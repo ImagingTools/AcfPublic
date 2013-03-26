@@ -124,6 +124,18 @@
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
+    <name>CPhononVideoViewGuiComp.h</name>
+    <path>C:/Temp/Iacf/Include/iphonon/</path>
+    <filename>_c_phonon_video_view_gui_comp_8h</filename>
+    <class kind="class">iphonon::CPhononVideoViewGuiComp</class>
+    <namespace>iphonon</namespace>
+  </compound>
+  <compound kind="file">
+    <name>iphonon.h</name>
+    <path>C:/Temp/Iacf/Include/iphonon/</path>
+    <filename>iphonon_8h</filename>
+  </compound>
+  <compound kind="file">
     <name>CVlcVideoViewGuiComp.h</name>
     <path>C:/Temp/Iacf/Include/iqaxmm/</path>
     <filename>_c_vlc_video_view_gui_comp_8h</filename>
@@ -1281,6 +1293,171 @@
       <name>OnComponentDestroyed</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
       <anchor>a8323bb34a993612efeb7f1d2b34b4874</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>iphonon</name>
+    <filename>namespaceiphonon.html</filename>
+    <class kind="class">iphonon::CPhononVideoViewGuiComp</class>
+  </compound>
+  <compound kind="class">
+    <name>iphonon::CPhononVideoViewGuiComp</name>
+    <filename>classiphonon_1_1_c_phonon_video_view_gui_comp.html</filename>
+    <base>TGuiComponentBase&lt; Phonon::VideoWidget &gt;</base>
+    <base virtualness="virtual">imm::IVideoController</base>
+    <member kind="typedef">
+      <type>iqtgui::TGuiComponentBase&lt; Phonon::VideoWidget &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a18d77e72abf75e27eb9e396dc95bfbd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CPhononVideoViewGuiComp</name>
+      <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a137936efd7278f3d8931ec2b8093840d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOpenedMediumUrl</name>
+      <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a66c02ba01903642f76fa867d0f19de23</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OpenMediumUrl</name>
+      <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a4b032785f9cea7520d5c38c6e36f1ef3</anchor>
+      <arglist>(const QString &amp;url, bool autoPlay=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CloseMedium</name>
+      <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>afdafbf9aa8636878d9cb875d25372ece</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsPlaying</name>
+      <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>acc08a6e2d78c8341bb22e1706f9567ff</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPlaying</name>
+      <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a694ed5c87064575422d620f443d5640f</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetMediumLength</name>
+      <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>aa2ef209659715ddc08d7fddfcf71c249</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetCurrentPosition</name>
+      <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>aa03525167778fc1597175eb931805495</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetCurrentPosition</name>
+      <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>aba710988b86f8853c9c25eb2d489ec57</anchor>
+      <arglist>(double position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedFeatures</name>
+      <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a396ebc8bfe998429a522ecb301341cb7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetFramesCount</name>
+      <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a05da2768a750e273c8dcf3e9d27f0fed</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetFrameIntervall</name>
+      <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a0d9c1cc3f6f85809795273f5403f464d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CIndex2d</type>
+      <name>GetFrameSize</name>
+      <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a556f8a1ce5eb1d2744c39f0a7e30c92b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetPixelAspectRatio</name>
+      <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>ae194766e6fef7d3389728b77040f2d85</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetCurrentFrame</name>
+      <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a5e294aeb9d30d543d5898c14eeb7d090</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetCurrentFrame</name>
+      <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>a693535176e4b66f3a8812f70d36ce89e</anchor>
+      <arglist>(int frameIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>af9dc368af0b03a827e4b37bb1daf5cae</anchor>
+      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>af19aec1b7e71236fb15cd365aca45fb1</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>EnsureSync</name>
+      <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>ad59b678f5a9637137d0ab351c75a1e44</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>ad291f6c40e432d62391eabb278173d58</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
+      <anchor>acab92a5ca720c2e516788b7f10a5d7e9</anchor>
       <arglist>()</arglist>
     </member>
   </compound>

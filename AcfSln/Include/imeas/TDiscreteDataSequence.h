@@ -24,6 +24,9 @@
 #define imeas_TDiscreteDataSequence_included
 
 
+// STL incldues
+#include <cstring>
+
 // Qt includes
 #include <QtCore/qmath.h>
 

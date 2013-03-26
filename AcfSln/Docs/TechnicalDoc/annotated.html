@@ -31,6 +31,7 @@
 <div class="textblock">Here are the classes, structs, unions and interfaces with brief descriptions:</div><table>
   <tr><td class="indexkey"><a class="el" href="classicam_1_1_c_acquisition_constraints_comp.html">icam::CAcquisitionConstraintsComp</a></td><td class="indexvalue">Component for the static configuration of the acquisition constraints for a given camera device </td></tr>
   <tr><td class="indexkey"><a class="el" href="structiipr_1_1_c_edge_distance_processor_comp_1_1_caliper_line.html">iipr::CEdgeDistanceProcessorComp::CaliperLine</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="classiipr_1_1_c_auto_image_normalize_processor_comp.html">iipr::CAutoImageNormalizeProcessorComp</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classiipr_1_1_c_bitmap_joiner_supplier_comp.html">iipr::CBitmapJoinerSupplierComp</a></td><td class="indexvalue">Supplier of bitmap's vector built on bitmap </td></tr>
   <tr><td class="indexkey"><a class="el" href="classiipr_1_1_c_bitmap_operations.html">iipr::CBitmapOperations</a></td><td class="indexvalue">Set of atmomic bitmap manipulations </td></tr>
   <tr><td class="indexkey"><a class="el" href="classiipr_1_1_c_bitmap_provider_cache_comp.html">iipr::CBitmapProviderCacheComp</a></td><td class="indexvalue">Bitmap provider returning always stored bitmap </td></tr>
@@ -156,7 +157,6 @@
   <tr><td class="indexkey"><a class="el" href="classimeas_1_1_c_numeric_values_joiner_comp.html">imeas::CNumericValuesJoinerComp</a></td><td class="indexvalue">Joins several numeric values into one </td></tr>
   <tr><td class="indexkey"><a class="el" href="classiqtmeas_1_1_c_numeric_value_widget.html">iqtmeas::CNumericValueWidget</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html">iqtipr::CPatternTeachingControllerGuiComp</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><a class="el" href="classiqtmm_1_1_c_phonon_video_view_gui_comp.html">iqtmm::CPhononVideoViewGuiComp</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classiqtmm_1_1_c_playback_controller_gui_comp.html">iqtmm::CPlaybackControllerGuiComp</a></td><td class="indexvalue">Component to play some image (frame) sequence from a directory </td></tr>
   <tr><td class="indexkey"><a class="el" href="classiipr_1_1_c_position_from_image_supplier_comp.html">iipr::CPositionFromImageSupplierComp</a></td><td class="indexvalue">Implementation of value supplier returning position on the image </td></tr>
   <tr><td class="indexkey"><a class="el" href="classiipr_1_1_c_processed_acquisition_comp.html">iipr::CProcessedAcquisitionComp</a></td><td class="indexvalue"></td></tr>
@@ -191,7 +191,7 @@
   <tr><td class="indexkey"><a class="el" href="classiipr_1_1_c_search_params.html">iipr::CSearchParams</a></td><td class="indexvalue">Definition of standard search parameters </td></tr>
   <tr><td class="indexkey"><a class="el" href="classiipr_1_1_c_search_params_comp.html">iipr::CSearchParamsComp</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classicam_1_1_c_selectable_bitmap_supplier_comp.html">icam::CSelectableBitmapSupplierComp</a></td><td class="indexvalue">Implementation of bitmap supplier based on image acquisition </td></tr>
-  <tr><td class="indexkey"><a class="el" href="classiipr_1_1_c_selectable_calibration_supplier_comp.html">iipr::CSelectableCalibrationSupplierComp</a></td><td class="indexvalue">Single 2D-calibration supplier implemented as a selector from a multi calibration provider </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classiipr_1_1_c_selectable_calibration_provider_comp.html">iipr::CSelectableCalibrationProviderComp</a></td><td class="indexvalue">Single 2D-calibration supplier implemented as a selector from a multi calibration provider </td></tr>
   <tr><td class="indexkey"><a class="el" href="classifileproc_1_1_c_selectable_file_converter_comp.html">ifileproc::CSelectableFileConverterComp</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classiwiz_1_1_c_selection_consistency_controller_comp.html">iwiz::CSelectionConsistencyControllerComp</a></td><td class="indexvalue">Component implementation of a wizard controller </td></tr>
   <tr><td class="indexkey"><a class="el" href="classicam_1_1_c_selection_param_camera_comp.html">icam::CSelectionParamCameraComp</a></td><td class="indexvalue"></td></tr>
@@ -233,13 +233,13 @@
   <tr><td class="indexkey"><a class="el" href="classicam_1_1_i_bitmap_acquisition.html">icam::IBitmapAcquisition</a></td><td class="indexvalue">Bitmap acquisition processor </td></tr>
   <tr><td class="indexkey"><a class="el" href="classiipr_1_1_i_bitmap_provider.html">iipr::IBitmapProvider</a></td><td class="indexvalue">Bitmap supplier allowing to access of produced bitmap </td></tr>
   <tr><td class="indexkey"><a class="el" href="classiipr_1_1_i_caliper_params.html">iipr::ICaliperParams</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><a class="el" href="class_i_caliper_processor.html">ICaliperProcessor</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classiipr_1_1_i_caliper_processor.html">iipr::ICaliperProcessor</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_i_caliper_processor.html">ICaliperProcessor</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classiipr_1_1_i_circle_finder_params.html">iipr::ICircleFinderParams</a></td><td class="indexvalue">Interface for the circle finder parameter </td></tr>
   <tr><td class="indexkey"><a class="el" href="classiipr_1_1_i_convolution_kernel2d.html">iipr::IConvolutionKernel2d</a></td><td class="indexvalue">Interface for 2D-convolution filter kernel </td></tr>
   <tr><td class="indexkey"><a class="el" href="classimeas_1_1_i_data_sequence.html">imeas::IDataSequence</a></td><td class="indexvalue">General definition of sequence contains samples in regular time grid </td></tr>
-  <tr><td class="indexkey"><a class="el" href="classimeas_1_1_i_data_sequence_correlation_processor.html">imeas::IDataSequenceCorrelationProcessor</a></td><td class="indexvalue">Interface for 1D-data correlation processor </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_i_data_sequence_correlation_processor.html">IDataSequenceCorrelationProcessor</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="classimeas_1_1_i_data_sequence_correlation_processor.html">imeas::IDataSequenceCorrelationProcessor</a></td><td class="indexvalue">Interface for 1D-data correlation processor </td></tr>
   <tr><td class="indexkey"><a class="el" href="classimeas_1_1_i_data_sequence_info.html">imeas::IDataSequenceInfo</a></td><td class="indexvalue">Stores additional data sequence data used to interpret samples value correctly </td></tr>
   <tr><td class="indexkey"><a class="el" href="classimeas_1_1_i_data_sequence_provider.html">imeas::IDataSequenceProvider</a></td><td class="indexvalue">Simple data sequence provider </td></tr>
   <tr><td class="indexkey"><a class="el" href="classimeas_1_1_i_data_sequence_statistics.html">imeas::IDataSequenceStatistics</a></td><td class="indexvalue">Common interaface for data sequence statistics </td></tr>
@@ -274,8 +274,8 @@
   <tr><td class="indexkey"><a class="el" href="classihotf_1_1_i_hotfolder_workflow_item.html">ihotf::IHotfolderWorkflowItem</a></td><td class="indexvalue">Interface for getting some informations about properties of a given hotfolder </td></tr>
   <tr><td class="indexkey"><a class="el" href="classiinsp_1_1_i_id_provider.html">iinsp::IIdProvider</a></td><td class="indexvalue">Allow access to some ID </td></tr>
   <tr><td class="indexkey"><a class="el" href="classiipr_1_1_i_image_interpolation_params.html">iipr::IImageInterpolationParams</a></td><td class="indexvalue">Common interface for interpolation parameters </td></tr>
-  <tr><td class="indexkey"><a class="el" href="class_i_image_to_feature_processor.html">IImageToFeatureProcessor</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classiipr_1_1_i_image_to_feature_processor.html">iipr::IImageToFeatureProcessor</a></td><td class="indexvalue">Allow to extract some features from the image </td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_i_image_to_feature_processor.html">IImageToFeatureProcessor</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classiinsp_1_1_i_inspection_task.html">iinsp::IInspectionTask</a></td><td class="indexvalue">Representation of complete inspection task </td></tr>
   <tr><td class="indexkey"><a class="el" href="classimeas_1_1_i_linear_adjust_constraints.html">imeas::ILinearAdjustConstraints</a></td><td class="indexvalue">Describes constraints of possible values of imeas::ILinearAdjust </td></tr>
   <tr><td class="indexkey"><a class="el" href="classimeas_1_1_i_linear_adjust_params.html">imeas::ILinearAdjustParams</a></td><td class="indexvalue">Get parameter of linear adjust </td></tr>

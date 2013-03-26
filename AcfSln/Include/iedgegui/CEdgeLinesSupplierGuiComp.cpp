@@ -23,9 +23,6 @@
 #include "CEdgeLinesSupplierGuiComp.h"
 
 
-// Qt includes
-#include <QtGui/QMessageBox>
-
 // ACF includes
 #include "imath/CVarVector.h"
 

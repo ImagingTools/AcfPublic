@@ -35,8 +35,6 @@
 
 #include "imath/CFixedPointManip.h"
 
-#include "icmm/CVarColor.h"
-
 #include "iview/IViewEventObserver.h"
 #include "iview/CConsoleBase.h"
 #include "iview/CCalibratedViewBase.h"

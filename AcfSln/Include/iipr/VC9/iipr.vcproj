@@ -154,6 +154,10 @@
 			Filter="cpp"
 			>
 			<File
+				RelativePath="..\CAutoImageNormalizeProcessorComp.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\CBitmapJoinerSupplierComp.cpp"
 				>
 			</File>
@@ -370,7 +374,7 @@
 				>
 			</File>
 			<File
-				RelativePath="..\CSelectableCalibrationSupplierComp.cpp"
+				RelativePath="..\CSelectableCalibrationProviderComp.cpp"
 				>
 			</File>
 			<File
@@ -390,6 +394,10 @@
 			Name="Header Files"
 			Filter="h"
 			>
+			<File
+				RelativePath="..\CAutoImageNormalizeProcessorComp.h"
+				>
+			</File>
 			<File
 				RelativePath="..\CBitmapJoinerSupplierComp.h"
 				>
@@ -607,7 +615,7 @@
 				>
 			</File>
 			<File
-				RelativePath="..\CSelectableCalibrationSupplierComp.h"
+				RelativePath="..\CSelectableCalibrationProviderComp.h"
 				>
 			</File>
 			<File

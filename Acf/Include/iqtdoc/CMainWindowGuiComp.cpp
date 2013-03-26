@@ -180,7 +180,7 @@ bool CMainWindowGuiComp::OpenFile(const QString& fileName)
 	if (m_documentManagerCompPtr.IsValid()){
 		idoc::IDocumentManager::FileToTypeMap fileMap;
 
-		retVal = m_documentManagerCompPtr->FileOpen(NULL, &fileName, true, "", NULL, &fileMap);
+		retVal = m_documentManagerCompPtr->OpenDocument(NULL, &fileName, true, "", NULL, &fileMap);
 		if (retVal){
 			UpdateRecentFileList(fileMap);
 		}
@@ -329,7 +329,7 @@ void CMainWindowGuiComp::UpdateUndoMenu()
 void CMainWindowGuiComp::OnNewDocument(const QByteArray& documentFactoryId)
 {
 	if (m_documentManagerCompPtr.IsValid()){
-		if (!m_documentManagerCompPtr->FileNew(documentFactoryId)){
+		if (!m_documentManagerCompPtr->InsertNewDocument(documentFactoryId)){
 			QMessageBox::warning(GetWidget(), "", tr("Document could not be created"));
 			return;
 		}
@@ -619,7 +619,7 @@ void CMainWindowGuiComp::OnGuiCreated()
 			QString documentFileName = applicationArguments[1];
 			idoc::IDocumentManager::FileToTypeMap fileMap;
 
-			if (m_documentManagerCompPtr->FileOpen(NULL, &documentFileName, true, "", NULL, &fileMap)){
+			if (m_documentManagerCompPtr->OpenDocument(NULL, &documentFileName, true, "", NULL, &fileMap)){
 				UpdateRecentFileList(fileMap);
 			}
 		}
@@ -811,7 +811,7 @@ void CMainWindowGuiComp::OnSave()
 	if (m_documentManagerCompPtr.IsValid()){
 		idoc::IDocumentManager::FileToTypeMap fileMap;
 
-		if (m_documentManagerCompPtr->FileSave(-1, false, &fileMap)){
+		if (m_documentManagerCompPtr->SaveDocument(-1, false, &fileMap)){
 			UpdateRecentFileList(fileMap);
 		}
 		else{
@@ -828,7 +828,7 @@ void CMainWindowGuiComp::OnSaveAs()
 	if (m_documentManagerCompPtr.IsValid()){
 		idoc::IDocumentManager::FileToTypeMap fileMap;
 
-		if (m_documentManagerCompPtr->FileSave(-1, true, &fileMap)){
+		if (m_documentManagerCompPtr->SaveDocument(-1, true, &fileMap)){
 			UpdateRecentFileList(fileMap);
 		}
 		else{
@@ -845,7 +845,7 @@ void CMainWindowGuiComp::OnOpenDocument(const QByteArray* documentTypeIdPtr)
 	idoc::IDocumentManager::FileToTypeMap fileMap;
 
 	if (m_documentManagerCompPtr.IsValid()){
-		if (m_documentManagerCompPtr->FileOpen(documentTypeIdPtr, NULL, true, "", NULL, &fileMap)){
+		if (m_documentManagerCompPtr->OpenDocument(documentTypeIdPtr, NULL, true, "", NULL, &fileMap)){
 			UpdateRecentFileList(fileMap);
 		}
 		else{

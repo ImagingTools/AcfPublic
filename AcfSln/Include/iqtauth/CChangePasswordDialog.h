@@ -31,7 +31,7 @@
 #include "iauth/IUsersManager.h"
 #include "iauth/CUser.h"
 
-#include "generated/ui_CChangePasswordDialog.h"
+#include "Generated/ui_CChangePasswordDialog.h"
 
 
 namespace iqtauth

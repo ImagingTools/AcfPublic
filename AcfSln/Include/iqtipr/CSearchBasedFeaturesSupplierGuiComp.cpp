@@ -24,7 +24,6 @@
 
 
 // Qt includes
-#include <QtGui/QMessageBox>
 #include <QtCore/QElapsedTimer>
 
 // ACF includes

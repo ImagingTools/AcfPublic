@@ -116,13 +116,13 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_packages_loader_comp.html#ab65007a04ebc62eb40eb1c60a61f96fb">RegisterPackageFile</a> (const QString &amp;file)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_packages_loader_comp.html#ab35da698da27101f475d220780a6218a">RegisterPackagesDir</a> (const QString &amp;subDir)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_packages_loader_comp.html#afb79a6aa5be77fd849b2e1c7d1fd48fe">LoadConfigFile</a> (const QString &amp;configFile)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QLibrary &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_packages_loader_comp.html#abcccda473af77c11d05a949129600422">GetLibrary</a> (const QFileInfo &amp;fileInfo)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">icomp::GetPackageInfoFunc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_packages_loader_comp.html#a8f380dec73765d796601f210091cabf7">GetPackageFunction</a> (const QFileInfo &amp;fileInfo)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_packages_loader_comp.html#a7b92a341343931063f4efad2b6ff8234">CheckAndMarkPath</a> (const QDir &amp;directory, const QString &amp;path, QString &amp;resultPath) const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Loads component packages from dynamic link libraries. </p>
 
-<p>Definition at line <a class="el" href="_c_packages_loader_comp_8h_source.html#l00034">34</a> of file <a class="el" href="_c_packages_loader_comp_8h_source.html">CPackagesLoaderComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_packages_loader_comp_8h_source.html#l00031">31</a> of file <a class="el" href="_c_packages_loader_comp_8h_source.html">CPackagesLoaderComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a5ae14b1f980af7afcd9733a52b68bb3f"></a><!-- doxytag: member="icmpstr::CPackagesLoaderComp::BaseClass" ref="a5ae14b1f980af7afcd9733a52b68bb3f" args="" -->
 <div class="memitem">
@@ -139,7 +139,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classicmpstr_1_1_c_packages_loader_ext_comp.html#a04e2187ee3ff580ce431efe3c33d9b16">icmpstr::CPackagesLoaderExtComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_packages_loader_comp_8h_source.html#l00041">41</a> of file <a class="el" href="_c_packages_loader_comp_8h_source.html">CPackagesLoaderComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_packages_loader_comp_8h_source.html#l00038">38</a> of file <a class="el" href="_c_packages_loader_comp_8h_source.html">CPackagesLoaderComp.h</a>.</p>
 
 </div>
 </div>
@@ -154,7 +154,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_packages_loader_comp_8h_source.html#l00042">42</a> of file <a class="el" href="_c_packages_loader_comp_8h_source.html">CPackagesLoaderComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_packages_loader_comp_8h_source.html#l00039">39</a> of file <a class="el" href="_c_packages_loader_comp_8h_source.html">CPackagesLoaderComp.h</a>.</p>
 
 </div>
 </div>
@@ -178,7 +178,7 @@ Protected Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_packages_loader_comp_8h_source.html#l00044">44</a> of file <a class="el" href="_c_packages_loader_comp_8h_source.html">CPackagesLoaderComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_packages_loader_comp_8h_source.html#l00041">41</a> of file <a class="el" href="_c_packages_loader_comp_8h_source.html">CPackagesLoaderComp.h</a>.</p>
 
 </div>
 </div>
@@ -258,12 +258,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abcccda473af77c11d05a949129600422"></a><!-- doxytag: member="icmpstr::CPackagesLoaderComp::GetLibrary" ref="abcccda473af77c11d05a949129600422" args="(const QFileInfo &amp;fileInfo)" -->
+<a class="anchor" id="a8f380dec73765d796601f210091cabf7"></a><!-- doxytag: member="icmpstr::CPackagesLoaderComp::GetPackageFunction" ref="a8f380dec73765d796601f210091cabf7" args="(const QFileInfo &amp;fileInfo)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QLibrary&amp; icmpstr::CPackagesLoaderComp::GetLibrary </td>
+          <td class="memname">icomp::GetPackageInfoFunc icmpstr::CPackagesLoaderComp::GetPackageFunction </td>
           <td>(</td>
           <td class="paramtype">const QFileInfo &amp;&#160;</td>
           <td class="paramname"><em>fileInfo</em></td><td>)</td>

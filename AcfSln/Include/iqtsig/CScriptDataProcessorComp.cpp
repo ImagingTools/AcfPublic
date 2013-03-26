@@ -153,7 +153,7 @@ end_iteration:
 		progressManagerPtr->EndProgressSession(progressSessionId);
 	}
 
-	return TS_OK;
+	return retVal;
 }
 
 

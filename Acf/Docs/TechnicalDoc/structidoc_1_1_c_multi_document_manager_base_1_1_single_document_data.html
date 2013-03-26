@@ -40,7 +40,7 @@
 <div class="title">idoc::CMultiDocumentManagerBase::SingleDocumentData Struct Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="idoc::CMultiDocumentManagerBase::SingleDocumentData" --><!-- doxytag: inherits="imod::CSingleModelObserverBase" -->
+<!-- doxytag: class="idoc::CMultiDocumentManagerBase::SingleDocumentData" --><!-- doxytag: inherits="imod::CMultiModelObserverBase" -->
 <p><code>#include &lt;<a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for idoc::CMultiDocumentManagerBase::SingleDocumentData:</div>
@@ -48,7 +48,7 @@ Inheritance diagram for idoc::CMultiDocumentManagerBase::SingleDocumentData:</di
  <div class="center">
   <img src="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.png" usemap="#idoc::CMultiDocumentManagerBase::SingleDocumentData_map" alt=""/>
   <map id="idoc::CMultiDocumentManagerBase::SingleDocumentData_map" name="idoc::CMultiDocumentManagerBase::SingleDocumentData_map">
-<area href="classimod_1_1_c_single_model_observer_base.html" title="Basic implementation for a single model observer." alt="imod::CSingleModelObserverBase" shape="rect" coords="0,112,336,136"/>
+<area href="classimod_1_1_c_multi_model_observer_base.html" title="Basic implementation of a multiple model observer." alt="imod::CMultiModelObserverBase" shape="rect" coords="0,112,336,136"/>
 <area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="0,56,336,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,336,24"/>
 </map>
@@ -64,15 +64,14 @@ Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html">CMultiDocumentManagerBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html#a8d59d6791cfbfd5339b8cf748c7fb52d">parentPtr</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a7dbf28615fc9937b79b9e79434d7d071">DocumentPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html#a09e7224b7d5135b1ee431e5b880e7a15">documentPtr</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#adc7bcebcefafc920f64ad1d4b0ef9f97">UndoManagerPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html#a5edf897e08e69f42f206dddc8bc2382b">undoManagerPtr</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a323464bacb46ca087abe82d5686f77c0">Views</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html#a27ff5cb2b60c54a4d1463abe26936f7c">views</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a93fd2a0b38352b4e4d6fa74532e809de">ViewTypeIds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html#a3005b1ae083d7c1c400d4dd94b88d487">viewTypeIds</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#aa74f65a55c8b187c14d098786a4cca36">Views</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html#a27ff5cb2b60c54a4d1463abe26936f7c">views</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html#a8bb6f3d6ec203a530581ef6e0f628773">OnUpdate</a> (int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html#a985b7d495cd63f2d76fe82438293846f">OnUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00064">64</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00070">70</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a76d036e8e4e2119e6cac85087671fea5"></a><!-- doxytag: member="idoc::CMultiDocumentManagerBase::SingleDocumentData::SingleDocumentData" ref="a76d036e8e4e2119e6cac85087671fea5" args="(CMultiDocumentManagerBase *parentPtr, const QByteArray &amp;documentTypeId, istd::IChangeable *documentPtr, idoc::IUndoManager *undoManagerPtr)" -->
 <div class="memitem">
@@ -105,26 +104,28 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td><code> [inline]</code></td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00066">66</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
-
-<p>References <a class="el" href="istd_8h_source.html#l00061">NULL</a>, <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00083">parentPtr</a>, and <a class="el" href="classidoc_1_1_i_document_state_comparator.html#ab4f5f60130624e0c3399565760c73fcc">idoc::IDocumentStateComparator::StoreDocumentState()</a>.</p>
-
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a8bb6f3d6ec203a530581ef6e0f628773"></a><!-- doxytag: member="idoc::CMultiDocumentManagerBase::SingleDocumentData::OnUpdate" ref="a8bb6f3d6ec203a530581ef6e0f628773" args="(int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
+<a class="anchor" id="a985b7d495cd63f2d76fe82438293846f"></a><!-- doxytag: member="idoc::CMultiDocumentManagerBase::SingleDocumentData::OnUpdate" ref="a985b7d495cd63f2d76fe82438293846f" args="(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void idoc::CMultiDocumentManagerBase::SingleDocumentData::OnUpdate </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td>
+          <td class="paramname"><em>modelPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>updateFlags</em>, </td>
         </tr>
@@ -143,7 +144,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classimod_1_1_c_single_model_observer_base.html#a66f8d05283672d798a57262434229e93">imod::CSingleModelObserverBase</a>.</p>
+<p>Reimplemented from <a class="el" href="classimod_1_1_c_multi_model_observer_base.html#a4fedb2ca9c97485f0688e99d072610df">imod::CMultiModelObserverBase</a>.</p>
 
 </div>
 </div>
@@ -159,7 +160,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00084">84</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00079">79</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
 
 </div>
 </div>
@@ -174,9 +175,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00083">83</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
-
-<p>Referenced by <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00066">SingleDocumentData()</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00078">78</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
 
 </div>
 </div>
@@ -191,7 +190,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00085">85</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00080">80</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
 
 </div>
 </div>
@@ -200,28 +199,13 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a323464bacb46ca087abe82d5686f77c0">Views</a> <a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html#a27ff5cb2b60c54a4d1463abe26936f7c">idoc::CMultiDocumentManagerBase::SingleDocumentData::views</a></td>
+          <td class="memname"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#aa74f65a55c8b187c14d098786a4cca36">Views</a> <a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html#a27ff5cb2b60c54a4d1463abe26936f7c">idoc::CMultiDocumentManagerBase::SingleDocumentData::views</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00086">86</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a3005b1ae083d7c1c400d4dd94b88d487"></a><!-- doxytag: member="idoc::CMultiDocumentManagerBase::SingleDocumentData::viewTypeIds" ref="a3005b1ae083d7c1c400d4dd94b88d487" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a93fd2a0b38352b4e4d6fa74532e809de">ViewTypeIds</a> <a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html#a3005b1ae083d7c1c400d4dd94b88d487">idoc::CMultiDocumentManagerBase::SingleDocumentData::viewTypeIds</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00087">87</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_document_manager_base_8h_source.html#l00081">81</a> of file <a class="el" href="_c_multi_document_manager_base_8h_source.html">CMultiDocumentManagerBase.h</a>.</p>
 
 </div>
 </div>

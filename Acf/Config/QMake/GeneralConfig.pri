@@ -1,12 +1,15 @@
-#General ACF settings
+#General base configuration should be included from all ACF-based projects
 
 CONFIG += stl
 CONFIG -= exceptions
 CONFIG += silent
-#General base configuration should be included from all ACF-based projects
-
 CONFIG += rtti
 CONFIG += debug_and_release
+
+PLATFORM_CODE = i86
+win32:contains(QMAKE_HOST.arch, x86_64) | *-64{
+	PLATFORM_CODE = x64
+}
 
 COMPILER_NAME = QMake
 PLATFORM_NAME = Unix
@@ -36,9 +39,14 @@ win32-msvc*{
 	}
 }
 
-*-clang*{
+*-clang* | *-llvm*{
 	QMAKE_CXXFLAGS_WARN_ON += -Wno-unused-variable
 	QMAKE_CXXFLAGS_WARN_ON += -Wno-overloaded-virtual
+	QMAKE_CXXFLAGS_WARN_ON += -Wno-format-security
+}
+
+*-gcc*{
+	QMAKE_CXXFLAGS_WARN_ON += -wformat-security
 }
 
 CONFIG(debug, debug|release){

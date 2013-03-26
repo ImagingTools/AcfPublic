@@ -31,14 +31,7 @@
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
-
 #include "idoc/IDocumentTemplate.h"
-
-#include "iser/CXmlFileWriteArchive.h"
-#include "iser/CXmlFileReadArchive.h"
-
-#include "iqtgui/CFileDialogLoaderComp.h"
-
 #include "iqt/CSettingsWriteArchive.h"
 #include "iqt/CSettingsReadArchive.h"
 
@@ -53,7 +46,8 @@ CMultiDocumentWorkspaceGuiComp::CMultiDocumentWorkspaceGuiComp()
 :	m_workspaceModeCommand("", 100, ibase::ICommand::CF_GLOBAL_MENU),
 	m_subWindowCommand("", 100, ibase::ICommand::CF_GLOBAL_MENU | ibase::ICommand::CF_ONOFF | ibase::ICommand::CF_EXCLUSIVE),
 	m_tabbedCommand("", 100, ibase::ICommand::CF_GLOBAL_MENU | ibase::ICommand::CF_ONOFF | ibase::ICommand::CF_EXCLUSIVE),
-	m_viewsCount(0)
+	m_viewsCount(0),
+	m_forceQuietClose(false)
 {
 	m_documentSelectionInfo.SetParent(*this);
 
@@ -96,8 +90,8 @@ const ibase::IHierarchicalCommand* CMultiDocumentWorkspaceGuiComp::GetCommands()
 void CMultiDocumentWorkspaceGuiComp::OnTryClose(bool* ignoredPtr)
 {
 	//Save open document settings before exit
-	if(m_rememberOpenDocumentsParamPtr.IsValid() && m_rememberOpenDocumentsParamPtr->IsEnabled()){
-		if(!m_organizationName.isEmpty() && !m_applicationName.isEmpty()){
+	if (m_rememberOpenDocumentsParamPtr.IsValid() && m_rememberOpenDocumentsParamPtr->IsEnabled()){
+		if (!m_organizationName.isEmpty() && !m_applicationName.isEmpty()){
 			iqt::CSettingsWriteArchive archive(
 							m_organizationName,
 							m_applicationName,
@@ -108,7 +102,9 @@ void CMultiDocumentWorkspaceGuiComp::OnTryClose(bool* ignoredPtr)
 		}
 	}
 
-	CloseAllDocuments();
+	if (SaveDirtyDocuments(false, ignoredPtr)){
+		CloseAllDocuments();
+	}
 
 	if (ignoredPtr != NULL){
 		*ignoredPtr = (GetDocumentsCount() > 0);
@@ -131,7 +127,7 @@ void CMultiDocumentWorkspaceGuiComp::UpdateAllTitles()
 					tr("<no name>"):
 					QFileInfo(info.filePath).fileName();
 
-		NameFrequencies::iterator freqIter = nameFrequencies.find(titleName);
+		NameFrequencies::Iterator freqIter = nameFrequencies.find(titleName);
 		int& frequency = freqIter.value();
 		if (freqIter != nameFrequencies.end()){
 			frequency++;
@@ -146,13 +142,13 @@ void CMultiDocumentWorkspaceGuiComp::UpdateAllTitles()
 			titleName += " *";
 		}
 
-		for (		Views::const_iterator viewIter = info.views.begin();
+		for (		Views::ConstIterator viewIter = info.views.begin();
 					viewIter != info.views.end();
 					++viewIter){
-			const ViewPtr& viewPtr = *viewIter;
-			Q_ASSERT(viewPtr.IsValid());
+			const ViewInfo& viewInfo = *viewIter;
+			Q_ASSERT(viewInfo.viewPtr.IsValid());
 
-			const iqtgui::IGuiObject* guiObjectPtr = CompCastPtr<iqtgui::IGuiObject>(viewPtr.GetPtr());
+			const iqtgui::IGuiObject* guiObjectPtr = CompCastPtr<iqtgui::IGuiObject>(viewInfo.viewPtr.GetPtr());
 			if (guiObjectPtr != NULL){
 				QWidget* widgetPtr = guiObjectPtr->GetWidget();
 				Q_ASSERT(widgetPtr != NULL);
@@ -167,13 +163,15 @@ void CMultiDocumentWorkspaceGuiComp::UpdateAllTitles()
 iqtgui::IGuiObject* CMultiDocumentWorkspaceGuiComp::GetViewFromWidget(const QWidget& widget) const
 {
 	int documentInfosCount = GetDocumentsCount();
-	for (int i = 0; i < documentInfosCount; ++i){
-		SingleDocumentData& info = GetSingleDocumentData(i);
+	for (int documentIndex = 0; documentIndex < documentInfosCount; ++documentIndex){
+		SingleDocumentData& info = GetSingleDocumentData(documentIndex);
 
-		for (		Views::const_iterator viewIter = info.views.begin();
+		for (		Views::ConstIterator viewIter = info.views.begin();
 					viewIter != info.views.end();
 					++viewIter){
-			iqtgui::IGuiObject* guiObjectPtr = CompCastPtr<iqtgui::IGuiObject>(viewIter->GetPtr());
+			const ViewInfo& viewInfo = *viewIter;
+
+			iqtgui::IGuiObject* guiObjectPtr = CompCastPtr<iqtgui::IGuiObject>(viewInfo.viewPtr.GetPtr());
 			if (guiObjectPtr != NULL){
 				if (guiObjectPtr->GetWidget() == &widget){
 					return guiObjectPtr;
@@ -183,6 +181,30 @@ iqtgui::IGuiObject* CMultiDocumentWorkspaceGuiComp::GetViewFromWidget(const QWid
 	}
 
 	return NULL;
+}
+
+
+int CMultiDocumentWorkspaceGuiComp::GetDocumentIndexFromWidget(const QWidget& widget) const
+{
+	int documentInfosCount = GetDocumentsCount();
+	for (int documentIndex = 0; documentIndex < documentInfosCount; ++documentIndex){
+		SingleDocumentData& info = GetSingleDocumentData(documentIndex);
+
+		for (		Views::ConstIterator viewIter = info.views.begin();
+					viewIter != info.views.end();
+					++viewIter){
+			const ViewInfo& viewInfo = *viewIter;
+
+			iqtgui::IGuiObject* guiObjectPtr = CompCastPtr<iqtgui::IGuiObject>(viewInfo.viewPtr.GetPtr());
+			if (guiObjectPtr != NULL){
+				if (guiObjectPtr->GetWidget() == &widget){
+					return documentIndex;
+				}
+			}
+		}
+	}
+
+	return -1;
 }
 
 
@@ -263,25 +285,21 @@ void CMultiDocumentWorkspaceGuiComp::SetActiveView(istd::IPolymorphic* viewPtr)
 
 bool CMultiDocumentWorkspaceGuiComp::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
 {
-	if (eventPtr->type() == QEvent::Close){
+	if (!m_forceQuietClose && (eventPtr->type() == QEvent::Close)){
 		const QWidget* widgetPtr = dynamic_cast<const QWidget*>(sourcePtr);
 		if (widgetPtr != NULL){
-			iqtgui::IGuiObject* guiObjectPtr = GetViewFromWidget(*widgetPtr);
-			if (guiObjectPtr != NULL){
-				SetActiveView(guiObjectPtr);
-
+			int documentIndex = GetDocumentIndexFromWidget(*widgetPtr);
+			if (documentIndex >= 0){
 				bool isCloseIgnored = false;
-				FileClose(-1, &isCloseIgnored);
+				CloseDocument(documentIndex, m_forceQuietClose, &isCloseIgnored);
 
-				if (!isCloseIgnored){
+				if (isCloseIgnored){
+					eventPtr->ignore();
+
 					return true;
 				}
 			}
 		}
-
-		eventPtr->ignore();
-
-		return true;
 	}
 
 	return BaseClass::eventFilter(sourcePtr, eventPtr);
@@ -348,7 +366,21 @@ void CMultiDocumentWorkspaceGuiComp::OnSaveSettings(QSettings& settings) const
 
 void CMultiDocumentWorkspaceGuiComp::CloseAllDocuments()
 {
-	OnCloseAllViews();
+	QMdiArea* workspacePtr = GetQtWidget();
+	Q_ASSERT(workspacePtr != NULL);
+	if (workspacePtr == NULL){
+		return;
+	}
+
+	m_forceQuietClose = true;
+
+	m_documentSelectionInfo.SetSelectedOptionIndex(iprm::ISelectionParam::NO_SELECTION);
+
+	workspacePtr->closeAllSubWindows();
+
+	BaseClass::CloseAllDocuments();
+
+	m_forceQuietClose = false;
 }
 
 
@@ -412,7 +444,7 @@ void CMultiDocumentWorkspaceGuiComp::OnViewRemoved(istd::IPolymorphic* viewPtr)
 }
 
 
-void CMultiDocumentWorkspaceGuiComp::QueryDocumentClose(const SingleDocumentData& info, bool* ignoredPtr)
+bool CMultiDocumentWorkspaceGuiComp::QueryDocumentSave(const SingleDocumentData& info, bool* ignoredPtr)
 {
 	QFileInfo fileInfo(info.filePath);
 	QMessageBox::StandardButtons buttons = QMessageBox::Yes | QMessageBox::No;
@@ -421,23 +453,21 @@ void CMultiDocumentWorkspaceGuiComp::QueryDocumentClose(const SingleDocumentData
 		buttons |= QMessageBox::Cancel;
 	}
 
-	QMessageBox messageBox;
-	messageBox.setText("Close document");
-	messageBox.setInformativeText(tr("Do you want to save your changes made in document\n%1").arg(fileInfo.fileName()));
-	messageBox.setStandardButtons(buttons);
-	messageBox.setDefaultButton(QMessageBox::Yes);
+	int response = QMessageBox::information(
+				GetQtWidget(),
+				tr("Close document"),
+				tr("Do you want to save your changes made in document\n%1").arg(fileInfo.fileName()),
+				buttons,
+				QMessageBox::Yes);
 
-	int response = messageBox.exec();
 	if (response == QMessageBox::Yes){
-		bool wasSaved = FileSave();
-
-		if (ignoredPtr != NULL){
-			*ignoredPtr = !wasSaved;
-		}
+		return true;
 	}
 	else if ((ignoredPtr != NULL) && (response == QMessageBox::Cancel)){
 		*ignoredPtr = true;
 	}
+
+	return false;
 }
 
 
@@ -605,15 +635,10 @@ void CMultiDocumentWorkspaceGuiComp::OnCascade()
 
 void CMultiDocumentWorkspaceGuiComp::OnCloseAllViews()
 {
-	QMdiArea* workspacePtr = GetQtWidget();
-	Q_ASSERT(workspacePtr != NULL);
-	if (workspacePtr == NULL){
-		return;
+	bool isCanceled = false;
+	if (SaveDirtyDocuments(false, &isCanceled) && !isCanceled){
+		CloseAllDocuments();
 	}
-
-	m_documentSelectionInfo.SetSelectedOptionIndex(iprm::ISelectionParam::NO_SELECTION);
-
-	workspacePtr->closeAllSubWindows();
 }
 
 

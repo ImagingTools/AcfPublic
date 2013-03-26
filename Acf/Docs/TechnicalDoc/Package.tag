@@ -1184,7 +1184,7 @@
     <path>C:/Temp/Acf/Include/icmm/</path>
     <filename>_t_color_gradient_8h</filename>
     <includes id="_t_i_math_function_8h" name="TIMathFunction.h" local="yes" imported="no">imath/TIMathFunction.h</includes>
-    <includes id="_c_var_color_8h" name="CVarColor.h" local="yes" imported="no">icmm/CVarColor.h</includes>
+    <includes id="_i_color_transformation_8h" name="IColorTransformation.h" local="yes" imported="no">icmm/IColorTransformation.h</includes>
     <class kind="class">icmm::LinearGradientFunction</class>
     <class kind="class">icmm::TColorGradient</class>
     <namespace>icmm</namespace>
@@ -2453,11 +2453,12 @@
     <filename>_c_multi_document_manager_base_8h</filename>
     <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
     <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
-    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
+    <includes id="_c_multi_model_observer_base_8h" name="CMultiModelObserverBase.h" local="yes" imported="no">imod/CMultiModelObserverBase.h</includes>
     <includes id="_i_undo_manager_8h" name="IUndoManager.h" local="yes" imported="no">idoc/IUndoManager.h</includes>
     <includes id="_c_tmpl_based_document_manager_base_8h" name="CTmplBasedDocumentManagerBase.h" local="yes" imported="no">idoc/CTmplBasedDocumentManagerBase.h</includes>
     <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
     <class kind="class">idoc::CMultiDocumentManagerBase</class>
+    <class kind="struct">idoc::CMultiDocumentManagerBase::ViewInfo</class>
     <class kind="struct">idoc::CMultiDocumentManagerBase::SingleDocumentData</class>
     <namespace>idoc</namespace>
   </compound>
@@ -4156,7 +4157,6 @@
     <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
     <includes id="_c_multi_document_manager_base_8h" name="CMultiDocumentManagerBase.h" local="yes" imported="no">idoc/CMultiDocumentManagerBase.h</includes>
     <includes id="_i_document_template_8h" name="IDocumentTemplate.h" local="yes" imported="no">idoc/IDocumentTemplate.h</includes>
-    <includes id="_i_settings_provider_8h" name="ISettingsProvider.h" local="yes" imported="no">iqt/ISettingsProvider.h</includes>
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <includes id="_t_restorable_gui_wrap_8h" name="TRestorableGuiWrap.h" local="yes" imported="no">iqtgui/TRestorableGuiWrap.h</includes>
     <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
@@ -6150,7 +6150,6 @@
     <filename>_c_viewport_8h</filename>
     <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
     <includes id="_c_fixed_point_manip_8h" name="CFixedPointManip.h" local="yes" imported="no">imath/CFixedPointManip.h</includes>
-    <includes id="_c_var_color_8h" name="CVarColor.h" local="yes" imported="no">icmm/CVarColor.h</includes>
     <includes id="_i_view_event_observer_8h" name="IViewEventObserver.h" local="yes" imported="no">iview/IViewEventObserver.h</includes>
     <includes id="_c_console_base_8h" name="CConsoleBase.h" local="yes" imported="no">iview/CConsoleBase.h</includes>
     <includes id="_c_calibrated_view_base_8h" name="CCalibratedViewBase.h" local="yes" imported="no">iview/CCalibratedViewBase.h</includes>
@@ -16113,7 +16112,7 @@
     <name>icmm::CVarColor</name>
     <filename>classicmm_1_1_c_var_color.html</filename>
     <base>imath::CVarVector</base>
-    <base>iser::ISerializable</base>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="typedef">
       <type>imath::CVarVector</type>
       <name>BaseClass</name>
@@ -18021,10 +18020,10 @@
       <arglist>(const QString &amp;configFile)</arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>QLibrary &amp;</type>
-      <name>GetLibrary</name>
+      <type>icomp::GetPackageInfoFunc</type>
+      <name>GetPackageFunction</name>
       <anchorfile>classicmpstr_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>abcccda473af77c11d05a949129600422</anchor>
+      <anchor>a8f380dec73765d796601f210091cabf7</anchor>
       <arglist>(const QFileInfo &amp;fileInfo)</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -25322,6 +25321,7 @@
     <filename>classidoc_1_1_c_multi_document_manager_base.html</filename>
     <base>idoc::CTmplBasedDocumentManagerBase</base>
     <class kind="struct">idoc::CMultiDocumentManagerBase::SingleDocumentData</class>
+    <class kind="struct">idoc::CMultiDocumentManagerBase::ViewInfo</class>
     <member kind="function">
       <type></type>
       <name>CMultiDocumentManagerBase</name>
@@ -25394,31 +25394,45 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>FileNew</name>
+      <name>InsertNewDocument</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>ad426e58e1cfc2b562d355af81022a895</anchor>
+      <anchor>a6db6d6371496c0b43a10c86e17c0d098</anchor>
       <arglist>(const QByteArray &amp;documentTypeId, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **newDocumentPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>FileOpen</name>
+      <name>OpenDocument</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>a9322de8deae115bb5fda51913d59c6cd</anchor>
+      <anchor>a5eff449f3902852670821bd96af2a081</anchor>
       <arglist>(const QByteArray *documentTypeIdPtr, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **documentPtr=NULL, FileToTypeMap *loadedMapPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>FileSave</name>
+      <name>SaveDocument</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>abca4fa8cd902b2a58e4a49bdf64034fe</anchor>
+      <anchor>af5df7dde1eb42813d5867ce5a96e1e82</anchor>
       <arglist>(int documentIndex=-1, bool requestFileName=false, FileToTypeMap *savedMapPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>FileClose</name>
+      <type>virtual bool</type>
+      <name>SaveDirtyDocuments</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>aafbd5258e1649b7f4755f29e740da1cd</anchor>
-      <arglist>(int documentIndex=-1, bool *ignoredPtr=NULL)</arglist>
+      <anchor>acc6c57c45b873d416c427853b11d2777</anchor>
+      <arglist>(bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CloseDocument</name>
+      <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
+      <anchor>a400888ac32c068ce273bce95b4e1fd08</anchor>
+      <arglist>(int documentIndex=-1, bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CloseCurrentView</name>
+      <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
+      <anchor>aa9c6064f3034c7fcc110335be7a77148</anchor>
+      <arglist>(bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>istd::TDelPtr&lt; istd::IChangeable &gt;</type>
@@ -25442,17 +25456,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>QList&lt; ViewPtr &gt;</type>
+      <type>QList&lt; ViewInfo &gt;</type>
       <name>Views</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>a323464bacb46ca087abe82d5686f77c0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>QList&lt; QByteArray &gt;</type>
-      <name>ViewTypeIds</name>
-      <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>a93fd2a0b38352b4e4d6fa74532e809de</anchor>
+      <anchor>aa74f65a55c8b187c14d098786a4cca36</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -25554,10 +25561,10 @@
       <arglist>(const QByteArray &amp;documentTypeId) const =0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>QueryDocumentClose</name>
+      <type>virtual bool</type>
+      <name>QueryDocumentSave</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>aecd55f724297c9b24ae7a0decd94a8d5</anchor>
+      <anchor>a73e8ae98de3d2f8216de50b8beb916ed</anchor>
       <arglist>(const SingleDocumentData &amp;info, bool *ignoredPtr)=0</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -25571,7 +25578,7 @@
   <compound kind="struct">
     <name>idoc::CMultiDocumentManagerBase::SingleDocumentData</name>
     <filename>structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html</filename>
-    <base>imod::CSingleModelObserverBase</base>
+    <base>imod::CMultiModelObserverBase</base>
     <member kind="function">
       <type></type>
       <name>SingleDocumentData</name>
@@ -25607,19 +25614,30 @@
       <anchor>a27ff5cb2b60c54a4d1463abe26936f7c</anchor>
       <arglist></arglist>
     </member>
-    <member kind="variable">
-      <type>ViewTypeIds</type>
-      <name>viewTypeIds</name>
-      <anchorfile>structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html</anchorfile>
-      <anchor>a3005b1ae083d7c1c400d4dd94b88d487</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html</anchorfile>
-      <anchor>a8bb6f3d6ec203a530581ef6e0f628773</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>a985b7d495cd63f2d76fe82438293846f</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>idoc::CMultiDocumentManagerBase::ViewInfo</name>
+    <filename>structidoc_1_1_c_multi_document_manager_base_1_1_view_info.html</filename>
+    <member kind="variable">
+      <type>ViewPtr</type>
+      <name>viewPtr</name>
+      <anchorfile>structidoc_1_1_c_multi_document_manager_base_1_1_view_info.html</anchorfile>
+      <anchor>a6967b87481b27a81070085be92bb55f5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QByteArray</type>
+      <name>viewTypeId</name>
+      <anchorfile>structidoc_1_1_c_multi_document_manager_base_1_1_view_info.html</anchorfile>
+      <anchor>a6c9b9cd8fbc412f63d18d51dbcdaeaed</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -25892,31 +25910,45 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>FileNew</name>
+      <name>InsertNewDocument</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>a6adff9952e92fdac46f02c74ae443cf0</anchor>
+      <anchor>ac002abd457ff05fdc83c8afae3902cae</anchor>
       <arglist>(const QByteArray &amp;documentTypeId, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **newDocumentPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>FileOpen</name>
+      <name>OpenDocument</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>a36179f899927d8fbfb74ed3ea963a43a</anchor>
+      <anchor>a6af23f61a992bfccda507956f08e123a</anchor>
       <arglist>(const QByteArray *documentTypeIdPtr, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **documentPtr=NULL, FileToTypeMap *loadedMapPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>FileSave</name>
+      <name>SaveDocument</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>a796ff18e1f4a3339776748cf6f202d77</anchor>
+      <anchor>aa69fc1a688f70a4418a053a450d3f3dc</anchor>
       <arglist>(int documentIndex=-1, bool requestFileName=false, FileToTypeMap *savedMapPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>FileClose</name>
+      <type>virtual bool</type>
+      <name>SaveDirtyDocuments</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>a24bf55bef8ff4e7e70cdfc18fc70032f</anchor>
-      <arglist>(int documentIndex=-1, bool *ignoredPtr=NULL)</arglist>
+      <anchor>a2e7b5ae2bb29df3dd56e61ace9419d51</anchor>
+      <arglist>(bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CloseDocument</name>
+      <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
+      <anchor>af8296b88f9a5fe6f1f4183ed2b6a5862</anchor>
+      <arglist>(int documentIndex=-1, bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CloseCurrentView</name>
+      <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
+      <anchor>aa09de6aebaba063b4182e5fbc7891d0b</anchor>
+      <arglist>(bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -25975,10 +26007,10 @@
       <arglist>(const QByteArray &amp;documentTypeId) const =0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>QueryDocumentClose</name>
+      <type>virtual bool</type>
+      <name>QueryDocumentSave</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>a449da5685bf4c85013b6fb6cc78ea47c</anchor>
+      <anchor>a4b17f838c4f76608271a204ac0b2afc7</anchor>
       <arglist>(bool *ignoredPtr)=0</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -26421,31 +26453,45 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
-      <name>FileNew</name>
+      <name>InsertNewDocument</name>
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a020453dc791e153882ec96bdad062056</anchor>
+      <anchor>a23d616bc99dd8d37aae275cebbcdc4d3</anchor>
       <arglist>(const QByteArray &amp;documentTypeId, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **newDocumentPtr=NULL)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
-      <name>FileOpen</name>
+      <name>OpenDocument</name>
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>acf8d20ab44ed7c4d090f25df0b5898b4</anchor>
+      <anchor>ae41bc6c65bdd3acc9fd835a8bb189c41</anchor>
       <arglist>(const QByteArray *documentTypeIdPtr=NULL, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **documentPtr=NULL, FileToTypeMap *loadedMapPtr=NULL)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
-      <name>FileSave</name>
+      <name>SaveDocument</name>
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a404be3aa6734a8a787b764d76fb94250</anchor>
+      <anchor>afff6a0ce9d63789e8dfb95dbb8fb2fdc</anchor>
       <arglist>(int documentIndex=-1, bool requestFileName=false, FileToTypeMap *savedMapPtr=NULL)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>FileClose</name>
+      <type>virtual bool</type>
+      <name>SaveDirtyDocuments</name>
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a333b6a7c4cc31479099a1f35de46b777</anchor>
-      <arglist>(int documentIndex=-1, bool *ignoredPtr=NULL)=0</arglist>
+      <anchor>ade941137205a834687bfef8d61ffeae8</anchor>
+      <arglist>(bool beQuiet=false, bool *ignoredPtr=NULL)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>CloseDocument</name>
+      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
+      <anchor>aecdcf733c25c32c92f20b42b73754e72</anchor>
+      <arglist>(int documentIndex=-1, bool beQuiet=false, bool *ignoredPtr=NULL)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>CloseCurrentView</name>
+      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
+      <anchor>a0c25044c53ff043006b7395089fd6d57</anchor>
+      <arglist>(bool beQuiet=false, bool *ignoredPtr=NULL)=0</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -35495,9 +35541,9 @@
     </member>
     <member kind="function">
       <type>bool</type>
-      <name>OpenDocument</name>
+      <name>OpenFile</name>
       <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>ac81e77932cd2ff8853628242ed1a7360</anchor>
+      <anchor>a31f2c1f8f7b3fea27fc63f5f9fc0f1e1</anchor>
       <arglist>(const QString &amp;filePath)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -35684,9 +35730,9 @@
     </member>
     <member kind="function">
       <type>bool</type>
-      <name>OpenDocument</name>
+      <name>OpenFile</name>
       <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a0c3fa018f14f2df9b3e68c5304c0906d</anchor>
+      <anchor>a24b4e38d078b10f31fe04f0aa4bdae12</anchor>
       <arglist>(const QString &amp;filePath)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -38045,6 +38091,13 @@
       <anchor>a63cbe408485a2192532c60e110a1bcd9</anchor>
       <arglist>(const QWidget &amp;widget) const </arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>int</type>
+      <name>GetDocumentIndexFromWidget</name>
+      <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
+      <anchor>a810ccd4ffeb7daa9e7bf876e34980bf8</anchor>
+      <arglist>(const QWidget &amp;widget) const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>CreateConnections</name>
@@ -38123,10 +38176,10 @@
       <arglist>(istd::IPolymorphic *viewPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>QueryDocumentClose</name>
+      <type>virtual bool</type>
+      <name>QueryDocumentSave</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a5344342f2ea5097196611999a60763d0</anchor>
+      <anchor>a765391a61a2b335d598ae90cdf9f95c6</anchor>
       <arglist>(const SingleDocumentData &amp;info, bool *ignoredPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -38257,10 +38310,10 @@
       <arglist>(istd::IPolymorphic *viewPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>QueryDocumentClose</name>
+      <type>virtual bool</type>
+      <name>QueryDocumentSave</name>
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a1046da2b255150f27e0d125ed088b207</anchor>
+      <anchor>a8ff556b0bf7a11a033fc2401bf0c84c5</anchor>
       <arglist>(bool *ignoredPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -46448,6 +46501,13 @@
       <anchorfile>classistd_1_1_c_system.html</anchorfile>
       <anchor>ada9991b256aadaf6f980523719629460</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>ConvertToFileName</name>
+      <anchorfile>classistd_1_1_c_system.html</anchorfile>
+      <anchor>abfc3277a11613906ce179021643acaa9</anchor>
+      <arglist>(const QString &amp;fileNameString, QString &amp;fileName, const QString replacingChar=QString())</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static QString</type>

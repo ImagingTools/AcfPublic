@@ -63,7 +63,7 @@ public:
 
 	bool Flush();
 
-	bool OpenDocument(const QString& filePath);
+	bool OpenFile(const QString& filePath);
 
 	// reimplemented (iser::IArchive)
 	virtual bool IsTagSkippingSupported() const;

@@ -39,10 +39,11 @@ void CPatternTeachingControllerGuiComp::on_LearnButton_clicked()
 	Q_ASSERT(objectPtr != NULL);
 
 	if (objectPtr->IsPatternValid()){
-		int result = QMessageBox::question(NULL, 
-			tr("Replace pattern"),
-			tr("The pattern data exists already. Do you want to replace them?"),
-			QMessageBox::Ok | QMessageBox::Cancel);
+		int result = QMessageBox::question(
+					GetQtWidget(), 
+					tr("Replace pattern"),
+					tr("The pattern data exists already. Do you want to replace them?"),
+					QMessageBox::Ok | QMessageBox::Cancel);
 
 		if (result != QMessageBox::Ok){
 			return;
@@ -50,9 +51,10 @@ void CPatternTeachingControllerGuiComp::on_LearnButton_clicked()
 	}
 
 	if (!objectPtr->TeachPattern()){
-		QMessageBox::critical(NULL,
-			tr("Error"), 
-			tr("Cannot learn pattern"));
+		QMessageBox::critical(
+					GetQtWidget(),
+					tr("Error"), 
+					tr("Cannot learn pattern"));
 
 		return;
 	}

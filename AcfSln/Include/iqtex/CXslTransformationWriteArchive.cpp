@@ -83,7 +83,7 @@ CXslTransformationWriteArchive::CXslTransformationWriteArchive(
 	m_isSeparatorNeeded(false)
 {
 	if (!filePath.isEmpty()){
-		OpenDocument(filePath, xslFilePath);
+		OpenFile(filePath, xslFilePath);
 	}
 }
 
@@ -130,7 +130,7 @@ bool CXslTransformationWriteArchive::Flush()
 }
 
 
-bool CXslTransformationWriteArchive::OpenDocument(const QString& filePath, const QString& xslFilePath)
+bool CXslTransformationWriteArchive::OpenFile(const QString& filePath, const QString& xslFilePath)
 {
 	bool retVal = true;
 

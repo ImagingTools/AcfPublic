@@ -26,6 +26,7 @@
 // ACF includes
 #include "i2d/CDirection2d.h"
 #include "iprm/TParamsPtr.h"
+#include "icmm/CVarColor.h"
 #include "icmm/CRgbToHsvTranformation.h"
 #include "icmm/CRgb.h"
 

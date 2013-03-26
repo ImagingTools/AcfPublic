@@ -226,9 +226,9 @@ I_EXPORT_COMPONENT(
 			"Multi Line Projection Supplier")
 
 I_EXPORT_COMPONENT(
-			SelectableCalibrationSupplier, 
+			SelectableCalibrationProvider, 
 			"Provider of a single (selected) calibration from a list of calibrations",
-			"Multi Single Calibration Supplier Provider" IM_AUTHOR("\"Kirill Lepskiy\""));
+			"Multi Single Calibration Provider" IM_AUTHOR("\"Kirill Lepskiy\""));
 
 I_EXPORT_COMPONENT(
 			CheckerboardPatternGenerator, 
@@ -251,14 +251,19 @@ I_EXPORT_COMPONENT(
 			"Pattern Color Matching Compare" IM_AUTHOR("\"Kirill Lepskiy\""));
 
 I_EXPORT_COMPONENT(
-				   ImageHistogramSupplier,
-				   "Image histogram supplier",
-				   "Image Bitmap Histogram Statistics" IM_AUTHOR("\"Kirill Lepskiy\""));
+			ImageHistogramSupplier,
+			"Image histogram supplier",
+			"Image Bitmap Histogram Statistics" IM_AUTHOR("\"Kirill Lepskiy\""));
 
 I_EXPORT_COMPONENT(
-				   FastGaussianProcessor,
-				   "Fast Gaussian processor with statically defined kernel",
-				   "Filter Smoothing Convolution Gaussian Blur" IM_AUTHOR("\"Kirill Lepskiy\""));
+			FastGaussianProcessor,
+			"Fast Gaussian processor with statically defined kernel",
+			"Filter Smoothing Convolution Gaussian Blur" IM_AUTHOR("\"Kirill Lepskiy\""));
+
+I_EXPORT_COMPONENT(
+			AutoImageNormalizeProcessor,
+			"Histogram based automatic image normalization",
+			"Histogram Normalization Contrast Enhancing Equalization" IM_AUTHOR("\"Kirill Lepskiy\""));
 
 
 } // namespace IprPck

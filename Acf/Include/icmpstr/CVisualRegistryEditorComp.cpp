@@ -162,7 +162,7 @@ bool CVisualRegistryEditorComp::TryOpenComponent(const CVisualRegistryElement& r
 
 				QString filePath = packageDir.absoluteFilePath(componentId + ".arx");
 
-				m_documentManagerCompPtr->FileOpen(NULL, &filePath);
+				m_documentManagerCompPtr->OpenDocument(NULL, &filePath);
 
 				return true;
 			}
@@ -621,7 +621,7 @@ bool CVisualRegistryEditorComp::OnDropObject(const QMimeData& mimeData, QGraphic
 			return true;
 		}
 		else{
-			QMessageBox::critical(NULL, tr("Error"), tr("Component could not be added")); 
+			QMessageBox::critical(GetQtWidget(), tr("Error"), tr("Component could not be added")); 
 		}
 	}
 
@@ -970,7 +970,7 @@ void CVisualRegistryEditorComp::OnPasteCommand()
 	retVal = retVal && archive.EndTag(s_elementsListTag);
 
 	if (hasErrors){
-		QMessageBox::critical(NULL, tr("Error"), tr("Some components could not be added")); 
+		QMessageBox::critical(GetQtWidget(), tr("Error"), tr("Some components could not be added")); 
 	}
 }
 
@@ -1041,7 +1041,7 @@ void CVisualRegistryEditorComp::NewEmbeddedComponent()
 
 	icomp::IRegistry* newEmbeddedRegistryPtr = registryPtr->InsertEmbeddedRegistry(newName);
 	if (newEmbeddedRegistryPtr == NULL){
-		QMessageBox::critical(NULL, tr("Error"), tr("Embedded component could not be created!")); 
+		QMessageBox::critical(GetQtWidget(), tr("Error"), tr("Embedded component could not be created!")); 
 		return;
 	}
 }
@@ -1068,7 +1068,7 @@ void CVisualRegistryEditorComp::ToEmbeddedComponent()
 
 	icomp::IRegistry* newEmbeddedRegistryPtr = registryPtr->InsertEmbeddedRegistry(newName);
 	if (newEmbeddedRegistryPtr == NULL){
-		QMessageBox::critical(NULL, tr("Error"), tr("Embedded component could not be created!")); 
+		QMessageBox::critical(GetQtWidget(), tr("Error"), tr("Embedded component could not be created!")); 
 		return;
 	}
 
@@ -1143,7 +1143,7 @@ void CVisualRegistryEditorComp::ToEmbeddedComponent()
 		}
 	}
 	else{
-		QMessageBox::critical(NULL, tr("Error"), tr("Component could not be added")); 
+		QMessageBox::critical(GetQtWidget(), tr("Error"), tr("Component could not be added")); 
 		return;
 	}
 }
@@ -1171,7 +1171,7 @@ void CVisualRegistryEditorComp::OnExportToCode()
 		QString file = QFileDialog::getSaveFileName(NULL, tr("Export registry to code"), "", filter);
 		if (!file.isEmpty()){
 			if (m_registryCodeSaverCompPtr->SaveToFile(*registryPtr, file) == iser::IFileLoader::StateFailed){
-				QMessageBox::warning(NULL, tr("Error"), tr("Cannot export to file\n%1").arg(file));
+				QMessageBox::warning(GetQtWidget(), tr("Error"), tr("Cannot export to file\n%1").arg(file));
 			}
 		}
 	}

@@ -51,6 +51,8 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef QMap&lt; QString, QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_system.html#ada9991b256aadaf6f980523719629460">EnvironmentVariables</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_system.html#abfc3277a11613906ce179021643acaa9">ConvertToFileName</a> (const QString &amp;fileNameString, QString &amp;fileName, const QString replacingChar=QString())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a valid file name from a string.  <a href="#abfc3277a11613906ce179021643acaa9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_system.html#a8c2c4d447f3a9255e628d2cfb6c737c8">GetNormalizedPath</a> (const QString &amp;path)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get normalized path with enrolled system variables.  <a href="#a8c2c4d447f3a9255e628d2cfb6c737c8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_system.html#a586b766208d0c2190d6270f8150ff9a4">FindVariableValue</a> (const QString &amp;varName)</td></tr>
@@ -91,6 +93,50 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="abfc3277a11613906ce179021643acaa9"></a><!-- doxytag: member="istd::CSystem::ConvertToFileName" ref="abfc3277a11613906ce179021643acaa9" args="(const QString &amp;fileNameString, QString &amp;fileName, const QString replacingChar=QString())" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool istd::CSystem::ConvertToFileName </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>fileNameString</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString &amp;&#160;</td>
+          <td class="paramname"><em>fileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString&#160;</td>
+          <td class="paramname"><em>replacingChar</em> = <code>QString()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Make a valid file name from a string. </p>
+<p>All not allowed characters in the <code>fileNameString</code> will be replaced by a valid symbol defined in c or removed if this parameter is not set. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileNameString</td><td>Input string representing the file name </td></tr>
+    <tr><td class="paramname">fileName</td><td>Resulting file name if the conversion was successful. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><code>true</code> if the operation was successful, otherwise <code>false</code>. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a5e1521202395d7ed4a91a84accda949e"></a><!-- doxytag: member="istd::CSystem::EnsurePathExists" ref="a5e1521202395d7ed4a91a84accda949e" args="(const QString &amp;filePath)" -->
 <div class="memitem">
 <div class="memproto">

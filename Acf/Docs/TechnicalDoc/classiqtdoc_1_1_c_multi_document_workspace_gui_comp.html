@@ -116,6 +116,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Update titles of views or all views of specified document.  <a href="#a91d562edb64c6268c2b800d9e395eb14"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a63cbe408485a2192532c60e110a1bcd9">GetViewFromWidget</a> (const QWidget &amp;widget) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Find view object associated with specified Qt widget.  <a href="#a63cbe408485a2192532c60e110a1bcd9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a810ccd4ffeb7daa9e7bf876e34980bf8">GetDocumentIndexFromWidget</a> (const QWidget &amp;widget) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Find index of document associated with specified Qt widget.  <a href="#a810ccd4ffeb7daa9e7bf876e34980bf8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a29113bbf2ec258d89b2048d2462c96e9">CreateConnections</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates signal/slot connnections for the implementation.  <a href="#a29113bbf2ec258d89b2048d2462c96e9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#aa4860f69ec88183b22c195c5df860161">OnViewsCountChanged</a> ()</td></tr>
@@ -134,8 +136,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after view is registered.  <a href="#a903124d67c39939cc1030e1b09edaf1b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#ada320e04b54d2643207ec49f42fb59b3">OnViewRemoved</a> (<a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *viewPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before view is removed.  <a href="#ada320e04b54d2643207ec49f42fb59b3"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a5344342f2ea5097196611999a60763d0">QueryDocumentClose</a> (const <a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html">SingleDocumentData</a> &amp;info, bool *ignoredPtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Query user if this document can be closed.  <a href="#a5344342f2ea5097196611999a60763d0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a765391a61a2b335d598ae90cdf9f95c6">QueryDocumentSave</a> (const <a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html">SingleDocumentData</a> &amp;info, bool *ignoredPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Query user if this document should be saved.  <a href="#a765391a61a2b335d598ae90cdf9f95c6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a5c9420509bf5281e2e7b6a6cd0044987">OnGuiCreated</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#a5c9420509bf5281e2e7b6a6cd0044987"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a8305c96220199c63102571d512f112f1">OnGuiDestroyed</a> ()</td></tr>
@@ -154,7 +156,7 @@ Friends</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>This class is a Qt-based workspace implementation of a document manager. </p>
 
-<p>Definition at line <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html#l00034">34</a> of file <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html">CMultiDocumentWorkspaceGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html#l00032">32</a> of file <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html">CMultiDocumentWorkspaceGuiComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a9af57cbcaedadde67a849e96b49d3a96"></a><!-- doxytag: member="iqtdoc::CMultiDocumentWorkspaceGuiComp::BaseClass" ref="a9af57cbcaedadde67a849e96b49d3a96" args="" -->
 <div class="memitem">
@@ -169,7 +171,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#ae85de65726cc00d124d1cdaa63c17a95">iqtdoc::TQtDocumentManagerWrap&lt; idoc::CMultiDocumentManagerBase, iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QMdiArea &gt; &gt; &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html#l00047">47</a> of file <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html">CMultiDocumentWorkspaceGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html#l00045">45</a> of file <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html">CMultiDocumentWorkspaceGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -195,7 +197,7 @@ Friends</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html#l00064">64</a> of file <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html">CMultiDocumentWorkspaceGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html#l00062">62</a> of file <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html">CMultiDocumentWorkspaceGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -300,6 +302,32 @@ Friends</h2></td></tr>
 <p>These commands will be integrated in global menu system, independent from actual selected view. For support of normal pull down menu, depth of this tree structure should be at least 3. </p>
 
 <p>Reimplemented from <a class="el" href="classibase_1_1_i_commands_provider.html#a970c1822d91bc215e53b0e972f5b294d">ibase::ICommandsProvider</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a810ccd4ffeb7daa9e7bf876e34980bf8"></a><!-- doxytag: member="iqtdoc::CMultiDocumentWorkspaceGuiComp::GetDocumentIndexFromWidget" ref="a810ccd4ffeb7daa9e7bf876e34980bf8" args="(const QWidget &amp;widget) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int iqtdoc::CMultiDocumentWorkspaceGuiComp::GetDocumentIndexFromWidget </td>
+          <td>(</td>
+          <td class="paramtype">const QWidget &amp;&#160;</td>
+          <td class="paramname"><em>widget</em></td><td>)</td>
+          <td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Find index of document associated with specified Qt widget. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">widget</td><td>Qt widget representing view. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>index of document or negative value if nothing is found. </dd></dl>
 
 </div>
 </div>
@@ -903,12 +931,12 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5344342f2ea5097196611999a60763d0"></a><!-- doxytag: member="iqtdoc::CMultiDocumentWorkspaceGuiComp::QueryDocumentClose" ref="a5344342f2ea5097196611999a60763d0" args="(const SingleDocumentData &amp;info, bool *ignoredPtr)" -->
+<a class="anchor" id="a765391a61a2b335d598ae90cdf9f95c6"></a><!-- doxytag: member="iqtdoc::CMultiDocumentWorkspaceGuiComp::QueryDocumentSave" ref="a765391a61a2b335d598ae90cdf9f95c6" args="(const SingleDocumentData &amp;info, bool *ignoredPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iqtdoc::CMultiDocumentWorkspaceGuiComp::QueryDocumentClose </td>
+          <td class="memname">virtual bool iqtdoc::CMultiDocumentWorkspaceGuiComp::QueryDocumentSave </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html">SingleDocumentData</a> &amp;&#160;</td>
           <td class="paramname"><em>info</em>, </td>
@@ -928,7 +956,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Query user if this document can be closed. </p>
+<p>Query user if this document should be saved. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">info</td><td>document info of document will be closed. </td></tr>
@@ -937,7 +965,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#aecd55f724297c9b24ae7a0decd94a8d5">idoc::CMultiDocumentManagerBase</a>.</p>
+<p>Implements <a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a73e8ae98de3d2f8216de50b8beb916ed">idoc::CMultiDocumentManagerBase</a>.</p>
 
 </div>
 </div>
@@ -998,7 +1026,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html#l00176">176</a> of file <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html">CMultiDocumentWorkspaceGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html#l00181">181</a> of file <a class="el" href="_c_multi_document_workspace_gui_comp_8h_source.html">CMultiDocumentWorkspaceGuiComp.h</a>.</p>
 
 </div>
 </div>

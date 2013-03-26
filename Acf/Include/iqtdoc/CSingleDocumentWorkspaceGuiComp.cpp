@@ -67,7 +67,7 @@ void CSingleDocumentWorkspaceGuiComp::OnTryClose(bool* ignoredPtr)
 		}
 	}
 
-	FileClose(-1, ignoredPtr);
+	CloseDocument(-1, false, ignoredPtr);
 
 	if (ignoredPtr != NULL){
 		*ignoredPtr = (GetDocumentsCount() > 0);
@@ -151,7 +151,7 @@ void CSingleDocumentWorkspaceGuiComp::OnViewRemoved(istd::IPolymorphic* viewPtr)
 }
 
 
-void CSingleDocumentWorkspaceGuiComp::QueryDocumentClose(bool* ignoredPtr)
+bool CSingleDocumentWorkspaceGuiComp::QueryDocumentSave(bool* ignoredPtr)
 {
 	if (ignoredPtr != NULL){
 		*ignoredPtr = false;
@@ -170,23 +170,21 @@ void CSingleDocumentWorkspaceGuiComp::QueryDocumentClose(bool* ignoredPtr)
 		}
 
 		int response = QMessageBox::information(
-					NULL,
+					GetQtWidget(),
 					tr("Close document"),
 					tr("Do you want to save your changes made in document\n%1").arg(fileInfo.fileName()),
 					buttons,
 					QMessageBox::Yes);
 
 		if (response == QMessageBox::Yes){
-			bool wasSaved = FileSave();
-
-			if (ignoredPtr != NULL){
-				*ignoredPtr = !wasSaved;
-			}
+			return true;
 		}
 		else if ((ignoredPtr != NULL) && (response == QMessageBox::Cancel)){
 			*ignoredPtr = true;
 		}
 	}
+
+	return false;
 }
 
 
@@ -219,7 +217,7 @@ void CSingleDocumentWorkspaceGuiComp::OnGuiCreated()
 
 void CSingleDocumentWorkspaceGuiComp::OnGuiDestroyed()
 {
-	FileClose();
+	CloseDocument();
 
 	BaseClass::OnGuiDestroyed();
 }
@@ -236,7 +234,7 @@ void CSingleDocumentWorkspaceGuiComp::OnComponentCreated()
 	if (m_documentTemplateCompPtr.IsValid()){
 		idoc::IDocumentTemplate::Ids ids = m_documentTemplateCompPtr->GetDocumentTypeIds();
 		if (!ids.isEmpty()){
-			FileNew(ids.front());
+			InsertNewDocument(ids.front());
 		}
 	}
 }

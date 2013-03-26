@@ -134,6 +134,7 @@ void CComposedParamsSetGuiComp::OnGuiCreated()
 		case DT_TAB_WIDGET:
 			ParamsFrame->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
 			m_guiContainerPtr = tabWidgetPtr = new QTabWidget(ParamsFrame);
+			tabWidgetPtr->setTabPosition(QTabWidget::TabPosition(*m_tabOrientationAttrPtr));
 			QObject::connect(tabWidgetPtr, SIGNAL(currentChanged(int)), this, SLOT(OnEditorChanged(int)));
 			layoutPtr->addWidget(tabWidgetPtr);
 			m_currentGuiIndex = 0;
@@ -155,7 +156,6 @@ void CComposedParamsSetGuiComp::OnGuiCreated()
 	// map gui objects with their names (the container will be filled by OnGuiModelAttached())
 	int elementsCount = m_guisCompPtr.GetCount();
 	for (int i = 0; i < elementsCount; ++i){
-
 		iqtgui::IGuiObject* guiPtr = m_guisCompPtr[i];
 		if (guiPtr == NULL){
 			continue;
@@ -193,7 +193,6 @@ void CComposedParamsSetGuiComp::OnGuiDestroyed()
 
 // reimplemented (iqt2d::IViewExtender)
 
-
 void CComposedParamsSetGuiComp::AddItemsToScene(iqt2d::IViewProvider* providerPtr, int flags)
 {
 	Q_ASSERT(providerPtr != NULL);
@@ -215,7 +214,6 @@ void CComposedParamsSetGuiComp::RemoveItemsFromScene(iqt2d::IViewProvider* provi
 
 
 // protected methods
-
 
 void CComposedParamsSetGuiComp::AttachToScene(iqt2d::IViewProvider* providerPtr, int flags)
 {
@@ -288,7 +286,6 @@ void CComposedParamsSetGuiComp::DetachFromScene(iqt2d::IViewProvider* providerPt
 
 
 // reimplemented (imod::IObserver)
-
 
 void CComposedParamsSetGuiComp::OnGuiModelAttached()
 {

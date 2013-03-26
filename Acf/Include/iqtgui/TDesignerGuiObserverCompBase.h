@@ -42,7 +42,7 @@ namespace iqtgui
 
 
 /**
-	Base class for all Qt GUI componentes.
+	Base class for all Qt GUI components.
 
 	\ingroup ModelObserver
  */

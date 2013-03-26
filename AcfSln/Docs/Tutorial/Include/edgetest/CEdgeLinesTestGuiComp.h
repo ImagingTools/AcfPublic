@@ -24,9 +24,6 @@
 #define edgetest_CHelloWorldGuiComp_included
 
 
-//Qt includes
-#include <QtGui/QMessageBox>
-
 // ACF includes
 #include "iqtgui/TDesignerGuiCompBase.h" 
 #include "iqt2d/TViewExtenderCompBase.h"

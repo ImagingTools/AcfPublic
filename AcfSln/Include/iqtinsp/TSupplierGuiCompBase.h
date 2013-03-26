@@ -309,8 +309,8 @@ bool TSupplierGuiCompBase<UI, WidgetType>::LoadParams()
 				return true;
 			}
 			else{
-				QMessageBox::information(
-							NULL,
+				QMessageBox::warning(
+							BaseClass::GetQtWidget(),
 							QObject::tr("Error"),
 							QObject::tr("Cannot load parameters"));
 			}
@@ -332,8 +332,8 @@ bool TSupplierGuiCompBase<UI, WidgetType>::SaveParams()
 				return true;
 			}
 			else{
-				QMessageBox::information(
-							NULL,
+				QMessageBox::warning(
+							BaseClass::GetQtWidget(),
 							QObject::tr("Error"),
 							QObject::tr("Cannot save parameters"));
 			}

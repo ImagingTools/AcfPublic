@@ -755,6 +755,15 @@
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
+    <name>CAutoImageNormalizeProcessorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_auto_image_normalize_processor_comp_8h</filename>
+    <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
+    <includes id="_c_image_processor_comp_base_8h" name="CImageProcessorCompBase.h" local="yes" imported="no">iipr/CImageProcessorCompBase.h</includes>
+    <class kind="class">iipr::CAutoImageNormalizeProcessorComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CBitmapJoinerSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_bitmap_joiner_supplier_comp_8h</filename>
@@ -1283,11 +1292,10 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
-    <name>CSelectableCalibrationSupplierComp.h</name>
+    <name>CSelectableCalibrationProviderComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
-    <filename>_c_selectable_calibration_supplier_comp_8h</filename>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
-    <class kind="class">iipr::CSelectableCalibrationSupplierComp</class>
+    <filename>_c_selectable_calibration_provider_comp_8h</filename>
+    <class kind="class">iipr::CSelectableCalibrationProviderComp</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -2525,14 +2533,6 @@
     <filename>_c_media_loader_comp_8h</filename>
     <includes id="iqtmm_8h" name="iqtmm.h" local="yes" imported="no">iqtmm/iqtmm.h</includes>
     <class kind="class">iqtmm::CMediaLoaderComp</class>
-    <namespace>iqtmm</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CPhononVideoViewGuiComp.h</name>
-    <path>C:/Temp/AcfSln/Include/iqtmm/</path>
-    <filename>_c_phonon_video_view_gui_comp_8h</filename>
-    <includes id="_i_video_controller_8h" name="IVideoController.h" local="yes" imported="no">imm/IVideoController.h</includes>
-    <class kind="class">iqtmm::CPhononVideoViewGuiComp</class>
     <namespace>iqtmm</namespace>
   </compound>
   <compound kind="file">
@@ -7870,6 +7870,7 @@
   <compound kind="namespace">
     <name>iipr</name>
     <filename>namespaceiipr.html</filename>
+    <class kind="class">iipr::CAutoImageNormalizeProcessorComp</class>
     <class kind="class">iipr::CBitmapJoinerSupplierComp</class>
     <class kind="class">iipr::CBitmapOperations</class>
     <class kind="class">iipr::CBitmapProviderCacheComp</class>
@@ -7924,7 +7925,7 @@
     <class kind="class">iipr::CSearchFeature</class>
     <class kind="class">iipr::CSearchParams</class>
     <class kind="class">iipr::CSearchParamsComp</class>
-    <class kind="class">iipr::CSelectableCalibrationSupplierComp</class>
+    <class kind="class">iipr::CSelectableCalibrationProviderComp</class>
     <class kind="class">iipr::CSingleFeatureConsumer</class>
     <class kind="class">iipr::CTubeProjectionLinesProviderComp</class>
     <class kind="class">iipr::CTubeProjectionsGenerator</class>
@@ -7970,6 +7971,25 @@
       <anchorfile>namespaceiipr.html</anchorfile>
       <anchor>a310caaf2e3e829aef8247d0eb1e37aada28eae46bbb14021d34f46b02f4ecc45f</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CAutoImageNormalizeProcessorComp</name>
+    <filename>classiipr_1_1_c_auto_image_normalize_processor_comp.html</filename>
+    <base>iipr::CImageProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iipr::CImageProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_auto_image_normalize_processor_comp.html</anchorfile>
+      <anchor>a30932dcadedb53a49e5dec6e6c7183cc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ProcessImage</name>
+      <anchorfile>classiipr_1_1_c_auto_image_normalize_processor_comp.html</anchorfile>
+      <anchor>aecb157d7d2edaba7721a2f7d4f63344c</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -11046,65 +11066,23 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iipr::CSelectableCalibrationSupplierComp</name>
-    <filename>classiipr_1_1_c_selectable_calibration_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; istd::TDelPtr&lt; i2d::ICalibration2d &gt; &gt;</base>
+    <name>iipr::CSelectableCalibrationProviderComp</name>
+    <filename>classiipr_1_1_c_selectable_calibration_provider_comp.html</filename>
+    <base>ibase::TLoggerCompWrap</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; istd::TDelPtr&lt; i2d::ICalibration2d &gt; &gt;</type>
+      <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_c_selectable_calibration_supplier_comp.html</anchorfile>
-      <anchor>aa5ddff824c03fb2d710c811cc6f705b3</anchor>
+      <anchorfile>classiipr_1_1_c_selectable_calibration_provider_comp.html</anchorfile>
+      <anchor>ade340c84a618d3d6fd04012aeb2d5d55</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_selectable_calibration_supplier_comp.html</anchorfile>
-      <anchor>a8709b6001196331967d7c4a063cdbad3</anchor>
-      <arglist>(m_multiCalibrationSupplierCompPtr, m_multiCalibrationProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_selectable_calibration_supplier_comp.html</anchorfile>
-      <anchor>ab511a8a80aeb5de4cab14ac123e61f2e</anchor>
-      <arglist>(m_multiCalibrationProviderModelCompPtr, m_multiCalibrationProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_selectable_calibration_supplier_comp.html</anchorfile>
-      <anchor>a688d6fc570dec61e5033373b015e3c9f</anchor>
-      <arglist>(m_calibrationSelectionModelCompPtr, m_calibrationSelectionCompPtr, true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const i2d::ICalibration2d *</type>
       <name>GetCalibration</name>
-      <anchorfile>classiipr_1_1_c_selectable_calibration_supplier_comp.html</anchorfile>
-      <anchor>a13ec002f62073bce83ce76696615dbbe</anchor>
+      <anchorfile>classiipr_1_1_c_selectable_calibration_provider_comp.html</anchorfile>
+      <anchor>ac120bb0e5c77f25114fecb126b09435a</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual int</type>
-      <name>ProduceObject</name>
-      <anchorfile>classiipr_1_1_c_selectable_calibration_supplier_comp.html</anchorfile>
-      <anchor>aba16f795f9d942bfaf8707d1c73bf245</anchor>
-      <arglist>(ProductType &amp;result) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiipr_1_1_c_selectable_calibration_supplier_comp.html</anchorfile>
-      <anchor>ac348f3906ae5318ce23dd2ba66c3c005</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiipr_1_1_c_selectable_calibration_supplier_comp.html</anchorfile>
-      <anchor>a86d0284fef41b76ff62cd2eb1fb4b6bb</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -17362,9 +17340,9 @@
     </member>
     <member kind="function">
       <type>bool</type>
-      <name>OpenDocument</name>
+      <name>OpenFile</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>a77627f97fe8ccb3d9282cfdcc78f6ef5</anchor>
+      <anchor>aaed5a0f06fd2349a37513592b0ab4641</anchor>
       <arglist>(const QString &amp;filePath, const QString &amp;xslFilePath)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -17551,9 +17529,9 @@
     </member>
     <member kind="function">
       <type>bool</type>
-      <name>OpenDocument</name>
+      <name>OpenFile</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>a318544fdc25e04fe31fb1fcff9d75dc7</anchor>
+      <anchor>a30bb9954577292c1cdc64451032c78c0</anchor>
       <arglist>(const QString &amp;filePath, const QString &amp;xslFilePath)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -17944,16 +17922,44 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>on_LoadParamsButton_clicked</name>
+      <name>OnLoadParams</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a9e8ba6d29f90019a62f7419cb45b446f</anchor>
+      <anchor>ad57d346d313ce25fa7e154a47d8df439</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>on_SaveParamsButton_clicked</name>
+      <name>OnSaveParams</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>af94b0c396c2dba3ac4fb78412e34bb06</anchor>
+      <anchor>afd406ff1531b6f4f709b625c5e3514e4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnCopyAll</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>aab0dbd12453e8e3df4a726be88b8bf00</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnPasteAll</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a060fe48e4eb46eab7588c6d8b9cb85b7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnCopyCurrent</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a435c23b82dc97500f7e8415da80a2083</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnPasteCurrent</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a2c149da9f263858cd86a4ae576ac037f</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -19482,7 +19488,6 @@
     <filename>namespaceiqtmm.html</filename>
     <class kind="class">iqtmm::CFrameSeqVideoControllerComp</class>
     <class kind="class">iqtmm::CMediaLoaderComp</class>
-    <class kind="class">iqtmm::CPhononVideoViewGuiComp</class>
     <class kind="class">iqtmm::CPlaybackControllerGuiComp</class>
     <class kind="class">iqtmm::CSvgBitmapLoaderComp</class>
     <class kind="class">iqtmm::CVideoPlayerGuiComp</class>
@@ -19720,166 +19725,6 @@
       <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
       <anchor>a68e82ca744a339da34c4ce76404a08c2</anchor>
       <arglist>(const QString *extensionPtr=NULL) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtmm::CPhononVideoViewGuiComp</name>
-    <filename>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</filename>
-    <base>TGuiComponentBase&lt; Phonon::VideoWidget &gt;</base>
-    <base virtualness="virtual">imm::IVideoController</base>
-    <member kind="typedef">
-      <type>iqtgui::TGuiComponentBase&lt; Phonon::VideoWidget &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a9088fe245c6c967e4ee4fd1a37df8774</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CPhononVideoViewGuiComp</name>
-      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a96e2e6a4025d3ea8b11c190f7ec99a73</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetOpenedMediumUrl</name>
-      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>ac88b96fbd15fc66b02a452f41e4c7994</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OpenMediumUrl</name>
-      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a95b63aefe32dc0a57a57b63efbcbe54a</anchor>
-      <arglist>(const QString &amp;url, bool autoPlay=true)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>CloseMedium</name>
-      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a44f77de152106e7738b3456d926967de</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsPlaying</name>
-      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a9bee80d9722798174ea8e1ca9dd9034a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetPlaying</name>
-      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>af269d00721bce3bce9b183fa3bcf6c39</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetMediumLength</name>
-      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a5d4a19d4e6db80c489abf790870a86dd</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetCurrentPosition</name>
-      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a8f6da23b7fba501ba9bdf1c0a553a043</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetCurrentPosition</name>
-      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>aea02b2fb7cddfdb4db95b7982fb6912b</anchor>
-      <arglist>(double position)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSupportedFeatures</name>
-      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>ad360b005839154a6d9fcf5c3246baa76</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetFramesCount</name>
-      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>ac47c96dc12ca7265fd2be9dcd0725ed8</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetFrameIntervall</name>
-      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a2efbae309243ab4c7e755174ca2be2a0</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CIndex2d</type>
-      <name>GetFrameSize</name>
-      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a196e370e974c8892505ec04c41f6043c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetPixelAspectRatio</name>
-      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>aefc3efd8d486d4cd36088a1ba353fac0</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetCurrentFrame</name>
-      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>aa709c8e2b5a7426670dd1def9c2de47f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetCurrentFrame</name>
-      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a18656f4f4d7a10833cc741ae0179c56c</anchor>
-      <arglist>(int frameIndex)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetFileExtensions</name>
-      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a377068730bf34b0f942a2cdd6fbd7111</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetTypeDescription</name>
-      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a238262b71af88b744ab1460ad825b101</anchor>
-      <arglist>(const QString *extensionPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>EnsureSync</name>
-      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>ab8dafdf880548a160a6de8a07af19915</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a75c2c90f9a9798ba86d8756373fbb286</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtmm_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>adb4dc62a34d7001c31be54a60f3f404a</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

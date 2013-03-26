@@ -24,6 +24,9 @@
 #define icam_CMultiCameraBitmapSupplierComp_included
 
 
+// Qt includes
+#include <QtCore/QMutex>
+
 // ACF includes
 #include "istd/TDelPtr.h"
 #include "istd/TPointerVector.h"
@@ -97,6 +100,9 @@ private:
 		Camera parameters.
 	*/
 	I_REF(iprm::IParamsManager, m_cameraParamsManagerCompPtr);
+
+	// security mutex
+	mutable QMutex m_lock;
 };
 
 

@@ -68,15 +68,14 @@
 #include "iipr/CTubeProjectionLinesProviderComp.h"
 #include "iipr/CMorphologicalProcessorComp.h"
 #include "iipr/CMultiLineProjectionSupplierComp.h"
-#include "iipr/CSelectableCalibrationSupplierComp.h"
+#include "iipr/CSelectableCalibrationProviderComp.h"
 #include "iipr/CCheckerboardPatternGeneratorComp.h"
 #include "iipr/CImageFlipProcessorComp.h"
 #include "iipr/CColorPatternControllerComp.h"
 #include "iipr/CColorPatternComparatorComp.h"
 #include "iipr/CImageHistogramSupplierComp.h"
 #include "iipr/CFastGaussianProcessorComp.h"
-
-//#include "iipr/CImageAffineTransformProcessorComp.h"
+#include "iipr/CAutoImageNormalizeProcessorComp.h"
 
 
 /**
@@ -141,16 +140,14 @@ typedef iipr::CMorphologicalProcessorComp MorphologicalProcessor;
 typedef icomp::TModelCompWrap<
 			iipr::CMultiLineProjectionSupplierComp> MultiLineProjectionSupplier;
 typedef icomp::TModelCompWrap<
-			iipr::CSelectableCalibrationSupplierComp> SelectableCalibrationSupplier;
+			iipr::CSelectableCalibrationProviderComp> SelectableCalibrationProvider;
 typedef iipr::CCheckerboardPatternGeneratorComp CheckerboardPatternGenerator;
 typedef iipr::CImageFlipProcessorComp ImageFlipProcessor;
 typedef icomp::TModelCompWrap<iipr::CColorPatternControllerComp> ColorPatternController;
 typedef icomp::TModelCompWrap<iipr::CColorPatternComparatorComp> ColorPatternComparator;
 typedef icomp::TModelCompWrap<iipr::CImageHistogramSupplierComp> ImageHistogramSupplier;
 typedef iipr::CFastGaussianProcessorComp FastGaussianProcessor;
-
-
-//typedef iipr::CImageAffineTransformProcessorComp ImageAffineTransformProcessor;
+typedef iipr::CAutoImageNormalizeProcessorComp AutoImageNormalizeProcessor;
 
 
 } // namespace IprPck
