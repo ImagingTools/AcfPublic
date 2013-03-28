@@ -29,6 +29,11 @@
 #include <QtCore/QMap>
 
 
+#if defined(Sleep)
+#undef Sleep
+#endif
+
+
 namespace istd
 {
 

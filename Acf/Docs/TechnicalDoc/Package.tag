@@ -4788,16 +4788,6 @@
     <namespace>iqtprm</namespace>
   </compound>
   <compound kind="file">
-    <name>CComboParamsManagerGuiComp.h</name>
-    <path>C:/Temp/Acf/Include/iqtprm/</path>
-    <filename>_c_combo_params_manager_gui_comp_8h</filename>
-    <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
-    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <class kind="class">iqtprm::CComboParamsManagerGuiComp</class>
-    <namespace>iqtprm</namespace>
-  </compound>
-  <compound kind="file">
     <name>CComposedParamsSetGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtprm/</path>
     <filename>_c_composed_params_set_gui_comp_8h</filename>
@@ -41555,7 +41545,6 @@
     <name>iqtprm</name>
     <filename>namespaceiqtprm.html</filename>
     <class kind="class">iqtprm::CButtonBasedSelectionParamGuiComp</class>
-    <class kind="class">iqtprm::CComboParamsManagerGuiComp</class>
     <class kind="class">iqtprm::CComposedParamsSetGuiComp</class>
     <class kind="class">iqtprm::CEnableableParamGuiComp</class>
     <class kind="class">iqtprm::CFileNameParamGuiComp</class>
@@ -41609,81 +41598,6 @@
       <anchorfile>classiqtprm_1_1_c_button_based_selection_param_gui_comp.html</anchorfile>
       <anchor>a132d894e3cc5d99469f15fbabf83b45f</anchor>
       <arglist>(int updateFlags=0)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtprm::CComboParamsManagerGuiComp</name>
-    <filename>classiqtprm_1_1_c_combo_params_manager_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CComboParamsManagerGuiComp, iprm::IParamsManager &gt;</base>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CComboParamsManagerGuiComp, iprm::IParamsManager &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtprm_1_1_c_combo_params_manager_gui_comp.html</anchorfile>
-      <anchor>a2804e57335ff222872be6774ea281968</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtprm_1_1_c_combo_params_manager_gui_comp.html</anchorfile>
-      <anchor>aec743436a87ddf6b0892cc1308b34fb0</anchor>
-      <arglist>(m_selectionObserverCompPtr, m_selectionGuiCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CComboParamsManagerGuiComp</name>
-      <anchorfile>classiqtprm_1_1_c_combo_params_manager_gui_comp.html</anchorfile>
-      <anchor>a5bfccc666f9db75c5f002dd1e9799e4f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateParamsView</name>
-      <anchorfile>classiqtprm_1_1_c_combo_params_manager_gui_comp.html</anchorfile>
-      <anchor>a194213c4cd136048f6b43cbb62445da1</anchor>
-      <arglist>(int selectedIndex)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>EnsureParamsGuiDetached</name>
-      <anchorfile>classiqtprm_1_1_c_combo_params_manager_gui_comp.html</anchorfile>
-      <anchor>a1a62acbf8d3ee84fd333793c80aff30c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classiqtprm_1_1_c_combo_params_manager_gui_comp.html</anchorfile>
-      <anchor>a9f95dce7701f6b8c0ac30c54aee1f23e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classiqtprm_1_1_c_combo_params_manager_gui_comp.html</anchorfile>
-      <anchor>a155e054cc91db41518db164c948bcce4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiqtprm_1_1_c_combo_params_manager_gui_comp.html</anchorfile>
-      <anchor>a1d982e035e744f188e358156e5f53b04</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtprm_1_1_c_combo_params_manager_gui_comp.html</anchorfile>
-      <anchor>a31f7cffc035e0b3545cdebd37315f319</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtprm_1_1_c_combo_params_manager_gui_comp.html</anchorfile>
-      <anchor>a0445df8c4e77a1ff75c78dd140b16e3d</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
