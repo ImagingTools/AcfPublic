@@ -39776,6 +39776,13 @@
     </member>
     <member kind="function">
       <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a9d20a84109567bcd39cddc09ab1ae7cb</anchor>
+      <arglist>(m_slaveMessageContainerCompPtr, m_slaveMessageConsumerCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
       <name>CLogGuiComp</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
       <anchor>aeff1c28dc515350045b132af9bccf162</anchor>
