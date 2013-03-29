@@ -40,7 +40,7 @@
 <div class="title">icmpstr::CRegistryCodeSaverComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="icmpstr::CRegistryCodeSaverComp" --><!-- doxytag: inherits="ibase::TLoggerCompWrap,iser::IFileLoader,iprm::IOptionsList" -->
+<!-- doxytag: class="icmpstr::CRegistryCodeSaverComp" --><!-- doxytag: inherits="ibase::TLoggerCompWrap,iser::IFileLoader" -->
 <p>Save registry as C++ code (it generates C++ class with the same functionality) and/or dependencies list.  
  <a href="classicmpstr_1_1_c_registry_code_saver_comp.html#details">More...</a></p>
 
@@ -53,15 +53,12 @@ Inheritance diagram for icmpstr::CRegistryCodeSaverComp:</div>
   <map id="icmpstr::CRegistryCodeSaverComp_map" name="icmpstr::CRegistryCodeSaverComp_map">
 <area href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations." alt="ibase::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="219,168,428,192"/>
 <area href="classiser_1_1_i_file_loader.html" title="Provide loading and saving of objects." alt="iser::IFileLoader" shape="rect" coords="657,168,866,192"/>
-<area href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities." alt="iprm::IOptionsList" shape="rect" coords="876,168,1085,192"/>
 <area href="classibase_1_1_t_logger_wrap.html" title="Class wrapper implementing interface istd::ILogger sending log messages over ibase::IMessageConsumer..." alt="ibase::TLoggerWrap&lt; Base &gt;" shape="rect" coords="219,112,428,136"/>
 <area href="classiser_1_1_i_file_type_info.html" title="Provide loading and saving of objects." alt="iser::IFileTypeInfo" shape="rect" coords="657,112,866,136"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="876,112,1085,136"/>
 <area href="class_base.html" alt="Base" shape="rect" coords="0,56,209,80"/>
 <area href="classibase_1_1_i_loggable.html" title="Inteface for object, which support the." alt="ibase::ILoggable" shape="rect" coords="219,56,428,80"/>
 <area href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info." alt="istd::ILogger" shape="rect" coords="438,56,647,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="657,56,866,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="876,56,1085,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="219,0,428,24"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="438,0,647,24"/>
 </map>
@@ -77,9 +74,8 @@ Public Types</h2></td></tr>
 <a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#aa5dce88812d3e2ef14aae5b8f1f80394a5a2d5ff3f7a16d906a87c33d4b3cab90">MI_UNKNOWN_PACKAGE</a>
  }</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">List of possible message ids used in context of this interface.  <a href="classicmpstr_1_1_c_registry_code_saver_comp.html#aa5dce88812d3e2ef14aae5b8f1f80394">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ad5ab50f42f71539fa47f07ba77501984">WorkingMode</a> { <a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ad5ab50f42f71539fa47f07ba77501984a0df3d34058c441cf7b9cfdc19a72b86d">WM_SOURCES</a> =  1, 
-<a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ad5ab50f42f71539fa47f07ba77501984ab5c64a48ef3fade5b2b88aa6828090b8">WM_DEPENDENCIES</a>, 
-<a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ad5ab50f42f71539fa47f07ba77501984ac02c14331e30fef8d805f63f9bebd91d">WM_SOURCES_AND_WM_DEPENDENCIES</a>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ad5ab50f42f71539fa47f07ba77501984">WorkingMode</a> { <a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ad5ab50f42f71539fa47f07ba77501984a0df3d34058c441cf7b9cfdc19a72b86d">WM_SOURCES</a>, 
+<a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ad5ab50f42f71539fa47f07ba77501984ab5c64a48ef3fade5b2b88aa6828090b8">WM_DEPENDENCIES</a>
  }</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#af05418c61dfe24e421df87db7ccdd18f">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
@@ -96,18 +92,6 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file extensions supported by this loader.  <a href="#a1997c60869e666312180a55a83014a9a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ae7d93689f16987ec44a3e84f8de7d619">GetTypeDescription</a> (const QString *extensionPtr=NULL) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of object type associated with single extension.  <a href="#ae7d93689f16987ec44a3e84f8de7d619"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#a0a30e61637f09b229922f143937c1338">GetOptionsFlags</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints flags.  <a href="#a0a30e61637f09b229922f143937c1338"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#a3d3b230d9af4ca181d3b35e7b7fc576d">GetOptionsCount</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of managed options.  <a href="#a3d3b230d9af4ca181d3b35e7b7fc576d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#abeae54b72438d3f1e394e15177bbeeff">GetOptionName</a> (int index) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of specified option.  <a href="#abeae54b72438d3f1e394e15177bbeeff"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ae7f33e3f1bee1d71bcdc6153bd6c29ca">GetOptionDescription</a> (int index) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable description for a option with the index <code>index</code>.  <a href="#ae7f33e3f1bee1d71bcdc6153bd6c29ca"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#a8c3ced8a71ce08ccafb17eeb61930c4d">GetOptionId</a> (int index) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get option ID.  <a href="#a8c3ced8a71ce08ccafb17eeb61930c4d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ab5368b32bebf953889f714525f9c40cf">IsOptionEnabled</a> (int index) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code> if the option is enabled and can be selected.  <a href="#ab5368b32bebf953889f714525f9c40cf"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-types"></a>
 Protected Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef QSet<br class="typebreak"/>
@@ -122,7 +106,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#a315574ebfe4c81dd3e9f491a7bcd925d">WriteHeader</a> (const QByteArray &amp;className, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const <a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ab7c435788a316a8514656be5d531d213">Addresses</a> &amp;composedAddresses, const <a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ab7c435788a316a8514656be5d531d213">Addresses</a> &amp;realAddresses, QTextStream &amp;stream) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#a53b6f982934b255555594d22b6fe0f65">WriteIncludes</a> (const QByteArray &amp;className, const <a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ab7c435788a316a8514656be5d531d213">Addresses</a> &amp;addresses, QTextStream &amp;stream) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ade863819ed4a33a524f6f0149350907e">WriteClassDefinitions</a> (const QByteArray &amp;className, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const <a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ab7c435788a316a8514656be5d531d213">Addresses</a> &amp;composedAddresses, const <a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ab7c435788a316a8514656be5d531d213">Addresses</a> &amp;realAddresses, QTextStream &amp;stream) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#af2c2a4217285074073a2147f31c8535a">WriteDependencies</a> (const QByteArray &amp;className, const <a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ab7c435788a316a8514656be5d531d213">Addresses</a> &amp;composedAddresses, const <a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ab7c435788a316a8514656be5d531d213">Addresses</a> &amp;realAddresses, QTextStream &amp;stream) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#a030ef7f93d55f780e0cc0413118fb37c">WriteDependencies</a> (const <a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ab7c435788a316a8514656be5d531d213">Addresses</a> &amp;composedAddresses, const <a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ab7c435788a316a8514656be5d531d213">Addresses</a> &amp;realAddresses, QTextStream &amp;stream) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#a8c2efe61144d5e0090d58bb78c187ccf">WriteRegistryInfo</a> (const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const QByteArray &amp;registryCallPrefix, QTextStream &amp;stream) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ab603e3892ade760c058257dc65ba09ab">WriteComponentInfo</a> (const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const QByteArray &amp;registryCallPrefix, const QByteArray &amp;componentId, const <a class="el" href="structicomp_1_1_i_registry_1_1_element_info.html">icomp::IRegistry::ElementInfo</a> &amp;componentInfo, QTextStream &amp;stream) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#a3c03ee65f446a3e1d0c72b081fc6a841">WriteAttribute</a> (const QByteArray &amp;attributeId, const QByteArray &amp;componentId, const QByteArray &amp;attributeName, const <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> &amp;attribute, QTextStream &amp;stream) const </td></tr>
@@ -162,7 +146,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00091">91</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00079">79</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
 
 </div>
 </div>
@@ -179,7 +163,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a5ca6564c805194cba50c4aeab30abfec">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00037">37</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00036">36</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
 
 </div>
 </div>
@@ -194,7 +178,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00092">92</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00080">80</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
 
 </div>
 </div>
@@ -226,7 +210,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiser_1_1_i_file_loader.html#a885bc2cad957c89052cf890e68436bf4">iser::IFileLoader</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00039">39</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00038">38</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
 
 </div>
 </div>
@@ -245,13 +229,11 @@ Protected Member Functions</h2></td></tr>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="ad5ab50f42f71539fa47f07ba77501984ab5c64a48ef3fade5b2b88aa6828090b8"></a><!-- doxytag: member="WM_DEPENDENCIES" ref="ad5ab50f42f71539fa47f07ba77501984ab5c64a48ef3fade5b2b88aa6828090b8" args="" -->WM_DEPENDENCIES</em>&nbsp;</td><td>
 </td></tr>
-<tr><td valign="top"><em><a class="anchor" id="ad5ab50f42f71539fa47f07ba77501984ac02c14331e30fef8d805f63f9bebd91d"></a><!-- doxytag: member="WM_SOURCES_AND_WM_DEPENDENCIES" ref="ad5ab50f42f71539fa47f07ba77501984ac02c14331e30fef8d805f63f9bebd91d" args="" -->WM_SOURCES_AND_WM_DEPENDENCIES</em>&nbsp;</td><td>
-</td></tr>
 </table>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00047">47</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_registry_code_saver_comp_8h_source.html#l00046">46</a> of file <a class="el" href="_c_registry_code_saver_comp_8h_source.html">CRegistryCodeSaverComp.h</a>.</p>
 
 </div>
 </div>
@@ -540,112 +522,6 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae7f33e3f1bee1d71bcdc6153bd6c29ca"></a><!-- doxytag: member="icmpstr::CRegistryCodeSaverComp::GetOptionDescription" ref="ae7f33e3f1bee1d71bcdc6153bd6c29ca" args="(int index) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual QString icmpstr::CRegistryCodeSaverComp::GetOptionDescription </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get human readable description for a option with the index <code>index</code>. </p>
-
-<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#adf6d315fe048e3a617ea5f803845393b">iprm::IOptionsList</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a8c3ced8a71ce08ccafb17eeb61930c4d"></a><!-- doxytag: member="icmpstr::CRegistryCodeSaverComp::GetOptionId" ref="a8c3ced8a71ce08ccafb17eeb61930c4d" args="(int index) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual QByteArray icmpstr::CRegistryCodeSaverComp::GetOptionId </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get option ID. </p>
-<p>The option ID must be unique, if flag SCF_SUPPORT_UNIQUE_ID is set. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiprm_1_1_i_options_list.html#a14593d38693c2bdbfe3988dbaaedfcfa" title="Flags for control constraints behavior.">OptionsFlags</a> </dd></dl>
-
-<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#aa7af53aa0f41e2b65bfd0128792d18d2">iprm::IOptionsList</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="abeae54b72438d3f1e394e15177bbeeff"></a><!-- doxytag: member="icmpstr::CRegistryCodeSaverComp::GetOptionName" ref="abeae54b72438d3f1e394e15177bbeeff" args="(int index) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual QString icmpstr::CRegistryCodeSaverComp::GetOptionName </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get name of specified option. </p>
-
-<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#ab30d9ae1759e0a1953751154f9983b3e">iprm::IOptionsList</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a3d3b230d9af4ca181d3b35e7b7fc576d"></a><!-- doxytag: member="icmpstr::CRegistryCodeSaverComp::GetOptionsCount" ref="a3d3b230d9af4ca181d3b35e7b7fc576d" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int icmpstr::CRegistryCodeSaverComp::GetOptionsCount </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get number of managed options. </p>
-
-<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#a37659b5d1cae689b3d715304a48ef929">iprm::IOptionsList</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a0a30e61637f09b229922f143937c1338"></a><!-- doxytag: member="icmpstr::CRegistryCodeSaverComp::GetOptionsFlags" ref="a0a30e61637f09b229922f143937c1338" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int icmpstr::CRegistryCodeSaverComp::GetOptionsFlags </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get constraints flags. </p>
-<p>The flags describes how the constraints object mantainance </p>
-
-<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#ab5b5157f0e5e6d68c30b772b8e3ecc2a">iprm::IOptionsList</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a81856345bba6560b3f9755f331848bc9"></a><!-- doxytag: member="icmpstr::CRegistryCodeSaverComp::GetPackageName" ref="a81856345bba6560b3f9755f331848bc9" args="(const QByteArray &amp;packageId) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -806,28 +682,6 @@ Protected Member Functions</h2></td></tr>
 </dl>
 
 <p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a4e5d8cde47513d09de802aa28697249d">iser::IFileLoader</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab5368b32bebf953889f714525f9c40cf"></a><!-- doxytag: member="icmpstr::CRegistryCodeSaverComp::IsOptionEnabled" ref="ab5368b32bebf953889f714525f9c40cf" args="(int index) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool icmpstr::CRegistryCodeSaverComp::IsOptionEnabled </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Return <code>true</code> if the option is enabled and can be selected. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd>SetOptionEnabled </dd></dl>
-
-<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#a12fcebc0af408e94fc1bfbe2f15e7fa7">iprm::IOptionsList</a>.</p>
 
 </div>
 </div>
@@ -1051,19 +905,13 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af2c2a4217285074073a2147f31c8535a"></a><!-- doxytag: member="icmpstr::CRegistryCodeSaverComp::WriteDependencies" ref="af2c2a4217285074073a2147f31c8535a" args="(const QByteArray &amp;className, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, QTextStream &amp;stream) const " -->
+<a class="anchor" id="a030ef7f93d55f780e0cc0413118fb37c"></a><!-- doxytag: member="icmpstr::CRegistryCodeSaverComp::WriteDependencies" ref="a030ef7f93d55f780e0cc0413118fb37c" args="(const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, QTextStream &amp;stream) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool icmpstr::CRegistryCodeSaverComp::WriteDependencies </td>
           <td>(</td>
-          <td class="paramtype">const QByteArray &amp;&#160;</td>
-          <td class="paramname"><em>className</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const <a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ab7c435788a316a8514656be5d531d213">Addresses</a> &amp;&#160;</td>
           <td class="paramname"><em>composedAddresses</em>, </td>
         </tr>

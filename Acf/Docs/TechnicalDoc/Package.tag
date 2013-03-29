@@ -18268,7 +18268,6 @@
     <filename>classicmpstr_1_1_c_registry_code_saver_comp.html</filename>
     <base>ibase::TLoggerCompWrap</base>
     <base>iser::IFileLoader</base>
-    <base>iprm::IOptionsList</base>
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
@@ -18315,12 +18314,6 @@
       <name>WM_DEPENDENCIES</name>
       <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
       <anchor>ad5ab50f42f71539fa47f07ba77501984ab5c64a48ef3fade5b2b88aa6828090b8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>WM_SOURCES_AND_WM_DEPENDENCIES</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ad5ab50f42f71539fa47f07ba77501984ac02c14331e30fef8d805f63f9bebd91d</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -18378,48 +18371,6 @@
       <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
       <anchor>ae7d93689f16987ec44a3e84f8de7d619</anchor>
       <arglist>(const QString *extensionPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetOptionsFlags</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a0a30e61637f09b229922f143937c1338</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetOptionsCount</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a3d3b230d9af4ca181d3b35e7b7fc576d</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetOptionName</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>abeae54b72438d3f1e394e15177bbeeff</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetOptionDescription</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ae7f33e3f1bee1d71bcdc6153bd6c29ca</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QByteArray</type>
-      <name>GetOptionId</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a8c3ced8a71ce08ccafb17eeb61930c4d</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsOptionEnabled</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ab5368b32bebf953889f714525f9c40cf</anchor>
-      <arglist>(int index) const </arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>QSet&lt; icomp::CComponentAddress &gt;</type>
@@ -18481,8 +18432,8 @@
       <type>bool</type>
       <name>WriteDependencies</name>
       <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>af2c2a4217285074073a2147f31c8535a</anchor>
-      <arglist>(const QByteArray &amp;className, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, QTextStream &amp;stream) const </arglist>
+      <anchor>a030ef7f93d55f780e0cc0413118fb37c</anchor>
+      <arglist>(const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, QTextStream &amp;stream) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
