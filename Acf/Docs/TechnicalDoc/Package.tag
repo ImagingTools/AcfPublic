@@ -18458,6 +18458,20 @@
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
+      <name>WriteRegistryTranslation</name>
+      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a73ebaf3ac953f8b367ae4308f30fd705</anchor>
+      <arglist>(const icomp::IRegistry &amp;registry, bool &amp;translationFound, QTextStream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteComponentTranslation</name>
+      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a54743a372b82910c6148fccafcaae84e</anchor>
+      <arglist>(const QByteArray &amp;componentId, const icomp::IRegistry::ElementInfo &amp;componentInfo, bool &amp;translationFound, QTextStream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
       <name>WriteRegistryClassDeclaration</name>
       <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
       <anchor>ae9c434e5b90316a5f41af4099e3692db</anchor>

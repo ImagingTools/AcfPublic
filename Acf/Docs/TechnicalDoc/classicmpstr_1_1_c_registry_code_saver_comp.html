@@ -110,6 +110,10 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#a8c2efe61144d5e0090d58bb78c187ccf">WriteRegistryInfo</a> (const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const QByteArray &amp;registryCallPrefix, QTextStream &amp;stream) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ab603e3892ade760c058257dc65ba09ab">WriteComponentInfo</a> (const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, const QByteArray &amp;registryCallPrefix, const QByteArray &amp;componentId, const <a class="el" href="structicomp_1_1_i_registry_1_1_element_info.html">icomp::IRegistry::ElementInfo</a> &amp;componentInfo, QTextStream &amp;stream) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#a3c03ee65f446a3e1d0c72b081fc6a841">WriteAttribute</a> (const QByteArray &amp;attributeId, const QByteArray &amp;componentId, const QByteArray &amp;attributeName, const <a class="el" href="classiser_1_1_i_object.html">iser::IObject</a> &amp;attribute, QTextStream &amp;stream) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#a73ebaf3ac953f8b367ae4308f30fd705">WriteRegistryTranslation</a> (const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, bool &amp;translationFound, QTextStream &amp;stream) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Write translation macro of all string attributes from registry.  <a href="#a73ebaf3ac953f8b367ae4308f30fd705"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#a54743a372b82910c6148fccafcaae84e">WriteComponentTranslation</a> (const QByteArray &amp;componentId, const <a class="el" href="structicomp_1_1_i_registry_1_1_element_info.html">icomp::IRegistry::ElementInfo</a> &amp;componentInfo, bool &amp;translationFound, QTextStream &amp;stream) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Write translation macro of all string attributes from component.  <a href="#a54743a372b82910c6148fccafcaae84e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#ae9c434e5b90316a5f41af4099e3692db">WriteRegistryClassDeclaration</a> (const QByteArray &amp;baseClassName, const QByteArray &amp;registryClassName, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, QTextStream &amp;stream) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#a111fbd7bedb6095782fe8cd174f2f6da">WriteRegistryClassBody</a> (const QByteArray &amp;baseClassName, const QByteArray &amp;registryClassName, const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;registry, QTextStream &amp;stream) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmpstr_1_1_c_registry_code_saver_comp.html#a16468df240b41a21acc1c4bd69137ea4">WriteDeserializingCode</a> (const <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a> &amp;object, QTextStream &amp;stream) const </td></tr>
@@ -905,6 +909,47 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a54743a372b82910c6148fccafcaae84e"></a><!-- doxytag: member="icmpstr::CRegistryCodeSaverComp::WriteComponentTranslation" ref="a54743a372b82910c6148fccafcaae84e" args="(const QByteArray &amp;componentId, const icomp::IRegistry::ElementInfo &amp;componentInfo, bool &amp;translationFound, QTextStream &amp;stream) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool icmpstr::CRegistryCodeSaverComp::WriteComponentTranslation </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>componentId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structicomp_1_1_i_registry_1_1_element_info.html">icomp::IRegistry::ElementInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>componentInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>translationFound</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QTextStream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Write translation macro of all string attributes from component. </p>
+
+</div>
+</div>
 <a class="anchor" id="a030ef7f93d55f780e0cc0413118fb37c"></a><!-- doxytag: member="icmpstr::CRegistryCodeSaverComp::WriteDependencies" ref="a030ef7f93d55f780e0cc0413118fb37c" args="(const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, QTextStream &amp;stream) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -1153,6 +1198,41 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a73ebaf3ac953f8b367ae4308f30fd705"></a><!-- doxytag: member="icmpstr::CRegistryCodeSaverComp::WriteRegistryTranslation" ref="a73ebaf3ac953f8b367ae4308f30fd705" args="(const icomp::IRegistry &amp;registry, bool &amp;translationFound, QTextStream &amp;stream) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool icmpstr::CRegistryCodeSaverComp::WriteRegistryTranslation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classicomp_1_1_i_registry.html">icomp::IRegistry</a> &amp;&#160;</td>
+          <td class="paramname"><em>registry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>translationFound</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QTextStream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Write translation macro of all string attributes from registry. </p>
 
 </div>
 </div>
