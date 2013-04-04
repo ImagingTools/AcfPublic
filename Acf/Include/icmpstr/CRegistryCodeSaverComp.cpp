@@ -1295,10 +1295,6 @@ bool CRegistryCodeSaverComp::WriteRegistryTranslation(
 			if (!WriteRegistryTranslation(*embeddedRegistryPtr, translationFound, stream)){
 				return false;
 			}
-
-			ChangeIndent(-1);
-			NextLine(stream);
-			stream << "}";
 		}
 	}
 
@@ -1336,7 +1332,7 @@ bool CRegistryCodeSaverComp::WriteComponentTranslation(
 							}
 
 							NextLine(stream);
-							stream << "QT_TRANSLATE_NOOP(\"Attribute\", " << GetStringLiteral(stringAttribute->GetValue()) << "); // Set to attribute " << attributeId << " in component" << componentId;
+							stream << "QT_TRANSLATE_NOOP(\"Attribute\", " << GetStringLiteral(stringAttribute->GetValue()) << "); // Attribute " << attributeId << " in " << componentId;
 
 							translationFound = true;
 							continue;
@@ -1351,7 +1347,7 @@ bool CRegistryCodeSaverComp::WriteComponentTranslation(
 								}
 
 								NextLine(stream);
-								stream << "QT_TRANSLATE_NOOP(\"Attribute\", " << GetStringLiteral(stringAttributePtr->GetValueAt(index)) << "); // Set to attribute " << attributeId << " in component" << componentId;
+								stream << "QT_TRANSLATE_NOOP(\"Attribute\", " << GetStringLiteral(stringAttributePtr->GetValueAt(index)) << "); // Attribute " << attributeId << " in " << componentId;
 
 								translationFound = true;
 							}

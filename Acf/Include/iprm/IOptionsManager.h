@@ -48,7 +48,7 @@ public:
 		Enables a given option. Only enabled options can be selected.
 		\sa GetOptionEnabled
 	*/
-	virtual void SetOptionEnabled(int index, bool isEnabled = true) = 0;
+	virtual bool SetOptionEnabled(int index, bool isEnabled = true) = 0;
 
 	/**
 		Remove an option at the given index.

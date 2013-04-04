@@ -33353,10 +33353,17 @@
     </member>
     <member kind="function">
       <type>void</type>
-      <name>SetSlaveSelectionConstraints</name>
+      <name>SetFixedOptionsList</name>
       <anchorfile>classiprm_1_1_c_options_manager.html</anchorfile>
-      <anchor>a4f423984d3b0e3d2d53250ee1aace853</anchor>
+      <anchor>a28b2826d589a4a1596ff99c2da7e59e0</anchor>
       <arglist>(const iprm::IOptionsList *slaveSelectionConstraintsPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ResetOptions</name>
+      <anchorfile>classiprm_1_1_c_options_manager.html</anchorfile>
+      <anchor>ad3a6f197494388eeb1926867eae0e443</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -33401,10 +33408,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>SetOptionEnabled</name>
       <anchorfile>classiprm_1_1_c_options_manager.html</anchorfile>
-      <anchor>ac4eca4e6a15b6f6288f3ba3ca106dd80</anchor>
+      <anchor>ad5c040f75eef96a082b0f77661c3b833</anchor>
       <arglist>(int index, bool isEnabled=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -34336,10 +34343,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>SetOptionEnabled</name>
       <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
-      <anchor>abd4585a3b03792f011f6b798945b102e</anchor>
+      <anchor>a568deee53f71324240e49af5d78fa940</anchor>
       <arglist>(int index, bool isEnabled=true)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">

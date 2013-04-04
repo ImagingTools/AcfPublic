@@ -106,7 +106,6 @@ public:
 
 	/**
 		Return \c true if the option is enabled and can be selected.
-		\sa SetOptionEnabled
 	*/
 	virtual bool IsOptionEnabled(int index) const = 0;
 };

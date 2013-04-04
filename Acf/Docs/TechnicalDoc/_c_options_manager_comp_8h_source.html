@@ -51,7 +51,7 @@
 <a name="l00026"></a>00026               I_REGISTER_INTERFACE(<a class="code" href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities.">iprm::IOptionsList</a>);
 <a name="l00027"></a>00027               I_REGISTER_INTERFACE(<a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>);
 <a name="l00028"></a>00028               I_REGISTER_INTERFACE(<a class="code" href="classiprm_1_1_i_options_manager.html" title="Common interface for the management of the dynamic selection constraints.">iprm::IOptionsManager</a>);
-<a name="l00029"></a>00029               I_ASSIGN(m_slaveSelectionConstraintsCompPtr, <span class="stringliteral">&quot;SlaveConstraints&quot;</span>, <span class="stringliteral">&quot;Slave constraints object&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;SlaveConstraints&quot;</span>);
+<a name="l00029"></a>00029               I_ASSIGN(m_fixedOptionsListCompPtr, <span class="stringliteral">&quot;FixedOptionsList&quot;</span>, <span class="stringliteral">&quot;List of options could not be changed using this manager&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;FixedOptionsList&quot;</span>);
 <a name="l00030"></a>00030        I_END_COMPONENT;
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032 <span class="keyword">protected</span>:
@@ -60,7 +60,7 @@
 <a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_options_manager_comp.html#a71c04ecbc8e54e7a56548d8ac7de979a">OnComponentDestroyed</a>();
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037 <span class="keyword">private</span>:
-<a name="l00038"></a>00038        I_REF(<a class="code" href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities.">iprm::IOptionsList</a>, m_slaveSelectionConstraintsCompPtr);
+<a name="l00038"></a>00038        I_REF(<a class="code" href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities.">iprm::IOptionsList</a>, m_fixedOptionsListCompPtr);
 <a name="l00039"></a>00039 };
 <a name="l00040"></a>00040 
 <a name="l00041"></a>00041 

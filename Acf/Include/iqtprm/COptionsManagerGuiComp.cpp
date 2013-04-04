@@ -271,7 +271,7 @@ void COptionsManagerGuiComp::OnEditingFinished()
 		}
 
 		iprm::IOptionsManager* optionManagerPtr = GetObjectPtr();
-		if (optionManagerPtr != NULL && addNewOption){
+		if ((optionManagerPtr != NULL) && addNewOption){
 			optionManagerPtr->InsertOption(newOptionName, newOptionName.toLocal8Bit());
 		}
 	}
