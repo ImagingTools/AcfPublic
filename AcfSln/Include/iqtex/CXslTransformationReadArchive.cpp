@@ -33,9 +33,6 @@
 #include <QtXmlPatterns/QXmlQuery>
 #include <QtXmlPatterns/QAbstractMessageHandler>
 
-// ACF includes
-#include "istd/CBase64.h"
-
 
 namespace
 {
@@ -372,13 +369,10 @@ bool CXslTransformationReadArchive::ProcessData(void* dataPtr, int size)
 {
 	QString text = PullTextNode();
 
-	quint8* data = (quint8*)dataPtr;
-
-	QVector<quint8> decodedData = istd::CBase64::ConvertFromBase64(text.toLocal8Bit());
-
+	QByteArray decodedData = QByteArray::fromBase64(text.toLocal8Bit());
 	Q_ASSERT(size == int(decodedData.size()));
 
-	std::memcpy(data, &decodedData[0], size);
+	std::memcpy(dataPtr, decodedData.constData(), size);
 
 	return !m_currentNode.isNull();
 }

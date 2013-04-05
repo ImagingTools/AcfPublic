@@ -217,6 +217,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CContainerGuiBase.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\CDialogApplicationComp.cpp"
 				>
 			</File>
@@ -309,6 +313,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CSettingsContainerGuiComp.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\CSimpleMainWindowGuiComp.cpp"
 				>
 			</File>
@@ -388,6 +396,10 @@
 			</File>
 			<File
 				RelativePath="..\CComposedGuiComp.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CContainerGuiBase.h"
 				>
 			</File>
 			<File
@@ -502,6 +514,10 @@
 			</File>
 			<File
 				RelativePath="..\CSelectableCommandsProviderComp.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CSettingsContainerGuiComp.h"
 				>
 			</File>
 			<File
@@ -694,6 +710,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\Generated\moc_CSettingsContainerGuiComp.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\generated\moc_CSimpleMainWindowGuiComp.cpp"
 				>
 			</File>
@@ -727,6 +747,10 @@
 			</File>
 			<File
 				RelativePath="..\Generated\ui_CLogGuiComp.h"
+				>
+			</File>
+			<File
+				RelativePath="..\Generated\ui_CNumpadGui.h"
 				>
 			</File>
 			<File
@@ -851,6 +875,10 @@
 			</File>
 			<File
 				RelativePath="..\CSelectableCommandsProviderComp.moc"
+				>
+			</File>
+			<File
+				RelativePath="..\CSettingsContainerGuiComp.moc"
 				>
 			</File>
 			<File

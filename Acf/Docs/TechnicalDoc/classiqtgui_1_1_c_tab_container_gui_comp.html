@@ -33,13 +33,12 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">iqtgui::CTabContainerGuiComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqtgui::CTabContainerGuiComp" --><!-- doxytag: inherits="TGuiComponentBase&lt; QTabWidget &gt;,imod::CMultiModelDispatcherBase" -->
+<!-- doxytag: class="iqtgui::CTabContainerGuiComp" --><!-- doxytag: inherits="TContainerGuiBase&lt; QTabWidget &gt;" -->
 <p>Component to create the tab widget, that shows the specified sub-UI-component in its tab page.  
  <a href="classiqtgui_1_1_c_tab_container_gui_comp.html#details">More...</a></p>
 
@@ -50,17 +49,18 @@ Inheritance diagram for iqtgui::CTabContainerGuiComp:</div>
  <div class="center">
   <img src="classiqtgui_1_1_c_tab_container_gui_comp.png" usemap="#iqtgui::CTabContainerGuiComp_map" alt=""/>
   <map id="iqtgui::CTabContainerGuiComp_map" name="iqtgui::CTabContainerGuiComp_map">
-<area href="classiqtgui_1_1_t_gui_component_base.html" alt="iqtgui::TGuiComponentBase&lt; QTabWidget &gt;" shape="rect" coords="267,224,524,248"/>
-<area href="classimod_1_1_c_multi_model_dispatcher_base.html" title="Generic implementation of a data model changes notifier." alt="imod::CMultiModelDispatcherBase" shape="rect" coords="534,224,791,248"/>
-<area href="classiqtgui_1_1_c_gui_component_base.html" title="Base class for classes implementing interface iqtgui::IGuiObject." alt="iqtgui::CGuiComponentBase" shape="rect" coords="267,168,524,192"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="534,168,791,192"/>
-<area href="class_q_object.html" alt="QObject" shape="rect" coords="0,112,257,136"/>
-<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="267,112,524,136"/>
-<area href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context." alt="iqtgui::IGuiObject" shape="rect" coords="534,112,791,136"/>
-<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="267,56,524,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="534,56,791,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="267,0,524,24"/>
-<area href="classiqtgui_1_1_c_tabbed_multi_view_gui_comp.html" title="A multi view observer implementation." alt="iqtgui::CTabbedMultiViewGuiComp" shape="rect" coords="400,336,657,360"/>
+<area href="classiqtgui_1_1_t_container_gui_base.html" alt="iqtgui::TContainerGuiBase&lt; QTabWidget &gt;" shape="rect" coords="518,280,767,304"/>
+<area href="classiqtgui_1_1_c_container_gui_base.html" title="A basic class for selectable GUI containers." alt="iqtgui::CContainerGuiBase" shape="rect" coords="518,224,767,248"/>
+<area href="classiqtgui_1_1_c_gui_component_base.html" title="Base class for classes implementing interface iqtgui::IGuiObject." alt="iqtgui::CGuiComponentBase" shape="rect" coords="259,168,508,192"/>
+<area href="classimod_1_1_c_multi_model_dispatcher_base.html" title="Generic implementation of a data model changes notifier." alt="imod::CMultiModelDispatcherBase" shape="rect" coords="777,168,1026,192"/>
+<area href="class_q_object.html" alt="QObject" shape="rect" coords="0,112,249,136"/>
+<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="259,112,508,136"/>
+<area href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context." alt="iqtgui::IGuiObject" shape="rect" coords="518,112,767,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="777,112,1026,136"/>
+<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="259,56,508,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="518,56,767,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="259,0,508,24"/>
+<area href="classiqtgui_1_1_c_tabbed_multi_view_gui_comp.html" title="A multi view observer implementation." alt="iqtgui::CTabbedMultiViewGuiComp" shape="rect" coords="518,392,767,416"/>
 </map>
  </div></div>
 
@@ -69,381 +69,82 @@ Inheritance diagram for iqtgui::CTabContainerGuiComp:</div>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase</a><br class="typebreak"/>
-&lt; QTabWidget &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a90c8e4fbaec412fd71bfd82c9ce3eeb1">BaseClass</a></td></tr>
-<tr><td colspan="2"><h2><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#ab3a3ea6eaf42fb12efebc7e9907ee3b9">I_REGISTER_SUBELEMENT</a> (TabModel)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a3f9faab76f444f1000b61cbb93f800b2">I_REGISTER_SUBELEMENT_INTERFACE_T</a> (TabModel, <a class="el" href="classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>, ExtractTabModel)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a70a141005a391dc8fca663ef79fdd55d">I_REGISTER_SUBELEMENT_INTERFACE_T</a> (TabModel, <a class="el" href="classiprm_1_1_i_options_list.html">iprm::IOptionsList</a>, ExtractTabModel)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a6706d4ae0fc5d0ce1017f28747580c43">I_REGISTER_SUBELEMENT_INTERFACE_T</a> (TabModel, <a class="el" href="classiprm_1_1_i_options_manager.html">iprm::IOptionsManager</a>, ExtractTabModel)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#ac1eb6996701c935cb9a1d1478e41adac">I_REGISTER_SUBELEMENT_INTERFACE_T</a> (TabModel, <a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a>, ExtractTabModel)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#ac9cb7689fb71fe1cb0dff60cee15ab6e">I_REGISTER_SUBELEMENT_INTERFACE_T</a> (TabModel, <a class="el" href="classimod_1_1_i_model.html">imod::IModel</a>, ExtractTabModel)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#aa5ceb5f6b3fc6161b1d0606e701dec10">I_REGISTER_SUBELEMENT_INTERFACE_T</a> (TabModel, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>, ExtractTabModel)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a9436580fea58a22ec5c3108ead964382">I_ASSIGN_TO</a> (m_slaveWidgetsModelCompPtr, m_slaveWidgetsVisualCompPtr, false)</td></tr>
+<a class="el" href="classiqtgui_1_1_t_container_gui_base.html">iqtgui::TContainerGuiBase</a><br class="typebreak"/>
+&lt; QTabWidget &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#abe2010a74f4f0d57def4d8bdde8ce132">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#ae7386e81babadd9ff8df98b8bd4b1fc7">UpdateVisualElements</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a70e404a18b0b9cb082f97614e33f2a02">OnGuiCreated</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#a70e404a18b0b9cb082f97614e33f2a02"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a339d7874c2db7d67e5fd6dad1bfdfaa5">OnGuiDestroyed</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just before GUI is released.  <a href="#a339d7874c2db7d67e5fd6dad1bfdfaa5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#aaac719be4d5f18d9624666b972f5dbde">OnModelChanged</a> (int modelId, int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a0f56b344ce80382a39b3d988802462fe">OnComponentCreated</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#ae440741526cb0ae2749f7b6c9c08f2eb">CreateMainGui</a> (QSize iconSize)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a0bdf4e72ae077f6cf0c46ece8404ddad">CreatePageGui</a> (const QString &amp;name, QSize iconSize, <a class="el" href="classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a> *guiPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a0e9e2cfa0bb63cda25a133c6a257e9c3">UpdateItem</a> (int index, const QIcon &amp;icon, const QString &amp;toolTip)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#abe2439d2a3db817493b68e339c7e0874">SetSelectedIndex</a> (int index)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#aa3c60a2a5f482b4c5b462245e53e01c0">SetEnabled</a> (int index, bool isEnabled)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Component to create the tab widget, that shows the specified sub-UI-component in its tab page. </p>
 <p>You can control some settings of the tabs such icons, title, orientation or tab visualization. Optionally, you can specify the corner widget, which will be placed beside of the last tab. </p>
 
-<p>Definition at line <a class="el" href="_c_tab_container_gui_comp_8h_source.html#l00026">26</a> of file <a class="el" href="_c_tab_container_gui_comp_8h_source.html">CTabContainerGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_tab_container_gui_comp_8h_source.html#l00021">21</a> of file <a class="el" href="_c_tab_container_gui_comp_8h_source.html">CTabContainerGuiComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a90c8e4fbaec412fd71bfd82c9ce3eeb1"></a><!-- doxytag: member="iqtgui::CTabContainerGuiComp::BaseClass" ref="a90c8e4fbaec412fd71bfd82c9ce3eeb1" args="" -->
+<a class="anchor" id="abe2010a74f4f0d57def4d8bdde8ce132"></a><!-- doxytag: member="iqtgui::CTabContainerGuiComp::BaseClass" ref="abe2010a74f4f0d57def4d8bdde8ce132" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase</a>&lt;QTabWidget&gt; <a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a90c8e4fbaec412fd71bfd82c9ce3eeb1">iqtgui::CTabContainerGuiComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="classiqtgui_1_1_t_container_gui_base.html">iqtgui::TContainerGuiBase</a>&lt;QTabWidget&gt; <a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#abe2010a74f4f0d57def4d8bdde8ce132">iqtgui::CTabContainerGuiComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_component_base.html#a71d48e5e9425438c80e0d95aa88fa782">iqtgui::TGuiComponentBase&lt; QTabWidget &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_container_gui_base.html#a8e20dd79acbab5036f92c058d5e0d00f">iqtgui::TContainerGuiBase&lt; QTabWidget &gt;</a>.</p>
 
 <p>Reimplemented in <a class="el" href="classiqtgui_1_1_c_tabbed_multi_view_gui_comp.html#ac00273f0ff0c91f8811eadcfd93ac1e0">iqtgui::CTabbedMultiViewGuiComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_tab_container_gui_comp_8h_source.html#l00031">31</a> of file <a class="el" href="_c_tab_container_gui_comp_8h_source.html">CTabContainerGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_tab_container_gui_comp_8h_source.html#l00025">25</a> of file <a class="el" href="_c_tab_container_gui_comp_8h_source.html">CTabContainerGuiComp.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a9436580fea58a22ec5c3108ead964382"></a><!-- doxytag: member="iqtgui::CTabContainerGuiComp::I_ASSIGN_TO" ref="a9436580fea58a22ec5c3108ead964382" args="(m_slaveWidgetsModelCompPtr, m_slaveWidgetsVisualCompPtr, false)" -->
+<a class="anchor" id="ae440741526cb0ae2749f7b6c9c08f2eb"></a><!-- doxytag: member="iqtgui::CTabContainerGuiComp::CreateMainGui" ref="ae440741526cb0ae2749f7b6c9c08f2eb" args="(QSize iconSize)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">iqtgui::CTabContainerGuiComp::I_ASSIGN_TO </td>
+          <td class="memname">virtual bool iqtgui::CTabContainerGuiComp::CreateMainGui </td>
           <td>(</td>
-          <td class="paramtype">m_slaveWidgetsModelCompPtr&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">m_slaveWidgetsVisualCompPtr&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">false&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ab3a3ea6eaf42fb12efebc7e9907ee3b9"></a><!-- doxytag: member="iqtgui::CTabContainerGuiComp::I_REGISTER_SUBELEMENT" ref="ab3a3ea6eaf42fb12efebc7e9907ee3b9" args="(TabModel)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">iqtgui::CTabContainerGuiComp::I_REGISTER_SUBELEMENT </td>
-          <td>(</td>
-          <td class="paramtype">TabModel&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a3f9faab76f444f1000b61cbb93f800b2"></a><!-- doxytag: member="iqtgui::CTabContainerGuiComp::I_REGISTER_SUBELEMENT_INTERFACE_T" ref="a3f9faab76f444f1000b61cbb93f800b2" args="(TabModel, iprm::ISelectionParam, ExtractTabModel)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">iqtgui::CTabContainerGuiComp::I_REGISTER_SUBELEMENT_INTERFACE_T </td>
-          <td>(</td>
-          <td class="paramtype">TabModel&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ExtractTabModel&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a70a141005a391dc8fca663ef79fdd55d"></a><!-- doxytag: member="iqtgui::CTabContainerGuiComp::I_REGISTER_SUBELEMENT_INTERFACE_T" ref="a70a141005a391dc8fca663ef79fdd55d" args="(TabModel, iprm::IOptionsList, ExtractTabModel)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">iqtgui::CTabContainerGuiComp::I_REGISTER_SUBELEMENT_INTERFACE_T </td>
-          <td>(</td>
-          <td class="paramtype">TabModel&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classiprm_1_1_i_options_list.html">iprm::IOptionsList</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ExtractTabModel&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a6706d4ae0fc5d0ce1017f28747580c43"></a><!-- doxytag: member="iqtgui::CTabContainerGuiComp::I_REGISTER_SUBELEMENT_INTERFACE_T" ref="a6706d4ae0fc5d0ce1017f28747580c43" args="(TabModel, iprm::IOptionsManager, ExtractTabModel)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">iqtgui::CTabContainerGuiComp::I_REGISTER_SUBELEMENT_INTERFACE_T </td>
-          <td>(</td>
-          <td class="paramtype">TabModel&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classiprm_1_1_i_options_manager.html">iprm::IOptionsManager</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ExtractTabModel&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ac1eb6996701c935cb9a1d1478e41adac"></a><!-- doxytag: member="iqtgui::CTabContainerGuiComp::I_REGISTER_SUBELEMENT_INTERFACE_T" ref="ac1eb6996701c935cb9a1d1478e41adac" args="(TabModel, iser::ISerializable, ExtractTabModel)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">iqtgui::CTabContainerGuiComp::I_REGISTER_SUBELEMENT_INTERFACE_T </td>
-          <td>(</td>
-          <td class="paramtype">TabModel&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classiser_1_1_i_serializable.html">iser::ISerializable</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ExtractTabModel&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ac9cb7689fb71fe1cb0dff60cee15ab6e"></a><!-- doxytag: member="iqtgui::CTabContainerGuiComp::I_REGISTER_SUBELEMENT_INTERFACE_T" ref="ac9cb7689fb71fe1cb0dff60cee15ab6e" args="(TabModel, imod::IModel, ExtractTabModel)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">iqtgui::CTabContainerGuiComp::I_REGISTER_SUBELEMENT_INTERFACE_T </td>
-          <td>(</td>
-          <td class="paramtype">TabModel&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ExtractTabModel&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aa5ceb5f6b3fc6161b1d0606e701dec10"></a><!-- doxytag: member="iqtgui::CTabContainerGuiComp::I_REGISTER_SUBELEMENT_INTERFACE_T" ref="aa5ceb5f6b3fc6161b1d0606e701dec10" args="(TabModel, istd::IChangeable, ExtractTabModel)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">iqtgui::CTabContainerGuiComp::I_REGISTER_SUBELEMENT_INTERFACE_T </td>
-          <td>(</td>
-          <td class="paramtype">TabModel&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ExtractTabModel&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a0f56b344ce80382a39b3d988802462fe"></a><!-- doxytag: member="iqtgui::CTabContainerGuiComp::OnComponentCreated" ref="a0f56b344ce80382a39b3d988802462fe" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iqtgui::CTabContainerGuiComp::OnComponentCreated </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">QSize&#160;</td>
+          <td class="paramname"><em>iconSize</em></td><td>)</td>
           <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#acbe64d5e28b4059b0c34111dd7e3cc8d">iqtgui::CGuiComponentBase</a>.</p>
+<p>Implements <a class="el" href="classiqtgui_1_1_c_container_gui_base.html#a7de955e0f1c6b78b6c17d5e7dde100ce">iqtgui::CContainerGuiBase</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a70e404a18b0b9cb082f97614e33f2a02"></a><!-- doxytag: member="iqtgui::CTabContainerGuiComp::OnGuiCreated" ref="a70e404a18b0b9cb082f97614e33f2a02" args="()" -->
+<a class="anchor" id="a0bdf4e72ae077f6cf0c46ece8404ddad"></a><!-- doxytag: member="iqtgui::CTabContainerGuiComp::CreatePageGui" ref="a0bdf4e72ae077f6cf0c46ece8404ddad" args="(const QString &amp;name, QSize iconSize, iqtgui::IGuiObject *guiPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iqtgui::CTabContainerGuiComp::OnGuiCreated </td>
+          <td class="memname">virtual int iqtgui::CTabContainerGuiComp::CreatePageGui </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Called just after GUI is initialized. </p>
-
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#ab66ecf3d13faa48018f89d871bd32ae3">iqtgui::CGuiComponentBase</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a339d7874c2db7d67e5fd6dad1bfdfaa5"></a><!-- doxytag: member="iqtgui::CTabContainerGuiComp::OnGuiDestroyed" ref="a339d7874c2db7d67e5fd6dad1bfdfaa5" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iqtgui::CTabContainerGuiComp::OnGuiDestroyed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Called just before GUI is released. </p>
-
-<p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#a71e5a19907ff118fe8b99280b86c16ff">iqtgui::CGuiComponentBase</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aaac719be4d5f18d9624666b972f5dbde"></a><!-- doxytag: member="iqtgui::CTabContainerGuiComp::OnModelChanged" ref="aaac719be4d5f18d9624666b972f5dbde" args="(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iqtgui::CTabContainerGuiComp::OnModelChanged </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>modelId</em>, </td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>changeFlags</em>, </td>
+          <td class="paramtype">QSize&#160;</td>
+          <td class="paramname"><em>iconSize</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
-          <td class="paramname"><em>updateParamsPtr</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a> *&#160;</td>
+          <td class="paramname"><em>guiPtr</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -454,23 +155,90 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="el" href="classimod_1_1_c_multi_model_dispatcher_base.html#aa28b9338ca45e28b03cadaf4454f14e8">imod::CMultiModelDispatcherBase</a>.</p>
+<p>Implements <a class="el" href="classiqtgui_1_1_c_container_gui_base.html#aad696e4fcacc67804c4c131fdb42e979">iqtgui::CContainerGuiBase</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae7386e81babadd9ff8df98b8bd4b1fc7"></a><!-- doxytag: member="iqtgui::CTabContainerGuiComp::UpdateVisualElements" ref="ae7386e81babadd9ff8df98b8bd4b1fc7" args="()" -->
+<a class="anchor" id="aa3c60a2a5f482b4c5b462245e53e01c0"></a><!-- doxytag: member="iqtgui::CTabContainerGuiComp::SetEnabled" ref="aa3c60a2a5f482b4c5b462245e53e01c0" args="(int index, bool isEnabled)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void iqtgui::CTabContainerGuiComp::UpdateVisualElements </td>
+          <td class="memname">virtual bool iqtgui::CTabContainerGuiComp::SetEnabled </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [protected]</code></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isEnabled</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Implements <a class="el" href="classiqtgui_1_1_c_container_gui_base.html#a90bd58980fa67f52da4fe7bc76bb64e8">iqtgui::CContainerGuiBase</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abe2439d2a3db817493b68e339c7e0874"></a><!-- doxytag: member="iqtgui::CTabContainerGuiComp::SetSelectedIndex" ref="abe2439d2a3db817493b68e339c7e0874" args="(int index)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iqtgui::CTabContainerGuiComp::SetSelectedIndex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="el" href="classiqtgui_1_1_c_container_gui_base.html#a1acc5afd73236f7d4f5a9ea4c9204376">iqtgui::CContainerGuiBase</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0e9e2cfa0bb63cda25a133c6a257e9c3"></a><!-- doxytag: member="iqtgui::CTabContainerGuiComp::UpdateItem" ref="a0e9e2cfa0bb63cda25a133c6a257e9c3" args="(int index, const QIcon &amp;icon, const QString &amp;toolTip)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtgui::CTabContainerGuiComp::UpdateItem </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QIcon &amp;&#160;</td>
+          <td class="paramname"><em>icon</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>toolTip</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="el" href="classiqtgui_1_1_c_container_gui_base.html#acce430f60c9a5a180260ce0552d5b049">iqtgui::CContainerGuiBase</a>.</p>
 
 </div>
 </div>
