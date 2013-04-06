@@ -38,7 +38,7 @@
 <div class="title">iqt::CRenderedObjectFileLoaderComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqt::CRenderedObjectFileLoaderComp" --><!-- doxytag: inherits="icomp::CComponentBase,iser::IFileLoader,iser::ISerializable" -->
+<!-- doxytag: class="iqt::CRenderedObjectFileLoaderComp" --><!-- doxytag: inherits="icomp::CComponentBase,ifile::IFilePersistence,iser::ISerializable" -->
 <p><code>#include &lt;<a class="el" href="_c_rendered_object_file_loader_comp_8h_source.html">CRenderedObjectFileLoaderComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iqt::CRenderedObjectFileLoaderComp:</div>
@@ -47,10 +47,10 @@ Inheritance diagram for iqt::CRenderedObjectFileLoaderComp:</div>
   <img src="classiqt_1_1_c_rendered_object_file_loader_comp.png" usemap="#iqt::CRenderedObjectFileLoaderComp_map" alt=""/>
   <map id="iqt::CRenderedObjectFileLoaderComp_map" name="iqt::CRenderedObjectFileLoaderComp_map">
 <area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,112,224,136"/>
-<area href="classiser_1_1_i_file_loader.html" title="Provide loading and saving of objects." alt="iser::IFileLoader" shape="rect" coords="234,112,458,136"/>
+<area href="classifile_1_1_i_file_persistence.html" title="Provide loading and saving of objects." alt="ifile::IFilePersistence" shape="rect" coords="234,112,458,136"/>
 <area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="468,112,692,136"/>
 <area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,56,224,80"/>
-<area href="classiser_1_1_i_file_type_info.html" title="Provide loading and saving of objects." alt="iser::IFileTypeInfo" shape="rect" coords="234,56,458,80"/>
+<area href="classifile_1_1_i_file_type_info.html" title="Provide loading and saving of objects." alt="ifile::IFileTypeInfo" shape="rect" coords="234,56,458,80"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="468,56,692,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,224,24"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="234,0,458,24"/>
@@ -137,7 +137,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8" title="Describe detailed options of query.">QueryFlags</a>. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classifile_1_1_i_file_type_info.html#a327f9848e8ae67a4a3c227b62b07fb1a" title="Describe detailed options of query.">QueryFlags</a>. </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">doAppend</td><td>if true, list of extensions should be appended to existing list. </td></tr>
@@ -145,7 +145,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_type_info.html#a2b1e53b1976bc7a962684a7f64577b70">iser::IFileTypeInfo</a>.</p>
+<p>Implements <a class="el" href="classifile_1_1_i_file_type_info.html#acb9ac14845f9ea67dca2e7a24b391cde">ifile::IFileTypeInfo</a>.</p>
 
 </div>
 </div>
@@ -166,7 +166,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get description of object type associated with single extension. </p>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_type_info.html#af40e91e01c4040e96b9ed978a67eada8">iser::IFileTypeInfo</a>.</p>
+<p>Implements <a class="el" href="classifile_1_1_i_file_type_info.html#ab6cec8df21bf8869a8b5e85c2b48a682">ifile::IFileTypeInfo</a>.</p>
 
 </div>
 </div>
@@ -212,13 +212,13 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">dataObjectPtr</td><td>optional pointer to data object should be loaded/stored. It can be NULL if any object is meant. </td></tr>
     <tr><td class="paramname">filePathPtr</td><td>optional pointer to file should be loaded/stored. It can be NULL if any file is meant. If it points at empty string, anonymous loading is mean. </td></tr>
-    <tr><td class="paramname">flags</td><td>combination of flags defined in <code>QueryFlags</code> and <code><a class="el" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8" title="Describe detailed options of query.">iser::IFileTypeInfo::QueryFlags</a></code>. </td></tr>
+    <tr><td class="paramname">flags</td><td>combination of flags defined in <code>QueryFlags</code> and <code><a class="el" href="classifile_1_1_i_file_type_info.html#a327f9848e8ae67a4a3c227b62b07fb1a" title="Describe detailed options of query.">ifile::IFileTypeInfo::QueryFlags</a></code>. </td></tr>
     <tr><td class="paramname">beQuiet</td><td>if true, no user message output is allowed. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a4e5d8cde47513d09de802aa28697249d">iser::IFileLoader</a>.</p>
+<p>Implements <a class="el" href="classifile_1_1_i_file_persistence.html#a5546b646fa5d4dc32156b06a3cd3e13f">ifile::IFilePersistence</a>.</p>
 
 </div>
 </div>
@@ -249,9 +249,9 @@ Public Member Functions</h2></td></tr>
 
 <p>This function loads data <code>data</code> from file <code>filePath</code>. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>File loading state. </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_file_loader.html#a75a7bac07b89aa42b7596185b7bb5c51" title="Result of operation.">OperationState</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classifile_1_1_i_file_persistence.html#a674791f4173d2b57c1e6d6aa30228f76" title="Result of operation.">OperationState</a> </dd></dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a1515f5bff4437903bb15dafe82b56755">iser::IFileLoader</a>.</p>
+<p>Implements <a class="el" href="classifile_1_1_i_file_persistence.html#ac3e349d549b4aeabc33a4555d2482385">ifile::IFilePersistence</a>.</p>
 
 </div>
 </div>
@@ -282,9 +282,9 @@ Public Member Functions</h2></td></tr>
 
 <p>This function saves data <code>data</code> to file <code>filePath</code>. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>File saving state. </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_file_loader.html#a75a7bac07b89aa42b7596185b7bb5c51" title="Result of operation.">OperationState</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classifile_1_1_i_file_persistence.html#a674791f4173d2b57c1e6d6aa30228f76" title="Result of operation.">OperationState</a> </dd></dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a600870dbf0fc5a833bfe747bf1a60c1c">iser::IFileLoader</a>.</p>
+<p>Implements <a class="el" href="classifile_1_1_i_file_persistence.html#afe328c38bf1f522f666fe2bf72beeca3">ifile::IFilePersistence</a>.</p>
 
 </div>
 </div>

@@ -36,7 +36,7 @@
 <a name="l00008"></a>00008 <span class="preprocessor">#include &lt;QtGui/QStandardItemModel&gt;</span>
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="comment">// ACF includes</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_loader_8h.html">iser/IFileLoader.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_persistence_8h.html">ifile/IFilePersistence.h</a>&quot;</span>
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_i_model_8h.html">imod/IModel.h</a>&quot;</span>
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_c_single_model_observer_base_8h.html">imod/CSingleModelObserverBase.h</a>&quot;</span>
@@ -54,7 +54,7 @@
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027 
 <a name="l00031"></a><a class="code" href="classifile_1_1_c_file_list_provider_comp.html">00031</a> <span class="keyword">class </span><a class="code" href="classifile_1_1_c_file_list_provider_comp.html" title="Provide list of file pathes using recursive search of some file directory.">CFileListProviderComp</a>:
-<a name="l00032"></a>00032                      <span class="keyword">public</span> <a class="code" href="class_q_object.html">QObject</a>,
+<a name="l00032"></a>00032                      <span class="keyword">public</span> QObject,
 <a name="l00033"></a>00033                      <span class="keyword">public</span> icomp::CComponentBase,
 <a name="l00034"></a>00034                      <span class="keyword">virtual</span> <span class="keyword">public</span> ifile::<a class="code" href="classifile_1_1_i_file_list_provider.html" title="Provide access to some parameter list.">IFileListProvider</a>,
 <a name="l00035"></a>00035                      <span class="keyword">virtual</span> <span class="keyword">public</span> ibase::IQtItemModelProvider,
@@ -96,7 +96,7 @@
 <a name="l00071"></a>00071 <span class="keyword">private</span>:
 <a name="l00072"></a>00072        I_REF(<a class="code" href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)">ifile::IFileNameParam</a>, m_dirParamCompPtr);
 <a name="l00073"></a>00073        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_dirParamModelCompPtr);
-<a name="l00074"></a>00074        I_REF(<a class="code" href="classiser_1_1_i_file_type_info.html" title="Provide loading and saving of objects.">iser::IFileTypeInfo</a>, m_fileTypeInfoCompPtr);
+<a name="l00074"></a>00074        I_REF(<a class="code" href="classifile_1_1_i_file_type_info.html" title="Provide loading and saving of objects.">ifile::IFileTypeInfo</a>, m_fileTypeInfoCompPtr);
 <a name="l00075"></a>00075        I_MULTIATTR(QString, m_filtersAttrPtr);
 <a name="l00076"></a>00076        I_ATTR(<span class="keywordtype">int</span>, m_minRecurDepthAttrPtr);
 <a name="l00077"></a>00077        I_ATTR(<span class="keywordtype">int</span>, m_maxRecurDepthAttrPtr);

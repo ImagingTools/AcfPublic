@@ -75,7 +75,7 @@ struct PcmFmtHeader: public FmtHeader
 #pragma pack(pop)
 
 
-// reimplemented (iser::IFileLoader)
+// reimplemented (ifile::IFilePersistence)
 
 bool CWavSamplesLoaderComp::IsOperationSupported(
 			const istd::IChangeable* dataObjectPtr,
@@ -184,7 +184,7 @@ int CWavSamplesLoaderComp::SaveToFile(const istd::IChangeable& data, const QStri
 }
 
 
-// reimplemented (iser::IFileTypeInfo)
+// reimplemented (ifile::IFileTypeInfo)
 
 bool CWavSamplesLoaderComp::GetFileExtensions(QStringList& result, int flags, bool doAppend) const
 {

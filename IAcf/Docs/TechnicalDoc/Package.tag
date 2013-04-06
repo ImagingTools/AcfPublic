@@ -252,6 +252,10 @@
     <namespace>izlib</namespace>
   </compound>
   <compound kind="class">
+    <name>TSingleModelObserverBase</name>
+    <filename>class_t_single_model_observer_base.html</filename>
+  </compound>
+  <compound kind="class">
     <name>TViewExtenderCompBase</name>
     <filename>class_t_view_extender_comp_base.html</filename>
   </compound>
@@ -393,7 +397,7 @@
     <name>icbox::CMemoryBankSerializerComp</name>
     <filename>classicbox_1_1_c_memory_bank_serializer_comp.html</filename>
     <base>ibase::TLoggerCompWrap</base>
-    <base virtualness="virtual">iser::IFileLoader</base>
+    <base virtualness="virtual">ifile::IFilePersistence</base>
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
@@ -1745,13 +1749,13 @@
   <compound kind="class">
     <name>iqsci::CTextEditorGuiComp</name>
     <filename>classiqsci_1_1_c_text_editor_gui_comp.html</filename>
-    <base>TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; CTextEditor &gt;, imod::TSingleModelObserverBase&lt; ibase::ITextDocument &gt; &gt;</base>
+    <base>TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; CTextEditor &gt;, imod::TSingleModelObserverBase&lt; idoc::ITextDocument &gt; &gt;</base>
     <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="typedef">
-      <type>iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; CTextEditor &gt;, imod::TSingleModelObserverBase&lt; ibase::ITextDocument &gt; &gt;</type>
+      <type>iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; CTextEditor &gt;, imod::TSingleModelObserverBase&lt; idoc::ITextDocument &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
-      <anchor>aeb4e2cf9d12956a25b7860db88fdfdf3</anchor>
+      <anchor>af9ad7b573c878b3f7b9aef17e27d1c24</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -2269,7 +2273,7 @@
     <name>izlib::CGzXmlReadArchive</name>
     <filename>classizlib_1_1_c_gz_xml_read_archive.html</filename>
     <base>iser::CXmlReadArchiveBase</base>
-    <base>iser::CFileArchiveInfo</base>
+    <base>ifile::CFileArchiveInfo</base>
     <member kind="typedef">
       <type>iser::CXmlReadArchiveBase</type>
       <name>BaseClass</name>
@@ -2278,10 +2282,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>iser::CFileArchiveInfo</type>
+      <type>ifile::CFileArchiveInfo</type>
       <name>BaseClass2</name>
       <anchorfile>classizlib_1_1_c_gz_xml_read_archive.html</anchorfile>
-      <anchor>ae49525d49e0c1a5ae531e8db62bf631d</anchor>
+      <anchor>a66dd57fcb1ff7a23973e5b4915f24f04</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -2310,7 +2314,7 @@
     <name>izlib::CGzXmlWriteArchive</name>
     <filename>classizlib_1_1_c_gz_xml_write_archive.html</filename>
     <base>iser::CXmlWriteArchiveBase</base>
-    <base>iser::CFileArchiveInfo</base>
+    <base>ifile::CFileArchiveInfo</base>
     <member kind="typedef">
       <type>iser::CXmlWriteArchiveBase</type>
       <name>BaseClass</name>
@@ -2319,10 +2323,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>iser::CFileArchiveInfo</type>
+      <type>ifile::CFileArchiveInfo</type>
       <name>BaseClass2</name>
       <anchorfile>classizlib_1_1_c_gz_xml_write_archive.html</anchorfile>
-      <anchor>a9d60d5465898b13168ae82e8d7b10d0b</anchor>
+      <anchor>a8fb4e72a9257e347d85dbb78667352eb</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">

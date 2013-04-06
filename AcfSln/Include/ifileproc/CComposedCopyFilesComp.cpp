@@ -35,7 +35,7 @@ namespace ifileproc
 {
 
 
-// reimplemented (ibase::IFileConvertCopy)
+// reimplemented (ifileproc::IFileConvertCopy)
 
 bool CComposedCopyFilesComp::ConvertFiles(
 			const QString& inputPath,
@@ -46,7 +46,7 @@ bool CComposedCopyFilesComp::ConvertFiles(
 
 	int copiersCount = m_fileCopiersCompPtr.GetCount();
 	for (int i = 0; i < copiersCount; ++i){
-		ibase::IFileConvertCopy* copierPtr = m_fileCopiersCompPtr[i];
+		ifileproc::IFileConvertCopy* copierPtr = m_fileCopiersCompPtr[i];
 		if (copierPtr != NULL){
 			retVal = copierPtr->ConvertFiles(inputPath, outputPath, paramsPtr) && retVal;
 		}

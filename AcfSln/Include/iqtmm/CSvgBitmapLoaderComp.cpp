@@ -41,7 +41,7 @@ namespace iqtmm
 // public methods
 
 
-// reimplemented (iser::IFileLoader)
+// reimplemented (ifile::IFilePersistence)
 
 bool CSvgBitmapLoaderComp::IsOperationSupported(
 			const istd::IChangeable* dataObjectPtr,
@@ -132,7 +132,7 @@ int CSvgBitmapLoaderComp::SaveToFile(const istd::IChangeable&/* data*/, const QS
 }
 
 
-// reimplemented (iser::IFileTypeInfo)
+// reimplemented (ifile::IFileTypeInfo)
 
 bool CSvgBitmapLoaderComp::GetFileExtensions(QStringList& result, int flags, bool doAppend) const
 {

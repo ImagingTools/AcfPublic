@@ -30,7 +30,7 @@
 #include <QtCore/QList>
 
 // ACF includes
-#include "iser/IFileLoader.h"
+#include "ifile/IFilePersistence.h"
 #include "icomp/CComponentBase.h"
 
 #include "iproc/TILockedProducer.h"
@@ -87,7 +87,7 @@ protected:
 	virtual int GetMaxCachedFilesCount() const = 0;
 
 private:
-	I_REF(iser::IFileLoader, m_cacheLoaderCompPtr);
+	I_REF(ifile::IFilePersistence, m_cacheLoaderCompPtr);
 	I_TREF(LockedProducerType, m_slaveCacheEngineCompPtr);
 
 	typedef QMap<Key, QString> KeyToFileNameMap;
@@ -122,12 +122,12 @@ const CacheObject* TFileCachedProducerCompBase<Key, CacheObject>::ProduceLockedO
 			if (m_cacheLoaderCompPtr->IsOperationSupported(
 						NULL,
 						&cacheFilePath,
-						iser::IFileLoader::QF_LOAD | iser::IFileLoader::QF_FILE,
+						ifile::IFilePersistence::QF_LOAD | ifile::IFilePersistence::QF_FILE,
 						false)){
 				istd::TDelPtr<CacheObject> objectPtr(new CacheObject);
 
 				if (objectPtr.IsValid()){
-					if (m_cacheLoaderCompPtr->LoadFromFile(*objectPtr, cacheFilePath) == iser::IFileLoader::StateOk){
+					if (m_cacheLoaderCompPtr->LoadFromFile(*objectPtr, cacheFilePath) == ifile::IFilePersistence::StateOk){
 						m_ownedObjects.insert(objectPtr.GetPtr());
 
 						return objectPtr.PopPtr();
@@ -145,7 +145,7 @@ const CacheObject* TFileCachedProducerCompBase<Key, CacheObject>::ProduceLockedO
 		if (objectPtr != NULL){
 			QString cacheFilePath = CalcCacheFilePath(key);
 			if (!cacheFilePath.isEmpty() && m_cacheLoaderCompPtr.IsValid()){
-				if (m_cacheLoaderCompPtr->SaveToFile(*const_cast<CacheObject*>(objectPtr), cacheFilePath) == iser::IFileLoader::StateOk){
+				if (m_cacheLoaderCompPtr->SaveToFile(*const_cast<CacheObject*>(objectPtr), cacheFilePath) == ifile::IFilePersistence::StateOk){
 					OnCacheFileSaved(key, cacheFilePath);
 
 					m_keyToFileNameMap[key] = cacheFilePath;

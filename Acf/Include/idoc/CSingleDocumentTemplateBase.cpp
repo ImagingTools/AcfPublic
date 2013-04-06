@@ -107,7 +107,7 @@ QString CSingleDocumentTemplateBase::GetDocumentTypeName(const QByteArray& docum
 }
 
 
-iser::IFileTypeInfo* CSingleDocumentTemplateBase::GetDocumentFileTypeInfo(const QByteArray& documentTypeId) const
+ifile::IFileTypeInfo* CSingleDocumentTemplateBase::GetDocumentFileTypeInfo(const QByteArray& documentTypeId) const
 {
 	return GetFileLoader(documentTypeId);
 }
@@ -123,7 +123,7 @@ IDocumentTemplate::Ids CSingleDocumentTemplateBase::GetDocumentTypeIdsForFile(co
 				++iter){
 		const QByteArray& id = *iter;
 
-		iser::IFileLoader* loaderPtr = GetFileLoader(*iter);
+		ifile::IFilePersistence* loaderPtr = GetFileLoader(*iter);
 		if (loaderPtr->IsOperationSupported(NULL, &filePath)){
 			retVal.push_back(id);
 		}

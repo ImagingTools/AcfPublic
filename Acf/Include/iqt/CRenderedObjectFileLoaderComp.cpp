@@ -42,7 +42,7 @@ namespace iqt
 
 // public methods
 
-// reimplemented (iser::IFileLoader)
+// reimplemented (ifile::IFilePersistence)
 
 bool CRenderedObjectFileLoaderComp::IsOperationSupported(
 				const istd::IChangeable* dataObjectPtr,
@@ -120,11 +120,11 @@ int CRenderedObjectFileLoaderComp::SaveToFile(const istd::IChangeable& data, con
 		return m_fileLoaderCompPtr->SaveToFile(data, filePath);
 	}
 
-	return iser::IFileLoader::StateFailed;
+	return ifile::IFilePersistence::StateFailed;
 }
 
 
-// reimplemented (iser::IFileTypeInfo)
+// reimplemented (ifile::IFileTypeInfo)
 
 bool CRenderedObjectFileLoaderComp::GetFileExtensions(QStringList& result, int flags, bool doAppend) const
 {

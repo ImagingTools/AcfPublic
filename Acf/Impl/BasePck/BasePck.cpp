@@ -86,11 +86,6 @@ I_EXPORT_COMPONENT(
 			"Observer Bind Composition Connection" IM_CATEGORY(I_DATA_MODEL) IM_TAG("Model Composition"));
 
 I_EXPORT_COMPONENT(
-			AutoPersistence,
-			"Allows object persistence using files",
-			"Free Create Store Restore Load Save" IM_CATEGORY(I_DATA_PERSISTENCE) IM_TAG("Persistence File"));
-
-I_EXPORT_COMPONENT(
 			ConsoleLog,
 			"Simple log on windows console",
 			"Windows Message Consumer" IM_CATEGORY(I_SERVICE) IM_TAG("Log"));
@@ -99,16 +94,6 @@ I_EXPORT_COMPONENT(
 			TextFileLog,
 			"Simple text file log",
 			"Message Consumer" IM_CATEGORY(I_SERVICE) IM_TAG("Text File Log"));
-
-I_EXPORT_COMPONENT(
-			FileCopyOverLoader,
-			"General file copy or transform using loaders and any object",
-			"Copy Compile Transform Saver" IM_CATEGORY(I_DATA_PROCESSING) IM_TAG("File Loader"));
-
-I_EXPORT_COMPONENT(
-			CopyApp,
-			"Copy application transforming files",
-			"Copy Compile Transform Application" IM_CATEGORY(I_DATA_PROCESSING I_APPLICATION) IM_TAG("File"));
 
 I_EXPORT_COMPONENT(
 			Uuid,

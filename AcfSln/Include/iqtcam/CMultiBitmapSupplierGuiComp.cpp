@@ -87,7 +87,7 @@ void CMultiBitmapSupplierGuiComp::on_SaveImageButton_clicked()
 			newFilePath = (*m_filePathFormatAttrPtr).arg(dateText).arg(timeText).arg(channelndexText).arg(resolutionText);
 		}
 
-		if (m_bitmapLoaderCompPtr->SaveToFile(m_bitmap, newFilePath) == iser::IFileLoader::StateFailed){
+		if (m_bitmapLoaderCompPtr->SaveToFile(m_bitmap, newFilePath) == ifile::IFilePersistence::StateFailed){
 			QMessageBox::warning(
 						GetQtWidget(),
 						QObject::tr("Error"),

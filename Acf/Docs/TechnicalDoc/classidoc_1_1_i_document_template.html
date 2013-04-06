@@ -65,8 +65,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return supported view type IDs for specified document type.  <a href="#ac47a4a85191e7f4a6bb293c489611d7b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_template.html#a6e18d91dcb96dc27af931e526d5992c2">GetViewTypeName</a> (const QByteArray &amp;documentTypeId, const QByteArray &amp;viewTypeId) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable name of some view type ID.  <a href="#a6e18d91dcb96dc27af931e526d5992c2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_file_loader.html">iser::IFileLoader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_template.html#ad599f3c2f78399f4f28a2e6b4bfe2e0d">GetFileLoader</a> (const QByteArray &amp;documentTypeId) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file loader/saver for spacified document ID.  <a href="#ad599f3c2f78399f4f28a2e6b4bfe2e0d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classifile_1_1_i_file_persistence.html">ifile::IFilePersistence</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_template.html#ab7e01e2b3c635bdd04cdb57b18249439">GetFileLoader</a> (const QByteArray &amp;documentTypeId) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file loader/saver for spacified document ID.  <a href="#ab7e01e2b3c635bdd04cdb57b18249439"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_template.html#ad8dd16801bac9fbc5138e34164020260">CreateDocument</a> (const QByteArray &amp;documentTypeId) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a document instance for document type <code>documentTypeId</code>.  <a href="#ad8dd16801bac9fbc5138e34164020260"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_template.html#aa9dc2ddd9889c79f373dd6c1b5324690">CreateView</a> (const QByteArray &amp;documentTypeId, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *documentPtr, const QByteArray &amp;viewTypeId=QByteArray()) const =0</td></tr>
@@ -190,12 +190,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad599f3c2f78399f4f28a2e6b4bfe2e0d"></a><!-- doxytag: member="idoc::IDocumentTemplate::GetFileLoader" ref="ad599f3c2f78399f4f28a2e6b4bfe2e0d" args="(const QByteArray &amp;documentTypeId) const =0" -->
+<a class="anchor" id="ab7e01e2b3c635bdd04cdb57b18249439"></a><!-- doxytag: member="idoc::IDocumentTemplate::GetFileLoader" ref="ab7e01e2b3c635bdd04cdb57b18249439" args="(const QByteArray &amp;documentTypeId) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classiser_1_1_i_file_loader.html">iser::IFileLoader</a>* idoc::IDocumentTemplate::GetFileLoader </td>
+          <td class="memname">virtual <a class="el" href="classifile_1_1_i_file_persistence.html">ifile::IFilePersistence</a>* idoc::IDocumentTemplate::GetFileLoader </td>
           <td>(</td>
           <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>documentTypeId</em></td><td>)</td>
@@ -213,7 +213,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a1e783c28138db0bb7e6fc021f0327c78">idoc::CCompositeDocumentTemplateComp</a>, and <a class="el" href="classidoc_1_1_c_single_document_template_comp.html#a9fd758135f102c593980f27e59c75891">idoc::CSingleDocumentTemplateComp</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a71e8079f3d1dea1202f46950c4f12ba1">idoc::CCompositeDocumentTemplateComp</a>, and <a class="el" href="classidoc_1_1_c_single_document_template_comp.html#a4dda2fcfa7e399b7c8d2d0af543edf92">idoc::CSingleDocumentTemplateComp</a>.</p>
 
 </div>
 </div>

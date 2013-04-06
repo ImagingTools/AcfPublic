@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Include/iser/CFileReadArchive.h Source File</title>
+<title>Include/ifile/CFileReadArchive.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -23,11 +23,11 @@
   </div>
 <div class="header">
   <div class="headertitle">
-<div class="title">Include/iser/CFileReadArchive.h</div>  </div>
+<div class="title">Include/ifile/CFileReadArchive.h</div>  </div>
 </div>
 <div class="contents">
-<a href="_c_file_read_archive_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef iser_CFileReadArchive_included</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iser_CFileReadArchive_included</span>
+<a href="_c_file_read_archive_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef ifile_CFileReadArchive_included</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define ifile_CFileReadArchive_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
@@ -36,39 +36,39 @@
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_c_binary_read_archive_base_8h.html">iser/CBinaryReadArchiveBase.h</a>&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_c_file_archive_info_8h.html">iser/CFileArchiveInfo.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_c_file_archive_info_8h.html">ifile/CFileArchiveInfo.h</a>&quot;</span>
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 
-<a name="l00014"></a>00014 <span class="keyword">namespace </span>iser
+<a name="l00014"></a>00014 <span class="keyword">namespace </span>ifile
 <a name="l00015"></a>00015 {
 <a name="l00016"></a>00016 
 <a name="l00017"></a>00017 
-<a name="l00024"></a><a class="code" href="classiser_1_1_c_file_read_archive.html">00024</a> <span class="keyword">class </span><a class="code" href="classiser_1_1_c_file_read_archive.html" title="Simple implementation of archive reading from own ACF format binary file.">CFileReadArchive</a>:
-<a name="l00025"></a>00025                      <span class="keyword">public</span> <a class="code" href="classiser_1_1_c_binary_read_archive_base.html" title="Base class for archive implementations reading data based on its binary representation.">CBinaryReadArchiveBase</a>,
-<a name="l00026"></a>00026                      <span class="keyword">public</span> <a class="code" href="classiser_1_1_c_file_archive_info.html" title="Basic implementation of interface iser::IFileArchiveInfo.">CFileArchiveInfo</a>
+<a name="l00024"></a><a class="code" href="classifile_1_1_c_file_read_archive.html">00024</a> <span class="keyword">class </span><a class="code" href="classifile_1_1_c_file_read_archive.html" title="Simple implementation of archive reading from own ACF format binary file.">CFileReadArchive</a>:
+<a name="l00025"></a>00025                      <span class="keyword">public</span> iser::CBinaryReadArchiveBase,
+<a name="l00026"></a>00026                      <span class="keyword">public</span> <a class="code" href="classifile_1_1_c_file_archive_info.html" title="Basic implementation of interface ifile::IFileArchiveInfo.">CFileArchiveInfo</a>
 <a name="l00027"></a>00027 {
 <a name="l00028"></a>00028 <span class="keyword">public</span>:
-<a name="l00029"></a><a class="code" href="classiser_1_1_c_file_read_archive.html#a76c9cca76ca6abd048bf55a68a8d572c">00029</a>        <span class="keyword">typedef</span> <a class="code" href="classiser_1_1_c_binary_read_archive_base.html" title="Base class for archive implementations reading data based on its binary representation.">CBinaryReadArchiveBase</a> <a class="code" href="classiser_1_1_c_file_read_archive.html#a76c9cca76ca6abd048bf55a68a8d572c">BaseClass</a>;
-<a name="l00030"></a><a class="code" href="classiser_1_1_c_file_read_archive.html#a304eb98a21774dc6f50c26190367d369">00030</a>        <span class="keyword">typedef</span> <a class="code" href="classiser_1_1_c_file_archive_info.html" title="Basic implementation of interface iser::IFileArchiveInfo.">CFileArchiveInfo</a> <a class="code" href="classiser_1_1_c_file_read_archive.html#a304eb98a21774dc6f50c26190367d369">BaseClass2</a>;
+<a name="l00029"></a><a class="code" href="classifile_1_1_c_file_read_archive.html#a03e8f2b55fd2ae7ffea24ed5a2449463">00029</a>        <span class="keyword">typedef</span> <a class="code" href="classiser_1_1_c_binary_read_archive_base.html" title="Base class for archive implementations reading data based on its binary representation.">iser::CBinaryReadArchiveBase</a> <a class="code" href="classifile_1_1_c_file_read_archive.html#a03e8f2b55fd2ae7ffea24ed5a2449463">BaseClass</a>;
+<a name="l00030"></a><a class="code" href="classifile_1_1_c_file_read_archive.html#a48bb1b1a5f1801b95c794ee40f199810">00030</a>        <span class="keyword">typedef</span> <a class="code" href="classifile_1_1_c_file_archive_info.html" title="Basic implementation of interface ifile::IFileArchiveInfo.">CFileArchiveInfo</a> <a class="code" href="classifile_1_1_c_file_read_archive.html#a48bb1b1a5f1801b95c794ee40f199810">BaseClass2</a>;
 <a name="l00031"></a>00031 
-<a name="l00041"></a>00041        <a class="code" href="classiser_1_1_c_file_read_archive.html#a5f32e5e008850497bac30e95766abf0e" title="Contructor.">CFileReadArchive</a>(<span class="keyword">const</span> QString&amp; filePath, <span class="keywordtype">bool</span> supportTagSkipping = <span class="keyword">true</span>, <span class="keywordtype">bool</span> serializeHeader = <span class="keyword">true</span>);
+<a name="l00041"></a>00041        <a class="code" href="classifile_1_1_c_file_read_archive.html#a4bf1a79fb6378099e31243534120911b" title="Contructor.">CFileReadArchive</a>(<span class="keyword">const</span> QString&amp; filePath, <span class="keywordtype">bool</span> supportTagSkipping = <span class="keyword">true</span>, <span class="keywordtype">bool</span> serializeHeader = <span class="keyword">true</span>);
 <a name="l00042"></a>00042 
-<a name="l00043"></a>00043        <span class="comment">// reimplemented (iser::IArchive)</span>
-<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_file_read_archive.html#ac6d305d5eb27c06a190e699706e151a1" title="Check if skiping to the end of tag on EndTag is supported.">IsTagSkippingSupported</a>() <span class="keyword">const</span>;
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_file_read_archive.html#ada7047b380eece18cf623b80a5d7188e" title="Begin of archive tag.">BeginTag</a>(<span class="keyword">const</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">CArchiveTag</a>&amp; tag);
-<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_file_read_archive.html#ac4363e7b665000eeff55b0cfbf152677" title="End of archive tag.">EndTag</a>(<span class="keyword">const</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">CArchiveTag</a>&amp; tag);
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_file_read_archive.html#adcd676057b7acaefceb0af82cb76193a" title="Process binary data block.">ProcessData</a>(<span class="keywordtype">void</span>* data, <span class="keywordtype">int</span> size);
+<a name="l00043"></a>00043        <span class="comment">// reimplemented (ifile::IArchive)</span>
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifile_1_1_c_file_read_archive.html#a3b61507956400a3213ee24c14433b3ec" title="Check if skiping to the end of tag on EndTag is supported.">IsTagSkippingSupported</a>() <span class="keyword">const</span>;
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifile_1_1_c_file_read_archive.html#ad24f052beca32ef60daea1abdd15d0d1" title="Begin of archive tag.">BeginTag</a>(<span class="keyword">const</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a>&amp; tag);
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifile_1_1_c_file_read_archive.html#aca5a5deb64254edacc588d3333d385dc" title="End of archive tag.">EndTag</a>(<span class="keyword">const</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a>&amp; tag);
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifile_1_1_c_file_read_archive.html#a971726afae602cae25db9b0897bab157" title="Process binary data block.">ProcessData</a>(<span class="keywordtype">void</span>* data, <span class="keywordtype">int</span> size);
 <a name="l00048"></a>00048        
 <a name="l00049"></a>00049 <span class="keyword">protected</span>:
-<a name="l00050"></a><a class="code" href="structiser_1_1_c_file_read_archive_1_1_tag_stack_element.html">00050</a>        <span class="keyword">struct </span><a class="code" href="structiser_1_1_c_file_read_archive_1_1_tag_stack_element.html">TagStackElement</a>
+<a name="l00050"></a><a class="code" href="structifile_1_1_c_file_read_archive_1_1_tag_stack_element.html">00050</a>        <span class="keyword">struct </span><a class="code" href="structifile_1_1_c_file_read_archive_1_1_tag_stack_element.html">TagStackElement</a>
 <a name="l00051"></a>00051        {
-<a name="l00052"></a><a class="code" href="structiser_1_1_c_file_read_archive_1_1_tag_stack_element.html#a9134fe62c40a76ca7b511cabde348a2c">00052</a>               quint32 <a class="code" href="structiser_1_1_c_file_read_archive_1_1_tag_stack_element.html#a9134fe62c40a76ca7b511cabde348a2c">tagBinaryId</a>;
-<a name="l00053"></a><a class="code" href="structiser_1_1_c_file_read_archive_1_1_tag_stack_element.html#a426ef315f784a850392892ced02db9cd">00053</a>               quint32 <a class="code" href="structiser_1_1_c_file_read_archive_1_1_tag_stack_element.html#a426ef315f784a850392892ced02db9cd">endPosition</a>;
-<a name="l00054"></a><a class="code" href="structiser_1_1_c_file_read_archive_1_1_tag_stack_element.html#a316b2cb28b5c6931aaad0d5614f20979">00054</a>               <span class="keywordtype">bool</span> <a class="code" href="structiser_1_1_c_file_read_archive_1_1_tag_stack_element.html#a316b2cb28b5c6931aaad0d5614f20979">useTagSkipping</a>;
+<a name="l00052"></a><a class="code" href="structifile_1_1_c_file_read_archive_1_1_tag_stack_element.html#a74dbfdf5e9c398cd8228d4504837f642">00052</a>               quint32 <a class="code" href="structifile_1_1_c_file_read_archive_1_1_tag_stack_element.html#a74dbfdf5e9c398cd8228d4504837f642">tagBinaryId</a>;
+<a name="l00053"></a><a class="code" href="structifile_1_1_c_file_read_archive_1_1_tag_stack_element.html#a07e60b38819f2c82323201e9d64ffeef">00053</a>               quint32 <a class="code" href="structifile_1_1_c_file_read_archive_1_1_tag_stack_element.html#a07e60b38819f2c82323201e9d64ffeef">endPosition</a>;
+<a name="l00054"></a><a class="code" href="structifile_1_1_c_file_read_archive_1_1_tag_stack_element.html#ab31205cb8a9a2308ead83e0582fb25b5">00054</a>               <span class="keywordtype">bool</span> <a class="code" href="structifile_1_1_c_file_read_archive_1_1_tag_stack_element.html#ab31205cb8a9a2308ead83e0582fb25b5">useTagSkipping</a>;
 <a name="l00055"></a>00055        };
 <a name="l00056"></a>00056 
 <a name="l00057"></a>00057        <span class="comment">// reimplemented (istd::ILogger)</span>
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiser_1_1_c_file_read_archive.html#a34680fe1778bfb8001ed16af4429fb13" title="Decorate message parts before outputting.">DecorateMessage</a>(
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifile_1_1_c_file_read_archive.html#ad109920de30f965150e858877259856c" title="Decorate message parts before outputting.">DecorateMessage</a>(
 <a name="l00059"></a>00059                             <a class="code" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152" title="Category of information.">istd::IInformationProvider::InformationCategory</a> category,
 <a name="l00060"></a>00060                             <span class="keywordtype">int</span> <span class="keywordtype">id</span>,
 <a name="l00061"></a>00061                             <span class="keywordtype">int</span> flags,
@@ -86,10 +86,10 @@
 <a name="l00073"></a>00073 };
 <a name="l00074"></a>00074 
 <a name="l00075"></a>00075 
-<a name="l00076"></a>00076 } <span class="comment">// namespace iser</span>
+<a name="l00076"></a>00076 } <span class="comment">// namespace ifile</span>
 <a name="l00077"></a>00077 
 <a name="l00078"></a>00078 
-<a name="l00079"></a>00079 <span class="preprocessor">#endif // !iser_CFileReadArchive_included</span>
+<a name="l00079"></a>00079 <span class="preprocessor">#endif // !ifile_CFileReadArchive_included</span>
 <a name="l00080"></a>00080 <span class="preprocessor"></span>
 <a name="l00081"></a>00081 
 </pre></div></div>

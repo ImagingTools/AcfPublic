@@ -71,7 +71,7 @@ QString CCompositeDocumentTemplateComp::GetDocumentTypeName(const QByteArray& do
 }
 
 
-iser::IFileTypeInfo* CCompositeDocumentTemplateComp::GetDocumentFileTypeInfo(const QByteArray& documentTypeId) const
+ifile::IFileTypeInfo* CCompositeDocumentTemplateComp::GetDocumentFileTypeInfo(const QByteArray& documentTypeId) const
 {
 	IdToTemplateMap::ConstIterator iter = m_idToTemplateMap.constFind(documentTypeId);
 	if (iter != m_idToTemplateMap.constEnd()){
@@ -164,7 +164,7 @@ QString CCompositeDocumentTemplateComp::GetViewTypeName(
 }
 
 
-iser::IFileLoader* CCompositeDocumentTemplateComp::GetFileLoader(const QByteArray& documentTypeId) const
+ifile::IFilePersistence* CCompositeDocumentTemplateComp::GetFileLoader(const QByteArray& documentTypeId) const
 {
 	IdToTemplateMap::ConstIterator iter = m_idToTemplateMap.constFind(documentTypeId);
 	if (iter != m_idToTemplateMap.constEnd()){

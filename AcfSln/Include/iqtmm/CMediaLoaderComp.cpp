@@ -38,7 +38,7 @@ namespace iqtmm
 // public methods
 
 
-// reimplemented (iser::IFileLoader)
+// reimplemented (ifile::IFilePersistence)
 
 bool CMediaLoaderComp::IsOperationSupported(
 			const istd::IChangeable* dataObjectPtr,
@@ -102,7 +102,7 @@ int CMediaLoaderComp::SaveToFile(const istd::IChangeable&/* data*/, const QStrin
 }
 
 
-// reimplemented (iser::IFileTypeInfo)
+// reimplemented (ifile::IFileTypeInfo)
 
 bool CMediaLoaderComp::GetFileExtensions(QStringList& result, int flags, bool doAppend) const
 {

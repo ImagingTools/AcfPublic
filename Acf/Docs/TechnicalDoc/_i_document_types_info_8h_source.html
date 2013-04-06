@@ -37,7 +37,7 @@
 <a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_polymorphic_8h.html">istd/IPolymorphic.h</a>&quot;</span>
 <a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_type_info_8h.html">iser/IFileTypeInfo.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_type_info_8h.html">ifile/IFileTypeInfo.h</a>&quot;</span>
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 <span class="keyword">namespace </span>idoc
@@ -64,7 +64,7 @@
 <a name="l00057"></a>00057 
 <a name="l00062"></a>00062        <span class="keyword">virtual</span> QString <a class="code" href="classidoc_1_1_i_document_types_info.html#a9a0476c469498d8456573a730a3a7d7e" title="Get human readable name of some document type ID.">GetDocumentTypeName</a>(<span class="keyword">const</span> QByteArray&amp; documentTypeId) <span class="keyword">const</span> = 0;
 <a name="l00063"></a>00063 
-<a name="l00068"></a>00068        <span class="keyword">virtual</span> <a class="code" href="classiser_1_1_i_file_type_info.html" title="Provide loading and saving of objects.">iser::IFileTypeInfo</a>* <a class="code" href="classidoc_1_1_i_document_types_info.html#ac41e8a8af9fef09682eb4c9d75ed7d74" title="Get file type information object for some selected document type.">GetDocumentFileTypeInfo</a>(<span class="keyword">const</span> QByteArray&amp; documentTypeId) <span class="keyword">const</span> = 0;
+<a name="l00068"></a>00068        <span class="keyword">virtual</span> <a class="code" href="classifile_1_1_i_file_type_info.html" title="Provide loading and saving of objects.">ifile::IFileTypeInfo</a>* <a class="code" href="classidoc_1_1_i_document_types_info.html#a104d84bb6b698a5fadce945572ed9e86" title="Get file type information object for some selected document type.">GetDocumentFileTypeInfo</a>(<span class="keyword">const</span> QByteArray&amp; documentTypeId) <span class="keyword">const</span> = 0;
 <a name="l00069"></a>00069 
 <a name="l00073"></a>00073        <span class="keyword">virtual</span> <a class="code" href="classidoc_1_1_i_document_types_info.html#ad27b000c2b9dd09e63ccd4af882c3817">Ids</a> <a class="code" href="classidoc_1_1_i_document_types_info.html#ae8e1a3bda31441f2c7e1cf37f64f0c53" title="Get list of supported document ID&#39;s can be created for specified file.">GetDocumentTypeIdsForFile</a>(<span class="keyword">const</span> QString&amp; filePath) <span class="keyword">const</span> = 0;
 <a name="l00074"></a>00074 

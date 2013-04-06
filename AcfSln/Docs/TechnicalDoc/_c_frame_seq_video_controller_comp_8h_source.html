@@ -33,7 +33,7 @@
 <a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QtCore/QTimer&gt;</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_file_loader_8h.html">iser/IFileLoader.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_file_persistence_8h.html">ifile/IFilePersistence.h</a>&quot;</span>
 <a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_single_model_observer_base_8h.html">imod/CSingleModelObserverBase.h</a>&quot;</span>
 <a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_t_sync_processor_comp_base_8h.html">iproc/TSyncProcessorCompBase.h</a>&quot;</span>
@@ -49,7 +49,7 @@
 <a name="l00023"></a>00023 
 <a name="l00024"></a>00024 
 <a name="l00028"></a><a class="code" href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html">00028</a> <span class="keyword">class </span><a class="code" href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html" title="Component to play some image (frame) sequence from a directory.">CFrameSeqVideoControllerComp</a>:
-<a name="l00029"></a>00029                      <span class="keyword">public</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_q_object.html">QObject</a>,
+<a name="l00029"></a>00029                      <span class="keyword">public</span> <a class="code" href="class_q_object.html">QObject</a>,
 <a name="l00030"></a>00030                      <span class="keyword">public</span> iproc::TSyncProcessorCompBase&lt;icam::IBitmapAcquisition&gt;,
 <a name="l00031"></a>00031                      <span class="keyword">virtual</span> <span class="keyword">public</span> imm::IVideoController,
 <a name="l00032"></a>00032                      <span class="keyword">protected</span> imod::CSingleModelObserverBase
@@ -102,7 +102,7 @@
 <a name="l00079"></a>00079        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html#a3b8910baf2d4c87a906a76e257910841" title="Get index of current frame.">GetCurrentFrame</a>() <span class="keyword">const</span>;
 <a name="l00080"></a>00080        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html#a703bfebc04bbaab94b2e5dfd0493a4c3" title="Set index of current frame.">SetCurrentFrame</a>(<span class="keywordtype">int</span> frameIndex);
 <a name="l00081"></a>00081 
-<a name="l00082"></a>00082        <span class="comment">// reimplemented (iser::IFileTypeInfo)</span>
+<a name="l00082"></a>00082        <span class="comment">// reimplemented (ifile::IFileTypeInfo)</span>
 <a name="l00083"></a>00083        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html#a10938d38c762a36ed9b0f24746cf4571">GetFileExtensions</a>(QStringList&amp; result, <span class="keywordtype">int</span> flags = -1, <span class="keywordtype">bool</span> doAppend = <span class="keyword">false</span>) <span class="keyword">const</span>;
 <a name="l00084"></a>00084        <span class="keyword">virtual</span> QString <a class="code" href="classiqtmm_1_1_c_frame_seq_video_controller_comp.html#abbe5e6e4d67bb14c1f724879e2f5d136">GetTypeDescription</a>(<span class="keyword">const</span> QString* extensionPtr = NULL) <span class="keyword">const</span>;
 <a name="l00085"></a>00085 
@@ -112,7 +112,7 @@
 <a name="l00089"></a>00089 <span class="keyword">private</span>:
 <a name="l00090"></a>00090        I_ATTR(QString, m_defaultSequenceDirectoryAttrPtr);
 <a name="l00091"></a>00091        I_ATTR(<span class="keywordtype">double</span>, m_framesPerSecondAttrPtr);
-<a name="l00092"></a>00092        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html">iser::IFileLoader</a>, m_frameLoaderCompPtr);
+<a name="l00092"></a>00092        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_persistence.html">ifile::IFilePersistence</a>, m_frameLoaderCompPtr);
 <a name="l00093"></a>00093        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>, m_frameDataCompPtr);
 <a name="l00094"></a>00094 
 <a name="l00095"></a>00095        <span class="keywordtype">int</span> m_currentFrameIndex;

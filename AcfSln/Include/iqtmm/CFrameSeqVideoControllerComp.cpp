@@ -74,7 +74,7 @@ int CFrameSeqVideoControllerComp::DoProcessing(
 
 			istd::CChangeNotifier notifier(bitmapPtr);
 
-			if (m_frameLoaderCompPtr->LoadFromFile(*bitmapPtr, fileName) == iser::IFileLoader::StateOk){
+			if (m_frameLoaderCompPtr->LoadFromFile(*bitmapPtr, fileName) == ifile::IFilePersistence::StateOk){
 				return TS_OK;
 			}
 		}
@@ -215,7 +215,7 @@ bool CFrameSeqVideoControllerComp::SetCurrentFrame(int frameIndex)
 }
 
 
-// reimplemented (iser::IFileTypeInfo)
+// reimplemented (ifile::IFileTypeInfo)
 
 bool CFrameSeqVideoControllerComp::GetFileExtensions(QStringList& result, int flags, bool doAppend) const
 {
@@ -258,7 +258,7 @@ bool CFrameSeqVideoControllerComp::LoadCurrentFrame()
 
 		int loadState = m_frameLoaderCompPtr->LoadFromFile(*m_frameDataCompPtr, currentFile);
 
-		return (loadState == iser::IFileLoader::StateOk);
+		return (loadState == ifile::IFilePersistence::StateOk);
 	}
 	else{
 		return false;

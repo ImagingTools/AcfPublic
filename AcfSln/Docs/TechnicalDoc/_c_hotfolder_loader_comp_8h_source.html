@@ -29,46 +29,46 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/iser_2_c_xml_file_read_archive_8h.html">iser/CXmlFileReadArchive.h</a>&quot;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/iser_2_c_xml_file_write_archive_8h.html">iser/CXmlFileWriteArchive.h</a>&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/ifile_2_c_xml_file_read_archive_8h.html">ifile/CXmlFileReadArchive.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/ifile_2_c_xml_file_write_archive_8h.html">ifile/CXmlFileWriteArchive.h</a>&quot;</span>
 <a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_file_serializer_comp_8h.html">ibase/TFileSerializerComp.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_file_serializer_comp_8h.html">ifile/TFileSerializerComp.h</a>&quot;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 <span class="keyword">namespace </span>ihotf
 <a name="l00013"></a>00013 {
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 
-<a name="l00020"></a><a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html">00020</a> <span class="keyword">class </span><a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html" title="Hotfolder data loader.">CHotfolderLoaderComp</a>: <span class="keyword">public</span> ibase::TFileSerializerComp&lt;iser::CXmlFileReadArchive, iser::CXmlFileWriteArchive&gt;
+<a name="l00020"></a><a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html">00020</a> <span class="keyword">class </span><a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html" title="Hotfolder data loader.">CHotfolderLoaderComp</a>: <span class="keyword">public</span> ifile::TFileSerializerComp&lt;ifile::CXmlFileReadArchive, ifile::CXmlFileWriteArchive&gt;
 <a name="l00021"></a>00021 {
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
-<a name="l00023"></a><a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html#a0650077677699cd0a25abb1ba418a346">00023</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_file_serializer_comp.html">ibase::TFileSerializerComp&lt;iser::CXmlFileReadArchive, iser::CXmlFileWriteArchive&gt;</a> <a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html#a0650077677699cd0a25abb1ba418a346">BaseClass</a>;
+<a name="l00023"></a><a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html#a87ab7dbe4eb455ac32fdb34e85d05c48">00023</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_t_file_serializer_comp.html">ifile::TFileSerializerComp&lt;ifile::CXmlFileReadArchive, ifile::CXmlFileWriteArchive&gt;</a> <a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html#a87ab7dbe4eb455ac32fdb34e85d05c48">BaseClass</a>;
 <a name="l00024"></a>00024 
 <a name="l00025"></a>00025        I_BEGIN_COMPONENT(<a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html" title="Hotfolder data loader.">CHotfolderLoaderComp</a>);
 <a name="l00026"></a>00026               I_ASSIGN(m_monitorSessionsParamIdAttrPtr, <span class="stringliteral">&quot;MonitorSessionsParamId&quot;</span>, <span class="stringliteral">&quot;Parameter ID for monitoring sessions&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;MonitoringSessions&quot;</span>);
 <a name="l00027"></a>00027        I_END_COMPONENT;
 <a name="l00028"></a>00028 
-<a name="l00029"></a><a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html#ad7d06d35a1cbd2df0a7e5680ee0165f7">00029</a>        <span class="keyword">enum</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_c_file_serializer_comp_base.html#acc7406a1d564b4d9ea4205a8f6b1b1dc">MessageId</a>
+<a name="l00029"></a><a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html#ad7d06d35a1cbd2df0a7e5680ee0165f7">00029</a>        <span class="keyword">enum</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_c_file_serializer_comp_base.html#ae177b2fecdc0565b7d8e06b6e1b7626e">MessageId</a>
 <a name="l00030"></a>00030        {
 <a name="l00031"></a><a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html#ad7d06d35a1cbd2df0a7e5680ee0165f7a540b9547bdc5551e9c5ee0c0149af7ac">00031</a>               <a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html#ad7d06d35a1cbd2df0a7e5680ee0165f7a540b9547bdc5551e9c5ee0c0149af7ac">MI_LOAD_ERROR</a> = 680,
 <a name="l00032"></a><a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html#ad7d06d35a1cbd2df0a7e5680ee0165f7a3fadb5a59a47e69b165a130cce118457">00032</a>               <a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html#ad7d06d35a1cbd2df0a7e5680ee0165f7a3fadb5a59a47e69b165a130cce118457">MI_CANNOT_READ_STATIC_PARAMS</a>,
 <a name="l00033"></a><a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html#ad7d06d35a1cbd2df0a7e5680ee0165f7a499e1ff10c7dcd34442b0473102c9f7b">00033</a>               <a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html#ad7d06d35a1cbd2df0a7e5680ee0165f7a499e1ff10c7dcd34442b0473102c9f7b">MI_CANNOT_READ_DYNAMIC_PARAMS</a>
 <a name="l00034"></a>00034        };
 <a name="l00035"></a>00035 
-<a name="l00036"></a>00036        <span class="comment">// reimplemented (iser::IFileLoader)</span>
+<a name="l00036"></a>00036        <span class="comment">// reimplemented (ifile::IFilePersistence)</span>
 <a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html#aa60ed182d639095c9d02963135b48714">LoadFromFile</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>&amp; data, <span class="keyword">const</span> QString&amp; filePath) <span class="keyword">const</span>;
 <a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html#ad3e769f854c79a42db83b5f7665b2329">SaveToFile</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>&amp; data, <span class="keyword">const</span> QString&amp; filePath) <span class="keyword">const</span>;
 <a name="l00039"></a>00039 
-<a name="l00040"></a>00040        <span class="comment">// reimplemented (iser::IFileTypeInfo)</span>
+<a name="l00040"></a>00040        <span class="comment">// reimplemented (ifile::IFileTypeInfo)</span>
 <a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html#a4d9d2c0a575b9457621fa1c2af1fc581">GetFileExtensions</a>(QStringList&amp; result, <span class="keywordtype">int</span> flags = -1, <span class="keywordtype">bool</span> doAppend = <span class="keyword">false</span>) <span class="keyword">const</span>;
 <a name="l00042"></a>00042        <span class="keyword">virtual</span> QString <a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html#ace302b59822a6f767859e7c704dbff1c">GetTypeDescription</a>(<span class="keyword">const</span> QString* extensionPtr = NULL) <span class="keyword">const</span>;
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044 <span class="keyword">protected</span>:
 <a name="l00048"></a>00048        QString <a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html#a563f842fb8310521a0150e7151bcf753" title="Get the path of the static hotfolder parameter file.">GetStaticParamsPath</a>(<span class="keyword">const</span> QString&amp; objectPath) <span class="keyword">const</span>;
 <a name="l00049"></a>00049 
-<a name="l00050"></a>00050        <span class="comment">// reimplemented (ibase::TFileSerializerComp)</span>
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html#ad7f66fbcd9366b7bd8c72dc2ed067315">OnReadError</a>(
-<a name="l00052"></a>00052                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_c_xml_file_read_archive.html">iser::CXmlFileReadArchive</a>&amp; archive,
+<a name="l00050"></a>00050        <span class="comment">// reimplemented (ifile::TFileSerializerComp)</span>
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classihotf_1_1_c_hotfolder_loader_comp.html#a769d09a36f92481bd173a3e5195a907a">OnReadError</a>(
+<a name="l00052"></a>00052                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_c_xml_file_read_archive.html">ifile::CXmlFileReadArchive</a>&amp; archive,
 <a name="l00053"></a>00053                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>&amp; data,
 <a name="l00054"></a>00054                             <span class="keyword">const</span> QString&amp; filePath) <span class="keyword">const</span>;
 <a name="l00055"></a>00055 

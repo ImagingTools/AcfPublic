@@ -38,7 +38,7 @@
 <div class="title">ifileproc::CSelectableFileConverterComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ifileproc::CSelectableFileConverterComp" --><!-- doxytag: inherits="icomp::CComponentBase,ibase::IFileConvertCopy,iprm::ISelectionParam,iprm::IOptionsList" -->
+<!-- doxytag: class="ifileproc::CSelectableFileConverterComp" --><!-- doxytag: inherits="icomp::CComponentBase,ifileproc::IFileConvertCopy,iprm::ISelectionParam,iprm::IOptionsList" -->
 <p><code>#include &lt;<a class="el" href="_c_selectable_file_converter_comp_8h_source.html">CSelectableFileConverterComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ifileproc::CSelectableFileConverterComp:</div>
@@ -47,7 +47,7 @@ Inheritance diagram for ifileproc::CSelectableFileConverterComp:</div>
   <img src="classifileproc_1_1_c_selectable_file_converter_comp.png" usemap="#ifileproc::CSelectableFileConverterComp_map" alt=""/>
   <map id="ifileproc::CSelectableFileConverterComp_map" name="ifileproc::CSelectableFileConverterComp_map">
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html" alt="icomp::CComponentBase" shape="rect" coords="0,168,242,192"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_file_convert_copy.html" alt="ibase::IFileConvertCopy" shape="rect" coords="252,168,494,192"/>
+<area href="classifileproc_1_1_i_file_convert_copy.html" title="Common interface for file copying." alt="ifileproc::IFileConvertCopy" shape="rect" coords="252,168,494,192"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html" alt="iprm::ISelectionParam" shape="rect" coords="504,168,746,192"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html" alt="iprm::IOptionsList" shape="rect" coords="756,168,998,192"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="0,112,242,136"/>
@@ -70,6 +70,7 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a1d9905cbfe4197675a106e933cd820bf">CSelectableFileConverterComp</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_selectable_file_converter_comp.html#af30b8b5e925b0e9b32743758a1625a16">ConvertFiles</a> (const QString &amp;inputPath, const QString &amp;outputPath, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a file or files from <code>inputPath</code> to destination <code>outputPath</code>.  <a href="#af30b8b5e925b0e9b32743758a1625a16"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const IOptionsList *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_selectable_file_converter_comp.html#ab436ec7d4e00dd2791bc8040b78bef98">GetSelectionConstraints</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a04578647853ff5878755ef7c0e25ae28">GetSelectedOptionIndex</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a4409552270a591d62d0ae16657cffe91">SetSelectedOptionIndex</a> (int index)</td></tr>
@@ -153,7 +154,10 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_file_convert_copy.html#ad11442c7773dc7ace817074217e3ef4c">ibase::IFileConvertCopy</a>.</p>
+<p>Copy a file or files from <code>inputPath</code> to destination <code>outputPath</code>. </p>
+<p>Optionally, you can use <code>paramsPtr</code> to control the copy process. </p>
+
+<p>Implements <a class="el" href="classifileproc_1_1_i_file_convert_copy.html#a93acd5c4e2cfa400220ab4ed502e6b5f">ifileproc::IFileConvertCopy</a>.</p>
 
 </div>
 </div>

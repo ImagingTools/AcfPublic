@@ -27,7 +27,7 @@
 // ACF includes
 #include "istd/IChangeable.h"
 #include <QtCore/QString>
-#include "iser/IFileTypeInfo.h"
+#include "ifile/IFileTypeInfo.h"
 
 #include "imm/imm.h"
 
@@ -38,7 +38,7 @@ namespace imm
 
 class IMediaController:
 			virtual public istd::IChangeable,
-			virtual public iser::IFileTypeInfo
+			virtual public ifile::IFileTypeInfo
 {
 public:
 	enum ChangeFlags

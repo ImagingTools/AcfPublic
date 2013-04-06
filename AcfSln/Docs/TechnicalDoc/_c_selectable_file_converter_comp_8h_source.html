@@ -34,7 +34,7 @@
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_selection_param_8h.html">iprm/ISelectionParam.h</a>&quot;</span>
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_options_list_8h.html">iprm/IOptionsList.h</a>&quot;</span>
 <a name="l00010"></a>00010 
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_file_convert_copy_8h.html">ibase/IFileConvertCopy.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_convert_copy_8h.html">ifileproc/IFileConvertCopy.h</a>&quot;</span>
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 <span class="keyword">namespace </span>ifileproc
@@ -43,7 +43,7 @@
 <a name="l00017"></a>00017 
 <a name="l00018"></a><a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html">00018</a> <span class="keyword">class </span><a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html">CSelectableFileConverterComp</a>:
 <a name="l00019"></a>00019                      <span class="keyword">public</span> icomp::CComponentBase,
-<a name="l00020"></a>00020                      <span class="keyword">virtual</span> <span class="keyword">public</span> ibase::IFileConvertCopy,
+<a name="l00020"></a>00020                      <span class="keyword">virtual</span> <span class="keyword">public</span> ifileproc::<a class="code" href="classifileproc_1_1_i_file_convert_copy.html" title="Common interface for file copying.">IFileConvertCopy</a>,
 <a name="l00021"></a>00021                      <span class="keyword">virtual</span> <span class="keyword">public</span> iprm::ISelectionParam,
 <a name="l00022"></a>00022                      <span class="keyword">virtual</span> <span class="keyword">protected</span> iprm::IOptionsList
 <a name="l00023"></a>00023 {
@@ -51,7 +51,7 @@
 <a name="l00025"></a><a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a6d19081c6d37afa0ee8516b8e7572c8a">00025</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a6d19081c6d37afa0ee8516b8e7572c8a">BaseClass</a>;
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027        I_BEGIN_COMPONENT(<a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html">CSelectableFileConverterComp</a>);
-<a name="l00028"></a>00028               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_file_convert_copy.html">ibase::IFileConvertCopy</a>);
+<a name="l00028"></a>00028               I_REGISTER_INTERFACE(<a class="code" href="classifileproc_1_1_i_file_convert_copy.html" title="Common interface for file copying.">ifileproc::IFileConvertCopy</a>);
 <a name="l00029"></a>00029               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_selection_param.html">iprm::ISelectionParam</a>);
 <a name="l00030"></a>00030               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html">iser::ISerializable</a>);
 <a name="l00031"></a>00031               I_ASSIGN_MULTI_0(m_slaveConvertersCompPtr, <span class="stringliteral">&quot;SlaveConverters&quot;</span>, <span class="stringliteral">&quot;List of the slave converters&quot;</span>, <span class="keyword">true</span>);
@@ -61,8 +61,8 @@
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036        <a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#a1d9905cbfe4197675a106e933cd820bf">CSelectableFileConverterComp</a>();
 <a name="l00037"></a>00037 
-<a name="l00038"></a>00038        <span class="comment">// reimplemented (ibase::IFileConvertCopy)</span>
-<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#af30b8b5e925b0e9b32743758a1625a16">ConvertFiles</a>(
+<a name="l00038"></a>00038        <span class="comment">// reimplemented (ifileproc::IFileConvertCopy)</span>
+<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#af30b8b5e925b0e9b32743758a1625a16" title="Copy a file or files from inputPath to destination outputPath.">ConvertFiles</a>(
 <a name="l00040"></a>00040                             <span class="keyword">const</span> QString&amp; inputPath,
 <a name="l00041"></a>00041                             <span class="keyword">const</span> QString&amp; outputPath,
 <a name="l00042"></a>00042                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr = NULL) <span class="keyword">const</span>;
@@ -89,7 +89,7 @@
 <a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifileproc_1_1_c_selectable_file_converter_comp.html#aa293971865c76e31eee0175c026369f1">IsOptionEnabled</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00064"></a>00064 
 <a name="l00065"></a>00065 <span class="keyword">private</span>:
-<a name="l00066"></a>00066        I_MULTIREF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_file_convert_copy.html">ibase::IFileConvertCopy</a>, m_slaveConvertersCompPtr);
+<a name="l00066"></a>00066        I_MULTIREF(<a class="code" href="classifileproc_1_1_i_file_convert_copy.html" title="Common interface for file copying.">ifileproc::IFileConvertCopy</a>, m_slaveConvertersCompPtr);
 <a name="l00067"></a>00067        I_MULTIATTR(QString, m_slaveConverterNamesAttrPtr);
 <a name="l00068"></a>00068        I_MULTIATTR(QString, m_slaveConverterDescriptionsAttrPtr);
 <a name="l00069"></a>00069 

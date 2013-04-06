@@ -36,10 +36,10 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">iqt::CXmlFileWriteArchive Class Reference<div class="ingroups"><a class="el" href="group___persistence.html">Persistence concept.</a></div></div>  </div>
+<div class="title">iqt::CXmlFileWriteArchive Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqt::CXmlFileWriteArchive" --><!-- doxytag: inherits="iser::CWriteArchiveBase,iser::CFileArchiveInfo,iser::CXmlDocumentInfoBase" -->
+<!-- doxytag: class="iqt::CXmlFileWriteArchive" --><!-- doxytag: inherits="iser::CWriteArchiveBase,ifile::CFileArchiveInfo,iser::CXmlDocumentInfoBase" -->
 <p>Qt-based implementation of archive for writing in XML format.  
  <a href="classiqt_1_1_c_xml_file_write_archive.html#details">More...</a></p>
 
@@ -51,10 +51,10 @@ Inheritance diagram for iqt::CXmlFileWriteArchive:</div>
   <img src="classiqt_1_1_c_xml_file_write_archive.png" usemap="#iqt::CXmlFileWriteArchive_map" alt=""/>
   <map id="iqt::CXmlFileWriteArchive_map" name="iqt::CXmlFileWriteArchive_map">
 <area href="classiser_1_1_c_write_archive_base.html" title="Basic implementation of an abstract archive for data writting." alt="iser::CWriteArchiveBase" shape="rect" coords="92,168,266,192"/>
-<area href="classiser_1_1_c_file_archive_info.html" title="Basic implementation of interface iser::IFileArchiveInfo." alt="iser::CFileArchiveInfo" shape="rect" coords="368,168,542,192"/>
+<area href="classifile_1_1_c_file_archive_info.html" title="Basic implementation of interface ifile::IFileArchiveInfo." alt="ifile::CFileArchiveInfo" shape="rect" coords="368,168,542,192"/>
 <area href="classiser_1_1_c_xml_document_info_base.html" title="Base class for all XML implementations for ACF documents." alt="iser::CXmlDocumentInfoBase" shape="rect" coords="552,168,726,192"/>
 <area href="classiser_1_1_c_archive_base.html" title="Base implementation of iser::IArchive interface." alt="iser::CArchiveBase" shape="rect" coords="92,112,266,136"/>
-<area href="classiser_1_1_i_file_archive_info.html" title="Simple informative interface allowing to get access to current processed file by file archives..." alt="iser::IFileArchiveInfo" shape="rect" coords="368,112,542,136"/>
+<area href="classifile_1_1_i_file_archive_info.html" title="Simple informative interface allowing to get access to current processed file by file archives..." alt="ifile::IFileArchiveInfo" shape="rect" coords="368,112,542,136"/>
 <area href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive." alt="iser::IArchive" shape="rect" coords="0,56,174,80"/>
 <area href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info." alt="istd::ILogger" shape="rect" coords="184,56,358,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="368,56,542,80"/>
@@ -68,7 +68,7 @@ Inheritance diagram for iqt::CXmlFileWriteArchive:</div>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiser_1_1_c_write_archive_base.html">iser::CWriteArchiveBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_xml_file_write_archive.html#a04b94ab8ff13725c630088e91ad83482">BaseClass</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiser_1_1_c_file_archive_info.html">iser::CFileArchiveInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_xml_file_write_archive.html#a7ab66e167630ae8cc466541f59b80b4a">BaseClass2</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classifile_1_1_c_file_archive_info.html">ifile::CFileArchiveInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_xml_file_write_archive.html#aaa2f13c1b0457e6748c19a170d028324">BaseClass2</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_xml_file_write_archive.html#adbe43861b0610d68bff3007d74bbb88e">CXmlFileWriteArchive</a> (const QString &amp;filePath=&quot;&quot;, const <a class="el" href="classiser_1_1_i_version_info.html">iser::IVersionInfo</a> *versionInfoPtr=NULL, bool serializeHeader=true, const <a class="el" href="classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;rootTag=<a class="el" href="classiser_1_1_c_archive_base.html#af37185cf961a49405088cd05130cbfef">s_acfRootTag</a>)</td></tr>
@@ -120,7 +120,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Qt-based implementation of archive for writing in XML format. </p>
-<p>Please note that it doesn't create <code>counter</code> attribute needed by <code><a class="el" href="classiser_1_1_c_xml_file_read_archive.html" title="Simple implementation of archive reading from XML file.">iser::CXmlFileReadArchive</a></code>. </p>
+<p>Please note that it doesn't create <code>counter</code> attribute needed by <code><a class="el" href="classifile_1_1_c_xml_file_read_archive.html" title="Simple implementation of archive reading from XML file.">ifile::CXmlFileReadArchive</a></code>. </p>
 
 <p>Definition at line <a class="el" href="iqt_2_c_xml_file_write_archive_8h_source.html#l00026">26</a> of file <a class="el" href="iqt_2_c_xml_file_write_archive_8h_source.html">CXmlFileWriteArchive.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
@@ -139,12 +139,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7ab66e167630ae8cc466541f59b80b4a"></a><!-- doxytag: member="iqt::CXmlFileWriteArchive::BaseClass2" ref="a7ab66e167630ae8cc466541f59b80b4a" args="" -->
+<a class="anchor" id="aaa2f13c1b0457e6748c19a170d028324"></a><!-- doxytag: member="iqt::CXmlFileWriteArchive::BaseClass2" ref="aaa2f13c1b0457e6748c19a170d028324" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classiser_1_1_c_file_archive_info.html">iser::CFileArchiveInfo</a> <a class="el" href="classiqt_1_1_c_xml_file_write_archive.html#a7ab66e167630ae8cc466541f59b80b4a">iqt::CXmlFileWriteArchive::BaseClass2</a></td>
+          <td class="memname">typedef <a class="el" href="classifile_1_1_c_file_archive_info.html">ifile::CFileArchiveInfo</a> <a class="el" href="classiqt_1_1_c_xml_file_write_archive.html#aaa2f13c1b0457e6748c19a170d028324">iqt::CXmlFileWriteArchive::BaseClass2</a></td>
         </tr>
       </table>
 </div>

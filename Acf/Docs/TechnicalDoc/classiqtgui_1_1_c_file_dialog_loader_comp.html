@@ -40,7 +40,7 @@
 <div class="title">iqtgui::CFileDialogLoaderComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqtgui::CFileDialogLoaderComp" --><!-- doxytag: inherits="QObject,ibase::TLoggerCompWrap,iser::IFileLoader,iser::IFileLoaderInfo" -->
+<!-- doxytag: class="iqtgui::CFileDialogLoaderComp" --><!-- doxytag: inherits="ibase::TLoggerCompWrap,ifile::IFilePersistence,ifile::IFilePersistenceInfo" -->
 <p>File dialog component.  
  <a href="classiqtgui_1_1_c_file_dialog_loader_comp.html#details">More...</a></p>
 
@@ -51,12 +51,11 @@ Inheritance diagram for iqtgui::CFileDialogLoaderComp:</div>
  <div class="center">
   <img src="classiqtgui_1_1_c_file_dialog_loader_comp.png" usemap="#iqtgui::CFileDialogLoaderComp_map" alt=""/>
   <map id="iqtgui::CFileDialogLoaderComp_map" name="iqtgui::CFileDialogLoaderComp_map">
-<area href="class_q_object.html" alt="QObject" shape="rect" coords="0,168,209,192"/>
 <area href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations." alt="ibase::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="219,168,428,192"/>
-<area href="classiser_1_1_i_file_loader.html" title="Provide loading and saving of objects." alt="iser::IFileLoader" shape="rect" coords="657,168,866,192"/>
-<area href="classiser_1_1_i_file_loader_info.html" title="Provide some information about file loader state." alt="iser::IFileLoaderInfo" shape="rect" coords="876,168,1085,192"/>
+<area href="classifile_1_1_i_file_persistence.html" title="Provide loading and saving of objects." alt="ifile::IFilePersistence" shape="rect" coords="657,168,866,192"/>
+<area href="classifile_1_1_i_file_persistence_info.html" title="Provide some information about file loader state." alt="ifile::IFilePersistenceInfo" shape="rect" coords="876,168,1085,192"/>
 <area href="classibase_1_1_t_logger_wrap.html" title="Class wrapper implementing interface istd::ILogger sending log messages over ibase::IMessageConsumer..." alt="ibase::TLoggerWrap&lt; Base &gt;" shape="rect" coords="219,112,428,136"/>
-<area href="classiser_1_1_i_file_type_info.html" title="Provide loading and saving of objects." alt="iser::IFileTypeInfo" shape="rect" coords="657,112,866,136"/>
+<area href="classifile_1_1_i_file_type_info.html" title="Provide loading and saving of objects." alt="ifile::IFileTypeInfo" shape="rect" coords="657,112,866,136"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="876,112,1085,136"/>
 <area href="class_base.html" alt="Base" shape="rect" coords="0,56,209,80"/>
 <area href="classibase_1_1_i_loggable.html" title="Inteface for object, which support the." alt="ibase::ILoggable" shape="rect" coords="219,56,428,80"/>
@@ -87,24 +86,24 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file extensions supported by this loader.  <a href="#aecb38bab5cf8650757cb0861c95cf565"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#ab69a2cf14e84536647e19387d13eecbf">GetTypeDescription</a> (const QString *extensionPtr=NULL) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of object type associated with single extension.  <a href="#ab69a2cf14e84536647e19387d13eecbf"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#adbd2a0314e6936a69205d07c792bae22">GetLastFilePath</a> (<a class="el" href="classiser_1_1_i_file_loader_info.html#afa52073c8b31934db93706e6bd3bf457">OperationType</a> operationType=OT_UNKNOWN, <a class="el" href="classiser_1_1_i_file_loader_info.html#ab6db5c7833e043db2c7c27ad6c24b87d">PathType</a> pathType=PT_COMPLETE) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#adbd2a0314e6936a69205d07c792bae22">GetLastFilePath</a> (<a class="el" href="classifile_1_1_i_file_persistence_info.html#a5ec4c7b4003e0dcf02fc98e847513a35">OperationType</a> operationType=OT_UNKNOWN, <a class="el" href="classifile_1_1_i_file_persistence_info.html#aedaa95c7411b564c00535ce42c0cebf5">PathType</a> pathType=PT_COMPLETE) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the last opened file name.  <a href="#adbd2a0314e6936a69205d07c792bae22"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a13bfc6a8db73cf5b9ba79a1cb53898ea">AppendLoaderFilterList</a> (const <a class="el" href="classiser_1_1_i_file_type_info.html">iser::IFileTypeInfo</a> &amp;fileTypeInfo, int flags, QStringList &amp;allExt, QStringList &amp;result)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Append filters extracted from file loader to Qt filter list accepted by <code>QFileDialog</code>.  <a href="#a13bfc6a8db73cf5b9ba79a1cb53898ea"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a4dc5b0ff40e793893ab27ee3e1771461">AppendLoaderFilterList</a> (const <a class="el" href="classifile_1_1_i_file_type_info.html">ifile::IFileTypeInfo</a> &amp;fileTypeInfo, int flags, QStringList &amp;allExt, QStringList &amp;result)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Append filters extracted from file loader to Qt filter list accepted by <code>QFileDialog</code>.  <a href="#a4dc5b0ff40e793893ab27ee3e1771461"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a27dcd79ba499697d09ebdc36c4e6d3b5">GetPathForType</a> (const QFileInfo &amp;fileInfo, <a class="el" href="classiser_1_1_i_file_loader_info.html#ab6db5c7833e043db2c7c27ad6c24b87d">PathType</a> pathType) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a27dcd79ba499697d09ebdc36c4e6d3b5">GetPathForType</a> (const QFileInfo &amp;fileInfo, <a class="el" href="classifile_1_1_i_file_persistence_info.html#aedaa95c7411b564c00535ce42c0cebf5">PathType</a> pathType) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a5906e327f4ade219df779213ef6cd7c6">GetFileName</a> (const QString &amp;filePath, bool isSaving, int &amp;selectionIndex) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiser_1_1_i_file_loader.html">iser::IFileLoader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#aa7f52aeb2d19650c3ae0064ce682d19c">GetLoaderFor</a> (const QString &amp;filePath, int selectionIndex, int flags, bool beQuiet) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classifile_1_1_i_file_persistence.html">ifile::IFilePersistence</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a41c9f88981bbd7017aced704c443bb9c">GetLoaderFor</a> (const QString &amp;filePath, int selectionIndex, int flags, bool beQuiet) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#acdeb4247ab86e7fe2626df198cd0b23e">OnComponentCreated</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>File dialog component. </p>
 <p>File dialog will be created according to set of the slave file loaders. </p>
 
-<p>Definition at line <a class="el" href="_c_file_dialog_loader_comp_8h_source.html#l00032">32</a> of file <a class="el" href="_c_file_dialog_loader_comp_8h_source.html">CFileDialogLoaderComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_file_dialog_loader_comp_8h_source.html#l00027">27</a> of file <a class="el" href="_c_file_dialog_loader_comp_8h_source.html">CFileDialogLoaderComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a5491a127e57ab7b5c15946deaf7c334a"></a><!-- doxytag: member="iqtgui::CFileDialogLoaderComp::BaseClass" ref="a5491a127e57ab7b5c15946deaf7c334a" args="" -->
 <div class="memitem">
@@ -119,7 +118,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a5ca6564c805194cba50c4aeab30abfec">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_file_dialog_loader_comp_8h_source.html#l00039">39</a> of file <a class="el" href="_c_file_dialog_loader_comp_8h_source.html">CFileDialogLoaderComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_file_dialog_loader_comp_8h_source.html#l00034">34</a> of file <a class="el" href="_c_file_dialog_loader_comp_8h_source.html">CFileDialogLoaderComp.h</a>.</p>
 
 </div>
 </div>
@@ -143,21 +142,21 @@ Protected Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="classiser_1_1_i_file_loader.html#a885bc2cad957c89052cf890e68436bf4">iser::IFileLoader</a>.</p>
+<p>Reimplemented from <a class="el" href="classifile_1_1_i_file_persistence.html#a24e35495e0c1f4d128ed1513c8907376">ifile::IFilePersistence</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_file_dialog_loader_comp_8h_source.html#l00041">41</a> of file <a class="el" href="_c_file_dialog_loader_comp_8h_source.html">CFileDialogLoaderComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_file_dialog_loader_comp_8h_source.html#l00036">36</a> of file <a class="el" href="_c_file_dialog_loader_comp_8h_source.html">CFileDialogLoaderComp.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a13bfc6a8db73cf5b9ba79a1cb53898ea"></a><!-- doxytag: member="iqtgui::CFileDialogLoaderComp::AppendLoaderFilterList" ref="a13bfc6a8db73cf5b9ba79a1cb53898ea" args="(const iser::IFileTypeInfo &amp;fileTypeInfo, int flags, QStringList &amp;allExt, QStringList &amp;result)" -->
+<a class="anchor" id="a4dc5b0ff40e793893ab27ee3e1771461"></a><!-- doxytag: member="iqtgui::CFileDialogLoaderComp::AppendLoaderFilterList" ref="a4dc5b0ff40e793893ab27ee3e1771461" args="(const ifile::IFileTypeInfo &amp;fileTypeInfo, int flags, QStringList &amp;allExt, QStringList &amp;result)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">static void iqtgui::CFileDialogLoaderComp::AppendLoaderFilterList </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classiser_1_1_i_file_type_info.html">iser::IFileTypeInfo</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classifile_1_1_i_file_type_info.html">ifile::IFileTypeInfo</a> &amp;&#160;</td>
           <td class="paramname"><em>fileTypeInfo</em>, </td>
         </tr>
         <tr>
@@ -241,7 +240,7 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8" title="Describe detailed options of query.">QueryFlags</a>. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classifile_1_1_i_file_type_info.html#a327f9848e8ae67a4a3c227b62b07fb1a" title="Describe detailed options of query.">QueryFlags</a>. </dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">doAppend</td><td>if true, list of extensions should be appended to existing list. </td></tr>
@@ -249,7 +248,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_type_info.html#a2b1e53b1976bc7a962684a7f64577b70">iser::IFileTypeInfo</a>.</p>
+<p>Implements <a class="el" href="classifile_1_1_i_file_type_info.html#acb9ac14845f9ea67dca2e7a24b391cde">ifile::IFileTypeInfo</a>.</p>
 
 </div>
 </div>
@@ -293,13 +292,13 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual QString iqtgui::CFileDialogLoaderComp::GetLastFilePath </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classiser_1_1_i_file_loader_info.html#afa52073c8b31934db93706e6bd3bf457">OperationType</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classifile_1_1_i_file_persistence_info.html#a5ec4c7b4003e0dcf02fc98e847513a35">OperationType</a>&#160;</td>
           <td class="paramname"><em>operationType</em> = <code>OT_UNKNOWN</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classiser_1_1_i_file_loader_info.html#ab6db5c7833e043db2c7c27ad6c24b87d">PathType</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classifile_1_1_i_file_persistence_info.html#aedaa95c7411b564c00535ce42c0cebf5">PathType</a>&#160;</td>
           <td class="paramname"><em>pathType</em> = <code>PT_COMPLETE</code>&#160;</td>
         </tr>
         <tr>
@@ -313,16 +312,16 @@ Protected Member Functions</h2></td></tr>
 
 <p>Returns the last opened file name. </p>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_loader_info.html#aeb0ecfae17d1fc4ac03c5c502fdd25e9">iser::IFileLoaderInfo</a>.</p>
+<p>Implements <a class="el" href="classifile_1_1_i_file_persistence_info.html#a2f86e9b5a4f767d18bb4246636e7222d">ifile::IFilePersistenceInfo</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa7f52aeb2d19650c3ae0064ce682d19c"></a><!-- doxytag: member="iqtgui::CFileDialogLoaderComp::GetLoaderFor" ref="aa7f52aeb2d19650c3ae0064ce682d19c" args="(const QString &amp;filePath, int selectionIndex, int flags, bool beQuiet) const " -->
+<a class="anchor" id="a41c9f88981bbd7017aced704c443bb9c"></a><!-- doxytag: member="iqtgui::CFileDialogLoaderComp::GetLoaderFor" ref="a41c9f88981bbd7017aced704c443bb9c" args="(const QString &amp;filePath, int selectionIndex, int flags, bool beQuiet) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classiser_1_1_i_file_loader.html">iser::IFileLoader</a>* iqtgui::CFileDialogLoaderComp::GetLoaderFor </td>
+          <td class="memname"><a class="el" href="classifile_1_1_i_file_persistence.html">ifile::IFilePersistence</a>* iqtgui::CFileDialogLoaderComp::GetLoaderFor </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>filePath</em>, </td>
@@ -369,7 +368,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classiser_1_1_i_file_loader_info.html#ab6db5c7833e043db2c7c27ad6c24b87d">PathType</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classifile_1_1_i_file_persistence_info.html#aedaa95c7411b564c00535ce42c0cebf5">PathType</a>&#160;</td>
           <td class="paramname"><em>pathType</em>&#160;</td>
         </tr>
         <tr>
@@ -400,7 +399,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get description of object type associated with single extension. </p>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_type_info.html#af40e91e01c4040e96b9ed978a67eada8">iser::IFileTypeInfo</a>.</p>
+<p>Implements <a class="el" href="classifile_1_1_i_file_type_info.html#ab6cec8df21bf8869a8b5e85c2b48a682">ifile::IFileTypeInfo</a>.</p>
 
 </div>
 </div>
@@ -446,13 +445,13 @@ Protected Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">dataObjectPtr</td><td>optional pointer to data object should be loaded/stored. It can be NULL if any object is meant. </td></tr>
     <tr><td class="paramname">filePathPtr</td><td>optional pointer to file should be loaded/stored. It can be NULL if any file is meant. If it points at empty string, anonymous loading is mean. </td></tr>
-    <tr><td class="paramname">flags</td><td>combination of flags defined in <code>QueryFlags</code> and <code><a class="el" href="classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8" title="Describe detailed options of query.">iser::IFileTypeInfo::QueryFlags</a></code>. </td></tr>
+    <tr><td class="paramname">flags</td><td>combination of flags defined in <code>QueryFlags</code> and <code><a class="el" href="classifile_1_1_i_file_type_info.html#a327f9848e8ae67a4a3c227b62b07fb1a" title="Describe detailed options of query.">ifile::IFileTypeInfo::QueryFlags</a></code>. </td></tr>
     <tr><td class="paramname">beQuiet</td><td>if true, no user message output is allowed. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a4e5d8cde47513d09de802aa28697249d">iser::IFileLoader</a>.</p>
+<p>Implements <a class="el" href="classifile_1_1_i_file_persistence.html#a5546b646fa5d4dc32156b06a3cd3e13f">ifile::IFilePersistence</a>.</p>
 
 </div>
 </div>
@@ -483,9 +482,9 @@ Protected Member Functions</h2></td></tr>
 
 <p>This function loads data <code>data</code> from file <code>filePath</code>. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>File loading state. </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_file_loader.html#a75a7bac07b89aa42b7596185b7bb5c51" title="Result of operation.">OperationState</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classifile_1_1_i_file_persistence.html#a674791f4173d2b57c1e6d6aa30228f76" title="Result of operation.">OperationState</a> </dd></dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a1515f5bff4437903bb15dafe82b56755">iser::IFileLoader</a>.</p>
+<p>Implements <a class="el" href="classifile_1_1_i_file_persistence.html#ac3e349d549b4aeabc33a4555d2482385">ifile::IFilePersistence</a>.</p>
 
 </div>
 </div>
@@ -534,9 +533,9 @@ Protected Member Functions</h2></td></tr>
 
 <p>This function saves data <code>data</code> to file <code>filePath</code>. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>File saving state. </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_file_loader.html#a75a7bac07b89aa42b7596185b7bb5c51" title="Result of operation.">OperationState</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classifile_1_1_i_file_persistence.html#a674791f4173d2b57c1e6d6aa30228f76" title="Result of operation.">OperationState</a> </dd></dl>
 
-<p>Implements <a class="el" href="classiser_1_1_i_file_loader.html#a600870dbf0fc5a833bfe747bf1a60c1c">iser::IFileLoader</a>.</p>
+<p>Implements <a class="el" href="classifile_1_1_i_file_persistence.html#afe328c38bf1f522f666fe2bf72beeca3">ifile::IFilePersistence</a>.</p>
 
 </div>
 </div>

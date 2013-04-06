@@ -30,7 +30,7 @@
 #include "iprm/ISelectionParam.h"
 #include "iprm/IOptionsList.h"
 
-#include "ibase/IFileConvertCopy.h"
+#include "ifileproc/IFileConvertCopy.h"
 
 
 namespace ifileproc
@@ -39,7 +39,7 @@ namespace ifileproc
 
 class CSelectableFileConverterComp:
 			public icomp::CComponentBase,
-			virtual public ibase::IFileConvertCopy,
+			virtual public ifileproc::IFileConvertCopy,
 			virtual public iprm::ISelectionParam,
 			virtual protected iprm::IOptionsList
 {
@@ -47,7 +47,7 @@ public:
 	typedef icomp::CComponentBase BaseClass;
 
 	I_BEGIN_COMPONENT(CSelectableFileConverterComp);
-		I_REGISTER_INTERFACE(ibase::IFileConvertCopy);
+		I_REGISTER_INTERFACE(ifileproc::IFileConvertCopy);
 		I_REGISTER_INTERFACE(iprm::ISelectionParam);
 		I_REGISTER_INTERFACE(iser::ISerializable);
 		I_ASSIGN_MULTI_0(m_slaveConvertersCompPtr, "SlaveConverters", "List of the slave converters", true);
@@ -57,7 +57,7 @@ public:
 
 	CSelectableFileConverterComp();
 
-	// reimplemented (ibase::IFileConvertCopy)
+	// reimplemented (ifileproc::IFileConvertCopy)
 	virtual bool ConvertFiles(
 				const QString& inputPath,
 				const QString& outputPath,
@@ -85,7 +85,7 @@ protected:
 	virtual bool IsOptionEnabled(int index) const;
 
 private:
-	I_MULTIREF(ibase::IFileConvertCopy, m_slaveConvertersCompPtr);
+	I_MULTIREF(ifileproc::IFileConvertCopy, m_slaveConvertersCompPtr);
 	I_MULTIATTR(QString, m_slaveConverterNamesAttrPtr);
 	I_MULTIATTR(QString, m_slaveConverterDescriptionsAttrPtr);
 

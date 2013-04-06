@@ -25,7 +25,7 @@
 
 
 // ACF includes
-#include "iser/IFileLoader.h"
+#include "ifile/IFilePersistence.h"
 
 #include "iqtgui/TDesignerGuiCompBase.h"
 
@@ -60,7 +60,7 @@ protected:
 
 private:
 	I_REF(istd::IChangeable, m_objectCompPtr);
-	I_REF(iser::IFileLoader, m_fileLoaderCompPtr);
+	I_REF(ifile::IFilePersistence, m_fileLoaderCompPtr);
 	I_ATTR(bool, m_showLoadAttrPtr);
 	I_ATTR(bool, m_showSaveAttrPtr);
 };

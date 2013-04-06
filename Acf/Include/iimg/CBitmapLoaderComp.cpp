@@ -40,7 +40,7 @@ namespace iimg
 {
 
 
-// reimplemented (iser::IFileLoader)
+// reimplemented (ifile::IFilePersistence)
 
 bool CBitmapLoaderComp::IsOperationSupported(
 			const istd::IChangeable* dataObjectPtr,
@@ -163,7 +163,7 @@ int CBitmapLoaderComp::SaveToFile(const istd::IChangeable& data, const QString& 
 }
 
 
-// reimplemented (iser::IFileTypeInfo)
+// reimplemented (ifile::IFileTypeInfo)
 
 bool CBitmapLoaderComp::GetFileExtensions(QStringList& result, int /*flags*/, bool doAppend) const
 {

@@ -34,7 +34,7 @@
 <a name="l00008"></a>00008 <span class="preprocessor">#include &lt;QtCore/QList&gt;</span>
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="comment">// ACF includes</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_file_loader_8h.html">iser/IFileLoader.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_file_persistence_8h.html">ifile/IFilePersistence.h</a>&quot;</span>
 <a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_t_i_locked_producer_8h.html">iproc/TILockedProducer.h</a>&quot;</span>
@@ -77,7 +77,7 @@
 <a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_t_file_cached_producer_comp_base.html#aa3a79666d440d2204579865d39440f15" title="Get number of maximal cached files.">GetMaxCachedFilesCount</a>() <span class="keyword">const</span> = 0;
 <a name="l00066"></a>00066 
 <a name="l00067"></a>00067 <span class="keyword">private</span>:
-<a name="l00068"></a>00068        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html">iser::IFileLoader</a>, m_cacheLoaderCompPtr);
+<a name="l00068"></a>00068        I_REF(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_persistence.html">ifile::IFilePersistence</a>, m_cacheLoaderCompPtr);
 <a name="l00069"></a>00069        I_TREF(<a class="code" href="classiproc_1_1_t_i_locked_producer.html" title="Template interface for providers of cached data.">LockedProducerType</a>, m_slaveCacheEngineCompPtr);
 <a name="l00070"></a>00070 
 <a name="l00071"></a>00071        <span class="keyword">typedef</span> QMap&lt;Key, QString&gt; KeyToFileNameMap;
@@ -112,12 +112,12 @@
 <a name="l00100"></a>00100                      <span class="keywordflow">if</span> (m_cacheLoaderCompPtr-&gt;IsOperationSupported(
 <a name="l00101"></a>00101                                           <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
 <a name="l00102"></a>00102                                           &amp;cacheFilePath,
-<a name="l00103"></a>00103                                           <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8a9dbb719698b08d4104837a5dbfabc8df">iser::IFileLoader::QF_LOAD</a> | <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_type_info.html#a2d24774c415748d3c04a27608a6e05e8aa405328fad211e44b5a3eca44411accb">iser::IFileLoader::QF_FILE</a>,
+<a name="l00103"></a>00103                                           <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_type_info.html#a327f9848e8ae67a4a3c227b62b07fb1aaaa7d8800b08ce989914b9782c6820dca">ifile::IFilePersistence::QF_LOAD</a> | <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_type_info.html#a327f9848e8ae67a4a3c227b62b07fb1aa82cd5447d3bc54b765421f5b50c617ab">ifile::IFilePersistence::QF_FILE</a>,
 <a name="l00104"></a>00104                                           <span class="keyword">false</span>)){
 <a name="l00105"></a>00105                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;CacheObject&gt;</a> objectPtr(<span class="keyword">new</span> CacheObject);
 <a name="l00106"></a>00106 
 <a name="l00107"></a>00107                             <span class="keywordflow">if</span> (objectPtr.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_base.html#ade2adaa3f705bd7e98adbdf1bb79dabf">IsValid</a>()){
-<a name="l00108"></a>00108                                    <span class="keywordflow">if</span> (m_cacheLoaderCompPtr-&gt;LoadFromFile(*objectPtr, cacheFilePath) == <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html#a75a7bac07b89aa42b7596185b7bb5c51a5a3b52788a1d74ae0252724e06ebe26d">iser::IFileLoader::StateOk</a>){
+<a name="l00108"></a>00108                                    <span class="keywordflow">if</span> (m_cacheLoaderCompPtr-&gt;LoadFromFile(*objectPtr, cacheFilePath) == <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_persistence.html#a674791f4173d2b57c1e6d6aa30228f76a9100e86ea8e2ca89b14a8ab59914ee8d">ifile::IFilePersistence::StateOk</a>){
 <a name="l00109"></a>00109                                           m_ownedObjects.insert(objectPtr.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_base.html#a705aa6108a47c2921fff05d8dac21951">GetPtr</a>());
 <a name="l00110"></a>00110 
 <a name="l00111"></a>00111                                           <span class="keywordflow">return</span> objectPtr.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html#a699e9ff86495a4b8e5f22cbdc285c2cf">PopPtr</a>();
@@ -135,7 +135,7 @@
 <a name="l00123"></a>00123               <span class="keywordflow">if</span> (objectPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
 <a name="l00124"></a>00124                      QString cacheFilePath = CalcCacheFilePath(key);
 <a name="l00125"></a>00125                      <span class="keywordflow">if</span> (!cacheFilePath.isEmpty() &amp;&amp; m_cacheLoaderCompPtr.IsValid()){
-<a name="l00126"></a>00126                             <span class="keywordflow">if</span> (m_cacheLoaderCompPtr-&gt;SaveToFile(*const_cast&lt;CacheObject*&gt;(objectPtr), cacheFilePath) == <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html#a75a7bac07b89aa42b7596185b7bb5c51a5a3b52788a1d74ae0252724e06ebe26d">iser::IFileLoader::StateOk</a>){
+<a name="l00126"></a>00126                             <span class="keywordflow">if</span> (m_cacheLoaderCompPtr-&gt;SaveToFile(*const_cast&lt;CacheObject*&gt;(objectPtr), cacheFilePath) == <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_persistence.html#a674791f4173d2b57c1e6d6aa30228f76a9100e86ea8e2ca89b14a8ab59914ee8d">ifile::IFilePersistence::StateOk</a>){
 <a name="l00127"></a>00127                                    OnCacheFileSaved(key, cacheFilePath);
 <a name="l00128"></a>00128 
 <a name="l00129"></a>00129                                    m_keyToFileNameMap[key] = cacheFilePath;

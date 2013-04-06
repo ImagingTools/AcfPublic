@@ -32,7 +32,7 @@ namespace iqt
 {
 
 
-// reimplemented (iser::IFileLoader)
+// reimplemented (ifile::IFilePersistence)
 
 bool CSettingsSerializerComp::IsOperationSupported(
 			const istd::IChangeable* dataObjectPtr,
@@ -117,7 +117,7 @@ int CSettingsSerializerComp::SaveToFile(const istd::IChangeable& data, const QSt
 }
 
 
-// reimplemented (iser::IFileTypeInfo)
+// reimplemented (ifile::IFileTypeInfo)
 
 bool CSettingsSerializerComp::GetFileExtensions(QStringList& /*result*/, int /*flags*/, bool /*doAppend*/) const
 {

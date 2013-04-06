@@ -40,7 +40,7 @@ namespace ihotf
 {
 
 
-// reimplemented (iser::IFileLoader)
+// reimplemented (ifile::IFilePersistence)
 
 int CHotfolderLoaderComp::LoadFromFile(istd::IChangeable& data, const QString& filePath) const
 {
@@ -96,7 +96,7 @@ int CHotfolderLoaderComp::SaveToFile(const istd::IChangeable& data, const QStrin
 }
 
 
-// reimplemented (iser::IFileTypeInfo)
+// reimplemented (ifile::IFileTypeInfo)
 
 bool CHotfolderLoaderComp::GetFileExtensions(QStringList& result, int flags, bool doAppend) const
 {
@@ -132,10 +132,10 @@ QString CHotfolderLoaderComp::GetStaticParamsPath(const QString& objectPath) con
 }
 
 
-// reimplemented (ibase::TFileSerializerComp)
+// reimplemented (ifile::TFileSerializerComp)
 
 void CHotfolderLoaderComp::OnReadError(
-			const iser::CXmlFileReadArchive& /*archive*/,
+			const ifile::CXmlFileReadArchive& /*archive*/,
 			const istd::IChangeable& /*data*/,
 			const QString& /*filePath*/) const
 {

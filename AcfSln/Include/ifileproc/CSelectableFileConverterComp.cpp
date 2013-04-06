@@ -43,7 +43,7 @@ CSelectableFileConverterComp::CSelectableFileConverterComp()
 }
 
 
-// reimplemented (ibase::IFileConvertCopy)
+// reimplemented (ifileproc::IFileConvertCopy)
 
 bool CSelectableFileConverterComp::ConvertFiles(
 			const QString& inputPath,

@@ -35,7 +35,7 @@
 <a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QtCore/QFile&gt;</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_c_write_archive_base_8h.html">iser/CWriteArchiveBase.h</a>&quot;</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_c_file_archive_info_8h.html">iser/CFileArchiveInfo.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_c_file_archive_info_8h.html">ifile/CFileArchiveInfo.h</a>&quot;</span>
 <a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_c_xml_document_info_base_8h.html">iser/CXmlDocumentInfoBase.h</a>&quot;</span>
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="iqt_8h.html">iqt/iqt.h</a>&quot;</span>
@@ -47,12 +47,12 @@
 <a name="l00019"></a>00019 
 <a name="l00026"></a><a class="code" href="classiqt_1_1_c_xml_file_write_archive.html">00026</a> <span class="keyword">class </span><a class="code" href="classiqt_1_1_c_xml_file_write_archive.html" title="Qt-based implementation of archive for writing in XML format.">CXmlFileWriteArchive</a>:
 <a name="l00027"></a>00027                      <span class="keyword">public</span> iser::CWriteArchiveBase,
-<a name="l00028"></a>00028                      <span class="keyword">public</span> iser::CFileArchiveInfo,
+<a name="l00028"></a>00028                      <span class="keyword">public</span> ifile::CFileArchiveInfo,
 <a name="l00029"></a>00029                      <span class="keyword">public</span> iser::CXmlDocumentInfoBase
 <a name="l00030"></a>00030 {
 <a name="l00031"></a>00031 <span class="keyword">public</span>:
 <a name="l00032"></a><a class="code" href="classiqt_1_1_c_xml_file_write_archive.html#a04b94ab8ff13725c630088e91ad83482">00032</a>        <span class="keyword">typedef</span> <a class="code" href="classiser_1_1_c_write_archive_base.html" title="Basic implementation of an abstract archive for data writting.">iser::CWriteArchiveBase</a> <a class="code" href="classiqt_1_1_c_xml_file_write_archive.html#a04b94ab8ff13725c630088e91ad83482">BaseClass</a>;
-<a name="l00033"></a><a class="code" href="classiqt_1_1_c_xml_file_write_archive.html#a7ab66e167630ae8cc466541f59b80b4a">00033</a>        <span class="keyword">typedef</span> <a class="code" href="classiser_1_1_c_file_archive_info.html" title="Basic implementation of interface iser::IFileArchiveInfo.">iser::CFileArchiveInfo</a> <a class="code" href="classiqt_1_1_c_xml_file_write_archive.html#a7ab66e167630ae8cc466541f59b80b4a">BaseClass2</a>;
+<a name="l00033"></a><a class="code" href="classiqt_1_1_c_xml_file_write_archive.html#aaa2f13c1b0457e6748c19a170d028324">00033</a>        <span class="keyword">typedef</span> <a class="code" href="classifile_1_1_c_file_archive_info.html" title="Basic implementation of interface ifile::IFileArchiveInfo.">ifile::CFileArchiveInfo</a> <a class="code" href="classiqt_1_1_c_xml_file_write_archive.html#aaa2f13c1b0457e6748c19a170d028324">BaseClass2</a>;
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035        <a class="code" href="classiqt_1_1_c_xml_file_write_archive.html#adbe43861b0610d68bff3007d74bbb88e">CXmlFileWriteArchive</a>(
 <a name="l00036"></a>00036                             <span class="keyword">const</span> QString&amp; filePath = <span class="stringliteral">&quot;&quot;</span>,

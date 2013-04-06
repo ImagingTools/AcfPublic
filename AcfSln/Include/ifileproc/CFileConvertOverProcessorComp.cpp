@@ -39,7 +39,7 @@ CFileConvertOverProcessorComp::CFileConvertOverProcessorComp()
 }
 
 
-// reimplemented (ibase::IFileConvertCopy)
+// reimplemented (ifileproc::IFileConvertCopy)
 
 bool CFileConvertOverProcessorComp::ConvertFiles(
 			const QString& inputPath,
@@ -66,13 +66,13 @@ bool CFileConvertOverProcessorComp::ConvertFiles(
 		return false;
 	}
 
-	if (!m_inputFileLoaderCompPtr->IsOperationSupported(m_inputDataCompPtr.GetPtr(), &inputPath, iser::IFileLoader::QF_LOAD | iser::IFileLoader::QF_FILE)){
+	if (!m_inputFileLoaderCompPtr->IsOperationSupported(m_inputDataCompPtr.GetPtr(), &inputPath, ifile::IFilePersistence::QF_LOAD | ifile::IFilePersistence::QF_FILE)){
 		SendErrorMessage(0, "File could not be loaded", "File processing component");
 		
 		return false;
 	}
 
-	if (m_inputFileLoaderCompPtr->LoadFromFile(*m_inputDataCompPtr.GetPtr(), inputPath) != iser::IFileLoader::StateOk){
+	if (m_inputFileLoaderCompPtr->LoadFromFile(*m_inputDataCompPtr.GetPtr(), inputPath) != ifile::IFilePersistence::StateOk){
 		SendErrorMessage(0, "File could not be loaded", "File processing component");
 		
 		return false;
@@ -95,14 +95,14 @@ bool CFileConvertOverProcessorComp::ConvertFiles(
 		return false;
 	}
 
-	iser::IFileLoader* outputFileLoader = m_inputFileLoaderCompPtr.GetPtr();
+	ifile::IFilePersistence* outputFileLoader = m_inputFileLoaderCompPtr.GetPtr();
 	if (m_outputFileLoaderCompPtr.IsValid()){
 		outputFileLoader = m_outputFileLoaderCompPtr.GetPtr(); 
 	}
 
 	Q_ASSERT(outputFileLoader != NULL);
 
-	return (outputFileLoader->SaveToFile(*m_outputDataCompPtr.GetPtr(), outputPath) == iser::IFileLoader::StateOk);
+	return (outputFileLoader->SaveToFile(*m_outputDataCompPtr.GetPtr(), outputPath) == ifile::IFilePersistence::StateOk);
 }
 
 

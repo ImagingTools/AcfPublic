@@ -50,7 +50,7 @@ namespace
 }
 
 
-// reimplemented (ibase::IFileConvertCopy)
+// reimplemented (ifileproc::IFileConvertCopy)
 
 bool CProcessingResultsReviewComp::ConvertFiles(
 			const QString& inputPath,
@@ -76,7 +76,7 @@ bool CProcessingResultsReviewComp::ConvertFiles(
 
 	CProcessSerializer processSerializer(this, inputPath);
 
-	if (m_outputFileSerializerCompPtr->SaveToFile(processSerializer, outputPath) == iser::IFileLoader::StateOk){
+	if (m_outputFileSerializerCompPtr->SaveToFile(processSerializer, outputPath) == ifile::IFilePersistence::StateOk){
 		return true;
 	}
 

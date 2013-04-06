@@ -510,43 +510,11 @@
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
-    <name>CAutoPersistenceComp.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_c_auto_persistence_comp_8h</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
-    <class kind="class">ibase::CAutoPersistenceComp</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CComposedLoaderComp.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_c_composed_loader_comp_8h</filename>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <class kind="class">ibase::CComposedLoaderComp</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
     <name>CConsoleLogComp.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_console_log_comp_8h</filename>
     <includes id="_c_stream_log_comp_base_8h" name="CStreamLogCompBase.h" local="yes" imported="no">ibase/CStreamLogCompBase.h</includes>
     <class kind="class">ibase::CConsoleLogComp</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CCopyAppComp.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_c_copy_app_comp_8h</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
-    <includes id="_i_application_8h" name="IApplication.h" local="yes" imported="no">ibase/IApplication.h</includes>
-    <includes id="_i_file_convert_copy_8h" name="IFileConvertCopy.h" local="yes" imported="no">ibase/IFileConvertCopy.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
-    <class kind="class">ibase::CCopyAppComp</class>
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
@@ -556,36 +524,6 @@
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <includes id="_i_progress_manager_8h" name="IProgressManager.h" local="yes" imported="no">ibase/IProgressManager.h</includes>
     <class kind="class">ibase::CDelegatedProgressManager</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CFileCopyOverLoaderComp.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_c_file_copy_over_loader_comp_8h</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
-    <includes id="_i_file_convert_copy_8h" name="IFileConvertCopy.h" local="yes" imported="no">ibase/IFileConvertCopy.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
-    <class kind="class">ibase::CFileCopyOverLoaderComp</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CFileSerializerCompBase.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_c_file_serializer_comp_base_8h</filename>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
-    <includes id="_c_file_type_info_comp_8h" name="CFileTypeInfoComp.h" local="yes" imported="no">ibase/CFileTypeInfoComp.h</includes>
-    <class kind="class">ibase::CFileSerializerCompBase</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CFileTypeInfoComp.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_c_file_type_info_comp_8h</filename>
-    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">iser/IFileTypeInfo.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <class kind="class">ibase::CFileTypeInfoComp</class>
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
@@ -716,34 +654,6 @@
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
-    <name>CTextDocumentComp.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_c_text_document_comp_8h</filename>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_text_document_8h" name="ITextDocument.h" local="yes" imported="no">ibase/ITextDocument.h</includes>
-    <class kind="class">ibase::CTextDocumentComp</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CTextFileLoaderComp.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_c_text_file_loader_comp_8h</filename>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <class kind="class">ibase::CTextFileLoaderComp</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CTextFileLogComp.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_c_text_file_log_comp_8h</filename>
-    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
-    <includes id="_c_stream_log_comp_base_8h" name="CStreamLogCompBase.h" local="yes" imported="no">ibase/CStreamLogCompBase.h</includes>
-    <class kind="class">ibase::CTextFileLogComp</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
     <name>CUuidComp.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_uuid_comp_8h</filename>
@@ -811,15 +721,6 @@
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <includes id="_i_command_8h" name="ICommand.h" local="yes" imported="no">ibase/ICommand.h</includes>
     <class kind="class">ibase::ICommandsProvider</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IFileConvertCopy.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_i_file_convert_copy_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <class kind="class">ibase::IFileConvertCopy</class>
-    <namespace>iprm</namespace>
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
@@ -902,14 +803,6 @@
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
-    <name>ITextDocument.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_i_text_document_8h</filename>
-    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
-    <class kind="class">ibase::ITextDocument</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
     <name>TCommandsProviderCompWrap.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_t_commands_provider_comp_wrap_8h</filename>
@@ -945,18 +838,6 @@
     <includes id="_t_i_factory_8h" name="TIFactory.h" local="yes" imported="no">istd/TIFactory.h</includes>
     <includes id="_t_serializable_container_8h" name="TSerializableContainer.h" local="yes" imported="no">ibase/TSerializableContainer.h</includes>
     <class kind="class">ibase::TFactorisableContainer</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TFileSerializerComp.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_t_file_serializer_comp_8h</filename>
-    <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
-    <includes id="_c_system_8h" name="CSystem.h" local="yes" imported="no">istd/CSystem.h</includes>
-    <includes id="_c_file_serializer_comp_base_8h" name="CFileSerializerCompBase.h" local="yes" imported="no">ibase/CFileSerializerCompBase.h</includes>
-    <class kind="class">ibase::TFileSerializerComp</class>
-    <class kind="class">ibase::TFileSerializerComp::ReadArchiveEx</class>
-    <class kind="class">ibase::TFileSerializerComp::WriteArchiveEx</class>
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
@@ -1223,442 +1104,6 @@
       <anchor>a5d42c07f2be33ad5a96638aba0794cab</anchor>
       <arglist></arglist>
     </member>
-  </compound>
-  <compound kind="file">
-    <name>CAttributeEditorComp.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_attribute_editor_comp_8h</filename>
-    <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
-    <includes id="_i_help_viewer_8h" name="IHelpViewer.h" local="yes" imported="no">idoc/IHelpViewer.h</includes>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <includes id="_c_tree_widget_filter_8h" name="CTreeWidgetFilter.h" local="yes" imported="no">iqtgui/CTreeWidgetFilter.h</includes>
-    <includes id="_c_item_delegate_8h" name="CItemDelegate.h" local="yes" imported="no">iqtgui/CItemDelegate.h</includes>
-    <includes id="_c_element_selection_info_manager_base_8h" name="CElementSelectionInfoManagerBase.h" local="yes" imported="no">icmpstr/CElementSelectionInfoManagerBase.h</includes>
-    <includes id="_c_multi_attribute_editor_8h" name="CMultiAttributeEditor.h" local="yes" imported="no">icmpstr/CMultiAttributeEditor.h</includes>
-    <class kind="class">icmpstr::CAttributeEditorComp</class>
-    <class kind="struct">icmpstr::CAttributeEditorComp::AttrInfo</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CComponentAccessor.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_component_accessor_8h</filename>
-    <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
-    <includes id="_i_component_static_info_8h" name="IComponentStaticInfo.h" local="yes" imported="no">icomp/IComponentStaticInfo.h</includes>
-    <includes id="_i_component_context_8h" name="IComponentContext.h" local="yes" imported="no">icomp/IComponentContext.h</includes>
-    <includes id="_c_composite_component_8h" name="CCompositeComponent.h" local="yes" imported="no">icomp/CCompositeComponent.h</includes>
-    <class kind="class">icmpstr::CComponentAccessor</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CComponentHelpFileProviderComp.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_component_help_file_provider_comp_8h</filename>
-    <includes id="_i_component_static_info_8h" name="IComponentStaticInfo.h" local="yes" imported="no">icomp/IComponentStaticInfo.h</includes>
-    <includes id="_i_registries_manager_8h" name="IRegistriesManager.h" local="yes" imported="no">icomp/IRegistriesManager.h</includes>
-    <includes id="_i_meta_info_manager_8h" name="IMetaInfoManager.h" local="yes" imported="no">icomp/IMetaInfoManager.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_c_component_address_8h" name="CComponentAddress.h" local="yes" imported="no">icomp/CComponentAddress.h</includes>
-    <includes id="_i_help_file_provider_8h" name="IHelpFileProvider.h" local="yes" imported="no">idoc/IHelpFileProvider.h</includes>
-    <includes id="_i_external_meta_info_manager_8h" name="IExternalMetaInfoManager.h" local="yes" imported="no">icmpstr/IExternalMetaInfoManager.h</includes>
-    <class kind="class">icmpstr::CComponentHelpFileProviderComp</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CComponentNoteEditorComp.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_component_note_editor_comp_8h</filename>
-    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
-    <class kind="class">icmpstr::CComponentNoteEditorComp</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CComponentPromotorDialogComp.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_component_promotor_dialog_comp_8h</filename>
-    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
-    <includes id="_i_meta_info_manager_8h" name="IMetaInfoManager.h" local="yes" imported="no">icomp/IMetaInfoManager.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
-    <includes id="_t_model_observer_comp_wrap_8h" name="TModelObserverCompWrap.h" local="yes" imported="no">ibase/TModelObserverCompWrap.h</includes>
-    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
-    <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
-    <class kind="class">icmpstr::CComponentPromotorDialogCompBase</class>
-    <class kind="class">icmpstr::CComponentPromotorDialogComp</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CElementSelectionInfoManagerBase.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_element_selection_info_manager_base_8h</filename>
-    <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
-    <includes id="_t_opt_del_ptr_8h" name="TOptDelPtr.h" local="yes" imported="no">istd/TOptDelPtr.h</includes>
-    <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
-    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
-    <includes id="_i_component_environment_manager_8h" name="IComponentEnvironmentManager.h" local="yes" imported="no">icomp/IComponentEnvironmentManager.h</includes>
-    <includes id="_i_registry_element_8h" name="IRegistryElement.h" local="yes" imported="no">icomp/IRegistryElement.h</includes>
-    <includes id="_i_attribute_selection_observer_8h" name="IAttributeSelectionObserver.h" local="yes" imported="no">icmpstr/IAttributeSelectionObserver.h</includes>
-    <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
-    <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
-    <class kind="class">icmpstr::CElementSelectionInfoManagerBase</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CGraphicsConnectorItem.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_graphics_connector_item_8h</filename>
-    <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">icmpstr/ISceneProvider.h</includes>
-    <class kind="class">icmpstr::CGraphicsConnectorItem</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CMultiAttributeDelegateWidget.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_multi_attribute_delegate_widget_8h</filename>
-    <includes id="_c_element_selection_info_manager_base_8h" name="CElementSelectionInfoManagerBase.h" local="yes" imported="no">icmpstr/CElementSelectionInfoManagerBase.h</includes>
-    <class kind="class">icmpstr::CMultiAttributeDelegateWidget</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CMultiAttributeEditor.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_multi_attribute_editor_8h</filename>
-    <includes id="_c_tree_widget_filter_8h" name="CTreeWidgetFilter.h" local="yes" imported="no">iqtgui/CTreeWidgetFilter.h</includes>
-    <includes id="_c_item_delegate_8h" name="CItemDelegate.h" local="yes" imported="no">iqtgui/CItemDelegate.h</includes>
-    <includes id="_c_element_selection_info_manager_base_8h" name="CElementSelectionInfoManagerBase.h" local="yes" imported="no">icmpstr/CElementSelectionInfoManagerBase.h</includes>
-    <class kind="class">icmpstr::CMultiAttributeEditor</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CPackageOverviewComp.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_package_overview_comp_8h</filename>
-    <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
-    <includes id="_i_component_environment_manager_8h" name="IComponentEnvironmentManager.h" local="yes" imported="no">icomp/IComponentEnvironmentManager.h</includes>
-    <includes id="_c_component_address_8h" name="CComponentAddress.h" local="yes" imported="no">icomp/CComponentAddress.h</includes>
-    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
-    <includes id="_i_help_viewer_8h" name="IHelpViewer.h" local="yes" imported="no">idoc/IHelpViewer.h</includes>
-    <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
-    <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
-    <includes id="_i_attribute_selection_observer_8h" name="IAttributeSelectionObserver.h" local="yes" imported="no">icmpstr/IAttributeSelectionObserver.h</includes>
-    <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
-    <class kind="class">icmpstr::CPackageOverviewComp</class>
-    <class kind="struct">icmpstr::CPackageOverviewComp::RootInfo</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CPackagesLoaderComp.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_packages_loader_comp_8h</filename>
-    <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
-    <includes id="_i_registry_loader_8h" name="IRegistryLoader.h" local="yes" imported="no">icomp/IRegistryLoader.h</includes>
-    <includes id="_c_registry_8h" name="CRegistry.h" local="yes" imported="no">icomp/CRegistry.h</includes>
-    <includes id="_c_environment_manager_base_8h" name="CEnvironmentManagerBase.h" local="yes" imported="no">icomp/CEnvironmentManagerBase.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_c_composite_package_static_info_8h" name="CCompositePackageStaticInfo.h" local="yes" imported="no">icomp/CCompositePackageStaticInfo.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
-    <class kind="class">icmpstr::CPackagesLoaderComp</class>
-    <class kind="class">icmpstr::CPackagesLoaderComp::LogingRegistry</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CPackagesLoaderExtComp.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_packages_loader_ext_comp_8h</filename>
-    <includes id="_i_external_meta_info_manager_8h" name="IExternalMetaInfoManager.h" local="yes" imported="no">icmpstr/IExternalMetaInfoManager.h</includes>
-    <includes id="_c_packages_loader_comp_8h" name="CPackagesLoaderComp.h" local="yes" imported="no">icmpstr/CPackagesLoaderComp.h</includes>
-    <class kind="class">icmpstr::CPackagesLoaderExtComp</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CQuickHelpGuiComp.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_quick_help_gui_comp_8h</filename>
-    <includes id="_i_meta_info_manager_8h" name="IMetaInfoManager.h" local="yes" imported="no">icomp/IMetaInfoManager.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
-    <includes id="_i_help_viewer_8h" name="IHelpViewer.h" local="yes" imported="no">idoc/IHelpViewer.h</includes>
-    <includes id="_i_help_file_provider_8h" name="IHelpFileProvider.h" local="yes" imported="no">idoc/IHelpFileProvider.h</includes>
-    <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
-    <includes id="_i_external_meta_info_manager_8h" name="IExternalMetaInfoManager.h" local="yes" imported="no">icmpstr/IExternalMetaInfoManager.h</includes>
-    <class kind="class">icmpstr::CQuickHelpGuiComp</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CRegistriesManagerComp.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_registries_manager_comp_8h</filename>
-    <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
-    <includes id="_i_ext_packages_manager_8h" name="IExtPackagesManager.h" local="yes" imported="no">icomp/IExtPackagesManager.h</includes>
-    <includes id="_i_registries_manager_8h" name="IRegistriesManager.h" local="yes" imported="no">icomp/IRegistriesManager.h</includes>
-    <includes id="_i_registry_loader_8h" name="IRegistryLoader.h" local="yes" imported="no">icomp/IRegistryLoader.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
-    <class kind="class">icmpstr::CRegistriesManagerComp</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CRegistryCodeSaverComp.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_registry_code_saver_comp_8h</filename>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
-    <includes id="_i_registry_8h" name="IRegistry.h" local="yes" imported="no">icomp/IRegistry.h</includes>
-    <includes id="_i_ext_packages_manager_8h" name="IExtPackagesManager.h" local="yes" imported="no">icomp/IExtPackagesManager.h</includes>
-    <includes id="_i_registries_manager_8h" name="IRegistriesManager.h" local="yes" imported="no">icomp/IRegistriesManager.h</includes>
-    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
-    <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
-    <class kind="class">icmpstr::CRegistryCodeSaverComp</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CRegistryConsistInfoComp.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_registry_consist_info_comp_8h</filename>
-    <includes id="_i_component_environment_manager_8h" name="IComponentEnvironmentManager.h" local="yes" imported="no">icomp/IComponentEnvironmentManager.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
-    <includes id="_i_external_meta_info_manager_8h" name="IExternalMetaInfoManager.h" local="yes" imported="no">icmpstr/IExternalMetaInfoManager.h</includes>
-    <class kind="class">icmpstr::CRegistryConsistInfoComp</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CRegistryElementShape.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_registry_element_shape_8h</filename>
-    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
-    <includes id="_t_object_shape_base_8h" name="TObjectShapeBase.h" local="yes" imported="no">icmpstr/TObjectShapeBase.h</includes>
-    <includes id="_c_visual_registry_element_8h" name="CVisualRegistryElement.h" local="yes" imported="no">icmpstr/CVisualRegistryElement.h</includes>
-    <class kind="class">icmpstr::CRegistryElementShape</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CRegistryLoaderComp.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_registry_loader_comp_8h</filename>
-    <includes id="iser_2_c_xml_file_read_archive_8h" name="CXmlFileReadArchive.h" local="yes" imported="no">iser/CXmlFileReadArchive.h</includes>
-    <includes id="iser_2_c_xml_file_write_archive_8h" name="CXmlFileWriteArchive.h" local="yes" imported="no">iser/CXmlFileWriteArchive.h</includes>
-    <includes id="_t_file_serializer_comp_8h" name="TFileSerializerComp.h" local="yes" imported="no">ibase/TFileSerializerComp.h</includes>
-    <class kind="class">icmpstr::CRegistryLoaderComp</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CRegistryPreviewComp.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_registry_preview_comp_8h</filename>
-    <includes id="_i_component_environment_manager_8h" name="IComponentEnvironmentManager.h" local="yes" imported="no">icomp/IComponentEnvironmentManager.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
-    <includes id="_i_registry_preview_8h" name="IRegistryPreview.h" local="yes" imported="no">icmpstr/IRegistryPreview.h</includes>
-    <class kind="class">icmpstr::CRegistryPreviewComp</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CRegistryPropEditorComp.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_registry_prop_editor_comp_8h</filename>
-    <includes id="_i_registry_8h" name="IRegistry.h" local="yes" imported="no">icomp/IRegistry.h</includes>
-    <includes id="_i_component_environment_manager_8h" name="IComponentEnvironmentManager.h" local="yes" imported="no">icomp/IComponentEnvironmentManager.h</includes>
-    <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="yes" imported="no">ibase/IMessageConsumer.h</includes>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <includes id="_c_checkable_combo_box_8h" name="CCheckableComboBox.h" local="yes" imported="no">iqtgui/CCheckableComboBox.h</includes>
-    <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
-    <class kind="class">icmpstr::CRegistryPropEditorComp</class>
-    <class kind="class">icmpstr::CRegistryPropEditorComp::TextLog</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CRegistryTreeViewComp.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_registry_tree_view_comp_8h</filename>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
-    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
-    <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="yes" imported="no">imod/TModelWrap.h</includes>
-    <includes id="_i_registry_8h" name="IRegistry.h" local="yes" imported="no">icomp/IRegistry.h</includes>
-    <includes id="_i_component_environment_manager_8h" name="IComponentEnvironmentManager.h" local="yes" imported="no">icomp/IComponentEnvironmentManager.h</includes>
-    <includes id="_c_registry_element_8h" name="CRegistryElement.h" local="yes" imported="no">icomp/CRegistryElement.h</includes>
-    <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
-    <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
-    <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
-    <class kind="class">icmpstr::CRegistryTreeViewComp</class>
-    <class kind="class">icmpstr::CRegistryTreeViewComp::EnvironmentObserver</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CSceneProviderGuiComp.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_scene_provider_gui_comp_8h</filename>
-    <includes id="_i_scene_controller_8h" name="ISceneController.h" local="yes" imported="no">i2d/ISceneController.h</includes>
-    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
-    <includes id="_i_drop_consumer_8h" name="IDropConsumer.h" local="yes" imported="no">iqtgui/IDropConsumer.h</includes>
-    <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
-    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
-    <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">icmpstr/ISceneProvider.h</includes>
-    <class kind="class">icmpstr::CSceneProviderGuiComp</class>
-    <class kind="class">icmpstr::CSceneProviderGuiComp::CScene</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CVisualRegistry.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_visual_registry_8h</filename>
-    <includes id="_c_registry_8h" name="CRegistry.h" local="yes" imported="no">icomp/CRegistry.h</includes>
-    <includes id="_i_component_note_controller_8h" name="IComponentNoteController.h" local="yes" imported="no">icmpstr/IComponentNoteController.h</includes>
-    <includes id="_c_visual_registry_element_8h" name="CVisualRegistryElement.h" local="yes" imported="no">icmpstr/CVisualRegistryElement.h</includes>
-    <class kind="class">icmpstr::CVisualRegistry</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CVisualRegistryEditorComp.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_visual_registry_editor_comp_8h</filename>
-    <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
-    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
-    <includes id="_i_registry_8h" name="IRegistry.h" local="yes" imported="no">icomp/IRegistry.h</includes>
-    <includes id="_i_component_environment_manager_8h" name="IComponentEnvironmentManager.h" local="yes" imported="no">icomp/IComponentEnvironmentManager.h</includes>
-    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
-    <includes id="_i_help_viewer_8h" name="IHelpViewer.h" local="yes" imported="no">idoc/IHelpViewer.h</includes>
-    <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
-    <includes id="_i_drop_consumer_8h" name="IDropConsumer.h" local="yes" imported="no">iqtgui/IDropConsumer.h</includes>
-    <includes id="_i_registry_preview_8h" name="IRegistryPreview.h" local="yes" imported="no">icmpstr/IRegistryPreview.h</includes>
-    <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
-    <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
-    <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">icmpstr/ISceneProvider.h</includes>
-    <class kind="class">icmpstr::CVisualRegistryEditorComp</class>
-    <class kind="class">icmpstr::CVisualRegistryEditorComp::EnvironmentObserver</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CVisualRegistryElement.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_visual_registry_element_8h</filename>
-    <includes id="_c_object2d_base_8h" name="CObject2dBase.h" local="yes" imported="no">i2d/CObject2dBase.h</includes>
-    <includes id="_i_registry_8h" name="IRegistry.h" local="yes" imported="no">icomp/IRegistry.h</includes>
-    <includes id="_c_component_address_8h" name="CComponentAddress.h" local="yes" imported="no">icomp/CComponentAddress.h</includes>
-    <includes id="_c_registry_element_8h" name="CRegistryElement.h" local="yes" imported="no">icomp/CRegistryElement.h</includes>
-    <includes id="icmpstr_8h" name="icmpstr.h" local="yes" imported="no">icmpstr/icmpstr.h</includes>
-    <class kind="class">icmpstr::CVisualRegistryElement</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CXpcEditorComp.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_c_xpc_editor_comp_8h</filename>
-    <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <includes id="_c_xpc_model_8h" name="CXpcModel.h" local="yes" imported="no">icomp/CXpcModel.h</includes>
-    <class kind="class">icmpstr::CXpcEditorComp</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IAttributeSelectionObserver.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_i_attribute_selection_observer_8h</filename>
-    <includes id="_i_attribute_static_info_8h" name="IAttributeStaticInfo.h" local="yes" imported="no">icomp/IAttributeStaticInfo.h</includes>
-    <includes id="icmpstr_8h" name="icmpstr.h" local="yes" imported="no">icmpstr/icmpstr.h</includes>
-    <class kind="class">icmpstr::IAttributeSelectionObserver</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>icmpstr.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>icmpstr_8h</filename>
-    <includes id="iqt2d_8h" name="iqt2d.h" local="yes" imported="no">iqt2d/iqt2d.h</includes>
-    <includes id="ibase_8h" name="ibase.h" local="yes" imported="no">ibase/ibase.h</includes>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IComponentNoteController.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_i_component_note_controller_8h</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <includes id="icmpstr_8h" name="icmpstr.h" local="yes" imported="no">icmpstr/icmpstr.h</includes>
-    <class kind="class">icmpstr::IComponentNoteController</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IElementSelectionInfo.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_i_element_selection_info_8h</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
-    <includes id="_i_registry_8h" name="IRegistry.h" local="yes" imported="no">icomp/IRegistry.h</includes>
-    <includes id="_c_component_address_8h" name="CComponentAddress.h" local="yes" imported="no">icomp/CComponentAddress.h</includes>
-    <includes id="icmpstr_8h" name="icmpstr.h" local="yes" imported="no">icmpstr/icmpstr.h</includes>
-    <class kind="class">icmpstr::IElementSelectionInfo</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IExternalMetaInfoManager.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_i_external_meta_info_manager_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <includes id="_c_component_address_8h" name="CComponentAddress.h" local="yes" imported="no">icomp/CComponentAddress.h</includes>
-    <class kind="class">icmpstr::IExternalMetaInfoManager</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IRegistryConsistInfo.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_i_registry_consist_info_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <includes id="_i_registry_8h" name="IRegistry.h" local="yes" imported="no">icomp/IRegistry.h</includes>
-    <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="yes" imported="no">ibase/IMessageConsumer.h</includes>
-    <includes id="icmpstr_8h" name="icmpstr.h" local="yes" imported="no">icmpstr/icmpstr.h</includes>
-    <class kind="class">icmpstr::IRegistryConsistInfo</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IRegistryPreview.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_i_registry_preview_8h</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <includes id="_i_registry_8h" name="IRegistry.h" local="yes" imported="no">icomp/IRegistry.h</includes>
-    <includes id="icmpstr_8h" name="icmpstr.h" local="yes" imported="no">icmpstr/icmpstr.h</includes>
-    <class kind="class">icmpstr::IRegistryPreview</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>ISceneProvider.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_i_scene_provider_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <includes id="icmpstr_8h" name="icmpstr.h" local="yes" imported="no">icmpstr/icmpstr.h</includes>
-    <class kind="class">icmpstr::ISceneProvider</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TObjectShapeBase.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_t_object_shape_base_8h</filename>
-    <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
-    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
-    <includes id="_i_object2d_8h" name="IObject2d.h" local="yes" imported="no">i2d/IObject2d.h</includes>
-    <includes id="_t_shape_base_8h" name="TShapeBase.h" local="yes" imported="no">icmpstr/TShapeBase.h</includes>
-    <class kind="class">icmpstr::TObjectShapeBase</class>
-    <namespace>icmpstr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TShapeBase.h</name>
-    <path>C:/Temp/Acf/Include/icmpstr/</path>
-    <filename>_t_shape_base_8h</filename>
-    <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">icmpstr/ISceneProvider.h</includes>
-    <class kind="class">icmpstr::TShapeBase</class>
-    <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
     <name>CBaseComponentStaticInfo.h</name>
@@ -2508,11 +1953,29 @@
     <name>CSingleDocumentTemplateComp.h</name>
     <path>C:/Temp/Acf/Include/idoc/</path>
     <filename>_c_single_document_template_comp_8h</filename>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_c_single_document_template_base_8h" name="CSingleDocumentTemplateBase.h" local="yes" imported="no">idoc/CSingleDocumentTemplateBase.h</includes>
     <class kind="class">idoc::CSingleDocumentTemplateComp</class>
+    <namespace>idoc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CTextDocumentComp.h</name>
+    <path>C:/Temp/Acf/Include/idoc/</path>
+    <filename>_c_text_document_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_text_document_8h" name="ITextDocument.h" local="yes" imported="no">idoc/ITextDocument.h</includes>
+    <class kind="class">idoc::CTextDocumentComp</class>
+    <namespace>idoc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CTextFileLoaderComp.h</name>
+    <path>C:/Temp/Acf/Include/idoc/</path>
+    <filename>_c_text_file_loader_comp_8h</filename>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <class kind="class">idoc::CTextFileLoaderComp</class>
     <namespace>idoc</namespace>
   </compound>
   <compound kind="file">
@@ -2553,7 +2016,7 @@
     <path>C:/Temp/Acf/Include/idoc/</path>
     <filename>_i_document_template_8h</filename>
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_observer_8h" name="IObserver.h" local="yes" imported="no">imod/IObserver.h</includes>
     <includes id="_i_command_8h" name="ICommand.h" local="yes" imported="no">ibase/ICommand.h</includes>
     <includes id="_i_undo_manager_8h" name="IUndoManager.h" local="yes" imported="no">idoc/IUndoManager.h</includes>
@@ -2566,7 +2029,7 @@
     <path>C:/Temp/Acf/Include/idoc/</path>
     <filename>_i_document_types_info_8h</filename>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">iser/IFileTypeInfo.h</includes>
+    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
     <class kind="class">idoc::IDocumentTypesInfo</class>
     <namespace>idoc</namespace>
   </compound>
@@ -2597,6 +2060,14 @@
     <namespace>idoc</namespace>
   </compound>
   <compound kind="file">
+    <name>ITextDocument.h</name>
+    <path>C:/Temp/Acf/Include/idoc/</path>
+    <filename>_i_text_document_8h</filename>
+    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <class kind="class">idoc::ITextDocument</class>
+    <namespace>idoc</namespace>
+  </compound>
+  <compound kind="file">
     <name>IUndoManager.h</name>
     <path>C:/Temp/Acf/Include/idoc/</path>
     <filename>_i_undo_manager_8h</filename>
@@ -2605,11 +2076,39 @@
     <namespace>idoc</namespace>
   </compound>
   <compound kind="file">
+    <name>CAutoPersistenceComp.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_auto_persistence_comp_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <class kind="class">ifile::CAutoPersistenceComp</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CComposedFilePersistenceComp.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_composed_file_persistence_comp_8h</filename>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <class kind="class">ifile::CComposedFilePersistenceComp</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
     <name>CDirList.h</name>
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_c_dir_list_8h</filename>
     <includes id="ifile_8h" name="ifile.h" local="yes" imported="no">ifile/ifile.h</includes>
     <class kind="class">ifile::CDirList</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CFileArchiveInfo.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_file_archive_info_8h</filename>
+    <includes id="_i_file_archive_info_8h" name="IFileArchiveInfo.h" local="yes" imported="no">ifile/IFileArchiveInfo.h</includes>
+    <class kind="class">ifile::CFileArchiveInfo</class>
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
@@ -2624,7 +2123,7 @@
     <name>CFileListProviderComp.h</name>
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_c_file_list_provider_comp_8h</filename>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
     <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
@@ -2645,10 +2144,49 @@
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
+    <name>CFileReadArchive.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_file_read_archive_8h</filename>
+    <includes id="_c_binary_read_archive_base_8h" name="CBinaryReadArchiveBase.h" local="yes" imported="no">iser/CBinaryReadArchiveBase.h</includes>
+    <includes id="_c_file_archive_info_8h" name="CFileArchiveInfo.h" local="yes" imported="no">ifile/CFileArchiveInfo.h</includes>
+    <class kind="class">ifile::CFileReadArchive</class>
+    <class kind="struct">ifile::CFileReadArchive::TagStackElement</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CFileSerializerCompBase.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_file_serializer_comp_base_8h</filename>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_c_file_type_info_comp_8h" name="CFileTypeInfoComp.h" local="yes" imported="no">ifile/CFileTypeInfoComp.h</includes>
+    <class kind="class">ifile::CFileSerializerCompBase</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CFileTypeInfoComp.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_file_type_info_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
+    <class kind="class">ifile::CFileTypeInfoComp</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CFileWriteArchive.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_file_write_archive_8h</filename>
+    <includes id="_c_binary_write_archive_base_8h" name="CBinaryWriteArchiveBase.h" local="yes" imported="no">iser/CBinaryWriteArchiveBase.h</includes>
+    <includes id="_c_file_archive_info_8h" name="CFileArchiveInfo.h" local="yes" imported="no">ifile/CFileArchiveInfo.h</includes>
+    <class kind="class">ifile::CFileWriteArchive</class>
+    <class kind="struct">ifile::CFileWriteArchive::TagStackElement</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
     <name>CGeneratedFileNameParamComp.h</name>
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_c_generated_file_name_param_comp_8h</filename>
-    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">iser/IFileTypeInfo.h</includes>
+    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <includes id="_c_relative_file_name_param_comp_8h" name="CRelativeFileNameParamComp.h" local="yes" imported="no">ifile/CRelativeFileNameParamComp.h</includes>
     <class kind="class">ifile::CGeneratedFileNameParamComp</class>
@@ -2669,10 +2207,59 @@
     <filename>_c_system_location_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
-    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">iser/IFileTypeInfo.h</includes>
+    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <class kind="class">ifile::CSystemLocationComp</class>
     <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CTextFileLogComp.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_text_file_log_comp_8h</filename>
+    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <includes id="_c_stream_log_comp_base_8h" name="CStreamLogCompBase.h" local="yes" imported="no">ibase/CStreamLogCompBase.h</includes>
+    <class kind="class">ifile::CTextFileLogComp</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CXmlFileReadArchive.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>ifile_2_c_xml_file_read_archive_8h</filename>
+    <includes id="_c_xml_stream_read_archive_base_8h" name="CXmlStreamReadArchiveBase.h" local="yes" imported="no">iser/CXmlStreamReadArchiveBase.h</includes>
+    <includes id="_c_file_archive_info_8h" name="CFileArchiveInfo.h" local="yes" imported="no">ifile/CFileArchiveInfo.h</includes>
+    <class kind="class">ifile::CXmlFileReadArchive</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CXmlFileReadArchive.h</name>
+    <path>C:/Temp/Acf/Include/iqt/</path>
+    <filename>iqt_2_c_xml_file_read_archive_8h</filename>
+    <includes id="_c_xml_document_info_base_8h" name="CXmlDocumentInfoBase.h" local="yes" imported="no">iser/CXmlDocumentInfoBase.h</includes>
+    <includes id="_c_read_archive_base_8h" name="CReadArchiveBase.h" local="yes" imported="no">iser/CReadArchiveBase.h</includes>
+    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
+    <class kind="class">iqt::CXmlFileReadArchive</class>
+    <namespace>iqt</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CXmlFileWriteArchive.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>ifile_2_c_xml_file_write_archive_8h</filename>
+    <includes id="_c_xml_write_archive_base_8h" name="CXmlWriteArchiveBase.h" local="yes" imported="no">iser/CXmlWriteArchiveBase.h</includes>
+    <includes id="_c_file_archive_info_8h" name="CFileArchiveInfo.h" local="yes" imported="no">ifile/CFileArchiveInfo.h</includes>
+    <class kind="class">ifile::CXmlFileWriteArchive</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CXmlFileWriteArchive.h</name>
+    <path>C:/Temp/Acf/Include/iqt/</path>
+    <filename>iqt_2_c_xml_file_write_archive_8h</filename>
+    <includes id="_c_write_archive_base_8h" name="CWriteArchiveBase.h" local="yes" imported="no">iser/CWriteArchiveBase.h</includes>
+    <includes id="_c_file_archive_info_8h" name="CFileArchiveInfo.h" local="yes" imported="no">ifile/CFileArchiveInfo.h</includes>
+    <includes id="_c_xml_document_info_base_8h" name="CXmlDocumentInfoBase.h" local="yes" imported="no">iser/CXmlDocumentInfoBase.h</includes>
+    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
+    <class kind="class">iqt::CXmlFileWriteArchive</class>
+    <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
     <name>ifile.h</name>
@@ -2682,6 +2269,14 @@
     <includes id="imod_8h" name="imod.h" local="yes" imported="no">imod/imod.h</includes>
     <includes id="iser_8h" name="iser.h" local="yes" imported="no">iser/iser.h</includes>
     <includes id="icomp_8h" name="icomp.h" local="yes" imported="no">icomp/icomp.h</includes>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IFileArchiveInfo.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_i_file_archive_info_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <class kind="class">ifile::IFileArchiveInfo</class>
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
@@ -2699,6 +2294,43 @@
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <includes id="ifile_8h" name="ifile.h" local="yes" imported="no">ifile/ifile.h</includes>
     <class kind="class">ifile::IFileNameParam</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IFilePersistence.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_i_file_persistence_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
+    <class kind="class">ifile::IFilePersistence</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IFilePersistenceInfo.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_i_file_persistence_info_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <class kind="class">ifile::IFilePersistenceInfo</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IFileTypeInfo.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_i_file_type_info_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <class kind="class">ifile::IFileTypeInfo</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TFileSerializerComp.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_t_file_serializer_comp_8h</filename>
+    <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
+    <includes id="_c_system_8h" name="CSystem.h" local="yes" imported="no">istd/CSystem.h</includes>
+    <includes id="_c_file_serializer_comp_base_8h" name="CFileSerializerCompBase.h" local="yes" imported="no">ifile/CFileSerializerCompBase.h</includes>
+    <class kind="class">ifile::TFileSerializerComp</class>
+    <class kind="class">ifile::TFileSerializerComp::ReadArchiveEx</class>
+    <class kind="class">ifile::TFileSerializerComp::WriteArchiveEx</class>
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
@@ -2726,7 +2358,7 @@
     <name>CBitmapLoaderComp.h</name>
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>_c_bitmap_loader_comp_8h</filename>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <includes id="iimg_8h" name="iimg.h" local="yes" imported="no">iimg/iimg.h</includes>
@@ -3284,6 +2916,64 @@
     <namespace>imod</namespace>
   </compound>
   <compound kind="file">
+    <name>CComponentAccessor.h</name>
+    <path>C:/Temp/Acf/Include/ipackage/</path>
+    <filename>_c_component_accessor_8h</filename>
+    <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
+    <includes id="_i_component_static_info_8h" name="IComponentStaticInfo.h" local="yes" imported="no">icomp/IComponentStaticInfo.h</includes>
+    <includes id="_i_component_context_8h" name="IComponentContext.h" local="yes" imported="no">icomp/IComponentContext.h</includes>
+    <includes id="_c_composite_component_8h" name="CCompositeComponent.h" local="yes" imported="no">icomp/CCompositeComponent.h</includes>
+    <class kind="class">ipackage::CComponentAccessor</class>
+    <namespace>ipackage</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CPackagesLoaderComp.h</name>
+    <path>C:/Temp/Acf/Include/ipackage/</path>
+    <filename>_c_packages_loader_comp_8h</filename>
+    <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_i_registry_loader_8h" name="IRegistryLoader.h" local="yes" imported="no">icomp/IRegistryLoader.h</includes>
+    <includes id="_c_registry_8h" name="CRegistry.h" local="yes" imported="no">icomp/CRegistry.h</includes>
+    <includes id="_c_environment_manager_base_8h" name="CEnvironmentManagerBase.h" local="yes" imported="no">icomp/CEnvironmentManagerBase.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_c_composite_package_static_info_8h" name="CCompositePackageStaticInfo.h" local="yes" imported="no">icomp/CCompositePackageStaticInfo.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <class kind="class">ipackage::CPackagesLoaderComp</class>
+    <class kind="class">ipackage::CPackagesLoaderComp::LogingRegistry</class>
+    <namespace>ipackage</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CRegistriesManagerComp.h</name>
+    <path>C:/Temp/Acf/Include/ipackage/</path>
+    <filename>_c_registries_manager_comp_8h</filename>
+    <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_i_ext_packages_manager_8h" name="IExtPackagesManager.h" local="yes" imported="no">icomp/IExtPackagesManager.h</includes>
+    <includes id="_i_registries_manager_8h" name="IRegistriesManager.h" local="yes" imported="no">icomp/IRegistriesManager.h</includes>
+    <includes id="_i_registry_loader_8h" name="IRegistryLoader.h" local="yes" imported="no">icomp/IRegistryLoader.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <class kind="class">ipackage::CRegistriesManagerComp</class>
+    <namespace>ipackage</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CRegistryCodeSaverComp.h</name>
+    <path>C:/Temp/Acf/Include/ipackage/</path>
+    <filename>_c_registry_code_saver_comp_8h</filename>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_i_registry_8h" name="IRegistry.h" local="yes" imported="no">icomp/IRegistry.h</includes>
+    <includes id="_i_ext_packages_manager_8h" name="IExtPackagesManager.h" local="yes" imported="no">icomp/IExtPackagesManager.h</includes>
+    <includes id="_i_registries_manager_8h" name="IRegistriesManager.h" local="yes" imported="no">icomp/IRegistriesManager.h</includes>
+    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
+    <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <class kind="class">ipackage::CRegistryCodeSaverComp</class>
+    <namespace>ipackage</namespace>
+  </compound>
+  <compound kind="file">
     <name>CComposedParamsSetComp.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_composed_params_set_comp_8h</filename>
@@ -3557,21 +3247,10 @@
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>_c_clipboard_serializer_comp_8h</filename>
     <includes id="_i_version_info_8h" name="IVersionInfo.h" local="yes" imported="no">iser/IVersionInfo.h</includes>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
     <class kind="class">iqt::CClipboardSerializerComp</class>
-    <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CFileInfoCopyComp.h</name>
-    <path>C:/Temp/Acf/Include/iqt/</path>
-    <filename>_c_file_info_copy_comp_8h</filename>
-    <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
-    <includes id="_i_file_convert_copy_8h" name="IFileConvertCopy.h" local="yes" imported="no">ibase/IFileConvertCopy.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
-    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
-    <class kind="class">iqt::CFileInfoCopyComp</class>
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
@@ -3597,7 +3276,7 @@
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>_c_rendered_object_file_loader_comp_8h</filename>
     <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="yes" imported="no">istd/TSmartPtr.h</includes>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_object_snap_8h" name="IObjectSnap.h" local="yes" imported="no">ibase/IObjectSnap.h</includes>
@@ -3626,7 +3305,7 @@
     <name>CSettingsSerializerComp.h</name>
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>_c_settings_serializer_comp_8h</filename>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
@@ -3664,45 +3343,6 @@
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
     <class kind="class">iqt::CTranslationManagerComp</class>
     <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CXmlFileReadArchive.h</name>
-    <path>C:/Temp/Acf/Include/iqt/</path>
-    <filename>iqt_2_c_xml_file_read_archive_8h</filename>
-    <includes id="_c_xml_document_info_base_8h" name="CXmlDocumentInfoBase.h" local="yes" imported="no">iser/CXmlDocumentInfoBase.h</includes>
-    <includes id="_c_read_archive_base_8h" name="CReadArchiveBase.h" local="yes" imported="no">iser/CReadArchiveBase.h</includes>
-    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
-    <class kind="class">iqt::CXmlFileReadArchive</class>
-    <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CXmlFileReadArchive.h</name>
-    <path>C:/Temp/Acf/Include/iser/</path>
-    <filename>iser_2_c_xml_file_read_archive_8h</filename>
-    <includes id="_c_xml_stream_read_archive_base_8h" name="CXmlStreamReadArchiveBase.h" local="yes" imported="no">iser/CXmlStreamReadArchiveBase.h</includes>
-    <includes id="_c_file_archive_info_8h" name="CFileArchiveInfo.h" local="yes" imported="no">iser/CFileArchiveInfo.h</includes>
-    <class kind="class">iser::CXmlFileReadArchive</class>
-    <namespace>iser</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CXmlFileWriteArchive.h</name>
-    <path>C:/Temp/Acf/Include/iqt/</path>
-    <filename>iqt_2_c_xml_file_write_archive_8h</filename>
-    <includes id="_c_write_archive_base_8h" name="CWriteArchiveBase.h" local="yes" imported="no">iser/CWriteArchiveBase.h</includes>
-    <includes id="_c_file_archive_info_8h" name="CFileArchiveInfo.h" local="yes" imported="no">iser/CFileArchiveInfo.h</includes>
-    <includes id="_c_xml_document_info_base_8h" name="CXmlDocumentInfoBase.h" local="yes" imported="no">iser/CXmlDocumentInfoBase.h</includes>
-    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
-    <class kind="class">iqt::CXmlFileWriteArchive</class>
-    <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CXmlFileWriteArchive.h</name>
-    <path>C:/Temp/Acf/Include/iser/</path>
-    <filename>iser_2_c_xml_file_write_archive_8h</filename>
-    <includes id="_c_xml_write_archive_base_8h" name="CXmlWriteArchiveBase.h" local="yes" imported="no">iser/CXmlWriteArchiveBase.h</includes>
-    <includes id="_c_file_archive_info_8h" name="CFileArchiveInfo.h" local="yes" imported="no">iser/CFileArchiveInfo.h</includes>
-    <class kind="class">iser::CXmlFileWriteArchive</class>
-    <namespace>iser</namespace>
   </compound>
   <compound kind="file">
     <name>iqt.h</name>
@@ -4269,7 +3909,7 @@
     <name>CComposedGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_composed_gui_comp_8h</filename>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <includes id="_t_restorable_gui_wrap_8h" name="TRestorableGuiWrap.h" local="yes" imported="no">iqtgui/TRestorableGuiWrap.h</includes>
@@ -4330,10 +3970,10 @@
     <name>CFileDialogLoaderComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_file_dialog_loader_comp_8h</filename>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
-    <includes id="_i_file_loader_info_8h" name="IFileLoaderInfo.h" local="yes" imported="no">iser/IFileLoaderInfo.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_i_file_persistence_info_8h" name="IFilePersistenceInfo.h" local="yes" imported="no">ifile/IFilePersistenceInfo.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="iqtgui_8h" name="iqtgui.h" local="yes" imported="no">iqtgui/iqtgui.h</includes>
     <class kind="class">iqtgui::CFileDialogLoaderComp</class>
@@ -4352,7 +3992,7 @@
     <name>CFilePersistenceGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_file_persistence_gui_comp_8h</filename>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
     <class kind="class">iqtgui::CFilePersistenceGuiComp</class>
     <namespace>iqtgui</namespace>
@@ -4361,7 +4001,7 @@
     <name>CFileSystemExplorerGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_file_system_explorer_gui_comp_8h</filename>
-    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">iser/IFileTypeInfo.h</includes>
+    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <includes id="_c_ext_line_edit_8h" name="CExtLineEdit.h" local="yes" imported="no">iqtgui/CExtLineEdit.h</includes>
@@ -4462,7 +4102,7 @@
     <name>CLogGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_log_gui_comp_8h</filename>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_c_message_container_8h" name="CMessageContainer.h" local="yes" imported="no">ibase/CMessageContainer.h</includes>
     <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ibase/CMessage.h</includes>
     <includes id="_i_visual_status_provider_8h" name="IVisualStatusProvider.h" local="yes" imported="no">iqtgui/IVisualStatusProvider.h</includes>
@@ -4497,7 +4137,7 @@
     <name>CObjectPreviewGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_object_preview_gui_comp_8h</filename>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <class kind="class">iqtgui::CObjectPreviewGuiComp</class>
@@ -4813,7 +4453,7 @@
     <name>CComposedParamsSetGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtprm/</path>
     <filename>_c_composed_params_set_gui_comp_8h</filename>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
@@ -4834,7 +4474,7 @@
     <name>CFileNameParamGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtprm/</path>
     <filename>_c_file_name_param_gui_comp_8h</filename>
-    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">iser/IFileTypeInfo.h</includes>
+    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <class kind="class">iqtprm::CFileNameParamGuiComp</class>
@@ -4941,7 +4581,7 @@
     <name>CVariableParamGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtprm/</path>
     <filename>_c_variable_param_gui_comp_8h</filename>
-    <includes id="_i_file_loader_8h" name="IFileLoader.h" local="yes" imported="no">iser/IFileLoader.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_variable_param_8h" name="IVariableParam.h" local="yes" imported="no">iprm/IVariableParam.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
@@ -5004,34 +4644,6 @@
     <filename>_c_bit_memory_write_archive_8h</filename>
     <includes id="_c_memory_write_archive_8h" name="CMemoryWriteArchive.h" local="yes" imported="no">iser/CMemoryWriteArchive.h</includes>
     <class kind="class">iser::CBitMemoryWriteArchive</class>
-    <namespace>iser</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CFileArchiveInfo.h</name>
-    <path>C:/Temp/Acf/Include/iser/</path>
-    <filename>_c_file_archive_info_8h</filename>
-    <includes id="_i_file_archive_info_8h" name="IFileArchiveInfo.h" local="yes" imported="no">iser/IFileArchiveInfo.h</includes>
-    <class kind="class">iser::CFileArchiveInfo</class>
-    <namespace>iser</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CFileReadArchive.h</name>
-    <path>C:/Temp/Acf/Include/iser/</path>
-    <filename>_c_file_read_archive_8h</filename>
-    <includes id="_c_binary_read_archive_base_8h" name="CBinaryReadArchiveBase.h" local="yes" imported="no">iser/CBinaryReadArchiveBase.h</includes>
-    <includes id="_c_file_archive_info_8h" name="CFileArchiveInfo.h" local="yes" imported="no">iser/CFileArchiveInfo.h</includes>
-    <class kind="class">iser::CFileReadArchive</class>
-    <class kind="struct">iser::CFileReadArchive::TagStackElement</class>
-    <namespace>iser</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CFileWriteArchive.h</name>
-    <path>C:/Temp/Acf/Include/iser/</path>
-    <filename>_c_file_write_archive_8h</filename>
-    <includes id="_c_binary_write_archive_base_8h" name="CBinaryWriteArchiveBase.h" local="yes" imported="no">iser/CBinaryWriteArchiveBase.h</includes>
-    <includes id="_c_file_archive_info_8h" name="CFileArchiveInfo.h" local="yes" imported="no">iser/CFileArchiveInfo.h</includes>
-    <class kind="class">iser::CFileWriteArchive</class>
-    <class kind="struct">iser::CFileWriteArchive::TagStackElement</class>
     <namespace>iser</namespace>
   </compound>
   <compound kind="file">
@@ -5173,39 +4785,6 @@
     <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <class kind="class">iser::IArchive</class>
-    <namespace>iser</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IFileArchiveInfo.h</name>
-    <path>C:/Temp/Acf/Include/iser/</path>
-    <filename>_i_file_archive_info_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <class kind="class">iser::IFileArchiveInfo</class>
-    <namespace>iser</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IFileLoader.h</name>
-    <path>C:/Temp/Acf/Include/iser/</path>
-    <filename>_i_file_loader_8h</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">iser/IFileTypeInfo.h</includes>
-    <class kind="class">iser::IFileLoader</class>
-    <namespace>iser</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IFileLoaderInfo.h</name>
-    <path>C:/Temp/Acf/Include/iser/</path>
-    <filename>_i_file_loader_info_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <class kind="class">iser::IFileLoaderInfo</class>
-    <namespace>iser</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IFileTypeInfo.h</name>
-    <path>C:/Temp/Acf/Include/iser/</path>
-    <filename>_i_file_type_info_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <class kind="class">iser::IFileTypeInfo</class>
     <namespace>iser</namespace>
   </compound>
   <compound kind="file">
@@ -6446,13 +6025,16 @@
     <name>Persistence</name>
     <title>Persistence concept.</title>
     <filename>group___persistence.html</filename>
-    <class kind="class">iqt::CXmlFileReadArchive</class>
-    <class kind="class">iqt::CXmlFileWriteArchive</class>
+    <class kind="class">ifile::CFileReadArchive</class>
+    <class kind="class">ifile::CFileWriteArchive</class>
+    <class kind="class">ifile::CXmlFileReadArchive</class>
+    <class kind="class">ifile::CXmlFileWriteArchive</class>
+    <class kind="class">ifile::IFilePersistence</class>
+    <class kind="class">ifile::IFilePersistenceInfo</class>
+    <class kind="class">ifile::IFileTypeInfo</class>
     <class kind="class">iser::CArchiveTag</class>
     <class kind="class">iser::CBitMemoryReadArchive</class>
     <class kind="class">iser::CBitMemoryWriteArchive</class>
-    <class kind="class">iser::CFileReadArchive</class>
-    <class kind="class">iser::CFileWriteArchive</class>
     <class kind="class">iser::CMemoryReadArchive</class>
     <class kind="class">iser::CMemoryWriteArchive</class>
     <class kind="class">iser::CMinimalVersionInfo</class>
@@ -6461,9 +6043,6 @@
     <class kind="class">iser::CXmlStringReadArchive</class>
     <class kind="class">iser::CXmlStringWriteArchive</class>
     <class kind="class">iser::IArchive</class>
-    <class kind="class">iser::IFileLoader</class>
-    <class kind="class">iser::IFileLoaderInfo</class>
-    <class kind="class">iser::IFileTypeInfo</class>
     <class kind="class">iser::IObject</class>
     <class kind="class">iser::ISerializable</class>
     <class kind="class">iser::IVersionInfo</class>
@@ -6569,12 +6148,8 @@
     <filename>class_base.html</filename>
   </compound>
   <compound kind="class">
-    <name>CComponentPromotorDialogCompBase</name>
-    <filename>class_c_component_promotor_dialog_comp_base.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>CElementSelectionInfoManagerBase</name>
-    <filename>class_c_element_selection_info_manager_base.html</filename>
+    <name>CFileTypeInfoComp</name>
+    <filename>class_c_file_type_info_comp.html</filename>
   </compound>
   <compound kind="class">
     <name>CViewProviderGuiComp</name>
@@ -6589,20 +6164,8 @@
     <filename>class_i_hierarchical_message_container.html</filename>
   </compound>
   <compound kind="class">
-    <name>QGraphicsRectItem</name>
-    <filename>class_q_graphics_rect_item.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>QObject</name>
-    <filename>class_q_object.html</filename>
-  </compound>
-  <compound kind="class">
     <name>RuntimeStatus</name>
     <filename>class_runtime_status.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>SelectionInfoImpl</name>
-    <filename>class_selection_info_impl.html</filename>
   </compound>
   <compound kind="class">
     <name>TabModel</name>
@@ -11974,14 +11537,8 @@
     <name>ibase</name>
     <filename>namespaceibase.html</filename>
     <class kind="class">ibase::CApplicationInfoComp</class>
-    <class kind="class">ibase::CAutoPersistenceComp</class>
-    <class kind="class">ibase::CComposedLoaderComp</class>
     <class kind="class">ibase::CConsoleLogComp</class>
-    <class kind="class">ibase::CCopyAppComp</class>
     <class kind="class">ibase::CDelegatedProgressManager</class>
-    <class kind="class">ibase::CFileCopyOverLoaderComp</class>
-    <class kind="class">ibase::CFileSerializerCompBase</class>
-    <class kind="class">ibase::CFileTypeInfoComp</class>
     <class kind="class">ibase::CInstantiatorComp</class>
     <class kind="class">ibase::CLogComp</class>
     <class kind="class">ibase::CMessage</class>
@@ -11995,16 +11552,12 @@
     <class kind="class">ibase::CSingletonApplicationComp</class>
     <class kind="class">ibase::CSize</class>
     <class kind="class">ibase::CStreamLogCompBase</class>
-    <class kind="class">ibase::CTextDocumentComp</class>
-    <class kind="class">ibase::CTextFileLoaderComp</class>
-    <class kind="class">ibase::CTextFileLogComp</class>
     <class kind="class">ibase::CUuidComp</class>
     <class kind="class">ibase::CVersionInfoComp</class>
     <class kind="class">ibase::IApplication</class>
     <class kind="class">ibase::IApplicationInfo</class>
     <class kind="class">ibase::ICommand</class>
     <class kind="class">ibase::ICommandsProvider</class>
-    <class kind="class">ibase::IFileConvertCopy</class>
     <class kind="class">ibase::ILoggable</class>
     <class kind="class">ibase::IMessageConsumer</class>
     <class kind="class">ibase::IMessageContainer</class>
@@ -12013,12 +11566,10 @@
     <class kind="class">ibase::IProgressManager</class>
     <class kind="class">ibase::IQtItemModelProvider</class>
     <class kind="class">ibase::IRuntimeStatusProvider</class>
-    <class kind="class">ibase::ITextDocument</class>
     <class kind="class">ibase::TCommandsProviderCompWrap</class>
     <class kind="class">ibase::TComposedFactoryComp</class>
     <class kind="class">ibase::TContainer</class>
     <class kind="class">ibase::TFactorisableContainer</class>
-    <class kind="class">ibase::TFileSerializerComp</class>
     <class kind="class">ibase::THierarchicalBase</class>
     <class kind="class">ibase::TLoggerCompWrap</class>
     <class kind="class">ibase::TLoggerWrap</class>
@@ -12140,80 +11691,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>ibase::CAutoPersistenceComp</name>
-    <filename>classibase_1_1_c_auto_persistence_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_c_auto_persistence_comp.html</anchorfile>
-      <anchor>a5dabf077c032cc34986a166c65edf86a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classibase_1_1_c_auto_persistence_comp.html</anchorfile>
-      <anchor>a125c81b9cf7ee3e167d622c3e6f20208</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classibase_1_1_c_auto_persistence_comp.html</anchorfile>
-      <anchor>a578c0f4237b5fd2893bbaa8b509777ac</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::CComposedLoaderComp</name>
-    <filename>classibase_1_1_c_composed_loader_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">iser::IFileLoader</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_c_composed_loader_comp.html</anchorfile>
-      <anchor>a09ebc38cb0b089b47ac7ed475e09b0bb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsOperationSupported</name>
-      <anchorfile>classibase_1_1_c_composed_loader_comp.html</anchorfile>
-      <anchor>a13d2717e182f70d16986ff954b6b6fbb</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>LoadFromFile</name>
-      <anchorfile>classibase_1_1_c_composed_loader_comp.html</anchorfile>
-      <anchor>af480f57ae969292135f2c14e84dc2ec4</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>SaveToFile</name>
-      <anchorfile>classibase_1_1_c_composed_loader_comp.html</anchorfile>
-      <anchor>a537008ab39a94d4fa0c07a1e3af22d25</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetFileExtensions</name>
-      <anchorfile>classibase_1_1_c_composed_loader_comp.html</anchorfile>
-      <anchor>ac741044c3b5d156b222040a2d2726267</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetTypeDescription</name>
-      <anchorfile>classibase_1_1_c_composed_loader_comp.html</anchorfile>
-      <anchor>a05cfeb03c71d9d67ef213f1ffeb8d4e3</anchor>
-      <arglist>(const QString *extensionPtr=NULL) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>ibase::CConsoleLogComp</name>
     <filename>classibase_1_1_c_console_log_comp.html</filename>
     <base>ibase::CStreamLogCompBase</base>
@@ -12237,47 +11714,6 @@
       <anchorfile>classibase_1_1_c_console_log_comp.html</anchorfile>
       <anchor>a9c4bf1c48aa62258aa92f1294681d40f</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::CCopyAppComp</name>
-    <filename>classibase_1_1_c_copy_app_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
-    <base virtualness="virtual">ibase::IApplication</base>
-    <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_c_copy_app_comp.html</anchorfile>
-      <anchor>a780eaa070a2c09c5b15ab40e6be08390</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>InitializeApplication</name>
-      <anchorfile>classibase_1_1_c_copy_app_comp.html</anchorfile>
-      <anchor>a7b4727c7e23093c68e70f1a8f723f113</anchor>
-      <arglist>(int argc, char **argv)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>Execute</name>
-      <anchorfile>classibase_1_1_c_copy_app_comp.html</anchorfile>
-      <anchor>aea2bdc8e397a802c94454c3f8d275152</anchor>
-      <arglist>(int argc, char **argv)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetHelpText</name>
-      <anchorfile>classibase_1_1_c_copy_app_comp.html</anchorfile>
-      <anchor>a79550d56b3e64186fdac58934c0bb285</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QStringList</type>
-      <name>GetApplicationArguments</name>
-      <anchorfile>classibase_1_1_c_copy_app_comp.html</anchorfile>
-      <anchor>a126ea51dbb6f6211c00617d3d7e7d5ed</anchor>
-      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12379,137 +11815,6 @@
       <anchorfile>classibase_1_1_c_delegated_progress_manager.html</anchorfile>
       <anchor>ae51cbd932a049004406056b13ab2cc82</anchor>
       <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::CFileCopyOverLoaderComp</name>
-    <filename>classibase_1_1_c_file_copy_over_loader_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
-    <base virtualness="virtual">ibase::IFileConvertCopy</base>
-    <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_c_file_copy_over_loader_comp.html</anchorfile>
-      <anchor>a01af731da47b4ecada2d7bf117387842</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ConvertFiles</name>
-      <anchorfile>classibase_1_1_c_file_copy_over_loader_comp.html</anchorfile>
-      <anchor>a65d2dbb84d53db91d040226b20937e50</anchor>
-      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::CFileSerializerCompBase</name>
-    <filename>classibase_1_1_c_file_serializer_comp_base.html</filename>
-    <base>TLoggerCompWrap&lt; CFileTypeInfoComp &gt;</base>
-    <base virtualness="virtual">iser::IFileLoader</base>
-    <member kind="enumeration">
-      <name>MessageId</name>
-      <anchorfile>classibase_1_1_c_file_serializer_comp_base.html</anchorfile>
-      <anchor>acc7406a1d564b4d9ea4205a8f6b1b1dc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_BAD_EXTENSION</name>
-      <anchorfile>classibase_1_1_c_file_serializer_comp_base.html</anchorfile>
-      <anchor>acc7406a1d564b4d9ea4205a8f6b1b1dca3da140f5bdfbdd1cccbcabab44c67df9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_UNSUPPORTED_VERSION</name>
-      <anchorfile>classibase_1_1_c_file_serializer_comp_base.html</anchorfile>
-      <anchor>acc7406a1d564b4d9ea4205a8f6b1b1dcac761f5160148f67c5264bae0247a1c4e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ibase::TLoggerCompWrap&lt; CFileTypeInfoComp &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_c_file_serializer_comp_base.html</anchorfile>
-      <anchor>afd788ef9ae1f896f918d7e7115d83116</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsOperationSupported</name>
-      <anchorfile>classibase_1_1_c_file_serializer_comp_base.html</anchorfile>
-      <anchor>ac46bd5354b18a54118b7e8a303ca1853</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual const iser::IVersionInfo *</type>
-      <name>GetVersionInfo</name>
-      <anchorfile>classibase_1_1_c_file_serializer_comp_base.html</anchorfile>
-      <anchor>a482fec29c6390148e824aaa6d32f5430</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>CheckMinimalVersion</name>
-      <anchorfile>classibase_1_1_c_file_serializer_comp_base.html</anchorfile>
-      <anchor>a7488934b5de0dd8b55b8bdc7959a8253</anchor>
-      <arglist>(const iser::ISerializable &amp;object, const iser::IVersionInfo &amp;versionInfo) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>CheckInputFile</name>
-      <anchorfile>classibase_1_1_c_file_serializer_comp_base.html</anchorfile>
-      <anchor>afda947621577403fa1127cb26ef0efec</anchor>
-      <arglist>(const QString filePath, bool beQuiet=true) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>CheckOutputFile</name>
-      <anchorfile>classibase_1_1_c_file_serializer_comp_base.html</anchorfile>
-      <anchor>a1661a12f1a179e02e5189049ac527cc3</anchor>
-      <arglist>(const QString filePath, bool beQuiet=true) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::CFileTypeInfoComp</name>
-    <filename>classibase_1_1_c_file_type_info_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">iser::IFileTypeInfo</base>
-    <member kind="enumeration">
-      <name>MessageId</name>
-      <anchorfile>classibase_1_1_c_file_type_info_comp.html</anchorfile>
-      <anchor>a135f6889a5b3dcc0e95bba46dc067f2c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_BAD_EXTENSION</name>
-      <anchorfile>classibase_1_1_c_file_type_info_comp.html</anchorfile>
-      <anchor>a135f6889a5b3dcc0e95bba46dc067f2ca9ea9b595f0423d0e6dca4e7273c7c068</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_UNSUPPORTED_VERSION</name>
-      <anchorfile>classibase_1_1_c_file_type_info_comp.html</anchorfile>
-      <anchor>a135f6889a5b3dcc0e95bba46dc067f2ca11bb534e9b96f2b59f2e139498459fa2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_c_file_type_info_comp.html</anchorfile>
-      <anchor>ab66af6479e16d5834d2fa0c9afc37be3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetFileExtensions</name>
-      <anchorfile>classibase_1_1_c_file_type_info_comp.html</anchorfile>
-      <anchor>ab67ef8c97fad1d2d0e77c40407ee1fa3</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetTypeDescription</name>
-      <anchorfile>classibase_1_1_c_file_type_info_comp.html</anchorfile>
-      <anchor>ad9e95c6a4dfaa35177a99c829d337bc8</anchor>
-      <arglist>(const QString *extensionPtr=NULL) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13413,149 +12718,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>ibase::CTextDocumentComp</name>
-    <filename>classibase_1_1_c_text_document_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">ibase::ITextDocument</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_c_text_document_comp.html</anchorfile>
-      <anchor>a1e0e136f16ae39b949e1ef8aeba2dbad</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetText</name>
-      <anchorfile>classibase_1_1_c_text_document_comp.html</anchorfile>
-      <anchor>a2e0063ea60d95adf42003f792d2ba202</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetText</name>
-      <anchorfile>classibase_1_1_c_text_document_comp.html</anchorfile>
-      <anchor>adcbd9d9bd394b32ab4c5832215d33fab</anchor>
-      <arglist>(const QString &amp;text)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classibase_1_1_c_text_document_comp.html</anchorfile>
-      <anchor>a2af7f42738b1f68cc7f76eb66f733729</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classibase_1_1_c_text_document_comp.html</anchorfile>
-      <anchor>acb24f7baf3ef846d49b192e00a01c7a7</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::CTextFileLoaderComp</name>
-    <filename>classibase_1_1_c_text_file_loader_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>iser::IFileLoader</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_c_text_file_loader_comp.html</anchorfile>
-      <anchor>ad1db63a407f4cf62f3d0ea8a142ced2d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsOperationSupported</name>
-      <anchorfile>classibase_1_1_c_text_file_loader_comp.html</anchorfile>
-      <anchor>af7f926174e3a4969d6194ebf96ac3355</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>LoadFromFile</name>
-      <anchorfile>classibase_1_1_c_text_file_loader_comp.html</anchorfile>
-      <anchor>a5c618e6e6cdc88f274d5067458b89c82</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>SaveToFile</name>
-      <anchorfile>classibase_1_1_c_text_file_loader_comp.html</anchorfile>
-      <anchor>a08f309562d94c95403256180f3330dd7</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetFileExtensions</name>
-      <anchorfile>classibase_1_1_c_text_file_loader_comp.html</anchorfile>
-      <anchor>aad992e45b0e2f2a1cba6bdd32b5f0993</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetTypeDescription</name>
-      <anchorfile>classibase_1_1_c_text_file_loader_comp.html</anchorfile>
-      <anchor>af6c1c88ab57a8e685093efca45591dde</anchor>
-      <arglist>(const QString *extensionPtr=NULL) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::CTextFileLogComp</name>
-    <filename>classibase_1_1_c_text_file_log_comp.html</filename>
-    <base>ibase::CStreamLogCompBase</base>
-    <member kind="typedef">
-      <type>CStreamLogCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>a3eb24e2bc1392315b530ae9fc5ed6990</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classibase_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>a2df70545cccf3ae255ae38403711009b</anchor>
-      <arglist>(m_fileNameModelCompPtr, m_fileNameCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CTextFileLogComp</name>
-      <anchorfile>classibase_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>acadef390a249af4ace1e1cd3fc3c1e69</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>WriteText</name>
-      <anchorfile>classibase_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>aec31a46be89c78b0d412785d7e0410ec</anchor>
-      <arglist>(const QString &amp;text)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>NewLine</name>
-      <anchorfile>classibase_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>a7495ab2f56b7759b17faa63a93083a45</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classibase_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>a0f0fdcce0692f6abd6609ee1003a18fb</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classibase_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>a0fef786c26c8ca4fb2909d5f9329490a</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>ibase::CUuidComp</name>
     <filename>classibase_1_1_c_uuid_comp.html</filename>
     <base>icomp::CComponentBase</base>
@@ -13866,36 +13028,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>ibase::IFileConvertCopy</name>
-    <filename>classibase_1_1_i_file_convert_copy.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="enumeration">
-      <name>MessageId</name>
-      <anchorfile>classibase_1_1_i_file_convert_copy.html</anchorfile>
-      <anchor>ab38aa73cdbe7cdf4bd29c30cee30f061</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_INPUT_PATH</name>
-      <anchorfile>classibase_1_1_i_file_convert_copy.html</anchorfile>
-      <anchor>ab38aa73cdbe7cdf4bd29c30cee30f061a87172119ccfef21e1bab64a3f4c52b0b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_OUTPUT_PATH</name>
-      <anchorfile>classibase_1_1_i_file_convert_copy.html</anchorfile>
-      <anchor>ab38aa73cdbe7cdf4bd29c30cee30f061a6f45c46864df50c737d0ca2b96572513</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>ConvertFiles</name>
-      <anchorfile>classibase_1_1_i_file_convert_copy.html</anchorfile>
-      <anchor>ad11442c7773dc7ace817074217e3ef4c</anchor>
-      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>ibase::ILoggable</name>
     <filename>classibase_1_1_i_loggable.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
@@ -14200,25 +13332,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>ibase::ITextDocument</name>
-    <filename>classibase_1_1_i_text_document.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetText</name>
-      <anchorfile>classibase_1_1_i_text_document.html</anchorfile>
-      <anchor>ae74f657dd0378054a2ef2cedb48ff4f6</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetText</name>
-      <anchorfile>classibase_1_1_i_text_document.html</anchorfile>
-      <anchor>a84c4a5012dbb291c122be939a29e1473</anchor>
-      <arglist>(const QString &amp;text)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>ibase::TCommandsProviderCompWrap</name>
     <filename>classibase_1_1_t_commands_provider_comp_wrap.html</filename>
     <templarg></templarg>
@@ -14511,107 +13624,6 @@
       <anchorfile>classibase_1_1_t_factorisable_container.html</anchorfile>
       <anchor>adb49f2f3eb3993c83073f9c421600793</anchor>
       <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::TFileSerializerComp</name>
-    <filename>classibase_1_1_t_file_serializer_comp.html</filename>
-    <templarg>ReadArchive</templarg>
-    <templarg>WriteArchive</templarg>
-    <base>ibase::CFileSerializerCompBase</base>
-    <class kind="class">ibase::TFileSerializerComp::ReadArchiveEx</class>
-    <class kind="class">ibase::TFileSerializerComp::WriteArchiveEx</class>
-    <member kind="typedef">
-      <type>CFileSerializerCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_t_file_serializer_comp.html</anchorfile>
-      <anchor>a9746991279933ef2e3b6127c4323554b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>LoadFromFile</name>
-      <anchorfile>classibase_1_1_t_file_serializer_comp.html</anchorfile>
-      <anchor>ab3b73bb0a58e8f00e9f051b0225eaff2</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>SaveToFile</name>
-      <anchorfile>classibase_1_1_t_file_serializer_comp.html</anchorfile>
-      <anchor>ab287d68478ebf3e9f4d9173fe4122c1d</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnReadError</name>
-      <anchorfile>classibase_1_1_t_file_serializer_comp.html</anchorfile>
-      <anchor>aa831b9417f00ec3c58feaed540f90122</anchor>
-      <arglist>(const ReadArchive &amp;archive, const istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::TFileSerializerComp::ReadArchiveEx</name>
-    <filename>classibase_1_1_t_file_serializer_comp_1_1_read_archive_ex.html</filename>
-    <member kind="typedef">
-      <type>ReadArchive</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_t_file_serializer_comp_1_1_read_archive_ex.html</anchorfile>
-      <anchor>a7769eeb6ed90000835bc11082f8d98f5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>ReadArchiveEx</name>
-      <anchorfile>classibase_1_1_t_file_serializer_comp_1_1_read_archive_ex.html</anchorfile>
-      <anchor>a3eba56cf1f75d9f33af9e0fc84a5b30c</anchor>
-      <arglist>(const QString &amp;filePath, const TFileSerializerComp *loggerPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsLogConsumed</name>
-      <anchorfile>classibase_1_1_t_file_serializer_comp_1_1_read_archive_ex.html</anchorfile>
-      <anchor>a4b8e24d2bb00df2b036cc93cfb0e64bd</anchor>
-      <arglist>(const istd::IInformationProvider::InformationCategory *, const int *flagsPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SendLogMessage</name>
-      <anchorfile>classibase_1_1_t_file_serializer_comp_1_1_read_archive_ex.html</anchorfile>
-      <anchor>ac93be4c4ad7c3229fe6bd511f04d2475</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::TFileSerializerComp::WriteArchiveEx</name>
-    <filename>classibase_1_1_t_file_serializer_comp_1_1_write_archive_ex.html</filename>
-    <member kind="typedef">
-      <type>WriteArchive</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_t_file_serializer_comp_1_1_write_archive_ex.html</anchorfile>
-      <anchor>ab673f88cf662aa8d92028546f0da164d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>WriteArchiveEx</name>
-      <anchorfile>classibase_1_1_t_file_serializer_comp_1_1_write_archive_ex.html</anchorfile>
-      <anchor>aafe1ec1c73d67ac56af5f5bd07b2c8ac</anchor>
-      <arglist>(const QString &amp;filePath, const iser::IVersionInfo *infoPtr, const TFileSerializerComp *loggerPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsLogConsumed</name>
-      <anchorfile>classibase_1_1_t_file_serializer_comp_1_1_write_archive_ex.html</anchorfile>
-      <anchor>a7b69e616e3ecbf43ab5c9fe6df71f599</anchor>
-      <arglist>(const istd::IInformationProvider::InformationCategory *, const int *flagsPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SendLogMessage</name>
-      <anchorfile>classibase_1_1_t_file_serializer_comp_1_1_write_archive_ex.html</anchorfile>
-      <anchor>a4f3b63ddafc9336601ce04e2374009d6</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -16557,4474 +15569,6 @@
       <anchorfile>classicmm_1_1_t_composed_color_gradient.html</anchorfile>
       <anchor>a31ad7fbada5f95a8d4aebdd8482e5c2f</anchor>
       <arglist>(const Argument &amp;argument) const </arglist>
-    </member>
-  </compound>
-  <compound kind="namespace">
-    <name>icmpstr</name>
-    <filename>namespaceicmpstr.html</filename>
-    <class kind="class">icmpstr::CAttributeEditorComp</class>
-    <class kind="class">icmpstr::CComponentAccessor</class>
-    <class kind="class">icmpstr::CComponentHelpFileProviderComp</class>
-    <class kind="class">icmpstr::CComponentNoteEditorComp</class>
-    <class kind="class">icmpstr::CComponentPromotorDialogCompBase</class>
-    <class kind="class">icmpstr::CComponentPromotorDialogComp</class>
-    <class kind="class">icmpstr::CElementSelectionInfoManagerBase</class>
-    <class kind="class">icmpstr::CGraphicsConnectorItem</class>
-    <class kind="class">icmpstr::CMultiAttributeDelegateWidget</class>
-    <class kind="class">icmpstr::CMultiAttributeEditor</class>
-    <class kind="class">icmpstr::CPackageOverviewComp</class>
-    <class kind="class">icmpstr::CPackagesLoaderComp</class>
-    <class kind="class">icmpstr::CPackagesLoaderExtComp</class>
-    <class kind="class">icmpstr::CQuickHelpGuiComp</class>
-    <class kind="class">icmpstr::CRegistriesManagerComp</class>
-    <class kind="class">icmpstr::CRegistryCodeSaverComp</class>
-    <class kind="class">icmpstr::CRegistryConsistInfoComp</class>
-    <class kind="class">icmpstr::CRegistryElementShape</class>
-    <class kind="class">icmpstr::CRegistryLoaderComp</class>
-    <class kind="class">icmpstr::CRegistryPreviewComp</class>
-    <class kind="class">icmpstr::CRegistryPropEditorComp</class>
-    <class kind="class">icmpstr::CRegistryTreeViewComp</class>
-    <class kind="class">icmpstr::CSceneProviderGuiComp</class>
-    <class kind="class">icmpstr::CVisualRegistry</class>
-    <class kind="class">icmpstr::CVisualRegistryEditorComp</class>
-    <class kind="class">icmpstr::CVisualRegistryElement</class>
-    <class kind="class">icmpstr::CXpcEditorComp</class>
-    <class kind="class">icmpstr::IAttributeSelectionObserver</class>
-    <class kind="class">icmpstr::IComponentNoteController</class>
-    <class kind="class">icmpstr::IElementSelectionInfo</class>
-    <class kind="class">icmpstr::IExternalMetaInfoManager</class>
-    <class kind="class">icmpstr::IRegistryConsistInfo</class>
-    <class kind="class">icmpstr::IRegistryPreview</class>
-    <class kind="class">icmpstr::ISceneProvider</class>
-    <class kind="class">icmpstr::TObjectShapeBase</class>
-    <class kind="class">icmpstr::TShapeBase</class>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CAttributeEditorComp</name>
-    <filename>classicmpstr_1_1_c_attribute_editor_comp.html</filename>
-    <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CAttributeEditorComp &gt;, CElementSelectionInfoManagerBase &gt; &gt;</base>
-    <class kind="struct">icmpstr::CAttributeEditorComp::AttrInfo</class>
-    <member kind="enumeration">
-      <name>TabIndex</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a263dc5f2a5775ec1b68ce8fc3ad608cf</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TI_GENERAL</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a263dc5f2a5775ec1b68ce8fc3ad608cfa0e928a8edaae0a3da5b4377ba5e8b90f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TI_ATTRIBUTES</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a263dc5f2a5775ec1b68ce8fc3ad608cfa3955b50958ad4e43667c0ad5d574982b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TI_INTERFACES</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a263dc5f2a5775ec1b68ce8fc3ad608cfa1fdf0011261b28706cc1184bd7839676</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TI_FLAGS</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a263dc5f2a5775ec1b68ce8fc3ad608cfa3088f77da3bf9e6a97a447e8b72a51db</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TI_EXPORTS</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a263dc5f2a5775ec1b68ce8fc3ad608cfadcf691a496c3238c11aaf4ebffc20418</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>AttrMeaning</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>ad8b45c49f2f9036d9a63fbb828752a03</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>AM_NONE</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>ad8b45c49f2f9036d9a63fbb828752a03a37ac90fb66977119a4d84f9cfa342e19</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>AM_REFERENCE</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>ad8b45c49f2f9036d9a63fbb828752a03a86eaede74d385e14b136c7508037aa6e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>AM_MULTI_REFERENCE</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>ad8b45c49f2f9036d9a63fbb828752a03a6974b9498aebbd6f3c3f384a75ab94b5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>AM_ATTRIBUTE</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>ad8b45c49f2f9036d9a63fbb828752a03a6cc3fee462776ac9cb3bf5b62eca5c6a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>AM_BOOL_ATTRIBUTE</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>ad8b45c49f2f9036d9a63fbb828752a03a53a7cded218bb7c51b08bf77a2e4f12f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>AM_MULTI_ATTRIBUTE</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>ad8b45c49f2f9036d9a63fbb828752a03adb98c2aec039784d63ab2198c5992ebb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>AM_EXPORTED_ATTR</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>ad8b45c49f2f9036d9a63fbb828752a03a47d6e3869de7aa1be5316609f3ae04af</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>AM_EXPORTED_COMP</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>ad8b45c49f2f9036d9a63fbb828752a03ac1310d8b63af960cb18f4c5da12fb836</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>AM_MULTI</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>ad8b45c49f2f9036d9a63fbb828752a03ac0320d866128224f20d79a19261ee68a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>AttributeColumns</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a9ea46939bda9debd7aa6f5c1a753dc44</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>AC_NAME</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a9ea46939bda9debd7aa6f5c1a753dc44aa8114038ec7df403009f611a6ead3420</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>AC_VALUE</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a9ea46939bda9debd7aa6f5c1a753dc44a610be4595e2cacca973e4a73f2989895</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>AttributeRole</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a1a4a9e9cbf809497cf176f751f9f5648</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>AttributeMining</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a1a4a9e9cbf809497cf176f751f9f5648a23130885ba3e0afe66dcf40e11b671bd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>AttributeId</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a1a4a9e9cbf809497cf176f751f9f5648a476002d65af7e52c853ae13fb0b6ebe6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>AttributeValue</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a1a4a9e9cbf809497cf176f751f9f5648ab095570a7737336e8c2fdf58107400d1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>AttributeTypeId</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a1a4a9e9cbf809497cf176f751f9f5648a056649771f29361711e45eed782cc345</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>ElementId</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a1a4a9e9cbf809497cf176f751f9f5648ae8f8eed7e4c407484b35087254739966</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InterfaceName</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a1a4a9e9cbf809497cf176f751f9f5648aa7f09407789928d47b7994a5507f2db8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CAttributeEditorComp &gt;, CElementSelectionInfoManagerBase &gt; &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a0c77ba80f9c0832dd5fb5eb8f1eefadd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="signal">
-      <type>void</type>
-      <name>AfterAttributesChange</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a177b27de9e48bb1b87286b4583efe8c4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="signal">
-      <type>void</type>
-      <name>AfterInterfacesChange</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a141731404e25b9d835ecd21d22f391ea</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="signal">
-      <type>void</type>
-      <name>AfterSubcomponentsChange</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a1ef26478c8b5b803e9d4f91678bb9a17</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a56458cd23853445cef23142b218d9897</anchor>
-      <arglist>(m_registryPropObserverCompPtr, m_registryPropGuiCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CAttributeEditorComp</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a7080437833d523b1baad9011458c7a35</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const icomp::IComponentEnvironmentManager *</type>
-      <name>GetMetaInfoManagerPtr</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>ad466c87b2391669b99abb9a164b96869</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const icmpstr::IRegistryConsistInfo *</type>
-      <name>GetConsistencyInfoPtr</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a2feaa0d0c73d8eabb21f906a45eeac83</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>QMap&lt; QByteArray, AttrInfo &gt;</type>
-      <name>ElementIdToAttrInfoMap</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a695fc267e112f9e765ec6d35c6708a28</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>QMap&lt; QByteArray, ElementIdToAttrInfoMap &gt;</type>
-      <name>AttrInfosMap</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>ab6815e194696bb53f1ec1d78488ce2de</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_AttributeTree_itemSelectionChanged</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a6b767eb6dc450ef91ca391343ce65bb2</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_AttributeTree_itemChanged</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a6191c9be3f030e09d31478db66073c5e</anchor>
-      <arglist>(QTreeWidgetItem *item, int column)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_InterfacesTree_itemSelectionChanged</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a7cb15154c0de73fa20265c0c92792b65</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_InterfacesTree_itemChanged</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>ab052c5f0f6f79371512a0af3d9b145ed</anchor>
-      <arglist>(QTreeWidgetItem *item, int column)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_AutoInstanceCB_toggled</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a1fc963c373c0c4425ead95046f638810</anchor>
-      <arglist>(bool checked)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>UpdateGeneralView</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a8576d5879b6197591169e2c41ba0d318</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>UpdateAttributesView</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a7a1edd9751fd232ebd01db446ff97a22</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>UpdateInterfacesView</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a2b703677eda4e48fac9dd4dd62527328</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>UpdateFlagsView</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>ace1a1c2055d2626037dbebd79c2fb061</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>UpdateSubcomponentsView</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a79e32636f76494b313a9775f57e58505</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SetAttributeToItem</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a41af6ccf2e52cb2fecd7f347f931b0c0</anchor>
-      <arglist>(QTreeWidgetItem &amp;attributeItem, const icomp::IRegistry &amp;registry, const QByteArray &amp;attributeId, const ElementIdToAttrInfoMap &amp;infos, bool &amp;hasError, bool &amp;hasWarning, bool &amp;hasExport) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SetInterfaceToItem</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a43c87471790c8d21e309c6190bc249c4</anchor>
-      <arglist>(QTreeWidgetItem &amp;item, icomp::IRegistry::ExportedInterfacesMap *interfacesMapPtr, const QByteArray &amp;elementId, const QByteArray &amp;interfaceName, bool &amp;hasWarning, bool &amp;hasExport) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>ResetItem</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a10fec0062e01215bc8e84f807ad9220a</anchor>
-      <arglist>(QTreeWidgetItem &amp;item)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>DecodeAttribute</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a2353ae27a3a95ccc32663723e2fe3f8c</anchor>
-      <arglist>(const iser::ISerializable &amp;attribute, QString &amp;text, int &amp;meaning) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>EncodeAttribute</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>abe84b77d79389d96a9417f55565f706f</anchor>
-      <arglist>(const QString &amp;text, int meaning, iser::ISerializable &amp;result) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>CreateInterfacesTree</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a61b2e621f8b43af937e0bf1f8fcd57ea</anchor>
-      <arglist>(const QByteArray &amp;elementId, const icomp::IElementStaticInfo *infoPtr, icomp::IRegistry::ExportedInterfacesMap &amp;registryInterfaces, QTreeWidgetItem *parentItemPtr, bool &amp;hasWarning, bool &amp;hasExport, bool includeSubelement)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>CreateExportedComponentsTree</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>adccaaae8270689783b821601f9d03d0b</anchor>
-      <arglist>(const QByteArray &amp;elementId, const QByteArray &amp;globalElementId, const icomp::IElementStaticInfo *elementMetaInfoPtr, QTreeWidgetItem &amp;item, bool &amp;hasWarning, bool &amp;hasExport) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>abecebea584444d4ef69a39284085492a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>acb0af3380168193e389704b9e94847a0</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a7310e6015410d5e1cdb1bb1e21ba74a8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a820f48a4a1a2552d7b6dd255801f91ae</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" static="yes">
-      <type>static QString</type>
-      <name>DecodeFromEdit</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a58cefc45dfd7dddb7d06fb98feada259</anchor>
-      <arglist>(const QString &amp;text)</arglist>
-    </member>
-    <member kind="function" protection="protected" static="yes">
-      <type>static QString</type>
-      <name>EncodeToEdit</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a31ad707c08f99ae6a0bd6b584c85987d</anchor>
-      <arglist>(const QString &amp;text)</arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>icmpstr::CAttributeEditorComp::AttrInfo</name>
-    <filename>structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html</filename>
-    <member kind="variable">
-      <type>istd::TPointerBase&lt; icomp::IRegistryElement &gt;</type>
-      <name>elementPtr</name>
-      <anchorfile>structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html</anchorfile>
-      <anchor>ad932a2271d5167352abb656bc26e0498</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>istd::TPointerBase&lt; icomp::IRegistryElement::AttributeInfo &gt;</type>
-      <name>infoPtr</name>
-      <anchorfile>structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html</anchorfile>
-      <anchor>ad7a4e7cfcfe26ab1491319e2eeae39d0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>istd::TPointerBase&lt; const icomp::IAttributeStaticInfo &gt;</type>
-      <name>staticInfoPtr</name>
-      <anchorfile>structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html</anchorfile>
-      <anchor>a65738552e552f54762f2adefcb29f795</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CComponentAccessor</name>
-    <filename>classicmpstr_1_1_c_component_accessor.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>CComponentAccessor</name>
-      <anchorfile>classicmpstr_1_1_c_component_accessor.html</anchorfile>
-      <anchor>a1c3e5849fab95815cf42f4a5cd62bdb1</anchor>
-      <arglist>(const QString &amp;registryFile, const QString &amp;configFile=QString())</arglist>
-    </member>
-    <member kind="function">
-      <type>InterfaceType *</type>
-      <name>GetComponentInterface</name>
-      <anchorfile>classicmpstr_1_1_c_component_accessor.html</anchorfile>
-      <anchor>af9ce41de3fc70729c6b30034fe05c527</anchor>
-      <arglist>(const QByteArray &amp;componentId=QByteArray())</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CComponentHelpFileProviderComp</name>
-    <filename>classicmpstr_1_1_c_component_help_file_provider_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">idoc::IHelpFileProvider</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_component_help_file_provider_comp.html</anchorfile>
-      <anchor>a32520efeac203eca187c178698476a60</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_component_help_file_provider_comp.html</anchorfile>
-      <anchor>af92279a2acf04297f97fed6cf4db2e1a</anchor>
-      <arglist>(m_externalMetaInfoManagerCompPtr, m_metaInfoManagerCompPtr, false)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetHelpQuality</name>
-      <anchorfile>classicmpstr_1_1_c_component_help_file_provider_comp.html</anchorfile>
-      <anchor>aae33ea05fe92561ccd23d83d674b4bb6</anchor>
-      <arglist>(const QString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetHelpFilePath</name>
-      <anchorfile>classicmpstr_1_1_c_component_help_file_provider_comp.html</anchorfile>
-      <anchor>a04db28ce3c827ef1be39e44eea88957b</anchor>
-      <arglist>(const QString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetInfoFilePath</name>
-      <anchorfile>classicmpstr_1_1_c_component_help_file_provider_comp.html</anchorfile>
-      <anchor>a0415596f2e732f334a1b92fe184a258f</anchor>
-      <arglist>(const icomp::CComponentAddress &amp;componentAddress) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetHelpFilePath</name>
-      <anchorfile>classicmpstr_1_1_c_component_help_file_provider_comp.html</anchorfile>
-      <anchor>a19e407c4b73234954d2293a4c6350332</anchor>
-      <arglist>(const icomp::CComponentAddress &amp;componentAddress) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>ExtractComponentAddress</name>
-      <anchorfile>classicmpstr_1_1_c_component_help_file_provider_comp.html</anchorfile>
-      <anchor>a45b886e4e8e60047fff5ec4017c031b5</anchor>
-      <arglist>(const QString &amp;contextText, const istd::IPolymorphic *contextObjectPtr, icomp::CComponentAddress &amp;result) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CComponentNoteEditorComp</name>
-    <filename>classicmpstr_1_1_c_component_note_editor_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CComponentNoteEditorComp, IElementSelectionInfo &gt;</base>
-    <base protection="protected">imod::CMultiModelDispatcherBase</base>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CComponentNoteEditorComp, IElementSelectionInfo &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
-      <anchor>aa4b94c71e4f8f581bc50bd80c9937059</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CComponentNoteEditorComp</name>
-      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
-      <anchor>a74a9d0ff1ff9c4abb3bf2e760f98ef08</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_NoteEditor_textChanged</name>
-      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
-      <anchor>ab1207a910f90d2a13addc32e6655756d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
-      <anchor>aa0d788190aa022ff2668ddfdd0480fd2</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
-      <anchor>a828f3322b626ef3c895942549a4f734f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
-      <anchor>aadaa8d26bce2855be670b1f0b6f77571</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
-      <anchor>aafa11db8c8d63013ef440ad6b0751288</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>eventFilter</name>
-      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
-      <anchor>a409780372e55a9d0bda316ffab02a905</anchor>
-      <arglist>(QObject *sourcePtr, QEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
-      <anchor>a3bdf27150acb81eae40e01f21d41e74c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnModelChanged</name>
-      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
-      <anchor>aeb2d73b45d65c9f9666746e44297cf79</anchor>
-      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CComponentPromotorDialogCompBase</name>
-    <filename>classicmpstr_1_1_c_component_promotor_dialog_comp_base.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>TSingleModelObserverBase&lt; IElementSelectionInfo &gt;</base>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CComponentPromotorDialogComp</name>
-    <filename>classicmpstr_1_1_c_component_promotor_dialog_comp.html</filename>
-    <base>TModelObserverCompWrap&lt; CComponentPromotorDialogCompBase &gt;</base>
-    <base virtualness="virtual">ibase::ICommandsProvider</base>
-    <member kind="typedef">
-      <type>ibase::TModelObserverCompWrap&lt; CComponentPromotorDialogCompBase &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a2e084c999f2a66fefe45a9452220fbb9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>imod::TSingleModelObserverBase&lt; IElementSelectionInfo &gt;</type>
-      <name>BaseClass2</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a895586751db455af5c2334efdc335d4b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>QDialog</type>
-      <name>BaseClass3</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a88309f5a1e055356fa92612ea01d3ed2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CComponentPromotorDialogComp</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a7798dec2cc665e2446d3feb9eaf795f5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const ibase::IHierarchicalCommand *</type>
-      <name>GetCommands</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a922592539adbef1b4100bb691afbd64c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="enumeration">
-      <name>GroupId</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>adbd5d01ec79756ee7949da2d46193b8d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>GI_COMPONENT</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>adbd5d01ec79756ee7949da2d46193b8dae63e8798886e3adcff68f133aba86dd5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_InterfacesPolicyCB_currentIndexChanged</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a4f639c06ed9ff62be2ba68480dbbb170</anchor>
-      <arglist>(int index)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_AttributesPolicyCB_currentIndexChanged</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a49aee3ef6a075a54724585e08bcf059f</anchor>
-      <arglist>(int index)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_SubcomponentsPolicyCB_currentIndexChanged</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>ae69909f7dcf07a4f28f2ba616fe4c034</anchor>
-      <arglist>(int index)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_PackageNameCB_currentIndexChanged</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>acb6f9b3efa6a674be6e13ae09d178de9</anchor>
-      <arglist>(int index)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_ComponentNameCB_currentIndexChanged</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>aa1bcd1fbdc5caaaf1197d76aa4b6735f</anchor>
-      <arglist>(int index)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnPromoteCommand</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a16be56238f36a699bbcb5e63465f18ff</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>InsertElementToFilters</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a23495e811a03bed532a1feb6e447699e</anchor>
-      <arglist>(const icomp::IRegistry &amp;registry, const QByteArray &amp;elementName, const icomp::IRegistry::ElementInfo &amp;elementInfo)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>CreatePackagesList</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a954e3fd8790c39502f3dff13b7b6853a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>CreateComponentsList</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>ac7bf15751a039a3f25ac8fabed65c8ae</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>CalcFilteredComponents</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a6b9b0b57f4036299b4991b6d7a3fa405</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>DoRetranslate</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a126db753c880e9920499a3d65cfa3270</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnUpdate</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a4136f63962638b63db18fe7c73c1df9a</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CElementSelectionInfoManagerBase</name>
-    <filename>classicmpstr_1_1_c_element_selection_info_manager_base.html</filename>
-    <base>TSingleModelObserverBase&lt; IElementSelectionInfo &gt;</base>
-    <member kind="typedef">
-      <type>imod::TSingleModelObserverBase&lt; IElementSelectionInfo &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>a23ba8ff638532f6ea1249a35c0d05895</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CElementSelectionInfoManagerBase</name>
-      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>a067a4c4f75d52db9a2a483cd7574451a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>icomp::IRegistry *</type>
-      <name>GetRegistry</name>
-      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>ad98f051454dcf47073c373deb0f9991f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>QStringList</type>
-      <name>GetExportAliases</name>
-      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>aa1fefc5b9d7bed8cb7b68541e29e8290</anchor>
-      <arglist>(const QByteArray &amp;attributeName) const </arglist>
-    </member>
-    <member kind="function">
-      <type>const icomp::IComponentStaticInfo *</type>
-      <name>GetComponentMetaInfo</name>
-      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>afba3914c48939b71805ac721888fcc6d</anchor>
-      <arglist>(const icomp::CComponentAddress &amp;address) const </arglist>
-    </member>
-    <member kind="function">
-      <type>const iser::IObject *</type>
-      <name>GetAttributeObject</name>
-      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>a1c13e5ed6c40adc8f9a3135fe6f206ea</anchor>
-      <arglist>(const QByteArray &amp;attributeId, const icomp::IRegistry::ElementInfo &amp;elementInfo) const </arglist>
-    </member>
-    <member kind="function">
-      <type>const icomp::IAttributeStaticInfo *</type>
-      <name>GetAttributeStaticInfo</name>
-      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>a3b8e49be8c2c336f5dd00a067956afcc</anchor>
-      <arglist>(const QByteArray &amp;attributeId, const icomp::IRegistry::ElementInfo &amp;elementInfo) const </arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const icomp::IComponentEnvironmentManager *</type>
-      <name>GetMetaInfoManagerPtr</name>
-      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>ad683a111edd593e83b5a1f855784f78e</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const icmpstr::IRegistryConsistInfo *</type>
-      <name>GetConsistencyInfoPtr</name>
-      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>af115f5b82bd6d6781ba9a4430421099c</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>QMap&lt; icomp::CComponentAddress, istd::TOptDelPtr&lt; const icomp::IComponentStaticInfo &gt; &gt;</type>
-      <name>AddressToInfoMap</name>
-      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>a6c2356df966bf08fabf429468f191868</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateAddressToMetaInfoMap</name>
-      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>a5312c1a21a331c4d6b107a33697edb58</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnUpdate</name>
-      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>a3ec91ab7a63798f542d47364226d3b6a</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>AddressToInfoMap</type>
-      <name>m_adressToMetaInfoMap</name>
-      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>a9772d07e41ecc103d5d4fdf1b9737e2e</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CGraphicsConnectorItem</name>
-    <filename>classicmpstr_1_1_c_graphics_connector_item.html</filename>
-    <base>QObject</base>
-    <member kind="enumeration">
-      <name>ConnectFlags</name>
-      <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
-      <anchor>aafa4ad7fca0c1dc726dcbf3a6529473f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_FACTORY</name>
-      <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
-      <anchor>aafa4ad7fca0c1dc726dcbf3a6529473fa8022861d140c5b2cfcf7c9e80e5c9f63</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_EMBEDDED</name>
-      <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
-      <anchor>aafa4ad7fca0c1dc726dcbf3a6529473fa7cf74bf67bb4ac63280831b07942fdbb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>GeometricParams</name>
-      <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
-      <anchor>a021656cdf63c4b66f3c77f117243b4be</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>GP_RADIUS</name>
-      <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
-      <anchor>a021656cdf63c4b66f3c77f117243b4bea1ee09fcc7a1251afd1d17dea89c7708f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>GP_RADIUS2</name>
-      <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
-      <anchor>a021656cdf63c4b66f3c77f117243b4bea34dd3eff551ac2ab82d91d55aec3d31f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>GP_OFFSET</name>
-      <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
-      <anchor>a021656cdf63c4b66f3c77f117243b4bea0b4893e636b7fb96159af730e94d8d9f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>QGraphicsItem</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
-      <anchor>a5ae00816a72403178daf0fe597ade3a5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CGraphicsConnectorItem</name>
-      <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
-      <anchor>ae0a20de7209754ce79c5c8c41810fff4</anchor>
-      <arglist>(const icmpstr::ISceneProvider &amp;sceneProvider, int connectFlags=0, QGraphicsItem *parent=NULL)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>InitEnds</name>
-      <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
-      <anchor>a0b674af192eb36ba5fd96b19f6c8bb89</anchor>
-      <arglist>(CRegistryElementShape *sourceShapePtr, CRegistryElementShape *destShapePtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>type</name>
-      <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
-      <anchor>a8796319c73ce6798b0138e796fbbbaf1</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QPainterPath</type>
-      <name>shape</name>
-      <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
-      <anchor>a702d0ed0d2556e4de08c4069e1c6149f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>contains</name>
-      <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
-      <anchor>addaf778bf7872f6e87780db6e1886ce2</anchor>
-      <arglist>(const QPointF &amp;point) const </arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnSourceRectMoved</name>
-      <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
-      <anchor>a4ef0e1c4c98979a3c4645cb1f92ba402</anchor>
-      <arglist>(const QRectF &amp;rect)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnDestRectMoved</name>
-      <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
-      <anchor>a5c0d3121bbecb5f02a819703cc7e080b</anchor>
-      <arglist>(const QRectF &amp;rect)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnSourceSelected</name>
-      <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
-      <anchor>a62cb32f425208c3905e0b8d60dc372fd</anchor>
-      <arglist>(bool state)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnDestSelected</name>
-      <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
-      <anchor>ae92d5fea73a4fab179314bc2748553ae</anchor>
-      <arglist>(bool state)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>Adjust</name>
-      <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
-      <anchor>a0b5787c07da3c180dc4a0c6707c2307c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QRectF</type>
-      <name>boundingRect</name>
-      <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
-      <anchor>a1e2bab267542027ac7435cbea25b53c8</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>paint</name>
-      <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
-      <anchor>a80a35b1acf6597fe5023dcf0ee31cd13</anchor>
-      <arglist>(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CMultiAttributeDelegateWidget</name>
-    <filename>classicmpstr_1_1_c_multi_attribute_delegate_widget.html</filename>
-    <member kind="typedef">
-      <type>QWidget</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_multi_attribute_delegate_widget.html</anchorfile>
-      <anchor>a3f872252151218561bc51ed574d40d30</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CMultiAttributeDelegateWidget</name>
-      <anchorfile>classicmpstr_1_1_c_multi_attribute_delegate_widget.html</anchorfile>
-      <anchor>ab60b0365ea63a57c18b69998600f9bc0</anchor>
-      <arglist>(QItemDelegate &amp;itemDelegate, const CElementSelectionInfoManagerBase &amp;elementSelectionInfoManager, QWidget *parentWidget, const QByteArray &amp;attributeId, int attributeFlags)</arglist>
-    </member>
-    <member kind="function">
-      <type>QString</type>
-      <name>GetText</name>
-      <anchorfile>classicmpstr_1_1_c_multi_attribute_delegate_widget.html</anchorfile>
-      <anchor>a7fb4add51b500797d9ddf522404a76c3</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetText</name>
-      <anchorfile>classicmpstr_1_1_c_multi_attribute_delegate_widget.html</anchorfile>
-      <anchor>a705aab83617fd778d25cfd3f1f049c28</anchor>
-      <arglist>(const QString &amp;text)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnShowDialog</name>
-      <anchorfile>classicmpstr_1_1_c_multi_attribute_delegate_widget.html</anchorfile>
-      <anchor>a8bcd62fc43c11fce223dedc820871cb6</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CMultiAttributeEditor</name>
-    <filename>classicmpstr_1_1_c_multi_attribute_editor.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>CMultiAttributeEditor</name>
-      <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
-      <anchor>aca88f10c53941fe8bddfde47f13d2fc3</anchor>
-      <arglist>(const CElementSelectionInfoManagerBase &amp;elementSelectionInfoManager, const QByteArray &amp;attributeId, int attributeFlags)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetEditorText</name>
-      <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
-      <anchor>abf747a0d3cde386bb3d51efb843be82c</anchor>
-      <arglist>(const QString &amp;attributeValuesText)</arglist>
-    </member>
-    <member kind="function">
-      <type>QStringList</type>
-      <name>GetAttributeValues</name>
-      <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
-      <anchor>ab91e1b421f9ed4f052434b08370ffe24</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnItemAdd</name>
-      <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
-      <anchor>a4adc4a2fc332fc0e9503a432fc023b80</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnItemRemove</name>
-      <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
-      <anchor>a55697f75052670412d129e3f14795363</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnItemMoveUp</name>
-      <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
-      <anchor>a81cf672b847268c9bf1d239145e62da6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnItemMoveDown</name>
-      <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
-      <anchor>afec0eb7313b56883300fcc646808302c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>UpdateButtonStates</name>
-      <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
-      <anchor>afaed3552a9b5378b56375e46a9d36eb7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>CreateValuesTree</name>
-      <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
-      <anchor>aa32398214a3b67c8aed87e3bdf5eef02</anchor>
-      <arglist>(const QStringList &amp;values)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CPackageOverviewComp</name>
-    <filename>classicmpstr_1_1_c_package_overview_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CPackageOverviewComp, IElementSelectionInfo &gt;</base>
-    <base virtualness="virtual">ibase::ICommandsProvider</base>
-    <base virtualness="virtual">icmpstr::IAttributeSelectionObserver</base>
-    <class kind="struct">icmpstr::CPackageOverviewComp::RootInfo</class>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CPackageOverviewComp, IElementSelectionInfo &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a5bb11af954b4b08f97e4ebe20290ec04</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a4b366692a2ed8f973b30ecc682a8dd14</anchor>
-      <arglist>(m_configFilePathModelCompPtr, m_configFilePathCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CPackageOverviewComp</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a6e7340b3f8c46f19c0d5fd2e2fa391ca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const ibase::IHierarchicalCommand *</type>
-      <name>GetCommands</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a3897ef00415b959fd9c7879e7d707d1e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnAttributeSelected</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a9bba9dddc5b78467e29cde259d2d116f</anchor>
-      <arglist>(const icomp::IAttributeStaticInfo *attributeStaticInfoPtr)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_FilterEdit_editingFinished</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>aaf5215ff3fac605bb4492b929262019a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_GroupByCB_currentIndexChanged</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a44fc5357ad0e9d6c1cbeee8c5bb1941e</anchor>
-      <arglist>(int index)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_PackagesList_itemSelectionChanged</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a0b8de919ead319a7584e0fa523f7f93d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_PackagesList_itemExpanded</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a3623cdca738d71a18e913a10915fed76</anchor>
-      <arglist>(QTreeWidgetItem *item)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_PackagesList_itemClicked</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>aa4945d3dfc47f44e6446b239cf5ab857</anchor>
-      <arglist>(QTreeWidgetItem *item, int column)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_PackagesList_itemDoubleClicked</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a30061e4acf0700a5ef164f423dcdc54e</anchor>
-      <arglist>(QTreeWidgetItem *item, int column)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_FilterGB_toggled</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>aa63cfef6a94570958857d86e16877088</anchor>
-      <arglist>(bool on)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_InterfaceCB_currentIndexChanged</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a1088fc8e23b5fd3d62e474d16fb2677f</anchor>
-      <arglist>(int index)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnReloadPackages</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>ac3d81b6e5e0fef49b0af462c51acad84</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_KeywordClearButton_clicked</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a8a26e40769d565669b31db3c10703e23</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_InterfaceClearButton_clicked</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a8a284cccf99246adb469b7161ef6e438</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>GenerateComponentTree</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a2ea2bb4e692c4c536763cdf85bd8f7a2</anchor>
-      <arglist>(bool forceUpdate)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateComponentGroups</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a86ea72e853678f9b6816f0fcc6eafa08</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateInterfaceList</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a88405540569440d3cb98c1bedbe92ddf</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateAllLists</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>ac2373fb7bc294eff65f08dbf1f79f24c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>icomp::IMetaInfoManager::ComponentAddresses</type>
-      <name>GetFilteredComponentAdresses</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a60b7162d99110a87588dc39878076a8b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>QPixmap</type>
-      <name>CreateComponentDragPixmap</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a44dacd103072715f68a9c2e5fc6ca8fc</anchor>
-      <arglist>(const icomp::CComponentAddress &amp;address) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>RootInfo &amp;</type>
-      <name>EnsureRoot</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a39b9d80b568c6001ca3230ffb2bf4ce0</anchor>
-      <arglist>(const QByteArray &amp;path, const icomp::CComponentAddress &amp;address, const icomp::IComponentStaticInfo *staticInfoPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>SetCommandNames</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>aab7328d596d6fdd9417d02a912e70c00</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>eventFilter</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a04fbe6679bc12ea0450fa4347ce9d978</anchor>
-      <arglist>(QObject *sourcePtr, QEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a60eadf25d6215b97ea125aec323ea4bf</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a9fba419020f348e96b8997c35a65525f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>acf1d4838d86ed1ba6cbb209d0edd505f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnRetranslate</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a70908ffbb93dc94b6cd35a825147d0c5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiRetranslate</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a277a7b1ca10749405ab7cc185d339987</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend class</type>
-      <name>CItemDelegate</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>acce93f48e2b49be54476ce114be4fcb2</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>icmpstr::CPackageOverviewComp::RootInfo</name>
-    <filename>structicmpstr_1_1_c_package_overview_comp_1_1_root_info.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>RootInfo</name>
-      <anchorfile>structicmpstr_1_1_c_package_overview_comp_1_1_root_info.html</anchorfile>
-      <anchor>ad94d6f04d11626b7712490b62f268492</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable">
-      <type>QTreeWidgetItem *</type>
-      <name>itemPtr</name>
-      <anchorfile>structicmpstr_1_1_c_package_overview_comp_1_1_root_info.html</anchorfile>
-      <anchor>aa10bad77f7f7313722523fb8d1bb0bae</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>bool</type>
-      <name>hasRealComponents</name>
-      <anchorfile>structicmpstr_1_1_c_package_overview_comp_1_1_root_info.html</anchorfile>
-      <anchor>aff8ea13db5e5e360bcef9b700b5143cc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>bool</type>
-      <name>hasCompositeComponents</name>
-      <anchorfile>structicmpstr_1_1_c_package_overview_comp_1_1_root_info.html</anchorfile>
-      <anchor>ad0ef5b6c11c153b445481dcd0a52e15b</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CPackagesLoaderComp</name>
-    <filename>classicmpstr_1_1_c_packages_loader_comp.html</filename>
-    <base>QObject</base>
-    <base>ibase::TLoggerCompWrap</base>
-    <base>icomp::CEnvironmentManagerBase</base>
-    <base virtualness="virtual">icomp::IRegistryLoader</base>
-    <class kind="class">icmpstr::CPackagesLoaderComp::LogingRegistry</class>
-    <member kind="enumeration">
-      <name>MessageId</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>a8f6f2d4387bd1f251cc5a86b059d4ec2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_CANNOT_REGISTER</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>a8f6f2d4387bd1f251cc5a86b059d4ec2a8082c79f2f2159517104676aef4166b6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_CANNOT_CREATE_ELEMENT</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>a8f6f2d4387bd1f251cc5a86b059d4ec2a0c9dcf3a8a73cc8d32ff82214bb41226</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>a5ae14b1f980af7afcd9733a52b68bb3f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>icomp::CEnvironmentManagerBase</type>
-      <name>BaseClass2</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>a78ef8d3cb2a5f1a3510c261a9ab16d1d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const icomp::IRegistry *</type>
-      <name>GetRegistryFromFile</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>af8fff961f31ecd9f3048df9b17da430a</anchor>
-      <arglist>(const QString &amp;path) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetConfigFilePath</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>aa954eea9c63242e5f2b780ad5733ca85</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>LoadPackages</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>ac05a3afc9183b425388d16b6b7aab01d</anchor>
-      <arglist>(const QString &amp;configFilePath=QString())</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetPackageType</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>a90137c5f9ad0f3e58b591bd79b82e154</anchor>
-      <arglist>(const QByteArray &amp;packageId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetPackagePath</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>afe3396b75913054f24e29d80447159ca</anchor>
-      <arglist>(const QByteArray &amp;packageId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const icomp::IRegistry *</type>
-      <name>GetRegistry</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>a47d9943a0478849faa05b5876a61253a</anchor>
-      <arglist>(const icomp::CComponentAddress &amp;address, const icomp::IRegistry *contextRegistryPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ComponentAddresses</type>
-      <name>GetComponentAddresses</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>ab12ed0abb66e3d282e5797e1a7a753c5</anchor>
-      <arglist>(int typeFlag=CTF_ALL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>a22c48a33ce1f14172440a67fd21d849f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>RegisterPackageFile</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>ab65007a04ebc62eb40eb1c60a61f96fb</anchor>
-      <arglist>(const QString &amp;file)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>RegisterPackagesDir</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>ab35da698da27101f475d220780a6218a</anchor>
-      <arglist>(const QString &amp;subDir)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>LoadConfigFile</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>afb79a6aa5be77fd849b2e1c7d1fd48fe</anchor>
-      <arglist>(const QString &amp;configFile)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>icomp::GetPackageInfoFunc</type>
-      <name>GetPackageFunction</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>a8f380dec73765d796601f210091cabf7</anchor>
-      <arglist>(const QFileInfo &amp;fileInfo)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>CheckAndMarkPath</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>a7b92a341343931063f4efad2b6ff8234</anchor>
-      <arglist>(const QDir &amp;directory, const QString &amp;path, QString &amp;resultPath) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CPackagesLoaderComp::LogingRegistry</name>
-    <filename>classicmpstr_1_1_c_packages_loader_comp_1_1_loging_registry.html</filename>
-    <base>icomp::CRegistry</base>
-    <member kind="typedef">
-      <type>icomp::CRegistry</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_comp_1_1_loging_registry.html</anchorfile>
-      <anchor>ae776c684e305f49b0a00f14e7ae3733b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>LogingRegistry</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_comp_1_1_loging_registry.html</anchorfile>
-      <anchor>aeb6c1c989c03233add7b0c3ea68c5d63</anchor>
-      <arglist>(CPackagesLoaderComp *parentPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ElementInfo *</type>
-      <name>InsertElementInfo</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_comp_1_1_loging_registry.html</anchorfile>
-      <anchor>a795b96da8d20cd7c7f106d48cbc26331</anchor>
-      <arglist>(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address, bool ensureElementCreated=true)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CPackagesLoaderExtComp</name>
-    <filename>classicmpstr_1_1_c_packages_loader_ext_comp.html</filename>
-    <base>icmpstr::CPackagesLoaderComp</base>
-    <base virtualness="virtual">icmpstr::IExternalMetaInfoManager</base>
-    <member kind="typedef">
-      <type>icmpstr::CPackagesLoaderComp</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_ext_comp.html</anchorfile>
-      <anchor>a04e2187ee3ff580ce431efe3c33d9b16</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>RegisterPackagesDir</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_ext_comp.html</anchorfile>
-      <anchor>a3f4ae52aeb05ac8a34cfcd7318a25d49</anchor>
-      <arglist>(const QString &amp;subDir)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetPackageInfoPath</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_ext_comp.html</anchorfile>
-      <anchor>a5476d7ad2980641c05d8090e9987383e</anchor>
-      <arglist>(const QByteArray &amp;packageId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetComponentInfoPath</name>
-      <anchorfile>classicmpstr_1_1_c_packages_loader_ext_comp.html</anchorfile>
-      <anchor>a9de09fcf0a4c1705c5e9ff37487252b5</anchor>
-      <arglist>(const icomp::CComponentAddress &amp;address) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CQuickHelpGuiComp</name>
-    <filename>classicmpstr_1_1_c_quick_help_gui_comp.html</filename>
-    <base>TDesignerGuiCompBase&lt; Ui::CQuickHelpGuiComp &gt;</base>
-    <base virtualness="virtual">idoc::IHelpViewer</base>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CQuickHelpGuiComp &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_quick_help_gui_comp.html</anchorfile>
-      <anchor>abd6d4923c6fae328a8ebd9501bd6d467</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_quick_help_gui_comp.html</anchorfile>
-      <anchor>a1b51ecdc891608520d53a6b41416203a</anchor>
-      <arglist>(m_externalMetaInfoManagerCompPtr, m_metaInfoManagerCompPtr, false)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetHelpQuality</name>
-      <anchorfile>classicmpstr_1_1_c_quick_help_gui_comp.html</anchorfile>
-      <anchor>a55cbdc6161031345f9230936ef0eff7b</anchor>
-      <arglist>(const QString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ShowHelp</name>
-      <anchorfile>classicmpstr_1_1_c_quick_help_gui_comp.html</anchorfile>
-      <anchor>a60915caff805d7eefecc44d1e9011597</anchor>
-      <arglist>(const QString &amp;contextText, const istd::IPolymorphic *contextObjectPtr)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_EditButton_clicked</name>
-      <anchorfile>classicmpstr_1_1_c_quick_help_gui_comp.html</anchorfile>
-      <anchor>a5c721f8c6a9c26849cda2bcd40e638b1</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_NewButton_clicked</name>
-      <anchorfile>classicmpstr_1_1_c_quick_help_gui_comp.html</anchorfile>
-      <anchor>a8b8ff5efeb4d056b3d884113e29a7335</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_ShowTechButton_clicked</name>
-      <anchorfile>classicmpstr_1_1_c_quick_help_gui_comp.html</anchorfile>
-      <anchor>aec890469399b06568f4326064df12845</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>QString</type>
-      <name>CalcDoxygenFileName</name>
-      <anchorfile>classicmpstr_1_1_c_quick_help_gui_comp.html</anchorfile>
-      <anchor>adfb93c1d4cf2ca809faae985bdae1b45</anchor>
-      <arglist>(const istd::CClassInfo &amp;classInfo) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classicmpstr_1_1_c_quick_help_gui_comp.html</anchorfile>
-      <anchor>a2727cfda8e9845b3216202ec606bbbae</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CRegistriesManagerComp</name>
-    <filename>classicmpstr_1_1_c_registries_manager_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
-    <base virtualness="virtual">icomp::IExtPackagesManager</base>
-    <base virtualness="virtual">icomp::IRegistriesManager</base>
-    <base virtualness="virtual">icomp::IRegistryLoader</base>
-    <member kind="enumeration">
-      <name>MessageId</name>
-      <anchorfile>classicmpstr_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>a95270637c700c7a9178d5379e2885121</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_CANNOT_REGISTER</name>
-      <anchorfile>classicmpstr_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>a95270637c700c7a9178d5379e2885121a1b2d88cde1a9074077984bac36dd4481</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_CANNOT_CREATE_ELEMENT</name>
-      <anchorfile>classicmpstr_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>a95270637c700c7a9178d5379e2885121a2b728db353ecf4b30dd387b004586fb2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>a52fef723b6f34d2b69d3626c201c74a7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>LoadPackages</name>
-      <anchorfile>classicmpstr_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>a98b506ba3a8545a86a8270072ccc117f</anchor>
-      <arglist>(const QString &amp;configFilePath=QString())</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetPackageType</name>
-      <anchorfile>classicmpstr_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>a322e2d107bdb77522a7f9cda3c254e96</anchor>
-      <arglist>(const QByteArray &amp;packageId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetPackagePath</name>
-      <anchorfile>classicmpstr_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>a699d627daf4e9b6b9475d611a8fe9142</anchor>
-      <arglist>(const QByteArray &amp;packageId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual PathList</type>
-      <name>GetConfigurationPathList</name>
-      <anchorfile>classicmpstr_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>aa485ca8fe43b3a069cc6b8a1d39f5888</anchor>
-      <arglist>(PathType pathType) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const icomp::IRegistry *</type>
-      <name>GetRegistry</name>
-      <anchorfile>classicmpstr_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>aca47d2b921676e9d6cf7fcf99ed86ae6</anchor>
-      <arglist>(const icomp::CComponentAddress &amp;address, const icomp::IRegistry *contextRegistryPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const icomp::IRegistry *</type>
-      <name>GetRegistryFromFile</name>
-      <anchorfile>classicmpstr_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>aae3ac69c62581543f4436d149ebb98b3</anchor>
-      <arglist>(const QString &amp;path) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>RegisterPackageFile</name>
-      <anchorfile>classicmpstr_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>afd8ead217efa8553509cdc4175bb6706</anchor>
-      <arglist>(const QString &amp;file)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>RegisterPackagesDir</name>
-      <anchorfile>classicmpstr_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>a60cddfc1edbbf8b8d9810996feed8abb</anchor>
-      <arglist>(const QString &amp;subDir)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>LoadConfigFile</name>
-      <anchorfile>classicmpstr_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>a1bf69a35191750f1462fa63633254922</anchor>
-      <arglist>(const QString &amp;configFile)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>CheckAndMarkPath</name>
-      <anchorfile>classicmpstr_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>aff258fa4ebfdb03d8d27c712fe3892ab</anchor>
-      <arglist>(PathList &amp;pathList, const QDir &amp;directory, const QString &amp;path, QString &amp;resultPath) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classicmpstr_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>a274f159a2e736cc57a995fe88112a99e</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CRegistryCodeSaverComp</name>
-    <filename>classicmpstr_1_1_c_registry_code_saver_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
-    <base>iser::IFileLoader</base>
-    <member kind="enumeration">
-      <name>MessageId</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>aa5dce88812d3e2ef14aae5b8f1f80394</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_UNDEFINED_PACKAGE</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>aa5dce88812d3e2ef14aae5b8f1f80394a40d1ca51feb857146e206cc354253869</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_UNDEFINED_COMPONENT</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>aa5dce88812d3e2ef14aae5b8f1f80394ac9cf6510bb4d3308971d096d151035df</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_UNDEFINED_ATTR_TYPE</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>aa5dce88812d3e2ef14aae5b8f1f80394aa512d314637f224e2f89c1322b41007c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_UNKNOWN_PACKAGE</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>aa5dce88812d3e2ef14aae5b8f1f80394a5a2d5ff3f7a16d906a87c33d4b3cab90</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>WorkingMode</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ad5ab50f42f71539fa47f07ba77501984</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>WM_SOURCES</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ad5ab50f42f71539fa47f07ba77501984a0df3d34058c441cf7b9cfdc19a72b86d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>WM_DEPENDENCIES</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ad5ab50f42f71539fa47f07ba77501984ab5c64a48ef3fade5b2b88aa6828090b8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>af05418c61dfe24e421df87db7ccdd18f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a8116dad3fa76ffbd7899d510a0b7b036</anchor>
-      <arglist>(m_extPackagesManagerCompPtr, m_packagesManagerCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CRegistryCodeSaverComp</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a01c21ee890a452941e273db05d59938d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsOperationSupported</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a4e2a817d373320334102b28f30da6964</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>LoadFromFile</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>af537a70a683c6d9d92dd39ddc3f696ad</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>SaveToFile</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a82e09861fe7fe5010d1fb5b6c095a8e7</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetFileExtensions</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a1997c60869e666312180a55a83014a9a</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetTypeDescription</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ae7d93689f16987ec44a3e84f8de7d619</anchor>
-      <arglist>(const QString *extensionPtr=NULL) const </arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>QSet&lt; icomp::CComponentAddress &gt;</type>
-      <name>Addresses</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ab7c435788a316a8514656be5d531d213</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>QSet&lt; QByteArray &gt;</type>
-      <name>Ids</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a1db6619d08379c867daa4416528f74bc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>AppendAddresses</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>acabf5bd1c5357556225030d077ee9366</anchor>
-      <arglist>(const icomp::IRegistry &amp;registry, Addresses &amp;realAddresses, Addresses &amp;composedAddresses) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Ids</type>
-      <name>ExtractPackageIds</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a3c0bdab0c637f70bb6ea9dc64d67285e</anchor>
-      <arglist>(const Addresses &amp;addresses) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Ids</type>
-      <name>ExtractComponentIds</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ad5ed3819382a62cd7e8eb783911f4a2e</anchor>
-      <arglist>(const Addresses &amp;addresses, const QByteArray &amp;packageId) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteHeader</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a315574ebfe4c81dd3e9f491a7bcd925d</anchor>
-      <arglist>(const QByteArray &amp;className, const icomp::IRegistry &amp;registry, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, QTextStream &amp;stream) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteIncludes</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a53b6f982934b255555594d22b6fe0f65</anchor>
-      <arglist>(const QByteArray &amp;className, const Addresses &amp;addresses, QTextStream &amp;stream) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteClassDefinitions</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ade863819ed4a33a524f6f0149350907e</anchor>
-      <arglist>(const QByteArray &amp;className, const icomp::IRegistry &amp;registry, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, QTextStream &amp;stream) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteDependencies</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a030ef7f93d55f780e0cc0413118fb37c</anchor>
-      <arglist>(const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, QTextStream &amp;stream) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteRegistryInfo</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a8c2efe61144d5e0090d58bb78c187ccf</anchor>
-      <arglist>(const icomp::IRegistry &amp;registry, const QByteArray &amp;registryCallPrefix, QTextStream &amp;stream) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteComponentInfo</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ab603e3892ade760c058257dc65ba09ab</anchor>
-      <arglist>(const icomp::IRegistry &amp;registry, const QByteArray &amp;registryCallPrefix, const QByteArray &amp;componentId, const icomp::IRegistry::ElementInfo &amp;componentInfo, QTextStream &amp;stream) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteAttribute</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a3c03ee65f446a3e1d0c72b081fc6a841</anchor>
-      <arglist>(const QByteArray &amp;attributeId, const QByteArray &amp;componentId, const QByteArray &amp;attributeName, const iser::IObject &amp;attribute, QTextStream &amp;stream) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteRegistryTranslation</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a73ebaf3ac953f8b367ae4308f30fd705</anchor>
-      <arglist>(const icomp::IRegistry &amp;registry, bool &amp;translationFound, QTextStream &amp;stream) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteComponentTranslation</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a54743a372b82910c6148fccafcaae84e</anchor>
-      <arglist>(const QByteArray &amp;componentId, const icomp::IRegistry::ElementInfo &amp;componentInfo, bool &amp;translationFound, QTextStream &amp;stream) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteRegistryClassDeclaration</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ae9c434e5b90316a5f41af4099e3692db</anchor>
-      <arglist>(const QByteArray &amp;baseClassName, const QByteArray &amp;registryClassName, const icomp::IRegistry &amp;registry, QTextStream &amp;stream) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteRegistryClassBody</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a111fbd7bedb6095782fe8cd174f2f6da</anchor>
-      <arglist>(const QByteArray &amp;baseClassName, const QByteArray &amp;registryClassName, const icomp::IRegistry &amp;registry, QTextStream &amp;stream) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteDeserializingCode</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a16468df240b41a21acc1c4bd69137ea4</anchor>
-      <arglist>(const iser::ISerializable &amp;object, QTextStream &amp;stream) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>GetAttributeValue</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>afcaaefef2d06cd8f8eac78709b173fb8</anchor>
-      <arglist>(const iser::ISerializable &amp;attribute, QByteArray &amp;valueString, QByteArray &amp;typeName) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>GetMultiAttributeValue</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ab1610dbe2bda35ce9a93f8813bc28f7f</anchor>
-      <arglist>(const iser::ISerializable &amp;attribute, QList&lt; QByteArray &gt; &amp;valueStrings, QByteArray &amp;typeName) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>NextLine</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ac2263f3a8c992a353b4fc23f346ea870</anchor>
-      <arglist>(QTextStream &amp;stream) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>int</type>
-      <name>ChangeIndent</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a959b6378c3c4d1b8cea40bdff175676c</anchor>
-      <arglist>(int difference) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>ExtractInfoFromFile</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a7fa5aaf3fdb62aef9b413b1c10be3c21</anchor>
-      <arglist>(const QString &amp;filePath, QByteArray &amp;className, QString &amp;baseFilePath) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>QByteArray</type>
-      <name>GetPackageName</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a81856345bba6560b3f9755f331848bc9</anchor>
-      <arglist>(const QByteArray &amp;packageId) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>QByteArray</type>
-      <name>GetStringLiteral</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>af446365e00cfbe02412232fffcd484eb</anchor>
-      <arglist>(const QString &amp;text) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>QByteArray</type>
-      <name>GetIdValueLiteral</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ab129bfdd18d14b157655be55f9c2aff7</anchor>
-      <arglist>(const QByteArray &amp;text) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>QByteArray</type>
-      <name>GetValidIdentifier</name>
-      <anchorfile>classicmpstr_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ad9d0be3431ec2a84a53ca14f20a39cc2</anchor>
-      <arglist>(const QByteArray &amp;identifier) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CRegistryConsistInfoComp</name>
-    <filename>classicmpstr_1_1_c_registry_consist_info_comp.html</filename>
-    <base>QObject</base>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">icmpstr::IRegistryConsistInfo</base>
-    <member kind="enumeration">
-      <name>MessageId</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>aab12518eeda711c1c8d273992696f049</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_COMPONENT_INACTIVE</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>aab12518eeda711c1c8d273992696f049afafc18991d48f9a8131072c66492663f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_NO_ELEMENT_INFO</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>aab12518eeda711c1c8d273992696f049a3420392b68d4746df5541351b39695ed</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_BAD_ATTRIBUTE_TYPE</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>aab12518eeda711c1c8d273992696f049a4aabf1085305ed323a137ed2da971ced</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_UNDEF_ATTRIBUTE</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>aab12518eeda711c1c8d273992696f049af52eb982c907c853a7f07a8ab805f09f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_COMPOSITE_FOUND</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>aab12518eeda711c1c8d273992696f049ae8b0e88158df0469f656010b7af39a11</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_WRONG_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>aab12518eeda711c1c8d273992696f049ac1fc527cf4157d915218e9f1b692665a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_COMPONENT_NOT_FOUND</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>aab12518eeda711c1c8d273992696f049a430c03a159b6efadaa2f6797b35242be</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_REF_NOT_RESOLVED</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>aab12518eeda711c1c8d273992696f049a7e584ceefd04f9653147e241a199e7e0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>aa1de6d51343fecb39f7d3534ab54ac61</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>aa2dc071addc8f3a2df5e780034a4880f</anchor>
-      <arglist>(m_externalMetaInfoManagerCompPtr, m_envManagerCompPtr, false)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual icomp::IRegistry::Ids</type>
-      <name>GetCompatibleElements</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a52361767108785ce2fb137a11cd5b3e8</anchor>
-      <arglist>(const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const icomp::IRegistry &amp;registry, int queryFlags) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsRegistryValid</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>ae33ef5db07f2bdddf09afc82a127dbd3</anchor>
-      <arglist>(const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsElementValid</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a7958bfdf6e0c5e4c9d1c0c4309b11b48</anchor>
-      <arglist>(const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsElementWithInfoValid</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a6359ce0e4a9587d849e108c20efc991b</anchor>
-      <arglist>(const QByteArray &amp;elementName, const icomp::IRegistry::ElementInfo &amp;elementInfo, const icomp::IComponentStaticInfo *metaInfoPtr, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsAttributeValid</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a082168fddbf0cb6a31adda38b7bf1052</anchor>
-      <arglist>(const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QIcon</type>
-      <name>GetComponentIcon</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a5e2a5e46247018d56513fc0f419405f8</anchor>
-      <arglist>(const icomp::CComponentAddress &amp;address) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>icomp::IRegistry::Ids</type>
-      <name>GetCompatibleIds</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a80445013f4628821e2ba95d01d2af920</anchor>
-      <arglist>(const QByteArray &amp;elementId, const icomp::IElementStaticInfo &amp;elementStaticInfo, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, int queryFlags, bool subcomponentsFlag) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>CheckAttributeCompatibility</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a27e136826b79669b85acf92e7ee726d0</anchor>
-      <arglist>(const iser::IObject &amp;attribute, const icomp::IAttributeStaticInfo &amp;attributeMetaInfo, const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>CheckPointedElementCompatibility</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a090c924ce43eb3618c7bc9629337313a</anchor>
-      <arglist>(const QByteArray &amp;pointedElementName, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const icomp::IElementStaticInfo::Ids &amp;optionalInterfaceNames, const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>CheckPointedElementInfoCompatibility</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a8ca59728536ab50ec585100288c1de88</anchor>
-      <arglist>(const QByteArray &amp;pointedElementName, const icomp::IElementStaticInfo *pointedMetaInfoPtr, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const icomp::IElementStaticInfo::Ids &amp;optionalInterfaceNames, const QByteArray &amp;attributeName, const QByteArray &amp;elementName, bool ignoreUndef, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CRegistryElementShape</name>
-    <filename>classicmpstr_1_1_c_registry_element_shape.html</filename>
-    <base>TObjectShapeBase&lt; QGraphicsRectItem, CVisualRegistryElement &gt;</base>
-    <member kind="typedef">
-      <type>icmpstr::TObjectShapeBase&lt; QGraphicsRectItem, CVisualRegistryElement &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>afe07580ce056cae717b8307a6b122543</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="signal">
-      <type>void</type>
-      <name>RectChanged</name>
-      <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>a9b4c9041762bd37e2560467d4713768c</anchor>
-      <arglist>(QRectF rect)</arglist>
-    </member>
-    <member kind="signal">
-      <type>void</type>
-      <name>SelectionChanged</name>
-      <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>a010d5ffb13a0ae13b41e798fe5991367</anchor>
-      <arglist>(bool state)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CRegistryElementShape</name>
-      <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>aded32c2fe22eb95c76dbf3730796b0fd</anchor>
-      <arglist>(CVisualRegistryEditorComp *registryViewPtr, const icmpstr::ISceneProvider *providerPtr=NULL)</arglist>
-    </member>
-    <member kind="function">
-      <type>QRectF</type>
-      <name>GetViewRect</name>
-      <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>a7f22b6673eb94c5b72a1755ba4da376a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>CheckConsistency</name>
-      <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>a393b33b6a0bc5dd37452ee249e1cde71</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QRectF</type>
-      <name>boundingRect</name>
-      <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>ae8ca65c44bb8ff34cb951e71e2fbfb5e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>paint</name>
-      <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>afce8d14ff9e5da41e465c42c6347ea53</anchor>
-      <arglist>(QPainter *painterPtr, const QStyleOptionGraphicsItem *stylePtr, QWidget *widgetPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>mouseMoveEvent</name>
-      <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>af031e48c795e14ba785d01cb1fdd6c8e</anchor>
-      <arglist>(QGraphicsSceneMouseEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>mouseDoubleClickEvent</name>
-      <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>a28f1fa5e95e96ba57369fc2d0a13053f</anchor>
-      <arglist>(QGraphicsSceneMouseEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnAttached</name>
-      <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>a693615243f8ff1c87ea04d7f5c035e61</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SIDE_OFFSET</name>
-      <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>ae4545d9b49a6256e86a61a5e7b5468eeaef8e9470aa7f146aa93268980192b5bb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SHADOW_OFFSET</name>
-      <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>ae4545d9b49a6256e86a61a5e7b5468eeabc25da06cff09b155ba1cb7b96603cd1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>CalcExportedInteraces</name>
-      <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>a08ad3d384b601753414b4950c98bbab7</anchor>
-      <arglist>(const CVisualRegistryElement &amp;element)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateGraphicsItem</name>
-      <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>ada335c2650b43ae81eb5afd3d9c8449b</anchor>
-      <arglist>(const CVisualRegistryElement &amp;element)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnSelectionChanged</name>
-      <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>a72c8520bcdcff16b7c959988af0cea1e</anchor>
-      <arglist>(bool isSelected)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CRegistryLoaderComp</name>
-    <filename>classicmpstr_1_1_c_registry_loader_comp.html</filename>
-    <base>QObject</base>
-    <base>TFileSerializerComp&lt; iser::CXmlFileReadArchive, iser::CXmlFileWriteArchive &gt;</base>
-    <member kind="enumeration">
-      <name>MessageId</name>
-      <anchorfile>classicmpstr_1_1_c_registry_loader_comp.html</anchorfile>
-      <anchor>a83c4d161fe2bb108d55f1051d28143f9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_LOAD_ERROR</name>
-      <anchorfile>classicmpstr_1_1_c_registry_loader_comp.html</anchorfile>
-      <anchor>a83c4d161fe2bb108d55f1051d28143f9aee13cf0577e10f86f2bd7aa869d6ace4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_CANNOT_READ_LAYOUT</name>
-      <anchorfile>classicmpstr_1_1_c_registry_loader_comp.html</anchorfile>
-      <anchor>a83c4d161fe2bb108d55f1051d28143f9a4baa9032bbcba7487917ab57b033d2a8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ibase::TFileSerializerComp&lt; iser::CXmlFileReadArchive, iser::CXmlFileWriteArchive &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_registry_loader_comp.html</anchorfile>
-      <anchor>aeba098475de918ae8efcd09e4654e628</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>LoadFromFile</name>
-      <anchorfile>classicmpstr_1_1_c_registry_loader_comp.html</anchorfile>
-      <anchor>a2b73d7a0d3ab2c3162d4698d4972bb44</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>SaveToFile</name>
-      <anchorfile>classicmpstr_1_1_c_registry_loader_comp.html</anchorfile>
-      <anchor>ade4dd8df0ad64e2b9a7583071e2a54d0</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetFileExtensions</name>
-      <anchorfile>classicmpstr_1_1_c_registry_loader_comp.html</anchorfile>
-      <anchor>a4c5e1a519d9385c197c3bb87ab4918b7</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetTypeDescription</name>
-      <anchorfile>classicmpstr_1_1_c_registry_loader_comp.html</anchorfile>
-      <anchor>abcf59f0485db608962f802069c5e0d7b</anchor>
-      <arglist>(const QString *extensionPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>QString</type>
-      <name>GetLayoutPath</name>
-      <anchorfile>classicmpstr_1_1_c_registry_loader_comp.html</anchorfile>
-      <anchor>a822db6c2a2f359a0961e25a862dcc5d1</anchor>
-      <arglist>(const QString &amp;registryPath) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnReadError</name>
-      <anchorfile>classicmpstr_1_1_c_registry_loader_comp.html</anchorfile>
-      <anchor>ae13008030987c8592835a2806a1812a5</anchor>
-      <arglist>(const iser::CXmlFileReadArchive &amp;archive, const istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CRegistryPreviewComp</name>
-    <filename>classicmpstr_1_1_c_registry_preview_comp.html</filename>
-    <base>QObject</base>
-    <base>ibase::TLoggerCompWrap</base>
-    <base>icmpstr::IRegistryPreview</base>
-    <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_registry_preview_comp.html</anchorfile>
-      <anchor>a6607b9112a5c433a294590200a4e5c69</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CRegistryPreviewComp</name>
-      <anchorfile>classicmpstr_1_1_c_registry_preview_comp.html</anchorfile>
-      <anchor>a8cf3012e1e305e1d705521a48b57a61a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>StartRegistry</name>
-      <anchorfile>classicmpstr_1_1_c_registry_preview_comp.html</anchorfile>
-      <anchor>aaeb13d4af3934f19f1bab09ad3c3fe8c</anchor>
-      <arglist>(const icomp::IRegistry &amp;registry)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsRunning</name>
-      <anchorfile>classicmpstr_1_1_c_registry_preview_comp.html</anchorfile>
-      <anchor>a96c507a6e57b12298bbfcdabbbfc42d2</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AbortRegistry</name>
-      <anchorfile>classicmpstr_1_1_c_registry_preview_comp.html</anchorfile>
-      <anchor>a57158c776915e97c79e952dedd288cd3</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnStateChanged</name>
-      <anchorfile>classicmpstr_1_1_c_registry_preview_comp.html</anchorfile>
-      <anchor>a7e93fa61d636012840d0bae15da65837</anchor>
-      <arglist>(QProcess::ProcessState state)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnReadyReadStandardError</name>
-      <anchorfile>classicmpstr_1_1_c_registry_preview_comp.html</anchorfile>
-      <anchor>aeef525ac26ba1bf21c07128821843ba7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnReadyReadStandardOutput</name>
-      <anchorfile>classicmpstr_1_1_c_registry_preview_comp.html</anchorfile>
-      <anchor>aae86f06211e99690090ac68f6bfdbb47</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classicmpstr_1_1_c_registry_preview_comp.html</anchorfile>
-      <anchor>af147dad1e42e0feb30be36d6e5f726a4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classicmpstr_1_1_c_registry_preview_comp.html</anchorfile>
-      <anchor>ac7cedf4d306ed6d339cd73adbd04e2c3</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CRegistryPropEditorComp</name>
-    <filename>classicmpstr_1_1_c_registry_prop_editor_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CRegistryPropEditorComp, icomp::IRegistry &gt;</base>
-    <class kind="class">icmpstr::CRegistryPropEditorComp::TextLog</class>
-    <member kind="enumeration">
-      <name>ItemType</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>ad9ff19a492913cba2e361bf84d6268a6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>IT_EXPORTED_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>ad9ff19a492913cba2e361bf84d6268a6a4f5ef2bf067c535d3d308bb54e5b1121</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>IT_EXPORTED_COMPONENT</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>ad9ff19a492913cba2e361bf84d6268a6a167a416c365d71eb70eeda2e1eaaea48</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>DataRole</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>a2017d4c1d45860a5b900029b7ce5bddd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DR_COMPONENT_ID</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>a2017d4c1d45860a5b900029b7ce5bddda2a1ffc2d21f0ea8a43c680e002f69bd7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DR_ITEM_TYPE</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>a2017d4c1d45860a5b900029b7ce5bddda1d6ced433a05697d0220136b43b300a0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DR_EXPORT_ID</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>a2017d4c1d45860a5b900029b7ce5bdddabbe08122217fef89e12ea11dcff0c2aa</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CRegistryPropEditorComp, icomp::IRegistry &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>a7f563286d72f70f0876c597aab4df7fb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="signal">
-      <type>void</type>
-      <name>AfterExportsChanged</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>ad939ae74d4897aa3b0399ac4e3368ec6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>a6c84ce3dcc221ea075e122ef7c25b2b0</anchor>
-      <arglist>(m_envManagerModelCompPtr, m_envManagerCompPtr, false)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnUpdateExportsTree</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>a59687224cc8abcbd0293f5ed1e4a3d22</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnUpdateKeywords</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>a2c333abe41d8d056a4abddea54268c84</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_DescriptionEdit_editingFinished</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>a19c2cba91104605272949b3fdd7ece2b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_OverviewTree_itemChanged</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>a2bc276d95cdd7d26b760358cda6ea5bf</anchor>
-      <arglist>(QTreeWidgetItem *itemPtr, int column)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>CreateOverview</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>abcf81cdf39601a8fa85a5314b38cd1ea</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>a1a6ec3f05188e0b4aad670e538b6aa62</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>a1dba68bf8aa43f57270dfafafabca5b8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>a2ef0b396eda6f0a1e4297c466f4c7ea0</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>a4be1f620ac6ad44b1bf868d447b57a73</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CRegistryPropEditorComp::TextLog</name>
-    <filename>classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html</filename>
-    <base virtualness="virtual">ibase::IMessageConsumer</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsMessageSupported</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html</anchorfile>
-      <anchor>a9eae8a44f0b67a4c3d9af5de1ef031d3</anchor>
-      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AddMessage</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html</anchorfile>
-      <anchor>aff2fb5b7f38432d593e83ae1ac25730f</anchor>
-      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CRegistryTreeViewComp</name>
-    <filename>classicmpstr_1_1_c_registry_tree_view_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CRegistryTreeViewComp, icomp::IRegistry &gt;</base>
-    <class kind="class">icmpstr::CRegistryTreeViewComp::EnvironmentObserver</class>
-    <member kind="enumeration">
-      <name>DataRole</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>af56c18fb33e6389cffc4e4a1581c77bb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DR_MESSAGE_LIST</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>af56c18fb33e6389cffc4e4a1581c77bba7649d00cac82dd7253a55f0b618b111e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DR_ELEMENT_NAME</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>af56c18fb33e6389cffc4e4a1581c77bbabb6366637b72b83e69ac1e9a3e28f29c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DR_ELEMENT_ID</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>af56c18fb33e6389cffc4e4a1581c77bba72c3a3163d1de45387797a91b7510632</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DR_ELEMENT_PACKAGE_ID</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>af56c18fb33e6389cffc4e4a1581c77bba694ecd5d537a428ac06f2d7845b47aa4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DR_REGISTRY</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>af56c18fb33e6389cffc4e4a1581c77bba1b202c3c89c9e423cd36fe6b79561c34</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>ColumnTypes</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a2c6d8ecaf6a25ff33c8559d523768971</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CT_NAME</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a2c6d8ecaf6a25ff33c8559d523768971a2b35f9b630dfdd3b8e1a4ccf61d33dc1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CT_ID</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a2c6d8ecaf6a25ff33c8559d523768971afe74034586cdca0554e64583f39d9aea</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CT_PACKAGE</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a2c6d8ecaf6a25ff33c8559d523768971aa74f98bb082c7285a53b070fcd4087fe</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CRegistryTreeViewComp, icomp::IRegistry &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a538501ceab1c16a3c3d3d30d8e34e530</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>aa411c26929e956e859e22c0b969e8609</anchor>
-      <arglist>(SelectionInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a3be850de34f944af6d007944c8b1d84c</anchor>
-      <arglist>(SelectionInfo, IElementSelectionInfo, ExtractSelectionInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>aa356fe794040936c194f88bee98e291b</anchor>
-      <arglist>(SelectionInfo, imod::IModel, ExtractSelectionInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a680647bcd3ed46dfb4845ad01d1b4a38</anchor>
-      <arglist>(SelectionInfo, istd::IChangeable, ExtractSelectionInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a760efde492bdaa904643a49069355ebe</anchor>
-      <arglist>(m_envManagerModelCompPtr, m_envManagerCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CRegistryTreeViewComp</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a6ef137304678cbef9c2f4ac6dd87897b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>AddSubcomponents</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a864e7bc271c06612822a45be997336e5</anchor>
-      <arglist>(const icomp::CComponentAddress &amp;address, QTreeWidgetItem *registryElementItemPtr)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>CreateRegistryTree</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a8df8516a98be023a29c7d78b7948ccc1</anchor>
-      <arglist>(const icomp::IRegistry &amp;registry, QTreeWidgetItem *registryRootItemPtr)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_RegistryTree_itemSelectionChanged</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>ae919cd4f57bd58a5da90584b226950b3</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_RegistryTree_itemDoubleClicked</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a5d46540820341fab37b940c4a5111855</anchor>
-      <arglist>(QTreeWidgetItem *itemPtr, int column)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_FilterEdit_textChanged</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a52e20c218ba9ba5ac50481a431f7d921</anchor>
-      <arglist>(const QString &amp;filterText)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_ShowOnlyErrorsCheck_stateChanged</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>aa0992bd84925b9f59cac28e19d7b8925</anchor>
-      <arglist>(int state)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>QTreeWidgetItem *</type>
-      <name>AddRegistryElementItem</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a79b00960d5fb8d195c59ba97d2f0b5af</anchor>
-      <arglist>(const icomp::IRegistry &amp;registry, const icomp::IRegistry::ElementInfo *elementPtr, const QByteArray &amp;elementId, QTreeWidgetItem *parentItemPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>IsRegistryValid</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a6391357e7a9a8a173850075c89a887a8</anchor>
-      <arglist>(const icomp::IRegistry &amp;registry) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateRegistryStatus</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a53abc7282cb59131e06e36f290a6d820</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateTreeItemsVisibility</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a3226e59a17c315884d16c207f5b0f8fe</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a4d5155c05d5e02929088bc6108f67eef</anchor>
-      <arglist>(int updateFlags)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>ab77244650dc816d9f2d190de9c5b4d66</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>aeec208163ba21c2ab78d95c5993d1e1c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AfterUpdate</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a66f86e419648241c45b4bd15aaa58a9e</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a2a7154a1725b761d3ff3a562214514ef</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a46868cad39114b2305d075cbfa52797c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="friend">
-      <type>friend class</type>
-      <name>imod::TModelWrap&lt; SelectionInfoImpl &gt;</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a1ecffae37bd7adb0d052fdefe2de32db</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CRegistryTreeViewComp::EnvironmentObserver</name>
-    <filename>classicmpstr_1_1_c_registry_tree_view_comp_1_1_environment_observer.html</filename>
-    <base>TSingleModelObserverBase&lt; icomp::IComponentEnvironmentManager &gt;</base>
-    <member kind="function">
-      <type></type>
-      <name>EnvironmentObserver</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp_1_1_environment_observer.html</anchorfile>
-      <anchor>aaa8e5dd579a3d4f9a029c706aeec40ee</anchor>
-      <arglist>(CRegistryTreeViewComp *parentPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnUpdate</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp_1_1_environment_observer.html</anchorfile>
-      <anchor>aec246857ab34e971d2ef23d29004ad48</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CSceneProviderGuiComp</name>
-    <filename>classicmpstr_1_1_c_scene_provider_gui_comp.html</filename>
-    <base>TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt;</base>
-    <base virtualness="virtual">ibase::ICommandsProvider</base>
-    <base virtualness="virtual">icmpstr::ISceneProvider</base>
-    <base virtualness="virtual">i2d::ISceneController</base>
-    <class kind="class">icmpstr::CSceneProviderGuiComp::CScene</class>
-    <member kind="enumeration">
-      <name>BackgroundMode</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a47c91d6e3ead1cfdc34d82377baa724b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>BM_NORMAL</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a47c91d6e3ead1cfdc34d82377baa724bafc68d3c8e62e0483af5da521808859a8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>BM_SOLID</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a47c91d6e3ead1cfdc34d82377baa724baa6b141bd3afec7c472b076e920b9ae82</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>BM_GRID</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a47c91d6e3ead1cfdc34d82377baa724ba51df2ce255658c352d7be519fc72b4f6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>BM_CHECKERBOARD</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a47c91d6e3ead1cfdc34d82377baa724ba7efd4d9a24f1a3372a5873aaf5fefb1b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>BM_DOT_GRID</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a47c91d6e3ead1cfdc34d82377baa724ba6220fda529744e6286d74e4c0efb271e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>BM_TRANSPARENT</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a47c91d6e3ead1cfdc34d82377baa724baf6b00fe5c0d1b53ce82737888d501839</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a4b82e25cb9b5ba1717af8bf62066f548</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="signal">
-      <type>void</type>
-      <name>zoomChanged</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a67daccf53d94bd418b6df8e2e2271ee5</anchor>
-      <arglist>(double)</arglist>
-    </member>
-    <member kind="signal">
-      <type>void</type>
-      <name>embeddedRegistrySelected</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a63280291733b3e99608f2ab03a6cc8fc</anchor>
-      <arglist>(const QByteArray &amp;)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CSceneProviderGuiComp</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a6a103465bb6e5644eb9db127e409b6e7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetIsotropyFactor</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>aa85103097a8a9b629bc1277a20ba8d54</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetIsotropyFactor</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a903626b7abb7c7678d0e3861dfdda07e</anchor>
-      <arglist>(double factor)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const ibase::IHierarchicalCommand *</type>
-      <name>GetCommands</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a7c35feafb0a2d3dd1fefe11d3db94211</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSceneId</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a9de552749c081c7c9dbfdb85524276fb</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QGraphicsScene *</type>
-      <name>GetScene</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a502e2e7cba35fe4b62493cdbb8b7ec1f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetSceneAlignment</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ab28733d3c7cd9cf6c74c490a80c66ab1</anchor>
-      <arglist>(double &amp;distance) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSceneFlags</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>aec6720eefef956cbc8b64ba087ec2f38</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSceneRestrictionFlags</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a34dfb24d8adc67343f808071f211c061</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual FitMode</type>
-      <name>GetFitMode</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a63408f397ad039d73901fbffa4d810b3</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetFitMode</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a98bad749f848c2a904f165c43fe1ab44</anchor>
-      <arglist>(FitMode fitMode)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsFullScreenMode</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>ad8dc3554153b1a14af2b61d12f5a5796</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetFullScreenMode</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a09f39cd2e5fb50445a38d21b28c51d46</anchor>
-      <arglist>(bool isFullScreen)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetScale</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a1a268449e76bd9e69209061d2fc56dcc</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetScale</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a42c26ef4d15b92894cdd3d3f44e75293</anchor>
-      <arglist>(int scaleMode=SM_SET, double value=1.0)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnPrint</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a6e7c8ac1c87150a93a6196b8997614bf</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnZoomIncrement</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a288aee26504716ba937b35e14bc794c4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnZoomDecrement</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>af5a4252fe81d455338a906c72849e20a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnFitToView</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>aba3ad11bf74d6a848f2420b081905e69</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnFitToShapes</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a2083730906fff7f9b49923b536ef5197</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnResetScale</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a020442f517e0484e41a3d164cf1e9d1c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnAutoFit</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>abe7041e3fb492ae30868c0f85a42fa18</anchor>
-      <arglist>(bool isAutoScale)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnSelectAllShapes</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a2c734d994a9f91ccb439b6b1d4c2753b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnResize</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a49683b5ebb5c6b6cde811b3df7657c48</anchor>
-      <arglist>(QResizeEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnWheelEvent</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a7372bb5cde03e56c821253083e2f958c</anchor>
-      <arglist>(QGraphicsSceneWheelEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnKeyReleaseEvent</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a432bb5828e2fa52b93f172dc0c1635f3</anchor>
-      <arglist>(QKeyEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnMouseDoubleClickEvent</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a09af7ad720712ab60371f76999ad1297</anchor>
-      <arglist>(QEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>ScaleView</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a794fcf4e964dbc6752cf2c9ed4fe52a8</anchor>
-      <arglist>(double scaleFactor)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>SetFittedScale</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a025ea63f12ae8486069ffeaaf86a4731</anchor>
-      <arglist>(FitMode mode)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>iqtgui::CHierarchicalCommand &amp;</type>
-      <name>GetCommandsRootRef</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>adcc1921aa5f48c6270e9c4066aa6ea87</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>HasDropConsumerForFormat</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a9f532aff55821370feeb83fe5c0632f6</anchor>
-      <arglist>(const QStringList &amp;formats) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>DelegateDropEvent</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a283b9f55d219f7061405f9bb08717d35</anchor>
-      <arglist>(const QMimeData &amp;data, QGraphicsSceneDragDropEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>ResetScene</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>abfb44d86142ee260280c86735a5a5728</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a20f65b7fc506be58b9d87ae27aaa2dd9</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnRetranslate</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a31eea4df98270b8ae80a53b9a494b508</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a5eb4a1ed4ec859de744c6a0bf9429068</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>adeef6f1baa220a862cf32a88fed25594</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>eventFilter</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
-      <anchor>a685309b26a2cd708dabed4656bd6f843</anchor>
-      <arglist>(QObject *sourcePtr, QEvent *eventPtr)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CSceneProviderGuiComp::CScene</name>
-    <filename>classicmpstr_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</filename>
-    <member kind="typedef">
-      <type>QGraphicsScene</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</anchorfile>
-      <anchor>a7efe68bb8b5c61966a179f438359921a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CScene</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</anchorfile>
-      <anchor>ab0c1c594aa6def922e6ed4c69d92fbe9</anchor>
-      <arglist>(CSceneProviderGuiComp *parentPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>DrawGrid</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</anchorfile>
-      <anchor>a03cdad8754eea1ec6af24c6759162371</anchor>
-      <arglist>(QPainter &amp;painter, const QRectF &amp;rect, bool useDot=false)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>drawBackground</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</anchorfile>
-      <anchor>aedcc57241c4176b62fff7024a7f56597</anchor>
-      <arglist>(QPainter *painter, const QRectF &amp;rect)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>dragEnterEvent</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</anchorfile>
-      <anchor>a4dc327e7b05e2dbeaf9f33e71aeb6d75</anchor>
-      <arglist>(QGraphicsSceneDragDropEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>dropEvent</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</anchorfile>
-      <anchor>af048c290e6d5cd5cb38bf633e8e39c0f</anchor>
-      <arglist>(QGraphicsSceneDragDropEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>dragMoveEvent</name>
-      <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp_1_1_c_scene.html</anchorfile>
-      <anchor>a394296933e58deb9b7bb5eab916e82aa</anchor>
-      <arglist>(QGraphicsSceneDragDropEvent *eventPtr)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CVisualRegistry</name>
-    <filename>classicmpstr_1_1_c_visual_registry.html</filename>
-    <base>QObject</base>
-    <base>icomp::CRegistry</base>
-    <base virtualness="virtual">icmpstr::IComponentNoteController</base>
-    <member kind="enumeration">
-      <name>MessageId</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
-      <anchor>a12990af2da6dc5fcb708ec39d3747f4a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_CANNOT_CREATE_ELEMENT</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
-      <anchor>a12990af2da6dc5fcb708ec39d3747f4aac1fab72877a37ca1f0ab6b3936a6e4a3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>icomp::CRegistry</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
-      <anchor>abeafd65eeb1a68562890d8eef10d4ef5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CVisualRegistry</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
-      <anchor>af1a2823bf33d52d967fef7c5fdc7aa60</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SerializeComponentsLayout</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
-      <anchor>a8212c4cfee3d5f462c592356b3a43cc9</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SerializeRegistry</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
-      <anchor>aacc81283198b77d48a70230f8c0306b3</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SerializeUserData</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
-      <anchor>af8d0e2442da19c68cc77e67732831632</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetComponentNote</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
-      <anchor>ade15062c098b2f1337ce1b349a4c0013</anchor>
-      <arglist>(const QByteArray &amp;componentName)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetComponentNote</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
-      <anchor>a0d0e25f014391207b270fc35c945d3c0</anchor>
-      <arglist>(const QByteArray &amp;componentName, const QString &amp;componentNote)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ElementInfo *</type>
-      <name>InsertElementInfo</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
-      <anchor>a844b262dddc0fdcfe52ed0ef9308ab16</anchor>
-      <arglist>(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address, bool ensureElementCreated=true)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>RenameElement</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
-      <anchor>a371381857eb111a8f2d53c032b3aadc1</anchor>
-      <arglist>(const QByteArray &amp;oldElementId, const QByteArray &amp;newElementId)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
-      <anchor>aad3503b4a0d519f820306a1d9a5456ee</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>imod::TModelWrap&lt; istd::TChangeDelegator&lt; CVisualRegistryElement &gt; &gt;</type>
-      <name>Element</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
-      <anchor>accdcceac4a4aa28bf0e72bb7bdf0c7d4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>istd::TDelPtr&lt; QIcon &gt;</type>
-      <name>IconPtr</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
-      <anchor>aca3f11d3675d97682091a3171699496d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>QMap&lt; icomp::CComponentAddress, IconPtr &gt;</type>
-      <name>IconMap</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
-      <anchor>af335b49f02059c0e6f329fa4df77a18e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SerializeComponentInfo</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
-      <anchor>a3996514753bd3011052829d04d19c19d</anchor>
-      <arglist>(iser::IArchive &amp;archive, QByteArray &amp;componentName, i2d::CVector2d &amp;position, QString &amp;note)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual icomp::IRegistryElement *</type>
-      <name>CreateRegistryElement</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
-      <anchor>aa3848ac92823cbf68132d4dbf22f07fa</anchor>
-      <arglist>(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual icomp::IRegistry *</type>
-      <name>InsertEmbeddedRegistry</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
-      <anchor>a1ca96f13f105db7257b8a61f4bf1a99e</anchor>
-      <arglist>(const QByteArray &amp;registryId)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CVisualRegistryEditorComp</name>
-    <filename>classicmpstr_1_1_c_visual_registry_editor_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CVisualRegistryEditorComp, icomp::IRegistry &gt;</base>
-    <base virtualness="virtual">iqtgui::IDropConsumer</base>
-    <base virtualness="virtual">ibase::ICommandsProvider</base>
-    <base protection="protected">imod::CMultiModelDispatcherBase</base>
-    <class kind="class">icmpstr::CVisualRegistryEditorComp::EnvironmentObserver</class>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a2be0ca698a596382a666aeca507de9a9</anchor>
-      <arglist>(SelectionInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a8ddf4c8f53b700d096a67c75de0adcf5</anchor>
-      <arglist>(SelectionInfo, IElementSelectionInfo, ExtractSelectionInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>abb429094bada7d2e9e7823b6760203b9</anchor>
-      <arglist>(SelectionInfo, imod::IModel, ExtractSelectionInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a86948f76cad0f1f62cacc96c31aa3eed</anchor>
-      <arglist>(SelectionInfo, istd::IChangeable, ExtractSelectionInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a0c4a36fcb6f07ee291614101d9c3f2d2</anchor>
-      <arglist>(m_sceneProviderGuiCompPtr, m_sceneProviderCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>ab3b9115aaaf6bd8e11e484fcd50f0c49</anchor>
-      <arglist>(m_envManagerModelCompPtr, m_envManagerCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>ae7389e7d6c27724af87baf8d5956cf04</anchor>
-      <arglist>(m_registryObserverCompPtr, m_registryTopologyGuiCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a5b5ce2f2865f8a6c0e8c6397a0ce25cc</anchor>
-      <arglist>(m_registryValidationStatusModelCompPtr, m_registryValidationStatusCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CVisualRegistryEditorComp</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>afd688e7ecb8ec53f2444fdf2c9178d7b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const QFont &amp;</type>
-      <name>GetElementNameFont</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>ac165739fcecbc4713a4c80eab970dfc0</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>const QFont &amp;</type>
-      <name>GetElementDetailFont</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>aa2282b19f08849a789b8bf9154785d8e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>const icomp::IComponentEnvironmentManager *</type>
-      <name>GetEnvironmentManager</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>aa98b336168a19656fae79d8f6433a6e2</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>const IRegistryConsistInfo *</type>
-      <name>GetRegistryConsistInfo</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>aa9b166d5fea6b091b999a710e732bd35</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>TryOpenComponent</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>adbdcac0be0af8540390aa21ff4cbbdb7</anchor>
-      <arglist>(const CVisualRegistryElement &amp;registryElement)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetAcceptedMimeTypes</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>acc889733d4946c3b2bb9453703150bcf</anchor>
-      <arglist>(const QStringList &amp;mimeTypes)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const ibase::IHierarchicalCommand *</type>
-      <name>GetCommands</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>aabf294b438ec771c45ad197978174048</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QStringList</type>
-      <name>GetAcceptedMimeIds</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>abd12be132c99494d0ef120818c896c92</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnDropFinished</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a26988087a87aba5b3f993877ea80f412</anchor>
-      <arglist>(const QMimeData &amp;mimeData, QEvent *eventPtr)</arglist>
-    </member>
-    <member kind="variable">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CVisualRegistryEditorComp, icomp::IRegistry &gt;</type>
-      <name>BaseClass2</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a4c891c183b1f408f0591b672152f8fb2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>GroupId</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a233b273076b25fa833a2a3b2123386d7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>GI_COMPONENT</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a233b273076b25fa833a2a3b2123386d7a1db9f4469a5b86bf612026a67d2e0c06</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>GI_EMBEDDED_REGISTRY</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a233b273076b25fa833a2a3b2123386d7a19b58792dc1b6b504b35c25a762c6d63</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>GI_CODEGEN</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a233b273076b25fa833a2a3b2123386d7a27da63bde2eb1d0247950e53258ce708</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>GI_PREVIEW</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a233b273076b25fa833a2a3b2123386d7a333f46c00846751c89c0429f428a437d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>GI_EDIT</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a233b273076b25fa833a2a3b2123386d7a059bb57882415ccd6c208015f6113fa1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>GI_TOOLS</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a233b273076b25fa833a2a3b2123386d7a1d489f3ab152d5ed5d36be0cbb347422</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnSelectionChanged</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>ac022b0f5d471e1ae544a91c12329b935</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnCutCommand</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>abcba543c6e7e4887d1c83e356ef27d64</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnCopyCommand</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a306faa669843bcf718e176182db77bc0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnPasteCommand</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a93d4ebcf3887c28718a3aed8dee69b88</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnRemoveComponent</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a21c58c10627758b78f541d49f87ecda7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnRenameComponent</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a07ed3d6ff9348728203d30fc3b132957</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>NewEmbeddedComponent</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a524211f2df03a3b38fd81c4f1646a736</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>ToEmbeddedComponent</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a6f6d91ab8f40e133107f964fd960455b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>RemoveEmbeddedComponent</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a98c3cfdc9535a73b20cf2915522b10c0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnExportToCode</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a5c02f309036f42e0d7893f95908518e9</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnExecute</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>aa4ab3adb657b1fadbfa749a59184060d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnAbort</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a97e103ece057f3f5eb35c19b9284528c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnExecutionTimerTick</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>ad106963a0a84920649a64d259ee30102</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnShowRegistryTopology</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a9a9a84c44284ce68694ea1bc75a8e4b8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnEmbeddedComponentButtonClicked</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a18fb3f5b3ae3c3b5ff5cdc29ebe9b107</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>UpdateEmbeddedRegistryButtons</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>ac403c35b20500aee8f27259268a45361</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>UpdateEmbeddedRegistryView</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>ab5327d7dc79b59d59b989edda4ecd30e</anchor>
-      <arglist>(const QByteArray &amp;id)</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>aa8b2750cb1c903b73899c16f7f90da56</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a3f08b370e1cbb44da13f8d1535401dce</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>icomp::IRegistry *</type>
-      <name>GetSelectedRegistry</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a8c5bb9b7d115ccb10684f5862cf35c72</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>QGraphicsItem *</type>
-      <name>AddShapeToScene</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a837c0b20aff3f9b4745138df7257f12d</anchor>
-      <arglist>(iser::ISerializable *elementPtr) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>AddConnectorsToScene</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a835ff27bd9a00ee741cbb9b879087e9d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>AddConnector</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a16a82854a377fa66427fa0872dd26cad</anchor>
-      <arglist>(CRegistryElementShape &amp;sourceShape, const QByteArray &amp;referenceComponentId, const QByteArray &amp;attributeId, bool isFactory=false)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>icomp::IRegistryElement *</type>
-      <name>TryCreateComponent</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a74e5e7ff66d60bdd61340ed72f16b96a</anchor>
-      <arglist>(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address, const i2d::CVector2d &amp;position)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>ConnectReferences</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>ac26961623ce7b332fdcb43e9d0f46db3</anchor>
-      <arglist>(const QByteArray &amp;componentRole)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateComponentSelection</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>ad492494cb0e8fd2d5fd3a6a238fddef3</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>DoRetranslate</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a20bd3646af0fa95386167d03aad9eb53</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnDropObject</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a52fd71ee948b05248d94a5a043839343</anchor>
-      <arglist>(const QMimeData &amp;data, QGraphicsSceneDragDropEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateScene</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>ac86b77de39ddc462410c4ecb69ee1c58</anchor>
-      <arglist>(int updateFlags)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnModelChanged</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a31a0816128118d47d543d9d51d80b7af</anchor>
-      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a241d14550bf848be92bd5a7efcd73936</anchor>
-      <arglist>(int updateFlags)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnAttached</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a323000d3138c35b7c48bbf8a015d6045</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnDetached</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>af4d64289ff0173a223146e2a0a72445f</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a8205212eeb4d97087b2ac4b2d47686b4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>ab5b47a8ef4c9e14d2fb82421a9f8036f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="friend">
-      <type>friend class</type>
-      <name>imod::TModelWrap&lt; SelectionInfoImpl &gt;</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a1ecffae37bd7adb0d052fdefe2de32db</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CVisualRegistryEditorComp::EnvironmentObserver</name>
-    <filename>classicmpstr_1_1_c_visual_registry_editor_comp_1_1_environment_observer.html</filename>
-    <base>TSingleModelObserverBase&lt; icomp::IComponentEnvironmentManager &gt;</base>
-    <member kind="function">
-      <type></type>
-      <name>EnvironmentObserver</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp_1_1_environment_observer.html</anchorfile>
-      <anchor>a47d0280e470f8ef8c6c54c47f99fb8d3</anchor>
-      <arglist>(CVisualRegistryEditorComp *parentPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnUpdate</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp_1_1_environment_observer.html</anchorfile>
-      <anchor>a35514abd8c7a95bc6a473a8d699b0301</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CVisualRegistryElement</name>
-    <filename>classicmpstr_1_1_c_visual_registry_element.html</filename>
-    <base>icomp::CRegistryElement</base>
-    <base>i2d::CObject2dBase</base>
-    <member kind="typedef">
-      <type>icomp::CRegistryElement</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
-      <anchor>a131b5e93a9985ddcaea01a6a43f13371</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CVisualRegistryElement</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
-      <anchor>a4a83a01e0b70e1d1bce027e2fa816fdc</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const icomp::IRegistry *</type>
-      <name>GetRegistry</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
-      <anchor>a073aecc840690707fb7900d2ec39a080</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>const icomp::CComponentAddress &amp;</type>
-      <name>GetAddress</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
-      <anchor>a3a12f32245c99e9115a326ec7d7cae90</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>const QByteArray &amp;</type>
-      <name>GetName</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
-      <anchor>a0f669f037051a1ecc2e5eb08437a472f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetName</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
-      <anchor>ac72fdcef07d5fdb5090d929dbbf3fff9</anchor>
-      <arglist>(const QByteArray &amp;name)</arglist>
-    </member>
-    <member kind="function">
-      <type>const QString &amp;</type>
-      <name>GetNote</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
-      <anchor>a1f65617a43e93a7fb1699581a57a670e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetNote</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
-      <anchor>aae8573245887a177d58e64e2e31b11a1</anchor>
-      <arglist>(const QString &amp;note)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Initialize</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
-      <anchor>ac269f1eb45d4a1637d5e415c21ff234c</anchor>
-      <arglist>(const icomp::IRegistry *parentPtr, const icomp::CComponentAddress &amp;address)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual i2d::CVector2d</type>
-      <name>GetCenter</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
-      <anchor>a6520dbc1e14b0bd281180c7d1b4cff91</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>MoveCenterTo</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
-      <anchor>a4bced32048f834a04d0a2d40fc81548d</anchor>
-      <arglist>(const i2d::CVector2d &amp;position)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual i2d::CRectangle</type>
-      <name>GetBoundingBox</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
-      <anchor>a4dde1e07df3feb69b8e56180ac28e208</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Transform</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
-      <anchor>a6786b9a5ebbd0c89474d9b813de8cd14</anchor>
-      <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>InvTransform</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
-      <anchor>ac444f10fc9d82abe56f5addca2f1f213</anchor>
-      <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetTransformed</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
-      <anchor>a833baab4f49b1a72c0627928bed0ca45</anchor>
-      <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::IObject2d &amp;result, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetInvTransformed</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_element.html</anchorfile>
-      <anchor>a8e60a45da2f52b86f58694b1bbd69be0</anchor>
-      <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::IObject2d &amp;result, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::CXpcEditorComp</name>
-    <filename>classicmpstr_1_1_c_xpc_editor_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::XpcEditorComp, icomp::CXpcModel &gt;</base>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::XpcEditorComp, icomp::CXpcModel &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_xpc_editor_comp.html</anchorfile>
-      <anchor>a0be55362b300184394272aba38dfc7f6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="signal">
-      <type>void</type>
-      <name>DoLateUpdateModel</name>
-      <anchorfile>classicmpstr_1_1_c_xpc_editor_comp.html</anchorfile>
-      <anchor>ac9e8f03a7367464f13451cf39a997544</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CXpcEditorComp</name>
-      <anchorfile>classicmpstr_1_1_c_xpc_editor_comp.html</anchorfile>
-      <anchor>a587ec0e9daf0dd6fcdfa2ca0617d59a1</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classicmpstr_1_1_c_xpc_editor_comp.html</anchorfile>
-      <anchor>a8d88666443718f48435ecd1a6c41b846</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classicmpstr_1_1_c_xpc_editor_comp.html</anchorfile>
-      <anchor>a900d91744aecb668a1b18270ba4eaa9e</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classicmpstr_1_1_c_xpc_editor_comp.html</anchorfile>
-      <anchor>acd2f8b86b0f2c67e2754a358f3ecc408</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::IAttributeSelectionObserver</name>
-    <filename>classicmpstr_1_1_i_attribute_selection_observer.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>OnAttributeSelected</name>
-      <anchorfile>classicmpstr_1_1_i_attribute_selection_observer.html</anchorfile>
-      <anchor>a0f0484a41dcb4e6694c7bcb511f2c45e</anchor>
-      <arglist>(const icomp::IAttributeStaticInfo *attributeStaticInfoPtr)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::IComponentNoteController</name>
-    <filename>classicmpstr_1_1_i_component_note_controller.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="enumeration">
-      <name>ChangeFlags</name>
-      <anchorfile>classicmpstr_1_1_i_component_note_controller.html</anchorfile>
-      <anchor>acdc9337112c091fe77639f15a5e93f17</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_NOTE_CHANGED</name>
-      <anchorfile>classicmpstr_1_1_i_component_note_controller.html</anchorfile>
-      <anchor>acdc9337112c091fe77639f15a5e93f17a51d310e3bfd3ae1cd4bb970c2fc6ff63</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetComponentNote</name>
-      <anchorfile>classicmpstr_1_1_i_component_note_controller.html</anchorfile>
-      <anchor>aa36105a11bdd50bdac9f4659b9e38a7c</anchor>
-      <arglist>(const QByteArray &amp;componentName)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetComponentNote</name>
-      <anchorfile>classicmpstr_1_1_i_component_note_controller.html</anchorfile>
-      <anchor>a9cfb7f69388ded543f2ef52dde43e5f5</anchor>
-      <arglist>(const QByteArray &amp;componentName, const QString &amp;componentNote)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::IElementSelectionInfo</name>
-    <filename>classicmpstr_1_1_i_element_selection_info.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="enumeration">
-      <name>ChangeFlags</name>
-      <anchorfile>classicmpstr_1_1_i_element_selection_info.html</anchorfile>
-      <anchor>a63c33646e2066bbeeef15c7f176c7429</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_SELECTION</name>
-      <anchorfile>classicmpstr_1_1_i_element_selection_info.html</anchorfile>
-      <anchor>a63c33646e2066bbeeef15c7f176c7429a541f91a51e5f77609236592592524fed</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>QMap&lt; QByteArray, const icomp::IRegistry::ElementInfo * &gt;</type>
-      <name>Elements</name>
-      <anchorfile>classicmpstr_1_1_i_element_selection_info.html</anchorfile>
-      <anchor>aec5620326a5b18eae0eef42c47d78744</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual icomp::IRegistry *</type>
-      <name>GetSelectedRegistry</name>
-      <anchorfile>classicmpstr_1_1_i_element_selection_info.html</anchorfile>
-      <anchor>adc74e98e02bf20e86906aa685ad82dbd</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual Elements</type>
-      <name>GetSelectedElements</name>
-      <anchorfile>classicmpstr_1_1_i_element_selection_info.html</anchorfile>
-      <anchor>ac5ee1bd848258aa4a0bb4081c59b1c05</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::IExternalMetaInfoManager</name>
-    <filename>classicmpstr_1_1_i_external_meta_info_manager.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetPackageInfoPath</name>
-      <anchorfile>classicmpstr_1_1_i_external_meta_info_manager.html</anchorfile>
-      <anchor>ae4efa950ebfe0690cf92b66e8eefc261</anchor>
-      <arglist>(const QByteArray &amp;packageId) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetComponentInfoPath</name>
-      <anchorfile>classicmpstr_1_1_i_external_meta_info_manager.html</anchorfile>
-      <anchor>a44ef238560ff30dda93affd2240442e8</anchor>
-      <arglist>(const icomp::CComponentAddress &amp;address) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::IRegistryConsistInfo</name>
-    <filename>classicmpstr_1_1_i_registry_consist_info.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="enumeration">
-      <name>QueryFlags</name>
-      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
-      <anchor>a17277f70a9bf291a4806d392aa37d8b2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>QF_NONE</name>
-      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
-      <anchor>a17277f70a9bf291a4806d392aa37d8b2af792ec43d28e8c197e6c2ffc97a6fc39</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>QF_ANY_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
-      <anchor>a17277f70a9bf291a4806d392aa37d8b2a2c72e2bab99955b0093b8b84dd8c3b49</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>QF_INCLUDE_UNDEFINED</name>
-      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
-      <anchor>a17277f70a9bf291a4806d392aa37d8b2af050992c4fda62f91eb3d6eada5fc7e8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual icomp::IRegistry::Ids</type>
-      <name>GetCompatibleElements</name>
-      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
-      <anchor>aa144f2dc6342f8096128f17ec3d50f89</anchor>
-      <arglist>(const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const icomp::IRegistry &amp;registry, int queryFlags=QF_NONE) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsRegistryValid</name>
-      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
-      <anchor>a84a07d820edbb8f542ca577bbf7dd8b9</anchor>
-      <arglist>(const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsElementValid</name>
-      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
-      <anchor>a7a5f49e5acecb6c03518b6c68fc167db</anchor>
-      <arglist>(const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsAttributeValid</name>
-      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
-      <anchor>a111097da538f262f69ee108da356b051</anchor>
-      <arglist>(const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QIcon</type>
-      <name>GetComponentIcon</name>
-      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
-      <anchor>adfe758e659238dc37492c437179d8c31</anchor>
-      <arglist>(const icomp::CComponentAddress &amp;address) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::IRegistryPreview</name>
-    <filename>classicmpstr_1_1_i_registry_preview.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>StartRegistry</name>
-      <anchorfile>classicmpstr_1_1_i_registry_preview.html</anchorfile>
-      <anchor>ad42f2222fe6c335177c8de4a27749bd4</anchor>
-      <arglist>(const icomp::IRegistry &amp;registry)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsRunning</name>
-      <anchorfile>classicmpstr_1_1_i_registry_preview.html</anchorfile>
-      <anchor>a849dcb11852a0fb08aab39990e655121</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>AbortRegistry</name>
-      <anchorfile>classicmpstr_1_1_i_registry_preview.html</anchorfile>
-      <anchor>ac587ec423b8d3e3b6e9ef699d312797e</anchor>
-      <arglist>()=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::ISceneProvider</name>
-    <filename>classicmpstr_1_1_i_scene_provider.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="enumeration">
-      <name>SceneFlags</name>
-      <anchorfile>classicmpstr_1_1_i_scene_provider.html</anchorfile>
-      <anchor>a5b04222d7e3b4e9542b1a26ab3ec3245</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SF_FIXED_SIZE</name>
-      <anchorfile>classicmpstr_1_1_i_scene_provider.html</anchorfile>
-      <anchor>a5b04222d7e3b4e9542b1a26ab3ec3245adee81a2a0fa3944e96e781d1f662b3fd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SF_ALIGNED</name>
-      <anchorfile>classicmpstr_1_1_i_scene_provider.html</anchorfile>
-      <anchor>a5b04222d7e3b4e9542b1a26ab3ec3245a6ed7d94c9b5ff12650ac39718ec4cb6e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetSceneId</name>
-      <anchorfile>classicmpstr_1_1_i_scene_provider.html</anchorfile>
-      <anchor>a3f24e149134255e6030b5a40657add76</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QGraphicsScene *</type>
-      <name>GetScene</name>
-      <anchorfile>classicmpstr_1_1_i_scene_provider.html</anchorfile>
-      <anchor>ac09c5e76b6688321620cfeefafbe4415</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>GetSceneAlignment</name>
-      <anchorfile>classicmpstr_1_1_i_scene_provider.html</anchorfile>
-      <anchor>af3fc795bbe91a0a227687a9d0723839f</anchor>
-      <arglist>(double &amp;distance) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetSceneFlags</name>
-      <anchorfile>classicmpstr_1_1_i_scene_provider.html</anchorfile>
-      <anchor>a707b8924f37ade1f5102ca2e20da0274</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::TObjectShapeBase</name>
-    <filename>classicmpstr_1_1_t_object_shape_base.html</filename>
-    <templarg>GraphicsItemClass</templarg>
-    <templarg>ObjectClass</templarg>
-    <base>icmpstr::TShapeBase</base>
-    <base>TSingleModelObserverBase&lt; ObjectClass &gt;</base>
-    <member kind="typedef">
-      <type>TShapeBase&lt; GraphicsItemClass &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>ad00993b61767d1e229adc4d44ac5ab11</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>imod::TSingleModelObserverBase&lt; ObjectClass &gt;</type>
-      <name>BaseClass2</name>
-      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>a1b67ca20d9bf006d4785967132783363</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TObjectShapeBase</name>
-      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>ac62d4216e3dbdb96aa8d03dc9fc41c79</anchor>
-      <arglist>(bool isEditable=false, const ISceneProvider *providerPtr=NULL)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnSelectionChanged</name>
-      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>a3967ef9d1790a4bdb85a27c5b860f320</anchor>
-      <arglist>(bool isSelected)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnPositionChanged</name>
-      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>ab1b2bd8ac222118c71dff0c559cf4a74</anchor>
-      <arglist>(const QPointF &amp;position)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QVariant</type>
-      <name>itemChange</name>
-      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>a8966ba6b1d04cf1d2ef745c1e5681d61</anchor>
-      <arglist>(QGraphicsItem::GraphicsItemChange change, const QVariant &amp;value)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>mousePressEvent</name>
-      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>ac52bce6b8a08b75c49a751814cb8d3b3</anchor>
-      <arglist>(QGraphicsSceneMouseEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>mouseReleaseEvent</name>
-      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>a389d48028358fc515c793acce9bccbec</anchor>
-      <arglist>(QGraphicsSceneMouseEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>mouseDoubleClickEvent</name>
-      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>a73dcd1ce65c9108b85d2a07209e7c6c0</anchor>
-      <arglist>(QGraphicsSceneMouseEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AfterUpdate</name>
-      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>aa38243f1b9a880253096d0fb4d64ee62</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>UpdateGraphicsItem</name>
-      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>ab7b096e6f596a53bf1331dbdb25ec99e</anchor>
-      <arglist>(const ObjectClass &amp;object)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::TShapeBase</name>
-    <filename>classicmpstr_1_1_t_shape_base.html</filename>
-    <templarg>GraphicsItemClass</templarg>
-    <base>QObject</base>
-    <member kind="enumeration">
-      <name>ColorSheme</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>adb37f975550e5ea266069cd8be2492d4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SelectedColor</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>adb37f975550e5ea266069cd8be2492d4a4f884b3d7b931a32410aeaf74f380f85</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>EditableColor</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>adb37f975550e5ea266069cd8be2492d4afd9c4969f64c4761ebc51f9ff2cb68bd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>InactiveColor</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>adb37f975550e5ea266069cd8be2492d4a23b64324649d03e6a5b58f76f31f90df</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DefaultColor</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>adb37f975550e5ea266069cd8be2492d4a42c4eff6a251e42cbe140127b78c0669</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>GraphicsItemClass</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>aee3e0d45b8ff2d4aa2bcb57e20a456ef</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TShapeBase</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>ae05a49a0a7568d04500d86c1a5661b9c</anchor>
-      <arglist>(bool isEditable=false, const ISceneProvider *providerPtr=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetPen</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>aab947758d35d34a6fe99bfd0129e6b40</anchor>
-      <arglist>(int colorSheme, const QPen &amp;pen)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QPen</type>
-      <name>GetPen</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>ac1d04b1443ef89f4ff8c5ec02c29cb7b</anchor>
-      <arglist>(int colorSheme) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetBrush</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>a162a42318f015b6c41e33c89ef40a64f</anchor>
-      <arglist>(int colorSheme, const QBrush &amp;pen)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QBrush</type>
-      <name>GetBrush</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>ae650176339fa229e9d0331333da6fd88</anchor>
-      <arglist>(int colorSheme) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SwitchColorSheme</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>a2726d891662771b491ec857006d6566b</anchor>
-      <arglist>(int colorSheme)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsEditable</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>a9d35d412ba88bb7e6b5a76442e4d647b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetEditable</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>aef8dd96943692c410942dda156a73b90</anchor>
-      <arglist>(bool isEditable)</arglist>
-    </member>
-    <member kind="function">
-      <type>const ISceneProvider *</type>
-      <name>GetSceneProvider</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>a09bb67f9285d42126fe2294b8059afb0</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>i2d::CVector2d</type>
-      <name>GetPosFromLocal</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>a2479bbb32e3f1819643ceff4a558442a</anchor>
-      <arglist>(const QPointF &amp;position) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>QPointF</type>
-      <name>GetLocalFromPos</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>a1b2b890ade200162309cbdf264ac9896</anchor>
-      <arglist>(const i2d::CVector2d &amp;position) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnSelectionChanged</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>a8272ebe7d40e5720c16b0a2545f8cf61</anchor>
-      <arglist>(bool isSelected)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnPositionChanged</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>a071dae8731f249d895feecf3d34cfad4</anchor>
-      <arglist>(const QPointF &amp;position)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QVariant</type>
-      <name>itemChange</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>a153b4a35041c83a6f4df18387f7bb263</anchor>
-      <arglist>(QGraphicsItem::GraphicsItemChange change, const QVariant &amp;value)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>hoverEnterEvent</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>a258ec40b12ec5724346b2949e9166864</anchor>
-      <arglist>(QGraphicsSceneHoverEvent *event)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>hoverLeaveEvent</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>acbda29c594f7c3dccf1a7c63c0e951ec</anchor>
-      <arglist>(QGraphicsSceneHoverEvent *event)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>paint</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>a0e73765a1d3535ac1797971d748c7fb1</anchor>
-      <arglist>(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget=NULL)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>paint</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>adc014a2a0e09ef92cd18642fd1e3d02b</anchor>
-      <arglist>(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>paint</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>a39fd5e47f354db3203d15a5b448af941</anchor>
-      <arglist>(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -25115,6 +19659,8 @@
     <class kind="class">idoc::CSingleDocumentManagerBase</class>
     <class kind="class">idoc::CSingleDocumentTemplateBase</class>
     <class kind="class">idoc::CSingleDocumentTemplateComp</class>
+    <class kind="class">idoc::CTextDocumentComp</class>
+    <class kind="class">idoc::CTextFileLoaderComp</class>
     <class kind="class">idoc::CTmplBasedDocumentManagerBase</class>
     <class kind="class">idoc::IDocumentManager</class>
     <class kind="class">idoc::IDocumentStateComparator</class>
@@ -25123,6 +19669,7 @@
     <class kind="class">idoc::IHelpFileProvider</class>
     <class kind="class">idoc::IHelpInfoProvider</class>
     <class kind="class">idoc::IHelpViewer</class>
+    <class kind="class">idoc::ITextDocument</class>
     <class kind="class">idoc::IUndoManager</class>
   </compound>
   <compound kind="class">
@@ -25159,10 +19706,10 @@
       <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual iser::IFileTypeInfo *</type>
+      <type>virtual ifile::IFileTypeInfo *</type>
       <name>GetDocumentFileTypeInfo</name>
       <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
-      <anchor>a46910a714e74fd3d899027514a721e81</anchor>
+      <anchor>a05582ef4889b0a543ad4696adb2efe22</anchor>
       <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -25194,10 +19741,10 @@
       <arglist>(const QByteArray &amp;documentTypeId, const QByteArray &amp;viewTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual iser::IFileLoader *</type>
+      <type>virtual ifile::IFilePersistence *</type>
       <name>GetFileLoader</name>
       <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
-      <anchor>a1e783c28138db0bb7e6fc021f0327c78</anchor>
+      <anchor>a71e8079f3d1dea1202f46950c4f12ba1</anchor>
       <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -25645,7 +20192,7 @@
     <member kind="enumvalue">
       <name>RELEVANT_FLAGS</name>
       <anchorfile>classidoc_1_1_c_selected_doc_model_binder_comp.html</anchorfile>
-      <anchor>a24cd7e92fda13a1b1a177b82e96a147aa94becf689cf0939104480dfefc235d30</anchor>
+      <anchor>a66849e4bdd3950e95a10035d46a472eca94becf689cf0939104480dfefc235d30</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -26065,10 +20612,10 @@
       <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual iser::IFileTypeInfo *</type>
+      <type>virtual ifile::IFileTypeInfo *</type>
       <name>GetDocumentFileTypeInfo</name>
       <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
-      <anchor>ab427f8ccd5827ace1926b3993ca1d77a</anchor>
+      <anchor>aab5ad5ae4e5b76f0eb2cecf46fda4863</anchor>
       <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -26148,10 +20695,10 @@
       <arglist>(m_undoManagerObserverCompFact, m_undoManagerCompFact, true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual iser::IFileLoader *</type>
+      <type>virtual ifile::IFilePersistence *</type>
       <name>GetFileLoader</name>
       <anchorfile>classidoc_1_1_c_single_document_template_comp.html</anchorfile>
-      <anchor>a9fd758135f102c593980f27e59c75891</anchor>
+      <anchor>a4dda2fcfa7e399b7c8d2d0af543edf92</anchor>
       <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -26188,6 +20735,95 @@
       <anchorfile>classidoc_1_1_c_single_document_template_comp.html</anchorfile>
       <anchor>a547b5aef726b695b4ac9ec09f29c536e</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>idoc::CTextDocumentComp</name>
+    <filename>classidoc_1_1_c_text_document_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">idoc::ITextDocument</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classidoc_1_1_c_text_document_comp.html</anchorfile>
+      <anchor>add3e0abfd1ad4be7d649b28c166ace7a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetText</name>
+      <anchorfile>classidoc_1_1_c_text_document_comp.html</anchorfile>
+      <anchor>ad55b9ec3fb40f1d4c03ed8757115da38</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetText</name>
+      <anchorfile>classidoc_1_1_c_text_document_comp.html</anchorfile>
+      <anchor>abfa50e4ebb121301cfc268d63cb7c522</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classidoc_1_1_c_text_document_comp.html</anchorfile>
+      <anchor>a4c05eddc26744be66c186ede3101ddd3</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classidoc_1_1_c_text_document_comp.html</anchorfile>
+      <anchor>a457e5b290585e389ac355011a8e119a0</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>idoc::CTextFileLoaderComp</name>
+    <filename>classidoc_1_1_c_text_file_loader_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>ifile::IFilePersistence</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classidoc_1_1_c_text_file_loader_comp.html</anchorfile>
+      <anchor>af2414b3863ee6607314ea29432d844c1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOperationSupported</name>
+      <anchorfile>classidoc_1_1_c_text_file_loader_comp.html</anchorfile>
+      <anchor>a221fe335a6bf6db4f1227e51f71c0794</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>LoadFromFile</name>
+      <anchorfile>classidoc_1_1_c_text_file_loader_comp.html</anchorfile>
+      <anchor>a2d15e61cd84d128061003c0ec638ce3e</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>SaveToFile</name>
+      <anchorfile>classidoc_1_1_c_text_file_loader_comp.html</anchorfile>
+      <anchor>a668323dd55994d0365ea966b75714976</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classidoc_1_1_c_text_file_loader_comp.html</anchorfile>
+      <anchor>ad71cf1d9193c8754bc1f6b866a18a076</anchor>
+      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classidoc_1_1_c_text_file_loader_comp.html</anchorfile>
+      <anchor>ab4da446dcb32f75aa553f6c626ec265b</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -26230,10 +20866,10 @@
       <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual iser::IFileTypeInfo *</type>
+      <type>virtual ifile::IFileTypeInfo *</type>
       <name>GetDocumentFileTypeInfo</name>
       <anchorfile>classidoc_1_1_c_tmpl_based_document_manager_base.html</anchorfile>
-      <anchor>ae4db74119c01ac88d231f44a3a385788</anchor>
+      <anchor>a7c3ecbe9e11705c176388bf5c31aaf5f</anchor>
       <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -26564,10 +21200,10 @@
       <arglist>(const QByteArray &amp;documentTypeId, const QByteArray &amp;viewTypeId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual iser::IFileLoader *</type>
+      <type>virtual ifile::IFilePersistence *</type>
       <name>GetFileLoader</name>
       <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
-      <anchor>ad599f3c2f78399f4f28a2e6b4bfe2e0d</anchor>
+      <anchor>ab7e01e2b3c635bdd04cdb57b18249439</anchor>
       <arglist>(const QByteArray &amp;documentTypeId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -26649,10 +21285,10 @@
       <arglist>(const QByteArray &amp;documentTypeId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual iser::IFileTypeInfo *</type>
+      <type>virtual ifile::IFileTypeInfo *</type>
       <name>GetDocumentFileTypeInfo</name>
       <anchorfile>classidoc_1_1_i_document_types_info.html</anchorfile>
-      <anchor>ac41e8a8af9fef09682eb4c9d75ed7d74</anchor>
+      <anchor>a104d84bb6b698a5fadce945572ed9e86</anchor>
       <arglist>(const QByteArray &amp;documentTypeId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -26707,6 +21343,25 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>idoc::ITextDocument</name>
+    <filename>classidoc_1_1_i_text_document.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetText</name>
+      <anchorfile>classidoc_1_1_i_text_document.html</anchorfile>
+      <anchor>a7bdc07ec757fe01ce7b10904249a4ef7</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetText</name>
+      <anchorfile>classidoc_1_1_i_text_document.html</anchorfile>
+      <anchor>ad2ee10b0a60c3ec6f2dc0429f176d22a</anchor>
+      <arglist>(const QString &amp;text)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>idoc::IUndoManager</name>
     <filename>classidoc_1_1_i_undo_manager.html</filename>
     <base virtualness="virtual">idoc::IDocumentStateComparator</base>
@@ -26749,20 +21404,108 @@
   <compound kind="namespace">
     <name>ifile</name>
     <filename>namespaceifile.html</filename>
+    <class kind="class">ifile::CAutoPersistenceComp</class>
+    <class kind="class">ifile::CComposedFilePersistenceComp</class>
     <class kind="class">ifile::CDirList</class>
+    <class kind="class">ifile::CFileArchiveInfo</class>
     <class kind="class">ifile::CFileList</class>
     <class kind="class">ifile::CFileListProviderComp</class>
     <class kind="class">ifile::CFileNameParamComp</class>
+    <class kind="class">ifile::CFileReadArchive</class>
+    <class kind="class">ifile::CFileSerializerCompBase</class>
+    <class kind="class">ifile::CFileTypeInfoComp</class>
+    <class kind="class">ifile::CFileWriteArchive</class>
     <class kind="class">ifile::CGeneratedFileNameParamComp</class>
     <class kind="class">ifile::CRelativeFileNameParamComp</class>
     <class kind="class">ifile::CSystemLocationComp</class>
+    <class kind="class">ifile::CTextFileLogComp</class>
+    <class kind="class">ifile::CXmlFileReadArchive</class>
+    <class kind="class">ifile::CXmlFileWriteArchive</class>
+    <class kind="class">ifile::IFileArchiveInfo</class>
     <class kind="class">ifile::IFileListProvider</class>
     <class kind="class">ifile::IFileNameParam</class>
+    <class kind="class">ifile::IFilePersistence</class>
+    <class kind="class">ifile::IFilePersistenceInfo</class>
+    <class kind="class">ifile::IFileTypeInfo</class>
+    <class kind="class">ifile::TFileSerializerComp</class>
+  </compound>
+  <compound kind="class">
+    <name>ifile::CAutoPersistenceComp</name>
+    <filename>classifile_1_1_c_auto_persistence_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
+      <anchor>ad6cca8229f651bdf1501961558f36172</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
+      <anchor>a4fe381aa34d289980a5c2b4cd5e9ee5c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
+      <anchor>ad348970648bc84ca8a98da2ca4128c28</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::CComposedFilePersistenceComp</name>
+    <filename>classifile_1_1_c_composed_file_persistence_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">ifile::IFilePersistence</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_composed_file_persistence_comp.html</anchorfile>
+      <anchor>a3cd405d28a2f71e7fbe91611287c64c7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOperationSupported</name>
+      <anchorfile>classifile_1_1_c_composed_file_persistence_comp.html</anchorfile>
+      <anchor>a32f2f428b257d5ee32a37231feec352e</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>LoadFromFile</name>
+      <anchorfile>classifile_1_1_c_composed_file_persistence_comp.html</anchorfile>
+      <anchor>af3ea050b1c70043dc62cf57dee590e87</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>SaveToFile</name>
+      <anchorfile>classifile_1_1_c_composed_file_persistence_comp.html</anchorfile>
+      <anchor>ae08266f40d877719e2b86791e0e2ac38</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classifile_1_1_c_composed_file_persistence_comp.html</anchorfile>
+      <anchor>a0ae84e330cb2a72c8fc9a8f3a023c05d</anchor>
+      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classifile_1_1_c_composed_file_persistence_comp.html</anchorfile>
+      <anchor>a1a24c151ac58ad166872c0c270ac8df8</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const </arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>ifile::CDirList</name>
     <filename>classifile_1_1_c_dir_list.html</filename>
-    <base>QObject</base>
     <member kind="signal">
       <type>void</type>
       <name>currentDir</name>
@@ -26800,9 +21543,34 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>ifile::CFileArchiveInfo</name>
+    <filename>classifile_1_1_c_file_archive_info.html</filename>
+    <base virtualness="virtual">ifile::IFileArchiveInfo</base>
+    <member kind="function">
+      <type></type>
+      <name>CFileArchiveInfo</name>
+      <anchorfile>classifile_1_1_c_file_archive_info.html</anchorfile>
+      <anchor>aff4f16a0effe663fb3308e039f959d1b</anchor>
+      <arglist>(const QString &amp;filePath)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QString &amp;</type>
+      <name>GetCurrentFilePath</name>
+      <anchorfile>classifile_1_1_c_file_archive_info.html</anchorfile>
+      <anchor>a9d4e6f8c3a1c21caa281d6796335ffab</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QString</type>
+      <name>m_filePath</name>
+      <anchorfile>classifile_1_1_c_file_archive_info.html</anchorfile>
+      <anchor>a1952595055f067cc54bd0dc6016ed2f9</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>ifile::CFileList</name>
     <filename>classifile_1_1_c_file_list.html</filename>
-    <base>QObject</base>
     <member kind="signal">
       <type>void</type>
       <name>currentFile</name>
@@ -26828,7 +21596,6 @@
   <compound kind="class">
     <name>ifile::CFileListProviderComp</name>
     <filename>classifile_1_1_c_file_list_provider_comp.html</filename>
-    <base>QObject</base>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">ifile::IFileListProvider</base>
     <base virtualness="virtual">ibase::IQtItemModelProvider</base>
@@ -26922,6 +21689,293 @@
       <anchorfile>classifile_1_1_c_file_name_param_comp.html</anchorfile>
       <anchor>a828fd0bec0cd35df995fd2f94cce35bb</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::CFileReadArchive</name>
+    <filename>classifile_1_1_c_file_read_archive.html</filename>
+    <base>iser::CBinaryReadArchiveBase</base>
+    <base>ifile::CFileArchiveInfo</base>
+    <class kind="struct">ifile::CFileReadArchive::TagStackElement</class>
+    <member kind="typedef">
+      <type>iser::CBinaryReadArchiveBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_file_read_archive.html</anchorfile>
+      <anchor>a03e8f2b55fd2ae7ffea24ed5a2449463</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CFileArchiveInfo</type>
+      <name>BaseClass2</name>
+      <anchorfile>classifile_1_1_c_file_read_archive.html</anchorfile>
+      <anchor>a48bb1b1a5f1801b95c794ee40f199810</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CFileReadArchive</name>
+      <anchorfile>classifile_1_1_c_file_read_archive.html</anchorfile>
+      <anchor>a4bf1a79fb6378099e31243534120911b</anchor>
+      <arglist>(const QString &amp;filePath, bool supportTagSkipping=true, bool serializeHeader=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsTagSkippingSupported</name>
+      <anchorfile>classifile_1_1_c_file_read_archive.html</anchorfile>
+      <anchor>a3b61507956400a3213ee24c14433b3ec</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>BeginTag</name>
+      <anchorfile>classifile_1_1_c_file_read_archive.html</anchorfile>
+      <anchor>ad24f052beca32ef60daea1abdd15d0d1</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>EndTag</name>
+      <anchorfile>classifile_1_1_c_file_read_archive.html</anchorfile>
+      <anchor>aca5a5deb64254edacc588d3333d385dc</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ProcessData</name>
+      <anchorfile>classifile_1_1_c_file_read_archive.html</anchorfile>
+      <anchor>a971726afae602cae25db9b0897bab157</anchor>
+      <arglist>(void *data, int size)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DecorateMessage</name>
+      <anchorfile>classifile_1_1_c_file_read_archive.html</anchorfile>
+      <anchor>ad109920de30f965150e858877259856c</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>ifile::CFileReadArchive::TagStackElement</name>
+    <filename>structifile_1_1_c_file_read_archive_1_1_tag_stack_element.html</filename>
+    <member kind="variable">
+      <type>quint32</type>
+      <name>tagBinaryId</name>
+      <anchorfile>structifile_1_1_c_file_read_archive_1_1_tag_stack_element.html</anchorfile>
+      <anchor>a74dbfdf5e9c398cd8228d4504837f642</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>quint32</type>
+      <name>endPosition</name>
+      <anchorfile>structifile_1_1_c_file_read_archive_1_1_tag_stack_element.html</anchorfile>
+      <anchor>a07e60b38819f2c82323201e9d64ffeef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>useTagSkipping</name>
+      <anchorfile>structifile_1_1_c_file_read_archive_1_1_tag_stack_element.html</anchorfile>
+      <anchor>ab31205cb8a9a2308ead83e0582fb25b5</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::CFileSerializerCompBase</name>
+    <filename>classifile_1_1_c_file_serializer_comp_base.html</filename>
+    <base>TLoggerCompWrap&lt; CFileTypeInfoComp &gt;</base>
+    <base virtualness="virtual">ifile::IFilePersistence</base>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classifile_1_1_c_file_serializer_comp_base.html</anchorfile>
+      <anchor>ae177b2fecdc0565b7d8e06b6e1b7626e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_BAD_EXTENSION</name>
+      <anchorfile>classifile_1_1_c_file_serializer_comp_base.html</anchorfile>
+      <anchor>ae177b2fecdc0565b7d8e06b6e1b7626eab79221d68fabd8152f6eeff778a88397</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_UNSUPPORTED_VERSION</name>
+      <anchorfile>classifile_1_1_c_file_serializer_comp_base.html</anchorfile>
+      <anchor>ae177b2fecdc0565b7d8e06b6e1b7626eaa0dac5d40675b82a161057bb39fc7d87</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ibase::TLoggerCompWrap&lt; CFileTypeInfoComp &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_file_serializer_comp_base.html</anchorfile>
+      <anchor>a3001a046bd85f6e6eecdc631a7cfb693</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOperationSupported</name>
+      <anchorfile>classifile_1_1_c_file_serializer_comp_base.html</anchorfile>
+      <anchor>a6d599ca86417f859523d1ff83821ba25</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const iser::IVersionInfo *</type>
+      <name>GetVersionInfo</name>
+      <anchorfile>classifile_1_1_c_file_serializer_comp_base.html</anchorfile>
+      <anchor>a818b64146ff947e7746d7a6b824108ee</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CheckMinimalVersion</name>
+      <anchorfile>classifile_1_1_c_file_serializer_comp_base.html</anchorfile>
+      <anchor>a567df5d5eb4a7ab7859db28f502e360a</anchor>
+      <arglist>(const iser::ISerializable &amp;object, const iser::IVersionInfo &amp;versionInfo) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CheckInputFile</name>
+      <anchorfile>classifile_1_1_c_file_serializer_comp_base.html</anchorfile>
+      <anchor>adf9f02c4a1ced289658183dab92e86a3</anchor>
+      <arglist>(const QString filePath, bool beQuiet=true) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CheckOutputFile</name>
+      <anchorfile>classifile_1_1_c_file_serializer_comp_base.html</anchorfile>
+      <anchor>aedd53069982927a57948373f2ca17c4f</anchor>
+      <arglist>(const QString filePath, bool beQuiet=true) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::CFileTypeInfoComp</name>
+    <filename>classifile_1_1_c_file_type_info_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">ifile::IFileTypeInfo</base>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classifile_1_1_c_file_type_info_comp.html</anchorfile>
+      <anchor>aa225a0e44a01fa16e68fbdef891721d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_BAD_EXTENSION</name>
+      <anchorfile>classifile_1_1_c_file_type_info_comp.html</anchorfile>
+      <anchor>aa225a0e44a01fa16e68fbdef891721d4a65c90e93ab9f4cfc99283ca860dfad8f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_UNSUPPORTED_VERSION</name>
+      <anchorfile>classifile_1_1_c_file_type_info_comp.html</anchorfile>
+      <anchor>aa225a0e44a01fa16e68fbdef891721d4aaa0c065485bb1c45aa054fb487feb4fc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_file_type_info_comp.html</anchorfile>
+      <anchor>a987ff1fbcb1600ee26cc7dddf090e577</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classifile_1_1_c_file_type_info_comp.html</anchorfile>
+      <anchor>a90145770f14f3e639675793f21d7e1c6</anchor>
+      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classifile_1_1_c_file_type_info_comp.html</anchorfile>
+      <anchor>af61004b13daf5dae0cd6b5635cf44428</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::CFileWriteArchive</name>
+    <filename>classifile_1_1_c_file_write_archive.html</filename>
+    <base>iser::CBinaryWriteArchiveBase</base>
+    <base>ifile::CFileArchiveInfo</base>
+    <class kind="struct">ifile::CFileWriteArchive::TagStackElement</class>
+    <member kind="typedef">
+      <type>iser::CBinaryWriteArchiveBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_file_write_archive.html</anchorfile>
+      <anchor>aaf9e8282af1d76cac1d6efb3f627acd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CFileArchiveInfo</type>
+      <name>BaseClass2</name>
+      <anchorfile>classifile_1_1_c_file_write_archive.html</anchorfile>
+      <anchor>ac74ce31db748a06341ee4a43c5e6e4de</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CFileWriteArchive</name>
+      <anchorfile>classifile_1_1_c_file_write_archive.html</anchorfile>
+      <anchor>aa6b0bb99d4c6959a948bc05fd2579fac</anchor>
+      <arglist>(const QString &amp;filePath, const iser::IVersionInfo *versionInfoPtr=NULL, bool supportTagSkipping=true, bool serializeHeader=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsArchiveValid</name>
+      <anchorfile>classifile_1_1_c_file_write_archive.html</anchorfile>
+      <anchor>aed694f429a3d1a1df4fc52b6bcfe978b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Flush</name>
+      <anchorfile>classifile_1_1_c_file_write_archive.html</anchorfile>
+      <anchor>afd6e2cc74cc61c4a6255817398edbeca</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsTagSkippingSupported</name>
+      <anchorfile>classifile_1_1_c_file_write_archive.html</anchorfile>
+      <anchor>a87880cbf9f22200fda714acd95364a32</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>BeginTag</name>
+      <anchorfile>classifile_1_1_c_file_write_archive.html</anchorfile>
+      <anchor>aa916bc5ed885551a4f46b49c144664b0</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>EndTag</name>
+      <anchorfile>classifile_1_1_c_file_write_archive.html</anchorfile>
+      <anchor>abc6270ed63d8266382863591b3235f02</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ProcessData</name>
+      <anchorfile>classifile_1_1_c_file_write_archive.html</anchorfile>
+      <anchor>a459620032ca511bd5e68446152bda45b</anchor>
+      <arglist>(void *data, int size)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>ifile::CFileWriteArchive::TagStackElement</name>
+    <filename>structifile_1_1_c_file_write_archive_1_1_tag_stack_element.html</filename>
+    <member kind="variable">
+      <type>quint32</type>
+      <name>tagBinaryId</name>
+      <anchorfile>structifile_1_1_c_file_write_archive_1_1_tag_stack_element.html</anchorfile>
+      <anchor>abcaaa3274cd5c2b736c36c6b51fa9e92</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>quint32</type>
+      <name>endFieldPosition</name>
+      <anchorfile>structifile_1_1_c_file_write_archive_1_1_tag_stack_element.html</anchorfile>
+      <anchor>aa17675f2b74881c363c1f611ffa0f985</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -27061,6 +22115,154 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>ifile::CTextFileLogComp</name>
+    <filename>classifile_1_1_c_text_file_log_comp.html</filename>
+    <base>ibase::CStreamLogCompBase</base>
+    <member kind="typedef">
+      <type>CStreamLogCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_text_file_log_comp.html</anchorfile>
+      <anchor>a26732102eeb6d4a8df8a52444fe4244f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classifile_1_1_c_text_file_log_comp.html</anchorfile>
+      <anchor>aacec8e34b4d7e6b85af6b56465a5c4bd</anchor>
+      <arglist>(m_fileNameModelCompPtr, m_fileNameCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CTextFileLogComp</name>
+      <anchorfile>classifile_1_1_c_text_file_log_comp.html</anchorfile>
+      <anchor>ad996407e1858701c411d5964cb411ba0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>WriteText</name>
+      <anchorfile>classifile_1_1_c_text_file_log_comp.html</anchorfile>
+      <anchor>acec692d30798c19f23ab052fea84459d</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>NewLine</name>
+      <anchorfile>classifile_1_1_c_text_file_log_comp.html</anchorfile>
+      <anchor>a791b47b244f06112dea00b6f3f104ff2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classifile_1_1_c_text_file_log_comp.html</anchorfile>
+      <anchor>a870ad0291d422c489b5055829b2ce677</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classifile_1_1_c_text_file_log_comp.html</anchorfile>
+      <anchor>ac26ec2b439ee3b2eafb058aba1ea9462</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::CXmlFileReadArchive</name>
+    <filename>classifile_1_1_c_xml_file_read_archive.html</filename>
+    <base>iser::CXmlStreamReadArchiveBase</base>
+    <base>ifile::CFileArchiveInfo</base>
+    <member kind="typedef">
+      <type>iser::CXmlStreamReadArchiveBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_xml_file_read_archive.html</anchorfile>
+      <anchor>aff82d2a97018553919bd837d1dea17ec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CFileArchiveInfo</type>
+      <name>BaseClass2</name>
+      <anchorfile>classifile_1_1_c_xml_file_read_archive.html</anchorfile>
+      <anchor>accb1f095c1961e209a97e1d748ee4106</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CXmlFileReadArchive</name>
+      <anchorfile>classifile_1_1_c_xml_file_read_archive.html</anchorfile>
+      <anchor>a1cf46489290916b7b0ac922acbcda45a</anchor>
+      <arglist>(const QString &amp;filePath, bool serializeHeader=true, const iser::CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CXmlFileReadArchive</name>
+      <anchorfile>classifile_1_1_c_xml_file_read_archive.html</anchorfile>
+      <anchor>ad72dfcae92b4a463c6077cf2645dbffb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DecorateMessage</name>
+      <anchorfile>classifile_1_1_c_xml_file_read_archive.html</anchorfile>
+      <anchor>adfbb1a67f75ba9cce07dd2b104d28b61</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::CXmlFileWriteArchive</name>
+    <filename>classifile_1_1_c_xml_file_write_archive.html</filename>
+    <base>iser::CXmlWriteArchiveBase</base>
+    <base>ifile::CFileArchiveInfo</base>
+    <member kind="typedef">
+      <type>iser::CXmlWriteArchiveBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_xml_file_write_archive.html</anchorfile>
+      <anchor>adf2b2ccaae08e63be40d5e394cf3641f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CFileArchiveInfo</type>
+      <name>BaseClass2</name>
+      <anchorfile>classifile_1_1_c_xml_file_write_archive.html</anchorfile>
+      <anchor>a250254ac4adee9581b6b23ee36862fdd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CXmlFileWriteArchive</name>
+      <anchorfile>classifile_1_1_c_xml_file_write_archive.html</anchorfile>
+      <anchor>ae4b9658dba0d663bf8c59c1effea6c9e</anchor>
+      <arglist>(const QString &amp;filePath, const iser::IVersionInfo *versionInfoPtr=NULL, bool serializeHeader=true, const iser::CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CXmlFileWriteArchive</name>
+      <anchorfile>classifile_1_1_c_xml_file_write_archive.html</anchorfile>
+      <anchor>aa02c9be464ec40e5f3eb808705c1f1bd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>WriteString</name>
+      <anchorfile>classifile_1_1_c_xml_file_write_archive.html</anchorfile>
+      <anchor>a6f933ac6bdf74060908e3d805b339bf0</anchor>
+      <arglist>(const QByteArray &amp;value)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::IFileArchiveInfo</name>
+    <filename>classifile_1_1_i_file_archive_info.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const QString &amp;</type>
+      <name>GetCurrentFilePath</name>
+      <anchorfile>classifile_1_1_i_file_archive_info.html</anchorfile>
+      <anchor>a76b4848ea8950fa3722f3c2dcec56584</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>ifile::IFileListProvider</name>
     <filename>classifile_1_1_i_file_list_provider.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
@@ -27126,6 +22328,320 @@
       <anchorfile>classifile_1_1_i_file_name_param.html</anchorfile>
       <anchor>aeeb97c75a7d380ed9b99ea3bec451b8a</anchor>
       <arglist>(const QString &amp;path)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::IFilePersistence</name>
+    <filename>classifile_1_1_i_file_persistence.html</filename>
+    <base virtualness="virtual">ifile::IFileTypeInfo</base>
+    <member kind="enumeration">
+      <name>OperationState</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>a674791f4173d2b57c1e6d6aa30228f76</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>StateOk</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>a674791f4173d2b57c1e6d6aa30228f76a9100e86ea8e2ca89b14a8ab59914ee8d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>StateAborted</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>a674791f4173d2b57c1e6d6aa30228f76a6260f5344ae42889d2ee230406372f97</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>StateFailed</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>a674791f4173d2b57c1e6d6aa30228f76aeb47b187c7d890ae515d35ebdabd3464</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>ErrorType</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>acfb011fb0ecccb52b85c52881552ec6e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ET_NO_WRITE_PERMISSIONS</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>acfb011fb0ecccb52b85c52881552ec6eaf324b5c735ae1d026b5332359f5eb625</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ET_NO_READ_PERMISSIONS</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>acfb011fb0ecccb52b85c52881552ec6ea2b54136a4bd2a25a44b1051f34352ca9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ET_FILE_NOT_EXIST</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>acfb011fb0ecccb52b85c52881552ec6ea2b2029b1572f7d8353782db9d8f93819</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>a24e35495e0c1f4d128ed1513c8907376</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_BAD_OBJECT_TYPE</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>a24e35495e0c1f4d128ed1513c8907376aea48adb715464da4c32c8537d5051f57</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_CANNOT_LOAD</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>a24e35495e0c1f4d128ed1513c8907376a98b0c49404ab528a72d1778acfa9bd0f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_CANNOT_SAVE</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>a24e35495e0c1f4d128ed1513c8907376a43ac0d6482c1c806777158e9e9e0cc0b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsOperationSupported</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>a5546b646fa5d4dc32156b06a3cd3e13f</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>LoadFromFile</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>ac3e349d549b4aeabc33a4555d2482385</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>SaveToFile</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>afe328c38bf1f522f666fe2bf72beeca3</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::IFilePersistenceInfo</name>
+    <filename>classifile_1_1_i_file_persistence_info.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="enumeration">
+      <name>OperationType</name>
+      <anchorfile>classifile_1_1_i_file_persistence_info.html</anchorfile>
+      <anchor>a5ec4c7b4003e0dcf02fc98e847513a35</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>OT_UNKNOWN</name>
+      <anchorfile>classifile_1_1_i_file_persistence_info.html</anchorfile>
+      <anchor>a5ec4c7b4003e0dcf02fc98e847513a35ac885fa8c8263ccb89a938d29af4fa5d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>OT_LOAD</name>
+      <anchorfile>classifile_1_1_i_file_persistence_info.html</anchorfile>
+      <anchor>a5ec4c7b4003e0dcf02fc98e847513a35a174ce9f9c115a7774094d67d2c2f6722</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>OT_SAVE</name>
+      <anchorfile>classifile_1_1_i_file_persistence_info.html</anchorfile>
+      <anchor>a5ec4c7b4003e0dcf02fc98e847513a35a06aded30b5b0b6b3e91be6ad9089b3d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>PathType</name>
+      <anchorfile>classifile_1_1_i_file_persistence_info.html</anchorfile>
+      <anchor>aedaa95c7411b564c00535ce42c0cebf5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PT_COMPLETE</name>
+      <anchorfile>classifile_1_1_i_file_persistence_info.html</anchorfile>
+      <anchor>aedaa95c7411b564c00535ce42c0cebf5af99742f7dee9ef51f200c53da205154d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>OT_FILENAME</name>
+      <anchorfile>classifile_1_1_i_file_persistence_info.html</anchorfile>
+      <anchor>aedaa95c7411b564c00535ce42c0cebf5a2cdab25023d9ed886fd2434da507db43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>OT_DIR</name>
+      <anchorfile>classifile_1_1_i_file_persistence_info.html</anchorfile>
+      <anchor>aedaa95c7411b564c00535ce42c0cebf5a8dce85e2eb00c2bba9f0895fc63bd01a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetLastFilePath</name>
+      <anchorfile>classifile_1_1_i_file_persistence_info.html</anchorfile>
+      <anchor>a2f86e9b5a4f767d18bb4246636e7222d</anchor>
+      <arglist>(OperationType operationType=OT_UNKNOWN, PathType pathType=PT_COMPLETE) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::IFileTypeInfo</name>
+    <filename>classifile_1_1_i_file_type_info.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="enumeration">
+      <name>QueryFlags</name>
+      <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
+      <anchor>a327f9848e8ae67a4a3c227b62b07fb1a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>QF_SAVE</name>
+      <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
+      <anchor>a327f9848e8ae67a4a3c227b62b07fb1aac65cfe44dd19de2a48738f0175386d1d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>QF_LOAD</name>
+      <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
+      <anchor>a327f9848e8ae67a4a3c227b62b07fb1aaaa7d8800b08ce989914b9782c6820dca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>QF_FILE</name>
+      <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
+      <anchor>a327f9848e8ae67a4a3c227b62b07fb1aa82cd5447d3bc54b765421f5b50c617ab</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>QF_DIRECTORY</name>
+      <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
+      <anchor>a327f9848e8ae67a4a3c227b62b07fb1aa62e2f4e2f6c7481be353a5929d750a1c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>QF_ANONYMOUS</name>
+      <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
+      <anchor>a327f9848e8ae67a4a3c227b62b07fb1aa0c229a4527df0a04ac6d68e494e66f88</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
+      <anchor>acb9ac14845f9ea67dca2e7a24b391cde</anchor>
+      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
+      <anchor>ab6cec8df21bf8869a8b5e85c2b48a682</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::TFileSerializerComp</name>
+    <filename>classifile_1_1_t_file_serializer_comp.html</filename>
+    <templarg></templarg>
+    <templarg></templarg>
+    <base>ifile::CFileSerializerCompBase</base>
+    <class kind="class">ifile::TFileSerializerComp::ReadArchiveEx</class>
+    <class kind="class">ifile::TFileSerializerComp::WriteArchiveEx</class>
+    <member kind="typedef">
+      <type>CFileSerializerCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_t_file_serializer_comp.html</anchorfile>
+      <anchor>ab599dfa4915ab18bdebe588b89a64414</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>LoadFromFile</name>
+      <anchorfile>classifile_1_1_t_file_serializer_comp.html</anchorfile>
+      <anchor>a3abdf0610148cdf646e744ecb4c082c0</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>SaveToFile</name>
+      <anchorfile>classifile_1_1_t_file_serializer_comp.html</anchorfile>
+      <anchor>ac47b8a80bdb7078648f06e633f22b19c</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnReadError</name>
+      <anchorfile>classifile_1_1_t_file_serializer_comp.html</anchorfile>
+      <anchor>a9e58a952339031ddf10119798c3bce77</anchor>
+      <arglist>(const ReadArchive &amp;archive, const istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::TFileSerializerComp::ReadArchiveEx</name>
+    <filename>classifile_1_1_t_file_serializer_comp_1_1_read_archive_ex.html</filename>
+    <member kind="typedef">
+      <type>ReadArchive</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_t_file_serializer_comp_1_1_read_archive_ex.html</anchorfile>
+      <anchor>a663502a1eed6684d76c344ca79fb0e19</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ReadArchiveEx</name>
+      <anchorfile>classifile_1_1_t_file_serializer_comp_1_1_read_archive_ex.html</anchorfile>
+      <anchor>abcd899dd00a97a8d9764318523093e47</anchor>
+      <arglist>(const QString &amp;filePath, const TFileSerializerComp *loggerPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsLogConsumed</name>
+      <anchorfile>classifile_1_1_t_file_serializer_comp_1_1_read_archive_ex.html</anchorfile>
+      <anchor>af65760373fc3f129a1fa62c6662e58f0</anchor>
+      <arglist>(const istd::IInformationProvider::InformationCategory *, const int *flagsPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SendLogMessage</name>
+      <anchorfile>classifile_1_1_t_file_serializer_comp_1_1_read_archive_ex.html</anchorfile>
+      <anchor>a053ab75acaabba1e6d9d86d8e435f408</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::TFileSerializerComp::WriteArchiveEx</name>
+    <filename>classifile_1_1_t_file_serializer_comp_1_1_write_archive_ex.html</filename>
+    <member kind="typedef">
+      <type>WriteArchive</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_t_file_serializer_comp_1_1_write_archive_ex.html</anchorfile>
+      <anchor>a4e3f5bb1ebfcb36328988227bde473ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>WriteArchiveEx</name>
+      <anchorfile>classifile_1_1_t_file_serializer_comp_1_1_write_archive_ex.html</anchorfile>
+      <anchor>aa37de8d2986fde11f6d193ebc655b33c</anchor>
+      <arglist>(const QString &amp;filePath, const iser::IVersionInfo *infoPtr, const TFileSerializerComp *loggerPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsLogConsumed</name>
+      <anchorfile>classifile_1_1_t_file_serializer_comp_1_1_write_archive_ex.html</anchorfile>
+      <anchor>a650722b92af933e6c1cb19f5941ad238</anchor>
+      <arglist>(const istd::IInformationProvider::InformationCategory *, const int *flagsPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SendLogMessage</name>
+      <anchorfile>classifile_1_1_t_file_serializer_comp_1_1_write_archive_ex.html</anchorfile>
+      <anchor>a45995e6a3cd152c6e2560fe5ec577b2a</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -27453,9 +22969,8 @@
   <compound kind="class">
     <name>iimg::CBitmapLoaderComp</name>
     <filename>classiimg_1_1_c_bitmap_loader_comp.html</filename>
-    <base>QObject</base>
     <base>ibase::TLoggerCompWrap</base>
-    <base virtualness="virtual">iser::IFileLoader</base>
+    <base virtualness="virtual">ifile::IFilePersistence</base>
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classiimg_1_1_c_bitmap_loader_comp.html</anchorfile>
@@ -28824,7 +24339,7 @@
     <member kind="enumvalue">
       <name>PRECISION</name>
       <anchorfile>classimath_1_1_c_double_manip.html</anchorfile>
-      <anchor>abb18076f5fee9fc9fb04fd4c069d2b9fa9c44114731a4fbde7f474759bcb26fa4</anchor>
+      <anchor>af91456f078ffaa8d334fc7b1f35ca858a9c44114731a4fbde7f474759bcb26fa4</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -29892,7 +25407,7 @@
     <member kind="enumvalue">
       <name>MAX_ELEMENTS_COUNT</name>
       <anchorfile>classimath_1_1_t_fast_vector.html</anchorfile>
-      <anchor>a887cb8a3482c08199f7142c94926466ea9d7088773a8584e0410aee31b776e2ba</anchor>
+      <anchor>a2f65d3cc933b8aa7337ab7d9c7f1ce96a9d7088773a8584e0410aee31b776e2ba</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -32753,6 +28268,591 @@
     </member>
   </compound>
   <compound kind="namespace">
+    <name>ipackage</name>
+    <filename>namespaceipackage.html</filename>
+    <class kind="class">ipackage::CComponentAccessor</class>
+    <class kind="class">ipackage::CPackagesLoaderComp</class>
+    <class kind="class">ipackage::CRegistriesManagerComp</class>
+    <class kind="class">ipackage::CRegistryCodeSaverComp</class>
+  </compound>
+  <compound kind="class">
+    <name>ipackage::CComponentAccessor</name>
+    <filename>classipackage_1_1_c_component_accessor.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CComponentAccessor</name>
+      <anchorfile>classipackage_1_1_c_component_accessor.html</anchorfile>
+      <anchor>ac12cd540b46e4da20bddf289fc187c47</anchor>
+      <arglist>(const QString &amp;registryFile, const QString &amp;configFile=QString())</arglist>
+    </member>
+    <member kind="function">
+      <type>InterfaceType *</type>
+      <name>GetComponentInterface</name>
+      <anchorfile>classipackage_1_1_c_component_accessor.html</anchorfile>
+      <anchor>af825bae09991e2e31518806f969e3706</anchor>
+      <arglist>(const QByteArray &amp;componentId=QByteArray())</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ipackage::CPackagesLoaderComp</name>
+    <filename>classipackage_1_1_c_packages_loader_comp.html</filename>
+    <base>ibase::TLoggerCompWrap</base>
+    <base>icomp::CEnvironmentManagerBase</base>
+    <base virtualness="virtual">icomp::IRegistryLoader</base>
+    <class kind="class">ipackage::CPackagesLoaderComp::LogingRegistry</class>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classipackage_1_1_c_packages_loader_comp.html</anchorfile>
+      <anchor>a07064a1d3d2167faa229b4618f17d612</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_CANNOT_REGISTER</name>
+      <anchorfile>classipackage_1_1_c_packages_loader_comp.html</anchorfile>
+      <anchor>a07064a1d3d2167faa229b4618f17d612a1c1bd4e550fa23629aa1b6a4be422189</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_CANNOT_CREATE_ELEMENT</name>
+      <anchorfile>classipackage_1_1_c_packages_loader_comp.html</anchorfile>
+      <anchor>a07064a1d3d2167faa229b4618f17d612a26362c8c6ff7772773ed19441bdd8528</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classipackage_1_1_c_packages_loader_comp.html</anchorfile>
+      <anchor>a0c35c6c5db8c2af8cf328fea9ffdecf5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>icomp::CEnvironmentManagerBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classipackage_1_1_c_packages_loader_comp.html</anchorfile>
+      <anchor>a8394b87cadcdb7c5da2e31998ea4c547</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const icomp::IRegistry *</type>
+      <name>GetRegistryFromFile</name>
+      <anchorfile>classipackage_1_1_c_packages_loader_comp.html</anchorfile>
+      <anchor>ae09433f3793cfa7b5e8f99cf600371ef</anchor>
+      <arglist>(const QString &amp;path) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetConfigFilePath</name>
+      <anchorfile>classipackage_1_1_c_packages_loader_comp.html</anchorfile>
+      <anchor>af7929e6da388c62ee9920dbc37c2c3c7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>LoadPackages</name>
+      <anchorfile>classipackage_1_1_c_packages_loader_comp.html</anchorfile>
+      <anchor>acdcb00907336c23f7bb4bfbc62beb7ae</anchor>
+      <arglist>(const QString &amp;configFilePath=QString())</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPackageType</name>
+      <anchorfile>classipackage_1_1_c_packages_loader_comp.html</anchorfile>
+      <anchor>a11ed1d96c43b93ba70ddc652d3b52732</anchor>
+      <arglist>(const QByteArray &amp;packageId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetPackagePath</name>
+      <anchorfile>classipackage_1_1_c_packages_loader_comp.html</anchorfile>
+      <anchor>a5c684b8e23ec626bfc5296beca904339</anchor>
+      <arglist>(const QByteArray &amp;packageId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const icomp::IRegistry *</type>
+      <name>GetRegistry</name>
+      <anchorfile>classipackage_1_1_c_packages_loader_comp.html</anchorfile>
+      <anchor>a7f55ad8fcb7b752b44919ea1261f1261</anchor>
+      <arglist>(const icomp::CComponentAddress &amp;address, const icomp::IRegistry *contextRegistryPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ComponentAddresses</type>
+      <name>GetComponentAddresses</name>
+      <anchorfile>classipackage_1_1_c_packages_loader_comp.html</anchorfile>
+      <anchor>a52c56a771af12a501b341cd495aa4c2a</anchor>
+      <arglist>(int typeFlag=CTF_ALL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classipackage_1_1_c_packages_loader_comp.html</anchorfile>
+      <anchor>ac5dca766d6494fad8d4ac3dacdab4786</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RegisterPackageFile</name>
+      <anchorfile>classipackage_1_1_c_packages_loader_comp.html</anchorfile>
+      <anchor>ab6f94f2e3ee248b81ddd105e24336737</anchor>
+      <arglist>(const QString &amp;file)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RegisterPackagesDir</name>
+      <anchorfile>classipackage_1_1_c_packages_loader_comp.html</anchorfile>
+      <anchor>a619fce33fc94e9f29a3564f63d60805a</anchor>
+      <arglist>(const QString &amp;subDir)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>LoadConfigFile</name>
+      <anchorfile>classipackage_1_1_c_packages_loader_comp.html</anchorfile>
+      <anchor>a27c29045cbbda807b108313710efc56f</anchor>
+      <arglist>(const QString &amp;configFile)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>icomp::GetPackageInfoFunc</type>
+      <name>GetPackageFunction</name>
+      <anchorfile>classipackage_1_1_c_packages_loader_comp.html</anchorfile>
+      <anchor>a84f6cc8cd53e592f4e438e0504baa890</anchor>
+      <arglist>(const QFileInfo &amp;fileInfo)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CheckAndMarkPath</name>
+      <anchorfile>classipackage_1_1_c_packages_loader_comp.html</anchorfile>
+      <anchor>aaf9c2701eb3ca2a74e914cc9094ae047</anchor>
+      <arglist>(const QDir &amp;directory, const QString &amp;path, QString &amp;resultPath) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ipackage::CPackagesLoaderComp::LogingRegistry</name>
+    <filename>classipackage_1_1_c_packages_loader_comp_1_1_loging_registry.html</filename>
+    <base>icomp::CRegistry</base>
+    <member kind="typedef">
+      <type>icomp::CRegistry</type>
+      <name>BaseClass</name>
+      <anchorfile>classipackage_1_1_c_packages_loader_comp_1_1_loging_registry.html</anchorfile>
+      <anchor>a62ff65ca3bf90350fbca91187e0be4cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>LogingRegistry</name>
+      <anchorfile>classipackage_1_1_c_packages_loader_comp_1_1_loging_registry.html</anchorfile>
+      <anchor>a8ecd8d9d0137de0d4def6a93c467cb84</anchor>
+      <arglist>(CPackagesLoaderComp *parentPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ElementInfo *</type>
+      <name>InsertElementInfo</name>
+      <anchorfile>classipackage_1_1_c_packages_loader_comp_1_1_loging_registry.html</anchorfile>
+      <anchor>a79c27638022e2105f6dd9cfbda89a282</anchor>
+      <arglist>(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address, bool ensureElementCreated=true)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ipackage::CRegistriesManagerComp</name>
+    <filename>classipackage_1_1_c_registries_manager_comp.html</filename>
+    <base>ibase::TLoggerCompWrap</base>
+    <base virtualness="virtual">icomp::IExtPackagesManager</base>
+    <base virtualness="virtual">icomp::IRegistriesManager</base>
+    <base virtualness="virtual">icomp::IRegistryLoader</base>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
+      <anchor>adcb6bf8e698f35e4750eda4370683c8a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_CANNOT_REGISTER</name>
+      <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
+      <anchor>adcb6bf8e698f35e4750eda4370683c8aa7e9815a3741e1d1869c53b077567757b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_CANNOT_CREATE_ELEMENT</name>
+      <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
+      <anchor>adcb6bf8e698f35e4750eda4370683c8aaa3987bf8d1775d3bc8a7b73426951870</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
+      <anchor>a183506d674d6a55a68e0b980b02f4ab4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>LoadPackages</name>
+      <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
+      <anchor>ae3c698d26efd240b33ed641615a5a0c0</anchor>
+      <arglist>(const QString &amp;configFilePath=QString())</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPackageType</name>
+      <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
+      <anchor>a5562e6967d3bc7dba825e3051f446f61</anchor>
+      <arglist>(const QByteArray &amp;packageId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetPackagePath</name>
+      <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
+      <anchor>acc5654653a83ec777537443ef3105256</anchor>
+      <arglist>(const QByteArray &amp;packageId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual PathList</type>
+      <name>GetConfigurationPathList</name>
+      <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
+      <anchor>af292494f123bd950012338fa9081f0bb</anchor>
+      <arglist>(PathType pathType) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const icomp::IRegistry *</type>
+      <name>GetRegistry</name>
+      <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
+      <anchor>ae01aba15987aa766562a7ff7ec4575c5</anchor>
+      <arglist>(const icomp::CComponentAddress &amp;address, const icomp::IRegistry *contextRegistryPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const icomp::IRegistry *</type>
+      <name>GetRegistryFromFile</name>
+      <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
+      <anchor>ae6891e74e7f18761dcca2179df44a9e6</anchor>
+      <arglist>(const QString &amp;path) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>RegisterPackageFile</name>
+      <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
+      <anchor>aa369781b1cbf8713a541e8682bd5a02a</anchor>
+      <arglist>(const QString &amp;file)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>RegisterPackagesDir</name>
+      <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
+      <anchor>a3d24bdc6d34bac8f829aa0861db00921</anchor>
+      <arglist>(const QString &amp;subDir)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>LoadConfigFile</name>
+      <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
+      <anchor>a788836068b3a14736c37473be03d84a7</anchor>
+      <arglist>(const QString &amp;configFile)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CheckAndMarkPath</name>
+      <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
+      <anchor>ab98213a7007e2677c779a82dd361d4b1</anchor>
+      <arglist>(PathList &amp;pathList, const QDir &amp;directory, const QString &amp;path, QString &amp;resultPath) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
+      <anchor>a72493157bfee0fab1753b23a68a746af</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ipackage::CRegistryCodeSaverComp</name>
+    <filename>classipackage_1_1_c_registry_code_saver_comp.html</filename>
+    <base>ibase::TLoggerCompWrap</base>
+    <base>ifile::IFilePersistence</base>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>ab3c9f026a0c799e044c94b1852b80f80</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_UNDEFINED_PACKAGE</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>ab3c9f026a0c799e044c94b1852b80f80a1b1443dcbec4cfcaa1ca763234e86fae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_UNDEFINED_COMPONENT</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>ab3c9f026a0c799e044c94b1852b80f80adbbdf5b4aa4a643f14d11f8fd277ef59</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_UNDEFINED_ATTR_TYPE</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>ab3c9f026a0c799e044c94b1852b80f80a179c1a9f32cb178d3803151ea19c6e59</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_UNKNOWN_PACKAGE</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>ab3c9f026a0c799e044c94b1852b80f80af0bfcf35c21e776fae8c91d403dce9ad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>WorkingMode</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>afee1ffd0aaa620069434b21a1fde6d94</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>WM_SOURCES</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>afee1ffd0aaa620069434b21a1fde6d94aedc18644a593902f89cd6b6194559cff</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>WM_DEPENDENCIES</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>afee1ffd0aaa620069434b21a1fde6d94a510954eef316c1c754ffd7e9b4b9105f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ibase::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a415018795028aedfb8c97b4b28528242</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>ade93df136dbced04e1a5c5b5384464ee</anchor>
+      <arglist>(m_extPackagesManagerCompPtr, m_packagesManagerCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CRegistryCodeSaverComp</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a58212abcdfec4314b18ea8272a2a646f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOperationSupported</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>abfcde197def62d3a3d1051034c676cdb</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>LoadFromFile</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>aab03c7fc4a5f1458e74217d06c25a323</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>SaveToFile</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>aae462949e73206c312df53ea0d4a7caa</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>aabb50b01f12bb84ded0bd28900f16893</anchor>
+      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>abab2835826874404e2989694d4f032c6</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const </arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>QSet&lt; icomp::CComponentAddress &gt;</type>
+      <name>Addresses</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a64cf66eaa47c35a2834c78b5e480c506</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>QSet&lt; QByteArray &gt;</type>
+      <name>Ids</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>adbd81156169990513fd219561d5ef6ef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>AppendAddresses</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>abc6f15ccfcacfc2d2cbbaa91828d5e95</anchor>
+      <arglist>(const icomp::IRegistry &amp;registry, Addresses &amp;realAddresses, Addresses &amp;composedAddresses) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Ids</type>
+      <name>ExtractPackageIds</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a67107018da83c8edccd02ab5acc53a8d</anchor>
+      <arglist>(const Addresses &amp;addresses) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Ids</type>
+      <name>ExtractComponentIds</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a88364f672677fa391a28829d119ab0da</anchor>
+      <arglist>(const Addresses &amp;addresses, const QByteArray &amp;packageId) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteHeader</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a3f4159d5f0da9e258a9afca964904832</anchor>
+      <arglist>(const QByteArray &amp;className, const icomp::IRegistry &amp;registry, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, QTextStream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteIncludes</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a0acf5eca391e0c6b8b4a4289c23aec77</anchor>
+      <arglist>(const QByteArray &amp;className, const Addresses &amp;addresses, QTextStream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteClassDefinitions</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>aeaf4d7f5f729036dd3be15ba719532b0</anchor>
+      <arglist>(const QByteArray &amp;className, const icomp::IRegistry &amp;registry, const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, QTextStream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteDependencies</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>aa324f96ad2d2e606daf09f6cbdd24e29</anchor>
+      <arglist>(const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, QTextStream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteRegistryInfo</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a6e1b9de0c76a348700e89800a5734f32</anchor>
+      <arglist>(const icomp::IRegistry &amp;registry, const QByteArray &amp;registryCallPrefix, QTextStream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteComponentInfo</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a6294a2ef49ca23139e7570d82f67f856</anchor>
+      <arglist>(const icomp::IRegistry &amp;registry, const QByteArray &amp;registryCallPrefix, const QByteArray &amp;componentId, const icomp::IRegistry::ElementInfo &amp;componentInfo, QTextStream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteAttribute</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>aa2a9f5186d2e5b06b6d87d10daca7669</anchor>
+      <arglist>(const QByteArray &amp;attributeId, const QByteArray &amp;componentId, const QByteArray &amp;attributeName, const iser::IObject &amp;attribute, QTextStream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteRegistryTranslation</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a120fd2421c05dda35ddd439f9095b23a</anchor>
+      <arglist>(const icomp::IRegistry &amp;registry, bool &amp;translationFound, QTextStream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteComponentTranslation</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a9c127178d562a3a0ba8d1b54385f94a0</anchor>
+      <arglist>(const QByteArray &amp;componentId, const icomp::IRegistry::ElementInfo &amp;componentInfo, bool &amp;translationFound, QTextStream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteRegistryClassDeclaration</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a856ccf290a61453563f7ce8d73dc6bc5</anchor>
+      <arglist>(const QByteArray &amp;baseClassName, const QByteArray &amp;registryClassName, const icomp::IRegistry &amp;registry, QTextStream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteRegistryClassBody</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a14248cc635b049dd3f0c4ea376626810</anchor>
+      <arglist>(const QByteArray &amp;baseClassName, const QByteArray &amp;registryClassName, const icomp::IRegistry &amp;registry, QTextStream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteDeserializingCode</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a50f2d3c3a98dbbf0eea37c22de3e78de</anchor>
+      <arglist>(const iser::ISerializable &amp;object, QTextStream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>GetAttributeValue</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>aa339add8b3a720812eafee76ad4d7aab</anchor>
+      <arglist>(const iser::ISerializable &amp;attribute, QByteArray &amp;valueString, QByteArray &amp;typeName) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>GetMultiAttributeValue</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a72fbc587bb6c610868cdf5441a65a0fd</anchor>
+      <arglist>(const iser::ISerializable &amp;attribute, QList&lt; QByteArray &gt; &amp;valueStrings, QByteArray &amp;typeName) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>NextLine</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a974cfbb99f45a2a37a4249eafdc044bd</anchor>
+      <arglist>(QTextStream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>int</type>
+      <name>ChangeIndent</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a79e040aa533e852f306c9ab88f092148</anchor>
+      <arglist>(int difference) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>ExtractInfoFromFile</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a1278b2bef3571523ee6aa6f7176cee7e</anchor>
+      <arglist>(const QString &amp;filePath, QByteArray &amp;className, QString &amp;baseFilePath) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QByteArray</type>
+      <name>GetPackageName</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a445ced209034e5528a9692f5b0f639fd</anchor>
+      <arglist>(const QByteArray &amp;packageId) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QByteArray</type>
+      <name>GetStringLiteral</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a9b011f3b905a8b5ac54cc1128111a0f9</anchor>
+      <arglist>(const QString &amp;text) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QByteArray</type>
+      <name>GetIdValueLiteral</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a7932d47e410225f8d5b8e257e51d39cc</anchor>
+      <arglist>(const QByteArray &amp;text) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QByteArray</type>
+      <name>GetValidIdentifier</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a5dca541af361e9197bf7ab958b4371f4</anchor>
+      <arglist>(const QByteArray &amp;identifier) const </arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
     <name>iprm</name>
     <filename>namespaceiprm.html</filename>
     <class kind="class">iprm::CComposedParamsSetComp</class>
@@ -34586,7 +30686,7 @@
     <member kind="enumvalue">
       <name>NO_SELECTION</name>
       <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
-      <anchor>a991db11ac0dc689ba0b1d31a7f806f8ba7c687b23162301178cafe954f53c7702</anchor>
+      <anchor>a9ea81a6e88b19a936ed2e63265117c27a7c687b23162301178cafe954f53c7702</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -34711,7 +30811,6 @@
     <filename>namespaceiqt.html</filename>
     <class kind="class">iqt::CApplicationSettingsProviderComp</class>
     <class kind="class">iqt::CClipboardSerializerComp</class>
-    <class kind="class">iqt::CFileInfoCopyComp</class>
     <class kind="class">iqt::CIniSettingsProviderComp</class>
     <class kind="class">iqt::CNetworkWriteArchive</class>
     <class kind="class">iqt::CRenderedObjectFileLoaderComp</class>
@@ -34848,7 +30947,7 @@
     <name>iqt::CClipboardSerializerComp</name>
     <filename>classiqt_1_1_c_clipboard_serializer_comp.html</filename>
     <base>ibase::TLoggerCompWrap</base>
-    <base virtualness="virtual">iser::IFileLoader</base>
+    <base virtualness="virtual">ifile::IFilePersistence</base>
     <member kind="typedef">
       <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -34893,70 +30992,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqt::CFileInfoCopyComp</name>
-    <filename>classiqt_1_1_c_file_info_copy_comp.html</filename>
-    <base>QObject</base>
-    <base>ibase::TLoggerCompWrap</base>
-    <base virtualness="virtual">ibase::IFileConvertCopy</base>
-    <member kind="enumeration">
-      <name>MessageId</name>
-      <anchorfile>classiqt_1_1_c_file_info_copy_comp.html</anchorfile>
-      <anchor>a864bcab4d6c92ba737c87c106a8441a2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_FILE_INFO</name>
-      <anchorfile>classiqt_1_1_c_file_info_copy_comp.html</anchorfile>
-      <anchor>a864bcab4d6c92ba737c87c106a8441a2ae1fb85d36a983c26cfdde403c1c22fef</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_INPUT_OPEN</name>
-      <anchorfile>classiqt_1_1_c_file_info_copy_comp.html</anchorfile>
-      <anchor>a864bcab4d6c92ba737c87c106a8441a2a6e2956e4f618ad558bc298973e85681a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_OUTPUT_OPEN</name>
-      <anchorfile>classiqt_1_1_c_file_info_copy_comp.html</anchorfile>
-      <anchor>a864bcab4d6c92ba737c87c106a8441a2a2617213f64215a4bcb6a98b5eec60c48</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_LICENSE_OPEN</name>
-      <anchorfile>classiqt_1_1_c_file_info_copy_comp.html</anchorfile>
-      <anchor>a864bcab4d6c92ba737c87c106a8441a2aad2e9814c967c032c85c8f45922714a4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_BAD_TAG</name>
-      <anchorfile>classiqt_1_1_c_file_info_copy_comp.html</anchorfile>
-      <anchor>a864bcab4d6c92ba737c87c106a8441a2a2606daf64bfbb6c517688913eda9c6af</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt_1_1_c_file_info_copy_comp.html</anchorfile>
-      <anchor>aff713baa73e1d26fbb5d8c4658fa0610</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ConvertFiles</name>
-      <anchorfile>classiqt_1_1_c_file_info_copy_comp.html</anchorfile>
-      <anchor>a08b18cfc0d2f1e1a07f0ab905c934c08</anchor>
-      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>ProcessSubstitutionTag</name>
-      <anchorfile>classiqt_1_1_c_file_info_copy_comp.html</anchorfile>
-      <anchor>a70be5ecc4b27697c4d0154091bfdb4a8</anchor>
-      <arglist>(const QString &amp;tag, QString &amp;result) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iqt::CIniSettingsProviderComp</name>
     <filename>classiqt_1_1_c_ini_settings_provider_comp.html</filename>
     <base>icomp::CComponentBase</base>
@@ -34986,7 +31021,6 @@
   <compound kind="class">
     <name>iqt::CNetworkWriteArchive</name>
     <filename>classiqt_1_1_c_network_write_archive.html</filename>
-    <base>QObject</base>
     <base>iser::CMemoryWriteArchive</base>
     <member kind="typedef">
       <type>iser::CMemoryWriteArchive</type>
@@ -35028,7 +31062,7 @@
     <name>iqt::CRenderedObjectFileLoaderComp</name>
     <filename>classiqt_1_1_c_rendered_object_file_loader_comp.html</filename>
     <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">iser::IFileLoader</base>
+    <base virtualness="virtual">ifile::IFilePersistence</base>
     <base virtualness="virtual">iser::ISerializable</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -35253,7 +31287,7 @@
     <name>iqt::CSettingsSerializerComp</name>
     <filename>classiqt_1_1_c_settings_serializer_comp.html</filename>
     <base>ibase::TLoggerCompWrap</base>
-    <base virtualness="virtual">iser::IFileLoader</base>
+    <base virtualness="virtual">ifile::IFilePersistence</base>
     <member kind="typedef">
       <type>ibase::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -35667,7 +31701,7 @@
     <name>iqt::CXmlFileWriteArchive</name>
     <filename>classiqt_1_1_c_xml_file_write_archive.html</filename>
     <base>iser::CWriteArchiveBase</base>
-    <base>iser::CFileArchiveInfo</base>
+    <base>ifile::CFileArchiveInfo</base>
     <base>iser::CXmlDocumentInfoBase</base>
     <member kind="typedef">
       <type>iser::CWriteArchiveBase</type>
@@ -35677,10 +31711,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>iser::CFileArchiveInfo</type>
+      <type>ifile::CFileArchiveInfo</type>
       <name>BaseClass2</name>
       <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a7ab66e167630ae8cc466541f59b80b4a</anchor>
+      <anchor>aaa2f13c1b0457e6748c19a170d028324</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -38958,7 +34992,6 @@
   <compound kind="class">
     <name>iqtgui::CDialogGuiComp</name>
     <filename>classiqtgui_1_1_c_dialog_gui_comp.html</filename>
-    <base>QObject</base>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iqtgui::IDialog</base>
     <base virtualness="virtual">ibase::ICommandsProvider</base>
@@ -39123,10 +35156,9 @@
   <compound kind="class">
     <name>iqtgui::CFileDialogLoaderComp</name>
     <filename>classiqtgui_1_1_c_file_dialog_loader_comp.html</filename>
-    <base>QObject</base>
     <base>ibase::TLoggerCompWrap</base>
-    <base virtualness="virtual">iser::IFileLoader</base>
-    <base virtualness="virtual">iser::IFileLoaderInfo</base>
+    <base virtualness="virtual">ifile::IFilePersistence</base>
+    <base virtualness="virtual">ifile::IFilePersistenceInfo</base>
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
@@ -39192,8 +35224,8 @@
       <type>static void</type>
       <name>AppendLoaderFilterList</name>
       <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>a13bfc6a8db73cf5b9ba79a1cb53898ea</anchor>
-      <arglist>(const iser::IFileTypeInfo &amp;fileTypeInfo, int flags, QStringList &amp;allExt, QStringList &amp;result)</arglist>
+      <anchor>a4dc5b0ff40e793893ab27ee3e1771461</anchor>
+      <arglist>(const ifile::IFileTypeInfo &amp;fileTypeInfo, int flags, QStringList &amp;allExt, QStringList &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>QString</type>
@@ -39210,10 +35242,10 @@
       <arglist>(const QString &amp;filePath, bool isSaving, int &amp;selectionIndex) const </arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>iser::IFileLoader *</type>
+      <type>ifile::IFilePersistence *</type>
       <name>GetLoaderFor</name>
       <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>aa7f52aeb2d19650c3ae0064ce682d19c</anchor>
+      <anchor>a41c9f88981bbd7017aced704c443bb9c</anchor>
       <arglist>(const QString &amp;filePath, int selectionIndex, int flags, bool beQuiet) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -39407,7 +35439,6 @@
   <compound kind="class">
     <name>iqtgui::CGuiComponentBase</name>
     <filename>classiqtgui_1_1_c_gui_component_base.html</filename>
-    <base>QObject</base>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iqtgui::IGuiObject</base>
     <class kind="class">iqtgui::CGuiComponentBase::VisualStatus</class>
@@ -40511,7 +36542,6 @@
   <compound kind="class">
     <name>iqtgui::CSelectableCommandsProviderComp</name>
     <filename>classiqtgui_1_1_c_selectable_commands_provider_comp.html</filename>
-    <base>QObject</base>
     <base>icomp::CComponentBase</base>
     <base protection="protected">TSingleModelObserverBase&lt; iprm::ISelectionParam &gt;</base>
     <base virtualness="virtual">ibase::ICommandsProvider</base>
@@ -41092,7 +37122,6 @@
   <compound kind="class">
     <name>iqtgui::CTextElider</name>
     <filename>classiqtgui_1_1_c_text_elider.html</filename>
-    <base>QObject</base>
     <member kind="function">
       <type></type>
       <name>CTextElider</name>
@@ -41220,7 +37249,6 @@
   <compound kind="class">
     <name>iqtgui::CTreeWidgetFilter</name>
     <filename>classiqtgui_1_1_c_tree_widget_filter.html</filename>
-    <base>QObject</base>
     <member kind="typedef">
       <type>QObject</type>
       <name>BaseClass</name>
@@ -43147,9 +39175,6 @@
     <class kind="class">iser::CBinaryWriteArchiveBase</class>
     <class kind="class">iser::CBitMemoryReadArchive</class>
     <class kind="class">iser::CBitMemoryWriteArchive</class>
-    <class kind="class">iser::CFileArchiveInfo</class>
-    <class kind="class">iser::CFileReadArchive</class>
-    <class kind="class">iser::CFileWriteArchive</class>
     <class kind="class">iser::CMemoryReadArchive</class>
     <class kind="class">iser::CMemoryWriteArchive</class>
     <class kind="class">iser::CMinimalVersionInfo</class>
@@ -43160,18 +39185,12 @@
     <class kind="class">iser::CTextWriteArchiveBase</class>
     <class kind="class">iser::CWriteArchiveBase</class>
     <class kind="class">iser::CXmlDocumentInfoBase</class>
-    <class kind="class">iser::CXmlFileReadArchive</class>
-    <class kind="class">iser::CXmlFileWriteArchive</class>
     <class kind="class">iser::CXmlReadArchiveBase</class>
     <class kind="class">iser::CXmlStreamReadArchiveBase</class>
     <class kind="class">iser::CXmlStringReadArchive</class>
     <class kind="class">iser::CXmlStringWriteArchive</class>
     <class kind="class">iser::CXmlWriteArchiveBase</class>
     <class kind="class">iser::IArchive</class>
-    <class kind="class">iser::IFileArchiveInfo</class>
-    <class kind="class">iser::IFileLoader</class>
-    <class kind="class">iser::IFileLoaderInfo</class>
-    <class kind="class">iser::IFileTypeInfo</class>
     <class kind="class">iser::IObject</class>
     <class kind="class">iser::ISerializable</class>
     <class kind="class">iser::IVersionInfo</class>
@@ -43402,7 +39421,7 @@
     <member kind="enumvalue">
       <name>MaxStringLength</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>a49645d55a027d7ff46b455096d56d0f7a1a2beb3a975a90f733fb0c1ab64525be</anchor>
+      <anchor>a4515d997a13667d732ae946fecef00cda1a2beb3a975a90f733fb0c1ab64525be</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -43656,208 +39675,6 @@
       <name>m_bitPosition</name>
       <anchorfile>classiser_1_1_c_bit_memory_write_archive.html</anchorfile>
       <anchor>a459de81076bf1d27d76185a00d623cde</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iser::CFileArchiveInfo</name>
-    <filename>classiser_1_1_c_file_archive_info.html</filename>
-    <base virtualness="virtual">iser::IFileArchiveInfo</base>
-    <member kind="function">
-      <type></type>
-      <name>CFileArchiveInfo</name>
-      <anchorfile>classiser_1_1_c_file_archive_info.html</anchorfile>
-      <anchor>acbd6090cd5d2163e4852aad811202f44</anchor>
-      <arglist>(const QString &amp;filePath)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const QString &amp;</type>
-      <name>GetCurrentFilePath</name>
-      <anchorfile>classiser_1_1_c_file_archive_info.html</anchorfile>
-      <anchor>aa11da01f8f9bd6830839aba9176f5fae</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QString</type>
-      <name>m_filePath</name>
-      <anchorfile>classiser_1_1_c_file_archive_info.html</anchorfile>
-      <anchor>af5aa42f5685c72a9dd62afa7c3c138bf</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iser::CFileReadArchive</name>
-    <filename>classiser_1_1_c_file_read_archive.html</filename>
-    <base>iser::CBinaryReadArchiveBase</base>
-    <base>iser::CFileArchiveInfo</base>
-    <class kind="struct">iser::CFileReadArchive::TagStackElement</class>
-    <member kind="typedef">
-      <type>CBinaryReadArchiveBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiser_1_1_c_file_read_archive.html</anchorfile>
-      <anchor>a76c9cca76ca6abd048bf55a68a8d572c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>CFileArchiveInfo</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiser_1_1_c_file_read_archive.html</anchorfile>
-      <anchor>a304eb98a21774dc6f50c26190367d369</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CFileReadArchive</name>
-      <anchorfile>classiser_1_1_c_file_read_archive.html</anchorfile>
-      <anchor>a5f32e5e008850497bac30e95766abf0e</anchor>
-      <arglist>(const QString &amp;filePath, bool supportTagSkipping=true, bool serializeHeader=true)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsTagSkippingSupported</name>
-      <anchorfile>classiser_1_1_c_file_read_archive.html</anchorfile>
-      <anchor>ac6d305d5eb27c06a190e699706e151a1</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>BeginTag</name>
-      <anchorfile>classiser_1_1_c_file_read_archive.html</anchorfile>
-      <anchor>ada7047b380eece18cf623b80a5d7188e</anchor>
-      <arglist>(const CArchiveTag &amp;tag)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>EndTag</name>
-      <anchorfile>classiser_1_1_c_file_read_archive.html</anchorfile>
-      <anchor>ac4363e7b665000eeff55b0cfbf152677</anchor>
-      <arglist>(const CArchiveTag &amp;tag)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ProcessData</name>
-      <anchorfile>classiser_1_1_c_file_read_archive.html</anchorfile>
-      <anchor>adcd676057b7acaefceb0af82cb76193a</anchor>
-      <arglist>(void *data, int size)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>DecorateMessage</name>
-      <anchorfile>classiser_1_1_c_file_read_archive.html</anchorfile>
-      <anchor>a34680fe1778bfb8001ed16af4429fb13</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>iser::CFileReadArchive::TagStackElement</name>
-    <filename>structiser_1_1_c_file_read_archive_1_1_tag_stack_element.html</filename>
-    <member kind="variable">
-      <type>quint32</type>
-      <name>tagBinaryId</name>
-      <anchorfile>structiser_1_1_c_file_read_archive_1_1_tag_stack_element.html</anchorfile>
-      <anchor>a9134fe62c40a76ca7b511cabde348a2c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>quint32</type>
-      <name>endPosition</name>
-      <anchorfile>structiser_1_1_c_file_read_archive_1_1_tag_stack_element.html</anchorfile>
-      <anchor>a426ef315f784a850392892ced02db9cd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>bool</type>
-      <name>useTagSkipping</name>
-      <anchorfile>structiser_1_1_c_file_read_archive_1_1_tag_stack_element.html</anchorfile>
-      <anchor>a316b2cb28b5c6931aaad0d5614f20979</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iser::CFileWriteArchive</name>
-    <filename>classiser_1_1_c_file_write_archive.html</filename>
-    <base>iser::CBinaryWriteArchiveBase</base>
-    <base>iser::CFileArchiveInfo</base>
-    <class kind="struct">iser::CFileWriteArchive::TagStackElement</class>
-    <member kind="typedef">
-      <type>CBinaryWriteArchiveBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiser_1_1_c_file_write_archive.html</anchorfile>
-      <anchor>ac06251c142b3664b6b4c1a0d94fcf694</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>CFileArchiveInfo</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiser_1_1_c_file_write_archive.html</anchorfile>
-      <anchor>a72de239c8952119fb72fd43d7212e736</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CFileWriteArchive</name>
-      <anchorfile>classiser_1_1_c_file_write_archive.html</anchorfile>
-      <anchor>a31a632749085a62881f809c1d027ca0e</anchor>
-      <arglist>(const QString &amp;filePath, const IVersionInfo *versionInfoPtr=NULL, bool supportTagSkipping=true, bool serializeHeader=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsArchiveValid</name>
-      <anchorfile>classiser_1_1_c_file_write_archive.html</anchorfile>
-      <anchor>a7b148d2b49c7f5553ca8741d5d1f347f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Flush</name>
-      <anchorfile>classiser_1_1_c_file_write_archive.html</anchorfile>
-      <anchor>a20e397acbc28696f2a49833e1a71a95a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsTagSkippingSupported</name>
-      <anchorfile>classiser_1_1_c_file_write_archive.html</anchorfile>
-      <anchor>abce404dd04ef9b71fe49dd4dcd0c96ec</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>BeginTag</name>
-      <anchorfile>classiser_1_1_c_file_write_archive.html</anchorfile>
-      <anchor>a72e2668c4594306a72493c9adf44f6ea</anchor>
-      <arglist>(const CArchiveTag &amp;tag)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>EndTag</name>
-      <anchorfile>classiser_1_1_c_file_write_archive.html</anchorfile>
-      <anchor>a7db11ea82640b76f2fc4285868407404</anchor>
-      <arglist>(const CArchiveTag &amp;tag)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ProcessData</name>
-      <anchorfile>classiser_1_1_c_file_write_archive.html</anchorfile>
-      <anchor>ae6c893d9b0b689e6d06d46c25a5390a4</anchor>
-      <arglist>(void *data, int size)</arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>iser::CFileWriteArchive::TagStackElement</name>
-    <filename>structiser_1_1_c_file_write_archive_1_1_tag_stack_element.html</filename>
-    <member kind="variable">
-      <type>quint32</type>
-      <name>tagBinaryId</name>
-      <anchorfile>structiser_1_1_c_file_write_archive_1_1_tag_stack_element.html</anchorfile>
-      <anchor>a3ad411d595bdd854889e487ad6013728</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>quint32</type>
-      <name>endFieldPosition</name>
-      <anchorfile>structiser_1_1_c_file_write_archive_1_1_tag_stack_element.html</anchorfile>
-      <anchor>a880a2cbd24ea66326495f471980d99de</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -44634,88 +40451,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iser::CXmlFileReadArchive</name>
-    <filename>classiser_1_1_c_xml_file_read_archive.html</filename>
-    <base>iser::CXmlStreamReadArchiveBase</base>
-    <base>iser::CFileArchiveInfo</base>
-    <member kind="typedef">
-      <type>CXmlStreamReadArchiveBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiser_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>a3d19f857933715cb86a2fdd953c17284</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>CFileArchiveInfo</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiser_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>a2660fd7a9f7b27d6cd3470655329c5f4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CXmlFileReadArchive</name>
-      <anchorfile>classiser_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>a4f11eb02f5239f489ed0f3566a873efd</anchor>
-      <arglist>(const QString &amp;filePath, bool serializeHeader=true, const CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~CXmlFileReadArchive</name>
-      <anchorfile>classiser_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>ad06c6cbaed12b4cd24996fb1a49fe739</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>DecorateMessage</name>
-      <anchorfile>classiser_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>ad0c2d3fa96572c4629212954db6eeeff</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iser::CXmlFileWriteArchive</name>
-    <filename>classiser_1_1_c_xml_file_write_archive.html</filename>
-    <base>iser::CXmlWriteArchiveBase</base>
-    <base>iser::CFileArchiveInfo</base>
-    <member kind="typedef">
-      <type>CXmlWriteArchiveBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiser_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a13efb5c43b79ffca81c177993a568c80</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>CFileArchiveInfo</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiser_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a1d102cf3198589d5d0efbbb6fc31e32d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CXmlFileWriteArchive</name>
-      <anchorfile>classiser_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a8b7daa0886557b32a02ff7109d79438b</anchor>
-      <arglist>(const QString &amp;filePath, const IVersionInfo *versionInfoPtr=NULL, bool serializeHeader=true, const CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~CXmlFileWriteArchive</name>
-      <anchorfile>classiser_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>afb47e650fcbb9bb8c51b474f063d0fa8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>WriteString</name>
-      <anchorfile>classiser_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>affb533c675413fd6ded1b1033912ec91</anchor>
-      <arglist>(const QByteArray &amp;value)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iser::CXmlReadArchiveBase</name>
     <filename>classiser_1_1_c_xml_read_archive_base.html</filename>
     <base>iser::CTextReadArchiveBase</base>
@@ -45186,231 +40921,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iser::IFileArchiveInfo</name>
-    <filename>classiser_1_1_i_file_archive_info.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual const QString &amp;</type>
-      <name>GetCurrentFilePath</name>
-      <anchorfile>classiser_1_1_i_file_archive_info.html</anchorfile>
-      <anchor>a197e1f5f74f5846a3b5ea6fa9557b654</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iser::IFileLoader</name>
-    <filename>classiser_1_1_i_file_loader.html</filename>
-    <base virtualness="virtual">iser::IFileTypeInfo</base>
-    <member kind="enumeration">
-      <name>OperationState</name>
-      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
-      <anchor>a75a7bac07b89aa42b7596185b7bb5c51</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>StateOk</name>
-      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
-      <anchor>a75a7bac07b89aa42b7596185b7bb5c51a5a3b52788a1d74ae0252724e06ebe26d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>StateAborted</name>
-      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
-      <anchor>a75a7bac07b89aa42b7596185b7bb5c51a6a65f04e7543b45760da1378ed60c328</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>StateFailed</name>
-      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
-      <anchor>a75a7bac07b89aa42b7596185b7bb5c51aa09dcbc2185bb8c631d1537abd3c04a8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>ErrorType</name>
-      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
-      <anchor>a773dea7ed871a60448bf26efe9f6a729</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>ET_NO_WRITE_PERMISSIONS</name>
-      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
-      <anchor>a773dea7ed871a60448bf26efe9f6a729a9f103a28d572122be8df0608de83adfb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>ET_NO_READ_PERMISSIONS</name>
-      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
-      <anchor>a773dea7ed871a60448bf26efe9f6a729aeed682d1015be39a3f422e61ff7d18fc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>ET_FILE_NOT_EXIST</name>
-      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
-      <anchor>a773dea7ed871a60448bf26efe9f6a729a41281ca5a5ed803f69f10cac5f5d62e9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>MessageId</name>
-      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
-      <anchor>a885bc2cad957c89052cf890e68436bf4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_BAD_OBJECT_TYPE</name>
-      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
-      <anchor>a885bc2cad957c89052cf890e68436bf4a601a2e89a63068304e0cb83976cdafff</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_CANNOT_LOAD</name>
-      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
-      <anchor>a885bc2cad957c89052cf890e68436bf4a1803b797c6d80cdd6daef0afd6f00ccf</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_CANNOT_SAVE</name>
-      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
-      <anchor>a885bc2cad957c89052cf890e68436bf4a23433678f728922ea7537fd394c50bb1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsOperationSupported</name>
-      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
-      <anchor>a4e5d8cde47513d09de802aa28697249d</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>LoadFromFile</name>
-      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
-      <anchor>a1515f5bff4437903bb15dafe82b56755</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>SaveToFile</name>
-      <anchorfile>classiser_1_1_i_file_loader.html</anchorfile>
-      <anchor>a600870dbf0fc5a833bfe747bf1a60c1c</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iser::IFileLoaderInfo</name>
-    <filename>classiser_1_1_i_file_loader_info.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="enumeration">
-      <name>OperationType</name>
-      <anchorfile>classiser_1_1_i_file_loader_info.html</anchorfile>
-      <anchor>afa52073c8b31934db93706e6bd3bf457</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>OT_UNKNOWN</name>
-      <anchorfile>classiser_1_1_i_file_loader_info.html</anchorfile>
-      <anchor>afa52073c8b31934db93706e6bd3bf457aa836ba53a798d7284c3b837e3cab042a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>OT_LOAD</name>
-      <anchorfile>classiser_1_1_i_file_loader_info.html</anchorfile>
-      <anchor>afa52073c8b31934db93706e6bd3bf457a6d7d932810868fc1d5fee294a887be5a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>OT_SAVE</name>
-      <anchorfile>classiser_1_1_i_file_loader_info.html</anchorfile>
-      <anchor>afa52073c8b31934db93706e6bd3bf457a72e45d6c3c978a1fa4122ef43f16328c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>PathType</name>
-      <anchorfile>classiser_1_1_i_file_loader_info.html</anchorfile>
-      <anchor>ab6db5c7833e043db2c7c27ad6c24b87d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PT_COMPLETE</name>
-      <anchorfile>classiser_1_1_i_file_loader_info.html</anchorfile>
-      <anchor>ab6db5c7833e043db2c7c27ad6c24b87da2141650c9527b91c510833a6d35b34f2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>OT_FILENAME</name>
-      <anchorfile>classiser_1_1_i_file_loader_info.html</anchorfile>
-      <anchor>ab6db5c7833e043db2c7c27ad6c24b87da0fd75bb88dd6da4da0dad704013c61c9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>OT_DIR</name>
-      <anchorfile>classiser_1_1_i_file_loader_info.html</anchorfile>
-      <anchor>ab6db5c7833e043db2c7c27ad6c24b87dac40dd6a40700d0fe5a8949cb6d5ab5b0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetLastFilePath</name>
-      <anchorfile>classiser_1_1_i_file_loader_info.html</anchorfile>
-      <anchor>aeb0ecfae17d1fc4ac03c5c502fdd25e9</anchor>
-      <arglist>(OperationType operationType=OT_UNKNOWN, PathType pathType=PT_COMPLETE) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iser::IFileTypeInfo</name>
-    <filename>classiser_1_1_i_file_type_info.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="enumeration">
-      <name>QueryFlags</name>
-      <anchorfile>classiser_1_1_i_file_type_info.html</anchorfile>
-      <anchor>a2d24774c415748d3c04a27608a6e05e8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>QF_SAVE</name>
-      <anchorfile>classiser_1_1_i_file_type_info.html</anchorfile>
-      <anchor>a2d24774c415748d3c04a27608a6e05e8a5ff3ec0ae476ca071cc761ed8cba3a81</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>QF_LOAD</name>
-      <anchorfile>classiser_1_1_i_file_type_info.html</anchorfile>
-      <anchor>a2d24774c415748d3c04a27608a6e05e8a9dbb719698b08d4104837a5dbfabc8df</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>QF_FILE</name>
-      <anchorfile>classiser_1_1_i_file_type_info.html</anchorfile>
-      <anchor>a2d24774c415748d3c04a27608a6e05e8aa405328fad211e44b5a3eca44411accb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>QF_DIRECTORY</name>
-      <anchorfile>classiser_1_1_i_file_type_info.html</anchorfile>
-      <anchor>a2d24774c415748d3c04a27608a6e05e8abc2f74556d1904cab80e4dd9ac8a257d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>QF_ANONYMOUS</name>
-      <anchorfile>classiser_1_1_i_file_type_info.html</anchorfile>
-      <anchor>a2d24774c415748d3c04a27608a6e05e8aff35564fbdfdf7851b718104d70ef8c9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>GetFileExtensions</name>
-      <anchorfile>classiser_1_1_i_file_type_info.html</anchorfile>
-      <anchor>a2b1e53b1976bc7a962684a7f64577b70</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetTypeDescription</name>
-      <anchorfile>classiser_1_1_i_file_type_info.html</anchorfile>
-      <anchor>af40e91e01c4040e96b9ed978a67eada8</anchor>
-      <arglist>(const QString *extensionPtr=NULL) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iser::IObject</name>
     <filename>classiser_1_1_i_object.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
@@ -45472,7 +40982,7 @@
     <member kind="enumvalue">
       <name>UnknownVersion</name>
       <anchorfile>classiser_1_1_i_version_info.html</anchorfile>
-      <anchor>a60cc015d568ce2139b8d17245f6ebef9af9fa112e0f25b4bc6c7b7b7bc3ee742f</anchor>
+      <anchor>a41704f75da7d978f4be5064bd72ab3cdaf9fa112e0f25b4bc6c7b7b7bc3ee742f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -46064,7 +41574,6 @@
   <compound kind="class">
     <name>istd::NotificationTarget</name>
     <filename>classistd_1_1_notification_target.html</filename>
-    <base protection="protected">QObject</base>
     <member kind="signal">
       <type>void</type>
       <name>EmitBeginChanges</name>
@@ -46122,7 +41631,7 @@
     <member kind="enumvalue">
       <name>MAX_ELEMENTS_COUNT</name>
       <anchorfile>classistd_1_1_c_fast_binary_index.html</anchorfile>
-      <anchor>a02e0e12d1e6d33cd315f7a1dca5481a2abbd51a4d709be2d7e1ab0cc554dd3944</anchor>
+      <anchor>a4d4814acfbe44c2399618e1aafc532b7abbd51a4d709be2d7e1ab0cc554dd3944</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -48347,7 +43856,7 @@
     <member kind="enumvalue">
       <name>DIMENSIONS</name>
       <anchorfile>classistd_1_1_t_index.html</anchorfile>
-      <anchor>afc1b837ba113166e458223c75ae33bc8a45842b3fa4ac21fb16cb7a478a51ad6a</anchor>
+      <anchor>ae5a570876a164730b812843080a1b375a45842b3fa4ac21fb16cb7a478a51ad6a</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -48990,7 +44499,7 @@
     <member kind="enumvalue">
       <name>InvalidIndex</name>
       <anchorfile>classistd_1_1_t_pointer_vector.html</anchorfile>
-      <anchor>ad91619ce68c064307824cfc03e86506ea5e9e43a0fe51bd123229d4b73c161110</anchor>
+      <anchor>a01df72dd3f97b868188f2c6bb493e66aa5e9e43a0fe51bd123229d4b73c161110</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -50486,13 +45995,13 @@
     <member kind="enumvalue">
       <name>CONTROL_POINTS_COUNT</name>
       <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
-      <anchor>a831886a6fcce6333778844a28eeec141a7fb66a1f5e3ce4190017f22939c36afb</anchor>
+      <anchor>a2ea8a0c3aee041ada14f7dd3ad0ca8eba7fb66a1f5e3ce4190017f22939c36afb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>ACTIVE_POINTS_COUNT</name>
       <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
-      <anchor>a831886a6fcce6333778844a28eeec141a3776b7e973707d0c8d2a86abccc207e3</anchor>
+      <anchor>a2ea8a0c3aee041ada14f7dd3ad0ca8eba3776b7e973707d0c8d2a86abccc207e3</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
@@ -51398,7 +46907,7 @@
     <member kind="enumvalue">
       <name>NORMAL_SET_SIZE</name>
       <anchorfile>classiview_1_1_c_color_schema.html</anchorfile>
-      <anchor>a2f928f35cd24d71381c922ed894b2213a82b6f7e4fa5cdcfe8a3073430eb883ef</anchor>
+      <anchor>aff301eff627298d9deb0a4432b0f9523a82b6f7e4fa5cdcfe8a3073430eb883ef</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -51458,19 +46967,19 @@
     <member kind="enumvalue">
       <name>TICKER_SIZE</name>
       <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
-      <anchor>ae5716ecce487b63ee2549c7222d9d1dba7b9aaadf57b04e96b6d901d25229edec</anchor>
+      <anchor>abad75a2cde30f933a0eaf07d907b6131a7b9aaadf57b04e96b6d901d25229edec</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SMALL_TICKER_SIZE</name>
       <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
-      <anchor>ae5716ecce487b63ee2549c7222d9d1dbab62460c925c9513455eea5005dc64220</anchor>
+      <anchor>abad75a2cde30f933a0eaf07d907b6131ab62460c925c9513455eea5005dc64220</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>LOGICAL_LINE_WIDTH</name>
       <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
-      <anchor>ae5716ecce487b63ee2549c7222d9d1dba664c9e6063e60c758b4ae1ee3ee48a9c</anchor>
+      <anchor>abad75a2cde30f933a0eaf07d907b6131a664c9e6063e60c758b4ae1ee3ee48a9c</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">

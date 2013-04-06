@@ -30,7 +30,7 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define idoc_CSingleDocumentTemplateComp_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_loader_8h.html">iser/IFileLoader.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_persistence_8h.html">ifile/IFilePersistence.h</a>&quot;</span>
 <a name="l00006"></a>00006 
 <a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_i_model_8h.html">imod/IModel.h</a>&quot;</span>
 <a name="l00008"></a>00008 
@@ -65,7 +65,7 @@
 <a name="l00037"></a>00037        I_END_COMPONENT;
 <a name="l00038"></a>00038 
 <a name="l00039"></a>00039        <span class="comment">// reimplemented (idoc::IDocumentTemplate)</span>
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <a class="code" href="classiser_1_1_i_file_loader.html" title="Provide loading and saving of objects.">iser::IFileLoader</a>* <a class="code" href="classidoc_1_1_c_single_document_template_comp.html#a9fd758135f102c593980f27e59c75891" title="Get file loader/saver for spacified document ID.">GetFileLoader</a>(<span class="keyword">const</span> QByteArray&amp; documentTypeId) <span class="keyword">const</span>;
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <a class="code" href="classifile_1_1_i_file_persistence.html" title="Provide loading and saving of objects.">ifile::IFilePersistence</a>* <a class="code" href="classidoc_1_1_c_single_document_template_comp.html#a4dda2fcfa7e399b7c8d2d0af543edf92" title="Get file loader/saver for spacified document ID.">GetFileLoader</a>(<span class="keyword">const</span> QByteArray&amp; documentTypeId) <span class="keyword">const</span>;
 <a name="l00041"></a>00041        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classidoc_1_1_c_single_document_template_comp.html#af7495d708afa102d31d049418f789437" title="Creates a document instance for document type documentTypeId.">CreateDocument</a>(<span class="keyword">const</span> QByteArray&amp; documentTypeId) <span class="keyword">const</span>;
 <a name="l00042"></a>00042        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* <a class="code" href="classidoc_1_1_c_single_document_template_comp.html#ae2732f441e6e6b4202dcde4ffb7135b0" title="Creates a view instance for document document of type viewTypeId.">CreateView</a>(
 <a name="l00043"></a>00043                             <span class="keyword">const</span> QByteArray&amp; documentTypeId,
@@ -88,7 +88,7 @@
 <a name="l00067"></a>00067        I_FACT(<a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>, m_documentCompFact);
 <a name="l00068"></a>00068        I_FACT(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_modelCompFact);
 <a name="l00069"></a>00069        I_FACT(<a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>, m_viewCompFact);
-<a name="l00070"></a>00070        I_REF(<a class="code" href="classiser_1_1_i_file_loader.html" title="Provide loading and saving of objects.">iser::IFileLoader</a>, m_fileLoaderCompPtr);
+<a name="l00070"></a>00070        I_REF(<a class="code" href="classifile_1_1_i_file_persistence.html" title="Provide loading and saving of objects.">ifile::IFilePersistence</a>, m_fileLoaderCompPtr);
 <a name="l00071"></a>00071        I_FACT(<a class="code" href="classidoc_1_1_i_undo_manager.html" title="Interface providing UNDO/REDO functionality.">idoc::IUndoManager</a>, m_undoManagerCompFact);
 <a name="l00072"></a>00072        I_FACT(<a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>, m_undoManagerObserverCompFact);
 <a name="l00073"></a>00073 

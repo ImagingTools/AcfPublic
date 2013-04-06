@@ -27,7 +27,7 @@
 #include "icomp/CComponentBase.h"
 
 #include "iser/ISerializable.h"
-#include "iser/IFileTypeInfo.h"
+#include "ifile/IFileTypeInfo.h"
 
 #include "ifile/IFileNameParam.h"
 

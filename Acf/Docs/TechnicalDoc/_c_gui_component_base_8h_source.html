@@ -48,7 +48,7 @@
 <a name="l00020"></a>00020 
 <a name="l00021"></a>00021 
 <a name="l00025"></a><a class="code" href="classiqtgui_1_1_c_gui_component_base.html">00025</a> <span class="keyword">class </span><a class="code" href="classiqtgui_1_1_c_gui_component_base.html" title="Base class for classes implementing interface iqtgui::IGuiObject.">CGuiComponentBase</a>:
-<a name="l00026"></a>00026                      <span class="keyword">public</span> <a class="code" href="class_q_object.html">QObject</a>, 
+<a name="l00026"></a>00026                      <span class="keyword">public</span> QObject, 
 <a name="l00027"></a>00027                      <span class="keyword">public</span> icomp::CComponentBase,
 <a name="l00028"></a>00028                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">IGuiObject</a>
 <a name="l00029"></a>00029 {
@@ -116,7 +116,7 @@
 <a name="l00119"></a>00119        <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_gui_component_base.html#aaebf9e40fa2b193e2e3f7d4e8ce97877" title="Set status text;.">SetStatusText</a>(<span class="keyword">const</span> QString&amp; text);
 <a name="l00120"></a>00120 
 <a name="l00121"></a>00121        <span class="comment">// reimplemented (QObject)</span>
-<a name="l00122"></a>00122        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_gui_component_base.html#af7d034ff8f69f4102e8df829f71802f5">eventFilter</a>(<a class="code" href="class_q_object.html">QObject</a>* sourcePtr, QEvent* eventPtr);
+<a name="l00122"></a>00122        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_gui_component_base.html#af7d034ff8f69f4102e8df829f71802f5">eventFilter</a>(QObject* sourcePtr, QEvent* eventPtr);
 <a name="l00123"></a>00123 
 <a name="l00124"></a>00124        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
 <a name="l00125"></a>00125        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_gui_component_base.html#acbe64d5e28b4059b0c34111dd7e3cc8d">OnComponentCreated</a>();
@@ -130,16 +130,16 @@
 <a name="l00136"></a>00136 <span class="keyword">private</span>:
 <a name="l00137"></a>00137        <span class="keywordtype">void</span> MakeAutoSlotConnection();
 <a name="l00138"></a>00138 
-<a name="l00139"></a>00139        <span class="keyword">class </span>LanguageChangeEventFilter: <span class="keyword">public</span> <a class="code" href="class_q_object.html">QObject</a>
+<a name="l00139"></a>00139        <span class="keyword">class </span>LanguageChangeEventFilter: <span class="keyword">public</span> QObject
 <a name="l00140"></a>00140        {
 <a name="l00141"></a>00141        <span class="keyword">public</span>:
-<a name="l00142"></a>00142               <span class="keyword">typedef</span> <a class="code" href="class_q_object.html">QObject</a> <a class="code" href="classiqtgui_1_1_c_gui_component_base.html#ad1f756b56b4b967ce6af21988a11c31b">BaseClass</a>;
+<a name="l00142"></a>00142               <span class="keyword">typedef</span> QObject <a class="code" href="classiqtgui_1_1_c_gui_component_base.html#ad1f756b56b4b967ce6af21988a11c31b">BaseClass</a>;
 <a name="l00143"></a>00143 
 <a name="l00144"></a>00144               LanguageChangeEventFilter(<a class="code" href="classiqtgui_1_1_c_gui_component_base.html" title="Base class for classes implementing interface iqtgui::IGuiObject.">CGuiComponentBase</a>&amp; parent);
 <a name="l00145"></a>00145 
 <a name="l00146"></a>00146        <span class="keyword">protected</span>:
 <a name="l00147"></a>00147               <span class="comment">// reimplemented (QObject)</span>
-<a name="l00148"></a>00148               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_gui_component_base.html#af7d034ff8f69f4102e8df829f71802f5">eventFilter</a>(<a class="code" href="class_q_object.html">QObject</a>* sourcePtr, QEvent* eventPtr);
+<a name="l00148"></a>00148               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_gui_component_base.html#af7d034ff8f69f4102e8df829f71802f5">eventFilter</a>(QObject* sourcePtr, QEvent* eventPtr);
 <a name="l00149"></a>00149        
 <a name="l00150"></a>00150        <span class="keyword">private</span>:
 <a name="l00151"></a>00151               <a class="code" href="classiqtgui_1_1_c_gui_component_base.html" title="Base class for classes implementing interface iqtgui::IGuiObject.">CGuiComponentBase</a>&amp; m_parent;

@@ -37,7 +37,7 @@ namespace ifileproc
 {
 
 
-// reimplemented (ibase::IFileConvertCopy)
+// reimplemented (ifileproc::IFileConvertCopy)
 
 bool CExternalFileConverterComp::ConvertFiles(
 			const QString& inputPath,

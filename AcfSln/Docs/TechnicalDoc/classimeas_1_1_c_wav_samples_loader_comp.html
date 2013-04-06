@@ -38,7 +38,7 @@
 <div class="title">imeas::CWavSamplesLoaderComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="imeas::CWavSamplesLoaderComp" --><!-- doxytag: inherits="icomp::CComponentBase,iser::IFileLoader" -->
+<!-- doxytag: class="imeas::CWavSamplesLoaderComp" --><!-- doxytag: inherits="icomp::CComponentBase,ifile::IFilePersistence" -->
 <p><code>#include &lt;<a class="el" href="_c_wav_samples_loader_comp_8h_source.html">CWavSamplesLoaderComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for imeas::CWavSamplesLoaderComp:</div>
@@ -47,9 +47,9 @@ Inheritance diagram for imeas::CWavSamplesLoaderComp:</div>
   <img src="classimeas_1_1_c_wav_samples_loader_comp.png" usemap="#imeas::CWavSamplesLoaderComp_map" alt=""/>
   <map id="imeas::CWavSamplesLoaderComp_map" name="imeas::CWavSamplesLoaderComp_map">
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html" alt="icomp::CComponentBase" shape="rect" coords="0,112,203,136"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html" alt="iser::IFileLoader" shape="rect" coords="213,112,416,136"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_persistence.html" alt="ifile::IFilePersistence" shape="rect" coords="213,112,416,136"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="0,56,203,80"/>
-<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_type_info.html" alt="iser::IFileTypeInfo" shape="rect" coords="213,56,416,80"/>
+<area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_type_info.html" alt="ifile::IFileTypeInfo" shape="rect" coords="213,56,416,80"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,203,24"/>
 <area doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="213,0,416,24"/>
 </map>
@@ -69,9 +69,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimeas_1_1_c_wav_samples_loader_comp.html#a31dc76bacfe8d22ce67bb58597204bf7">GetTypeDescription</a> (const QString *extensionPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) const </td></tr>
 <tr><td colspan="2"><h2><a name="pro-types"></a>
 Protected Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="classimeas_1_1_c_wav_samples_loader_comp.html#a42ea7a74ecf605b936b52534d7be7739acc0e163beb3e170717fd1cdd318203d5">BYTES_PER_SAMPLE</a> =  2, 
-<a class="el" href="classimeas_1_1_c_wav_samples_loader_comp.html#a42ea7a74ecf605b936b52534d7be7739ad9ee197dc89c4cc7adbee13008ed1548">BITS_PER_SAMPLE</a> =  BYTES_PER_SAMPLE * 8, 
-<a class="el" href="classimeas_1_1_c_wav_samples_loader_comp.html#a42ea7a74ecf605b936b52534d7be7739ab4c12e1396ba8e8f2d4acdcd0050e24c">WAVE_FORMAT_PCM</a> =  1
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="classimeas_1_1_c_wav_samples_loader_comp.html#aaca5083289fd88aea6c5dd6f62b40cdaacc0e163beb3e170717fd1cdd318203d5">BYTES_PER_SAMPLE</a> =  2, 
+<a class="el" href="classimeas_1_1_c_wav_samples_loader_comp.html#aaca5083289fd88aea6c5dd6f62b40cdaad9ee197dc89c4cc7adbee13008ed1548">BITS_PER_SAMPLE</a> =  BYTES_PER_SAMPLE * 8, 
+<a class="el" href="classimeas_1_1_c_wav_samples_loader_comp.html#aaca5083289fd88aea6c5dd6f62b40cdaab4c12e1396ba8e8f2d4acdcd0050e24c">WAVE_FORMAT_PCM</a> =  1
  }</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -94,7 +94,7 @@ Protected Types</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Enumeration Documentation</h2>
-<a class="anchor" id="a42ea7a74ecf605b936b52534d7be7739"></a><!-- doxytag: member="imeas::CWavSamplesLoaderComp::@1" ref="a42ea7a74ecf605b936b52534d7be7739" args="" -->
+<a class="anchor" id="aaca5083289fd88aea6c5dd6f62b40cda"></a><!-- doxytag: member="imeas::CWavSamplesLoaderComp::@2" ref="aaca5083289fd88aea6c5dd6f62b40cda" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -105,11 +105,11 @@ Protected Types</h2></td></tr>
 </div>
 <div class="memdoc">
 <dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em><a class="anchor" id="a42ea7a74ecf605b936b52534d7be7739acc0e163beb3e170717fd1cdd318203d5"></a><!-- doxytag: member="BYTES_PER_SAMPLE" ref="a42ea7a74ecf605b936b52534d7be7739acc0e163beb3e170717fd1cdd318203d5" args="" -->BYTES_PER_SAMPLE</em>&nbsp;</td><td>
+<tr><td valign="top"><em><a class="anchor" id="aaca5083289fd88aea6c5dd6f62b40cdaacc0e163beb3e170717fd1cdd318203d5"></a><!-- doxytag: member="BYTES_PER_SAMPLE" ref="aaca5083289fd88aea6c5dd6f62b40cdaacc0e163beb3e170717fd1cdd318203d5" args="" -->BYTES_PER_SAMPLE</em>&nbsp;</td><td>
 </td></tr>
-<tr><td valign="top"><em><a class="anchor" id="a42ea7a74ecf605b936b52534d7be7739ad9ee197dc89c4cc7adbee13008ed1548"></a><!-- doxytag: member="BITS_PER_SAMPLE" ref="a42ea7a74ecf605b936b52534d7be7739ad9ee197dc89c4cc7adbee13008ed1548" args="" -->BITS_PER_SAMPLE</em>&nbsp;</td><td>
+<tr><td valign="top"><em><a class="anchor" id="aaca5083289fd88aea6c5dd6f62b40cdaad9ee197dc89c4cc7adbee13008ed1548"></a><!-- doxytag: member="BITS_PER_SAMPLE" ref="aaca5083289fd88aea6c5dd6f62b40cdaad9ee197dc89c4cc7adbee13008ed1548" args="" -->BITS_PER_SAMPLE</em>&nbsp;</td><td>
 </td></tr>
-<tr><td valign="top"><em><a class="anchor" id="a42ea7a74ecf605b936b52534d7be7739ab4c12e1396ba8e8f2d4acdcd0050e24c"></a><!-- doxytag: member="WAVE_FORMAT_PCM" ref="a42ea7a74ecf605b936b52534d7be7739ab4c12e1396ba8e8f2d4acdcd0050e24c" args="" -->WAVE_FORMAT_PCM</em>&nbsp;</td><td>
+<tr><td valign="top"><em><a class="anchor" id="aaca5083289fd88aea6c5dd6f62b40cdaab4c12e1396ba8e8f2d4acdcd0050e24c"></a><!-- doxytag: member="WAVE_FORMAT_PCM" ref="aaca5083289fd88aea6c5dd6f62b40cdaab4c12e1396ba8e8f2d4acdcd0050e24c" args="" -->WAVE_FORMAT_PCM</em>&nbsp;</td><td>
 </td></tr>
 </table>
 </dd>
@@ -151,7 +151,7 @@ Protected Types</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_type_info.html#a2b1e53b1976bc7a962684a7f64577b70">iser::IFileTypeInfo</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_type_info.html#acb9ac14845f9ea67dca2e7a24b391cde">ifile::IFileTypeInfo</a>.</p>
 
 </div>
 </div>
@@ -170,7 +170,7 @@ Protected Types</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_type_info.html#af40e91e01c4040e96b9ed978a67eada8">iser::IFileTypeInfo</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_type_info.html#ab6cec8df21bf8869a8b5e85c2b48a682">ifile::IFileTypeInfo</a>.</p>
 
 </div>
 </div>
@@ -211,7 +211,7 @@ Protected Types</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html#a4e5d8cde47513d09de802aa28697249d">iser::IFileLoader</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_persistence.html#a5546b646fa5d4dc32156b06a3cd3e13f">ifile::IFilePersistence</a>.</p>
 
 </div>
 </div>
@@ -240,7 +240,7 @@ Protected Types</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html#a1515f5bff4437903bb15dafe82b56755">iser::IFileLoader</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_persistence.html#ac3e349d549b4aeabc33a4555d2482385">ifile::IFilePersistence</a>.</p>
 
 </div>
 </div>
@@ -269,7 +269,7 @@ Protected Types</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html#a600870dbf0fc5a833bfe747bf1a60c1c">iser::IFileLoader</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_persistence.html#afe328c38bf1f522f666fe2bf72beeca3">ifile::IFilePersistence</a>.</p>
 
 </div>
 </div>

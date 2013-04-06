@@ -28,7 +28,7 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iqtmm_CMediaLoaderComp_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_file_loader_8h.html">iser/IFileLoader.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_file_persistence_8h.html">ifile/IFilePersistence.h</a>&quot;</span>
 <a name="l00006"></a>00006 
 <a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
 <a name="l00008"></a>00008 
@@ -42,27 +42,27 @@
 <a name="l00016"></a>00016 
 <a name="l00017"></a>00017 
 <a name="l00018"></a><a class="code" href="classiqtmm_1_1_c_media_loader_comp.html">00018</a> <span class="keyword">class </span><a class="code" href="classiqtmm_1_1_c_media_loader_comp.html">CMediaLoaderComp</a>:
-<a name="l00019"></a>00019                      <span class="keyword">public</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/class_q_object.html">QObject</a>,
+<a name="l00019"></a>00019                      <span class="keyword">public</span> <a class="code" href="class_q_object.html">QObject</a>,
 <a name="l00020"></a>00020                      <span class="keyword">public</span> ibase::<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga8ef64a77c28b704454f15c826587cc93">CLoggerComponentBase</a>,
-<a name="l00021"></a>00021                      <span class="keyword">virtual</span> <span class="keyword">public</span> iser::IFileLoader
+<a name="l00021"></a>00021                      <span class="keyword">virtual</span> <span class="keyword">public</span> ifile::IFilePersistence
 <a name="l00022"></a>00022 {
 <a name="l00023"></a>00023 <span class="keyword">public</span>:
 <a name="l00024"></a><a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#a4be55073d384153a8eaa7bcd7d5b7eca">00024</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html">ibase::CLoggerComponentBase</a> <a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#a4be55073d384153a8eaa7bcd7d5b7eca">BaseClass</a>;
 <a name="l00025"></a>00025 
 <a name="l00026"></a>00026        I_BEGIN_COMPONENT(<a class="code" href="classiqtmm_1_1_c_media_loader_comp.html">CMediaLoaderComp</a>);
-<a name="l00027"></a>00027               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_type_info.html">iser::IFileTypeInfo</a>);
-<a name="l00028"></a>00028               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html">iser::IFileLoader</a>);
+<a name="l00027"></a>00027               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_type_info.html">ifile::IFileTypeInfo</a>);
+<a name="l00028"></a>00028               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_persistence.html">ifile::IFilePersistence</a>);
 <a name="l00029"></a>00029               I_ASSIGN(m_autoPlayAttrPtr, <span class="stringliteral">&quot;AutoPlay&quot;</span>, <span class="stringliteral">&quot;If enabled, movie will be automatically played after loading&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);
 <a name="l00030"></a>00030        I_END_COMPONENT;
 <a name="l00031"></a>00031 
-<a name="l00032"></a><a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#abfe262925b385db6acd4c72ba1cf0cd3">00032</a>        <span class="keyword">enum</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_file_loader.html#a885bc2cad957c89052cf890e68436bf4">MessageId</a>
+<a name="l00032"></a><a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#abfe262925b385db6acd4c72ba1cf0cd3">00032</a>        <span class="keyword">enum</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_persistence.html#a24e35495e0c1f4d128ed1513c8907376">MessageId</a>
 <a name="l00033"></a>00033        {
 <a name="l00034"></a><a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#abfe262925b385db6acd4c72ba1cf0cd3a3a42aedf094e46ddd36ccb2f540f419b">00034</a>               <a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#abfe262925b385db6acd4c72ba1cf0cd3a3a42aedf094e46ddd36ccb2f540f419b">MI_BAD_EXTENSION</a> = 0xa7e0,
 <a name="l00035"></a><a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#abfe262925b385db6acd4c72ba1cf0cd3a0788b7124d3bb82f4fbbe0b818ebfb98">00035</a>               <a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#abfe262925b385db6acd4c72ba1cf0cd3a0788b7124d3bb82f4fbbe0b818ebfb98">MI_FILE_NOT_EXIST</a>,
 <a name="l00036"></a><a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#abfe262925b385db6acd4c72ba1cf0cd3a9207dd4779261f20991d0a35f62b13a5">00036</a>               <a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#abfe262925b385db6acd4c72ba1cf0cd3a9207dd4779261f20991d0a35f62b13a5">MI_BAD_FORMAT</a>
 <a name="l00037"></a>00037        };
 <a name="l00038"></a>00038 
-<a name="l00039"></a>00039        <span class="comment">// reimplemented (iser::IFileLoader)</span>
+<a name="l00039"></a>00039        <span class="comment">// reimplemented (ifile::IFilePersistence)</span>
 <a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#a6ae4f59d16c5d700ad7970ab04003c31">IsOperationSupported</a>(
 <a name="l00041"></a>00041                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* dataObjectPtr,
 <a name="l00042"></a>00042                             <span class="keyword">const</span> QString* filePathPtr = NULL,
@@ -71,7 +71,7 @@
 <a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#a5f9ddd57e57444f7c1d8b91dc415aab0">LoadFromFile</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>&amp; data, <span class="keyword">const</span> QString&amp; filePath) <span class="keyword">const</span>;
 <a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#a389452cc5b8c0c374325a5b8a6abf56c">SaveToFile</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>&amp; data, <span class="keyword">const</span> QString&amp; filePath) <span class="keyword">const</span>;
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048        <span class="comment">// reimplemented (iser::IFileTypeInfo)</span>
+<a name="l00048"></a>00048        <span class="comment">// reimplemented (ifile::IFileTypeInfo)</span>
 <a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#a431f9ebdb48b2af9c461a54c03ce6388">GetFileExtensions</a>(QStringList&amp; result, <span class="keywordtype">int</span> flags = -1, <span class="keywordtype">bool</span> doAppend = <span class="keyword">false</span>) <span class="keyword">const</span>;
 <a name="l00050"></a>00050        <span class="keyword">virtual</span> QString <a class="code" href="classiqtmm_1_1_c_media_loader_comp.html#a68e82ca744a339da34c4ce76404a08c2">GetTypeDescription</a>(<span class="keyword">const</span> QString* extensionPtr = NULL) <span class="keyword">const</span>;
 <a name="l00051"></a>00051 

@@ -72,8 +72,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of supported document ID's can be created for specified file.  <a href="#a36a49944186f968922c25eea76dd10e3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#ab001914b4a5c5368ecef0cea93f758ab">GetDocumentTypeName</a> (const QByteArray &amp;documentTypeId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable name of some document type ID.  <a href="#ab001914b4a5c5368ecef0cea93f758ab"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_file_type_info.html">iser::IFileTypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a46910a714e74fd3d899027514a721e81">GetDocumentFileTypeInfo</a> (const QByteArray &amp;documentTypeId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file type information object for some selected document type.  <a href="#a46910a714e74fd3d899027514a721e81"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classifile_1_1_i_file_type_info.html">ifile::IFileTypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a05582ef4889b0a543ad4696adb2efe22">GetDocumentFileTypeInfo</a> (const QByteArray &amp;documentTypeId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file type information object for some selected document type.  <a href="#a05582ef4889b0a543ad4696adb2efe22"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_types_info.html#ad27b000c2b9dd09e63ccd4af882c3817">Ids</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#afed347f34994e0dc9994aeef70398862">GetDocumentTypeIdsForFile</a> (const QString &amp;filePath) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of supported document ID's can be created for specified file.  <a href="#afed347f34994e0dc9994aeef70398862"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a9267e276ce03cefb682ac01235ac2e01">GetDefaultDirectory</a> (const QString &amp;sugestedDir=&quot;&quot;, const QByteArray *documentTypeIdPtr=NULL) const </td></tr>
@@ -82,8 +82,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return supported view type IDs for specified document type.  <a href="#abb197624f79b6dcd0bc845db7e246afa"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a9bcebdd6d008815161e161c86b2b0897">GetViewTypeName</a> (const QByteArray &amp;documentTypeId, const QByteArray &amp;viewTypeId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable name of some view type ID.  <a href="#a9bcebdd6d008815161e161c86b2b0897"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiser_1_1_i_file_loader.html">iser::IFileLoader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a1e783c28138db0bb7e6fc021f0327c78">GetFileLoader</a> (const QByteArray &amp;documentTypeId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file loader/saver for spacified document ID.  <a href="#a1e783c28138db0bb7e6fc021f0327c78"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classifile_1_1_i_file_persistence.html">ifile::IFilePersistence</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a71e8079f3d1dea1202f46950c4f12ba1">GetFileLoader</a> (const QByteArray &amp;documentTypeId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file loader/saver for spacified document ID.  <a href="#a71e8079f3d1dea1202f46950c4f12ba1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#aca5446c4f52dce8c618f416c40906756">CreateDocument</a> (const QByteArray &amp;documentTypeId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a document instance for document type <code>documentTypeId</code>.  <a href="#aca5446c4f52dce8c618f416c40906756"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a4c96ba0b8e6b0d193ddf3a4ce0995a60">CreateView</a> (const QByteArray &amp;documentTypeId, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *documentPtr, const QByteArray &amp;viewTypeId=QByteArray()) const </td></tr>
@@ -265,12 +265,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a46910a714e74fd3d899027514a721e81"></a><!-- doxytag: member="idoc::CCompositeDocumentTemplateComp::GetDocumentFileTypeInfo" ref="a46910a714e74fd3d899027514a721e81" args="(const QByteArray &amp;documentTypeId) const " -->
+<a class="anchor" id="a05582ef4889b0a543ad4696adb2efe22"></a><!-- doxytag: member="idoc::CCompositeDocumentTemplateComp::GetDocumentFileTypeInfo" ref="a05582ef4889b0a543ad4696adb2efe22" args="(const QByteArray &amp;documentTypeId) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classiser_1_1_i_file_type_info.html">iser::IFileTypeInfo</a>* idoc::CCompositeDocumentTemplateComp::GetDocumentFileTypeInfo </td>
+          <td class="memname">virtual <a class="el" href="classifile_1_1_i_file_type_info.html">ifile::IFileTypeInfo</a>* idoc::CCompositeDocumentTemplateComp::GetDocumentFileTypeInfo </td>
           <td>(</td>
           <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>documentTypeId</em></td><td>)</td>
@@ -288,7 +288,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classidoc_1_1_i_document_types_info.html#ac41e8a8af9fef09682eb4c9d75ed7d74">idoc::IDocumentTypesInfo</a>.</p>
+<p>Implements <a class="el" href="classidoc_1_1_i_document_types_info.html#a104d84bb6b698a5fadce945572ed9e86">idoc::IDocumentTypesInfo</a>.</p>
 
 </div>
 </div>
@@ -360,12 +360,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1e783c28138db0bb7e6fc021f0327c78"></a><!-- doxytag: member="idoc::CCompositeDocumentTemplateComp::GetFileLoader" ref="a1e783c28138db0bb7e6fc021f0327c78" args="(const QByteArray &amp;documentTypeId) const " -->
+<a class="anchor" id="a71e8079f3d1dea1202f46950c4f12ba1"></a><!-- doxytag: member="idoc::CCompositeDocumentTemplateComp::GetFileLoader" ref="a71e8079f3d1dea1202f46950c4f12ba1" args="(const QByteArray &amp;documentTypeId) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classiser_1_1_i_file_loader.html">iser::IFileLoader</a>* idoc::CCompositeDocumentTemplateComp::GetFileLoader </td>
+          <td class="memname">virtual <a class="el" href="classifile_1_1_i_file_persistence.html">ifile::IFilePersistence</a>* idoc::CCompositeDocumentTemplateComp::GetFileLoader </td>
           <td>(</td>
           <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>documentTypeId</em></td><td>)</td>
@@ -383,7 +383,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classidoc_1_1_i_document_template.html#ad599f3c2f78399f4f28a2e6b4bfe2e0d">idoc::IDocumentTemplate</a>.</p>
+<p>Implements <a class="el" href="classidoc_1_1_i_document_template.html#ab7e01e2b3c635bdd04cdb57b18249439">idoc::IDocumentTemplate</a>.</p>
 
 </div>
 </div>

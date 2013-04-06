@@ -31,7 +31,7 @@
 #include <QtGui/QFileIconProvider>
 
 // ACF includes
-#include "iser/IFileTypeInfo.h"
+#include "ifile/IFileTypeInfo.h"
 #include "ifile/IFileNameParam.h"
 
 #include "iqtgui/TDesignerGuiObserverCompBase.h"
@@ -91,7 +91,7 @@ private:
 	void InvalidateFileSystemModel(const QString& currentFilePath);
 
 private:
-	I_REF(iser::IFileTypeInfo, m_filterInfoCompPtr);
+	I_REF(ifile::IFileTypeInfo, m_filterInfoCompPtr);
 	I_ATTR(bool, m_showUserFilterAttrPtr);
 	I_ATTR(bool, m_showFileTypeAttrPtr);
 	I_ATTR(bool, m_showFileModificationTimeAttrPtr);
