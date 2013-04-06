@@ -4593,7 +4593,12 @@
     <name>CTabContainerGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_tab_container_gui_comp_8h</filename>
-    <includes id="_c_container_gui_base_8h" name="CContainerGuiBase.h" local="yes" imported="no">iqtgui/CContainerGuiBase.h</includes>
+    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
+    <includes id="_c_multi_model_bridge_base_8h" name="CMultiModelBridgeBase.h" local="yes" imported="no">imod/CMultiModelBridgeBase.h</includes>
+    <includes id="_i_enableable_param_8h" name="IEnableableParam.h" local="yes" imported="no">iprm/IEnableableParam.h</includes>
+    <includes id="_c_selection_param_8h" name="CSelectionParam.h" local="yes" imported="no">iprm/CSelectionParam.h</includes>
+    <includes id="_c_options_manager_8h" name="COptionsManager.h" local="yes" imported="no">iprm/COptionsManager.h</includes>
+    <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <class kind="class">iqtgui::CTabContainerGuiComp</class>
     <namespace>iqtgui</namespace>
   </compound>
@@ -40957,48 +40962,112 @@
   <compound kind="class">
     <name>iqtgui::CTabContainerGuiComp</name>
     <filename>classiqtgui_1_1_c_tab_container_gui_comp.html</filename>
-    <base>TContainerGuiBase&lt; QTabWidget &gt;</base>
+    <base>TGuiComponentBase&lt; QTabWidget &gt;</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="typedef">
-      <type>iqtgui::TContainerGuiBase&lt; QTabWidget &gt;</type>
+      <type>iqtgui::TGuiComponentBase&lt; QTabWidget &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>abe2010a74f4f0d57def4d8bdde8ce132</anchor>
+      <anchor>a90c8e4fbaec412fd71bfd82c9ce3eeb1</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CreateMainGui</name>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT</name>
       <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>ae440741526cb0ae2749f7b6c9c08f2eb</anchor>
-      <arglist>(QSize iconSize)</arglist>
+      <anchor>ab3a3ea6eaf42fb12efebc7e9907ee3b9</anchor>
+      <arglist>(TabModel)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual int</type>
-      <name>CreatePageGui</name>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
       <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>a0bdf4e72ae077f6cf0c46ece8404ddad</anchor>
-      <arglist>(const QString &amp;name, QSize iconSize, iqtgui::IGuiObject *guiPtr)</arglist>
+      <anchor>a3f9faab76f444f1000b61cbb93f800b2</anchor>
+      <arglist>(TabModel, iprm::ISelectionParam, ExtractTabModel)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
+      <anchor>a70a141005a391dc8fca663ef79fdd55d</anchor>
+      <arglist>(TabModel, iprm::IOptionsList, ExtractTabModel)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
+      <anchor>ac1eb6996701c935cb9a1d1478e41adac</anchor>
+      <arglist>(TabModel, iser::ISerializable, ExtractTabModel)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
+      <anchor>ac9cb7689fb71fe1cb0dff60cee15ab6e</anchor>
+      <arglist>(TabModel, imod::IModel, ExtractTabModel)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
+      <anchor>aa5ceb5f6b3fc6161b1d0606e701dec10</anchor>
+      <arglist>(TabModel, istd::IChangeable, ExtractTabModel)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
+      <anchor>a9436580fea58a22ec5c3108ead964382</anchor>
+      <arglist>(m_slaveWidgetsModelCompPtr, m_slaveWidgetsVisualCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
+      <anchor>aaa0a4e8d68c841ddf89113c7e27f2c19</anchor>
+      <arglist>(m_tabActivatorsModelCompPtr, m_tabActivatorsCompPtr, false)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateVisualElements</name>
+      <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
+      <anchor>ae7386e81babadd9ff8df98b8bd4b1fc7</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateItem</name>
+      <name>OnGuiCreated</name>
       <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>a0e9e2cfa0bb63cda25a133c6a257e9c3</anchor>
-      <arglist>(int index, const QIcon &amp;icon, const QString &amp;toolTip)</arglist>
+      <anchor>a70e404a18b0b9cb082f97614e33f2a02</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetSelectedIndex</name>
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
       <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>abe2439d2a3db817493b68e339c7e0874</anchor>
-      <arglist>(int index)</arglist>
+      <anchor>a339d7874c2db7d67e5fd6dad1bfdfaa5</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetEnabled</name>
+      <type>virtual void</type>
+      <name>CTabContainerGuiComp::OnComponentCreated</name>
       <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>aa3c60a2a5f482b4c5b462245e53e01c0</anchor>
-      <arglist>(int index, bool isEnabled)</arglist>
+      <anchor>a6096d0c1f044748d9d9030d42bb16f26</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CTabContainerGuiComp::OnComponentDestroyed</name>
+      <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
+      <anchor>af3d9ab867b79d038054435079b4b46e0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
+      <anchor>aaac719be4d5f18d9624666b972f5dbde</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
