@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef ifile_IFileLoader_included
-#define ifile_IFileLoader_included
+#ifndef ifile_IFilePersistence_included
+#define ifile_IFilePersistence_included
 
 
 // Qt includes
@@ -30,7 +30,6 @@
 
 // ACF includes
 #include "istd/IChangeable.h"
-
 #include "ifile/IFileTypeInfo.h"
 
 
@@ -52,17 +51,19 @@ public:
 	enum OperationState
 	{
 		/**
-			Operation was successfull.
+			Operation was successful.
 		*/
-		StateOk,
+		OS_OK,
+
 		/**
 			Operation was aborted by user.
 		*/
-		StateAborted,
+		OS_CANCELED,
+
 		/**
 			Operation failed.
 		*/
-		StateFailed
+		OS_FAILED
 	};
 
 	/**
@@ -129,6 +130,6 @@ public:
 } // namespace ifile
 
 
-#endif // !ifile_IFileLoader_included
+#endif // !ifile_IFilePersistence_included
 
 

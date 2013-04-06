@@ -72,7 +72,7 @@ bool CFileConvertOverProcessorComp::ConvertFiles(
 		return false;
 	}
 
-	if (m_inputFileLoaderCompPtr->LoadFromFile(*m_inputDataCompPtr.GetPtr(), inputPath) != ifile::IFilePersistence::StateOk){
+	if (m_inputFileLoaderCompPtr->LoadFromFile(*m_inputDataCompPtr.GetPtr(), inputPath) != ifile::IFilePersistence::OS_OK){
 		SendErrorMessage(0, "File could not be loaded", "File processing component");
 		
 		return false;
@@ -102,7 +102,7 @@ bool CFileConvertOverProcessorComp::ConvertFiles(
 
 	Q_ASSERT(outputFileLoader != NULL);
 
-	return (outputFileLoader->SaveToFile(*m_outputDataCompPtr.GetPtr(), outputPath) == ifile::IFilePersistence::StateOk);
+	return (outputFileLoader->SaveToFile(*m_outputDataCompPtr.GetPtr(), outputPath) == ifile::IFilePersistence::OS_OK);
 }
 
 

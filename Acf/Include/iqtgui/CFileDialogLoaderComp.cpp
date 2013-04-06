@@ -73,7 +73,7 @@ int CFileDialogLoaderComp::LoadFromFile(istd::IChangeable& data, const QString& 
 	int selectionIndex = -1;
 	QString openFileName = GetFileName(filePath, false, selectionIndex);
 	if (openFileName.isEmpty()){
-		return StateAborted;
+		return OS_CANCELED;
 	}
 
 	ifile::IFilePersistence* loaderPtr = GetLoaderFor(openFileName, selectionIndex, QF_LOAD, false);
@@ -81,7 +81,7 @@ int CFileDialogLoaderComp::LoadFromFile(istd::IChangeable& data, const QString& 
 		return loaderPtr->LoadFromFile(data, openFileName);
 	}
 
-	return StateFailed;
+	return OS_FAILED;
 }
 
 
@@ -91,7 +91,7 @@ int CFileDialogLoaderComp::SaveToFile(const istd::IChangeable& data, const QStri
 
 	QString saveFileName = GetFileName(filePath, true, selectionIndex);
 	if (saveFileName.isEmpty()){
-		return StateAborted;
+		return OS_CANCELED;
 	}
 
 	ifile::IFilePersistence* loaderPtr = GetLoaderFor(saveFileName, selectionIndex, QF_SAVE, false);
@@ -99,7 +99,7 @@ int CFileDialogLoaderComp::SaveToFile(const istd::IChangeable& data, const QStri
 		return loaderPtr->SaveToFile(data, saveFileName);
 	}
 
-	return StateFailed;
+	return OS_FAILED;
 }
 
 

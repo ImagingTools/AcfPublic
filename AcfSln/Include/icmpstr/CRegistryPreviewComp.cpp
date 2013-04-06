@@ -25,12 +25,11 @@
 
 // Qt includes
 #include <QtCore/QDir>
+#include <QtCore/QMetaType>
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
-
 #include "ifile/CXmlFileWriteArchive.h"
-
 #include "istd/CSystem.h"
 
 

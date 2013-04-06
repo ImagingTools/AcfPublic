@@ -25,10 +25,10 @@
 
 // Qt includes
 #include <QtCore/QMutexLocker>
-#include <QtCore/QElapsedTimer>
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
+#include "istd/CGeneralTimeStamp.h"
 #include "imod/IModel.h"
 
 
@@ -123,19 +123,19 @@ void CDirectoryMonitorComp::OnComponentDestroyed()
 
 void CDirectoryMonitorComp::run()
 {
-	QElapsedTimer updateTimer;
+    istd::CGeneralTimeStamp updateTimer;
 
-	QElapsedTimer measurementTimer;
+    istd::CGeneralTimeStamp measurementTimer;
 
 	while (!m_finishThread){
-		bool needStateUpdate = updateTimer.hasExpired(quint64(m_poolingFrequency * 1000));
+        bool needStateUpdate = updateTimer.GetElapsed() > m_poolingFrequency;
 		if (!needStateUpdate || m_lockChanges){
 			msleep(100);
 
 			continue;
 		}
 
-		measurementTimer.start();
+        measurementTimer.Start();
 
 		QFileInfo currentDirectoryInfo(m_currentDirectory.absolutePath());
 		if (!currentDirectoryInfo.exists()){
@@ -300,10 +300,10 @@ void CDirectoryMonitorComp::run()
 		}
 
 		Q_EMIT FolderChanged(changeFlags);
-		updateTimer.start();
+        updateTimer.Start();
 
 		I_IF_DEBUG(
-			double processingTime = measurementTimer.elapsed() * 0.001;
+            double processingTime = measurementTimer.GetElapsed();
 
 			SendInfoMessage(0,
 				QString("Folder monitoring of ") +
@@ -427,8 +427,8 @@ void CDirectoryMonitorComp::StopObserverThread()
 	m_finishThread = true;
 
 	// wait for 30 seconds for finishing of thread:
-	QElapsedTimer timer;
-	while (!timer.hasExpired(30000) && BaseClass2::isRunning());
+    istd::CGeneralTimeStamp timer;
+    while ((timer.GetElapsed() < 30) && BaseClass2::isRunning());
 
 	if (BaseClass2::isRunning()){
 		BaseClass2::terminate();

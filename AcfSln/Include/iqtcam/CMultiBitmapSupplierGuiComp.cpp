@@ -87,7 +87,7 @@ void CMultiBitmapSupplierGuiComp::on_SaveImageButton_clicked()
 			newFilePath = (*m_filePathFormatAttrPtr).arg(dateText).arg(timeText).arg(channelndexText).arg(resolutionText);
 		}
 
-		if (m_bitmapLoaderCompPtr->SaveToFile(m_bitmap, newFilePath) == ifile::IFilePersistence::StateFailed){
+		if (m_bitmapLoaderCompPtr->SaveToFile(m_bitmap, newFilePath) == ifile::IFilePersistence::OS_FAILED){
 			QMessageBox::warning(
 						GetQtWidget(),
 						QObject::tr("Error"),
@@ -216,8 +216,13 @@ void CMultiBitmapSupplierGuiComp::UpdateGui(int updateFlags)
 		if (bitmapPtr != NULL){
 			const QImage& image = bitmapPtr->GetQImage();
 			QPixmap iconPixmap;
-			iconPixmap.convertFromImage(image);
-			m_icons.push_back(QIcon(iconPixmap.scaled(*m_iconSizeAttrPtr, *m_iconSizeAttrPtr, Qt::KeepAspectRatio)));
+
+#if QT_VERSION >= 0x040700
+            iconPixmap.convertFromImage(image);
+#else
+            iconPixmap.fromImage(image);
+#endif
+            m_icons.push_back(QIcon(iconPixmap.scaled(*m_iconSizeAttrPtr, *m_iconSizeAttrPtr, Qt::KeepAspectRatio)));
 
 			QString iconText = QObject::tr("Channel %1").arg(bitmapIndex + 1);
 			if ((selectionConstraintsPtr != NULL) && (bitmapIndex < selectionConstraintsPtr->GetOptionsCount())){

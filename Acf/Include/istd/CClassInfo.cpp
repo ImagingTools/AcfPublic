@@ -24,7 +24,9 @@
 
 
 #ifndef _MSC_VER
+
 #include <cxxabi.h>
+#include <stdlib.h>
 
 // static help functions
 
@@ -385,7 +387,7 @@ QByteArray CClassInfo::GetUndecoratedName(const QByteArray& rawName)
 	char* demangledName = abi::__cxa_demangle(rawName.constData(), NULL, NULL, &status);
 	QByteArray retVal(demangledName);
 
-	::free(demangledName);
+    ::free(demangledName);
 	
 	return retVal;
 #endif

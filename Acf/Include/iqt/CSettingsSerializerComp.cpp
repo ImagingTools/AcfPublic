@@ -69,7 +69,7 @@ int CSettingsSerializerComp::LoadFromFile(istd::IChangeable& data, const QString
 			CSettingsReadArchive archive(companyName, applicationName, *m_rootKeyAttrPtr, scope);
 
 			if (serializeblePtr->Serialize(archive)){
-				return StateOk;
+				return OS_OK;
 			}
 			else{
 				SendInfoMessage(MI_CANNOT_LOAD, "Cannot serialize object from file");
@@ -80,7 +80,7 @@ int CSettingsSerializerComp::LoadFromFile(istd::IChangeable& data, const QString
 		}
 	}
 
-	return StateFailed;
+	return OS_FAILED;
 }
 
 
@@ -102,7 +102,7 @@ int CSettingsSerializerComp::SaveToFile(const istd::IChangeable& data, const QSt
 						&m_applicationInfoCompPtr->GetVersionInfo());
 
 			if (serializeblePtr->Serialize(archive)){
-				return StateOk;
+				return OS_OK;
 			}
 			else{
 				SendInfoMessage(MI_CANNOT_SAVE, "Cannot serialize object to file");
@@ -113,7 +113,7 @@ int CSettingsSerializerComp::SaveToFile(const istd::IChangeable& data, const QSt
 		}
 	}
 
-	return StateFailed;
+	return OS_FAILED;
 }
 
 

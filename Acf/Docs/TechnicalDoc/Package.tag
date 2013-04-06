@@ -22341,21 +22341,21 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>StateOk</name>
+      <name>OS_OK</name>
       <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
-      <anchor>a674791f4173d2b57c1e6d6aa30228f76a9100e86ea8e2ca89b14a8ab59914ee8d</anchor>
+      <anchor>a674791f4173d2b57c1e6d6aa30228f76ad3ad24e4a04c8d4066a3b6b91489a5a9</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>StateAborted</name>
+      <name>OS_CANCELED</name>
       <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
-      <anchor>a674791f4173d2b57c1e6d6aa30228f76a6260f5344ae42889d2ee230406372f97</anchor>
+      <anchor>a674791f4173d2b57c1e6d6aa30228f76aadbf3ed4fda32f09ef7ffdcb43476914</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>StateFailed</name>
+      <name>OS_FAILED</name>
       <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
-      <anchor>a674791f4173d2b57c1e6d6aa30228f76aeb47b187c7d890ae515d35ebdabd3464</anchor>
+      <anchor>a674791f4173d2b57c1e6d6aa30228f76a629c8d6d55c0333a880c31d11f12308b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -36097,12 +36097,6 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>DR_MESSAGE_ID</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ae690e3b2dfa33b48acf1c7513d42ae14ace3e879dcc7e3d9ceeda0df8b7a52bc5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
       <name>DR_CATEGORY</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
       <anchor>ae690e3b2dfa33b48acf1c7513d42ae14ac2a7717d903429e38286ff80005ec858</anchor>
@@ -37080,16 +37074,16 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>CTabContainerGuiComp::OnComponentCreated</name>
+      <name>OnComponentCreated</name>
       <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>a6096d0c1f044748d9d9030d42bb16f26</anchor>
+      <anchor>a0f56b344ce80382a39b3d988802462fe</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>CTabContainerGuiComp::OnComponentDestroyed</name>
+      <name>OnComponentDestroyed</name>
       <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>af3d9ab867b79d038054435079b4b46e0</anchor>
+      <anchor>a3904f92d7d78f0385b9bb9f466252ed7</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

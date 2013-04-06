@@ -96,7 +96,7 @@ int CMemoryBankSerializerComp::LoadFromFile(istd::IChangeable& data, const QStri
 
 		quint32 blockSize;
 		if (!ReadFromMem(0, &blockSize, sizeof(blockSize)) || (blockSize < 0) || (blockSize > 0xffff)){
-			return StateFailed;
+			return OS_FAILED;
 		}
 
 		QVector<quint8> buffer(blockSize, 0);
@@ -104,7 +104,7 @@ int CMemoryBankSerializerComp::LoadFromFile(istd::IChangeable& data, const QStri
 			iser::CMemoryReadArchive archive(&buffer, blockSize);
 
 			if (serializablePtr->Serialize(archive)){
-				return StateOk;
+				return OS_OK;
 			}
 			else{
 				SendErrorMessage(MI_CANNOT_LOAD, "Cannot load data from Crypto Box, data corrupted");
@@ -113,7 +113,7 @@ int CMemoryBankSerializerComp::LoadFromFile(istd::IChangeable& data, const QStri
 		}
 	}
 
-	return StateFailed;
+	return OS_FAILED;
 }
 
 
@@ -126,19 +126,19 @@ int CMemoryBankSerializerComp::SaveToFile(const istd::IChangeable& data, const Q
 		iser::CMemoryWriteArchive archive(m_versionInfoCompPtr.GetPtr());
 		if (!serializablePtr->Serialize(archive)){
 			SendErrorMessage(MI_CANNOT_LOAD, "Cannot store data to archive");
-			return StateFailed;
+			return OS_FAILED;
 		}
 
 		quint32 blockSize = quint32(archive.GetBufferSize());
 		if (WriteToMem(0, &blockSize, sizeof(blockSize)) && WriteToMem(sizeof(blockSize), archive.GetBuffer(), blockSize)){
-			return StateOk;
+			return OS_OK;
 		}
 		else{
 			SendErrorMessage(MI_CANNOT_LOAD, "Cannot write data to Crypto Box");
 		}
 	}
 
-	return StateFailed;
+	return OS_FAILED;
 }
 
 

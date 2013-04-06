@@ -30,11 +30,11 @@
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QSet&gt;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QtCore/QElapsedTimer&gt;</span>
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_changeable_8h.html">istd/IChangeable.h</a>&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_change_notifier_8h.html">istd/TChangeNotifier.h</a>&quot;</span>
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_changeable_8h.html">istd/IChangeable.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_change_notifier_8h.html">istd/TChangeNotifier.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_general_time_stamp_8h.html">istd/CGeneralTimeStamp.h</a>&quot;</span>
 <a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_model_8h.html">imod/IModel.h</a>&quot;</span>
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_model_wrap_8h.html">imod/TModelWrap.h</a>&quot;</span>
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_multi_model_observer_base_8h.html">imod/CMultiModelObserverBase.h</a>&quot;</span>
@@ -93,7 +93,7 @@
 <a name="l00071"></a>00071               <a class="code" href="classiproc_1_1_t_supplier_comp_wrap_1_1_timer.html#a997a5ca668786cbe967f9798d97f03dd">~Timer</a>();
 <a name="l00072"></a>00072 
 <a name="l00073"></a>00073        <span class="keyword">private</span>:
-<a name="l00074"></a>00074               QElapsedTimer m_timer;
+<a name="l00074"></a>00074         <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_general_time_stamp.html">istd::CGeneralTimeStamp</a> m_timer;
 <a name="l00075"></a>00075               <span class="keyword">const</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Standard implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap</a>* m_parentPtr;
 <a name="l00076"></a>00076               QString m_measuredFeatureName;
 <a name="l00077"></a>00077        };
@@ -414,7 +414,7 @@
 <a name="l00419"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap_1_1_timer.html#a9d1a054822e3eef727dace6129fbded4">00419</a> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap_1_1_timer.html#a9d1a054822e3eef727dace6129fbded4">TSupplierCompWrap&lt;Product&gt;::Timer::Timer</a>(<span class="keyword">const</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Standard implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap</a>* parentPtr, <span class="keyword">const</span> QString&amp; measuredFeatureName)
 <a name="l00420"></a>00420 :      m_parentPtr(parentPtr), m_measuredFeatureName(measuredFeatureName)
 <a name="l00421"></a>00421 {
-<a name="l00422"></a>00422        m_timer.start();
+<a name="l00422"></a>00422     m_timer.<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_general_time_stamp.html#a7d0d886d2e4a74255a9309154542e15e">Start</a>();
 <a name="l00423"></a>00423 }
 <a name="l00424"></a>00424 
 <a name="l00425"></a>00425 
@@ -425,7 +425,7 @@
 <a name="l00430"></a>00430               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_smart_ptr.html">MessagePtr</a> messagePtr(<span class="keyword">new</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_c_message.html">ibase::CMessage</a>(
 <a name="l00431"></a>00431                                    <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152a42a989ac6baf47a23c6595f66cb30077">istd::IInformationProvider::IC_INFO</a>,
 <a name="l00432"></a>00432                                    0,
-<a name="l00433"></a>00433                                    QObject::tr(<span class="stringliteral">&quot;%1 took %2 ms&quot;</span>).arg(m_measuredFeatureName).arg(m_timer.elapsed()),
+<a name="l00433"></a>00433                     QObject::tr(<span class="stringliteral">&quot;%1 took %2 ms&quot;</span>).arg(m_measuredFeatureName).arg(m_timer.GetElapsed() * 1000),
 <a name="l00434"></a>00434                                    *m_parentPtr-&gt;m_diagnosticNameAttrPtr));
 <a name="l00435"></a>00435               m_parentPtr-&gt;m_messageContainer.AddMessage(messagePtr);
 <a name="l00436"></a>00436        }

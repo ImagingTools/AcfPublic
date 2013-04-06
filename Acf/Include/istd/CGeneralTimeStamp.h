@@ -28,7 +28,7 @@
 #if QT_VERSION >= 0x040700
 	#include <QtCore/QElapsedTimer>
 #else
-	#include <QtCore/QTime>
+    #include <QtCore/QDateTime>
 #endif
 
 #include "istd/ITimeStamp.h"

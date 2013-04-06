@@ -151,7 +151,7 @@ void CObjectPreviewGuiComp::UpdateObjectFromFile()
 
 		if (m_fileLoaderCompPtr.IsValid()){
 			int retVal = m_fileLoaderCompPtr->LoadFromFile(*m_objectCompPtr.GetPtr(), m_lastFilePath);
-			if (retVal != ifile::IFilePersistence::StateOk){
+			if (retVal != ifile::IFilePersistence::OS_OK){
 				disableView = true;
 			}
 		}

@@ -67,9 +67,9 @@ Inheritance diagram for ifile::IFilePersistence:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifile_1_1_i_file_persistence.html#a674791f4173d2b57c1e6d6aa30228f76">OperationState</a> { <a class="el" href="classifile_1_1_i_file_persistence.html#a674791f4173d2b57c1e6d6aa30228f76a9100e86ea8e2ca89b14a8ab59914ee8d">StateOk</a>, 
-<a class="el" href="classifile_1_1_i_file_persistence.html#a674791f4173d2b57c1e6d6aa30228f76a6260f5344ae42889d2ee230406372f97">StateAborted</a>, 
-<a class="el" href="classifile_1_1_i_file_persistence.html#a674791f4173d2b57c1e6d6aa30228f76aeb47b187c7d890ae515d35ebdabd3464">StateFailed</a>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifile_1_1_i_file_persistence.html#a674791f4173d2b57c1e6d6aa30228f76">OperationState</a> { <a class="el" href="classifile_1_1_i_file_persistence.html#a674791f4173d2b57c1e6d6aa30228f76ad3ad24e4a04c8d4066a3b6b91489a5a9">OS_OK</a>, 
+<a class="el" href="classifile_1_1_i_file_persistence.html#a674791f4173d2b57c1e6d6aa30228f76aadbf3ed4fda32f09ef7ffdcb43476914">OS_CANCELED</a>, 
+<a class="el" href="classifile_1_1_i_file_persistence.html#a674791f4173d2b57c1e6d6aa30228f76a629c8d6d55c0333a880c31d11f12308b">OS_FAILED</a>
  }</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Result of operation.  <a href="classifile_1_1_i_file_persistence.html#a674791f4173d2b57c1e6d6aa30228f76">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifile_1_1_i_file_persistence.html#acfb011fb0ecccb52b85c52881552ec6e">ErrorType</a> { <a class="el" href="classifile_1_1_i_file_persistence.html#acfb011fb0ecccb52b85c52881552ec6eaf324b5c735ae1d026b5332359f5eb625">ET_NO_WRITE_PERMISSIONS</a>, 
@@ -94,7 +94,7 @@ Public Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Provide loading and saving of objects. </p>
 
-<p>Definition at line <a class="el" href="_i_file_persistence_8h_source.html#l00024">24</a> of file <a class="el" href="_i_file_persistence_8h_source.html">IFilePersistence.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_file_persistence_8h_source.html#l00023">23</a> of file <a class="el" href="_i_file_persistence_8h_source.html">IFilePersistence.h</a>.</p>
 </div><hr/><h2>Member Enumeration Documentation</h2>
 <a class="anchor" id="acfb011fb0ecccb52b85c52881552ec6e"></a><!-- doxytag: member="ifile::IFilePersistence::ErrorType" ref="acfb011fb0ecccb52b85c52881552ec6e" args="" -->
 <div class="memitem">
@@ -122,7 +122,7 @@ Public Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_file_persistence_8h_source.html#l00049">49</a> of file <a class="el" href="_i_file_persistence_8h_source.html">IFilePersistence.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_file_persistence_8h_source.html#l00050">50</a> of file <a class="el" href="_i_file_persistence_8h_source.html">IFilePersistence.h</a>.</p>
 
 </div>
 </div>
@@ -151,7 +151,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classipackage_1_1_c_registry_code_saver_comp.html#ab3c9f026a0c799e044c94b1852b80f80">ipackage::CRegistryCodeSaverComp</a>, <a class="el" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a1c6505cec393c4178dea87867e891199">iqtgui::CFileDialogLoaderComp</a>, <a class="el" href="classiimg_1_1_c_bitmap_loader_comp.html#a345866a4ee60744da1c60e2f944ec6f7">iimg::CBitmapLoaderComp</a>, and <a class="el" href="classifile_1_1_c_file_serializer_comp_base.html#ae177b2fecdc0565b7d8e06b6e1b7626e">ifile::CFileSerializerCompBase</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_file_persistence_8h_source.html#l00070">70</a> of file <a class="el" href="_i_file_persistence_8h_source.html">IFilePersistence.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_file_persistence_8h_source.html#l00071">71</a> of file <a class="el" href="_i_file_persistence_8h_source.html">IFilePersistence.h</a>.</p>
 
 </div>
 </div>
@@ -168,20 +168,20 @@ Public Member Functions</h2></td></tr>
 
 <p>Result of operation. </p>
 <dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em><a class="anchor" id="a674791f4173d2b57c1e6d6aa30228f76a9100e86ea8e2ca89b14a8ab59914ee8d"></a><!-- doxytag: member="StateOk" ref="a674791f4173d2b57c1e6d6aa30228f76a9100e86ea8e2ca89b14a8ab59914ee8d" args="" -->StateOk</em>&nbsp;</td><td>
-<p>Operation was successfull. </p>
+<tr><td valign="top"><em><a class="anchor" id="a674791f4173d2b57c1e6d6aa30228f76ad3ad24e4a04c8d4066a3b6b91489a5a9"></a><!-- doxytag: member="OS_OK" ref="a674791f4173d2b57c1e6d6aa30228f76ad3ad24e4a04c8d4066a3b6b91489a5a9" args="" -->OS_OK</em>&nbsp;</td><td>
+<p>Operation was successful. </p>
 </td></tr>
-<tr><td valign="top"><em><a class="anchor" id="a674791f4173d2b57c1e6d6aa30228f76a6260f5344ae42889d2ee230406372f97"></a><!-- doxytag: member="StateAborted" ref="a674791f4173d2b57c1e6d6aa30228f76a6260f5344ae42889d2ee230406372f97" args="" -->StateAborted</em>&nbsp;</td><td>
+<tr><td valign="top"><em><a class="anchor" id="a674791f4173d2b57c1e6d6aa30228f76aadbf3ed4fda32f09ef7ffdcb43476914"></a><!-- doxytag: member="OS_CANCELED" ref="a674791f4173d2b57c1e6d6aa30228f76aadbf3ed4fda32f09ef7ffdcb43476914" args="" -->OS_CANCELED</em>&nbsp;</td><td>
 <p>Operation was aborted by user. </p>
 </td></tr>
-<tr><td valign="top"><em><a class="anchor" id="a674791f4173d2b57c1e6d6aa30228f76aeb47b187c7d890ae515d35ebdabd3464"></a><!-- doxytag: member="StateFailed" ref="a674791f4173d2b57c1e6d6aa30228f76aeb47b187c7d890ae515d35ebdabd3464" args="" -->StateFailed</em>&nbsp;</td><td>
+<tr><td valign="top"><em><a class="anchor" id="a674791f4173d2b57c1e6d6aa30228f76a629c8d6d55c0333a880c31d11f12308b"></a><!-- doxytag: member="OS_FAILED" ref="a674791f4173d2b57c1e6d6aa30228f76a629c8d6d55c0333a880c31d11f12308b" args="" -->OS_FAILED</em>&nbsp;</td><td>
 <p>Operation failed. </p>
 </td></tr>
 </table>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_file_persistence_8h_source.html#l00030">30</a> of file <a class="el" href="_i_file_persistence_8h_source.html">IFilePersistence.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_file_persistence_8h_source.html#l00029">29</a> of file <a class="el" href="_i_file_persistence_8h_source.html">IFilePersistence.h</a>.</p>
 
 </div>
 </div>

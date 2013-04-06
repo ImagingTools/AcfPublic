@@ -158,7 +158,6 @@ void CPropertiesEditorComp::SetDataToEditor(const IProperty& objectProperty, QTr
 }
 
 
-
 CPropertiesEditorComp::EditorDelegate::EditorDelegate(CPropertiesEditorComp& parent)
 	:m_parent(parent)
 {

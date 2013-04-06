@@ -69,7 +69,7 @@ int CComposedFilePersistenceComp::LoadFromFile(istd::IChangeable& data, const QS
 		}
 	}
 
-	return StateFailed;
+	return OS_FAILED;
 }
 
 
@@ -91,7 +91,7 @@ int CComposedFilePersistenceComp::SaveToFile(const istd::IChangeable& data, cons
 		}
 	}
 
-	return StateFailed;
+	return OS_FAILED;
 }
 
 

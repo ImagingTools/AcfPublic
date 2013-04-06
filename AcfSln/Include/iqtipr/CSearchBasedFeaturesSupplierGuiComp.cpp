@@ -23,9 +23,6 @@
 #include "iqtipr/CSearchBasedFeaturesSupplierGuiComp.h"
 
 
-// Qt includes
-#include <QtCore/QElapsedTimer>
-
 // ACF includes
 #include "imath/CVarVector.h"
 

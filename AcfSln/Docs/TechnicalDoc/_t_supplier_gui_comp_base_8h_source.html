@@ -270,7 +270,7 @@
 <a name="l00283"></a>00283        <span class="keywordflow">if</span> ((supplierPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; m_paramsLoaderCompPtr.IsValid()){
 <a name="l00284"></a>00284               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr = supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52" title="Get parameter set using by this supplier.">GetModelParametersSet</a>();
 <a name="l00285"></a>00285               <span class="keywordflow">if</span> (paramsPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00286"></a>00286                      <span class="keywordflow">if</span> (m_paramsLoaderCompPtr-&gt;LoadFromFile(*paramsPtr, <span class="stringliteral">&quot;&quot;</span>) != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_persistence.html#a674791f4173d2b57c1e6d6aa30228f76aeb47b187c7d890ae515d35ebdabd3464">ifile::IFilePersistence::StateFailed</a>){
+<a name="l00286"></a>00286                      <span class="keywordflow">if</span> (m_paramsLoaderCompPtr-&gt;LoadFromFile(*paramsPtr, <span class="stringliteral">&quot;&quot;</span>) != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_persistence.html#a674791f4173d2b57c1e6d6aa30228f76a629c8d6d55c0333a880c31d11f12308b">ifile::IFilePersistence::OS_FAILED</a>){
 <a name="l00287"></a>00287                             <span class="keywordflow">return</span> <span class="keyword">true</span>;
 <a name="l00288"></a>00288                      }
 <a name="l00289"></a>00289                      <span class="keywordflow">else</span>{
@@ -293,7 +293,7 @@
 <a name="l00306"></a>00306        <span class="keywordflow">if</span> ((supplierPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; m_paramsLoaderCompPtr.IsValid()){
 <a name="l00307"></a>00307               <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr = supplierPtr-&gt;<a class="code" href="classiproc_1_1_i_supplier.html#a676cd5ff0426c1f72076c1847cb84a52" title="Get parameter set using by this supplier.">GetModelParametersSet</a>();
 <a name="l00308"></a>00308               <span class="keywordflow">if</span> (paramsPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00309"></a>00309                      <span class="keywordflow">if</span> (m_paramsLoaderCompPtr-&gt;SaveToFile(*paramsPtr, <span class="stringliteral">&quot;&quot;</span>) != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_persistence.html#a674791f4173d2b57c1e6d6aa30228f76aeb47b187c7d890ae515d35ebdabd3464">ifile::IFilePersistence::StateFailed</a>){
+<a name="l00309"></a>00309                      <span class="keywordflow">if</span> (m_paramsLoaderCompPtr-&gt;SaveToFile(*paramsPtr, <span class="stringliteral">&quot;&quot;</span>) != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_persistence.html#a674791f4173d2b57c1e6d6aa30228f76a629c8d6d55c0333a880c31d11f12308b">ifile::IFilePersistence::OS_FAILED</a>){
 <a name="l00310"></a>00310                             <span class="keywordflow">return</span> <span class="keyword">true</span>;
 <a name="l00311"></a>00311                      }
 <a name="l00312"></a>00312                      <span class="keywordflow">else</span>{
@@ -450,13 +450,13 @@
 <a name="l00463"></a>00463 
 <a name="l00464"></a>00464                             <span class="keywordflow">default</span>:
 <a name="l00465"></a>00465                                    statusText = QObject::tr(<span class="stringliteral">&quot;Processing completed without errors&quot;</span>);
-<a name="l00466"></a>00466                                    statusIcon = QIcon(<span class="stringliteral">&quot;:/Icons/StateOk.svg&quot;</span>);
+<a name="l00466"></a>00466                                    statusIcon = QIcon(<span class="stringliteral">&quot;:/Icons/OS_OK.svg&quot;</span>);
 <a name="l00467"></a>00467                                    <span class="keywordflow">break</span>;
 <a name="l00468"></a>00468                             }
 <a name="l00469"></a>00469                      }
 <a name="l00470"></a>00470                      <span class="keywordflow">else</span>{
 <a name="l00471"></a>00471                             statusText = QObject::tr(<span class="stringliteral">&quot;Processing completed without errors&quot;</span>);
-<a name="l00472"></a>00472                             statusIcon = QIcon(<span class="stringliteral">&quot;:/Icons/StateOk.svg&quot;</span>);
+<a name="l00472"></a>00472                             statusIcon = QIcon(<span class="stringliteral">&quot;:/Icons/OS_OK.svg&quot;</span>);
 <a name="l00473"></a>00473                      }
 <a name="l00474"></a>00474                      <span class="keywordflow">break</span>;
 <a name="l00475"></a>00475 

@@ -119,7 +119,7 @@ int CBitmapLoaderComp::LoadFromFile(istd::IChangeable& data, const QString& file
 		}
 
 		if (isOk){
-			return StateOk;
+			return OS_OK;
 		}
 		else{
 			SendInfoMessage(MI_BAD_OBJECT_TYPE, tr("Object is not supported image"));
@@ -129,7 +129,7 @@ int CBitmapLoaderComp::LoadFromFile(istd::IChangeable& data, const QString& file
 		SendInfoMessage(MI_CANNOT_LOAD, tr("Cannot load file %1").arg(filePath));
 	}
 
-	return StateFailed;
+	return OS_FAILED;
 }
 
 
@@ -145,7 +145,7 @@ int CBitmapLoaderComp::SaveToFile(const istd::IChangeable& data, const QString& 
 		else{
 			SendInfoMessage(MI_BAD_OBJECT_TYPE, tr("Object is not supported image"));
 
-			return StateFailed;
+			return OS_FAILED;
 		}
 	}
 
@@ -153,13 +153,13 @@ int CBitmapLoaderComp::SaveToFile(const istd::IChangeable& data, const QString& 
 
 	const QImage& image = imageProviderPtr->GetQImage();
 	if (image.save(filePath)){
-		return StateOk;
+		return OS_OK;
 	}
 	else{
 		SendInfoMessage(MI_CANNOT_SAVE, tr("Cannot save file %1").arg(filePath));
 	}
 
-	return StateFailed;
+	return OS_FAILED;
 }
 
 

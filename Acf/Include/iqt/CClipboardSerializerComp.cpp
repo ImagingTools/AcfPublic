@@ -88,7 +88,7 @@ int CClipboardSerializerComp::LoadFromFile(istd::IChangeable& data, const QStrin
 				if (serializablePtr->Serialize(archive)){
 					changePtr.SetPtr(&data);
 					
-					return StateOk;
+					return OS_OK;
 				}
 				else{
 					SendErrorMessage(MI_CANNOT_LOAD, "Cannot read data from clipboard archive (data corrupted)");
@@ -100,7 +100,7 @@ int CClipboardSerializerComp::LoadFromFile(istd::IChangeable& data, const QStrin
 		}
 	}
 
-	return StateFailed;
+	return OS_FAILED;
 }
 
 
@@ -109,7 +109,7 @@ int CClipboardSerializerComp::SaveToFile(const istd::IChangeable& data, const QS
 	if (IsOperationSupported(&data, NULL, QF_SAVE | QF_ANONYMOUS, false)){
 		QClipboard* clipboardPtr = QApplication::clipboard();
 		if (clipboardPtr == NULL){
-			return StateAborted;
+			return OS_CANCELED;
 		}
 
 		istd::TDelPtr<QMimeData> mimeDataPtr(new QMimeData);
@@ -124,7 +124,7 @@ int CClipboardSerializerComp::SaveToFile(const istd::IChangeable& data, const QS
 
 				clipboardPtr->setMimeData(mimeDataPtr.PopPtr());
 
-				return StateOk;
+				return OS_OK;
 			}
 			else{
 				SendErrorMessage(MI_CANNOT_LOAD, "Cannot store data to archive");
@@ -132,7 +132,7 @@ int CClipboardSerializerComp::SaveToFile(const istd::IChangeable& data, const QS
 		}
 	}
 
-	return StateFailed;
+	return OS_FAILED;
 }
 
 

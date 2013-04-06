@@ -120,7 +120,10 @@ void CScanlineMask::CreateFromCircle(const i2d::CCircle& circle, const i2d::CRec
 	int linesCount = m_boundingBox.GetHeight();
 
 	m_scanlines.resize(linesCount);
-	m_rangesContainer.reserve(linesCount);
+
+#if QT_VERSION >= 0x040700
+    m_rangesContainer.reserve(linesCount);
+#endif
 
 	for (int lineIndex = 0; lineIndex < linesCount; lineIndex++){
 		m_rangesContainer.push_back(istd::CIntRanges());
@@ -208,7 +211,10 @@ void CScanlineMask::CreateFromAnnulus(const i2d::CAnnulus& annulus, const i2d::C
 	double centerY = center.GetY();
 
 	m_scanlines.resize(linesCount);
-	m_rangesContainer.reserve(linesCount);
+
+#if QT_VERSION >= 0x040700
+    m_rangesContainer.reserve(linesCount);
+#endif
 
 	for (int lineIndex = 0; lineIndex < linesCount; lineIndex++){
 		m_rangesContainer.push_back(istd::CIntRanges());
@@ -333,7 +339,10 @@ void CScanlineMask::CreateFromPolygon(const i2d::CPolygon& polygon, const i2d::C
 
 	// build the scan ranges
 	m_scanlines.resize(linesCount);
-	m_rangesContainer.reserve(linesCount);
+
+#if QT_VERSION >= 0x040700
+    m_rangesContainer.reserve(linesCount);
+#endif
 
 	for (int lineIndex = 0; lineIndex < linesCount; lineIndex++){
 		m_rangesContainer.push_back(istd::CIntRanges());
