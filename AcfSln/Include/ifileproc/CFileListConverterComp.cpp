@@ -64,7 +64,7 @@ int CFileListConverterComp::DoProcessing(
 
 	CFilePathesContainer* convertedFileListPtr = dynamic_cast<CFilePathesContainer*>(outputPtr);
 
-	QStringList fileList = inputFileListProviderPtr->GetFileList();
+	const QFileInfoList& fileList = inputFileListProviderPtr->GetFileList();
 	int filesCount = fileList.count();
 
 	double progressStep = 1.0 / (double)filesCount;
@@ -76,7 +76,7 @@ int CFileListConverterComp::DoProcessing(
 	QStringList filesToRemove;
 
 	for (int inputFileIndex = 0; inputFileIndex < filesCount; inputFileIndex++){
-		const QString& inputFile = fileList[inputFileIndex];
+		const QString& inputFile = fileList[inputFileIndex].absoluteFilePath();
 
 		const QString outputFileName = m_outputFileNameCompPtr->GetFilePath(inputFile);
 
@@ -84,7 +84,7 @@ int CFileListConverterComp::DoProcessing(
 
 		QDir outputDirectory(outputFileInfo.absoluteDir());
 		if (!outputDirectory.mkpath(outputFileInfo.absolutePath())){
-			SendErrorMessage(0, QObject::tr("Output directry doesn't exist").arg(outputFileInfo.absolutePath()));			
+			SendErrorMessage(0, QObject::tr("Output directory doesn't exist").arg(outputFileInfo.absolutePath()));			
 		}
 
 		bool isConverted = false;
@@ -131,11 +131,11 @@ int CFileListConverterComp::DoProcessing(
 			SendErrorMessage(0, QObject::tr("File %1 could not be removed").arg(fileToRemove));
 		}
 	}
-/*
+
 	if (progressManagerPtr != NULL){
 		progressManagerPtr->EndProgressSession(progressSessionId);
 	}
-*/
+
 	return retVal;
 }
 

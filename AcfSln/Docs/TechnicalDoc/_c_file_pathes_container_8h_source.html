@@ -49,7 +49,7 @@
 <a name="l00027"></a>00027        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifileproc_1_1_c_file_pathes_container.html#a382029470eff5fd81c6353212029fb96" title="Insert a new file into the list.">InsertFile</a>(<span class="keyword">const</span> QString&amp; file, <span class="keywordtype">int</span> index = -1, <span class="keywordtype">bool</span> ignoreNonExistingFiles = <span class="keyword">false</span>);
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029        <span class="comment">// reimplemented (ifile::IFileListProvider)</span>
-<a name="l00030"></a>00030        <span class="keyword">virtual</span> QStringList <a class="code" href="classifileproc_1_1_c_file_pathes_container.html#a5fdf400339a5dd41d3366eaa43188b53">GetFileList</a>() <span class="keyword">const</span>;
+<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keyword">const</span> QFileInfoList&amp; <a class="code" href="classifileproc_1_1_c_file_pathes_container.html#ad97a6665fcd973f17016b55a3b1916bb">GetFileList</a>() <span class="keyword">const</span>;
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032 <span class="keyword">private</span>:
 <a name="l00033"></a>00033        QFileInfoList m_fileList;

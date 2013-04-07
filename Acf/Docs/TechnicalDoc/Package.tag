@@ -2096,14 +2096,6 @@
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
-    <name>CDirList.h</name>
-    <path>C:/Temp/Acf/Include/ifile/</path>
-    <filename>_c_dir_list_8h</filename>
-    <includes id="ifile_8h" name="ifile.h" local="yes" imported="no">ifile/ifile.h</includes>
-    <class kind="class">ifile::CDirList</class>
-    <namespace>ifile</namespace>
-  </compound>
-  <compound kind="file">
     <name>CFileArchiveInfo.h</name>
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_c_file_archive_info_8h</filename>
@@ -2112,24 +2104,16 @@
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
-    <name>CFileList.h</name>
-    <path>C:/Temp/Acf/Include/ifile/</path>
-    <filename>_c_file_list_8h</filename>
-    <includes id="ifile_8h" name="ifile.h" local="yes" imported="no">ifile/ifile.h</includes>
-    <class kind="class">ifile::CFileList</class>
-    <namespace>ifile</namespace>
-  </compound>
-  <compound kind="file">
     <name>CFileListProviderComp.h</name>
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_c_file_list_provider_comp_8h</filename>
-    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
     <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_qt_item_model_provider_8h" name="IQtItemModelProvider.h" local="yes" imported="no">ibase/IQtItemModelProvider.h</includes>
     <includes id="_i_file_list_provider_8h" name="IFileListProvider.h" local="yes" imported="no">ifile/IFileListProvider.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
     <class kind="class">ifile::CFileListProviderComp</class>
     <namespace>ifile</namespace>
   </compound>
@@ -21406,9 +21390,7 @@
     <filename>namespaceifile.html</filename>
     <class kind="class">ifile::CAutoPersistenceComp</class>
     <class kind="class">ifile::CComposedFilePersistenceComp</class>
-    <class kind="class">ifile::CDirList</class>
     <class kind="class">ifile::CFileArchiveInfo</class>
-    <class kind="class">ifile::CFileList</class>
     <class kind="class">ifile::CFileListProviderComp</class>
     <class kind="class">ifile::CFileNameParamComp</class>
     <class kind="class">ifile::CFileReadArchive</class>
@@ -21504,45 +21486,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>ifile::CDirList</name>
-    <filename>classifile_1_1_c_dir_list.html</filename>
-    <member kind="signal">
-      <type>void</type>
-      <name>currentDir</name>
-      <anchorfile>classifile_1_1_c_dir_list.html</anchorfile>
-      <anchor>a61af200868d44a75e25ecfe83ed90d9d</anchor>
-      <arglist>(const QString &amp;dir)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CDirList</name>
-      <anchorfile>classifile_1_1_c_dir_list.html</anchorfile>
-      <anchor>a9716b5a2abc2b2b15cdb93b64bac6683</anchor>
-      <arglist>(QObject *parent=0)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CDirList</name>
-      <anchorfile>classifile_1_1_c_dir_list.html</anchorfile>
-      <anchor>aa12b8ed5f29c3c0c33ed258ce27c8920</anchor>
-      <arglist>(QObject *parent, const QDir &amp;root, int minRecursionDepth=0, int maxRecursionDepth=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>Create</name>
-      <anchorfile>classifile_1_1_c_dir_list.html</anchorfile>
-      <anchor>a20e79f6587bcc6af34b544cf513d1cd9</anchor>
-      <arglist>(const QDir &amp;root, int minRecursionDepth=0, int maxRecursionDepth=0, bool doAppend=false)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>DoSearch</name>
-      <anchorfile>classifile_1_1_c_dir_list.html</anchorfile>
-      <anchor>a8eb9774cd46686cd489518f2fddb5626</anchor>
-      <arglist>(const QDir &amp;root, int minRecursionDepth, int maxRecursionDepth)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>ifile::CFileArchiveInfo</name>
     <filename>classifile_1_1_c_file_archive_info.html</filename>
     <base virtualness="virtual">ifile::IFileArchiveInfo</base>
@@ -21569,31 +21512,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>ifile::CFileList</name>
-    <filename>classifile_1_1_c_file_list.html</filename>
-    <member kind="signal">
-      <type>void</type>
-      <name>currentFile</name>
-      <anchorfile>classifile_1_1_c_file_list.html</anchorfile>
-      <anchor>adcef9427da85b148a2b24cbff68b6fd6</anchor>
-      <arglist>(const QString &amp;file)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CFileList</name>
-      <anchorfile>classifile_1_1_c_file_list.html</anchorfile>
-      <anchor>a2079606187039140bc71dd2b1a87180e</anchor>
-      <arglist>(QObject *parent=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>Create</name>
-      <anchorfile>classifile_1_1_c_file_list.html</anchorfile>
-      <anchor>a8348155894553b4662efadb32b95ced2</anchor>
-      <arglist>(const QDir &amp;root, int minRecursionDepth=0, int maxRecursionDepth=0, const QStringList &amp;nameFilters=QStringList(), QDir::SortFlags sortSpec=QDir::Name|QDir::IgnoreCase)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>ifile::CFileListProviderComp</name>
     <filename>classifile_1_1_c_file_list_provider_comp.html</filename>
     <base>icomp::CComponentBase</base>
@@ -21608,10 +21526,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual QStringList</type>
+      <type>virtual const QFileInfoList &amp;</type>
       <name>GetFileList</name>
       <anchorfile>classifile_1_1_c_file_list_provider_comp.html</anchorfile>
-      <anchor>a2f4722ed003a5798e83ad58f84f5df44</anchor>
+      <anchor>a175132241900a395c5a71b0f3fc1614e</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -22267,10 +22185,10 @@
     <filename>classifile_1_1_i_file_list_provider.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
-      <type>virtual QStringList</type>
+      <type>virtual const QFileInfoList &amp;</type>
       <name>GetFileList</name>
       <anchorfile>classifile_1_1_i_file_list_provider.html</anchorfile>
-      <anchor>ad709412821d3453c89bd99d8b054ae1c</anchor>
+      <anchor>a3a99cdec5f1eccc9375e267324bb729b</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>

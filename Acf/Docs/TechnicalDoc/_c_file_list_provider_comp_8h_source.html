@@ -32,89 +32,104 @@
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QFileSystemWatcher&gt;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QtCore/QStringList&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QtCore/QDir&gt;</span>
 <a name="l00008"></a>00008 <span class="preprocessor">#include &lt;QtGui/QStandardItemModel&gt;</span>
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="comment">// ACF includes</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_persistence_8h.html">ifile/IFilePersistence.h</a>&quot;</span>
-<a name="l00012"></a>00012 
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_i_model_8h.html">imod/IModel.h</a>&quot;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_c_single_model_observer_base_8h.html">imod/CSingleModelObserverBase.h</a>&quot;</span>
-<a name="l00015"></a>00015 
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;<a class="code" href="_i_qt_item_model_provider_8h.html">ibase/IQtItemModelProvider.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_model_8h.html">imod/IModel.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_c_single_model_observer_base_8h.html">imod/CSingleModelObserverBase.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_i_qt_item_model_provider_8h.html">ibase/IQtItemModelProvider.h</a>&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_list_provider_8h.html">ifile/IFileListProvider.h</a>&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_name_param_8h.html">ifile/IFileNameParam.h</a>&quot;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_type_info_8h.html">ifile/IFileTypeInfo.h</a>&quot;</span>
+<a name="l00018"></a>00018 
 <a name="l00019"></a>00019 
-<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_list_provider_8h.html">ifile/IFileListProvider.h</a>&quot;</span>
-<a name="l00021"></a>00021 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_name_param_8h.html">ifile/IFileNameParam.h</a>&quot;</span>
+<a name="l00020"></a>00020 <span class="keyword">namespace </span>ifile
+<a name="l00021"></a>00021 {
 <a name="l00022"></a>00022 
 <a name="l00023"></a>00023 
-<a name="l00024"></a>00024 <span class="keyword">namespace </span>ifile
-<a name="l00025"></a>00025 {
-<a name="l00026"></a>00026 
-<a name="l00027"></a>00027 
-<a name="l00031"></a><a class="code" href="classifile_1_1_c_file_list_provider_comp.html">00031</a> <span class="keyword">class </span><a class="code" href="classifile_1_1_c_file_list_provider_comp.html" title="Provide list of file pathes using recursive search of some file directory.">CFileListProviderComp</a>:
-<a name="l00032"></a>00032                      <span class="keyword">public</span> QObject,
-<a name="l00033"></a>00033                      <span class="keyword">public</span> icomp::CComponentBase,
-<a name="l00034"></a>00034                      <span class="keyword">virtual</span> <span class="keyword">public</span> ifile::<a class="code" href="classifile_1_1_i_file_list_provider.html" title="Provide access to some parameter list.">IFileListProvider</a>,
-<a name="l00035"></a>00035                      <span class="keyword">virtual</span> <span class="keyword">public</span> ibase::IQtItemModelProvider,
-<a name="l00036"></a>00036                      <span class="keyword">protected</span> imod::CSingleModelObserverBase
-<a name="l00037"></a>00037 {
-<a name="l00038"></a>00038        Q_OBJECT
-<a name="l00039"></a>00039 <span class="keyword">public</span>:
-<a name="l00040"></a><a class="code" href="classifile_1_1_c_file_list_provider_comp.html#a3ae4b0ac5ba1190621fe14ea2c03474a">00040</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_component_base.html" title="Base class for component implementation.">icomp::CComponentBase</a> <a class="code" href="classifile_1_1_c_file_list_provider_comp.html#a3ae4b0ac5ba1190621fe14ea2c03474a">BaseClass</a>;
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042        I_BEGIN_COMPONENT(<a class="code" href="classifile_1_1_c_file_list_provider_comp.html" title="Provide list of file pathes using recursive search of some file directory.">CFileListProviderComp</a>);
-<a name="l00043"></a>00043               I_REGISTER_INTERFACE(<a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>);
-<a name="l00044"></a>00044               I_REGISTER_INTERFACE(<a class="code" href="classifile_1_1_i_file_list_provider.html" title="Provide access to some parameter list.">ifile::IFileListProvider</a>);
-<a name="l00045"></a>00045               I_REGISTER_INTERFACE(<a class="code" href="classibase_1_1_i_qt_item_model_provider.html" title="Interface for getting access to the Qt&#39;s item based data model.">ibase::IQtItemModelProvider</a>);
-<a name="l00046"></a>00046               I_ASSIGN(m_dirParamCompPtr, <span class="stringliteral">&quot;DirParam&quot;</span>, <span class="stringliteral">&quot;Parameter storing root directory&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;DirParam&quot;</span>);
-<a name="l00047"></a>00047               I_ASSIGN(m_dirParamModelCompPtr, <span class="stringliteral">&quot;DirParam&quot;</span>, <span class="stringliteral">&quot;Parameter storing root directory&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;DirParam&quot;</span>);
-<a name="l00048"></a>00048               I_ASSIGN(m_fileTypeInfoCompPtr, <span class="stringliteral">&quot;FileTypeInfo&quot;</span>, <span class="stringliteral">&quot;File type info used to create file filters&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;FileTypeInfo&quot;</span>);
-<a name="l00049"></a>00049               I_ASSIGN_MULTI_0(m_filtersAttrPtr, <span class="stringliteral">&quot;Filters&quot;</span>, <span class="stringliteral">&quot;List of filters if no loader is specified&quot;</span>, <span class="keyword">false</span>);
-<a name="l00050"></a>00050               I_ASSIGN(m_minRecurDepthAttrPtr, <span class="stringliteral">&quot;MinRecurDepth&quot;</span>, <span class="stringliteral">&quot;Minimal recursion depth for file search&quot;</span>, <span class="keyword">true</span>, 0);
-<a name="l00051"></a>00051               I_ASSIGN(m_maxRecurDepthAttrPtr, <span class="stringliteral">&quot;MaxRecurDepth&quot;</span>, <span class="stringliteral">&quot;Maximal recursion depth for file search, negative value means no depth limit&quot;</span>, <span class="keyword">true</span>, 0);
-<a name="l00052"></a>00052        I_END_COMPONENT;
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054        <span class="comment">// reimplemented (ifile::IFileListProvider)</span>
-<a name="l00055"></a>00055        <span class="keyword">virtual</span> QStringList <a class="code" href="classifile_1_1_c_file_list_provider_comp.html#a2f4722ed003a5798e83ad58f84f5df44" title="Get list of files.">GetFileList</a>() <span class="keyword">const</span>;
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057        <span class="comment">// reimplemented (ibase::IQtItemModelProvider)</span>
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keyword">const</span> QAbstractItemModel* <a class="code" href="classifile_1_1_c_file_list_provider_comp.html#a13b0dd885ce7b2b439a456d29e43168d" title="Get access to the Qt&#39;s item model.">GetItemModel</a>() <span class="keyword">const</span>;
+<a name="l00027"></a><a class="code" href="classifile_1_1_c_file_list_provider_comp.html">00027</a> <span class="keyword">class </span><a class="code" href="classifile_1_1_c_file_list_provider_comp.html" title="Provide list of file pathes using recursive search of some file directory.">CFileListProviderComp</a>:
+<a name="l00028"></a>00028                      <span class="keyword">public</span> QObject,
+<a name="l00029"></a>00029                      <span class="keyword">public</span> icomp::CComponentBase,
+<a name="l00030"></a>00030                      <span class="keyword">virtual</span> <span class="keyword">public</span> ifile::<a class="code" href="classifile_1_1_i_file_list_provider.html" title="Provide access to a list of files.">IFileListProvider</a>,
+<a name="l00031"></a>00031                      <span class="keyword">virtual</span> <span class="keyword">public</span> ibase::IQtItemModelProvider,
+<a name="l00032"></a>00032                      <span class="keyword">protected</span> imod::CSingleModelObserverBase
+<a name="l00033"></a>00033 {
+<a name="l00034"></a>00034        Q_OBJECT
+<a name="l00035"></a>00035 <span class="keyword">public</span>:
+<a name="l00036"></a><a class="code" href="classifile_1_1_c_file_list_provider_comp.html#a3ae4b0ac5ba1190621fe14ea2c03474a">00036</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_component_base.html" title="Base class for component implementation.">icomp::CComponentBase</a> <a class="code" href="classifile_1_1_c_file_list_provider_comp.html#a3ae4b0ac5ba1190621fe14ea2c03474a">BaseClass</a>;
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038        I_BEGIN_COMPONENT(<a class="code" href="classifile_1_1_c_file_list_provider_comp.html" title="Provide list of file pathes using recursive search of some file directory.">CFileListProviderComp</a>);
+<a name="l00039"></a>00039               I_REGISTER_INTERFACE(<a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>);
+<a name="l00040"></a>00040               I_REGISTER_INTERFACE(<a class="code" href="classifile_1_1_i_file_list_provider.html" title="Provide access to a list of files.">ifile::IFileListProvider</a>);
+<a name="l00041"></a>00041               I_REGISTER_INTERFACE(<a class="code" href="classibase_1_1_i_qt_item_model_provider.html" title="Interface for getting access to the Qt&#39;s item based data model.">ibase::IQtItemModelProvider</a>);
+<a name="l00042"></a>00042               I_ASSIGN(m_dirParamCompPtr, <span class="stringliteral">&quot;DirParam&quot;</span>, <span class="stringliteral">&quot;Parameter storing root directory&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;DirParam&quot;</span>);
+<a name="l00043"></a>00043               I_ASSIGN(m_dirParamModelCompPtr, <span class="stringliteral">&quot;DirParam&quot;</span>, <span class="stringliteral">&quot;Parameter storing root directory&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;DirParam&quot;</span>);
+<a name="l00044"></a>00044               I_ASSIGN(m_fileTypeInfoCompPtr, <span class="stringliteral">&quot;FileTypeInfo&quot;</span>, <span class="stringliteral">&quot;File type info used to create file filters&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;FileTypeInfo&quot;</span>);
+<a name="l00045"></a>00045               I_ASSIGN_MULTI_0(m_filtersAttrPtr, <span class="stringliteral">&quot;Filters&quot;</span>, <span class="stringliteral">&quot;List of filters if no loader is specified&quot;</span>, <span class="keyword">false</span>);
+<a name="l00046"></a>00046               I_ASSIGN(m_minRecurDepthAttrPtr, <span class="stringliteral">&quot;MinRecurDepth&quot;</span>, <span class="stringliteral">&quot;Minimal recursion depth for file search&quot;</span>, <span class="keyword">true</span>, 0);
+<a name="l00047"></a>00047               I_ASSIGN(m_maxRecurDepthAttrPtr, <span class="stringliteral">&quot;MaxRecurDepth&quot;</span>, <span class="stringliteral">&quot;Maximal recursion depth for file search, negative value means no depth limit&quot;</span>, <span class="keyword">true</span>, 0);
+<a name="l00048"></a>00048        I_END_COMPONENT;
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050        <span class="comment">// reimplemented (ifile::IFileListProvider)</span>
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keyword">const</span> QFileInfoList&amp; <a class="code" href="classifile_1_1_c_file_list_provider_comp.html#a175132241900a395c5a71b0f3fc1614e" title="Get list of files.">GetFileList</a>() <span class="keyword">const</span>;
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053        <span class="comment">// reimplemented (ibase::IQtItemModelProvider)</span>
+<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keyword">const</span> QAbstractItemModel* <a class="code" href="classifile_1_1_c_file_list_provider_comp.html#a13b0dd885ce7b2b439a456d29e43168d" title="Get access to the Qt&#39;s item model.">GetItemModel</a>() <span class="keyword">const</span>;
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056 <span class="keyword">protected</span>:
+<a name="l00057"></a>00057        <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifile_1_1_c_file_list_provider_comp.html#a57ded2035ba70ed081c87e4835aaebbf">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00059"></a>00059 
-<a name="l00060"></a>00060 <span class="keyword">protected</span>:
-<a name="l00061"></a>00061        <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
-<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifile_1_1_c_file_list_provider_comp.html#a57ded2035ba70ed081c87e4835aaebbf">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00060"></a>00060        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifile_1_1_c_file_list_provider_comp.html#a2fb55a17c7c14821932c5921618cfab9">OnComponentCreated</a>();
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifile_1_1_c_file_list_provider_comp.html#a69e67eda0bc0fd2ed52fc8ff6738381a">OnComponentDestroyed</a>();
 <a name="l00063"></a>00063 
-<a name="l00064"></a>00064        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifile_1_1_c_file_list_provider_comp.html#a2fb55a17c7c14821932c5921618cfab9">OnComponentCreated</a>();
-<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifile_1_1_c_file_list_provider_comp.html#a69e67eda0bc0fd2ed52fc8ff6738381a">OnComponentDestroyed</a>();
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068 <span class="keyword">private</span> Q_SLOTS:
-<a name="l00069"></a>00069        <span class="keywordtype">void</span> OnDirectoryContentChanged(<span class="keyword">const</span> QString&amp; directoryPath);
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071 <span class="keyword">private</span>:
-<a name="l00072"></a>00072        I_REF(<a class="code" href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)">ifile::IFileNameParam</a>, m_dirParamCompPtr);
-<a name="l00073"></a>00073        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_dirParamModelCompPtr);
-<a name="l00074"></a>00074        I_REF(<a class="code" href="classifile_1_1_i_file_type_info.html" title="Provide loading and saving of objects.">ifile::IFileTypeInfo</a>, m_fileTypeInfoCompPtr);
-<a name="l00075"></a>00075        I_MULTIATTR(QString, m_filtersAttrPtr);
-<a name="l00076"></a>00076        I_ATTR(<span class="keywordtype">int</span>, m_minRecurDepthAttrPtr);
-<a name="l00077"></a>00077        I_ATTR(<span class="keywordtype">int</span>, m_maxRecurDepthAttrPtr);
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079        QStringList m_fileList;
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081        QFileSystemWatcher m_directoryWatcher;
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083        QStandardItemModel m_itemModel;
-<a name="l00084"></a>00084 };
-<a name="l00085"></a>00085 
-<a name="l00086"></a>00086 
-<a name="l00087"></a>00087 } <span class="comment">// namespace ifile</span>
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089 
-<a name="l00090"></a>00090 <span class="preprocessor">#endif //!ifile_CFileListProviderComp_included</span>
-<a name="l00091"></a>00091 <span class="preprocessor"></span>
-<a name="l00092"></a>00092 
+<a name="l00064"></a>00064 <span class="keyword">private</span> Q_SLOTS:
+<a name="l00065"></a>00065        <span class="keywordtype">void</span> OnDirectoryContentChanged(<span class="keyword">const</span> QString&amp; directoryPath);
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 <span class="keyword">private</span>:
+<a name="l00075"></a>00075        <span class="keyword">static</span> <span class="keywordtype">bool</span> CreateFileList(<span class="keyword">const</span> QDir&amp; root,
+<a name="l00076"></a>00076                             <span class="keywordtype">int</span> minRecursionDepth,
+<a name="l00077"></a>00077                             <span class="keywordtype">int</span> maxRecursionDepth,
+<a name="l00078"></a>00078                             <span class="keyword">const</span> QStringList&amp; nameFilters,
+<a name="l00079"></a>00079                             QDir::SortFlags sortSpec,
+<a name="l00080"></a>00080                             QFileInfoList&amp; fileList);
+<a name="l00081"></a>00081 
+<a name="l00087"></a>00087        <span class="keyword">static</span> <span class="keywordtype">bool</span> CreateDirectoryList(<span class="keyword">const</span> QDir&amp; root,
+<a name="l00088"></a>00088                             <span class="keywordtype">int</span> minRecursionDepth,
+<a name="l00089"></a>00089                             <span class="keywordtype">int</span> maxRecursionDepth,
+<a name="l00090"></a>00090                             QFileInfoList&amp; directoryList);
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092        <span class="keyword">static</span> <span class="keywordtype">void</span> EnumerateDirectory(
+<a name="l00093"></a>00093                             <span class="keyword">const</span> QDir&amp; root,
+<a name="l00094"></a>00094                             <span class="keywordtype">int</span> minRecursionDepth,
+<a name="l00095"></a>00095                             <span class="keywordtype">int</span> maxRecursionDepth,
+<a name="l00096"></a>00096                             QFileInfoList&amp; directoryList);
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098 <span class="keyword">private</span>:
+<a name="l00099"></a>00099        I_REF(<a class="code" href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)">ifile::IFileNameParam</a>, m_dirParamCompPtr);
+<a name="l00100"></a>00100        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_dirParamModelCompPtr);
+<a name="l00101"></a>00101        I_REF(<a class="code" href="classifile_1_1_i_file_type_info.html" title="Provide loading and saving of objects.">ifile::IFileTypeInfo</a>, m_fileTypeInfoCompPtr);
+<a name="l00102"></a>00102        I_MULTIATTR(QString, m_filtersAttrPtr);
+<a name="l00103"></a>00103        I_ATTR(<span class="keywordtype">int</span>, m_minRecurDepthAttrPtr);
+<a name="l00104"></a>00104        I_ATTR(<span class="keywordtype">int</span>, m_maxRecurDepthAttrPtr);
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106        QFileInfoList m_fileList;
+<a name="l00107"></a>00107 
+<a name="l00108"></a>00108        QFileSystemWatcher m_directoryWatcher;
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110        QStandardItemModel m_itemModel;
+<a name="l00111"></a>00111 };
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113 
+<a name="l00114"></a>00114 } <span class="comment">// namespace ifile</span>
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116 
+<a name="l00117"></a>00117 <span class="preprocessor">#endif //!ifile_CFileListProviderComp_included</span>
+<a name="l00118"></a>00118 <span class="preprocessor"></span>
+<a name="l00119"></a>00119 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

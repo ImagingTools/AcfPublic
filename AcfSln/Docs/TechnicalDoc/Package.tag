@@ -9370,10 +9370,10 @@
       <arglist>(const QString &amp;file, int index=-1, bool ignoreNonExistingFiles=false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual QStringList</type>
+      <type>virtual const QFileInfoList &amp;</type>
       <name>GetFileList</name>
       <anchorfile>classifileproc_1_1_c_file_pathes_container.html</anchorfile>
-      <anchor>a5fdf400339a5dd41d3366eaa43188b53</anchor>
+      <anchor>ad97a6665fcd973f17016b55a3b1916bb</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
