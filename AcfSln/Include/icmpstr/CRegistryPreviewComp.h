@@ -31,9 +31,7 @@
 // ACF includes
 #include "icomp/IComponentEnvironmentManager.h"
 #include "ibase/TLoggerCompWrap.h"
-
 #include "ifile/IFileNameParam.h"
-
 #include "icmpstr/IRegistryPreview.h"
 
 

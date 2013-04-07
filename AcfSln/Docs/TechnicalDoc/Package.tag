@@ -4692,24 +4692,24 @@
     <name>icmpstr::CAttributeEditorComp::AttrInfo</name>
     <filename>structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html</filename>
     <member kind="variable">
-      <type>istd::TPointerBase&lt; icomp::IRegistryElement &gt;</type>
+      <type>icomp::IRegistryElement *</type>
       <name>elementPtr</name>
       <anchorfile>structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html</anchorfile>
-      <anchor>ad932a2271d5167352abb656bc26e0498</anchor>
+      <anchor>ac814675e95d09baa4d76eac1d60d02b8</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>istd::TPointerBase&lt; icomp::IRegistryElement::AttributeInfo &gt;</type>
+      <type>icomp::IRegistryElement::AttributeInfo *</type>
       <name>infoPtr</name>
       <anchorfile>structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html</anchorfile>
-      <anchor>ad7a4e7cfcfe26ab1491319e2eeae39d0</anchor>
+      <anchor>adfb37331fa98e9f944ce04bcb40aa674</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>istd::TPointerBase&lt; const icomp::IAttributeStaticInfo &gt;</type>
+      <type>const icomp::IAttributeStaticInfo *</type>
       <name>staticInfoPtr</name>
       <anchorfile>structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html</anchorfile>
-      <anchor>a65738552e552f54762f2adefcb29f795</anchor>
+      <anchor>a795950d025b2307374cceb127a2c4f73</anchor>
       <arglist></arglist>
     </member>
   </compound>

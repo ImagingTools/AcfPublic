@@ -24,7 +24,11 @@
 
 
 // Qt includes
-#include <QtGui/QDesktopServices>
+#if QT_VERSION < 0x050000
+	#include <QtGui/QDesktopServices>
+#else
+	#include <QtCore/QStandardPaths>
+#endif
 
 
 namespace ifile
@@ -71,7 +75,12 @@ void CSystemLocationComp::OnComponentCreated()
 
 	Q_ASSERT(m_locationTypeAttrPtr.IsValid());
 
+#if QT_VERSION < 0x050000
 	m_storagePath = QDesktopServices::storageLocation(QDesktopServices::StandardLocation(*m_locationTypeAttrPtr));
+#else
+	m_storagePath = QStandardPaths::writableLocation(QStandardPaths::StandardLocation(*m_locationTypeAttrPtr));
+
+#endif
 }
 
 

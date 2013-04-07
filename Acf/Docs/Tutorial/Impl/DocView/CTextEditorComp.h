@@ -25,6 +25,7 @@
 
 
 // Qt includes
+#include <QtGui/QPrinter>
 #include <QtGui/QTextEdit>
 
 #include "imod/TSingleModelObserverBase.h"
