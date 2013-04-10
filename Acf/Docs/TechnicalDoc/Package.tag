@@ -28916,10 +28916,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>SetEnabled</name>
       <anchorfile>classiprm_1_1_c_enableable_param.html</anchorfile>
-      <anchor>ae336cebc654b98d573a628571a17c2f2</anchor>
+      <anchor>a79eb8deecd40218f918aec9827d5ba8a</anchor>
       <arglist>(bool isEnabled=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -30230,10 +30230,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>SetEnabled</name>
       <anchorfile>classiprm_1_1_i_enableable_param.html</anchorfile>
-      <anchor>a73999d835aea7e904dc84f11bbc5b1bf</anchor>
+      <anchor>abfeb0979494599fac89407f46fa63142</anchor>
       <arglist>(bool isEnabled=true)=0</arglist>
     </member>
   </compound>
@@ -35755,10 +35755,10 @@
       <arglist>(const QString &amp;name)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>SetEnabled</name>
       <anchorfile>classiqtgui_1_1_c_hierarchical_command.html</anchorfile>
-      <anchor>a056d90b0c4e74eb40809becb4d9e8c9d</anchor>
+      <anchor>a2173366fd2a5f407f0f0980c3ca188ed</anchor>
       <arglist>(bool isEnabled=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">

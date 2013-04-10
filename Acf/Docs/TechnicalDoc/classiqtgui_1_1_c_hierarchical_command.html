@@ -105,8 +105,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get child value.  <a href="#ae050eab66b37a5a6e1d1915e4bf485b3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a344474e2b4cd7113ac2dc087fdfe6a51">SetName</a> (const QString &amp;name)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the object name.  <a href="#a344474e2b4cd7113ac2dc087fdfe6a51"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a056d90b0c4e74eb40809becb4d9e8c9d">SetEnabled</a> (bool isEnabled=true)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set something to <code>isEnabled</code> state.  <a href="#a056d90b0c4e74eb40809becb4d9e8c9d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a2173366fd2a5f407f0f0980c3ca188ed">SetEnabled</a> (bool isEnabled=true)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set something to <code>isEnabled</code> state.  <a href="#a2173366fd2a5f407f0f0980c3ca188ed"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a7fa01faf2be21e32cebf99c9cf19a61b">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a7fa01faf2be21e32cebf99c9cf19a61b"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
@@ -519,12 +519,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a056d90b0c4e74eb40809becb4d9e8c9d"></a><!-- doxytag: member="iqtgui::CHierarchicalCommand::SetEnabled" ref="a056d90b0c4e74eb40809becb4d9e8c9d" args="(bool isEnabled=true)" -->
+<a class="anchor" id="a2173366fd2a5f407f0f0980c3ca188ed"></a><!-- doxytag: member="iqtgui::CHierarchicalCommand::SetEnabled" ref="a2173366fd2a5f407f0f0980c3ca188ed" args="(bool isEnabled=true)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iqtgui::CHierarchicalCommand::SetEnabled </td>
+          <td class="memname">virtual bool iqtgui::CHierarchicalCommand::SetEnabled </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>isEnabled</em> = <code>true</code></td><td>)</td>
@@ -535,8 +535,9 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Set something to <code>isEnabled</code> state. </p>
+<p>The method returns <code>true</code> if the changing of the enabling status was allowed, otherwise <code>false</code>. </p>
 
-<p>Reimplemented from <a class="el" href="classiprm_1_1_c_enableable_param.html#ae336cebc654b98d573a628571a17c2f2">iprm::CEnableableParam</a>.</p>
+<p>Reimplemented from <a class="el" href="classiprm_1_1_c_enableable_param.html#a79eb8deecd40218f918aec9827d5ba8a">iprm::CEnableableParam</a>.</p>
 
 </div>
 </div>

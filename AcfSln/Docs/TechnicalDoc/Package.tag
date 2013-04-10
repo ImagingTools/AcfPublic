@@ -14,6 +14,14 @@
     <filename>_acf_sln_8h</filename>
   </compound>
   <compound kind="file">
+    <name>CRightsBasedEnablerComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
+    <filename>_c_rights_based_enabler_comp_8h</filename>
+    <includes id="_i_rights_provider_8h" name="IRightsProvider.h" local="yes" imported="no">iauth/IRightsProvider.h</includes>
+    <class kind="class">iauth::CRightsBasedEnablerComp</class>
+    <namespace>iauth</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSimpleLoginComp.h</name>
     <path>C:/Temp/AcfSln/Include/iauth/</path>
     <filename>_c_simple_login_comp_8h</filename>
@@ -3143,6 +3151,7 @@
   <compound kind="namespace">
     <name>iauth</name>
     <filename>namespaceiauth.html</filename>
+    <class kind="class">iauth::CRightsBasedEnablerComp</class>
     <class kind="class">iauth::CSimpleLoginComp</class>
     <class kind="class">iauth::CStaticRightsProviderComp</class>
     <class kind="class">iauth::CUser</class>
@@ -3152,6 +3161,90 @@
     <class kind="class">iauth::IPasswordChanger</class>
     <class kind="class">iauth::IRightsProvider</class>
     <class kind="class">iauth::IUsersManager</class>
+  </compound>
+  <compound kind="class">
+    <name>iauth::CRightsBasedEnablerComp</name>
+    <filename>classiauth_1_1_c_rights_based_enabler_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iprm::IEnableableParam</base>
+    <base protection="protected">TSingleModelObserverBase&lt; iauth::IRightsProvider &gt;</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiauth_1_1_c_rights_based_enabler_comp.html</anchorfile>
+      <anchor>ac01013440050abad679012fc93289174</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::TSingleModelObserverBase&lt; iauth::IRightsProvider &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiauth_1_1_c_rights_based_enabler_comp.html</anchorfile>
+      <anchor>a108f19864197ea58860686be42e07f87</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiauth_1_1_c_rights_based_enabler_comp.html</anchorfile>
+      <anchor>a3046867fc3b884263fb539c6932c5be6</anchor>
+      <arglist>(m_rightsProviderModelCompPtr, m_rightsProviderCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CRightsBasedEnablerComp</name>
+      <anchorfile>classiauth_1_1_c_rights_based_enabler_comp.html</anchorfile>
+      <anchor>ab0e12e37b6d582ed76efcd6099f7a850</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEnabled</name>
+      <anchorfile>classiauth_1_1_c_rights_based_enabler_comp.html</anchorfile>
+      <anchor>ab57e36ba88304af8840ec3a810b77000</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEnablingAllowed</name>
+      <anchorfile>classiauth_1_1_c_rights_based_enabler_comp.html</anchorfile>
+      <anchor>a740115eb350d91b687301d2635dcbc6b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetEnabled</name>
+      <anchorfile>classiauth_1_1_c_rights_based_enabler_comp.html</anchorfile>
+      <anchor>abf46940684a1fe492ca056bf2279f298</anchor>
+      <arglist>(bool isEnabled=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiauth_1_1_c_rights_based_enabler_comp.html</anchorfile>
+      <anchor>ab5f8720d622e48a2df15e5e061a93873</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiauth_1_1_c_rights_based_enabler_comp.html</anchorfile>
+      <anchor>af5dd734bc7904b55a613f81c5273d94c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiauth_1_1_c_rights_based_enabler_comp.html</anchorfile>
+      <anchor>a9e346ebe5f6c3f16971f06aa021a62a9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classiauth_1_1_c_rights_based_enabler_comp.html</anchorfile>
+      <anchor>af00fdcc8c5ebb11608d61d30701eb5f2</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iauth::CSimpleLoginComp</name>
@@ -3339,11 +3432,11 @@
       <anchor>a21be7bf74a1bdad9988f5e8c031c6641</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiauth_1_1_c_user.html</anchorfile>
-      <anchor>a9ec2abee1d9b4c2bdc0b34fbf1aa9606</anchor>
+      <anchor>a1f2e8d28879623266c577234d9a903d1</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
