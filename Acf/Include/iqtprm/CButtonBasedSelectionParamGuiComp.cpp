@@ -118,15 +118,15 @@ void CButtonBasedSelectionParamGuiComp::UpdateGui(int /*updateFlags*/)
 		selectionInfo = m_selectionInfos.at(i);
 
 		QCommandLinkButton* buttonPtr = static_cast<QCommandLinkButton*>(buttons.at(i));
-
 		Q_ASSERT(buttonPtr != NULL && selectionInfo != NULL);
+
+		const iprm::IOptionsList* constraintsPtr = selectionInfo->paramPtr->GetSelectionConstraints();
 
 		// should this button be checked?
 		if (isChecked){
 			buttonPtr->setChecked(true);
 
 			if (isCompactDescription){
-				const iprm::IOptionsList* constraintsPtr = selectionInfo->paramPtr->GetSelectionConstraints();
 				if (constraintsPtr != NULL){
 					buttonPtr->setDescription(constraintsPtr->GetOptionDescription(selectionInfo->index));
 				}
@@ -157,6 +157,11 @@ void CButtonBasedSelectionParamGuiComp::UpdateGui(int /*updateFlags*/)
 						QFontMetrics(buttonPtr->font()).width(buttonPtr->text()));						
 				}
 			}
+		}
+
+		// enable/disable the button
+		if (constraintsPtr != NULL){
+			buttonPtr->setEnabled(constraintsPtr->IsOptionEnabled(selectionInfo->index));
 		}
 	}
 }
