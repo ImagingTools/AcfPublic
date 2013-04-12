@@ -33,7 +33,7 @@
 #include "icomp/CComponentBase.h"
 
 #include "ibase/IApplicationInfo.h"
-#include "ibase/TLoggerCompWrap.h"
+#include "ilog/TLoggerCompWrap.h"
 
 #include "iqt/iqt.h"
 
@@ -46,11 +46,11 @@ namespace iqt
 	Store and load parameter as global settings.
 */
 class CSettingsSerializerComp:
-			public ibase::CLoggerComponentBase,
+			public ilog::CLoggerComponentBase,
 			virtual public ifile::IFilePersistence
 {
 public:
-	typedef ibase::CLoggerComponentBase BaseClass;
+	typedef ilog::CLoggerComponentBase BaseClass;
 
 	I_BEGIN_COMPONENT(CSettingsSerializerComp);
 		I_REGISTER_INTERFACE(ifile::IFilePersistence);

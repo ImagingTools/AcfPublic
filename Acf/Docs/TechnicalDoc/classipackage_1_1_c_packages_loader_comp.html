@@ -40,7 +40,7 @@
 <div class="title">ipackage::CPackagesLoaderComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ipackage::CPackagesLoaderComp" --><!-- doxytag: inherits="ibase::TLoggerCompWrap,icomp::CEnvironmentManagerBase,icomp::IRegistryLoader" -->
+<!-- doxytag: class="ipackage::CPackagesLoaderComp" --><!-- doxytag: inherits="ilog::TLoggerCompWrap,icomp::CEnvironmentManagerBase,icomp::IRegistryLoader" -->
 <p>Loads component packages from dynamic link libraries.  
  <a href="classipackage_1_1_c_packages_loader_comp.html#details">More...</a></p>
 
@@ -51,15 +51,15 @@ Inheritance diagram for ipackage::CPackagesLoaderComp:</div>
  <div class="center">
   <img src="classipackage_1_1_c_packages_loader_comp.png" usemap="#ipackage::CPackagesLoaderComp_map" alt=""/>
   <map id="ipackage::CPackagesLoaderComp_map" name="ipackage::CPackagesLoaderComp_map">
-<area href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations." alt="ibase::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="248,280,486,304"/>
+<area href="classilog_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations." alt="ilog::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="248,280,486,304"/>
 <area href="classicomp_1_1_c_environment_manager_base.html" alt="icomp::CEnvironmentManagerBase" shape="rect" coords="992,280,1230,304"/>
 <area href="classicomp_1_1_i_registry_loader.html" title="Interface for a ACF registry loader." alt="icomp::IRegistryLoader" shape="rect" coords="1488,280,1726,304"/>
-<area href="classibase_1_1_t_logger_wrap.html" title="Class wrapper implementing interface istd::ILogger sending log messages over ibase::IMessageConsumer..." alt="ibase::TLoggerWrap&lt; Base &gt;" shape="rect" coords="248,224,486,248"/>
+<area href="classilog_1_1_t_logger_wrap.html" title="Class wrapper implementing interface istd::ILogger sending log messages over ilog::IMessageConsumer." alt="ilog::TLoggerWrap&lt; Base &gt;" shape="rect" coords="248,224,486,248"/>
 <area href="classicomp_1_1_c_package_static_info.html" title="Static info for component package." alt="icomp::CPackageStaticInfo" shape="rect" coords="744,224,982,248"/>
 <area href="classicomp_1_1_i_component_environment_manager.html" alt="icomp::IComponentEnvironmentManager" shape="rect" coords="1240,224,1478,248"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1488,224,1726,248"/>
 <area href="class_base.html" alt="Base" shape="rect" coords="0,168,238,192"/>
-<area href="classibase_1_1_i_loggable.html" title="Inteface for object, which support the." alt="ibase::ILoggable" shape="rect" coords="248,168,486,192"/>
+<area href="classilog_1_1_i_loggable.html" title="Inteface for object, which support the." alt="ilog::ILoggable" shape="rect" coords="248,168,486,192"/>
 <area href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info." alt="istd::ILogger" shape="rect" coords="496,168,734,192"/>
 <area href="classicomp_1_1_c_component_static_info_base.html" alt="icomp::CComponentStaticInfoBase" shape="rect" coords="744,168,982,192"/>
 <area href="classicomp_1_1_i_packages_manager.html" alt="icomp::IPackagesManager" shape="rect" coords="992,168,1230,192"/>
@@ -89,7 +89,7 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classipackage_1_1_c_packages_loader_comp.html#a07064a1d3d2167faa229b4618f17d612">MessageId</a> { <a class="el" href="classipackage_1_1_c_packages_loader_comp.html#a07064a1d3d2167faa229b4618f17d612a1c1bd4e550fa23629aa1b6a4be422189">MI_CANNOT_REGISTER</a> =  650, 
 <a class="el" href="classipackage_1_1_c_packages_loader_comp.html#a07064a1d3d2167faa229b4618f17d612a26362c8c6ff7772773ed19441bdd8528">MI_CANNOT_CREATE_ELEMENT</a>
  }</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classipackage_1_1_c_packages_loader_comp.html#a0c35c6c5db8c2af8cf328fea9ffdecf5">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___main.html#ga2ac8e0a207c9bb18de1ac6883d2cf09c">ilog::CLoggerComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classipackage_1_1_c_packages_loader_comp.html#aa8c9104559331d294a5a3fcef55cee3d">BaseClass</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
 <a class="el" href="classicomp_1_1_c_environment_manager_base.html">icomp::CEnvironmentManagerBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classipackage_1_1_c_packages_loader_comp.html#a8394b87cadcdb7c5da2e31998ea4c547">BaseClass2</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
@@ -122,18 +122,18 @@ Protected Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_packages_loader_comp_8h_source.html#l00031">31</a> of file <a class="el" href="_c_packages_loader_comp_8h_source.html">CPackagesLoaderComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a0c35c6c5db8c2af8cf328fea9ffdecf5"></a><!-- doxytag: member="ipackage::CPackagesLoaderComp::BaseClass" ref="a0c35c6c5db8c2af8cf328fea9ffdecf5" args="" -->
+<a class="anchor" id="aa8c9104559331d294a5a3fcef55cee3d"></a><!-- doxytag: member="ipackage::CPackagesLoaderComp::BaseClass" ref="aa8c9104559331d294a5a3fcef55cee3d" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a> <a class="el" href="classipackage_1_1_c_packages_loader_comp.html#a0c35c6c5db8c2af8cf328fea9ffdecf5">ipackage::CPackagesLoaderComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="group___main.html#ga2ac8e0a207c9bb18de1ac6883d2cf09c">ilog::CLoggerComponentBase</a> <a class="el" href="classipackage_1_1_c_packages_loader_comp.html#aa8c9104559331d294a5a3fcef55cee3d">ipackage::CPackagesLoaderComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a5ca6564c805194cba50c4aeab30abfec">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classilog_1_1_t_logger_comp_wrap.html#a590fd3e388adbdb4dc9bf584b9c9cd2a">ilog::TLoggerCompWrap&lt; Base &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_packages_loader_comp_8h_source.html#l00038">38</a> of file <a class="el" href="_c_packages_loader_comp_8h_source.html">CPackagesLoaderComp.h</a>.</p>
 
@@ -432,7 +432,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a58f942fa48f8f32af7886a036306b04e">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classilog_1_1_t_logger_comp_wrap.html#a8a3add3e8068f0392d0b1cfdd68454ef">ilog::TLoggerCompWrap&lt; Base &gt;</a>.</p>
 
 </div>
 </div>

@@ -31,7 +31,7 @@
 
 #include "imod/TModelWrap.h"
 
-#include "ibase/TLoggerCompWrap.h"
+#include "ilog/TLoggerCompWrap.h"
 
 
 // AcfSln includes
@@ -47,10 +47,10 @@ namespace ihotf
 	
 */
 class CVisualHotfolderWorkflowComp:
-			public ibase::TLoggerCompWrap<ihotf::CHotfolderWorkflowComp>
+			public ilog::TLoggerCompWrap<ihotf::CHotfolderWorkflowComp>
 {
 public:
-	typedef ibase::TLoggerCompWrap<ihotf::CHotfolderWorkflowComp> BaseClass;
+	typedef ilog::TLoggerCompWrap<ihotf::CHotfolderWorkflowComp> BaseClass;
 
 	I_BEGIN_COMPONENT(CVisualHotfolderWorkflowComp);
 	I_END_COMPONENT;

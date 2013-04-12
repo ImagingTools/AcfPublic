@@ -33,7 +33,8 @@ namespace iqtmeas
 
 CNumericValueWidget::CNumericValueWidget(
 			QWidget* parentPtr,
-			bool showSlilder)
+			bool showSlilder,
+			int inputPolicy)
 :	QWidget(parentPtr),
 	m_unitMultiplicationFactor(1),
 	m_unitPrecisionFactor(100)
@@ -43,6 +44,21 @@ CNumericValueWidget::CNumericValueWidget(
 	setupUi(this);
 
 	ValueSlider->setVisible(showSlilder);
+
+	switch (inputPolicy){
+		case 2:
+			ValueSB->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+			DescriptionLabel->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+			break;
+
+		case 1:
+			ValueSB->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
+			break;
+
+		default:
+			ValueSB->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+			break;
+	}
 }
 
 
@@ -52,10 +68,11 @@ void CNumericValueWidget::SetUnitInfo(const QString& description, const imath::I
 	const QString& unitName = unitInfo.GetUnitName();
 	if (!unitName.isEmpty()){
 		UnitLabel->setText(unitName);
-		UnitLabel->setVisible(true);
+		//UnitLabel->setVisible(true);
 	}
 	else{
-		UnitLabel->setVisible(false);
+		//UnitLabel->setVisible(false);
+		UnitLabel->setFixedWidth(0);
 	}
 
 	m_unitMultiplicationFactor = unitInfo.GetDisplayMultiplicationFactor();

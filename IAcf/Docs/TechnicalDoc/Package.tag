@@ -268,14 +268,14 @@
     <name>iabc::CServiceApplicationComp</name>
     <filename>classiabc_1_1_c_service_application_comp.html</filename>
     <base>QObject</base>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base>ibase::IApplication</base>
     <class kind="class">iabc::CServiceApplicationComp::CService</class>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiabc_1_1_c_service_application_comp.html</anchorfile>
-      <anchor>a8a301409f16050a07de1598ef06a76fe</anchor>
+      <anchor>acd06d02b7b4243ce5b18738f5c441d44</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -396,7 +396,7 @@
   <compound kind="class">
     <name>icbox::CMemoryBankSerializerComp</name>
     <filename>classicbox_1_1_c_memory_bank_serializer_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifile::IFilePersistence</base>
     <member kind="enumeration">
       <name>MessageId</name>
@@ -411,10 +411,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
-      <anchor>a3a49499a42d29a56caf441bbb53d9c07</anchor>
+      <anchor>a52b29b8d5f920c4bb72ab55c2806be0f</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -517,7 +517,7 @@
   <compound kind="class">
     <name>idc1394::CSimpleCameraComp</name>
     <filename>classidc1394_1_1_c_simple_camera_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;</base>
     <member kind="enumeration">
       <name>MessageId</name>
@@ -538,10 +538,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
-      <anchor>aeeae6b3856276db715aadfe6dd2a5331</anchor>
+      <anchor>a5746952508ff11bcf72b0ac4120f91dd</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -703,7 +703,7 @@
   <compound kind="class">
     <name>ilibav::CLibAvVideoDecoderComp</name>
     <filename>classilibav_1_1_c_lib_av_video_decoder_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">icam::IBitmapAcquisition</base>
     <base virtualness="virtual">imeas::ISampleAcquisition</base>
     <base virtualness="virtual">imm::IVideoController</base>
@@ -726,10 +726,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>ae152b91bfd916beff426586f2bc2e73d</anchor>
+      <anchor>a0a5ec1333d53d2fb28a303b21a18853b</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -1041,7 +1041,7 @@
   <compound kind="class">
     <name>iocv::COcvAcquisitionComp</name>
     <filename>classiocv_1_1_c_ocv_acquisition_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">isig::ITriggerConstraints</base>
     <base virtualness="virtual">TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;</base>
     <member kind="enumeration">
@@ -1051,10 +1051,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiocv_1_1_c_ocv_acquisition_comp.html</anchorfile>
-      <anchor>aa0ee535d1bc6aa64c53be2f79d8e74ba</anchor>
+      <anchor>ad4426f56f406f6f8863a141d0fd03cd3</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">

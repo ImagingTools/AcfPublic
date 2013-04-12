@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Include/ibase/ILoggable.h Source File</title>
+<title>Include/ilog/ILoggable.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -23,39 +23,39 @@
   </div>
 <div class="header">
   <div class="headertitle">
-<div class="title">Include/ibase/ILoggable.h</div>  </div>
+<div class="title">Include/ilog/ILoggable.h</div>  </div>
 </div>
 <div class="contents">
-<a href="_i_loggable_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef ibase_ILoggable_included</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define ibase_ILoggable_included</span>
+<a href="_i_loggable_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef ilog_ILoggable_included</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define ilog_ILoggable_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_i_message_consumer_8h.html">ibase/IMessageConsumer.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_i_message_consumer_8h.html">ilog/IMessageConsumer.h</a>&quot;</span>
 <a name="l00006"></a>00006 
 <a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_i_polymorphic_8h.html">istd/IPolymorphic.h</a>&quot;</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 
-<a name="l00010"></a>00010 <span class="keyword">namespace </span>ibase
+<a name="l00010"></a>00010 <span class="keyword">namespace </span>ilog
 <a name="l00011"></a>00011 {
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 
-<a name="l00017"></a><a class="code" href="classibase_1_1_i_loggable.html">00017</a> <span class="keyword">class </span><a class="code" href="classibase_1_1_i_loggable.html" title="Inteface for object, which support the.">ILoggable</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IPolymorphic
+<a name="l00017"></a><a class="code" href="classilog_1_1_i_loggable.html">00017</a> <span class="keyword">class </span><a class="code" href="classilog_1_1_i_loggable.html" title="Inteface for object, which support the.">ILoggable</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IPolymorphic
 <a name="l00018"></a>00018 {
 <a name="l00019"></a>00019 <span class="keyword">public</span>:
-<a name="l00023"></a>00023        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_i_loggable.html#a057a0bba2008982bd14ab84e02716576" title="Install log.">SetLogPtr</a>(<a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">IMessageConsumer</a>* logPtr) = 0;
+<a name="l00023"></a>00023        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classilog_1_1_i_loggable.html#a3af9736a7051d9339f85e1c38699807b" title="Install log.">SetLogPtr</a>(<a class="code" href="classilog_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">IMessageConsumer</a>* logPtr) = 0;
 <a name="l00024"></a>00024        
-<a name="l00028"></a>00028        <span class="keyword">virtual</span> <a class="code" href="classibase_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">IMessageConsumer</a>* <a class="code" href="classibase_1_1_i_loggable.html#a9c8169f96643b91a14e803b8c2310abb" title="Get log.">GetLogPtr</a>() <span class="keyword">const</span> = 0;
+<a name="l00028"></a>00028        <span class="keyword">virtual</span> <a class="code" href="classilog_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">IMessageConsumer</a>* <a class="code" href="classilog_1_1_i_loggable.html#a8ed3f045f191cc01be82f59e1222835c" title="Get log.">GetLogPtr</a>() <span class="keyword">const</span> = 0;
 <a name="l00029"></a>00029 
-<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_i_loggable.html#a69d23a922c84cc79a058be79c593d97b" title="Enable/disable tracing.">SetTracingEnabled</a>(<span class="keywordtype">bool</span> trace) = 0;
+<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classilog_1_1_i_loggable.html#a8d2371f072a87af4e15e3fb0c348e24c" title="Enable/disable tracing.">SetTracingEnabled</a>(<span class="keywordtype">bool</span> trace) = 0;
 <a name="l00034"></a>00034 
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_i_loggable.html#a608e8afc44b145e13e34cf0d10f6beab" title="Returns true if tracing enabled.">IsTracingEnabled</a>() <span class="keyword">const</span> = 0;
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classilog_1_1_i_loggable.html#a5a207ced7f0211aa2eef12d0ca9065bd" title="Returns true if tracing enabled.">IsTracingEnabled</a>() <span class="keyword">const</span> = 0;
 <a name="l00039"></a>00039 };
 <a name="l00040"></a>00040 
 <a name="l00041"></a>00041 
-<a name="l00042"></a>00042 } <span class="comment">// namespace ibase</span>
+<a name="l00042"></a>00042 } <span class="comment">// namespace ilog</span>
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044 
-<a name="l00045"></a>00045 <span class="preprocessor">#endif // !ibase_ILoggable_included</span>
+<a name="l00045"></a>00045 <span class="preprocessor">#endif // !ilog_ILoggable_included</span>
 <a name="l00046"></a>00046 <span class="preprocessor"></span>
 <a name="l00047"></a>00047 
 </pre></div></div>

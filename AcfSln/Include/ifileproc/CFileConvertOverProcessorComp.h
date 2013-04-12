@@ -33,7 +33,7 @@
 #include "ifile/IFilePersistence.h"
 
 #include "ifileproc/IFileConvertCopy.h"
-#include "ibase/TLoggerCompWrap.h"
+#include "ilog/TLoggerCompWrap.h"
 
 #include "ibase/IProgressManager.h"
 #include "iproc/IProcessor.h"
@@ -47,11 +47,11 @@ namespace ifileproc
 	Component for a file conversion over a data processor.
 */
 class CFileConvertOverProcessorComp:
-			public ibase::CLoggerComponentBase,
+			public ilog::CLoggerComponentBase,
 			virtual public ifileproc::IFileConvertCopy
 {
 public:
-	typedef ibase::CLoggerComponentBase BaseClass;
+	typedef ilog::CLoggerComponentBase BaseClass;
 
 	CFileConvertOverProcessorComp();
 

@@ -243,7 +243,7 @@ void CInspectionTaskComp::ClearWorkResults()
 }
 
 
-const ibase::IMessageContainer* CInspectionTaskComp::GetWorkMessages() const
+const ilog::IMessageContainer* CInspectionTaskComp::GetWorkMessages() const
 {
 	return &m_messageContainer;
 }
@@ -421,7 +421,7 @@ CInspectionTaskComp::MessageContainer::MessageContainer(CInspectionTaskComp* par
 }
 
 
-// reimplemented (ibase::IMessageContainer)
+// reimplemented (ilog::IMessageContainer)
 
 int CInspectionTaskComp::MessageContainer::GetWorstCategory() const
 {
@@ -431,15 +431,15 @@ int CInspectionTaskComp::MessageContainer::GetWorstCategory() const
 }
 
 
-ibase::IMessageContainer::Messages CInspectionTaskComp::MessageContainer::GetMessages() const
+ilog::IMessageContainer::Messages CInspectionTaskComp::MessageContainer::GetMessages() const
 {
-	ibase::IMessageContainer::Messages retVal;
+	ilog::IMessageContainer::Messages retVal;
 
 	int subtasksCount = m_parentPtr->m_subtasksCompPtr.GetCount();
 	for (int i = 0; i < subtasksCount; ++i){
 		const iproc::ISupplier* supplierPtr = m_parentPtr->m_subtasksCompPtr[i];
 		if (supplierPtr != NULL){
-			const ibase::IMessageContainer* containerPtr = supplierPtr->GetWorkMessages();
+			const ilog::IMessageContainer* containerPtr = supplierPtr->GetWorkMessages();
 
 			if (containerPtr != NULL){
 				retVal += containerPtr->GetMessages();
@@ -470,7 +470,7 @@ bool CInspectionTaskComp::MessageContainer::Serialize(iser::IArchive& archive)
 	for (int i = 0; i < subtasksCount; ++i){
 		iproc::ISupplier* supplierPtr = m_parentPtr->m_subtasksCompPtr[i];
 		if (supplierPtr != NULL){
-			ibase::IMessageContainer* containerPtr = const_cast<ibase::IMessageContainer*>(supplierPtr->GetWorkMessages());
+			ilog::IMessageContainer* containerPtr = const_cast<ilog::IMessageContainer*>(supplierPtr->GetWorkMessages());
 
 			if (containerPtr != NULL){
 				retVal = containerPtr->Serialize(archive) && retVal;

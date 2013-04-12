@@ -39,8 +39,8 @@
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_model_wrap_8h.html">imod/TModelWrap.h</a>&quot;</span>
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_multi_model_observer_base_8h.html">imod/CMultiModelObserverBase.h</a>&quot;</span>
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_logger_comp_wrap_8h.html">ibase/TLoggerCompWrap.h</a>&quot;</span>
-<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_message_container_8h.html">ibase/CMessageContainer.h</a>&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_logger_comp_wrap_8h.html">ilog/TLoggerCompWrap.h</a>&quot;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_message_container_8h.html">ilog/CMessageContainer.h</a>&quot;</span>
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019 <span class="comment">// ACF-Solutions includes</span>
 <a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="code" href="_i_supplier_8h.html">iproc/ISupplier.h</a>&quot;</span>
@@ -52,13 +52,13 @@
 <a name="l00026"></a>00026 
 <a name="l00031"></a>00031 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
 <a name="l00032"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html">00032</a> <span class="keyword">class </span><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Standard implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap</a>:
-<a name="l00033"></a>00033                      <span class="keyword">public</span> ibase::<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga8ef64a77c28b704454f15c826587cc93">CLoggerComponentBase</a>,
+<a name="l00033"></a>00033                      <span class="keyword">public</span> ilog::<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga2ac8e0a207c9bb18de1ac6883d2cf09c">CLoggerComponentBase</a>,
 <a name="l00034"></a>00034                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">ISupplier</a>,
 <a name="l00035"></a>00035                      <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IChangeable,
-<a name="l00036"></a>00036                      <span class="keyword">virtual</span> <span class="keyword">protected</span> ibase::IMessageConsumer
+<a name="l00036"></a>00036                      <span class="keyword">virtual</span> <span class="keyword">protected</span> ilog::IMessageConsumer
 <a name="l00037"></a>00037 {
 <a name="l00038"></a>00038 <span class="keyword">public</span>:
-<a name="l00039"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#aa798f2691f94a39db1097a56727a68b9">00039</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html">ibase::CLoggerComponentBase</a> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#aa798f2691f94a39db1097a56727a68b9">BaseClass</a>;
+<a name="l00039"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a4ebbfee7e8e76999c4e14e5359c8ac25">00039</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classilog_1_1_t_logger_comp_wrap.html">ilog::CLoggerComponentBase</a> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a4ebbfee7e8e76999c4e14e5359c8ac25">BaseClass</a>;
 <a name="l00040"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a6c07595d7aa93d9e7ddecd35f6b44557">00040</a>        <span class="keyword">typedef</span> Product <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a6c07595d7aa93d9e7ddecd35f6b44557">ProductType</a>;
 <a name="l00041"></a>00041 
 <a name="l00042"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ae4928500a07bc7997704eb06d7effb9f">00042</a>        <span class="keyword">enum</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ae4928500a07bc7997704eb06d7effb9f">MessageId</a>
@@ -82,7 +82,7 @@
 <a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a448aa1751441a329a76510cbeb2894c6" title="Force the supplier to initialize its work.">EnsureWorkInitialized</a>();
 <a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a94292879cc623a44e70067a7ef78c05e" title="Ensure that all objects are produced.">EnsureWorkFinished</a>();
 <a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a0a5893f9c6a884949e2ccb5286c37921" title="Remove all stored work results.">ClearWorkResults</a>();
-<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_message_container.html">ibase::IMessageContainer</a>* <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a2f54c6e93e652280137f5b8cbdc09239" title="Get messages outputted by this work.">GetWorkMessages</a>() <span class="keyword">const</span>;
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classilog_1_1_i_message_container.html">ilog::IMessageContainer</a>* <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a238c853e44e8705755ecc1f4dde36e20" title="Get messages outputted by this work.">GetWorkMessages</a>() <span class="keyword">const</span>;
 <a name="l00064"></a>00064        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#ab6f30ac3f2d05e657c1263026630fd6d" title="Get parameter set using by this supplier.">GetModelParametersSet</a>() <span class="keyword">const</span>;
 <a name="l00065"></a>00065 
 <a name="l00066"></a>00066 <span class="keyword">protected</span>:
@@ -107,17 +107,17 @@
 <a name="l00101"></a>00101        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a247f2b444973b6b94218f437ca057746" title="Register supplier input.">RegisterSupplierInput</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr, <a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">ISupplier</a>* supplierPtr = NULL);
 <a name="l00106"></a>00106        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#af3699e19481feebf476a3f823ac98bfb" title="Unregister supplier input.">UnregisterSupplierInput</a>(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>* modelPtr);
 <a name="l00107"></a>00107 
-<a name="l00111"></a>00111        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a36b627cbfa39bad9b1a76cb7371560d8" title="Add ibase::CMessage to the internal message container (also from const functions).">AddMessage</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_c_message.html">ibase::CMessage</a>* messagePtr) <span class="keyword">const</span>;
+<a name="l00111"></a>00111        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a09aeef81ece3ead19ceddb5b32383361" title="Add ilog::CMessage to the internal message container (also from const functions).">AddMessage</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classilog_1_1_c_message.html">ilog::CMessage</a>* messagePtr) <span class="keyword">const</span>;
 <a name="l00112"></a>00112 
 <a name="l00113"></a>00113        <span class="comment">// abstract methods</span>
 <a name="l00118"></a>00118 <span class="comment"></span>       <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a6230575f0d5b0ccfd28cdf7082866c62" title="Produce single object.">ProduceObject</a>(Product&amp; result) <span class="keyword">const</span> = 0;
 <a name="l00119"></a>00119 
-<a name="l00120"></a>00120        <span class="comment">// reimplemented (ibase::IMessageConsumer)</span>
+<a name="l00120"></a>00120        <span class="comment">// reimplemented (ilog::IMessageConsumer)</span>
 <a name="l00121"></a>00121        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a1fe91e45040ff8b41c43f7d28c5fea10">IsMessageSupported</a>(
 <a name="l00122"></a>00122                             <span class="keywordtype">int</span> messageCategory = -1,
 <a name="l00123"></a>00123                             <span class="keywordtype">int</span> messageId = -1,
 <a name="l00124"></a>00124                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html">istd::IInformationProvider</a>* messagePtr = NULL) <span class="keyword">const</span>;
-<a name="l00125"></a>00125        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a36b627cbfa39bad9b1a76cb7371560d8" title="Add ibase::CMessage to the internal message container (also from const functions).">AddMessage</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_smart_ptr.html">MessagePtr</a>&amp; messagePtr);
+<a name="l00125"></a>00125        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a09aeef81ece3ead19ceddb5b32383361" title="Add ilog::CMessage to the internal message container (also from const functions).">AddMessage</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_smart_ptr.html">MessagePtr</a>&amp; messagePtr);
 <a name="l00126"></a>00126 
 <a name="l00127"></a>00127        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
 <a name="l00128"></a>00128        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a87209e190b38fd6513767b16208ed1ce">OnComponentCreated</a>();
@@ -169,7 +169,7 @@
 <a name="l00174"></a>00174        <span class="keyword">typedef</span> QMap&lt;imod::IModel*, ISupplier*&gt; InputSuppliersMap;
 <a name="l00175"></a>00175        InputSuppliersMap m_inputSuppliersMap;
 <a name="l00176"></a>00176 
-<a name="l00177"></a>00177        <span class="keyword">mutable</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;ibase::CMessageContainer&gt;</a> m_messageContainer;
+<a name="l00177"></a>00177        <span class="keyword">mutable</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;ilog::CMessageContainer&gt;</a> m_messageContainer;
 <a name="l00178"></a>00178 
 <a name="l00179"></a>00179        <span class="keywordtype">bool</span> m_areParametersValid;
 <a name="l00180"></a>00180 };
@@ -277,7 +277,7 @@
 <a name="l00282"></a>00282 
 <a name="l00283"></a>00283 
 <a name="l00284"></a>00284 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
-<a name="l00285"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a2f54c6e93e652280137f5b8cbdc09239">00285</a> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_message_container.html">ibase::IMessageContainer</a>* <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a2f54c6e93e652280137f5b8cbdc09239" title="Get messages outputted by this work.">TSupplierCompWrap&lt;Product&gt;::GetWorkMessages</a>()<span class="keyword"> const</span>
+<a name="l00285"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a238c853e44e8705755ecc1f4dde36e20">00285</a> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classilog_1_1_i_message_container.html">ilog::IMessageContainer</a>* <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a238c853e44e8705755ecc1f4dde36e20" title="Get messages outputted by this work.">TSupplierCompWrap&lt;Product&gt;::GetWorkMessages</a>()<span class="keyword"> const</span>
 <a name="l00286"></a>00286 <span class="keyword"></span>{
 <a name="l00287"></a>00287        <span class="keywordflow">return</span> &amp;m_messageContainer;
 <a name="l00288"></a>00288 }
@@ -345,7 +345,7 @@
 <a name="l00350"></a>00350 
 <a name="l00351"></a>00351 
 <a name="l00352"></a>00352 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
-<a name="l00353"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a36b627cbfa39bad9b1a76cb7371560d8">00353</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a36b627cbfa39bad9b1a76cb7371560d8" title="Add ibase::CMessage to the internal message container (also from const functions).">TSupplierCompWrap&lt;Product&gt;::AddMessage</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_c_message.html">ibase::CMessage</a>* messagePtr)<span class="keyword"> const</span>
+<a name="l00353"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a09aeef81ece3ead19ceddb5b32383361">00353</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a09aeef81ece3ead19ceddb5b32383361" title="Add ilog::CMessage to the internal message container (also from const functions).">TSupplierCompWrap&lt;Product&gt;::AddMessage</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classilog_1_1_c_message.html">ilog::CMessage</a>* messagePtr)<span class="keyword"> const</span>
 <a name="l00354"></a>00354 <span class="keyword"></span>{
 <a name="l00355"></a>00355        Q_ASSERT(messagePtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00356"></a>00356 
@@ -353,7 +353,7 @@
 <a name="l00358"></a>00358 }
 <a name="l00359"></a>00359 
 <a name="l00360"></a>00360 
-<a name="l00361"></a>00361 <span class="comment">// reimplemented (ibase::IMessageConsumer)</span>
+<a name="l00361"></a>00361 <span class="comment">// reimplemented (ilog::IMessageConsumer)</span>
 <a name="l00362"></a>00362 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
 <a name="l00363"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a1fe91e45040ff8b41c43f7d28c5fea10">00363</a> <span class="keywordtype">bool</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a1fe91e45040ff8b41c43f7d28c5fea10">TSupplierCompWrap&lt;Product&gt;::IsMessageSupported</a>(
 <a name="l00364"></a>00364                      <span class="keywordtype">int</span> messageCategory,
@@ -365,7 +365,7 @@
 <a name="l00370"></a>00370 
 <a name="l00371"></a>00371 
 <a name="l00372"></a>00372 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Product&gt;
-<a name="l00373"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a022dd25ac0bef5830e4be67f481435ff">00373</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a36b627cbfa39bad9b1a76cb7371560d8" title="Add ibase::CMessage to the internal message container (also from const functions).">TSupplierCompWrap&lt;Product&gt;::AddMessage</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_smart_ptr.html">MessagePtr</a>&amp; messagePtr)
+<a name="l00373"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a022dd25ac0bef5830e4be67f481435ff">00373</a> <span class="keywordtype">void</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a09aeef81ece3ead19ceddb5b32383361" title="Add ilog::CMessage to the internal message container (also from const functions).">TSupplierCompWrap&lt;Product&gt;::AddMessage</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_smart_ptr.html">MessagePtr</a>&amp; messagePtr)
 <a name="l00374"></a>00374 {
 <a name="l00375"></a>00375        m_messageContainer.AddMessage(messagePtr);
 <a name="l00376"></a>00376 }
@@ -422,7 +422,7 @@
 <a name="l00427"></a><a class="code" href="classiproc_1_1_t_supplier_comp_wrap_1_1_timer.html#a997a5ca668786cbe967f9798d97f03dd">00427</a> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Standard implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap&lt;Product&gt;::Timer::~Timer</a>()
 <a name="l00428"></a>00428 {
 <a name="l00429"></a>00429        <span class="keywordflow">if</span> ((m_parentPtr != <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; (m_parentPtr-&gt;m_diagnosticNameAttrPtr.IsValid())){
-<a name="l00430"></a>00430               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_smart_ptr.html">MessagePtr</a> messagePtr(<span class="keyword">new</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_c_message.html">ibase::CMessage</a>(
+<a name="l00430"></a>00430               <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_smart_ptr.html">MessagePtr</a> messagePtr(<span class="keyword">new</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classilog_1_1_c_message.html">ilog::CMessage</a>(
 <a name="l00431"></a>00431                                    <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152a42a989ac6baf47a23c6595f66cb30077">istd::IInformationProvider::IC_INFO</a>,
 <a name="l00432"></a>00432                                    0,
 <a name="l00433"></a>00433                     QObject::tr(<span class="stringliteral">&quot;%1 took %2 ms&quot;</span>).arg(m_measuredFeatureName).arg(m_timer.GetElapsed() * 1000),

@@ -29,7 +29,7 @@
 
 // ACF includes
 #include "i2d/CRectangle.h"
-#include "ibase/TLoggerCompWrap.h"
+#include "ilog/TLoggerCompWrap.h"
 #include "icomp/CComponentBase.h"
 
 // ACF-Solutions includes
@@ -49,11 +49,11 @@ namespace idc1394
 	Simple fire wire camera implementation based on library libDC1394.
 */
 class CSimpleCameraComp:
-			public ibase::CLoggerComponentBase,
+			public ilog::CLoggerComponentBase,
 			virtual public iproc::TSyncProcessorWrap<icam::IBitmapAcquisition>
 {
 public:
-	typedef ibase::CLoggerComponentBase BaseClass;
+	typedef ilog::CLoggerComponentBase BaseClass;
 
 	I_BEGIN_COMPONENT(CSimpleCameraComp);
 		I_REGISTER_INTERFACE(icam::IBitmapAcquisition);

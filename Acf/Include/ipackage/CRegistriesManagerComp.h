@@ -30,16 +30,12 @@
 
 // ACF includes
 #include "istd/TDelPtr.h"
-
 #include "ifile/IFilePersistence.h"
-
 #include "icomp/IExtPackagesManager.h"
 #include "icomp/IRegistriesManager.h"
 #include "icomp/IRegistryLoader.h"
 #include "icomp/CComponentBase.h"
-
-#include "ibase/TLoggerCompWrap.h"
-
+#include "ilog/TLoggerCompWrap.h"
 #include "ifile/IFileNameParam.h"
 
 
@@ -51,13 +47,13 @@ namespace ipackage
 	Loads component packages from dynamic link libraries.
 */
 class CRegistriesManagerComp:
-			public ibase::CLoggerComponentBase,
+			public ilog::CLoggerComponentBase,
 			virtual public icomp::IExtPackagesManager,
 			virtual public icomp::IRegistriesManager,
 			virtual public icomp::IRegistryLoader
 {
 public:
-	typedef ibase::CLoggerComponentBase BaseClass;
+	typedef ilog::CLoggerComponentBase BaseClass;
 
 	enum MessageId
 	{

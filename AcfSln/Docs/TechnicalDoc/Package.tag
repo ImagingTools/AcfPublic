@@ -3757,13 +3757,13 @@
   <compound kind="class">
     <name>icam::CCameraDelegatorComp</name>
     <filename>classicam_1_1_c_camera_delegator_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base>icam::IBitmapAcquisition</base>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
-      <anchor>aa819b8094e765fc45d9785fbc23cc3cb</anchor>
+      <anchor>a341af101bb2dff0d381a2bc45d29cc1b</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -5865,29 +5865,29 @@
       <type>virtual bool</type>
       <name>IsRegistryValid</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>ae33ef5db07f2bdddf09afc82a127dbd3</anchor>
-      <arglist>(const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
+      <anchor>a325d8030d31915d61f091459f7a0899a</anchor>
+      <arglist>(const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ilog::IMessageConsumer *reasonConsumerPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsElementValid</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a7958bfdf6e0c5e4c9d1c0c4309b11b48</anchor>
-      <arglist>(const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
+      <anchor>a2db989c320a1155e81c538b7878609e6</anchor>
+      <arglist>(const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ilog::IMessageConsumer *reasonConsumerPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsElementWithInfoValid</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a6359ce0e4a9587d849e108c20efc991b</anchor>
-      <arglist>(const QByteArray &amp;elementName, const icomp::IRegistry::ElementInfo &amp;elementInfo, const icomp::IComponentStaticInfo *metaInfoPtr, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
+      <anchor>ae5d00b315e89967c85cf7a8731a79654</anchor>
+      <arglist>(const QByteArray &amp;elementName, const icomp::IRegistry::ElementInfo &amp;elementInfo, const icomp::IComponentStaticInfo *metaInfoPtr, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ilog::IMessageConsumer *reasonConsumerPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsAttributeValid</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a082168fddbf0cb6a31adda38b7bf1052</anchor>
-      <arglist>(const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
+      <anchor>a0a226e70c01872c46624ef5cb0db8618</anchor>
+      <arglist>(const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ilog::IMessageConsumer *reasonConsumerPtr) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QIcon</type>
@@ -5907,22 +5907,22 @@
       <type>bool</type>
       <name>CheckAttributeCompatibility</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a27e136826b79669b85acf92e7ee726d0</anchor>
-      <arglist>(const iser::IObject &amp;attribute, const icomp::IAttributeStaticInfo &amp;attributeMetaInfo, const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
+      <anchor>a9603f20aad91079d3dd5cba648494fb0</anchor>
+      <arglist>(const iser::IObject &amp;attribute, const icomp::IAttributeStaticInfo &amp;attributeMetaInfo, const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ilog::IMessageConsumer *reasonConsumerPtr) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>CheckPointedElementCompatibility</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a090c924ce43eb3618c7bc9629337313a</anchor>
-      <arglist>(const QByteArray &amp;pointedElementName, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const icomp::IElementStaticInfo::Ids &amp;optionalInterfaceNames, const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
+      <anchor>ab8210c89891a8bf2b4d6d7a7293edb35</anchor>
+      <arglist>(const QByteArray &amp;pointedElementName, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const icomp::IElementStaticInfo::Ids &amp;optionalInterfaceNames, const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, ilog::IMessageConsumer *reasonConsumerPtr) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>CheckPointedElementInfoCompatibility</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a8ca59728536ab50ec585100288c1de88</anchor>
-      <arglist>(const QByteArray &amp;pointedElementName, const icomp::IElementStaticInfo *pointedMetaInfoPtr, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const icomp::IElementStaticInfo::Ids &amp;optionalInterfaceNames, const QByteArray &amp;attributeName, const QByteArray &amp;elementName, bool ignoreUndef, ibase::IMessageConsumer *reasonConsumerPtr) const </arglist>
+      <anchor>a449a7d9bdcd2536f2af4964dd603fedf</anchor>
+      <arglist>(const QByteArray &amp;pointedElementName, const icomp::IElementStaticInfo *pointedMetaInfoPtr, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const icomp::IElementStaticInfo::Ids &amp;optionalInterfaceNames, const QByteArray &amp;attributeName, const QByteArray &amp;elementName, bool ignoreUndef, ilog::IMessageConsumer *reasonConsumerPtr) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6117,13 +6117,13 @@
     <name>icmpstr::CRegistryPreviewComp</name>
     <filename>classicmpstr_1_1_c_registry_preview_comp.html</filename>
     <base>QObject</base>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base>icmpstr::IRegistryPreview</base>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classicmpstr_1_1_c_registry_preview_comp.html</anchorfile>
-      <anchor>a6607b9112a5c433a294590200a4e5c69</anchor>
+      <anchor>a37890f5e7856d8458934b77a40d68827</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -6325,7 +6325,7 @@
   <compound kind="class">
     <name>icmpstr::CRegistryPropEditorComp::TextLog</name>
     <filename>classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html</filename>
-    <base virtualness="virtual">ibase::IMessageConsumer</base>
+    <base virtualness="virtual">ilog::IMessageConsumer</base>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsMessageSupported</name>
@@ -7875,22 +7875,22 @@
       <type>virtual bool</type>
       <name>IsRegistryValid</name>
       <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
-      <anchor>a84a07d820edbb8f542ca577bbf7dd8b9</anchor>
-      <arglist>(const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const =0</arglist>
+      <anchor>adf2b332578a91634a77bb94a8d3e3054</anchor>
+      <arglist>(const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ilog::IMessageConsumer *reasonConsumerPtr) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsElementValid</name>
       <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
-      <anchor>a7a5f49e5acecb6c03518b6c68fc167db</anchor>
-      <arglist>(const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const =0</arglist>
+      <anchor>ac00992ee6e4ac225414375e5f81f10c1</anchor>
+      <arglist>(const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ilog::IMessageConsumer *reasonConsumerPtr) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsAttributeValid</name>
       <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
-      <anchor>a111097da538f262f69ee108da356b051</anchor>
-      <arglist>(const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ibase::IMessageConsumer *reasonConsumerPtr) const =0</arglist>
+      <anchor>a8b4add4bfd257ba94d2d81c8967eb280</anchor>
+      <arglist>(const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ilog::IMessageConsumer *reasonConsumerPtr) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QIcon</type>
@@ -9040,7 +9040,7 @@
     <name>ifileproc::CComposedCopyFilesComp</name>
     <filename>classifileproc_1_1_c_composed_copy_files_comp.html</filename>
     <base>QObject</base>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifileproc::IFileConvertCopy</base>
     <member kind="enumeration">
       <name>MessageId</name>
@@ -9055,10 +9055,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classifileproc_1_1_c_composed_copy_files_comp.html</anchorfile>
-      <anchor>aa7bc649079627068de0f8b9dafa5b670</anchor>
+      <anchor>a0df0adc24aaac2ebf2bf467908d45767</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9072,13 +9072,13 @@
   <compound kind="class">
     <name>ifileproc::CCopyAppComp</name>
     <filename>classifileproc_1_1_c_copy_app_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ibase::IApplication</base>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classifileproc_1_1_c_copy_app_comp.html</anchorfile>
-      <anchor>ae4c3c71f260a6fa752fbf4855fa22b97</anchor>
+      <anchor>add905cb6f61eb42db6f35eb391360508</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9114,7 +9114,7 @@
     <name>ifileproc::CCopyFilesTreeComp</name>
     <filename>classifileproc_1_1_c_copy_files_tree_comp.html</filename>
     <base>QObject</base>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifileproc::IFileConvertCopy</base>
     <member kind="enumeration">
       <name>MessageId</name>
@@ -9141,10 +9141,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classifileproc_1_1_c_copy_files_tree_comp.html</anchorfile>
-      <anchor>a8bb583ef60d549a0a1abdf09d97e206f</anchor>
+      <anchor>a7d06995d263cdfb7d9cabb0795718ec2</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9180,13 +9180,13 @@
     <name>ifileproc::CExternalFileConverterComp</name>
     <filename>classifileproc_1_1_c_external_file_converter_comp.html</filename>
     <base>QObject</base>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifileproc::IFileConvertCopy</base>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classifileproc_1_1_c_external_file_converter_comp.html</anchorfile>
-      <anchor>a9a0354a6f2e63896166a06220d47276f</anchor>
+      <anchor>a8b280d7598cb57c80ba5eb2b3a65da11</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9207,13 +9207,13 @@
   <compound kind="class">
     <name>ifileproc::CFileConvertOverProcessorComp</name>
     <filename>classifileproc_1_1_c_file_convert_over_processor_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifileproc::IFileConvertCopy</base>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classifileproc_1_1_c_file_convert_over_processor_comp.html</anchorfile>
-      <anchor>a25e84206e80578e52f1f054f12450704</anchor>
+      <anchor>a49552aaca4c72b8d6ba52b7a6df3bc57</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -9234,13 +9234,13 @@
   <compound kind="class">
     <name>ifileproc::CFileCopyOverLoaderComp</name>
     <filename>classifileproc_1_1_c_file_copy_over_loader_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifileproc::IFileConvertCopy</base>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classifileproc_1_1_c_file_copy_over_loader_comp.html</anchorfile>
-      <anchor>a504014f1a64845541b94129536576fc4</anchor>
+      <anchor>ab79c1fa8b55c0ec11ba3840c96407b96</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9255,7 +9255,7 @@
     <name>ifileproc::CFileInfoCopyComp</name>
     <filename>classifileproc_1_1_c_file_info_copy_comp.html</filename>
     <base>QObject</base>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifileproc::IFileConvertCopy</base>
     <member kind="enumeration">
       <name>MessageId</name>
@@ -9294,10 +9294,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classifileproc_1_1_c_file_info_copy_comp.html</anchorfile>
-      <anchor>a3b5b21a52ce2e9d3cdcc26cb33338e7f</anchor>
+      <anchor>a9d9e5e3f5ac98be7de9a901093028834</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9337,13 +9337,13 @@
   <compound kind="class">
     <name>ifileproc::CFileNamingComp</name>
     <filename>classifileproc_1_1_c_file_naming_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifileproc::IFileNaming</base>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classifileproc_1_1_c_file_naming_comp.html</anchorfile>
-      <anchor>a4050ac6a1bbd857b6da8ddb3469e3b1c</anchor>
+      <anchor>a9ad688cb8ea415897cf13b3f8470390e</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9473,13 +9473,13 @@
   <compound kind="class">
     <name>ifileproc::CProcessingResultsReviewComp</name>
     <filename>classifileproc_1_1_c_processing_results_review_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifileproc::IFileConvertCopy</base>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classifileproc_1_1_c_processing_results_review_comp.html</anchorfile>
-      <anchor>af055d8f69fce28b38250a603b9d650a8</anchor>
+      <anchor>a45589b5b58154b1e276542d65aabefec</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -10551,10 +10551,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::TLoggerCompWrap&lt; ihotf::CHotfolderWorkflowComp &gt;</type>
+      <type>ilog::TLoggerCompWrap&lt; ihotf::CHotfolderWorkflowComp &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>abe20ec7ac6b27907ba5fffc99dbba01f</anchor>
+      <anchor>af84a5ea0c1a2dc1b9115ce5991066319</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -11297,13 +11297,13 @@
   <compound kind="class">
     <name>ihotfgui::CDirectoryMonitorComp</name>
     <filename>classihotfgui_1_1_c_directory_monitor_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ihotf::IDirectoryMonitor</base>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classihotfgui_1_1_c_directory_monitor_comp.html</anchorfile>
-      <anchor>aa1730388980c671c3b3235983ed43513</anchor>
+      <anchor>ab66d9b8d6ef969f6237007d9f0e8eda2</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -11656,13 +11656,13 @@
     <name>ihotfgui::CHotfolderProcessingComp</name>
     <filename>classihotfgui_1_1_c_hotfolder_processing_comp.html</filename>
     <base>QObject</base>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <class kind="class">ihotfgui::CHotfolderProcessingComp::ItemProcessor</class>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classihotfgui_1_1_c_hotfolder_processing_comp.html</anchorfile>
-      <anchor>ac28973763f64a1f8bec29c520044b2b3</anchor>
+      <anchor>afc53586fa833ee1b693c5eb5f5859650</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -11771,13 +11771,13 @@
   <compound kind="class">
     <name>ihotfgui::CHotfolderTaskManagerComp</name>
     <filename>classihotfgui_1_1_c_hotfolder_task_manager_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ihotf::IHotfolderTaskManager</base>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classihotfgui_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
-      <anchor>aa5c90eda103f8db9bdf39981aad6472b</anchor>
+      <anchor>a6bac99d505f597d271dab20bd98de527</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -12014,7 +12014,7 @@
   <compound kind="class">
     <name>iinsp::CInspectionTaskComp</name>
     <filename>classiinsp_1_1_c_inspection_task_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">iinsp::IInspectionTask</base>
     <base virtualness="virtual">iproc::ISupplier</base>
     <base virtualness="virtual">istd::IInformationProvider</base>
@@ -12038,10 +12038,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>a2ef04c15176b03787f0f6c3bc66f7825</anchor>
+      <anchor>aaa3ae536daa9c809e7339444c69bc281</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -12185,10 +12185,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const ibase::IMessageContainer *</type>
+      <type>virtual const ilog::IMessageContainer *</type>
       <name>GetWorkMessages</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>a1b67078b63e2605f4abe7389c0900292</anchor>
+      <anchor>a89a591f873abe98ce712bfaf78fd7749</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -13284,16 +13284,16 @@
   <compound kind="class">
     <name>iipr::CColorPatternControllerComp</name>
     <filename>classiipr_1_1_c_color_pattern_controller_comp.html</filename>
-    <base virtualness="virtual">ibase::TLoggerCompWrap</base>
+    <base virtualness="virtual">ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">iipr::IPatternController</base>
     <base virtualness="virtual">iipr::IBitmapProvider</base>
     <base virtualness="virtual">imeas::IDataSequenceProvider</base>
     <base virtualness="virtual">iser::ISerializable</base>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_color_pattern_controller_comp.html</anchorfile>
-      <anchor>a712aa784868f747f03db6a5c36141403</anchor>
+      <anchor>a880abbc88f48496f8224c79696c052aa</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -13471,17 +13471,17 @@
   <compound kind="class">
     <name>iipr::CDelegatedBitmapSupplierComp</name>
     <filename>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">iproc::ISupplier</base>
     <base virtualness="virtual">istd::IChangeable</base>
     <base virtualness="virtual">iipr::IBitmapProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <base protection="protected">imod::CMultiModelBridgeBase</base>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a0f71629291f6d6fbbd0863b7316846a1</anchor>
+      <anchor>a0d7d004b4c1888b54e3494cac59265e4</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -13576,10 +13576,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual const ibase::IMessageContainer *</type>
+      <type>virtual const ilog::IMessageContainer *</type>
       <name>GetWorkMessages</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>aa511440d2efa4b9ad4957949904f4738</anchor>
+      <anchor>a5e006becfa8c97a71cda478df1776953</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -15500,13 +15500,13 @@
   <compound kind="class">
     <name>iipr::CSearchParamsComp</name>
     <filename>classiipr_1_1_c_search_params_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base>iipr::CSearchParams</base>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_search_params_comp.html</anchorfile>
-      <anchor>ac533743253f96ec72099b7b9546fd30a</anchor>
+      <anchor>ad10cf4e89cfa85b63a8db5137710ac27</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -15520,13 +15520,13 @@
   <compound kind="class">
     <name>iipr::CSelectableCalibrationProviderComp</name>
     <filename>classiipr_1_1_c_selectable_calibration_provider_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_selectable_calibration_provider_comp.html</anchorfile>
-      <anchor>ade340c84a618d3d6fd04012aeb2d5d55</anchor>
+      <anchor>a29cb9f1c8e8bf5847d2c2f48bcc1ce3f</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -17400,14 +17400,14 @@
   <compound kind="class">
     <name>imeas::CNumericValuesJoinerComp</name>
     <filename>classimeas_1_1_c_numeric_values_joiner_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">imeas::INumericValueProvider</base>
     <base protection="protected">imeas::CSimpleNumericValue</base>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classimeas_1_1_c_numeric_values_joiner_comp.html</anchorfile>
-      <anchor>a6c616ca1a545c6a395accaa30cab1b03</anchor>
+      <anchor>a31a0f9444c614d1483690e041ec02f23</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -18594,7 +18594,7 @@
   <compound kind="class">
     <name>iproc::CIterativeProcessorComp</name>
     <filename>classiproc_1_1_c_iterative_processor_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base>iproc::TSyncProcessorWrap</base>
     <base virtualness="virtual">iprm::IOptionsList</base>
     <member kind="enumeration">
@@ -18610,10 +18610,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
-      <anchor>acbfe48bc4d178444aa91bd62893e68cf</anchor>
+      <anchor>a79c810cfba26c6db4a43bf3ffcd7fbd7</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -18690,13 +18690,13 @@
   <compound kind="class">
     <name>iproc::CModelBasedProcessingTriggerComp</name>
     <filename>classiproc_1_1_c_model_based_processing_trigger_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base>imod::CSingleModelObserverBase</base>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiproc_1_1_c_model_based_processing_trigger_comp.html</anchorfile>
-      <anchor>a1e77a85bac7e41c195721e403f6ba204</anchor>
+      <anchor>a8b3d15645af70b91f696e314eef34aec</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -19083,10 +19083,10 @@
       <arglist>()=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const ibase::IMessageContainer *</type>
+      <type>virtual const ilog::IMessageContainer *</type>
       <name>GetWorkMessages</name>
       <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>af8b4ee0f60187163bc498a8b5106149c</anchor>
+      <anchor>ad1de7b1ce7a364b008b45346dc452530</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -19314,10 +19314,10 @@
     <name>iproc::TSupplierCompWrap</name>
     <filename>classiproc_1_1_t_supplier_comp_wrap.html</filename>
     <templarg>Product</templarg>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">iproc::ISupplier</base>
     <base virtualness="virtual">istd::IChangeable</base>
-    <base protection="protected" virtualness="virtual">ibase::IMessageConsumer</base>
+    <base protection="protected" virtualness="virtual">ilog::IMessageConsumer</base>
     <class kind="class">iproc::TSupplierCompWrap::Timer</class>
     <member kind="enumeration">
       <name>MessageId</name>
@@ -19332,10 +19332,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>aa798f2691f94a39db1097a56727a68b9</anchor>
+      <anchor>a4ebbfee7e8e76999c4e14e5359c8ac25</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -19395,10 +19395,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const ibase::IMessageContainer *</type>
+      <type>virtual const ilog::IMessageContainer *</type>
       <name>GetWorkMessages</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a2f54c6e93e652280137f5b8cbdc09239</anchor>
+      <anchor>a238c853e44e8705755ecc1f4dde36e20</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -19447,8 +19447,8 @@
       <type>virtual void</type>
       <name>AddMessage</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a36b627cbfa39bad9b1a76cb7371560d8</anchor>
-      <arglist>(const ibase::CMessage *messagePtr) const </arglist>
+      <anchor>a09aeef81ece3ead19ceddb5b32383361</anchor>
+      <arglist>(const ilog::CMessage *messagePtr) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual int</type>
@@ -19509,13 +19509,13 @@
     <filename>classiproc_1_1_t_sync_processor_comp_base.html</filename>
     <templarg>Base</templarg>
     <templarg>Interface</templarg>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base>iproc::TSyncProcessorWrap</base>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
-      <anchor>aba5b8a1659fcb233df925c946248ae58</anchor>
+      <anchor>a89a981e20fa8a2d09462bb32d933509e</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -19660,14 +19660,14 @@
     <name>iprocgui::CDocumentProcessingManagerCompBase</name>
     <filename>classiprocgui_1_1_c_document_processing_manager_comp_base.html</filename>
     <base>QObject</base>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
-      <anchor>a663beb23386ecc1a732eb2b55cf86393</anchor>
+      <anchor>ae409c890d1aef50212a784fcbbb730d2</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -20785,10 +20785,10 @@
     <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <base virtualness="virtual">iauth::IPasswordChanger</base>
     <member kind="typedef">
-      <type>ibase::TLoggerCompWrap&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CUserGuiComp, iauth::IUsersManager &gt; &gt;</type>
+      <type>ilog::TLoggerCompWrap&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CUserGuiComp, iauth::IUsersManager &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtauth_1_1_c_user_gui_comp.html</anchorfile>
-      <anchor>a45c111946219cc24be55d39eabfde1fe</anchor>
+      <anchor>a3832299a62fd380f25a0ab65909650c2</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -20918,10 +20918,10 @@
     <base>TLoggerCompWrap&lt; iqtinsp::TSupplierGuiCompBase&lt; Ui::CBitmapSupplierGuiComp &gt; &gt;</base>
     <base virtualness="virtual">iipr::IBitmapProvider</base>
     <member kind="typedef">
-      <type>ibase::TLoggerCompWrap&lt; iqtinsp::TSupplierGuiCompBase&lt; Ui::CBitmapSupplierGuiComp &gt; &gt;</type>
+      <type>ilog::TLoggerCompWrap&lt; iqtinsp::TSupplierGuiCompBase&lt; Ui::CBitmapSupplierGuiComp &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>a560a704f4a9227adc2fe35a53f791395</anchor>
+      <anchor>abe38aaa44984739f7143bd276aab9961</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -21080,14 +21080,14 @@
   <compound kind="class">
     <name>iqtcam::CFileAcquisitionComp</name>
     <filename>classiqtcam_1_1_c_file_acquisition_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;</base>
     <class kind="struct">iqtcam::CFileAcquisitionComp::ParamsInfo</class>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqtcam_1_1_c_file_acquisition_comp.html</anchorfile>
-      <anchor>af39d2abe9c404adedd4c2504b874f00a</anchor>
+      <anchor>a1680c70fcdf0c9a0a228cf03b3958b97</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -23896,8 +23896,8 @@
       <type></type>
       <name>CNumericValueWidget</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
-      <anchor>acff996dd4c710168d1e091689bb71cdb</anchor>
-      <arglist>(QWidget *parentPtr=NULL, bool showSlilder=true)</arglist>
+      <anchor>a172438ee4f1016c0434cff39404258f4</anchor>
+      <arglist>(QWidget *parentPtr=NULL, bool showSlilder=true, int inputPolicy=0)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -24110,7 +24110,7 @@
     <name>iqtmm::CMediaLoaderComp</name>
     <filename>classiqtmm_1_1_c_media_loader_comp.html</filename>
     <base>QObject</base>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifile::IFilePersistence</base>
     <member kind="enumeration">
       <name>MessageId</name>
@@ -24137,10 +24137,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
-      <anchor>a4be55073d384153a8eaa7bcd7d5b7eca</anchor>
+      <anchor>a62a8eceeea8c1ec0ff9ad8520b7ed62e</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -24216,7 +24216,7 @@
     <name>iqtmm::CSvgBitmapLoaderComp</name>
     <filename>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</filename>
     <base>QObject</base>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifile::IFilePersistence</base>
     <member kind="enumeration">
       <name>MessageId</name>
@@ -24249,10 +24249,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
-      <anchor>a4445bfedc9aee35ee8347f6ec6165859</anchor>
+      <anchor>a8d6563eadea105ce1c4a0d85f3505f41</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -24596,13 +24596,13 @@
   <compound kind="class">
     <name>iqtsig::CScriptDataProcessorComp</name>
     <filename>classiqtsig_1_1_c_script_data_processor_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base>iproc::TSyncProcessorWrap</base>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqtsig_1_1_c_script_data_processor_comp.html</anchorfile>
-      <anchor>a8468ba0584c1a8101e02aa735c550b0e</anchor>
+      <anchor>a3c9f237c3b028fe26a3582962da19c7d</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">

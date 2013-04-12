@@ -74,13 +74,13 @@ public:
 				const icomp::IRegistry& registry,
 				bool ignoreUndef,
 				bool allReasons,
-				ibase::IMessageConsumer* reasonConsumerPtr) const;
+				ilog::IMessageConsumer* reasonConsumerPtr) const;
 	virtual bool IsElementValid(
 				const QByteArray& elementName,
 				const icomp::IRegistry& registry,
 				bool ignoreUndef,
 				bool allReasons,
-				ibase::IMessageConsumer* reasonConsumerPtr) const;
+				ilog::IMessageConsumer* reasonConsumerPtr) const;
 	virtual bool IsElementWithInfoValid(
 				const QByteArray& elementName,
 				const icomp::IRegistry::ElementInfo& elementInfo,
@@ -88,14 +88,14 @@ public:
 				const icomp::IRegistry& registry,
 				bool ignoreUndef,
 				bool allReasons,
-				ibase::IMessageConsumer* reasonConsumerPtr) const;
+				ilog::IMessageConsumer* reasonConsumerPtr) const;
 	virtual bool IsAttributeValid(
 				const QByteArray& attributeName,
 				const QByteArray& elementName,
 				const icomp::IRegistry& registry,
 				bool ignoreUndef,
 				bool allReasons,
-				ibase::IMessageConsumer* reasonConsumerPtr) const;
+				ilog::IMessageConsumer* reasonConsumerPtr) const;
 	virtual QIcon GetComponentIcon(const icomp::CComponentAddress& address) const;
 
 protected:
@@ -119,7 +119,7 @@ protected:
 				const icomp::IRegistry& registry,
 				bool ignoreUndef,
 				bool allReasons,
-				ibase::IMessageConsumer* reasonConsumerPtr) const;
+				ilog::IMessageConsumer* reasonConsumerPtr) const;
 	bool CheckPointedElementCompatibility(
 				const QByteArray& pointedElementName,
 				const icomp::IElementStaticInfo::Ids& interfaceNames,
@@ -128,7 +128,7 @@ protected:
 				const QByteArray& elementName,
 				const icomp::IRegistry& registry,
 				bool ignoreUndef,
-				ibase::IMessageConsumer* reasonConsumerPtr) const;
+				ilog::IMessageConsumer* reasonConsumerPtr) const;
 	bool CheckPointedElementInfoCompatibility(
 				const QByteArray& pointedElementName,
 				const icomp::IElementStaticInfo* pointedMetaInfoPtr,
@@ -137,7 +137,7 @@ protected:
 				const QByteArray& attributeName,
 				const QByteArray& elementName,
 				bool ignoreUndef,
-				ibase::IMessageConsumer* reasonConsumerPtr) const;
+				ilog::IMessageConsumer* reasonConsumerPtr) const;
 
 private:
 	I_REF(icomp::IComponentEnvironmentManager, m_envManagerCompPtr);

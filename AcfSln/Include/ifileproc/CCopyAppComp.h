@@ -31,7 +31,7 @@
 #include "istd/IChangeable.h"
 #include "ibase/IApplication.h"
 #include "ifile/IFilePersistence.h"
-#include "ibase/TLoggerCompWrap.h"
+#include "ilog/TLoggerCompWrap.h"
 
 // ACF-Solutions include
 #include "ifileproc/IFileConvertCopy.h"
@@ -47,11 +47,11 @@ namespace ifileproc
 	It implements ibase::IApplication and can be used as standalone application.
 */
 class CCopyAppComp:
-			public ibase::CLoggerComponentBase,
+			public ilog::CLoggerComponentBase,
 			virtual public ibase::IApplication
 {
 public:
-	typedef ibase::CLoggerComponentBase BaseClass;
+	typedef ilog::CLoggerComponentBase BaseClass;
 
 	I_BEGIN_COMPONENT(CCopyAppComp);
 		I_REGISTER_INTERFACE(ibase::IApplication);

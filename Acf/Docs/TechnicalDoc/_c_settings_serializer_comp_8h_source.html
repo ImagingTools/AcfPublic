@@ -39,7 +39,7 @@
 <a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_i_application_info_8h.html">ibase/IApplicationInfo.h</a>&quot;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_t_logger_comp_wrap_8h.html">ibase/TLoggerCompWrap.h</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_t_logger_comp_wrap_8h.html">ilog/TLoggerCompWrap.h</a>&quot;</span>
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="iqt_8h.html">iqt/iqt.h</a>&quot;</span>
 <a name="l00017"></a>00017 
@@ -49,11 +49,11 @@
 <a name="l00021"></a>00021 
 <a name="l00022"></a>00022 
 <a name="l00026"></a><a class="code" href="classiqt_1_1_c_settings_serializer_comp.html">00026</a> <span class="keyword">class </span><a class="code" href="classiqt_1_1_c_settings_serializer_comp.html" title="Store and load parameter as global settings.">CSettingsSerializerComp</a>:
-<a name="l00027"></a>00027                      <span class="keyword">public</span> ibase::<a class="code" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93" title="Type defining base class for simple components outputting log messages.">CLoggerComponentBase</a>,
+<a name="l00027"></a>00027                      <span class="keyword">public</span> ilog::<a class="code" href="group___main.html#ga2ac8e0a207c9bb18de1ac6883d2cf09c" title="Type defining base class for simple components outputting log messages.">CLoggerComponentBase</a>,
 <a name="l00028"></a>00028                      <span class="keyword">virtual</span> <span class="keyword">public</span> ifile::IFilePersistence
 <a name="l00029"></a>00029 {
 <a name="l00030"></a>00030 <span class="keyword">public</span>:
-<a name="l00031"></a><a class="code" href="classiqt_1_1_c_settings_serializer_comp.html#aafad559ce2c63f244ac4f5b745858c14">00031</a>        <span class="keyword">typedef</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations.">ibase::CLoggerComponentBase</a> <a class="code" href="classiqt_1_1_c_settings_serializer_comp.html#aafad559ce2c63f244ac4f5b745858c14">BaseClass</a>;
+<a name="l00031"></a><a class="code" href="classiqt_1_1_c_settings_serializer_comp.html#a7e82d94315a21b007602fd8adf982bb8">00031</a>        <span class="keyword">typedef</span> <a class="code" href="classilog_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations.">ilog::CLoggerComponentBase</a> <a class="code" href="classiqt_1_1_c_settings_serializer_comp.html#a7e82d94315a21b007602fd8adf982bb8">BaseClass</a>;
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        I_BEGIN_COMPONENT(<a class="code" href="classiqt_1_1_c_settings_serializer_comp.html" title="Store and load parameter as global settings.">CSettingsSerializerComp</a>);
 <a name="l00034"></a>00034               I_REGISTER_INTERFACE(<a class="code" href="classifile_1_1_i_file_persistence.html" title="Provide loading and saving of objects.">ifile::IFilePersistence</a>);

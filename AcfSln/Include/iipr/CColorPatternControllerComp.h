@@ -27,7 +27,7 @@
 // ACF includes
 #include "iser/ISerializable.h"
 #include "imod/TModelWrap.h"
-#include "ibase/TLoggerCompWrap.h"
+#include "ilog/TLoggerCompWrap.h"
 #include "iimg/CGeneralBitmap.h"
 
 // ACF-Solutions includes
@@ -45,7 +45,7 @@ namespace iipr
 
 
 class CColorPatternControllerComp:
-			virtual public ibase::CLoggerComponentBase,
+			virtual public ilog::CLoggerComponentBase,
 			virtual public IPatternController,
 			virtual public iipr::IBitmapProvider,
 			virtual public imeas::IDataSequenceProvider,
@@ -53,7 +53,7 @@ class CColorPatternControllerComp:
 
 {
 public:
-	typedef ibase::CLoggerComponentBase BaseClass;
+	typedef ilog::CLoggerComponentBase BaseClass;
 
 	I_BEGIN_COMPONENT(CColorPatternControllerComp);
 		I_REGISTER_INTERFACE(IPatternController);

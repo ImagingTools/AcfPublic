@@ -37,8 +37,8 @@
 <a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_model_8h.html">imod/IModel.h</a>&quot;</span>
 <a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_model_wrap_8h.html">imod/TModelWrap.h</a>&quot;</span>
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_multi_model_bridge_base_8h.html">imod/CMultiModelBridgeBase.h</a>&quot;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_message_container_8h.html">ibase/IMessageContainer.h</a>&quot;</span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_logger_comp_wrap_8h.html">ibase/TLoggerCompWrap.h</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_i_message_container_8h.html">ilog/IMessageContainer.h</a>&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_logger_comp_wrap_8h.html">ilog/TLoggerCompWrap.h</a>&quot;</span>
 <a name="l00016"></a>00016 
 <a name="l00017"></a>00017 <span class="comment">// ACF-Solutions includes</span>
 <a name="l00018"></a>00018 <span class="preprocessor">#include &quot;<a class="code" href="_i_inspection_task_8h.html">iinsp/IInspectionTask.h</a>&quot;</span>
@@ -49,14 +49,14 @@
 <a name="l00023"></a>00023 
 <a name="l00024"></a>00024 
 <a name="l00029"></a><a class="code" href="classiinsp_1_1_c_inspection_task_comp.html">00029</a> <span class="keyword">class </span><a class="code" href="classiinsp_1_1_c_inspection_task_comp.html" title="Standard component implementation of interface iinsp::IInspectionTask.">CInspectionTaskComp</a>:
-<a name="l00030"></a>00030                      <span class="keyword">public</span> ibase::<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga8ef64a77c28b704454f15c826587cc93">CLoggerComponentBase</a>,
+<a name="l00030"></a>00030                      <span class="keyword">public</span> ilog::<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/group___main.html#ga2ac8e0a207c9bb18de1ac6883d2cf09c">CLoggerComponentBase</a>,
 <a name="l00031"></a>00031                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiinsp_1_1_i_inspection_task.html" title="Representation of complete inspection task.">IInspectionTask</a>,
 <a name="l00032"></a>00032                      <span class="keyword">virtual</span> <span class="keyword">public</span> iproc::ISupplier,
 <a name="l00033"></a>00033                      <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IInformationProvider,
 <a name="l00034"></a>00034                      <span class="keyword">protected</span> imod::CMultiModelBridgeBase
 <a name="l00035"></a>00035 {
 <a name="l00036"></a>00036 <span class="keyword">public</span>:
-<a name="l00037"></a><a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#a2ef04c15176b03787f0f6c3bc66f7825">00037</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html">ibase::CLoggerComponentBase</a> <a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#a2ef04c15176b03787f0f6c3bc66f7825">BaseClass</a>;
+<a name="l00037"></a><a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#aaa3ae536daa9c809e7339444c69bc281">00037</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classilog_1_1_t_logger_comp_wrap.html">ilog::CLoggerComponentBase</a> <a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#aaa3ae536daa9c809e7339444c69bc281">BaseClass</a>;
 <a name="l00038"></a><a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#a12198bff1d69b95db90f8783b59da116">00038</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimod_1_1_c_multi_model_bridge_base.html">imod::CMultiModelBridgeBase</a> <a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#a12198bff1d69b95db90f8783b59da116">BaseClass2</a>;
 <a name="l00039"></a>00039 
 <a name="l00040"></a><a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#a3e985c30cb550692ee98a936a2db3b15">00040</a>        <span class="keyword">enum</span> <a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#a3e985c30cb550692ee98a936a2db3b15">MessageId</a>
@@ -69,7 +69,7 @@
 <a name="l00047"></a>00047               I_REGISTER_INTERFACE(<a class="code" href="classiinsp_1_1_i_inspection_task.html" title="Representation of complete inspection task.">IInspectionTask</a>);
 <a name="l00048"></a>00048               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html">iser::ISerializable</a>);
 <a name="l00049"></a>00049               I_REGISTER_INTERFACE(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>);
-<a name="l00050"></a>00050               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_i_message_container.html">ibase::IMessageContainer</a>);
+<a name="l00050"></a>00050               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classilog_1_1_i_message_container.html">ilog::IMessageContainer</a>);
 <a name="l00051"></a>00051               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html">istd::IInformationProvider</a>);
 <a name="l00052"></a>00052               <a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#ad0a1c1648634d57c3044bf8a3e904f12">I_REGISTER_SUBELEMENT</a>(Parameters);
 <a name="l00053"></a>00053               <a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#a5a00131624c687877f065da2f9ee2f82">I_REGISTER_SUBELEMENT_INTERFACE_T</a>(Parameters, <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>, ExtractParameters);
@@ -103,7 +103,7 @@
 <a name="l00081"></a>00081        virtual <span class="keywordtype">void</span> <a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#a11f9adccf21efc75d4af08e84fced7ab" title="Force the supplier to initialize its work.">EnsureWorkInitialized</a>();
 <a name="l00082"></a>00082        virtual <span class="keywordtype">void</span> <a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#ab83d6a7be784858e191434b33fb4e648" title="Ensure that all objects are produced.">EnsureWorkFinished</a>();
 <a name="l00083"></a>00083        virtual <span class="keywordtype">void</span> <a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#a883d18ce626088c874c58b4eee7e47de" title="Remove all stored work results.">ClearWorkResults</a>();
-<a name="l00084"></a>00084        virtual const ibase::IMessageContainer* <a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#a1b67078b63e2605f4abe7389c0900292" title="Get messages outputted by this work.">GetWorkMessages</a>() const;
+<a name="l00084"></a>00084        virtual const ilog::IMessageContainer* <a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#a89a591f873abe98ce712bfaf78fd7749" title="Get messages outputted by this work.">GetWorkMessages</a>() const;
 <a name="l00085"></a>00085        virtual iprm::IParamsSet* <a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#ae17f09b830020cb2017119e8a57b262a" title="Get parameter set using by this supplier.">GetModelParametersSet</a>() const;
 <a name="l00086"></a>00086 
 <a name="l00087"></a>00087        <span class="comment">// reimplemented (istd::IInformationProvider)</span>
@@ -125,12 +125,12 @@
 <a name="l00103"></a>00103        virtual <span class="keywordtype">void</span> <a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#af7ff85eeaf73e1b17c3054716c241df0">AfterUpdate</a>(imod::IModel* modelPtr, <span class="keywordtype">int</span> updateFlags, istd::IPolymorphic* updateParamsPtr);
 <a name="l00104"></a>00104 
 <a name="l00105"></a>00105 private:
-<a name="l00106"></a>00106        class MessageContainer: virtual public ibase::IMessageContainer
+<a name="l00106"></a>00106        class MessageContainer: virtual public ilog::IMessageContainer
 <a name="l00107"></a>00107        {
 <a name="l00108"></a>00108        <span class="keyword">public</span>:
 <a name="l00109"></a>00109               MessageContainer(<a class="code" href="classiinsp_1_1_c_inspection_task_comp.html" title="Standard component implementation of interface iinsp::IInspectionTask.">CInspectionTaskComp</a>* parentPtr);
 <a name="l00110"></a>00110 
-<a name="l00111"></a>00111               <span class="comment">// reimplemented (ibase::IMessageContainer)</span>
+<a name="l00111"></a>00111               <span class="comment">// reimplemented (ilog::IMessageContainer)</span>
 <a name="l00112"></a>00112               <span class="keyword">virtual</span> <span class="keywordtype">int</span> GetWorstCategory() <span class="keyword">const</span>;
 <a name="l00113"></a>00113               <span class="keyword">virtual</span> Messages GetMessages() <span class="keyword">const</span>;
 <a name="l00114"></a>00114               <span class="keyword">virtual</span> <span class="keywordtype">void</span> ClearMessages();

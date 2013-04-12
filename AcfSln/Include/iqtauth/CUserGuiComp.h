@@ -26,7 +26,7 @@
 
 // ACF includes
 #include "imod/CMultiModelDispatcherBase.h"
-#include "ibase/TLoggerCompWrap.h"
+#include "ilog/TLoggerCompWrap.h"
 #include "iqtgui/TDesignerGuiObserverCompBase.h"
 
 // ACF-Solutions includes
@@ -43,7 +43,7 @@ namespace iqtauth
 
 
 class CUserGuiComp:
-			public ibase::TLoggerCompWrap<
+			public ilog::TLoggerCompWrap<
 						iqtgui::TDesignerGuiObserverCompBase<
 									Ui::CUserGuiComp, iauth::IUsersManager> >,
 			protected imod::CMultiModelDispatcherBase,
@@ -52,7 +52,7 @@ class CUserGuiComp:
 	Q_OBJECT
 
 public:
-	typedef ibase::TLoggerCompWrap<
+	typedef ilog::TLoggerCompWrap<
 				iqtgui::TDesignerGuiObserverCompBase<
 							Ui::CUserGuiComp, iauth::IUsersManager> > BaseClass;
 

@@ -510,14 +510,6 @@
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
-    <name>CConsoleLogComp.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_c_console_log_comp_8h</filename>
-    <includes id="_c_stream_log_comp_base_8h" name="CStreamLogCompBase.h" local="yes" imported="no">ibase/CStreamLogCompBase.h</includes>
-    <class kind="class">ibase::CConsoleLogComp</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
     <name>CDelegatedProgressManager.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_delegated_progress_manager_8h</filename>
@@ -532,37 +524,6 @@
     <filename>_c_instantiator_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <class kind="class">ibase::CInstantiatorComp</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CLogComp.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_c_log_comp_8h</filename>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_message_container_8h" name="IMessageContainer.h" local="yes" imported="no">ibase/IMessageContainer.h</includes>
-    <includes id="_c_message_container_8h" name="CMessageContainer.h" local="yes" imported="no">ibase/CMessageContainer.h</includes>
-    <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ibase/CMessage.h</includes>
-    <class kind="class">ibase::CLogComp</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CMessage.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_c_message_8h</filename>
-    <includes id="_i_information_provider_8h" name="IInformationProvider.h" local="yes" imported="no">istd/IInformationProvider.h</includes>
-    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
-    <class kind="class">ibase::CMessage</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CMessageContainer.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_c_message_container_8h</filename>
-    <includes id="_i_information_provider_8h" name="IInformationProvider.h" local="yes" imported="no">istd/IInformationProvider.h</includes>
-    <includes id="_i_message_container_8h" name="IMessageContainer.h" local="yes" imported="no">ibase/IMessageContainer.h</includes>
-    <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="yes" imported="no">ibase/IMessageConsumer.h</includes>
-    <includes id="_t_hierarchical_base_8h" name="THierarchicalBase.h" local="yes" imported="no">ibase/THierarchicalBase.h</includes>
-    <class kind="class">ibase::CMessageContainer</class>
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
@@ -645,15 +606,6 @@
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
-    <name>CStreamLogCompBase.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_c_stream_log_comp_base_8h</filename>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="yes" imported="no">ibase/IMessageConsumer.h</includes>
-    <class kind="class">ibase::CStreamLogCompBase</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
     <name>CUuidComp.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_uuid_comp_8h</filename>
@@ -722,43 +674,6 @@
     <includes id="_i_command_8h" name="ICommand.h" local="yes" imported="no">ibase/ICommand.h</includes>
     <class kind="class">ibase::ICommandsProvider</class>
     <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
-    <name>ILoggable.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_i_loggable_8h</filename>
-    <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="yes" imported="no">ibase/IMessageConsumer.h</includes>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <class kind="class">ibase::ILoggable</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IMessageConsumer.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_i_message_consumer_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <includes id="_i_information_provider_8h" name="IInformationProvider.h" local="yes" imported="no">istd/IInformationProvider.h</includes>
-    <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="yes" imported="no">istd/TSmartPtr.h</includes>
-    <class kind="class">ibase::IMessageConsumer</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IMessageContainer.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_i_message_container_8h</filename>
-    <includes id="_i_information_provider_8h" name="IInformationProvider.h" local="yes" imported="no">istd/IInformationProvider.h</includes>
-    <includes id="_t_i_hierarchical_8h" name="TIHierarchical.h" local="yes" imported="no">istd/TIHierarchical.h</includes>
-    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
-    <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="yes" imported="no">ibase/IMessageConsumer.h</includes>
-    <class kind="class">ibase::IMessageContainer</class>
-    <namespace>ibase</namespace>
-    <member kind="typedef">
-      <type>istd::TIHierarchical&lt; ibase::IMessageContainer &gt;</type>
-      <name>IHierarchicalMessageContainer</name>
-      <anchorfile>namespaceibase.html</anchorfile>
-      <anchor>a1cb6747206bcf8cab703d7f6c3f05282</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="file">
     <name>IObjectQueue.h</name>
@@ -841,51 +756,12 @@
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
-    <name>THierarchicalBase.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_t_hierarchical_base_8h</filename>
-    <includes id="ibase_8h" name="ibase.h" local="yes" imported="no">ibase/ibase.h</includes>
-    <includes id="_t_i_hierarchical_8h" name="TIHierarchical.h" local="yes" imported="no">istd/TIHierarchical.h</includes>
-    <includes id="_t_change_delegator_8h" name="TChangeDelegator.h" local="yes" imported="no">istd/TChangeDelegator.h</includes>
-    <class kind="class">ibase::THierarchicalBase</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TLoggerCompWrap.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_t_logger_comp_wrap_8h</filename>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_c_component_context_8h" name="CComponentContext.h" local="yes" imported="no">icomp/CComponentContext.h</includes>
-    <includes id="_i_logger_8h" name="ILogger.h" local="yes" imported="no">istd/ILogger.h</includes>
-    <includes id="_t_logger_wrap_8h" name="TLoggerWrap.h" local="yes" imported="no">ibase/TLoggerWrap.h</includes>
-    <class kind="class">ibase::TLoggerCompWrap</class>
-    <namespace>ibase</namespace>
-    <member kind="typedef">
-      <type>TLoggerCompWrap&lt; icomp::CComponentBase &gt;</type>
-      <name>CLoggerComponentBase</name>
-      <anchorfile>group___main.html</anchorfile>
-      <anchor>ga8ef64a77c28b704454f15c826587cc93</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>TLoggerWrap.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_t_logger_wrap_8h</filename>
-    <includes id="_i_logger_8h" name="ILogger.h" local="yes" imported="no">istd/ILogger.h</includes>
-    <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="yes" imported="no">ibase/IMessageConsumer.h</includes>
-    <includes id="_i_loggable_8h" name="ILoggable.h" local="yes" imported="no">ibase/ILoggable.h</includes>
-    <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ibase/CMessage.h</includes>
-    <class kind="class">ibase::TLoggerWrap</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
     <name>TModelObserverCompWrap.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_t_model_observer_comp_wrap_8h</filename>
     <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
     <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
     <class kind="class">ibase::TModelObserverCompWrap</class>
     <namespace>ibase</namespace>
   </compound>
@@ -927,7 +803,7 @@
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_t_version_info_base_8h</filename>
     <includes id="_i_version_info_8h" name="IVersionInfo.h" local="yes" imported="no">iser/IVersionInfo.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
     <includes id="_acf_version_8h" name="AcfVersion.h" local="yes" imported="no">istd/AcfVersion.h</includes>
     <class kind="class">ibase::TVersionInfoBase</class>
     <namespace>ibase</namespace>
@@ -939,10 +815,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TVersionInfoBase&lt; CLoggerComponentBase &gt;</type>
+      <type>TVersionInfoBase&lt; ilog::CLoggerComponentBase &gt;</type>
       <name>CVersionInfoLoggerCompBase</name>
       <anchorfile>namespaceibase.html</anchorfile>
-      <anchor>a862b03f2a1b9a706b8f8a61aa4d6d1db</anchor>
+      <anchor>ad827d7f8a09019f012f1848c23a2fb6e</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -2141,7 +2017,7 @@
     <name>CFileSerializerCompBase.h</name>
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_c_file_serializer_comp_base_8h</filename>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
     <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_c_file_type_info_comp_8h" name="CFileTypeInfoComp.h" local="yes" imported="no">ifile/CFileTypeInfoComp.h</includes>
     <class kind="class">ifile::CFileSerializerCompBase</class>
@@ -2171,7 +2047,7 @@
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_c_generated_file_name_param_comp_8h</filename>
     <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
     <includes id="_c_relative_file_name_param_comp_8h" name="CRelativeFileNameParamComp.h" local="yes" imported="no">ifile/CRelativeFileNameParamComp.h</includes>
     <class kind="class">ifile::CGeneratedFileNameParamComp</class>
     <namespace>ifile</namespace>
@@ -2194,16 +2070,6 @@
     <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <class kind="class">ifile::CSystemLocationComp</class>
-    <namespace>ifile</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CTextFileLogComp.h</name>
-    <path>C:/Temp/Acf/Include/ifile/</path>
-    <filename>_c_text_file_log_comp_8h</filename>
-    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
-    <includes id="_c_stream_log_comp_base_8h" name="CStreamLogCompBase.h" local="yes" imported="no">ibase/CStreamLogCompBase.h</includes>
-    <class kind="class">ifile::CTextFileLogComp</class>
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
@@ -2344,7 +2210,7 @@
     <filename>_c_bitmap_loader_comp_8h</filename>
     <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
     <includes id="iimg_8h" name="iimg.h" local="yes" imported="no">iimg/iimg.h</includes>
     <class kind="class">iimg::CBitmapLoaderComp</class>
     <namespace>iimg</namespace>
@@ -2463,6 +2329,147 @@
       <anchor>abc60b4a807e4c35802b08f5d9d693446</anchor>
       <arglist></arglist>
     </member>
+  </compound>
+  <compound kind="file">
+    <name>CConsoleLogComp.h</name>
+    <path>C:/Temp/Acf/Include/ilog/</path>
+    <filename>_c_console_log_comp_8h</filename>
+    <includes id="_c_stream_log_comp_base_8h" name="CStreamLogCompBase.h" local="yes" imported="no">ilog/CStreamLogCompBase.h</includes>
+    <class kind="class">ilog::CConsoleLogComp</class>
+    <namespace>ilog</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CLogComp.h</name>
+    <path>C:/Temp/Acf/Include/ilog/</path>
+    <filename>_c_log_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_message_container_8h" name="IMessageContainer.h" local="yes" imported="no">ilog/IMessageContainer.h</includes>
+    <includes id="_c_message_container_8h" name="CMessageContainer.h" local="yes" imported="no">ilog/CMessageContainer.h</includes>
+    <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ilog/CMessage.h</includes>
+    <class kind="class">ilog::CLogComp</class>
+    <namespace>ilog</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CMessage.h</name>
+    <path>C:/Temp/Acf/Include/ilog/</path>
+    <filename>_c_message_8h</filename>
+    <includes id="_i_information_provider_8h" name="IInformationProvider.h" local="yes" imported="no">istd/IInformationProvider.h</includes>
+    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <class kind="class">ilog::CMessage</class>
+    <namespace>ilog</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CMessageContainer.h</name>
+    <path>C:/Temp/Acf/Include/ilog/</path>
+    <filename>_c_message_container_8h</filename>
+    <includes id="_i_information_provider_8h" name="IInformationProvider.h" local="yes" imported="no">istd/IInformationProvider.h</includes>
+    <includes id="_t_hierarchical_base_8h" name="THierarchicalBase.h" local="yes" imported="no">istd/THierarchicalBase.h</includes>
+    <includes id="_i_message_container_8h" name="IMessageContainer.h" local="yes" imported="no">ilog/IMessageContainer.h</includes>
+    <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="yes" imported="no">ilog/IMessageConsumer.h</includes>
+    <class kind="class">ilog::CMessageContainer</class>
+    <namespace>ilog</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CStreamLogCompBase.h</name>
+    <path>C:/Temp/Acf/Include/ilog/</path>
+    <filename>_c_stream_log_comp_base_8h</filename>
+    <includes id="_t_message_delegator_comp_8h" name="TMessageDelegatorComp.h" local="yes" imported="no">ilog/TMessageDelegatorComp.h</includes>
+    <class kind="class">ilog::CStreamLogCompBase</class>
+    <namespace>ilog</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CTextFileLogComp.h</name>
+    <path>C:/Temp/Acf/Include/ilog/</path>
+    <filename>_c_text_file_log_comp_8h</filename>
+    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <includes id="_c_stream_log_comp_base_8h" name="CStreamLogCompBase.h" local="yes" imported="no">ilog/CStreamLogCompBase.h</includes>
+    <class kind="class">ilog::CTextFileLogComp</class>
+    <namespace>ilog</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ilog.h</name>
+    <path>C:/Temp/Acf/Include/ilog/</path>
+    <filename>ilog_8h</filename>
+    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
+    <includes id="iser_8h" name="iser.h" local="yes" imported="no">iser/iser.h</includes>
+    <includes id="icomp_8h" name="icomp.h" local="yes" imported="no">icomp/icomp.h</includes>
+    <namespace>ilog</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ILoggable.h</name>
+    <path>C:/Temp/Acf/Include/ilog/</path>
+    <filename>_i_loggable_8h</filename>
+    <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="yes" imported="no">ilog/IMessageConsumer.h</includes>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <class kind="class">ilog::ILoggable</class>
+    <namespace>ilog</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IMessageConsumer.h</name>
+    <path>C:/Temp/Acf/Include/ilog/</path>
+    <filename>_i_message_consumer_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="_i_information_provider_8h" name="IInformationProvider.h" local="yes" imported="no">istd/IInformationProvider.h</includes>
+    <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="yes" imported="no">istd/TSmartPtr.h</includes>
+    <class kind="class">ilog::IMessageConsumer</class>
+    <namespace>ilog</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IMessageContainer.h</name>
+    <path>C:/Temp/Acf/Include/ilog/</path>
+    <filename>_i_message_container_8h</filename>
+    <includes id="_i_information_provider_8h" name="IInformationProvider.h" local="yes" imported="no">istd/IInformationProvider.h</includes>
+    <includes id="_t_i_hierarchical_8h" name="TIHierarchical.h" local="yes" imported="no">istd/TIHierarchical.h</includes>
+    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="yes" imported="no">ilog/IMessageConsumer.h</includes>
+    <class kind="class">ilog::IMessageContainer</class>
+    <namespace>ilog</namespace>
+    <member kind="typedef">
+      <type>istd::TIHierarchical&lt; ilog::IMessageContainer &gt;</type>
+      <name>IHierarchicalMessageContainer</name>
+      <anchorfile>namespaceilog.html</anchorfile>
+      <anchor>a1fdf995bf4b4b21559fcab437deeff36</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>TLoggerCompWrap.h</name>
+    <path>C:/Temp/Acf/Include/ilog/</path>
+    <filename>_t_logger_comp_wrap_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_c_component_context_8h" name="CComponentContext.h" local="yes" imported="no">icomp/CComponentContext.h</includes>
+    <includes id="_i_logger_8h" name="ILogger.h" local="yes" imported="no">istd/ILogger.h</includes>
+    <includes id="_t_logger_wrap_8h" name="TLoggerWrap.h" local="yes" imported="no">ilog/TLoggerWrap.h</includes>
+    <class kind="class">ilog::TLoggerCompWrap</class>
+    <namespace>ilog</namespace>
+    <member kind="typedef">
+      <type>TLoggerCompWrap&lt; icomp::CComponentBase &gt;</type>
+      <name>CLoggerComponentBase</name>
+      <anchorfile>group___main.html</anchorfile>
+      <anchor>ga2ac8e0a207c9bb18de1ac6883d2cf09c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>TLoggerWrap.h</name>
+    <path>C:/Temp/Acf/Include/ilog/</path>
+    <filename>_t_logger_wrap_8h</filename>
+    <includes id="_i_logger_8h" name="ILogger.h" local="yes" imported="no">istd/ILogger.h</includes>
+    <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="yes" imported="no">ilog/IMessageConsumer.h</includes>
+    <includes id="_i_loggable_8h" name="ILoggable.h" local="yes" imported="no">ilog/ILoggable.h</includes>
+    <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ilog/CMessage.h</includes>
+    <class kind="class">ilog::TLoggerWrap</class>
+    <namespace>ilog</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TMessageDelegatorComp.h</name>
+    <path>C:/Temp/Acf/Include/ilog/</path>
+    <filename>_t_message_delegator_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="yes" imported="no">ilog/IMessageConsumer.h</includes>
+    <class kind="class">ilog::TMessageDelegatorComp</class>
+    <namespace>ilog</namespace>
   </compound>
   <compound kind="file">
     <name>CAkimaInterpolator.h</name>
@@ -2921,7 +2928,7 @@
     <includes id="_c_environment_manager_base_8h" name="CEnvironmentManagerBase.h" local="yes" imported="no">icomp/CEnvironmentManagerBase.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_c_composite_package_static_info_8h" name="CCompositePackageStaticInfo.h" local="yes" imported="no">icomp/CCompositePackageStaticInfo.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <class kind="class">ipackage::CPackagesLoaderComp</class>
     <class kind="class">ipackage::CPackagesLoaderComp::LogingRegistry</class>
@@ -2937,7 +2944,7 @@
     <includes id="_i_registries_manager_8h" name="IRegistriesManager.h" local="yes" imported="no">icomp/IRegistriesManager.h</includes>
     <includes id="_i_registry_loader_8h" name="IRegistryLoader.h" local="yes" imported="no">icomp/IRegistryLoader.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <class kind="class">ipackage::CRegistriesManagerComp</class>
     <namespace>ipackage</namespace>
@@ -2953,7 +2960,7 @@
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
     <class kind="class">ipackage::CRegistryCodeSaverComp</class>
     <namespace>ipackage</namespace>
   </compound>
@@ -3232,7 +3239,7 @@
     <filename>_c_clipboard_serializer_comp_8h</filename>
     <includes id="_i_version_info_8h" name="IVersionInfo.h" local="yes" imported="no">iser/IVersionInfo.h</includes>
     <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
     <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
     <class kind="class">iqt::CClipboardSerializerComp</class>
     <namespace>iqt</namespace>
@@ -3292,7 +3299,7 @@
     <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
     <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
     <class kind="class">iqt::CSettingsSerializerComp</class>
     <namespace>iqt</namespace>
@@ -3324,7 +3331,7 @@
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
     <includes id="_i_translation_manager_8h" name="ITranslationManager.h" local="yes" imported="no">iqt/ITranslationManager.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
     <class kind="class">iqt::CTranslationManagerComp</class>
     <namespace>iqt</namespace>
   </compound>
@@ -3955,7 +3962,7 @@
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_file_dialog_loader_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ibase/TLoggerCompWrap.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
     <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_file_persistence_info_8h" name="IFilePersistenceInfo.h" local="yes" imported="no">ifile/IFilePersistenceInfo.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
@@ -4039,10 +4046,10 @@
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_hierarchical_command_8h</filename>
     <includes id="_t_opt_pointer_vector_8h" name="TOptPointerVector.h" local="yes" imported="no">istd/TOptPointerVector.h</includes>
+    <includes id="_t_hierarchical_base_8h" name="THierarchicalBase.h" local="yes" imported="no">istd/THierarchicalBase.h</includes>
     <includes id="_c_name_param_8h" name="CNameParam.h" local="yes" imported="no">iprm/CNameParam.h</includes>
     <includes id="_c_enableable_param_8h" name="CEnableableParam.h" local="yes" imported="no">iprm/CEnableableParam.h</includes>
     <includes id="_i_command_8h" name="ICommand.h" local="yes" imported="no">ibase/ICommand.h</includes>
-    <includes id="_t_hierarchical_base_8h" name="THierarchicalBase.h" local="yes" imported="no">ibase/THierarchicalBase.h</includes>
     <includes id="iqtgui_8h" name="iqtgui.h" local="yes" imported="no">iqtgui/iqtgui.h</includes>
     <class kind="class">iqtgui::CHierarchicalCommand</class>
     <namespace>iqtgui</namespace>
@@ -4087,8 +4094,8 @@
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_log_gui_comp_8h</filename>
     <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
-    <includes id="_c_message_container_8h" name="CMessageContainer.h" local="yes" imported="no">ibase/CMessageContainer.h</includes>
-    <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ibase/CMessage.h</includes>
+    <includes id="_c_message_container_8h" name="CMessageContainer.h" local="yes" imported="no">ilog/CMessageContainer.h</includes>
+    <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ilog/CMessage.h</includes>
     <includes id="_i_visual_status_provider_8h" name="IVisualStatusProvider.h" local="yes" imported="no">iqtgui/IVisualStatusProvider.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <class kind="class">iqtgui::CLogGuiComp</class>
@@ -5152,6 +5159,16 @@
     <namespace>istd</namespace>
   </compound>
   <compound kind="file">
+    <name>THierarchicalBase.h</name>
+    <path>C:/Temp/Acf/Include/istd/</path>
+    <filename>_t_hierarchical_base_8h</filename>
+    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
+    <includes id="_t_i_hierarchical_8h" name="TIHierarchical.h" local="yes" imported="no">istd/TIHierarchical.h</includes>
+    <includes id="_t_change_delegator_8h" name="TChangeDelegator.h" local="yes" imported="no">istd/TChangeDelegator.h</includes>
+    <class kind="class">istd::THierarchicalBase</class>
+    <namespace>istd</namespace>
+  </compound>
+  <compound kind="file">
     <name>TIFactory.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_t_i_factory_8h</filename>
@@ -6037,10 +6054,11 @@
     <name>Helpers</name>
     <title>Set of helper classes.</title>
     <filename>group___helpers.html</filename>
-    <class kind="class">ibase::TLoggerCompWrap</class>
-    <class kind="class">ibase::TLoggerWrap</class>
     <class kind="class">icomp::TMakeComponentWrap</class>
     <class kind="class">icomp::TModelCompWrap</class>
+    <class kind="class">ilog::TLoggerCompWrap</class>
+    <class kind="class">ilog::TLoggerWrap</class>
+    <class kind="class">ilog::TMessageDelegatorComp</class>
     <class kind="class">imod::TModelWrap</class>
     <class kind="class">iprm::CEnableableParam</class>
     <class kind="class">iprm::CNameParam</class>
@@ -6062,8 +6080,8 @@
     <class kind="class">ibase::CSize</class>
     <class kind="class">ibase::IApplication</class>
     <class kind="class">ibase::IApplicationInfo</class>
-    <class kind="class">ibase::IMessageConsumer</class>
     <class kind="class">icomp::CComponentBase</class>
+    <class kind="class">ilog::IMessageConsumer</class>
     <class kind="class">iser::CPrimitiveTypesSerializer</class>
     <class kind="class">iser::IArchive</class>
     <class kind="class">iser::ISerializable</class>
@@ -6083,7 +6101,7 @@
       <type>TLoggerCompWrap&lt; icomp::CComponentBase &gt;</type>
       <name>CLoggerComponentBase</name>
       <anchorfile>group___main.html</anchorfile>
-      <anchor>ga8ef64a77c28b704454f15c826587cc93</anchor>
+      <anchor>ga2ac8e0a207c9bb18de1ac6883d2cf09c</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" static="yes">
@@ -11521,12 +11539,8 @@
     <name>ibase</name>
     <filename>namespaceibase.html</filename>
     <class kind="class">ibase::CApplicationInfoComp</class>
-    <class kind="class">ibase::CConsoleLogComp</class>
     <class kind="class">ibase::CDelegatedProgressManager</class>
     <class kind="class">ibase::CInstantiatorComp</class>
-    <class kind="class">ibase::CLogComp</class>
-    <class kind="class">ibase::CMessage</class>
-    <class kind="class">ibase::CMessageContainer</class>
     <class kind="class">ibase::CModelBinderComp</class>
     <class kind="class">ibase::CModelProxyComp</class>
     <class kind="class">ibase::CMultiObserverBinderComp</class>
@@ -11535,16 +11549,12 @@
     <class kind="class">ibase::CQtVersionInfoComp</class>
     <class kind="class">ibase::CSingletonApplicationComp</class>
     <class kind="class">ibase::CSize</class>
-    <class kind="class">ibase::CStreamLogCompBase</class>
     <class kind="class">ibase::CUuidComp</class>
     <class kind="class">ibase::CVersionInfoComp</class>
     <class kind="class">ibase::IApplication</class>
     <class kind="class">ibase::IApplicationInfo</class>
     <class kind="class">ibase::ICommand</class>
     <class kind="class">ibase::ICommandsProvider</class>
-    <class kind="class">ibase::ILoggable</class>
-    <class kind="class">ibase::IMessageConsumer</class>
-    <class kind="class">ibase::IMessageContainer</class>
     <class kind="class">ibase::IObjectQueue</class>
     <class kind="class">ibase::IObjectSnap</class>
     <class kind="class">ibase::IProgressManager</class>
@@ -11554,9 +11564,6 @@
     <class kind="class">ibase::TComposedFactoryComp</class>
     <class kind="class">ibase::TContainer</class>
     <class kind="class">ibase::TFactorisableContainer</class>
-    <class kind="class">ibase::THierarchicalBase</class>
-    <class kind="class">ibase::TLoggerCompWrap</class>
-    <class kind="class">ibase::TLoggerWrap</class>
     <class kind="class">ibase::TModelObserverCompWrap</class>
     <class kind="class">ibase::TMsbWord</class>
     <class kind="class">ibase::TSerializableContainer</class>
@@ -11566,20 +11573,6 @@
       <name>IHierarchicalCommand</name>
       <anchorfile>namespaceibase.html</anchorfile>
       <anchor>a662cd115f05118f6247d8bb781cdd7fd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>istd::TIHierarchical&lt; ibase::IMessageContainer &gt;</type>
-      <name>IHierarchicalMessageContainer</name>
-      <anchorfile>namespaceibase.html</anchorfile>
-      <anchor>a1cb6747206bcf8cab703d7f6c3f05282</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TLoggerCompWrap&lt; icomp::CComponentBase &gt;</type>
-      <name>CLoggerComponentBase</name>
-      <anchorfile>group___main.html</anchorfile>
-      <anchor>ga8ef64a77c28b704454f15c826587cc93</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -11604,10 +11597,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TVersionInfoBase&lt; CLoggerComponentBase &gt;</type>
+      <type>TVersionInfoBase&lt; ilog::CLoggerComponentBase &gt;</type>
       <name>CVersionInfoLoggerCompBase</name>
       <anchorfile>namespaceibase.html</anchorfile>
-      <anchor>a862b03f2a1b9a706b8f8a61aa4d6d1db</anchor>
+      <anchor>ad827d7f8a09019f012f1848c23a2fb6e</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -11672,32 +11665,6 @@
       <anchorfile>classibase_1_1_c_application_info_comp.html</anchorfile>
       <anchor>a94128d9c2b6cd54d8107fc7e6a23b805</anchor>
       <arglist>(int versionId, quint32 versionNumber) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::CConsoleLogComp</name>
-    <filename>classibase_1_1_c_console_log_comp.html</filename>
-    <base>ibase::CStreamLogCompBase</base>
-    <member kind="typedef">
-      <type>CStreamLogCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_c_console_log_comp.html</anchorfile>
-      <anchor>a0693140239244ee7e99085b6780f1b4a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>WriteText</name>
-      <anchorfile>classibase_1_1_c_console_log_comp.html</anchorfile>
-      <anchor>a728d1a7464d8fd8054165bb90c13cab0</anchor>
-      <arglist>(const QString &amp;text)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>NewLine</name>
-      <anchorfile>classibase_1_1_c_console_log_comp.html</anchorfile>
-      <anchor>a9c4bf1c48aa62258aa92f1294681d40f</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -11818,283 +11785,6 @@
       <anchorfile>classibase_1_1_c_instantiator_comp.html</anchorfile>
       <anchor>a06d0a3d99a6b3d1edf057fda6216e46a</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::CLogComp</name>
-    <filename>classibase_1_1_c_log_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>ibase::CMessageContainer</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_c_log_comp.html</anchorfile>
-      <anchor>a6a16d07d54fcbd9ad7f10dfbda2550c9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ibase::CMessageContainer</type>
-      <name>BaseClass2</name>
-      <anchorfile>classibase_1_1_c_log_comp.html</anchorfile>
-      <anchor>af3497bda2968a9ba9952b1083a9135fa</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classibase_1_1_c_log_comp.html</anchorfile>
-      <anchor>af1aa4862efe7d80e5af4da651437312a</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::CMessage</name>
-    <filename>classibase_1_1_c_message.html</filename>
-    <base virtualness="virtual">istd::IInformationProvider</base>
-    <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="function">
-      <type></type>
-      <name>CMessage</name>
-      <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>aafe338d5d93b99a4d95e5359bf4a237c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CMessage</name>
-      <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>a6048c1e17ab37f5030c16f79dab9e692</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;text, const QString &amp;source, int flags=0, const QDateTime *timeStampPtr=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetCategory</name>
-      <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>ad2c8d0d032bd845dbb140cea70e3309b</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetText</name>
-      <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>a94d850108fd32ace9f0571fdfa905a6d</anchor>
-      <arglist>(const QString &amp;text)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetSource</name>
-      <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>a107d513e8c5fd4efe193f2ef5c4f86e1</anchor>
-      <arglist>(const QString &amp;source)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QDateTime</type>
-      <name>GetInformationTimeStamp</name>
-      <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>abac5eddd946d801440f959aeb0e5bfa9</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual InformationCategory</type>
-      <name>GetInformationCategory</name>
-      <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>a93daa6d9b157408aa8fdfb640dee5aae</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetInformationId</name>
-      <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>a51558dcbf12955d02fb22c4ff7d9591c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetInformationDescription</name>
-      <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>a98d8823175baad2e2eee6202a4829bf7</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetInformationSource</name>
-      <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>abf52593cb762a131246066078619f1d3</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetInformationFlags</name>
-      <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>a5d5e0d8843a8ca9fbc8ded421df1c164</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>a2cfd9251b94e5f9a6fd5b4bfd281bb19</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CopyFrom</name>
-      <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>a1da2f3a27d05f88c436eb702e37befc9</anchor>
-      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
-      <name>CloneMe</name>
-      <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>a2f74b5dd4403808400883b24fa60b164</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>istd::IInformationProvider::InformationCategory</type>
-      <name>m_category</name>
-      <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>a873e5360d1660b9ef75032b51798f5d3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>int</type>
-      <name>m_id</name>
-      <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>a552ee2f7fed1f70c6040715d545ecdea</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QString</type>
-      <name>m_text</name>
-      <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>a75fe3a47012fc321a0b7e772373dc858</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QString</type>
-      <name>m_source</name>
-      <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>a62a05af22aed3111bbd39f731947f034</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>int</type>
-      <name>m_flags</name>
-      <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>a8a6a2283a1465b61fd49d0c8eab28d6f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QDateTime</type>
-      <name>m_timeStamp</name>
-      <anchorfile>classibase_1_1_c_message.html</anchorfile>
-      <anchor>a296bd9e63e88fa79f2f691319de5f84e</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::CMessageContainer</name>
-    <filename>classibase_1_1_c_message_container.html</filename>
-    <base>THierarchicalBase&lt; IHierarchicalMessageContainer &gt;</base>
-    <base virtualness="virtual">ibase::IMessageConsumer</base>
-    <member kind="function">
-      <type></type>
-      <name>CMessageContainer</name>
-      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
-      <anchor>a658b006be1bea0c2311ba3975f281542</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CMessageContainer</name>
-      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
-      <anchor>aa731eb26127757684ed44e12fa58c3dd</anchor>
-      <arglist>(const CMessageContainer &amp;container)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AddChildContainer</name>
-      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
-      <anchor>aa331e77e82c301148a24880866fca9d7</anchor>
-      <arglist>(IHierarchicalMessageContainer *childContainerPtr)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetSlaveConsumer</name>
-      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
-      <anchor>ac96787fcd2d4df915eab139c29164be7</anchor>
-      <arglist>(ibase::IMessageConsumer *consumerPtr)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetMaxMessageCount</name>
-      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
-      <anchor>afddbd67f0c5a6d30ce8bf1aa62eabc20</anchor>
-      <arglist>(int maxMessageCount=-1)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
-      <anchor>a12a98d2ca094f56627dbf710ee400f9c</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetWorstCategory</name>
-      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
-      <anchor>ae34fbf54ba367e9f9abecef200e724ae</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual Messages</type>
-      <name>GetMessages</name>
-      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
-      <anchor>ac065525da072c3f81abf399f0c1e296a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ClearMessages</name>
-      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
-      <anchor>a4ba0c59b1a99bfd7ca60e7b1ade8388c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsMessageSupported</name>
-      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
-      <anchor>aa472c99668e61bd4ce172e307ad79245</anchor>
-      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AddMessage</name>
-      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
-      <anchor>aef7e1cdf35dc9f443eafc1ac650ad09f</anchor>
-      <arglist>(const IMessageConsumer::MessagePtr &amp;messagePtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetChildsCount</name>
-      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
-      <anchor>abb7d4257a9425546d21f23e39a3741dd</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual IHierarchicalMessageContainer *</type>
-      <name>GetChild</name>
-      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
-      <anchor>aacb0d3680b600054a53c7f2ebc469993</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CopyFrom</name>
-      <anchorfile>classibase_1_1_c_message_container.html</anchorfile>
-      <anchor>a4b925226bd0c30420ad0208b48249fde</anchor>
-      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12633,75 +12323,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>ibase::CStreamLogCompBase</name>
-    <filename>classibase_1_1_c_stream_log_comp_base.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">ibase::IMessageConsumer</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>a96987774200458f1f888ec1592a697dd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CStreamLogCompBase</name>
-      <anchorfile>classibase_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>a3e4c7a761dfbfac09c8ea42d792ed756</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsMessageSupported</name>
-      <anchorfile>classibase_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>a9e5fe09bc8cd289b4595b3b44f8aa256</anchor>
-      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AddMessage</name>
-      <anchorfile>classibase_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>a919237d2ce02c9d1ff77635d74f34880</anchor>
-      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>WriteMessageToStream</name>
-      <anchorfile>classibase_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>a6f6e02a49a58a0cd850e956230302e09</anchor>
-      <arglist>(const istd::IInformationProvider &amp;message)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GenerateMessageText</name>
-      <anchorfile>classibase_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>a18ab4ad999df860f51bd2e7019e459f3</anchor>
-      <arglist>(const istd::IInformationProvider &amp;message) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>WriteText</name>
-      <anchorfile>classibase_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>ab8abbb08ee84cff30316189ff03b8ddf</anchor>
-      <arglist>(const QString &amp;text)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>NewLine</name>
-      <anchorfile>classibase_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>a23fabb0113f9e6990eca7bd3967b2a5f</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classibase_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>acea6b8ea476102049991780341479b56</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>ibase::CUuidComp</name>
     <filename>classibase_1_1_c_uuid_comp.html</filename>
     <base>icomp::CComponentBase</base>
@@ -13009,122 +12630,6 @@
       <anchorfile>classibase_1_1_i_commands_provider.html</anchorfile>
       <anchor>a970c1822d91bc215e53b0e972f5b294d</anchor>
       <arglist>() const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::ILoggable</name>
-    <filename>classibase_1_1_i_loggable.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetLogPtr</name>
-      <anchorfile>classibase_1_1_i_loggable.html</anchorfile>
-      <anchor>a057a0bba2008982bd14ab84e02716576</anchor>
-      <arglist>(IMessageConsumer *logPtr)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual IMessageConsumer *</type>
-      <name>GetLogPtr</name>
-      <anchorfile>classibase_1_1_i_loggable.html</anchorfile>
-      <anchor>a9c8169f96643b91a14e803b8c2310abb</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetTracingEnabled</name>
-      <anchorfile>classibase_1_1_i_loggable.html</anchorfile>
-      <anchor>a69d23a922c84cc79a058be79c593d97b</anchor>
-      <arglist>(bool trace)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsTracingEnabled</name>
-      <anchorfile>classibase_1_1_i_loggable.html</anchorfile>
-      <anchor>a608e8afc44b145e13e34cf0d10f6beab</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::IMessageConsumer</name>
-    <filename>classibase_1_1_i_message_consumer.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="typedef">
-      <type>istd::TSmartPtr&lt; const istd::IInformationProvider &gt;</type>
-      <name>MessagePtr</name>
-      <anchorfile>classibase_1_1_i_message_consumer.html</anchorfile>
-      <anchor>ae311a8dd68f996f8aaaf8ed9fdfa4df7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsMessageSupported</name>
-      <anchorfile>classibase_1_1_i_message_consumer.html</anchorfile>
-      <anchor>ad60ff234c5745a0b3029f5f326106ed5</anchor>
-      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>AddMessage</name>
-      <anchorfile>classibase_1_1_i_message_consumer.html</anchorfile>
-      <anchor>a00ab2d3aa60b88bf13a8c4ac687273cb</anchor>
-      <arglist>(const MessagePtr &amp;messagePtr)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::IMessageContainer</name>
-    <filename>classibase_1_1_i_message_container.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="enumeration">
-      <name>ChangeFlags</name>
-      <anchorfile>classibase_1_1_i_message_container.html</anchorfile>
-      <anchor>af2755abeca53284af38ccf73ba57d8a9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_MESSAGE_ADDED</name>
-      <anchorfile>classibase_1_1_i_message_container.html</anchorfile>
-      <anchor>af2755abeca53284af38ccf73ba57d8a9a6f90281c66532a5a0c83da226e3f470e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_MESSAGE_REMOVED</name>
-      <anchorfile>classibase_1_1_i_message_container.html</anchorfile>
-      <anchor>af2755abeca53284af38ccf73ba57d8a9af6c8498da8eec2fafe45d980c7f5a2cf</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_RESET</name>
-      <anchorfile>classibase_1_1_i_message_container.html</anchorfile>
-      <anchor>af2755abeca53284af38ccf73ba57d8a9a631695e22f718627f841bf47167c4627</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>QVector&lt; ibase::IMessageConsumer::MessagePtr &gt;</type>
-      <name>Messages</name>
-      <anchorfile>classibase_1_1_i_message_container.html</anchorfile>
-      <anchor>a198cd938222b714f782b3e51cbd02efc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetWorstCategory</name>
-      <anchorfile>classibase_1_1_i_message_container.html</anchorfile>
-      <anchor>adaec1546c8caaeac32971c96ea73e2eb</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual Messages</type>
-      <name>GetMessages</name>
-      <anchorfile>classibase_1_1_i_message_container.html</anchorfile>
-      <anchor>a0c3f5911eeb22ad94eaa97fe64fae100</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>ClearMessages</name>
-      <anchorfile>classibase_1_1_i_message_container.html</anchorfile>
-      <anchor>a0d9d1d0a86950ceb646c3e25bad7502c</anchor>
-      <arglist>()=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13608,195 +13113,6 @@
       <anchorfile>classibase_1_1_t_factorisable_container.html</anchorfile>
       <anchor>adb49f2f3eb3993c83073f9c421600793</anchor>
       <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::THierarchicalBase</name>
-    <filename>classibase_1_1_t_hierarchical_base.html</filename>
-    <templarg>Base</templarg>
-    <templarg>Interface</templarg>
-    <base>istd::TChangeDelegator</base>
-    <member kind="typedef">
-      <type>istd::TChangeDelegator&lt; Base &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_t_hierarchical_base.html</anchorfile>
-      <anchor>a42e03941ea05bc756eab49d96bf658e4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>THierarchicalBase</name>
-      <anchorfile>classibase_1_1_t_hierarchical_base.html</anchorfile>
-      <anchor>aab41e33eaf92f901b8ff1742ab3bdc74</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetParentPtr</name>
-      <anchorfile>classibase_1_1_t_hierarchical_base.html</anchorfile>
-      <anchor>a9f6288e0cbb7491e16a210d1b07f60b7</anchor>
-      <arglist>(Interface *parentPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetHierarchicalFlags</name>
-      <anchorfile>classibase_1_1_t_hierarchical_base.html</anchorfile>
-      <anchor>a7764bfd78db92d3b351a5eb62b445079</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetChildsCount</name>
-      <anchorfile>classibase_1_1_t_hierarchical_base.html</anchorfile>
-      <anchor>a950be4ab87167bbf72fe856a40ab52ce</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual Interface *</type>
-      <name>GetChild</name>
-      <anchorfile>classibase_1_1_t_hierarchical_base.html</anchorfile>
-      <anchor>a04614eb6d4ddcb795c12e10b198bc979</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual Interface *</type>
-      <name>GetParent</name>
-      <anchorfile>classibase_1_1_t_hierarchical_base.html</anchorfile>
-      <anchor>a30bd05b43795c59dcb4f741a07330530</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>Interface *</type>
-      <name>m_parentPtr</name>
-      <anchorfile>classibase_1_1_t_hierarchical_base.html</anchorfile>
-      <anchor>a082c1f5b24e590e4b3c2743e59fd1509</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::TLoggerCompWrap</name>
-    <filename>classibase_1_1_t_logger_comp_wrap.html</filename>
-    <templarg>Base</templarg>
-    <base>ibase::TLoggerWrap</base>
-    <member kind="typedef">
-      <type>ibase::TLoggerWrap&lt; Base &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_t_logger_comp_wrap.html</anchorfile>
-      <anchor>a5ca6564c805194cba50c4aeab30abfec</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>IsVerboseEnabled</name>
-      <anchorfile>classibase_1_1_t_logger_comp_wrap.html</anchorfile>
-      <anchor>a96af7047c6398cedff347122412de28d</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>SendVerboseMessage</name>
-      <anchorfile>classibase_1_1_t_logger_comp_wrap.html</anchorfile>
-      <anchor>a9c492066b26162c18d0195d329d45e6f</anchor>
-      <arglist>(const QString &amp;message, const QString &amp;messageSource=QString()) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>DecorateMessage</name>
-      <anchorfile>classibase_1_1_t_logger_comp_wrap.html</anchorfile>
-      <anchor>aa16a2ae14c9d8978160bd588e30bf114</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classibase_1_1_t_logger_comp_wrap.html</anchorfile>
-      <anchor>a58f942fa48f8f32af7886a036306b04e</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::TLoggerWrap</name>
-    <filename>classibase_1_1_t_logger_wrap.html</filename>
-    <templarg>Base</templarg>
-    <base>Base</base>
-    <base virtualness="virtual">ibase::ILoggable</base>
-    <base virtualness="virtual">istd::ILogger</base>
-    <member kind="function">
-      <type></type>
-      <name>TLoggerWrap</name>
-      <anchorfile>classibase_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>aa209df371e25c11fa421aeb34cb221a4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetLogPtr</name>
-      <anchorfile>classibase_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a6f5c8250b60c1899ebdbbc5d43334ae0</anchor>
-      <arglist>(ibase::IMessageConsumer *logPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ibase::IMessageConsumer *</type>
-      <name>GetLogPtr</name>
-      <anchorfile>classibase_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>ac66e43fec85060af81a884d4d98c1cc6</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetTracingEnabled</name>
-      <anchorfile>classibase_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>aa8d73ed0eb72efc40c0c271c13613b97</anchor>
-      <arglist>(bool trace)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsTracingEnabled</name>
-      <anchorfile>classibase_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a9d3b09b6f3bb953d6811ecf9f8a98f5f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendInfoMessage</name>
-      <anchorfile>classibase_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>ab956c62c01c4bb63500ae2c0b93fbd42</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendWarningMessage</name>
-      <anchorfile>classibase_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>aa4afeae4985faa72eacf78b5d177b9fe</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendErrorMessage</name>
-      <anchorfile>classibase_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>adf53e77edcb828d2e35db7ce2fde3781</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendCriticalMessage</name>
-      <anchorfile>classibase_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>addd6b9bd21a7c28c928ddc269d7e4432</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsLogConsumed</name>
-      <anchorfile>classibase_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a7a17ab335b721fe778a2803a3511feb9</anchor>
-      <arglist>(const istd::IInformationProvider::InformationCategory *categoryPtr=NULL, const int *flagsPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SendLogMessage</name>
-      <anchorfile>classibase_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a42ada63e4c0cc1f6a07e1340ccd208f0</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -21400,7 +20716,6 @@
     <class kind="class">ifile::CGeneratedFileNameParamComp</class>
     <class kind="class">ifile::CRelativeFileNameParamComp</class>
     <class kind="class">ifile::CSystemLocationComp</class>
-    <class kind="class">ifile::CTextFileLogComp</class>
     <class kind="class">ifile::CXmlFileReadArchive</class>
     <class kind="class">ifile::CXmlFileWriteArchive</class>
     <class kind="class">ifile::IFileArchiveInfo</class>
@@ -21721,10 +21036,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::TLoggerCompWrap&lt; CFileTypeInfoComp &gt;</type>
+      <type>ilog::TLoggerCompWrap&lt; CFileTypeInfoComp &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classifile_1_1_c_file_serializer_comp_base.html</anchorfile>
-      <anchor>a3001a046bd85f6e6eecdc631a7cfb693</anchor>
+      <anchor>af88a1e63cdcd0c0de498cd993590fd0c</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -21901,10 +21216,10 @@
     <filename>classifile_1_1_c_generated_file_name_param_comp.html</filename>
     <base>TLoggerCompWrap&lt; ifile::CRelativeFileNameParamComp &gt;</base>
     <member kind="typedef">
-      <type>ibase::TLoggerCompWrap&lt; ifile::CRelativeFileNameParamComp &gt;</type>
+      <type>ilog::TLoggerCompWrap&lt; ifile::CRelativeFileNameParamComp &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classifile_1_1_c_generated_file_name_param_comp.html</anchorfile>
-      <anchor>aa73ed12d6405043d1a690f962796ad00</anchor>
+      <anchor>aac49f37c65478e4b3059457cf7659607</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -22029,60 +21344,6 @@
       <name>OnComponentCreated</name>
       <anchorfile>classifile_1_1_c_system_location_comp.html</anchorfile>
       <anchor>a2a4cf007ae148c02c5fef67ffe718cfd</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ifile::CTextFileLogComp</name>
-    <filename>classifile_1_1_c_text_file_log_comp.html</filename>
-    <base>ibase::CStreamLogCompBase</base>
-    <member kind="typedef">
-      <type>CStreamLogCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classifile_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>a26732102eeb6d4a8df8a52444fe4244f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classifile_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>aacec8e34b4d7e6b85af6b56465a5c4bd</anchor>
-      <arglist>(m_fileNameModelCompPtr, m_fileNameCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CTextFileLogComp</name>
-      <anchorfile>classifile_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>ad996407e1858701c411d5964cb411ba0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>WriteText</name>
-      <anchorfile>classifile_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>acec692d30798c19f23ab052fea84459d</anchor>
-      <arglist>(const QString &amp;text)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>NewLine</name>
-      <anchorfile>classifile_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>a791b47b244f06112dea00b6f3f104ff2</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classifile_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>a870ad0291d422c489b5055829b2ce677</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classifile_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>ac26ec2b439ee3b2eafb058aba1ea9462</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -22887,7 +22148,7 @@
   <compound kind="class">
     <name>iimg::CBitmapLoaderComp</name>
     <filename>classiimg_1_1_c_bitmap_loader_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifile::IFilePersistence</base>
     <member kind="enumeration">
       <name>MessageId</name>
@@ -22914,10 +22175,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiimg_1_1_c_bitmap_loader_comp.html</anchorfile>
-      <anchor>a91aadb8ffb8cb99c08d0b7cab70f77c7</anchor>
+      <anchor>adc08d5bd17a5d9c079330aaae1ac9523</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -23716,6 +22977,730 @@
       <anchorfile>classiimg_1_1_t_pixel_conversion.html</anchorfile>
       <anchor>a4e6c6d83682b5927fc92f5e7bcb2cb54</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>ilog</name>
+    <filename>namespaceilog.html</filename>
+    <class kind="class">ilog::CConsoleLogComp</class>
+    <class kind="class">ilog::CLogComp</class>
+    <class kind="class">ilog::CMessage</class>
+    <class kind="class">ilog::CMessageContainer</class>
+    <class kind="class">ilog::CStreamLogCompBase</class>
+    <class kind="class">ilog::CTextFileLogComp</class>
+    <class kind="class">ilog::ILoggable</class>
+    <class kind="class">ilog::IMessageConsumer</class>
+    <class kind="class">ilog::IMessageContainer</class>
+    <class kind="class">ilog::TLoggerCompWrap</class>
+    <class kind="class">ilog::TLoggerWrap</class>
+    <class kind="class">ilog::TMessageDelegatorComp</class>
+    <member kind="typedef">
+      <type>istd::TIHierarchical&lt; ilog::IMessageContainer &gt;</type>
+      <name>IHierarchicalMessageContainer</name>
+      <anchorfile>namespaceilog.html</anchorfile>
+      <anchor>a1fdf995bf4b4b21559fcab437deeff36</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TLoggerCompWrap&lt; icomp::CComponentBase &gt;</type>
+      <name>CLoggerComponentBase</name>
+      <anchorfile>group___main.html</anchorfile>
+      <anchor>ga2ac8e0a207c9bb18de1ac6883d2cf09c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilog::CConsoleLogComp</name>
+    <filename>classilog_1_1_c_console_log_comp.html</filename>
+    <base>ilog::CStreamLogCompBase</base>
+    <member kind="typedef">
+      <type>CStreamLogCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classilog_1_1_c_console_log_comp.html</anchorfile>
+      <anchor>af39ac15b4b11a22fbc2cfcb1694f8594</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>WriteText</name>
+      <anchorfile>classilog_1_1_c_console_log_comp.html</anchorfile>
+      <anchor>a099bf4330c4426b79f9c71d55ccad4a4</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>NewLine</name>
+      <anchorfile>classilog_1_1_c_console_log_comp.html</anchorfile>
+      <anchor>a05329c1039e219c48c925afdcb50af3f</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilog::CLogComp</name>
+    <filename>classilog_1_1_c_log_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>ilog::CMessageContainer</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classilog_1_1_c_log_comp.html</anchorfile>
+      <anchor>af41c4f90db2c21319911e2ce53a73393</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::CMessageContainer</type>
+      <name>BaseClass2</name>
+      <anchorfile>classilog_1_1_c_log_comp.html</anchorfile>
+      <anchor>ae611fbd9ecc49f8397da7871b6e4a162</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classilog_1_1_c_log_comp.html</anchorfile>
+      <anchor>a462962d9a5fe98556ae63c6fe5ab0f8c</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilog::CMessage</name>
+    <filename>classilog_1_1_c_message.html</filename>
+    <base virtualness="virtual">istd::IInformationProvider</base>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="function">
+      <type></type>
+      <name>CMessage</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a0fff68ff01b65a0b770d827b49a47c69</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMessage</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>ab6a037921a5ad26c9c3b48b1f65c6ab2</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;text, const QString &amp;source, int flags=0, const QDateTime *timeStampPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetCategory</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a169defc09e3fa0e409eb8650c43cbf19</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetText</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>aa282f7c18578a82fcac617d13fcfa220</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetSource</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>aa1eb7378e6ba58dc833dfa75d1e2ee65</anchor>
+      <arglist>(const QString &amp;source)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QDateTime</type>
+      <name>GetInformationTimeStamp</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a2babd989f89e26cfe3f53f55d014d7ad</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual InformationCategory</type>
+      <name>GetInformationCategory</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a84640ff7ea2b0e773f94903981e006b4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetInformationId</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a62f4fc6d02cd85f55dc47712bcfd3a9e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetInformationDescription</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>aff1883a317b933c35da72ddc6e936c84</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetInformationSource</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a1101a384ad237ce3072d793927b697ef</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetInformationFlags</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a09acb35d4402f4da8c81e9926b40c723</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a5811124e2787060112a964483dd2c9db</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a76afdc8bbbab808ef216559367deea3f</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a805ee7a0049df207360ad4eefa2e877c</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::IInformationProvider::InformationCategory</type>
+      <name>m_category</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a91657b7965ffd65faf1d19c9d7f5ec4d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_id</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>af318d820cbc8cc1cc3515f9531f8d615</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QString</type>
+      <name>m_text</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a3b654bb6daca28c31c6486744d93a481</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QString</type>
+      <name>m_source</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>ad1fd2d227516f069699c151b63b73f73</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_flags</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a47b69cd76e08833067e7abce84167230</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QDateTime</type>
+      <name>m_timeStamp</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>ac64645a8d6e9cd247d50e462b013af08</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilog::CMessageContainer</name>
+    <filename>classilog_1_1_c_message_container.html</filename>
+    <base>THierarchicalBase&lt; IHierarchicalMessageContainer &gt;</base>
+    <base virtualness="virtual">ilog::IMessageConsumer</base>
+    <member kind="function">
+      <type></type>
+      <name>CMessageContainer</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>ae8a5f8bba07f741d2e63cb5242c04e99</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMessageContainer</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>ad37a5e83729c45eebea2fc474199cd93</anchor>
+      <arglist>(const CMessageContainer &amp;container)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddChildContainer</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>a5d88edfe065e558983a6da67e865cfc4</anchor>
+      <arglist>(IHierarchicalMessageContainer *childContainerPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetSlaveConsumer</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>a1dc07c720bb746803c997da1956e9a8c</anchor>
+      <arglist>(ilog::IMessageConsumer *consumerPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetMaxMessageCount</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>aad5f164cd5e2d6f1080e4728e8250d63</anchor>
+      <arglist>(int maxMessageCount=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>a7b26c48ed90025b8d23d16ad6c897701</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetWorstCategory</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>a88630242ac8251352a9f40c7077167b5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Messages</type>
+      <name>GetMessages</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>a10bdee6be0044da4682d55cbe4527083</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearMessages</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>ac183f7730f07c39865ff4b97300b9aae</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsMessageSupported</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>a7160d27ef12bda66789cf584fd4bf49d</anchor>
+      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddMessage</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>a904ec92930019f51d8c1731f35794ddf</anchor>
+      <arglist>(const IMessageConsumer::MessagePtr &amp;messagePtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetChildsCount</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>ae19c8bb098074a08c7eb7264cb17e5c8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual IHierarchicalMessageContainer *</type>
+      <name>GetChild</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>acad5744316b8736a91cd2bc2d1360152</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>a05d8995c947602a97f7c5f54c9abd32d</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilog::CStreamLogCompBase</name>
+    <filename>classilog_1_1_c_stream_log_comp_base.html</filename>
+    <base>TMessageDelegatorComp&lt; icomp::CComponentBase &gt;</base>
+    <member kind="typedef">
+      <type>ilog::TMessageDelegatorComp&lt; icomp::CComponentBase &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
+      <anchor>a8ad75c2d433e4ade431f2cbe9467704e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CStreamLogCompBase</name>
+      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
+      <anchor>ac0a95326f3818aa505dda07f95bd24a7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsMessageSupported</name>
+      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
+      <anchor>a42e4eb8bd6c0999495a3c910f19c5224</anchor>
+      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddMessage</name>
+      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
+      <anchor>a1edc6d2ee066f52a17aec32a29744924</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>WriteMessageToStream</name>
+      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
+      <anchor>a7d47ff00b092a70ca160dd744874cb0f</anchor>
+      <arglist>(const istd::IInformationProvider &amp;message)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GenerateMessageText</name>
+      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
+      <anchor>a0f73e53f6074d88aac9a7fac950e5075</anchor>
+      <arglist>(const istd::IInformationProvider &amp;message) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>WriteText</name>
+      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
+      <anchor>adb4779c428fea3cfeda7a10ecdfb0a62</anchor>
+      <arglist>(const QString &amp;text)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>NewLine</name>
+      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
+      <anchor>a7d0f7e207d1e813d120dbeb6d4f7aa2d</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
+      <anchor>a9f10811e49b682acf3fb777be6ac48f6</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilog::CTextFileLogComp</name>
+    <filename>classilog_1_1_c_text_file_log_comp.html</filename>
+    <base>ilog::CStreamLogCompBase</base>
+    <member kind="typedef">
+      <type>CStreamLogCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classilog_1_1_c_text_file_log_comp.html</anchorfile>
+      <anchor>a54c23724021864e670e6b9885191c6e3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classilog_1_1_c_text_file_log_comp.html</anchorfile>
+      <anchor>aa24a4e3ef2bb6dea2d905568b1d2904e</anchor>
+      <arglist>(m_fileNameModelCompPtr, m_fileNameCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CTextFileLogComp</name>
+      <anchorfile>classilog_1_1_c_text_file_log_comp.html</anchorfile>
+      <anchor>ac30bd25eb2212388ab11ecdfe71a0ed5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>WriteText</name>
+      <anchorfile>classilog_1_1_c_text_file_log_comp.html</anchorfile>
+      <anchor>aacea785e43605b24a304a561622eee22</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>NewLine</name>
+      <anchorfile>classilog_1_1_c_text_file_log_comp.html</anchorfile>
+      <anchor>acd2f3b29b3cd175d3540165d454e1b50</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classilog_1_1_c_text_file_log_comp.html</anchorfile>
+      <anchor>ab1c7ca004aa23f75005b4d02d807cd08</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classilog_1_1_c_text_file_log_comp.html</anchorfile>
+      <anchor>ad8ccde9f1e71cd539cd0a9c8326e6219</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilog::ILoggable</name>
+    <filename>classilog_1_1_i_loggable.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetLogPtr</name>
+      <anchorfile>classilog_1_1_i_loggable.html</anchorfile>
+      <anchor>a3af9736a7051d9339f85e1c38699807b</anchor>
+      <arglist>(IMessageConsumer *logPtr)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual IMessageConsumer *</type>
+      <name>GetLogPtr</name>
+      <anchorfile>classilog_1_1_i_loggable.html</anchorfile>
+      <anchor>a8ed3f045f191cc01be82f59e1222835c</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetTracingEnabled</name>
+      <anchorfile>classilog_1_1_i_loggable.html</anchorfile>
+      <anchor>a8d2371f072a87af4e15e3fb0c348e24c</anchor>
+      <arglist>(bool trace)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsTracingEnabled</name>
+      <anchorfile>classilog_1_1_i_loggable.html</anchorfile>
+      <anchor>a5a207ced7f0211aa2eef12d0ca9065bd</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilog::IMessageConsumer</name>
+    <filename>classilog_1_1_i_message_consumer.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="typedef">
+      <type>istd::TSmartPtr&lt; const istd::IInformationProvider &gt;</type>
+      <name>MessagePtr</name>
+      <anchorfile>classilog_1_1_i_message_consumer.html</anchorfile>
+      <anchor>a23ac5d41df864166db9ddb457ea7058d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsMessageSupported</name>
+      <anchorfile>classilog_1_1_i_message_consumer.html</anchorfile>
+      <anchor>a9264a9ef7543656b34c80721ebced931</anchor>
+      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>AddMessage</name>
+      <anchorfile>classilog_1_1_i_message_consumer.html</anchorfile>
+      <anchor>a4d13168c44a8d577633e7163c462b2cc</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilog::IMessageContainer</name>
+    <filename>classilog_1_1_i_message_container.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="enumeration">
+      <name>ChangeFlags</name>
+      <anchorfile>classilog_1_1_i_message_container.html</anchorfile>
+      <anchor>ad1699737f555eb7f60dfe500a1547800</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_MESSAGE_ADDED</name>
+      <anchorfile>classilog_1_1_i_message_container.html</anchorfile>
+      <anchor>ad1699737f555eb7f60dfe500a1547800a355a0243af9c4065759cfd7c508d5254</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_MESSAGE_REMOVED</name>
+      <anchorfile>classilog_1_1_i_message_container.html</anchorfile>
+      <anchor>ad1699737f555eb7f60dfe500a1547800a77d9b6d0d43263a52413ed5f78f2becb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_RESET</name>
+      <anchorfile>classilog_1_1_i_message_container.html</anchorfile>
+      <anchor>ad1699737f555eb7f60dfe500a1547800a5189016d9e9d3f9d57268df0021f4a37</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QVector&lt; ilog::IMessageConsumer::MessagePtr &gt;</type>
+      <name>Messages</name>
+      <anchorfile>classilog_1_1_i_message_container.html</anchorfile>
+      <anchor>abe432c7d9cbab21ff1056c1301eb277e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetWorstCategory</name>
+      <anchorfile>classilog_1_1_i_message_container.html</anchorfile>
+      <anchor>a1da63f6dc42b6f7ca4d4c86eb8227fdf</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual Messages</type>
+      <name>GetMessages</name>
+      <anchorfile>classilog_1_1_i_message_container.html</anchorfile>
+      <anchor>a79565800855f5e4ec187cdabfe36b5a6</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>ClearMessages</name>
+      <anchorfile>classilog_1_1_i_message_container.html</anchorfile>
+      <anchor>ae86703b177cf99324932ad2cf20ba8d5</anchor>
+      <arglist>()=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilog::TLoggerCompWrap</name>
+    <filename>classilog_1_1_t_logger_comp_wrap.html</filename>
+    <templarg>Base</templarg>
+    <base>ilog::TLoggerWrap</base>
+    <member kind="typedef">
+      <type>ilog::TLoggerWrap&lt; Base &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
+      <anchor>a590fd3e388adbdb4dc9bf584b9c9cd2a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>IsVerboseEnabled</name>
+      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
+      <anchor>a9d1245fd121084ca782a70267cf7d9cb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SendVerboseMessage</name>
+      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
+      <anchor>a1f22cbf9121836e55c06f535f1db9ecb</anchor>
+      <arglist>(const QString &amp;message, const QString &amp;messageSource=QString()) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DecorateMessage</name>
+      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
+      <anchor>a148b8b1a78a6265cc95bb8434fb1e3c7</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
+      <anchor>a8a3add3e8068f0392d0b1cfdd68454ef</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilog::TLoggerWrap</name>
+    <filename>classilog_1_1_t_logger_wrap.html</filename>
+    <templarg>Base</templarg>
+    <base>Base</base>
+    <base virtualness="virtual">ilog::ILoggable</base>
+    <base virtualness="virtual">istd::ILogger</base>
+    <member kind="function">
+      <type></type>
+      <name>TLoggerWrap</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>a57511dfea9c5c1e102647f1f7ca826aa</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetLogPtr</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>a87506bdfa64e0509f5fb7a3d430a5dd4</anchor>
+      <arglist>(ilog::IMessageConsumer *logPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ilog::IMessageConsumer *</type>
+      <name>GetLogPtr</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>ab6314c71cabb4562e7229c3c8c06761c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetTracingEnabled</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>ae9e590b90904a64afde7a5ad10f3bca8</anchor>
+      <arglist>(bool trace)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsTracingEnabled</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>aa796620cca275e7834d7a0d5599f73af</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendInfoMessage</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>adc0cc2f5c3b599a9824a0ed6ebe9124c</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendWarningMessage</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>adb540f7def3c56fecc5f7eef36d26ef7</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendErrorMessage</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>aa0a071c19b2b632b147df41207bf979c</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendCriticalMessage</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>abadaac82ecdb83f794136c894ab487ca</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsLogConsumed</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>ab4b51ebab3e9634407680f35ef4afa98</anchor>
+      <arglist>(const istd::IInformationProvider::InformationCategory *categoryPtr=NULL, const int *flagsPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SendLogMessage</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>abeeedb5fce3b703e62b314beb2dc9ae2</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilog::TMessageDelegatorComp</name>
+    <filename>classilog_1_1_t_message_delegator_comp.html</filename>
+    <templarg>BaseComponent</templarg>
+    <base virtualness="virtual">ilog::IMessageConsumer</base>
+    <member kind="typedef">
+      <type>BaseComponent</type>
+      <name>BaseClass</name>
+      <anchorfile>classilog_1_1_t_message_delegator_comp.html</anchorfile>
+      <anchor>a2e55146441b763f0e7df74aa210fcd64</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsMessageSupported</name>
+      <anchorfile>classilog_1_1_t_message_delegator_comp.html</anchorfile>
+      <anchor>af6a6189d19791283f4e76004796db15c</anchor>
+      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddMessage</name>
+      <anchorfile>classilog_1_1_t_message_delegator_comp.html</anchorfile>
+      <anchor>ab77601e186505bcef9e0f26dffefd7a4</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -28214,7 +28199,7 @@
   <compound kind="class">
     <name>ipackage::CPackagesLoaderComp</name>
     <filename>classipackage_1_1_c_packages_loader_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base>icomp::CEnvironmentManagerBase</base>
     <base virtualness="virtual">icomp::IRegistryLoader</base>
     <class kind="class">ipackage::CPackagesLoaderComp::LogingRegistry</class>
@@ -28237,10 +28222,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classipackage_1_1_c_packages_loader_comp.html</anchorfile>
-      <anchor>a0c35c6c5db8c2af8cf328fea9ffdecf5</anchor>
+      <anchor>aa8c9104559331d294a5a3fcef55cee3d</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -28371,7 +28356,7 @@
   <compound kind="class">
     <name>ipackage::CRegistriesManagerComp</name>
     <filename>classipackage_1_1_c_registries_manager_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">icomp::IExtPackagesManager</base>
     <base virtualness="virtual">icomp::IRegistriesManager</base>
     <base virtualness="virtual">icomp::IRegistryLoader</base>
@@ -28394,10 +28379,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>a183506d674d6a55a68e0b980b02f4ab4</anchor>
+      <anchor>a7d0f32d81104986f97abaaac4d61f9eb</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -28481,7 +28466,7 @@
   <compound kind="class">
     <name>ipackage::CRegistryCodeSaverComp</name>
     <filename>classipackage_1_1_c_registry_code_saver_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base>ifile::IFilePersistence</base>
     <member kind="enumeration">
       <name>MessageId</name>
@@ -28532,10 +28517,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a415018795028aedfb8c97b4b28528242</anchor>
+      <anchor>a691cffc739de5b662c6e36cb9b0286e8</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -30864,13 +30849,13 @@
   <compound kind="class">
     <name>iqt::CClipboardSerializerComp</name>
     <filename>classiqt_1_1_c_clipboard_serializer_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifile::IFilePersistence</base>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqt_1_1_c_clipboard_serializer_comp.html</anchorfile>
-      <anchor>a1409759ade160279d3b021bcdfe79e1c</anchor>
+      <anchor>a2095c44a072daba15e6ef37e8f8b59db</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -31204,13 +31189,13 @@
   <compound kind="class">
     <name>iqt::CSettingsSerializerComp</name>
     <filename>classiqt_1_1_c_settings_serializer_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifile::IFilePersistence</base>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqt_1_1_c_settings_serializer_comp.html</anchorfile>
-      <anchor>aafad559ce2c63f244ac4f5b745858c14</anchor>
+      <anchor>a7e82d94315a21b007602fd8adf982bb8</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -31332,14 +31317,14 @@
   <compound kind="class">
     <name>iqt::CTranslationManagerComp</name>
     <filename>classiqt_1_1_c_translation_manager_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">iqt::ITranslationManager</base>
     <base virtualness="virtual">iprm::IOptionsList</base>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
-      <anchor>a71ee02912b8d55441a24347a01aafd2b</anchor>
+      <anchor>a2253f3bf8fcccb5be3317b78a67550f4</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -35074,7 +35059,7 @@
   <compound kind="class">
     <name>iqtgui::CFileDialogLoaderComp</name>
     <filename>classiqtgui_1_1_c_file_dialog_loader_comp.html</filename>
-    <base>ibase::TLoggerCompWrap</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifile::IFilePersistence</base>
     <base virtualness="virtual">ifile::IFilePersistenceInfo</base>
     <member kind="enumeration">
@@ -35090,10 +35075,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::CLoggerComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>a5491a127e57ab7b5c15946deaf7c334a</anchor>
+      <anchor>aac9481790b35f2c6d1187e0e44380620</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -35912,7 +35897,7 @@
     <name>iqtgui::CLogGuiComp</name>
     <filename>classiqtgui_1_1_c_log_gui_comp.html</filename>
     <base>TDesignerGuiCompBase&lt; Ui::CLogGuiComp &gt;</base>
-    <base>ibase::CMessageContainer</base>
+    <base>ilog::CMessageContainer</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CLogGuiComp &gt;</type>
       <name>BaseClass</name>
@@ -35921,10 +35906,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::CMessageContainer</type>
+      <type>ilog::CMessageContainer</type>
       <name>BaseClass2</name>
       <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a01db4d4a25edc91d00be4da602453081</anchor>
+      <anchor>ace8384f4e2be36c0a67c6343d5d15cab</anchor>
       <arglist></arglist>
     </member>
     <member kind="signal">
@@ -41053,6 +41038,7 @@
     <class kind="class">istd::TChangeNotifier</class>
     <class kind="class">istd::TComposedFactory</class>
     <class kind="class">istd::TDelPtr</class>
+    <class kind="class">istd::THierarchicalBase</class>
     <class kind="class">istd::TIFactory</class>
     <class kind="class">istd::TIHierarchical</class>
     <class kind="class">istd::TIMap</class>
@@ -43597,6 +43583,69 @@
       <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
       <anchor>a0db00924e06e8a1cf2ca6f4acf7fd01f</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>istd::THierarchicalBase</name>
+    <filename>classistd_1_1_t_hierarchical_base.html</filename>
+    <templarg>Base</templarg>
+    <templarg>Interface</templarg>
+    <base>istd::TChangeDelegator</base>
+    <member kind="typedef">
+      <type>istd::TChangeDelegator&lt; Base &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classistd_1_1_t_hierarchical_base.html</anchorfile>
+      <anchor>adec6f02733e8975175c89dcdbdf0f6a2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>THierarchicalBase</name>
+      <anchorfile>classistd_1_1_t_hierarchical_base.html</anchorfile>
+      <anchor>a12b4ff3e29e59c885c2dbf6072a8b641</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetParentPtr</name>
+      <anchorfile>classistd_1_1_t_hierarchical_base.html</anchorfile>
+      <anchor>ac7389a3f206b683936d63fa827413883</anchor>
+      <arglist>(Interface *parentPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetHierarchicalFlags</name>
+      <anchorfile>classistd_1_1_t_hierarchical_base.html</anchorfile>
+      <anchor>ac0c1b4ce4ef95fff286f1fb92d00c301</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetChildsCount</name>
+      <anchorfile>classistd_1_1_t_hierarchical_base.html</anchorfile>
+      <anchor>a25bcfb140053561bec886cb554b8cb44</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Interface *</type>
+      <name>GetChild</name>
+      <anchorfile>classistd_1_1_t_hierarchical_base.html</anchorfile>
+      <anchor>a660578e9688180e71dd8f1790d5f0748</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Interface *</type>
+      <name>GetParent</name>
+      <anchorfile>classistd_1_1_t_hierarchical_base.html</anchorfile>
+      <anchor>ae5c8208da45fd1a2160fcdf3fe03f4c1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Interface *</type>
+      <name>m_parentPtr</name>
+      <anchorfile>classistd_1_1_t_hierarchical_base.html</anchorfile>
+      <anchor>ad3713733bfce4d91e896080a3e962428</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">

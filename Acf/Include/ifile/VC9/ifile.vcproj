@@ -235,10 +235,6 @@
 				>
 			</File>
 			<File
-				RelativePath="..\CTextFileLogComp.cpp"
-				>
-			</File>
-			<File
 				RelativePath="..\CXmlFileReadArchive.cpp"
 				>
 			</File>
@@ -297,10 +293,6 @@
 			</File>
 			<File
 				RelativePath="..\CSystemLocationComp.h"
-				>
-			</File>
-			<File
-				RelativePath="..\CTextFileLogComp.h"
 				>
 			</File>
 			<File

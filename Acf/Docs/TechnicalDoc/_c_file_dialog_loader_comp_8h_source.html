@@ -37,7 +37,7 @@
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="comment">// ACF includes</span>
 <a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_t_logger_comp_wrap_8h.html">ibase/TLoggerCompWrap.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_t_logger_comp_wrap_8h.html">ilog/TLoggerCompWrap.h</a>&quot;</span>
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_persistence_8h.html">ifile/IFilePersistence.h</a>&quot;</span>
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_persistence_info_8h.html">ifile/IFilePersistenceInfo.h</a>&quot;</span>
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_name_param_8h.html">ifile/IFileNameParam.h</a>&quot;</span>
@@ -49,12 +49,12 @@
 <a name="l00021"></a>00021 
 <a name="l00027"></a><a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html">00027</a> <span class="keyword">class </span><a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html" title="File dialog component.">CFileDialogLoaderComp</a>: 
 <a name="l00028"></a>00028                      <span class="keyword">public</span> QObject,
-<a name="l00029"></a>00029                      <span class="keyword">public</span> ibase::<a class="code" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93" title="Type defining base class for simple components outputting log messages.">CLoggerComponentBase</a>, 
+<a name="l00029"></a>00029                      <span class="keyword">public</span> ilog::<a class="code" href="group___main.html#ga2ac8e0a207c9bb18de1ac6883d2cf09c" title="Type defining base class for simple components outputting log messages.">CLoggerComponentBase</a>, 
 <a name="l00030"></a>00030                      <span class="keyword">virtual</span> <span class="keyword">public</span> ifile::IFilePersistence,
 <a name="l00031"></a>00031                      <span class="keyword">virtual</span> <span class="keyword">public</span> ifile::IFilePersistenceInfo
 <a name="l00032"></a>00032 {
 <a name="l00033"></a>00033 <span class="keyword">public</span>:
-<a name="l00034"></a><a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a5491a127e57ab7b5c15946deaf7c334a">00034</a>        <span class="keyword">typedef</span> <a class="code" href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations.">ibase::CLoggerComponentBase</a> <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a5491a127e57ab7b5c15946deaf7c334a">BaseClass</a>;
+<a name="l00034"></a><a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#aac9481790b35f2c6d1187e0e44380620">00034</a>        <span class="keyword">typedef</span> <a class="code" href="classilog_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations.">ilog::CLoggerComponentBase</a> <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#aac9481790b35f2c6d1187e0e44380620">BaseClass</a>;
 <a name="l00035"></a>00035 
 <a name="l00036"></a><a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a1c6505cec393c4178dea87867e891199">00036</a>        <span class="keyword">enum</span> <a class="code" href="classifile_1_1_i_file_persistence.html#a24e35495e0c1f4d128ed1513c8907376" title="List of possible message ids used in context of this interface.">MessageId</a>
 <a name="l00037"></a>00037        {

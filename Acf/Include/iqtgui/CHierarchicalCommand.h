@@ -28,16 +28,12 @@
 #include <QtGui/QAction>
 #include <QtCore/QString>
 
-
 // ACF includes
 #include "istd/TOptPointerVector.h"
-
+#include "istd/THierarchicalBase.h"
 #include "iprm/CNameParam.h"
 #include "iprm/CEnableableParam.h"
-
 #include "ibase/ICommand.h"
-#include "ibase/THierarchicalBase.h"
-
 #include "iqtgui/iqtgui.h"
 
 
@@ -52,7 +48,7 @@ class CHierarchicalCommand:
 			public QAction,
 			public iprm::CEnableableParam,
 			public iprm::CNameParam,
-			public ibase::THierarchicalBase<ibase::IHierarchicalCommand>
+			public istd::THierarchicalBase<ibase::IHierarchicalCommand>
 {
 	Q_OBJECT
 

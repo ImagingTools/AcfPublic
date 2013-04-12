@@ -49,7 +49,7 @@ Signals</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Will be emited when user changed value.  <a href="#ad8f924063a52a88d21792445b7903148"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtmeas_1_1_c_numeric_value_widget.html#acff996dd4c710168d1e091689bb71cdb">CNumericValueWidget</a> (QWidget *parentPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, bool showSlilder=true)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtmeas_1_1_c_numeric_value_widget.html#a172438ee4f1016c0434cff39404258f4">CNumericValueWidget</a> (QWidget *parentPtr=<a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, bool showSlilder=true, int inputPolicy=0)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtmeas_1_1_c_numeric_value_widget.html#af4f16faa9ca6ced21c1ce8dccecacdd6">SetUnitInfo</a> (const QString &amp;description, const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html">imath::IUnitInfo</a> &amp;unitInfo)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtmeas_1_1_c_numeric_value_widget.html#a8e1fa3954a5f93c9d4b408ea9af61e60">GetValue</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtmeas_1_1_c_numeric_value_widget.html#a65082783af4ceab4e60bc7621bf2c924">SetValue</a> (double value)</td></tr>
@@ -62,7 +62,7 @@ Protected Slots</h2></td></tr>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_c_numeric_value_widget_8h_source.html#l00018">18</a> of file <a class="el" href="_c_numeric_value_widget_8h_source.html">CNumericValueWidget.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="acff996dd4c710168d1e091689bb71cdb"></a><!-- doxytag: member="iqtmeas::CNumericValueWidget::CNumericValueWidget" ref="acff996dd4c710168d1e091689bb71cdb" args="(QWidget *parentPtr=NULL, bool showSlilder=true)" -->
+<a class="anchor" id="a172438ee4f1016c0434cff39404258f4"></a><!-- doxytag: member="iqtmeas::CNumericValueWidget::CNumericValueWidget" ref="a172438ee4f1016c0434cff39404258f4" args="(QWidget *parentPtr=NULL, bool showSlilder=true, int inputPolicy=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -76,7 +76,13 @@ Protected Slots</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>showSlilder</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>showSlilder</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>inputPolicy</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

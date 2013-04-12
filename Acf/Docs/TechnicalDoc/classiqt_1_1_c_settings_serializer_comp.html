@@ -38,7 +38,7 @@
 <div class="title">iqt::CSettingsSerializerComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqt::CSettingsSerializerComp" --><!-- doxytag: inherits="ibase::TLoggerCompWrap,ifile::IFilePersistence" -->
+<!-- doxytag: class="iqt::CSettingsSerializerComp" --><!-- doxytag: inherits="ilog::TLoggerCompWrap,ifile::IFilePersistence" -->
 <p>Store and load parameter as global settings.  
  <a href="classiqt_1_1_c_settings_serializer_comp.html#details">More...</a></p>
 
@@ -49,16 +49,16 @@ Inheritance diagram for iqt::CSettingsSerializerComp:</div>
  <div class="center">
   <img src="classiqt_1_1_c_settings_serializer_comp.png" usemap="#iqt::CSettingsSerializerComp_map" alt=""/>
   <map id="iqt::CSettingsSerializerComp_map" name="iqt::CSettingsSerializerComp_map">
-<area href="classibase_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations." alt="ibase::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="219,168,428,192"/>
-<area href="classifile_1_1_i_file_persistence.html" title="Provide loading and saving of objects." alt="ifile::IFilePersistence" shape="rect" coords="657,168,866,192"/>
-<area href="classibase_1_1_t_logger_wrap.html" title="Class wrapper implementing interface istd::ILogger sending log messages over ibase::IMessageConsumer..." alt="ibase::TLoggerWrap&lt; Base &gt;" shape="rect" coords="219,112,428,136"/>
-<area href="classifile_1_1_i_file_type_info.html" title="Provide loading and saving of objects." alt="ifile::IFileTypeInfo" shape="rect" coords="657,112,866,136"/>
-<area href="class_base.html" alt="Base" shape="rect" coords="0,56,209,80"/>
-<area href="classibase_1_1_i_loggable.html" title="Inteface for object, which support the." alt="ibase::ILoggable" shape="rect" coords="219,56,428,80"/>
-<area href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info." alt="istd::ILogger" shape="rect" coords="438,56,647,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="657,56,866,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="219,0,428,24"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="438,0,647,24"/>
+<area href="classilog_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations." alt="ilog::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="209,168,408,192"/>
+<area href="classifile_1_1_i_file_persistence.html" title="Provide loading and saving of objects." alt="ifile::IFilePersistence" shape="rect" coords="627,168,826,192"/>
+<area href="classilog_1_1_t_logger_wrap.html" title="Class wrapper implementing interface istd::ILogger sending log messages over ilog::IMessageConsumer." alt="ilog::TLoggerWrap&lt; Base &gt;" shape="rect" coords="209,112,408,136"/>
+<area href="classifile_1_1_i_file_type_info.html" title="Provide loading and saving of objects." alt="ifile::IFileTypeInfo" shape="rect" coords="627,112,826,136"/>
+<area href="class_base.html" alt="Base" shape="rect" coords="0,56,199,80"/>
+<area href="classilog_1_1_i_loggable.html" title="Inteface for object, which support the." alt="ilog::ILoggable" shape="rect" coords="209,56,408,80"/>
+<area href="classistd_1_1_i_logger.html" title="Common interface for classes sending some log info." alt="istd::ILogger" shape="rect" coords="418,56,617,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="627,56,826,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="209,0,408,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="418,0,617,24"/>
 </map>
  </div></div>
 
@@ -66,7 +66,7 @@ Inheritance diagram for iqt::CSettingsSerializerComp:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_serializer_comp.html#aafad559ce2c63f244ac4f5b745858c14">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___main.html#ga2ac8e0a207c9bb18de1ac6883d2cf09c">ilog::CLoggerComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_serializer_comp.html#a7e82d94315a21b007602fd8adf982bb8">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_serializer_comp.html#a397ee806c7b678c472b019bc8eaeda0c">IsOperationSupported</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </td></tr>
@@ -85,18 +85,18 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_settings_serializer_comp_8h_source.html#l00026">26</a> of file <a class="el" href="_c_settings_serializer_comp_8h_source.html">CSettingsSerializerComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="aafad559ce2c63f244ac4f5b745858c14"></a><!-- doxytag: member="iqt::CSettingsSerializerComp::BaseClass" ref="aafad559ce2c63f244ac4f5b745858c14" args="" -->
+<a class="anchor" id="a7e82d94315a21b007602fd8adf982bb8"></a><!-- doxytag: member="iqt::CSettingsSerializerComp::BaseClass" ref="a7e82d94315a21b007602fd8adf982bb8" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="group___main.html#ga8ef64a77c28b704454f15c826587cc93">ibase::CLoggerComponentBase</a> <a class="el" href="classiqt_1_1_c_settings_serializer_comp.html#aafad559ce2c63f244ac4f5b745858c14">iqt::CSettingsSerializerComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="group___main.html#ga2ac8e0a207c9bb18de1ac6883d2cf09c">ilog::CLoggerComponentBase</a> <a class="el" href="classiqt_1_1_c_settings_serializer_comp.html#a7e82d94315a21b007602fd8adf982bb8">iqt::CSettingsSerializerComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classibase_1_1_t_logger_comp_wrap.html#a5ca6564c805194cba50c4aeab30abfec">ibase::TLoggerCompWrap&lt; Base &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classilog_1_1_t_logger_comp_wrap.html#a590fd3e388adbdb4dc9bf584b9c9cd2a">ilog::TLoggerCompWrap&lt; Base &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_settings_serializer_comp_8h_source.html#l00031">31</a> of file <a class="el" href="_c_settings_serializer_comp_8h_source.html">CSettingsSerializerComp.h</a>.</p>
 

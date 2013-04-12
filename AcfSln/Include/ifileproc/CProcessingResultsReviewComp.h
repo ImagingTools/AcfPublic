@@ -28,7 +28,7 @@
 #include "ifile/IFileNameParam.h"
 #include "ifile/IFilePersistence.h"
 #include "ifileproc/IFileConvertCopy.h"
-#include "ibase/TLoggerCompWrap.h"
+#include "ilog/TLoggerCompWrap.h"
 
 // ACF-Solutions includes
 #include "iproc/ISupplier.h"
@@ -38,11 +38,11 @@ namespace ifileproc
 {
 
 class CProcessingResultsReviewComp:
-			public ibase::CLoggerComponentBase,
+			public ilog::CLoggerComponentBase,
 			virtual public ifileproc::IFileConvertCopy			
 {
 public:
-	typedef ibase::CLoggerComponentBase BaseClass;
+	typedef ilog::CLoggerComponentBase BaseClass;
 
 	I_BEGIN_COMPONENT(CProcessingResultsReviewComp);
 		I_REGISTER_INTERFACE(ifileproc::IFileConvertCopy);

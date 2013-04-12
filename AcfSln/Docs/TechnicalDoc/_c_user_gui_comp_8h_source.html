@@ -30,7 +30,7 @@
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_c_multi_model_dispatcher_base_8h.html">imod/CMultiModelDispatcherBase.h</a>&quot;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_logger_comp_wrap_8h.html">ibase/TLoggerCompWrap.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_logger_comp_wrap_8h.html">ilog/TLoggerCompWrap.h</a>&quot;</span>
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/_t_designer_gui_observer_comp_base_8h.html">iqtgui/TDesignerGuiObserverCompBase.h</a>&quot;</span>
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="comment">// ACF-Solutions includes</span>
@@ -47,7 +47,7 @@
 <a name="l00021"></a>00021 
 <a name="l00022"></a>00022 
 <a name="l00023"></a><a class="code" href="classiqtauth_1_1_c_user_gui_comp.html">00023</a> <span class="keyword">class </span><a class="code" href="classiqtauth_1_1_c_user_gui_comp.html">CUserGuiComp</a>:
-<a name="l00024"></a>00024                      <span class="keyword">public</span> ibase::TLoggerCompWrap&lt;
+<a name="l00024"></a>00024                      <span class="keyword">public</span> ilog::TLoggerCompWrap&lt;
 <a name="l00025"></a>00025                                           iqtgui::TDesignerGuiObserverCompBase&lt;
 <a name="l00026"></a>00026                                                                Ui::CUserGuiComp, iauth::IUsersManager&gt; &gt;,
 <a name="l00027"></a>00027                      <span class="keyword">protected</span> imod::CMultiModelDispatcherBase,
@@ -56,9 +56,9 @@
 <a name="l00030"></a>00030        Q_OBJECT
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032 <span class="keyword">public</span>:
-<a name="l00033"></a>00033        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classibase_1_1_t_logger_comp_wrap.html">ibase::TLoggerCompWrap</a>&lt;
+<a name="l00033"></a>00033        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classilog_1_1_t_logger_comp_wrap.html">ilog::TLoggerCompWrap</a>&lt;
 <a name="l00034"></a>00034                             <a class="codeRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase</a>&lt;
-<a name="l00035"></a><a class="code" href="classiqtauth_1_1_c_user_gui_comp.html#a45c111946219cc24be55d39eabfde1fe">00035</a>                                                  Ui::CUserGuiComp, <a class="code" href="classiauth_1_1_i_users_manager.html" title="Provide management of users.">iauth::IUsersManager</a>&gt; &gt; <a class="code" href="classiqtauth_1_1_c_user_gui_comp.html#a45c111946219cc24be55d39eabfde1fe">BaseClass</a>;
+<a name="l00035"></a><a class="code" href="classiqtauth_1_1_c_user_gui_comp.html#a3832299a62fd380f25a0ab65909650c2">00035</a>                                                  Ui::CUserGuiComp, <a class="code" href="classiauth_1_1_i_users_manager.html" title="Provide management of users.">iauth::IUsersManager</a>&gt; &gt; <a class="code" href="classiqtauth_1_1_c_user_gui_comp.html#a3832299a62fd380f25a0ab65909650c2">BaseClass</a>;
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037        I_BEGIN_COMPONENT(<a class="code" href="classiqtauth_1_1_c_user_gui_comp.html">CUserGuiComp</a>);
 <a name="l00038"></a>00038               I_REGISTER_INTERFACE(<a class="code" href="classiauth_1_1_i_password_changer.html">iauth::IPasswordChanger</a>);

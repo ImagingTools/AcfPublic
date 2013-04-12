@@ -46,7 +46,7 @@ namespace iipr
 	Image supplier delegating the calls to another one or accessing some bitmap object directly.
 */
 class CDelegatedBitmapSupplierComp:
-			public ibase::CLoggerComponentBase,
+			public ilog::CLoggerComponentBase,
 			virtual public iproc::ISupplier,
 			virtual public istd::IChangeable,
 			virtual public IBitmapProvider,
@@ -54,7 +54,7 @@ class CDelegatedBitmapSupplierComp:
 			protected imod::CMultiModelBridgeBase
 {
 public:
-	typedef ibase::CLoggerComponentBase BaseClass;
+	typedef ilog::CLoggerComponentBase BaseClass;
 	typedef imod::CMultiModelBridgeBase BaseClass2;
 
 	I_BEGIN_COMPONENT(CDelegatedBitmapSupplierComp);
@@ -84,7 +84,7 @@ protected:
 	virtual void EnsureWorkInitialized();
 	virtual void EnsureWorkFinished();
 	virtual void ClearWorkResults();
-	virtual const ibase::IMessageContainer* GetWorkMessages() const;
+	virtual const ilog::IMessageContainer* GetWorkMessages() const;
 	virtual iprm::IParamsSet* GetModelParametersSet() const;
 
 	// reimplemented (icomp::CComponentBase)
