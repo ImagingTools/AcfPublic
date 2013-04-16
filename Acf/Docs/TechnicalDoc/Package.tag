@@ -4013,6 +4013,8 @@
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_gui_application_comp_8h</filename>
     <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="yes" imported="no">imod/TModelWrap.h</includes>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
+    <includes id="_i_enableable_param_8h" name="IEnableableParam.h" local="yes" imported="no">iprm/IEnableableParam.h</includes>
     <includes id="_i_runtime_status_provider_8h" name="IRuntimeStatusProvider.h" local="yes" imported="no">ibase/IRuntimeStatusProvider.h</includes>
     <includes id="_i_gui_object_8h" name="IGuiObject.h" local="yes" imported="no">iqtgui/IGuiObject.h</includes>
     <includes id="_i_gui_application_8h" name="IGuiApplication.h" local="yes" imported="no">iqtgui/IGuiApplication.h</includes>
@@ -35281,12 +35283,20 @@
     <name>iqtgui::CGuiApplicationComp</name>
     <filename>classiqtgui_1_1_c_gui_application_comp.html</filename>
     <base>iqtgui::CApplicationCompBase</base>
+    <base protection="protected">TSingleModelObserverBase&lt; iprm::IEnableableParam &gt;</base>
     <base virtualness="virtual">iqtgui::IGuiApplication</base>
     <member kind="typedef">
       <type>CApplicationCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
       <anchor>ad128044423e2b4c8f62a5252c864369f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::TSingleModelObserverBase&lt; iprm::IEnableableParam &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>a5e97d72d9f4a86ac973bb3cb0e58637b</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -35317,6 +35327,20 @@
       <anchor>a32e5f55f912a98b560f64b93da49a8a8</anchor>
       <arglist>(RuntimeStatus, istd::IChangeable, ExtractRuntimeStatus)</arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>ad27af51f9198b2754b42ce53c03ba630</anchor>
+      <arglist>(m_allowApplicationCloseModelCompPtr, m_allowApplicationCloseCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CGuiApplicationComp</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>a1bbfdb93efc23c5b1d54caa438b7bedd</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iqtgui::IGuiObject *</type>
       <name>GetApplicationGui</name>
@@ -35337,6 +35361,27 @@
       <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
       <anchor>afdf3d4b7dc9c280bfc998cbda548cb3d</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>a4cdf7c74abaef6bed6b7553e5b26c0fc</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>a133d9160498f9d2a4cdcec3dbdb2232e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>adfb41515c43fc18425d471daf96957af</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

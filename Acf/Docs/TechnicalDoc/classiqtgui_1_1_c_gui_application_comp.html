@@ -33,12 +33,13 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">iqtgui::CGuiApplicationComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqtgui::CGuiApplicationComp" --><!-- doxytag: inherits="iqtgui::CApplicationCompBase,iqtgui::IGuiApplication" -->
+<!-- doxytag: class="iqtgui::CGuiApplicationComp" --><!-- doxytag: inherits="iqtgui::CApplicationCompBase,TSingleModelObserverBase&lt; iprm::IEnableableParam &gt;,iqtgui::IGuiApplication" -->
 <p>Standard component for a Qt based GUI application.  
  <a href="classiqtgui_1_1_c_gui_application_comp.html#details">More...</a></p>
 
@@ -49,15 +50,19 @@ Inheritance diagram for iqtgui::CGuiApplicationComp:</div>
  <div class="center">
   <img src="classiqtgui_1_1_c_gui_application_comp.png" usemap="#iqtgui::CGuiApplicationComp_map" alt=""/>
   <map id="iqtgui::CGuiApplicationComp_map" name="iqtgui::CGuiApplicationComp_map">
-<area href="classiqtgui_1_1_c_application_comp_base.html" title="Standard component for a Qt based GUI application." alt="iqtgui::CApplicationCompBase" shape="rect" coords="94,168,273,192"/>
-<area href="classiqtgui_1_1_i_gui_application.html" title="Interface for Qt based application with GUI." alt="iqtgui::IGuiApplication" shape="rect" coords="378,168,557,192"/>
-<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,112,179,136"/>
-<area href="classibase_1_1_i_application.html" title="Main entry point of component-based application." alt="ibase::IApplication" shape="rect" coords="189,112,368,136"/>
-<area href="classibase_1_1_i_application.html" title="Main entry point of component-based application." alt="ibase::IApplication" shape="rect" coords="378,112,557,136"/>
-<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,56,179,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="189,56,368,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="378,56,557,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,179,24"/>
+<area href="classiqtgui_1_1_c_application_comp_base.html" title="Standard component for a Qt based GUI application." alt="iqtgui::CApplicationCompBase" shape="rect" coords="184,168,543,192"/>
+<area href="classimod_1_1_t_single_model_observer_base.html" alt="imod::TSingleModelObserverBase&lt; iprm::IEnableableParam &gt;" shape="rect" coords="738,168,1097,192"/>
+<area href="classiqtgui_1_1_i_gui_application.html" title="Interface for Qt based application with GUI." alt="iqtgui::IGuiApplication" shape="rect" coords="1107,168,1466,192"/>
+<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,112,359,136"/>
+<area href="classibase_1_1_i_application.html" title="Main entry point of component-based application." alt="ibase::IApplication" shape="rect" coords="369,112,728,136"/>
+<area href="classimod_1_1_c_single_model_observer_base.html" title="Basic implementation for a single model observer." alt="imod::CSingleModelObserverBase" shape="rect" coords="738,112,1097,136"/>
+<area href="classibase_1_1_i_application.html" title="Main entry point of component-based application." alt="ibase::IApplication" shape="rect" coords="1107,112,1466,136"/>
+<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,56,359,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="369,56,728,80"/>
+<area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="738,56,1097,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1107,56,1466,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,359,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="738,0,1097,24"/>
 </map>
  </div></div>
 
@@ -66,18 +71,28 @@ Inheritance diagram for iqtgui::CGuiApplicationComp:</div>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiqtgui_1_1_c_application_comp_base.html">CApplicationCompBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#ad128044423e2b4c8f62a5252c864369f">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+<a class="el" href="classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase</a><br class="typebreak"/>
+&lt; <a class="el" href="classiprm_1_1_i_enableable_param.html">iprm::IEnableableParam</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#a5e97d72d9f4a86ac973bb3cb0e58637b">BaseClass2</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#ad8a2d4c6c2b2320e73a43c6ceed07836">I_REGISTER_SUBELEMENT</a> (RuntimeStatus)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#a871ea02cd646880d9157d599813c2930">I_REGISTER_SUBELEMENT_INTERFACE</a> (RuntimeStatus, <a class="el" href="classibase_1_1_i_runtime_status_provider.html">ibase::IRuntimeStatusProvider</a>, ExtractRuntimeStatus)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#a2b8db1c860b980e31e57e896e20ec030">I_REGISTER_SUBELEMENT_INTERFACE</a> (RuntimeStatus, <a class="el" href="classimod_1_1_i_model.html">imod::IModel</a>, ExtractRuntimeStatus)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#a32e5f55f912a98b560f64b93da49a8a8">I_REGISTER_SUBELEMENT_INTERFACE</a> (RuntimeStatus, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>, ExtractRuntimeStatus)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#ad27af51f9198b2754b42ce53c03ba630">I_ASSIGN_TO</a> (m_allowApplicationCloseModelCompPtr, m_allowApplicationCloseCompPtr, false)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#a1bbfdb93efc23c5b1d54caa438b7bedd">CGuiApplicationComp</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#af1cac41b0945e458e9bf0c2ca242eac7">GetApplicationGui</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the main UI object of the application.  <a href="#af1cac41b0945e458e9bf0c2ca242eac7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#ac5da37f7603e57c88e2827b86e98af5a">Execute</a> (int argc, char **argv)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Start execution loop of the application.  <a href="#ac5da37f7603e57c88e2827b86e98af5a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#afdf3d4b7dc9c280bfc998cbda548cb3d">GetHelpText</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get information about the possible command line arguments of this application.  <a href="#afdf3d4b7dc9c280bfc998cbda548cb3d"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#a4cdf7c74abaef6bed6b7553e5b26c0fc">OnUpdate</a> (int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#a133d9160498f9d2a4cdcec3dbdb2232e">OnComponentCreated</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#adfb41515c43fc18425d471daf96957af">OnComponentDestroyed</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Standard component for a Qt based GUI application. </p>
@@ -98,7 +113,39 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_application_comp_base.html#a79f597bef8787deed5eb451bf2ec76f0">iqtgui::CApplicationCompBase</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_gui_application_comp_8h_source.html#l00029">29</a> of file <a class="el" href="_c_gui_application_comp_8h_source.html">CGuiApplicationComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_gui_application_comp_8h_source.html#l00030">30</a> of file <a class="el" href="_c_gui_application_comp_8h_source.html">CGuiApplicationComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5e97d72d9f4a86ac973bb3cb0e58637b"></a><!-- doxytag: member="iqtgui::CGuiApplicationComp::BaseClass2" ref="a5e97d72d9f4a86ac973bb3cb0e58637b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase</a>&lt;<a class="el" href="classiprm_1_1_i_enableable_param.html">iprm::IEnableableParam</a>&gt; <a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#a5e97d72d9f4a86ac973bb3cb0e58637b">iqtgui::CGuiApplicationComp::BaseClass2</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_gui_application_comp_8h_source.html#l00031">31</a> of file <a class="el" href="_c_gui_application_comp_8h_source.html">CGuiApplicationComp.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a1bbfdb93efc23c5b1d54caa438b7bedd"></a><!-- doxytag: member="iqtgui::CGuiApplicationComp::CGuiApplicationComp" ref="a1bbfdb93efc23c5b1d54caa438b7bedd" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iqtgui::CGuiApplicationComp::CGuiApplicationComp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -171,6 +218,39 @@ Public Member Functions</h2></td></tr>
 <p>Get information about the possible command line arguments of this application. </p>
 
 <p>Implements <a class="el" href="classibase_1_1_i_application.html#a59d3f8ea3ce9cb249cdfe8cdaaf83985">ibase::IApplication</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad27af51f9198b2754b42ce53c03ba630"></a><!-- doxytag: member="iqtgui::CGuiApplicationComp::I_ASSIGN_TO" ref="ad27af51f9198b2754b42ce53c03ba630" args="(m_allowApplicationCloseModelCompPtr, m_allowApplicationCloseCompPtr, false)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iqtgui::CGuiApplicationComp::I_ASSIGN_TO </td>
+          <td>(</td>
+          <td class="paramtype">m_allowApplicationCloseModelCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">m_allowApplicationCloseCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">false&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -287,6 +367,71 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a133d9160498f9d2a4cdcec3dbdb2232e"></a><!-- doxytag: member="iqtgui::CGuiApplicationComp::OnComponentCreated" ref="a133d9160498f9d2a4cdcec3dbdb2232e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtgui::CGuiApplicationComp::OnComponentCreated </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_application_comp_base.html#ab236d74fd25f21bd155906efb25b80d7">iqtgui::CApplicationCompBase</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adfb41515c43fc18425d471daf96957af"></a><!-- doxytag: member="iqtgui::CGuiApplicationComp::OnComponentDestroyed" ref="adfb41515c43fc18425d471daf96957af" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtgui::CGuiApplicationComp::OnComponentDestroyed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classicomp_1_1_c_component_base.html#a007550438603368acd5133e97547d73f">icomp::CComponentBase</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4cdf7c74abaef6bed6b7553e5b26c0fc"></a><!-- doxytag: member="iqtgui::CGuiApplicationComp::OnUpdate" ref="a4cdf7c74abaef6bed6b7553e5b26c0fc" args="(int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtgui::CGuiApplicationComp::OnUpdate </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>updateFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
+          <td class="paramname"><em>updateParamsPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classimod_1_1_c_single_model_observer_base.html#a66f8d05283672d798a57262434229e93">imod::CSingleModelObserverBase</a>.</p>
 
 </div>
 </div>
