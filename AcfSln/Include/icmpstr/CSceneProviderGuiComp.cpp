@@ -51,7 +51,7 @@ CSceneProviderGuiComp::CSceneProviderGuiComp()
 	m_isotropyFactor(0)
 {
 	m_printCommand.SetGroupId(iqtdoc::CMainWindowGuiComp::GI_DOCUMENT);
-	m_printCommand.setShortcut(tr("Ctrl+P"));
+	m_printCommand.setShortcut(Qt::CTRL + Qt::Key_P);
 	connect(&m_printCommand, SIGNAL(triggered()), this, SLOT(OnPrint()));
 	m_fileMenu.InsertChild(&m_printCommand);
 
@@ -60,7 +60,7 @@ CSceneProviderGuiComp::CSceneProviderGuiComp()
 	m_editMenu.InsertChild(&m_selectAllCommand);
 
 	m_autoFitToViewCommand.SetStaticFlags(
-				iqtgui::CHierarchicalCommand::CF_ONOFF | 
+				iqtgui::CHierarchicalCommand::CF_ONOFF |
 				iqtgui::CHierarchicalCommand::CF_GLOBAL_MENU);
 	connect(&m_autoFitToViewCommand, SIGNAL(toggled(bool)), this, SLOT(OnAutoFit(bool)));
 	m_viewMenu.InsertChild(&m_autoFitToViewCommand);
@@ -214,7 +214,7 @@ bool CSceneProviderGuiComp::SetFullScreenMode(bool fullScreenMode)
 					SceneView->setParent(m_savedParentWidgetPtr);
 					m_savedParentWidgetPtr->layout()->addWidget(SceneView);
 				}
-				
+
 				m_savedParentWidgetPtr = NULL;
 
 				SceneView->showNormal();
@@ -398,7 +398,7 @@ bool CSceneProviderGuiComp::HasDropConsumerForFormat(const QStringList& formats)
 			}
 		}
 	}
-	
+
 	return false;
 }
 
@@ -418,12 +418,12 @@ void CSceneProviderGuiComp::DelegateDropEvent(const QMimeData& mimeData, QGraphi
 		}
 
 		QStringList supportedIds = dropConsumerPtr->GetAcceptedMimeIds();
-		
+
 		bool triggerEvent = false;
 		for (int idIndex = 0; idIndex < supportedIds.size(); idIndex++){
 			if (formats.contains(supportedIds[idIndex])){
 				triggerEvent = true;
-				
+
 				break;
 			}
 		}
@@ -441,7 +441,7 @@ void CSceneProviderGuiComp::ResetScene()
 	foreach(QGraphicsItem* itemPtr, sceneItems){
 		m_scenePtr->removeItem(itemPtr);
 	}
-	
+
 	m_scenePtr.Reset();
 }
 
@@ -459,7 +459,7 @@ void CSceneProviderGuiComp::OnGuiCreated()
 	SceneView->setScene(m_scenePtr.GetPtr());
 	SceneView->setMouseTracking(true);
 	SceneView->setDragMode(QGraphicsView::ScrollHandDrag);
-	
+
 	switch (*m_backgroundModeAttrPtr){
 		case BM_NORMAL:
 			SceneView->setBackgroundBrush(qApp->palette().button());
@@ -503,7 +503,7 @@ void CSceneProviderGuiComp::OnGuiCreated()
 	}
 
 	m_scenePtr->installEventFilter(this);
-} 
+}
 
 
 void CSceneProviderGuiComp::OnRetranslate()
@@ -623,13 +623,13 @@ void CSceneProviderGuiComp::OnPrint()
 
 void CSceneProviderGuiComp::OnZoomIncrement()
 {
-	 ScaleView(qPow((double)2, 0.5));  
+	 ScaleView(qPow((double)2, 0.5));
 }
 
 
 void CSceneProviderGuiComp::OnZoomDecrement()
 {
-	ScaleView(qPow((double)2, -0.5));  
+	ScaleView(qPow((double)2, -0.5));
 }
 
 
@@ -699,7 +699,7 @@ CSceneProviderGuiComp::CScene::CScene(CSceneProviderGuiComp* parentPtr)
 
 // protected methods of embedded class CScene
 
-void CSceneProviderGuiComp::CScene::DrawGrid(QPainter& painter, const QRectF& rect, bool useDot)  
+void CSceneProviderGuiComp::CScene::DrawGrid(QPainter& painter, const QRectF& rect, bool useDot)
 {
 	QRectF gridRect = rect;
 	if (!sceneRect().isEmpty()){

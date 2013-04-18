@@ -33,7 +33,9 @@
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-types">Protected Types</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">iqtcam::CFileAcquisitionComp Class Reference</div>  </div>
 </div>
@@ -78,6 +80,15 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Do synchronized processing.  <a href="#a6d147dc90246a9a9bb3054474aa5e129"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtcam_1_1_c_file_acquisition_comp.html#a034c5fac994e1ac0f1b20fd05ab8541a">GetBitmapSize</a> (const <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get size of acquired bitmap for specified parameters.  <a href="#a034c5fac994e1ac0f1b20fd05ab8541a"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-types"></a>
+Protected Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QMap&lt; QString, <a class="el" href="structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html">ParamsInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtcam_1_1_c_file_acquisition_comp.html#a8a0cd0df060342bb8c0273ee3f54c6ba">DirInfos</a></td></tr>
+<tr><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiqtcam_1_1_c_file_acquisition_comp.html#a8a0cd0df060342bb8c0273ee3f54c6ba">DirInfos</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtcam_1_1_c_file_acquisition_comp.html#a7a8149ed647d51dc0108394f479dc375">m_dirInfos</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">quint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtcam_1_1_c_file_acquisition_comp.html#aa749243898cdd1ed93a4dcd5cfddf1a8">m_lastIdStamp</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtcam_1_1_c_file_acquisition_comp.html#a352209d50d867b5b45e2f7c157b8d0d9">m_lastImageSize</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QMutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtcam_1_1_c_file_acquisition_comp.html#a1bc90a34e0b266dc9a4e787745351368">m_lock</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Bitmap loader component implementing interface <code><a class="el" href="classicam_1_1_i_bitmap_acquisition.html" title="Bitmap acquisition processor.">icam::IBitmapAcquisition</a></code> over <code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classifile_1_1_i_file_persistence.html">ifile::IFilePersistence</a></code>. </p>
@@ -98,6 +109,21 @@ Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classilog_1_1_t_logger_comp_wrap.html#a590fd3e388adbdb4dc9bf584b9c9cd2a">ilog::TLoggerCompWrap&lt; Base &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="_c_file_acquisition_comp_8h_source.html#l00034">34</a> of file <a class="el" href="_c_file_acquisition_comp_8h_source.html">CFileAcquisitionComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8a0cd0df060342bb8c0273ee3f54c6ba"></a><!-- doxytag: member="iqtcam::CFileAcquisitionComp::DirInfos" ref="a8a0cd0df060342bb8c0273ee3f54c6ba" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef QMap&lt;QString, <a class="el" href="structiqtcam_1_1_c_file_acquisition_comp_1_1_params_info.html">ParamsInfo</a>&gt; <a class="el" href="classiqtcam_1_1_c_file_acquisition_comp.html#a8a0cd0df060342bb8c0273ee3f54c6ba">iqtcam::CFileAcquisitionComp::DirInfos</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_file_acquisition_comp_8h_source.html#l00070">70</a> of file <a class="el" href="_c_file_acquisition_comp_8h_source.html">CFileAcquisitionComp.h</a>.</p>
 
 </div>
 </div>
@@ -184,6 +210,67 @@ Public Member Functions</h2></td></tr>
 <dl class="see"><dt><b>See also:</b></dt><dd><code><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_t_index.html#adc9ffec0e27b28010cc88af1ebd33852">istd::TIndex::IsValid()</a></code>. </dd></dl>
 
 <p>Implements <a class="el" href="classicam_1_1_i_bitmap_acquisition.html#ad1fd013eaa11fd644b41f2959b29fd7a">icam::IBitmapAcquisition</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a7a8149ed647d51dc0108394f479dc375"></a><!-- doxytag: member="iqtcam::CFileAcquisitionComp::m_dirInfos" ref="a7a8149ed647d51dc0108394f479dc375" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classiqtcam_1_1_c_file_acquisition_comp.html#a8a0cd0df060342bb8c0273ee3f54c6ba">DirInfos</a> <a class="el" href="classiqtcam_1_1_c_file_acquisition_comp.html#a7a8149ed647d51dc0108394f479dc375">iqtcam::CFileAcquisitionComp::m_dirInfos</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_file_acquisition_comp_8h_source.html#l00071">71</a> of file <a class="el" href="_c_file_acquisition_comp_8h_source.html">CFileAcquisitionComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa749243898cdd1ed93a4dcd5cfddf1a8"></a><!-- doxytag: member="iqtcam::CFileAcquisitionComp::m_lastIdStamp" ref="aa749243898cdd1ed93a4dcd5cfddf1a8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">quint32 <a class="el" href="classiqtcam_1_1_c_file_acquisition_comp.html#aa749243898cdd1ed93a4dcd5cfddf1a8">iqtcam::CFileAcquisitionComp::m_lastIdStamp</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_file_acquisition_comp_8h_source.html#l00073">73</a> of file <a class="el" href="_c_file_acquisition_comp_8h_source.html">CFileAcquisitionComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a352209d50d867b5b45e2f7c157b8d0d9"></a><!-- doxytag: member="iqtcam::CFileAcquisitionComp::m_lastImageSize" ref="a352209d50d867b5b45e2f7c157b8d0d9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" doxygen="Package.tag:file:\\C:\Temp\Acf/Docs/TechnicalDoc/" href="file:\\C:\Temp\Acf/Docs/TechnicalDoc/classistd_1_1_c_index2d.html">istd::CIndex2d</a> <a class="el" href="classiqtcam_1_1_c_file_acquisition_comp.html#a352209d50d867b5b45e2f7c157b8d0d9">iqtcam::CFileAcquisitionComp::m_lastImageSize</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_file_acquisition_comp_8h_source.html#l00075">75</a> of file <a class="el" href="_c_file_acquisition_comp_8h_source.html">CFileAcquisitionComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1bc90a34e0b266dc9a4e787745351368"></a><!-- doxytag: member="iqtcam::CFileAcquisitionComp::m_lock" ref="a1bc90a34e0b266dc9a4e787745351368" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMutex <a class="el" href="classiqtcam_1_1_c_file_acquisition_comp.html#a1bc90a34e0b266dc9a4e787745351368">iqtcam::CFileAcquisitionComp::m_lock</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_file_acquisition_comp_8h_source.html#l00077">77</a> of file <a class="el" href="_c_file_acquisition_comp_8h_source.html">CFileAcquisitionComp.h</a>.</p>
 
 </div>
 </div>

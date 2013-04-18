@@ -21111,6 +21111,41 @@
       <anchor>a034c5fac994e1ac0f1b20fd05ab8541a</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
+    <member kind="typedef" protection="protected">
+      <type>QMap&lt; QString, ParamsInfo &gt;</type>
+      <name>DirInfos</name>
+      <anchorfile>classiqtcam_1_1_c_file_acquisition_comp.html</anchorfile>
+      <anchor>a8a0cd0df060342bb8c0273ee3f54c6ba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>DirInfos</type>
+      <name>m_dirInfos</name>
+      <anchorfile>classiqtcam_1_1_c_file_acquisition_comp.html</anchorfile>
+      <anchor>a7a8149ed647d51dc0108394f479dc375</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>quint32</type>
+      <name>m_lastIdStamp</name>
+      <anchorfile>classiqtcam_1_1_c_file_acquisition_comp.html</anchorfile>
+      <anchor>aa749243898cdd1ed93a4dcd5cfddf1a8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::CIndex2d</type>
+      <name>m_lastImageSize</name>
+      <anchorfile>classiqtcam_1_1_c_file_acquisition_comp.html</anchorfile>
+      <anchor>a352209d50d867b5b45e2f7c157b8d0d9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QMutex</type>
+      <name>m_lock</name>
+      <anchorfile>classiqtcam_1_1_c_file_acquisition_comp.html</anchorfile>
+      <anchor>a1bc90a34e0b266dc9a4e787745351368</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>iqtcam::CFileAcquisitionComp::ParamsInfo</name>

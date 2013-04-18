@@ -130,6 +130,9 @@
 : <a class="el" href="classiprop_1_1_t_object_property.html#a8838b2ef16aa163c78f874cebb3fae17">iprop::TObjectProperty&lt; Value &gt;</a>
 , <a class="el" href="classiprop_1_1_t_property.html#a83bda4b555a7767f6d9ccac142c1ed54">iprop::TProperty&lt; Value &gt;</a>
 </li>
+<li>m_dirInfos
+: <a class="el" href="classiqtcam_1_1_c_file_acquisition_comp.html#a7a8149ed647d51dc0108394f479dc375">iqtcam::CFileAcquisitionComp</a>
+</li>
 <li>m_id
 : <a class="el" href="classiqtcam_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a1730dff2f3690ff472b349476a984125">iqtcam::CMultiBitmapViewComp::CSingleView</a>
 </li>
@@ -154,8 +157,17 @@
 <li>m_isWorking
 : <a class="el" href="classihotf_1_1_c_hotfolder_processing_info.html#a8235fec3b2c27d3e6248cc9eebe6131f">ihotf::CHotfolderProcessingInfo</a>
 </li>
+<li>m_lastIdStamp
+: <a class="el" href="classiqtcam_1_1_c_file_acquisition_comp.html#aa749243898cdd1ed93a4dcd5cfddf1a8">iqtcam::CFileAcquisitionComp</a>
+</li>
+<li>m_lastImageSize
+: <a class="el" href="classiqtcam_1_1_c_file_acquisition_comp.html#a352209d50d867b5b45e2f7c157b8d0d9">iqtcam::CFileAcquisitionComp</a>
+</li>
 <li>m_lineSelection
 : <a class="el" href="classiqtipr_1_1_c_multi_line_supplier_gui_comp.html#acfe23db2599b5f67f1180fb72cb57d53">iqtipr::CMultiLineSupplierGuiComp</a>
+</li>
+<li>m_lock
+: <a class="el" href="classiqtcam_1_1_c_file_acquisition_comp.html#a1bc90a34e0b266dc9a4e787745351368">iqtcam::CFileAcquisitionComp</a>
 </li>
 <li>m_mainMenuCommand
 : <a class="el" href="classiprocgui_1_1_c_processor_command_comp.html#a183e4664d45dbc0c9f2ef20767500b7b">iprocgui::CProcessorCommandComp</a>
@@ -215,21 +227,21 @@
 : <a class="el" href="classiipr_1_1_t_weighted_feature_wrap.html#a48120fa2978f81cf33d685fddc69bab9">iipr::TWeightedFeatureWrap&lt; BaseObject &gt;</a>
 </li>
 <li>MessageId
-: <a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#a5c38e80996484bd73eaf8524eedba0ec">iproc::CIterativeProcessorComp</a>
+: <a class="el" href="classifileproc_1_1_i_file_convert_copy.html#a9bf8a92485d6aed2f4f2f637d0f7a3fc">ifileproc::IFileConvertCopy</a>
+, <a class="el" href="classihotf_1_1_c_hotfolder_loader_comp.html#ad7d06d35a1cbd2df0a7e5680ee0165f7">ihotf::CHotfolderLoaderComp</a>
+, <a class="el" href="classihotf_1_1_c_visual_hotfolder_workflow_comp.html#aef3922c988e971d564a955ffb887aa02">ihotf::CVisualHotfolderWorkflowComp</a>
+, <a class="el" href="classiinsp_1_1_c_inspection_task_comp.html#a3e985c30cb550692ee98a936a2db3b15">iinsp::CInspectionTaskComp</a>
+, <a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#a5c38e80996484bd73eaf8524eedba0ec">iproc::CIterativeProcessorComp</a>
 , <a class="el" href="classiproc_1_1_i_processor.html#a71f0e6f70fcf044073f7055a0e0f5225">iproc::IProcessor</a>
 , <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#ae4928500a07bc7997704eb06d7effb9f">iproc::TSupplierCompWrap&lt; Product &gt;</a>
 , <a class="el" href="classiqtmm_1_1_c_media_loader_comp.html#abfe262925b385db6acd4c72ba1cf0cd3">iqtmm::CMediaLoaderComp</a>
 , <a class="el" href="classiqtmm_1_1_c_svg_bitmap_loader_comp.html#ada050c80d54608502eac377685442414">iqtmm::CSvgBitmapLoaderComp</a>
-, <a class="el" href="classihotf_1_1_c_hotfolder_loader_comp.html#ad7d06d35a1cbd2df0a7e5680ee0165f7">ihotf::CHotfolderLoaderComp</a>
 , <a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#aab12518eeda711c1c8d273992696f049">icmpstr::CRegistryConsistInfoComp</a>
 , <a class="el" href="classicmpstr_1_1_c_registry_loader_comp.html#a83c4d161fe2bb108d55f1051d28143f9">icmpstr::CRegistryLoaderComp</a>
 , <a class="el" href="classicmpstr_1_1_c_visual_registry.html#a12990af2da6dc5fcb708ec39d3747f4a">icmpstr::CVisualRegistry</a>
 , <a class="el" href="classifileproc_1_1_c_composed_copy_files_comp.html#a46fd5318f44016f9d726664794f0036c">ifileproc::CComposedCopyFilesComp</a>
 , <a class="el" href="classifileproc_1_1_c_file_info_copy_comp.html#ac2dd887626237cc16a13320e4705080a">ifileproc::CFileInfoCopyComp</a>
 , <a class="el" href="classifileproc_1_1_c_copy_files_tree_comp.html#a6137b5797b1cc367c7b357bc5ee54f09">ifileproc::CCopyFilesTreeComp</a>
-, <a class="el" href="classifileproc_1_1_i_file_convert_copy.html#a9bf8a92485d6aed2f4f2f637d0f7a3fc">ifileproc::IFileConvertCopy</a>
-, <a class="el" href="classihotf_1_1_c_visual_hotfolder_workflow_comp.html#aef3922c988e971d564a955ffb887aa02">ihotf::CVisualHotfolderWorkflowComp</a>
-, <a class="el" href="classiinsp_1_1_c_inspection_task_comp.html#a3e985c30cb550692ee98a936a2db3b15">iinsp::CInspectionTaskComp</a>
 </li>
 <li>MI_BAD_ATTRIBUTE_TYPE
 : <a class="el" href="classicmpstr_1_1_c_registry_consist_info_comp.html#aab12518eeda711c1c8d273992696f049a4aabf1085305ed323a137ed2da971ced">icmpstr::CRegistryConsistInfoComp</a>
@@ -238,8 +250,8 @@
 : <a class="el" href="classiproc_1_1_c_iterative_processor_comp.html#a5c38e80996484bd73eaf8524eedba0eca1bc0a262d6eed674d2e8526d7d9dd46a">iproc::CIterativeProcessorComp</a>
 </li>
 <li>MI_BAD_EXTENSION
-: <a class="el" href="classiqtmm_1_1_c_media_loader_comp.html#abfe262925b385db6acd4c72ba1cf0cd3a3a42aedf094e46ddd36ccb2f540f419b">iqtmm::CMediaLoaderComp</a>
-, <a class="el" href="classiqtmm_1_1_c_svg_bitmap_loader_comp.html#ada050c80d54608502eac377685442414a550efe30c51ffa56478377a8c24c8fa5">iqtmm::CSvgBitmapLoaderComp</a>
+: <a class="el" href="classiqtmm_1_1_c_svg_bitmap_loader_comp.html#ada050c80d54608502eac377685442414a550efe30c51ffa56478377a8c24c8fa5">iqtmm::CSvgBitmapLoaderComp</a>
+, <a class="el" href="classiqtmm_1_1_c_media_loader_comp.html#abfe262925b385db6acd4c72ba1cf0cd3a3a42aedf094e46ddd36ccb2f540f419b">iqtmm::CMediaLoaderComp</a>
 </li>
 <li>MI_BAD_FORMAT
 : <a class="el" href="classiqtmm_1_1_c_media_loader_comp.html#abfe262925b385db6acd4c72ba1cf0cd3a9207dd4779261f20991d0a35f62b13a5">iqtmm::CMediaLoaderComp</a>
@@ -258,8 +270,8 @@
 : <a class="el" href="classiqtmm_1_1_c_svg_bitmap_loader_comp.html#ada050c80d54608502eac377685442414af10d7a8e0c0328f1484c439b67cfcc45">iqtmm::CSvgBitmapLoaderComp</a>
 </li>
 <li>MI_CANNOT_CREATE_ELEMENT
-: <a class="el" href="classihotf_1_1_c_visual_hotfolder_workflow_comp.html#aef3922c988e971d564a955ffb887aa02a4c91f8c3b3a94e6f9b64bfbbd1adc145">ihotf::CVisualHotfolderWorkflowComp</a>
-, <a class="el" href="classicmpstr_1_1_c_visual_registry.html#a12990af2da6dc5fcb708ec39d3747f4aac1fab72877a37ca1f0ab6b3936a6e4a3">icmpstr::CVisualRegistry</a>
+: <a class="el" href="classicmpstr_1_1_c_visual_registry.html#a12990af2da6dc5fcb708ec39d3747f4aac1fab72877a37ca1f0ab6b3936a6e4a3">icmpstr::CVisualRegistry</a>
+, <a class="el" href="classihotf_1_1_c_visual_hotfolder_workflow_comp.html#aef3922c988e971d564a955ffb887aa02a4c91f8c3b3a94e6f9b64bfbbd1adc145">ihotf::CVisualHotfolderWorkflowComp</a>
 </li>
 <li>MI_CANNOT_READ_DYNAMIC_PARAMS
 : <a class="el" href="classihotf_1_1_c_hotfolder_loader_comp.html#ad7d06d35a1cbd2df0a7e5680ee0165f7a499e1ff10c7dcd34442b0473102c9f7b">ihotf::CHotfolderLoaderComp</a>
@@ -292,8 +304,8 @@
 : <a class="el" href="classifileproc_1_1_c_file_info_copy_comp.html#ac2dd887626237cc16a13320e4705080aa428a6d4924b0027f0e18c7acb835820e">ifileproc::CFileInfoCopyComp</a>
 </li>
 <li>MI_FILE_NOT_EXIST
-: <a class="el" href="classiqtmm_1_1_c_media_loader_comp.html#abfe262925b385db6acd4c72ba1cf0cd3a0788b7124d3bb82f4fbbe0b818ebfb98">iqtmm::CMediaLoaderComp</a>
-, <a class="el" href="classiqtmm_1_1_c_svg_bitmap_loader_comp.html#ada050c80d54608502eac377685442414ae59647782c05f5326569833d51e24ac9">iqtmm::CSvgBitmapLoaderComp</a>
+: <a class="el" href="classiqtmm_1_1_c_svg_bitmap_loader_comp.html#ada050c80d54608502eac377685442414ae59647782c05f5326569833d51e24ac9">iqtmm::CSvgBitmapLoaderComp</a>
+, <a class="el" href="classiqtmm_1_1_c_media_loader_comp.html#abfe262925b385db6acd4c72ba1cf0cd3a0788b7124d3bb82f4fbbe0b818ebfb98">iqtmm::CMediaLoaderComp</a>
 </li>
 <li>MI_INPUT_OPEN
 : <a class="el" href="classifileproc_1_1_c_file_info_copy_comp.html#ac2dd887626237cc16a13320e4705080aa1aacee068dd24988095abf3e448f0f61">ifileproc::CFileInfoCopyComp</a>
@@ -352,8 +364,8 @@
 : <a class="el" href="classicmpstr_1_1_t_object_shape_base.html#a389d48028358fc515c793acce9bccbec">icmpstr::TObjectShapeBase&lt; GraphicsItemClass, ObjectClass &gt;</a>
 </li>
 <li>MoveCenterTo()
-: <a class="el" href="classiedge_1_1_c_edge_line.html#a86725343db2e08c12c528ca88d0799b7">iedge::CEdgeLine</a>
-, <a class="el" href="classiedge_1_1_c_edge_line_container.html#a3dbe751f3bebc2712b7b0cabd09791d8">iedge::CEdgeLineContainer</a>
+: <a class="el" href="classiedge_1_1_c_edge_line_container.html#a3dbe751f3bebc2712b7b0cabd09791d8">iedge::CEdgeLineContainer</a>
+, <a class="el" href="classiedge_1_1_c_edge_line.html#a86725343db2e08c12c528ca88d0799b7">iedge::CEdgeLine</a>
 , <a class="el" href="classicmpstr_1_1_c_visual_registry_element.html#a4bced32048f834a04d0a2d40fc81548d">icmpstr::CVisualRegistryElement</a>
 </li>
 <li>TM_CONTINUOUS
