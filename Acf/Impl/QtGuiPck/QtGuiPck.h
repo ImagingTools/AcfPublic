@@ -31,7 +31,6 @@
 #include "iqtgui/CDialogApplicationComp.h"
 #include "iqtgui/CSplashScreenGuiComp.h"
 #include "iqtgui/CComposedGuiComp.h"
-#include "iqtgui/CLogGuiComp.h"
 #include "iqtgui/CIconProviderComp.h" 
 #include "iqtgui/CFileDialogLoaderComp.h"
 #include "iqtgui/CDockWidgetGuiComp.h"
@@ -81,6 +80,9 @@
 #include "iqtdoc/CHtmlHelpGuiComp.h"
 #include "iqtdoc/CHtmlHelpViewerComp.h"
 
+#include "iloggui/CLogGuiComp.h"
+#include "iloggui/CTextLogGuiComp.h"
+
 
 /**
 	Standard Qt package.
@@ -92,7 +94,6 @@ namespace QtGuiPck
 typedef iqtgui::CGuiApplicationComp GuiApplication;
 typedef iqtgui::CDialogApplicationComp DialogApplication;
 typedef iqtgui::CSplashScreenGuiComp SplashScreen;
-typedef iqtgui::CLogGuiComp LogGui;
 typedef iqtgui::CComposedGuiComp ComposedGui;
 typedef iqtgui::CIconProviderComp IconProvider;
 typedef iqtgui::CFileDialogLoaderComp FileDialogLoader;
@@ -142,6 +143,9 @@ typedef icomp::TModelCompWrap<iqtdoc::CSingleDocumentWorkspaceGuiComp> SingleDoc
 typedef icomp::TModelCompWrap<iqtdoc::CMultiDocumentWorkspaceGuiComp> MultiDocWorkspaceGui;
 typedef iqtdoc::CHtmlHelpGuiComp HtmlHelpGui;
 typedef iqtdoc::CHtmlHelpViewerComp HtmlHelpViewer;
+
+typedef iloggui::CLogGuiComp LogGui;
+typedef iloggui::CTextLogGuiComp TextLogGui;
 
 
 } // namespace QtGuiPck

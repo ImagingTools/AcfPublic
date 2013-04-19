@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef iqtgui_CLogGuiComp_included
-#define iqtgui_CLogGuiComp_included
+#ifndef iloggui_CLogGuiComp_included
+#define iloggui_CLogGuiComp_included
 
 
 // Qt includes
@@ -34,10 +34,11 @@
 #include "ilog/CMessage.h"
 #include "iqtgui/IVisualStatusProvider.h"
 #include "iqtgui/TDesignerGuiObserverCompBase.h"
-#include "iqtgui/Generated/ui_CLogGuiComp.h"
+
+#include "iloggui/Generated/ui_CLogGuiComp.h"
 
 
-namespace iqtgui
+namespace iloggui
 {
 
 
@@ -164,8 +165,8 @@ private:
 };
 
 
-} // namespace iqtgui
+} // namespace iloggui
 
 
-#endif // !iqtgui_CLogGuiComp_included
+#endif // !iloggui_CLogGuiComp_included
 

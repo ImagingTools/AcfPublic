@@ -42,7 +42,7 @@ const QString& CRelativeFileNameParamComp::GetPath() const
 {
 	const QString& relativePath = BaseClass::GetPath();
 
-	if (!relativePath.isEmpty() && m_relativeToCompPtr.IsValid()){
+	if (m_relativeToCompPtr.IsValid()){
 		const QString& basePath = m_relativeToCompPtr->GetPath();
 		if (!basePath.isEmpty()){
 			QDir baseDir(basePath);

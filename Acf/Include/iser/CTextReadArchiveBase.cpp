@@ -137,6 +137,12 @@ bool CTextReadArchiveBase::Process(double& value)
 }
 
 
+bool CTextReadArchiveBase::Process(QByteArray& value)
+{
+	return ProcessInternal(value);
+}
+
+
 bool CTextReadArchiveBase::ProcessData(void* dataPtr, int size)
 {
 	QByteArray text;

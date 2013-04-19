@@ -2388,6 +2388,16 @@
     <namespace>ilog</namespace>
   </compound>
   <compound kind="file">
+    <name>CTextFileLogStreamerComp.h</name>
+    <path>C:/Temp/Acf/Include/ilog/</path>
+    <filename>_c_text_file_log_streamer_comp_8h</filename>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_c_stream_log_comp_base_8h" name="CStreamLogCompBase.h" local="yes" imported="no">ilog/CStreamLogCompBase.h</includes>
+    <class kind="class">ilog::CTextFileLogStreamerComp</class>
+    <namespace>ilog</namespace>
+  </compound>
+  <compound kind="file">
     <name>ilog.h</name>
     <path>C:/Temp/Acf/Include/ilog/</path>
     <filename>ilog_8h</filename>
@@ -2470,6 +2480,28 @@
     <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="yes" imported="no">ilog/IMessageConsumer.h</includes>
     <class kind="class">ilog::TMessageDelegatorComp</class>
     <namespace>ilog</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CLogGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iloggui/</path>
+    <filename>_c_log_gui_comp_8h</filename>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_c_message_container_8h" name="CMessageContainer.h" local="yes" imported="no">ilog/CMessageContainer.h</includes>
+    <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ilog/CMessage.h</includes>
+    <includes id="_i_visual_status_provider_8h" name="IVisualStatusProvider.h" local="yes" imported="no">iqtgui/IVisualStatusProvider.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <class kind="class">iloggui::CLogGuiComp</class>
+    <namespace>iloggui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CTextLogGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iloggui/</path>
+    <filename>_c_text_log_gui_comp_8h</filename>
+    <includes id="_i_message_container_8h" name="IMessageContainer.h" local="yes" imported="no">ilog/IMessageContainer.h</includes>
+    <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ilog/CMessage.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <class kind="class">iloggui::CTextLogGuiComp</class>
+    <namespace>iloggui</namespace>
   </compound>
   <compound kind="file">
     <name>CAkimaInterpolator.h</name>
@@ -4089,18 +4121,6 @@
     <filename>_c_item_delegate_8h</filename>
     <includes id="iqtgui_8h" name="iqtgui.h" local="yes" imported="no">iqtgui/iqtgui.h</includes>
     <class kind="class">iqtgui::CItemDelegate</class>
-    <namespace>iqtgui</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CLogGuiComp.h</name>
-    <path>C:/Temp/Acf/Include/iqtgui/</path>
-    <filename>_c_log_gui_comp_8h</filename>
-    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
-    <includes id="_c_message_container_8h" name="CMessageContainer.h" local="yes" imported="no">ilog/CMessageContainer.h</includes>
-    <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ilog/CMessage.h</includes>
-    <includes id="_i_visual_status_provider_8h" name="IVisualStatusProvider.h" local="yes" imported="no">iqtgui/IVisualStatusProvider.h</includes>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <class kind="class">iqtgui::CLogGuiComp</class>
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
@@ -22990,6 +23010,7 @@
     <class kind="class">ilog::CMessageContainer</class>
     <class kind="class">ilog::CStreamLogCompBase</class>
     <class kind="class">ilog::CTextFileLogComp</class>
+    <class kind="class">ilog::CTextFileLogStreamerComp</class>
     <class kind="class">ilog::ILoggable</class>
     <class kind="class">ilog::IMessageConsumer</class>
     <class kind="class">ilog::IMessageContainer</class>
@@ -23437,6 +23458,89 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>ilog::CTextFileLogStreamerComp</name>
+    <filename>classilog_1_1_c_text_file_log_streamer_comp.html</filename>
+    <base>ilog::CStreamLogCompBase</base>
+    <base>ifile::IFilePersistence</base>
+    <member kind="typedef">
+      <type>CStreamLogCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
+      <anchor>a03eec54d37c32fe0a868b23f3dc1fabb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CTextFileLogStreamerComp</name>
+      <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
+      <anchor>aa8a156d1ed5f6bfc9bb70cbfbb8be896</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOperationSupported</name>
+      <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
+      <anchor>af956e3e965fa41d1b976a36638b4e9da</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>LoadFromFile</name>
+      <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
+      <anchor>aaa8134f1bac5d7d82b84a5612d2a061d</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>SaveToFile</name>
+      <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
+      <anchor>a35f7544be0b8604b60ccb749a1d93042</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
+      <anchor>abb176aead284f00d8a03bc0ce0af5518</anchor>
+      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
+      <anchor>a16e4fbc0896e1631ff2401793b709180</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>WriteText</name>
+      <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
+      <anchor>a8163072c3e58ba4a22d3fa6048b0eaab</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>NewLine</name>
+      <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
+      <anchor>acaab221345d98680943ae46bd75126c9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
+      <anchor>ab4b645c84939f380fcc0bc5f48567c21</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
+      <anchor>a7e520ce2e041e13f7af751c582e352a5</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>ilog::ILoggable</name>
     <filename>classilog_1_1_i_loggable.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
@@ -23703,6 +23807,298 @@
       <anchorfile>classilog_1_1_t_message_delegator_comp.html</anchorfile>
       <anchor>ab77601e186505bcef9e0f26dffefd7a4</anchor>
       <arglist>(const MessagePtr &amp;messagePtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>iloggui</name>
+    <filename>namespaceiloggui.html</filename>
+    <class kind="class">iloggui::CLogGuiComp</class>
+    <class kind="class">iloggui::CTextLogGuiComp</class>
+  </compound>
+  <compound kind="class">
+    <name>iloggui::CLogGuiComp</name>
+    <filename>classiloggui_1_1_c_log_gui_comp.html</filename>
+    <base>TDesignerGuiCompBase&lt; Ui::CLogGuiComp &gt;</base>
+    <base>ilog::CMessageContainer</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CLogGuiComp &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a689ac2f696f90c879838caa2691a1139</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::CMessageContainer</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a90e3909d73dccd9a0e2fa4c1a9b641d3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>EmitAddMessage</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a2d6f12f1f392ba8da020850ef14f0d99</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a814af1f2cca4f93765ae93462c2e5311</anchor>
+      <arglist>(m_slaveMessageContainerCompPtr, m_slaveMessageConsumerCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CLogGuiComp</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>aeba1d40c611db7d2a9ecaec58922944c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="enumeration">
+      <name>ColumnType</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a35c2d73166d9d3a251bc0c85cebfaf40</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CT_ICON</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a35c2d73166d9d3a251bc0c85cebfaf40a61dc16ce660ef51e7cf579e6706c15b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CT_TIME</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a35c2d73166d9d3a251bc0c85cebfaf40a5e31a31076e890f6d46abd21138d2c62</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CT_SOURCE</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a35c2d73166d9d3a251bc0c85cebfaf40aa91ef2c6e1af1ca5a389468ca25d350b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CT_MESSAGE</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a35c2d73166d9d3a251bc0c85cebfaf40afe872c24bae7b4fc25f67290bd508026</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>MessageMode</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>ab4f7ee116ce3e30fd050af573c8b6c20</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MM_INFO</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>ab4f7ee116ce3e30fd050af573c8b6c20a04adfc8cd36e48c8accf6964ced35a20</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MM_WARNING</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>ab4f7ee116ce3e30fd050af573c8b6c20a3aab94fd14c7ed201b7c314fcad9ef9c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MM_ERROR</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>ab4f7ee116ce3e30fd050af573c8b6c20af679c278fd5c9bead5105fc5c45d1010</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MM_ALL</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>ab4f7ee116ce3e30fd050af573c8b6c20a8143df4401b638cd0951ff81c7bb5e8a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>DataRole</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a61b2ece386ba62e2ede244b6d3b1240f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DR_CATEGORY</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a61b2ece386ba62e2ede244b6d3b1240fa9226799d89b8d8669e9e1d0373aef423</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnAddMessage</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>ab5c6e917f4f86308de2b15d90d31dd00</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnMessageModeChanged</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a8120fc5d4002e3c24469b9dc22cb7be9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnClearAction</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>ad8db656e363f4c6b5e6b78c943bcc44a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnExportAction</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a70619e15932003660b0eab83a714a78a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnRemoveMessagesTimer</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a7bc9cd07eed9b34a004a96ddf9af8409</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_FilterText_textChanged</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a6bc2c6b1a74dcbd01bf8d3427fd9bf53</anchor>
+      <arglist>(const QString &amp;filterText)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_FilterClearButton_clicked</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a151ed04105fc60d69dbbaf54656bcbf4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QTreeWidgetItem *</type>
+      <name>CreateGuiItem</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a586b53d81e956577e4b9336655a9f9ba</anchor>
+      <arglist>(const istd::IInformationProvider &amp;message)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QIcon</type>
+      <name>GetCategoryIcon</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a6343064aaeb5357455d574f1fb722bae</anchor>
+      <arglist>(int category) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QString</type>
+      <name>GetCategoryText</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a50dd272161bbaac908c7678c49c4638e</anchor>
+      <arglist>(int category) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsMessageSupported</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a8a1451088a12df96fd0f6cbaa01a6ded</anchor>
+      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddMessage</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a86d0086d416047a7e7824684b23b2008</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a77b30b21f8b5aea82e9ddc136bbe4cc1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>ab388d6e2dc6934112506280fc4ca9768</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>af5494bcbfde5a6f2940553497758ed5b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction *</type>
+      <name>m_infoAction</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a232f459dc92bb0dbc5e74ba1eaf5e256</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction *</type>
+      <name>m_warningAction</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a3bc66e57bce8962a2568bcd408054c0c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction *</type>
+      <name>m_errorAction</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>ad5537eeecc58f98e301410dd29971d6a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction *</type>
+      <name>m_clearAction</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a53e15398089edb7f16106621d6b68d58</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction *</type>
+      <name>m_exportAction</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>af979153783166d073f890580529036e3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iloggui::CTextLogGuiComp</name>
+    <filename>classiloggui_1_1_c_text_log_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CTextLogGuiComp, ilog::IMessageContainer &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CTextLogGuiComp, ilog::IMessageContainer &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiloggui_1_1_c_text_log_gui_comp.html</anchorfile>
+      <anchor>a3e5442c94280c83e3f9534d375c7f912</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiloggui_1_1_c_text_log_gui_comp.html</anchorfile>
+      <anchor>a898c745db1a0e0dd5a3a928d2f70db20</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiloggui_1_1_c_text_log_gui_comp.html</anchorfile>
+      <anchor>ae43ac0e2e9155653cd09604b2d19de70</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiloggui_1_1_c_text_log_gui_comp.html</anchorfile>
+      <anchor>adee7ecc861c2e63fae428974dfea35bf</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -34386,7 +34782,6 @@
     <class kind="class">iqtgui::CImagePropertiesFrameComp</class>
     <class kind="class">iqtgui::CImagePropertyGuiComp</class>
     <class kind="class">iqtgui::CItemDelegate</class>
-    <class kind="class">iqtgui::CLogGuiComp</class>
     <class kind="class">iqtgui::CModelDialogGuiComp</class>
     <class kind="class">iqtgui::CModelEditorGuiComp</class>
     <class kind="class">iqtgui::CObjectPreviewGuiComp</class>
@@ -35936,259 +36331,6 @@
       <anchorfile>classiqtgui_1_1_c_item_delegate.html</anchorfile>
       <anchor>a282d560dada796d24dfece8772eebe4c</anchor>
       <arglist>(QPainter *painter, const QStyleOptionViewItem &amp;option, const QModelIndex &amp;index) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtgui::CLogGuiComp</name>
-    <filename>classiqtgui_1_1_c_log_gui_comp.html</filename>
-    <base>TDesignerGuiCompBase&lt; Ui::CLogGuiComp &gt;</base>
-    <base>ilog::CMessageContainer</base>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CLogGuiComp &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a8c89242334146eb7dd72603bcf2a505c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ilog::CMessageContainer</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ace8384f4e2be36c0a67c6343d5d15cab</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="signal">
-      <type>void</type>
-      <name>EmitAddMessage</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>af03f27e43483d802fe9b859eb8e67ce4</anchor>
-      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a9d20a84109567bcd39cddc09ab1ae7cb</anchor>
-      <arglist>(m_slaveMessageContainerCompPtr, m_slaveMessageConsumerCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CLogGuiComp</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>aeff1c28dc515350045b132af9bccf162</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="enumeration">
-      <name>ColumnType</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ad9e797c367cb906a3707367d7de04baa</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CT_ICON</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ad9e797c367cb906a3707367d7de04baaa2d77e8a6298e0c3628469d108c571c25</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CT_TIME</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ad9e797c367cb906a3707367d7de04baaa0d9feb4cfe7cc9f6c9e143ae8eefee57</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CT_SOURCE</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ad9e797c367cb906a3707367d7de04baaabe22f3653a1ef4c9d4126199328f57d2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CT_MESSAGE</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ad9e797c367cb906a3707367d7de04baaa0a2b769ce663820be3e3f34ffb294a69</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>MessageMode</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a0d5f0ce82cd63c410f2f7f5fe7a84954</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MM_INFO</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a0d5f0ce82cd63c410f2f7f5fe7a84954a8f8634cc0429aca4f1f028116254904d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MM_WARNING</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a0d5f0ce82cd63c410f2f7f5fe7a84954aae612defc864130777a65445450026b3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MM_ERROR</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a0d5f0ce82cd63c410f2f7f5fe7a84954a755a290f8942214d8464b349a159d7a7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MM_ALL</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a0d5f0ce82cd63c410f2f7f5fe7a84954a0d455854ab7d5c277c5345728b6d518e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>DataRole</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ae690e3b2dfa33b48acf1c7513d42ae14</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DR_CATEGORY</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ae690e3b2dfa33b48acf1c7513d42ae14ac2a7717d903429e38286ff80005ec858</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnAddMessage</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ae556232d71c38bc5eaef0bca7a59ca39</anchor>
-      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnMessageModeChanged</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a47403ce2904f27d0a6ef3a1f193a7acf</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnClearAction</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ad96063bc481cedd226e746a125a671a2</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnExportAction</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>acc4ebe610e35d3894f18c2f238f2d0c8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnRemoveMessagesTimer</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a0d54dabfbd90b0fdd8aff45f552b83fb</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_FilterText_textChanged</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a508409760326f872536d9a9616d5af90</anchor>
-      <arglist>(const QString &amp;filterText)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_FilterClearButton_clicked</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a83dccae885e40a5fdd9b5ddd6bdb8837</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QTreeWidgetItem *</type>
-      <name>CreateGuiItem</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a601dad58f6070b29493518478ab7f8e7</anchor>
-      <arglist>(const istd::IInformationProvider &amp;message)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>QIcon</type>
-      <name>GetCategoryIcon</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a2ba7b88befe2a8089e7b945f42fc1acb</anchor>
-      <arglist>(int category) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>QString</type>
-      <name>GetCategoryText</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a8c18a841730bc336a27d48570cbd66c1</anchor>
-      <arglist>(int category) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsMessageSupported</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a372291a17581ea2b9f675783f3deabbe</anchor>
-      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AddMessage</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a8938af6f0fea58d669f248c36c94f59e</anchor>
-      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>aca39e9db4d7598da61351ccc6a2c8f50</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a272cf86b036e7a4411d2a809f950dd59</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a7f8ed97803c69fe3de8863b25881b922</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QAction *</type>
-      <name>m_infoAction</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a98860c4c7f7db9e41527e2223ab07366</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QAction *</type>
-      <name>m_warningAction</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a613a9b6e8d533aab49908418f5598d6f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QAction *</type>
-      <name>m_errorAction</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>acae48f6a282b407013061115c92936f3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QAction *</type>
-      <name>m_clearAction</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a09b464efdd211a6439f0954cbf5180c9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QAction *</type>
-      <name>m_exportAction</name>
-      <anchorfile>classiqtgui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a562431876996d842a9168ef1ed1b0a1d</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -40084,6 +40226,13 @@
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
       <anchor>af83f1151321f71053c0e48f177600e2f</anchor>
       <arglist>(double &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
+      <anchor>adb90ebc35d1e26aa4db0efe6e9eb97b5</anchor>
+      <arglist>(QByteArray &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>

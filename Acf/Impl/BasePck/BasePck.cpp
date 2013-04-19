@@ -96,6 +96,11 @@ I_EXPORT_COMPONENT(
 			"Message Consumer" IM_CATEGORY(I_SERVICE) IM_TAG("Text File Log"));
 
 I_EXPORT_COMPONENT(
+			TextFileLogStreamer,
+			"Simple text file log serializer",
+			"Log Text Write Serialize" IM_CATEGORY(I_SERVICE) IM_TAG("Text File Log Write"));
+
+I_EXPORT_COMPONENT(
 			Uuid,
 			"Unique identifier",
 			"Unique Identifier UUID Generated" IM_CATEGORY(I_SERVICE));

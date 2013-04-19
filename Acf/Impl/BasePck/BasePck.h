@@ -29,6 +29,7 @@
 #include "ilog/CTextFileLogComp.h"
 #include "ilog/CConsoleLogComp.h"
 #include "ilog/CLogComp.h"
+#include "ilog/CTextFileLogStreamerComp.h"
 
 #include "ifile/TFileSerializerComp.h"
 #include "ifile/CXmlFileReadArchive.h"
@@ -101,6 +102,7 @@ namespace BasePck
 typedef ilog::CTextFileLogComp TextFileLog;
 typedef ilog::CConsoleLogComp ConsoleLog;
 typedef icomp::TModelCompWrap<ilog::CLogComp> Log;
+typedef ilog::CTextFileLogStreamerComp TextFileLogStreamer;
 
 typedef ifile::TFileSerializerComp<ifile::CXmlFileReadArchive, ifile::CXmlFileWriteArchive> XmlFileSerializer;
 typedef ifile::TFileSerializerComp<ifile::CFileReadArchive, ifile::CFileWriteArchive> BinaryFileSerializer;
