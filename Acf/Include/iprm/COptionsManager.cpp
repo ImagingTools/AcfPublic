@@ -152,6 +152,14 @@ bool COptionsManager::IsOptionEnabled(int index) const
 }
 
 
+// reimplemented (iprm::IOptionsManager)
+
+int COptionsManager::GetIndexOperationFlags(int /*index*/) const
+{
+	return OOF_SUPPORT_INSERT | OOF_SUPPORT_DELETE;
+}
+
+
 bool COptionsManager::SetOptionEnabled(int index, bool isEnabled)
 {
 	Q_ASSERT(index >= 0);
@@ -177,8 +185,6 @@ bool COptionsManager::SetOptionEnabled(int index, bool isEnabled)
 	return true;
 }
 
-
-// reimplemented (iprm::IOptionsManager)
 
 bool COptionsManager::RemoveOption(int index)
 {

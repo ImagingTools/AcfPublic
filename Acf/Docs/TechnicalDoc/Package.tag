@@ -29773,11 +29773,11 @@
       <anchor>a28b2826d589a4a1596ff99c2da7e59e0</anchor>
       <arglist>(const iprm::IOptionsList *slaveSelectionConstraintsPtr)</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
       <name>ResetOptions</name>
       <anchorfile>classiprm_1_1_c_options_manager.html</anchorfile>
-      <anchor>ad3a6f197494388eeb1926867eae0e443</anchor>
+      <anchor>abf0ed393891f1e4aba68f657256d2717</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -29821,6 +29821,13 @@
       <anchorfile>classiprm_1_1_c_options_manager.html</anchorfile>
       <anchor>a5beb6069c3fc941bb5c0eef191a30990</anchor>
       <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetIndexOperationFlags</name>
+      <anchorfile>classiprm_1_1_c_options_manager.html</anchorfile>
+      <anchor>a56b9a32eccb6f10337bf51b7cd9f2a22</anchor>
+      <arglist>(int index=-1) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -30756,6 +30763,49 @@
       <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
       <anchor>a8e1c581835bcc37db3e25212902013ccaa89e24c84d49356fdead922551e903dc</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <name>OptionOperationFlags</name>
+      <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
+      <anchor>a791cc29e0b7b69402a02568a15f6f471</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>OOF_COUNT_FIXED</name>
+      <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
+      <anchor>a791cc29e0b7b69402a02568a15f6f471aa6a7a3cf9ab06324f3687e5568ae8a68</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>OOF_SUPPORT_RENAME</name>
+      <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
+      <anchor>a791cc29e0b7b69402a02568a15f6f471a85be700055a1acf79b36ae9c62c90e15</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>OOF_SUPPORT_INSERT</name>
+      <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
+      <anchor>a791cc29e0b7b69402a02568a15f6f471ab53a89a3c770874eb45d2b6dbedcb841</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>OOF_SUPPORT_DELETE</name>
+      <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
+      <anchor>a791cc29e0b7b69402a02568a15f6f471a307d6fbae732ea896d133f8f17960040</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>OOF_SUPPORT_SWAP</name>
+      <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
+      <anchor>a791cc29e0b7b69402a02568a15f6f471adc2d45122aef2374df191961d1d69f20</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetIndexOperationFlags</name>
+      <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
+      <anchor>a86bf3ccea292b0c07bc4c35f826efcf2</anchor>
+      <arglist>(int index=-1) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
