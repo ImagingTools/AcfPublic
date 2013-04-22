@@ -70,6 +70,7 @@ Defines</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Register interface extractor for some subelement.  <a href="#ab2b90c5b1e9ccfb347bfdcac76cea2fd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_component_base_8h.html#a066dd1fa9d7f8ae60350f54e5fe07f29">I_REGISTER_SUBELEMENT_INTERFACE_T</a>(ElementName, InterfaceType, extractorFunction)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Register interface extractor for some subelement with template extractor function.  <a href="#a066dd1fa9d7f8ae60350f54e5fe07f29"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_component_base_8h.html#a91a1c623c0ea9f2fb0a37e19e1280f09">I_TFACT</a>(interfaceType, member)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_component_base_8h.html#a692ec682602616b4f635745d992efccf">I_ASSIGN_BASE</a>(member, id, description, isObligatory)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to assign value for single parameter (attribute, reference or factory).  <a href="#a692ec682602616b4f635745d992efccf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_component_base_8h.html#a5492f482a2ce21fb20030ccd94ca4b88">I_ASSIGN_MULTI_BASE</a>(member, id, description, isObligatory, defaultValue)</td></tr>
@@ -135,7 +136,7 @@ Functions</h2></td></tr>
 </pre></div>
 <p>Used to assign value for single parameter (attribute, reference or factory). </p>
 
-<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00291">291</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00295">295</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
 
 </div>
 </div>
@@ -186,7 +187,7 @@ Functions</h2></td></tr>
 </pre></div>
 <p>Used to assign value for multiply parameters (attributes, references or factories). </p>
 
-<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00310">310</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00314">314</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
 
 </div>
 </div>
@@ -227,7 +228,7 @@ Functions</h2></td></tr>
 </pre></div>
 <p>Used to assign value for overloaded attributes or references. </p>
 
-<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00416">416</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00420">420</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
 
 </div>
 </div>
@@ -395,7 +396,7 @@ Functions</h2></td></tr>
 </pre></div>
 <p>Used to assign value for single parameter with template type (attribute, reference or factory). </p>
 
-<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00364">364</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00368">368</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
 
 </div>
 </div>
@@ -446,7 +447,7 @@ Functions</h2></td></tr>
 </pre></div>
 <p>Used to assign value for multiply parameters with template type (attributes, references or factories). </p>
 
-<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00380">380</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00384">384</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
 
 </div>
 </div>
@@ -487,7 +488,39 @@ Functions</h2></td></tr>
 </pre></div>
 <p>Used to assign value for overloaded attributes or references. </p>
 
-<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00425">425</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00429">429</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a91a1c623c0ea9f2fb0a37e19e1280f09"></a><!-- doxytag: member="CComponentBase.h::I_TFACT" ref="a91a1c623c0ea9f2fb0a37e19e1280f09" args="(interfaceType, member)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I_TFACT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">interfaceType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">member&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<b>Value:</b><div class="fragment"><pre class="fragment"><span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_t_factory_member.html" title="Factory of components used as component member.">icomp::TFactoryMember&lt;interfaceType&gt;</a> member##_Type;\
+       typedef <span class="keyword">typename</span> <a class="code" href="classicomp_1_1_c_factory_attribute.html" title="Special attribute used to store referenced component ID.">icomp::TFactoryMember&lt;interfaceType&gt;::AttributeType</a> member##_AttrType;\
+       icomp::TFactoryMember&lt;interfaceType&gt; member;
+</pre></div>
+<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00278">278</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
 
 </div>
 </div>
@@ -512,7 +545,7 @@ template&lt;class Dest &gt; </div>
 <p>Cast to specified interface trying to use component interface query. </p>
 <p>It extends standard dynamic_cast functinality when you use composed components. </p>
 
-<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00436">436</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00440">440</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
 
 <p>References <a class="el" href="classicomp_1_1_i_component.html#ac081336b0e23bf323972601368910213">icomp::IComponent::GetInterface()</a>, <a class="el" href="classicomp_1_1_i_component.html#adca938957e64be16768c0cf32c4bf1e1">icomp::IComponent::GetParentComponent()</a>, and <a class="el" href="istd_8h_source.html#l00061">NULL</a>.</p>
 
@@ -539,7 +572,7 @@ template&lt;class Dest &gt; </div>
 <p>It extends standard dynamic_cast functinality when you use composed components.</p>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
 
-<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00461">461</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00465">465</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
 
 <p>References <a class="el" href="classicomp_1_1_i_component.html#ac081336b0e23bf323972601368910213">icomp::IComponent::GetInterface()</a>, <a class="el" href="classicomp_1_1_i_component.html#adca938957e64be16768c0cf32c4bf1e1">icomp::IComponent::GetParentComponent()</a>, and <a class="el" href="istd_8h_source.html#l00061">NULL</a>.</p>
 

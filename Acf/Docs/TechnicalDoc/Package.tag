@@ -1064,6 +1064,13 @@
     </member>
     <member kind="define">
       <type>#define</type>
+      <name>I_TFACT</name>
+      <anchorfile>_c_component_base_8h.html</anchorfile>
+      <anchor>a91a1c623c0ea9f2fb0a37e19e1280f09</anchor>
+      <arglist>(interfaceType, member)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
       <name>I_ASSIGN_BASE</name>
       <anchorfile>_c_component_base_8h.html</anchorfile>
       <anchor>a692ec682602616b4f635745d992efccf</anchor>
@@ -1956,6 +1963,8 @@
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_c_auto_persistence_comp_8h</filename>
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
+    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
@@ -20752,12 +20761,27 @@
     <name>ifile::CAutoPersistenceComp</name>
     <filename>classifile_1_1_c_auto_persistence_comp.html</filename>
     <base>icomp::CComponentBase</base>
+    <base protection="protected">imod::CSingleModelObserverBase</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
       <anchor>ad6cca8229f651bdf1501961558f36172</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
+      <anchor>af1a234862731074648d76dcf9b4a1e09</anchor>
+      <arglist>(m_objectModelCompPtr, m_objectCompPtr, false)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
+      <anchor>a4754be947328fe820ba24ea0fc798b4f</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
