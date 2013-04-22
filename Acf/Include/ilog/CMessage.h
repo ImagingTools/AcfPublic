@@ -29,8 +29,7 @@
 
 // ACF includes
 #include "istd/IInformationProvider.h"
-
-#include "iser/ISerializable.h"
+#include "iser/IObject.h"
 
 
 namespace ilog
@@ -42,7 +41,7 @@ namespace ilog
 */
 class CMessage:
 			virtual public istd::IInformationProvider,
-			virtual public iser::ISerializable
+			virtual public iser::IObject
 {
 public:
 	CMessage();
@@ -64,6 +63,9 @@ public:
 	virtual QString GetInformationDescription() const;
 	virtual QString GetInformationSource() const;
 	virtual int GetInformationFlags() const;
+
+	// reimplemented (iser::IObject)
+	virtual QByteArray GetFactoryId() const;
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);

@@ -25,7 +25,7 @@
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
-
+#include "istd/CClassInfo.h"
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
 
@@ -89,6 +89,14 @@ void CMessage::SetSource(const QString& source)
 
 		m_source = source;
 	}
+}
+
+
+// reimplemented (iser::IObject)
+
+QByteArray CMessage::GetFactoryId() const
+{
+	return istd::CClassInfo::GetName<CMessage>();
 }
 
 

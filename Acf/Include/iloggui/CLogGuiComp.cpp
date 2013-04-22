@@ -141,6 +141,7 @@ QString CLogGuiComp::GetCategoryText(int category) const
 	}
 }
 
+
 // reimplemented (ilog::IMessageConsumer)
 
 bool CLogGuiComp::IsMessageSupported(

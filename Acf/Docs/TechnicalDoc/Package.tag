@@ -2363,7 +2363,7 @@
     <path>C:/Temp/Acf/Include/ilog/</path>
     <filename>_c_message_8h</filename>
     <includes id="_i_information_provider_8h" name="IInformationProvider.h" local="yes" imported="no">istd/IInformationProvider.h</includes>
-    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
     <class kind="class">ilog::CMessage</class>
     <namespace>ilog</namespace>
   </compound>
@@ -2373,6 +2373,10 @@
     <filename>_c_message_container_8h</filename>
     <includes id="_i_information_provider_8h" name="IInformationProvider.h" local="yes" imported="no">istd/IInformationProvider.h</includes>
     <includes id="_t_hierarchical_base_8h" name="THierarchicalBase.h" local="yes" imported="no">istd/THierarchicalBase.h</includes>
+    <includes id="_t_composed_factory_8h" name="TComposedFactory.h" local="yes" imported="no">istd/TComposedFactory.h</includes>
+    <includes id="_t_single_factory_8h" name="TSingleFactory.h" local="yes" imported="no">istd/TSingleFactory.h</includes>
+    <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
+    <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
     <includes id="_i_message_container_8h" name="IMessageContainer.h" local="yes" imported="no">ilog/IMessageContainer.h</includes>
     <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="yes" imported="no">ilog/IMessageConsumer.h</includes>
     <class kind="class">ilog::CMessageContainer</class>
@@ -23113,7 +23117,7 @@
     <name>ilog::CMessage</name>
     <filename>classilog_1_1_c_message.html</filename>
     <base virtualness="virtual">istd::IInformationProvider</base>
-    <base virtualness="virtual">iser::ISerializable</base>
+    <base virtualness="virtual">iser::IObject</base>
     <member kind="function">
       <type></type>
       <name>CMessage</name>
@@ -23189,6 +23193,13 @@
       <name>GetInformationFlags</name>
       <anchorfile>classilog_1_1_c_message.html</anchorfile>
       <anchor>a09acb35d4402f4da8c81e9926b40c723</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>aaaa6a7249836d96d9583dba4e37f34fc</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -23357,6 +23368,13 @@
       <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
       <anchor>a05d8995c947602a97f7c5f54c9abd32d</anchor>
       <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>RegisterMessageType</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>a72de740600619759bababeda00bdff30</anchor>
+      <arglist>(const QByteArray &amp;messageTypeId=QByteArray())</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -24107,8 +24125,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiloggui_1_1_c_text_log_gui_comp.html</anchorfile>
-      <anchor>a898c745db1a0e0dd5a3a928d2f70db20</anchor>
-      <arglist>()</arglist>
+      <anchor>a572ca9a0eae55013b7b193431e180be8</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -24122,6 +24140,13 @@
       <name>OnGuiDestroyed</name>
       <anchorfile>classiloggui_1_1_c_text_log_gui_comp.html</anchorfile>
       <anchor>adee7ecc861c2e63fae428974dfea35bf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiloggui_1_1_c_text_log_gui_comp.html</anchorfile>
+      <anchor>a765f58a84765d24a57ea60735ff517a3</anchor>
       <arglist>()</arglist>
     </member>
   </compound>

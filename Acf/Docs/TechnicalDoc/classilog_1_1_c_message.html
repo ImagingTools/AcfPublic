@@ -38,7 +38,7 @@
 <div class="title">ilog::CMessage Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ilog::CMessage" --><!-- doxytag: inherits="istd::IInformationProvider,iser::ISerializable" -->
+<!-- doxytag: class="ilog::CMessage" --><!-- doxytag: inherits="istd::IInformationProvider,iser::IObject" -->
 <p>Basic implementation of the <a class="el" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a> interface.  
  <a href="classilog_1_1_c_message.html#details">More...</a></p>
 
@@ -49,11 +49,12 @@ Inheritance diagram for ilog::CMessage:</div>
  <div class="center">
   <img src="classilog_1_1_c_message.png" usemap="#ilog::CMessage_map" alt=""/>
   <map id="ilog::CMessage_map" name="ilog::CMessage_map">
-<area href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object." alt="istd::IInformationProvider" shape="rect" coords="0,112,151,136"/>
+<area href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object." alt="istd::IInformationProvider" shape="rect" coords="0,168,151,192"/>
+<area href="classiser_1_1_i_object.html" title="Common interface for factorisable model objects." alt="iser::IObject" shape="rect" coords="161,168,312,192"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,112,151,136"/>
 <area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="161,112,312,136"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,151,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,56,151,80"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="161,56,312,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,151,24"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="161,0,312,24"/>
 </map>
  </div></div>
@@ -79,6 +80,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the source of the information.  <a href="#a1101a384ad237ce3072d793927b697ef"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_message.html#a09acb35d4402f4da8c81e9926b40c723">GetInformationFlags</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flags of the information.  <a href="#a09acb35d4402f4da8c81e9926b40c723"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_message.html#aaaa6a7249836d96d9583dba4e37f34fc">GetFactoryId</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_message.html#a5811124e2787060112a964483dd2c9db">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a5811124e2787060112a964483dd2c9db"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_message.html#a76afdc8bbbab808ef216559367deea3f">CopyFrom</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;object, <a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS)</td></tr>
@@ -97,7 +99,7 @@ Protected Attributes</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Basic implementation of the <a class="el" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a> interface. </p>
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00021">21</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00020">20</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a0fff68ff01b65a0b770d827b49a47c69"></a><!-- doxytag: member="ilog::CMessage::CMessage" ref="a0fff68ff01b65a0b770d827b49a47c69" args="()" -->
 <div class="memitem">
@@ -221,6 +223,24 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aaaa6a7249836d96d9583dba4e37f34fc"></a><!-- doxytag: member="ilog::CMessage::GetFactoryId" ref="aaaa6a7249836d96d9583dba4e37f34fc" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QByteArray ilog::CMessage::GetFactoryId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classiser_1_1_i_object.html#abae3ddcb3be9fcd24ec21b87445e5d7e">iser::IObject</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a84640ff7ea2b0e773f94903981e006b4"></a><!-- doxytag: member="ilog::CMessage::GetInformationCategory" ref="a84640ff7ea2b0e773f94903981e006b4" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -240,9 +260,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classistd_1_1_i_information_provider.html#aff4b561f2d27eb0968f82c06e9f4ccb2">istd::IInformationProvider</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00074">74</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00076">76</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>References <a class="el" href="_c_message_8h_source.html#l00054">m_category</a>.</p>
+<p>References <a class="el" href="_c_message_8h_source.html#l00056">m_category</a>.</p>
 
 </div>
 </div>
@@ -265,9 +285,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classistd_1_1_i_information_provider.html#a1bc354203a118ec6e2fde585d8b1f2af">istd::IInformationProvider</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00086">86</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00088">88</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>References <a class="el" href="_c_message_8h_source.html#l00056">m_text</a>.</p>
+<p>References <a class="el" href="_c_message_8h_source.html#l00058">m_text</a>.</p>
 
 </div>
 </div>
@@ -290,9 +310,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classistd_1_1_i_information_provider.html#a12942cf75ec0a5dcbffeb002ac54694c">istd::IInformationProvider</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00098">98</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00100">100</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>References <a class="el" href="_c_message_8h_source.html#l00058">m_flags</a>.</p>
+<p>References <a class="el" href="_c_message_8h_source.html#l00060">m_flags</a>.</p>
 
 </div>
 </div>
@@ -315,9 +335,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classistd_1_1_i_information_provider.html#acc2814cc1acd8063451bd125031e55d5">istd::IInformationProvider</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00080">80</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00082">82</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>References <a class="el" href="_c_message_8h_source.html#l00055">m_id</a>.</p>
+<p>References <a class="el" href="_c_message_8h_source.html#l00057">m_id</a>.</p>
 
 </div>
 </div>
@@ -340,9 +360,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classistd_1_1_i_information_provider.html#a5d9a8e363087d8a769b506e323bc8cf6">istd::IInformationProvider</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00092">92</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00094">94</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>References <a class="el" href="_c_message_8h_source.html#l00057">m_source</a>.</p>
+<p>References <a class="el" href="_c_message_8h_source.html#l00059">m_source</a>.</p>
 
 </div>
 </div>
@@ -365,9 +385,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classistd_1_1_i_information_provider.html#a20f38eec5cd18588d78853cb0edc50c5">istd::IInformationProvider</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00068">68</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00070">70</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>References <a class="el" href="_c_message_8h_source.html#l00060">m_timeStamp</a>.</p>
+<p>References <a class="el" href="_c_message_8h_source.html#l00062">m_timeStamp</a>.</p>
 
 </div>
 </div>
@@ -457,9 +477,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00054">54</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00056">56</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00074">GetInformationCategory()</a>.</p>
+<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00076">GetInformationCategory()</a>.</p>
 
 </div>
 </div>
@@ -474,9 +494,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00058">58</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00060">60</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00098">GetInformationFlags()</a>.</p>
+<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00100">GetInformationFlags()</a>.</p>
 
 </div>
 </div>
@@ -491,9 +511,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00055">55</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00057">57</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00080">GetInformationId()</a>.</p>
+<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00082">GetInformationId()</a>.</p>
 
 </div>
 </div>
@@ -508,9 +528,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00057">57</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00059">59</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00092">GetInformationSource()</a>.</p>
+<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00094">GetInformationSource()</a>.</p>
 
 </div>
 </div>
@@ -525,9 +545,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00056">56</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00058">58</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00086">GetInformationDescription()</a>.</p>
+<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00088">GetInformationDescription()</a>.</p>
 
 </div>
 </div>
@@ -542,9 +562,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00060">60</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_8h_source.html#l00062">62</a> of file <a class="el" href="_c_message_8h_source.html">CMessage.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00068">GetInformationTimeStamp()</a>.</p>
+<p>Referenced by <a class="el" href="_c_message_8h_source.html#l00070">GetInformationTimeStamp()</a>.</p>
 
 </div>
 </div>

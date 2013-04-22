@@ -32,7 +32,8 @@
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ilog::CMessageContainer Class Reference</div>  </div>
 </div>
@@ -70,7 +71,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_message_container.html#ae8a5f8bba07f741d2e63cb5242c04e99">CMessageContainer</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_message_container.html#ad37a5e83729c45eebea2fc474199cd93">CMessageContainer</a> (const <a class="el" href="classilog_1_1_c_message_container.html">CMessageContainer</a> &amp;container)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_message_container.html#a5d88edfe065e558983a6da67e865cfc4">AddChildContainer</a> (<a class="el" href="namespaceilog.html#a1fdf995bf4b4b21559fcab437deeff36">IHierarchicalMessageContainer</a> *childContainerPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a child message container to this object.  <a href="#a5d88edfe065e558983a6da67e865cfc4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_message_container.html#a1dc07c720bb746803c997da1956e9a8c">SetSlaveConsumer</a> (<a class="el" href="classilog_1_1_i_message_consumer.html">ilog::IMessageConsumer</a> *consumerPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set slave message consumer.  <a href="#a1dc07c720bb746803c997da1956e9a8c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_message_container.html#aad5f164cd5e2d6f1080e4728e8250d63">SetMaxMessageCount</a> (int maxMessageCount=-1)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set maximal number of messages in the container.  <a href="#aad5f164cd5e2d6f1080e4728e8250d63"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_message_container.html#a7b26c48ed90025b8d23d16ad6c897701">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
@@ -86,11 +89,16 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="namespaceilog.html#a1fdf995bf4b4b21559fcab437deeff36">IHierarchicalMessageContainer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_message_container.html#acad5744316b8736a91cd2bc2d1360152">GetChild</a> (int index) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_message_container.html#a05d8995c947602a97f7c5f54c9abd32d">CopyFrom</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;object, <a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy this object from another one.  <a href="#a05d8995c947602a97f7c5f54c9abd32d"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename MessageType &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_message_container.html#a72de740600619759bababeda00bdff30">RegisterMessageType</a> (const QByteArray &amp;messageTypeId=QByteArray())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a new message type.  <a href="#a72de740600619759bababeda00bdff30"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Basic implementation of a message container. </p>
 
-<p>Definition at line <a class="el" href="_c_message_container_8h_source.html#l00023">23</a> of file <a class="el" href="_c_message_container_8h_source.html">CMessageContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_container_8h_source.html#l00027">27</a> of file <a class="el" href="_c_message_container_8h_source.html">CMessageContainer.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae8a5f8bba07f741d2e63cb5242c04e99"></a><!-- doxytag: member="ilog::CMessageContainer::CMessageContainer" ref="ae8a5f8bba07f741d2e63cb5242c04e99" args="()" -->
 <div class="memitem">
@@ -140,6 +148,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Add a child message container to this object. </p>
+<p>GetMessages returns messages from this container and all its children. </p>
 
 </div>
 </div>
@@ -336,6 +347,32 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a72de740600619759bababeda00bdff30"></a><!-- doxytag: member="ilog::CMessageContainer::RegisterMessageType" ref="a72de740600619759bababeda00bdff30" args="(const QByteArray &amp;messageTypeId=QByteArray())" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MessageType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ilog::CMessageContainer::RegisterMessageType </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>messageTypeId</em> = <code>QByteArray()</code></td><td>)</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Register a new message type. </p>
+<p>Only messages of known (registered) types can be serialized. </p>
+
+<p>Definition at line <a class="el" href="_c_message_container_8h_source.html#l00103">103</a> of file <a class="el" href="_c_message_container_8h_source.html">CMessageContainer.h</a>.</p>
+
+<p>References <a class="el" href="_t_composed_factory_8h_source.html#l00051">istd::TComposedFactory&lt; InterfaceType &gt;::RegisterFactory()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a7b26c48ed90025b8d23d16ad6c897701"></a><!-- doxytag: member="ilog::CMessageContainer::Serialize" ref="a7b26c48ed90025b8d23d16ad6c897701" args="(iser::IArchive &amp;archive)" -->
 <div class="memitem">
 <div class="memproto">
@@ -393,6 +430,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Set slave message consumer. </p>
+<p>All incoming messages will be delegated to this object. </p>
 
 </div>
 </div>
