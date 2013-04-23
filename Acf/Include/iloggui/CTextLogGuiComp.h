@@ -73,7 +73,6 @@ private:
 
 	QTextTableFormat m_tableFormat;
 	QTextTableCellFormat m_okCellFormat;
-	QTextTableCellFormat m_okEvenCellFormat;
 };
 
 
