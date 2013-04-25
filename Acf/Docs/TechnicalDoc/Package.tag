@@ -2033,6 +2033,19 @@
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
+    <name>CFileTreeProviderComp.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_file_tree_provider_comp_8h</filename>
+    <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
+    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_qt_item_model_provider_8h" name="IQtItemModelProvider.h" local="yes" imported="no">ibase/IQtItemModelProvider.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
+    <class kind="class">ifile::CFileTreeProviderComp</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
     <name>CFileTypeInfoComp.h</name>
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_c_file_type_info_comp_8h</filename>
@@ -4042,6 +4055,16 @@
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <includes id="_c_ext_line_edit_8h" name="CExtLineEdit.h" local="yes" imported="no">iqtgui/CExtLineEdit.h</includes>
     <class kind="class">iqtgui::CFileSystemExplorerGuiComp</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CFileTreeProviderGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_c_file_tree_provider_gui_comp_8h</filename>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <includes id="_i_qt_item_model_provider_8h" name="IQtItemModelProvider.h" local="yes" imported="no">ibase/IQtItemModelProvider.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <class kind="class">iqtgui::CFileTreeProviderGuiComp</class>
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
@@ -20746,6 +20769,7 @@
     <class kind="class">ifile::CFileNameParamComp</class>
     <class kind="class">ifile::CFileReadArchive</class>
     <class kind="class">ifile::CFileSerializerCompBase</class>
+    <class kind="class">ifile::CFileTreeProviderComp</class>
     <class kind="class">ifile::CFileTypeInfoComp</class>
     <class kind="class">ifile::CFileWriteArchive</class>
     <class kind="class">ifile::CGeneratedFileNameParamComp</class>
@@ -21126,6 +21150,49 @@
       <anchorfile>classifile_1_1_c_file_serializer_comp_base.html</anchorfile>
       <anchor>aedd53069982927a57948373f2ca17c4f</anchor>
       <arglist>(const QString filePath, bool beQuiet=true) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::CFileTreeProviderComp</name>
+    <filename>classifile_1_1_c_file_tree_provider_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">ibase::IQtItemModelProvider</base>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <base protection="protected">imod::CSingleModelObserverBase</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_file_tree_provider_comp.html</anchorfile>
+      <anchor>a2f23d71c965d34357a11365d3b7a6351</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QAbstractItemModel *</type>
+      <name>GetItemModel</name>
+      <anchorfile>classifile_1_1_c_file_tree_provider_comp.html</anchorfile>
+      <anchor>a82e91926f937e3c75bac70ba9c157e6a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classifile_1_1_c_file_tree_provider_comp.html</anchorfile>
+      <anchor>a5a33de250758a5cbabd736225e1e5bb0</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classifile_1_1_c_file_tree_provider_comp.html</anchorfile>
+      <anchor>a5973c75d161d56e883267cd972d956be</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classifile_1_1_c_file_tree_provider_comp.html</anchorfile>
+      <anchor>a4558ffca9c1b2fe856e20c09c0715470</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -34872,6 +34939,7 @@
     <class kind="class">iqtgui::CFileListProviderGuiComp</class>
     <class kind="class">iqtgui::CFilePersistenceGuiComp</class>
     <class kind="class">iqtgui::CFileSystemExplorerGuiComp</class>
+    <class kind="class">iqtgui::CFileTreeProviderGuiComp</class>
     <class kind="class">iqtgui::CFreeWidgetGuiComp</class>
     <class kind="class">iqtgui::CGuiApplicationComp</class>
     <class kind="class">iqtgui::CGuiComponentBase</class>
@@ -35738,6 +35806,32 @@
       <anchorfile>classiqtgui_1_1_c_file_system_explorer_gui_comp.html</anchorfile>
       <anchor>a1ef1571cc99744eded39e878e8612f83</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CFileTreeProviderGuiComp</name>
+    <filename>classiqtgui_1_1_c_file_tree_provider_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CFileTreeProviderGuiComp, ibase::IQtItemModelProvider &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CFileTreeProviderGuiComp, ibase::IQtItemModelProvider &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_c_file_tree_provider_gui_comp.html</anchorfile>
+      <anchor>a552c5af9c31e01d5993653d3533d60c8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtgui_1_1_c_file_tree_provider_gui_comp.html</anchorfile>
+      <anchor>aab5590df0622688ed0fefa1820a75568</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtgui_1_1_c_file_tree_provider_gui_comp.html</anchorfile>
+      <anchor>ad2d83e40e94c37879a7440a34885079a</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>
   <compound kind="class">

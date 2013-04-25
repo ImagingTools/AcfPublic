@@ -32,6 +32,7 @@
 #include "ifile/CSystemLocationComp.h"
 #include "ifile/CGeneratedFileNameParamComp.h"
 #include "ifile/CFileListProviderComp.h"
+#include "ifile/CFileTreeProviderComp.h"
 #include "ifile/CAutoPersistenceComp.h"
 
 
@@ -47,6 +48,7 @@ typedef icomp::TModelCompWrap<ifile::CRelativeFileNameParamComp> RelativeFileNam
 typedef icomp::TModelCompWrap<ifile::CSystemLocationComp> SystemLocation;
 typedef icomp::TModelCompWrap<ifile::CGeneratedFileNameParamComp> GeneratedFileNameParam;
 typedef icomp::TModelCompWrap<ifile::CFileListProviderComp> FileListProvider;
+typedef icomp::TModelCompWrap<ifile::CFileTreeProviderComp> FileTreeProvider;
 typedef ifile::CAutoPersistenceComp AutoPersistence;
 
 

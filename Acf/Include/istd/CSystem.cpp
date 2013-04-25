@@ -212,7 +212,7 @@ void CSystem::SetTempDirectoryPath(const QString& tempPath)
 
 void CSystem::Sleep(double seconds)
 {
-	CQtThread::usleep((unsigned long)seconds * 1000000);
+	CQtThread::usleep((unsigned long)(seconds * 1000000));
 }
 
 
