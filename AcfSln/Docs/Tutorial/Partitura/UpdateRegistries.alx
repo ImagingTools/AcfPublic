@@ -37,58 +37,30 @@
       </Version>
     </VersionInfos>
   </AcfHeader>
-  <PositionMap count="10">
+  <PositionMap count="6">
     <Element>
       <ComponentName>
-        BitmapLoader
+        Loader
       </ComponentName>
       <X>
-        1050
+        250
       </X>
-      <X>
-        175
-      </X>
-      <Note>
-        
-      </Note>
-    </Element>
-    <Element>
-      <ComponentName>
-        SelectionParamGui
-      </ComponentName>
-      <X>
-        825
-      </X>
-      <X>
-        350
-      </X>
-      <Note>
-        
-      </Note>
-    </Element>
-    <Element>
-      <ComponentName>
-        SnapParamsGui
-      </ComponentName>
-      <X>
-        850
-      </X>
-      <X>
-        600
-      </X>
-      <Note>
-        
-      </Note>
-    </Element>
-    <Element>
-      <ComponentName>
-        BitmapAcquisition
-      </ComponentName>
       <X>
         775
       </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        Registry
+      </ComponentName>
       <X>
-        50
+        525
+      </X>
+      <X>
+        775
       </X>
       <Note>
         
@@ -96,13 +68,13 @@
     </Element>
     <Element>
       <ComponentName>
-        ParamsManager
+        UpdateRegistryLoader
       </ComponentName>
       <X>
-        450
+        525
       </X>
       <X>
-        475
+        650
       </X>
       <Note>
         
@@ -110,13 +82,13 @@
     </Element>
     <Element>
       <ComponentName>
-        SelectableParameter
+        ComplexCopyApplication
       </ComponentName>
       <X>
-        450
+        525
       </X>
       <X>
-        350
+        325
       </X>
       <Note>
         
@@ -124,13 +96,13 @@
     </Element>
     <Element>
       <ComponentName>
-        SnapApplication
+        CopyFilesTree
       </ComponentName>
       <X>
-        450
+        525
       </X>
       <X>
-        175
+        500
       </X>
       <Note>
         
@@ -138,41 +110,13 @@
     </Element>
     <Element>
       <ComponentName>
-        ParamsManagerGui
+        VersionInfo
       </ComponentName>
       <X>
-        850
+        200
       </X>
       <X>
-        475
-      </X>
-      <Note>
-        
-      </Note>
-    </Element>
-    <Element>
-      <ComponentName>
-        SnapParamsGray
-      </ComponentName>
-      <X>
-        175
-      </X>
-      <X>
-        375
-      </X>
-      <Note>
-        
-      </Note>
-    </Element>
-    <Element>
-      <ComponentName>
-        SnapParamsColor
-      </ComponentName>
-      <X>
-        175
-      </X>
-      <X>
-        575
+        325
       </X>
       <Note>
         
