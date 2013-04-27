@@ -68,52 +68,59 @@
 <a name="l00043"></a>00043               I_ASSIGN_MULTI_0(m_filtersAttrPtr, <span class="stringliteral">&quot;Filters&quot;</span>, <span class="stringliteral">&quot;List of filters if no loader is specified&quot;</span>, <span class="keyword">false</span>);
 <a name="l00044"></a>00044        I_END_COMPONENT;
 <a name="l00045"></a>00045 
-<a name="l00046"></a>00046        <span class="comment">// reimplemented (ibase::IQtItemModelProvider)</span>
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keyword">const</span> QAbstractItemModel* <a class="code" href="classifile_1_1_c_file_tree_provider_comp.html#a82e91926f937e3c75bac70ba9c157e6a" title="Get access to the Qt&#39;s item model.">GetItemModel</a>() <span class="keyword">const</span>;
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049 <span class="keyword">protected</span>:
-<a name="l00050"></a>00050        <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifile_1_1_c_file_tree_provider_comp.html#a5a33de250758a5cbabd736225e1e5bb0">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00046"></a><a class="code" href="classifile_1_1_c_file_tree_provider_comp.html#a95cccc9c7a1929f94cf3ecd2de1e2d3b">00046</a>        <span class="keyword">enum</span> <a class="code" href="classifile_1_1_c_file_tree_provider_comp.html#a95cccc9c7a1929f94cf3ecd2de1e2d3b">DataRoles</a>{
+<a name="l00047"></a><a class="code" href="classifile_1_1_c_file_tree_provider_comp.html#a95cccc9c7a1929f94cf3ecd2de1e2d3baa5c35921de843d6d2ccea16528969506">00047</a>               <a class="code" href="classifile_1_1_c_file_tree_provider_comp.html#a95cccc9c7a1929f94cf3ecd2de1e2d3baa5c35921de843d6d2ccea16528969506">DR_PATH</a> = Qt::UserRole + 1
+<a name="l00048"></a>00048        };
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050        <span class="comment">// reimplemented (ibase::IQtItemModelProvider)</span>
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keyword">const</span> QAbstractItemModel* <a class="code" href="classifile_1_1_c_file_tree_provider_comp.html#a82e91926f937e3c75bac70ba9c157e6a" title="Get access to the Qt&#39;s item model.">GetItemModel</a>() <span class="keyword">const</span>;
 <a name="l00052"></a>00052 
-<a name="l00053"></a>00053        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifile_1_1_c_file_tree_provider_comp.html#a5973c75d161d56e883267cd972d956be">OnComponentCreated</a>();
-<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifile_1_1_c_file_tree_provider_comp.html#a4558ffca9c1b2fe856e20c09c0715470">OnComponentDestroyed</a>();
+<a name="l00053"></a>00053 <span class="keyword">protected</span>:
+<a name="l00054"></a>00054        <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
+<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifile_1_1_c_file_tree_provider_comp.html#a5a33de250758a5cbabd736225e1e5bb0">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00056"></a>00056 
-<a name="l00057"></a>00057 <span class="keyword">private</span>:
-<a name="l00063"></a>00063        <span class="keywordtype">bool</span> CreateFileList(<span class="keyword">const</span> QDir&amp; root,
-<a name="l00064"></a>00064               <span class="keyword">const</span> QStringList&amp; nameFilters,
-<a name="l00065"></a>00065               QDir::SortFlags sortSpec,
-<a name="l00066"></a>00066               QStandardItem* parentItemPtr);
-<a name="l00067"></a>00067 
-<a name="l00071"></a>00071        <span class="keywordtype">bool</span> CreateDirectoryList(
-<a name="l00072"></a>00072               <span class="keyword">const</span> QDir&amp; root,
-<a name="l00073"></a>00073               <span class="keyword">const</span> QStringList&amp; nameFilters,
-<a name="l00074"></a>00074               QDir::SortFlags sortSpec,
-<a name="l00075"></a>00075               QStandardItem* parentItemPtr);
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077        <span class="keywordtype">void</span> EnumerateDirectory(
-<a name="l00078"></a>00078               <span class="keyword">const</span> QDir&amp; root,
-<a name="l00079"></a>00079               <span class="keyword">const</span> QStringList&amp; nameFilters,
-<a name="l00080"></a>00080               QDir::SortFlags sortSpec,
-<a name="l00081"></a>00081               QStandardItem* parentItemPtr);
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083 <span class="keyword">private</span>:
-<a name="l00084"></a>00084        I_REF(<a class="code" href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)">ifile::IFileNameParam</a>, m_dirParamCompPtr);
-<a name="l00085"></a>00085        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_dirParamModelCompPtr);
-<a name="l00086"></a>00086        I_REF(<a class="code" href="classifile_1_1_i_file_type_info.html" title="Provide loading and saving of objects.">ifile::IFileTypeInfo</a>, m_fileTypeInfoCompPtr);
-<a name="l00087"></a>00087        I_MULTIATTR(QString, m_filtersAttrPtr);
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089        QStandardItemModel m_itemModel;
-<a name="l00090"></a>00090        QFileIconProvider m_iconProvider;
-<a name="l00091"></a>00091 };
-<a name="l00092"></a>00092 
-<a name="l00093"></a>00093 
-<a name="l00094"></a>00094 } <span class="comment">// namespace ifile</span>
+<a name="l00057"></a>00057        <span class="comment">// pseudo-reimplemented (istd::IChangeable)</span>
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifile_1_1_c_file_tree_provider_comp.html#a4dc4f0b0720791b306337a34f65de80a" title="Callback function for end change event.">OnEndChanges</a>(<span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* changeParamsPtr);
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifile_1_1_c_file_tree_provider_comp.html#a5973c75d161d56e883267cd972d956be">OnComponentCreated</a>();
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifile_1_1_c_file_tree_provider_comp.html#a4558ffca9c1b2fe856e20c09c0715470">OnComponentDestroyed</a>();
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 <span class="keyword">private</span>:
+<a name="l00070"></a>00070        <span class="keywordtype">bool</span> CreateFileList(<span class="keyword">const</span> QDir&amp; root,
+<a name="l00071"></a>00071               <span class="keyword">const</span> QStringList&amp; nameFilters,
+<a name="l00072"></a>00072               QDir::SortFlags sortSpec,
+<a name="l00073"></a>00073               QStandardItem* parentItemPtr);
+<a name="l00074"></a>00074 
+<a name="l00078"></a>00078        <span class="keywordtype">bool</span> CreateDirectoryList(
+<a name="l00079"></a>00079               <span class="keyword">const</span> QDir&amp; root,
+<a name="l00080"></a>00080               <span class="keyword">const</span> QStringList&amp; nameFilters,
+<a name="l00081"></a>00081               QDir::SortFlags sortSpec,
+<a name="l00082"></a>00082               QStandardItem* parentItemPtr);
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084        <span class="keywordtype">void</span> EnumerateDirectory(
+<a name="l00085"></a>00085               <span class="keyword">const</span> QDir&amp; root,
+<a name="l00086"></a>00086               <span class="keyword">const</span> QStringList&amp; nameFilters,
+<a name="l00087"></a>00087               QDir::SortFlags sortSpec,
+<a name="l00088"></a>00088               QStandardItem* parentItemPtr);
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090 <span class="keyword">private</span>:
+<a name="l00091"></a>00091        I_REF(<a class="code" href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)">ifile::IFileNameParam</a>, m_dirParamCompPtr);
+<a name="l00092"></a>00092        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_dirParamModelCompPtr);
+<a name="l00093"></a>00093        I_REF(<a class="code" href="classifile_1_1_i_file_type_info.html" title="Provide loading and saving of objects.">ifile::IFileTypeInfo</a>, m_fileTypeInfoCompPtr);
+<a name="l00094"></a>00094        I_MULTIATTR(QString, m_filtersAttrPtr);
 <a name="l00095"></a>00095 
-<a name="l00096"></a>00096 
-<a name="l00097"></a>00097 <span class="preprocessor">#endif //!ifile_CFileTreeProviderComp_included</span>
-<a name="l00098"></a>00098 <span class="preprocessor"></span>
+<a name="l00096"></a>00096        QStandardItemModel m_itemModel;
+<a name="l00097"></a>00097        QFileIconProvider m_iconProvider;
+<a name="l00098"></a>00098 };
 <a name="l00099"></a>00099 
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101 } <span class="comment">// namespace ifile</span>
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103 
+<a name="l00104"></a>00104 <span class="preprocessor">#endif //!ifile_CFileTreeProviderComp_included</span>
+<a name="l00105"></a>00105 <span class="preprocessor"></span>
+<a name="l00106"></a>00106 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

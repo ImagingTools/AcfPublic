@@ -4063,6 +4063,7 @@
     <filename>_c_file_tree_provider_gui_comp_8h</filename>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_i_qt_item_model_provider_8h" name="IQtItemModelProvider.h" local="yes" imported="no">ibase/IQtItemModelProvider.h</includes>
+    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <class kind="class">iqtgui::CFileTreeProviderGuiComp</class>
     <namespace>iqtgui</namespace>
@@ -21159,6 +21160,18 @@
     <base virtualness="virtual">ibase::IQtItemModelProvider</base>
     <base virtualness="virtual">istd::IChangeable</base>
     <base protection="protected">imod::CSingleModelObserverBase</base>
+    <member kind="enumeration">
+      <name>DataRoles</name>
+      <anchorfile>classifile_1_1_c_file_tree_provider_comp.html</anchorfile>
+      <anchor>a95cccc9c7a1929f94cf3ecd2de1e2d3b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DR_PATH</name>
+      <anchorfile>classifile_1_1_c_file_tree_provider_comp.html</anchorfile>
+      <anchor>a95cccc9c7a1929f94cf3ecd2de1e2d3baa5c35921de843d6d2ccea16528969506</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -21179,6 +21192,13 @@
       <anchorfile>classifile_1_1_c_file_tree_provider_comp.html</anchorfile>
       <anchor>a5a33de250758a5cbabd736225e1e5bb0</anchor>
       <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnEndChanges</name>
+      <anchorfile>classifile_1_1_c_file_tree_provider_comp.html</anchorfile>
+      <anchor>a4dc4f0b0720791b306337a34f65de80a</anchor>
+      <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -35812,12 +35832,46 @@
     <name>iqtgui::CFileTreeProviderGuiComp</name>
     <filename>classiqtgui_1_1_c_file_tree_provider_gui_comp.html</filename>
     <base>TDesignerGuiObserverCompBase&lt; Ui::CFileTreeProviderGuiComp, ibase::IQtItemModelProvider &gt;</base>
+    <base>imod::CMultiModelDispatcherBase</base>
+    <member kind="enumeration">
+      <name>DataRoles</name>
+      <anchorfile>classiqtgui_1_1_c_file_tree_provider_gui_comp.html</anchorfile>
+      <anchor>a86241aa387fee0c3fd3359fe12c0ec16</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DR_PATH</name>
+      <anchorfile>classiqtgui_1_1_c_file_tree_provider_gui_comp.html</anchorfile>
+      <anchor>a86241aa387fee0c3fd3359fe12c0ec16adfa0aba2072655fa211010cfafec9174</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CFileTreeProviderGuiComp, ibase::IQtItemModelProvider &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_c_file_tree_provider_gui_comp.html</anchorfile>
       <anchor>a552c5af9c31e01d5993653d3533d60c8</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtgui_1_1_c_file_tree_provider_gui_comp.html</anchorfile>
+      <anchor>ac425b40b50c1ade99ae770b1df3f155f</anchor>
+      <arglist>(m_currentFileModelCompPtr, m_currentFileCompPtr, false)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtgui_1_1_c_file_tree_provider_gui_comp.html</anchorfile>
+      <anchor>a1925e21ccd95f5d3b91076431cefd5c8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqtgui_1_1_c_file_tree_provider_gui_comp.html</anchorfile>
+      <anchor>a0cc3769bab096100cf0676a8118198d1</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -35832,6 +35886,20 @@
       <anchorfile>classiqtgui_1_1_c_file_tree_provider_gui_comp.html</anchorfile>
       <anchor>ad2d83e40e94c37879a7440a34885079a</anchor>
       <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtgui_1_1_c_file_tree_provider_gui_comp.html</anchorfile>
+      <anchor>a2cd0da6e2fdfd049f232701b216b5b10</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiqtgui_1_1_c_file_tree_provider_gui_comp.html</anchorfile>
+      <anchor>a32cc06f1f68b39704445b22015dc5d94</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">

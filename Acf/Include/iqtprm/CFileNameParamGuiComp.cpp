@@ -154,6 +154,13 @@ void CFileNameParamGuiComp::OnGuiCreated()
 	DirEdit->setLineEdit(lineEdit);
 	DirEdit->setCompleter(NULL);
 
+	if (*m_readOnlyAttrPtr || !*m_filesComboAttrPtr){
+		DirEdit->setStyleSheet(
+			"QComboBox::drop-down {border: none; background-color: transparent;} "
+			"QComboBox::down-arrow {image: none;}"
+			);
+	}
+
 	BaseClass::OnGuiCreated();
 }
 
@@ -292,7 +299,7 @@ void CFileNameParamGuiComp::SetPathToEditor(const QString& path) const
 
 void CFileNameParamGuiComp::MakeSelectionHint(const QString& text) const
 {
-	if (*m_readOnlyAttrPtr){
+	if (*m_readOnlyAttrPtr || !*m_filesComboAttrPtr){
 		return;
 	}
 

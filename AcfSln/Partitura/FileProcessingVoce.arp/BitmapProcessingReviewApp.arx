@@ -1,16 +1,27 @@
 <?xml version="1.0"?>
 <Acf>
   <AcfHeader>
-    <VersionInfos count="2">
+    <VersionInfos count="3">
       <Version>
         <Id>
           0
         </Id>
         <Number>
-          2870
+          2935
         </Number>
         <Description>
           ACF
+        </Description>
+      </Version>
+      <Version>
+        <Id>
+          1
+        </Id>
+        <Number>
+          925
+        </Number>
+        <Description>
+          ACF-Solutions
         </Description>
       </Version>
       <Version>
@@ -26,16 +37,16 @@
       </Version>
     </VersionInfos>
   </AcfHeader>
-  <ElementsList count="2">
+  <ElementsList count="8">
     <Element>
       <Id>
-        BaseInfo
+        Bitmap
       </Id>
       <PackageId>
-        AcfVoce
+        BitmapPck
       </PackageId>
       <ComponentId>
-        VersionInfo
+        Bitmap
       </ComponentId>
       <Data>
         <IsEnabled>
@@ -44,134 +55,28 @@
         <Flags>
           0
         </Flags>
-        <AttributeInfoMap count="8">
-          <AttributeInfo>
-            <Id>
-              IsExtensionUsed
-            </Id>
-            <Type>
-              Boolean
-            </Type>
-            <ExportId>
-              
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                true
-              </IsEnabled>
-              <Value>
-                true
-              </Value>
-            </Data>
-          </AttributeInfo>
-          <AttributeInfo>
-            <Id>
-              KnownVersionNames
-            </Id>
-            <Type>
-              String[]
-            </Type>
-            <ExportId>
-              
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                true
-              </IsEnabled>
-              <Values count="12">
-                <Value>
-                  0.2.0
-                </Value>
-                <Value>
-                  0.3.0
-                </Value>
-                <Value>
-                  0.3.1
-                </Value>
-                <Value>
-                  0.3.2
-                </Value>
-                <Value>
-                  0.4.0
-                </Value>
-                <Value>
-                  0.4.1
-                </Value>
-                <Value>
-                  0.4.2
-                </Value>
-                <Value>
-                  0.4.3
-                </Value>
-                <Value>
-                  0.4.4
-                </Value>
-                <Value>
-                  0.5.0
-                </Value>
-                <Value>
-                  0.5.1
-                </Value>
-                <Value>
-                  0.6.0
-                </Value>
-              </Values>
-            </Data>
-          </AttributeInfo>
-          <AttributeInfo>
-            <Id>
-              KnownVersions
-            </Id>
-            <Type>
-              Integer[]
-            </Type>
-            <ExportId>
-              
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                true
-              </IsEnabled>
-              <Values count="12">
-                <Value>
-                  127
-                </Value>
-                <Value>
-                  144
-                </Value>
-                <Value>
-                  148
-                </Value>
-                <Value>
-                  183
-                </Value>
-                <Value>
-                  209
-                </Value>
-                <Value>
-                  292
-                </Value>
-                <Value>
-                  307
-                </Value>
-                <Value>
-                  313
-                </Value>
-                <Value>
-                  341
-                </Value>
-                <Value>
-                  356
-                </Value>
-                <Value>
-                  651
-                </Value>
-                <Value>
-                  844
-                </Value>
-              </Values>
-            </Data>
-          </AttributeInfo>
+        <AttributeInfoMap count="0">
+        </AttributeInfoMap>
+      </Data>
+    </Element>
+    <Element>
+      <Id>
+        BitmapLoader
+      </Id>
+      <PackageId>
+        BitmapPck
+      </PackageId>
+      <ComponentId>
+        BitmapLoader
+      </ComponentId>
+      <Data>
+        <IsEnabled>
+          true
+        </IsEnabled>
+        <Flags>
+          0
+        </Flags>
+        <AttributeInfoMap count="1">
           <AttributeInfo>
             <Id>
               Log
@@ -180,38 +85,6 @@
               Reference
             </Type>
             <ExportId>
-              Log
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                false
-              </IsEnabled>
-            </Data>
-          </AttributeInfo>
-          <AttributeInfo>
-            <Id>
-              SlaveVersionInfo
-            </Id>
-            <Type>
-              Reference
-            </Type>
-            <ExportId>
-              SlaveVersionInfo
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                false
-              </IsEnabled>
-            </Data>
-          </AttributeInfo>
-          <AttributeInfo>
-            <Id>
-              VersionId
-            </Id>
-            <Type>
-              Integer
-            </Type>
-            <ExportId>
               
             </ExportId>
             <Data>
@@ -219,45 +92,7 @@
                 true
               </IsEnabled>
               <Value>
-                1
-              </Value>
-            </Data>
-          </AttributeInfo>
-          <AttributeInfo>
-            <Id>
-              VersionIdDesc
-            </Id>
-            <Type>
-              String
-            </Type>
-            <ExportId>
-              
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                true
-              </IsEnabled>
-              <Value>
-                ACF-Solutions
-              </Value>
-            </Data>
-          </AttributeInfo>
-          <AttributeInfo>
-            <Id>
-              VersionNumber
-            </Id>
-            <Type>
-              Integer
-            </Type>
-            <ExportId>
-              
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                true
-              </IsEnabled>
-              <Value>
-                926
+                ConsoleLog
               </Value>
             </Data>
           </AttributeInfo>
@@ -266,13 +101,13 @@
     </Element>
     <Element>
       <Id>
-        VersionInfo
+        ConsoleLog
       </Id>
       <PackageId>
         BasePck
       </PackageId>
       <ComponentId>
-        VersionInfo
+        ConsoleLog
       </ComponentId>
       <Data>
         <IsEnabled>
@@ -281,16 +116,37 @@
         <Flags>
           0
         </Flags>
-        <AttributeInfoMap count="7">
+        <AttributeInfoMap count="0">
+        </AttributeInfoMap>
+      </Data>
+    </Element>
+    <Element>
+      <Id>
+        CopyApp
+      </Id>
+      <PackageId>
+        FileProcessingPck
+      </PackageId>
+      <ComponentId>
+        CopyApp
+      </ComponentId>
+      <Data>
+        <IsEnabled>
+          true
+        </IsEnabled>
+        <Flags>
+          0
+        </Flags>
+        <AttributeInfoMap count="4">
           <AttributeInfo>
             <Id>
-              IsExtensionUsed
+              EnableVerbose
             </Id>
             <Type>
               Boolean
             </Type>
             <ExportId>
-              IsExtensionUsed
+              EnableVerbose
             </ExportId>
             <Data>
               <IsEnabled>
@@ -300,39 +156,7 @@
           </AttributeInfo>
           <AttributeInfo>
             <Id>
-              KnownVersionNames
-            </Id>
-            <Type>
-              String[]
-            </Type>
-            <ExportId>
-              KnownVersionNames
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                false
-              </IsEnabled>
-            </Data>
-          </AttributeInfo>
-          <AttributeInfo>
-            <Id>
-              KnownVersions
-            </Id>
-            <Type>
-              Integer[]
-            </Type>
-            <ExportId>
-              KnownVersions
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                false
-              </IsEnabled>
-            </Data>
-          </AttributeInfo>
-          <AttributeInfo>
-            <Id>
-              SlaveVersionInfo
+              FileCopy
             </Id>
             <Type>
               Reference
@@ -345,19 +169,116 @@
                 true
               </IsEnabled>
               <Value>
-                BaseInfo
+                ProcessingResultsReview
               </Value>
             </Data>
           </AttributeInfo>
           <AttributeInfo>
             <Id>
-              VersionId
+              Log
             </Id>
             <Type>
-              Integer
+              Reference
             </Type>
             <ExportId>
-              VersionId
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Value>
+                ConsoleLog
+              </Value>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              NeedExplicitInput
+            </Id>
+            <Type>
+              Boolean
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Value>
+                true
+              </Value>
+            </Data>
+          </AttributeInfo>
+        </AttributeInfoMap>
+      </Data>
+    </Element>
+    <Element>
+      <Id>
+        FileCamera
+      </Id>
+      <PackageId>
+        QtCameraPck
+      </PackageId>
+      <ComponentId>
+        FileAcquisition
+      </ComponentId>
+      <Data>
+        <IsEnabled>
+          true
+        </IsEnabled>
+        <Flags>
+          0
+        </Flags>
+        <AttributeInfoMap count="4">
+          <AttributeInfo>
+            <Id>
+              BitmapLoader
+            </Id>
+            <Type>
+              Reference
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Value>
+                BitmapLoader
+              </Value>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              DefaultPathParam
+            </Id>
+            <Type>
+              Reference
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Value>
+                ProcessedFilePath
+              </Value>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              EnableVerbose
+            </Id>
+            <Type>
+              Boolean
+            </Type>
+            <ExportId>
+              EnableVerbose
             </ExportId>
             <Data>
               <IsEnabled>
@@ -367,13 +288,74 @@
           </AttributeInfo>
           <AttributeInfo>
             <Id>
-              VersionIdDesc
+              Log
             </Id>
             <Type>
-              String
+              Reference
             </Type>
             <ExportId>
-              VersionIdDesc
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Value>
+                ConsoleLog
+              </Value>
+            </Data>
+          </AttributeInfo>
+        </AttributeInfoMap>
+      </Data>
+    </Element>
+    <Element>
+      <Id>
+        ProcessedFilePath
+      </Id>
+      <PackageId>
+        FilePck
+      </PackageId>
+      <ComponentId>
+        FileNameParam
+      </ComponentId>
+      <Data>
+        <IsEnabled>
+          true
+        </IsEnabled>
+        <Flags>
+          0
+        </Flags>
+        <AttributeInfoMap count="0">
+        </AttributeInfoMap>
+      </Data>
+    </Element>
+    <Element>
+      <Id>
+        ProcessingResultsReview
+      </Id>
+      <PackageId>
+        FileProcessingPck
+      </PackageId>
+      <ComponentId>
+        ProcessingResultsReview
+      </ComponentId>
+      <Data>
+        <IsEnabled>
+          true
+        </IsEnabled>
+        <Flags>
+          0
+        </Flags>
+        <AttributeInfoMap count="5">
+          <AttributeInfo>
+            <Id>
+              EnableVerbose
+            </Id>
+            <Type>
+              Boolean
+            </Type>
+            <ExportId>
+              EnableVerbose
             </ExportId>
             <Data>
               <IsEnabled>
@@ -383,18 +365,166 @@
           </AttributeInfo>
           <AttributeInfo>
             <Id>
-              VersionNumber
+              Log
             </Id>
             <Type>
-              Integer
+              Reference
             </Type>
             <ExportId>
-              VersionNumber
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Value>
+                ConsoleLog
+              </Value>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              OutputFileSerializer
+            </Id>
+            <Type>
+              Reference
+            </Type>
+            <ExportId>
+              OutputFileSerializer
             </ExportId>
             <Data>
               <IsEnabled>
                 false
               </IsEnabled>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              OutputSupplier
+            </Id>
+            <Type>
+              Reference
+            </Type>
+            <ExportId>
+              OutputSupplier
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                false
+              </IsEnabled>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              CurrentProcessedFilePath
+            </Id>
+            <Type>
+              Reference
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Value>
+                ProcessedFilePath
+              </Value>
+            </Data>
+          </AttributeInfo>
+        </AttributeInfoMap>
+      </Data>
+    </Element>
+    <Element>
+      <Id>
+        SnapBitmapSupplier
+      </Id>
+      <PackageId>
+        CameraPck
+      </PackageId>
+      <ComponentId>
+        SnapBitmapSupplier
+      </ComponentId>
+      <Data>
+        <IsEnabled>
+          true
+        </IsEnabled>
+        <Flags>
+          0
+        </Flags>
+        <AttributeInfoMap count="4">
+          <AttributeInfo>
+            <Id>
+              BitmapAcquisition
+            </Id>
+            <Type>
+              Reference
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Value>
+                FileCamera
+              </Value>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              BitmapFactory
+            </Id>
+            <Type>
+              Factory
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Value>
+                Bitmap
+              </Value>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              EnableVerbose
+            </Id>
+            <Type>
+              Boolean
+            </Type>
+            <ExportId>
+              EnableVerbose
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                false
+              </IsEnabled>
+            </Data>
+          </AttributeInfo>
+          <AttributeInfo>
+            <Id>
+              Log
+            </Id>
+            <Type>
+              Reference
+            </Type>
+            <ExportId>
+              
+            </ExportId>
+            <Data>
+              <IsEnabled>
+                true
+              </IsEnabled>
+              <Value>
+                ConsoleLog
+              </Value>
             </Data>
           </AttributeInfo>
         </AttributeInfoMap>
@@ -406,19 +536,35 @@
   <ExportedInterfaces count="1">
     <Interface>
       <InterfaceId>
-        iser::IVersionInfo
+        ibase::IApplication
       </InterfaceId>
       <ComponentId>
-        VersionInfo
+        CopyApp
       </ComponentId>
     </Interface>
   </ExportedInterfaces>
-  <ExportedComponents count="0">
+  <ExportedComponents count="2">
+    <Component>
+      <ExportedId>
+        BitmapSupplier
+      </ExportedId>
+      <ComponentId>
+        SnapBitmapSupplier
+      </ComponentId>
+    </Component>
+    <Component>
+      <ExportedId>
+        Log
+      </ExportedId>
+      <ComponentId>
+        ConsoleLog
+      </ComponentId>
+    </Component>
   </ExportedComponents>
   <Description>
-    Version information for modules based directly on ACF-Solutions
+    Application base used to create review of bitmap processing result
   </Description>
   <Keywords>
-    Application Tag=Version Info Author='"Witold Gantzke"'
+    
   </Keywords>
 </Acf>

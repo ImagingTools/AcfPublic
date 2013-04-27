@@ -63,52 +63,54 @@
 <a name="l00035"></a>00035               I_ASSIGN(m_startHintAttrPtr, <span class="stringliteral">&quot;StartHint&quot;</span>, <span class="stringliteral">&quot;Start hint for the editor&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;&lt;Enter path&gt;&quot;</span>);
 <a name="l00036"></a>00036               I_ASSIGN(m_fileTypeInfoPtr, <span class="stringliteral">&quot;FileTypeInfo&quot;</span>, <span class="stringliteral">&quot;Allows to retrieve optional file type information for file selection dialog&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;FileTypeInfo&quot;</span>);
 <a name="l00037"></a>00037               I_ASSIGN(m_readOnlyAttrPtr, <span class="stringliteral">&quot;ReadOnly&quot;</span>, <span class="stringliteral">&quot;True if read only&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
-<a name="l00038"></a>00038               I_ASSIGN(m_labelWidthAttrPtr, <span class="stringliteral">&quot;LabelWidth&quot;</span>, <span class="stringliteral">&quot;Fixed label width (in pixels)&quot;</span>, <span class="keyword">false</span>, 100);
-<a name="l00039"></a>00039               I_ASSIGN(m_defaultDirPtr, <span class="stringliteral">&quot;DefaultPath&quot;</span>, <span class="stringliteral">&quot;Default path to search&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;C:/&quot;</span>);
-<a name="l00040"></a>00040        I_END_COMPONENT;
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#abb5d137c83b17c15eb3e47e3807936f6" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#af09680d91a7f51c17cb81b084a43de9f" title="Called from widget event filter when GUI should be retranslated.">OnGuiRetranslate</a>();
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046        <span class="comment">// reimplemented (imod::IModelEditor)</span>
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#a6db58d566316b88b81125871c1806707" title="Updates model from editor.">UpdateModel</a>() <span class="keyword">const</span>;
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#adb92085eb9f5d8d8c6b4a2951d1a7298" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#addafbf399505795d48c48a4acaed131e" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053 <span class="keyword">protected</span> Q_SLOTS:
-<a name="l00054"></a>00054        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#a45ba3d7e7eb9a027dca57c8c1c165a40">on_BrowseButton_clicked</a>();
-<a name="l00055"></a>00055        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#a894da00dca852f6630c9f64d8a52a286">on_DirEdit_editTextChanged</a>(<span class="keyword">const</span> QString&amp; text);
-<a name="l00056"></a>00056        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#add1303146e14f2b7e7fcc0e70d4c69fd">OnDirectoryUp</a>();
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058 <span class="keyword">private</span>:
-<a name="l00059"></a>00059        <span class="keywordtype">void</span> SetPathToEditor(<span class="keyword">const</span> QString&amp; path) <span class="keyword">const</span>;
-<a name="l00060"></a>00060        <span class="keywordtype">void</span> MakeSelectionHint(<span class="keyword">const</span> QString&amp; text) <span class="keyword">const</span>;
-<a name="l00061"></a>00061        QIcon GetFileIcon(<span class="keyword">const</span> QString&amp; filePath) <span class="keyword">const</span>;
-<a name="l00062"></a>00062        <span class="keywordtype">void</span> OnPathEdited(<span class="keyword">const</span> QString&amp; path) <span class="keyword">const</span>;
-<a name="l00063"></a>00063        QString GetPathFromEditor() <span class="keyword">const</span>;
-<a name="l00064"></a>00064        <span class="keywordtype">bool</span> IsLabelNeeded() <span class="keyword">const</span>;
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066 <span class="keyword">private</span>:
-<a name="l00067"></a>00067        I_ATTR(QString, m_pathLabelAttrPtr);
-<a name="l00068"></a>00068        I_ATTR(QString, m_startHintAttrPtr);
-<a name="l00069"></a>00069        I_ATTR(<span class="keywordtype">bool</span>, m_readOnlyAttrPtr);
-<a name="l00070"></a>00070        I_ATTR(<span class="keywordtype">int</span>, m_labelWidthAttrPtr);
-<a name="l00071"></a>00071        I_REF(<a class="code" href="classifile_1_1_i_file_type_info.html" title="Provide loading and saving of objects.">ifile::IFileTypeInfo</a>, m_fileTypeInfoPtr);
-<a name="l00072"></a>00072        I_REF(<a class="code" href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)">ifile::IFileNameParam</a>, m_defaultDirPtr);
-<a name="l00073"></a>00073 
-<a name="l00074"></a>00074        QDirModel m_directoryModel;
-<a name="l00075"></a>00075 };
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077 
-<a name="l00078"></a>00078 } <span class="comment">// namespace iqtprm</span>
+<a name="l00038"></a>00038               I_ASSIGN(m_filesComboAttrPtr, <span class="stringliteral">&quot;FilesComboBox&quot;</span>, <span class="stringliteral">&quot;Show combobox with files&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);
+<a name="l00039"></a>00039               I_ASSIGN(m_labelWidthAttrPtr, <span class="stringliteral">&quot;LabelWidth&quot;</span>, <span class="stringliteral">&quot;Fixed label width (in pixels)&quot;</span>, <span class="keyword">false</span>, 100);
+<a name="l00040"></a>00040               I_ASSIGN(m_defaultDirPtr, <span class="stringliteral">&quot;DefaultPath&quot;</span>, <span class="stringliteral">&quot;Default path to search&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;C:/&quot;</span>);
+<a name="l00041"></a>00041        I_END_COMPONENT;
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#abb5d137c83b17c15eb3e47e3807936f6" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#af09680d91a7f51c17cb81b084a43de9f" title="Called from widget event filter when GUI should be retranslated.">OnGuiRetranslate</a>();
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047        <span class="comment">// reimplemented (imod::IModelEditor)</span>
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#a6db58d566316b88b81125871c1806707" title="Updates model from editor.">UpdateModel</a>() <span class="keyword">const</span>;
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#adb92085eb9f5d8d8c6b4a2951d1a7298" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#addafbf399505795d48c48a4acaed131e" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 <span class="keyword">protected</span> Q_SLOTS:
+<a name="l00055"></a>00055        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#a45ba3d7e7eb9a027dca57c8c1c165a40">on_BrowseButton_clicked</a>();
+<a name="l00056"></a>00056        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#a894da00dca852f6630c9f64d8a52a286">on_DirEdit_editTextChanged</a>(<span class="keyword">const</span> QString&amp; text);
+<a name="l00057"></a>00057        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#add1303146e14f2b7e7fcc0e70d4c69fd">OnDirectoryUp</a>();
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059 <span class="keyword">private</span>:
+<a name="l00060"></a>00060        <span class="keywordtype">void</span> SetPathToEditor(<span class="keyword">const</span> QString&amp; path) <span class="keyword">const</span>;
+<a name="l00061"></a>00061        <span class="keywordtype">void</span> MakeSelectionHint(<span class="keyword">const</span> QString&amp; text) <span class="keyword">const</span>;
+<a name="l00062"></a>00062        QIcon GetFileIcon(<span class="keyword">const</span> QString&amp; filePath) <span class="keyword">const</span>;
+<a name="l00063"></a>00063        <span class="keywordtype">void</span> OnPathEdited(<span class="keyword">const</span> QString&amp; path) <span class="keyword">const</span>;
+<a name="l00064"></a>00064        QString GetPathFromEditor() <span class="keyword">const</span>;
+<a name="l00065"></a>00065        <span class="keywordtype">bool</span> IsLabelNeeded() <span class="keyword">const</span>;
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 <span class="keyword">private</span>:
+<a name="l00068"></a>00068        I_ATTR(QString, m_pathLabelAttrPtr);
+<a name="l00069"></a>00069        I_ATTR(QString, m_startHintAttrPtr);
+<a name="l00070"></a>00070        I_ATTR(<span class="keywordtype">bool</span>, m_readOnlyAttrPtr);
+<a name="l00071"></a>00071        I_ATTR(<span class="keywordtype">bool</span>, m_filesComboAttrPtr);
+<a name="l00072"></a>00072        I_ATTR(<span class="keywordtype">int</span>, m_labelWidthAttrPtr);
+<a name="l00073"></a>00073        I_REF(<a class="code" href="classifile_1_1_i_file_type_info.html" title="Provide loading and saving of objects.">ifile::IFileTypeInfo</a>, m_fileTypeInfoPtr);
+<a name="l00074"></a>00074        I_REF(<a class="code" href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)">ifile::IFileNameParam</a>, m_defaultDirPtr);
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076        QDirModel m_directoryModel;
+<a name="l00077"></a>00077 };
+<a name="l00078"></a>00078 
 <a name="l00079"></a>00079 
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081 <span class="preprocessor">#endif // !iqtprm_CFileNameParamGuiComp_included</span>
-<a name="l00082"></a>00082 <span class="preprocessor"></span>
-<a name="l00083"></a>00083 
+<a name="l00080"></a>00080 } <span class="comment">// namespace iqtprm</span>
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083 <span class="preprocessor">#endif // !iqtprm_CFileNameParamGuiComp_included</span>
+<a name="l00084"></a>00084 <span class="preprocessor"></span>
+<a name="l00085"></a>00085 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

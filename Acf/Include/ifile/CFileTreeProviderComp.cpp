@@ -58,8 +58,8 @@ bool CFileTreeProviderComp::CreateFileList(
 	QStringList files = dir.entryList(nameFilters, QDir::Files, sortSpec);
 
 	for (		QStringList::const_iterator fileIter = files.begin();
-		fileIter != files.end();
-		++fileIter){
+				fileIter != files.end();
+				++fileIter){
 			const QString& fileName = *fileIter;
 
 			QString filePath = dir.absoluteFilePath(fileName);
@@ -67,7 +67,7 @@ bool CFileTreeProviderComp::CreateFileList(
 			QStandardItem* fileItemPtr = new QStandardItem(fileName);
 			fileItemPtr->setEditable(false);
 			fileItemPtr->setIcon(m_iconProvider.icon(QFileInfo(filePath)));
-			fileItemPtr->setData(filePath, Qt::UserRole+100);
+			fileItemPtr->setData(filePath, DR_PATH);
 
 			if (parentItemPtr != NULL)
 				parentItemPtr->appendRow(fileItemPtr);
@@ -127,7 +127,7 @@ void CFileTreeProviderComp::EnumerateDirectory(
 			QStandardItem* dirItemPtr = new QStandardItem(subDirName);
 			dirItemPtr->setEditable(false);
 			dirItemPtr->setIcon(m_iconProvider.icon(QFileIconProvider::Folder));
-			dirItemPtr->setData(subDir.absolutePath(), Qt::UserRole+100);
+			dirItemPtr->setData(subDir.absolutePath(), DR_PATH);
 
 			if (parentItemPtr != NULL)
 				parentItemPtr->appendRow(dirItemPtr);
@@ -178,6 +178,14 @@ void CFileTreeProviderComp::OnUpdate(int /*updateFlags*/, istd::IPolymorphic* /*
 			QDir::Name | QDir::IgnoreCase,
 			NULL);
 	}
+}
+
+
+// pseudo-reimplemented (istd::IChangeable)
+
+void CFileTreeProviderComp::OnEndChanges(int changeFlags, istd::IPolymorphic* changeParamsPtr)
+{
+	OnUpdate(changeFlags, changeParamsPtr);
 }
 
 

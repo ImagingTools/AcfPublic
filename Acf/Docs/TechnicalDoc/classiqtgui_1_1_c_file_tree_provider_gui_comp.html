@@ -33,12 +33,13 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">iqtgui::CFileTreeProviderGuiComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqtgui::CFileTreeProviderGuiComp" --><!-- doxytag: inherits="TDesignerGuiObserverCompBase&lt; Ui::CFileTreeProviderGuiComp, ibase::IQtItemModelProvider &gt;" -->
+<!-- doxytag: class="iqtgui::CFileTreeProviderGuiComp" --><!-- doxytag: inherits="TDesignerGuiObserverCompBase&lt; Ui::CFileTreeProviderGuiComp, ibase::IQtItemModelProvider &gt;,imod::CMultiModelDispatcherBase" -->
 <p><code>#include &lt;<a class="el" href="_c_file_tree_provider_gui_comp_8h_source.html">CFileTreeProviderGuiComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iqtgui::CFileTreeProviderGuiComp:</div>
@@ -47,7 +48,9 @@ Inheritance diagram for iqtgui::CFileTreeProviderGuiComp:</div>
   <img src="classiqtgui_1_1_c_file_tree_provider_gui_comp.png" usemap="#iqtgui::CFileTreeProviderGuiComp_map" alt=""/>
   <map id="iqtgui::CFileTreeProviderGuiComp_map" name="iqtgui::CFileTreeProviderGuiComp_map">
 <area href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" alt="iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CFileTreeProviderGuiComp, ibase::IQtItemModelProvider &gt;" shape="rect" coords="3042,448,4249,472"/>
+<area href="classimod_1_1_c_multi_model_dispatcher_base.html" title="Generic implementation of a data model changes notifier." alt="imod::CMultiModelDispatcherBase" shape="rect" coords="4259,448,5466,472"/>
 <area href="classibase_1_1_t_model_observer_comp_wrap.html" alt="ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CFileTreeProviderGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; ibase::IQtItemModelProvider &gt; &gt; &gt;" shape="rect" coords="3042,392,4249,416"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="4259,392,5466,416"/>
 <area href="classiqtgui_1_1_t_gui_observer_wrap.html" alt="iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CFileTreeProviderGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; ibase::IQtItemModelProvider &gt; &gt;" shape="rect" coords="3042,336,4249,360"/>
 <area href="classiqtgui_1_1_t_designer_gui_comp_base.html" alt="iqtgui::TDesignerGuiCompBase&lt; Ui::CFileTreeProviderGuiComp, QWidget &gt;" shape="rect" coords="1217,280,2424,304"/>
 <area href="classimod_1_1_t_single_model_observer_base.html" alt="imod::TSingleModelObserverBase&lt; ibase::IQtItemModelProvider &gt;" shape="rect" coords="3042,280,4249,304"/>
@@ -70,20 +73,30 @@ Inheritance diagram for iqtgui::CFileTreeProviderGuiComp:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_tree_provider_gui_comp.html#a86241aa387fee0c3fd3359fe12c0ec16">DataRoles</a> { <a class="el" href="classiqtgui_1_1_c_file_tree_provider_gui_comp.html#a86241aa387fee0c3fd3359fe12c0ec16adfa0aba2072655fa211010cfafec9174">DR_PATH</a> =  Qt::UserRole + 1
+ }</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
 <a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase</a><br class="typebreak"/>
 &lt; Ui::CFileTreeProviderGuiComp, <br class="typebreak"/>
 <a class="el" href="classibase_1_1_i_qt_item_model_provider.html">ibase::IQtItemModelProvider</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_tree_provider_gui_comp.html#a552c5af9c31e01d5993653d3533d60c8">BaseClass</a></td></tr>
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_tree_provider_gui_comp.html#ac425b40b50c1ade99ae770b1df3f155f">I_ASSIGN_TO</a> (m_currentFileModelCompPtr, m_currentFileCompPtr, false)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_tree_provider_gui_comp.html#a1925e21ccd95f5d3b91076431cefd5c8">OnComponentCreated</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_tree_provider_gui_comp.html#a0cc3769bab096100cf0676a8118198d1">OnComponentDestroyed</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_tree_provider_gui_comp.html#aab5590df0622688ed0fefa1820a75568">OnGuiCreated</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#aab5590df0622688ed0fefa1820a75568"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_tree_provider_gui_comp.html#ad2d83e40e94c37879a7440a34885079a">UpdateGui</a> (int updateFlags=0)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Do update of the model GUI.  <a href="#ad2d83e40e94c37879a7440a34885079a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_tree_provider_gui_comp.html#a2cd0da6e2fdfd049f232701b216b5b10">UpdateModel</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates model from editor.  <a href="#a2cd0da6e2fdfd049f232701b216b5b10"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_file_tree_provider_gui_comp.html#a32cc06f1f68b39704445b22015dc5d94">OnModelChanged</a> (int modelId, int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_file_tree_provider_gui_comp_8h_source.html#l00017">17</a> of file <a class="el" href="_c_file_tree_provider_gui_comp_8h_source.html">CFileTreeProviderGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_file_tree_provider_gui_comp_8h_source.html#l00019">19</a> of file <a class="el" href="_c_file_tree_provider_gui_comp_8h_source.html">CFileTreeProviderGuiComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a552c5af9c31e01d5993653d3533d60c8"></a><!-- doxytag: member="iqtgui::CFileTreeProviderGuiComp::BaseClass" ref="a552c5af9c31e01d5993653d3533d60c8" args="" -->
 <div class="memitem">
@@ -98,11 +111,102 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html#a5fd4bd071b17d67ebfc151794f14c4ea">iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CFileTreeProviderGuiComp, ibase::IQtItemModelProvider &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_file_tree_provider_gui_comp_8h_source.html#l00024">24</a> of file <a class="el" href="_c_file_tree_provider_gui_comp_8h_source.html">CFileTreeProviderGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_file_tree_provider_gui_comp_8h_source.html#l00027">27</a> of file <a class="el" href="_c_file_tree_provider_gui_comp_8h_source.html">CFileTreeProviderGuiComp.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="a86241aa387fee0c3fd3359fe12c0ec16"></a><!-- doxytag: member="iqtgui::CFileTreeProviderGuiComp::DataRoles" ref="a86241aa387fee0c3fd3359fe12c0ec16" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classiqtgui_1_1_c_file_tree_provider_gui_comp.html#a86241aa387fee0c3fd3359fe12c0ec16">iqtgui::CFileTreeProviderGuiComp::DataRoles</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a86241aa387fee0c3fd3359fe12c0ec16adfa0aba2072655fa211010cfafec9174"></a><!-- doxytag: member="DR_PATH" ref="a86241aa387fee0c3fd3359fe12c0ec16adfa0aba2072655fa211010cfafec9174" args="" -->DR_PATH</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_c_file_tree_provider_gui_comp_8h_source.html#l00034">34</a> of file <a class="el" href="_c_file_tree_provider_gui_comp_8h_source.html">CFileTreeProviderGuiComp.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ac425b40b50c1ade99ae770b1df3f155f"></a><!-- doxytag: member="iqtgui::CFileTreeProviderGuiComp::I_ASSIGN_TO" ref="ac425b40b50c1ade99ae770b1df3f155f" args="(m_currentFileModelCompPtr, m_currentFileCompPtr, false)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iqtgui::CFileTreeProviderGuiComp::I_ASSIGN_TO </td>
+          <td>(</td>
+          <td class="paramtype">m_currentFileModelCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">m_currentFileCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">false&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1925e21ccd95f5d3b91076431cefd5c8"></a><!-- doxytag: member="iqtgui::CFileTreeProviderGuiComp::OnComponentCreated" ref="a1925e21ccd95f5d3b91076431cefd5c8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtgui::CFileTreeProviderGuiComp::OnComponentCreated </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classibase_1_1_t_model_observer_comp_wrap.html#ac046dfe3995e995397f20a1ebf031436">ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CFileTreeProviderGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; ibase::IQtItemModelProvider &gt; &gt; &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0cc3769bab096100cf0676a8118198d1"></a><!-- doxytag: member="iqtgui::CFileTreeProviderGuiComp::OnComponentDestroyed" ref="a0cc3769bab096100cf0676a8118198d1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtgui::CFileTreeProviderGuiComp::OnComponentDestroyed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classibase_1_1_t_model_observer_comp_wrap.html#aacf9336769a621402f913fad75bb5cf5">ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CFileTreeProviderGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; ibase::IQtItemModelProvider &gt; &gt; &gt;</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aab5590df0622688ed0fefa1820a75568"></a><!-- doxytag: member="iqtgui::CFileTreeProviderGuiComp::OnGuiCreated" ref="aab5590df0622688ed0fefa1820a75568" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -120,6 +224,41 @@ Protected Member Functions</h2></td></tr>
 <p>Called just after GUI is initialized. </p>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#ac57a710831aca6724b034983717d1a12">iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CFileTreeProviderGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; ibase::IQtItemModelProvider &gt; &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a32cc06f1f68b39704445b22015dc5d94"></a><!-- doxytag: member="iqtgui::CFileTreeProviderGuiComp::OnModelChanged" ref="a32cc06f1f68b39704445b22015dc5d94" args="(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtgui::CFileTreeProviderGuiComp::OnModelChanged </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>modelId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>changeFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
+          <td class="paramname"><em>updateParamsPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="el" href="classimod_1_1_c_multi_model_dispatcher_base.html#aa28b9338ca45e28b03cadaf4454f14e8">imod::CMultiModelDispatcherBase</a>.</p>
 
 </div>
 </div>
@@ -141,6 +280,27 @@ Protected Member Functions</h2></td></tr>
 <p>Do update of the model GUI. </p>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#a2a108ca09fa12c1102c340df331c8bfc">iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CFileTreeProviderGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; ibase::IQtItemModelProvider &gt; &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2cd0da6e2fdfd049f232701b216b5b10"></a><!-- doxytag: member="iqtgui::CFileTreeProviderGuiComp::UpdateModel" ref="a2cd0da6e2fdfd049f232701b216b5b10" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtgui::CFileTreeProviderGuiComp::UpdateModel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Updates model from editor. </p>
+<p>This method will be called only if GUI is connected and model is attached. </p>
+
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#abcbab4e791342130d28df5db810f95b8">iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CFileTreeProviderGuiComp, QWidget &gt;, imod::TSingleModelObserverBase&lt; ibase::IQtItemModelProvider &gt; &gt;</a>.</p>
 
 </div>
 </div>
