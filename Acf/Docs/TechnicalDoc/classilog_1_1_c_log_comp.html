@@ -33,12 +33,13 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ilog::CLogComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ilog::CLogComp" --><!-- doxytag: inherits="icomp::CComponentBase,ilog::CMessageContainer" -->
+<!-- doxytag: class="ilog::CLogComp" --><!-- doxytag: inherits="TMessageDelegatorComp&lt; icomp::CComponentBase &gt;,ilog::CMessageContainer" -->
 <p>Data model of logging component.  
  <a href="classilog_1_1_c_log_comp.html#details">More...</a></p>
 
@@ -49,20 +50,23 @@ Inheritance diagram for ilog::CLogComp:</div>
  <div class="center">
   <img src="classilog_1_1_c_log_comp.png" usemap="#ilog::CLogComp_map" alt=""/>
   <map id="ilog::CLogComp_map" name="ilog::CLogComp_map">
-<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,392,445,416"/>
-<area href="classilog_1_1_c_message_container.html" title="Basic implementation of a message container." alt="ilog::CMessageContainer" shape="rect" coords="682,392,1127,416"/>
-<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,336,445,360"/>
-<area href="classistd_1_1_t_hierarchical_base.html" alt="istd::THierarchicalBase&lt; IHierarchicalMessageContainer &gt;" shape="rect" coords="455,336,900,360"/>
-<area href="classilog_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages)." alt="ilog::IMessageConsumer" shape="rect" coords="910,336,1355,360"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,280,445,304"/>
-<area href="classistd_1_1_t_change_delegator.html" alt="istd::TChangeDelegator&lt; IHierarchicalMessageContainer &gt;" shape="rect" coords="455,280,900,304"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="910,280,1355,304"/>
-<area href="classistd_1_1_t_change_binder.html" alt="istd::TChangeBinder&lt; IHierarchicalMessageContainer, CChangeDelegator &gt;" shape="rect" coords="455,224,900,248"/>
-<area href="class_i_hierarchical_message_container.html" alt="IHierarchicalMessageContainer" shape="rect" coords="227,168,672,192"/>
-<area href="classistd_1_1_c_change_delegator.html" title="Delegates calls of IChangeable methods to the given slave." alt="istd::CChangeDelegator" shape="rect" coords="682,168,1127,192"/>
-<area href="classistd_1_1_i_change_delegator.html" title="Common interface for all classes that supports delegation of their updates to another class..." alt="istd::IChangeDelegator" shape="rect" coords="682,112,1127,136"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="682,56,1127,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="682,0,1127,24"/>
+<area href="classilog_1_1_t_message_delegator_comp.html" alt="ilog::TMessageDelegatorComp&lt; icomp::CComponentBase &gt;" shape="rect" coords="227,392,672,416"/>
+<area href="classilog_1_1_c_message_container.html" title="Basic implementation of a message container." alt="ilog::CMessageContainer" shape="rect" coords="1137,392,1582,416"/>
+<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,336,445,360"/>
+<area href="classilog_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages)." alt="ilog::IMessageConsumer" shape="rect" coords="455,336,900,360"/>
+<area href="classistd_1_1_t_hierarchical_base.html" alt="istd::THierarchicalBase&lt; IHierarchicalMessageContainer &gt;" shape="rect" coords="910,336,1355,360"/>
+<area href="classilog_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages)." alt="ilog::IMessageConsumer" shape="rect" coords="1365,336,1810,360"/>
+<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,280,445,304"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="455,280,900,304"/>
+<area href="classistd_1_1_t_change_delegator.html" alt="istd::TChangeDelegator&lt; IHierarchicalMessageContainer &gt;" shape="rect" coords="910,280,1355,304"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1365,280,1810,304"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,224,445,248"/>
+<area href="classistd_1_1_t_change_binder.html" alt="istd::TChangeBinder&lt; IHierarchicalMessageContainer, CChangeDelegator &gt;" shape="rect" coords="910,224,1355,248"/>
+<area href="class_i_hierarchical_message_container.html" alt="IHierarchicalMessageContainer" shape="rect" coords="682,168,1127,192"/>
+<area href="classistd_1_1_c_change_delegator.html" title="Delegates calls of IChangeable methods to the given slave." alt="istd::CChangeDelegator" shape="rect" coords="1137,168,1582,192"/>
+<area href="classistd_1_1_i_change_delegator.html" title="Common interface for all classes that supports delegation of their updates to another class..." alt="istd::IChangeDelegator" shape="rect" coords="1137,112,1582,136"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="1137,56,1582,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1137,0,1582,24"/>
 </map>
  </div></div>
 
@@ -70,8 +74,16 @@ Inheritance diagram for ilog::CLogComp:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_log_comp.html#af41c4f90db2c21319911e2ce53a73393">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+<a class="el" href="classilog_1_1_t_message_delegator_comp.html">ilog::TMessageDelegatorComp</a><br class="typebreak"/>
+&lt; <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_log_comp.html#acf4fec7875ec6e58fa7c9f8e4d10091f">BaseClass</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classilog_1_1_c_message_container.html">ilog::CMessageContainer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_log_comp.html#ae611fbd9ecc49f8397da7871b6e4a162">BaseClass2</a></td></tr>
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_log_comp.html#ac5d773ff58db441313a87fb86b339a6d">IsMessageSupported</a> (int messageCategory=-1, int messageId=-1, const <a class="el" href="classistd_1_1_i_information_provider.html">istd::IInformationProvider</a> *messagePtr=NULL) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if some messge is supported.  <a href="#ac5d773ff58db441313a87fb86b339a6d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_log_comp.html#a98c92da07a2f0146619a7ee211c81869">AddMessage</a> (const <a class="el" href="classilog_1_1_i_message_consumer.html#a23ac5d41df864166db9ddb457ea7058d">IMessageConsumer::MessagePtr</a> &amp;messagePtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a message item to the container.  <a href="#a98c92da07a2f0146619a7ee211c81869"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_log_comp.html#a462962d9a5fe98556ae63c6fe5ab0f8c">OnComponentCreated</a> ()</td></tr>
@@ -79,22 +91,22 @@ Protected Member Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Data model of logging component. </p>
 
-<p>Definition at line <a class="el" href="_c_log_comp_8h_source.html#l00021">21</a> of file <a class="el" href="_c_log_comp_8h_source.html">CLogComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_log_comp_8h_source.html#l00022">22</a> of file <a class="el" href="_c_log_comp_8h_source.html">CLogComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="af41c4f90db2c21319911e2ce53a73393"></a><!-- doxytag: member="ilog::CLogComp::BaseClass" ref="af41c4f90db2c21319911e2ce53a73393" args="" -->
+<a class="anchor" id="acf4fec7875ec6e58fa7c9f8e4d10091f"></a><!-- doxytag: member="ilog::CLogComp::BaseClass" ref="acf4fec7875ec6e58fa7c9f8e4d10091f" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="el" href="classilog_1_1_c_log_comp.html#af41c4f90db2c21319911e2ce53a73393">ilog::CLogComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="classilog_1_1_t_message_delegator_comp.html">ilog::TMessageDelegatorComp</a>&lt;<a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&gt; <a class="el" href="classilog_1_1_c_log_comp.html#acf4fec7875ec6e58fa7c9f8e4d10091f">ilog::CLogComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classistd_1_1_t_hierarchical_base.html#adec6f02733e8975175c89dcdbdf0f6a2">istd::THierarchicalBase&lt; IHierarchicalMessageContainer &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classilog_1_1_t_message_delegator_comp.html#a2e55146441b763f0e7df74aa210fcd64">ilog::TMessageDelegatorComp&lt; icomp::CComponentBase &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_log_comp_8h_source.html#l00026">26</a> of file <a class="el" href="_c_log_comp_8h_source.html">CLogComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_log_comp_8h_source.html#l00027">27</a> of file <a class="el" href="_c_log_comp_8h_source.html">CLogComp.h</a>.</p>
 
 </div>
 </div>
@@ -111,11 +123,83 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classistd_1_1_t_change_binder.html#a13fca783bae6e7251bfb0420f1986860">istd::TChangeBinder&lt; IHierarchicalMessageContainer, CChangeDelegator &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_log_comp_8h_source.html#l00027">27</a> of file <a class="el" href="_c_log_comp_8h_source.html">CLogComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_log_comp_8h_source.html#l00028">28</a> of file <a class="el" href="_c_log_comp_8h_source.html">CLogComp.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a98c92da07a2f0146619a7ee211c81869"></a><!-- doxytag: member="ilog::CLogComp::AddMessage" ref="a98c92da07a2f0146619a7ee211c81869" args="(const IMessageConsumer::MessagePtr &amp;messagePtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ilog::CLogComp::AddMessage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classilog_1_1_i_message_consumer.html#a23ac5d41df864166db9ddb457ea7058d">IMessageConsumer::MessagePtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>messagePtr</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Adds a message item to the container. </p>
+
+<p>Reimplemented from <a class="el" href="classilog_1_1_c_message_container.html#a904ec92930019f51d8c1731f35794ddf">ilog::CMessageContainer</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac5d773ff58db441313a87fb86b339a6d"></a><!-- doxytag: member="ilog::CLogComp::IsMessageSupported" ref="ac5d773ff58db441313a87fb86b339a6d" args="(int messageCategory=&#45;1, int messageId=&#45;1, const istd::IInformationProvider *messagePtr=NULL) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ilog::CLogComp::IsMessageSupported </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>messageCategory</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>messageId</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_i_information_provider.html">istd::IInformationProvider</a> *&#160;</td>
+          <td class="paramname"><em>messagePtr</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Check if some messge is supported. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">messageCategory</td><td>category of message or -1 if undefined, </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152" title="Category of information.">istd::IInformationProvider::InformationCategory</a>. </dd></dl>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">messageId</td><td>ID of message as defined in <a class="el" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a> or -1 if undefined. </td></tr>
+    <tr><td class="paramname">messagePtr</td><td>optional message object, or NULL if undefined. Please note, this object will not be stored by receiver. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classilog_1_1_c_message_container.html#a7160d27ef12bda66789cf584fd4bf49d">ilog::CMessageContainer</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a462962d9a5fe98556ae63c6fe5ab0f8c"></a><!-- doxytag: member="ilog::CLogComp::OnComponentCreated" ref="a462962d9a5fe98556ae63c6fe5ab0f8c" args="()" -->
 <div class="memitem">
 <div class="memproto">

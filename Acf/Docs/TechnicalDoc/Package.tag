@@ -2366,6 +2366,7 @@
     <filename>_c_log_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_message_container_8h" name="IMessageContainer.h" local="yes" imported="no">ilog/IMessageContainer.h</includes>
+    <includes id="_t_message_delegator_comp_8h" name="TMessageDelegatorComp.h" local="yes" imported="no">ilog/TMessageDelegatorComp.h</includes>
     <includes id="_c_message_container_8h" name="CMessageContainer.h" local="yes" imported="no">ilog/CMessageContainer.h</includes>
     <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ilog/CMessage.h</includes>
     <class kind="class">ilog::CLogComp</class>
@@ -6115,9 +6116,6 @@
     <filename>group___helpers.html</filename>
     <class kind="class">icomp::TMakeComponentWrap</class>
     <class kind="class">icomp::TModelCompWrap</class>
-    <class kind="class">ilog::TLoggerCompWrap</class>
-    <class kind="class">ilog::TLoggerWrap</class>
-    <class kind="class">ilog::TMessageDelegatorComp</class>
     <class kind="class">imod::TModelWrap</class>
     <class kind="class">iprm::CEnableableParam</class>
     <class kind="class">iprm::CNameParam</class>
@@ -23176,13 +23174,13 @@
   <compound kind="class">
     <name>ilog::CLogComp</name>
     <filename>classilog_1_1_c_log_comp.html</filename>
-    <base>icomp::CComponentBase</base>
+    <base>TMessageDelegatorComp&lt; icomp::CComponentBase &gt;</base>
     <base>ilog::CMessageContainer</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>ilog::TMessageDelegatorComp&lt; icomp::CComponentBase &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classilog_1_1_c_log_comp.html</anchorfile>
-      <anchor>af41c4f90db2c21319911e2ce53a73393</anchor>
+      <anchor>acf4fec7875ec6e58fa7c9f8e4d10091f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -23191,6 +23189,20 @@
       <anchorfile>classilog_1_1_c_log_comp.html</anchorfile>
       <anchor>ae611fbd9ecc49f8397da7871b6e4a162</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsMessageSupported</name>
+      <anchorfile>classilog_1_1_c_log_comp.html</anchorfile>
+      <anchor>ac5d773ff58db441313a87fb86b339a6d</anchor>
+      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddMessage</name>
+      <anchorfile>classilog_1_1_c_log_comp.html</anchorfile>
+      <anchor>a98c92da07a2f0146619a7ee211c81869</anchor>
+      <arglist>(const IMessageConsumer::MessagePtr &amp;messagePtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>

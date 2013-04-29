@@ -36,7 +36,7 @@ namespace ilog
 /**
 	Delegator component for a message consumer.
 
-	\ingroup Helpers
+	\ingroup Logging
 */
 template <class BaseComponent>
 class TMessageDelegatorComp: public BaseComponent, virtual public ilog::IMessageConsumer
@@ -51,9 +51,9 @@ public:
 
 	// reimplemented (ilog::IMessageConsumer)
 	virtual bool IsMessageSupported(
-		int messageCategory = -1,
-		int messageId = -1,
-		const istd::IInformationProvider* messagePtr = NULL) const;
+				int messageCategory = -1,
+				int messageId = -1,
+				const istd::IInformationProvider* messagePtr = NULL) const;
 	virtual void AddMessage(const MessagePtr& messagePtr);
 
 protected:

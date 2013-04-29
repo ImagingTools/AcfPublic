@@ -24,6 +24,7 @@
 #define ilog_TLoggerCompWrap_included
 
 
+// ACF includes
 #include "icomp/CComponentBase.h"
 #include "icomp/CComponentContext.h"
 #include "istd/ILogger.h"
@@ -31,13 +32,12 @@
 
 
 namespace ilog
-{		
-
+{
 
 /**
 	Wrapper provider of log-functionality for component based implementations.
 
-	\ingroup Helpers
+	\ingroup Logging
 */
 template <class Base>
 class TLoggerCompWrap: public ilog::TLoggerWrap<Base>

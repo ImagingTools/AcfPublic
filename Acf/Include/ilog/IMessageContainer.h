@@ -30,9 +30,7 @@
 // ACF includes
 #include "istd/IInformationProvider.h"
 #include "istd/TIHierarchical.h"
-
 #include "iser/ISerializable.h"
-
 #include "ilog/IMessageConsumer.h"
 
 
@@ -42,6 +40,8 @@ namespace ilog
 
 /**
 	Common interface for a message container.
+
+	\ingroup Logging
 */
 class IMessageContainer: virtual public iser::ISerializable
 {
