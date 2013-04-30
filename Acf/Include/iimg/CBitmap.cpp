@@ -140,16 +140,7 @@ bool CBitmap::CreateBitmap(PixelFormat pixelFormat, const istd::CIndex2d& size)
 
 		m_externalBuffer.Reset();
 
-		bool retVal = SetQImage(image);
-		if (retVal){
-			Q_ASSERT(!m_image.isNull());
-			Q_ASSERT(size == GetImageSize());
-			if (m_image.isNull() || size != GetImageSize()){
-				return false;
-			}
-		}
-
-		return retVal;
+		return SetQImage(image);
 	}
 
 	return false;
@@ -163,6 +154,12 @@ bool CBitmap::CreateBitmap(PixelFormat pixelFormat, const istd::CIndex2d& size, 
 	QImage::Format imageFormat = CalcQtFormat(pixelFormat);
 	if (imageFormat != QImage::Format_Invalid){
 		QImage image((quint8*)dataPtr, size.GetX(), size.GetY(), imageFormat);
+		
+		Q_ASSERT(!image.isNull());
+		if (image.isNull()){
+			return false;
+		}
+
 		if ((linesDifference != 0) && (linesDifference != image.scanLine(1) - image.scanLine(0))){
 			return false;	// requested format doesnt fit to internal Qt bitmap representation
 		}
@@ -369,6 +366,10 @@ bool CBitmap::SetQImage(const QImage& image)
 {
 	m_image = image;
 
+	if (m_image.isNull()){
+		return false;
+	}
+
 	if (m_image.format() == QImage::Format_Indexed8){
 		QVector<QRgb> colorTable(256);
 
@@ -379,7 +380,7 @@ bool CBitmap::SetQImage(const QImage& image)
 		m_image.setColorTable(colorTable);
 	}
 
-	return true;
+	return !(m_image.isNull());
 }
 
 
