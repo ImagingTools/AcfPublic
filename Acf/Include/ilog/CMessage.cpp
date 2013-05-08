@@ -1,0 +1,180 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#include "ilog/CMessage.h"
+
+
+// ACF includes
+#include "istd/TChangeNotifier.h"
+#include "istd/CClassInfo.h"
+#include "iser/IArchive.h"
+#include "iser/CArchiveTag.h"
+
+
+namespace ilog
+{		
+
+
+CMessage::CMessage()
+:	m_timeStamp(QDateTime::currentDateTime())
+{
+}
+
+
+CMessage::CMessage(
+			istd::IInformationProvider::InformationCategory category,
+			int id,
+			const QString& text,
+			const QString& source,
+			int flags,
+			const QDateTime* timeStampPtr)
+:	m_category(category),
+	m_id(id),
+	m_text(text),
+	m_source(source),
+	m_flags(flags)
+{
+	if (timeStampPtr != NULL){
+		m_timeStamp = *timeStampPtr;
+	}
+	else{
+		m_timeStamp = QDateTime::currentDateTime();
+	}
+}
+
+
+void CMessage::SetCategory(istd::IInformationProvider::InformationCategory category)
+{
+	if (category != m_category){
+		istd::CChangeNotifier notifier(this);
+
+		m_category = category;
+	}
+}
+
+
+void CMessage::SetText(const QString& text)
+{
+	if (text != m_text){
+		istd::CChangeNotifier notifier(this);
+
+		m_text = text;
+	}
+}
+
+
+void CMessage::SetSource(const QString& source)
+{
+	if (source != m_source){
+		istd::CChangeNotifier notifier(this);
+
+		m_source = source;
+	}
+}
+
+
+// reimplemented (iser::IObject)
+
+QByteArray CMessage::GetFactoryId() const
+{
+	return istd::CClassInfo::GetName<CMessage>();
+}
+
+
+// reimplemented (iser::ISerializable)
+
+bool CMessage::Serialize(iser::IArchive& archive)
+{
+	static iser::CArchiveTag categoryTag("Category", "Message category");
+
+	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this);
+
+	bool isStoring = archive.IsStoring();
+
+	int category = m_category;
+
+	bool retVal = archive.BeginTag(categoryTag);
+	retVal = retVal && archive.Process(category);
+	retVal = retVal && archive.EndTag(categoryTag);
+
+	if (!isStoring){
+		m_category = istd::IInformationProvider::InformationCategory(category);
+	}
+
+	static iser::CArchiveTag textTag("Text", "Message text");
+	retVal = retVal && archive.BeginTag(textTag);
+	retVal = retVal && archive.Process(m_text);
+	retVal = retVal && archive.EndTag(textTag);
+
+	static iser::CArchiveTag sourceTag("Source", "Message source");
+	retVal = retVal && archive.BeginTag(sourceTag);
+	retVal = retVal && archive.Process(m_source);
+	retVal = retVal && archive.EndTag(sourceTag);
+
+	static iser::CArchiveTag timeStampTag("Timestamp", "Message time stamp");
+	retVal = retVal && archive.BeginTag(timeStampTag);
+	QString timeStampString = m_timeStamp.toString(Qt::ISODate);
+	retVal = retVal && archive.Process(timeStampString);
+	retVal = retVal && archive.EndTag(timeStampTag);
+
+	if (!isStoring){
+		m_timeStamp = QDateTime::fromString(timeStampString, Qt::ISODate);
+	}
+
+	return retVal;
+}
+
+
+// reimplemented (istd::IChangeable)
+
+bool CMessage::CopyFrom(const istd::IChangeable& object, CompatibilityMode /*mode*/)
+{
+	const CMessage* sourcePtr = dynamic_cast<const CMessage*>(&object);
+	if (sourcePtr){
+		m_category = sourcePtr->m_category;
+		m_id = sourcePtr->m_id;
+		m_text = sourcePtr->m_text;
+		m_source = sourcePtr->m_source;
+		m_flags = sourcePtr->m_flags;
+		m_timeStamp = sourcePtr->m_timeStamp;
+		
+		return true;
+	}
+
+	return false;
+}
+
+
+istd::IChangeable* CMessage::CloneMe(CompatibilityMode /*mode*/) const
+{
+	return new CMessage(
+			m_category,
+			m_id,
+			m_text,
+			m_source,
+			m_flags,
+			&m_timeStamp);
+}
+
+
+} // namespace ilog
+

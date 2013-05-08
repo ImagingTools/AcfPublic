@@ -1,0 +1,87 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#include "itutacf/CInterpolationTestComp.h"
+
+
+// ACF inlcudes
+#include "istd/TChangeNotifier.h"
+#include "istd/TRange.h"
+#include "imod/IModel.h"
+#include "imath/CAkimaInterpolator.h"
+
+
+namespace itutacf
+{
+
+
+// protected methods
+
+// reimplemented (imod::CSingleModelObserverBase)
+
+void CInterpolationTestComp::OnUpdate(int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
+{
+	if (!m_slaveObjectCompPtr.IsValid()){
+		return;
+	}
+
+	istd::CChangeNotifier notifier(m_slaveObjectCompPtr.GetPtr());
+
+	m_slaveObjectCompPtr->Clear();
+
+	const i2d::CPolygon* objectPtr = GetObjectPtr();
+
+	if (objectPtr != NULL){
+		QMap<double, double> positionMap;
+		int nodesCount = objectPtr->GetNodesCount();
+
+		for (int nodeIndex = 0; nodeIndex < nodesCount; ++nodeIndex){
+			const i2d::CVector2d& node = objectPtr->GetNode(nodeIndex);
+			positionMap[node.GetX()] = node.GetY();
+		}
+
+		QVector<double> positions = positionMap.keys().toVector();
+		QVector<double> values = positionMap.values().toVector();
+		Q_ASSERT(positions.size() == values.size());
+
+		if (positions.size() >= 2){
+			imath::CAkimaInterpolator interpolator;
+			interpolator.SetNodes(&positions[0], &values[0], positions.size());
+
+			istd::CRange positionRange(positions.first(), positions.last());
+
+			int interpolatedNodesCount = *m_interpolatedNodesCountAttrPtr;
+
+			for (int interIndex = 0; interIndex < interpolatedNodesCount; ++interIndex){
+				double position = positionRange.GetValueFromAlpha(double(interIndex) / (interpolatedNodesCount - 1));
+				double interpolatedValue = interpolator.GetValueAt(position);
+
+				m_slaveObjectCompPtr->InsertNode(i2d::CVector2d(position, interpolatedValue));
+			}
+		}
+	}
+}
+
+
+} // namespace itutacf
+
+
