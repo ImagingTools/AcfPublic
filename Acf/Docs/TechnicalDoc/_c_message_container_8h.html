@@ -25,7 +25,8 @@
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Defines</a>  </div>
   <div class="headertitle">
 <div class="title">Include/ilog/CMessageContainer.h File Reference</div>  </div>
 </div>
@@ -52,7 +53,37 @@ Namespaces</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceilog.html">ilog</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>This namespace contains implementations for the logging functionality. </p>
 <br/></td></tr>
+<tr><td colspan="2"><h2><a name="define-members"></a>
+Defines</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_message_container_8h.html#a799dfa5202f340245d2a97d08224b988">I_REGISTER_MESSAGE_TYPE</a>(messageType)</td></tr>
 </table>
+<hr/><h2>Define Documentation</h2>
+<a class="anchor" id="a799dfa5202f340245d2a97d08224b988"></a><!-- doxytag: member="CMessageContainer.h::I_REGISTER_MESSAGE_TYPE" ref="a799dfa5202f340245d2a97d08224b988" args="(messageType)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I_REGISTER_MESSAGE_TYPE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">messageType</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<b>Value:</b><div class="fragment"><pre class="fragment"><span class="keyword">static</span> <span class="keyword">struct </span>DefaultMessageTypesRegistrator_##messageType\
+{\
+       DefaultMessageTypesRegistrator_##messageType()\
+       {\
+              ilog::CMessageContainer::RegisterMessageType&lt;messageType&gt;();\
+       }\
+} s_defaultMessageTypesRegistrator_##messageType;
+</pre></div>
+<p>Definition at line <a class="el" href="_c_message_container_8h_source.html#l00117">117</a> of file <a class="el" href="_c_message_container_8h_source.html">CMessageContainer.h</a>.</p>
+
+</div>
+</div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>
