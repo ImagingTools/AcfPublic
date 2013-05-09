@@ -89,55 +89,57 @@
 <a name="l00083"></a>00083        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classilog_1_1_c_message_container.html#a05d8995c947602a97f7c5f54c9abd32d" title="Copy this object from another one.">CopyFrom</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; <span class="keywordtype">object</span>, <a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de" title="Control how relationship betweeen objects are interpreted.">CompatibilityMode</a> mode = <a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af" title="External references are simple ignored.">CM_WITHOUT_REFS</a>);
 <a name="l00084"></a>00084 
 <a name="l00085"></a>00085 <span class="keyword">private</span>:
-<a name="l00086"></a>00086        <span class="keyword">typedef</span> QList&lt;IMessageConsumer::MessagePtr&gt; MessageList;
-<a name="l00087"></a>00087        MessageList m_messages;
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089        <span class="keyword">typedef</span> QVector&lt;IHierarchicalMessageContainer*&gt; Childs;
-<a name="l00090"></a>00090        Childs m_childContainers;
-<a name="l00091"></a>00091 
-<a name="l00092"></a>00092        <a class="code" href="classilog_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ilog::IMessageConsumer</a>* m_slaveConsumerPtr;
-<a name="l00093"></a>00093        <span class="keywordtype">int</span> m_maxMessagesCount;
-<a name="l00094"></a>00094        <span class="keywordtype">int</span> m_worstCategory;
-<a name="l00095"></a>00095 
-<a name="l00096"></a>00096        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_composed_factory.html" title="Standard generic implementation of the composed factory.">istd::TComposedFactory&lt;iser::IObject&gt;</a> <a class="code" href="classistd_1_1_t_composed_factory.html" title="Standard generic implementation of the composed factory.">MessageFactory</a>;
-<a name="l00097"></a>00097 
-<a name="l00098"></a>00098        <span class="keyword">static</span> <a class="code" href="classistd_1_1_t_composed_factory.html" title="Standard generic implementation of the composed factory.">MessageFactory</a> s_messageFactory;
-<a name="l00099"></a>00099 };
+<a name="l00086"></a>00086        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_composed_factory.html" title="Standard generic implementation of the composed factory.">istd::TComposedFactory&lt;iser::IObject&gt;</a> <a class="code" href="classistd_1_1_t_composed_factory.html" title="Standard generic implementation of the composed factory.">MessageFactory</a>;
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088        <span class="keyword">static</span> <a class="code" href="classistd_1_1_t_composed_factory.html" title="Standard generic implementation of the composed factory.">MessageFactory</a>&amp; GetMessageFactory();
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090 <span class="keyword">private</span>:
+<a name="l00091"></a>00091        <span class="keyword">typedef</span> QList&lt;IMessageConsumer::MessagePtr&gt; MessageList;
+<a name="l00092"></a>00092        MessageList m_messages;
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094        <span class="keyword">typedef</span> QVector&lt;IHierarchicalMessageContainer*&gt; Childs;
+<a name="l00095"></a>00095        Childs m_childContainers;
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097        <a class="code" href="classilog_1_1_i_message_consumer.html" title="Common interface for a message container consuming information objects (messages).">ilog::IMessageConsumer</a>* m_slaveConsumerPtr;
+<a name="l00098"></a>00098        <span class="keywordtype">int</span> m_maxMessagesCount;
+<a name="l00099"></a>00099        <span class="keywordtype">int</span> m_worstCategory;
 <a name="l00100"></a>00100 
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102 <span class="comment">// public static methods</span>
+<a name="l00101"></a>00101 };
+<a name="l00102"></a>00102 
 <a name="l00103"></a>00103 
-<a name="l00104"></a>00104 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MessageType&gt;
-<a name="l00105"></a><a class="code" href="classilog_1_1_c_message_container.html#a72de740600619759bababeda00bdff30">00105</a> <span class="keywordtype">bool</span> <a class="code" href="classilog_1_1_c_message_container.html#a72de740600619759bababeda00bdff30" title="Register a new message type.">CMessageContainer::RegisterMessageType</a>(<span class="keyword">const</span> QByteArray&amp; messageTypeId)
-<a name="l00106"></a>00106 {
-<a name="l00107"></a>00107        QByteArray realTypeId = messageTypeId;
-<a name="l00108"></a>00108 
-<a name="l00109"></a>00109        <span class="keywordflow">if</span> (realTypeId.isEmpty()){
-<a name="l00110"></a>00110               realTypeId = istd::CClassInfo::GetName&lt;MessageType&gt;();
-<a name="l00111"></a>00111        }
-<a name="l00112"></a>00112        
-<a name="l00113"></a>00113        <span class="keywordflow">return</span> s_messageFactory.<a class="code" href="classistd_1_1_t_composed_factory.html#ac7983de55ffa7ee52fb802052f36fd03" title="Registers object factory factoryPtr that will be mapped to the keyId.">RegisterFactory</a>(<span class="keyword">new</span> <a class="code" href="classistd_1_1_t_single_factory.html" title="Template based object factory interface.">istd::TSingleFactory&lt;iser::IObject, MessageType&gt;</a>(realTypeId), <span class="keyword">true</span>);
-<a name="l00114"></a>00114 }
-<a name="l00115"></a>00115 
-<a name="l00116"></a>00116 
-<a name="l00117"></a><a class="code" href="_c_message_container_8h.html#a799dfa5202f340245d2a97d08224b988">00117</a> <span class="preprocessor">#define I_REGISTER_MESSAGE_TYPE(messageType)\</span>
-<a name="l00118"></a>00118 <span class="preprocessor">static struct DefaultMessageTypesRegistrator_##messageType\</span>
-<a name="l00119"></a>00119 <span class="preprocessor">{\</span>
-<a name="l00120"></a>00120 <span class="preprocessor">       DefaultMessageTypesRegistrator_##messageType()\</span>
-<a name="l00121"></a>00121 <span class="preprocessor">       {\</span>
-<a name="l00122"></a>00122 <span class="preprocessor">              ilog::CMessageContainer::RegisterMessageType&lt;messageType&gt;();\</span>
-<a name="l00123"></a>00123 <span class="preprocessor">       }\</span>
-<a name="l00124"></a>00124 <span class="preprocessor">} s_defaultMessageTypesRegistrator_##messageType;</span>
-<a name="l00125"></a>00125 <span class="preprocessor"></span>
-<a name="l00126"></a>00126 
-<a name="l00127"></a>00127 
+<a name="l00104"></a>00104 <span class="comment">// public static methods</span>
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MessageType&gt;
+<a name="l00107"></a><a class="code" href="classilog_1_1_c_message_container.html#a72de740600619759bababeda00bdff30">00107</a> <span class="keywordtype">bool</span> <a class="code" href="classilog_1_1_c_message_container.html#a72de740600619759bababeda00bdff30" title="Register a new message type.">CMessageContainer::RegisterMessageType</a>(<span class="keyword">const</span> QByteArray&amp; messageTypeId)
+<a name="l00108"></a>00108 {
+<a name="l00109"></a>00109        QByteArray realTypeId = messageTypeId;
+<a name="l00110"></a>00110 
+<a name="l00111"></a>00111        <span class="keywordflow">if</span> (realTypeId.isEmpty()){
+<a name="l00112"></a>00112               realTypeId = istd::CClassInfo::GetName&lt;MessageType&gt;();
+<a name="l00113"></a>00113        }
+<a name="l00114"></a>00114        
+<a name="l00115"></a>00115        <span class="keywordflow">return</span> GetMessageFactory().<a class="code" href="classistd_1_1_t_composed_factory.html#ac7983de55ffa7ee52fb802052f36fd03" title="Registers object factory factoryPtr that will be mapped to the keyId.">RegisterFactory</a>(<span class="keyword">new</span> <a class="code" href="classistd_1_1_t_single_factory.html" title="Template based object factory interface.">istd::TSingleFactory&lt;iser::IObject, MessageType&gt;</a>(realTypeId), <span class="keyword">true</span>);
+<a name="l00116"></a>00116 }
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118 
+<a name="l00119"></a><a class="code" href="_c_message_container_8h.html#a799dfa5202f340245d2a97d08224b988">00119</a> <span class="preprocessor">#define I_REGISTER_MESSAGE_TYPE(messageType)\</span>
+<a name="l00120"></a>00120 <span class="preprocessor">static struct DefaultMessageTypesRegistrator_##messageType\</span>
+<a name="l00121"></a>00121 <span class="preprocessor">{\</span>
+<a name="l00122"></a>00122 <span class="preprocessor">       DefaultMessageTypesRegistrator_##messageType()\</span>
+<a name="l00123"></a>00123 <span class="preprocessor">       {\</span>
+<a name="l00124"></a>00124 <span class="preprocessor">              ilog::CMessageContainer::RegisterMessageType&lt;messageType&gt;();\</span>
+<a name="l00125"></a>00125 <span class="preprocessor">       }\</span>
+<a name="l00126"></a>00126 <span class="preprocessor">} s_defaultMessageTypesRegistrator_##messageType;</span>
+<a name="l00127"></a>00127 <span class="preprocessor"></span>
 <a name="l00128"></a>00128 
-<a name="l00129"></a>00129 } <span class="comment">// namespace ilog</span>
+<a name="l00129"></a>00129 
 <a name="l00130"></a>00130 
-<a name="l00131"></a>00131 
-<a name="l00132"></a>00132 <span class="preprocessor">#endif // !ilog_CMessageContainer_included</span>
-<a name="l00133"></a>00133 <span class="preprocessor"></span>
-<a name="l00134"></a>00134 
+<a name="l00131"></a>00131 } <span class="comment">// namespace ilog</span>
+<a name="l00132"></a>00132 
+<a name="l00133"></a>00133 
+<a name="l00134"></a>00134 <span class="preprocessor">#endif // !ilog_CMessageContainer_included</span>
+<a name="l00135"></a>00135 <span class="preprocessor"></span>
+<a name="l00136"></a>00136 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

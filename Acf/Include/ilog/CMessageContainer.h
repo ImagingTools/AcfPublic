@@ -105,6 +105,11 @@ public:
 	virtual bool CopyFrom(const istd::IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS);
 
 private:
+	typedef istd::TComposedFactory<iser::IObject> MessageFactory;
+
+	static MessageFactory& GetMessageFactory();
+
+private:
 	typedef QList<IMessageConsumer::MessagePtr> MessageList;
 	MessageList m_messages;
 
@@ -115,9 +120,6 @@ private:
 	int m_maxMessagesCount;
 	int m_worstCategory;
 
-	typedef istd::TComposedFactory<iser::IObject> MessageFactory;
-
-	static MessageFactory s_messageFactory;
 };
 
 
@@ -132,7 +134,7 @@ bool CMessageContainer::RegisterMessageType(const QByteArray& messageTypeId)
 		realTypeId = istd::CClassInfo::GetName<MessageType>();
 	}
 	
-	return s_messageFactory.RegisterFactory(new istd::TSingleFactory<iser::IObject, MessageType>(realTypeId), true);
+	return GetMessageFactory().RegisterFactory(new istd::TSingleFactory<iser::IObject, MessageType>(realTypeId), true);
 }
 
 

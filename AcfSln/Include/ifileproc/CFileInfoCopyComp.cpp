@@ -28,10 +28,8 @@
 #include <QtCore/QDateTime>
 #include <QtCore/QFile>
 
-
 // ACF includes
 #include "iser/IVersionInfo.h"
-
 #include "istd/CSystem.h"
 
 
