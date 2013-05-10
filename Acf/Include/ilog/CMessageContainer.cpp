@@ -36,7 +36,6 @@
 namespace ilog
 {
 
-	
 
 CMessageContainer::CMessageContainer()
 :	m_slaveConsumerPtr(NULL),
@@ -166,9 +165,7 @@ bool CMessageContainer::Serialize(iser::IArchive& archive)
 					}
 				}
 				else{
-					QString debugMessage = QString("Message type: '%1' not supported").arg(messageTypeId.constData());
-
-					qDebug(debugMessage.toUtf8());
+					qDebug("Message type: '%s' not supported", qPrintable(messageTypeId));
 				}
 			}
 		}

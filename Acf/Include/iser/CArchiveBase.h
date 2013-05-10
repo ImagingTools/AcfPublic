@@ -60,7 +60,7 @@ private:
 	/**
 		Block of copy contructor for all derrived classes.
 	*/
-	CArchiveBase(const CArchiveBase&){}
+	CArchiveBase(const CArchiveBase&);
 };
 
 
