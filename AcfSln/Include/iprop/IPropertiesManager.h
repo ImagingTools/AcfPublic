@@ -24,16 +24,15 @@
 #define iprop_IPropertiesManager_included
 
 
+// ACF includes
 #include "iser/IObject.h"
 
-#include "iprop/iprop.h"
+// ACF-Solutions includes
+#include "iprop/IProperty.h"
 
 
 namespace iprop
 {
-
-
-class IProperty;
 
 
 /**
@@ -59,9 +58,11 @@ public:
 	};
 
 	/**
-		Remove all properties from the manager.
+		Reset properties.
+		The method set all static properties to their default values 
+		and removes all dynamically added properties from the manager.
 	*/
-	virtual void RemoveAllProperties() = 0;
+	virtual void ResetProperties() = 0;
 
 	/**
 		Get number of properties.
@@ -83,6 +84,12 @@ public:
 		Get the description of the property with the given index \c propertyIndex
 	*/
 	virtual QString GetPropertyDescription(int propertyIndex) const = 0;
+
+	/**
+		Get the property flags.
+		\sa IProperty::PropertyFlags
+	*/
+	virtual IProperty::PropertyFlags GetPropertyFlags(int propertyIndex) const = 0;
 
 	/**
 		Insert an property into the object.

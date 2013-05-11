@@ -65,8 +65,8 @@ Public Types</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Data model change notification flags.  <a href="classiprop_1_1_i_properties_manager.html#a0fbea1b08f6348eafea994bbc13b64b2">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_i_properties_manager.html#aca6f310c1740a1eb833551f9c8355774">RemoveAllProperties</a> ()=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all properties from the manager.  <a href="#aca6f310c1740a1eb833551f9c8355774"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_i_properties_manager.html#a1536c4a00b51f6dd3b04b81624688390">ResetProperties</a> ()=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset properties.  <a href="#a1536c4a00b51f6dd3b04b81624688390"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_i_properties_manager.html#ac8f07c4483169a61ca474f4a04222097">GetPropertiesCount</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of properties.  <a href="#ac8f07c4483169a61ca474f4a04222097"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_i_properties_manager.html#ab4acd8685206a2c66929d9cc5637f62a">GetProperty</a> (int propertyIndex) const =0</td></tr>
@@ -75,13 +75,15 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ID of the property with the given index <code>propertyIndex</code>.  <a href="#aff67b7b0a40bedf98acda47ca5720d27"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_i_properties_manager.html#a16b6064121146b8efab81b4cd84a7e0d">GetPropertyDescription</a> (int propertyIndex) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the description of the property with the given index <code>propertyIndex</code>.  <a href="#a16b6064121146b8efab81b4cd84a7e0d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiprop_1_1_i_property.html#a99af505245ee2046b16ab69bc239844e">IProperty::PropertyFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_i_properties_manager.html#ad794e09a9b925ccf2c1537a6c0c84e9a">GetPropertyFlags</a> (int propertyIndex) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the property flags.  <a href="#ad794e09a9b925ccf2c1537a6c0c84e9a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_i_properties_manager.html#a365365ce2c71f76182d5e60b7be9a4dc">InsertProperty</a> (<a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a> *objectPtr, const QByteArray &amp;propertyId, const QByteArray &amp;propertyDescription, int propertyFlags, bool releaseFlag)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an property into the object.  <a href="#a365365ce2c71f76182d5e60b7be9a4dc"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Common interface for a container of properties. </p>
 
-<p>Definition at line <a class="el" href="_i_properties_manager_8h_source.html#l00020">20</a> of file <a class="el" href="_i_properties_manager_8h_source.html">IPropertiesManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_properties_manager_8h_source.html#l00019">19</a> of file <a class="el" href="_i_properties_manager_8h_source.html">IPropertiesManager.h</a>.</p>
 </div><hr/><h2>Member Enumeration Documentation</h2>
 <a class="anchor" id="a0fbea1b08f6348eafea994bbc13b64b2"></a><!-- doxytag: member="iprop::IPropertiesManager::ChangeFlags" ref="a0fbea1b08f6348eafea994bbc13b64b2" args="" -->
 <div class="memitem">
@@ -108,7 +110,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9">istd::IChangeable</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_properties_manager_8h_source.html#l00026">26</a> of file <a class="el" href="_i_properties_manager_8h_source.html">IPropertiesManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_properties_manager_8h_source.html#l00025">25</a> of file <a class="el" href="_i_properties_manager_8h_source.html">IPropertiesManager.h</a>.</p>
 
 </div>
 </div>
@@ -172,6 +174,28 @@ Public Member Functions</h2></td></tr>
 <p>Get the description of the property with the given index <code>propertyIndex</code>. </p>
 
 <p>Implemented in <a class="el" href="classiprop_1_1_c_properties_manager.html#aaccab62dc65f9fa24b66a7d7ffe75ddc">iprop::CPropertiesManager</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad794e09a9b925ccf2c1537a6c0c84e9a"></a><!-- doxytag: member="iprop::IPropertiesManager::GetPropertyFlags" ref="ad794e09a9b925ccf2c1537a6c0c84e9a" args="(int propertyIndex) const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classiprop_1_1_i_property.html#a99af505245ee2046b16ab69bc239844e">IProperty::PropertyFlags</a> iprop::IPropertiesManager::GetPropertyFlags </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>propertyIndex</em></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the property flags. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiprop_1_1_i_property.html#a99af505245ee2046b16ab69bc239844e">IProperty::PropertyFlags</a> </dd></dl>
+
+<p>Implemented in <a class="el" href="classiprop_1_1_c_properties_manager.html#ac69975a6ec723202f3df1c7b52b6e4a5">iprop::CPropertiesManager</a>.</p>
 
 </div>
 </div>
@@ -262,12 +286,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aca6f310c1740a1eb833551f9c8355774"></a><!-- doxytag: member="iprop::IPropertiesManager::RemoveAllProperties" ref="aca6f310c1740a1eb833551f9c8355774" args="()=0" -->
+<a class="anchor" id="a1536c4a00b51f6dd3b04b81624688390"></a><!-- doxytag: member="iprop::IPropertiesManager::ResetProperties" ref="a1536c4a00b51f6dd3b04b81624688390" args="()=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iprop::IPropertiesManager::RemoveAllProperties </td>
+          <td class="memname">virtual void iprop::IPropertiesManager::ResetProperties </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [pure virtual]</code></td>
@@ -276,9 +300,10 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Remove all properties from the manager. </p>
+<p>Reset properties. </p>
+<p>The method set all static properties to their default values and removes all dynamically added properties from the manager. </p>
 
-<p>Implemented in <a class="el" href="classiprop_1_1_c_properties_manager.html#aebe25efc9cd0569b4e3372f90922dd9a">iprop::CPropertiesManager</a>.</p>
+<p>Implemented in <a class="el" href="classiprop_1_1_c_properties_manager.html#a94f38f1f511caf815bbc2a05be18d9ec">iprop::CPropertiesManager</a>.</p>
 
 </div>
 </div>

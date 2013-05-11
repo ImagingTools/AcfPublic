@@ -52,20 +52,21 @@
 <a name="l00029"></a>00029                             <span class="keywordtype">int</span> changeFlags = 0);
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031        <span class="comment">// reimplemented (iprop::IProperty)</span>
-<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* <a class="code" href="classiprop_1_1_c_property_base.html#aa987a946b7dc18f56dab4d79a0d84945">GetDefaultPropertyValue</a>() <span class="keyword">const</span>;
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034 <span class="keyword">protected</span>:
-<a name="l00035"></a><a class="code" href="classiprop_1_1_c_property_base.html#ab7cb34faeb513d0ad0b3d3bc472c3fd6">00035</a>        <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">IPropertiesManager</a>* <a class="code" href="classiprop_1_1_c_property_base.html#ab7cb34faeb513d0ad0b3d3bc472c3fd6">m_propertyOwnerPtr</a>;
-<a name="l00036"></a><a class="code" href="classiprop_1_1_c_property_base.html#ae34a533b9856610d0bcc8eb7314c25d5">00036</a>        <span class="keywordtype">int</span> <a class="code" href="classiprop_1_1_c_property_base.html#ae34a533b9856610d0bcc8eb7314c25d5">m_changeFlags</a>;
-<a name="l00037"></a>00037 };
-<a name="l00038"></a>00038 
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprop_1_1_c_property_base.html#a1d2b9f1ebc00b41afe34dc98480e8a98">ResetValue</a>();
+<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* <a class="code" href="classiprop_1_1_c_property_base.html#aa987a946b7dc18f56dab4d79a0d84945">GetDefaultPropertyValue</a>() <span class="keyword">const</span>;
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035 <span class="keyword">protected</span>:
+<a name="l00036"></a><a class="code" href="classiprop_1_1_c_property_base.html#ab7cb34faeb513d0ad0b3d3bc472c3fd6">00036</a>        <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">IPropertiesManager</a>* <a class="code" href="classiprop_1_1_c_property_base.html#ab7cb34faeb513d0ad0b3d3bc472c3fd6">m_propertyOwnerPtr</a>;
+<a name="l00037"></a><a class="code" href="classiprop_1_1_c_property_base.html#ae34a533b9856610d0bcc8eb7314c25d5">00037</a>        <span class="keywordtype">int</span> <a class="code" href="classiprop_1_1_c_property_base.html#ae34a533b9856610d0bcc8eb7314c25d5">m_changeFlags</a>;
+<a name="l00038"></a>00038 };
 <a name="l00039"></a>00039 
-<a name="l00040"></a>00040 } <span class="comment">// namespace iprop</span>
-<a name="l00041"></a>00041 
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041 } <span class="comment">// namespace iprop</span>
 <a name="l00042"></a>00042 
-<a name="l00043"></a>00043 <span class="preprocessor">#endif // !iprop_CPropertyBase_included</span>
-<a name="l00044"></a>00044 <span class="preprocessor"></span>
-<a name="l00045"></a>00045 
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044 <span class="preprocessor">#endif // !iprop_CPropertyBase_included</span>
+<a name="l00045"></a>00045 <span class="preprocessor"></span>
+<a name="l00046"></a>00046 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

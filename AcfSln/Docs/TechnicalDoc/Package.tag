@@ -2386,7 +2386,7 @@
     <name>IPropertiesManager.h</name>
     <path>C:/Temp/AcfSln/Include/iprop/</path>
     <filename>_i_properties_manager_8h</filename>
-    <includes id="iprop_8h" name="iprop.h" local="yes" imported="no">iprop/iprop.h</includes>
+    <includes id="_i_property_8h" name="IProperty.h" local="yes" imported="no">iprop/IProperty.h</includes>
     <class kind="class">iprop::IPropertiesManager</class>
     <namespace>iprop</namespace>
   </compound>
@@ -20063,7 +20063,6 @@
     <name>iprop::CPropertiesManager</name>
     <filename>classiprop_1_1_c_properties_manager.html</filename>
     <base virtualness="virtual">iprop::IPropertiesManager</base>
-    <base virtualness="virtual">ibase::IQtItemModelProvider</base>
     <class kind="struct">iprop::CPropertiesManager::PropertyInfo</class>
     <member kind="function">
       <type></type>
@@ -20081,9 +20080,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>RemoveAllProperties</name>
+      <name>ResetProperties</name>
       <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
-      <anchor>aebe25efc9cd0569b4e3372f90922dd9a</anchor>
+      <anchor>a94f38f1f511caf815bbc2a05be18d9ec</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -20115,18 +20114,18 @@
       <arglist>(int propertyIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual IProperty::PropertyFlags</type>
+      <name>GetPropertyFlags</name>
+      <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
+      <anchor>ac69975a6ec723202f3df1c7b52b6e4a5</anchor>
+      <arglist>(int propertyIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>InsertProperty</name>
       <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
       <anchor>a45a286ac7bcff84fd183c4bcb9efd297</anchor>
       <arglist>(iser::IObject *objectPtr, const QByteArray &amp;propertyId, const QByteArray &amp;propertyDescription, int propertyFlags, bool releaseFlag)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const QAbstractItemModel *</type>
-      <name>GetItemModel</name>
-      <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
-      <anchor>a007fb7f273ca631aec6874baa726009a</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -20208,6 +20207,13 @@
       <arglist>(IPropertiesManager *propertyOwnerPtr, const QByteArray &amp;propertyId, const QByteArray &amp;propertyDescription, int propertyFlags, int changeFlags=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetValue</name>
+      <anchorfile>classiprop_1_1_c_property_base.html</anchorfile>
+      <anchor>a1d2b9f1ebc00b41afe34dc98480e8a98</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual const iser::IObject *</type>
       <name>GetDefaultPropertyValue</name>
       <anchorfile>classiprop_1_1_c_property_base.html</anchorfile>
@@ -20253,9 +20259,9 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
-      <name>RemoveAllProperties</name>
+      <name>ResetProperties</name>
       <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
-      <anchor>aca6f310c1740a1eb833551f9c8355774</anchor>
+      <anchor>a1536c4a00b51f6dd3b04b81624688390</anchor>
       <arglist>()=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -20287,6 +20293,13 @@
       <arglist>(int propertyIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
+      <type>virtual IProperty::PropertyFlags</type>
+      <name>GetPropertyFlags</name>
+      <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
+      <anchor>ad794e09a9b925ccf2c1537a6c0c84e9a</anchor>
+      <arglist>(int propertyIndex) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>InsertProperty</name>
       <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
@@ -20309,6 +20322,19 @@
       <anchorfile>classiprop_1_1_i_property.html</anchorfile>
       <anchor>a99af505245ee2046b16ab69bc239844ea937799e06875e1f14dd7bdddbe37c08d</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PF_DYNAMIC</name>
+      <anchorfile>classiprop_1_1_i_property.html</anchorfile>
+      <anchor>a99af505245ee2046b16ab69bc239844ead865fa33471070fd8a945ca98780090c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>ResetValue</name>
+      <anchorfile>classiprop_1_1_i_property.html</anchorfile>
+      <anchor>a99190813cd9d08f5866204367706733f</anchor>
+      <arglist>()=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const iser::IObject *</type>
@@ -20470,6 +20496,41 @@
       <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
       <anchor>aa662bbb29e085c53d68c3d4f3c8c126a</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>a211ad2b1cebfd2b7dc40b5ba6b9bc56f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>aae47b365c49b74a76a7310e07dc92ba1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>a3ed479c447ebefe58c3bf914ed1c5392</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>aeab9e7d0e9ec18db8601b10ee501f7db</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiprop_1_1_t_multi_property.html</anchorfile>
+      <anchor>a222e5d69de6b72334aec880fe71e7dd8</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static QByteArray</type>
@@ -20644,8 +20705,8 @@
       <anchor>ab5c68424ccbda1e45f55aad0681d6467</anchor>
       <arglist>(const Value &amp;value)</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
       <name>ResetValue</name>
       <anchorfile>classiprop_1_1_t_property.html</anchorfile>
       <anchor>a0904f16c11e7c363200be61df4a65706</anchor>
@@ -20671,6 +20732,41 @@
       <anchorfile>classiprop_1_1_t_property.html</anchorfile>
       <anchor>a035a722c8060bd11d04883aebf697be4</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiprop_1_1_t_property.html</anchorfile>
+      <anchor>a5acfbf301970e8f27a9d84a8cf07c878</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiprop_1_1_t_property.html</anchorfile>
+      <anchor>a7a968b7870e55cd24bdcbe37a2c10f8a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiprop_1_1_t_property.html</anchorfile>
+      <anchor>a1f1d5d2cbf26a618a6d6452d7894a525</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiprop_1_1_t_property.html</anchorfile>
+      <anchor>ab39c22f9d31fa550e86eecda6c618890</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiprop_1_1_t_property.html</anchorfile>
+      <anchor>a5f5fdbfa9f4fce622cb19987247a1552</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static QByteArray</type>

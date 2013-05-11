@@ -63,9 +63,9 @@ public:
 
 	const Value& GetValue() const;
 	void SetValue(const Value& value);
-	void ResetValue();
 
 	// reimplemented (iser::IProperty)
+	virtual void ResetValue();
 	virtual const iser::IObject* GetDefaultPropertyPtr() const;
 
 	// reimplemented (iser::IObject)
@@ -130,6 +130,8 @@ void TProperty<Value>::SetValue(const Value& value)
 }
 
 
+// reimplemented (iser::IProperty)
+
 template <typename Value>
 void  TProperty<Value>::ResetValue()
 {
@@ -138,8 +140,6 @@ void  TProperty<Value>::ResetValue()
 	}
 }
 
-
-// reimplemented (iser::IProperty)
 
 template <typename Value>
 const iser::IObject* TProperty<Value>::GetDefaultPropertyPtr() const
@@ -182,6 +182,41 @@ template <typename Value>
 QByteArray TProperty<Value>::GetTypeName()
 {
 	return istd::CClassInfo::GetName<TProperty<Value> >();
+}
+
+
+template <>
+inline QByteArray TProperty<bool>::GetTypeName()
+{
+	return "Boolean";
+}
+
+
+template <>
+inline QByteArray TProperty<double>::GetTypeName()
+{
+	return "Real";
+}
+
+
+template <>
+inline QByteArray TProperty<int>::GetTypeName()
+{
+	return "Integer";
+}
+
+
+template <>
+inline QByteArray TProperty<QString>::GetTypeName()
+{
+	return "String";
+}
+
+
+template <>
+inline QByteArray TProperty<QByteArray>::GetTypeName()
+{
+	return "Id";
 }
 
 

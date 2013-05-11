@@ -51,6 +51,7 @@ public:
 				int changeFlags = 0);
 
 	// reimplemented (iprop::IProperty)
+	virtual void ResetValue();
 	virtual const iser::IObject* GetDefaultPropertyValue() const;
 
 protected:

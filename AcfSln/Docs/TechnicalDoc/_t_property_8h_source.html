@@ -60,9 +60,9 @@
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042        <span class="keyword">const</span> Value&amp; <a class="code" href="classiprop_1_1_t_property.html#a5754d5a194cb9e46896fb7c81bdd7c56">GetValue</a>() <span class="keyword">const</span>;
 <a name="l00043"></a>00043        <span class="keywordtype">void</span> <a class="code" href="classiprop_1_1_t_property.html#ab5c68424ccbda1e45f55aad0681d6467">SetValue</a>(<span class="keyword">const</span> Value&amp; value);
-<a name="l00044"></a>00044        <span class="keywordtype">void</span> <a class="code" href="classiprop_1_1_t_property.html#a0904f16c11e7c363200be61df4a65706">ResetValue</a>();
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046        <span class="comment">// reimplemented (iser::IProperty)</span>
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045        <span class="comment">// reimplemented (iser::IProperty)</span>
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprop_1_1_t_property.html#a0904f16c11e7c363200be61df4a65706">ResetValue</a>();
 <a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* <a class="code" href="classiprop_1_1_t_property.html#a89970a478012c640032b657d41c89f66">GetDefaultPropertyPtr</a>() <span class="keyword">const</span>;
 <a name="l00048"></a>00048 
 <a name="l00049"></a>00049        <span class="comment">// reimplemented (iser::IObject)</span>
@@ -127,16 +127,16 @@
 <a name="l00108"></a>00108 }
 <a name="l00109"></a>00109 
 <a name="l00110"></a>00110 
-<a name="l00111"></a>00111 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
-<a name="l00112"></a><a class="code" href="classiprop_1_1_t_property.html#a0904f16c11e7c363200be61df4a65706">00112</a> <span class="keywordtype">void</span>  <a class="code" href="classiprop_1_1_t_property.html#a0904f16c11e7c363200be61df4a65706">TProperty&lt;Value&gt;::ResetValue</a>()
-<a name="l00113"></a>00113 {
-<a name="l00114"></a>00114        <span class="keywordflow">if</span> (m_defaultPropertyValuePtr.IsValid()){
-<a name="l00115"></a>00115               SetValue(m_defaultPropertyValuePtr-&gt;GetValue());
-<a name="l00116"></a>00116        }
-<a name="l00117"></a>00117 }
-<a name="l00118"></a>00118 
-<a name="l00119"></a>00119 
-<a name="l00120"></a>00120 <span class="comment">// reimplemented (iser::IProperty)</span>
+<a name="l00111"></a>00111 <span class="comment">// reimplemented (iser::IProperty)</span>
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
+<a name="l00114"></a><a class="code" href="classiprop_1_1_t_property.html#a0904f16c11e7c363200be61df4a65706">00114</a> <span class="keywordtype">void</span>  <a class="code" href="classiprop_1_1_t_property.html#a0904f16c11e7c363200be61df4a65706">TProperty&lt;Value&gt;::ResetValue</a>()
+<a name="l00115"></a>00115 {
+<a name="l00116"></a>00116        <span class="keywordflow">if</span> (m_defaultPropertyValuePtr.IsValid()){
+<a name="l00117"></a>00117               SetValue(m_defaultPropertyValuePtr-&gt;GetValue());
+<a name="l00118"></a>00118        }
+<a name="l00119"></a>00119 }
+<a name="l00120"></a>00120 
 <a name="l00121"></a>00121 
 <a name="l00122"></a>00122 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
 <a name="l00123"></a><a class="code" href="classiprop_1_1_t_property.html#a89970a478012c640032b657d41c89f66">00123</a> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a>* <a class="code" href="classiprop_1_1_t_property.html#a89970a478012c640032b657d41c89f66">TProperty&lt;Value&gt;::GetDefaultPropertyPtr</a>()<span class="keyword"> const</span>
@@ -182,21 +182,56 @@
 <a name="l00163"></a>00163 }
 <a name="l00164"></a>00164 
 <a name="l00165"></a>00165 
-<a name="l00166"></a>00166 <span class="comment">// typedefs</span>
-<a name="l00167"></a>00167 
-<a name="l00168"></a><a class="code" href="namespaceiprop.html#a54d537cb09aa22ef7adf4e615ef727bc">00168</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;double&gt;</a> <a class="code" href="namespaceiprop.html#a54d537cb09aa22ef7adf4e615ef727bc">CDoubleProperty</a>;
-<a name="l00169"></a><a class="code" href="namespaceiprop.html#a969ef46e521547d501738d17f4eefabc">00169</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;bool&gt;</a> <a class="code" href="namespaceiprop.html#a969ef46e521547d501738d17f4eefabc">CBoolProperty</a>;
-<a name="l00170"></a><a class="code" href="namespaceiprop.html#a5c82b613d33aa43f16ee106a1190755b">00170</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;int&gt;</a> <a class="code" href="namespaceiprop.html#a5c82b613d33aa43f16ee106a1190755b">CIntProperty</a>;
-<a name="l00171"></a><a class="code" href="namespaceiprop.html#a5b6aa25962ebcf89eb3b3e41c20de2e1">00171</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;QString&gt;</a> <a class="code" href="namespaceiprop.html#a5b6aa25962ebcf89eb3b3e41c20de2e1">CStringProperty</a>;
-<a name="l00172"></a><a class="code" href="namespaceiprop.html#ae3d8ffc89d60cdbbf33e654d0ce03140">00172</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;QByteArray&gt;</a> <a class="code" href="namespaceiprop.html#ae3d8ffc89d60cdbbf33e654d0ce03140">CStdStringProperty</a>;
-<a name="l00173"></a>00173 
-<a name="l00174"></a>00174 
-<a name="l00175"></a>00175 } <span class="comment">// namespace iprop</span>
-<a name="l00176"></a>00176 
-<a name="l00177"></a>00177 
-<a name="l00178"></a>00178 <span class="preprocessor">#endif // !iprop_TProperty_included</span>
-<a name="l00179"></a>00179 <span class="preprocessor"></span>
-<a name="l00180"></a>00180 
+<a name="l00166"></a>00166 <span class="keyword">template</span> &lt;&gt;
+<a name="l00167"></a><a class="code" href="classiprop_1_1_t_property.html#a5acfbf301970e8f27a9d84a8cf07c878">00167</a> <span class="keyword">inline</span> QByteArray <a class="code" href="classiprop_1_1_t_property.html#a240fcd498aa91a1520973c055808daca">TProperty&lt;bool&gt;::GetTypeName</a>()
+<a name="l00168"></a>00168 {
+<a name="l00169"></a>00169        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Boolean&quot;</span>;
+<a name="l00170"></a>00170 }
+<a name="l00171"></a>00171 
+<a name="l00172"></a>00172 
+<a name="l00173"></a>00173 <span class="keyword">template</span> &lt;&gt;
+<a name="l00174"></a><a class="code" href="classiprop_1_1_t_property.html#a7a968b7870e55cd24bdcbe37a2c10f8a">00174</a> <span class="keyword">inline</span> QByteArray <a class="code" href="classiprop_1_1_t_property.html#a240fcd498aa91a1520973c055808daca">TProperty&lt;double&gt;::GetTypeName</a>()
+<a name="l00175"></a>00175 {
+<a name="l00176"></a>00176        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Real&quot;</span>;
+<a name="l00177"></a>00177 }
+<a name="l00178"></a>00178 
+<a name="l00179"></a>00179 
+<a name="l00180"></a>00180 <span class="keyword">template</span> &lt;&gt;
+<a name="l00181"></a><a class="code" href="classiprop_1_1_t_property.html#a1f1d5d2cbf26a618a6d6452d7894a525">00181</a> <span class="keyword">inline</span> QByteArray <a class="code" href="classiprop_1_1_t_property.html#a240fcd498aa91a1520973c055808daca">TProperty&lt;int&gt;::GetTypeName</a>()
+<a name="l00182"></a>00182 {
+<a name="l00183"></a>00183        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Integer&quot;</span>;
+<a name="l00184"></a>00184 }
+<a name="l00185"></a>00185 
+<a name="l00186"></a>00186 
+<a name="l00187"></a>00187 <span class="keyword">template</span> &lt;&gt;
+<a name="l00188"></a><a class="code" href="classiprop_1_1_t_property.html#ab39c22f9d31fa550e86eecda6c618890">00188</a> <span class="keyword">inline</span> QByteArray <a class="code" href="classiprop_1_1_t_property.html#a240fcd498aa91a1520973c055808daca">TProperty&lt;QString&gt;::GetTypeName</a>()
+<a name="l00189"></a>00189 {
+<a name="l00190"></a>00190        <span class="keywordflow">return</span> <span class="stringliteral">&quot;String&quot;</span>;
+<a name="l00191"></a>00191 }
+<a name="l00192"></a>00192 
+<a name="l00193"></a>00193 
+<a name="l00194"></a>00194 <span class="keyword">template</span> &lt;&gt;
+<a name="l00195"></a><a class="code" href="classiprop_1_1_t_property.html#a5f5fdbfa9f4fce622cb19987247a1552">00195</a> <span class="keyword">inline</span> QByteArray <a class="code" href="classiprop_1_1_t_property.html#a240fcd498aa91a1520973c055808daca">TProperty&lt;QByteArray&gt;::GetTypeName</a>()
+<a name="l00196"></a>00196 {
+<a name="l00197"></a>00197        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Id&quot;</span>;
+<a name="l00198"></a>00198 }
+<a name="l00199"></a>00199 
+<a name="l00200"></a>00200 
+<a name="l00201"></a>00201 <span class="comment">// typedefs</span>
+<a name="l00202"></a>00202 
+<a name="l00203"></a><a class="code" href="namespaceiprop.html#a54d537cb09aa22ef7adf4e615ef727bc">00203</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;double&gt;</a> <a class="code" href="namespaceiprop.html#a54d537cb09aa22ef7adf4e615ef727bc">CDoubleProperty</a>;
+<a name="l00204"></a><a class="code" href="namespaceiprop.html#a969ef46e521547d501738d17f4eefabc">00204</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;bool&gt;</a> <a class="code" href="namespaceiprop.html#a969ef46e521547d501738d17f4eefabc">CBoolProperty</a>;
+<a name="l00205"></a><a class="code" href="namespaceiprop.html#a5c82b613d33aa43f16ee106a1190755b">00205</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;int&gt;</a> <a class="code" href="namespaceiprop.html#a5c82b613d33aa43f16ee106a1190755b">CIntProperty</a>;
+<a name="l00206"></a><a class="code" href="namespaceiprop.html#a5b6aa25962ebcf89eb3b3e41c20de2e1">00206</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;QString&gt;</a> <a class="code" href="namespaceiprop.html#a5b6aa25962ebcf89eb3b3e41c20de2e1">CStringProperty</a>;
+<a name="l00207"></a><a class="code" href="namespaceiprop.html#ae3d8ffc89d60cdbbf33e654d0ce03140">00207</a> <span class="keyword">typedef</span> <a class="code" href="classiprop_1_1_t_property.html" title="Template implementation of an atomic property.">TProperty&lt;QByteArray&gt;</a> <a class="code" href="namespaceiprop.html#ae3d8ffc89d60cdbbf33e654d0ce03140">CStdStringProperty</a>;
+<a name="l00208"></a>00208 
+<a name="l00209"></a>00209 
+<a name="l00210"></a>00210 } <span class="comment">// namespace iprop</span>
+<a name="l00211"></a>00211 
+<a name="l00212"></a>00212 
+<a name="l00213"></a>00213 <span class="preprocessor">#endif // !iprop_TProperty_included</span>
+<a name="l00214"></a>00214 <span class="preprocessor"></span>
+<a name="l00215"></a>00215 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

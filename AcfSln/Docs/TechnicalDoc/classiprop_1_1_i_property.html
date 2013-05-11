@@ -59,17 +59,20 @@ Inheritance diagram for iprop::IProperty:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_i_property.html#a99af505245ee2046b16ab69bc239844e">PropertyFlags</a> { <a class="el" href="classiprop_1_1_i_property.html#a99af505245ee2046b16ab69bc239844ea937799e06875e1f14dd7bdddbe37c08d">PF_PERSISTENT</a> =  0x1
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_i_property.html#a99af505245ee2046b16ab69bc239844e">PropertyFlags</a> { <a class="el" href="classiprop_1_1_i_property.html#a99af505245ee2046b16ab69bc239844ea937799e06875e1f14dd7bdddbe37c08d">PF_PERSISTENT</a> =  0x1, 
+<a class="el" href="classiprop_1_1_i_property.html#a99af505245ee2046b16ab69bc239844ead865fa33471070fd8a945ca98780090c">PF_DYNAMIC</a> =  0x2
  }</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_i_property.html#a99190813cd9d08f5866204367706733f">ResetValue</a> ()=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set property to a default value.  <a href="#a99190813cd9d08f5866204367706733f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_i_property.html#abefac683df80e74878855a36dd6355fd">GetDefaultPropertyValue</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get default value for the property.  <a href="#abefac683df80e74878855a36dd6355fd"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Common interface for an abstract property. </p>
 
-<p>Definition at line <a class="el" href="_i_property_8h_source.html#l00017">17</a> of file <a class="el" href="_i_property_8h_source.html">IProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_property_8h_source.html#l00019">19</a> of file <a class="el" href="_i_property_8h_source.html">IProperty.h</a>.</p>
 </div><hr/><h2>Member Enumeration Documentation</h2>
 <a class="anchor" id="a99af505245ee2046b16ab69bc239844e"></a><!-- doxytag: member="iprop::IProperty::PropertyFlags" ref="a99af505245ee2046b16ab69bc239844e" args="" -->
 <div class="memitem">
@@ -85,11 +88,14 @@ Public Member Functions</h2></td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a99af505245ee2046b16ab69bc239844ea937799e06875e1f14dd7bdddbe37c08d"></a><!-- doxytag: member="PF_PERSISTENT" ref="a99af505245ee2046b16ab69bc239844ea937799e06875e1f14dd7bdddbe37c08d" args="" -->PF_PERSISTENT</em>&nbsp;</td><td>
 <p>Property is persistent. </p>
 </td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a99af505245ee2046b16ab69bc239844ead865fa33471070fd8a945ca98780090c"></a><!-- doxytag: member="PF_DYNAMIC" ref="a99af505245ee2046b16ab69bc239844ead865fa33471070fd8a945ca98780090c" args="" -->PF_DYNAMIC</em>&nbsp;</td><td>
+<p>Property was added to the container at the run time. </p>
+</td></tr>
 </table>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_property_8h_source.html#l00020">20</a> of file <a class="el" href="_i_property_8h_source.html">IProperty.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_property_8h_source.html#l00022">22</a> of file <a class="el" href="_i_property_8h_source.html">IProperty.h</a>.</p>
 
 </div>
 </div>
@@ -109,6 +115,25 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Get default value for the property. </p>
+
+</div>
+</div>
+<a class="anchor" id="a99190813cd9d08f5866204367706733f"></a><!-- doxytag: member="iprop::IProperty::ResetValue" ref="a99190813cd9d08f5866204367706733f" args="()=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iprop::IProperty::ResetValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set property to a default value. </p>
+<p>: Think about moving this method to <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> </p>
 
 </div>
 </div>

@@ -70,10 +70,20 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#a55c58705f3fbcc58b1a310648af7b584">TProperty</a> (<a class="el" href="classiprop_1_1_i_properties_manager.html">IPropertiesManager</a> *propertyOwnerPtr, const QByteArray &amp;propertyName, const QByteArray &amp;propertyDescription, int propertyFlags, int changeFlags=0, const <a class="el" href="classiprop_1_1_t_property.html#ad72c4993f337587ae5ca1edd4b503da8">ValueType</a> &amp;defaultValue=<a class="el" href="classiprop_1_1_t_property.html#ad72c4993f337587ae5ca1edd4b503da8">ValueType</a>())</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const Value &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#a5754d5a194cb9e46896fb7c81bdd7c56">GetValue</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#ab5c68424ccbda1e45f55aad0681d6467">SetValue</a> (const Value &amp;value)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#a0904f16c11e7c363200be61df4a65706">ResetValue</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#a0904f16c11e7c363200be61df4a65706">ResetValue</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_i_object.html">iser::IObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#a89970a478012c640032b657d41c89f66">GetDefaultPropertyPtr</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#aa537b1a6c12543413eff827f6ba2a13f">GetFactoryId</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#a035a722c8060bd11d04883aebf697be4">Serialize</a> (<a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#a5acfbf301970e8f27a9d84a8cf07c878">GetTypeName</a> ()</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#a7a968b7870e55cd24bdcbe37a2c10f8a">GetTypeName</a> ()</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#a1f1d5d2cbf26a618a6d6452d7894a525">GetTypeName</a> ()</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#ab39c22f9d31fa550e86eecda6c618890">GetTypeName</a> ()</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#a5f5fdbfa9f4fce622cb19987247a1552">GetTypeName</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_t_property.html#a240fcd498aa91a1520973c055808daca">GetTypeName</a> ()</td></tr>
@@ -284,6 +294,106 @@ template&lt;typename Value &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a5acfbf301970e8f27a9d84a8cf07c878"></a><!-- doxytag: member="iprop::TProperty::GetTypeName" ref="a5acfbf301970e8f27a9d84a8cf07c878" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray <a class="el" href="classiprop_1_1_t_property.html">iprop::TProperty</a>&lt; bool &gt;::GetTypeName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00167">167</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7a968b7870e55cd24bdcbe37a2c10f8a"></a><!-- doxytag: member="iprop::TProperty::GetTypeName" ref="a7a968b7870e55cd24bdcbe37a2c10f8a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray <a class="el" href="classiprop_1_1_t_property.html">iprop::TProperty</a>&lt; double &gt;::GetTypeName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00174">174</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1f1d5d2cbf26a618a6d6452d7894a525"></a><!-- doxytag: member="iprop::TProperty::GetTypeName" ref="a1f1d5d2cbf26a618a6d6452d7894a525" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray <a class="el" href="classiprop_1_1_t_property.html">iprop::TProperty</a>&lt; int &gt;::GetTypeName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00181">181</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab39c22f9d31fa550e86eecda6c618890"></a><!-- doxytag: member="iprop::TProperty::GetTypeName" ref="ab39c22f9d31fa550e86eecda6c618890" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray <a class="el" href="classiprop_1_1_t_property.html">iprop::TProperty</a>&lt; QString &gt;::GetTypeName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00188">188</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5f5fdbfa9f4fce622cb19987247a1552"></a><!-- doxytag: member="iprop::TProperty::GetTypeName" ref="a5f5fdbfa9f4fce622cb19987247a1552" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray <a class="el" href="classiprop_1_1_t_property.html">iprop::TProperty</a>&lt; QByteArray &gt;::GetTypeName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00195">195</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a5754d5a194cb9e46896fb7c81bdd7c56"></a><!-- doxytag: member="iprop::TProperty::GetValue" ref="a5754d5a194cb9e46896fb7c81bdd7c56" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -314,13 +424,15 @@ template&lt;typename Value &gt; </div>
           <td class="memname">void <a class="el" href="classiprop_1_1_t_property.html">iprop::TProperty</a>&lt; Value &gt;::ResetValue </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00112">112</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
+<p>Reimplemented from <a class="el" href="classiprop_1_1_c_property_base.html#a1d2b9f1ebc00b41afe34dc98480e8a98">iprop::CPropertyBase</a>.</p>
+
+<p>Definition at line <a class="el" href="_t_property_8h_source.html#l00114">114</a> of file <a class="el" href="_t_property_8h_source.html">TProperty.h</a>.</p>
 
 </div>
 </div>
