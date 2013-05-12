@@ -116,13 +116,13 @@
 <a name="l00127"></a>00127 
 <a name="l00128"></a>00128 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value, <span class="keyword">class</span> Container&gt;
 <a name="l00129"></a><a class="code" href="classiprop_1_1_t_multi_property.html#a96e67b552bc89aac467a0f04aaa4afe1">00129</a> <a class="code" href="classiprop_1_1_t_multi_property.html#a9a849815d641633113352063f3255fdc" title="Default constructor.">TMultiProperty&lt;Value, Container&gt;::TMultiProperty</a>(
-<a name="l00130"></a>00130                             <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">IPropertiesManager</a>* propertyOwnerPtr,
-<a name="l00131"></a>00131                             <span class="keyword">const</span> QByteArray&amp; propertyId,
-<a name="l00132"></a>00132                             <span class="keyword">const</span> QByteArray&amp; propertyDescription,
-<a name="l00133"></a>00133                             <span class="keywordtype">int</span> propertyFlags,
-<a name="l00134"></a>00134                             <span class="keywordtype">int</span> changeFlags,
-<a name="l00135"></a>00135                             <span class="keywordtype">int</span> elementsCount,
-<a name="l00136"></a>00136                             Value* valuesPtr)
+<a name="l00130"></a>00130                      <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">IPropertiesManager</a>* propertyOwnerPtr,
+<a name="l00131"></a>00131                      <span class="keyword">const</span> QByteArray&amp; propertyId,
+<a name="l00132"></a>00132                      <span class="keyword">const</span> QByteArray&amp; propertyDescription,
+<a name="l00133"></a>00133                      <span class="keywordtype">int</span> propertyFlags,
+<a name="l00134"></a>00134                      <span class="keywordtype">int</span> changeFlags,
+<a name="l00135"></a>00135                      <span class="keywordtype">int</span> elementsCount,
+<a name="l00136"></a>00136                      Value* valuesPtr)
 <a name="l00137"></a>00137        :<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/class_base.html">BaseClass</a>(propertyOwnerPtr, propertyId, propertyDescription, propertyFlags, changeFlags)
 <a name="l00138"></a>00138 {
 <a name="l00139"></a>00139        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){

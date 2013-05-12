@@ -27,13 +27,12 @@
 // Qt includes
 #include <QtGui/QTreeWidget>
 
-
 // ACF includes
-#include "iprop/IPropertiesManager.h"
-
 #include "iqtgui/TDesignerGuiObserverCompBase.h"
 #include "iqtgui/CItemDelegate.h"
 
+// ACF-Solutions includes
+#include "iprop/IPropertiesManager.h"
 #include "iprop/Generated/ui_CPropertiesEditorComp.h"
 
 
@@ -92,7 +91,6 @@ private:
 	};
 
 private:
-
 	void UpdatePropertyEditor(
 				const IProperty& objectProperty,
 				const QString& propertyId,

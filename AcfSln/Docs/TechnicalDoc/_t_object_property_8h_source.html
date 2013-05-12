@@ -95,12 +95,12 @@
 <a name="l00073"></a>00073 
 <a name="l00074"></a>00074 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
 <a name="l00075"></a><a class="code" href="classiprop_1_1_t_object_property.html#afb76d06416d02298da59228820805a3d">00075</a> <a class="code" href="classiprop_1_1_t_object_property.html#aa71701d0e2b738435005410c470ec688">TObjectProperty&lt;Value&gt;::TObjectProperty</a>(
-<a name="l00076"></a>00076                             <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">IPropertiesManager</a>* propertyOwnerPtr,
-<a name="l00077"></a>00077                             <span class="keyword">const</span> QByteArray&amp; propertyName,
-<a name="l00078"></a>00078                             <span class="keyword">const</span> QByteArray&amp; propertyDescription,
-<a name="l00079"></a>00079                             <span class="keywordtype">int</span> propertyFlags,
-<a name="l00080"></a>00080                             <span class="keywordtype">int</span> changeFlags,
-<a name="l00081"></a>00081                             <span class="keyword">const</span> <a class="code" href="classiprop_1_1_t_object_property.html#a7639b27ea56c2a15884503717703165e">ValueType</a>&amp; defaultValue)
+<a name="l00076"></a>00076                      <a class="code" href="classiprop_1_1_i_properties_manager.html" title="Common interface for a container of properties.">IPropertiesManager</a>* propertyOwnerPtr,
+<a name="l00077"></a>00077                      <span class="keyword">const</span> QByteArray&amp; propertyName,
+<a name="l00078"></a>00078                      <span class="keyword">const</span> QByteArray&amp; propertyDescription,
+<a name="l00079"></a>00079                      <span class="keywordtype">int</span> propertyFlags,
+<a name="l00080"></a>00080                      <span class="keywordtype">int</span> changeFlags,
+<a name="l00081"></a>00081                      <span class="keyword">const</span> <a class="code" href="classiprop_1_1_t_object_property.html#a7639b27ea56c2a15884503717703165e">ValueType</a>&amp; defaultValue)
 <a name="l00082"></a>00082        :<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/class_base.html">BaseClass</a>(propertyOwnerPtr, propertyName, propertyDescription, propertyFlags, changeFlags)
 <a name="l00083"></a>00083 {
 <a name="l00084"></a>00084        <a class="code" href="classiprop_1_1_t_object_property.html#a8838b2ef16aa163c78f874cebb3fae17">m_defaultPropertyValuePtr</a>.<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">SetPtr</a>(<span class="keyword">new</span> <a class="code" href="classiprop_1_1_t_object_property.html#aa951669404aff63e99ab3e5e33261dc8">PropertyType</a>());
@@ -121,7 +121,7 @@
 <a name="l00099"></a>00099 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Value&gt;
 <a name="l00100"></a><a class="code" href="classiprop_1_1_t_object_property.html#ae6f505072bd937deba1604d8a6dce889">00100</a> <span class="keywordtype">bool</span> <a class="code" href="classiprop_1_1_t_object_property.html#ae6f505072bd937deba1604d8a6dce889">TObjectProperty&lt;Value&gt;::SetValue</a>(<span class="keyword">const</span> Value&amp; value)
 <a name="l00101"></a>00101 {
-<a name="l00102"></a>00102        <span class="keywordflow">if</span> (m_value != value){
+<a name="l00102"></a>00102        <span class="keywordflow">if</span> (!m_value.IsEqual(value)){
 <a name="l00103"></a>00103               <span class="keywordflow">return</span> m_value.CopyFrom(value);
 <a name="l00104"></a>00104        }
 <a name="l00105"></a>00105 
