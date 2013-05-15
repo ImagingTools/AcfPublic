@@ -732,9 +732,26 @@
 <a name="l00801"></a>00801 } <span class="comment">// namespace imath</span>
 <a name="l00802"></a>00802 
 <a name="l00803"></a>00803 
-<a name="l00804"></a>00804 <span class="preprocessor">#endif // !imath_TFastVector_included</span>
-<a name="l00805"></a>00805 <span class="preprocessor"></span>
-<a name="l00806"></a>00806 
+<a name="l00804"></a>00804 
+<a name="l00805"></a>00805 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> MaxSize, <span class="keyword">class</span> Element&gt;
+<a name="l00806"></a><a class="code" href="_t_fast_vector_8h.html#a1cc3d5ce75247d7419de34a726d651b8">00806</a> <span class="keyword">inline</span> uint <a class="code" href="_t_fast_vector_8h.html#a1cc3d5ce75247d7419de34a726d651b8">qHash</a>(<span class="keyword">const</span> <a class="code" href="classimath_1_1_t_fast_vector.html" title="Simple implementation of fixed-size vector.">imath::TFastVector&lt;MaxSize, Element&gt;</a>&amp; v)
+<a name="l00807"></a>00807 {
+<a name="l00808"></a>00808        uint retVal = 0;
+<a name="l00809"></a>00809 
+<a name="l00810"></a>00810        <span class="keywordtype">int</span> elementsCount = v.<a class="code" href="classimath_1_1_t_fast_vector.html#a7950f000b511d2dcff98b7d131c8ca0a" title="Get number of elements.">GetElementsCount</a>();
+<a name="l00811"></a>00811        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
+<a name="l00812"></a>00812               <span class="keywordtype">double</span> element = v[i];
+<a name="l00813"></a>00813 
+<a name="l00814"></a>00814               retVal = (retVal &lt;&lt; 1) ^ *((uint*)&amp;element) + 1;
+<a name="l00815"></a>00815        }
+<a name="l00816"></a>00816 
+<a name="l00817"></a>00817        <span class="keywordflow">return</span> retVal;
+<a name="l00818"></a>00818 }
+<a name="l00819"></a>00819 
+<a name="l00820"></a>00820 
+<a name="l00821"></a>00821 <span class="preprocessor">#endif // !imath_TFastVector_included</span>
+<a name="l00822"></a>00822 <span class="preprocessor"></span>
+<a name="l00823"></a>00823 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

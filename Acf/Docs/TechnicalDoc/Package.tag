@@ -2681,6 +2681,13 @@
     <includes id="_t_vector_8h" name="TVector.h" local="yes" imported="no">imath/TVector.h</includes>
     <class kind="class">imath::TFastVector</class>
     <namespace>imath</namespace>
+    <member kind="function">
+      <type>uint</type>
+      <name>qHash</name>
+      <anchorfile>_t_fast_vector_8h.html</anchorfile>
+      <anchor>a1cc3d5ce75247d7419de34a726d651b8</anchor>
+      <arglist>(const imath::TFastVector&lt; MaxSize, Element &gt; &amp;v)</arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>TFulcrumGridFunctionBase.h</name>
