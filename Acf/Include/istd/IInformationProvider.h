@@ -55,7 +55,7 @@ public:
 	};
 
 	/**
-		Additionaly information flags.
+		Additionally information flags.
 	*/
 	enum InformationTypeFlags
 	{

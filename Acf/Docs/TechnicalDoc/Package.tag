@@ -859,6 +859,24 @@
     <namespace>icmm</namespace>
   </compound>
   <compound kind="file">
+    <name>CFastColor.h</name>
+    <path>C:/Temp/Acf/Include/icmm/</path>
+    <filename>_c_fast_color_8h</filename>
+    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <includes id="_i_double_manip_8h" name="IDoubleManip.h" local="yes" imported="no">imath/IDoubleManip.h</includes>
+    <includes id="_t_fast_vector_8h" name="TFastVector.h" local="yes" imported="no">imath/TFastVector.h</includes>
+    <includes id="_c_var_color_8h" name="CVarColor.h" local="yes" imported="no">icmm/CVarColor.h</includes>
+    <includes id="_c_lab_8h" name="CLab.h" local="yes" imported="no">icmm/CLab.h</includes>
+    <class kind="class">icmm::CFastColor</class>
+    <namespace>icmm</namespace>
+    <member kind="enumvalue">
+      <name>MAX_COLOR_COMPONENTS_COUNT</name>
+      <anchorfile>namespaceicmm.html</anchorfile>
+      <anchor>a5895497c877a6986bfe16b0e88a007b2aeff64e127f3aa234c1ecd2ca435f0552</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
     <name>CHsv.h</name>
     <path>C:/Temp/Acf/Include/icmm/</path>
     <filename>_c_hsv_8h</filename>
@@ -1884,6 +1902,14 @@
     <includes id="_i_document_types_info_8h" name="IDocumentTypesInfo.h" local="yes" imported="no">idoc/IDocumentTypesInfo.h</includes>
     <class kind="class">idoc::IDocumentManager</class>
     <class kind="struct">idoc::IDocumentManager::DocumentInfo</class>
+    <namespace>idoc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IDocumentMetaInfo.h</name>
+    <path>C:/Temp/Acf/Include/idoc/</path>
+    <filename>_i_document_meta_info_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="no" imported="no">istd/IChangeable.h</includes>
+    <class kind="class">idoc::IDocumentMetaInfo</class>
     <namespace>idoc</namespace>
   </compound>
   <compound kind="file">
@@ -13336,6 +13362,7 @@
     <class kind="class">icmm::CCmyk</class>
     <class kind="class">icmm::CCmykToRgbTransformation</class>
     <class kind="class">icmm::CColorTransformationProvider</class>
+    <class kind="class">icmm::CFastColor</class>
     <class kind="class">icmm::CHsv</class>
     <class kind="class">icmm::CHsvToRgbTransformation</class>
     <class kind="class">icmm::CLab</class>
@@ -13360,6 +13387,12 @@
       <name>CComposedLinearGradient</name>
       <anchorfile>namespaceicmm.html</anchorfile>
       <anchor>a5d42c07f2be33ad5a96638aba0794cab</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MAX_COLOR_COMPONENTS_COUNT</name>
+      <anchorfile>namespaceicmm.html</anchorfile>
+      <anchor>a5895497c877a6986bfe16b0e88a007b2aeff64e127f3aa234c1ecd2ca435f0552</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -13841,6 +13874,263 @@
       <anchorfile>classicmm_1_1_c_color_transformation_provider.html</anchorfile>
       <anchor>a7495f92eb8b1aa2132c7e1d852c888b5</anchor>
       <arglist>(int inputColorType, int outputColorType)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icmm::CFastColor</name>
+    <filename>classicmm_1_1_c_fast_color.html</filename>
+    <base>TFastVector&lt; MAX_COLOR_COMPONENTS_COUNT &gt;</base>
+    <member kind="typedef">
+      <type>imath::TFastVector&lt; MAX_COLOR_COMPONENTS_COUNT &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>aebdde9a21bdc0e59c2cd31524def7b3c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CFastColor</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>aad6e8034b892e7298c52b4f297878aea</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CFastColor</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>abdb478e29fce8fb4a0c2c0d4943d5a3d</anchor>
+      <arglist>(int componentsCount, double value=0)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CFastColor</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a3d42ae07e9c1298d18bb044e1d0fd57c</anchor>
+      <arglist>(const CFastColor &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CFastColor</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>ad18bf0e297ebdfe54835a3b577571666</anchor>
+      <arglist>(const imath::TVector&lt; Size &gt; &amp;vector)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CFastColor</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a082a28d14e03d30c89b9774a7fe9ffc0</anchor>
+      <arglist>(const icmm::CVarColor &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>icmm::CLab</type>
+      <name>GetAsLab</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>afa096ecb70da0cac45761971419d437f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetAsLab</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a014214e212bb51688fe7715c11728171</anchor>
+      <arglist>(const icmm::CLab &amp;lab)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>EnsureElementsCount</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>ae99aefe4805cbf70855c74333fb759eb</anchor>
+      <arglist>(int count, double value=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetRounded</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a07c39593c69426dd8f41780fd4944328</anchor>
+      <arglist>(const imath::IDoubleManip &amp;manipulator, CFastColor &amp;result)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsRoundedEqual</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>add13a03157aa43bdd6c121355f7f9486</anchor>
+      <arglist>(const CFastColor &amp;color, const imath::IDoubleManip &amp;manipulator) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsSimilar</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a41825719d3a209bda1d1199072de6b06</anchor>
+      <arglist>(const CFastColor &amp;color, double tolerance=I_BIG_EPSILON) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsNormalized</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>aa60da96b92cf6913c03b90c4bd1e6732</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Normalize</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a750f4cd943404412a57288841d5ff7db</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetNormalized</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a4fe0fd980c3921acd7ef4dbc656e058b</anchor>
+      <arglist>(CFastColor &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator icmm::CVarColor</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>ab2726c82901efd015bc294c6daf0075c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a0f2da6590383a3e66f571be50a700424</anchor>
+      <arglist>(const CFastColor &amp;vector) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>aa9cb42f2fe87dcb64916f013b6fcf845</anchor>
+      <arglist>(const CFastColor &amp;vector) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator&lt;</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>abc64716c1727b5f9f4ca71b74e2b7631</anchor>
+      <arglist>(const CFastColor &amp;vector) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator&gt;</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a1e36389c9dd091a9d9a50e7ba4f7fc17</anchor>
+      <arglist>(const CFastColor &amp;vector) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator&lt;=</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>ab8d9a8b425bdd8df400ba7956b9bdb46</anchor>
+      <arglist>(const CFastColor &amp;vector) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator&gt;=</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a247eeeea052906ffecba9ef033a3779a</anchor>
+      <arglist>(const CFastColor &amp;vector) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CFastColor</type>
+      <name>operator+</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a1f1fe71bbf79c6a1ef149c426239c565</anchor>
+      <arglist>(const CFastColor &amp;color) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CFastColor</type>
+      <name>operator-</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a906e8dc2e058fd81071cddddd4036790</anchor>
+      <arglist>(const CFastColor &amp;color) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CFastColor</type>
+      <name>operator*</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a9a878b3f3769fe10b23314a4fd94442b</anchor>
+      <arglist>(const CFastColor &amp;color) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CFastColor</type>
+      <name>operator/</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>ac49b42ded0b75308b8c65d280ee2bae0</anchor>
+      <arglist>(const CFastColor &amp;color) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CFastColor</type>
+      <name>operator*</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a48c86cae4797ddc59799f5a7851cc14f</anchor>
+      <arglist>(double value) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CFastColor</type>
+      <name>operator/</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a30fca75a0d910c2b9d110bfe528313d4</anchor>
+      <arglist>(double value) const </arglist>
+    </member>
+    <member kind="function">
+      <type>const CFastColor &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a0dfb656197938730d1df68be148d5044</anchor>
+      <arglist>(const CFastColor &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>const CFastColor &amp;</type>
+      <name>operator+=</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a3b754b47a286dd3c9ece80291a896c78</anchor>
+      <arglist>(const CFastColor &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>const CFastColor &amp;</type>
+      <name>operator-=</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a3e1db27231b1955461d8e6d57c451798</anchor>
+      <arglist>(const CFastColor &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>const CFastColor &amp;</type>
+      <name>operator*=</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a2c1a9fd0493c124c276d4224a436f61f</anchor>
+      <arglist>(const CFastColor &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>const CFastColor &amp;</type>
+      <name>operator/=</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a37f321a8e4b37fb3c1056877c2f82210</anchor>
+      <arglist>(const CFastColor &amp;color)</arglist>
+    </member>
+    <member kind="function">
+      <type>const CFastColor &amp;</type>
+      <name>operator*=</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a0cc8193b284575d98667ff5aab99a933</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function">
+      <type>const CFastColor &amp;</type>
+      <name>operator/=</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a354c69b90fe52dc838e875875574255d</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>Serialize</name>
+      <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
+      <anchor>a9ab779640514b7b5aadd565a11a3002a</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -19028,6 +19318,7 @@
     <class kind="class">idoc::CTextFileLoaderComp</class>
     <class kind="class">idoc::CTmplBasedDocumentManagerBase</class>
     <class kind="class">idoc::IDocumentManager</class>
+    <class kind="class">idoc::IDocumentMetaInfo</class>
     <class kind="class">idoc::IDocumentStateComparator</class>
     <class kind="class">idoc::IDocumentTemplate</class>
     <class kind="class">idoc::IDocumentTypesInfo</class>
@@ -19557,7 +19848,7 @@
     <member kind="enumvalue">
       <name>RELEVANT_FLAGS</name>
       <anchorfile>classidoc_1_1_c_selected_doc_model_binder_comp.html</anchorfile>
-      <anchor>a66849e4bdd3950e95a10035d46a472eca94becf689cf0939104480dfefc235d30</anchor>
+      <anchor>a24cd7e92fda13a1b1a177b82e96a147aa94becf689cf0939104480dfefc235d30</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -20487,6 +20778,88 @@
       <anchorfile>structidoc_1_1_i_document_manager_1_1_document_info.html</anchorfile>
       <anchor>a5285b60ab274181c39e6052a94554684</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>idoc::IDocumentMetaInfo</name>
+    <filename>classidoc_1_1_i_document_meta_info.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="enumeration">
+      <name>MetaInfoType</name>
+      <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
+      <anchor>a7dad62c05a2974976650722db5891a0a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MIT_AUTHOR</name>
+      <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
+      <anchor>a7dad62c05a2974976650722db5891a0aa98720a18831a3ee78fac3e50e81b754f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MIT_CREATOR</name>
+      <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
+      <anchor>a7dad62c05a2974976650722db5891a0aa60b395429ab3f232eb4f3569fb9dc2b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MIT_DESCRIPTION</name>
+      <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
+      <anchor>a7dad62c05a2974976650722db5891a0aa49e9981ecb3ba6a84a1bb0a1967aeb65</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MIT_CREATION_TIME</name>
+      <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
+      <anchor>a7dad62c05a2974976650722db5891a0aae4bd4b4b880375bb629ca56f398cb5e7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MIT_MODIFICATION_TIME</name>
+      <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
+      <anchor>a7dad62c05a2974976650722db5891a0aa614d76f0b5fc5925c1b3ab94b83a2f07</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MIT_USER</name>
+      <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
+      <anchor>a7dad62c05a2974976650722db5891a0aaec57564004dc04e9464f01cb90c3c715</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QSet&lt; MetaInfoType &gt;</type>
+      <name>MetaInfoTypes</name>
+      <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
+      <anchor>a01f0c41e844efc86e49e852c0bb601a1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual MetaInfoTypes</type>
+      <name>GetSupportedMetaInfoTypes</name>
+      <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
+      <anchor>a5b568f454de67200839a733ba93dea64</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QVariant</type>
+      <name>GetDocumentMetaInfo</name>
+      <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
+      <anchor>a7f746e087b8948ba0cf4e4e5374f965b</anchor>
+      <arglist>(MetaInfoType metaInfoType) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetMetaInfoName</name>
+      <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
+      <anchor>aabe5c68f86d80d5531aea076a98515ea</anchor>
+      <arglist>(MetaInfoType metaInfoType) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetMetaInfoDescription</name>
+      <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
+      <anchor>aac015eff62a1dc8afaa5e498588dab26</anchor>
+      <arglist>(MetaInfoType metaInfoType) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -24761,7 +25134,7 @@
     <member kind="enumvalue">
       <name>PRECISION</name>
       <anchorfile>classimath_1_1_c_double_manip.html</anchorfile>
-      <anchor>af91456f078ffaa8d334fc7b1f35ca858a9c44114731a4fbde7f474759bcb26fa4</anchor>
+      <anchor>abb18076f5fee9fc9fb04fd4c069d2b9fa9c44114731a4fbde7f474759bcb26fa4</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -25829,7 +26202,7 @@
     <member kind="enumvalue">
       <name>MAX_ELEMENTS_COUNT</name>
       <anchorfile>classimath_1_1_t_fast_vector.html</anchorfile>
-      <anchor>a2f65d3cc933b8aa7337ab7d9c7f1ce96a9d7088773a8584e0410aee31b776e2ba</anchor>
+      <anchor>a887cb8a3482c08199f7142c94926466ea9d7088773a8584e0410aee31b776e2ba</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -31158,7 +31531,7 @@
     <member kind="enumvalue">
       <name>NO_SELECTION</name>
       <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
-      <anchor>a9ea81a6e88b19a936ed2e63265117c27a7c687b23162301178cafe954f53c7702</anchor>
+      <anchor>a991db11ac0dc689ba0b1d31a7f806f8ba7c687b23162301178cafe954f53c7702</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -39785,7 +40158,7 @@
     <member kind="enumvalue">
       <name>MaxStringLength</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>a4515d997a13667d732ae946fecef00cda1a2beb3a975a90f733fb0c1ab64525be</anchor>
+      <anchor>a49645d55a027d7ff46b455096d56d0f7a1a2beb3a975a90f733fb0c1ab64525be</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -41353,7 +41726,7 @@
     <member kind="enumvalue">
       <name>UnknownVersion</name>
       <anchorfile>classiser_1_1_i_version_info.html</anchorfile>
-      <anchor>a41704f75da7d978f4be5064bd72ab3cdaf9fa112e0f25b4bc6c7b7b7bc3ee742f</anchor>
+      <anchor>a60cc015d568ce2139b8d17245f6ebef9af9fa112e0f25b4bc6c7b7b7bc3ee742f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -42003,7 +42376,7 @@
     <member kind="enumvalue">
       <name>MAX_ELEMENTS_COUNT</name>
       <anchorfile>classistd_1_1_c_fast_binary_index.html</anchorfile>
-      <anchor>a4d4814acfbe44c2399618e1aafc532b7abbd51a4d709be2d7e1ab0cc554dd3944</anchor>
+      <anchor>a02e0e12d1e6d33cd315f7a1dca5481a2abbd51a4d709be2d7e1ab0cc554dd3944</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -44291,7 +44664,7 @@
     <member kind="enumvalue">
       <name>DIMENSIONS</name>
       <anchorfile>classistd_1_1_t_index.html</anchorfile>
-      <anchor>ae5a570876a164730b812843080a1b375a45842b3fa4ac21fb16cb7a478a51ad6a</anchor>
+      <anchor>afc1b837ba113166e458223c75ae33bc8a45842b3fa4ac21fb16cb7a478a51ad6a</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -44934,7 +45307,7 @@
     <member kind="enumvalue">
       <name>InvalidIndex</name>
       <anchorfile>classistd_1_1_t_pointer_vector.html</anchorfile>
-      <anchor>a01df72dd3f97b868188f2c6bb493e66aa5e9e43a0fe51bd123229d4b73c161110</anchor>
+      <anchor>ad91619ce68c064307824cfc03e86506ea5e9e43a0fe51bd123229d4b73c161110</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -46430,13 +46803,13 @@
     <member kind="enumvalue">
       <name>CONTROL_POINTS_COUNT</name>
       <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
-      <anchor>a2ea8a0c3aee041ada14f7dd3ad0ca8eba7fb66a1f5e3ce4190017f22939c36afb</anchor>
+      <anchor>a831886a6fcce6333778844a28eeec141a7fb66a1f5e3ce4190017f22939c36afb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>ACTIVE_POINTS_COUNT</name>
       <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
-      <anchor>a2ea8a0c3aee041ada14f7dd3ad0ca8eba3776b7e973707d0c8d2a86abccc207e3</anchor>
+      <anchor>a831886a6fcce6333778844a28eeec141a3776b7e973707d0c8d2a86abccc207e3</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
@@ -47342,7 +47715,7 @@
     <member kind="enumvalue">
       <name>NORMAL_SET_SIZE</name>
       <anchorfile>classiview_1_1_c_color_schema.html</anchorfile>
-      <anchor>aff301eff627298d9deb0a4432b0f9523a82b6f7e4fa5cdcfe8a3073430eb883ef</anchor>
+      <anchor>a2f928f35cd24d71381c922ed894b2213a82b6f7e4fa5cdcfe8a3073430eb883ef</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -47402,19 +47775,19 @@
     <member kind="enumvalue">
       <name>TICKER_SIZE</name>
       <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
-      <anchor>abad75a2cde30f933a0eaf07d907b6131a7b9aaadf57b04e96b6d901d25229edec</anchor>
+      <anchor>ae5716ecce487b63ee2549c7222d9d1dba7b9aaadf57b04e96b6d901d25229edec</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SMALL_TICKER_SIZE</name>
       <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
-      <anchor>abad75a2cde30f933a0eaf07d907b6131ab62460c925c9513455eea5005dc64220</anchor>
+      <anchor>ae5716ecce487b63ee2549c7222d9d1dbab62460c925c9513455eea5005dc64220</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>LOGICAL_LINE_WIDTH</name>
       <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
-      <anchor>abad75a2cde30f933a0eaf07d907b6131a664c9e6063e60c758b4ae1ee3ee48a9c</anchor>
+      <anchor>ae5716ecce487b63ee2549c7222d9d1dba664c9e6063e60c758b4ae1ee3ee48a9c</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
