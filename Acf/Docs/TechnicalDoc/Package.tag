@@ -8669,6 +8669,13 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
+      <name>IsEqual</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a360cc7895316bc492388eb48b678fefe</anchor>
+      <arglist>(const IChangeable &amp;object) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
       <anchor>aee96368e13548faa82bd3c2cf7aad01a</anchor>

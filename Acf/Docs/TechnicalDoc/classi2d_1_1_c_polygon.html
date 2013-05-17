@@ -111,6 +111,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#aab373d069a4e8854c26831897ea6adae">CopyFrom</a> (const IChangeable &amp;object, <a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#acd7a8230afdef605df6e5af2b3087942">CloneMe</a> (<a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#acd7a8230afdef605df6e5af2b3087942"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#a360cc7895316bc492388eb48b678fefe">IsEqual</a> (const IChangeable &amp;object) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_polygon.html#aee96368e13548faa82bd3c2cf7aad01a">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#aee96368e13548faa82bd3c2cf7aad01a"></a><br/></td></tr>
 </table>
@@ -133,7 +134,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00136">136</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00137">137</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
 
 </div>
 </div>
@@ -331,7 +332,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00149">149</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00150">150</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_t_data_node_polyline_8h_source.html#l00145">i2d::TDataNodePolyline&lt; NodeData &gt;::CopyFrom()</a>, <a class="el" href="_t_polygon_based_params_gui_comp_8h_source.html#l00336">iqt2d::TPolygonBasedParamsGuiComp&lt; PolygonBasedShape, PolygonBasedModel &gt;::OnToolsButtonMenuActionTriggered()</a>, and <a class="el" href="_t_polygon_based_params_gui_comp_8h_source.html#l00264">iqt2d::TPolygonBasedParamsGuiComp&lt; PolygonBasedShape, PolygonBasedModel &gt;::UpdateGui()</a>.</p>
 
@@ -353,7 +354,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Return size of node table. </p>
 
-<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00143">143</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00144">144</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_t_data_node_polyline_8h_source.html#l00145">i2d::TDataNodePolyline&lt; NodeData &gt;::CopyFrom()</a>, <a class="el" href="_t_polygon_based_params_gui_comp_8h_source.html#l00336">iqt2d::TPolygonBasedParamsGuiComp&lt; PolygonBasedShape, PolygonBasedModel &gt;::OnToolsButtonMenuActionTriggered()</a>, and <a class="el" href="_t_polygon_based_params_gui_comp_8h_source.html#l00264">iqt2d::TPolygonBasedParamsGuiComp&lt; PolygonBasedShape, PolygonBasedModel &gt;::UpdateGui()</a>.</p>
 
@@ -553,6 +554,23 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a360cc7895316bc492388eb48b678fefe"></a><!-- doxytag: member="i2d::CPolygon::IsEqual" ref="a360cc7895316bc492388eb48b678fefe" args="(const IChangeable &amp;object) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool i2d::CPolygon::IsEqual </td>
+          <td>(</td>
+          <td class="paramtype">const IChangeable &amp;&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a53880a9685e64d6fb4db7c765ff5a5a6"></a><!-- doxytag: member="i2d::CPolygon::MoveCenterTo" ref="a53880a9685e64d6fb4db7c765ff5a5a6" args="(const CVector2d &amp;position)" -->
 <div class="memitem">
 <div class="memproto">
@@ -654,7 +672,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00157">157</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_polygon_8h_source.html#l00158">158</a> of file <a class="el" href="_c_polygon_8h_source.html">CPolygon.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_t_polygon_based_params_gui_comp_8h_source.html#l00336">iqt2d::TPolygonBasedParamsGuiComp&lt; PolygonBasedShape, PolygonBasedModel &gt;::OnToolsButtonMenuActionTriggered()</a>.</p>
 
