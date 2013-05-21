@@ -20,16 +20,16 @@
 ********************************************************************************/
 
 
-#ifndef idoc_CTextDocumentComp_included
-#define idoc_CTextDocumentComp_included
+#ifndef idoc_CStandardDocumentMetaInfo_included
+#define idoc_CStandardDocumentMetaInfo_included
 
 
 // Qt includes
-#include <QtCore/QString>
+#include <QtCore/QMap>
 
 // ACF includes
-#include "icomp/CComponentBase.h"
-#include "idoc/ITextDocument.h"
+#include "iser/ISerializable.h"
+#include "idoc/IDocumentMetaInfo.h"
 
 
 namespace idoc
@@ -39,39 +39,31 @@ namespace idoc
 /**
 	Simple implementation of a text document model.
 */
-class CTextDocumentComp: public icomp::CComponentBase, virtual public ITextDocument
+class CStandardDocumentMetaInfo:
+			virtual public IDocumentMetaInfo,
+			virtual public iser::ISerializable
 {
 public:
-	typedef icomp::CComponentBase BaseClass;
-
-	I_BEGIN_COMPONENT(CTextDocumentComp);
-		I_REGISTER_INTERFACE(iser::ISerializable);
-		I_REGISTER_INTERFACE(ITextDocument);
-		I_ASSIGN(m_defaultTextAttrPtr, "DefaultText", "Default text", false, "Hallo World!");
-	I_END_COMPONENT;
-
-	// reimplemented (idoc::ITextDocument)
-	virtual QString GetText() const;
-	virtual void SetText(const QString& text);
+	// reimplemented (IDocumentMetaInfo)
+	virtual MetaInfoTypes GetSupportedMetaInfoTypes() const;
+	virtual QVariant GetDocumentMetaInfo(MetaInfoType metaInfoType) const;
+	virtual bool SetDocumentMetaInfo(MetaInfoType metaInfoType, const QVariant& metaInfo);
+	virtual QString GetMetaInfoName(MetaInfoType metaInfoType) const;
+	virtual QString GetMetaInfoDescription(MetaInfoType metaInfoType) const;
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
 
-protected:
-	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentCreated();
-
 private:
-	QString m_text;
+	typedef QMap<int, QVariant> MetaInfoMap;
 
-	I_ATTR(QString, m_defaultTextAttrPtr);
+	QMap<int, QVariant> m_infosMap;
 };
 
 
 } // namespace idoc
 
 
-
-#endif // !idoc_CTextDocumentComp_included
+#endif // !idoc_CStandardDocumentMetaInfo_included
 
 

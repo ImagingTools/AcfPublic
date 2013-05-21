@@ -1862,6 +1862,15 @@
     <namespace>idoc</namespace>
   </compound>
   <compound kind="file">
+    <name>CStandardDocumentMetaInfo.h</name>
+    <path>C:/Temp/Acf/Include/idoc/</path>
+    <filename>_c_standard_document_meta_info_8h</filename>
+    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <includes id="_i_document_meta_info_8h" name="IDocumentMetaInfo.h" local="yes" imported="no">idoc/IDocumentMetaInfo.h</includes>
+    <class kind="class">idoc::CStandardDocumentMetaInfo</class>
+    <namespace>idoc</namespace>
+  </compound>
+  <compound kind="file">
     <name>CTextDocumentComp.h</name>
     <path>C:/Temp/Acf/Include/idoc/</path>
     <filename>_c_text_document_comp_8h</filename>
@@ -19321,6 +19330,7 @@
     <class kind="class">idoc::CSingleDocumentManagerBase</class>
     <class kind="class">idoc::CSingleDocumentTemplateBase</class>
     <class kind="class">idoc::CSingleDocumentTemplateComp</class>
+    <class kind="class">idoc::CStandardDocumentMetaInfo</class>
     <class kind="class">idoc::CTextDocumentComp</class>
     <class kind="class">idoc::CTextFileLoaderComp</class>
     <class kind="class">idoc::CTmplBasedDocumentManagerBase</class>
@@ -20401,6 +20411,54 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>idoc::CStandardDocumentMetaInfo</name>
+    <filename>classidoc_1_1_c_standard_document_meta_info.html</filename>
+    <base virtualness="virtual">idoc::IDocumentMetaInfo</base>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual MetaInfoTypes</type>
+      <name>GetSupportedMetaInfoTypes</name>
+      <anchorfile>classidoc_1_1_c_standard_document_meta_info.html</anchorfile>
+      <anchor>a0d7afc45ce2fb7343594fae6b24363f2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QVariant</type>
+      <name>GetDocumentMetaInfo</name>
+      <anchorfile>classidoc_1_1_c_standard_document_meta_info.html</anchorfile>
+      <anchor>a4305b8406311b619ca869da4ad201f48</anchor>
+      <arglist>(MetaInfoType metaInfoType) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetDocumentMetaInfo</name>
+      <anchorfile>classidoc_1_1_c_standard_document_meta_info.html</anchorfile>
+      <anchor>a163a4759bb61cb090d29ebb201fcd98f</anchor>
+      <arglist>(MetaInfoType metaInfoType, const QVariant &amp;metaInfo)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetMetaInfoName</name>
+      <anchorfile>classidoc_1_1_c_standard_document_meta_info.html</anchorfile>
+      <anchor>aa6713b5fbd35ddc6d22d152bc43745b3</anchor>
+      <arglist>(MetaInfoType metaInfoType) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetMetaInfoDescription</name>
+      <anchorfile>classidoc_1_1_c_standard_document_meta_info.html</anchorfile>
+      <anchor>a14682a6add0ad4e923df6fddb03f9a26</anchor>
+      <arglist>(MetaInfoType metaInfoType) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classidoc_1_1_c_standard_document_meta_info.html</anchorfile>
+      <anchor>a89a50d39a44d0181981997015e7f2fcf</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>idoc::CTextDocumentComp</name>
     <filename>classidoc_1_1_c_text_document_comp.html</filename>
     <base>icomp::CComponentBase</base>
@@ -20853,6 +20911,13 @@
       <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
       <anchor>a7f746e087b8948ba0cf4e4e5374f965b</anchor>
       <arglist>(MetaInfoType metaInfoType) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>SetDocumentMetaInfo</name>
+      <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
+      <anchor>a730a4bf762dbaa752d4d7032edda1a7b</anchor>
+      <arglist>(MetaInfoType metaInfoType, const QVariant &amp;metaInfo)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>

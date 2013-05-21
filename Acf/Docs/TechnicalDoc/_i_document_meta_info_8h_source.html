@@ -66,16 +66,18 @@
 <a name="l00062"></a>00062 
 <a name="l00066"></a>00066        <span class="keyword">virtual</span> QVariant <a class="code" href="classidoc_1_1_i_document_meta_info.html#a7f746e087b8948ba0cf4e4e5374f965b" title="Get document&#39;s meta info.">GetDocumentMetaInfo</a>(<a class="code" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0a">MetaInfoType</a> metaInfoType) <span class="keyword">const</span> = 0;
 <a name="l00067"></a>00067 
-<a name="l00071"></a>00071        <span class="keyword">virtual</span> QString <a class="code" href="classidoc_1_1_i_document_meta_info.html#aabe5c68f86d80d5531aea076a98515ea" title="Get a human readable name for a given meta information type.">GetMetaInfoName</a>(<a class="code" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0a">MetaInfoType</a> metaInfoType) <span class="keyword">const</span> = 0;
+<a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_i_document_meta_info.html#a730a4bf762dbaa752d4d7032edda1a7b" title="Set new document&#39;s meta information for a given meta type.">SetDocumentMetaInfo</a>(<a class="code" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0a">MetaInfoType</a> metaInfoType, <span class="keyword">const</span> QVariant&amp; metaInfo) = 0;
 <a name="l00072"></a>00072 
-<a name="l00076"></a>00076        <span class="keyword">virtual</span> QString <a class="code" href="classidoc_1_1_i_document_meta_info.html#aac015eff62a1dc8afaa5e498588dab26" title="Get a human readable description for a given meta information type.">GetMetaInfoDescription</a>(<a class="code" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0a">MetaInfoType</a> metaInfoType) <span class="keyword">const</span> = 0;
-<a name="l00077"></a>00077 };
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079 
-<a name="l00080"></a>00080 } <span class="comment">// namespace idoc</span>
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083 <span class="preprocessor">#endif // !idoc_IDocumentMetaInfo_included</span>
+<a name="l00076"></a>00076        <span class="keyword">virtual</span> QString <a class="code" href="classidoc_1_1_i_document_meta_info.html#aabe5c68f86d80d5531aea076a98515ea" title="Get a human readable name for a given meta information type.">GetMetaInfoName</a>(<a class="code" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0a">MetaInfoType</a> metaInfoType) <span class="keyword">const</span> = 0;
+<a name="l00077"></a>00077 
+<a name="l00081"></a>00081        <span class="keyword">virtual</span> QString <a class="code" href="classidoc_1_1_i_document_meta_info.html#aac015eff62a1dc8afaa5e498588dab26" title="Get a human readable description for a given meta information type.">GetMetaInfoDescription</a>(<a class="code" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0a">MetaInfoType</a> metaInfoType) <span class="keyword">const</span> = 0;
+<a name="l00082"></a>00082 };
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 } <span class="comment">// namespace idoc</span>
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 <span class="preprocessor">#endif // !idoc_IDocumentMetaInfo_included</span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
