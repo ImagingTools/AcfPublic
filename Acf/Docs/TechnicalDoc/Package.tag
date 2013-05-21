@@ -435,6 +435,14 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>IRectangleConstraints.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_i_rectangle_constraints_8h</filename>
+    <includes id="_c_rectangle_8h" name="CRectangle.h" local="no" imported="no">i2d/CRectangle.h</includes>
+    <class kind="class">i2d::IRectangleConstraints</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>ISceneController.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_i_scene_controller_8h</filename>
@@ -4109,6 +4117,13 @@
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
+    <name>CFlowLayout.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_c_flow_layout_8h</filename>
+    <class kind="class">iqtgui::CFlowLayout</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
     <name>CFreeWidgetGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_free_widget_gui_comp_8h</filename>
@@ -6335,6 +6350,7 @@
     <class kind="class">i2d::ICalibrationProvider</class>
     <class kind="class">i2d::IMultiCalibrationProvider</class>
     <class kind="class">i2d::IObject2d</class>
+    <class kind="class">i2d::IRectangleConstraints</class>
     <class kind="class">i2d::ISceneController</class>
     <class kind="class">i2d::ITransformation2d</class>
     <class kind="class">i2d::TDataNodePolyline</class>
@@ -10852,6 +10868,25 @@
       <anchorfile>classi2d_1_1_i_object2d.html</anchorfile>
       <anchor>ab77a3500838d3439a2cc8cfb679fc860</anchor>
       <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::IRectangleConstraints</name>
+    <filename>classi2d_1_1_i_rectangle_constraints.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::TRange&lt; int &gt;</type>
+      <name>GetWidthRange</name>
+      <anchorfile>classi2d_1_1_i_rectangle_constraints.html</anchorfile>
+      <anchor>a14f8365f734b81a7fab66826d9284aaf</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::TRange&lt; int &gt;</type>
+      <name>GetHeightRange</name>
+      <anchorfile>classi2d_1_1_i_rectangle_constraints.html</anchorfile>
+      <anchor>aee7c76964c9bf09d308d80480f6f5b7c</anchor>
+      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -35390,6 +35425,7 @@
     <class kind="class">iqtgui::CFilePersistenceGuiComp</class>
     <class kind="class">iqtgui::CFileSystemExplorerGuiComp</class>
     <class kind="class">iqtgui::CFileTreeViewGuiComp</class>
+    <class kind="class">iqtgui::CFlowLayout</class>
     <class kind="class">iqtgui::CFreeWidgetGuiComp</class>
     <class kind="class">iqtgui::CGuiApplicationComp</class>
     <class kind="class">iqtgui::CGuiComponentBase</class>
@@ -36364,6 +36400,115 @@
       <anchorfile>classiqtgui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
       <anchor>ab336987dc363f285a687e73e2dc018e4</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CFlowLayout</name>
+    <filename>classiqtgui_1_1_c_flow_layout.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CFlowLayout</name>
+      <anchorfile>classiqtgui_1_1_c_flow_layout.html</anchorfile>
+      <anchor>a90709e11602550ee13c408200fe90573</anchor>
+      <arglist>(QWidget *parent, int margin=-1, int hSpacing=-1, int vSpacing=-1)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CFlowLayout</name>
+      <anchorfile>classiqtgui_1_1_c_flow_layout.html</anchorfile>
+      <anchor>ac7a7779a180035d23228799a40784110</anchor>
+      <arglist>(int margin=-1, int hSpacing=-1, int vSpacing=-1)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~CFlowLayout</name>
+      <anchorfile>classiqtgui_1_1_c_flow_layout.html</anchorfile>
+      <anchor>a8358a7db2be48d05191a0daaccfcdff2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addItem</name>
+      <anchorfile>classiqtgui_1_1_c_flow_layout.html</anchorfile>
+      <anchor>abe155e6c28b38bf9e7a1afb6082d9bb7</anchor>
+      <arglist>(QLayoutItem *item)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>horizontalSpacing</name>
+      <anchorfile>classiqtgui_1_1_c_flow_layout.html</anchorfile>
+      <anchor>ac2da95b5e82c401bb539795963ddf2c1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>verticalSpacing</name>
+      <anchorfile>classiqtgui_1_1_c_flow_layout.html</anchorfile>
+      <anchor>a56f85195f7c6dbabcd0ebd12241bf763</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>Qt::Orientations</type>
+      <name>expandingDirections</name>
+      <anchorfile>classiqtgui_1_1_c_flow_layout.html</anchorfile>
+      <anchor>a69720b1b145b7a98bea3ccf0cd6b6d45</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>hasHeightForWidth</name>
+      <anchorfile>classiqtgui_1_1_c_flow_layout.html</anchorfile>
+      <anchor>a113249db256315ce09d8f53407565824</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>heightForWidth</name>
+      <anchorfile>classiqtgui_1_1_c_flow_layout.html</anchorfile>
+      <anchor>a05c5e5975b56d59b6c4797f05098578c</anchor>
+      <arglist>(int) const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>count</name>
+      <anchorfile>classiqtgui_1_1_c_flow_layout.html</anchorfile>
+      <anchor>ae2eb12504afe51691612df8bdbc22608</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>QLayoutItem *</type>
+      <name>itemAt</name>
+      <anchorfile>classiqtgui_1_1_c_flow_layout.html</anchorfile>
+      <anchor>a3a06333a7985baa47b16d5ea7750688d</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>QSize</type>
+      <name>minimumSize</name>
+      <anchorfile>classiqtgui_1_1_c_flow_layout.html</anchorfile>
+      <anchor>a3b0b2a8dd9ac5d678f65c9af05edffd2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setGeometry</name>
+      <anchorfile>classiqtgui_1_1_c_flow_layout.html</anchorfile>
+      <anchor>a9e63519464a5233a64ec2d8ca737d9cb</anchor>
+      <arglist>(const QRect &amp;rect)</arglist>
+    </member>
+    <member kind="function">
+      <type>QSize</type>
+      <name>sizeHint</name>
+      <anchorfile>classiqtgui_1_1_c_flow_layout.html</anchorfile>
+      <anchor>a27dcf107f3996531d8de26bcc86a356a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>QLayoutItem *</type>
+      <name>takeAt</name>
+      <anchorfile>classiqtgui_1_1_c_flow_layout.html</anchorfile>
+      <anchor>a1e19a41f1c5b634c2ab5a483e19464ea</anchor>
+      <arglist>(int index)</arglist>
     </member>
   </compound>
   <compound kind="class">

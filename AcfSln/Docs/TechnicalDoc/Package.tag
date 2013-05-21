@@ -190,6 +190,13 @@
     <namespace>icam</namespace>
   </compound>
   <compound kind="file">
+    <name>ICameraInfo.h</name>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
+    <filename>_i_camera_info_8h</filename>
+    <class kind="class">icam::ICameraInfo</class>
+    <namespace>icam</namespace>
+  </compound>
+  <compound kind="file">
     <name>IExposureConstraints.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_i_exposure_constraints_8h</filename>
@@ -2540,6 +2547,14 @@
     <namespace>iqtcam</namespace>
   </compound>
   <compound kind="file">
+    <name>CCameraInfoGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtcam/</path>
+    <filename>_c_camera_info_gui_comp_8h</filename>
+    <includes id="_i_camera_info_8h" name="ICameraInfo.h" local="yes" imported="no">icam/ICameraInfo.h</includes>
+    <class kind="class">iqtcam::CCameraInfoGuiComp</class>
+    <namespace>iqtcam</namespace>
+  </compound>
+  <compound kind="file">
     <name>CExposureParamsGuiComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>_c_exposure_params_gui_comp_8h</filename>
@@ -3709,6 +3724,7 @@
     <class kind="class">icam::CSelectionParamCameraComp</class>
     <class kind="class">icam::CSnapBitmapSupplierComp</class>
     <class kind="class">icam::IBitmapAcquisition</class>
+    <class kind="class">icam::ICameraInfo</class>
     <class kind="class">icam::IExposureConstraints</class>
     <class kind="class">icam::IExposureParams</class>
   </compound>
@@ -4270,6 +4286,96 @@
       <anchorfile>classicam_1_1_i_bitmap_acquisition.html</anchorfile>
       <anchor>ad1fd013eaa11fd644b41f2959b29fd7a</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icam::ICameraInfo</name>
+    <filename>classicam_1_1_i_camera_info.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="enumeration">
+      <name>CameraAttribute</name>
+      <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
+      <anchor>a7650f9df161d473e5e92cb718c46535b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CA_VENDOR</name>
+      <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
+      <anchor>a7650f9df161d473e5e92cb718c46535bab9b9c6bb37222632f8ac0e8765e93bdb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CA_MODEL</name>
+      <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
+      <anchor>a7650f9df161d473e5e92cb718c46535ba2055d84f7217930a6bb45a1a0c43f414</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CA_DEVICE_VERSION</name>
+      <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
+      <anchor>a7650f9df161d473e5e92cb718c46535ba000c5bcba5b24c19366a0cb374d1442d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CA_FIRMWARE_VERSION</name>
+      <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
+      <anchor>a7650f9df161d473e5e92cb718c46535bafa3a18573b74fd3db9cc77764916dcfe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CA_DEVICE_ID</name>
+      <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
+      <anchor>a7650f9df161d473e5e92cb718c46535baa610038d8aed1695551cb39ce20c2bf3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CA_DEVICE_NAME</name>
+      <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
+      <anchor>a7650f9df161d473e5e92cb718c46535ba872b6ec8547c0e584381e7e3686c13dd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CA_DEVICE_CLASS</name>
+      <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
+      <anchor>a7650f9df161d473e5e92cb718c46535ba564f0e899c548d590a0049fe73f6ce0c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CA_SERIAL_NUMBER</name>
+      <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
+      <anchor>a7650f9df161d473e5e92cb718c46535baedb0f16f1064b1df1a5207c3cce7e4fe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CA_IP_ADDRESS</name>
+      <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
+      <anchor>a7650f9df161d473e5e92cb718c46535baadff78f7ff5fb81df049af0f9716be9e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CA_MAC_ADDRESS</name>
+      <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
+      <anchor>a7650f9df161d473e5e92cb718c46535ba72c2a4f984676f59ffcc8e9107328629</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CA_PORT</name>
+      <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
+      <anchor>a7650f9df161d473e5e92cb718c46535ba4f96f0759f524a7f3bae7a4212be73f4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CA_USER</name>
+      <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
+      <anchor>a7650f9df161d473e5e92cb718c46535ba914d067a371f322e28285df4d264ac8b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetCameraAttribute</name>
+      <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
+      <anchor>a0dd734a70a0d7f3571cd52a0507f088c</anchor>
+      <arglist>(int cameraIndex, int attributeId) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -21015,6 +21121,7 @@
     <name>iqtcam</name>
     <filename>namespaceiqtcam.html</filename>
     <class kind="class">iqtcam::CBitmapSupplierGuiComp</class>
+    <class kind="class">iqtcam::CCameraInfoGuiComp</class>
     <class kind="class">iqtcam::CExposureParamsGuiComp</class>
     <class kind="class">iqtcam::CFileAcquisitionComp</class>
     <class kind="class">iqtcam::CMultiBitmapSupplierGuiComp</class>
@@ -21138,6 +21245,25 @@
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
       <anchor>a09679cc02dbb54b0470d77ac459f0fae</anchor>
       <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtcam::CCameraInfoGuiComp</name>
+    <filename>classiqtcam_1_1_c_camera_info_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CCameraInfoGuiComp, iprm::ISelectionParam &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CCameraInfoGuiComp, iprm::ISelectionParam &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtcam_1_1_c_camera_info_gui_comp.html</anchorfile>
+      <anchor>a2bfe1722ee0c3a6a0486b93218153e4d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtcam_1_1_c_camera_info_gui_comp.html</anchorfile>
+      <anchor>ad7f8b30cdec8590ba602226ef2118538</anchor>
+      <arglist>(int updateFlags=0)</arglist>
     </member>
   </compound>
   <compound kind="class">
