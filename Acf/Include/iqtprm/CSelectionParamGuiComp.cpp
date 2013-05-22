@@ -120,6 +120,8 @@ void CSelectionParamGuiComp::OnGuiShown()
 	}
 
 	UpdateSelectorLabel();
+
+	UpdateDescriptionFrame();
 }
 
 

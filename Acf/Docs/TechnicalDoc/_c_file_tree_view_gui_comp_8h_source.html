@@ -180,22 +180,23 @@
 <a name="l00165"></a>00165 
 <a name="l00166"></a>00166        <span class="keyword">mutable</span> QMap&lt;QString, QIcon&gt; m_extToIconMap;
 <a name="l00167"></a>00167 
-<a name="l00168"></a>00168        QString m_userFilter;
-<a name="l00169"></a>00169        QTimer m_filterTimer;
-<a name="l00170"></a>00170        QElapsedTimer m_performanceTimer;
-<a name="l00171"></a>00171 
-<a name="l00172"></a>00172        I_REF(<a class="code" href="classifile_1_1_i_file_type_info.html" title="Provide loading and saving of objects.">ifile::IFileTypeInfo</a>, m_fileTypeInfoCompPtr);
-<a name="l00173"></a>00173        I_MULTIATTR(QString, m_filtersAttrPtr);
-<a name="l00174"></a>00174        I_ATTR(<span class="keywordtype">bool</span>, m_noEmptyDirsAttrPtr);
-<a name="l00175"></a>00175 };
-<a name="l00176"></a>00176 
+<a name="l00168"></a>00168        QRegExp m_filterMatcher;
+<a name="l00169"></a>00169        QString m_userFilter;
+<a name="l00170"></a>00170        QTimer m_filterTimer;
+<a name="l00171"></a>00171        QElapsedTimer m_performanceTimer;
+<a name="l00172"></a>00172 
+<a name="l00173"></a>00173        I_REF(<a class="code" href="classifile_1_1_i_file_type_info.html" title="Provide loading and saving of objects.">ifile::IFileTypeInfo</a>, m_fileTypeInfoCompPtr);
+<a name="l00174"></a>00174        I_MULTIATTR(QString, m_filtersAttrPtr);
+<a name="l00175"></a>00175        I_ATTR(<span class="keywordtype">bool</span>, m_noEmptyDirsAttrPtr);
+<a name="l00176"></a>00176 };
 <a name="l00177"></a>00177 
-<a name="l00178"></a>00178 } <span class="comment">// namespace iqtgui</span>
-<a name="l00179"></a>00179 
+<a name="l00178"></a>00178 
+<a name="l00179"></a>00179 } <span class="comment">// namespace iqtgui</span>
 <a name="l00180"></a>00180 
-<a name="l00181"></a>00181 <span class="preprocessor">#endif // !iqtgui_CFileTreeProviderGuiComp_included</span>
-<a name="l00182"></a>00182 <span class="preprocessor"></span>
-<a name="l00183"></a>00183 
+<a name="l00181"></a>00181 
+<a name="l00182"></a>00182 <span class="preprocessor">#endif // !iqtgui_CFileTreeProviderGuiComp_included</span>
+<a name="l00183"></a>00183 <span class="preprocessor"></span>
+<a name="l00184"></a>00184 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

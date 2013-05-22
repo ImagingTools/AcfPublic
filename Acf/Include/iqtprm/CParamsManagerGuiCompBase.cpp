@@ -78,17 +78,20 @@ void CParamsManagerGuiCompBase::on_RemoveButton_clicked()
 		Q_ASSERT(selectedIndex < objectPtr->GetParamsSetsCount());
 
 		if (selectedIndex >= 0){
-			objectPtr->RemoveParamsSet(selectedIndex);
-
-			// auto select element next to removed
-			int count = objectPtr->GetParamsSetsCount();
-			if (count > 0){
-				if (selectedIndex < count){
-					objectPtr->SetSelectedOptionIndex(selectedIndex);
+			// successfully removed
+			if (objectPtr->RemoveParamsSet(selectedIndex)){
+				// auto select element next to removed
+				int count = objectPtr->GetParamsSetsCount();
+				if (count > 0){
+					if (selectedIndex < count){
+						objectPtr->SetSelectedOptionIndex(selectedIndex);
+					}
+					else{
+						objectPtr->SetSelectedOptionIndex(count-1);
+					}
 				}
-				else{
-					objectPtr->SetSelectedOptionIndex(count-1);
-				}
+			} else {	// not removed by any reason
+				UpdateParamsView(selectedIndex);
 			}
 		}
 	}
@@ -182,7 +185,10 @@ void CParamsManagerGuiCompBase::on_ParamsTree_itemChanged(QTreeWidgetItem* item,
 	if (objectPtr != NULL){
 		int setIndex = item->data(0, Qt::UserRole).toInt();
 
-		objectPtr->SetParamsSetName(setIndex, item->text(0));
+		if (objectPtr->SetParamsSetName(setIndex, item->text(0)) == false){
+			// if not set: restore old name
+			item->setText(0, objectPtr->GetParamsSetName(setIndex));
+		}
 	}
 }
 
@@ -236,9 +242,9 @@ void CParamsManagerGuiCompBase::on_ParamsComboBox_editTextChanged(const QString&
 		if (objectPtr != NULL){
 			int setIndex = ParamsComboBox->itemData(selectedIndex, Qt::UserRole).toInt();
 
-			objectPtr->SetParamsSetName(setIndex, text);
-
-			ParamsComboBox->setItemText(selectedIndex, text);
+			if (objectPtr->SetParamsSetName(setIndex, text)){
+				ParamsComboBox->setItemText(selectedIndex, text);
+			}
 		}
 	}
 }

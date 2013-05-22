@@ -4359,6 +4359,18 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <name>CA_MAX_WIDTH</name>
+      <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
+      <anchor>a7650f9df161d473e5e92cb718c46535ba49668fa867b469983c0356e369cae73d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CA_MAX_HEIGHT</name>
+      <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
+      <anchor>a7650f9df161d473e5e92cb718c46535ba17c1bdb7795f4697c5c195883e70c407</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
       <name>CA_PORT</name>
       <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
       <anchor>a7650f9df161d473e5e92cb718c46535ba4f96f0759f524a7f3bae7a4212be73f4</anchor>
