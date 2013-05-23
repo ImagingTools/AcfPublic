@@ -10891,17 +10891,17 @@
     <filename>classi2d_1_1_i_rectangle_constraints.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
-      <type>virtual istd::TRange&lt; int &gt;</type>
+      <type>virtual istd::CIntRange</type>
       <name>GetWidthRange</name>
       <anchorfile>classi2d_1_1_i_rectangle_constraints.html</anchorfile>
-      <anchor>a14f8365f734b81a7fab66826d9284aaf</anchor>
+      <anchor>a8384ed43dea971253f26a451d78bb41a</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual istd::TRange&lt; int &gt;</type>
+      <type>virtual istd::CIntRange</type>
       <name>GetHeightRange</name>
       <anchorfile>classi2d_1_1_i_rectangle_constraints.html</anchorfile>
-      <anchor>aee7c76964c9bf09d308d80480f6f5b7c</anchor>
+      <anchor>a7fe1ba7ba0f0bfc75d155323bac83255</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>

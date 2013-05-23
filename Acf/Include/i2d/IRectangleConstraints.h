@@ -35,8 +35,8 @@ namespace i2d
 class IRectangleConstraints: virtual public istd::IPolymorphic
 {
 public:
-	virtual istd::TRange<int> GetWidthRange() const = 0;
-	virtual istd::TRange<int> GetHeightRange() const = 0;
+	virtual istd::CIntRange GetWidthRange() const = 0;
+	virtual istd::CIntRange GetHeightRange() const = 0;
 };
 
 
