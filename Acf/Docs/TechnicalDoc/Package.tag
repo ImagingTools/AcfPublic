@@ -936,6 +936,14 @@
     <namespace>icmm</namespace>
   </compound>
   <compound kind="file">
+    <name>CRgbToXyzTransformation.h</name>
+    <path>C:/Temp/Acf/Include/icmm/</path>
+    <filename>_c_rgb_to_xyz_transformation_8h</filename>
+    <includes id="_i_color_transformation_8h" name="IColorTransformation.h" local="yes" imported="no">icmm/IColorTransformation.h</includes>
+    <class kind="class">icmm::CRgbToXyzTransformation</class>
+    <namespace>icmm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CVarColor.h</name>
     <path>C:/Temp/Acf/Include/icmm/</path>
     <filename>_c_var_color_8h</filename>
@@ -944,6 +952,14 @@
     <includes id="_c_var_vector_8h" name="CVarVector.h" local="yes" imported="no">imath/CVarVector.h</includes>
     <includes id="icmm_8h" name="icmm.h" local="yes" imported="no">icmm/icmm.h</includes>
     <class kind="class">icmm::CVarColor</class>
+    <namespace>icmm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CXyzToCieLabTransformation.h</name>
+    <path>C:/Temp/Acf/Include/icmm/</path>
+    <filename>_c_xyz_to_cie_lab_transformation_8h</filename>
+    <includes id="_i_color_transformation_8h" name="IColorTransformation.h" local="yes" imported="no">icmm/IColorTransformation.h</includes>
+    <class kind="class">icmm::CXyzToCieLabTransformation</class>
     <namespace>icmm</namespace>
   </compound>
   <compound kind="file">
@@ -13420,7 +13436,9 @@
     <class kind="class">icmm::CRgb</class>
     <class kind="class">icmm::CRgbToCmykTransformation</class>
     <class kind="class">icmm::CRgbToHsvTranformation</class>
+    <class kind="class">icmm::CRgbToXyzTransformation</class>
     <class kind="class">icmm::CVarColor</class>
+    <class kind="class">icmm::CXyzToCieLabTransformation</class>
     <class kind="class">icmm::IColorTransformation</class>
     <class kind="class">icmm::LinearGradientFunction</class>
     <class kind="class">icmm::TColorGradient</class>
@@ -14831,6 +14849,25 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>icmm::CRgbToXyzTransformation</name>
+    <filename>classicmm_1_1_c_rgb_to_xyz_transformation.html</filename>
+    <base>icmm::IColorTransformation</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetValueAt</name>
+      <anchorfile>classicmm_1_1_c_rgb_to_xyz_transformation.html</anchorfile>
+      <anchor>ab6b169eeb1444d482de163acee54a827</anchor>
+      <arglist>(const icmm::CVarColor &amp;argument, icmm::CVarColor &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual icmm::CVarColor</type>
+      <name>GetValueAt</name>
+      <anchorfile>classicmm_1_1_c_rgb_to_xyz_transformation.html</anchorfile>
+      <anchor>a208e1989ecca5adee887a94e27e17c37</anchor>
+      <arglist>(const icmm::CVarColor &amp;argument) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>icmm::CVarColor</name>
     <filename>classicmm_1_1_c_var_color.html</filename>
     <base>imath::CVarVector</base>
@@ -15009,6 +15046,25 @@
       <anchorfile>classicmm_1_1_c_var_color.html</anchorfile>
       <anchor>a1eb0ad2377f2a54579d2d22684d15c0e</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icmm::CXyzToCieLabTransformation</name>
+    <filename>classicmm_1_1_c_xyz_to_cie_lab_transformation.html</filename>
+    <base>icmm::IColorTransformation</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetValueAt</name>
+      <anchorfile>classicmm_1_1_c_xyz_to_cie_lab_transformation.html</anchorfile>
+      <anchor>abb028974f4d3469a9462fa5db7b08eb4</anchor>
+      <arglist>(const icmm::CVarColor &amp;argument, icmm::CVarColor &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual icmm::CVarColor</type>
+      <name>GetValueAt</name>
+      <anchorfile>classicmm_1_1_c_xyz_to_cie_lab_transformation.html</anchorfile>
+      <anchor>af4a4b2236ef959129e9aff9f4fbbacae</anchor>
+      <arglist>(const icmm::CVarColor &amp;argument) const </arglist>
     </member>
   </compound>
   <compound kind="class">

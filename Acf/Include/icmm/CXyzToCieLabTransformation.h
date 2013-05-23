@@ -20,25 +20,33 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#ifndef icmm_CXyzToCieLabTransformation_included
+#define icmm_CXyzToCieLabTransformation_included
 
 
-namespace istd
+#include "icmm/IColorTransformation.h"
+
+
+namespace icmm
 {
 
 
-enum RepositoryState
+/**
+	Implementation of XYZ-to-CIE-Lab color transformation.
+	2° Observer and D65-illumination are used.
+*/
+class CXyzToCieLabTransformation: public icmm::IColorTransformation
 {
-	RS_ORIGINAL_VERSION =  2974,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+public:
+	// reimplemented (icmm::IColorTransformation)
+	virtual bool GetValueAt(const icmm::CVarColor& argument, icmm::CVarColor& result) const;
+	virtual icmm::CVarColor GetValueAt(const icmm::CVarColor& argument) const;
 };
 
 
-} // namespace istd
+} // namespace icmm
 
 
-#endif // !istd_AcfVersion_included
+#endif // !icmm_CXyzToCieLabTransformation_included
 
 
