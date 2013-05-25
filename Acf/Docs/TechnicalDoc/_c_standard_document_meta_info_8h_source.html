@@ -57,19 +57,22 @@
 <a name="l00032"></a>00032        <span class="comment">// reimplemented (iser::ISerializable)</span>
 <a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_c_standard_document_meta_info.html#a89a50d39a44d0181981997015e7f2fcf" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
 <a name="l00034"></a>00034 
-<a name="l00035"></a>00035 <span class="keyword">private</span>:
-<a name="l00036"></a>00036        <span class="keyword">typedef</span> QMap&lt;int, QVariant&gt; MetaInfoMap;
+<a name="l00035"></a>00035        <span class="comment">// reimplemented (istd::IChangeable)</span>
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classidoc_1_1_c_standard_document_meta_info.html#a343c749f15a69fbdfc0beea040ece859">IsEqual</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>) <span class="keyword">const</span>;
 <a name="l00037"></a>00037 
-<a name="l00038"></a>00038        QMap&lt;int, QVariant&gt; m_infosMap;
-<a name="l00039"></a>00039 };
+<a name="l00038"></a>00038 <span class="keyword">private</span>:
+<a name="l00039"></a>00039        <span class="keyword">typedef</span> QMap&lt;int, QVariant&gt; MetaInfoMap;
 <a name="l00040"></a>00040 
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042 } <span class="comment">// namespace idoc</span>
+<a name="l00041"></a>00041        QMap&lt;int, QVariant&gt; m_infosMap;
+<a name="l00042"></a>00042 };
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044 
-<a name="l00045"></a>00045 <span class="preprocessor">#endif // !idoc_CStandardDocumentMetaInfo_included</span>
-<a name="l00046"></a>00046 <span class="preprocessor"></span>
+<a name="l00045"></a>00045 } <span class="comment">// namespace idoc</span>
+<a name="l00046"></a>00046 
 <a name="l00047"></a>00047 
+<a name="l00048"></a>00048 <span class="preprocessor">#endif // !idoc_CStandardDocumentMetaInfo_included</span>
+<a name="l00049"></a>00049 <span class="preprocessor"></span>
+<a name="l00050"></a>00050 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

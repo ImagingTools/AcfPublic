@@ -20548,6 +20548,13 @@
       <anchor>a89a50d39a44d0181981997015e7f2fcf</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEqual</name>
+      <anchorfile>classidoc_1_1_c_standard_document_meta_info.html</anchorfile>
+      <anchor>a343c749f15a69fbdfc0beea040ece859</anchor>
+      <arglist>(const IChangeable &amp;object) const </arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>idoc::CTextDocumentComp</name>

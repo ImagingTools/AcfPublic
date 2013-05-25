@@ -108,6 +108,7 @@ void CNumericParamsGuiComp::UpdateGui(int /*changeFlags*/)
 			CNumericValueWidget* valueWidgetPtr = 
 				new CNumericValueWidget(panelPtr, 
 					*m_isSliderVisibleAttrPtr, 
+					*m_isButtonsVisibleAttrPtr,
 					*m_inputPolicyAttrPtr);
 			
 			connect(valueWidgetPtr, SIGNAL(ValueChanged()), this, SLOT(OnValueChanged()));

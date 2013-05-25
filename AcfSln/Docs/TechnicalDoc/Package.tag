@@ -24179,8 +24179,8 @@
       <type></type>
       <name>CNumericValueWidget</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
-      <anchor>a172438ee4f1016c0434cff39404258f4</anchor>
-      <arglist>(QWidget *parentPtr=NULL, bool showSlilder=true, int inputPolicy=0)</arglist>
+      <anchor>a8b62cb3a7f98e4d4ec9a4dd97f5c9222</anchor>
+      <arglist>(QWidget *parentPtr=NULL, bool showSlilder=true, bool showButtons=true, int inputPolicy=0)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -24216,6 +24216,20 @@
       <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
       <anchor>a02af3b5f5b151fda2ebbe7321a126a9a</anchor>
       <arglist>(int value)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_MinButton_clicked</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>a759a7b6c94728905aa017e04c4df819a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_MaxButton_clicked</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>a3513474ac0921b27a1acf578b358feae</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="namespace">
