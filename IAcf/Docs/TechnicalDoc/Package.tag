@@ -2044,6 +2044,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
+      <type></type>
+      <name>CPerformanceTimeStamp</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>a39d120c16d24d3a789b4e05dc5135445</anchor>
+      <arglist>(quint64 nativeValue)</arglist>
+    </member>
+    <member kind="function">
       <type>bool</type>
       <name>IsVaild</name>
       <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
