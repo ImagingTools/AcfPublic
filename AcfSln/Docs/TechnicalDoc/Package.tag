@@ -18221,9 +18221,9 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>VT_ALPHA</name>
+      <name>VTI_ALPHA</name>
       <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a680eac0c4e2548609ad4667927f46a3c</anchor>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a441014f84f906a518a4e2d694be03e40</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">

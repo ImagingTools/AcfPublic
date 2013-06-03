@@ -74,6 +74,7 @@
 #include "iqtprm/CButtonBasedSelectionParamGuiComp.h"
 #include "iqtprm/CMultiParamsManagerGuiComp.h"
 #include "iqtprm/COptionsListEditorGuiComp.h"
+#include "iqtprm/CCheckableOptionsEditorComp.h"
 
 #include "iqtdoc/CMainWindowGuiComp.h"
 #include "iqtdoc/CSingleDocumentWorkspaceGuiComp.h"
@@ -136,6 +137,7 @@ typedef iqtprm::CSelectableParamsSetGuiComp SelectableParamsSetGui;
 typedef iqtprm::CNameParamGuiComp NameParamGui;
 typedef iqtprm::COptionsManagerGuiComp OptionsManagerGui;
 typedef iqtprm::COptionsListEditorGuiComp OptionsListEditor;
+typedef iqtprm::CCheckableOptionsEditorComp CheckableOptionsEditor;
 typedef iqtprm::CEnableableParamGuiComp EnableableParamGui;
 typedef iqtprm::CButtonBasedSelectionParamGuiComp ButtonBasedSelectionEditor;
 typedef iqtprm::CMultiParamsManagerGuiComp MultiParamsManagerGui;

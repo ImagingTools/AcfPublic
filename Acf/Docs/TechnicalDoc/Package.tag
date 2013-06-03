@@ -4571,6 +4571,15 @@
     <namespace>iqtprm</namespace>
   </compound>
   <compound kind="file">
+    <name>CCheckableOptionsEditorComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtprm/</path>
+    <filename>_c_checkable_options_editor_comp_8h</filename>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="_i_options_manager_8h" name="IOptionsManager.h" local="yes" imported="no">iprm/IOptionsManager.h</includes>
+    <class kind="class">iqtprm::CCheckableOptionsEditorComp</class>
+    <namespace>iqtprm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CComposedParamsSetGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtprm/</path>
     <filename>_c_composed_params_set_gui_comp_8h</filename>
@@ -38813,6 +38822,7 @@
     <name>iqtprm</name>
     <filename>namespaceiqtprm.html</filename>
     <class kind="class">iqtprm::CButtonBasedSelectionParamGuiComp</class>
+    <class kind="class">iqtprm::CCheckableOptionsEditorComp</class>
     <class kind="class">iqtprm::CComposedParamsSetGuiComp</class>
     <class kind="class">iqtprm::CEnableableParamGuiComp</class>
     <class kind="class">iqtprm::CFileNameParamGuiComp</class>
@@ -38866,6 +38876,46 @@
       <anchorfile>classiqtprm_1_1_c_button_based_selection_param_gui_comp.html</anchorfile>
       <anchor>a132d894e3cc5d99469f15fbabf83b45f</anchor>
       <arglist>(int updateFlags=0)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtprm::CCheckableOptionsEditorComp</name>
+    <filename>classiqtprm_1_1_c_checkable_options_editor_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CCheckableOptionsEditorComp, iprm::IOptionsManager &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CCheckableOptionsEditorComp, iprm::IOptionsManager &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtprm_1_1_c_checkable_options_editor_comp.html</anchorfile>
+      <anchor>a7fe420674e3bee993e7254f512a73b4b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtprm_1_1_c_checkable_options_editor_comp.html</anchorfile>
+      <anchor>aa6eaee922547b5a5a549e67bfda03842</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnParameterChanged</name>
+      <anchorfile>classiqtprm_1_1_c_checkable_options_editor_comp.html</anchorfile>
+      <anchor>a072fce6747ea40f1d668326b3420f07c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtprm_1_1_c_checkable_options_editor_comp.html</anchorfile>
+      <anchor>aef99dfb97e45056903972433ecfac971</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtprm_1_1_c_checkable_options_editor_comp.html</anchorfile>
+      <anchor>a0f2eddecd35da1ca62a400e189a739c4</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
