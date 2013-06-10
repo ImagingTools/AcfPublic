@@ -2145,6 +2145,13 @@
       <anchor>a1f7559ee41cb4b574c0093722d4d0b31</anchor>
       <arglist>(bool useApplicationModule=false, bool onlyDirectory=false)</arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>EnableLowFragmentationHeap</name>
+      <anchorfile>classiwin_1_1_c_system.html</anchorfile>
+      <anchor>ae00e382ca20f0bef5093f3e857883347</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iwin::CTimeStampCacheComp</name>
