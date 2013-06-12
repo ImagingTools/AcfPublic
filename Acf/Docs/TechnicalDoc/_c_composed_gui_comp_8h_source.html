@@ -65,41 +65,43 @@
 <a name="l00047"></a>00047               I_ASSIGN(m_settingsKeyAttrPtr, <span class="stringliteral">&quot;SettingsKey&quot;</span>, <span class="stringliteral">&quot;Key for saving/restoring of the layout information in the registry&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;SettingsKey&quot;</span>);
 <a name="l00048"></a>00048               I_ASSIGN(m_tabOrientationAttrPtr, <span class="stringliteral">&quot;TabBarOrientation&quot;</span>, <span class="stringliteral">&quot;Orientation of the tab bar for tab design\n 0 - North\n 1 - South\n 2 - West\n 3 - East&quot;</span>, <span class="keyword">true</span>, 0);
 <a name="l00049"></a>00049               I_ASSIGN(m_flatViewAttrPtr, <span class="stringliteral">&quot;FlatView&quot;</span>, <span class="stringliteral">&quot;Tries to apply flat view to the design if possible (Group Box: without frame; Tab Bar: triangular tabs; Slider: transparent grip)&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
-<a name="l00050"></a>00050        I_END_COMPONENT;
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052        <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#ac0db64a27c2d926671418f43c9712844">CComposedGuiComp</a>();
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054        <span class="comment">// reimplemented (TRestorableGuiWrap)</span>
-<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#a6ec1012774b12128d78c8063c50fce37">OnRestoreSettings</a>(<span class="keyword">const</span> QSettings&amp; settings);
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#ae817ec11da293675db10428284f76222">OnSaveSettings</a>(QSettings&amp; settings) <span class="keyword">const</span>;
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#a39e95e68c62e662ff39a9ce3311dd9cf" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#ad3b26182b2a5455a25685082cbdf614b" title="Called just before GUI is released.">OnGuiDestroyed</a>();
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062 <span class="keyword">private</span>:
-<a name="l00066"></a>00066        QString GetSettingsKey() <span class="keyword">const</span>;
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068 <span class="keyword">private</span>:
-<a name="l00069"></a>00069        I_MULTIREF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_guisCompPtr);
-<a name="l00070"></a>00070        I_MULTIATTR(QString, m_namesAttrPtr);
-<a name="l00071"></a>00071        I_ATTR(<span class="keywordtype">bool</span>, m_useHorizontalLayoutAttrPtr);
-<a name="l00072"></a>00072        I_ATTR(<span class="keywordtype">bool</span>, m_insertSpacerAttrPtr);
-<a name="l00073"></a>00073        I_ATTR(<span class="keywordtype">int</span>, m_designTypeAttrPtr);
-<a name="l00074"></a>00074        I_ATTR(QString, m_settingsKeyAttrPtr);
-<a name="l00075"></a>00075        I_ATTR(<span class="keywordtype">int</span>, m_tabOrientationAttrPtr);
-<a name="l00076"></a>00076        I_ATTR(<span class="keywordtype">bool</span>, m_flatViewAttrPtr);
-<a name="l00077"></a>00077 
-<a name="l00078"></a>00078        QSplitter* m_splitterPtr;
-<a name="l00079"></a>00079 };
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082 } <span class="comment">// namespace iqtgui</span>
+<a name="l00050"></a>00050               I_ASSIGN(m_useSameStretchingFactorAttrPtr, <span class="stringliteral">&quot;UseSameStretchingFactor&quot;</span>, <span class="stringliteral">&quot;Set the same stretching factor for all widgets. Only for group box mode&quot;</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);
+<a name="l00051"></a>00051        I_END_COMPONENT;
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053        <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#ac0db64a27c2d926671418f43c9712844">CComposedGuiComp</a>();
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055        <span class="comment">// reimplemented (TRestorableGuiWrap)</span>
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#a6ec1012774b12128d78c8063c50fce37">OnRestoreSettings</a>(<span class="keyword">const</span> QSettings&amp; settings);
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#ae817ec11da293675db10428284f76222">OnSaveSettings</a>(QSettings&amp; settings) <span class="keyword">const</span>;
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#a39e95e68c62e662ff39a9ce3311dd9cf" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#ad3b26182b2a5455a25685082cbdf614b" title="Called just before GUI is released.">OnGuiDestroyed</a>();
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063 <span class="keyword">private</span>:
+<a name="l00067"></a>00067        QString GetSettingsKey() <span class="keyword">const</span>;
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069 <span class="keyword">private</span>:
+<a name="l00070"></a>00070        I_MULTIREF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_guisCompPtr);
+<a name="l00071"></a>00071        I_MULTIATTR(QString, m_namesAttrPtr);
+<a name="l00072"></a>00072        I_ATTR(<span class="keywordtype">bool</span>, m_useHorizontalLayoutAttrPtr);
+<a name="l00073"></a>00073        I_ATTR(<span class="keywordtype">bool</span>, m_insertSpacerAttrPtr);
+<a name="l00074"></a>00074        I_ATTR(<span class="keywordtype">int</span>, m_designTypeAttrPtr);
+<a name="l00075"></a>00075        I_ATTR(QString, m_settingsKeyAttrPtr);
+<a name="l00076"></a>00076        I_ATTR(<span class="keywordtype">int</span>, m_tabOrientationAttrPtr);
+<a name="l00077"></a>00077        I_ATTR(<span class="keywordtype">bool</span>, m_flatViewAttrPtr);
+<a name="l00078"></a>00078        I_ATTR(<span class="keywordtype">bool</span>, m_useSameStretchingFactorAttrPtr);
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080        QSplitter* m_splitterPtr;
+<a name="l00081"></a>00081 };
+<a name="l00082"></a>00082 
 <a name="l00083"></a>00083 
-<a name="l00084"></a>00084 
-<a name="l00085"></a>00085 <span class="preprocessor">#endif // !iqtgui_CComposedGuiComp_included</span>
-<a name="l00086"></a>00086 <span class="preprocessor"></span>
-<a name="l00087"></a>00087 
+<a name="l00084"></a>00084 } <span class="comment">// namespace iqtgui</span>
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087 <span class="preprocessor">#endif // !iqtgui_CComposedGuiComp_included</span>
+<a name="l00088"></a>00088 <span class="preprocessor"></span>
+<a name="l00089"></a>00089 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
