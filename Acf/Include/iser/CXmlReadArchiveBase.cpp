@@ -113,7 +113,7 @@ bool CXmlReadArchiveBase::BeginMultiTag(const CArchiveTag& tag, const CArchiveTa
 			SendLogMessage(
 						istd::IInformationProvider::IC_ERROR,
 						MI_TAG_ERROR,
-						QString("Found tag is empty, shoud be '%1'").arg(QString(tag.GetId())),
+						QString("Found tag is empty, shoud be '%'").arg(QString(tag.GetId())),
 						"iser::CXmlReadArchiveBase",
 						istd::IInformationProvider::ITF_SYSTEM);
 		}
@@ -126,7 +126,7 @@ bool CXmlReadArchiveBase::BeginMultiTag(const CArchiveTag& tag, const CArchiveTa
 			SendLogMessage(
 						istd::IInformationProvider::IC_ERROR,
 						MI_TAG_ERROR,
-						QString("Found tag is empty, shoud be '%1'").arg(QString(tag.GetId())),
+						QString("Found tag is empty, shoud be '%'").arg(QString(tag.GetId())),
 						"iser::CXmlReadArchiveBase",
 						istd::IInformationProvider::ITF_SYSTEM);
 		}

@@ -59,6 +59,9 @@ protected:
 	// reimplemented (iqtgui::TGuiObserverWrap)
 	virtual void UpdateGui(int updateFlags = 0);
 
+	// reimplemented (iqt::CGuiObjectBase)
+	virtual void OnGuiCreated();
+
 private:
 	I_ATTR(bool, m_useHorizontalLayoutAttrPtr);
 };

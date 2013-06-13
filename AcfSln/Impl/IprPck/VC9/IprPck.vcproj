@@ -40,7 +40,6 @@
 				Name="VCCLCompilerTool"
 				AdditionalIncludeDirectories="../../../Include;&quot;$(ACFDIR)/Include&quot;"
 				AdditionalUsingDirectories=""
-				RuntimeLibrary="2"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -101,7 +100,6 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				AdditionalIncludeDirectories="../../../Include;&quot;$(ACFDIR)/Include&quot;"
-				RuntimeLibrary="3"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
