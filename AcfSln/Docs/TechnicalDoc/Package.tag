@@ -1898,6 +1898,14 @@
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
+    <name>CGeneralNumericValue.h</name>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
+    <filename>_c_general_numeric_value_8h</filename>
+    <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
+    <class kind="class">imeas::CGeneralNumericValue</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
     <name>CHistogramStatisticsProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_histogram_statistics_processor_comp_8h</filename>
@@ -16631,6 +16639,7 @@
     <class kind="class">imeas::CDataSequenceStatistics</class>
     <class kind="class">imeas::CDataStatistics</class>
     <class kind="class">imeas::CGeneralDataSequence</class>
+    <class kind="class">imeas::CGeneralNumericValue</class>
     <class kind="class">imeas::CHistogramStatisticsProcessorComp</class>
     <class kind="class">imeas::CLinearAdjustParamsComp</class>
     <class kind="class">imeas::CMeasurementRange</class>
@@ -17052,6 +17061,74 @@
       <name>CloneMe</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
       <anchor>a1e9f4d49b833f768e4da5a5ca17da30f</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imeas::CGeneralNumericValue</name>
+    <filename>classimeas_1_1_c_general_numeric_value.html</filename>
+    <base virtualness="virtual">imeas::INumericValue</base>
+    <member kind="function">
+      <type>void</type>
+      <name>SetComponentValue</name>
+      <anchorfile>classimeas_1_1_c_general_numeric_value.html</anchorfile>
+      <anchor>ad6b0890242a88371102591e588c92487</anchor>
+      <arglist>(imeas::INumericValue::ValueTypeId valueTypeId, imath::CVarVector value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsValueTypeSupported</name>
+      <anchorfile>classimeas_1_1_c_general_numeric_value.html</anchorfile>
+      <anchor>ad55649c772767e298b557f57b58ed624</anchor>
+      <arglist>(imeas::INumericValue::ValueTypeId valueTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imeas::INumericConstraints *</type>
+      <name>GetNumericConstraints</name>
+      <anchorfile>classimeas_1_1_c_general_numeric_value.html</anchorfile>
+      <anchor>a2cdc74291acd661705c7696b082a9dea</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual imath::CVarVector</type>
+      <name>GetComponentValue</name>
+      <anchorfile>classimeas_1_1_c_general_numeric_value.html</anchorfile>
+      <anchor>ad1ce81058250c70cbc98ca9f94624cea</anchor>
+      <arglist>(imeas::INumericValue::ValueTypeId valueTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual imath::CVarVector</type>
+      <name>GetValues</name>
+      <anchorfile>classimeas_1_1_c_general_numeric_value.html</anchorfile>
+      <anchor>a84de90b2e6f7738256e5ccf4728cb7fb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetValues</name>
+      <anchorfile>classimeas_1_1_c_general_numeric_value.html</anchorfile>
+      <anchor>a48a6812019f5644a5c7c03530b363030</anchor>
+      <arglist>(const imath::CVarVector &amp;values)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>iser::ISerializable::Serialize</name>
+      <anchorfile>classimeas_1_1_c_general_numeric_value.html</anchorfile>
+      <anchor>a0ad838db29c15e5ecd33558f878ef953</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classimeas_1_1_c_general_numeric_value.html</anchorfile>
+      <anchor>abe8a0e014ee129ba0fb0c7d2c064aa7b</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classimeas_1_1_c_general_numeric_value.html</anchorfile>
+      <anchor>a6d5c34181c99ea735cca79a7b6f710f2</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
   </compound>
