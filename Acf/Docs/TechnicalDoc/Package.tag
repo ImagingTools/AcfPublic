@@ -38910,13 +38910,6 @@
       <anchor>aef99dfb97e45056903972433ecfac971</anchor>
       <arglist>(int updateFlags=0)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtprm_1_1_c_checkable_options_editor_comp.html</anchorfile>
-      <anchor>a0f2eddecd35da1ca62a400e189a739c4</anchor>
-      <arglist>()</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iqtprm::CComposedParamsSetGuiComp</name>
