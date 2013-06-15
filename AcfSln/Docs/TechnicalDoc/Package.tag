@@ -17112,9 +17112,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>iser::ISerializable::Serialize</name>
+      <name>Serialize</name>
       <anchorfile>classimeas_1_1_c_general_numeric_value.html</anchorfile>
-      <anchor>a0ad838db29c15e5ecd33558f878ef953</anchor>
+      <anchor>af07c71194e038839dfe1f15c805e4061</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -17125,10 +17125,10 @@
       <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual IChangeable *</type>
+      <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classimeas_1_1_c_general_numeric_value.html</anchorfile>
-      <anchor>a6d5c34181c99ea735cca79a7b6f710f2</anchor>
+      <anchor>a2d02f43465a15072e900f1f8414e2caf</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
   </compound>

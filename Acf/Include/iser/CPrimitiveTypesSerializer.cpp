@@ -226,6 +226,8 @@ bool CPrimitiveTypesSerializer::SerializeDateTime(iser::IArchive& archive, QDate
 
 		if (archive.Process(dateTimeString)){
 			dateTime = QDateTime::fromString(dateTimeString, TimeFormat);
+
+			return true;
 		}
 	}
 
