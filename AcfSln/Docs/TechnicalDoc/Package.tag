@@ -25647,6 +25647,13 @@
     <name>isig::ITriggerController</name>
     <filename>classisig_1_1_i_trigger_controller.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="typedef">
+      <type>istd::TDelPtr&lt; istd::ITimeStamp &gt;</type>
+      <name>TimeStampPtr</name>
+      <anchorfile>classisig_1_1_i_trigger_controller.html</anchorfile>
+      <anchor>a33a4bd1f99bd33dd50ac21088cf508d3</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsSoftwareTriggerActive</name>
@@ -25658,8 +25665,8 @@
       <type>virtual bool</type>
       <name>SendSoftwareTrigger</name>
       <anchorfile>classisig_1_1_i_trigger_controller.html</anchorfile>
-      <anchor>ac70438f0963ca6ba53ca2f759bb5ac61</anchor>
-      <arglist>()=0</arglist>
+      <anchor>a3ea722845ea2f4187d3576456d5d660f</anchor>
+      <arglist>(TimeStampPtr *timeStampPtrPtr=NULL)=0</arglist>
     </member>
   </compound>
   <compound kind="class">

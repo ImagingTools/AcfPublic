@@ -31,6 +31,7 @@
 </div>
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">isig::ITriggerController Class Reference</div>  </div>
@@ -50,17 +51,37 @@ Inheritance diagram for isig::ITriggerController:</div>
 
 <p><a href="classisig_1_1_i_trigger_controller-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr</a><br class="typebreak"/>
+&lt; <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_time_stamp.html">istd::ITimeStamp</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_i_trigger_controller.html#a33a4bd1f99bd33dd50ac21088cf508d3">TimeStampPtr</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_i_trigger_controller.html#a3b1c38fad790ed47e7f045c91d7f84ba">IsSoftwareTriggerActive</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check, if software trigger is accepted and possible.  <a href="#a3b1c38fad790ed47e7f045c91d7f84ba"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_i_trigger_controller.html#ac70438f0963ca6ba53ca2f759bb5ac61">SendSoftwareTrigger</a> ()=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send software trigger to device.  <a href="#ac70438f0963ca6ba53ca2f759bb5ac61"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_i_trigger_controller.html#a3ea722845ea2f4187d3576456d5d660f">SendSoftwareTrigger</a> (<a class="el" href="classisig_1_1_i_trigger_controller.html#a33a4bd1f99bd33dd50ac21088cf508d3">TimeStampPtr</a> *timeStampPtrPtr=<a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send software trigger to device.  <a href="#a3ea722845ea2f4187d3576456d5d660f"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_i_trigger_controller_8h_source.html#l00013">13</a> of file <a class="el" href="_i_trigger_controller_8h_source.html">ITriggerController.h</a>.</p>
-</div><hr/><h2>Member Function Documentation</h2>
+<p>Definition at line <a class="el" href="_i_trigger_controller_8h_source.html#l00015">15</a> of file <a class="el" href="_i_trigger_controller_8h_source.html">ITriggerController.h</a>.</p>
+</div><hr/><h2>Member Typedef Documentation</h2>
+<a class="anchor" id="a33a4bd1f99bd33dd50ac21088cf508d3"></a><!-- doxytag: member="isig::ITriggerController::TimeStampPtr" ref="a33a4bd1f99bd33dd50ac21088cf508d3" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr</a>&lt;<a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_time_stamp.html">istd::ITimeStamp</a>&gt; <a class="el" href="classisig_1_1_i_trigger_controller.html#a33a4bd1f99bd33dd50ac21088cf508d3">isig::ITriggerController::TimeStampPtr</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_i_trigger_controller_8h_source.html#l00018">18</a> of file <a class="el" href="_i_trigger_controller_8h_source.html">ITriggerController.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a3b1c38fad790ed47e7f045c91d7f84ba"></a><!-- doxytag: member="isig::ITriggerController::IsSoftwareTriggerActive" ref="a3b1c38fad790ed47e7f045c91d7f84ba" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
@@ -79,14 +100,15 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac70438f0963ca6ba53ca2f759bb5ac61"></a><!-- doxytag: member="isig::ITriggerController::SendSoftwareTrigger" ref="ac70438f0963ca6ba53ca2f759bb5ac61" args="()=0" -->
+<a class="anchor" id="a3ea722845ea2f4187d3576456d5d660f"></a><!-- doxytag: member="isig::ITriggerController::SendSoftwareTrigger" ref="a3ea722845ea2f4187d3576456d5d660f" args="(TimeStampPtr *timeStampPtrPtr=NULL)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool isig::ITriggerController::SendSoftwareTrigger </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classisig_1_1_i_trigger_controller.html#a33a4bd1f99bd33dd50ac21088cf508d3">TimeStampPtr</a> *&#160;</td>
+          <td class="paramname"><em>timeStampPtrPtr</em> = <code><a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
       </table>
@@ -94,6 +116,12 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Send software trigger to device. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeStampPtr</td><td>optional pointer to time stamp object, if it is not <code>NULL</code>, will be filled with trigger time stamp. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
