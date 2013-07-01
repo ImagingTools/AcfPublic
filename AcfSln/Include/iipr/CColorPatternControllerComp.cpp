@@ -36,7 +36,7 @@ namespace iipr
 	
 // reimplemented (IPatternController)
 
-bool CColorPatternControllerComp::TeachPattern()
+bool CColorPatternControllerComp::TeachPattern(const istd::IChangeable* /*sourceObjectPtr*/)
 {
 	if (!m_patternBitmapProviderCompPtr.IsValid()){
 		SendCriticalMessage(0, "Bad component configuration. Pattern bitmap provider 'PatternBitmapProvider' not set!");

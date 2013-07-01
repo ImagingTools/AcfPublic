@@ -13426,8 +13426,8 @@
       <type>virtual bool</type>
       <name>TeachPattern</name>
       <anchorfile>classiipr_1_1_c_color_pattern_controller_comp.html</anchorfile>
-      <anchor>a69848acbc8900bc82becd015748b0011</anchor>
-      <arglist>()</arglist>
+      <anchor>a3ff9b15520af27e6d0aaf5b23a08be3e</anchor>
+      <arglist>(const istd::IChangeable *sourceObjectPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -16266,8 +16266,8 @@
       <type>virtual bool</type>
       <name>TeachPattern</name>
       <anchorfile>classiipr_1_1_i_pattern_controller.html</anchorfile>
-      <anchor>ac69e01f6882e68f7b0e86e6557e7f5d1</anchor>
-      <arglist>()=0</arglist>
+      <anchor>aed95604a6ff4364e89b6fc3c53515d17</anchor>
+      <arglist>(const istd::IChangeable *sourceObjectPtr=NULL)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
@@ -23728,11 +23728,25 @@
       <anchor>aca3da95d0a414fba309aa54d7cfba5a6</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html</anchorfile>
+      <anchor>ac59e5da5835d8d93a616355fc0b82c56</anchor>
+      <arglist>(m_patternEditorObserverCompPtr, m_patternEditorCompPtr, false)</arglist>
+    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_LearnButton_clicked</name>
       <anchorfile>classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html</anchorfile>
       <anchor>a1e54c3f62c2a07f13b797dd8a8326f5c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_EditButton_clicked</name>
+      <anchorfile>classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html</anchorfile>
+      <anchor>ac6142a401bd4bcb731dec6039b385a2f</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
