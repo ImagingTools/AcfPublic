@@ -70,8 +70,8 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_dialog_gui_comp.html#acd7fe5ded9a9e2fbb78cd1c38277d961">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_dialog_gui_comp.html#a862eb095cd18cd5b1eed60b340e6046f">ExecuteDialog</a> (<a class="el" href="classiqtgui_1_1_i_gui_object.html">IGuiObject</a> *parentPtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute dialog instance.  <a href="#a862eb095cd18cd5b1eed60b340e6046f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_dialog_gui_comp.html#a57f699ff8c7e2716a3fde0b75fd6ed8b">ExecuteDialog</a> (<a class="el" href="classiqtgui_1_1_i_gui_object.html">IGuiObject</a> *parentPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute dialog instance.  <a href="#a57f699ff8c7e2716a3fde0b75fd6ed8b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 <a class="el" href="namespaceibase.html#a662cd115f05118f6247d8bb781cdd7fd">ibase::IHierarchicalCommand</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_dialog_gui_comp.html#ac88fcbfbd98d25b26082a1b5387442a5">GetCommands</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of menu commands.  <a href="#ac88fcbfbd98d25b26082a1b5387442a5"></a><br/></td></tr>
@@ -135,12 +135,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a862eb095cd18cd5b1eed60b340e6046f"></a><!-- doxytag: member="iqtgui::CDialogGuiComp::ExecuteDialog" ref="a862eb095cd18cd5b1eed60b340e6046f" args="(IGuiObject *parentPtr)" -->
+<a class="anchor" id="a57f699ff8c7e2716a3fde0b75fd6ed8b"></a><!-- doxytag: member="iqtgui::CDialogGuiComp::ExecuteDialog" ref="a57f699ff8c7e2716a3fde0b75fd6ed8b" args="(IGuiObject *parentPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iqtgui::CDialogGuiComp::ExecuteDialog </td>
+          <td class="memname">virtual int iqtgui::CDialogGuiComp::ExecuteDialog </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classiqtgui_1_1_i_gui_object.html">IGuiObject</a> *&#160;</td>
           <td class="paramname"><em>parentPtr</em></td><td>)</td>
@@ -151,10 +151,12 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Execute dialog instance. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Status of the dialog execution. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd>QDialog </dd></dl>
 
-<p>Implements <a class="el" href="classiqtgui_1_1_i_dialog.html#aa8d420324be83339c8ffa28329c109ad">iqtgui::IDialog</a>.</p>
+<p>Implements <a class="el" href="classiqtgui_1_1_i_dialog.html#a36c5340345a6dcc3133be3469560ad3d">iqtgui::IDialog</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classiqtgui_1_1_c_model_dialog_gui_comp.html#a04b099512ab370208673f11a35bf7b75">iqtgui::CModelDialogGuiComp</a>.</p>
+<p>Reimplemented in <a class="el" href="classiqtgui_1_1_c_model_dialog_gui_comp.html#a9b72418aa2edbd774ba74520fd9f1bf6">iqtgui::CModelDialogGuiComp</a>.</p>
 
 </div>
 </div>

@@ -24,6 +24,7 @@
 
 
 // ACF includes
+#include "istd/CGeneralTimeStamp.h"
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
 
@@ -38,6 +39,8 @@ CInspectionTaskComp::CInspectionTaskComp()
 	m_messageContainer(this),
 	m_productChangeNotifier(NULL, CF_SUPPLIER_RESULTS | CF_MODEL)
 {
+	// Only processing time message allowed:
+	m_messageContainer.SetMaxMessageCount(1);
 }
 
 
@@ -198,6 +201,8 @@ void CInspectionTaskComp::EnsureWorkInitialized()
 
 void CInspectionTaskComp::EnsureWorkFinished()
 {
+	istd::CGeneralTimeStamp timer;
+
 	int inspectionsCount = m_subtasksCompPtr.GetCount();
 	for (int i = 0; i < inspectionsCount; ++i){
 		iproc::ISupplier* supplierPtr = m_subtasksCompPtr[i];
@@ -213,6 +218,16 @@ void CInspectionTaskComp::EnsureWorkFinished()
 		if (supplierPtr != NULL){
 			supplierPtr->EnsureWorkInitialized();
 		}
+	}
+
+	if (m_diagnosticNameAttrPtr.IsValid()){
+		istd::TSmartPtr<const istd::IInformationProvider> messagePtr(new ilog::CMessage(
+				istd::IInformationProvider::IC_INFO,
+				0,
+				QObject::tr("Processing took %1 ms").arg(timer.GetElapsed() * 1000),
+				*m_diagnosticNameAttrPtr));
+		
+		m_messageContainer.AddMessage(messagePtr);
 	}
 
 	m_subtaskNotifiers.clear();
@@ -433,7 +448,7 @@ int CInspectionTaskComp::MessageContainer::GetWorstCategory() const
 
 ilog::IMessageContainer::Messages CInspectionTaskComp::MessageContainer::GetMessages() const
 {
-	ilog::IMessageContainer::Messages retVal;
+	ilog::IMessageContainer::Messages retVal = BaseClass::GetMessages();
 
 	int subtasksCount = m_parentPtr->m_subtasksCompPtr.GetCount();
 	for (int i = 0; i < subtasksCount; ++i){
@@ -453,6 +468,7 @@ ilog::IMessageContainer::Messages CInspectionTaskComp::MessageContainer::GetMess
 
 void CInspectionTaskComp::MessageContainer::ClearMessages()
 {
+	BaseClass::ClearMessages();
 }
 
 

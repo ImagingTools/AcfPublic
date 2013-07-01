@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef iqt2d_ISceneExtender_included
-#define iqt2d_ISceneExtender_included
+#ifndef iqt2d_IViewExtender_included
+#define iqt2d_IViewExtender_included
 
 
 // ACF includes
@@ -71,6 +71,6 @@ public:
 } // namespace iqt2d
 
 
-#endif // !iqt2d_ISceneExtender_included
+#endif // !iqt2d_IViewExtender_included
 
 

@@ -74,11 +74,13 @@ Public Types</h2></td></tr>
 &lt; <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_c_position2d.html">i2d::CPosition2d</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a30b11c38202107f51cf451b7414fbfae">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a9f5341e8fa7ce0508fff73dea01d1267">CSearchFeature</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#aaedb91cd8ef447238ab55ce468880194">CSearchFeature</a> (double weight, const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position, double angle, const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;scale, int index=-1, const QString &amp;id=&quot;&quot;)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a1f8e680c24cd7adcc7ffa5555904d623">GetAngle</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#aac77c713ab574967a412a0c7884361ab">GetScale</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a1b9b60d3ee8b06a83b64ddab6a369bce">GetIndex</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a900d79d8c73354c11e90644bf312848c">GetId</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a00461e0d5e7c8d6838cddfba94a57827">SetId</a> (QString id)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a9b75f993741fe8ff834b767cb98b754e">GetTransformation</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a38734f1485a38e5ddaba4cfd4c1f6959">IsValueTypeSupported</a> (<a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1">ValueTypeId</a> valueTypeId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the given value type (or value component) is supported.  <a href="#a38734f1485a38e5ddaba4cfd4c1f6959"></a><br/></td></tr>
@@ -86,6 +88,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to component value of the given type.  <a href="#ac402a8ca167f9c0d8f0794c927a6d813"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a3736d0349b7ce9cebda91144f73b2e96">Serialize</a> (<a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#abc6ebec8006530ed5b3b176c1829a9ee">CopyFrom</a> (const IChangeable &amp;object, <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=<a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af">CM_WITHOUT_REFS</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#aa40ab32d71e62f80941426236e6f1f1e">CloneMe</a> (<a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=<a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af">CM_WITHOUT_REFS</a>) const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Implementation of the pattern search feature. </p>
@@ -110,6 +113,22 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a9f5341e8fa7ce0508fff73dea01d1267"></a><!-- doxytag: member="iipr::CSearchFeature::CSearchFeature" ref="a9f5341e8fa7ce0508fff73dea01d1267" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iipr::CSearchFeature::CSearchFeature </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aaedb91cd8ef447238ab55ce468880194"></a><!-- doxytag: member="iipr::CSearchFeature::CSearchFeature" ref="aaedb91cd8ef447238ab55ce468880194" args="(double weight, const i2d::CVector2d &amp;position, double angle, const i2d::CVector2d &amp;scale, int index=&#45;1, const QString &amp;id=&quot;&quot;)" -->
 <div class="memitem">
 <div class="memproto">
@@ -162,6 +181,25 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="aa40ab32d71e62f80941426236e6f1f1e"></a><!-- doxytag: member="iipr::CSearchFeature::CloneMe" ref="aa40ab32d71e62f80941426236e6f1f1e" args="(CompatibilityMode mode=CM_WITHOUT_REFS) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* iipr::CSearchFeature::CloneMe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code><a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af">CM_WITHOUT_REFS</a></code></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_c_position2d.html#a6bd001f163d333a7d3d0bfa7eac5d3ee">i2d::CPosition2d</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="abc6ebec8006530ed5b3b176c1829a9ee"></a><!-- doxytag: member="iipr::CSearchFeature::CopyFrom" ref="abc6ebec8006530ed5b3b176c1829a9ee" args="(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)" -->
 <div class="memitem">
 <div class="memproto">
@@ -333,6 +371,23 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classiipr_1_1_t_weighted_feature_wrap.html#a97ae2b01e85ae32c589aa154cee0e9e4">iipr::TWeightedFeatureWrap&lt; i2d::CPosition2d &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a00461e0d5e7c8d6838cddfba94a57827"></a><!-- doxytag: member="iipr::CSearchFeature::SetId" ref="a00461e0d5e7c8d6838cddfba94a57827" args="(QString id)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iipr::CSearchFeature::SetId </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>

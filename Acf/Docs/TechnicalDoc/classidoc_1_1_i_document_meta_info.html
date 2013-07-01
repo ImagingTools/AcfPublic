@@ -69,31 +69,31 @@ Public Types</h2></td></tr>
 <a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0aaec57564004dc04e9464f01cb90c3c715">MIT_USER</a> =  1024
 <br/>
  }</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef QSet&lt; <a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0a">MetaInfoType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#a01f0c41e844efc86e49e852c0bb601a1">MetaInfoTypes</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QSet&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#a45c9d391c9fea5810497af26dbee2450">MetaInfoTypes</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_meta_info.html#a01f0c41e844efc86e49e852c0bb601a1">MetaInfoTypes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#a5b568f454de67200839a733ba93dea64">GetSupportedMetaInfoTypes</a> () const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_meta_info.html#a45c9d391c9fea5810497af26dbee2450">MetaInfoTypes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#a5b568f454de67200839a733ba93dea64">GetSupportedMetaInfoTypes</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of supported meta info types.  <a href="#a5b568f454de67200839a733ba93dea64"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QVariant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#a7f746e087b8948ba0cf4e4e5374f965b">GetDocumentMetaInfo</a> (<a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0a">MetaInfoType</a> metaInfoType) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get document's meta info.  <a href="#a7f746e087b8948ba0cf4e4e5374f965b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#a730a4bf762dbaa752d4d7032edda1a7b">SetDocumentMetaInfo</a> (<a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0a">MetaInfoType</a> metaInfoType, const QVariant &amp;metaInfo)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set new document's meta information for a given meta type.  <a href="#a730a4bf762dbaa752d4d7032edda1a7b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#aabe5c68f86d80d5531aea076a98515ea">GetMetaInfoName</a> (<a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0a">MetaInfoType</a> metaInfoType) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a human readable name for a given meta information type.  <a href="#aabe5c68f86d80d5531aea076a98515ea"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#aac015eff62a1dc8afaa5e498588dab26">GetMetaInfoDescription</a> (<a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0a">MetaInfoType</a> metaInfoType) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a human readable description for a given meta information type.  <a href="#aac015eff62a1dc8afaa5e498588dab26"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QVariant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#af3c0ca6bae4d26d4153022bd92708768">GetDocumentMetaInfo</a> (int metaInfoType) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get document's meta info.  <a href="#af3c0ca6bae4d26d4153022bd92708768"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#a3809ed2455e9509fb6f8db2415fe768d">SetDocumentMetaInfo</a> (int metaInfoType, const QVariant &amp;metaInfo)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set new document's meta information for a given meta type.  <a href="#a3809ed2455e9509fb6f8db2415fe768d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#a40b4eb9d33b6dc10c882f0f5f4d03b69">GetMetaInfoName</a> (int metaInfoType) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a human readable name for a given meta information type.  <a href="#a40b4eb9d33b6dc10c882f0f5f4d03b69"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#a525fb0ef7afca405c433d165f9ce9c52">GetMetaInfoDescription</a> (int metaInfoType) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a human readable description for a given meta information type.  <a href="#a525fb0ef7afca405c433d165f9ce9c52"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Interface for document meta-information. </p>
 
 <p>Definition at line <a class="el" href="_i_document_meta_info_8h_source.html#l00019">19</a> of file <a class="el" href="_i_document_meta_info_8h_source.html">IDocumentMetaInfo.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a01f0c41e844efc86e49e852c0bb601a1"></a><!-- doxytag: member="idoc::IDocumentMetaInfo::MetaInfoTypes" ref="a01f0c41e844efc86e49e852c0bb601a1" args="" -->
+<a class="anchor" id="a45c9d391c9fea5810497af26dbee2450"></a><!-- doxytag: member="idoc::IDocumentMetaInfo::MetaInfoTypes" ref="a45c9d391c9fea5810497af26dbee2450" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef QSet&lt;<a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0a">MetaInfoType</a>&gt; <a class="el" href="classidoc_1_1_i_document_meta_info.html#a01f0c41e844efc86e49e852c0bb601a1">idoc::IDocumentMetaInfo::MetaInfoTypes</a></td>
+          <td class="memname">typedef QSet&lt;int&gt; <a class="el" href="classidoc_1_1_i_document_meta_info.html#a45c9d391c9fea5810497af26dbee2450">idoc::IDocumentMetaInfo::MetaInfoTypes</a></td>
         </tr>
       </table>
 </div>
@@ -142,14 +142,14 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a7f746e087b8948ba0cf4e4e5374f965b"></a><!-- doxytag: member="idoc::IDocumentMetaInfo::GetDocumentMetaInfo" ref="a7f746e087b8948ba0cf4e4e5374f965b" args="(MetaInfoType metaInfoType) const =0" -->
+<a class="anchor" id="af3c0ca6bae4d26d4153022bd92708768"></a><!-- doxytag: member="idoc::IDocumentMetaInfo::GetDocumentMetaInfo" ref="af3c0ca6bae4d26d4153022bd92708768" args="(int metaInfoType) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual QVariant idoc::IDocumentMetaInfo::GetDocumentMetaInfo </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0a">MetaInfoType</a>&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>metaInfoType</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -159,18 +159,18 @@ Public Member Functions</h2></td></tr>
 
 <p>Get document's meta info. </p>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#a4305b8406311b619ca869da4ad201f48">idoc::CStandardDocumentMetaInfo</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#a13d1ee096ac4133227142a35bdc61368">idoc::CStandardDocumentMetaInfo</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aac015eff62a1dc8afaa5e498588dab26"></a><!-- doxytag: member="idoc::IDocumentMetaInfo::GetMetaInfoDescription" ref="aac015eff62a1dc8afaa5e498588dab26" args="(MetaInfoType metaInfoType) const =0" -->
+<a class="anchor" id="a525fb0ef7afca405c433d165f9ce9c52"></a><!-- doxytag: member="idoc::IDocumentMetaInfo::GetMetaInfoDescription" ref="a525fb0ef7afca405c433d165f9ce9c52" args="(int metaInfoType) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual QString idoc::IDocumentMetaInfo::GetMetaInfoDescription </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0a">MetaInfoType</a>&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>metaInfoType</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -180,18 +180,18 @@ Public Member Functions</h2></td></tr>
 
 <p>Get a human readable description for a given meta information type. </p>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#a14682a6add0ad4e923df6fddb03f9a26">idoc::CStandardDocumentMetaInfo</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#a42c49d1951f349c432662ea0329a97f6">idoc::CStandardDocumentMetaInfo</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aabe5c68f86d80d5531aea076a98515ea"></a><!-- doxytag: member="idoc::IDocumentMetaInfo::GetMetaInfoName" ref="aabe5c68f86d80d5531aea076a98515ea" args="(MetaInfoType metaInfoType) const =0" -->
+<a class="anchor" id="a40b4eb9d33b6dc10c882f0f5f4d03b69"></a><!-- doxytag: member="idoc::IDocumentMetaInfo::GetMetaInfoName" ref="a40b4eb9d33b6dc10c882f0f5f4d03b69" args="(int metaInfoType) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual QString idoc::IDocumentMetaInfo::GetMetaInfoName </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0a">MetaInfoType</a>&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>metaInfoType</em></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
@@ -201,7 +201,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get a human readable name for a given meta information type. </p>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#aa6713b5fbd35ddc6d22d152bc43745b3">idoc::CStandardDocumentMetaInfo</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#aaf09a5b40472e5f4d4fb8e33f9647078">idoc::CStandardDocumentMetaInfo</a>.</p>
 
 </div>
 </div>
@@ -210,7 +210,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classidoc_1_1_i_document_meta_info.html#a01f0c41e844efc86e49e852c0bb601a1">MetaInfoTypes</a> idoc::IDocumentMetaInfo::GetSupportedMetaInfoTypes </td>
+          <td class="memname">virtual <a class="el" href="classidoc_1_1_i_document_meta_info.html#a45c9d391c9fea5810497af26dbee2450">MetaInfoTypes</a> idoc::IDocumentMetaInfo::GetSupportedMetaInfoTypes </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -225,14 +225,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a730a4bf762dbaa752d4d7032edda1a7b"></a><!-- doxytag: member="idoc::IDocumentMetaInfo::SetDocumentMetaInfo" ref="a730a4bf762dbaa752d4d7032edda1a7b" args="(MetaInfoType metaInfoType, const QVariant &amp;metaInfo)=0" -->
+<a class="anchor" id="a3809ed2455e9509fb6f8db2415fe768d"></a><!-- doxytag: member="idoc::IDocumentMetaInfo::SetDocumentMetaInfo" ref="a3809ed2455e9509fb6f8db2415fe768d" args="(int metaInfoType, const QVariant &amp;metaInfo)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool idoc::IDocumentMetaInfo::SetDocumentMetaInfo </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0a">MetaInfoType</a>&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>metaInfoType</em>, </td>
         </tr>
         <tr>
@@ -252,7 +252,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Set new document's meta information for a given meta type. </p>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#a163a4759bb61cb090d29ebb201fcd98f">idoc::CStandardDocumentMetaInfo</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#a52183f7d55a4cb9328c72d93afbedfd4">idoc::CStandardDocumentMetaInfo</a>.</p>
 
 </div>
 </div>

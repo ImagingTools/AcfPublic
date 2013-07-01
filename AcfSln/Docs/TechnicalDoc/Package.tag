@@ -15262,6 +15262,18 @@
     <base virtualness="virtual">imeas::INumericValueProvider</base>
     <base virtualness="virtual">i2d::IMultiCalibrationProvider</base>
     <base virtualness="virtual">istd::IInformationProvider</base>
+    <member kind="enumeration">
+      <name>MessageType</name>
+      <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
+      <anchor>a979d992616d1cee856befce711de5df8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MT_SEARCH_RESULT</name>
+      <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
+      <anchor>a979d992616d1cee856befce711de5df8a9f81e1e31fedab84947fc8d5e954770e</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>iproc::TSupplierCompWrap&lt; CFeaturesContainer &gt;</type>
       <name>BaseClass</name>
@@ -15282,6 +15294,13 @@
       <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
       <anchor>af443611390935b7aa23e1fd3692c4c4a</anchor>
       <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSearchBasedFeaturesSupplierComp</name>
+      <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
+      <anchor>ac445ddb150dc8e7efc36a6798dc571aa</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iprm::IOptionsList *</type>
@@ -15404,6 +15423,13 @@
       <type></type>
       <name>CSearchFeature</name>
       <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
+      <anchor>a9f5341e8fa7ce0508fff73dea01d1267</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSearchFeature</name>
+      <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
       <anchor>aaedb91cd8ef447238ab55ce468880194</anchor>
       <arglist>(double weight, const i2d::CVector2d &amp;position, double angle, const i2d::CVector2d &amp;scale, int index=-1, const QString &amp;id=&quot;&quot;)</arglist>
     </member>
@@ -15434,6 +15460,13 @@
       <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
       <anchor>a900d79d8c73354c11e90644bf312848c</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetId</name>
+      <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
+      <anchor>a00461e0d5e7c8d6838cddfba94a57827</anchor>
+      <arglist>(QString id)</arglist>
     </member>
     <member kind="function">
       <type>const i2d::ITransformation2d &amp;</type>
@@ -15469,6 +15502,13 @@
       <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
       <anchor>abc6ebec8006530ed5b3b176c1829a9ee</anchor>
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
+      <anchor>aa40ab32d71e62f80941426236e6f1f1e</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
   </compound>
   <compound kind="class">

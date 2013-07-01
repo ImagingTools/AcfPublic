@@ -63,6 +63,7 @@ public:
 
 	/**
 		Get selected index.
+		\return	index of selected option or negative value if no option is selected.
 	*/
 	virtual int GetSelectedOptionIndex() const = 0;
 

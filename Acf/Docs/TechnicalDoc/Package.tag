@@ -3179,12 +3179,14 @@
     <name>CParamsManagerComp.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_params_manager_comp_8h</filename>
-    <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="yes" imported="no">istd/TSmartPtr.h</includes>
+    <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
+    <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="yes" imported="no">imod/TModelWrap.h</includes>
     <includes id="_c_multi_model_bridge_base_8h" name="CMultiModelBridgeBase.h" local="yes" imported="no">imod/CMultiModelBridgeBase.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
+    <includes id="_i_name_param_8h" name="INameParam.h" local="yes" imported="no">iprm/INameParam.h</includes>
     <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
     <class kind="class">iprm::CParamsManagerComp</class>
     <namespace>iprm</namespace>
@@ -4665,6 +4667,7 @@
     <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
     <includes id="_i_icon_provider_8h" name="IIconProvider.h" local="yes" imported="no">iqtgui/IIconProvider.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
     <class kind="class">iqtprm::CParamsManagerGuiCompBase</class>
     <namespace>iqtprm</namespace>
   </compound>
@@ -5589,7 +5592,8 @@
     <filename>_c_color_schema_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_c_color_schema_8h" name="CColorSchema.h" local="yes" imported="no">iview/CColorSchema.h</includes>
-    <class kind="class">iview::CColorSchemaCompAttr</class>
+    <class kind="class">iview::CColorSchemaPenAttr</class>
+    <class kind="class">iview::CColorSchemaBrushAttr</class>
     <class kind="class">iview::CColorSchemaComp</class>
     <namespace>iview</namespace>
   </compound>
@@ -20526,29 +20530,29 @@
       <type>virtual QVariant</type>
       <name>GetDocumentMetaInfo</name>
       <anchorfile>classidoc_1_1_c_standard_document_meta_info.html</anchorfile>
-      <anchor>a4305b8406311b619ca869da4ad201f48</anchor>
-      <arglist>(MetaInfoType metaInfoType) const </arglist>
+      <anchor>a13d1ee096ac4133227142a35bdc61368</anchor>
+      <arglist>(int metaInfoType) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetDocumentMetaInfo</name>
       <anchorfile>classidoc_1_1_c_standard_document_meta_info.html</anchorfile>
-      <anchor>a163a4759bb61cb090d29ebb201fcd98f</anchor>
-      <arglist>(MetaInfoType metaInfoType, const QVariant &amp;metaInfo)</arglist>
+      <anchor>a52183f7d55a4cb9328c72d93afbedfd4</anchor>
+      <arglist>(int metaInfoType, const QVariant &amp;metaInfo)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetMetaInfoName</name>
       <anchorfile>classidoc_1_1_c_standard_document_meta_info.html</anchorfile>
-      <anchor>aa6713b5fbd35ddc6d22d152bc43745b3</anchor>
-      <arglist>(MetaInfoType metaInfoType) const </arglist>
+      <anchor>aaf09a5b40472e5f4d4fb8e33f9647078</anchor>
+      <arglist>(int metaInfoType) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetMetaInfoDescription</name>
       <anchorfile>classidoc_1_1_c_standard_document_meta_info.html</anchorfile>
-      <anchor>a14682a6add0ad4e923df6fddb03f9a26</anchor>
-      <arglist>(MetaInfoType metaInfoType) const </arglist>
+      <anchor>a42c49d1951f349c432662ea0329a97f6</anchor>
+      <arglist>(int metaInfoType) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -20999,10 +21003,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>QSet&lt; MetaInfoType &gt;</type>
+      <type>QSet&lt; int &gt;</type>
       <name>MetaInfoTypes</name>
       <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
-      <anchor>a01f0c41e844efc86e49e852c0bb601a1</anchor>
+      <anchor>a45c9d391c9fea5810497af26dbee2450</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -21016,29 +21020,29 @@
       <type>virtual QVariant</type>
       <name>GetDocumentMetaInfo</name>
       <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
-      <anchor>a7f746e087b8948ba0cf4e4e5374f965b</anchor>
-      <arglist>(MetaInfoType metaInfoType) const =0</arglist>
+      <anchor>af3c0ca6bae4d26d4153022bd92708768</anchor>
+      <arglist>(int metaInfoType) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>SetDocumentMetaInfo</name>
       <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
-      <anchor>a730a4bf762dbaa752d4d7032edda1a7b</anchor>
-      <arglist>(MetaInfoType metaInfoType, const QVariant &amp;metaInfo)=0</arglist>
+      <anchor>a3809ed2455e9509fb6f8db2415fe768d</anchor>
+      <arglist>(int metaInfoType, const QVariant &amp;metaInfo)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
       <name>GetMetaInfoName</name>
       <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
-      <anchor>aabe5c68f86d80d5531aea076a98515ea</anchor>
-      <arglist>(MetaInfoType metaInfoType) const =0</arglist>
+      <anchor>a40b4eb9d33b6dc10c882f0f5f4d03b69</anchor>
+      <arglist>(int metaInfoType) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
       <name>GetMetaInfoDescription</name>
       <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
-      <anchor>aac015eff62a1dc8afaa5e498588dab26</anchor>
-      <arglist>(MetaInfoType metaInfoType) const =0</arglist>
+      <anchor>a525fb0ef7afca405c433d165f9ce9c52</anchor>
+      <arglist>(int metaInfoType) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -30747,6 +30751,13 @@
       <anchor>a8673e0236772ead7203a0c8eedc01768</anchor>
       <arglist>(int index) const </arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>QString</type>
+      <name>GetNewSetName</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
+      <anchor>a84862a74e9dceacd7ce844418eaa0a22</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
@@ -36028,10 +36039,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual int</type>
       <name>ExecuteDialog</name>
       <anchorfile>classiqtgui_1_1_c_dialog_gui_comp.html</anchorfile>
-      <anchor>a862eb095cd18cd5b1eed60b340e6046f</anchor>
+      <anchor>a57f699ff8c7e2716a3fde0b75fd6ed8b</anchor>
       <arglist>(IGuiObject *parentPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -37302,10 +37313,10 @@
       <arglist>(m_workingDataFactoryCompPtr, m_workingModelFactoryCompPtr, true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual int</type>
       <name>ExecuteDialog</name>
       <anchorfile>classiqtgui_1_1_c_model_dialog_gui_comp.html</anchorfile>
-      <anchor>a04b099512ab370208673f11a35bf7b75</anchor>
+      <anchor>a9b72418aa2edbd774ba74520fd9f1bf6</anchor>
       <arglist>(IGuiObject *parentPtr)</arglist>
     </member>
   </compound>
@@ -38339,10 +38350,10 @@
     <filename>classiqtgui_1_1_i_dialog.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
-      <type>virtual void</type>
+      <type>virtual int</type>
       <name>ExecuteDialog</name>
       <anchorfile>classiqtgui_1_1_i_dialog.html</anchorfile>
-      <anchor>aa8d420324be83339c8ffa28329c109ad</anchor>
+      <anchor>a36c5340345a6dcc3133be3469560ad3d</anchor>
       <arglist>(IGuiObject *parentPtr)=0</arglist>
     </member>
   </compound>
@@ -39193,7 +39204,6 @@
     <name>iqtprm::CMultiParamsManagerGuiComp</name>
     <filename>classiqtprm_1_1_c_multi_params_manager_gui_comp.html</filename>
     <base>iqtprm::CParamsManagerGuiCompBase</base>
-    <base virtualness="virtual">iqt2d::IViewExtender</base>
     <member kind="typedef">
       <type>CParamsManagerGuiCompBase</type>
       <name>BaseClass</name>
@@ -39214,20 +39224,6 @@
       <anchorfile>classiqtprm_1_1_c_multi_params_manager_gui_comp.html</anchorfile>
       <anchor>a8f4ad4fcc9d665313dc6fd3fafc8b180</anchor>
       <arglist>(m_viewExtendersCompPtr, m_paramsGuiCompPtr, false)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AddItemsToScene</name>
-      <anchorfile>classiqtprm_1_1_c_multi_params_manager_gui_comp.html</anchorfile>
-      <anchor>a8c19dad0b321fca17cb5be5843872fc2</anchor>
-      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>RemoveItemsFromScene</name>
-      <anchorfile>classiqtprm_1_1_c_multi_params_manager_gui_comp.html</anchorfile>
-      <anchor>ab1aa0abda1937cd34d592af960edd70b</anchor>
-      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual imod::IObserver *</type>
@@ -39251,18 +39247,11 @@
       <arglist>(int selectedIndex)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>BeforeUpdate</name>
+      <type>virtual iqt2d::IViewExtender *</type>
+      <name>GetCurrentViewExtenderPtr</name>
       <anchorfile>classiqtprm_1_1_c_multi_params_manager_gui_comp.html</anchorfile>
-      <anchor>aa6e24ceff53070b82a7c81b0b46be97c</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AfterUpdate</name>
-      <anchorfile>classiqtprm_1_1_c_multi_params_manager_gui_comp.html</anchorfile>
-      <anchor>a678a55095f16486f5556cd6772ed4bb5</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>afc3cfe748bd4c39832b2acdb5c9dceca</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -39634,6 +39623,7 @@
     <name>iqtprm::CParamsManagerGuiCompBase</name>
     <filename>classiqtprm_1_1_c_params_manager_gui_comp_base.html</filename>
     <base>TDesignerGuiObserverCompBase&lt; Ui::CParamsManagerGuiCompBase, iprm::IParamsManager &gt;</base>
+    <base virtualness="virtual">iqt2d::IViewExtender</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CParamsManagerGuiCompBase, iprm::IParamsManager &gt;</type>
       <name>BaseClass</name>
@@ -39647,6 +39637,20 @@
       <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
       <anchor>ac6c19b8ea97872a572d9eceeaae52c0b</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddItemsToScene</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a16969fb83b7cf4a305098bd7ab17b466</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveItemsFromScene</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a273c46617d34bd3cc8b669484b7b0494</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -39725,6 +39729,13 @@
       <anchor>a48aea3c15835d174124d504885706140</anchor>
       <arglist>(const iprm::IParamsSet *paramsSetPtr) const =0</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual iqt2d::IViewExtender *</type>
+      <name>GetCurrentViewExtenderPtr</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>ae736c98d6bbe3878c4bda557a883794c</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>UpdateActions</name>
@@ -39801,6 +39812,20 @@
       <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
       <anchor>a6488e3212baef31550423fb2e6fedea4</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>BeforeUpdate</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>ae0dc25d39a40faf7c8930c30e630ab99</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>afafea12d60b389f9b2e4115144f0661c</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -45470,6 +45495,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>Swap</name>
+      <anchorfile>classistd_1_1_t_pointer_base.html</anchorfile>
+      <anchor>a3359542add320a57d9c4cc7d7aa6474a</anchor>
+      <arglist>(TPointerBase &amp;ptr)</arglist>
+    </member>
+    <member kind="function">
       <type>Type &amp;</type>
       <name>operator*</name>
       <anchorfile>classistd_1_1_t_pointer_base.html</anchorfile>
@@ -46923,7 +46955,8 @@
     <class kind="class">iview::CCircleShape</class>
     <class kind="class">iview::CColorSchema</class>
     <class kind="class">iview::CColorSchemaBase</class>
-    <class kind="class">iview::CColorSchemaCompAttr</class>
+    <class kind="class">iview::CColorSchemaPenAttr</class>
+    <class kind="class">iview::CColorSchemaBrushAttr</class>
     <class kind="class">iview::CColorSchemaComp</class>
     <class kind="class">iview::CConsoleBase</class>
     <class kind="class">iview::CConsoleGui</class>
@@ -48150,27 +48183,39 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iview::CColorSchemaCompAttr</name>
-    <filename>classiview_1_1_c_color_schema_comp_attr.html</filename>
+    <name>iview::CColorSchemaPenAttr</name>
+    <filename>classiview_1_1_c_color_schema_pen_attr.html</filename>
     <base>icomp::CComponentBase</base>
     <base>iview::CColorSchema</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiview_1_1_c_color_schema_comp_attr.html</anchorfile>
-      <anchor>ab6b84a34d1174820195f706884615cce</anchor>
+      <anchorfile>classiview_1_1_c_color_schema_pen_attr.html</anchorfile>
+      <anchor>a0e45e2781165d53325f8a6cf6870fa2d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iview::CColorSchemaBrushAttr</name>
+    <filename>classiview_1_1_c_color_schema_brush_attr.html</filename>
+    <base>iview::CColorSchemaPenAttr</base>
+    <member kind="typedef">
+      <type>CColorSchemaPenAttr</type>
+      <name>BaseClass</name>
+      <anchorfile>classiview_1_1_c_color_schema_brush_attr.html</anchorfile>
+      <anchor>a98ac1afb0822ff6fbad5780daecd5a8f</anchor>
       <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>iview::CColorSchemaComp</name>
     <filename>classiview_1_1_c_color_schema_comp.html</filename>
-    <base>iview::CColorSchemaCompAttr</base>
+    <base>iview::CColorSchemaBrushAttr</base>
     <member kind="typedef">
-      <type>CColorSchemaCompAttr</type>
+      <type>CColorSchemaBrushAttr</type>
       <name>BaseClass</name>
       <anchorfile>classiview_1_1_c_color_schema_comp.html</anchorfile>
-      <anchor>a232fc9ec7b9abc29c5c1248d709a477c</anchor>
+      <anchor>afcfd3bfc994eb14a07146f4433b58ac7</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

@@ -70,6 +70,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return access to internal stored pointer.  <a href="#a705aa6108a47c2921fff05d8dac21951"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_pointer_base.html#ade2adaa3f705bd7e98adbdf1bb79dabf">IsValid</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if internal pointer not NULL.  <a href="#ade2adaa3f705bd7e98adbdf1bb79dabf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_pointer_base.html#a3359542add320a57d9c4cc7d7aa6474a">Swap</a> (<a class="el" href="classistd_1_1_t_pointer_base.html">TPointerBase</a> &amp;ptr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap two pointers.  <a href="#a3359542add320a57d9c4cc7d7aa6474a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Type &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_pointer_base.html#a8f26c0e808e2385838dbddf4033affa9">operator*</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an access to object pointed at.  <a href="#a8f26c0e808e2385838dbddf4033affa9"></a><br/></td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;class CastedType &gt; </td></tr>
@@ -119,7 +121,7 @@ template&lt;class Type&gt; </div>
 
 <p>Construct and assign internal pointer. </p>
 
-<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00242">242</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00255">255</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
 
 </div>
 </div>
@@ -142,7 +144,7 @@ template&lt;class CastedType &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00085">85</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00091">91</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
 
 </div>
 </div>
@@ -164,9 +166,9 @@ template&lt;class Type &gt; </div>
 
 <p>Return access to internal stored pointer. </p>
 
-<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00126">126</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00132">132</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_pointer_base_8h_source.html#l00085">istd::TPointerBase&lt; i2d::ICalibration2d &gt;::Cast()</a>, <a class="el" href="_t_multi_factory_member_8h_source.html#l00120">icomp::TMultiFactoryMember&lt; Interface &gt;::CreateInstance()</a>, <a class="el" href="_t_factory_member_8h_source.html#l00125">icomp::TFactoryMember&lt; Interface &gt;::CreateInstance()</a>, <a class="el" href="_c_sim_component_context_base_8h_source.html#l00098">icomp::CSimComponentContextBase::InsertMultiAttr()</a>, and <a class="el" href="_t_smart_ptr_8h_source.html#l00084">istd::TSmartPtr&lt; Type, Accessor &gt;::RefCounter::OnDetached()</a>.</p>
+<p>Referenced by <a class="el" href="_t_pointer_base_8h_source.html#l00091">istd::TPointerBase&lt; i2d::ICalibration2d &gt;::Cast()</a>, <a class="el" href="_t_multi_factory_member_8h_source.html#l00120">icomp::TMultiFactoryMember&lt; Interface &gt;::CreateInstance()</a>, <a class="el" href="_t_factory_member_8h_source.html#l00125">icomp::TFactoryMember&lt; Interface &gt;::CreateInstance()</a>, <a class="el" href="_c_sim_component_context_base_8h_source.html#l00098">icomp::CSimComponentContextBase::InsertMultiAttr()</a>, and <a class="el" href="_t_smart_ptr_8h_source.html#l00084">istd::TSmartPtr&lt; Type, Accessor &gt;::RefCounter::OnDetached()</a>.</p>
 
 </div>
 </div>
@@ -186,7 +188,7 @@ template&lt;class Type &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00265">265</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00278">278</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
 
 </div>
 </div>
@@ -209,7 +211,7 @@ template&lt;class Type &gt; </div>
 <p>Check if internal pointer not NULL. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if internal pointer not NULL and can be used to access pointed members. </dd></dl>
 
-<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00133">133</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00139">139</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00061">NULL</a>.</p>
 
@@ -234,7 +236,7 @@ template&lt;class Type&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00163">163</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00176">176</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
 
 </div>
 </div>
@@ -255,7 +257,7 @@ template&lt;class Type&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00205">205</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00218">218</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
 
 </div>
 </div>
@@ -277,7 +279,7 @@ template&lt;class Type &gt; </div>
 
 <p>Get an access to object pointed at. </p>
 
-<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00140">140</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00153">153</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00061">NULL</a>.</p>
 
@@ -301,7 +303,7 @@ template&lt;class Type &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classistd_1_1_t_change_notifier.html#abacf580696db63dfe09dfb8fd91e0ca5">istd::TChangeNotifier&lt; Changeable &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00149">149</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00162">162</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
 
 </div>
 </div>
@@ -322,7 +324,7 @@ template&lt;class Type&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00170">170</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00183">183</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
 
 </div>
 </div>
@@ -343,7 +345,7 @@ template&lt;class Type&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00212">212</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00225">225</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
 
 </div>
 </div>
@@ -364,7 +366,7 @@ template&lt;class Type&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00184">184</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00197">197</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
 
 </div>
 </div>
@@ -385,7 +387,7 @@ template&lt;class Type&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00226">226</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00239">239</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
 
 </div>
 </div>
@@ -406,7 +408,7 @@ template&lt;class Type&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00256">256</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00269">269</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
 
 </div>
 </div>
@@ -427,7 +429,7 @@ template&lt;class Type&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00156">156</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00169">169</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
 
 </div>
 </div>
@@ -448,7 +450,7 @@ template&lt;class Type&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00198">198</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00211">211</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
 
 </div>
 </div>
@@ -469,7 +471,7 @@ template&lt;class Type&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00177">177</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00190">190</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
 
 </div>
 </div>
@@ -490,7 +492,7 @@ template&lt;class Type&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00219">219</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00232">232</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
 
 </div>
 </div>
@@ -511,7 +513,7 @@ template&lt;class Type&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00191">191</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00204">204</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
 
 </div>
 </div>
@@ -532,7 +534,7 @@ template&lt;class Type&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00233">233</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00246">246</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
 
 </div>
 </div>
@@ -554,9 +556,9 @@ template&lt;class Type &gt; </div>
 
 <p>Set internal pointer value to NULL. </p>
 
-<p>Reimplemented in <a class="el" href="classistd_1_1_t_opt_del_ptr.html#a4077ac614da6a11b3842e451eacdec02">istd::TOptDelPtr&lt; Type, DelArray &gt;</a>, <a class="el" href="classistd_1_1_t_opt_del_ptr.html#a4077ac614da6a11b3842e451eacdec02">istd::TOptDelPtr&lt; iser::ISerializable &gt;</a>, <a class="el" href="classistd_1_1_t_opt_del_ptr.html#a4077ac614da6a11b3842e451eacdec02">istd::TOptDelPtr&lt; const IColorSchema &gt;</a>, <a class="el" href="classistd_1_1_t_opt_del_ptr.html#a4077ac614da6a11b3842e451eacdec02">istd::TOptDelPtr&lt; istd::IPolymorphic &gt;</a>, <a class="el" href="classistd_1_1_t_opt_del_ptr.html#a4077ac614da6a11b3842e451eacdec02">istd::TOptDelPtr&lt; quint8, true &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; Type, Accessor &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; QWidget &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; iser::CMemoryWriteArchive &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; QSettings &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; QPainter &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; icomp::CCompositeComponentStaticInfo &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; QMenuBar &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; QLabel &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; icomp::CCompositePackageStaticInfo &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; iser::ISerializable &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; QFrame &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; icomp::IComponentStaticInfo &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; icomp::IComponentContext &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; istd::IPolymorphic &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; idoc::IUndoManager &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; IRegistryElement &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; iser::IObject &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; QMainWindow &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; CCompositePackageStaticInfo &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; QApplication &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; icomp::IComponent &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; QTextBrowser &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; QSharedMemory &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; QToolBar &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; istd::IChangeable &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; i2d::ICalibration2d &gt;</a>, and <a class="el" href="classistd_1_1_t_change_notifier.html#a254c668d925984c4d9eaafd3da70dbec">istd::TChangeNotifier&lt; Changeable &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classistd_1_1_t_opt_del_ptr.html#a4077ac614da6a11b3842e451eacdec02">istd::TOptDelPtr&lt; Type, DelArray &gt;</a>, <a class="el" href="classistd_1_1_t_opt_del_ptr.html#a4077ac614da6a11b3842e451eacdec02">istd::TOptDelPtr&lt; iser::ISerializable &gt;</a>, <a class="el" href="classistd_1_1_t_opt_del_ptr.html#a4077ac614da6a11b3842e451eacdec02">istd::TOptDelPtr&lt; const IColorSchema &gt;</a>, <a class="el" href="classistd_1_1_t_opt_del_ptr.html#a4077ac614da6a11b3842e451eacdec02">istd::TOptDelPtr&lt; istd::IPolymorphic &gt;</a>, <a class="el" href="classistd_1_1_t_opt_del_ptr.html#a4077ac614da6a11b3842e451eacdec02">istd::TOptDelPtr&lt; quint8, true &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; Type, Accessor &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; QWidget &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; iser::CMemoryWriteArchive &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; QSettings &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; QPainter &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; icomp::CCompositeComponentStaticInfo &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; QMenuBar &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; QLabel &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; icomp::CCompositePackageStaticInfo &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; iser::ISerializable &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; IParamsSet &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; QFrame &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; icomp::IComponentStaticInfo &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; icomp::IComponentContext &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; istd::IPolymorphic &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; idoc::IUndoManager &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; IRegistryElement &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; iser::IObject &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; QMainWindow &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; CCompositePackageStaticInfo &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; QApplication &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; icomp::IComponent &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; QTextBrowser &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; QSharedMemory &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; QToolBar &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; istd::IChangeable &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#a402b3bb1ac7c61782eedf605cc64a148">istd::TDelPtr&lt; i2d::ICalibration2d &gt;</a>, and <a class="el" href="classistd_1_1_t_change_notifier.html#a254c668d925984c4d9eaafd3da70dbec">istd::TChangeNotifier&lt; Changeable &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00119">119</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00125">125</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00061">NULL</a>.</p>
 
@@ -581,9 +583,32 @@ template&lt;class Type&gt; </div>
 
 <p>Set value of internal stored pointer. </p>
 
-<p>Reimplemented in <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; Type, Accessor &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; QWidget &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; iser::CMemoryWriteArchive &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; QSettings &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; QPainter &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; icomp::CCompositeComponentStaticInfo &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; QMenuBar &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; QLabel &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; icomp::CCompositePackageStaticInfo &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; iser::ISerializable &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; QFrame &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; icomp::IComponentStaticInfo &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; icomp::IComponentContext &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; istd::IPolymorphic &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; idoc::IUndoManager &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; IRegistryElement &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; iser::IObject &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; QMainWindow &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; CCompositePackageStaticInfo &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; QApplication &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; icomp::IComponent &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; QTextBrowser &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; QSharedMemory &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; QToolBar &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; istd::IChangeable &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; i2d::ICalibration2d &gt;</a>, and <a class="el" href="classistd_1_1_t_change_notifier.html#a3bd524813e6c66d33ce42cc42a8be71b">istd::TChangeNotifier&lt; Changeable &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; Type, Accessor &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; QWidget &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; iser::CMemoryWriteArchive &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; QSettings &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; QPainter &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; icomp::CCompositeComponentStaticInfo &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; QMenuBar &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; QLabel &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; icomp::CCompositePackageStaticInfo &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; iser::ISerializable &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; IParamsSet &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; QFrame &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; icomp::IComponentStaticInfo &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; icomp::IComponentContext &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; istd::IPolymorphic &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; idoc::IUndoManager &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; IRegistryElement &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; iser::IObject &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; QMainWindow &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; CCompositePackageStaticInfo &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; QApplication &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; icomp::IComponent &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; QTextBrowser &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; QSharedMemory &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; QToolBar &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; istd::IChangeable &gt;</a>, <a class="el" href="classistd_1_1_t_del_ptr.html#ad2e88db38d69bbee93059067d3ec1f08">istd::TDelPtr&lt; i2d::ICalibration2d &gt;</a>, and <a class="el" href="classistd_1_1_t_change_notifier.html#a3bd524813e6c66d33ce42cc42a8be71b">istd::TChangeNotifier&lt; Changeable &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00249">249</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00262">262</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3359542add320a57d9c4cc7d7aa6474a"></a><!-- doxytag: member="istd::TPointerBase::Swap" ref="a3359542add320a57d9c4cc7d7aa6474a" args="(TPointerBase &amp;ptr)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classistd_1_1_t_pointer_base.html">istd::TPointerBase</a>&lt; Type &gt;::Swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_t_pointer_base.html">TPointerBase</a>&lt; Type &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Swap two pointers. </p>
+
+<p>Definition at line <a class="el" href="_t_pointer_base_8h_source.html#l00146">146</a> of file <a class="el" href="_t_pointer_base_8h_source.html">TPointerBase.h</a>.</p>
 
 </div>
 </div>

@@ -63,7 +63,15 @@ public:
 		I_ASSIGN(m_searchProcessorCompPtr, "Processor", "Calculate model positions in the image", true, "Processor");
 		I_ASSIGN(m_slaveInformationProviderCompPtr, "SlaveInformationProvider", "Used to provide the status if set", false, "SlaveInformationProvider");
 		I_ASSIGN(m_searchParamsManagerParamIdAttrPtr, "SearchParamsManagerParameterId", "ID of the parameter manager used for multi search", false, "SearchParamsManagerParamId");
+		I_ASSIGN(m_searchParamsIdAttrPtr, "SearchParamsId", "ID of standard search parameters", true, "SearchParamsId");
 	I_END_COMPONENT;
+
+	enum MessageType
+	{
+		MT_SEARCH_RESULT = 0x2561
+	};
+
+	CSearchBasedFeaturesSupplierComp();
 
 	// reimplemented (i2d::IMultiCalibrationProvider)
 	virtual const iprm::IOptionsList* GetCalibrationSelectionContraints() const;
@@ -98,10 +106,13 @@ private:
 	I_REF(iproc::IProcessor, m_searchProcessorCompPtr);
 	I_REF(istd::IInformationProvider, m_slaveInformationProviderCompPtr);
 	I_ATTR(QByteArray, m_searchParamsManagerParamIdAttrPtr);
+	I_ATTR(QByteArray, m_searchParamsIdAttrPtr);
 	
 	typedef QVector<i2d::CAffineTransformation2d> TransformationList;
 	
 	mutable TransformationList m_transformationList;
+
+	mutable istd::IInformationProvider::InformationCategory m_defaultInformationCategory;
 };
 
 
