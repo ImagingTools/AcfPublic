@@ -150,6 +150,12 @@ void CDocumentProcessingManagerCompBase::OnDoProcessing()
 	if (inputDocumentPtr != NULL){
 		documentTypeId = m_documentManagerCompPtr->GetDocumentTypeId(*inputDocumentPtr);
 	}
+	
+	if (documentTypeId.isEmpty() && m_documentTypeIdAttrPtr.IsValid())
+	{
+		documentTypeId = *m_documentTypeIdAttrPtr;
+	}
+
 
 	istd::TDelPtr<iqtgui::CGuiComponentDialog> dialogPtr;
 

@@ -16290,6 +16290,13 @@
       <anchor>a3b316b91ccff2af05e674bd013735474</anchor>
       <arglist>() const =0</arglist>
     </member>
+    <member kind="variable" static="yes">
+      <type>static const int</type>
+      <name>CF_PATTERN_LEARNED</name>
+      <anchorfile>classiipr_1_1_i_pattern_controller.html</anchorfile>
+      <anchor>a3d226246f98359f2e2ba103feb56db22</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::IProjectionConstraints</name>

@@ -31,94 +31,91 @@
 <a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QObject&gt;</span>
 <a name="l00007"></a>00007 
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_c_multi_model_dispatcher_base_8h.html">imod/CMultiModelDispatcherBase.h</a>&quot;</span>
-<a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_t_logger_comp_wrap_8h.html">ilog/TLoggerCompWrap.h</a>&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_commands_provider_8h.html">ibase/ICommandsProvider.h</a>&quot;</span>
-<a name="l00014"></a>00014 
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_document_manager_8h.html">idoc/IDocumentManager.h</a>&quot;</span>
+<a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_c_multi_model_dispatcher_base_8h.html">imod/CMultiModelDispatcherBase.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_t_logger_comp_wrap_8h.html">ilog/TLoggerCompWrap.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_commands_provider_8h.html">ibase/ICommandsProvider.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_document_manager_8h.html">idoc/IDocumentManager.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_i_processor_8h.html">iproc/IProcessor.h</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_gui_object_8h.html">iqtgui/IGuiObject.h</a>&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_c_hierarchical_command_8h.html">iqtgui/CHierarchicalCommand.h</a>&quot;</span>
 <a name="l00016"></a>00016 
-<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="code" href="_i_processor_8h.html">iproc/IProcessor.h</a>&quot;</span>
-<a name="l00018"></a>00018 
-<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_gui_object_8h.html">iqtgui/IGuiObject.h</a>&quot;</span>
-<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_c_hierarchical_command_8h.html">iqtgui/CHierarchicalCommand.h</a>&quot;</span>
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="keyword">namespace </span>iprocgui
+<a name="l00019"></a>00019 {
+<a name="l00020"></a>00020 
 <a name="l00021"></a>00021 
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023 <span class="keyword">namespace </span>iprocgui
-<a name="l00024"></a>00024 {
-<a name="l00025"></a>00025 
-<a name="l00026"></a>00026 
-<a name="l00027"></a><a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html">00027</a> <span class="keyword">class </span><a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html">CDocumentProcessingManagerCompBase</a>:
-<a name="l00028"></a>00028                      <span class="keyword">public</span> <a class="code" href="class_q_object.html">QObject</a>,
-<a name="l00029"></a>00029                      <span class="keyword">public</span> ilog::<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/group___main.html#ga2ac8e0a207c9bb18de1ac6883d2cf09c">CLoggerComponentBase</a>,
-<a name="l00030"></a>00030                      <span class="keyword">protected</span> imod::CMultiModelDispatcherBase,
-<a name="l00031"></a>00031                      <span class="keyword">virtual</span> <span class="keyword">public</span> ibase::ICommandsProvider
-<a name="l00032"></a>00032 {
-<a name="l00033"></a>00033        Q_OBJECT
-<a name="l00034"></a>00034 <span class="keyword">public</span>:
-<a name="l00035"></a><a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#ae409c890d1aef50212a784fcbbb730d2">00035</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classilog_1_1_t_logger_comp_wrap.html">ilog::CLoggerComponentBase</a> <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#ae409c890d1aef50212a784fcbbb730d2">BaseClass</a>;
-<a name="l00036"></a>00036        
-<a name="l00037"></a>00037        I_BEGIN_BASE_COMPONENT(<a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html">CDocumentProcessingManagerCompBase</a>);
-<a name="l00038"></a>00038               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classibase_1_1_i_commands_provider.html">ibase::ICommandsProvider</a>);
-<a name="l00039"></a>00039               I_ASSIGN(m_documentManagerCompPtr, <span class="stringliteral">&quot;DocumentManager&quot;</span>, <span class="stringliteral">&quot;Application&#39;s document manager&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;DocumentManager&quot;</span>);
-<a name="l00040"></a>00040               <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#a817892a7761181e19c02326cf686ec66">I_ASSIGN_TO</a>(m_documentManagerModelCompPtr, m_documentManagerCompPtr, <span class="keyword">true</span>);
-<a name="l00041"></a>00041               I_ASSIGN(m_processorCompPtr, <span class="stringliteral">&quot;Processor&quot;</span>, <span class="stringliteral">&quot;Target processing component&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Processor&quot;</span>);
-<a name="l00042"></a>00042               I_ASSIGN(m_progressManagerCompPtr, <span class="stringliteral">&quot;ProgressManager&quot;</span>, <span class="stringliteral">&quot;Processing progress manager&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ProgressManager&quot;</span>);
-<a name="l00043"></a>00043               I_ASSIGN(m_paramsSetCompPtr, <span class="stringliteral">&quot;ProcessingParamsSet&quot;</span>, <span class="stringliteral">&quot;Processing parameters&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ProcessingParameters&quot;</span>);
-<a name="l00044"></a>00044               I_ASSIGN(m_paramsGuiCompPtr, <span class="stringliteral">&quot;ProcessingParamsGui&quot;</span>, <span class="stringliteral">&quot;UI for processing parameters&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ProcessingParamsGui&quot;</span>);
-<a name="l00045"></a>00045               I_ASSIGN(m_commandNameAttrPtr, <span class="stringliteral">&quot;ProcessingCommandName&quot;</span>, <span class="stringliteral">&quot;Name of the processing action in menu&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;&quot;</span>);
-<a name="l00046"></a>00046               I_ASSIGN(m_menuNameAttrPtr, <span class="stringliteral">&quot;ProcessingMenuName&quot;</span>, <span class="stringliteral">&quot;Name of the processing menu&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Processing&quot;</span>);
-<a name="l00047"></a>00047               I_ASSIGN(m_inputDocumentRequiredAttrPtr, <span class="stringliteral">&quot;InputDocumentRequired&quot;</span>, <span class="stringliteral">&quot;If enabled, the input document is required for processing&quot;</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);
-<a name="l00048"></a>00048        I_END_COMPONENT;
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050        <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#a94236a24c35c7ced2fecf65eeba3f3b0">CDocumentProcessingManagerCompBase</a>();
-<a name="l00051"></a>00051 
-<a name="l00055"></a>00055        <span class="keywordtype">bool</span> <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#a2ef6c2a629dbdc00e74bb57e294092c0" title="Return true, if the input document is required for processing.">IsInputDocumentRequired</a>() <span class="keyword">const</span>;
-<a name="l00056"></a>00056 
-<a name="l00060"></a>00060        <span class="keywordtype">void</span> <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#aad3ec6b54e6b4b1a2371f1970f951361" title="Enable or disable processing command.">SetProcessingCommandEnabled</a>(<span class="keywordtype">bool</span> isProcessingCommandEnabled = <span class="keyword">true</span>);
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062        <span class="comment">// reimpemented (ibase::ICommandsProvider)</span>
-<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_t_i_hierarchical.html">ibase::IHierarchicalCommand</a>* <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#a937d0085e132727b5b55b1a9b949f29c">GetCommands</a>() <span class="keyword">const</span>;
+<a name="l00022"></a><a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html">00022</a> <span class="keyword">class </span><a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html">CDocumentProcessingManagerCompBase</a>:
+<a name="l00023"></a>00023                      <span class="keyword">public</span> <a class="code" href="class_q_object.html">QObject</a>,
+<a name="l00024"></a>00024                      <span class="keyword">public</span> ilog::<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/group___main.html#ga2ac8e0a207c9bb18de1ac6883d2cf09c">CLoggerComponentBase</a>,
+<a name="l00025"></a>00025                      <span class="keyword">protected</span> imod::CMultiModelDispatcherBase,
+<a name="l00026"></a>00026                      <span class="keyword">virtual</span> <span class="keyword">public</span> ibase::ICommandsProvider
+<a name="l00027"></a>00027 {
+<a name="l00028"></a>00028        Q_OBJECT
+<a name="l00029"></a>00029 <span class="keyword">public</span>:
+<a name="l00030"></a><a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#ae409c890d1aef50212a784fcbbb730d2">00030</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classilog_1_1_t_logger_comp_wrap.html">ilog::CLoggerComponentBase</a> <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#ae409c890d1aef50212a784fcbbb730d2">BaseClass</a>;
+<a name="l00031"></a>00031        
+<a name="l00032"></a>00032        I_BEGIN_BASE_COMPONENT(<a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html">CDocumentProcessingManagerCompBase</a>);
+<a name="l00033"></a>00033               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classibase_1_1_i_commands_provider.html">ibase::ICommandsProvider</a>);
+<a name="l00034"></a>00034               I_ASSIGN(m_documentManagerCompPtr, <span class="stringliteral">&quot;DocumentManager&quot;</span>, <span class="stringliteral">&quot;Application&#39;s document manager&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;DocumentManager&quot;</span>);
+<a name="l00035"></a>00035               <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#a817892a7761181e19c02326cf686ec66">I_ASSIGN_TO</a>(m_documentManagerModelCompPtr, m_documentManagerCompPtr, <span class="keyword">true</span>);
+<a name="l00036"></a>00036               I_ASSIGN(m_processorCompPtr, <span class="stringliteral">&quot;Processor&quot;</span>, <span class="stringliteral">&quot;Target processing component&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Processor&quot;</span>);
+<a name="l00037"></a>00037               I_ASSIGN(m_progressManagerCompPtr, <span class="stringliteral">&quot;ProgressManager&quot;</span>, <span class="stringliteral">&quot;Processing progress manager&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ProgressManager&quot;</span>);
+<a name="l00038"></a>00038               I_ASSIGN(m_paramsSetCompPtr, <span class="stringliteral">&quot;ProcessingParamsSet&quot;</span>, <span class="stringliteral">&quot;Processing parameters&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ProcessingParameters&quot;</span>);
+<a name="l00039"></a>00039               I_ASSIGN(m_paramsGuiCompPtr, <span class="stringliteral">&quot;ProcessingParamsGui&quot;</span>, <span class="stringliteral">&quot;UI for processing parameters&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ProcessingParamsGui&quot;</span>);
+<a name="l00040"></a>00040               I_ASSIGN(m_commandNameAttrPtr, <span class="stringliteral">&quot;ProcessingCommandName&quot;</span>, <span class="stringliteral">&quot;Name of the processing action in menu&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;&quot;</span>);
+<a name="l00041"></a>00041               I_ASSIGN(m_menuNameAttrPtr, <span class="stringliteral">&quot;ProcessingMenuName&quot;</span>, <span class="stringliteral">&quot;Name of the processing menu&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Processing&quot;</span>);
+<a name="l00042"></a>00042               I_ASSIGN(m_inputDocumentRequiredAttrPtr, <span class="stringliteral">&quot;InputDocumentRequired&quot;</span>, <span class="stringliteral">&quot;If enabled, the input document is required for processing&quot;</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);
+<a name="l00043"></a>00043               I_ASSIGN(m_documentTypeIdAttrPtr, <span class="stringliteral">&quot;DocumentTypeId&quot;</span>, <span class="stringliteral">&quot;Document type ID used for document creation&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Default&quot;</span>);
+<a name="l00044"></a>00044        I_END_COMPONENT;
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046        <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#a94236a24c35c7ced2fecf65eeba3f3b0">CDocumentProcessingManagerCompBase</a>();
+<a name="l00047"></a>00047 
+<a name="l00051"></a>00051        <span class="keywordtype">bool</span> <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#a2ef6c2a629dbdc00e74bb57e294092c0" title="Return true, if the input document is required for processing.">IsInputDocumentRequired</a>() <span class="keyword">const</span>;
+<a name="l00052"></a>00052 
+<a name="l00056"></a>00056        <span class="keywordtype">void</span> <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#aad3ec6b54e6b4b1a2371f1970f951361" title="Enable or disable processing command.">SetProcessingCommandEnabled</a>(<span class="keywordtype">bool</span> isProcessingCommandEnabled = <span class="keyword">true</span>);
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058        <span class="comment">// reimpemented (ibase::ICommandsProvider)</span>
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_t_i_hierarchical.html">ibase::IHierarchicalCommand</a>* <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#a937d0085e132727b5b55b1a9b949f29c">GetCommands</a>() <span class="keyword">const</span>;
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061        <span class="comment">// reimpemented (icomp::IComponent)</span>
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#a85544fd405a619b295b1f1156c70804a">OnComponentCreated</a>();
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#a89a8acd22b4aaf27f7472adaf164b78c">OnComponentDestroyed</a>();
 <a name="l00064"></a>00064 
-<a name="l00065"></a>00065        <span class="comment">// reimpemented (icomp::IComponent)</span>
-<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#a85544fd405a619b295b1f1156c70804a">OnComponentCreated</a>();
-<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#a89a8acd22b4aaf27f7472adaf164b78c">OnComponentDestroyed</a>();
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069        <span class="comment">// abstract methods</span>
-<a name="l00070"></a>00070 
-<a name="l00074"></a>00074        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#ae67ec59dda6ef0c8e0387cb1c3dcf10e" title="Process the current document.">DoDocumentProcessing</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* inputDocumentPtr, <span class="keyword">const</span> QByteArray&amp; documentTypeId) = 0;
+<a name="l00065"></a>00065        <span class="comment">// abstract methods</span>
+<a name="l00066"></a>00066 
+<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#ae67ec59dda6ef0c8e0387cb1c3dcf10e" title="Process the current document.">DoDocumentProcessing</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* inputDocumentPtr, <span class="keyword">const</span> QByteArray&amp; documentTypeId) = 0;
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072 <span class="keyword">protected</span>:
+<a name="l00073"></a>00073        <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
+<a name="l00074"></a>00074        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#abfc0b10a9d2dfc534f26e1899b158cf7">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00075"></a>00075 
-<a name="l00076"></a>00076 <span class="keyword">protected</span>:
-<a name="l00077"></a>00077        <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
-<a name="l00078"></a>00078        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#abfc0b10a9d2dfc534f26e1899b158cf7">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00079"></a>00079 
-<a name="l00080"></a>00080        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classidoc_1_1_i_document_manager.html">idoc::IDocumentManager</a>, m_documentManagerCompPtr);
-<a name="l00081"></a>00081        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_documentManagerModelCompPtr);
-<a name="l00082"></a>00082        I_REF(<a class="code" href="classiproc_1_1_i_processor.html" title="Interface for all synchrone and assynchrone processors with &quot;push data&quot; model.">iproc::IProcessor</a>, m_processorCompPtr);
-<a name="l00083"></a>00083        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classibase_1_1_i_progress_manager.html">ibase::IProgressManager</a>, m_progressManagerCompPtr);
-<a name="l00084"></a>00084        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>, m_paramsSetCompPtr);
-<a name="l00085"></a>00085        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_paramsGuiCompPtr);
-<a name="l00086"></a>00086        I_ATTR(QString, m_commandNameAttrPtr);
-<a name="l00087"></a>00087        I_ATTR(QString, m_menuNameAttrPtr);
-<a name="l00088"></a>00088        I_ATTR(<span class="keywordtype">bool</span>, m_inputDocumentRequiredAttrPtr);
-<a name="l00089"></a>00089 
-<a name="l00090"></a><a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#a4ce81aa063682fa5195fbc5a45762acd">00090</a>        <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqtgui_1_1_c_hierarchical_command.html">iqtgui::CHierarchicalCommand</a> <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#a4ce81aa063682fa5195fbc5a45762acd">m_processingMenu</a>;
-<a name="l00091"></a><a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#ae709005994ea32faa4ee0c2e526b9cec">00091</a>        <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqtgui_1_1_c_hierarchical_command.html">iqtgui::CHierarchicalCommand</a> <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#ae709005994ea32faa4ee0c2e526b9cec">m_rootCommands</a>;
-<a name="l00092"></a><a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#a2f0ac6f5b7663d002eb3b4a9728f2fa2">00092</a>        <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqtgui_1_1_c_hierarchical_command.html">iqtgui::CHierarchicalCommand</a> <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#a2f0ac6f5b7663d002eb3b4a9728f2fa2">m_processingCommand</a>;
-<a name="l00093"></a>00093 
-<a name="l00094"></a>00094 <span class="keyword">private</span> Q_SLOTS:
-<a name="l00095"></a>00095        <span class="keywordtype">void</span> OnDoProcessing();
-<a name="l00096"></a>00096 };
+<a name="l00076"></a>00076        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classidoc_1_1_i_document_manager.html">idoc::IDocumentManager</a>, m_documentManagerCompPtr);
+<a name="l00077"></a>00077        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_documentManagerModelCompPtr);
+<a name="l00078"></a>00078        I_REF(<a class="code" href="classiproc_1_1_i_processor.html" title="Interface for all synchrone and assynchrone processors with &quot;push data&quot; model.">iproc::IProcessor</a>, m_processorCompPtr);
+<a name="l00079"></a>00079        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classibase_1_1_i_progress_manager.html">ibase::IProgressManager</a>, m_progressManagerCompPtr);
+<a name="l00080"></a>00080        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>, m_paramsSetCompPtr);
+<a name="l00081"></a>00081        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_paramsGuiCompPtr);
+<a name="l00082"></a>00082        I_ATTR(QString, m_commandNameAttrPtr);
+<a name="l00083"></a>00083        I_ATTR(QString, m_menuNameAttrPtr);
+<a name="l00084"></a>00084        I_ATTR(<span class="keywordtype">bool</span>, m_inputDocumentRequiredAttrPtr);
+<a name="l00085"></a>00085        I_ATTR(QByteArray, m_documentTypeIdAttrPtr);
+<a name="l00086"></a>00086 
+<a name="l00087"></a><a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#a4ce81aa063682fa5195fbc5a45762acd">00087</a>        <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqtgui_1_1_c_hierarchical_command.html">iqtgui::CHierarchicalCommand</a> <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#a4ce81aa063682fa5195fbc5a45762acd">m_processingMenu</a>;
+<a name="l00088"></a><a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#ae709005994ea32faa4ee0c2e526b9cec">00088</a>        <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqtgui_1_1_c_hierarchical_command.html">iqtgui::CHierarchicalCommand</a> <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#ae709005994ea32faa4ee0c2e526b9cec">m_rootCommands</a>;
+<a name="l00089"></a><a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#a2f0ac6f5b7663d002eb3b4a9728f2fa2">00089</a>        <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqtgui_1_1_c_hierarchical_command.html">iqtgui::CHierarchicalCommand</a> <a class="code" href="classiprocgui_1_1_c_document_processing_manager_comp_base.html#a2f0ac6f5b7663d002eb3b4a9728f2fa2">m_processingCommand</a>;
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091 <span class="keyword">private</span> Q_SLOTS:
+<a name="l00092"></a>00092        <span class="keywordtype">void</span> OnDoProcessing();
+<a name="l00093"></a>00093 };
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096 } <span class="comment">// namespace iproc</span>
 <a name="l00097"></a>00097 
 <a name="l00098"></a>00098 
-<a name="l00099"></a>00099 } <span class="comment">// namespace iproc</span>
-<a name="l00100"></a>00100 
+<a name="l00099"></a>00099 <span class="preprocessor">#endif // !iprocgui_CDocumentProcessingManagerCompBase_included</span>
+<a name="l00100"></a>00100 <span class="preprocessor"></span>
 <a name="l00101"></a>00101 
-<a name="l00102"></a>00102 <span class="preprocessor">#endif // !iprocgui_CDocumentProcessingManagerCompBase_included</span>
-<a name="l00103"></a>00103 <span class="preprocessor"></span>
-<a name="l00104"></a>00104 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

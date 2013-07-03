@@ -27,17 +27,12 @@
 // Qt includes
 #include <QtCore/QObject>
 
-
 // ACF includes
 #include "imod/CMultiModelDispatcherBase.h"
-
 #include "ilog/TLoggerCompWrap.h"
 #include "ibase/ICommandsProvider.h"
-
 #include "idoc/IDocumentManager.h"
-
 #include "iproc/IProcessor.h"
-
 #include "iqtgui/IGuiObject.h"
 #include "iqtgui/CHierarchicalCommand.h"
 
@@ -67,6 +62,7 @@ public:
 		I_ASSIGN(m_commandNameAttrPtr, "ProcessingCommandName", "Name of the processing action in menu", true, "");
 		I_ASSIGN(m_menuNameAttrPtr, "ProcessingMenuName", "Name of the processing menu", true, "Processing");
 		I_ASSIGN(m_inputDocumentRequiredAttrPtr, "InputDocumentRequired", "If enabled, the input document is required for processing", false, true);
+		I_ASSIGN(m_documentTypeIdAttrPtr, "DocumentTypeId", "Document type ID used for document creation", false, "Default");
 	I_END_COMPONENT;
 
 	CDocumentProcessingManagerCompBase();
@@ -108,6 +104,7 @@ protected:
 	I_ATTR(QString, m_commandNameAttrPtr);
 	I_ATTR(QString, m_menuNameAttrPtr);
 	I_ATTR(bool, m_inputDocumentRequiredAttrPtr);
+	I_ATTR(QByteArray, m_documentTypeIdAttrPtr);
 
 	iqtgui::CHierarchicalCommand m_processingMenu;
 	iqtgui::CHierarchicalCommand m_rootCommands;
