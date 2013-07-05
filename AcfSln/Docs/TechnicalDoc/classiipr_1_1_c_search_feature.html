@@ -75,12 +75,14 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a9f5341e8fa7ce0508fff73dea01d1267">CSearchFeature</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#aaedb91cd8ef447238ab55ce468880194">CSearchFeature</a> (double weight, const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position, double angle, const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;scale, int index=-1, const QString &amp;id=&quot;&quot;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#ab0b5b7ce1ecde0e620b34b51429d5dbf">CSearchFeature</a> (double weight, const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position, double angle, const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;scale, bool negativeModel=false, int index=-1, const QString &amp;id=&quot;&quot;)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a1f8e680c24cd7adcc7ffa5555904d623">GetAngle</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#aac77c713ab574967a412a0c7884361ab">GetScale</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a1b9b60d3ee8b06a83b64ddab6a369bce">GetIndex</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a900d79d8c73354c11e90644bf312848c">GetId</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a00461e0d5e7c8d6838cddfba94a57827">SetId</a> (QString id)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a72e72115f88a42fd73f5c1b6bd733377">IsNegativeModelEnabled</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a17081b2644d62aa1e89aecedc655f870">SetNegativeModelEnabled</a> (bool enable)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a9b75f993741fe8ff834b767cb98b754e">GetTransformation</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_search_feature.html#a38734f1485a38e5ddaba4cfd4c1f6959">IsValueTypeSupported</a> (<a class="el" href="classimeas_1_1_i_numeric_value.html#a840dc03c17a580cc816b8bf799ddc9e1">ValueTypeId</a> valueTypeId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the given value type (or value component) is supported.  <a href="#a38734f1485a38e5ddaba4cfd4c1f6959"></a><br/></td></tr>
@@ -129,7 +131,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aaedb91cd8ef447238ab55ce468880194"></a><!-- doxytag: member="iipr::CSearchFeature::CSearchFeature" ref="aaedb91cd8ef447238ab55ce468880194" args="(double weight, const i2d::CVector2d &amp;position, double angle, const i2d::CVector2d &amp;scale, int index=&#45;1, const QString &amp;id=&quot;&quot;)" -->
+<a class="anchor" id="ab0b5b7ce1ecde0e620b34b51429d5dbf"></a><!-- doxytag: member="iipr::CSearchFeature::CSearchFeature" ref="ab0b5b7ce1ecde0e620b34b51429d5dbf" args="(double weight, const i2d::CVector2d &amp;position, double angle, const i2d::CVector2d &amp;scale, bool negativeModel=false, int index=&#45;1, const QString &amp;id=&quot;&quot;)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -156,6 +158,12 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
           <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>negativeModel</em> = <code>false</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -332,6 +340,22 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a72e72115f88a42fd73f5c1b6bd733377"></a><!-- doxytag: member="iipr::CSearchFeature::IsNegativeModelEnabled" ref="a72e72115f88a42fd73f5c1b6bd733377" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool iipr::CSearchFeature::IsNegativeModelEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a38734f1485a38e5ddaba4cfd4c1f6959"></a><!-- doxytag: member="iipr::CSearchFeature::IsValueTypeSupported" ref="a38734f1485a38e5ddaba4cfd4c1f6959" args="(ValueTypeId valueTypeId) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -383,6 +407,23 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">QString&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a17081b2644d62aa1e89aecedc655f870"></a><!-- doxytag: member="iipr::CSearchFeature::SetNegativeModelEnabled" ref="a17081b2644d62aa1e89aecedc655f870" args="(bool enable)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iipr::CSearchFeature::SetNegativeModelEnabled </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

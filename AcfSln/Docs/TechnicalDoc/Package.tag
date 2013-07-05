@@ -15430,8 +15430,8 @@
       <type></type>
       <name>CSearchFeature</name>
       <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
-      <anchor>aaedb91cd8ef447238ab55ce468880194</anchor>
-      <arglist>(double weight, const i2d::CVector2d &amp;position, double angle, const i2d::CVector2d &amp;scale, int index=-1, const QString &amp;id=&quot;&quot;)</arglist>
+      <anchor>ab0b5b7ce1ecde0e620b34b51429d5dbf</anchor>
+      <arglist>(double weight, const i2d::CVector2d &amp;position, double angle, const i2d::CVector2d &amp;scale, bool negativeModel=false, int index=-1, const QString &amp;id=&quot;&quot;)</arglist>
     </member>
     <member kind="function">
       <type>double</type>
@@ -15467,6 +15467,20 @@
       <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
       <anchor>a00461e0d5e7c8d6838cddfba94a57827</anchor>
       <arglist>(QString id)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsNegativeModelEnabled</name>
+      <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
+      <anchor>a72e72115f88a42fd73f5c1b6bd733377</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetNegativeModelEnabled</name>
+      <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
+      <anchor>a17081b2644d62aa1e89aecedc655f870</anchor>
+      <arglist>(bool enable)</arglist>
     </member>
     <member kind="function">
       <type>const i2d::ITransformation2d &amp;</type>
