@@ -43340,6 +43340,13 @@
     </member>
     <member kind="function">
       <type>bool</type>
+      <name>IsValid</name>
+      <anchorfile>classistd_1_1_c_var_index.html</anchorfile>
+      <anchor>af05061facb1e7aa1ca0267f18bb9467e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
       <name>IsZero</name>
       <anchorfile>classistd_1_1_c_var_index.html</anchorfile>
       <anchor>a36cc2dc1ea1e69037d2090adbb952acd</anchor>

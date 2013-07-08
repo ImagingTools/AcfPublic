@@ -17883,22 +17883,28 @@
       <anchor>a31dc76bacfe8d22ce67bb58597204bf7</anchor>
       <arglist>(const QString *extensionPtr=NULL) const </arglist>
     </member>
-    <member kind="enumvalue">
-      <name>BYTES_PER_SAMPLE</name>
+    <member kind="enumeration">
+      <name>WavContaints</name>
       <anchorfile>classimeas_1_1_c_wav_samples_loader_comp.html</anchorfile>
-      <anchor>aaca5083289fd88aea6c5dd6f62b40cdaacc0e163beb3e170717fd1cdd318203d5</anchor>
+      <anchor>a6dd5c66f580cd92133fec237be325e8b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>BITS_PER_SAMPLE</name>
+      <name>WC_BYTES_PER_SAMPLE</name>
       <anchorfile>classimeas_1_1_c_wav_samples_loader_comp.html</anchorfile>
-      <anchor>aaca5083289fd88aea6c5dd6f62b40cdaad9ee197dc89c4cc7adbee13008ed1548</anchor>
+      <anchor>a6dd5c66f580cd92133fec237be325e8ba79987808a0332e703388eaa74c9cff8b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>WAVE_FORMAT_PCM</name>
+      <name>WC_BITS_PER_SAMPLE</name>
       <anchorfile>classimeas_1_1_c_wav_samples_loader_comp.html</anchorfile>
-      <anchor>aaca5083289fd88aea6c5dd6f62b40cdaab4c12e1396ba8e8f2d4acdcd0050e24c</anchor>
+      <anchor>a6dd5c66f580cd92133fec237be325e8ba6fc431ab4f3cbd3d07295a5d200b5f71</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>WC_WAVE_FORMAT_PCM</name>
+      <anchorfile>classimeas_1_1_c_wav_samples_loader_comp.html</anchorfile>
+      <anchor>a6dd5c66f580cd92133fec237be325e8bae7fc72301093211ede0a482ee917fe64</anchor>
       <arglist></arglist>
     </member>
   </compound>
