@@ -14132,7 +14132,7 @@
       <anchor>a8bd0f4bb480440da7bd9dd13f61ccf9c</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>ProcessImageRegion</name>
       <anchorfile>classiipr_1_1_c_image_crop_processor_comp.html</anchorfile>
