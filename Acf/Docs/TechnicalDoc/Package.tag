@@ -22663,6 +22663,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearImage</name>
+      <anchorfile>classiimg_1_1_c_bitmap.html</anchorfile>
+      <anchor>a8a16f925a63698cef3a49bb4fcfb0062</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual istd::CIndex2d</type>
       <name>GetImageSize</name>
       <anchorfile>classiimg_1_1_c_bitmap.html</anchorfile>
@@ -23011,6 +23018,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearImage</name>
+      <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
+      <anchor>aba47b7f97fe64fd9a11313d4bb79f299</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual istd::CIndex2d</type>
       <name>GetImageSize</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
@@ -23280,6 +23294,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearImage</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a0396bab21dad455a483923b494c69e14</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual istd::CIndex2d</type>
       <name>GetImageSize</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
@@ -23500,6 +23521,13 @@
       <name>ResetImage</name>
       <anchorfile>classiimg_1_1_i_raster_image.html</anchorfile>
       <anchor>afb0344fb0cb7bd07836b1a59cc9243a3</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>ClearImage</name>
+      <anchorfile>classiimg_1_1_i_raster_image.html</anchorfile>
+      <anchor>a99af99f25c4f49fa7f382ef1846b6ff9</anchor>
       <arglist>()=0</arglist>
     </member>
     <member kind="function" virtualness="pure">

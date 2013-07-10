@@ -28,59 +28,132 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iipr_CMultiBitmapCacheComp_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_t_pointer_vector_8h.html">istd/TPointerVector.h</a>&quot;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_calibration2d_8h.html">i2d/ICalibration2d.h</a>&quot;</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_multi_calibration_provider_8h.html">i2d/IMultiCalibrationProvider.h</a>&quot;</span>
-<a name="l00010"></a>00010 
-<a name="l00011"></a>00011 <span class="comment">// ACF-Solutions includes</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_multi_bitmap_provider_8h.html">iipr/IMultiBitmapProvider.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QStringList&gt;</span>
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_t_pointer_vector_8h.html">istd/TPointerVector.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_calibration2d_8h.html">i2d/ICalibration2d.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_multi_calibration_provider_8h.html">i2d/IMultiCalibrationProvider.h</a>&quot;</span>
 <a name="l00013"></a>00013 
-<a name="l00014"></a>00014 
-<a name="l00015"></a>00015 <span class="keyword">namespace </span>iipr
-<a name="l00016"></a>00016 {
+<a name="l00014"></a>00014 <span class="comment">// ACF-Solutions includes</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_i_multi_bitmap_provider_8h.html">iipr/IMultiBitmapProvider.h</a>&quot;</span>
+<a name="l00016"></a>00016 
 <a name="l00017"></a>00017 
-<a name="l00018"></a>00018 
-<a name="l00024"></a><a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html">00024</a> <span class="keyword">class </span><a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html" title="Multi bitmap provider returning always stored bitmaps.">CMultiBitmapCacheComp</a>:
-<a name="l00025"></a>00025                      <span class="keyword">public</span> icomp::CComponentBase,
-<a name="l00026"></a>00026                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiipr_1_1_i_multi_bitmap_provider.html" title="Supplier allowing to access of multiple produced bitmaps.">IMultiBitmapProvider</a>,
-<a name="l00027"></a>00027                      <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::IMultiCalibrationProvider
-<a name="l00028"></a>00028 {
-<a name="l00029"></a>00029 <span class="keyword">public</span>:
-<a name="l00030"></a><a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a05cb5521e849eaadc9f271aae3b953a8">00030</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a05cb5521e849eaadc9f271aae3b953a8">BaseClass</a>;
-<a name="l00031"></a>00031 
-<a name="l00032"></a>00032        I_BEGIN_COMPONENT(<a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html" title="Multi bitmap provider returning always stored bitmaps.">CMultiBitmapCacheComp</a>);
-<a name="l00033"></a>00033               I_REGISTER_INTERFACE(<a class="code" href="classiipr_1_1_i_multi_bitmap_provider.html" title="Supplier allowing to access of multiple produced bitmaps.">IMultiBitmapProvider</a>);
-<a name="l00034"></a>00034        I_END_COMPONENT;
+<a name="l00018"></a>00018 <span class="keyword">namespace </span>iipr
+<a name="l00019"></a>00019 {
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 
+<a name="l00027"></a><a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html">00027</a> <span class="keyword">class </span><a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html" title="Multi bitmap provider returning always stored bitmaps.">CMultiBitmapCacheComp</a>:
+<a name="l00028"></a>00028                      <span class="keyword">public</span> icomp::CComponentBase,
+<a name="l00029"></a>00029                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiipr_1_1_i_multi_bitmap_provider.html" title="Supplier allowing to access of multiple produced bitmaps.">IMultiBitmapProvider</a>,
+<a name="l00030"></a>00030                      <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::IMultiCalibrationProvider,
+<a name="l00031"></a>00031                      <span class="keyword">virtual</span> <span class="keyword">public</span> iser::ISerializable
+<a name="l00032"></a>00032 {
+<a name="l00033"></a>00033 <span class="keyword">public</span>:
+<a name="l00034"></a><a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a05cb5521e849eaadc9f271aae3b953a8">00034</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a05cb5521e849eaadc9f271aae3b953a8">BaseClass</a>;
 <a name="l00035"></a>00035 
-<a name="l00036"></a>00036        <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a25f81226b1873d3e06cc5de300ac7f92">CMultiBitmapCacheComp</a>();
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038        <span class="comment">// reimplemented (iipr::IMultiBitmapProvider)</span>
-<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html">iprm::IOptionsList</a>* <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#ac6290733b32d85da2bce3ba013b56271" title="Get optional information about bitmaps in form of section contraints.">GetBitmapSelectionContraints</a>() <span class="keyword">const</span>;
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a03025bb4473f7b1f9073102b37ba9e70" title="Get number of produced bitmaps.">GetBitmapsCount</a>() <span class="keyword">const</span>;
-<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a54007d2545576446ef50be04cfe42a0a" title="Get access to produced bitmap object.">GetBitmap</a>(<span class="keywordtype">int</span> bitmapIndex) <span class="keyword">const</span>;
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043        <span class="comment">// reimplemented (i2d::IMultiCalibrationProvider)</span>
-<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html">iprm::IOptionsList</a>* <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#aad6fdac527297d52070c99c45a42badd">GetCalibrationSelectionContraints</a>() <span class="keyword">const</span>;
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a3b259732128de8c3e30baba91df531af">GetCalibrationsCount</a>() <span class="keyword">const</span>;
-<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a>* <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a14c4b0dfc6960698a1f32e1cd5751a2c">GetCalibration</a>(<span class="keywordtype">int</span> calibrationIndex) <span class="keyword">const</span>;
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048        <span class="comment">// reimplemented (istd::IChangeable)</span>
-<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a1f0a40aaa274daf6e6c227f6635296dc">CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>, <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode = <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af">CM_WITHOUT_REFS</a>);
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051 <span class="keyword">private</span>:
-<a name="l00052"></a>00052        <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;iimg::IBitmap&gt;</a> m_bitmapsPtr;
-<a name="l00053"></a>00053        <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;i2d::ICalibration2d&gt;</a> m_transformsPtr;
-<a name="l00054"></a>00054 };
-<a name="l00055"></a>00055 
+<a name="l00036"></a>00036        I_BEGIN_COMPONENT(<a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html" title="Multi bitmap provider returning always stored bitmaps.">CMultiBitmapCacheComp</a>);
+<a name="l00037"></a>00037               I_REGISTER_INTERFACE(<a class="code" href="classiipr_1_1_i_multi_bitmap_provider.html" title="Supplier allowing to access of multiple produced bitmaps.">IMultiBitmapProvider</a>);
+<a name="l00038"></a>00038               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html">iser::ISerializable</a>);
+<a name="l00039"></a>00039               I_ASSIGN(m_copyConstraintsAttrPtr, <span class="stringliteral">&quot;CopyConstraints&quot;</span>, <span class="stringliteral">&quot;Copy bitmap constraints from provider&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
+<a name="l00040"></a>00040        I_END_COMPONENT;
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042        <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a25f81226b1873d3e06cc5de300ac7f92">CMultiBitmapCacheComp</a>();
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044        <span class="comment">// reimplemented (iipr::IMultiBitmapProvider)</span>
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html">iprm::IOptionsList</a>* <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#ac6290733b32d85da2bce3ba013b56271" title="Get optional information about bitmaps in form of section contraints.">GetBitmapSelectionContraints</a>() <span class="keyword">const</span>;
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a03025bb4473f7b1f9073102b37ba9e70" title="Get number of produced bitmaps.">GetBitmapsCount</a>() <span class="keyword">const</span>;
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a54007d2545576446ef50be04cfe42a0a" title="Get access to produced bitmap object.">GetBitmap</a>(<span class="keywordtype">int</span> bitmapIndex) <span class="keyword">const</span>;
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049        <span class="comment">// reimplemented (i2d::IMultiCalibrationProvider)</span>
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html">iprm::IOptionsList</a>* <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#aad6fdac527297d52070c99c45a42badd">GetCalibrationSelectionContraints</a>() <span class="keyword">const</span>;
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a3b259732128de8c3e30baba91df531af">GetCalibrationsCount</a>() <span class="keyword">const</span>;
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a>* <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a14c4b0dfc6960698a1f32e1cd5751a2c">GetCalibration</a>(<span class="keywordtype">int</span> calibrationIndex) <span class="keyword">const</span>;
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054        <span class="comment">// reimplemented (istd::IChangeable)</span>
+<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a1f0a40aaa274daf6e6c227f6635296dc">CopyFrom</a>(<span class="keyword">const</span> IChangeable&amp; <span class="keywordtype">object</span>, <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode = <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af">CM_WITHOUT_REFS</a>);
 <a name="l00056"></a>00056 
-<a name="l00057"></a>00057 } <span class="comment">// namespace iipr</span>
-<a name="l00058"></a>00058 
+<a name="l00057"></a>00057        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#ac45d1399c07b2604515d7d5ad1745b49">Serialize</a>(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);
 <a name="l00059"></a>00059 
-<a name="l00060"></a>00060 <span class="preprocessor">#endif // !iipr_CMultiBitmapCacheComp_included</span>
-<a name="l00061"></a>00061 <span class="preprocessor"></span>
-<a name="l00062"></a>00062 
+<a name="l00060"></a>00060 <span class="keyword">private</span>:
+<a name="l00061"></a>00061        <span class="keyword">class </span>CBitmapConstraints: <span class="keyword">virtual</span> <span class="keyword">public</span> iprm::IOptionsList
+<a name="l00062"></a>00062        {
+<a name="l00063"></a>00063               <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classiipr_1_1_c_multi_bitmap_cache_comp.html" title="Multi bitmap provider returning always stored bitmaps.">CMultiBitmapCacheComp</a>;
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065        <span class="keyword">public</span>:
+<a name="l00066"></a>00066               CBitmapConstraints()
+<a name="l00067"></a>00067               {
+<a name="l00068"></a>00068                      Reset();
+<a name="l00069"></a>00069               }
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071               <span class="keywordtype">void</span> Reset()
+<a name="l00072"></a>00072               {
+<a name="l00073"></a>00073                      m_flags = 0;
+<a name="l00074"></a>00074                      m_count = -1;
+<a name="l00075"></a>00075                      m_names.clear();
+<a name="l00076"></a>00076                      m_descriptions.clear();
+<a name="l00077"></a>00077                      m_ids.clear();
+<a name="l00078"></a>00078                      m_enabled.clear();
+<a name="l00079"></a>00079               }
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081               <span class="keyword">virtual</span> <span class="keywordtype">int</span> GetOptionsFlags()<span class="keyword"> const</span>
+<a name="l00082"></a>00082 <span class="keyword">              </span>{
+<a name="l00083"></a>00083                      <span class="keywordflow">return</span> m_flags;
+<a name="l00084"></a>00084               }
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086               <span class="keyword">virtual</span> <span class="keywordtype">int</span> GetOptionsCount()<span class="keyword"> const</span>
+<a name="l00087"></a>00087 <span class="keyword">              </span>{
+<a name="l00088"></a>00088                      <span class="keywordflow">return</span> m_count;
+<a name="l00089"></a>00089               }
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091               <span class="keyword">virtual</span> QString GetOptionName(<span class="keywordtype">int</span> index)<span class="keyword"> const</span>
+<a name="l00092"></a>00092 <span class="keyword">              </span>{
+<a name="l00093"></a>00093                      <span class="keywordflow">return</span> m_names.at(index);
+<a name="l00094"></a>00094               }
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096               <span class="keyword">virtual</span> QString GetOptionDescription(<span class="keywordtype">int</span> index)<span class="keyword"> const</span>
+<a name="l00097"></a>00097 <span class="keyword">              </span>{
+<a name="l00098"></a>00098                      <span class="keywordflow">return</span> m_descriptions.at(index);
+<a name="l00099"></a>00099               }
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101               <span class="keyword">virtual</span> QByteArray GetOptionId(<span class="keywordtype">int</span> index)<span class="keyword"> const</span>
+<a name="l00102"></a>00102 <span class="keyword">              </span>{
+<a name="l00103"></a>00103                      <span class="keywordflow">return</span> m_ids.at(index);
+<a name="l00104"></a>00104               }
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> IsOptionEnabled(<span class="keywordtype">int</span> index)<span class="keyword"> const</span>
+<a name="l00107"></a>00107 <span class="keyword">              </span>{
+<a name="l00108"></a>00108                      <span class="keywordflow">return</span> m_enabled.at(index);
+<a name="l00109"></a>00109               }
+<a name="l00110"></a>00110 
+<a name="l00111"></a>00111        <span class="keyword">private</span>:
+<a name="l00112"></a>00112               <span class="keywordtype">int</span> m_flags;
+<a name="l00113"></a>00113               <span class="keywordtype">int</span> m_count;
+<a name="l00114"></a>00114               QStringList m_names;
+<a name="l00115"></a>00115               QStringList m_descriptions;
+<a name="l00116"></a>00116               QList&lt;QByteArray&gt; m_ids;
+<a name="l00117"></a>00117               QList&lt;bool&gt; m_enabled;
+<a name="l00118"></a>00118        };
+<a name="l00119"></a>00119 
+<a name="l00120"></a>00120        CBitmapConstraints m_bitmapConstraints;
+<a name="l00121"></a>00121        <span class="keywordtype">bool</span> m_copyConstraints;
+<a name="l00122"></a>00122 
+<a name="l00123"></a>00123        <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;iimg::IBitmap&gt;</a> m_bitmapsPtr;
+<a name="l00124"></a>00124        <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;i2d::ICalibration2d&gt;</a> m_transformsPtr;
+<a name="l00125"></a>00125 
+<a name="l00126"></a>00126        I_ATTR(<span class="keywordtype">bool</span>, m_copyConstraintsAttrPtr);
+<a name="l00127"></a>00127 };
+<a name="l00128"></a>00128 
+<a name="l00129"></a>00129 
+<a name="l00130"></a>00130 } <span class="comment">// namespace iipr</span>
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132 
+<a name="l00133"></a>00133 <span class="preprocessor">#endif // !iipr_CMultiBitmapCacheComp_included</span>
+<a name="l00134"></a>00134 <span class="preprocessor"></span>
+<a name="l00135"></a>00135 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -14585,6 +14585,7 @@
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iipr::IMultiBitmapProvider</base>
     <base virtualness="virtual">i2d::IMultiCalibrationProvider</base>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -14647,6 +14648,13 @@
       <anchorfile>classiipr_1_1_c_multi_bitmap_cache_comp.html</anchorfile>
       <anchor>a1f0a40aaa274daf6e6c227f6635296dc</anchor>
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiipr_1_1_c_multi_bitmap_cache_comp.html</anchorfile>
+      <anchor>ac45d1399c07b2604515d7d5ad1745b49</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -21685,6 +21693,7 @@
     <name>iqtcam::CMultiBitmapViewComp</name>
     <filename>classiqtcam_1_1_c_multi_bitmap_view_comp.html</filename>
     <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; iipr::IMultiBitmapProvider &gt; &gt; &gt;</base>
+    <base>iqtgui::IDialog</base>
     <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <class kind="class">iqtcam::CMultiBitmapViewComp::CSingleView</class>
     <member kind="typedef">
@@ -21714,6 +21723,34 @@
       <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp.html</anchorfile>
       <anchor>a98279d4e726e6c9e70fbd8dd8059eccf</anchor>
       <arglist>(m_generalInformationModelCompPtr, m_generalInformationProviderCompPtr, true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateEditor</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a1add13c2d6927c65d40e43d8617b535e</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>ab83711af07a5f7572cfa8fb479374f6a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ExecuteDialog</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>adb90bce148a53d8f974721e32c799e5d</anchor>
+      <arglist>(IGuiObject *parentPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DoCreateGui</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a466cefc2be63c1f7b96d7ae53c08c3e6</anchor>
+      <arglist>(QWidget *parentWidget)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>

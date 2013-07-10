@@ -232,6 +232,12 @@ void CBitmap::ResetImage()
 }
 
 
+void CBitmap::ClearImage()
+{
+	m_image.fill(0);
+}
+
+
 istd::CIndex2d CBitmap::GetImageSize() const
 {
 	return m_image.size();

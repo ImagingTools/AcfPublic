@@ -86,37 +86,38 @@
 <a name="l00129"></a>00129        <span class="comment">// reimplemented (iimg::IRasterImage)</span>
 <a name="l00130"></a>00130        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_scanline_mask.html#a9a672a0b9a5688afe28b400312227f6a" title="Return true if this image is empty.">IsEmpty</a>() <span class="keyword">const</span>;
 <a name="l00131"></a>00131        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_c_scanline_mask.html#a48c4e82952b6956f59d5999a47c308bb" title="Reset this image.">ResetImage</a>();
-<a name="l00132"></a>00132        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> <a class="code" href="classiimg_1_1_c_scanline_mask.html#a561e130a809b8a5b11328354242cbb31" title="Get size of this raster image.">GetImageSize</a>() <span class="keyword">const</span>;
-<a name="l00133"></a>00133        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_c_scanline_mask.html#aaef909121f6ec3420598d1b8d3a44e76" title="Get number of color components.">GetComponentsCount</a>() <span class="keyword">const</span>;
-<a name="l00134"></a>00134        <span class="keyword">virtual</span> <a class="code" href="classicmm_1_1_c_var_color.html" title="Generic color implementation with variable number of color components.">icmm::CVarColor</a> <a class="code" href="classiimg_1_1_c_scanline_mask.html#a17d94da941d7667e824749529dd490fb" title="Get color at specified pixel.">GetColorAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position) <span class="keyword">const</span>;
-<a name="l00135"></a>00135        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_scanline_mask.html#addc4a8c1313767cddd3d70dc049bd9ca" title="Set color at specified pixel.">SetColorAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position, <span class="keyword">const</span> <a class="code" href="classicmm_1_1_c_var_color.html" title="Generic color implementation with variable number of color components.">icmm::CVarColor</a>&amp; color);
-<a name="l00136"></a>00136 
-<a name="l00137"></a>00137        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00138"></a>00138        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_scanline_mask.html#a2f3947c71c49739c5ec3bc2bc57dde0b" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
-<a name="l00139"></a>00139 
-<a name="l00140"></a>00140 <span class="keyword">protected</span>:
-<a name="l00141"></a>00141        <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_c_scanline_mask.html#a812739c067134a447f2927a356b98cca">SetBoundingBox</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a>&amp; objectBoundingBox, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>* clipAreaPtr);
-<a name="l00142"></a>00142 
-<a name="l00143"></a>00143 <span class="keyword">private</span>:
-<a name="l00144"></a>00144        <span class="keyword">typedef</span> QList&lt;istd::CIntRanges&gt; RangesContainer;
-<a name="l00145"></a>00145        RangesContainer m_rangesContainer;
-<a name="l00146"></a>00146 
-<a name="l00147"></a>00147        <span class="keyword">typedef</span> QVector&lt;const istd::CIntRanges*&gt; Scanlines;
-<a name="l00148"></a>00148        Scanlines m_scanlines;
-<a name="l00149"></a>00149 
-<a name="l00150"></a>00150        <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> m_boundingBox;
-<a name="l00151"></a>00151 
-<a name="l00152"></a>00152        <span class="keywordtype">bool</span> m_isEmpty;
-<a name="l00153"></a>00153 };
-<a name="l00154"></a>00154 
+<a name="l00132"></a>00132        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_c_scanline_mask.html#a0396bab21dad455a483923b494c69e14" title="Cleat this image.">ClearImage</a>();
+<a name="l00133"></a>00133        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> <a class="code" href="classiimg_1_1_c_scanline_mask.html#a561e130a809b8a5b11328354242cbb31" title="Get size of this raster image.">GetImageSize</a>() <span class="keyword">const</span>;
+<a name="l00134"></a>00134        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiimg_1_1_c_scanline_mask.html#aaef909121f6ec3420598d1b8d3a44e76" title="Get number of color components.">GetComponentsCount</a>() <span class="keyword">const</span>;
+<a name="l00135"></a>00135        <span class="keyword">virtual</span> <a class="code" href="classicmm_1_1_c_var_color.html" title="Generic color implementation with variable number of color components.">icmm::CVarColor</a> <a class="code" href="classiimg_1_1_c_scanline_mask.html#a17d94da941d7667e824749529dd490fb" title="Get color at specified pixel.">GetColorAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position) <span class="keyword">const</span>;
+<a name="l00136"></a>00136        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_scanline_mask.html#addc4a8c1313767cddd3d70dc049bd9ca" title="Set color at specified pixel.">SetColorAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position, <span class="keyword">const</span> <a class="code" href="classicmm_1_1_c_var_color.html" title="Generic color implementation with variable number of color components.">icmm::CVarColor</a>&amp; color);
+<a name="l00137"></a>00137 
+<a name="l00138"></a>00138        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00139"></a>00139        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_scanline_mask.html#a2f3947c71c49739c5ec3bc2bc57dde0b" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
+<a name="l00140"></a>00140 
+<a name="l00141"></a>00141 <span class="keyword">protected</span>:
+<a name="l00142"></a>00142        <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_c_scanline_mask.html#a812739c067134a447f2927a356b98cca">SetBoundingBox</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rectangle.html" title="Definition of rectangle area orthogonal to axis of coordination system.">i2d::CRectangle</a>&amp; objectBoundingBox, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>* clipAreaPtr);
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144 <span class="keyword">private</span>:
+<a name="l00145"></a>00145        <span class="keyword">typedef</span> QList&lt;istd::CIntRanges&gt; RangesContainer;
+<a name="l00146"></a>00146        RangesContainer m_rangesContainer;
+<a name="l00147"></a>00147 
+<a name="l00148"></a>00148        <span class="keyword">typedef</span> QVector&lt;const istd::CIntRanges*&gt; Scanlines;
+<a name="l00149"></a>00149        Scanlines m_scanlines;
+<a name="l00150"></a>00150 
+<a name="l00151"></a>00151        <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> m_boundingBox;
+<a name="l00152"></a>00152 
+<a name="l00153"></a>00153        <span class="keywordtype">bool</span> m_isEmpty;
+<a name="l00154"></a>00154 };
 <a name="l00155"></a>00155 
-<a name="l00156"></a>00156 } <span class="comment">// namespace iimg</span>
-<a name="l00157"></a>00157 
+<a name="l00156"></a>00156 
+<a name="l00157"></a>00157 } <span class="comment">// namespace iimg</span>
 <a name="l00158"></a>00158 
-<a name="l00159"></a>00159 <span class="preprocessor">#endif // !iimg_CScanlineMask_included</span>
-<a name="l00160"></a>00160 <span class="preprocessor"></span>
-<a name="l00161"></a>00161 
+<a name="l00159"></a>00159 
+<a name="l00160"></a>00160 <span class="preprocessor">#endif // !iimg_CScanlineMask_included</span>
+<a name="l00161"></a>00161 <span class="preprocessor"></span>
 <a name="l00162"></a>00162 
+<a name="l00163"></a>00163 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -37,7 +37,7 @@
 <div class="title">iipr::CMultiBitmapCacheComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iipr::CMultiBitmapCacheComp" --><!-- doxytag: inherits="icomp::CComponentBase,iipr::IMultiBitmapProvider,i2d::IMultiCalibrationProvider" -->
+<!-- doxytag: class="iipr::CMultiBitmapCacheComp" --><!-- doxytag: inherits="icomp::CComponentBase,iipr::IMultiBitmapProvider,i2d::IMultiCalibrationProvider,iser::ISerializable" -->
 <p>Multi bitmap provider returning always stored bitmaps.  
  <a href="classiipr_1_1_c_multi_bitmap_cache_comp.html#details">More...</a></p>
 
@@ -51,12 +51,15 @@ Inheritance diagram for iipr::CMultiBitmapCacheComp:</div>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html" alt="icomp::CComponentBase" shape="rect" coords="0,112,178,136"/>
 <area href="classiipr_1_1_i_multi_bitmap_provider.html" title="Supplier allowing to access of multiple produced bitmaps." alt="iipr::IMultiBitmapProvider" shape="rect" coords="188,112,366,136"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_multi_calibration_provider.html" alt="i2d::IMultiCalibrationProvider" shape="rect" coords="376,112,554,136"/>
+<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html" alt="iser::ISerializable" shape="rect" coords="564,112,742,136"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="0,56,178,80"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="188,56,366,80"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="376,56,554,80"/>
+<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="564,56,742,80"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,178,24"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="188,0,366,24"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="376,0,554,24"/>
+<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="564,0,742,24"/>
 </map>
  </div></div>
 
@@ -78,12 +81,13 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a3b259732128de8c3e30baba91df531af">GetCalibrationsCount</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a14c4b0dfc6960698a1f32e1cd5751a2c">GetCalibration</a> (int calibrationIndex) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#a1f0a40aaa274daf6e6c227f6635296dc">CopyFrom</a> (const IChangeable &amp;object, <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=<a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af">CM_WITHOUT_REFS</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_multi_bitmap_cache_comp.html#ac45d1399c07b2604515d7d5ad1745b49">Serialize</a> (<a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Multi bitmap provider returning always stored bitmaps. </p>
 <p>Stored bitmaps can be changed only copying their from another multi bitmap provider using CopyFrom method. This object will be used to manage threading barrier for object supplier chain. </p>
 
-<p>Definition at line <a class="el" href="_c_multi_bitmap_cache_comp_8h_source.html#l00024">24</a> of file <a class="el" href="_c_multi_bitmap_cache_comp_8h_source.html">CMultiBitmapCacheComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_bitmap_cache_comp_8h_source.html#l00027">27</a> of file <a class="el" href="_c_multi_bitmap_cache_comp_8h_source.html">CMultiBitmapCacheComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a05cb5521e849eaadc9f271aae3b953a8"></a><!-- doxytag: member="iipr::CMultiBitmapCacheComp::BaseClass" ref="a05cb5521e849eaadc9f271aae3b953a8" args="" -->
 <div class="memitem">
@@ -96,7 +100,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_multi_bitmap_cache_comp_8h_source.html#l00030">30</a> of file <a class="el" href="_c_multi_bitmap_cache_comp_8h_source.html">CMultiBitmapCacheComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_bitmap_cache_comp_8h_source.html#l00034">34</a> of file <a class="el" href="_c_multi_bitmap_cache_comp_8h_source.html">CMultiBitmapCacheComp.h</a>.</p>
 
 </div>
 </div>
@@ -260,6 +264,25 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Implements <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_multi_calibration_provider.html#aa7e8c0e27d71c5afecf579c3313cb4d2">i2d::IMultiCalibrationProvider</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac45d1399c07b2604515d7d5ad1745b49"></a><!-- doxytag: member="iipr::CMultiBitmapCacheComp::Serialize" ref="ac45d1399c07b2604515d7d5ad1745b49" args="(iser::IArchive &amp;archive)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iipr::CMultiBitmapCacheComp::Serialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
+          <td class="paramname"><em>archive</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
 
 </div>
 </div>
