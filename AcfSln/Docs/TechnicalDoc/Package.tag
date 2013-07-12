@@ -23898,8 +23898,8 @@
       <type>void</type>
       <name>Update</name>
       <anchorfile>classiqtipr_1_1_c_processed_multi_bitmap_view.html</anchorfile>
-      <anchor>a20f96f1ff3d7148bb1669d9ddf25461c</anchor>
-      <arglist>(iipr::IMultiBitmapProvider *bitmapProviderPtr)</arglist>
+      <anchor>ac868b08a66fec9fa606ed62e8837f862</anchor>
+      <arglist>(const iipr::IMultiBitmapProvider *bitmapProviderPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">

@@ -6132,6 +6132,18 @@
     <class kind="class">iview::IVisualizable</class>
     <namespace>iview</namespace>
   </compound>
+  <compound kind="file">
+    <name>TVisualObjects.h</name>
+    <path>C:/Temp/Acf/Include/iview/</path>
+    <filename>_t_visual_objects_8h</filename>
+    <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="yes" imported="no">imod/TModelWrap.h</includes>
+    <includes id="_c_circle_8h" name="CCircle.h" local="yes" imported="no">i2d/CCircle.h</includes>
+    <includes id="_c_circle_shape_8h" name="CCircleShape.h" local="yes" imported="no">iview/CCircleShape.h</includes>
+    <includes id="_c_image_shape_8h" name="CImageShape.h" local="yes" imported="no">iview/CImageShape.h</includes>
+    <class kind="struct">iview::TCircleVisualObject</class>
+    <class kind="struct">iview::TBitmapVisualObject</class>
+    <namespace>iview</namespace>
+  </compound>
   <compound kind="group">
     <name>ACF</name>
     <title>ACF</title>
@@ -47042,6 +47054,8 @@
     <class kind="class">iview::IViewRulersAccessor</class>
     <class kind="class">iview::IVisualCalibrationInfo</class>
     <class kind="class">iview::IVisualizable</class>
+    <class kind="struct">iview::TCircleVisualObject</class>
+    <class kind="struct">iview::TBitmapVisualObject</class>
     <member kind="enumeration">
       <name>ChangeFlags</name>
       <anchorfile>namespaceiview.html</anchorfile>
@@ -54785,6 +54799,74 @@
       <anchorfile>classiview_1_1_i_visualizable.html</anchorfile>
       <anchor>ab9ba4ea31ba739e1e265868a6025cd76</anchor>
       <arglist>(int flags)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>iview::TCircleVisualObject</name>
+    <filename>structiview_1_1_t_circle_visual_object.html</filename>
+    <templarg></templarg>
+    <templarg></templarg>
+    <member kind="typedef">
+      <type>imod::TModelWrap&lt; Object &gt;</type>
+      <name>PositionModel</name>
+      <anchorfile>structiview_1_1_t_circle_visual_object.html</anchorfile>
+      <anchor>a18c8adc82923b2907d7bceab5c0dd6cd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TCircleVisualObject</name>
+      <anchorfile>structiview_1_1_t_circle_visual_object.html</anchorfile>
+      <anchor>a36827f992973a2052f765b98574a08dc</anchor>
+      <arglist>(bool editable=false)</arglist>
+    </member>
+    <member kind="variable">
+      <type>istd::TDelPtr&lt; PositionModel &gt;</type>
+      <name>model</name>
+      <anchorfile>structiview_1_1_t_circle_visual_object.html</anchorfile>
+      <anchor>a1f68f7c2fc48fc33dcc841a9cdd038d8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>istd::TDelPtr&lt; Shape &gt;</type>
+      <name>shape</name>
+      <anchorfile>structiview_1_1_t_circle_visual_object.html</anchorfile>
+      <anchor>a02fffad41295e73e23030b5cf9cb7751</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>iview::TBitmapVisualObject</name>
+    <filename>structiview_1_1_t_bitmap_visual_object.html</filename>
+    <templarg></templarg>
+    <templarg></templarg>
+    <member kind="typedef">
+      <type>imod::TModelWrap&lt; Object &gt;</type>
+      <name>ImageModel</name>
+      <anchorfile>structiview_1_1_t_bitmap_visual_object.html</anchorfile>
+      <anchor>aaa50e426e4fbf9e847af00131bfadd30</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TBitmapVisualObject</name>
+      <anchorfile>structiview_1_1_t_bitmap_visual_object.html</anchorfile>
+      <anchor>aba06642f145ef54064efe1918c9edc19</anchor>
+      <arglist>(const Object *imagePtr=0)</arglist>
+    </member>
+    <member kind="variable">
+      <type>istd::TDelPtr&lt; ImageModel &gt;</type>
+      <name>model</name>
+      <anchorfile>structiview_1_1_t_bitmap_visual_object.html</anchorfile>
+      <anchor>a4b572f1cf5321dc04da45da898196079</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>istd::TDelPtr&lt; BitmapShape &gt;</type>
+      <name>shape</name>
+      <anchorfile>structiview_1_1_t_bitmap_visual_object.html</anchorfile>
+      <anchor>a33f77ed61d064b895715c0f0b322f094</anchor>
+      <arglist></arglist>
     </member>
   </compound>
 </tagfile>
