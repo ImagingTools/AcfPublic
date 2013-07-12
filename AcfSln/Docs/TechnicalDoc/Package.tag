@@ -2776,6 +2776,21 @@
     <namespace>iqtipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CProcessedBitmapView.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
+    <filename>_c_processed_bitmap_view_8h</filename>
+    <class kind="class">iqtipr::CProcessedBitmapView</class>
+    <namespace>iqtipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CProcessedMultiBitmapView.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
+    <filename>_c_processed_multi_bitmap_view_8h</filename>
+    <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iipr/IMultiBitmapProvider.h</includes>
+    <class kind="class">iqtipr::CProcessedMultiBitmapView</class>
+    <namespace>iqtipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CProjectionShape.h</name>
     <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_projection_shape_8h</filename>
@@ -20413,6 +20428,13 @@
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
+      <name>RemoveProperty</name>
+      <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
+      <anchor>af085f9efeab9fa5b360ef60ceedfd44d</anchor>
+      <arglist>(const QByteArray &amp;propertyId, bool onlyOwned=true)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
       <name>ReadProperties</name>
       <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
       <anchor>a1eb5a3fcddc8a1978c2061dad52aee4f</anchor>
@@ -20591,12 +20613,6 @@
       <name>PF_PERSISTENT</name>
       <anchorfile>classiprop_1_1_i_property.html</anchorfile>
       <anchor>a99af505245ee2046b16ab69bc239844ea937799e06875e1f14dd7bdddbe37c08d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PF_DYNAMIC</name>
-      <anchorfile>classiprop_1_1_i_property.html</anchorfile>
-      <anchor>a99af505245ee2046b16ab69bc239844ead865fa33471070fd8a945ca98780090c</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -21693,7 +21709,6 @@
     <name>iqtcam::CMultiBitmapViewComp</name>
     <filename>classiqtcam_1_1_c_multi_bitmap_view_comp.html</filename>
     <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; iipr::IMultiBitmapProvider &gt; &gt; &gt;</base>
-    <base>iqtgui::IDialog</base>
     <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <class kind="class">iqtcam::CMultiBitmapViewComp::CSingleView</class>
     <member kind="typedef">
@@ -21723,34 +21738,6 @@
       <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp.html</anchorfile>
       <anchor>a98279d4e726e6c9e70fbd8dd8059eccf</anchor>
       <arglist>(m_generalInformationModelCompPtr, m_generalInformationProviderCompPtr, true)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp.html</anchorfile>
-      <anchor>a1add13c2d6927c65d40e43d8617b535e</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp.html</anchorfile>
-      <anchor>ab83711af07a5f7572cfa8fb479374f6a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>ExecuteDialog</name>
-      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp.html</anchorfile>
-      <anchor>adb90bce148a53d8f974721e32c799e5d</anchor>
-      <arglist>(IGuiObject *parentPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>DoCreateGui</name>
-      <anchorfile>classiqtcam_1_1_c_multi_bitmap_view_comp.html</anchorfile>
-      <anchor>a466cefc2be63c1f7b96d7ae53c08c3e6</anchor>
-      <arglist>(QWidget *parentWidget)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -23122,6 +23109,8 @@
     <class kind="class">iqtipr::CMultiLineProjectionSupplierGuiComp</class>
     <class kind="class">iqtipr::CMultiLineSupplierGuiComp</class>
     <class kind="class">iqtipr::CPatternTeachingControllerGuiComp</class>
+    <class kind="class">iqtipr::CProcessedBitmapView</class>
+    <class kind="class">iqtipr::CProcessedMultiBitmapView</class>
     <class kind="class">iqtipr::CProjectionShape</class>
     <class kind="class">iqtipr::CSearchBasedFeaturesSupplierGuiComp</class>
     <class kind="class">iqtipr::CValueSupplierGuiComp</class>
@@ -23826,6 +23815,91 @@
       <anchorfile>classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html</anchorfile>
       <anchor>a7f73811ea800bcf38e55672c53c8be76</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtipr::CProcessedBitmapView</name>
+    <filename>classiqtipr_1_1_c_processed_bitmap_view.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CProcessedBitmapView</name>
+      <anchorfile>classiqtipr_1_1_c_processed_bitmap_view.html</anchorfile>
+      <anchor>a04af57779414cc3dcedd6e1d0cdfcbc5</anchor>
+      <arglist>(QWidget *parent=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetBitmap</name>
+      <anchorfile>classiqtipr_1_1_c_processed_bitmap_view.html</anchorfile>
+      <anchor>afd5423e3c0627514ef6b1b705fbe0d8c</anchor>
+      <arglist>(const iimg::IBitmap *bitmapPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetTitle</name>
+      <anchorfile>classiqtipr_1_1_c_processed_bitmap_view.html</anchorfile>
+      <anchor>a25a83f00082395f73dd752c345546672</anchor>
+      <arglist>(const QString &amp;title)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_SaveButton_clicked</name>
+      <anchorfile>classiqtipr_1_1_c_processed_bitmap_view.html</anchorfile>
+      <anchor>a40c686d02698e3c2cb72387ab1977a12</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Ui::CProcessedBitmapView</type>
+      <name>m_ui</name>
+      <anchorfile>classiqtipr_1_1_c_processed_bitmap_view.html</anchorfile>
+      <anchor>a37f76039738fe429a8c530ee0812308a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>imod::TModelWrap&lt; iimg::CBitmap &gt;</type>
+      <name>m_sourceImageModel</name>
+      <anchorfile>classiqtipr_1_1_c_processed_bitmap_view.html</anchorfile>
+      <anchor>a67a1db8334c8efcbc17a1f309d6d32a4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iview::CImageShape</type>
+      <name>m_sourceImageShape</name>
+      <anchorfile>classiqtipr_1_1_c_processed_bitmap_view.html</anchorfile>
+      <anchor>aad647c5ee5d005b8e04bd39d1f80818e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QString</type>
+      <name>m_lastImagePath</name>
+      <anchorfile>classiqtipr_1_1_c_processed_bitmap_view.html</anchorfile>
+      <anchor>ac109dda16acef7b07cd52e4250d05f01</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_toolBarCommands</name>
+      <anchorfile>classiqtipr_1_1_c_processed_bitmap_view.html</anchorfile>
+      <anchor>a3ab50522c0e1868b5559d2660950031c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtipr::CProcessedMultiBitmapView</name>
+    <filename>classiqtipr_1_1_c_processed_multi_bitmap_view.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CProcessedMultiBitmapView</name>
+      <anchorfile>classiqtipr_1_1_c_processed_multi_bitmap_view.html</anchorfile>
+      <anchor>a678b0205458d3316f9b6a8aa2f52c57d</anchor>
+      <arglist>(QWidget *parent=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Update</name>
+      <anchorfile>classiqtipr_1_1_c_processed_multi_bitmap_view.html</anchorfile>
+      <anchor>a20f96f1ff3d7148bb1669d9ddf25461c</anchor>
+      <arglist>(iipr::IMultiBitmapProvider *bitmapProviderPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">

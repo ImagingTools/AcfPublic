@@ -20,53 +20,38 @@
 ********************************************************************************/
 
 
-#include "iprop/CPropertyBase.h"
+#ifndef iqtipr_CProcessedMultiBitmapView_included
+#define iqtipr_CProcessedMultiBitmapView_included
 
 
-#include "iprop/IPropertiesManager.h"
+// Qt includes
+#include <QtCore/QList>
+#include <QtGui/QWidget>
+
+// ACF includes
+#include "iipr/IMultiBitmapProvider.h"
 
 
-namespace iprop
+namespace iqtipr
 {
 
 
-// public methods
+class CProcessedBitmapView;
 
-CPropertyBase::CPropertyBase()
-	:m_propertyOwnerPtr(NULL),
-	m_changeFlags(0)
+
+class CProcessedMultiBitmapView: public QWidget
 {
-}
+public:
+	CProcessedMultiBitmapView(QWidget* parent = NULL);
+	
+	void Update(iipr::IMultiBitmapProvider* bitmapProviderPtr);
+
+private:
+	QList<CProcessedBitmapView*> m_views;
+};
 
 
-CPropertyBase::CPropertyBase(
-				IPropertiesManager* propertyOwnerPtr,
-				const QByteArray& propertyId,
-				const QByteArray& propertyDescription,
-				int propertyFlags,
-				int changeFlags)
-	:m_propertyOwnerPtr(propertyOwnerPtr),
-	m_changeFlags(changeFlags)
-{
-	if (propertyOwnerPtr != NULL){
-		propertyOwnerPtr->InsertProperty(this, propertyId, propertyDescription, propertyFlags, false);
-	}
-}
+} // namespace iqtipr
 
 
-// reimplemented (iprop::IProperty)
-
-void CPropertyBase::ResetValue()
-{
-}
-
-
-const iser::IObject* CPropertyBase::GetDefaultPropertyValue() const
-{
-	return NULL;
-}
-
-
-} // namespace iprop
-
-
+#endif // !iqtipr_CProcessedMultiBitmapView_included

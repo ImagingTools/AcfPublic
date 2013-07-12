@@ -89,6 +89,8 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a new property type.  <a href="#a3a5afd3f335fbe328c5f30d589826c04"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_c_properties_manager.html#af085f9efeab9fa5b360ef60ceedfd44d">RemoveProperty</a> (const QByteArray &amp;propertyId, bool onlyOwned=true)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove property from manager.  <a href="#af085f9efeab9fa5b360ef60ceedfd44d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_c_properties_manager.html#a1eb5a3fcddc8a1978c2061dad52aee4f">ReadProperties</a> (<a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive, const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;propertiesTag, const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;propertyTag)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprop_1_1_c_properties_manager.html#ab2ee6b37a6e929edf8a37a082c409aee">WriteProperties</a> (<a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive, const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;propertiesTag, const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;propertyTag) const </td></tr>
 </table>
@@ -355,9 +357,46 @@ template&lt;typename PropertyImpl &gt; </div>
 
 <p>Register a new property type. </p>
 
-<p>Definition at line <a class="el" href="_c_properties_manager_8h_source.html#l00100">100</a> of file <a class="el" href="_c_properties_manager_8h_source.html">CPropertiesManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_properties_manager_8h_source.html#l00108">108</a> of file <a class="el" href="_c_properties_manager_8h_source.html">CPropertiesManager.h</a>.</p>
 
 <p>References <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_t_composed_factory.html#ac7983de55ffa7ee52fb802052f36fd03">istd::TComposedFactory&lt; InterfaceType &gt;::RegisterFactory()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af085f9efeab9fa5b360ef60ceedfd44d"></a><!-- doxytag: member="iprop::CPropertiesManager::RemoveProperty" ref="af085f9efeab9fa5b360ef60ceedfd44d" args="(const QByteArray &amp;propertyId, bool onlyOwned=true)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool iprop::CPropertiesManager::RemoveProperty </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>propertyId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>onlyOwned</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Remove property from manager. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">propertyId</td><td>ID of property to remove. </td></tr>
+    <tr><td class="paramname">onlyOwned</td><td>if true, only properties owned by manager can be removed. Property is owned by manager if it was inserted with set <code>releaseFlag</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true, if property could be removed. </dd></dl>
 
 </div>
 </div>

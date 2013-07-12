@@ -49156,6 +49156,13 @@
       <anchor>aef4ba2cf792cb67071fb9b0620ec0a43</anchor>
       <arglist>(const icmm::IColorTransformation *colorTransformationPtr=0)</arglist>
     </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetPositionOffset</name>
+      <anchorfile>classiview_1_1_c_image_shape.html</anchorfile>
+      <anchor>adebc01e57f207ee2ccbd8372915e07d7</anchor>
+      <arglist>(const QPoint &amp;position)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>Draw</name>
