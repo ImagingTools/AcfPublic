@@ -25,8 +25,14 @@
 
 
 // Qt includes
+#include <QtCore/QtGlobal>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QDockWidget>
+#else
 #include <QtGui/QMainWindow>
 #include <QtGui/QDockWidget>
+#endif
 
 // ACF includes
 #include "imod/IModel.h"
@@ -192,7 +198,7 @@ private:
 		typedef imod::TSingleModelObserverBase<idoc::IUndoManager> BaseClass;
 
 		ActiveUndoManager(CMainWindowGuiComp& parent);
-		
+
 		// reimplemented (imod::IObserver)
 		virtual bool OnAttached(imod::IModel* modelPtr);
 

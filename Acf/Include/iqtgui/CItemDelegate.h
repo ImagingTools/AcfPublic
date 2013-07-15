@@ -25,10 +25,15 @@
 
 
 // Qt includes
+#include <QtCore/QtGlobal>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QItemDelegate>
+#else
 #include <QtGui/QItemDelegate>
+#endif
 
 
-// ACF includes 
+// ACF includes
 #include "iqtgui/iqtgui.h"
 
 
@@ -55,7 +60,7 @@ public:
 		Get the item height.
 	*/
 	int GetItemHeight() const;
-		
+
 	// reimplemented (QItemDelegate)
 	virtual QSize sizeHint(const QStyleOptionViewItem& option, const QModelIndex& index) const;
 	virtual void paint(QPainter* painter, const QStyleOptionViewItem& option, const QModelIndex& index ) const;

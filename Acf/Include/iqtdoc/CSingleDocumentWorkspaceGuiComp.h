@@ -25,7 +25,12 @@
 
 
 // Qt includes
+#include <QtCore/QtGlobal>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QWidget>
+#else
 #include <QtGui/QWidget>
+#endif
 
 // ACF includes
 #include "ibase/ICommandsProvider.h"
@@ -42,7 +47,7 @@ namespace iqtdoc
 {
 
 
-/**	
+/**
 	Qt-based workspace implementation of a single document manager.
 */
 class CSingleDocumentWorkspaceGuiComp:
@@ -59,7 +64,7 @@ public:
 
 	I_BEGIN_COMPONENT(CSingleDocumentWorkspaceGuiComp);
 		I_REGISTER_INTERFACE(idoc::IDocumentManager);
-		I_ASSIGN(m_documentTemplateCompPtr, "DocumentTemplate", "Document template", true, "DocumentTemplate");		
+		I_ASSIGN(m_documentTemplateCompPtr, "DocumentTemplate", "Document template", true, "DocumentTemplate");
 		I_ASSIGN(m_rememberOpenDocumentParamPtr, "RememberOpenDocumentOnExit", "If enabled, restores open document from previous session", false, "RememberOpenDocumentOnExit");
 	I_END_COMPONENT;
 
@@ -89,7 +94,7 @@ protected:
 	virtual bool QueryDocumentSave(bool* ignoredPtr);
 
 	// reimplemented (iqt:CGuiComponentBase)
-	virtual void OnGuiCreated();	
+	virtual void OnGuiCreated();
 	virtual void OnGuiDestroyed();
 
 	// reimplemented (icomp::CComponentBase)

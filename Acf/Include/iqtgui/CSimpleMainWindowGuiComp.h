@@ -25,8 +25,14 @@
 
 
 // Qt includes
+#include <QtCore/QtGlobal>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenuBar>
+#else
 #include <QtGui/QMainWindow>
 #include <QtGui/QMenuBar>
+#endif
 
 // ACF includes
 #include "imod/CMultiModelDispatcherBase.h"
@@ -118,7 +124,7 @@ private:
 		typedef imod::CMultiModelDispatcherBase BaseClass;
 
 		CommandsObserver(CSimpleMainWindowGuiComp& parent);
-		
+
 		// reimplemented (imod::CMultiModelDispatcherBase)
 		void OnModelChanged(int modelId, int changeFlags, istd::IPolymorphic* updateParamsPtr);
 

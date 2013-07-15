@@ -25,8 +25,12 @@
 
 
 // Qt includes
-#include <QtGui/QFileDialog>
 #include <QtCore/QSettings>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QFileDialog>
+#else
+#include <QtGui/QFileDialog>
+#endif
 
 
 // ACF includes
@@ -39,7 +43,7 @@ namespace iqtdoc
 {
 
 
-/**	
+/**
 	Wrapper for general functionality of a Qt based document workspace.
 */
 template <class Base, class Gui>

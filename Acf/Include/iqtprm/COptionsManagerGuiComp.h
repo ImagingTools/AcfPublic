@@ -25,7 +25,12 @@
 
 
 // Qt includes
+#include <QtCore/QtGlobal>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QComboBox>
+#else
 #include <QtGui/QComboBox>
+#endif
 
 
 // ACF includes
@@ -81,7 +86,7 @@ public:
 	I_END_COMPONENT;
 
 	COptionsManagerGuiComp();
-			
+
 	// reimplemented (imod::IModelEditor)
 	virtual void UpdateModel() const;
 

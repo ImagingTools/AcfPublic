@@ -30,9 +30,12 @@
 #include <QtCore/QElapsedTimer>
 #include <QtCore/QThread>
 #include <QtCore/QMutexLocker>
-
 #include <QtGui/QStandardItemModel>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QFileIconProvider>
+#else
 #include <QtGui/QFileIconProvider>
+#endif
 
 
 // ACF includes
@@ -52,8 +55,8 @@ namespace iqtgui
 {
 
 
-/** 
-	File system explorer-like component. 
+/**
+	File system explorer-like component.
 	Observes a directory which is to be the root of the tree view.
 	Provides on-demand refresh of the view (i.e. via button click).
 */
@@ -157,7 +160,7 @@ private:
 	class InternalThread: public QThread
 	{
 	public:
-		InternalThread(CFileTreeViewGuiComp* parentPtr): QThread(parentPtr), 
+		InternalThread(CFileTreeViewGuiComp* parentPtr): QThread(parentPtr),
 			m_parentPtr(parentPtr)
 		{
 		}

@@ -25,8 +25,13 @@
 
 // Qt includes
 #include <QtCore/QObject>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QAction>
+#include <QtWidgets/QFileDialog>
+#else
 #include <QtGui/QAction>
 #include <QtGui/QFileDialog>
+#endif
 
 
 namespace iqtgui
@@ -236,12 +241,12 @@ QString CFileDialogLoaderComp::GetFileName(const QString& filePath, bool isSavin
 
 			if (!useNativeDialogs){
 				QFileDialog dialog(
-							NULL, 
+							NULL,
 							caption,
 							m_lastSaveInfo.absoluteFilePath());
 				dialog.setNameFilters(filterList);
 				dialog.setAcceptMode(QFileDialog::AcceptSave);
-				
+
 				if (dialog.exec()){
 					selectedFilter = dialog.selectedNameFilter();
 					retVal = dialog.selectedFiles().join(";");
@@ -250,10 +255,10 @@ QString CFileDialogLoaderComp::GetFileName(const QString& filePath, bool isSavin
 			else {
 				retVal = QFileDialog::getSaveFileName(
 							NULL,
-							caption, 
+							caption,
 							m_lastSaveInfo.absoluteFilePath(),
 							filterList.join("\n"),
-							&selectedFilter); 
+							&selectedFilter);
 			}
 		}
 		else{
@@ -261,7 +266,7 @@ QString CFileDialogLoaderComp::GetFileName(const QString& filePath, bool isSavin
 
 			if (!useNativeDialogs){
 				QFileDialog dialog(
-					NULL, 
+					NULL,
 					caption,
 					m_lastSaveInfo.absoluteFilePath());
 				dialog.setNameFilters(filterList);
@@ -322,7 +327,7 @@ ifile::IFilePersistence* CFileDialogLoaderComp::GetLoaderFor(const QString& file
 			QStringList allExt;
 			QStringList filters;
 			AppendLoaderFilterList(*loaderPtr, flags, allExt, filters);
-		
+
 			if (allExt.contains(fileExtension)){
 				if ((selectionIndex < 0) || ((selectionIndex >= filtersSum) && (selectionIndex < filtersSum + filters.size()))){
 					return loaderPtr;

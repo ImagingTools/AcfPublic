@@ -4071,6 +4071,13 @@
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
+    <name>CDoubleRangeSpinEdit.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_c_double_range_spin_edit_8h</filename>
+    <class kind="class">iqtgui::CDoubleRangeSpinEdit</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
     <name>CExtLineEdit.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_ext_line_edit_8h</filename>
@@ -35542,6 +35549,7 @@
     <class kind="class">iqtgui::CDialogApplicationComp</class>
     <class kind="class">iqtgui::CDialogGuiComp</class>
     <class kind="class">iqtgui::CDockWidgetGuiComp</class>
+    <class kind="class">iqtgui::CDoubleRangeSpinEdit</class>
     <class kind="class">iqtgui::CExtLineEdit</class>
     <class kind="class">iqtgui::CFileDialogLoaderComp</class>
     <class kind="class">iqtgui::CFileListProviderGuiComp</class>
@@ -36160,6 +36168,122 @@
       <anchorfile>classiqtgui_1_1_c_dock_widget_gui_comp.html</anchorfile>
       <anchor>ae34f7d81706ef5396dcd8e5babf6454e</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CDoubleRangeSpinEdit</name>
+    <filename>classiqtgui_1_1_c_double_range_spin_edit.html</filename>
+    <member kind="signal">
+      <type>void</type>
+      <name>ValuesChanged</name>
+      <anchorfile>classiqtgui_1_1_c_double_range_spin_edit.html</anchorfile>
+      <anchor>a117905d7f1635b883e20f5d46540ae9d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CDoubleRangeSpinEdit</name>
+      <anchorfile>classiqtgui_1_1_c_double_range_spin_edit.html</anchorfile>
+      <anchor>a80198795a1e0f06061b4ed58b2a6b93f</anchor>
+      <arglist>(QWidget *parent=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetMinRange</name>
+      <anchorfile>classiqtgui_1_1_c_double_range_spin_edit.html</anchorfile>
+      <anchor>ad05c0611c5048d56474de9e3d761a9c1</anchor>
+      <arglist>(double minFrom, double minTo)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetMaxRange</name>
+      <anchorfile>classiqtgui_1_1_c_double_range_spin_edit.html</anchorfile>
+      <anchor>a87b2970186626533a9183c6f552012d3</anchor>
+      <arglist>(double maxFrom, double maxTo)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetRange</name>
+      <anchorfile>classiqtgui_1_1_c_double_range_spin_edit.html</anchorfile>
+      <anchor>afd99e24859ec21b03ebdd99080867f21</anchor>
+      <arglist>(double from, double to)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetDecimals</name>
+      <anchorfile>classiqtgui_1_1_c_double_range_spin_edit.html</anchorfile>
+      <anchor>ac49928bf92061e7b568a259b23c8c7f9</anchor>
+      <arglist>(int count)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetSingleStep</name>
+      <anchorfile>classiqtgui_1_1_c_double_range_spin_edit.html</anchorfile>
+      <anchor>a12e81e6fd515f9ff01732718a5b59784</anchor>
+      <arglist>(double step)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetSuffixText</name>
+      <anchorfile>classiqtgui_1_1_c_double_range_spin_edit.html</anchorfile>
+      <anchor>aecd337e8d8ba18d51c39cc351348f511</anchor>
+      <arglist>(const QString &amp;suffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetMinLabelText</name>
+      <anchorfile>classiqtgui_1_1_c_double_range_spin_edit.html</anchorfile>
+      <anchor>a8ef0f34e7ffe645dcc987328d0985bfd</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetMaxLabelText</name>
+      <anchorfile>classiqtgui_1_1_c_double_range_spin_edit.html</anchorfile>
+      <anchor>a444f69bf5565cf03f925c4f7e9631b2a</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>EnableMaxValue</name>
+      <anchorfile>classiqtgui_1_1_c_double_range_spin_edit.html</anchorfile>
+      <anchor>ab271b3ecdd9aaea2a853f2d865f5267f</anchor>
+      <arglist>(bool enable=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetValues</name>
+      <anchorfile>classiqtgui_1_1_c_double_range_spin_edit.html</anchorfile>
+      <anchor>ac20aba76017fdb2a6dad2f8019e1b50e</anchor>
+      <arglist>(double minValue, double maxValue)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetMinValue</name>
+      <anchorfile>classiqtgui_1_1_c_double_range_spin_edit.html</anchorfile>
+      <anchor>a17538631444fd74c024c58fa5749c5b1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetMaxValue</name>
+      <anchorfile>classiqtgui_1_1_c_double_range_spin_edit.html</anchorfile>
+      <anchor>aeaeba78ea700fd198f7441e5fd8281d3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Ui::CDoubleRangeSpinEdit</type>
+      <name>m_ui</name>
+      <anchorfile>classiqtgui_1_1_c_double_range_spin_edit.html</anchorfile>
+      <anchor>a6a2c6e62cea97ddb8b7f69f7167ce803</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_maxValueEnabled</name>
+      <anchorfile>classiqtgui_1_1_c_double_range_spin_edit.html</anchorfile>
+      <anchor>aec1097964abdf82551f9f3d85cd56ef8</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">

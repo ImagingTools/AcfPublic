@@ -25,13 +25,19 @@
 
 
 // Qt includes
-#include <QtGui/QItemDelegate>
-#include <QtGui/QLineEdit>
-#include <QtGui/QDoubleValidator>
-#include <QtGui/QClipboard>
 #include <QtCore/QMimeData>
 #include <QtCore/QByteArray>
+#include <QtGui/QDoubleValidator>
+#include <QtGui/QClipboard>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QItemDelegate>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QMenu>
+#else
+#include <QtGui/QItemDelegate>
+#include <QtGui/QLineEdit>
 #include <QtGui/QMenu>
+#endif
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
@@ -131,7 +137,7 @@ protected:
 		virtual QWidget* createEditor(QWidget* parent, const QStyleOptionViewItem&, const QModelIndex&) const
 		{
 			QLineEdit* editorPtr = new QLineEdit(parent);
-            editorPtr->setValidator(new QDoubleValidator(editorPtr));
+			editorPtr->setValidator(new QDoubleValidator(editorPtr));
 			return editorPtr;
 		}
 	}; // CPolygonParamsGuiItemDelegate
@@ -313,7 +319,7 @@ void TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::OnGuiCrea
 #if QT_VERSION < 0x050000
 	NodeParamsTable->horizontalHeader()->setResizeMode(QHeaderView::Stretch);
 #else
-	NodeParamsTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);	
+	NodeParamsTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 #endif
 
 	CPolygonParamsGuiItemDelegate* columnDelegate = new CPolygonParamsGuiItemDelegate();

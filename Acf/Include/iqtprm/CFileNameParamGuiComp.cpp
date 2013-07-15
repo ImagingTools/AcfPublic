@@ -24,9 +24,15 @@
 
 
 // Qt includes
-#include <QtGui/QFileDialog>
 #include <QtCore/QFileInfo>
+#include <QtCore/QtGlobal>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QFileDialog>
+#include <QtWidgets/QLineEdit>
+#else
+#include <QtGui/QFileDialog>
 #include <QtGui/QLineEdit>
+#endif
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
@@ -126,7 +132,7 @@ void CFileNameParamGuiComp::OnGuiCreated()
 	if (m_startHintAttrPtr.IsValid()){
 		startHint = *m_startHintAttrPtr;
 	}
-	
+
 	if (m_labelWidthAttrPtr.IsValid()){
 		int width = *m_labelWidthAttrPtr;
 		if (width > 0){
@@ -187,11 +193,11 @@ void CFileNameParamGuiComp::on_BrowseButton_clicked()
 			QString pathToSearch = GetPathFromEditor();
 			if (!QFile::exists(pathToSearch) && m_defaultDirPtr.IsValid()){
 				pathToSearch = m_defaultDirPtr->GetPath();
-			}		
+			}
 
 			QString filePath = QFileDialog::getExistingDirectory(
-				GetQtWidget(), 
-				tr("Select directory"), 
+				GetQtWidget(),
+				tr("Select directory"),
 				pathToSearch);
 			if (!filePath.isEmpty()){
 				OnPathEdited(filePath);
@@ -267,7 +273,7 @@ void CFileNameParamGuiComp::SetPathToEditor(const QString& path) const
 	}
 
 	Q_ASSERT(DirEdit->isEditable());
-	
+
 	iqt::CSignalBlocker blocker(DirEdit);
 
 	int cursorPosition = DirEdit->lineEdit()->cursorPosition();
@@ -282,7 +288,7 @@ void CFileNameParamGuiComp::SetPathToEditor(const QString& path) const
 	}
 	else{
 		DirEdit->clear();
-			
+
 		normalizedPath = QDir::fromNativeSeparators(path);
 
 		MakeSelectionHint(normalizedPath);
@@ -311,7 +317,7 @@ void CFileNameParamGuiComp::MakeSelectionHint(const QString& text) const
 		}
 
 		QString filePath = text;
-	
+
 		istd::TDelPtr<QFileInfo> validFileInfoPtr;
 
 		while(!filePath.isEmpty()){
@@ -369,7 +375,7 @@ QIcon CFileNameParamGuiComp::GetFileIcon(const QString& filePath) const
 		fileIcon = m_directoryModel.fileIcon(index);
 	}
 
-	return fileIcon;  
+	return fileIcon;
 }
 
 
@@ -389,7 +395,7 @@ QString CFileNameParamGuiComp::GetPathFromEditor() const
 		if (path == lineEdit->GetStartupText()){
 			return QString();
 		}
-	
+
 		return path;
 	}
 

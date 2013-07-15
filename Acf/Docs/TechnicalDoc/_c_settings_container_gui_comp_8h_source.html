@@ -31,52 +31,58 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtGui/QStackedWidget&gt;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QtGui/QListWidget&gt;</span>
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_c_container_gui_base_8h.html">iqtgui/CContainerGuiBase.h</a>&quot;</span>
-<a name="l00011"></a>00011 
-<a name="l00012"></a>00012 
-<a name="l00013"></a>00013 <span class="keyword">namespace </span>iqtgui
-<a name="l00014"></a>00014 {
-<a name="l00015"></a>00015 
-<a name="l00016"></a>00016 
-<a name="l00021"></a><a class="code" href="classiqtgui_1_1_c_settings_container_gui_comp.html">00021</a> <span class="keyword">class </span><a class="code" href="classiqtgui_1_1_c_settings_container_gui_comp.html" title="GUI container providing vertical menu for selection between the child UIs.">CSettingsContainerGuiComp</a>:
-<a name="l00022"></a>00022                             <span class="keyword">public</span> iqtgui::<a class="code" href="classiqtgui_1_1_t_container_gui_base.html">TContainerGuiBase</a>&lt;QWidget&gt;
-<a name="l00023"></a>00023 {
-<a name="l00024"></a>00024        Q_OBJECT
-<a name="l00025"></a>00025 <span class="keyword">public</span>:
-<a name="l00026"></a><a class="code" href="classiqtgui_1_1_c_settings_container_gui_comp.html#a009a4ffbdfb721e267268d23dc53b2d9">00026</a>        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_container_gui_base.html">iqtgui::TContainerGuiBase&lt;QWidget&gt;</a> <a class="code" href="classiqtgui_1_1_c_settings_container_gui_comp.html#a009a4ffbdfb721e267268d23dc53b2d9">BaseClass</a>;
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_settings_container_gui_comp.html" title="GUI container providing vertical menu for selection between the child UIs.">CSettingsContainerGuiComp</a>);
-<a name="l00029"></a>00029               I_ASSIGN(m_fixedWidthAttrPtr, <span class="stringliteral">&quot;FixedWidth&quot;</span>, <span class="stringliteral">&quot;Fixed width of the buttons&quot;</span>, <span class="keyword">false</span>, 100);
-<a name="l00030"></a>00030               I_ASSIGN(m_alternateColorsAttrPtr, <span class="stringliteral">&quot;AlternateColors&quot;</span>, <span class="stringliteral">&quot;Alternate colors for each button&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);
-<a name="l00031"></a>00031               I_ASSIGN(m_menuPositionAttrPtr, <span class="stringliteral">&quot;SelectorPosition&quot;</span>, <span class="stringliteral">&quot;0 - Left\n1 - Right&quot;</span>, <span class="keyword">true</span>, 0);
-<a name="l00032"></a>00032        I_END_COMPONENT;
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QtGlobal&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#if QT_VERSION &gt;= 0x050000</span>
+<a name="l00008"></a>00008 <span class="preprocessor"></span><span class="preprocessor">#include &lt;QtWidgets/QStackedWidget&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;QtWidgets/QListWidget&gt;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#else</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#include &lt;QtGui/QStackedWidget&gt;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;QtGui/QListWidget&gt;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#endif</span>
+<a name="l00014"></a>00014 <span class="preprocessor"></span>
+<a name="l00015"></a>00015 <span class="comment">// ACF includes</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="_c_container_gui_base_8h.html">iqtgui/CContainerGuiBase.h</a>&quot;</span>
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019 <span class="keyword">namespace </span>iqtgui
+<a name="l00020"></a>00020 {
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 
+<a name="l00027"></a><a class="code" href="classiqtgui_1_1_c_settings_container_gui_comp.html">00027</a> <span class="keyword">class </span><a class="code" href="classiqtgui_1_1_c_settings_container_gui_comp.html" title="GUI container providing vertical menu for selection between the child UIs.">CSettingsContainerGuiComp</a>:
+<a name="l00028"></a>00028                             <span class="keyword">public</span> iqtgui::<a class="code" href="classiqtgui_1_1_t_container_gui_base.html">TContainerGuiBase</a>&lt;QWidget&gt;
+<a name="l00029"></a>00029 {
+<a name="l00030"></a>00030        Q_OBJECT
+<a name="l00031"></a>00031 <span class="keyword">public</span>:
+<a name="l00032"></a><a class="code" href="classiqtgui_1_1_c_settings_container_gui_comp.html#a009a4ffbdfb721e267268d23dc53b2d9">00032</a>        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_container_gui_base.html">iqtgui::TContainerGuiBase&lt;QWidget&gt;</a> <a class="code" href="classiqtgui_1_1_c_settings_container_gui_comp.html#a009a4ffbdfb721e267268d23dc53b2d9">BaseClass</a>;
 <a name="l00033"></a>00033 
-<a name="l00034"></a>00034 <span class="keyword">protected</span>:
-<a name="l00035"></a>00035        <span class="comment">// reimplemented (CContainerGuiBase)</span>
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_settings_container_gui_comp.html#aa6a6a81ba682f7b375684a5985408736">CreateMainGui</a>(QSize iconSize);
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_settings_container_gui_comp.html#a3ca0ade08539ace0135ddc9256d11823">CreatePageGui</a>(<span class="keyword">const</span> QString&amp; name, QSize iconSize, <a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>* guiPtr);
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_settings_container_gui_comp.html#a506ded6a8308104408fa40785ec35d1c">UpdateItem</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> QIcon&amp; icon, <span class="keyword">const</span> QString&amp; toolTip);
-<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_settings_container_gui_comp.html#ad712b8cd330523ddd2beaef27f242e20">SetSelectedIndex</a>(<span class="keywordtype">int</span> index);
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_settings_container_gui_comp.html#ab3246b767acd993d52161ec8f670e179">SetEnabled</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> isEnabled);
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042 <span class="keyword">private</span>:
-<a name="l00043"></a>00043        I_ATTR(<span class="keywordtype">int</span>, m_fixedWidthAttrPtr);
-<a name="l00044"></a>00044        I_ATTR(<span class="keywordtype">bool</span>, m_alternateColorsAttrPtr);
-<a name="l00045"></a>00045        I_ATTR(<span class="keywordtype">int</span>, m_menuPositionAttrPtr);
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047        QStackedWidget* m_stackedWidgetPtr;
-<a name="l00048"></a>00048        QListWidget* m_menuListPtr;
-<a name="l00049"></a>00049 };
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052 } <span class="comment">// namespace iqtgui</span>
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054 
-<a name="l00055"></a>00055 <span class="preprocessor">#endif // !iqtgui_CSettingsContainerGuiComp_included</span>
+<a name="l00034"></a>00034        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_settings_container_gui_comp.html" title="GUI container providing vertical menu for selection between the child UIs.">CSettingsContainerGuiComp</a>);
+<a name="l00035"></a>00035               I_ASSIGN(m_fixedWidthAttrPtr, <span class="stringliteral">&quot;FixedWidth&quot;</span>, <span class="stringliteral">&quot;Fixed width of the buttons&quot;</span>, <span class="keyword">false</span>, 100);
+<a name="l00036"></a>00036               I_ASSIGN(m_alternateColorsAttrPtr, <span class="stringliteral">&quot;AlternateColors&quot;</span>, <span class="stringliteral">&quot;Alternate colors for each button&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);
+<a name="l00037"></a>00037               I_ASSIGN(m_menuPositionAttrPtr, <span class="stringliteral">&quot;SelectorPosition&quot;</span>, <span class="stringliteral">&quot;0 - Left\n1 - Right&quot;</span>, <span class="keyword">true</span>, 0);
+<a name="l00038"></a>00038        I_END_COMPONENT;
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040 <span class="keyword">protected</span>:
+<a name="l00041"></a>00041        <span class="comment">// reimplemented (CContainerGuiBase)</span>
+<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_settings_container_gui_comp.html#aa6a6a81ba682f7b375684a5985408736">CreateMainGui</a>(QSize iconSize);
+<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_settings_container_gui_comp.html#a3ca0ade08539ace0135ddc9256d11823">CreatePageGui</a>(<span class="keyword">const</span> QString&amp; name, QSize iconSize, <a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>* guiPtr);
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_settings_container_gui_comp.html#a506ded6a8308104408fa40785ec35d1c">UpdateItem</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> QIcon&amp; icon, <span class="keyword">const</span> QString&amp; toolTip);
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_settings_container_gui_comp.html#ad712b8cd330523ddd2beaef27f242e20">SetSelectedIndex</a>(<span class="keywordtype">int</span> index);
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_settings_container_gui_comp.html#ab3246b767acd993d52161ec8f670e179">SetEnabled</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> isEnabled);
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 <span class="keyword">private</span>:
+<a name="l00049"></a>00049        I_ATTR(<span class="keywordtype">int</span>, m_fixedWidthAttrPtr);
+<a name="l00050"></a>00050        I_ATTR(<span class="keywordtype">bool</span>, m_alternateColorsAttrPtr);
+<a name="l00051"></a>00051        I_ATTR(<span class="keywordtype">int</span>, m_menuPositionAttrPtr);
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053        QStackedWidget* m_stackedWidgetPtr;
+<a name="l00054"></a>00054        QListWidget* m_menuListPtr;
+<a name="l00055"></a>00055 };
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058 } <span class="comment">// namespace iqtgui</span>
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061 <span class="preprocessor">#endif // !iqtgui_CSettingsContainerGuiComp_included</span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -25,7 +25,12 @@
 
 
 //Qt includes
+#include <QtCore/QtGlobal>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QMenu>
+#else
 #include <QtGui/QMenu>
+#endif
 
 // ACF includes
 #include "iprm/IParamsManager.h"
@@ -44,7 +49,7 @@ class CParamsManagerGuiCompBase:
 						Ui::CParamsManagerGuiCompBase, iprm::IParamsManager>,
 			virtual public iqt2d::IViewExtender
 
-			
+
 {
 	Q_OBJECT
 

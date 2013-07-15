@@ -24,7 +24,12 @@
 
 
 // Qt includes
+#include <QtCore/QtGlobal>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QLineEdit>
+#else
 #include <QtGui/QLineEdit>
+#endif
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
@@ -111,7 +116,7 @@ void COptionsManagerGuiComp::UpdateGui(int updateFlags)
 	iprm::IOptionsManager* optionManagerPtr = GetObjectPtr();
 	if (optionManagerPtr != NULL){
 		int supplortedFlags = optionManagerPtr->GetIndexOperationFlags();
-		
+
 		Selector->setEditable(supplortedFlags & iprm::IOptionsManager::OOF_SUPPORT_INSERT);
 	}
 
@@ -146,10 +151,10 @@ void COptionsManagerGuiComp::OnGuiCreated()
 
 		if (labelPosition == LP_LEFT){
 			selectorLayoutPtr = new QHBoxLayout(SelectionFrame);
-			
+
 		}
 		else{
-			selectorLayoutPtr = new QVBoxLayout(SelectionFrame);			
+			selectorLayoutPtr = new QVBoxLayout(SelectionFrame);
 		}
 
 		selectorLayoutPtr->setContentsMargins(0, 0, 0, 0);
@@ -227,7 +232,7 @@ void COptionsManagerGuiComp::OnModelChanged(int /*modelId*/, int /*changeFlags*/
 
 	if (!IsUpdateBlocked()){
 		UpdateBlocker updateBlocker(this);
-		
+
 		UpdateGui();
 	}
 }
@@ -292,7 +297,7 @@ void COptionsManagerGuiComp::OnTextChanged(const QString& text)
 	iprm::INameParam* nameParamsPtr = CompCastPtr<iprm::INameParam>(GetObjectPtr());
 	if (nameParamsPtr != NULL){
 		UpdateBlocker updateBlocker(this);
-		
+
 		nameParamsPtr->SetName(text);
 	}
 }
@@ -309,7 +314,7 @@ void COptionsManagerGuiComp::OnTextEdited(const QString& /*text*/)
 void COptionsManagerGuiComp::UpdateComboBox()
 {
 	Selector->clear();
-	
+
 	iprm::ISelectionParam* selectionPtr = CompCastPtr<iprm::ISelectionParam>(GetObjectPtr());
 	if (selectionPtr != NULL){
 		int selectedIndex = selectionPtr->GetSelectedOptionIndex();
@@ -318,7 +323,7 @@ void COptionsManagerGuiComp::UpdateComboBox()
 			int optionsCount = constraintsPtr->GetOptionsCount();
 			for (int i = 0; i < optionsCount; ++i){
 				const QString& name = constraintsPtr->GetOptionName(i);
-				
+
 				Selector->addItem(name);
 			}
 		}
@@ -341,7 +346,7 @@ void COptionsManagerGuiComp::UpdateDescriptionFrame()
 	iprm::ISelectionParam* selectionPtr = CompCastPtr<iprm::ISelectionParam>(GetObjectPtr());
 	if (selectionPtr != NULL){
 		int selectedIndex = selectionPtr->GetSelectedOptionIndex();
-		
+
 		const iprm::IOptionsList* constraintsPtr = selectionPtr->GetSelectionConstraints();
 		if (constraintsPtr != NULL && selectedIndex >= 0){
 
