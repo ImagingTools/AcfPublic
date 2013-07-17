@@ -38,7 +38,7 @@
 <div class="title">iipr::CDifferenceBitmapSupplierComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iipr::CDifferenceBitmapSupplierComp" --><!-- doxytag: inherits="TSupplierCompWrap&lt; QPair&lt; i2d::ICalibration2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;,iipr::IBitmapProvider,i2d::ICalibrationProvider" -->
+<!-- doxytag: class="iipr::CDifferenceBitmapSupplierComp" --><!-- doxytag: inherits="TSupplierCompWrap&lt; QPair&lt; i2d::ICalibration2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;,iimg::IBitmapProvider,i2d::ICalibrationProvider" -->
 <p>Supplier of bitmap built on difference of two images.  
  <a href="classiipr_1_1_c_difference_bitmap_supplier_comp.html#details">More...</a></p>
 
@@ -50,7 +50,7 @@ Inheritance diagram for iipr::CDifferenceBitmapSupplierComp:</div>
   <img src="classiipr_1_1_c_difference_bitmap_supplier_comp.png" usemap="#iipr::CDifferenceBitmapSupplierComp_map" alt=""/>
   <map id="iipr::CDifferenceBitmapSupplierComp_map" name="iipr::CDifferenceBitmapSupplierComp_map">
 <area href="classiproc_1_1_t_supplier_comp_wrap.html" alt="iproc::TSupplierCompWrap&lt; QPair&lt; i2d::ICalibration2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;" shape="rect" coords="1872,224,2397,248"/>
-<area href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap." alt="iipr::IBitmapProvider" shape="rect" coords="3210,224,3735,248"/>
+<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap_provider.html" alt="iimg::IBitmapProvider" shape="rect" coords="3210,224,3735,248"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html" alt="i2d::ICalibrationProvider" shape="rect" coords="3745,224,4270,248"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classilog_1_1_t_logger_comp_wrap.html" alt="ilog::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="535,168,1060,192"/>
 <area href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model..." alt="iproc::ISupplier" shape="rect" coords="1605,168,2130,192"/>
@@ -92,7 +92,6 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_difference_bitmap_supplier_comp.html#a6ed2c0bcd494f93f78c13b7d8eacc234">EnsureBitmapCreated</a> (<a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a6c07595d7aa93d9e7ddecd35f6b44557">ProductType</a> &amp;result) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_difference_bitmap_supplier_comp.html#a57bb9d04a73f1ec22ba88cf2d65e58e1">GetBitmap</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to produced bitmap object.  <a href="#a57bb9d04a73f1ec22ba88cf2d65e58e1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_difference_bitmap_supplier_comp.html#a99e5991fca38bee7b7cca2a458422341">GetCalibration</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_difference_bitmap_supplier_comp.html#ada69b4869743de4abeb893ee57f94657">ProduceObject</a> (<a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a6c07595d7aa93d9e7ddecd35f6b44557">ProductType</a> &amp;result) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Produce single object.  <a href="#ada69b4869743de4abeb893ee57f94657"></a><br/></td></tr>
@@ -152,10 +151,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get access to produced bitmap object. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>pointer to bitmap instance if this bitmap is accessible, or NULL. </dd></dl>
-
-<p>Implements <a class="el" href="classiipr_1_1_i_bitmap_provider.html#ae43b432f1334ca40461f8bea3ac2be9d">iipr::IBitmapProvider</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap_provider.html#a6be61f173cff49d0fd008e0a020befb5">iimg::IBitmapProvider</a>.</p>
 
 </div>
 </div>

@@ -36,8 +36,8 @@
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_processor_8h.html">iproc/IProcessor.h</a>&quot;</span>
 <a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_supplier_8h.html">iproc/ISupplier.h</a>&quot;</span>
 <a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_t_supplier_comp_wrap_8h.html">iproc/TSupplierCompWrap.h</a>&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_i_bitmap_provider_8h.html">iipr/IBitmapProvider.h</a>&quot;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_i_multi_bitmap_provider_8h.html">iipr/IMultiBitmapProvider.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_bitmap_provider_8h.html">iimg/IBitmapProvider.h</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_multi_bitmap_provider_8h.html">iimg/IMultiBitmapProvider.h</a>&quot;</span>
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 
 <a name="l00017"></a>00017 <span class="keyword">namespace </span>iipr
@@ -45,13 +45,13 @@
 <a name="l00019"></a>00019 
 <a name="l00023"></a><a class="code" href="classiipr_1_1_c_bitmap_joiner_supplier_comp.html">00023</a> <span class="keyword">class </span><a class="code" href="classiipr_1_1_c_bitmap_joiner_supplier_comp.html" title="Supplier of bitmap&#39;s vector built on bitmap.">CBitmapJoinerSupplierComp</a>:
 <a name="l00024"></a>00024                      <span class="keyword">public</span> iproc::TSupplierCompWrap&lt; QPair&lt;i2d::ITransformation2d*,  istd::TDelPtr&lt;iimg::IBitmap&gt; &gt; &gt;,
-<a name="l00025"></a>00025                      <span class="keyword">virtual</span> <span class="keyword">public</span> iipr::<a class="code" href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap.">IBitmapProvider</a>
+<a name="l00025"></a>00025                      <span class="keyword">virtual</span> <span class="keyword">public</span> iimg::IBitmapProvider
 <a name="l00026"></a>00026 {
 <a name="l00027"></a>00027 <span class="keyword">public</span>:
 <a name="l00028"></a><a class="code" href="classiipr_1_1_c_bitmap_joiner_supplier_comp.html#a74711c1f51b6884ec52038cf89ee307a">00028</a>        <span class="keyword">typedef</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Standard implementation of interface iproc::ISupplier with preparation for component implementation...">iproc::TSupplierCompWrap&lt; QPair&lt;i2d::ITransformation2d*,  istd::TDelPtr&lt;iimg::IBitmap&gt;</a> &gt; &gt; <a class="code" href="classiipr_1_1_c_bitmap_joiner_supplier_comp.html#a74711c1f51b6884ec52038cf89ee307a">BaseClass</a>;
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030        I_BEGIN_COMPONENT(<a class="code" href="classiipr_1_1_c_bitmap_joiner_supplier_comp.html" title="Supplier of bitmap&#39;s vector built on bitmap.">CBitmapJoinerSupplierComp</a>);
-<a name="l00031"></a>00031               I_REGISTER_INTERFACE(<a class="code" href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap.">iipr::IBitmapProvider</a>);
+<a name="l00031"></a>00031               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap_provider.html">iimg::IBitmapProvider</a>);
 <a name="l00032"></a>00032               I_ASSIGN(m_bitmapCompFact, <span class="stringliteral">&quot;BitmapFactory&quot;</span>, <span class="stringliteral">&quot;Use to create bitmap object&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;BitmapFactory&quot;</span>);
 <a name="l00033"></a>00033               I_ASSIGN(m_bitmapsProviderCompPtr, <span class="stringliteral">&quot;BitmapListSupplier&quot;</span>, <span class="stringliteral">&quot;Provide list of the input images&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;BitmapListSupplier&quot;</span>);
 <a name="l00034"></a>00034               <a class="code" href="classiipr_1_1_c_bitmap_joiner_supplier_comp.html#abdc934bb36194da96c1235f32c1d06b4">I_ASSIGN_TO</a>(m_bitmapsSupplierCompPtr, m_bitmapsProviderCompPtr, <span class="keyword">false</span>);
@@ -62,8 +62,8 @@
 <a name="l00039"></a>00039 <span class="keyword">protected</span>:
 <a name="l00040"></a>00040        <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_bitmap_joiner_supplier_comp.html#a28f9a3d02cea8e2a75eb68001b0aa009">EnsureBitmapCreated</a>(<a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a6c07595d7aa93d9e7ddecd35f6b44557">ProductType</a>&amp; result) <span class="keyword">const</span>;
 <a name="l00041"></a>00041 
-<a name="l00042"></a>00042        <span class="comment">// reimplemented (iipr::IBitmapProvider)</span>
-<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* <a class="code" href="classiipr_1_1_c_bitmap_joiner_supplier_comp.html#a559799b2a9d21e8dacf53cf107ad5fe3" title="Get access to produced bitmap object.">GetBitmap</a>() <span class="keyword">const</span>;
+<a name="l00042"></a>00042        <span class="comment">// reimplemented (iimg::IBitmapProvider)</span>
+<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* <a class="code" href="classiipr_1_1_c_bitmap_joiner_supplier_comp.html#a559799b2a9d21e8dacf53cf107ad5fe3">GetBitmap</a>() <span class="keyword">const</span>;
 <a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_transformation2d.html">i2d::ITransformation2d</a>* <a class="code" href="classiipr_1_1_c_bitmap_joiner_supplier_comp.html#a9f0f37fc5a423476c7eb0dbf652e0658">GetLogTransform</a>() <span class="keyword">const</span>; 
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046        <span class="comment">// reimplemented (iproc::TSupplierCompWrap)</span>
@@ -75,7 +75,7 @@
 <a name="l00052"></a>00052 <span class="keyword">private</span>:
 <a name="l00053"></a>00053        I_FACT(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>, m_bitmapCompFact);
 <a name="l00054"></a>00054 
-<a name="l00055"></a>00055        I_REF(<a class="code" href="classiipr_1_1_i_multi_bitmap_provider.html" title="Supplier allowing to access of multiple produced bitmaps.">iipr::IMultiBitmapProvider</a>, m_bitmapsProviderCompPtr);
+<a name="l00055"></a>00055        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_multi_bitmap_provider.html">iimg::IMultiBitmapProvider</a>, m_bitmapsProviderCompPtr);
 <a name="l00056"></a>00056        I_REF(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>, m_bitmapsSupplierCompPtr);
 <a name="l00057"></a>00057        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_bitmapsProviderModelCompPtr);
 <a name="l00058"></a>00058 

@@ -29,7 +29,7 @@
 #include <QtGui/QWidget>
 
 // ACF includes
-#include "iipr/IMultiBitmapProvider.h"
+#include "iimg/IMultiBitmapProvider.h"
 
 
 namespace iqtipr
@@ -44,7 +44,7 @@ class CProcessedMultiBitmapView: public QWidget
 public:
 	CProcessedMultiBitmapView(QWidget* parent = NULL);
 	
-	void Update(const iipr::IMultiBitmapProvider* bitmapProviderPtr);
+	void Update(const iimg::IMultiBitmapProvider* bitmapProviderPtr);
 
 private:
 	QList<CProcessedBitmapView*> m_views;

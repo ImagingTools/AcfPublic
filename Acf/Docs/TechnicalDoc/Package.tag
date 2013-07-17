@@ -2002,6 +2002,14 @@
     <namespace>idoc</namespace>
   </compound>
   <compound kind="file">
+    <name>IMultiPageDocument.h</name>
+    <path>C:/Temp/Acf/Include/idoc/</path>
+    <filename>_i_multi_page_document_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="no" imported="no">istd/IChangeable.h</includes>
+    <class kind="class">idoc::IMultiPageDocument</class>
+    <namespace>idoc</namespace>
+  </compound>
+  <compound kind="file">
     <name>ITextDocument.h</name>
     <path>C:/Temp/Acf/Include/idoc/</path>
     <filename>_i_text_document_8h</filename>
@@ -2015,6 +2023,15 @@
     <filename>_i_undo_manager_8h</filename>
     <includes id="_i_document_state_comparator_8h" name="IDocumentStateComparator.h" local="yes" imported="no">idoc/IDocumentStateComparator.h</includes>
     <class kind="class">idoc::IUndoManager</class>
+    <namespace>idoc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TMultiDocumentWrap.h</name>
+    <path>C:/Temp/Acf/Include/idoc/</path>
+    <filename>_t_multi_document_wrap_8h</filename>
+    <includes id="_i_multi_page_document_8h" name="IMultiPageDocument.h" local="yes" imported="no">idoc/IMultiPageDocument.h</includes>
+    <includes id="_c_standard_document_meta_info_8h" name="CStandardDocumentMetaInfo.h" local="yes" imported="no">idoc/CStandardDocumentMetaInfo.h</includes>
+    <class kind="class">idoc::TMultiDocumentWrap</class>
     <namespace>idoc</namespace>
   </compound>
   <compound kind="file">
@@ -2338,10 +2355,30 @@
     <namespace>iimg</namespace>
   </compound>
   <compound kind="file">
+    <name>IBitmapProvider.h</name>
+    <path>C:/Temp/Acf/Include/iimg/</path>
+    <filename>_i_bitmap_provider_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
+    <class kind="class">iimg::IBitmapProvider</class>
+    <namespace>iimg</namespace>
+  </compound>
+  <compound kind="file">
     <name>iimg.h</name>
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>iimg_8h</filename>
     <includes id="icmm_8h" name="icmm.h" local="yes" imported="no">icmm/icmm.h</includes>
+    <namespace>iimg</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IMultiBitmapProvider.h</name>
+    <path>C:/Temp/Acf/Include/iimg/</path>
+    <filename>_i_multi_bitmap_provider_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <includes id="_i_transformation2d_8h" name="ITransformation2d.h" local="yes" imported="no">i2d/ITransformation2d.h</includes>
+    <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
+    <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
+    <class kind="class">iimg::IMultiBitmapProvider</class>
     <namespace>iimg</namespace>
   </compound>
   <compound kind="file">
@@ -3644,6 +3681,25 @@
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CMultiBitmapViewComp.h</name>
+    <path>C:/Temp/Acf/Include/iqt2d/</path>
+    <filename>_c_multi_bitmap_view_comp_8h</filename>
+    <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="no" imported="no">iqtgui/TGuiComponentBase.h</includes>
+    <includes id="_t_model_observer_comp_wrap_8h" name="TModelObserverCompWrap.h" local="no" imported="no">ibase/TModelObserverCompWrap.h</includes>
+    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="no" imported="no">imod/CMultiModelDispatcherBase.h</includes>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="no" imported="no">imod/TSingleModelObserverBase.h</includes>
+    <includes id="_i_information_provider_8h" name="IInformationProvider.h" local="no" imported="no">istd/IInformationProvider.h</includes>
+    <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="no" imported="no">iqtgui/TGuiObserverWrap.h</includes>
+    <includes id="_i_view_extender_8h" name="IViewExtender.h" local="no" imported="no">iqt2d/IViewExtender.h</includes>
+    <includes id="_i_view_provider_8h" name="IViewProvider.h" local="no" imported="no">iqt2d/IViewProvider.h</includes>
+    <includes id="_c_console_gui_8h" name="CConsoleGui.h" local="no" imported="no">iview/CConsoleGui.h</includes>
+    <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="no" imported="no">iimg/IMultiBitmapProvider.h</includes>
+    <includes id="_c_bitmap_8h" name="CBitmap.h" local="no" imported="no">iimg/CBitmap.h</includes>
+    <class kind="class">iqt2d::CMultiBitmapViewComp</class>
+    <class kind="class">iqt2d::CMultiBitmapViewComp::CSingleView</class>
+    <namespace>iqt2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>COrientedCircleEditorComp.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_oriented_circle_editor_comp_8h</filename>
@@ -4460,7 +4516,6 @@
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_i_gui_object_8h</filename>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
-    <includes id="_i_component_8h" name="IComponent.h" local="yes" imported="no">icomp/IComponent.h</includes>
     <includes id="iqtgui_8h" name="iqtgui.h" local="yes" imported="no">iqtgui/iqtgui.h</includes>
     <class kind="class">iqtgui::IGuiObject</class>
     <namespace>iqtgui</namespace>
@@ -19465,8 +19520,10 @@
     <class kind="class">idoc::IHelpFileProvider</class>
     <class kind="class">idoc::IHelpInfoProvider</class>
     <class kind="class">idoc::IHelpViewer</class>
+    <class kind="class">idoc::IMultiPageDocument</class>
     <class kind="class">idoc::ITextDocument</class>
     <class kind="class">idoc::IUndoManager</class>
+    <class kind="class">idoc::TMultiDocumentWrap</class>
   </compound>
   <compound kind="class">
     <name>idoc::CCompositeDocumentTemplateComp</name>
@@ -21283,6 +21340,53 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>idoc::IMultiPageDocument</name>
+    <filename>classidoc_1_1_i_multi_page_document.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetPagesCount</name>
+      <anchorfile>classidoc_1_1_i_multi_page_document.html</anchorfile>
+      <anchor>ab9824b47b658dc15afb82f9b3cc590db</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const istd::IChangeable &amp;</type>
+      <name>GetDocumentPage</name>
+      <anchorfile>classidoc_1_1_i_multi_page_document.html</anchorfile>
+      <anchor>a55859cfe555bb0c639d621b255447cc7</anchor>
+      <arglist>(int pageIndex) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>ResetPages</name>
+      <anchorfile>classidoc_1_1_i_multi_page_document.html</anchorfile>
+      <anchor>a26498368e7501c88e59f57f2c7b6ba0c</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::IChangeable *</type>
+      <name>InsertPage</name>
+      <anchorfile>classidoc_1_1_i_multi_page_document.html</anchorfile>
+      <anchor>ab05e3dfc4144cf7f35bc9b822531efbc</anchor>
+      <arglist>(const QSizeF &amp;pageSize=QSizeF(), int position=-1)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>RemovePage</name>
+      <anchorfile>classidoc_1_1_i_multi_page_document.html</anchorfile>
+      <anchor>ac7e39f5324340ffb6f4f38c34848be68</anchor>
+      <arglist>(int pageIndex)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const IDocumentMetaInfo &amp;</type>
+      <name>GetDocumentMetaInfo</name>
+      <anchorfile>classidoc_1_1_i_multi_page_document.html</anchorfile>
+      <anchor>a2cd96ca541f00544904a5b9bc987c39d</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>idoc::ITextDocument</name>
     <filename>classidoc_1_1_i_text_document.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
@@ -21339,6 +21443,91 @@
       <anchorfile>classidoc_1_1_i_undo_manager.html</anchorfile>
       <anchor>a7f3163e0828f772914a5587e9f8e2831</anchor>
       <arglist>()=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>idoc::TMultiDocumentWrap</name>
+    <filename>classidoc_1_1_t_multi_document_wrap.html</filename>
+    <templarg></templarg>
+    <templarg></templarg>
+    <base virtualness="virtual">Base</base>
+    <base>idoc::CStandardDocumentMetaInfo</base>
+    <member kind="typedef">
+      <type>Base</type>
+      <name>BaseClass</name>
+      <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
+      <anchor>a8e21072a48ee93b25cb64ca9fc69da26</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CStandardDocumentMetaInfo</type>
+      <name>BaseClass2</name>
+      <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
+      <anchor>a206fdab16e7a0ff48e961f3a78f08944</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>PageInterface</type>
+      <name>PageInterface</name>
+      <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
+      <anchor>a4f82691eed9ec1b60cbc5621ebccf8d0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>const PageInterface *</type>
+      <name>GetPageObject</name>
+      <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
+      <anchor>a47be0572498b4d329514e30592119479</anchor>
+      <arglist>(int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPagesCount</name>
+      <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
+      <anchor>abc1e712e8e994c7e51f556ab30ec842f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const istd::IChangeable &amp;</type>
+      <name>GetDocumentPage</name>
+      <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
+      <anchor>a7d4b60c4dc4900ca56396ea471443a9b</anchor>
+      <arglist>(int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetPages</name>
+      <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
+      <anchor>a45d956959268d29ea575380bf428655f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemovePage</name>
+      <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
+      <anchor>a21701387d722c153784a168d78cd7b08</anchor>
+      <arglist>(int pageIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const IDocumentMetaInfo &amp;</type>
+      <name>GetDocumentMetaInfo</name>
+      <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
+      <anchor>a106edf1fe826f6497a54f7069d77369b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>istd::TPointerVector&lt; PageInterface &gt;</type>
+      <name>Pages</name>
+      <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
+      <anchor>ac0c01fcc7298f837b6fc3fb67528f528</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Pages</type>
+      <name>m_documentPages</name>
+      <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
+      <anchor>ad22f5d0f5846248b0293446075496a79</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -22517,6 +22706,8 @@
     <class kind="class">iimg::CReflectedBitmapBase</class>
     <class kind="class">iimg::CScanlineMask</class>
     <class kind="class">iimg::IBitmap</class>
+    <class kind="class">iimg::IBitmapProvider</class>
+    <class kind="class">iimg::IMultiBitmapProvider</class>
     <class kind="class">iimg::IQImageProvider</class>
     <class kind="class">iimg::IRasterImage</class>
     <class kind="class">iimg::TPixelConversion</class>
@@ -23503,6 +23694,44 @@
       <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
       <anchor>a153793aa7e6ba654f01e07deabf28f54</anchor>
       <arglist>(int positionY)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iimg::IBitmapProvider</name>
+    <filename>classiimg_1_1_i_bitmap_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const iimg::IBitmap *</type>
+      <name>GetBitmap</name>
+      <anchorfile>classiimg_1_1_i_bitmap_provider.html</anchorfile>
+      <anchor>a6be61f173cff49d0fd008e0a020befb5</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iimg::IMultiBitmapProvider</name>
+    <filename>classiimg_1_1_i_multi_bitmap_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const iprm::IOptionsList *</type>
+      <name>GetBitmapListInfo</name>
+      <anchorfile>classiimg_1_1_i_multi_bitmap_provider.html</anchorfile>
+      <anchor>a43a5e7b7790f66e6a02abe1160be8a86</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetBitmapsCount</name>
+      <anchorfile>classiimg_1_1_i_multi_bitmap_provider.html</anchorfile>
+      <anchor>a596f2e744ffd28d5a475e28308f9adcf</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const iimg::IBitmap *</type>
+      <name>GetBitmap</name>
+      <anchorfile>classiimg_1_1_i_multi_bitmap_provider.html</anchorfile>
+      <anchor>a22f91cc3e748d899d717f033f9526e87</anchor>
+      <arglist>(int bitmapIndex) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33037,6 +33266,7 @@
     <class kind="class">iqt2d::CExtendedConsoleGuiComp</class>
     <class kind="class">iqt2d::CImageViewComp</class>
     <class kind="class">iqt2d::CLine2dParamsGuiComp</class>
+    <class kind="class">iqt2d::CMultiBitmapViewComp</class>
     <class kind="class">iqt2d::COrientedCircleEditorComp</class>
     <class kind="class">iqt2d::CPolygonParamsGuiComp</class>
     <class kind="class">iqt2d::CPolylineParamsGuiComp</class>
@@ -33396,6 +33626,207 @@
       <anchorfile>classiqt2d_1_1_c_line2d_params_gui_comp.html</anchorfile>
       <anchor>ac65c4142996b366b3fb3ab4a1325513f</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::CMultiBitmapViewComp</name>
+    <filename>classiqt2d_1_1_c_multi_bitmap_view_comp.html</filename>
+    <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; iimg::IMultiBitmapProvider &gt; &gt; &gt;</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <class kind="class">iqt2d::CMultiBitmapViewComp::CSingleView</class>
+    <member kind="typedef">
+      <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; iimg::IMultiBitmapProvider &gt; &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>aec59edcc4fb43330a7f1b01cfd9d5568</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::CMultiModelDispatcherBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a5fe23233393b6c8575d3a11654d8b708</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>ac6e1ce1de2314e0c22b2442ade7ec3c6</anchor>
+      <arglist>(m_informationModelsCompPtr, m_informationProvidersCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a049307260422e6c1e681a6518f1ebc97</anchor>
+      <arglist>(m_generalInformationModelCompPtr, m_generalInformationProviderCompPtr, true)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a908f3472e990da5e4a9038eef08ab695</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a8c5115162064a371998d80f68a577147</anchor>
+      <arglist>(int updateFlags)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a94242a0fa5d7badea7466d6dda97e797</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a3ef87841702a0e91120008246851150f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a7dab5727abe8a52b56bfe2040c54e240</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual CSingleView *</type>
+      <name>CreateView</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a56832537f36e4be1b89b810d38e9b639</anchor>
+      <arglist>(QWidget *parentPtr, int id=-1, const QString &amp;title=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static QIcon</type>
+      <name>GetCategoryIcon</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>afaa3ffd1e72f9f8e4a840a688e5433c8</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category)</arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static const int</type>
+      <name>GeneralStatusModelId</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a266b374301305cf5690a3c3abb769c1b</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::CMultiBitmapViewComp::CSingleView</name>
+    <filename>classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</filename>
+    <base>iqt2d::IViewProvider</base>
+    <member kind="typedef">
+      <type>QGroupBox</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>a7b34a28ea4d1aedf622330ae77de6a19</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSingleView</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>a47d5271d5e41ccfef4bde4df1e8ffb31</anchor>
+      <arglist>(QWidget *parentPtr, int id=-1, const QString &amp;title=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>UpdateImage</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>a964e16f5dc0e4aea5fd6a6b191556437</anchor>
+      <arglist>(const iimg::IBitmap *bitmapPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetBackgroundColor</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>a1612a187d75d258c3da66140207cbe52</anchor>
+      <arglist>(const QColor &amp;color)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Init</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>a0dc8d1cfd6a5a48ec467fae5cfc26a87</anchor>
+      <arglist>(bool hasStatusLabel, bool hasStatusBackground)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetInspectionResult</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>ae26feadfddb580b46dd041eaf135f968</anchor>
+      <arglist>(int result)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetViewId</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>a06a9e03eea6d69d563b2a9a23de972ba</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iview::IShapeView *</type>
+      <name>GetView</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>ab0d6d03d185bcd65d95732fc02c50658</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddStatusItems</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>af11db850632f378a65de9d70acfacbd6</anchor>
+      <arglist>(QBoxLayout *layoutPtr)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iview::CImageShape</type>
+      <name>m_backgroundShape</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>ae01b3b34331775d1b5ed803c503d73ea</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>imod::TModelWrap&lt; iimg::CBitmap &gt;</type>
+      <name>m_backgroundModel</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>a63d878ce785f2deee126989d34dea526</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iview::CConsoleGui</type>
+      <name>m_console</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>a6048d41286d2dcc2f97e15dc3fedeccb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_id</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>abee40550730480f96c94431f2d39b551</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_showStatusLabel</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>aa8d0c71792300996658d008b7e098dab</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_showStatusBackground</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>a5713f5457568bb30ffcec446bf567849</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">

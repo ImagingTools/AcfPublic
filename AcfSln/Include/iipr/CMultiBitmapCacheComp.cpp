@@ -37,9 +37,9 @@ CMultiBitmapCacheComp::CMultiBitmapCacheComp()
 }
 
 
-// reimplemented (iipr::IMultiBitmapProvider)
+// reimplemented (iimg::IMultiBitmapProvider)
 
-const iprm::IOptionsList* CMultiBitmapCacheComp::GetBitmapSelectionContraints() const
+const iprm::IOptionsList* CMultiBitmapCacheComp::GetBitmapListInfo() const
 {
 	if (!m_copyConstraints){
 		return NULL;
@@ -104,7 +104,7 @@ bool CMultiBitmapCacheComp::CopyFrom(const IChangeable& object, CompatibilityMod
 		m_bitmapConstraints.Reset();
 	}
 
-	const IMultiBitmapProvider* providerPtr = CompCastPtr<const IMultiBitmapProvider>(&object);
+	const iimg::IMultiBitmapProvider* providerPtr = CompCastPtr<const iimg::IMultiBitmapProvider>(&object);
 	if (providerPtr != NULL){
 		int bitmapsCount = providerPtr->GetBitmapsCount();
 
@@ -122,7 +122,7 @@ bool CMultiBitmapCacheComp::CopyFrom(const IChangeable& object, CompatibilityMod
 		retVal = true;
 
 		if (m_copyConstraints){
-			const iprm::IOptionsList* bitmapConstraintsPtr = providerPtr->GetBitmapSelectionContraints();
+			const iprm::IOptionsList* bitmapConstraintsPtr = providerPtr->GetBitmapListInfo();
 			if (bitmapConstraintsPtr != NULL){
 				m_bitmapConstraints.m_count = bitmapConstraintsPtr->GetOptionsCount();
 				m_bitmapConstraints.m_flags = bitmapConstraintsPtr->GetOptionsFlags();

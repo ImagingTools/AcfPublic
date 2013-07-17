@@ -34,7 +34,6 @@
 
 // ACF includes
 #include "istd/IPolymorphic.h"
-#include "icomp/IComponent.h"
 #include "iqtgui/iqtgui.h"
 
 

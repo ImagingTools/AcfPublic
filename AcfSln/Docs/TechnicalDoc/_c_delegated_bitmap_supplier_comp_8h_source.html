@@ -39,7 +39,7 @@
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_t_supplier_comp_wrap_8h.html">iproc/TSupplierCompWrap.h</a>&quot;</span>
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 <span class="comment">// ACF-Solutions includes</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="_i_bitmap_provider_8h.html">iipr/IBitmapProvider.h</a>&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_bitmap_provider_8h.html">iimg/IBitmapProvider.h</a>&quot;</span>
 <a name="l00017"></a>00017 
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019 <span class="keyword">namespace </span>iipr
@@ -50,7 +50,7 @@
 <a name="l00027"></a>00027                      <span class="keyword">public</span> ilog::<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/group___main.html#ga2ac8e0a207c9bb18de1ac6883d2cf09c">CLoggerComponentBase</a>,
 <a name="l00028"></a>00028                      <span class="keyword">virtual</span> <span class="keyword">public</span> iproc::ISupplier,
 <a name="l00029"></a>00029                      <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IChangeable,
-<a name="l00030"></a>00030                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap.">IBitmapProvider</a>,
+<a name="l00030"></a>00030                      <span class="keyword">virtual</span> <span class="keyword">public</span> iimg::IBitmapProvider,
 <a name="l00031"></a>00031                      <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::ICalibrationProvider,
 <a name="l00032"></a>00032                      <span class="keyword">protected</span> imod::CMultiModelBridgeBase
 <a name="l00033"></a>00033 {
@@ -60,7 +60,7 @@
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038        I_BEGIN_COMPONENT(<a class="code" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html" title="Image supplier delegating the calls to another one or accessing some bitmap object directly...">CDelegatedBitmapSupplierComp</a>);
 <a name="l00039"></a>00039               I_REGISTER_INTERFACE(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>);
-<a name="l00040"></a>00040               I_REGISTER_INTERFACE(<a class="code" href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap.">IBitmapProvider</a>);
+<a name="l00040"></a>00040               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap_provider.html">iimg::IBitmapProvider</a>);
 <a name="l00041"></a>00041               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html">i2d::ICalibrationProvider</a>);
 <a name="l00042"></a>00042               I_ASSIGN(m_bitmapCompPtr, <span class="stringliteral">&quot;BitmapObject&quot;</span>, <span class="stringliteral">&quot;Bitmap object used if no slave supplier is provided&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;BitmapObject&quot;</span>);
 <a name="l00043"></a>00043               <a class="code" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a7ccbd1a36502e4e2ff19434b9d98d4b9">I_ASSIGN_TO</a>(m_bitmapModelCompPtr, m_bitmapCompPtr, <span class="keyword">false</span>);
@@ -73,8 +73,8 @@
 <a name="l00050"></a>00050        I_END_COMPONENT;
 <a name="l00051"></a>00051 
 <a name="l00052"></a>00052 <span class="keyword">protected</span>:
-<a name="l00053"></a>00053        <span class="comment">// reimplemented (iipr::IBitmapProvider)</span>
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* <a class="code" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a45c7c3568ba2c8cb44a1a35e1fb9a74e" title="Get access to produced bitmap object.">GetBitmap</a>() <span class="keyword">const</span>;
+<a name="l00053"></a>00053        <span class="comment">// reimplemented (iimg::IBitmapProvider)</span>
+<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* <a class="code" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a45c7c3568ba2c8cb44a1a35e1fb9a74e">GetBitmap</a>() <span class="keyword">const</span>;
 <a name="l00055"></a>00055 
 <a name="l00056"></a>00056        <span class="comment">// reimplemented (i2d::ICalibrationProvider)</span>
 <a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a>* <a class="code" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a02a4b87632584389261adf3934db213c">GetCalibration</a>() <span class="keyword">const</span>;
@@ -99,7 +99,7 @@
 <a name="l00076"></a>00076        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a>, m_calibrationCompPtr);
 <a name="l00077"></a>00077        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_calibrationModelCompPtr);
 <a name="l00078"></a>00078 
-<a name="l00079"></a>00079        I_REF(<a class="code" href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap.">iipr::IBitmapProvider</a>, m_bitmapProviderCompPtr);
+<a name="l00079"></a>00079        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap_provider.html">iimg::IBitmapProvider</a>, m_bitmapProviderCompPtr);
 <a name="l00080"></a>00080        I_REF(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>, m_bitmapSupplierCompPtr);
 <a name="l00081"></a>00081        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_bitmapProviderModelCompPtr);
 <a name="l00082"></a>00082        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html">i2d::ICalibrationProvider</a>, m_calibrationProviderCompPtr);

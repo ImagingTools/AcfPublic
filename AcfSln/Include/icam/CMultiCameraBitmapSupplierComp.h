@@ -38,7 +38,7 @@
 
 // ACF-Solutions includes
 #include "icam/IBitmapAcquisition.h"
-#include "iipr/IMultiBitmapProvider.h"
+#include "iimg/IMultiBitmapProvider.h"
 
 
 namespace icam
@@ -52,14 +52,14 @@ namespace icam
 */
 class CMultiCameraBitmapSupplierComp:
 			public iproc::TSupplierCompWrap< istd::TPointerVector<const iimg::IBitmap> >,
-			virtual public iipr::IMultiBitmapProvider,
+			virtual public iimg::IMultiBitmapProvider,
 			virtual public i2d::ICalibrationProvider
 {
 public:
 	typedef iproc::TSupplierCompWrap< istd::TPointerVector<const iimg::IBitmap> > BaseClass;
 
 	I_BEGIN_COMPONENT(CMultiCameraBitmapSupplierComp);
-		I_REGISTER_INTERFACE(iipr::IMultiBitmapProvider);
+		I_REGISTER_INTERFACE(iimg::IMultiBitmapProvider);
 		I_REGISTER_INTERFACE(i2d::ICalibrationProvider);
 		I_ASSIGN(m_bitmapCompFact, "BitmapFactory", "Use to create bitmap object", true, "BitmapFactory");
 		I_ASSIGN(m_bitmapAcquisitionCompPtr, "BitmapAcquisition", "Bitmap acquision object for image snap", true, "BitmapAcquisition");
@@ -67,8 +67,8 @@ public:
 		I_ASSIGN(m_cameraParamsManagerCompPtr, "CameraParamsManager", "Manager of camera parameters", true, "CameraParamsManager");
 	I_END_COMPONENT;
 
-	// reimplemented (iipr::IMultiBitmapProvider)
-	virtual const iprm::IOptionsList* GetBitmapSelectionContraints() const;
+	// reimplemented (iimg::IMultiBitmapProvider)
+	virtual const iprm::IOptionsList* GetBitmapListInfo() const;
 	virtual int GetBitmapsCount() const;
 	virtual const iimg::IBitmap* GetBitmap(int bitmapIndex) const;
 

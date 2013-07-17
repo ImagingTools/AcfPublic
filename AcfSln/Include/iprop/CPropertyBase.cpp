@@ -40,11 +40,11 @@ CPropertyBase::CPropertyBase()
 
 
 CPropertyBase::CPropertyBase(
-				IPropertiesManager* propertyOwnerPtr,
-				const QByteArray& propertyId,
-				const QByteArray& propertyDescription,
-				int propertyFlags,
-				int changeFlags)
+			IPropertiesManager* propertyOwnerPtr,
+			const QByteArray& propertyId,
+			const QByteArray& propertyDescription,
+			int propertyFlags,
+			int changeFlags)
 	:m_propertyOwnerPtr(propertyOwnerPtr),
 	m_changeFlags(changeFlags)
 {

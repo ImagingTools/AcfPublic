@@ -37,7 +37,7 @@
 <div class="title">iipr::CBitmapProviderCacheComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iipr::CBitmapProviderCacheComp" --><!-- doxytag: inherits="icomp::CComponentBase,iipr::IBitmapProvider,i2d::ICalibrationProvider" -->
+<!-- doxytag: class="iipr::CBitmapProviderCacheComp" --><!-- doxytag: inherits="icomp::CComponentBase,iimg::IBitmapProvider,i2d::ICalibrationProvider" -->
 <p>Bitmap provider returning always stored bitmap.  
  <a href="classiipr_1_1_c_bitmap_provider_cache_comp.html#details">More...</a></p>
 
@@ -49,7 +49,7 @@ Inheritance diagram for iipr::CBitmapProviderCacheComp:</div>
   <img src="classiipr_1_1_c_bitmap_provider_cache_comp.png" usemap="#iipr::CBitmapProviderCacheComp_map" alt=""/>
   <map id="iipr::CBitmapProviderCacheComp_map" name="iipr::CBitmapProviderCacheComp_map">
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html" alt="icomp::CComponentBase" shape="rect" coords="0,112,200,136"/>
-<area href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap." alt="iipr::IBitmapProvider" shape="rect" coords="210,112,410,136"/>
+<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap_provider.html" alt="iimg::IBitmapProvider" shape="rect" coords="210,112,410,136"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html" alt="i2d::ICalibrationProvider" shape="rect" coords="420,112,620,136"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="0,56,200,80"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="210,56,410,80"/>
@@ -68,7 +68,6 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_bitmap_provider_cache_comp.html#ab4497e98f0bca9e7ec515487fc33c8c8">GetBitmap</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to produced bitmap object.  <a href="#ab4497e98f0bca9e7ec515487fc33c8c8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_bitmap_provider_cache_comp.html#ac50b3514a1c2e73f08b61f7ac3d0cbb7">GetCalibration</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_bitmap_provider_cache_comp.html#aa5b3aef85624cb3f666328f1a9c3942d">CopyFrom</a> (const IChangeable &amp;object, <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=<a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af">CM_WITHOUT_REFS</a>)</td></tr>
 </table>
@@ -135,10 +134,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get access to produced bitmap object. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>pointer to bitmap instance if this bitmap is accessible, or NULL. </dd></dl>
-
-<p>Implements <a class="el" href="classiipr_1_1_i_bitmap_provider.html#ae43b432f1334ca40461f8bea3ac2be9d">iipr::IBitmapProvider</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap_provider.html#a6be61f173cff49d0fd008e0a020befb5">iimg::IBitmapProvider</a>.</p>
 
 </div>
 </div>

@@ -51,6 +51,7 @@
 #include "iqt2d/CPolylineParamsGuiComp.h"
 #include "iqt2d/CTubePolylineParamsGuiComp.h"
 #include "iqt2d/CAffineTransformationParamsGuiComp.h"
+#include "iqt2d/CMultiBitmapViewComp.h"
 
 
 
@@ -86,6 +87,7 @@ typedef iqt2d::CExtendedConsoleGuiComp ExtendedConsoleGui;
 typedef iqt2d::CPolylineParamsGuiComp PolylineParamsGui;
 typedef iqt2d::CTubePolylineParamsGuiComp TubePolylineParamsGui;
 typedef iqt2d::CAffineTransformationParamsGuiComp AffineTransformationParamsGui;
+typedef iqt2d::CMultiBitmapViewComp MultiBitmapView;
 
 
 } // namespace QtViewPck

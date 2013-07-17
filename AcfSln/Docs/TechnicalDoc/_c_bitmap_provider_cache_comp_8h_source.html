@@ -34,7 +34,7 @@
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_calibration_provider_8h.html">i2d/ICalibrationProvider.h</a>&quot;</span>
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 <span class="comment">// ACF-Solutions includes</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_bitmap_provider_8h.html">iipr/IBitmapProvider.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_bitmap_provider_8h.html">iimg/IBitmapProvider.h</a>&quot;</span>
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 <span class="keyword">namespace </span>iipr
@@ -43,19 +43,19 @@
 <a name="l00017"></a>00017 
 <a name="l00023"></a><a class="code" href="classiipr_1_1_c_bitmap_provider_cache_comp.html">00023</a> <span class="keyword">class </span><a class="code" href="classiipr_1_1_c_bitmap_provider_cache_comp.html" title="Bitmap provider returning always stored bitmap.">CBitmapProviderCacheComp</a>:
 <a name="l00024"></a>00024                      <span class="keyword">public</span> icomp::CComponentBase,
-<a name="l00025"></a>00025                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap.">IBitmapProvider</a>,
+<a name="l00025"></a>00025                      <span class="keyword">virtual</span> <span class="keyword">public</span> iimg::IBitmapProvider,
 <a name="l00026"></a>00026                      <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::ICalibrationProvider
 <a name="l00027"></a>00027 {
 <a name="l00028"></a>00028 <span class="keyword">public</span>:
 <a name="l00029"></a><a class="code" href="classiipr_1_1_c_bitmap_provider_cache_comp.html#aa02977435d6f87aa3bbe43a5f8d49138">00029</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classiipr_1_1_c_bitmap_provider_cache_comp.html#aa02977435d6f87aa3bbe43a5f8d49138">BaseClass</a>;
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031        I_BEGIN_COMPONENT(<a class="code" href="classiipr_1_1_c_bitmap_provider_cache_comp.html" title="Bitmap provider returning always stored bitmap.">CBitmapProviderCacheComp</a>);
-<a name="l00032"></a>00032               I_REGISTER_INTERFACE(<a class="code" href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap.">IBitmapProvider</a>);
+<a name="l00032"></a>00032               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap_provider.html">iimg::IBitmapProvider</a>);
 <a name="l00033"></a>00033               I_REGISTER_INTERFACE(ICalibrationProvider);
 <a name="l00034"></a>00034        I_END_COMPONENT;
 <a name="l00035"></a>00035 
-<a name="l00036"></a>00036        <span class="comment">// reimplemented (iipr::IBitmapProvider)</span>
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* <a class="code" href="classiipr_1_1_c_bitmap_provider_cache_comp.html#ab4497e98f0bca9e7ec515487fc33c8c8" title="Get access to produced bitmap object.">GetBitmap</a>() <span class="keyword">const</span>;
+<a name="l00036"></a>00036        <span class="comment">// reimplemented (iimg::IBitmapProvider)</span>
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>* <a class="code" href="classiipr_1_1_c_bitmap_provider_cache_comp.html#ab4497e98f0bca9e7ec515487fc33c8c8">GetBitmap</a>() <span class="keyword">const</span>;
 <a name="l00038"></a>00038 
 <a name="l00039"></a>00039        <span class="comment">// reimplemented (i2d::ICalibrationProvider)</span>
 <a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a>* <a class="code" href="classiipr_1_1_c_bitmap_provider_cache_comp.html#ac50b3514a1c2e73f08b61f7ac3d0cbb7">GetCalibration</a>() <span class="keyword">const</span>;

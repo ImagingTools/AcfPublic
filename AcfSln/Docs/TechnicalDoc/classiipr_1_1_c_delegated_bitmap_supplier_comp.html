@@ -38,7 +38,7 @@
 <div class="title">iipr::CDelegatedBitmapSupplierComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iipr::CDelegatedBitmapSupplierComp" --><!-- doxytag: inherits="ilog::TLoggerCompWrap,iproc::ISupplier,istd::IChangeable,iipr::IBitmapProvider,i2d::ICalibrationProvider,imod::CMultiModelBridgeBase" -->
+<!-- doxytag: class="iipr::CDelegatedBitmapSupplierComp" --><!-- doxytag: inherits="ilog::TLoggerCompWrap,iproc::ISupplier,istd::IChangeable,iimg::IBitmapProvider,i2d::ICalibrationProvider,imod::CMultiModelBridgeBase" -->
 <p>Image supplier delegating the calls to another one or accessing some bitmap object directly.  
  <a href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#details">More...</a></p>
 
@@ -52,7 +52,7 @@ Inheritance diagram for iipr::CDelegatedBitmapSupplierComp:</div>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classilog_1_1_t_logger_comp_wrap.html" alt="ilog::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="0,224,218,248"/>
 <area href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model..." alt="iproc::ISupplier" shape="rect" coords="456,224,674,248"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="684,224,902,248"/>
-<area href="classiipr_1_1_i_bitmap_provider.html" title="Bitmap supplier allowing to access of produced bitmap." alt="iipr::IBitmapProvider" shape="rect" coords="912,224,1130,248"/>
+<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap_provider.html" alt="iimg::IBitmapProvider" shape="rect" coords="912,224,1130,248"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html" alt="i2d::ICalibrationProvider" shape="rect" coords="1140,224,1358,248"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_c_multi_model_bridge_base.html" alt="imod::CMultiModelBridgeBase" shape="rect" coords="1482,224,1700,248"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classilog_1_1_t_logger_wrap.html" alt="ilog::TLoggerWrap&lt; Base &gt;" shape="rect" coords="0,168,218,192"/>
@@ -89,7 +89,6 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a45c7c3568ba2c8cb44a1a35e1fb9a74e">GetBitmap</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to produced bitmap object.  <a href="#a45c7c3568ba2c8cb44a1a35e1fb9a74e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a02a4b87632584389261adf3934db213c">GetCalibration</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a41e2d09d2166cbcfa375f22dfbffc1af">GetWorkStatus</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get status of last work.  <a href="#a41e2d09d2166cbcfa375f22dfbffc1af"></a><br/></td></tr>
@@ -223,10 +222,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get access to produced bitmap object. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>pointer to bitmap instance if this bitmap is accessible, or NULL. </dd></dl>
-
-<p>Implements <a class="el" href="classiipr_1_1_i_bitmap_provider.html#ae43b432f1334ca40461f8bea3ac2be9d">iipr::IBitmapProvider</a>.</p>
+<p>Implements <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap_provider.html#a6be61f173cff49d0fd008e0a020befb5">iimg::IBitmapProvider</a>.</p>
 
 </div>
 </div>
