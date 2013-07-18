@@ -41614,6 +41614,13 @@
       <anchor>a16c2e38a58fc765a088f8e37afb3bd2d</anchor>
       <arglist>(iser::IArchive &amp;archive, istd::TIndex&lt; Dimensions &gt; &amp;index)</arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>SerializeQPointF</name>
+      <anchorfile>classiser_1_1_c_primitive_types_serializer.html</anchorfile>
+      <anchor>a996f3f6f983aafa6343f8bd51d580dd4</anchor>
+      <arglist>(iser::IArchive &amp;archive, QPointF &amp;point)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iser::CReadArchiveBase</name>
