@@ -81,6 +81,11 @@ void CBitmapSupplierGuiComp::on_SnapBackImageButton_clicked()
 void CBitmapSupplierGuiComp::on_LiveImageButton_toggled(bool checked)
 {
 	if (checked){
+		icam::ISnapControl* snapControlPtr = dynamic_cast<icam::ISnapControl*>(GetObjectPtr());
+		if (snapControlPtr != NULL){
+			snapControlPtr->SetSnapDirection(icam::ISnapControl::SD_FORWARD);
+		}
+
 		m_timer.setInterval(*m_snapIntervalAttrPtr);
 
 		m_timer.start();
@@ -88,6 +93,9 @@ void CBitmapSupplierGuiComp::on_LiveImageButton_toggled(bool checked)
 	else{
 		m_timer.stop();
 	}
+
+	SnapImageButton->setEnabled(!checked);
+	SnapBackImageButton->setEnabled(!checked);
 }
 
 
@@ -210,10 +218,12 @@ void CBitmapSupplierGuiComp::UpdateGui(int updateFlags)
 
 	Q_ASSERT(IsGuiCreated());
 
+	bool isLive = LiveImageButton->isChecked();
+
 	istd::CIndex2d bitmapSize = m_bitmap.GetImageSize();
 
 	SizeLabel->setText(tr("(%1 x %2)").arg(bitmapSize.GetX()).arg(bitmapSize.GetY()));
-	SaveImageButton->setEnabled(!bitmapSize.IsSizeEmpty());
+	SaveImageButton->setEnabled(!bitmapSize.IsSizeEmpty() && !isLive);
 
 	UpdateAllViews();
 }

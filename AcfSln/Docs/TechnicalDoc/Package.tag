@@ -165,6 +165,7 @@
     <filename>_c_snap_bitmap_supplier_comp_8h</filename>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
+    <includes id="_i_snap_control_8h" name="ISnapControl.h" local="yes" imported="no">icam/ISnapControl.h</includes>
     <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="no" imported="no">imeas/INumericConstraints.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="no" imported="no">imeas/CSimpleNumericValue.h</includes>
     <class kind="class">icam::CSnapBitmapSupplierComp</class>
@@ -2560,8 +2561,8 @@
     <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>_c_file_acquisition_comp_8h</filename>
     <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
-    <includes id="_i_snap_control_8h" name="ISnapControl.h" local="yes" imported="no">icam/ISnapControl.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
+    <includes id="_i_snap_control_8h" name="ISnapControl.h" local="yes" imported="no">icam/ISnapControl.h</includes>
     <includes id="iqtcam_8h" name="iqtcam.h" local="yes" imported="no">iqtcam/iqtcam.h</includes>
     <class kind="class">iqtcam::CFileAcquisitionComp</class>
     <class kind="struct">iqtcam::CFileAcquisitionComp::ParamsInfo</class>
@@ -2649,6 +2650,7 @@
     <filename>_c_inspection_task_gui_comp_8h</filename>
     <includes id="_i_inspection_task_8h" name="IInspectionTask.h" local="yes" imported="no">iinsp/IInspectionTask.h</includes>
     <includes id="iqtinsp_8h" name="iqtinsp.h" local="yes" imported="no">iqtinsp/iqtinsp.h</includes>
+    <class kind="class">iqtinsp::CInspectionTaskGuiCompBase</class>
     <class kind="class">iqtinsp::CInspectionTaskGuiComp</class>
     <namespace>iqtinsp</namespace>
   </compound>
@@ -4489,6 +4491,12 @@
       <name>SD_BACK</name>
       <anchorfile>classicam_1_1_i_snap_control.html</anchorfile>
       <anchor>a20585ec2576da79aaf5176253f21e993a1cd075f13886c828d151e729fac2b24c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SD_HOLD</name>
+      <anchorfile>classicam_1_1_i_snap_control.html</anchorfile>
+      <anchor>a20585ec2576da79aaf5176253f21e993a9e69ecc921e79acc4cebad9811861d52</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -22442,6 +22450,7 @@
     <name>iqtinsp</name>
     <filename>namespaceiqtinsp.html</filename>
     <class kind="class">iqtinsp::CGeneralSupplierGuiComp</class>
+    <class kind="class">iqtinsp::CInspectionTaskGuiCompBase</class>
     <class kind="class">iqtinsp::CInspectionTaskGuiComp</class>
     <class kind="class">iqtinsp::TSupplierGuiCompBase</class>
   </compound>
@@ -22514,9 +22523,21 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqtinsp::CInspectionTaskGuiCompBase</name>
+    <filename>classiqtinsp_1_1_c_inspection_task_gui_comp_base.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CInspectionTaskGuiComp, iinsp::IInspectionTask &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CInspectionTaskGuiComp, iinsp::IInspectionTask &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp_base.html</anchorfile>
+      <anchor>a0826b1dc6a7362db434d747d51dc5838</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iqtinsp::CInspectionTaskGuiComp</name>
     <filename>classiqtinsp_1_1_c_inspection_task_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CInspectionTaskGuiComp, iinsp::IInspectionTask &gt;</base>
+    <base>iqtinsp::CInspectionTaskGuiCompBase</base>
     <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="enumeration">
       <name>DataRole</name>
@@ -22537,10 +22558,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CInspectionTaskGuiComp, iinsp::IInspectionTask &gt;</type>
+      <type>CInspectionTaskGuiCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>afd4f936d4b70cd95d6c23a82318a5812</anchor>
+      <anchor>a84ee3833e39025fdb325e2db3a6387e1</anchor>
       <arglist></arglist>
     </member>
     <member kind="signal">
@@ -22652,14 +22673,21 @@
       <type>void</type>
       <name>OnAutoTest</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a1cddc4786a0052dadce7819e10b1c380</anchor>
-      <arglist>()</arglist>
+      <anchor>a5f93c7baf435726bb8506471b4487f11</anchor>
+      <arglist>(bool forward=true)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_TestAllButton_clicked</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
       <anchor>ac510d3d7c36ad1a46809403bd704f666</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_TestBackButton_clicked</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a4a9035bf7ba3b4d25aa1b04fb21d4a30</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">

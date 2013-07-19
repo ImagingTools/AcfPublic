@@ -40,7 +40,7 @@
 <div class="title">iqtinsp::CInspectionTaskGuiComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqtinsp::CInspectionTaskGuiComp" --><!-- doxytag: inherits="TDesignerGuiObserverCompBase&lt; Ui::CInspectionTaskGuiComp, iinsp::IInspectionTask &gt;,imod::CMultiModelDispatcherBase" -->
+<!-- doxytag: class="iqtinsp::CInspectionTaskGuiComp" --><!-- doxytag: inherits="iqtinsp::CInspectionTaskGuiCompBase,imod::CMultiModelDispatcherBase" -->
 <p><code>#include &lt;<a class="el" href="_c_inspection_task_gui_comp_8h_source.html">CInspectionTaskGuiComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iqtinsp::CInspectionTaskGuiComp:</div>
@@ -48,10 +48,11 @@ Inheritance diagram for iqtinsp::CInspectionTaskGuiComp:</div>
  <div class="center">
   <img src="classiqtinsp_1_1_c_inspection_task_gui_comp.png" usemap="#iqtinsp::CInspectionTaskGuiComp_map" alt=""/>
   <map id="iqtinsp::CInspectionTaskGuiComp_map" name="iqtinsp::CInspectionTaskGuiComp_map">
+<area href="classiqtinsp_1_1_c_inspection_task_gui_comp_base.html" alt="iqtinsp::CInspectionTaskGuiCompBase" shape="rect" coords="0,112,1136,136"/>
+<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_c_multi_model_dispatcher_base.html" alt="imod::CMultiModelDispatcherBase" shape="rect" coords="1146,112,2282,136"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqtgui_1_1_t_designer_gui_observer_comp_base.html" alt="iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CInspectionTaskGuiComp, iinsp::IInspectionTask &gt;" shape="rect" coords="0,56,1136,80"/>
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_c_multi_model_dispatcher_base.html" alt="imod::CMultiModelDispatcherBase" shape="rect" coords="1146,56,2282,80"/>
+<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="1146,56,2282,80"/>
 <area href="class_t_model_observer_comp_wrap.html" alt="TModelObserverCompWrap" shape="rect" coords="0,0,1136,24"/>
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="1146,0,2282,24"/>
 </map>
  </div></div>
 
@@ -62,10 +63,7 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#aaf567d81493ff1fd3b1e02461dd7f453">DataRole</a> { <a class="el" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#aaf567d81493ff1fd3b1e02461dd7f453af4ee775a7ab84f68029768c86bf4e4ba">DR_TASK_INDEX</a> =  Qt::UserRole + 1, 
 <a class="el" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#aaf567d81493ff1fd3b1e02461dd7f453a05d6708a666b15d413ee95e52937d050">DR_SHAPE_INDEX</a>
  }</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase</a><br class="typebreak"/>
-&lt; Ui::CInspectionTaskGuiComp, <br class="typebreak"/>
-<a class="el" href="classiinsp_1_1_i_inspection_task.html">iinsp::IInspectionTask</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#afd4f936d4b70cd95d6c23a82318a5812">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiqtinsp_1_1_c_inspection_task_gui_comp_base.html">CInspectionTaskGuiCompBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#a84ee3833e39025fdb325e2db3a6387e1">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="signals"></a>
 Signals</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#a2a04d3e528fc60d0d35bd6e8f0e5c283">DoAutoTest</a> ()</td></tr>
@@ -87,8 +85,9 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#a0d37fc605b71cd0d4ca36c279c2810dc">OnEditorChanged</a> (int index)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#a1cddc4786a0052dadce7819e10b1c380">OnAutoTest</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#a5f93c7baf435726bb8506471b4487f11">OnAutoTest</a> (bool forward=true)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#ac510d3d7c36ad1a46809403bd704f666">on_TestAllButton_clicked</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#a4a9035bf7ba3b4d25aa1b04fb21d4a30">on_TestBackButton_clicked</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#af9deac7d7047539e17471bb4ef2b9dad">on_AutoTestButton_clicked</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#ad57d346d313ce25fa7e154a47d8df439">OnLoadParams</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#afd406ff1531b6f4f709b625c5e3514e4">OnSaveParams</a> ()</td></tr>
@@ -109,22 +108,22 @@ Protected Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_inspection_task_gui_comp_8h_source.html#l00035">35</a> of file <a class="el" href="_c_inspection_task_gui_comp_8h_source.html">CInspectionTaskGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_inspection_task_gui_comp_8h_source.html#l00058">58</a> of file <a class="el" href="_c_inspection_task_gui_comp_8h_source.html">CInspectionTaskGuiComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="afd4f936d4b70cd95d6c23a82318a5812"></a><!-- doxytag: member="iqtinsp::CInspectionTaskGuiComp::BaseClass" ref="afd4f936d4b70cd95d6c23a82318a5812" args="" -->
+<a class="anchor" id="a84ee3833e39025fdb325e2db3a6387e1"></a><!-- doxytag: member="iqtinsp::CInspectionTaskGuiComp::BaseClass" ref="a84ee3833e39025fdb325e2db3a6387e1" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase</a>&lt;Ui::CInspectionTaskGuiComp, <a class="el" href="classiinsp_1_1_i_inspection_task.html">iinsp::IInspectionTask</a>&gt; <a class="el" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#afd4f936d4b70cd95d6c23a82318a5812">iqtinsp::CInspectionTaskGuiComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="classiqtinsp_1_1_c_inspection_task_gui_comp_base.html">CInspectionTaskGuiCompBase</a> <a class="el" href="classiqtinsp_1_1_c_inspection_task_gui_comp.html#a84ee3833e39025fdb325e2db3a6387e1">iqtinsp::CInspectionTaskGuiComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqtgui_1_1_t_designer_gui_observer_comp_base.html#a5fd4bd071b17d67ebfc151794f14c4ea">iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CInspectionTaskGuiComp, iinsp::IInspectionTask &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classiqtinsp_1_1_c_inspection_task_gui_comp_base.html#a0826b1dc6a7362db434d747d51dc5838">iqtinsp::CInspectionTaskGuiCompBase</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_inspection_task_gui_comp_8h_source.html#l00042">42</a> of file <a class="el" href="_c_inspection_task_gui_comp_8h_source.html">CInspectionTaskGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_inspection_task_gui_comp_8h_source.html#l00065">65</a> of file <a class="el" href="_c_inspection_task_gui_comp_8h_source.html">CInspectionTaskGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -148,7 +147,7 @@ Protected Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_inspection_task_gui_comp_8h_source.html#l00044">44</a> of file <a class="el" href="_c_inspection_task_gui_comp_8h_source.html">CInspectionTaskGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_inspection_task_gui_comp_8h_source.html#l00067">67</a> of file <a class="el" href="_c_inspection_task_gui_comp_8h_source.html">CInspectionTaskGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -525,6 +524,22 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a4a9035bf7ba3b4d25aa1b04fb21d4a30"></a><!-- doxytag: member="iqtinsp::CInspectionTaskGuiComp::on_TestBackButton_clicked" ref="a4a9035bf7ba3b4d25aa1b04fb21d4a30" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iqtinsp::CInspectionTaskGuiComp::on_TestBackButton_clicked </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ab3b2edce0b992c95cae41f1e2d077647"></a><!-- doxytag: member="iqtinsp::CInspectionTaskGuiComp::OnAttached" ref="ab3b2edce0b992c95cae41f1e2d077647" args="(imod::IModel *modelPtr)" -->
 <div class="memitem">
 <div class="memproto">
@@ -542,14 +557,15 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1cddc4786a0052dadce7819e10b1c380"></a><!-- doxytag: member="iqtinsp::CInspectionTaskGuiComp::OnAutoTest" ref="a1cddc4786a0052dadce7819e10b1c380" args="()" -->
+<a class="anchor" id="a5f93c7baf435726bb8506471b4487f11"></a><!-- doxytag: member="iqtinsp::CInspectionTaskGuiComp::OnAutoTest" ref="a5f93c7baf435726bb8506471b4487f11" args="(bool forward=true)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void iqtinsp::CInspectionTaskGuiComp::OnAutoTest </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>forward</em> = <code>true</code></td><td>)</td>
           <td><code> [protected, slot]</code></td>
         </tr>
       </table>
