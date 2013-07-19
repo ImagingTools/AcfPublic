@@ -2029,6 +2029,8 @@
     <name>TMultiDocumentWrap.h</name>
     <path>C:/Temp/Acf/Include/idoc/</path>
     <filename>_t_multi_document_wrap_8h</filename>
+    <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
+    <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
     <includes id="_i_multi_page_document_8h" name="IMultiPageDocument.h" local="yes" imported="no">idoc/IMultiPageDocument.h</includes>
     <includes id="_c_standard_document_meta_info_8h" name="CStandardDocumentMetaInfo.h" local="yes" imported="no">idoc/CStandardDocumentMetaInfo.h</includes>
     <class kind="class">idoc::TMultiDocumentWrap</class>
@@ -3684,11 +3686,12 @@
     <name>CMultiBitmapViewComp.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_multi_bitmap_view_comp_8h</filename>
-    <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="no" imported="no">iqtgui/TGuiComponentBase.h</includes>
+    <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="no" imported="no">istd/TPointerVector.h</includes>
     <includes id="_t_model_observer_comp_wrap_8h" name="TModelObserverCompWrap.h" local="no" imported="no">ibase/TModelObserverCompWrap.h</includes>
     <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="no" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="no" imported="no">imod/TSingleModelObserverBase.h</includes>
     <includes id="_i_information_provider_8h" name="IInformationProvider.h" local="no" imported="no">istd/IInformationProvider.h</includes>
+    <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="no" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="no" imported="no">iqtgui/TGuiObserverWrap.h</includes>
     <includes id="_i_view_extender_8h" name="IViewExtender.h" local="no" imported="no">iqt2d/IViewExtender.h</includes>
     <includes id="_i_view_provider_8h" name="IViewProvider.h" local="no" imported="no">iqt2d/IViewProvider.h</includes>
@@ -21448,8 +21451,8 @@
   <compound kind="class">
     <name>idoc::TMultiDocumentWrap</name>
     <filename>classidoc_1_1_t_multi_document_wrap.html</filename>
-    <templarg></templarg>
-    <templarg></templarg>
+    <templarg>Base</templarg>
+    <templarg>PageInterface</templarg>
     <base virtualness="virtual">Base</base>
     <base>idoc::CStandardDocumentMetaInfo</base>
     <member kind="typedef">
@@ -21468,16 +21471,16 @@
     </member>
     <member kind="typedef">
       <type>PageInterface</type>
-      <name>PageInterface</name>
+      <name>PageInterfaceType</name>
       <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
-      <anchor>a4f82691eed9ec1b60cbc5621ebccf8d0</anchor>
+      <anchor>a2098e3f9b623017cf3c7abf4232f5d5f</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>const PageInterface *</type>
+      <type>const PageInterfaceType *</type>
       <name>GetPageObject</name>
       <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
-      <anchor>a47be0572498b4d329514e30592119479</anchor>
+      <anchor>a11d79627b37f9ef77a8c30e352df94f7</anchor>
       <arglist>(int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -33678,16 +33681,16 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnGuiCreated</name>
+      <name>OnGuiModelAttached</name>
       <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
-      <anchor>a94242a0fa5d7badea7466d6dda97e797</anchor>
+      <anchor>a5d3ee208e46d844951373876126df6ff</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnComponentCreated</name>
+      <name>OnGuiCreated</name>
       <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
-      <anchor>a3ef87841702a0e91120008246851150f</anchor>
+      <anchor>a94242a0fa5d7badea7466d6dda97e797</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

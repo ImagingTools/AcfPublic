@@ -1,8 +1,8 @@
 /********************************************************************************
 **
-**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -15,30 +15,38 @@
 **	contact us at info@imagingtools.de.
 **
 ** 	See http://www.ilena.org, write info@imagingtools.de or contact
-**	by Skype to ACF_infoline for further information about the ACF.
+**	by Skype to ACF_infoline for further information about the ACF-Solutions.
 **
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#ifndef icam_ISnapControl_included
+#define icam_ISnapControl_included
 
 
-namespace istd
+// ACF includes
+#include "istd/IPolymorphic.h"
+
+
+namespace icam
 {
 
 
-enum RepositoryState
+class ISnapControl: public istd::IPolymorphic
 {
-	RS_ORIGINAL_VERSION =  3022,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+public:
+	enum SnapDirection
+	{
+		SD_FORWARD,
+		SD_BACK
+	};
+
+	virtual void SetSnapDirection(int snapDirection) = 0;
+	virtual int GetSnapDirection() const = 0;
 };
 
 
-} // namespace istd
+} // namespace icam
 
 
-#endif // !istd_AcfVersion_included
-
-
+#endif // !icam_ISnapControl_included

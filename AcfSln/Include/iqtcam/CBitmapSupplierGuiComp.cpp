@@ -30,6 +30,7 @@
 #include "iproc/ISupplier.h"
 #include "iview/CImageShape.h"
 #include "iview/CViewBase.h"
+#include "icam/ISnapControl.h"
 
 
 namespace iqtcam
@@ -56,18 +57,23 @@ const iimg::IBitmap* CBitmapSupplierGuiComp::GetBitmap() const
 
 void CBitmapSupplierGuiComp::on_SnapImageButton_clicked()
 {
-	iproc::ISupplier* supplierPtr = GetObjectPtr();
-	if (supplierPtr != NULL){
-		supplierPtr->InvalidateSupplier();
-		supplierPtr->EnsureWorkInitialized();
-		supplierPtr->EnsureWorkFinished();
+	icam::ISnapControl* snapControlPtr = dynamic_cast<icam::ISnapControl*>(GetObjectPtr());
+	if (snapControlPtr != NULL){
+		snapControlPtr->SetSnapDirection(icam::ISnapControl::SD_FORWARD);
+	}
 
-		if (supplierPtr->GetWorkStatus() >= iproc::ISupplier::WS_ERROR){
-			QMessageBox::warning(
-						GetQtWidget(),
-						QObject::tr("Error"),
-						QObject::tr("Snap Error"));
-		}
+	// snap with UI message by default
+	DoSnap();
+}
+
+
+void CBitmapSupplierGuiComp::on_SnapBackImageButton_clicked()
+{
+	icam::ISnapControl* snapControlPtr = dynamic_cast<icam::ISnapControl*>(GetObjectPtr());
+	if (snapControlPtr != NULL){
+		snapControlPtr->SetSnapDirection(icam::ISnapControl::SD_BACK);
+
+		DoSnap();
 	}
 }
 
@@ -111,6 +117,14 @@ void CBitmapSupplierGuiComp::on_SaveParamsButton_clicked()
 
 void CBitmapSupplierGuiComp::OnTimerReady()
 {
+	DoSnap(true);
+}
+
+
+// protected methods
+
+void CBitmapSupplierGuiComp::DoSnap(bool noGui)
+{
 	iproc::ISupplier* supplierPtr = GetObjectPtr();
 	if (supplierPtr != NULL){
 		supplierPtr->InvalidateSupplier();
@@ -118,13 +132,18 @@ void CBitmapSupplierGuiComp::OnTimerReady()
 		supplierPtr->EnsureWorkFinished();
 
 		if (supplierPtr->GetWorkStatus() >= iproc::ISupplier::WS_ERROR){
-			SendCriticalMessage(0, QObject::tr("Snap Error"));
+			if (noGui){
+				SendCriticalMessage(0, QObject::tr("Snap Error"));
+			} else {
+				QMessageBox::warning(
+					GetQtWidget(),
+					QObject::tr("Error"),
+					QObject::tr("Snap Error"));
+			}
 		}
 	}
 }
 
-
-// protected methods
 
 // reimplemented (iqtgui::CGuiComponentBase)
 
@@ -133,6 +152,9 @@ void CBitmapSupplierGuiComp::OnGuiCreated()
 	BaseClass::OnGuiCreated();
 
 	SaveImageButton->setVisible(m_bitmapLoaderCompPtr.IsValid());
+
+	icam::ISnapControl* snapControlPtr = dynamic_cast<icam::ISnapControl*>(GetObjectPtr());
+	SnapBackImageButton->setVisible(snapControlPtr != NULL);
 }
 
 

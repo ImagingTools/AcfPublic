@@ -42,9 +42,8 @@ const iimg::IBitmap* CSnapBitmapSupplierComp::GetBitmap() const
 	if (productPtr != NULL){
 		return productPtr->second.GetPtr();
 	}
-	else{
-		return NULL;
-	}
+
+	return NULL;
 }
 
 
@@ -56,9 +55,8 @@ const i2d::ICalibration2d* CSnapBitmapSupplierComp::GetCalibration() const
 	if (productPtr != NULL){
 		return productPtr->first.GetPtr();
 	}
-	else{
-		return NULL;
-	}
+
+	return NULL;
 }
 
 

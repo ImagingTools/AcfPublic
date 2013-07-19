@@ -68,10 +68,10 @@ Inheritance diagram for idoc::TMultiDocumentWrap&lt; Base, PageInterface &gt;:</
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_base.html">Base</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a8e21072a48ee93b25cb64ca9fc69da26">BaseClass</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classidoc_1_1_c_standard_document_meta_info.html">CStandardDocumentMetaInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a206fdab16e7a0ff48e961f3a78f08944">BaseClass2</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a4f82691eed9ec1b60cbc5621ebccf8d0">PageInterface</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a4f82691eed9ec1b60cbc5621ebccf8d0">PageInterface</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef PageInterface&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a2098e3f9b623017cf3c7abf4232f5d5f">PageInterfaceType</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a4f82691eed9ec1b60cbc5621ebccf8d0">PageInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a47be0572498b4d329514e30592119479">GetPageObject</a> (int pageIndex) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a2098e3f9b623017cf3c7abf4232f5d5f">PageInterfaceType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a11d79627b37f9ef77a8c30e352df94f7">GetPageObject</a> (int pageIndex) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_t_multi_document_wrap.html#abc1e712e8e994c7e51f556ab30ec842f">GetPagesCount</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a7d4b60c4dc4900ca56396ea471443a9b">GetDocumentPage</a> (int pageIndex) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a45d956959268d29ea575380bf428655f">ResetPages</a> ()</td></tr>
@@ -80,7 +80,7 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-types"></a>
 Protected Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector</a><br class="typebreak"/>
-&lt; <a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a4f82691eed9ec1b60cbc5621ebccf8d0">PageInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_t_multi_document_wrap.html#ac0c01fcc7298f837b6fc3fb67528f528">Pages</a></td></tr>
+&lt; PageInterface &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_t_multi_document_wrap.html#ac0c01fcc7298f837b6fc3fb67528f528">Pages</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classidoc_1_1_t_multi_document_wrap.html#ac0c01fcc7298f837b6fc3fb67528f528">Pages</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_t_multi_document_wrap.html#ad22f5d0f5846248b0293446075496a79">m_documentPages</a></td></tr>
@@ -91,50 +91,16 @@ class idoc::TMultiDocumentWrap&lt; Base, PageInterface &gt;</h3>
 
 <p>Generic implementation of <a class="el" href="classidoc_1_1_i_multi_page_document.html" title="Simple interface for a structured document.">IMultiPageDocument</a> interface. </p>
 
-<p>Definition at line <a class="el" href="_t_multi_document_wrap_8h_source.html#l00018">18</a> of file <a class="el" href="_t_multi_document_wrap_8h_source.html">TMultiDocumentWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_document_wrap_8h_source.html#l00020">20</a> of file <a class="el" href="_t_multi_document_wrap_8h_source.html">TMultiDocumentWrap.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a8e21072a48ee93b25cb64ca9fc69da26"></a><!-- doxytag: member="idoc::TMultiDocumentWrap::BaseClass" ref="a8e21072a48ee93b25cb64ca9fc69da26" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Base , class PageInterface &gt; </div>
+template&lt;class Base, class PageInterface&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="class_base.html">Base</a> <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">idoc::TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, <a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a4f82691eed9ec1b60cbc5621ebccf8d0">PageInterface</a> &gt;::<a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a8e21072a48ee93b25cb64ca9fc69da26">BaseClass</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_t_multi_document_wrap_8h_source.html#l00023">23</a> of file <a class="el" href="_t_multi_document_wrap_8h_source.html">TMultiDocumentWrap.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a206fdab16e7a0ff48e961f3a78f08944"></a><!-- doxytag: member="idoc::TMultiDocumentWrap::BaseClass2" ref="a206fdab16e7a0ff48e961f3a78f08944" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Base , class PageInterface &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="classidoc_1_1_c_standard_document_meta_info.html">CStandardDocumentMetaInfo</a> <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">idoc::TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, <a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a4f82691eed9ec1b60cbc5621ebccf8d0">PageInterface</a> &gt;::<a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a206fdab16e7a0ff48e961f3a78f08944">BaseClass2</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_t_multi_document_wrap_8h_source.html#l00024">24</a> of file <a class="el" href="_t_multi_document_wrap_8h_source.html">TMultiDocumentWrap.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4f82691eed9ec1b60cbc5621ebccf8d0"></a><!-- doxytag: member="idoc::TMultiDocumentWrap::PageInterface" ref="a4f82691eed9ec1b60cbc5621ebccf8d0" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Base , class PageInterface &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a4f82691eed9ec1b60cbc5621ebccf8d0">PageInterface</a> <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">idoc::TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, <a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a4f82691eed9ec1b60cbc5621ebccf8d0">PageInterface</a> &gt;::<a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a4f82691eed9ec1b60cbc5621ebccf8d0">PageInterface</a></td>
+          <td class="memname">typedef <a class="el" href="class_base.html">Base</a> <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">idoc::TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, PageInterface &gt;::<a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a8e21072a48ee93b25cb64ca9fc69da26">BaseClass</a></td>
         </tr>
       </table>
 </div>
@@ -144,20 +110,54 @@ template&lt;class Base , class PageInterface &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ac0c01fcc7298f837b6fc3fb67528f528"></a><!-- doxytag: member="idoc::TMultiDocumentWrap::Pages" ref="ac0c01fcc7298f837b6fc3fb67528f528" args="" -->
+<a class="anchor" id="a206fdab16e7a0ff48e961f3a78f08944"></a><!-- doxytag: member="idoc::TMultiDocumentWrap::BaseClass2" ref="a206fdab16e7a0ff48e961f3a78f08944" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Base , class PageInterface &gt; </div>
+template&lt;class Base, class PageInterface&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector</a>&lt;<a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a4f82691eed9ec1b60cbc5621ebccf8d0">PageInterface</a>&gt; <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">idoc::TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, <a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a4f82691eed9ec1b60cbc5621ebccf8d0">PageInterface</a> &gt;::<a class="el" href="classidoc_1_1_t_multi_document_wrap.html#ac0c01fcc7298f837b6fc3fb67528f528">Pages</a><code> [protected]</code></td>
+          <td class="memname">typedef <a class="el" href="classidoc_1_1_c_standard_document_meta_info.html">CStandardDocumentMetaInfo</a> <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">idoc::TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, PageInterface &gt;::<a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a206fdab16e7a0ff48e961f3a78f08944">BaseClass2</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_document_wrap_8h_source.html#l00037">37</a> of file <a class="el" href="_t_multi_document_wrap_8h_source.html">TMultiDocumentWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_document_wrap_8h_source.html#l00026">26</a> of file <a class="el" href="_t_multi_document_wrap_8h_source.html">TMultiDocumentWrap.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2098e3f9b623017cf3c7abf4232f5d5f"></a><!-- doxytag: member="idoc::TMultiDocumentWrap::PageInterfaceType" ref="a2098e3f9b623017cf3c7abf4232f5d5f" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Base, class PageInterface&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef PageInterface <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">idoc::TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, PageInterface &gt;::<a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a2098e3f9b623017cf3c7abf4232f5d5f">PageInterfaceType</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_multi_document_wrap_8h_source.html#l00027">27</a> of file <a class="el" href="_t_multi_document_wrap_8h_source.html">TMultiDocumentWrap.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac0c01fcc7298f837b6fc3fb67528f528"></a><!-- doxytag: member="idoc::TMultiDocumentWrap::Pages" ref="ac0c01fcc7298f837b6fc3fb67528f528" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Base, class PageInterface&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector</a>&lt;PageInterface&gt; <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">idoc::TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, PageInterface &gt;::<a class="el" href="classidoc_1_1_t_multi_document_wrap.html#ac0c01fcc7298f837b6fc3fb67528f528">Pages</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_t_multi_document_wrap_8h_source.html#l00039">39</a> of file <a class="el" href="_t_multi_document_wrap_8h_source.html">TMultiDocumentWrap.h</a>.</p>
 
 </div>
 </div>
@@ -169,7 +169,7 @@ template&lt;class Base , class PageInterface &gt; </div>
 template&lt;class Base , class PageInterface &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classidoc_1_1_i_document_meta_info.html">IDocumentMetaInfo</a> &amp; <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">idoc::TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, <a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a4f82691eed9ec1b60cbc5621ebccf8d0">PageInterface</a> &gt;::GetDocumentMetaInfo </td>
+          <td class="memname">const <a class="el" href="classidoc_1_1_i_document_meta_info.html">IDocumentMetaInfo</a> &amp; <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">idoc::TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, PageInterface &gt;::GetDocumentMetaInfo </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -178,7 +178,7 @@ template&lt;class Base , class PageInterface &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_document_wrap_8h_source.html#l00095">95</a> of file <a class="el" href="_t_multi_document_wrap_8h_source.html">TMultiDocumentWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_document_wrap_8h_source.html#l00097">97</a> of file <a class="el" href="_t_multi_document_wrap_8h_source.html">TMultiDocumentWrap.h</a>.</p>
 
 </div>
 </div>
@@ -189,7 +189,7 @@ template&lt;class Base , class PageInterface &gt; </div>
 template&lt;class Base , class PageInterface &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp; <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">idoc::TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, <a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a4f82691eed9ec1b60cbc5621ebccf8d0">PageInterface</a> &gt;::GetDocumentPage </td>
+          <td class="memname">const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp; <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">idoc::TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, PageInterface &gt;::GetDocumentPage </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>pageIndex</em></td><td>)</td>
@@ -199,18 +199,18 @@ template&lt;class Base , class PageInterface &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_document_wrap_8h_source.html#l00065">65</a> of file <a class="el" href="_t_multi_document_wrap_8h_source.html">TMultiDocumentWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_document_wrap_8h_source.html#l00067">67</a> of file <a class="el" href="_t_multi_document_wrap_8h_source.html">TMultiDocumentWrap.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a47be0572498b4d329514e30592119479"></a><!-- doxytag: member="idoc::TMultiDocumentWrap::GetPageObject" ref="a47be0572498b4d329514e30592119479" args="(int pageIndex) const " -->
+<a class="anchor" id="a11d79627b37f9ef77a8c30e352df94f7"></a><!-- doxytag: member="idoc::TMultiDocumentWrap::GetPageObject" ref="a11d79627b37f9ef77a8c30e352df94f7" args="(int pageIndex) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class Base , class PageInterface &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a4f82691eed9ec1b60cbc5621ebccf8d0">PageInterface</a> * <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">idoc::TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, <a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a4f82691eed9ec1b60cbc5621ebccf8d0">PageInterface</a> &gt;::GetPageObject </td>
+          <td class="memname">const <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, PageInterface &gt;::<a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a2098e3f9b623017cf3c7abf4232f5d5f">PageInterfaceType</a> * <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">idoc::TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, PageInterface &gt;::GetPageObject </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>pageIndex</em></td><td>)</td>
@@ -220,7 +220,7 @@ template&lt;class Base , class PageInterface &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_document_wrap_8h_source.html#l00046">46</a> of file <a class="el" href="_t_multi_document_wrap_8h_source.html">TMultiDocumentWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_document_wrap_8h_source.html#l00048">48</a> of file <a class="el" href="_t_multi_document_wrap_8h_source.html">TMultiDocumentWrap.h</a>.</p>
 
 </div>
 </div>
@@ -231,7 +231,7 @@ template&lt;class Base , class PageInterface &gt; </div>
 template&lt;class Base , class PageInterface &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">idoc::TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, <a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a4f82691eed9ec1b60cbc5621ebccf8d0">PageInterface</a> &gt;::GetPagesCount </td>
+          <td class="memname">int <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">idoc::TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, PageInterface &gt;::GetPagesCount </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [virtual]</code></td>
@@ -240,7 +240,7 @@ template&lt;class Base , class PageInterface &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_document_wrap_8h_source.html#l00058">58</a> of file <a class="el" href="_t_multi_document_wrap_8h_source.html">TMultiDocumentWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_document_wrap_8h_source.html#l00060">60</a> of file <a class="el" href="_t_multi_document_wrap_8h_source.html">TMultiDocumentWrap.h</a>.</p>
 
 </div>
 </div>
@@ -251,7 +251,7 @@ template&lt;class Base , class PageInterface &gt; </div>
 template&lt;class Base , class PageInterface &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">idoc::TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, <a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a4f82691eed9ec1b60cbc5621ebccf8d0">PageInterface</a> &gt;::RemovePage </td>
+          <td class="memname">bool <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">idoc::TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, PageInterface &gt;::RemovePage </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>pageIndex</em></td><td>)</td>
@@ -261,7 +261,7 @@ template&lt;class Base , class PageInterface &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_document_wrap_8h_source.html#l00081">81</a> of file <a class="el" href="_t_multi_document_wrap_8h_source.html">TMultiDocumentWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_document_wrap_8h_source.html#l00083">83</a> of file <a class="el" href="_t_multi_document_wrap_8h_source.html">TMultiDocumentWrap.h</a>.</p>
 
 </div>
 </div>
@@ -272,7 +272,7 @@ template&lt;class Base , class PageInterface &gt; </div>
 template&lt;class Base , class PageInterface &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">idoc::TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, <a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a4f82691eed9ec1b60cbc5621ebccf8d0">PageInterface</a> &gt;::ResetPages </td>
+          <td class="memname">void <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">idoc::TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, PageInterface &gt;::ResetPages </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [virtual]</code></td>
@@ -281,7 +281,7 @@ template&lt;class Base , class PageInterface &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_document_wrap_8h_source.html#l00072">72</a> of file <a class="el" href="_t_multi_document_wrap_8h_source.html">TMultiDocumentWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_document_wrap_8h_source.html#l00074">74</a> of file <a class="el" href="_t_multi_document_wrap_8h_source.html">TMultiDocumentWrap.h</a>.</p>
 
 </div>
 </div>
@@ -290,16 +290,16 @@ template&lt;class Base , class PageInterface &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Base , class PageInterface &gt; </div>
+template&lt;class Base, class PageInterface&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classidoc_1_1_t_multi_document_wrap.html#ac0c01fcc7298f837b6fc3fb67528f528">Pages</a> <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">idoc::TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, <a class="el" href="classidoc_1_1_t_multi_document_wrap.html#a4f82691eed9ec1b60cbc5621ebccf8d0">PageInterface</a> &gt;::<a class="el" href="classidoc_1_1_t_multi_document_wrap.html#ad22f5d0f5846248b0293446075496a79">m_documentPages</a><code> [protected]</code></td>
+          <td class="memname"><a class="el" href="classidoc_1_1_t_multi_document_wrap.html#ac0c01fcc7298f837b6fc3fb67528f528">Pages</a> <a class="el" href="classidoc_1_1_t_multi_document_wrap.html">idoc::TMultiDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, PageInterface &gt;::<a class="el" href="classidoc_1_1_t_multi_document_wrap.html#ad22f5d0f5846248b0293446075496a79">m_documentPages</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_document_wrap_8h_source.html#l00039">39</a> of file <a class="el" href="_t_multi_document_wrap_8h_source.html">TMultiDocumentWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_document_wrap_8h_source.html#l00041">41</a> of file <a class="el" href="_t_multi_document_wrap_8h_source.html">TMultiDocumentWrap.h</a>.</p>
 
 </div>
 </div>

@@ -74,6 +74,11 @@ int CFileAcquisitionComp::DoProcessing(
 		inputPath = pathParamsPtr->GetPath();
 	}
 
+	bool backSnapDirection = false;
+	if (m_snapControlCompPtr.IsValid()){
+		backSnapDirection = (m_snapControlCompPtr->GetSnapDirection() == icam::ISnapControl::SD_BACK);
+	}
+
 	QString imageFileName;
 
 	QFileInfo inputPathInfo(inputPath);
@@ -84,7 +89,9 @@ int CFileAcquisitionComp::DoProcessing(
 		m_bitmapLoaderCompPtr->GetFileExtensions(extensions, ifile::IFilePersistence::QF_LOAD);
 
 		ParamsInfo& info = m_dirInfos[inputPath];
-		if (info.filesIter == info.files.end()){
+
+		if (		(backSnapDirection && info.filesIter == info.files.begin())
+				|| (!backSnapDirection && info.filesIter == info.files.end())){
 			QStringList nameFilters;
 
 			if (!extensions.isEmpty()){
@@ -101,14 +108,25 @@ int CFileAcquisitionComp::DoProcessing(
 			}
 
 			info.files = directory.entryList(nameFilters, QDir::Files | QDir::Readable);
-			info.filesIter = info.files.begin();
+			info.filesIter = info.files.end();
 		}
 
 		info.idStamp = ++m_lastIdStamp;
 
+		if (backSnapDirection){
+			if (info.filesIter == info.files.begin()){
+				info.filesIter = info.files.end();
+			}
+			info.filesIter--;
+		} else {
+			info.filesIter++;
+			if (info.filesIter >= info.files.end()){
+				info.filesIter = info.files.begin();
+			}
+		}
+
 		if (info.filesIter != info.files.end()){
 			imageFileName = directory.absoluteFilePath(*info.filesIter);
-			info.filesIter++;
 		}
 	}
 	else if (inputPathInfo.isFile()){

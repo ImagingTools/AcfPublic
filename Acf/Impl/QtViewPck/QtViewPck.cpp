@@ -159,8 +159,6 @@ I_EXPORT_COMPONENT(
 			"Image Bitmap Multiple View");
 
 
-
-
 } // namespace QtViewPck
 
 

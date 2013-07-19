@@ -95,9 +95,10 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a908f3472e990da5e4a9038eef08ab695">OnModelChanged</a> (int modelId, int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a8c5115162064a371998d80f68a577147">UpdateGui</a> (int updateFlags)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Do update of the model GUI.  <a href="#a8c5115162064a371998d80f68a577147"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a5d3ee208e46d844951373876126df6ff">OnGuiModelAttached</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when model is attached and GUI is created.  <a href="#a5d3ee208e46d844951373876126df6ff"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a94242a0fa5d7badea7466d6dda97e797">OnGuiCreated</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#a94242a0fa5d7badea7466d6dda97e797"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a3ef87841702a0e91120008246851150f">OnComponentCreated</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a7dab5727abe8a52b56bfe2040c54e240">OnComponentDestroyed</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html">CSingleView</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a56832537f36e4be1b89b810d38e9b639">CreateView</a> (QWidget *parentPtr, int id=-1, const QString &amp;title=&quot;&quot;)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-static-methods"></a>
@@ -109,7 +110,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html#l00029">29</a> of file <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html">CMultiBitmapViewComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html#l00030">30</a> of file <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html">CMultiBitmapViewComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="aec59edcc4fb43330a7f1b01cfd9d5568"></a><!-- doxytag: member="iqt2d::CMultiBitmapViewComp::BaseClass" ref="aec59edcc4fb43330a7f1b01cfd9d5568" args="" -->
 <div class="memitem">
@@ -124,7 +125,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classibase_1_1_t_model_observer_comp_wrap.html#afa3fcab514bf33fbdb6ec2f83eb8f075">ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; iimg::IMultiBitmapProvider &gt; &gt; &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html#l00039">39</a> of file <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html">CMultiBitmapViewComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html#l00040">40</a> of file <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html">CMultiBitmapViewComp.h</a>.</p>
 
 </div>
 </div>
@@ -139,7 +140,7 @@ Static Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html#l00041">41</a> of file <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html">CMultiBitmapViewComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html#l00042">42</a> of file <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html">CMultiBitmapViewComp.h</a>.</p>
 
 </div>
 </div>
@@ -260,24 +261,6 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3ef87841702a0e91120008246851150f"></a><!-- doxytag: member="iqt2d::CMultiBitmapViewComp::OnComponentCreated" ref="a3ef87841702a0e91120008246851150f" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void iqt2d::CMultiBitmapViewComp::OnComponentCreated </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="classibase_1_1_t_model_observer_comp_wrap.html#ac046dfe3995e995397f20a1ebf031436">ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; iimg::IMultiBitmapProvider &gt; &gt; &gt;</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a7dab5727abe8a52b56bfe2040c54e240"></a><!-- doxytag: member="iqt2d::CMultiBitmapViewComp::OnComponentDestroyed" ref="a7dab5727abe8a52b56bfe2040c54e240" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -313,6 +296,26 @@ Static Protected Attributes</h2></td></tr>
 <p>Called just after GUI is initialized. </p>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#ac57a710831aca6724b034983717d1a12">iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; iimg::IMultiBitmapProvider &gt; &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5d3ee208e46d844951373876126df6ff"></a><!-- doxytag: member="iqt2d::CMultiBitmapViewComp::OnGuiModelAttached" ref="a5d3ee208e46d844951373876126df6ff" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqt2d::CMultiBitmapViewComp::OnGuiModelAttached </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Called when model is attached and GUI is created. </p>
+
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#a171dcddc85378f81d53c29c8367f7364">iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; iimg::IMultiBitmapProvider &gt; &gt;</a>.</p>
 
 </div>
 </div>
@@ -384,7 +387,7 @@ Static Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html#l00058">58</a> of file <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html">CMultiBitmapViewComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html#l00059">59</a> of file <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html">CMultiBitmapViewComp.h</a>.</p>
 
 </div>
 </div>

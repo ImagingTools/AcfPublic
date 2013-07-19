@@ -209,6 +209,13 @@
     <namespace>icam</namespace>
   </compound>
   <compound kind="file">
+    <name>ISnapControl.h</name>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
+    <filename>_i_snap_control_8h</filename>
+    <class kind="class">icam::ISnapControl</class>
+    <namespace>icam</namespace>
+  </compound>
+  <compound kind="file">
     <name>CAttributeEditorComp.h</name>
     <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_attribute_editor_comp_8h</filename>
@@ -2553,6 +2560,7 @@
     <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>_c_file_acquisition_comp_8h</filename>
     <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
+    <includes id="_i_snap_control_8h" name="ISnapControl.h" local="yes" imported="no">icam/ISnapControl.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
     <includes id="iqtcam_8h" name="iqtcam.h" local="yes" imported="no">iqtcam/iqtcam.h</includes>
     <class kind="class">iqtcam::CFileAcquisitionComp</class>
@@ -3717,6 +3725,7 @@
     <class kind="class">icam::ICameraInfo</class>
     <class kind="class">icam::IExposureConstraints</class>
     <class kind="class">icam::IExposureParams</class>
+    <class kind="class">icam::ISnapControl</class>
   </compound>
   <compound kind="class">
     <name>icam::CAcquisitionConstraintsComp</name>
@@ -4458,6 +4467,43 @@
       <anchorfile>classicam_1_1_i_exposure_params.html</anchorfile>
       <anchor>a5b4f1e2f64bb83c43e5db5f4fbc5766a</anchor>
       <arglist>(double time)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icam::ISnapControl</name>
+    <filename>classicam_1_1_i_snap_control.html</filename>
+    <base>istd::IPolymorphic</base>
+    <member kind="enumeration">
+      <name>SnapDirection</name>
+      <anchorfile>classicam_1_1_i_snap_control.html</anchorfile>
+      <anchor>a20585ec2576da79aaf5176253f21e993</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SD_FORWARD</name>
+      <anchorfile>classicam_1_1_i_snap_control.html</anchorfile>
+      <anchor>a20585ec2576da79aaf5176253f21e993a0cd2719fba5f656529a0f9659dfc0a6e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SD_BACK</name>
+      <anchorfile>classicam_1_1_i_snap_control.html</anchorfile>
+      <anchor>a20585ec2576da79aaf5176253f21e993a1cd075f13886c828d151e729fac2b24c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetSnapDirection</name>
+      <anchorfile>classicam_1_1_i_snap_control.html</anchorfile>
+      <anchor>ae4ba428074cd67d03fea435e918ab34b</anchor>
+      <arglist>(int snapDirection)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetSnapDirection</name>
+      <anchorfile>classicam_1_1_i_snap_control.html</anchorfile>
+      <anchor>a4f866aa5314072340e6e3c3d0948dccb</anchor>
+      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -8391,6 +8437,13 @@
       <anchorfile>classidocproc_1_1_c_rendered_document_preview_generator_comp.html</anchorfile>
       <anchor>a3bd6bf4978b97882fa1dfd304678c467</anchor>
       <arglist>(int bitmapIndex) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnDetached</name>
+      <anchorfile>classidocproc_1_1_c_rendered_document_preview_generator_comp.html</anchorfile>
+      <anchor>a52d2eeb57af33a829af2c9e7be1136e6</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -21324,6 +21377,13 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
+      <name>on_SnapBackImageButton_clicked</name>
+      <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>acb0e02c4483ce6e90ab67a5f0c1e7366</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
       <name>on_LiveImageButton_toggled</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
       <anchor>a56566f25be437675769a456a4bccd1e7</anchor>
@@ -21356,6 +21416,13 @@
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
       <anchor>affc4ca7daa0ee5876766e393af981885</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>DoSnap</name>
+      <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>ab1d36b94f83326697268d63ada668c37</anchor>
+      <arglist>(bool noGui=false)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
