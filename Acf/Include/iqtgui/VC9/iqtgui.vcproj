@@ -309,6 +309,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CMultiPageWidget.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\CObjectPreviewGuiComp.cpp"
 				>
 			</File>
@@ -325,11 +329,19 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CSimpleGuiContainerDelegate.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\CSimpleMainWindowGuiComp.cpp"
 				>
 			</File>
 			<File
 				RelativePath="..\CSplashScreenGuiComp.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\CSplitterDelegate.cpp"
 				>
 			</File>
 			<File
@@ -353,6 +365,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CTabWidgetDelegate.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\CTextElider.cpp"
 				>
 			</File>
@@ -362,6 +378,10 @@
 			</File>
 			<File
 				RelativePath="..\CToolBarWidgetGuiComp.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\CToolBoxDelegate.cpp"
 				>
 			</File>
 			<File
@@ -521,6 +541,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CMultiPageWidget.h"
+				>
+			</File>
+			<File
 				RelativePath="..\CObjectPreviewGuiComp.h"
 				>
 			</File>
@@ -537,11 +561,19 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CSimpleGuiContainerDelegate.h"
+				>
+			</File>
+			<File
 				RelativePath="..\CSimpleMainWindowGuiComp.h"
 				>
 			</File>
 			<File
 				RelativePath="..\CSplashScreenGuiComp.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CSplitterDelegate.h"
 				>
 			</File>
 			<File
@@ -565,6 +597,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CTabWidgetDelegate.h"
+				>
+			</File>
+			<File
 				RelativePath="..\CTextElider.h"
 				>
 			</File>
@@ -574,6 +610,10 @@
 			</File>
 			<File
 				RelativePath="..\CToolBarWidgetGuiComp.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CToolBoxDelegate.h"
 				>
 			</File>
 			<File
@@ -610,6 +650,10 @@
 			</File>
 			<File
 				RelativePath="..\IMainWindowComponent.h"
+				>
+			</File>
+			<File
+				RelativePath="..\IMultiPageWidgetDelegate.h"
 				>
 			</File>
 			<File
