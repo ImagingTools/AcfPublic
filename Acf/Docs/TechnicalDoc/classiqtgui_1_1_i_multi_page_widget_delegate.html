@@ -32,6 +32,7 @@
 </div>
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">iqtgui::IMultiPageWidgetDelegate Class Reference</div>  </div>
@@ -59,10 +60,24 @@ Inheritance diagram for iqtgui::IMultiPageWidgetDelegate:</div>
 
 <p><a href="classiqtgui_1_1_i_multi_page_widget_delegate-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642eb">PageHeaderPosition</a> { <br/>
+&#160;&#160;<a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642eba078e51fcbff47f3af6ec2ac31f7515a4">PHP_AUTO</a>, 
+<a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642ebaa197d5b51199f55d3d355d64d1ea5eb3">PHP_LEFT</a>, 
+<a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642eba8a4a808c7dfa530ed099f0a2332d81ee">PHP_TOP</a>, 
+<a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642ebaaa7775523486e69fcb9bbd29cfd3cafe">PHP_RIGHT</a>, 
+<br/>
+&#160;&#160;<a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642ebaffcf4404344fabda374197d30ab68dbb">PHP_BOTTOM</a>
+<br/>
+ }</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum for describing of page header bar position on the container widget.  <a href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642eb">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#aca569e934a9ae7751b2051038c7ec0c6">CreateContainerWidget</a> (QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create container for the page widgets.  <a href="#aca569e934a9ae7751b2051038c7ec0c6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a2c58bdbc332ab4d4e14da95629514e05">SetPageHeaderPosition</a> (QWidget &amp;containerWidget, <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642eb">PageHeaderPosition</a> pageHeaderPosition)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the page header bar on the container UI.  <a href="#a2c58bdbc332ab4d4e14da95629514e05"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a8dd5a66abf85506d3cd0297062450a6b">InsertPage</a> (QWidget &amp;containerWidget, QWidget *pageWidgetPtr, const QString &amp;pageTitle, int pageIndex=-1)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new page to the container.  <a href="#a8dd5a66abf85506d3cd0297062450a6b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#aa4b7395d618c8acb640369c1faf369be">RemovePage</a> (QWidget &amp;containerWidget, int pageIndex)=0</td></tr>
@@ -106,7 +121,44 @@ Public Member Functions</h2></td></tr>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiqtgui_1_1_c_tab_widget_delegate.html" title="Implementation of the IMultiPageWidgetDelegate interface for QTabWidget.">CTabWidgetDelegate</a>, <a class="el" href="classiqtgui_1_1_c_splitter_delegate.html" title="Implementation of the IMultiPageWidgetDelegate interface for QSplitter.">CSplitterDelegate</a>, <a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html" title="Implementation of the IMultiPageWidgetDelegate interface for QToolBox.">CToolBoxDelegate</a> and <a class="el" href="classiqtgui_1_1_c_simple_gui_container_delegate.html" title="Implementation of the IMultiPageWidgetDelegate interface for a simple container of widgets...">CSimpleGuiContainerDelegate</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="_i_multi_page_widget_delegate_8h_source.html#l00022">22</a> of file <a class="el" href="_i_multi_page_widget_delegate_8h_source.html">IMultiPageWidgetDelegate.h</a>.</p>
-</div><hr/><h2>Member Function Documentation</h2>
+</div><hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="a463a78325413ff97f3f478cf485642eb"></a><!-- doxytag: member="iqtgui::IMultiPageWidgetDelegate::PageHeaderPosition" ref="a463a78325413ff97f3f478cf485642eb" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642eb">iqtgui::IMultiPageWidgetDelegate::PageHeaderPosition</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Enum for describing of page header bar position on the container widget. </p>
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a463a78325413ff97f3f478cf485642eba078e51fcbff47f3af6ec2ac31f7515a4"></a><!-- doxytag: member="PHP_AUTO" ref="a463a78325413ff97f3f478cf485642eba078e51fcbff47f3af6ec2ac31f7515a4" args="" -->PHP_AUTO</em>&nbsp;</td><td>
+<p>Default page header position (decided by container implementation) </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a463a78325413ff97f3f478cf485642ebaa197d5b51199f55d3d355d64d1ea5eb3"></a><!-- doxytag: member="PHP_LEFT" ref="a463a78325413ff97f3f478cf485642ebaa197d5b51199f55d3d355d64d1ea5eb3" args="" -->PHP_LEFT</em>&nbsp;</td><td>
+<p>The page header will be placed on the left side of the container if possible. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a463a78325413ff97f3f478cf485642eba8a4a808c7dfa530ed099f0a2332d81ee"></a><!-- doxytag: member="PHP_TOP" ref="a463a78325413ff97f3f478cf485642eba8a4a808c7dfa530ed099f0a2332d81ee" args="" -->PHP_TOP</em>&nbsp;</td><td>
+<p>The page header will be placed on the top side of the container if possible. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a463a78325413ff97f3f478cf485642ebaaa7775523486e69fcb9bbd29cfd3cafe"></a><!-- doxytag: member="PHP_RIGHT" ref="a463a78325413ff97f3f478cf485642ebaaa7775523486e69fcb9bbd29cfd3cafe" args="" -->PHP_RIGHT</em>&nbsp;</td><td>
+<p>The page header will be placed on the right side of the container if possible. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a463a78325413ff97f3f478cf485642ebaffcf4404344fabda374197d30ab68dbb"></a><!-- doxytag: member="PHP_BOTTOM" ref="a463a78325413ff97f3f478cf485642ebaffcf4404344fabda374197d30ab68dbb" args="" -->PHP_BOTTOM</em>&nbsp;</td><td>
+<p>The page header will be placed on the bottom side of the container if possible. </p>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_i_multi_page_widget_delegate_8h_source.html#l00028">28</a> of file <a class="el" href="_i_multi_page_widget_delegate_8h_source.html">IMultiPageWidgetDelegate.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="aca569e934a9ae7751b2051038c7ec0c6"></a><!-- doxytag: member="iqtgui::IMultiPageWidgetDelegate::CreateContainerWidget" ref="aca569e934a9ae7751b2051038c7ec0c6" args="(QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)=0" -->
 <div class="memitem">
 <div class="memproto">
@@ -529,6 +581,37 @@ Public Member Functions</h2></td></tr>
 <p>Set page enabled/disabled. </p>
 
 <p>Implemented in <a class="el" href="classiqtgui_1_1_c_tab_widget_delegate.html#ab51834ecafaab80022a57054cf0cff79">iqtgui::CTabWidgetDelegate</a>, <a class="el" href="classiqtgui_1_1_c_simple_gui_container_delegate.html#a9d475e58bc600e04e0e66dd7d41dfe14">iqtgui::CSimpleGuiContainerDelegate</a>, <a class="el" href="classiqtgui_1_1_c_splitter_delegate.html#a87693a88ae067861209113a24dcbe1c2">iqtgui::CSplitterDelegate</a>, <a class="el" href="classiqtgui_1_1_c_stack_widget_delegate.html#a2050478e5d8108ffa04ba736ad9f3824">iqtgui::CStackWidgetDelegate</a>, and <a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#aadaa093c02280c61d5d80a30495b24aa">iqtgui::CToolBoxDelegate</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2c58bdbc332ab4d4e14da95629514e05"></a><!-- doxytag: member="iqtgui::IMultiPageWidgetDelegate::SetPageHeaderPosition" ref="a2c58bdbc332ab4d4e14da95629514e05" args="(QWidget &amp;containerWidget, PageHeaderPosition pageHeaderPosition)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iqtgui::IMultiPageWidgetDelegate::SetPageHeaderPosition </td>
+          <td>(</td>
+          <td class="paramtype">QWidget &amp;&#160;</td>
+          <td class="paramname"><em>containerWidget</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642eb">PageHeaderPosition</a>&#160;</td>
+          <td class="paramname"><em>pageHeaderPosition</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set the position of the page header bar on the container UI. </p>
+
+<p>Implemented in <a class="el" href="classiqtgui_1_1_c_tab_widget_delegate.html#a4d99d1996bc220a8917baa95d7a1fb1f">iqtgui::CTabWidgetDelegate</a>, <a class="el" href="classiqtgui_1_1_c_simple_gui_container_delegate.html#a40078526707514b286fd8bb68c8ddada">iqtgui::CSimpleGuiContainerDelegate</a>, <a class="el" href="classiqtgui_1_1_c_splitter_delegate.html#aff4e8beab4e0bb305bc06c2d5a9454ac">iqtgui::CSplitterDelegate</a>, <a class="el" href="classiqtgui_1_1_c_stack_widget_delegate.html#a5bc2cb8b2137c16355ecc9eed6837177">iqtgui::CStackWidgetDelegate</a>, and <a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#a884f96f302e8c613e44f44ba35ca7dd7">iqtgui::CToolBoxDelegate</a>.</p>
 
 </div>
 </div>

@@ -47,6 +47,12 @@ QWidget* CSplitterDelegate::CreateContainerWidget(QWidget* parentWidgetPtr, int 
 }
 
 
+bool CSplitterDelegate::SetPageHeaderPosition(QWidget& /*containerWidget*/, PageHeaderPosition /*pageHeaderPosition*/)
+{
+	return false;
+}
+
+
 int CSplitterDelegate::InsertPage(
 		QWidget& containerWidget,
 		QWidget* pageWidgetPtr,

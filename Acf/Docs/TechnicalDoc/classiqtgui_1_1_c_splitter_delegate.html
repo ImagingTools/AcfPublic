@@ -59,6 +59,8 @@ Inheritance diagram for iqtgui::CSplitterDelegate:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_splitter_delegate.html#adadf814137cf3c4b496d19c0b416e77c">CreateContainerWidget</a> (QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create container for the page widgets.  <a href="#adadf814137cf3c4b496d19c0b416e77c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_splitter_delegate.html#aff4e8beab4e0bb305bc06c2d5a9454ac">SetPageHeaderPosition</a> (QWidget &amp;containerWidget, <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642eb">PageHeaderPosition</a> pageHeaderPosition)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the page header bar on the container UI.  <a href="#aff4e8beab4e0bb305bc06c2d5a9454ac"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_splitter_delegate.html#a0f85a427f83472fb308ff3ce40fa3345">InsertPage</a> (QWidget &amp;containerWidget, QWidget *pageWidgetPtr, const QString &amp;pageTitle, int pageIndex=-1)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new page to the container.  <a href="#a0f85a427f83472fb308ff3ce40fa3345"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_splitter_delegate.html#aa2883753a4003adceb13869c6ea55ae2">RemovePage</a> (QWidget &amp;containerWidget, int pageIndex)</td></tr>
@@ -523,6 +525,37 @@ Public Member Functions</h2></td></tr>
 <p>Set page enabled/disabled. </p>
 
 <p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a48bc5bc03fbf6f2596373605c6b8ecba">iqtgui::IMultiPageWidgetDelegate</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aff4e8beab4e0bb305bc06c2d5a9454ac"></a><!-- doxytag: member="iqtgui::CSplitterDelegate::SetPageHeaderPosition" ref="aff4e8beab4e0bb305bc06c2d5a9454ac" args="(QWidget &amp;containerWidget, PageHeaderPosition pageHeaderPosition)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iqtgui::CSplitterDelegate::SetPageHeaderPosition </td>
+          <td>(</td>
+          <td class="paramtype">QWidget &amp;&#160;</td>
+          <td class="paramname"><em>containerWidget</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642eb">PageHeaderPosition</a>&#160;</td>
+          <td class="paramname"><em>pageHeaderPosition</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set the position of the page header bar on the container UI. </p>
+
+<p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a2c58bdbc332ab4d4e14da95629514e05">iqtgui::IMultiPageWidgetDelegate</a>.</p>
 
 </div>
 </div>

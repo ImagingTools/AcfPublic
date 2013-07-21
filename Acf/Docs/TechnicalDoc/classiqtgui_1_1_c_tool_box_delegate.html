@@ -59,6 +59,8 @@ Inheritance diagram for iqtgui::CToolBoxDelegate:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#a369950fd279a3a1ba637cda5a7bd635b">CreateContainerWidget</a> (QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create container for the page widgets.  <a href="#a369950fd279a3a1ba637cda5a7bd635b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#a884f96f302e8c613e44f44ba35ca7dd7">SetPageHeaderPosition</a> (QWidget &amp;containerWidget, <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642eb">PageHeaderPosition</a> pageHeaderPosition)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the page header bar on the container UI.  <a href="#a884f96f302e8c613e44f44ba35ca7dd7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#afb88862fa6122d6516472446b3ef5207">InsertPage</a> (QWidget &amp;containerWidget, QWidget *pageWidgetPtr, const QString &amp;pageTitle, int pageIndex=-1)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new page to the container.  <a href="#afb88862fa6122d6516472446b3ef5207"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#a872b455226c634518f0b9d8dfa4bfbcc">RemovePage</a> (QWidget &amp;containerWidget, int pageIndex)</td></tr>
@@ -523,6 +525,37 @@ Public Member Functions</h2></td></tr>
 <p>Set page enabled/disabled. </p>
 
 <p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a48bc5bc03fbf6f2596373605c6b8ecba">iqtgui::IMultiPageWidgetDelegate</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a884f96f302e8c613e44f44ba35ca7dd7"></a><!-- doxytag: member="iqtgui::CToolBoxDelegate::SetPageHeaderPosition" ref="a884f96f302e8c613e44f44ba35ca7dd7" args="(QWidget &amp;containerWidget, PageHeaderPosition pageHeaderPosition)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iqtgui::CToolBoxDelegate::SetPageHeaderPosition </td>
+          <td>(</td>
+          <td class="paramtype">QWidget &amp;&#160;</td>
+          <td class="paramname"><em>containerWidget</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642eb">PageHeaderPosition</a>&#160;</td>
+          <td class="paramname"><em>pageHeaderPosition</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set the position of the page header bar on the container UI. </p>
+
+<p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a2c58bdbc332ab4d4e14da95629514e05">iqtgui::IMultiPageWidgetDelegate</a>.</p>
 
 </div>
 </div>

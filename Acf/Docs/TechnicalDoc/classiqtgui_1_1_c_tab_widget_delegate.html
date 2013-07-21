@@ -58,8 +58,12 @@ Inheritance diagram for iqtgui::CTabWidgetDelegate:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_widget_delegate.html#a4ebb788daf49c86af00382395e262995">CTabWidgetDelegate</a> (QTabWidget::TabPosition tabPosition=QTabWidget::North, bool useDocumentMode=false)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_widget_delegate.html#a4d9ef262a0923d3450ace54e00c73758">SetTabPosition</a> (QWidget &amp;containerWidget, QTabWidget::TabPosition tabPosition)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_widget_delegate.html#a6acc0ca8138b53a08f9d10b38ddfe475">SetDocumentModeEnabled</a> (QWidget &amp;containerWidget, bool isDocumentModeEnabled=true)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_widget_delegate.html#ad0c3e0426a4d3bbb21fc125dae5abb18">CreateContainerWidget</a> (QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create container for the page widgets.  <a href="#ad0c3e0426a4d3bbb21fc125dae5abb18"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_widget_delegate.html#a4d99d1996bc220a8917baa95d7a1fb1f">SetPageHeaderPosition</a> (QWidget &amp;containerWidget, <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642eb">PageHeaderPosition</a> pageHeaderPosition)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the page header bar on the container UI.  <a href="#a4d99d1996bc220a8917baa95d7a1fb1f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_widget_delegate.html#a118dd0d63d2e2d1828605d2c5563610c">InsertPage</a> (QWidget &amp;containerWidget, QWidget *pageWidgetPtr, const QString &amp;pageTitle, int pageIndex=-1)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new page to the container.  <a href="#a118dd0d63d2e2d1828605d2c5563610c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_widget_delegate.html#aeff477b7a4ebe14b60f437385fab2b2e">RemovePage</a> (QWidget &amp;containerWidget, int pageIndex)</td></tr>
@@ -518,6 +522,33 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6acc0ca8138b53a08f9d10b38ddfe475"></a><!-- doxytag: member="iqtgui::CTabWidgetDelegate::SetDocumentModeEnabled" ref="a6acc0ca8138b53a08f9d10b38ddfe475" args="(QWidget &amp;containerWidget, bool isDocumentModeEnabled=true)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iqtgui::CTabWidgetDelegate::SetDocumentModeEnabled </td>
+          <td>(</td>
+          <td class="paramtype">QWidget &amp;&#160;</td>
+          <td class="paramname"><em>containerWidget</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isDocumentModeEnabled</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ab51834ecafaab80022a57054cf0cff79"></a><!-- doxytag: member="iqtgui::CTabWidgetDelegate::SetPageEnabled" ref="ab51834ecafaab80022a57054cf0cff79" args="(QWidget &amp;containerWidget, int pageIndex, bool isPageEnabled=true)" -->
 <div class="memitem">
 <div class="memproto">
@@ -552,6 +583,37 @@ Public Member Functions</h2></td></tr>
 <p>Set page enabled/disabled. </p>
 
 <p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a48bc5bc03fbf6f2596373605c6b8ecba">iqtgui::IMultiPageWidgetDelegate</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4d99d1996bc220a8917baa95d7a1fb1f"></a><!-- doxytag: member="iqtgui::CTabWidgetDelegate::SetPageHeaderPosition" ref="a4d99d1996bc220a8917baa95d7a1fb1f" args="(QWidget &amp;containerWidget, PageHeaderPosition pageHeaderPosition)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iqtgui::CTabWidgetDelegate::SetPageHeaderPosition </td>
+          <td>(</td>
+          <td class="paramtype">QWidget &amp;&#160;</td>
+          <td class="paramname"><em>containerWidget</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642eb">PageHeaderPosition</a>&#160;</td>
+          <td class="paramname"><em>pageHeaderPosition</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set the position of the page header bar on the container UI. </p>
+
+<p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a2c58bdbc332ab4d4e14da95629514e05">iqtgui::IMultiPageWidgetDelegate</a>.</p>
 
 </div>
 </div>
@@ -731,6 +793,33 @@ Public Member Functions</h2></td></tr>
 <p>Set page visible/hidden. </p>
 
 <p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a8896ca4180ea92e069bda7943df7b285">iqtgui::IMultiPageWidgetDelegate</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4d9ef262a0923d3450ace54e00c73758"></a><!-- doxytag: member="iqtgui::CTabWidgetDelegate::SetTabPosition" ref="a4d9ef262a0923d3450ace54e00c73758" args="(QWidget &amp;containerWidget, QTabWidget::TabPosition tabPosition)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iqtgui::CTabWidgetDelegate::SetTabPosition </td>
+          <td>(</td>
+          <td class="paramtype">QWidget &amp;&#160;</td>
+          <td class="paramname"><em>containerWidget</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QTabWidget::TabPosition&#160;</td>
+          <td class="paramname"><em>tabPosition</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>

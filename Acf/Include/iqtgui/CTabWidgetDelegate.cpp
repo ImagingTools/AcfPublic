@@ -41,6 +41,24 @@ CTabWidgetDelegate::CTabWidgetDelegate(QTabWidget::TabPosition tabPosition, bool
 }
 
 
+void CTabWidgetDelegate::SetTabPosition(QWidget& containerWidget, QTabWidget::TabPosition tabPosition)
+{
+	QTabWidget* tabWidgetPtr = dynamic_cast<QTabWidget*>(&containerWidget);
+	if (tabWidgetPtr != NULL){
+		tabWidgetPtr->setTabPosition(tabPosition);
+	}
+}
+
+
+void CTabWidgetDelegate::SetDocumentModeEnabled(QWidget& containerWidget, bool isDocumentModeEnabled)
+{
+	QTabWidget* tabWidgetPtr = dynamic_cast<QTabWidget*>(&containerWidget);
+	if (tabWidgetPtr != NULL){
+		tabWidgetPtr->setDocumentMode(isDocumentModeEnabled);
+	}
+}
+
+
 // reimplemented (IMultiPageWidgetDelegate)
 
 QWidget* CTabWidgetDelegate::CreateContainerWidget(QWidget* parentWidgetPtr, int /*orientation*/)
@@ -52,6 +70,34 @@ QWidget* CTabWidgetDelegate::CreateContainerWidget(QWidget* parentWidgetPtr, int
 	tabWidgetPtr->setDocumentMode(m_useDocumentMode);
 
 	return tabWidgetPtr;
+}
+
+
+bool CTabWidgetDelegate::SetPageHeaderPosition(QWidget& containerWidget, PageHeaderPosition pageHeaderPosition)
+{
+	QTabWidget* tabWidgetPtr = dynamic_cast<QTabWidget*>(&containerWidget);
+	if (tabWidgetPtr != NULL){
+		QTabWidget::TabPosition tabPosition = QTabWidget::North;
+		switch (pageHeaderPosition){
+			case PHP_LEFT:
+				tabPosition = QTabWidget::West;
+				break;
+			case PHP_RIGHT:
+				tabPosition = QTabWidget::East;
+				break;
+			case PHP_BOTTOM:
+				tabPosition = QTabWidget::South;
+				break;
+			default:
+				break;
+		}
+
+		tabWidgetPtr->setTabPosition(tabPosition);
+
+		return true;
+	}
+
+	return false;
 }
 
 

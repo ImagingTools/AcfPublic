@@ -4347,6 +4347,20 @@
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
+    <name>CMultiPageGuiCompBase.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_c_multi_page_gui_comp_base_8h</filename>
+    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
+    <includes id="_c_multi_model_bridge_base_8h" name="CMultiModelBridgeBase.h" local="yes" imported="no">imod/CMultiModelBridgeBase.h</includes>
+    <includes id="_i_enableable_param_8h" name="IEnableableParam.h" local="yes" imported="no">iprm/IEnableableParam.h</includes>
+    <includes id="_c_selection_param_8h" name="CSelectionParam.h" local="yes" imported="no">iprm/CSelectionParam.h</includes>
+    <includes id="_c_options_manager_8h" name="COptionsManager.h" local="yes" imported="no">iprm/COptionsManager.h</includes>
+    <includes id="_c_gui_component_base_8h" name="CGuiComponentBase.h" local="yes" imported="no">iqtgui/CGuiComponentBase.h</includes>
+    <includes id="_c_multi_page_widget_8h" name="CMultiPageWidget.h" local="yes" imported="no">iqtgui/CMultiPageWidget.h</includes>
+    <class kind="class">iqtgui::CMultiPageGuiCompBase</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
     <name>CMultiPageWidget.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_multi_page_widget_8h</filename>
@@ -4632,19 +4646,6 @@
     <filename>_i_visual_status_provider_8h</filename>
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <class kind="class">iqtgui::IVisualStatusProvider</class>
-    <namespace>iqtgui</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TContainerGuiCompBase.h</name>
-    <path>C:/Temp/Acf/Include/iqtgui/</path>
-    <filename>_t_container_gui_comp_base_8h</filename>
-    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
-    <includes id="_c_multi_model_bridge_base_8h" name="CMultiModelBridgeBase.h" local="yes" imported="no">imod/CMultiModelBridgeBase.h</includes>
-    <includes id="_i_enableable_param_8h" name="IEnableableParam.h" local="yes" imported="no">iprm/IEnableableParam.h</includes>
-    <includes id="_c_selection_param_8h" name="CSelectionParam.h" local="yes" imported="no">iprm/CSelectionParam.h</includes>
-    <includes id="_c_options_manager_8h" name="COptionsManager.h" local="yes" imported="no">iprm/COptionsManager.h</includes>
-    <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
-    <class kind="class">iqtgui::TContainerGuiCompBase</class>
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
@@ -36459,6 +36460,7 @@
     <class kind="class">iqtgui::CItemDelegate</class>
     <class kind="class">iqtgui::CModelDialogGuiComp</class>
     <class kind="class">iqtgui::CModelEditorGuiComp</class>
+    <class kind="class">iqtgui::CMultiPageGuiCompBase</class>
     <class kind="class">iqtgui::CMultiPageWidget</class>
     <class kind="class">iqtgui::CProgressManagerGuiComp</class>
     <class kind="class">iqtgui::CSelectableCommandsProviderComp</class>
@@ -36489,7 +36491,6 @@
     <class kind="class">iqtgui::IMainWindowComponent</class>
     <class kind="class">iqtgui::IMultiPageWidgetDelegate</class>
     <class kind="class">iqtgui::IVisualStatusProvider</class>
-    <class kind="class">iqtgui::TContainerGuiCompBase</class>
     <class kind="class">iqtgui::TDesignerBasicGui</class>
     <class kind="class">iqtgui::TDesignerGuiCompBase</class>
     <class kind="class">iqtgui::TDesignerGuiObserverCompBase</class>
@@ -38199,6 +38200,166 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqtgui::CMultiPageGuiCompBase</name>
+    <filename>classiqtgui_1_1_c_multi_page_gui_comp_base.html</filename>
+    <base>iqtgui::CGuiComponentBase</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <member kind="typedef">
+      <type>iqtgui::CGuiComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>ab23ebf7f99a4c2f1ae2e86877b635b20</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::CMultiModelDispatcherBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a08b5e789e141a54f216e8d01a2c67b41</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>abdb6d6f8bbe1c3a1533bd0b82b4b22b0</anchor>
+      <arglist>(PageModel)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a39323ee5015f377748292b4ddd548751</anchor>
+      <arglist>(PageModel, iprm::ISelectionParam, ExtractPageModel)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>afeadb383bb2bb2bddbf2c5ea63654a2f</anchor>
+      <arglist>(PageModel, iprm::IOptionsList, ExtractPageModel)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>ab11b4045cbeb1472e68ab937c2527ac5</anchor>
+      <arglist>(PageModel, iser::ISerializable, ExtractPageModel)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>ae55738e79075c903ea37da138a053e4d</anchor>
+      <arglist>(PageModel, imod::IModel, ExtractPageModel)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a942bec340e7a8189ebb5a103df2064c5</anchor>
+      <arglist>(PageModel, istd::IChangeable, ExtractPageModel)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a995ccb8699c96ee66a78df73c0718297</anchor>
+      <arglist>(m_slaveWidgetsModelCompPtr, m_slaveWidgetsVisualCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a81f39dd38e426c77e7b098180d18656f</anchor>
+      <arglist>(m_pageActivatorsModelCompPtr, m_pageActivatorsCompPtr, false)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetPagesCount</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>ac5f441fa586dfd7796fac053e57dbcd4</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual iqtgui::IGuiObject *</type>
+      <name>GetPageGuiComponent</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a4db259a5e7014adfd93c2d8630b34f64</anchor>
+      <arglist>(int pageIndex) const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>AddPageToContainerWidget</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a99f04adf90b66b2dbbbc6754ece61b06</anchor>
+      <arglist>(iqtgui::IGuiObject &amp;pageGui, const QString &amp;pageTitle) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QString</type>
+      <name>GetPageGuiName</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a5c1b664e43bb8848a79e26dc49ae3a07</anchor>
+      <arglist>(const iqtgui::IGuiObject &amp;pageGui) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CreatePage</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a07bc6b986dc6281988543c16d3a83999</anchor>
+      <arglist>(int guiIndex)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateVisualElements</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a1eb05aac8059ad6ee9880a6f6cc6a4f1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QWidget *</type>
+      <name>InitWidgetToParent</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a914085b5ccc3377318f9703af9ddc831</anchor>
+      <arglist>(QWidget *parentPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>ac12668fc8e47c09d03c978e07b581fbe</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a88cc86e69467f6582610c37554643755</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a71ac7cb8d3797735e7125dad5ede38d1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a83c8323b86ba3ba0dd4aefcfd863ebd6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a6ba8956b833bad91425d297f7bb2b6ec</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iqtgui::CMultiPageWidget</name>
     <filename>classiqtgui_1_1_c_multi_page_widget.html</filename>
     <member kind="enumeration">
@@ -38250,12 +38411,33 @@
       <anchor>aeafecd70c50c1251f05edd9e2b0c2a66</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>IMultiPageWidgetDelegate::PageHeaderPosition</type>
+      <name>PageHeaderPosition</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>ac7a65aecdf5afb210aae9873be9617c4</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CMultiPageWidget</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
-      <anchor>aed22dd37a002ae4b83c3228b60c2e3ad</anchor>
-      <arglist>(int designMode=DT_SIMPLE, Qt::Orientation orientation=Qt::Vertical, QWidget *parentWidgetPtr=NULL)</arglist>
+      <anchor>a2790ff0c5f4f7e4903be43865d92c3fc</anchor>
+      <arglist>(QWidget *parentWidgetPtr=NULL, int designMode=DT_SIMPLE, Qt::Orientation orientation=Qt::Vertical)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetPages</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>aed3833fc2ed3a114de0331c34f60abe5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPageHeaderPosition</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>ad6a71dc3be736a29b112178703b09a7c</anchor>
+      <arglist>(PageHeaderPosition pageHeaderPosition)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -38631,6 +38813,13 @@
       <arglist>(QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPageHeaderPosition</name>
+      <anchorfile>classiqtgui_1_1_c_simple_gui_container_delegate.html</anchorfile>
+      <anchor>a40078526707514b286fd8bb68c8ddada</anchor>
+      <arglist>(QWidget &amp;containerWidget, PageHeaderPosition pageHeaderPosition)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>InsertPage</name>
       <anchorfile>classiqtgui_1_1_c_simple_gui_container_delegate.html</anchorfile>
@@ -39001,6 +39190,13 @@
       <arglist>(QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPageHeaderPosition</name>
+      <anchorfile>classiqtgui_1_1_c_splitter_delegate.html</anchorfile>
+      <anchor>aff4e8beab4e0bb305bc06c2d5a9454ac</anchor>
+      <arglist>(QWidget &amp;containerWidget, PageHeaderPosition pageHeaderPosition)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>InsertPage</name>
       <anchorfile>classiqtgui_1_1_c_splitter_delegate.html</anchorfile>
@@ -39137,6 +39333,13 @@
       <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
       <anchor>a5801d5e877c44b1ecac3a47e3bd46ed9</anchor>
       <arglist>(QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPageHeaderPosition</name>
+      <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
+      <anchor>a5bc2cb8b2137c16355ecc9eed6837177</anchor>
+      <arglist>(QWidget &amp;containerWidget, PageHeaderPosition pageHeaderPosition)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -39493,12 +39696,33 @@
       <anchor>a4ebb788daf49c86af00382395e262995</anchor>
       <arglist>(QTabWidget::TabPosition tabPosition=QTabWidget::North, bool useDocumentMode=false)</arglist>
     </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetTabPosition</name>
+      <anchorfile>classiqtgui_1_1_c_tab_widget_delegate.html</anchorfile>
+      <anchor>a4d9ef262a0923d3450ace54e00c73758</anchor>
+      <arglist>(QWidget &amp;containerWidget, QTabWidget::TabPosition tabPosition)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetDocumentModeEnabled</name>
+      <anchorfile>classiqtgui_1_1_c_tab_widget_delegate.html</anchorfile>
+      <anchor>a6acc0ca8138b53a08f9d10b38ddfe475</anchor>
+      <arglist>(QWidget &amp;containerWidget, bool isDocumentModeEnabled=true)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QWidget *</type>
       <name>CreateContainerWidget</name>
       <anchorfile>classiqtgui_1_1_c_tab_widget_delegate.html</anchorfile>
       <anchor>ad0c3e0426a4d3bbb21fc125dae5abb18</anchor>
       <arglist>(QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPageHeaderPosition</name>
+      <anchorfile>classiqtgui_1_1_c_tab_widget_delegate.html</anchorfile>
+      <anchor>a4d99d1996bc220a8917baa95d7a1fb1f</anchor>
+      <arglist>(QWidget &amp;containerWidget, PageHeaderPosition pageHeaderPosition)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -39764,6 +39988,13 @@
       <anchorfile>classiqtgui_1_1_c_tool_box_delegate.html</anchorfile>
       <anchor>a369950fd279a3a1ba637cda5a7bd635b</anchor>
       <arglist>(QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPageHeaderPosition</name>
+      <anchorfile>classiqtgui_1_1_c_tool_box_delegate.html</anchorfile>
+      <anchor>a884f96f302e8c613e44f44ba35ca7dd7</anchor>
+      <arglist>(QWidget &amp;containerWidget, PageHeaderPosition pageHeaderPosition)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -40079,12 +40310,55 @@
     <name>iqtgui::IMultiPageWidgetDelegate</name>
     <filename>classiqtgui_1_1_i_multi_page_widget_delegate.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="enumeration">
+      <name>PageHeaderPosition</name>
+      <anchorfile>classiqtgui_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>a463a78325413ff97f3f478cf485642eb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PHP_AUTO</name>
+      <anchorfile>classiqtgui_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>a463a78325413ff97f3f478cf485642eba078e51fcbff47f3af6ec2ac31f7515a4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PHP_LEFT</name>
+      <anchorfile>classiqtgui_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>a463a78325413ff97f3f478cf485642ebaa197d5b51199f55d3d355d64d1ea5eb3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PHP_TOP</name>
+      <anchorfile>classiqtgui_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>a463a78325413ff97f3f478cf485642eba8a4a808c7dfa530ed099f0a2332d81ee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PHP_RIGHT</name>
+      <anchorfile>classiqtgui_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>a463a78325413ff97f3f478cf485642ebaaa7775523486e69fcb9bbd29cfd3cafe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PHP_BOTTOM</name>
+      <anchorfile>classiqtgui_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>a463a78325413ff97f3f478cf485642ebaffcf4404344fabda374197d30ab68dbb</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual QWidget *</type>
       <name>CreateContainerWidget</name>
       <anchorfile>classiqtgui_1_1_i_multi_page_widget_delegate.html</anchorfile>
       <anchor>aca569e934a9ae7751b2051038c7ec0c6</anchor>
       <arglist>(QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>SetPageHeaderPosition</name>
+      <anchorfile>classiqtgui_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>a2c58bdbc332ab4d4e14da95629514e05</anchor>
+      <arglist>(QWidget &amp;containerWidget, PageHeaderPosition pageHeaderPosition)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
@@ -40230,279 +40504,6 @@
       <anchorfile>classiqtgui_1_1_i_visual_status_provider.html</anchorfile>
       <anchor>ad053c7a04497eb1f490c02859b9f716c</anchor>
       <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtgui::TContainerGuiCompBase</name>
-    <filename>classiqtgui_1_1_t_container_gui_comp_base.html</filename>
-    <templarg></templarg>
-    <base protection="protected">imod::CMultiModelDispatcherBase</base>
-    <member kind="enumeration">
-      <name>DesignType</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a45845b11c66a3612cf0113b209b925ac</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DT_SIMPLE</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a45845b11c66a3612cf0113b209b925acaf0f2b670c111523f07d5caec1bd60c57</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DT_TOOL_BOX</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a45845b11c66a3612cf0113b209b925acae62d67d89ee26e8b608186d30bc3bb4a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DT_TAB_WIDGET</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a45845b11c66a3612cf0113b209b925acaf3384f308371e43df21b29a331204daf</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DT_STACK</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a45845b11c66a3612cf0113b209b925aca89b975f3e898c0ac3503a946057c5d58</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DT_SPLITTER</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a45845b11c66a3612cf0113b209b925aca7e6ba7683045b4b48cb6f1c7add14a83</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>GuiCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a9520a9721f60fef5f71be52ce5c13f5f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>imod::CMultiModelDispatcherBase</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>af2c18d9a4bbe509c40c6f42c5d245284</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>adad8d7e1fba8328162d823454f26e902</anchor>
-      <arglist>(PageModel)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a5b26295d8c9fc2898980b7d8b64b35c3</anchor>
-      <arglist>(PageModel, iprm::ISelectionParam, ExtractPageModel)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>ac18c332e13842a9567adcc106e367d4a</anchor>
-      <arglist>(PageModel, iprm::IOptionsList, ExtractPageModel)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>afcd6b4a29abc859c4288f2d5595a7556</anchor>
-      <arglist>(PageModel, iser::ISerializable, ExtractPageModel)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>aad63605de24a7d13a0e6e1e684da2ae9</anchor>
-      <arglist>(PageModel, imod::IModel, ExtractPageModel)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>aebb4dd5acb8aade87328680d3862b10a</anchor>
-      <arglist>(PageModel, istd::IChangeable, ExtractPageModel)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a92ec25154f78a69aeb4c1b3fa0f47bb9</anchor>
-      <arglist>(m_slaveWidgetsModelCompPtr, m_slaveWidgetsVisualCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>af2e7ca0981cc49a55725801e09d0d1c2</anchor>
-      <arglist>(m_pageActivatorsModelCompPtr, m_pageActivatorsCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TContainerGuiCompBase</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a99842f0727dd7805af288fcc28fa3470</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetPagesCount</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>aa18da1711d71996929c5a278bd04c2a1</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual iqtgui::IGuiObject *</type>
-      <name>GetPageGuiComponent</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a86686df1c880274673588b31f69dbe9f</anchor>
-      <arglist>(int pageIndex) const =0</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>int</type>
-      <name>GetCurrentPageIndex</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a684f3961284104abc3f997882a10392a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QWidget *</type>
-      <name>GetGuiContainerPtr</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a3a3d8c55bc99ba1232c1a2d05fe0be6f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CreateContainerGui</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a271a883699742648dca560094f2eefe4</anchor>
-      <arglist>(QWidget &amp;parentWidget)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetCurrentPage</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>ada7c5aac814dce19c3f75c28b487f157</anchor>
-      <arglist>(QWidget &amp;containerWidget) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetCurrentPage</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a4be4bec81fa79ff8372b8f67e3ec910d</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetPageTitle</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a48f980c2431a505032f2349b91cc1444</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetPageTitle</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a6b3ffe88bfd0f81f7bfb83070bba3e81</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex, const QString &amp;pageTitle) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetPageIcon</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a702f8b07ca6169738860aea4e242dbf1</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex, const QIcon &amp;pageIcon) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetPageToolTip</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a303b067ff6adb1821e1cdefbd73960ba</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex, const QString &amp;pageToolTip) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual int</type>
-      <name>AddPageToContainerWidget</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a5744ed2fa6bcd088e0d9959c0a7c95e8</anchor>
-      <arglist>(QWidget &amp;containerWidget, iqtgui::IGuiObject &amp;pageGui, const QString &amp;pageTitle) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetPageEnabled</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>af3a63e21d0dafb7a17a7d1be6c3d3eb7</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex, bool isPageEnabled=true) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetPageIconSize</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>ae5835b56c4dfc580677f3cdd5a8631c3</anchor>
-      <arglist>(QWidget &amp;containerWidget, const QSize &amp;pageIconSize) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>QString</type>
-      <name>GetPageGuiName</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>af12d3c8db2fb2309e2f08768ef89fa3f</anchor>
-      <arglist>(const iqtgui::IGuiObject &amp;pageGui) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>CreatePage</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a6449b4cb3e437067a0312eecc5b561ce</anchor>
-      <arglist>(QWidget *containerWidgetPtr, int guiIndex)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateVisualElements</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a699ab5136fbce7f9630503fb93e79122</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>aa304183c59c2b39ea7f3955492dc87e1</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a89d29a42d06ca7fefcb54110eb4823be</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a2bed798f78c75ebdfef93ea3f6e80e6a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>a8b7c6ab09d65ba02941a079f409282b2</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnModelChanged</name>
-      <anchorfile>classiqtgui_1_1_t_container_gui_comp_base.html</anchorfile>
-      <anchor>ace696a656972d5ce5db47ea5df875e9b</anchor>
-      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
