@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Include/iqtgui/CFileSystemExplorerGuiComp.h Source File</title>
+<title>Include/ifilegui/CFileSystemExplorerGuiComp.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -23,11 +23,11 @@
   </div>
 <div class="header">
   <div class="headertitle">
-<div class="title">Include/iqtgui/CFileSystemExplorerGuiComp.h</div>  </div>
+<div class="title">Include/ifilegui/CFileSystemExplorerGuiComp.h</div>  </div>
 </div>
 <div class="contents">
-<a href="_c_file_system_explorer_gui_comp_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef iqtgui_CFileSystemExplorerGuiComp_included</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iqtgui_CFileSystemExplorerGuiComp_included</span>
+<a href="_c_file_system_explorer_gui_comp_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef ifilegui_CFileSystemExplorerGuiComp_included</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define ifilegui_CFileSystemExplorerGuiComp_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
@@ -51,23 +51,23 @@
 <a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="_t_designer_gui_observer_comp_base_8h.html">iqtgui/TDesignerGuiObserverCompBase.h</a>&quot;</span>
 <a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="_c_ext_line_edit_8h.html">iqtgui/CExtLineEdit.h</a>&quot;</span>
 <a name="l00025"></a>00025 
-<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;iqtgui/Generated/ui_CFileSystemExplorerGuiComp.h&quot;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;ifilegui/Generated/ui_CFileSystemExplorerGuiComp.h&quot;</span>
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028 
-<a name="l00029"></a>00029 <span class="keyword">namespace </span>iqtgui
+<a name="l00029"></a>00029 <span class="keyword">namespace </span>ifilegui
 <a name="l00030"></a>00030 {
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032 
-<a name="l00040"></a><a class="code" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html">00040</a> <span class="keyword">class </span><a class="code" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html" title="UI component for visualization of file system contents.">CFileSystemExplorerGuiComp</a>:
-<a name="l00041"></a>00041                      <span class="keyword">public</span> iqtgui::<a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" title="Base class for all Qt GUI components.">TDesignerGuiObserverCompBase</a>&lt;
+<a name="l00040"></a><a class="code" href="classifilegui_1_1_c_file_system_explorer_gui_comp.html">00040</a> <span class="keyword">class </span><a class="code" href="classifilegui_1_1_c_file_system_explorer_gui_comp.html" title="UI component for visualization of file system contents.">CFileSystemExplorerGuiComp</a>:
+<a name="l00041"></a>00041                      <span class="keyword">public</span> iqtgui::TDesignerGuiObserverCompBase&lt;
 <a name="l00042"></a>00042                                           Ui::CFileSystemExplorerGuiComp, ifile::IFileNameParam&gt;
 <a name="l00043"></a>00043 {
 <a name="l00044"></a>00044        Q_OBJECT
 <a name="l00045"></a>00045 <span class="keyword">public</span>:
 <a name="l00046"></a>00046        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" title="Base class for all Qt GUI components.">iqtgui::TDesignerGuiObserverCompBase</a>&lt;
-<a name="l00047"></a><a class="code" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html#a490300cd97852910c974f34caa4b13cc">00047</a>                             Ui::CFileSystemExplorerGuiComp, <a class="code" href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)">ifile::IFileNameParam</a>&gt; <a class="code" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html#a490300cd97852910c974f34caa4b13cc">BaseClass</a>;
+<a name="l00047"></a><a class="code" href="classifilegui_1_1_c_file_system_explorer_gui_comp.html#a8db3d15f1269b9502782a28191195495">00047</a>                             Ui::CFileSystemExplorerGuiComp, <a class="code" href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)">ifile::IFileNameParam</a>&gt; <a class="code" href="classifilegui_1_1_c_file_system_explorer_gui_comp.html#a8db3d15f1269b9502782a28191195495">BaseClass</a>;
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html" title="UI component for visualization of file system contents.">CFileSystemExplorerGuiComp</a>);
+<a name="l00049"></a>00049        I_BEGIN_COMPONENT(<a class="code" href="classifilegui_1_1_c_file_system_explorer_gui_comp.html" title="UI component for visualization of file system contents.">CFileSystemExplorerGuiComp</a>);
 <a name="l00050"></a>00050               I_ASSIGN(m_filterInfoCompPtr, <span class="stringliteral">&quot;FilterInfo&quot;</span>, <span class="stringliteral">&quot;Provides information about supported files used to filter shown files&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;FilterInfo&quot;</span>);
 <a name="l00051"></a>00051               I_ASSIGN(m_rootPathParamCompPtr, <span class="stringliteral">&quot;RootPath&quot;</span>, <span class="stringliteral">&quot;Sets the root path&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;RootPath&quot;</span>);
 <a name="l00052"></a>00052               I_ASSIGN(m_showUserFilterAttrPtr, <span class="stringliteral">&quot;ShowUserFilter&quot;</span>, <span class="stringliteral">&quot;If activated user filter line will be shown&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
@@ -78,13 +78,13 @@
 <a name="l00057"></a>00057        I_END_COMPONENT;
 <a name="l00058"></a>00058 
 <a name="l00059"></a>00059 <span class="keyword">protected</span>:
-<a name="l00064"></a>00064        QStringList <a class="code" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html#afc477a01d70604290be4ebe38f811526" title="Get default list of filters.">GetDefaultFilters</a>() <span class="keyword">const</span>;
+<a name="l00064"></a>00064        QStringList <a class="code" href="classifilegui_1_1_c_file_system_explorer_gui_comp.html#a9afb2aa611533a6725e72a15be6a3000" title="Get default list of filters.">GetDefaultFilters</a>() <span class="keyword">const</span>;
 <a name="l00065"></a>00065 
 <a name="l00066"></a>00066        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html#a4fde1a1b3312c920073c243dff3d2e9a" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifilegui_1_1_c_file_system_explorer_gui_comp.html#a1ac13c13a02ed0be09f5092a7580bfe7" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
 <a name="l00068"></a>00068 
 <a name="l00069"></a>00069        <span class="comment">// reimplemented (CGuiComponentBase)</span>
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html#a1ef1571cc99744eded39e878e8612f83" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifilegui_1_1_c_file_system_explorer_gui_comp.html#ace9559f82c725ae5fa104fab4f15b528" title="Called just after GUI is initialized.">OnGuiCreated</a>();
 <a name="l00071"></a>00071 
 <a name="l00072"></a>00072 <span class="keyword">private</span> Q_SLOTS:
 <a name="l00073"></a>00073        <span class="keywordtype">void</span> OnFilterChanged();
@@ -106,7 +106,7 @@
 <a name="l00089"></a>00089        <span class="keyword">class </span>FileIconProvider: <span class="keyword">public</span> QFileIconProvider
 <a name="l00090"></a>00090        {
 <a name="l00091"></a>00091        <span class="keyword">public</span>:
-<a name="l00092"></a>00092               <span class="keyword">typedef</span> QFileIconProvider <a class="code" href="classiqtgui_1_1_c_file_system_explorer_gui_comp.html#a490300cd97852910c974f34caa4b13cc">BaseClass</a>;
+<a name="l00092"></a>00092               <span class="keyword">typedef</span> QFileIconProvider <a class="code" href="classifilegui_1_1_c_file_system_explorer_gui_comp.html#a8db3d15f1269b9502782a28191195495">BaseClass</a>;
 <a name="l00093"></a>00093 
 <a name="l00094"></a>00094               <span class="comment">// reimplemented (QFileIconProvider)</span>
 <a name="l00095"></a>00095               <span class="keyword">virtual</span> QIcon icon(<span class="keyword">const</span> QFileInfo&amp; fileInfo) <span class="keyword">const</span>;
@@ -120,10 +120,10 @@
 <a name="l00103"></a>00103 };
 <a name="l00104"></a>00104 
 <a name="l00105"></a>00105 
-<a name="l00106"></a>00106 } <span class="comment">// namespace iqtgui</span>
+<a name="l00106"></a>00106 } <span class="comment">// namespace ifilegui</span>
 <a name="l00107"></a>00107 
 <a name="l00108"></a>00108 
-<a name="l00109"></a>00109 <span class="preprocessor">#endif // !iqtgui_CFileSystemExplorerGuiComp_included</span>
+<a name="l00109"></a>00109 <span class="preprocessor">#endif // !ifilegui_CFileSystemExplorerGuiComp_included</span>
 <a name="l00110"></a>00110 <span class="preprocessor"></span>
 <a name="l00111"></a>00111 
 </pre></div></div>

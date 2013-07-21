@@ -1,6 +1,6 @@
 /********************************************************************************
 **
-**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**	Copyright (C) 2007-2013 Witold Gantzke & Kirill Lepskiy
 **
 **	This file is part of the ACF Toolkit.
 **
@@ -36,12 +36,10 @@
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
-
-#include "iqt/CSignalBlocker.h"
 #include "istd/CSystem.h"
-
+#include "iqt/CSignalBlocker.h"
 #include "iqtgui/CExtLineEdit.h"
-#include "iqtgui/CFileDialogLoaderComp.h"
+#include "ifilegui/CFileDialogLoaderComp.h"
 
 
 namespace iqtprm
@@ -208,7 +206,7 @@ void CFileNameParamGuiComp::on_BrowseButton_clicked()
 
 			if (m_fileTypeInfoPtr.IsValid()){
 				QStringList allExt;
-				iqtgui::CFileDialogLoaderComp::AppendLoaderFilterList(
+				ifilegui::CFileDialogLoaderComp::AppendLoaderFilterList(
 							*m_fileTypeInfoPtr,
 							0,
 							allExt,

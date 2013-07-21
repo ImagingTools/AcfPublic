@@ -1,6 +1,6 @@
 /********************************************************************************
 **
-**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**	Copyright (C) 2007-2013 Witold Gantzke & Kirill Lepskiy
 **
 **	This file is part of the ACF Toolkit.
 **
@@ -71,7 +71,7 @@ int CSimpleGuiContainerDelegate::InsertPage(
 
 	containerLayoutPtr->addWidget(panelPtr);
 
-	return pageIndex;
+	return containerLayoutPtr->count() - 1;
 }
 
 
@@ -105,7 +105,7 @@ QWidget* CSimpleGuiContainerDelegate::GetPageWidgetPtr(const QWidget& containerW
 }
 
 
-int CSimpleGuiContainerDelegate::GetCurrentPage(QWidget& /*containerWidget*/) const
+int CSimpleGuiContainerDelegate::GetCurrentPage(const QWidget& /*containerWidget*/) const
 {
 	return -1;
 }
@@ -117,7 +117,7 @@ bool CSimpleGuiContainerDelegate::SetCurrentPage(QWidget& /*containerWidget*/, i
 }
 
 
-QString CSimpleGuiContainerDelegate::GetPageTitle(QWidget& /*containerWidget*/, int /*pageIndex*/) const
+QString CSimpleGuiContainerDelegate::GetPageTitle(const QWidget& /*containerWidget*/, int /*pageIndex*/) const
 {
 	return QString();
 }
@@ -128,7 +128,7 @@ void CSimpleGuiContainerDelegate::SetPageTitle(QWidget& /*containerWidget*/, int
 }
 
 
-QIcon CSimpleGuiContainerDelegate::GetPageIcon(QWidget& containerWidget, int pageIndex) const
+QIcon CSimpleGuiContainerDelegate::GetPageIcon(const QWidget& containerWidget, int pageIndex) const
 {
 	QWidget* pageWidgetPtr = GetPageWidgetPtr(containerWidget, pageIndex);
 	if (pageWidgetPtr != NULL){
@@ -154,7 +154,7 @@ void CSimpleGuiContainerDelegate::SetPageIcon(QWidget& containerWidget, int page
 }
 
 
-QString CSimpleGuiContainerDelegate::GetPageToolTip(QWidget& containerWidget, int pageIndex) const
+QString CSimpleGuiContainerDelegate::GetPageToolTip(const QWidget& containerWidget, int pageIndex) const
 {
 	QWidget* pageWidgetPtr = GetPageWidgetPtr(containerWidget, pageIndex);
 	if (pageWidgetPtr != NULL){
@@ -174,7 +174,7 @@ void CSimpleGuiContainerDelegate::SetPageToolTip(QWidget& containerWidget, int p
 }
 
 
-bool CSimpleGuiContainerDelegate::IsPageEnabled(QWidget& containerWidget, int pageIndex) const
+bool CSimpleGuiContainerDelegate::IsPageEnabled(const QWidget& containerWidget, int pageIndex) const
 {
 	QWidget* pageWidgetPtr = GetPageWidgetPtr(containerWidget, pageIndex);
 	if (pageWidgetPtr != NULL){
@@ -198,7 +198,7 @@ bool CSimpleGuiContainerDelegate::SetPageEnabled(QWidget& containerWidget, int p
 }
 
 
-bool CSimpleGuiContainerDelegate::IsPageVisible(QWidget& containerWidget, int pageIndex) const
+bool CSimpleGuiContainerDelegate::IsPageVisible(const QWidget& containerWidget, int pageIndex) const
 {
 	QWidget* pageWidgetPtr = GetPageWidgetPtr(containerWidget, pageIndex);
 	if (pageWidgetPtr != NULL){
@@ -220,7 +220,7 @@ bool CSimpleGuiContainerDelegate::SetPageVisible(QWidget& containerWidget, int p
 }
 
 
-QSize CSimpleGuiContainerDelegate::GetPageIconSize(QWidget& /*containerWidget*/) const
+QSize CSimpleGuiContainerDelegate::GetPageIconSize(const QWidget& /*containerWidget*/) const
 {
 	return m_iconSize;
 }

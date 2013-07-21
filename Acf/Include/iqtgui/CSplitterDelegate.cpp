@@ -1,6 +1,6 @@
 /********************************************************************************
 **
-**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**	Copyright (C) 2007-2013 Witold Gantzke & Kirill Lepskiy
 **
 **	This file is part of the ACF Toolkit.
 **
@@ -60,12 +60,20 @@ int CSplitterDelegate::InsertPage(
 
 	QWidget* panelPtr = pageTitle.isEmpty() ? new QWidget(splitterPtr) : new QGroupBox(pageTitle, splitterPtr);
 	QLayout* panelLayoutPtr = new QVBoxLayout(panelPtr);
-	panelLayoutPtr->setMargin(0);
 	panelLayoutPtr->addWidget(pageWidgetPtr);
 
 	splitterPtr->insertWidget(pageIndex, panelPtr);
 
-	return pageIndex;
+	int insertPosition = pageIndex;
+	if (insertPosition < 0){
+		insertPosition = splitterPtr->count() - 1;
+	}
+
+	if (insertPosition >= splitterPtr->count()){
+		insertPosition = splitterPtr->count() - 1;
+	}
+
+	return insertPosition;
 }
 
 
@@ -103,7 +111,7 @@ QWidget* CSplitterDelegate::GetPageWidgetPtr(const QWidget& containerWidget, int
 }
 
 
-int CSplitterDelegate::GetCurrentPage(QWidget& /*containerWidget*/) const
+int CSplitterDelegate::GetCurrentPage(const QWidget& /*containerWidget*/) const
 {
 	return -1;
 }
@@ -115,7 +123,7 @@ bool CSplitterDelegate::SetCurrentPage(QWidget& /*containerWidget*/, int /*pageI
 }
 
 
-QString CSplitterDelegate::GetPageTitle(QWidget& /*containerWidget*/, int /*pageIndex*/) const
+QString CSplitterDelegate::GetPageTitle(const QWidget& /*containerWidget*/, int /*pageIndex*/) const
 {
 	return QString();
 }
@@ -126,9 +134,9 @@ void CSplitterDelegate::SetPageTitle(QWidget& /*containerWidget*/, int /*pageInd
 }
 
 
-QIcon CSplitterDelegate::GetPageIcon(QWidget& containerWidget, int pageIndex) const
+QIcon CSplitterDelegate::GetPageIcon(const QWidget& containerWidget, int pageIndex) const
 {
-	QSplitter* splitterPtr = dynamic_cast<QSplitter*>(&containerWidget);
+	const QSplitter* splitterPtr = dynamic_cast<const QSplitter*>(&containerWidget);
 	if (splitterPtr != NULL){
 		QWidget* widgetPtr = splitterPtr->widget(pageIndex);
 		if (widgetPtr != NULL){
@@ -159,9 +167,9 @@ void CSplitterDelegate::SetPageIcon(QWidget& containerWidget, int pageIndex, con
 }
 
 
-QString CSplitterDelegate::GetPageToolTip(QWidget& containerWidget, int pageIndex) const
+QString CSplitterDelegate::GetPageToolTip(const QWidget& containerWidget, int pageIndex) const
 {
-	QSplitter* splitterPtr = dynamic_cast<QSplitter*>(&containerWidget);
+	const QSplitter* splitterPtr = dynamic_cast<const QSplitter*>(&containerWidget);
 	if (splitterPtr != NULL){
 		QWidget* widgetPtr = splitterPtr->widget(pageIndex);
 		if (widgetPtr != NULL){
@@ -185,9 +193,9 @@ void CSplitterDelegate::SetPageToolTip(QWidget& containerWidget, int pageIndex, 
 }
 
 
-bool CSplitterDelegate::IsPageEnabled(QWidget& containerWidget, int pageIndex) const
+bool CSplitterDelegate::IsPageEnabled(const QWidget& containerWidget, int pageIndex) const
 {
-	QSplitter* splitterPtr = dynamic_cast<QSplitter*>(&containerWidget);
+	const QSplitter* splitterPtr = dynamic_cast<const QSplitter*>(&containerWidget);
 	if (splitterPtr != NULL){
 		QWidget* widgetPtr = splitterPtr->widget(pageIndex);
 		if (widgetPtr != NULL){
@@ -215,9 +223,9 @@ bool CSplitterDelegate::SetPageEnabled(QWidget& containerWidget, int pageIndex, 
 }
 
 
-bool CSplitterDelegate::IsPageVisible(QWidget& containerWidget, int pageIndex) const
+bool CSplitterDelegate::IsPageVisible(const QWidget& containerWidget, int pageIndex) const
 {
-	QSplitter* splitterPtr = dynamic_cast<QSplitter*>(&containerWidget);
+	const QSplitter* splitterPtr = dynamic_cast<const QSplitter*>(&containerWidget);
 	if (splitterPtr != NULL){
 		QWidget* widgetPtr = splitterPtr->widget(pageIndex);
 		if (widgetPtr != NULL){
@@ -247,7 +255,7 @@ bool CSplitterDelegate::SetPageVisible(QWidget& containerWidget, int pageIndex, 
 }
 
 
-QSize CSplitterDelegate::GetPageIconSize(QWidget& /*containerWidget*/) const
+QSize CSplitterDelegate::GetPageIconSize(const QWidget& /*containerWidget*/) const
 {
 	return m_iconSize;
 }

@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Include/iqtgui/CFileDialogLoaderComp.h Source File</title>
+<title>Include/ifilegui/CFileDialogLoaderComp.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -23,11 +23,11 @@
   </div>
 <div class="header">
   <div class="headertitle">
-<div class="title">Include/iqtgui/CFileDialogLoaderComp.h</div>  </div>
+<div class="title">Include/ifilegui/CFileDialogLoaderComp.h</div>  </div>
 </div>
 <div class="contents">
-<a href="_c_file_dialog_loader_comp_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef iqtgui_CFileDialogSerializerComp_included</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iqtgui_CFileDialogSerializerComp_included</span>
+<a href="_c_file_dialog_loader_comp_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef ifilegui_CFileDialogSerializerComp_included</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define ifilegui_CFileDialogSerializerComp_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
@@ -41,27 +41,27 @@
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_persistence_8h.html">ifile/IFilePersistence.h</a>&quot;</span>
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_persistence_info_8h.html">ifile/IFilePersistenceInfo.h</a>&quot;</span>
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_name_param_8h.html">ifile/IFileNameParam.h</a>&quot;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="iqtgui_8h.html">iqtgui/iqtgui.h</a>&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="ifilegui_8h.html">ifilegui/ifilegui.h</a>&quot;</span>
 <a name="l00017"></a>00017 
 <a name="l00018"></a>00018 
-<a name="l00019"></a>00019 <span class="keyword">namespace </span>iqtgui
+<a name="l00019"></a><a class="code" href="namespaceifilegui.html">00019</a> <span class="keyword">namespace </span>ifilegui
 <a name="l00020"></a>00020 {
 <a name="l00021"></a>00021 
-<a name="l00027"></a><a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html">00027</a> <span class="keyword">class </span><a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html" title="File dialog component.">CFileDialogLoaderComp</a>: 
+<a name="l00027"></a><a class="code" href="classifilegui_1_1_c_file_dialog_loader_comp.html">00027</a> <span class="keyword">class </span><a class="code" href="classifilegui_1_1_c_file_dialog_loader_comp.html" title="File dialog component.">CFileDialogLoaderComp</a>: 
 <a name="l00028"></a>00028                      <span class="keyword">public</span> QObject,
 <a name="l00029"></a>00029                      <span class="keyword">public</span> ilog::<a class="code" href="group___main.html#ga2ac8e0a207c9bb18de1ac6883d2cf09c" title="Type defining base class for simple components outputting log messages.">CLoggerComponentBase</a>, 
 <a name="l00030"></a>00030                      <span class="keyword">virtual</span> <span class="keyword">public</span> ifile::IFilePersistence,
 <a name="l00031"></a>00031                      <span class="keyword">virtual</span> <span class="keyword">public</span> ifile::IFilePersistenceInfo
 <a name="l00032"></a>00032 {
 <a name="l00033"></a>00033 <span class="keyword">public</span>:
-<a name="l00034"></a><a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#aac9481790b35f2c6d1187e0e44380620">00034</a>        <span class="keyword">typedef</span> <a class="code" href="classilog_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations.">ilog::CLoggerComponentBase</a> <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#aac9481790b35f2c6d1187e0e44380620">BaseClass</a>;
+<a name="l00034"></a><a class="code" href="classifilegui_1_1_c_file_dialog_loader_comp.html#a4c432876b8a60cfc3e427a7f2cecd3cb">00034</a>        <span class="keyword">typedef</span> <a class="code" href="classilog_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations.">ilog::CLoggerComponentBase</a> <a class="code" href="classifilegui_1_1_c_file_dialog_loader_comp.html#a4c432876b8a60cfc3e427a7f2cecd3cb">BaseClass</a>;
 <a name="l00035"></a>00035 
-<a name="l00036"></a><a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a1c6505cec393c4178dea87867e891199">00036</a>        <span class="keyword">enum</span> <a class="code" href="classifile_1_1_i_file_persistence.html#a24e35495e0c1f4d128ed1513c8907376" title="List of possible message ids used in context of this interface.">MessageId</a>
+<a name="l00036"></a><a class="code" href="classifilegui_1_1_c_file_dialog_loader_comp.html#a4a61d2b36c51cd13b9a7d5468207b515">00036</a>        <span class="keyword">enum</span> <a class="code" href="classifile_1_1_i_file_persistence.html#a24e35495e0c1f4d128ed1513c8907376" title="List of possible message ids used in context of this interface.">MessageId</a>
 <a name="l00037"></a>00037        {
-<a name="l00038"></a><a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a1c6505cec393c4178dea87867e891199a2021640d9a4af7e47d6d3cf17292846a">00038</a>               <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a1c6505cec393c4178dea87867e891199a2021640d9a4af7e47d6d3cf17292846a">MI_NONE_SUPPORTS</a> = 0xf8e0
+<a name="l00038"></a><a class="code" href="classifilegui_1_1_c_file_dialog_loader_comp.html#a4a61d2b36c51cd13b9a7d5468207b515a9bbd7787b7a9acc945207e1118670d42">00038</a>               <a class="code" href="classifilegui_1_1_c_file_dialog_loader_comp.html#a4a61d2b36c51cd13b9a7d5468207b515a9bbd7787b7a9acc945207e1118670d42">MI_NONE_SUPPORTS</a> = 0xf8e0
 <a name="l00039"></a>00039        };
 <a name="l00040"></a>00040 
-<a name="l00041"></a>00041        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html" title="File dialog component.">CFileDialogLoaderComp</a>);
+<a name="l00041"></a>00041        I_BEGIN_COMPONENT(<a class="code" href="classifilegui_1_1_c_file_dialog_loader_comp.html" title="File dialog component.">CFileDialogLoaderComp</a>);
 <a name="l00042"></a>00042               I_REGISTER_INTERFACE(<a class="code" href="classifile_1_1_i_file_type_info.html" title="Provide loading and saving of objects.">ifile::IFileTypeInfo</a>);
 <a name="l00043"></a>00043               I_REGISTER_INTERFACE(<a class="code" href="classifile_1_1_i_file_persistence.html" title="Provide loading and saving of objects.">ifile::IFilePersistence</a>);
 <a name="l00044"></a>00044               I_REGISTER_INTERFACE(<a class="code" href="classifile_1_1_i_file_persistence_info.html" title="Provide some information about file loader state.">ifile::IFilePersistenceInfo</a>);
@@ -71,32 +71,32 @@
 <a name="l00048"></a>00048        I_END_COMPONENT;
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050        <span class="comment">// reimplemented (ifile::IFilePersistence)</span>
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a92c3c3c41ae3f90ebd1eedc7cb1787c6" title="Returns true if object dataObject can be loaded/saved.">IsOperationSupported</a>(
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifilegui_1_1_c_file_dialog_loader_comp.html#a9db2736dd860753a68c7f232afb52eb1" title="Returns true if object dataObject can be loaded/saved.">IsOperationSupported</a>(
 <a name="l00052"></a>00052                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* dataObjectPtr,
 <a name="l00053"></a>00053                             <span class="keyword">const</span> QString* filePathPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
 <a name="l00054"></a>00054                             <span class="keywordtype">int</span> flags = -1,
 <a name="l00055"></a>00055                             <span class="keywordtype">bool</span> beQuiet = <span class="keyword">true</span>) <span class="keyword">const</span>;
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a7024fa370483bef9232977bf45d23de2" title="This function loads data data from file filePath.">LoadFromFile</a>(<a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; data, <span class="keyword">const</span> QString&amp; filePath = QString()) <span class="keyword">const</span>;
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#ab33d039aab082524aaf3b55cd72faa76" title="This function saves data data to file filePath.">SaveToFile</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; data, <span class="keyword">const</span> QString&amp; filePath = QString()) <span class="keyword">const</span>;
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classifilegui_1_1_c_file_dialog_loader_comp.html#a4f6967ee34f6a09b145794e25f5f1b37" title="This function loads data data from file filePath.">LoadFromFile</a>(<a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; data, <span class="keyword">const</span> QString&amp; filePath = QString()) <span class="keyword">const</span>;
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classifilegui_1_1_c_file_dialog_loader_comp.html#afa9e3683090b740160c35f22111e2ff9" title="This function saves data data to file filePath.">SaveToFile</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; data, <span class="keyword">const</span> QString&amp; filePath = QString()) <span class="keyword">const</span>;
 <a name="l00058"></a>00058 
 <a name="l00059"></a>00059        <span class="comment">// reimplemented (ifile::IFileTypeInfo)</span>
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#aecb38bab5cf8650757cb0861c95cf565" title="Get file extensions supported by this loader.">GetFileExtensions</a>(QStringList&amp; result, <span class="keywordtype">int</span> flags = -1, <span class="keywordtype">bool</span> doAppend = <span class="keyword">false</span>) <span class="keyword">const</span>;
-<a name="l00061"></a>00061        <span class="keyword">virtual</span> QString <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#ab69a2cf14e84536647e19387d13eecbf" title="Get description of object type associated with single extension.">GetTypeDescription</a>(<span class="keyword">const</span> QString* extensionPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifilegui_1_1_c_file_dialog_loader_comp.html#a9a025f38ecfc22b1e61bde99b558bf4d" title="Get file extensions supported by this loader.">GetFileExtensions</a>(QStringList&amp; result, <span class="keywordtype">int</span> flags = -1, <span class="keywordtype">bool</span> doAppend = <span class="keyword">false</span>) <span class="keyword">const</span>;
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> QString <a class="code" href="classifilegui_1_1_c_file_dialog_loader_comp.html#a3aae66d9742b4bce705c50759c23424f" title="Get description of object type associated with single extension.">GetTypeDescription</a>(<span class="keyword">const</span> QString* extensionPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keyword">const</span>;
 <a name="l00062"></a>00062 
 <a name="l00063"></a>00063        <span class="comment">// reimplemented (ifile::IFilePersistenceInfo)</span>
-<a name="l00064"></a>00064        <span class="keyword">virtual</span> QString <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#adbd2a0314e6936a69205d07c792bae22" title="Returns the last opened file name.">GetLastFilePath</a>(<a class="code" href="classifile_1_1_i_file_persistence_info.html#a5ec4c7b4003e0dcf02fc98e847513a35">OperationType</a> operationType = <a class="code" href="classifile_1_1_i_file_persistence_info.html#a5ec4c7b4003e0dcf02fc98e847513a35ac885fa8c8263ccb89a938d29af4fa5d4">OT_UNKNOWN</a>, <a class="code" href="classifile_1_1_i_file_persistence_info.html#aedaa95c7411b564c00535ce42c0cebf5">PathType</a> pathType = <a class="code" href="classifile_1_1_i_file_persistence_info.html#aedaa95c7411b564c00535ce42c0cebf5af99742f7dee9ef51f200c53da205154d">PT_COMPLETE</a>) <span class="keyword">const</span>;
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> QString <a class="code" href="classifilegui_1_1_c_file_dialog_loader_comp.html#a75fa21fadef707ec41c8a96d08212791" title="Returns the last opened file name.">GetLastFilePath</a>(<a class="code" href="classifile_1_1_i_file_persistence_info.html#a5ec4c7b4003e0dcf02fc98e847513a35">OperationType</a> operationType = <a class="code" href="classifile_1_1_i_file_persistence_info.html#a5ec4c7b4003e0dcf02fc98e847513a35ac885fa8c8263ccb89a938d29af4fa5d4">OT_UNKNOWN</a>, <a class="code" href="classifile_1_1_i_file_persistence_info.html#aedaa95c7411b564c00535ce42c0cebf5">PathType</a> pathType = <a class="code" href="classifile_1_1_i_file_persistence_info.html#aedaa95c7411b564c00535ce42c0cebf5af99742f7dee9ef51f200c53da205154d">PT_COMPLETE</a>) <span class="keyword">const</span>;
 <a name="l00065"></a>00065 
 <a name="l00066"></a>00066        <span class="comment">// static methods</span>
-<a name="l00074"></a>00074 <span class="comment"></span>       <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a4dc5b0ff40e793893ab27ee3e1771461" title="Append filters extracted from file loader to Qt filter list accepted by QFileDialog.">AppendLoaderFilterList</a>(<span class="keyword">const</span> <a class="code" href="classifile_1_1_i_file_type_info.html" title="Provide loading and saving of objects.">ifile::IFileTypeInfo</a>&amp; fileTypeInfo, <span class="keywordtype">int</span> flags, QStringList&amp; allExt, QStringList&amp; result);
+<a name="l00074"></a>00074 <span class="comment"></span>       <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classifilegui_1_1_c_file_dialog_loader_comp.html#adc4e078614a767ae437c4293e38b119a" title="Append filters extracted from file loader to Qt filter list accepted by QFileDialog.">AppendLoaderFilterList</a>(<span class="keyword">const</span> <a class="code" href="classifile_1_1_i_file_type_info.html" title="Provide loading and saving of objects.">ifile::IFileTypeInfo</a>&amp; fileTypeInfo, <span class="keywordtype">int</span> flags, QStringList&amp; allExt, QStringList&amp; result);
 <a name="l00075"></a>00075 
 <a name="l00076"></a>00076 <span class="keyword">protected</span>:
-<a name="l00077"></a>00077        QString <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a27dcd79ba499697d09ebdc36c4e6d3b5">GetPathForType</a>(<span class="keyword">const</span> QFileInfo&amp; fileInfo, <a class="code" href="classifile_1_1_i_file_persistence_info.html#aedaa95c7411b564c00535ce42c0cebf5">PathType</a> pathType) <span class="keyword">const</span>;
-<a name="l00078"></a>00078        <span class="keyword">virtual</span> QString <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a5906e327f4ade219df779213ef6cd7c6">GetFileName</a>(<span class="keyword">const</span> QString&amp; filePath, <span class="keywordtype">bool</span> isSaving, <span class="keywordtype">int</span>&amp; selectionIndex) <span class="keyword">const</span>;
+<a name="l00077"></a>00077        QString <a class="code" href="classifilegui_1_1_c_file_dialog_loader_comp.html#aa2600b97addac713fb0435f6fc012587">GetPathForType</a>(<span class="keyword">const</span> QFileInfo&amp; fileInfo, <a class="code" href="classifile_1_1_i_file_persistence_info.html#aedaa95c7411b564c00535ce42c0cebf5">PathType</a> pathType) <span class="keyword">const</span>;
+<a name="l00078"></a>00078        <span class="keyword">virtual</span> QString <a class="code" href="classifilegui_1_1_c_file_dialog_loader_comp.html#ac2391296f939755bd48753ad83fdcd53">GetFileName</a>(<span class="keyword">const</span> QString&amp; filePath, <span class="keywordtype">bool</span> isSaving, <span class="keywordtype">int</span>&amp; selectionIndex) <span class="keyword">const</span>;
 <a name="l00079"></a>00079 
-<a name="l00080"></a>00080        <a class="code" href="classifile_1_1_i_file_persistence.html" title="Provide loading and saving of objects.">ifile::IFilePersistence</a>* <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#a41c9f88981bbd7017aced704c443bb9c">GetLoaderFor</a>(<span class="keyword">const</span> QString&amp; filePath, <span class="keywordtype">int</span> selectionIndex, <span class="keywordtype">int</span> flags, <span class="keywordtype">bool</span> beQuiet) <span class="keyword">const</span>;
+<a name="l00080"></a>00080        <a class="code" href="classifile_1_1_i_file_persistence.html" title="Provide loading and saving of objects.">ifile::IFilePersistence</a>* <a class="code" href="classifilegui_1_1_c_file_dialog_loader_comp.html#aabd5c5170ced901fc7035b588d3cdc83">GetLoaderFor</a>(<span class="keyword">const</span> QString&amp; filePath, <span class="keywordtype">int</span> selectionIndex, <span class="keywordtype">int</span> flags, <span class="keywordtype">bool</span> beQuiet) <span class="keyword">const</span>;
 <a name="l00081"></a>00081 
 <a name="l00082"></a>00082        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00083"></a>00083        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_file_dialog_loader_comp.html#acdeb4247ab86e7fe2626df198cd0b23e">OnComponentCreated</a>();
+<a name="l00083"></a>00083        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifilegui_1_1_c_file_dialog_loader_comp.html#a0fc8081cb318e4fb774b915f31e0c9f6">OnComponentCreated</a>();
 <a name="l00084"></a>00084 
 <a name="l00085"></a>00085 <span class="keyword">private</span>:
 <a name="l00086"></a>00086        I_ATTR(<span class="keywordtype">bool</span>, m_useNativeAttrPtr);
@@ -108,10 +108,10 @@
 <a name="l00092"></a>00092 };
 <a name="l00093"></a>00093          
 <a name="l00094"></a>00094 
-<a name="l00095"></a>00095 } <span class="comment">// namespace iqtgui</span>
+<a name="l00095"></a>00095 } <span class="comment">// namespace ifilegui</span>
 <a name="l00096"></a>00096 
 <a name="l00097"></a>00097 
-<a name="l00098"></a>00098 <span class="preprocessor">#endif // !iqtgui_CFileDialogSerializerComp_included</span>
+<a name="l00098"></a>00098 <span class="preprocessor">#endif // !ifilegui_CFileDialogSerializerComp_included</span>
 <a name="l00099"></a>00099 <span class="preprocessor"></span>
 </pre></div></div>
 </div>

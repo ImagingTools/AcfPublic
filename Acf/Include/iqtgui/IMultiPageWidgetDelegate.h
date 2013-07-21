@@ -1,6 +1,6 @@
 /********************************************************************************
 **
-**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**	Copyright (C) 2007-2013 Witold Gantzke & Kirill Lepskiy
 **
 **	This file is part of the ACF Toolkit.
 **
@@ -36,11 +36,16 @@ namespace iqtgui
 {
 
 
+/**
+	Interface of a delegate object used for operating on concrete UI-container implementation.
+	The delegate itself is no widget, but it provides all necessary management functionalities for a page container widget.
+	\sa CTabWidgetDelegate, CSplitterDelegate, CToolBoxDelegate and CSimpleGuiContainerDelegate
+*/
 class IMultiPageWidgetDelegate: virtual public istd::IPolymorphic
 {
 public:
 	/**
-		Create container widget.
+		Create container for the page widgets.
 	*/
 	virtual QWidget* CreateContainerWidget(QWidget* parentWidgetPtr, int orientation = Qt::Horizontal) = 0;
 
@@ -73,7 +78,7 @@ public:
 	/**
 		Get currently active page in the container.
 	*/
-	virtual int GetCurrentPage(QWidget& containerWidget) const = 0;
+	virtual int GetCurrentPage(const QWidget& containerWidget) const = 0;
 
 	/**
 		Set active page in the container.
@@ -83,7 +88,7 @@ public:
 	/**
 		Get the title of the given page.
 	*/
-	virtual QString GetPageTitle(QWidget& containerWidget, int pageIndex) const = 0;
+	virtual QString GetPageTitle(const QWidget& containerWidget, int pageIndex) const = 0;
 
 	/**
 		Set the page title.
@@ -93,7 +98,7 @@ public:
 	/**
 		Get the page icon.
 	*/
-	virtual QIcon GetPageIcon(QWidget& containerWidget, int pageIndex) const = 0;
+	virtual QIcon GetPageIcon(const QWidget& containerWidget, int pageIndex) const = 0;
 
 	/**
 		Set the page icon.
@@ -103,7 +108,7 @@ public:
 	/**
 		Get the page tool tip.
 	*/
-	virtual QString GetPageToolTip(QWidget& containerWidget, int pageIndex) const = 0;
+	virtual QString GetPageToolTip(const QWidget& containerWidget, int pageIndex) const = 0;
 
 	/**
 		Set the page tool tip.
@@ -113,7 +118,7 @@ public:
 	/**
 		Get if the page enabled/disabled.
 	*/
-	virtual bool IsPageEnabled(QWidget& containerWidget, int pageIndex) const = 0;
+	virtual bool IsPageEnabled(const QWidget& containerWidget, int pageIndex) const = 0;
 
 	/**
 		Set page enabled/disabled.
@@ -123,7 +128,7 @@ public:
 	/**
 		Get if the page visible/hidden.
 	*/
-	virtual bool IsPageVisible(QWidget& containerWidget, int pageIndex) const = 0;
+	virtual bool IsPageVisible(const QWidget& containerWidget, int pageIndex) const = 0;
 
 	/**
 		Set page visible/hidden.
@@ -133,7 +138,7 @@ public:
 	/**
 		Get the size page icon.
 	*/
-	virtual QSize GetPageIconSize(QWidget& containerWidget) const = 0;
+	virtual QSize GetPageIconSize(const QWidget& containerWidget) const = 0;
 
 	/**
 		Set the size of the icon for all pages in the container.

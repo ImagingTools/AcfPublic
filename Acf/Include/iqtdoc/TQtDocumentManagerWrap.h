@@ -1,6 +1,6 @@
 /********************************************************************************
 **
-**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**	Copyright (C) 2007-2013 Witold Gantzke & Kirill Lepskiy
 **
 **	This file is part of the ACF Toolkit.
 **
@@ -36,7 +36,7 @@
 // ACF includes
 #include "idoc/IDocumentManager.h"
 
-#include "iqtgui/CFileDialogLoaderComp.h"
+#include "ifilegui/CFileDialogLoaderComp.h"
 
 
 namespace iqtdoc
@@ -128,7 +128,7 @@ QStringList TQtDocumentManagerWrap<Base, Gui>::CreateFileDialogFilters(const QBy
 	if (documentTypeIdPtr != NULL){
 		ifile::IFileTypeInfo* typeInfoPtr = BaseClass::GetDocumentFileTypeInfo(*documentTypeIdPtr);
 		if (typeInfoPtr != NULL){
-			iqtgui::CFileDialogLoaderComp::AppendLoaderFilterList(*typeInfoPtr, flags, allExt, filters);
+			ifilegui::CFileDialogLoaderComp::AppendLoaderFilterList(*typeInfoPtr, flags, allExt, filters);
 		}
 	}
 	else{
@@ -137,7 +137,7 @@ QStringList TQtDocumentManagerWrap<Base, Gui>::CreateFileDialogFilters(const QBy
 					++docTypeIter){
 			ifile::IFileTypeInfo* typeInfoPtr = BaseClass::GetDocumentFileTypeInfo(*docTypeIter);
 			if (typeInfoPtr != NULL){
-				iqtgui::CFileDialogLoaderComp::AppendLoaderFilterList(*typeInfoPtr, flags, allExt, filters);
+				ifilegui::CFileDialogLoaderComp::AppendLoaderFilterList(*typeInfoPtr, flags, allExt, filters);
 			}
 		}
 	}

@@ -38,7 +38,7 @@
 </div>
 <div class="contents">
 <!-- doxytag: class="iqtgui::CToolBoxDelegate" --><!-- doxytag: inherits="iqtgui::IMultiPageWidgetDelegate" -->
-<p>Implementation of the <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html">IMultiPageWidgetDelegate</a> interface for QTabWidget.  
+<p>Implementation of the <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html" title="Interface of a delegate object used for operating on concrete UI-container implementation.">IMultiPageWidgetDelegate</a> interface for QToolBox.  
  <a href="classiqtgui_1_1_c_tool_box_delegate.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_c_tool_box_delegate_8h_source.html">CToolBoxDelegate.h</a>&gt;</code></p>
@@ -48,7 +48,7 @@ Inheritance diagram for iqtgui::CToolBoxDelegate:</div>
  <div class="center">
   <img src="classiqtgui_1_1_c_tool_box_delegate.png" usemap="#iqtgui::CToolBoxDelegate_map" alt=""/>
   <map id="iqtgui::CToolBoxDelegate_map" name="iqtgui::CToolBoxDelegate_map">
-<area href="classiqtgui_1_1_i_multi_page_widget_delegate.html" alt="iqtgui::IMultiPageWidgetDelegate" shape="rect" coords="0,56,194,80"/>
+<area href="classiqtgui_1_1_i_multi_page_widget_delegate.html" title="Interface of a delegate object used for operating on concrete UI-container implementation." alt="iqtgui::IMultiPageWidgetDelegate" shape="rect" coords="0,56,194,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,194,24"/>
 </map>
  </div></div>
@@ -58,7 +58,7 @@ Inheritance diagram for iqtgui::CToolBoxDelegate:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#a369950fd279a3a1ba637cda5a7bd635b">CreateContainerWidget</a> (QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create container widget.  <a href="#a369950fd279a3a1ba637cda5a7bd635b"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create container for the page widgets.  <a href="#a369950fd279a3a1ba637cda5a7bd635b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#afb88862fa6122d6516472446b3ef5207">InsertPage</a> (QWidget &amp;containerWidget, QWidget *pageWidgetPtr, const QString &amp;pageTitle, int pageIndex=-1)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new page to the container.  <a href="#afb88862fa6122d6516472446b3ef5207"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#a872b455226c634518f0b9d8dfa4bfbcc">RemovePage</a> (QWidget &amp;containerWidget, int pageIndex)</td></tr>
@@ -67,37 +67,37 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of the pages in the container.  <a href="#a919e3847949ef6d79863364aa3c9ff22"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#ad0cac653d7b880eab9bd086b761fbd77">GetPageWidgetPtr</a> (const QWidget &amp;containerWidget, int pageIndex) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get page's widget from the container.  <a href="#ad0cac653d7b880eab9bd086b761fbd77"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#adcd5776d952f2fed9fd4ac93f3d98704">GetCurrentPage</a> (QWidget &amp;containerWidget) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get currently active page in the container.  <a href="#adcd5776d952f2fed9fd4ac93f3d98704"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#aa7fab458bb939dee63e7eb4f6d24f361">GetCurrentPage</a> (const QWidget &amp;containerWidget) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get currently active page in the container.  <a href="#aa7fab458bb939dee63e7eb4f6d24f361"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#a25f97eea108349e37b2e87f1362aa715">SetCurrentPage</a> (QWidget &amp;containerWidget, int pageIndex)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set active page in the container.  <a href="#a25f97eea108349e37b2e87f1362aa715"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#a12319e3531752a11f3d243da2b1e1514">GetPageTitle</a> (QWidget &amp;containerWidget, int pageIndex) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the title of the given page.  <a href="#a12319e3531752a11f3d243da2b1e1514"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#a086a86f5437fa60e410692e773fcaf85">GetPageTitle</a> (const QWidget &amp;containerWidget, int pageIndex) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the title of the given page.  <a href="#a086a86f5437fa60e410692e773fcaf85"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#a5b2a72017cdf2abc26c6ea85bfeb3629">SetPageTitle</a> (QWidget &amp;containerWidget, int pageIndex, const QString &amp;pageTitle)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the page title.  <a href="#a5b2a72017cdf2abc26c6ea85bfeb3629"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QIcon&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#a9ea7b1bbb8b41f7e8f4ef21b13f5a4a9">GetPageIcon</a> (QWidget &amp;containerWidget, int pageIndex) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the page icon.  <a href="#a9ea7b1bbb8b41f7e8f4ef21b13f5a4a9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QIcon&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#aaf65f2abca290dde89b425d7c9429a22">GetPageIcon</a> (const QWidget &amp;containerWidget, int pageIndex) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the page icon.  <a href="#aaf65f2abca290dde89b425d7c9429a22"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#ac9a886a0435f82f5486e49898616fe92">SetPageIcon</a> (QWidget &amp;containerWidget, int pageIndex, const QIcon &amp;pageIcon)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the page icon.  <a href="#ac9a886a0435f82f5486e49898616fe92"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#ad219a7ceb945802377e20c7cb67a2498">GetPageToolTip</a> (QWidget &amp;containerWidget, int pageIndex) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the page tool tip.  <a href="#ad219a7ceb945802377e20c7cb67a2498"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#a1c39a3cd83e84dbf5a73ea752bcd38e5">GetPageToolTip</a> (const QWidget &amp;containerWidget, int pageIndex) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the page tool tip.  <a href="#a1c39a3cd83e84dbf5a73ea752bcd38e5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#a1b92eaf0c526a1f1ef49e92e478f966e">SetPageToolTip</a> (QWidget &amp;containerWidget, int pageIndex, const QString &amp;pageToolTip)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the page tool tip.  <a href="#a1b92eaf0c526a1f1ef49e92e478f966e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#a5e0f469de3b9b293f46dd68ff1a7ef3b">IsPageEnabled</a> (QWidget &amp;containerWidget, int pageIndex) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get if the page enabled/disabled.  <a href="#a5e0f469de3b9b293f46dd68ff1a7ef3b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#a91414572781cfa96f8b7ac726263effe">IsPageEnabled</a> (const QWidget &amp;containerWidget, int pageIndex) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get if the page enabled/disabled.  <a href="#a91414572781cfa96f8b7ac726263effe"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#aadaa093c02280c61d5d80a30495b24aa">SetPageEnabled</a> (QWidget &amp;containerWidget, int pageIndex, bool isPageEnabled=true)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set page enabled/disabled.  <a href="#aadaa093c02280c61d5d80a30495b24aa"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#ab69a50f4cb91589f96006808b6cd8a4a">IsPageVisible</a> (QWidget &amp;containerWidget, int pageIndex) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get if the page visible/hidden.  <a href="#ab69a50f4cb91589f96006808b6cd8a4a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#a415185bf849752849f67b1be4460a294">IsPageVisible</a> (const QWidget &amp;containerWidget, int pageIndex) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get if the page visible/hidden.  <a href="#a415185bf849752849f67b1be4460a294"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#a7177446299416c746999b0d44293a2d6">SetPageVisible</a> (QWidget &amp;containerWidget, int pageIndex, bool isPageVisible=true)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set page visible/hidden.  <a href="#a7177446299416c746999b0d44293a2d6"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QSize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#a30578a411c2e515b92f7d5660e003839">GetPageIconSize</a> (QWidget &amp;containerWidget) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size page icon.  <a href="#a30578a411c2e515b92f7d5660e003839"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QSize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#a5200072db33fa60e57f848cfc52858fa">GetPageIconSize</a> (const QWidget &amp;containerWidget) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size page icon.  <a href="#a5200072db33fa60e57f848cfc52858fa"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_box_delegate.html#a90ad4368464e542c578781f85bc62239">SetPageIconSize</a> (QWidget &amp;containerWidget, const QSize &amp;pageIconSize)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the size of the icon for all pages in the container.  <a href="#a90ad4368464e542c578781f85bc62239"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Implementation of the <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html">IMultiPageWidgetDelegate</a> interface for QTabWidget. </p>
+<div class="textblock"><p>Implementation of the <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html" title="Interface of a delegate object used for operating on concrete UI-container implementation.">IMultiPageWidgetDelegate</a> interface for QToolBox. </p>
 
 <p>Definition at line <a class="el" href="_c_tool_box_delegate_8h_source.html#l00016">16</a> of file <a class="el" href="_c_tool_box_delegate_8h_source.html">CToolBoxDelegate.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
@@ -126,20 +126,20 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Create container widget. </p>
+<p>Create container for the page widgets. </p>
 
 <p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#aca569e934a9ae7751b2051038c7ec0c6">iqtgui::IMultiPageWidgetDelegate</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="adcd5776d952f2fed9fd4ac93f3d98704"></a><!-- doxytag: member="iqtgui::CToolBoxDelegate::GetCurrentPage" ref="adcd5776d952f2fed9fd4ac93f3d98704" args="(QWidget &amp;containerWidget) const " -->
+<a class="anchor" id="aa7fab458bb939dee63e7eb4f6d24f361"></a><!-- doxytag: member="iqtgui::CToolBoxDelegate::GetCurrentPage" ref="aa7fab458bb939dee63e7eb4f6d24f361" args="(const QWidget &amp;containerWidget) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual int iqtgui::CToolBoxDelegate::GetCurrentPage </td>
           <td>(</td>
-          <td class="paramtype">QWidget &amp;&#160;</td>
+          <td class="paramtype">const QWidget &amp;&#160;</td>
           <td class="paramname"><em>containerWidget</em></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -149,18 +149,18 @@ Public Member Functions</h2></td></tr>
 
 <p>Get currently active page in the container. </p>
 
-<p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a25c8b2e75342cf56380f1e18eb06e6d1">iqtgui::IMultiPageWidgetDelegate</a>.</p>
+<p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#ae5e34ff1a8ec3cd67eb2d5c80e72ab42">iqtgui::IMultiPageWidgetDelegate</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9ea7b1bbb8b41f7e8f4ef21b13f5a4a9"></a><!-- doxytag: member="iqtgui::CToolBoxDelegate::GetPageIcon" ref="a9ea7b1bbb8b41f7e8f4ef21b13f5a4a9" args="(QWidget &amp;containerWidget, int pageIndex) const " -->
+<a class="anchor" id="aaf65f2abca290dde89b425d7c9429a22"></a><!-- doxytag: member="iqtgui::CToolBoxDelegate::GetPageIcon" ref="aaf65f2abca290dde89b425d7c9429a22" args="(const QWidget &amp;containerWidget, int pageIndex) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual QIcon iqtgui::CToolBoxDelegate::GetPageIcon </td>
           <td>(</td>
-          <td class="paramtype">QWidget &amp;&#160;</td>
+          <td class="paramtype">const QWidget &amp;&#160;</td>
           <td class="paramname"><em>containerWidget</em>, </td>
         </tr>
         <tr>
@@ -180,18 +180,18 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the page icon. </p>
 
-<p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#afcb0f9f37bdc591f07162c5524bf5691">iqtgui::IMultiPageWidgetDelegate</a>.</p>
+<p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#aba5f927524112b90d335797d752f4902">iqtgui::IMultiPageWidgetDelegate</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a30578a411c2e515b92f7d5660e003839"></a><!-- doxytag: member="iqtgui::CToolBoxDelegate::GetPageIconSize" ref="a30578a411c2e515b92f7d5660e003839" args="(QWidget &amp;containerWidget) const " -->
+<a class="anchor" id="a5200072db33fa60e57f848cfc52858fa"></a><!-- doxytag: member="iqtgui::CToolBoxDelegate::GetPageIconSize" ref="a5200072db33fa60e57f848cfc52858fa" args="(const QWidget &amp;containerWidget) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual QSize iqtgui::CToolBoxDelegate::GetPageIconSize </td>
           <td>(</td>
-          <td class="paramtype">QWidget &amp;&#160;</td>
+          <td class="paramtype">const QWidget &amp;&#160;</td>
           <td class="paramname"><em>containerWidget</em></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -201,7 +201,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the size page icon. </p>
 
-<p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a123b6b5e72759eb9aaf40774edcc09ee">iqtgui::IMultiPageWidgetDelegate</a>.</p>
+<p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a3616709cb64b4cc2b6c210df8de67701">iqtgui::IMultiPageWidgetDelegate</a>.</p>
 
 </div>
 </div>
@@ -226,14 +226,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a12319e3531752a11f3d243da2b1e1514"></a><!-- doxytag: member="iqtgui::CToolBoxDelegate::GetPageTitle" ref="a12319e3531752a11f3d243da2b1e1514" args="(QWidget &amp;containerWidget, int pageIndex) const " -->
+<a class="anchor" id="a086a86f5437fa60e410692e773fcaf85"></a><!-- doxytag: member="iqtgui::CToolBoxDelegate::GetPageTitle" ref="a086a86f5437fa60e410692e773fcaf85" args="(const QWidget &amp;containerWidget, int pageIndex) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual QString iqtgui::CToolBoxDelegate::GetPageTitle </td>
           <td>(</td>
-          <td class="paramtype">QWidget &amp;&#160;</td>
+          <td class="paramtype">const QWidget &amp;&#160;</td>
           <td class="paramname"><em>containerWidget</em>, </td>
         </tr>
         <tr>
@@ -253,18 +253,18 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the title of the given page. </p>
 
-<p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a3c76c1da2f9131f7e24ef336af420d51">iqtgui::IMultiPageWidgetDelegate</a>.</p>
+<p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a75d4e2dc005450f605bb7423b210a772">iqtgui::IMultiPageWidgetDelegate</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad219a7ceb945802377e20c7cb67a2498"></a><!-- doxytag: member="iqtgui::CToolBoxDelegate::GetPageToolTip" ref="ad219a7ceb945802377e20c7cb67a2498" args="(QWidget &amp;containerWidget, int pageIndex) const " -->
+<a class="anchor" id="a1c39a3cd83e84dbf5a73ea752bcd38e5"></a><!-- doxytag: member="iqtgui::CToolBoxDelegate::GetPageToolTip" ref="a1c39a3cd83e84dbf5a73ea752bcd38e5" args="(const QWidget &amp;containerWidget, int pageIndex) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual QString iqtgui::CToolBoxDelegate::GetPageToolTip </td>
           <td>(</td>
-          <td class="paramtype">QWidget &amp;&#160;</td>
+          <td class="paramtype">const QWidget &amp;&#160;</td>
           <td class="paramname"><em>containerWidget</em>, </td>
         </tr>
         <tr>
@@ -284,7 +284,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the page tool tip. </p>
 
-<p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#aa82acf2280d1135fb4b1ca57160d026b">iqtgui::IMultiPageWidgetDelegate</a>.</p>
+<p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a7762075d07f1a1b1305613fe0fe01778">iqtgui::IMultiPageWidgetDelegate</a>.</p>
 
 </div>
 </div>
@@ -364,14 +364,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5e0f469de3b9b293f46dd68ff1a7ef3b"></a><!-- doxytag: member="iqtgui::CToolBoxDelegate::IsPageEnabled" ref="a5e0f469de3b9b293f46dd68ff1a7ef3b" args="(QWidget &amp;containerWidget, int pageIndex) const " -->
+<a class="anchor" id="a91414572781cfa96f8b7ac726263effe"></a><!-- doxytag: member="iqtgui::CToolBoxDelegate::IsPageEnabled" ref="a91414572781cfa96f8b7ac726263effe" args="(const QWidget &amp;containerWidget, int pageIndex) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iqtgui::CToolBoxDelegate::IsPageEnabled </td>
           <td>(</td>
-          <td class="paramtype">QWidget &amp;&#160;</td>
+          <td class="paramtype">const QWidget &amp;&#160;</td>
           <td class="paramname"><em>containerWidget</em>, </td>
         </tr>
         <tr>
@@ -391,18 +391,18 @@ Public Member Functions</h2></td></tr>
 
 <p>Get if the page enabled/disabled. </p>
 
-<p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a7f1b3549eafb0321eba86c60f1a2e129">iqtgui::IMultiPageWidgetDelegate</a>.</p>
+<p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#af390c1cd1a5caa935774107abadc3b3b">iqtgui::IMultiPageWidgetDelegate</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab69a50f4cb91589f96006808b6cd8a4a"></a><!-- doxytag: member="iqtgui::CToolBoxDelegate::IsPageVisible" ref="ab69a50f4cb91589f96006808b6cd8a4a" args="(QWidget &amp;containerWidget, int pageIndex) const " -->
+<a class="anchor" id="a415185bf849752849f67b1be4460a294"></a><!-- doxytag: member="iqtgui::CToolBoxDelegate::IsPageVisible" ref="a415185bf849752849f67b1be4460a294" args="(const QWidget &amp;containerWidget, int pageIndex) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual bool iqtgui::CToolBoxDelegate::IsPageVisible </td>
           <td>(</td>
-          <td class="paramtype">QWidget &amp;&#160;</td>
+          <td class="paramtype">const QWidget &amp;&#160;</td>
           <td class="paramname"><em>containerWidget</em>, </td>
         </tr>
         <tr>
@@ -422,7 +422,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get if the page visible/hidden. </p>
 
-<p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#aef364aa7fbfd2ae62769a8b34d3a406a">iqtgui::IMultiPageWidgetDelegate</a>.</p>
+<p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a5c3079d62667d0a598f67f4028ca3b08">iqtgui::IMultiPageWidgetDelegate</a>.</p>
 
 </div>
 </div>

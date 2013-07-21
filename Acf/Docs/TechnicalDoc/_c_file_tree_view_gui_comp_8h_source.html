@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Include/iqtgui/CFileTreeViewGuiComp.h Source File</title>
+<title>Include/ifilegui/CFileTreeViewGuiComp.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -23,11 +23,11 @@
   </div>
 <div class="header">
   <div class="headertitle">
-<div class="title">Include/iqtgui/CFileTreeViewGuiComp.h</div>  </div>
+<div class="title">Include/ifilegui/CFileTreeViewGuiComp.h</div>  </div>
 </div>
 <div class="contents">
-<a href="_c_file_tree_view_gui_comp_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef iqtgui_CFileTreeViewGuiComp_included</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iqtgui_CFileTreeViewGuiComp_included</span>
+<a href="_c_file_tree_view_gui_comp_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef ifilegui_CFileTreeViewGuiComp_included</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define ifilegui_CFileTreeViewGuiComp_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
@@ -54,52 +54,52 @@
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="_t_designer_gui_observer_comp_base_8h.html">iqtgui/TDesignerGuiObserverCompBase.h</a>&quot;</span>
 <a name="l00028"></a>00028 
-<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;iqtgui/Generated/ui_CFileTreeViewGuiComp.h&quot;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;ifilegui/Generated/ui_CFileTreeViewGuiComp.h&quot;</span>
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031 
-<a name="l00032"></a>00032 <span class="keyword">namespace </span>iqtgui
+<a name="l00032"></a>00032 <span class="keyword">namespace </span>ifilegui
 <a name="l00033"></a>00033 {
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035 
-<a name="l00041"></a><a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html">00041</a> <span class="keyword">class </span><a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html" title="File system explorer-like component.">CFileTreeViewGuiComp</a>:
-<a name="l00042"></a>00042                      <span class="keyword">public</span> iqtgui::<a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" title="Base class for all Qt GUI components.">TDesignerGuiObserverCompBase</a>&lt;
+<a name="l00041"></a><a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html">00041</a> <span class="keyword">class </span><a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html" title="File system explorer-like component.">CFileTreeViewGuiComp</a>:
+<a name="l00042"></a>00042                      <span class="keyword">public</span> iqtgui::TDesignerGuiObserverCompBase&lt;
 <a name="l00043"></a>00043                                           Ui::CFileTreeViewGuiComp, ifile::IFileNameParam&gt;,
 <a name="l00044"></a>00044                      <span class="keyword">public</span> imod::CMultiModelDispatcherBase
 <a name="l00045"></a>00045 {
 <a name="l00046"></a>00046        Q_OBJECT
 <a name="l00047"></a>00047 <span class="keyword">public</span>:
 <a name="l00048"></a>00048        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" title="Base class for all Qt GUI components.">iqtgui::TDesignerGuiObserverCompBase</a>&lt;
-<a name="l00049"></a><a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#aa569bc4fcb88a6d5bd2a55de2cf1a3dc">00049</a>                             Ui::CFileTreeViewGuiComp, <a class="code" href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)">ifile::IFileNameParam</a>&gt; <a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#aa569bc4fcb88a6d5bd2a55de2cf1a3dc">BaseClass</a>;
+<a name="l00049"></a><a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#ad334cae08d80140ad989549eb17c10ee">00049</a>                             Ui::CFileTreeViewGuiComp, <a class="code" href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)">ifile::IFileNameParam</a>&gt; <a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#ad334cae08d80140ad989549eb17c10ee">BaseClass</a>;
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html" title="File system explorer-like component.">CFileTreeViewGuiComp</a>);
-<a name="l00052"></a>00052               <a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#a5da9dd5675c96b81d5e7a81ffefa7060">I_REGISTER_SUBELEMENT</a>(CurrentFile);
-<a name="l00053"></a>00053               <a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#a3264a26575270b04bce002f8d03a952a">I_REGISTER_SUBELEMENT_INTERFACE</a>(CurrentFile, <a class="code" href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)">ifile::IFileNameParam</a>, ExtractCurrentFile);
-<a name="l00054"></a>00054               <a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#a3264a26575270b04bce002f8d03a952a">I_REGISTER_SUBELEMENT_INTERFACE</a>(CurrentFile, <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, ExtractCurrentFile);
-<a name="l00055"></a>00055               <a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#a3264a26575270b04bce002f8d03a952a">I_REGISTER_SUBELEMENT_INTERFACE</a>(CurrentFile, <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>, ExtractCurrentFile);
-<a name="l00056"></a>00056               <a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#a3264a26575270b04bce002f8d03a952a">I_REGISTER_SUBELEMENT_INTERFACE</a>(CurrentFile, <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>, ExtractCurrentFile);
+<a name="l00051"></a>00051        I_BEGIN_COMPONENT(<a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html" title="File system explorer-like component.">CFileTreeViewGuiComp</a>);
+<a name="l00052"></a>00052               <a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#a4b183810e7146350f4df5567093c2377">I_REGISTER_SUBELEMENT</a>(CurrentFile);
+<a name="l00053"></a>00053               <a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#a2f811c559bb2fc8d49b8e94384bfdf00">I_REGISTER_SUBELEMENT_INTERFACE</a>(CurrentFile, <a class="code" href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)">ifile::IFileNameParam</a>, ExtractCurrentFile);
+<a name="l00054"></a>00054               <a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#a2f811c559bb2fc8d49b8e94384bfdf00">I_REGISTER_SUBELEMENT_INTERFACE</a>(CurrentFile, <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, ExtractCurrentFile);
+<a name="l00055"></a>00055               <a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#a2f811c559bb2fc8d49b8e94384bfdf00">I_REGISTER_SUBELEMENT_INTERFACE</a>(CurrentFile, <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>, ExtractCurrentFile);
+<a name="l00056"></a>00056               <a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#a2f811c559bb2fc8d49b8e94384bfdf00">I_REGISTER_SUBELEMENT_INTERFACE</a>(CurrentFile, <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>, ExtractCurrentFile);
 <a name="l00057"></a>00057               I_ASSIGN(m_fileTypeInfoCompPtr, <span class="stringliteral">&quot;FileTypeInfo&quot;</span>, <span class="stringliteral">&quot;File type info used to create file filters&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;FileTypeInfo&quot;</span>);
 <a name="l00058"></a>00058               I_ASSIGN_MULTI_0(m_filtersAttrPtr, <span class="stringliteral">&quot;Filters&quot;</span>, <span class="stringliteral">&quot;List of filters if no FileTypeInfo is specified&quot;</span>, <span class="keyword">false</span>);
 <a name="l00059"></a>00059               I_ASSIGN(m_noEmptyDirsAttrPtr, <span class="stringliteral">&quot;NoEmptyFolders&quot;</span>, <span class="stringliteral">&quot;Recursively skip folder which containing no files&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);
 <a name="l00060"></a>00060        I_END_COMPONENT;
 <a name="l00061"></a>00061 
-<a name="l00062"></a><a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#a5af124a45db28402bc5dfdd9fcfd721e">00062</a>        <span class="keyword">enum</span> <a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#a5af124a45db28402bc5dfdd9fcfd721e">DataRoles</a>{
-<a name="l00063"></a><a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#a5af124a45db28402bc5dfdd9fcfd721ea53a63f13e9b27921116da10d2c891a64">00063</a>               <a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#a5af124a45db28402bc5dfdd9fcfd721ea53a63f13e9b27921116da10d2c891a64">DR_PATH</a> = Qt::UserRole + 1,
-<a name="l00064"></a><a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#a5af124a45db28402bc5dfdd9fcfd721ea75ea0c97dc914ce45ca10aa17b80deda">00064</a>               <a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#a5af124a45db28402bc5dfdd9fcfd721ea75ea0c97dc914ce45ca10aa17b80deda">DR_ISDIR</a>
+<a name="l00062"></a><a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#aa7392eab0b1ac81c33bfad4578c0dfd2">00062</a>        <span class="keyword">enum</span> <a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#aa7392eab0b1ac81c33bfad4578c0dfd2">DataRoles</a>{
+<a name="l00063"></a><a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#aa7392eab0b1ac81c33bfad4578c0dfd2ac15593e6b06bfd58a1a1d5ef9f1e0c26">00063</a>               <a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#aa7392eab0b1ac81c33bfad4578c0dfd2ac15593e6b06bfd58a1a1d5ef9f1e0c26">DR_PATH</a> = Qt::UserRole + 1,
+<a name="l00064"></a><a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#aa7392eab0b1ac81c33bfad4578c0dfd2af17bafc5352f383095daf3a3fd6dd92a">00064</a>               <a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#aa7392eab0b1ac81c33bfad4578c0dfd2af17bafc5352f383095daf3a3fd6dd92a">DR_ISDIR</a>
 <a name="l00065"></a>00065        };
 <a name="l00066"></a>00066 
 <a name="l00067"></a>00067 <span class="keyword">protected</span>:
 <a name="l00068"></a>00068        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#a3ad2fe5d2183194e2f7b46655c7a4984">OnComponentCreated</a>();
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#afe5602333294df2ff787b99de6a236cd">OnComponentDestroyed</a>();
+<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#a08633ded9ecfa0fa4d1fb639efe19328">OnComponentCreated</a>();
+<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#a5c8cf9dc7e83037e1e75df658274bb40">OnComponentDestroyed</a>();
 <a name="l00071"></a>00071 
 <a name="l00072"></a>00072        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#af30a20b105addef31ffee665c05552ee" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#ae669f50548fe831d6ed9958ce8159a4d" title="Called just after GUI is initialized.">OnGuiCreated</a>();
 <a name="l00074"></a>00074 
 <a name="l00075"></a>00075        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00076"></a>00076        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#ab01cfbda26ca2210f2adaf2fea028bf9" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00076"></a>00076        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#afdddddcdea73a587d153ef101fcec354" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
 <a name="l00077"></a>00077 
 <a name="l00078"></a>00078        <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
-<a name="l00079"></a>00079        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#a82d66f6c856123e7a1724c9e11d76e2b">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00079"></a>00079        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#aff0f13557a7fae1e46891c158815ab1e">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00080"></a>00080 
 <a name="l00081"></a>00081 <span class="keyword">private</span> Q_SLOTS:
 <a name="l00082"></a>00082        <span class="keywordtype">void</span> OnSelectionChanged(<span class="keyword">const</span> QItemSelection&amp; selected, <span class="keyword">const</span> QItemSelection&amp; deselected);
@@ -150,10 +150,10 @@
 <a name="l00135"></a>00135        }
 <a name="l00136"></a>00136 
 <a name="l00137"></a>00137 
-<a name="l00138"></a>00138        <span class="keyword">class </span><a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#ab336987dc363f285a687e73e2dc018e4">InternalThread</a>: <span class="keyword">public</span> QThread
+<a name="l00138"></a>00138        <span class="keyword">class </span><a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#ab336987dc363f285a687e73e2dc018e4">InternalThread</a>: <span class="keyword">public</span> QThread
 <a name="l00139"></a>00139        {
 <a name="l00140"></a>00140        <span class="keyword">public</span>:
-<a name="l00141"></a>00141               <a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#ab336987dc363f285a687e73e2dc018e4">InternalThread</a>(CFileTreeViewGuiComp* parentPtr): QThread(parentPtr),
+<a name="l00141"></a>00141               <a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#ab336987dc363f285a687e73e2dc018e4">InternalThread</a>(CFileTreeViewGuiComp* parentPtr): QThread(parentPtr),
 <a name="l00142"></a>00142                      m_parentPtr(parentPtr)
 <a name="l00143"></a>00143               {
 <a name="l00144"></a>00144               }
@@ -168,8 +168,8 @@
 <a name="l00153"></a>00153               CFileTreeViewGuiComp* m_parentPtr;
 <a name="l00154"></a>00154        };
 <a name="l00155"></a>00155 
-<a name="l00156"></a><a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#ab336987dc363f285a687e73e2dc018e4">00156</a>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#ab336987dc363f285a687e73e2dc018e4">InternalThread</a>;
-<a name="l00157"></a>00157        <a class="code" href="classiqtgui_1_1_c_file_tree_view_gui_comp.html#ab336987dc363f285a687e73e2dc018e4">InternalThread</a>* m_internalThreadPtr;
+<a name="l00156"></a><a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#ab336987dc363f285a687e73e2dc018e4">00156</a>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#ab336987dc363f285a687e73e2dc018e4">InternalThread</a>;
+<a name="l00157"></a>00157        <a class="code" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#ab336987dc363f285a687e73e2dc018e4">InternalThread</a>* m_internalThreadPtr;
 <a name="l00158"></a>00158 
 <a name="l00159"></a>00159        QMutex m_lock;
 <a name="l00160"></a>00160 
@@ -194,10 +194,10 @@
 <a name="l00179"></a>00179 };
 <a name="l00180"></a>00180 
 <a name="l00181"></a>00181 
-<a name="l00182"></a>00182 } <span class="comment">// namespace iqtgui</span>
+<a name="l00182"></a>00182 } <span class="comment">// namespace ifilegui</span>
 <a name="l00183"></a>00183 
 <a name="l00184"></a>00184 
-<a name="l00185"></a>00185 <span class="preprocessor">#endif // !iqtgui_CFileTreeProviderGuiComp_included</span>
+<a name="l00185"></a>00185 <span class="preprocessor">#endif // !ifilegui_CFileTreeProviderGuiComp_included</span>
 <a name="l00186"></a>00186 <span class="preprocessor"></span>
 <a name="l00187"></a>00187 
 </pre></div></div>

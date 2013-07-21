@@ -2272,6 +2272,85 @@
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
+    <name>CFileDialogLoaderComp.h</name>
+    <path>C:/Temp/Acf/Include/ifilegui/</path>
+    <filename>_c_file_dialog_loader_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_i_file_persistence_info_8h" name="IFilePersistenceInfo.h" local="yes" imported="no">ifile/IFilePersistenceInfo.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <includes id="ifilegui_8h" name="ifilegui.h" local="yes" imported="no">ifilegui/ifilegui.h</includes>
+    <class kind="class">ifilegui::CFileDialogLoaderComp</class>
+    <namespace>ifilegui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CFileListProviderGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/ifilegui/</path>
+    <filename>_c_file_list_provider_gui_comp_8h</filename>
+    <includes id="_i_file_list_provider_8h" name="IFileListProvider.h" local="yes" imported="no">ifile/IFileListProvider.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <class kind="class">ifilegui::CFileListProviderGuiComp</class>
+    <namespace>ifilegui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CFilePersistenceGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/ifilegui/</path>
+    <filename>_c_file_persistence_gui_comp_8h</filename>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
+    <class kind="class">ifilegui::CFilePersistenceGuiComp</class>
+    <namespace>ifilegui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CFilePreviewGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/ifilegui/</path>
+    <filename>_c_file_preview_gui_comp_8h</filename>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <class kind="class">ifilegui::CFilePreviewGuiComp</class>
+    <namespace>ifilegui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CFileSystemExplorerGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/ifilegui/</path>
+    <filename>_c_file_system_explorer_gui_comp_8h</filename>
+    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="_c_ext_line_edit_8h" name="CExtLineEdit.h" local="yes" imported="no">iqtgui/CExtLineEdit.h</includes>
+    <class kind="class">ifilegui::CFileSystemExplorerGuiComp</class>
+    <namespace>ifilegui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CFileTreeViewGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/ifilegui/</path>
+    <filename>_c_file_tree_view_gui_comp_8h</filename>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
+    <includes id="_c_file_name_param_comp_8h" name="CFileNameParamComp.h" local="yes" imported="no">ifile/CFileNameParamComp.h</includes>
+    <includes id="_i_qt_item_model_provider_8h" name="IQtItemModelProvider.h" local="yes" imported="no">ibase/IQtItemModelProvider.h</includes>
+    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <class kind="class">ifilegui::CFileTreeViewGuiComp</class>
+    <namespace>ifilegui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ifilegui.h</name>
+    <path>C:/Temp/Acf/Include/ifilegui/</path>
+    <filename>ifilegui_8h</filename>
+    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
+    <namespace>ifilegui</namespace>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>SetStyleSheet</name>
+      <anchorfile>namespaceifilegui.html</anchorfile>
+      <anchor>a00daafd63dfaeb2d432d5464c66a1300</anchor>
+      <arglist>(StyleSheetConsumer &amp;styleSheetConsumer, const QString &amp;styleSheetFilePath)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
     <name>CBitmap.h</name>
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>_c_bitmap_8h</filename>
@@ -4012,7 +4091,7 @@
     <path>C:/Temp/Acf/Include/iqtdoc/</path>
     <filename>_t_qt_document_manager_wrap_8h</filename>
     <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
-    <includes id="_c_file_dialog_loader_comp_8h" name="CFileDialogLoaderComp.h" local="yes" imported="no">iqtgui/CFileDialogLoaderComp.h</includes>
+    <includes id="_c_file_dialog_loader_comp_8h" name="CFileDialogLoaderComp.h" local="yes" imported="no">ifilegui/CFileDialogLoaderComp.h</includes>
     <class kind="class">iqtdoc::TQtDocumentManagerWrap</class>
     <namespace>iqtdoc</namespace>
   </compound>
@@ -4143,61 +4222,6 @@
     <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
     <includes id="iqtgui_8h" name="iqtgui.h" local="yes" imported="no">iqtgui/iqtgui.h</includes>
     <class kind="class">iqtgui::CExtLineEdit</class>
-    <namespace>iqtgui</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CFileDialogLoaderComp.h</name>
-    <path>C:/Temp/Acf/Include/iqtgui/</path>
-    <filename>_c_file_dialog_loader_comp_8h</filename>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
-    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
-    <includes id="_i_file_persistence_info_8h" name="IFilePersistenceInfo.h" local="yes" imported="no">ifile/IFilePersistenceInfo.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
-    <includes id="iqtgui_8h" name="iqtgui.h" local="yes" imported="no">iqtgui/iqtgui.h</includes>
-    <class kind="class">iqtgui::CFileDialogLoaderComp</class>
-    <namespace>iqtgui</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CFileListProviderGuiComp.h</name>
-    <path>C:/Temp/Acf/Include/iqtgui/</path>
-    <filename>_c_file_list_provider_gui_comp_8h</filename>
-    <includes id="_i_file_list_provider_8h" name="IFileListProvider.h" local="yes" imported="no">ifile/IFileListProvider.h</includes>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <class kind="class">iqtgui::CFileListProviderGuiComp</class>
-    <namespace>iqtgui</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CFilePersistenceGuiComp.h</name>
-    <path>C:/Temp/Acf/Include/iqtgui/</path>
-    <filename>_c_file_persistence_gui_comp_8h</filename>
-    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
-    <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
-    <class kind="class">iqtgui::CFilePersistenceGuiComp</class>
-    <namespace>iqtgui</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CFileSystemExplorerGuiComp.h</name>
-    <path>C:/Temp/Acf/Include/iqtgui/</path>
-    <filename>_c_file_system_explorer_gui_comp_8h</filename>
-    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <includes id="_c_ext_line_edit_8h" name="CExtLineEdit.h" local="yes" imported="no">iqtgui/CExtLineEdit.h</includes>
-    <class kind="class">iqtgui::CFileSystemExplorerGuiComp</class>
-    <namespace>iqtgui</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CFileTreeViewGuiComp.h</name>
-    <path>C:/Temp/Acf/Include/iqtgui/</path>
-    <filename>_c_file_tree_view_gui_comp_8h</filename>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
-    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
-    <includes id="_c_file_name_param_comp_8h" name="CFileNameParamComp.h" local="yes" imported="no">ifile/CFileNameParamComp.h</includes>
-    <includes id="_i_qt_item_model_provider_8h" name="IQtItemModelProvider.h" local="yes" imported="no">ibase/IQtItemModelProvider.h</includes>
-    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <class kind="class">iqtgui::CFileTreeViewGuiComp</class>
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
@@ -4332,16 +4356,6 @@
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
-    <name>CObjectPreviewGuiComp.h</name>
-    <path>C:/Temp/Acf/Include/iqtgui/</path>
-    <filename>_c_object_preview_gui_comp_8h</filename>
-    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <class kind="class">iqtgui::CObjectPreviewGuiComp</class>
-    <namespace>iqtgui</namespace>
-  </compound>
-  <compound kind="file">
     <name>CProgressManagerGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_progress_manager_gui_comp_8h</filename>
@@ -4409,6 +4423,14 @@
     <filename>_c_splitter_delegate_8h</filename>
     <includes id="_i_multi_page_widget_delegate_8h" name="IMultiPageWidgetDelegate.h" local="no" imported="no">iqtgui/IMultiPageWidgetDelegate.h</includes>
     <class kind="class">iqtgui::CSplitterDelegate</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CStackWidgetDelegate.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_c_stack_widget_delegate_8h</filename>
+    <includes id="_i_multi_page_widget_delegate_8h" name="IMultiPageWidgetDelegate.h" local="no" imported="no">iqtgui/IMultiPageWidgetDelegate.h</includes>
+    <class kind="class">iqtgui::CStackWidgetDelegate</class>
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
@@ -22765,6 +22787,380 @@
     </member>
   </compound>
   <compound kind="namespace">
+    <name>ifilegui</name>
+    <filename>namespaceifilegui.html</filename>
+    <class kind="class">ifilegui::CFileDialogLoaderComp</class>
+    <class kind="class">ifilegui::CFileListProviderGuiComp</class>
+    <class kind="class">ifilegui::CFilePersistenceGuiComp</class>
+    <class kind="class">ifilegui::CFilePreviewGuiComp</class>
+    <class kind="class">ifilegui::CFileSystemExplorerGuiComp</class>
+    <class kind="class">ifilegui::CFileTreeViewGuiComp</class>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>SetStyleSheet</name>
+      <anchorfile>namespaceifilegui.html</anchorfile>
+      <anchor>a00daafd63dfaeb2d432d5464c66a1300</anchor>
+      <arglist>(StyleSheetConsumer &amp;styleSheetConsumer, const QString &amp;styleSheetFilePath)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifilegui::CFileDialogLoaderComp</name>
+    <filename>classifilegui_1_1_c_file_dialog_loader_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base virtualness="virtual">ifile::IFilePersistence</base>
+    <base virtualness="virtual">ifile::IFilePersistenceInfo</base>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classifilegui_1_1_c_file_dialog_loader_comp.html</anchorfile>
+      <anchor>a4a61d2b36c51cd13b9a7d5468207b515</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_NONE_SUPPORTS</name>
+      <anchorfile>classifilegui_1_1_c_file_dialog_loader_comp.html</anchorfile>
+      <anchor>a4a61d2b36c51cd13b9a7d5468207b515a9bbd7787b7a9acc945207e1118670d42</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifilegui_1_1_c_file_dialog_loader_comp.html</anchorfile>
+      <anchor>a4c432876b8a60cfc3e427a7f2cecd3cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOperationSupported</name>
+      <anchorfile>classifilegui_1_1_c_file_dialog_loader_comp.html</anchorfile>
+      <anchor>a9db2736dd860753a68c7f232afb52eb1</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>LoadFromFile</name>
+      <anchorfile>classifilegui_1_1_c_file_dialog_loader_comp.html</anchorfile>
+      <anchor>a4f6967ee34f6a09b145794e25f5f1b37</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>SaveToFile</name>
+      <anchorfile>classifilegui_1_1_c_file_dialog_loader_comp.html</anchorfile>
+      <anchor>afa9e3683090b740160c35f22111e2ff9</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classifilegui_1_1_c_file_dialog_loader_comp.html</anchorfile>
+      <anchor>a9a025f38ecfc22b1e61bde99b558bf4d</anchor>
+      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classifilegui_1_1_c_file_dialog_loader_comp.html</anchorfile>
+      <anchor>a3aae66d9742b4bce705c50759c23424f</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetLastFilePath</name>
+      <anchorfile>classifilegui_1_1_c_file_dialog_loader_comp.html</anchorfile>
+      <anchor>a75fa21fadef707ec41c8a96d08212791</anchor>
+      <arglist>(OperationType operationType=OT_UNKNOWN, PathType pathType=PT_COMPLETE) const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>AppendLoaderFilterList</name>
+      <anchorfile>classifilegui_1_1_c_file_dialog_loader_comp.html</anchorfile>
+      <anchor>adc4e078614a767ae437c4293e38b119a</anchor>
+      <arglist>(const ifile::IFileTypeInfo &amp;fileTypeInfo, int flags, QStringList &amp;allExt, QStringList &amp;result)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QString</type>
+      <name>GetPathForType</name>
+      <anchorfile>classifilegui_1_1_c_file_dialog_loader_comp.html</anchorfile>
+      <anchor>aa2600b97addac713fb0435f6fc012587</anchor>
+      <arglist>(const QFileInfo &amp;fileInfo, PathType pathType) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetFileName</name>
+      <anchorfile>classifilegui_1_1_c_file_dialog_loader_comp.html</anchorfile>
+      <anchor>ac2391296f939755bd48753ad83fdcd53</anchor>
+      <arglist>(const QString &amp;filePath, bool isSaving, int &amp;selectionIndex) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>ifile::IFilePersistence *</type>
+      <name>GetLoaderFor</name>
+      <anchorfile>classifilegui_1_1_c_file_dialog_loader_comp.html</anchorfile>
+      <anchor>aabd5c5170ced901fc7035b588d3cdc83</anchor>
+      <arglist>(const QString &amp;filePath, int selectionIndex, int flags, bool beQuiet) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classifilegui_1_1_c_file_dialog_loader_comp.html</anchorfile>
+      <anchor>a0fc8081cb318e4fb774b915f31e0c9f6</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifilegui::CFileListProviderGuiComp</name>
+    <filename>classifilegui_1_1_c_file_list_provider_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CFileListProviderGuiComp, ifile::IFileListProvider &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CFileListProviderGuiComp, ifile::IFileListProvider &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classifilegui_1_1_c_file_list_provider_gui_comp.html</anchorfile>
+      <anchor>a7b57e5a1cfa77da2eefadb48a24fd234</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classifilegui_1_1_c_file_list_provider_gui_comp.html</anchorfile>
+      <anchor>a69b95dee91bb5c9e57c538788bbbb962</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifilegui::CFilePersistenceGuiComp</name>
+    <filename>classifilegui_1_1_c_file_persistence_gui_comp.html</filename>
+    <base>TDesignerGuiCompBase&lt; Ui::CFilePersistenceGuiComp &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CFilePersistenceGuiComp &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classifilegui_1_1_c_file_persistence_gui_comp.html</anchorfile>
+      <anchor>a4215f9a269101836eafc038ccf0edbb0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_LoadButton_clicked</name>
+      <anchorfile>classifilegui_1_1_c_file_persistence_gui_comp.html</anchorfile>
+      <anchor>a85a34a9eaf6c88950ec58c907e117f5a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_SaveButton_clicked</name>
+      <anchorfile>classifilegui_1_1_c_file_persistence_gui_comp.html</anchorfile>
+      <anchor>a53f919158b586fa6f10a7d0e429815d0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classifilegui_1_1_c_file_persistence_gui_comp.html</anchorfile>
+      <anchor>aa85347e719fb48d7027c8fa544021f76</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifilegui::CFilePreviewGuiComp</name>
+    <filename>classifilegui_1_1_c_file_preview_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CFilePreviewGuiComp, ifile::IFileNameParam &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CFilePreviewGuiComp, ifile::IFileNameParam &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
+      <anchor>ad1a5e0b767dda87dcc1b2bbaf2c184c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
+      <anchor>a38ef11959558df0f9cd5ba944ecbceaa</anchor>
+      <arglist>(m_objectModelCompPtr, m_objectCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
+      <anchor>ab52f8d09fad93e7067eb8ffa59add971</anchor>
+      <arglist>(m_objectGuiCompPtr, m_objectObserverCompPtr, true)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
+      <anchor>ae40c7a2205322a2bf3311f6a6096ab31</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
+      <anchor>acc4ed9cc8c029d3aeb7ccf65f33639c6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
+      <anchor>a440c805ac50b1a78bbad20530c895ef9</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
+      <anchor>a24f0028ea59859367e027ba487b3a3c2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
+      <anchor>a2f118ad984cf1c881a28b6e0dcd8678c</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifilegui::CFileSystemExplorerGuiComp</name>
+    <filename>classifilegui_1_1_c_file_system_explorer_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CFileSystemExplorerGuiComp, ifile::IFileNameParam &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CFileSystemExplorerGuiComp, ifile::IFileNameParam &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classifilegui_1_1_c_file_system_explorer_gui_comp.html</anchorfile>
+      <anchor>a8db3d15f1269b9502782a28191195495</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QStringList</type>
+      <name>GetDefaultFilters</name>
+      <anchorfile>classifilegui_1_1_c_file_system_explorer_gui_comp.html</anchorfile>
+      <anchor>a9afb2aa611533a6725e72a15be6a3000</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classifilegui_1_1_c_file_system_explorer_gui_comp.html</anchorfile>
+      <anchor>a1ac13c13a02ed0be09f5092a7580bfe7</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classifilegui_1_1_c_file_system_explorer_gui_comp.html</anchorfile>
+      <anchor>ace9559f82c725ae5fa104fab4f15b528</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifilegui::CFileTreeViewGuiComp</name>
+    <filename>classifilegui_1_1_c_file_tree_view_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CFileTreeViewGuiComp, ifile::IFileNameParam &gt;</base>
+    <base>imod::CMultiModelDispatcherBase</base>
+    <member kind="enumeration">
+      <name>DataRoles</name>
+      <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>aa7392eab0b1ac81c33bfad4578c0dfd2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DR_PATH</name>
+      <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>aa7392eab0b1ac81c33bfad4578c0dfd2ac15593e6b06bfd58a1a1d5ef9f1e0c26</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DR_ISDIR</name>
+      <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>aa7392eab0b1ac81c33bfad4578c0dfd2af17bafc5352f383095daf3a3fd6dd92a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CFileTreeViewGuiComp, ifile::IFileNameParam &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>ad334cae08d80140ad989549eb17c10ee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT</name>
+      <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>a4b183810e7146350f4df5567093c2377</anchor>
+      <arglist>(CurrentFile)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>a2f811c559bb2fc8d49b8e94384bfdf00</anchor>
+      <arglist>(CurrentFile, ifile::IFileNameParam, ExtractCurrentFile)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>acb82fb9d0e53df12906f116b9c4df879</anchor>
+      <arglist>(CurrentFile, imod::IModel, ExtractCurrentFile)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>a0f23345fc4ea3559c6c48f5e9e3175ab</anchor>
+      <arglist>(CurrentFile, istd::IChangeable, ExtractCurrentFile)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>acc7091a58ec5316d324c39bd5566ab39</anchor>
+      <arglist>(CurrentFile, iser::ISerializable, ExtractCurrentFile)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>a08633ded9ecfa0fa4d1fb639efe19328</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>a5c8cf9dc7e83037e1e75df658274bb40</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>ae669f50548fe831d6ed9958ce8159a4d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>afdddddcdea73a587d153ef101fcec354</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>aff0f13557a7fae1e46891c158815ab1e</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>InternalThread</name>
+      <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>ab336987dc363f285a687e73e2dc018e4</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
     <name>iimg</name>
     <filename>namespaceiimg.html</filename>
     <class kind="class">iimg::CBitmap</class>
@@ -36051,11 +36447,6 @@
     <class kind="class">iqtgui::CDockWidgetGuiComp</class>
     <class kind="class">iqtgui::CDoubleRangeSpinEdit</class>
     <class kind="class">iqtgui::CExtLineEdit</class>
-    <class kind="class">iqtgui::CFileDialogLoaderComp</class>
-    <class kind="class">iqtgui::CFileListProviderGuiComp</class>
-    <class kind="class">iqtgui::CFilePersistenceGuiComp</class>
-    <class kind="class">iqtgui::CFileSystemExplorerGuiComp</class>
-    <class kind="class">iqtgui::CFileTreeViewGuiComp</class>
     <class kind="class">iqtgui::CFlowLayout</class>
     <class kind="class">iqtgui::CFreeWidgetGuiComp</class>
     <class kind="class">iqtgui::CGuiApplicationComp</class>
@@ -36069,7 +36460,6 @@
     <class kind="class">iqtgui::CModelDialogGuiComp</class>
     <class kind="class">iqtgui::CModelEditorGuiComp</class>
     <class kind="class">iqtgui::CMultiPageWidget</class>
-    <class kind="class">iqtgui::CObjectPreviewGuiComp</class>
     <class kind="class">iqtgui::CProgressManagerGuiComp</class>
     <class kind="class">iqtgui::CSelectableCommandsProviderComp</class>
     <class kind="class">iqtgui::CSettingsContainerGuiComp</class>
@@ -36077,6 +36467,7 @@
     <class kind="class">iqtgui::CSimpleMainWindowGuiComp</class>
     <class kind="class">iqtgui::CSplashScreenGuiComp</class>
     <class kind="class">iqtgui::CSplitterDelegate</class>
+    <class kind="class">iqtgui::CStackWidgetDelegate</class>
     <class kind="class">iqtgui::CStatusBarWidgetComp</class>
     <class kind="class">iqtgui::CStatusGuiComp</class>
     <class kind="class">iqtgui::CTabbedMultiViewGuiComp</class>
@@ -36858,302 +37249,6 @@
       <anchorfile>classiqtgui_1_1_c_ext_line_edit.html</anchorfile>
       <anchor>af97bf7d7c1c1ebf6b6c4da27a877ea51</anchor>
       <arglist>(QFocusEvent *focusEvent)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtgui::CFileDialogLoaderComp</name>
-    <filename>classiqtgui_1_1_c_file_dialog_loader_comp.html</filename>
-    <base>ilog::TLoggerCompWrap</base>
-    <base virtualness="virtual">ifile::IFilePersistence</base>
-    <base virtualness="virtual">ifile::IFilePersistenceInfo</base>
-    <member kind="enumeration">
-      <name>MessageId</name>
-      <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>a1c6505cec393c4178dea87867e891199</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_NONE_SUPPORTS</name>
-      <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>a1c6505cec393c4178dea87867e891199a2021640d9a4af7e47d6d3cf17292846a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ilog::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>aac9481790b35f2c6d1187e0e44380620</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsOperationSupported</name>
-      <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>a92c3c3c41ae3f90ebd1eedc7cb1787c6</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>LoadFromFile</name>
-      <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>a7024fa370483bef9232977bf45d23de2</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>SaveToFile</name>
-      <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>ab33d039aab082524aaf3b55cd72faa76</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetFileExtensions</name>
-      <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>aecb38bab5cf8650757cb0861c95cf565</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetTypeDescription</name>
-      <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>ab69a2cf14e84536647e19387d13eecbf</anchor>
-      <arglist>(const QString *extensionPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetLastFilePath</name>
-      <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>adbd2a0314e6936a69205d07c792bae22</anchor>
-      <arglist>(OperationType operationType=OT_UNKNOWN, PathType pathType=PT_COMPLETE) const </arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static void</type>
-      <name>AppendLoaderFilterList</name>
-      <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>a4dc5b0ff40e793893ab27ee3e1771461</anchor>
-      <arglist>(const ifile::IFileTypeInfo &amp;fileTypeInfo, int flags, QStringList &amp;allExt, QStringList &amp;result)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>QString</type>
-      <name>GetPathForType</name>
-      <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>a27dcd79ba499697d09ebdc36c4e6d3b5</anchor>
-      <arglist>(const QFileInfo &amp;fileInfo, PathType pathType) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetFileName</name>
-      <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>a5906e327f4ade219df779213ef6cd7c6</anchor>
-      <arglist>(const QString &amp;filePath, bool isSaving, int &amp;selectionIndex) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>ifile::IFilePersistence *</type>
-      <name>GetLoaderFor</name>
-      <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>a41c9f88981bbd7017aced704c443bb9c</anchor>
-      <arglist>(const QString &amp;filePath, int selectionIndex, int flags, bool beQuiet) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiqtgui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>acdeb4247ab86e7fe2626df198cd0b23e</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtgui::CFileListProviderGuiComp</name>
-    <filename>classiqtgui_1_1_c_file_list_provider_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CFileListProviderGuiComp, ifile::IFileListProvider &gt;</base>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CFileListProviderGuiComp, ifile::IFileListProvider &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtgui_1_1_c_file_list_provider_gui_comp.html</anchorfile>
-      <anchor>ac8bc451080b96e22487b9f0225c0aac3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiqtgui_1_1_c_file_list_provider_gui_comp.html</anchorfile>
-      <anchor>ad66b1edb11f61154bf365e4267301aa6</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtgui::CFilePersistenceGuiComp</name>
-    <filename>classiqtgui_1_1_c_file_persistence_gui_comp.html</filename>
-    <base>TDesignerGuiCompBase&lt; Ui::CFilePersistenceGuiComp &gt;</base>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CFilePersistenceGuiComp &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtgui_1_1_c_file_persistence_gui_comp.html</anchorfile>
-      <anchor>a0e74b28d27f0eb209f3a32f65fe19a0d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_LoadButton_clicked</name>
-      <anchorfile>classiqtgui_1_1_c_file_persistence_gui_comp.html</anchorfile>
-      <anchor>a97b1849f01c145f6194e12ae43bfc03b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_SaveButton_clicked</name>
-      <anchorfile>classiqtgui_1_1_c_file_persistence_gui_comp.html</anchorfile>
-      <anchor>a94bf86009f42f64fef75c90263c621e6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtgui_1_1_c_file_persistence_gui_comp.html</anchorfile>
-      <anchor>aee83891e458690677db80b5c39ab26fa</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtgui::CFileSystemExplorerGuiComp</name>
-    <filename>classiqtgui_1_1_c_file_system_explorer_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CFileSystemExplorerGuiComp, ifile::IFileNameParam &gt;</base>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CFileSystemExplorerGuiComp, ifile::IFileNameParam &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtgui_1_1_c_file_system_explorer_gui_comp.html</anchorfile>
-      <anchor>a490300cd97852910c974f34caa4b13cc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>QStringList</type>
-      <name>GetDefaultFilters</name>
-      <anchorfile>classiqtgui_1_1_c_file_system_explorer_gui_comp.html</anchorfile>
-      <anchor>afc477a01d70604290be4ebe38f811526</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiqtgui_1_1_c_file_system_explorer_gui_comp.html</anchorfile>
-      <anchor>a4fde1a1b3312c920073c243dff3d2e9a</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtgui_1_1_c_file_system_explorer_gui_comp.html</anchorfile>
-      <anchor>a1ef1571cc99744eded39e878e8612f83</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtgui::CFileTreeViewGuiComp</name>
-    <filename>classiqtgui_1_1_c_file_tree_view_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CFileTreeViewGuiComp, ifile::IFileNameParam &gt;</base>
-    <base>imod::CMultiModelDispatcherBase</base>
-    <member kind="enumeration">
-      <name>DataRoles</name>
-      <anchorfile>classiqtgui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
-      <anchor>a5af124a45db28402bc5dfdd9fcfd721e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DR_PATH</name>
-      <anchorfile>classiqtgui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
-      <anchor>a5af124a45db28402bc5dfdd9fcfd721ea53a63f13e9b27921116da10d2c891a64</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DR_ISDIR</name>
-      <anchorfile>classiqtgui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
-      <anchor>a5af124a45db28402bc5dfdd9fcfd721ea75ea0c97dc914ce45ca10aa17b80deda</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CFileTreeViewGuiComp, ifile::IFileNameParam &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtgui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
-      <anchor>aa569bc4fcb88a6d5bd2a55de2cf1a3dc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classiqtgui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
-      <anchor>a5da9dd5675c96b81d5e7a81ffefa7060</anchor>
-      <arglist>(CurrentFile)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiqtgui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
-      <anchor>a3264a26575270b04bce002f8d03a952a</anchor>
-      <arglist>(CurrentFile, ifile::IFileNameParam, ExtractCurrentFile)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiqtgui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
-      <anchor>ab747176cf94996c8229297cf3635bfa8</anchor>
-      <arglist>(CurrentFile, imod::IModel, ExtractCurrentFile)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiqtgui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
-      <anchor>a0ff22edb2fd3438c7f54ee27014b963a</anchor>
-      <arglist>(CurrentFile, istd::IChangeable, ExtractCurrentFile)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiqtgui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
-      <anchor>a824f04e00136043c145e12c61cddd774</anchor>
-      <arglist>(CurrentFile, iser::ISerializable, ExtractCurrentFile)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiqtgui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
-      <anchor>a3ad2fe5d2183194e2f7b46655c7a4984</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiqtgui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
-      <anchor>afe5602333294df2ff787b99de6a236cd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtgui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
-      <anchor>af30a20b105addef31ffee665c05552ee</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiqtgui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
-      <anchor>ab01cfbda26ca2210f2adaf2fea028bf9</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnModelChanged</name>
-      <anchorfile>classiqtgui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
-      <anchor>a82d66f6c856123e7a1724c9e11d76e2b</anchor>
-      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend class</type>
-      <name>InternalThread</name>
-      <anchorfile>classiqtgui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
-      <anchor>ab336987dc363f285a687e73e2dc018e4</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -38149,25 +38244,25 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>QObject</type>
+      <type>QWidget</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
-      <anchor>ad8c8798fb5ac83a4d5b10314a3e95477</anchor>
+      <anchor>aeafecd70c50c1251f05edd9e2b0c2a66</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CMultiPageWidget</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
-      <anchor>aecd6b44bed3d8e040f7953b11e21a27e</anchor>
-      <arglist>(int designMode=DT_SIMPLE, bool useHorizontalLayout=true)</arglist>
+      <anchor>aed22dd37a002ae4b83c3228b60c2e3ad</anchor>
+      <arglist>(int designMode=DT_SIMPLE, Qt::Orientation orientation=Qt::Vertical, QWidget *parentWidgetPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>InsertPage</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
-      <anchor>a6a7e02d76f8417ccc5bfa006923ed4c4</anchor>
-      <arglist>(QWidget *widgetPtr, const QString &amp;pageTitle, int pageIndex=-1)</arglist>
+      <anchor>ad087a6a476022494ec0a844cc7a04a2b</anchor>
+      <arglist>(QWidget *pageWidgetPtr, const QString &amp;pageTitle, int pageIndex=-1)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -38175,20 +38270,6 @@
       <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
       <anchor>acd269719d0cf7131375783058b1e502b</anchor>
       <arglist>(int pageIndex)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetPageEnabled</name>
-      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
-      <anchor>a7a73721f1bf5d4a058d289ca15fec88a</anchor>
-      <arglist>(int pageIndex, bool isEnabled=true)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetPageVisible</name>
-      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
-      <anchor>a30900200cbc53b6ab6b60b42972b95d8</anchor>
-      <arglist>(int pageIndex, bool isVisible=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -38203,6 +38284,104 @@
       <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
       <anchor>a6bbc1710ce6e2c9539b7f5bf0c53bfd7</anchor>
       <arglist>(int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetCurrentPage</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>ac75f163bc4ace571a45e2057798e0c1a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetCurrentPage</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>ad4bc21d3ff18df04e573880c4b69baa6</anchor>
+      <arglist>(int pageIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetPageTitle</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>a672f9d254e0f8a82b011cb9a1e0a0a25</anchor>
+      <arglist>(int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPageTitle</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>a1689c308cf5f5177b2e62f090f0a3273</anchor>
+      <arglist>(int pageIndex, const QString &amp;pageTitle)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QIcon</type>
+      <name>GetPageIcon</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>a82c64d1847442f6cc86436e0323b2649</anchor>
+      <arglist>(int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPageIcon</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>ada9b958301ed325bf6d0beb043424335</anchor>
+      <arglist>(int pageIndex, const QIcon &amp;pageIcon)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetPageToolTip</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>a290e8b9fa00ab0220ac6ea816e31b257</anchor>
+      <arglist>(int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPageToolTip</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>a3a1917e355d5ccdb411341fe59030c7c</anchor>
+      <arglist>(int pageIndex, const QString &amp;pageToolTip)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsPageEnabled</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>ae537994ec5e712cd82852d37297b6a54</anchor>
+      <arglist>(int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPageEnabled</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>a853453f87ac74e0dd0665dee5b72b87c</anchor>
+      <arglist>(int pageIndex, bool isPageEnabled=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsPageVisible</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>a9045d4d0834a0632c51d357651038ad4</anchor>
+      <arglist>(int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPageVisible</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>adf443549c9e3fdeff8903856ce218042</anchor>
+      <arglist>(int pageIndex, bool isPageVisible=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QSize</type>
+      <name>GetPageIconSize</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>a0ad9074ad1fb45eec731d7a5a9067060</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPageIconSize</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>a4f0f4659dbb66ad70a1c0b2132a3ec16</anchor>
+      <arglist>(const QSize &amp;pageIconSize)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -38224,74 +38403,6 @@
       <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
       <anchor>aad8e99bf20649ee595531265460acb91</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CreateContainerGui</name>
-      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
-      <anchor>aa08ba3331f612bededfd475ef4a01f65</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtgui::CObjectPreviewGuiComp</name>
-    <filename>classiqtgui_1_1_c_object_preview_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CObjectPreviewGuiComp, ifile::IFileNameParam &gt;</base>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CObjectPreviewGuiComp, ifile::IFileNameParam &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtgui_1_1_c_object_preview_gui_comp.html</anchorfile>
-      <anchor>a2696b18195cee9b535213dfb92a1f484</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtgui_1_1_c_object_preview_gui_comp.html</anchorfile>
-      <anchor>aad4da33e555e70b3453b3cc9ae5534c2</anchor>
-      <arglist>(m_objectModelCompPtr, m_objectCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtgui_1_1_c_object_preview_gui_comp.html</anchorfile>
-      <anchor>ac3b9835a44bd0c9407403743590b8a78</anchor>
-      <arglist>(m_objectGuiCompPtr, m_objectObserverCompPtr, true)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classiqtgui_1_1_c_object_preview_gui_comp.html</anchorfile>
-      <anchor>a2e83443c9a15c086049cda276958e4da</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classiqtgui_1_1_c_object_preview_gui_comp.html</anchorfile>
-      <anchor>a3daf5e173d6dec22db4bd28242b40a67</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiqtgui_1_1_c_object_preview_gui_comp.html</anchorfile>
-      <anchor>ad4b78f0c1995c56bc4ccf5b8206ab7ae</anchor>
-      <arglist>(int updateFlags=0)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtgui_1_1_c_object_preview_gui_comp.html</anchorfile>
-      <anchor>aa9ccc86acad1661b3dbcb840847bac51</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtgui_1_1_c_object_preview_gui_comp.html</anchorfile>
-      <anchor>afa94c2ea414bb8b8cccb5cab85b9394b</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -38551,8 +38662,8 @@
       <type>virtual int</type>
       <name>GetCurrentPage</name>
       <anchorfile>classiqtgui_1_1_c_simple_gui_container_delegate.html</anchorfile>
-      <anchor>a8d55220e0ce6b8fff5934dbd1be0dde9</anchor>
-      <arglist>(QWidget &amp;containerWidget) const </arglist>
+      <anchor>abbe1c93b97c3969e66543276d6605a17</anchor>
+      <arglist>(const QWidget &amp;containerWidget) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -38565,8 +38676,8 @@
       <type>virtual QString</type>
       <name>GetPageTitle</name>
       <anchorfile>classiqtgui_1_1_c_simple_gui_container_delegate.html</anchorfile>
-      <anchor>aa25237666089f56b1110a697039adee9</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const </arglist>
+      <anchor>a7aa21c67a3222e4ac790307ec4e3c7b3</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -38579,8 +38690,8 @@
       <type>virtual QIcon</type>
       <name>GetPageIcon</name>
       <anchorfile>classiqtgui_1_1_c_simple_gui_container_delegate.html</anchorfile>
-      <anchor>a8521d3b575f83655deb487555b113f8d</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const </arglist>
+      <anchor>a05ab564f8cfb7b50fa3793e490f52c50</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -38593,8 +38704,8 @@
       <type>virtual QString</type>
       <name>GetPageToolTip</name>
       <anchorfile>classiqtgui_1_1_c_simple_gui_container_delegate.html</anchorfile>
-      <anchor>ac92fbc78caed8ed22d865b3cce6e13e6</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const </arglist>
+      <anchor>a14aa2169d7824fd8712f905861965912</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -38607,8 +38718,8 @@
       <type>virtual bool</type>
       <name>IsPageEnabled</name>
       <anchorfile>classiqtgui_1_1_c_simple_gui_container_delegate.html</anchorfile>
-      <anchor>ae6661b24b1fe1111f8b5cb8984a8a21c</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const </arglist>
+      <anchor>a0b0e0908f30e0e3985b75985e04d200f</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -38621,8 +38732,8 @@
       <type>virtual bool</type>
       <name>IsPageVisible</name>
       <anchorfile>classiqtgui_1_1_c_simple_gui_container_delegate.html</anchorfile>
-      <anchor>ae852f4d9e1bcbafd58314f483a8acb43</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const </arglist>
+      <anchor>ab3fdffc0964ec8cfe79ffbbd6a278908</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -38635,8 +38746,8 @@
       <type>virtual QSize</type>
       <name>GetPageIconSize</name>
       <anchorfile>classiqtgui_1_1_c_simple_gui_container_delegate.html</anchorfile>
-      <anchor>aa2237d547ff966f4b3fa285ac6c66716</anchor>
-      <arglist>(QWidget &amp;containerWidget) const </arglist>
+      <anchor>a1617e9064fc606d70bab88645e2a056e</anchor>
+      <arglist>(const QWidget &amp;containerWidget) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -38921,8 +39032,8 @@
       <type>virtual int</type>
       <name>GetCurrentPage</name>
       <anchorfile>classiqtgui_1_1_c_splitter_delegate.html</anchorfile>
-      <anchor>a4e12e6b3e38444bd9b32cee92a0ff724</anchor>
-      <arglist>(QWidget &amp;containerWidget) const </arglist>
+      <anchor>a4807948536983bb79607e9351f470c09</anchor>
+      <arglist>(const QWidget &amp;containerWidget) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -38935,8 +39046,8 @@
       <type>virtual QString</type>
       <name>GetPageTitle</name>
       <anchorfile>classiqtgui_1_1_c_splitter_delegate.html</anchorfile>
-      <anchor>ab6b8fc8671cac6fd8aa4fb8bfb864733</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const </arglist>
+      <anchor>a0c4fda64ebf9aae66c5257cf5c0e2eb2</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -38949,8 +39060,8 @@
       <type>virtual QIcon</type>
       <name>GetPageIcon</name>
       <anchorfile>classiqtgui_1_1_c_splitter_delegate.html</anchorfile>
-      <anchor>ae20bb57e8c652d76952c5477d3d4bb51</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const </arglist>
+      <anchor>a64bc8a968a5d4f3ec4fcd45fe32b1e60</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -38963,8 +39074,8 @@
       <type>virtual QString</type>
       <name>GetPageToolTip</name>
       <anchorfile>classiqtgui_1_1_c_splitter_delegate.html</anchorfile>
-      <anchor>a55d94d724682e9316bf9b39ee63998f6</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const </arglist>
+      <anchor>a95f0708c7bdeddda5935a5aea9c7d2c9</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -38977,8 +39088,8 @@
       <type>virtual bool</type>
       <name>IsPageEnabled</name>
       <anchorfile>classiqtgui_1_1_c_splitter_delegate.html</anchorfile>
-      <anchor>aa1afa417b1b85fd6494eac76ae9fa36d</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const </arglist>
+      <anchor>a94f924f52309ea3b838cd37764f0caf6</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -38991,8 +39102,8 @@
       <type>virtual bool</type>
       <name>IsPageVisible</name>
       <anchorfile>classiqtgui_1_1_c_splitter_delegate.html</anchorfile>
-      <anchor>a394213be1b7706f5ca10f899f68ed4a4</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const </arglist>
+      <anchor>ae66320d41109f1043eaea505f729ef78</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -39005,14 +39116,152 @@
       <type>virtual QSize</type>
       <name>GetPageIconSize</name>
       <anchorfile>classiqtgui_1_1_c_splitter_delegate.html</anchorfile>
-      <anchor>ae444b8fed4047720f838295101aa0dcf</anchor>
-      <arglist>(QWidget &amp;containerWidget) const </arglist>
+      <anchor>a4030cfd9f98cea59398cd3357f390e65</anchor>
+      <arglist>(const QWidget &amp;containerWidget) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetPageIconSize</name>
       <anchorfile>classiqtgui_1_1_c_splitter_delegate.html</anchorfile>
       <anchor>a563e5d1dc0fd1bb6df36d1fd9430db95</anchor>
+      <arglist>(QWidget &amp;containerWidget, const QSize &amp;pageIconSize)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CStackWidgetDelegate</name>
+    <filename>classiqtgui_1_1_c_stack_widget_delegate.html</filename>
+    <base virtualness="virtual">iqtgui::IMultiPageWidgetDelegate</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QWidget *</type>
+      <name>CreateContainerWidget</name>
+      <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
+      <anchor>a5801d5e877c44b1ecac3a47e3bd46ed9</anchor>
+      <arglist>(QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>InsertPage</name>
+      <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
+      <anchor>abef30d8b823809b7a5c5444ba3b3ff6a</anchor>
+      <arglist>(QWidget &amp;containerWidget, QWidget *pageWidgetPtr, const QString &amp;pageTitle, int pageIndex=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemovePage</name>
+      <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
+      <anchor>a741143ba0a90770d22be5fa49c9d7547</anchor>
+      <arglist>(QWidget &amp;containerWidget, int pageIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPagesCount</name>
+      <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
+      <anchor>a7c2d7dce22a3c79451e57a7d54f1c510</anchor>
+      <arglist>(const QWidget &amp;containerWidget) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QWidget *</type>
+      <name>GetPageWidgetPtr</name>
+      <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
+      <anchor>a33a967a35f9e185a3a1141120d91a4ac</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetCurrentPage</name>
+      <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
+      <anchor>a266dfcefb5ef6e17a146793939ad0c3d</anchor>
+      <arglist>(const QWidget &amp;containerWidget) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetCurrentPage</name>
+      <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
+      <anchor>a6105f7e666cfb7790cc197fa221bad34</anchor>
+      <arglist>(QWidget &amp;containerWidget, int pageIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetPageTitle</name>
+      <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
+      <anchor>a1cb39e2339da3ca710105d02bdc1a6cf</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPageTitle</name>
+      <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
+      <anchor>afbd766f58e31b3d45b6d3fd8104afaeb</anchor>
+      <arglist>(QWidget &amp;containerWidget, int pageIndex, const QString &amp;pageTitle)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QIcon</type>
+      <name>GetPageIcon</name>
+      <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
+      <anchor>a1ffcd73aab7ea651b6673af0111df4b2</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPageIcon</name>
+      <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
+      <anchor>adbebe7b27cef43dea54eb9a11d9ee89f</anchor>
+      <arglist>(QWidget &amp;containerWidget, int pageIndex, const QIcon &amp;pageIcon)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetPageToolTip</name>
+      <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
+      <anchor>aa677931fbb20cbd746d01a7b6eeb7414</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPageToolTip</name>
+      <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
+      <anchor>a3ec11c2be3f445114f77235563580032</anchor>
+      <arglist>(QWidget &amp;containerWidget, int pageIndex, const QString &amp;pageToolTip)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsPageEnabled</name>
+      <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
+      <anchor>a26631cb23a7e870a548909cbfc33f317</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPageEnabled</name>
+      <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
+      <anchor>a2050478e5d8108ffa04ba736ad9f3824</anchor>
+      <arglist>(QWidget &amp;containerWidget, int pageIndex, bool isPageEnabled=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsPageVisible</name>
+      <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
+      <anchor>a00c53c4587a940d17a628cbd83ae0cff</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPageVisible</name>
+      <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
+      <anchor>ac255aab580c97899dc83479783724818</anchor>
+      <arglist>(QWidget &amp;containerWidget, int pageIndex, bool isPageVisible=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QSize</type>
+      <name>GetPageIconSize</name>
+      <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
+      <anchor>a91930c95088d0f9728bba18d519a1d7f</anchor>
+      <arglist>(const QWidget &amp;containerWidget) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPageIconSize</name>
+      <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
+      <anchor>af702fccb9019c2843c62f8dbab55258f</anchor>
       <arglist>(QWidget &amp;containerWidget, const QSize &amp;pageIconSize)</arglist>
     </member>
   </compound>
@@ -39237,6 +39486,13 @@
     <name>iqtgui::CTabWidgetDelegate</name>
     <filename>classiqtgui_1_1_c_tab_widget_delegate.html</filename>
     <base virtualness="virtual">iqtgui::IMultiPageWidgetDelegate</base>
+    <member kind="function">
+      <type></type>
+      <name>CTabWidgetDelegate</name>
+      <anchorfile>classiqtgui_1_1_c_tab_widget_delegate.html</anchorfile>
+      <anchor>a4ebb788daf49c86af00382395e262995</anchor>
+      <arglist>(QTabWidget::TabPosition tabPosition=QTabWidget::North, bool useDocumentMode=false)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QWidget *</type>
       <name>CreateContainerWidget</name>
@@ -39276,8 +39532,8 @@
       <type>virtual int</type>
       <name>GetCurrentPage</name>
       <anchorfile>classiqtgui_1_1_c_tab_widget_delegate.html</anchorfile>
-      <anchor>a039b80355e1a6d1f768bb9c592e5c163</anchor>
-      <arglist>(QWidget &amp;containerWidget) const </arglist>
+      <anchor>aae2fe9c59ad543914c0c3c1d14da9c96</anchor>
+      <arglist>(const QWidget &amp;containerWidget) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -39290,8 +39546,8 @@
       <type>virtual QString</type>
       <name>GetPageTitle</name>
       <anchorfile>classiqtgui_1_1_c_tab_widget_delegate.html</anchorfile>
-      <anchor>a1fdb773f35d6d640e7e1dd97edb9e66e</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const </arglist>
+      <anchor>ae7685ce496d4840a5747b6c37b961795</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -39304,8 +39560,8 @@
       <type>virtual QIcon</type>
       <name>GetPageIcon</name>
       <anchorfile>classiqtgui_1_1_c_tab_widget_delegate.html</anchorfile>
-      <anchor>a38d04c3a8fdb4042b3aa680551175722</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const </arglist>
+      <anchor>ad20e5d7c5d3a5ba8a0ab0ab7d56a1ed0</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -39318,8 +39574,8 @@
       <type>virtual QString</type>
       <name>GetPageToolTip</name>
       <anchorfile>classiqtgui_1_1_c_tab_widget_delegate.html</anchorfile>
-      <anchor>a4941a75b1bbf9d2e25a133545229914b</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const </arglist>
+      <anchor>a3b11df9cafa0597e2f9e36bf10783ffb</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -39332,8 +39588,8 @@
       <type>virtual bool</type>
       <name>IsPageEnabled</name>
       <anchorfile>classiqtgui_1_1_c_tab_widget_delegate.html</anchorfile>
-      <anchor>ade7f3ba13ec3cf74aeb338ee4f0b38fb</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const </arglist>
+      <anchor>a3c98b8a466825e04fe0b2cb82be4ea5d</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -39346,8 +39602,8 @@
       <type>virtual bool</type>
       <name>IsPageVisible</name>
       <anchorfile>classiqtgui_1_1_c_tab_widget_delegate.html</anchorfile>
-      <anchor>abf3c0b3f5f5ddd5be0b8a91e7bac31e1</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const </arglist>
+      <anchor>a4c3c8b756118435667e1f3fc69f48a3a</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -39360,8 +39616,8 @@
       <type>virtual QSize</type>
       <name>GetPageIconSize</name>
       <anchorfile>classiqtgui_1_1_c_tab_widget_delegate.html</anchorfile>
-      <anchor>a536977c2d2147ea7b378b644293b8e73</anchor>
-      <arglist>(QWidget &amp;containerWidget) const </arglist>
+      <anchor>a2fc5260c13d643e3570f2f5e57f78b3f</anchor>
+      <arglist>(const QWidget &amp;containerWidget) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -39541,8 +39797,8 @@
       <type>virtual int</type>
       <name>GetCurrentPage</name>
       <anchorfile>classiqtgui_1_1_c_tool_box_delegate.html</anchorfile>
-      <anchor>adcd5776d952f2fed9fd4ac93f3d98704</anchor>
-      <arglist>(QWidget &amp;containerWidget) const </arglist>
+      <anchor>aa7fab458bb939dee63e7eb4f6d24f361</anchor>
+      <arglist>(const QWidget &amp;containerWidget) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -39555,8 +39811,8 @@
       <type>virtual QString</type>
       <name>GetPageTitle</name>
       <anchorfile>classiqtgui_1_1_c_tool_box_delegate.html</anchorfile>
-      <anchor>a12319e3531752a11f3d243da2b1e1514</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const </arglist>
+      <anchor>a086a86f5437fa60e410692e773fcaf85</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -39569,8 +39825,8 @@
       <type>virtual QIcon</type>
       <name>GetPageIcon</name>
       <anchorfile>classiqtgui_1_1_c_tool_box_delegate.html</anchorfile>
-      <anchor>a9ea7b1bbb8b41f7e8f4ef21b13f5a4a9</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const </arglist>
+      <anchor>aaf65f2abca290dde89b425d7c9429a22</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -39583,8 +39839,8 @@
       <type>virtual QString</type>
       <name>GetPageToolTip</name>
       <anchorfile>classiqtgui_1_1_c_tool_box_delegate.html</anchorfile>
-      <anchor>ad219a7ceb945802377e20c7cb67a2498</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const </arglist>
+      <anchor>a1c39a3cd83e84dbf5a73ea752bcd38e5</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -39597,8 +39853,8 @@
       <type>virtual bool</type>
       <name>IsPageEnabled</name>
       <anchorfile>classiqtgui_1_1_c_tool_box_delegate.html</anchorfile>
-      <anchor>a5e0f469de3b9b293f46dd68ff1a7ef3b</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const </arglist>
+      <anchor>a91414572781cfa96f8b7ac726263effe</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -39611,8 +39867,8 @@
       <type>virtual bool</type>
       <name>IsPageVisible</name>
       <anchorfile>classiqtgui_1_1_c_tool_box_delegate.html</anchorfile>
-      <anchor>ab69a50f4cb91589f96006808b6cd8a4a</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const </arglist>
+      <anchor>a415185bf849752849f67b1be4460a294</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -39625,8 +39881,8 @@
       <type>virtual QSize</type>
       <name>GetPageIconSize</name>
       <anchorfile>classiqtgui_1_1_c_tool_box_delegate.html</anchorfile>
-      <anchor>a30578a411c2e515b92f7d5660e003839</anchor>
-      <arglist>(QWidget &amp;containerWidget) const </arglist>
+      <anchor>a5200072db33fa60e57f848cfc52858fa</anchor>
+      <arglist>(const QWidget &amp;containerWidget) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -39862,8 +40118,8 @@
       <type>virtual int</type>
       <name>GetCurrentPage</name>
       <anchorfile>classiqtgui_1_1_i_multi_page_widget_delegate.html</anchorfile>
-      <anchor>a25c8b2e75342cf56380f1e18eb06e6d1</anchor>
-      <arglist>(QWidget &amp;containerWidget) const =0</arglist>
+      <anchor>ae5e34ff1a8ec3cd67eb2d5c80e72ab42</anchor>
+      <arglist>(const QWidget &amp;containerWidget) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -39876,8 +40132,8 @@
       <type>virtual QString</type>
       <name>GetPageTitle</name>
       <anchorfile>classiqtgui_1_1_i_multi_page_widget_delegate.html</anchorfile>
-      <anchor>a3c76c1da2f9131f7e24ef336af420d51</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const =0</arglist>
+      <anchor>a75d4e2dc005450f605bb7423b210a772</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
@@ -39890,8 +40146,8 @@
       <type>virtual QIcon</type>
       <name>GetPageIcon</name>
       <anchorfile>classiqtgui_1_1_i_multi_page_widget_delegate.html</anchorfile>
-      <anchor>afcb0f9f37bdc591f07162c5524bf5691</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const =0</arglist>
+      <anchor>aba5f927524112b90d335797d752f4902</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
@@ -39904,8 +40160,8 @@
       <type>virtual QString</type>
       <name>GetPageToolTip</name>
       <anchorfile>classiqtgui_1_1_i_multi_page_widget_delegate.html</anchorfile>
-      <anchor>aa82acf2280d1135fb4b1ca57160d026b</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const =0</arglist>
+      <anchor>a7762075d07f1a1b1305613fe0fe01778</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
@@ -39918,8 +40174,8 @@
       <type>virtual bool</type>
       <name>IsPageEnabled</name>
       <anchorfile>classiqtgui_1_1_i_multi_page_widget_delegate.html</anchorfile>
-      <anchor>a7f1b3549eafb0321eba86c60f1a2e129</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const =0</arglist>
+      <anchor>af390c1cd1a5caa935774107abadc3b3b</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -39932,8 +40188,8 @@
       <type>virtual bool</type>
       <name>IsPageVisible</name>
       <anchorfile>classiqtgui_1_1_i_multi_page_widget_delegate.html</anchorfile>
-      <anchor>aef364aa7fbfd2ae62769a8b34d3a406a</anchor>
-      <arglist>(QWidget &amp;containerWidget, int pageIndex) const =0</arglist>
+      <anchor>a5c3079d62667d0a598f67f4028ca3b08</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -39946,8 +40202,8 @@
       <type>virtual QSize</type>
       <name>GetPageIconSize</name>
       <anchorfile>classiqtgui_1_1_i_multi_page_widget_delegate.html</anchorfile>
-      <anchor>a123b6b5e72759eb9aaf40774edcc09ee</anchor>
-      <arglist>(QWidget &amp;containerWidget) const =0</arglist>
+      <anchor>a3616709cb64b4cc2b6c210df8de67701</anchor>
+      <arglist>(const QWidget &amp;containerWidget) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
