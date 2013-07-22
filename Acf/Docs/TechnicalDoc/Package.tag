@@ -4365,6 +4365,7 @@
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_multi_page_widget_8h</filename>
     <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="no" imported="no">istd/TSmartPtr.h</includes>
+    <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="no" imported="no">istd/TDelPtr.h</includes>
     <includes id="_i_multi_page_widget_delegate_8h" name="IMultiPageWidgetDelegate.h" local="no" imported="no">iqtgui/IMultiPageWidgetDelegate.h</includes>
     <class kind="class">iqtgui::CMultiPageWidget</class>
     <namespace>iqtgui</namespace>
@@ -38288,6 +38289,13 @@
       <anchor>a4db259a5e7014adfd93c2d8630b34f64</anchor>
       <arglist>(int pageIndex) const =0</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetDesignType</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>ac9bbeebdff6050cde751d833da8d9b73</anchor>
+      <arglist>() const =0</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>AddPageToContainerWidget</name>
@@ -38424,6 +38432,20 @@
       <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
       <anchor>a2790ff0c5f4f7e4903be43865d92c3fc</anchor>
       <arglist>(QWidget *parentWidgetPtr=NULL, int designMode=DT_SIMPLE, Qt::Orientation orientation=Qt::Vertical)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QWidget *</type>
+      <name>GetContainerWidgetPtr</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>af057bf6b8649875fff7d173e0f57df46</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetDesignMode</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>a29436100cb98cb536ff2a5c4dd231c0f</anchor>
+      <arglist>(int designMode)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -38577,13 +38599,6 @@
       <name>GetCurrentPageIndex</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
       <anchor>a56fa9dce1031fb3f321ed45073da8d67</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QWidget *</type>
-      <name>GetGuiContainerPtr</name>
-      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
-      <anchor>aad8e99bf20649ee595531265460acb91</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
@@ -38805,6 +38820,13 @@
     <name>iqtgui::CSimpleGuiContainerDelegate</name>
     <filename>classiqtgui_1_1_c_simple_gui_container_delegate.html</filename>
     <base virtualness="virtual">iqtgui::IMultiPageWidgetDelegate</base>
+    <member kind="function">
+      <type></type>
+      <name>CSimpleGuiContainerDelegate</name>
+      <anchorfile>classiqtgui_1_1_c_simple_gui_container_delegate.html</anchorfile>
+      <anchor>ac634d56c932fff0eb383217f00b87f4c</anchor>
+      <arglist>(bool useUniformSizes=false, bool isCompactModeEnabled=false)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QWidget *</type>
       <name>CreateContainerWidget</name>

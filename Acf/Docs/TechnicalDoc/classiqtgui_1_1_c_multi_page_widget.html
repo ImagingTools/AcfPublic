@@ -66,6 +66,10 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_widget.html#a2790ff0c5f4f7e4903be43865d92c3fc">CMultiPageWidget</a> (QWidget *parentWidgetPtr=NULL, int designMode=DT_SIMPLE, Qt::Orientation orientation=Qt::Vertical)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the multi page widget.  <a href="#a2790ff0c5f4f7e4903be43865d92c3fc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_widget.html#af057bf6b8649875fff7d173e0f57df46">GetContainerWidgetPtr</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get page container widget.  <a href="#af057bf6b8649875fff7d173e0f57df46"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_widget.html#a29436100cb98cb536ff2a5c4dd231c0f">SetDesignMode</a> (int designMode)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set design mode.  <a href="#a29436100cb98cb536ff2a5c4dd231c0f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_widget.html#aed3833fc2ed3a114de0331c34f60abe5">ResetPages</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all pages from the container widget.  <a href="#aed3833fc2ed3a114de0331c34f60abe5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_widget.html#ad6a71dc3be736a29b112178703b09a7c">SetPageHeaderPosition</a> (<a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642eb">PageHeaderPosition</a> pageHeaderPosition)</td></tr>
@@ -113,14 +117,12 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_widget.html#a56fa9dce1031fb3f321ed45073da8d67">GetCurrentPageIndex</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the index of the currently active page in the container widget.  <a href="#a56fa9dce1031fb3f321ed45073da8d67"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_widget.html#aad8e99bf20649ee595531265460acb91">GetGuiContainerPtr</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get page container widget.  <a href="#aad8e99bf20649ee595531265460acb91"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Implementation of the widget, which is represented as a set of pages. </p>
 <p>According to a selected UI presentation mode, it can be a tab widget, stacked layout, tool box, or simple a set of lay-outed widgets. </p>
 
-<p>Definition at line <a class="el" href="_c_multi_page_widget_8h_source.html#l00024">24</a> of file <a class="el" href="_c_multi_page_widget_8h_source.html">CMultiPageWidget.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_page_widget_8h_source.html#l00025">25</a> of file <a class="el" href="_c_multi_page_widget_8h_source.html">CMultiPageWidget.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="aeafecd70c50c1251f05edd9e2b0c2a66"></a><!-- doxytag: member="iqtgui::CMultiPageWidget::BaseClass" ref="aeafecd70c50c1251f05edd9e2b0c2a66" args="" -->
 <div class="memitem">
@@ -133,7 +135,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_multi_page_widget_8h_source.html#l00027">27</a> of file <a class="el" href="_c_multi_page_widget_8h_source.html">CMultiPageWidget.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_page_widget_8h_source.html#l00028">28</a> of file <a class="el" href="_c_multi_page_widget_8h_source.html">CMultiPageWidget.h</a>.</p>
 
 </div>
 </div>
@@ -148,7 +150,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_multi_page_widget_8h_source.html#l00028">28</a> of file <a class="el" href="_c_multi_page_widget_8h_source.html">CMultiPageWidget.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_page_widget_8h_source.html#l00029">29</a> of file <a class="el" href="_c_multi_page_widget_8h_source.html">CMultiPageWidget.h</a>.</p>
 
 </div>
 </div>
@@ -186,7 +188,7 @@ Protected Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_multi_page_widget_8h_source.html#l00030">30</a> of file <a class="el" href="_c_multi_page_widget_8h_source.html">CMultiPageWidget.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_page_widget_8h_source.html#l00031">31</a> of file <a class="el" href="_c_multi_page_widget_8h_source.html">CMultiPageWidget.h</a>.</p>
 
 </div>
 </div>
@@ -240,6 +242,24 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="af057bf6b8649875fff7d173e0f57df46"></a><!-- doxytag: member="iqtgui::CMultiPageWidget::GetContainerWidgetPtr" ref="af057bf6b8649875fff7d173e0f57df46" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QWidget* iqtgui::CMultiPageWidget::GetContainerWidgetPtr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get page container widget. </p>
+
+</div>
+</div>
 <a class="anchor" id="ac75f163bc4ace571a45e2057798e0c1a"></a><!-- doxytag: member="iqtgui::CMultiPageWidget::GetCurrentPage" ref="ac75f163bc4ace571a45e2057798e0c1a" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -273,24 +293,6 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Get the index of the currently active page in the container widget. </p>
-
-</div>
-</div>
-<a class="anchor" id="aad8e99bf20649ee595531265460acb91"></a><!-- doxytag: member="iqtgui::CMultiPageWidget::GetGuiContainerPtr" ref="aad8e99bf20649ee595531265460acb91" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual QWidget* iqtgui::CMultiPageWidget::GetGuiContainerPtr </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get page container widget. </p>
 
 </div>
 </div>
@@ -500,7 +502,7 @@ template&lt;class DelegateImpl &gt; </div>
 
 <p>Register your own page widget delegate objects for the given UI mode. </p>
 
-<p>Definition at line <a class="el" href="_c_multi_page_widget_8h_source.html#l00227">227</a> of file <a class="el" href="_c_multi_page_widget_8h_source.html">CMultiPageWidget.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_page_widget_8h_source.html#l00233">233</a> of file <a class="el" href="_c_multi_page_widget_8h_source.html">CMultiPageWidget.h</a>.</p>
 
 </div>
 </div>
@@ -558,6 +560,26 @@ template&lt;class DelegateImpl &gt; </div>
 <div class="memdoc">
 
 <p>Set active page in the container. </p>
+
+</div>
+</div>
+<a class="anchor" id="a29436100cb98cb536ff2a5c4dd231c0f"></a><!-- doxytag: member="iqtgui::CMultiPageWidget::SetDesignMode" ref="a29436100cb98cb536ff2a5c4dd231c0f" args="(int designMode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iqtgui::CMultiPageWidget::SetDesignMode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>designMode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set design mode. </p>
+<p>Existing pages will be re-integrated into the new container widget. </p>
 
 </div>
 </div>

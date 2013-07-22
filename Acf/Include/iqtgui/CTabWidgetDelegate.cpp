@@ -62,7 +62,7 @@ void CTabWidgetDelegate::SetDocumentModeEnabled(QWidget& containerWidget, bool i
 // reimplemented (IMultiPageWidgetDelegate)
 
 QWidget* CTabWidgetDelegate::CreateContainerWidget(QWidget* parentWidgetPtr, int /*orientation*/)
-{	
+{
 	QTabWidget* tabWidgetPtr = new QTabWidget(parentWidgetPtr);
 
 	// Setup tab widget:

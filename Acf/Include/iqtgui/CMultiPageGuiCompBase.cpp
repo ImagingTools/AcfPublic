@@ -133,10 +133,17 @@ void CMultiPageGuiCompBase::UpdateVisualElements()
 
 QWidget* CMultiPageGuiCompBase::InitWidgetToParent(QWidget* parentPtr)
 {
-	return new CMultiPageWidget(
+	CMultiPageWidget* widgetPtr = new CMultiPageWidget(
 				parentPtr,
-				*m_designTypeAttrPtr,
+				GetDesignType(),
 				*m_useHorizontalLayoutAttrPtr ? Qt::Horizontal : Qt::Vertical);
+
+
+	if (m_iconSizeAttrPtr.IsValid()){
+		widgetPtr->SetPageIconSize(QSize(*m_iconSizeAttrPtr, *m_iconSizeAttrPtr));
+	}
+
+	return widgetPtr;
 }
 
 
@@ -150,6 +157,8 @@ void CMultiPageGuiCompBase::OnGuiCreated()
 	for (int pageIndex = 0; pageIndex < pagesCount; pageIndex++){
 		CreatePage(pageIndex);
 	}
+
+	UpdateVisualElements();
 }
 
 

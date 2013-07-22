@@ -81,6 +81,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of the pages in the UI container.  <a href="#ac5f441fa586dfd7796fac053e57dbcd4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a4db259a5e7014adfd93c2d8630b34f64">GetPageGuiComponent</a> (int pageIndex) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the UI component for a given page.  <a href="#a4db259a5e7014adfd93c2d8630b34f64"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#ac9bbeebdff6050cde751d833da8d9b73">GetDesignType</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the container UI mode.  <a href="#ac9bbeebdff6050cde751d833da8d9b73"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a99f04adf90b66b2dbbbc6754ece61b06">AddPageToContainerWidget</a> (<a class="el" href="classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a> &amp;pageGui, const QString &amp;pageTitle) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new page to the widget container.  <a href="#a99f04adf90b66b2dbbbc6754ece61b06"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a5c1b664e43bb8848a79e26dc49ae3a07">GetPageGuiName</a> (const <a class="el" href="classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a> &amp;pageGui) const </td></tr>
@@ -181,6 +183,25 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Create a page in the page container widget. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac9bbeebdff6050cde751d833da8d9b73"></a><!-- doxytag: member="iqtgui::CMultiPageGuiCompBase::GetDesignType" ref="ac9bbeebdff6050cde751d833da8d9b73" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int iqtgui::CMultiPageGuiCompBase::GetDesignType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [protected, pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the container UI mode. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiqtgui_1_1_c_multi_page_widget.html#a446c70acf2fed5b8afff103bed79e863">iqtgui::CMultiPageWidget::DesignType</a> </dd></dl>
 
 </div>
 </div>
