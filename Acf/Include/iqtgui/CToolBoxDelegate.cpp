@@ -24,9 +24,15 @@
 
 
 // Qt includes
+#include <QtGlobal>
 #include <QtCore/QVariant>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QToolBox>
+#else
 #include <QtGui/QToolBox>
 #include <QtGui/QVBoxLayout>
+#endif
 
 
 namespace iqtgui

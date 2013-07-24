@@ -83,6 +83,7 @@
 #include "iqtdoc/CMultiDocumentWorkspaceGuiComp.h"
 #include "iqtdoc/CHtmlHelpGuiComp.h"
 #include "iqtdoc/CHtmlHelpViewerComp.h"
+#include "iqtdoc/CDocumentMetaInfoEditorComp.h"
 
 #include "iloggui/CLogGuiComp.h"
 #include "iloggui/CTextLogGuiComp.h"
@@ -150,6 +151,7 @@ typedef icomp::TModelCompWrap<iqtdoc::CSingleDocumentWorkspaceGuiComp> SingleDoc
 typedef icomp::TModelCompWrap<iqtdoc::CMultiDocumentWorkspaceGuiComp> MultiDocWorkspaceGui;
 typedef iqtdoc::CHtmlHelpGuiComp HtmlHelpGui;
 typedef iqtdoc::CHtmlHelpViewerComp HtmlHelpViewer;
+typedef iqtdoc::CDocumentMetaInfoEditorComp DocumentMetaInfoEditor;
 
 typedef iloggui::CLogGuiComp LogGui;
 typedef iloggui::CTextLogGuiComp TextLogGui;

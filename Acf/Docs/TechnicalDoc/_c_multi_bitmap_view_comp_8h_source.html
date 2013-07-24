@@ -31,139 +31,146 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtGui/QGroupBox&gt;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QtGui/QBoxLayout&gt;</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;QtGui/QLabel&gt;</span>
-<a name="l00009"></a>00009 
-<a name="l00010"></a>00010 <span class="comment">// ACF includes</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;<a class="code" href="_t_pointer_vector_8h.html">istd/TPointerVector.h</a>&gt;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;<a class="code" href="_t_model_observer_comp_wrap_8h.html">ibase/TModelObserverCompWrap.h</a>&gt;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;<a class="code" href="_c_multi_model_dispatcher_base_8h.html">imod/CMultiModelDispatcherBase.h</a>&gt;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;<a class="code" href="_t_single_model_observer_base_8h.html">imod/TSingleModelObserverBase.h</a>&gt;</span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;<a class="code" href="_i_information_provider_8h.html">istd/IInformationProvider.h</a>&gt;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &lt;<a class="code" href="_t_gui_component_base_8h.html">iqtgui/TGuiComponentBase.h</a>&gt;</span>
-<a name="l00017"></a>00017 <span class="preprocessor">#include &lt;<a class="code" href="_t_gui_observer_wrap_8h.html">iqtgui/TGuiObserverWrap.h</a>&gt;</span>
-<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;<a class="code" href="_t_gui_component_base_8h.html">iqtgui/TGuiComponentBase.h</a>&gt;</span>
-<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;<a class="code" href="_i_view_extender_8h.html">iqt2d/IViewExtender.h</a>&gt;</span>
-<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;<a class="code" href="_i_view_provider_8h.html">iqt2d/IViewProvider.h</a>&gt;</span>
-<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;<a class="code" href="_c_console_gui_8h.html">iview/CConsoleGui.h</a>&gt;</span>
-<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;<a class="code" href="_i_multi_bitmap_provider_8h.html">iimg/IMultiBitmapProvider.h</a>&gt;</span>
-<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;<a class="code" href="_c_bitmap_8h.html">iimg/CBitmap.h</a>&gt;</span>
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025 
-<a name="l00026"></a>00026 <span class="keyword">namespace </span>iqt2d
-<a name="l00027"></a>00027 {
-<a name="l00028"></a>00028 
-<a name="l00029"></a>00029 
-<a name="l00030"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html">00030</a> <span class="keyword">class </span><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html">CMultiBitmapViewComp</a>:
-<a name="l00031"></a>00031                      <span class="keyword">public</span> ibase::TModelObserverCompWrap&lt;
-<a name="l00032"></a>00032                                           iqtgui::TGuiObserverWrap&lt;
-<a name="l00033"></a>00033                                                                iqtgui::TGuiComponentBase&lt;QWidget&gt;, imod::TSingleModelObserverBase&lt;iimg::IMultiBitmapProvider&gt; &gt; &gt;,
-<a name="l00034"></a>00034                      <span class="keyword">protected</span> imod::CMultiModelDispatcherBase
-<a name="l00035"></a>00035 {
-<a name="l00036"></a>00036 <span class="keyword">public</span>:
-<a name="l00037"></a>00037        <span class="keyword">typedef</span> <a class="code" href="classibase_1_1_t_model_observer_comp_wrap.html" title="Implementation of component wrapper for model observer classes.">ibase::TModelObserverCompWrap</a>&lt;
-<a name="l00038"></a>00038                             <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html" title="Join functionality of iqtgui::IGuiObject interface and imod::IObserver.">iqtgui::TGuiObserverWrap</a>&lt;
-<a name="l00039"></a>00039                                                  <a class="code" href="classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase&lt;QWidget&gt;</a>,
-<a name="l00040"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#aec59edcc4fb43330a7f1b01cfd9d5568">00040</a>                                                  <a class="code" href="classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase&lt;iimg::IMultiBitmapProvider&gt;</a> &gt; &gt; <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#aec59edcc4fb43330a7f1b01cfd9d5568">BaseClass</a>;
-<a name="l00041"></a>00041 
-<a name="l00042"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a5fe23233393b6c8575d3a11654d8b708">00042</a>        <span class="keyword">typedef</span> <a class="code" href="classimod_1_1_c_multi_model_dispatcher_base.html" title="Generic implementation of a data model changes notifier.">imod::CMultiModelDispatcherBase</a> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a5fe23233393b6c8575d3a11654d8b708">BaseClass2</a>;
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044        I_BEGIN_COMPONENT(<a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html">CMultiBitmapViewComp</a>);
-<a name="l00045"></a>00045               I_ASSIGN(m_horizontalViewsAttrPtr, <span class="stringliteral">&quot;HorizontalViewsCount&quot;</span>, <span class="stringliteral">&quot;Number of horizontal views&quot;</span>, <span class="keyword">false</span>, 1);
-<a name="l00046"></a>00046               I_ASSIGN(m_verticalViewsAttrPtr, <span class="stringliteral">&quot;VerticalViewsCount&quot;</span>, <span class="stringliteral">&quot;Number of vertical views&quot;</span>, <span class="keyword">false</span>, 1);
-<a name="l00047"></a>00047               I_ASSIGN_MULTI_0(m_informationProvidersCompPtr, <span class="stringliteral">&quot;InformationProviders&quot;</span>, <span class="stringliteral">&quot;Information providers&quot;</span>, <span class="keyword">false</span>);
-<a name="l00048"></a>00048               <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#ac6e1ce1de2314e0c22b2442ade7ec3c6">I_ASSIGN_TO</a>(m_informationModelsCompPtr, m_informationProvidersCompPtr, <span class="keyword">true</span>);
-<a name="l00049"></a>00049               I_ASSIGN(m_generalInformationProviderCompPtr, <span class="stringliteral">&quot;GeneralInformationProvider&quot;</span>, <span class="stringliteral">&quot;General information provider&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;GeneralInformationProvider&quot;</span>);
-<a name="l00050"></a>00050               <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#ac6e1ce1de2314e0c22b2442ade7ec3c6">I_ASSIGN_TO</a>(m_generalInformationModelCompPtr, m_generalInformationProviderCompPtr, <span class="keyword">true</span>);
-<a name="l00051"></a>00051               I_ASSIGN_MULTI_0(m_viewExtendersCompPtr, <span class="stringliteral">&quot;ViewExtenders&quot;</span>, <span class="stringliteral">&quot;View extenders&quot;</span>, <span class="keyword">false</span>);
-<a name="l00052"></a>00052               I_ASSIGN_MULTI_0(m_viewLabelPrefixesAttrPtr, <span class="stringliteral">&quot;ViewLabelPrefixes&quot;</span>, <span class="stringliteral">&quot;Prefixes used to title the single bitmap view. If none present, information from InformationProviders will be used.&quot;</span>, <span class="keyword">false</span>);
-<a name="l00053"></a>00053               I_ASSIGN(m_showStatusLabelAttrPtr, <span class="stringliteral">&quot;ShowStatusLabel&quot;</span>, <span class="stringliteral">&quot;If active then status will be shown in the view&#39;s header&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
-<a name="l00054"></a>00054               I_ASSIGN(m_showStatusBackgroundAttrPtr, <span class="stringliteral">&quot;ShowStatusBackground&quot;</span>, <span class="stringliteral">&quot;If active then status will be shown as the view&#39;s background color&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
-<a name="l00055"></a>00055               I_ASSIGN(m_viewBackgroundColorAttrPtr, <span class="stringliteral">&quot;BackgroundColor&quot;</span>, <span class="stringliteral">&quot;Background color of the console&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;black&quot;</span>);
-<a name="l00056"></a>00056        I_END_COMPONENT;
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058 <span class="keyword">protected</span>:
-<a name="l00059"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a266b374301305cf5690a3c3abb769c1b">00059</a>        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a266b374301305cf5690a3c3abb769c1b">GeneralStatusModelId</a> = -1;
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061        <span class="keyword">static</span> QIcon <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#afaa3ffd1e72f9f8e4a840a688e5433c8">GetCategoryIcon</a>(<a class="code" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152" title="Category of information.">istd::IInformationProvider::InformationCategory</a> category);
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063        <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
-<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a908f3472e990da5e4a9038eef08ab695">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a8c5115162064a371998d80f68a577147" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags);
-<a name="l00068"></a>00068        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a5d3ee208e46d844951373876126df6ff" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtGlobal&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#if QT_VERSION &gt;= 0x050000</span>
+<a name="l00008"></a>00008 <span class="preprocessor"></span><span class="preprocessor">#include &lt;QtWidgets/QGroupBox&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;QtWidgets/QBoxLayout&gt;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;QtWidgets/QLabel&gt;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#else</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">#include &lt;QtGui/QGroupBox&gt;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;QtGui/QBoxLayout&gt;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;QtGui/QLabel&gt;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#endif</span>
+<a name="l00016"></a>00016 <span class="preprocessor"></span>
+<a name="l00017"></a>00017 <span class="comment">// ACF includes</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;<a class="code" href="_t_pointer_vector_8h.html">istd/TPointerVector.h</a>&gt;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;<a class="code" href="_t_model_observer_comp_wrap_8h.html">ibase/TModelObserverCompWrap.h</a>&gt;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;<a class="code" href="_c_multi_model_dispatcher_base_8h.html">imod/CMultiModelDispatcherBase.h</a>&gt;</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;<a class="code" href="_t_single_model_observer_base_8h.html">imod/TSingleModelObserverBase.h</a>&gt;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;<a class="code" href="_i_information_provider_8h.html">istd/IInformationProvider.h</a>&gt;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;<a class="code" href="_t_gui_component_base_8h.html">iqtgui/TGuiComponentBase.h</a>&gt;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &lt;<a class="code" href="_t_gui_observer_wrap_8h.html">iqtgui/TGuiObserverWrap.h</a>&gt;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &lt;<a class="code" href="_t_gui_component_base_8h.html">iqtgui/TGuiComponentBase.h</a>&gt;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &lt;<a class="code" href="_i_view_extender_8h.html">iqt2d/IViewExtender.h</a>&gt;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &lt;<a class="code" href="_i_view_provider_8h.html">iqt2d/IViewProvider.h</a>&gt;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &lt;<a class="code" href="_c_console_gui_8h.html">iview/CConsoleGui.h</a>&gt;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &lt;<a class="code" href="_i_multi_bitmap_provider_8h.html">iimg/IMultiBitmapProvider.h</a>&gt;</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &lt;<a class="code" href="_c_bitmap_8h.html">iimg/CBitmap.h</a>&gt;</span>
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033 <span class="keyword">namespace </span>iqt2d
+<a name="l00034"></a>00034 {
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036 
+<a name="l00037"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html">00037</a> <span class="keyword">class </span><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html">CMultiBitmapViewComp</a>:
+<a name="l00038"></a>00038                      <span class="keyword">public</span> ibase::TModelObserverCompWrap&lt;
+<a name="l00039"></a>00039                                           iqtgui::TGuiObserverWrap&lt;
+<a name="l00040"></a>00040                                                                iqtgui::TGuiComponentBase&lt;QWidget&gt;, imod::TSingleModelObserverBase&lt;iimg::IMultiBitmapProvider&gt; &gt; &gt;,
+<a name="l00041"></a>00041                      <span class="keyword">protected</span> imod::CMultiModelDispatcherBase
+<a name="l00042"></a>00042 {
+<a name="l00043"></a>00043 <span class="keyword">public</span>:
+<a name="l00044"></a>00044        <span class="keyword">typedef</span> <a class="code" href="classibase_1_1_t_model_observer_comp_wrap.html" title="Implementation of component wrapper for model observer classes.">ibase::TModelObserverCompWrap</a>&lt;
+<a name="l00045"></a>00045                             <a class="code" href="classiqtgui_1_1_t_gui_observer_wrap.html" title="Join functionality of iqtgui::IGuiObject interface and imod::IObserver.">iqtgui::TGuiObserverWrap</a>&lt;
+<a name="l00046"></a>00046                                                  <a class="code" href="classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase&lt;QWidget&gt;</a>,
+<a name="l00047"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#aec59edcc4fb43330a7f1b01cfd9d5568">00047</a>                                                  <a class="code" href="classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase&lt;iimg::IMultiBitmapProvider&gt;</a> &gt; &gt; <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#aec59edcc4fb43330a7f1b01cfd9d5568">BaseClass</a>;
+<a name="l00048"></a>00048 
+<a name="l00049"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a5fe23233393b6c8575d3a11654d8b708">00049</a>        <span class="keyword">typedef</span> <a class="code" href="classimod_1_1_c_multi_model_dispatcher_base.html" title="Generic implementation of a data model changes notifier.">imod::CMultiModelDispatcherBase</a> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a5fe23233393b6c8575d3a11654d8b708">BaseClass2</a>;
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051        I_BEGIN_COMPONENT(<a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html">CMultiBitmapViewComp</a>);
+<a name="l00052"></a>00052               I_ASSIGN(m_horizontalViewsAttrPtr, <span class="stringliteral">&quot;HorizontalViewsCount&quot;</span>, <span class="stringliteral">&quot;Number of horizontal views&quot;</span>, <span class="keyword">false</span>, 1);
+<a name="l00053"></a>00053               I_ASSIGN(m_verticalViewsAttrPtr, <span class="stringliteral">&quot;VerticalViewsCount&quot;</span>, <span class="stringliteral">&quot;Number of vertical views&quot;</span>, <span class="keyword">false</span>, 1);
+<a name="l00054"></a>00054               I_ASSIGN_MULTI_0(m_informationProvidersCompPtr, <span class="stringliteral">&quot;InformationProviders&quot;</span>, <span class="stringliteral">&quot;Information providers&quot;</span>, <span class="keyword">false</span>);
+<a name="l00055"></a>00055               <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#ac6e1ce1de2314e0c22b2442ade7ec3c6">I_ASSIGN_TO</a>(m_informationModelsCompPtr, m_informationProvidersCompPtr, <span class="keyword">true</span>);
+<a name="l00056"></a>00056               I_ASSIGN(m_generalInformationProviderCompPtr, <span class="stringliteral">&quot;GeneralInformationProvider&quot;</span>, <span class="stringliteral">&quot;General information provider&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;GeneralInformationProvider&quot;</span>);
+<a name="l00057"></a>00057               <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#ac6e1ce1de2314e0c22b2442ade7ec3c6">I_ASSIGN_TO</a>(m_generalInformationModelCompPtr, m_generalInformationProviderCompPtr, <span class="keyword">true</span>);
+<a name="l00058"></a>00058               I_ASSIGN_MULTI_0(m_viewExtendersCompPtr, <span class="stringliteral">&quot;ViewExtenders&quot;</span>, <span class="stringliteral">&quot;View extenders&quot;</span>, <span class="keyword">false</span>);
+<a name="l00059"></a>00059               I_ASSIGN_MULTI_0(m_viewLabelPrefixesAttrPtr, <span class="stringliteral">&quot;ViewLabelPrefixes&quot;</span>, <span class="stringliteral">&quot;Prefixes used to title the single bitmap view. If none present, information from InformationProviders will be used.&quot;</span>, <span class="keyword">false</span>);
+<a name="l00060"></a>00060               I_ASSIGN(m_showStatusLabelAttrPtr, <span class="stringliteral">&quot;ShowStatusLabel&quot;</span>, <span class="stringliteral">&quot;If active then status will be shown in the view&#39;s header&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
+<a name="l00061"></a>00061               I_ASSIGN(m_showStatusBackgroundAttrPtr, <span class="stringliteral">&quot;ShowStatusBackground&quot;</span>, <span class="stringliteral">&quot;If active then status will be shown as the view&#39;s background color&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
+<a name="l00062"></a>00062               I_ASSIGN(m_viewBackgroundColorAttrPtr, <span class="stringliteral">&quot;BackgroundColor&quot;</span>, <span class="stringliteral">&quot;Background color of the console&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;black&quot;</span>);
+<a name="l00063"></a>00063        I_END_COMPONENT;
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065 <span class="keyword">protected</span>:
+<a name="l00066"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a266b374301305cf5690a3c3abb769c1b">00066</a>        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a266b374301305cf5690a3c3abb769c1b">GeneralStatusModelId</a> = -1;
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068        <span class="keyword">static</span> QIcon <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#afaa3ffd1e72f9f8e4a840a688e5433c8">GetCategoryIcon</a>(<a class="code" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152" title="Category of information.">istd::IInformationProvider::InformationCategory</a> category);
 <a name="l00069"></a>00069 
-<a name="l00070"></a>00070        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a94242a0fa5d7badea7466d6dda97e797" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00070"></a>00070        <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
+<a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a908f3472e990da5e4a9038eef08ab695">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
 <a name="l00072"></a>00072 
-<a name="l00073"></a>00073        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00074"></a>00074        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a7dab5727abe8a52b56bfe2040c54e240">OnComponentDestroyed</a>();
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076 <span class="keyword">private</span>:
-<a name="l00077"></a>00077        <span class="keywordtype">void</span> EnsureViewsCreated();
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079 <span class="keyword">protected</span>:
-<a name="l00080"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html">00080</a>        <span class="keyword">class </span><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html">CSingleView</a>: <span class="keyword">public</span> QGroupBox, <span class="keyword">public</span> iqt2d::<a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">IViewProvider</a>
-<a name="l00081"></a>00081        {
-<a name="l00082"></a>00082        <span class="keyword">public</span>:
-<a name="l00083"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a7b34a28ea4d1aedf622330ae77de6a19">00083</a>               <span class="keyword">typedef</span> QGroupBox <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a7b34a28ea4d1aedf622330ae77de6a19">BaseClass</a>;
-<a name="l00084"></a>00084 
-<a name="l00085"></a>00085               <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a47d5271d5e41ccfef4bde4df1e8ffb31">CSingleView</a>(QWidget* parentPtr, <span class="keywordtype">int</span> <span class="keywordtype">id</span> = -1, <span class="keyword">const</span> QString&amp; title = <span class="stringliteral">&quot;&quot;</span>);
-<a name="l00086"></a>00086 
-<a name="l00087"></a>00087               <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a964e16f5dc0e4aea5fd6a6b191556437">UpdateImage</a>(<span class="keyword">const</span> <a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">iimg::IBitmap</a>* bitmapPtr);
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089               <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a1612a187d75d258c3da66140207cbe52">SetBackgroundColor</a>(<span class="keyword">const</span> QColor&amp; color);
-<a name="l00090"></a>00090 
-<a name="l00091"></a>00091               <span class="comment">// called once at initialization stage, at this moment the model should be connected already.</span>
-<a name="l00092"></a>00092               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a0dc8d1cfd6a5a48ec467fae5cfc26a87">Init</a>(<span class="keywordtype">bool</span> hasStatusLabel, <span class="keywordtype">bool</span> hasStatusBackground);
-<a name="l00093"></a>00093               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#ae26feadfddb580b46dd041eaf135f968">SetInspectionResult</a>(<span class="keywordtype">int</span> result);
-<a name="l00094"></a>00094 
-<a name="l00095"></a>00095               <span class="comment">// reimplemented (iqt2d::IViewProvider)</span>
-<a name="l00096"></a>00096               <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a06a9e03eea6d69d563b2a9a23de972ba" title="Get ID indentifing this view.">GetViewId</a>() <span class="keyword">const</span>;
-<a name="l00097"></a>00097               <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>* <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#ab0d6d03d185bcd65d95732fc02c50658" title="Called when items should be removed from specified view.">GetView</a>() <span class="keyword">const</span>;
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099        <span class="keyword">protected</span>:
-<a name="l00100"></a>00100               <span class="comment">// called from Init() to add status labels etc. to the main widget layout (layoutPtr).</span>
-<a name="l00101"></a>00101               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#af11db850632f378a65de9d70acfacbd6">AddStatusItems</a>(QBoxLayout* layoutPtr);
-<a name="l00102"></a>00102 
-<a name="l00103"></a>00103        <span class="keyword">protected</span>:
-<a name="l00104"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#ae01b3b34331775d1b5ed803c503d73ea">00104</a>               <a class="code" href="classiview_1_1_c_image_shape.html">iview::CImageShape</a> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#ae01b3b34331775d1b5ed803c503d73ea">m_backgroundShape</a>;
-<a name="l00105"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a63d878ce785f2deee126989d34dea526">00105</a>               <a class="code" href="classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;iimg::CBitmap&gt;</a> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a63d878ce785f2deee126989d34dea526">m_backgroundModel</a>;
-<a name="l00106"></a>00106 
-<a name="l00107"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a6048d41286d2dcc2f97e15dc3fedeccb">00107</a>               <span class="keyword">mutable</span> <a class="code" href="classiview_1_1_c_console_gui.html">iview::CConsoleGui</a> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a6048d41286d2dcc2f97e15dc3fedeccb">m_console</a>;
-<a name="l00108"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#abee40550730480f96c94431f2d39b551">00108</a>               <span class="keywordtype">int</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#abee40550730480f96c94431f2d39b551">m_id</a>;
-<a name="l00109"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#aa8d0c71792300996658d008b7e098dab">00109</a>               <span class="keywordtype">bool</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#aa8d0c71792300996658d008b7e098dab">m_showStatusLabel</a>;
-<a name="l00110"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a5713f5457568bb30ffcec446bf567849">00110</a>               <span class="keywordtype">bool</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a5713f5457568bb30ffcec446bf567849">m_showStatusBackground</a>;
-<a name="l00111"></a>00111        };
-<a name="l00112"></a>00112 
-<a name="l00113"></a>00113        <span class="keyword">virtual</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html">CSingleView</a>* <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a56832537f36e4be1b89b810d38e9b639">CreateView</a>(QWidget* parentPtr, <span class="keywordtype">int</span> <span class="keywordtype">id</span> = -1, <span class="keyword">const</span> QString&amp; title = <span class="stringliteral">&quot;&quot;</span>);
-<a name="l00114"></a>00114 
-<a name="l00115"></a>00115 <span class="keyword">private</span>:
-<a name="l00116"></a>00116        I_ATTR(<span class="keywordtype">int</span>, m_horizontalViewsAttrPtr);
-<a name="l00117"></a>00117        I_ATTR(<span class="keywordtype">int</span>, m_verticalViewsAttrPtr);
-<a name="l00118"></a>00118        I_REF(<a class="code" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a>, m_generalInformationProviderCompPtr);
-<a name="l00119"></a>00119        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_generalInformationModelCompPtr);
-<a name="l00120"></a>00120        I_MULTIREF(<a class="code" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a>, m_informationProvidersCompPtr);
-<a name="l00121"></a>00121        I_MULTIREF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_informationModelsCompPtr);
-<a name="l00122"></a>00122        I_MULTIREF(<a class="code" href="classiqt2d_1_1_i_view_extender.html" title="Interface for GUI objects presenting its results using extern view objects.">iqt2d::IViewExtender</a>, m_viewExtendersCompPtr);
-<a name="l00123"></a>00123        I_MULTIATTR(QString, m_viewLabelPrefixesAttrPtr);
-<a name="l00124"></a>00124        I_ATTR(<span class="keywordtype">bool</span>, m_showStatusLabelAttrPtr);
-<a name="l00125"></a>00125        I_ATTR(<span class="keywordtype">bool</span>, m_showStatusBackgroundAttrPtr);
-<a name="l00126"></a>00126        I_ATTR(QByteArray, m_viewBackgroundColorAttrPtr);
-<a name="l00127"></a>00127        
-<a name="l00128"></a>00128        <span class="keywordtype">int</span> m_rowCount;
-<a name="l00129"></a>00129        <span class="keywordtype">int</span> m_columnCount;
-<a name="l00130"></a>00130        <span class="keywordtype">int</span> m_viewCount;
-<a name="l00131"></a>00131        <a class="code" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;CSingleView&gt;</a> m_views;
-<a name="l00132"></a>00132 };
-<a name="l00133"></a>00133 
-<a name="l00134"></a>00134 
-<a name="l00135"></a>00135 } <span class="comment">// namespace iqt2d</span>
-<a name="l00136"></a>00136 
-<a name="l00137"></a>00137 
-<a name="l00138"></a>00138 <span class="preprocessor">#endif // !iqt2d_CMultiBitmapViewComp_included</span>
+<a name="l00073"></a>00073        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00074"></a>00074        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a8c5115162064a371998d80f68a577147" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags);
+<a name="l00075"></a>00075        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a5d3ee208e46d844951373876126df6ff" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00078"></a>00078        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a94242a0fa5d7badea7466d6dda97e797" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00081"></a>00081        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a7dab5727abe8a52b56bfe2040c54e240">OnComponentDestroyed</a>();
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083 <span class="keyword">private</span>:
+<a name="l00084"></a>00084        <span class="keywordtype">void</span> EnsureViewsCreated();
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086 <span class="keyword">protected</span>:
+<a name="l00087"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html">00087</a>        <span class="keyword">class </span><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html">CSingleView</a>: <span class="keyword">public</span> QGroupBox, <span class="keyword">public</span> iqt2d::<a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">IViewProvider</a>
+<a name="l00088"></a>00088        {
+<a name="l00089"></a>00089        <span class="keyword">public</span>:
+<a name="l00090"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a7b34a28ea4d1aedf622330ae77de6a19">00090</a>               <span class="keyword">typedef</span> QGroupBox <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a7b34a28ea4d1aedf622330ae77de6a19">BaseClass</a>;
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092               <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a47d5271d5e41ccfef4bde4df1e8ffb31">CSingleView</a>(QWidget* parentPtr, <span class="keywordtype">int</span> <span class="keywordtype">id</span> = -1, <span class="keyword">const</span> QString&amp; title = <span class="stringliteral">&quot;&quot;</span>);
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094               <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a964e16f5dc0e4aea5fd6a6b191556437">UpdateImage</a>(<span class="keyword">const</span> <a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">iimg::IBitmap</a>* bitmapPtr);
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096               <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a1612a187d75d258c3da66140207cbe52">SetBackgroundColor</a>(<span class="keyword">const</span> QColor&amp; color);
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098               <span class="comment">// called once at initialization stage, at this moment the model should be connected already.</span>
+<a name="l00099"></a>00099               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a0dc8d1cfd6a5a48ec467fae5cfc26a87">Init</a>(<span class="keywordtype">bool</span> hasStatusLabel, <span class="keywordtype">bool</span> hasStatusBackground);
+<a name="l00100"></a>00100               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#ae26feadfddb580b46dd041eaf135f968">SetInspectionResult</a>(<span class="keywordtype">int</span> result);
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102               <span class="comment">// reimplemented (iqt2d::IViewProvider)</span>
+<a name="l00103"></a>00103               <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a06a9e03eea6d69d563b2a9a23de972ba" title="Get ID indentifing this view.">GetViewId</a>() <span class="keyword">const</span>;
+<a name="l00104"></a>00104               <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>* <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#ab0d6d03d185bcd65d95732fc02c50658" title="Called when items should be removed from specified view.">GetView</a>() <span class="keyword">const</span>;
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106        <span class="keyword">protected</span>:
+<a name="l00107"></a>00107               <span class="comment">// called from Init() to add status labels etc. to the main widget layout (layoutPtr).</span>
+<a name="l00108"></a>00108               <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#af11db850632f378a65de9d70acfacbd6">AddStatusItems</a>(QBoxLayout* layoutPtr);
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110        <span class="keyword">protected</span>:
+<a name="l00111"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#ae01b3b34331775d1b5ed803c503d73ea">00111</a>               <a class="code" href="classiview_1_1_c_image_shape.html">iview::CImageShape</a> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#ae01b3b34331775d1b5ed803c503d73ea">m_backgroundShape</a>;
+<a name="l00112"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a63d878ce785f2deee126989d34dea526">00112</a>               <a class="code" href="classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;iimg::CBitmap&gt;</a> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a63d878ce785f2deee126989d34dea526">m_backgroundModel</a>;
+<a name="l00113"></a>00113 
+<a name="l00114"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a6048d41286d2dcc2f97e15dc3fedeccb">00114</a>               <span class="keyword">mutable</span> <a class="code" href="classiview_1_1_c_console_gui.html">iview::CConsoleGui</a> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a6048d41286d2dcc2f97e15dc3fedeccb">m_console</a>;
+<a name="l00115"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#abee40550730480f96c94431f2d39b551">00115</a>               <span class="keywordtype">int</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#abee40550730480f96c94431f2d39b551">m_id</a>;
+<a name="l00116"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#aa8d0c71792300996658d008b7e098dab">00116</a>               <span class="keywordtype">bool</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#aa8d0c71792300996658d008b7e098dab">m_showStatusLabel</a>;
+<a name="l00117"></a><a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a5713f5457568bb30ffcec446bf567849">00117</a>               <span class="keywordtype">bool</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html#a5713f5457568bb30ffcec446bf567849">m_showStatusBackground</a>;
+<a name="l00118"></a>00118        };
+<a name="l00119"></a>00119 
+<a name="l00120"></a>00120        <span class="keyword">virtual</span> <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html">CSingleView</a>* <a class="code" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a56832537f36e4be1b89b810d38e9b639">CreateView</a>(QWidget* parentPtr, <span class="keywordtype">int</span> <span class="keywordtype">id</span> = -1, <span class="keyword">const</span> QString&amp; title = <span class="stringliteral">&quot;&quot;</span>);
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122 <span class="keyword">private</span>:
+<a name="l00123"></a>00123        I_ATTR(<span class="keywordtype">int</span>, m_horizontalViewsAttrPtr);
+<a name="l00124"></a>00124        I_ATTR(<span class="keywordtype">int</span>, m_verticalViewsAttrPtr);
+<a name="l00125"></a>00125        I_REF(<a class="code" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a>, m_generalInformationProviderCompPtr);
+<a name="l00126"></a>00126        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_generalInformationModelCompPtr);
+<a name="l00127"></a>00127        I_MULTIREF(<a class="code" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a>, m_informationProvidersCompPtr);
+<a name="l00128"></a>00128        I_MULTIREF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_informationModelsCompPtr);
+<a name="l00129"></a>00129        I_MULTIREF(<a class="code" href="classiqt2d_1_1_i_view_extender.html" title="Interface for GUI objects presenting its results using extern view objects.">iqt2d::IViewExtender</a>, m_viewExtendersCompPtr);
+<a name="l00130"></a>00130        I_MULTIATTR(QString, m_viewLabelPrefixesAttrPtr);
+<a name="l00131"></a>00131        I_ATTR(<span class="keywordtype">bool</span>, m_showStatusLabelAttrPtr);
+<a name="l00132"></a>00132        I_ATTR(<span class="keywordtype">bool</span>, m_showStatusBackgroundAttrPtr);
+<a name="l00133"></a>00133        I_ATTR(QByteArray, m_viewBackgroundColorAttrPtr);
+<a name="l00134"></a>00134        
+<a name="l00135"></a>00135        <span class="keywordtype">int</span> m_rowCount;
+<a name="l00136"></a>00136        <span class="keywordtype">int</span> m_columnCount;
+<a name="l00137"></a>00137        <span class="keywordtype">int</span> m_viewCount;
+<a name="l00138"></a>00138        <a class="code" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;CSingleView&gt;</a> m_views;
+<a name="l00139"></a>00139 };
+<a name="l00140"></a>00140 
+<a name="l00141"></a>00141 
+<a name="l00142"></a>00142 } <span class="comment">// namespace iqt2d</span>
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144 
+<a name="l00145"></a>00145 <span class="preprocessor">#endif // !iqt2d_CMultiBitmapViewComp_included</span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

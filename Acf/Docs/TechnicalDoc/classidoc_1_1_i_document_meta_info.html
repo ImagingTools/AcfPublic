@@ -49,10 +49,10 @@ Inheritance diagram for idoc::IDocumentMetaInfo:</div>
  <div class="center">
   <img src="classidoc_1_1_i_document_meta_info.png" usemap="#idoc::IDocumentMetaInfo_map" alt=""/>
   <map id="idoc::IDocumentMetaInfo_map" name="idoc::IDocumentMetaInfo_map">
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,302,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,302,24"/>
-<area href="classidoc_1_1_c_standard_document_meta_info.html" title="Simple implementation of a text document model." alt="idoc::CStandardDocumentMetaInfo" shape="rect" coords="0,168,302,192"/>
-<area href="classidoc_1_1_t_multi_document_wrap.html" title="Generic implementation of IMultiPageDocument interface." alt="idoc::TMultiDocumentWrap&lt; Base, PageInterface &gt;" shape="rect" coords="0,224,302,248"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,331,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,331,24"/>
+<area href="classidoc_1_1_c_standard_document_meta_info.html" title="Simple implementation of a text document model." alt="idoc::CStandardDocumentMetaInfo" shape="rect" coords="0,168,331,192"/>
+<area href="classidoc_1_1_t_multi_page_document_wrap.html" title="Generic implementation of IMultiPageDocument interface." alt="idoc::TMultiPageDocumentWrap&lt; Base, PageInterface &gt;" shape="rect" coords="0,224,331,248"/>
 </map>
  </div></div>
 
@@ -60,6 +60,8 @@ Inheritance diagram for idoc::IDocumentMetaInfo:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#af3e58c14cae88b83c112cda02a59050b">ChangeFlags</a> { <a class="el" href="classidoc_1_1_i_document_meta_info.html#af3e58c14cae88b83c112cda02a59050ba20385a6c6e040ca124fd8723bb867607">CF_METAINFO</a> =  1 &lt;&lt; 21
+ }</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0a">MetaInfoType</a> { <br/>
 &#160;&#160;<a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0aa98720a18831a3ee78fac3e50e81b754f">MIT_AUTHOR</a>, 
 <a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0aa60b395429ab3f232eb4f3569fb9dc2b8">MIT_CREATOR</a>, 
@@ -100,11 +102,34 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_i_document_meta_info_8h_source.html#l00056">56</a> of file <a class="el" href="_i_document_meta_info_8h_source.html">IDocumentMetaInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_document_meta_info_8h_source.html#l00061">61</a> of file <a class="el" href="_i_document_meta_info_8h_source.html">IDocumentMetaInfo.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="af3e58c14cae88b83c112cda02a59050b"></a><!-- doxytag: member="idoc::IDocumentMetaInfo::ChangeFlags" ref="af3e58c14cae88b83c112cda02a59050b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classidoc_1_1_i_document_meta_info.html#af3e58c14cae88b83c112cda02a59050b">idoc::IDocumentMetaInfo::ChangeFlags</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="af3e58c14cae88b83c112cda02a59050ba20385a6c6e040ca124fd8723bb867607"></a><!-- doxytag: member="CF_METAINFO" ref="af3e58c14cae88b83c112cda02a59050ba20385a6c6e040ca124fd8723bb867607" args="" -->CF_METAINFO</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9">istd::IChangeable</a>.</p>
+
+<p>Definition at line <a class="el" href="_i_document_meta_info_8h_source.html#l00023">23</a> of file <a class="el" href="_i_document_meta_info_8h_source.html">IDocumentMetaInfo.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a7dad62c05a2974976650722db5891a0a"></a><!-- doxytag: member="idoc::IDocumentMetaInfo::MetaInfoType" ref="a7dad62c05a2974976650722db5891a0a" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -138,7 +163,7 @@ Public Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_i_document_meta_info_8h_source.html#l00023">23</a> of file <a class="el" href="_i_document_meta_info_8h_source.html">IDocumentMetaInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_document_meta_info_8h_source.html#l00028">28</a> of file <a class="el" href="_i_document_meta_info_8h_source.html">IDocumentMetaInfo.h</a>.</p>
 
 </div>
 </div>

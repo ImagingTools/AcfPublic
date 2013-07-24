@@ -883,6 +883,13 @@
       <anchor>a5895497c877a6986bfe16b0e88a007b2aeff64e127f3aa234c1ecd2ca435f0552</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type>int</type>
+      <name>qHash</name>
+      <anchorfile>_c_fast_color_8h.html</anchorfile>
+      <anchor>a82e50e163dc9dbd73408231b759bbdea</anchor>
+      <arglist>(const icmm::CFastColor &amp;color)</arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>CHsv.h</name>
@@ -2026,14 +2033,14 @@
     <namespace>idoc</namespace>
   </compound>
   <compound kind="file">
-    <name>TMultiDocumentWrap.h</name>
+    <name>TMultiPageDocumentWrap.h</name>
     <path>C:/Temp/Acf/Include/idoc/</path>
-    <filename>_t_multi_document_wrap_8h</filename>
+    <filename>_t_multi_page_document_wrap_8h</filename>
     <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
     <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
     <includes id="_i_multi_page_document_8h" name="IMultiPageDocument.h" local="yes" imported="no">idoc/IMultiPageDocument.h</includes>
     <includes id="_c_standard_document_meta_info_8h" name="CStandardDocumentMetaInfo.h" local="yes" imported="no">idoc/CStandardDocumentMetaInfo.h</includes>
-    <class kind="class">idoc::TMultiDocumentWrap</class>
+    <class kind="class">idoc::TMultiPageDocumentWrap</class>
     <namespace>idoc</namespace>
   </compound>
   <compound kind="file">
@@ -3983,6 +3990,18 @@
       <anchor>aaa07639b224bf681c5aa50e41400f109</anchor>
       <arglist></arglist>
     </member>
+  </compound>
+  <compound kind="file">
+    <name>CDocumentMetaInfoEditorComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtdoc/</path>
+    <filename>_c_document_meta_info_editor_comp_8h</filename>
+    <includes id="_i_document_meta_info_8h" name="IDocumentMetaInfo.h" local="yes" imported="no">idoc/IDocumentMetaInfo.h</includes>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
+    <includes id="_t_model_observer_comp_wrap_8h" name="TModelObserverCompWrap.h" local="yes" imported="no">ibase/TModelObserverCompWrap.h</includes>
+    <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="yes" imported="no">iqtgui/TGuiObserverWrap.h</includes>
+    <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
+    <class kind="class">iqtdoc::CDocumentMetaInfoEditorComp</class>
+    <namespace>iqtdoc</namespace>
   </compound>
   <compound kind="file">
     <name>CDoxygenHelpFileProviderComp.h</name>
@@ -19616,7 +19635,7 @@
     <class kind="class">idoc::IMultiPageDocument</class>
     <class kind="class">idoc::ITextDocument</class>
     <class kind="class">idoc::IUndoManager</class>
-    <class kind="class">idoc::TMultiDocumentWrap</class>
+    <class kind="class">idoc::TMultiPageDocumentWrap</class>
   </compound>
   <compound kind="class">
     <name>idoc::CCompositeDocumentTemplateComp</name>
@@ -21130,6 +21149,18 @@
     <filename>classidoc_1_1_i_document_meta_info.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
     <member kind="enumeration">
+      <name>ChangeFlags</name>
+      <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
+      <anchor>af3e58c14cae88b83c112cda02a59050b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_METAINFO</name>
+      <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
+      <anchor>af3e58c14cae88b83c112cda02a59050ba20385a6c6e040ca124fd8723bb867607</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
       <name>MetaInfoType</name>
       <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
       <anchor>a7dad62c05a2974976650722db5891a0a</anchor>
@@ -21539,8 +21570,8 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>idoc::TMultiDocumentWrap</name>
-    <filename>classidoc_1_1_t_multi_document_wrap.html</filename>
+    <name>idoc::TMultiPageDocumentWrap</name>
+    <filename>classidoc_1_1_t_multi_page_document_wrap.html</filename>
     <templarg>Base</templarg>
     <templarg>PageInterface</templarg>
     <base virtualness="virtual">Base</base>
@@ -21548,78 +21579,78 @@
     <member kind="typedef">
       <type>Base</type>
       <name>BaseClass</name>
-      <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
-      <anchor>a8e21072a48ee93b25cb64ca9fc69da26</anchor>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a7cf4fbd58f85f90274d76beddfd5602c</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CStandardDocumentMetaInfo</type>
       <name>BaseClass2</name>
-      <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
-      <anchor>a206fdab16e7a0ff48e961f3a78f08944</anchor>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>ae60744da1c04bd1a6b43d0d401eac765</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>PageInterface</type>
       <name>PageInterfaceType</name>
-      <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
-      <anchor>a2098e3f9b623017cf3c7abf4232f5d5f</anchor>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a97f9471c3c1dcb8fcfb98279482f7095</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type>const PageInterfaceType *</type>
       <name>GetPageObject</name>
-      <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
-      <anchor>a11d79627b37f9ef77a8c30e352df94f7</anchor>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a9831ece7d101a597ff86ea4f4678d48e</anchor>
       <arglist>(int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetPagesCount</name>
-      <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
-      <anchor>abc1e712e8e994c7e51f556ab30ec842f</anchor>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a90a256e47c00e132e35aa408a6f2f55f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const istd::IChangeable &amp;</type>
       <name>GetDocumentPage</name>
-      <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
-      <anchor>a7d4b60c4dc4900ca56396ea471443a9b</anchor>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a9cf27c18535ba4446a4e692db620c59a</anchor>
       <arglist>(int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ResetPages</name>
-      <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
-      <anchor>a45d956959268d29ea575380bf428655f</anchor>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a372d3101294670609a55d5a23e8d0d99</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RemovePage</name>
-      <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
-      <anchor>a21701387d722c153784a168d78cd7b08</anchor>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a58ecd425196fdc5fe86e8e94ef84beba</anchor>
       <arglist>(int pageIndex)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IDocumentMetaInfo &amp;</type>
       <name>GetDocumentMetaInfo</name>
-      <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
-      <anchor>a106edf1fe826f6497a54f7069d77369b</anchor>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>ae53f1dfceec17f2c0e4b6a3238e9802b</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>istd::TPointerVector&lt; PageInterface &gt;</type>
       <name>Pages</name>
-      <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
-      <anchor>ac0c01fcc7298f837b6fc3fb67528f528</anchor>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>add1e00f34c9167c3a5496becd6fe55b3</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>Pages</type>
       <name>m_documentPages</name>
-      <anchorfile>classidoc_1_1_t_multi_document_wrap.html</anchorfile>
-      <anchor>ad22f5d0f5846248b0293446075496a79</anchor>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a824c988b9295fe39268a30209c05ed1d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -35455,6 +35486,7 @@
   <compound kind="namespace">
     <name>iqtdoc</name>
     <filename>namespaceiqtdoc.html</filename>
+    <class kind="class">iqtdoc::CDocumentMetaInfoEditorComp</class>
     <class kind="class">iqtdoc::CDoxygenHelpFileProviderComp</class>
     <class kind="class">iqtdoc::CExtendedDocumentTemplateComp</class>
     <class kind="class">iqtdoc::CHtmlHelpGuiComp</class>
@@ -35464,6 +35496,46 @@
     <class kind="class">iqtdoc::CSingleDocumentWorkspaceGuiComp</class>
     <class kind="class">iqtdoc::CStaticHelpFileProviderComp</class>
     <class kind="class">iqtdoc::TQtDocumentManagerWrap</class>
+  </compound>
+  <compound kind="class">
+    <name>iqtdoc::CDocumentMetaInfoEditorComp</name>
+    <filename>classiqtdoc_1_1_c_document_meta_info_editor_comp.html</filename>
+    <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; idoc::IDocumentMetaInfo &gt; &gt; &gt;</base>
+    <member kind="typedef">
+      <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; idoc::IDocumentMetaInfo &gt; &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtdoc_1_1_c_document_meta_info_editor_comp.html</anchorfile>
+      <anchor>a1f5e5b93439df2795c7b669571559cb8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtdoc_1_1_c_document_meta_info_editor_comp.html</anchorfile>
+      <anchor>af478835f0a896624f96c70b1284a601d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqtdoc_1_1_c_document_meta_info_editor_comp.html</anchorfile>
+      <anchor>a8a1eb70deb856e71d11939922047ee35</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtdoc_1_1_c_document_meta_info_editor_comp.html</anchorfile>
+      <anchor>a74d549c8fc33acb84a417ce257f744f5</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtdoc_1_1_c_document_meta_info_editor_comp.html</anchorfile>
+      <anchor>aeb05edd41a85c265cd0aa4873832fecb</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtdoc::CDoxygenHelpFileProviderComp</name>

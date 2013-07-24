@@ -24,7 +24,13 @@
 
 
 // Qt includes
+#include <QtGlobal>
+#include <QtCore/QVariant>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QVBoxLayout>
+#else
 #include <QtGui/QVBoxLayout>
+#endif
 
 
 namespace iqtgui
@@ -137,7 +143,6 @@ QWidget* CMultiPageGuiCompBase::InitWidgetToParent(QWidget* parentPtr)
 				parentPtr,
 				GetDesignType(),
 				*m_useHorizontalLayoutAttrPtr ? Qt::Horizontal : Qt::Vertical);
-
 
 	if (m_iconSizeAttrPtr.IsValid()){
 		widgetPtr->SetPageIconSize(QSize(*m_iconSizeAttrPtr, *m_iconSizeAttrPtr));

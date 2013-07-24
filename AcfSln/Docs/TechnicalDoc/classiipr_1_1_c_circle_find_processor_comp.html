@@ -40,8 +40,8 @@
 <div class="title">iipr::CCircleFindProcessorComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iipr::CCircleFindProcessorComp" --><!-- doxytag: inherits="icomp::CComponentBase,TSyncProcessorWrap&lt; IImageToFeatureProcessor &gt;" -->
-<p>Cliper based circle finder.  
+<!-- doxytag: class="iipr::CCircleFindProcessorComp" --><!-- doxytag: inherits="icomp::CComponentBase,TSyncProcessorWrap&lt; IImageToFeatureProcessor &gt;,iipr::CSimpleResultsContainer" -->
+<p>Caliper based circle finder.  
  <a href="classiipr_1_1_c_circle_find_processor_comp.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>&gt;</code></p>
@@ -53,6 +53,7 @@ Inheritance diagram for iipr::CCircleFindProcessorComp:</div>
   <map id="iipr::CCircleFindProcessorComp_map" name="iipr::CCircleFindProcessorComp_map">
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html" alt="icomp::CComponentBase" shape="rect" coords="0,112,347,136"/>
 <area href="classiproc_1_1_t_sync_processor_wrap.html" alt="iproc::TSyncProcessorWrap&lt; IImageToFeatureProcessor &gt;" shape="rect" coords="357,112,704,136"/>
+<area href="classiipr_1_1_c_simple_results_container.html" alt="iipr::CSimpleResultsContainer" shape="rect" coords="714,112,1061,136"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="0,56,347,80"/>
 <area href="class_i_image_to_feature_processor.html" alt="IImageToFeatureProcessor" shape="rect" coords="357,56,704,80"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,347,24"/>
@@ -86,12 +87,13 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_circle_find_processor_comp.html#a415967994d0019f6444814dd0bedca97">CalculateCircle</a> (const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;center, bool removeOutliers, double minOutliersDistance, <a class="el" href="classiipr_1_1_c_circle_find_processor_comp.html#a5430fcfe2feb8d0410eb25233711776e">Rays</a> &amp;rays, <a class="el" href="classiipr_1_1_c_circle_find_processor_comp.html#a01a1e62f4a9582d0f8eaacf356defbe4">CircleFeature</a> &amp;result)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_circle_find_processor_comp.html#a6abdcec24fc49dce8060ad06b03c0f49">CalculateAnnulus</a> (const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;center, <a class="el" href="classiipr_1_1_c_circle_find_processor_comp.html#a5430fcfe2feb8d0410eb25233711776e">Rays</a> &amp;inRays, <a class="el" href="classiipr_1_1_c_circle_find_processor_comp.html#a5430fcfe2feb8d0410eb25233711776e">Rays</a> &amp;outRays, <a class="el" href="classiipr_1_1_c_circle_find_processor_comp.html#a47291226b62f678c85e393ba0bb7ff49">AnnulusFeature</a> &amp;result)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_circle_find_processor_comp.html#a60a93d1b701f7ef6593b22de57bd2ece">AddProjectionResultsToRays</a> (const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> &amp;params, const <a class="el" href="classimeas_1_1_i_numeric_value_provider.html">imeas::INumericValueProvider</a> &amp;container, <a class="el" href="classiipr_1_1_c_circle_find_processor_comp.html#a5430fcfe2feb8d0410eb25233711776e">Rays</a> &amp;inRays, <a class="el" href="classiipr_1_1_c_circle_find_processor_comp.html#a5430fcfe2feb8d0410eb25233711776e">Rays</a> &amp;outRays)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_circle_find_processor_comp.html#a1af6de12864db222804c5f68ba7d161a">AddIntermediateResults</a> (<a class="el" href="classiipr_1_1_c_circle_find_processor_comp.html#a5430fcfe2feb8d0410eb25233711776e">Rays</a> &amp;outRays)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Cliper based circle finder. </p>
-<p>This is realized as processor, as input the image, as output consumer of features must be given. It uses set of 1D caliper lines to find the position and radius of circle. It takes area of interests (AOI) from parameter set. As AOI can be used annulus, segment of annulus, rectangle and set of segments of annulus. </p>
+<div class="textblock"><p>Caliper based circle finder. </p>
+<p>This is realized as processor, as input the image, as output consumer of features must be given. It uses set of 1D caliper lines to find the position and radius of circle. It takes area of interests (AOI) from parameter set. As AOI can be used annulus, segment of annulus, rectangle and set of segments of annulus. Collects introspection results and delivers them via <a class="el" href="classiipr_1_1_c_simple_results_container.html">iipr::CSimpleResultsContainer</a> if EnableIntrospection = true. </p>
 
-<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00029">29</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00032">32</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a47291226b62f678c85e393ba0bb7ff49"></a><!-- doxytag: member="iipr::CCircleFindProcessorComp::AnnulusFeature" ref="a47291226b62f678c85e393ba0bb7ff49" args="" -->
 <div class="memitem">
@@ -104,7 +106,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00063">63</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00068">68</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
 
 </div>
 </div>
@@ -121,7 +123,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiproc_1_1_t_sync_processor_wrap.html#a3b21fc424b686e6bcf4537b75d89adf3">iproc::TSyncProcessorWrap&lt; IImageToFeatureProcessor &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00034">34</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00038">38</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
 
 </div>
 </div>
@@ -136,7 +138,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00062">62</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00067">67</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
 
 </div>
 </div>
@@ -151,7 +153,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00071">71</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00076">76</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
 
 </div>
 </div>
@@ -166,7 +168,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00080">80</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00085">85</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
 
 </div>
 </div>
@@ -227,6 +229,23 @@ Protected Member Functions</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1af6de12864db222804c5f68ba7d161a"></a><!-- doxytag: member="iipr::CCircleFindProcessorComp::AddIntermediateResults" ref="a1af6de12864db222804c5f68ba7d161a" args="(Rays &amp;outRays)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iipr::CCircleFindProcessorComp::AddIntermediateResults </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classiipr_1_1_c_circle_find_processor_comp.html#a5430fcfe2feb8d0410eb25233711776e">Rays</a> &amp;&#160;</td>
+          <td class="paramname"><em>outRays</em></td><td>)</td>
+          <td><code> [protected]</code></td>
         </tr>
       </table>
 </div>

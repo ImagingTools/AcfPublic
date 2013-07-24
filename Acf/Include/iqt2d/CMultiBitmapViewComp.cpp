@@ -20,11 +20,16 @@
 ********************************************************************************/
 
 
+
 #include "iqt2d/CMultiBitmapViewComp.h"
 
 
 // Qt includes
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QGridLayout>
+#else
 #include <QtGui/QGridLayout>
+#endif
 
 // ACF includes
 #include <iview/CViewport.h>
@@ -152,6 +157,10 @@ void CMultiBitmapViewComp::OnGuiCreated()
 
 void CMultiBitmapViewComp::OnComponentDestroyed()
 {
+	while (!m_views.IsEmpty()){
+		m_views.PopAt(0);
+	}
+
 	UnregisterAllModels();
 
 	BaseClass::OnComponentDestroyed();

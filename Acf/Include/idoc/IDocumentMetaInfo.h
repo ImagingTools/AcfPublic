@@ -42,6 +42,11 @@ class IDocumentMetaInfo: virtual public istd::IChangeable
 {
 public:
 
+	enum ChangeFlags
+	{
+		CF_METAINFO = 1 << 21
+	};
+
 	enum MetaInfoType
 	{
 		/**

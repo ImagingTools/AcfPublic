@@ -46,6 +46,10 @@ int CCircleFindProcessorComp::DoExtractFeatures(
 			const iimg::IBitmap& image,
 			IFeaturesConsumer& results)
 {
+	if (*m_introspectionOnAttrPtr){
+		clear();
+	}
+
 	if (!m_featuresMapperCompPtr.IsValid() || (paramsPtr == NULL)){
 		return TS_INVALID;
 	}
@@ -79,8 +83,12 @@ int CCircleFindProcessorComp::DoExtractFeatures(
 		if (CalculateAnnulus(center, inRays, outRays, *featurePtr)){
 			results.AddFeature(featurePtr.PopPtr());
 
+			AddIntermediateResults(outRays);
+
 			return TS_OK;
 		}
+
+		AddIntermediateResults(outRays);
 	}
 	else{
 		istd::TDelPtr<CircleFeature> featurePtr(new CircleFeature());
@@ -93,8 +101,12 @@ int CCircleFindProcessorComp::DoExtractFeatures(
 								*featurePtr)){
 			results.AddFeature(featurePtr.PopPtr());
 
+			AddIntermediateResults(usedRays);
+
 			return TS_OK;
 		}
+
+		AddIntermediateResults(usedRays);
 	}
 
 	return TS_INVALID;
@@ -395,7 +407,7 @@ void CCircleFindProcessorComp::AddProjectionResultsToRays(
 			Rays& inRays,
 			Rays& outRays)
 {
-	Q_ASSERT(m_featuresMapperCompPtr.IsValid());	// validíty of features mapper should be checked on the beginning
+	Q_ASSERT(m_featuresMapperCompPtr.IsValid());	// validity of features mapper should be checked on the beginning
 
 	Ray inRay;
 	Ray outRay;
@@ -437,6 +449,24 @@ void CCircleFindProcessorComp::AddProjectionResultsToRays(
 		outRays.push_back(outRay);
 	}
 }
+
+
+void CCircleFindProcessorComp::AddIntermediateResults(Rays& outRays)
+{
+	if (!*m_introspectionOnAttrPtr){
+		return;
+	}
+
+	for (int rayIndex = 0; rayIndex < outRays.count(); rayIndex++){
+		const Ray& ray = outRays.at(rayIndex);
+		if (ray.points.count() > 0){
+			const i2d::CVector2d& pointVector = ray.points.at(ray.usedIndex).position;
+
+			append(QPointF(pointVector.GetX(), pointVector.GetY()));
+		}
+	}
+}
+
 
 
 } // namespace iipr

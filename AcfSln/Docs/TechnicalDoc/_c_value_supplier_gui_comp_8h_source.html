@@ -57,7 +57,7 @@
 <a name="l00031"></a><a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#a57344afe1ef47fe90364bbba2fc1c8ef">00031</a>        <span class="keyword">typedef</span> <a class="code" href="classiqtinsp_1_1_t_supplier_gui_comp_base.html">iqtinsp::TSupplierGuiCompBase&lt;Ui::CValueSupplierGuiComp&gt;</a> <a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html#a57344afe1ef47fe90364bbba2fc1c8ef">BaseClass</a>;
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        I_BEGIN_COMPONENT(<a class="code" href="classiqtipr_1_1_c_value_supplier_gui_comp.html">CValueSupplierGuiComp</a>);
-<a name="l00034"></a>00034               I_ASSIGN(m_intermediateResultsGuiCompPtr, <span class="stringliteral">&quot;IntermediateResultsGui&quot;</span>, <span class="stringliteral">&quot;GUI integreted in group &#39;Intermediate Results&#39;&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;IntermediateResultsGui&quot;</span>);
+<a name="l00034"></a>00034               I_ASSIGN(m_intermediateResultsGuiCompPtr, <span class="stringliteral">&quot;IntermediateResultsGui&quot;</span>, <span class="stringliteral">&quot;GUI integrated in group &#39;Intermediate Results&#39;&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;IntermediateResultsGui&quot;</span>);
 <a name="l00035"></a>00035        I_END_COMPONENT;
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037 <span class="keyword">protected</span> Q_SLOTS:
@@ -90,15 +90,18 @@
 <a name="l00064"></a>00064 
 <a name="l00065"></a>00065        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;i2d::CCircle&gt;</a> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">FoundModel</a>;
 <a name="l00066"></a>00066        <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">FoundModel</a> m_foundModel;
-<a name="l00067"></a>00067 };
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070 } <span class="comment">// namespace iqtipr</span>
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;i2d::CPosition2d&gt;</a> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_t_model_wrap.html">PositionModel</a>;
+<a name="l00069"></a>00069        <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;PositionModel&gt;</a> m_positionModels;
+<a name="l00070"></a>00070 };
 <a name="l00071"></a>00071 
 <a name="l00072"></a>00072 
-<a name="l00073"></a>00073 <span class="preprocessor">#endif // !iqtipr_CValueSupplierGuiComp_included</span>
-<a name="l00074"></a>00074 <span class="preprocessor"></span>
+<a name="l00073"></a>00073 } <span class="comment">// namespace iqtipr</span>
+<a name="l00074"></a>00074 
 <a name="l00075"></a>00075 
+<a name="l00076"></a>00076 <span class="preprocessor">#endif // !iqtipr_CValueSupplierGuiComp_included</span>
+<a name="l00077"></a>00077 <span class="preprocessor"></span>
+<a name="l00078"></a>00078 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
