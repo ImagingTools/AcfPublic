@@ -37224,6 +37224,13 @@
     </member>
     <member kind="function">
       <type>void</type>
+      <name>EnableValdation</name>
+      <anchorfile>classiqtgui_1_1_c_double_range_spin_edit.html</anchorfile>
+      <anchor>ab5c2ced436fe60c1b231b66a241102af</anchor>
+      <arglist>(bool enable=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
       <name>SetValues</name>
       <anchorfile>classiqtgui_1_1_c_double_range_spin_edit.html</anchorfile>
       <anchor>ac20aba76017fdb2a6dad2f8019e1b50e</anchor>
@@ -37243,6 +37250,20 @@
       <anchor>aeaeba78ea700fd198f7441e5fd8281d3</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnMinValueChanged</name>
+      <anchorfile>classiqtgui_1_1_c_double_range_spin_edit.html</anchorfile>
+      <anchor>ab6413e0fb94c0422268c61a34c2323fa</anchor>
+      <arglist>(double)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnMaxValueChanged</name>
+      <anchorfile>classiqtgui_1_1_c_double_range_spin_edit.html</anchorfile>
+      <anchor>ad1222d0438347679bae12b80d749946e</anchor>
+      <arglist>(double)</arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>Ui::CDoubleRangeSpinEdit</type>
       <name>m_ui</name>
@@ -37255,6 +37276,13 @@
       <name>m_maxValueEnabled</name>
       <anchorfile>classiqtgui_1_1_c_double_range_spin_edit.html</anchorfile>
       <anchor>aec1097964abdf82551f9f3d85cd56ef8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_validateRangesEnabled</name>
+      <anchorfile>classiqtgui_1_1_c_double_range_spin_edit.html</anchorfile>
+      <anchor>a05410f51753b2172d36ada8fa6a32867</anchor>
       <arglist></arglist>
     </member>
   </compound>

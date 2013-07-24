@@ -29,17 +29,17 @@
 
 // ACF includes
 #include "i2d/CVector2d.h"
-
 #include "iqt/iqt.h"
 
+// ACF-Solutions includes
 #include "icmpstr/CRegistryElementShape.h"
 
-
-// public methods
 
 namespace icmpstr
 {
 
+
+// public methods
 
 CGraphicsConnectorItem::CGraphicsConnectorItem(
 			const icmpstr::ISceneProvider& sceneProvider,
@@ -50,7 +50,11 @@ CGraphicsConnectorItem::CGraphicsConnectorItem(
 	m_connectFlags(connectFlags)
 {
 	setAcceptedMouseButtons(0);
+#if QT_VERSION >= 0x050000
+	setAcceptHoverEvents(true);
+#else
 	setAcceptsHoverEvents(true);
+#endif
 
 	setFlags(QGraphicsItem::ItemIsMovable | QGraphicsItem::ItemSendsGeometryChanges);
 

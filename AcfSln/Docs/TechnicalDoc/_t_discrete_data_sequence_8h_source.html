@@ -146,8 +146,8 @@
 <a name="l00120"></a>00120        m_allocatedElementsCount = 0;
 <a name="l00121"></a>00121        m_samplesCount = samplesCount;
 <a name="l00122"></a>00122        m_channelsCount = channelsCount;
-<a name="l00123"></a>00123        m_sampleDiff = (sampleDiff != 0)? sampleDiff: channelsCount * <span class="keyword">sizeof</span>(Element);
-<a name="l00124"></a>00124        m_channelDiff = (channelDiff != 0)? channelDiff: <span class="keyword">sizeof</span>(Element);
+<a name="l00123"></a>00123        m_sampleDiff = (sampleDiff != 0) ? sampleDiff : <span class="keywordtype">int</span>(channelsCount * <span class="keyword">sizeof</span>(Element));
+<a name="l00124"></a>00124        m_channelDiff = (channelDiff != 0) ? channelDiff: <span class="keyword">sizeof</span>(Element);
 <a name="l00125"></a>00125 
 <a name="l00126"></a>00126        <span class="keywordflow">return</span> <span class="keyword">true</span>;
 <a name="l00127"></a>00127 }

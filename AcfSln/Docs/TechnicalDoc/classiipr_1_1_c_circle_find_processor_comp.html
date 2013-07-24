@@ -40,7 +40,7 @@
 <div class="title">iipr::CCircleFindProcessorComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iipr::CCircleFindProcessorComp" --><!-- doxytag: inherits="icomp::CComponentBase,TSyncProcessorWrap&lt; IImageToFeatureProcessor &gt;,iipr::CSimpleResultsContainer" -->
+<!-- doxytag: class="iipr::CCircleFindProcessorComp" --><!-- doxytag: inherits="icomp::CComponentBase,TSyncProcessorWrap&lt; IImageToFeatureProcessor &gt;,iipr::ISimpleResultsConsumer" -->
 <p>Caliper based circle finder.  
  <a href="classiipr_1_1_c_circle_find_processor_comp.html#details">More...</a></p>
 
@@ -53,9 +53,10 @@ Inheritance diagram for iipr::CCircleFindProcessorComp:</div>
   <map id="iipr::CCircleFindProcessorComp_map" name="iipr::CCircleFindProcessorComp_map">
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html" alt="icomp::CComponentBase" shape="rect" coords="0,112,347,136"/>
 <area href="classiproc_1_1_t_sync_processor_wrap.html" alt="iproc::TSyncProcessorWrap&lt; IImageToFeatureProcessor &gt;" shape="rect" coords="357,112,704,136"/>
-<area href="classiipr_1_1_c_simple_results_container.html" alt="iipr::CSimpleResultsContainer" shape="rect" coords="714,112,1061,136"/>
+<area href="classiipr_1_1_i_simple_results_consumer.html" alt="iipr::ISimpleResultsConsumer" shape="rect" coords="714,112,1061,136"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classicomp_1_1_i_component.html" alt="icomp::IComponent" shape="rect" coords="0,56,347,80"/>
 <area href="class_i_image_to_feature_processor.html" alt="IImageToFeatureProcessor" shape="rect" coords="357,56,704,80"/>
+<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="714,56,1061,80"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,347,24"/>
 </map>
  </div></div>
@@ -71,8 +72,10 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_circle_find_processor_comp.html#a5d7a01981508c9b0c6b2609ad8286e1d">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_circle_find_processor_comp.html#acde9d9598d46b8216faceb30d2144d85">CCircleFindProcessorComp</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_circle_find_processor_comp.html#a79a9b3c50aaeccc7cc6e50d988ad67a6">DoExtractFeatures</a> (const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr, const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> &amp;image, <a class="el" href="classiipr_1_1_i_features_consumer.html">IFeaturesConsumer</a> &amp;results)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_circle_find_processor_comp.html#acc4c657f22e7822a4ff54206a332ca31">DoProcessing</a> (const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr, const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *inputPtr, <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a> *outputPtr, <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classibase_1_1_i_progress_manager.html">ibase::IProgressManager</a> *progressManagerPtr=<a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_circle_find_processor_comp.html#adfe98632d20b01ef6189641a35b80b36">SetResultsBuffer</a> (<a class="el" href="classiipr_1_1_c_simple_results_container.html">CSimpleResultsContainer</a> *bufferPtr)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-types"></a>
 Protected Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiipr_1_1_t_weighted_feature_wrap.html">TWeightedFeatureWrap</a><br class="typebreak"/>
@@ -91,7 +94,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Caliper based circle finder. </p>
-<p>This is realized as processor, as input the image, as output consumer of features must be given. It uses set of 1D caliper lines to find the position and radius of circle. It takes area of interests (AOI) from parameter set. As AOI can be used annulus, segment of annulus, rectangle and set of segments of annulus. Collects introspection results and delivers them via <a class="el" href="classiipr_1_1_c_simple_results_container.html">iipr::CSimpleResultsContainer</a> if EnableIntrospection = true. </p>
+<p>This is realized as processor, as input the image, as output consumer of features must be given. It uses set of 1D caliper lines to find the position and radius of circle. It takes area of interests (AOI) from parameter set. As AOI can be used annulus, segment of annulus, rectangle and set of segments of annulus. To collect introspection results, call SetResultsBuffer with the valid buffer pointer as parameter. </p>
 
 <p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00032">32</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
@@ -106,7 +109,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00068">68</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00072">72</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
 
 </div>
 </div>
@@ -138,7 +141,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00067">67</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00071">71</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
 
 </div>
 </div>
@@ -153,7 +156,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00076">76</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00080">80</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
 
 </div>
 </div>
@@ -168,7 +171,24 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00085">85</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_circle_find_processor_comp_8h_source.html#l00089">89</a> of file <a class="el" href="_c_circle_find_processor_comp_8h_source.html">CCircleFindProcessorComp.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="acde9d9598d46b8216faceb30d2144d85"></a><!-- doxytag: member="iipr::CCircleFindProcessorComp::CCircleFindProcessorComp" ref="acde9d9598d46b8216faceb30d2144d85" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iipr::CCircleFindProcessorComp::CCircleFindProcessorComp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -445,6 +465,25 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adfe98632d20b01ef6189641a35b80b36"></a><!-- doxytag: member="iipr::CCircleFindProcessorComp::SetResultsBuffer" ref="adfe98632d20b01ef6189641a35b80b36" args="(CSimpleResultsContainer *bufferPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iipr::CCircleFindProcessorComp::SetResultsBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classiipr_1_1_c_simple_results_container.html">CSimpleResultsContainer</a> *&#160;</td>
+          <td class="paramname"><em>bufferPtr</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="el" href="classiipr_1_1_i_simple_results_consumer.html#a0a1cd0d49ba16601bacfb0a2fd156875">iipr::ISimpleResultsConsumer</a>.</p>
 
 </div>
 </div>

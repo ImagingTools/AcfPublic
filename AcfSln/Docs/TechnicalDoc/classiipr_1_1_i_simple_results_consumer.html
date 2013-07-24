@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>iipr::ISimpleResultsProvider Class Reference</title>
+<title>iipr::ISimpleResultsConsumer Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -25,7 +25,7 @@
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="namespaceiipr.html">iipr</a>      </li>
-      <li class="navelem"><a class="el" href="classiipr_1_1_i_simple_results_provider.html">ISimpleResultsProvider</a>      </li>
+      <li class="navelem"><a class="el" href="classiipr_1_1_i_simple_results_consumer.html">ISimpleResultsConsumer</a>      </li>
     </ul>
   </div>
 </div>
@@ -33,47 +33,48 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">iipr::ISimpleResultsProvider Class Reference</div>  </div>
+<div class="title">iipr::ISimpleResultsConsumer Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iipr::ISimpleResultsProvider" --><!-- doxytag: inherits="istd::IPolymorphic" -->
+<!-- doxytag: class="iipr::ISimpleResultsConsumer" --><!-- doxytag: inherits="istd::IPolymorphic" -->
 <p><code>#include &lt;<a class="el" href="_i_simple_results_provider_8h_source.html">ISimpleResultsProvider.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for iipr::ISimpleResultsProvider:</div>
+Inheritance diagram for iipr::ISimpleResultsConsumer:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classiipr_1_1_i_simple_results_provider.png" usemap="#iipr::ISimpleResultsProvider_map" alt=""/>
-  <map id="iipr::ISimpleResultsProvider_map" name="iipr::ISimpleResultsProvider_map">
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,230,24"/>
-<area href="classiipr_1_1_c_position_from_image_supplier_comp.html" title="Implementation of value supplier returning position on the image." alt="iipr::CPositionFromImageSupplierComp" shape="rect" coords="0,112,230,136"/>
+  <img src="classiipr_1_1_i_simple_results_consumer.png" usemap="#iipr::ISimpleResultsConsumer_map" alt=""/>
+  <map id="iipr::ISimpleResultsConsumer_map" name="iipr::ISimpleResultsConsumer_map">
+<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="0,0,194,24"/>
+<area href="classiipr_1_1_c_circle_find_processor_comp.html" title="Caliper based circle finder." alt="iipr::CCircleFindProcessorComp" shape="rect" coords="0,112,194,136"/>
 </map>
  </div></div>
 
-<p><a href="classiipr_1_1_i_simple_results_provider-members.html">List of all members.</a></p>
+<p><a href="classiipr_1_1_i_simple_results_consumer-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiipr_1_1_c_simple_results_container.html">CSimpleResultsContainer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_simple_results_provider.html#a7e43a0bb0e2a2bd69092f63183ddaa75">GetResults</a> () const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_i_simple_results_consumer.html#a0a1cd0d49ba16601bacfb0a2fd156875">SetResultsBuffer</a> (<a class="el" href="classiipr_1_1_c_simple_results_container.html">CSimpleResultsContainer</a> *bufferPtr)=0</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_i_simple_results_provider_8h_source.html#l00035">35</a> of file <a class="el" href="_i_simple_results_provider_8h_source.html">ISimpleResultsProvider.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_simple_results_provider_8h_source.html#l00028">28</a> of file <a class="el" href="_i_simple_results_provider_8h_source.html">ISimpleResultsProvider.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a7e43a0bb0e2a2bd69092f63183ddaa75"></a><!-- doxytag: member="iipr::ISimpleResultsProvider::GetResults" ref="a7e43a0bb0e2a2bd69092f63183ddaa75" args="() const =0" -->
+<a class="anchor" id="a0a1cd0d49ba16601bacfb0a2fd156875"></a><!-- doxytag: member="iipr::ISimpleResultsConsumer::SetResultsBuffer" ref="a0a1cd0d49ba16601bacfb0a2fd156875" args="(CSimpleResultsContainer *bufferPtr)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classiipr_1_1_c_simple_results_container.html">CSimpleResultsContainer</a>* iipr::ISimpleResultsProvider::GetResults </td>
+          <td class="memname">virtual void iipr::ISimpleResultsConsumer::SetResultsBuffer </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [pure virtual]</code></td>
+          <td class="paramtype"><a class="el" href="classiipr_1_1_c_simple_results_container.html">CSimpleResultsContainer</a> *&#160;</td>
+          <td class="paramname"><em>bufferPtr</em></td><td>)</td>
+          <td><code> [pure virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Implemented in <a class="el" href="classiipr_1_1_c_position_from_image_supplier_comp.html#a5730ff39df0b0abc098aff613a03c3a1">iipr::CPositionFromImageSupplierComp</a>.</p>
+<p>Implemented in <a class="el" href="classiipr_1_1_c_circle_find_processor_comp.html#adfe98632d20b01ef6189641a35b80b36">iipr::CCircleFindProcessorComp</a>.</p>
 
 </div>
 </div>

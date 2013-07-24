@@ -24,13 +24,22 @@
 
 
 // Qt includes
+#include<QtCore/QtGlobal>
+#include <QtCore/QMimeData>
+#include <QtGui/QClipboard>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QGroupBox>
+#include <QtWidgets/QMenu>
+#else
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QSpacerItem>
 #include <QtGui/QGroupBox>
 #include <QtGui/QMenu>
-#include <QtGui/QClipboard>
-#include <QtCore/QMimeData>
+#endif
 
 // ACF includes
 #include "imod/IModel.h"
@@ -41,7 +50,6 @@
 #include "iview/CShapeBase.h"
 #include "iser/CXmlStringReadArchive.h"
 #include "iser/CXmlStringWriteArchive.h"
-
 #include "iqtgui/CFlowLayout.h"
 
 
@@ -1038,11 +1046,11 @@ void CInspectionTaskGuiComp::CreateMenu()
 	QMenu* actionsMenuPtr = new QMenu(MenuButton);
 	MenuButton->setMenu(actionsMenuPtr);
 
+	m_copyAllActionPtr = actionsMenuPtr->addAction(QIcon(":/Icons/Copy"), tr("Copy all"), this, SLOT(OnCopyAll()));
+	m_pasteAllActionPtr = actionsMenuPtr->addAction(QIcon(":/Icons/Paste"), tr("Paste all"), this, SLOT(OnPasteAll()));
+	actionsMenuPtr->addSeparator();
 	m_copyCurrentTaskActionPtr = actionsMenuPtr->addAction(QIcon(":/Icons/Copy"), tr("Copy current task"), this, SLOT(OnCopyCurrent()));
 	m_pasteCurrentTaskActionPtr = actionsMenuPtr->addAction(QIcon(":/Icons/Paste"), tr("Paste current task"), this, SLOT(OnPasteCurrent()));
-	actionsMenuPtr->addSeparator();
-	m_copyAllActionPtr = actionsMenuPtr->addAction(QIcon(":/Icons/Copy"), tr("Copy all tasks"), this, SLOT(OnCopyAll()));
-	m_pasteAllActionPtr = actionsMenuPtr->addAction(QIcon(":/Icons/Paste"), tr("Paste all tasks"), this, SLOT(OnPasteAll()));
 
 	if (m_paramsLoaderCompPtr.IsValid()){
 		actionsMenuPtr->addSeparator();

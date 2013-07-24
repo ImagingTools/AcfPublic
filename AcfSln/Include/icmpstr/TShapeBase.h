@@ -32,11 +32,17 @@
 #include <QtCore/QPointF>
 #include <QtGui/QBrush>
 #include <QtGui/QPen>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QGraphicsItem>
+#include <QtWidgets/QStyle>
+#include <QtWidgets/QStyleOptionGraphicsItem>
+#else
 #include <QtGui/QGraphicsItem>
 #include <QtGui/QStyle>
 #include <QtGui/QStyleOptionGraphicsItem>
+#endif
 
-// ACF includes
+// ACF-Solutions includes
 #include "icmpstr/ISceneProvider.h"
 
 
@@ -125,7 +131,11 @@ TShapeBase<GraphicsItemClass>::TShapeBase(bool isEditable, const ISceneProvider*
 :	m_isEditable(isEditable),
 	m_providerPtr(providerPtr)
 {
+#if QT_VERSION >= 0x050000
+	BaseClass::setAcceptHoverEvents(true);
+#else
 	BaseClass::setAcceptsHoverEvents(true);
+#endif
 }
 
 

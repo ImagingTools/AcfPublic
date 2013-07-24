@@ -56,7 +56,7 @@ int CPositionFromImageSupplierComp::GetValuesCount() const
 }
 
 
-const imeas::INumericValue& CPositionFromImageSupplierComp::GetNumericValue(int index) const
+const imeas::INumericValue& CPositionFromImageSupplierComp::GetNumericValue(int I_IF_DEBUG(index)) const
 {
 	Q_ASSERT(index == 0);
 
@@ -96,6 +96,15 @@ int CPositionFromImageSupplierComp::ProduceObject(imath::CVarVector& result) con
 		if (bitmapPtr != NULL){
 			iprm::IParamsSet* paramsSetPtr = GetModelParametersSet();
 
+			if (*m_introspectionOnAttrPtr){
+				iipr::ISimpleResultsConsumer* intermediateResultsProviderPtr = 
+					dynamic_cast<iipr::ISimpleResultsConsumer*>(m_processorCompPtr.GetPtr());
+
+				if (intermediateResultsProviderPtr != NULL){
+					intermediateResultsProviderPtr->SetResultsBuffer(&m_intermediateResults);
+				}				
+			}
+
 			Timer performanceTimer(this, "Calculation of position");
 
 			CSingleFeatureConsumer consumer(CSingleFeatureConsumer::FP_HEAVIEST);
@@ -103,13 +112,6 @@ int CPositionFromImageSupplierComp::ProduceObject(imath::CVarVector& result) con
 							paramsSetPtr,
 							bitmapPtr,
 							&consumer);
-
-			if (*m_introspectionOnAttrPtr){
-				iipr::CSimpleResultsContainer* intermediateResultsPtr = dynamic_cast<iipr::CSimpleResultsContainer*>(m_processorCompPtr.GetPtr());
-				if (intermediateResultsPtr != NULL){
-					m_intermediateResults = *intermediateResultsPtr;
-				}
-			}
 
 			if (positionState != iproc::IProcessor::TS_OK){
 				return WS_ERROR;

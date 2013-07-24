@@ -24,8 +24,13 @@
 
 
 // Qt includes
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QFileDialog>
+#include <QtWidgets/QToolBar>
+#else
 #include <QtGui/QFileDialog>
 #include <QtGui/QToolBar>
+#endif
 
 // ACF includes
 #include "istd/TChangeNotifier.h"

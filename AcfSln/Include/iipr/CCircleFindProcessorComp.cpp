@@ -39,6 +39,12 @@ namespace iipr
 {
 
 
+CCircleFindProcessorComp::CCircleFindProcessorComp()
+:	m_intermediateResultsBufferPtr(NULL)
+{
+}
+
+
 // reimplemented (iipr::IImageToFeatureProcessor)
 
 int CCircleFindProcessorComp::DoExtractFeatures(
@@ -46,10 +52,6 @@ int CCircleFindProcessorComp::DoExtractFeatures(
 			const iimg::IBitmap& image,
 			IFeaturesConsumer& results)
 {
-	if (*m_introspectionOnAttrPtr){
-		clear();
-	}
-
 	if (!m_featuresMapperCompPtr.IsValid() || (paramsPtr == NULL)){
 		return TS_INVALID;
 	}
@@ -134,6 +136,14 @@ int CCircleFindProcessorComp::DoProcessing(
 	}
 
 	return DoExtractFeatures(paramsPtr, *imagePtr, *consumerPtr);
+}
+
+
+// reimplemented (iipr::ISimpleResultsConsumer)
+
+void CCircleFindProcessorComp::SetResultsBuffer(CSimpleResultsContainer* bufferPtr)
+{
+	m_intermediateResultsBufferPtr = bufferPtr;
 }
 
 
@@ -453,7 +463,7 @@ void CCircleFindProcessorComp::AddProjectionResultsToRays(
 
 void CCircleFindProcessorComp::AddIntermediateResults(Rays& outRays)
 {
-	if (!*m_introspectionOnAttrPtr){
+	if (m_intermediateResultsBufferPtr == NULL){
 		return;
 	}
 
@@ -462,7 +472,7 @@ void CCircleFindProcessorComp::AddIntermediateResults(Rays& outRays)
 		if (ray.points.count() > 0){
 			const i2d::CVector2d& pointVector = ray.points.at(ray.usedIndex).position;
 
-			append(QPointF(pointVector.GetX(), pointVector.GetY()));
+			m_intermediateResultsBufferPtr->PushBack(QPointF(pointVector.GetX(), pointVector.GetY()));
 		}
 	}
 }

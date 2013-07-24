@@ -34,6 +34,7 @@
   <div class="summary">
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-slots">Protected Slots</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">iqtgui::CDoubleRangeSpinEdit Class Reference</div>  </div>
@@ -59,13 +60,19 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_double_range_spin_edit.html#a8ef0f34e7ffe645dcc987328d0985bfd">SetMinLabelText</a> (const QString &amp;text)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_double_range_spin_edit.html#a444f69bf5565cf03f925c4f7e9631b2a">SetMaxLabelText</a> (const QString &amp;text)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_double_range_spin_edit.html#ab271b3ecdd9aaea2a853f2d865f5267f">EnableMaxValue</a> (bool enable=true)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_double_range_spin_edit.html#ab5c2ced436fe60c1b231b66a241102af">EnableValdation</a> (bool enable=true)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_double_range_spin_edit.html#ac20aba76017fdb2a6dad2f8019e1b50e">SetValues</a> (double minValue, double maxValue)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_double_range_spin_edit.html#a17538631444fd74c024c58fa5749c5b1">GetMinValue</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_double_range_spin_edit.html#aeaeba78ea700fd198f7441e5fd8281d3">GetMaxValue</a> () const </td></tr>
+<tr><td colspan="2"><h2><a name="pro-slots"></a>
+Protected Slots</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_double_range_spin_edit.html#ab6413e0fb94c0422268c61a34c2323fa">OnMinValueChanged</a> (double)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_double_range_spin_edit.html#ad1222d0438347679bae12b80d749946e">OnMaxValueChanged</a> (double)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Ui::CDoubleRangeSpinEdit&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_double_range_spin_edit.html#a6a2c6e62cea97ddb8b7f69f7167ce803">m_ui</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_double_range_spin_edit.html#aec1097964abdf82551f9f3d85cd56ef8">m_maxValueEnabled</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_double_range_spin_edit.html#a05410f51753b2172d36ada8fa6a32867">m_validateRangesEnabled</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -106,6 +113,23 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab5c2ced436fe60c1b231b66a241102af"></a><!-- doxytag: member="iqtgui::CDoubleRangeSpinEdit::EnableValdation" ref="ab5c2ced436fe60c1b231b66a241102af" args="(bool enable=true)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iqtgui::CDoubleRangeSpinEdit::EnableValdation </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aeaeba78ea700fd198f7441e5fd8281d3"></a><!-- doxytag: member="iqtgui::CDoubleRangeSpinEdit::GetMaxValue" ref="aeaeba78ea700fd198f7441e5fd8281d3" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -131,6 +155,40 @@ Protected Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad1222d0438347679bae12b80d749946e"></a><!-- doxytag: member="iqtgui::CDoubleRangeSpinEdit::OnMaxValueChanged" ref="ad1222d0438347679bae12b80d749946e" args="(double)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iqtgui::CDoubleRangeSpinEdit::OnMaxValueChanged </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab6413e0fb94c0422268c61a34c2323fa"></a><!-- doxytag: member="iqtgui::CDoubleRangeSpinEdit::OnMinValueChanged" ref="ab6413e0fb94c0422268c61a34c2323fa" args="(double)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iqtgui::CDoubleRangeSpinEdit::OnMinValueChanged </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, slot]</code></td>
         </tr>
       </table>
 </div>
@@ -359,7 +417,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_double_range_spin_edit_8h_source.html#l00042">42</a> of file <a class="el" href="_c_double_range_spin_edit_8h_source.html">CDoubleRangeSpinEdit.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_double_range_spin_edit_8h_source.html#l00047">47</a> of file <a class="el" href="_c_double_range_spin_edit_8h_source.html">CDoubleRangeSpinEdit.h</a>.</p>
 
 </div>
 </div>
@@ -374,7 +432,22 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_double_range_spin_edit_8h_source.html#l00040">40</a> of file <a class="el" href="_c_double_range_spin_edit_8h_source.html">CDoubleRangeSpinEdit.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_double_range_spin_edit_8h_source.html#l00045">45</a> of file <a class="el" href="_c_double_range_spin_edit_8h_source.html">CDoubleRangeSpinEdit.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a05410f51753b2172d36ada8fa6a32867"></a><!-- doxytag: member="iqtgui::CDoubleRangeSpinEdit::m_validateRangesEnabled" ref="a05410f51753b2172d36ada8fa6a32867" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classiqtgui_1_1_c_double_range_spin_edit.html#a05410f51753b2172d36ada8fa6a32867">iqtgui::CDoubleRangeSpinEdit::m_validateRangesEnabled</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_double_range_spin_edit_8h_source.html#l00048">48</a> of file <a class="el" href="_c_double_range_spin_edit_8h_source.html">CDoubleRangeSpinEdit.h</a>.</p>
 
 </div>
 </div>

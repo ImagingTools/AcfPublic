@@ -1809,6 +1809,7 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_simple_results_provider_8h</filename>
     <class kind="class">iipr::CSimpleResultsContainer</class>
+    <class kind="class">iipr::ISimpleResultsConsumer</class>
     <class kind="class">iipr::ISimpleResultsProvider</class>
     <namespace>iipr</namespace>
   </compound>
@@ -2659,7 +2660,6 @@
     <path>C:/Temp/AcfSln/Include/iqtinsp/</path>
     <filename>_c_inspection_task_gui_comp_8h</filename>
     <includes id="_i_inspection_task_8h" name="IInspectionTask.h" local="yes" imported="no">iinsp/IInspectionTask.h</includes>
-    <includes id="iqtinsp_8h" name="iqtinsp.h" local="yes" imported="no">iqtinsp/iqtinsp.h</includes>
     <class kind="class">iqtinsp::CInspectionTaskGuiCompBase</class>
     <class kind="class">iqtinsp::CInspectionTaskGuiComp</class>
     <namespace>iqtinsp</namespace>
@@ -12632,6 +12632,7 @@
     <class kind="class">iipr::ISearchConstraints</class>
     <class kind="class">iipr::ISearchParams</class>
     <class kind="class">iipr::CSimpleResultsContainer</class>
+    <class kind="class">iipr::ISimpleResultsConsumer</class>
     <class kind="class">iipr::ISimpleResultsProvider</class>
     <class kind="class">iipr::TImageParamProcessorCompBase</class>
     <class kind="class">iipr::TImagePixelInterpolator</class>
@@ -13167,7 +13168,7 @@
     <filename>classiipr_1_1_c_circle_find_processor_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base>TSyncProcessorWrap&lt; IImageToFeatureProcessor &gt;</base>
-    <base virtualness="virtual">iipr::CSimpleResultsContainer</base>
+    <base virtualness="virtual">iipr::ISimpleResultsConsumer</base>
     <class kind="struct">iipr::CCircleFindProcessorComp::Point</class>
     <class kind="struct">iipr::CCircleFindProcessorComp::Ray</class>
     <member kind="typedef">
@@ -13176,6 +13177,13 @@
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
       <anchor>a5d7a01981508c9b0c6b2609ad8286e1d</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CCircleFindProcessorComp</name>
+      <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
+      <anchor>acde9d9598d46b8216faceb30d2144d85</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -13190,6 +13198,13 @@
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
       <anchor>acc4c657f22e7822a4ff54206a332ca31</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetResultsBuffer</name>
+      <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
+      <anchor>adfe98632d20b01ef6189641a35b80b36</anchor>
+      <arglist>(CSimpleResultsContainer *bufferPtr)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>TWeightedFeatureWrap&lt; i2d::CCircle &gt;</type>
@@ -16646,6 +16661,18 @@
       <anchorfile>classiipr_1_1_c_simple_results_container.html</anchorfile>
       <anchor>a44faa6b1485c8620bf534baa0eeeb284</anchor>
       <arglist>(const QVariant &amp;value)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::ISimpleResultsConsumer</name>
+    <filename>classiipr_1_1_i_simple_results_consumer.html</filename>
+    <base>istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetResultsBuffer</name>
+      <anchorfile>classiipr_1_1_i_simple_results_consumer.html</anchorfile>
+      <anchor>a0a1cd0d49ba16601bacfb0a2fd156875</anchor>
+      <arglist>(CSimpleResultsContainer *bufferPtr)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
