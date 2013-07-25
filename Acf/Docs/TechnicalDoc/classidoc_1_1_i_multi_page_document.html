@@ -48,8 +48,10 @@ Inheritance diagram for idoc::IMultiPageDocument:</div>
  <div class="center">
   <img src="classidoc_1_1_i_multi_page_document.png" usemap="#idoc::IMultiPageDocument_map" alt=""/>
   <map id="idoc::IMultiPageDocument_map" name="idoc::IMultiPageDocument_map">
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,157,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,157,24"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,543,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,543,24"/>
+<area href="classidoc_1_1_t_multi_page_document_wrap.html" alt="idoc::TMultiPageDocumentWrap&lt; idoc::IMultiPageDocument, imod::TModelWrap&lt; CBitmap &gt; &gt;" shape="rect" coords="0,168,543,192"/>
+<area href="classiimg_1_1_c_bitmap_document.html" title="Definition of a multi-page bitmap document." alt="iimg::CBitmapDocument" shape="rect" coords="0,224,543,248"/>
 </map>
  </div></div>
 
@@ -63,8 +65,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the document page.  <a href="#a55859cfe555bb0c639d621b255447cc7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_multi_page_document.html#a26498368e7501c88e59f57f2c7b6ba0c">ResetPages</a> ()=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all pages and their content from the document.  <a href="#a26498368e7501c88e59f57f2c7b6ba0c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_multi_page_document.html#ab05e3dfc4144cf7f35bc9b822531efbc">InsertPage</a> (const QSizeF &amp;pageSize=QSizeF(), int position=-1)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a new document page at the given position.  <a href="#ab05e3dfc4144cf7f35bc9b822531efbc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_multi_page_document.html#affc10fa80f242ef5d27245e935946008">InsertPage</a> (const QString &amp;pageTitle=QString(), const QSizeF &amp;pageSize=QSizeF(), int position=-1)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a new document page at the given position.  <a href="#affc10fa80f242ef5d27245e935946008"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_multi_page_document.html#ac7e39f5324340ffb6f4f38c34848be68">RemovePage</a> (int pageIndex)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the page at the given index.  <a href="#ac7e39f5324340ffb6f4f38c34848be68"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classidoc_1_1_i_document_meta_info.html">IDocumentMetaInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_multi_page_document.html#a2cd96ca541f00544904a5b9bc987c39d">GetDocumentMetaInfo</a> () const =0</td></tr>
@@ -74,7 +76,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Simple interface for a structured document. </p>
 <p>Document is container of the pages. A page is the owner of the content. </p>
 
-<p>Definition at line <a class="el" href="_i_multi_page_document_8h_source.html#l00023">23</a> of file <a class="el" href="_i_multi_page_document_8h_source.html">IMultiPageDocument.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_multi_page_document_8h_source.html#l00024">24</a> of file <a class="el" href="_i_multi_page_document_8h_source.html">IMultiPageDocument.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a2cd96ca541f00544904a5b9bc987c39d"></a><!-- doxytag: member="idoc::IMultiPageDocument::GetDocumentMetaInfo" ref="a2cd96ca541f00544904a5b9bc987c39d" args="() const =0" -->
 <div class="memitem">
@@ -91,6 +93,8 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Get meta information about the document. </p>
+
+<p>Implemented in <a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html#ae53f1dfceec17f2c0e4b6a3238e9802b">idoc::TMultiPageDocumentWrap&lt; idoc::IMultiPageDocument, imod::TModelWrap&lt; CBitmap &gt; &gt;</a>.</p>
 
 </div>
 </div>
@@ -111,6 +115,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the document page. </p>
 
+<p>Implemented in <a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html#a9cf27c18535ba4446a4e692db620c59a">idoc::TMultiPageDocumentWrap&lt; idoc::IMultiPageDocument, imod::TModelWrap&lt; CBitmap &gt; &gt;</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ab9824b47b658dc15afb82f9b3cc590db"></a><!-- doxytag: member="idoc::IMultiPageDocument::GetPagesCount" ref="ab9824b47b658dc15afb82f9b3cc590db" args="() const =0" -->
@@ -129,15 +135,23 @@ Public Member Functions</h2></td></tr>
 
 <p>Get number of pages in the document. </p>
 
+<p>Implemented in <a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html#a90a256e47c00e132e35aa408a6f2f55f">idoc::TMultiPageDocumentWrap&lt; idoc::IMultiPageDocument, imod::TModelWrap&lt; CBitmap &gt; &gt;</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="ab05e3dfc4144cf7f35bc9b822531efbc"></a><!-- doxytag: member="idoc::IMultiPageDocument::InsertPage" ref="ab05e3dfc4144cf7f35bc9b822531efbc" args="(const QSizeF &amp;pageSize=QSizeF(), int position=&#45;1)=0" -->
+<a class="anchor" id="affc10fa80f242ef5d27245e935946008"></a><!-- doxytag: member="idoc::IMultiPageDocument::InsertPage" ref="affc10fa80f242ef5d27245e935946008" args="(const QString &amp;pageTitle=QString(), const QSizeF &amp;pageSize=QSizeF(), int position=&#45;1)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* idoc::IMultiPageDocument::InsertPage </td>
           <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>pageTitle</em> = <code>QString()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const QSizeF &amp;&#160;</td>
           <td class="paramname"><em>pageSize</em> = <code>QSizeF()</code>, </td>
         </tr>
@@ -159,11 +173,14 @@ Public Member Functions</h2></td></tr>
 <p>Insert a new document page at the given position. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
+    <tr><td class="paramname">pageTitle</td><td>- Title of the page. </td></tr>
     <tr><td class="paramname">pageSize</td><td>- Physical dimension of the page in mm. </td></tr>
     <tr><td class="paramname">Insertion</td><td>position in the page container. If this value is negative, the new page will be inserted after the last page of the document. </td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Implemented in <a class="el" href="classiimg_1_1_c_bitmap_document.html#a3baa2e0e331aa4168a0145c29b91462b">iimg::CBitmapDocument</a>.</p>
 
 </div>
 </div>
@@ -184,6 +201,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Remove the page at the given index. </p>
 
+<p>Implemented in <a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html#a58ecd425196fdc5fe86e8e94ef84beba">idoc::TMultiPageDocumentWrap&lt; idoc::IMultiPageDocument, imod::TModelWrap&lt; CBitmap &gt; &gt;</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a26498368e7501c88e59f57f2c7b6ba0c"></a><!-- doxytag: member="idoc::IMultiPageDocument::ResetPages" ref="a26498368e7501c88e59f57f2c7b6ba0c" args="()=0" -->
@@ -201,6 +220,8 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Remove all pages and their content from the document. </p>
+
+<p>Implemented in <a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html#a372d3101294670609a55d5a23e8d0d99">idoc::TMultiPageDocumentWrap&lt; idoc::IMultiPageDocument, imod::TModelWrap&lt; CBitmap &gt; &gt;</a>.</p>
 
 </div>
 </div>

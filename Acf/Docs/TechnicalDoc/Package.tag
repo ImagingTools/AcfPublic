@@ -2037,10 +2037,11 @@
     <path>C:/Temp/Acf/Include/idoc/</path>
     <filename>_t_multi_page_document_wrap_8h</filename>
     <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
-    <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
+    <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="yes" imported="no">istd/TSmartPtr.h</includes>
     <includes id="_i_multi_page_document_8h" name="IMultiPageDocument.h" local="yes" imported="no">idoc/IMultiPageDocument.h</includes>
     <includes id="_c_standard_document_meta_info_8h" name="CStandardDocumentMetaInfo.h" local="yes" imported="no">idoc/CStandardDocumentMetaInfo.h</includes>
     <class kind="class">idoc::TMultiPageDocumentWrap</class>
+    <class kind="struct">idoc::TMultiPageDocumentWrap::Page</class>
     <namespace>idoc</namespace>
   </compound>
   <compound kind="file">
@@ -2376,6 +2377,18 @@
     <includes id="_c_object2d_base_8h" name="CObject2dBase.h" local="yes" imported="no">i2d/CObject2dBase.h</includes>
     <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
     <class kind="class">iimg::CBitmapBase</class>
+    <namespace>iimg</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CBitmapDocument.h</name>
+    <path>C:/Temp/Acf/Include/iimg/</path>
+    <filename>_c_bitmap_document_8h</filename>
+    <includes id="_t_multi_page_document_wrap_8h" name="TMultiPageDocumentWrap.h" local="yes" imported="no">idoc/TMultiPageDocumentWrap.h</includes>
+    <includes id="_c_standard_document_meta_info_8h" name="CStandardDocumentMetaInfo.h" local="yes" imported="no">idoc/CStandardDocumentMetaInfo.h</includes>
+    <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iimg/IMultiBitmapProvider.h</includes>
+    <includes id="_c_bitmap_8h" name="CBitmap.h" local="yes" imported="no">iimg/CBitmap.h</includes>
+    <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="yes" imported="no">imod/TModelWrap.h</includes>
+    <class kind="class">iimg::CBitmapDocument</class>
     <namespace>iimg</namespace>
   </compound>
   <compound kind="file">
@@ -21492,8 +21505,8 @@
       <type>virtual istd::IChangeable *</type>
       <name>InsertPage</name>
       <anchorfile>classidoc_1_1_i_multi_page_document.html</anchorfile>
-      <anchor>ab05e3dfc4144cf7f35bc9b822531efbc</anchor>
-      <arglist>(const QSizeF &amp;pageSize=QSizeF(), int position=-1)=0</arglist>
+      <anchor>affc10fa80f242ef5d27245e935946008</anchor>
+      <arglist>(const QString &amp;pageTitle=QString(), const QSizeF &amp;pageSize=QSizeF(), int position=-1)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -21576,6 +21589,7 @@
     <templarg>PageInterface</templarg>
     <base virtualness="virtual">Base</base>
     <base>idoc::CStandardDocumentMetaInfo</base>
+    <class kind="struct">idoc::TMultiPageDocumentWrap::Page</class>
     <member kind="typedef">
       <type>Base</type>
       <name>BaseClass</name>
@@ -21640,10 +21654,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>istd::TPointerVector&lt; PageInterface &gt;</type>
+      <type>QVector&lt; Page &gt;</type>
       <name>Pages</name>
       <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
-      <anchor>add1e00f34c9167c3a5496becd6fe55b3</anchor>
+      <anchor>a2cffdc32986bc578f1f642feb01c445b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -21651,6 +21665,24 @@
       <name>m_documentPages</name>
       <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
       <anchor>a824c988b9295fe39268a30209c05ed1d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>idoc::TMultiPageDocumentWrap::Page</name>
+    <filename>structidoc_1_1_t_multi_page_document_wrap_1_1_page.html</filename>
+    <member kind="variable">
+      <type>QString</type>
+      <name>pageTitle</name>
+      <anchorfile>structidoc_1_1_t_multi_page_document_wrap_1_1_page.html</anchorfile>
+      <anchor>ab18e21ad1423939882aa91fd2fb0e448</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>istd::TSmartPtr&lt; PageInterfaceType &gt;</type>
+      <name>pagePtr</name>
+      <anchorfile>structidoc_1_1_t_multi_page_document_wrap_1_1_page.html</anchorfile>
+      <anchor>a027effa3715ae9a51b7cc6977249436a</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -23198,6 +23230,7 @@
     <filename>namespaceiimg.html</filename>
     <class kind="class">iimg::CBitmap</class>
     <class kind="class">iimg::CBitmapBase</class>
+    <class kind="class">iimg::CBitmapDocument</class>
     <class kind="class">iimg::CBitmapLoaderComp</class>
     <class kind="class">iimg::CBitmapSurface</class>
     <class kind="class">iimg::CGeneralBitmap</class>
@@ -23522,6 +23555,75 @@
       <anchorfile>classiimg_1_1_c_bitmap_base.html</anchorfile>
       <anchor>a136e4c19f5859a78d3866ac80095d022</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iimg::CBitmapDocument</name>
+    <filename>classiimg_1_1_c_bitmap_document.html</filename>
+    <base>TMultiPageDocumentWrap&lt; idoc::IMultiPageDocument, imod::TModelWrap&lt; CBitmap &gt; &gt;</base>
+    <base virtualness="virtual">iimg::IMultiBitmapProvider</base>
+    <member kind="typedef">
+      <type>idoc::TMultiPageDocumentWrap&lt; idoc::IMultiPageDocument, imod::TModelWrap&lt; CBitmap &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document.html</anchorfile>
+      <anchor>a811db94c3afecf843b2908ef46dd93f8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::TModelWrap&lt; CBitmap &gt;</type>
+      <name>Bitmap</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document.html</anchorfile>
+      <anchor>a2b22f52c0dc48e5dcf5e62fdb5e119eb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>InsertPage</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document.html</anchorfile>
+      <anchor>a3baa2e0e331aa4168a0145c29b91462b</anchor>
+      <arglist>(const QString &amp;pageTitle=QString(), const QSizeF &amp;pageSize=QSizeF(), int position=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iprm::IOptionsList *</type>
+      <name>GetBitmapListInfo</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document.html</anchorfile>
+      <anchor>a0b8a919a1e9c83512a3aa1f536f8691c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetBitmapsCount</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document.html</anchorfile>
+      <anchor>a2495a0785d98fff3ae6872c8fca23369</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iimg::IBitmap *</type>
+      <name>GetBitmap</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document.html</anchorfile>
+      <anchor>a8197d2f65fb9cdf3e7b427a5cb9882d7</anchor>
+      <arglist>(int bitmapIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document.html</anchorfile>
+      <anchor>abbec4e88600224cfdf5f80a9662cf6b5</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document.html</anchorfile>
+      <anchor>a37b980b60db141f86c89164ad27233b7</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document.html</anchorfile>
+      <anchor>a3301937463965d523bbafab2bd2a3176</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
   </compound>
   <compound kind="class">
