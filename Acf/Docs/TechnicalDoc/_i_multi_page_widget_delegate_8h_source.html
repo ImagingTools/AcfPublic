@@ -65,56 +65,61 @@
 <a name="l00060"></a>00060 
 <a name="l00064"></a>00064        <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#aca569e934a9ae7751b2051038c7ec0c6" title="Create container for the page widgets.">CreateContainerWidget</a>(QWidget* parentWidgetPtr, <span class="keywordtype">int</span> orientation = Qt::Horizontal) = 0;
 <a name="l00065"></a>00065 
-<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a2c58bdbc332ab4d4e14da95629514e05" title="Set the position of the page header bar on the container UI.">SetPageHeaderPosition</a>(QWidget&amp; containerWidget, <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642eb" title="Enum for describing of page header bar position on the container widget.">PageHeaderPosition</a> pageHeaderPosition) = 0;
-<a name="l00070"></a>00070 
-<a name="l00076"></a>00076        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a8dd5a66abf85506d3cd0297062450a6b" title="Add a new page to the container.">InsertPage</a>(
-<a name="l00077"></a>00077                             QWidget&amp; containerWidget,
-<a name="l00078"></a>00078                             QWidget* pageWidgetPtr,
-<a name="l00079"></a>00079                             <span class="keyword">const</span> QString&amp; pageTitle,
-<a name="l00080"></a>00080                             <span class="keywordtype">int</span> pageIndex = -1) = 0;
+<a name="l00072"></a>00072        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a2fa6715795543baac2d87b5526a5765c" title="Connect object, which will be notified about changing of the current selected page index...">ConnectPageIndexListener</a>(
+<a name="l00073"></a>00073                             QWidget&amp; containerWidget,
+<a name="l00074"></a>00074                             QObject* receiverPtr,
+<a name="l00075"></a>00075                             <span class="keyword">const</span> <span class="keywordtype">char</span>* receiverSlotName) = 0;
+<a name="l00076"></a>00076 
+<a name="l00080"></a>00080        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a2c58bdbc332ab4d4e14da95629514e05" title="Set the position of the page header bar on the container UI.">SetPageHeaderPosition</a>(QWidget&amp; containerWidget, <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642eb" title="Enum for describing of page header bar position on the container widget.">PageHeaderPosition</a> pageHeaderPosition) = 0;
 <a name="l00081"></a>00081 
-<a name="l00085"></a>00085        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#aa4b7395d618c8acb640369c1faf369be" title="Remove the page from the container.">RemovePage</a>(QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex) = 0;
-<a name="l00086"></a>00086 
-<a name="l00090"></a>00090        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a4191767ddc51eee9703f9c63a8df70b8" title="Get the number of the pages in the container.">GetPagesCount</a>(<span class="keyword">const</span> QWidget&amp; containerWidget) <span class="keyword">const</span> = 0; 
-<a name="l00091"></a>00091 
-<a name="l00095"></a>00095        <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a9a34ecda21081b683e075800317e2e03" title="Get page&#39;s widget from the container.">GetPageWidgetPtr</a>(<span class="keyword">const</span> QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex) <span class="keyword">const</span> = 0; 
-<a name="l00096"></a>00096 
-<a name="l00100"></a>00100        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#ae5e34ff1a8ec3cd67eb2d5c80e72ab42" title="Get currently active page in the container.">GetCurrentPage</a>(<span class="keyword">const</span> QWidget&amp; containerWidget) <span class="keyword">const</span> = 0;
-<a name="l00101"></a>00101 
-<a name="l00105"></a>00105        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a8316d9fd7d0d279521c814e5ae3636f5" title="Set active page in the container.">SetCurrentPage</a>(QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex) = 0;
-<a name="l00106"></a>00106 
-<a name="l00110"></a>00110        <span class="keyword">virtual</span> QString <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a75d4e2dc005450f605bb7423b210a772" title="Get the title of the given page.">GetPageTitle</a>(<span class="keyword">const</span> QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex) <span class="keyword">const</span> = 0;
-<a name="l00111"></a>00111 
-<a name="l00115"></a>00115        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a412c58b0b3185faba6cdf131210f4c4e" title="Set the page title.">SetPageTitle</a>(QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex, <span class="keyword">const</span> QString&amp; pageTitle) = 0;
-<a name="l00116"></a>00116 
-<a name="l00120"></a>00120        <span class="keyword">virtual</span> QIcon <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#aba5f927524112b90d335797d752f4902" title="Get the page icon.">GetPageIcon</a>(<span class="keyword">const</span> QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex) <span class="keyword">const</span> = 0;
-<a name="l00121"></a>00121 
-<a name="l00125"></a>00125        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a9e9a87c79f16c3ef3c8bd5626a7e815c" title="Set the page icon.">SetPageIcon</a>(QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex, <span class="keyword">const</span> QIcon&amp; pageIcon) = 0;
-<a name="l00126"></a>00126 
-<a name="l00130"></a>00130        <span class="keyword">virtual</span> QString <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a7762075d07f1a1b1305613fe0fe01778" title="Get the page tool tip.">GetPageToolTip</a>(<span class="keyword">const</span> QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex) <span class="keyword">const</span> = 0;
-<a name="l00131"></a>00131 
-<a name="l00135"></a>00135        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a645e208f3f0d22e4579a9ad5805b8afc" title="Set the page tool tip.">SetPageToolTip</a>(QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex, <span class="keyword">const</span> QString&amp; pageToolTip) = 0;
-<a name="l00136"></a>00136 
-<a name="l00140"></a>00140        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#af390c1cd1a5caa935774107abadc3b3b" title="Get if the page enabled/disabled.">IsPageEnabled</a>(<span class="keyword">const</span> QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex) <span class="keyword">const</span> = 0;
-<a name="l00141"></a>00141 
-<a name="l00145"></a>00145        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a48bc5bc03fbf6f2596373605c6b8ecba" title="Set page enabled/disabled.">SetPageEnabled</a>(QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex, <span class="keywordtype">bool</span> isPageEnabled = <span class="keyword">true</span>) = 0;
-<a name="l00146"></a>00146 
-<a name="l00150"></a>00150        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a5c3079d62667d0a598f67f4028ca3b08" title="Get if the page visible/hidden.">IsPageVisible</a>(<span class="keyword">const</span> QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex) <span class="keyword">const</span> = 0;
-<a name="l00151"></a>00151 
-<a name="l00155"></a>00155        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a8896ca4180ea92e069bda7943df7b285" title="Set page visible/hidden.">SetPageVisible</a>(QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex, <span class="keywordtype">bool</span> isPageVisible = <span class="keyword">true</span>) = 0;
-<a name="l00156"></a>00156 
-<a name="l00160"></a>00160        <span class="keyword">virtual</span> QSize <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a3616709cb64b4cc2b6c210df8de67701" title="Get the size page icon.">GetPageIconSize</a>(<span class="keyword">const</span> QWidget&amp; containerWidget) <span class="keyword">const</span> = 0;
-<a name="l00161"></a>00161 
-<a name="l00165"></a>00165        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a63311f35646f32e9c8cfff14228166c9" title="Set the size of the icon for all pages in the container.">SetPageIconSize</a>(QWidget&amp; containerWidget, <span class="keyword">const</span> QSize&amp; pageIconSize) = 0;
-<a name="l00166"></a>00166 };
+<a name="l00087"></a>00087        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a8dd5a66abf85506d3cd0297062450a6b" title="Add a new page to the container.">InsertPage</a>(
+<a name="l00088"></a>00088                             QWidget&amp; containerWidget,
+<a name="l00089"></a>00089                             QWidget* pageWidgetPtr,
+<a name="l00090"></a>00090                             <span class="keyword">const</span> QString&amp; pageTitle,
+<a name="l00091"></a>00091                             <span class="keywordtype">int</span> pageIndex = -1) = 0;
+<a name="l00092"></a>00092 
+<a name="l00096"></a>00096        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#aa4b7395d618c8acb640369c1faf369be" title="Remove the page from the container.">RemovePage</a>(QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex) = 0;
+<a name="l00097"></a>00097 
+<a name="l00101"></a>00101        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a4191767ddc51eee9703f9c63a8df70b8" title="Get the number of the pages in the container.">GetPagesCount</a>(<span class="keyword">const</span> QWidget&amp; containerWidget) <span class="keyword">const</span> = 0; 
+<a name="l00102"></a>00102 
+<a name="l00106"></a>00106        <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a9a34ecda21081b683e075800317e2e03" title="Get page&#39;s widget from the container.">GetPageWidgetPtr</a>(<span class="keyword">const</span> QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex) <span class="keyword">const</span> = 0; 
+<a name="l00107"></a>00107 
+<a name="l00111"></a>00111        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#ae5e34ff1a8ec3cd67eb2d5c80e72ab42" title="Get currently active page in the container.">GetCurrentPage</a>(<span class="keyword">const</span> QWidget&amp; containerWidget) <span class="keyword">const</span> = 0;
+<a name="l00112"></a>00112 
+<a name="l00116"></a>00116        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a8316d9fd7d0d279521c814e5ae3636f5" title="Set active page in the container.">SetCurrentPage</a>(QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex) = 0;
+<a name="l00117"></a>00117 
+<a name="l00121"></a>00121        <span class="keyword">virtual</span> QString <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a75d4e2dc005450f605bb7423b210a772" title="Get the title of the given page.">GetPageTitle</a>(<span class="keyword">const</span> QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex) <span class="keyword">const</span> = 0;
+<a name="l00122"></a>00122 
+<a name="l00126"></a>00126        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a412c58b0b3185faba6cdf131210f4c4e" title="Set the page title.">SetPageTitle</a>(QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex, <span class="keyword">const</span> QString&amp; pageTitle) = 0;
+<a name="l00127"></a>00127 
+<a name="l00131"></a>00131        <span class="keyword">virtual</span> QIcon <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#aba5f927524112b90d335797d752f4902" title="Get the page icon.">GetPageIcon</a>(<span class="keyword">const</span> QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex) <span class="keyword">const</span> = 0;
+<a name="l00132"></a>00132 
+<a name="l00136"></a>00136        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a9e9a87c79f16c3ef3c8bd5626a7e815c" title="Set the page icon.">SetPageIcon</a>(QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex, <span class="keyword">const</span> QIcon&amp; pageIcon) = 0;
+<a name="l00137"></a>00137 
+<a name="l00141"></a>00141        <span class="keyword">virtual</span> QString <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a7762075d07f1a1b1305613fe0fe01778" title="Get the page tool tip.">GetPageToolTip</a>(<span class="keyword">const</span> QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex) <span class="keyword">const</span> = 0;
+<a name="l00142"></a>00142 
+<a name="l00146"></a>00146        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a645e208f3f0d22e4579a9ad5805b8afc" title="Set the page tool tip.">SetPageToolTip</a>(QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex, <span class="keyword">const</span> QString&amp; pageToolTip) = 0;
+<a name="l00147"></a>00147 
+<a name="l00151"></a>00151        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#af390c1cd1a5caa935774107abadc3b3b" title="Get if the page enabled/disabled.">IsPageEnabled</a>(<span class="keyword">const</span> QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex) <span class="keyword">const</span> = 0;
+<a name="l00152"></a>00152 
+<a name="l00156"></a>00156        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a48bc5bc03fbf6f2596373605c6b8ecba" title="Set page enabled/disabled.">SetPageEnabled</a>(QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex, <span class="keywordtype">bool</span> isPageEnabled = <span class="keyword">true</span>) = 0;
+<a name="l00157"></a>00157 
+<a name="l00161"></a>00161        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a5c3079d62667d0a598f67f4028ca3b08" title="Get if the page visible/hidden.">IsPageVisible</a>(<span class="keyword">const</span> QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex) <span class="keyword">const</span> = 0;
+<a name="l00162"></a>00162 
+<a name="l00166"></a>00166        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a8896ca4180ea92e069bda7943df7b285" title="Set page visible/hidden.">SetPageVisible</a>(QWidget&amp; containerWidget, <span class="keywordtype">int</span> pageIndex, <span class="keywordtype">bool</span> isPageVisible = <span class="keyword">true</span>) = 0;
 <a name="l00167"></a>00167 
-<a name="l00168"></a>00168 
-<a name="l00169"></a>00169 } <span class="comment">// namespace iqtgui</span>
-<a name="l00170"></a>00170 
-<a name="l00171"></a>00171 
-<a name="l00172"></a>00172 <span class="preprocessor">#endif // !iqtgui_IMultiPageWidgetDelegate_included</span>
-<a name="l00173"></a>00173 <span class="preprocessor"></span>
-<a name="l00174"></a>00174 
+<a name="l00171"></a>00171        <span class="keyword">virtual</span> QSize <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a3616709cb64b4cc2b6c210df8de67701" title="Get the size page icon.">GetPageIconSize</a>(<span class="keyword">const</span> QWidget&amp; containerWidget) <span class="keyword">const</span> = 0;
+<a name="l00172"></a>00172 
+<a name="l00176"></a>00176        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a63311f35646f32e9c8cfff14228166c9" title="Set the size of the icon for all pages in the container.">SetPageIconSize</a>(QWidget&amp; containerWidget, <span class="keyword">const</span> QSize&amp; pageIconSize) = 0;
+<a name="l00177"></a>00177 };
+<a name="l00178"></a>00178 
+<a name="l00179"></a>00179 
+<a name="l00180"></a>00180 } <span class="comment">// namespace iqtgui</span>
+<a name="l00181"></a>00181 
+<a name="l00182"></a>00182 
+<a name="l00183"></a>00183 <span class="preprocessor">#endif // !iqtgui_IMultiPageWidgetDelegate_included</span>
+<a name="l00184"></a>00184 <span class="preprocessor"></span>
+<a name="l00185"></a>00185 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

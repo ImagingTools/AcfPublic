@@ -59,6 +59,8 @@ Inheritance diagram for iqtgui::CSplitterDelegate:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_splitter_delegate.html#adadf814137cf3c4b496d19c0b416e77c">CreateContainerWidget</a> (QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create container for the page widgets.  <a href="#adadf814137cf3c4b496d19c0b416e77c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_splitter_delegate.html#ad0c18dae16f3c143e445a7e3bc938546">ConnectPageIndexListener</a> (QWidget &amp;containerWidget, QObject *receiverPtr, const char *receiverSlotName)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect object, which will be notified about changing of the current selected page index.  <a href="#ad0c18dae16f3c143e445a7e3bc938546"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_splitter_delegate.html#aff4e8beab4e0bb305bc06c2d5a9454ac">SetPageHeaderPosition</a> (QWidget &amp;containerWidget, <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642eb">PageHeaderPosition</a> pageHeaderPosition)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the page header bar on the container UI.  <a href="#aff4e8beab4e0bb305bc06c2d5a9454ac"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_splitter_delegate.html#a0f85a427f83472fb308ff3ce40fa3345">InsertPage</a> (QWidget &amp;containerWidget, QWidget *pageWidgetPtr, const QString &amp;pageTitle, int pageIndex=-1)</td></tr>
@@ -103,6 +105,51 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_splitter_delegate_8h_source.html#l00016">16</a> of file <a class="el" href="_c_splitter_delegate_8h_source.html">CSplitterDelegate.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ad0c18dae16f3c143e445a7e3bc938546"></a><!-- doxytag: member="iqtgui::CSplitterDelegate::ConnectPageIndexListener" ref="ad0c18dae16f3c143e445a7e3bc938546" args="(QWidget &amp;containerWidget, QObject *receiverPtr, const char *receiverSlotName)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iqtgui::CSplitterDelegate::ConnectPageIndexListener </td>
+          <td>(</td>
+          <td class="paramtype">QWidget &amp;&#160;</td>
+          <td class="paramname"><em>containerWidget</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QObject *&#160;</td>
+          <td class="paramname"><em>receiverPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>receiverSlotName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Connect object, which will be notified about changing of the current selected page index. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">containerWidget</td><td>Container widget which provides initiate switching of the page </td></tr>
+    <tr><td class="paramname">receiverPtr</td><td>Receiver of the page changing notification </td></tr>
+    <tr><td class="paramname">receiverSlotName</td><td>Name of the slot implemented in the receiver implementation, which will be triggered on page switching. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a2fa6715795543baac2d87b5526a5765c">iqtgui::IMultiPageWidgetDelegate</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="adadf814137cf3c4b496d19c0b416e77c"></a><!-- doxytag: member="iqtgui::CSplitterDelegate::CreateContainerWidget" ref="adadf814137cf3c4b496d19c0b416e77c" args="(QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)" -->
 <div class="memitem">
 <div class="memproto">

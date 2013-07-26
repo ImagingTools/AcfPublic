@@ -38,7 +38,7 @@
 <div class="title">iimg::CBitmapDocument Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iimg::CBitmapDocument" --><!-- doxytag: inherits="TMultiPageDocumentWrap&lt; idoc::IMultiPageDocument, imod::TModelWrap&lt; CBitmap &gt; &gt;,iimg::IMultiBitmapProvider" -->
+<!-- doxytag: class="iimg::CBitmapDocument" --><!-- doxytag: inherits="idoc::TMultiPageDocumentWrap,iimg::IMultiBitmapProvider" -->
 <p>Definition of a multi-page bitmap document.  
  <a href="classiimg_1_1_c_bitmap_document.html#details">More...</a></p>
 
@@ -49,20 +49,18 @@ Inheritance diagram for iimg::CBitmapDocument:</div>
  <div class="center">
   <img src="classiimg_1_1_c_bitmap_document.png" usemap="#iimg::CBitmapDocument_map" alt=""/>
   <map id="iimg::CBitmapDocument_map" name="iimg::CBitmapDocument_map">
-<area href="classidoc_1_1_t_multi_page_document_wrap.html" alt="idoc::TMultiPageDocumentWrap&lt; idoc::IMultiPageDocument, imod::TModelWrap&lt; CBitmap &gt; &gt;" shape="rect" coords="414,224,957,248"/>
-<area href="classiimg_1_1_i_multi_bitmap_provider.html" title="Supplier allowing to access of multiple produced bitmaps." alt="iimg::IMultiBitmapProvider" shape="rect" coords="1659,224,2202,248"/>
-<area href="classidoc_1_1_i_multi_page_document.html" title="Simple interface for a structured document." alt="idoc::IMultiPageDocument" shape="rect" coords="0,168,543,192"/>
-<area href="classidoc_1_1_c_standard_document_meta_info.html" title="Simple implementation of a text document model." alt="idoc::CStandardDocumentMetaInfo" shape="rect" coords="829,168,1372,192"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="1659,168,2202,192"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,112,543,136"/>
-<area href="classidoc_1_1_i_document_meta_info.html" title="Interface for document meta-information." alt="idoc::IDocumentMetaInfo" shape="rect" coords="553,112,1096,136"/>
-<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="1106,112,1649,136"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1659,112,2202,136"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,56,543,80"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="553,56,1096,80"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="1106,56,1649,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="553,0,1096,24"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1106,0,1649,24"/>
+<area href="classidoc_1_1_t_multi_page_document_wrap.html" title="Generic implementation of IMultiPageDocument interface." alt="idoc::TMultiPageDocumentWrap&lt; Base &gt;" shape="rect" coords="126,224,369,248"/>
+<area href="classiimg_1_1_i_multi_bitmap_provider.html" title="Supplier allowing to access of multiple produced bitmaps." alt="iimg::IMultiBitmapProvider" shape="rect" coords="632,224,875,248"/>
+<area href="class_base.html" alt="Base" shape="rect" coords="0,168,243,192"/>
+<area href="classidoc_1_1_c_standard_document_meta_info.html" title="Simple implementation of a text document model." alt="idoc::CStandardDocumentMetaInfo" shape="rect" coords="253,168,496,192"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="632,168,875,192"/>
+<area href="classidoc_1_1_i_document_meta_info.html" title="Interface for document meta-information." alt="idoc::IDocumentMetaInfo" shape="rect" coords="126,112,369,136"/>
+<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="379,112,622,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="632,112,875,136"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="126,56,369,80"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="379,56,622,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="126,0,369,24"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="379,0,622,24"/>
 </map>
  </div></div>
 
@@ -70,23 +68,20 @@ Inheritance diagram for iimg::CBitmapDocument:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="classiimg_1_1_c_bitmap_document.html#a3b4ed5c71ab38af61ce796dce0d383b8aeeeac90401486b19f23632c14208b4a0">MIT_CAMERA_MODEL</a> =  MIT_USER + 1
+ }</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html">idoc::TMultiPageDocumentWrap</a><br class="typebreak"/>
-&lt; <a class="el" href="classidoc_1_1_i_multi_page_document.html">idoc::IMultiPageDocument</a>, <br class="typebreak"/>
-<a class="el" href="classimod_1_1_t_model_wrap.html">imod::TModelWrap</a>&lt; <a class="el" href="classiimg_1_1_c_bitmap.html">CBitmap</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_document.html#a811db94c3afecf843b2908ef46dd93f8">BaseClass</a></td></tr>
+<a class="el" href="namespaceidoc.html#a93fadf41a3abd9673cb1f3e9e5401f5e">idoc::CMultiPageDocumentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_document.html#acb7e13e8c9c280ebf012cc81dc097316">BaseClass</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classimod_1_1_t_model_wrap.html">imod::TModelWrap</a>&lt; <a class="el" href="classiimg_1_1_c_bitmap.html">CBitmap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_document.html#a2b22f52c0dc48e5dcf5e62fdb5e119eb">Bitmap</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_document.html#a3baa2e0e331aa4168a0145c29b91462b">InsertPage</a> (const QString &amp;pageTitle=QString(), const QSizeF &amp;pageSize=QSizeF(), int position=-1)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a new document page at the given position.  <a href="#a3baa2e0e331aa4168a0145c29b91462b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiprm_1_1_i_options_list.html">iprm::IOptionsList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_document.html#a0b8a919a1e9c83512a3aa1f536f8691c">GetBitmapListInfo</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get optional information about bitmaps in form of section constraints.  <a href="#a0b8a919a1e9c83512a3aa1f536f8691c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_document.html#a2495a0785d98fff3ae6872c8fca23369">GetBitmapsCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of produced bitmaps.  <a href="#a2495a0785d98fff3ae6872c8fca23369"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiimg_1_1_i_bitmap.html">iimg::IBitmap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_document.html#a8197d2f65fb9cdf3e7b427a5cb9882d7">GetBitmap</a> (int bitmapIndex) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to produced bitmap object.  <a href="#a8197d2f65fb9cdf3e7b427a5cb9882d7"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_document.html#abbec4e88600224cfdf5f80a9662cf6b5">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#abbec4e88600224cfdf5f80a9662cf6b5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_document.html#a37b980b60db141f86c89164ad27233b7">CopyFrom</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;object, <a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy this object from another one.  <a href="#a37b980b60db141f86c89164ad27233b7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_document.html#a3301937463965d523bbafab2bd2a3176">CloneMe</a> (<a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS) const </td></tr>
@@ -97,20 +92,20 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_bitmap_document_8h_source.html#l00020">20</a> of file <a class="el" href="_c_bitmap_document_8h_source.html">CBitmapDocument.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a811db94c3afecf843b2908ef46dd93f8"></a><!-- doxytag: member="iimg::CBitmapDocument::BaseClass" ref="a811db94c3afecf843b2908ef46dd93f8" args="" -->
+<a class="anchor" id="acb7e13e8c9c280ebf012cc81dc097316"></a><!-- doxytag: member="iimg::CBitmapDocument::BaseClass" ref="acb7e13e8c9c280ebf012cc81dc097316" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html">idoc::TMultiPageDocumentWrap</a>&lt; <a class="el" href="classidoc_1_1_i_multi_page_document.html">idoc::IMultiPageDocument</a>, <a class="el" href="classimod_1_1_t_model_wrap.html">imod::TModelWrap</a>&lt;<a class="el" href="classiimg_1_1_c_bitmap.html">CBitmap</a>&gt; &gt; <a class="el" href="classiimg_1_1_c_bitmap_document.html#a811db94c3afecf843b2908ef46dd93f8">iimg::CBitmapDocument::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="namespaceidoc.html#a93fadf41a3abd9673cb1f3e9e5401f5e">idoc::CMultiPageDocumentBase</a> <a class="el" href="classiimg_1_1_c_bitmap_document.html#acb7e13e8c9c280ebf012cc81dc097316">iimg::CBitmapDocument::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html#a7cf4fbd58f85f90274d76beddfd5602c">idoc::TMultiPageDocumentWrap&lt; idoc::IMultiPageDocument, imod::TModelWrap&lt; CBitmap &gt; &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html#a18c4f12c76b060a504bd198577569c69">idoc::TMultiPageDocumentWrap&lt; Base &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_bitmap_document_8h_source.html#l00029">29</a> of file <a class="el" href="_c_bitmap_document_8h_source.html">CBitmapDocument.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_bitmap_document_8h_source.html#l00025">25</a> of file <a class="el" href="_c_bitmap_document_8h_source.html">CBitmapDocument.h</a>.</p>
 
 </div>
 </div>
@@ -125,7 +120,29 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_bitmap_document_8h_source.html#l00030">30</a> of file <a class="el" href="_c_bitmap_document_8h_source.html">CBitmapDocument.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_bitmap_document_8h_source.html#l00026">26</a> of file <a class="el" href="_c_bitmap_document_8h_source.html">CBitmapDocument.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="a3b4ed5c71ab38af61ce796dce0d383b8"></a><!-- doxytag: member="iimg::CBitmapDocument::@2" ref="a3b4ed5c71ab38af61ce796dce0d383b8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a3b4ed5c71ab38af61ce796dce0d383b8aeeeac90401486b19f23632c14208b4a0"></a><!-- doxytag: member="MIT_CAMERA_MODEL" ref="a3b4ed5c71ab38af61ce796dce0d383b8aeeeac90401486b19f23632c14208b4a0" args="" -->MIT_CAMERA_MODEL</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_c_bitmap_document_8h_source.html#l00028">28</a> of file <a class="el" href="_c_bitmap_document_8h_source.html">CBitmapDocument.h</a>.</p>
 
 </div>
 </div>
@@ -277,41 +294,6 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Insert a new document page at the given position. </p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pageTitle</td><td>- Title of the page. </td></tr>
-    <tr><td class="paramname">pageSize</td><td>- Physical dimension of the page in mm. </td></tr>
-    <tr><td class="paramname">Insertion</td><td>position in the page container. If this value is negative, the new page will be inserted after the last page of the document. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="classidoc_1_1_i_multi_page_document.html#affc10fa80f242ef5d27245e935946008">idoc::IMultiPageDocument</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="abbec4e88600224cfdf5f80a9662cf6b5"></a><!-- doxytag: member="iimg::CBitmapDocument::Serialize" ref="abbec4e88600224cfdf5f80a9662cf6b5" args="(iser::IArchive &amp;archive)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool iimg::CBitmapDocument::Serialize </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
-          <td class="paramname"><em>archive</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Load or store state of this object as a archive stream. </p>
-<p>Type of operation is depending on archive type. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a> </dd></dl>
-
-<p>Reimplemented from <a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#a89a50d39a44d0181981997015e7f2fcf">idoc::CStandardDocumentMetaInfo</a>.</p>
 
 </div>
 </div>

@@ -34,7 +34,8 @@
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a>  </div>
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">iqtgui::CMultiPageGuiCompBase Class Reference</div>  </div>
 </div>
@@ -55,6 +56,8 @@ Inheritance diagram for iqtgui::CMultiPageGuiCompBase:</div>
 <area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,56,204,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="214,56,418,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,204,24"/>
+<area href="classiqtgui_1_1_c_tab_container_gui_comp.html" title="Component to create the tab widget, that shows the specified sub-UI-component in its tab page..." alt="iqtgui::CTabContainerGuiComp" shape="rect" coords="267,280,471,304"/>
+<area href="classiqtgui_1_1_c_tabbed_multi_view_gui_comp.html" title="A multi view observer implementation." alt="iqtgui::CTabbedMultiViewGuiComp" shape="rect" coords="267,336,471,360"/>
 </map>
  </div></div>
 
@@ -75,6 +78,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a942bec340e7a8189ebb5a103df2064c5">I_REGISTER_SUBELEMENT_INTERFACE_T</a> (PageModel, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>, ExtractPageModel)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a995ccb8699c96ee66a78df73c0718297">I_ASSIGN_TO</a> (m_slaveWidgetsModelCompPtr, m_slaveWidgetsVisualCompPtr, false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a81f39dd38e426c77e7b098180d18656f">I_ASSIGN_TO</a> (m_pageActivatorsModelCompPtr, m_pageActivatorsCompPtr, false)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a800938c522827eef7c1bd0be448888f0">CMultiPageGuiCompBase</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#ac5f441fa586dfd7796fac053e57dbcd4">GetPagesCount</a> () const =0</td></tr>
@@ -83,8 +87,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the UI component for a given page.  <a href="#a4db259a5e7014adfd93c2d8630b34f64"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#ac9bbeebdff6050cde751d833da8d9b73">GetDesignType</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the container UI mode.  <a href="#ac9bbeebdff6050cde751d833da8d9b73"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a99f04adf90b66b2dbbbc6754ece61b06">AddPageToContainerWidget</a> (<a class="el" href="classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a> &amp;pageGui, const QString &amp;pageTitle) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new page to the widget container.  <a href="#a99f04adf90b66b2dbbbc6754ece61b06"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#ac1793aecf0a2c28cfcc61033a8c09123">AddPageToContainerWidget</a> (<a class="el" href="classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a> &amp;pageGui, const QString &amp;pageTitle)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new page to the widget container.  <a href="#ac1793aecf0a2c28cfcc61033a8c09123"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a5c1b664e43bb8848a79e26dc49ae3a07">GetPageGuiName</a> (const <a class="el" href="classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a> &amp;pageGui) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name corresponding to a page GUI element.  <a href="#a5c1b664e43bb8848a79e26dc49ae3a07"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a07bc6b986dc6281988543c16d3a83999">CreatePage</a> (int guiIndex)</td></tr>
@@ -100,6 +104,9 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a71ac7cb8d3797735e7125dad5ede38d1">OnComponentCreated</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a83c8323b86ba3ba0dd4aefcfd863ebd6">OnComponentDestroyed</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a6ba8956b833bad91425d297f7bb2b6ec">OnModelChanged</a> (int modelId, int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a5c23492ea22b0d75b4ac6bef591872cd">m_currentPageIndex</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -118,6 +125,8 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#ad1f756b56b4b967ce6af21988a11c31b">iqtgui::CGuiComponentBase</a>.</p>
 
+<p>Reimplemented in <a class="el" href="classiqtgui_1_1_c_tabbed_multi_view_gui_comp.html#ac00273f0ff0c91f8811eadcfd93ac1e0">iqtgui::CTabbedMultiViewGuiComp</a>, and <a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a114cc522fe78186107efee0f664e94ea">iqtgui::CTabContainerGuiComp</a>.</p>
+
 <p>Definition at line <a class="el" href="_c_multi_page_gui_comp_base_8h_source.html#l00027">27</a> of file <a class="el" href="_c_multi_page_gui_comp_base_8h_source.html">CMultiPageGuiCompBase.h</a>.</p>
 
 </div>
@@ -133,12 +142,31 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Reimplemented in <a class="el" href="classiqtgui_1_1_c_tabbed_multi_view_gui_comp.html#adf198e016c39daca195271d63fd2551a">iqtgui::CTabbedMultiViewGuiComp</a>.</p>
+
 <p>Definition at line <a class="el" href="_c_multi_page_gui_comp_base_8h_source.html#l00028">28</a> of file <a class="el" href="_c_multi_page_gui_comp_base_8h_source.html">CMultiPageGuiCompBase.h</a>.</p>
 
 </div>
 </div>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a800938c522827eef7c1bd0be448888f0"></a><!-- doxytag: member="iqtgui::CMultiPageGuiCompBase::CMultiPageGuiCompBase" ref="a800938c522827eef7c1bd0be448888f0" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iqtgui::CMultiPageGuiCompBase::CMultiPageGuiCompBase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a99f04adf90b66b2dbbbc6754ece61b06"></a><!-- doxytag: member="iqtgui::CMultiPageGuiCompBase::AddPageToContainerWidget" ref="a99f04adf90b66b2dbbbc6754ece61b06" args="(iqtgui::IGuiObject &amp;pageGui, const QString &amp;pageTitle) const " -->
+<a class="anchor" id="ac1793aecf0a2c28cfcc61033a8c09123"></a><!-- doxytag: member="iqtgui::CMultiPageGuiCompBase::AddPageToContainerWidget" ref="ac1793aecf0a2c28cfcc61033a8c09123" args="(iqtgui::IGuiObject &amp;pageGui, const QString &amp;pageTitle)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -157,7 +185,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> const<code> [protected, virtual]</code></td>
+          <td></td><td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -203,6 +231,8 @@ Protected Member Functions</h2></td></tr>
 <p>Get the container UI mode. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiqtgui_1_1_c_multi_page_widget.html#a446c70acf2fed5b8afff103bed79e863">iqtgui::CMultiPageWidget::DesignType</a> </dd></dl>
 
+<p>Implemented in <a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#ac8db9b3cec4c5aa877de667d8892c66f">iqtgui::CTabContainerGuiComp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a4db259a5e7014adfd93c2d8630b34f64"></a><!-- doxytag: member="iqtgui::CMultiPageGuiCompBase::GetPageGuiComponent" ref="a4db259a5e7014adfd93c2d8630b34f64" args="(int pageIndex) const =0" -->
@@ -221,6 +251,8 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Get the UI component for a given page. </p>
+
+<p>Implemented in <a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a2c88ac57ab70498684ccd4488e0c73cc">iqtgui::CTabContainerGuiComp</a>.</p>
 
 </div>
 </div>
@@ -258,6 +290,8 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Get the number of the pages in the UI container. </p>
+
+<p>Implemented in <a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a88bea5d2996df5c5c4c79133e956da40">iqtgui::CTabContainerGuiComp</a>.</p>
 
 </div>
 </div>
@@ -584,6 +618,8 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#ab66ecf3d13faa48018f89d871bd32ae3">iqtgui::CGuiComponentBase</a>.</p>
 
+<p>Reimplemented in <a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a70e404a18b0b9cb082f97614e33f2a02">iqtgui::CTabContainerGuiComp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a88cc86e69467f6582610c37554643755"></a><!-- doxytag: member="iqtgui::CMultiPageGuiCompBase::OnGuiDestroyed" ref="a88cc86e69467f6582610c37554643755" args="()" -->
@@ -656,6 +692,22 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Update visual status of the page elements. </p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a5c23492ea22b0d75b4ac6bef591872cd"></a><!-- doxytag: member="iqtgui::CMultiPageGuiCompBase::m_currentPageIndex" ref="a5c23492ea22b0d75b4ac6bef591872cd" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a5c23492ea22b0d75b4ac6bef591872cd">iqtgui::CMultiPageGuiCompBase::m_currentPageIndex</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_multi_page_gui_comp_base_8h_source.html#l00154">154</a> of file <a class="el" href="_c_multi_page_gui_comp_base_8h_source.html">CMultiPageGuiCompBase.h</a>.</p>
 
 </div>
 </div>

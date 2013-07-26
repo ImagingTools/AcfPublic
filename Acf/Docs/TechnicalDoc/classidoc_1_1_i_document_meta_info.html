@@ -49,12 +49,11 @@ Inheritance diagram for idoc::IDocumentMetaInfo:</div>
  <div class="center">
   <img src="classidoc_1_1_i_document_meta_info.png" usemap="#idoc::IDocumentMetaInfo_map" alt=""/>
   <map id="idoc::IDocumentMetaInfo_map" name="idoc::IDocumentMetaInfo_map">
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="276,56,819,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="276,0,819,24"/>
-<area href="classidoc_1_1_c_standard_document_meta_info.html" title="Simple implementation of a text document model." alt="idoc::CStandardDocumentMetaInfo" shape="rect" coords="276,168,819,192"/>
-<area href="classidoc_1_1_t_multi_page_document_wrap.html" title="Generic implementation of IMultiPageDocument interface." alt="idoc::TMultiPageDocumentWrap&lt; Base, PageInterface &gt;" shape="rect" coords="0,224,543,248"/>
-<area href="classidoc_1_1_t_multi_page_document_wrap.html" alt="idoc::TMultiPageDocumentWrap&lt; idoc::IMultiPageDocument, imod::TModelWrap&lt; CBitmap &gt; &gt;" shape="rect" coords="553,224,1096,248"/>
-<area href="classiimg_1_1_c_bitmap_document.html" title="Definition of a multi-page bitmap document." alt="iimg::CBitmapDocument" shape="rect" coords="553,280,1096,304"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="0,56,243,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,243,24"/>
+<area href="classidoc_1_1_c_standard_document_meta_info.html" title="Simple implementation of a text document model." alt="idoc::CStandardDocumentMetaInfo" shape="rect" coords="0,168,243,192"/>
+<area href="classidoc_1_1_t_multi_page_document_wrap.html" title="Generic implementation of IMultiPageDocument interface." alt="idoc::TMultiPageDocumentWrap&lt; Base &gt;" shape="rect" coords="0,224,243,248"/>
+<area href="classiimg_1_1_c_bitmap_document.html" title="Definition of a multi-page bitmap document." alt="iimg::CBitmapDocument" shape="rect" coords="0,280,243,304"/>
 </map>
  </div></div>
 
@@ -65,12 +64,13 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#af3e58c14cae88b83c112cda02a59050b">ChangeFlags</a> { <a class="el" href="classidoc_1_1_i_document_meta_info.html#af3e58c14cae88b83c112cda02a59050ba20385a6c6e040ca124fd8723bb867607">CF_METAINFO</a> =  1 &lt;&lt; 21
  }</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0a">MetaInfoType</a> { <br/>
-&#160;&#160;<a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0aa98720a18831a3ee78fac3e50e81b754f">MIT_AUTHOR</a>, 
+&#160;&#160;<a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0aa56caf056fdd064497bd92940de73a01b">MIT_TITLE</a>, 
+<a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0aa98720a18831a3ee78fac3e50e81b754f">MIT_AUTHOR</a>, 
 <a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0aa60b395429ab3f232eb4f3569fb9dc2b8">MIT_CREATOR</a>, 
 <a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0aa49e9981ecb3ba6a84a1bb0a1967aeb65">MIT_DESCRIPTION</a>, 
-<a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0aae4bd4b4b880375bb629ca56f398cb5e7">MIT_CREATION_TIME</a>, 
 <br/>
-&#160;&#160;<a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0aa614d76f0b5fc5925c1b3ab94b83a2f07">MIT_MODIFICATION_TIME</a>, 
+&#160;&#160;<a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0aae4bd4b4b880375bb629ca56f398cb5e7">MIT_CREATION_TIME</a>, 
+<a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0aa614d76f0b5fc5925c1b3ab94b83a2f07">MIT_MODIFICATION_TIME</a>, 
 <a class="el" href="classidoc_1_1_i_document_meta_info.html#a7dad62c05a2974976650722db5891a0aaec57564004dc04e9464f01cb90c3c715">MIT_USER</a> =  1024
 <br/>
  }</td></tr>
@@ -104,7 +104,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_i_document_meta_info_8h_source.html#l00061">61</a> of file <a class="el" href="_i_document_meta_info_8h_source.html">IDocumentMetaInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_document_meta_info_8h_source.html#l00066">66</a> of file <a class="el" href="_i_document_meta_info_8h_source.html">IDocumentMetaInfo.h</a>.</p>
 
 </div>
 </div>
@@ -143,6 +143,9 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 <dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a7dad62c05a2974976650722db5891a0aa56caf056fdd064497bd92940de73a01b"></a><!-- doxytag: member="MIT_TITLE" ref="a7dad62c05a2974976650722db5891a0aa56caf056fdd064497bd92940de73a01b" args="" -->MIT_TITLE</em>&nbsp;</td><td>
+<p>Title of the document. </p>
+</td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a7dad62c05a2974976650722db5891a0aa98720a18831a3ee78fac3e50e81b754f"></a><!-- doxytag: member="MIT_AUTHOR" ref="a7dad62c05a2974976650722db5891a0aa98720a18831a3ee78fac3e50e81b754f" args="" -->MIT_AUTHOR</em>&nbsp;</td><td>
 <p>Person, who has created the document. </p>
 </td></tr>

@@ -302,6 +302,14 @@ bool CMultiPageWidget::SetPageIconSize(const QSize& pageIconSize)
 }
 
 
+// protected slots
+
+void CMultiPageWidget::OnPageIndexChanged(int pageIndex)
+{
+	Q_EMIT EmitPageIndexChanged(pageIndex);
+}
+
+
 // private methods
 
 bool CMultiPageWidget::CreateContainerGui()
@@ -326,6 +334,8 @@ bool CMultiPageWidget::CreateContainerGui()
 
 	m_guiContainerPtr.SetPtr(delegatePtr->CreateContainerWidget(this, m_orientation));
 	layoutPtr->addWidget(m_guiContainerPtr.GetPtr());
+
+	delegatePtr->ConnectPageIndexListener(*m_guiContainerPtr.GetPtr(), this, SLOT(OnPageIndexChanged(int)));
 
 	if (!m_pageIconSize.isNull() && m_pageIconSize.isValid() && !m_pageIconSize.isEmpty()){
 		delegatePtr->SetPageIconSize(*m_guiContainerPtr.GetPtr(), m_pageIconSize);

@@ -50,6 +50,11 @@ public:
 	enum MetaInfoType
 	{
 		/**
+			Title of the document.
+		*/
+		MIT_TITLE,
+
+		/**
 			Person, who has created the document.
 		*/
 		MIT_AUTHOR,

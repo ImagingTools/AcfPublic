@@ -44,9 +44,25 @@ namespace iqtgui
 
 // public methods
 
+// reimplemented (IMultiPageWidgetDelegate)
+
 QWidget* CStackWidgetDelegate::CreateContainerWidget(QWidget* parentWidgetPtr, int /*orientation*/)
 {	
 	return new QStackedWidget(parentWidgetPtr);
+}
+
+
+bool CStackWidgetDelegate::ConnectPageIndexListener(
+			QWidget& containerWidget,
+			QObject* receiverPtr,
+			const char* receiverSlotName)
+{
+	QStackedWidget* stackedWidgetPtr = dynamic_cast<QStackedWidget*>(&containerWidget);
+	if (stackedWidgetPtr != NULL){
+		return QObject::connect(stackedWidgetPtr, SIGNAL(currentChanged(int)), receiverPtr, receiverSlotName);
+	}
+
+	return false;
 }
 
 

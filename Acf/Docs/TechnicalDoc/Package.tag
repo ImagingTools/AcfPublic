@@ -2040,9 +2040,17 @@
     <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="yes" imported="no">istd/TSmartPtr.h</includes>
     <includes id="_i_multi_page_document_8h" name="IMultiPageDocument.h" local="yes" imported="no">idoc/IMultiPageDocument.h</includes>
     <includes id="_c_standard_document_meta_info_8h" name="CStandardDocumentMetaInfo.h" local="yes" imported="no">idoc/CStandardDocumentMetaInfo.h</includes>
+    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
     <class kind="class">idoc::TMultiPageDocumentWrap</class>
     <class kind="struct">idoc::TMultiPageDocumentWrap::Page</class>
     <namespace>idoc</namespace>
+    <member kind="typedef">
+      <type>idoc::TMultiPageDocumentWrap&lt; idoc::IMultiPageDocument &gt;</type>
+      <name>CMultiPageDocumentBase</name>
+      <anchorfile>namespaceidoc.html</anchorfile>
+      <anchor>a93fadf41a3abd9673cb1f3e9e5401f5e</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>CAutoPersistenceComp.h</name>
@@ -2383,11 +2391,11 @@
     <name>CBitmapDocument.h</name>
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>_c_bitmap_document_8h</filename>
+    <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="yes" imported="no">imod/TModelWrap.h</includes>
     <includes id="_t_multi_page_document_wrap_8h" name="TMultiPageDocumentWrap.h" local="yes" imported="no">idoc/TMultiPageDocumentWrap.h</includes>
     <includes id="_c_standard_document_meta_info_8h" name="CStandardDocumentMetaInfo.h" local="yes" imported="no">idoc/CStandardDocumentMetaInfo.h</includes>
     <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iimg/IMultiBitmapProvider.h</includes>
     <includes id="_c_bitmap_8h" name="CBitmap.h" local="yes" imported="no">iimg/CBitmap.h</includes>
-    <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="yes" imported="no">imod/TModelWrap.h</includes>
     <class kind="class">iimg::CBitmapDocument</class>
     <namespace>iimg</namespace>
   </compound>
@@ -4516,12 +4524,7 @@
     <name>CTabContainerGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_tab_container_gui_comp_8h</filename>
-    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
-    <includes id="_c_multi_model_bridge_base_8h" name="CMultiModelBridgeBase.h" local="yes" imported="no">imod/CMultiModelBridgeBase.h</includes>
-    <includes id="_i_enableable_param_8h" name="IEnableableParam.h" local="yes" imported="no">iprm/IEnableableParam.h</includes>
-    <includes id="_c_selection_param_8h" name="CSelectionParam.h" local="yes" imported="no">iprm/CSelectionParam.h</includes>
-    <includes id="_c_options_manager_8h" name="COptionsManager.h" local="yes" imported="no">iprm/COptionsManager.h</includes>
-    <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
+    <includes id="_c_multi_page_gui_comp_base_8h" name="CMultiPageGuiCompBase.h" local="yes" imported="no">iqtgui/CMultiPageGuiCompBase.h</includes>
     <class kind="class">iqtgui::CTabContainerGuiComp</class>
     <namespace>iqtgui</namespace>
   </compound>
@@ -19649,6 +19652,13 @@
     <class kind="class">idoc::ITextDocument</class>
     <class kind="class">idoc::IUndoManager</class>
     <class kind="class">idoc::TMultiPageDocumentWrap</class>
+    <member kind="typedef">
+      <type>idoc::TMultiPageDocumentWrap&lt; idoc::IMultiPageDocument &gt;</type>
+      <name>CMultiPageDocumentBase</name>
+      <anchorfile>namespaceidoc.html</anchorfile>
+      <anchor>a93fadf41a3abd9673cb1f3e9e5401f5e</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>idoc::CCompositeDocumentTemplateComp</name>
@@ -21180,6 +21190,12 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <name>MIT_TITLE</name>
+      <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
+      <anchor>a7dad62c05a2974976650722db5891a0aa56caf056fdd064497bd92940de73a01b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
       <name>MIT_AUTHOR</name>
       <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
       <anchor>a7dad62c05a2974976650722db5891a0aa98720a18831a3ee78fac3e50e81b754f</anchor>
@@ -21495,6 +21511,13 @@
       <arglist>(int pageIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
+      <type>virtual const idoc::IDocumentMetaInfo *</type>
+      <name>GetPageMetaInfo</name>
+      <anchorfile>classidoc_1_1_i_multi_page_document.html</anchorfile>
+      <anchor>a3ef4f5482a3cf48b9f811a74d6d300be</anchor>
+      <arglist>(int pageIndex) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>ResetPages</name>
       <anchorfile>classidoc_1_1_i_multi_page_document.html</anchorfile>
@@ -21585,8 +21608,7 @@
   <compound kind="class">
     <name>idoc::TMultiPageDocumentWrap</name>
     <filename>classidoc_1_1_t_multi_page_document_wrap.html</filename>
-    <templarg>Base</templarg>
-    <templarg>PageInterface</templarg>
+    <templarg></templarg>
     <base virtualness="virtual">Base</base>
     <base>idoc::CStandardDocumentMetaInfo</base>
     <class kind="struct">idoc::TMultiPageDocumentWrap::Page</class>
@@ -21594,77 +21616,84 @@
       <type>Base</type>
       <name>BaseClass</name>
       <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
-      <anchor>a7cf4fbd58f85f90274d76beddfd5602c</anchor>
+      <anchor>a18c4f12c76b060a504bd198577569c69</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CStandardDocumentMetaInfo</type>
       <name>BaseClass2</name>
       <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
-      <anchor>ae60744da1c04bd1a6b43d0d401eac765</anchor>
+      <anchor>aeee7dbd83cd9aafae794b668d85fdf3f</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>PageInterface</type>
-      <name>PageInterfaceType</name>
-      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
-      <anchor>a97f9471c3c1dcb8fcfb98279482f7095</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>const PageInterfaceType *</type>
-      <name>GetPageObject</name>
-      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
-      <anchor>a9831ece7d101a597ff86ea4f4678d48e</anchor>
-      <arglist>(int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetPagesCount</name>
       <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
-      <anchor>a90a256e47c00e132e35aa408a6f2f55f</anchor>
+      <anchor>a4f531004368818c09f1c4b524d4a39e1</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const istd::IChangeable &amp;</type>
       <name>GetDocumentPage</name>
       <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
-      <anchor>a9cf27c18535ba4446a4e692db620c59a</anchor>
+      <anchor>af72332a3891d4485e4da3061b49e30fb</anchor>
+      <arglist>(int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const idoc::IDocumentMetaInfo *</type>
+      <name>GetPageMetaInfo</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a6aaab6aec665106cb27a0aa90a435f5d</anchor>
       <arglist>(int pageIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ResetPages</name>
       <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
-      <anchor>a372d3101294670609a55d5a23e8d0d99</anchor>
+      <anchor>a07e189d60ffab78b0dc29a71b3bb4d53</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RemovePage</name>
       <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
-      <anchor>a58ecd425196fdc5fe86e8e94ef84beba</anchor>
+      <anchor>a7630992d240ac0eb74d869d7521650a4</anchor>
       <arglist>(int pageIndex)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IDocumentMetaInfo &amp;</type>
       <name>GetDocumentMetaInfo</name>
       <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
-      <anchor>ae53f1dfceec17f2c0e4b6a3238e9802b</anchor>
+      <anchor>a525e559a0a2f666ec8fd383dc6274505</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a54c26fdb7854b18c0bf276c4c31f0f4a</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>QVector&lt; Page &gt;</type>
       <name>Pages</name>
       <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
-      <anchor>a2cffdc32986bc578f1f642feb01c445b</anchor>
+      <anchor>aea9499115a55a3b2f76d3c790cc3ef4d</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SerializePage</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a555844d4f823bf72e6b5eaf41628b753</anchor>
+      <arglist>(iser::IArchive &amp;archive, Page &amp;pageItem)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>Pages</type>
       <name>m_documentPages</name>
       <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
-      <anchor>a824c988b9295fe39268a30209c05ed1d</anchor>
+      <anchor>a49918c5f92f9611dbb86363fca61c0e8</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -21672,17 +21701,17 @@
     <name>idoc::TMultiPageDocumentWrap::Page</name>
     <filename>structidoc_1_1_t_multi_page_document_wrap_1_1_page.html</filename>
     <member kind="variable">
-      <type>QString</type>
-      <name>pageTitle</name>
+      <type>idoc::CStandardDocumentMetaInfo</type>
+      <name>pageMetaInfo</name>
       <anchorfile>structidoc_1_1_t_multi_page_document_wrap_1_1_page.html</anchorfile>
-      <anchor>ab18e21ad1423939882aa91fd2fb0e448</anchor>
+      <anchor>a35963e75013c4e45b343a79b74db939b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>istd::TSmartPtr&lt; PageInterfaceType &gt;</type>
+      <type>istd::TSmartPtr&lt; istd::IChangeable &gt;</type>
       <name>pagePtr</name>
       <anchorfile>structidoc_1_1_t_multi_page_document_wrap_1_1_page.html</anchorfile>
-      <anchor>a027effa3715ae9a51b7cc6977249436a</anchor>
+      <anchor>ad9e851be57dbddf84dd16da15cd0ef67</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -23560,13 +23589,19 @@
   <compound kind="class">
     <name>iimg::CBitmapDocument</name>
     <filename>classiimg_1_1_c_bitmap_document.html</filename>
-    <base>TMultiPageDocumentWrap&lt; idoc::IMultiPageDocument, imod::TModelWrap&lt; CBitmap &gt; &gt;</base>
+    <base>idoc::TMultiPageDocumentWrap</base>
     <base virtualness="virtual">iimg::IMultiBitmapProvider</base>
+    <member kind="enumvalue">
+      <name>MIT_CAMERA_MODEL</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document.html</anchorfile>
+      <anchor>a3b4ed5c71ab38af61ce796dce0d383b8aeeeac90401486b19f23632c14208b4a0</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
-      <type>idoc::TMultiPageDocumentWrap&lt; idoc::IMultiPageDocument, imod::TModelWrap&lt; CBitmap &gt; &gt;</type>
+      <type>idoc::CMultiPageDocumentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiimg_1_1_c_bitmap_document.html</anchorfile>
-      <anchor>a811db94c3afecf843b2908ef46dd93f8</anchor>
+      <anchor>acb7e13e8c9c280ebf012cc81dc097316</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -23603,13 +23638,6 @@
       <anchorfile>classiimg_1_1_c_bitmap_document.html</anchorfile>
       <anchor>a8197d2f65fb9cdf3e7b427a5cb9882d7</anchor>
       <arglist>(int bitmapIndex) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiimg_1_1_c_bitmap_document.html</anchorfile>
-      <anchor>abbec4e88600224cfdf5f80a9662cf6b5</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -26193,7 +26221,7 @@
     <member kind="enumvalue">
       <name>PRECISION</name>
       <anchorfile>classimath_1_1_c_double_manip.html</anchorfile>
-      <anchor>abb18076f5fee9fc9fb04fd4c069d2b9fa9c44114731a4fbde7f474759bcb26fa4</anchor>
+      <anchor>afc5934a3508db15f4a4c19cffebb5f41a9c44114731a4fbde7f474759bcb26fa4</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -27261,7 +27289,7 @@
     <member kind="enumvalue">
       <name>MAX_ELEMENTS_COUNT</name>
       <anchorfile>classimath_1_1_t_fast_vector.html</anchorfile>
-      <anchor>a887cb8a3482c08199f7142c94926466ea9d7088773a8584e0410aee31b776e2ba</anchor>
+      <anchor>afda09aeb6866224e49422fd9ccb81fb1a9d7088773a8584e0410aee31b776e2ba</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -32597,7 +32625,7 @@
     <member kind="enumvalue">
       <name>NO_SELECTION</name>
       <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
-      <anchor>a991db11ac0dc689ba0b1d31a7f806f8ba7c687b23162301178cafe954f53c7702</anchor>
+      <anchor>a2bdbd5a44526e96214ee4e91bea69449a7c687b23162301178cafe954f53c7702</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -38477,6 +38505,13 @@
       <anchor>a81f39dd38e426c77e7b098180d18656f</anchor>
       <arglist>(m_pageActivatorsModelCompPtr, m_pageActivatorsCompPtr, false)</arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CMultiPageGuiCompBase</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a800938c522827eef7c1bd0be448888f0</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual int</type>
       <name>GetPagesCount</name>
@@ -38502,8 +38537,8 @@
       <type>virtual int</type>
       <name>AddPageToContainerWidget</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
-      <anchor>a99f04adf90b66b2dbbbc6754ece61b06</anchor>
-      <arglist>(iqtgui::IGuiObject &amp;pageGui, const QString &amp;pageTitle) const </arglist>
+      <anchor>ac1793aecf0a2c28cfcc61033a8c09123</anchor>
+      <arglist>(iqtgui::IGuiObject &amp;pageGui, const QString &amp;pageTitle)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>QString</type>
@@ -38568,6 +38603,13 @@
       <anchor>a6ba8956b833bad91425d297f7bb2b6ec</anchor>
       <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_currentPageIndex</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a5c23492ea22b0d75b4ac6bef591872cd</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtgui::CMultiPageWidget</name>
@@ -38627,6 +38669,13 @@
       <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
       <anchor>ac7a65aecdf5afb210aae9873be9617c4</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>EmitPageIndexChanged</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>a9a8a0b6c508f9208d836fe60cd078912</anchor>
+      <arglist>(int pageIndex)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -38796,12 +38845,12 @@
       <anchor>acbf17e02085d5ae443bc1845d1097876</anchor>
       <arglist>(int uiMode)</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>int</type>
-      <name>GetCurrentPageIndex</name>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnPageIndexChanged</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
-      <anchor>a56fa9dce1031fb3f321ed45073da8d67</anchor>
-      <arglist>() const </arglist>
+      <anchor>a75628b2d5ccbb25079aca792d22a3ed0</anchor>
+      <arglist>(int pageIndex)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -39035,6 +39084,13 @@
       <anchorfile>classiqtgui_1_1_c_simple_gui_container_delegate.html</anchorfile>
       <anchor>a7fac4bb705e492c1bdc7f9bee58522e7</anchor>
       <arglist>(QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ConnectPageIndexListener</name>
+      <anchorfile>classiqtgui_1_1_c_simple_gui_container_delegate.html</anchorfile>
+      <anchor>a073ea10c9ac9194549d273ec3e308847</anchor>
+      <arglist>(QWidget &amp;containerWidget, QObject *receiverPtr, const char *receiverSlotName)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -39415,6 +39471,13 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
+      <name>ConnectPageIndexListener</name>
+      <anchorfile>classiqtgui_1_1_c_splitter_delegate.html</anchorfile>
+      <anchor>ad0c18dae16f3c143e445a7e3bc938546</anchor>
+      <arglist>(QWidget &amp;containerWidget, QObject *receiverPtr, const char *receiverSlotName)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
       <name>SetPageHeaderPosition</name>
       <anchorfile>classiqtgui_1_1_c_splitter_delegate.html</anchorfile>
       <anchor>aff4e8beab4e0bb305bc06c2d5a9454ac</anchor>
@@ -39557,6 +39620,13 @@
       <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
       <anchor>a5801d5e877c44b1ecac3a47e3bd46ed9</anchor>
       <arglist>(QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ConnectPageIndexListener</name>
+      <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
+      <anchor>a54dc549388a8a0d7025c789c563e01cf</anchor>
+      <arglist>(QWidget &amp;containerWidget, QObject *receiverPtr, const char *receiverSlotName)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -39782,77 +39852,34 @@
   <compound kind="class">
     <name>iqtgui::CTabContainerGuiComp</name>
     <filename>classiqtgui_1_1_c_tab_container_gui_comp.html</filename>
-    <base>TGuiComponentBase&lt; QTabWidget &gt;</base>
-    <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <base>iqtgui::CMultiPageGuiCompBase</base>
     <member kind="typedef">
-      <type>iqtgui::TGuiComponentBase&lt; QTabWidget &gt;</type>
+      <type>CMultiPageGuiCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>a90c8e4fbaec412fd71bfd82c9ce3eeb1</anchor>
+      <anchor>a114cc522fe78186107efee0f664e94ea</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPagesCount</name>
       <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>ab3a3ea6eaf42fb12efebc7e9907ee3b9</anchor>
-      <arglist>(TabModel)</arglist>
+      <anchor>a88bea5d2996df5c5c4c79133e956da40</anchor>
+      <arglist>() const </arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual iqtgui::IGuiObject *</type>
+      <name>GetPageGuiComponent</name>
       <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>a3f9faab76f444f1000b61cbb93f800b2</anchor>
-      <arglist>(TabModel, iprm::ISelectionParam, ExtractTabModel)</arglist>
+      <anchor>a2c88ac57ab70498684ccd4488e0c73cc</anchor>
+      <arglist>(int pageIndex) const </arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetDesignType</name>
       <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>a70a141005a391dc8fca663ef79fdd55d</anchor>
-      <arglist>(TabModel, iprm::IOptionsList, ExtractTabModel)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
-      <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>ac1eb6996701c935cb9a1d1478e41adac</anchor>
-      <arglist>(TabModel, iser::ISerializable, ExtractTabModel)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
-      <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>ac9cb7689fb71fe1cb0dff60cee15ab6e</anchor>
-      <arglist>(TabModel, imod::IModel, ExtractTabModel)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
-      <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>aa5ceb5f6b3fc6161b1d0606e701dec10</anchor>
-      <arglist>(TabModel, istd::IChangeable, ExtractTabModel)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>a9436580fea58a22ec5c3108ead964382</anchor>
-      <arglist>(m_slaveWidgetsModelCompPtr, m_slaveWidgetsVisualCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>aaa0a4e8d68c841ddf89113c7e27f2c19</anchor>
-      <arglist>(m_tabActivatorsModelCompPtr, m_tabActivatorsCompPtr, false)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateVisualElements</name>
-      <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>ae7386e81babadd9ff8df98b8bd4b1fc7</anchor>
-      <arglist>()</arglist>
+      <anchor>ac8db9b3cec4c5aa877de667d8892c66f</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -39860,34 +39887,6 @@
       <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
       <anchor>a70e404a18b0b9cb082f97614e33f2a02</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>a339d7874c2db7d67e5fd6dad1bfdfaa5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>a0f56b344ce80382a39b3d988802462fe</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>a3904f92d7d78f0385b9bb9f466252ed7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnModelChanged</name>
-      <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
-      <anchor>aaac719be4d5f18d9624666b972f5dbde</anchor>
-      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -39940,6 +39939,13 @@
       <anchorfile>classiqtgui_1_1_c_tab_widget_delegate.html</anchorfile>
       <anchor>ad0c3e0426a4d3bbb21fc125dae5abb18</anchor>
       <arglist>(QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ConnectPageIndexListener</name>
+      <anchorfile>classiqtgui_1_1_c_tab_widget_delegate.html</anchorfile>
+      <anchor>a0fb226e5c768e47a5163511ba96b370d</anchor>
+      <arglist>(QWidget &amp;containerWidget, QObject *receiverPtr, const char *receiverSlotName)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -40212,6 +40218,13 @@
       <anchorfile>classiqtgui_1_1_c_tool_box_delegate.html</anchorfile>
       <anchor>a369950fd279a3a1ba637cda5a7bd635b</anchor>
       <arglist>(QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ConnectPageIndexListener</name>
+      <anchorfile>classiqtgui_1_1_c_tool_box_delegate.html</anchorfile>
+      <anchor>a4713c260a026ee9346a2b356faed79ae</anchor>
+      <arglist>(QWidget &amp;containerWidget, QObject *receiverPtr, const char *receiverSlotName)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -40576,6 +40589,13 @@
       <anchorfile>classiqtgui_1_1_i_multi_page_widget_delegate.html</anchorfile>
       <anchor>aca569e934a9ae7751b2051038c7ec0c6</anchor>
       <arglist>(QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>ConnectPageIndexListener</name>
+      <anchorfile>classiqtgui_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>a2fa6715795543baac2d87b5526a5765c</anchor>
+      <arglist>(QWidget &amp;containerWidget, QObject *receiverPtr, const char *receiverSlotName)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -42751,7 +42771,7 @@
     <member kind="enumvalue">
       <name>MaxStringLength</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>a49645d55a027d7ff46b455096d56d0f7a1a2beb3a975a90f733fb0c1ab64525be</anchor>
+      <anchor>a851d0f63ec0ba1881a97539124ae50d2a1a2beb3a975a90f733fb0c1ab64525be</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -44326,7 +44346,7 @@
     <member kind="enumvalue">
       <name>UnknownVersion</name>
       <anchorfile>classiser_1_1_i_version_info.html</anchorfile>
-      <anchor>a60cc015d568ce2139b8d17245f6ebef9af9fa112e0f25b4bc6c7b7b7bc3ee742f</anchor>
+      <anchor>a3d035ccb76f6d08216cb9489b3ac8a94af9fa112e0f25b4bc6c7b7b7bc3ee742f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -44976,7 +44996,7 @@
     <member kind="enumvalue">
       <name>MAX_ELEMENTS_COUNT</name>
       <anchorfile>classistd_1_1_c_fast_binary_index.html</anchorfile>
-      <anchor>a02e0e12d1e6d33cd315f7a1dca5481a2abbd51a4d709be2d7e1ab0cc554dd3944</anchor>
+      <anchor>a4a255df319de07e9ecf393ea3ab43207abbd51a4d709be2d7e1ab0cc554dd3944</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -47271,7 +47291,7 @@
     <member kind="enumvalue">
       <name>DIMENSIONS</name>
       <anchorfile>classistd_1_1_t_index.html</anchorfile>
-      <anchor>afc1b837ba113166e458223c75ae33bc8a45842b3fa4ac21fb16cb7a478a51ad6a</anchor>
+      <anchor>a81e7d48bbfcd4598589908b536c4c9a0a45842b3fa4ac21fb16cb7a478a51ad6a</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -47921,7 +47941,7 @@
     <member kind="enumvalue">
       <name>InvalidIndex</name>
       <anchorfile>classistd_1_1_t_pointer_vector.html</anchorfile>
-      <anchor>ad91619ce68c064307824cfc03e86506ea5e9e43a0fe51bd123229d4b73c161110</anchor>
+      <anchor>aca8cd0dbd7c8efb794d487dfaac3fe42a5e9e43a0fe51bd123229d4b73c161110</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -49420,13 +49440,13 @@
     <member kind="enumvalue">
       <name>CONTROL_POINTS_COUNT</name>
       <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
-      <anchor>a831886a6fcce6333778844a28eeec141a7fb66a1f5e3ce4190017f22939c36afb</anchor>
+      <anchor>a6a81c5880b66a4c04c87e96fcf0d1bf7a7fb66a1f5e3ce4190017f22939c36afb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>ACTIVE_POINTS_COUNT</name>
       <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
-      <anchor>a831886a6fcce6333778844a28eeec141a3776b7e973707d0c8d2a86abccc207e3</anchor>
+      <anchor>a6a81c5880b66a4c04c87e96fcf0d1bf7a3776b7e973707d0c8d2a86abccc207e3</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
@@ -50332,7 +50352,7 @@
     <member kind="enumvalue">
       <name>NORMAL_SET_SIZE</name>
       <anchorfile>classiview_1_1_c_color_schema.html</anchorfile>
-      <anchor>a2f928f35cd24d71381c922ed894b2213a82b6f7e4fa5cdcfe8a3073430eb883ef</anchor>
+      <anchor>a4f21a5feba71e409b2b757ede9e33644a82b6f7e4fa5cdcfe8a3073430eb883ef</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -50392,19 +50412,19 @@
     <member kind="enumvalue">
       <name>TICKER_SIZE</name>
       <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
-      <anchor>ae5716ecce487b63ee2549c7222d9d1dba7b9aaadf57b04e96b6d901d25229edec</anchor>
+      <anchor>a6719baa4b18c7cd807e1a963d916d825a7b9aaadf57b04e96b6d901d25229edec</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SMALL_TICKER_SIZE</name>
       <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
-      <anchor>ae5716ecce487b63ee2549c7222d9d1dbab62460c925c9513455eea5005dc64220</anchor>
+      <anchor>a6719baa4b18c7cd807e1a963d916d825ab62460c925c9513455eea5005dc64220</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>LOGICAL_LINE_WIDTH</name>
       <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
-      <anchor>ae5716ecce487b63ee2549c7222d9d1dba664c9e6063e60c758b4ae1ee3ee48a9c</anchor>
+      <anchor>a6719baa4b18c7cd807e1a963d916d825a664c9e6063e60c758b4ae1ee3ee48a9c</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
