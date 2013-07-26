@@ -884,10 +884,10 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>int</type>
+      <type>uint</type>
       <name>qHash</name>
-      <anchorfile>_c_fast_color_8h.html</anchorfile>
-      <anchor>a82e50e163dc9dbd73408231b759bbdea</anchor>
+      <anchorfile>namespaceicmm.html</anchorfile>
+      <anchor>a7607c8f1cf1b4dd798e17ca442eb2d1d</anchor>
       <arglist>(const icmm::CFastColor &amp;color)</arglist>
     </member>
   </compound>
@@ -1059,10 +1059,10 @@
     <class kind="class">icomp::CComponentAddress</class>
     <namespace>icomp</namespace>
     <member kind="function">
-      <type>int</type>
+      <type>uint</type>
       <name>qHash</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a26abc726c1a0a3f61e96dc22f82799f9</anchor>
+      <anchor>ac8879a5b0e5eec2fab18377172b0faed</anchor>
       <arglist>(const icomp::CComponentAddress &amp;address)</arglist>
     </member>
   </compound>
@@ -5283,10 +5283,10 @@
     <class kind="class">istd::CVarIndex</class>
     <namespace>istd</namespace>
     <member kind="function">
-      <type>int</type>
+      <type>uint</type>
       <name>qHash</name>
       <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>a8673c9e530e7807733209e3429565775</anchor>
+      <anchor>aca9c6ea628776a2cd96bbb49293b996d</anchor>
       <arglist>(const istd::CVarIndex &amp;index)</arglist>
     </member>
   </compound>
@@ -13679,6 +13679,13 @@
       <anchor>a5895497c877a6986bfe16b0e88a007b2aeff64e127f3aa234c1ecd2ca435f0552</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type>uint</type>
+      <name>qHash</name>
+      <anchorfile>namespaceicmm.html</anchorfile>
+      <anchor>a7607c8f1cf1b4dd798e17ca442eb2d1d</anchor>
+      <arglist>(const icmm::CFastColor &amp;color)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>icmm::CCmy</name>
@@ -15685,10 +15692,10 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>int</type>
+      <type>uint</type>
       <name>qHash</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a26abc726c1a0a3f61e96dc22f82799f9</anchor>
+      <anchor>ac8879a5b0e5eec2fab18377172b0faed</anchor>
       <arglist>(const icomp::CComponentAddress &amp;address)</arglist>
     </member>
   </compound>
@@ -15912,10 +15919,10 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="friend">
-      <type>friend int</type>
+      <type>friend uint</type>
       <name>qHash</name>
       <anchorfile>classicomp_1_1_c_component_address.html</anchorfile>
-      <anchor>a1f3323e0eebe7920d64abb009cfd6477</anchor>
+      <anchor>a652fb269ebaaa91f75dfa2d04bb7ca86</anchor>
       <arglist>(const CComponentAddress &amp;address)</arglist>
     </member>
   </compound>
@@ -44613,10 +44620,10 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>int</type>
+      <type>uint</type>
       <name>qHash</name>
       <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>a8673c9e530e7807733209e3429565775</anchor>
+      <anchor>aca9c6ea628776a2cd96bbb49293b996d</anchor>
       <arglist>(const istd::CVarIndex &amp;index)</arglist>
     </member>
   </compound>
@@ -45821,10 +45828,10 @@
       <arglist>(const CVarIndex &amp;index)</arglist>
     </member>
     <member kind="friend">
-      <type>friend int</type>
+      <type>friend uint</type>
       <name>qHash</name>
       <anchorfile>classistd_1_1_c_var_index.html</anchorfile>
-      <anchor>a252d604366e7e195aeebce5a62a035a9</anchor>
+      <anchor>a7b72c036ea5baa8c16ab7f7fbbb74b02</anchor>
       <arglist>(const istd::CVarIndex &amp;index)</arglist>
     </member>
   </compound>

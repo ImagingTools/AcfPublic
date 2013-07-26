@@ -65,7 +65,7 @@
 <a name="l00046"></a>00046        <span class="comment">// reimplemented (iser::ISerializable)</span>
 <a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_component_address.html#a77e4dc5ff47a36134f4f441444ca3b44" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049        <span class="keyword">friend</span> <span class="keywordtype">int</span> <a class="code" href="classicomp_1_1_c_component_address.html#a1f3323e0eebe7920d64abb009cfd6477">qHash</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">CComponentAddress</a>&amp; address);
+<a name="l00049"></a>00049        <span class="keyword">friend</span> uint <a class="code" href="classicomp_1_1_c_component_address.html#a652fb269ebaaa91f75dfa2d04bb7ca86">qHash</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">CComponentAddress</a>&amp; address);
 <a name="l00050"></a>00050 
 <a name="l00051"></a>00051 <span class="keyword">private</span>:
 <a name="l00052"></a>00052        QByteArray m_packageId;
@@ -123,9 +123,9 @@
 <a name="l00104"></a>00104 
 <a name="l00105"></a>00105 <span class="comment">// related functions</span>
 <a name="l00106"></a>00106 
-<a name="l00107"></a><a class="code" href="namespaceicomp.html#a26abc726c1a0a3f61e96dc22f82799f9">00107</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="namespaceicomp.html#a26abc726c1a0a3f61e96dc22f82799f9">qHash</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; address)
+<a name="l00107"></a><a class="code" href="namespaceicomp.html#ac8879a5b0e5eec2fab18377172b0faed">00107</a> <span class="keyword">inline</span> uint <a class="code" href="namespaceicomp.html#ac8879a5b0e5eec2fab18377172b0faed">qHash</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_c_component_address.html" title="Represents global address of component.">icomp::CComponentAddress</a>&amp; address)
 <a name="l00108"></a>00108 {
-<a name="l00109"></a>00109        <span class="keywordflow">return</span> <a class="code" href="namespaceicomp.html#a26abc726c1a0a3f61e96dc22f82799f9">qHash</a>(address.m_packageId) + <a class="code" href="namespaceicomp.html#a26abc726c1a0a3f61e96dc22f82799f9">qHash</a>(address.m_packageId);
+<a name="l00109"></a>00109        <span class="keywordflow">return</span> <a class="code" href="namespaceicomp.html#ac8879a5b0e5eec2fab18377172b0faed">qHash</a>(address.m_packageId) + <a class="code" href="namespaceicomp.html#ac8879a5b0e5eec2fab18377172b0faed">qHash</a>(address.m_packageId);
 <a name="l00110"></a>00110 }
 <a name="l00111"></a>00111 
 <a name="l00112"></a>00112 
