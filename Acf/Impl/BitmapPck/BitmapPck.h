@@ -31,6 +31,7 @@
 #include "iimg/CBitmapSurface.h"
 #include "iimg/CBitmapLoaderComp.h"
 #include "iimg/CGeneralBitmap.h"
+#include "iimg/CBitmapDocument.h"
 
 
 /**
@@ -65,6 +66,14 @@ typedef icomp::TModelCompWrap<
 						imath::ISampledFunction2d> > BitmapSurface;
 
 typedef iimg::CBitmapLoaderComp BitmapLoader;
+
+typedef icomp::TModelCompWrap<
+			icomp::TMakeComponentWrap<
+						iimg::CBitmapDocument,
+						idoc::IMultiPageDocument,
+						iprm::IOptionsList,
+						iser::ISerializable> > BitmapDocument;
+
 
 
 } // namespace BitmapPck

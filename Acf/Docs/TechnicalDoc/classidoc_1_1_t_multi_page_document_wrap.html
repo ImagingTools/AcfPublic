@@ -42,7 +42,7 @@
 <div class="title">idoc::TMultiPageDocumentWrap&lt; Base &gt; Class Template Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="idoc::TMultiPageDocumentWrap" --><!-- doxytag: inherits="Base,idoc::CStandardDocumentMetaInfo" -->
+<!-- doxytag: class="idoc::TMultiPageDocumentWrap" --><!-- doxytag: inherits="Base,idoc::CStandardDocumentMetaInfo,iprm::IOptionsList" -->
 <p>Generic implementation of <a class="el" href="classidoc_1_1_i_multi_page_document.html" title="Simple interface for a structured document.">IMultiPageDocument</a> interface.  
  <a href="classidoc_1_1_t_multi_page_document_wrap.html#details">More...</a></p>
 
@@ -55,13 +55,16 @@ Inheritance diagram for idoc::TMultiPageDocumentWrap&lt; Base &gt;:</div>
   <map id="idoc::TMultiPageDocumentWrap&lt; Base &gt;_map" name="idoc::TMultiPageDocumentWrap&lt; Base &gt;_map">
 <area href="class_base.html" alt="Base" shape="rect" coords="0,168,243,192"/>
 <area href="classidoc_1_1_c_standard_document_meta_info.html" title="Simple implementation of a text document model." alt="idoc::CStandardDocumentMetaInfo" shape="rect" coords="253,168,496,192"/>
+<area href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities." alt="iprm::IOptionsList" shape="rect" coords="632,168,875,192"/>
 <area href="classidoc_1_1_i_document_meta_info.html" title="Interface for document meta-information." alt="idoc::IDocumentMetaInfo" shape="rect" coords="126,112,369,136"/>
 <area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="379,112,622,136"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="632,112,875,136"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="126,56,369,80"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="379,56,622,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="632,56,875,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="126,0,369,24"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="379,0,622,24"/>
-<area href="classiimg_1_1_c_bitmap_document.html" title="Definition of a multi-page bitmap document." alt="iimg::CBitmapDocument" shape="rect" coords="126,280,369,304"/>
+<area href="classiimg_1_1_c_bitmap_document.html" title="Definition of a multi-page bitmap document." alt="iimg::CBitmapDocument" shape="rect" coords="253,280,496,304"/>
 </map>
  </div></div>
 
@@ -83,6 +86,18 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html#a07e189d60ffab78b0dc29a71b3bb4d53">ResetPages</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html#a7630992d240ac0eb74d869d7521650a4">RemovePage</a> (int pageIndex)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classidoc_1_1_i_document_meta_info.html">IDocumentMetaInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html#a525e559a0a2f666ec8fd383dc6274505">GetDocumentMetaInfo</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html#a393acef7c2dcbc2f987b2dd47f7e4e42">GetOptionsFlags</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints flags.  <a href="#a393acef7c2dcbc2f987b2dd47f7e4e42"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html#a3bc58d3f6db839fc81b33d39421bf0a7">GetOptionsCount</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of managed options.  <a href="#a3bc58d3f6db839fc81b33d39421bf0a7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html#aa24c2372623f11c676e4754f062b1a65">GetOptionName</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of specified option.  <a href="#aa24c2372623f11c676e4754f062b1a65"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html#a352dd6922955773dad49b6b51643946e">GetOptionDescription</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable description for a option with the index <code>index</code>.  <a href="#a352dd6922955773dad49b6b51643946e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html#aa6656737c337c27f1ecb2884efadddcb">GetOptionId</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get option ID.  <a href="#aa6656737c337c27f1ecb2884efadddcb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html#a9b9e62ad6291f25e0d8cc3c1cbacd04a">IsOptionEnabled</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code> if the option is enabled and can be selected.  <a href="#a9b9e62ad6291f25e0d8cc3c1cbacd04a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html#a54c26fdb7854b18c0bf276c4c31f0f4a">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a54c26fdb7854b18c0bf276c4c31f0f4a"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-types"></a>
@@ -102,7 +117,7 @@ class idoc::TMultiPageDocumentWrap&lt; Base &gt;</h3>
 
 <p>Generic implementation of <a class="el" href="classidoc_1_1_i_multi_page_document.html" title="Simple interface for a structured document.">IMultiPageDocument</a> interface. </p>
 
-<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00024">24</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00025">25</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a18c4f12c76b060a504bd198577569c69"></a><!-- doxytag: member="idoc::TMultiPageDocumentWrap::BaseClass" ref="a18c4f12c76b060a504bd198577569c69" args="" -->
 <div class="memitem">
@@ -119,7 +134,7 @@ template&lt;class Base &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classiimg_1_1_c_bitmap_document.html#acb7e13e8c9c280ebf012cc81dc097316">iimg::CBitmapDocument</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00029">29</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00031">31</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
 
 </div>
 </div>
@@ -136,7 +151,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00030">30</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00032">32</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
 
 </div>
 </div>
@@ -153,7 +168,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00057">57</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00067">67</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
 
 </div>
 </div>
@@ -174,7 +189,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00119">119</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00129">129</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
 
 </div>
 </div>
@@ -195,7 +210,133 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00075">75</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00085">85</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a352dd6922955773dad49b6b51643946e"></a><!-- doxytag: member="idoc::TMultiPageDocumentWrap::GetOptionDescription" ref="a352dd6922955773dad49b6b51643946e" args="(int index) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Base &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">QString <a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html">idoc::TMultiPageDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::GetOptionDescription </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get human readable description for a option with the index <code>index</code>. </p>
+
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#adf6d315fe048e3a617ea5f803845393b">iprm::IOptionsList</a>.</p>
+
+<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00162">162</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa6656737c337c27f1ecb2884efadddcb"></a><!-- doxytag: member="idoc::TMultiPageDocumentWrap::GetOptionId" ref="aa6656737c337c27f1ecb2884efadddcb" args="(int index) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Base &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray <a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html">idoc::TMultiPageDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::GetOptionId </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get option ID. </p>
+<p>The option ID must be unique, if flag SCF_SUPPORT_UNIQUE_ID is set. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiprm_1_1_i_options_list.html#a14593d38693c2bdbfe3988dbaaedfcfa" title="Flags for control constraints behavior.">OptionsFlags</a> </dd></dl>
+
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#aa7af53aa0f41e2b65bfd0128792d18d2">iprm::IOptionsList</a>.</p>
+
+<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00169">169</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa24c2372623f11c676e4754f062b1a65"></a><!-- doxytag: member="idoc::TMultiPageDocumentWrap::GetOptionName" ref="aa24c2372623f11c676e4754f062b1a65" args="(int index) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Base &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">QString <a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html">idoc::TMultiPageDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::GetOptionName </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get name of specified option. </p>
+
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#ab30d9ae1759e0a1953751154f9983b3e">iprm::IOptionsList</a>.</p>
+
+<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00152">152</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3bc58d3f6db839fc81b33d39421bf0a7"></a><!-- doxytag: member="idoc::TMultiPageDocumentWrap::GetOptionsCount" ref="a3bc58d3f6db839fc81b33d39421bf0a7" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Base &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html">idoc::TMultiPageDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::GetOptionsCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get number of managed options. </p>
+
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#a37659b5d1cae689b3d715304a48ef929">iprm::IOptionsList</a>.</p>
+
+<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00145">145</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a393acef7c2dcbc2f987b2dd47f7e4e42"></a><!-- doxytag: member="idoc::TMultiPageDocumentWrap::GetOptionsFlags" ref="a393acef7c2dcbc2f987b2dd47f7e4e42" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Base &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html">idoc::TMultiPageDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::GetOptionsFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get constraints flags. </p>
+<p>The flags describes how the constraints object mantainance </p>
+
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#ab5b5157f0e5e6d68c30b772b8e3ecc2a">iprm::IOptionsList</a>.</p>
+
+<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00138">138</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
 
 </div>
 </div>
@@ -216,7 +357,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00086">86</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00096">96</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
 
 </div>
 </div>
@@ -236,7 +377,32 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00068">68</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00078">78</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9b9e62ad6291f25e0d8cc3c1cbacd04a"></a><!-- doxytag: member="idoc::TMultiPageDocumentWrap::IsOptionEnabled" ref="a9b9e62ad6291f25e0d8cc3c1cbacd04a" args="(int index) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Base &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html">idoc::TMultiPageDocumentWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::IsOptionEnabled </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return <code>true</code> if the option is enabled and can be selected. </p>
+
+<p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#a12fcebc0af408e94fc1bfbe2f15e7fa7">iprm::IOptionsList</a>.</p>
+
+<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00176">176</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
 
 </div>
 </div>
@@ -257,7 +423,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00105">105</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00115">115</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
 
 </div>
 </div>
@@ -277,7 +443,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00096">96</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00106">106</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
 
 </div>
 </div>
@@ -304,7 +470,7 @@ template&lt;class Base &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#a89a50d39a44d0181981997015e7f2fcf">idoc::CStandardDocumentMetaInfo</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00128">128</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00185">185</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
 
 <p>References <a class="el" href="classiser_1_1_i_archive.html#aae3a60247b5538e7fdbe0250b0b8729e">iser::IArchive::BeginMultiTag()</a>, <a class="el" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">iser::IArchive::BeginTag()</a>, <a class="el" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">iser::IArchive::EndTag()</a>, and <a class="el" href="classiser_1_1_i_archive.html#ac56a5050934a6ab67c8fd5ba44a16d31">iser::IArchive::IsStoring()</a>.</p>
 
@@ -339,9 +505,9 @@ template&lt;class Base &gt; </div>
 
 <p>Serialize a single page item into or from the archive. </p>
 
-<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00174">174</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00231">231</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
 
-<p>References <a class="el" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">iser::IArchive::BeginTag()</a>, <a class="el" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">iser::IArchive::EndTag()</a>, <a class="el" href="_t_trans_ptr_8h_source.html#l00134">istd::TTransPtr&lt; Type &gt;::GetPtr()</a>, <a class="el" href="istd_8h_source.html#l00061">NULL</a>, <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00046">idoc::TMultiPageDocumentWrap&lt; Base &gt;::Page::pageMetaInfo</a>, <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00047">idoc::TMultiPageDocumentWrap&lt; Base &gt;::Page::pagePtr</a>, <a class="el" href="classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable::Serialize()</a>, and <a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#a89a50d39a44d0181981997015e7f2fcf">idoc::CStandardDocumentMetaInfo::Serialize()</a>.</p>
+<p>References <a class="el" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">iser::IArchive::BeginTag()</a>, <a class="el" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a">iser::IArchive::EndTag()</a>, <a class="el" href="_t_trans_ptr_8h_source.html#l00134">istd::TTransPtr&lt; Type &gt;::GetPtr()</a>, <a class="el" href="istd_8h_source.html#l00061">NULL</a>, <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00056">idoc::TMultiPageDocumentWrap&lt; Base &gt;::Page::pageMetaInfo</a>, <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00057">idoc::TMultiPageDocumentWrap&lt; Base &gt;::Page::pagePtr</a>, <a class="el" href="classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable::Serialize()</a>, and <a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#a89a50d39a44d0181981997015e7f2fcf">idoc::CStandardDocumentMetaInfo::Serialize()</a>.</p>
 
 </div>
 </div>
@@ -359,7 +525,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00059">59</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00069">69</a> of file <a class="el" href="_t_multi_page_document_wrap_8h_source.html">TMultiPageDocumentWrap.h</a>.</p>
 
 </div>
 </div>

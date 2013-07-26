@@ -2038,9 +2038,10 @@
     <filename>_t_multi_page_document_wrap_8h</filename>
     <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
     <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="yes" imported="no">istd/TSmartPtr.h</includes>
+    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
+    <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
     <includes id="_i_multi_page_document_8h" name="IMultiPageDocument.h" local="yes" imported="no">idoc/IMultiPageDocument.h</includes>
     <includes id="_c_standard_document_meta_info_8h" name="CStandardDocumentMetaInfo.h" local="yes" imported="no">idoc/CStandardDocumentMetaInfo.h</includes>
-    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
     <class kind="class">idoc::TMultiPageDocumentWrap</class>
     <class kind="struct">idoc::TMultiPageDocumentWrap::Page</class>
     <namespace>idoc</namespace>
@@ -21618,6 +21619,7 @@
     <templarg></templarg>
     <base virtualness="virtual">Base</base>
     <base>idoc::CStandardDocumentMetaInfo</base>
+    <base virtualness="virtual">iprm::IOptionsList</base>
     <class kind="struct">idoc::TMultiPageDocumentWrap::Page</class>
     <member kind="typedef">
       <type>Base</type>
@@ -21674,6 +21676,48 @@
       <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
       <anchor>a525e559a0a2f666ec8fd383dc6274505</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsFlags</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a393acef7c2dcbc2f987b2dd47f7e4e42</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a3bc58d3f6db839fc81b33d39421bf0a7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>aa24c2372623f11c676e4754f062b1a65</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a352dd6922955773dad49b6b51643946e</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetOptionId</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>aa6656737c337c27f1ecb2884efadddcb</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a9b9e62ad6291f25e0d8cc3c1cbacd04a</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>

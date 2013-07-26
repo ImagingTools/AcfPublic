@@ -62,7 +62,7 @@ istd::IChangeable* CBitmapDocument::InsertPage(
 
 const iprm::IOptionsList* CBitmapDocument::GetBitmapListInfo() const
 {
-	return NULL;
+	return this;
 }
 
 

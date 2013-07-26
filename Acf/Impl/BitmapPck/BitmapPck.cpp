@@ -55,6 +55,11 @@ I_EXPORT_COMPONENT(
 			"Loader loading bitmaps using Qt standard implementations",
 			IM_TAG("Image File Loader"));
 
+I_EXPORT_COMPONENT(
+			BitmapDocument,
+			"Multi-page bitmap document",
+			IM_TAG("Image Bitmap Document Pages Page"));
+
 
 } // namespace BitmapPck
 
