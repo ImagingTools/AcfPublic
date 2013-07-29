@@ -48,30 +48,32 @@
 <a name="l00025"></a>00025               I_ASSIGN(m_cornerGuiCompPtr, <span class="stringliteral">&quot;CornerWidget&quot;</span>, <span class="stringliteral">&quot;Optional corner widget&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;CornerWidget&quot;</span>);
 <a name="l00026"></a>00026               I_ASSIGN(m_useTriangularTabsAttrPtr, <span class="stringliteral">&quot;UseTriangularTabs&quot;</span>, <span class="stringliteral">&quot;Using triangular tab form&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
 <a name="l00027"></a>00027               I_ASSIGN(m_tabOrientationAttrPtr, <span class="stringliteral">&quot;TabBarOrientation&quot;</span>, <span class="stringliteral">&quot;Orientation of the tab bar\n 0 - North\n 1 - South\n 2 - West\n 3 - East&quot;</span>, <span class="keyword">true</span>, 0);
-<a name="l00028"></a>00028        I_END_COMPONENT;
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030 <span class="keyword">protected</span>:
-<a name="l00031"></a>00031        <span class="comment">// reimplemented (iqtgui::CMultiPageGuiCompBase)</span>
-<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a88bea5d2996df5c5c4c79133e956da40" title="Get the number of the pages in the UI container.">GetPagesCount</a>() <span class="keyword">const</span>;
-<a name="l00033"></a>00033        <span class="keyword">virtual</span> <a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>* <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a2c88ac57ab70498684ccd4488e0c73cc" title="Get the UI component for a given page.">GetPageGuiComponent</a>(<span class="keywordtype">int</span> pageIndex) <span class="keyword">const</span>;
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#ac8db9b3cec4c5aa877de667d8892c66f" title="Get the container UI mode.">GetDesignType</a>() <span class="keyword">const</span>;
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a70e404a18b0b9cb082f97614e33f2a02" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039 <span class="keyword">private</span>:
-<a name="l00040"></a>00040        I_MULTIREF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">IGuiObject</a>, m_slaveWidgetsCompPtr);
-<a name="l00041"></a>00041        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_cornerGuiCompPtr);
-<a name="l00042"></a>00042        I_ATTR(<span class="keywordtype">bool</span>, m_useTriangularTabsAttrPtr);
-<a name="l00043"></a>00043        I_ATTR(<span class="keywordtype">int</span>, m_tabOrientationAttrPtr);
-<a name="l00044"></a>00044 };
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047 } <span class="comment">// namespace iqtgui</span>
+<a name="l00028"></a>00028               I_ASSIGN(m_useDocumentModeAttrPtr, <span class="stringliteral">&quot;UseDocumentMode&quot;</span>, <span class="stringliteral">&quot;If enabledm, the tab widget will be switched into the document mode&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
+<a name="l00029"></a>00029        I_END_COMPONENT;
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031 <span class="keyword">protected</span>:
+<a name="l00032"></a>00032        <span class="comment">// reimplemented (iqtgui::CMultiPageGuiCompBase)</span>
+<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a88bea5d2996df5c5c4c79133e956da40" title="Get the number of the pages in the UI container.">GetPagesCount</a>() <span class="keyword">const</span>;
+<a name="l00034"></a>00034        <span class="keyword">virtual</span> <a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>* <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a2c88ac57ab70498684ccd4488e0c73cc" title="Get the UI component for a given page.">GetPageGuiComponent</a>(<span class="keywordtype">int</span> pageIndex) <span class="keyword">const</span>;
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#ac8db9b3cec4c5aa877de667d8892c66f" title="Get the container UI mode.">GetDesignType</a>() <span class="keyword">const</span>;
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a70e404a18b0b9cb082f97614e33f2a02" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040 <span class="keyword">private</span>:
+<a name="l00041"></a>00041        I_MULTIREF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">IGuiObject</a>, m_slaveWidgetsCompPtr);
+<a name="l00042"></a>00042        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_cornerGuiCompPtr);
+<a name="l00043"></a>00043        I_ATTR(<span class="keywordtype">bool</span>, m_useTriangularTabsAttrPtr);
+<a name="l00044"></a>00044        I_ATTR(<span class="keywordtype">int</span>, m_tabOrientationAttrPtr);
+<a name="l00045"></a>00045        I_ATTR(<span class="keywordtype">bool</span>, m_useDocumentModeAttrPtr);
+<a name="l00046"></a>00046 };
+<a name="l00047"></a>00047 
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050 <span class="preprocessor">#endif // !iqtgui_CTabContainerGuiComp_included</span>
-<a name="l00051"></a>00051 <span class="preprocessor"></span>
+<a name="l00049"></a>00049 } <span class="comment">// namespace iqtgui</span>
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 <span class="preprocessor">#endif // !iqtgui_CTabContainerGuiComp_included</span>
+<a name="l00053"></a>00053 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

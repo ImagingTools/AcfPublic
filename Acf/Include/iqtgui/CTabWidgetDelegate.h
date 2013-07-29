@@ -48,7 +48,8 @@ class CTabWidgetDelegate: virtual public IMultiPageWidgetDelegate
 public:
 	CTabWidgetDelegate(
 				QTabWidget::TabPosition tabPosition = QTabWidget::North,
-				bool useDocumentMode = false);
+				bool useDocumentMode = false,
+				bool useCompactPageMode = false);
 
 	void SetTabPosition(QWidget& containerWidget, QTabWidget::TabPosition tabPosition);
 	void SetDocumentModeEnabled(QWidget& containerWidget, bool isDocumentModeEnabled = true);
@@ -86,6 +87,7 @@ public:
 private:
 	QTabWidget::TabPosition m_tabPosition;
 	bool m_useDocumentMode;
+	bool m_useCompactPageMode;
 };
 
 

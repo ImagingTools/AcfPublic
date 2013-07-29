@@ -1046,6 +1046,13 @@
     <namespace>ihotfgui</namespace>
   </compound>
   <compound kind="file">
+    <name>CComposedInformationProviderComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
+    <filename>_c_composed_information_provider_comp_8h</filename>
+    <class kind="class">iinsp::CComposedInformationProviderComp</class>
+    <namespace>iinsp</namespace>
+  </compound>
+  <compound kind="file">
     <name>CIdProviderCacheComp.h</name>
     <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_c_id_provider_cache_comp_8h</filename>
@@ -12134,12 +12141,90 @@
   <compound kind="namespace">
     <name>iinsp</name>
     <filename>namespaceiinsp.html</filename>
+    <class kind="class">iinsp::CComposedInformationProviderComp</class>
     <class kind="class">iinsp::CIdProviderCacheComp</class>
     <class kind="class">iinsp::CInformationProviderCacheComp</class>
     <class kind="class">iinsp::CInspectionTaskComp</class>
     <class kind="class">iinsp::IIdProvider</class>
     <class kind="class">iinsp::IInspectionTask</class>
     <class kind="class">iinsp::ITimeStampProvider</class>
+  </compound>
+  <compound kind="class">
+    <name>iinsp::CComposedInformationProviderComp</name>
+    <filename>classiinsp_1_1_c_composed_information_provider_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base protection="protected">imod::CMultiModelBridgeBase</base>
+    <base virtualness="virtual">istd::IInformationProvider</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiinsp_1_1_c_composed_information_provider_comp.html</anchorfile>
+      <anchor>ab22255f27f4c85b0b82015727f0ed7d3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiinsp_1_1_c_composed_information_provider_comp.html</anchorfile>
+      <anchor>a42da488ee2705a6ac0617665ef94daa1</anchor>
+      <arglist>(m_slaveInformationProviderModelsCompPtr, m_slaveInformationProvidersCompPtr, false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QDateTime</type>
+      <name>GetInformationTimeStamp</name>
+      <anchorfile>classiinsp_1_1_c_composed_information_provider_comp.html</anchorfile>
+      <anchor>a28394016dc698fbea6213db62e3e4b09</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual InformationCategory</type>
+      <name>GetInformationCategory</name>
+      <anchorfile>classiinsp_1_1_c_composed_information_provider_comp.html</anchorfile>
+      <anchor>a61457192962e632f8ad5b5dbb8f98e55</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetInformationId</name>
+      <anchorfile>classiinsp_1_1_c_composed_information_provider_comp.html</anchorfile>
+      <anchor>aea1307971d261c39081e335c814d0f22</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetInformationDescription</name>
+      <anchorfile>classiinsp_1_1_c_composed_information_provider_comp.html</anchorfile>
+      <anchor>a8946929071f0e7332a99fe57b705ec2f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetInformationSource</name>
+      <anchorfile>classiinsp_1_1_c_composed_information_provider_comp.html</anchorfile>
+      <anchor>ad16d88fe89cefcdebe400ffeac5c0379</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetInformationFlags</name>
+      <anchorfile>classiinsp_1_1_c_composed_information_provider_comp.html</anchorfile>
+      <anchor>a81ad7b9722d0ff51236c20537de812e2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiinsp_1_1_c_composed_information_provider_comp.html</anchorfile>
+      <anchor>a4b99ee5f06e28a054511985b98961d60</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiinsp_1_1_c_composed_information_provider_comp.html</anchorfile>
+      <anchor>a80f059cfdd0053a264ed02ee4ab0f2fe</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iinsp::CIdProviderCacheComp</name>

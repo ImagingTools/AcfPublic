@@ -2422,6 +2422,18 @@
     <namespace>iimg</namespace>
   </compound>
   <compound kind="file">
+    <name>CComposedBitmapProviderComp.h</name>
+    <path>C:/Temp/Acf/Include/iimg/</path>
+    <filename>_c_composed_bitmap_provider_comp_8h</filename>
+    <includes id="_i_bitmap_provider_8h" name="IBitmapProvider.h" local="yes" imported="no">iimg/IBitmapProvider.h</includes>
+    <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iimg/IMultiBitmapProvider.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_c_multi_model_bridge_base_8h" name="CMultiModelBridgeBase.h" local="yes" imported="no">imod/CMultiModelBridgeBase.h</includes>
+    <includes id="_c_options_manager_8h" name="COptionsManager.h" local="yes" imported="no">iprm/COptionsManager.h</includes>
+    <class kind="class">iimg::CComposedBitmapProviderComp</class>
+    <namespace>iimg</namespace>
+  </compound>
+  <compound kind="file">
     <name>CGeneralBitmap.h</name>
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>_c_general_bitmap_8h</filename>
@@ -23313,6 +23325,7 @@
     <class kind="class">iimg::CBitmapDocument</class>
     <class kind="class">iimg::CBitmapLoaderComp</class>
     <class kind="class">iimg::CBitmapSurface</class>
+    <class kind="class">iimg::CComposedBitmapProviderComp</class>
     <class kind="class">iimg::CGeneralBitmap</class>
     <class kind="class">iimg::CReflectedBitmapBase</class>
     <class kind="class">iimg::CScanlineMask</class>
@@ -23823,6 +23836,63 @@
       <anchorfile>classiimg_1_1_c_bitmap_surface.html</anchorfile>
       <anchor>a458a6acb54491d46ec29926570430502</anchor>
       <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iimg::CComposedBitmapProviderComp</name>
+    <filename>classiimg_1_1_c_composed_bitmap_provider_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iimg::IMultiBitmapProvider</base>
+    <base protection="protected">iprm::COptionsManager</base>
+    <base protection="protected">imod::CMultiModelBridgeBase</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiimg_1_1_c_composed_bitmap_provider_comp.html</anchorfile>
+      <anchor>aef94529a4fc450e7b71cc0f0d9751b10</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiimg_1_1_c_composed_bitmap_provider_comp.html</anchorfile>
+      <anchor>a1310b12a73e5ab316a7d73dde735337c</anchor>
+      <arglist>(m_bitmapProviderModelsCompPtr, m_bitmapProvidersCompPtr, false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iprm::IOptionsList *</type>
+      <name>GetBitmapListInfo</name>
+      <anchorfile>classiimg_1_1_c_composed_bitmap_provider_comp.html</anchorfile>
+      <anchor>a1678ee7742b9c3c4d29bf803fb6709ae</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetBitmapsCount</name>
+      <anchorfile>classiimg_1_1_c_composed_bitmap_provider_comp.html</anchorfile>
+      <anchor>a283bbdea9c966de29d8331f0d9cf7cc9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iimg::IBitmap *</type>
+      <name>GetBitmap</name>
+      <anchorfile>classiimg_1_1_c_composed_bitmap_provider_comp.html</anchorfile>
+      <anchor>a7f97758b5739230201eab3be570bb171</anchor>
+      <arglist>(int bitmapIndex) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiimg_1_1_c_composed_bitmap_provider_comp.html</anchorfile>
+      <anchor>ac9fd0651f5e29beb99716b6aaabbb74d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiimg_1_1_c_composed_bitmap_provider_comp.html</anchorfile>
+      <anchor>a321d5f416adc88ed73859aa523bcf3b6</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -39967,8 +40037,8 @@
       <type></type>
       <name>CTabWidgetDelegate</name>
       <anchorfile>classiqtgui_1_1_c_tab_widget_delegate.html</anchorfile>
-      <anchor>a4ebb788daf49c86af00382395e262995</anchor>
-      <arglist>(QTabWidget::TabPosition tabPosition=QTabWidget::North, bool useDocumentMode=false)</arglist>
+      <anchor>a91dcb3275f44e137957dfa52634c1ec8</anchor>
+      <arglist>(QTabWidget::TabPosition tabPosition=QTabWidget::North, bool useDocumentMode=false, bool useCompactPageMode=false)</arglist>
     </member>
     <member kind="function">
       <type>void</type>

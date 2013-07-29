@@ -41,9 +41,10 @@ namespace iqtgui
 
 // reimplemented (IMultiPageWidgetDelegate)
 
-CTabWidgetDelegate::CTabWidgetDelegate(QTabWidget::TabPosition tabPosition, bool useDocumentMode)
+CTabWidgetDelegate::CTabWidgetDelegate(QTabWidget::TabPosition tabPosition, bool useDocumentMode, bool useCompactPageMode)
 	:m_tabPosition(tabPosition),
-	m_useDocumentMode(useDocumentMode)
+	m_useDocumentMode(useDocumentMode),
+	m_useCompactPageMode(useCompactPageMode)
 {
 }
 
@@ -140,9 +141,11 @@ int CTabWidgetDelegate::InsertPage(
 
 	panelLayoutPtr->addWidget(pageWidgetPtr);
 
-	// Add a spacer on the bottom the tab page:
-	QSpacerItem* spacerPtr = new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
-	panelLayoutPtr->addItem(spacerPtr);
+	if (m_useCompactPageMode){
+		// Add a spacer on the bottom the tab page:
+		QSpacerItem* spacerPtr = new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
+		panelLayoutPtr->addItem(spacerPtr);
+	}
 
 	return pageIndex;
 }
