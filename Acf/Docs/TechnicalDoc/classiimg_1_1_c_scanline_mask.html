@@ -32,6 +32,7 @@
 </div>
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
@@ -70,11 +71,18 @@ Inheritance diagram for iimg::CScanlineMask:</div>
 
 <p><a href="classiimg_1_1_c_scanline_mask-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QList&lt; <a class="el" href="namespaceistd.html#aa43dd797b70403051ebf80fd7d2fc25d">istd::CIntRanges</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a5faed858ff3f51b9056ef8906c09669e">RangesContainer</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QVector&lt; const <br class="typebreak"/>
+<a class="el" href="namespaceistd.html#aa43dd797b70403051ebf80fd7d2fc25d">istd::CIntRanges</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#ab3e3976a4239f6274df8242fc149fdd3">Scanlines</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#af99af06d374a0b2f8df907bb12e4694a">CScanlineMask</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#af40fc8ca1a2b22774651f2965cea1e65">IsBitmapRegionEmpty</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if region is empty.  <a href="#af40fc8ca1a2b22774651f2965cea1e65"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a36ed12998191d54dfffab6164d82b237">ResetScanlines</a> (const <a class="el" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a> &amp;verticalRange)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this mask to empty set for some vertical range.  <a href="#a36ed12998191d54dfffab6164d82b237"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceistd.html#aa43dd797b70403051ebf80fd7d2fc25d">istd::CIntRanges</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#ac028bcb59cb2bea3abff3ba7ea0f0101">GetPixelRanges</a> (int lineIndex) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of pixel ranges per given line.  <a href="#ac028bcb59cb2bea3abff3ba7ea0f0101"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a3faf5d9177545877e2c211923bb4c1d8">CreateFromGeometry</a> (const <a class="el" href="classi2d_1_1_i_object2d.html">i2d::IObject2d</a> &amp;geometry, const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> *clipAreaPtr)</td></tr>
@@ -107,6 +115,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate translated (moved) mask.  <a href="#a1c67b3e45b19066fc4d761a2b42dc83b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#ae562e226db109611d02b22d924ecac0a">Translate</a> (int dx, int dy)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Translated (move) this mask.  <a href="#ae562e226db109611d02b22d924ecac0a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a5faed858ff3f51b9056ef8906c09669e">RangesContainer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a6872fce1a4076f0c0dff547f77990824">GetRangesContainer</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to internal range container.  <a href="#a6872fce1a4076f0c0dff547f77990824"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiimg_1_1_c_scanline_mask.html#ab3e3976a4239f6274df8242fc149fdd3">Scanlines</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a138ea204a99ae59a4e3d8c4aca877d68">GetScanLines</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to internal scan lines.  <a href="#a138ea204a99ae59a4e3d8c4aca877d68"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a028471f6ace53c1486e2f9a919b1069a">GetCenter</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns center of this 2D-object.  <a href="#a028471f6ace53c1486e2f9a919b1069a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a9fb46049250392645c39ec75b49a6613">MoveCenterTo</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;position)</td></tr>
@@ -131,13 +143,44 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a2f3947c71c49739c5ec3bc2bc57dde0b"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a812739c067134a447f2927a356b98cca">SetBoundingBox</a> (const <a class="el" href="classi2d_1_1_c_rectangle.html">i2d::CRectangle</a> &amp;objectBoundingBox, const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> *clipAreaPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a2793645d0eaef198c83499393433ac03">InitFromBoudingBox</a> (const <a class="el" href="classi2d_1_1_c_rectangle.html">i2d::CRectangle</a> &amp;objectBoundingBox, const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> *clipAreaPtr)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Representation of a 2D-region as container of bitmap line scans. </p>
 
 <p>Definition at line <a class="el" href="_c_scanline_mask_8h_source.html#l00026">26</a> of file <a class="el" href="_c_scanline_mask_8h_source.html">CScanlineMask.h</a>.</p>
-</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+</div><hr/><h2>Member Typedef Documentation</h2>
+<a class="anchor" id="a5faed858ff3f51b9056ef8906c09669e"></a><!-- doxytag: member="iimg::CScanlineMask::RangesContainer" ref="a5faed858ff3f51b9056ef8906c09669e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef QList&lt;<a class="el" href="namespaceistd.html#aa43dd797b70403051ebf80fd7d2fc25d">istd::CIntRanges</a>&gt; <a class="el" href="classiimg_1_1_c_scanline_mask.html#a5faed858ff3f51b9056ef8906c09669e">iimg::CScanlineMask::RangesContainer</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_scanline_mask_8h_source.html#l00031">31</a> of file <a class="el" href="_c_scanline_mask_8h_source.html">CScanlineMask.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab3e3976a4239f6274df8242fc149fdd3"></a><!-- doxytag: member="iimg::CScanlineMask::Scanlines" ref="ab3e3976a4239f6274df8242fc149fdd3" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef QVector&lt;const <a class="el" href="namespaceistd.html#aa43dd797b70403051ebf80fd7d2fc25d">istd::CIntRanges</a>*&gt; <a class="el" href="classiimg_1_1_c_scanline_mask.html#ab3e3976a4239f6274df8242fc149fdd3">iimg::CScanlineMask::Scanlines</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_scanline_mask_8h_source.html#l00032">32</a> of file <a class="el" href="_c_scanline_mask_8h_source.html">CScanlineMask.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="af99af06d374a0b2f8df907bb12e4694a"></a><!-- doxytag: member="iimg::CScanlineMask::CScanlineMask" ref="af99af06d374a0b2f8df907bb12e4694a" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -568,6 +611,46 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6872fce1a4076f0c0dff547f77990824"></a><!-- doxytag: member="iimg::CScanlineMask::GetRangesContainer" ref="a6872fce1a4076f0c0dff547f77990824" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classiimg_1_1_c_scanline_mask.html#a5faed858ff3f51b9056ef8906c09669e">CScanlineMask::RangesContainer</a> &amp; iimg::CScanlineMask::GetRangesContainer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get access to internal range container. </p>
+
+<p>Definition at line <a class="el" href="_c_scanline_mask_8h_source.html#l00175">175</a> of file <a class="el" href="_c_scanline_mask_8h_source.html">CScanlineMask.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a138ea204a99ae59a4e3d8c4aca877d68"></a><!-- doxytag: member="iimg::CScanlineMask::GetScanLines" ref="a138ea204a99ae59a4e3d8c4aca877d68" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classiimg_1_1_c_scanline_mask.html#ab3e3976a4239f6274df8242fc149fdd3">CScanlineMask::Scanlines</a> &amp; iimg::CScanlineMask::GetScanLines </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get access to internal scan lines. </p>
+
+<p>Definition at line <a class="el" href="_c_scanline_mask_8h_source.html#l00181">181</a> of file <a class="el" href="_c_scanline_mask_8h_source.html">CScanlineMask.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a9e49d4cd90c6c2592b8e1df76057f400"></a><!-- doxytag: member="iimg::CScanlineMask::GetTranslated" ref="a9e49d4cd90c6c2592b8e1df76057f400" args="(int dx, int dy) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -682,6 +765,33 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a2793645d0eaef198c83499393433ac03"></a><!-- doxytag: member="iimg::CScanlineMask::InitFromBoudingBox" ref="a2793645d0eaef198c83499393433ac03" args="(const i2d::CRectangle &amp;objectBoundingBox, const i2d::CRect *clipAreaPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iimg::CScanlineMask::InitFromBoudingBox </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_rectangle.html">i2d::CRectangle</a> &amp;&#160;</td>
+          <td class="paramname"><em>objectBoundingBox</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> *&#160;</td>
+          <td class="paramname"><em>clipAreaPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ac94b33f9fbc2c8c5bcd0b359094297ec"></a><!-- doxytag: member="iimg::CScanlineMask::Intersection" ref="ac94b33f9fbc2c8c5bcd0b359094297ec" args="(const CScanlineMask &amp;mask)" -->
 <div class="memitem">
 <div class="memproto">
@@ -782,6 +892,25 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a36ed12998191d54dfffab6164d82b237"></a><!-- doxytag: member="iimg::CScanlineMask::ResetScanlines" ref="a36ed12998191d54dfffab6164d82b237" args="(const istd::CIntRange &amp;verticalRange)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iimg::CScanlineMask::ResetScanlines </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceistd.html#a00297e6d21a1ecbb94c7c66bf61cc4f6">istd::CIntRange</a> &amp;&#160;</td>
+          <td class="paramname"><em>verticalRange</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set this mask to empty set for some vertical range. </p>
+
+</div>
+</div>
 <a class="anchor" id="a2f3947c71c49739c5ec3bc2bc57dde0b"></a><!-- doxytag: member="iimg::CScanlineMask::Serialize" ref="a2f3947c71c49739c5ec3bc2bc57dde0b" args="(iser::IArchive &amp;archive)" -->
 <div class="memitem">
 <div class="memproto">
@@ -802,33 +931,6 @@ Protected Member Functions</h2></td></tr>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a> </dd></dl>
 
 <p>Implements <a class="el" href="classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a812739c067134a447f2927a356b98cca"></a><!-- doxytag: member="iimg::CScanlineMask::SetBoundingBox" ref="a812739c067134a447f2927a356b98cca" args="(const i2d::CRectangle &amp;objectBoundingBox, const i2d::CRect *clipAreaPtr)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void iimg::CScanlineMask::SetBoundingBox </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_rectangle.html">i2d::CRectangle</a> &amp;&#160;</td>
-          <td class="paramname"><em>objectBoundingBox</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> *&#160;</td>
-          <td class="paramname"><em>clipAreaPtr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
 
 </div>
 </div>

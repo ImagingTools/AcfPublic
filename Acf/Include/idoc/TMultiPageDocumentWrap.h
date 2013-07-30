@@ -30,6 +30,7 @@
 // ACF includes
 #include "istd/TChangeNotifier.h"
 #include "istd/TSmartPtr.h"
+#include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
 #include "iprm/IOptionsList.h"
 #include "idoc/IMultiPageDocument.h"
@@ -233,7 +234,7 @@ bool TMultiPageDocumentWrap<Base>::Serialize(iser::IArchive& archive)
 		m_documentPages.clear();
 
 		for (int pageIndex = 0; pageIndex < pagesCount; ++pageIndex){
-			InsertPage(QString(), QSizeF(), pageIndex);
+			this->InsertPage(QString(), QSizeF(), pageIndex);
 
 			retVal = retVal && archive.BeginTag(pageTag);
 			retVal = retVal && SerializePage(archive, m_documentPages[pageIndex]);

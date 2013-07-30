@@ -2038,6 +2038,7 @@
     <filename>_t_multi_page_document_wrap_8h</filename>
     <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
     <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="yes" imported="no">istd/TSmartPtr.h</includes>
+    <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
     <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
     <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
     <includes id="_i_multi_page_document_8h" name="IMultiPageDocument.h" local="yes" imported="no">idoc/IMultiPageDocument.h</includes>
@@ -24091,6 +24092,20 @@
     <filename>classiimg_1_1_c_scanline_mask.html</filename>
     <base>i2d::CObject2dBase</base>
     <base virtualness="virtual">iimg::IRasterImage</base>
+    <member kind="typedef">
+      <type>QList&lt; istd::CIntRanges &gt;</type>
+      <name>RangesContainer</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a5faed858ff3f51b9056ef8906c09669e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QVector&lt; const istd::CIntRanges * &gt;</type>
+      <name>Scanlines</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>ab3e3976a4239f6274df8242fc149fdd3</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CScanlineMask</name>
@@ -24104,6 +24119,13 @@
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
       <anchor>af40fc8ca1a2b22774651f2965cea1e65</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ResetScanlines</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a36ed12998191d54dfffab6164d82b237</anchor>
+      <arglist>(const istd::CIntRange &amp;verticalRange)</arglist>
     </member>
     <member kind="function">
       <type>const istd::CIntRanges *</type>
@@ -24217,6 +24239,20 @@
       <anchor>ae562e226db109611d02b22d924ecac0a</anchor>
       <arglist>(int dx, int dy)</arglist>
     </member>
+    <member kind="function">
+      <type>RangesContainer &amp;</type>
+      <name>GetRangesContainer</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a6872fce1a4076f0c0dff547f77990824</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Scanlines &amp;</type>
+      <name>GetScanLines</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a138ea204a99ae59a4e3d8c4aca877d68</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual i2d::CVector2d</type>
       <name>GetCenter</name>
@@ -24296,9 +24332,9 @@
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>SetBoundingBox</name>
+      <name>InitFromBoudingBox</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
-      <anchor>a812739c067134a447f2927a356b98cca</anchor>
+      <anchor>a2793645d0eaef198c83499393433ac03</anchor>
       <arglist>(const i2d::CRectangle &amp;objectBoundingBox, const i2d::CRect *clipAreaPtr)</arglist>
     </member>
   </compound>
