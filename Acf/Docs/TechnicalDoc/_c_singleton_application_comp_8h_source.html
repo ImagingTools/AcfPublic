@@ -32,64 +32,95 @@
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtCore/QSharedMemory&gt;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QtCore/QStringList&gt;</span>
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
-<a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_application_8h.html">ibase/IApplication.h</a>&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_i_application_info_8h.html">ibase/IApplicationInfo.h</a>&quot;</span>
-<a name="l00014"></a>00014 
-<a name="l00015"></a>00015 
-<a name="l00016"></a>00016 <span class="keyword">namespace </span>ibase
-<a name="l00017"></a>00017 {
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QtCore/QObject&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;QtCore/QTimer&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;QtCore/QStringList&gt;</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="comment">// ACF includes</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_t_single_model_observer_base_8h.html">imod/TSingleModelObserverBase.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_i_application_8h.html">ibase/IApplication.h</a>&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_i_application_info_8h.html">ibase/IApplicationInfo.h</a>&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="_i_document_manager_8h.html">idoc/IDocumentManager.h</a>&quot;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="code" href="_i_runtime_status_provider_8h.html">ibase/IRuntimeStatusProvider.h</a>&quot;</span>
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019 
-<a name="l00024"></a><a class="code" href="classibase_1_1_c_singleton_application_comp.html">00024</a> <span class="keyword">class </span><a class="code" href="classibase_1_1_c_singleton_application_comp.html" title="Singleton application component.">CSingletonApplicationComp</a>:
-<a name="l00025"></a>00025                      <span class="keyword">public</span> icomp::CComponentBase, 
-<a name="l00026"></a>00026                      <span class="keyword">virtual</span> <span class="keyword">public</span> ibase::<a class="code" href="classibase_1_1_i_application.html" title="Main entry point of component-based application.">IApplication</a>
-<a name="l00027"></a>00027 {
-<a name="l00028"></a>00028 <span class="keyword">public</span>:
-<a name="l00029"></a><a class="code" href="classibase_1_1_c_singleton_application_comp.html#a79107560ef617410bb3eb5b596e5f92b">00029</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_component_base.html" title="Base class for component implementation.">icomp::CComponentBase</a> <a class="code" href="classibase_1_1_c_singleton_application_comp.html#a79107560ef617410bb3eb5b596e5f92b">BaseClass</a>;
-<a name="l00030"></a>00030 
-<a name="l00031"></a>00031        I_BEGIN_COMPONENT(<a class="code" href="classibase_1_1_c_singleton_application_comp.html" title="Singleton application component.">CSingletonApplicationComp</a>);
-<a name="l00032"></a>00032               I_REGISTER_INTERFACE(<a class="code" href="classibase_1_1_i_application.html" title="Main entry point of component-based application.">ibase::IApplication</a>);
-<a name="l00033"></a>00033               I_ASSIGN(m_applicationInfoCompPtr, <span class="stringliteral">&quot;ApplicationInfo&quot;</span>, <span class="stringliteral">&quot;Application info used to identify the application in the system&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ApplicationInfo&quot;</span>);
-<a name="l00034"></a>00034               I_ASSIGN(m_slaveApplicationCompPtr, <span class="stringliteral">&quot;Application&quot;</span>, <span class="stringliteral">&quot;Application component to be executed&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Application&quot;</span>);
-<a name="l00035"></a>00035        I_END_COMPONENT;
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037        <a class="code" href="classibase_1_1_c_singleton_application_comp.html#a61cc3b8bbc1d49f29fc0cc223f6ccd7c">CSingletonApplicationComp</a>();
+<a name="l00020"></a>00020 <span class="keyword">namespace </span>ibase
+<a name="l00021"></a>00021 {
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 
+<a name="l00028"></a><a class="code" href="classibase_1_1_c_singleton_application_comp.html">00028</a> <span class="keyword">class </span><a class="code" href="classibase_1_1_c_singleton_application_comp.html" title="Singleton application component.">CSingletonApplicationComp</a>:
+<a name="l00029"></a>00029                      <span class="keyword">public</span> QObject,
+<a name="l00030"></a>00030                      <span class="keyword">public</span> icomp::CComponentBase,
+<a name="l00031"></a>00031                      <span class="keyword">protected</span> imod::TSingleModelObserverBase&lt;ibase::IRuntimeStatusProvider&gt;,
+<a name="l00032"></a>00032                      <span class="keyword">virtual</span> <span class="keyword">public</span> ibase::<a class="code" href="classibase_1_1_i_application.html" title="Main entry point of component-based application.">IApplication</a>
+<a name="l00033"></a>00033 {
+<a name="l00034"></a>00034        Q_OBJECT
+<a name="l00035"></a>00035 <span class="keyword">public</span>:
+<a name="l00036"></a><a class="code" href="classibase_1_1_c_singleton_application_comp.html#a79107560ef617410bb3eb5b596e5f92b">00036</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_component_base.html" title="Base class for component implementation.">icomp::CComponentBase</a> <a class="code" href="classibase_1_1_c_singleton_application_comp.html#a79107560ef617410bb3eb5b596e5f92b">BaseClass</a>;
+<a name="l00037"></a><a class="code" href="classibase_1_1_c_singleton_application_comp.html#ab0ed085308eac9881ace17b649287542">00037</a>        <span class="keyword">typedef</span> <a class="code" href="classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase&lt;ibase::IRuntimeStatusProvider&gt;</a> <a class="code" href="classibase_1_1_c_singleton_application_comp.html#ab0ed085308eac9881ace17b649287542">BaseClass2</a>;
 <a name="l00038"></a>00038 
-<a name="l00039"></a>00039        <span class="comment">// reimplemented (ibase::IApplication)</span>
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_singleton_application_comp.html#af6df5796895aaded10a84e0ae4b7bc9a" title="Initialize the application object.">InitializeApplication</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv);
-<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_c_singleton_application_comp.html#a3eff6c2c1b1a6b4c6bfe7a319e7e9f07" title="Start execution loop of the application.">Execute</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv);
-<a name="l00042"></a>00042        <span class="keyword">virtual</span> QString <a class="code" href="classibase_1_1_c_singleton_application_comp.html#ab993f28d3b2c0b6fc6ba2c1a4471a410" title="Get information about the possible command line arguments of this application.">GetHelpText</a>() <span class="keyword">const</span>;
-<a name="l00043"></a>00043        <span class="keyword">virtual</span> QStringList <a class="code" href="classibase_1_1_c_singleton_application_comp.html#abdcc6e579e43ff6bf5bdc8237e74cd9a" title="Get the command line arguments of this application.">GetApplicationArguments</a>() <span class="keyword">const</span>;
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045 <span class="keyword">protected</span>:
-<a name="l00046"></a>00046        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_singleton_application_comp.html#a3ed96cb6c8fc2272e3f2768dec162165">OnComponentCreated</a>();
-<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_singleton_application_comp.html#a9846eb811712ac2f6b5fd830e0844bcb">OnComponentDestroyed</a>();
+<a name="l00039"></a>00039        I_BEGIN_COMPONENT(<a class="code" href="classibase_1_1_c_singleton_application_comp.html" title="Singleton application component.">CSingletonApplicationComp</a>);
+<a name="l00040"></a>00040               I_REGISTER_INTERFACE(<a class="code" href="classibase_1_1_i_application.html" title="Main entry point of component-based application.">ibase::IApplication</a>);
+<a name="l00041"></a>00041               I_ASSIGN(m_applicationInfoCompPtr, <span class="stringliteral">&quot;ApplicationInfo&quot;</span>, <span class="stringliteral">&quot;Application info used to identify the application in the system&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ApplicationInfo&quot;</span>);
+<a name="l00042"></a>00042               I_ASSIGN(m_slaveApplicationCompPtr, <span class="stringliteral">&quot;Application&quot;</span>, <span class="stringliteral">&quot;Application component to be executed&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Application&quot;</span>);
+<a name="l00043"></a>00043               I_ASSIGN(m_documentManagerCompPtr, <span class="stringliteral">&quot;DocumentManager&quot;</span>, <span class="stringliteral">&quot;Document manager used for opening of documents triggered by the shell&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;DocumentManager&quot;</span>);
+<a name="l00044"></a>00044               I_ASSIGN(m_runtimeStatusProviderCompPtr, <span class="stringliteral">&quot;RuntimeStatus&quot;</span>, <span class="stringliteral">&quot;Runtime status of the application&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;RuntimeStatus&quot;</span>);
+<a name="l00045"></a>00045               <a class="code" href="classibase_1_1_c_singleton_application_comp.html#aac1d8682932a5b53138c0a5095a1a0e8">I_ASSIGN_TO</a>(m_runtimeStatusProviderModelCompPtr, m_runtimeStatusProviderCompPtr, <span class="keyword">false</span>);
+<a name="l00046"></a>00046        I_END_COMPONENT;
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048        <a class="code" href="classibase_1_1_c_singleton_application_comp.html#a61cc3b8bbc1d49f29fc0cc223f6ccd7c">CSingletonApplicationComp</a>();
 <a name="l00049"></a>00049 
-<a name="l00050"></a>00050 <span class="keyword">private</span>:
-<a name="l00054"></a>00054        <span class="keyword">struct </span>RunningProcessInfo
-<a name="l00055"></a>00055        {
-<a name="l00056"></a>00056               qint64 processId;
-<a name="l00057"></a>00057        };
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059        I_REF(<a class="code" href="classibase_1_1_i_application_info.html" title="This interface provides some information about the application.">ibase::IApplicationInfo</a>, m_applicationInfoCompPtr);
-<a name="l00060"></a>00060        I_REF(<a class="code" href="classibase_1_1_i_application.html" title="Main entry point of component-based application.">ibase::IApplication</a>, m_slaveApplicationCompPtr);
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;QSharedMemory&gt;</a> m_processData;
-<a name="l00063"></a>00063        <span class="keywordtype">bool</span> m_isAlreadyRunning;
-<a name="l00064"></a>00064 };
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067 } <span class="comment">// namespace ibase</span>
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070 <span class="preprocessor">#endif // ibase_CSingletonApplicationComp_included</span>
-<a name="l00071"></a>00071 <span class="preprocessor"></span>
+<a name="l00050"></a>00050        <span class="comment">// reimplemented (ibase::IApplication)</span>
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_singleton_application_comp.html#af6df5796895aaded10a84e0ae4b7bc9a" title="Initialize the application object.">InitializeApplication</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv);
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classibase_1_1_c_singleton_application_comp.html#a3eff6c2c1b1a6b4c6bfe7a319e7e9f07" title="Start execution loop of the application.">Execute</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv);
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> QString <a class="code" href="classibase_1_1_c_singleton_application_comp.html#ab993f28d3b2c0b6fc6ba2c1a4471a410" title="Get information about the possible command line arguments of this application.">GetHelpText</a>() <span class="keyword">const</span>;
+<a name="l00054"></a>00054        <span class="keyword">virtual</span> QStringList <a class="code" href="classibase_1_1_c_singleton_application_comp.html#abdcc6e579e43ff6bf5bdc8237e74cd9a" title="Get the command line arguments of this application.">GetApplicationArguments</a>() <span class="keyword">const</span>;
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056 <span class="keyword">protected</span>:
+<a name="l00057"></a>00057        <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_singleton_application_comp.html#a3c7abbcc38c66879f6c45e6d93856c5f">OnUpdate</a>(<span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_singleton_application_comp.html#a3ed96cb6c8fc2272e3f2768dec162165">OnComponentCreated</a>();
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_singleton_application_comp.html#a9846eb811712ac2f6b5fd830e0844bcb">OnComponentDestroyed</a>();
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 <span class="keyword">private</span>:
+<a name="l00065"></a>00065        <span class="keywordtype">void</span> ShareDocumentsForOpening(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv);
+<a name="l00066"></a>00066        QStringList PopDocumentsForOpening() <span class="keyword">const</span>;
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 <span class="keyword">private</span> Q_SLOTS:
+<a name="l00069"></a>00069        <span class="keywordtype">void</span> OnUpdateDocumentList();
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 <span class="keyword">private</span>:
+<a name="l00075"></a>00075        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> MAX_DOCUMENT_PATH = 1024;
+<a name="l00076"></a>00076 
+<a name="l00080"></a>00080        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> MAX_DOCUMENTS = 100;
+<a name="l00081"></a>00081 
+<a name="l00085"></a>00085        <span class="keyword">struct </span>RunningProcessInfo
+<a name="l00086"></a>00086        {
+<a name="l00087"></a>00087               qint64 processId;
+<a name="l00088"></a>00088               <span class="keywordtype">char</span> requestedDocuments[MAX_DOCUMENTS][MAX_DOCUMENT_PATH];
+<a name="l00089"></a>00089        };
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091        I_REF(<a class="code" href="classibase_1_1_i_application_info.html" title="This interface provides some information about the application.">ibase::IApplicationInfo</a>, m_applicationInfoCompPtr);
+<a name="l00092"></a>00092        I_REF(<a class="code" href="classibase_1_1_i_application.html" title="Main entry point of component-based application.">ibase::IApplication</a>, m_slaveApplicationCompPtr);
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;QSharedMemory&gt;</a> m_processData;
+<a name="l00095"></a>00095        <span class="keywordtype">bool</span> m_isAlreadyRunning;
+<a name="l00096"></a>00096        QTimer m_documentUpdateTimer;
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098        I_REF(<a class="code" href="classidoc_1_1_i_document_manager.html" title="Provide set of user actions needed to manage documents in MVC (Model View Controller) concept...">idoc::IDocumentManager</a>, m_documentManagerCompPtr);
+<a name="l00099"></a>00099        I_REF(<a class="code" href="classibase_1_1_i_runtime_status_provider.html" title="Provider of the run-time status.">ibase::IRuntimeStatusProvider</a>, m_runtimeStatusProviderCompPtr);
+<a name="l00100"></a>00100        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_runtimeStatusProviderModelCompPtr);
+<a name="l00101"></a>00101 };
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103 
+<a name="l00104"></a>00104 } <span class="comment">// namespace ibase</span>
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107 <span class="preprocessor">#endif // ibase_CSingletonApplicationComp_included</span>
+<a name="l00108"></a>00108 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

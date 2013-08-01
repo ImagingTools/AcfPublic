@@ -598,9 +598,12 @@
     <name>CSingletonApplicationComp.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_singleton_application_comp_8h</filename>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_application_8h" name="IApplication.h" local="yes" imported="no">ibase/IApplication.h</includes>
     <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
+    <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
+    <includes id="_i_runtime_status_provider_8h" name="IRuntimeStatusProvider.h" local="yes" imported="no">ibase/IRuntimeStatusProvider.h</includes>
     <class kind="class">ibase::CSingletonApplicationComp</class>
     <namespace>ibase</namespace>
   </compound>
@@ -12562,6 +12565,7 @@
     <name>ibase::CSingletonApplicationComp</name>
     <filename>classibase_1_1_c_singleton_application_comp.html</filename>
     <base>icomp::CComponentBase</base>
+    <base protection="protected">TSingleModelObserverBase&lt; ibase::IRuntimeStatusProvider &gt;</base>
     <base virtualness="virtual">ibase::IApplication</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -12569,6 +12573,20 @@
       <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
       <anchor>a79107560ef617410bb3eb5b596e5f92b</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::TSingleModelObserverBase&lt; ibase::IRuntimeStatusProvider &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
+      <anchor>ab0ed085308eac9881ace17b649287542</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
+      <anchor>aac1d8682932a5b53138c0a5095a1a0e8</anchor>
+      <arglist>(m_runtimeStatusProviderModelCompPtr, m_runtimeStatusProviderCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -12604,6 +12622,13 @@
       <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
       <anchor>abdcc6e579e43ff6bf5bdc8237e74cd9a</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
+      <anchor>a3c7abbcc38c66879f6c45e6d93856c5f</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>

@@ -39,7 +39,7 @@
 <div class="title">ibase::CSingletonApplicationComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ibase::CSingletonApplicationComp" --><!-- doxytag: inherits="icomp::CComponentBase,ibase::IApplication" -->
+<!-- doxytag: class="ibase::CSingletonApplicationComp" --><!-- doxytag: inherits="icomp::CComponentBase,TSingleModelObserverBase&lt; ibase::IRuntimeStatusProvider &gt;,ibase::IApplication" -->
 <p>Singleton application component.  
  <a href="classibase_1_1_c_singleton_application_comp.html#details">More...</a></p>
 
@@ -50,11 +50,15 @@ Inheritance diagram for ibase::CSingletonApplicationComp:</div>
  <div class="center">
   <img src="classibase_1_1_c_singleton_application_comp.png" usemap="#ibase::CSingletonApplicationComp_map" alt=""/>
   <map id="ibase::CSingletonApplicationComp_map" name="ibase::CSingletonApplicationComp_map">
-<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,112,204,136"/>
-<area href="classibase_1_1_i_application.html" title="Main entry point of component-based application." alt="ibase::IApplication" shape="rect" coords="214,112,418,136"/>
-<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,56,204,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="214,56,418,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,204,24"/>
+<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,168,393,192"/>
+<area href="classimod_1_1_t_single_model_observer_base.html" alt="imod::TSingleModelObserverBase&lt; ibase::IRuntimeStatusProvider &gt;" shape="rect" coords="403,168,796,192"/>
+<area href="classibase_1_1_i_application.html" title="Main entry point of component-based application." alt="ibase::IApplication" shape="rect" coords="806,168,1199,192"/>
+<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,112,393,136"/>
+<area href="classimod_1_1_c_single_model_observer_base.html" title="Basic implementation for a single model observer." alt="imod::CSingleModelObserverBase" shape="rect" coords="403,112,796,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="806,112,1199,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,56,393,80"/>
+<area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="403,56,796,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="403,0,796,24"/>
 </map>
  </div></div>
 
@@ -63,8 +67,12 @@ Inheritance diagram for ibase::CSingletonApplicationComp:</div>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_singleton_application_comp.html#a79107560ef617410bb3eb5b596e5f92b">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+<a class="el" href="classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase</a><br class="typebreak"/>
+&lt; <a class="el" href="classibase_1_1_i_runtime_status_provider.html">ibase::IRuntimeStatusProvider</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_singleton_application_comp.html#ab0ed085308eac9881ace17b649287542">BaseClass2</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_singleton_application_comp.html#aac1d8682932a5b53138c0a5095a1a0e8">I_ASSIGN_TO</a> (m_runtimeStatusProviderModelCompPtr, m_runtimeStatusProviderCompPtr, false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_singleton_application_comp.html#a61cc3b8bbc1d49f29fc0cc223f6ccd7c">CSingletonApplicationComp</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_singleton_application_comp.html#af6df5796895aaded10a84e0ae4b7bc9a">InitializeApplication</a> (int argc, char **argv)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the application object.  <a href="#af6df5796895aaded10a84e0ae4b7bc9a"></a><br/></td></tr>
@@ -76,6 +84,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the command line arguments of this application.  <a href="#abdcc6e579e43ff6bf5bdc8237e74cd9a"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_singleton_application_comp.html#a3c7abbcc38c66879f6c45e6d93856c5f">OnUpdate</a> (int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_singleton_application_comp.html#a3ed96cb6c8fc2272e3f2768dec162165">OnComponentCreated</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classibase_1_1_c_singleton_application_comp.html#a9846eb811712ac2f6b5fd830e0844bcb">OnComponentDestroyed</a> ()</td></tr>
 </table>
@@ -83,7 +92,7 @@ Protected Member Functions</h2></td></tr>
 <div class="textblock"><p>Singleton application component. </p>
 <p>This component wraps a "real" application component implementation and allows only a single execution of the application instance. </p>
 
-<p>Definition at line <a class="el" href="_c_singleton_application_comp_8h_source.html#l00024">24</a> of file <a class="el" href="_c_singleton_application_comp_8h_source.html">CSingletonApplicationComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_singleton_application_comp_8h_source.html#l00028">28</a> of file <a class="el" href="_c_singleton_application_comp_8h_source.html">CSingletonApplicationComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a79107560ef617410bb3eb5b596e5f92b"></a><!-- doxytag: member="ibase::CSingletonApplicationComp::BaseClass" ref="a79107560ef617410bb3eb5b596e5f92b" args="" -->
 <div class="memitem">
@@ -96,7 +105,24 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_singleton_application_comp_8h_source.html#l00029">29</a> of file <a class="el" href="_c_singleton_application_comp_8h_source.html">CSingletonApplicationComp.h</a>.</p>
+<p>Reimplemented from <a class="el" href="classimod_1_1_t_single_model_observer_base.html#a4183ada6ca430e22ee43b62c1e03ef5d">imod::TSingleModelObserverBase&lt; ibase::IRuntimeStatusProvider &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="_c_singleton_application_comp_8h_source.html#l00036">36</a> of file <a class="el" href="_c_singleton_application_comp_8h_source.html">CSingletonApplicationComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab0ed085308eac9881ace17b649287542"></a><!-- doxytag: member="ibase::CSingletonApplicationComp::BaseClass2" ref="ab0ed085308eac9881ace17b649287542" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase</a>&lt;<a class="el" href="classibase_1_1_i_runtime_status_provider.html">ibase::IRuntimeStatusProvider</a>&gt; <a class="el" href="classibase_1_1_c_singleton_application_comp.html#ab0ed085308eac9881ace17b649287542">ibase::CSingletonApplicationComp::BaseClass2</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_singleton_application_comp_8h_source.html#l00037">37</a> of file <a class="el" href="_c_singleton_application_comp_8h_source.html">CSingletonApplicationComp.h</a>.</p>
 
 </div>
 </div>
@@ -189,6 +215,39 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aac1d8682932a5b53138c0a5095a1a0e8"></a><!-- doxytag: member="ibase::CSingletonApplicationComp::I_ASSIGN_TO" ref="aac1d8682932a5b53138c0a5095a1a0e8" args="(m_runtimeStatusProviderModelCompPtr, m_runtimeStatusProviderCompPtr, false)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ibase::CSingletonApplicationComp::I_ASSIGN_TO </td>
+          <td>(</td>
+          <td class="paramtype">m_runtimeStatusProviderModelCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">m_runtimeStatusProviderCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">false&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af6df5796895aaded10a84e0ae4b7bc9a"></a><!-- doxytag: member="ibase::CSingletonApplicationComp::InitializeApplication" ref="af6df5796895aaded10a84e0ae4b7bc9a" args="(int argc, char **argv)" -->
 <div class="memitem">
 <div class="memproto">
@@ -253,6 +312,35 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classicomp_1_1_c_component_base.html#a007550438603368acd5133e97547d73f">icomp::CComponentBase</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3c7abbcc38c66879f6c45e6d93856c5f"></a><!-- doxytag: member="ibase::CSingletonApplicationComp::OnUpdate" ref="a3c7abbcc38c66879f6c45e6d93856c5f" args="(int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ibase::CSingletonApplicationComp::OnUpdate </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>updateFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
+          <td class="paramname"><em>updateParamsPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classimod_1_1_c_single_model_observer_base.html#a66f8d05283672d798a57262434229e93">imod::CSingleModelObserverBase</a>.</p>
 
 </div>
 </div>
