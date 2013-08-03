@@ -58,7 +58,6 @@
 #include "ibase/CUuidComp.h"
 #include "ibase/CObjectQueueComp.h"
 #include "ibase/CMultiObserverBinderComp.h"
-#include "ibase/CSingletonApplicationComp.h"
 #include "ibase/CQtVersionInfoComp.h"
 #include "ibase/CObjectSynchronizerComp.h"
 
@@ -117,7 +116,6 @@ typedef ibase::CModelBinderComp ModelBinder;
 typedef icomp::TModelCompWrap<ibase::CUuidComp> Uuid;
 typedef ibase::CObjectQueueComp ObjectQueue;
 typedef ibase::CMultiObserverBinderComp MultiObserverBinder;
-typedef ibase::CSingletonApplicationComp SingletonApplication;
 typedef ibase::CQtVersionInfoComp QtVersionInfo;
 typedef ibase::CObjectSynchronizerComp ObjectSynchronizer;
 

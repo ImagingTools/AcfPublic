@@ -229,7 +229,7 @@ bool CBitmapBase::Serialize(iser::IArchive& archive)
 
 	if (isStoring){
 		size = GetImageSize();
-		pixelFormat =  GetPixelFormat();
+		pixelFormat = GetPixelFormat();
 	}
 
 	retVal = retVal && archive.BeginTag(sizeTag);

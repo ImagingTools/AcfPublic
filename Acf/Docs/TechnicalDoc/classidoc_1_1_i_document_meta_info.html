@@ -77,8 +77,8 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef QSet&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#a45c9d391c9fea5810497af26dbee2450">MetaInfoTypes</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_meta_info.html#a45c9d391c9fea5810497af26dbee2450">MetaInfoTypes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#a5b568f454de67200839a733ba93dea64">GetSupportedMetaInfoTypes</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of supported meta info types.  <a href="#a5b568f454de67200839a733ba93dea64"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_meta_info.html#a45c9d391c9fea5810497af26dbee2450">MetaInfoTypes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#aa4b4cc6046d9e45732e9f882b5dd4513">GetSupportedMetaInfoTypes</a> (bool allowReadOnly=true) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of supported meta info types.  <a href="#aa4b4cc6046d9e45732e9f882b5dd4513"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QVariant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#af3c0ca6bae4d26d4153022bd92708768">GetDocumentMetaInfo</a> (int metaInfoType) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get document's meta info.  <a href="#af3c0ca6bae4d26d4153022bd92708768"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#a3809ed2455e9509fb6f8db2415fe768d">SetDocumentMetaInfo</a> (int metaInfoType, const QVariant &amp;metaInfo)=0</td></tr>
@@ -87,6 +87,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a human readable name for a given meta information type.  <a href="#a40b4eb9d33b6dc10c882f0f5f4d03b69"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#a525fb0ef7afca405c433d165f9ce9c52">GetMetaInfoDescription</a> (int metaInfoType) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a human readable description for a given meta information type.  <a href="#a525fb0ef7afca405c433d165f9ce9c52"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_document_meta_info.html#a7e8193c94b41195f0955566bfe5a3a7b">IsMetaInfoWritable</a> (int metaInfoType) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if meta information can be changed.  <a href="#a7e8193c94b41195f0955566bfe5a3a7b"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Interface for document meta-information. </p>
@@ -236,14 +238,15 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5b568f454de67200839a733ba93dea64"></a><!-- doxytag: member="idoc::IDocumentMetaInfo::GetSupportedMetaInfoTypes" ref="a5b568f454de67200839a733ba93dea64" args="() const =0" -->
+<a class="anchor" id="aa4b4cc6046d9e45732e9f882b5dd4513"></a><!-- doxytag: member="idoc::IDocumentMetaInfo::GetSupportedMetaInfoTypes" ref="aa4b4cc6046d9e45732e9f882b5dd4513" args="(bool allowReadOnly=true) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classidoc_1_1_i_document_meta_info.html#a45c9d391c9fea5810497af26dbee2450">MetaInfoTypes</a> idoc::IDocumentMetaInfo::GetSupportedMetaInfoTypes </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>allowReadOnly</em> = <code>true</code></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
       </table>
@@ -251,8 +254,36 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Get list of supported meta info types. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">allowReadOnly</td><td>if enabled read only types will be also listed out, if this flag is false only the writable types will be returned. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classidoc_1_1_i_document_meta_info.html#a7e8193c94b41195f0955566bfe5a3a7b" title="Check if meta information can be changed.">IsMetaInfoWritable</a>. </dd></dl>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#a0d7afc45ce2fb7343594fae6b24363f2">idoc::CStandardDocumentMetaInfo</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#a29b7d55c4aead87bf9338e09537f4b91">idoc::CStandardDocumentMetaInfo</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7e8193c94b41195f0955566bfe5a3a7b"></a><!-- doxytag: member="idoc::IDocumentMetaInfo::IsMetaInfoWritable" ref="a7e8193c94b41195f0955566bfe5a3a7b" args="(int metaInfoType) const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool idoc::IDocumentMetaInfo::IsMetaInfoWritable </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>metaInfoType</em></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Check if meta information can be changed. </p>
+
+<p>Implemented in <a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#a0ce5d94781ee706d727029a425b6b24a">idoc::CStandardDocumentMetaInfo</a>.</p>
 
 </div>
 </div>

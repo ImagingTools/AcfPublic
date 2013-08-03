@@ -63,8 +63,8 @@ Inheritance diagram for idoc::CStandardDocumentMetaInfo:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_meta_info.html#a45c9d391c9fea5810497af26dbee2450">MetaInfoTypes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#a0d7afc45ce2fb7343594fae6b24363f2">GetSupportedMetaInfoTypes</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of supported meta info types.  <a href="#a0d7afc45ce2fb7343594fae6b24363f2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_document_meta_info.html#a45c9d391c9fea5810497af26dbee2450">MetaInfoTypes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#a29b7d55c4aead87bf9338e09537f4b91">GetSupportedMetaInfoTypes</a> (bool allowReadOnly=true) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of supported meta info types.  <a href="#a29b7d55c4aead87bf9338e09537f4b91"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QVariant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#a13d1ee096ac4133227142a35bdc61368">GetDocumentMetaInfo</a> (int metaInfoType) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get document's meta info.  <a href="#a13d1ee096ac4133227142a35bdc61368"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#a52183f7d55a4cb9328c72d93afbedfd4">SetDocumentMetaInfo</a> (int metaInfoType, const QVariant &amp;metaInfo)</td></tr>
@@ -73,6 +73,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a human readable name for a given meta information type.  <a href="#aaf09a5b40472e5f4d4fb8e33f9647078"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#a42c49d1951f349c432662ea0329a97f6">GetMetaInfoDescription</a> (int metaInfoType) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a human readable description for a given meta information type.  <a href="#a42c49d1951f349c432662ea0329a97f6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#a0ce5d94781ee706d727029a425b6b24a">IsMetaInfoWritable</a> (int metaInfoType) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if meta information can be changed.  <a href="#a0ce5d94781ee706d727029a425b6b24a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#a89a50d39a44d0181981997015e7f2fcf">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a89a50d39a44d0181981997015e7f2fcf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#a343c749f15a69fbdfc0beea040ece859">IsEqual</a> (const IChangeable &amp;object) const </td></tr>
@@ -145,14 +147,15 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0d7afc45ce2fb7343594fae6b24363f2"></a><!-- doxytag: member="idoc::CStandardDocumentMetaInfo::GetSupportedMetaInfoTypes" ref="a0d7afc45ce2fb7343594fae6b24363f2" args="() const " -->
+<a class="anchor" id="a29b7d55c4aead87bf9338e09537f4b91"></a><!-- doxytag: member="idoc::CStandardDocumentMetaInfo::GetSupportedMetaInfoTypes" ref="a29b7d55c4aead87bf9338e09537f4b91" args="(bool allowReadOnly=true) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classidoc_1_1_i_document_meta_info.html#a45c9d391c9fea5810497af26dbee2450">MetaInfoTypes</a> idoc::CStandardDocumentMetaInfo::GetSupportedMetaInfoTypes </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>allowReadOnly</em> = <code>true</code></td><td>)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
       </table>
@@ -160,8 +163,15 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Get list of supported meta info types. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">allowReadOnly</td><td>if enabled read only types will be also listed out, if this flag is false only the writable types will be returned. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classidoc_1_1_c_standard_document_meta_info.html#a0ce5d94781ee706d727029a425b6b24a" title="Check if meta information can be changed.">IsMetaInfoWritable</a>. </dd></dl>
 
-<p>Implements <a class="el" href="classidoc_1_1_i_document_meta_info.html#a5b568f454de67200839a733ba93dea64">idoc::IDocumentMetaInfo</a>.</p>
+<p>Implements <a class="el" href="classidoc_1_1_i_document_meta_info.html#aa4b4cc6046d9e45732e9f882b5dd4513">idoc::IDocumentMetaInfo</a>.</p>
 
 </div>
 </div>
@@ -179,6 +189,27 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0ce5d94781ee706d727029a425b6b24a"></a><!-- doxytag: member="idoc::CStandardDocumentMetaInfo::IsMetaInfoWritable" ref="a0ce5d94781ee706d727029a425b6b24a" args="(int metaInfoType) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool idoc::CStandardDocumentMetaInfo::IsMetaInfoWritable </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>metaInfoType</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Check if meta information can be changed. </p>
+
+<p>Implements <a class="el" href="classidoc_1_1_i_document_meta_info.html#a7e8193c94b41195f0955566bfe5a3a7b">idoc::IDocumentMetaInfo</a>.</p>
 
 </div>
 </div>

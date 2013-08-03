@@ -595,19 +595,6 @@
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
-    <name>CSingletonApplicationComp.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_c_singleton_application_comp_8h</filename>
-    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_application_8h" name="IApplication.h" local="yes" imported="no">ibase/IApplication.h</includes>
-    <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
-    <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
-    <includes id="_i_runtime_status_provider_8h" name="IRuntimeStatusProvider.h" local="yes" imported="no">ibase/IRuntimeStatusProvider.h</includes>
-    <class kind="class">ibase::CSingletonApplicationComp</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
     <name>CSize.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_size_8h</filename>
@@ -2405,6 +2392,15 @@
     <namespace>iimg</namespace>
   </compound>
   <compound kind="file">
+    <name>CBitmapDocumentFilePersistenceComp.h</name>
+    <path>C:/Temp/Acf/Include/iimg/</path>
+    <filename>_c_bitmap_document_file_persistence_comp_8h</filename>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
+    <class kind="class">iimg::CBitmapDocumentFilePersistenceComp</class>
+    <namespace>iimg</namespace>
+  </compound>
+  <compound kind="file">
     <name>CBitmapLoaderComp.h</name>
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>_c_bitmap_loader_comp_8h</filename>
@@ -3205,13 +3201,13 @@
     <path>C:/Temp/Acf/Include/ipackage/</path>
     <filename>_c_packages_loader_comp_8h</filename>
     <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
-    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_registry_loader_8h" name="IRegistryLoader.h" local="yes" imported="no">icomp/IRegistryLoader.h</includes>
     <includes id="_c_registry_8h" name="CRegistry.h" local="yes" imported="no">icomp/CRegistry.h</includes>
     <includes id="_c_environment_manager_base_8h" name="CEnvironmentManagerBase.h" local="yes" imported="no">icomp/CEnvironmentManagerBase.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_c_composite_package_static_info_8h" name="CCompositePackageStaticInfo.h" local="yes" imported="no">icomp/CCompositePackageStaticInfo.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <class kind="class">ipackage::CPackagesLoaderComp</class>
     <class kind="class">ipackage::CPackagesLoaderComp::LogingRegistry</class>
@@ -3222,12 +3218,12 @@
     <path>C:/Temp/Acf/Include/ipackage/</path>
     <filename>_c_registries_manager_comp_8h</filename>
     <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
-    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_ext_packages_manager_8h" name="IExtPackagesManager.h" local="yes" imported="no">icomp/IExtPackagesManager.h</includes>
     <includes id="_i_registries_manager_8h" name="IRegistriesManager.h" local="yes" imported="no">icomp/IRegistriesManager.h</includes>
     <includes id="_i_registry_loader_8h" name="IRegistryLoader.h" local="yes" imported="no">icomp/IRegistryLoader.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <class kind="class">ipackage::CRegistriesManagerComp</class>
     <namespace>ipackage</namespace>
@@ -4123,6 +4119,19 @@
     <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
     <includes id="_t_qt_document_manager_wrap_8h" name="TQtDocumentManagerWrap.h" local="yes" imported="no">iqtdoc/TQtDocumentManagerWrap.h</includes>
     <class kind="class">iqtdoc::CSingleDocumentWorkspaceGuiComp</class>
+    <namespace>iqtdoc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CSingletonDocApplicationComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtdoc/</path>
+    <filename>_c_singleton_doc_application_comp_8h</filename>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
+    <includes id="_i_runtime_status_provider_8h" name="IRuntimeStatusProvider.h" local="yes" imported="no">ibase/IRuntimeStatusProvider.h</includes>
+    <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
+    <includes id="_i_gui_application_8h" name="IGuiApplication.h" local="yes" imported="no">iqtgui/IGuiApplication.h</includes>
+    <class kind="class">iqtdoc::CSingletonDocApplicationComp</class>
     <namespace>iqtdoc</namespace>
   </compound>
   <compound kind="file">
@@ -11937,7 +11946,6 @@
     <class kind="class">ibase::CObjectQueueComp</class>
     <class kind="class">ibase::CObjectSynchronizerComp</class>
     <class kind="class">ibase::CQtVersionInfoComp</class>
-    <class kind="class">ibase::CSingletonApplicationComp</class>
     <class kind="class">ibase::CSize</class>
     <class kind="class">ibase::CUuidComp</class>
     <class kind="class">ibase::CVersionInfoComp</class>
@@ -12558,90 +12566,6 @@
       <name>OnComponentCreated</name>
       <anchorfile>classibase_1_1_c_qt_version_info_comp.html</anchorfile>
       <anchor>a6b6c826f801c2b8e1a60dd1132f6e1d3</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::CSingletonApplicationComp</name>
-    <filename>classibase_1_1_c_singleton_application_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base protection="protected">TSingleModelObserverBase&lt; ibase::IRuntimeStatusProvider &gt;</base>
-    <base virtualness="virtual">ibase::IApplication</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
-      <anchor>a79107560ef617410bb3eb5b596e5f92b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>imod::TSingleModelObserverBase&lt; ibase::IRuntimeStatusProvider &gt;</type>
-      <name>BaseClass2</name>
-      <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
-      <anchor>ab0ed085308eac9881ace17b649287542</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
-      <anchor>aac1d8682932a5b53138c0a5095a1a0e8</anchor>
-      <arglist>(m_runtimeStatusProviderModelCompPtr, m_runtimeStatusProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CSingletonApplicationComp</name>
-      <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
-      <anchor>a61cc3b8bbc1d49f29fc0cc223f6ccd7c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>InitializeApplication</name>
-      <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
-      <anchor>af6df5796895aaded10a84e0ae4b7bc9a</anchor>
-      <arglist>(int argc, char **argv)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>Execute</name>
-      <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
-      <anchor>a3eff6c2c1b1a6b4c6bfe7a319e7e9f07</anchor>
-      <arglist>(int argc, char **argv)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetHelpText</name>
-      <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
-      <anchor>ab993f28d3b2c0b6fc6ba2c1a4471a410</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QStringList</type>
-      <name>GetApplicationArguments</name>
-      <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
-      <anchor>abdcc6e579e43ff6bf5bdc8237e74cd9a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnUpdate</name>
-      <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
-      <anchor>a3c7abbcc38c66879f6c45e6d93856c5f</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
-      <anchor>a3ed96cb6c8fc2272e3f2768dec162165</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classibase_1_1_c_singleton_application_comp.html</anchorfile>
-      <anchor>a9846eb811712ac2f6b5fd830e0844bcb</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -20780,8 +20704,8 @@
       <type>virtual MetaInfoTypes</type>
       <name>GetSupportedMetaInfoTypes</name>
       <anchorfile>classidoc_1_1_c_standard_document_meta_info.html</anchorfile>
-      <anchor>a0d7afc45ce2fb7343594fae6b24363f2</anchor>
-      <arglist>() const </arglist>
+      <anchor>a29b7d55c4aead87bf9338e09537f4b91</anchor>
+      <arglist>(bool allowReadOnly=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QVariant</type>
@@ -20809,6 +20733,13 @@
       <name>GetMetaInfoDescription</name>
       <anchorfile>classidoc_1_1_c_standard_document_meta_info.html</anchorfile>
       <anchor>a42c49d1951f349c432662ea0329a97f6</anchor>
+      <arglist>(int metaInfoType) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsMetaInfoWritable</name>
+      <anchorfile>classidoc_1_1_c_standard_document_meta_info.html</anchorfile>
+      <anchor>a0ce5d94781ee706d727029a425b6b24a</anchor>
       <arglist>(int metaInfoType) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -21288,8 +21219,8 @@
       <type>virtual MetaInfoTypes</type>
       <name>GetSupportedMetaInfoTypes</name>
       <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
-      <anchor>a5b568f454de67200839a733ba93dea64</anchor>
-      <arglist>() const =0</arglist>
+      <anchor>aa4b4cc6046d9e45732e9f882b5dd4513</anchor>
+      <arglist>(bool allowReadOnly=true) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QVariant</type>
@@ -21317,6 +21248,13 @@
       <name>GetMetaInfoDescription</name>
       <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
       <anchor>a525fb0ef7afca405c433d165f9ce9c52</anchor>
+      <arglist>(int metaInfoType) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsMetaInfoWritable</name>
+      <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
+      <anchor>a7e8193c94b41195f0955566bfe5a3a7b</anchor>
       <arglist>(int metaInfoType) const =0</arglist>
     </member>
   </compound>
@@ -23349,6 +23287,7 @@
     <class kind="class">iimg::CBitmap</class>
     <class kind="class">iimg::CBitmapBase</class>
     <class kind="class">iimg::CBitmapDocument</class>
+    <class kind="class">iimg::CBitmapDocumentFilePersistenceComp</class>
     <class kind="class">iimg::CBitmapLoaderComp</class>
     <class kind="class">iimg::CBitmapSurface</class>
     <class kind="class">iimg::CComposedBitmapProviderComp</class>
@@ -23742,6 +23681,78 @@
       <anchorfile>classiimg_1_1_c_bitmap_document.html</anchorfile>
       <anchor>a3301937463965d523bbafab2bd2a3176</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iimg::CBitmapDocumentFilePersistenceComp</name>
+    <filename>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base virtualness="virtual">ifile::IFilePersistence</base>
+    <member kind="enumeration">
+      <name>OperationMode</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
+      <anchor>acfe83e99b27f4018c5d85054a538f743</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>OM_FLAT</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
+      <anchor>acfe83e99b27f4018c5d85054a538f743a99ba696c32f0101dbfd4b3c556d21594</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>OM_FOLDER</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
+      <anchor>acfe83e99b27f4018c5d85054a538f743aa94bd3b57672617539bf9aaac7a82aac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>OM_COMPRESSED_FOLDER</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
+      <anchor>acfe83e99b27f4018c5d85054a538f743ac2020dce2250643be323ed735db513f0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
+      <anchor>ab84b5d1830b1ef25551fb7fdf2e1f1b2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOperationSupported</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
+      <anchor>a7a387868462afbc6879ef79dfb170333</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>LoadFromFile</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
+      <anchor>a0c4cfcc4fd0656a0a4ed903a0a17058c</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>SaveToFile</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
+      <anchor>a773ca9169c1140a801c288e3c0d1abe7</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
+      <anchor>a51ce9946bf913fa3e3d4dc335cb464e1</anchor>
+      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
+      <anchor>ac986556164c2b9ad2df05ef5e0f62aff</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -35806,6 +35817,7 @@
     <class kind="class">iqtdoc::CMainWindowGuiComp</class>
     <class kind="class">iqtdoc::CMultiDocumentWorkspaceGuiComp</class>
     <class kind="class">iqtdoc::CSingleDocumentWorkspaceGuiComp</class>
+    <class kind="class">iqtdoc::CSingletonDocApplicationComp</class>
     <class kind="class">iqtdoc::CStaticHelpFileProviderComp</class>
     <class kind="class">iqtdoc::TQtDocumentManagerWrap</class>
   </compound>
@@ -36724,6 +36736,97 @@
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
       <anchor>af42445991a29be81209d923ebd727dd1</anchor>
       <arglist>(const QSettings &amp;settings)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtdoc::CSingletonDocApplicationComp</name>
+    <filename>classiqtdoc_1_1_c_singleton_doc_application_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base protection="protected">TSingleModelObserverBase&lt; ibase::IRuntimeStatusProvider &gt;</base>
+    <base virtualness="virtual">ibase::IApplication</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtdoc_1_1_c_singleton_doc_application_comp.html</anchorfile>
+      <anchor>a54ccaba76ea369f120b8d339f97b2bda</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::TSingleModelObserverBase&lt; ibase::IRuntimeStatusProvider &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiqtdoc_1_1_c_singleton_doc_application_comp.html</anchorfile>
+      <anchor>a60bd63eaaa4c4982716b0b49cb5306a4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtdoc_1_1_c_singleton_doc_application_comp.html</anchorfile>
+      <anchor>a08a91eb761b5b01215ac0c52782c48e3</anchor>
+      <arglist>(m_slaveGuiApplicationCompPtr, m_slaveApplicationCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtdoc_1_1_c_singleton_doc_application_comp.html</anchorfile>
+      <anchor>a2d80fbc1ff2b77ab4e0a794c0a56be38</anchor>
+      <arglist>(m_runtimeStatusProviderModelCompPtr, m_runtimeStatusProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSingletonDocApplicationComp</name>
+      <anchorfile>classiqtdoc_1_1_c_singleton_doc_application_comp.html</anchorfile>
+      <anchor>a04845e534b9bf884567d90ca37376cde</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InitializeApplication</name>
+      <anchorfile>classiqtdoc_1_1_c_singleton_doc_application_comp.html</anchorfile>
+      <anchor>a7192448b4560dfdc0afdb8bc1fd527d6</anchor>
+      <arglist>(int argc, char **argv)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>Execute</name>
+      <anchorfile>classiqtdoc_1_1_c_singleton_doc_application_comp.html</anchorfile>
+      <anchor>ab584649d413025e79a05a2753de3ec96</anchor>
+      <arglist>(int argc, char **argv)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetHelpText</name>
+      <anchorfile>classiqtdoc_1_1_c_singleton_doc_application_comp.html</anchorfile>
+      <anchor>a4b938fe8221c409534dd847dff82995c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QStringList</type>
+      <name>GetApplicationArguments</name>
+      <anchorfile>classiqtdoc_1_1_c_singleton_doc_application_comp.html</anchorfile>
+      <anchor>a8cb611b01a919f8cfa4022b1f0dc2f1d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classiqtdoc_1_1_c_singleton_doc_application_comp.html</anchorfile>
+      <anchor>a178c41196066b31a890e3b9c16de002a</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtdoc_1_1_c_singleton_doc_application_comp.html</anchorfile>
+      <anchor>a083b8b8e0275ddcdf12196dc3a132ad3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqtdoc_1_1_c_singleton_doc_application_comp.html</anchorfile>
+      <anchor>a0d7499cb06ae25a2338af35e220d54c9</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
