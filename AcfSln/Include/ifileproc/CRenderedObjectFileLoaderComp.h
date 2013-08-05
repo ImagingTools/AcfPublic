@@ -1,8 +1,8 @@
 /********************************************************************************
 **
-**	Copyright (C) 2007-2013 Witold Gantzke & Kirill Lepskiy
+**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -15,33 +15,28 @@
 **	contact us at info@imagingtools.de.
 **
 ** 	See http://www.ilena.org, write info@imagingtools.de or contact
-**	by Skype to ACF_infoline for further information about the ACF.
+**	by Skype to ACF_infoline for further information about the ACF-Solutions.
 **
 ********************************************************************************/
 
 
-#ifndef iqt_CRenderedObjectFileLoaderComp_included
-#define iqt_CRenderedObjectFileLoaderComp_included
+#ifndef ifileproc_CRenderedObjectFileLoaderComp_included
+#define ifileproc_CRenderedObjectFileLoaderComp_included
 
 
 // Qt includes
 #include <QtCore/QDateTime>
 
-
 // ACF includes
 #include "istd/TSmartPtr.h"
-
-#include "ifile/IFilePersistence.h"
 #include "iser/ISerializable.h"
-
 #include "icomp/CComponentBase.h"
-
 #include "ibase/IObjectSnap.h"
-
+#include "ifile/IFilePersistence.h"
 #include "iimg/CBitmap.h"
 
 
-namespace iqt
+namespace ifileproc
 {
 
 
@@ -101,9 +96,9 @@ private:
 };
 
 
-} // namespace iqt
+} // namespace ifileproc
 
 
-#endif // !iqt_CRenderedObjectFileLoaderComp_included
+#endif // !ifileproc_CRenderedObjectFileLoaderComp_included
 
 

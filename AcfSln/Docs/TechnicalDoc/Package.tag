@@ -724,6 +724,13 @@
     <namespace>ifileproc</namespace>
   </compound>
   <compound kind="file">
+    <name>CRenderedObjectFileLoaderComp.h</name>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
+    <filename>_c_rendered_object_file_loader_comp_8h</filename>
+    <class kind="class">ifileproc::CRenderedObjectFileLoaderComp</class>
+    <namespace>ifileproc</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSelectableFileConverterComp.h</name>
     <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_selectable_file_converter_comp_8h</filename>
@@ -9271,6 +9278,7 @@
     <class kind="class">ifileproc::CFileNamingParamsComp</class>
     <class kind="class">ifileproc::CFilePathesContainer</class>
     <class kind="class">ifileproc::CProcessingResultsReviewComp</class>
+    <class kind="class">ifileproc::CRenderedObjectFileLoaderComp</class>
     <class kind="class">ifileproc::CSelectableFileConverterComp</class>
     <class kind="class">ifileproc::IFileConvertCopy</class>
     <class kind="class">ifileproc::IFileNaming</class>
@@ -9742,6 +9750,62 @@
       <anchorfile>classifileproc_1_1_c_processing_results_review_comp.html</anchorfile>
       <anchor>a18f4dcff96bb067b4e0985fba07f5442</anchor>
       <arglist>(const QString &amp;filePath, iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifileproc::CRenderedObjectFileLoaderComp</name>
+    <filename>classifileproc_1_1_c_rendered_object_file_loader_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">ifile::IFilePersistence</base>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifileproc_1_1_c_rendered_object_file_loader_comp.html</anchorfile>
+      <anchor>ab6087d38c67a741f63b8911c320c6895</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOperationSupported</name>
+      <anchorfile>classifileproc_1_1_c_rendered_object_file_loader_comp.html</anchorfile>
+      <anchor>ac7b25f57cbbe9139c8954b0d451bd90c</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>LoadFromFile</name>
+      <anchorfile>classifileproc_1_1_c_rendered_object_file_loader_comp.html</anchorfile>
+      <anchor>a28cbed2941a9df09faedaf88edc52778</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>SaveToFile</name>
+      <anchorfile>classifileproc_1_1_c_rendered_object_file_loader_comp.html</anchorfile>
+      <anchor>a8cf4eb89e4a6b4a5c4ef0a9a69e91b34</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classifileproc_1_1_c_rendered_object_file_loader_comp.html</anchorfile>
+      <anchor>a5d27e1d05b83ef8699669435626d53f3</anchor>
+      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classifileproc_1_1_c_rendered_object_file_loader_comp.html</anchorfile>
+      <anchor>a07cc9f91ef7dbc1a99862d65bfc94a4e</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classifileproc_1_1_c_rendered_object_file_loader_comp.html</anchorfile>
+      <anchor>a6301b35430801c6b762e20781843126d</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">

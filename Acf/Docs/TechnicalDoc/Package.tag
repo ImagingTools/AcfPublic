@@ -2142,8 +2142,8 @@
     <name>CGeneratedFileNameParamComp.h</name>
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_c_generated_file_name_param_comp_8h</filename>
-    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
+    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
     <includes id="_c_relative_file_name_param_comp_8h" name="CRelativeFileNameParamComp.h" local="yes" imported="no">ifile/CRelativeFileNameParamComp.h</includes>
     <class kind="class">ifile::CGeneratedFileNameParamComp</class>
     <namespace>ifile</namespace>
@@ -2213,8 +2213,10 @@
     <filename>ifile_8h</filename>
     <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <includes id="imod_8h" name="imod.h" local="yes" imported="no">imod/imod.h</includes>
+    <includes id="ibase_8h" name="ibase.h" local="yes" imported="no">ibase/ibase.h</includes>
     <includes id="iser_8h" name="iser.h" local="yes" imported="no">iser/iser.h</includes>
     <includes id="icomp_8h" name="icomp.h" local="yes" imported="no">icomp/icomp.h</includes>
+    <includes id="ilog_8h" name="ilog.h" local="yes" imported="no">ilog/ilog.h</includes>
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
@@ -3541,19 +3543,6 @@
     <includes id="_c_memory_write_archive_8h" name="CMemoryWriteArchive.h" local="yes" imported="no">iser/CMemoryWriteArchive.h</includes>
     <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
     <class kind="class">iqt::CNetworkWriteArchive</class>
-    <namespace>iqt</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CRenderedObjectFileLoaderComp.h</name>
-    <path>C:/Temp/Acf/Include/iqt/</path>
-    <filename>_c_rendered_object_file_loader_comp_8h</filename>
-    <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="yes" imported="no">istd/TSmartPtr.h</includes>
-    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
-    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_object_snap_8h" name="IObjectSnap.h" local="yes" imported="no">ibase/IObjectSnap.h</includes>
-    <includes id="_c_bitmap_8h" name="CBitmap.h" local="yes" imported="no">iimg/CBitmap.h</includes>
-    <class kind="class">iqt::CRenderedObjectFileLoaderComp</class>
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
@@ -32945,7 +32934,6 @@
     <class kind="class">iqt::CClipboardSerializerComp</class>
     <class kind="class">iqt::CIniSettingsProviderComp</class>
     <class kind="class">iqt::CNetworkWriteArchive</class>
-    <class kind="class">iqt::CRenderedObjectFileLoaderComp</class>
     <class kind="class">iqt::CSettingsArchiveBase</class>
     <class kind="class">iqt::CSettingsReadArchive</class>
     <class kind="class">iqt::CSettingsSerializerComp</class>
@@ -33188,62 +33176,6 @@
       <anchorfile>classiqt_1_1_c_network_write_archive.html</anchorfile>
       <anchor>aced76891b36a1dab4e5f6f1ef3bf9123</anchor>
       <arglist>(void *dataPtr, int size)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt::CRenderedObjectFileLoaderComp</name>
-    <filename>classiqt_1_1_c_rendered_object_file_loader_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">ifile::IFilePersistence</base>
-    <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt_1_1_c_rendered_object_file_loader_comp.html</anchorfile>
-      <anchor>a0f8989232abed2886fc3da546413340f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsOperationSupported</name>
-      <anchorfile>classiqt_1_1_c_rendered_object_file_loader_comp.html</anchorfile>
-      <anchor>a5255324ffa68cc721b78ec5198b91bf1</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>LoadFromFile</name>
-      <anchorfile>classiqt_1_1_c_rendered_object_file_loader_comp.html</anchorfile>
-      <anchor>a3780952969ad6243beef39e890a0d7d7</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>SaveToFile</name>
-      <anchorfile>classiqt_1_1_c_rendered_object_file_loader_comp.html</anchorfile>
-      <anchor>a96509b8fc9bdbb3afe8bb24e9ac59ede</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetFileExtensions</name>
-      <anchorfile>classiqt_1_1_c_rendered_object_file_loader_comp.html</anchorfile>
-      <anchor>a86765ff2560087bd31275196da4eb960</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetTypeDescription</name>
-      <anchorfile>classiqt_1_1_c_rendered_object_file_loader_comp.html</anchorfile>
-      <anchor>ac4bab7a0ae2f364dd36832567f30b5e8</anchor>
-      <arglist>(const QString *extensionPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiqt_1_1_c_rendered_object_file_loader_comp.html</anchorfile>
-      <anchor>ac515121b82b2b3964f6daf7b2ba1b770</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">

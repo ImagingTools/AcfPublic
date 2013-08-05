@@ -7,7 +7,7 @@
           0
         </Id>
         <Number>
-          3012
+          3079
         </Number>
         <Description>
           ACF
@@ -18,7 +18,7 @@
           1
         </Id>
         <Number>
-          890
+          983
         </Number>
         <Description>
           ACF-Solutions
@@ -43,10 +43,24 @@
         AutoPersistence
       </ComponentName>
       <X>
-        425
+        600
       </X>
       <X>
-        375
+        475
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        FilePreviewGui
+      </ComponentName>
+      <X>
+        600
+      </X>
+      <X>
+        175
       </X>
       <Note>
         
@@ -57,7 +71,7 @@
         BinaryFileSerializer
       </ComponentName>
       <X>
-        425
+        875
       </X>
       <X>
         475
@@ -71,10 +85,10 @@
         ImageView
       </ComponentName>
       <X>
-        925
+        300
       </X>
       <X>
-        400
+        175
       </X>
       <Note>
         
@@ -85,24 +99,10 @@
         File
       </ComponentName>
       <X>
-        200
-      </X>
-      <X>
         375
       </X>
-      <Note>
-        
-      </Note>
-    </Element>
-    <Element>
-      <ComponentName>
-        ObjectPreviewGui
-      </ComponentName>
       <X>
-        700
-      </X>
-      <X>
-        275
+        475
       </X>
       <Note>
         
@@ -113,10 +113,10 @@
         Bitmap
       </ComponentName>
       <X>
-        925
+        875
       </X>
       <X>
-        150
+        175
       </X>
       <Note>
         
@@ -127,10 +127,10 @@
         RenderedObjectFileLoader
       </ComponentName>
       <X>
-        425
+        600
       </X>
       <X>
-        275
+        350
       </X>
       <Note>
         

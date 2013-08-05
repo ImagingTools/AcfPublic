@@ -25,10 +25,8 @@
 
 
 // ACF includes
-#include "ifile/IFileTypeInfo.h"
-
 #include "ilog/TLoggerCompWrap.h"
-
+#include "ifile/IFileTypeInfo.h"
 #include "ifile/CRelativeFileNameParamComp.h"
 
 

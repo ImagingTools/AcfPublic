@@ -40,6 +40,7 @@
 #include "ifileproc/CFileInfoCopyComp.h"
 #include "ifileproc/CFileCopyOverLoaderComp.h"
 #include "ifileproc/CCopyAppComp.h"
+#include "ifileproc/CRenderedObjectFileLoaderComp.h"
 
 
 /**
@@ -69,7 +70,7 @@ typedef ifileproc::CProcessingResultsReviewComp ProcessingResultsReview;
 typedef ifileproc::CFileInfoCopyComp FileInfoCopy;
 typedef ifileproc::CFileCopyOverLoaderComp FileCopyOverLoader;
 typedef ifileproc::CCopyAppComp CopyApp;
-
+typedef ifileproc::CRenderedObjectFileLoaderComp RenderedObjectFileLoader;
 
 } // namespace FileProcessingPck
 

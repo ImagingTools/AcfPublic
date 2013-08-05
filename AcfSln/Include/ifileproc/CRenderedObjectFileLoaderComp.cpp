@@ -1,8 +1,8 @@
 /********************************************************************************
 **
-**	Copyright (C) 2007-2013 Witold Gantzke & Kirill Lepskiy
+**	Copyright (c) 2007-2011 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -15,12 +15,12 @@
 **	contact us at info@imagingtools.de.
 **
 ** 	See http://www.ilena.org, write info@imagingtools.de or contact
-**	by Skype to ACF_infoline for further information about the ACF.
+**	by Skype to ACF_infoline for further information about the ACF-Solutions.
 **
 ********************************************************************************/
 
 
-#include "iqt/CRenderedObjectFileLoaderComp.h"
+#include "ifileproc/CRenderedObjectFileLoaderComp.h"
 
 
 // Qt includes
@@ -28,15 +28,12 @@
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
-
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
 #include "iser/CPrimitiveTypesSerializer.h"
 
-#include "iimg/IBitmap.h"
 
-
-namespace iqt
+namespace ifileproc
 {
 
 
@@ -218,6 +215,6 @@ bool CRenderedObjectFileLoaderComp::Serialize(iser::IArchive& archive)
 }
 
 
-} // namespace iqt
+} // namespace ifileproc
 
 
