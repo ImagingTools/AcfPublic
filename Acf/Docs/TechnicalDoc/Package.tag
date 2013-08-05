@@ -20031,8 +20031,8 @@
       <type>virtual QString</type>
       <name>GetSaveFilePath</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>aec2496b47f95b9594b3a0b9116f07470</anchor>
-      <arglist>(const QByteArray &amp;documentTypeId) const =0</arglist>
+      <anchor>a7f82067efd187c08a2d9edc1f0c14d66</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, const QString &amp;currentFilePath) const =0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
@@ -20477,8 +20477,8 @@
       <type>virtual QString</type>
       <name>GetSaveFilePath</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>aec2461dc19bdd7095aa76a4c29717449</anchor>
-      <arglist>(const QByteArray &amp;documentTypeId) const =0</arglist>
+      <anchor>ab55d201a25fd24623bdbe89430c017d4</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, const QString &amp;currentFilePath) const =0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
@@ -36894,8 +36894,8 @@
       <type>virtual QString</type>
       <name>GetSaveFilePath</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
-      <anchor>af75f33d5dabd8a3cfd63574c9d2b441b</anchor>
-      <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
+      <anchor>a64cf2461202fc1a33bba0630b80dd004</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, const QString &amp;currentFilePath) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>QStringList</type>

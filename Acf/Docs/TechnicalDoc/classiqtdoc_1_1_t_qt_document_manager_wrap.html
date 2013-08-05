@@ -64,7 +64,7 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a943e07ce3fa46e4e722c1b064e72c6cb">OnRestoreSettings</a> (const QSettings &amp;settings)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#af5a2a46082ba3bf9e24b7fc67f117f42">OnSaveSettings</a> (QSettings &amp;settings) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#af75f33d5dabd8a3cfd63574c9d2b441b">GetSaveFilePath</a> (const QByteArray &amp;documentTypeId) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a64cf2461202fc1a33bba0630b80dd004">GetSaveFilePath</a> (const QByteArray &amp;documentTypeId, const QString &amp;currentFilePath) const </td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#aa8a660ca9060d2f9b99d71238e2d0fa1">CreateFileDialogFilters</a> (const QByteArray *documentTypeIdPtr=NULL, int flags=0) const </td></tr>
@@ -152,7 +152,7 @@ template&lt;class Base , class Gui &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_t_qt_document_manager_wrap_8h_source.html#l00098">98</a> of file <a class="el" href="_t_qt_document_manager_wrap_8h_source.html">TQtDocumentManagerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_qt_document_manager_wrap_8h_source.html#l00105">105</a> of file <a class="el" href="_t_qt_document_manager_wrap_8h_source.html">TQtDocumentManagerWrap.h</a>.</p>
 
 <p>References <a class="el" href="classifilegui_1_1_c_file_dialog_loader_comp.html#adc4e078614a767ae437c4293e38b119a">ifilegui::CFileDialogLoaderComp::AppendLoaderFilterList()</a>, <a class="el" href="istd_8h_source.html#l00061">NULL</a>, and <a class="el" href="_i_file_type_info_8h_source.html#l00033">ifile::IFileTypeInfo::QF_SAVE</a>.</p>
 
@@ -175,13 +175,13 @@ template&lt;class Base , class Gui &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_qt_document_manager_wrap_8h_source.html#l00140">140</a> of file <a class="el" href="_t_qt_document_manager_wrap_8h_source.html">TQtDocumentManagerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_qt_document_manager_wrap_8h_source.html#l00147">147</a> of file <a class="el" href="_t_qt_document_manager_wrap_8h_source.html">TQtDocumentManagerWrap.h</a>.</p>
 
 <p>References <a class="el" href="_i_file_type_info_8h_source.html#l00041">ifile::IFileTypeInfo::QF_FILE</a>, and <a class="el" href="_i_file_type_info_8h_source.html#l00037">ifile::IFileTypeInfo::QF_LOAD</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af75f33d5dabd8a3cfd63574c9d2b441b"></a><!-- doxytag: member="iqtdoc::TQtDocumentManagerWrap::GetSaveFilePath" ref="af75f33d5dabd8a3cfd63574c9d2b441b" args="(const QByteArray &amp;documentTypeId) const " -->
+<a class="anchor" id="a64cf2461202fc1a33bba0630b80dd004"></a><!-- doxytag: member="iqtdoc::TQtDocumentManagerWrap::GetSaveFilePath" ref="a64cf2461202fc1a33bba0630b80dd004" args="(const QByteArray &amp;documentTypeId, const QString &amp;currentFilePath) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -191,8 +191,18 @@ template&lt;class Base , class Gui &gt; </div>
           <td class="memname">QString <a class="el" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html">iqtdoc::TQtDocumentManagerWrap</a>&lt; <a class="el" href="class_base.html">Base</a>, Gui &gt;::GetSaveFilePath </td>
           <td>(</td>
           <td class="paramtype">const QByteArray &amp;&#160;</td>
-          <td class="paramname"><em>documentTypeId</em></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
+          <td class="paramname"><em>documentTypeId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>currentFilePath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -200,7 +210,7 @@ template&lt;class Base , class Gui &gt; </div>
 
 <p>Definition at line <a class="el" href="_t_qt_document_manager_wrap_8h_source.html#l00083">83</a> of file <a class="el" href="_t_qt_document_manager_wrap_8h_source.html">TQtDocumentManagerWrap.h</a>.</p>
 
-<p>References <a class="el" href="istd_8h_source.html#l00061">NULL</a>, <a class="el" href="_i_file_type_info_8h_source.html#l00041">ifile::IFileTypeInfo::QF_FILE</a>, and <a class="el" href="_i_file_type_info_8h_source.html#l00033">ifile::IFileTypeInfo::QF_SAVE</a>.</p>
+<p>References <a class="el" href="_i_file_type_info_8h_source.html#l00041">ifile::IFileTypeInfo::QF_FILE</a>, and <a class="el" href="_i_file_type_info_8h_source.html#l00033">ifile::IFileTypeInfo::QF_SAVE</a>.</p>
 
 </div>
 </div>
@@ -267,7 +277,7 @@ template&lt;class Base , class Gui &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_qt_document_manager_wrap_8h_source.html#l00131">131</a> of file <a class="el" href="_t_qt_document_manager_wrap_8h_source.html">TQtDocumentManagerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_qt_document_manager_wrap_8h_source.html#l00138">138</a> of file <a class="el" href="_t_qt_document_manager_wrap_8h_source.html">TQtDocumentManagerWrap.h</a>.</p>
 
 </div>
 </div>

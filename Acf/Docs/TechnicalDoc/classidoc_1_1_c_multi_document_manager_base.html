@@ -133,8 +133,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before view is removed.  <a href="#a41b03a6d47f8658e45de3a17b7d634ed"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a9d03420d4b2bc7866bdd4de16ac17aaa">GetOpenFilePaths</a> (const QByteArray *documentTypeIdPtr=NULL) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets open file names.  <a href="#a9d03420d4b2bc7866bdd4de16ac17aaa"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#aec2496b47f95b9594b3a0b9116f07470">GetSaveFilePath</a> (const QByteArray &amp;documentTypeId) const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets save file name.  <a href="#aec2496b47f95b9594b3a0b9116f07470"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a7f82067efd187c08a2d9edc1f0c14d66">GetSaveFilePath</a> (const QByteArray &amp;documentTypeId, const QString &amp;currentFilePath) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets save file name.  <a href="#a7f82067efd187c08a2d9edc1f0c14d66"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a73e8ae98de3d2f8216de50b8beb916ed">QueryDocumentSave</a> (const <a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html">SingleDocumentData</a> &amp;info, bool *ignoredPtr)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Query user if this document should be saved.  <a href="#a73e8ae98de3d2f8216de50b8beb916ed"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a4a6a52c74faee2a76a92f4d88783472d">SerializeOpenDocumentList</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
@@ -633,7 +633,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aec2496b47f95b9594b3a0b9116f07470"></a><!-- doxytag: member="idoc::CMultiDocumentManagerBase::GetSaveFilePath" ref="aec2496b47f95b9594b3a0b9116f07470" args="(const QByteArray &amp;documentTypeId) const =0" -->
+<a class="anchor" id="a7f82067efd187c08a2d9edc1f0c14d66"></a><!-- doxytag: member="idoc::CMultiDocumentManagerBase::GetSaveFilePath" ref="a7f82067efd187c08a2d9edc1f0c14d66" args="(const QByteArray &amp;documentTypeId, const QString &amp;currentFilePath) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -641,8 +641,18 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">virtual QString idoc::CMultiDocumentManagerBase::GetSaveFilePath </td>
           <td>(</td>
           <td class="paramtype">const QByteArray &amp;&#160;</td>
-          <td class="paramname"><em>documentTypeId</em></td><td>)</td>
-          <td> const<code> [protected, pure virtual]</code></td>
+          <td class="paramname"><em>documentTypeId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>currentFilePath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [protected, pure virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -650,7 +660,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Gets save file name. </p>
 
-<p>Implemented in <a class="el" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#af75f33d5dabd8a3cfd63574c9d2b441b">iqtdoc::TQtDocumentManagerWrap&lt; idoc::CMultiDocumentManagerBase, iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QMdiArea &gt; &gt; &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classiqtdoc_1_1_t_qt_document_manager_wrap.html#a64cf2461202fc1a33bba0630b80dd004">iqtdoc::TQtDocumentManagerWrap&lt; idoc::CMultiDocumentManagerBase, iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QMdiArea &gt; &gt; &gt;</a>.</p>
 
 </div>
 </div>

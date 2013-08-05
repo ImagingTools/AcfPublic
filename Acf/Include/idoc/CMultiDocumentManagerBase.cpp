@@ -291,7 +291,7 @@ bool CMultiDocumentManagerBase::SaveDocument(
 	requestFileName  = requestFileName || filePath.isEmpty();
 
 	if (requestFileName){
-		filePath = GetSaveFilePath(infoPtr->documentTypeId);
+		filePath = GetSaveFilePath(infoPtr->documentTypeId, filePath);
 		if (filePath.isEmpty()){
 			return true;
 		}

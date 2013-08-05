@@ -236,7 +236,7 @@ bool CSingleDocumentManagerBase::SaveDocument(
 	requestFileName  = requestFileName || filePath.isEmpty();
 
 	if (requestFileName){
-		filePath = GetSaveFilePath(m_documentTypeId);
+		filePath = GetSaveFilePath(m_documentTypeId, filePath);
 
 		if (filePath.isEmpty()){
 			return true;
