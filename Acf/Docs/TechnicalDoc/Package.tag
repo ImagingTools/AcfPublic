@@ -14697,6 +14697,13 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function">
+      <type>double</type>
+      <name>GetDeltaE</name>
+      <anchorfile>classicmm_1_1_c_lab.html</anchorfile>
+      <anchor>a426c27302d0ada4ca03586b9a5ef6653</anchor>
+      <arglist>(const CLab &amp;lab) const </arglist>
+    </member>
+    <member kind="function">
       <type>CLab</type>
       <name>operator+</name>
       <anchorfile>classicmm_1_1_c_lab.html</anchorfile>
@@ -21583,7 +21590,6 @@
     <filename>classidoc_1_1_t_multi_page_document_wrap.html</filename>
     <templarg></templarg>
     <base virtualness="virtual">Base</base>
-    <base>idoc::CStandardDocumentMetaInfo</base>
     <base virtualness="virtual">iprm::IOptionsList</base>
     <class kind="struct">idoc::TMultiPageDocumentWrap::Page</class>
     <member kind="typedef">
@@ -21591,13 +21597,6 @@
       <name>BaseClass</name>
       <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
       <anchor>a18c4f12c76b060a504bd198577569c69</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>CStandardDocumentMetaInfo</type>
-      <name>BaseClass2</name>
-      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
-      <anchor>aeee7dbd83cd9aafae794b668d85fdf3f</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -21710,6 +21709,13 @@
       <name>m_documentPages</name>
       <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
       <anchor>a49918c5f92f9611dbb86363fca61c0e8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>CStandardDocumentMetaInfo</type>
+      <name>m_metaInfo</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>ac1fd4adcb3266b0fa85a868b787a6872</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -23742,6 +23748,13 @@
       <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
       <anchor>ac986556164c2b9ad2df05ef5e0f62aff</anchor>
       <arglist>(const QString *extensionPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
+      <anchor>a94561f554f281017117f98bebf0ad9e2</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

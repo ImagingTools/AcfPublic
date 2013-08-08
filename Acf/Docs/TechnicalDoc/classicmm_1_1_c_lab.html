@@ -78,6 +78,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmm_1_1_c_lab.html#ae2e60abe2f0b69f05b2eba7500d95862">SetB</a> (double value)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmm_1_1_c_lab.html#a166e2ad58c35fd181c738a03f8d8ebc9">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a166e2ad58c35fd181c738a03f8d8ebc9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmm_1_1_c_lab.html#a426c27302d0ada4ca03586b9a5ef6653">GetDeltaE</a> (const <a class="el" href="classicmm_1_1_c_lab.html">CLab</a> &amp;lab) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classicmm_1_1_c_lab.html">CLab</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmm_1_1_c_lab.html#a5f291b7ab201fa04ce1351fc065ab3a9">operator+</a> (const <a class="el" href="classicmm_1_1_c_lab.html">CLab</a> &amp;color) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classicmm_1_1_c_lab.html">CLab</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmm_1_1_c_lab.html#aa4933695da787e4224a67e7f2c73e7bd">operator-</a> (const <a class="el" href="classicmm_1_1_c_lab.html">CLab</a> &amp;color) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classicmm_1_1_c_lab.html">CLab</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicmm_1_1_c_lab.html#a8406669ed9fd27bbcec41675fbd7092e">operator*</a> (const <a class="el" href="classicmm_1_1_c_lab.html">CLab</a> &amp;color) const </td></tr>
@@ -173,7 +174,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00066">66</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00068">68</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
 
 <p>References <a class="el" href="_c_lab_8h_source.html#l00026">CI_A</a>, <a class="el" href="_c_lab_8h_source.html#l00027">CI_B</a>, <a class="el" href="_c_lab_8h_source.html#l00025">CI_L</a>, and <a class="el" href="classimath_1_1_t_vector.html#aefb4e0720e2623b16b5be4aa5cb2a249">imath::TVector&lt; Size &gt;::SetElement()</a>.</p>
 
@@ -194,7 +195,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00074">74</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00076">76</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
 
 </div>
 </div>
@@ -213,7 +214,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00097">97</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00099">99</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
 
 <p>References <a class="el" href="_c_lab_8h_source.html#l00026">CI_A</a>, and <a class="el" href="classimath_1_1_t_vector.html#abc29b4e0177a55eca638ab989fc6281f">imath::TVector&lt; Size &gt;::GetElement()</a>.</p>
 
@@ -233,9 +234,26 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00109">109</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00111">111</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
 
 <p>References <a class="el" href="_c_lab_8h_source.html#l00027">CI_B</a>, and <a class="el" href="classimath_1_1_t_vector.html#abc29b4e0177a55eca638ab989fc6281f">imath::TVector&lt; Size &gt;::GetElement()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a426c27302d0ada4ca03586b9a5ef6653"></a><!-- doxytag: member="icmm::CLab::GetDeltaE" ref="a426c27302d0ada4ca03586b9a5ef6653" args="(const CLab &amp;lab) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double icmm::CLab::GetDeltaE </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classicmm_1_1_c_lab.html">CLab</a> &amp;&#160;</td>
+          <td class="paramname"><em>lab</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -253,7 +271,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00085">85</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00087">87</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
 
 <p>References <a class="el" href="_c_lab_8h_source.html#l00025">CI_L</a>, and <a class="el" href="classimath_1_1_t_vector.html#abc29b4e0177a55eca638ab989fc6281f">imath::TVector&lt; Size &gt;::GetElement()</a>.</p>
 
@@ -274,7 +292,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00143">143</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00145">145</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
 
 </div>
 </div>
@@ -295,7 +313,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classicmm_1_1_t_composed_color.html#aa27366ed0afb6db633adfa21135d0a91">icmm::TComposedColor&lt; 3 &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00163">163</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00165">165</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
 
 </div>
 </div>
@@ -314,7 +332,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00207">207</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00209">209</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
 
 <p>References <a class="el" href="classicmm_1_1_t_composed_color.html#a4e03f5914731dd93f863e51342206b17">icmm::TComposedColor&lt; 3 &gt;::operator*=()</a>.</p>
 
@@ -337,7 +355,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classicmm_1_1_t_composed_color.html#a6340215fd524d203720137f2563c42d9">icmm::TComposedColor&lt; 3 &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00223">223</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00225">225</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
 
 <p>References <a class="el" href="classicmm_1_1_t_composed_color.html#a4e03f5914731dd93f863e51342206b17">icmm::TComposedColor&lt; 3 &gt;::operator*=()</a>.</p>
 
@@ -358,7 +376,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00123">123</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00125">125</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
 
 </div>
 </div>
@@ -377,7 +395,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00191">191</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00193">193</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
 
 <p>References <a class="el" href="classicmm_1_1_t_composed_color.html#a3e004c3ebfdc069e75edbcea0cb8841c">icmm::TComposedColor&lt; 3 &gt;::operator+=()</a>.</p>
 
@@ -398,7 +416,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00133">133</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00135">135</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
 
 </div>
 </div>
@@ -417,7 +435,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00199">199</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00201">201</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
 
 <p>References <a class="el" href="classicmm_1_1_t_composed_color.html#a46bdde76402673a68593728aa9648b21">icmm::TComposedColor&lt; 3 &gt;::operator-=()</a>.</p>
 
@@ -438,7 +456,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00153">153</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00155">155</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
 
 </div>
 </div>
@@ -459,7 +477,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classicmm_1_1_t_composed_color.html#a24d3e893508a37f1a79533f8855111cb">icmm::TComposedColor&lt; 3 &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00173">173</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00175">175</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
 
 </div>
 </div>
@@ -478,7 +496,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00215">215</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00217">217</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
 
 <p>References <a class="el" href="classicmm_1_1_t_composed_color.html#acdd443b8aa0577110ecc0aa42c471316">icmm::TComposedColor&lt; 3 &gt;::operator/=()</a>.</p>
 
@@ -501,7 +519,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classicmm_1_1_t_composed_color.html#a79e116f11276706590cdbe1b03f75e11">icmm::TComposedColor&lt; 3 &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00231">231</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00233">233</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
 
 <p>References <a class="el" href="classicmm_1_1_t_composed_color.html#acdd443b8aa0577110ecc0aa42c471316">icmm::TComposedColor&lt; 3 &gt;::operator/=()</a>.</p>
 
@@ -522,7 +540,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00183">183</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00185">185</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
 
 <p>References <a class="el" href="classicmm_1_1_t_composed_color.html#a11312889ee6e95c6452c1f4a93d64e2a">icmm::TComposedColor&lt; 3 &gt;::operator=()</a>.</p>
 
@@ -566,7 +584,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00103">103</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00105">105</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
 
 <p>References <a class="el" href="_c_lab_8h_source.html#l00026">CI_A</a>, and <a class="el" href="classimath_1_1_t_vector.html#aefb4e0720e2623b16b5be4aa5cb2a249">imath::TVector&lt; Size &gt;::SetElement()</a>.</p>
 
@@ -587,7 +605,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00115">115</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00117">117</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
 
 <p>References <a class="el" href="_c_lab_8h_source.html#l00027">CI_B</a>, and <a class="el" href="classimath_1_1_t_vector.html#aefb4e0720e2623b16b5be4aa5cb2a249">imath::TVector&lt; Size &gt;::SetElement()</a>.</p>
 
@@ -608,7 +626,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00091">91</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_lab_8h_source.html#l00093">93</a> of file <a class="el" href="_c_lab_8h_source.html">CLab.h</a>.</p>
 
 <p>References <a class="el" href="_c_lab_8h_source.html#l00025">CI_L</a>, and <a class="el" href="classimath_1_1_t_vector.html#aefb4e0720e2623b16b5be4aa5cb2a249">imath::TVector&lt; Size &gt;::SetElement()</a>.</p>
 
