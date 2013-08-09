@@ -20752,6 +20752,13 @@
       <anchor>a343c749f15a69fbdfc0beea040ece859</anchor>
       <arglist>(const IChangeable &amp;object) const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classidoc_1_1_c_standard_document_meta_info.html</anchorfile>
+      <anchor>a997cf798dabb131c38f90a9fcc266110</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>idoc::CTextDocumentComp</name>
