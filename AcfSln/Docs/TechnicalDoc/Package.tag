@@ -615,9 +615,9 @@
     <path>C:/Temp/AcfSln/Include/iedgegui/</path>
     <filename>_c_edge_lines_supplier_gui_comp_8h</filename>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_c_edge_line_container_8h" name="CEdgeLineContainer.h" local="yes" imported="no">iedge/CEdgeLineContainer.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="iqtipr_8h" name="iqtipr.h" local="yes" imported="no">iqtipr/iqtipr.h</includes>
-    <includes id="_c_edge_line_container_8h" name="CEdgeLineContainer.h" local="yes" imported="no">iedge/CEdgeLineContainer.h</includes>
     <class kind="class">iedgegui::CEdgeLinesSupplierGuiComp</class>
     <namespace>iedgegui</namespace>
   </compound>
@@ -2163,14 +2163,6 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>imf.h</name>
-    <path>C:/Temp/AcfSln/Include/imf/</path>
-    <filename>imf_8h</filename>
-    <includes id="iproc_8h" name="iproc.h" local="yes" imported="no">iproc/iproc.h</includes>
-    <includes id="iipr_8h" name="iipr.h" local="yes" imported="no">iipr/iipr.h</includes>
-    <namespace>imf</namespace>
-  </compound>
-  <compound kind="file">
     <name>IMediaController.h</name>
     <path>C:/Temp/AcfSln/Include/imm/</path>
     <filename>_i_media_controller_8h</filename>
@@ -2605,7 +2597,7 @@
     <name>CScaleCalibrationEditorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>_c_scale_calibration_editor_comp_8h</filename>
-    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <class kind="class">iqtcam::CScaleCalibrationEditorComp</class>
     <namespace>iqtcam</namespace>
   </compound>
@@ -2714,9 +2706,9 @@
     <name>CColorPatternComparatorGuiComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_color_pattern_comparator_gui_comp_8h</filename>
-    <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <class kind="class">iqtipr::CColorPatternComparatorGuiComp</class>
     <namespace>iqtipr</namespace>
   </compound>
@@ -2752,9 +2744,9 @@
     <name>CMultiLineProjectionSupplierGuiComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_multi_line_projection_supplier_gui_comp_8h</filename>
-    <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="_i_multi_data_sequence_provider_8h" name="IMultiDataSequenceProvider.h" local="yes" imported="no">imeas/IMultiDataSequenceProvider.h</includes>
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
+    <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <class kind="class">iqtipr::CMultiLineProjectionSupplierGuiComp</class>
     <namespace>iqtipr</namespace>
   </compound>
@@ -2762,8 +2754,8 @@
     <name>CMultiLineSupplierGuiComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_multi_line_supplier_gui_comp_8h</filename>
-    <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="_c_simple_numeric_value_provider_8h" name="CSimpleNumericValueProvider.h" local="yes" imported="no">imeas/CSimpleNumericValueProvider.h</includes>
+    <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <class kind="class">iqtipr::CMultiLineSupplierGuiComp</class>
     <class kind="class">iqtipr::CMultiLineSupplierGuiComp::LineSelection</class>
     <class kind="class">iqtipr::CMultiLineSupplierGuiComp::CShape</class>
@@ -18878,10 +18870,6 @@
       <anchor>a263bc6f83841516c121dd465b337e6e9</anchor>
       <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
-  </compound>
-  <compound kind="namespace">
-    <name>imf</name>
-    <filename>namespaceimf.html</filename>
   </compound>
   <compound kind="namespace">
     <name>imm</name>

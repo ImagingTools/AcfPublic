@@ -38,59 +38,60 @@
 <a name="l00012"></a>00012 <span class="preprocessor">#include &lt;QtGui/QGroupBox&gt;</span>
 <a name="l00013"></a>00013 <span class="preprocessor">#endif</span>
 <a name="l00014"></a>00014 <span class="preprocessor"></span>
-<a name="l00015"></a>00015 <span class="comment">// Acf includes</span>
+<a name="l00015"></a>00015 <span class="comment">// ACF includes</span>
 <a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_t_designer_gui_observer_comp_base_8h.html">iqtgui/TDesignerGuiObserverCompBase.h</a>&quot;</span>
-<a name="l00017"></a>00017 <span class="preprocessor">#include &lt;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_t_pointer_vector_8h.html">istd/TPointerVector.h</a>&gt;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_t_pointer_vector_8h.html">istd/TPointerVector.h</a>&quot;</span>
 <a name="l00018"></a>00018 
-<a name="l00019"></a>00019 <span class="comment">// AcfSln includes</span>
-<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;<a class="code" href="_i_numeric_value_provider_8h.html">imeas/INumericValueProvider.h</a>&gt;</span>
-<a name="l00021"></a>00021 <span class="preprocessor">#include &quot;Generated/ui_CScaleCalibrationEditorComp.h&quot;</span>
-<a name="l00022"></a>00022 
+<a name="l00019"></a>00019 <span class="comment">// ACF-Solutions includes</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="code" href="_i_numeric_value_provider_8h.html">imeas/INumericValueProvider.h</a>&quot;</span>
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 <span class="preprocessor">#include &quot;iqtcam/Generated/ui_CScaleCalibrationEditorComp.h&quot;</span>
 <a name="l00023"></a>00023 
-<a name="l00024"></a>00024 <span class="keyword">namespace </span>iqtcam
-<a name="l00025"></a>00025 {
-<a name="l00026"></a>00026 
+<a name="l00024"></a>00024 
+<a name="l00025"></a>00025 <span class="keyword">namespace </span>iqtcam
+<a name="l00026"></a>00026 {
 <a name="l00027"></a>00027 
-<a name="l00028"></a><a class="code" href="classiqtcam_1_1_c_scale_calibration_editor_comp.html">00028</a> <span class="keyword">class </span><a class="code" href="classiqtcam_1_1_c_scale_calibration_editor_comp.html">CScaleCalibrationEditorComp</a>:
-<a name="l00029"></a>00029                      <span class="keyword">public</span> iqtgui::TDesignerGuiObserverCompBase&lt;
-<a name="l00030"></a>00030                                           Ui::CScaleCalibrationEditorComp, imeas::INumericValue&gt;
-<a name="l00031"></a>00031 {
-<a name="l00032"></a>00032        Q_OBJECT
-<a name="l00033"></a>00033 <span class="keyword">public</span>:
-<a name="l00034"></a>00034        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase</a>&lt;
-<a name="l00035"></a><a class="code" href="classiqtcam_1_1_c_scale_calibration_editor_comp.html#a796add38f325a0903b86af77695a0ca5">00035</a>                             Ui::CScaleCalibrationEditorComp, <a class="code" href="classimeas_1_1_i_numeric_value.html" title="General parameter set containing list of numeric values.">imeas::INumericValue</a>&gt; <a class="code" href="classiqtcam_1_1_c_scale_calibration_editor_comp.html#a796add38f325a0903b86af77695a0ca5">BaseClass</a>;
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037        I_BEGIN_COMPONENT(<a class="code" href="classiqtcam_1_1_c_scale_calibration_editor_comp.html">CScaleCalibrationEditorComp</a>);
-<a name="l00038"></a>00038               I_ASSIGN(m_circleProviderPtr, <span class="stringliteral">&quot;CircleProvider&quot;</span>, <span class="stringliteral">&quot;External circle provider providing radius used for scale calibration\nThe provider must provide a numeric value of type VTI_RADIUS&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;CircleProvider&quot;</span>);
-<a name="l00039"></a>00039               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_i_model_editor.html">imod::IModelEditor</a>);
-<a name="l00040"></a>00040        I_END_COMPONENT;
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042 <span class="keyword">protected</span>:
-<a name="l00043"></a>00043        <span class="comment">// reimplemented (imod::IModelEditor)</span>
-<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_scale_calibration_editor_comp.html#aa575081126f42680a2ba1a7ce9c4ce65">UpdateModel</a>() <span class="keyword">const</span>;
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_scale_calibration_editor_comp.html#a51456bb8bf4f792b70306118444316d2">OnGuiCreated</a>();
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_scale_calibration_editor_comp.html#a54c2805661f1a0c3f1fd6eb886a4d7c7">UpdateGui</a>(<span class="keywordtype">int</span> changeFlags);
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052 <span class="keyword">private</span> Q_SLOTS:
-<a name="l00053"></a>00053        <span class="keywordtype">void</span> OnValueChanged(<span class="keywordtype">double</span>);
-<a name="l00054"></a>00054        <span class="keywordtype">void</span> on_CalibrateButton_clicked();
-<a name="l00055"></a>00055        <span class="keywordtype">void</span> on_NominalRadiusSpinBox_valueChanged(<span class="keywordtype">double</span> d);
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057 <span class="keyword">private</span>:
-<a name="l00058"></a>00058        I_REF(<a class="code" href="classimeas_1_1_i_numeric_value_provider.html" title="Provide access to the list of the numeric values.">imeas::INumericValueProvider</a>, m_circleProviderPtr);
-<a name="l00059"></a>00059 };
-<a name="l00060"></a>00060 
+<a name="l00028"></a>00028 
+<a name="l00029"></a><a class="code" href="classiqtcam_1_1_c_scale_calibration_editor_comp.html">00029</a> <span class="keyword">class </span><a class="code" href="classiqtcam_1_1_c_scale_calibration_editor_comp.html">CScaleCalibrationEditorComp</a>:
+<a name="l00030"></a>00030                      <span class="keyword">public</span> iqtgui::TDesignerGuiObserverCompBase&lt;
+<a name="l00031"></a>00031                                           Ui::CScaleCalibrationEditorComp, imeas::INumericValue&gt;
+<a name="l00032"></a>00032 {
+<a name="l00033"></a>00033        Q_OBJECT
+<a name="l00034"></a>00034 <span class="keyword">public</span>:
+<a name="l00035"></a>00035        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase</a>&lt;
+<a name="l00036"></a><a class="code" href="classiqtcam_1_1_c_scale_calibration_editor_comp.html#a796add38f325a0903b86af77695a0ca5">00036</a>                             Ui::CScaleCalibrationEditorComp, <a class="code" href="classimeas_1_1_i_numeric_value.html" title="General parameter set containing list of numeric values.">imeas::INumericValue</a>&gt; <a class="code" href="classiqtcam_1_1_c_scale_calibration_editor_comp.html#a796add38f325a0903b86af77695a0ca5">BaseClass</a>;
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038        I_BEGIN_COMPONENT(<a class="code" href="classiqtcam_1_1_c_scale_calibration_editor_comp.html">CScaleCalibrationEditorComp</a>);
+<a name="l00039"></a>00039               I_ASSIGN(m_circleProviderPtr, <span class="stringliteral">&quot;CircleProvider&quot;</span>, <span class="stringliteral">&quot;External circle provider providing radius used for scale calibration\nThe provider must provide a numeric value of type VTI_RADIUS&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;CircleProvider&quot;</span>);
+<a name="l00040"></a>00040               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_i_model_editor.html">imod::IModelEditor</a>);
+<a name="l00041"></a>00041        I_END_COMPONENT;
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043 <span class="keyword">protected</span>:
+<a name="l00044"></a>00044        <span class="comment">// reimplemented (imod::IModelEditor)</span>
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_scale_calibration_editor_comp.html#aa575081126f42680a2ba1a7ce9c4ce65">UpdateModel</a>() <span class="keyword">const</span>;
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_scale_calibration_editor_comp.html#a51456bb8bf4f792b70306118444316d2">OnGuiCreated</a>();
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtcam_1_1_c_scale_calibration_editor_comp.html#a54c2805661f1a0c3f1fd6eb886a4d7c7">UpdateGui</a>(<span class="keywordtype">int</span> changeFlags);
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053 <span class="keyword">private</span> Q_SLOTS:
+<a name="l00054"></a>00054        <span class="keywordtype">void</span> OnValueChanged(<span class="keywordtype">double</span>);
+<a name="l00055"></a>00055        <span class="keywordtype">void</span> on_CalibrateButton_clicked();
+<a name="l00056"></a>00056        <span class="keywordtype">void</span> on_NominalRadiusSpinBox_valueChanged(<span class="keywordtype">double</span> d);
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058 <span class="keyword">private</span>:
+<a name="l00059"></a>00059        I_REF(<a class="code" href="classimeas_1_1_i_numeric_value_provider.html" title="Provide access to the list of the numeric values.">imeas::INumericValueProvider</a>, m_circleProviderPtr);
+<a name="l00060"></a>00060 };
 <a name="l00061"></a>00061 
-<a name="l00062"></a>00062 } <span class="comment">// namespace iqtcam</span>
-<a name="l00063"></a>00063 
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063 } <span class="comment">// namespace iqtcam</span>
 <a name="l00064"></a>00064 
-<a name="l00065"></a>00065 <span class="preprocessor">#endif // !iqtcam_CScaleCalibrationEditorComp_included</span>
-<a name="l00066"></a>00066 <span class="preprocessor"></span>
-<a name="l00067"></a>00067 
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 <span class="preprocessor">#endif // !iqtcam_CScaleCalibrationEditorComp_included</span>
+<a name="l00067"></a>00067 <span class="preprocessor"></span>
+<a name="l00068"></a>00068 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

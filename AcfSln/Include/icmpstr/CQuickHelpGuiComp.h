@@ -43,7 +43,8 @@
 
 // ACF-Solutions includes
 #include "icmpstr/IExternalMetaInfoManager.h"
-#include "Generated/ui_CQuickHelpGuiComp.h"
+
+#include "icmpstr/Generated/ui_CQuickHelpGuiComp.h"
 
 
 namespace icmpstr

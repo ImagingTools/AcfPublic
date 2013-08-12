@@ -30,6 +30,7 @@
 
 // ACF-Solutions includes
 #include "iprop/IPropertiesManager.h"
+
 #include "iprop/Generated/ui_CPropertiesEditorComp.h"
 
 
@@ -59,7 +60,7 @@ public:
 	{
 		DR_PROPERTY_ID = Qt::UserRole + 1
 	};
-	
+
 	I_BEGIN_COMPONENT(CPropertiesEditorComp);
 	I_END_COMPONENT;
 

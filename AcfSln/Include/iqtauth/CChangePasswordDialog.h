@@ -35,7 +35,8 @@
 // ACF-Solutions includes
 #include "iauth/IUsersManager.h"
 #include "iauth/CUser.h"
-#include "Generated/ui_CChangePasswordDialog.h"
+
+#include "iqtauth/Generated/ui_CChangePasswordDialog.h"
 
 
 namespace iqtauth

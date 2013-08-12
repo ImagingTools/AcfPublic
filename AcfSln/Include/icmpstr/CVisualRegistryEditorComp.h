@@ -45,7 +45,7 @@
 #include "icmpstr/IElementSelectionInfo.h"
 #include "icmpstr/ISceneProvider.h"
 
-#include "Generated/ui_CVisualRegistryEditorComp.h"
+#include "icmpstr/Generated/ui_CVisualRegistryEditorComp.h"
 
 
 namespace icmpstr

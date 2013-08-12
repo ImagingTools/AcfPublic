@@ -33,7 +33,7 @@
 // ACF-Solutions includes
 #include "iauth/ILogin.h"
 
-#include "Generated/ui_CLoginBarGuiComp.h"
+#include "iqtauth/Generated/ui_CLoginBarGuiComp.h"
 
 
 namespace iqtauth

@@ -106,6 +106,10 @@ bool CBitmapDocument::CopyFrom(const istd::IChangeable& object, CompatibilityMod
 			}
 		}
 
+		if (!m_metaInfo.CopyFrom(sourcePtr->m_metaInfo)){
+			return false;
+		}
+
 		return true;
 	}
 

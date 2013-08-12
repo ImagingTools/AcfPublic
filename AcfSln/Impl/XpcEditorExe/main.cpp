@@ -22,7 +22,11 @@
 
 // Qt includes
 #include <QtCore/QCoreApplication>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QApplication>
+#else
 #include <QtGui/QApplication>
+#endif
 
 // ACF includes
 #include "ibase/IApplication.h"
@@ -35,6 +39,7 @@ int main(int argc, char *argv[])
 	Q_INIT_RESOURCE(iqtgui);
 	Q_INIT_RESOURCE(icmpstr);
 	Q_INIT_RESOURCE(AcfLoc);
+	Q_INIT_RESOURCE(AcfSlnLoc);
 	Q_INIT_RESOURCE(XpcEditor);
 
 	QApplication::setStyle("plastique");
