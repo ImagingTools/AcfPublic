@@ -70,7 +70,7 @@ void TObject2dCompWrap<BaseObject2d>::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
-	BaseClass2::SetCalibration(m_calibrationCompPtr.GetPtr());
+	BaseClass2::SetCalibration(m_calibrationCompPtr.GetPtr(), false);
 }
 
 

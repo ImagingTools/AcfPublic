@@ -8694,8 +8694,8 @@
       <type>virtual void</type>
       <name>SetCalibration</name>
       <anchorfile>classiedge_1_1_c_edge_line_container.html</anchorfile>
-      <anchor>a4143a7cb53add0f0da9322c8aac72c23</anchor>
-      <arglist>(const i2d::ICalibration2d *calibrationPtr)</arglist>
+      <anchor>acc135a4a96abf8a67ed94c38d9f0d02a</anchor>
+      <arglist>(const i2d::ICalibration2d *calibrationPtr, bool releaseFlag=false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual i2d::CVector2d</type>
@@ -15124,14 +15124,13 @@
   <compound kind="class">
     <name>iipr::CProcessedBitmapSupplierComp</name>
     <filename>classiipr_1_1_c_processed_bitmap_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; QPair&lt; const i2d::ICalibration2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <base>TSupplierCompWrap&lt; istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</base>
     <base virtualness="virtual">iimg::IBitmapProvider</base>
-    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; QPair&lt; const i2d::ICalibration2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>ae2360a51e0269fbe4cfc62f9d15a4154</anchor>
+      <anchor>a857e2002f2138bb2f1d092c1c864af30</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -15148,13 +15147,6 @@
       <anchor>a6ddc62f438e357669453ca2d2a22e68d</anchor>
       <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>aa74ec8673fc7c8e4f603c52f697ab262</anchor>
-      <arglist>(m_calibrationProviderCompPtr, m_bitmapProviderCompPtr, false)</arglist>
-    </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>EnsureBitmapCreated</name>
@@ -15167,13 +15159,6 @@
       <name>GetBitmap</name>
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
       <anchor>a4688ddf6927eaf785b7297c8acadaf9e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual const i2d::ICalibration2d *</type>
-      <name>GetCalibration</name>
-      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a911732ac8e8882f54474a4f7d9f6e8bc</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

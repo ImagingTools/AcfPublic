@@ -167,6 +167,7 @@
     <name>CObject2dBase.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_object2d_base_8h</filename>
+    <includes id="_t_opt_del_ptr_8h" name="TOptDelPtr.h" local="yes" imported="no">istd/TOptDelPtr.h</includes>
     <includes id="_i_object2d_8h" name="IObject2d.h" local="yes" imported="no">i2d/IObject2d.h</includes>
     <class kind="class">i2d::CObject2dBase</class>
     <namespace>i2d</namespace>
@@ -8534,18 +8535,18 @@
       <arglist>(const CObject2dBase &amp;object2d)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetCalibration</name>
-      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
-      <anchor>a213a59e47d3a6f059ee95fafd14d351a</anchor>
-      <arglist>(const ICalibration2d *calibrationPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual const ICalibration2d *</type>
       <name>GetCalibration</name>
       <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
       <anchor>a7c9398ad12709b1d17bbd82ff8c10776</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetCalibration</name>
+      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
+      <anchor>aefe511bf721267e25c2de981d9f03de0</anchor>
+      <arglist>(const ICalibration2d *calibrationPtr, bool releaseFlag=false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -11086,6 +11087,13 @@
       <anchorfile>classi2d_1_1_i_object2d.html</anchorfile>
       <anchor>aa8b9b2eddb7170b1ba39f3b0aeedc007</anchor>
       <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetCalibration</name>
+      <anchorfile>classi2d_1_1_i_object2d.html</anchorfile>
+      <anchor>a0a73ac291f4bae19635266ed416405f2</anchor>
+      <arglist>(const ICalibration2d *calibrationPtr, bool releaseFlag=false)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
