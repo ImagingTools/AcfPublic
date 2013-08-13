@@ -43016,7 +43016,7 @@
     <member kind="enumvalue">
       <name>MaxStringLength</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>a851d0f63ec0ba1881a97539124ae50d2a1a2beb3a975a90f733fb0c1ab64525be</anchor>
+      <anchor>ace5484bb81742dc03065371ebc73755fa1a2beb3a975a90f733fb0c1ab64525be</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -44591,7 +44591,7 @@
     <member kind="enumvalue">
       <name>UnknownVersion</name>
       <anchorfile>classiser_1_1_i_version_info.html</anchorfile>
-      <anchor>a3d035ccb76f6d08216cb9489b3ac8a94af9fa112e0f25b4bc6c7b7b7bc3ee742f</anchor>
+      <anchor>affca7b8e693c8044e1c8b514dc339d16af9fa112e0f25b4bc6c7b7b7bc3ee742f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -45241,7 +45241,7 @@
     <member kind="enumvalue">
       <name>MAX_ELEMENTS_COUNT</name>
       <anchorfile>classistd_1_1_c_fast_binary_index.html</anchorfile>
-      <anchor>a4a255df319de07e9ecf393ea3ab43207abbd51a4d709be2d7e1ab0cc554dd3944</anchor>
+      <anchor>a2a1cb502e298fc14ad0011fda8b95fa8abbd51a4d709be2d7e1ab0cc554dd3944</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -47536,7 +47536,7 @@
     <member kind="enumvalue">
       <name>DIMENSIONS</name>
       <anchorfile>classistd_1_1_t_index.html</anchorfile>
-      <anchor>a81e7d48bbfcd4598589908b536c4c9a0a45842b3fa4ac21fb16cb7a478a51ad6a</anchor>
+      <anchor>a38cfa93b2d421639bd3f3b57fefa7f60a45842b3fa4ac21fb16cb7a478a51ad6a</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -48186,7 +48186,7 @@
     <member kind="enumvalue">
       <name>InvalidIndex</name>
       <anchorfile>classistd_1_1_t_pointer_vector.html</anchorfile>
-      <anchor>aca8cd0dbd7c8efb794d487dfaac3fe42a5e9e43a0fe51bd123229d4b73c161110</anchor>
+      <anchor>ae6930ad62628e1422ca8e1bd749cb82ca5e9e43a0fe51bd123229d4b73c161110</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -49685,13 +49685,13 @@
     <member kind="enumvalue">
       <name>CONTROL_POINTS_COUNT</name>
       <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
-      <anchor>a6a81c5880b66a4c04c87e96fcf0d1bf7a7fb66a1f5e3ce4190017f22939c36afb</anchor>
+      <anchor>a4f0b1a35e6f3f0897968966d4a6e3f05a7fb66a1f5e3ce4190017f22939c36afb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>ACTIVE_POINTS_COUNT</name>
       <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
-      <anchor>a6a81c5880b66a4c04c87e96fcf0d1bf7a3776b7e973707d0c8d2a86abccc207e3</anchor>
+      <anchor>a4f0b1a35e6f3f0897968966d4a6e3f05a3776b7e973707d0c8d2a86abccc207e3</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
@@ -50597,7 +50597,7 @@
     <member kind="enumvalue">
       <name>NORMAL_SET_SIZE</name>
       <anchorfile>classiview_1_1_c_color_schema.html</anchorfile>
-      <anchor>a4f21a5feba71e409b2b757ede9e33644a82b6f7e4fa5cdcfe8a3073430eb883ef</anchor>
+      <anchor>a8a1820d97ef8c6f36ed7d3f22c8aa05fa82b6f7e4fa5cdcfe8a3073430eb883ef</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -50657,19 +50657,19 @@
     <member kind="enumvalue">
       <name>TICKER_SIZE</name>
       <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
-      <anchor>a6719baa4b18c7cd807e1a963d916d825a7b9aaadf57b04e96b6d901d25229edec</anchor>
+      <anchor>a98ee9fc45162a7a61a280ac9c0fb1f2ea7b9aaadf57b04e96b6d901d25229edec</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SMALL_TICKER_SIZE</name>
       <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
-      <anchor>a6719baa4b18c7cd807e1a963d916d825ab62460c925c9513455eea5005dc64220</anchor>
+      <anchor>a98ee9fc45162a7a61a280ac9c0fb1f2eab62460c925c9513455eea5005dc64220</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>LOGICAL_LINE_WIDTH</name>
       <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
-      <anchor>a6719baa4b18c7cd807e1a963d916d825a664c9e6063e60c758b4ae1ee3ee48a9c</anchor>
+      <anchor>a98ee9fc45162a7a61a280ac9c0fb1f2ea664c9e6063e60c758b4ae1ee3ee48a9c</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
