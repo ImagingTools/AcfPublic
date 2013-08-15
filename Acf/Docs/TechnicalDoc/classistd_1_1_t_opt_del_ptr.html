@@ -159,14 +159,14 @@ template&lt;class Type, bool DelArray&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Type, bool DelArray = false&gt; </div>
+template&lt;class Type, bool DelArray&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classistd_1_1_t_opt_del_ptr.html">istd::TOptDelPtr</a>&lt; Type, DelArray &gt;::<a class="el" href="classistd_1_1_t_opt_del_ptr.html">TOptDelPtr</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classistd_1_1_t_opt_del_ptr.html">TOptDelPtr</a>&lt; Type, DelArray &gt; &amp;&#160;</td>
           <td class="paramname"><em>ptr</em></td><td>)</td>
-          <td></td>
+          <td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -174,6 +174,10 @@ template&lt;class Type, bool DelArray = false&gt; </div>
 
 <p>Copy constructor. </p>
 <p>This implementation has no function and is provided only for compatibility with STL. The source pointer must be invalid (NULL). </p>
+
+<p>Definition at line <a class="el" href="_t_opt_del_ptr_8h_source.html#l00127">127</a> of file <a class="el" href="_t_opt_del_ptr_8h_source.html">TOptDelPtr.h</a>.</p>
+
+<p>References <a class="el" href="_t_pointer_base_8h_source.html#l00132">istd::TPointerBase&lt; Type &gt;::GetPtr()</a>, <a class="el" href="istd_8h_source.html#l00061">NULL</a>, and <a class="el" href="_t_opt_del_ptr_8h_source.html#l00162">istd::TOptDelPtr&lt; Type, DelArray &gt;::SetPtr()</a>.</p>
 
 </div>
 </div>
@@ -196,7 +200,7 @@ template&lt;class Type , bool DelArray&gt; </div>
 <p>Destructor. </p>
 <p>It calls <a class="el" href="classistd_1_1_t_opt_del_ptr.html#a4077ac614da6a11b3842e451eacdec02" title="Remove object pointed by internal pointer and set this pointer to NULL.">Reset()</a> to delete pointed object. </p>
 
-<p>Definition at line <a class="el" href="_t_opt_del_ptr_8h_source.html#l00135">135</a> of file <a class="el" href="_t_opt_del_ptr_8h_source.html">TOptDelPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_opt_del_ptr_8h_source.html#l00141">141</a> of file <a class="el" href="_t_opt_del_ptr_8h_source.html">TOptDelPtr.h</a>.</p>
 
 </div>
 </div>
@@ -220,7 +224,7 @@ template&lt;class Type , bool DelArray&gt; </div>
 <p>Remove referenced object. </p>
 <p>Warning: internal pointer will be not changed. </p>
 
-<p>Definition at line <a class="el" href="_t_opt_del_ptr_8h_source.html#l00210">210</a> of file <a class="el" href="_t_opt_del_ptr_8h_source.html">TOptDelPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_opt_del_ptr_8h_source.html#l00216">216</a> of file <a class="el" href="_t_opt_del_ptr_8h_source.html">TOptDelPtr.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00061">NULL</a>.</p>
 
@@ -245,7 +249,7 @@ template&lt;class Type , bool DelArray&gt; </div>
 <p>Get state of release flag. </p>
 <p>If this flag is true, pointed object will be automatically removed from memory. If this pointer isn't valid, returned value has no meaning. </p>
 
-<p>Definition at line <a class="el" href="_t_opt_del_ptr_8h_source.html#l00149">149</a> of file <a class="el" href="_t_opt_del_ptr_8h_source.html">TOptDelPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_opt_del_ptr_8h_source.html#l00155">155</a> of file <a class="el" href="_t_opt_del_ptr_8h_source.html">TOptDelPtr.h</a>.</p>
 
 </div>
 </div>
@@ -297,7 +301,7 @@ template&lt;class Type, bool DelArray&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_t_opt_del_ptr_8h_source.html#l00197">197</a> of file <a class="el" href="_t_opt_del_ptr_8h_source.html">TOptDelPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_opt_del_ptr_8h_source.html#l00203">203</a> of file <a class="el" href="_t_opt_del_ptr_8h_source.html">TOptDelPtr.h</a>.</p>
 
 </div>
 </div>
@@ -319,11 +323,11 @@ template&lt;class Type , bool DelArray&gt; </div>
 
 <p>Reset internal pointer value without deleting instance and return previos value. </p>
 
-<p>Definition at line <a class="el" href="_t_opt_del_ptr_8h_source.html#l00167">167</a> of file <a class="el" href="_t_opt_del_ptr_8h_source.html">TOptDelPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_opt_del_ptr_8h_source.html#l00173">173</a> of file <a class="el" href="_t_opt_del_ptr_8h_source.html">TOptDelPtr.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00061">NULL</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_opt_del_ptr_8h_source.html#l00177">istd::TOptDelPtr&lt; Type, DelArray &gt;::TakeOver()</a>.</p>
+<p>Referenced by <a class="el" href="_t_opt_del_ptr_8h_source.html#l00183">istd::TOptDelPtr&lt; Type, DelArray &gt;::TakeOver()</a>.</p>
 
 </div>
 </div>
@@ -347,7 +351,7 @@ template&lt;class Type , bool DelArray&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classistd_1_1_t_pointer_base.html#a54dff49514e5ca5505938fe0eaae3ebf">istd::TPointerBase&lt; Type &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_opt_del_ptr_8h_source.html#l00142">142</a> of file <a class="el" href="_t_opt_del_ptr_8h_source.html">TOptDelPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_opt_del_ptr_8h_source.html#l00148">148</a> of file <a class="el" href="_t_opt_del_ptr_8h_source.html">TOptDelPtr.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00061">NULL</a>.</p>
 
@@ -431,9 +435,9 @@ template&lt;class Type, bool DelArray&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_t_opt_del_ptr_8h_source.html#l00156">156</a> of file <a class="el" href="_t_opt_del_ptr_8h_source.html">TOptDelPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_opt_del_ptr_8h_source.html#l00162">162</a> of file <a class="el" href="_t_opt_del_ptr_8h_source.html">TOptDelPtr.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_opt_del_ptr_8h_source.html#l00089">istd::TOptDelPtr&lt; quint8, true &gt;::SetCastedOrRemove()</a>.</p>
+<p>Referenced by <a class="el" href="_t_opt_del_ptr_8h_source.html#l00089">istd::TOptDelPtr&lt; quint8, true &gt;::SetCastedOrRemove()</a>, and <a class="el" href="_t_opt_del_ptr_8h_source.html#l00127">istd::TOptDelPtr&lt; Type, DelArray &gt;::TOptDelPtr()</a>.</p>
 
 </div>
 </div>
@@ -457,9 +461,9 @@ template&lt;class Type , bool DelArray&gt; </div>
 <p>Take internal pointer over. </p>
 <p>It set pointer from other object and detach it from them. </p>
 
-<p>Definition at line <a class="el" href="_t_opt_del_ptr_8h_source.html#l00177">177</a> of file <a class="el" href="_t_opt_del_ptr_8h_source.html">TOptDelPtr.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_opt_del_ptr_8h_source.html#l00183">183</a> of file <a class="el" href="_t_opt_del_ptr_8h_source.html">TOptDelPtr.h</a>.</p>
 
-<p>References <a class="el" href="_t_opt_del_ptr_8h_source.html#l00167">istd::TOptDelPtr&lt; Type, DelArray &gt;::PopPtr()</a>.</p>
+<p>References <a class="el" href="_t_opt_del_ptr_8h_source.html#l00173">istd::TOptDelPtr&lt; Type, DelArray &gt;::PopPtr()</a>.</p>
 
 </div>
 </div>

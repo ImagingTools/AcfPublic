@@ -326,7 +326,7 @@ void CInteractiveViewLayer::OnShapeFocused(IInteractiveShape* shapePtr)
 
 		IShapeView* viewPtr = GetViewPtr();
 		Q_ASSERT(viewPtr != NULL);
-		viewPtr->OnShapeFocused(shapePtr, this);
+		viewPtr->OnLayerShapeFocused(shapePtr, this);
 	}
 }
 
@@ -340,7 +340,7 @@ void CInteractiveViewLayer::OnShapeDefocused(IInteractiveShape* shapePtr)
 
 		IShapeView* viewPtr = GetViewPtr();
 		Q_ASSERT(viewPtr != NULL);
-		viewPtr->OnShapeDefocused(shapePtr, this);
+		viewPtr->OnLayerShapeDefocused(shapePtr, this);
 	}
 }
 

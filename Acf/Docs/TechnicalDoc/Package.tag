@@ -55107,16 +55107,16 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnShapeFocused</name>
+      <name>OnLayerShapeFocused</name>
       <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>ab8f7ad5def111eef0862dd173e94393c</anchor>
+      <anchor>a306c445494b2aa1322b9e6f5c1afe3ed</anchor>
       <arglist>(IInteractiveShape *shapePtr, ISelectableLayer *layerPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnShapeDefocused</name>
+      <name>OnLayerShapeDefocused</name>
       <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>a88fd244d89abe8a5bed78a6646d3d7da</anchor>
+      <anchor>ac6ece001c8088c7d63b40e1599939dbb</anchor>
       <arglist>(IInteractiveShape *shapePtr, ISelectableLayer *layerPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -56967,16 +56967,16 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
-      <name>OnShapeFocused</name>
+      <name>OnLayerShapeFocused</name>
       <anchorfile>classiview_1_1_i_shape_view.html</anchorfile>
-      <anchor>a329bebfa42f0b4d7201632e3c2a54c67</anchor>
+      <anchor>a9f537c9365c1438a3e879b00e16b7319</anchor>
       <arglist>(IInteractiveShape *shapePtr, ISelectableLayer *layerPtr)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
-      <name>OnShapeDefocused</name>
+      <name>OnLayerShapeDefocused</name>
       <anchorfile>classiview_1_1_i_shape_view.html</anchorfile>
-      <anchor>af278069adc967ce1aef04c98e088f00d</anchor>
+      <anchor>a26406f6cb3ed49f6b6ac66700f06dcf1</anchor>
       <arglist>(IInteractiveShape *shapePtr, ISelectableLayer *layerPtr)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">

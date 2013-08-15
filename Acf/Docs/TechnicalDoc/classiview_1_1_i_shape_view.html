@@ -96,10 +96,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect shape object to view.  <a href="#a4eb8c94c7f54c27dff5274b41a6dfac9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiview_1_1_i_selectable_layer.html">ISelectableLayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape_view.html#a0c988d5298ad58647db28a586ec81151">GetFocusedLayerPtr</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get focused layer.  <a href="#a0c988d5298ad58647db28a586ec81151"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape_view.html#a329bebfa42f0b4d7201632e3c2a54c67">OnShapeFocused</a> (<a class="el" href="classiview_1_1_i_interactive_shape.html">IInteractiveShape</a> *shapePtr, <a class="el" href="classiview_1_1_i_selectable_layer.html">ISelectableLayer</a> *layerPtr)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when shape in layer get focus.  <a href="#a329bebfa42f0b4d7201632e3c2a54c67"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape_view.html#af278069adc967ce1aef04c98e088f00d">OnShapeDefocused</a> (<a class="el" href="classiview_1_1_i_interactive_shape.html">IInteractiveShape</a> *shapePtr, <a class="el" href="classiview_1_1_i_selectable_layer.html">ISelectableLayer</a> *layerPtr)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when shape in layer loose focus.  <a href="#af278069adc967ce1aef04c98e088f00d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape_view.html#a9f537c9365c1438a3e879b00e16b7319">OnLayerShapeFocused</a> (<a class="el" href="classiview_1_1_i_interactive_shape.html">IInteractiveShape</a> *shapePtr, <a class="el" href="classiview_1_1_i_selectable_layer.html">ISelectableLayer</a> *layerPtr)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when shape in layer get focus.  <a href="#a9f537c9365c1438a3e879b00e16b7319"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape_view.html#a26406f6cb3ed49f6b6ac66700f06dcf1">OnLayerShapeDefocused</a> (<a class="el" href="classiview_1_1_i_interactive_shape.html">IInteractiveShape</a> *shapePtr, <a class="el" href="classiview_1_1_i_selectable_layer.html">ISelectableLayer</a> *layerPtr)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when shape in layer loose focus.  <a href="#a26406f6cb3ed49f6b6ac66700f06dcf1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape_view.html#aa9c92248a4a0bce37929e9364af548d7">OnLayerInvalidated</a> (const <a class="el" href="classiview_1_1_i_view_layer.html">IViewLayer</a> &amp;layer, const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;prevArea, const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;newArea)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Inform that layer was invalidated.  <a href="#aa9c92248a4a0bce37929e9364af548d7"></a><br/></td></tr>
 </table>
@@ -364,12 +364,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af278069adc967ce1aef04c98e088f00d"></a><!-- doxytag: member="iview::IShapeView::OnShapeDefocused" ref="af278069adc967ce1aef04c98e088f00d" args="(IInteractiveShape *shapePtr, ISelectableLayer *layerPtr)=0" -->
+<a class="anchor" id="a26406f6cb3ed49f6b6ac66700f06dcf1"></a><!-- doxytag: member="iview::IShapeView::OnLayerShapeDefocused" ref="a26406f6cb3ed49f6b6ac66700f06dcf1" args="(IInteractiveShape *shapePtr, ISelectableLayer *layerPtr)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iview::IShapeView::OnShapeDefocused </td>
+          <td class="memname">virtual void iview::IShapeView::OnLayerShapeDefocused </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classiview_1_1_i_interactive_shape.html">IInteractiveShape</a> *&#160;</td>
           <td class="paramname"><em>shapePtr</em>, </td>
@@ -391,16 +391,16 @@ Public Member Functions</h2></td></tr>
 
 <p>Called when shape in layer loose focus. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a88fd244d89abe8a5bed78a6646d3d7da">iview::CViewBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#ac6ece001c8088c7d63b40e1599939dbb">iview::CViewBase</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a329bebfa42f0b4d7201632e3c2a54c67"></a><!-- doxytag: member="iview::IShapeView::OnShapeFocused" ref="a329bebfa42f0b4d7201632e3c2a54c67" args="(IInteractiveShape *shapePtr, ISelectableLayer *layerPtr)=0" -->
+<a class="anchor" id="a9f537c9365c1438a3e879b00e16b7319"></a><!-- doxytag: member="iview::IShapeView::OnLayerShapeFocused" ref="a9f537c9365c1438a3e879b00e16b7319" args="(IInteractiveShape *shapePtr, ISelectableLayer *layerPtr)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void iview::IShapeView::OnShapeFocused </td>
+          <td class="memname">virtual void iview::IShapeView::OnLayerShapeFocused </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classiview_1_1_i_interactive_shape.html">IInteractiveShape</a> *&#160;</td>
           <td class="paramname"><em>shapePtr</em>, </td>
@@ -422,7 +422,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Called when shape in layer get focus. </p>
 
-<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#ab8f7ad5def111eef0862dd173e94393c">iview::CViewBase</a>.</p>
+<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a306c445494b2aa1322b9e6f5c1afe3ed">iview::CViewBase</a>.</p>
 
 </div>
 </div>
