@@ -1,4 +1,5 @@
 import qbs.base 1.0
+import qbs.FileInfo
 
 Module{
 	name: "qwt"
@@ -7,15 +8,30 @@ Module{
 	Depends{ name: "Qt.core" }
 	Depends{ name: "cpp" }
 
-	Properties{
-		condition: cpp.debugInformation === true
-		cpp.staticLibraries: '../../../../../../Qwt/6.0.0/Lib/DebugQMake/qwt'
-	}
+	prefix: "Debug"
 	Properties{
 		condition: cpp.debugInformation === false
-		cpp.staticLibraries: '../../../../../../Qwt/6.0.0/Lib/ReleaseQMake/qwt'
+		prefix: "Release"
 	}
+
+	base: "QMake"
+	Properties{
+		condition: cpp.compilerPath.contains("2005") || cpp.compilerPath.contains("VC8")
+		base: "VC8"
+	}
+	Properties{
+		condition: cpp.compilerPath.contains("2008") || cpp.compilerPath.contains("VC9")
+		base: "VC9"
+	}
+	Properties{
+		condition: cpp.compilerPath.contains("2010") || cpp.compilerPath.contains("VC10")
+		base: "VC10"
+	}
+
+	modulePath: qbs.getenv("EXTLIBDIR")
+
+	cpp.staticLibraries: FileInfo.joinPaths(modulePath, "Qwt/6.0.0/Lib/" + prefix + base + "/qwt")
 	cpp.includePaths: [
-		'../../../../../../Qwt/6.0.0/Include'
+		FileInfo.joinPaths(modulePath, "Qwt/6.0.0/Include")
 	]
 }
