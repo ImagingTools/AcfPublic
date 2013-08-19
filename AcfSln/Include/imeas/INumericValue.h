@@ -20,12 +20,11 @@
 ********************************************************************************/
 
 
-#ifndef imeas_INumericParams_included
-#define imeas_INumericParams_included
+#ifndef imeas_INumericValue_included
+#define imeas_INumericValue_included
 
 
 #include "iser/ISerializable.h"
-
 #include "imath/CVarVector.h"
 
 
@@ -133,6 +132,6 @@ public:
 } // namespace imeas
 
 
-#endif // !imeas_INumericParams_included
+#endif // !imeas_INumericValue_included
 
 
