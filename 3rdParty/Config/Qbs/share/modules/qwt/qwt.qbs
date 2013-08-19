@@ -11,7 +11,8 @@ Module{
 
 	modulePath: qbs.getenv("EXTLIBDIR")
 
-	cpp.staticLibraries: FileInfo.joinPaths(modulePath, "Qwt/6.0.0/Lib/" + acf.compilerDir + "/qwt")
+	cpp.libraryPaths: FileInfo.joinPaths(modulePath, "Qwt/6.0.0/Lib/" + acf.compilerDir)
+	cpp.staticLibraries: "qwt"
 	cpp.includePaths: [
 		FileInfo.joinPaths(modulePath, "Qwt/6.0.0/Include")
 	]
