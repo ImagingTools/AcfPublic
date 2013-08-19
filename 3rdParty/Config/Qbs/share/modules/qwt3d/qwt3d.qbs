@@ -2,7 +2,7 @@ import qbs.base 1.0
 import qbs.FileInfo
 
 Module{
-	name: "qwt"
+	name: "qwt3d"
 
 	property string selectedVersion	// the user requested version can be placed here
 
@@ -11,8 +11,8 @@ Module{
 
 	modulePath: qbs.getenv("EXTLIBDIR")
 
-	cpp.staticLibraries: FileInfo.joinPaths(modulePath, "Qwt/6.0.0/Lib/" + acf.compilerDir + "/qwt")
+	cpp.staticLibraries: FileInfo.joinPaths(modulePath, "Qwt3D/Lib/" + acf.compilerDir + "/qwt3dlib")
 	cpp.includePaths: [
-		FileInfo.joinPaths(modulePath, "Qwt/6.0.0/Include")
+		FileInfo.joinPaths(modulePath, "Qwt3D/Include")
 	]
 }
