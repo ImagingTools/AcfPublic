@@ -2608,8 +2608,8 @@
       <type>#define</type>
       <name>I_REGISTER_MESSAGE_TYPE</name>
       <anchorfile>_c_message_container_8h.html</anchorfile>
-      <anchor>a799dfa5202f340245d2a97d08224b988</anchor>
-      <arglist>(messageType)</arglist>
+      <anchor>a5176214809cb23138c67213c534e252d</anchor>
+      <arglist>(messageType, messageTypeId)</arglist>
     </member>
   </compound>
   <compound kind="file">

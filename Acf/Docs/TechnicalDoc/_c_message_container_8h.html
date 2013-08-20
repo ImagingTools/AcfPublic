@@ -55,10 +55,10 @@ Namespaces</h2></td></tr>
 <br/></td></tr>
 <tr><td colspan="2"><h2><a name="define-members"></a>
 Defines</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_message_container_8h.html#a799dfa5202f340245d2a97d08224b988">I_REGISTER_MESSAGE_TYPE</a>(messageType)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_message_container_8h.html#a5176214809cb23138c67213c534e252d">I_REGISTER_MESSAGE_TYPE</a>(messageType, messageTypeId)</td></tr>
 </table>
 <hr/><h2>Define Documentation</h2>
-<a class="anchor" id="a799dfa5202f340245d2a97d08224b988"></a><!-- doxytag: member="CMessageContainer.h::I_REGISTER_MESSAGE_TYPE" ref="a799dfa5202f340245d2a97d08224b988" args="(messageType)" -->
+<a class="anchor" id="a5176214809cb23138c67213c534e252d"></a><!-- doxytag: member="CMessageContainer.h::I_REGISTER_MESSAGE_TYPE" ref="a5176214809cb23138c67213c534e252d" args="(messageType, messageTypeId)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -66,8 +66,18 @@ Defines</h2></td></tr>
           <td class="memname">#define I_REGISTER_MESSAGE_TYPE</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">messageType</td><td>)</td>
+          <td class="paramname">messageType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">messageTypeId&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
@@ -75,9 +85,9 @@ Defines</h2></td></tr>
 <b>Value:</b><div class="fragment"><pre class="fragment"><span class="keyword">static</span> <span class="keyword">struct </span>DefaultMessageTypesRegistrator_##messageType\
 {\
        DefaultMessageTypesRegistrator_##messageType()\
-       {\
-              ilog::CMessageContainer::RegisterMessageType&lt;messageType&gt;();\
-       }\
+{\
+       ilog::CMessageContainer::RegisterMessageType&lt;messageType&gt;(messageTypeId);\
+}\
 } s_defaultMessageTypesRegistrator_##messageType;
 </pre></div>
 <p>Definition at line <a class="el" href="_c_message_container_8h_source.html#l00119">119</a> of file <a class="el" href="_c_message_container_8h_source.html">CMessageContainer.h</a>.</p>
