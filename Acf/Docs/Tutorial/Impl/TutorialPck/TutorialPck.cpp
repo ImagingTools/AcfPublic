@@ -54,6 +54,20 @@ I_EXPORT_COMPONENT(
 			"Test of polyline interpolation",
 			"Data Model Polyline Polygon Interpolation Nodes Function");
 
+I_EXPORT_COMPONENT(
+				   HelloJuri,
+				   "Test of polyline interpolation",
+				   "Data Model Polyline Polygon Interpolation Nodes Function");
+
+I_EXPORT_COMPONENT(
+				   Test1,
+				   "Test of polyline interpolation",
+				   "Data Model Polyline Polygon Interpolation Nodes Function");
+
+I_EXPORT_COMPONENT(
+				   Test1Gui,
+				   "Test of polyline interpolation",
+				   "Data Model Polyline Polygon Interpolation Nodes Function");
 
 } // namespace TutorialPck
 
