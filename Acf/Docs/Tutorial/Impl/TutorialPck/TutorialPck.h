@@ -32,10 +32,8 @@
 #include "ModelObserver/CAbGuiComp.h"
 
 #include "itutacf/CInterpolationTestComp.h"
-#include "Juri/CHelloJuriGuiComp.h"
-#include "TestProject/CTest1Comp.h"
-#include "TestProject/CTest1GuiComp.h"
- 
+
+
 /**
 	Base system-undependent general package.
 */
@@ -47,9 +45,6 @@ typedef CTextEditorComp TextEditor;
 
 typedef icomp::TModelCompWrap<CAbComp> AB;
 typedef CAbGuiComp AbGui;
-typedef CHelloJuriGuiComp HelloJuri;
-typedef icomp::TModelCompWrap<CTest1Comp> Test1;
-typedef CTest1GuiComp Test1Gui;
 
 typedef itutacf::CInterpolationTestComp InterpolationTest;
 

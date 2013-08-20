@@ -218,10 +218,6 @@
 				>
 			</File>
 			<File
-				RelativePath="..\CHelloWorldComp.cpp"
-				>
-			</File>
-			<File
 				RelativePath="..\CInstantiatorComp.cpp"
 				>
 			</File>
@@ -272,10 +268,6 @@
 			</File>
 			<File
 				RelativePath="..\CDelegatedProgressManager.h"
-				>
-			</File>
-			<File
-				RelativePath="..\CHelloWorldComp.h"
 				>
 			</File>
 			<File
@@ -393,17 +385,6 @@
 			<File
 				RelativePath="..\TVersionInfoBase.h"
 				>
-			</File>
-			<File
-				RelativePath="..\Generated\ui_CHelloJuriGuiComp.h"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-					/>
-				</FileConfiguration>
 			</File>
 		</Filter>
 	</Files>

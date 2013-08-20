@@ -90,9 +90,6 @@
 
 #include "imath/CSampledFunction2d.h"
 
-#include "ibase/CHelloWorldComp.h"
-//#include "ibase/CHelloJuriGuiComp.h"
-
 
 /**
 	Base system-independent general package.
@@ -167,9 +164,6 @@ typedef icomp::TMakeComponentWrap<
 
 typedef icomp::TModelCompWrap<iprm::CMultiParamsManagerComp> MultiParamsManager;
 typedef icomp::TModelCompWrap<iprm::COptionsManagerComp> OptionsManager;
-
-typedef ibase::CHelloWorldComp HelloWorld;
-//typedef ibase::CHelloJuriGuiComp HelloJuri;
 
 
 } // namespace BasePck

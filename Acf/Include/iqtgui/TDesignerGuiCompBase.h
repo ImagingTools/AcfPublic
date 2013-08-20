@@ -61,7 +61,7 @@ protected:
 template <class UI, class WidgetType>
 QWidget* TDesignerGuiCompBase<UI, WidgetType>::InitWidgetToParent(QWidget* parentPtr)
 {
-	//Q_ASSERT(!BaseClass::IsGuiCreated());
+	Q_ASSERT(!BaseClass::IsGuiCreated());
 
 	QWidget* widgetPtr = BaseClass::InitWidgetToParent(parentPtr);
 

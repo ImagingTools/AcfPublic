@@ -47851,7 +47851,7 @@
       <type>TOptDelPtr &amp;</type>
       <name>operator=</name>
       <anchorfile>classistd_1_1_t_opt_del_ptr.html</anchorfile>
-      <anchor>acbeedf8206a2881300e6604df305cda3</anchor>
+      <anchor>a5a00ca9c447075f0ffe9d8992e15186d</anchor>
       <arglist>(const TOptDelPtr &amp;ptr)</arglist>
     </member>
     <member kind="function">
