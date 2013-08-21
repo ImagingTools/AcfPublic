@@ -106,7 +106,7 @@ void CRectangle::Reset()
 void CRectangle::SetLeft(double left)
 {
 	if (GetLeft() != left){
-		istd::CChangeNotifier changePtr(this);
+		istd::CChangeNotifier notifier(this, IsUndoAllowed() ? CF_MODEL : CF_MODEL | CF_NO_UNDO);
 
 		m_horizontalRange.SetMinValue(left);
 	}
@@ -116,7 +116,7 @@ void CRectangle::SetLeft(double left)
 void CRectangle::SetTop(double top)
 {
 	if (GetTop() != top){
-		istd::CChangeNotifier changePtr(this);
+		istd::CChangeNotifier notifier(this, IsUndoAllowed() ? CF_MODEL : CF_MODEL | CF_NO_UNDO);
 
 		m_verticalRange.SetMinValue(top);
 	}
@@ -126,7 +126,7 @@ void CRectangle::SetTop(double top)
 void CRectangle::SetRight(double right)
 {
 	if (GetRight() != right){
-		istd::CChangeNotifier changePtr(this);
+		istd::CChangeNotifier notifier(this, IsUndoAllowed() ? CF_MODEL : CF_MODEL | CF_NO_UNDO);
 
 		m_horizontalRange.SetMaxValue(right);
 	}
@@ -136,7 +136,7 @@ void CRectangle::SetRight(double right)
 void CRectangle::SetBottom(double bottom)
 {
 	if (GetBottom() != bottom){
-			istd::CChangeNotifier changePtr(this);
+		istd::CChangeNotifier notifier(this, IsUndoAllowed() ? CF_MODEL : CF_MODEL | CF_NO_UNDO);
 
 		m_verticalRange.SetMaxValue(bottom);
 	}
@@ -146,7 +146,7 @@ void CRectangle::SetBottom(double bottom)
 void CRectangle::SetHorizontalRange(const istd::CRange& range)
 {
 	if (range != m_horizontalRange){
-		istd::CChangeNotifier notifier(this);
+		istd::CChangeNotifier notifier(this, IsUndoAllowed() ? CF_MODEL : CF_MODEL | CF_NO_UNDO);
 
 		m_horizontalRange = range;
 	}
@@ -156,7 +156,7 @@ void CRectangle::SetHorizontalRange(const istd::CRange& range)
 void CRectangle::SetVerticalRange(const istd::CRange& range)
 {
 	if (range != m_verticalRange){
-		istd::CChangeNotifier notifier(this);
+		istd::CChangeNotifier notifier(this, IsUndoAllowed() ? CF_MODEL : CF_MODEL | CF_NO_UNDO);
 
 		m_verticalRange = range;
 	}
@@ -172,7 +172,7 @@ CVector2d CRectangle::GetLeftTop() const
 void CRectangle::SetTopLeft(const CVector2d& topLeft)
 {
 	if (topLeft != GetLeftTop()){
-		istd::CChangeNotifier changePtr(this);
+		istd::CChangeNotifier notifier(this, IsUndoAllowed() ? CF_MODEL : CF_MODEL | CF_NO_UNDO);
 
 		m_horizontalRange.SetMinValue(topLeft.GetX());
 		m_verticalRange.SetMinValue(topLeft.GetY());
@@ -189,7 +189,7 @@ CVector2d CRectangle::GetRightTop() const
 void CRectangle::SetTopRight(const CVector2d& topRight)
 {
 	if (topRight != GetRightTop()){
-		istd::CChangeNotifier changePtr(this);
+		istd::CChangeNotifier notifier(this, IsUndoAllowed() ? CF_MODEL : CF_MODEL | CF_NO_UNDO);
 
 		m_horizontalRange.SetMaxValue(topRight.GetX());
 		m_verticalRange.SetMinValue(topRight.GetY());
@@ -206,7 +206,7 @@ CVector2d CRectangle::GetLeftBottom() const
 void CRectangle::SetBottomLeft(const CVector2d& bottomLeft)
 {
 	if (bottomLeft != GetLeftBottom()){
-		istd::CChangeNotifier changePtr(this);
+		istd::CChangeNotifier notifier(this, IsUndoAllowed() ? CF_MODEL : CF_MODEL | CF_NO_UNDO);
 
 		m_horizontalRange.SetMinValue(bottomLeft.GetX());
 		m_verticalRange.SetMaxValue(bottomLeft.GetY());
@@ -223,7 +223,7 @@ CVector2d CRectangle::GetRightBottom() const
 void CRectangle::SetBottomRight(const CVector2d& bottomRight)
 {
 	if (bottomRight != GetRightBottom()){
-		istd::CChangeNotifier changePtr(this);
+		istd::CChangeNotifier notifier(this, IsUndoAllowed() ? CF_MODEL : CF_MODEL | CF_NO_UNDO);
 
 		m_horizontalRange.SetMaxValue(bottomRight.GetX());
 		m_verticalRange.SetMaxValue(bottomRight.GetY());
@@ -348,7 +348,7 @@ CRectangle CRectangle::GetUnion(const CRectangle& rect) const
 
 void CRectangle::Unite(const CRectangle& rect)
 {
-	istd::CChangeNotifier changePtr(this);
+	istd::CChangeNotifier notifier(this, IsUndoAllowed() ? CF_MODEL : CF_MODEL | CF_NO_UNDO);
 
 	double outputLeft = qMin(rect.GetLeft(), GetLeft());
 	double outputTop = qMin(rect.GetTop(), GetTop());
@@ -402,7 +402,7 @@ CRectangle CRectangle::GetExpanded(const CRectangle& rect) const
 
 void CRectangle::Expand(const CRectangle& rect)
 {
-	istd::CChangeNotifier changePtr(this);
+	istd::CChangeNotifier notifier(this, IsUndoAllowed() ? CF_MODEL : CF_MODEL | CF_NO_UNDO);
 
 	m_horizontalRange.Expand(rect.m_horizontalRange);
 	m_verticalRange.Expand(rect.m_verticalRange);
@@ -425,7 +425,7 @@ CRectangle CRectangle::GetTranslated(const i2d::CVector2d& delta) const
 
 void CRectangle::Translate(const i2d::CVector2d& delta)
 {
-	istd::CChangeNotifier notifier(this, CF_OBJECT_POSITION | CF_MODEL);
+	istd::CChangeNotifier notifier(this, IsUndoAllowed() ? CF_OBJECT_POSITION | CF_MODEL : CF_OBJECT_POSITION | CF_MODEL | CF_NO_UNDO);
 
 	m_horizontalRange.SetMinValue(m_horizontalRange.GetMinValue() + delta.GetX());
 	m_verticalRange.SetMinValue(m_verticalRange.GetMinValue() + delta.GetY());
@@ -468,7 +468,7 @@ void CRectangle::MoveCenterTo(const CVector2d& position)
 {
 	i2d::CVector2d offset = position - GetCenter();
 	if (offset != i2d::CVector2d(0, 0)){
-		istd::CChangeNotifier notifier(this, CF_OBJECT_POSITION | CF_MODEL);
+		istd::CChangeNotifier notifier(this, IsUndoAllowed() ? CF_OBJECT_POSITION | CF_MODEL : CF_OBJECT_POSITION | CF_MODEL | CF_NO_UNDO);
 
 		m_verticalRange.SetMinValue(m_verticalRange.GetMinValue() + offset.GetY());
 		m_verticalRange.SetMaxValue(m_verticalRange.GetMaxValue() + offset.GetY());
@@ -498,7 +498,7 @@ bool CRectangle::Transform(
 
 	if (		transformation.GetPositionAt(leftTop, transLeftTop, mode) &&
 				transformation.GetPositionAt(rightBottom, transRightBottom, mode)){
-		istd::CChangeNotifier notifier(this, CF_OBJECT_POSITION | CF_MODEL);
+		istd::CChangeNotifier notifier(this, IsUndoAllowed() ? CF_OBJECT_POSITION | CF_MODEL : CF_OBJECT_POSITION | CF_MODEL | CF_NO_UNDO);
 		
 		if (errorFactorPtr != NULL){
 			*errorFactorPtr = 0;
@@ -530,7 +530,7 @@ bool CRectangle::InvTransform(
 
 	if (		transformation.GetInvPositionAt(leftTop, transLeftTop, mode) &&
 				transformation.GetInvPositionAt(rightBottom, transRightBottom, mode)){
-		istd::CChangeNotifier notifier(this, CF_OBJECT_POSITION | CF_MODEL);
+		istd::CChangeNotifier notifier(this, IsUndoAllowed() ? CF_OBJECT_POSITION | CF_MODEL : CF_OBJECT_POSITION | CF_MODEL | CF_NO_UNDO);
 		
 		if (errorFactorPtr != NULL){
 			*errorFactorPtr = 0;
@@ -592,7 +592,7 @@ bool CRectangle::CopyFrom(const IChangeable& object, CompatibilityMode mode)
 	const CRectangle* rectanglePtr = dynamic_cast<const CRectangle*>(&object);
 
 	if (rectanglePtr != NULL){
-		istd::CChangeNotifier notifier(this);
+		istd::CChangeNotifier notifier(this, IsUndoAllowed() ? CF_MODEL : CF_MODEL | CF_NO_UNDO);
 
 		SetHorizontalRange(rectanglePtr->GetHorizontalRange());
 		SetVerticalRange(rectanglePtr->GetVerticalRange());

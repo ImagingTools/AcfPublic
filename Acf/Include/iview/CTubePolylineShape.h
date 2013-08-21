@@ -38,6 +38,7 @@ class CTubePolylineShape: public iview::CPolylineShape
 {
 public:
 	typedef iview::CPolylineShape BaseClass;
+	typedef CInteractiveShapeBase ShapeBaseClass;
 
 	CTubePolylineShape();
 

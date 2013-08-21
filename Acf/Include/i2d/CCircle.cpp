@@ -53,7 +53,7 @@ CCircle::CCircle(double radius, const CVector2d& center)
 void CCircle::SetRadius(double radius)
 {
 	if (radius != m_radius){
-		istd::CChangeNotifier notifier(this);
+		istd::CChangeNotifier notifier(this, IsUndoAllowed() ? CF_MODEL : CF_MODEL | CF_NO_UNDO);
 
 		m_radius = radius;
 	}
@@ -99,7 +99,7 @@ bool CCircle::Transform(
 		return false;
 	}
 
-	istd::CChangeNotifier changePtr(this);
+	istd::CChangeNotifier notifier(this, IsUndoAllowed() ? CF_MODEL : CF_MODEL | CF_NO_UNDO);
 
 	double scale = affine.GetDeformMatrix().GetApproxScale();
 
@@ -129,7 +129,7 @@ bool CCircle::InvTransform(
 		return false;
 	}
 
-	istd::CChangeNotifier changePtr(this);
+	istd::CChangeNotifier notifier(this, IsUndoAllowed() ? CF_MODEL : CF_MODEL | CF_NO_UNDO);
 
 	double scale = affine.GetDeformMatrix().GetApproxScale();
 
@@ -197,7 +197,7 @@ bool CCircle::CopyFrom(const IChangeable& object, CompatibilityMode mode)
 	const CCircle* circlePtr = dynamic_cast<const CCircle*>(&object);
 
 	if (circlePtr != NULL){
-		istd::CChangeNotifier notifier(this);
+		istd::CChangeNotifier notifier(this, IsUndoAllowed() ? CF_MODEL : CF_MODEL | CF_NO_UNDO);
 		
 		SetPosition(circlePtr->GetPosition());
 		SetRadius(circlePtr->GetRadius());

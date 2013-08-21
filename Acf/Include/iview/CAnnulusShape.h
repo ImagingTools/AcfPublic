@@ -35,6 +35,7 @@ class CAnnulusShape: public CPinShape
 {
 public:
 	typedef CPinShape BaseClass;
+	typedef CInteractiveShapeBase ShapeBaseClass;
 
 	CAnnulusShape();
 

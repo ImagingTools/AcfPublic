@@ -45,30 +45,31 @@
 <a name="l00017"></a>00017 {
 <a name="l00018"></a>00018 <span class="keyword">public</span>:
 <a name="l00019"></a><a class="code" href="classiview_1_1_c_center_pin_shape.html#a2e30c3cab2422307ada5a544219b7287">00019</a>        <span class="keyword">typedef</span> <a class="code" href="classiview_1_1_c_pin_shape.html">CPinShape</a> <a class="code" href="classiview_1_1_c_center_pin_shape.html#a2e30c3cab2422307ada5a544219b7287">BaseClass</a>;
-<a name="l00020"></a>00020 
-<a name="l00021"></a>00021        <a class="code" href="classiview_1_1_c_center_pin_shape.html#a2dc0fac436cc0b7ff0a41b667be246df">CCenterPinShape</a>();
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023        <span class="comment">// reimplemented (iview::IVisualizable)</span>
-<a name="l00024"></a>00024        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_center_pin_shape.html#add0337e6ec69b7903304fa29491b2160" title="Draw this shape using draw context.">Draw</a>(QPainter&amp; drawContext) <span class="keyword">const</span>;
-<a name="l00025"></a>00025 
-<a name="l00026"></a>00026        <span class="comment">// reimplemented (iview::IMouseActionObserver)</span>
-<a name="l00027"></a>00027        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_center_pin_shape.html#a72ed0e301c55a331dbe2c826654711e8" title="It is called, when mouse button is pushed down or up on this object.">OnMouseButton</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position, Qt::MouseButton buttonType, <span class="keywordtype">bool</span> downFlag);
-<a name="l00028"></a>00028        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_center_pin_shape.html#aca911cc059b53db16716d334305ea48b" title="It is called, when mouse is moved.">OnMouseMove</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position);
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030 <span class="keyword">protected</span>:
-<a name="l00031"></a>00031        <span class="comment">// reimplemented (iview::CShapeBase)</span>
-<a name="l00032"></a>00032        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_center_pin_shape.html#aa4950e57de117dc0e495b7685edc40d9" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span>;
-<a name="l00033"></a>00033 
-<a name="l00034"></a><a class="code" href="classiview_1_1_c_center_pin_shape.html#a28d5a62627926ff36f68e60d83c786f7">00034</a>        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_center_pin_shape.html#a28d5a62627926ff36f68e60d83c786f7">m_referencePosition</a>;
-<a name="l00035"></a>00035 };
-<a name="l00036"></a>00036 
+<a name="l00020"></a><a class="code" href="classiview_1_1_c_center_pin_shape.html#a8d4b2bd3afdce0626257dbd188f44207">00020</a>        <span class="keyword">typedef</span> <a class="code" href="classiview_1_1_c_interactive_shape_base.html">CInteractiveShapeBase</a> <a class="code" href="classiview_1_1_c_center_pin_shape.html#a8d4b2bd3afdce0626257dbd188f44207">ShapeBaseClass</a>;
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022        <a class="code" href="classiview_1_1_c_center_pin_shape.html#a2dc0fac436cc0b7ff0a41b667be246df">CCenterPinShape</a>();
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024        <span class="comment">// reimplemented (iview::IVisualizable)</span>
+<a name="l00025"></a>00025        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_center_pin_shape.html#add0337e6ec69b7903304fa29491b2160" title="Draw this shape using draw context.">Draw</a>(QPainter&amp; drawContext) <span class="keyword">const</span>;
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027        <span class="comment">// reimplemented (iview::IMouseActionObserver)</span>
+<a name="l00028"></a>00028        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_center_pin_shape.html#a72ed0e301c55a331dbe2c826654711e8" title="It is called, when mouse button is pushed down or up on this object.">OnMouseButton</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position, Qt::MouseButton buttonType, <span class="keywordtype">bool</span> downFlag);
+<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_center_pin_shape.html#aca911cc059b53db16716d334305ea48b" title="It is called, when mouse is moved.">OnMouseMove</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position);
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031 <span class="keyword">protected</span>:
+<a name="l00032"></a>00032        <span class="comment">// reimplemented (iview::CShapeBase)</span>
+<a name="l00033"></a>00033        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_center_pin_shape.html#aa4950e57de117dc0e495b7685edc40d9" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span>;
+<a name="l00034"></a>00034 
+<a name="l00035"></a><a class="code" href="classiview_1_1_c_center_pin_shape.html#a28d5a62627926ff36f68e60d83c786f7">00035</a>        <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiview_1_1_c_center_pin_shape.html#a28d5a62627926ff36f68e60d83c786f7">m_referencePosition</a>;
+<a name="l00036"></a>00036 };
 <a name="l00037"></a>00037 
-<a name="l00038"></a>00038 } <span class="comment">// namespace iview</span>
-<a name="l00039"></a>00039 
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 } <span class="comment">// namespace iview</span>
 <a name="l00040"></a>00040 
-<a name="l00041"></a>00041 <span class="preprocessor">#endif // !iview_CPinShape_included</span>
-<a name="l00042"></a>00042 <span class="preprocessor"></span>
-<a name="l00043"></a>00043 
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042 <span class="preprocessor">#endif // !iview_CPinShape_included</span>
+<a name="l00043"></a>00043 <span class="preprocessor"></span>
+<a name="l00044"></a>00044 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

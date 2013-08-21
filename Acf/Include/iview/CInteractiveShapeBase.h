@@ -32,6 +32,9 @@
 #include "iview/ISelectable.h"
 #include "iview/CShapeBase.h"
 
+#include "istd/IChangeable.h"
+#include "istd/TChangeNotifier.h"
+
 // Qt includes
 #include <QtGui/QPen>
 
@@ -133,6 +136,11 @@ inline bool CInteractiveShapeBase::IsDraggable() const
 
 inline void CInteractiveShapeBase::BeginDrag(const istd::CIndex2d& position)
 {
+	i2d::CObject2dBase* objectPtr = dynamic_cast<i2d::CObject2dBase*>(GetModelPtr());
+	if (objectPtr != NULL){
+		objectPtr->StartTransform();
+	}
+
 	BeginLogDrag(GetLogPosition(position));
 }
 
@@ -145,6 +153,10 @@ inline void CInteractiveShapeBase::SetDragPosition(const istd::CIndex2d& positio
 
 inline void CInteractiveShapeBase::EndDrag()
 {
+	i2d::CObject2dBase* objectPtr = dynamic_cast<i2d::CObject2dBase*>(GetModelPtr());
+	if (objectPtr != NULL){
+		objectPtr->FinishTransform();
+	}
 }
 
 
@@ -160,7 +172,6 @@ inline int CInteractiveShapeBase::GetKeysState() const
 		return 0;
 	}
 }
-
 
 
 inline int CInteractiveShapeBase::GetEditMode() const

@@ -73,6 +73,9 @@ Inheritance diagram for i2d::CObject2dBase:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_object2d_base.html#ab00780b19a69d586c8d7e6ea37e7df3d">CObject2dBase</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_object2d_base.html#a016af1dc4f10d78f5eab57fe5b040350">CObject2dBase</a> (const <a class="el" href="classi2d_1_1_c_object2d_base.html">CObject2dBase</a> &amp;object2d)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_object2d_base.html#a3ec5cbbdd6f4c54a4e558d9c693ef8d6">StartTransform</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_object2d_base.html#a1d57324b5e8c624a851610b36ff6d721">FinishTransform</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_object2d_base.html#abc9387e818299bdc2d30d0b196b650a8">IsUndoAllowed</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classi2d_1_1_i_calibration2d.html">ICalibration2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_object2d_base.html#a7c9398ad12709b1d17bbd82ff8c10776">GetCalibration</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to transformation object, which transforms a local logical coordinate system to global one.  <a href="#a7c9398ad12709b1d17bbd82ff8c10776"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_object2d_base.html#aefe511bf721267e25c2de981d9f03de0">SetCalibration</a> (const <a class="el" href="classi2d_1_1_i_calibration2d.html">ICalibration2d</a> *calibrationPtr, bool releaseFlag=false)</td></tr>
@@ -161,6 +164,24 @@ Public Member Functions</h2></td></tr>
 <p>Reimplemented in <a class="el" href="classiimg_1_1_c_bitmap.html#a88de0962374314b86b1dc0a2933aaf71">iimg::CBitmap</a>, <a class="el" href="classiimg_1_1_c_general_bitmap.html#ade736643c98955ef44175848afb407f0">iimg::CGeneralBitmap</a>, and <a class="el" href="classiser_1_1_t_copy_serialized_wrap.html#aa367df7912c41ac6e13b1a1b53b4bc2a">iser::TCopySerializedWrap&lt; iimg::CBitmap &gt;</a>.</p>
 
 <p>Referenced by <a class="el" href="_t_data_node_polyline_8h_source.html#l00145">i2d::TDataNodePolyline&lt; NodeData &gt;::CopyFrom()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1d57324b5e8c624a851610b36ff6d721"></a><!-- doxytag: member="i2d::CObject2dBase::FinishTransform" ref="a1d57324b5e8c624a851610b36ff6d721" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void i2d::CObject2dBase::FinishTransform </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="_c_interactive_shape_base_8h_source.html#l00132">iview::CInteractiveShapeBase::EndDrag()</a>.</p>
 
 </div>
 </div>
@@ -343,6 +364,22 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="abc9387e818299bdc2d30d0b196b650a8"></a><!-- doxytag: member="i2d::CObject2dBase::IsUndoAllowed" ref="abc9387e818299bdc2d30d0b196b650a8" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool i2d::CObject2dBase::IsUndoAllowed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aefe511bf721267e25c2de981d9f03de0"></a><!-- doxytag: member="i2d::CObject2dBase::SetCalibration" ref="aefe511bf721267e25c2de981d9f03de0" args="(const ICalibration2d *calibrationPtr, bool releaseFlag=false)" -->
 <div class="memitem">
 <div class="memproto">
@@ -378,6 +415,24 @@ Public Member Functions</h2></td></tr>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_t_opt_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">istd::TOptDelPtr</a>. </dd></dl>
 
 <p>Implements <a class="el" href="classi2d_1_1_i_object2d.html#a0a73ac291f4bae19635266ed416405f2">i2d::IObject2d</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3ec5cbbdd6f4c54a4e558d9c693ef8d6"></a><!-- doxytag: member="i2d::CObject2dBase::StartTransform" ref="a3ec5cbbdd6f4c54a4e558d9c693ef8d6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void i2d::CObject2dBase::StartTransform </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="_c_interactive_shape_base_8h_source.html#l00115">iview::CInteractiveShapeBase::BeginDrag()</a>.</p>
 
 </div>
 </div>

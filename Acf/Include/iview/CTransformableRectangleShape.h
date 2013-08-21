@@ -38,6 +38,7 @@ class CTransformableRectangleShape: public CInteractiveShapeBase
 {
 public:
 	typedef CInteractiveShapeBase BaseClass;
+	typedef CInteractiveShapeBase ShapeBaseClass;
 	
 	CTransformableRectangleShape();
 

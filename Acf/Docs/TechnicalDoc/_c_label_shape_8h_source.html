@@ -43,139 +43,140 @@
 <a name="l00015"></a>00015 {
 <a name="l00016"></a>00016 <span class="keyword">public</span>:
 <a name="l00017"></a><a class="code" href="classiview_1_1_c_label_shape.html#a3888de5591efc98b73fe2479a134a6f1">00017</a>        <span class="keyword">typedef</span> <a class="code" href="classiview_1_1_c_pin_shape.html">CPinShape</a> <a class="code" href="classiview_1_1_c_label_shape.html#a3888de5591efc98b73fe2479a134a6f1">BaseClass</a>;
-<a name="l00018"></a>00018 
-<a name="l00019"></a><a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79b">00019</a>        <span class="keyword">enum</span> <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79b">TextAlign</a>
-<a name="l00020"></a>00020        {
-<a name="l00021"></a><a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79ba9d51d6fb3a0c6244f31058ba19dac123">00021</a>               <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79ba9d51d6fb3a0c6244f31058ba19dac123">TAL_CENTER</a>,
-<a name="l00022"></a><a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79ba5f7120cb0f4dbdad83b28aa456deb879">00022</a>               <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79ba5f7120cb0f4dbdad83b28aa456deb879">TAL_LEFT_TOP</a>,
-<a name="l00023"></a><a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79bab17158553adee64a04453b7c216b6402">00023</a>               <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79bab17158553adee64a04453b7c216b6402">TAL_RIGHT_TOP</a>,
-<a name="l00024"></a><a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79ba8cc5574883410ccb075aa95081698836">00024</a>               <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79ba8cc5574883410ccb075aa95081698836">TAL_LEFT_BOTTOM</a>,
-<a name="l00025"></a><a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79ba21aa75f4b39ef48f90be831db3033ca3">00025</a>               <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79ba21aa75f4b39ef48f90be831db3033ca3">TAL_RIGHT_BOTTOM</a>,
-<a name="l00026"></a><a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79baeb1387d0298b1c3717d165fbde98580b">00026</a>               <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79baeb1387d0298b1c3717d165fbde98580b">TAL_AUTOMATIC</a>,
-<a name="l00027"></a><a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79baff8c071c70dd10da466e7c74c97db481">00027</a>               <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79baff8c071c70dd10da466e7c74c97db481">TAL_LAST</a> = <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79baeb1387d0298b1c3717d165fbde98580b">TAL_AUTOMATIC</a>
-<a name="l00028"></a>00028        };
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030        <a class="code" href="classiview_1_1_c_label_shape.html#ad0cb5e2e206b3ffa3b6115aa2df7dd0b">CLabelShape</a>(
-<a name="l00031"></a>00031                             <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79b">TextAlign</a> align = <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79bab17158553adee64a04453b7c216b6402">TAL_RIGHT_TOP</a>,
-<a name="l00032"></a>00032                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; offset = <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>(20, -20));
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79b">TextAlign</a> <a class="code" href="classiview_1_1_c_label_shape.html#a965ef105d44bb35cc8daf167cfd357f6">GetTextAlign</a>() <span class="keyword">const</span>;
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a92c3becea751ba3de96012edac06320f">SetTextAlign</a>(<a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79b">TextAlign</a> align);
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; <a class="code" href="classiview_1_1_c_label_shape.html#a590e05695d07bb198bcefb84b3dff2bd">GetDrawOffset</a>() <span class="keyword">const</span>;
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a133db66c71c012cfa7b8e4af4b064846">SetDrawOffset</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; offset);
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_label_shape.html#a0ceeff642e3dc85489767cb802ac3731">IsPositionVisible</a>() <span class="keyword">const</span>;
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a0bcd75d60aedf4143354d2133234caf4">SetPositionVisible</a>(<span class="keywordtype">bool</span> visible = <span class="keyword">true</span>);
-<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_label_shape.html#ade92a07bed8fcff35d55d72231cc6be7">IsBackgroundTransparent</a>() <span class="keyword">const</span>;
-<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a0427352fd8a4fb36a4e82016ae7db725">SetBackgroundTransparent</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
-<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_label_shape.html#a0cb0a79cf610d0086dd7beff863d45e7">IsEditableOffset</a>() <span class="keyword">const</span>;
-<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a9d1cbbb13cf321e7ec42678d372c269a">SetEditableOffset</a>(<span class="keywordtype">bool</span> editable = <span class="keyword">true</span>);
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046        <span class="comment">// reimplemented (iview::IMouseActionObserver)</span>
-<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_label_shape.html#ae66af022d41b33535744bd120f9d867e" title="It is called, when mouse button is pushed down or up on this object.">OnMouseButton</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position, Qt::MouseButton buttonType, <span class="keywordtype">bool</span> downFlag);
-<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_label_shape.html#abc34900d1fffa3fa68c8cd36c4fd8cb1" title="It is called, when mouse is moved.">OnMouseMove</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position);
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050        <span class="comment">// reimplemented (iview::IVisualizable)</span>
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a15d6a0a2302b332d9addcb19a039249c" title="Draw this shape using draw context.">Draw</a>(QPainter&amp; drawContext) <span class="keyword">const</span>;
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053        <span class="comment">// reimplemented (imod::IObserver)</span>
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_label_shape.html#ac18b6be779e7009a65cccd0f52854f6b" title="This call back function will be called, if an observable object is about to be attached.">OnAttached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr);
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056        <span class="comment">// reimplemented (iview::ITouchable)</span>
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_touchable.html#aff8f4bec7213cc866469e5e41a8395e2" title="Enumeration for possible shape touch states.">TouchState</a> <a class="code" href="classiview_1_1_c_label_shape.html#abc7a09ff6573832d8b368c9c728fd3e2" title="Check, if any shape is touched.">IsTouched</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059 <span class="keyword">protected</span>:
-<a name="l00060"></a><a class="code" href="classiview_1_1_c_label_shape.html#a7fff5a3307d7bbf619814321dadf94c6">00060</a>        <span class="keyword">enum</span> <a class="code" href="classiview_1_1_c_label_shape.html#a7fff5a3307d7bbf619814321dadf94c6">EditMode</a>
-<a name="l00061"></a>00061        {
-<a name="l00062"></a><a class="code" href="classiview_1_1_c_label_shape.html#a7fff5a3307d7bbf619814321dadf94c6a294dba05e9c80af15da60fa4a853f0ee">00062</a>               <a class="code" href="classiview_1_1_c_label_shape.html#a7fff5a3307d7bbf619814321dadf94c6a294dba05e9c80af15da60fa4a853f0ee">EM_NONE</a>,
-<a name="l00063"></a><a class="code" href="classiview_1_1_c_label_shape.html#a7fff5a3307d7bbf619814321dadf94c6aaddaa51a8c922ae27d755dc7d01e5517">00063</a>               <a class="code" href="classiview_1_1_c_label_shape.html#a7fff5a3307d7bbf619814321dadf94c6aaddaa51a8c922ae27d755dc7d01e5517">EM_POSITION</a>,
-<a name="l00064"></a><a class="code" href="classiview_1_1_c_label_shape.html#a7fff5a3307d7bbf619814321dadf94c6aa839cdfd87f59d50e64a4d5857f9ef5d">00064</a>               <a class="code" href="classiview_1_1_c_label_shape.html#a7fff5a3307d7bbf619814321dadf94c6aa839cdfd87f59d50e64a4d5857f9ef5d">EM_OFFSET</a>
-<a name="l00065"></a>00065        };
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a32bf3af87d248986855b9e878a18ce70">CalculateTextOriginSize</a>(<a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; textBox) <span class="keyword">const</span>;
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_label_shape.html#a93aac48158c3d07948e54805ee9e0ff2" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span>;
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072 <span class="keyword">private</span>:
-<a name="l00073"></a>00073        <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> m_referenceOffset;
-<a name="l00074"></a>00074        <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79b">TextAlign</a>   m_textAlign;
-<a name="l00075"></a>00075        <span class="keyword">mutable</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> m_drawOffset;
-<a name="l00076"></a>00076        <span class="keywordtype">bool</span> m_isPositionVisible;
-<a name="l00077"></a>00077        <span class="keywordtype">bool</span> m_isBackgroundTransparent;
-<a name="l00078"></a>00078        <span class="keywordtype">bool</span> m_isEditableOffset;
-<a name="l00079"></a>00079        <a class="code" href="classiview_1_1_c_label_shape.html#a7fff5a3307d7bbf619814321dadf94c6">EditMode</a> m_editMode;
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081        <span class="keywordtype">bool</span> m_isAlignFixed;
-<a name="l00082"></a>00082 };
-<a name="l00083"></a>00083 
+<a name="l00018"></a><a class="code" href="classiview_1_1_c_label_shape.html#afeb80af16426cd04f28e7a82d9e671f2">00018</a>        <span class="keyword">typedef</span> <a class="code" href="classiview_1_1_c_interactive_shape_base.html">CInteractiveShapeBase</a> <a class="code" href="classiview_1_1_c_label_shape.html#afeb80af16426cd04f28e7a82d9e671f2">ShapeBaseClass</a>;
+<a name="l00019"></a>00019 
+<a name="l00020"></a><a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79b">00020</a>        <span class="keyword">enum</span> <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79b">TextAlign</a>
+<a name="l00021"></a>00021        {
+<a name="l00022"></a><a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79ba9d51d6fb3a0c6244f31058ba19dac123">00022</a>               <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79ba9d51d6fb3a0c6244f31058ba19dac123">TAL_CENTER</a>,
+<a name="l00023"></a><a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79ba5f7120cb0f4dbdad83b28aa456deb879">00023</a>               <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79ba5f7120cb0f4dbdad83b28aa456deb879">TAL_LEFT_TOP</a>,
+<a name="l00024"></a><a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79bab17158553adee64a04453b7c216b6402">00024</a>               <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79bab17158553adee64a04453b7c216b6402">TAL_RIGHT_TOP</a>,
+<a name="l00025"></a><a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79ba8cc5574883410ccb075aa95081698836">00025</a>               <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79ba8cc5574883410ccb075aa95081698836">TAL_LEFT_BOTTOM</a>,
+<a name="l00026"></a><a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79ba21aa75f4b39ef48f90be831db3033ca3">00026</a>               <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79ba21aa75f4b39ef48f90be831db3033ca3">TAL_RIGHT_BOTTOM</a>,
+<a name="l00027"></a><a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79baeb1387d0298b1c3717d165fbde98580b">00027</a>               <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79baeb1387d0298b1c3717d165fbde98580b">TAL_AUTOMATIC</a>,
+<a name="l00028"></a><a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79baff8c071c70dd10da466e7c74c97db481">00028</a>               <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79baff8c071c70dd10da466e7c74c97db481">TAL_LAST</a> = <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79baeb1387d0298b1c3717d165fbde98580b">TAL_AUTOMATIC</a>
+<a name="l00029"></a>00029        };
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031        <a class="code" href="classiview_1_1_c_label_shape.html#ad0cb5e2e206b3ffa3b6115aa2df7dd0b">CLabelShape</a>(
+<a name="l00032"></a>00032                             <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79b">TextAlign</a> align = <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79bab17158553adee64a04453b7c216b6402">TAL_RIGHT_TOP</a>,
+<a name="l00033"></a>00033                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; offset = <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>(20, -20));
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79b">TextAlign</a> <a class="code" href="classiview_1_1_c_label_shape.html#a965ef105d44bb35cc8daf167cfd357f6">GetTextAlign</a>() <span class="keyword">const</span>;
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a92c3becea751ba3de96012edac06320f">SetTextAlign</a>(<a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79b">TextAlign</a> align);
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; <a class="code" href="classiview_1_1_c_label_shape.html#a590e05695d07bb198bcefb84b3dff2bd">GetDrawOffset</a>() <span class="keyword">const</span>;
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a133db66c71c012cfa7b8e4af4b064846">SetDrawOffset</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; offset);
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_label_shape.html#a0ceeff642e3dc85489767cb802ac3731">IsPositionVisible</a>() <span class="keyword">const</span>;
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a0bcd75d60aedf4143354d2133234caf4">SetPositionVisible</a>(<span class="keywordtype">bool</span> visible = <span class="keyword">true</span>);
+<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_label_shape.html#ade92a07bed8fcff35d55d72231cc6be7">IsBackgroundTransparent</a>() <span class="keyword">const</span>;
+<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a0427352fd8a4fb36a4e82016ae7db725">SetBackgroundTransparent</a>(<span class="keywordtype">bool</span> state = <span class="keyword">true</span>);
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_label_shape.html#a0cb0a79cf610d0086dd7beff863d45e7">IsEditableOffset</a>() <span class="keyword">const</span>;
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a9d1cbbb13cf321e7ec42678d372c269a">SetEditableOffset</a>(<span class="keywordtype">bool</span> editable = <span class="keyword">true</span>);
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047        <span class="comment">// reimplemented (iview::IMouseActionObserver)</span>
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_label_shape.html#ae66af022d41b33535744bd120f9d867e" title="It is called, when mouse button is pushed down or up on this object.">OnMouseButton</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position, Qt::MouseButton buttonType, <span class="keywordtype">bool</span> downFlag);
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_label_shape.html#abc34900d1fffa3fa68c8cd36c4fd8cb1" title="It is called, when mouse is moved.">OnMouseMove</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position);
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051        <span class="comment">// reimplemented (iview::IVisualizable)</span>
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a15d6a0a2302b332d9addcb19a039249c" title="Draw this shape using draw context.">Draw</a>(QPainter&amp; drawContext) <span class="keyword">const</span>;
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054        <span class="comment">// reimplemented (imod::IObserver)</span>
+<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_label_shape.html#ac18b6be779e7009a65cccd0f52854f6b" title="This call back function will be called, if an observable object is about to be attached.">OnAttached</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr);
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057        <span class="comment">// reimplemented (iview::ITouchable)</span>
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_touchable.html#aff8f4bec7213cc866469e5e41a8395e2" title="Enumeration for possible shape touch states.">TouchState</a> <a class="code" href="classiview_1_1_c_label_shape.html#abc7a09ff6573832d8b368c9c728fd3e2" title="Check, if any shape is touched.">IsTouched</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060 <span class="keyword">protected</span>:
+<a name="l00061"></a><a class="code" href="classiview_1_1_c_label_shape.html#a7fff5a3307d7bbf619814321dadf94c6">00061</a>        <span class="keyword">enum</span> <a class="code" href="classiview_1_1_c_label_shape.html#a7fff5a3307d7bbf619814321dadf94c6">EditMode</a>
+<a name="l00062"></a>00062        {
+<a name="l00063"></a><a class="code" href="classiview_1_1_c_label_shape.html#a7fff5a3307d7bbf619814321dadf94c6a294dba05e9c80af15da60fa4a853f0ee">00063</a>               <a class="code" href="classiview_1_1_c_label_shape.html#a7fff5a3307d7bbf619814321dadf94c6a294dba05e9c80af15da60fa4a853f0ee">EM_NONE</a>,
+<a name="l00064"></a><a class="code" href="classiview_1_1_c_label_shape.html#a7fff5a3307d7bbf619814321dadf94c6aaddaa51a8c922ae27d755dc7d01e5517">00064</a>               <a class="code" href="classiview_1_1_c_label_shape.html#a7fff5a3307d7bbf619814321dadf94c6aaddaa51a8c922ae27d755dc7d01e5517">EM_POSITION</a>,
+<a name="l00065"></a><a class="code" href="classiview_1_1_c_label_shape.html#a7fff5a3307d7bbf619814321dadf94c6aa839cdfd87f59d50e64a4d5857f9ef5d">00065</a>               <a class="code" href="classiview_1_1_c_label_shape.html#a7fff5a3307d7bbf619814321dadf94c6aa839cdfd87f59d50e64a4d5857f9ef5d">EM_OFFSET</a>
+<a name="l00066"></a>00066        };
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068        <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a32bf3af87d248986855b9e878a18ce70">CalculateTextOriginSize</a>(<a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; textBox) <span class="keyword">const</span>;
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
+<a name="l00071"></a>00071        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_label_shape.html#a93aac48158c3d07948e54805ee9e0ff2" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span>;
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073 <span class="keyword">private</span>:
+<a name="l00074"></a>00074        <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> m_referenceOffset;
+<a name="l00075"></a>00075        <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79b">TextAlign</a>   m_textAlign;
+<a name="l00076"></a>00076        <span class="keyword">mutable</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> m_drawOffset;
+<a name="l00077"></a>00077        <span class="keywordtype">bool</span> m_isPositionVisible;
+<a name="l00078"></a>00078        <span class="keywordtype">bool</span> m_isBackgroundTransparent;
+<a name="l00079"></a>00079        <span class="keywordtype">bool</span> m_isEditableOffset;
+<a name="l00080"></a>00080        <a class="code" href="classiview_1_1_c_label_shape.html#a7fff5a3307d7bbf619814321dadf94c6">EditMode</a> m_editMode;
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082        <span class="keywordtype">bool</span> m_isAlignFixed;
+<a name="l00083"></a>00083 };
 <a name="l00084"></a>00084 
-<a name="l00085"></a><a class="code" href="classiview_1_1_c_label_shape.html#a965ef105d44bb35cc8daf167cfd357f6">00085</a> <span class="keyword">inline</span> <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79b">CLabelShape::TextAlign</a> <a class="code" href="classiview_1_1_c_label_shape.html#a965ef105d44bb35cc8daf167cfd357f6">CLabelShape::GetTextAlign</a>()<span class="keyword"> const</span>
-<a name="l00086"></a>00086 <span class="keyword"></span>{
-<a name="l00087"></a>00087        <span class="keywordflow">return</span> m_textAlign;
-<a name="l00088"></a>00088 }
-<a name="l00089"></a>00089 
+<a name="l00085"></a>00085 
+<a name="l00086"></a><a class="code" href="classiview_1_1_c_label_shape.html#a965ef105d44bb35cc8daf167cfd357f6">00086</a> <span class="keyword">inline</span> <a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79b">CLabelShape::TextAlign</a> <a class="code" href="classiview_1_1_c_label_shape.html#a965ef105d44bb35cc8daf167cfd357f6">CLabelShape::GetTextAlign</a>()<span class="keyword"> const</span>
+<a name="l00087"></a>00087 <span class="keyword"></span>{
+<a name="l00088"></a>00088        <span class="keywordflow">return</span> m_textAlign;
+<a name="l00089"></a>00089 }
 <a name="l00090"></a>00090 
-<a name="l00091"></a><a class="code" href="classiview_1_1_c_label_shape.html#a92c3becea751ba3de96012edac06320f">00091</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a92c3becea751ba3de96012edac06320f">CLabelShape::SetTextAlign</a>(<a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79b">CLabelShape::TextAlign</a> align)
-<a name="l00092"></a>00092 {
-<a name="l00093"></a>00093        m_textAlign = align;
-<a name="l00094"></a>00094 }
-<a name="l00095"></a>00095 
+<a name="l00091"></a>00091 
+<a name="l00092"></a><a class="code" href="classiview_1_1_c_label_shape.html#a92c3becea751ba3de96012edac06320f">00092</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a92c3becea751ba3de96012edac06320f">CLabelShape::SetTextAlign</a>(<a class="code" href="classiview_1_1_c_label_shape.html#a01e8e8b2ab196609647c4ebe015dc79b">CLabelShape::TextAlign</a> align)
+<a name="l00093"></a>00093 {
+<a name="l00094"></a>00094        m_textAlign = align;
+<a name="l00095"></a>00095 }
 <a name="l00096"></a>00096 
-<a name="l00097"></a><a class="code" href="classiview_1_1_c_label_shape.html#a590e05695d07bb198bcefb84b3dff2bd">00097</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; <a class="code" href="classiview_1_1_c_label_shape.html#a590e05695d07bb198bcefb84b3dff2bd">CLabelShape::GetDrawOffset</a>()<span class="keyword"> const</span>
-<a name="l00098"></a>00098 <span class="keyword"></span>{
-<a name="l00099"></a>00099        <span class="keywordflow">return</span> m_drawOffset;
-<a name="l00100"></a>00100 }
-<a name="l00101"></a>00101 
+<a name="l00097"></a>00097 
+<a name="l00098"></a><a class="code" href="classiview_1_1_c_label_shape.html#a590e05695d07bb198bcefb84b3dff2bd">00098</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; <a class="code" href="classiview_1_1_c_label_shape.html#a590e05695d07bb198bcefb84b3dff2bd">CLabelShape::GetDrawOffset</a>()<span class="keyword"> const</span>
+<a name="l00099"></a>00099 <span class="keyword"></span>{
+<a name="l00100"></a>00100        <span class="keywordflow">return</span> m_drawOffset;
+<a name="l00101"></a>00101 }
 <a name="l00102"></a>00102 
-<a name="l00103"></a><a class="code" href="classiview_1_1_c_label_shape.html#a133db66c71c012cfa7b8e4af4b064846">00103</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a133db66c71c012cfa7b8e4af4b064846">CLabelShape::SetDrawOffset</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; offset)
-<a name="l00104"></a>00104 {
-<a name="l00105"></a>00105        m_drawOffset = offset;
-<a name="l00106"></a>00106 }
-<a name="l00107"></a>00107 
+<a name="l00103"></a>00103 
+<a name="l00104"></a><a class="code" href="classiview_1_1_c_label_shape.html#a133db66c71c012cfa7b8e4af4b064846">00104</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a133db66c71c012cfa7b8e4af4b064846">CLabelShape::SetDrawOffset</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; offset)
+<a name="l00105"></a>00105 {
+<a name="l00106"></a>00106        m_drawOffset = offset;
+<a name="l00107"></a>00107 }
 <a name="l00108"></a>00108 
-<a name="l00109"></a><a class="code" href="classiview_1_1_c_label_shape.html#a0ceeff642e3dc85489767cb802ac3731">00109</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_label_shape.html#a0ceeff642e3dc85489767cb802ac3731">CLabelShape::IsPositionVisible</a>()<span class="keyword"> const</span>
-<a name="l00110"></a>00110 <span class="keyword"></span>{
-<a name="l00111"></a>00111        <span class="keywordflow">return</span> m_isPositionVisible;
-<a name="l00112"></a>00112 }
-<a name="l00113"></a>00113 
+<a name="l00109"></a>00109 
+<a name="l00110"></a><a class="code" href="classiview_1_1_c_label_shape.html#a0ceeff642e3dc85489767cb802ac3731">00110</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_label_shape.html#a0ceeff642e3dc85489767cb802ac3731">CLabelShape::IsPositionVisible</a>()<span class="keyword"> const</span>
+<a name="l00111"></a>00111 <span class="keyword"></span>{
+<a name="l00112"></a>00112        <span class="keywordflow">return</span> m_isPositionVisible;
+<a name="l00113"></a>00113 }
 <a name="l00114"></a>00114 
-<a name="l00115"></a><a class="code" href="classiview_1_1_c_label_shape.html#a0bcd75d60aedf4143354d2133234caf4">00115</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a0bcd75d60aedf4143354d2133234caf4">CLabelShape::SetPositionVisible</a>(<span class="keywordtype">bool</span> visible)
-<a name="l00116"></a>00116 {
-<a name="l00117"></a>00117        m_isPositionVisible = visible;
-<a name="l00118"></a>00118 }
-<a name="l00119"></a>00119 
+<a name="l00115"></a>00115 
+<a name="l00116"></a><a class="code" href="classiview_1_1_c_label_shape.html#a0bcd75d60aedf4143354d2133234caf4">00116</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a0bcd75d60aedf4143354d2133234caf4">CLabelShape::SetPositionVisible</a>(<span class="keywordtype">bool</span> visible)
+<a name="l00117"></a>00117 {
+<a name="l00118"></a>00118        m_isPositionVisible = visible;
+<a name="l00119"></a>00119 }
 <a name="l00120"></a>00120 
-<a name="l00121"></a><a class="code" href="classiview_1_1_c_label_shape.html#ade92a07bed8fcff35d55d72231cc6be7">00121</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_label_shape.html#ade92a07bed8fcff35d55d72231cc6be7">CLabelShape::IsBackgroundTransparent</a>()<span class="keyword"> const</span>
-<a name="l00122"></a>00122 <span class="keyword"></span>{
-<a name="l00123"></a>00123        <span class="keywordflow">return</span> m_isBackgroundTransparent;
-<a name="l00124"></a>00124 }
-<a name="l00125"></a>00125 
+<a name="l00121"></a>00121 
+<a name="l00122"></a><a class="code" href="classiview_1_1_c_label_shape.html#ade92a07bed8fcff35d55d72231cc6be7">00122</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_label_shape.html#ade92a07bed8fcff35d55d72231cc6be7">CLabelShape::IsBackgroundTransparent</a>()<span class="keyword"> const</span>
+<a name="l00123"></a>00123 <span class="keyword"></span>{
+<a name="l00124"></a>00124        <span class="keywordflow">return</span> m_isBackgroundTransparent;
+<a name="l00125"></a>00125 }
 <a name="l00126"></a>00126 
-<a name="l00127"></a><a class="code" href="classiview_1_1_c_label_shape.html#a0427352fd8a4fb36a4e82016ae7db725">00127</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a0427352fd8a4fb36a4e82016ae7db725">CLabelShape::SetBackgroundTransparent</a>(<span class="keywordtype">bool</span> state)
-<a name="l00128"></a>00128 {
-<a name="l00129"></a>00129        m_isBackgroundTransparent = state;
-<a name="l00130"></a>00130 }
-<a name="l00131"></a>00131 
+<a name="l00127"></a>00127 
+<a name="l00128"></a><a class="code" href="classiview_1_1_c_label_shape.html#a0427352fd8a4fb36a4e82016ae7db725">00128</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a0427352fd8a4fb36a4e82016ae7db725">CLabelShape::SetBackgroundTransparent</a>(<span class="keywordtype">bool</span> state)
+<a name="l00129"></a>00129 {
+<a name="l00130"></a>00130        m_isBackgroundTransparent = state;
+<a name="l00131"></a>00131 }
 <a name="l00132"></a>00132 
-<a name="l00133"></a><a class="code" href="classiview_1_1_c_label_shape.html#a0cb0a79cf610d0086dd7beff863d45e7">00133</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_label_shape.html#a0cb0a79cf610d0086dd7beff863d45e7">CLabelShape::IsEditableOffset</a>()<span class="keyword"> const</span>
-<a name="l00134"></a>00134 <span class="keyword"></span>{
-<a name="l00135"></a>00135        <span class="keywordflow">return</span> m_isEditableOffset;
-<a name="l00136"></a>00136 }
-<a name="l00137"></a>00137 
+<a name="l00133"></a>00133 
+<a name="l00134"></a><a class="code" href="classiview_1_1_c_label_shape.html#a0cb0a79cf610d0086dd7beff863d45e7">00134</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_label_shape.html#a0cb0a79cf610d0086dd7beff863d45e7">CLabelShape::IsEditableOffset</a>()<span class="keyword"> const</span>
+<a name="l00135"></a>00135 <span class="keyword"></span>{
+<a name="l00136"></a>00136        <span class="keywordflow">return</span> m_isEditableOffset;
+<a name="l00137"></a>00137 }
 <a name="l00138"></a>00138 
-<a name="l00139"></a><a class="code" href="classiview_1_1_c_label_shape.html#a9d1cbbb13cf321e7ec42678d372c269a">00139</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a9d1cbbb13cf321e7ec42678d372c269a">CLabelShape::SetEditableOffset</a>(<span class="keywordtype">bool</span> editable)
-<a name="l00140"></a>00140 {
-<a name="l00141"></a>00141        m_isEditableOffset = editable;
-<a name="l00142"></a>00142 }
-<a name="l00143"></a>00143 
+<a name="l00139"></a>00139 
+<a name="l00140"></a><a class="code" href="classiview_1_1_c_label_shape.html#a9d1cbbb13cf321e7ec42678d372c269a">00140</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_label_shape.html#a9d1cbbb13cf321e7ec42678d372c269a">CLabelShape::SetEditableOffset</a>(<span class="keywordtype">bool</span> editable)
+<a name="l00141"></a>00141 {
+<a name="l00142"></a>00142        m_isEditableOffset = editable;
+<a name="l00143"></a>00143 }
 <a name="l00144"></a>00144 
-<a name="l00145"></a>00145 } <span class="comment">// namespace iview</span>
-<a name="l00146"></a>00146 
+<a name="l00145"></a>00145 
+<a name="l00146"></a>00146 } <span class="comment">// namespace iview</span>
 <a name="l00147"></a>00147 
-<a name="l00148"></a>00148 <span class="preprocessor">#endif // !iview_CLabelShape_included</span>
-<a name="l00149"></a>00149 <span class="preprocessor"></span>
-<a name="l00150"></a>00150 
+<a name="l00148"></a>00148 
+<a name="l00149"></a>00149 <span class="preprocessor">#endif // !iview_CLabelShape_included</span>
+<a name="l00150"></a>00150 <span class="preprocessor"></span>
+<a name="l00151"></a>00151 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

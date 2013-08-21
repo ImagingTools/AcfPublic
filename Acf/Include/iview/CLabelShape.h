@@ -37,6 +37,7 @@ class CLabelShape: public CPinShape
 {
 public:
 	typedef CPinShape BaseClass;
+	typedef CInteractiveShapeBase ShapeBaseClass;
 
 	enum TextAlign
 	{

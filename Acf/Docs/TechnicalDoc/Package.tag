@@ -5849,6 +5849,8 @@
     <includes id="_i_draggable_8h" name="IDraggable.h" local="yes" imported="no">iview/IDraggable.h</includes>
     <includes id="_i_selectable_8h" name="ISelectable.h" local="yes" imported="no">iview/ISelectable.h</includes>
     <includes id="_c_shape_base_8h" name="CShapeBase.h" local="yes" imported="no">iview/CShapeBase.h</includes>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
     <class kind="class">iview::CInteractiveShapeBase</class>
     <namespace>iview</namespace>
   </compound>
@@ -8534,6 +8536,27 @@
       <anchor>a016af1dc4f10d78f5eab57fe5b040350</anchor>
       <arglist>(const CObject2dBase &amp;object2d)</arglist>
     </member>
+    <member kind="function">
+      <type>void</type>
+      <name>StartTransform</name>
+      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
+      <anchor>a3ec5cbbdd6f4c54a4e558d9c693ef8d6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>FinishTransform</name>
+      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
+      <anchor>a1d57324b5e8c624a851610b36ff6d721</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsUndoAllowed</name>
+      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
+      <anchor>abc9387e818299bdc2d30d0b196b650a8</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ICalibration2d *</type>
       <name>GetCalibration</name>
@@ -11065,6 +11088,18 @@
       <name>CF_OBJECT_POSITION</name>
       <anchorfile>classi2d_1_1_i_object2d.html</anchorfile>
       <anchor>ad93b4b065f29fa85330055454c837acaa1ec86ce6e63055e3ff6f752e4c954253</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_OBJECT_START_TRANSFORM</name>
+      <anchorfile>classi2d_1_1_i_object2d.html</anchorfile>
+      <anchor>ad93b4b065f29fa85330055454c837acaad9a5f2304030593f0f87f786708c5250</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_OBJECT_END_TRANSFORM</name>
+      <anchorfile>classi2d_1_1_i_object2d.html</anchorfile>
+      <anchor>ad93b4b065f29fa85330055454c837acaad2d582bba18c432ed8ca792f65865c04</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -49774,6 +49809,13 @@
       <anchor>a98889787b30018050b4822b07dbd8697</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>CInteractiveShapeBase</type>
+      <name>ShapeBaseClass</name>
+      <anchorfile>classiview_1_1_c_annulus_segment_shape.html</anchorfile>
+      <anchor>a7d00f7641420bbdb7cf0c29c102aa37b</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CAnnulusSegmentShape</name>
@@ -49872,6 +49914,13 @@
       <name>BaseClass</name>
       <anchorfile>classiview_1_1_c_annulus_shape.html</anchorfile>
       <anchor>a86ea5d247e687be2cf00a2aae5e6a2df</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CInteractiveShapeBase</type>
+      <name>ShapeBaseClass</name>
+      <anchorfile>classiview_1_1_c_annulus_shape.html</anchorfile>
+      <anchor>ae87af1a144d64c1d53671799f715c8fb</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -50419,6 +50468,13 @@
       <anchor>a2e30c3cab2422307ada5a544219b7287</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>CInteractiveShapeBase</type>
+      <name>ShapeBaseClass</name>
+      <anchorfile>classiview_1_1_c_center_pin_shape.html</anchorfile>
+      <anchor>a8d4b2bd3afdce0626257dbd188f44207</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CCenterPinShape</name>
@@ -50471,6 +50527,13 @@
       <name>BaseClass</name>
       <anchorfile>classiview_1_1_c_circle_shape.html</anchorfile>
       <anchor>aa86a97f3f9992723d2c7a8f38a06672e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CInteractiveShapeBase</type>
+      <name>ShapeBaseClass</name>
+      <anchorfile>classiview_1_1_c_circle_shape.html</anchorfile>
+      <anchor>aa97654cd0fdb75ca4ef4f439879e8dc1</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -52189,6 +52252,13 @@
       <anchor>a3888de5591efc98b73fe2479a134a6f1</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>CInteractiveShapeBase</type>
+      <name>ShapeBaseClass</name>
+      <anchorfile>classiview_1_1_c_label_shape.html</anchorfile>
+      <anchor>afeb80af16426cd04f28e7a82d9e671f2</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CLabelShape</name>
@@ -53329,6 +53399,13 @@
       <anchor>ae70d03286d38908a1f763f0511d0e3d3</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>CInteractiveShapeBase</type>
+      <name>ShapeBaseClass</name>
+      <anchorfile>classiview_1_1_c_polygon_shape.html</anchorfile>
+      <anchor>a5926075f777e4ec0a093add7aad5d7f1</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CPolygonShape</name>
@@ -53521,6 +53598,13 @@
       <name>BaseClass</name>
       <anchorfile>classiview_1_1_c_polyline_shape.html</anchorfile>
       <anchor>a4fc044670c52139194c6ab7f6e3607cf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CInteractiveShapeBase</type>
+      <name>ShapeBaseClass</name>
+      <anchorfile>classiview_1_1_c_polyline_shape.html</anchorfile>
+      <anchor>a37064ad5d5f815cbaaa9f1d97d222aa7</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -54399,6 +54483,13 @@
       <anchor>aa5a187e986ff04383e8f2600665b1264</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>CInteractiveShapeBase</type>
+      <name>ShapeBaseClass</name>
+      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
+      <anchor>aa5fd40d37f0b9f7df0adad1ab87b9b7c</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CTransformableRectangleShape</name>
@@ -54790,6 +54881,13 @@
       <name>BaseClass</name>
       <anchorfile>classiview_1_1_c_tube_polyline_shape.html</anchorfile>
       <anchor>a48544efe679deb05e8ef96bcc5f2c984</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CInteractiveShapeBase</type>
+      <name>ShapeBaseClass</name>
+      <anchorfile>classiview_1_1_c_tube_polyline_shape.html</anchorfile>
+      <anchor>a298775735025dd86c5c4108f07749b69</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
