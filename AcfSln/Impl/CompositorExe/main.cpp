@@ -31,7 +31,7 @@
 // ACF includes
 #include "ibase/IApplication.h"
 
-#include "Generated/CCompositor.h"
+#include "GeneratedFiles/Compositor/CCompositor.h"
 
 
 int main(int argc, char *argv[])

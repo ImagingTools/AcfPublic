@@ -29,7 +29,7 @@
 
 #include "iqtgui/TDesignerGuiCompBase.h"
 
-#include "ifilegui/Generated/ui_CFilePersistenceGuiComp.h"
+#include "GeneratedFiles/ifilegui/ui_CFilePersistenceGuiComp.h"
 
 
 namespace ifilegui

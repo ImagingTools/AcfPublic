@@ -7,7 +7,7 @@
           0
         </Id>
         <Number>
-          3038
+          3105
         </Number>
         <Description>
           ACF
@@ -18,7 +18,7 @@
           1
         </Id>
         <Number>
-          977
+          997
         </Number>
         <Description>
           ACF-Solutions
@@ -411,7 +411,7 @@
         <Flags>
           0
         </Flags>
-        <AttributeInfoMap count="4">
+        <AttributeInfoMap count="3">
           <AttributeInfo>
             <Id>
               AoiParamId
@@ -456,22 +456,6 @@
             </Type>
             <ExportId>
               Log
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                false
-              </IsEnabled>
-            </Data>
-          </AttributeInfo>
-          <AttributeInfo>
-            <Id>
-              RegionCalibrationProvider
-            </Id>
-            <Type>
-              Reference
-            </Type>
-            <ExportId>
-              AoiCalibrationProvider
             </ExportId>
             <Data>
               <IsEnabled>
@@ -974,7 +958,7 @@
               <Flags>
                 0
               </Flags>
-              <AttributeInfoMap count="5">
+              <AttributeInfoMap count="6">
                 <AttributeInfo>
                   <Id>
                     EnableVerbose
@@ -1037,6 +1021,25 @@
                     <IsEnabled>
                       false
                     </IsEnabled>
+                  </Data>
+                </AttributeInfo>
+                <AttributeInfo>
+                  <Id>
+                    ProcessorParams
+                  </Id>
+                  <Type>
+                    Reference
+                  </Type>
+                  <ExportId>
+                    
+                  </ExportId>
+                  <Data>
+                    <IsEnabled>
+                      true
+                    </IsEnabled>
+                    <Value>
+                      PatternComparatorParams
+                    </Value>
                   </Data>
                 </AttributeInfo>
                 <AttributeInfo>

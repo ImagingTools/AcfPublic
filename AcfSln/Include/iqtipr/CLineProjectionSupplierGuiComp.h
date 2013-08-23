@@ -41,7 +41,7 @@
 
 #include "iqtipr/iqtipr.h"
 
-#include "iqtipr/Generated/ui_CLineProjectionSupplierGuiComp.h"
+#include "GeneratedFiles/iqtipr/ui_CLineProjectionSupplierGuiComp.h"
 
 
 namespace iqtipr

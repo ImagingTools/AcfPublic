@@ -33,7 +33,7 @@
 
 // ACF-Solutions includes
 #include "icmpstr/IRegistryConsistInfo.h"
-#include "icmpstr/Generated/ui_CRegistryPropEditorComp.h"
+#include "GeneratedFiles/icmpstr/ui_CRegistryPropEditorComp.h"
 
 
 namespace icmpstr

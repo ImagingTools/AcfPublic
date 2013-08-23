@@ -32,7 +32,7 @@
 #include "imod/TSingleModelObserverBase.h"
 #include "iqtgui/TDesignerGuiObserverCompBase.h"
 #include "imeas/IDataSequence.h"
-#include "iqtmeas/Generated/ui_CDataSequenceViewComp.h"
+#include "GeneratedFiles/iqtmeas/ui_CDataSequenceViewComp.h"
 
 
 namespace iqtmeas

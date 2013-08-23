@@ -14,6 +14,330 @@
     <filename>_acf_sln_8h</filename>
   </compound>
   <compound kind="file">
+    <name>ui_CAttributeEditorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/icmpstr/</path>
+    <filename>ui___c_attribute_editor_comp_8h</filename>
+    <class kind="class">Ui_CAttributeEditorComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CComponentNoteEditorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/icmpstr/</path>
+    <filename>ui___c_component_note_editor_comp_8h</filename>
+    <class kind="class">Ui_CComponentNoteEditorComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CComponentPromotorDialogComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/icmpstr/</path>
+    <filename>ui___c_component_promotor_dialog_comp_8h</filename>
+    <class kind="class">Ui_CComponentPromotorDialogComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CMultiAttributeEditor.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/icmpstr/</path>
+    <filename>ui___c_multi_attribute_editor_8h</filename>
+    <class kind="class">Ui_CMultiAttributeEditor</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CPackageOverviewComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/icmpstr/</path>
+    <filename>ui___c_package_overview_comp_8h</filename>
+    <class kind="class">Ui_CPackageOverviewComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CQuickHelpGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/icmpstr/</path>
+    <filename>ui___c_quick_help_gui_comp_8h</filename>
+    <class kind="class">Ui_CQuickHelpGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CRegistryPropEditorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/icmpstr/</path>
+    <filename>ui___c_registry_prop_editor_comp_8h</filename>
+    <class kind="class">Ui_CRegistryPropEditorComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CRegistryTreeViewComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/icmpstr/</path>
+    <filename>ui___c_registry_tree_view_comp_8h</filename>
+    <class kind="class">Ui_CRegistryTreeViewComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CSceneProviderGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/icmpstr/</path>
+    <filename>ui___c_scene_provider_gui_comp_8h</filename>
+    <class kind="class">Ui_CSceneProviderGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CVisualRegistryEditorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/icmpstr/</path>
+    <filename>ui___c_visual_registry_editor_comp_8h</filename>
+    <class kind="class">Ui_CVisualRegistryEditorComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CXpcEditorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/icmpstr/</path>
+    <filename>ui___c_xpc_editor_comp_8h</filename>
+    <class kind="class">Ui_XpcEditorComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CEdgeLinesSupplierGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iedgegui/</path>
+    <filename>ui___c_edge_lines_supplier_gui_comp_8h</filename>
+    <class kind="class">Ui_CEdgeLinesSupplierGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CDirectoryItemGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/ihotfgui/</path>
+    <filename>ui___c_directory_item_gui_comp_8h</filename>
+    <class kind="class">Ui_CDirectoryItemGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CDirectoryMonitorParamsGui.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/ihotfgui/</path>
+    <filename>ui___c_directory_monitor_params_gui_8h</filename>
+    <class kind="class">Ui_CDirectoryMonitorParamsGui</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CHotfolderContainerGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/ihotfgui/</path>
+    <filename>ui___c_hotfolder_container_gui_comp_8h</filename>
+    <class kind="class">Ui_CHotfolderContainerGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CHotfolderGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/ihotfgui/</path>
+    <filename>ui___c_hotfolder_gui_comp_8h</filename>
+    <class kind="class">Ui_CHotfolderGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CProcessingItemPreviewGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/ihotfgui/</path>
+    <filename>ui___c_processing_item_preview_gui_comp_8h</filename>
+    <class kind="class">Ui_CProcessingItemPreviewGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CProcessorControlGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iprocgui/</path>
+    <filename>ui___c_processor_control_gui_comp_8h</filename>
+    <class kind="class">Ui_CProcessorControlGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CPropertiesEditorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iprop/</path>
+    <filename>ui___c_properties_editor_comp_8h</filename>
+    <class kind="class">Ui_CPropertiesEditorComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CChangePasswordDialog.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtauth/</path>
+    <filename>ui___c_change_password_dialog_8h</filename>
+    <class kind="class">Ui_CChangePasswordDialog</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CLoginBarGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtauth/</path>
+    <filename>ui___c_login_bar_gui_comp_8h</filename>
+    <class kind="class">Ui_CLoginBarGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CUserGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtauth/</path>
+    <filename>ui___c_user_gui_comp_8h</filename>
+    <class kind="class">Ui_CUserGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CUserManagerDialog.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtauth/</path>
+    <filename>ui___c_user_manager_dialog_8h</filename>
+    <class kind="class">Ui_CUserManagerDialog</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CBitmapSupplierGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtcam/</path>
+    <filename>ui___c_bitmap_supplier_gui_comp_8h</filename>
+    <class kind="class">Ui_CBitmapSupplierGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CCameraInfoGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtcam/</path>
+    <filename>ui___c_camera_info_gui_comp_8h</filename>
+    <class kind="class">Ui_CCameraInfoGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CExposureParamsGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtcam/</path>
+    <filename>ui___c_exposure_params_gui_comp_8h</filename>
+    <class kind="class">Ui_CExposureParamsGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CMultiBitmapSupplierGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtcam/</path>
+    <filename>ui___c_multi_bitmap_supplier_gui_comp_8h</filename>
+    <class kind="class">Ui_CMultiBitmapSupplierGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CScaleCalibrationEditorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtcam/</path>
+    <filename>ui___c_scale_calibration_editor_comp_8h</filename>
+    <class kind="class">Ui_CScaleCalibrationEditorComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CSnapImageGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtcam/</path>
+    <filename>ui___c_snap_image_gui_comp_8h</filename>
+    <class kind="class">Ui_CSnapImageGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CTcpTerminalGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtex/</path>
+    <filename>ui___c_tcp_terminal_gui_comp_8h</filename>
+    <class kind="class">Ui_CTcpTerminalGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CGeneralSupplierGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtinsp/</path>
+    <filename>ui___c_general_supplier_gui_comp_8h</filename>
+    <class kind="class">Ui_CGeneralSupplierGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CInspectionTaskGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtinsp/</path>
+    <filename>ui___c_inspection_task_gui_comp_8h</filename>
+    <class kind="class">Ui_CInspectionTaskGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CCaliperParamsGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtipr/</path>
+    <filename>ui___c_caliper_params_gui_comp_8h</filename>
+    <class kind="class">Ui_CCaliperParamsGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CCircleFinderParamsGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtipr/</path>
+    <filename>ui___c_circle_finder_params_gui_comp_8h</filename>
+    <class kind="class">Ui_CCircleFinderParamsGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CColorPatternComparatorGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtipr/</path>
+    <filename>ui___c_color_pattern_comparator_gui_comp_8h</filename>
+    <class kind="class">Ui_CColorPatternComparatorGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CConvolution2dParamsGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtipr/</path>
+    <filename>ui___c_convolution2d_params_gui_comp_8h</filename>
+    <class kind="class">Ui_CConvolution2dParamsGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CGeneralSearchParamsGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtipr/</path>
+    <filename>ui___c_general_search_params_gui_comp_8h</filename>
+    <class kind="class">Ui_CGeneralSearchParamsGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CLineProjectionSupplierGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtipr/</path>
+    <filename>ui___c_line_projection_supplier_gui_comp_8h</filename>
+    <class kind="class">Ui_CLineProjectionSupplierGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CMultiLineProjectionSupplierGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtipr/</path>
+    <filename>ui___c_multi_line_projection_supplier_gui_comp_8h</filename>
+    <class kind="class">Ui_CMultiLineProjectionSupplierGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CMultiLineSupplierGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtipr/</path>
+    <filename>ui___c_multi_line_supplier_gui_comp_8h</filename>
+    <class kind="class">Ui_CMultiLineSupplierGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CPatternTeachingControllerGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtipr/</path>
+    <filename>ui___c_pattern_teaching_controller_gui_comp_8h</filename>
+    <class kind="class">Ui_CPatternTeachingControllerGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CProcessedBitmapView.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtipr/</path>
+    <filename>ui___c_processed_bitmap_view_8h</filename>
+    <class kind="class">Ui_CProcessedBitmapView</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CSearchBasedFeaturesSupplierGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtipr/</path>
+    <filename>ui___c_search_based_features_supplier_gui_comp_8h</filename>
+    <class kind="class">Ui_CSearchBasedFeaturesSupplierGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CValueSupplierGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtipr/</path>
+    <filename>ui___c_value_supplier_gui_comp_8h</filename>
+    <class kind="class">Ui_CValueSupplierGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CDataSequenceViewComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtmeas/</path>
+    <filename>ui___c_data_sequence_view_comp_8h</filename>
+    <class kind="class">Ui_CDataSequenceViewComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CDataStatisticsGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtmeas/</path>
+    <filename>ui___c_data_statistics_gui_comp_8h</filename>
+    <class kind="class">Ui_CDataStatisticsGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CNumericValueWidget.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtmeas/</path>
+    <filename>ui___c_numeric_value_widget_8h</filename>
+    <class kind="class">Ui_CNumericValueWidget</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CPlaybackControllerGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtmm/</path>
+    <filename>ui___c_playback_controller_gui_comp_8h</filename>
+    <class kind="class">Ui_CPlaybackControllerGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CVideoPlayerGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtmm/</path>
+    <filename>ui___c_video_player_gui_comp_8h</filename>
+    <class kind="class">Ui_CVideoPlayerGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CPulseParamsGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtsig/</path>
+    <filename>ui___c_pulse_params_gui_comp_8h</filename>
+    <class kind="class">Ui_CPulseParamsGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CSampleAcquisitionGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtsig/</path>
+    <filename>ui___c_sample_acquisition_gui_comp_8h</filename>
+    <class kind="class">Ui_CSampleAcquisitionGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CSamplingParamsGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtsig/</path>
+    <filename>ui___c_sampling_params_gui_comp_8h</filename>
+    <class kind="class">Ui_CSamplingParamsGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CTriggerParamsGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iqtsig/</path>
+    <filename>ui___c_trigger_params_gui_comp_8h</filename>
+    <class kind="class">Ui_CTriggerParamsGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CWizardOptionsListGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/GeneratedFiles/iwizgui/</path>
+    <filename>ui___c_wizard_options_list_gui_comp_8h</filename>
+    <class kind="class">Ui_CWizardOptionsListGuiComp</class>
+  </compound>
+  <compound kind="file">
     <name>CRightsBasedEnablerComp.h</name>
     <path>C:/Temp/AcfSln/Include/iauth/</path>
     <filename>_c_rights_based_enabler_comp_8h</filename>
@@ -222,6 +546,7 @@
     <filename>_c_attribute_editor_comp_8h</filename>
     <includes id="_c_element_selection_info_manager_base_8h" name="CElementSelectionInfoManagerBase.h" local="yes" imported="no">icmpstr/CElementSelectionInfoManagerBase.h</includes>
     <includes id="_c_multi_attribute_editor_8h" name="CMultiAttributeEditor.h" local="yes" imported="no">icmpstr/CMultiAttributeEditor.h</includes>
+    <includes id="ui___c_attribute_editor_comp_8h" name="ui_CAttributeEditorComp.h" local="yes" imported="no">GeneratedFiles/icmpstr/ui_CAttributeEditorComp.h</includes>
     <class kind="class">icmpstr::CAttributeEditorComp</class>
     <class kind="struct">icmpstr::CAttributeEditorComp::AttrInfo</class>
     <namespace>icmpstr</namespace>
@@ -239,6 +564,7 @@
     <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_component_note_editor_comp_8h</filename>
     <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
+    <includes id="ui___c_component_note_editor_comp_8h" name="ui_CComponentNoteEditorComp.h" local="yes" imported="no">GeneratedFiles/icmpstr/ui_CComponentNoteEditorComp.h</includes>
     <class kind="class">icmpstr::CComponentNoteEditorComp</class>
     <namespace>icmpstr</namespace>
   </compound>
@@ -247,6 +573,7 @@
     <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_component_promotor_dialog_comp_8h</filename>
     <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
+    <includes id="ui___c_component_promotor_dialog_comp_8h" name="ui_CComponentPromotorDialogComp.h" local="yes" imported="no">GeneratedFiles/icmpstr/ui_CComponentPromotorDialogComp.h</includes>
     <class kind="class">icmpstr::CComponentPromotorDialogCompBase</class>
     <class kind="class">icmpstr::CComponentPromotorDialogComp</class>
     <namespace>icmpstr</namespace>
@@ -282,6 +609,7 @@
     <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_multi_attribute_editor_8h</filename>
     <includes id="_c_element_selection_info_manager_base_8h" name="CElementSelectionInfoManagerBase.h" local="yes" imported="no">icmpstr/CElementSelectionInfoManagerBase.h</includes>
+    <includes id="ui___c_multi_attribute_editor_8h" name="ui_CMultiAttributeEditor.h" local="yes" imported="no">GeneratedFiles/icmpstr/ui_CMultiAttributeEditor.h</includes>
     <class kind="class">icmpstr::CMultiAttributeEditor</class>
     <namespace>icmpstr</namespace>
   </compound>
@@ -292,6 +620,7 @@
     <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
     <includes id="_i_attribute_selection_observer_8h" name="IAttributeSelectionObserver.h" local="yes" imported="no">icmpstr/IAttributeSelectionObserver.h</includes>
     <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
+    <includes id="ui___c_package_overview_comp_8h" name="ui_CPackageOverviewComp.h" local="yes" imported="no">GeneratedFiles/icmpstr/ui_CPackageOverviewComp.h</includes>
     <class kind="class">icmpstr::CPackageOverviewComp</class>
     <class kind="struct">icmpstr::CPackageOverviewComp::RootInfo</class>
     <namespace>icmpstr</namespace>
@@ -309,6 +638,7 @@
     <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_quick_help_gui_comp_8h</filename>
     <includes id="_i_external_meta_info_manager_8h" name="IExternalMetaInfoManager.h" local="yes" imported="no">icmpstr/IExternalMetaInfoManager.h</includes>
+    <includes id="ui___c_quick_help_gui_comp_8h" name="ui_CQuickHelpGuiComp.h" local="yes" imported="no">GeneratedFiles/icmpstr/ui_CQuickHelpGuiComp.h</includes>
     <class kind="class">icmpstr::CQuickHelpGuiComp</class>
     <namespace>icmpstr</namespace>
   </compound>
@@ -350,6 +680,7 @@
     <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_registry_prop_editor_comp_8h</filename>
     <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
+    <includes id="ui___c_registry_prop_editor_comp_8h" name="ui_CRegistryPropEditorComp.h" local="yes" imported="no">GeneratedFiles/icmpstr/ui_CRegistryPropEditorComp.h</includes>
     <class kind="class">icmpstr::CRegistryPropEditorComp</class>
     <class kind="class">icmpstr::CRegistryPropEditorComp::TextLog</class>
     <namespace>icmpstr</namespace>
@@ -360,6 +691,7 @@
     <filename>_c_registry_tree_view_comp_8h</filename>
     <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
     <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
+    <includes id="ui___c_registry_tree_view_comp_8h" name="ui_CRegistryTreeViewComp.h" local="yes" imported="no">GeneratedFiles/icmpstr/ui_CRegistryTreeViewComp.h</includes>
     <class kind="class">icmpstr::CRegistryTreeViewComp</class>
     <class kind="class">icmpstr::CRegistryTreeViewComp::EnvironmentObserver</class>
     <namespace>icmpstr</namespace>
@@ -369,6 +701,7 @@
     <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_scene_provider_gui_comp_8h</filename>
     <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">icmpstr/ISceneProvider.h</includes>
+    <includes id="ui___c_scene_provider_gui_comp_8h" name="ui_CSceneProviderGuiComp.h" local="yes" imported="no">GeneratedFiles/icmpstr/ui_CSceneProviderGuiComp.h</includes>
     <class kind="class">icmpstr::CSceneProviderGuiComp</class>
     <class kind="class">icmpstr::CSceneProviderGuiComp::CScene</class>
     <namespace>icmpstr</namespace>
@@ -390,6 +723,7 @@
     <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
     <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
     <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">icmpstr/ISceneProvider.h</includes>
+    <includes id="ui___c_visual_registry_editor_comp_8h" name="ui_CVisualRegistryEditorComp.h" local="yes" imported="no">GeneratedFiles/icmpstr/ui_CVisualRegistryEditorComp.h</includes>
     <class kind="class">icmpstr::CVisualRegistryEditorComp</class>
     <class kind="class">icmpstr::CVisualRegistryEditorComp::EnvironmentObserver</class>
     <namespace>icmpstr</namespace>
@@ -406,6 +740,7 @@
     <name>CXpcEditorComp.h</name>
     <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_xpc_editor_comp_8h</filename>
+    <includes id="ui___c_xpc_editor_comp_8h" name="ui_CXpcEditorComp.h" local="yes" imported="no">GeneratedFiles/icmpstr/ui_CXpcEditorComp.h</includes>
     <class kind="class">icmpstr::CXpcEditorComp</class>
     <namespace>icmpstr</namespace>
   </compound>
@@ -618,6 +953,7 @@
     <includes id="_c_edge_line_container_8h" name="CEdgeLineContainer.h" local="yes" imported="no">iedge/CEdgeLineContainer.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="iqtipr_8h" name="iqtipr.h" local="yes" imported="no">iqtipr/iqtipr.h</includes>
+    <includes id="ui___c_edge_lines_supplier_gui_comp_8h" name="ui_CEdgeLinesSupplierGuiComp.h" local="yes" imported="no">GeneratedFiles/iedgegui/ui_CEdgeLinesSupplierGuiComp.h</includes>
     <class kind="class">iedgegui::CEdgeLinesSupplierGuiComp</class>
     <namespace>iedgegui</namespace>
   </compound>
@@ -976,6 +1312,7 @@
     <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
     <filename>_c_directory_item_gui_comp_8h</filename>
     <includes id="_i_hotfolder_statistics_8h" name="IHotfolderStatistics.h" local="yes" imported="no">ihotf/IHotfolderStatistics.h</includes>
+    <includes id="ui___c_directory_item_gui_comp_8h" name="ui_CDirectoryItemGuiComp.h" local="yes" imported="no">GeneratedFiles/ihotfgui/ui_CDirectoryItemGuiComp.h</includes>
     <class kind="class">ihotfgui::CDirectoryItemGuiComp</class>
     <namespace>ihotfgui</namespace>
   </compound>
@@ -995,6 +1332,7 @@
     <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
     <filename>_c_directory_monitor_params_gui_8h</filename>
     <includes id="_i_directory_monitor_params_8h" name="IDirectoryMonitorParams.h" local="yes" imported="no">ihotf/IDirectoryMonitorParams.h</includes>
+    <includes id="ui___c_directory_monitor_params_gui_8h" name="ui_CDirectoryMonitorParamsGui.h" local="yes" imported="no">GeneratedFiles/ihotfgui/ui_CDirectoryMonitorParamsGui.h</includes>
     <class kind="class">ihotfgui::CDirectoryMonitorParamsGui</class>
     <namespace>ihotfgui</namespace>
   </compound>
@@ -1002,6 +1340,7 @@
     <name>CHotfolderContainerGuiComp.h</name>
     <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
     <filename>_c_hotfolder_container_gui_comp_8h</filename>
+    <includes id="ui___c_hotfolder_container_gui_comp_8h" name="ui_CHotfolderContainerGuiComp.h" local="yes" imported="no">GeneratedFiles/ihotfgui/ui_CHotfolderContainerGuiComp.h</includes>
     <class kind="class">ihotfgui::CHotfolderContainerGuiComp</class>
     <namespace>ihotfgui</namespace>
   </compound>
@@ -1012,6 +1351,7 @@
     <includes id="_i_hotfolder_processing_info_8h" name="IHotfolderProcessingInfo.h" local="yes" imported="no">ihotf/IHotfolderProcessingInfo.h</includes>
     <includes id="_i_hotfolder_processing_item_8h" name="IHotfolderProcessingItem.h" local="yes" imported="no">ihotf/IHotfolderProcessingItem.h</includes>
     <includes id="_i_hotfolder_statistics_8h" name="IHotfolderStatistics.h" local="yes" imported="no">ihotf/IHotfolderStatistics.h</includes>
+    <includes id="ui___c_hotfolder_gui_comp_8h" name="ui_CHotfolderGuiComp.h" local="yes" imported="no">GeneratedFiles/ihotfgui/ui_CHotfolderGuiComp.h</includes>
     <class kind="class">ihotfgui::CHotfolderGuiComp</class>
     <namespace>ihotfgui</namespace>
   </compound>
@@ -1043,6 +1383,7 @@
     <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
     <filename>_c_processing_item_preview_gui_comp_8h</filename>
     <includes id="_i_hotfolder_processing_item_8h" name="IHotfolderProcessingItem.h" local="yes" imported="no">ihotf/IHotfolderProcessingItem.h</includes>
+    <includes id="ui___c_processing_item_preview_gui_comp_8h" name="ui_CProcessingItemPreviewGuiComp.h" local="yes" imported="no">GeneratedFiles/ihotfgui/ui_CProcessingItemPreviewGuiComp.h</includes>
     <class kind="class">ihotfgui::CProcessingItemPreviewGuiComp</class>
     <namespace>ihotfgui</namespace>
   </compound>
@@ -2359,6 +2700,7 @@
     <path>C:/Temp/AcfSln/Include/iprocgui/</path>
     <filename>_c_processor_control_gui_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="ui___c_processor_control_gui_comp_8h" name="ui_CProcessorControlGuiComp.h" local="yes" imported="no">GeneratedFiles/iprocgui/ui_CProcessorControlGuiComp.h</includes>
     <class kind="class">iprocgui::CProcessorControlGuiComp</class>
     <namespace>iprocgui</namespace>
   </compound>
@@ -2373,6 +2715,7 @@
     <path>C:/Temp/AcfSln/Include/iprop/</path>
     <filename>_c_properties_editor_comp_8h</filename>
     <includes id="_i_properties_manager_8h" name="IPropertiesManager.h" local="yes" imported="no">iprop/IPropertiesManager.h</includes>
+    <includes id="ui___c_properties_editor_comp_8h" name="ui_CPropertiesEditorComp.h" local="yes" imported="no">GeneratedFiles/iprop/ui_CPropertiesEditorComp.h</includes>
     <class kind="class">iprop::CPropertiesEditorComp</class>
     <namespace>iprop</namespace>
   </compound>
@@ -2517,6 +2860,7 @@
     <filename>_c_change_password_dialog_8h</filename>
     <includes id="_i_users_manager_8h" name="IUsersManager.h" local="yes" imported="no">iauth/IUsersManager.h</includes>
     <includes id="_c_user_8h" name="CUser.h" local="yes" imported="no">iauth/CUser.h</includes>
+    <includes id="ui___c_change_password_dialog_8h" name="ui_CChangePasswordDialog.h" local="yes" imported="no">GeneratedFiles/iqtauth/ui_CChangePasswordDialog.h</includes>
     <class kind="class">iqtauth::CChangePasswordDialog</class>
     <namespace>iqtauth</namespace>
   </compound>
@@ -2525,6 +2869,7 @@
     <path>C:/Temp/AcfSln/Include/iqtauth/</path>
     <filename>_c_login_bar_gui_comp_8h</filename>
     <includes id="_i_login_8h" name="ILogin.h" local="yes" imported="no">iauth/ILogin.h</includes>
+    <includes id="ui___c_login_bar_gui_comp_8h" name="ui_CLoginBarGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtauth/ui_CLoginBarGuiComp.h</includes>
     <class kind="class">iqtauth::CLoginBarGuiComp</class>
     <namespace>iqtauth</namespace>
   </compound>
@@ -2536,6 +2881,7 @@
     <includes id="_i_login_8h" name="ILogin.h" local="yes" imported="no">iauth/ILogin.h</includes>
     <includes id="_i_users_manager_8h" name="IUsersManager.h" local="yes" imported="no">iauth/IUsersManager.h</includes>
     <includes id="_i_password_changer_8h" name="IPasswordChanger.h" local="yes" imported="no">iauth/IPasswordChanger.h</includes>
+    <includes id="ui___c_user_gui_comp_8h" name="ui_CUserGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtauth/ui_CUserGuiComp.h</includes>
     <class kind="class">iqtauth::CUserGuiComp</class>
     <namespace>iqtauth</namespace>
   </compound>
@@ -2545,6 +2891,7 @@
     <filename>_c_user_manager_dialog_8h</filename>
     <includes id="_i_login_8h" name="ILogin.h" local="yes" imported="no">iauth/ILogin.h</includes>
     <includes id="_i_users_manager_8h" name="IUsersManager.h" local="yes" imported="no">iauth/IUsersManager.h</includes>
+    <includes id="ui___c_user_manager_dialog_8h" name="ui_CUserManagerDialog.h" local="yes" imported="no">GeneratedFiles/iqtauth/ui_CUserManagerDialog.h</includes>
     <class kind="class">iqtauth::CUserManagerDialog</class>
     <namespace>iqtauth</namespace>
   </compound>
@@ -2554,6 +2901,7 @@
     <filename>_c_bitmap_supplier_gui_comp_8h</filename>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="iqtcam_8h" name="iqtcam.h" local="yes" imported="no">iqtcam/iqtcam.h</includes>
+    <includes id="ui___c_bitmap_supplier_gui_comp_8h" name="ui_CBitmapSupplierGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtcam/ui_CBitmapSupplierGuiComp.h</includes>
     <class kind="class">iqtcam::CBitmapSupplierGuiComp</class>
     <namespace>iqtcam</namespace>
   </compound>
@@ -2562,6 +2910,7 @@
     <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>_c_camera_info_gui_comp_8h</filename>
     <includes id="_i_camera_info_8h" name="ICameraInfo.h" local="yes" imported="no">icam/ICameraInfo.h</includes>
+    <includes id="ui___c_camera_info_gui_comp_8h" name="ui_CCameraInfoGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtcam/ui_CCameraInfoGuiComp.h</includes>
     <class kind="class">iqtcam::CCameraInfoGuiComp</class>
     <namespace>iqtcam</namespace>
   </compound>
@@ -2570,6 +2919,7 @@
     <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>_c_exposure_params_gui_comp_8h</filename>
     <includes id="_i_exposure_params_8h" name="IExposureParams.h" local="yes" imported="no">icam/IExposureParams.h</includes>
+    <includes id="ui___c_exposure_params_gui_comp_8h" name="ui_CExposureParamsGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtcam/ui_CExposureParamsGuiComp.h</includes>
     <class kind="class">iqtcam::CExposureParamsGuiComp</class>
     <namespace>iqtcam</namespace>
   </compound>
@@ -2590,6 +2940,7 @@
     <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>_c_multi_bitmap_supplier_gui_comp_8h</filename>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
+    <includes id="ui___c_multi_bitmap_supplier_gui_comp_8h" name="ui_CMultiBitmapSupplierGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtcam/ui_CMultiBitmapSupplierGuiComp.h</includes>
     <class kind="class">iqtcam::CMultiBitmapSupplierGuiComp</class>
     <namespace>iqtcam</namespace>
   </compound>
@@ -2598,6 +2949,7 @@
     <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>_c_scale_calibration_editor_comp_8h</filename>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="ui___c_scale_calibration_editor_comp_8h" name="ui_CScaleCalibrationEditorComp.h" local="yes" imported="no">GeneratedFiles/iqtcam/ui_CScaleCalibrationEditorComp.h</includes>
     <class kind="class">iqtcam::CScaleCalibrationEditorComp</class>
     <namespace>iqtcam</namespace>
   </compound>
@@ -2607,6 +2959,7 @@
     <filename>_c_snap_image_gui_comp_8h</filename>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
     <includes id="iqtcam_8h" name="iqtcam.h" local="yes" imported="no">iqtcam/iqtcam.h</includes>
+    <includes id="ui___c_snap_image_gui_comp_8h" name="ui_CSnapImageGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtcam/ui_CSnapImageGuiComp.h</includes>
     <class kind="class">iqtcam::CSnapImageGuiComp</class>
     <namespace>iqtcam</namespace>
   </compound>
@@ -2620,6 +2973,7 @@
     <name>CTcpTerminalGuiComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtex/</path>
     <filename>_c_tcp_terminal_gui_comp_8h</filename>
+    <includes id="ui___c_tcp_terminal_gui_comp_8h" name="ui_CTcpTerminalGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtex/ui_CTcpTerminalGuiComp.h</includes>
     <class kind="class">iqtex::CTcpTerminalGuiComp</class>
     <namespace>iqtex</namespace>
   </compound>
@@ -2658,6 +3012,7 @@
     <filename>_c_general_supplier_gui_comp_8h</filename>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
+    <includes id="ui___c_general_supplier_gui_comp_8h" name="ui_CGeneralSupplierGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtinsp/ui_CGeneralSupplierGuiComp.h</includes>
     <class kind="class">iqtinsp::CGeneralSupplierGuiComp</class>
     <namespace>iqtinsp</namespace>
   </compound>
@@ -2666,6 +3021,7 @@
     <path>C:/Temp/AcfSln/Include/iqtinsp/</path>
     <filename>_c_inspection_task_gui_comp_8h</filename>
     <includes id="_i_inspection_task_8h" name="IInspectionTask.h" local="yes" imported="no">iinsp/IInspectionTask.h</includes>
+    <includes id="ui___c_inspection_task_gui_comp_8h" name="ui_CInspectionTaskGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtinsp/ui_CInspectionTaskGuiComp.h</includes>
     <class kind="class">iqtinsp::CInspectionTaskGuiCompBase</class>
     <class kind="class">iqtinsp::CInspectionTaskGuiComp</class>
     <namespace>iqtinsp</namespace>
@@ -2691,6 +3047,7 @@
     <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_caliper_params_gui_comp_8h</filename>
     <includes id="_i_caliper_params_8h" name="ICaliperParams.h" local="yes" imported="no">iipr/ICaliperParams.h</includes>
+    <includes id="ui___c_caliper_params_gui_comp_8h" name="ui_CCaliperParamsGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtipr/ui_CCaliperParamsGuiComp.h</includes>
     <class kind="class">iqtipr::CCaliperParamsGuiComp</class>
     <namespace>iqtipr</namespace>
   </compound>
@@ -2699,6 +3056,7 @@
     <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_circle_finder_params_gui_comp_8h</filename>
     <includes id="_i_circle_finder_params_8h" name="ICircleFinderParams.h" local="yes" imported="no">iipr/ICircleFinderParams.h</includes>
+    <includes id="ui___c_circle_finder_params_gui_comp_8h" name="ui_CCircleFinderParamsGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtipr/ui_CCircleFinderParamsGuiComp.h</includes>
     <class kind="class">iqtipr::CCircleFinderParamsGuiComp</class>
     <namespace>iqtipr</namespace>
   </compound>
@@ -2709,6 +3067,7 @@
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
+    <includes id="ui___c_color_pattern_comparator_gui_comp_8h" name="ui_CColorPatternComparatorGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtipr/ui_CColorPatternComparatorGuiComp.h</includes>
     <class kind="class">iqtipr::CColorPatternComparatorGuiComp</class>
     <namespace>iqtipr</namespace>
   </compound>
@@ -2717,6 +3076,7 @@
     <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_convolution2d_params_gui_comp_8h</filename>
     <includes id="_i_convolution_kernel2d_8h" name="IConvolutionKernel2d.h" local="yes" imported="no">iipr/IConvolutionKernel2d.h</includes>
+    <includes id="ui___c_convolution2d_params_gui_comp_8h" name="ui_CConvolution2dParamsGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtipr/ui_CConvolution2dParamsGuiComp.h</includes>
     <class kind="class">iqtipr::CConvolution2dParamsGuiComp</class>
     <namespace>iqtipr</namespace>
   </compound>
@@ -2725,6 +3085,7 @@
     <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_general_search_params_gui_comp_8h</filename>
     <includes id="_i_search_params_8h" name="ISearchParams.h" local="yes" imported="no">iipr/ISearchParams.h</includes>
+    <includes id="ui___c_general_search_params_gui_comp_8h" name="ui_CGeneralSearchParamsGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtipr/ui_CGeneralSearchParamsGuiComp.h</includes>
     <class kind="class">iqtipr::CGeneralSearchParamsGuiComp</class>
     <namespace>iqtipr</namespace>
   </compound>
@@ -2737,6 +3098,7 @@
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="iqtipr_8h" name="iqtipr.h" local="yes" imported="no">iqtipr/iqtipr.h</includes>
+    <includes id="ui___c_line_projection_supplier_gui_comp_8h" name="ui_CLineProjectionSupplierGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtipr/ui_CLineProjectionSupplierGuiComp.h</includes>
     <class kind="class">iqtipr::CLineProjectionSupplierGuiComp</class>
     <namespace>iqtipr</namespace>
   </compound>
@@ -2747,6 +3109,7 @@
     <includes id="_i_multi_data_sequence_provider_8h" name="IMultiDataSequenceProvider.h" local="yes" imported="no">imeas/IMultiDataSequenceProvider.h</includes>
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
+    <includes id="ui___c_multi_line_projection_supplier_gui_comp_8h" name="ui_CMultiLineProjectionSupplierGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtipr/ui_CMultiLineProjectionSupplierGuiComp.h</includes>
     <class kind="class">iqtipr::CMultiLineProjectionSupplierGuiComp</class>
     <namespace>iqtipr</namespace>
   </compound>
@@ -2756,6 +3119,7 @@
     <filename>_c_multi_line_supplier_gui_comp_8h</filename>
     <includes id="_c_simple_numeric_value_provider_8h" name="CSimpleNumericValueProvider.h" local="yes" imported="no">imeas/CSimpleNumericValueProvider.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
+    <includes id="ui___c_multi_line_supplier_gui_comp_8h" name="ui_CMultiLineSupplierGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtipr/ui_CMultiLineSupplierGuiComp.h</includes>
     <class kind="class">iqtipr::CMultiLineSupplierGuiComp</class>
     <class kind="class">iqtipr::CMultiLineSupplierGuiComp::LineSelection</class>
     <class kind="class">iqtipr::CMultiLineSupplierGuiComp::CShape</class>
@@ -2766,6 +3130,7 @@
     <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_pattern_teaching_controller_gui_comp_8h</filename>
     <includes id="_i_pattern_controller_8h" name="IPatternController.h" local="yes" imported="no">iipr/IPatternController.h</includes>
+    <includes id="ui___c_pattern_teaching_controller_gui_comp_8h" name="ui_CPatternTeachingControllerGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtipr/ui_CPatternTeachingControllerGuiComp.h</includes>
     <class kind="class">iqtipr::CPatternTeachingControllerGuiComp</class>
     <namespace>iqtipr</namespace>
   </compound>
@@ -2773,6 +3138,7 @@
     <name>CProcessedBitmapView.h</name>
     <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_processed_bitmap_view_8h</filename>
+    <includes id="ui___c_processed_bitmap_view_8h" name="ui_CProcessedBitmapView.h" local="yes" imported="no">GeneratedFiles/iqtipr/ui_CProcessedBitmapView.h</includes>
     <class kind="class">iqtipr::CProcessedBitmapView</class>
     <namespace>iqtipr</namespace>
   </compound>
@@ -2798,6 +3164,7 @@
     <filename>_c_search_based_features_supplier_gui_comp_8h</filename>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="iqtipr_8h" name="iqtipr.h" local="yes" imported="no">iqtipr/iqtipr.h</includes>
+    <includes id="ui___c_search_based_features_supplier_gui_comp_8h" name="ui_CSearchBasedFeaturesSupplierGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtipr/ui_CSearchBasedFeaturesSupplierGuiComp.h</includes>
     <class kind="class">iqtipr::CSearchBasedFeaturesSupplierGuiComp</class>
     <namespace>iqtipr</namespace>
   </compound>
@@ -2808,6 +3175,7 @@
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="iqtipr_8h" name="iqtipr.h" local="yes" imported="no">iqtipr/iqtipr.h</includes>
+    <includes id="ui___c_value_supplier_gui_comp_8h" name="ui_CValueSupplierGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtipr/ui_CValueSupplierGuiComp.h</includes>
     <class kind="class">iqtipr::CValueSupplierGuiComp</class>
     <namespace>iqtipr</namespace>
   </compound>
@@ -2831,6 +3199,7 @@
     <path>C:/Temp/AcfSln/Include/iqtmeas/</path>
     <filename>_c_data_sequence_view_comp_8h</filename>
     <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
+    <includes id="ui___c_data_sequence_view_comp_8h" name="ui_CDataSequenceViewComp.h" local="yes" imported="no">GeneratedFiles/iqtmeas/ui_CDataSequenceViewComp.h</includes>
     <class kind="class">iqtmeas::CDataSequenceViewComp</class>
     <class kind="class">iqtmeas::CDataSequenceViewComp::DiagramWidget</class>
     <namespace>iqtmeas</namespace>
@@ -2840,6 +3209,7 @@
     <path>C:/Temp/AcfSln/Include/iqtmeas/</path>
     <filename>_c_data_statistics_gui_comp_8h</filename>
     <includes id="_i_data_statistics_8h" name="IDataStatistics.h" local="yes" imported="no">imeas/IDataStatistics.h</includes>
+    <includes id="ui___c_data_statistics_gui_comp_8h" name="ui_CDataStatisticsGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtmeas/ui_CDataStatisticsGuiComp.h</includes>
     <class kind="class">iqtmeas::CDataStatisticsGuiComp</class>
     <namespace>iqtmeas</namespace>
   </compound>
@@ -2856,6 +3226,7 @@
     <name>CNumericValueWidget.h</name>
     <path>C:/Temp/AcfSln/Include/iqtmeas/</path>
     <filename>_c_numeric_value_widget_8h</filename>
+    <includes id="ui___c_numeric_value_widget_8h" name="ui_CNumericValueWidget.h" local="yes" imported="no">GeneratedFiles/iqtmeas/ui_CNumericValueWidget.h</includes>
     <class kind="class">iqtmeas::CNumericValueWidget</class>
     <namespace>iqtmeas</namespace>
   </compound>
@@ -2889,6 +3260,7 @@
     <path>C:/Temp/AcfSln/Include/iqtmm/</path>
     <filename>_c_playback_controller_gui_comp_8h</filename>
     <includes id="_i_video_controller_8h" name="IVideoController.h" local="yes" imported="no">imm/IVideoController.h</includes>
+    <includes id="ui___c_playback_controller_gui_comp_8h" name="ui_CPlaybackControllerGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtmm/ui_CPlaybackControllerGuiComp.h</includes>
     <class kind="class">iqtmm::CPlaybackControllerGuiComp</class>
     <namespace>iqtmm</namespace>
   </compound>
@@ -2905,6 +3277,7 @@
     <path>C:/Temp/AcfSln/Include/iqtmm/</path>
     <filename>_c_video_player_gui_comp_8h</filename>
     <includes id="_i_media_controller_8h" name="IMediaController.h" local="yes" imported="no">imm/IMediaController.h</includes>
+    <includes id="ui___c_video_player_gui_comp_8h" name="ui_CVideoPlayerGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtmm/ui_CVideoPlayerGuiComp.h</includes>
     <class kind="class">iqtmm::CVideoPlayerGuiComp</class>
     <namespace>iqtmm</namespace>
   </compound>
@@ -2920,6 +3293,7 @@
     <filename>_c_pulse_params_gui_comp_8h</filename>
     <includes id="_i_pulse_params_8h" name="IPulseParams.h" local="yes" imported="no">isig/IPulseParams.h</includes>
     <includes id="iqtsig_8h" name="iqtsig.h" local="yes" imported="no">iqtsig/iqtsig.h</includes>
+    <includes id="ui___c_pulse_params_gui_comp_8h" name="ui_CPulseParamsGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtsig/ui_CPulseParamsGuiComp.h</includes>
     <class kind="class">iqtsig::CPulseParamsGuiComp</class>
     <namespace>iqtsig</namespace>
   </compound>
@@ -2930,6 +3304,7 @@
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
     <includes id="_c_sample_container_view_8h" name="CSampleContainerView.h" local="yes" imported="no">iqtsig/CSampleContainerView.h</includes>
+    <includes id="ui___c_sample_acquisition_gui_comp_8h" name="ui_CSampleAcquisitionGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtsig/ui_CSampleAcquisitionGuiComp.h</includes>
     <class kind="class">iqtsig::CSampleAcquisitionGuiComp</class>
     <namespace>iqtsig</namespace>
   </compound>
@@ -2947,6 +3322,7 @@
     <filename>_c_sampling_params_gui_comp_8h</filename>
     <includes id="_i_sampling_params_8h" name="ISamplingParams.h" local="yes" imported="no">isig/ISamplingParams.h</includes>
     <includes id="iqtsig_8h" name="iqtsig.h" local="yes" imported="no">iqtsig/iqtsig.h</includes>
+    <includes id="ui___c_sampling_params_gui_comp_8h" name="ui_CSamplingParamsGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtsig/ui_CSamplingParamsGuiComp.h</includes>
     <class kind="class">iqtsig::CSamplingParamsGuiComp</class>
     <namespace>iqtsig</namespace>
   </compound>
@@ -2965,6 +3341,7 @@
     <filename>_c_trigger_params_gui_comp_8h</filename>
     <includes id="_i_trigger_params_8h" name="ITriggerParams.h" local="yes" imported="no">isig/ITriggerParams.h</includes>
     <includes id="iqtsig_8h" name="iqtsig.h" local="yes" imported="no">iqtsig/iqtsig.h</includes>
+    <includes id="ui___c_trigger_params_gui_comp_8h" name="ui_CTriggerParamsGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtsig/ui_CTriggerParamsGuiComp.h</includes>
     <class kind="class">iqtsig::CTriggerParamsGuiComp</class>
     <namespace>iqtsig</namespace>
   </compound>
@@ -3119,6 +3496,7 @@
     <path>C:/Temp/AcfSln/Include/iwizgui/</path>
     <filename>_c_wizard_options_list_gui_comp_8h</filename>
     <includes id="_i_params_manager_wizard_8h" name="IParamsManagerWizard.h" local="yes" imported="no">iwiz/IParamsManagerWizard.h</includes>
+    <includes id="ui___c_wizard_options_list_gui_comp_8h" name="ui_CWizardOptionsListGuiComp.h" local="yes" imported="no">GeneratedFiles/iwizgui/ui_CWizardOptionsListGuiComp.h</includes>
     <class kind="class">iwizgui::CWizardOptionsListGuiComp</class>
     <namespace>iwizgui</namespace>
   </compound>
@@ -3178,6 +3556,6053 @@
   <compound kind="class">
     <name>TVector</name>
     <filename>class_t_vector.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CAttributeEditorComp</name>
+    <filename>class_ui___c_attribute_editor_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>afb8bcd502ddde923e2fa4359665e7af1</anchor>
+      <arglist>(QWidget *CAttributeEditorComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a965fabdcc9b3786f8488ec9809c66ae9</anchor>
+      <arglist>(QWidget *CAttributeEditorComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_6</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>ac82cf3f2b4ac820123677012e8256c48</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTabWidget *</type>
+      <name>ElementInfoTab</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a2c6317eaafabefa0fb82ec9c35770223</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>InfoTab</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a102b91179978a1661f64f9c59764021a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_5</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a6d4aa35e8bcf9c1678f6e0b1efdbe9c8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>NameLabel</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a42cb3635a4f9b869fd7006800f1ab774</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>AddressLabel</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a3cc5cdb3a19c0e00fed01cdfa6aec75b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>verticalSpacer_4</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a3a8a53abbbe61f86b116e473c7916b4a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>MetaInfoFrame</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>ab105c485b0d168ef99a413cc11a01436</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>ab7a97761e738a84411610e03d2a5efc1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_5</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a04546c3add3db965ffcdb84eefa62149</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>DescriptionLabel</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>aecdd3290c6021e1806d29bdb9a630c3c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_7</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>ae1bbb9750c58b6dca2829fd1a2206f6b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>CompanyLabel</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a5f4a9a625ec685431e5e03aaaa03e0b7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_2</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a10b4d1ce9b21a930a53849b48730c32b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>ProjectLabel</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a98c424e0de1a612e8121a27ae9f93eb0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_3</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>abb0bfb8b22c2a2decd81994d88ee83f3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>AuthorLabel</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>ad168070c9d39185525938a9ad57e6619</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>afc4c2a5bbd0da44bcee4fb4499035ea7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>CategoryLabel</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a77fc860724332cae648fc182c83919c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_8</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a0e3708fa5e678209eb0049ce95f8aef4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>TagsLabel</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a231c75a1db89c21775c2548911f81940</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_4</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a9ab98cf2f95db3da90d88dd3031a2e6b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>KeywordsLabel</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>ad055714f3e917f255304117d3a512d3a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>verticalSpacer_2</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a5f0b9d80ab80f0bb1f06fd34b3539d70</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a67facadb25b2a378d5dfbd8e2a907fae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a27def3a553b5546ec347d2de325944d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>IconLabel</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a5072588bede82ef93163734cf2f36d25</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer_2</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a6903b89d0997b1ea434225a222972726</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>verticalSpacer_3</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a9941eec9ec9764b1e1d42b50e2e0c9d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>AttributesTab</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>af03f4fadb8652f03e22c0811ead76595</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a6f4071b3e40370d79c143bb67088c8f9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeWidget *</type>
+      <name>AttributeTree</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a411242f6f2442ed24209e2bda194da2c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>ExportTab</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>af7441ba525f26f7b7dbc41b77b4b2e42</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a2ba7edf69c2b4f46a5bbf73d2cedf922</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeWidget *</type>
+      <name>InterfacesTree</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>abd6100fe972652938af2e8566b046b43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>FlagsTab</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a233af356f4ca1268b17202dadfdf23f3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_3</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a4db2ee60baa5d931e377db811056b128</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QCheckBox *</type>
+      <name>AutoInstanceCB</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a57c69df07471a3fe17d525effe3713c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>verticalSpacer</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a82691c9645f73d581a96483b993b1d62</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>ComponentTab</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a9164d6315226acb8efa088271fa25e8d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>ac008e295b950b8d6345e4ccb2a845861</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeWidget *</type>
+      <name>ComponentsTree</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>ac3bc34add0a2a057c1ac6c65b2cf949d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>RegistryPropertiesFrame</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a6681a1f1d4075477443b3521e08f5864</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_7</name>
+      <anchorfile>class_ui___c_attribute_editor_comp.html</anchorfile>
+      <anchor>a6c69bae517c824e1772f444b56cd9599</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CBitmapSupplierGuiComp</name>
+    <filename>class_ui___c_bitmap_supplier_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>ac02e405d67c10aa39b0e545864ea4fdf</anchor>
+      <arglist>(QWidget *CBitmapSupplierGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>ac7c1f9b96297a8eb548fdfa52012d97d</anchor>
+      <arglist>(QWidget *CBitmapSupplierGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>ac338179de0bdc7f5a2bdadead6e814db</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>groupBox</name>
+      <anchorfile>class_ui___c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a20a55f1c61f1f2837e4e4a6f6dcfea11</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>af415c56a7656a85da4e46ff63ec22594</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>SnapBackImageButton</name>
+      <anchorfile>class_ui___c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a08c2489cad8f6bfb0ac8f7a1ed42eca6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>SnapImageButton</name>
+      <anchorfile>class_ui___c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a78f25918b01ce70fe4e3972198d334eb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>LiveImageButton</name>
+      <anchorfile>class_ui___c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>ad270f3a0236a4df3143fa866e45456f2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>SizeLabel</name>
+      <anchorfile>class_ui___c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a4656cee2d8e7fceb30f116b860c0a845</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer</name>
+      <anchorfile>class_ui___c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>af2d9580950cc6347e76da1329194ee30</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>SaveImageButton</name>
+      <anchorfile>class_ui___c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a16f1615a255ed5211fac2c1248cbf4d5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ParamsFrame</name>
+      <anchorfile>class_ui___c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>ae01f138b4b7fbf94e7729ae7022b94ad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout</name>
+      <anchorfile>class_ui___c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a0343dfe6385f7a87ab626c59e95a90d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>verticalSpacer</name>
+      <anchorfile>class_ui___c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a229f7acba54b07f8ac048e1aa7911525</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a9942ac008e114301f47e4cb19af7fe87</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>LoadParamsButton</name>
+      <anchorfile>class_ui___c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>aee337eba9084d01a859baa83cf8840c6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>SaveParamsButton</name>
+      <anchorfile>class_ui___c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a9f2e63a9c8ff459942f6a0044ccd254d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CCaliperParamsGuiComp</name>
+    <filename>class_ui___c_caliper_params_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_caliper_params_gui_comp.html</anchorfile>
+      <anchor>af7ab577c03d6598ac13a66dcbdbe9c71</anchor>
+      <arglist>(QWidget *CCaliperParamsGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_caliper_params_gui_comp.html</anchorfile>
+      <anchor>a306d0c950887df3f5f5c6c67e9c59935</anchor>
+      <arglist>(QWidget *CCaliperParamsGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_caliper_params_gui_comp.html</anchorfile>
+      <anchor>a0b704e0d51900f5798df3e612ef90acb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___c_caliper_params_gui_comp.html</anchorfile>
+      <anchor>a2d8d716396237afe88d81c054a1a4162</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpinBox *</type>
+      <name>ThresholdSB</name>
+      <anchorfile>class_ui___c_caliper_params_gui_comp.html</anchorfile>
+      <anchor>ad0066a2ae40d4b79f988e88682e3c921</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_2</name>
+      <anchorfile>class_ui___c_caliper_params_gui_comp.html</anchorfile>
+      <anchor>a048c9c8525bc93c43ae742919712346d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_3</name>
+      <anchorfile>class_ui___c_caliper_params_gui_comp.html</anchorfile>
+      <anchor>a57bb2a43f7b83158761bd9409dd50b91</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QComboBox *</type>
+      <name>EdgePolarityCB</name>
+      <anchorfile>class_ui___c_caliper_params_gui_comp.html</anchorfile>
+      <anchor>a4d1c8e16f36b4db7edd8d20ab693d211</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_4</name>
+      <anchorfile>class_ui___c_caliper_params_gui_comp.html</anchorfile>
+      <anchor>ab8a2b21d61bf1955afdbdfdc1b02ae5d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QComboBox *</type>
+      <name>DirectionCB</name>
+      <anchorfile>class_ui___c_caliper_params_gui_comp.html</anchorfile>
+      <anchor>a79533108eff19c1f3668f3c821d6bd77</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CCameraInfoGuiComp</name>
+    <filename>class_ui___c_camera_info_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_camera_info_gui_comp.html</anchorfile>
+      <anchor>a72783b5f2f78d373256343b614963334</anchor>
+      <arglist>(QWidget *CCameraInfoGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_camera_info_gui_comp.html</anchorfile>
+      <anchor>a96232a2764015d0421dbe6dbbdc85cd1</anchor>
+      <arglist>(QWidget *CCameraInfoGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_camera_info_gui_comp.html</anchorfile>
+      <anchor>ad923d991da71fcb6e998fa4d27e4a95f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTableWidget *</type>
+      <name>TableView</name>
+      <anchorfile>class_ui___c_camera_info_gui_comp.html</anchorfile>
+      <anchor>acbae1dff654893f9b26282e05638bb5d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CChangePasswordDialog</name>
+    <filename>class_ui___c_change_password_dialog.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_change_password_dialog.html</anchorfile>
+      <anchor>a88356ddab41fbffa5da656164c219512</anchor>
+      <arglist>(QDialog *CChangePasswordDialog)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_change_password_dialog.html</anchorfile>
+      <anchor>a4c15e3b6599fc3dc035f2ac20cab1b85</anchor>
+      <arglist>(QDialog *CChangePasswordDialog)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout</name>
+      <anchorfile>class_ui___c_change_password_dialog.html</anchorfile>
+      <anchor>a6f16df70c3ab95539bfdcb6cd500c568</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___c_change_password_dialog.html</anchorfile>
+      <anchor>a8c0e3c71ea78210fa9e1d69becb6bd93</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLineEdit *</type>
+      <name>OldPasswordEdit</name>
+      <anchorfile>class_ui___c_change_password_dialog.html</anchorfile>
+      <anchor>aa0c661ceef5169ed08f31b9ff3f31559</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_2</name>
+      <anchorfile>class_ui___c_change_password_dialog.html</anchorfile>
+      <anchor>a82caecb56cf483ff1a8c87ba7bfb7b77</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLineEdit *</type>
+      <name>NewPasswordEdit</name>
+      <anchorfile>class_ui___c_change_password_dialog.html</anchorfile>
+      <anchor>a07215683c4653d1538bbc18d6b3075b2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_3</name>
+      <anchorfile>class_ui___c_change_password_dialog.html</anchorfile>
+      <anchor>a3c5724e80b27bc65ea61ef5d92ddb26d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLineEdit *</type>
+      <name>ConfirmPasswordEdit</name>
+      <anchorfile>class_ui___c_change_password_dialog.html</anchorfile>
+      <anchor>a81822bf308674ceb4e3d9cc41e490b8b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDialogButtonBox *</type>
+      <name>ButtonBox</name>
+      <anchorfile>class_ui___c_change_password_dialog.html</anchorfile>
+      <anchor>a92cb337ed74b9d80344991197538039d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CCircleFinderParamsGuiComp</name>
+    <filename>class_ui___c_circle_finder_params_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_circle_finder_params_gui_comp.html</anchorfile>
+      <anchor>a5f8aeb87110afb729f8c5ce135d98fb7</anchor>
+      <arglist>(QWidget *CCircleFinderParamsGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_circle_finder_params_gui_comp.html</anchorfile>
+      <anchor>a979fb5eb109059d4d9600905da2af2ba</anchor>
+      <arglist>(QWidget *CCircleFinderParamsGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_circle_finder_params_gui_comp.html</anchorfile>
+      <anchor>a6e1aef7051c9f0c6f1353c232d9f7519</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QCheckBox *</type>
+      <name>EnableOutliersElimination</name>
+      <anchorfile>class_ui___c_circle_finder_params_gui_comp.html</anchorfile>
+      <anchor>a5138be2a4f664104178dcaacc5c0b5eb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_circle_finder_params_gui_comp.html</anchorfile>
+      <anchor>a4afb3103f6b888b914beb96da4d2831a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_circle_finder_params_gui_comp.html</anchorfile>
+      <anchor>a991846a895c63cda6631e953a0877b60</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>MinOutliersDistanceLabel</name>
+      <anchorfile>class_ui___c_circle_finder_params_gui_comp.html</anchorfile>
+      <anchor>a4ebecf488f06179eacecc951ba60744f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_4</name>
+      <anchorfile>class_ui___c_circle_finder_params_gui_comp.html</anchorfile>
+      <anchor>a81c64378d172ee85b434767b0f2044a5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___c_circle_finder_params_gui_comp.html</anchorfile>
+      <anchor>a5b2f52a0276365a4824f10a417a828f5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_circle_finder_params_gui_comp.html</anchorfile>
+      <anchor>a50d7c7012c3d14236dac818b5430ac94</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>MinOutliersDistance</name>
+      <anchorfile>class_ui___c_circle_finder_params_gui_comp.html</anchorfile>
+      <anchor>aa792eff428f9844543769b7747f5b221</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpinBox *</type>
+      <name>MaxRaysCount</name>
+      <anchorfile>class_ui___c_circle_finder_params_gui_comp.html</anchorfile>
+      <anchor>a430c4ff29e975410504ef0b1dc26965c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QComboBox *</type>
+      <name>CaliperMode</name>
+      <anchorfile>class_ui___c_circle_finder_params_gui_comp.html</anchorfile>
+      <anchor>a33a40d756a47ecbd5ce86dcf16cbe9de</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>verticalSpacer</name>
+      <anchorfile>class_ui___c_circle_finder_params_gui_comp.html</anchorfile>
+      <anchor>ae862a1e755fb5866bd2a8c0564d4f375</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CColorPatternComparatorGuiComp</name>
+    <filename>class_ui___c_color_pattern_comparator_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_color_pattern_comparator_gui_comp.html</anchorfile>
+      <anchor>aeb90cc467b12777f107836ee1f21422d</anchor>
+      <arglist>(QWidget *CColorPatternComparatorGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_color_pattern_comparator_gui_comp.html</anchorfile>
+      <anchor>a5f2881df6355078fb1388e51207b3362</anchor>
+      <arglist>(QWidget *CColorPatternComparatorGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_color_pattern_comparator_gui_comp.html</anchorfile>
+      <anchor>a2445fafc864e6898d5881564d56158c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_color_pattern_comparator_gui_comp.html</anchorfile>
+      <anchor>a0aa3490dc961ed13cd3001632d8cb309</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>TestButton</name>
+      <anchorfile>class_ui___c_color_pattern_comparator_gui_comp.html</anchorfile>
+      <anchor>a7e455071f45955dd611364b8ddac80b1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>AutoUpdateButton</name>
+      <anchorfile>class_ui___c_color_pattern_comparator_gui_comp.html</anchorfile>
+      <anchor>a0a5e65decdf6313157df8e160ff6ebeb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>ResultsGB</name>
+      <anchorfile>class_ui___c_color_pattern_comparator_gui_comp.html</anchorfile>
+      <anchor>a62cb3844b9e10dc5b4661637073f3660</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_3</name>
+      <anchorfile>class_ui___c_color_pattern_comparator_gui_comp.html</anchorfile>
+      <anchor>a1d3521bfc90b05699a5aec6eac479195</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTableWidget *</type>
+      <name>ColorTable</name>
+      <anchorfile>class_ui___c_color_pattern_comparator_gui_comp.html</anchorfile>
+      <anchor>a5cb0d18dff9337dc2e848a046ab972d2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>verticalSpacer</name>
+      <anchorfile>class_ui___c_color_pattern_comparator_gui_comp.html</anchorfile>
+      <anchor>a2effb25ad568fe1cf6e6498d4e1f4ba1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>ParamsFrame</name>
+      <anchorfile>class_ui___c_color_pattern_comparator_gui_comp.html</anchorfile>
+      <anchor>a859b5610fdc93160bd5494acc2057ade</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_color_pattern_comparator_gui_comp.html</anchorfile>
+      <anchor>af89e9047901efd9d3e0d8a76eda0cb58</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CComponentNoteEditorComp</name>
+    <filename>class_ui___c_component_note_editor_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_component_note_editor_comp.html</anchorfile>
+      <anchor>afb7b1c1675449f0c69fe875d1ba17a97</anchor>
+      <arglist>(QWidget *CComponentNoteEditorComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_component_note_editor_comp.html</anchorfile>
+      <anchor>a9cb149865c8a6b842e1546b2d4177001</anchor>
+      <arglist>(QWidget *CComponentNoteEditorComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_component_note_editor_comp.html</anchorfile>
+      <anchor>a0c10fb4fb0e90b73dc1c137dc8daf7cf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTextEdit *</type>
+      <name>NoteEditor</name>
+      <anchorfile>class_ui___c_component_note_editor_comp.html</anchorfile>
+      <anchor>ae97259fe4aee9dd27b62636671f8f45f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CComponentPromotorDialogComp</name>
+    <filename>class_ui___c_component_promotor_dialog_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>a4f070cd21136b324bcb9884bb88247ff</anchor>
+      <arglist>(QDialog *CComponentPromotorDialogComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>a7e6176ed3d7c08789f5d76cf96a914c2</anchor>
+      <arglist>(QDialog *CComponentPromotorDialogComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>ab23ce8bb90e40f933458e591b72c5930</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>groupBox</name>
+      <anchorfile>class_ui___c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>abc173398acce55f9e45083999ac0bbce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>a2c9e5ffa898fdededf7c2d9ac1662314</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QComboBox *</type>
+      <name>InterfacesPolicyCB</name>
+      <anchorfile>class_ui___c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>ab000ed6aa86a8f0b506a377e8f0e4427</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QComboBox *</type>
+      <name>AttributesPolicyCB</name>
+      <anchorfile>class_ui___c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>a628cdb89993af62e623e4f7ba878886c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QComboBox *</type>
+      <name>SubcomponentsPolicyCB</name>
+      <anchorfile>class_ui___c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>af131255547bf9c11f32baab96037590b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>groupBox_2</name>
+      <anchorfile>class_ui___c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>acf694f4f808c89972bf7a456054976a6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>a147e40bf8e0befecdec064ff06b55fe7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QComboBox *</type>
+      <name>PackageNameCB</name>
+      <anchorfile>class_ui___c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>a4af3e651ead61d35e56ba33637893c83</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QComboBox *</type>
+      <name>ComponentNameCB</name>
+      <anchorfile>class_ui___c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>a2d2a7f6826331a6aa95885600288a074</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>verticalSpacer</name>
+      <anchorfile>class_ui___c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>a561f00dbe1bf9030eeb4f9aba88dea6a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDialogButtonBox *</type>
+      <name>ButtonBox</name>
+      <anchorfile>class_ui___c_component_promotor_dialog_comp.html</anchorfile>
+      <anchor>a674e348bf5d79a664b16f8eb2b56ef16</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CConvolution2dParamsGuiComp</name>
+    <filename>class_ui___c_convolution2d_params_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_convolution2d_params_gui_comp.html</anchorfile>
+      <anchor>a5189f242ee8f3b220cd5c59cc3ee6db0</anchor>
+      <arglist>(QWidget *CConvolution2dParamsGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_convolution2d_params_gui_comp.html</anchorfile>
+      <anchor>afa7b0a596110c9f173becd242d211f03</anchor>
+      <arglist>(QWidget *CConvolution2dParamsGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_convolution2d_params_gui_comp.html</anchorfile>
+      <anchor>aa354c56f232b6379c979258afe7f03cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>KernelParameterLayout</name>
+      <anchorfile>class_ui___c_convolution2d_params_gui_comp.html</anchorfile>
+      <anchor>a96f535a2bbebf732935ac4d1ae2817c7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>KernelWidthLabel</name>
+      <anchorfile>class_ui___c_convolution2d_params_gui_comp.html</anchorfile>
+      <anchor>a539d5ba25693abd3508161ac7b121d14</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpinBox *</type>
+      <name>KernelWidthSpin</name>
+      <anchorfile>class_ui___c_convolution2d_params_gui_comp.html</anchorfile>
+      <anchor>a7240fe782fad6b491bc7aa86166ca7d1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>KernelHeightLabel</name>
+      <anchorfile>class_ui___c_convolution2d_params_gui_comp.html</anchorfile>
+      <anchor>a88bf545018dbe0d4a5f1e225664a6e02</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpinBox *</type>
+      <name>KernelHeightSpin</name>
+      <anchorfile>class_ui___c_convolution2d_params_gui_comp.html</anchorfile>
+      <anchor>a440f70b336b0ff74304a5661df853a9c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTableWidget *</type>
+      <name>KernelTable</name>
+      <anchorfile>class_ui___c_convolution2d_params_gui_comp.html</anchorfile>
+      <anchor>addd038398107b56fce09d4e0917a7654</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CDataSequenceViewComp</name>
+    <filename>class_ui___c_data_sequence_view_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a6fcaf4b6202a2207d6c8377ef952127f</anchor>
+      <arglist>(QWidget *CDataSequenceViewComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>aaad19af972c67e43fd1dc2a4630bf801</anchor>
+      <arglist>(QWidget *CDataSequenceViewComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_3</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a7229f5ebf4a52a9c10a6a98aa759f476</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_5</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a2f7b5a5a42f222b803fb24da7f295a10</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>MainFrame</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a995f9feff8358bf88b7c1203410ae113</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a11c4cbb80d375a8ef218e62b864e07ef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>ScaleFrame</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>aba38bcdf7471448dbdef30519cd47046</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>adc6dffe4e65cd7d9a8b08165b25e625d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>ValueMaxSB</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>aedf8eb2a46834c068efb8cfbba5deb51</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_5</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>ab14a89ef797dbce0bbd1f671610d88af</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>verticalSpacer</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a123c8c9475891b4c2434fd611e46f433</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_4</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a8747e0dfa8b48475044a3a158929a565</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>ValueMinSB</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a8ab3f44b8c669bd4ef3c130277e819a8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>BottomFrame</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a3f02da2f77fb85627f0b4749a0dfc30a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a9538e4a46f68da1967ef9a796097f491</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>TimeSpanFrame</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>ab9aa15cade84b892bd95aac0e062f5e3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_6</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a871ae08f1a8cb8ca0edc27d87e1ebde0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QCheckBox *</type>
+      <name>TimeSpanCB</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>ac4e66cf923762406863f7ea34b273d2d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>TimeSpanControlFrame</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a501bc6eb227c063d702467384c624da0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>aa58882042351b65dbe775b7b206b7775</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>PrevButton</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a785cf557ea6d8dbd58877a09c1e9cbab</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>NextButton</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a868e75cba717e5773e1bc4d10b89d462</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a9c28011c52de29368761394e21b565a4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>TimeBeginSB</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>abbdc35fc3afe2a97e5ec548d3ab7e9cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_2</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a9e65b81014bd1a9d308fe058025451fd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>TimeEndSB</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>aaac4db819a86629afce5513b3729a779</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>ZoomInButton</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a387ec27d4e48bac5e8e28acb1a184fa6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>ZoomOutButton</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>aedee93087e6d796eedc64eb213358142</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>ChannelsFrame</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a0b696e19dc55608af777d57b3b3a9878</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_4</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a95c0249640a5c7a6d6bc3728dea71a1e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer_2</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>ae6f36cbea9eb3f16a06c5de13ca27a0c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_3</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>ade4d56f8b38adb4040d6a014c0dfd6ef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QComboBox *</type>
+      <name>ChannelSelectorCB</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a81b116e1b65273477bedf49f666533dd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>ScaleControlFrame</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a3c4444a8df0c864447db9641091a7f6d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_3</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>adc48ed041c4be805a256d8b580377201</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a03d10300affc4e679ac604af2db867c5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QCheckBox *</type>
+      <name>ScaleCB</name>
+      <anchorfile>class_ui___c_data_sequence_view_comp.html</anchorfile>
+      <anchor>a27ea83d4f613192669ef5e74d29249b2</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CDataStatisticsGuiComp</name>
+    <filename>class_ui___c_data_statistics_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_data_statistics_gui_comp.html</anchorfile>
+      <anchor>a3b86ba608a4be4ae0d8aaba1c5d95465</anchor>
+      <arglist>(QWidget *CDataStatisticsGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_data_statistics_gui_comp.html</anchorfile>
+      <anchor>a7e539086ff30d58d05c69ab5fc7d834a</anchor>
+      <arglist>(QWidget *CDataStatisticsGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_data_statistics_gui_comp.html</anchorfile>
+      <anchor>acdfdf29a35ac16e8e94450904a6dcca5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___c_data_statistics_gui_comp.html</anchorfile>
+      <anchor>a3b436a212c999f03c859fa5ec0eea1be</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>MinimumLabel</name>
+      <anchorfile>class_ui___c_data_statistics_gui_comp.html</anchorfile>
+      <anchor>aa5cc335dea3a5e60e0658ad0d5614703</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_2</name>
+      <anchorfile>class_ui___c_data_statistics_gui_comp.html</anchorfile>
+      <anchor>a41838971a202f4799b5b89fca920272b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>MaximumLabel</name>
+      <anchorfile>class_ui___c_data_statistics_gui_comp.html</anchorfile>
+      <anchor>a83997c864d021bcfa1ee7267427a0ca4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_3</name>
+      <anchorfile>class_ui___c_data_statistics_gui_comp.html</anchorfile>
+      <anchor>ade9eb330e6c005f5a6d12adf3855526d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>AverageLabel</name>
+      <anchorfile>class_ui___c_data_statistics_gui_comp.html</anchorfile>
+      <anchor>a5cb906a49aa3307169dac39addd39dba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_4</name>
+      <anchorfile>class_ui___c_data_statistics_gui_comp.html</anchorfile>
+      <anchor>add75486b8de58f2ef7188b7076349e19</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>MedianLabel</name>
+      <anchorfile>class_ui___c_data_statistics_gui_comp.html</anchorfile>
+      <anchor>a953ed4204d7763b5871f746d4adfb588</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_5</name>
+      <anchorfile>class_ui___c_data_statistics_gui_comp.html</anchorfile>
+      <anchor>a398a5b658139aafe57642940ed3aff08</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>StandardDeviationLabel</name>
+      <anchorfile>class_ui___c_data_statistics_gui_comp.html</anchorfile>
+      <anchor>a71bce4a8a30ed0dce1d4ea0f925534f9</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CDirectoryItemGuiComp</name>
+    <filename>class_ui___c_directory_item_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_directory_item_gui_comp.html</anchorfile>
+      <anchor>a2e9260c74c995e98592751f0daf341ba</anchor>
+      <arglist>(QWidget *CDirectoryItemGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_directory_item_gui_comp.html</anchorfile>
+      <anchor>a6fbc62d7175a93ce79635e0ab5a992e0</anchor>
+      <arglist>(QWidget *CDirectoryItemGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_directory_item_gui_comp.html</anchorfile>
+      <anchor>a453a328fd2614f2bf5f4160a8c5372d3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>IconLabel</name>
+      <anchorfile>class_ui___c_directory_item_gui_comp.html</anchorfile>
+      <anchor>acdca963eefccb89cfc9eb15335926b31</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_directory_item_gui_comp.html</anchorfile>
+      <anchor>a9bcb737535fb4e31384bcffa139ce21d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>PathNameLabel</name>
+      <anchorfile>class_ui___c_directory_item_gui_comp.html</anchorfile>
+      <anchor>a652b619bf854412cd6b29004bfe55112</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>DirectoryLabel</name>
+      <anchorfile>class_ui___c_directory_item_gui_comp.html</anchorfile>
+      <anchor>aaa1120678cfd362baca5a055f45e7c1f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer_2</name>
+      <anchorfile>class_ui___c_directory_item_gui_comp.html</anchorfile>
+      <anchor>a0a5c42414d965cb84ef89eee57b11a1f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QProgressBar *</type>
+      <name>ProcessedProgressBar</name>
+      <anchorfile>class_ui___c_directory_item_gui_comp.html</anchorfile>
+      <anchor>a0a6af288794346397c9832a21b1c9845</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_directory_item_gui_comp.html</anchorfile>
+      <anchor>a396319d21c2ebd01d014df550527a012</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___c_directory_item_gui_comp.html</anchorfile>
+      <anchor>aee365b41d1bb7089056c4edbbf749d71</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>FilesCountLabel</name>
+      <anchorfile>class_ui___c_directory_item_gui_comp.html</anchorfile>
+      <anchor>a8e465f1f6c2f5d5d586cbb2a7a51ee6c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_4</name>
+      <anchorfile>class_ui___c_directory_item_gui_comp.html</anchorfile>
+      <anchor>a0921880150d7c085bb9d019d848dd3e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>ErrorsCountLabel</name>
+      <anchorfile>class_ui___c_directory_item_gui_comp.html</anchorfile>
+      <anchor>a55a687a431fca71d2f3046df55772f36</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_2</name>
+      <anchorfile>class_ui___c_directory_item_gui_comp.html</anchorfile>
+      <anchor>a178fd79ce7b296279696043bc792b111</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>ProcessedFileCountLabel</name>
+      <anchorfile>class_ui___c_directory_item_gui_comp.html</anchorfile>
+      <anchor>a927b5201aea9bbde9f5b879516fce9c2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer</name>
+      <anchorfile>class_ui___c_directory_item_gui_comp.html</anchorfile>
+      <anchor>ab9e7dcc7ecab7ed0ef90636479703007</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CDirectoryMonitorParamsGui</name>
+    <filename>class_ui___c_directory_monitor_params_gui.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>aaa12529bdbf9c4ded449a084f1a8df75</anchor>
+      <arglist>(QWidget *CDirectoryMonitorParamsGui)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a365d03158a2231ad39221ed207d1bf4b</anchor>
+      <arglist>(QWidget *CDirectoryMonitorParamsGui)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_3</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>abfbb9cb994e59d8b9c104278f07ebd38</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_4</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>ab9a4c059280370213a474ffd9952a590</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>groupBox_4</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a1edb9e8456ea023c675e943ce394cbf1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a4c47d33b3e85a761be90b594c0c11179</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>PoolingIntervallSpin</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>aee0877dc1a07fc014a6c4793527175d7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>groupBox</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a1f89868c1823fa467f70cc48eeb2da82</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_3</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a56e6fd2c49b071ba5f90fe5fc250ec26</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QCheckBox *</type>
+      <name>FilesCheck</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a7bf1ae35b3b30ff4e0f722e889b249dd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QCheckBox *</type>
+      <name>DirsCheck</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a4a1c6c2aad8c845654c0d54f5d890bb6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QCheckBox *</type>
+      <name>DrivesCheck</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>ab8ad0ed79ae8391ab6c5662c0d1c1897</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>groupBox_2</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a1624d8abfd51e5e0ed6d1a8ceb20efd5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>ad80eb3c8ad8ed8246b0a9061340503bc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QCheckBox *</type>
+      <name>ModifiedCheck</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>ad0a5def5fdb0365bf07ae99921d7a2b3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QCheckBox *</type>
+      <name>AddedCheck</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a1f2aaaad04758fd465d819572cf4a7b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QCheckBox *</type>
+      <name>RemovedCheck</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a76d7743f9deef9b845b8f359bb53a9bc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QCheckBox *</type>
+      <name>AttributesCheck</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a7b13f227d42327ee1bc8289a224a4813</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_5</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a5f6928ce01f0459cfcc2494d6d597fd3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>groupBox_3</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>acb914d6d34db1b1d478a7c73cd67eb0a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a3668444c7d1cf63edfaad458897bbc53</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeWidget *</type>
+      <name>AcceptPatternsList</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a2abca556ebee0c4be2ae1d77942c67b6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_6</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a66b633280802f3287b466f8d98365588</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer_2</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>ad9165d2563477772cbc6aa40a0e8806a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>AddAcceptPatternButton</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a09f7b49afa67a901e0527661da0a5784</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>RemoveAcceptPatternButton</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a0686571da2c2e8fd1724568dac3faf1a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>groupBox_5</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a56fe3a2b4fb840660e255ef72ed66b74</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a685b803474d9986ade40e96bc8528964</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeWidget *</type>
+      <name>IgnorePatternsList</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>ae2e9d0124577ad8422db1d998a2d64e9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_7</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a8b42a7abd19a0649e6d296e6dcb3497e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer_3</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a0cec4bdc96ca2844b8403fea147531f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>AddIgnorePatternButton</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>ae1eb7fd41740807721fd111afd7516ef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>RemoveIgnorePatternButton</name>
+      <anchorfile>class_ui___c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>ae8e548e417889160e40dc625763d8072</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CEdgeLinesSupplierGuiComp</name>
+    <filename>class_ui___c_edge_lines_supplier_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>afaad7ffb6a175d4903856f5b1798a166</anchor>
+      <arglist>(QWidget *CEdgeLinesSupplierGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>ab597130c23fb7eebe79f8f27c2385460</anchor>
+      <arglist>(QWidget *CEdgeLinesSupplierGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>a325d3d46f3c013bb7d940fe0737f855c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>TestButton</name>
+      <anchorfile>class_ui___c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>a2cbf78697e75939e5d4916266d66f7d8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>AutoUpdateButton</name>
+      <anchorfile>class_ui___c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>ab5995d23b38eccd7535d33f826531b5a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>ParamsGB</name>
+      <anchorfile>class_ui___c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>aa8fed6ff3559acbc22c1e813417cb165</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>a28c727cd90c7c928618459e5019d0e34</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ParamsFrame</name>
+      <anchorfile>class_ui___c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>a7195821f0674178fc771a3cc0acf81e7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout</name>
+      <anchorfile>class_ui___c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>aa079c7dd08d805c09328a15ebeb3ffdf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>aa5cc5d5f3b1d38e74b5498f5225a43ad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>LoadParamsButton</name>
+      <anchorfile>class_ui___c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>a1835a307749c8e40aa918659e6bec7d1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>SaveParamsButton</name>
+      <anchorfile>class_ui___c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>af711953c38026a88f070922131806875</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>IntResultsFrame</name>
+      <anchorfile>class_ui___c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>a81afa242e42d3084feeb4c3cf01fb1bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>a52541be1dfc3a90140b18d1da87f7635</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>verticalSpacer</name>
+      <anchorfile>class_ui___c_edge_lines_supplier_gui_comp.html</anchorfile>
+      <anchor>a8091b28f29a5eaf63bd95b191ffb6b97</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CExposureParamsGuiComp</name>
+    <filename>class_ui___c_exposure_params_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_exposure_params_gui_comp.html</anchorfile>
+      <anchor>ac51aba6af5729a7fc5012a6b6bef2b40</anchor>
+      <arglist>(QWidget *CExposureParamsGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_exposure_params_gui_comp.html</anchorfile>
+      <anchor>a89312fe7bc26e7a1447cf6a2f5041669</anchor>
+      <arglist>(QWidget *CExposureParamsGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_exposure_params_gui_comp.html</anchorfile>
+      <anchor>a25042351cb66071120b3891a0944b6a1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>ShutterTimeLabel</name>
+      <anchorfile>class_ui___c_exposure_params_gui_comp.html</anchorfile>
+      <anchor>a5733dfe58f8ab18a9c875d735bcee240</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>ShutterTimeSB</name>
+      <anchorfile>class_ui___c_exposure_params_gui_comp.html</anchorfile>
+      <anchor>a3d263368d47e334719c236fcd67b6995</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>ShutterTimeUnitLabel</name>
+      <anchorfile>class_ui___c_exposure_params_gui_comp.html</anchorfile>
+      <anchor>a8c9717a933351a581e8af118a4d982f3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>DelayTimeLabel</name>
+      <anchorfile>class_ui___c_exposure_params_gui_comp.html</anchorfile>
+      <anchor>a22186c58ea1863d2fbaa1a1f33dd5950</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>DelayTimeSB</name>
+      <anchorfile>class_ui___c_exposure_params_gui_comp.html</anchorfile>
+      <anchor>afdcfa465a34a8f0dd19a62b2cd299b86</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>DelayTimeUnitLabel</name>
+      <anchorfile>class_ui___c_exposure_params_gui_comp.html</anchorfile>
+      <anchor>a58ddfbee71a0047800d2083012913340</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>EenDelayTimeLabel</name>
+      <anchorfile>class_ui___c_exposure_params_gui_comp.html</anchorfile>
+      <anchor>a677a375abe4966e703c8453162037171</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>EenDelayTimeSB</name>
+      <anchorfile>class_ui___c_exposure_params_gui_comp.html</anchorfile>
+      <anchor>ab6e6ee61a64fcfaaaef93c8ba8e8fca3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>EenDelayTimeUnitLabel</name>
+      <anchorfile>class_ui___c_exposure_params_gui_comp.html</anchorfile>
+      <anchor>ade88e8f2850ccee9de4a41a510e54d5f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CGeneralSearchParamsGuiComp</name>
+    <filename>class_ui___c_general_search_params_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>afa4f3756d51e8472912da859f7b3cd14</anchor>
+      <arglist>(QWidget *CGeneralSearchParamsGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>ab52b830440c328c90da251cd8ddc74b8</anchor>
+      <arglist>(QWidget *CGeneralSearchParamsGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>a0b1ffe9818b3ba4db222b9eb5a3fbf42</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>af668b2c7cd51a9d7e661acda1fd8d234</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QCheckBox *</type>
+      <name>ScalingCB</name>
+      <anchorfile>class_ui___c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>a330bbc96bbf0fe83a36edf37c95f3ef1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_5</name>
+      <anchorfile>class_ui___c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>a9591e61699d4e73dc3af9a0e5264e474</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpinBox *</type>
+      <name>MinScoreSB</name>
+      <anchorfile>class_ui___c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>ad804c82d500898f5fdb51c52d1c2f2b4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>MinScaleSB</name>
+      <anchorfile>class_ui___c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>a79787ba784a6799ada2c90b5a40b3a0e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpinBox *</type>
+      <name>ModelOccurenceSB</name>
+      <anchorfile>class_ui___c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>ac3ff7664bd1c72beaebbda6b3d79700c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QCheckBox *</type>
+      <name>RotationCB</name>
+      <anchorfile>class_ui___c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>afbd5696c73b4811661ad1a78481c8b16</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_3</name>
+      <anchorfile>class_ui___c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>a213575c212c2ecd5b91e3d1c0a4828a9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>MinRotationSB</name>
+      <anchorfile>class_ui___c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>a7eaf033730607b89971a68f4ef888156</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>a2a512a8c03e9dc6e70b9614053e9ca6c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_6</name>
+      <anchorfile>class_ui___c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>a54eb74575db4543d5b6f634e72f336dd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>MaxRotationSB</name>
+      <anchorfile>class_ui___c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>abf31de58ee25130b9a57a405dfa08bbf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_7</name>
+      <anchorfile>class_ui___c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>afca7a1d41b0cd35b67998717d661cc7c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>MaxScaleSB</name>
+      <anchorfile>class_ui___c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>afbd6dbb25430bb420d100aa49f04681b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_4</name>
+      <anchorfile>class_ui___c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>ab565e2c4d2af1d25322194f9aa212918</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>line</name>
+      <anchorfile>class_ui___c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>a230c599b984d0742d77b53da0eeb6e43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>verticalSpacer</name>
+      <anchorfile>class_ui___c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>a9abb5d0ff95fb6b7ba91f894ec1203a8</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CGeneralSupplierGuiComp</name>
+    <filename>class_ui___c_general_supplier_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>a2d7617a4cde14f701bd3b4803c50f6b3</anchor>
+      <arglist>(QWidget *CGeneralSupplierGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>a0e6e1e791a2efaf1f17b1c697e7918cc</anchor>
+      <arglist>(QWidget *CGeneralSupplierGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>adaa960005ae0492ee56b211ae37a97b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>a6897a59b8b347fa27725dfe082cf0342</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>TestButton</name>
+      <anchorfile>class_ui___c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>a9f86072bbb82a734631f01e5a049fbbc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>AutoTestButton</name>
+      <anchorfile>class_ui___c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>ac2f3335af4662920bab60a92bb2b3c06</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>ParamsGB</name>
+      <anchorfile>class_ui___c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>a208057470b20eab91da410c32630f6cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>ada90a0232871b8ba0a80891553884e27</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ParamsFrame</name>
+      <anchorfile>class_ui___c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>a585d93954789e0da25e3ab2373c1b030</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout</name>
+      <anchorfile>class_ui___c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>aaec5b58a84746535fe6baa2db9576854</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>adb4f9f2bf1e5eb432aee6c923f0cca59</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>LoadParamsButton</name>
+      <anchorfile>class_ui___c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>ada95c36293c00a5e9c96fe02ed12d313</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>SaveParamsButton</name>
+      <anchorfile>class_ui___c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>a59b373bfde462dcd9ef3a6d903b20bac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>groupBox_2</name>
+      <anchorfile>class_ui___c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>ad461c1ea9ecda12cafe7e76ae8bba22b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>a0dfdb60e6788dbdb2e652fe9a5018eda</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>UserResultFrame</name>
+      <anchorfile>class_ui___c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>ad9342b7389ac0c6d6d697a81d138ad84</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_2</name>
+      <anchorfile>class_ui___c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>a94845a575f6f42eae1d207bfa0547323</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>StatusLabel</name>
+      <anchorfile>class_ui___c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>ae6f09aa4d3c54738c7ae0844aa5a3043</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>DescriptionLabel</name>
+      <anchorfile>class_ui___c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>a5808ac45eb92ce06d4ff5aa0dbd30d65</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CHotfolderContainerGuiComp</name>
+    <filename>class_ui___c_hotfolder_container_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_hotfolder_container_gui_comp.html</anchorfile>
+      <anchor>aa9e612dd2ba67a30aeb96d1fd10481d3</anchor>
+      <arglist>(QWidget *CHotfolderContainerGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_hotfolder_container_gui_comp.html</anchorfile>
+      <anchor>a8332201ecd6d9f273c8f483065a5fd63</anchor>
+      <arglist>(QWidget *CHotfolderContainerGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_hotfolder_container_gui_comp.html</anchorfile>
+      <anchor>ad7762ba928cf6d9fff6ec6d9e7f23b04</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QListWidget *</type>
+      <name>HotfolderList</name>
+      <anchorfile>class_ui___c_hotfolder_container_gui_comp.html</anchorfile>
+      <anchor>ac2761e9e5d81ce1a198a1a07a0250e5b</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CHotfolderGuiComp</name>
+    <filename>class_ui___c_hotfolder_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>aee03b08cd247f82fee6686c1aa0809d7</anchor>
+      <arglist>(QWidget *CHotfolderGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>a8b539ff997d0e9181061f28b86cc7279</anchor>
+      <arglist>(QWidget *CHotfolderGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>a699374b70e3de540dfed58abb5eafef2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSplitter *</type>
+      <name>splitter</name>
+      <anchorfile>class_ui___c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>a18f725dd7432af3b8fa944512abb528b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeWidget *</type>
+      <name>FileList</name>
+      <anchorfile>class_ui___c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>a62515682c43b6aebac944f0507b7857b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>PreviewFrame</name>
+      <anchorfile>class_ui___c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>ad00a9804b42f50137befab1b8f36748a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>a884d5d55bf4b23d81e0a6b2ed1b60302</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>FilterFrame</name>
+      <anchorfile>class_ui___c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>a7cfb6fec1e0660749fcda7d7061341d2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>af9004822dfeca992bd2b55bb7a92e71a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>a11d0b1b5fbe38b51f866cda605769c3f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>TextFilterFrame</name>
+      <anchorfile>class_ui___c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>ae777a45903835bbdab80217e690d81b2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>a02dc41c4f47e7c0a9eb0f69f580ea5f3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QRadioButton *</type>
+      <name>AllRadio</name>
+      <anchorfile>class_ui___c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>a511f75e468ec8f6e9da8c03dd6efb901</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QRadioButton *</type>
+      <name>ErrorsRadio</name>
+      <anchorfile>class_ui___c_hotfolder_gui_comp.html</anchorfile>
+      <anchor>a5d952ce08c899dfc9565bb384e9c00e8</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CInspectionTaskGuiComp</name>
+    <filename>class_ui___c_inspection_task_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a25e670974693f7351e890953e862b0b0</anchor>
+      <arglist>(QWidget *CInspectionTaskGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a8f73c9d9afb4364427c6f9d1756f45d7</anchor>
+      <arglist>(QWidget *CInspectionTaskGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_3</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a1560994be855a94522f7f6c4c0eeeed4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSplitter *</type>
+      <name>PreviewSplitter</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a701a61e6a1d1ccc987f1222dd2a6ac7e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>PrevewFrame</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a46f8d139eb628068bb937b6a9b308d82</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_5</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a32e72dd7486ebf3b256c812c9c1d0abf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSplitter *</type>
+      <name>MessageListSplitter</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a5dfa13112b40fb67b1fae7d6cb6cac90</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QStackedWidget *</type>
+      <name>PreviewStack</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a2c2e0928d1b785f5cf4e9c3469fe1f17</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeWidget *</type>
+      <name>MessageList</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a447cf4a67be79f386317850cca7b956e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>layoutWidget</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a435871b11da1439bd78069757080416d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a0a0b5638e4e98a653b3ddec2d97e4e9b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>groupBox</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a567289b341eab46e299021415cf875b6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a85bf3a4946c68fffebdbcb275cd0cfed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>StateIconLabel</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a657862e31d121f43b3fa34dd98c62cad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>aaaed047c820937e27c3f2a542e43cc41</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>TestAllButton</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a5a8ef4abaea3b011bdc927117b98d6d8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>AutoTestButton</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>ad10ad946c62153b9197851d9ef7b6f0a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>MenuButton</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a98f80f78d61be3a3fb72c36dabb0405d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>TestBackButton</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>aef2264f88653cbb647a350415f6e345e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>HoldSnapButton</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a12b8f760f5f25d7f51f184c728f98a45</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>GeneralParamsFrame</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a3395b383a99c668bc36c61476c89c1b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_4</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>aea28718bb9fb9b397714d4d051d050c9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ParamsFrame</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a0a93ef4e89ee76160045d6d9442d47a0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a96ca42dee72ff50b4fe2c89b29a7bb3c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CLineProjectionSupplierGuiComp</name>
+    <filename>class_ui___c_line_projection_supplier_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>aea42f4c71a45fe4b2dc66548ff1d0ecf</anchor>
+      <arglist>(QWidget *CLineProjectionSupplierGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a34f85e59b0d65b84b1f29e308ae51e3f</anchor>
+      <arglist>(QWidget *CLineProjectionSupplierGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout</name>
+      <anchorfile>class_ui___c_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>ae575abee03adb91056313027b4ca3b6d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>groupBox</name>
+      <anchorfile>class_ui___c_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a1b4e491fab258268cc1606f3f8c9552f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout1</name>
+      <anchorfile>class_ui___c_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a2980e12397f43f7d638936df3a1435a0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>TestButton</name>
+      <anchorfile>class_ui___c_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a29d2aeac3c0cc0c01a71f93b1cd97ad4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>ProjectionFrame</name>
+      <anchorfile>class_ui___c_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a5d23a0886ec0114d3858056f0dfe29f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a494a6df11f013e4c826b28ea184d0fd5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>ParamsGB</name>
+      <anchorfile>class_ui___c_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a115c616af34fbc7d84cbefdc54589021</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a33f645b17674266e5a76485288b28a80</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ParamsFrame</name>
+      <anchorfile>class_ui___c_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a71790f11ddc0e3f820fac256a9ffcb9c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout2</name>
+      <anchorfile>class_ui___c_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>abbfb50f2fc6771564faa17de6b9595db</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a84dfc27fbc54770f17073ff0e3a96e6f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>LoadParamsButton</name>
+      <anchorfile>class_ui___c_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>ab96787ecb021cb35a3eeca4e84eabd01</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>SaveParamsButton</name>
+      <anchorfile>class_ui___c_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a20a1e29ac7f49018076fe4549bb1966b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>verticalSpacer</name>
+      <anchorfile>class_ui___c_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a949fedbf0d5c34e8d4799e751db1235b</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CLoginBarGuiComp</name>
+    <filename>class_ui___c_login_bar_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_login_bar_gui_comp.html</anchorfile>
+      <anchor>ae025a0eb2462c12aa084880d8a4aab05</anchor>
+      <arglist>(QWidget *CLoginBarGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_login_bar_gui_comp.html</anchorfile>
+      <anchor>a5a6f23431a325fef5f20fec0e7d8a71e</anchor>
+      <arglist>(QWidget *CLoginBarGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>hboxLayout</name>
+      <anchorfile>class_ui___c_login_bar_gui_comp.html</anchorfile>
+      <anchor>a0d8b2db74c87080b3eee8416546d93b2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___c_login_bar_gui_comp.html</anchorfile>
+      <anchor>a881590a65498fe7c792300e5a9942f7c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLineEdit *</type>
+      <name>UserEdit</name>
+      <anchorfile>class_ui___c_login_bar_gui_comp.html</anchorfile>
+      <anchor>a2e34b2c7c50308e3b3890b19e7dba042</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>spacerItem</name>
+      <anchorfile>class_ui___c_login_bar_gui_comp.html</anchorfile>
+      <anchor>a2e3b9afe1381aaa4d4856442aee2ed72</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>PasswordFrame</name>
+      <anchorfile>class_ui___c_login_bar_gui_comp.html</anchorfile>
+      <anchor>aebfd085771ae83c4555ab242ddc7afad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>hboxLayout1</name>
+      <anchorfile>class_ui___c_login_bar_gui_comp.html</anchorfile>
+      <anchor>a4178d614deeae3a6a9a7015ba66b65e7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_2</name>
+      <anchorfile>class_ui___c_login_bar_gui_comp.html</anchorfile>
+      <anchor>a38de3fece119eedb3f63dbc7dd6220fa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLineEdit *</type>
+      <name>PasswordEdit</name>
+      <anchorfile>class_ui___c_login_bar_gui_comp.html</anchorfile>
+      <anchor>a935726494375ba90cea41abea621d8eb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>LoginButton</name>
+      <anchorfile>class_ui___c_login_bar_gui_comp.html</anchorfile>
+      <anchor>ade19dcbdf34b21ea2e9ce732a20d6f78</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>LogoutButton</name>
+      <anchorfile>class_ui___c_login_bar_gui_comp.html</anchorfile>
+      <anchor>a8380f181346728a5b0c478955486379a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CMultiAttributeEditor</name>
+    <filename>class_ui___c_multi_attribute_editor.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_multi_attribute_editor.html</anchorfile>
+      <anchor>acf9a9d3864b6e42288335d4036f9b34a</anchor>
+      <arglist>(QDialog *CMultiAttributeEditor)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_multi_attribute_editor.html</anchorfile>
+      <anchor>a93ffdc0d5ff71f7fe1aae826c11a85a6</anchor>
+      <arglist>(QDialog *CMultiAttributeEditor)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_multi_attribute_editor.html</anchorfile>
+      <anchor>acece9f98616189057a020ff9c9946845</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QListWidget *</type>
+      <name>AttributeValuesTree</name>
+      <anchorfile>class_ui___c_multi_attribute_editor.html</anchorfile>
+      <anchor>a85da28df198f5a729a99a0d0ff9f8295</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_multi_attribute_editor.html</anchorfile>
+      <anchor>a9f2602db3a66fe725aef48ab6786515b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>AddButton</name>
+      <anchorfile>class_ui___c_multi_attribute_editor.html</anchorfile>
+      <anchor>ac494da462395cc5dafd9c36a9c8b2ad4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>RemoveButton</name>
+      <anchorfile>class_ui___c_multi_attribute_editor.html</anchorfile>
+      <anchor>adbdc2c418a84896618c185f83c37247a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer_2</name>
+      <anchorfile>class_ui___c_multi_attribute_editor.html</anchorfile>
+      <anchor>a1ab835fdd19473ef3b5f9f0ba480ea52</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>UpButton</name>
+      <anchorfile>class_ui___c_multi_attribute_editor.html</anchorfile>
+      <anchor>a2823b68ad0fe9fd2a70a2c1d92a6bd16</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>DownButton</name>
+      <anchorfile>class_ui___c_multi_attribute_editor.html</anchorfile>
+      <anchor>a08eb3152516f04efa0351883d7bbb5a8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer</name>
+      <anchorfile>class_ui___c_multi_attribute_editor.html</anchorfile>
+      <anchor>a2308ca6a3f896b8ed6aa71269b1a705a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDialogButtonBox *</type>
+      <name>buttonBox</name>
+      <anchorfile>class_ui___c_multi_attribute_editor.html</anchorfile>
+      <anchor>af0e895db1a8d18105abd6571d2087386</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CMultiBitmapSupplierGuiComp</name>
+    <filename>class_ui___c_multi_bitmap_supplier_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a033f8b11262063325fcd7d629571102a</anchor>
+      <arglist>(QWidget *CMultiBitmapSupplierGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a24a79ccea10a0cdc02e110e46058a97b</anchor>
+      <arglist>(QWidget *CMultiBitmapSupplierGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_4</name>
+      <anchorfile>class_ui___c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a1dbefa4c95b02be20d89a2cc4efad353</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>IconsGB</name>
+      <anchorfile>class_ui___c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a9ba72f3d3ef8e59a3868c4a3a2568381</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>adb18f779ca554620f29a9ccc1ca6c862</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>SnapImageButton</name>
+      <anchorfile>class_ui___c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a727ab942c7197ea92c29b7a66e3ac406</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>LiveImageButton</name>
+      <anchorfile>class_ui___c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a5f8f4cc8875fe9ea913cee92b0a4837a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QListWidget *</type>
+      <name>IconsView</name>
+      <anchorfile>class_ui___c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a8824e2720c63fb5643d8f1cd1eb59710</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>SaveImageButton</name>
+      <anchorfile>class_ui___c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a464fc180c2c967f30cb4b422441d5298</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>SizeLabel</name>
+      <anchorfile>class_ui___c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a1849d70de05b8d96a29a9e9e2b6f4df0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>ParamsGB</name>
+      <anchorfile>class_ui___c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a615252885ae9e8b76c695ee81ab540a9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>aae2844b3772d6bddacb601a8a0d2e192</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ParamsFrame</name>
+      <anchorfile>class_ui___c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>ad89bdbd84919776f8d7f4a0704d63b87</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout</name>
+      <anchorfile>class_ui___c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a7a64cef881013208fa929a49e08a6c12</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>acc97e930e23882d0291890b3e04715cf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>LoadParamsButton</name>
+      <anchorfile>class_ui___c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>afa9ce9e21b5832077e5b459eba77cd91</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>SaveParamsButton</name>
+      <anchorfile>class_ui___c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a024a1bc7a6111ccd0eb478858809c8a0</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CMultiLineProjectionSupplierGuiComp</name>
+    <filename>class_ui___c_multi_line_projection_supplier_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>afcd0c3a96ef2981091bf084c1e21c6ec</anchor>
+      <arglist>(QWidget *CMultiLineProjectionSupplierGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>afa165e1723eca05d8e1a1bdf9be4855b</anchor>
+      <arglist>(QWidget *CMultiLineProjectionSupplierGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>adf9621b36cf31423ec753ed8fe54907a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>TestButton</name>
+      <anchorfile>class_ui___c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a7333963407e8578a2707375b2d64980e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>ParamsFrame</name>
+      <anchorfile>class_ui___c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>adfab32c2b8db3fdadbbf277731285569</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a14199fd410e699a4623528f477068306</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>AutoUpdateButton</name>
+      <anchorfile>class_ui___c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>ae17281111e2d8de7b1dccf422301c80b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>ResultsGB</name>
+      <anchorfile>class_ui___c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a4ac4bec7baf6459f0579c8c144a99c81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_3</name>
+      <anchorfile>class_ui___c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a74e1ed87ef51696f84632bbf1720715b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ProjectionFrame</name>
+      <anchorfile>class_ui___c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>abbaaaec0f24c50fa54fff19a3c856206</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_5</name>
+      <anchorfile>class_ui___c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a2f920eaabd686e436e5286bc64fdc097</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>ProjectionSelectorLayout</name>
+      <anchorfile>class_ui___c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a98f51def11ab168d31a29861598534c7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>CurrentProjecttionLabel</name>
+      <anchorfile>class_ui___c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a1449778fef7419bc02db5981251b1855</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSlider *</type>
+      <name>ProjectionSlider</name>
+      <anchorfile>class_ui___c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>a8cedae7990de4bad7c5969f817a47e45</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpinBox *</type>
+      <name>ProjectionSpin</name>
+      <anchorfile>class_ui___c_multi_line_projection_supplier_gui_comp.html</anchorfile>
+      <anchor>ab1bbaa0a5a3c5d98b0a91c0b960353fd</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CMultiLineSupplierGuiComp</name>
+    <filename>class_ui___c_multi_line_supplier_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>ac80b989e5e95e4b87c561c351ab0d84e</anchor>
+      <arglist>(QWidget *CMultiLineSupplierGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>ac9ce020e101b4d7a9e90240b148ed11c</anchor>
+      <arglist>(QWidget *CMultiLineSupplierGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>aa4bd90960f3dd2f15fd32bc6923ac61b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>TestButton</name>
+      <anchorfile>class_ui___c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>a7e52306f49f05dd956bb636de4d034b4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>AutoUpdateButton</name>
+      <anchorfile>class_ui___c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>ac9f5e48c15c9ebdfac7234e87d61b2d0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>ParamsGB</name>
+      <anchorfile>class_ui___c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>a6607c6107a6b8c99adffd459084eb581</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>ab3c8b34ed67b6a205c527dd9358eeeae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ParamsFrame</name>
+      <anchorfile>class_ui___c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>a0d82314390268b4b39767e7b334929d8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_4</name>
+      <anchorfile>class_ui___c_multi_line_supplier_gui_comp.html</anchorfile>
+      <anchor>a1b5f67a2bb4306ddebc8d02b48b05c49</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CNumericValueWidget</name>
+    <filename>class_ui___c_numeric_value_widget.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_numeric_value_widget.html</anchorfile>
+      <anchor>a18690bbdeff3c4651e0823845612d4ad</anchor>
+      <arglist>(QWidget *CNumericValueWidget)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_numeric_value_widget.html</anchorfile>
+      <anchor>a8ccd7c2754cc4a71493c84007e76ae47</anchor>
+      <arglist>(QWidget *CNumericValueWidget)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_numeric_value_widget.html</anchorfile>
+      <anchor>a2b8b930d14da2133a80f555f44421130</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_numeric_value_widget.html</anchorfile>
+      <anchor>aff62ac8aa410d3607fc95975b27aec94</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>DescriptionLabel</name>
+      <anchorfile>class_ui___c_numeric_value_widget.html</anchorfile>
+      <anchor>a81f06c59d73e6b8442c3a786a8daf047</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>ValueSB</name>
+      <anchorfile>class_ui___c_numeric_value_widget.html</anchorfile>
+      <anchor>aa19480591bdada9a118b9469e2ebdb8c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>UnitLabel</name>
+      <anchorfile>class_ui___c_numeric_value_widget.html</anchorfile>
+      <anchor>acf31a0043f35c91118fbac29c005c3d0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_numeric_value_widget.html</anchorfile>
+      <anchor>adb0ac74e73205b77a7a8cb5683551a47</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>MinButton</name>
+      <anchorfile>class_ui___c_numeric_value_widget.html</anchorfile>
+      <anchor>a8ce81eadf1b7026a919202b3b946fa12</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSlider *</type>
+      <name>ValueSlider</name>
+      <anchorfile>class_ui___c_numeric_value_widget.html</anchorfile>
+      <anchor>a7c318f201355f837a9c8c4427c44263a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>MaxButton</name>
+      <anchorfile>class_ui___c_numeric_value_widget.html</anchorfile>
+      <anchor>af9ab84fa05ffc24a1666f8a3019a20e3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CPackageOverviewComp</name>
+    <filename>class_ui___c_package_overview_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_package_overview_comp.html</anchorfile>
+      <anchor>afac8530ca55e301c1ae41fefeba7c910</anchor>
+      <arglist>(QWidget *CPackageOverviewComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_package_overview_comp.html</anchorfile>
+      <anchor>a2ccecd57cbc72079dafcdcd46e419826</anchor>
+      <arglist>(QWidget *CPackageOverviewComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_package_overview_comp.html</anchorfile>
+      <anchor>a2b561155ff1a254bdb7001ff64b8aa40</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_package_overview_comp.html</anchorfile>
+      <anchor>a20e6b5114d73d994952e55e367c081f5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_2</name>
+      <anchorfile>class_ui___c_package_overview_comp.html</anchorfile>
+      <anchor>ae74266dc402d5e42266e9b77931bb7be</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QComboBox *</type>
+      <name>GroupByCB</name>
+      <anchorfile>class_ui___c_package_overview_comp.html</anchorfile>
+      <anchor>ac4b4570a7b1bb04745eded10689b9ed0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeWidget *</type>
+      <name>PackagesList</name>
+      <anchorfile>class_ui___c_package_overview_comp.html</anchorfile>
+      <anchor>a789480414db3ea30ec0000587483e653</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>FilterGB</name>
+      <anchorfile>class_ui___c_package_overview_comp.html</anchorfile>
+      <anchor>aeb96fd7decc6b01fa62181d704030771</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_package_overview_comp.html</anchorfile>
+      <anchor>a343ac6c1afaac0ea52c21ac1f91cf918</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>InterfaceClearButton</name>
+      <anchorfile>class_ui___c_package_overview_comp.html</anchorfile>
+      <anchor>a4739c1f7e24fa39bd4a2f39b4eba6576</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QComboBox *</type>
+      <name>InterfaceCB</name>
+      <anchorfile>class_ui___c_package_overview_comp.html</anchorfile>
+      <anchor>af75627a9d52223efada187856fd46ca2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>InterfaceLabel</name>
+      <anchorfile>class_ui___c_package_overview_comp.html</anchorfile>
+      <anchor>aaa035d83339fd142f597cb6138926900</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>KeywordClearButton</name>
+      <anchorfile>class_ui___c_package_overview_comp.html</anchorfile>
+      <anchor>a0923fc132c674ea1726d953c6b8e2df9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLineEdit *</type>
+      <name>FilterEdit</name>
+      <anchorfile>class_ui___c_package_overview_comp.html</anchorfile>
+      <anchor>ad5c945f0ad820b68a95b82003f53a322</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_4</name>
+      <anchorfile>class_ui___c_package_overview_comp.html</anchorfile>
+      <anchor>adef07a098400eaf6f9760653a44b94a4</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CPatternTeachingControllerGuiComp</name>
+    <filename>class_ui___c_pattern_teaching_controller_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_pattern_teaching_controller_gui_comp.html</anchorfile>
+      <anchor>aec7a29ef994ef7aeb6857714f22d1548</anchor>
+      <arglist>(QWidget *CPatternTeachingControllerGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_pattern_teaching_controller_gui_comp.html</anchorfile>
+      <anchor>a390efb85b2041f1e0d94dc93a616b1cc</anchor>
+      <arglist>(QWidget *CPatternTeachingControllerGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_pattern_teaching_controller_gui_comp.html</anchorfile>
+      <anchor>a0d866720473243d083347929cc201bce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_pattern_teaching_controller_gui_comp.html</anchorfile>
+      <anchor>a4656429d12f4db7f26c69a6b701c58d1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>PatternInfoLabel</name>
+      <anchorfile>class_ui___c_pattern_teaching_controller_gui_comp.html</anchorfile>
+      <anchor>ac3ea5b3fb6f9438afde5140425c63e24</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>LearnButton</name>
+      <anchorfile>class_ui___c_pattern_teaching_controller_gui_comp.html</anchorfile>
+      <anchor>af2afb0bb0a5bfe9010cf84ab38bf74be</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>EditButton</name>
+      <anchorfile>class_ui___c_pattern_teaching_controller_gui_comp.html</anchorfile>
+      <anchor>a06ad6160f948c1361c8fc39671842369</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>PatternFrame</name>
+      <anchorfile>class_ui___c_pattern_teaching_controller_gui_comp.html</anchorfile>
+      <anchor>a79e07e0db3aa9f336840f6c9b8f8d971</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_pattern_teaching_controller_gui_comp.html</anchorfile>
+      <anchor>a8352d804b6c131c3e6bab5285d5549d8</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CPlaybackControllerGuiComp</name>
+    <filename>class_ui___c_playback_controller_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_playback_controller_gui_comp.html</anchorfile>
+      <anchor>a08eaa46e60caed506785bec34eec3869</anchor>
+      <arglist>(QWidget *CPlaybackControllerGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_playback_controller_gui_comp.html</anchorfile>
+      <anchor>a0113c298079f1da97ae838741f58682f</anchor>
+      <arglist>(QWidget *CPlaybackControllerGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_playback_controller_gui_comp.html</anchorfile>
+      <anchor>af5e3db80358dacac5064abc501357867</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>PlayButton</name>
+      <anchorfile>class_ui___c_playback_controller_gui_comp.html</anchorfile>
+      <anchor>a1128baa3c927b6705f7f08ad66a1b2b7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTimeEdit *</type>
+      <name>TimeEdit</name>
+      <anchorfile>class_ui___c_playback_controller_gui_comp.html</anchorfile>
+      <anchor>acc4946deaed88a22e03afa2a24aaddcb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSlider *</type>
+      <name>PositionSlider</name>
+      <anchorfile>class_ui___c_playback_controller_gui_comp.html</anchorfile>
+      <anchor>ab69592a6d90931ba90d53a8d2c9eddfa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>IndexFrame</name>
+      <anchorfile>class_ui___c_playback_controller_gui_comp.html</anchorfile>
+      <anchor>ae457391dc3b991e693efabf53068e0a9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_playback_controller_gui_comp.html</anchorfile>
+      <anchor>aa0f6c4e5cf951e2f6d2e3d320617dff7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpinBox *</type>
+      <name>FrameIndexSB</name>
+      <anchorfile>class_ui___c_playback_controller_gui_comp.html</anchorfile>
+      <anchor>a87bea2c1b111cdf8b5e73e66de968e71</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___c_playback_controller_gui_comp.html</anchorfile>
+      <anchor>ac303a7295c0c676c6beafd5500aa9dea</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>MaxFramesLabel</name>
+      <anchorfile>class_ui___c_playback_controller_gui_comp.html</anchorfile>
+      <anchor>a3d9fe01f58cad602649d429e1b6f2b87</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>RepeatButton</name>
+      <anchorfile>class_ui___c_playback_controller_gui_comp.html</anchorfile>
+      <anchor>a6d34bce9a100669c75f5489a5956e5e8</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CProcessedBitmapView</name>
+    <filename>class_ui___c_processed_bitmap_view.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_processed_bitmap_view.html</anchorfile>
+      <anchor>afa7be840015b9a36b80989551401ff28</anchor>
+      <arglist>(QWidget *CProcessedBitmapView)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_processed_bitmap_view.html</anchorfile>
+      <anchor>ae586f0e1daede658121ccff009989c96</anchor>
+      <arglist>(QWidget *CProcessedBitmapView)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_processed_bitmap_view.html</anchorfile>
+      <anchor>aef3847ba7cfa07bcd760ca8af7d6543e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>GroupBox</name>
+      <anchorfile>class_ui___c_processed_bitmap_view.html</anchorfile>
+      <anchor>aade8ec3562d7ce6859c1dd57a4f60503</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_processed_bitmap_view.html</anchorfile>
+      <anchor>acc67c3050d94bdc7db2ed843cb2f77c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>ToolBarFrame</name>
+      <anchorfile>class_ui___c_processed_bitmap_view.html</anchorfile>
+      <anchor>a7a40ecd2136758487ca0f20ef2d02b03</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_processed_bitmap_view.html</anchorfile>
+      <anchor>adb5aa3fbb9644d8c288c75888f9167fd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>iview::CConsoleGui *</type>
+      <name>ImageView</name>
+      <anchorfile>class_ui___c_processed_bitmap_view.html</anchorfile>
+      <anchor>abbef8f8af6fb612c5071d5c0c925b6df</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_processed_bitmap_view.html</anchorfile>
+      <anchor>aafbf5f4e7095be6ec6e6803c2e2c85e6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFormLayout *</type>
+      <name>FormLayout</name>
+      <anchorfile>class_ui___c_processed_bitmap_view.html</anchorfile>
+      <anchor>a39457d2f990b60f4cf7c96cc3f902a2c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___c_processed_bitmap_view.html</anchorfile>
+      <anchor>a7dc4db5058c59161de4b8c2cb0df5e92</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>WidthLabel</name>
+      <anchorfile>class_ui___c_processed_bitmap_view.html</anchorfile>
+      <anchor>a3228a3a5156d501c4b5a7c48824bb8f2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_2</name>
+      <anchorfile>class_ui___c_processed_bitmap_view.html</anchorfile>
+      <anchor>a9d605cd990c4df9f2482f4f8b0e6786e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>HeightLabel</name>
+      <anchorfile>class_ui___c_processed_bitmap_view.html</anchorfile>
+      <anchor>abf73d373116b788624c0b475a8403393</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>verticalSpacer</name>
+      <anchorfile>class_ui___c_processed_bitmap_view.html</anchorfile>
+      <anchor>a7ea5505cf8e7bfbcce511814e456b16b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>SaveButton</name>
+      <anchorfile>class_ui___c_processed_bitmap_view.html</anchorfile>
+      <anchor>a2d7b71bd4a2b6732fe74039e88f0a99e</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CProcessingItemPreviewGuiComp</name>
+    <filename>class_ui___c_processing_item_preview_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>aed037e57074a513b6d0475f84a4f19f9</anchor>
+      <arglist>(QWidget *CProcessingItemPreviewGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a584b495c7ac844aa84cc15aa927cbbe1</anchor>
+      <arglist>(QWidget *CProcessingItemPreviewGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_4</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>ad459fff34d9996824bcbcd2e18662aa5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>StyledFrame</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a801a96acc384b9a39ddb903b60b36e9c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_5</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a0b324adc2e20f97ae9c58543bd4f63ff</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>aa941a35856802532034f8e1f897d14bf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>af59b99847dcfbd35bb1bc017f8536d27</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a57ce7fe7e3cc93a6eba1a438fd9dc8c9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>InputFileNameLabel</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a163b52951e9f63ee548982f617fa2c27</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_3</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a069f07fa885d907d94f24a602f6dcf13</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>InputFileSizeLabel</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>ac14d24d1027e391573c5142126aec64b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_2</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>afb93d2f91592b5fd8ce7c4193fee942c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>OutputFileNameLabel</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a1368240fc1077ba6724b3244524e3bf4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_4</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>aeb0733d9d6a43a0f523b690429de822a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>OutputFileSizeLabel</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a4b67214a50d335d23484d86d1afcde81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>line</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a0c5a8fb138408a1a4ea46e243f4ed90d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a98b115d55477c92cc7b4b50dca22b73e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_5</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a7c20003ed8f12294d0e338c16034a0cd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>StartedAtLabel</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a7fa721ab150cfab77c9bca190871ff5f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_3</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a797eb4ff890689b1a85f3aefeddb1b2c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_6</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>ad823eb76200f28eb8a1d95e902b99c9c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>ProcessingTimeLabel</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a01b30fcc034bc0a4920bc205625a09f4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>aa98266f6fdfbcddb1e9a6d0e466d413b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_7</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>ae043ae6dbdbce81cb8ea986ee248e9a0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>ProcessingStateLabel</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a4a68e8ab32d15770901e4dd7f78ee329</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>verticalSpacer</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a45b828e4c803469d9cd7436ff30ea566</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>frame</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>aa13637ea8068be6f8b080dfe628d6b33</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>InputPreviewFrame</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>aff5e48e616c64e36b65fc3455cb4beb2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>aa047a49328138c9fcd895d02041bdd40</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>OutputPreviewFrame</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>a6eea75d4c6d8eda198767c83be21f17a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_4</name>
+      <anchorfile>class_ui___c_processing_item_preview_gui_comp.html</anchorfile>
+      <anchor>acd985b5d30fae987146c1d50ac3225d5</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CProcessorControlGuiComp</name>
+    <filename>class_ui___c_processor_control_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_processor_control_gui_comp.html</anchorfile>
+      <anchor>a67b150dba30bba625791a19c8177feb6</anchor>
+      <arglist>(QWidget *CProcessorControlGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_processor_control_gui_comp.html</anchorfile>
+      <anchor>ad68f2547a67d54a32e757b278907458b</anchor>
+      <arglist>(QWidget *CProcessorControlGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_3</name>
+      <anchorfile>class_ui___c_processor_control_gui_comp.html</anchorfile>
+      <anchor>ad6a78b301b5b30e18623b972d55cd827</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>groupBox</name>
+      <anchorfile>class_ui___c_processor_control_gui_comp.html</anchorfile>
+      <anchor>a5ef77d47f54f00a12571870db1a784b2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_processor_control_gui_comp.html</anchorfile>
+      <anchor>a46ebac5d3819219237f172e79a84aba9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>hboxLayout</name>
+      <anchorfile>class_ui___c_processor_control_gui_comp.html</anchorfile>
+      <anchor>a0b02d021ca12a78e32fe7d7b23998c74</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>DataAcquisitionButton</name>
+      <anchorfile>class_ui___c_processor_control_gui_comp.html</anchorfile>
+      <anchor>a655641e661cf5d9f3ef913e4f8ac5d6a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>LiveDataAcquisitionButton</name>
+      <anchorfile>class_ui___c_processor_control_gui_comp.html</anchorfile>
+      <anchor>ac1d2f1c21727d949ab8a1d98aaedb566</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>SaveDataButton</name>
+      <anchorfile>class_ui___c_processor_control_gui_comp.html</anchorfile>
+      <anchor>ac2c84d4831bf6e204d60a629ed027f58</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>ParamsGB</name>
+      <anchorfile>class_ui___c_processor_control_gui_comp.html</anchorfile>
+      <anchor>a3086de11399cb0ec2be42c8b359fea76</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_processor_control_gui_comp.html</anchorfile>
+      <anchor>a978278bc16bc3f2402fbf8e78a10577c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ParamsFrame</name>
+      <anchorfile>class_ui___c_processor_control_gui_comp.html</anchorfile>
+      <anchor>af8a905cde242ad43b7bcb32c846c4bde</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout</name>
+      <anchorfile>class_ui___c_processor_control_gui_comp.html</anchorfile>
+      <anchor>a14760fb711a0e623d8ca1f1c45e2cc52</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_processor_control_gui_comp.html</anchorfile>
+      <anchor>a20da4e4fa31171e733e67fc4dd3e2be8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>LoadParamsButton</name>
+      <anchorfile>class_ui___c_processor_control_gui_comp.html</anchorfile>
+      <anchor>aacbff509d7c267f9fd9c5990bee081ed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>SaveParamsButton</name>
+      <anchorfile>class_ui___c_processor_control_gui_comp.html</anchorfile>
+      <anchor>a8468b1c3d55e5c3e4e6a6eaf54c04f35</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>verticalSpacer</name>
+      <anchorfile>class_ui___c_processor_control_gui_comp.html</anchorfile>
+      <anchor>ab2a99bea5d1cbdc4736e53733c123a5c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CPropertiesEditorComp</name>
+    <filename>class_ui___c_properties_editor_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_properties_editor_comp.html</anchorfile>
+      <anchor>af1f3a65ad5358fc309f65aca60e8d416</anchor>
+      <arglist>(QWidget *CPropertiesEditorComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_properties_editor_comp.html</anchorfile>
+      <anchor>af481dcbdce5d83516c57dcc272ea27d1</anchor>
+      <arglist>(QWidget *CPropertiesEditorComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_properties_editor_comp.html</anchorfile>
+      <anchor>af20c5ad04a5282ba6fa1e74934c75d10</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeWidget *</type>
+      <name>PropertyTree</name>
+      <anchorfile>class_ui___c_properties_editor_comp.html</anchorfile>
+      <anchor>aac6e459570f02beb1f94efa066ee749c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CPulseParamsGuiComp</name>
+    <filename>class_ui___c_pulse_params_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_pulse_params_gui_comp.html</anchorfile>
+      <anchor>a7b003241a9decda4229567a13b0056be</anchor>
+      <arglist>(QWidget *CPulseParamsGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_pulse_params_gui_comp.html</anchorfile>
+      <anchor>a87c3f4d18ea696512edc629a9d1fbcff</anchor>
+      <arglist>(QWidget *CPulseParamsGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_pulse_params_gui_comp.html</anchorfile>
+      <anchor>a6c7688ad6299fcab97ef7c9b4e0d5518</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>DelayTimeLabel</name>
+      <anchorfile>class_ui___c_pulse_params_gui_comp.html</anchorfile>
+      <anchor>a6839b4fd3d5e1a3a7d00c00a4d600cdc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>DelayTimeSB</name>
+      <anchorfile>class_ui___c_pulse_params_gui_comp.html</anchorfile>
+      <anchor>a8c85fe573e1590ff68d6924e65f56683</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>DelayTimeUnitLabel</name>
+      <anchorfile>class_ui___c_pulse_params_gui_comp.html</anchorfile>
+      <anchor>ab25b529b369255f05f2b3fd08e5a2c79</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>PulseTimeLabel</name>
+      <anchorfile>class_ui___c_pulse_params_gui_comp.html</anchorfile>
+      <anchor>a8b90f6cd59fcd91b32b0a34f9a8bdf03</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>PulseTimeSB</name>
+      <anchorfile>class_ui___c_pulse_params_gui_comp.html</anchorfile>
+      <anchor>ac78283d1cb94ea581d345cb8c8adca3c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>PulseTimeUnitLabel</name>
+      <anchorfile>class_ui___c_pulse_params_gui_comp.html</anchorfile>
+      <anchor>a9e0d8bc61277b714d2494f9f187f2ae7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>RelaxingTimeLabel</name>
+      <anchorfile>class_ui___c_pulse_params_gui_comp.html</anchorfile>
+      <anchor>a520d4b9c429a745f889250aa5f125ae0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>RelaxingTimeSB</name>
+      <anchorfile>class_ui___c_pulse_params_gui_comp.html</anchorfile>
+      <anchor>a489f4cacef2c323870aaab7d3bfddf59</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>RelaxingTimeUnitLabel</name>
+      <anchorfile>class_ui___c_pulse_params_gui_comp.html</anchorfile>
+      <anchor>a424aec2f82a1c96927ed40954f44eb0a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CQuickHelpGuiComp</name>
+    <filename>class_ui___c_quick_help_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_quick_help_gui_comp.html</anchorfile>
+      <anchor>a949a9dfb7ce01722487aaf7b88b46b69</anchor>
+      <arglist>(QWidget *CQuickHelpGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_quick_help_gui_comp.html</anchorfile>
+      <anchor>a021b71d2cc0fcfa03434beee2969dbe7</anchor>
+      <arglist>(QWidget *CQuickHelpGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_quick_help_gui_comp.html</anchorfile>
+      <anchor>a16314c63e6a5610a345b9adcd771c05f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>NoDescriptionFrame</name>
+      <anchorfile>class_ui___c_quick_help_gui_comp.html</anchorfile>
+      <anchor>a62262324d08924668f648468aa511817</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_quick_help_gui_comp.html</anchorfile>
+      <anchor>a46d4df13dd10c95de79a5ad89e3b0de3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>NoDescriptionLabel</name>
+      <anchorfile>class_ui___c_quick_help_gui_comp.html</anchorfile>
+      <anchor>a470c8181be3d42bb497d25c350250c53</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>NewButton</name>
+      <anchorfile>class_ui___c_quick_help_gui_comp.html</anchorfile>
+      <anchor>a0c231365c1ec25a052d5b7e39048438c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>DescriptionFrame</name>
+      <anchorfile>class_ui___c_quick_help_gui_comp.html</anchorfile>
+      <anchor>a5a7c62999ad4361f386e6a3d817002a1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_3</name>
+      <anchorfile>class_ui___c_quick_help_gui_comp.html</anchorfile>
+      <anchor>a8e41422cbebc83a4921110111bf64884</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTextBrowser *</type>
+      <name>DescriptionBrowser</name>
+      <anchorfile>class_ui___c_quick_help_gui_comp.html</anchorfile>
+      <anchor>a5ebd1c08b2bf7fbde8d4c04c87adf363</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>EditButton</name>
+      <anchorfile>class_ui___c_quick_help_gui_comp.html</anchorfile>
+      <anchor>a6ddd99ee1c5fb0670b21034d3b831a1d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>ShowTechButton</name>
+      <anchorfile>class_ui___c_quick_help_gui_comp.html</anchorfile>
+      <anchor>af0e9c5ebd02e150437946521c24dcc6f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CRegistryPropEditorComp</name>
+    <filename>class_ui___c_registry_prop_editor_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>afb53b7eb5e81a30dd677afbcc285cd8a</anchor>
+      <arglist>(QWidget *CRegistryPropEditorComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a140da5ce9977754b1dadc6e70fb4886a</anchor>
+      <arglist>(QWidget *CRegistryPropEditorComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a7e540307338165ce2c3b0f6da8f782be</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>groupBox</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>ad19e4da50f68765a1f0544badcbc18ff</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a773da1485f8c43f6616965ff3f53346f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLineEdit *</type>
+      <name>DescriptionEdit</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>afaddfcde866bddfec0dd0c3d58b07708</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>RegistryInfoFrame</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>af5e2f660829e50ea25cc29cb9fe52f9d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFormLayout *</type>
+      <name>formLayout</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a6014199678d8c95d5d5b5b89866bd223</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_6</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>ae53c8e0bfcf9f9e5e69b3e5040230ff0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLineEdit *</type>
+      <name>CompanyEdit</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a112848b1de555a21de37169fce56a10a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_2</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a718234ad45e204bb9b2ed878cc20564e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLineEdit *</type>
+      <name>ProjectEdit</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>af2698c45aeae95c6af65a5e1b1a5bf31</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_3</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>ad571aaf94e772113bd5b91f59b90c93e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLineEdit *</type>
+      <name>AuthorEdit</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a15965fbcaf7f3b82614463473e6e3784</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>abc962cb4f549d7fc502641bccec9afa8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLineEdit *</type>
+      <name>CategoryEdit</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>acf04c118ccbac584638c767271c532ae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_5</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a9d0377d9667b6f880b8435a4ae28576f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLineEdit *</type>
+      <name>TagsEdit</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a375ad9ee12267b4ce3deb9742d86fbe0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_4</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a80cae1b4758f76ab4fa48582b320b32f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLineEdit *</type>
+      <name>KeywordsEdit</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a69271d3a2eb89567e9c0ee88bb61e054</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>groupBox_3</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>af9da0d642946b48548c14710021c307f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_3</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a18936f35f2fc4357e1c769367bba9eaa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeWidget *</type>
+      <name>OverviewTree</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>ae7e64dbf25b94f27b7ba34e2e7996e6d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QScrollArea *</type>
+      <name>ErrorsFrame</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a7eb2b732143f5733774c6985d208707e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>scrollAreaWidgetContents</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a785dc5a81e70768d36a272f8a4fd6ca5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_4</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a5ff96aaf574669c9ed85fa65e9791955</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>ErrorsHeader</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>a9b81b6b277e031e3bd8b930a15980749</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>ErrorsLabel</name>
+      <anchorfile>class_ui___c_registry_prop_editor_comp.html</anchorfile>
+      <anchor>ae6cc9f99e917167f65d44627d7b33206</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CRegistryTreeViewComp</name>
+    <filename>class_ui___c_registry_tree_view_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a80d066be20e3aa402ed5009aed15aa13</anchor>
+      <arglist>(QWidget *CRegistryTreeViewComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a454fcb0ab058a157869072f22aed898a</anchor>
+      <arglist>(QWidget *CRegistryTreeViewComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_registry_tree_view_comp.html</anchorfile>
+      <anchor>afcd9bfaeb84f49f9f2589b2359800972</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>FilterFrame</name>
+      <anchorfile>class_ui___c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a2628174bcd614fc5e55835208001e6a2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a171114ac7b8a228fc009b04855eaa8cd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a4baf619360d77652c8de8e447b967c08</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLineEdit *</type>
+      <name>FilterEdit</name>
+      <anchorfile>class_ui___c_registry_tree_view_comp.html</anchorfile>
+      <anchor>ad9889bb28ab341b35b112c539c742541</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QCheckBox *</type>
+      <name>ShowOnlyErrorsCheck</name>
+      <anchorfile>class_ui___c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a52ecb9210b46712fdd0c346a02342854</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSplitter *</type>
+      <name>MainSplitter</name>
+      <anchorfile>class_ui___c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a025c3946f36e989f1ff3a7f0054955ae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeWidget *</type>
+      <name>RegistryTree</name>
+      <anchorfile>class_ui___c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a3c1eb9191d54b7c0c8fb6714f7926cd7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTextEdit *</type>
+      <name>MessagesList</name>
+      <anchorfile>class_ui___c_registry_tree_view_comp.html</anchorfile>
+      <anchor>aac6403255b6be6cc5152e317777bf2c8</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CSampleAcquisitionGuiComp</name>
+    <filename>class_ui___c_sample_acquisition_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_sample_acquisition_gui_comp.html</anchorfile>
+      <anchor>abc2454c83b18460d8e9e74ed899c4283</anchor>
+      <arglist>(QWidget *CSampleAcquisitionGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_sample_acquisition_gui_comp.html</anchorfile>
+      <anchor>a39bfba854b200f3e2cb6999dc31bf3e9</anchor>
+      <arglist>(QWidget *CSampleAcquisitionGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout</name>
+      <anchorfile>class_ui___c_sample_acquisition_gui_comp.html</anchorfile>
+      <anchor>a6fa76610e5b9685de712cf8ea1bd0102</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSplitter *</type>
+      <name>splitter</name>
+      <anchorfile>class_ui___c_sample_acquisition_gui_comp.html</anchorfile>
+      <anchor>aa3c1f6aa14242101cd34522ef2a92bc4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>frame</name>
+      <anchorfile>class_ui___c_sample_acquisition_gui_comp.html</anchorfile>
+      <anchor>ad5d72cd378d13cc92fb54b1325c2b4cc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout1</name>
+      <anchorfile>class_ui___c_sample_acquisition_gui_comp.html</anchorfile>
+      <anchor>ac9e708ec921b37c7471234cdc9f80270</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>groupBox</name>
+      <anchorfile>class_ui___c_sample_acquisition_gui_comp.html</anchorfile>
+      <anchor>aafe1b9ecc21499e9a78e98637b4ae5d2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_sample_acquisition_gui_comp.html</anchorfile>
+      <anchor>ad2a35cf2dae73ff3f0d095a5f9037741</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>StopButton</name>
+      <anchorfile>class_ui___c_sample_acquisition_gui_comp.html</anchorfile>
+      <anchor>ac28cd829eae6a7450d659c24d806172f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>StartButton</name>
+      <anchorfile>class_ui___c_sample_acquisition_gui_comp.html</anchorfile>
+      <anchor>a20fbb53005937f9ef180e26dccf880e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>SaveSampleButton</name>
+      <anchorfile>class_ui___c_sample_acquisition_gui_comp.html</anchorfile>
+      <anchor>aefe757bb434b65ae4a5e6fe05510f5bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>ParamsGB</name>
+      <anchorfile>class_ui___c_sample_acquisition_gui_comp.html</anchorfile>
+      <anchor>aec0f350a2114f00e78e90b0a6e56d35b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout2</name>
+      <anchorfile>class_ui___c_sample_acquisition_gui_comp.html</anchorfile>
+      <anchor>a13eac80505fee4121101bee6d9a6d5a0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ParamsFrame</name>
+      <anchorfile>class_ui___c_sample_acquisition_gui_comp.html</anchorfile>
+      <anchor>ab47870f34224e89a25d8bad7bb8727d1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout3</name>
+      <anchorfile>class_ui___c_sample_acquisition_gui_comp.html</anchorfile>
+      <anchor>a0c3aa4f0aaa54a281b482f335e80814b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>LoadParamsButton</name>
+      <anchorfile>class_ui___c_sample_acquisition_gui_comp.html</anchorfile>
+      <anchor>ac27cb30e94f58f328817b7fb01093aa4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>SaveParamsButton</name>
+      <anchorfile>class_ui___c_sample_acquisition_gui_comp.html</anchorfile>
+      <anchor>a74471a25c5180f891e59f0b482f703e6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>spacerItem</name>
+      <anchorfile>class_ui___c_sample_acquisition_gui_comp.html</anchorfile>
+      <anchor>ae8a6e7bb80349cbe60d7982eceaf1837</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>SampleViewFrame</name>
+      <anchorfile>class_ui___c_sample_acquisition_gui_comp.html</anchorfile>
+      <anchor>a262ee316150ef25139a2ea257867c29c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout4</name>
+      <anchorfile>class_ui___c_sample_acquisition_gui_comp.html</anchorfile>
+      <anchor>a6045b7ffc325f201f887394118ea1d5e</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CSamplingParamsGuiComp</name>
+    <filename>class_ui___c_sampling_params_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_sampling_params_gui_comp.html</anchorfile>
+      <anchor>a2614088da0cc2a2cdac67cac4e4b258b</anchor>
+      <arglist>(QWidget *CSamplingParamsGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_sampling_params_gui_comp.html</anchorfile>
+      <anchor>a707ab96fea30fc8c306d261319ea3afe</anchor>
+      <arglist>(QWidget *CSamplingParamsGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_sampling_params_gui_comp.html</anchorfile>
+      <anchor>a87add3e52d60796bbfa162b2cf28d27b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___c_sampling_params_gui_comp.html</anchorfile>
+      <anchor>aa003c6665fd43b209eecdf4365962681</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>IntervalSB</name>
+      <anchorfile>class_ui___c_sampling_params_gui_comp.html</anchorfile>
+      <anchor>a49773884b5df80aa72d14a1d7063eebd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_2</name>
+      <anchorfile>class_ui___c_sampling_params_gui_comp.html</anchorfile>
+      <anchor>aca2bb277cc2e33d1bf24618bd45f9aa0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_3</name>
+      <anchorfile>class_ui___c_sampling_params_gui_comp.html</anchorfile>
+      <anchor>af5367a8e9640ab0ac6e86a72a55da51d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QComboBox *</type>
+      <name>ModeCB</name>
+      <anchorfile>class_ui___c_sampling_params_gui_comp.html</anchorfile>
+      <anchor>a36873fff747e0d69e44f5dc67960e540</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CScaleCalibrationEditorComp</name>
+    <filename>class_ui___c_scale_calibration_editor_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>ad17fa5a6b9bb079a30186f4f06fa2eb5</anchor>
+      <arglist>(QWidget *CScaleCalibrationEditorComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>a6b2446f02f50bac2303591dead082cf4</anchor>
+      <arglist>(QWidget *CScaleCalibrationEditorComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>aaf89dc608b5bd3d4e45f793e34b621fe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>groupBox</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>a824b052b6d19417a3c59f13d83418477</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_4</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>a4cdf7b2cbd9f7a6899e1a148aa42e6b2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>ScaleXWidget</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>a10eafc837d8e576948a65a5c6617418f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>a86b028ed938d9a8e9c6ffe69935d8812</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer_2</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>a696bcef0ee005093f2db6ba8a6ca664e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>ScaleXLabel</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>a9b925934bd654a7921c738e9ca4cceff</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>ScaleXSpinBox</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>a202c68292afcfe160ab9b26cef84569d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>ad344b616663ad3cdcc7f72db6488f068</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>ScaleYWidget</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>aec1f19ea80803b6e1cb640fb98b475f1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_3</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>a2a6b94011aa987e090f14dde53276467</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>ScaleYLabel</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>a091de6a493d9cf7e7d240437e028369b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>ScaleYSpinBox</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>a71f8698f911614c81337b95e9aae75e5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>ScaleYSpacer</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>ad2262d0bb5c2fd6399151134eda02d90</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>CalibrationGroupBox</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>a8790fdd92d9999f3ac2032cc13cdd1d2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>a7d85e495d37eca52ee9db5e14282ea43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>widget</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>a73326f7c9131907e67f7b30131a23fac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>a1fd643884efc2bed10c786ef90eb5f8b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer_4</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>a047db999109775a186dc9bf851a79585</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_3</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>a1c88a10e3fad5227750b16c8a501b95c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>NominalRadiusSpinBox</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>aaa9b7a2f9d56b643039e1c6c09961e57</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer_5</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>a070672aa723bf42f0fb318af59894522</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>CalibrateButton</name>
+      <anchorfile>class_ui___c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>ad2d8df37561ce9c4f2fba37c00fd33e6</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CSceneProviderGuiComp</name>
+    <filename>class_ui___c_scene_provider_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>aa3f395bb4fe8394fc6e8d3234a22d248</anchor>
+      <arglist>(QWidget *CSceneProviderGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a6445de4a69788df1e7946e7120c95b5c</anchor>
+      <arglist>(QWidget *CSceneProviderGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a1c4f54dee9eb5584750064c766b30224</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGraphicsView *</type>
+      <name>SceneView</name>
+      <anchorfile>class_ui___c_scene_provider_gui_comp.html</anchorfile>
+      <anchor>a58cb7954c953235d13f08c3756399f7d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CSearchBasedFeaturesSupplierGuiComp</name>
+    <filename>class_ui___c_search_based_features_supplier_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a3ff113f58efc67f05f06d249e61d9ebe</anchor>
+      <arglist>(QWidget *CSearchBasedFeaturesSupplierGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>aeb247b28be22939e9814df748427ff70</anchor>
+      <arglist>(QWidget *CSearchBasedFeaturesSupplierGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>ad92cc4c7835d5d5408add0a556eef2d3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>aa22212d95e75c003b1be046efa8ed4be</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>TestButton</name>
+      <anchorfile>class_ui___c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a78bfd99b4cdbdc83d2eba0d953ee4627</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>AutoTestButton</name>
+      <anchorfile>class_ui___c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>ace06d81992a5ad1cfd6ca496aceb0ad8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSplitter *</type>
+      <name>splitter</name>
+      <anchorfile>class_ui___c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a1b45b2d7be6a20ba442373ad55158d5b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>ParamsGB</name>
+      <anchorfile>class_ui___c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>ab0088785914416cc2c4aa2fffd18f2f0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a5823355236b90c278992bad807112807</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ParamsFrame</name>
+      <anchorfile>class_ui___c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>ab5a09c25f3b668e5fc3b35e0d4ba502f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_4</name>
+      <anchorfile>class_ui___c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>ad01bbc2d1527c231bd3cbfddcbaf112b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a2fe39144d6ded17bae600c4655d5963c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>LoadParamsButton</name>
+      <anchorfile>class_ui___c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>ac86871bfca48d80a855b47c2d33ee871</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>SaveParamsButton</name>
+      <anchorfile>class_ui___c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a76c8b5d262f9519a51e54004cbf47aee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>ResultsFrame</name>
+      <anchorfile>class_ui___c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a6226a1a761078171c9553ebd387c118f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_3</name>
+      <anchorfile>class_ui___c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a63623225b65729cda3299e6d23713d19</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeWidget *</type>
+      <name>ResultsList</name>
+      <anchorfile>class_ui___c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>af8a484c89d963267d5870fadbe203810</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CSnapImageGuiComp</name>
+    <filename>class_ui___c_snap_image_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_snap_image_gui_comp.html</anchorfile>
+      <anchor>ae28c489d8d4bba54b0bc355590a66276</anchor>
+      <arglist>(QWidget *CSnapImageGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_snap_image_gui_comp.html</anchorfile>
+      <anchor>a0c472d17ef1c3c8bb443d46e8c5d3dd2</anchor>
+      <arglist>(QWidget *CSnapImageGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout</name>
+      <anchorfile>class_ui___c_snap_image_gui_comp.html</anchorfile>
+      <anchor>ab94133192edaf241f6b000fffb037322</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>frame</name>
+      <anchorfile>class_ui___c_snap_image_gui_comp.html</anchorfile>
+      <anchor>a3f8da6170d64e74557f141d7f456969d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout1</name>
+      <anchorfile>class_ui___c_snap_image_gui_comp.html</anchorfile>
+      <anchor>adab37bc50f570c1d1f55aea298b428c1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>groupBox</name>
+      <anchorfile>class_ui___c_snap_image_gui_comp.html</anchorfile>
+      <anchor>ad502cdcaaea2a17b6c982f308326ecc1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_snap_image_gui_comp.html</anchorfile>
+      <anchor>a0197f281caf811de8bdca70907fca641</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>hboxLayout</name>
+      <anchorfile>class_ui___c_snap_image_gui_comp.html</anchorfile>
+      <anchor>a5b867fc805047622de2ae5bc9c0c8b92</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>SnapImageButton</name>
+      <anchorfile>class_ui___c_snap_image_gui_comp.html</anchorfile>
+      <anchor>aa00b7ce1e6eb701d5583b08ad0e03dd7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>LiveImageButton</name>
+      <anchorfile>class_ui___c_snap_image_gui_comp.html</anchorfile>
+      <anchor>a51a71e97395f67933b0a7e72901ddd36</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>SaveImageButton</name>
+      <anchorfile>class_ui___c_snap_image_gui_comp.html</anchorfile>
+      <anchor>aa4b50b7a03142970e5a86218c53c6eff</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>ParamsGB</name>
+      <anchorfile>class_ui___c_snap_image_gui_comp.html</anchorfile>
+      <anchor>a0de122144be36391cc6f11134413c919</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_snap_image_gui_comp.html</anchorfile>
+      <anchor>a4151f1c56b5cea80acc1c8ffe278cbf5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ParamsFrame</name>
+      <anchorfile>class_ui___c_snap_image_gui_comp.html</anchorfile>
+      <anchor>ae2ac2e2e92613927275463a1923545ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout2</name>
+      <anchorfile>class_ui___c_snap_image_gui_comp.html</anchorfile>
+      <anchor>a4f1415a703b0d28a4d242adb504a4de1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_snap_image_gui_comp.html</anchorfile>
+      <anchor>a7b1735ec24caa332b39d3d8b802f7cdc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>LoadParamsButton</name>
+      <anchorfile>class_ui___c_snap_image_gui_comp.html</anchorfile>
+      <anchor>aa3fabf6ac193e39d3408034f8dd90973</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>SaveParamsButton</name>
+      <anchorfile>class_ui___c_snap_image_gui_comp.html</anchorfile>
+      <anchor>ac2d231e776cc5a539056f471f2160a9c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CTcpTerminalGuiComp</name>
+    <filename>class_ui___c_tcp_terminal_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_tcp_terminal_gui_comp.html</anchorfile>
+      <anchor>a98791a7228146051316102722a55ae3a</anchor>
+      <arglist>(QWidget *CTcpTerminalGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_tcp_terminal_gui_comp.html</anchorfile>
+      <anchor>a38e0a70cad6425a33eea83855ed9d92a</anchor>
+      <arglist>(QWidget *CTcpTerminalGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_3</name>
+      <anchorfile>class_ui___c_tcp_terminal_gui_comp.html</anchorfile>
+      <anchor>a818c848b0230a42711edfbee00693aad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSplitter *</type>
+      <name>splitter</name>
+      <anchorfile>class_ui___c_tcp_terminal_gui_comp.html</anchorfile>
+      <anchor>a6ff6e1220bb8cc58df83922c49a86425</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>widget</name>
+      <anchorfile>class_ui___c_tcp_terminal_gui_comp.html</anchorfile>
+      <anchor>ac70f6728c66ba8708f7db62e8b280cc1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_tcp_terminal_gui_comp.html</anchorfile>
+      <anchor>abc1fb4f067ae0f161c35d583ffcb3944</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeWidget *</type>
+      <name>SentList</name>
+      <anchorfile>class_ui___c_tcp_terminal_gui_comp.html</anchorfile>
+      <anchor>add1e94829b80fcbb86900331a409fe55</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>ClearSentListButton</name>
+      <anchorfile>class_ui___c_tcp_terminal_gui_comp.html</anchorfile>
+      <anchor>a6414d4aacd19b1218aba070ba839db2b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_tcp_terminal_gui_comp.html</anchorfile>
+      <anchor>acfa935db1d07c8b681c43539fc4d4059</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___c_tcp_terminal_gui_comp.html</anchorfile>
+      <anchor>affa7cc37f3f282b3adfb29a5600a48bd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QComboBox *</type>
+      <name>CommandCB</name>
+      <anchorfile>class_ui___c_tcp_terminal_gui_comp.html</anchorfile>
+      <anchor>a50aa3ae925a24cd87434700ae5b908ae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>SendButton</name>
+      <anchorfile>class_ui___c_tcp_terminal_gui_comp.html</anchorfile>
+      <anchor>aec43940d198a23307395a38af2369b3f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>widget1</name>
+      <anchorfile>class_ui___c_tcp_terminal_gui_comp.html</anchorfile>
+      <anchor>a5c0d5f92bb3c77170b81ffcccb7898f4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_tcp_terminal_gui_comp.html</anchorfile>
+      <anchor>a9fb1b58de6863cb9357c107563eb4796</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeWidget *</type>
+      <name>ReceivedList</name>
+      <anchorfile>class_ui___c_tcp_terminal_gui_comp.html</anchorfile>
+      <anchor>aeb5644bd030aa926a007be16c14e95b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>ClearReceivedListButton</name>
+      <anchorfile>class_ui___c_tcp_terminal_gui_comp.html</anchorfile>
+      <anchor>ac79adf5f89c73a918de2650999c25460</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CTriggerParamsGuiComp</name>
+    <filename>class_ui___c_trigger_params_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_trigger_params_gui_comp.html</anchorfile>
+      <anchor>ad7ffd7962f20fc7aa8152d5d23c9c7ec</anchor>
+      <arglist>(QWidget *CTriggerParamsGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_trigger_params_gui_comp.html</anchorfile>
+      <anchor>a77da507fe0047b79497e7b09e455503e</anchor>
+      <arglist>(QWidget *CTriggerParamsGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_trigger_params_gui_comp.html</anchorfile>
+      <anchor>a532f7f14f22d0892bd801edf166a173b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QRadioButton *</type>
+      <name>NoTriggerRB</name>
+      <anchorfile>class_ui___c_trigger_params_gui_comp.html</anchorfile>
+      <anchor>ac1a761c3109a42d14845f687c8d9bbcd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QRadioButton *</type>
+      <name>ContinuousRB</name>
+      <anchorfile>class_ui___c_trigger_params_gui_comp.html</anchorfile>
+      <anchor>afecd45c00a3507a963fbb50d30860182</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QRadioButton *</type>
+      <name>RisingEdgeRB</name>
+      <anchorfile>class_ui___c_trigger_params_gui_comp.html</anchorfile>
+      <anchor>ad2dda7774ffa7fcbbafa327235207df1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QRadioButton *</type>
+      <name>FallingEdgeRB</name>
+      <anchorfile>class_ui___c_trigger_params_gui_comp.html</anchorfile>
+      <anchor>af0f16645394c57b348d7bd45296b55bc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QRadioButton *</type>
+      <name>PositiveLevelRB</name>
+      <anchorfile>class_ui___c_trigger_params_gui_comp.html</anchorfile>
+      <anchor>a07215bfb5c8c80c3abba53f1a27d9689</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QRadioButton *</type>
+      <name>NegativeLevelRB</name>
+      <anchorfile>class_ui___c_trigger_params_gui_comp.html</anchorfile>
+      <anchor>af9c51fb3afa5d492c667324d8248fadb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QRadioButton *</type>
+      <name>SoftwareTriggerRB</name>
+      <anchorfile>class_ui___c_trigger_params_gui_comp.html</anchorfile>
+      <anchor>a96971d73fd1bda651d1ab01675b52963</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CUserGuiComp</name>
+    <filename>class_ui___c_user_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_user_gui_comp.html</anchorfile>
+      <anchor>acb7e9463cce6396f18e27b14f114c0f9</anchor>
+      <arglist>(QWidget *CUserGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_user_gui_comp.html</anchorfile>
+      <anchor>abd7fb96c07770d675d8bccaf3a78b121</anchor>
+      <arglist>(QWidget *CUserGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout</name>
+      <anchorfile>class_ui___c_user_gui_comp.html</anchorfile>
+      <anchor>ad2751960b5c105abe03452d6fb8fbb2e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>PushChangePassword</name>
+      <anchorfile>class_ui___c_user_gui_comp.html</anchorfile>
+      <anchor>a4edf971600bf9139f53f7bdea8513f8d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>PushOpenUserManager</name>
+      <anchorfile>class_ui___c_user_gui_comp.html</anchorfile>
+      <anchor>a6c007814396d310659933991483f9a6a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CUserManagerDialog</name>
+    <filename>class_ui___c_user_manager_dialog.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_user_manager_dialog.html</anchorfile>
+      <anchor>a1dd2dcee18bc9d3b53568b3151b977c9</anchor>
+      <arglist>(QDialog *CUserManagerDialog)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_user_manager_dialog.html</anchorfile>
+      <anchor>a7ef79e11476109acf9bd576e36fddf70</anchor>
+      <arglist>(QDialog *CUserManagerDialog)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_user_manager_dialog.html</anchorfile>
+      <anchor>a3f1c7b2e3ad1bcbf44d5afe565582518</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeWidget *</type>
+      <name>TreeUserList</name>
+      <anchorfile>class_ui___c_user_manager_dialog.html</anchorfile>
+      <anchor>a3103e21e6daa33a72238baf26dbf5117</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout</name>
+      <anchorfile>class_ui___c_user_manager_dialog.html</anchorfile>
+      <anchor>aea10e2cc0b68d5727048c85b985f1568</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>AddUserButton</name>
+      <anchorfile>class_ui___c_user_manager_dialog.html</anchorfile>
+      <anchor>abf3f6615277d114fa4373a4109ce9ee5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>ResetPasswordButton</name>
+      <anchorfile>class_ui___c_user_manager_dialog.html</anchorfile>
+      <anchor>ae389b3fe9aff4b7700832a7afb80e8cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>RemoveUserButton</name>
+      <anchorfile>class_ui___c_user_manager_dialog.html</anchorfile>
+      <anchor>aef788cc84984902e795f8f265b8183f1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>spacerItem</name>
+      <anchorfile>class_ui___c_user_manager_dialog.html</anchorfile>
+      <anchor>ab41661ff0e910ec4f3246182e9ca62af</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDialogButtonBox *</type>
+      <name>buttonBox</name>
+      <anchorfile>class_ui___c_user_manager_dialog.html</anchorfile>
+      <anchor>aadf5bb792cd54951cb1b8c579bb854fc</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CValueSupplierGuiComp</name>
+    <filename>class_ui___c_value_supplier_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>a99b5f1667bfbb180fbf9f0c6d1da1bf2</anchor>
+      <arglist>(QWidget *CValueSupplierGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>acb70a970106fed6a4ca32e4d64f4347e</anchor>
+      <arglist>(QWidget *CValueSupplierGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_3</name>
+      <anchorfile>class_ui___c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>a472d0138e75b10d20c40a261c271436f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>groupBox</name>
+      <anchorfile>class_ui___c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>ad62862125f7a3038be9a0df3acd84066</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>afc6145f4103f03db1e187a42652b4b80</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>a299f9c20137827c8146203c9ca723237</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>TestButton</name>
+      <anchorfile>class_ui___c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>a33ede7f533bbcf74ed30154c4f1b6984</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>AutoUpdateButton</name>
+      <anchorfile>class_ui___c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>a5913bb30a342067fb7cc4881915526c8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>PositionLabel</name>
+      <anchorfile>class_ui___c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>ab67f1e06b9ffcd021d109dc19bcef564</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>ParamsGB</name>
+      <anchorfile>class_ui___c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>a57d267a0159224c8f938a113c10fe1d7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_4</name>
+      <anchorfile>class_ui___c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>a161c25e46b649fc56358d12257ba73d7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ParamsFrame</name>
+      <anchorfile>class_ui___c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>a2bb989ed099850f8d19de3a848d09a58</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout</name>
+      <anchorfile>class_ui___c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>a0d0e969f0a761c956fc93f7479325609</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>a1b5ff3ead61cf19bc44431f326b61e5b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>LoadParamsButton</name>
+      <anchorfile>class_ui___c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>ae417daeaf66685f5bd6ed31fed7e5a92</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>SaveParamsButton</name>
+      <anchorfile>class_ui___c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>acc4227f2daabbfeffc2f9b411bec1afc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>IntResultsFrame</name>
+      <anchorfile>class_ui___c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>a8c45cbd3fac73b9dbb76f59695893d84</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>ad3acacea946bda47ff28c61d41159175</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>verticalSpacer</name>
+      <anchorfile>class_ui___c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>ab9c60b6984f250e83ad134562a20b23a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CVideoPlayerGuiComp</name>
+    <filename>class_ui___c_video_player_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_video_player_gui_comp.html</anchorfile>
+      <anchor>a22c46005893980e40f1100c5d31d32c9</anchor>
+      <arglist>(QWidget *CVideoPlayerGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_video_player_gui_comp.html</anchorfile>
+      <anchor>a7ddaede8dfdb9e56f5d07d2006499246</anchor>
+      <arglist>(QWidget *CVideoPlayerGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_video_player_gui_comp.html</anchorfile>
+      <anchor>aec3fb18c60beb93f28bbc9b14b86309f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>UrlParamFrame</name>
+      <anchorfile>class_ui___c_video_player_gui_comp.html</anchorfile>
+      <anchor>abdd9c8f2f506fe4322ff5c24a340d7f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_3</name>
+      <anchorfile>class_ui___c_video_player_gui_comp.html</anchorfile>
+      <anchor>a4bfd4668663c642348cd6748d663b3c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>FrameView</name>
+      <anchorfile>class_ui___c_video_player_gui_comp.html</anchorfile>
+      <anchor>a0fdd5f2f44915a0767f38435150471f2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_video_player_gui_comp.html</anchorfile>
+      <anchor>ab4ec5d8ffa7f05edab483d12d1dba14e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ControllerBarFrame</name>
+      <anchorfile>class_ui___c_video_player_gui_comp.html</anchorfile>
+      <anchor>a9af7a84bc0297875cd94670f5a68a3b1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_4</name>
+      <anchorfile>class_ui___c_video_player_gui_comp.html</anchorfile>
+      <anchor>ace22462772248c25f1debf66ae0834f5</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CVisualRegistryEditorComp</name>
+    <filename>class_ui___c_visual_registry_editor_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a057e0f086d30cc6e858234d04678e776</anchor>
+      <arglist>(QWidget *CVisualRegistryEditorComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>abf1574fa81f25de62c00d946393bd165</anchor>
+      <arglist>(QWidget *CVisualRegistryEditorComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a27d2421c2336a2fc4f5a86660d1d07bc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>EmbeddedComponentsFrame</name>
+      <anchorfile>class_ui___c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a17fb74ca4bc230fe474c340bd5165ab4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>EmbeddedComponentsLayout</name>
+      <anchorfile>class_ui___c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>aafcd3bc2bda1dcad46ccceede5ca443a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>RootButton</name>
+      <anchorfile>class_ui___c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>af59542ada7917c6924708964f5bebe33</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>SceneContainer</name>
+      <anchorfile>class_ui___c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a50934034eb6355c28d5cea003d074241</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>ab2ba367bdbd1f32d5569df29d5fd03da</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CWizardOptionsListGuiComp</name>
+    <filename>class_ui___c_wizard_options_list_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>ad2fad6e7801f0d5b0ca2868b2c4101fa</anchor>
+      <arglist>(QWidget *CWizardOptionsListGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>a13fd9e47f0b45cf145497c0fe603233c</anchor>
+      <arglist>(QWidget *CWizardOptionsListGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>hboxLayout</name>
+      <anchorfile>class_ui___c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>a1997c27d7c0e58bda471e1499be396c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>SelectionFrame</name>
+      <anchorfile>class_ui___c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>a3983ae02e3fcbd05ea7cf7e3dc024a7a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>hboxLayout1</name>
+      <anchorfile>class_ui___c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>a0b52982d8468081f53fd0b02381eb37f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeWidget *</type>
+      <name>OptionsList</name>
+      <anchorfile>class_ui___c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>a4873f1f98b72a13ce95b1ca40769861a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_XpcEditorComp</name>
+    <filename>class_ui___xpc_editor_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a221dffe96adcf582aa70731b237badb4</anchor>
+      <arglist>(QWidget *XpcEditorComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>aa9eb0da19677ae9e6eb306590e5d978e</anchor>
+      <arglist>(QWidget *XpcEditorComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_3</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a14a58b0f01df3ea4f2776116543b5033</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTabWidget *</type>
+      <name>tabWidget</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>ab73e7d70acc3f1423842b936a802d614</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>tabWidgetPage2</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a3f5baf3693f3052aa30e889abc31a364</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>afbc2d734f734835d673c638e1b8868be</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a8a906376e5abde2637f3c1e7892a07f2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QListView *</type>
+      <name>ConfigPathView</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>ab03cb81bb88022201166f69ac27a2e63</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_3</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a3302e054e03bc796ce0e5ac4229a2e55</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>ConfigPathAddButton</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>ad3c32304dc26306f3d65c757eee4e704</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>ConfigPathRemoveButton</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a5b78bbb3da3a6e20863588a2e6f38e43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a05c366e0dbe7f37cd170df63a9901201</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>ConfigPathEditFrame</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>afcb116fc12dca12b09a61e8c04264cf5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_4</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a4158d92afd92d52a24a2fe65d1808270</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLineEdit *</type>
+      <name>ConfigPathEdit</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>ad67ea555afaf34dab11efd0c70f2b16d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>ConfigPathInsertVariableButton</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a0501bc0dec065e7be6ffc80e96a7f3b3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>ConfigPathBrowseButton</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a568b7a918b1a8bbbf7baa9d35b183fc6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_2</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a2d95a8da3f084599a0f078ea49a2361a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QListView *</type>
+      <name>PackageDirView</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>ae9d6a476adb6388a5f6cedc169a5a5d3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a30dfd0a12262d10352054cbab105d50d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>PackageDirAddButton</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a46af5cc7a882168de3ecd07a1991d95a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>PackageDirRemoveButton</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>af0143e977e1dfc6e3ca79ad9009a20aa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer_2</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a84fd5c8facd24c6c5d3055c186ff5aba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>PackageDirEditFrame</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a6785738b28cfb4780c6229f20c74fa22</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_5</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a34efb47aa069fb863f3ca6a7dcddc0a0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLineEdit *</type>
+      <name>PackageDirEdit</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a28c258b97109747b260fb37bcc31992e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>PackageDirInsertVariableButton</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a20a6472904f70319f69bcde742ba9ed7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>PackageDirBrowseButton</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a8dbbb21302d93c2876a14eb28fde78ed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_3</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>ac9c7b1247bd044995dd0015ea6188d78</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QListView *</type>
+      <name>PackagePathView</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>abd87ffdd54d7626b29df8adbac60dd85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a8133554c3fcd5a011dfabf3abd0fb822</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>PackagePathAddButton</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a39573585788f83483905597827deab74</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>PackagePathRemoveButton</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a9496c09abaf1bc20891e349751b1b6af</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer_3</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>af1e70e617180f74d92f070a8c32c9016</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>PackagePathEditFrame</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a3de57e53c5a33db5359b24541d47384d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_6</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a1af784fc325ce51f75188244d9e8cd60</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLineEdit *</type>
+      <name>PackagePathEdit</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a9601a890c556500d4af1f6a85a288716</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>PackagePathInsertVariableButton</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>aee809ece8f99619b559b69de821ff5b5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>PackagePathBrowseButton</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a3c53ecdec5fd40e6c05d0e10c2f68c18</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>widget</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>aa9e15fb76526643ccd35db487bb64a28</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a0834099b416f37d80c73d3eac04c3ae5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QListView *</type>
+      <name>RegistryPathView</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a63c21f312d619cc81361f28a024843ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_7</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>ae2191fbb84d8ab266092c3af021d3fcd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>RegistryPathAddButton</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>aeb82c5ecd9d4cf2b2f80a3f65f12e032</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>RegistryPathRemoveButton</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a4f521a7d4a5193397d363a2e5030e3b5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer_4</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a6a4f9196a614675184369518f57788fd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>RegistryPathEditFrame</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a091fec4b0384a908aaa31b9c1748df65</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_8</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>ab18cb11805e9a51b2c941023b002aeb4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLineEdit *</type>
+      <name>RegistryPathEdit</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a22e097941e762d092c12adff52442d9b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>RegistryPathInsertVariableButton</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a58629d8a92b5015d0fcd35555de3377d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>RegistryPathBrowseButton</name>
+      <anchorfile>class_ui___xpc_editor_comp.html</anchorfile>
+      <anchor>a56b2fc10ee181f511f50ce6014aa2469</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="namespace">
     <name>iauth</name>
@@ -23895,6 +30320,13 @@
       <name>OnGuiCreated</name>
       <anchorfile>classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html</anchorfile>
       <anchor>a7f73811ea800bcf38e55672c53c8be76</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html</anchorfile>
+      <anchor>a0c5f4711c8ffaa453c60ea2ba11db659</anchor>
       <arglist>()</arglist>
     </member>
   </compound>

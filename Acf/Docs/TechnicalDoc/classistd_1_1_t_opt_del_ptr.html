@@ -77,8 +77,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset internal pointer value without deleting instance and return previos value.  <a href="#aa87a52acb8c5e044de5f7fd8e3f86b81"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_opt_del_ptr.html#a51d576768e7a35762b01667bf2b4f5c8">TakeOver</a> (<a class="el" href="classistd_1_1_t_opt_del_ptr.html">TOptDelPtr</a> &amp;sourcePtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Take internal pointer over.  <a href="#a51d576768e7a35762b01667bf2b4f5c8"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_t_opt_del_ptr.html">TOptDelPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_opt_del_ptr.html#a5a00ca9c447075f0ffe9d8992e15186d">operator=</a> (const <a class="el" href="classistd_1_1_t_opt_del_ptr.html">TOptDelPtr</a> &amp;ptr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign operator.  <a href="#a5a00ca9c447075f0ffe9d8992e15186d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_t_opt_del_ptr.html">TOptDelPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_opt_del_ptr.html#acbeedf8206a2881300e6604df305cda3">operator=</a> (const <a class="el" href="classistd_1_1_t_opt_del_ptr.html">TOptDelPtr</a> &amp;ptr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign operator.  <a href="#acbeedf8206a2881300e6604df305cda3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_t_opt_del_ptr.html">TOptDelPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_t_opt_del_ptr.html#a66f8b2c72d51bcd4cbcaccbdc5416de9">operator=</a> (Type *ptr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign operator.  <a href="#a66f8b2c72d51bcd4cbcaccbdc5416de9"></a><br/></td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;class SourceType &gt; </td></tr>
@@ -253,14 +253,14 @@ template&lt;class Type , bool DelArray&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a5a00ca9c447075f0ffe9d8992e15186d"></a><!-- doxytag: member="istd::TOptDelPtr::operator=" ref="a5a00ca9c447075f0ffe9d8992e15186d" args="(const TOptDelPtr &amp;ptr)" -->
+<a class="anchor" id="acbeedf8206a2881300e6604df305cda3"></a><!-- doxytag: member="istd::TOptDelPtr::operator=" ref="acbeedf8206a2881300e6604df305cda3" args="(const TOptDelPtr &amp;ptr)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Type , bool DelArray&gt; </div>
+template&lt;class Type, bool DelArray = false&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classistd_1_1_t_opt_del_ptr.html">TOptDelPtr</a>&lt; Type, DelArray &gt; &amp; <a class="el" href="classistd_1_1_t_opt_del_ptr.html">istd::TOptDelPtr</a>&lt; Type, DelArray &gt;::operator= </td>
+          <td class="memname"><a class="el" href="classistd_1_1_t_opt_del_ptr.html">TOptDelPtr</a>&amp; <a class="el" href="classistd_1_1_t_opt_del_ptr.html">istd::TOptDelPtr</a>&lt; Type, DelArray &gt;::operator= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classistd_1_1_t_opt_del_ptr.html">TOptDelPtr</a>&lt; Type, DelArray &gt; &amp;&#160;</td>
           <td class="paramname"><em>ptr</em></td><td>)</td>
@@ -272,10 +272,6 @@ template&lt;class Type , bool DelArray&gt; </div>
 
 <p>Assign operator. </p>
 <p>This implementation has no function and is provided only for compatibility with STL. The source pointer must be invalid (NULL). </p>
-
-<p>Definition at line <a class="el" href="_t_opt_del_ptr_8h_source.html#l00192">192</a> of file <a class="el" href="_t_opt_del_ptr_8h_source.html">TOptDelPtr.h</a>.</p>
-
-<p>References <a class="el" href="_t_pointer_base_8h_source.html#l00132">istd::TPointerBase&lt; Type &gt;::GetPtr()</a>, and <a class="el" href="istd_8h_source.html#l00061">NULL</a>.</p>
 
 </div>
 </div>

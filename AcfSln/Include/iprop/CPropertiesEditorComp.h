@@ -31,7 +31,7 @@
 // ACF-Solutions includes
 #include "iprop/IPropertiesManager.h"
 
-#include "iprop/Generated/ui_CPropertiesEditorComp.h"
+#include "GeneratedFiles/iprop/ui_CPropertiesEditorComp.h"
 
 
 namespace iprop

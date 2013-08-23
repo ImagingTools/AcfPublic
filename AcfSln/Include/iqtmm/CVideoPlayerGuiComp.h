@@ -33,7 +33,7 @@
 // ACF-Solutions includes
 #include "imm/IMediaController.h"
 
-#include "iqtmm/Generated/ui_CVideoPlayerGuiComp.h"
+#include "GeneratedFiles/iqtmm/ui_CVideoPlayerGuiComp.h"
 
 
 namespace iqtmm

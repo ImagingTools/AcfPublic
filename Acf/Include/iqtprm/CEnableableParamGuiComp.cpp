@@ -59,6 +59,7 @@ void CEnableableParamGuiComp::OnGuiModelAttached()
 
 	iprm::IEnableableParam* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
+		
 		EnableableCheck->setChecked(objectPtr->IsEnabled());	
 		EnableableCheck->setEnabled(objectPtr->IsEnablingAllowed());
 	}
@@ -71,6 +72,7 @@ void CEnableableParamGuiComp::UpdateGui(int /*updateFlags*/)
 
 	iprm::IEnableableParam* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
+		
 		EnableableCheck->setChecked(objectPtr->IsEnabled());
 		EnableableCheck->setEnabled(objectPtr->IsEnablingAllowed());		
 	}	

@@ -41,7 +41,7 @@
 // ACF-Solutions includes
 #include "imeas/INumericValueProvider.h"
 
-#include "iqtcam/Generated/ui_CScaleCalibrationEditorComp.h"
+#include "GeneratedFiles/iqtcam/ui_CScaleCalibrationEditorComp.h"
 
 
 namespace iqtcam

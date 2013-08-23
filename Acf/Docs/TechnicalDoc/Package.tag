@@ -14,6 +14,240 @@
     <filename>_a_c_f_8h</filename>
   </compound>
   <compound kind="file">
+    <name>ui_CFileListProviderGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/ifilegui/</path>
+    <filename>ui___c_file_list_provider_gui_comp_8h</filename>
+    <class kind="class">Ui_CFileListProviderGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CFilePersistenceGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/ifilegui/</path>
+    <filename>ui___c_file_persistence_gui_comp_8h</filename>
+    <class kind="class">Ui_CFilePersistenceGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CFilePreviewGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/ifilegui/</path>
+    <filename>ui___c_file_preview_gui_comp_8h</filename>
+    <class kind="class">Ui_CFilePreviewGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CFileSystemExplorerGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/ifilegui/</path>
+    <filename>ui___c_file_system_explorer_gui_comp_8h</filename>
+    <class kind="class">Ui_CFileSystemExplorerGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CFileTreeViewGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/ifilegui/</path>
+    <filename>ui___c_file_tree_view_gui_comp_8h</filename>
+    <class kind="class">Ui_CFileTreeViewGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CLogGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iloggui/</path>
+    <filename>ui___c_log_gui_comp_8h</filename>
+    <class kind="class">Ui_CLogGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CTextLogGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iloggui/</path>
+    <filename>ui___c_text_log_gui_comp_8h</filename>
+    <class kind="class">Ui_CTextLogGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CAffineTransformationParamsGui.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqt2d/</path>
+    <filename>ui___c_affine_transformation_params_gui_8h</filename>
+    <class kind="class">Ui_CAffineTransformationParamsGui</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CAnnulusParamsGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqt2d/</path>
+    <filename>ui___c_annulus_params_gui_comp_8h</filename>
+    <class kind="class">Ui_CAnnulusParamsGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CAnnulusSegmentParamsGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqt2d/</path>
+    <filename>ui___c_annulus_segment_params_gui_comp_8h</filename>
+    <class kind="class">Ui_CAnnulusSegmentParamsGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CCircleParamsGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqt2d/</path>
+    <filename>ui___c_circle_params_gui_comp_8h</filename>
+    <class kind="class">Ui_CCircleParamsGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CExtendedConsoleGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqt2d/</path>
+    <filename>ui___c_extended_console_gui_comp_8h</filename>
+    <class kind="class">Ui_CExtendedConsoleGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CLine2dParamsGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqt2d/</path>
+    <filename>ui___c_line2d_params_gui_comp_8h</filename>
+    <class kind="class">Ui_CLine2dParamsGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_COrientedCircleEditorComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqt2d/</path>
+    <filename>ui___c_oriented_circle_editor_comp_8h</filename>
+    <class kind="class">Ui_COrientedCircleEditorComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CPolygonParamsGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqt2d/</path>
+    <filename>ui___c_polygon_params_gui_comp_8h</filename>
+    <class kind="class">Ui_CPolygonParamsGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CQuadrangleParamsGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqt2d/</path>
+    <filename>ui___c_quadrangle_params_gui_comp_8h</filename>
+    <class kind="class">Ui_CQuadrangleParamsGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CRectangleParamsGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqt2d/</path>
+    <filename>ui___c_rectangle_params_gui_comp_8h</filename>
+    <class kind="class">Ui_CRectangleParamsGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CSceneConnectorGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqt2d/</path>
+    <filename>ui___c_scene_connector_gui_comp_8h</filename>
+    <class kind="class">Ui_CSceneConnectorGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CAboutWidgetGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqtgui/</path>
+    <filename>ui___c_about_widget_gui_comp_8h</filename>
+    <class kind="class">Ui_CAboutWidgetGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CDoubleRangeSpinEdit.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqtgui/</path>
+    <filename>ui___c_double_range_spin_edit_8h</filename>
+    <class kind="class">Ui_CDoubleRangeSpinEdit</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CImagePropertiesFrameComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqtgui/</path>
+    <filename>ui___c_image_properties_frame_comp_8h</filename>
+    <class kind="class">Ui_CImagePropertiesFrameComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CImagePropertyGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqtgui/</path>
+    <filename>ui___c_image_property_gui_comp_8h</filename>
+    <class kind="class">Ui_CImagePropertyGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CProgressManagerGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqtgui/</path>
+    <filename>ui___c_progress_manager_gui_comp_8h</filename>
+    <class kind="class">Ui_CProgressManagerGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CSplashScreenGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqtgui/</path>
+    <filename>ui___c_splash_screen_gui_comp_8h</filename>
+    <class kind="class">Ui_CSplashScreenGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CVersionInfoGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqtgui/</path>
+    <filename>ui___c_version_info_gui_comp_8h</filename>
+    <class kind="class">Ui_CVersionInfoGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CButtonBasedSelectionParamGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqtprm/</path>
+    <filename>ui___c_button_based_selection_param_gui_comp_8h</filename>
+    <class kind="class">Ui_CButtonBasedSelectionParamGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CCheckableOptionsEditorComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqtprm/</path>
+    <filename>ui___c_checkable_options_editor_comp_8h</filename>
+    <class kind="class">Ui_CCheckableOptionsEditorComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CComposedParamsSetGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqtprm/</path>
+    <filename>ui___c_composed_params_set_gui_comp_8h</filename>
+    <class kind="class">Ui_CComposedParamsSetGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CEnableableParamGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqtprm/</path>
+    <filename>ui___c_enableable_param_gui_comp_8h</filename>
+    <class kind="class">Ui_CEnableableParamGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CFileNameParamGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqtprm/</path>
+    <filename>ui___c_file_name_param_gui_comp_8h</filename>
+    <class kind="class">Ui_CFileNameParamGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CNameParamGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqtprm/</path>
+    <filename>ui___c_name_param_gui_comp_8h</filename>
+    <class kind="class">Ui_CNameParamGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_COptionsListEditorGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqtprm/</path>
+    <filename>ui___c_options_list_editor_gui_comp_8h</filename>
+    <class kind="class">Ui_COptionsListEditorGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_COptionsManagerGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqtprm/</path>
+    <filename>ui___c_options_manager_gui_comp_8h</filename>
+    <class kind="class">Ui_COptionsManagerGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CParamsManagerGuiCompBase.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqtprm/</path>
+    <filename>ui___c_params_manager_gui_comp_base_8h</filename>
+    <class kind="class">Ui_CParamsManagerGuiCompBase</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CSelectableGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqtprm/</path>
+    <filename>ui___c_selectable_gui_comp_8h</filename>
+    <class kind="class">Ui_CSelectableGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CSelectionParamGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqtprm/</path>
+    <filename>ui___c_selection_param_gui_comp_8h</filename>
+    <class kind="class">Ui_CSelectionParamGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CSelectionParamIndexGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqtprm/</path>
+    <filename>ui___c_selection_param_index_gui_comp_8h</filename>
+    <class kind="class">Ui_CSelectionParamIndexGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CVariableParamGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iqtprm/</path>
+    <filename>ui___c_variable_param_gui_comp_8h</filename>
+    <class kind="class">Ui_CVariableParamGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CShapeInfoGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/GeneratedFiles/iview/</path>
+    <filename>ui___c_shape_info_gui_comp_8h</filename>
+    <class kind="class">Ui_CShapeInfoGuiComp</class>
+  </compound>
+  <compound kind="file">
     <name>CAffine2d.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_affine2d_8h</filename>
@@ -2301,6 +2535,7 @@
     <filename>_c_file_list_provider_gui_comp_8h</filename>
     <includes id="_i_file_list_provider_8h" name="IFileListProvider.h" local="yes" imported="no">ifile/IFileListProvider.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="ui___c_file_list_provider_gui_comp_8h" name="ui_CFileListProviderGuiComp.h" local="yes" imported="no">GeneratedFiles/ifilegui/ui_CFileListProviderGuiComp.h</includes>
     <class kind="class">ifilegui::CFileListProviderGuiComp</class>
     <namespace>ifilegui</namespace>
   </compound>
@@ -2310,6 +2545,7 @@
     <filename>_c_file_persistence_gui_comp_8h</filename>
     <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
+    <includes id="ui___c_file_persistence_gui_comp_8h" name="ui_CFilePersistenceGuiComp.h" local="yes" imported="no">GeneratedFiles/ifilegui/ui_CFilePersistenceGuiComp.h</includes>
     <class kind="class">ifilegui::CFilePersistenceGuiComp</class>
     <namespace>ifilegui</namespace>
   </compound>
@@ -2320,6 +2556,7 @@
     <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="ui___c_file_preview_gui_comp_8h" name="ui_CFilePreviewGuiComp.h" local="yes" imported="no">GeneratedFiles/ifilegui/ui_CFilePreviewGuiComp.h</includes>
     <class kind="class">ifilegui::CFilePreviewGuiComp</class>
     <namespace>ifilegui</namespace>
   </compound>
@@ -2331,6 +2568,7 @@
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <includes id="_c_ext_line_edit_8h" name="CExtLineEdit.h" local="yes" imported="no">iqtgui/CExtLineEdit.h</includes>
+    <includes id="ui___c_file_system_explorer_gui_comp_8h" name="ui_CFileSystemExplorerGuiComp.h" local="yes" imported="no">GeneratedFiles/ifilegui/ui_CFileSystemExplorerGuiComp.h</includes>
     <class kind="class">ifilegui::CFileSystemExplorerGuiComp</class>
     <namespace>ifilegui</namespace>
   </compound>
@@ -2344,6 +2582,7 @@
     <includes id="_i_qt_item_model_provider_8h" name="IQtItemModelProvider.h" local="yes" imported="no">ibase/IQtItemModelProvider.h</includes>
     <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="ui___c_file_tree_view_gui_comp_8h" name="ui_CFileTreeViewGuiComp.h" local="yes" imported="no">GeneratedFiles/ifilegui/ui_CFileTreeViewGuiComp.h</includes>
     <class kind="class">ifilegui::CFileTreeViewGuiComp</class>
     <namespace>ifilegui</namespace>
   </compound>
@@ -2733,6 +2972,7 @@
     <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ilog/CMessage.h</includes>
     <includes id="_i_visual_status_provider_8h" name="IVisualStatusProvider.h" local="yes" imported="no">iqtgui/IVisualStatusProvider.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="ui___c_log_gui_comp_8h" name="ui_CLogGuiComp.h" local="yes" imported="no">GeneratedFiles/iloggui/ui_CLogGuiComp.h</includes>
     <class kind="class">iloggui::CLogGuiComp</class>
     <namespace>iloggui</namespace>
   </compound>
@@ -2743,6 +2983,7 @@
     <includes id="_i_message_container_8h" name="IMessageContainer.h" local="yes" imported="no">ilog/IMessageContainer.h</includes>
     <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ilog/CMessage.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="ui___c_text_log_gui_comp_8h" name="ui_CTextLogGuiComp.h" local="yes" imported="no">GeneratedFiles/iloggui/ui_CTextLogGuiComp.h</includes>
     <class kind="class">iloggui::CTextLogGuiComp</class>
     <namespace>iloggui</namespace>
   </compound>
@@ -3725,6 +3966,7 @@
     <includes id="_c_affine_transformation2d_shape_8h" name="CAffineTransformation2dShape.h" local="no" imported="no">iview/CAffineTransformation2dShape.h</includes>
     <includes id="_c_affine_transformation2d_8h" name="CAffineTransformation2d.h" local="no" imported="no">i2d/CAffineTransformation2d.h</includes>
     <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="no" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <includes id="ui___c_affine_transformation_params_gui_8h" name="ui_CAffineTransformationParamsGui.h" local="yes" imported="no">GeneratedFiles/iqt2d/ui_CAffineTransformationParamsGui.h</includes>
     <class kind="class">iqt2d::CAffineTransformationParamsGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -3735,6 +3977,7 @@
     <includes id="_c_annulus_8h" name="CAnnulus.h" local="yes" imported="no">i2d/CAnnulus.h</includes>
     <includes id="_c_annulus_shape_8h" name="CAnnulusShape.h" local="yes" imported="no">iview/CAnnulusShape.h</includes>
     <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <includes id="ui___c_annulus_params_gui_comp_8h" name="ui_CAnnulusParamsGuiComp.h" local="yes" imported="no">GeneratedFiles/iqt2d/ui_CAnnulusParamsGuiComp.h</includes>
     <class kind="class">iqt2d::CAnnulusParamsGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -3745,6 +3988,7 @@
     <includes id="_c_annulus_segment_8h" name="CAnnulusSegment.h" local="yes" imported="no">i2d/CAnnulusSegment.h</includes>
     <includes id="_c_annulus_segment_shape_8h" name="CAnnulusSegmentShape.h" local="yes" imported="no">iview/CAnnulusSegmentShape.h</includes>
     <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <includes id="ui___c_annulus_segment_params_gui_comp_8h" name="ui_CAnnulusSegmentParamsGuiComp.h" local="yes" imported="no">GeneratedFiles/iqt2d/ui_CAnnulusSegmentParamsGuiComp.h</includes>
     <class kind="class">iqt2d::CAnnulusSegmentParamsGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -3755,6 +3999,7 @@
     <includes id="_c_circle_8h" name="CCircle.h" local="yes" imported="no">i2d/CCircle.h</includes>
     <includes id="_c_circle_shape_8h" name="CCircleShape.h" local="yes" imported="no">iview/CCircleShape.h</includes>
     <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <includes id="ui___c_circle_params_gui_comp_8h" name="ui_CCircleParamsGuiComp.h" local="yes" imported="no">GeneratedFiles/iqt2d/ui_CCircleParamsGuiComp.h</includes>
     <class kind="class">iqt2d::CCircleParamsGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -3764,6 +4009,7 @@
     <filename>_c_extended_console_gui_comp_8h</filename>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
     <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
+    <includes id="ui___c_extended_console_gui_comp_8h" name="ui_CExtendedConsoleGuiComp.h" local="yes" imported="no">GeneratedFiles/iqt2d/ui_CExtendedConsoleGuiComp.h</includes>
     <class kind="class">iqt2d::CExtendedConsoleGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -3789,6 +4035,7 @@
     <includes id="_c_line2d_8h" name="CLine2d.h" local="yes" imported="no">i2d/CLine2d.h</includes>
     <includes id="_c_line_shape_8h" name="CLineShape.h" local="yes" imported="no">iview/CLineShape.h</includes>
     <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <includes id="ui___c_line2d_params_gui_comp_8h" name="ui_CLine2dParamsGuiComp.h" local="yes" imported="no">GeneratedFiles/iqt2d/ui_CLine2dParamsGuiComp.h</includes>
     <class kind="class">iqt2d::CLine2dParamsGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -3819,6 +4066,7 @@
     <includes id="_c_oriented_circle_8h" name="COrientedCircle.h" local="yes" imported="no">i2d/COrientedCircle.h</includes>
     <includes id="_c_oriented_circle_shape_8h" name="COrientedCircleShape.h" local="yes" imported="no">iview/COrientedCircleShape.h</includes>
     <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <includes id="ui___c_oriented_circle_editor_comp_8h" name="ui_COrientedCircleEditorComp.h" local="yes" imported="no">GeneratedFiles/iqt2d/ui_COrientedCircleEditorComp.h</includes>
     <class kind="class">iqt2d::COrientedCircleEditorComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -3848,6 +4096,7 @@
     <includes id="_c_quadrangle_8h" name="CQuadrangle.h" local="yes" imported="no">i2d/CQuadrangle.h</includes>
     <includes id="_c_parallelogram_shape_8h" name="CParallelogramShape.h" local="yes" imported="no">iview/CParallelogramShape.h</includes>
     <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <includes id="ui___c_quadrangle_params_gui_comp_8h" name="ui_CQuadrangleParamsGuiComp.h" local="yes" imported="no">GeneratedFiles/iqt2d/ui_CQuadrangleParamsGuiComp.h</includes>
     <class kind="class">iqt2d::CQuadrangleParamsGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -3858,6 +4107,7 @@
     <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
     <includes id="_c_rectangle_shape_8h" name="CRectangleShape.h" local="yes" imported="no">iview/CRectangleShape.h</includes>
     <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <includes id="ui___c_rectangle_params_gui_comp_8h" name="ui_CRectangleParamsGuiComp.h" local="yes" imported="no">GeneratedFiles/iqt2d/ui_CRectangleParamsGuiComp.h</includes>
     <class kind="class">iqt2d::CRectangleParamsGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -3881,6 +4131,7 @@
     <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
     <includes id="_i_view_provider_8h" name="IViewProvider.h" local="yes" imported="no">iqt2d/IViewProvider.h</includes>
     <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
+    <includes id="ui___c_scene_connector_gui_comp_8h" name="ui_CSceneConnectorGuiComp.h" local="yes" imported="no">GeneratedFiles/iqt2d/ui_CSceneConnectorGuiComp.h</includes>
     <class kind="class">iqt2d::CSceneConnectorGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -3971,6 +4222,7 @@
     <includes id="_c_affine_transformation2d_8h" name="CAffineTransformation2d.h" local="yes" imported="no">i2d/CAffineTransformation2d.h</includes>
     <includes id="_c_signal_blocker_8h" name="CSignalBlocker.h" local="yes" imported="no">iqt/CSignalBlocker.h</includes>
     <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <includes id="ui___c_polygon_params_gui_comp_8h" name="ui_CPolygonParamsGuiComp.h" local="yes" imported="no">GeneratedFiles/iqt2d/ui_CPolygonParamsGuiComp.h</includes>
     <class kind="class">iqt2d::TPolygonBasedParamsGuiComp</class>
     <class kind="class">iqt2d::TPolygonBasedParamsGuiComp::CPolygonParamsGuiItemDelegate</class>
     <namespace>iqt2d</namespace>
@@ -4157,6 +4409,7 @@
     <filename>_c_about_widget_gui_comp_8h</filename>
     <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
     <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
+    <includes id="ui___c_about_widget_gui_comp_8h" name="ui_CAboutWidgetGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtgui/ui_CAboutWidgetGuiComp.h</includes>
     <class kind="class">iqtgui::CAboutWidgetGuiComp</class>
     <namespace>iqtgui</namespace>
   </compound>
@@ -4268,6 +4521,7 @@
     <name>CDoubleRangeSpinEdit.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_double_range_spin_edit_8h</filename>
+    <includes id="ui___c_double_range_spin_edit_8h" name="ui_CDoubleRangeSpinEdit.h" local="yes" imported="no">GeneratedFiles/iqtgui/ui_CDoubleRangeSpinEdit.h</includes>
     <class kind="class">iqtgui::CDoubleRangeSpinEdit</class>
     <namespace>iqtgui</namespace>
   </compound>
@@ -4359,6 +4613,7 @@
     <filename>_c_image_properties_frame_comp_8h</filename>
     <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="ui___c_image_properties_frame_comp_8h" name="ui_CImagePropertiesFrameComp.h" local="yes" imported="no">GeneratedFiles/iqtgui/ui_CImagePropertiesFrameComp.h</includes>
     <class kind="class">iqtgui::CImagePropertiesFrameComp</class>
     <namespace>iqtgui</namespace>
   </compound>
@@ -4368,6 +4623,7 @@
     <filename>_c_image_property_gui_comp_8h</filename>
     <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="ui___c_image_property_gui_comp_8h" name="ui_CImagePropertyGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtgui/ui_CImagePropertyGuiComp.h</includes>
     <class kind="class">iqtgui::CImagePropertyGuiComp</class>
     <namespace>iqtgui</namespace>
   </compound>
@@ -4432,6 +4688,7 @@
     <filename>_c_progress_manager_gui_comp_8h</filename>
     <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
     <includes id="_c_delegated_progress_manager_8h" name="CDelegatedProgressManager.h" local="yes" imported="no">ibase/CDelegatedProgressManager.h</includes>
+    <includes id="ui___c_progress_manager_gui_comp_8h" name="ui_CProgressManagerGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtgui/ui_CProgressManagerGuiComp.h</includes>
     <class kind="class">iqtgui::CProgressManagerGuiComp</class>
     <namespace>iqtgui</namespace>
   </compound>
@@ -4485,6 +4742,7 @@
     <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
     <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
     <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
+    <includes id="ui___c_splash_screen_gui_comp_8h" name="ui_CSplashScreenGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtgui/ui_CSplashScreenGuiComp.h</includes>
     <class kind="class">iqtgui::CSplashScreenGuiComp</class>
     <namespace>iqtgui</namespace>
   </compound>
@@ -4606,6 +4864,7 @@
     <filename>_c_version_info_gui_comp_8h</filename>
     <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
     <includes id="_i_version_info_8h" name="IVersionInfo.h" local="yes" imported="no">iser/IVersionInfo.h</includes>
+    <includes id="ui___c_version_info_gui_comp_8h" name="ui_CVersionInfoGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtgui/ui_CVersionInfoGuiComp.h</includes>
     <class kind="class">iqtgui::CVersionInfoGuiComp</class>
     <namespace>iqtgui</namespace>
   </compound>
@@ -4771,6 +5030,7 @@
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_i_icon_provider_8h" name="IIconProvider.h" local="yes" imported="no">iqtgui/IIconProvider.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="ui___c_button_based_selection_param_gui_comp_8h" name="ui_CButtonBasedSelectionParamGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtprm/ui_CButtonBasedSelectionParamGuiComp.h</includes>
     <class kind="class">iqtprm::CButtonBasedSelectionParamGuiComp</class>
     <namespace>iqtprm</namespace>
   </compound>
@@ -4780,6 +5040,7 @@
     <filename>_c_checkable_options_editor_comp_8h</filename>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <includes id="_i_options_manager_8h" name="IOptionsManager.h" local="yes" imported="no">iprm/IOptionsManager.h</includes>
+    <includes id="ui___c_checkable_options_editor_comp_8h" name="ui_CCheckableOptionsEditorComp.h" local="yes" imported="no">GeneratedFiles/iqtprm/ui_CCheckableOptionsEditorComp.h</includes>
     <class kind="class">iqtprm::CCheckableOptionsEditorComp</class>
     <namespace>iqtprm</namespace>
   </compound>
@@ -4792,6 +5053,7 @@
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
     <includes id="iqtprm_8h" name="iqtprm.h" local="yes" imported="no">iqtprm/iqtprm.h</includes>
+    <includes id="ui___c_composed_params_set_gui_comp_8h" name="ui_CComposedParamsSetGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtprm/ui_CComposedParamsSetGuiComp.h</includes>
     <class kind="class">iqtprm::CComposedParamsSetGuiComp</class>
     <namespace>iqtprm</namespace>
   </compound>
@@ -4801,6 +5063,7 @@
     <filename>_c_enableable_param_gui_comp_8h</filename>
     <includes id="_i_enableable_param_8h" name="IEnableableParam.h" local="yes" imported="no">iprm/IEnableableParam.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="ui___c_enableable_param_gui_comp_8h" name="ui_CEnableableParamGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtprm/ui_CEnableableParamGuiComp.h</includes>
     <class kind="class">iqtprm::CEnableableParamGuiComp</class>
     <namespace>iqtprm</namespace>
   </compound>
@@ -4811,6 +5074,7 @@
     <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="ui___c_file_name_param_gui_comp_8h" name="ui_CFileNameParamGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtprm/ui_CFileNameParamGuiComp.h</includes>
     <class kind="class">iqtprm::CFileNameParamGuiComp</class>
     <namespace>iqtprm</namespace>
   </compound>
@@ -4829,6 +5093,7 @@
     <filename>_c_name_param_gui_comp_8h</filename>
     <includes id="_i_name_param_8h" name="INameParam.h" local="yes" imported="no">iprm/INameParam.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="ui___c_name_param_gui_comp_8h" name="ui_CNameParamGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtprm/ui_CNameParamGuiComp.h</includes>
     <class kind="class">iqtprm::CNameParamGuiComp</class>
     <namespace>iqtprm</namespace>
   </compound>
@@ -4838,6 +5103,7 @@
     <filename>_c_options_list_editor_gui_comp_8h</filename>
     <includes id="_i_options_manager_8h" name="IOptionsManager.h" local="yes" imported="no">iprm/IOptionsManager.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="ui___c_options_list_editor_gui_comp_8h" name="ui_COptionsListEditorGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtprm/ui_COptionsListEditorGuiComp.h</includes>
     <class kind="class">iqtprm::COptionsListEditorGuiComp</class>
     <namespace>iqtprm</namespace>
   </compound>
@@ -4851,6 +5117,7 @@
     <includes id="_i_options_manager_8h" name="IOptionsManager.h" local="yes" imported="no">iprm/IOptionsManager.h</includes>
     <includes id="_i_icon_provider_8h" name="IIconProvider.h" local="yes" imported="no">iqtgui/IIconProvider.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="ui___c_options_manager_gui_comp_8h" name="ui_COptionsManagerGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtprm/ui_COptionsManagerGuiComp.h</includes>
     <class kind="class">iqtprm::COptionsManagerGuiComp</class>
     <namespace>iqtprm</namespace>
   </compound>
@@ -4870,6 +5137,7 @@
     <includes id="_i_icon_provider_8h" name="IIconProvider.h" local="yes" imported="no">iqtgui/IIconProvider.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
+    <includes id="ui___c_params_manager_gui_comp_base_8h" name="ui_CParamsManagerGuiCompBase.h" local="yes" imported="no">GeneratedFiles/iqtprm/ui_CParamsManagerGuiCompBase.h</includes>
     <class kind="class">iqtprm::CParamsManagerGuiCompBase</class>
     <namespace>iqtprm</namespace>
   </compound>
@@ -4880,6 +5148,7 @@
     <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="ui___c_selectable_gui_comp_8h" name="ui_CSelectableGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtprm/ui_CSelectableGuiComp.h</includes>
     <class kind="class">iqtprm::CSelectableGuiComp</class>
     <namespace>iqtprm</namespace>
   </compound>
@@ -4900,6 +5169,7 @@
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_i_icon_provider_8h" name="IIconProvider.h" local="yes" imported="no">iqtgui/IIconProvider.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="ui___c_selection_param_gui_comp_8h" name="ui_CSelectionParamGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtprm/ui_CSelectionParamGuiComp.h</includes>
     <class kind="class">iqtprm::CSelectionParamGuiComp</class>
     <namespace>iqtprm</namespace>
   </compound>
@@ -4909,6 +5179,7 @@
     <filename>_c_selection_param_index_gui_comp_8h</filename>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <includes id="ui___c_selection_param_index_gui_comp_8h" name="ui_CSelectionParamIndexGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtprm/ui_CSelectionParamIndexGuiComp.h</includes>
     <class kind="class">iqtprm::CSelectionParamIndexGuiComp</class>
     <namespace>iqtprm</namespace>
   </compound>
@@ -4921,6 +5192,7 @@
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
     <includes id="iqtprm_8h" name="iqtprm.h" local="yes" imported="no">iqtprm/iqtprm.h</includes>
+    <includes id="ui___c_variable_param_gui_comp_8h" name="ui_CVariableParamGuiComp.h" local="yes" imported="no">GeneratedFiles/iqtprm/ui_CVariableParamGuiComp.h</includes>
     <class kind="class">iqtprm::CVariableParamGuiComp</class>
     <namespace>iqtprm</namespace>
   </compound>
@@ -5844,13 +6116,12 @@
     <name>CInteractiveShapeBase.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_interactive_shape_base_8h</filename>
+    <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
     <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
     <includes id="_i_interactive_shape_8h" name="IInteractiveShape.h" local="yes" imported="no">iview/IInteractiveShape.h</includes>
     <includes id="_i_draggable_8h" name="IDraggable.h" local="yes" imported="no">iview/IDraggable.h</includes>
     <includes id="_i_selectable_8h" name="ISelectable.h" local="yes" imported="no">iview/ISelectable.h</includes>
     <includes id="_c_shape_base_8h" name="CShapeBase.h" local="yes" imported="no">iview/CShapeBase.h</includes>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
     <class kind="class">iview::CInteractiveShapeBase</class>
     <namespace>iview</namespace>
   </compound>
@@ -6005,6 +6276,7 @@
     <filename>_c_shape_info_gui_comp_8h</filename>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <includes id="_i_shape_status_info_8h" name="IShapeStatusInfo.h" local="yes" imported="no">iview/IShapeStatusInfo.h</includes>
+    <includes id="ui___c_shape_info_gui_comp_8h" name="ui_CShapeInfoGuiComp.h" local="yes" imported="no">GeneratedFiles/iview/ui_CShapeInfoGuiComp.h</includes>
     <class kind="class">iview::CShapeInfoGuiComp</class>
     <namespace>iview</namespace>
   </compound>
@@ -6540,6 +6812,2906 @@
   <compound kind="class">
     <name>TGuiObserverWrap</name>
     <filename>class_t_gui_observer_wrap.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CAboutWidgetGuiComp</name>
+    <filename>class_ui___c_about_widget_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_about_widget_gui_comp.html</anchorfile>
+      <anchor>a139f00135f004c04009d4fd411eb6458</anchor>
+      <arglist>(QWidget *CAboutWidgetGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_about_widget_gui_comp.html</anchorfile>
+      <anchor>a6fb202da892cb78aac54d581cb494518</anchor>
+      <arglist>(QWidget *CAboutWidgetGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_about_widget_gui_comp.html</anchorfile>
+      <anchor>a542fccb130e48836ac522f9e5a97cbd5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>LogoLabel</name>
+      <anchorfile>class_ui___c_about_widget_gui_comp.html</anchorfile>
+      <anchor>ab38bd59f741ed10df4b37f0706c1be99</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>InfoFrame</name>
+      <anchorfile>class_ui___c_about_widget_gui_comp.html</anchorfile>
+      <anchor>a9fcb5699d965b72775f2fcff7e52364d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_about_widget_gui_comp.html</anchorfile>
+      <anchor>aaa2ef91c676ab77498479aea71c95faa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>ProductNameLabel</name>
+      <anchorfile>class_ui___c_about_widget_gui_comp.html</anchorfile>
+      <anchor>ad306e095fc803a3657333f6ba596795a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>ApplicationNameLabel</name>
+      <anchorfile>class_ui___c_about_widget_gui_comp.html</anchorfile>
+      <anchor>adf604d707f6dfad3812be27244c46da0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>ApplicationTypeLabel</name>
+      <anchorfile>class_ui___c_about_widget_gui_comp.html</anchorfile>
+      <anchor>af85a3adb46e190cef923190bb57286d6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>MainVersionFrame</name>
+      <anchorfile>class_ui___c_about_widget_gui_comp.html</anchorfile>
+      <anchor>aa5051de641c299349ef97df69589612f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_about_widget_gui_comp.html</anchorfile>
+      <anchor>adfb9d66b6c62450a892bbaee7916c4c8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___c_about_widget_gui_comp.html</anchorfile>
+      <anchor>ad3f28a6dde53102d7f6dceefb53e5ead</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>MainVersionLabel</name>
+      <anchorfile>class_ui___c_about_widget_gui_comp.html</anchorfile>
+      <anchor>a806e25a1e2a9e0a140984571e2cc4976</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>VersionsFrame</name>
+      <anchorfile>class_ui___c_about_widget_gui_comp.html</anchorfile>
+      <anchor>a672a794e8c96446b2cad81f1c7e8c0a8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_about_widget_gui_comp.html</anchorfile>
+      <anchor>abbf5ed6cbdd9eaa56208a9cb1ea56f5d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>verticalSpacer</name>
+      <anchorfile>class_ui___c_about_widget_gui_comp.html</anchorfile>
+      <anchor>aaeee054f15bdd7cca0c736a18bad3767</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>DescriptionFrame</name>
+      <anchorfile>class_ui___c_about_widget_gui_comp.html</anchorfile>
+      <anchor>a2763d805d2e17ffe89640886ba258847</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_about_widget_gui_comp.html</anchorfile>
+      <anchor>a2dff52417ec909d2a5f00f8c59216020</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>CopyrightLabel</name>
+      <anchorfile>class_ui___c_about_widget_gui_comp.html</anchorfile>
+      <anchor>aa103208a40551a9414532536609a4e24</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>verticalSpacer_2</name>
+      <anchorfile>class_ui___c_about_widget_gui_comp.html</anchorfile>
+      <anchor>aae34915dc9315cb9bea3bda8f872e76f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CAffineTransformationParamsGui</name>
+    <filename>class_ui___c_affine_transformation_params_gui.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_affine_transformation_params_gui.html</anchorfile>
+      <anchor>af600770d87e07c807e03176190d64756</anchor>
+      <arglist>(QWidget *CAffineTransformationParamsGui)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_affine_transformation_params_gui.html</anchorfile>
+      <anchor>a34ef331323caee49e6c97dea28c93780</anchor>
+      <arglist>(QWidget *CAffineTransformationParamsGui)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_affine_transformation_params_gui.html</anchorfile>
+      <anchor>a04e48b7650c24a3c0cf7c1f87861a8ca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>groupBox</name>
+      <anchorfile>class_ui___c_affine_transformation_params_gui.html</anchorfile>
+      <anchor>abf480c35b61e4272e96cd1bee69ffc24</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_affine_transformation_params_gui.html</anchorfile>
+      <anchor>a6aa5773b33a7378580ae5a8ef9a0a507</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___c_affine_transformation_params_gui.html</anchorfile>
+      <anchor>acb2f7e0f88bc432eadfd42164e583bd0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>TranslationSpinX</name>
+      <anchorfile>class_ui___c_affine_transformation_params_gui.html</anchorfile>
+      <anchor>aee6656f1be59349dc164555833af5945</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_2</name>
+      <anchorfile>class_ui___c_affine_transformation_params_gui.html</anchorfile>
+      <anchor>a6df0b1bb2a85ce96aec15c1d002e20f8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>TranslationSpinY</name>
+      <anchorfile>class_ui___c_affine_transformation_params_gui.html</anchorfile>
+      <anchor>a398c218fb6f94204dc7d83449be19d81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>ResetButton</name>
+      <anchorfile>class_ui___c_affine_transformation_params_gui.html</anchorfile>
+      <anchor>a18c8bd547b5f1bbcd01046a6c4b06a01</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CAnnulusParamsGuiComp</name>
+    <filename>class_ui___c_annulus_params_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_annulus_params_gui_comp.html</anchorfile>
+      <anchor>a4b6590bf92b69d64821db5688ced1bf0</anchor>
+      <arglist>(QWidget *CAnnulusParamsGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_annulus_params_gui_comp.html</anchorfile>
+      <anchor>a6fac012f8f11e776b544e82dbd4255e5</anchor>
+      <arglist>(QWidget *CAnnulusParamsGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_annulus_params_gui_comp.html</anchorfile>
+      <anchor>a9bfa79be25a9c07da5ea0c208282c356</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>PositionLabel</name>
+      <anchorfile>class_ui___c_annulus_params_gui_comp.html</anchorfile>
+      <anchor>a929850c5c6e94c29727d6ecd4c5e24eb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>XSpin</name>
+      <anchorfile>class_ui___c_annulus_params_gui_comp.html</anchorfile>
+      <anchor>ae8f6609d0903e23c6499a6af59185d75</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>YSpin</name>
+      <anchorfile>class_ui___c_annulus_params_gui_comp.html</anchorfile>
+      <anchor>a2f398c06e727e166f3c3abf8770aeea3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>PositionUnitLabel</name>
+      <anchorfile>class_ui___c_annulus_params_gui_comp.html</anchorfile>
+      <anchor>ab9cd6a5205dc7e7d1a172b1b08b80003</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>InnerRadiusLabel</name>
+      <anchorfile>class_ui___c_annulus_params_gui_comp.html</anchorfile>
+      <anchor>aeac62156f6f1bbb99e34c0131d962e61</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>InnerRadiusSpin</name>
+      <anchorfile>class_ui___c_annulus_params_gui_comp.html</anchorfile>
+      <anchor>a22f684407ac92963872686a144178a8f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>OuterRadiusSpin</name>
+      <anchorfile>class_ui___c_annulus_params_gui_comp.html</anchorfile>
+      <anchor>a6bbc7a1a28e4c6ff9038cbb48c709fd6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>RadiusUnitLabel</name>
+      <anchorfile>class_ui___c_annulus_params_gui_comp.html</anchorfile>
+      <anchor>a8dbf314ba9988c16abbaed228c203fd0</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CAnnulusSegmentParamsGuiComp</name>
+    <filename>class_ui___c_annulus_segment_params_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_annulus_segment_params_gui_comp.html</anchorfile>
+      <anchor>a5dc2775a9d37f7dd63e7f0eb2b260634</anchor>
+      <arglist>(QWidget *CAnnulusSegmentParamsGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_annulus_segment_params_gui_comp.html</anchorfile>
+      <anchor>a582ef868b5c668ce877256bd1becb01e</anchor>
+      <arglist>(QWidget *CAnnulusSegmentParamsGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_annulus_segment_params_gui_comp.html</anchorfile>
+      <anchor>aad952fcf982ab8c315a2cb55ff695888</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>PositionLabel</name>
+      <anchorfile>class_ui___c_annulus_segment_params_gui_comp.html</anchorfile>
+      <anchor>a2b2f377c9aff999ff481512d180b29d9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>XSpin</name>
+      <anchorfile>class_ui___c_annulus_segment_params_gui_comp.html</anchorfile>
+      <anchor>a830a0edac661b3805cd05ca62b69887b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>YSpin</name>
+      <anchorfile>class_ui___c_annulus_segment_params_gui_comp.html</anchorfile>
+      <anchor>adb1f0f9b3bf9cfb4d2878fe56e307a36</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>PositionUnitLabel</name>
+      <anchorfile>class_ui___c_annulus_segment_params_gui_comp.html</anchorfile>
+      <anchor>a2ccef7c972101460ad1417aefdc19555</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>RadiiLabel</name>
+      <anchorfile>class_ui___c_annulus_segment_params_gui_comp.html</anchorfile>
+      <anchor>a334c2801860845da056241760ac8bd05</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>InnerRadiusSpin</name>
+      <anchorfile>class_ui___c_annulus_segment_params_gui_comp.html</anchorfile>
+      <anchor>a1af0515cb348cc6d74765f6b35f99a62</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>OuterRadiusSpin</name>
+      <anchorfile>class_ui___c_annulus_segment_params_gui_comp.html</anchorfile>
+      <anchor>a2b3e41fbe75cdb253283c98c9bc562cd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>RadiusUnitLabel</name>
+      <anchorfile>class_ui___c_annulus_segment_params_gui_comp.html</anchorfile>
+      <anchor>a287dd3ecb9df58dc4a926740388e4c3e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>AnglesLabel</name>
+      <anchorfile>class_ui___c_annulus_segment_params_gui_comp.html</anchorfile>
+      <anchor>ad3a806733a8afa4cef5719a4035f63e5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>BeginAngleSB</name>
+      <anchorfile>class_ui___c_annulus_segment_params_gui_comp.html</anchorfile>
+      <anchor>a14693745552bc8291072a01371ad9968</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>EndAngleSB</name>
+      <anchorfile>class_ui___c_annulus_segment_params_gui_comp.html</anchorfile>
+      <anchor>ae90d97f9f50abcb61cc97d444aff7b39</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___c_annulus_segment_params_gui_comp.html</anchorfile>
+      <anchor>a8f23a9fa9e82375d9e35fd40dd9384ef</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CButtonBasedSelectionParamGuiComp</name>
+    <filename>class_ui___c_button_based_selection_param_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_button_based_selection_param_gui_comp.html</anchorfile>
+      <anchor>a98f00e8b16e7ce8a044457e82ba5a06d</anchor>
+      <arglist>(QWidget *CButtonBasedSelectionParamGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_button_based_selection_param_gui_comp.html</anchorfile>
+      <anchor>a44bac1157beca142b5ba7327069f78bc</anchor>
+      <arglist>(QWidget *CButtonBasedSelectionParamGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_button_based_selection_param_gui_comp.html</anchorfile>
+      <anchor>a722ec922eaa66c3dc1bb7bdc049d09c1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>SelectionFrame</name>
+      <anchorfile>class_ui___c_button_based_selection_param_gui_comp.html</anchorfile>
+      <anchor>a0bd744ea998ab0834c8774550efc7e75</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CCheckableOptionsEditorComp</name>
+    <filename>class_ui___c_checkable_options_editor_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_checkable_options_editor_comp.html</anchorfile>
+      <anchor>a046a82c60d0958389b5df22d4812157a</anchor>
+      <arglist>(QWidget *CCheckableOptionsEditorComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_checkable_options_editor_comp.html</anchorfile>
+      <anchor>a35287bf3626ad27bbbd4a20b420e5868</anchor>
+      <arglist>(QWidget *CCheckableOptionsEditorComp)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CCircleParamsGuiComp</name>
+    <filename>class_ui___c_circle_params_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_circle_params_gui_comp.html</anchorfile>
+      <anchor>a22cd6e0ae08c01d7e73649f5bb9ae403</anchor>
+      <arglist>(QWidget *CCircleParamsGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_circle_params_gui_comp.html</anchorfile>
+      <anchor>aa3a0227a1d1689ea475c2b87d877ce58</anchor>
+      <arglist>(QWidget *CCircleParamsGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_circle_params_gui_comp.html</anchorfile>
+      <anchor>adcf0474ae3e8fbd634633a553758edb1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>PositionLabel</name>
+      <anchorfile>class_ui___c_circle_params_gui_comp.html</anchorfile>
+      <anchor>a39b19625b3cc6f6f520e4d7da011fbe5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>XSpin</name>
+      <anchorfile>class_ui___c_circle_params_gui_comp.html</anchorfile>
+      <anchor>a4bc30d4cb2895612f9cf61ef1e8fa06c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>YSpin</name>
+      <anchorfile>class_ui___c_circle_params_gui_comp.html</anchorfile>
+      <anchor>a36bfe725177b28276134c32780662ab8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>PositionUnitLabel</name>
+      <anchorfile>class_ui___c_circle_params_gui_comp.html</anchorfile>
+      <anchor>a7ce85951d5294c02d260496931979f61</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>RadiusLabel</name>
+      <anchorfile>class_ui___c_circle_params_gui_comp.html</anchorfile>
+      <anchor>a699e247c2eb76fe775a2f6f7bf5f463f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>RadiusSpin</name>
+      <anchorfile>class_ui___c_circle_params_gui_comp.html</anchorfile>
+      <anchor>a75ac7c393a0f3f0a2f2d64816f51d3b5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>RadiusUnitLabel</name>
+      <anchorfile>class_ui___c_circle_params_gui_comp.html</anchorfile>
+      <anchor>ad78d3f2bf3d17e5e81c3b1346d079f75</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CComposedParamsSetGuiComp</name>
+    <filename>class_ui___c_composed_params_set_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>af39d5980ac5e91aa637783b9f035a868</anchor>
+      <arglist>(QWidget *CComposedParamsSetGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>ab29e7eb13f7eb71d294424d6534653cb</anchor>
+      <arglist>(QWidget *CComposedParamsSetGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>a226f299a460a5866acf7cec7967d1a64</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>LoaderFrame</name>
+      <anchorfile>class_ui___c_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>a080fc759cdeb34ed2116132c3ff998aa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>ac4baf0466b31e4ddbeff0c701e8a90c8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>LoadParamsButton</name>
+      <anchorfile>class_ui___c_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>a6a7cc3f15c0c473ac93eb6647c71f75d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>SaveParamsButton</name>
+      <anchorfile>class_ui___c_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>a84e09c5b3b963d5e6009facb8a1ac23a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ParamsFrame</name>
+      <anchorfile>class_ui___c_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>a6a87dad15b3435792632edeed60d6278</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CDoubleRangeSpinEdit</name>
+    <filename>class_ui___c_double_range_spin_edit.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_double_range_spin_edit.html</anchorfile>
+      <anchor>a48c3f2d0524f98ba15503034e3d83e38</anchor>
+      <arglist>(QWidget *CDoubleRangeSpinEdit)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_double_range_spin_edit.html</anchorfile>
+      <anchor>a7de3bb89d62b852eca3d7c506171aa89</anchor>
+      <arglist>(QWidget *CDoubleRangeSpinEdit)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_double_range_spin_edit.html</anchorfile>
+      <anchor>a309c04bdcf7808df5433ee0368842a3f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>FromLabel</name>
+      <anchorfile>class_ui___c_double_range_spin_edit.html</anchorfile>
+      <anchor>a0fb992aba3903def4d79e8cfe0821914</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>ValueFromSpinBox</name>
+      <anchorfile>class_ui___c_double_range_spin_edit.html</anchorfile>
+      <anchor>ac73d88535346dfc7440d02da3c6e65e5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>SuffixLabel1</name>
+      <anchorfile>class_ui___c_double_range_spin_edit.html</anchorfile>
+      <anchor>aab6b531aae511a72c9b7cb546c76de55</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>ToLabel</name>
+      <anchorfile>class_ui___c_double_range_spin_edit.html</anchorfile>
+      <anchor>acb6471e8c2696a93c3823e1e473b3fc5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>ValueToSpinBox</name>
+      <anchorfile>class_ui___c_double_range_spin_edit.html</anchorfile>
+      <anchor>aab1cf768b59fd4438974acf2ac688cbf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>SuffixLabel2</name>
+      <anchorfile>class_ui___c_double_range_spin_edit.html</anchorfile>
+      <anchor>a77208cf1cbcc211536c3ea4925cb9e70</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CEnableableParamGuiComp</name>
+    <filename>class_ui___c_enableable_param_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_enableable_param_gui_comp.html</anchorfile>
+      <anchor>a31215f8147c43fac23042409d03b7ed9</anchor>
+      <arglist>(QWidget *CEnableableParamGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_enableable_param_gui_comp.html</anchorfile>
+      <anchor>ac7dcbde58d87e739989ee157975123b9</anchor>
+      <arglist>(QWidget *CEnableableParamGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_enableable_param_gui_comp.html</anchorfile>
+      <anchor>aba55e3a12956d5e6f249dee17dcef14d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QCheckBox *</type>
+      <name>EnableableCheck</name>
+      <anchorfile>class_ui___c_enableable_param_gui_comp.html</anchorfile>
+      <anchor>ac80d0ece5e5589f4492bf9e9b1ec2df0</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CExtendedConsoleGuiComp</name>
+    <filename>class_ui___c_extended_console_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_extended_console_gui_comp.html</anchorfile>
+      <anchor>a9156325f472220d7a8414d47a4d66f9c</anchor>
+      <arglist>(QWidget *CExtendedConsoleGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_extended_console_gui_comp.html</anchorfile>
+      <anchor>adc491306578b9471178fdc769fcbb753</anchor>
+      <arglist>(QWidget *CExtendedConsoleGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_5</name>
+      <anchorfile>class_ui___c_extended_console_gui_comp.html</anchorfile>
+      <anchor>a96c90d5b799cd94932ad8dc513cb733a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ConsoleFrame</name>
+      <anchorfile>class_ui___c_extended_console_gui_comp.html</anchorfile>
+      <anchor>a9c1537cd5542d5a6f8beadcecddccfe5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_4</name>
+      <anchorfile>class_ui___c_extended_console_gui_comp.html</anchorfile>
+      <anchor>a7890abeb73baaab368d75c1fb17c5a1d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>CommandsFrame</name>
+      <anchorfile>class_ui___c_extended_console_gui_comp.html</anchorfile>
+      <anchor>ab58b490912661737577df33a2b01eeee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_extended_console_gui_comp.html</anchorfile>
+      <anchor>a4598c0fab6574598de7db2ab92afc1cc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ViewFrame</name>
+      <anchorfile>class_ui___c_extended_console_gui_comp.html</anchorfile>
+      <anchor>a1a15adb2d12aeec7d89c731c869a302f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_extended_console_gui_comp.html</anchorfile>
+      <anchor>a747f39649a4a9ab5d08a9edca9da75b4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_extended_console_gui_comp.html</anchorfile>
+      <anchor>a2e258a6510d91c1801e7362fde3bc084</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer</name>
+      <anchorfile>class_ui___c_extended_console_gui_comp.html</anchorfile>
+      <anchor>ac8e808da3f491737d70e9135c7c8e46d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>InfoFrame</name>
+      <anchorfile>class_ui___c_extended_console_gui_comp.html</anchorfile>
+      <anchor>aa475b16637ce5a4741f8d15536e80531</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_3</name>
+      <anchorfile>class_ui___c_extended_console_gui_comp.html</anchorfile>
+      <anchor>a46b321a6ecaadf5cd8eda73bb8394ce1</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CFileListProviderGuiComp</name>
+    <filename>class_ui___c_file_list_provider_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_file_list_provider_gui_comp.html</anchorfile>
+      <anchor>af37fc47004d7aaae20b48cbef4c46b63</anchor>
+      <arglist>(QWidget *CFileListProviderGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_file_list_provider_gui_comp.html</anchorfile>
+      <anchor>a69af9421273636d70392e05026eb853e</anchor>
+      <arglist>(QWidget *CFileListProviderGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_file_list_provider_gui_comp.html</anchorfile>
+      <anchor>a863db2c395def9baffab72688a7d1d42</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeWidget *</type>
+      <name>FileList</name>
+      <anchorfile>class_ui___c_file_list_provider_gui_comp.html</anchorfile>
+      <anchor>a7ebd00de523484dd6cfcf870d27635cf</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CFileNameParamGuiComp</name>
+    <filename>class_ui___c_file_name_param_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_file_name_param_gui_comp.html</anchorfile>
+      <anchor>a93d1755611e29614c26afb39ac17e293</anchor>
+      <arglist>(QWidget *CFileNameParamGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_file_name_param_gui_comp.html</anchorfile>
+      <anchor>a1be2d406f292ae81b67de1100db34c03</anchor>
+      <arglist>(QWidget *CFileNameParamGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>hboxLayout</name>
+      <anchorfile>class_ui___c_file_name_param_gui_comp.html</anchorfile>
+      <anchor>af72d3f10d37a14ded1cff7b839cbe40a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>DirectoryLabel</name>
+      <anchorfile>class_ui___c_file_name_param_gui_comp.html</anchorfile>
+      <anchor>a770450a74aba4e022688505e881e4d6a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>PathLabel</name>
+      <anchorfile>class_ui___c_file_name_param_gui_comp.html</anchorfile>
+      <anchor>acd5924d2ccb8a2d3903d4d0143ba6f00</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>UrlLabel</name>
+      <anchorfile>class_ui___c_file_name_param_gui_comp.html</anchorfile>
+      <anchor>a118f5fa851549f7d7ede0da36d7c82fc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QComboBox *</type>
+      <name>DirEdit</name>
+      <anchorfile>class_ui___c_file_name_param_gui_comp.html</anchorfile>
+      <anchor>a53e8532871ca86bcb46611f42024bdf7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>BrowseButton</name>
+      <anchorfile>class_ui___c_file_name_param_gui_comp.html</anchorfile>
+      <anchor>a3a7b1e19856d6ff86eb63813c32b56aa</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CFilePersistenceGuiComp</name>
+    <filename>class_ui___c_file_persistence_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_file_persistence_gui_comp.html</anchorfile>
+      <anchor>ac285014398b53d0bcc0c7b696190be8e</anchor>
+      <arglist>(QWidget *CFilePersistenceGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_file_persistence_gui_comp.html</anchorfile>
+      <anchor>ae3c9fba85f2568979cfedbfcbe09189e</anchor>
+      <arglist>(QWidget *CFilePersistenceGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_file_persistence_gui_comp.html</anchorfile>
+      <anchor>a54f34345d19675c846d813f683dbac9a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>LoadButton</name>
+      <anchorfile>class_ui___c_file_persistence_gui_comp.html</anchorfile>
+      <anchor>a59d35f81ff683766a0d4ba976e981311</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>SaveButton</name>
+      <anchorfile>class_ui___c_file_persistence_gui_comp.html</anchorfile>
+      <anchor>af714049ab2ed3d3cdb84912e37d25805</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CFilePreviewGuiComp</name>
+    <filename>class_ui___c_file_preview_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_file_preview_gui_comp.html</anchorfile>
+      <anchor>a1722aa07944fdbeb737b33feaa793356</anchor>
+      <arglist>(QWidget *CFilePreviewGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_file_preview_gui_comp.html</anchorfile>
+      <anchor>a983f2c53d50a6e75319faee5c8c3dace</anchor>
+      <arglist>(QWidget *CFilePreviewGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_file_preview_gui_comp.html</anchorfile>
+      <anchor>ab8d76dd81cce6795dd0014f59afe3cad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ObjectViewFrame</name>
+      <anchorfile>class_ui___c_file_preview_gui_comp.html</anchorfile>
+      <anchor>a6572b6712e453b00b00d1955385eaa85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_file_preview_gui_comp.html</anchorfile>
+      <anchor>ad4e12a796e21dd494cad2ef3c49d19e6</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CFileSystemExplorerGuiComp</name>
+    <filename>class_ui___c_file_system_explorer_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_file_system_explorer_gui_comp.html</anchorfile>
+      <anchor>a1ca44f77217a8ca14c293d00e081bcf1</anchor>
+      <arglist>(QWidget *CFileSystemExplorerGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_file_system_explorer_gui_comp.html</anchorfile>
+      <anchor>abc3e08213b76155bf58bbd658f8b5f19</anchor>
+      <arglist>(QWidget *CFileSystemExplorerGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_file_system_explorer_gui_comp.html</anchorfile>
+      <anchor>a1732acc6f476be4d309984c093b36636</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>FilterFrame</name>
+      <anchorfile>class_ui___c_file_system_explorer_gui_comp.html</anchorfile>
+      <anchor>aad1a4b986e2f5489e36937b6a029dac8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_file_system_explorer_gui_comp.html</anchorfile>
+      <anchor>a6162878b5db97b9c3d96fa630fa4fa13</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeView *</type>
+      <name>FileTree</name>
+      <anchorfile>class_ui___c_file_system_explorer_gui_comp.html</anchorfile>
+      <anchor>a198cd867aa5a9ab400cb35aa5260a83e</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CFileTreeViewGuiComp</name>
+    <filename>class_ui___c_file_tree_view_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>a417c9aadb4e11433ece84b08b9c11871</anchor>
+      <arglist>(QWidget *CFileTreeViewGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>abc93a741541841275d67c7dd70218fa2</anchor>
+      <arglist>(QWidget *CFileTreeViewGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>ada60e1c241085c1b7a79320cddc1d6bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_3</name>
+      <anchorfile>class_ui___c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>a51ca55848ecfaf5b4515650709dfbf16</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QStackedWidget *</type>
+      <name>Stack</name>
+      <anchorfile>class_ui___c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>a34acf412984b8965eca1d52f74e207f1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>page</name>
+      <anchorfile>class_ui___c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>af05ca20065a9abb6f11acea2b52459df</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>aa6c01bddf97398a368071b636ba7bdaa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>adad7ec008af8db5793b1417b3d7e5caf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>LuppeIcon</name>
+      <anchorfile>class_ui___c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>a100ce1085a77cae8034ad936c25ecb4e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLineEdit *</type>
+      <name>FilterText</name>
+      <anchorfile>class_ui___c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>a7b919f6dbe3a730a04d8545c24fbf919</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>FilterClearButton</name>
+      <anchorfile>class_ui___c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>a6c5651080bbb427523b0251acd0faa96</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer</name>
+      <anchorfile>class_ui___c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>a2b1d2cbbd0ecee6064c980aad6cb3c1b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>ExpandAll</name>
+      <anchorfile>class_ui___c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>aaef26d64d16fafa19e3038cba9e49c15</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>CollapseAll</name>
+      <anchorfile>class_ui___c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>adb4d2aba054ac43526cba08024d83c1a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>page_2</name>
+      <anchorfile>class_ui___c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>a3431bea2de205adf85695f8d233ba9d9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>a91d0a03519b3b15cef0eb1029118add8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QProgressBar *</type>
+      <name>progressBar</name>
+      <anchorfile>class_ui___c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>adccebc0b0a1c1d8c6585a90d8b9ebf7d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>aa8d7dfbfcbd18d113b2d16ecbee26820</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>Refresh</name>
+      <anchorfile>class_ui___c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>aa59be662880680374070c200f6067a53</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeView *</type>
+      <name>FileList</name>
+      <anchorfile>class_ui___c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>a5e686336633cfff6b3945526f166790b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>InfoLabel</name>
+      <anchorfile>class_ui___c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>a538d672499c84484d92f59cebf2ad4c6</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CImagePropertiesFrameComp</name>
+    <filename>class_ui___c_image_properties_frame_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_image_properties_frame_comp.html</anchorfile>
+      <anchor>a2f385f3b12cdcdfffff8c695f24db5d3</anchor>
+      <arglist>(QWidget *CImagePropertiesFrameComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_image_properties_frame_comp.html</anchorfile>
+      <anchor>aba390a094990dcdfe0a763d17181286c</anchor>
+      <arglist>(QWidget *CImagePropertiesFrameComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_image_properties_frame_comp.html</anchorfile>
+      <anchor>a0acdc6ab413451ac768e71fa3498b3d7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>SizeLabel</name>
+      <anchorfile>class_ui___c_image_properties_frame_comp.html</anchorfile>
+      <anchor>a58e0db43b3e96a825dec055385aad696</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>DepthLabel</name>
+      <anchorfile>class_ui___c_image_properties_frame_comp.html</anchorfile>
+      <anchor>a4a10eb2a5cd146085b18a11a6300056c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>ColorSpaceLabel</name>
+      <anchorfile>class_ui___c_image_properties_frame_comp.html</anchorfile>
+      <anchor>a672b4ad578783c60b92ef4ff9eda724f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>ResolutionLabel</name>
+      <anchorfile>class_ui___c_image_properties_frame_comp.html</anchorfile>
+      <anchor>a4102fca0063117fce7c8e1fe703d4924</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CImagePropertyGuiComp</name>
+    <filename>class_ui___c_image_property_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_image_property_gui_comp.html</anchorfile>
+      <anchor>a2dcb0046e173c88fc6febdc690140f84</anchor>
+      <arglist>(QWidget *CImagePropertyGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_image_property_gui_comp.html</anchorfile>
+      <anchor>a505de1b9f705808c404cf3c3589f66f0</anchor>
+      <arglist>(QWidget *CImagePropertyGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_image_property_gui_comp.html</anchorfile>
+      <anchor>a481c57fa7eddafbf423f30959a779477</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeWidget *</type>
+      <name>PropertyTree</name>
+      <anchorfile>class_ui___c_image_property_gui_comp.html</anchorfile>
+      <anchor>a0d123aaabe9f6973e0a508abb062122c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CLine2dParamsGuiComp</name>
+    <filename>class_ui___c_line2d_params_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_line2d_params_gui_comp.html</anchorfile>
+      <anchor>a62028dea2bd29c1fa875570065770b6c</anchor>
+      <arglist>(QWidget *CLine2dParamsGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_line2d_params_gui_comp.html</anchorfile>
+      <anchor>a95f48f2bb04b9855ade31567ebc89173</anchor>
+      <arglist>(QWidget *CLine2dParamsGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_line2d_params_gui_comp.html</anchorfile>
+      <anchor>a25b52bd99ee86c6310fc083b2387f981</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>Point1Label</name>
+      <anchorfile>class_ui___c_line2d_params_gui_comp.html</anchorfile>
+      <anchor>aa11b84741a539db1f52e351a0e1ee192</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>Point1XSB</name>
+      <anchorfile>class_ui___c_line2d_params_gui_comp.html</anchorfile>
+      <anchor>a11e19649e7a6565796ef639c07fca6a7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>Point1YSB</name>
+      <anchorfile>class_ui___c_line2d_params_gui_comp.html</anchorfile>
+      <anchor>a3a61a5e280983dd091e8c1a300524787</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>Point1UnitLabel</name>
+      <anchorfile>class_ui___c_line2d_params_gui_comp.html</anchorfile>
+      <anchor>a829c6e512b068f42fc7b778c245cf550</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>Point2Label</name>
+      <anchorfile>class_ui___c_line2d_params_gui_comp.html</anchorfile>
+      <anchor>a18bc6a105e192d0844c2d36644c1a67d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>Point2XSB</name>
+      <anchorfile>class_ui___c_line2d_params_gui_comp.html</anchorfile>
+      <anchor>a9933c9663e4661724f39eb36f4ae04d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>Point2YSB</name>
+      <anchorfile>class_ui___c_line2d_params_gui_comp.html</anchorfile>
+      <anchor>aff0349e9514d857ade1c5b55ef9cb4fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>Point2UnitLabel</name>
+      <anchorfile>class_ui___c_line2d_params_gui_comp.html</anchorfile>
+      <anchor>a88ce98139b1f7ef9d487c476400d4c3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CLogGuiComp</name>
+    <filename>class_ui___c_log_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_log_gui_comp.html</anchorfile>
+      <anchor>a417d76dc8e6a2a459c9ef76a3a337eeb</anchor>
+      <arglist>(QWidget *CLogGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_log_gui_comp.html</anchorfile>
+      <anchor>a2aa4a2af3f17ccaea74f8e8f2e9b8a87</anchor>
+      <arglist>(QWidget *CLogGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_log_gui_comp.html</anchorfile>
+      <anchor>ab410e94a462d4a073d6555a875f40cb7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>MainLayout</name>
+      <anchorfile>class_ui___c_log_gui_comp.html</anchorfile>
+      <anchor>a4bb683cc95a794c2385b32d0be33ab49</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ToolBarFrame</name>
+      <anchorfile>class_ui___c_log_gui_comp.html</anchorfile>
+      <anchor>a7e09c80c5cb23c01b1f7961ce1f20c81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_log_gui_comp.html</anchorfile>
+      <anchor>adbbaa16cf65217c1ab0e8d6d99bda1c1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>BarSpacer</name>
+      <anchorfile>class_ui___c_log_gui_comp.html</anchorfile>
+      <anchor>a4078b434d9713ed361048c4b40991c1c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>FilterFrame</name>
+      <anchorfile>class_ui___c_log_gui_comp.html</anchorfile>
+      <anchor>a5dd27694ea6927ee7f9744771eb200e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_3</name>
+      <anchorfile>class_ui___c_log_gui_comp.html</anchorfile>
+      <anchor>afd151e52e47a7427164c986d5991e794</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>LuppeIcon</name>
+      <anchorfile>class_ui___c_log_gui_comp.html</anchorfile>
+      <anchor>aee3bc59a66b1121b85af1333d19d1c67</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLineEdit *</type>
+      <name>FilterText</name>
+      <anchorfile>class_ui___c_log_gui_comp.html</anchorfile>
+      <anchor>af666721c26b786a94721b57b4b1723d9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>FilterClearButton</name>
+      <anchorfile>class_ui___c_log_gui_comp.html</anchorfile>
+      <anchor>a5f785c0078a60f8c91ebf911c3a53891</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeWidget *</type>
+      <name>LogView</name>
+      <anchorfile>class_ui___c_log_gui_comp.html</anchorfile>
+      <anchor>a4d6654f9e2ab7064963f9c22caf25b50</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CNameParamGuiComp</name>
+    <filename>class_ui___c_name_param_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_name_param_gui_comp.html</anchorfile>
+      <anchor>a83161767d8b8fce16af3d2dbe3b8c8d6</anchor>
+      <arglist>(QWidget *CNameParamGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_name_param_gui_comp.html</anchorfile>
+      <anchor>ae5d03bfc4d9aaed3e7004916bb4e9f44</anchor>
+      <arglist>(QWidget *CNameParamGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_name_param_gui_comp.html</anchorfile>
+      <anchor>a833cfdf52595f5ced86eb4aed3b681b5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>NameFrame</name>
+      <anchorfile>class_ui___c_name_param_gui_comp.html</anchorfile>
+      <anchor>a71b5e7c09e7985e63b10dc821ce9e5b3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLineEdit *</type>
+      <name>NameEdit</name>
+      <anchorfile>class_ui___c_name_param_gui_comp.html</anchorfile>
+      <anchor>a44a70727d9ce92e70154193b75bdb055</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_COptionsListEditorGuiComp</name>
+    <filename>class_ui___c_options_list_editor_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_options_list_editor_gui_comp.html</anchorfile>
+      <anchor>a9e62e3dce3c2bc5a067d110ed8327d24</anchor>
+      <arglist>(QWidget *COptionsListEditorGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_options_list_editor_gui_comp.html</anchorfile>
+      <anchor>a350f1b69b43662c072d18094c4f4e38a</anchor>
+      <arglist>(QWidget *COptionsListEditorGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_options_list_editor_gui_comp.html</anchorfile>
+      <anchor>a5a8d43326f4863f4aff7f13774741432</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeWidget *</type>
+      <name>ParamsTree</name>
+      <anchorfile>class_ui___c_options_list_editor_gui_comp.html</anchorfile>
+      <anchor>a29890b72789291dec8d585f4e3dff4da</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>ButtonsFrame</name>
+      <anchorfile>class_ui___c_options_list_editor_gui_comp.html</anchorfile>
+      <anchor>a753815edb742c9690aa4c4b0ee28cfc6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_4</name>
+      <anchorfile>class_ui___c_options_list_editor_gui_comp.html</anchorfile>
+      <anchor>af04d0fec1adcb6d11d23aea0e10f4ef5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>AddRemoveButtonsFrame</name>
+      <anchorfile>class_ui___c_options_list_editor_gui_comp.html</anchorfile>
+      <anchor>a03316ffdd33d203e00db3354bda46276</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_options_list_editor_gui_comp.html</anchorfile>
+      <anchor>a83ae0f1ef0b5ce9797b7a2860b67d73b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>AddButton</name>
+      <anchorfile>class_ui___c_options_list_editor_gui_comp.html</anchorfile>
+      <anchor>a05184571b4b641e02df41959d1582db6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>RemoveButton</name>
+      <anchorfile>class_ui___c_options_list_editor_gui_comp.html</anchorfile>
+      <anchor>aa99bcb878b71a329f286c0ec9f859b43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer</name>
+      <anchorfile>class_ui___c_options_list_editor_gui_comp.html</anchorfile>
+      <anchor>a841375c8aca81a40f6c8789dd512bce0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>UpDownButtonsFrame</name>
+      <anchorfile>class_ui___c_options_list_editor_gui_comp.html</anchorfile>
+      <anchor>aa3c4a114716dacd41ad44b911c319284</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_3</name>
+      <anchorfile>class_ui___c_options_list_editor_gui_comp.html</anchorfile>
+      <anchor>a64ce4ec464c172e5ccc5a113ffcde8ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>UpButton</name>
+      <anchorfile>class_ui___c_options_list_editor_gui_comp.html</anchorfile>
+      <anchor>ac727dab8eba195232f4cf3e82afeb82e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>DownButton</name>
+      <anchorfile>class_ui___c_options_list_editor_gui_comp.html</anchorfile>
+      <anchor>a5da76a36a5d6f2372188d838d5c51d29</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_COptionsManagerGuiComp</name>
+    <filename>class_ui___c_options_manager_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a105556d5145f9c00c2d3b2b2213466f9</anchor>
+      <arglist>(QWidget *COptionsManagerGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a4675100e018a39e35a29c72364b1ed71</anchor>
+      <arglist>(QWidget *COptionsManagerGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a37f3842fccf094fc5bb5eaa4e870c67a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>SelectionFrame</name>
+      <anchorfile>class_ui___c_options_manager_gui_comp.html</anchorfile>
+      <anchor>af92aa697f8af35e48dc689cac2b710b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>layoutWidget</name>
+      <anchorfile>class_ui___c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a55327d59b020ca9e04de4ad31e23dd2f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>SelectorLayout</name>
+      <anchorfile>class_ui___c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a008c7f123f0441323b1e6ee33dcce8cf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QComboBox *</type>
+      <name>Selector</name>
+      <anchorfile>class_ui___c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a40452263ad751a2d2f4847c1882120a6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>InfoFrame</name>
+      <anchorfile>class_ui___c_options_manager_gui_comp.html</anchorfile>
+      <anchor>ac8608c53e0432fc5918e952178f74207</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_options_manager_gui_comp.html</anchorfile>
+      <anchor>aa664e59c7bf83a21353c0e0829ca6ad2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer</name>
+      <anchorfile>class_ui___c_options_manager_gui_comp.html</anchorfile>
+      <anchor>ae4940c2dc511d0936343297889058192</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>InfoIcon</name>
+      <anchorfile>class_ui___c_options_manager_gui_comp.html</anchorfile>
+      <anchor>ab451b712a13cfa48f756e45f4a206e7e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>InfoLabel</name>
+      <anchorfile>class_ui___c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a8dd3f6426147bd56f0686836e799d49f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>DescriptionFrame</name>
+      <anchorfile>class_ui___c_options_manager_gui_comp.html</anchorfile>
+      <anchor>a54504fc8a36001f3d9475905a5400ba8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_options_manager_gui_comp.html</anchorfile>
+      <anchor>af3c20fedc519a49640e8faa2befe4c12</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>DescriptionLabel</name>
+      <anchorfile>class_ui___c_options_manager_gui_comp.html</anchorfile>
+      <anchor>aece46d6f81cdea5357646299e16d0dc1</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_COrientedCircleEditorComp</name>
+    <filename>class_ui___c_oriented_circle_editor_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_oriented_circle_editor_comp.html</anchorfile>
+      <anchor>a241c4604e7529e3bab7f2256375facb6</anchor>
+      <arglist>(QWidget *COrientedCircleEditorComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_oriented_circle_editor_comp.html</anchorfile>
+      <anchor>a310d82e65907cb188ad9cdaeb7b8577e</anchor>
+      <arglist>(QWidget *COrientedCircleEditorComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_oriented_circle_editor_comp.html</anchorfile>
+      <anchor>a8fd5fba80242e394cfbb3b18afc4606e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>PositionLabel</name>
+      <anchorfile>class_ui___c_oriented_circle_editor_comp.html</anchorfile>
+      <anchor>a60250d3a8f7a0a709db99a5241b5a89e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>XSpin</name>
+      <anchorfile>class_ui___c_oriented_circle_editor_comp.html</anchorfile>
+      <anchor>a128bda3e4fbd62fd990952525c409a67</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>YSpin</name>
+      <anchorfile>class_ui___c_oriented_circle_editor_comp.html</anchorfile>
+      <anchor>a3b868e2e060661bbc30e18d8ac1768a9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>RadiusUnitLabel</name>
+      <anchorfile>class_ui___c_oriented_circle_editor_comp.html</anchorfile>
+      <anchor>a0101e317c810725642594ae80c4fa488</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>PositionUnitLabel</name>
+      <anchorfile>class_ui___c_oriented_circle_editor_comp.html</anchorfile>
+      <anchor>a6dd0467f06f7499d25f107dd77a4697c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>RadiusLabel</name>
+      <anchorfile>class_ui___c_oriented_circle_editor_comp.html</anchorfile>
+      <anchor>acb73b3faba7d0674ade74a2d3770eb00</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>RadiusSpin</name>
+      <anchorfile>class_ui___c_oriented_circle_editor_comp.html</anchorfile>
+      <anchor>a505b6ad5e75059d9c415f1cf8679cdd6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QCheckBox *</type>
+      <name>AxisOrientationCheckBox</name>
+      <anchorfile>class_ui___c_oriented_circle_editor_comp.html</anchorfile>
+      <anchor>a7cd9cf604cff698cc2797cb5e35ac53b</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CParamsManagerGuiCompBase</name>
+    <filename>class_ui___c_params_manager_gui_comp_base.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>abc6d9363026bf6acd54dd57490efa871</anchor>
+      <arglist>(QWidget *CParamsManagerGuiCompBase)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a53d40f21c64dbe50aea056308bb00137</anchor>
+      <arglist>(QWidget *CParamsManagerGuiCompBase)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a43ec81a8516c2d08a71e8211179ac644</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeWidget *</type>
+      <name>ParamsTree</name>
+      <anchorfile>class_ui___c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>ac341d95f966887fbeb238e1eabedfdcd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_5</name>
+      <anchorfile>class_ui___c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>af144ea73b52722aecad2f19b297a1e30</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QComboBox *</type>
+      <name>ParamsComboBox</name>
+      <anchorfile>class_ui___c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>afc9f66c31252836d3025d3dcd005791e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>ButtonsFrame</name>
+      <anchorfile>class_ui___c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a807ba0088854284805ed23128874d995</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_4</name>
+      <anchorfile>class_ui___c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>ad0a93bd7e8478dee9b3c0c81905400a8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>AddRemoveButtonsFrame</name>
+      <anchorfile>class_ui___c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>afc70155c6664458ceb2db97b3244125b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a29c69ddd77503e4dcf6578f2261ac5b4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>AddButton</name>
+      <anchorfile>class_ui___c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a07d8b05544680ae22d6491a7c4ffa518</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>RemoveButton</name>
+      <anchorfile>class_ui___c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>abd06563b59a35a532b42f47299a48232</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer</name>
+      <anchorfile>class_ui___c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a401894088dd0f1346b7057eb094342f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>UpDownButtonsFrame</name>
+      <anchorfile>class_ui___c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>ad4d0aa6e0ae1766a76742405200e7a3a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_3</name>
+      <anchorfile>class_ui___c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a2a586bafe5cee5fbb0594e0dacd736d8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>UpButton</name>
+      <anchorfile>class_ui___c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a271dbe23577f4917ea32b6d6490c25e0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>DownButton</name>
+      <anchorfile>class_ui___c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a3d83f50a150d5af8cf1cb096c2ff52f3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ParamsFrame</name>
+      <anchorfile>class_ui___c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a3939011f828b98f7083012a2568418a6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a877b66ee8aadc9202d7f2ff283c501f7</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CPolygonParamsGuiComp</name>
+    <filename>class_ui___c_polygon_params_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_polygon_params_gui_comp.html</anchorfile>
+      <anchor>a3bc53ddedc20c70446b0a2b589901be4</anchor>
+      <arglist>(QWidget *CPolygonParamsGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_polygon_params_gui_comp.html</anchorfile>
+      <anchor>a478a780b6b1bc9f05493faf46a249008</anchor>
+      <arglist>(QWidget *CPolygonParamsGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_polygon_params_gui_comp.html</anchorfile>
+      <anchor>a68dda8fd03467cc0b2f2b51f9fd2b3f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTableWidget *</type>
+      <name>NodeParamsTable</name>
+      <anchorfile>class_ui___c_polygon_params_gui_comp.html</anchorfile>
+      <anchor>a9b19da66a29e42ead169f0052c91100b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_polygon_params_gui_comp.html</anchorfile>
+      <anchor>aa7ff722e8bb81dbea1b68575ecd32356</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>InsertButton</name>
+      <anchorfile>class_ui___c_polygon_params_gui_comp.html</anchorfile>
+      <anchor>af500415e6d7602fa7a9840472746b076</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>RemoveButton</name>
+      <anchorfile>class_ui___c_polygon_params_gui_comp.html</anchorfile>
+      <anchor>a7fc22fb5afa57f2b6a5e2aa5124a11ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>CopyButton</name>
+      <anchorfile>class_ui___c_polygon_params_gui_comp.html</anchorfile>
+      <anchor>afab47ac9b528af8ded8868556fdd716c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>PasteButton</name>
+      <anchorfile>class_ui___c_polygon_params_gui_comp.html</anchorfile>
+      <anchor>a1e7c9768c4f2e3ebfb9dd5dcf81f6dc1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer</name>
+      <anchorfile>class_ui___c_polygon_params_gui_comp.html</anchorfile>
+      <anchor>a906ef372bed87301e1f7ada541dca7c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QCheckBox *</type>
+      <name>CloseLineCheckBox</name>
+      <anchorfile>class_ui___c_polygon_params_gui_comp.html</anchorfile>
+      <anchor>a9c8c4f940803c84083868a974832e820</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>ToolsButton</name>
+      <anchorfile>class_ui___c_polygon_params_gui_comp.html</anchorfile>
+      <anchor>adb05255f9c441d59af0e8a4c3789af17</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CProgressManagerGuiComp</name>
+    <filename>class_ui___c_progress_manager_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_progress_manager_gui_comp.html</anchorfile>
+      <anchor>a3e917b3501b3e442871d556d015c053e</anchor>
+      <arglist>(QWidget *CProgressManagerGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_progress_manager_gui_comp.html</anchorfile>
+      <anchor>aadaef917d822f0c6f6def0ae57fc4e38</anchor>
+      <arglist>(QWidget *CProgressManagerGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_progress_manager_gui_comp.html</anchorfile>
+      <anchor>a5504ac2c58a45be8d31856d016ae1e69</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>DescriptionLabel</name>
+      <anchorfile>class_ui___c_progress_manager_gui_comp.html</anchorfile>
+      <anchor>a582a72c4de6fcd0fab541a6275b8fe0f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QProgressBar *</type>
+      <name>ProgressBar</name>
+      <anchorfile>class_ui___c_progress_manager_gui_comp.html</anchorfile>
+      <anchor>a75919ca802b7a7fbb5d3ebce4a88f49c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>CancelButton</name>
+      <anchorfile>class_ui___c_progress_manager_gui_comp.html</anchorfile>
+      <anchor>aa77df129c001f6f15562247a0a793f99</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CQuadrangleParamsGuiComp</name>
+    <filename>class_ui___c_quadrangle_params_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>ab316c7d7d70e9296e0778a93010992f0</anchor>
+      <arglist>(QWidget *CQuadrangleParamsGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>a29541cb3a8449dbe9ca3314330217dd8</anchor>
+      <arglist>(QWidget *CQuadrangleParamsGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>a103503995de039305c6f1187e0c0e638</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>groupBox</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>a0a6a491839014570da281c2e5febd7b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>ab746ff5177a7b0c3cbc2cc05a85813e3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>Point1Label_2</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>a33ff869c7a06e48ea3739a2be8ead415</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>FirstDiagPoint1XSpin</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>a621b12c375399723c36a70fc6792c3a6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>FirstDiagPoint1YSpin</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>a8107c838fd7468d9cc1db1327ae257e0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>FirstDiagPoint1UnitLabel</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>a7b045c5ef0d8c3860794ab368914f7d6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>Point2Label_2</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>ae95522d1d9359bd8b5a4f3bae214ef2f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>FirstDiagPoint2XSpin</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>ac55adef1c5e441214a4b2697e794bb4c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>FirstDiagPoint2YSpin</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>a979fc10e70840a2a857f628c28686a8f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>FirstDiagPoint2UnitLabel</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>a6ecac60820a5d6a316d9689f88e305ae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>groupBox_2</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>ab4910d32862df04062106448e81dcb18</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout_2</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>a5497394b1b4d47263542ac0726183893</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>Point1Label</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>a01153bc19fb255b969d05e7ea52cc112</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>SecondDiagPoint1XSpin</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>a634a4a284cc229e3807f29f947a40de6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>SecondDiagPoint1YSpin</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>acdd993a60ccfbe1a872ac40bf5dd1c35</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>SecondDiagPoint1UnitLabel</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>a525109e95a3823e0e0ccc868ee1a33f4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>Point2Label</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>acee6817aa62265209e9507a822b8c452</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>SecondDiagPoint2XSpin</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>a978e92e96cfd645e89971b85e1640de5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>SecondDiagPoint2YSpin</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>a82eb3f0915c4c8bd9a023b92890f5177</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>SecondDiagPoint2UnitLabel</name>
+      <anchorfile>class_ui___c_quadrangle_params_gui_comp.html</anchorfile>
+      <anchor>a96dc63885a2e178161ea45a3a5db9d1b</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CRectangleParamsGuiComp</name>
+    <filename>class_ui___c_rectangle_params_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_rectangle_params_gui_comp.html</anchorfile>
+      <anchor>adce5c821c444e143afa9cafd9eb98a84</anchor>
+      <arglist>(QWidget *CRectangleParamsGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_rectangle_params_gui_comp.html</anchorfile>
+      <anchor>a0a15282e23c8099ea6c47462b9c25e14</anchor>
+      <arglist>(QWidget *CRectangleParamsGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_rectangle_params_gui_comp.html</anchorfile>
+      <anchor>a522d3ff9fba574624877193cd99c57ab</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>Point1Label</name>
+      <anchorfile>class_ui___c_rectangle_params_gui_comp.html</anchorfile>
+      <anchor>a7d8d008da7bb504536c375e08b65abeb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>LeftSpin</name>
+      <anchorfile>class_ui___c_rectangle_params_gui_comp.html</anchorfile>
+      <anchor>aad432408ef2dffc80ad70f4a2b4369c8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>Point1Label_2</name>
+      <anchorfile>class_ui___c_rectangle_params_gui_comp.html</anchorfile>
+      <anchor>a081637017fd2d05ce6fece449f9a1cf9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>RightSpin</name>
+      <anchorfile>class_ui___c_rectangle_params_gui_comp.html</anchorfile>
+      <anchor>a31a830d872b584772b6c6b53a15d1447</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>Point2Label</name>
+      <anchorfile>class_ui___c_rectangle_params_gui_comp.html</anchorfile>
+      <anchor>ae583baf7842ef805cef76e599798f3ab</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>TopSpin</name>
+      <anchorfile>class_ui___c_rectangle_params_gui_comp.html</anchorfile>
+      <anchor>a64a6d8fbb8cf914ed87525f43c8247e9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>Point2Label_2</name>
+      <anchorfile>class_ui___c_rectangle_params_gui_comp.html</anchorfile>
+      <anchor>ab13a96ab959a112ece393a36c0ed9b8a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDoubleSpinBox *</type>
+      <name>BottomSpin</name>
+      <anchorfile>class_ui___c_rectangle_params_gui_comp.html</anchorfile>
+      <anchor>ab3f83dd92bd265ab176fcdf7062df5bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>verticalSpacer</name>
+      <anchorfile>class_ui___c_rectangle_params_gui_comp.html</anchorfile>
+      <anchor>a7de18ef5e84524a36c832ecd6e694ce7</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CSceneConnectorGuiComp</name>
+    <filename>class_ui___c_scene_connector_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_scene_connector_gui_comp.html</anchorfile>
+      <anchor>a10e4a993f62b8bbe872992dd914fc0df</anchor>
+      <arglist>(QWidget *CSceneConnectorGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_scene_connector_gui_comp.html</anchorfile>
+      <anchor>a33af4e70332d90d5f7fa653cbdd4a226</anchor>
+      <arglist>(QWidget *CSceneConnectorGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout</name>
+      <anchorfile>class_ui___c_scene_connector_gui_comp.html</anchorfile>
+      <anchor>a8461a135129cee6af776230890957599</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSplitter *</type>
+      <name>splitter</name>
+      <anchorfile>class_ui___c_scene_connector_gui_comp.html</anchorfile>
+      <anchor>a96ab5019e1adb5286d344b91aeff9e8d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ImageViewFrame</name>
+      <anchorfile>class_ui___c_scene_connector_gui_comp.html</anchorfile>
+      <anchor>a7ebca620ad173ba2076cbed761ab36f3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout1</name>
+      <anchorfile>class_ui___c_scene_connector_gui_comp.html</anchorfile>
+      <anchor>a82c40bb2668a9bee9294e9674f965f00</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ExternFrame</name>
+      <anchorfile>class_ui___c_scene_connector_gui_comp.html</anchorfile>
+      <anchor>a1a0eee81403ebec81f8cce2eb825809f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout2</name>
+      <anchorfile>class_ui___c_scene_connector_gui_comp.html</anchorfile>
+      <anchor>ac68d94682756e381713fd1b4a5528160</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ParamsFrame</name>
+      <anchorfile>class_ui___c_scene_connector_gui_comp.html</anchorfile>
+      <anchor>a635abd5dd885ffba49c788d1c9961331</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>vboxLayout3</name>
+      <anchorfile>class_ui___c_scene_connector_gui_comp.html</anchorfile>
+      <anchor>ae51c904932c0c6f8d162c001ea6548f5</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CSelectableGuiComp</name>
+    <filename>class_ui___c_selectable_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_selectable_gui_comp.html</anchorfile>
+      <anchor>a71f62d6245dfcabd2f45b3528f6579dc</anchor>
+      <arglist>(QWidget *CSelectableGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_selectable_gui_comp.html</anchorfile>
+      <anchor>ad2e5debde678dcc6758f5a1392b88022</anchor>
+      <arglist>(QWidget *CSelectableGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_selectable_gui_comp.html</anchorfile>
+      <anchor>aa2fc36f1cbd36c3f0f1d1e0063d462b7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>SelectorFrame</name>
+      <anchorfile>class_ui___c_selectable_gui_comp.html</anchorfile>
+      <anchor>a7590a28cbdfb0ee79140300c511ab398</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_3</name>
+      <anchorfile>class_ui___c_selectable_gui_comp.html</anchorfile>
+      <anchor>afd2bbe88d787800b17985ae4ccd31630</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>LineSeparator</name>
+      <anchorfile>class_ui___c_selectable_gui_comp.html</anchorfile>
+      <anchor>a2ce44fac2b67b34a0239f4e71ce5f67a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QStackedWidget *</type>
+      <name>SelectionStack</name>
+      <anchorfile>class_ui___c_selectable_gui_comp.html</anchorfile>
+      <anchor>a20a7a980a0d6220c9efb95f32627131c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>NoSelectionPage</name>
+      <anchorfile>class_ui___c_selectable_gui_comp.html</anchorfile>
+      <anchor>aa19187e59034a82ce9e3455fbf31be22</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_selectable_gui_comp.html</anchorfile>
+      <anchor>adc224c9e0adc79d41508fefc715d4a00</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>NoSelectionLabel</name>
+      <anchorfile>class_ui___c_selectable_gui_comp.html</anchorfile>
+      <anchor>a907fc968a5538449a8854e64183f5f29</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CSelectionParamGuiComp</name>
+    <filename>class_ui___c_selection_param_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_selection_param_gui_comp.html</anchorfile>
+      <anchor>aefafb26d0c60d52c80fa0f7a845f3b7f</anchor>
+      <arglist>(QWidget *CSelectionParamGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_selection_param_gui_comp.html</anchorfile>
+      <anchor>a7c753f84cad8ff13549d46c0e7dbc6f7</anchor>
+      <arglist>(QWidget *CSelectionParamGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_selection_param_gui_comp.html</anchorfile>
+      <anchor>a80cd3d7272918478b3082a5147cc99bc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>SelectionFrame</name>
+      <anchorfile>class_ui___c_selection_param_gui_comp.html</anchorfile>
+      <anchor>a676891658e8654ceef0e1d56dd93ecf2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>InfoFrame</name>
+      <anchorfile>class_ui___c_selection_param_gui_comp.html</anchorfile>
+      <anchor>af58f9354bb4b4f9b21a28cb0605832ce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_selection_param_gui_comp.html</anchorfile>
+      <anchor>a67742a220c0418f6b374f027a9ed044b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer</name>
+      <anchorfile>class_ui___c_selection_param_gui_comp.html</anchorfile>
+      <anchor>a2bf9f1ac79e7cecc79eb5090aa648aa2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>InfoIcon</name>
+      <anchorfile>class_ui___c_selection_param_gui_comp.html</anchorfile>
+      <anchor>ac22407926bf8de37f331ccecf5b30fc5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>InfoLabel</name>
+      <anchorfile>class_ui___c_selection_param_gui_comp.html</anchorfile>
+      <anchor>aa112a3beaedb20a4d4ca17a84738eaf0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>DescriptionFrame</name>
+      <anchorfile>class_ui___c_selection_param_gui_comp.html</anchorfile>
+      <anchor>a2de3f826a118ccbc7b55914a8e5134a1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_selection_param_gui_comp.html</anchorfile>
+      <anchor>a2a6137ae5096ed1a1ba6ccd5956a3462</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>DescriptionLabel</name>
+      <anchorfile>class_ui___c_selection_param_gui_comp.html</anchorfile>
+      <anchor>a7d067009eaeafe5821ade887f6149d34</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CSelectionParamIndexGuiComp</name>
+    <filename>class_ui___c_selection_param_index_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_selection_param_index_gui_comp.html</anchorfile>
+      <anchor>a707596a4a4e6ad8262273b60c84d4d97</anchor>
+      <arglist>(QWidget *CSelectionParamIndexGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_selection_param_index_gui_comp.html</anchorfile>
+      <anchor>a2e460b3e1bee885830461fc056bd5a92</anchor>
+      <arglist>(QWidget *CSelectionParamIndexGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_selection_param_index_gui_comp.html</anchorfile>
+      <anchor>a55ea2b8941eb3df157db21ffb77d6cb2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_2</name>
+      <anchorfile>class_ui___c_selection_param_index_gui_comp.html</anchorfile>
+      <anchor>a2bab55d2ed13d791e3902ce8ef1392ca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSlider *</type>
+      <name>OptionIndexSlider</name>
+      <anchorfile>class_ui___c_selection_param_index_gui_comp.html</anchorfile>
+      <anchor>ab1f808e4dd9f8eb64f6be38993ff4bff</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpinBox *</type>
+      <name>OptionIndexSpin</name>
+      <anchorfile>class_ui___c_selection_param_index_gui_comp.html</anchorfile>
+      <anchor>a6dcf764d3b25f793b3347a0f12b5120e</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CShapeInfoGuiComp</name>
+    <filename>class_ui___c_shape_info_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_shape_info_gui_comp.html</anchorfile>
+      <anchor>a78e03fb98aed20417ef01c95ebeca518</anchor>
+      <arglist>(QWidget *CShapeInfoGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_shape_info_gui_comp.html</anchorfile>
+      <anchor>a64c371199079079faa10df7f7db5fc78</anchor>
+      <arglist>(QWidget *CShapeInfoGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_shape_info_gui_comp.html</anchorfile>
+      <anchor>a6f32757f1cdfc16cde218d116d774fe0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>InfoText</name>
+      <anchorfile>class_ui___c_shape_info_gui_comp.html</anchorfile>
+      <anchor>a1fa234fd021282c3fd1ae0a0c3b087b0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer</name>
+      <anchorfile>class_ui___c_shape_info_gui_comp.html</anchorfile>
+      <anchor>a855b12ffd662ab7f97196ed51a61c60a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CSplashScreenGuiComp</name>
+    <filename>class_ui___c_splash_screen_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_splash_screen_gui_comp.html</anchorfile>
+      <anchor>a1d313ec1c17a80e7f8d1f1ae06b7ae47</anchor>
+      <arglist>(QWidget *CSplashScreenGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_splash_screen_gui_comp.html</anchorfile>
+      <anchor>ad114490e1479319bc11ac880419d9c96</anchor>
+      <arglist>(QWidget *CSplashScreenGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_splash_screen_gui_comp.html</anchorfile>
+      <anchor>a4b48639ceffa16cc208fd4b6e59cbb78</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>ProductNameLabel</name>
+      <anchorfile>class_ui___c_splash_screen_gui_comp.html</anchorfile>
+      <anchor>a4a219e2e0b4f05ead2ce7a221952c21c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>ApplicationNameLabel</name>
+      <anchorfile>class_ui___c_splash_screen_gui_comp.html</anchorfile>
+      <anchor>a54458b2f570b75ed3db86b561f99e1d1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>ApplicationTypeLabel</name>
+      <anchorfile>class_ui___c_splash_screen_gui_comp.html</anchorfile>
+      <anchor>a886d7dbe2e0e9fd7e3cda946fee4b7a1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>verticalSpacer</name>
+      <anchorfile>class_ui___c_splash_screen_gui_comp.html</anchorfile>
+      <anchor>ac5ff935cd6779b20593fdce4c3638758</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_splash_screen_gui_comp.html</anchorfile>
+      <anchor>a54993fb2f3f7094f4642db2331c92029</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>VersionsFrame</name>
+      <anchorfile>class_ui___c_splash_screen_gui_comp.html</anchorfile>
+      <anchor>a5f57955421c9f7443ae05bfd825b7b94</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGridLayout *</type>
+      <name>gridLayout</name>
+      <anchorfile>class_ui___c_splash_screen_gui_comp.html</anchorfile>
+      <anchor>a1f08ca98192bcace73da4d1fd372bccf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>MainVersionTitleLabel</name>
+      <anchorfile>class_ui___c_splash_screen_gui_comp.html</anchorfile>
+      <anchor>a810b978a6e57aa8a6310132b2f6a9fd4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>MainVersionLabel</name>
+      <anchorfile>class_ui___c_splash_screen_gui_comp.html</anchorfile>
+      <anchor>ad736a041ec26fdb5b71a82f4821057cf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer</name>
+      <anchorfile>class_ui___c_splash_screen_gui_comp.html</anchorfile>
+      <anchor>a9d2598370f9f6d9d54574aafb6df0d5d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>CopyrightLabel</name>
+      <anchorfile>class_ui___c_splash_screen_gui_comp.html</anchorfile>
+      <anchor>a82781ae91a301f99157b772bca6628c4</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CTextLogGuiComp</name>
+    <filename>class_ui___c_text_log_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_text_log_gui_comp.html</anchorfile>
+      <anchor>a8c3a7cdada0ecfad9aa7d447733742f1</anchor>
+      <arglist>(QWidget *CTextLogGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_text_log_gui_comp.html</anchorfile>
+      <anchor>aee8c2e1442d2c5a97012d0b981ddc510</anchor>
+      <arglist>(QWidget *CTextLogGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_text_log_gui_comp.html</anchorfile>
+      <anchor>abb8639288dd11f8eb2ce81c85642af15</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>MainLayout</name>
+      <anchorfile>class_ui___c_text_log_gui_comp.html</anchorfile>
+      <anchor>aa4e05603c423b0640782141dce3a6e56</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ToolBarFrame</name>
+      <anchorfile>class_ui___c_text_log_gui_comp.html</anchorfile>
+      <anchor>a4252ce5ec2bc3c44eb5b4101a2d55155</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_2</name>
+      <anchorfile>class_ui___c_text_log_gui_comp.html</anchorfile>
+      <anchor>a8f4bf16ff90f985ea1c0edd66934a7de</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label</name>
+      <anchorfile>class_ui___c_text_log_gui_comp.html</anchorfile>
+      <anchor>ad0ebf355251526e1a27c8f1dbe876f08</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QComboBox *</type>
+      <name>SeverityFilterCB</name>
+      <anchorfile>class_ui___c_text_log_gui_comp.html</anchorfile>
+      <anchor>a25ad2c66ee8cb2ce40c5c84b73719320</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>label_2</name>
+      <anchorfile>class_ui___c_text_log_gui_comp.html</anchorfile>
+      <anchor>a2993d21e320e90a666158e56503ceea9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QComboBox *</type>
+      <name>SourceFilterCB</name>
+      <anchorfile>class_ui___c_text_log_gui_comp.html</anchorfile>
+      <anchor>ac248b2e443e5abb132a2bc8db0ee2e08</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>BarSpacer</name>
+      <anchorfile>class_ui___c_text_log_gui_comp.html</anchorfile>
+      <anchor>a4e889de54711b3fd2535a5bfedb5eb59</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>FilterFrame</name>
+      <anchorfile>class_ui___c_text_log_gui_comp.html</anchorfile>
+      <anchor>a2f4dfe884e03d2c5b26e5623dae5192e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout_3</name>
+      <anchorfile>class_ui___c_text_log_gui_comp.html</anchorfile>
+      <anchor>abbcc0552e232b22b0f65fa547858714f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>LuppeIcon</name>
+      <anchorfile>class_ui___c_text_log_gui_comp.html</anchorfile>
+      <anchor>ab7705a3be1e43bb0dd49d71a7f298018</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLineEdit *</type>
+      <name>FilterText</name>
+      <anchorfile>class_ui___c_text_log_gui_comp.html</anchorfile>
+      <anchor>a177437d0d5807d0ba56e755d445dd9d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QToolButton *</type>
+      <name>FilterClearButton</name>
+      <anchorfile>class_ui___c_text_log_gui_comp.html</anchorfile>
+      <anchor>a2bd1aed4ff43fbe3a5d55991899f15c5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTextEdit *</type>
+      <name>LogEditor</name>
+      <anchorfile>class_ui___c_text_log_gui_comp.html</anchorfile>
+      <anchor>ab815a3f10caeb24a06015f8eff16d850</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CVariableParamGuiComp</name>
+    <filename>class_ui___c_variable_param_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_variable_param_gui_comp.html</anchorfile>
+      <anchor>ae9e2b06eb0c42d82803cde085777b02e</anchor>
+      <arglist>(QWidget *CVariableParamGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_variable_param_gui_comp.html</anchorfile>
+      <anchor>a147116905abab5e781fa9210855b42bb</anchor>
+      <arglist>(QWidget *CVariableParamGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_variable_param_gui_comp.html</anchorfile>
+      <anchor>ae3b6871b010ca1427dfb697e1108e22c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QComboBox *</type>
+      <name>TypeSelectorCB</name>
+      <anchorfile>class_ui___c_variable_param_gui_comp.html</anchorfile>
+      <anchor>a3830bac3eae40863b43a26b21e249faa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>ParamFrame</name>
+      <anchorfile>class_ui___c_variable_param_gui_comp.html</anchorfile>
+      <anchor>a6ffada9a0f3234938c65833711bdb4d6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_variable_param_gui_comp.html</anchorfile>
+      <anchor>acc3255616c39fbb43da9cec50bd1838d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CVersionInfoGuiComp</name>
+    <filename>class_ui___c_version_info_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_version_info_gui_comp.html</anchorfile>
+      <anchor>ad5103ba86d5e2bb6693ce3fae26c02cc</anchor>
+      <arglist>(QWidget *CVersionInfoGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_version_info_gui_comp.html</anchorfile>
+      <anchor>a0c88ad05ecad79f9b14086283f7d5058</anchor>
+      <arglist>(QWidget *CVersionInfoGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_version_info_gui_comp.html</anchorfile>
+      <anchor>a2708dba296e79a9759b322e58c215f03</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QTreeWidget *</type>
+      <name>Tree</name>
+      <anchorfile>class_ui___c_version_info_gui_comp.html</anchorfile>
+      <anchor>ae50b23af75a247fe77d0a97c31c1f333</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>VisualStatus</name>
@@ -8535,27 +11707,6 @@
       <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
       <anchor>a016af1dc4f10d78f5eab57fe5b040350</anchor>
       <arglist>(const CObject2dBase &amp;object2d)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>StartTransform</name>
-      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
-      <anchor>a3ec5cbbdd6f4c54a4e558d9c693ef8d6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>FinishTransform</name>
-      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
-      <anchor>a1d57324b5e8c624a851610b36ff6d721</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsUndoAllowed</name>
-      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
-      <anchor>abc9387e818299bdc2d30d0b196b650a8</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ICalibration2d *</type>
@@ -11088,18 +14239,6 @@
       <name>CF_OBJECT_POSITION</name>
       <anchorfile>classi2d_1_1_i_object2d.html</anchorfile>
       <anchor>ad93b4b065f29fa85330055454c837acaa1ec86ce6e63055e3ff6f752e4c954253</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_OBJECT_START_TRANSFORM</name>
-      <anchorfile>classi2d_1_1_i_object2d.html</anchorfile>
-      <anchor>ad93b4b065f29fa85330055454c837acaad9a5f2304030593f0f87f786708c5250</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_OBJECT_END_TRANSFORM</name>
-      <anchorfile>classi2d_1_1_i_object2d.html</anchorfile>
-      <anchor>ad93b4b065f29fa85330055454c837acaad2d582bba18c432ed8ca792f65865c04</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -47120,7 +50259,7 @@
   <compound kind="class">
     <name>istd::TChangeNotifier</name>
     <filename>classistd_1_1_t_change_notifier.html</filename>
-    <templarg></templarg>
+    <templarg>Changeable</templarg>
     <base>TPointerBase&lt; Changeable &gt;</base>
     <member kind="typedef">
       <type>istd::TPointerBase&lt; Changeable &gt;</type>
@@ -47886,7 +51025,7 @@
       <type>TOptDelPtr &amp;</type>
       <name>operator=</name>
       <anchorfile>classistd_1_1_t_opt_del_ptr.html</anchorfile>
-      <anchor>a5a00ca9c447075f0ffe9d8992e15186d</anchor>
+      <anchor>acbeedf8206a2881300e6604df305cda3</anchor>
       <arglist>(const TOptDelPtr &amp;ptr)</arglist>
     </member>
     <member kind="function">
@@ -51847,28 +54986,28 @@
       <type>virtual bool</type>
       <name>IsDraggable</name>
       <anchorfile>classiview_1_1_c_interactive_shape_base.html</anchorfile>
-      <anchor>a1938f41bb140d38bfcb633d3d4bec7e3</anchor>
+      <anchor>a75ae8c27f90d322531287cbd684044b9</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginDrag</name>
       <anchorfile>classiview_1_1_c_interactive_shape_base.html</anchorfile>
-      <anchor>ac108c43963e1a8e95eb6338b796d5c4d</anchor>
+      <anchor>a1230c65b77dd6ce1710ab256571518be</anchor>
       <arglist>(const istd::CIndex2d &amp;position)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetDragPosition</name>
       <anchorfile>classiview_1_1_c_interactive_shape_base.html</anchorfile>
-      <anchor>a963e0fa45b2b8ef6dbb6e5846b780ee5</anchor>
+      <anchor>af760cfd679338eb19d70683b177be786</anchor>
       <arglist>(const istd::CIndex2d &amp;position)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndDrag</name>
       <anchorfile>classiview_1_1_c_interactive_shape_base.html</anchorfile>
-      <anchor>a46b5b4c90c9d5e025b92a450313a3de5</anchor>
+      <anchor>aea8b1d4cc9cea1daa1e4c85e115b1967</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">

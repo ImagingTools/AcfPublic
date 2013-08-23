@@ -31,7 +31,7 @@
 // Tutorial includes
 #include "IAb.h"
 
-#include "Generated/ui_CAbGuiComp.h"
+#include "GeneratedFiles/CAbGuiComp/ui_CAbGuiComp.h"
 
 
 /**

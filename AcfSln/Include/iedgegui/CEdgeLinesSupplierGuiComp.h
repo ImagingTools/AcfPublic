@@ -38,7 +38,7 @@
 #include "iqtinsp/TSupplierGuiCompBase.h"
 #include "iqtipr/iqtipr.h"
 
-#include "iedgegui/Generated/ui_CEdgeLinesSupplierGuiComp.h"
+#include "GeneratedFiles/iedgegui/ui_CEdgeLinesSupplierGuiComp.h"
 
 
 

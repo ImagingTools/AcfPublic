@@ -1,6 +1,30 @@
 <?xml version='1.0' encoding='ISO-8859-1' standalone='yes' ?>
 <tagfile>
   <compound kind="file">
+    <name>ui_CTextEditor.h</name>
+    <path>C:/Temp/Iacf/Include/GeneratedFiles/iqsci/</path>
+    <filename>ui___c_text_editor_8h</filename>
+    <class kind="class">Ui_CTextEditor</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CHistogramViewComp.h</name>
+    <path>C:/Temp/Iacf/Include/GeneratedFiles/iqwt/</path>
+    <filename>ui___c_histogram_view_comp_8h</filename>
+    <class kind="class">Ui_CHistogramViewComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CProgressHistoryGuiComp.h</name>
+    <path>C:/Temp/Iacf/Include/GeneratedFiles/iqwt/</path>
+    <filename>ui___c_progress_history_gui_comp_8h</filename>
+    <class kind="class">Ui_CProgressHistoryGuiComp</class>
+  </compound>
+  <compound kind="file">
+    <name>ui_CSurfaceViewComp.h</name>
+    <path>C:/Temp/Iacf/Include/GeneratedFiles/iqwt3d/</path>
+    <filename>ui___c_surface_view_comp_8h</filename>
+    <class kind="class">Ui_CSurfaceViewComp</class>
+  </compound>
+  <compound kind="file">
     <name>CServiceApplicationComp.h</name>
     <path>C:/Temp/Iacf/Include/iabc/</path>
     <filename>_c_service_application_comp_8h</filename>
@@ -152,6 +176,7 @@
     <name>CTextEditor.h</name>
     <path>C:/Temp/Iacf/Include/iqsci/</path>
     <filename>_c_text_editor_8h</filename>
+    <includes id="ui___c_text_editor_8h" name="ui_CTextEditor.h" local="yes" imported="no">GeneratedFiles/iqsci/ui_CTextEditor.h</includes>
     <class kind="class">iqsci::CTextEditor</class>
     <namespace>iqsci</namespace>
   </compound>
@@ -173,6 +198,7 @@
     <name>CHistogramViewComp.h</name>
     <path>C:/Temp/Iacf/Include/iqwt/</path>
     <filename>_c_histogram_view_comp_8h</filename>
+    <includes id="ui___c_histogram_view_comp_8h" name="ui_CHistogramViewComp.h" local="yes" imported="no">GeneratedFiles/iqwt/ui_CHistogramViewComp.h</includes>
     <class kind="class">iqwt::CHistogramViewComp</class>
     <namespace>iqwt</namespace>
   </compound>
@@ -180,6 +206,7 @@
     <name>CProgressHistoryGuiComp.h</name>
     <path>C:/Temp/Iacf/Include/iqwt/</path>
     <filename>_c_progress_history_gui_comp_8h</filename>
+    <includes id="ui___c_progress_history_gui_comp_8h" name="ui_CProgressHistoryGuiComp.h" local="yes" imported="no">GeneratedFiles/iqwt/ui_CProgressHistoryGuiComp.h</includes>
     <class kind="class">iqwt::CProgressHistoryGuiComp</class>
     <namespace>iqwt</namespace>
   </compound>
@@ -193,6 +220,7 @@
     <name>CSurfaceViewComp.h</name>
     <path>C:/Temp/Iacf/Include/iqwt3d/</path>
     <filename>_c_surface_view_comp_8h</filename>
+    <includes id="ui___c_surface_view_comp_8h" name="ui_CSurfaceViewComp.h" local="yes" imported="no">GeneratedFiles/iqwt3d/ui_CSurfaceViewComp.h</includes>
     <class kind="class">iqwt3d::CSurfaceViewComp</class>
     <namespace>Qwt3D</namespace>
     <namespace>iqwt3d</namespace>
@@ -258,6 +286,225 @@
   <compound kind="class">
     <name>TViewExtenderCompBase</name>
     <filename>class_t_view_extender_comp_base.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CHistogramViewComp</name>
+    <filename>class_ui___c_histogram_view_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_histogram_view_comp.html</anchorfile>
+      <anchor>a6690782f363d324851c99964c525a987</anchor>
+      <arglist>(QWidget *CHistogramViewComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_histogram_view_comp.html</anchorfile>
+      <anchor>a891cf3c30ec3f5e2d3990a44caa60539</anchor>
+      <arglist>(QWidget *CHistogramViewComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_3</name>
+      <anchorfile>class_ui___c_histogram_view_comp.html</anchorfile>
+      <anchor>a6eab0c51ac9ab331b96af7687668d045</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>ChannelSelectorFrame</name>
+      <anchorfile>class_ui___c_histogram_view_comp.html</anchorfile>
+      <anchor>a27fb531a41babf663a24f3179ab9f478</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_histogram_view_comp.html</anchorfile>
+      <anchor>aaa053a661cbad59284de51ec7e2ff04e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSpacerItem *</type>
+      <name>horizontalSpacer</name>
+      <anchorfile>class_ui___c_histogram_view_comp.html</anchorfile>
+      <anchor>acc2dbb45472703aedf4d6d9f6b286cc2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QComboBox *</type>
+      <name>ChannelCombo</name>
+      <anchorfile>class_ui___c_histogram_view_comp.html</anchorfile>
+      <anchor>a914155fedd64ac23c4572decfaba8da2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>PlotFrame</name>
+      <anchorfile>class_ui___c_histogram_view_comp.html</anchorfile>
+      <anchor>a7077701e3a4a17eee6d776d4d1cd948d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_histogram_view_comp.html</anchorfile>
+      <anchor>a6df6773788aef4512ad7314417ce495a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QGroupBox *</type>
+      <name>StatisticsFrame</name>
+      <anchorfile>class_ui___c_histogram_view_comp.html</anchorfile>
+      <anchor>ac7947eb570ec0c3878f08ab5fd120350</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_histogram_view_comp.html</anchorfile>
+      <anchor>ac127b7a42cb419543e2c008b8c1f8429</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CProgressHistoryGuiComp</name>
+    <filename>class_ui___c_progress_history_gui_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_progress_history_gui_comp.html</anchorfile>
+      <anchor>a2c523a29fe2b6339e7a487fa9afa4ba5</anchor>
+      <arglist>(QWidget *CProgressHistoryGuiComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_progress_history_gui_comp.html</anchorfile>
+      <anchor>a20f6d4d09478be07b47a68a8ff62b7e4</anchor>
+      <arglist>(QWidget *CProgressHistoryGuiComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_progress_history_gui_comp.html</anchorfile>
+      <anchor>ad431765406fc39ff2930c8e1192e38b4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>DiagramFrame</name>
+      <anchorfile>class_ui___c_progress_history_gui_comp.html</anchorfile>
+      <anchor>a70aa46f54ce57f4073fab70d417391d5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_2</name>
+      <anchorfile>class_ui___c_progress_history_gui_comp.html</anchorfile>
+      <anchor>af91e82c235a8145a893483ceb8d49158</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWidget *</type>
+      <name>StatusFrame</name>
+      <anchorfile>class_ui___c_progress_history_gui_comp.html</anchorfile>
+      <anchor>ae7a1030ed1ce372290c63298a4dd9f4d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QHBoxLayout *</type>
+      <name>horizontalLayout</name>
+      <anchorfile>class_ui___c_progress_history_gui_comp.html</anchorfile>
+      <anchor>ae85a45e24eec09f23af4df8a91e87702</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QLabel *</type>
+      <name>DescriptionLabel</name>
+      <anchorfile>class_ui___c_progress_history_gui_comp.html</anchorfile>
+      <anchor>a942ff892b7d1daa744e210dc390844c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QPushButton *</type>
+      <name>CancelButton</name>
+      <anchorfile>class_ui___c_progress_history_gui_comp.html</anchorfile>
+      <anchor>a1c8c7c3b87b89c6801fdb081eb6b8cc4</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CSurfaceViewComp</name>
+    <filename>class_ui___c_surface_view_comp.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_surface_view_comp.html</anchorfile>
+      <anchor>a92968b4cf32e8cf9c003513d934c8e2f</anchor>
+      <arglist>(QWidget *CSurfaceViewComp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_surface_view_comp.html</anchorfile>
+      <anchor>a4af360e083946dadd79f73557f4ac7b5</anchor>
+      <arglist>(QWidget *CSurfaceViewComp)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout_4</name>
+      <anchorfile>class_ui___c_surface_view_comp.html</anchorfile>
+      <anchor>aeda3dc447cd3d00036860b9d0b817e65</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>SurfacePlotFrame</name>
+      <anchorfile>class_ui___c_surface_view_comp.html</anchorfile>
+      <anchor>a2da269a3d8b9030ca442151c3b0c8f89</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_surface_view_comp.html</anchorfile>
+      <anchor>a189a9038941edcf5f3af4977d0c89199</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Ui_CTextEditor</name>
+    <filename>class_ui___c_text_editor.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>class_ui___c_text_editor.html</anchorfile>
+      <anchor>ac0113a35711cc91b8283004ed767f555</anchor>
+      <arglist>(QWidget *CTextEditor)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>class_ui___c_text_editor.html</anchorfile>
+      <anchor>a3aa3c3c53c03be22a262e8474bddb1f2</anchor>
+      <arglist>(QWidget *CTextEditor)</arglist>
+    </member>
+    <member kind="variable">
+      <type>QVBoxLayout *</type>
+      <name>verticalLayout</name>
+      <anchorfile>class_ui___c_text_editor.html</anchorfile>
+      <anchor>aa9bb23c63c16dcb03f712112369c04b2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QFrame *</type>
+      <name>EditorFrame</name>
+      <anchorfile>class_ui___c_text_editor.html</anchorfile>
+      <anchor>a2eb25d4fbcdca67a2eca25b6cb4061b7</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="namespace">
     <name>iabc</name>

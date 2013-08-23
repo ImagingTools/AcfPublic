@@ -34,7 +34,7 @@
 
 
 // Local includes
-#include "iqtipr/Generated/ui_CProcessedBitmapView.h"
+#include "GeneratedFiles/iqtipr/ui_CProcessedBitmapView.h"
 
 
 namespace iqtipr

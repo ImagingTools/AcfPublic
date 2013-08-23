@@ -33,7 +33,7 @@
 // ACF-Solutions includes
 #include "imm/IVideoController.h"
 
-#include "iqtmm/Generated/ui_CPlaybackControllerGuiComp.h"
+#include "GeneratedFiles/iqtmm/ui_CPlaybackControllerGuiComp.h"
 
 
 namespace iqtmm

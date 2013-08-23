@@ -30,7 +30,7 @@
 
 #include "iqtsig/iqtsig.h"
 
-#include "iqtsig/Generated/ui_CTriggerParamsGuiComp.h"
+#include "GeneratedFiles/iqtsig/ui_CTriggerParamsGuiComp.h"
 
 
 namespace iqtsig

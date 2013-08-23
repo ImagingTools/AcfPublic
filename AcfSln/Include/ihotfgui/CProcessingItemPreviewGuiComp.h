@@ -35,7 +35,7 @@
 // AcfSln includes
 #include "ihotf/IHotfolderProcessingItem.h"
 
-#include "ihotfgui/Generated/ui_CProcessingItemPreviewGuiComp.h"
+#include "GeneratedFiles/ihotfgui/ui_CProcessingItemPreviewGuiComp.h"
 
 
 namespace ihotfgui

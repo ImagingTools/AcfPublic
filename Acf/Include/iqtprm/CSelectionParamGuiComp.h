@@ -41,7 +41,7 @@
 #include "iprm/ISelectionParam.h"
 #include "iqtgui/IIconProvider.h"
 #include "iqtgui/TDesignerGuiObserverCompBase.h"
-#include "iqtprm/Generated/ui_CSelectionParamGuiComp.h"
+#include "GeneratedFiles/iqtprm/ui_CSelectionParamGuiComp.h"
 
 
 namespace iqtprm

@@ -32,7 +32,7 @@
 #include "iqtgui/TDesignerGuiObserverCompBase.h"
 #include "iqtgui/CHierarchicalCommand.h"
 
-#include "iqwt3d/Generated/ui_CSurfaceViewComp.h"
+#include "GeneratedFiles/iqwt3d/ui_CSurfaceViewComp.h"
 
 
 namespace Qwt3D

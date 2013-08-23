@@ -30,7 +30,7 @@
 
 #include "iqtgui/TDesignerGuiObserverCompBase.h"
 
-#include "iqtprm/Generated/ui_CEnableableParamGuiComp.h"
+#include "GeneratedFiles/iqtprm/ui_CEnableableParamGuiComp.h"
 
 
 namespace iqtprm

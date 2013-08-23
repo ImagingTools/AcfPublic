@@ -41,7 +41,7 @@
 
 #include "iqtcam/iqtcam.h"
 
-#include "iqtcam/Generated/ui_CBitmapSupplierGuiComp.h"
+#include "GeneratedFiles/iqtcam/ui_CBitmapSupplierGuiComp.h"
 
 
 namespace iqtcam

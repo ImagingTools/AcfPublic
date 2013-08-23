@@ -39,7 +39,7 @@
 
 #include "iqtgui/TDesignerGuiObserverCompBase.h"
 
-#include "iqtprm/Generated/ui_CFileNameParamGuiComp.h"
+#include "GeneratedFiles/iqtprm/ui_CFileNameParamGuiComp.h"
 
 
 namespace iqtprm

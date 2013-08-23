@@ -43,7 +43,7 @@
 
 #include "iqtcam/iqtcam.h"
 
-#include "iqtcam/Generated/ui_CSnapImageGuiComp.h"
+#include "GeneratedFiles/iqtcam/ui_CSnapImageGuiComp.h"
 
 
 namespace iqtcam

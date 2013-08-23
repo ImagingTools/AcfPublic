@@ -44,7 +44,7 @@
 
 #include "iqtsig/CSampleContainerView.h"
 
-#include "iqtsig/Generated/ui_CSampleAcquisitionGuiComp.h"
+#include "GeneratedFiles/iqtsig/ui_CSampleAcquisitionGuiComp.h"
 
 
 namespace iqtsig

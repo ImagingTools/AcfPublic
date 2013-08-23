@@ -34,7 +34,7 @@
 <a name="l00008"></a>00008 <span class="comment">// ACF-Solutions includes</span>
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_i_pattern_controller_8h.html">iipr/IPatternController.h</a>&quot;</span>
 <a name="l00010"></a>00010 
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;iqtipr/Generated/ui_CPatternTeachingControllerGuiComp.h&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="ui___c_pattern_teaching_controller_gui_comp_8h.html">GeneratedFiles/iqtipr/ui_CPatternTeachingControllerGuiComp.h</a>&quot;</span>
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 <span class="keyword">namespace </span>iqtipr
@@ -55,31 +55,38 @@
 <a name="l00029"></a>00029        I_BEGIN_COMPONENT(<a class="code" href="classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html">CPatternTeachingControllerGuiComp</a>);
 <a name="l00030"></a>00030               I_ASSIGN(m_patternEditorCompPtr, <span class="stringliteral">&quot;PatternEditor&quot;</span>, <span class="stringliteral">&quot;Pattern editor&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;PatternEditor&quot;</span>);
 <a name="l00031"></a>00031               <a class="code" href="classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html#ac59e5da5835d8d93a616355fc0b82c56">I_ASSIGN_TO</a>(m_patternEditorObserverCompPtr, m_patternEditorCompPtr, <span class="keyword">false</span>);
-<a name="l00032"></a>00032        I_END_COMPONENT;
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034 <span class="keyword">protected</span> Q_SLOTS:
-<a name="l00035"></a>00035        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html#a1e54c3f62c2a07f13b797dd8a8326f5c">on_LearnButton_clicked</a>();
-<a name="l00036"></a>00036        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html#ac6142a401bd4bcb731dec6039b385a2f">on_EditButton_clicked</a>();
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038 <span class="keyword">protected</span>:
-<a name="l00039"></a>00039        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html#a4f5464421cf5f6a38ac4fb8b727e10fa">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042        <span class="comment">// reimplemented (iqt::CGuiObjectBase)</span>
-<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html#a7f73811ea800bcf38e55672c53c8be76">OnGuiCreated</a>();
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033               I_ASSIGN(m_patternViewCompPtr, <span class="stringliteral">&quot;PatternView&quot;</span>, <span class="stringliteral">&quot;GUI representing learned pattern&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;PatternView&quot;</span>);
+<a name="l00034"></a>00034               I_ASSIGN(m_patternViewObserverCompPtr, <span class="stringliteral">&quot;PatternObserver&quot;</span>, <span class="stringliteral">&quot;Pattern GUI observer&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;PatternObserver&quot;</span>);
+<a name="l00035"></a>00035        I_END_COMPONENT;
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037 <span class="keyword">protected</span> Q_SLOTS:
+<a name="l00038"></a>00038        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html#a1e54c3f62c2a07f13b797dd8a8326f5c">on_LearnButton_clicked</a>();
+<a name="l00039"></a>00039        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html#ac6142a401bd4bcb731dec6039b385a2f">on_EditButton_clicked</a>();
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041 <span class="keyword">protected</span>:
+<a name="l00042"></a>00042        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html#a4f5464421cf5f6a38ac4fb8b727e10fa">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
 <a name="l00044"></a>00044 
-<a name="l00045"></a>00045 <span class="keyword">private</span>:
-<a name="l00046"></a>00046        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_patternEditorCompPtr);
-<a name="l00047"></a>00047        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>, m_patternEditorObserverCompPtr);
-<a name="l00048"></a>00048 };
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051 } <span class="comment">// namespace iqtipr</span>
+<a name="l00045"></a>00045        <span class="comment">// reimplemented (iqt::CGuiObjectBase)</span>
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html#a7f73811ea800bcf38e55672c53c8be76">OnGuiCreated</a>();
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html#a0c5f4711c8ffaa453c60ea2ba11db659">OnGuiDestroyed</a>();
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 <span class="keyword">private</span>:
+<a name="l00050"></a>00050        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_patternEditorCompPtr);
+<a name="l00051"></a>00051        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>, m_patternEditorObserverCompPtr);
 <a name="l00052"></a>00052 
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054 <span class="preprocessor">#endif // !iqtipr_CPatternTeachingControllerGuiComp_included</span>
-<a name="l00055"></a>00055 <span class="preprocessor"></span>
+<a name="l00053"></a>00053        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_patternViewCompPtr);
+<a name="l00054"></a>00054        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_i_observer.html">imod::IObserver</a>, m_patternViewObserverCompPtr);
+<a name="l00055"></a>00055 };
 <a name="l00056"></a>00056 
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058 } <span class="comment">// namespace iqtipr</span>
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061 <span class="preprocessor">#endif // !iqtipr_CPatternTeachingControllerGuiComp_included</span>
+<a name="l00062"></a>00062 <span class="preprocessor"></span>
+<a name="l00063"></a>00063 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

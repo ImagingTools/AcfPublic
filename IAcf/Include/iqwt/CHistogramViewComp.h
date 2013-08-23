@@ -40,7 +40,7 @@
 #include "imeas/IDataSequence.h"
 #include "imeas/IDataSequenceStatistics.h"
 
-#include "iqwt/Generated/ui_CHistogramViewComp.h"
+#include "GeneratedFiles/iqwt/ui_CHistogramViewComp.h"
 
 
 namespace iqwt

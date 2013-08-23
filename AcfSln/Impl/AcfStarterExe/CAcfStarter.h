@@ -24,7 +24,7 @@
 #define CAcfStarter_included
  
 
-#include "Generated/ui_CAcfStarter.h"
+#include "GeneratedFiles/AcfStarter/ui_CAcfStarter.h"
 
 
 class CAcfStarter: public QWidget, public Ui::CAcfStarter

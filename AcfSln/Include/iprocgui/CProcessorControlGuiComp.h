@@ -40,7 +40,7 @@
 
 #include "iproc/IProcessor.h"
 
-#include "iprocgui/Generated/ui_CProcessorControlGuiComp.h"
+#include "GeneratedFiles/iprocgui/ui_CProcessorControlGuiComp.h"
 
 
 namespace iprocgui

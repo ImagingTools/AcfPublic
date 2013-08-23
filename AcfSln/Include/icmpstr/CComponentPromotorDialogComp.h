@@ -41,7 +41,7 @@
 #include "iqtgui/CHierarchicalCommand.h"
 #include "icmpstr/IElementSelectionInfo.h"
 
-#include "icmpstr/Generated/ui_CComponentPromotorDialogComp.h"
+#include "GeneratedFiles/icmpstr/ui_CComponentPromotorDialogComp.h"
 
 
 namespace icmpstr
