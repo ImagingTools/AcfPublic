@@ -23217,7 +23217,7 @@
   <compound kind="class">
     <name>iipr::ISimpleResultsConsumer</name>
     <filename>classiipr_1_1_i_simple_results_consumer.html</filename>
-    <base>istd::IPolymorphic</base>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetResultsBuffer</name>
@@ -23229,7 +23229,7 @@
   <compound kind="class">
     <name>iipr::ISimpleResultsProvider</name>
     <filename>classiipr_1_1_i_simple_results_provider.html</filename>
-    <base>istd::IPolymorphic</base>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual CSimpleResultsContainer *</type>
       <name>GetResults</name>
