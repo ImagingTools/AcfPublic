@@ -8,8 +8,8 @@ Module{
 	Depends{ name: "acf" }
 	Depends{ name: "cpp" }
 
-	cpp.staticLibraries: path + "/../../../../../CBios/lib/VC9/CBIOS"
+	cpp.staticLibraries: path + "/../../../../CBios/lib/VC9/CBIOS"
 	cpp.includePaths: [
-		path + "/../../../../../CBios/include"
+		path + "/../../../../CBios/include"
 	]
 }

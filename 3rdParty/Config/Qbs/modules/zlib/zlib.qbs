@@ -9,9 +9,9 @@ Module{
 	Depends{ name: "cpp" }
 
 	cpp.staticLibraries: [
-		path + "/../../../../../zlib/lib/zlib",
+		path + "/../../../../zlib/lib/zlib",
 	]
 	cpp.includePaths: [
-		path + "/../../../../../zlib/include"
+		path + "/../../../../zlib/include"
 	]
 }

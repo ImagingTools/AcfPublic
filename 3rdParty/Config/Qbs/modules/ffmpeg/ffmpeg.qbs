@@ -9,15 +9,15 @@ Module{
 	Depends{ name: "cpp" }
 
 	cpp.staticLibraries: [
-		path + "/../../../../../FFMpeg/20121010/lib/avcodec",
-		path + "/../../../../../FFMpeg/20121010/lib/avdevice",
-		path + "/../../../../../FFMpeg/20121010/lib/avfilter",
-		path + "/../../../../../FFMpeg/20121010/lib/avformat",
-		path + "/../../../../../FFMpeg/20121010/lib/avutil",
-		path + "/../../../../../FFMpeg/20121010/lib/swscale"
+		path + "/../../../../FFMpeg/20121010/lib/avcodec",
+		path + "/../../../../FFMpeg/20121010/lib/avdevice",
+		path + "/../../../../FFMpeg/20121010/lib/avfilter",
+		path + "/../../../../FFMpeg/20121010/lib/avformat",
+		path + "/../../../../FFMpeg/20121010/lib/avutil",
+		path + "/../../../../FFMpeg/20121010/lib/swscale"
 	]
 	cpp.includePaths: [
-		path + "/../../../../../FFMpeg/20121010/include",
-		path + "/../../../../../FFMpeg/20121010/msinttypes"
+		path + "/../../../../FFMpeg/20121010/include",
+		path + "/../../../../FFMpeg/20121010/msinttypes"
 	]
 }

@@ -9,9 +9,9 @@ Module{
 	Depends{ name: "cpp" }
 
 	cpp.staticLibraries: [
-		path + "/../../../../../libdc1394/2.2.0/lib/dc1394",
+		path + "/../../../../libdc1394/2.2.0/lib/dc1394",
 	]
 	cpp.includePaths: [
-		path + "/../../../../../libdc1394/2.2.0/dc1394"
+		path + "/../../../../libdc1394/2.2.0/dc1394"
 	]
 }

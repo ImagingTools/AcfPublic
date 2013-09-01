@@ -9,9 +9,9 @@ Module{
 	Depends{ name: "cpp" }
 
 	cpp.staticLibraries: [
-		path + "/../../../../../live555/2012.10.24/lib/libliveMedia",
+		path + "/../../../../live555/2012.10.24/lib/libliveMedia",
 	]
 	cpp.includePaths: [
-		path + "/../../../../../live555/2012.10.24/liveMedia"
+		path + "/../../../../live555/2012.10.24/liveMedia"
 	]
 }
