@@ -25,7 +25,10 @@ Project{
 	}
 
 	ApplicationProduct{
-		name: "Compositor"
+		name: "CompositorExe"
+		targetName: "Compositor"
+
+		consoleApplication: false
 
 		files: ["../*.cpp"]
 

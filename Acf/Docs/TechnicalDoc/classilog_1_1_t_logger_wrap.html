@@ -90,6 +90,14 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send error message to log.  <a href="#aa0a071c19b2b632b147df41207bf979c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_t_logger_wrap.html#abadaac82ecdb83f794136c894ab487ca">SendCriticalMessage</a> (int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send critical message to log.  <a href="#abadaac82ecdb83f794136c894ab487ca"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_t_logger_wrap.html#a80fd5dff3aa3d83e4d39b24e4fc63f52">SendInfoMessageOnce</a> (int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send once info message to log.  <a href="#a80fd5dff3aa3d83e4d39b24e4fc63f52"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_t_logger_wrap.html#aa0d77dbf2bb831b29438936446f0a393">SendWarningMessageOnce</a> (int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send once warning message to log.  <a href="#aa0d77dbf2bb831b29438936446f0a393"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_t_logger_wrap.html#a31e82291cfe271a91013cccf67dbb716">SendErrorMessageOnce</a> (int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send once error message to log.  <a href="#a31e82291cfe271a91013cccf67dbb716"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_t_logger_wrap.html#a1d6acbc0e51abd89a4b2fe22b4b15781">SendCriticalMessageOnce</a> (int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send once critical message to log.  <a href="#a1d6acbc0e51abd89a4b2fe22b4b15781"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_t_logger_wrap.html#ab4b51ebab3e9634407680f35ef4afa98">IsLogConsumed</a> (const <a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a> *categoryPtr=NULL, const int *flagsPtr=NULL) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if any log message is consumed.  <a href="#ab4b51ebab3e9634407680f35ef4afa98"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_t_logger_wrap.html#abeeedb5fce3b703e62b314beb2dc9ae2">SendLogMessage</a> (<a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a> category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </td></tr>
@@ -120,7 +128,7 @@ template&lt;class Base &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00108">108</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00165">165</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 </div>
 </div>
@@ -145,7 +153,7 @@ template&lt;class Base &gt; </div>
 
 <p>Implements <a class="el" href="classilog_1_1_i_loggable.html#a8ed3f045f191cc01be82f59e1222835c">ilog::ILoggable</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00125">125</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00182">182</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 </div>
 </div>
@@ -181,7 +189,7 @@ template&lt;class Base &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classistd_1_1_i_logger.html#a880404a3500d83e8d2260d5304e16ce1">istd::ILogger</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00180">180</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00307">307</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00061">NULL</a>.</p>
 
@@ -209,7 +217,7 @@ template&lt;class Base &gt; </div>
 
 <p>Implements <a class="el" href="classilog_1_1_i_loggable.html#a5a207ced7f0211aa2eef12d0ca9065bd">ilog::ILoggable</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00141">141</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00198">198</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 </div>
 </div>
@@ -263,9 +271,64 @@ template&lt;class Base &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00171">171</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00228">228</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 <p>References <a class="el" href="_i_information_provider_8h_source.html#l00032">istd::IInformationProvider::IC_CRITICAL</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1d6acbc0e51abd89a4b2fe22b4b15781"></a><!-- doxytag: member="ilog::TLoggerWrap::SendCriticalMessageOnce" ref="a1d6acbc0e51abd89a4b2fe22b4b15781" args="(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Base &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classilog_1_1_t_logger_wrap.html">ilog::TLoggerWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::SendCriticalMessageOnce </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>messageSource</em> = <code>QString()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Send once critical message to log. </p>
+<p>Agains to <code>SendCriticalMessage</code> the message will be sent only first time. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a> for message meaning documentation. </dd></dl>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>binary id identifying this message type for automatic processing. </td></tr>
+    <tr><td class="paramname">message</td><td>message text will be send. </td></tr>
+    <tr><td class="paramname">messageSource</td><td>optional human readable description of message source. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00288">288</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 </div>
 </div>
@@ -319,9 +382,64 @@ template&lt;class Base &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00164">164</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00221">221</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 <p>References <a class="el" href="_i_information_provider_8h_source.html#l00031">istd::IInformationProvider::IC_ERROR</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a31e82291cfe271a91013cccf67dbb716"></a><!-- doxytag: member="ilog::TLoggerWrap::SendErrorMessageOnce" ref="a31e82291cfe271a91013cccf67dbb716" args="(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Base &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classilog_1_1_t_logger_wrap.html">ilog::TLoggerWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::SendErrorMessageOnce </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>messageSource</em> = <code>QString()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Send once error message to log. </p>
+<p>Agains to <code>SendErrorMessage</code> the message will be sent only first time. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a> for message meaning documentation. </dd></dl>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>binary id identifying this message type for automatic processing. </td></tr>
+    <tr><td class="paramname">message</td><td>message text will be send. </td></tr>
+    <tr><td class="paramname">messageSource</td><td>source of the message </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00270">270</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 </div>
 </div>
@@ -375,9 +493,64 @@ template&lt;class Base &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00150">150</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00207">207</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 <p>References <a class="el" href="_i_information_provider_8h_source.html#l00029">istd::IInformationProvider::IC_INFO</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a80fd5dff3aa3d83e4d39b24e4fc63f52"></a><!-- doxytag: member="ilog::TLoggerWrap::SendInfoMessageOnce" ref="a80fd5dff3aa3d83e4d39b24e4fc63f52" args="(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Base &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classilog_1_1_t_logger_wrap.html">ilog::TLoggerWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::SendInfoMessageOnce </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>messageSource</em> = <code>QString()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Send once info message to log. </p>
+<p>Agains to <code>SendInfoMessage</code> the message will be sent only first time. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a> for message meaning documentation. </dd></dl>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>binary id identifying this message type for automatic processing. </td></tr>
+    <tr><td class="paramname">message</td><td>message text will be send. </td></tr>
+    <tr><td class="paramname">messageSource</td><td>source of the message </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00235">235</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 </div>
 </div>
@@ -441,7 +614,7 @@ template&lt;class Base &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classistd_1_1_i_logger.html#ac9045cc3d95a7b501480155f548bbe1a">istd::ILogger</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00189">189</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00316">316</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00061">NULL</a>.</p>
 
@@ -499,9 +672,64 @@ template&lt;class Base &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00157">157</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00214">214</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 <p>References <a class="el" href="_i_information_provider_8h_source.html#l00030">istd::IInformationProvider::IC_WARNING</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa0d77dbf2bb831b29438936446f0a393"></a><!-- doxytag: member="ilog::TLoggerWrap::SendWarningMessageOnce" ref="aa0d77dbf2bb831b29438936446f0a393" args="(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Base &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classilog_1_1_t_logger_wrap.html">ilog::TLoggerWrap</a>&lt; <a class="el" href="class_base.html">Base</a> &gt;::SendWarningMessageOnce </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>messageSource</em> = <code>QString()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Send once warning message to log. </p>
+<p>Agains to <code>SendWarningMessage</code> the message will be sent only first time. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_information_provider.html" title="Common interface for class providing some basic information object.">istd::IInformationProvider</a> for message meaning documentation. </dd></dl>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>binary id identifying this message type for automatic processing. </td></tr>
+    <tr><td class="paramname">message</td><td>message text will be send. </td></tr>
+    <tr><td class="paramname">messageSource</td><td>source of the message </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00252">252</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 </div>
 </div>
@@ -526,7 +754,7 @@ template&lt;class Base &gt; </div>
 
 <p>Implements <a class="el" href="classilog_1_1_i_loggable.html#a3af9736a7051d9339f85e1c38699807b">ilog::ILoggable</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00118">118</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00175">175</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 </div>
 </div>
@@ -551,7 +779,7 @@ template&lt;class Base &gt; </div>
 
 <p>Implements <a class="el" href="classilog_1_1_i_loggable.html#a8d2371f072a87af4e15e3fb0c348e24c">ilog::ILoggable</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00134">134</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_logger_wrap_8h_source.html#l00191">191</a> of file <a class="el" href="_t_logger_wrap_8h_source.html">TLoggerWrap.h</a>.</p>
 
 </div>
 </div>

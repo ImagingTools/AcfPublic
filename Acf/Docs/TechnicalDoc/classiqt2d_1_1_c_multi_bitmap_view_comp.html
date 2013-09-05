@@ -37,6 +37,7 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pro-static-attribs">Static Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">iqt2d::CMultiBitmapViewComp Class Reference</div>  </div>
@@ -92,6 +93,13 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a049307260422e6c1e681a6518f1ebc97">I_ASSIGN_TO</a> (m_generalInformationModelCompPtr, m_generalInformationProviderCompPtr, true)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html">CSingleView</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a56832537f36e4be1b89b810d38e9b639">CreateView</a> (QWidget *parentPtr, int id=-1, const QString &amp;title=&quot;&quot;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a234329bd0b256becf5f671a157d21dc6">EnsureViewsCreated</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a78dd5d599b190db9bab417232737a820">GetTitleByIndex</a> (int index) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#abcb5252d3e177f619d2574c970f87d8c">UpdateInspectionCategory</a> (int index)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#ab04333b740e8b291e7dc1c392dce1336">ResetAllViews</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a13bcaf714489cabf74dd1b581aaaa734">ConnectModels</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#addd89599b773fbd1f1767a816e8273f8">OnViewCreated</a> (int index, <a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html">CSingleView</a> *viewPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a908f3472e990da5e4a9038eef08ab695">OnModelChanged</a> (int modelId, int changeFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a8c5115162064a371998d80f68a577147">UpdateGui</a> (int updateFlags)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Do update of the model GUI.  <a href="#a8c5115162064a371998d80f68a577147"></a><br/></td></tr>
@@ -100,10 +108,16 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a94242a0fa5d7badea7466d6dda97e797">OnGuiCreated</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#a94242a0fa5d7badea7466d6dda97e797"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a7dab5727abe8a52b56bfe2040c54e240">OnComponentDestroyed</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html">CSingleView</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a56832537f36e4be1b89b810d38e9b639">CreateView</a> (QWidget *parentPtr, int id=-1, const QString &amp;title=&quot;&quot;)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static QIcon&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#afaa3ffd1e72f9f8e4a840a688e5433c8">GetCategoryIcon</a> (<a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a> category)</td></tr>
+<tr><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector</a>&lt; <a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html">CSingleView</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#ae54b243c429aab4493d8951d19ed8302">m_views</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#ab68d1ffbff58fb6df0ae0af989a92f7e">m_rowCount</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a70d905cc493be8465b36dcf5da7a7fc9">m_columnCount</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#af0ae70c8a8cc8addf723cafe43d80bf6">m_viewCount</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#ab5457379e1374d3e0c06b35bcafd66a4">m_dynamicTitles</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a266b374301305cf5690a3c3abb769c1b">GeneralStatusModelId</a> = -1</td></tr>
@@ -145,6 +159,22 @@ Static Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a13bcaf714489cabf74dd1b581aaaa734"></a><!-- doxytag: member="iqt2d::CMultiBitmapViewComp::ConnectModels" ref="a13bcaf714489cabf74dd1b581aaaa734" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqt2d::CMultiBitmapViewComp::ConnectModels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a56832537f36e4be1b89b810d38e9b639"></a><!-- doxytag: member="iqt2d::CMultiBitmapViewComp::CreateView" ref="a56832537f36e4be1b89b810d38e9b639" args="(QWidget *parentPtr, int id=&#45;1, const QString &amp;title=&quot;&quot;)" -->
 <div class="memitem">
 <div class="memproto">
@@ -178,6 +208,22 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a234329bd0b256becf5f671a157d21dc6"></a><!-- doxytag: member="iqt2d::CMultiBitmapViewComp::EnsureViewsCreated" ref="a234329bd0b256becf5f671a157d21dc6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqt2d::CMultiBitmapViewComp::EnsureViewsCreated </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="afaa3ffd1e72f9f8e4a840a688e5433c8"></a><!-- doxytag: member="iqt2d::CMultiBitmapViewComp::GetCategoryIcon" ref="afaa3ffd1e72f9f8e4a840a688e5433c8" args="(istd::IInformationProvider::InformationCategory category)" -->
 <div class="memitem">
 <div class="memproto">
@@ -188,6 +234,23 @@ Static Protected Attributes</h2></td></tr>
           <td class="paramtype"><a class="el" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a>&#160;</td>
           <td class="paramname"><em>category</em></td><td>)</td>
           <td><code> [static, protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a78dd5d599b190db9bab417232737a820"></a><!-- doxytag: member="iqt2d::CMultiBitmapViewComp::GetTitleByIndex" ref="a78dd5d599b190db9bab417232737a820" args="(int index) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString iqt2d::CMultiBitmapViewComp::GetTitleByIndex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const<code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -354,6 +417,49 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="addd89599b773fbd1f1767a816e8273f8"></a><!-- doxytag: member="iqt2d::CMultiBitmapViewComp::OnViewCreated" ref="addd89599b773fbd1f1767a816e8273f8" args="(int index, CSingleView *viewPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqt2d::CMultiBitmapViewComp::OnViewCreated </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html">CSingleView</a> *&#160;</td>
+          <td class="paramname"><em>viewPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab04333b740e8b291e7dc1c392dce1336"></a><!-- doxytag: member="iqt2d::CMultiBitmapViewComp::ResetAllViews" ref="ab04333b740e8b291e7dc1c392dce1336" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqt2d::CMultiBitmapViewComp::ResetAllViews </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a8c5115162064a371998d80f68a577147"></a><!-- doxytag: member="iqt2d::CMultiBitmapViewComp::UpdateGui" ref="a8c5115162064a371998d80f68a577147" args="(int updateFlags)" -->
 <div class="memitem">
 <div class="memproto">
@@ -375,6 +481,23 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="abcb5252d3e177f619d2574c970f87d8c"></a><!-- doxytag: member="iqt2d::CMultiBitmapViewComp::UpdateInspectionCategory" ref="abcb5252d3e177f619d2574c970f87d8c" args="(int index)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqt2d::CMultiBitmapViewComp::UpdateInspectionCategory </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <hr/><h2>Member Data Documentation</h2>
 <a class="anchor" id="a266b374301305cf5690a3c3abb769c1b"></a><!-- doxytag: member="iqt2d::CMultiBitmapViewComp::GeneralStatusModelId" ref="a266b374301305cf5690a3c3abb769c1b" args="" -->
 <div class="memitem">
@@ -387,7 +510,82 @@ Static Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html#l00067">67</a> of file <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html">CMultiBitmapViewComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html#l00070">70</a> of file <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html">CMultiBitmapViewComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a70d905cc493be8465b36dcf5da7a7fc9"></a><!-- doxytag: member="iqt2d::CMultiBitmapViewComp::m_columnCount" ref="a70d905cc493be8465b36dcf5da7a7fc9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a70d905cc493be8465b36dcf5da7a7fc9">iqt2d::CMultiBitmapViewComp::m_columnCount</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html#l00149">149</a> of file <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html">CMultiBitmapViewComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab5457379e1374d3e0c06b35bcafd66a4"></a><!-- doxytag: member="iqt2d::CMultiBitmapViewComp::m_dynamicTitles" ref="ab5457379e1374d3e0c06b35bcafd66a4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#ab5457379e1374d3e0c06b35bcafd66a4">iqt2d::CMultiBitmapViewComp::m_dynamicTitles</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html#l00151">151</a> of file <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html">CMultiBitmapViewComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab68d1ffbff58fb6df0ae0af989a92f7e"></a><!-- doxytag: member="iqt2d::CMultiBitmapViewComp::m_rowCount" ref="ab68d1ffbff58fb6df0ae0af989a92f7e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#ab68d1ffbff58fb6df0ae0af989a92f7e">iqt2d::CMultiBitmapViewComp::m_rowCount</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html#l00148">148</a> of file <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html">CMultiBitmapViewComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af0ae70c8a8cc8addf723cafe43d80bf6"></a><!-- doxytag: member="iqt2d::CMultiBitmapViewComp::m_viewCount" ref="af0ae70c8a8cc8addf723cafe43d80bf6" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#af0ae70c8a8cc8addf723cafe43d80bf6">iqt2d::CMultiBitmapViewComp::m_viewCount</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html#l00150">150</a> of file <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html">CMultiBitmapViewComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae54b243c429aab4493d8951d19ed8302"></a><!-- doxytag: member="iqt2d::CMultiBitmapViewComp::m_views" ref="ae54b243c429aab4493d8951d19ed8302" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classistd_1_1_t_pointer_vector.html">istd::TPointerVector</a>&lt;<a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html">CSingleView</a>&gt; <a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#ae54b243c429aab4493d8951d19ed8302">iqt2d::CMultiBitmapViewComp::m_views</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html#l00107">107</a> of file <a class="el" href="_c_multi_bitmap_view_comp_8h_source.html">CMultiBitmapViewComp.h</a>.</p>
 
 </div>
 </div>

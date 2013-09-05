@@ -93,7 +93,7 @@
 <a name="l00071"></a>00071               <a class="code" href="classiproc_1_1_t_supplier_comp_wrap_1_1_timer.html#a997a5ca668786cbe967f9798d97f03dd">~Timer</a>();
 <a name="l00072"></a>00072 
 <a name="l00073"></a>00073        <span class="keyword">private</span>:
-<a name="l00074"></a>00074         <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_c_general_time_stamp.html">istd::CGeneralTimeStamp</a> m_timer;
+<a name="l00074"></a>00074               <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_c_general_time_stamp.html">istd::CGeneralTimeStamp</a> m_timer;
 <a name="l00075"></a>00075               <span class="keyword">const</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Standard implementation of interface iproc::ISupplier with preparation for component implementation...">TSupplierCompWrap</a>* m_parentPtr;
 <a name="l00076"></a>00076               QString m_measuredFeatureName;
 <a name="l00077"></a>00077        };
@@ -426,7 +426,7 @@
 <a name="l00431"></a>00431               <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_t_smart_ptr.html">MessagePtr</a> messagePtr(<span class="keyword">new</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classilog_1_1_c_message.html">ilog::CMessage</a>(
 <a name="l00432"></a>00432                                    <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152a42a989ac6baf47a23c6595f66cb30077">istd::IInformationProvider::IC_INFO</a>,
 <a name="l00433"></a>00433                                    0,
-<a name="l00434"></a>00434                     QObject::tr(<span class="stringliteral">&quot;%1 took %2 ms&quot;</span>).arg(m_measuredFeatureName).arg(m_timer.GetElapsed() * 1000),
+<a name="l00434"></a>00434                                    QObject::tr(<span class="stringliteral">&quot;%1 took %2 ms&quot;</span>).arg(m_measuredFeatureName).arg(m_timer.GetElapsed() * 1000),
 <a name="l00435"></a>00435                                    *m_parentPtr-&gt;m_diagnosticNameAttrPtr));
 <a name="l00436"></a>00436               m_parentPtr-&gt;m_messageContainer.AddMessage(messagePtr);
 <a name="l00437"></a>00437        }

@@ -25,7 +25,10 @@ Project{
 	}
 
 	ApplicationProduct{
-		name: "XpcEditor"
+		name: "XpcEditorExe"
+		targetName: "XpcEditor"
+
+		consoleApplication: false
 
 		files: ["../*.cpp"]
 

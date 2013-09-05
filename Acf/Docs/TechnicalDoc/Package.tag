@@ -2639,6 +2639,7 @@
     <filename>_c_bitmap_document_file_persistence_comp_8h</filename>
     <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
+    <includes id="_c_bitmap_document_8h" name="CBitmapDocument.h" local="yes" imported="no">iimg/CBitmapDocument.h</includes>
     <class kind="class">iimg::CBitmapDocumentFilePersistenceComp</class>
     <namespace>iimg</namespace>
   </compound>
@@ -26945,6 +26946,20 @@
       <anchor>a94561f554f281017117f98bebf0ad9e2</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SerializeDocumentMetaInfo</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
+      <anchor>af1efeebf27786756a01bac39323aa7dd</anchor>
+      <arglist>(iimg::CBitmapDocument &amp;document, iser::IArchive &amp;archive) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SerializePageMetaInfo</name>
+      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
+      <anchor>a023c18f3000a02163201f4d346d80cb9</anchor>
+      <arglist>(iimg::CBitmapDocument &amp;document, int pageIndex, iser::IArchive &amp;archive) const </arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iimg::CBitmapLoaderComp</name>
@@ -28139,6 +28154,13 @@
       <anchor>a805ee7a0049df207360ad4eefa2e877c</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static QByteArray</type>
+      <name>GetMessageTypeId</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a983172fce095b5a040d6310a305f56e8</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>istd::IInformationProvider::InformationCategory</type>
       <name>m_category</name>
@@ -28723,6 +28745,34 @@
       <name>SendCriticalMessage</name>
       <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
       <anchor>abadaac82ecdb83f794136c894ab487ca</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendInfoMessageOnce</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>a80fd5dff3aa3d83e4d39b24e4fc63f52</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendWarningMessageOnce</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>aa0d77dbf2bb831b29438936446f0a393</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendErrorMessageOnce</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>a31e82291cfe271a91013cccf67dbb716</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendCriticalMessageOnce</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>a1d6acbc0e51abd89a4b2fe22b4b15781</anchor>
       <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -37618,6 +37668,55 @@
       <arglist>(m_generalInformationModelCompPtr, m_generalInformationProviderCompPtr, true)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual CSingleView *</type>
+      <name>CreateView</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a56832537f36e4be1b89b810d38e9b639</anchor>
+      <arglist>(QWidget *parentPtr, int id=-1, const QString &amp;title=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureViewsCreated</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a234329bd0b256becf5f671a157d21dc6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetTitleByIndex</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a78dd5d599b190db9bab417232737a820</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateInspectionCategory</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>abcb5252d3e177f619d2574c970f87d8c</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetAllViews</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>ab04333b740e8b291e7dc1c392dce1336</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ConnectModels</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a13bcaf714489cabf74dd1b581aaaa734</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnViewCreated</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>addd89599b773fbd1f1767a816e8273f8</anchor>
+      <arglist>(int index, CSingleView *viewPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnModelChanged</name>
       <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
@@ -37652,19 +37751,47 @@
       <anchor>a7dab5727abe8a52b56bfe2040c54e240</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual CSingleView *</type>
-      <name>CreateView</name>
-      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
-      <anchor>a56832537f36e4be1b89b810d38e9b639</anchor>
-      <arglist>(QWidget *parentPtr, int id=-1, const QString &amp;title=&quot;&quot;)</arglist>
-    </member>
     <member kind="function" protection="protected" static="yes">
       <type>static QIcon</type>
       <name>GetCategoryIcon</name>
       <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
       <anchor>afaa3ffd1e72f9f8e4a840a688e5433c8</anchor>
       <arglist>(istd::IInformationProvider::InformationCategory category)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TPointerVector&lt; CSingleView &gt;</type>
+      <name>m_views</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>ae54b243c429aab4493d8951d19ed8302</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_rowCount</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>ab68d1ffbff58fb6df0ae0af989a92f7e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_columnCount</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a70d905cc493be8465b36dcf5da7a7fc9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_viewCount</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>af0ae70c8a8cc8addf723cafe43d80bf6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_dynamicTitles</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>ab5457379e1374d3e0c06b35bcafd66a4</anchor>
+      <arglist></arglist>
     </member>
     <member kind="variable" protection="protected" static="yes">
       <type>static const int</type>
@@ -47257,10 +47384,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>CReadArchiveBase</type>
+      <type>CTextReadArchiveBase</type>
       <name>BaseClass</name>
       <anchorfile>classiser_1_1_c_xml_read_archive_base.html</anchorfile>
-      <anchor>a9a499a0fc4bb01d99d74ba56ef64dc97</anchor>
+      <anchor>a2a83a90533f7da4c57e7018f81e1d566</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">

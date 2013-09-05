@@ -100,7 +100,7 @@ void CMessage::SetSource(const QString& source)
 
 QByteArray CMessage::GetFactoryId() const
 {
-	return istd::CClassInfo::GetName<CMessage>();
+	return GetMessageTypeId();
 }
 
 
@@ -184,6 +184,14 @@ istd::IChangeable* CMessage::CloneMe(CompatibilityMode /*mode*/) const
 			m_source,
 			m_flags,
 			&m_timeStamp);
+}
+
+
+// public static methods
+
+QByteArray CMessage::GetMessageTypeId()
+{
+	return "DefaultMessage";
 }
 
 

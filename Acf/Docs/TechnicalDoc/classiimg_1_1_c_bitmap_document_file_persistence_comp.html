@@ -87,12 +87,14 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_document_file_persistence_comp.html#a94561f554f281017117f98bebf0ad9e2">OnComponentCreated</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_document_file_persistence_comp.html#af1efeebf27786756a01bac39323aa7dd">SerializeDocumentMetaInfo</a> (<a class="el" href="classiimg_1_1_c_bitmap_document.html">iimg::CBitmapDocument</a> &amp;document, <a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiimg_1_1_c_bitmap_document_file_persistence_comp.html#a023c18f3000a02163201f4d346d80cb9">SerializePageMetaInfo</a> (<a class="el" href="classiimg_1_1_c_bitmap_document.html">iimg::CBitmapDocument</a> &amp;document, int pageIndex, <a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive) const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>File based persistence of the multi-paged bitmap document. </p>
 <p>Document persistence is realized as a list of bitmap files (for each document page) and meta info description file. There are three operating modes for this component (controlled by component attribute 'OpeationMode'): 1. Page bitmaps and meta info are saved in the target directory with following naming convention: &lt;DocumentFileName&gt;_[PageIndex].&lt;DocumentExtension&gt; for bitmap pages and &lt;DocumentFileName&gt;.bdm for the document's meta info. 2. All files (page bitmaps and meta info) are saved in the document's own directory with the same name as a document file name: &lt;DocumentFileName&gt;.bid 3. The same as 2. but the document's directory will be zipped. </p>
 
-<p>Definition at line <a class="el" href="_c_bitmap_document_file_persistence_comp_8h_source.html#l00023">23</a> of file <a class="el" href="_c_bitmap_document_file_persistence_comp_8h_source.html">CBitmapDocumentFilePersistenceComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_bitmap_document_file_persistence_comp_8h_source.html#l00024">24</a> of file <a class="el" href="_c_bitmap_document_file_persistence_comp_8h_source.html">CBitmapDocumentFilePersistenceComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="ab84b5d1830b1ef25551fb7fdf2e1f1b2"></a><!-- doxytag: member="iimg::CBitmapDocumentFilePersistenceComp::BaseClass" ref="ab84b5d1830b1ef25551fb7fdf2e1f1b2" args="" -->
 <div class="memitem">
@@ -107,7 +109,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classilog_1_1_t_logger_comp_wrap.html#a590fd3e388adbdb4dc9bf584b9c9cd2a">ilog::TLoggerCompWrap&lt; Base &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_bitmap_document_file_persistence_comp_8h_source.html#l00028">28</a> of file <a class="el" href="_c_bitmap_document_file_persistence_comp_8h_source.html">CBitmapDocumentFilePersistenceComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_bitmap_document_file_persistence_comp_8h_source.html#l00029">29</a> of file <a class="el" href="_c_bitmap_document_file_persistence_comp_8h_source.html">CBitmapDocumentFilePersistenceComp.h</a>.</p>
 
 </div>
 </div>
@@ -133,7 +135,7 @@ Protected Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_bitmap_document_file_persistence_comp_8h_source.html#l00030">30</a> of file <a class="el" href="_c_bitmap_document_file_persistence_comp_8h_source.html">CBitmapDocumentFilePersistenceComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_bitmap_document_file_persistence_comp_8h_source.html#l00031">31</a> of file <a class="el" href="_c_bitmap_document_file_persistence_comp_8h_source.html">CBitmapDocumentFilePersistenceComp.h</a>.</p>
 
 </div>
 </div>
@@ -343,6 +345,66 @@ Protected Member Functions</h2></td></tr>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classifile_1_1_i_file_persistence.html#a674791f4173d2b57c1e6d6aa30228f76" title="Result of operation.">OperationState</a> </dd></dl>
 
 <p>Implements <a class="el" href="classifile_1_1_i_file_persistence.html#afe328c38bf1f522f666fe2bf72beeca3">ifile::IFilePersistence</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af1efeebf27786756a01bac39323aa7dd"></a><!-- doxytag: member="iimg::CBitmapDocumentFilePersistenceComp::SerializeDocumentMetaInfo" ref="af1efeebf27786756a01bac39323aa7dd" args="(iimg::CBitmapDocument &amp;document, iser::IArchive &amp;archive) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iimg::CBitmapDocumentFilePersistenceComp::SerializeDocumentMetaInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classiimg_1_1_c_bitmap_document.html">iimg::CBitmapDocument</a> &amp;&#160;</td>
+          <td class="paramname"><em>document</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
+          <td class="paramname"><em>archive</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a023c18f3000a02163201f4d346d80cb9"></a><!-- doxytag: member="iimg::CBitmapDocumentFilePersistenceComp::SerializePageMetaInfo" ref="a023c18f3000a02163201f4d346d80cb9" args="(iimg::CBitmapDocument &amp;document, int pageIndex, iser::IArchive &amp;archive) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iimg::CBitmapDocumentFilePersistenceComp::SerializePageMetaInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classiimg_1_1_c_bitmap_document.html">iimg::CBitmapDocument</a> &amp;&#160;</td>
+          <td class="paramname"><em>document</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pageIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;&#160;</td>
+          <td class="paramname"><em>archive</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>

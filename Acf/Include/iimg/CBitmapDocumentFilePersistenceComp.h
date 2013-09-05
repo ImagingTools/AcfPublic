@@ -27,6 +27,7 @@
 // ACF includes
 #include "ifile/IFilePersistence.h"
 #include "ilog/TLoggerCompWrap.h"
+#include "iimg/CBitmapDocument.h"
 
 
 namespace iimg
@@ -79,6 +80,10 @@ public:
 protected:
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();
+
+protected:
+	virtual bool SerializeDocumentMetaInfo(iimg::CBitmapDocument& document, iser::IArchive& archive) const;
+	virtual bool SerializePageMetaInfo(iimg::CBitmapDocument& document, int pageIndex, iser::IArchive& archive) const;
 
 private:
 	I_REF(ifile::IFilePersistence, m_bitmapPersistenceCompPtr);

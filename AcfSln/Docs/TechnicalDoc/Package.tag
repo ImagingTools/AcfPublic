@@ -28214,6 +28214,13 @@
       <anchor>a034c5fac994e1ac0f1b20fd05ab8541a</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtcam_1_1_c_file_acquisition_comp.html</anchorfile>
+      <anchor>a1b6e867f7eeab44e8cea876c88f18a1f</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="typedef" protection="protected">
       <type>QMap&lt; QString, ParamsInfo &gt;</type>
       <name>DirInfos</name>

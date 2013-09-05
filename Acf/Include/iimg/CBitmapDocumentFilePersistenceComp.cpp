@@ -29,7 +29,6 @@
 #include <QtCore/QDir>
 
 // ACF includes
-#include "iimg/CBitmapDocument.h"
 #include "iimg/CBitmapLoaderComp.h"
 #include "ifile/CXmlFileReadArchive.h"
 #include "ifile/CXmlFileWriteArchive.h"
@@ -93,16 +92,7 @@ int CBitmapDocumentFilePersistenceComp::LoadFromFile(istd::IChangeable& data, co
 	bool retVal = true;
 
 	// Serialize meta info:
-	static iser::CArchiveTag metaInfoTag("MetaInfo", "Meta information about the document");
-
-	iser::ISerializable* metaInfoSerializablePtr = dynamic_cast<iser::ISerializable*>(const_cast<idoc::IDocumentMetaInfo*>(&docPtr->GetDocumentMetaInfo()));
-	if (metaInfoSerializablePtr != NULL){
-		static iser::CArchiveTag metaInfoTag("MetaInfo", "Meta information about the document");
-		retVal = retVal && archive.BeginTag(metaInfoTag);
-		retVal = retVal && metaInfoSerializablePtr->Serialize(archive);
-	}
-
-	retVal = retVal && archive.EndTag(metaInfoTag);
+	retVal = retVal && SerializeDocumentMetaInfo(*docPtr, archive);
 
 	// Serialize document pages:
 	static iser::CArchiveTag pagesTag("Pages", "Container of the document pages");
@@ -113,14 +103,14 @@ int CBitmapDocumentFilePersistenceComp::LoadFromFile(istd::IChangeable& data, co
 	retVal = retVal && archive.BeginMultiTag(pagesTag, pageFileTag, pagesCount);
 
 	for (int pageIndex = 0; pageIndex < pagesCount; ++pageIndex){
+		// load bitmap file
 		QString pageFileName;
 
 		retVal = retVal && archive.BeginTag(pageFileTag);
 		retVal = retVal && archive.Process(pageFileName);
 		retVal = retVal && archive.EndTag(pageFileTag);
 
-		iimg::CBitmapDocument::Bitmap* bitmapPtr = 
-			dynamic_cast<iimg::CBitmapDocument::Bitmap*>(docPtr->InsertPage(pageFileName));
+		iimg::IBitmap* bitmapPtr = dynamic_cast<iimg::IBitmap*>(docPtr->InsertPage(pageFileName));
 
 		if (bitmapPtr == NULL || pageFileName.isEmpty()){
 			retVal = false;
@@ -131,6 +121,9 @@ int CBitmapDocumentFilePersistenceComp::LoadFromFile(istd::IChangeable& data, co
 
 			retVal = retVal && (loadState == ifile::IFilePersistence::OS_OK);
 		}
+
+		// load page meta info
+		retVal = retVal && SerializePageMetaInfo(*docPtr, pageIndex, archive);
 	}
 
 	retVal = retVal && archive.EndTag(pagesTag);
@@ -175,16 +168,7 @@ int CBitmapDocumentFilePersistenceComp::SaveToFile(const istd::IChangeable& data
 	bool retVal = true;
 	
 	// Serialize meta info:
-	static iser::CArchiveTag metaInfoTag("MetaInfo", "Meta information about the document");
-
-	iser::ISerializable* metaInfoSerializablePtr = dynamic_cast<iser::ISerializable*>(const_cast<idoc::IDocumentMetaInfo*>(&docPtr->GetDocumentMetaInfo()));
-	if (metaInfoSerializablePtr != NULL){
-		static iser::CArchiveTag metaInfoTag("MetaInfo", "Meta information about the document");
-		retVal = retVal && archive.BeginTag(metaInfoTag);
-		retVal = retVal && metaInfoSerializablePtr->Serialize(archive);
-	}
-
-	retVal = retVal && archive.EndTag(metaInfoTag);
+	retVal = retVal && SerializeDocumentMetaInfo(const_cast<iimg::CBitmapDocument&>(*docPtr), archive);
 
 	// Serialize document pages:
 	static iser::CArchiveTag pagesTag("Pages", "Container of the document pages");
@@ -195,6 +179,7 @@ int CBitmapDocumentFilePersistenceComp::SaveToFile(const istd::IChangeable& data
 	retVal = retVal && archive.BeginMultiTag(pagesTag, pageFileTag, pagesCount);
 
 	for (int pageIndex = 0; pageIndex < pagesCount; ++pageIndex){
+		// write page bitmap
 		QString pageName = docPtr->GetOptionName(pageIndex);
 		if (pageName.isEmpty()){
 			pageName = QString::number(pageIndex+1);
@@ -218,6 +203,9 @@ int CBitmapDocumentFilePersistenceComp::SaveToFile(const istd::IChangeable& data
 		else{
 			retVal = false;
 		}
+
+		// write page meta info
+		retVal = retVal && SerializePageMetaInfo(const_cast<iimg::CBitmapDocument&>(*docPtr), pageIndex, archive);
 	}
 
 	retVal = retVal && archive.EndTag(pagesTag);
@@ -270,6 +258,45 @@ void CBitmapDocumentFilePersistenceComp::OnComponentCreated()
 		}
 	}
 }
+
+
+// protected methods
+
+bool CBitmapDocumentFilePersistenceComp::SerializeDocumentMetaInfo(iimg::CBitmapDocument& document, iser::IArchive& archive) const
+{
+	bool retVal = true;
+
+	iser::ISerializable* metaInfoSerializablePtr = dynamic_cast<iser::ISerializable*>(const_cast<idoc::IDocumentMetaInfo*>(&document.GetDocumentMetaInfo()));
+	if (metaInfoSerializablePtr != NULL){
+		static iser::CArchiveTag metaInfoTag("MetaInfo", "Meta information about the document");
+		retVal = retVal && archive.BeginTag(metaInfoTag);
+		retVal = retVal && metaInfoSerializablePtr->Serialize(archive);
+		retVal = retVal && archive.EndTag(metaInfoTag);
+	}
+
+	return retVal;
+}
+
+
+bool CBitmapDocumentFilePersistenceComp::SerializePageMetaInfo(iimg::CBitmapDocument& document, int pageIndex, iser::IArchive& archive) const
+{
+	bool retVal = true;
+
+	iser::ISerializable* metaInfoSerializablePtr = dynamic_cast<iser::ISerializable*>(
+		const_cast<idoc::IDocumentMetaInfo*>(document.GetPageMetaInfo(pageIndex))
+		);
+	if (metaInfoSerializablePtr != NULL){
+		static iser::CArchiveTag pageMetaInfoTag("PageMetaInfo", "Single document page meta information");
+		retVal = retVal && archive.BeginTag(pageMetaInfoTag);
+		retVal = retVal && metaInfoSerializablePtr->Serialize(archive);
+		retVal = retVal && archive.EndTag(pageMetaInfoTag);
+	}
+
+	return retVal;
+}
+
+
+
 
 
 } // namespace iimg
