@@ -108,6 +108,12 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes handler to catch view events.  <a href="#a63ae1c909ae51a9f7a8c940ecf56e48d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#ab9d45fa723b732f05c5b5e16bcc64cf7">InsertDefaultLayers</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert default layers, when there is no one user layer.  <a href="#ab9d45fa723b732f05c5b5e16bcc64cf7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#af94d74a291af6176dd342d90c8c3b70e">GetBackgroundLayerIndex</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get index of default background layer.  <a href="#af94d74a291af6176dd342d90c8c3b70e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#a03d2a46686db7bdda71ae6355145ff58">GetInactiveLayerIndex</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get index of default inactive layer.  <a href="#a03d2a46686db7bdda71ae6355145ff58"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#a351cb6efa1960a11e75493bfcc5e874a">GetActiveLayerIndex</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get index of default active layer.  <a href="#a351cb6efa1960a11e75493bfcc5e874a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiview_1_1_i_interactive_shape.html">IInteractiveShape</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#ad0bb83b68ad5bb3e82dda53963f97078">GetMouseShapePtr</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get shape under mouse pointer.  <a href="#ad0bb83b68ad5bb3e82dda53963f97078"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#aef328b895c24b6d2d9b3d495e6f280a0">Update</a> ()</td></tr>
@@ -120,6 +126,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert layer to view.  <a href="#a6023db18c191e69e1096ce1fc552ea0b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#a2c0bbffa14037c5057fc26b9a297fa80">GetLayerIndex</a> (const <a class="el" href="classiview_1_1_i_view_layer.html">IViewLayer</a> &amp;layer) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get index of layer.  <a href="#a2c0bbffa14037c5057fc26b9a297fa80"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#a521e2f6e9f085761c93522448c4eb7dd">GetLayerIndex</a> (int layerType) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get index of layer by type.  <a href="#a521e2f6e9f085761c93522448c4eb7dd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#acfa8d315d274afd618381e9aa4b2ee22">RemoveLayer</a> (int index)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove layer from view.  <a href="#acfa8d315d274afd618381e9aa4b2ee22"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#a53cf066043e39c98155cd95b4a94aabb">GetLayersCount</a> () const </td></tr>
@@ -198,12 +206,6 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#ab91db86fee4f28b9220573e0fc4ca3c7">GetLastBackgroundLayerIndex</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get last background layer index.  <a href="#ab91db86fee4f28b9220573e0fc4ca3c7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#ac3898de8ddb97346ccad70050e0306ed">SetLastBackgroundLayerIndex</a> (int index)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#af94d74a291af6176dd342d90c8c3b70e">GetBackgroundLayerIndex</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get index of default background layer.  <a href="#af94d74a291af6176dd342d90c8c3b70e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#a03d2a46686db7bdda71ae6355145ff58">GetInactiveLayerIndex</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get index of default inactive layer.  <a href="#a03d2a46686db7bdda71ae6355145ff58"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#a351cb6efa1960a11e75493bfcc5e874a">GetActiveLayerIndex</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get index of default active layer.  <a href="#a351cb6efa1960a11e75493bfcc5e874a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#ab1175185e129ddc7d602150497dee219">CanBeMoved</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is internal used to check, if drag mode is allowed.  <a href="#ab1175185e129ddc7d602150497dee219"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_view_base.html#a718de7e1742d20089c1e0f0ea9075f25">DisconnectAllShapes</a> ()</td></tr>
@@ -253,7 +255,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00173">173</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00189">189</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -386,7 +388,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_viewport.html#a3c9a3a14226cf60734b2fd88c0d5c82d">iview::CViewport</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_view_base_8h_source.html#l00434">GetBoundingBox()</a>.</p>
+<p>Referenced by <a class="el" href="_c_view_base_8h_source.html#l00435">GetBoundingBox()</a>.</p>
 
 </div>
 </div>
@@ -423,7 +425,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Calc shape under mouse pointer. </p>
 
-<p>Referenced by <a class="el" href="_c_view_base_8h_source.html#l00374">GetMouseShapePtr()</a>.</p>
+<p>Referenced by <a class="el" href="_c_view_base_8h_source.html#l00375">GetMouseShapePtr()</a>.</p>
 
 </div>
 </div>
@@ -601,7 +603,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">int iview::CViewBase::GetActiveLayerIndex </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const<code> [inline, protected]</code></td>
+          <td> const<code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -609,7 +611,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get index of default active layer. </p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00494">494</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00495">495</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -621,7 +623,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">int iview::CViewBase::GetBackgroundLayerIndex </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const<code> [inline, protected]</code></td>
+          <td> const<code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -629,7 +631,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get index of default background layer. </p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00482">482</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00483">483</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -651,7 +653,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_i_display.html#a1a15caedd39dd5ed58d3761c0d4a6c11">iview::IDisplay</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00434">434</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00435">435</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 <p>References <a class="el" href="classiview_1_1_c_view_base.html#a5ff5fca67784243383d277eba1a424bc">CalcBoundingBox()</a>.</p>
 
@@ -675,7 +677,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_i_display.html#a654016c3111cf15b2d2aba021ae413c0">iview::IDisplay</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00446">446</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00447">447</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 <p>References <a class="el" href="classiview_1_1_c_view_base.html#accbdf23f2f6d636e15ef5c0178e35194">GetDefaultColorSchema()</a>.</p>
 
@@ -697,7 +699,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classiview_1_1_c_calibrated_view_base.html#a1c2ad28489292752850622ec399b1037">iview::CCalibratedViewBase</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_view_base_8h_source.html#l00446">GetColorSchema()</a>.</p>
+<p>Referenced by <a class="el" href="_c_view_base_8h_source.html#l00447">GetColorSchema()</a>.</p>
 
 </div>
 </div>
@@ -738,7 +740,7 @@ Protected Member Functions</h2></td></tr>
 <p>Get area will be used to automatic fit the zoom to view size. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiview_1_1_c_view_base.html#abf1e5afe010e16ccd4c08c22a494a632" title="Set zoom.">SetZoom(ZoomMode)</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00344">344</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00345">345</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -770,7 +772,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">int iview::CViewBase::GetInactiveLayerIndex </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const<code> [inline, protected]</code></td>
+          <td> const<code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -778,7 +780,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get index of default inactive layer. </p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00488">488</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00489">489</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -798,7 +800,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get bounding box of all invalidated rectangles. </p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00517">517</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00518">518</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -820,7 +822,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_i_selectable.html#a55a85abf3a5a3d49148c888bdd9d638b">iview::ISelectable</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00454">454</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00455">455</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -840,7 +842,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get last background layer index. </p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00470">470</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00471">471</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -863,9 +865,9 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_i_shape_view.html#a9b7a8569e3dcf969d51ad3cd52ed760a">iview::IShapeView</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00404">404</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00405">405</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
-<p>References <a class="el" href="_c_view_base_8h_source.html#l00398">GetLayersCount()</a>, <a class="el" href="classiview_1_1_c_view_base.html#ab9d45fa723b732f05c5b5e16bcc64cf7">InsertDefaultLayers()</a>, and <a class="el" href="istd_8h_source.html#l00061">NULL</a>.</p>
+<p>References <a class="el" href="_c_view_base_8h_source.html#l00399">GetLayersCount()</a>, <a class="el" href="classiview_1_1_c_view_base.html#ab9d45fa723b732f05c5b5e16bcc64cf7">InsertDefaultLayers()</a>, and <a class="el" href="istd_8h_source.html#l00061">NULL</a>.</p>
 
 </div>
 </div>
@@ -891,6 +893,28 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a521e2f6e9f085761c93522448c4eb7dd"></a><!-- doxytag: member="iview::CViewBase::GetLayerIndex" ref="a521e2f6e9f085761c93522448c4eb7dd" args="(int layerType) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int iview::CViewBase::GetLayerIndex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>layerType</em></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get index of layer by type. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>layer index, or -1 if not found. </dd></dl>
+
+<p>Implements <a class="el" href="classiview_1_1_i_shape_view.html#a30e8b88615a831c236d18d540acb537e">iview::IShapeView</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="adbe2fbb2bfdb84856bf9802d1df3a288"></a><!-- doxytag: member="iview::CViewBase::GetLayers" ref="adbe2fbb2bfdb84856bf9802d1df3a288" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -905,7 +929,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00541">541</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00542">542</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -923,7 +947,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00547">547</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00548">548</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -945,9 +969,9 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_i_shape_view.html#add7e356c3dd7fa8f629d6a95d1fa8560">iview::IShapeView</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00398">398</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00399">399</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_view_base_8h_source.html#l00404">GetLayer()</a>.</p>
+<p>Referenced by <a class="el" href="_c_view_base_8h_source.html#l00405">GetLayer()</a>.</p>
 
 </div>
 </div>
@@ -968,7 +992,7 @@ Protected Member Functions</h2></td></tr>
 <p>Get shape under mouse pointer. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>shape under mouse pointer, or NULL if there is no shape. </dd></dl>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00374">374</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00375">375</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 <p>References <a class="el" href="classiview_1_1_c_view_base.html#a829e355952e98129b84ae4d8b878495c">CalcMouseShape()</a>.</p>
 
@@ -993,7 +1017,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_i_display.html#a88ed04964ac88c16073306f72f2f080a">iview::IDisplay</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00422">422</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00423">423</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00061">NULL</a>.</p>
 
@@ -1059,7 +1083,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_i_display.html#aafe9a5b1a9a75e7d78964bd96ea88ef0">iview::IDisplay</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00428">428</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00429">429</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -1081,7 +1105,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_calibrated_view_base.html#a78329039f72a0cd2a790d7cd00bc17c9">iview::CCalibratedViewBase</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_view_base_8h_source.html#l00404">GetLayer()</a>.</p>
+<p>Referenced by <a class="el" href="_c_view_base_8h_source.html#l00405">GetLayer()</a>.</p>
 
 </div>
 </div>
@@ -1120,7 +1144,7 @@ Protected Member Functions</h2></td></tr>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">layerPtr</td><td>pointer to inserted layer. </td></tr>
-    <tr><td class="paramname">index</td><td>index of inserted layer. If equals -1, layer will be inserted after layst existing layer. </td></tr>
+    <tr><td class="paramname">index</td><td>index of inserted layer. If equals -1, layer will be inserted after last existing layer. </td></tr>
     <tr><td class="paramname">layerType</td><td>used to set standard layers. </td></tr>
   </table>
   </dd>
@@ -1212,7 +1236,7 @@ Protected Member Functions</h2></td></tr>
 <p>Invalidate rectangle screen area. </p>
 <p>It added this area to other invalidated areas. </p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00523">523</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00524">524</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 <p>References <a class="el" href="_c_rect_8h_source.html#l00487">i2d::CRect::Union()</a>.</p>
 
@@ -1252,7 +1276,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Check if background buffer is valid. </p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00500">500</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00501">501</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -1274,7 +1298,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_i_draggable.html#afdf8d70420c42b9a3b54347e0c759163">iview::IDraggable</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00462">462</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00463">463</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -1296,7 +1320,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_i_shape_view.html#aff4da09be4287455b59dfa0f2cd95d3f">iview::IShapeView</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00392">392</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00393">393</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -1342,7 +1366,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_i_shape_view.html#a84bb42ffd80b769d38073b9c79182336">iview::IShapeView</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00386">386</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00387">387</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -1603,7 +1627,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_i_selectable.html#a90f50d7ffe3e00b33b4229ff961b3560">iview::ISelectable</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00137">137</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00153">153</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -1626,7 +1650,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classiview_1_1_i_selectable.html#a4962be35f4315cb8016a71e76778a972">iview::ISelectable</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00136">136</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00152">152</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -1719,7 +1743,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reset invalidated box. </p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00529">529</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00530">530</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 <p>References <a class="el" href="_c_rect_8h_source.html#l00480">i2d::CRect::Reset()</a>.</p>
 
@@ -1744,7 +1768,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_viewport.html#a55713a630af99f4d977c1d0a758ba562">iview::CViewport</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00506">506</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00507">507</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 <p>References <a class="el" href="classiview_1_1_i_display.html#af6ea59859c203e496bb2aed65771f3ea">iview::IDisplay::GetClientRect()</a>.</p>
 
@@ -1769,7 +1793,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Turn on/off possibility to move more selected shapes, when one is moved. </p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00368">368</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00369">369</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -1840,7 +1864,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiview_1_1_c_viewport.html#a336da414fa0e7d4ff92fb815777ee921">iview::CViewport</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00350">350</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00351">351</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -1861,7 +1885,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Set state of keys. </p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00535">535</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00536">536</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -1880,7 +1904,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00476">476</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00477">477</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -1923,7 +1947,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Turn on/off possibility to select more shapes using control keys. </p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00362">362</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00363">363</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>
@@ -1995,7 +2019,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Turn on/off possibility to move whole view transform. </p>
 
-<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00356">356</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_base_8h_source.html#l00357">357</a> of file <a class="el" href="_c_view_base_8h_source.html">CViewBase.h</a>.</p>
 
 </div>
 </div>

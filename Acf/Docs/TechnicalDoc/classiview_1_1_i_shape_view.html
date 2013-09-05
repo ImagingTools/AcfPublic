@@ -86,6 +86,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert layer to view.  <a href="#ab4778db24222328c13506560988a0ad3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape_view.html#a9cf667e0984dfbe29952f681aef9b570">GetLayerIndex</a> (const <a class="el" href="classiview_1_1_i_view_layer.html">IViewLayer</a> &amp;layer) const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get index of layer.  <a href="#a9cf667e0984dfbe29952f681aef9b570"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape_view.html#a30e8b88615a831c236d18d540acb537e">GetLayerIndex</a> (int layerType) const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get index of layer by type.  <a href="#a30e8b88615a831c236d18d540acb537e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape_view.html#ac13671f88e24dc128779b3f429fe3b59">RemoveLayer</a> (int index)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove layer from view.  <a href="#ac13671f88e24dc128779b3f429fe3b59"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_i_shape_view.html#add7e356c3dd7fa8f629d6a95d1fa8560">GetLayersCount</a> () const =0</td></tr>
@@ -219,6 +221,28 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a30e8b88615a831c236d18d540acb537e"></a><!-- doxytag: member="iview::IShapeView::GetLayerIndex" ref="a30e8b88615a831c236d18d540acb537e" args="(int layerType) const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int iview::IShapeView::GetLayerIndex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>layerType</em></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get index of layer by type. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>layer index, or -1 if not found. </dd></dl>
+
+<p>Implemented in <a class="el" href="classiview_1_1_c_view_base.html#a521e2f6e9f085761c93522448c4eb7dd">iview::CViewBase</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="add7e356c3dd7fa8f629d6a95d1fa8560"></a><!-- doxytag: member="iview::IShapeView::GetLayersCount" ref="add7e356c3dd7fa8f629d6a95d1fa8560" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
@@ -274,7 +298,7 @@ Public Member Functions</h2></td></tr>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">layerPtr</td><td>pointer to inserted layer. </td></tr>
-    <tr><td class="paramname">index</td><td>index of inserted layer. If equals -1, layer will be inserted after layst existing layer. </td></tr>
+    <tr><td class="paramname">index</td><td>index of inserted layer. If equals -1, layer will be inserted after last existing layer. </td></tr>
     <tr><td class="paramname">layerType</td><td>used to set standard layers. </td></tr>
   </table>
   </dd>

@@ -129,6 +129,21 @@ public:
 	virtual void InsertDefaultLayers();
 
 	/**
+		Get index of default background layer.
+	*/
+	int GetBackgroundLayerIndex() const;
+
+	/**
+		Get index of default inactive layer.
+	*/
+	int GetInactiveLayerIndex() const;
+
+	/**
+		Get index of default active layer.
+	*/
+	int GetActiveLayerIndex() const;
+
+	/**
 		Get shape under mouse pointer.
 		\return	shape under mouse pointer, or NULL if there is no shape.
 	*/
@@ -140,6 +155,7 @@ public:
 	virtual bool IsMultiselectable() const;
 	virtual int InsertLayer(IViewLayer* layerPtr, int index = -1, int layerType = IViewLayer::LT_NONE);
 	virtual int GetLayerIndex(const IViewLayer& layer) const;
+	virtual int GetLayerIndex(int layerType) const;
 	virtual void RemoveLayer(int index);
 	virtual int GetLayersCount() const;
 	virtual IViewLayer& GetLayer(int index) const;
@@ -208,21 +224,6 @@ protected:
 	int GetLastBackgroundLayerIndex();
 	void SetLastBackgroundLayerIndex(int index);
 	
-	/**
-		Get index of default background layer.
-	*/
-	int GetBackgroundLayerIndex() const;
-	
-	/**
-		Get index of default inactive layer.
-	*/
-	int GetInactiveLayerIndex() const;
-	
-	/**
-		Get index of default active layer.
-	*/
-	int GetActiveLayerIndex() const;
-
 	/**
 		This method is internal used to check, if drag mode is allowed.
 		Normally it return IsViewDraggable(), but in derived class you

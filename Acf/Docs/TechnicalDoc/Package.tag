@@ -58393,6 +58393,27 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
+      <type>int</type>
+      <name>GetBackgroundLayerIndex</name>
+      <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
+      <anchor>af94d74a291af6176dd342d90c8c3b70e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetInactiveLayerIndex</name>
+      <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
+      <anchor>a03d2a46686db7bdda71ae6355145ff58</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetActiveLayerIndex</name>
+      <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
+      <anchor>a351cb6efa1960a11e75493bfcc5e874a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
       <type>IInteractiveShape *</type>
       <name>GetMouseShapePtr</name>
       <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
@@ -58433,6 +58454,13 @@
       <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
       <anchor>a2c0bbffa14037c5057fc26b9a297fa80</anchor>
       <arglist>(const IViewLayer &amp;layer) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetLayerIndex</name>
+      <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
+      <anchor>a521e2f6e9f085761c93522448c4eb7dd</anchor>
+      <arglist>(int layerType) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -58699,27 +58727,6 @@
       <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
       <anchor>ac3898de8ddb97346ccad70050e0306ed</anchor>
       <arglist>(int index)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>int</type>
-      <name>GetBackgroundLayerIndex</name>
-      <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>af94d74a291af6176dd342d90c8c3b70e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>int</type>
-      <name>GetInactiveLayerIndex</name>
-      <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>a03d2a46686db7bdda71ae6355145ff58</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>int</type>
-      <name>GetActiveLayerIndex</name>
-      <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
-      <anchor>a351cb6efa1960a11e75493bfcc5e874a</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -60293,6 +60300,13 @@
       <anchorfile>classiview_1_1_i_shape_view.html</anchorfile>
       <anchor>a9cf667e0984dfbe29952f681aef9b570</anchor>
       <arglist>(const IViewLayer &amp;layer) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetLayerIndex</name>
+      <anchorfile>classiview_1_1_i_shape_view.html</anchorfile>
+      <anchor>a30e8b88615a831c236d18d540acb537e</anchor>
+      <arglist>(int layerType) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>

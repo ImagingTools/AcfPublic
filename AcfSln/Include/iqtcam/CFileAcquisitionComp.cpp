@@ -193,6 +193,8 @@ int CFileAcquisitionComp::DoProcessing(
 
 istd::CIndex2d CFileAcquisitionComp::GetBitmapSize(const iprm::IParamsSet* /*paramsPtr*/) const
 {
+	QMutexLocker lock(&m_lock);
+
 	return m_lastImageSize;
 }
 
@@ -201,6 +203,8 @@ istd::CIndex2d CFileAcquisitionComp::GetBitmapSize(const iprm::IParamsSet* /*par
 
 void CFileAcquisitionComp::OnComponentCreated()
 {
+	QMutexLocker lock(&m_lock);
+
 	BaseClass::OnComponentCreated();
 
 	// preinitialize components

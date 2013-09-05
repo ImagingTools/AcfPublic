@@ -100,7 +100,7 @@ protected:
 
 	istd::CIndex2d m_lastImageSize;
 
-	QMutex m_lock;
+	mutable QMutex m_lock;
 
 private:
 	I_REF(ifile::IFilePersistence, m_bitmapLoaderCompPtr);
