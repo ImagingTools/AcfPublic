@@ -94,7 +94,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#ab107da72006c2be0ca88a9e440c2e7b7">Serialize</a> (<a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#a118c34b5ecbc08ad7e7683d10e4f5c5f">EnsureVolatileValid</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make sure, that all volatile values are calculated and valid.  <a href="#a118c34b5ecbc08ad7e7683d10e4f5c5f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#a139b13e1fd9b569cd73c25c011ce9e6c">CalcVolatile</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#ae91a83126a1c2ef14b7a30d67bd4390c">OnEndChanges</a> (int changeFlags, <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *changeParamsPtr)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -147,7 +150,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="_c_edge_line_8h_source.html#l00152">GetMaxWeight()</a>, <a class="el" href="_c_edge_line_8h_source.html#l00142">GetMinWeight()</a>, and <a class="el" href="_c_edge_line_8h_source.html#l00132">GetTotalLength()</a>.</p>
+<p>Referenced by <a class="el" href="_c_edge_line_8h_source.html#l00173">EnsureVolatileValid()</a>.</p>
 
 </div>
 </div>
@@ -248,6 +251,30 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a118c34b5ecbc08ad7e7683d10e4f5c5f"></a><!-- doxytag: member="iedge::CEdgeLine::EnsureVolatileValid" ref="a118c34b5ecbc08ad7e7683d10e4f5c5f" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iedge::CEdgeLine::EnsureVolatileValid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline, protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Make sure, that all volatile values are calculated and valid. </p>
+
+<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00173">173</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
+
+<p>References <a class="el" href="classiedge_1_1_c_edge_line.html#a139b13e1fd9b569cd73c25c011ce9e6c">CalcVolatile()</a>.</p>
+
+<p>Referenced by <a class="el" href="_c_edge_line_8h_source.html#l00157">GetMaxWeight()</a>, <a class="el" href="_c_edge_line_8h_source.html#l00149">GetMinWeight()</a>, and <a class="el" href="_c_edge_line_8h_source.html#l00141">GetTotalLength()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a43f77f4f7a55ee7f7245e1f106783400"></a><!-- doxytag: member="iedge::CEdgeLine::GetBoundingBox" ref="a43f77f4f7a55ee7f7245e1f106783400" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -337,9 +364,9 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00152">152</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00157">157</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
 
-<p>References <a class="el" href="classiedge_1_1_c_edge_line.html#a139b13e1fd9b569cd73c25c011ce9e6c">CalcVolatile()</a>.</p>
+<p>References <a class="el" href="_c_edge_line_8h_source.html#l00173">EnsureVolatileValid()</a>.</p>
 
 </div>
 </div>
@@ -357,9 +384,9 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00142">142</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00149">149</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
 
-<p>References <a class="el" href="classiedge_1_1_c_edge_line.html#a139b13e1fd9b569cd73c25c011ce9e6c">CalcVolatile()</a>.</p>
+<p>References <a class="el" href="_c_edge_line_8h_source.html#l00173">EnsureVolatileValid()</a>.</p>
 
 </div>
 </div>
@@ -427,7 +454,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00120">120</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00129">129</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
 
 </div>
 </div>
@@ -445,7 +472,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00126">126</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00135">135</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
 
 </div>
 </div>
@@ -463,9 +490,9 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00132">132</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00141">141</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
 
-<p>References <a class="el" href="classiedge_1_1_c_edge_line.html#a139b13e1fd9b569cd73c25c011ce9e6c">CalcVolatile()</a>.</p>
+<p>References <a class="el" href="_c_edge_line_8h_source.html#l00173">EnsureVolatileValid()</a>.</p>
 
 </div>
 </div>
@@ -574,7 +601,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00162">162</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00165">165</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
 
 </div>
 </div>
@@ -594,6 +621,35 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Implements <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_object2d.html#a220864dd27c1973b54fa4788caee2630">i2d::IObject2d</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae91a83126a1c2ef14b7a30d67bd4390c"></a><!-- doxytag: member="iedge::CEdgeLine::OnEndChanges" ref="ae91a83126a1c2ef14b7a30d67bd4390c" args="(int changeFlags, istd::IPolymorphic *changeParamsPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iedge::CEdgeLine::OnEndChanges </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>changeFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
+          <td class="paramname"><em>changeParamsPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#a2a2491de06d52ac09889c20ed72d2529">istd::IChangeable</a>.</p>
 
 </div>
 </div>

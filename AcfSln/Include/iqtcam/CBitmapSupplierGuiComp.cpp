@@ -36,7 +36,6 @@
 #include "iproc/ISupplier.h"
 #include "iview/CImageShape.h"
 #include "iview/CViewBase.h"
-#include "icam/ISnapControl.h"
 
 
 namespace iqtcam
@@ -63,35 +62,14 @@ const iimg::IBitmap* CBitmapSupplierGuiComp::GetBitmap() const
 
 void CBitmapSupplierGuiComp::on_SnapImageButton_clicked()
 {
-	icam::ISnapControl* snapControlPtr = dynamic_cast<icam::ISnapControl*>(GetObjectPtr());
-	if (snapControlPtr != NULL){
-		snapControlPtr->SetSnapDirection(icam::ISnapControl::SD_FORWARD);
-	}
-
 	// snap with UI message by default
 	DoSnap();
-}
-
-
-void CBitmapSupplierGuiComp::on_SnapBackImageButton_clicked()
-{
-	icam::ISnapControl* snapControlPtr = dynamic_cast<icam::ISnapControl*>(GetObjectPtr());
-	if (snapControlPtr != NULL){
-		snapControlPtr->SetSnapDirection(icam::ISnapControl::SD_BACK);
-
-		DoSnap();
-	}
 }
 
 
 void CBitmapSupplierGuiComp::on_LiveImageButton_toggled(bool checked)
 {
 	if (checked){
-		icam::ISnapControl* snapControlPtr = dynamic_cast<icam::ISnapControl*>(GetObjectPtr());
-		if (snapControlPtr != NULL){
-			snapControlPtr->SetSnapDirection(icam::ISnapControl::SD_FORWARD);
-		}
-
 		m_timer.setInterval(*m_snapIntervalAttrPtr);
 
 		m_timer.start();
@@ -101,7 +79,6 @@ void CBitmapSupplierGuiComp::on_LiveImageButton_toggled(bool checked)
 	}
 
 	SnapImageButton->setEnabled(!checked);
-	SnapBackImageButton->setEnabled(!checked);
 }
 
 
@@ -166,9 +143,6 @@ void CBitmapSupplierGuiComp::OnGuiCreated()
 	BaseClass::OnGuiCreated();
 
 	SaveImageButton->setVisible(m_bitmapLoaderCompPtr.IsValid());
-
-	icam::ISnapControl* snapControlPtr = dynamic_cast<icam::ISnapControl*>(GetObjectPtr());
-	SnapBackImageButton->setVisible(snapControlPtr != NULL);
 }
 
 

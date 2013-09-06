@@ -489,7 +489,6 @@
     <filename>_c_snap_bitmap_supplier_comp_8h</filename>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
-    <includes id="_i_snap_control_8h" name="ISnapControl.h" local="yes" imported="no">icam/ISnapControl.h</includes>
     <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="no" imported="no">imeas/INumericConstraints.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="no" imported="no">imeas/CSimpleNumericValue.h</includes>
     <class kind="class">icam::CSnapBitmapSupplierComp</class>
@@ -531,13 +530,6 @@
     <filename>_i_exposure_params_8h</filename>
     <includes id="icam_8h" name="icam.h" local="yes" imported="no">icam/icam.h</includes>
     <class kind="class">icam::IExposureParams</class>
-    <namespace>icam</namespace>
-  </compound>
-  <compound kind="file">
-    <name>ISnapControl.h</name>
-    <path>C:/Temp/AcfSln/Include/icam/</path>
-    <filename>_i_snap_control_8h</filename>
-    <class kind="class">icam::ISnapControl</class>
     <namespace>icam</namespace>
   </compound>
   <compound kind="file">
@@ -2929,7 +2921,6 @@
     <filename>_c_file_acquisition_comp_8h</filename>
     <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
-    <includes id="_i_snap_control_8h" name="ISnapControl.h" local="yes" imported="no">icam/ISnapControl.h</includes>
     <includes id="iqtcam_8h" name="iqtcam.h" local="yes" imported="no">iqtcam/iqtcam.h</includes>
     <class kind="class">iqtcam::CFileAcquisitionComp</class>
     <class kind="struct">iqtcam::CFileAcquisitionComp::ParamsInfo</class>
@@ -3922,13 +3913,6 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>QToolButton *</type>
-      <name>SnapBackImageButton</name>
-      <anchorfile>class_ui___c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>a08c2489cad8f6bfb0ac8f7a1ed42eca6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
       <type>QPushButton *</type>
       <name>SnapImageButton</name>
       <anchorfile>class_ui___c_bitmap_supplier_gui_comp.html</anchorfile>
@@ -4352,13 +4336,6 @@
       <name>ColorTable</name>
       <anchorfile>class_ui___c_color_pattern_comparator_gui_comp.html</anchorfile>
       <anchor>a5cb0d18dff9337dc2e848a046ab972d2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>QSpacerItem *</type>
-      <name>verticalSpacer</name>
-      <anchorfile>class_ui___c_color_pattern_comparator_gui_comp.html</anchorfile>
-      <anchor>a2effb25ad568fe1cf6e6498d4e1f4ba1</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -6032,20 +6009,6 @@
       <name>MenuButton</name>
       <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
       <anchor>a98f80f78d61be3a3fb72c36dabb0405d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>QToolButton *</type>
-      <name>TestBackButton</name>
-      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>aef2264f88653cbb647a350415f6e345e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>QToolButton *</type>
-      <name>HoldSnapButton</name>
-      <anchorfile>class_ui___c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a12b8f760f5f25d7f51f184c728f98a45</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -10168,7 +10131,6 @@
     <class kind="class">icam::ICameraInfo</class>
     <class kind="class">icam::IExposureConstraints</class>
     <class kind="class">icam::IExposureParams</class>
-    <class kind="class">icam::ISnapControl</class>
   </compound>
   <compound kind="class">
     <name>icam::CAcquisitionConstraintsComp</name>
@@ -10910,49 +10872,6 @@
       <anchorfile>classicam_1_1_i_exposure_params.html</anchorfile>
       <anchor>a5b4f1e2f64bb83c43e5db5f4fbc5766a</anchor>
       <arglist>(double time)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icam::ISnapControl</name>
-    <filename>classicam_1_1_i_snap_control.html</filename>
-    <base>istd::IPolymorphic</base>
-    <member kind="enumeration">
-      <name>SnapDirection</name>
-      <anchorfile>classicam_1_1_i_snap_control.html</anchorfile>
-      <anchor>a20585ec2576da79aaf5176253f21e993</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SD_FORWARD</name>
-      <anchorfile>classicam_1_1_i_snap_control.html</anchorfile>
-      <anchor>a20585ec2576da79aaf5176253f21e993a0cd2719fba5f656529a0f9659dfc0a6e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SD_BACK</name>
-      <anchorfile>classicam_1_1_i_snap_control.html</anchorfile>
-      <anchor>a20585ec2576da79aaf5176253f21e993a1cd075f13886c828d151e729fac2b24c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SD_HOLD</name>
-      <anchorfile>classicam_1_1_i_snap_control.html</anchorfile>
-      <anchor>a20585ec2576da79aaf5176253f21e993a9e69ecc921e79acc4cebad9811861d52</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetSnapDirection</name>
-      <anchorfile>classicam_1_1_i_snap_control.html</anchorfile>
-      <anchor>ae4ba428074cd67d03fea435e918ab34b</anchor>
-      <arglist>(int snapDirection)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetSnapDirection</name>
-      <anchorfile>classicam_1_1_i_snap_control.html</anchorfile>
-      <anchor>a4f866aa5314072340e6e3c3d0948dccb</anchor>
-      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -15088,12 +15007,26 @@
       <anchor>ab107da72006c2be0ca88a9e440c2e7b7</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>EnsureVolatileValid</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>a118c34b5ecbc08ad7e7683d10e4f5c5f</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>CalcVolatile</name>
       <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
       <anchor>a139b13e1fd9b569cd73c25c011ce9e6c</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnEndChanges</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>ae91a83126a1c2ef14b7a30d67bd4390c</anchor>
+      <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -28017,13 +27950,6 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>on_SnapBackImageButton_clicked</name>
-      <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>acb0e02c4483ce6e90ab67a5f0c1e7366</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
       <name>on_LiveImageButton_toggled</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
       <anchor>a56566f25be437675769a456a4bccd1e7</anchor>
@@ -29333,21 +29259,14 @@
       <type>void</type>
       <name>OnAutoTest</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a5f93c7baf435726bb8506471b4487f11</anchor>
-      <arglist>(bool forward=true)</arglist>
+      <anchor>a1cddc4786a0052dadce7819e10b1c380</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_TestAllButton_clicked</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
       <anchor>ac510d3d7c36ad1a46809403bd704f666</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_TestBackButton_clicked</name>
-      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a4a9035bf7ba3b4d25aa1b04fb21d4a30</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
