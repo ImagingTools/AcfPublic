@@ -29104,6 +29104,27 @@
       <anchor>ab4cbcaf8324cd8511e57b35f5cbbfbb2</anchor>
       <arglist></arglist>
     </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>DoAutoTest</name>
+      <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>a0432c588bd31d4134f24f414cbecbdae</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CGeneralSupplierGuiComp</name>
+      <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>a85e95c986f00250524d95981f868f00e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnAutoTest</name>
+      <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>ae562a8e8e36bbd0d86ccb83c12a42d96</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_TestButton_clicked</name>

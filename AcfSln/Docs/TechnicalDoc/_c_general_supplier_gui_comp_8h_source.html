@@ -52,29 +52,35 @@
 <a name="l00026"></a>00026        I_BEGIN_COMPONENT(<a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html">CGeneralSupplierGuiComp</a>);
 <a name="l00027"></a>00027        I_END_COMPONENT;
 <a name="l00028"></a>00028 
-<a name="l00029"></a>00029 <span class="keyword">protected</span> Q_SLOTS:
-<a name="l00030"></a>00030        <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#ade039256b336e4c8d2069f7548e9d5d4">on_TestButton_clicked</a>();
-<a name="l00031"></a>00031        <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#ab6db33e28929b7b8fe20b22e54b808d2">on_LoadParamsButton_clicked</a>();
-<a name="l00032"></a>00032        <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#a42dc82083fec12373815fe696ddd5d17">on_SaveParamsButton_clicked</a>();
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034 <span class="keyword">protected</span>:
-<a name="l00035"></a>00035        <span class="comment">// reimplemented (iqtinsp::TSupplierGuiCompBase)</span>
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#ab8ca1190d3a8ced0d9b69bac1ed5c497" title="Get parameters widget object.">GetParamsWidget</a>() <span class="keyword">const</span>;
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#aa59fc0079d42002a462aee69a91541e7" title="Method will be called every time if the parameter set of the supplier has been changed.">OnSupplierParamsChanged</a>();
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#a292de76a8651f5a98731df87c0d6c82a">OnGuiModelAttached</a>();
-<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#a40e3de099ffff8e7f5700ec7e612f911">OnGuiHidden</a>();
-<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#aa635fb30331f46d5efc33b4adb2f192f">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00043"></a>00043 };
+<a name="l00029"></a>00029        <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#a85e95c986f00250524d95981f868f00e">CGeneralSupplierGuiComp</a>();
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031 <span class="keyword">protected</span> Q_SLOTS:
+<a name="l00032"></a>00032        <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#ae562a8e8e36bbd0d86ccb83c12a42d96">OnAutoTest</a>();
+<a name="l00033"></a>00033        <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#ade039256b336e4c8d2069f7548e9d5d4">on_TestButton_clicked</a>();
+<a name="l00034"></a>00034        <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#ab6db33e28929b7b8fe20b22e54b808d2">on_LoadParamsButton_clicked</a>();
+<a name="l00035"></a>00035        <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#a42dc82083fec12373815fe696ddd5d17">on_SaveParamsButton_clicked</a>();
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037 Q_SIGNALS:
+<a name="l00038"></a>00038        <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#a0432c588bd31d4134f24f414cbecbdae">DoAutoTest</a>();
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040 <span class="keyword">protected</span>:
+<a name="l00041"></a>00041        <span class="comment">// reimplemented (iqtinsp::TSupplierGuiCompBase)</span>
+<a name="l00042"></a>00042        <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#ab8ca1190d3a8ced0d9b69bac1ed5c497" title="Get parameters widget object.">GetParamsWidget</a>() <span class="keyword">const</span>;
+<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#aa59fc0079d42002a462aee69a91541e7" title="Method will be called every time if the parameter set of the supplier has been changed.">OnSupplierParamsChanged</a>();
 <a name="l00044"></a>00044 
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046 } <span class="comment">// namespace iqtinsp</span>
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049 <span class="preprocessor">#endif // !iqtinsp_CGeneralSupplierGuiComp_included</span>
-<a name="l00050"></a>00050 <span class="preprocessor"></span>
+<a name="l00045"></a>00045        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#a292de76a8651f5a98731df87c0d6c82a">OnGuiModelAttached</a>();
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#a40e3de099ffff8e7f5700ec7e612f911">OnGuiHidden</a>();
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtinsp_1_1_c_general_supplier_gui_comp.html#aa635fb30331f46d5efc33b4adb2f192f">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00049"></a>00049 };
+<a name="l00050"></a>00050 
 <a name="l00051"></a>00051 
+<a name="l00052"></a>00052 } <span class="comment">// namespace iqtinsp</span>
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 <span class="preprocessor">#endif // !iqtinsp_CGeneralSupplierGuiComp_included</span>
+<a name="l00056"></a>00056 <span class="preprocessor"></span>
+<a name="l00057"></a>00057 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
