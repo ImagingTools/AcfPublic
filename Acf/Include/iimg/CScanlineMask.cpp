@@ -125,7 +125,11 @@ bool CScanlineMask::CreateFromGeometry(const i2d::IObject2d& geometry, const i2d
 
 void CScanlineMask::CreateFromCircle(const i2d::CCircle& circle, const i2d::CRect* clipAreaPtr)
 {
-	InitFromBoudingBox(circle.GetBoundingBox(), clipAreaPtr);
+	i2d::CCircle recalibratedCircle;
+	recalibratedCircle.SetCalibration(GetCalibration());
+	recalibratedCircle.CopyFrom(circle, istd::IChangeable::CM_CONVERT);
+
+	InitFromBoudingBox(recalibratedCircle.GetBoundingBox(), clipAreaPtr);
 
 	int linesCount = m_scanlines.size();
 
@@ -135,8 +139,8 @@ void CScanlineMask::CreateFromCircle(const i2d::CCircle& circle, const i2d::CRec
 		return;
 	}
 
-	const i2d::CVector2d& center = circle.GetPosition();
-	double radius = circle.GetRadius();
+	const i2d::CVector2d& center = recalibratedCircle.GetPosition();
+	double radius = recalibratedCircle.GetRadius();
 	double radius2 = radius * radius;
 
 #if QT_VERSION >= 0x040700
@@ -180,7 +184,11 @@ void CScanlineMask::CreateFromCircle(const i2d::CCircle& circle, const i2d::CRec
 
 void CScanlineMask::CreateFromRectangle(const i2d::CRectangle& rect, const i2d::CRect* clipAreaPtr)
 {
-	InitFromBoudingBox(rect, clipAreaPtr);
+	i2d::CRectangle recalibratedRect;
+	recalibratedRect.SetCalibration(GetCalibration());
+	recalibratedRect.CopyFrom(rect, istd::IChangeable::CM_CONVERT);
+
+	InitFromBoudingBox(recalibratedRect, clipAreaPtr);
 
 	int linesCount = m_scanlines.size();
 
@@ -192,8 +200,8 @@ void CScanlineMask::CreateFromRectangle(const i2d::CRectangle& rect, const i2d::
 
 	m_rangesContainer.push_back(istd::CIntRanges());
 	istd::CIntRanges& rangeList = m_rangesContainer.back();
-	rangeList.InsertSwitchPoint(int(rect.GetLeft() + 0.5));
-	rangeList.InsertSwitchPoint(int(rect.GetRight() + 0.5));
+	rangeList.InsertSwitchPoint(int(recalibratedRect.GetLeft() + 0.5));
+	rangeList.InsertSwitchPoint(int(recalibratedRect.GetRight() + 0.5));
 
 
 	for (int lineIndex = 0; lineIndex < linesCount; lineIndex++){
@@ -204,7 +212,11 @@ void CScanlineMask::CreateFromRectangle(const i2d::CRectangle& rect, const i2d::
 
 void CScanlineMask::CreateFromAnnulus(const i2d::CAnnulus& annulus, const i2d::CRect* clipAreaPtr)
 {
-	InitFromBoudingBox(annulus.GetBoundingBox(), clipAreaPtr);
+	i2d::CAnnulus recalibratedAnnulus;
+	recalibratedAnnulus.SetCalibration(GetCalibration());
+	recalibratedAnnulus.CopyFrom(annulus, istd::IChangeable::CM_CONVERT);
+
+	InitFromBoudingBox(recalibratedAnnulus.GetBoundingBox(), clipAreaPtr);
 	int linesCount = m_scanlines.size();
 
 	if (linesCount <= 0){
@@ -213,11 +225,11 @@ void CScanlineMask::CreateFromAnnulus(const i2d::CAnnulus& annulus, const i2d::C
 		return;
 	}
 
-	const i2d::CVector2d& center = annulus.GetCenter();
-	double outerRadius = annulus.GetOuterRadius();
+	const i2d::CVector2d& center = recalibratedAnnulus.GetCenter();
+	double outerRadius = recalibratedAnnulus.GetOuterRadius();
 	double outerRadius2 = outerRadius * outerRadius;
 
-	double innerRadius = annulus.GetInnerRadius();
+	double innerRadius = recalibratedAnnulus.GetInnerRadius();
 	double innerRadius2 = innerRadius * innerRadius;
 
 	double centerX = center.GetX();
@@ -287,7 +299,11 @@ void CScanlineMask::CreateFromAnnulus(const i2d::CAnnulus& annulus, const i2d::C
 
 void CScanlineMask::CreateFromPolygon(const i2d::CPolygon& polygon, const i2d::CRect* clipAreaPtr)
 {
-	InitFromBoudingBox(polygon.GetBoundingBox(), clipAreaPtr);
+	i2d::CPolygon recalibratedPolygon;
+	recalibratedPolygon.SetCalibration(GetCalibration());
+	recalibratedPolygon.CopyFrom(polygon, istd::IChangeable::CM_CONVERT);
+
+	InitFromBoudingBox(recalibratedPolygon.GetBoundingBox(), clipAreaPtr);
 	int linesCount = m_scanlines.size();
 
 	if (linesCount <= 0){
@@ -300,15 +316,15 @@ void CScanlineMask::CreateFromPolygon(const i2d::CPolygon& polygon, const i2d::C
 	// every line is QList of X coordinates of the polygon lines points 
 	QVector< std::set<int> > scanVector(linesCount);
 
-	int nodesCount = polygon.GetNodesCount();
+	int nodesCount = recalibratedPolygon.GetNodesCount();
 	for (int i = 0; i < nodesCount; i++){
 		int nextIndex = i + 1;
 		if (nextIndex >= nodesCount){
 			nextIndex = 0;
 		}
 
-		i2d::CVector2d startPoint = polygon.GetNode(i);
-		i2d::CVector2d endPoint = polygon.GetNode(nextIndex);
+		i2d::CVector2d startPoint = recalibratedPolygon.GetNode(i);
+		i2d::CVector2d endPoint = recalibratedPolygon.GetNode(nextIndex);
 
 		double y1 = startPoint.GetY() - m_firstLinePos;
 		double y2 = endPoint.GetY() - m_firstLinePos;
@@ -399,6 +415,7 @@ void CScanlineMask::CreateFromPolygon(const i2d::CPolygon& polygon, const i2d::C
 void CScanlineMask::CreateFromTube(const i2d::CTubePolyline& tube, const i2d::CRect* clipAreaPtr)
 {
 	i2d::CPolygon polygon;
+	polygon.SetCalibration(tube.GetCalibration());
 
 	int nodesCount = tube.GetNodesCount();
 	if (nodesCount >= 1){
