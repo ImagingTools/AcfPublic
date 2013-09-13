@@ -39,10 +39,17 @@ namespace iqtipr
 CSearchBasedFeaturesSupplierGuiComp::CSearchBasedFeaturesSupplierGuiComp()
 	:m_lastViewPtr(NULL)
 {
+	connect(this, SIGNAL(DoAutoTest()), SLOT(OnAutoTest()), Qt::QueuedConnection);
 }
 
 
 // protected slots
+
+void CSearchBasedFeaturesSupplierGuiComp::OnAutoTest()
+{
+	DoTest();
+}
+
 
 void CSearchBasedFeaturesSupplierGuiComp::on_TestButton_clicked()
 {
@@ -77,7 +84,7 @@ QWidget* CSearchBasedFeaturesSupplierGuiComp::GetParamsWidget() const
 void CSearchBasedFeaturesSupplierGuiComp::OnSupplierParamsChanged()
 {
 	if (IsGuiCreated() && AutoTestButton->isChecked()){
-		DoTest();
+		emit DoAutoTest();
 	}
 }
 

@@ -69,9 +69,13 @@ public:
 	CSearchBasedFeaturesSupplierGuiComp();
 
 protected Q_SLOTS:
+	void OnAutoTest();
 	void on_TestButton_clicked();
 	void on_LoadParamsButton_clicked();
 	void on_SaveParamsButton_clicked();
+
+Q_SIGNALS:
+	void DoAutoTest();
 
 protected:
 	// reimplemented (iqtinsp::TSupplierGuiCompBase)
