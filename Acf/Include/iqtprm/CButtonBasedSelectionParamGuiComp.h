@@ -37,7 +37,7 @@
 #endif
 
 // ACF includes
-#include "iprm/CSelectionParam.h"
+#include "iprm/ISelectionParam.h"
 #include "iqtgui/IIconProvider.h"
 #include "iqtgui/TDesignerGuiObserverCompBase.h"
 

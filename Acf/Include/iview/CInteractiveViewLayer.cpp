@@ -553,9 +553,8 @@ void CInteractiveViewLayer::SetDragPosition(const istd::CIndex2d& position)
 
 void CInteractiveViewLayer::EndDrag()
 {
-	QList<IShape*> keys  = m_activeShapes.keys();
-	for (int keyIndex = 0; keyIndex < keys.size(); ++keyIndex){
-		IDraggable* draggablePtr = dynamic_cast<IDraggable*>(keys[keyIndex]);
+	for (ShapeMap::iterator iter = m_activeShapes.begin(); iter != m_activeShapes.end(); ++iter){
+		IDraggable* draggablePtr = dynamic_cast<IDraggable*>(iter.key());
 		if ((draggablePtr != NULL) && draggablePtr->IsDraggable()){
 			draggablePtr->EndDrag();
 		}
