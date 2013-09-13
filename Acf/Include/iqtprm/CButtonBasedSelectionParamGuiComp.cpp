@@ -90,9 +90,28 @@ void CButtonBasedSelectionParamGuiComp::OnGuiModelDetached()
 }
 
 
-void CButtonBasedSelectionParamGuiComp::UpdateGui(int /*updateFlags*/)
+void CButtonBasedSelectionParamGuiComp::UpdateGui(int updateFlags)
 {
 	Q_ASSERT(IsGuiCreated());
+
+	const iprm::ISelectionParam* paramPtr = GetObjectPtr();
+	if ((paramPtr != NULL) && (updateFlags & istd::IChangeable::CF_MODEL)){
+		QList<QAbstractButton*> buttons = m_buttonsGroup.buttons();
+		for (int i = 0; i < buttons.size(); i++){
+			m_buttonsGroup.removeButton(buttons[i]);
+		}
+
+		m_selectionInfos.clear();
+
+		qDeleteAll(m_allSelectionInfos);
+		m_allSelectionInfos.clear();
+
+		int totalButtons = 0;
+
+		CreateButtons(paramPtr, NULL, totalButtons);
+
+		connect(&m_buttonsGroup, SIGNAL(buttonClicked(int)), this, SLOT(OnButtonClicked(int)));
+	}
 
 	bool isCompactDescription = (*m_descriptionTypeAttrPtr == 2);
 	bool useHorizontalLayout = (*m_layoutTypeAttrPtr) < 1;
