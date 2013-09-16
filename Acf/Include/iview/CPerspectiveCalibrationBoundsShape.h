@@ -31,8 +31,6 @@ namespace iview
 {
 
 
-// TODO: Redesign it to ACF transformation concept.
-
 /**
 	This shape object, is used to tune bounds of iview::CPerpectiveCalib using user interface.
 */

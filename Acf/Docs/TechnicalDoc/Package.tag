@@ -42001,6 +42001,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
+      <type>void</type>
+      <name>EnsureSelectedIndexUpdated</name>
+      <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
+      <anchor>ab1b5dcb20f5f2be03c3933847c9146af</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
       <type>QByteArray</type>
       <name>GetSelectedParamsSetTypeId</name>
       <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>

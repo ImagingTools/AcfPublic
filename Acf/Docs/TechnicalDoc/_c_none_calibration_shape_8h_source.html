@@ -37,41 +37,39 @@
 <a name="l00009"></a>00009 {
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="comment">// TODO: Redesign it to ACF transformation concept.</span>
-<a name="l00013"></a>00013 
-<a name="l00018"></a><a class="code" href="classiview_1_1_c_none_calibration_shape.html">00018</a> <span class="keyword">class </span><a class="code" href="classiview_1_1_c_none_calibration_shape.html" title="Shape object for none calibration.">CNoneCalibrationShape</a>: <span class="keyword">public</span> <a class="code" href="classiview_1_1_c_shape_base.html">CShapeBase</a>
-<a name="l00019"></a>00019 {
-<a name="l00020"></a>00020 <span class="keyword">public</span>:
-<a name="l00021"></a><a class="code" href="classiview_1_1_c_none_calibration_shape.html#aabd7c7e97ac67f2b20d674ae348773ab">00021</a>        <span class="keyword">typedef</span> <a class="code" href="classiview_1_1_c_shape_base.html">CShapeBase</a> <a class="code" href="classiview_1_1_c_none_calibration_shape.html#aabd7c7e97ac67f2b20d674ae348773ab">BaseClass</a>;
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023        <span class="comment">// reimplemented (iview::IVisualizable)</span>
-<a name="l00024"></a>00024        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_none_calibration_shape.html#a32fbbdfdaebb8c24328118da99a1287c" title="Draw this shape using draw context.">Draw</a>(QPainter&amp; drawContext) <span class="keyword">const</span>;
-<a name="l00025"></a>00025 
-<a name="l00026"></a>00026        <span class="comment">// reimplemented (iview::IInteractiveShape)</span>
-<a name="l00027"></a>00027        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_touchable.html#aff8f4bec7213cc866469e5e41a8395e2" title="Enumeration for possible shape touch states.">TouchState</a> <a class="code" href="classiview_1_1_c_none_calibration_shape.html#aa8913aa443ee267bd451d4837bb4b336" title="Check, if any shape is touched.">IsTouched</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
-<a name="l00028"></a>00028 
-<a name="l00029"></a>00029        <span class="comment">// reimplemented (iview::IMouseActionObserver)</span>
-<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_none_calibration_shape.html#afac1dddb663a2070130b6efc1907c13f">OnMouseButton</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position, Qt::MouseButton buttonType, <span class="keywordtype">bool</span> downFlag);
-<a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_none_calibration_shape.html#a6ee9bc84468f3e28690c9112bc8230a0">OnMouseMove</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position);
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033 <span class="keyword">protected</span>:
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a>* <a class="code" href="classiview_1_1_c_none_calibration_shape.html#af14416d9acff277d89d0a6f247e4fba5" title="Get access to calibration.">GetCalibrationPtr</a>() <span class="keyword">const</span>;
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_none_calibration_shape.html#aa121b4e05b51323f36b578d4414debef">BeginLogDrag</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; reference);
-<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_none_calibration_shape.html#a3d4edd390cf662ce49ff79b6fbe901a5">SetLogDragPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; position);
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043        <span class="comment">// reimplemented (iview::CShapeBase)</span>
-<a name="l00044"></a>00044        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_none_calibration_shape.html#a2645caefa06f23809fc18d932319c9d5" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span>;
-<a name="l00045"></a>00045 };
-<a name="l00046"></a>00046 
+<a name="l00016"></a><a class="code" href="classiview_1_1_c_none_calibration_shape.html">00016</a> <span class="keyword">class </span><a class="code" href="classiview_1_1_c_none_calibration_shape.html" title="Shape object for none calibration.">CNoneCalibrationShape</a>: <span class="keyword">public</span> <a class="code" href="classiview_1_1_c_shape_base.html">CShapeBase</a>
+<a name="l00017"></a>00017 {
+<a name="l00018"></a>00018 <span class="keyword">public</span>:
+<a name="l00019"></a><a class="code" href="classiview_1_1_c_none_calibration_shape.html#aabd7c7e97ac67f2b20d674ae348773ab">00019</a>        <span class="keyword">typedef</span> <a class="code" href="classiview_1_1_c_shape_base.html">CShapeBase</a> <a class="code" href="classiview_1_1_c_none_calibration_shape.html#aabd7c7e97ac67f2b20d674ae348773ab">BaseClass</a>;
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021        <span class="comment">// reimplemented (iview::IVisualizable)</span>
+<a name="l00022"></a>00022        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_none_calibration_shape.html#a32fbbdfdaebb8c24328118da99a1287c" title="Draw this shape using draw context.">Draw</a>(QPainter&amp; drawContext) <span class="keyword">const</span>;
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024        <span class="comment">// reimplemented (iview::IInteractiveShape)</span>
+<a name="l00025"></a>00025        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_touchable.html#aff8f4bec7213cc866469e5e41a8395e2" title="Enumeration for possible shape touch states.">TouchState</a> <a class="code" href="classiview_1_1_c_none_calibration_shape.html#aa8913aa443ee267bd451d4837bb4b336" title="Check, if any shape is touched.">IsTouched</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027        <span class="comment">// reimplemented (iview::IMouseActionObserver)</span>
+<a name="l00028"></a>00028        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_none_calibration_shape.html#afac1dddb663a2070130b6efc1907c13f">OnMouseButton</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position, Qt::MouseButton buttonType, <span class="keywordtype">bool</span> downFlag);
+<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_none_calibration_shape.html#a6ee9bc84468f3e28690c9112bc8230a0">OnMouseMove</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position);
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031 <span class="keyword">protected</span>:
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a>* <a class="code" href="classiview_1_1_c_none_calibration_shape.html#af14416d9acff277d89d0a6f247e4fba5" title="Get access to calibration.">GetCalibrationPtr</a>() <span class="keyword">const</span>;
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_none_calibration_shape.html#aa121b4e05b51323f36b578d4414debef">BeginLogDrag</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; reference);
+<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_none_calibration_shape.html#a3d4edd390cf662ce49ff79b6fbe901a5">SetLogDragPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; position);
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041        <span class="comment">// reimplemented (iview::CShapeBase)</span>
+<a name="l00042"></a>00042        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_none_calibration_shape.html#a2645caefa06f23809fc18d932319c9d5" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span>;
+<a name="l00043"></a>00043 };
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 } <span class="comment">// namespace iview</span>
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048 } <span class="comment">// namespace iview</span>
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051 <span class="preprocessor">#endif // !iview_CNoneCalibrationShape_included</span>
-<a name="l00052"></a>00052 <span class="preprocessor"></span>
-<a name="l00053"></a>00053 
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 <span class="preprocessor">#endif // !iview_CNoneCalibrationShape_included</span>
+<a name="l00050"></a>00050 <span class="preprocessor"></span>
+<a name="l00051"></a>00051 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -37,48 +37,46 @@
 <a name="l00009"></a>00009 {
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="comment">// TODO: Redesign it to ACF transformation concept.</span>
-<a name="l00013"></a>00013 
-<a name="l00017"></a><a class="code" href="classiview_1_1_c_perspective_calibration_bounds_shape.html">00017</a> <span class="keyword">class </span><a class="code" href="classiview_1_1_c_perspective_calibration_bounds_shape.html" title="This shape object, is used to tune bounds of iview::CPerpectiveCalib using user interface.">CPerspectiveCalibrationBoundsShape</a>: <span class="keyword">public</span> <a class="code" href="classiview_1_1_c_interactive_shape_base.html">CInteractiveShapeBase</a>
-<a name="l00018"></a>00018 {
-<a name="l00019"></a>00019 <span class="keyword">public</span>:
-<a name="l00020"></a><a class="code" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#a436e895c8664c39a3ed83af5b6598097">00020</a>        <span class="keyword">typedef</span> <a class="code" href="classiview_1_1_c_interactive_shape_base.html">CInteractiveShapeBase</a> <a class="code" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#a436e895c8664c39a3ed83af5b6598097">BaseClass</a>;
-<a name="l00021"></a>00021 
-<a name="l00022"></a>00022        <span class="comment">// reimplemented (iview::IInteractiveShape)</span>
-<a name="l00023"></a>00023        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_touchable.html#aff8f4bec7213cc866469e5e41a8395e2" title="Enumeration for possible shape touch states.">TouchState</a> <a class="code" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#a7af471f367ea6dba2b3144419ac63fd6" title="Check, if any shape is touched.">IsTouched</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025        <span class="comment">// reimplemented (iview::IVisualizable)</span>
-<a name="l00026"></a>00026        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#a4fb5626f85ec7d3d8faf159f39685ac2" title="Draw this shape using draw context.">Draw</a>(QPainter&amp; drawContext) <span class="keyword">const</span>;
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028        <span class="comment">// reimplemented (iview::IMouseActionObserver)</span>
-<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#ac022f42ddc32fbdc68172d0737e59aed" title="It is called, when mouse button is pushed down or up on this object.">OnMouseButton</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position, Qt::MouseButton buttonType, <span class="keywordtype">bool</span> downFlag);
-<a name="l00030"></a>00030        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#a0a68e0b707b0a076b3c2bfc9da5a722b" title="It is called, when mouse is moved.">OnMouseMove</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position);
-<a name="l00031"></a>00031 
-<a name="l00032"></a>00032 <span class="keyword">protected</span>:
-<a name="l00033"></a>00033        <span class="comment">// reimplemented (iview::CShapeBase)</span>
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#a4caed41505e3b7025cd64234b3128daa" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span>;
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#af08ea2b237d12e208c6b794561ec6809">BeginLogDrag</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; reference);
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#a3618689d3c0db257616eda50bc3e93ca">SetLogDragPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; position);
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040 <span class="keyword">private</span>:
-<a name="l00041"></a>00041        <span class="keyword">enum</span> EditBound
-<a name="l00042"></a>00042        {
-<a name="l00043"></a>00043               EB_LEFT,
-<a name="l00044"></a>00044               EB_RIGHT,
-<a name="l00045"></a>00045               EB_TOP,
-<a name="l00046"></a>00046               EB_BOTTOM
-<a name="l00047"></a>00047        } m_editBound;
-<a name="l00048"></a>00048 };
-<a name="l00049"></a>00049 
+<a name="l00015"></a><a class="code" href="classiview_1_1_c_perspective_calibration_bounds_shape.html">00015</a> <span class="keyword">class </span><a class="code" href="classiview_1_1_c_perspective_calibration_bounds_shape.html" title="This shape object, is used to tune bounds of iview::CPerpectiveCalib using user interface.">CPerspectiveCalibrationBoundsShape</a>: <span class="keyword">public</span> <a class="code" href="classiview_1_1_c_interactive_shape_base.html">CInteractiveShapeBase</a>
+<a name="l00016"></a>00016 {
+<a name="l00017"></a>00017 <span class="keyword">public</span>:
+<a name="l00018"></a><a class="code" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#a436e895c8664c39a3ed83af5b6598097">00018</a>        <span class="keyword">typedef</span> <a class="code" href="classiview_1_1_c_interactive_shape_base.html">CInteractiveShapeBase</a> <a class="code" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#a436e895c8664c39a3ed83af5b6598097">BaseClass</a>;
+<a name="l00019"></a>00019 
+<a name="l00020"></a>00020        <span class="comment">// reimplemented (iview::IInteractiveShape)</span>
+<a name="l00021"></a>00021        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_touchable.html#aff8f4bec7213cc866469e5e41a8395e2" title="Enumeration for possible shape touch states.">TouchState</a> <a class="code" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#a7af471f367ea6dba2b3144419ac63fd6" title="Check, if any shape is touched.">IsTouched</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023        <span class="comment">// reimplemented (iview::IVisualizable)</span>
+<a name="l00024"></a>00024        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#a4fb5626f85ec7d3d8faf159f39685ac2" title="Draw this shape using draw context.">Draw</a>(QPainter&amp; drawContext) <span class="keyword">const</span>;
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026        <span class="comment">// reimplemented (iview::IMouseActionObserver)</span>
+<a name="l00027"></a>00027        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#ac022f42ddc32fbdc68172d0737e59aed" title="It is called, when mouse button is pushed down or up on this object.">OnMouseButton</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position, Qt::MouseButton buttonType, <span class="keywordtype">bool</span> downFlag);
+<a name="l00028"></a>00028        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#a0a68e0b707b0a076b3c2bfc9da5a722b" title="It is called, when mouse is moved.">OnMouseMove</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position);
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030 <span class="keyword">protected</span>:
+<a name="l00031"></a>00031        <span class="comment">// reimplemented (iview::CShapeBase)</span>
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a> <a class="code" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#a4caed41505e3b7025cd64234b3128daa" title="Calculate bounding box.">CalcBoundingBox</a>() <span class="keyword">const</span>;
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034        <span class="comment">// reimplemented (iview::CInteractiveShapeBase)</span>
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#af08ea2b237d12e208c6b794561ec6809">BeginLogDrag</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; reference);
+<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#a3618689d3c0db257616eda50bc3e93ca">SetLogDragPosition</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; position);
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038 <span class="keyword">private</span>:
+<a name="l00039"></a>00039        <span class="keyword">enum</span> EditBound
+<a name="l00040"></a>00040        {
+<a name="l00041"></a>00041               EB_LEFT,
+<a name="l00042"></a>00042               EB_RIGHT,
+<a name="l00043"></a>00043               EB_TOP,
+<a name="l00044"></a>00044               EB_BOTTOM
+<a name="l00045"></a>00045        } m_editBound;
+<a name="l00046"></a>00046 };
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 } <span class="comment">// namespace iview</span>
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051 } <span class="comment">// namespace iview</span>
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054 <span class="preprocessor">#endif // !iview_CPerspectiveCalibrationBoundsShape_included</span>
-<a name="l00055"></a>00055 <span class="preprocessor"></span>
-<a name="l00056"></a>00056 
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 <span class="preprocessor">#endif // !iview_CPerspectiveCalibrationBoundsShape_included</span>
+<a name="l00053"></a>00053 <span class="preprocessor"></span>
+<a name="l00054"></a>00054 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
