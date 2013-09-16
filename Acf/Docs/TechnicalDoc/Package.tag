@@ -4339,6 +4339,13 @@
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
+    <name>CHierarchicalHeaderView.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_c_hierarchical_header_view_8h</filename>
+    <class kind="class">iqtgui::CHierarchicalHeaderView</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
     <name>CIconProviderComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_icon_provider_comp_8h</filename>
@@ -37022,6 +37029,7 @@
     <class kind="class">iqtgui::CGuiComponentBase</class>
     <class kind="class">iqtgui::CGuiComponentDialog</class>
     <class kind="class">iqtgui::CHierarchicalCommand</class>
+    <class kind="class">iqtgui::CHierarchicalHeaderView</class>
     <class kind="class">iqtgui::CIconProviderComp</class>
     <class kind="class">iqtgui::CImagePropertiesFrameComp</class>
     <class kind="class">iqtgui::CImagePropertyGuiComp</class>
@@ -38420,6 +38428,63 @@
       <anchorfile>classiqtgui_1_1_c_hierarchical_command.html</anchorfile>
       <anchor>a49d4b4fb85cf555d24013b68676b3db5</anchor>
       <arglist>(int priority) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CHierarchicalHeaderView</name>
+    <filename>classiqtgui_1_1_c_hierarchical_header_view.html</filename>
+    <member kind="enumeration">
+      <name>HeaderDataModelRoles</name>
+      <anchorfile>classiqtgui_1_1_c_hierarchical_header_view.html</anchorfile>
+      <anchor>a419135cbe36ef16abbcecba4e73340ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>HorizontalHeaderDataRole</name>
+      <anchorfile>classiqtgui_1_1_c_hierarchical_header_view.html</anchorfile>
+      <anchor>a419135cbe36ef16abbcecba4e73340acab294510d74cc4e7a46a1e0726e873773</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>VerticalHeaderDataRole</name>
+      <anchorfile>classiqtgui_1_1_c_hierarchical_header_view.html</anchorfile>
+      <anchor>a419135cbe36ef16abbcecba4e73340acaa80bc4bb1f3bdd13ca57b56d2aca9816</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QHeaderView</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_c_hierarchical_header_view.html</anchorfile>
+      <anchor>a6ba1d4d8f917af12987981a0af99f89c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CHierarchicalHeaderView</name>
+      <anchorfile>classiqtgui_1_1_c_hierarchical_header_view.html</anchorfile>
+      <anchor>aac955ed6faa1304ab52c7a6e32cbfaf8</anchor>
+      <arglist>(Qt::Orientation orientation, QWidget *parent=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setModel</name>
+      <anchorfile>classiqtgui_1_1_c_hierarchical_header_view.html</anchorfile>
+      <anchor>a7a9ede3e04e586cf548cdce8f66c3f9c</anchor>
+      <arglist>(QAbstractItemModel *model)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>paintSection</name>
+      <anchorfile>classiqtgui_1_1_c_hierarchical_header_view.html</anchorfile>
+      <anchor>a5dacfc35e606bc02a870f9014052ad6d</anchor>
+      <arglist>(QPainter *painter, const QRect &amp;rect, int logicalIndex) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QSize</type>
+      <name>sectionSizeFromContents</name>
+      <anchorfile>classiqtgui_1_1_c_hierarchical_header_view.html</anchorfile>
+      <anchor>a940c51eb9b84a04130165a8141eb0076</anchor>
+      <arglist>(int logicalIndex) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -51685,13 +51750,6 @@
       <anchorfile>classiview_1_1_c_image_shape.html</anchorfile>
       <anchor>aef4ba2cf792cb67071fb9b0620ec0a43</anchor>
       <arglist>(const icmm::IColorTransformation *colorTransformationPtr=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetPositionOffset</name>
-      <anchorfile>classiview_1_1_c_image_shape.html</anchorfile>
-      <anchor>adebc01e57f207ee2ccbd8372915e07d7</anchor>
-      <arglist>(const QPoint &amp;position)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>

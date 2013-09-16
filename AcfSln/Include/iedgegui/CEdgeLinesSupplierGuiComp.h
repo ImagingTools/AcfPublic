@@ -89,7 +89,7 @@ private:
 	I_REF(iview::IColorSchema, m_contoursColorSchemaCompPtr);
 	I_REF(iqtgui::IGuiObject, m_intermediateResultsGuiCompPtr);
 
-	imod::TModelWrap<iedge::CEdgeLineContainer> m_foundModel;
+	imod::TModelWrap<iedge::CEdgeLineContainer> m_edgeLineContainer;
 
 	iview::CColorSchema m_edgesColorSchema;
 };

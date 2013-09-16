@@ -168,7 +168,7 @@ bool CAnnulusSegmentShape::OnMouseMove(istd::CIndex2d position)
 
 	case EM_ANGLE1:
 		{
-			i2d::CVector2d delta = cp - center;	
+			i2d::CVector2d delta = cp - center;
 			double beginAngle = qAtan2(delta.GetY(), delta.GetX());
 			double endAngle = objectPtr->GetEndAngle();
 			if (beginAngle > endAngle){
@@ -187,7 +187,7 @@ bool CAnnulusSegmentShape::OnMouseMove(istd::CIndex2d position)
 
 	case EM_ANGLE2:
 		{
-			i2d::CVector2d delta = cp - center;	
+			i2d::CVector2d delta = cp - center;
 			double beginAngle = objectPtr->GetBeginAngle();
 			double endAngle = qAtan2(delta.GetY(), delta.GetX());
 			if (beginAngle > endAngle){
@@ -247,12 +247,12 @@ void CAnnulusSegmentShape::Draw(QPainter& drawContext) const
 	}
 
 	DrawArea(	drawContext,
-				screenCenter, 
-				int(qMin(screenRadius, screenRadius2)), 
+				screenCenter,
+				int(qMin(screenRadius, screenRadius2)),
 				int(qMax(screenRadius, screenRadius2)),
 				objectPtr->GetBeginAngle(),
 				objectPtr->GetEndAngle());
-	
+
 	drawContext.restore();
 
 	if (m_isEditableRadius && IsSelected()){
@@ -304,7 +304,7 @@ ITouchable::TouchState CAnnulusSegmentShape::IsTouched(istd::CIndex2d position) 
 
 	const IColorSchema& colorSchema = GetColorSchema();
 
-	double proportions = GetViewToScreenTransform().GetDeformMatrix().GetApproxScale();
+	double viewScale = GetViewToScreenTransform().GetDeformMatrix().GetApproxScale();
 
 	i2d::CVector2d cp = GetLogPosition(position);
 
@@ -350,7 +350,7 @@ ITouchable::TouchState CAnnulusSegmentShape::IsTouched(istd::CIndex2d position) 
 		}
 	}
 
-	double logicalLineWidth = colorSchema.GetLogicalLineWidth();
+	double viewportLineWidth = colorSchema.GetLogicalLineWidth();
 	double angle = cpToCenterVector.GetAngle();
 	if (angle < beginAngle){
 		angle += 2 * I_PI;
@@ -359,8 +359,8 @@ ITouchable::TouchState CAnnulusSegmentShape::IsTouched(istd::CIndex2d position) 
 		angle -= 2 * I_PI;
 	}
 
-	if (		(proportions * qAbs(radius - distance) < logicalLineWidth) ||
-				(proportions * qAbs(radius2 - distance) < logicalLineWidth)){
+	if (		(viewScale * qAbs(radius - distance) < viewportLineWidth) ||
+				(viewScale * qAbs(radius2 - distance) < viewportLineWidth)){
 		if ((angle >= beginAngle) && (angle <= endAngle)){
 			bool isEditablePosition = IsEditablePosition();
 
@@ -368,8 +368,8 @@ ITouchable::TouchState CAnnulusSegmentShape::IsTouched(istd::CIndex2d position) 
 		}
 	}
 
-	if (		(proportions * middleRadius * qAbs(beginAngle - angle) < logicalLineWidth) ||
-				(proportions * middleRadius * qAbs(endAngle - angle) < logicalLineWidth)){
+	if (		(viewScale * middleRadius * qAbs(beginAngle - angle) < viewportLineWidth) ||
+				(viewScale * middleRadius * qAbs(endAngle - angle) < viewportLineWidth)){
 		if ((distance >= radius) && (distance <= radius2)){
 			bool isEditablePosition = IsEditablePosition();
 

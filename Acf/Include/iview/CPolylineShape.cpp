@@ -232,7 +232,7 @@ void CPolylineShape::DrawOrientationMarker(
 	i2d::CVector2d markerPoint2 = lineCenter + segmentBaseX;
 	i2d::CVector2d markerPoint3 = lineCenter - segmentBaseY;
 	i2d::CVector2d markerPoint4 = lineCenter + segmentBaseY;
- 
+
 	drawContext.save();
 
 	// draw the markers
@@ -297,8 +297,7 @@ void CPolylineShape::DrawCurve(QPainter& drawContext) const
 
 				segmentLine.SetPoint2(firstPoint);
 
-				const iview::CScreenTransform& transform = GetViewToScreenTransform();
-				double scale = transform.GetDeformMatrix().GetApproxScale();
+				double viewScale = GetViewToScreenTransform().GetDeformMatrix().GetApproxScale();
 
 				for (int pointIndex = secondPointIndex; pointIndex < nodesCount; ++pointIndex){
 					segmentLine.PushEndPoint(GetScreenPosition(polylinePtr->GetNode(pointIndex)));
@@ -308,7 +307,7 @@ void CPolylineShape::DrawCurve(QPainter& drawContext) const
 								softBrightPen, darkBrush,
 								softDarkPen, brightBrush,
 								segmentLine,
-								scale);
+								viewScale);
 				}
 			}
 
