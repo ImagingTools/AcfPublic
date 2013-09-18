@@ -34,7 +34,7 @@ namespace TutorialAcfSln
 {
 
 
-	typedef edgetest::CEdgeLinesTestGuiComp EdgeLinesTestGui;
+typedef edgetest::CEdgeLinesTestGuiComp EdgeLinesTestGui;
 
 
 } // namespace TutorialAcfSln

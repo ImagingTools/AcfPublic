@@ -182,6 +182,8 @@ bool CEdgeLineContainer::GetInvTransformed(
 
 bool CEdgeLineContainer::CopyFrom(const istd::IChangeable& object, CompatibilityMode mode)
 {
+	istd::CChangeNotifier notifier(this);
+
 	return BaseClass::CopyFrom(object, mode) && BaseClass2::CopyFrom(object, mode);
 }
 

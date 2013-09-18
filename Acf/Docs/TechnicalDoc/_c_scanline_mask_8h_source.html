@@ -54,7 +54,7 @@
 <a name="l00029"></a>00029 {
 <a name="l00030"></a>00030 <span class="keyword">public</span>:
 <a name="l00031"></a><a class="code" href="classiimg_1_1_c_scanline_mask.html#a5faed858ff3f51b9056ef8906c09669e">00031</a>        <span class="keyword">typedef</span> QList&lt;istd::CIntRanges&gt; <a class="code" href="classiimg_1_1_c_scanline_mask.html#a5faed858ff3f51b9056ef8906c09669e">RangesContainer</a>;
-<a name="l00032"></a><a class="code" href="classiimg_1_1_c_scanline_mask.html#ab3e3976a4239f6274df8242fc149fdd3">00032</a>        <span class="keyword">typedef</span> QVector&lt;const istd::CIntRanges*&gt; <a class="code" href="classiimg_1_1_c_scanline_mask.html#ab3e3976a4239f6274df8242fc149fdd3">Scanlines</a>;
+<a name="l00032"></a><a class="code" href="classiimg_1_1_c_scanline_mask.html#aaf078dcb50eaf66b9d4825a61bb4c12b">00032</a>        <span class="keyword">typedef</span> QVector&lt;int&gt; <a class="code" href="classiimg_1_1_c_scanline_mask.html#aaf078dcb50eaf66b9d4825a61bb4c12b">Scanlines</a>;    <span class="comment">// Index of container element for each scan line, negative value for empty element</span>
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034        <a class="code" href="classiimg_1_1_c_scanline_mask.html#af99af06d374a0b2f8df907bb12e4694a">CScanlineMask</a>();
 <a name="l00035"></a>00035 
@@ -84,7 +84,7 @@
 <a name="l00130"></a>00130        <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_c_scanline_mask.html#ae562e226db109611d02b22d924ecac0a" title="Translated (move) this mask.">Translate</a>(<span class="keywordtype">int</span> dx, <span class="keywordtype">int</span> dy);
 <a name="l00131"></a>00131 
 <a name="l00135"></a>00135        <a class="code" href="classiimg_1_1_c_scanline_mask.html#a5faed858ff3f51b9056ef8906c09669e">RangesContainer</a>&amp; <a class="code" href="classiimg_1_1_c_scanline_mask.html#a6872fce1a4076f0c0dff547f77990824" title="Get access to internal range container.">GetRangesContainer</a>();
-<a name="l00139"></a>00139        <a class="code" href="classiimg_1_1_c_scanline_mask.html#ab3e3976a4239f6274df8242fc149fdd3">Scanlines</a>&amp; <a class="code" href="classiimg_1_1_c_scanline_mask.html#a138ea204a99ae59a4e3d8c4aca877d68" title="Get access to internal scan lines.">GetScanLines</a>();
+<a name="l00139"></a>00139        <a class="code" href="classiimg_1_1_c_scanline_mask.html#aaf078dcb50eaf66b9d4825a61bb4c12b">Scanlines</a>&amp; <a class="code" href="classiimg_1_1_c_scanline_mask.html#a138ea204a99ae59a4e3d8c4aca877d68" title="Get access to internal scan lines.">GetScanLines</a>();
 <a name="l00140"></a>00140 
 <a name="l00141"></a>00141        <span class="comment">// reimplemented (i2d::IObject2d)</span>
 <a name="l00142"></a>00142        <span class="keyword">virtual</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> <a class="code" href="classiimg_1_1_c_scanline_mask.html#a028471f6ace53c1486e2f9a919b1069a" title="Returns center of this 2D-object.">GetCenter</a>() <span class="keyword">const</span>;
@@ -109,7 +109,7 @@
 <a name="l00161"></a>00161 <span class="keyword">private</span>:
 <a name="l00162"></a>00162        <a class="code" href="classiimg_1_1_c_scanline_mask.html#a5faed858ff3f51b9056ef8906c09669e">RangesContainer</a> m_rangesContainer;
 <a name="l00163"></a>00163 
-<a name="l00164"></a>00164        <a class="code" href="classiimg_1_1_c_scanline_mask.html#ab3e3976a4239f6274df8242fc149fdd3">Scanlines</a> m_scanlines;
+<a name="l00164"></a>00164        <a class="code" href="classiimg_1_1_c_scanline_mask.html#aaf078dcb50eaf66b9d4825a61bb4c12b">Scanlines</a> m_scanlines;
 <a name="l00165"></a>00165 
 <a name="l00166"></a>00166        <span class="keywordtype">int</span> m_firstLinePos;
 <a name="l00167"></a>00167 
@@ -126,7 +126,7 @@
 <a name="l00178"></a>00178 }
 <a name="l00179"></a>00179 
 <a name="l00180"></a>00180 
-<a name="l00181"></a><a class="code" href="classiimg_1_1_c_scanline_mask.html#a138ea204a99ae59a4e3d8c4aca877d68">00181</a> <span class="keyword">inline</span> <a class="code" href="classiimg_1_1_c_scanline_mask.html#ab3e3976a4239f6274df8242fc149fdd3">CScanlineMask::Scanlines</a>&amp; <a class="code" href="classiimg_1_1_c_scanline_mask.html#a138ea204a99ae59a4e3d8c4aca877d68" title="Get access to internal scan lines.">CScanlineMask::GetScanLines</a>()
+<a name="l00181"></a><a class="code" href="classiimg_1_1_c_scanline_mask.html#a138ea204a99ae59a4e3d8c4aca877d68">00181</a> <span class="keyword">inline</span> <a class="code" href="classiimg_1_1_c_scanline_mask.html#aaf078dcb50eaf66b9d4825a61bb4c12b">CScanlineMask::Scanlines</a>&amp; <a class="code" href="classiimg_1_1_c_scanline_mask.html#a138ea204a99ae59a4e3d8c4aca877d68" title="Get access to internal scan lines.">CScanlineMask::GetScanLines</a>()
 <a name="l00182"></a>00182 {
 <a name="l00183"></a>00183        <span class="keywordflow">return</span> m_scanlines;
 <a name="l00184"></a>00184 }

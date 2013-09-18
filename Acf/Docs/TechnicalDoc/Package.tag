@@ -24169,10 +24169,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>QVector&lt; const istd::CIntRanges * &gt;</type>
+      <type>QVector&lt; int &gt;</type>
       <name>Scanlines</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
-      <anchor>ab3e3976a4239f6274df8242fc149fdd3</anchor>
+      <anchor>aaf078dcb50eaf66b9d4825a61bb4c12b</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -50813,9 +50813,16 @@
     </member>
     <member kind="variable" protection="protected" static="yes">
       <type>static i2d::CRect</type>
-      <name>s_tickersBoxes</name>
+      <name>s_tickerDrawBoxes</name>
       <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
-      <anchor>a130c7e8698751c481c6a1c90b5714dd7</anchor>
+      <anchor>a03978f3dcb6bb5127308002f94dad766</anchor>
+      <arglist>[(int) TT_LAST+(int) 1]</arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static i2d::CRect</type>
+      <name>s_tickerBoundingBoxes</name>
+      <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
+      <anchor>a5ab87d0cd925ad8bef15dcde18898094</anchor>
       <arglist>[(int) TT_LAST+(int) 1]</arglist>
     </member>
   </compound>
