@@ -130,21 +130,21 @@ private:
 	};
 
 	// static methods
-	static void CFastEdgesExtractorComp::TryConnectElements(
-				PixelDescriptor& neightborPixel,
+	static void TryConnectElements(
+				const PixelDescriptor& neightborPixel,
 				PixelDescriptor& pixel);
-	static void CFastEdgesExtractorComp::CalcDerivative(
+	static void CalcDerivative(
 				const quint8* prevSourceLine,
 				const quint8* sourceLine,
 				int x,
 				PixelDescriptor& pixelDescriptor);
-	static void CFastEdgesExtractorComp::CalcDerivativeLine(
+	static void CalcDerivativeLine(
 				const quint8* prevSourceLine,
 				const quint8* sourceLine,
 				int inputBeginX,
 				int inputEndX,
 				PixelDescriptor* destLine);
-	static void CFastEdgesExtractorComp::CalcPoint(
+	static void CalcPoint(
 				int x,
 				int y,
 				quint32 threshold2Factor,
@@ -152,7 +152,7 @@ private:
 				PixelDescriptor* prevDestLine,
 				PixelDescriptor* destLine,
 				InternalContainer& container);
-	static void CFastEdgesExtractorComp::CalcOutputLine(
+	static void CalcOutputLine(
 				int outputBeginX,
 				int outputEndX,
 				int y,
