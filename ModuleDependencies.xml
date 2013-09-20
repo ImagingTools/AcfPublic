@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ModuleDependencies
+	Name="AcfPublic"
+	Version="FlavorOfTheDay">
+	<Dependencies>
+	<Dependency>
+	  <Module Name="QMake"/>
+	  <Module Name="QtLibraries"/>
+	</Dependency>
+	</Dependencies>
+	<Targets>
+		<Target Default="True" Language="CPP" Name="AcfPublic"/>
+		<Target Language="CPP" Name="AcfStd"/>
+		<Target Language="CPP" Name="Acf"/>
+		<Target Language="CPP" Name="AcfSln"/>
+		<Target Language="CPP" Name="MakeProjects"/>
+	</Targets>
+  <Builds>
+	<Build IfTarget="AcfPublic">
+	  <Build IfPlatform="WinOS">
+		<Qbs Project="Build/Qbs/AcfWorldAll.qbs" Profile="qtc_VC10" OutputDirectory="Acf">
+		</Qbs>
+	  </Build>
+	  <Build IfPlatform="MacOS">
+		<Qbs Project="Build/Qbs/AcfWorldAll.qbs" Profile="qtc_GCC">
+		</Qbs>
+	  </Build>
+	</Build>
+  </Builds>
+</ModuleDependencies>
