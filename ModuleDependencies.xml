@@ -18,7 +18,7 @@
   <Builds>
 	<Build IfTarget="AcfPublic">
 	  <Build IfPlatform="WinOS">
-		<Qbs Project="Build/Qbs/AcfWorldAll.qbs" Profile="qtc_VC10" OutputDirectory="Acf">
+		<Qbs Project="Build/Qbs/AcfWorldAll.qbs" Profile="qtc_VC10">
 		</Qbs>
 	  </Build>
 	  <Build IfPlatform="MacOS">
