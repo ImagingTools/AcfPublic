@@ -115,7 +115,7 @@ void COptionsManagerGuiComp::UpdateGui(int updateFlags)
 
 	iprm::IOptionsManager* optionManagerPtr = GetObjectPtr();
 	if (optionManagerPtr != NULL){
-		int supplortedFlags = optionManagerPtr->GetIndexOperationFlags();
+		int supplortedFlags = optionManagerPtr->GetOptionOperationFlags();
 
 		Selector->setEditable(supplortedFlags & iprm::IOptionsManager::OOF_SUPPORT_INSERT);
 	}

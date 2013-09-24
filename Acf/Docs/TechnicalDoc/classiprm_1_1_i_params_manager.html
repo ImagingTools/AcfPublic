@@ -68,7 +68,8 @@ Public Types</h2></td></tr>
 <a class="el" href="classiprm_1_1_i_params_manager.html#af0f7891ab3e905463489162a441f32e6ab3a666972d40e17ec3f7540bdc959e59">MF_SUPPORT_INSERT</a> =  4, 
 <a class="el" href="classiprm_1_1_i_params_manager.html#af0f7891ab3e905463489162a441f32e6aa24bd427372876d5433a1a9e39705b62">MF_SUPPORT_DELETE</a> =  8, 
 <br/>
-&#160;&#160;<a class="el" href="classiprm_1_1_i_params_manager.html#af0f7891ab3e905463489162a441f32e6af6b4bfb8080f455aaf183be464a007dd">MF_SUPPORT_SWAP</a> =  16
+&#160;&#160;<a class="el" href="classiprm_1_1_i_params_manager.html#af0f7891ab3e905463489162a441f32e6af6b4bfb8080f455aaf183be464a007dd">MF_SUPPORT_SWAP</a> =  16, 
+<a class="el" href="classiprm_1_1_i_params_manager.html#af0f7891ab3e905463489162a441f32e6a32150ef24514a075d4911945339a4a8b">MF_SUPPORT_ENABLING</a> =  32
 <br/>
  }</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitwise coded flags used to find out supported features.  <a href="classiprm_1_1_i_params_manager.html#af0f7891ab3e905463489162a441f32e6">More...</a><br/></td></tr>
@@ -145,7 +146,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiprm_1_1_i_selection_param.html#a092f5d4176d748b596be4ec0464827b3">iprm::ISelectionParam</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_params_manager_8h_source.html#l00058">58</a> of file <a class="el" href="_i_params_manager_8h_source.html">IParamsManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_params_manager_8h_source.html#l00067">67</a> of file <a class="el" href="_i_params_manager_8h_source.html">IParamsManager.h</a>.</p>
 
 </div>
 </div>
@@ -176,6 +177,9 @@ Public Member Functions</h2></td></tr>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="af0f7891ab3e905463489162a441f32e6af6b4bfb8080f455aaf183be464a007dd"></a><!-- doxytag: member="MF_SUPPORT_SWAP" ref="af0f7891ab3e905463489162a441f32e6af6b4bfb8080f455aaf183be464a007dd" args="" -->MF_SUPPORT_SWAP</em>&nbsp;</td><td>
 <p>Active if swap of parameters with the other one is possible. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="af0f7891ab3e905463489162a441f32e6a32150ef24514a075d4911945339a4a8b"></a><!-- doxytag: member="MF_SUPPORT_ENABLING" ref="af0f7891ab3e905463489162a441f32e6a32150ef24514a075d4911945339a4a8b" args="" -->MF_SUPPORT_ENABLING</em>&nbsp;</td><td>
+<p>Active if enabling/disabling of the parameters is possible. </p>
 </td></tr>
 </table>
 </dd>
@@ -210,7 +214,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#aae371ff5b70aa68a99b95bf72fb1918a">iprm::CMultiParamsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_params_manager_comp.html#a6c6a8deb0948740fe4558d220a3c893c">iprm::CParamsManagerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiprm_1_1_c_params_manager_comp.html#a6c6a8deb0948740fe4558d220a3c893c">iprm::CParamsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#aae371ff5b70aa68a99b95bf72fb1918a">iprm::CMultiParamsManagerComp</a>.</p>
 
 </div>
 </div>
@@ -231,7 +235,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get selected parameter set. </p>
 
-<p>Implemented in <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#acaf53902997bacf70cda2173246b2a33">iprm::CMultiParamsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_params_manager_comp.html#ae19b3efcc16c19eb07df3a3bef7f8f36">iprm::CParamsManagerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiprm_1_1_c_params_manager_comp.html#ae19b3efcc16c19eb07df3a3bef7f8f36">iprm::CParamsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#acaf53902997bacf70cda2173246b2a33">iprm::CMultiParamsManagerComp</a>.</p>
 
 </div>
 </div>
@@ -252,7 +256,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get name of specified parameter set. </p>
 
-<p>Implemented in <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a4bc57103fed2eaf01cf163df4baab67e">iprm::CMultiParamsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_params_manager_comp.html#add63f348396f6e97b119a84b9d5ea9e5">iprm::CParamsManagerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiprm_1_1_c_params_manager_comp.html#add63f348396f6e97b119a84b9d5ea9e5">iprm::CParamsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a4bc57103fed2eaf01cf163df4baab67e">iprm::CMultiParamsManagerComp</a>.</p>
 
 </div>
 </div>
@@ -272,7 +276,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get number of managed set. </p>
 
-<p>Implemented in <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a82efc76bc70b8b04eae7074421189be3">iprm::CMultiParamsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_params_manager_comp.html#abc52794b2ed4df7cb6a872bd208ca638">iprm::CParamsManagerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiprm_1_1_c_params_manager_comp.html#abc52794b2ed4df7cb6a872bd208ca638">iprm::CParamsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a82efc76bc70b8b04eae7074421189be3">iprm::CMultiParamsManagerComp</a>.</p>
 
 </div>
 </div>
@@ -293,7 +297,7 @@ Public Member Functions</h2></td></tr>
 <p>Get selection contraints describing each supported type. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>NULL, if only one annonymed type is supported. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#aa0f06fc4da29b3735dfb66e4aa70f55a">iprm::CMultiParamsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_params_manager_comp.html#a3b268222e4db98bd3edbe8abc2864a8a">iprm::CParamsManagerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiprm_1_1_c_params_manager_comp.html#a3b268222e4db98bd3edbe8abc2864a8a">iprm::CParamsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#aa0f06fc4da29b3735dfb66e4aa70f55a">iprm::CMultiParamsManagerComp</a>.</p>
 
 </div>
 </div>
@@ -332,7 +336,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>position of inserted new entry or negative value if no insert was possible. For specified index positions (positive <code>index</code> value) it will return the same index or negative value. </dd></dl>
 
-<p>Implemented in <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a1a852d47c2e74a29f96f2d0d2a5fe33f">iprm::CMultiParamsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_params_manager_comp.html#ab82378415def08b5bcde877e10946668">iprm::CParamsManagerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiprm_1_1_c_params_manager_comp.html#ab82378415def08b5bcde877e10946668">iprm::CParamsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a1a852d47c2e74a29f96f2d0d2a5fe33f">iprm::CMultiParamsManagerComp</a>.</p>
 
 </div>
 </div>
@@ -353,7 +357,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Remove parameters set at selected position. </p>
 
-<p>Implemented in <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a4f803aaa5f0091069c78795cbea8b5b7">iprm::CMultiParamsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_params_manager_comp.html#a50f8d419f57ae6f5f06cee02da4f66e1">iprm::CParamsManagerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiprm_1_1_c_params_manager_comp.html#a50f8d419f57ae6f5f06cee02da4f66e1">iprm::CParamsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a4f803aaa5f0091069c78795cbea8b5b7">iprm::CMultiParamsManagerComp</a>.</p>
 
 </div>
 </div>
@@ -384,7 +388,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Set name of specified parameter set. </p>
 
-<p>Implemented in <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a4e18ae62bbccc48fe49d5b3d6b1fd007">iprm::CMultiParamsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_params_manager_comp.html#a25e7d50536b4d173e6263f3c96f16cda">iprm::CParamsManagerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiprm_1_1_c_params_manager_comp.html#a25e7d50536b4d173e6263f3c96f16cda">iprm::CParamsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a4e18ae62bbccc48fe49d5b3d6b1fd007">iprm::CMultiParamsManagerComp</a>.</p>
 
 </div>
 </div>
@@ -415,7 +419,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Swap two parameter sets. </p>
 
-<p>Implemented in <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#af4f7843a1bd001a03128f5f44838232b">iprm::CMultiParamsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_params_manager_comp.html#af193c485d9ef1b3c0037035dbc18cd9d">iprm::CParamsManagerComp</a>.</p>
+<p>Implemented in <a class="el" href="classiprm_1_1_c_params_manager_comp.html#af193c485d9ef1b3c0037035dbc18cd9d">iprm::CParamsManagerComp</a>, and <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#af4f7843a1bd001a03128f5f44838232b">iprm::CMultiParamsManagerComp</a>.</p>
 
 </div>
 </div>

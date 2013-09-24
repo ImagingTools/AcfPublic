@@ -81,8 +81,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get option ID.  <a href="#ab47b77cb57604313643e9cfa829f1cd0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager.html#a5beb6069c3fc941bb5c0eef191a30990">IsOptionEnabled</a> (int index) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code> if the option is enabled and can be selected.  <a href="#a5beb6069c3fc941bb5c0eef191a30990"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager.html#a56b9a32eccb6f10337bf51b7cd9f2a22">GetIndexOperationFlags</a> (int index=-1) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get operation control flags of some option or whole manager.  <a href="#a56b9a32eccb6f10337bf51b7cd9f2a22"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager.html#a5dca9b353fa635f408cd8a069a0c242e">GetOptionOperationFlags</a> (int index=-1) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get operation control flags of some option or whole manager.  <a href="#a5dca9b353fa635f408cd8a069a0c242e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager.html#ad5c040f75eef96a082b0f77661c3b833">SetOptionEnabled</a> (int index, bool isEnabled=true)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables a given option.  <a href="#ad5c040f75eef96a082b0f77661c3b833"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager.html#a74834c67f53702d61b78a3e9856fbcfd">RemoveOption</a> (int index)</td></tr>
@@ -120,33 +120,6 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a56b9a32eccb6f10337bf51b7cd9f2a22"></a><!-- doxytag: member="iprm::COptionsManager::GetIndexOperationFlags" ref="a56b9a32eccb6f10337bf51b7cd9f2a22" args="(int index=&#45;1) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int iprm::COptionsManager::GetIndexOperationFlags </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em> = <code>-1</code></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get operation control flags of some option or whole manager. </p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>index addressing position in the option list. For negative value general flags are returned. For example if you want to check if there is any re-nameable element you should call it with negative index value. To check if first element can be renamed call it with index value 0. To check if you can insert at the last position please use index value equal to current options count. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="classiprm_1_1_i_options_manager.html#a86bf3ccea292b0c07bc4c35f826efcf2">iprm::IOptionsManager</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a03d5824c5ea99590a384c085003112ec"></a><!-- doxytag: member="iprm::COptionsManager::GetOptionDescription" ref="a03d5824c5ea99590a384c085003112ec" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -209,6 +182,33 @@ Public Member Functions</h2></td></tr>
 <p>Get name of specified option. </p>
 
 <p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#ab30d9ae1759e0a1953751154f9983b3e">iprm::IOptionsList</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5dca9b353fa635f408cd8a069a0c242e"></a><!-- doxytag: member="iprm::COptionsManager::GetOptionOperationFlags" ref="a5dca9b353fa635f408cd8a069a0c242e" args="(int index=&#45;1) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int iprm::COptionsManager::GetOptionOperationFlags </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>-1</code></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get operation control flags of some option or whole manager. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>index addressing position in the option list. For negative value general flags are returned. For example if you want to check if there is any re-nameable element you should call it with negative index value. To check if first element can be renamed call it with index value 0. To check if you can insert at the last position please use index value equal to current options count. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classiprm_1_1_i_options_manager.html#a92767a77df62964ad38d1ad3f9b5b2df">iprm::IOptionsManager</a>.</p>
 
 </div>
 </div>

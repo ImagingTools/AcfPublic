@@ -29,14 +29,11 @@
 
 // ACF includes
 #include "istd/TSmartPtr.h"
-
 #include "imod/CMultiModelBridgeBase.h"
-
 #include "icomp/CComponentBase.h"
-
 #include "iprm/IParamsSet.h"
 #include "iprm/ISelectionParam.h"
-#include "iprm/IOptionsList.h"
+#include "iprm/IOptionsManager.h"
 #include "iprm/IParamsManager.h"
 
 
@@ -50,7 +47,7 @@ namespace iprm
 class CMultiParamsManagerComp:
 			public icomp::CComponentBase,
 			virtual public IParamsManager,
-			virtual public IOptionsList,
+			virtual public IOptionsManager,
 			protected imod::CMultiModelBridgeBase
 {
 public:
@@ -61,6 +58,7 @@ public:
 		I_REGISTER_INTERFACE(IParamsManager);
 		I_REGISTER_INTERFACE(iser::ISerializable);
 		I_REGISTER_INTERFACE(IOptionsList);
+		I_REGISTER_INTERFACE(IOptionsManager);
 		I_ASSIGN_MULTI_0(m_fixedParamSetsCompPtr, "FixedParamSets", "List of references to fixed parameter set", false);
 		I_ASSIGN_MULTI_0(m_fixedSetNamesAttrPtr, "FixedSetNames", "List of fixed parameter names", false);
 		I_ASSIGN(m_defaultSetNameAttrPtr, "DefaultSetName", "Default name of parameter set. Use %1 to insert automatic enumeration ", true, "<noname>");		
@@ -91,6 +89,19 @@ public:
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
+
+	// reimplemented (iprm::IOptionsManager)
+	virtual int GetOptionOperationFlags(int index = -1) const;
+	virtual bool SetOptionEnabled(int index, bool isEnabled = true);
+	virtual bool RemoveOption(int index);
+	virtual bool InsertOption(
+				const QString& optionName,
+				const QByteArray& optionId,
+				const QString& optionDescription = QString(),
+				int index = -1);
+	virtual bool SwapOptions(int index1, int index2);
+	virtual bool SetOptionName(int optionIndex, const QString& optionName);
+	virtual bool SetOptionDescription(int optionIndex, const QString& optionDescription);
 
 	// reimplemented (iprm::IOptionsList)
 	virtual int GetOptionsFlags() const;
@@ -145,6 +156,7 @@ private:
 		istd::TSmartPtr<IParamsSet> paramSetPtr;
 		QString name;
 		QByteArray typeId;
+		bool isEnabled;
 	};
 
 	int FindParamSetIndex(const QString& name) const;

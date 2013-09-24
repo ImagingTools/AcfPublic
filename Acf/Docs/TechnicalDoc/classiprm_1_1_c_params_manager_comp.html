@@ -39,7 +39,7 @@
 <div class="title">iprm::CParamsManagerComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iprm::CParamsManagerComp" --><!-- doxytag: inherits="icomp::CComponentBase,iprm::IParamsManager,iprm::IOptionsList,imod::CMultiModelBridgeBase" -->
+<!-- doxytag: class="iprm::CParamsManagerComp" --><!-- doxytag: inherits="icomp::CComponentBase,iprm::IParamsManager,iprm::IOptionsManager,imod::CMultiModelBridgeBase" -->
 <p>Implementation of parameter manager.  
  <a href="classiprm_1_1_c_params_manager_comp.html#details">More...</a></p>
 
@@ -52,19 +52,20 @@ Inheritance diagram for iprm::CParamsManagerComp:</div>
   <map id="iprm::CParamsManagerComp_map" name="iprm::CParamsManagerComp_map">
 <area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,224,180,248"/>
 <area href="classiprm_1_1_i_params_manager.html" title="Manager of parameters set." alt="iprm::IParamsManager" shape="rect" coords="190,224,370,248"/>
-<area href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities." alt="iprm::IOptionsList" shape="rect" coords="380,224,560,248"/>
+<area href="classiprm_1_1_i_options_manager.html" title="Common interface for the management of the dynamic selection constraints." alt="iprm::IOptionsManager" shape="rect" coords="380,224,560,248"/>
 <area href="classimod_1_1_c_multi_model_bridge_base.html" title="Allow to connect as observer to multiple models and call BeginChanges and EndChanges on some its chan..." alt="imod::CMultiModelBridgeBase" shape="rect" coords="665,224,845,248"/>
 <area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,168,180,192"/>
 <area href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options." alt="iprm::ISelectionParam" shape="rect" coords="190,168,370,192"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="380,168,560,192"/>
+<area href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities." alt="iprm::IOptionsList" shape="rect" coords="380,168,560,192"/>
 <area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="570,168,750,192"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="760,168,940,192"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,112,180,136"/>
 <area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="190,112,370,136"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="380,112,560,136"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="380,112,560,136"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="570,112,750,136"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="760,112,940,136"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="190,56,370,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="380,56,560,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="190,0,370,24"/>
 </map>
  </div></div>
@@ -106,6 +107,20 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get subselection for specified option.  <a href="#a4e9891005ac21c1c28d2f74a75e62a52"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a52ddd155230d8509ab8dd4a2b11e0f92">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a52ddd155230d8509ab8dd4a2b11e0f92"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a76d5b14a8ad2c9decc271e50418d6ee1">GetOptionOperationFlags</a> (int index=-1) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get operation control flags of some option or whole manager.  <a href="#a76d5b14a8ad2c9decc271e50418d6ee1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#adab56aa9d92281f723d0b94edce186a7">SetOptionEnabled</a> (int index, bool isEnabled=true)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables a given option.  <a href="#adab56aa9d92281f723d0b94edce186a7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a53ee1d13c8e1236841648a77b329d3a6">RemoveOption</a> (int index)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove an option at the given index.  <a href="#a53ee1d13c8e1236841648a77b329d3a6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a3de8ae3aa52154fce57bb960c34fd1b5">InsertOption</a> (const QString &amp;optionName, const QByteArray &amp;optionId, const QString &amp;optionDescription=QString(), int index=-1)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an option at some position.  <a href="#a3de8ae3aa52154fce57bb960c34fd1b5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a205f8c0f49a0542b1922dc6caf341a95">SwapOptions</a> (int index1, int index2)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap two options.  <a href="#a205f8c0f49a0542b1922dc6caf341a95"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a9d619957ae332017b0ef302efe2b3eb8">SetOptionName</a> (int optionIndex, const QString &amp;optionName)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a new name for the option at the given index <code>optionIndex</code>.  <a href="#a9d619957ae332017b0ef302efe2b3eb8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a42fe4fbbb887c65ea01fc9556dde1ebc">SetOptionDescription</a> (int optionIndex, const QString &amp;optionDescription)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a new description for the option at the given index <code>optionIndex</code>.  <a href="#a42fe4fbbb887c65ea01fc9556dde1ebc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#a52b8ffe289e490221bd0d42c376f4157">GetOptionsFlags</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints flags.  <a href="#a52b8ffe289e490221bd0d42c376f4157"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_params_manager_comp.html#ac0839252bfb7cdb764554ac7a3887847">GetOptionsCount</a> () const </td></tr>
@@ -268,6 +283,33 @@ Protected Member Functions</h2></td></tr>
 <p>Get name of specified option. </p>
 
 <p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#ab30d9ae1759e0a1953751154f9983b3e">iprm::IOptionsList</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a76d5b14a8ad2c9decc271e50418d6ee1"></a><!-- doxytag: member="iprm::CParamsManagerComp::GetOptionOperationFlags" ref="a76d5b14a8ad2c9decc271e50418d6ee1" args="(int index=&#45;1) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int iprm::CParamsManagerComp::GetOptionOperationFlags </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>-1</code></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get operation control flags of some option or whole manager. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>index addressing position in the option list. For negative value general flags are returned. For example if you want to check if there is any re-nameable element you should call it with negative index value. To check if first element can be renamed call it with index value 0. To check if you can insert at the last position please use index value equal to current options count. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classiprm_1_1_i_options_manager.html#a92767a77df62964ad38d1ad3f9b5b2df">iprm::IOptionsManager</a>.</p>
 
 </div>
 </div>
@@ -459,6 +501,58 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a3de8ae3aa52154fce57bb960c34fd1b5"></a><!-- doxytag: member="iprm::CParamsManagerComp::InsertOption" ref="a3de8ae3aa52154fce57bb960c34fd1b5" args="(const QString &amp;optionName, const QByteArray &amp;optionId, const QString &amp;optionDescription=QString(), int index=&#45;1)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iprm::CParamsManagerComp::InsertOption </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>optionName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>optionId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>optionDescription</em> = <code>QString()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Insert an option at some position. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">optionName</td><td>Name of the option </td></tr>
+    <tr><td class="paramname">optionId</td><td>ID of the option, according to data model constraints needs to be unique </td></tr>
+    <tr><td class="paramname">optionDescription</td><td>Description of the option </td></tr>
+    <tr><td class="paramname">index</td><td>Position in the list, where the new option will be inserted. Negative value means that the option will be added to the end of the list. Returns <code>true</code> if the operation was successful. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classiprm_1_1_i_options_manager.html#a0c8b8953003b617667a4dd25fe292b76">iprm::IOptionsManager</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ab82378415def08b5bcde877e10946668"></a><!-- doxytag: member="iprm::CParamsManagerComp::InsertParamsSet" ref="ab82378415def08b5bcde877e10946668" args="(int typeIndex=&#45;1, int index=&#45;1)" -->
 <div class="memitem">
 <div class="memproto">
@@ -555,6 +649,28 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a53ee1d13c8e1236841648a77b329d3a6"></a><!-- doxytag: member="iprm::CParamsManagerComp::RemoveOption" ref="a53ee1d13c8e1236841648a77b329d3a6" args="(int index)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iprm::CParamsManagerComp::RemoveOption </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Remove an option at the given index. </p>
+<p>Returns <code>true</code> if the operation was successful. </p>
+
+<p>Implements <a class="el" href="classiprm_1_1_i_options_manager.html#a460843f2069a96f01fb981836a5a1c16">iprm::IOptionsManager</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a50f8d419f57ae6f5f06cee02da4f66e1"></a><!-- doxytag: member="iprm::CParamsManagerComp::RemoveParamsSet" ref="a50f8d419f57ae6f5f06cee02da4f66e1" args="(int index)" -->
 <div class="memitem">
 <div class="memproto">
@@ -596,6 +712,101 @@ Protected Member Functions</h2></td></tr>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a> </dd></dl>
 
 <p>Implements <a class="el" href="classiser_1_1_i_serializable.html#a7b061fb451416f6044c5a0aca655cf59">iser::ISerializable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a42fe4fbbb887c65ea01fc9556dde1ebc"></a><!-- doxytag: member="iprm::CParamsManagerComp::SetOptionDescription" ref="a42fe4fbbb887c65ea01fc9556dde1ebc" args="(int optionIndex, const QString &amp;optionDescription)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iprm::CParamsManagerComp::SetOptionDescription </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>optionIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>optionDescription</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set a new description for the option at the given index <code>optionIndex</code>. </p>
+
+<p>Implements <a class="el" href="classiprm_1_1_i_options_manager.html#a2564f4a7e2576aefc8bd56575eb05554">iprm::IOptionsManager</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adab56aa9d92281f723d0b94edce186a7"></a><!-- doxytag: member="iprm::CParamsManagerComp::SetOptionEnabled" ref="adab56aa9d92281f723d0b94edce186a7" args="(int index, bool isEnabled=true)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iprm::CParamsManagerComp::SetOptionEnabled </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isEnabled</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Enables a given option. </p>
+<p>Only enabled options can be selected. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd>GetOptionEnabled </dd></dl>
+
+<p>Implements <a class="el" href="classiprm_1_1_i_options_manager.html#a568deee53f71324240e49af5d78fa940">iprm::IOptionsManager</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9d619957ae332017b0ef302efe2b3eb8"></a><!-- doxytag: member="iprm::CParamsManagerComp::SetOptionName" ref="a9d619957ae332017b0ef302efe2b3eb8" args="(int optionIndex, const QString &amp;optionName)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iprm::CParamsManagerComp::SetOptionName </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>optionIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>optionName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set a new name for the option at the given index <code>optionIndex</code>. </p>
+
+<p>Implements <a class="el" href="classiprm_1_1_i_options_manager.html#a484c2d27f32ad0eb2adff423832cb78a">iprm::IOptionsManager</a>.</p>
 
 </div>
 </div>
@@ -666,6 +877,37 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a205f8c0f49a0542b1922dc6caf341a95"></a><!-- doxytag: member="iprm::CParamsManagerComp::SwapOptions" ref="a205f8c0f49a0542b1922dc6caf341a95" args="(int index1, int index2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iprm::CParamsManagerComp::SwapOptions </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Swap two options. </p>
+
+<p>Implements <a class="el" href="classiprm_1_1_i_options_manager.html#a762509d17f1542671b9d8ec522349fa3">iprm::IOptionsManager</a>.</p>
 
 </div>
 </div>

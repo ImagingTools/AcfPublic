@@ -3296,7 +3296,7 @@
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
-    <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
+    <includes id="_i_options_manager_8h" name="IOptionsManager.h" local="yes" imported="no">iprm/IOptionsManager.h</includes>
     <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
     <class kind="class">iprm::CMultiParamsManagerComp</class>
     <class kind="struct">iprm::CMultiParamsManagerComp::TypeInfo</class>
@@ -3348,7 +3348,7 @@
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
-    <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
+    <includes id="_i_options_manager_8h" name="IOptionsManager.h" local="yes" imported="no">iprm/IOptionsManager.h</includes>
     <includes id="_i_name_param_8h" name="INameParam.h" local="yes" imported="no">iprm/INameParam.h</includes>
     <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
     <class kind="class">iprm::CParamsManagerComp</class>
@@ -31242,7 +31242,7 @@
     <filename>classiprm_1_1_c_multi_params_manager_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iprm::IParamsManager</base>
-    <base virtualness="virtual">iprm::IOptionsList</base>
+    <base virtualness="virtual">iprm::IOptionsManager</base>
     <base protection="protected">imod::CMultiModelBridgeBase</base>
     <class kind="struct">iprm::CMultiParamsManagerComp::TypeInfo</class>
     <class kind="struct">iprm::CMultiParamsManagerComp::TypeInfoList</class>
@@ -31357,6 +31357,55 @@
       <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
       <anchor>a123d9a9901bbeeec336027d6ec0d5cbe</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionOperationFlags</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a1fdfc2789d858d55097ab6fa2cc0c924</anchor>
+      <arglist>(int index=-1) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetOptionEnabled</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>ad9d63efa06237303cc85b902d635ec03</anchor>
+      <arglist>(int index, bool isEnabled=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemoveOption</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a32d5b75de0fd65cfcea8ea8cae9ee25f</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertOption</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>aa8171cab3d92095abb7e36871b4f9b2e</anchor>
+      <arglist>(const QString &amp;optionName, const QByteArray &amp;optionId, const QString &amp;optionDescription=QString(), int index=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SwapOptions</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a19c7883fa653494bfe91780229cb22f7</anchor>
+      <arglist>(int index1, int index2)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetOptionName</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a721966c414425cb6e53f195f79515658</anchor>
+      <arglist>(int optionIndex, const QString &amp;optionName)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetOptionDescription</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a095a48338f21066a55b28e1b9c139e28</anchor>
+      <arglist>(int optionIndex, const QString &amp;optionDescription)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -31666,9 +31715,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetIndexOperationFlags</name>
+      <name>GetOptionOperationFlags</name>
       <anchorfile>classiprm_1_1_c_options_manager.html</anchorfile>
-      <anchor>a56b9a32eccb6f10337bf51b7cd9f2a22</anchor>
+      <anchor>a5dca9b353fa635f408cd8a069a0c242e</anchor>
       <arglist>(int index=-1) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -31753,7 +31802,7 @@
     <filename>classiprm_1_1_c_params_manager_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iprm::IParamsManager</base>
-    <base virtualness="virtual">iprm::IOptionsList</base>
+    <base virtualness="virtual">iprm::IOptionsManager</base>
     <base protection="protected">imod::CMultiModelBridgeBase</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -31873,6 +31922,55 @@
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
       <anchor>a52ddd155230d8509ab8dd4a2b11e0f92</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionOperationFlags</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
+      <anchor>a76d5b14a8ad2c9decc271e50418d6ee1</anchor>
+      <arglist>(int index=-1) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetOptionEnabled</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
+      <anchor>adab56aa9d92281f723d0b94edce186a7</anchor>
+      <arglist>(int index, bool isEnabled=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemoveOption</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
+      <anchor>a53ee1d13c8e1236841648a77b329d3a6</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertOption</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
+      <anchor>a3de8ae3aa52154fce57bb960c34fd1b5</anchor>
+      <arglist>(const QString &amp;optionName, const QByteArray &amp;optionId, const QString &amp;optionDescription=QString(), int index=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SwapOptions</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
+      <anchor>a205f8c0f49a0542b1922dc6caf341a95</anchor>
+      <arglist>(int index1, int index2)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetOptionName</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
+      <anchor>a9d619957ae332017b0ef302efe2b3eb8</anchor>
+      <arglist>(int optionIndex, const QString &amp;optionName)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetOptionDescription</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
+      <anchor>a42fe4fbbb887c65ea01fc9556dde1ebc</anchor>
+      <arglist>(int optionIndex, const QString &amp;optionDescription)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -32651,9 +32749,9 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
-      <name>GetIndexOperationFlags</name>
+      <name>GetOptionOperationFlags</name>
       <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
-      <anchor>a86bf3ccea292b0c07bc4c35f826efcf2</anchor>
+      <anchor>a92767a77df62964ad38d1ad3f9b5b2df</anchor>
       <arglist>(int index=-1) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -32737,6 +32835,12 @@
       <name>MF_SUPPORT_SWAP</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
       <anchor>af0f7891ab3e905463489162a441f32e6af6b4bfb8080f455aaf183be464a007dd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MF_SUPPORT_ENABLING</name>
+      <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
+      <anchor>af0f7891ab3e905463489162a441f32e6a32150ef24514a075d4911945339a4a8b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">

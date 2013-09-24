@@ -68,86 +68,88 @@
 <a name="l00040"></a>00040               I_REGISTER_INTERFACE(<a class="code" href="classiqt2d_1_1_i_view_extender.html" title="Interface for GUI objects presenting its results using extern view objects.">iqt2d::IViewExtender</a>);
 <a name="l00041"></a>00041               I_ASSIGN(m_allowAddRemoveAttrPtr, <span class="stringliteral">&quot;AllowAddRemove&quot;</span>, <span class="stringliteral">&quot;If it is false, &#39;Add&#39; and &#39;Remove&#39; buttons will be always hidden&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);
 <a name="l00042"></a>00042               I_ASSIGN(m_allowUpDownAttrPtr, <span class="stringliteral">&quot;AllowUpDown&quot;</span>, <span class="stringliteral">&quot;If it is false, &#39;Up&#39; and &#39;Down&#39; buttons will be always hidden&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);
-<a name="l00043"></a>00043               I_ASSIGN(m_comboBoxViewAttrPtr, <span class="stringliteral">&quot;CompactView&quot;</span>, <span class="stringliteral">&quot;Shows parameters list as a combo box&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
-<a name="l00044"></a>00044               I_ASSIGN(m_iconProviderCompPtr, <span class="stringliteral">&quot;IconProvider&quot;</span>, <span class="stringliteral">&quot;Icons for drop-down types menu&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;IconProvider&quot;</span>);
-<a name="l00045"></a>00045        I_END_COMPONENT;
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047        <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#ac6c19b8ea97872a572d9eceeaae52c0b">CParamsManagerGuiCompBase</a>();
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049        <span class="comment">// reimplemented (iqt2d::IViewExtender)</span>
-<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a16969fb83b7cf4a305098bd7ab17b466" title="Called when items should be added to specified scene.">AddItemsToScene</a>(<a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">iqt2d::IViewProvider</a>* providerPtr, <span class="keywordtype">int</span> flags);
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a273c46617d34bd3cc8b669484b7b0494" title="Called when items should be removed from specified scene.">RemoveItemsFromScene</a>(<a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">iqt2d::IViewProvider</a>* providerPtr);
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053 <span class="keyword">protected</span> Q_SLOTS:
-<a name="l00054"></a>00054        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a2613b211be411ec714f296a225490b7d">on_AddButton_clicked</a>();
-<a name="l00055"></a>00055        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#adbedcd3309e8c3a709b7c28c31614966">on_RemoveButton_clicked</a>();
-<a name="l00056"></a>00056        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#aada0a511ed7615c108c3b81ec1f6e15e">on_UpButton_clicked</a>();
-<a name="l00057"></a>00057        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#aa1c78af4b78a23b042f8b4fa2adb173c">on_DownButton_clicked</a>();
-<a name="l00058"></a>00058        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a7f42017773612794f69cf0dcc4c3a46b">on_ParamsTree_itemSelectionChanged</a>();
-<a name="l00059"></a>00059        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a030a2fc1e392f663f22fffb50a691c28">on_ParamsTree_itemChanged</a>(QTreeWidgetItem* item, <span class="keywordtype">int</span> column);
-<a name="l00060"></a>00060        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a8f190a20002d0ac4cef268b52c979aa8">on_ParamsComboBox_currentIndexChanged</a>(<span class="keywordtype">int</span> index);
-<a name="l00061"></a>00061        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a123096e4937953c7acc8bb5baee12f43">on_ParamsComboBox_editTextChanged</a>(<span class="keyword">const</span> QString&amp; text);
-<a name="l00062"></a>00062        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#ae1bc21ccfeba6de184132795f986f3f5">OnAddMenuOptionClicked</a>(QAction* action);
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 <span class="keyword">protected</span>:
-<a name="l00065"></a>00065        <span class="comment">// abstract methods</span>
-<a name="l00066"></a>00066 
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> <a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>* <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#ae3dacff6c0979e5af928e4d2d1cfbd63" title="Get the observer for a given parameter set.">GetObserverPtr</a>(<span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">iprm::IParamsSet</a>* paramsSetPtr) <span class="keyword">const</span> = 0;
-<a name="l00071"></a>00071 
-<a name="l00075"></a>00075        <span class="keyword">virtual</span> <a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>* <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a48aea3c15835d174124d504885706140" title="Get the editor GUI for a given parameter set.">GetEditorGuiPtr</a>(<span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">iprm::IParamsSet</a>* paramsSetPtr) <span class="keyword">const</span> = 0;
-<a name="l00076"></a>00076 
-<a name="l00080"></a>00080        <span class="keyword">virtual</span> <a class="code" href="classiqt2d_1_1_i_view_extender.html" title="Interface for GUI objects presenting its results using extern view objects.">iqt2d::IViewExtender</a>* <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#ae736c98d6bbe3878c4bda557a883794c" title="Get the currently active view extender.">GetCurrentViewExtenderPtr</a>() <span class="keyword">const</span>;
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a3a0990a3ff333c4de26ea2e9239fe842">UpdateActions</a>();
-<a name="l00083"></a>00083        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a3e04182b67f3a39818475fd4ea97595a">UpdateTree</a>();
-<a name="l00084"></a>00084        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#ac65be6f556ebe89a7bf487a106e65672">UpdateComboBox</a>();
-<a name="l00085"></a>00085        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a890dc41a06105ba5a099683b58e8089d">UpdateParamsView</a>(<span class="keywordtype">int</span> selectedIndex);
-<a name="l00086"></a>00086        <span class="keywordtype">int</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#ae85566257846e366301d4bcb668ab8a1">GetSelectedIndex</a>() <span class="keyword">const</span>;
-<a name="l00087"></a>00087        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a60385adb8ab76cedbecc04941e69b3f3">EnsureParamsGuiDetached</a>();
-<a name="l00088"></a>00088        QByteArray <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#ae48ad48124b09aba18aa49ae8a3284de">GetSelectedParamsSetTypeId</a>() <span class="keyword">const</span>;
-<a name="l00089"></a>00089 
-<a name="l00090"></a>00090        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00091"></a>00091        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#acfe252b4a1c19e94de6128919322f890" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
-<a name="l00092"></a>00092        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a1eda5cda31d4f098ef91ca2e21ff8140" title="Called when model is detached or GUI is destroyed.">OnGuiModelDetached</a>();
-<a name="l00093"></a>00093        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a227424963db6b5b3de1fc85126d4ca79" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00094"></a>00094 
-<a name="l00095"></a>00095        <span class="comment">// reimplemented (iqtgui::CComponentBase)</span>
-<a name="l00096"></a>00096        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a6488e3212baef31550423fb2e6fedea4" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00097"></a>00097 
-<a name="l00098"></a>00098        <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
-<a name="l00099"></a>00099        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#ae0dc25d39a40faf7c8930c30e630ab99" title="This function will be called before update of the observer contents occures.">BeforeUpdate</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00100"></a>00100        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#afafea12d60b389f9b2e4115144f0661c" title="This function will be called after update of the observer contents occures.">AfterUpdate</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102 <span class="keyword">private</span>:
-<a name="l00103"></a>00103        <span class="keywordtype">void</span> AttachCurrentExtender();
-<a name="l00104"></a>00104        <span class="keywordtype">void</span> DetachCurrentExtender();
-<a name="l00105"></a>00105 
-<a name="l00106"></a>00106 <span class="keyword">private</span>:
-<a name="l00107"></a>00107        I_REF(<a class="code" href="classiqtgui_1_1_i_icon_provider.html" title="This interface provides acces to an icon.">iqtgui::IIconProvider</a>, m_iconProviderCompPtr);
-<a name="l00108"></a>00108        I_ATTR(<span class="keywordtype">bool</span>, m_allowAddRemoveAttrPtr);
-<a name="l00109"></a>00109        I_ATTR(<span class="keywordtype">bool</span>, m_allowUpDownAttrPtr);
-<a name="l00110"></a>00110        I_ATTR(<span class="keywordtype">bool</span>, m_comboBoxViewAttrPtr);
-<a name="l00111"></a>00111        I_REF(<a class="code" href="classiqt2d_1_1_i_view_extender.html" title="Interface for GUI objects presenting its results using extern view objects.">iqt2d::IViewExtender</a>, m_extenderCompPtr);
-<a name="l00112"></a>00112 
-<a name="l00113"></a>00113        <span class="keyword">typedef</span> QMap&lt;int, QIcon&gt; StateIconsMap;
+<a name="l00043"></a>00043               I_ASSIGN(m_allowEnablingAttrPtr, <span class="stringliteral">&quot;AllowEnable&quot;</span>, <span class="stringliteral">&quot;If this option is activated, the single parameter sets can be enabled/disabled in the list&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
+<a name="l00044"></a>00044               I_ASSIGN(m_comboBoxViewAttrPtr, <span class="stringliteral">&quot;CompactView&quot;</span>, <span class="stringliteral">&quot;Shows parameters list as a combo box&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
+<a name="l00045"></a>00045               I_ASSIGN(m_iconProviderCompPtr, <span class="stringliteral">&quot;IconProvider&quot;</span>, <span class="stringliteral">&quot;Icons for drop-down types menu&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;IconProvider&quot;</span>);
+<a name="l00046"></a>00046        I_END_COMPONENT;
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048        <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#ac6c19b8ea97872a572d9eceeaae52c0b">CParamsManagerGuiCompBase</a>();
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050        <span class="comment">// reimplemented (iqt2d::IViewExtender)</span>
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a16969fb83b7cf4a305098bd7ab17b466" title="Called when items should be added to specified scene.">AddItemsToScene</a>(<a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">iqt2d::IViewProvider</a>* providerPtr, <span class="keywordtype">int</span> flags);
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a273c46617d34bd3cc8b669484b7b0494" title="Called when items should be removed from specified scene.">RemoveItemsFromScene</a>(<a class="code" href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view.">iqt2d::IViewProvider</a>* providerPtr);
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 <span class="keyword">protected</span> Q_SLOTS:
+<a name="l00055"></a>00055        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a2613b211be411ec714f296a225490b7d">on_AddButton_clicked</a>();
+<a name="l00056"></a>00056        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#adbedcd3309e8c3a709b7c28c31614966">on_RemoveButton_clicked</a>();
+<a name="l00057"></a>00057        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#aada0a511ed7615c108c3b81ec1f6e15e">on_UpButton_clicked</a>();
+<a name="l00058"></a>00058        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#aa1c78af4b78a23b042f8b4fa2adb173c">on_DownButton_clicked</a>();
+<a name="l00059"></a>00059        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a7f42017773612794f69cf0dcc4c3a46b">on_ParamsTree_itemSelectionChanged</a>();
+<a name="l00060"></a>00060        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a030a2fc1e392f663f22fffb50a691c28">on_ParamsTree_itemChanged</a>(QTreeWidgetItem* item, <span class="keywordtype">int</span> column);
+<a name="l00061"></a>00061        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a8f190a20002d0ac4cef268b52c979aa8">on_ParamsComboBox_currentIndexChanged</a>(<span class="keywordtype">int</span> index);
+<a name="l00062"></a>00062        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a123096e4937953c7acc8bb5baee12f43">on_ParamsComboBox_editTextChanged</a>(<span class="keyword">const</span> QString&amp; text);
+<a name="l00063"></a>00063        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#ae1bc21ccfeba6de184132795f986f3f5">OnAddMenuOptionClicked</a>(QAction* action);
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065 <span class="keyword">protected</span>:
+<a name="l00066"></a>00066        <span class="comment">// abstract methods</span>
+<a name="l00067"></a>00067 
+<a name="l00071"></a>00071        <span class="keyword">virtual</span> <a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>* <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#ae3dacff6c0979e5af928e4d2d1cfbd63" title="Get the observer for a given parameter set.">GetObserverPtr</a>(<span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">iprm::IParamsSet</a>* paramsSetPtr) <span class="keyword">const</span> = 0;
+<a name="l00072"></a>00072 
+<a name="l00076"></a>00076        <span class="keyword">virtual</span> <a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>* <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a48aea3c15835d174124d504885706140" title="Get the editor GUI for a given parameter set.">GetEditorGuiPtr</a>(<span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">iprm::IParamsSet</a>* paramsSetPtr) <span class="keyword">const</span> = 0;
+<a name="l00077"></a>00077 
+<a name="l00081"></a>00081        <span class="keyword">virtual</span> <a class="code" href="classiqt2d_1_1_i_view_extender.html" title="Interface for GUI objects presenting its results using extern view objects.">iqt2d::IViewExtender</a>* <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#ae736c98d6bbe3878c4bda557a883794c" title="Get the currently active view extender.">GetCurrentViewExtenderPtr</a>() <span class="keyword">const</span>;
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a3a0990a3ff333c4de26ea2e9239fe842">UpdateActions</a>();
+<a name="l00084"></a>00084        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a3e04182b67f3a39818475fd4ea97595a">UpdateTree</a>();
+<a name="l00085"></a>00085        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#ac65be6f556ebe89a7bf487a106e65672">UpdateComboBox</a>();
+<a name="l00086"></a>00086        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a890dc41a06105ba5a099683b58e8089d">UpdateParamsView</a>(<span class="keywordtype">int</span> selectedIndex);
+<a name="l00087"></a>00087        <span class="keywordtype">int</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#ae85566257846e366301d4bcb668ab8a1">GetSelectedIndex</a>() <span class="keyword">const</span>;
+<a name="l00088"></a>00088        <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a60385adb8ab76cedbecc04941e69b3f3">EnsureParamsGuiDetached</a>();
+<a name="l00089"></a>00089        QByteArray <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#ae48ad48124b09aba18aa49ae8a3284de">GetSelectedParamsSetTypeId</a>() <span class="keyword">const</span>;
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00092"></a>00092        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#acfe252b4a1c19e94de6128919322f890" title="Called when model is attached and GUI is created.">OnGuiModelAttached</a>();
+<a name="l00093"></a>00093        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a1eda5cda31d4f098ef91ca2e21ff8140" title="Called when model is detached or GUI is destroyed.">OnGuiModelDetached</a>();
+<a name="l00094"></a>00094        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a227424963db6b5b3de1fc85126d4ca79" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096        <span class="comment">// reimplemented (iqtgui::CComponentBase)</span>
+<a name="l00097"></a>00097        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a6488e3212baef31550423fb2e6fedea4" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00098"></a>00098 
+<a name="l00099"></a>00099        <span class="comment">// reimplemented (imod::CSingleModelObserverBase)</span>
+<a name="l00100"></a>00100        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#ae0dc25d39a40faf7c8930c30e630ab99" title="This function will be called before update of the observer contents occures.">BeforeUpdate</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00101"></a>00101        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#afafea12d60b389f9b2e4115144f0661c" title="This function will be called after update of the observer contents occures.">AfterUpdate</a>(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* modelPtr, <span class="keywordtype">int</span> updateFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103 <span class="keyword">private</span>:
+<a name="l00104"></a>00104        <span class="keywordtype">void</span> AttachCurrentExtender();
+<a name="l00105"></a>00105        <span class="keywordtype">void</span> DetachCurrentExtender();
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107 <span class="keyword">private</span>:
+<a name="l00108"></a>00108        I_REF(<a class="code" href="classiqtgui_1_1_i_icon_provider.html" title="This interface provides acces to an icon.">iqtgui::IIconProvider</a>, m_iconProviderCompPtr);
+<a name="l00109"></a>00109        I_ATTR(<span class="keywordtype">bool</span>, m_allowAddRemoveAttrPtr);
+<a name="l00110"></a>00110        I_ATTR(<span class="keywordtype">bool</span>, m_allowUpDownAttrPtr);
+<a name="l00111"></a>00111        I_ATTR(<span class="keywordtype">bool</span>, m_allowEnablingAttrPtr);
+<a name="l00112"></a>00112        I_ATTR(<span class="keywordtype">bool</span>, m_comboBoxViewAttrPtr);
+<a name="l00113"></a>00113        I_REF(<a class="code" href="classiqt2d_1_1_i_view_extender.html" title="Interface for GUI objects presenting its results using extern view objects.">iqt2d::IViewExtender</a>, m_extenderCompPtr);
 <a name="l00114"></a>00114 
-<a name="l00115"></a>00115        <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* m_lastConnectedModelPtr;
-<a name="l00116"></a>00116        <a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>* m_lastObserverPtr;
-<a name="l00117"></a>00117        QMenu m_startVariableMenus;
-<a name="l00118"></a>00118        QMap&lt;QByteArray, int&gt; m_factoryIconIndexMap;
-<a name="l00119"></a>00119        StateIconsMap m_stateIconsMap;
-<a name="l00120"></a>00120 
-<a name="l00121"></a>00121        <span class="keyword">typedef</span> QMap&lt;iqt2d::IViewProvider*, int&gt; ConnectedSceneFlags; <span class="comment">// maps connected scene provider to connection flags</span>
-<a name="l00122"></a>00122        ConnectedSceneFlags m_connectedSceneFlags;
-<a name="l00123"></a>00123 };
-<a name="l00124"></a>00124 
-<a name="l00125"></a>00125 
-<a name="l00126"></a>00126 } <span class="comment">// namespace iqtprm</span>
+<a name="l00115"></a>00115        <span class="keyword">typedef</span> QMap&lt;int, QIcon&gt; StateIconsMap;
+<a name="l00116"></a>00116 
+<a name="l00117"></a>00117        <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* m_lastConnectedModelPtr;
+<a name="l00118"></a>00118        <a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>* m_lastObserverPtr;
+<a name="l00119"></a>00119        QMenu m_startVariableMenus;
+<a name="l00120"></a>00120        QMap&lt;QByteArray, int&gt; m_factoryIconIndexMap;
+<a name="l00121"></a>00121        StateIconsMap m_stateIconsMap;
+<a name="l00122"></a>00122 
+<a name="l00123"></a>00123        <span class="keyword">typedef</span> QMap&lt;iqt2d::IViewProvider*, int&gt; ConnectedSceneFlags; <span class="comment">// maps connected scene provider to connection flags</span>
+<a name="l00124"></a>00124        ConnectedSceneFlags m_connectedSceneFlags;
+<a name="l00125"></a>00125 };
+<a name="l00126"></a>00126 
 <a name="l00127"></a>00127 
-<a name="l00128"></a>00128 
-<a name="l00129"></a>00129 <span class="preprocessor">#endif // !iqtprm_CParamsManagerGuiCompBase_included</span>
-<a name="l00130"></a>00130 <span class="preprocessor"></span>
-<a name="l00131"></a>00131 
+<a name="l00128"></a>00128 } <span class="comment">// namespace iqtprm</span>
+<a name="l00129"></a>00129 
+<a name="l00130"></a>00130 
+<a name="l00131"></a>00131 <span class="preprocessor">#endif // !iqtprm_CParamsManagerGuiCompBase_included</span>
+<a name="l00132"></a>00132 <span class="preprocessor"></span>
+<a name="l00133"></a>00133 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -138,7 +138,7 @@
 <a name="l00139"></a>00139                      BaseClass::SetPtr(paramImplPtr);
 <a name="l00140"></a>00140 
 <a name="l00141"></a>00141                      <a class="code" href="istd_8h.html#a0a13620120415a9017e5095986764a12">I_IF_DEBUG</a>(
-<a name="l00142"></a>00142                             <span class="keywordflow">if</span> ((paramImplPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; (paramPtr == <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)){
+<a name="l00142"></a>00142                             <span class="keywordflow">if</span> ((paramImplPtr == <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) &amp;&amp; (paramPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)){
 <a name="l00143"></a>00143                                    qDebug(<span class="stringliteral">&quot;Parameter %s in parameter set is not compatible, should be %s&quot;</span>, qPrintable(*parameterIdAttribute), qPrintable(istd::CClassInfo::GetName&lt;ParameterInterace&gt;()));
 <a name="l00144"></a>00144                             }
 <a name="l00145"></a>00145                      )
