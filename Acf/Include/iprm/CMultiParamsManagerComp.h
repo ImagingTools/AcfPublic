@@ -66,6 +66,8 @@ public:
 		I_ASSIGN_MULTI_0(m_factoryNameNameAttrPtr, "ParamSetsFactorieNames", "List of names associated with the parameter factories", true);
 		I_ASSIGN_MULTI_0(m_factoryDescriptionAttrPtr, "ParamSetsFactorieDesciption", "List of descriptions associated with the parameter factories", true);
 		I_ASSIGN(m_serializeSelectionAttrPtr, "SerializeSelection", "If enabled, the current parameter set selection will be serialized", true, true);
+		I_ASSIGN(m_allowDisabledAttrPtr, "AllowDisabled", "Control if disabled parameters are supported", true, false);
+		I_ASSIGN(m_supportEnablingAttrPtr, "SupportEnabling", "Control if enabling or disabling of parameters is allowed (works only if disabled parameters are supported)", true, true);
 	I_END_COMPONENT;
 
 	CMultiParamsManagerComp();	
@@ -135,31 +137,33 @@ protected:
 		QMap<QByteArray, int> typeIdToIndexMap;
 	};
 
+	/**
+		Ensure some parameter exist, has correct type and attributes. 
+		\param	index		position in list of parameters.
+		\param	typeid		ID of parameter type.
+		\param	name		name of parameter (attribute).
+		\param	isEnabled	enebling status of parameter (attribute).
+		\return			\c true if element exists (was present or could be created).
+	*/
+	bool EnsureParamExist(int index, const QByteArray& typeId, const QString& name, bool isEnabled);
+
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();
 	virtual void OnComponentDestroyed();
 
-	/**
-		Ensure some parameter exist and has correct type. 
-		\param	index	position in list of parameters.
-		\param	typeid	ID of parameter type.
-		\return			\c true - de-serialization was successful or \c false - no de-serialization was possible.
-	*/
-	bool EnsureParamExist(const QByteArray& typeId, int index, const QString& name);
-
 private:
 	void EnsureParamsSetModelDetached(iprm::IParamsSet* paramsSetPtr) const;
+	int FindParamSetIndex(const QString& name) const;
 
-private:
 	struct ParamSet
 	{
+		ParamSet();
+
 		istd::TSmartPtr<IParamsSet> paramSetPtr;
-		QString name;
 		QByteArray typeId;
+		QString name;
 		bool isEnabled;
 	};
-
-	int FindParamSetIndex(const QString& name) const;
 
 	typedef QList<ParamSet> ParamSets;
 
@@ -177,6 +181,8 @@ private:
 	I_MULTIATTR(QString, m_factoryNameNameAttrPtr);
 	I_MULTIATTR(QString, m_factoryDescriptionAttrPtr);
 	I_ATTR(bool, m_serializeSelectionAttrPtr);
+	I_ATTR(bool, m_allowDisabledAttrPtr);
+	I_ATTR(bool, m_supportEnablingAttrPtr);
 };
 
 

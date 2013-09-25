@@ -70,120 +70,126 @@
 <a name="l00045"></a>00045               I_ASSIGN(m_elementIndexParamId, <span class="stringliteral">&quot;ElementIndexParamId&quot;</span>, <span class="stringliteral">&quot;ID of index of returned parameter set in manager list&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Index&quot;</span>);
 <a name="l00046"></a>00046               I_ASSIGN(m_elementNameParamId, <span class="stringliteral">&quot;ElementNameParamId&quot;</span>, <span class="stringliteral">&quot;ID of the name of returned parameter set in manager list&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Name&quot;</span>);
 <a name="l00047"></a>00047               I_ASSIGN(m_paramSetsFactPtr, <span class="stringliteral">&quot;ParamsSetFactory&quot;</span>, <span class="stringliteral">&quot;Factory of variable parameter set&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;ParamsSet&quot;</span>);
-<a name="l00048"></a>00048        I_END_COMPONENT;
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050        <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a013168e66fc171c37d0eff1db2681112">CParamsManagerComp</a>();
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052        <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#acf101f14468c4eee3e2d7e4cf25eba16">SetSetsCount</a>(<span class="keywordtype">int</span> count);
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054        <span class="comment">// reimplemented (iprm::IParamsManager)</span>
-<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a6c6a8deb0948740fe4558d220a3c893c" title="Get operation control flags of some paramter set or whole manager.">GetIndexOperationFlags</a>(<span class="keywordtype">int</span> index = -1) <span class="keyword">const</span>;
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#abc52794b2ed4df7cb6a872bd208ca638" title="Get number of managed set.">GetParamsSetsCount</a>() <span class="keyword">const</span>;
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities.">IOptionsList</a>* <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a3b268222e4db98bd3edbe8abc2864a8a" title="Get selection contraints describing each supported type.">GetParamsTypeConstraints</a>() <span class="keyword">const</span>;
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#ab82378415def08b5bcde877e10946668" title="Insert new parameters set at selected position.">InsertParamsSet</a>(<span class="keywordtype">int</span> typeIndex = -1, <span class="keywordtype">int</span> index = -1);
-<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a50f8d419f57ae6f5f06cee02da4f66e1" title="Remove parameters set at selected position.">RemoveParamsSet</a>(<span class="keywordtype">int</span> index);
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#af193c485d9ef1b3c0037035dbc18cd9d" title="Swap two parameter sets.">SwapParamsSet</a>(<span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2);
-<a name="l00061"></a>00061        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">IParamsSet</a>* <a class="code" href="classiprm_1_1_c_params_manager_comp.html#ae19b3efcc16c19eb07df3a3bef7f8f36" title="Get selected parameter set.">GetParamsSet</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00062"></a>00062        <span class="keyword">virtual</span> QString <a class="code" href="classiprm_1_1_c_params_manager_comp.html#add63f348396f6e97b119a84b9d5ea9e5" title="Get name of specified parameter set.">GetParamsSetName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a25e7d50536b4d173e6263f3c96f16cda" title="Set name of specified parameter set.">SetParamsSetName</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> QString&amp; name);
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065        <span class="comment">// reimplemented (iprm::ISelectionParam)</span>
-<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities.">IOptionsList</a>* <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a5a466b071923f7873d93dfab35eec419" title="Get constraints of this parameter.">GetSelectionConstraints</a>() <span class="keyword">const</span>;
-<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a4fd8b1b6be7963c766940994f118c77e" title="Get selected index.">GetSelectedOptionIndex</a>() <span class="keyword">const</span>;
-<a name="l00068"></a>00068        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a24df36eb5ca0da6966a6f84977b61d25" title="Set index of selected option.">SetSelectedOptionIndex</a>(<span class="keywordtype">int</span> index);
-<a name="l00069"></a>00069        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">ISelectionParam</a>* <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a4e9891005ac21c1c28d2f74a75e62a52" title="Get subselection for specified option.">GetSubselection</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00072"></a>00072        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a52ddd155230d8509ab8dd4a2b11e0f92" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
+<a name="l00048"></a>00048               I_ASSIGN(m_serializeSelectionAttrPtr, <span class="stringliteral">&quot;SerializeSelection&quot;</span>, <span class="stringliteral">&quot;If enabled, the current parameter set selection will be serialized&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);
+<a name="l00049"></a>00049               I_ASSIGN(m_allowDisabledAttrPtr, <span class="stringliteral">&quot;AllowDisabled&quot;</span>, <span class="stringliteral">&quot;Control if disabled parameters are supported&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
+<a name="l00050"></a>00050               I_ASSIGN(m_supportEnablingAttrPtr, <span class="stringliteral">&quot;SupportEnabling&quot;</span>, <span class="stringliteral">&quot;Control if enabling or disabling of parameters is allowed (works only if disabled parameters are supported)&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);
+<a name="l00051"></a>00051        I_END_COMPONENT;
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053        <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a013168e66fc171c37d0eff1db2681112">CParamsManagerComp</a>();
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055        <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#acf101f14468c4eee3e2d7e4cf25eba16">SetSetsCount</a>(<span class="keywordtype">int</span> count);
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057        <span class="comment">// reimplemented (iprm::IParamsManager)</span>
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a6c6a8deb0948740fe4558d220a3c893c" title="Get operation control flags of some paramter set or whole manager.">GetIndexOperationFlags</a>(<span class="keywordtype">int</span> index = -1) <span class="keyword">const</span>;
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#abc52794b2ed4df7cb6a872bd208ca638" title="Get number of managed set.">GetParamsSetsCount</a>() <span class="keyword">const</span>;
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities.">IOptionsList</a>* <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a3b268222e4db98bd3edbe8abc2864a8a" title="Get selection contraints describing each supported type.">GetParamsTypeConstraints</a>() <span class="keyword">const</span>;
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#ab82378415def08b5bcde877e10946668" title="Insert new parameters set at selected position.">InsertParamsSet</a>(<span class="keywordtype">int</span> typeIndex = -1, <span class="keywordtype">int</span> index = -1);
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a50f8d419f57ae6f5f06cee02da4f66e1" title="Remove parameters set at selected position.">RemoveParamsSet</a>(<span class="keywordtype">int</span> index);
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#af193c485d9ef1b3c0037035dbc18cd9d" title="Swap two parameter sets.">SwapParamsSet</a>(<span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2);
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">IParamsSet</a>* <a class="code" href="classiprm_1_1_c_params_manager_comp.html#ae19b3efcc16c19eb07df3a3bef7f8f36" title="Get selected parameter set.">GetParamsSet</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00065"></a>00065        <span class="keyword">virtual</span> QString <a class="code" href="classiprm_1_1_c_params_manager_comp.html#add63f348396f6e97b119a84b9d5ea9e5" title="Get name of specified parameter set.">GetParamsSetName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a25e7d50536b4d173e6263f3c96f16cda" title="Set name of specified parameter set.">SetParamsSetName</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> QString&amp; name);
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068        <span class="comment">// reimplemented (iprm::ISelectionParam)</span>
+<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities.">IOptionsList</a>* <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a5a466b071923f7873d93dfab35eec419" title="Get constraints of this parameter.">GetSelectionConstraints</a>() <span class="keyword">const</span>;
+<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a4fd8b1b6be7963c766940994f118c77e" title="Get selected index.">GetSelectedOptionIndex</a>() <span class="keyword">const</span>;
+<a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a24df36eb5ca0da6966a6f84977b61d25" title="Set index of selected option.">SetSelectedOptionIndex</a>(<span class="keywordtype">int</span> index);
+<a name="l00072"></a>00072        <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">ISelectionParam</a>* <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a4e9891005ac21c1c28d2f74a75e62a52" title="Get subselection for specified option.">GetSubselection</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00073"></a>00073 
-<a name="l00074"></a>00074        <span class="comment">// reimplemented (iprm::IOptionsManager)</span>
-<a name="l00075"></a>00075        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a76d5b14a8ad2c9decc271e50418d6ee1" title="Get operation control flags of some option or whole manager.">GetOptionOperationFlags</a>(<span class="keywordtype">int</span> index = -1) <span class="keyword">const</span>;
-<a name="l00076"></a>00076        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#adab56aa9d92281f723d0b94edce186a7" title="Enables a given option.">SetOptionEnabled</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> isEnabled = <span class="keyword">true</span>);
-<a name="l00077"></a>00077        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a53ee1d13c8e1236841648a77b329d3a6" title="Remove an option at the given index.">RemoveOption</a>(<span class="keywordtype">int</span> index);
-<a name="l00078"></a>00078        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a3de8ae3aa52154fce57bb960c34fd1b5" title="Insert an option at some position.">InsertOption</a>(
-<a name="l00079"></a>00079                             <span class="keyword">const</span> QString&amp; optionName,
-<a name="l00080"></a>00080                             <span class="keyword">const</span> QByteArray&amp; optionId,
-<a name="l00081"></a>00081                             <span class="keyword">const</span> QString&amp; optionDescription = QString(),
-<a name="l00082"></a>00082                             <span class="keywordtype">int</span> index = -1);
-<a name="l00083"></a>00083        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a205f8c0f49a0542b1922dc6caf341a95" title="Swap two options.">SwapOptions</a>(<span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2);
-<a name="l00084"></a>00084        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a9d619957ae332017b0ef302efe2b3eb8" title="Set a new name for the option at the given index optionIndex.">SetOptionName</a>(<span class="keywordtype">int</span> optionIndex, <span class="keyword">const</span> QString&amp; optionName);
-<a name="l00085"></a>00085        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a42fe4fbbb887c65ea01fc9556dde1ebc" title="Set a new description for the option at the given index optionIndex.">SetOptionDescription</a>(<span class="keywordtype">int</span> optionIndex, <span class="keyword">const</span> QString&amp; optionDescription);
-<a name="l00086"></a>00086 
-<a name="l00087"></a>00087        <span class="comment">// reimplemented (iprm::IOptionsList)</span>
-<a name="l00088"></a>00088        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a52b8ffe289e490221bd0d42c376f4157" title="Get constraints flags.">GetOptionsFlags</a>() <span class="keyword">const</span>;
-<a name="l00089"></a>00089        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#ac0839252bfb7cdb764554ac7a3887847" title="Get number of managed options.">GetOptionsCount</a>() <span class="keyword">const</span>;
-<a name="l00090"></a>00090        <span class="keyword">virtual</span> QString <a class="code" href="classiprm_1_1_c_params_manager_comp.html#aefd514c92e09c35941681d03ed36cc60" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00091"></a>00091        <span class="keyword">virtual</span> QString <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a7ea78cdcbcc6fc415d97c9ce1a3f2533" title="Get human readable description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00092"></a>00092        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a42ef743ef676f52d8adf082ecb0fda26" title="Get option ID.">GetOptionId</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00093"></a>00093        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a8673e0236772ead7203a0c8eedc01768" title="Return true if the option is enabled and can be selected.">IsOptionEnabled</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00094"></a>00094 
-<a name="l00095"></a>00095 <span class="keyword">protected</span>:
-<a name="l00096"></a>00096        QString <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a84862a74e9dceacd7ce844418eaa0a22">GetNewSetName</a>() <span class="keyword">const</span>;
+<a name="l00074"></a>00074        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00075"></a>00075        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a52ddd155230d8509ab8dd4a2b11e0f92" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077        <span class="comment">// reimplemented (iprm::IOptionsManager)</span>
+<a name="l00078"></a>00078        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a76d5b14a8ad2c9decc271e50418d6ee1" title="Get operation control flags of some option or whole manager.">GetOptionOperationFlags</a>(<span class="keywordtype">int</span> index = -1) <span class="keyword">const</span>;
+<a name="l00079"></a>00079        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#adab56aa9d92281f723d0b94edce186a7" title="Enables a given option.">SetOptionEnabled</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> isEnabled = <span class="keyword">true</span>);
+<a name="l00080"></a>00080        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a53ee1d13c8e1236841648a77b329d3a6" title="Remove an option at the given index.">RemoveOption</a>(<span class="keywordtype">int</span> index);
+<a name="l00081"></a>00081        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a3de8ae3aa52154fce57bb960c34fd1b5" title="Insert an option at some position.">InsertOption</a>(
+<a name="l00082"></a>00082                             <span class="keyword">const</span> QString&amp; optionName,
+<a name="l00083"></a>00083                             <span class="keyword">const</span> QByteArray&amp; optionId,
+<a name="l00084"></a>00084                             <span class="keyword">const</span> QString&amp; optionDescription = QString(),
+<a name="l00085"></a>00085                             <span class="keywordtype">int</span> index = -1);
+<a name="l00086"></a>00086        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a205f8c0f49a0542b1922dc6caf341a95" title="Swap two options.">SwapOptions</a>(<span class="keywordtype">int</span> index1, <span class="keywordtype">int</span> index2);
+<a name="l00087"></a>00087        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a9d619957ae332017b0ef302efe2b3eb8" title="Set a new name for the option at the given index optionIndex.">SetOptionName</a>(<span class="keywordtype">int</span> optionIndex, <span class="keyword">const</span> QString&amp; optionName);
+<a name="l00088"></a>00088        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a42fe4fbbb887c65ea01fc9556dde1ebc" title="Set a new description for the option at the given index optionIndex.">SetOptionDescription</a>(<span class="keywordtype">int</span> optionIndex, <span class="keyword">const</span> QString&amp; optionDescription);
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090        <span class="comment">// reimplemented (iprm::IOptionsList)</span>
+<a name="l00091"></a>00091        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a52b8ffe289e490221bd0d42c376f4157" title="Get constraints flags.">GetOptionsFlags</a>() <span class="keyword">const</span>;
+<a name="l00092"></a>00092        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#ac0839252bfb7cdb764554ac7a3887847" title="Get number of managed options.">GetOptionsCount</a>() <span class="keyword">const</span>;
+<a name="l00093"></a>00093        <span class="keyword">virtual</span> QString <a class="code" href="classiprm_1_1_c_params_manager_comp.html#aefd514c92e09c35941681d03ed36cc60" title="Get name of specified option.">GetOptionName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00094"></a>00094        <span class="keyword">virtual</span> QString <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a7ea78cdcbcc6fc415d97c9ce1a3f2533" title="Get human readable description for a option with the index index.">GetOptionDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00095"></a>00095        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a42ef743ef676f52d8adf082ecb0fda26" title="Get option ID.">GetOptionId</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00096"></a>00096        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a8673e0236772ead7203a0c8eedc01768" title="Return true if the option is enabled and can be selected.">IsOptionEnabled</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
 <a name="l00097"></a>00097 
-<a name="l00098"></a>00098        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00099"></a>00099        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a6d00888e21687f7b8f07206d7289a0c0">OnComponentCreated</a>();
-<a name="l00100"></a>00100        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#ab43da8a12e64f6f0f444a8ccfa7b97fa">OnComponentDestroyed</a>();
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102 <span class="keyword">private</span>:
-<a name="l00103"></a>00103        I_MULTIREF(<a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">IParamsSet</a>, m_fixedParamSetsCompPtr);
-<a name="l00104"></a>00104        I_MULTIATTR(QString, m_fixedSetNamesAttrPtr);
-<a name="l00105"></a>00105        I_ATTR(QString, m_defaultSetNameAttrPtr);
-<a name="l00106"></a>00106        I_ATTR(QByteArray, m_elementIndexParamId);
-<a name="l00107"></a>00107        I_ATTR(QByteArray, m_elementNameParamId);
-<a name="l00108"></a>00108        I_FACT(<a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">IParamsSet</a>, m_paramSetsFactPtr);
-<a name="l00109"></a>00109 
-<a name="l00110"></a>00110        <span class="keyword">class </span>ParamSet:
-<a name="l00111"></a>00111                             <span class="keyword">public</span> CMultiModelBridgeBase,
-<a name="l00112"></a>00112                             <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">IParamsSet</a>,
-<a name="l00113"></a>00113                             <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">ISelectionParam</a>,
-<a name="l00114"></a>00114                             <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiprm_1_1_i_name_param.html" title="Interface for a object containing its name.">INameParam</a>
-<a name="l00115"></a>00115        {
-<a name="l00116"></a>00116        <span class="keyword">public</span>:
-<a name="l00117"></a>00117               ParamSet();
-<a name="l00118"></a>00118 
-<a name="l00119"></a>00119               <span class="comment">// reimplemented (iprm::IParamsSet)</span>
-<a name="l00120"></a>00120               <span class="keyword">virtual</span> Ids GetParamIds(<span class="keywordtype">bool</span> editableOnly = <span class="keyword">false</span>) <span class="keyword">const</span>;
-<a name="l00121"></a>00121               <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>* GetParameter(<span class="keyword">const</span> QByteArray&amp; <span class="keywordtype">id</span>) <span class="keyword">const</span>;
-<a name="l00122"></a>00122               <span class="keyword">virtual</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>* GetEditableParameter(<span class="keyword">const</span> QByteArray&amp; <span class="keywordtype">id</span>);
-<a name="l00123"></a>00123 
-<a name="l00124"></a>00124               <span class="comment">// reimplemented (iprm::ISelectionParam)</span>
-<a name="l00125"></a>00125               <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities.">IOptionsList</a>* <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a5a466b071923f7873d93dfab35eec419" title="Get constraints of this parameter.">GetSelectionConstraints</a>() <span class="keyword">const</span>;
-<a name="l00126"></a>00126               <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a4fd8b1b6be7963c766940994f118c77e" title="Get selected index.">GetSelectedOptionIndex</a>() <span class="keyword">const</span>;
-<a name="l00127"></a>00127               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a24df36eb5ca0da6966a6f84977b61d25" title="Set index of selected option.">SetSelectedOptionIndex</a>(<span class="keywordtype">int</span> index);
-<a name="l00128"></a>00128               <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">ISelectionParam</a>* <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a4e9891005ac21c1c28d2f74a75e62a52" title="Get subselection for specified option.">GetSubselection</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00098"></a>00098 <span class="keyword">protected</span>:
+<a name="l00099"></a>00099        QString <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a84862a74e9dceacd7ce844418eaa0a22">GetNewSetName</a>() <span class="keyword">const</span>;
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00102"></a>00102        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a6d00888e21687f7b8f07206d7289a0c0">OnComponentCreated</a>();
+<a name="l00103"></a>00103        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#ab43da8a12e64f6f0f444a8ccfa7b97fa">OnComponentDestroyed</a>();
+<a name="l00104"></a>00104 
+<a name="l00105"></a>00105 <span class="keyword">private</span>:
+<a name="l00106"></a>00106        I_MULTIREF(<a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">IParamsSet</a>, m_fixedParamSetsCompPtr);
+<a name="l00107"></a>00107        I_MULTIATTR(QString, m_fixedSetNamesAttrPtr);
+<a name="l00108"></a>00108        I_ATTR(QString, m_defaultSetNameAttrPtr);
+<a name="l00109"></a>00109        I_ATTR(QByteArray, m_elementIndexParamId);
+<a name="l00110"></a>00110        I_ATTR(QByteArray, m_elementNameParamId);
+<a name="l00111"></a>00111        I_FACT(<a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">IParamsSet</a>, m_paramSetsFactPtr);
+<a name="l00112"></a>00112        I_ATTR(<span class="keywordtype">bool</span>, m_serializeSelectionAttrPtr);
+<a name="l00113"></a>00113        I_ATTR(<span class="keywordtype">bool</span>, m_allowDisabledAttrPtr);
+<a name="l00114"></a>00114        I_ATTR(<span class="keywordtype">bool</span>, m_supportEnablingAttrPtr);
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116        <span class="keyword">class </span>ParamSet:
+<a name="l00117"></a>00117                             <span class="keyword">public</span> CMultiModelBridgeBase,
+<a name="l00118"></a>00118                             <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">IParamsSet</a>,
+<a name="l00119"></a>00119                             <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">ISelectionParam</a>,
+<a name="l00120"></a>00120                             <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiprm_1_1_i_name_param.html" title="Interface for a object containing its name.">INameParam</a>
+<a name="l00121"></a>00121        {
+<a name="l00122"></a>00122        <span class="keyword">public</span>:
+<a name="l00123"></a>00123               ParamSet();
+<a name="l00124"></a>00124 
+<a name="l00125"></a>00125               <span class="comment">// reimplemented (iprm::IParamsSet)</span>
+<a name="l00126"></a>00126               <span class="keyword">virtual</span> Ids GetParamIds(<span class="keywordtype">bool</span> editableOnly = <span class="keyword">false</span>) <span class="keyword">const</span>;
+<a name="l00127"></a>00127               <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>* GetParameter(<span class="keyword">const</span> QByteArray&amp; <span class="keywordtype">id</span>) <span class="keyword">const</span>;
+<a name="l00128"></a>00128               <span class="keyword">virtual</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>* GetEditableParameter(<span class="keyword">const</span> QByteArray&amp; <span class="keywordtype">id</span>);
 <a name="l00129"></a>00129 
-<a name="l00130"></a>00130               <span class="comment">// reimplemented (iser::INameParam)</span>
-<a name="l00131"></a>00131               <span class="keyword">virtual</span> <span class="keyword">const</span> QString&amp; GetName() <span class="keyword">const</span>;
-<a name="l00132"></a>00132               <span class="keyword">virtual</span> <span class="keywordtype">void</span> SetName(<span class="keyword">const</span> QString&amp; name);
-<a name="l00133"></a>00133               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> IsNameFixed() <span class="keyword">const</span>;
-<a name="l00134"></a>00134 
-<a name="l00135"></a>00135               <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00136"></a>00136               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a52ddd155230d8509ab8dd4a2b11e0f92" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
-<a name="l00137"></a>00137 
-<a name="l00138"></a>00138               <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;IParamsSet&gt;</a> paramSetPtr;
-<a name="l00139"></a>00139               QString name;
-<a name="l00140"></a>00140               <span class="keywordtype">bool</span> isEnabled;
-<a name="l00141"></a>00141               <span class="keyword">const</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html" title="Implementation of parameter manager.">CParamsManagerComp</a>* parentPtr;
-<a name="l00142"></a>00142        };
-<a name="l00143"></a>00143        
-<a name="l00144"></a>00144        <span class="keywordtype">int</span> FindParamSetIndex(<span class="keyword">const</span> QString&amp; name) <span class="keyword">const</span>;
-<a name="l00145"></a>00145 
-<a name="l00146"></a>00146        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">istd::TDelPtr&lt;ParamSet&gt;</a> ParamSetPtr;
-<a name="l00147"></a>00147 
-<a name="l00148"></a>00148        <span class="keyword">typedef</span> QList&lt;ParamSetPtr&gt; ParamSets;
-<a name="l00149"></a>00149 
-<a name="l00150"></a>00150        ParamSets m_paramSets;
+<a name="l00130"></a>00130               <span class="comment">// reimplemented (iprm::ISelectionParam)</span>
+<a name="l00131"></a>00131               <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities.">IOptionsList</a>* <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a5a466b071923f7873d93dfab35eec419" title="Get constraints of this parameter.">GetSelectionConstraints</a>() <span class="keyword">const</span>;
+<a name="l00132"></a>00132               <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a4fd8b1b6be7963c766940994f118c77e" title="Get selected index.">GetSelectedOptionIndex</a>() <span class="keyword">const</span>;
+<a name="l00133"></a>00133               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a24df36eb5ca0da6966a6f84977b61d25" title="Set index of selected option.">SetSelectedOptionIndex</a>(<span class="keywordtype">int</span> index);
+<a name="l00134"></a>00134               <span class="keyword">virtual</span> <a class="code" href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options.">ISelectionParam</a>* <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a4e9891005ac21c1c28d2f74a75e62a52" title="Get subselection for specified option.">GetSubselection</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00135"></a>00135 
+<a name="l00136"></a>00136               <span class="comment">// reimplemented (iser::INameParam)</span>
+<a name="l00137"></a>00137               <span class="keyword">virtual</span> <span class="keyword">const</span> QString&amp; GetName() <span class="keyword">const</span>;
+<a name="l00138"></a>00138               <span class="keyword">virtual</span> <span class="keywordtype">void</span> SetName(<span class="keyword">const</span> QString&amp; name);
+<a name="l00139"></a>00139               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> IsNameFixed() <span class="keyword">const</span>;
+<a name="l00140"></a>00140 
+<a name="l00141"></a>00141               <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00142"></a>00142               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html#a52ddd155230d8509ab8dd4a2b11e0f92" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144               <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;IParamsSet&gt;</a> paramSetPtr;
+<a name="l00145"></a>00145               QString name;
+<a name="l00146"></a>00146               <span class="keywordtype">bool</span> isEnabled;
+<a name="l00147"></a>00147               <span class="keyword">const</span> <a class="code" href="classiprm_1_1_c_params_manager_comp.html" title="Implementation of parameter manager.">CParamsManagerComp</a>* parentPtr;
+<a name="l00148"></a>00148        };
+<a name="l00149"></a>00149        
+<a name="l00150"></a>00150        <span class="keywordtype">int</span> FindParamSetIndex(<span class="keyword">const</span> QString&amp; name) <span class="keyword">const</span>;
 <a name="l00151"></a>00151 
-<a name="l00152"></a>00152        <span class="keywordtype">int</span> m_selectedIndex;
-<a name="l00153"></a>00153 };
-<a name="l00154"></a>00154 
+<a name="l00152"></a>00152        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">istd::TDelPtr&lt;ParamSet&gt;</a> ParamSetPtr;
+<a name="l00153"></a>00153 
+<a name="l00154"></a>00154        <span class="keyword">typedef</span> QList&lt;ParamSetPtr&gt; ParamSets;
 <a name="l00155"></a>00155 
-<a name="l00156"></a>00156 } <span class="comment">// namespace iprm</span>
+<a name="l00156"></a>00156        ParamSets m_paramSets;
 <a name="l00157"></a>00157 
-<a name="l00158"></a>00158 
-<a name="l00159"></a>00159 <span class="preprocessor">#endif // !iprm_CParamsManagerComp_included</span>
-<a name="l00160"></a>00160 <span class="preprocessor"></span>
+<a name="l00158"></a>00158        <span class="keywordtype">int</span> m_selectedIndex;
+<a name="l00159"></a>00159 };
+<a name="l00160"></a>00160 
 <a name="l00161"></a>00161 
+<a name="l00162"></a>00162 } <span class="comment">// namespace iprm</span>
+<a name="l00163"></a>00163 
+<a name="l00164"></a>00164 
+<a name="l00165"></a>00165 <span class="preprocessor">#endif // !iprm_CParamsManagerComp_included</span>
+<a name="l00166"></a>00166 <span class="preprocessor"></span>
+<a name="l00167"></a>00167 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -139,10 +139,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code> if the option is enabled and can be selected.  <a href="#aaf7beca237ea3254593d4968d73812d5"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#afe0de449c8aeba00dcce80c7ec6b2f78">EnsureParamExist</a> (int index, const QByteArray &amp;typeId, const QString &amp;name, bool isEnabled)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure some parameter exist, has correct type and attributes.  <a href="#afe0de449c8aeba00dcce80c7ec6b2f78"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a23952cc12c590db6db7579fb511eebac">OnComponentCreated</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#af61615da54317ad382cf08c5da5aa11f">OnComponentDestroyed</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#aeb0f24a23abc405816eb74f9065efcdd">EnsureParamExist</a> (const QByteArray &amp;typeId, int index, const QString &amp;name)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure some parameter exist and has correct type.  <a href="#aeb0f24a23abc405816eb74f9065efcdd"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Implementation of parameter manager. </p>
@@ -182,27 +182,33 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aeb0f24a23abc405816eb74f9065efcdd"></a><!-- doxytag: member="iprm::CMultiParamsManagerComp::EnsureParamExist" ref="aeb0f24a23abc405816eb74f9065efcdd" args="(const QByteArray &amp;typeId, int index, const QString &amp;name)" -->
+<a class="anchor" id="afe0de449c8aeba00dcce80c7ec6b2f78"></a><!-- doxytag: member="iprm::CMultiParamsManagerComp::EnsureParamExist" ref="afe0de449c8aeba00dcce80c7ec6b2f78" args="(int index, const QByteArray &amp;typeId, const QString &amp;name, bool isEnabled)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool iprm::CMultiParamsManagerComp::EnsureParamExist </td>
           <td>(</td>
-          <td class="paramtype">const QByteArray &amp;&#160;</td>
-          <td class="paramname"><em>typeId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>typeId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>name</em>&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isEnabled</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -213,15 +219,17 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Ensure some parameter exist and has correct type. </p>
+<p>Ensure some parameter exist, has correct type and attributes. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">index</td><td>position in list of parameters. </td></tr>
     <tr><td class="paramname">typeid</td><td>ID of parameter type. </td></tr>
+    <tr><td class="paramname">name</td><td>name of parameter (attribute). </td></tr>
+    <tr><td class="paramname">isEnabled</td><td>enebling status of parameter (attribute). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd><code>true</code> - de-serialization was successful or <code>false</code> - no de-serialization was possible. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><code>true</code> if element exists (was present or could be created). </dd></dl>
 
 </div>
 </div>

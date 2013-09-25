@@ -99,23 +99,29 @@ bool CParamsManagerComp::SetSetsCount(int count)
 
 int CParamsManagerComp::GetIndexOperationFlags(int index) const
 {
+	Q_ASSERT(index < GetParamsSetsCount());
+
 	int retVal = 0;
 
 	if (m_paramSetsFactPtr.IsValid()){
-		retVal |= MF_SUPPORT_INSERT | MF_SUPPORT_SWAP | MF_SUPPORT_RENAME | MF_SUPPORT_ENABLING;
+		if ((index < 0) || (index >= m_fixedParamSetsCompPtr.GetCount())){
+			retVal |= MF_SUPPORT_INSERT | MF_SUPPORT_SWAP | MF_SUPPORT_RENAME;
+			
+			if (*m_allowDisabledAttrPtr){
+				retVal |= MF_DISABLE_ALLOWED;
+				
+				if (*m_supportEnablingAttrPtr){
+					retVal |= OOF_SUPPORT_ENABLING;
+				}
+			}
 
-		if (!m_paramSets.isEmpty() && (index < CParamsManagerComp::GetParamsSetsCount())){
-			retVal |= MF_SUPPORT_DELETE;
+			if (!m_paramSets.isEmpty()){
+				retVal |= MF_SUPPORT_DELETE;
+			}
 		}
 	}
 	else{
 		retVal |= MF_COUNT_FIXED;
-	}
-
-	if (index >= 0){
-		if (index < m_fixedParamSetsCompPtr.GetCount()){
-			retVal &= ~(MF_SUPPORT_INSERT | MF_SUPPORT_DELETE | MF_SUPPORT_SWAP | MF_SUPPORT_RENAME | MF_SUPPORT_ENABLING);
-		}
 	}
 
 	return retVal;
@@ -227,6 +233,7 @@ bool CParamsManagerComp::SwapParamsSet(int index1, int index2)
 
 	paramsSet1.paramSetPtr.Swap(paramsSet2.paramSetPtr);
 	qSwap(paramsSet1.name, paramsSet2.name);
+	qSwap(paramsSet1.isEnabled, paramsSet2.isEnabled);
 
 	istd::CChangeNotifier notifier1(&paramsSet1);
 	istd::CChangeNotifier notifier2(&paramsSet2);
@@ -411,12 +418,21 @@ bool CParamsManagerComp::Serialize(iser::IArchive& archive)
 
 	retVal = retVal && archive.EndTag(paramsSetListTag);
 
+	int selectedIndex = -1;
+	if (*m_serializeSelectionAttrPtr){
+		selectedIndex = m_selectedIndex;
+	}
+
 	static iser::CArchiveTag selectedIndexTag("Selected", "Selected index");
 	retVal = retVal && archive.BeginTag(selectedIndexTag);
-	retVal = retVal && archive.Process(m_selectedIndex);
+	retVal = retVal && archive.Process(selectedIndex);
 	retVal = retVal && archive.EndTag(selectedIndexTag);
 
-	Q_ASSERT(m_selectedIndex < CParamsManagerComp::GetParamsSetsCount());
+	if (!isStoring){
+		if (*m_serializeSelectionAttrPtr){
+			m_selectedIndex = selectedIndex;
+		}
+	}
 
 	return retVal;
 }
@@ -435,7 +451,7 @@ bool CParamsManagerComp::SetOptionEnabled(int index, bool isEnabled)
 	Q_ASSERT((index >= 0) && (index < GetParamsSetsCount()));
 
 	int fixedSetsCount = m_fixedSetNamesAttrPtr.GetCount();
-	if (index < fixedSetsCount){
+	if ((index < fixedSetsCount) || !*m_allowDisabledAttrPtr || !*m_supportEnablingAttrPtr){
 		return false;
 	}
 
@@ -487,7 +503,7 @@ bool CParamsManagerComp::SetOptionDescription(int /*optionIndex*/, const QString
 
 int CParamsManagerComp::GetOptionsFlags() const
 {
-	return SCF_NONE;
+	return GetIndexOperationFlags(-1);
 }
 
 
@@ -520,7 +536,7 @@ bool CParamsManagerComp::IsOptionEnabled(int index) const
 	Q_ASSERT((index >= 0) && (index < GetParamsSetsCount()));
 
 	int fixedSetsCount = m_fixedParamSetsCompPtr.GetCount();
-	if (index < fixedSetsCount){
+	if (!*m_allowDisabledAttrPtr || (index < fixedSetsCount)){
 		return true;
 	}
 
@@ -595,6 +611,7 @@ int CParamsManagerComp::FindParamSetIndex(const QString& name) const
 // public methods of embedded class
 
 CParamsManagerComp::ParamSet::ParamSet()
+:	isEnabled(true)
 {
 	parentPtr = NULL;
 }

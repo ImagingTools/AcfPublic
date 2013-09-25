@@ -68,7 +68,7 @@
 <a name="l00040"></a>00040               I_REGISTER_INTERFACE(<a class="code" href="classiqt2d_1_1_i_view_extender.html" title="Interface for GUI objects presenting its results using extern view objects.">iqt2d::IViewExtender</a>);
 <a name="l00041"></a>00041               I_ASSIGN(m_allowAddRemoveAttrPtr, <span class="stringliteral">&quot;AllowAddRemove&quot;</span>, <span class="stringliteral">&quot;If it is false, &#39;Add&#39; and &#39;Remove&#39; buttons will be always hidden&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);
 <a name="l00042"></a>00042               I_ASSIGN(m_allowUpDownAttrPtr, <span class="stringliteral">&quot;AllowUpDown&quot;</span>, <span class="stringliteral">&quot;If it is false, &#39;Up&#39; and &#39;Down&#39; buttons will be always hidden&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);
-<a name="l00043"></a>00043               I_ASSIGN(m_allowEnablingAttrPtr, <span class="stringliteral">&quot;AllowEnable&quot;</span>, <span class="stringliteral">&quot;If this option is activated, the single parameter sets can be enabled/disabled in the list&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
+<a name="l00043"></a>00043               I_ASSIGN(m_supportEnablingAttrPtr, <span class="stringliteral">&quot;AllowEnable&quot;</span>, <span class="stringliteral">&quot;If this option is activated, the single parameter sets can be enabled/disabled in the list&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
 <a name="l00044"></a>00044               I_ASSIGN(m_comboBoxViewAttrPtr, <span class="stringliteral">&quot;CompactView&quot;</span>, <span class="stringliteral">&quot;Shows parameters list as a combo box&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
 <a name="l00045"></a>00045               I_ASSIGN(m_iconProviderCompPtr, <span class="stringliteral">&quot;IconProvider&quot;</span>, <span class="stringliteral">&quot;Icons for drop-down types menu&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;IconProvider&quot;</span>);
 <a name="l00046"></a>00046        I_END_COMPONENT;
@@ -127,7 +127,7 @@
 <a name="l00108"></a>00108        I_REF(<a class="code" href="classiqtgui_1_1_i_icon_provider.html" title="This interface provides acces to an icon.">iqtgui::IIconProvider</a>, m_iconProviderCompPtr);
 <a name="l00109"></a>00109        I_ATTR(<span class="keywordtype">bool</span>, m_allowAddRemoveAttrPtr);
 <a name="l00110"></a>00110        I_ATTR(<span class="keywordtype">bool</span>, m_allowUpDownAttrPtr);
-<a name="l00111"></a>00111        I_ATTR(<span class="keywordtype">bool</span>, m_allowEnablingAttrPtr);
+<a name="l00111"></a>00111        I_ATTR(<span class="keywordtype">bool</span>, m_supportEnablingAttrPtr);
 <a name="l00112"></a>00112        I_ATTR(<span class="keywordtype">bool</span>, m_comboBoxViewAttrPtr);
 <a name="l00113"></a>00113        I_REF(<a class="code" href="classiqt2d_1_1_i_view_extender.html" title="Interface for GUI objects presenting its results using extern view objects.">iqt2d::IViewExtender</a>, m_extenderCompPtr);
 <a name="l00114"></a>00114 

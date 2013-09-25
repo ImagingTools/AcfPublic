@@ -78,9 +78,9 @@ public:
 		MF_SUPPORT_SWAP = 16,
 
 		/**
-			Active if enabling/disabling of the parameters is possible.
+			Active if it is possible to get the disabled option.
 		*/
-		MF_SUPPORT_ENABLING = 32
+		MF_DISABLE_ALLOWED = 32,
 	};
 
 	/**

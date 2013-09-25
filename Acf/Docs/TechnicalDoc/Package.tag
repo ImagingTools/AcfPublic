@@ -31449,6 +31449,13 @@
       <anchor>aaf7beca237ea3254593d4968d73812d5</anchor>
       <arglist>(int index) const </arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>EnsureParamExist</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>afe0de449c8aeba00dcce80c7ec6b2f78</anchor>
+      <arglist>(int index, const QByteArray &amp;typeId, const QString &amp;name, bool isEnabled)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
@@ -31462,13 +31469,6 @@
       <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
       <anchor>af61615da54317ad382cf08c5da5aa11f</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>EnsureParamExist</name>
-      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>aeb0f24a23abc405816eb74f9065efcdd</anchor>
-      <arglist>(const QByteArray &amp;typeId, int index, const QString &amp;name)</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -32641,9 +32641,9 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>SCF_SUPPORT_DISABLED</name>
+      <name>SFC_DISABLE_ALLOWED</name>
       <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
-      <anchor>a14593d38693c2bdbfe3988dbaaedfcfaa607b1d4c000f3129c22f5822cc43f87f</anchor>
+      <anchor>a14593d38693c2bdbfe3988dbaaedfcfaa9abc592dd0831f4da8ee13cd550efab8</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -32747,6 +32747,18 @@
       <anchor>a791cc29e0b7b69402a02568a15f6f471adc2d45122aef2374df191961d1d69f20</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <name>OOF_DISABLE_ALLOWED</name>
+      <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
+      <anchor>a791cc29e0b7b69402a02568a15f6f471a9ced20aaf925b5c43c1531bdbe422ac4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>OOF_SUPPORT_ENABLING</name>
+      <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
+      <anchor>a791cc29e0b7b69402a02568a15f6f471a2667b5ef0b6ee8af4b6392bc9395cbe0</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetOptionOperationFlags</name>
@@ -32838,9 +32850,9 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>MF_SUPPORT_ENABLING</name>
+      <name>MF_DISABLE_ALLOWED</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
-      <anchor>af0f7891ab3e905463489162a441f32e6a32150ef24514a075d4911945339a4a8b</anchor>
+      <anchor>af0f7891ab3e905463489162a441f32e6ad0032e222a563cac392d25a034cb43e9</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
