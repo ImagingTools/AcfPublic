@@ -8,8 +8,11 @@ Module{
 	Depends{ name: "acf" }
 	Depends{ name: "cpp" }
 
+	cpp.libraryPaths: [
+		path + "/../../../../zlib/lib"
+	]
 	cpp.staticLibraries: [
-		path + "/../../../../zlib/lib/zlib",
+		"zlib", "libmmd"
 	]
 	cpp.includePaths: [
 		path + "/../../../../zlib/include"
