@@ -72,21 +72,28 @@
 <a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classibase_1_1_c_multi_observer_binder_comp.html#a3fd9854a42e82e2af217057933bed623" title="Returns true if the model data can be changed.">IsReadOnly</a>() <span class="keyword">const</span>;
 <a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_multi_observer_binder_comp.html#a36b8198e72c1e5a4a94f599c749858da" title="Set flag that the model data can be changed.">SetReadOnly</a>(<span class="keywordtype">bool</span> state);
 <a name="l00046"></a>00046 
-<a name="l00047"></a>00047 <span class="keyword">private</span>:
-<a name="l00048"></a>00048        I_MULTIREF(<a class="code" href="classimod_1_1_i_model_editor.html" title="Common interface for an model editor.">imod::IModelEditor</a>, m_modelEditorsCompPtr);
-<a name="l00049"></a>00049        I_MULTIREF(<a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>, m_observersCompPtr);
+<a name="l00047"></a>00047 <span class="keyword">protected</span>:
+<a name="l00048"></a>00048        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classibase_1_1_c_multi_observer_binder_comp.html#a74caae45244866affcef8bab59cb929d">OnComponentDestroyed</a>();
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051        <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* m_attachedModelPtr;
-<a name="l00052"></a>00052 };
+<a name="l00051"></a>00051 <span class="keyword">private</span>:
+<a name="l00052"></a>00052        <span class="keywordtype">void</span> EnsureModelDetached();
 <a name="l00053"></a>00053 
-<a name="l00054"></a>00054 
-<a name="l00055"></a>00055 } <span class="comment">// namespace ibase</span>
-<a name="l00056"></a>00056 
+<a name="l00054"></a>00054 <span class="keyword">private</span>:
+<a name="l00055"></a>00055        I_MULTIREF(<a class="code" href="classimod_1_1_i_model_editor.html" title="Common interface for an model editor.">imod::IModelEditor</a>, m_modelEditorsCompPtr);
+<a name="l00056"></a>00056        I_MULTIREF(<a class="code" href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design...">imod::IObserver</a>, m_observersCompPtr);
 <a name="l00057"></a>00057 
-<a name="l00058"></a>00058 <span class="preprocessor">#endif // !ibase_CMultiObserverBinderComp_included</span>
-<a name="l00059"></a>00059 <span class="preprocessor"></span>
+<a name="l00058"></a>00058        <a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>* m_attachedModelPtr;
+<a name="l00059"></a>00059 };
 <a name="l00060"></a>00060 
 <a name="l00061"></a>00061 
+<a name="l00062"></a>00062 } <span class="comment">// namespace ibase</span>
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065 <span class="preprocessor">#endif // !ibase_CMultiObserverBinderComp_included</span>
+<a name="l00066"></a>00066 <span class="preprocessor"></span>
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -12348,6 +12348,13 @@
       <anchor>a36b8198e72c1e5a4a94f599c749858da</anchor>
       <arglist>(bool state)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classibase_1_1_c_multi_observer_binder_comp.html</anchorfile>
+      <anchor>a74caae45244866affcef8bab59cb929d</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>ibase::CObjectQueueComp</name>
