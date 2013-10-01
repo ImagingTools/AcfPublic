@@ -211,8 +211,18 @@ public:
 	*/
 	static bool SetElementsCount(int count);
 
+	/**
+		Get vector with all coordinates set to 0.
+	*/
+	static const TVector<Size, Element>& GetZero();
+
 protected:
 	Elements m_elements;
+
+private:
+	explicit TVector(Element vector);
+
+	static TVector<Size, Element> s_zero;
 };
 
 
@@ -598,6 +608,13 @@ inline bool TVector<Size, Element>::SetElementsCount(int count)
 }
 
 
+template <int Size, class Element>
+inline const TVector<Size, Element>& TVector<Size, Element>::GetZero()
+{
+	return s_zero;
+}
+
+
 // public methods
 
 template <int Size, class Element>
@@ -682,6 +699,21 @@ bool TVector<Size, Element>::Serialize(iser::IArchive& archive)
 
 	return retVal;
 }
+
+
+// private methods
+
+template <int Size, class Element>
+TVector<Size, Element>::TVector(Element element)
+{
+	for (int i = 0; i < Size; ++i){
+		m_elements[i] = element;
+	}
+}
+
+
+template <int Size, class Element>
+TVector<Size, Element> TVector<Size, Element>::s_zero(Element(0));
 
 
 } // namespace imath

@@ -80,6 +80,14 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_circle.html#a188908a05dd12664adad71b2b14d640c">SetRadius</a> (double radius)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_circle.html#a0ab8bf18687abf4ef70fed3787836d24">operator==</a> (const <a class="el" href="classi2d_1_1_c_circle.html">CCircle</a> &amp;circle) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_circle.html#a6d1242b3528e7742d741661f17d9c3d8">operator!=</a> (const <a class="el" href="classi2d_1_1_c_circle.html">CCircle</a> &amp;circle) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_circle.html#a5dbbb1dddb323a340aeb56a40e28c391">IsIntersectedBy</a> (const <a class="el" href="classi2d_1_1_c_circle.html">CCircle</a> &amp;circle, bool isFilled=false) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this circle is intersected by another circle (or disk).  <a href="#a5dbbb1dddb323a340aeb56a40e28c391"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_circle.html#a4e4e900646e593ea03f45864848244d3">IsIntersectedBy</a> (const <a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> &amp;line, bool isFilled=false) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this circle is intersected by line.  <a href="#a4e4e900646e593ea03f45864848244d3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_circle.html#a6e07dfa8c212afa7489ed004c04946ac">GetIntersectionAlphas</a> (const <a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> &amp;line, double result[2]) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get points of intersection circle by line.  <a href="#a6e07dfa8c212afa7489ed004c04946ac"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_circle.html#ac0866f1d0c873a1bf2013bc59a2a149b">GetIntersectionPoints</a> (const <a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> &amp;line, <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;result1, <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;result2) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get points of intersection circle by line.  <a href="#ac0866f1d0c873a1bf2013bc59a2a149b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_rectangle.html">CRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_circle.html#a78aee945e2a7ae1dd717604b4657e309">GetBoundingBox</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get bounding box of this shape.  <a href="#a78aee945e2a7ae1dd717604b4657e309"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_circle.html#a8015a4528b42eb8a741d0edd56b98b46">Transform</a> (const <a class="el" href="classi2d_1_1_i_transformation2d.html">ITransformation2d</a> &amp;transformation, <a class="el" href="classi2d_1_1_i_transformation2d.html#a69ca1bcb67644ff4eff15cb4046176f8">ITransformation2d::ExactnessMode</a> mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</td></tr>
@@ -105,7 +113,7 @@ Protected Attributes</h2></td></tr>
 <div class="textblock"><p>Definition of graphical circle object. </p>
 <p>This object is stored using center position and radius. </p>
 
-<p>Definition at line <a class="el" href="_c_circle_8h_source.html#l00019">19</a> of file <a class="el" href="_c_circle_8h_source.html">CCircle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_circle_8h_source.html#l00020">20</a> of file <a class="el" href="_c_circle_8h_source.html">CCircle.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a78d0cf38aa5166bc45483f9e815c2e46"></a><!-- doxytag: member="i2d::CCircle::BaseClass" ref="a78d0cf38aa5166bc45483f9e815c2e46" args="" -->
 <div class="memitem">
@@ -120,7 +128,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classi2d_1_1_c_oriented_circle.html#a9ba45d6698dc1a7c01889be99bc51e68">i2d::COrientedCircle</a>, <a class="el" href="classi2d_1_1_t_object2d_comp_wrap.html#a4e7dbee55ab86d2b0e51e17fa162fa3f">i2d::TObject2dCompWrap&lt; COrientedCircle &gt;</a>, <a class="el" href="classi2d_1_1_t_object2d_comp_wrap.html#a4e7dbee55ab86d2b0e51e17fa162fa3f">i2d::TObject2dCompWrap&lt; CCircle &gt;</a>, <a class="el" href="classi2d_1_1_c_circle_comp.html#ad7606d37cf68f5c0f1342bfb2220f61d">i2d::CCircleComp</a>, and <a class="el" href="classi2d_1_1_c_oriented_circle_comp.html#a33380d4013b38a6fd93045932ee31f33">i2d::COrientedCircleComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_circle_8h_source.html#l00022">22</a> of file <a class="el" href="_c_circle_8h_source.html">CCircle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_circle_8h_source.html#l00023">23</a> of file <a class="el" href="_c_circle_8h_source.html">CCircle.h</a>.</p>
 
 </div>
 </div>
@@ -245,6 +253,87 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6e07dfa8c212afa7489ed004c04946ac"></a><!-- doxytag: member="i2d::CCircle::GetIntersectionAlphas" ref="a6e07dfa8c212afa7489ed004c04946ac" args="(const CLine2d &amp;line, double result[2]) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int i2d::CCircle::GetIntersectionAlphas </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>result</em>[2]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get points of intersection circle by line. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>line for check. </td></tr>
+    <tr><td class="paramname">result</td><td>alpha values of intersection points. If returned value is bigger or equals 1 the first value will be set. If returned value is equals 2 the both values will be set. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>number of intersection points. It can be 0, 1 or 2. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac0866f1d0c873a1bf2013bc59a2a149b"></a><!-- doxytag: member="i2d::CCircle::GetIntersectionPoints" ref="ac0866f1d0c873a1bf2013bc59a2a149b" args="(const CLine2d &amp;line, i2d::CVector2d &amp;result1, i2d::CVector2d &amp;result2) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int i2d::CCircle::GetIntersectionPoints </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>result1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>result2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get points of intersection circle by line. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>line for check. </td></tr>
+    <tr><td class="paramname">result1</td><td>intersection point 1. Will be set only if returned 1 or 2. </td></tr>
+    <tr><td class="paramname">result2</td><td>intersection point 2. Will be set only if returned 2. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>number of intersection points. It can be 0, 1 or 2. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aae375505fc42f5eaaf1a7747883767dd"></a><!-- doxytag: member="i2d::CCircle::GetInvTransformed" ref="aae375505fc42f5eaaf1a7747883767dd" args="(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -312,9 +401,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_circle_8h_source.html#l00069">69</a> of file <a class="el" href="_c_circle_8h_source.html">CCircle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_circle_8h_source.html#l00103">103</a> of file <a class="el" href="_c_circle_8h_source.html">CCircle.h</a>.</p>
 
-<p>References <a class="el" href="_c_circle_8h_source.html#l00063">m_radius</a>.</p>
+<p>References <a class="el" href="_c_circle_8h_source.html#l00097">m_radius</a>.</p>
 
 </div>
 </div>
@@ -437,6 +526,78 @@ Protected Attributes</h2></td></tr>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true, if transformation was done correctly. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classi2d_1_1_c_position2d.html#a9ad485da3d0ad4aaa4591c89c8218e6a">i2d::CPosition2d</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5dbbb1dddb323a340aeb56a40e28c391"></a><!-- doxytag: member="i2d::CCircle::IsIntersectedBy" ref="a5dbbb1dddb323a340aeb56a40e28c391" args="(const CCircle &amp;circle, bool isFilled=false) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool i2d::CCircle::IsIntersectedBy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_circle.html">CCircle</a> &amp;&#160;</td>
+          <td class="paramname"><em>circle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isFilled</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Check if this circle is intersected by another circle (or disk). </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>line for check. </td></tr>
+    <tr><td class="paramname">isFilled</td><td>flag if this circle should be interpreted as filled disk or boundary only. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4e4e900646e593ea03f45864848244d3"></a><!-- doxytag: member="i2d::CCircle::IsIntersectedBy" ref="a4e4e900646e593ea03f45864848244d3" args="(const CLine2d &amp;line, bool isFilled=false) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool i2d::CCircle::IsIntersectedBy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_line2d.html">CLine2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isFilled</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Check if this circle is intersected by line. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>line for check. </td></tr>
+    <tr><td class="paramname">isFilled</td><td>flag if this circle should be interpreted as filled disk or boundary only. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -574,9 +735,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_circle_8h_source.html#l00063">63</a> of file <a class="el" href="_c_circle_8h_source.html">CCircle.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_circle_8h_source.html#l00097">97</a> of file <a class="el" href="_c_circle_8h_source.html">CCircle.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_circle_8h_source.html#l00069">GetRadius()</a>.</p>
+<p>Referenced by <a class="el" href="_c_circle_8h_source.html#l00103">GetRadius()</a>.</p>
 
 </div>
 </div>

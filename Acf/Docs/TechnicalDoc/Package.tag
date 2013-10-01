@@ -92,6 +92,7 @@
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_circle_8h</filename>
     <includes id="_c_position2d_8h" name="CPosition2d.h" local="yes" imported="no">i2d/CPosition2d.h</includes>
+    <includes id="_c_line2d_8h" name="CLine2d.h" local="yes" imported="no">i2d/CLine2d.h</includes>
     <class kind="class">i2d::CCircle</class>
     <namespace>i2d</namespace>
   </compound>
@@ -7554,6 +7555,34 @@
       <anchor>a6d1242b3528e7742d741661f17d9c3d8</anchor>
       <arglist>(const CCircle &amp;circle) const </arglist>
     </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsIntersectedBy</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>a5dbbb1dddb323a340aeb56a40e28c391</anchor>
+      <arglist>(const CCircle &amp;circle, bool isFilled=false) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsIntersectedBy</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>a4e4e900646e593ea03f45864848244d3</anchor>
+      <arglist>(const CLine2d &amp;line, bool isFilled=false) const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetIntersectionAlphas</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>a6e07dfa8c212afa7489ed004c04946ac</anchor>
+      <arglist>(const CLine2d &amp;line, double result[2]) const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetIntersectionPoints</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>ac0866f1d0c873a1bf2013bc59a2a149b</anchor>
+      <arglist>(const CLine2d &amp;line, i2d::CVector2d &amp;result1, i2d::CVector2d &amp;result2) const </arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual CRectangle</type>
       <name>GetBoundingBox</name>
@@ -7951,6 +7980,13 @@
     </member>
     <member kind="function">
       <type>double</type>
+      <name>GetMaxDistance</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>a8dc0dc8dc5df0b288414df588f691707</anchor>
+      <arglist>(const CVector2d &amp;position) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
       <name>GetExtendedDistance</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
       <anchor>ae098728d0bf2b267d354031ea2cf1379</anchor>
@@ -7982,6 +8018,13 @@
       <name>GetLength2</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
       <anchor>a6826bc40273a46c8a4be8e6b46020c4d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetDirectionAngle</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>a250a33b7f0bfeca274439863398dc6f1</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -8039,13 +8082,6 @@
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
       <anchor>a046be8d4925d0528d259f6eff68d42a8</anchor>
       <arglist>(const i2d::CVector2d &amp;point) const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>CutDisk</name>
-      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
-      <anchor>a75190bd4783bb5f5d73c1933c9ef1661</anchor>
-      <arglist>(const i2d::CVector2d &amp;center, double radius) const </arglist>
     </member>
     <member kind="function">
       <type>QPair&lt; double, double &gt;</type>
@@ -10279,6 +10315,20 @@
       <arglist>(const CRectangle &amp;rect)</arglist>
     </member>
     <member kind="function">
+      <type>double</type>
+      <name>GetDistance</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>a1b2b14f1e5274842f4c8558057a5d12b</anchor>
+      <arglist>(const CVector2d &amp;position) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetMaxDistance</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>a2b91f8c0736be007cd436f89f8d5d1e2</anchor>
+      <arglist>(const CVector2d &amp;position) const </arglist>
+    </member>
+    <member kind="function">
       <type>CVector2d</type>
       <name>GetNearestPointTo</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
@@ -10986,6 +11036,13 @@
       <anchorfile>classi2d_1_1_c_vector2d.html</anchorfile>
       <anchor>a413ea4e928dfc167786f0af686563708</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const CVector2d &amp;</type>
+      <name>GetZero</name>
+      <anchorfile>classi2d_1_1_c_vector2d.html</anchorfile>
+      <anchor>a10b9143f64bae0e95733add42042a08f</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -29317,6 +29374,13 @@
       <anchorfile>classimath_1_1_t_vector.html</anchorfile>
       <anchor>a44a8412cc6105a059b036aeeffc5872d</anchor>
       <arglist>(int count)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const TVector&lt; Size, Element &gt; &amp;</type>
+      <name>GetZero</name>
+      <anchorfile>classimath_1_1_t_vector.html</anchorfile>
+      <anchor>a9ace883c0b6d6602a32df2cd12d77eb6</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>Elements</type>
