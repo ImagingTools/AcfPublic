@@ -60,6 +60,10 @@ Inheritance diagram for iipr::CFeaturesContainer:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_features_container.html#a5d7786aca3c8de9301e93142dd7a357b">RemoveFeature</a> (int featureIndex)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove feature at selected index.  <a href="#a5d7786aca3c8de9301e93142dd7a357b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classimeas_1_1_i_numeric_value.html">imeas::INumericValue</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_features_container.html#ad7a729e35f70782ade1b938b68792d7b">GetFeatureRef</a> (int index)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to stored feature.  <a href="#ad7a729e35f70782ade1b938b68792d7b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_features_container.html#a614767b01248f27acb51b5966c3deb95">ResetFeatures</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all features from this container.  <a href="#a614767b01248f27acb51b5966c3deb95"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_features_container.html#a877af492aa8f31794ea3037eb1cdc5fa">AddFeature</a> (const <a class="el" href="classimeas_1_1_i_numeric_value.html">imeas::INumericValue</a> *featurePtr, bool *isFullPtr=<a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
@@ -114,6 +118,25 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ad7a729e35f70782ade1b938b68792d7b"></a><!-- doxytag: member="iipr::CFeaturesContainer::GetFeatureRef" ref="ad7a729e35f70782ade1b938b68792d7b" args="(int index)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classimeas_1_1_i_numeric_value.html">imeas::INumericValue</a>&amp; iipr::CFeaturesContainer::GetFeatureRef </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get access to stored feature. </p>
+
+</div>
+</div>
 <a class="anchor" id="aeb790dd0a3a430a7c81873281e5701dc"></a><!-- doxytag: member="iipr::CFeaturesContainer::GetNumericValue" ref="aeb790dd0a3a430a7c81873281e5701dc" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -152,6 +175,26 @@ Public Member Functions</h2></td></tr>
 <p>Get number of numeric values in the list. </p>
 
 <p>Implements <a class="el" href="classimeas_1_1_i_numeric_value_provider.html#a552bff1848be3c7927a19727bc919d5a">imeas::INumericValueProvider</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5d7786aca3c8de9301e93142dd7a357b"></a><!-- doxytag: member="iipr::CFeaturesContainer::RemoveFeature" ref="a5d7786aca3c8de9301e93142dd7a357b" args="(int featureIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iipr::CFeaturesContainer::RemoveFeature </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>featureIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Remove feature at selected index. </p>
+<p>The following elements will be shift, size of this container will be decreased. </p>
 
 </div>
 </div>

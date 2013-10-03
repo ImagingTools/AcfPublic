@@ -6877,8 +6877,15 @@
       <type>const i2d::CAffine2d &amp;</type>
       <name>GetTransformation</name>
       <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a20a3767b358f0de59a1cf5128b9f03e3</anchor>
+      <anchor>ad332b0e9f8cab93359b61f0f6858aef2</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CAffine2d &amp;</type>
+      <name>GetTransformationRef</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>aa775ae8a58241b3914fee28e61c64f28</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -19385,6 +19392,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
+      <type>bool</type>
+      <name>EnsureInitialized</name>
+      <anchorfile>classicomp_1_1_t_multi_reference_member.html</anchorfile>
+      <anchor>aaac9e0cd47853554ffad5a0524cfef6f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
       <type>Interface *</type>
       <name>operator[]</name>
       <anchorfile>classicomp_1_1_t_multi_reference_member.html</anchorfile>
@@ -19397,13 +19411,6 @@
       <anchorfile>classicomp_1_1_t_multi_reference_member.html</anchorfile>
       <anchor>aac38e053940f113736cdd6a946456ed8</anchor>
       <arglist>(const TMultiReferenceMember &amp;ptr)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>EnsureInitialized</name>
-      <anchorfile>classicomp_1_1_t_multi_reference_member.html</anchorfile>
-      <anchor>aaac9e0cd47853554ffad5a0524cfef6f</anchor>
-      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -19455,6 +19462,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
+      <type>bool</type>
+      <name>EnsureInitialized</name>
+      <anchorfile>classicomp_1_1_t_reference_member.html</anchorfile>
+      <anchor>a9f9cb0ad4f2d0fe6874dc0c86fbc6a1a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
       <type>Interface *</type>
       <name>GetPtr</name>
       <anchorfile>classicomp_1_1_t_reference_member.html</anchorfile>
@@ -19474,13 +19488,6 @@
       <anchorfile>classicomp_1_1_t_reference_member.html</anchorfile>
       <anchor>aad62dbcd1b800d2d2a7a422230e6e710</anchor>
       <arglist>(const TReferenceMember &amp;ptr)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>EnsureInitialized</name>
-      <anchorfile>classicomp_1_1_t_reference_member.html</anchorfile>
-      <anchor>a9f9cb0ad4f2d0fe6874dc0c86fbc6a1a</anchor>
-      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">

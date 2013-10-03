@@ -67,8 +67,10 @@ Inheritance diagram for i2d::CAffineTransformation2d:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#adcc41bc3b4002d119455c8ce3ad37fbc">CAffineTransformation2d</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#ac0c758fdfb6f8715a8fb7b6e8cafb3d8">CAffineTransformation2d</a> (const <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;transformation)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a20a3767b358f0de59a1cf5128b9f03e3">GetTransformation</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get used transformation object.  <a href="#a20a3767b358f0de59a1cf5128b9f03e3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#ad332b0e9f8cab93359b61f0f6858aef2">GetTransformation</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get used transformation object.  <a href="#ad332b0e9f8cab93359b61f0f6858aef2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#aa775ae8a58241b3914fee28e61c64f28">GetTransformationRef</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get reference to internal transformation object.  <a href="#aa775ae8a58241b3914fee28e61c64f28"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a4c5cbc922fa7b51fcdd3008c56d54356">SetTransformation</a> (const <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp;transformation)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the transformation object.  <a href="#a4c5cbc922fa7b51fcdd3008c56d54356"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a87289c50a82e49e70fa2ce2113c704bd">Reset</a> ()</td></tr>
@@ -552,21 +554,25 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a20a3767b358f0de59a1cf5128b9f03e3"></a><!-- doxytag: member="i2d::CAffineTransformation2d::GetTransformation" ref="a20a3767b358f0de59a1cf5128b9f03e3" args="() const " -->
+<a class="anchor" id="ad332b0e9f8cab93359b61f0f6858aef2"></a><!-- doxytag: member="i2d::CAffineTransformation2d::GetTransformation" ref="ad332b0e9f8cab93359b61f0f6858aef2" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a>&amp; i2d::CAffineTransformation2d::GetTransformation </td>
+          <td class="memname">const <a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp; i2d::CAffineTransformation2d::GetTransformation </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td> const<code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>Get used transformation object. </p>
+
+<p>Definition at line <a class="el" href="_c_affine_transformation2d_8h_source.html#l00118">118</a> of file <a class="el" href="_c_affine_transformation2d_8h_source.html">CAffineTransformation2d.h</a>.</p>
+
+<p>References <a class="el" href="_c_affine_transformation2d_8h_source.html#l00108">m_transformation</a>.</p>
 
 </div>
 </div>
@@ -587,6 +593,29 @@ Protected Attributes</h2></td></tr>
 <p>Get flags of describing type of this transformation. </p>
 
 <p>Implements <a class="el" href="classi2d_1_1_i_transformation2d.html#a68f590d710df7df8eda66f06a8273915">i2d::ITransformation2d</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa775ae8a58241b3914fee28e61c64f28"></a><!-- doxytag: member="i2d::CAffineTransformation2d::GetTransformationRef" ref="aa775ae8a58241b3914fee28e61c64f28" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classi2d_1_1_c_affine2d.html">i2d::CAffine2d</a> &amp; i2d::CAffineTransformation2d::GetTransformationRef </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get reference to internal transformation object. </p>
+<p>Please don forgot the update notifying. </p>
+
+<p>Definition at line <a class="el" href="_c_affine_transformation2d_8h_source.html#l00124">124</a> of file <a class="el" href="_c_affine_transformation2d_8h_source.html">CAffineTransformation2d.h</a>.</p>
+
+<p>References <a class="el" href="_c_affine_transformation2d_8h_source.html#l00108">m_transformation</a>.</p>
 
 </div>
 </div>
@@ -831,7 +860,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_affine_transformation2d_8h_source.html#l00102">102</a> of file <a class="el" href="_c_affine_transformation2d_8h_source.html">CAffineTransformation2d.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_affine_transformation2d_8h_source.html#l00108">108</a> of file <a class="el" href="_c_affine_transformation2d_8h_source.html">CAffineTransformation2d.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_c_affine_transformation2d_8h_source.html#l00118">GetTransformation()</a>, and <a class="el" href="_c_affine_transformation2d_8h_source.html#l00124">GetTransformationRef()</a>.</p>
 
 </div>
 </div>

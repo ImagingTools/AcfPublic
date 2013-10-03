@@ -494,6 +494,19 @@
     <namespace>idocproc</namespace>
   </compound>
   <compound kind="file">
+    <name>CEdgeBasedFeaturesSupplierComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
+    <filename>_c_edge_based_features_supplier_comp_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_c_features_container_8h" name="CFeaturesContainer.h" local="yes" imported="no">iipr/CFeaturesContainer.h</includes>
+    <includes id="_i_edge_lines_provider_8h" name="IEdgeLinesProvider.h" local="yes" imported="no">iedge/IEdgeLinesProvider.h</includes>
+    <class kind="class">iedge::CEdgeBasedFeaturesSupplierComp</class>
+    <namespace>iedge</namespace>
+  </compound>
+  <compound kind="file">
     <name>CEdgeLine.h</name>
     <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_c_edge_line_8h</filename>
@@ -8427,6 +8440,7 @@
   <compound kind="namespace">
     <name>iedge</name>
     <filename>namespaceiedge.html</filename>
+    <class kind="class">iedge::CEdgeBasedFeaturesSupplierComp</class>
     <class kind="class">iedge::CEdgeLine</class>
     <class kind="class">iedge::CEdgeLineContainer</class>
     <class kind="class">iedge::CEdgeNode</class>
@@ -8437,6 +8451,173 @@
     <class kind="class">iedge::IEdgeLinesProcessor</class>
     <class kind="class">iedge::IEdgeLinesProvider</class>
     <class kind="class">iedge::IEdgesExtractor</class>
+  </compound>
+  <compound kind="class">
+    <name>iedge::CEdgeBasedFeaturesSupplierComp</name>
+    <filename>classiedge_1_1_c_edge_based_features_supplier_comp.html</filename>
+    <base>TSupplierCompWrap&lt; QPair&lt; iipr::CFeaturesContainer, QVector&lt; i2d::CAffineTransformation2d &gt; &gt; &gt;</base>
+    <base virtualness="virtual">imeas::INumericValueProvider</base>
+    <base virtualness="virtual">i2d::IMultiCalibrationProvider</base>
+    <base virtualness="virtual">istd::IInformationProvider</base>
+    <member kind="enumeration">
+      <name>MessageType</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>ad9b606b325a3b48c09c3567b654b8668</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MT_SEARCH_RESULT</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>ad9b606b325a3b48c09c3567b654b8668a95c3ddbc23d443bd359fc71b0fc2d3c9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iproc::TSupplierCompWrap&lt; QPair&lt; iipr::CFeaturesContainer, QVector&lt; i2d::CAffineTransformation2d &gt; &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>a6e57cd4f77b10129961c6f3b05ffd27b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>a0dd609024b1d33a96a0bb2fdd2ad533d</anchor>
+      <arglist>(m_calibrationSupplierCompPtr, m_calibrationProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>a85111cd77e709a09d7e6a1f403b7e7b1</anchor>
+      <arglist>(m_calibrationProviderModelCompPtr, m_calibrationProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>acf79f9e50e677f5a15853eb6786315fc</anchor>
+      <arglist>(m_edgeLinesSupplierCompPtr, m_edgeLinesProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>ae74712dbd91bedf96db59de23812661a</anchor>
+      <arglist>(m_edgeLinesProviderModelCompPtr, m_edgeLinesProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CEdgeBasedFeaturesSupplierComp</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>aa6292a1b57396927e74e112c89c53173</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iprm::IOptionsList *</type>
+      <name>GetCalibrationSelectionContraints</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>a9ea56eb067ef43648e9f92e3eb9575e8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetCalibrationsCount</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>ad3fcdaf8f587c8c76a4afb74180970fa</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ICalibration2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>a60f57502f57928f9ff26c64ad89aa827</anchor>
+      <arglist>(int calibrationIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetValuesCount</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>ad74d0fefff86d98fcf4987464a6e5bae</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imeas::INumericValue &amp;</type>
+      <name>GetNumericValue</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>a60c05b81c37afb6f18b4b4a637c6de2a</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QDateTime</type>
+      <name>GetInformationTimeStamp</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>ae402dcc7330fac75808453353fd72bf8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual InformationCategory</type>
+      <name>GetInformationCategory</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>a68159c698d84cec5d542f78cdb231ab2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetInformationId</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>a2516e192e84667a7d1210b0472e8f128</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetInformationDescription</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>ad48f035b184173f7eef9f8dedd71e3f6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetInformationSource</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>a892fe04f245aa1c015ac80a4bb79dd5a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetInformationFlags</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>abcff719ae088ebb2b741268004e9b24c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InitializeWork</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>aa6d0ba7308b9b8f070e96d8dc9da63d7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>ac8e375c0bfd1b8c658ab433c6e5e160d</anchor>
+      <arglist>(QPair&lt; iipr::CFeaturesContainer, QVector&lt; i2d::CAffineTransformation2d &gt; &gt; &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>aaaf97ef7d7eea759332f013642c7bcbf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>a5c9e22bef4a356697299f6b6a1fdae16</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iedge::CEdgeLine</name>
@@ -14271,6 +14452,20 @@
     <filename>classiipr_1_1_c_features_container.html</filename>
     <base virtualness="virtual">iipr::IFeaturesConsumer</base>
     <base virtualness="virtual">imeas::INumericValueProvider</base>
+    <member kind="function">
+      <type>void</type>
+      <name>RemoveFeature</name>
+      <anchorfile>classiipr_1_1_c_features_container.html</anchorfile>
+      <anchor>a5d7786aca3c8de9301e93142dd7a357b</anchor>
+      <arglist>(int featureIndex)</arglist>
+    </member>
+    <member kind="function">
+      <type>imeas::INumericValue &amp;</type>
+      <name>GetFeatureRef</name>
+      <anchorfile>classiipr_1_1_c_features_container.html</anchorfile>
+      <anchor>ad7a729e35f70782ade1b938b68792d7b</anchor>
+      <arglist>(int index)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ResetFeatures</name>
@@ -19839,6 +20034,27 @@
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>af7121d60c261027ec7dacd632de00cdd</anchor>
+      <arglist>(TaskLog)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>acda11a3a5a87a1be7fb7f6cbbbb8a3f2</anchor>
+      <arglist>(TaskLog, ilog::IMessageConsumer, ExtractTaskLog)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a3b2874fc11e22620bac9566cf875cba0</anchor>
+      <arglist>(TaskLog, istd::IPolymorphic, ExtractTaskLog)</arglist>
     </member>
     <member kind="function">
       <type></type>

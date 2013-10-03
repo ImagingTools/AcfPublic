@@ -72,6 +72,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize this attribute.  <a href="#a845401204fa7c95d0adaaaa333fce9d7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_reference_member.html#a356cac6e4bbfd2c3d9e6a84b8e8e56c7">IsValid</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this reference can be resolved.  <a href="#a356cac6e4bbfd2c3d9e6a84b8e8e56c7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_reference_member.html#a9f9cb0ad4f2d0fe6874dc0c86fbc6a1a">EnsureInitialized</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure that initlization process is closed.  <a href="#a9f9cb0ad4f2d0fe6874dc0c86fbc6a1a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Interface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_reference_member.html#ac36b9c61da497318364265730fefef02">GetPtr</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Direct cccess to internal pointer.  <a href="#ac36b9c61da497318364265730fefef02"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Interface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_reference_member.html#a6de7cc35ff4bd7cf8640d38fd0ed4ac8">operator-&gt;</a> () const </td></tr>
@@ -79,7 +81,6 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_reference_member.html#aad62dbcd1b800d2d2a7a422230e6e710">TReferenceMember</a> (const <a class="el" href="classicomp_1_1_t_reference_member.html">TReferenceMember</a> &amp;ptr)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_t_reference_member.html#a9f9cb0ad4f2d0fe6874dc0c86fbc6a1a">EnsureInitialized</a> () const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class Interface&gt;<br/>
@@ -160,7 +161,7 @@ template&lt;class Interface &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_reference_member_8h_source.html#l00065">65</a> of file <a class="el" href="_t_reference_member_8h_source.html">TReferenceMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_reference_member_8h_source.html#l00070">70</a> of file <a class="el" href="_t_reference_member_8h_source.html">TReferenceMember.h</a>.</p>
 
 </div>
 </div>
@@ -181,7 +182,7 @@ template&lt;class Interface &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_reference_member_8h_source.html#l00110">110</a> of file <a class="el" href="_t_reference_member_8h_source.html">TReferenceMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_reference_member_8h_source.html#l00142">142</a> of file <a class="el" href="_t_reference_member_8h_source.html">TReferenceMember.h</a>.</p>
 
 </div>
 </div>
@@ -196,15 +197,18 @@ template&lt;class Interface &gt; </div>
           <td class="memname">bool <a class="el" href="classicomp_1_1_t_reference_member.html">icomp::TReferenceMember</a>&lt; Interface &gt;::EnsureInitialized </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const<code> [protected]</code></td>
+          <td> const</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_t_reference_member_8h_source.html#l00120">120</a> of file <a class="el" href="_t_reference_member_8h_source.html">TReferenceMember.h</a>.</p>
+<p>Ensure that initlization process is closed. </p>
+<p>Do the same as <code><a class="el" href="classicomp_1_1_t_reference_member.html#a356cac6e4bbfd2c3d9e6a84b8e8e56c7" title="Check if this reference can be resolved.">IsValid()</a></code>, for convinience only (to provide better code clarify). </p>
 
-<p>References <a class="el" href="classicomp_1_1_i_component.html#adca938957e64be16768c0cf32c4bf1e1">icomp::IComponent::GetParentComponent()</a>, <a class="el" href="classicomp_1_1_i_composite_component.html#a80efce246703e0e10137eb95a639bcd6">icomp::ICompositeComponent::GetSubcomponent()</a>, <a class="el" href="istd_8h_source.html#l00061">NULL</a>, and <a class="el" href="_t_reference_member_8h_source.html#l00150">operator*()</a>.</p>
+<p>Definition at line <a class="el" href="_t_reference_member_8h_source.html#l00093">93</a> of file <a class="el" href="_t_reference_member_8h_source.html">TReferenceMember.h</a>.</p>
+
+<p>References <a class="el" href="classicomp_1_1_i_component.html#adca938957e64be16768c0cf32c4bf1e1">icomp::IComponent::GetParentComponent()</a>, <a class="el" href="classicomp_1_1_i_composite_component.html#a80efce246703e0e10137eb95a639bcd6">icomp::ICompositeComponent::GetSubcomponent()</a>, <a class="el" href="istd_8h_source.html#l00061">NULL</a>, and <a class="el" href="_t_reference_member_8h_source.html#l00154">operator*()</a>.</p>
 
 </div>
 </div>
@@ -226,9 +230,9 @@ template&lt;class Interface &gt; </div>
 
 <p>Direct cccess to internal pointer. </p>
 
-<p>Definition at line <a class="el" href="_t_reference_member_8h_source.html#l00089">89</a> of file <a class="el" href="_t_reference_member_8h_source.html">TReferenceMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_reference_member_8h_source.html#l00121">121</a> of file <a class="el" href="_t_reference_member_8h_source.html">TReferenceMember.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_reference_member_8h_source.html#l00156">operator*()</a>.</p>
+<p>Referenced by <a class="el" href="_t_reference_member_8h_source.html#l00160">operator*()</a>.</p>
 
 </div>
 </div>
@@ -270,7 +274,7 @@ template&lt;class Interface &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classicomp_1_1_t_attribute_member_base.html#a02c009fa9c34f4576f47cdc62e527c99">icomp::TAttributeMemberBase&lt; CReferenceAttribute &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_reference_member_8h_source.html#l00072">72</a> of file <a class="el" href="_t_reference_member_8h_source.html">TReferenceMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_reference_member_8h_source.html#l00077">77</a> of file <a class="el" href="_t_reference_member_8h_source.html">TReferenceMember.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00061">NULL</a>.</p>
 
@@ -293,10 +297,11 @@ template&lt;class Interface &gt; </div>
 <div class="memdoc">
 
 <p>Check if this reference can be resolved. </p>
+<p>It calls <code><a class="el" href="classicomp_1_1_t_reference_member.html#a9f9cb0ad4f2d0fe6874dc0c86fbc6a1a" title="Ensure that initlization process is closed.">EnsureInitialized()</a></code>. </p>
 
 <p>Reimplemented from <a class="el" href="classicomp_1_1_t_attribute_member_base.html#a1b34d4e097baa12a13d7722213e506f5">icomp::TAttributeMemberBase&lt; CReferenceAttribute &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_reference_member_8h_source.html#l00081">81</a> of file <a class="el" href="_t_reference_member_8h_source.html">TReferenceMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_reference_member_8h_source.html#l00086">86</a> of file <a class="el" href="_t_reference_member_8h_source.html">TReferenceMember.h</a>.</p>
 
 </div>
 </div>
@@ -320,7 +325,7 @@ template&lt;class Interface &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classicomp_1_1_t_attribute_member_base.html#ac73004f2f4da9afd9766e2f7a9a5c8b4">icomp::TAttributeMemberBase&lt; CReferenceAttribute &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_reference_member_8h_source.html#l00098">98</a> of file <a class="el" href="_t_reference_member_8h_source.html">TReferenceMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_reference_member_8h_source.html#l00130">130</a> of file <a class="el" href="_t_reference_member_8h_source.html">TReferenceMember.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00061">NULL</a>.</p>
 
