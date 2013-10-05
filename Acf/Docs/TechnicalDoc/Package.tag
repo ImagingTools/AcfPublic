@@ -7389,12 +7389,26 @@
       <anchor>afcea2322ac14ad36950af9b66b7d36d5</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>imod::CMultiModelBridgeBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>ac970f9d3304432afca20dbf41e9e6439</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
       <anchor>a51b8f1608fa90f18cd567784fd2d9903</anchor>
       <arglist>(m_calibrationProviderModelCompPtr, m_calibrationProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CCalibration2dProxyComp</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>a438b1d7da4cdc9e4fb7610bfe4c87232</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imath::IUnitInfo *</type>
@@ -7493,6 +7507,13 @@
       <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
       <anchor>a1983706707d0943f82d0c814b80b3a36</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>ab25a21a2aa232f17893b925fb7c47d3b</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
