@@ -31,12 +31,12 @@
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
-<a name="l00007"></a>00007 
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_t_opt_del_ptr_8h.html">istd/TOptDelPtr.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_c_multi_model_bridge_base_8h.html">imod/CMultiModelBridgeBase.h</a>&quot;</span>
-<a name="l00009"></a>00009 
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_calibration2d_8h.html">i2d/ICalibration2d.h</a>&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_calibration_provider_8h.html">i2d/ICalibrationProvider.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_i_calibration2d_8h.html">i2d/ICalibration2d.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_calibration_provider_8h.html">i2d/ICalibrationProvider.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_c_affine_transformation2d_8h.html">i2d/CAffineTransformation2d.h</a>&quot;</span>
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014 <span class="keyword">namespace </span>i2d
@@ -119,17 +119,19 @@
 <a name="l00095"></a>00095        I_REF(<a class="code" href="classi2d_1_1_i_calibration_provider.html" title="Common interface for an object, which delivers a 2D-calibration.">ICalibrationProvider</a>, m_calibrationProviderCompPtr);
 <a name="l00096"></a>00096        I_REF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_calibrationProviderModelCompPtr);
 <a name="l00097"></a>00097 
-<a name="l00098"></a>00098        <span class="keyword">mutable</span> <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;i2d::ICalibration2d&gt;</a> m_workingCalibrationPtr;
+<a name="l00098"></a>00098        <span class="keyword">mutable</span> <a class="code" href="classistd_1_1_t_opt_del_ptr.html">istd::TOptDelPtr&lt;i2d::ICalibration2d&gt;</a> m_workingCalibrationPtr;
 <a name="l00099"></a>00099        <span class="keyword">mutable</span> <span class="keywordtype">bool</span> m_isCalibrationCalculated;
-<a name="l00100"></a>00100 };
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102 
-<a name="l00103"></a>00103 } <span class="comment">// namespace i2d</span>
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101        <span class="keyword">static</span> <a class="code" href="classi2d_1_1_c_affine_transformation2d.html" title="Affine transformation for 2D spaces.">i2d::CAffineTransformation2d</a> s_defaultTransform;
+<a name="l00102"></a>00102 };
+<a name="l00103"></a>00103 
 <a name="l00104"></a>00104 
-<a name="l00105"></a>00105 
-<a name="l00106"></a>00106 <span class="preprocessor">#endif // !i2d_CCalibration2dProxyComp_included</span>
-<a name="l00107"></a>00107 <span class="preprocessor"></span>
-<a name="l00108"></a>00108 
+<a name="l00105"></a>00105 } <span class="comment">// namespace i2d</span>
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107 
+<a name="l00108"></a>00108 <span class="preprocessor">#endif // !i2d_CCalibration2dProxyComp_included</span>
+<a name="l00109"></a>00109 <span class="preprocessor"></span>
+<a name="l00110"></a>00110 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -25,12 +25,12 @@
 
 
 // ACF includes
+#include "istd/TOptDelPtr.h"
 #include "icomp/CComponentBase.h"
-
 #include "imod/CMultiModelBridgeBase.h"
-
 #include "i2d/ICalibration2d.h"
 #include "i2d/ICalibrationProvider.h"
+#include "i2d/CAffineTransformation2d.h"
 
 
 namespace i2d
@@ -117,8 +117,10 @@ private:
 	I_REF(ICalibrationProvider, m_calibrationProviderCompPtr);
 	I_REF(imod::IModel, m_calibrationProviderModelCompPtr);
 
-	mutable istd::TDelPtr<i2d::ICalibration2d> m_workingCalibrationPtr;
+	mutable istd::TOptDelPtr<i2d::ICalibration2d> m_workingCalibrationPtr;
 	mutable bool m_isCalibrationCalculated;
+
+	static i2d::CAffineTransformation2d s_defaultTransform;
 };
 
 
