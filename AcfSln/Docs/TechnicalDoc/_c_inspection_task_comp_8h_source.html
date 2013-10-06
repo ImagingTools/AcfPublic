@@ -104,7 +104,7 @@
 <a name="l00082"></a>00082        virtual <span class="keywordtype">void</span> <a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#a11f9adccf21efc75d4af08e84fced7ab" title="Force the supplier to initialize its work.">EnsureWorkInitialized</a>();
 <a name="l00083"></a>00083        virtual <span class="keywordtype">void</span> <a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#ab83d6a7be784858e191434b33fb4e648" title="Ensure that all objects are produced.">EnsureWorkFinished</a>();
 <a name="l00084"></a>00084        virtual <span class="keywordtype">void</span> <a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#a883d18ce626088c874c58b4eee7e47de" title="Remove all stored work results.">ClearWorkResults</a>();
-<a name="l00085"></a>00085        virtual const ilog::IMessageContainer* <a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#a89a591f873abe98ce712bfaf78fd7749" title="Get messages outputted by this work.">GetWorkMessages</a>() const;
+<a name="l00085"></a>00085        virtual const ilog::IMessageContainer* <a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#af99598cb0df852f8ace367cb38774dee" title="Get messages outputted by this work.">GetWorkMessages</a>(<span class="keywordtype">int</span> messageType) const;
 <a name="l00086"></a>00086        virtual iprm::IParamsSet* <a class="code" href="classiinsp_1_1_c_inspection_task_comp.html#ae17f09b830020cb2017119e8a57b262a" title="Get parameter set using by this supplier.">GetModelParametersSet</a>() const;
 <a name="l00087"></a>00087 
 <a name="l00088"></a>00088        <span class="comment">// reimplemented (istd::IInformationProvider)</span>

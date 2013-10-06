@@ -1215,7 +1215,6 @@
     <includes id="_i_feature_to_image_mapper_8h" name="IFeatureToImageMapper.h" local="yes" imported="no">iipr/IFeatureToImageMapper.h</includes>
     <includes id="_i_circle_finder_params_8h" name="ICircleFinderParams.h" local="yes" imported="no">iipr/ICircleFinderParams.h</includes>
     <includes id="_t_weighted_feature_wrap_8h" name="TWeightedFeatureWrap.h" local="yes" imported="no">iipr/TWeightedFeatureWrap.h</includes>
-    <includes id="_i_simple_results_provider_8h" name="ISimpleResultsProvider.h" local="yes" imported="no">iipr/ISimpleResultsProvider.h</includes>
     <class kind="class">iipr::CCircleFindProcessorComp</class>
     <class kind="struct">iipr::CCircleFindProcessorComp::Point</class>
     <class kind="struct">iipr::CCircleFindProcessorComp::Ray</class>
@@ -1526,7 +1525,6 @@
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="yes" imported="no">imeas/CSimpleNumericValue.h</includes>
-    <includes id="_i_simple_results_provider_8h" name="ISimpleResultsProvider.h" local="yes" imported="no">iipr/ISimpleResultsProvider.h</includes>
     <class kind="class">iipr::CPositionFromImageSupplierComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -1821,15 +1819,6 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_search_params_8h</filename>
     <class kind="class">iipr::ISearchParams</class>
-    <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>ISimpleResultsProvider.h</name>
-    <path>C:/Temp/AcfSln/Include/iipr/</path>
-    <filename>_i_simple_results_provider_8h</filename>
-    <class kind="class">iipr::CSimpleResultsContainer</class>
-    <class kind="class">iipr::ISimpleResultsConsumer</class>
-    <class kind="class">iipr::ISimpleResultsProvider</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -12704,8 +12693,8 @@
       <type>virtual const ilog::IMessageContainer *</type>
       <name>GetWorkMessages</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>a89a591f873abe98ce712bfaf78fd7749</anchor>
-      <arglist>() const </arglist>
+      <anchor>af99598cb0df852f8ace367cb38774dee</anchor>
+      <arglist>(int messageType) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iprm::IParamsSet *</type>
@@ -12914,9 +12903,6 @@
     <class kind="class">iipr::IRingPatternGeneratorParams</class>
     <class kind="class">iipr::ISearchConstraints</class>
     <class kind="class">iipr::ISearchParams</class>
-    <class kind="class">iipr::CSimpleResultsContainer</class>
-    <class kind="class">iipr::ISimpleResultsConsumer</class>
-    <class kind="class">iipr::ISimpleResultsProvider</class>
     <class kind="class">iipr::TImageParamProcessorCompBase</class>
     <class kind="class">iipr::TImagePixelInterpolator</class>
     <class kind="class">iipr::InvertFunction</class>
@@ -13451,9 +13437,20 @@
     <filename>classiipr_1_1_c_circle_find_processor_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base>TSyncProcessorWrap&lt; IImageToFeatureProcessor &gt;</base>
-    <base virtualness="virtual">iipr::ISimpleResultsConsumer</base>
     <class kind="struct">iipr::CCircleFindProcessorComp::Point</class>
     <class kind="struct">iipr::CCircleFindProcessorComp::Ray</class>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
+      <anchor>a78fa0804a118fd14132fe69a4cfc2a3f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_INTERMEDIATE</name>
+      <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
+      <anchor>a78fa0804a118fd14132fe69a4cfc2a3fa83534702da49b48ce78e46071f692efb</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -13481,13 +13478,6 @@
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
       <anchor>acc4c657f22e7822a4ff54206a332ca31</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetResultsBuffer</name>
-      <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>adfe98632d20b01ef6189641a35b80b36</anchor>
-      <arglist>(CSimpleResultsContainer *bufferPtr)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>TWeightedFeatureWrap&lt; i2d::CCircle &gt;</type>
@@ -13542,8 +13532,8 @@
       <type>void</type>
       <name>AddProjectionResultsToRays</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>a60a93d1b701f7ef6593b22de57bd2ece</anchor>
-      <arglist>(const iprm::IParamsSet &amp;params, const imeas::INumericValueProvider &amp;container, Rays &amp;inRays, Rays &amp;outRays)</arglist>
+      <anchor>a17e1c0a268021652bbce1869e841d1c2</anchor>
+      <arglist>(const i2d::CLine2d &amp;projectionLine, const iprm::IParamsSet &amp;params, const imeas::INumericValueProvider &amp;container, Rays &amp;inRays, Rays &amp;outRays, const i2d::ICalibration2d *calibrationPtr)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -13580,6 +13570,13 @@
       <anchorfile>structiipr_1_1_c_circle_find_processor_comp_1_1_ray.html</anchorfile>
       <anchor>ab632c4479f5bd544f9b88abc8629e340</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>i2d::CLine2d</type>
+      <name>projectionLine</name>
+      <anchorfile>structiipr_1_1_c_circle_find_processor_comp_1_1_ray.html</anchorfile>
+      <anchor>aa403a782679092f7ebc2dcefb91d8689</anchor>
+      <arglist></arglist>
     </member>
     <member kind="variable">
       <type>Points</type>
@@ -14118,8 +14115,8 @@
       <type>virtual const ilog::IMessageContainer *</type>
       <name>GetWorkMessages</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a5e006becfa8c97a71cda478df1776953</anchor>
-      <arglist>() const </arglist>
+      <anchor>a2f7bbfafbd8ac6451106c9087b90b31f</anchor>
+      <arglist>(int messageType) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual iprm::IParamsSet *</type>
@@ -15186,7 +15183,6 @@
     <base>TSupplierCompWrap&lt; imath::CVarVector &gt;</base>
     <base virtualness="virtual">imeas::INumericValueProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
-    <base virtualness="virtual">iipr::ISimpleResultsProvider</base>
     <member kind="typedef">
       <type>iproc::TSupplierCompWrap&lt; imath::CVarVector &gt;</type>
       <name>BaseClass</name>
@@ -15207,13 +15203,6 @@
       <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
       <anchor>af0e2eab9108af52e18ec896365e39493</anchor>
       <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual CSimpleResultsContainer *</type>
-      <name>GetResults</name>
-      <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
-      <anchor>a5730ff39df0b0abc098aff613a03c3a1</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -16925,48 +16914,6 @@
       <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
       <anchor>aa8ed7557cfd27fcf7d282a5729c0043c</anchor>
       <arglist>(int nominalModelsCount)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::CSimpleResultsContainer</name>
-    <filename>classiipr_1_1_c_simple_results_container.html</filename>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>Reset</name>
-      <anchorfile>classiipr_1_1_c_simple_results_container.html</anchorfile>
-      <anchor>a13adea6e589e35cee5e63fc866955634</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>PushBack</name>
-      <anchorfile>classiipr_1_1_c_simple_results_container.html</anchorfile>
-      <anchor>a44faa6b1485c8620bf534baa0eeeb284</anchor>
-      <arglist>(const QVariant &amp;value)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::ISimpleResultsConsumer</name>
-    <filename>classiipr_1_1_i_simple_results_consumer.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetResultsBuffer</name>
-      <anchorfile>classiipr_1_1_i_simple_results_consumer.html</anchorfile>
-      <anchor>a0a1cd0d49ba16601bacfb0a2fd156875</anchor>
-      <arglist>(CSimpleResultsContainer *bufferPtr)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::ISimpleResultsProvider</name>
-    <filename>classiipr_1_1_i_simple_results_provider.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual CSimpleResultsContainer *</type>
-      <name>GetResults</name>
-      <anchorfile>classiipr_1_1_i_simple_results_provider.html</anchorfile>
-      <anchor>a7e43a0bb0e2a2bd69092f63183ddaa75</anchor>
-      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -19737,6 +19684,24 @@
       <anchor>a493b9bac260cff15679441656b15f3caabe63c0459792ec8459c0304337047833</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <name>WorkMessageType</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>abbc42b61a9c35ce3f0821db967c5d449</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>WMT_TEMP</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>abbc42b61a9c35ce3f0821db967c5d449aea621e71f727c49c2b8b523c265e32d0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>WMT_RESULTS</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>abbc42b61a9c35ce3f0821db967c5d449a0bc9bc0b3bb53a7866afa8b1d15d8d69</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetWorkStatus</name>
@@ -19776,8 +19741,8 @@
       <type>virtual const ilog::IMessageContainer *</type>
       <name>GetWorkMessages</name>
       <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>ad1de7b1ce7a364b008b45346dc452530</anchor>
-      <arglist>() const =0</arglist>
+      <anchor>a10e73f09e5c780d884071e9326d085d7</anchor>
+      <arglist>(int messageType) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual iprm::IParamsSet *</type>
@@ -20058,6 +20023,27 @@
     </member>
     <member kind="function">
       <type></type>
+      <name>I_REGISTER_SUBELEMENT</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a3c05affc53f83667f37119878761c528</anchor>
+      <arglist>(TempMessages)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ab83de0cc80a60a7b81718f48b85a03f5</anchor>
+      <arglist>(TempMessages, ilog::IMessageConsumer, ExtractTempMessages)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a9676f705bdbb7e52743b59a3f0f647ab</anchor>
+      <arglist>(TempMessages, istd::IPolymorphic, ExtractTempMessages)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>a9f63ea1c39f5e17fabf56729c317cd1f</anchor>
@@ -20109,8 +20095,8 @@
       <type>virtual const ilog::IMessageContainer *</type>
       <name>GetWorkMessages</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a238c853e44e8705755ecc1f4dde36e20</anchor>
-      <arglist>() const </arglist>
+      <anchor>a23ce981a52290eae2fa71831a8b0a042</anchor>
+      <arglist>(int messageType) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iprm::IParamsSet *</type>
@@ -23200,7 +23186,6 @@
     <templarg>UI</templarg>
     <templarg>WidgetType</templarg>
     <base>TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iproc::ISupplier &gt; &gt;</base>
-    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <class kind="class">iqtinsp::TSupplierGuiCompBase::ParamsObserver</class>
     <member kind="typedef">
       <type>iqt2d::TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iproc::ISupplier &gt; &gt;</type>
@@ -23243,13 +23228,6 @@
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
       <anchor>a93745769f36d860dc445b1c8319851b4</anchor>
       <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::ICalibration2d *</type>
-      <name>GetCalibration</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a5f85056053c22536e29512ba91177020</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>BaseClass::Shapes</type>

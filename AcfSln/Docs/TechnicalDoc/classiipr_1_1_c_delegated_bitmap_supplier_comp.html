@@ -101,8 +101,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a0489251b80e02af442241147d89c7d1d">ClearWorkResults</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all stored work results.  <a href="#a0489251b80e02af442241147d89c7d1d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classilog_1_1_i_message_container.html">ilog::IMessageContainer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a5e006becfa8c97a71cda478df1776953">GetWorkMessages</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get messages outputted by this work.  <a href="#a5e006becfa8c97a71cda478df1776953"></a><br/></td></tr>
+<a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classilog_1_1_i_message_container.html">ilog::IMessageContainer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a2f7bbfafbd8ac6451106c9087b90b31f">GetWorkMessages</a> (int messageType) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get messages outputted by this work.  <a href="#a2f7bbfafbd8ac6451106c9087b90b31f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a06296593c05775770298541cbf04c092">GetModelParametersSet</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parameter set using by this supplier.  <a href="#a06296593c05775770298541cbf04c092"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiipr_1_1_c_delegated_bitmap_supplier_comp.html#a02c62def2d9d7e2964b87c6d35370a29">OnComponentCreated</a> ()</td></tr>
@@ -265,14 +265,15 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5e006becfa8c97a71cda478df1776953"></a><!-- doxytag: member="iipr::CDelegatedBitmapSupplierComp::GetWorkMessages" ref="a5e006becfa8c97a71cda478df1776953" args="() const " -->
+<a class="anchor" id="a2f7bbfafbd8ac6451106c9087b90b31f"></a><!-- doxytag: member="iipr::CDelegatedBitmapSupplierComp::GetWorkMessages" ref="a2f7bbfafbd8ac6451106c9087b90b31f" args="(int messageType) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classilog_1_1_i_message_container.html">ilog::IMessageContainer</a>* iipr::CDelegatedBitmapSupplierComp::GetWorkMessages </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>messageType</em></td><td>)</td>
           <td> const<code> [protected, virtual]</code></td>
         </tr>
       </table>
@@ -281,8 +282,15 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get messages outputted by this work. </p>
 <p>The pointed object will not be relocated - no reconnect is needed if it is observed. If the supplier doesn't support list of messages, it returns NULL. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">messageType</td><td>type of message, </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiproc_1_1_i_supplier.html#abbc42b61a9c35ce3f0821db967c5d449">WorkMessageType</a>. </dd></dl>
 
-<p>Implements <a class="el" href="classiproc_1_1_i_supplier.html#ad1de7b1ce7a364b008b45346dc452530">iproc::ISupplier</a>.</p>
+<p>Implements <a class="el" href="classiproc_1_1_i_supplier.html#a10e73f09e5c780d884071e9326d085d7">iproc::ISupplier</a>.</p>
 
 </div>
 </div>
