@@ -7525,9 +7525,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>AfterUpdate</name>
+      <name>BeforeUpdate</name>
       <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>ab25a21a2aa232f17893b925fb7c47d3b</anchor>
+      <anchor>a0687b0164f977182b869b2a3348dbaa1</anchor>
       <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

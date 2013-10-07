@@ -209,11 +209,11 @@ bool CCalibration2dProxyComp::Serialize(iser::IArchive& /*archive*/)
 
 // reimplemented (imod::IObserver)
 
-void CCalibration2dProxyComp::AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr)
+void CCalibration2dProxyComp::BeforeUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr)
 {
 	m_isCalibrationCalculated = false;
 
-	BaseClass2::AfterUpdate(modelPtr, updateFlags, updateParamsPtr);
+	BaseClass2::BeforeUpdate(modelPtr, updateFlags, updateParamsPtr);
 }
 
 
@@ -270,7 +270,6 @@ void CCalibration2dProxyComp::EnsureWorkingCalibrationUpdated() const
 
 i2d::CAffineTransformation2d CCalibration2dProxyComp::s_defaultTransform(
 			i2d::CAffine2d(i2d::CMatrix2d(1, 0, 0, 1)));
-
 
 
 

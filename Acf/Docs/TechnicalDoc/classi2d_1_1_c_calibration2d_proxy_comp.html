@@ -103,8 +103,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#ab31f670f17dc4ef2fc237ac60498e94d">GetValueAt</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;argument) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#a1983706707d0943f82d0c814b80b3a36">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a1983706707d0943f82d0c814b80b3a36"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#ab25a21a2aa232f17893b925fb7c47d3b">AfterUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be called after update of the observer contents occures.  <a href="#ab25a21a2aa232f17893b925fb7c47d3b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#a0687b0164f977182b869b2a3348dbaa1">BeforeUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be called before update of the observer contents occures.  <a href="#a0687b0164f977182b869b2a3348dbaa1"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#a675f8c1be7881b6fc79067a178329bdb">OnComponentCreated</a> ()</td></tr>
@@ -164,12 +164,12 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ab25a21a2aa232f17893b925fb7c47d3b"></a><!-- doxytag: member="i2d::CCalibration2dProxyComp::AfterUpdate" ref="ab25a21a2aa232f17893b925fb7c47d3b" args="(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
+<a class="anchor" id="a0687b0164f977182b869b2a3348dbaa1"></a><!-- doxytag: member="i2d::CCalibration2dProxyComp::BeforeUpdate" ref="a0687b0164f977182b869b2a3348dbaa1" args="(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void i2d::CCalibration2dProxyComp::AfterUpdate </td>
+          <td class="memname">virtual void i2d::CCalibration2dProxyComp::BeforeUpdate </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td>
           <td class="paramname"><em>modelPtr</em>, </td>
@@ -195,9 +195,10 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>This function will be called after update of the observer contents occures. </p>
+<p>This function will be called before update of the observer contents occures. </p>
+<p>Please note, that in some cases no following AfterUpdate can be called. </p>
 
-<p>Reimplemented from <a class="el" href="classimod_1_1_c_multi_model_bridge_base.html#ad466317234597651d04fdd782d4c073c">imod::CMultiModelBridgeBase</a>.</p>
+<p>Reimplemented from <a class="el" href="classimod_1_1_c_multi_model_bridge_base.html#a9b7e27e61bd22e7777c719fb5300291e">imod::CMultiModelBridgeBase</a>.</p>
 
 </div>
 </div>
