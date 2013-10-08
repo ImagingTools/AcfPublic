@@ -33,104 +33,110 @@
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_multi_calibration_provider_8h.html">i2d/IMultiCalibrationProvider.h</a>&quot;</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_c_vector2d_8h.html">i2d/CVector2d.h</a>&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_c_affine_transformation2d_8h.html">i2d/CAffineTransformation2d.h</a>&quot;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_params_set_8h.html">iprm/IParamsSet.h</a>&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_information_provider_8h.html">istd/IInformationProvider.h</a>&quot;</span>
-<a name="l00014"></a>00014 
-<a name="l00015"></a>00015 <span class="comment">// ACF-Solutions includes</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="_i_processor_8h.html">iproc/IProcessor.h</a>&quot;</span>
-<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="code" href="_i_supplier_8h.html">iproc/ISupplier.h</a>&quot;</span>
-<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;<a class="code" href="_t_supplier_comp_wrap_8h.html">iproc/TSupplierCompWrap.h</a>&quot;</span>
-<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="code" href="_i_numeric_value_provider_8h.html">imeas/INumericValueProvider.h</a>&quot;</span>
-<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="code" href="_c_features_container_8h.html">iipr/CFeaturesContainer.h</a>&quot;</span>
-<a name="l00021"></a>00021 <span class="preprocessor">#include &quot;<a class="code" href="_i_edge_lines_provider_8h.html">iedge/IEdgeLinesProvider.h</a>&quot;</span>
-<a name="l00022"></a>00022 
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_calibration_provider_8h.html">i2d/ICalibrationProvider.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_c_vector2d_8h.html">i2d/CVector2d.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_c_affine_transformation2d_8h.html">i2d/CAffineTransformation2d.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_params_set_8h.html">iprm/IParamsSet.h</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_information_provider_8h.html">istd/IInformationProvider.h</a>&quot;</span>
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016 <span class="comment">// ACF-Solutions includes</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="code" href="_i_processor_8h.html">iproc/IProcessor.h</a>&quot;</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;<a class="code" href="_i_supplier_8h.html">iproc/ISupplier.h</a>&quot;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="code" href="_t_supplier_comp_wrap_8h.html">iproc/TSupplierCompWrap.h</a>&quot;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="code" href="_i_numeric_value_provider_8h.html">imeas/INumericValueProvider.h</a>&quot;</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &quot;<a class="code" href="_c_features_container_8h.html">iipr/CFeaturesContainer.h</a>&quot;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &quot;<a class="code" href="_i_edge_lines_provider_8h.html">iedge/IEdgeLinesProvider.h</a>&quot;</span>
 <a name="l00023"></a>00023 
-<a name="l00024"></a><a class="code" href="namespaceiedge.html">00024</a> <span class="keyword">namespace </span>iedge
-<a name="l00025"></a>00025 {
-<a name="l00026"></a>00026 
+<a name="l00024"></a>00024 
+<a name="l00025"></a><a class="code" href="namespaceiedge.html">00025</a> <span class="keyword">namespace </span>iedge
+<a name="l00026"></a>00026 {
 <a name="l00027"></a>00027 
-<a name="l00028"></a><a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html">00028</a> <span class="keyword">class </span><a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html">CEdgeBasedFeaturesSupplierComp</a>:
-<a name="l00029"></a>00029                      <span class="keyword">public</span> iproc::TSupplierCompWrap&lt; QPair&lt; iipr::CFeaturesContainer, QVector&lt;i2d::CAffineTransformation2d&gt; &gt; &gt;,
-<a name="l00030"></a>00030                      <span class="keyword">virtual</span> <span class="keyword">public</span> imeas::INumericValueProvider,
-<a name="l00031"></a>00031                      <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::IMultiCalibrationProvider,
-<a name="l00032"></a>00032                      <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IInformationProvider
-<a name="l00033"></a>00033 {
-<a name="l00034"></a>00034 <span class="keyword">public</span>:
-<a name="l00035"></a><a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a6e57cd4f77b10129961c6f3b05ffd27b">00035</a>        <span class="keyword">typedef</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Standard implementation of interface iproc::ISupplier with preparation for component implementation...">iproc::TSupplierCompWrap&lt; QPair&lt; iipr::CFeaturesContainer, QVector&lt;i2d::CAffineTransformation2d&gt;</a> &gt; &gt; <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a6e57cd4f77b10129961c6f3b05ffd27b">BaseClass</a>;
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037        I_BEGIN_COMPONENT(<a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html">CEdgeBasedFeaturesSupplierComp</a>);
-<a name="l00038"></a>00038               I_REGISTER_INTERFACE(<a class="code" href="classimeas_1_1_i_numeric_value_provider.html" title="Provide access to the list of the numeric values.">imeas::INumericValueProvider</a>);
-<a name="l00039"></a>00039               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_multi_calibration_provider.html">i2d::IMultiCalibrationProvider</a>);
-<a name="l00040"></a>00040               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html">istd::IInformationProvider</a>);
-<a name="l00041"></a>00041               I_ASSIGN(m_calibrationProviderCompPtr, <span class="stringliteral">&quot;CalibrationProvider&quot;</span>, <span class="stringliteral">&quot;Provide input calibration&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;EdgeLinesProvider&quot;</span>);
-<a name="l00042"></a>00042               <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a0dd609024b1d33a96a0bb2fdd2ad533d">I_ASSIGN_TO</a>(m_calibrationSupplierCompPtr, m_calibrationProviderCompPtr, <span class="keyword">false</span>);
-<a name="l00043"></a>00043               <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a0dd609024b1d33a96a0bb2fdd2ad533d">I_ASSIGN_TO</a>(m_calibrationProviderModelCompPtr, m_calibrationProviderCompPtr, <span class="keyword">false</span>);
-<a name="l00044"></a>00044               I_ASSIGN(m_edgeLinesProviderCompPtr, <span class="stringliteral">&quot;EdgeLinesProvider&quot;</span>, <span class="stringliteral">&quot;Provide list of edge list to processing&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;EdgeLinesProvider&quot;</span>);
-<a name="l00045"></a>00045               <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a0dd609024b1d33a96a0bb2fdd2ad533d">I_ASSIGN_TO</a>(m_edgeLinesSupplierCompPtr, m_edgeLinesProviderCompPtr, <span class="keyword">false</span>);
-<a name="l00046"></a>00046               <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a0dd609024b1d33a96a0bb2fdd2ad533d">I_ASSIGN_TO</a>(m_edgeLinesProviderModelCompPtr, m_edgeLinesProviderCompPtr, <span class="keyword">false</span>);
-<a name="l00047"></a>00047               I_ASSIGN(m_searchProcessorCompPtr, <span class="stringliteral">&quot;Processor&quot;</span>, <span class="stringliteral">&quot;Calculate model positions in the image&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Processor&quot;</span>);
-<a name="l00048"></a>00048               I_ASSIGN(m_slaveInformationProviderCompPtr, <span class="stringliteral">&quot;SlaveInformationProvider&quot;</span>, <span class="stringliteral">&quot;Used to provide the status if set&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;SlaveInformationProvider&quot;</span>);
-<a name="l00049"></a>00049               I_ASSIGN(m_searchParamsManagerParamIdAttrPtr, <span class="stringliteral">&quot;SearchParamsManagerParameterId&quot;</span>, <span class="stringliteral">&quot;ID of the parameter manager used for multi search&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;SearchParamsManagerParamId&quot;</span>);
-<a name="l00050"></a>00050               I_ASSIGN(m_searchParamsIdAttrPtr, <span class="stringliteral">&quot;SearchParamsId&quot;</span>, <span class="stringliteral">&quot;ID of standard search parameters&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;SearchParamsId&quot;</span>);
-<a name="l00051"></a>00051        I_END_COMPONENT;
-<a name="l00052"></a>00052 
-<a name="l00053"></a><a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#ad9b606b325a3b48c09c3567b654b8668">00053</a>        <span class="keyword">enum</span> <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#ad9b606b325a3b48c09c3567b654b8668">MessageType</a>
-<a name="l00054"></a>00054        {
-<a name="l00055"></a><a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#ad9b606b325a3b48c09c3567b654b8668a95c3ddbc23d443bd359fc71b0fc2d3c9">00055</a>               <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#ad9b606b325a3b48c09c3567b654b8668a95c3ddbc23d443bd359fc71b0fc2d3c9">MT_SEARCH_RESULT</a> = 0x2561
-<a name="l00056"></a>00056        };
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058        <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#aa6292a1b57396927e74e112c89c53173">CEdgeBasedFeaturesSupplierComp</a>();
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060        <span class="comment">// reimplemented (i2d::IMultiCalibrationProvider)</span>
-<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html">iprm::IOptionsList</a>* <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a9ea56eb067ef43648e9f92e3eb9575e8">GetCalibrationSelectionContraints</a>() <span class="keyword">const</span>;
-<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#ad3fcdaf8f587c8c76a4afb74180970fa">GetCalibrationsCount</a>() <span class="keyword">const</span>;
-<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a>* <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a60f57502f57928f9ff26c64ad89aa827">GetCalibration</a>(<span class="keywordtype">int</span> calibrationIndex) <span class="keyword">const</span>;
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065        <span class="comment">// reimplemented (imeas::INumericValueProvider)</span>
-<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#ad74d0fefff86d98fcf4987464a6e5bae" title="Get number of numeric values in the list.">GetValuesCount</a>() <span class="keyword">const</span>;
-<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_numeric_value.html" title="General parameter set containing list of numeric values.">imeas::INumericValue</a>&amp; <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a60c05b81c37afb6f18b4b4a637c6de2a" title="Returns a single numeric value from the list.">GetNumericValue</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069        <span class="comment">// reimplemented (istd::IInformationProvider)</span>
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> QDateTime <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#ae402dcc7330fac75808453353fd72bf8">GetInformationTimeStamp</a>() <span class="keyword">const</span>;
-<a name="l00071"></a>00071        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">InformationCategory</a> <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a68159c698d84cec5d542f78cdb231ab2">GetInformationCategory</a>() <span class="keyword">const</span>;
-<a name="l00072"></a>00072        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a2516e192e84667a7d1210b0472e8f128">GetInformationId</a>() <span class="keyword">const</span>;
-<a name="l00073"></a>00073        <span class="keyword">virtual</span> QString <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#ad48f035b184173f7eef9f8dedd71e3f6">GetInformationDescription</a>() <span class="keyword">const</span>;
-<a name="l00074"></a>00074        <span class="keyword">virtual</span> QString <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a892fe04f245aa1c015ac80a4bb79dd5a">GetInformationSource</a>() <span class="keyword">const</span>;
-<a name="l00075"></a>00075        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#abcff719ae088ebb2b741268004e9b24c">GetInformationFlags</a>() <span class="keyword">const</span>;
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077 <span class="keyword">protected</span>:
-<a name="l00078"></a>00078        <span class="comment">// reimplemented (iproc::TSupplierCompWrap)</span>
-<a name="l00079"></a>00079        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#aa6d0ba7308b9b8f070e96d8dc9da63d7" title="Called if the new work should be initialized.">InitializeWork</a>();
-<a name="l00080"></a>00080        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#ac8e375c0bfd1b8c658ab433c6e5e160d" title="Produce single object.">ProduceObject</a>(QPair&lt; <a class="code" href="classiipr_1_1_c_features_container.html" title="Basic implementation of a features container.">iipr::CFeaturesContainer</a>, QVector&lt;i2d::CAffineTransformation2d&gt; &gt;&amp; result) <span class="keyword">const</span>;
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00083"></a>00083        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#aaaf97ef7d7eea759332f013642c7bcbf">OnComponentCreated</a>();
-<a name="l00084"></a>00084        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a5c9e22bef4a356697299f6b6a1fdae16">OnComponentDestroyed</a>();
-<a name="l00085"></a>00085 
-<a name="l00086"></a>00086 <span class="keyword">private</span>:
-<a name="l00087"></a>00087        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html">i2d::ICalibrationProvider</a>, m_calibrationProviderCompPtr);
-<a name="l00088"></a>00088        I_REF(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>, m_calibrationSupplierCompPtr);
-<a name="l00089"></a>00089        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_calibrationProviderModelCompPtr);
-<a name="l00090"></a>00090        I_REF(<a class="code" href="classiedge_1_1_i_edge_lines_provider.html">IEdgeLinesProvider</a>, m_edgeLinesProviderCompPtr);
-<a name="l00091"></a>00091        I_REF(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>, m_edgeLinesSupplierCompPtr);
-<a name="l00092"></a>00092        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_edgeLinesProviderModelCompPtr);
-<a name="l00093"></a>00093        I_REF(<a class="code" href="classiproc_1_1_i_processor.html" title="Interface for all synchrone and assynchrone processors with &quot;push data&quot; model.">iproc::IProcessor</a>, m_searchProcessorCompPtr);
-<a name="l00094"></a>00094        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html">istd::IInformationProvider</a>, m_slaveInformationProviderCompPtr);
-<a name="l00095"></a>00095        I_ATTR(QByteArray, m_searchParamsManagerParamIdAttrPtr);
-<a name="l00096"></a>00096        I_ATTR(QByteArray, m_searchParamsIdAttrPtr);
-<a name="l00097"></a>00097        
-<a name="l00098"></a>00098        <span class="keyword">mutable</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a> m_defaultInformationCategory;
-<a name="l00099"></a>00099 };
-<a name="l00100"></a>00100 
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102 } <span class="comment">// namespace iedge</span>
-<a name="l00103"></a>00103 
-<a name="l00104"></a>00104 
-<a name="l00105"></a>00105 <span class="preprocessor">#endif // !iedge_CEdgeBasedFeaturesSupplierComp_included</span>
-<a name="l00106"></a>00106 <span class="preprocessor"></span>
+<a name="l00028"></a>00028 
+<a name="l00029"></a><a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html">00029</a> <span class="keyword">class </span><a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html">CEdgeBasedFeaturesSupplierComp</a>:
+<a name="l00030"></a>00030                      <span class="keyword">public</span> iproc::TSupplierCompWrap&lt; QPair&lt; iipr::CFeaturesContainer, QVector&lt;i2d::CAffineTransformation2d&gt; &gt; &gt;,
+<a name="l00031"></a>00031                      <span class="keyword">virtual</span> <span class="keyword">public</span> imeas::INumericValueProvider,
+<a name="l00032"></a>00032                      <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::IMultiCalibrationProvider,
+<a name="l00033"></a>00033                      <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::ICalibrationProvider,
+<a name="l00034"></a>00034                      <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IInformationProvider
+<a name="l00035"></a>00035 {
+<a name="l00036"></a>00036 <span class="keyword">public</span>:
+<a name="l00037"></a><a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a6e57cd4f77b10129961c6f3b05ffd27b">00037</a>        <span class="keyword">typedef</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Standard implementation of interface iproc::ISupplier with preparation for component implementation...">iproc::TSupplierCompWrap&lt; QPair&lt; iipr::CFeaturesContainer, QVector&lt;i2d::CAffineTransformation2d&gt;</a> &gt; &gt; <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a6e57cd4f77b10129961c6f3b05ffd27b">BaseClass</a>;
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039        I_BEGIN_COMPONENT(<a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html">CEdgeBasedFeaturesSupplierComp</a>);
+<a name="l00040"></a>00040               I_REGISTER_INTERFACE(<a class="code" href="classimeas_1_1_i_numeric_value_provider.html" title="Provide access to the list of the numeric values.">imeas::INumericValueProvider</a>);
+<a name="l00041"></a>00041               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_multi_calibration_provider.html">i2d::IMultiCalibrationProvider</a>);
+<a name="l00042"></a>00042               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html">i2d::ICalibrationProvider</a>);
+<a name="l00043"></a>00043               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html">istd::IInformationProvider</a>);
+<a name="l00044"></a>00044               I_ASSIGN(m_calibrationProviderCompPtr, <span class="stringliteral">&quot;CalibrationProvider&quot;</span>, <span class="stringliteral">&quot;Provide input calibration&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;EdgeLinesProvider&quot;</span>);
+<a name="l00045"></a>00045               <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a0dd609024b1d33a96a0bb2fdd2ad533d">I_ASSIGN_TO</a>(m_calibrationSupplierCompPtr, m_calibrationProviderCompPtr, <span class="keyword">false</span>);
+<a name="l00046"></a>00046               <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a0dd609024b1d33a96a0bb2fdd2ad533d">I_ASSIGN_TO</a>(m_calibrationProviderModelCompPtr, m_calibrationProviderCompPtr, <span class="keyword">false</span>);
+<a name="l00047"></a>00047               I_ASSIGN(m_edgeLinesProviderCompPtr, <span class="stringliteral">&quot;EdgeLinesProvider&quot;</span>, <span class="stringliteral">&quot;Provide list of edge list to processing&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;EdgeLinesProvider&quot;</span>);
+<a name="l00048"></a>00048               <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a0dd609024b1d33a96a0bb2fdd2ad533d">I_ASSIGN_TO</a>(m_edgeLinesSupplierCompPtr, m_edgeLinesProviderCompPtr, <span class="keyword">false</span>);
+<a name="l00049"></a>00049               <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a0dd609024b1d33a96a0bb2fdd2ad533d">I_ASSIGN_TO</a>(m_edgeLinesProviderModelCompPtr, m_edgeLinesProviderCompPtr, <span class="keyword">false</span>);
+<a name="l00050"></a>00050               I_ASSIGN(m_searchProcessorCompPtr, <span class="stringliteral">&quot;Processor&quot;</span>, <span class="stringliteral">&quot;Calculate model positions in the image&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;Processor&quot;</span>);
+<a name="l00051"></a>00051               I_ASSIGN(m_slaveInformationProviderCompPtr, <span class="stringliteral">&quot;SlaveInformationProvider&quot;</span>, <span class="stringliteral">&quot;Used to provide the status if set&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;SlaveInformationProvider&quot;</span>);
+<a name="l00052"></a>00052               I_ASSIGN(m_searchParamsManagerParamIdAttrPtr, <span class="stringliteral">&quot;SearchParamsManagerParameterId&quot;</span>, <span class="stringliteral">&quot;ID of the parameter manager used for multi search&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;SearchParamsManagerParamId&quot;</span>);
+<a name="l00053"></a>00053               I_ASSIGN(m_searchParamsIdAttrPtr, <span class="stringliteral">&quot;SearchParamsId&quot;</span>, <span class="stringliteral">&quot;ID of standard search parameters&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;SearchParamsId&quot;</span>);
+<a name="l00054"></a>00054        I_END_COMPONENT;
+<a name="l00055"></a>00055 
+<a name="l00056"></a><a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#ad9b606b325a3b48c09c3567b654b8668">00056</a>        <span class="keyword">enum</span> <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#ad9b606b325a3b48c09c3567b654b8668">MessageType</a>
+<a name="l00057"></a>00057        {
+<a name="l00058"></a><a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#ad9b606b325a3b48c09c3567b654b8668a95c3ddbc23d443bd359fc71b0fc2d3c9">00058</a>               <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#ad9b606b325a3b48c09c3567b654b8668a95c3ddbc23d443bd359fc71b0fc2d3c9">MT_SEARCH_RESULT</a> = 0x2561
+<a name="l00059"></a>00059        };
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061        <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#aa6292a1b57396927e74e112c89c53173">CEdgeBasedFeaturesSupplierComp</a>();
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063        <span class="comment">// reimplemented (i2d::IMultiCalibrationProvider)</span>
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html">iprm::IOptionsList</a>* <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a9ea56eb067ef43648e9f92e3eb9575e8">GetCalibrationSelectionContraints</a>() <span class="keyword">const</span>;
+<a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#ad3fcdaf8f587c8c76a4afb74180970fa">GetCalibrationsCount</a>() <span class="keyword">const</span>;
+<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a>* <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a16139e61dcb0841b286bd2ee80de48aa">GetCalibration</a>(<span class="keywordtype">int</span> calibrationIndex) <span class="keyword">const</span>;
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068        <span class="comment">// reimplemented (i2d::ICalibrationProvider)</span>
+<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a>* <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a16139e61dcb0841b286bd2ee80de48aa">GetCalibration</a>() <span class="keyword">const</span>;
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071        <span class="comment">// reimplemented (imeas::INumericValueProvider)</span>
+<a name="l00072"></a>00072        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#ad74d0fefff86d98fcf4987464a6e5bae" title="Get number of numeric values in the list.">GetValuesCount</a>() <span class="keyword">const</span>;
+<a name="l00073"></a>00073        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_numeric_value.html" title="General parameter set containing list of numeric values.">imeas::INumericValue</a>&amp; <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a60c05b81c37afb6f18b4b4a637c6de2a" title="Returns a single numeric value from the list.">GetNumericValue</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00074"></a>00074 
+<a name="l00075"></a>00075        <span class="comment">// reimplemented (istd::IInformationProvider)</span>
+<a name="l00076"></a>00076        <span class="keyword">virtual</span> QDateTime <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#ae402dcc7330fac75808453353fd72bf8">GetInformationTimeStamp</a>() <span class="keyword">const</span>;
+<a name="l00077"></a>00077        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">InformationCategory</a> <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a68159c698d84cec5d542f78cdb231ab2">GetInformationCategory</a>() <span class="keyword">const</span>;
+<a name="l00078"></a>00078        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a2516e192e84667a7d1210b0472e8f128">GetInformationId</a>() <span class="keyword">const</span>;
+<a name="l00079"></a>00079        <span class="keyword">virtual</span> QString <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#ad48f035b184173f7eef9f8dedd71e3f6">GetInformationDescription</a>() <span class="keyword">const</span>;
+<a name="l00080"></a>00080        <span class="keyword">virtual</span> QString <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a892fe04f245aa1c015ac80a4bb79dd5a">GetInformationSource</a>() <span class="keyword">const</span>;
+<a name="l00081"></a>00081        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#abcff719ae088ebb2b741268004e9b24c">GetInformationFlags</a>() <span class="keyword">const</span>;
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083 <span class="keyword">protected</span>:
+<a name="l00084"></a>00084        <span class="comment">// reimplemented (iproc::TSupplierCompWrap)</span>
+<a name="l00085"></a>00085        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#aa6d0ba7308b9b8f070e96d8dc9da63d7" title="Called if the new work should be initialized.">InitializeWork</a>();
+<a name="l00086"></a>00086        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a1f4520d9dff9d2ffad5ed4e3fc5d27c0" title="Produce single object.">ProduceObject</a>(<a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html#a6c07595d7aa93d9e7ddecd35f6b44557">ProductType</a>&amp; result) <span class="keyword">const</span>;
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00089"></a>00089        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#aaaf97ef7d7eea759332f013642c7bcbf">OnComponentCreated</a>();
+<a name="l00090"></a>00090        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a5c9e22bef4a356697299f6b6a1fdae16">OnComponentDestroyed</a>();
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092 <span class="keyword">private</span>:
+<a name="l00093"></a>00093        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html">i2d::ICalibrationProvider</a>, m_calibrationProviderCompPtr);
+<a name="l00094"></a>00094        I_REF(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>, m_calibrationSupplierCompPtr);
+<a name="l00095"></a>00095        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_calibrationProviderModelCompPtr);
+<a name="l00096"></a>00096        I_REF(<a class="code" href="classiedge_1_1_i_edge_lines_provider.html">IEdgeLinesProvider</a>, m_edgeLinesProviderCompPtr);
+<a name="l00097"></a>00097        I_REF(<a class="code" href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model...">iproc::ISupplier</a>, m_edgeLinesSupplierCompPtr);
+<a name="l00098"></a>00098        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_edgeLinesProviderModelCompPtr);
+<a name="l00099"></a>00099        I_REF(<a class="code" href="classiproc_1_1_i_processor.html" title="Interface for all synchrone and assynchrone processors with &quot;push data&quot; model.">iproc::IProcessor</a>, m_searchProcessorCompPtr);
+<a name="l00100"></a>00100        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html">istd::IInformationProvider</a>, m_slaveInformationProviderCompPtr);
+<a name="l00101"></a>00101        I_ATTR(QByteArray, m_searchParamsManagerParamIdAttrPtr);
+<a name="l00102"></a>00102        I_ATTR(QByteArray, m_searchParamsIdAttrPtr);
+<a name="l00103"></a>00103        
+<a name="l00104"></a>00104        <span class="keyword">mutable</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152">istd::IInformationProvider::InformationCategory</a> m_defaultInformationCategory;
+<a name="l00105"></a>00105 };
+<a name="l00106"></a>00106 
 <a name="l00107"></a>00107 
+<a name="l00108"></a>00108 } <span class="comment">// namespace iedge</span>
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110 
+<a name="l00111"></a>00111 <span class="preprocessor">#endif // !iedge_CEdgeBasedFeaturesSupplierComp_included</span>
+<a name="l00112"></a>00112 <span class="preprocessor"></span>
+<a name="l00113"></a>00113 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

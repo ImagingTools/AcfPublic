@@ -38,7 +38,7 @@
 <div class="title">iedge::CEdgeBasedFeaturesSupplierComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iedge::CEdgeBasedFeaturesSupplierComp" --><!-- doxytag: inherits="TSupplierCompWrap&lt; QPair&lt; iipr::CFeaturesContainer, QVector&lt; i2d::CAffineTransformation2d &gt; &gt; &gt;,imeas::INumericValueProvider,i2d::IMultiCalibrationProvider,istd::IInformationProvider" -->
+<!-- doxytag: class="iedge::CEdgeBasedFeaturesSupplierComp" --><!-- doxytag: inherits="TSupplierCompWrap&lt; QPair&lt; iipr::CFeaturesContainer, QVector&lt; i2d::CAffineTransformation2d &gt; &gt; &gt;,imeas::INumericValueProvider,i2d::IMultiCalibrationProvider,i2d::ICalibrationProvider,istd::IInformationProvider" -->
 <p><code>#include &lt;<a class="el" href="_c_edge_based_features_supplier_comp_8h_source.html">CEdgeBasedFeaturesSupplierComp.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iedge::CEdgeBasedFeaturesSupplierComp:</div>
@@ -46,30 +46,19 @@ Inheritance diagram for iedge::CEdgeBasedFeaturesSupplierComp:</div>
  <div class="center">
   <img src="classiedge_1_1_c_edge_based_features_supplier_comp.png" usemap="#iedge::CEdgeBasedFeaturesSupplierComp_map" alt=""/>
   <map id="iedge::CEdgeBasedFeaturesSupplierComp_map" name="iedge::CEdgeBasedFeaturesSupplierComp_map">
-<area href="classiproc_1_1_t_supplier_comp_wrap.html" alt="iproc::TSupplierCompWrap&lt; QPair&lt; iipr::CFeaturesContainer, QVector&lt; i2d::CAffineTransformation2d &gt; &gt; &gt;" shape="rect" coords="2229,224,2856,248"/>
-<area href="classimeas_1_1_i_numeric_value_provider.html" title="Provide access to the list of the numeric values." alt="imeas::INumericValueProvider" shape="rect" coords="3822,224,4449,248"/>
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_multi_calibration_provider.html" alt="i2d::IMultiCalibrationProvider" shape="rect" coords="4459,224,5086,248"/>
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html" alt="istd::IInformationProvider" shape="rect" coords="5096,224,5723,248"/>
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classilog_1_1_t_logger_comp_wrap.html" alt="ilog::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="637,168,1264,192"/>
-<area href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model..." alt="iproc::ISupplier" shape="rect" coords="1911,168,2538,192"/>
+<area href="classiproc_1_1_t_supplier_comp_wrap.html" alt="iproc::TSupplierCompWrap&lt; QPair&lt; iipr::CFeaturesContainer, QVector&lt; i2d::CAffineTransformation2d &gt; &gt; &gt;" shape="rect" coords="0,224,627,248"/>
+<area href="classimeas_1_1_i_numeric_value_provider.html" title="Provide access to the list of the numeric values." alt="imeas::INumericValueProvider" shape="rect" coords="1274,224,1901,248"/>
+<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_multi_calibration_provider.html" alt="i2d::IMultiCalibrationProvider" shape="rect" coords="1911,224,2538,248"/>
+<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html" alt="i2d::ICalibrationProvider" shape="rect" coords="2548,224,3175,248"/>
+<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_information_provider.html" alt="istd::IInformationProvider" shape="rect" coords="3185,224,3812,248"/>
+<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="3185,168,3812,192"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="2548,168,3175,192"/>
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classilog_1_1_i_message_consumer.html" alt="ilog::IMessageConsumer" shape="rect" coords="3185,168,3812,192"/>
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="3822,168,4449,192"/>
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="4459,168,5086,192"/>
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="5096,168,5723,192"/>
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classilog_1_1_t_logger_wrap.html" alt="ilog::TLoggerWrap&lt; Base &gt;" shape="rect" coords="637,112,1264,136"/>
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="1911,112,2538,136"/>
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="2548,112,3175,136"/>
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="3185,112,3812,136"/>
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="3822,112,4449,136"/>
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="4459,112,5086,136"/>
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="5096,112,5723,136"/>
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/class_base.html" alt="Base" shape="rect" coords="0,56,627,80"/>
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classilog_1_1_i_loggable.html" alt="ilog::ILoggable" shape="rect" coords="637,56,1264,80"/>
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_logger.html" alt="istd::ILogger" shape="rect" coords="1274,56,1901,80"/>
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="1911,56,2538,80"/>
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="637,0,1264,24"/>
-<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="1274,0,1901,24"/>
+<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="1911,168,2538,192"/>
+<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="1274,168,1901,192"/>
+<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classilog_1_1_i_message_consumer.html" alt="ilog::IMessageConsumer" shape="rect" coords="637,168,1264,192"/>
+<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="637,112,1264,136"/>
+<area href="classiproc_1_1_i_supplier.html" title="Base interface for suppliers providing synchrone processing of single object with &quot;pull data&quot; model..." alt="iproc::ISupplier" shape="rect" coords="637,56,1264,80"/>
+<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classilog_1_1_t_logger_comp_wrap.html" alt="ilog::TLoggerCompWrap&lt; Base &gt;" shape="rect" coords="637,0,1264,24"/>
 </map>
  </div></div>
 
@@ -95,6 +84,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiprm_1_1_i_options_list.html">iprm::IOptionsList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a9ea56eb067ef43648e9f92e3eb9575e8">GetCalibrationSelectionContraints</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#ad3fcdaf8f587c8c76a4afb74180970fa">GetCalibrationsCount</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a60f57502f57928f9ff26c64ad89aa827">GetCalibration</a> (int calibrationIndex) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a16139e61dcb0841b286bd2ee80de48aa">GetCalibration</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#ad74d0fefff86d98fcf4987464a6e5bae">GetValuesCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of numeric values in the list.  <a href="#ad74d0fefff86d98fcf4987464a6e5bae"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
@@ -110,14 +100,14 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#aa6d0ba7308b9b8f070e96d8dc9da63d7">InitializeWork</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called if the new work should be initialized.  <a href="#aa6d0ba7308b9b8f070e96d8dc9da63d7"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#ac8e375c0bfd1b8c658ab433c6e5e160d">ProduceObject</a> (QPair&lt; <a class="el" href="classiipr_1_1_c_features_container.html">iipr::CFeaturesContainer</a>, QVector&lt; <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_c_affine_transformation2d.html">i2d::CAffineTransformation2d</a> &gt; &gt; &amp;result) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Produce single object.  <a href="#ac8e375c0bfd1b8c658ab433c6e5e160d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a1f4520d9dff9d2ffad5ed4e3fc5d27c0">ProduceObject</a> (<a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a6c07595d7aa93d9e7ddecd35f6b44557">ProductType</a> &amp;result) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Produce single object.  <a href="#a1f4520d9dff9d2ffad5ed4e3fc5d27c0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#aaaf97ef7d7eea759332f013642c7bcbf">OnComponentCreated</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_based_features_supplier_comp.html#a5c9e22bef4a356697299f6b6a1fdae16">OnComponentDestroyed</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_edge_based_features_supplier_comp_8h_source.html#l00028">28</a> of file <a class="el" href="_c_edge_based_features_supplier_comp_8h_source.html">CEdgeBasedFeaturesSupplierComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_edge_based_features_supplier_comp_8h_source.html#l00029">29</a> of file <a class="el" href="_c_edge_based_features_supplier_comp_8h_source.html">CEdgeBasedFeaturesSupplierComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a6e57cd4f77b10129961c6f3b05ffd27b"></a><!-- doxytag: member="iedge::CEdgeBasedFeaturesSupplierComp::BaseClass" ref="a6e57cd4f77b10129961c6f3b05ffd27b" args="" -->
 <div class="memitem">
@@ -132,7 +122,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a4ebbfee7e8e76999c4e14e5359c8ac25">iproc::TSupplierCompWrap&lt; QPair&lt; iipr::CFeaturesContainer, QVector&lt; i2d::CAffineTransformation2d &gt; &gt; &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_edge_based_features_supplier_comp_8h_source.html#l00035">35</a> of file <a class="el" href="_c_edge_based_features_supplier_comp_8h_source.html">CEdgeBasedFeaturesSupplierComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_edge_based_features_supplier_comp_8h_source.html#l00037">37</a> of file <a class="el" href="_c_edge_based_features_supplier_comp_8h_source.html">CEdgeBasedFeaturesSupplierComp.h</a>.</p>
 
 </div>
 </div>
@@ -154,7 +144,7 @@ Protected Member Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_edge_based_features_supplier_comp_8h_source.html#l00053">53</a> of file <a class="el" href="_c_edge_based_features_supplier_comp_8h_source.html">CEdgeBasedFeaturesSupplierComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_edge_based_features_supplier_comp_8h_source.html#l00056">56</a> of file <a class="el" href="_c_edge_based_features_supplier_comp_8h_source.html">CEdgeBasedFeaturesSupplierComp.h</a>.</p>
 
 </div>
 </div>
@@ -192,6 +182,24 @@ Protected Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Implements <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_multi_calibration_provider.html#aa9f417389a1272c87bfe0428f8166310">i2d::IMultiCalibrationProvider</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a16139e61dcb0841b286bd2ee80de48aa"></a><!-- doxytag: member="iedge::CEdgeBasedFeaturesSupplierComp::GetCalibration" ref="a16139e61dcb0841b286bd2ee80de48aa" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a>* iedge::CEdgeBasedFeaturesSupplierComp::GetCalibration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implements <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_calibration_provider.html#acfd7dbf4befb0b89c0fa693a3483ec55">i2d::ICalibrationProvider</a>.</p>
 
 </div>
 </div>
@@ -569,14 +577,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac8e375c0bfd1b8c658ab433c6e5e160d"></a><!-- doxytag: member="iedge::CEdgeBasedFeaturesSupplierComp::ProduceObject" ref="ac8e375c0bfd1b8c658ab433c6e5e160d" args="(QPair&lt; iipr::CFeaturesContainer, QVector&lt; i2d::CAffineTransformation2d &gt; &gt; &amp;result) const " -->
+<a class="anchor" id="a1f4520d9dff9d2ffad5ed4e3fc5d27c0"></a><!-- doxytag: member="iedge::CEdgeBasedFeaturesSupplierComp::ProduceObject" ref="a1f4520d9dff9d2ffad5ed4e3fc5d27c0" args="(ProductType &amp;result) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual int iedge::CEdgeBasedFeaturesSupplierComp::ProduceObject </td>
           <td>(</td>
-          <td class="paramtype">QPair&lt; <a class="el" href="classiipr_1_1_c_features_container.html">iipr::CFeaturesContainer</a>, QVector&lt; <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_c_affine_transformation2d.html">i2d::CAffineTransformation2d</a> &gt; &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classiproc_1_1_t_supplier_comp_wrap.html#a6c07595d7aa93d9e7ddecd35f6b44557">ProductType</a> &amp;&#160;</td>
           <td class="paramname"><em>result</em></td><td>)</td>
           <td> const<code> [protected, virtual]</code></td>
         </tr>

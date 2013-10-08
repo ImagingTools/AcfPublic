@@ -35625,7 +35625,6 @@
     <base>TGuiComponentBase&lt; iview::CConsoleGui &gt;</base>
     <base virtualness="virtual">ibase::ICommandsProvider</base>
     <base virtualness="virtual">iqt2d::IViewProvider</base>
-    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="enumeration">
       <name>BackgroundMode</name>
@@ -35697,13 +35696,6 @@
       <name>GetView</name>
       <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
       <anchor>adc78fdfd1b381f0da35436a3257afa52</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::ICalibration2d *</type>
-      <name>GetCalibration</name>
-      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
-      <anchor>a7392266a33732ac24bf066fb477874d4</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

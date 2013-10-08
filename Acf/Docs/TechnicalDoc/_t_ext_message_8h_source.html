@@ -118,37 +118,39 @@
 <a name="l00093"></a>00093 <span class="keyword">template</span>&lt;<span class="keyword">class</span> Element&gt; 
 <a name="l00094"></a><a class="code" href="classilog_1_1_t_ext_message.html#ab06f11d029aea7ffea65f522fb4f6091">00094</a> <span class="keywordtype">bool</span> <a class="code" href="classilog_1_1_t_ext_message.html#ab06f11d029aea7ffea65f522fb4f6091" title="Copy this object from another one.">TExtMessage&lt;Element&gt;::CopyFrom</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; <span class="keywordtype">object</span>, <a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de" title="Control how relationship betweeen objects are interpreted.">CompatibilityMode</a> mode)
 <a name="l00095"></a>00095 {
-<a name="l00096"></a>00096         <span class="keywordflow">return</span> BaseClass::CopyFrom(<span class="keywordtype">object</span>, mode) &amp;&amp; BaseClass2::CopyFrom(<span class="keywordtype">object</span>, mode);
-<a name="l00097"></a>00097 }
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099 
-<a name="l00100"></a>00100 <span class="keyword">template</span>&lt;<span class="keyword">class</span> Element&gt; 
-<a name="l00101"></a><a class="code" href="classilog_1_1_t_ext_message.html#af9370e86daaa83fb7f51067d17759e02">00101</a> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classilog_1_1_t_ext_message.html#af9370e86daaa83fb7f51067d17759e02" title="Make a copy of this object.">TExtMessage&lt;Element&gt;::CloneMe</a>(<a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de" title="Control how relationship betweeen objects are interpreted.">CompatibilityMode</a> mode)<span class="keyword"> const</span>
-<a name="l00102"></a>00102 <span class="keyword"></span>{
-<a name="l00103"></a>00103        <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">istd::TDelPtr&lt;TExtMessage&lt;Element&gt;</a> &gt; clonedPtr(<span class="keyword">new</span> <a class="code" href="classilog_1_1_t_ext_message.html" title="Extended message with attached some object.">TExtMessage&lt;Element&gt;</a>);
-<a name="l00104"></a>00104        <span class="keywordflow">if</span> (clonedPtr-&gt;CopyFrom(*<span class="keyword">this</span>, mode)){
-<a name="l00105"></a>00105               <span class="keywordflow">return</span> clonedPtr.<a class="code" href="classistd_1_1_t_del_ptr.html#a699e9ff86495a4b8e5f22cbdc285c2cf" title="Reset internal pointer value without deleting instance and return previos value.">PopPtr</a>();
-<a name="l00106"></a>00106        }
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
-<a name="l00109"></a>00109 }
-<a name="l00110"></a>00110 
-<a name="l00111"></a>00111 
-<a name="l00112"></a>00112 <span class="comment">// static methods</span>
+<a name="l00096"></a>00096        <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> notifier(<span class="keyword">this</span>);
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098        <span class="keywordflow">return</span> BaseClass::CopyFrom(<span class="keywordtype">object</span>, mode) &amp;&amp; BaseClass2::CopyFrom(<span class="keywordtype">object</span>, mode);
+<a name="l00099"></a>00099 }
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102 <span class="keyword">template</span>&lt;<span class="keyword">class</span> Element&gt; 
+<a name="l00103"></a><a class="code" href="classilog_1_1_t_ext_message.html#af9370e86daaa83fb7f51067d17759e02">00103</a> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classilog_1_1_t_ext_message.html#af9370e86daaa83fb7f51067d17759e02" title="Make a copy of this object.">TExtMessage&lt;Element&gt;::CloneMe</a>(<a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de" title="Control how relationship betweeen objects are interpreted.">CompatibilityMode</a> mode)<span class="keyword"> const</span>
+<a name="l00104"></a>00104 <span class="keyword"></span>{
+<a name="l00105"></a>00105        <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">istd::TDelPtr&lt;TExtMessage&lt;Element&gt;</a> &gt; clonedPtr(<span class="keyword">new</span> <a class="code" href="classilog_1_1_t_ext_message.html" title="Extended message with attached some object.">TExtMessage&lt;Element&gt;</a>);
+<a name="l00106"></a>00106        <span class="keywordflow">if</span> (clonedPtr-&gt;CopyFrom(*<span class="keyword">this</span>, mode)){
+<a name="l00107"></a>00107               <span class="keywordflow">return</span> clonedPtr.<a class="code" href="classistd_1_1_t_del_ptr.html#a699e9ff86495a4b8e5f22cbdc285c2cf" title="Reset internal pointer value without deleting instance and return previos value.">PopPtr</a>();
+<a name="l00108"></a>00108        }
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110        <span class="keywordflow">return</span> <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;
+<a name="l00111"></a>00111 }
+<a name="l00112"></a>00112 
 <a name="l00113"></a>00113 
-<a name="l00114"></a>00114 <span class="keyword">template</span>&lt;<span class="keyword">class</span> Element&gt; 
-<a name="l00115"></a><a class="code" href="classilog_1_1_t_ext_message.html#a14380e1349369ac46e213d788e6c6fe8">00115</a> QByteArray <a class="code" href="classilog_1_1_t_ext_message.html#a14380e1349369ac46e213d788e6c6fe8">TExtMessage&lt;Element&gt;::GetTypeName</a>()
-<a name="l00116"></a>00116 {
-<a name="l00117"></a>00117        <span class="keywordflow">return</span> istd::CClassInfo::GetName&lt;TExtMessage&lt;Element&gt; &gt;();
-<a name="l00118"></a>00118 }
-<a name="l00119"></a>00119 
-<a name="l00120"></a>00120 
-<a name="l00121"></a>00121 } <span class="comment">// namespace ilog</span>
+<a name="l00114"></a>00114 <span class="comment">// static methods</span>
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116 <span class="keyword">template</span>&lt;<span class="keyword">class</span> Element&gt; 
+<a name="l00117"></a><a class="code" href="classilog_1_1_t_ext_message.html#a14380e1349369ac46e213d788e6c6fe8">00117</a> QByteArray <a class="code" href="classilog_1_1_t_ext_message.html#a14380e1349369ac46e213d788e6c6fe8">TExtMessage&lt;Element&gt;::GetTypeName</a>()
+<a name="l00118"></a>00118 {
+<a name="l00119"></a>00119        <span class="keywordflow">return</span> istd::CClassInfo::GetName&lt;TExtMessage&lt;Element&gt; &gt;();
+<a name="l00120"></a>00120 }
+<a name="l00121"></a>00121 
 <a name="l00122"></a>00122 
-<a name="l00123"></a>00123 
-<a name="l00124"></a>00124 <span class="preprocessor">#endif // ilog_TExtMessage_included</span>
-<a name="l00125"></a>00125 <span class="preprocessor"></span>
-<a name="l00126"></a>00126 
+<a name="l00123"></a>00123 } <span class="comment">// namespace ilog</span>
+<a name="l00124"></a>00124 
+<a name="l00125"></a>00125 
+<a name="l00126"></a>00126 <span class="preprocessor">#endif // ilog_TExtMessage_included</span>
+<a name="l00127"></a>00127 <span class="preprocessor"></span>
+<a name="l00128"></a>00128 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

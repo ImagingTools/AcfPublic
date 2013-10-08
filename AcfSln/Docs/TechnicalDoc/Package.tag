@@ -8447,6 +8447,7 @@
     <base>TSupplierCompWrap&lt; QPair&lt; iipr::CFeaturesContainer, QVector&lt; i2d::CAffineTransformation2d &gt; &gt; &gt;</base>
     <base virtualness="virtual">imeas::INumericValueProvider</base>
     <base virtualness="virtual">i2d::IMultiCalibrationProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <base virtualness="virtual">istd::IInformationProvider</base>
     <member kind="enumeration">
       <name>MessageType</name>
@@ -8524,6 +8525,13 @@
       <arglist>(int calibrationIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ICalibration2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
+      <anchor>a16139e61dcb0841b286bd2ee80de48aa</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetValuesCount</name>
       <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
@@ -8590,8 +8598,8 @@
       <type>virtual int</type>
       <name>ProduceObject</name>
       <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
-      <anchor>ac8e375c0bfd1b8c658ab433c6e5e160d</anchor>
-      <arglist>(QPair&lt; iipr::CFeaturesContainer, QVector&lt; i2d::CAffineTransformation2d &gt; &gt; &amp;result) const </arglist>
+      <anchor>a1f4520d9dff9d2ffad5ed4e3fc5d27c0</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>

@@ -40,7 +40,7 @@
 <div class="title">iqt2d::CViewProviderGuiComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iqt2d::CViewProviderGuiComp" --><!-- doxytag: inherits="TGuiComponentBase&lt; iview::CConsoleGui &gt;,ibase::ICommandsProvider,iqt2d::IViewProvider,i2d::ICalibrationProvider,imod::CMultiModelDispatcherBase" -->
+<!-- doxytag: class="iqt2d::CViewProviderGuiComp" --><!-- doxytag: inherits="TGuiComponentBase&lt; iview::CConsoleGui &gt;,ibase::ICommandsProvider,iqt2d::IViewProvider,imod::CMultiModelDispatcherBase" -->
 <p>Standard 2D-View provider.  
  <a href="classiqt2d_1_1_c_view_provider_gui_comp.html#details">More...</a></p>
 
@@ -54,17 +54,14 @@ Inheritance diagram for iqt2d::CViewProviderGuiComp:</div>
 <area href="classiqtgui_1_1_t_gui_component_base.html" alt="iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt;" shape="rect" coords="153,224,450,248"/>
 <area href="classibase_1_1_i_commands_provider.html" alt="ibase::ICommandsProvider" shape="rect" coords="614,224,911,248"/>
 <area href="classiqt2d_1_1_i_view_provider.html" title="Interface for GUI objects managing view." alt="iqt2d::IViewProvider" shape="rect" coords="921,224,1218,248"/>
-<area href="classi2d_1_1_i_calibration_provider.html" title="Common interface for an object, which delivers a 2D-calibration." alt="i2d::ICalibrationProvider" shape="rect" coords="1228,224,1525,248"/>
-<area href="classimod_1_1_c_multi_model_dispatcher_base.html" title="Generic implementation of a data model changes notifier." alt="imod::CMultiModelDispatcherBase" shape="rect" coords="1535,224,1832,248"/>
+<area href="classimod_1_1_c_multi_model_dispatcher_base.html" title="Generic implementation of a data model changes notifier." alt="imod::CMultiModelDispatcherBase" shape="rect" coords="1228,224,1525,248"/>
 <area href="classiqtgui_1_1_c_gui_component_base.html" title="Base class for classes implementing interface iqtgui::IGuiObject." alt="iqtgui::CGuiComponentBase" shape="rect" coords="153,168,450,192"/>
 <area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="614,168,911,192"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="921,168,1218,192"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="1228,168,1525,192"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1535,168,1832,192"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1228,168,1525,192"/>
 <area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,112,297,136"/>
 <area href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context." alt="iqtgui::IGuiObject" shape="rect" coords="307,112,604,136"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="614,112,911,136"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1228,112,1525,136"/>
 <area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,56,297,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="307,56,604,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,297,24"/>
@@ -96,8 +93,6 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ID indentifing this view.  <a href="#ae4766251c9e5a0e71990def7ac27c588"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiview_1_1_i_shape_view.html">iview::IShapeView</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#adc78fdfd1b381f0da35436a3257afa52">GetView</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when items should be removed from specified view.  <a href="#adc78fdfd1b381f0da35436a3257afa52"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a7392266a33732ac24bf066fb477874d4">GetCalibration</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to transformation object, which transforms a local logical coordinate system to global one.  <a href="#a7392266a33732ac24bf066fb477874d4"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a00c5aee16212fa2937f7a6d7670a5796">OnGuiCreated</a> ()</td></tr>
@@ -128,7 +123,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_component_base.html#a71d48e5e9425438c80e0d95aa88fa782">iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_view_provider_gui_comp_8h_source.html#l00036">36</a> of file <a class="el" href="_c_view_provider_gui_comp_8h_source.html">CViewProviderGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_provider_gui_comp_8h_source.html#l00035">35</a> of file <a class="el" href="_c_view_provider_gui_comp_8h_source.html">CViewProviderGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -143,7 +138,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_view_provider_gui_comp_8h_source.html#l00037">37</a> of file <a class="el" href="_c_view_provider_gui_comp_8h_source.html">CViewProviderGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_provider_gui_comp_8h_source.html#l00036">36</a> of file <a class="el" href="_c_view_provider_gui_comp_8h_source.html">CViewProviderGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -177,32 +172,11 @@ Protected Attributes</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_c_view_provider_gui_comp_8h_source.html#l00042">42</a> of file <a class="el" href="_c_view_provider_gui_comp_8h_source.html">CViewProviderGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_provider_gui_comp_8h_source.html#l00041">41</a> of file <a class="el" href="_c_view_provider_gui_comp_8h_source.html">CViewProviderGuiComp.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a7392266a33732ac24bf066fb477874d4"></a><!-- doxytag: member="iqt2d::CViewProviderGuiComp::GetCalibration" ref="a7392266a33732ac24bf066fb477874d4" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const <a class="el" href="classi2d_1_1_i_calibration2d.html">i2d::ICalibration2d</a>* iqt2d::CViewProviderGuiComp::GetCalibration </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get access to transformation object, which transforms a local logical coordinate system to global one. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Pointer to transformation if it is accessible, or NULL. </dd></dl>
-
-<p>Implements <a class="el" href="classi2d_1_1_i_calibration_provider.html#acfd7dbf4befb0b89c0fa693a3483ec55">i2d::ICalibrationProvider</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a55a137fea748d3b7e61dc8d1c18b9cb1"></a><!-- doxytag: member="iqt2d::CViewProviderGuiComp::GetCommands" ref="a55a137fea748d3b7e61dc8d1c18b9cb1" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -401,7 +375,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_view_provider_gui_comp_8h_source.html#l00119">119</a> of file <a class="el" href="_c_view_provider_gui_comp_8h_source.html">CViewProviderGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_view_provider_gui_comp_8h_source.html#l00115">115</a> of file <a class="el" href="_c_view_provider_gui_comp_8h_source.html">CViewProviderGuiComp.h</a>.</p>
 
 </div>
 </div>
