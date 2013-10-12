@@ -69,111 +69,110 @@
 <a name="l00041"></a>00041               I_ASSIGN_MULTI_0(m_pageNamesAttrPtr, <span class="stringliteral">&quot;Names&quot;</span>, <span class="stringliteral">&quot;List of the page titles&quot;</span>, <span class="keyword">true</span>);
 <a name="l00042"></a>00042               I_ASSIGN(m_iconSizeAttrPtr, <span class="stringliteral">&quot;IconSize&quot;</span>, <span class="stringliteral">&quot;Size for page icons&quot;</span>, <span class="keyword">false</span>, 16);
 <a name="l00043"></a>00043               I_ASSIGN(m_useHorizontalLayoutAttrPtr, <span class="stringliteral">&quot;UseHorizontalLayout&quot;</span>, <span class="stringliteral">&quot;Use horizontal layout&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
-<a name="l00044"></a>00044 <span class="comment">//            I_ASSIGN(m_designTypeAttrPtr, &quot;DesignType&quot;, &quot;Type of design:\n* 0 - simple\n* 1 - tool box\n* 2 - tab\n* 3 - widget stack\n* 4 - splitter&quot;, true, CMultiPageWidget::DT_SIMPLE);</span>
-<a name="l00045"></a>00045               I_ASSIGN(m_useSameStretchingFactorAttrPtr, <span class="stringliteral">&quot;UseSameStretchingFactor&quot;</span>, <span class="stringliteral">&quot;Set the same stretching factor for all widgets. Only for group box mode&quot;</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);
-<a name="l00046"></a>00046        I_END_COMPONENT;
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048        <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a800938c522827eef7c1bd0be448888f0">CMultiPageGuiCompBase</a>();
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050 <span class="keyword">protected</span>:
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#ac5f441fa586dfd7796fac053e57dbcd4" title="Get the number of the pages in the UI container.">GetPagesCount</a>() <span class="keyword">const</span> = 0;
-<a name="l00055"></a>00055 
-<a name="l00059"></a>00059        <span class="keyword">virtual</span> <a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>* <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a4db259a5e7014adfd93c2d8630b34f64" title="Get the UI component for a given page.">GetPageGuiComponent</a>(<span class="keywordtype">int</span> pageIndex) <span class="keyword">const</span> = 0;
-<a name="l00060"></a>00060 
-<a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#ac9bbeebdff6050cde751d833da8d9b73" title="Get the container UI mode.">GetDesignType</a>() <span class="keyword">const</span> = 0;
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067 <span class="keyword">protected</span>:
-<a name="l00071"></a>00071        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#ac1793aecf0a2c28cfcc61033a8c09123" title="Add a new page to the widget container.">AddPageToContainerWidget</a>(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>&amp; pageGui, <span class="keyword">const</span> QString&amp; pageTitle);
-<a name="l00072"></a>00072 
-<a name="l00076"></a>00076        QString <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a5c1b664e43bb8848a79e26dc49ae3a07" title="Get the name corresponding to a page GUI element.">GetPageGuiName</a>(<span class="keyword">const</span> <a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>&amp; pageGui) <span class="keyword">const</span>;
-<a name="l00077"></a>00077 
-<a name="l00081"></a>00081        <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a07bc6b986dc6281988543c16d3a83999" title="Create a page in the page container widget.">CreatePage</a>(<span class="keywordtype">int</span> guiIndex);
-<a name="l00082"></a>00082 
-<a name="l00086"></a>00086        <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a1eb05aac8059ad6ee9880a6f6cc6a4f1" title="Update visual status of the page elements.">UpdateVisualElements</a>();
-<a name="l00087"></a>00087 
-<a name="l00088"></a>00088        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00089"></a>00089        <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a914085b5ccc3377318f9703af9ddc831" title="Create slave widget object.">InitWidgetToParent</a>(QWidget* parentPtr);
-<a name="l00090"></a>00090 
-<a name="l00091"></a>00091        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00092"></a>00092        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#ac12668fc8e47c09d03c978e07b581fbe" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00093"></a>00093        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a88cc86e69467f6582610c37554643755" title="Called just before GUI is released.">OnGuiDestroyed</a>();
-<a name="l00094"></a>00094 
-<a name="l00095"></a>00095        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00096"></a>00096        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a71ac7cb8d3797735e7125dad5ede38d1">OnComponentCreated</a>();
-<a name="l00097"></a>00097        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a83c8323b86ba3ba0dd4aefcfd863ebd6">OnComponentDestroyed</a>();
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099        <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
-<a name="l00100"></a>00100        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a6ba8956b833bad91425d297f7bb2b6ec">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102 <span class="keyword">private</span>:
-<a name="l00103"></a>00103        <span class="keyword">class </span>PageModel:
-<a name="l00104"></a>00104                             <span class="keyword">public</span> iprm::CSelectionParam,
-<a name="l00105"></a>00105                             <span class="keyword">public</span> imod::CMultiModelBridgeBase,
-<a name="l00106"></a>00106                             <span class="keyword">public</span> iprm::IOptionsList
-<a name="l00107"></a>00107        {
-<a name="l00108"></a>00108        <span class="keyword">public</span>:
-<a name="l00109"></a>00109               <span class="keyword">typedef</span> <a class="code" href="classiprm_1_1_c_selection_param.html" title="Basic implementation of selection parameter.">iprm::CSelectionParam</a> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#ab23ebf7f99a4c2f1ae2e86877b635b20">BaseClass</a>;
-<a name="l00110"></a>00110 
-<a name="l00111"></a>00111               PageModel();
-<a name="l00112"></a>00112 
-<a name="l00113"></a>00113               <span class="keywordtype">void</span> SetParent(<a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html">CMultiPageGuiCompBase</a>* parentPtr);
-<a name="l00114"></a>00114               <span class="keywordtype">void</span> UpdatePageState();
-<a name="l00115"></a>00115 
-<a name="l00116"></a>00116               <span class="comment">// reimplemented (iprm::ISelectionParam)</span>
-<a name="l00117"></a>00117               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> SetSelectedOptionIndex(<span class="keywordtype">int</span> index);
-<a name="l00118"></a>00118 
-<a name="l00119"></a>00119               <span class="comment">// reimplemented (iprm::IOptionsList)</span>
-<a name="l00120"></a>00120               <span class="keyword">virtual</span> <span class="keywordtype">int</span> GetOptionsFlags() <span class="keyword">const</span>;
-<a name="l00121"></a>00121               <span class="keyword">virtual</span> <span class="keywordtype">int</span> GetOptionsCount() <span class="keyword">const</span>;
-<a name="l00122"></a>00122               <span class="keyword">virtual</span> QString GetOptionName(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00123"></a>00123               <span class="keyword">virtual</span> QString GetOptionDescription(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00124"></a>00124               <span class="keyword">virtual</span> QByteArray GetOptionId(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00125"></a>00125               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> IsOptionEnabled(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00126"></a>00126 
-<a name="l00127"></a>00127        <span class="keyword">protected</span>:
-<a name="l00128"></a>00128               <span class="comment">// reimplemented (istd::IChangeable)</span>
-<a name="l00129"></a>00129               <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnEndChanges(<span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* changeParamsPtr);
-<a name="l00130"></a>00130 
-<a name="l00131"></a>00131        <span class="keyword">private</span>:
-<a name="l00132"></a>00132               <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html">CMultiPageGuiCompBase</a>* m_parentPtr;
-<a name="l00133"></a>00133        };
-<a name="l00134"></a>00134 
-<a name="l00135"></a>00135        <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceType&gt;
-<a name="l00136"></a>00136        <span class="keyword">static</span> InterfaceType* ExtractPageModel(<a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html">CMultiPageGuiCompBase</a>&amp; component)
-<a name="l00137"></a>00137        {
-<a name="l00138"></a>00138               <span class="keywordflow">return</span> &amp;component.m_pageModel;
-<a name="l00139"></a>00139        }
-<a name="l00140"></a>00140 
-<a name="l00141"></a>00141 <span class="keyword">protected</span>:
-<a name="l00142"></a>00142        I_MULTIREF(IVisualStatusProvider, m_slaveWidgetsVisualCompPtr);
-<a name="l00143"></a>00143        I_MULTIREF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_slaveWidgetsModelCompPtr);
-<a name="l00144"></a>00144        I_MULTIREF(<a class="code" href="classiprm_1_1_i_enableable_param.html" title="Interface for objects which can be enabled/disabled.">iprm::IEnableableParam</a>, m_pageActivatorsCompPtr);
-<a name="l00145"></a>00145        I_MULTIREF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_pageActivatorsModelCompPtr);
-<a name="l00146"></a>00146        I_MULTIATTR(QString, m_pageNamesAttrPtr);
-<a name="l00147"></a>00147        I_ATTR(<span class="keywordtype">int</span>, m_iconSizeAttrPtr);
-<a name="l00148"></a>00148        I_ATTR(<span class="keywordtype">bool</span>, m_useHorizontalLayoutAttrPtr);
-<a name="l00149"></a>00149 <span class="comment">//     I_ATTR(int, m_designTypeAttrPtr);</span>
-<a name="l00150"></a>00150        I_ATTR(<span class="keywordtype">bool</span>, m_useSameStretchingFactorAttrPtr);
-<a name="l00151"></a>00151        I_ATTR(<span class="keywordtype">bool</span>, m_insertSpacerAttrPtr);
-<a name="l00152"></a>00152 
-<a name="l00153"></a><a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a5c23492ea22b0d75b4ac6bef591872cd">00153</a>        <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a5c23492ea22b0d75b4ac6bef591872cd">m_currentPageIndex</a>;
-<a name="l00154"></a>00154 
-<a name="l00155"></a>00155 <span class="keyword">private</span>:
-<a name="l00156"></a>00156        <span class="keyword">typedef</span> QMap&lt;<span class="keywordtype">int</span> <span class="comment">/*page index in the widget container*/</span>, <span class="keywordtype">int</span> <span class="comment">/*logical GUI element index*/</span>&gt; PageToGuiIndexMap;
-<a name="l00157"></a>00157        PageToGuiIndexMap m_pageToGuiIndexMap;
-<a name="l00158"></a>00158 
-<a name="l00159"></a>00159        QMap&lt;const iqtgui::IGuiObject*, QString&gt; m_guiNamesMap;
-<a name="l00160"></a>00160 
-<a name="l00161"></a>00161        <a class="code" href="classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;PageModel&gt;</a> m_pageModel;
-<a name="l00162"></a>00162 };
+<a name="l00044"></a>00044               I_ASSIGN(m_useSameStretchingFactorAttrPtr, <span class="stringliteral">&quot;UseSameStretchingFactor&quot;</span>, <span class="stringliteral">&quot;Set the same stretching factor for all widgets. Only for group box mode&quot;</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);
+<a name="l00045"></a>00045        I_END_COMPONENT;
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047        <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a800938c522827eef7c1bd0be448888f0">CMultiPageGuiCompBase</a>();
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 <span class="keyword">protected</span>:
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#ac5f441fa586dfd7796fac053e57dbcd4" title="Get the number of the pages in the UI container.">GetPagesCount</a>() <span class="keyword">const</span> = 0;
+<a name="l00054"></a>00054 
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>* <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a4db259a5e7014adfd93c2d8630b34f64" title="Get the UI component for a given page.">GetPageGuiComponent</a>(<span class="keywordtype">int</span> pageIndex) <span class="keyword">const</span> = 0;
+<a name="l00059"></a>00059 
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#ac9bbeebdff6050cde751d833da8d9b73" title="Get the container UI mode.">GetDesignType</a>() <span class="keyword">const</span> = 0;
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 <span class="keyword">protected</span>:
+<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#ac1793aecf0a2c28cfcc61033a8c09123" title="Add a new page to the widget container.">AddPageToContainerWidget</a>(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>&amp; pageGui, <span class="keyword">const</span> QString&amp; pageTitle);
+<a name="l00071"></a>00071 
+<a name="l00075"></a>00075        QString <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a5c1b664e43bb8848a79e26dc49ae3a07" title="Get the name corresponding to a page GUI element.">GetPageGuiName</a>(<span class="keyword">const</span> <a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>&amp; pageGui) <span class="keyword">const</span>;
+<a name="l00076"></a>00076 
+<a name="l00080"></a>00080        <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a07bc6b986dc6281988543c16d3a83999" title="Create a page in the page container widget.">CreatePage</a>(<span class="keywordtype">int</span> guiIndex);
+<a name="l00081"></a>00081 
+<a name="l00085"></a>00085        <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a1eb05aac8059ad6ee9880a6f6cc6a4f1" title="Update visual status of the page elements.">UpdateVisualElements</a>();
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00088"></a>00088        <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a914085b5ccc3377318f9703af9ddc831" title="Create slave widget object.">InitWidgetToParent</a>(QWidget* parentPtr);
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00091"></a>00091        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#ac12668fc8e47c09d03c978e07b581fbe" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00092"></a>00092        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a88cc86e69467f6582610c37554643755" title="Called just before GUI is released.">OnGuiDestroyed</a>();
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00095"></a>00095        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a71ac7cb8d3797735e7125dad5ede38d1">OnComponentCreated</a>();
+<a name="l00096"></a>00096        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a83c8323b86ba3ba0dd4aefcfd863ebd6">OnComponentDestroyed</a>();
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098        <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
+<a name="l00099"></a>00099        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a6ba8956b833bad91425d297f7bb2b6ec">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101 <span class="keyword">private</span>:
+<a name="l00102"></a>00102        <span class="keyword">class </span>PageModel:
+<a name="l00103"></a>00103                             <span class="keyword">public</span> iprm::CSelectionParam,
+<a name="l00104"></a>00104                             <span class="keyword">public</span> imod::CMultiModelBridgeBase,
+<a name="l00105"></a>00105                             <span class="keyword">public</span> iprm::IOptionsList
+<a name="l00106"></a>00106        {
+<a name="l00107"></a>00107        <span class="keyword">public</span>:
+<a name="l00108"></a>00108               <span class="keyword">typedef</span> <a class="code" href="classiprm_1_1_c_selection_param.html" title="Basic implementation of selection parameter.">iprm::CSelectionParam</a> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#ab23ebf7f99a4c2f1ae2e86877b635b20">BaseClass</a>;
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110               PageModel();
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112               <span class="keywordtype">void</span> SetParent(<a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html">CMultiPageGuiCompBase</a>* parentPtr);
+<a name="l00113"></a>00113               <span class="keywordtype">void</span> UpdatePageState();
+<a name="l00114"></a>00114 
+<a name="l00115"></a>00115               <span class="comment">// reimplemented (iprm::ISelectionParam)</span>
+<a name="l00116"></a>00116               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> SetSelectedOptionIndex(<span class="keywordtype">int</span> index);
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118               <span class="comment">// reimplemented (iprm::IOptionsList)</span>
+<a name="l00119"></a>00119               <span class="keyword">virtual</span> <span class="keywordtype">int</span> GetOptionsFlags() <span class="keyword">const</span>;
+<a name="l00120"></a>00120               <span class="keyword">virtual</span> <span class="keywordtype">int</span> GetOptionsCount() <span class="keyword">const</span>;
+<a name="l00121"></a>00121               <span class="keyword">virtual</span> QString GetOptionName(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00122"></a>00122               <span class="keyword">virtual</span> QString GetOptionDescription(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00123"></a>00123               <span class="keyword">virtual</span> QByteArray GetOptionId(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00124"></a>00124               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> IsOptionEnabled(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00125"></a>00125 
+<a name="l00126"></a>00126        <span class="keyword">protected</span>:
+<a name="l00127"></a>00127               <span class="comment">// reimplemented (istd::IChangeable)</span>
+<a name="l00128"></a>00128               <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnEndChanges(<span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* changeParamsPtr);
+<a name="l00129"></a>00129 
+<a name="l00130"></a>00130        <span class="keyword">private</span>:
+<a name="l00131"></a>00131               <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html">CMultiPageGuiCompBase</a>* m_parentPtr;
+<a name="l00132"></a>00132        };
+<a name="l00133"></a>00133 
+<a name="l00134"></a>00134        <span class="keyword">template</span> &lt;<span class="keyword">class</span> InterfaceType&gt;
+<a name="l00135"></a>00135        <span class="keyword">static</span> InterfaceType* ExtractPageModel(<a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html">CMultiPageGuiCompBase</a>&amp; component)
+<a name="l00136"></a>00136        {
+<a name="l00137"></a>00137               <span class="keywordflow">return</span> &amp;component.m_pageModel;
+<a name="l00138"></a>00138        }
+<a name="l00139"></a>00139 
+<a name="l00140"></a>00140 <span class="keyword">protected</span>:
+<a name="l00141"></a>00141        I_MULTIREF(IVisualStatusProvider, m_slaveWidgetsVisualCompPtr);
+<a name="l00142"></a>00142        I_MULTIREF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_slaveWidgetsModelCompPtr);
+<a name="l00143"></a>00143        I_MULTIREF(<a class="code" href="classiprm_1_1_i_enableable_param.html" title="Interface for objects which can be enabled/disabled.">iprm::IEnableableParam</a>, m_pageActivatorsCompPtr);
+<a name="l00144"></a>00144        I_MULTIREF(<a class="code" href="classimod_1_1_i_model.html" title="Common interface for model objects, that supports Model/Observer design pattern.">imod::IModel</a>, m_pageActivatorsModelCompPtr);
+<a name="l00145"></a>00145        I_MULTIATTR(QString, m_pageNamesAttrPtr);
+<a name="l00146"></a>00146        I_ATTR(<span class="keywordtype">int</span>, m_iconSizeAttrPtr);
+<a name="l00147"></a>00147        I_ATTR(<span class="keywordtype">bool</span>, m_useHorizontalLayoutAttrPtr);
+<a name="l00148"></a>00148 <span class="comment">//     I_ATTR(int, m_designTypeAttrPtr);</span>
+<a name="l00149"></a>00149        I_ATTR(<span class="keywordtype">bool</span>, m_useSameStretchingFactorAttrPtr);
+<a name="l00150"></a>00150        I_ATTR(<span class="keywordtype">bool</span>, m_insertSpacerAttrPtr);
+<a name="l00151"></a>00151 
+<a name="l00152"></a><a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a5c23492ea22b0d75b4ac6bef591872cd">00152</a>        <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a5c23492ea22b0d75b4ac6bef591872cd">m_currentPageIndex</a>;
+<a name="l00153"></a>00153 
+<a name="l00154"></a>00154 <span class="keyword">private</span>:
+<a name="l00155"></a>00155        <span class="keyword">typedef</span> QMap&lt;<span class="keywordtype">int</span> <span class="comment">/*page index in the widget container*/</span>, <span class="keywordtype">int</span> <span class="comment">/*logical GUI element index*/</span>&gt; PageToGuiIndexMap;
+<a name="l00156"></a>00156        PageToGuiIndexMap m_pageToGuiIndexMap;
+<a name="l00157"></a>00157 
+<a name="l00158"></a>00158        QMap&lt;const iqtgui::IGuiObject*, QString&gt; m_guiNamesMap;
+<a name="l00159"></a>00159 
+<a name="l00160"></a>00160        <a class="code" href="classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;PageModel&gt;</a> m_pageModel;
+<a name="l00161"></a>00161 };
+<a name="l00162"></a>00162 
 <a name="l00163"></a>00163 
-<a name="l00164"></a>00164 
-<a name="l00165"></a>00165 } <span class="comment">// namespace iqtgui</span>
+<a name="l00164"></a>00164 } <span class="comment">// namespace iqtgui</span>
+<a name="l00165"></a>00165 
 <a name="l00166"></a>00166 
-<a name="l00167"></a>00167 
-<a name="l00168"></a>00168 <span class="preprocessor">#endif // !iqtgui_CMultiPageGuiCompBase_included</span>
-<a name="l00169"></a>00169 <span class="preprocessor"></span>
-<a name="l00170"></a>00170 
+<a name="l00167"></a>00167 <span class="preprocessor">#endif // !iqtgui_CMultiPageGuiCompBase_included</span>
+<a name="l00168"></a>00168 <span class="preprocessor"></span>
+<a name="l00169"></a>00169 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

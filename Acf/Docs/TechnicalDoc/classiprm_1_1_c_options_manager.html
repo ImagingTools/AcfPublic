@@ -69,6 +69,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set additional fixed list of options.  <a href="#a28b2826d589a4a1596ff99c2da7e59e0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager.html#abf0ed393891f1e4aba68f657256d2717">ResetOptions</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all options.  <a href="#abf0ed393891f1e4aba68f657256d2717"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager.html#ae80ec60042ae7959a483fe40fb765e90">GetOptionIndexById</a> (const QByteArray &amp;optionId) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the index for the given option ID.  <a href="#ae80ec60042ae7959a483fe40fb765e90"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager.html#a505aba759f876568de6599f05a8c7b0c">GetOptionIndexByName</a> (const QString &amp;optionName) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the index for the given option name.  <a href="#a505aba759f876568de6599f05a8c7b0c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager.html#a9a06084ec537c23025822cc1f1ee2aa5">GetOptionsFlags</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints flags.  <a href="#a9a06084ec537c23025822cc1f1ee2aa5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_options_manager.html#a1d3694923197991e43ca131eec6e3c83">GetOptionsCount</a> () const </td></tr>
@@ -161,6 +165,47 @@ Public Member Functions</h2></td></tr>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiprm_1_1_i_options_list.html#a14593d38693c2bdbfe3988dbaaedfcfa" title="Flags for control constraints behavior.">OptionsFlags</a> </dd></dl>
 
 <p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#aa7af53aa0f41e2b65bfd0128792d18d2">iprm::IOptionsList</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae80ec60042ae7959a483fe40fb765e90"></a><!-- doxytag: member="iprm::COptionsManager::GetOptionIndexById" ref="ae80ec60042ae7959a483fe40fb765e90" args="(const QByteArray &amp;optionId) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int iprm::COptionsManager::GetOptionIndexById </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>optionId</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the index for the given option ID. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>found option index, or a negative value if the option with the requested ID was not found. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a505aba759f876568de6599f05a8c7b0c"></a><!-- doxytag: member="iprm::COptionsManager::GetOptionIndexByName" ref="a505aba759f876568de6599f05a8c7b0c" args="(const QString &amp;optionName) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int iprm::COptionsManager::GetOptionIndexByName </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>optionName</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the index for the given option name. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>found option index, or a negative value if the option with the requested name was not found. </dd></dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>If the container contains more options with the same name, the first found option index will be returned. </dd></dl>
 
 </div>
 </div>

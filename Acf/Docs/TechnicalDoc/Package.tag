@@ -31856,6 +31856,20 @@
       <anchor>abf0ed393891f1e4aba68f657256d2717</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetOptionIndexById</name>
+      <anchorfile>classiprm_1_1_c_options_manager.html</anchorfile>
+      <anchor>ae80ec60042ae7959a483fe40fb765e90</anchor>
+      <arglist>(const QByteArray &amp;optionId) const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetOptionIndexByName</name>
+      <anchorfile>classiprm_1_1_c_options_manager.html</anchorfile>
+      <anchor>a505aba759f876568de6599f05a8c7b0c</anchor>
+      <arglist>(const QString &amp;optionName) const </arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetOptionsFlags</name>
@@ -39253,15 +39267,15 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>DT_STACK</name>
-      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
-      <anchor>a446c70acf2fed5b8afff103bed79e863a98a045f068054363e21121fcf93bdd6d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
       <name>DT_SPLITTER</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
       <anchor>a446c70acf2fed5b8afff103bed79e863a46906fdddcc5ee345f5c00514930e3de</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DT_STACK</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>a446c70acf2fed5b8afff103bed79e863a98a045f068054363e21121fcf93bdd6d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
