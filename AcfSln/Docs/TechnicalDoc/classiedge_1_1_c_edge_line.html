@@ -65,6 +65,7 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#ad8e793d1b9b5ff879b90073a5ad6a1c6">CEdgeLine</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#ac0e5538f54ccecef2f35b5c66d58616b">CEdgeLine</a> (const <a class="el" href="classiedge_1_1_c_edge_line.html">CEdgeLine</a> &amp;edgeLine)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#a03d8edaf017e25319090df28907fd878">Clear</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classiedge_1_1_c_edge_node.html">CEdgeNode</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiedge_1_1_c_edge_line.html#afd693c176220964b52b46579c41334c9">GetNode</a> (int index) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return node at specified index.  <a href="#afd693c176220964b52b46579c41334c9"></a><br/></td></tr>
@@ -135,6 +136,23 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ac0e5538f54ccecef2f35b5c66d58616b"></a><!-- doxytag: member="iedge::CEdgeLine::CEdgeLine" ref="ac0e5538f54ccecef2f35b5c66d58616b" args="(const CEdgeLine &amp;edgeLine)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iedge::CEdgeLine::CEdgeLine </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classiedge_1_1_c_edge_line.html">CEdgeLine</a> &amp;&#160;</td>
+          <td class="paramname"><em>edgeLine</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a139b13e1fd9b569cd73c25c011ce9e6c"></a><!-- doxytag: member="iedge::CEdgeLine::CalcVolatile" ref="a139b13e1fd9b569cd73c25c011ce9e6c" args="() const " -->
 <div class="memitem">
@@ -150,7 +168,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="_c_edge_line_8h_source.html#l00173">EnsureVolatileValid()</a>.</p>
+<p>Referenced by <a class="el" href="_c_edge_line_8h_source.html#l00174">EnsureVolatileValid()</a>.</p>
 
 </div>
 </div>
@@ -267,11 +285,11 @@ Protected Member Functions</h2></td></tr>
 
 <p>Make sure, that all volatile values are calculated and valid. </p>
 
-<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00173">173</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00174">174</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
 
 <p>References <a class="el" href="classiedge_1_1_c_edge_line.html#a139b13e1fd9b569cd73c25c011ce9e6c">CalcVolatile()</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_edge_line_8h_source.html#l00157">GetMaxWeight()</a>, <a class="el" href="_c_edge_line_8h_source.html#l00149">GetMinWeight()</a>, and <a class="el" href="_c_edge_line_8h_source.html#l00141">GetTotalLength()</a>.</p>
+<p>Referenced by <a class="el" href="_c_edge_line_8h_source.html#l00158">GetMaxWeight()</a>, <a class="el" href="_c_edge_line_8h_source.html#l00150">GetMinWeight()</a>, and <a class="el" href="_c_edge_line_8h_source.html#l00142">GetTotalLength()</a>.</p>
 
 </div>
 </div>
@@ -364,9 +382,9 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00157">157</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00158">158</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
 
-<p>References <a class="el" href="_c_edge_line_8h_source.html#l00173">EnsureVolatileValid()</a>.</p>
+<p>References <a class="el" href="_c_edge_line_8h_source.html#l00174">EnsureVolatileValid()</a>.</p>
 
 </div>
 </div>
@@ -384,9 +402,9 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00149">149</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00150">150</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
 
-<p>References <a class="el" href="_c_edge_line_8h_source.html#l00173">EnsureVolatileValid()</a>.</p>
+<p>References <a class="el" href="_c_edge_line_8h_source.html#l00174">EnsureVolatileValid()</a>.</p>
 
 </div>
 </div>
@@ -454,7 +472,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00129">129</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00130">130</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
 
 </div>
 </div>
@@ -472,7 +490,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00135">135</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00136">136</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
 
 </div>
 </div>
@@ -490,9 +508,9 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00141">141</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00142">142</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
 
-<p>References <a class="el" href="_c_edge_line_8h_source.html#l00173">EnsureVolatileValid()</a>.</p>
+<p>References <a class="el" href="_c_edge_line_8h_source.html#l00174">EnsureVolatileValid()</a>.</p>
 
 </div>
 </div>
@@ -601,7 +619,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00165">165</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_edge_line_8h_source.html#l00166">166</a> of file <a class="el" href="_c_edge_line_8h_source.html">CEdgeLine.h</a>.</p>
 
 </div>
 </div>

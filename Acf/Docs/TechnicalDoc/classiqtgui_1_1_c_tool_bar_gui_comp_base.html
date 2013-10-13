@@ -77,6 +77,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add this component to main window.  <a href="#ad3d805d2e31b847df10e8fb85805a1a2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#aec45539053c128210f767a529604f18d">RemoveFromMainWindow</a> (QMainWindow &amp;mainWindow)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove this component from main window.  <a href="#aec45539053c128210f767a529604f18d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#a2def06f1ecf19d0ffba56e86b81454ba">GetAssociatedDocumentTypeId</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type ID of the associated document.  <a href="#a2def06f1ecf19d0ffba56e86b81454ba"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#afe0e55f562f96ddfa76101a249f7e4ed">GetTitle</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the title of the main window component.  <a href="#afe0e55f562f96ddfa76101a249f7e4ed"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#a742e2309d8ca71c36cb368fca9e0922c">OnGuiCreated</a> ()</td></tr>
@@ -125,6 +129,48 @@ Protected Member Functions</h2></td></tr>
 <p>Add this component to main window. </p>
 
 <p>Implements <a class="el" href="classiqtgui_1_1_i_main_window_component.html#a3834e70dd62781859c5d5ffa5db0c8f3">iqtgui::IMainWindowComponent</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2def06f1ecf19d0ffba56e86b81454ba"></a><!-- doxytag: member="iqtgui::CToolBarGuiCompBase::GetAssociatedDocumentTypeId" ref="a2def06f1ecf19d0ffba56e86b81454ba" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QByteArray iqtgui::CToolBarGuiCompBase::GetAssociatedDocumentTypeId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the type ID of the associated document. </p>
+<p>The main window component will be only shown, if a document with associated type ID is currently active in the application. </p>
+<dl class="note"><dt><b>Note:</b></dt><dd>This method is only used in the context of document-based applications. </dd></dl>
+
+<p>Implements <a class="el" href="classiqtgui_1_1_i_main_window_component.html#a8a1c4e80e31f697bc4663b7d93cac330">iqtgui::IMainWindowComponent</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afe0e55f562f96ddfa76101a249f7e4ed"></a><!-- doxytag: member="iqtgui::CToolBarGuiCompBase::GetTitle" ref="afe0e55f562f96ddfa76101a249f7e4ed" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString iqtgui::CToolBarGuiCompBase::GetTitle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the title of the main window component. </p>
+
+<p>Implements <a class="el" href="classiqtgui_1_1_i_main_window_component.html#ad0d71cf4369e60022046d769b4a49058">iqtgui::IMainWindowComponent</a>.</p>
 
 </div>
 </div>

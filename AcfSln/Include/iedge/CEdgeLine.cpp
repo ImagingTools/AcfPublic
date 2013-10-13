@@ -23,6 +23,10 @@
 #include "iedge/CEdgeLine.h"
 
 
+// ACF includes
+#include "istd/TDelPtr.h"
+
+
 namespace iedge
 {
 
@@ -39,6 +43,29 @@ CEdgeLine::CEdgeLine()
 }
 
 
+CEdgeLine::CEdgeLine(const CEdgeLine& edgeLine)
+{
+	m_nodes = edgeLine.m_nodes;
+	m_isClosed = edgeLine.m_isClosed;
+	m_areVolatileValid = edgeLine.m_areVolatileValid;
+	m_center = edgeLine.m_center;
+	m_totalLength = edgeLine.m_totalLength;
+	m_minWeight  = edgeLine.m_minWeight;
+	m_maxWeight = edgeLine.m_maxWeight;
+	m_boundingBox = edgeLine.m_boundingBox;
+
+	const i2d::ICalibration2d* calibrationPtr = edgeLine.GetCalibration();
+	if (calibrationPtr != NULL){
+		istd::TDelPtr<i2d::ICalibration2d> newCalibration;
+		newCalibration.SetCastedOrRemove(calibrationPtr->CloneMe());
+
+		if (newCalibration.IsValid()){
+			SetCalibration(newCalibration.PopPtr(), true);
+		}
+	}
+}
+
+
 void CEdgeLine::Clear()
 {
 	istd::CChangeNotifier notifier(this);
@@ -49,6 +76,8 @@ void CEdgeLine::Clear()
 	m_totalLength = 0;
 	m_minWeight = 0;
 	m_maxWeight = 0;
+
+	SetCalibration(NULL);
 }
 
 

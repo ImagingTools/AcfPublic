@@ -59,29 +59,33 @@
 <a name="l00034"></a>00034               I_ASSIGN(m_dockAreaAttrPtr, <span class="stringliteral">&quot;ToolBarArea&quot;</span>, <span class="stringliteral">&quot;Specify the area for this toolbar\n 0 - left\n 1 - right\n 2 - top\n 3 - bottom&quot;</span>, <span class="keyword">false</span>, 0);
 <a name="l00035"></a>00035               I_ASSIGN(m_titleAttrPtr, <span class="stringliteral">&quot;Title&quot;</span>, <span class="stringliteral">&quot;Tool bar title&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;&quot;</span>);
 <a name="l00036"></a>00036               I_ASSIGN(m_iconSizeAttrPtr, <span class="stringliteral">&quot;IconSize&quot;</span>, <span class="stringliteral">&quot;Size of the icon used in the tool bar&quot;</span>, <span class="keyword">false</span>, 32);
-<a name="l00037"></a>00037        I_END_COMPONENT;
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039        <span class="comment">// reimplemented (iqtgui::IMainWindowComponent)</span>
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#ad3d805d2e31b847df10e8fb85805a1a2" title="Add this component to main window.">AddToMainWindow</a>(QMainWindow&amp; mainWindow);
-<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#aec45539053c128210f767a529604f18d" title="Remove this component from main window.">RemoveFromMainWindow</a>(QMainWindow&amp; mainWindow);
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043 <span class="keyword">protected</span>:
-<a name="l00044"></a>00044        <span class="comment">// reimplemented (CGuiComponentBase)</span>
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#a742e2309d8ca71c36cb368fca9e0922c" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047 <span class="keyword">private</span>:
-<a name="l00048"></a>00048        I_ATTR(<span class="keywordtype">int</span>, m_dockAreaAttrPtr);
-<a name="l00049"></a>00049        I_ATTR(QString, m_titleAttrPtr);
-<a name="l00050"></a>00050        I_ATTR(<span class="keywordtype">int</span>, m_iconSizeAttrPtr);
-<a name="l00051"></a>00051 };
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054 } <span class="comment">// namespace iqtgui</span>
-<a name="l00055"></a>00055 
+<a name="l00037"></a>00037               I_ASSIGN(m_associatedDocumentTypeId, <span class="stringliteral">&quot;AssociatedDocumentTypeId&quot;</span>, <span class="stringliteral">&quot;ID of the associated document type ID&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Default&quot;</span>);
+<a name="l00038"></a>00038        I_END_COMPONENT;
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040        <span class="comment">// reimplemented (iqtgui::IMainWindowComponent)</span>
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#ad3d805d2e31b847df10e8fb85805a1a2" title="Add this component to main window.">AddToMainWindow</a>(QMainWindow&amp; mainWindow);
+<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#aec45539053c128210f767a529604f18d" title="Remove this component from main window.">RemoveFromMainWindow</a>(QMainWindow&amp; mainWindow);
+<a name="l00043"></a>00043        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#a2def06f1ecf19d0ffba56e86b81454ba" title="Get the type ID of the associated document.">GetAssociatedDocumentTypeId</a>() <span class="keyword">const</span>;
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> QString <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#afe0e55f562f96ddfa76101a249f7e4ed" title="Get the title of the main window component.">GetTitle</a>() <span class="keyword">const</span>;
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 <span class="keyword">protected</span>:
+<a name="l00047"></a>00047        <span class="comment">// reimplemented (CGuiComponentBase)</span>
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#a742e2309d8ca71c36cb368fca9e0922c" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 <span class="keyword">private</span>:
+<a name="l00051"></a>00051        I_ATTR(<span class="keywordtype">int</span>, m_dockAreaAttrPtr);
+<a name="l00052"></a>00052        I_ATTR(QString, m_titleAttrPtr);
+<a name="l00053"></a>00053        I_ATTR(<span class="keywordtype">int</span>, m_iconSizeAttrPtr);
+<a name="l00054"></a>00054        I_ATTR(QByteArray, m_associatedDocumentTypeId);
+<a name="l00055"></a>00055 };
 <a name="l00056"></a>00056 
-<a name="l00057"></a>00057 <span class="preprocessor">#endif // !iqtgui_CToolBarGuiCompBase_included</span>
-<a name="l00058"></a>00058 <span class="preprocessor"></span>
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058 } <span class="comment">// namespace iqtgui</span>
 <a name="l00059"></a>00059 
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061 <span class="preprocessor">#endif // !iqtgui_CToolBarGuiCompBase_included</span>
+<a name="l00062"></a>00062 <span class="preprocessor"></span>
+<a name="l00063"></a>00063 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

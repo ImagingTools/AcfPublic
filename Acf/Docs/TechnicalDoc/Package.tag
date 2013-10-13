@@ -36627,6 +36627,13 @@
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
+      <name>UpdateMainWindowComponentsVisibility</name>
+      <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
+      <anchor>acfa35318dc37cd0b6e3fd9da1b6521cd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
       <name>OnNewDocument</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
       <anchor>a136a9974b0dff66b335cdb9d544d4789</anchor>
@@ -37910,10 +37917,10 @@
     <base>TGuiComponentBase&lt; QDockWidget &gt;</base>
     <base virtualness="virtual">iqtgui::IMainWindowComponent</base>
     <member kind="typedef">
-      <type>iqtgui::TGuiComponentBase&lt; QDockWidget &gt;</type>
+      <type>TGuiComponentBase&lt; QDockWidget &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_c_dock_widget_gui_comp.html</anchorfile>
-      <anchor>aef979c79029ae2042bcf575c6bb38a40</anchor>
+      <anchor>ae9f42586637730d251af855e997331ac</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -37929,6 +37936,20 @@
       <anchorfile>classiqtgui_1_1_c_dock_widget_gui_comp.html</anchorfile>
       <anchor>a2d30fb715b26296c514b67c29dcd3875</anchor>
       <arglist>(QMainWindow &amp;mainWindow)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetAssociatedDocumentTypeId</name>
+      <anchorfile>classiqtgui_1_1_c_dock_widget_gui_comp.html</anchorfile>
+      <anchor>a6cb708851d4e9f9a8d63c4c72f78b02f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetTitle</name>
+      <anchorfile>classiqtgui_1_1_c_dock_widget_gui_comp.html</anchorfile>
+      <anchor>a747c6d4df875dea0e85b09665a04025c</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -39905,11 +39926,25 @@
       <anchor>a0ac1b556080cb7f1e383727c0c2fe1f1</anchor>
       <arglist>(bool *ignoredPtr=NULL)</arglist>
     </member>
+    <member kind="typedef" protection="protected">
+      <type>QMap&lt; iqtgui::IMainWindowComponent *, bool &gt;</type>
+      <name>MainComponentVisibilityMap</name>
+      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
+      <anchor>ac1bf50e3fe7e368229ce1a6a6ee8dfa9</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnShowToolbars</name>
       <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
       <anchor>a17c7bf3c34a529b36e8c812d4ddc91e4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnAbout</name>
+      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
+      <anchor>af7d72fd382158a5717444c298311ce33</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -39921,10 +39956,10 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>OnAbout</name>
+      <name>OnShowOtherCommandTriggered</name>
       <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
-      <anchor>af7d72fd382158a5717444c298311ce33</anchor>
-      <arglist>()</arglist>
+      <anchor>a8af9bae096c8c9e5418ead29b9883cb6</anchor>
+      <arglist>(bool enabled)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -40052,11 +40087,25 @@
       <anchor>af945677d33a6a50d1b32f3b759c10198</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>eventFilter</name>
+      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
+      <anchor>a5b5eb20b30b78dad0eb25d0391e0c7d0</anchor>
+      <arglist>(QObject *sourcePtr, QEvent *eventPtr)</arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>CommandsObserver</type>
       <name>m_commandsObserver</name>
       <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
       <anchor>a1f384daa61609986c8a0dc5b57d751e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>MainComponentVisibilityMap</type>
+      <name>m_mainComponentVisibilityMap</name>
+      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
+      <anchor>a59321f03dc35a47d18e79503d0ff34cb</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -40415,6 +40464,20 @@
       <anchorfile>classiqtgui_1_1_c_status_bar_widget_comp.html</anchorfile>
       <anchor>a95f80f155dc4bd36bcb27060b340b057</anchor>
       <arglist>(QMainWindow &amp;mainWindow)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetAssociatedDocumentTypeId</name>
+      <anchorfile>classiqtgui_1_1_c_status_bar_widget_comp.html</anchorfile>
+      <anchor>ac72055d72e2e7af3f321b7378975b3e3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetTitle</name>
+      <anchorfile>classiqtgui_1_1_c_status_bar_widget_comp.html</anchorfile>
+      <anchor>aa722848795ed91a3f0f5719731e9fa69</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -40802,6 +40865,20 @@
       <anchor>aec45539053c128210f767a529604f18d</anchor>
       <arglist>(QMainWindow &amp;mainWindow)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetAssociatedDocumentTypeId</name>
+      <anchorfile>classiqtgui_1_1_c_tool_bar_gui_comp_base.html</anchorfile>
+      <anchor>a2def06f1ecf19d0ffba56e86b81454ba</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetTitle</name>
+      <anchorfile>classiqtgui_1_1_c_tool_bar_gui_comp_base.html</anchorfile>
+      <anchor>afe0e55f562f96ddfa76101a249f7e4ed</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
@@ -41169,6 +41246,20 @@
       <anchorfile>classiqtgui_1_1_i_main_window_component.html</anchorfile>
       <anchor>a4abeb613d32398f5b5908b1cde3c2544</anchor>
       <arglist>(QMainWindow &amp;mainWindow)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QByteArray</type>
+      <name>GetAssociatedDocumentTypeId</name>
+      <anchorfile>classiqtgui_1_1_i_main_window_component.html</anchorfile>
+      <anchor>a8a1c4e80e31f697bc4663b7d93cac330</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetTitle</name>
+      <anchorfile>classiqtgui_1_1_i_main_window_component.html</anchorfile>
+      <anchor>ad0d71cf4369e60022046d769b4a49058</anchor>
+      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">

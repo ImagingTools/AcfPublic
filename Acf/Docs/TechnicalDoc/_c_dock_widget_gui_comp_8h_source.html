@@ -48,47 +48,51 @@
 <a name="l00020"></a>00020 
 <a name="l00021"></a>00021 
 <a name="l00025"></a><a class="code" href="classiqtgui_1_1_c_dock_widget_gui_comp.html">00025</a> <span class="keyword">class </span><a class="code" href="classiqtgui_1_1_c_dock_widget_gui_comp.html" title="Wrapper for docking windows for main window.">CDockWidgetGuiComp</a>:
-<a name="l00026"></a>00026                      <span class="keyword">public</span> iqtgui::<a class="code" href="classiqtgui_1_1_t_gui_component_base.html" title="Base class for all Qt GUI componentes.">TGuiComponentBase</a>&lt;QDockWidget&gt;,
-<a name="l00027"></a>00027                      <span class="keyword">virtual</span> <span class="keyword">public</span> iqtgui::<a class="code" href="classiqtgui_1_1_i_main_window_component.html" title="A common interface for main window component such as dock widget, tool bar and so on...">IMainWindowComponent</a>
+<a name="l00026"></a>00026                      <span class="keyword">public</span> <a class="code" href="classiqtgui_1_1_t_gui_component_base.html" title="Base class for all Qt GUI componentes.">TGuiComponentBase</a>&lt;QDockWidget&gt;,
+<a name="l00027"></a>00027                      <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiqtgui_1_1_i_main_window_component.html" title="A common interface for main window component such as dock widget, tool bar and so on...">IMainWindowComponent</a>
 <a name="l00028"></a>00028 {
 <a name="l00029"></a>00029        Q_OBJECT
 <a name="l00030"></a>00030 <span class="keyword">public</span>:
-<a name="l00031"></a><a class="code" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#aef979c79029ae2042bcf575c6bb38a40">00031</a>        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase&lt;QDockWidget&gt;</a> <a class="code" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#aef979c79029ae2042bcf575c6bb38a40">BaseClass</a>;
+<a name="l00031"></a><a class="code" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#ae9f42586637730d251af855e997331ac">00031</a>        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_gui_component_base.html">TGuiComponentBase&lt;QDockWidget&gt;</a> <a class="code" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#ae9f42586637730d251af855e997331ac">BaseClass</a>;
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_dock_widget_gui_comp.html" title="Wrapper for docking windows for main window.">CDockWidgetGuiComp</a>);
-<a name="l00034"></a>00034               I_REGISTER_INTERFACE(<a class="code" href="classiqtgui_1_1_i_main_window_component.html" title="A common interface for main window component such as dock widget, tool bar and so on...">iqtgui::IMainWindowComponent</a>);
+<a name="l00034"></a>00034               I_REGISTER_INTERFACE(<a class="code" href="classiqtgui_1_1_i_main_window_component.html" title="A common interface for main window component such as dock widget, tool bar and so on...">IMainWindowComponent</a>);
 <a name="l00035"></a>00035               I_ASSIGN(m_slaveGuiCompPtr, <span class="stringliteral">&quot;SlaveGui&quot;</span>, <span class="stringliteral">&quot;Slave GUI for this dock widget&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;SlaveGui&quot;</span>);
 <a name="l00036"></a>00036               I_ASSIGN(m_dockAreaAttrPtr, <span class="stringliteral">&quot;DockArea&quot;</span>, <span class="stringliteral">&quot;Specify the dock area for this widget\n 0 - left\n 1 - right\n 2 - top\n 3 - bottom&quot;</span>, <span class="keyword">false</span>, 0);
 <a name="l00037"></a>00037               I_ASSIGN(m_dockFeaturesAttrPtr, <span class="stringliteral">&quot;DockFeatures&quot;</span>, <span class="stringliteral">&quot;Specify the dock features for this widget\nIt is combination of options:\n 1 - closeable\n 2 - moveable\n 4 - floatable\n 8 - vertical title&quot;</span>, <span class="keyword">false</span>, 0);
 <a name="l00038"></a>00038               I_ASSIGN(m_allowedDockAreasAttrPtr, <span class="stringliteral">&quot;AllowedDockAreas&quot;</span>, <span class="stringliteral">&quot;Specify the allowed dock areas\nIt is combination of options:\n 1 - left\n 2 - right\n 4 - top\n 8 - bottom&quot;</span>, <span class="keyword">false</span>, 0);
 <a name="l00039"></a>00039               I_ASSIGN(m_dockTitleAttrPtr, <span class="stringliteral">&quot;DockTitle&quot;</span>, <span class="stringliteral">&quot;Specify the dock title &quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;DockTitle&quot;</span>);
-<a name="l00040"></a>00040        I_END_COMPONENT;
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042        <span class="comment">// reimplemented (iqtgui::IMainWindowComponent)</span>
-<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#a431c69e3b934c32ee0f47c190bb1145d" title="Add this component to main window.">AddToMainWindow</a>(QMainWindow&amp; mainWindow);
-<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#a2d30fb715b26296c514b67c29dcd3875" title="Remove this component from main window.">RemoveFromMainWindow</a>(QMainWindow&amp; mainWindow);
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046 <span class="keyword">protected</span>:
-<a name="l00047"></a>00047        <span class="comment">// reimplemented (CGuiComponentBase)</span>
-<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#a3f5e4828e58a85727d4f2ddcc46a8b1b" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#affc4c0499d93efb4771ad887f1089704" title="Called just before GUI is released.">OnGuiDestroyed</a>();
-<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#ae34f7d81706ef5396dcd8e5babf6454e" title="Called from widget event filter when GUI should be retranslated.">OnGuiRetranslate</a>();
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052 <span class="keyword">private</span>:
-<a name="l00053"></a>00053        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_slaveGuiCompPtr);
-<a name="l00054"></a>00054        I_ATTR(<span class="keywordtype">int</span>, m_dockAreaAttrPtr);
-<a name="l00055"></a>00055        I_ATTR(<span class="keywordtype">int</span>, m_dockFeaturesAttrPtr);
-<a name="l00056"></a>00056        I_ATTR(<span class="keywordtype">int</span>, m_allowedDockAreasAttrPtr);
-<a name="l00057"></a>00057        I_ATTR(QString, m_dockTitleAttrPtr);
-<a name="l00058"></a>00058 };
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061 } <span class="comment">// namespace iqtgui</span>
-<a name="l00062"></a>00062 
+<a name="l00040"></a>00040               I_ASSIGN(m_associatedDocumentTypeId, <span class="stringliteral">&quot;AssociatedDocumentTypeId&quot;</span>, <span class="stringliteral">&quot;ID of the associated document type ID&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Default&quot;</span>);
+<a name="l00041"></a>00041        I_END_COMPONENT;
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043        <span class="comment">// reimplemented (iqtgui::IMainWindowComponent)</span>
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#a431c69e3b934c32ee0f47c190bb1145d" title="Add this component to main window.">AddToMainWindow</a>(QMainWindow&amp; mainWindow);
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#a2d30fb715b26296c514b67c29dcd3875" title="Remove this component from main window.">RemoveFromMainWindow</a>(QMainWindow&amp; mainWindow);
+<a name="l00046"></a>00046        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#a6cb708851d4e9f9a8d63c4c72f78b02f" title="Get the type ID of the associated document.">GetAssociatedDocumentTypeId</a>() <span class="keyword">const</span>;
+<a name="l00047"></a>00047        <span class="keyword">virtual</span> QString <a class="code" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#a747c6d4df875dea0e85b09665a04025c" title="Get the title of the main window component.">GetTitle</a>() <span class="keyword">const</span>;
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 <span class="keyword">protected</span>:
+<a name="l00050"></a>00050        <span class="comment">// reimplemented (CGuiComponentBase)</span>
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#a3f5e4828e58a85727d4f2ddcc46a8b1b" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#affc4c0499d93efb4771ad887f1089704" title="Called just before GUI is released.">OnGuiDestroyed</a>();
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#ae34f7d81706ef5396dcd8e5babf6454e" title="Called from widget event filter when GUI should be retranslated.">OnGuiRetranslate</a>();
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 <span class="keyword">private</span>:
+<a name="l00056"></a>00056        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_slaveGuiCompPtr);
+<a name="l00057"></a>00057        I_ATTR(<span class="keywordtype">int</span>, m_dockAreaAttrPtr);
+<a name="l00058"></a>00058        I_ATTR(<span class="keywordtype">int</span>, m_dockFeaturesAttrPtr);
+<a name="l00059"></a>00059        I_ATTR(<span class="keywordtype">int</span>, m_allowedDockAreasAttrPtr);
+<a name="l00060"></a>00060        I_ATTR(QString, m_dockTitleAttrPtr);
+<a name="l00061"></a>00061        I_ATTR(QByteArray, m_associatedDocumentTypeId);
+<a name="l00062"></a>00062 };
 <a name="l00063"></a>00063 
-<a name="l00064"></a>00064 <span class="preprocessor">#endif // !iqtgui_CDockWidgetGuiComp_included</span>
-<a name="l00065"></a>00065 <span class="preprocessor"></span>
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065 } <span class="comment">// namespace iqtgui</span>
 <a name="l00066"></a>00066 
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 <span class="preprocessor">#endif // !iqtgui_CDockWidgetGuiComp_included</span>
+<a name="l00069"></a>00069 <span class="preprocessor"></span>
+<a name="l00070"></a>00070 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

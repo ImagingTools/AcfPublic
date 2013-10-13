@@ -68,6 +68,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add this component to main window.  <a href="#a83b645ce1e518f16dd554405194a1c83"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_status_bar_widget_comp.html#a95f80f155dc4bd36bcb27060b340b057">RemoveFromMainWindow</a> (QMainWindow &amp;mainWindow)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove this component from main window.  <a href="#a95f80f155dc4bd36bcb27060b340b057"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_status_bar_widget_comp.html#ac72055d72e2e7af3f321b7378975b3e3">GetAssociatedDocumentTypeId</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type ID of the associated document.  <a href="#ac72055d72e2e7af3f321b7378975b3e3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_status_bar_widget_comp.html#aa722848795ed91a3f0f5719731e9fa69">GetTitle</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the title of the main window component.  <a href="#aa722848795ed91a3f0f5719731e9fa69"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Component for inserting of a widget into a status bar of the application. </p>
@@ -108,6 +112,48 @@ Public Member Functions</h2></td></tr>
 <p>Add this component to main window. </p>
 
 <p>Implements <a class="el" href="classiqtgui_1_1_i_main_window_component.html#a3834e70dd62781859c5d5ffa5db0c8f3">iqtgui::IMainWindowComponent</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac72055d72e2e7af3f321b7378975b3e3"></a><!-- doxytag: member="iqtgui::CStatusBarWidgetComp::GetAssociatedDocumentTypeId" ref="ac72055d72e2e7af3f321b7378975b3e3" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QByteArray iqtgui::CStatusBarWidgetComp::GetAssociatedDocumentTypeId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the type ID of the associated document. </p>
+<p>The main window component will be only shown, if a document with associated type ID is currently active in the application. </p>
+<dl class="note"><dt><b>Note:</b></dt><dd>This method is only used in the context of document-based applications. </dd></dl>
+
+<p>Implements <a class="el" href="classiqtgui_1_1_i_main_window_component.html#a8a1c4e80e31f697bc4663b7d93cac330">iqtgui::IMainWindowComponent</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa722848795ed91a3f0f5719731e9fa69"></a><!-- doxytag: member="iqtgui::CStatusBarWidgetComp::GetTitle" ref="aa722848795ed91a3f0f5719731e9fa69" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString iqtgui::CStatusBarWidgetComp::GetTitle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the title of the main window component. </p>
+
+<p>Implements <a class="el" href="classiqtgui_1_1_i_main_window_component.html#ad0d71cf4369e60022046d769b4a49058">iqtgui::IMainWindowComponent</a>.</p>
 
 </div>
 </div>

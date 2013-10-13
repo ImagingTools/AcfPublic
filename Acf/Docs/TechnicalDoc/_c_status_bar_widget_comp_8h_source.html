@@ -59,23 +59,27 @@
 <a name="l00034"></a>00034        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_status_bar_widget_comp.html" title="Component for inserting of a widget into a status bar of the application.">CStatusBarWidgetComp</a>);
 <a name="l00035"></a>00035               I_REGISTER_INTERFACE(<a class="code" href="classiqtgui_1_1_i_main_window_component.html" title="A common interface for main window component such as dock widget, tool bar and so on...">iqtgui::IMainWindowComponent</a>);
 <a name="l00036"></a>00036               I_ASSIGN_MULTI_0(m_statusBarWidgetsCompPtr, <span class="stringliteral">&quot;StatusBarWidgets&quot;</span>, <span class="stringliteral">&quot;Widgets to place into the status bar of the application&quot;</span>, <span class="keyword">true</span>);
-<a name="l00037"></a>00037        I_END_COMPONENT;
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039        <span class="comment">// reimplemented (iqtgui::IMainWindowComponent)</span>
-<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_status_bar_widget_comp.html#a83b645ce1e518f16dd554405194a1c83" title="Add this component to main window.">AddToMainWindow</a>(QMainWindow&amp; mainWindow);
-<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_status_bar_widget_comp.html#a95f80f155dc4bd36bcb27060b340b057" title="Remove this component from main window.">RemoveFromMainWindow</a>(QMainWindow&amp; mainWindow);
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043 <span class="keyword">private</span>:
-<a name="l00044"></a>00044        I_MULTIREF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_statusBarWidgetsCompPtr);
-<a name="l00045"></a>00045 };
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048 } <span class="comment">// namespace iqtgui</span>
-<a name="l00049"></a>00049 
+<a name="l00037"></a>00037               I_ASSIGN(m_associatedDocumentTypeId, <span class="stringliteral">&quot;AssociatedDocumentTypeId&quot;</span>, <span class="stringliteral">&quot;ID of the associated document type ID&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Default&quot;</span>);
+<a name="l00038"></a>00038        I_END_COMPONENT;
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040        <span class="comment">// reimplemented (iqtgui::IMainWindowComponent)</span>
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_status_bar_widget_comp.html#a83b645ce1e518f16dd554405194a1c83" title="Add this component to main window.">AddToMainWindow</a>(QMainWindow&amp; mainWindow);
+<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_status_bar_widget_comp.html#a95f80f155dc4bd36bcb27060b340b057" title="Remove this component from main window.">RemoveFromMainWindow</a>(QMainWindow&amp; mainWindow);
+<a name="l00043"></a>00043        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiqtgui_1_1_c_status_bar_widget_comp.html#ac72055d72e2e7af3f321b7378975b3e3" title="Get the type ID of the associated document.">GetAssociatedDocumentTypeId</a>() <span class="keyword">const</span>;
+<a name="l00044"></a>00044        <span class="keyword">virtual</span> QString <a class="code" href="classiqtgui_1_1_c_status_bar_widget_comp.html#aa722848795ed91a3f0f5719731e9fa69" title="Get the title of the main window component.">GetTitle</a>() <span class="keyword">const</span>;
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 <span class="keyword">private</span>:
+<a name="l00047"></a>00047        I_MULTIREF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_statusBarWidgetsCompPtr);
+<a name="l00048"></a>00048        I_ATTR(QByteArray, m_associatedDocumentTypeId);
+<a name="l00049"></a>00049 };
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051 <span class="preprocessor">#endif // !iqtgui_CStatusBarWidgetGuiComp_included</span>
-<a name="l00052"></a>00052 <span class="preprocessor"></span>
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 } <span class="comment">// namespace iqtgui</span>
 <a name="l00053"></a>00053 
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 <span class="preprocessor">#endif // !iqtgui_CStatusBarWidgetGuiComp_included</span>
+<a name="l00056"></a>00056 <span class="preprocessor"></span>
+<a name="l00057"></a>00057 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

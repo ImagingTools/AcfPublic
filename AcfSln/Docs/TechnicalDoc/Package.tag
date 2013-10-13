@@ -8635,6 +8635,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
+      <type></type>
+      <name>CEdgeLine</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>ac0e5538f54ccecef2f35b5c66d58616b</anchor>
+      <arglist>(const CEdgeLine &amp;edgeLine)</arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>Clear</name>
       <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>

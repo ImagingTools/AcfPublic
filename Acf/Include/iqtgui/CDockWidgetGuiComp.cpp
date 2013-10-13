@@ -31,6 +31,7 @@
 #else
 #include <QtGui/QMainWindow>
 #include <QtGui/QVBoxLayout>
+#include <QtGui/QAction>
 #endif
 
 
@@ -96,6 +97,30 @@ bool CDockWidgetGuiComp::RemoveFromMainWindow(QMainWindow& /*mainWindow*/)
 }
 
 
+QByteArray CDockWidgetGuiComp::GetAssociatedDocumentTypeId() const
+{
+	static QByteArray emptyId;
+
+	if (m_associatedDocumentTypeId.IsValid()){
+		return *m_associatedDocumentTypeId;
+	}
+
+	return emptyId;
+}
+
+
+QString CDockWidgetGuiComp::GetTitle() const
+{
+	static QString emptyTitle;
+
+	if (m_dockTitleAttrPtr.IsValid()){
+		return *m_dockTitleAttrPtr;
+	}
+
+	return emptyTitle;
+}
+
+
 // protected methods
 
 // reimplemented (CGuiComponentBase)
@@ -106,6 +131,11 @@ void CDockWidgetGuiComp::OnGuiCreated()
 
 	QDockWidget* dockWidgetPtr = GetQtWidget();
 	Q_ASSERT(dockWidgetPtr != NULL);
+
+	QAction* toggleViewAction = dockWidgetPtr->toggleViewAction();
+	if (toggleViewAction != NULL){
+		toggleViewAction->setVisible(false);
+	}
 
 	if (m_dockTitleAttrPtr.IsValid()){
 		dockWidgetPtr->setWindowTitle(*m_dockTitleAttrPtr);

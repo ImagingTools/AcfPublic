@@ -34,6 +34,7 @@
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-types">Protected Types</a> &#124;
 <a href="#pro-slots">Protected Slots</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a>  </div>
@@ -78,11 +79,17 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#ac9989e751fd3aab8360af01bce735f04">CSimpleMainWindowGuiComp</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#a0ac1b556080cb7f1e383727c0c2fe1f1">OnTryClose</a> (bool *ignoredPtr=NULL)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on trying to close application.  <a href="#a0ac1b556080cb7f1e383727c0c2fe1f1"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-types"></a>
+Protected Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QMap<br class="typebreak"/>
+&lt; <a class="el" href="classiqtgui_1_1_i_main_window_component.html">iqtgui::IMainWindowComponent</a> <br class="typebreak"/>
+*, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#ac1bf50e3fe7e368229ce1a6a6ee8dfa9">MainComponentVisibilityMap</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#a17c7bf3c34a529b36e8c812d4ddc91e4">OnShowToolbars</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#abc8d1cb7622785cc743dbad1719a82d6">OnSettings</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#af7d72fd382158a5717444c298311ce33">OnAbout</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#abc8d1cb7622785cc743dbad1719a82d6">OnSettings</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#a8af9bae096c8c9e5418ead29b9883cb6">OnShowOtherCommandTriggered</a> (bool enabled)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#ad8926b933173beed1d45f04b0a1dcad6">UpdateMenuActions</a> ()</td></tr>
@@ -106,13 +113,15 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just before GUI is released.  <a href="#a493cd92f664380729db892e1943e4cd6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#af945677d33a6a50d1b32f3b759c10198">OnRetranslate</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when non-GUI elements (like commands) should be retranslated.  <a href="#af945677d33a6a50d1b32f3b759c10198"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#a5b5eb20b30b78dad0eb25d0391e0c7d0">eventFilter</a> (QObject *sourcePtr, QEvent *eventPtr)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">CommandsObserver&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#a1f384daa61609986c8a0dc5b57d751e4">m_commandsObserver</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#ac1bf50e3fe7e368229ce1a6a6ee8dfa9">MainComponentVisibilityMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#a59321f03dc35a47d18e79503d0ff34cb">m_mainComponentVisibilityMap</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html#l00031">31</a> of file <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html">CSimpleMainWindowGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html#l00029">29</a> of file <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html">CSimpleMainWindowGuiComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a3ab0ae18afcd5903bd6ed541d4ae6bcd"></a><!-- doxytag: member="iqtgui::CSimpleMainWindowGuiComp::BaseClass" ref="a3ab0ae18afcd5903bd6ed541d4ae6bcd" args="" -->
 <div class="memitem">
@@ -129,7 +138,22 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aecf2f458ff3df45054a225b864e383a0">iqtdoc::CMainWindowGuiComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html#l00038">38</a> of file <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html">CSimpleMainWindowGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html#l00036">36</a> of file <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html">CSimpleMainWindowGuiComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac1bf50e3fe7e368229ce1a6a6ee8dfa9"></a><!-- doxytag: member="iqtgui::CSimpleMainWindowGuiComp::MainComponentVisibilityMap" ref="ac1bf50e3fe7e368229ce1a6a6ee8dfa9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef QMap&lt;<a class="el" href="classiqtgui_1_1_i_main_window_component.html">iqtgui::IMainWindowComponent</a>*, bool &gt; <a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#ac1bf50e3fe7e368229ce1a6a6ee8dfa9">iqtgui::CSimpleMainWindowGuiComp::MainComponentVisibilityMap</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html#l00118">118</a> of file <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html">CSimpleMainWindowGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -153,7 +177,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a37f570cb3786da9479dbb3ced2083621">iqtdoc::CMainWindowGuiComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html#l00055">55</a> of file <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html">CSimpleMainWindowGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html#l00053">53</a> of file <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html">CSimpleMainWindowGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -221,6 +245,37 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5b5eb20b30b78dad0eb25d0391e0c7d0"></a><!-- doxytag: member="iqtgui::CSimpleMainWindowGuiComp::eventFilter" ref="a5b5eb20b30b78dad0eb25d0391e0c7d0" args="(QObject *sourcePtr, QEvent *eventPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iqtgui::CSimpleMainWindowGuiComp::eventFilter </td>
+          <td>(</td>
+          <td class="paramtype">QObject *&#160;</td>
+          <td class="paramname"><em>sourcePtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QEvent *&#160;</td>
+          <td class="paramname"><em>eventPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#af7d034ff8f69f4102e8df829f71802f5">iqtgui::CGuiComponentBase</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classiqtdoc_1_1_c_main_window_gui_comp.html#aa8fe69479358817729eb1112e7b2cdf0">iqtdoc::CMainWindowGuiComp</a>.</p>
 
 </div>
 </div>
@@ -416,6 +471,23 @@ Protected Attributes</h2></td></tr>
           <td class="memname">void iqtgui::CSimpleMainWindowGuiComp::OnSettings </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td><code> [protected, slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8af9bae096c8c9e5418ead29b9883cb6"></a><!-- doxytag: member="iqtgui::CSimpleMainWindowGuiComp::OnShowOtherCommandTriggered" ref="a8af9bae096c8c9e5418ead29b9883cb6" args="(bool enabled)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iqtgui::CSimpleMainWindowGuiComp::OnShowOtherCommandTriggered </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
           <td><code> [protected, slot]</code></td>
         </tr>
       </table>
@@ -655,7 +727,22 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html#l00114">114</a> of file <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html">CSimpleMainWindowGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html#l00116">116</a> of file <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html">CSimpleMainWindowGuiComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a59321f03dc35a47d18e79503d0ff34cb"></a><!-- doxytag: member="iqtgui::CSimpleMainWindowGuiComp::m_mainComponentVisibilityMap" ref="a59321f03dc35a47d18e79503d0ff34cb" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#ac1bf50e3fe7e368229ce1a6a6ee8dfa9">MainComponentVisibilityMap</a> <a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#a59321f03dc35a47d18e79503d0ff34cb">iqtgui::CSimpleMainWindowGuiComp::m_mainComponentVisibilityMap</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html#l00120">120</a> of file <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html">CSimpleMainWindowGuiComp.h</a>.</p>
 
 </div>
 </div>

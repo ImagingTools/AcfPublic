@@ -66,15 +66,18 @@ Inheritance diagram for iqtgui::CDockWidgetGuiComp:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase</a><br class="typebreak"/>
-&lt; QDockWidget &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#aef979c79029ae2042bcf575c6bb38a40">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiqtgui_1_1_t_gui_component_base.html">TGuiComponentBase</a><br class="typebreak"/>
+&lt; QDockWidget &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#ae9f42586637730d251af855e997331ac">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#a431c69e3b934c32ee0f47c190bb1145d">AddToMainWindow</a> (QMainWindow &amp;mainWindow)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add this component to main window.  <a href="#a431c69e3b934c32ee0f47c190bb1145d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#a2d30fb715b26296c514b67c29dcd3875">RemoveFromMainWindow</a> (QMainWindow &amp;mainWindow)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove this component from main window.  <a href="#a2d30fb715b26296c514b67c29dcd3875"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#a6cb708851d4e9f9a8d63c4c72f78b02f">GetAssociatedDocumentTypeId</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type ID of the associated document.  <a href="#a6cb708851d4e9f9a8d63c4c72f78b02f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#a747c6d4df875dea0e85b09665a04025c">GetTitle</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the title of the main window component.  <a href="#a747c6d4df875dea0e85b09665a04025c"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#a3f5e4828e58a85727d4f2ddcc46a8b1b">OnGuiCreated</a> ()</td></tr>
@@ -89,12 +92,12 @@ Protected Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_dock_widget_gui_comp_8h_source.html#l00025">25</a> of file <a class="el" href="_c_dock_widget_gui_comp_8h_source.html">CDockWidgetGuiComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="aef979c79029ae2042bcf575c6bb38a40"></a><!-- doxytag: member="iqtgui::CDockWidgetGuiComp::BaseClass" ref="aef979c79029ae2042bcf575c6bb38a40" args="" -->
+<a class="anchor" id="ae9f42586637730d251af855e997331ac"></a><!-- doxytag: member="iqtgui::CDockWidgetGuiComp::BaseClass" ref="ae9f42586637730d251af855e997331ac" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase</a>&lt;QDockWidget&gt; <a class="el" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#aef979c79029ae2042bcf575c6bb38a40">iqtgui::CDockWidgetGuiComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="classiqtgui_1_1_t_gui_component_base.html">TGuiComponentBase</a>&lt;QDockWidget&gt; <a class="el" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#ae9f42586637730d251af855e997331ac">iqtgui::CDockWidgetGuiComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
@@ -125,6 +128,48 @@ Protected Member Functions</h2></td></tr>
 <p>Add this component to main window. </p>
 
 <p>Implements <a class="el" href="classiqtgui_1_1_i_main_window_component.html#a3834e70dd62781859c5d5ffa5db0c8f3">iqtgui::IMainWindowComponent</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6cb708851d4e9f9a8d63c4c72f78b02f"></a><!-- doxytag: member="iqtgui::CDockWidgetGuiComp::GetAssociatedDocumentTypeId" ref="a6cb708851d4e9f9a8d63c4c72f78b02f" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QByteArray iqtgui::CDockWidgetGuiComp::GetAssociatedDocumentTypeId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the type ID of the associated document. </p>
+<p>The main window component will be only shown, if a document with associated type ID is currently active in the application. </p>
+<dl class="note"><dt><b>Note:</b></dt><dd>This method is only used in the context of document-based applications. </dd></dl>
+
+<p>Implements <a class="el" href="classiqtgui_1_1_i_main_window_component.html#a8a1c4e80e31f697bc4663b7d93cac330">iqtgui::IMainWindowComponent</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a747c6d4df875dea0e85b09665a04025c"></a><!-- doxytag: member="iqtgui::CDockWidgetGuiComp::GetTitle" ref="a747c6d4df875dea0e85b09665a04025c" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString iqtgui::CDockWidgetGuiComp::GetTitle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the title of the main window component. </p>
+
+<p>Implements <a class="el" href="classiqtgui_1_1_i_main_window_component.html#ad0d71cf4369e60022046d769b4a49058">iqtgui::IMainWindowComponent</a>.</p>
 
 </div>
 </div>
