@@ -48,12 +48,12 @@
 <a name="l00022"></a>00022 
 <a name="l00023"></a>00023 
 <a name="l00030"></a><a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html">00030</a> <span class="keyword">class </span><a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html" title="Implementation of value supplier returning position on the image.">CPositionFromImageSupplierComp</a>:
-<a name="l00031"></a>00031                      <span class="keyword">public</span> iproc::TSupplierCompWrap&lt;imath::CVarVector&gt;,
+<a name="l00031"></a>00031                      <span class="keyword">public</span> iproc::TSupplierCompWrap&lt; istd::TDelPtr&lt;imeas::INumericValue&gt; &gt;,
 <a name="l00032"></a>00032                      <span class="keyword">virtual</span> <span class="keyword">public</span> imeas::INumericValueProvider,
 <a name="l00033"></a>00033                      <span class="keyword">virtual</span> <span class="keyword">public</span> i2d::ICalibrationProvider
 <a name="l00034"></a>00034 {
 <a name="l00035"></a>00035 <span class="keyword">public</span>:
-<a name="l00036"></a><a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html#ab187d64547bef3091dba6aa44b96dc37">00036</a>        <span class="keyword">typedef</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html">iproc::TSupplierCompWrap&lt;imath::CVarVector&gt;</a> <a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html#ab187d64547bef3091dba6aa44b96dc37">BaseClass</a>;
+<a name="l00036"></a><a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html#a3e002dd32b58421c16923f0ed442f03d">00036</a>        <span class="keyword">typedef</span> <a class="code" href="classiproc_1_1_t_supplier_comp_wrap.html" title="Standard implementation of interface iproc::ISupplier with preparation for component implementation...">iproc::TSupplierCompWrap&lt; istd::TDelPtr&lt;imeas::INumericValue&gt;</a> &gt; <a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html#a3e002dd32b58421c16923f0ed442f03d">BaseClass</a>;
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038        I_BEGIN_COMPONENT(<a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html" title="Implementation of value supplier returning position on the image.">CPositionFromImageSupplierComp</a>);
 <a name="l00039"></a>00039               I_REGISTER_INTERFACE(<a class="code" href="classimeas_1_1_i_numeric_value_provider.html" title="Provide access to the list of the numeric values.">imeas::INumericValueProvider</a>);
@@ -74,7 +74,7 @@
 <a name="l00054"></a>00054 
 <a name="l00055"></a>00055 <span class="keyword">protected</span>:
 <a name="l00056"></a>00056        <span class="comment">// reimplemented (iproc::TSupplierCompWrap)</span>
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html#a89dd14a9a7d2172a71d58101aec62f18" title="Produce single object.">ProduceObject</a>(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a>&amp; result) <span class="keyword">const</span>;
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html#abda766e5d0e2f17eb539c2b7de575231">ProduceObject</a>(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">ProductType</a>&amp; result) <span class="keyword">const</span>;
 <a name="l00058"></a>00058 
 <a name="l00059"></a>00059        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
 <a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiipr_1_1_c_position_from_image_supplier_comp.html#a59c8e8cd4b452ab79c986998f3dd0542">OnComponentCreated</a>();
@@ -91,21 +91,22 @@
 <a name="l00071"></a>00071        <span class="keyword">class </span>Position: <span class="keyword">public</span> imeas::CSimpleNumericValue
 <a name="l00072"></a>00072        {
 <a name="l00073"></a>00073        <span class="keyword">public</span>:
-<a name="l00074"></a>00074               <span class="comment">// reimplemented (imeas::INumericValue)</span>
-<a name="l00075"></a>00075               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> IsValueTypeSupported(ValueTypeId valueTypeId) <span class="keyword">const</span>;
-<a name="l00076"></a>00076               <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> GetComponentValue(ValueTypeId valueTypeId) <span class="keyword">const</span>;
-<a name="l00077"></a>00077        };
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079        <span class="keyword">mutable</span> Position m_position;
-<a name="l00080"></a>00080 };
-<a name="l00081"></a>00081 
+<a name="l00074"></a>00074               Position(){}
+<a name="l00075"></a>00075               Position(<span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a>&amp; positionVector);
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077               <span class="comment">// reimplemented (imeas::INumericValue)</span>
+<a name="l00078"></a>00078               <span class="keyword">virtual</span> <span class="keywordtype">bool</span> IsValueTypeSupported(ValueTypeId valueTypeId) <span class="keyword">const</span>;
+<a name="l00079"></a>00079               <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimath_1_1_c_var_vector.html">imath::CVarVector</a> GetComponentValue(ValueTypeId valueTypeId) <span class="keyword">const</span>;
+<a name="l00080"></a>00080        };
+<a name="l00081"></a>00081 };
 <a name="l00082"></a>00082 
-<a name="l00083"></a>00083 } <span class="comment">// namespace iipr</span>
-<a name="l00084"></a>00084 
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084 } <span class="comment">// namespace iipr</span>
 <a name="l00085"></a>00085 
-<a name="l00086"></a>00086 <span class="preprocessor">#endif // !iipr_CPositionFromImageSupplierComp_included</span>
-<a name="l00087"></a>00087 <span class="preprocessor"></span>
-<a name="l00088"></a>00088 
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087 <span class="preprocessor">#endif // !iipr_CPositionFromImageSupplierComp_included</span>
+<a name="l00088"></a>00088 <span class="preprocessor"></span>
+<a name="l00089"></a>00089 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

@@ -72,53 +72,57 @@
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047        <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#ada57267820c20e102cc354fa63f5a08f">CSearchBasedFeaturesSupplierGuiComp</a>();
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049 <span class="keyword">protected</span> Q_SLOTS:
-<a name="l00050"></a>00050        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a217441d92d511901d3c0a8742d3bd83c">on_TestButton_clicked</a>();
-<a name="l00051"></a>00051        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a7b355ab82eb84ef5adf68e974df7397d">on_LoadParamsButton_clicked</a>();
-<a name="l00052"></a>00052        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a7bf25c1f1f62003be3ff7ec952b1221a">on_SaveParamsButton_clicked</a>();
+<a name="l00049"></a>00049 <span class="keyword">protected</span>:
+<a name="l00050"></a>00050        <span class="comment">// reimplemented (iqtinsp::TSupplierGuiCompBase)</span>
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#ad7b8b0d008c667d2800cc4eca638c348" title="Get parameters widget object.">GetParamsWidget</a>() <span class="keyword">const</span>;
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a6ba0171a9013a0b5ffbd4ef6490c09e1" title="Method will be called every time if the parameter set of the supplier has been changed.">OnSupplierParamsChanged</a>();
 <a name="l00053"></a>00053 
-<a name="l00054"></a>00054 <span class="keyword">protected</span>:
-<a name="l00055"></a>00055        <span class="comment">// reimplemented (iqtinsp::TSupplierGuiCompBase)</span>
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> QWidget* <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#ad7b8b0d008c667d2800cc4eca638c348" title="Get parameters widget object.">GetParamsWidget</a>() <span class="keyword">const</span>;
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a6ba0171a9013a0b5ffbd4ef6490c09e1" title="Method will be called every time if the parameter set of the supplier has been changed.">OnSupplierParamsChanged</a>();
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059        <span class="comment">// reimplemented (iqt2d::IViewExtender)</span>
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a5a952165d7d8cc75974405429534c088">AddItemsToScene</a>(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a>* providerPtr, <span class="keywordtype">int</span> flags);
-<a name="l00061"></a>00061        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a4fecb0821802b3f9c708868034195019">RemoveItemsFromScene</a>(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a>* providerPtr);
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#af3ffb4548b31f53e48a94d936375ca43">OnGuiModelAttached</a>();
-<a name="l00065"></a>00065        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a5b0ba931a51005936119096efb7011d3">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067        <span class="comment">// reimplemented (iqtgui::IGuiObject)</span>
-<a name="l00068"></a>00068        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#ab089ac6d27dc53727f46ea0596f58e8e">OnGuiCreated</a>();
-<a name="l00069"></a>00069        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a20bd4d8c4def46cb7cf5749235e71012">OnGuiHidden</a>();
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071        <span class="comment">// reimplemented (icomp::IComponentBase)</span>
-<a name="l00072"></a>00072        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#af9d2735f53f3df11fa336ad78dcc827b">OnComponentDestroyed</a>();
-<a name="l00073"></a>00073 
-<a name="l00074"></a>00074 <span class="keyword">private</span>:
-<a name="l00075"></a>00075        <span class="keywordtype">void</span> ConnectShapes(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiview_1_1_i_shape_view.html">iview::IShapeView</a>&amp; view);
-<a name="l00076"></a>00076        <span class="keywordtype">void</span> DisconnectShapes(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiview_1_1_i_shape_view.html">iview::IShapeView</a>&amp; view);
+<a name="l00054"></a>00054        <span class="comment">// reimplemented (iqt2d::IViewExtender)</span>
+<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a5a952165d7d8cc75974405429534c088">AddItemsToScene</a>(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a>* providerPtr, <span class="keywordtype">int</span> flags);
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a4fecb0821802b3f9c708868034195019">RemoveItemsFromScene</a>(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqt2d_1_1_i_view_provider.html">iqt2d::IViewProvider</a>* providerPtr);
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#af3ffb4548b31f53e48a94d936375ca43">OnGuiModelAttached</a>();
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a5b0ba931a51005936119096efb7011d3">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062        <span class="comment">// reimplemented (iqtgui::IGuiObject)</span>
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#ab089ac6d27dc53727f46ea0596f58e8e">OnGuiCreated</a>();
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a20bd4d8c4def46cb7cf5749235e71012">OnGuiHidden</a>();
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066        <span class="comment">// reimplemented (icomp::IComponentBase)</span>
+<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#af9d2735f53f3df11fa336ad78dcc827b">OnComponentDestroyed</a>();
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069 <span class="keyword">protected</span> Q_SLOTS:
+<a name="l00070"></a>00070        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a54945bb340a2bd9e998193cdb78843c0">OnAutoTest</a>();
+<a name="l00071"></a>00071        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a217441d92d511901d3c0a8742d3bd83c">on_TestButton_clicked</a>();
+<a name="l00072"></a>00072        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a7b355ab82eb84ef5adf68e974df7397d">on_LoadParamsButton_clicked</a>();
+<a name="l00073"></a>00073        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a7bf25c1f1f62003be3ff7ec952b1221a">on_SaveParamsButton_clicked</a>();
+<a name="l00074"></a>00074 
+<a name="l00075"></a>00075 Q_SIGNALS:
+<a name="l00076"></a>00076        <span class="keywordtype">void</span> <a class="code" href="classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html#a15f303b32448f8bd63b8da7b997831c9">DoAutoTest</a>();
 <a name="l00077"></a>00077 
 <a name="l00078"></a>00078 <span class="keyword">private</span>:
-<a name="l00079"></a>00079        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_intermediateResultsGuiCompPtr);
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081        <span class="comment">// result shapes</span>
-<a name="l00082"></a>00082        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/structiview_1_1_t_circle_visual_object.html">iview::TCircleVisualObject&lt;&gt;</a> VisualObject;
-<a name="l00083"></a>00083        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;VisualObject&gt;</a> VisualObjects;
-<a name="l00084"></a>00084        VisualObjects m_visualPositions;
-<a name="l00085"></a>00085 
-<a name="l00086"></a>00086        <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiview_1_1_i_shape_view.html">iview::IShapeView</a>* m_lastViewPtr;
-<a name="l00087"></a>00087 };
-<a name="l00088"></a>00088 
+<a name="l00079"></a>00079        <span class="keywordtype">void</span> ConnectShapes(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiview_1_1_i_shape_view.html">iview::IShapeView</a>&amp; view);
+<a name="l00080"></a>00080        <span class="keywordtype">void</span> DisconnectShapes(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiview_1_1_i_shape_view.html">iview::IShapeView</a>&amp; view);
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 <span class="keyword">private</span>:
+<a name="l00083"></a>00083        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a>, m_intermediateResultsGuiCompPtr);
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085        <span class="comment">// result shapes</span>
+<a name="l00086"></a>00086        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/structiview_1_1_t_circle_visual_object.html">iview::TCircleVisualObject&lt;&gt;</a> VisualObject;
+<a name="l00087"></a>00087        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_t_pointer_vector.html">istd::TPointerVector&lt;VisualObject&gt;</a> VisualObjects;
+<a name="l00088"></a>00088        VisualObjects m_visualPositions;
 <a name="l00089"></a>00089 
-<a name="l00090"></a>00090 } <span class="comment">// namespace iqtipr</span>
-<a name="l00091"></a>00091 
+<a name="l00090"></a>00090        <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiview_1_1_i_shape_view.html">iview::IShapeView</a>* m_lastViewPtr;
+<a name="l00091"></a>00091 };
 <a name="l00092"></a>00092 
-<a name="l00093"></a>00093 <span class="preprocessor">#endif // !iqtipr_CSearchBasedFeaturesSupplierGuiComp_included</span>
-<a name="l00094"></a>00094 <span class="preprocessor"></span>
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094 } <span class="comment">// namespace iqtipr</span>
 <a name="l00095"></a>00095 
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097 <span class="preprocessor">#endif // !iqtipr_CSearchBasedFeaturesSupplierGuiComp_included</span>
+<a name="l00098"></a>00098 <span class="preprocessor"></span>
+<a name="l00099"></a>00099 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

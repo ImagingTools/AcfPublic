@@ -89,7 +89,7 @@ private:
 	bool IsInternalDataLocked() const;
 	void LockInternalData();
 	void UnlockInternalData();
-	void CleanupDetachedObservers();
+	void CleanupObserverState();
 
 private:
 	/**
@@ -97,11 +97,6 @@ private:
 	*/
 	enum AttachingState
 	{
-		/**
-			No state
-		*/
-		AS_NONE = 0,
-		
 		/**
 			Observer is being to attached.
 		*/

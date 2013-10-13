@@ -37,28 +37,9 @@ namespace iqtipr
 
 
 CSearchBasedFeaturesSupplierGuiComp::CSearchBasedFeaturesSupplierGuiComp()
-	:m_lastViewPtr(NULL)
+:	m_lastViewPtr(NULL)
 {
-}
-
-
-// protected slots
-
-void CSearchBasedFeaturesSupplierGuiComp::on_TestButton_clicked()
-{
-	DoTest();
-}
-
-
-void CSearchBasedFeaturesSupplierGuiComp::on_LoadParamsButton_clicked()
-{
-	LoadParams();
-}
-
-
-void CSearchBasedFeaturesSupplierGuiComp::on_SaveParamsButton_clicked()
-{
-	SaveParams();
+	connect(this, SIGNAL(DoAutoTest()), SLOT(OnAutoTest()), Qt::QueuedConnection);
 }
 
 
@@ -77,7 +58,7 @@ QWidget* CSearchBasedFeaturesSupplierGuiComp::GetParamsWidget() const
 void CSearchBasedFeaturesSupplierGuiComp::OnSupplierParamsChanged()
 {
 	if (IsGuiCreated() && AutoTestButton->isChecked()){
-		DoTest();
+		emit DoAutoTest();
 	}
 }
 
@@ -227,6 +208,32 @@ void CSearchBasedFeaturesSupplierGuiComp::OnComponentDestroyed()
 	m_paramsObserver.EnsureModelDetached();
 
 	BaseClass::OnComponentDestroyed();
+}
+
+
+// protected slots
+
+void CSearchBasedFeaturesSupplierGuiComp::OnAutoTest()
+{
+	DoTest();
+}
+
+
+void CSearchBasedFeaturesSupplierGuiComp::on_TestButton_clicked()
+{
+	DoTest();
+}
+
+
+void CSearchBasedFeaturesSupplierGuiComp::on_LoadParamsButton_clicked()
+{
+	LoadParams();
+}
+
+
+void CSearchBasedFeaturesSupplierGuiComp::on_SaveParamsButton_clicked()
+{
+	SaveParams();
 }
 
 

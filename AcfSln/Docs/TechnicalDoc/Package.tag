@@ -13540,8 +13540,8 @@
       <type>void</type>
       <name>AddProjectionResultsToRays</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>a17e1c0a268021652bbce1869e841d1c2</anchor>
-      <arglist>(const i2d::CLine2d &amp;projectionLine, const iprm::IParamsSet &amp;params, const imeas::INumericValueProvider &amp;container, Rays &amp;inRays, Rays &amp;outRays, const i2d::ICalibration2d *calibrationPtr)</arglist>
+      <anchor>ac5e5517c6b65da98ef9021bf386a5a0a</anchor>
+      <arglist>(const i2d::CLine2d &amp;projectionLine, const iprm::IParamsSet &amp;params, const imeas::INumericValueProvider &amp;container, Rays &amp;inRays, Rays &amp;outRays)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -15188,14 +15188,14 @@
   <compound kind="class">
     <name>iipr::CPositionFromImageSupplierComp</name>
     <filename>classiipr_1_1_c_position_from_image_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; imath::CVarVector &gt;</base>
+    <base>TSupplierCompWrap&lt; istd::TDelPtr&lt; imeas::INumericValue &gt; &gt;</base>
     <base virtualness="virtual">imeas::INumericValueProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; imath::CVarVector &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; istd::TDelPtr&lt; imeas::INumericValue &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
-      <anchor>ab187d64547bef3091dba6aa44b96dc37</anchor>
+      <anchor>a3e002dd32b58421c16923f0ed442f03d</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -15237,8 +15237,8 @@
       <type>virtual int</type>
       <name>ProduceObject</name>
       <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
-      <anchor>a89dd14a9a7d2172a71d58101aec62f18</anchor>
-      <arglist>(imath::CVarVector &amp;result) const </arglist>
+      <anchor>abda766e5d0e2f17eb539c2b7de575231</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -20149,6 +20149,13 @@
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetDiagnosticName</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a2b4f295d9b0e1bc9644f2e20145f2b10</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>AddMessage</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
@@ -24267,11 +24274,25 @@
       <anchor>ae08774f52b192b30c9f8cfaa2fd6f988</anchor>
       <arglist></arglist>
     </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>DoAutoTest</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a15f303b32448f8bd63b8da7b997831c9</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CSearchBasedFeaturesSupplierGuiComp</name>
       <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
       <anchor>ada57267820c20e102cc354fa63f5a08f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnAutoTest</name>
+      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
+      <anchor>a54945bb340a2bd9e998193cdb78843c0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
