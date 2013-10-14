@@ -86,9 +86,6 @@ protected:
 private:
 	CModelBase(const CModelBase& modelBase);
 
-	bool IsInternalDataLocked() const;
-	void LockInternalData();
-	void UnlockInternalData();
 	void CleanupObserverState();
 
 private:
@@ -121,7 +118,14 @@ private:
 	typedef QMap<IObserver*, AttachingState> ObserversMap;
 	ObserversMap m_observers;
 
-	bool m_areObserversLocked;
+	enum NotifyState
+	{
+		NS_NONE,
+		NS_SENDING_BEFORE,
+		NS_UPDATE,
+		NS_SENDING_AFTER
+	};
+	NotifyState m_notifyState;
 };
 
 

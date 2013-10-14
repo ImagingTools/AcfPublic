@@ -33,7 +33,7 @@ namespace imod
 
 
 CModelBase::CModelBase()
-	:m_areObserversLocked(false)
+:	m_notifyState(NS_NONE)
 {
 }
 
@@ -46,7 +46,7 @@ CModelBase::~CModelBase()
 
 int CModelBase::GetObserverCount() const
 {
-	return int(m_observers.size());
+	return m_observers.size();
 }
 
 
@@ -60,6 +60,9 @@ CModelBase::Observers CModelBase::GetObservers() const
 
 bool CModelBase::AttachObserver(IObserver* observerPtr)
 {
+	Q_ASSERT(m_notifyState != NS_SENDING_BEFORE);
+	Q_ASSERT(m_notifyState != NS_SENDING_AFTER);
+
 	if (observerPtr == NULL){
 		return false;
 	}
@@ -75,9 +78,11 @@ bool CModelBase::AttachObserver(IObserver* observerPtr)
 	state = AS_ATTACHING;
 
 	if (observerPtr->OnAttached(this)){
-		if (!IsInternalDataLocked()){
-			state = AS_ATTACHED;
+		if (m_notifyState > NS_NONE){
+			observerPtr->BeforeUpdate(this, 0, NULL);
 		}
+
+		state = AS_ATTACHED;
 
 		return true;
 	}
@@ -112,7 +117,7 @@ void CModelBase::DetachObserver(IObserver* observerPtr)
 	
 	state = AS_DETACHED;
 
-	if (!IsInternalDataLocked()){
+	if (m_notifyState == NS_NONE){
 		m_observers.erase(findIter);
 	}
 }
@@ -158,7 +163,7 @@ bool CModelBase::IsAttached(const IObserver* observerPtr) const
 
 void CModelBase::NotifyBeforeUpdate(int updateFlags, istd::IPolymorphic* updateParamsPtr)
 {
-	LockInternalData();
+	m_notifyState = NS_SENDING_BEFORE;
 
 	for (ObserversMap::ConstIterator iter = m_observers.constBegin(); iter != m_observers.constEnd(); ++iter){
 		const AttachingState& state = iter.value();
@@ -169,11 +174,15 @@ void CModelBase::NotifyBeforeUpdate(int updateFlags, istd::IPolymorphic* updateP
 			observerPtr->BeforeUpdate(this, updateFlags, updateParamsPtr);
 		}
 	}
+
+	m_notifyState = NS_UPDATE;
 }
 
 
 void CModelBase::NotifyAfterUpdate(int updateFlags, istd::IPolymorphic* updateParamsPtr)
 {
+	m_notifyState = NS_SENDING_AFTER;
+
 	for (ObserversMap::ConstIterator iter = m_observers.constBegin(); iter != m_observers.constEnd(); ++iter){
 		const AttachingState& state = iter.value();
 
@@ -184,7 +193,9 @@ void CModelBase::NotifyAfterUpdate(int updateFlags, istd::IPolymorphic* updatePa
 		}
 	}
 
-	UnlockInternalData();
+	CleanupObserverState();
+
+	m_notifyState = NS_NONE;
 }
 
 
@@ -192,26 +203,6 @@ void CModelBase::NotifyAfterUpdate(int updateFlags, istd::IPolymorphic* updatePa
 
 CModelBase::CModelBase(const CModelBase& /*modelBase*/)
 {
-}
-
-
-bool CModelBase::IsInternalDataLocked() const
-{
-	return m_areObserversLocked;
-}
-
-
-void CModelBase::LockInternalData()
-{
-	m_areObserversLocked = true;
-}
-
-
-void CModelBase::UnlockInternalData()
-{
-	CleanupObserverState();
-
-	m_areObserversLocked = false;
 }
 
 
@@ -225,9 +216,6 @@ void CModelBase::CleanupObserverState()
 			iter = m_observers.erase(iter);
 
 			continue;
-		}
-		else if (state == AS_ATTACHING){
-			state = AS_ATTACHED;
 		}
 
 		++iter;
