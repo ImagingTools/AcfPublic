@@ -74,11 +74,9 @@ Inheritance diagram for i2d::CCalibration2dProxyComp:</div>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#afcea2322ac14ad36950af9b66b7d36d5">BaseClass</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classimod_1_1_c_multi_model_bridge_base.html">imod::CMultiModelBridgeBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#ac970f9d3304432afca20dbf41e9e6439">BaseClass2</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#a51b8f1608fa90f18cd567784fd2d9903">I_ASSIGN_TO</a> (m_calibrationProviderModelCompPtr, m_calibrationProviderCompPtr, false)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#a438b1d7da4cdc9e4fb7610bfe4c87232">CCalibration2dProxyComp</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#ac3cebb0b1f631ef198ef2123d1af68a8">I_ASSIGN_TO</a> (m_calibrationProviderModelCompPtr, m_calibrationProviderCompPtr, true)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classimath_1_1_i_unit_info.html">imath::IUnitInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#a474e08f497aa445f36c17f6242db1d40">GetArgumentUnitInfo</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get unit description of calibration input (transformation function argument).  <a href="#a474e08f497aa445f36c17f6242db1d40"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classimath_1_1_i_unit_info.html">imath::IUnitInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#a82b046e9a80b47fe266ea361ba8a063a">GetResultUnitInfo</a> () const </td></tr>
@@ -103,8 +101,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#ab31f670f17dc4ef2fc237ac60498e94d">GetValueAt</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">CVector2d</a> &amp;argument) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#a1983706707d0943f82d0c814b80b3a36">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a1983706707d0943f82d0c814b80b3a36"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#a0687b0164f977182b869b2a3348dbaa1">BeforeUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be called before update of the observer contents occures.  <a href="#a0687b0164f977182b869b2a3348dbaa1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual IChangeable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#a288ae9c5a1b5edc8a845bf56b4cae325">CloneMe</a> (<a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#a288ae9c5a1b5edc8a845bf56b4cae325"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#a675f8c1be7881b6fc79067a178329bdb">OnComponentCreated</a> ()</td></tr>
@@ -114,7 +112,7 @@ Protected Member Functions</h2></td></tr>
 <div class="textblock"><p>Implementation of a proxy of <a class="el" href="classi2d_1_1_i_calibration2d.html">ICalibration2d</a> interface realized over <a class="el" href="classi2d_1_1_i_calibration_provider.html" title="Common interface for an object, which delivers a 2D-calibration.">ICalibrationProvider</a> access. </p>
 <p>Behind this proxy a <a class="el" href="classi2d_1_1_i_calibration_provider.html" title="Common interface for an object, which delivers a 2D-calibration.">ICalibrationProvider</a> component reference is used for interface implementation </p>
 
-<p>Definition at line <a class="el" href="_c_calibration2d_proxy_comp_8h_source.html#l00022">22</a> of file <a class="el" href="_c_calibration2d_proxy_comp_8h_source.html">CCalibration2dProxyComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_calibration2d_proxy_comp_8h_source.html#l00020">20</a> of file <a class="el" href="_c_calibration2d_proxy_comp_8h_source.html">CCalibration2dProxyComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="afcea2322ac14ad36950af9b66b7d36d5"></a><!-- doxytag: member="i2d::CCalibration2dProxyComp::BaseClass" ref="afcea2322ac14ad36950af9b66b7d36d5" args="" -->
 <div class="memitem">
@@ -127,78 +125,30 @@ Protected Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_calibration2d_proxy_comp_8h_source.html#l00028">28</a> of file <a class="el" href="_c_calibration2d_proxy_comp_8h_source.html">CCalibration2dProxyComp.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ac970f9d3304432afca20dbf41e9e6439"></a><!-- doxytag: member="i2d::CCalibration2dProxyComp::BaseClass2" ref="ac970f9d3304432afca20dbf41e9e6439" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="classimod_1_1_c_multi_model_bridge_base.html">imod::CMultiModelBridgeBase</a> <a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#ac970f9d3304432afca20dbf41e9e6439">i2d::CCalibration2dProxyComp::BaseClass2</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_c_calibration2d_proxy_comp_8h_source.html#l00029">29</a> of file <a class="el" href="_c_calibration2d_proxy_comp_8h_source.html">CCalibration2dProxyComp.h</a>.</p>
-
-</div>
-</div>
-<hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a438b1d7da4cdc9e4fb7610bfe4c87232"></a><!-- doxytag: member="i2d::CCalibration2dProxyComp::CCalibration2dProxyComp" ref="a438b1d7da4cdc9e4fb7610bfe4c87232" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">i2d::CCalibration2dProxyComp::CCalibration2dProxyComp </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
+<p>Definition at line <a class="el" href="_c_calibration2d_proxy_comp_8h_source.html#l00026">26</a> of file <a class="el" href="_c_calibration2d_proxy_comp_8h_source.html">CCalibration2dProxyComp.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a0687b0164f977182b869b2a3348dbaa1"></a><!-- doxytag: member="i2d::CCalibration2dProxyComp::BeforeUpdate" ref="a0687b0164f977182b869b2a3348dbaa1" args="(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
+<a class="anchor" id="a288ae9c5a1b5edc8a845bf56b4cae325"></a><!-- doxytag: member="i2d::CCalibration2dProxyComp::CloneMe" ref="a288ae9c5a1b5edc8a845bf56b4cae325" args="(CompatibilityMode mode=CM_WITHOUT_REFS) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void i2d::CCalibration2dProxyComp::BeforeUpdate </td>
+          <td class="memname">virtual IChangeable* i2d::CCalibration2dProxyComp::CloneMe </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td>
-          <td class="paramname"><em>modelPtr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>updateFlags</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
-          <td class="paramname"><em>updateParamsPtr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [virtual]</code></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>CM_WITHOUT_REFS</code></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>This function will be called before update of the observer contents occures. </p>
-<p>Please note, that in some cases no following AfterUpdate can be called. </p>
+<p>Make a copy of this object. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>new instance or NULL, if this operation is not supported. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classimod_1_1_c_multi_model_bridge_base.html#a9b7e27e61bd22e7777c719fb5300291e">imod::CMultiModelBridgeBase</a>.</p>
+<p>Reimplemented from <a class="el" href="classistd_1_1_i_changeable.html#aca17d0aedcec31b0ae88d233033622bc">istd::IChangeable</a>.</p>
 
 </div>
 </div>
@@ -612,7 +562,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a51b8f1608fa90f18cd567784fd2d9903"></a><!-- doxytag: member="i2d::CCalibration2dProxyComp::I_ASSIGN_TO" ref="a51b8f1608fa90f18cd567784fd2d9903" args="(m_calibrationProviderModelCompPtr, m_calibrationProviderCompPtr, false)" -->
+<a class="anchor" id="ac3cebb0b1f631ef198ef2123d1af68a8"></a><!-- doxytag: member="i2d::CCalibration2dProxyComp::I_ASSIGN_TO" ref="ac3cebb0b1f631ef198ef2123d1af68a8" args="(m_calibrationProviderModelCompPtr, m_calibrationProviderCompPtr, true)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -631,7 +581,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">false&#160;</td>
+          <td class="paramtype">true&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>

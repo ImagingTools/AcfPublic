@@ -23,16 +23,17 @@
 #include "i2d/CCalibration2dProxyComp.h"
 
 
+// ACF includes
+#include "imod/IModel.h"
+#include "i2d/CAffine2d.h"
+#include "i2d/CAffineTransformation2d.h"
+
+
 namespace i2d
 {
 
 
 // public methods
-
-CCalibration2dProxyComp::CCalibration2dProxyComp()
-	:m_isCalibrationValid(false)
-{
-}
 
 // reimplemented (ICalibration2d)
 
@@ -64,7 +65,10 @@ const ICalibration2d* CCalibration2dProxyComp::CreateCombinedCalibration(const I
 		return calibrationPtr->CreateCombinedCalibration(calibration);
 	}
 
-	return NULL;
+	istd::TDelPtr<ICalibration2d> retVal;
+	retVal.SetCastedOrRemove(calibration.CloneMe());
+
+	return retVal.PopPtr();
 }
 
 
@@ -92,7 +96,9 @@ bool CCalibration2dProxyComp::GetDistance(
 		return calibrationPtr->GetDistance(origPos1, origPos2, result, mode);
 	}
 
-	return false;
+	result = origPos1.GetDistance(origPos2);
+
+	return true;
 }
 
 
@@ -106,7 +112,9 @@ bool CCalibration2dProxyComp::GetPositionAt(
 		return calibrationPtr->GetPositionAt(origPosition, result, mode);
 	}
 
-	return false;
+	result = origPosition;
+
+	return true;
 }
 
 
@@ -120,7 +128,9 @@ bool CCalibration2dProxyComp::GetInvPositionAt(
 		return calibrationPtr->GetInvPositionAt(transfPosition, result, mode);
 	}
 
-	return false;
+	result = transfPosition;
+
+	return true;
 }
 
 
@@ -134,7 +144,9 @@ bool CCalibration2dProxyComp::GetLocalTransform(
 		return calibrationPtr->GetLocalTransform(origPosition, result, mode);
 	}
 
-	return false;
+	result = CAffine2d::GetIdentity();
+
+	return true;
 }
 
 
@@ -148,7 +160,9 @@ bool CCalibration2dProxyComp::GetLocalInvTransform(
 		return calibrationPtr->GetLocalInvTransform(transfPosition, result, mode);
 	}
 
-	return false;
+	result = CAffine2d::GetIdentity();
+
+	return true;
 }
 
 // reimplemented (imath::TISurjectFunction)
@@ -160,7 +174,9 @@ bool CCalibration2dProxyComp::GetInvValueAt(const CVector2d& argument, CVector2d
 		return calibrationPtr->GetInvValueAt(argument, result);
 	}
 
-	return false;
+	result = argument;
+
+	return true;
 }
 
 
@@ -171,7 +187,7 @@ CVector2d CCalibration2dProxyComp::GetInvValueAt(const CVector2d& argument) cons
 		return calibrationPtr->GetInvValueAt(argument);
 	}
 
-	return CVector2d();
+	return argument;
 }
 
 
@@ -184,7 +200,9 @@ bool CCalibration2dProxyComp::GetValueAt(const CVector2d& argument, CVector2d& r
 		return calibrationPtr->GetValueAt(argument, result);
 	}
 
-	return false;
+	result = argument;
+
+	return true;
 }
 
 
@@ -195,7 +213,7 @@ CVector2d CCalibration2dProxyComp::GetValueAt(const CVector2d& argument) const
 		return calibrationPtr->GetValueAt(argument);
 	}
 
-	return CVector2d();
+	return argument;
 }
 
 
@@ -207,15 +225,17 @@ bool CCalibration2dProxyComp::Serialize(iser::IArchive& /*archive*/)
 }
 
 
-// reimplemented (imod::IObserver)
+// reimplemented (istd::IChangeable)
 
-void CCalibration2dProxyComp::BeforeUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr)
+istd::IChangeable* CCalibration2dProxyComp::CloneMe(CompatibilityMode mode) const
 {
-	BaseClass2::BeforeUpdate(modelPtr, updateFlags, updateParamsPtr);
+	const ICalibration2d* calibrationPtr = GetCalibrationPtr();
+	if (calibrationPtr != NULL){
+		return calibrationPtr->CloneMe(mode);
+	}
 
-	m_isCalibrationValid = false;
+	return new i2d::CAffineTransformation2d(i2d::CAffine2d::GetIdentity());
 }
-
 
 
 // protected methods
@@ -244,34 +264,12 @@ void CCalibration2dProxyComp::OnComponentDestroyed()
 
 const ICalibration2d* CCalibration2dProxyComp::GetCalibrationPtr() const
 {
-	EnsureWorkingCalibrationUpdated();
-
-	return m_workingCalibrationPtr.GetPtr();
-}
-
-
-void CCalibration2dProxyComp::EnsureWorkingCalibrationUpdated() const
-{
-	if (!m_isCalibrationValid && m_calibrationProviderCompPtr.IsValid()){
-		m_isCalibrationValid = true;
-
-		const i2d::ICalibration2d* calibrationPtr = m_calibrationProviderCompPtr->GetCalibration();
-		if (calibrationPtr != NULL){
-			m_workingCalibrationPtr.SetCastedOrRemove(calibrationPtr->CloneMe(), true);
-		}
-		else{
-			m_workingCalibrationPtr.SetPtr(&s_defaultTransform, false);
-		}
+	if (m_calibrationProviderCompPtr.IsValid()){
+		return m_calibrationProviderCompPtr->GetCalibration();
 	}
+
+	return NULL;
 }
-
-
-// private static attributes
-
-i2d::CAffineTransformation2d CCalibration2dProxyComp::s_defaultTransform(
-			i2d::CAffine2d(i2d::CMatrix2d(1, 0, 0, 1)));
-
-
 
 
 } // namespace i2d

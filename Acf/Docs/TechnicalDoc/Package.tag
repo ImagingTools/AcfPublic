@@ -80,12 +80,10 @@
     <name>CCalibration2dProxyComp.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_calibration2d_proxy_comp_8h</filename>
-    <includes id="_t_opt_del_ptr_8h" name="TOptDelPtr.h" local="yes" imported="no">istd/TOptDelPtr.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_c_multi_model_bridge_base_8h" name="CMultiModelBridgeBase.h" local="yes" imported="no">imod/CMultiModelBridgeBase.h</includes>
     <includes id="_i_calibration2d_8h" name="ICalibration2d.h" local="yes" imported="no">i2d/ICalibration2d.h</includes>
     <includes id="_i_calibration_provider_8h" name="ICalibrationProvider.h" local="yes" imported="no">i2d/ICalibrationProvider.h</includes>
-    <includes id="_c_affine_transformation2d_8h" name="CAffineTransformation2d.h" local="yes" imported="no">i2d/CAffineTransformation2d.h</includes>
     <class kind="class">i2d::CCalibration2dProxyComp</class>
     <namespace>i2d</namespace>
   </compound>
@@ -7404,26 +7402,12 @@
       <anchor>afcea2322ac14ad36950af9b66b7d36d5</anchor>
       <arglist></arglist>
     </member>
-    <member kind="typedef">
-      <type>imod::CMultiModelBridgeBase</type>
-      <name>BaseClass2</name>
-      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>ac970f9d3304432afca20dbf41e9e6439</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>a51b8f1608fa90f18cd567784fd2d9903</anchor>
-      <arglist>(m_calibrationProviderModelCompPtr, m_calibrationProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CCalibration2dProxyComp</name>
-      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>a438b1d7da4cdc9e4fb7610bfe4c87232</anchor>
-      <arglist>()</arglist>
+      <anchor>ac3cebb0b1f631ef198ef2123d1af68a8</anchor>
+      <arglist>(m_calibrationProviderModelCompPtr, m_calibrationProviderCompPtr, true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imath::IUnitInfo *</type>
@@ -7524,11 +7508,11 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>BeforeUpdate</name>
+      <type>virtual IChangeable *</type>
+      <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>a0687b0164f977182b869b2a3348dbaa1</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>a288ae9c5a1b5edc8a845bf56b4cae325</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
