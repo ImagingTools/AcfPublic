@@ -6034,6 +6034,7 @@
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_shape_factory_8h" name="IShapeFactory.h" local="yes" imported="no">iview/IShapeFactory.h</includes>
     <includes id="_i_color_schema_8h" name="IColorSchema.h" local="yes" imported="no">iview/IColorSchema.h</includes>
+    <includes id="_c_interactive_shape_base_8h" name="CInteractiveShapeBase.h" local="yes" imported="no">iview/CInteractiveShapeBase.h</includes>
     <class kind="class">iview::CSimpleShapeFactoryComp</class>
     <namespace>iview</namespace>
   </compound>
@@ -54841,10 +54842,10 @@
       <arglist>(const i2d::IObject2d &amp;object, bool connectToModel=false) const </arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>IShape *</type>
+      <type>CInteractiveShapeBase *</type>
       <name>CreateShapeInstance</name>
       <anchorfile>classiview_1_1_c_simple_shape_factory_comp.html</anchorfile>
-      <anchor>aabaab327ca685abc6f879353f39451ad</anchor>
+      <anchor>a5ae16fd0f734fc3b2685211af7a2c3d0</anchor>
       <arglist>(const i2d::IObject2d &amp;object) const </arglist>
     </member>
   </compound>
