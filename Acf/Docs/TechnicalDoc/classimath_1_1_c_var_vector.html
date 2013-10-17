@@ -68,16 +68,18 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#a11f58fb380db04e339853cdfbfcc34bc"></a><br/></td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;int Size&gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_var_vector.html#af723d6bd8a4645eef65035a9b39acc1f">CVarVector</a> (const <a class="el" href="classimath_1_1_t_vector.html">TVector</a>&lt; Size, double &gt; &amp;vector)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_var_vector.html#a04ee5746d8bf24374dccbdeabc9bb560">IsEmpty</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <code>true</code>, if the element ist is empty.  <a href="#a04ee5746d8bf24374dccbdeabc9bb560"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa">GetElementsCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of elements.  <a href="#aaae055dede7006467da4cec5b7143cfa"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_var_vector.html#aca78a8571389dbfcb2dcb5c7c476fb0e">SetElementsCount</a> (int count, double value=0)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set number of elements.  <a href="#aca78a8571389dbfcb2dcb5c7c476fb0e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_var_vector.html#af761b0f17cf6ddb5daa14530e8c2bd1c">GetElement</a> (int i) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get element at specified i.  <a href="#af761b0f17cf6ddb5daa14530e8c2bd1c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_var_vector.html#a7f03f9cb95b8d21ea36d87b06241cff4">GetElementRef</a> (int i)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get reference to element at specified i.  <a href="#a7f03f9cb95b8d21ea36d87b06241cff4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_var_vector.html#abe8efeee3d92ed40fdb58687ffaa5a8d">SetElement</a> (int i, double value)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set element at specified i.  <a href="#abe8efeee3d92ed40fdb58687ffaa5a8d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_var_vector.html#a9e0f0b29a2cfccd173adc2094234772d">GetElement</a> (int index) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get element at specified index.  <a href="#a9e0f0b29a2cfccd173adc2094234772d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_var_vector.html#ae2bd61594326b0d6604da78867f7bcb6">GetElementRef</a> (int index)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get reference to element at specified index.  <a href="#ae2bd61594326b0d6604da78867f7bcb6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_var_vector.html#ab1686a789730cdedf84d9eaafdd46671">SetElement</a> (int index, double value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set element at specified index.  <a href="#ab1686a789730cdedf84d9eaafdd46671"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_var_vector.html#a3589d36f62f1997bc34409cdb3cdc1cb">Reset</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set size to zero.  <a href="#a3589d36f62f1997bc34409cdb3cdc1cb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_var_vector.html#a5b0e95b0393d5d533b6788d5a1ecdb38">Reset</a> (int elementsCount, double value)</td></tr>
@@ -90,6 +92,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get read-only access to internal element container.  <a href="#a8ac988714cf719e5d285f0b8ab5e9d1c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classimath_1_1_c_var_vector.html#a2f2aa27019a7b50df25303ddd19af9d1">Elements</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_var_vector.html#a051cd5dcedaeb2b04b58e654d130da95">GetElementsRef</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to internal element container.  <a href="#a051cd5dcedaeb2b04b58e654d130da95"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_var_vector.html#a1064974f24feacd69c74cfde9bd29e77">EnsureElementsCount</a> (int count, double value=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure, that number of elements is at least the specified value.  <a href="#a1064974f24feacd69c74cfde9bd29e77"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_var_vector.html#acafdb13c9499d4f8548218bd24dcf3d3">Translate</a> (const <a class="el" href="classimath_1_1_c_var_vector.html">CVarVector</a> &amp;vector)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Translate the point.  <a href="#acafdb13c9499d4f8548218bd24dcf3d3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classimath_1_1_c_var_vector.html">CVarVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimath_1_1_c_var_vector.html#a79221547152be66cbdf837cf9ccf30cd">GetTranslated</a> (const <a class="el" href="classimath_1_1_c_var_vector.html">CVarVector</a> &amp;vector)</td></tr>
@@ -178,7 +182,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Create the vector without components. </p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00219">219</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00232">232</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
 </div>
 </div>
@@ -209,7 +213,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Create vector and initialize number of components. </p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00224">224</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00237">237</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
 </div>
 </div>
@@ -230,7 +234,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Copy constructor. </p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00230">230</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00243">243</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
 </div>
 </div>
@@ -251,7 +255,7 @@ template&lt;int Size&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00608">608</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00627">627</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
 </div>
 </div>
@@ -272,9 +276,40 @@ template&lt;int Size&gt; </div>
 
 <p>Set all coordinates to zero. </p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00284">284</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00303">303</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
-<p>References <a class="el" href="_c_var_vector_8h_source.html#l00238">GetElementsCount()</a>.</p>
+<p>References <a class="el" href="_c_var_vector_8h_source.html#l00257">GetElementsCount()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1064974f24feacd69c74cfde9bd29e77"></a><!-- doxytag: member="imath::CVarVector::EnsureElementsCount" ref="a1064974f24feacd69c74cfde9bd29e77" args="(int count, double value=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool imath::CVarVector::EnsureElementsCount </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ensure, that number of elements is at least the specified value. </p>
+<p>It resize the vector if the new size is bigger than the current one. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>always true, this value is provided for template implementations. </dd></dl>
 
 </div>
 </div>
@@ -295,9 +330,9 @@ template&lt;int Size&gt; </div>
 
 <p>Return distance between two vectors. </p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00388">388</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00407">407</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
-<p>References <a class="el" href="_c_var_vector_8h_source.html#l00382">GetDistance2()</a>.</p>
+<p>References <a class="el" href="_c_var_vector_8h_source.html#l00401">GetDistance2()</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_var_color_8h_source.html#l00115">icmm::CVarColor::IsSimilar()</a>.</p>
 
@@ -320,9 +355,9 @@ template&lt;int Size&gt; </div>
 
 <p>Return distance square between two vectors. </p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00382">382</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00401">401</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_var_vector_8h_source.html#l00388">GetDistance()</a>.</p>
+<p>Referenced by <a class="el" href="_c_var_vector_8h_source.html#l00407">GetDistance()</a>.</p>
 
 </div>
 </div>
@@ -343,15 +378,15 @@ template&lt;int Size&gt; </div>
 
 <p>Return dot product of two vectors. </p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00355">355</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00374">374</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
-<p>References <a class="el" href="_c_var_vector_8h_source.html#l00238">GetElementsCount()</a>.</p>
+<p>References <a class="el" href="_c_var_vector_8h_source.html#l00257">GetElementsCount()</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_var_vector_8h_source.html#l00370">GetLength2()</a>.</p>
+<p>Referenced by <a class="el" href="_c_var_vector_8h_source.html#l00389">GetLength2()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af761b0f17cf6ddb5daa14530e8c2bd1c"></a><!-- doxytag: member="imath::CVarVector::GetElement" ref="af761b0f17cf6ddb5daa14530e8c2bd1c" args="(int i) const " -->
+<a class="anchor" id="a9e0f0b29a2cfccd173adc2094234772d"></a><!-- doxytag: member="imath::CVarVector::GetElement" ref="a9e0f0b29a2cfccd173adc2094234772d" args="(int index) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -359,24 +394,24 @@ template&lt;int Size&gt; </div>
           <td class="memname">double imath::CVarVector::GetElement </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
           <td> const<code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Get element at specified i. </p>
+<p>Get element at specified index. </p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00260">260</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00279">279</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
-<p>References <a class="el" href="_c_var_vector_8h_source.html#l00587">operator[]()</a>.</p>
+<p>References <a class="el" href="_c_var_vector_8h_source.html#l00606">operator[]()</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_var_color_8h_source.html#l00121">icmm::CVarColor::IsNormalized()</a>, <a class="el" href="_c_var_color_8h_source.html#l00177">icmm::CVarColor::operator*()</a>, and <a class="el" href="_c_var_color_8h_source.html#l00191">icmm::CVarColor::operator/()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a7f03f9cb95b8d21ea36d87b06241cff4"></a><!-- doxytag: member="imath::CVarVector::GetElementRef" ref="a7f03f9cb95b8d21ea36d87b06241cff4" args="(int i)" -->
+<a class="anchor" id="ae2bd61594326b0d6604da78867f7bcb6"></a><!-- doxytag: member="imath::CVarVector::GetElementRef" ref="ae2bd61594326b0d6604da78867f7bcb6" args="(int index)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -384,18 +419,18 @@ template&lt;int Size&gt; </div>
           <td class="memname">double &amp; imath::CVarVector::GetElementRef </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
           <td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Get reference to element at specified i. </p>
+<p>Get reference to element at specified index. </p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00266">266</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00285">285</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
-<p>References <a class="el" href="_c_var_vector_8h_source.html#l00587">operator[]()</a>.</p>
+<p>References <a class="el" href="_c_var_vector_8h_source.html#l00606">operator[]()</a>.</p>
 
 </div>
 </div>
@@ -415,7 +450,7 @@ template&lt;int Size&gt; </div>
 
 <p>Get read-only access to internal element container. </p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00303">303</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00322">322</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
 </div>
 </div>
@@ -435,9 +470,9 @@ template&lt;int Size&gt; </div>
 
 <p>Get number of elements. </p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00238">238</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00257">257</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_var_vector_8h_source.html#l00284">Clear()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00355">GetDotProduct()</a>, <a class="el" href="_t_color_gradient_8h_source.html#l00056">icmm::TColorGradient&lt; GradientFunction &gt;::GetValueAt()</a>, <a class="el" href="_c_var_color_8h_source.html#l00121">icmm::CVarColor::IsNormalized()</a>, <a class="el" href="_c_var_color_8h_source.html#l00177">icmm::CVarColor::operator*()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00502">operator*=()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00476">operator+=()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00533">operator-()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00489">operator-=()</a>, <a class="el" href="_c_var_color_8h_source.html#l00191">icmm::CVarColor::operator/()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00513">operator/=()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00524">operator=()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00587">operator[]()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00338">ScaledCumulate()</a>, <a class="el" href="_t_composed_color_8h_source.html#l00120">icmm::TComposedColor&lt; Size &gt;::TComposedColor()</a>, and <a class="el" href="_c_var_vector_8h_source.html#l00315">Translate()</a>.</p>
+<p>Referenced by <a class="el" href="_c_var_vector_8h_source.html#l00303">Clear()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00374">GetDotProduct()</a>, <a class="el" href="_t_color_gradient_8h_source.html#l00056">icmm::TColorGradient&lt; GradientFunction &gt;::GetValueAt()</a>, <a class="el" href="_c_var_color_8h_source.html#l00121">icmm::CVarColor::IsNormalized()</a>, <a class="el" href="_c_var_color_8h_source.html#l00177">icmm::CVarColor::operator*()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00521">operator*=()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00495">operator+=()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00552">operator-()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00508">operator-=()</a>, <a class="el" href="_c_var_color_8h_source.html#l00191">icmm::CVarColor::operator/()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00532">operator/=()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00543">operator=()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00606">operator[]()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00357">ScaledCumulate()</a>, <a class="el" href="_t_composed_color_8h_source.html#l00120">icmm::TComposedColor&lt; Size &gt;::TComposedColor()</a>, and <a class="el" href="_c_var_vector_8h_source.html#l00334">Translate()</a>.</p>
 
 </div>
 </div>
@@ -457,7 +492,7 @@ template&lt;int Size&gt; </div>
 
 <p>Get access to internal element container. </p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00309">309</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00328">328</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
 </div>
 </div>
@@ -495,9 +530,9 @@ template&lt;int Size&gt; </div>
 
 <p>Return euclidian length. </p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00376">376</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00395">395</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
-<p>References <a class="el" href="_c_var_vector_8h_source.html#l00370">GetLength2()</a>.</p>
+<p>References <a class="el" href="_c_var_vector_8h_source.html#l00389">GetLength2()</a>.</p>
 
 </div>
 </div>
@@ -517,11 +552,11 @@ template&lt;int Size&gt; </div>
 
 <p>Return euclidian length square. </p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00370">370</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00389">389</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
-<p>References <a class="el" href="_c_var_vector_8h_source.html#l00355">GetDotProduct()</a>.</p>
+<p>References <a class="el" href="_c_var_vector_8h_source.html#l00374">GetDotProduct()</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_var_vector_8h_source.html#l00376">GetLength()</a>, and <a class="el" href="_c_var_vector_8h_source.html#l00349">IsNull()</a>.</p>
+<p>Referenced by <a class="el" href="_c_var_vector_8h_source.html#l00395">GetLength()</a>, and <a class="el" href="_c_var_vector_8h_source.html#l00368">IsNull()</a>.</p>
 
 </div>
 </div>
@@ -636,7 +671,7 @@ template&lt;int Size&gt; </div>
 
 <p>Get translated point. </p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00326">326</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00345">345</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
 </div>
 </div>
@@ -667,7 +702,27 @@ template&lt;int Size&gt; </div>
 
 <p>/overloaded </p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00332">332</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00351">351</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a04ee5746d8bf24374dccbdeabc9bb560"></a><!-- doxytag: member="imath::CVarVector::IsEmpty" ref="a04ee5746d8bf24374dccbdeabc9bb560" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool imath::CVarVector::IsEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get <code>true</code>, if the element ist is empty. </p>
+
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00251">251</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
 </div>
 </div>
@@ -688,9 +743,9 @@ template&lt;int Size&gt; </div>
 
 <p>Check if this vector is null. </p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00349">349</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00368">368</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
-<p>References <a class="el" href="_c_var_vector_8h_source.html#l00370">GetLength2()</a>.</p>
+<p>References <a class="el" href="_c_var_vector_8h_source.html#l00389">GetLength2()</a>.</p>
 
 </div>
 </div>
@@ -735,7 +790,7 @@ template&lt;int Size&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00402">402</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00421">421</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
 </div>
 </div>
@@ -756,7 +811,7 @@ template&lt;int Size&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classicmm_1_1_c_var_color.html#a0ea5585f8bcab994865ce23082882792">icmm::CVarColor</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00567">567</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00586">586</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
 </div>
 </div>
@@ -777,9 +832,9 @@ template&lt;int Size&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classicmm_1_1_c_var_color.html#ad56de398a39ae1d0a9adf65a1d477090">icmm::CVarColor</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00502">502</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00521">521</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
-<p>References <a class="el" href="_c_var_vector_8h_source.html#l00238">GetElementsCount()</a>.</p>
+<p>References <a class="el" href="_c_var_vector_8h_source.html#l00257">GetElementsCount()</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_var_color_8h_source.html#l00205">icmm::CVarColor::operator*=()</a>.</p>
 
@@ -800,7 +855,7 @@ template&lt;int Size&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00547">547</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00566">566</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
 </div>
 </div>
@@ -819,9 +874,9 @@ template&lt;int Size&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00476">476</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00495">495</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
-<p>References <a class="el" href="_c_var_vector_8h_source.html#l00238">GetElementsCount()</a>.</p>
+<p>References <a class="el" href="_c_var_vector_8h_source.html#l00257">GetElementsCount()</a>.</p>
 
 </div>
 </div>
@@ -839,9 +894,9 @@ template&lt;int Size&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00533">533</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00552">552</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
-<p>References <a class="el" href="_c_var_vector_8h_source.html#l00238">GetElementsCount()</a>.</p>
+<p>References <a class="el" href="_c_var_vector_8h_source.html#l00257">GetElementsCount()</a>.</p>
 
 </div>
 </div>
@@ -860,7 +915,7 @@ template&lt;int Size&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00557">557</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00576">576</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
 </div>
 </div>
@@ -879,9 +934,9 @@ template&lt;int Size&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00489">489</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00508">508</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
-<p>References <a class="el" href="_c_var_vector_8h_source.html#l00238">GetElementsCount()</a>.</p>
+<p>References <a class="el" href="_c_var_vector_8h_source.html#l00257">GetElementsCount()</a>.</p>
 
 </div>
 </div>
@@ -902,7 +957,7 @@ template&lt;int Size&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classicmm_1_1_c_var_color.html#a998b14b8afe660ad5ed749d0d5a0228a">icmm::CVarColor</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00577">577</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00596">596</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
 </div>
 </div>
@@ -923,9 +978,9 @@ template&lt;int Size&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classicmm_1_1_c_var_color.html#a8c43fe867b41b2bf84ae5dedec87dba8">icmm::CVarColor</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00513">513</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00532">532</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
-<p>References <a class="el" href="_c_var_vector_8h_source.html#l00238">GetElementsCount()</a>.</p>
+<p>References <a class="el" href="_c_var_vector_8h_source.html#l00257">GetElementsCount()</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_var_color_8h_source.html#l00213">icmm::CVarColor::operator/=()</a>.</p>
 
@@ -946,7 +1001,7 @@ template&lt;int Size&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00408">408</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00427">427</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
 </div>
 </div>
@@ -965,7 +1020,7 @@ template&lt;int Size&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00442">442</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00461">461</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
 </div>
 </div>
@@ -984,9 +1039,9 @@ template&lt;int Size&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00524">524</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00543">543</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
-<p>References <a class="el" href="_c_var_vector_8h_source.html#l00238">GetElementsCount()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00244">SetElementsCount()</a>, and <a class="el" href="classimath_1_1_c_var_vector.html#a911d7fb00b0e4fa92e2f5a452ce16123">SetElementsFrom()</a>.</p>
+<p>References <a class="el" href="_c_var_vector_8h_source.html#l00257">GetElementsCount()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00263">SetElementsCount()</a>, and <a class="el" href="classimath_1_1_c_var_vector.html#a911d7fb00b0e4fa92e2f5a452ce16123">SetElementsFrom()</a>.</p>
 
 </div>
 </div>
@@ -1005,7 +1060,7 @@ template&lt;int Size&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00396">396</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00415">415</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
 </div>
 </div>
@@ -1024,7 +1079,7 @@ template&lt;int Size&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00425">425</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00444">444</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
 </div>
 </div>
@@ -1043,7 +1098,7 @@ template&lt;int Size&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00459">459</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00478">478</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
 </div>
 </div>
@@ -1062,11 +1117,11 @@ template&lt;int Size&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00587">587</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00606">606</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
-<p>References <a class="el" href="_c_var_vector_8h_source.html#l00238">GetElementsCount()</a>.</p>
+<p>References <a class="el" href="_c_var_vector_8h_source.html#l00257">GetElementsCount()</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_var_vector_8h_source.html#l00260">GetElement()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00266">GetElementRef()</a>, and <a class="el" href="_c_var_vector_8h_source.html#l00272">SetElement()</a>.</p>
+<p>Referenced by <a class="el" href="_c_var_vector_8h_source.html#l00279">GetElement()</a>, <a class="el" href="_c_var_vector_8h_source.html#l00285">GetElementRef()</a>, and <a class="el" href="_c_var_vector_8h_source.html#l00291">SetElement()</a>.</p>
 
 </div>
 </div>
@@ -1085,9 +1140,9 @@ template&lt;int Size&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00596">596</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00615">615</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
-<p>References <a class="el" href="_c_var_vector_8h_source.html#l00238">GetElementsCount()</a>.</p>
+<p>References <a class="el" href="_c_var_vector_8h_source.html#l00257">GetElementsCount()</a>.</p>
 
 </div>
 </div>
@@ -1107,7 +1162,7 @@ template&lt;int Size&gt; </div>
 
 <p>Set size to zero. </p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00278">278</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00297">297</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
 </div>
 </div>
@@ -1138,7 +1193,7 @@ template&lt;int Size&gt; </div>
 
 <p>Set number of elements and set all elements to specified value. </p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00293">293</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00312">312</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
 </div>
 </div>
@@ -1170,9 +1225,9 @@ template&lt;int Size&gt; </div>
 <p>Add second vector scaled by specified factor. </p>
 <p>It is equal of Translate(vector * scale) but can be faster implemented. </p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00338">338</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00357">357</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
-<p>References <a class="el" href="_c_var_vector_8h_source.html#l00238">GetElementsCount()</a>.</p>
+<p>References <a class="el" href="_c_var_vector_8h_source.html#l00257">GetElementsCount()</a>.</p>
 
 </div>
 </div>
@@ -1197,7 +1252,7 @@ template&lt;int Size&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="abe8efeee3d92ed40fdb58687ffaa5a8d"></a><!-- doxytag: member="imath::CVarVector::SetElement" ref="abe8efeee3d92ed40fdb58687ffaa5a8d" args="(int i, double value)" -->
+<a class="anchor" id="ab1686a789730cdedf84d9eaafdd46671"></a><!-- doxytag: member="imath::CVarVector::SetElement" ref="ab1686a789730cdedf84d9eaafdd46671" args="(int index, double value)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1205,7 +1260,7 @@ template&lt;int Size&gt; </div>
           <td class="memname">void imath::CVarVector::SetElement </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>i</em>, </td>
+          <td class="paramname"><em>index</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1222,11 +1277,11 @@ template&lt;int Size&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Set element at specified i. </p>
+<p>Set element at specified index. </p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00272">272</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00291">291</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
-<p>References <a class="el" href="_c_var_vector_8h_source.html#l00587">operator[]()</a>.</p>
+<p>References <a class="el" href="_c_var_vector_8h_source.html#l00606">operator[]()</a>.</p>
 
 <p>Referenced by <a class="el" href="_c_var_color_8h_source.html#l00177">icmm::CVarColor::operator*()</a>, and <a class="el" href="_c_var_color_8h_source.html#l00191">icmm::CVarColor::operator/()</a>.</p>
 
@@ -1260,9 +1315,9 @@ template&lt;int Size&gt; </div>
 <p>Set number of elements. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>always true, this value is provided for template implementations. </dd></dl>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00244">244</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00263">263</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_var_vector_8h_source.html#l00524">operator=()</a>.</p>
+<p>Referenced by <a class="el" href="_c_var_vector_8h_source.html#l00543">operator=()</a>.</p>
 
 </div>
 </div>
@@ -1300,7 +1355,7 @@ template&lt;int Size&gt; </div>
   </dd>
 </dl>
 
-<p>Referenced by <a class="el" href="_c_var_vector_8h_source.html#l00524">operator=()</a>.</p>
+<p>Referenced by <a class="el" href="_c_var_vector_8h_source.html#l00543">operator=()</a>.</p>
 
 </div>
 </div>
@@ -1321,9 +1376,9 @@ template&lt;int Size&gt; </div>
 
 <p>Translate the point. </p>
 
-<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00315">315</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_vector_8h_source.html#l00334">334</a> of file <a class="el" href="_c_var_vector_8h_source.html">CVarVector.h</a>.</p>
 
-<p>References <a class="el" href="_c_var_vector_8h_source.html#l00238">GetElementsCount()</a>.</p>
+<p>References <a class="el" href="_c_var_vector_8h_source.html#l00257">GetElementsCount()</a>.</p>
 
 </div>
 </div>

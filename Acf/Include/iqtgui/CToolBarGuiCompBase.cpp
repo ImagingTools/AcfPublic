@@ -29,6 +29,7 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QAction>
 #else
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QComboBox>

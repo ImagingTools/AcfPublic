@@ -2212,6 +2212,15 @@
     <namespace>iproc</namespace>
   </compound>
   <compound kind="file">
+    <name>CSupplierCompBase.h</name>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
+    <filename>_c_supplier_comp_base_8h</filename>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
+    <class kind="class">iproc::CSupplierCompBase</class>
+    <class kind="class">iproc::CSupplierCompBase::Timer</class>
+    <namespace>iproc</namespace>
+  </compound>
+  <compound kind="file">
     <name>IElapsedTimeProvider.h</name>
     <path>C:/Temp/AcfSln/Include/iproc/</path>
     <filename>_i_elapsed_time_provider_8h</filename>
@@ -2281,9 +2290,8 @@
     <name>TSupplierCompWrap.h</name>
     <path>C:/Temp/AcfSln/Include/iproc/</path>
     <filename>_t_supplier_comp_wrap_8h</filename>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
+    <includes id="_c_supplier_comp_base_8h" name="CSupplierCompBase.h" local="yes" imported="no">iproc/CSupplierCompBase.h</includes>
     <class kind="class">iproc::TSupplierCompWrap</class>
-    <class kind="class">iproc::TSupplierCompWrap::Timer</class>
     <namespace>iproc</namespace>
   </compound>
   <compound kind="file">
@@ -19169,6 +19177,7 @@
     <class kind="class">iproc::CCascadedProcessorComp</class>
     <class kind="class">iproc::CIterativeProcessorComp</class>
     <class kind="class">iproc::CModelBasedProcessingTriggerComp</class>
+    <class kind="class">iproc::CSupplierCompBase</class>
     <class kind="class">iproc::IElapsedTimeProvider</class>
     <class kind="class">iproc::IProcessor</class>
     <class kind="class">iproc::IStateController</class>
@@ -19385,6 +19394,221 @@
       <anchorfile>classiproc_1_1_c_model_based_processing_trigger_comp.html</anchorfile>
       <anchor>af09dd325ea51accbb9ff63c452f247f4</anchor>
       <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::CSupplierCompBase</name>
+    <filename>classiproc_1_1_c_supplier_comp_base.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base virtualness="virtual">iproc::ISupplier</base>
+    <base protection="protected" virtualness="virtual">ilog::IMessageConsumer</base>
+    <class kind="class">iproc::CSupplierCompBase::Timer</class>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a329d63030d2ab5b6cb9a08e0c255f4a7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a3eef45449f5614dff66cd6ebe401e901</anchor>
+      <arglist>(TaskLog)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a5d79650c946b54aa6cd6a938398ad19f</anchor>
+      <arglist>(TaskLog, ilog::IMessageConsumer, ExtractTaskLog)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>aed1cddb7d6f03d20422959a7ecce8b72</anchor>
+      <arglist>(TaskLog, istd::IPolymorphic, ExtractTaskLog)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>ae8e1cdfb5c9cec0ee1edee26f57f9a00</anchor>
+      <arglist>(TempMessages)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a4ced0cad1394112445f489c57995a858</anchor>
+      <arglist>(TempMessages, ilog::IMessageConsumer, ExtractTempMessages)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a3a0d38f8467bbcdfe9308e8dcdfcc036</anchor>
+      <arglist>(TempMessages, istd::IPolymorphic, ExtractTempMessages)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a19debc36963c129cc999774f4e57f7e1</anchor>
+      <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSupplierCompBase</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>ad453c1a96e4ebae5a8bc29fd9b92ee29</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetWorkStatus</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a857163a36ec16cf7a5dc4186cf53cd0e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InvalidateSupplier</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a03a2fe837887070a5ff58a28a40aa14c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkInitialized</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a015048dee6c4de8635031f29faf45293</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a442a80a344dff5d01993a699a7567691</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ilog::IMessageContainer *</type>
+      <name>GetWorkMessages</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a09125c4ab95caf42e045c7d5842fe321</anchor>
+      <arglist>(int messageType) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iprm::IParamsSet *</type>
+      <name>GetModelParametersSet</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>ad87e7e4fb0157c93ce2c158f5725bb37</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InitializeWork</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>ac37e116184f83fb9407a6243391222b0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnParametersChanged</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>abd3db22bdf1f16c2828cb137179cf9b6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RegisterSupplierInput</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a48d7e1c26473266c2b60409b5171852d</anchor>
+      <arglist>(imod::IModel *modelPtr, ISupplier *supplierPtr=NULL)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UnregisterSupplierInput</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>add07a57031037d60c26628f9cb52f811</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetDiagnosticName</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a12b7c1c099eca829dd19814d84a2ee87</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddMessage</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>aad40686b67a71362476a4db5e69de885</anchor>
+      <arglist>(const ilog::CMessage *messagePtr) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsMessageSupported</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a0561b4da80df642d7e9ed4c180be1cd7</anchor>
+      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddMessage</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a2ac3e3c6bc9d902e831c73576f6b6e6f</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a55e1e7daefec816c55e46d629bb20751</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a08829340301aed9acda31308797da725</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_workStatus</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a960a57e39a555f8e1aaff58d75ac5d85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::CChangeNotifier</type>
+      <name>m_productChangeNotifier</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a7fc326b1a7dd7f54d40d6d5b90b20a4e</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iproc::CSupplierCompBase::Timer</name>
+    <filename>classiproc_1_1_c_supplier_comp_base_1_1_timer.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Timer</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base_1_1_timer.html</anchorfile>
+      <anchor>a95dcc5c23ae599b53ad2271734a42bba</anchor>
+      <arglist>(const CSupplierCompBase *parentPtr, const QString &amp;measuredFeatureName)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Timer</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base_1_1_timer.html</anchorfile>
+      <anchor>a0444901d0fd4897688d136541a325b20</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -19984,11 +20208,7 @@
     <name>iproc::TSupplierCompWrap</name>
     <filename>classiproc_1_1_t_supplier_comp_wrap.html</filename>
     <templarg>Product</templarg>
-    <base>ilog::TLoggerCompWrap</base>
-    <base virtualness="virtual">iproc::ISupplier</base>
-    <base virtualness="virtual">istd::IChangeable</base>
-    <base protection="protected" virtualness="virtual">ilog::IMessageConsumer</base>
-    <class kind="class">iproc::TSupplierCompWrap::Timer</class>
+    <base>iproc::CSupplierCompBase</base>
     <member kind="enumeration">
       <name>MessageId</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
@@ -20002,10 +20222,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ilog::CLoggerComponentBase</type>
+      <type>CSupplierCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a4ebbfee7e8e76999c4e14e5359c8ac25</anchor>
+      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -20014,83 +20234,6 @@
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>af7121d60c261027ec7dacd632de00cdd</anchor>
-      <arglist>(TaskLog)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>acda11a3a5a87a1be7fb7f6cbbbb8a3f2</anchor>
-      <arglist>(TaskLog, ilog::IMessageConsumer, ExtractTaskLog)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a3b2874fc11e22620bac9566cf875cba0</anchor>
-      <arglist>(TaskLog, istd::IPolymorphic, ExtractTaskLog)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a3c05affc53f83667f37119878761c528</anchor>
-      <arglist>(TempMessages)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ab83de0cc80a60a7b81718f48b85a03f5</anchor>
-      <arglist>(TempMessages, ilog::IMessageConsumer, ExtractTempMessages)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a9676f705bdbb7e52743b59a3f0f647ab</anchor>
-      <arglist>(TempMessages, istd::IPolymorphic, ExtractTempMessages)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a9f63ea1c39f5e17fabf56729c317cd1f</anchor>
-      <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TSupplierCompWrap</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a11d01e8db5c10dc62b7b795c1c38d358</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetWorkStatus</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>aae3ac83c656d4b0de834372fdca85ee2</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>InvalidateSupplier</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ad5e0a872fbc23c641a87a0e722e7a3e2</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkInitialized</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a448aa1751441a329a76510cbeb2894c6</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -20106,68 +20249,12 @@
       <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const ilog::IMessageContainer *</type>
-      <name>GetWorkMessages</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a23ce981a52290eae2fa71831a8b0a042</anchor>
-      <arglist>(int messageType) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual iprm::IParamsSet *</type>
-      <name>GetModelParametersSet</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ab6f30ac3f2d05e657c1263026630fd6d</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>InitializeWork</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a864d166238f938df650c6d0b9a254406</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnParametersChanged</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a2ed24e750ada2b287d96e3f4f8329c73</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" protection="protected">
       <type>const Product *</type>
       <name>GetWorkProduct</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>RegisterSupplierInput</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a247f2b444973b6b94218f437ca057746</anchor>
-      <arglist>(imod::IModel *modelPtr, ISupplier *supplierPtr=NULL)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UnregisterSupplierInput</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>af3699e19481feebf476a3f823ac98bfb</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetDiagnosticName</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a2b4f295d9b0e1bc9644f2e20145f2b10</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AddMessage</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a09aeef81ece3ead19ceddb5b32383361</anchor>
-      <arglist>(const ilog::CMessage *messagePtr) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual int</type>
@@ -20176,65 +20263,12 @@
       <anchor>a6230575f0d5b0ccfd28cdf7082866c62</anchor>
       <arglist>(Product &amp;result) const =0</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsMessageSupported</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a1fe91e45040ff8b41c43f7d28c5fea10</anchor>
-      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AddMessage</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a022dd25ac0bef5830e4be67f481435ff</anchor>
-      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a87209e190b38fd6513767b16208ed1ce</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ab6c61739f6153e4f37b82ca110468afe</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; Product &gt;</type>
       <name>m_productPtr</name>
       <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>int</type>
-      <name>m_workStatus</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a7bb8dcd02bdb0df94fb34e1f2e8cf018</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iproc::TSupplierCompWrap::Timer</name>
-    <filename>classiproc_1_1_t_supplier_comp_wrap_1_1_timer.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>Timer</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_timer.html</anchorfile>
-      <anchor>a9d1a054822e3eef727dace6129fbded4</anchor>
-      <arglist>(const TSupplierCompWrap *parentPtr, const QString &amp;measuredFeatureName)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~Timer</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap_1_1_timer.html</anchorfile>
-      <anchor>a997a5ca668786cbe967f9798d97f03dd</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

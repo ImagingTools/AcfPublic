@@ -108,7 +108,7 @@
 <a name="l00123"></a>00123        <span class="keywordtype">int</span> elementsCount = <a class="code" href="classimath_1_1_c_var_vector.html#aaae055dede7006467da4cec5b7143cfa" title="Get number of elements.">GetElementsCount</a>();
 <a name="l00124"></a>00124 
 <a name="l00125"></a>00125        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
-<a name="l00126"></a>00126               <span class="keywordtype">double</span> component = <a class="code" href="classimath_1_1_c_var_vector.html#af761b0f17cf6ddb5daa14530e8c2bd1c" title="Get element at specified i.">GetElement</a>(i);
+<a name="l00126"></a>00126               <span class="keywordtype">double</span> component = <a class="code" href="classimath_1_1_c_var_vector.html#a9e0f0b29a2cfccd173adc2094234772d" title="Get element at specified index.">GetElement</a>(i);
 <a name="l00127"></a>00127 
 <a name="l00128"></a>00128               <span class="keywordflow">if</span> ((component &lt; 0) &amp;&amp; (component &gt; 1)){
 <a name="l00129"></a>00129                      <span class="keywordflow">return</span> <span class="keyword">false</span>;
@@ -166,7 +166,7 @@
 <a name="l00181"></a>00181        <a class="code" href="classicmm_1_1_c_var_color.html" title="Generic color implementation with variable number of color components.">CVarColor</a> retVal(elementsCount);
 <a name="l00182"></a>00182 
 <a name="l00183"></a>00183        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
-<a name="l00184"></a>00184               retVal.<a class="code" href="classimath_1_1_c_var_vector.html#abe8efeee3d92ed40fdb58687ffaa5a8d" title="Set element at specified i.">SetElement</a>(i, <a class="code" href="classimath_1_1_c_var_vector.html#af761b0f17cf6ddb5daa14530e8c2bd1c" title="Get element at specified i.">GetElement</a>(i) * value);
+<a name="l00184"></a>00184               retVal.<a class="code" href="classimath_1_1_c_var_vector.html#ab1686a789730cdedf84d9eaafdd46671" title="Set element at specified index.">SetElement</a>(i, <a class="code" href="classimath_1_1_c_var_vector.html#a9e0f0b29a2cfccd173adc2094234772d" title="Get element at specified index.">GetElement</a>(i) * value);
 <a name="l00185"></a>00185        }
 <a name="l00186"></a>00186 
 <a name="l00187"></a>00187        <span class="keywordflow">return</span> retVal;
@@ -180,7 +180,7 @@
 <a name="l00195"></a>00195        <a class="code" href="classicmm_1_1_c_var_color.html" title="Generic color implementation with variable number of color components.">CVarColor</a> retVal(elementsCount);
 <a name="l00196"></a>00196 
 <a name="l00197"></a>00197        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; elementsCount; ++i){
-<a name="l00198"></a>00198               retVal.<a class="code" href="classimath_1_1_c_var_vector.html#abe8efeee3d92ed40fdb58687ffaa5a8d" title="Set element at specified i.">SetElement</a>(i, <a class="code" href="classimath_1_1_c_var_vector.html#af761b0f17cf6ddb5daa14530e8c2bd1c" title="Get element at specified i.">GetElement</a>(i) / value);
+<a name="l00198"></a>00198               retVal.<a class="code" href="classimath_1_1_c_var_vector.html#ab1686a789730cdedf84d9eaafdd46671" title="Set element at specified index.">SetElement</a>(i, <a class="code" href="classimath_1_1_c_var_vector.html#a9e0f0b29a2cfccd173adc2094234772d" title="Get element at specified index.">GetElement</a>(i) / value);
 <a name="l00199"></a>00199        }
 <a name="l00200"></a>00200 
 <a name="l00201"></a>00201        <span class="keywordflow">return</span> retVal;

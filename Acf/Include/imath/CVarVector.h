@@ -69,6 +69,11 @@ public:
 	CVarVector(const TVector<Size, double>& vector);
 
 	/**
+		Get \c true, if the element ist is empty.
+	*/
+	bool IsEmpty() const;
+
+	/**
 		Get number of elements.
 	*/
 	int GetElementsCount() const;
@@ -80,19 +85,19 @@ public:
 	bool SetElementsCount(int count, double value = 0);
 
 	/**
-		Get element at specified i.
+		Get element at specified index.
 	*/
-	double GetElement(int i) const;
+	double GetElement(int index) const;
 
 	/**
-		Get reference to element at specified i.
+		Get reference to element at specified index.
 	*/
-	double& GetElementRef(int i);
+	double& GetElementRef(int index);
 
 	/**
-		Set element at specified i.
+		Set element at specified index.
 	*/
-	void SetElement(int i, double value);
+	void SetElement(int index, double value);
 
 	/**
 		Set size to zero.
@@ -124,6 +129,13 @@ public:
 		Get access to internal element container.
 	*/
 	Elements& GetElementsRef();
+
+	/**
+		Ensure, that number of elements is at least the specified value.
+		It resize the vector if the new size is bigger than the current one.
+		\return	always true, this value is provided for template implementations.
+	*/
+	bool EnsureElementsCount(int count, double value = 0);
 
 	/**
 		Translate the point.
@@ -160,6 +172,7 @@ public:
 		Return euclidian length square.
 	*/
 	double GetLength2() const;
+
 	/**
 		Return euclidian length.
 	*/
@@ -256,6 +269,12 @@ inline CVarVector::CVarVector(const CVarVector& vector)
 
 
 // inline methods
+
+inline bool CVarVector::IsEmpty() const
+{
+	return m_elements.isEmpty();
+}
+
 
 inline int CVarVector::GetElementsCount() const
 {

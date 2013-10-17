@@ -27302,6 +27302,13 @@
       <arglist>(const TVector&lt; Size, double &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
+      <type>bool</type>
+      <name>IsEmpty</name>
+      <anchorfile>classimath_1_1_c_var_vector.html</anchorfile>
+      <anchor>a04ee5746d8bf24374dccbdeabc9bb560</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
       <type>int</type>
       <name>GetElementsCount</name>
       <anchorfile>classimath_1_1_c_var_vector.html</anchorfile>
@@ -27319,22 +27326,22 @@
       <type>double</type>
       <name>GetElement</name>
       <anchorfile>classimath_1_1_c_var_vector.html</anchorfile>
-      <anchor>af761b0f17cf6ddb5daa14530e8c2bd1c</anchor>
-      <arglist>(int i) const </arglist>
+      <anchor>a9e0f0b29a2cfccd173adc2094234772d</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function">
       <type>double &amp;</type>
       <name>GetElementRef</name>
       <anchorfile>classimath_1_1_c_var_vector.html</anchorfile>
-      <anchor>a7f03f9cb95b8d21ea36d87b06241cff4</anchor>
-      <arglist>(int i)</arglist>
+      <anchor>ae2bd61594326b0d6604da78867f7bcb6</anchor>
+      <arglist>(int index)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>SetElement</name>
       <anchorfile>classimath_1_1_c_var_vector.html</anchorfile>
-      <anchor>abe8efeee3d92ed40fdb58687ffaa5a8d</anchor>
-      <arglist>(int i, double value)</arglist>
+      <anchor>ab1686a789730cdedf84d9eaafdd46671</anchor>
+      <arglist>(int index, double value)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -27377,6 +27384,13 @@
       <anchorfile>classimath_1_1_c_var_vector.html</anchorfile>
       <anchor>a051cd5dcedaeb2b04b58e654d130da95</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>EnsureElementsCount</name>
+      <anchorfile>classimath_1_1_c_var_vector.html</anchorfile>
+      <anchor>a1064974f24feacd69c74cfde9bd29e77</anchor>
+      <arglist>(int count, double value=0)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
