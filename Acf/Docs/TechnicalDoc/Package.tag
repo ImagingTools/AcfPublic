@@ -7868,6 +7868,27 @@
       <anchor>a9014bf003fa9b9b0b5c3a207d7af0e17</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classi2d_1_1_c_label.html</anchorfile>
+      <anchor>a88bbc4e2f20eed021041a2c42f1d8ef1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_label.html</anchorfile>
+      <anchor>a06924e695112eefcd9481586aec53924</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classi2d_1_1_c_label.html</anchorfile>
+      <anchor>a5d359f71f7b3568b5996fc298e14bbb8</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>i2d::CLine2d</name>

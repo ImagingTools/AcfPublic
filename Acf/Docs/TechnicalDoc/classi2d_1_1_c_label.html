@@ -76,6 +76,11 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set label text.  <a href="#a37a3cf9cf3a1dedba74213fd16ebd946"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_label.html#a9014bf003fa9b9b0b5c3a207d7af0e17">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a9014bf003fa9b9b0b5c3a207d7af0e17"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_label.html#a88bbc4e2f20eed021041a2c42f1d8ef1">GetSupportedOperations</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of flags for supported operations.  <a href="#a88bbc4e2f20eed021041a2c42f1d8ef1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_label.html#a06924e695112eefcd9481586aec53924">CopyFrom</a> (const IChangeable &amp;object, <a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_label.html#a5d359f71f7b3568b5996fc298e14bbb8">CloneMe</a> (<a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=CM_WITHOUT_REFS) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#a5d359f71f7b3568b5996fc298e14bbb8"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Data model for the label shape. </p>
@@ -135,6 +140,78 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a5d359f71f7b3568b5996fc298e14bbb8"></a><!-- doxytag: member="i2d::CLabel::CloneMe" ref="a5d359f71f7b3568b5996fc298e14bbb8" args="(CompatibilityMode mode=CM_WITHOUT_REFS) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* i2d::CLabel::CloneMe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>CM_WITHOUT_REFS</code></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Make a copy of this object. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>new instance or NULL, if this operation is not supported. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_position2d.html#a6bd001f163d333a7d3d0bfa7eac5d3ee">i2d::CPosition2d</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a06924e695112eefcd9481586aec53924"></a><!-- doxytag: member="i2d::CLabel::CopyFrom" ref="a06924e695112eefcd9481586aec53924" args="(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool i2d::CLabel::CopyFrom </td>
+          <td>(</td>
+          <td class="paramtype">const IChangeable &amp;&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>CM_WITHOUT_REFS</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_position2d.html#ae272706676cf4206aeef888f3ff898d0">i2d::CPosition2d</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a88bbc4e2f20eed021041a2c42f1d8ef1"></a><!-- doxytag: member="i2d::CLabel::GetSupportedOperations" ref="a88bbc4e2f20eed021041a2c42f1d8ef1" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int i2d::CLabel::GetSupportedOperations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get set of flags for supported operations. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classistd_1_1_i_changeable.html#adfacdea73eb745825f6797b4b8986eac" title="Flags for supported operations.">SupportedOperations</a> </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classi2d_1_1_c_position2d.html#a92f14c245c32228d6c124d97c216974d">i2d::CPosition2d</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="afba5278ae233b323f7020c1c217579e1"></a><!-- doxytag: member="i2d::CLabel::GetText" ref="afba5278ae233b323f7020c1c217579e1" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -151,7 +228,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get label text. </p>
 
-<p>Definition at line <a class="el" href="_c_label_8h_source.html#l00050">50</a> of file <a class="el" href="_c_label_8h_source.html">CLabel.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_label_8h_source.html#l00055">55</a> of file <a class="el" href="_c_label_8h_source.html">CLabel.h</a>.</p>
 
 </div>
 </div>
