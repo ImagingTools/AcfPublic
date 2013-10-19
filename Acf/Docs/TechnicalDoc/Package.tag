@@ -4028,6 +4028,19 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>CDocumentImportExportCommandComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtdoc/</path>
+    <filename>_c_document_import_export_command_comp_8h</filename>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="no" imported="no">imod/TSingleModelObserverBase.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="no" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="no" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="no" imported="no">idoc/IDocumentManager.h</includes>
+    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="no" imported="no">iqtgui/CHierarchicalCommand.h</includes>
+    <class kind="class">iqtdoc::CDocumentImportExportCommandComp</class>
+    <namespace>iqtdoc</namespace>
+  </compound>
+  <compound kind="file">
     <name>CDocumentMetaInfoEditorComp.h</name>
     <path>C:/Temp/Acf/Include/iqtdoc/</path>
     <filename>_c_document_meta_info_editor_comp_8h</filename>
@@ -36252,6 +36265,7 @@
   <compound kind="namespace">
     <name>iqtdoc</name>
     <filename>namespaceiqtdoc.html</filename>
+    <class kind="class">iqtdoc::CDocumentImportExportCommandComp</class>
     <class kind="class">iqtdoc::CDocumentMetaInfoEditorComp</class>
     <class kind="class">iqtdoc::CDoxygenHelpFileProviderComp</class>
     <class kind="class">iqtdoc::CExtendedDocumentTemplateComp</class>
@@ -36263,6 +36277,62 @@
     <class kind="class">iqtdoc::CSingletonDocApplicationComp</class>
     <class kind="class">iqtdoc::CStaticHelpFileProviderComp</class>
     <class kind="class">iqtdoc::TQtDocumentManagerWrap</class>
+  </compound>
+  <compound kind="class">
+    <name>iqtdoc::CDocumentImportExportCommandComp</name>
+    <filename>classiqtdoc_1_1_c_document_import_export_command_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base protection="protected">TSingleModelObserverBase&lt; idoc::IDocumentManager &gt;</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
+      <anchor>abff3cca02b4d9993a7d322dadf93d353</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
+      <anchor>a94f8fa5c5eac04486559815e38f8dc5f</anchor>
+      <arglist>(m_documentManagerModelCompPtr, m_documentManagerCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CDocumentImportExportCommandComp</name>
+      <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
+      <anchor>a85dec1f567b262226142d05337beb912</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ibase::IHierarchicalCommand *</type>
+      <name>GetCommands</name>
+      <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
+      <anchor>abbe3d358db742c2347eb559e4d86ca73</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
+      <anchor>a1943d20b4f9c32dfb7aed12ab59756cf</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
+      <anchor>a63a09f8aba936edeea29efc64feabbcc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
+      <anchor>a380b4617f49715a00b4260e513e1202f</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtdoc::CDocumentMetaInfoEditorComp</name>

@@ -44,9 +44,7 @@
 
 // ACF includes
 #include "imod/IObserver.h"
-
 #include "ibase/ICommandsProvider.h"
-
 #include "iqt/CSettingsWriteArchive.h"
 #include "iqt/CSettingsReadArchive.h"
 

@@ -1,0 +1,103 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2013 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iqtdoc_CDocumentImportExportCommandComp_included
+#define iqtdoc_CDocumentImportExportCommandComp_included
+
+
+// ACF includes
+#include <imod/TSingleModelObserverBase.h>
+#include <icomp/CComponentBase.h>
+#include <ibase/ICommandsProvider.h>
+#include <ifile/IFilePersistence.h>
+#include <idoc/IDocumentManager.h>
+#include <iqtgui/CHierarchicalCommand.h>
+
+
+namespace iqtdoc
+{
+
+
+/**
+	Component used for triggering of the document import/export command from the file menu of a document based application.
+*/
+class CDocumentImportExportCommandComp:
+			public QObject,
+			public icomp::CComponentBase,
+			protected imod::TSingleModelObserverBase<idoc::IDocumentManager>,
+			virtual public ibase::ICommandsProvider
+{
+	Q_OBJECT
+public:
+	typedef icomp::CComponentBase BaseClass;
+
+	I_BEGIN_COMPONENT(CDocumentImportExportCommandComp);
+		I_REGISTER_INTERFACE(ibase::ICommandsProvider);
+		I_ASSIGN(m_documentPersistenceCompPtr, "DocumentPersistence", "File persistence for the actual document type", true, "DocumentPersistence"); 
+		I_ASSIGN(m_documentManagerCompPtr, "DocumentManager", "Manager of the documents in the MDI workspace", true, "DocumentManager");
+		I_ASSIGN_TO(m_documentManagerModelCompPtr, m_documentManagerCompPtr, true);
+		I_ASSIGN(m_documentTypeIdAttrPtr, "DocumentTypeId", "ID of the document type used by MDI workspace", true, "Default");
+		I_ASSIGN(m_importCommandNameAttrPtr, "ImportCommandName", "Name/Text of the import command shown in File menu", true, "Import...");
+		I_ASSIGN(m_exportCommandNameAttrPtr, "ExportCommandName", "Name/Text of the export command shown in File menu", true, "Export...");
+	I_END_COMPONENT;
+
+	CDocumentImportExportCommandComp();
+
+	// reimplemented (ibase::ICommandsProvider)
+	virtual const ibase::IHierarchicalCommand* GetCommands() const;
+
+protected:
+	// reimplemented (imod::CSingleModelObserverBase)
+	virtual void OnUpdate(int updateFlags, istd::IPolymorphic* updateParamsPtr);
+
+	// reimplemented (icomp::CComponentBase)
+	virtual void OnComponentCreated();
+	virtual void OnComponentDestroyed();
+
+private Q_SLOTS:
+	virtual void OnImport();
+	virtual void OnExport();
+
+private:
+	void UpdateCommands();
+
+private:
+	iqtgui::CHierarchicalCommand m_rootCommands;
+	iqtgui::CHierarchicalCommand m_fileCommands;
+	iqtgui::CHierarchicalCommand m_importCommand;
+	iqtgui::CHierarchicalCommand m_exportCommand;
+	
+	I_REF(idoc::IDocumentManager, m_documentManagerCompPtr);
+	I_REF(imod::IModel, m_documentManagerModelCompPtr);
+	I_REF(ifile::IFilePersistence, m_documentPersistenceCompPtr);
+	I_ATTR(QByteArray, m_documentTypeIdAttrPtr);
+	I_ATTR(QString, m_importCommandNameAttrPtr);
+	I_ATTR(QString, m_exportCommandNameAttrPtr);
+};
+
+
+}  // namespace iqtdoc
+
+
+#endif // !iqtdoc_CDocumentImportExportCommandComp_included
+
+
