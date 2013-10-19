@@ -2695,6 +2695,7 @@
     <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="yes" imported="no">imod/TModelWrap.h</includes>
     <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ilog/CMessage.h</includes>
     <class kind="class">ilog::TExtMessage</class>
+    <class kind="class">ilog::TExtMessageModel</class>
     <namespace>ilog</namespace>
   </compound>
   <compound kind="file">
@@ -6533,10 +6534,6 @@
     <filename>class_document_selection_info.html</filename>
   </compound>
   <compound kind="class">
-    <name>Element</name>
-    <filename>class_element.html</filename>
-  </compound>
-  <compound kind="class">
     <name>IHierarchicalMessageContainer</name>
     <filename>class_i_hierarchical_message_container.html</filename>
   </compound>
@@ -6551,6 +6548,10 @@
   <compound kind="class">
     <name>TabModel</name>
     <filename>class_tab_model.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>TExtMessage</name>
+    <filename>class_t_ext_message.html</filename>
   </compound>
   <compound kind="class">
     <name>TGuiObserverWrap</name>
@@ -9006,6 +9007,13 @@
       <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>aee96368e13548faa82bd3c2cf7aad01a</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
@@ -9032,13 +9040,6 @@
       <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
       <anchor>a360cc7895316bc492388eb48b678fefe</anchor>
       <arglist>(const IChangeable &amp;object) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>aee96368e13548faa82bd3c2cf7aad01a</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -24900,6 +24901,7 @@
     <class kind="class">ilog::IMessageConsumer</class>
     <class kind="class">ilog::IMessageContainer</class>
     <class kind="class">ilog::TExtMessage</class>
+    <class kind="class">ilog::TExtMessageModel</class>
     <class kind="class">ilog::TLoggerCompWrap</class>
     <class kind="class">ilog::TLoggerWrap</class>
     <class kind="class">ilog::TMessageDelegatorComp</class>
@@ -25002,6 +25004,13 @@
       <name>CMessage</name>
       <anchorfile>classilog_1_1_c_message.html</anchorfile>
       <anchor>ab6a037921a5ad26c9c3b48b1f65c6ab2</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;text, const QString &amp;source, int flags=0, const QDateTime *timeStampPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetMessageValues</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a8316b52aad4581e2046df199d019a712</anchor>
       <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;text, const QString &amp;source, int flags=0, const QDateTime *timeStampPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -25582,7 +25591,6 @@
     <filename>classilog_1_1_t_ext_message.html</filename>
     <templarg></templarg>
     <base>ilog::CMessage</base>
-    <base>TModelWrap&lt; Element &gt;</base>
     <member kind="typedef">
       <type>CMessage</type>
       <name>BaseClass</name>
@@ -25591,60 +25599,80 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>imod::TModelWrap&lt; Element &gt;</type>
+      <type>Element</type>
       <name>BaseClass2</name>
       <anchorfile>classilog_1_1_t_ext_message.html</anchorfile>
-      <anchor>af0a943d2ff4d460b41257a26e951e3ed</anchor>
+      <anchor>a3513017c4a204f8903811d0c6f8b5795</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>TExtMessage</name>
       <anchorfile>classilog_1_1_t_ext_message.html</anchorfile>
-      <anchor>ad186bf89ffeef5275da2264121d91980</anchor>
+      <anchor>abf60daccefdc4700670a879d43b303f5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>TExtMessage</name>
       <anchorfile>classilog_1_1_t_ext_message.html</anchorfile>
-      <anchor>a856fc7622b1e75bdb82f49edb05bc698</anchor>
+      <anchor>aa5e4f80571cec10df7df551c4473f314</anchor>
       <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;text, const QString &amp;source, int flags=0, const QDateTime *timeStampPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classilog_1_1_t_ext_message.html</anchorfile>
-      <anchor>a98ea006b7b92caa6cd17240b146932e4</anchor>
+      <anchor>afb85a41934d0b7a3c2ef43ed1c49e9e4</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classilog_1_1_t_ext_message.html</anchorfile>
-      <anchor>ac7d167e020540909b4105bc115ad6720</anchor>
+      <anchor>a0e86bf31f8d61f214836b8752196233e</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classilog_1_1_t_ext_message.html</anchorfile>
-      <anchor>ab06f11d029aea7ffea65f522fb4f6091</anchor>
+      <anchor>acc73fdc45c895338bcd47afe99464ff4</anchor>
       <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_STRICT)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classilog_1_1_t_ext_message.html</anchorfile>
-      <anchor>af9370e86daaa83fb7f51067d17759e02</anchor>
+      <anchor>a572fe6c36d40c0705a5078603936f2a3</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
     <member kind="function" static="yes">
       <type>static QByteArray</type>
       <name>GetTypeName</name>
       <anchorfile>classilog_1_1_t_ext_message.html</anchorfile>
-      <anchor>a14380e1349369ac46e213d788e6c6fe8</anchor>
+      <anchor>a3bf29d830f36a8fc509a6bca361d5b7c</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilog::TExtMessageModel</name>
+    <filename>classilog_1_1_t_ext_message_model.html</filename>
+    <templarg></templarg>
+    <base>TModelWrap&lt; TExtMessage&lt; Element &gt; &gt;</base>
+    <member kind="typedef">
+      <type>imod::TModelWrap&lt; TExtMessage&lt; Element &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classilog_1_1_t_ext_message_model.html</anchorfile>
+      <anchor>ae73ad3da7d22e8fc37faed660b302899</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TExtMessageModel</name>
+      <anchorfile>classilog_1_1_t_ext_message_model.html</anchorfile>
+      <anchor>ab3fb9d23e419569dc4279f4f4f49d27c</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;text, const QString &amp;source, int flags=0, const QDateTime *timeStampPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">

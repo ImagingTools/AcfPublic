@@ -47,7 +47,7 @@
 <a name="l00024"></a>00024 <span class="keyword">public</span>:
 <a name="l00025"></a><a class="code" href="classistd_1_1_t_array.html#a024d75342182d3d93b27d5c96d3842a2">00025</a>        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">TIndex&lt;Dimensions&gt;</a> <a class="code" href="classistd_1_1_t_array.html#a024d75342182d3d93b27d5c96d3842a2">IndexType</a>;
 <a name="l00026"></a><a class="code" href="classistd_1_1_t_array.html#ad23e79e1dea82b73463a61969c4c68bc">00026</a>        <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">TIndex&lt;Dimensions&gt;</a> <a class="code" href="classistd_1_1_t_array.html#ad23e79e1dea82b73463a61969c4c68bc">SizesType</a>;
-<a name="l00027"></a><a class="code" href="classistd_1_1_t_array.html#ad1d6b23e6e813b2d5733cbc3901ed3b0">00027</a>        <span class="keyword">typedef</span> <a class="code" href="class_element.html">Element</a> <a class="code" href="classistd_1_1_t_array.html#ad1d6b23e6e813b2d5733cbc3901ed3b0">ElementType</a>;
+<a name="l00027"></a><a class="code" href="classistd_1_1_t_array.html#ad1d6b23e6e813b2d5733cbc3901ed3b0">00027</a>        <span class="keyword">typedef</span> Element <a class="code" href="classistd_1_1_t_array.html#ad1d6b23e6e813b2d5733cbc3901ed3b0">ElementType</a>;
 <a name="l00028"></a>00028 
 <a name="l00029"></a><a class="code" href="classistd_1_1_t_array_1_1_iterator.html">00029</a>        <span class="keyword">class </span><a class="code" href="classistd_1_1_t_index.html#a94973cb5f29f55c4fa9192f3b8980a21">Iterator</a>: <span class="keyword">public</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">TIndex</a>&lt;Dimensions&gt;
 <a name="l00030"></a>00030        {
@@ -56,11 +56,11 @@
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034               <a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a61e0338d408387d2bddb732320a4234c">Iterator</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html#a94973cb5f29f55c4fa9192f3b8980a21">Iterator</a>&amp; iterator);
 <a name="l00035"></a>00035 
-<a name="l00036"></a>00036               <a class="code" href="class_element.html">Element</a>&amp; <a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a5ddb059755aba47445e482fc447edca9">operator*</a>();
-<a name="l00037"></a>00037               <span class="keyword">const</span> <a class="code" href="class_element.html">Element</a>&amp; <a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a5ddb059755aba47445e482fc447edca9">operator*</a>() <span class="keyword">const</span>;
+<a name="l00036"></a>00036               Element&amp; <a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a5ddb059755aba47445e482fc447edca9">operator*</a>();
+<a name="l00037"></a>00037               <span class="keyword">const</span> Element&amp; <a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a5ddb059755aba47445e482fc447edca9">operator*</a>() <span class="keyword">const</span>;
 <a name="l00038"></a>00038 
-<a name="l00039"></a>00039               <a class="code" href="class_element.html">Element</a>* <a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a4c6d4ab58836d5213180f3f127d43303">operator-&gt;</a>();
-<a name="l00040"></a>00040               <span class="keyword">const</span> <a class="code" href="class_element.html">Element</a>* <a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a4c6d4ab58836d5213180f3f127d43303">operator-&gt;</a>() <span class="keyword">const</span>;
+<a name="l00039"></a>00039               Element* <a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a4c6d4ab58836d5213180f3f127d43303">operator-&gt;</a>();
+<a name="l00040"></a>00040               <span class="keyword">const</span> Element* <a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a4c6d4ab58836d5213180f3f127d43303">operator-&gt;</a>() <span class="keyword">const</span>;
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042               <a class="code" href="classistd_1_1_t_index.html#a94973cb5f29f55c4fa9192f3b8980a21">Iterator</a>&amp; <a class="code" href="classistd_1_1_t_array_1_1_iterator.html#ad6be5d6d51bec977e220060b765baeed">operator++</a>();
 <a name="l00043"></a>00043               <a class="code" href="classistd_1_1_t_index.html#a94973cb5f29f55c4fa9192f3b8980a21">Iterator</a> <a class="code" href="classistd_1_1_t_array_1_1_iterator.html#ad6be5d6d51bec977e220060b765baeed">operator++</a>(<span class="keywordtype">int</span>);
@@ -73,7 +73,7 @@
 <a name="l00050"></a>00050               <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a916a2c79786216f851bc94b6d968d391">operator==</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html#a94973cb5f29f55c4fa9192f3b8980a21">Iterator</a>&amp; iterator) <span class="keyword">const</span>;
 <a name="l00051"></a>00051               <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_t_array_1_1_iterator.html#af3e6728cdc38de1a18888887c3762ca6">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html#a94973cb5f29f55c4fa9192f3b8980a21">Iterator</a>&amp; iterator) <span class="keyword">const</span>;
 <a name="l00052"></a>00052 
-<a name="l00053"></a><a class="code" href="classistd_1_1_t_array_1_1_iterator.html#aac47ad37fccfb2c204afe994cb204240">00053</a>               <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classistd_1_1_t_array.html" title="Multidimensional array with fixed number of dimensions.">TArray</a>&lt;<a class="code" href="class_element.html">Element</a>, Dimensions&gt;;
+<a name="l00053"></a><a class="code" href="classistd_1_1_t_array_1_1_iterator.html#aac47ad37fccfb2c204afe994cb204240">00053</a>               <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classistd_1_1_t_array.html" title="Multidimensional array with fixed number of dimensions.">TArray</a>&lt;Element, Dimensions&gt;;
 <a name="l00054"></a>00054 
 <a name="l00055"></a>00055        <span class="keyword">protected</span>:
 <a name="l00056"></a>00056               <a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a61e0338d408387d2bddb732320a4234c">Iterator</a>(<a class="code" href="classistd_1_1_t_array.html" title="Multidimensional array with fixed number of dimensions.">TArray</a>* arrayPtr);
@@ -103,20 +103,20 @@
 <a name="l00109"></a>00109 
 <a name="l00115"></a>00115        <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_t_array.html#a251eb5e76cb9d397dca5d044b3bafd0f" title="Set size of array for specified dimension.">SetSize</a>(<span class="keywordtype">int</span> dimension, <span class="keywordtype">int</span> size);
 <a name="l00116"></a>00116 
-<a name="l00120"></a>00120        <span class="keyword">const</span> <a class="code" href="class_element.html">Element</a>&amp; <a class="code" href="classistd_1_1_t_array.html#a6a4eb06ddd4e851b68274f672f43c44d" title="Get element stored at specified index.">GetAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">IndexType</a>&amp; index) <span class="keyword">const</span>;
+<a name="l00120"></a>00120        <span class="keyword">const</span> Element&amp; <a class="code" href="classistd_1_1_t_array.html#a6a4eb06ddd4e851b68274f672f43c44d" title="Get element stored at specified index.">GetAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">IndexType</a>&amp; index) <span class="keyword">const</span>;
 <a name="l00121"></a>00121 
-<a name="l00125"></a>00125        <a class="code" href="class_element.html">Element</a>&amp; <a class="code" href="classistd_1_1_t_array.html#a52b6de212f56f661f04b55684401bd68" title="Get reference to element stored at specified index.">GetAtRef</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">IndexType</a>&amp; index);
+<a name="l00125"></a>00125        Element&amp; <a class="code" href="classistd_1_1_t_array.html#a52b6de212f56f661f04b55684401bd68" title="Get reference to element stored at specified index.">GetAtRef</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">IndexType</a>&amp; index);
 <a name="l00126"></a>00126 
-<a name="l00130"></a>00130        <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_array.html#aad5883ffb9a0f01b278ae24ec40f6ff4" title="Set element at specified index.">SetAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">IndexType</a>&amp; index, <span class="keyword">const</span> <a class="code" href="class_element.html">Element</a>&amp; value);
+<a name="l00130"></a>00130        <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_array.html#aad5883ffb9a0f01b278ae24ec40f6ff4" title="Set element at specified index.">SetAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">IndexType</a>&amp; index, <span class="keyword">const</span> Element&amp; value);
 <a name="l00131"></a>00131 
-<a name="l00135"></a>00135        <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_array.html#a0bd33830615391a11c68626e0d40d739" title="Set some value to all elements.">SetAllElements</a>(<span class="keyword">const</span> <a class="code" href="class_element.html">Element</a>&amp; value);
+<a name="l00135"></a>00135        <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_array.html#a0bd33830615391a11c68626e0d40d739" title="Set some value to all elements.">SetAllElements</a>(<span class="keyword">const</span> Element&amp; value);
 <a name="l00136"></a>00136 
 <a name="l00137"></a>00137        <span class="comment">// iterator support</span>
 <a name="l00142"></a>00142 <span class="comment"></span>       <a class="code" href="classistd_1_1_t_array_1_1_iterator.html">Iterator</a> <a class="code" href="classistd_1_1_t_array.html#abab51963c97526d23c6de156fceadaef" title="Get begin value of element access iterator.">Begin</a>() <span class="keyword">const</span>;
 <a name="l00147"></a>00147        <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_array_1_1_iterator.html">Iterator</a>&amp; <a class="code" href="classistd_1_1_t_array.html#a002e3977ee1ac8c7e4510ab8a0c7aa2a" title="Get end value of element access iterator.">End</a>() <span class="keyword">const</span>;
 <a name="l00148"></a>00148 
-<a name="l00149"></a>00149        <span class="keyword">const</span> <a class="code" href="class_element.html">Element</a>&amp; <a class="code" href="classistd_1_1_t_array.html#aaec10cea742308b14a4ab50020ccaaf5">operator[]</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">IndexType</a>&amp; index) <span class="keyword">const</span>;
-<a name="l00150"></a>00150        <a class="code" href="class_element.html">Element</a>&amp; <a class="code" href="classistd_1_1_t_array.html#aaec10cea742308b14a4ab50020ccaaf5">operator[]</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">IndexType</a>&amp; index);
+<a name="l00149"></a>00149        <span class="keyword">const</span> Element&amp; <a class="code" href="classistd_1_1_t_array.html#aaec10cea742308b14a4ab50020ccaaf5">operator[]</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">IndexType</a>&amp; index) <span class="keyword">const</span>;
+<a name="l00150"></a>00150        Element&amp; <a class="code" href="classistd_1_1_t_array.html#aaec10cea742308b14a4ab50020ccaaf5">operator[]</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">IndexType</a>&amp; index);
 <a name="l00151"></a>00151 
 <a name="l00152"></a>00152 <span class="keyword">protected</span>:
 <a name="l00153"></a><a class="code" href="classistd_1_1_t_array.html#abdcab1871532ba4f912a22efb0afb55a">00153</a>        <span class="keyword">typedef</span> QVector&lt;Element&gt; <a class="code" href="classistd_1_1_t_array.html#abdcab1871532ba4f912a22efb0afb55a">Elements</a>;
@@ -183,7 +183,7 @@
 <a name="l00220"></a>00220 
 <a name="l00221"></a>00221 
 <a name="l00222"></a>00222 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Element, <span class="keywordtype">int</span> Dimensions&gt;
-<a name="l00223"></a><a class="code" href="classistd_1_1_t_array.html#a6a4eb06ddd4e851b68274f672f43c44d">00223</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_element.html">Element</a>&amp; <a class="code" href="classistd_1_1_t_array.html#a6a4eb06ddd4e851b68274f672f43c44d" title="Get element stored at specified index.">TArray&lt;Element, Dimensions&gt;::GetAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">IndexType</a>&amp; index)<span class="keyword"> const</span>
+<a name="l00223"></a><a class="code" href="classistd_1_1_t_array.html#a6a4eb06ddd4e851b68274f672f43c44d">00223</a> <span class="keyword">inline</span> <span class="keyword">const</span> Element&amp; <a class="code" href="classistd_1_1_t_array.html#a6a4eb06ddd4e851b68274f672f43c44d" title="Get element stored at specified index.">TArray&lt;Element, Dimensions&gt;::GetAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">IndexType</a>&amp; index)<span class="keyword"> const</span>
 <a name="l00224"></a>00224 <span class="keyword"></span>{
 <a name="l00225"></a>00225        Q_ASSERT(index.<a class="code" href="classistd_1_1_t_index.html#a39afdfb2731f2dee652e667ab8b77667" title="Check if index is inside boundaries.">IsInside</a>(m_sizes));
 <a name="l00226"></a>00226 
@@ -195,7 +195,7 @@
 <a name="l00232"></a>00232 
 <a name="l00233"></a>00233 
 <a name="l00234"></a>00234 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Element, <span class="keywordtype">int</span> Dimensions&gt;
-<a name="l00235"></a><a class="code" href="classistd_1_1_t_array.html#a52b6de212f56f661f04b55684401bd68">00235</a> <span class="keyword">inline</span> <a class="code" href="class_element.html">Element</a>&amp; <a class="code" href="classistd_1_1_t_array.html#a52b6de212f56f661f04b55684401bd68" title="Get reference to element stored at specified index.">TArray&lt;Element, Dimensions&gt;::GetAtRef</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">IndexType</a>&amp; index)
+<a name="l00235"></a><a class="code" href="classistd_1_1_t_array.html#a52b6de212f56f661f04b55684401bd68">00235</a> <span class="keyword">inline</span> Element&amp; <a class="code" href="classistd_1_1_t_array.html#a52b6de212f56f661f04b55684401bd68" title="Get reference to element stored at specified index.">TArray&lt;Element, Dimensions&gt;::GetAtRef</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">IndexType</a>&amp; index)
 <a name="l00236"></a>00236 {
 <a name="l00237"></a>00237        Q_ASSERT(index.<a class="code" href="classistd_1_1_t_index.html#a39afdfb2731f2dee652e667ab8b77667" title="Check if index is inside boundaries.">IsInside</a>(m_sizes));
 <a name="l00238"></a>00238 
@@ -207,7 +207,7 @@
 <a name="l00244"></a>00244 
 <a name="l00245"></a>00245 
 <a name="l00246"></a>00246 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Element, <span class="keywordtype">int</span> Dimensions&gt;
-<a name="l00247"></a><a class="code" href="classistd_1_1_t_array.html#aad5883ffb9a0f01b278ae24ec40f6ff4">00247</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_array.html#aad5883ffb9a0f01b278ae24ec40f6ff4" title="Set element at specified index.">TArray&lt;Element, Dimensions&gt;::SetAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">IndexType</a>&amp; index, <span class="keyword">const</span> <a class="code" href="class_element.html">Element</a>&amp; value)
+<a name="l00247"></a><a class="code" href="classistd_1_1_t_array.html#aad5883ffb9a0f01b278ae24ec40f6ff4">00247</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_array.html#aad5883ffb9a0f01b278ae24ec40f6ff4" title="Set element at specified index.">TArray&lt;Element, Dimensions&gt;::SetAt</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">IndexType</a>&amp; index, <span class="keyword">const</span> Element&amp; value)
 <a name="l00248"></a>00248 {
 <a name="l00249"></a>00249        Q_ASSERT(index.<a class="code" href="classistd_1_1_t_index.html#a39afdfb2731f2dee652e667ab8b77667" title="Check if index is inside boundaries.">IsInside</a>(m_sizes));
 <a name="l00250"></a>00250 
@@ -235,14 +235,14 @@
 <a name="l00272"></a>00272 
 <a name="l00273"></a>00273 
 <a name="l00274"></a>00274 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Element, <span class="keywordtype">int</span> Dimensions&gt;
-<a name="l00275"></a><a class="code" href="classistd_1_1_t_array.html#aaec10cea742308b14a4ab50020ccaaf5">00275</a> <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="class_element.html">Element</a>&amp; <a class="code" href="classistd_1_1_t_array.html#aaec10cea742308b14a4ab50020ccaaf5">TArray&lt;Element, Dimensions&gt;::operator[]</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">IndexType</a>&amp; index)<span class="keyword"> const</span>
+<a name="l00275"></a><a class="code" href="classistd_1_1_t_array.html#aaec10cea742308b14a4ab50020ccaaf5">00275</a> <span class="keyword">inline</span> <span class="keyword">const</span> Element&amp; <a class="code" href="classistd_1_1_t_array.html#aaec10cea742308b14a4ab50020ccaaf5">TArray&lt;Element, Dimensions&gt;::operator[]</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">IndexType</a>&amp; index)<span class="keyword"> const</span>
 <a name="l00276"></a>00276 <span class="keyword"></span>{
 <a name="l00277"></a>00277        <span class="keywordflow">return</span> GetAt(index);
 <a name="l00278"></a>00278 }
 <a name="l00279"></a>00279 
 <a name="l00280"></a>00280 
 <a name="l00281"></a>00281 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Element, <span class="keywordtype">int</span> Dimensions&gt;
-<a name="l00282"></a><a class="code" href="classistd_1_1_t_array.html#abf8b81043d6af5e6c36265313e299e83">00282</a> <span class="keyword">inline</span> <a class="code" href="class_element.html">Element</a>&amp; <a class="code" href="classistd_1_1_t_array.html#aaec10cea742308b14a4ab50020ccaaf5">TArray&lt;Element, Dimensions&gt;::operator[]</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">IndexType</a>&amp; index)
+<a name="l00282"></a><a class="code" href="classistd_1_1_t_array.html#abf8b81043d6af5e6c36265313e299e83">00282</a> <span class="keyword">inline</span> Element&amp; <a class="code" href="classistd_1_1_t_array.html#aaec10cea742308b14a4ab50020ccaaf5">TArray&lt;Element, Dimensions&gt;::operator[]</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_index.html" title="Multidimensional index used to addressing fixed-size array.">IndexType</a>&amp; index)
 <a name="l00283"></a>00283 {
 <a name="l00284"></a>00284        <span class="keywordtype">int</span> elementIndex = GetElementIndex(index);
 <a name="l00285"></a>00285        Q_ASSERT(elementIndex &lt; <span class="keywordtype">int</span>(m_elements.size()));
@@ -324,7 +324,7 @@
 <a name="l00361"></a>00361 
 <a name="l00362"></a>00362 
 <a name="l00363"></a>00363 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Element, <span class="keywordtype">int</span> Dimensions&gt;
-<a name="l00364"></a><a class="code" href="classistd_1_1_t_array.html#a0bd33830615391a11c68626e0d40d739">00364</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_array.html#a0bd33830615391a11c68626e0d40d739" title="Set some value to all elements.">TArray&lt;Element, Dimensions&gt;::SetAllElements</a>(<span class="keyword">const</span> <a class="code" href="class_element.html">Element</a>&amp; value)
+<a name="l00364"></a><a class="code" href="classistd_1_1_t_array.html#a0bd33830615391a11c68626e0d40d739">00364</a> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_array.html#a0bd33830615391a11c68626e0d40d739" title="Set some value to all elements.">TArray&lt;Element, Dimensions&gt;::SetAllElements</a>(<span class="keyword">const</span> Element&amp; value)
 <a name="l00365"></a>00365 {
 <a name="l00366"></a>00366        <span class="keywordflow">for</span> (         <span class="keyword">typename</span> Elements::Iterator iter = m_elements.begin();
 <a name="l00367"></a>00367                             iter != m_elements.end();
@@ -374,7 +374,7 @@
 <a name="l00411"></a>00411 
 <a name="l00412"></a>00412 
 <a name="l00413"></a>00413 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Element, <span class="keywordtype">int</span> Dimensions&gt;
-<a name="l00414"></a><a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a8959e2a6c596b8b3918c21f1db91ad59">00414</a> <span class="keyword">const</span> <a class="code" href="class_element.html">Element</a>&amp; <a class="code" href="_t_reference_member_8h.html#af5f8b726e9dc6362a2d7f4aa7a395281">TArray&lt;Element, Dimensions&gt;::Iterator::operator*</a>()<span class="keyword"> const</span>
+<a name="l00414"></a><a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a8959e2a6c596b8b3918c21f1db91ad59">00414</a> <span class="keyword">const</span> Element&amp; <a class="code" href="_t_reference_member_8h.html#af5f8b726e9dc6362a2d7f4aa7a395281">TArray&lt;Element, Dimensions&gt;::Iterator::operator*</a>()<span class="keyword"> const</span>
 <a name="l00415"></a>00415 <span class="keyword"></span>{
 <a name="l00416"></a>00416        Q_ASSERT(m_arrayPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00417"></a>00417        Q_ASSERT(BaseClass::IsInside(m_arrayPtr-&gt;GetSizes()));
@@ -384,7 +384,7 @@
 <a name="l00421"></a>00421 
 <a name="l00422"></a>00422 
 <a name="l00423"></a>00423 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Element, <span class="keywordtype">int</span> Dimensions&gt;
-<a name="l00424"></a><a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a5ddb059755aba47445e482fc447edca9">00424</a> <a class="code" href="class_element.html">Element</a>&amp; <a class="code" href="_t_reference_member_8h.html#af5f8b726e9dc6362a2d7f4aa7a395281">TArray&lt;Element, Dimensions&gt;::Iterator::operator*</a>()
+<a name="l00424"></a><a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a5ddb059755aba47445e482fc447edca9">00424</a> Element&amp; <a class="code" href="_t_reference_member_8h.html#af5f8b726e9dc6362a2d7f4aa7a395281">TArray&lt;Element, Dimensions&gt;::Iterator::operator*</a>()
 <a name="l00425"></a>00425 {
 <a name="l00426"></a>00426        Q_ASSERT(m_arrayPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00427"></a>00427        Q_ASSERT(BaseClass::IsInside(m_arrayPtr-&gt;GetSizes()));
@@ -394,7 +394,7 @@
 <a name="l00431"></a>00431 
 <a name="l00432"></a>00432 
 <a name="l00433"></a>00433 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Element, <span class="keywordtype">int</span> Dimensions&gt;
-<a name="l00434"></a><a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a44ffc6fead54e0eac40bec275da992c4">00434</a> <span class="keyword">const</span> <a class="code" href="class_element.html">Element</a>* <a class="code" href="classistd_1_1_t_array.html" title="Multidimensional array with fixed number of dimensions.">TArray&lt;Element, Dimensions&gt;::Iterator::operator-&gt;</a>()<span class="keyword"> const</span>
+<a name="l00434"></a><a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a44ffc6fead54e0eac40bec275da992c4">00434</a> <span class="keyword">const</span> Element* <a class="code" href="classistd_1_1_t_array.html" title="Multidimensional array with fixed number of dimensions.">TArray&lt;Element, Dimensions&gt;::Iterator::operator-&gt;</a>()<span class="keyword"> const</span>
 <a name="l00435"></a>00435 <span class="keyword"></span>{
 <a name="l00436"></a>00436        Q_ASSERT(m_arrayPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00437"></a>00437        Q_ASSERT(BaseClass::IsInside(m_arrayPtr-&gt;GetSizes()));
@@ -404,7 +404,7 @@
 <a name="l00441"></a>00441 
 <a name="l00442"></a>00442 
 <a name="l00443"></a>00443 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Element, <span class="keywordtype">int</span> Dimensions&gt;
-<a name="l00444"></a><a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a4c6d4ab58836d5213180f3f127d43303">00444</a> <a class="code" href="class_element.html">Element</a>* <a class="code" href="classistd_1_1_t_array.html" title="Multidimensional array with fixed number of dimensions.">TArray&lt;Element, Dimensions&gt;::Iterator::operator-&gt;</a>()
+<a name="l00444"></a><a class="code" href="classistd_1_1_t_array_1_1_iterator.html#a4c6d4ab58836d5213180f3f127d43303">00444</a> Element* <a class="code" href="classistd_1_1_t_array.html" title="Multidimensional array with fixed number of dimensions.">TArray&lt;Element, Dimensions&gt;::Iterator::operator-&gt;</a>()
 <a name="l00445"></a>00445 {
 <a name="l00446"></a>00446        Q_ASSERT(m_arrayPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00447"></a>00447        Q_ASSERT(BaseClass::IsInside(m_arrayPtr-&gt;GetSizes()));

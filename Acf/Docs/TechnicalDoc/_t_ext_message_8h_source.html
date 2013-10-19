@@ -42,14 +42,14 @@
 <a name="l00017"></a>00017 <span class="keyword">template</span>&lt;<span class="keyword">class</span> Element&gt;
 <a name="l00018"></a><a class="code" href="classilog_1_1_t_ext_message.html">00018</a> <span class="keyword">class </span><a class="code" href="classilog_1_1_t_ext_message.html" title="Extended message with attached some object.">TExtMessage</a>:
 <a name="l00019"></a>00019                      <span class="keyword">public</span> <a class="code" href="classilog_1_1_c_message.html" title="Basic implementation of the istd::IInformationProvider interface.">CMessage</a>,
-<a name="l00020"></a>00020                      <span class="keyword">public</span> imod::TModelWrap&lt;Element&gt;
+<a name="l00020"></a>00020                      <span class="keyword">public</span> Element
 <a name="l00021"></a>00021 {
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
 <a name="l00023"></a><a class="code" href="classilog_1_1_t_ext_message.html#af042e8ca1694b930000b9c9cba15b0e6">00023</a>        <span class="keyword">typedef</span> <a class="code" href="classilog_1_1_c_message.html" title="Basic implementation of the istd::IInformationProvider interface.">CMessage</a> <a class="code" href="classilog_1_1_t_ext_message.html#af042e8ca1694b930000b9c9cba15b0e6">BaseClass</a>;
-<a name="l00024"></a><a class="code" href="classilog_1_1_t_ext_message.html#af0a943d2ff4d460b41257a26e951e3ed">00024</a>        <span class="keyword">typedef</span> <a class="code" href="classimod_1_1_t_model_wrap.html">imod::TModelWrap&lt;Element&gt;</a> <a class="code" href="classilog_1_1_t_ext_message.html#af0a943d2ff4d460b41257a26e951e3ed">BaseClass2</a>;
+<a name="l00024"></a><a class="code" href="classilog_1_1_t_ext_message.html#a3513017c4a204f8903811d0c6f8b5795">00024</a>        <span class="keyword">typedef</span> Element <a class="code" href="classilog_1_1_t_ext_message.html#a3513017c4a204f8903811d0c6f8b5795">BaseClass2</a>;
 <a name="l00025"></a>00025 
-<a name="l00026"></a>00026        <a class="code" href="classilog_1_1_t_ext_message.html#ad186bf89ffeef5275da2264121d91980">TExtMessage</a>();
-<a name="l00027"></a>00027        <a class="code" href="classilog_1_1_t_ext_message.html#ad186bf89ffeef5275da2264121d91980">TExtMessage</a>(<a class="code" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152" title="Category of information.">istd::IInformationProvider::InformationCategory</a> category,
+<a name="l00026"></a>00026        <a class="code" href="classilog_1_1_t_ext_message.html#abf60daccefdc4700670a879d43b303f5">TExtMessage</a>();
+<a name="l00027"></a>00027        <a class="code" href="classilog_1_1_t_ext_message.html#abf60daccefdc4700670a879d43b303f5">TExtMessage</a>(<a class="code" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152" title="Category of information.">istd::IInformationProvider::InformationCategory</a> category,
 <a name="l00028"></a>00028                             <span class="keywordtype">int</span> <span class="keywordtype">id</span>,
 <a name="l00029"></a>00029                             <span class="keyword">const</span> QString&amp; text, 
 <a name="l00030"></a>00030                             <span class="keyword">const</span> QString&amp; source,
@@ -57,24 +57,24 @@
 <a name="l00032"></a>00032                             <span class="keyword">const</span> QDateTime* timeStampPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034        <span class="comment">// reimplemented (iser::IObject)</span>
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> QByteArray <a class="code" href="classilog_1_1_t_ext_message.html#a98ea006b7b92caa6cd17240b146932e4">GetFactoryId</a>() <span class="keyword">const</span>;
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> QByteArray <a class="code" href="classilog_1_1_t_ext_message.html#afb85a41934d0b7a3c2ef43ed1c49e9e4">GetFactoryId</a>() <span class="keyword">const</span>;
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classilog_1_1_t_ext_message.html#ac7d167e020540909b4105bc115ad6720" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classilog_1_1_t_ext_message.html#a0e86bf31f8d61f214836b8752196233e" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040        <span class="comment">// reimplemented (iser::IChangeable)</span>
-<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classilog_1_1_t_ext_message.html#ab06f11d029aea7ffea65f522fb4f6091" title="Copy this object from another one.">CopyFrom</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; <span class="keywordtype">object</span>, <a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de" title="Control how relationship betweeen objects are interpreted.">CompatibilityMode</a> mode = <a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495deaac3f5b048d839815d6c86b1b33bf347e" title="If external references are different this object are not compatible and cannot be compared or copied...">CM_STRICT</a>);
-<a name="l00042"></a>00042        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classilog_1_1_t_ext_message.html#af9370e86daaa83fb7f51067d17759e02" title="Make a copy of this object.">CloneMe</a>(<a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de" title="Control how relationship betweeen objects are interpreted.">CompatibilityMode</a> mode = <a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af" title="External references are simple ignored.">CM_WITHOUT_REFS</a>) <span class="keyword">const</span>;
+<a name="l00041"></a>00041        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classilog_1_1_t_ext_message.html#acc73fdc45c895338bcd47afe99464ff4" title="Copy this object from another one.">CopyFrom</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; <span class="keywordtype">object</span>, <a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de" title="Control how relationship betweeen objects are interpreted.">CompatibilityMode</a> mode = <a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495deaac3f5b048d839815d6c86b1b33bf347e" title="If external references are different this object are not compatible and cannot be compared or copied...">CM_STRICT</a>);
+<a name="l00042"></a>00042        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classilog_1_1_t_ext_message.html#a572fe6c36d40c0705a5078603936f2a3" title="Make a copy of this object.">CloneMe</a>(<a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de" title="Control how relationship betweeen objects are interpreted.">CompatibilityMode</a> mode = <a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af" title="External references are simple ignored.">CM_WITHOUT_REFS</a>) <span class="keyword">const</span>;
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044        <span class="comment">// static methods</span>
-<a name="l00045"></a>00045        <span class="keyword">static</span> QByteArray <a class="code" href="classilog_1_1_t_ext_message.html#a14380e1349369ac46e213d788e6c6fe8">GetTypeName</a>();
+<a name="l00045"></a>00045        <span class="keyword">static</span> QByteArray <a class="code" href="classilog_1_1_t_ext_message.html#a3bf29d830f36a8fc509a6bca361d5b7c">GetTypeName</a>();
 <a name="l00046"></a>00046 };
 <a name="l00047"></a>00047 
 <a name="l00048"></a>00048 
 <a name="l00049"></a>00049 <span class="comment">// public methods</span>
 <a name="l00050"></a>00050 
 <a name="l00051"></a>00051 <span class="keyword">template</span>&lt;<span class="keyword">class</span> Element&gt; 
-<a name="l00052"></a><a class="code" href="classilog_1_1_t_ext_message.html#ad186bf89ffeef5275da2264121d91980">00052</a> <a class="code" href="classilog_1_1_t_ext_message.html#ad186bf89ffeef5275da2264121d91980">TExtMessage&lt;Element&gt;::TExtMessage</a>()
+<a name="l00052"></a><a class="code" href="classilog_1_1_t_ext_message.html#abf60daccefdc4700670a879d43b303f5">00052</a> <a class="code" href="classilog_1_1_t_ext_message.html#abf60daccefdc4700670a879d43b303f5">TExtMessage&lt;Element&gt;::TExtMessage</a>()
 <a name="l00053"></a>00053        :Element(),
 <a name="l00054"></a>00054        <a class="code" href="classilog_1_1_c_message.html" title="Basic implementation of the istd::IInformationProvider interface.">BaseClass</a>()
 <a name="l00055"></a>00055 {
@@ -82,7 +82,7 @@
 <a name="l00057"></a>00057 
 <a name="l00058"></a>00058 
 <a name="l00059"></a>00059 <span class="keyword">template</span>&lt;<span class="keyword">class</span> Element&gt; 
-<a name="l00060"></a><a class="code" href="classilog_1_1_t_ext_message.html#a856fc7622b1e75bdb82f49edb05bc698">00060</a> <a class="code" href="classilog_1_1_t_ext_message.html#ad186bf89ffeef5275da2264121d91980">TExtMessage&lt;Element&gt;::TExtMessage</a>(
+<a name="l00060"></a><a class="code" href="classilog_1_1_t_ext_message.html#aa5e4f80571cec10df7df551c4473f314">00060</a> <a class="code" href="classilog_1_1_t_ext_message.html#abf60daccefdc4700670a879d43b303f5">TExtMessage&lt;Element&gt;::TExtMessage</a>(
 <a name="l00061"></a>00061                      <a class="code" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152" title="Category of information.">istd::IInformationProvider::InformationCategory</a> category,
 <a name="l00062"></a>00062                      <span class="keywordtype">int</span> <span class="keywordtype">id</span>,
 <a name="l00063"></a>00063                      <span class="keyword">const</span> QString&amp; text, 
@@ -98,7 +98,7 @@
 <a name="l00073"></a>00073 <span class="comment">// reimplemented (iser::IObject)</span>
 <a name="l00074"></a>00074 
 <a name="l00075"></a>00075 <span class="keyword">template</span>&lt;<span class="keyword">class</span> Element&gt; 
-<a name="l00076"></a><a class="code" href="classilog_1_1_t_ext_message.html#a98ea006b7b92caa6cd17240b146932e4">00076</a> QByteArray <a class="code" href="classilog_1_1_t_ext_message.html#a98ea006b7b92caa6cd17240b146932e4">TExtMessage&lt;Element&gt;::GetFactoryId</a>()<span class="keyword"> const</span>
+<a name="l00076"></a><a class="code" href="classilog_1_1_t_ext_message.html#afb85a41934d0b7a3c2ef43ed1c49e9e4">00076</a> QByteArray <a class="code" href="classilog_1_1_t_ext_message.html#afb85a41934d0b7a3c2ef43ed1c49e9e4">TExtMessage&lt;Element&gt;::GetFactoryId</a>()<span class="keyword"> const</span>
 <a name="l00077"></a>00077 <span class="keyword"></span>{
 <a name="l00078"></a>00078        <span class="keywordflow">return</span> GetTypeName();
 <a name="l00079"></a>00079 }
@@ -107,7 +107,7 @@
 <a name="l00082"></a>00082 <span class="comment">// reimplemented (iser::ISerializable)</span>
 <a name="l00083"></a>00083 
 <a name="l00084"></a>00084 <span class="keyword">template</span>&lt;<span class="keyword">class</span> Element&gt; 
-<a name="l00085"></a><a class="code" href="classilog_1_1_t_ext_message.html#ac7d167e020540909b4105bc115ad6720">00085</a> <span class="keywordtype">bool</span> <a class="code" href="classilog_1_1_t_ext_message.html#ac7d167e020540909b4105bc115ad6720" title="Load or store state of this object as a archive stream.">TExtMessage&lt;Element&gt;::Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive)
+<a name="l00085"></a><a class="code" href="classilog_1_1_t_ext_message.html#a0e86bf31f8d61f214836b8752196233e">00085</a> <span class="keywordtype">bool</span> <a class="code" href="classilog_1_1_t_ext_message.html#a0e86bf31f8d61f214836b8752196233e" title="Load or store state of this object as a archive stream.">TExtMessage&lt;Element&gt;::Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive)
 <a name="l00086"></a>00086 {
 <a name="l00087"></a>00087        <span class="keywordflow">return</span> BaseClass::Serialize(archive) &amp;&amp; BaseClass2::Serialize(archive);
 <a name="l00088"></a>00088 }
@@ -116,7 +116,7 @@
 <a name="l00091"></a>00091 <span class="comment">// reimplemented (iser::IChangeable)</span>
 <a name="l00092"></a>00092 
 <a name="l00093"></a>00093 <span class="keyword">template</span>&lt;<span class="keyword">class</span> Element&gt; 
-<a name="l00094"></a><a class="code" href="classilog_1_1_t_ext_message.html#ab06f11d029aea7ffea65f522fb4f6091">00094</a> <span class="keywordtype">bool</span> <a class="code" href="classilog_1_1_t_ext_message.html#ab06f11d029aea7ffea65f522fb4f6091" title="Copy this object from another one.">TExtMessage&lt;Element&gt;::CopyFrom</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; <span class="keywordtype">object</span>, <a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de" title="Control how relationship betweeen objects are interpreted.">CompatibilityMode</a> mode)
+<a name="l00094"></a><a class="code" href="classilog_1_1_t_ext_message.html#acc73fdc45c895338bcd47afe99464ff4">00094</a> <span class="keywordtype">bool</span> <a class="code" href="classilog_1_1_t_ext_message.html#acc73fdc45c895338bcd47afe99464ff4" title="Copy this object from another one.">TExtMessage&lt;Element&gt;::CopyFrom</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; <span class="keywordtype">object</span>, <a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de" title="Control how relationship betweeen objects are interpreted.">CompatibilityMode</a> mode)
 <a name="l00095"></a>00095 {
 <a name="l00096"></a>00096        <a class="code" href="classistd_1_1_t_change_notifier.html" title="Help class which provides the automatic update mechanism of the model.">istd::CChangeNotifier</a> notifier(<span class="keyword">this</span>);
 <a name="l00097"></a>00097 
@@ -125,7 +125,7 @@
 <a name="l00100"></a>00100 
 <a name="l00101"></a>00101 
 <a name="l00102"></a>00102 <span class="keyword">template</span>&lt;<span class="keyword">class</span> Element&gt; 
-<a name="l00103"></a><a class="code" href="classilog_1_1_t_ext_message.html#af9370e86daaa83fb7f51067d17759e02">00103</a> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classilog_1_1_t_ext_message.html#af9370e86daaa83fb7f51067d17759e02" title="Make a copy of this object.">TExtMessage&lt;Element&gt;::CloneMe</a>(<a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de" title="Control how relationship betweeen objects are interpreted.">CompatibilityMode</a> mode)<span class="keyword"> const</span>
+<a name="l00103"></a><a class="code" href="classilog_1_1_t_ext_message.html#a572fe6c36d40c0705a5078603936f2a3">00103</a> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classilog_1_1_t_ext_message.html#a572fe6c36d40c0705a5078603936f2a3" title="Make a copy of this object.">TExtMessage&lt;Element&gt;::CloneMe</a>(<a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de" title="Control how relationship betweeen objects are interpreted.">CompatibilityMode</a> mode)<span class="keyword"> const</span>
 <a name="l00104"></a>00104 <span class="keyword"></span>{
 <a name="l00105"></a>00105        <a class="code" href="classistd_1_1_t_del_ptr.html" title="Pointer wrapper providing automatic deleting pointed object during destruction.">istd::TDelPtr&lt;TExtMessage&lt;Element&gt;</a> &gt; clonedPtr(<span class="keyword">new</span> <a class="code" href="classilog_1_1_t_ext_message.html" title="Extended message with attached some object.">TExtMessage&lt;Element&gt;</a>);
 <a name="l00106"></a>00106        <span class="keywordflow">if</span> (clonedPtr-&gt;CopyFrom(*<span class="keyword">this</span>, mode)){
@@ -139,18 +139,47 @@
 <a name="l00114"></a>00114 <span class="comment">// static methods</span>
 <a name="l00115"></a>00115 
 <a name="l00116"></a>00116 <span class="keyword">template</span>&lt;<span class="keyword">class</span> Element&gt; 
-<a name="l00117"></a><a class="code" href="classilog_1_1_t_ext_message.html#a14380e1349369ac46e213d788e6c6fe8">00117</a> QByteArray <a class="code" href="classilog_1_1_t_ext_message.html#a14380e1349369ac46e213d788e6c6fe8">TExtMessage&lt;Element&gt;::GetTypeName</a>()
+<a name="l00117"></a><a class="code" href="classilog_1_1_t_ext_message.html#a3bf29d830f36a8fc509a6bca361d5b7c">00117</a> QByteArray <a class="code" href="classilog_1_1_t_ext_message.html#a3bf29d830f36a8fc509a6bca361d5b7c">TExtMessage&lt;Element&gt;::GetTypeName</a>()
 <a name="l00118"></a>00118 {
 <a name="l00119"></a>00119        <span class="keywordflow">return</span> istd::CClassInfo::GetName&lt;TExtMessage&lt;Element&gt; &gt;();
 <a name="l00120"></a>00120 }
 <a name="l00121"></a>00121 
 <a name="l00122"></a>00122 
-<a name="l00123"></a>00123 } <span class="comment">// namespace ilog</span>
-<a name="l00124"></a>00124 
-<a name="l00125"></a>00125 
-<a name="l00126"></a>00126 <span class="preprocessor">#endif // ilog_TExtMessage_included</span>
-<a name="l00127"></a>00127 <span class="preprocessor"></span>
+<a name="l00123"></a>00123 <span class="keyword">template</span>&lt;<span class="keyword">class</span> Element&gt; 
+<a name="l00124"></a><a class="code" href="classilog_1_1_t_ext_message_model.html">00124</a> <span class="keyword">class </span><a class="code" href="classilog_1_1_t_ext_message_model.html">TExtMessageModel</a>: <span class="keyword">public</span> imod::TModelWrap&lt;TExtMessage&lt;Element&gt; &gt;
+<a name="l00125"></a>00125 {
+<a name="l00126"></a>00126 <span class="keyword">public</span>:
+<a name="l00127"></a><a class="code" href="classilog_1_1_t_ext_message_model.html#ae73ad3da7d22e8fc37faed660b302899">00127</a>        <span class="keyword">typedef</span> <a class="code" href="classimod_1_1_t_model_wrap.html" title="This model wrapper provides a simple connection between a concrete istd::IChangeable implementation a...">imod::TModelWrap&lt;TExtMessage&lt;Element&gt;</a> &gt; <a class="code" href="classilog_1_1_t_ext_message_model.html#ae73ad3da7d22e8fc37faed660b302899">BaseClass</a>;
 <a name="l00128"></a>00128 
+<a name="l00129"></a>00129        <a class="code" href="classilog_1_1_t_ext_message_model.html#ab3fb9d23e419569dc4279f4f4f49d27c">TExtMessageModel</a>(
+<a name="l00130"></a>00130                             <a class="code" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152" title="Category of information.">istd::IInformationProvider::InformationCategory</a> category,
+<a name="l00131"></a>00131                             <span class="keywordtype">int</span> <span class="keywordtype">id</span>,
+<a name="l00132"></a>00132                             <span class="keyword">const</span> QString&amp; text, 
+<a name="l00133"></a>00133                             <span class="keyword">const</span> QString&amp; source,
+<a name="l00134"></a>00134                             <span class="keywordtype">int</span> flags = 0,
+<a name="l00135"></a>00135                             <span class="keyword">const</span> QDateTime* timeStampPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00136"></a>00136 };
+<a name="l00137"></a>00137 
+<a name="l00138"></a>00138 
+<a name="l00139"></a>00139 <span class="keyword">template</span>&lt;<span class="keyword">class</span> Element&gt; 
+<a name="l00140"></a><a class="code" href="classilog_1_1_t_ext_message_model.html#ab3fb9d23e419569dc4279f4f4f49d27c">00140</a> <a class="code" href="classilog_1_1_t_ext_message_model.html#ab3fb9d23e419569dc4279f4f4f49d27c">TExtMessageModel&lt;Element&gt;::TExtMessageModel</a>(
+<a name="l00141"></a>00141                             <a class="code" href="classistd_1_1_i_information_provider.html#a0d3da3c1b4d2d053aa4254a31d8fa152" title="Category of information.">istd::IInformationProvider::InformationCategory</a> category,
+<a name="l00142"></a>00142                             <span class="keywordtype">int</span> <span class="keywordtype">id</span>,
+<a name="l00143"></a>00143                             <span class="keyword">const</span> QString&amp; text, 
+<a name="l00144"></a>00144                             <span class="keyword">const</span> QString&amp; source,
+<a name="l00145"></a>00145                             <span class="keywordtype">int</span> flags,
+<a name="l00146"></a>00146                             <span class="keyword">const</span> QDateTime* timeStampPtr)
+<a name="l00147"></a>00147 {
+<a name="l00148"></a>00148        BaseClass::SetMessageValues(category, <span class="keywordtype">id</span>, text, source, flags, timeStampPtr);
+<a name="l00149"></a>00149 }
+<a name="l00150"></a>00150 
+<a name="l00151"></a>00151 
+<a name="l00152"></a>00152 } <span class="comment">// namespace ilog</span>
+<a name="l00153"></a>00153 
+<a name="l00154"></a>00154 
+<a name="l00155"></a>00155 <span class="preprocessor">#endif // ilog_TExtMessage_included</span>
+<a name="l00156"></a>00156 <span class="preprocessor"></span>
+<a name="l00157"></a>00157 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
