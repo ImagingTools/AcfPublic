@@ -4035,6 +4035,7 @@
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="no" imported="no">ibase/ICommandsProvider.h</includes>
     <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="no" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_i_file_persistence_info_8h" name="IFilePersistenceInfo.h" local="no" imported="no">ifile/IFilePersistenceInfo.h</includes>
     <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="no" imported="no">idoc/IDocumentManager.h</includes>
     <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="no" imported="no">iqtgui/CHierarchicalCommand.h</includes>
     <class kind="class">iqtdoc::CDocumentImportExportCommandComp</class>
@@ -36295,6 +36296,13 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
+      <anchor>a2775396d1b53607b5132291910d77db3</anchor>
+      <arglist>(m_documentPersistenceInfoCompPtr, m_documentPersistenceCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
       <anchor>a94f8fa5c5eac04486559815e38f8dc5f</anchor>
       <arglist>(m_documentManagerModelCompPtr, m_documentManagerCompPtr, true)</arglist>
     </member>
@@ -36311,6 +36319,20 @@
       <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
       <anchor>abbe3d358db742c2347eb559e4d86ca73</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnImport</name>
+      <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
+      <anchor>aaeffea77d4f085abe3d783a3b8b7ed50</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnExport</name>
+      <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
+      <anchor>a9d8cf3c1e5020250a6d87b477a7500e5</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -36332,6 +36354,41 @@
       <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
       <anchor>a380b4617f49715a00b4260e513e1202f</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateCommands</name>
+      <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
+      <anchor>aca1127338a71fa7912562977c935050a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_rootCommands</name>
+      <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
+      <anchor>ab3c51147d09caea8c37ea1226b8db082</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_fileCommands</name>
+      <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
+      <anchor>ae3bc37c1d281358b5adff47d9f3f515e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_importCommand</name>
+      <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
+      <anchor>af777230ff45d7ad21e89861108140222</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_exportCommand</name>
+      <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
+      <anchor>a6f614e53ace69d271bac7f714c57ba50</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
