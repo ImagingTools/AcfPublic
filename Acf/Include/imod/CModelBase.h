@@ -103,7 +103,7 @@ private:
 			Observer is connected to the model.
 		*/
 		AS_ATTACHED,
-
+		AS_ATTACHED_UPDATING,
 		/**
 			Observer is in detaching stage.
 		*/
@@ -117,6 +117,7 @@ private:
 
 	typedef QMap<IObserver*, AttachingState> ObserversMap;
 	ObserversMap m_observers;
+	ObserversMap m_pendingObservers;
 
 	enum NotifyState
 	{
