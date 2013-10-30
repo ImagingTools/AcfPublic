@@ -23,9 +23,6 @@
 #include "iipr/CImageRegionProcessorCompBase.h"
 
 
-// Qt includes
-#include <QtCore/QStringList>
-
  // ACF includes
 #include "istd/TChangeNotifier.h"
 #include "ibase/CSize.h"
@@ -33,9 +30,6 @@
 #include "i2d/ICalibrationProvider.h"
 #include "iimg/IBitmap.h"
 #include "iprm/TParamsPtr.h"
-
-// IACF includes
-#include "iipr/TImagePixelInterpolator.h"
 
 
 namespace iipr

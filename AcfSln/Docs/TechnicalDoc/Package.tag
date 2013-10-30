@@ -1340,7 +1340,7 @@
     <name>CFastGaussianProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_fast_gaussian_processor_comp_8h</filename>
-    <includes id="_c_image_processor_comp_base_8h" name="CImageProcessorCompBase.h" local="yes" imported="no">iipr/CImageProcessorCompBase.h</includes>
+    <includes id="_c_image_region_processor_comp_base_8h" name="CImageRegionProcessorCompBase.h" local="yes" imported="no">iipr/CImageRegionProcessorCompBase.h</includes>
     <class kind="class">iipr::CFastGaussianProcessorComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -14433,7 +14433,7 @@
   <compound kind="class">
     <name>iipr::CFastGaussianProcessorComp</name>
     <filename>classiipr_1_1_c_fast_gaussian_processor_comp.html</filename>
-    <base>iipr::CImageProcessorCompBase</base>
+    <base>iipr::CImageRegionProcessorCompBase</base>
     <member kind="enumeration">
       <name>KernelTypes</name>
       <anchorfile>classiipr_1_1_c_fast_gaussian_processor_comp.html</anchorfile>
@@ -14453,18 +14453,18 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>iipr::CImageProcessorCompBase</type>
+      <type>iipr::CImageRegionProcessorCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_fast_gaussian_processor_comp.html</anchorfile>
-      <anchor>aca4496ed0d98b4fbbe4c35341e527d15</anchor>
+      <anchor>a4c1f4c594af2a189813a88045b2ae95c</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
-      <name>ProcessImage</name>
+      <name>ProcessImageRegion</name>
       <anchorfile>classiipr_1_1_c_fast_gaussian_processor_comp.html</anchorfile>
-      <anchor>ab370ee0008d6fc9a7a0c76f82f3d1289</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
+      <anchor>a4e617f09eefd049a321939b2bc1be0c3</anchor>
+      <arglist>(const iimg::IBitmap &amp;inputBitmap, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const </arglist>
     </member>
   </compound>
   <compound kind="class">

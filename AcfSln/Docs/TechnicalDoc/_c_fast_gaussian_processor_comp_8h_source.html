@@ -28,17 +28,17 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iipr_CFastGaussianProcessorComp_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_c_image_processor_comp_base_8h.html">iipr/CImageProcessorCompBase.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_c_image_region_processor_comp_base_8h.html">iipr/CImageRegionProcessorCompBase.h</a>&quot;</span>
 <a name="l00006"></a>00006 
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="keyword">namespace </span>iipr
 <a name="l00009"></a>00009 {
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 
-<a name="l00015"></a><a class="code" href="classiipr_1_1_c_fast_gaussian_processor_comp.html">00015</a> <span class="keyword">class </span><a class="code" href="classiipr_1_1_c_fast_gaussian_processor_comp.html" title="Implementation of fast Gaussian filtering with static defined filter kernels.">CFastGaussianProcessorComp</a>: <span class="keyword">public</span> iipr::<a class="code" href="classiipr_1_1_c_image_processor_comp_base.html" title="Basic implementation for a simple bitmap processor.">CImageProcessorCompBase</a>
+<a name="l00015"></a><a class="code" href="classiipr_1_1_c_fast_gaussian_processor_comp.html">00015</a> <span class="keyword">class </span><a class="code" href="classiipr_1_1_c_fast_gaussian_processor_comp.html" title="Implementation of fast Gaussian filtering with static defined filter kernels.">CFastGaussianProcessorComp</a>: <span class="keyword">public</span> iipr::<a class="code" href="classiipr_1_1_c_image_region_processor_comp_base.html" title="Basic implementation for a image region processor.">CImageRegionProcessorCompBase</a>
 <a name="l00016"></a>00016 {
 <a name="l00017"></a>00017 <span class="keyword">public</span>:
-<a name="l00018"></a><a class="code" href="classiipr_1_1_c_fast_gaussian_processor_comp.html#aca4496ed0d98b4fbbe4c35341e527d15">00018</a>        <span class="keyword">typedef</span> <a class="code" href="classiipr_1_1_c_image_processor_comp_base.html" title="Basic implementation for a simple bitmap processor.">iipr::CImageProcessorCompBase</a> <a class="code" href="classiipr_1_1_c_fast_gaussian_processor_comp.html#aca4496ed0d98b4fbbe4c35341e527d15">BaseClass</a>;
+<a name="l00018"></a><a class="code" href="classiipr_1_1_c_fast_gaussian_processor_comp.html#a4c1f4c594af2a189813a88045b2ae95c">00018</a>        <span class="keyword">typedef</span> <a class="code" href="classiipr_1_1_c_image_region_processor_comp_base.html" title="Basic implementation for a image region processor.">iipr::CImageRegionProcessorCompBase</a> <a class="code" href="classiipr_1_1_c_fast_gaussian_processor_comp.html#a4c1f4c594af2a189813a88045b2ae95c">BaseClass</a>;
 <a name="l00019"></a>00019 
 <a name="l00020"></a><a class="code" href="classiipr_1_1_c_fast_gaussian_processor_comp.html#a8a4510b231c73b22030a5fa021772936">00020</a>        <span class="keyword">enum</span> <a class="code" href="classiipr_1_1_c_fast_gaussian_processor_comp.html#a8a4510b231c73b22030a5fa021772936">KernelTypes</a>
 <a name="l00021"></a>00021        {
@@ -51,22 +51,23 @@
 <a name="l00028"></a>00028        I_END_COMPONENT;
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030 <span class="keyword">protected</span>:
-<a name="l00031"></a>00031        <span class="comment">// reimplemented (iipr::CImageProcessorCompBase)</span>
-<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_fast_gaussian_processor_comp.html#ab370ee0008d6fc9a7a0c76f82f3d1289">ProcessImage</a>(
-<a name="l00033"></a>00033               <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr, 
-<a name="l00034"></a>00034               <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; inputImage,
-<a name="l00035"></a>00035               <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; outputImage);
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037 <span class="keyword">private</span>:
-<a name="l00038"></a>00038        I_ATTR(<span class="keywordtype">int</span>, m_kernelTypeAttrPtr);
-<a name="l00039"></a>00039 };
-<a name="l00040"></a>00040 
+<a name="l00031"></a>00031        <span class="comment">// reimplemented (iipr::CImageRegionProcessorCompBase)</span>
+<a name="l00032"></a>00032        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiipr_1_1_c_fast_gaussian_processor_comp.html#a4e617f09eefd049a321939b2bc1be0c3" title="Process the defined image region.">ProcessImageRegion</a>(
+<a name="l00033"></a>00033                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiimg_1_1_i_bitmap.html">iimg::IBitmap</a>&amp; inputBitmap,
+<a name="l00034"></a>00034                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr,
+<a name="l00035"></a>00035                             <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classi2d_1_1_i_object2d.html">i2d::IObject2d</a>* aoiPtr,
+<a name="l00036"></a>00036                             <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>* outputPtr) <span class="keyword">const</span>;
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038 <span class="keyword">private</span>:
+<a name="l00039"></a>00039        I_ATTR(<span class="keywordtype">int</span>, m_kernelTypeAttrPtr);
+<a name="l00040"></a>00040 };
 <a name="l00041"></a>00041 
-<a name="l00042"></a>00042 } <span class="comment">// namespace iipr</span>
-<a name="l00043"></a>00043 
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043 } <span class="comment">// namespace iipr</span>
 <a name="l00044"></a>00044 
-<a name="l00045"></a>00045 <span class="preprocessor">#endif // !iipr_CFastGaussianProcessorComp_included</span>
-<a name="l00046"></a>00046 <span class="preprocessor"></span>
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 <span class="preprocessor">#endif // !iipr_CFastGaussianProcessorComp_included</span>
+<a name="l00047"></a>00047 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

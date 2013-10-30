@@ -33,7 +33,8 @@ namespace imod
 
 
 CModelBase::CModelBase()
-:	m_notifyState(NS_NONE)
+:	m_notifyState(NS_NONE),
+	m_notifyFlags(0)
 {
 }
 
@@ -73,10 +74,6 @@ bool CModelBase::AttachObserver(IObserver* observerPtr)
 	state = AS_ATTACHING;
 
 	if (observerPtr->OnAttached(this)){
-		if (m_notifyState > NS_NONE){
-			observerPtr->BeforeUpdate(this, 0, NULL);
-		}
-
 		state = AS_ATTACHED;
 
 		return true;
@@ -98,17 +95,16 @@ void CModelBase::DetachObserver(IObserver* observerPtr)
 	ObserversMap::Iterator findIter = m_observers.find(observerPtr);
 	if (findIter != m_observers.end()){
 		AttachingState& state = findIter.value();
-		if (state > AS_ATTACHED){
-			qFatal("Observer is not attached");
 
-			// Observer was already detached or is not correctly attached
+		if (state >= AS_DETACHING){
+			Q_ASSERT_X(false, "Detaching observer", "Observer was already detached");
 			return;
 		}
 
 		if (state == AS_ATTACHED_UPDATING){
 			IObserver* observerPtr = findIter.key();
 
-			observerPtr->AfterUpdate(this, 0, NULL);
+			observerPtr->AfterUpdate(this, m_notifyFlags, NULL);
 		}
 
 		state = AS_DETACHING;
@@ -145,7 +141,7 @@ void CModelBase::DetachAllObservers()
 		AttachingState& state = iter.value();
 
 		if (state == AS_ATTACHED_UPDATING){
-			observerPtr->AfterUpdate(this, 0, NULL);
+			observerPtr->AfterUpdate(this, m_notifyFlags, NULL);
 		}
 
 		if (state < AS_DETACHING){
@@ -190,6 +186,7 @@ void CModelBase::NotifyBeforeUpdate(int updateFlags, istd::IPolymorphic* updateP
 	Q_ASSERT(m_notifyState == NS_NONE);
 
 	m_notifyState = NS_SENDING_BEFORE;
+	m_notifyFlags = updateFlags;
 
 	for (ObserversMap::Iterator iter = m_observers.begin(); iter != m_observers.end(); ++iter){
 		AttachingState& state = iter.value();
@@ -212,6 +209,7 @@ void CModelBase::NotifyAfterUpdate(int updateFlags, istd::IPolymorphic* updatePa
 	Q_ASSERT(m_notifyState == NS_UPDATE);
 
 	m_notifyState = NS_SENDING_AFTER;
+	m_notifyFlags = updateFlags;
 
 	for (ObserversMap::Iterator iter = m_observers.begin(); iter != m_observers.end(); ++iter){
 		AttachingState& state = iter.value();
@@ -228,6 +226,7 @@ void CModelBase::NotifyAfterUpdate(int updateFlags, istd::IPolymorphic* updatePa
 	CleanupObserverState();
 
 	m_notifyState = NS_NONE;
+	m_notifyFlags = 0;
 }
 
 
