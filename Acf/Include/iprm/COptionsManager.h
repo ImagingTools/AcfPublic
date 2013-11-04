@@ -100,13 +100,15 @@ private:
 	struct OptionInfo
 	{
 		OptionInfo()
+			:isEnabled(true)
 		{
 		}
 
 		OptionInfo(const QString& optionName, QByteArray optionId, const QString& optionDescription)
 			:optionName(optionName),
 			optionId(optionId),
-			optionDescription(optionDescription)
+			optionDescription(optionDescription),
+			isEnabled(true)
 		{
 		}
 

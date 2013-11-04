@@ -88,36 +88,38 @@
 <a name="l00078"></a>00078        <span class="keyword">struct </span>OptionInfo
 <a name="l00079"></a>00079        {
 <a name="l00080"></a>00080               OptionInfo()
-<a name="l00081"></a>00081               {
-<a name="l00082"></a>00082               }
-<a name="l00083"></a>00083 
-<a name="l00084"></a>00084               OptionInfo(<span class="keyword">const</span> QString&amp; optionName, QByteArray optionId, <span class="keyword">const</span> QString&amp; optionDescription)
-<a name="l00085"></a>00085                      :optionName(optionName),
-<a name="l00086"></a>00086                      optionId(optionId),
-<a name="l00087"></a>00087                      optionDescription(optionDescription)
-<a name="l00088"></a>00088               {
-<a name="l00089"></a>00089               }
-<a name="l00090"></a>00090 
-<a name="l00091"></a>00091               QString optionName;
-<a name="l00092"></a>00092               QByteArray optionId;
-<a name="l00093"></a>00093               QString optionDescription;
-<a name="l00094"></a>00094               <span class="keywordtype">bool</span> isEnabled;
-<a name="l00095"></a>00095        };
-<a name="l00096"></a>00096 
-<a name="l00097"></a>00097        <span class="keyword">typedef</span> QVector&lt;OptionInfo&gt; Options;
+<a name="l00081"></a>00081                      :isEnabled(<span class="keyword">true</span>)
+<a name="l00082"></a>00082               {
+<a name="l00083"></a>00083               }
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085               OptionInfo(<span class="keyword">const</span> QString&amp; optionName, QByteArray optionId, <span class="keyword">const</span> QString&amp; optionDescription)
+<a name="l00086"></a>00086                      :optionName(optionName),
+<a name="l00087"></a>00087                      optionId(optionId),
+<a name="l00088"></a>00088                      optionDescription(optionDescription),
+<a name="l00089"></a>00089                      isEnabled(<span class="keyword">true</span>)
+<a name="l00090"></a>00090               {
+<a name="l00091"></a>00091               }
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093               QString optionName;
+<a name="l00094"></a>00094               QByteArray optionId;
+<a name="l00095"></a>00095               QString optionDescription;
+<a name="l00096"></a>00096               <span class="keywordtype">bool</span> isEnabled;
+<a name="l00097"></a>00097        };
 <a name="l00098"></a>00098 
-<a name="l00099"></a>00099        Options m_options;
+<a name="l00099"></a>00099        <span class="keyword">typedef</span> QVector&lt;OptionInfo&gt; Options;
 <a name="l00100"></a>00100 
-<a name="l00101"></a>00101        <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities.">iprm::IOptionsList</a>* m_slaveSelectionConstraintsPtr;
-<a name="l00102"></a>00102 };
-<a name="l00103"></a>00103 
-<a name="l00104"></a>00104 
-<a name="l00105"></a>00105 } <span class="comment">// namespace iprm</span>
+<a name="l00101"></a>00101        Options m_options;
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103        <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities.">iprm::IOptionsList</a>* m_slaveSelectionConstraintsPtr;
+<a name="l00104"></a>00104 };
+<a name="l00105"></a>00105 
 <a name="l00106"></a>00106 
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108 <span class="preprocessor">#endif // !iprm_COptionsManager_included</span>
-<a name="l00109"></a>00109 <span class="preprocessor"></span>
-<a name="l00110"></a>00110 
+<a name="l00107"></a>00107 } <span class="comment">// namespace iprm</span>
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110 <span class="preprocessor">#endif // !iprm_COptionsManager_included</span>
+<a name="l00111"></a>00111 <span class="preprocessor"></span>
+<a name="l00112"></a>00112 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
