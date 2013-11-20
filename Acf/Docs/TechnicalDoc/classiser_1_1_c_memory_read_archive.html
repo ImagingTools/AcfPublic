@@ -35,6 +35,7 @@
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">iser::CMemoryReadArchive Class Reference<div class="ingroups"><a class="el" href="group___persistence.html">Persistence concept.</a></div></div>  </div>
@@ -81,6 +82,10 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_memory_read_archive.html#a1487b9ce5c3e103106c7deb56c904c3b">CloneObjectByArchive</a> (const <a class="el" href="classiser_1_1_i_serializable.html">ISerializable</a> &amp;source, <a class="el" href="classiser_1_1_i_serializable.html">ISerializable</a> &amp;result)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Clone serializable objects using <code><a class="el" href="classiser_1_1_c_memory_write_archive.html" title="Implementation of archive using memory buffer to store the persistent objects.">iser::CMemoryWriteArchive</a></code> and <code><a class="el" href="classiser_1_1_c_memory_read_archive.html" title="Implementation of archive using memory buffer to read the persistent objects.">iser::CMemoryReadArchive</a></code> archives.  <a href="#a1487b9ce5c3e103106c7deb56c904c3b"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_memory_read_archive.html#a91642a62daa7ea808b8ec9538c19708d">GetMaxStringLength</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get maximal allowed string size.  <a href="#a91642a62daa7ea808b8ec9538c19708d"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const quint8 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiser_1_1_c_memory_read_archive.html#af5748b43ef886488acf68cd500b1885c">m_bufferPtr</a></td></tr>
@@ -204,6 +209,26 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a91642a62daa7ea808b8ec9538c19708d"></a><!-- doxytag: member="iser::CMemoryReadArchive::GetMaxStringLength" ref="a91642a62daa7ea808b8ec9538c19708d" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int iser::CMemoryReadArchive::GetMaxStringLength </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get maximal allowed string size. </p>
+
+<p>Reimplemented from <a class="el" href="classiser_1_1_c_binary_read_archive_base.html#ad24844fbc2021a53d033d154824fd49f">iser::CBinaryReadArchiveBase</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a40088e2a647c31167f6f5e4166c2ec67"></a><!-- doxytag: member="iser::CMemoryReadArchive::IsValid" ref="a40088e2a647c31167f6f5e4166c2ec67" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -296,7 +321,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_memory_read_archive_8h_source.html#l00057">57</a> of file <a class="el" href="_c_memory_read_archive_8h_source.html">CMemoryReadArchive.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_memory_read_archive_8h_source.html#l00060">60</a> of file <a class="el" href="_c_memory_read_archive_8h_source.html">CMemoryReadArchive.h</a>.</p>
 
 </div>
 </div>
@@ -311,7 +336,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_memory_read_archive_8h_source.html#l00058">58</a> of file <a class="el" href="_c_memory_read_archive_8h_source.html">CMemoryReadArchive.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_memory_read_archive_8h_source.html#l00061">61</a> of file <a class="el" href="_c_memory_read_archive_8h_source.html">CMemoryReadArchive.h</a>.</p>
 
 </div>
 </div>
@@ -326,7 +351,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_memory_read_archive_8h_source.html#l00060">60</a> of file <a class="el" href="_c_memory_read_archive_8h_source.html">CMemoryReadArchive.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_memory_read_archive_8h_source.html#l00063">63</a> of file <a class="el" href="_c_memory_read_archive_8h_source.html">CMemoryReadArchive.h</a>.</p>
 
 </div>
 </div>
@@ -341,7 +366,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_memory_read_archive_8h_source.html#l00059">59</a> of file <a class="el" href="_c_memory_read_archive_8h_source.html">CMemoryReadArchive.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_memory_read_archive_8h_source.html#l00062">62</a> of file <a class="el" href="_c_memory_read_archive_8h_source.html">CMemoryReadArchive.h</a>.</p>
 
 </div>
 </div>

@@ -66,19 +66,22 @@
 <a name="l00054"></a>00054 <span class="comment"></span>       <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_memory_read_archive.html#a1487b9ce5c3e103106c7deb56c904c3b" title="Clone serializable objects using iser::CMemoryWriteArchive and iser::CMemoryReadArchive archives...">CloneObjectByArchive</a>(<span class="keyword">const</span> <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">ISerializable</a>&amp; source, <a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">ISerializable</a>&amp; result);
 <a name="l00055"></a>00055        
 <a name="l00056"></a>00056 <span class="keyword">protected</span>:
-<a name="l00057"></a><a class="code" href="classiser_1_1_c_memory_read_archive.html#af5748b43ef886488acf68cd500b1885c">00057</a>        <span class="keyword">const</span> quint8* <a class="code" href="classiser_1_1_c_memory_read_archive.html#af5748b43ef886488acf68cd500b1885c">m_bufferPtr</a>;
-<a name="l00058"></a><a class="code" href="classiser_1_1_c_memory_read_archive.html#aacad2948bdc43666c5e08c0b4d2f0c84">00058</a>        <span class="keywordtype">int</span> <a class="code" href="classiser_1_1_c_memory_read_archive.html#aacad2948bdc43666c5e08c0b4d2f0c84">m_bufferSize</a>;
-<a name="l00059"></a><a class="code" href="classiser_1_1_c_memory_read_archive.html#a51367c64176a58e4728ff4598af981ef">00059</a>        <span class="keywordtype">int</span> <a class="code" href="classiser_1_1_c_memory_read_archive.html#a51367c64176a58e4728ff4598af981ef">m_readPosition</a>;
-<a name="l00060"></a><a class="code" href="classiser_1_1_c_memory_read_archive.html#a6506b7487a76dd733ae1181a6300c73a">00060</a>        <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_memory_read_archive.html#a6506b7487a76dd733ae1181a6300c73a">m_isValid</a>;
-<a name="l00061"></a>00061 };
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 } <span class="comment">// namespace iser</span>
+<a name="l00057"></a>00057        <span class="comment">// reimplemented (iser::CArchiveBase)</span>
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiser_1_1_c_memory_read_archive.html#a91642a62daa7ea808b8ec9538c19708d" title="Get maximal allowed string size.">GetMaxStringLength</a>() <span class="keyword">const</span>;
+<a name="l00059"></a>00059 
+<a name="l00060"></a><a class="code" href="classiser_1_1_c_memory_read_archive.html#af5748b43ef886488acf68cd500b1885c">00060</a>        <span class="keyword">const</span> quint8* <a class="code" href="classiser_1_1_c_memory_read_archive.html#af5748b43ef886488acf68cd500b1885c">m_bufferPtr</a>;
+<a name="l00061"></a><a class="code" href="classiser_1_1_c_memory_read_archive.html#aacad2948bdc43666c5e08c0b4d2f0c84">00061</a>        <span class="keywordtype">int</span> <a class="code" href="classiser_1_1_c_memory_read_archive.html#aacad2948bdc43666c5e08c0b4d2f0c84">m_bufferSize</a>;
+<a name="l00062"></a><a class="code" href="classiser_1_1_c_memory_read_archive.html#a51367c64176a58e4728ff4598af981ef">00062</a>        <span class="keywordtype">int</span> <a class="code" href="classiser_1_1_c_memory_read_archive.html#a51367c64176a58e4728ff4598af981ef">m_readPosition</a>;
+<a name="l00063"></a><a class="code" href="classiser_1_1_c_memory_read_archive.html#a6506b7487a76dd733ae1181a6300c73a">00063</a>        <span class="keywordtype">bool</span> <a class="code" href="classiser_1_1_c_memory_read_archive.html#a6506b7487a76dd733ae1181a6300c73a">m_isValid</a>;
+<a name="l00064"></a>00064 };
 <a name="l00065"></a>00065 
 <a name="l00066"></a>00066 
-<a name="l00067"></a>00067 <span class="preprocessor">#endif // !iser_CMemoryReadArchive_included</span>
-<a name="l00068"></a>00068 <span class="preprocessor"></span>
+<a name="l00067"></a>00067 } <span class="comment">// namespace iser</span>
+<a name="l00068"></a>00068 
 <a name="l00069"></a>00069 
+<a name="l00070"></a>00070 <span class="preprocessor">#endif // !iser_CMemoryReadArchive_included</span>
+<a name="l00071"></a>00071 <span class="preprocessor"></span>
+<a name="l00072"></a>00072 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

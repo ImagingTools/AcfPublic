@@ -168,6 +168,19 @@ bool CBinaryReadArchiveBase::Process(QByteArray& value)
 
 	if (retVal){
 		if (stringLength > 0) {
+			if (stringLength > GetMaxStringLength()){
+				if (IsLogConsumed()){
+					SendLogMessage(
+								istd::IInformationProvider::IC_ERROR,
+								MI_STRING_TOO_LONG,
+								QString("Read string size is ") + QString("%1").arg(stringLength) + " and it is longer than maximum size",
+								"iser::CBinaryReadArchiveBase",
+								istd::IInformationProvider::ITF_SYSTEM);
+				}
+
+				return false;
+			}
+
 			QVarLengthArray<char> buffer(stringLength);
 
 			retVal = ProcessData(buffer.data(), stringLength * int(sizeof(char)));	
@@ -194,7 +207,7 @@ bool CBinaryReadArchiveBase::Process(QString& value)
 
 	if (retVal){
 		if (stringLength > 0) {
-			if (stringLength > MaxStringLength){
+			if (stringLength > GetMaxStringLength()){
 				if (IsLogConsumed()){
 					SendLogMessage(
 								istd::IInformationProvider::IC_ERROR,
@@ -222,6 +235,14 @@ bool CBinaryReadArchiveBase::Process(QString& value)
 	}
 
 	return retVal;
+}
+
+
+// protected methods
+
+int CBinaryReadArchiveBase::GetMaxStringLength() const
+{
+	return 100000;
 }
 
 

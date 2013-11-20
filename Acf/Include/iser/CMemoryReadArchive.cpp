@@ -119,6 +119,16 @@ bool CMemoryReadArchive::CloneObjectByArchive(const ISerializable& source, ISeri
 }
 
 
+// protected methods
+
+// reimplemented (iser::CArchiveBase)
+
+int CMemoryReadArchive::GetMaxStringLength() const
+{
+	return m_bufferSize - m_readPosition;
+}
+
+
 } // namespace iser
 
 

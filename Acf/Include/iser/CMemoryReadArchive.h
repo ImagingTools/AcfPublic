@@ -76,6 +76,9 @@ public:
 	static bool CloneObjectByArchive(const ISerializable& source, ISerializable& result);
 	
 protected:
+	// reimplemented (iser::CArchiveBase)
+	virtual int GetMaxStringLength() const;
+
 	const quint8* m_bufferPtr;
 	int m_bufferSize;
 	int m_readPosition;

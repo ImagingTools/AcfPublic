@@ -127,6 +127,14 @@ void CFileReadArchive::DecorateMessage(
 }
 
 
+// reimplemented (iser::CArchiveBase)
+
+int CFileReadArchive::GetMaxStringLength() const
+{
+	return int(m_file.size() - m_file.pos());
+}
+
+
 } // namespace ifile
 
 

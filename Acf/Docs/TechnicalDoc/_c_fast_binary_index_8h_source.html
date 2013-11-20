@@ -43,7 +43,7 @@
 <a name="l00015"></a><a class="code" href="classistd_1_1_c_fast_binary_index.html#a279bf6efee3b81132b9767ff9851474c">00015</a>        <span class="keyword">typedef</span> <span class="keywordtype">int</span> <a class="code" href="classistd_1_1_c_fast_binary_index.html#a279bf6efee3b81132b9767ff9851474c">IndexType</a>;
 <a name="l00016"></a>00016 
 <a name="l00017"></a>00017        <span class="keyword">enum</span>{
-<a name="l00018"></a><a class="code" href="classistd_1_1_c_fast_binary_index.html#a2a1cb502e298fc14ad0011fda8b95fa8abbd51a4d709be2d7e1ab0cc554dd3944">00018</a>               <a class="code" href="classistd_1_1_c_fast_binary_index.html#a2a1cb502e298fc14ad0011fda8b95fa8abbd51a4d709be2d7e1ab0cc554dd3944">MAX_ELEMENTS_COUNT</a> = 31
+<a name="l00018"></a><a class="code" href="classistd_1_1_c_fast_binary_index.html#a4a255df319de07e9ecf393ea3ab43207abbd51a4d709be2d7e1ab0cc554dd3944">00018</a>               <a class="code" href="classistd_1_1_c_fast_binary_index.html#a4a255df319de07e9ecf393ea3ab43207abbd51a4d709be2d7e1ab0cc554dd3944">MAX_ELEMENTS_COUNT</a> = 31
 <a name="l00019"></a>00019        };
 <a name="l00020"></a>00020 
 <a name="l00021"></a><a class="code" href="classistd_1_1_c_fast_binary_index_1_1_iterator.html">00021</a>        <span class="keyword">class </span><a class="code" href="classistd_1_1_c_fast_binary_index_1_1_iterator.html">Iterator</a>
@@ -149,7 +149,7 @@
 <a name="l00213"></a><a class="code" href="classistd_1_1_c_fast_binary_index.html#a36e033a4bf9e8d4ad5084423440b947b">00213</a> <span class="keyword">inline</span> <a class="code" href="classistd_1_1_c_fast_binary_index.html#a2ca5c32cd18951e4d0fde921d38ed4dd" title="Default constructor without member initialization.">CFastBinaryIndex::CFastBinaryIndex</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_c_fast_binary_index.html">CFastBinaryIndex</a>&amp; index)
 <a name="l00214"></a>00214 :      m_bits(index.m_bits), m_size(index.m_size)
 <a name="l00215"></a>00215 {
-<a name="l00216"></a>00216        Q_ASSERT(m_size &lt;= <a class="code" href="classistd_1_1_c_fast_binary_index.html#a2a1cb502e298fc14ad0011fda8b95fa8abbd51a4d709be2d7e1ab0cc554dd3944">MAX_ELEMENTS_COUNT</a>);
+<a name="l00216"></a>00216        Q_ASSERT(m_size &lt;= <a class="code" href="classistd_1_1_c_fast_binary_index.html#a4a255df319de07e9ecf393ea3ab43207abbd51a4d709be2d7e1ab0cc554dd3944">MAX_ELEMENTS_COUNT</a>);
 <a name="l00217"></a>00217        Q_ASSERT((m_bits &gt;&gt; m_size) == 0);
 <a name="l00218"></a>00218 }
 <a name="l00219"></a>00219 
@@ -194,7 +194,7 @@
 <a name="l00258"></a>00258 
 <a name="l00259"></a><a class="code" href="classistd_1_1_c_fast_binary_index.html#a5966f1bb5e22bc686971d61aa4d58639">00259</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classistd_1_1_c_fast_binary_index.html#a5966f1bb5e22bc686971d61aa4d58639" title="Set number of dimensions of this index.">CFastBinaryIndex::SetDimensionsCount</a>(<span class="keywordtype">int</span> count)
 <a name="l00260"></a>00260 {
-<a name="l00261"></a>00261        <span class="keywordflow">if</span> (count &lt;= <a class="code" href="classistd_1_1_c_fast_binary_index.html#a2a1cb502e298fc14ad0011fda8b95fa8abbd51a4d709be2d7e1ab0cc554dd3944">MAX_ELEMENTS_COUNT</a>){
+<a name="l00261"></a>00261        <span class="keywordflow">if</span> (count &lt;= <a class="code" href="classistd_1_1_c_fast_binary_index.html#a4a255df319de07e9ecf393ea3ab43207abbd51a4d709be2d7e1ab0cc554dd3944">MAX_ELEMENTS_COUNT</a>){
 <a name="l00262"></a>00262               m_size = count;
 <a name="l00263"></a>00263               m_bits &amp;= quint32(1 &lt;&lt; m_size) - 1;
 <a name="l00264"></a>00264 
