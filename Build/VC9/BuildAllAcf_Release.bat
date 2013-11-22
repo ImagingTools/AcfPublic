@@ -1,8 +1,8 @@
 echo off
 
-set ACFDIR=%~dp0\..\..\Acf"
-set ACFSLNDIR=%~dp0\..\..\AcfSln"
-set IACFDIR="%~dp0\..\..\Iacf"
+set ACFDIR="%ACFPUBLICDIR%\Acf"
+set ACFSLNDIR="%ACFPUBLICDIR%\AcfSln"
+set IACFDIR="%ACFPUBLICDIR%\Iacf"
 
 call "%VS90COMNTOOLS%vsvars32.bat" x86
 
