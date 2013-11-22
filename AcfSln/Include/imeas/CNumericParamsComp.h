@@ -26,6 +26,7 @@
 
 // ACF includes
 #include "iser/ISerializable.h"
+#include "imod/CMultiModelBridgeBase.h"
 #include "icomp/CComponentBase.h"
 
 // ACF-Solutions incldues
@@ -45,6 +46,7 @@ namespace imeas
 class CNumericParamsComp:
 			public icomp::CComponentBase,
 			public CSimpleNumericValue,
+			protected imod::CMultiModelBridgeBase,
 			virtual protected INumericConstraints,
 			virtual protected imath::IUnitInfo
 {
@@ -61,6 +63,7 @@ public:
 		I_ASSIGN(m_maxValueAttrPtr, "MaxValues", "Maximal value (will be used if no constraints set)", true, 10);
 		I_ASSIGN_MULTI_0(m_defaultValuesAttrPtr, "Values", "Default values", false);
 		I_ASSIGN(m_constraintsCompPtr, "Constraints", "Constraints object describing possible parameter values", false, "Constraints");
+		I_ASSIGN_TO(m_constraintsModelCompPtr, m_constraintsCompPtr, false);
 	I_END_COMPONENT;
 
 	// reimplemented (imeas::INumericValue)
@@ -69,6 +72,7 @@ public:
 protected:
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();
+	virtual void OnComponentDestroyed();
 
 	// reimplemented (imeas::INumericConstraints)
 	virtual int GetNumericValuesCount() const;
@@ -89,6 +93,7 @@ private:
 	I_ATTR(double, m_maxValueAttrPtr);
 	I_MULTIATTR(double, m_defaultValuesAttrPtr);
 	I_REF(INumericConstraints, m_constraintsCompPtr);
+	I_REF(imod::IModel, m_constraintsModelCompPtr);
 };
 
 

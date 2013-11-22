@@ -60,6 +60,9 @@ Public Types</h2></td></tr>
 <a class="el" href="classiqtgui_1_1_c_multi_page_widget.html#a446c70acf2fed5b8afff103bed79e863a35c4acf6118e7016bca30cb1086bff35">DT_USER</a> =  1024
 <br/>
  }</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_widget.html#a98d17e3bc918aa3ff400be3d33dbf8b9">LayoutFlags</a> { <a class="el" href="classiqtgui_1_1_c_multi_page_widget.html#a98d17e3bc918aa3ff400be3d33dbf8b9a4bbc9cd2e4dd4f04236fd966d3f06fcb">LF_NONE</a>, 
+<a class="el" href="classiqtgui_1_1_c_multi_page_widget.html#a98d17e3bc918aa3ff400be3d33dbf8b9a58275803de0d7646da690c54932fd832">LF_COMPACT</a>
+ }</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef QWidget&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_widget.html#aeafecd70c50c1251f05edd9e2b0c2a66">BaseClass</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
 <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642eb">IMultiPageWidgetDelegate::PageHeaderPosition</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_widget.html#ac7a65aecdf5afb210aae9873be9617c4">PageHeaderPosition</a></td></tr>
@@ -69,8 +72,8 @@ Signals</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal will be emitted whenever the currently selected page will be changed.  <a href="#a9a8a0b6c508f9208d836fe60cd078912"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_widget.html#a2790ff0c5f4f7e4903be43865d92c3fc">CMultiPageWidget</a> (QWidget *parentWidgetPtr=NULL, int designMode=DT_SIMPLE, Qt::Orientation orientation=Qt::Vertical)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the multi page widget.  <a href="#a2790ff0c5f4f7e4903be43865d92c3fc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_widget.html#aaa4a3a84bb981c9e3ff18e4ddb62ebd1">CMultiPageWidget</a> (QWidget *parentWidgetPtr=NULL, int designMode=DT_SIMPLE, int layoutFlags=LF_NONE, Qt::Orientation orientation=Qt::Vertical)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the multi page widget.  <a href="#aaa4a3a84bb981c9e3ff18e4ddb62ebd1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_widget.html#af057bf6b8649875fff7d173e0f57df46">GetContainerWidgetPtr</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get page container widget.  <a href="#af057bf6b8649875fff7d173e0f57df46"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_widget.html#a29436100cb98cb536ff2a5c4dd231c0f">SetDesignMode</a> (int designMode)</td></tr>
@@ -196,8 +199,31 @@ Protected Slots</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a98d17e3bc918aa3ff400be3d33dbf8b9"></a><!-- doxytag: member="iqtgui::CMultiPageWidget::LayoutFlags" ref="a98d17e3bc918aa3ff400be3d33dbf8b9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classiqtgui_1_1_c_multi_page_widget.html#a98d17e3bc918aa3ff400be3d33dbf8b9">iqtgui::CMultiPageWidget::LayoutFlags</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a98d17e3bc918aa3ff400be3d33dbf8b9a4bbc9cd2e4dd4f04236fd966d3f06fcb"></a><!-- doxytag: member="LF_NONE" ref="a98d17e3bc918aa3ff400be3d33dbf8b9a4bbc9cd2e4dd4f04236fd966d3f06fcb" args="" -->LF_NONE</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a98d17e3bc918aa3ff400be3d33dbf8b9a58275803de0d7646da690c54932fd832"></a><!-- doxytag: member="LF_COMPACT" ref="a98d17e3bc918aa3ff400be3d33dbf8b9a58275803de0d7646da690c54932fd832" args="" -->LF_COMPACT</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_c_multi_page_widget_8h_source.html#l00071">71</a> of file <a class="el" href="_c_multi_page_widget_8h_source.html">CMultiPageWidget.h</a>.</p>
+
+</div>
+</div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a2790ff0c5f4f7e4903be43865d92c3fc"></a><!-- doxytag: member="iqtgui::CMultiPageWidget::CMultiPageWidget" ref="a2790ff0c5f4f7e4903be43865d92c3fc" args="(QWidget *parentWidgetPtr=NULL, int designMode=DT_SIMPLE, Qt::Orientation orientation=Qt::Vertical)" -->
+<a class="anchor" id="aaa4a3a84bb981c9e3ff18e4ddb62ebd1"></a><!-- doxytag: member="iqtgui::CMultiPageWidget::CMultiPageWidget" ref="aaa4a3a84bb981c9e3ff18e4ddb62ebd1" args="(QWidget *parentWidgetPtr=NULL, int designMode=DT_SIMPLE, int layoutFlags=LF_NONE, Qt::Orientation orientation=Qt::Vertical)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -212,6 +238,12 @@ Protected Slots</h2></td></tr>
           <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>designMode</em> = <code>DT_SIMPLE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>layoutFlags</em> = <code>LF_NONE</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -524,7 +556,7 @@ template&lt;class DelegateImpl &gt; </div>
 
 <p>Register your own page widget delegate objects for the given UI mode. </p>
 
-<p>Definition at line <a class="el" href="_c_multi_page_widget_8h_source.html#l00244">244</a> of file <a class="el" href="_c_multi_page_widget_8h_source.html">CMultiPageWidget.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_page_widget_8h_source.html#l00253">253</a> of file <a class="el" href="_c_multi_page_widget_8h_source.html">CMultiPageWidget.h</a>.</p>
 
 </div>
 </div>

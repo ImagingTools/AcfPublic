@@ -101,6 +101,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a31d620e94ee71b4232135661391b40c7">NewDocument</a> (const QByteArray &amp;documentTypeId, bool createView, const QByteArray &amp;viewTypeId)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create instance of specified document without attaching to this manager.  <a href="#a31d620e94ee71b4232135661391b40c7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a51ca1777268799a35e0e0a706126c906">EnsureViewRemoved</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#af841573183993aeae096b570524c7af7">GetCurrentDocumentFilePath</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#af0cb10d2875063d041accad6c7e67a48">HasDocumentPendingChanges</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#ae3f2382f5255be45088dc19d6b32b5af">OnUpdate</a> (int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a76091450d6234c2c670b83e007da4ee6">OnViewRegistered</a> (<a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *viewPtr)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after view is registered.  <a href="#a76091450d6234c2c670b83e007da4ee6"></a><br/></td></tr>
@@ -275,6 +277,22 @@ Protected Member Functions</h2></td></tr>
 <p>If no document is active, the function return a <code>NULL</code> </p>
 
 <p>Implements <a class="el" href="classidoc_1_1_i_document_manager.html#a54da788776d56b109f91251fd8e3687f">idoc::IDocumentManager</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af841573183993aeae096b570524c7af7"></a><!-- doxytag: member="idoc::CSingleDocumentManagerBase::GetCurrentDocumentFilePath" ref="af841573183993aeae096b570524c7af7" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString idoc::CSingleDocumentManagerBase::GetCurrentDocumentFilePath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -519,6 +537,22 @@ Protected Member Functions</h2></td></tr>
 <p>Get number of view for specified document. </p>
 
 <p>Implements <a class="el" href="classidoc_1_1_i_document_manager.html#a750f4805dbce82299d86c5883ecef279">idoc::IDocumentManager</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af0cb10d2875063d041accad6c7e67a48"></a><!-- doxytag: member="idoc::CSingleDocumentManagerBase::HasDocumentPendingChanges" ref="af0cb10d2875063d041accad6c7e67a48" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool idoc::CSingleDocumentManagerBase::HasDocumentPendingChanges </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>

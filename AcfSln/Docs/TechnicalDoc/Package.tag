@@ -17961,6 +17961,7 @@
     <filename>classimeas_1_1_c_numeric_params_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base>imeas::CSimpleNumericValue</base>
+    <base protection="protected">imod::CMultiModelBridgeBase</base>
     <base protection="protected" virtualness="virtual">imeas::INumericConstraints</base>
     <base protection="protected" virtualness="virtual">imath::IUnitInfo</base>
     <member kind="typedef">
@@ -17977,6 +17978,13 @@
       <anchor>aa05473c3499e850f62ee7d15537cb667</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>a286bd033bc8c01e1f24f989f11d1f545</anchor>
+      <arglist>(m_constraintsModelCompPtr, m_constraintsCompPtr, false)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const INumericConstraints *</type>
       <name>GetNumericConstraints</name>
@@ -17989,6 +17997,13 @@
       <name>OnComponentCreated</name>
       <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
       <anchor>a66df79f5747b3d2bbb39be65805502e9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>ae4004edfb0bf06efd35ef479fda16cfe</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

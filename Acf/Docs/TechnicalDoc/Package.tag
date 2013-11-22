@@ -20579,6 +20579,20 @@
       <anchor>a51ca1777268799a35e0e0a706126c906</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>QString</type>
+      <name>GetCurrentDocumentFilePath</name>
+      <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
+      <anchor>af841573183993aeae096b570524c7af7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>HasDocumentPendingChanges</name>
+      <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
+      <anchor>af0cb10d2875063d041accad6c7e67a48</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnUpdate</name>
@@ -39487,6 +39501,24 @@
       <anchor>a446c70acf2fed5b8afff103bed79e863a35c4acf6118e7016bca30cb1086bff35</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <name>LayoutFlags</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>a98d17e3bc918aa3ff400be3d33dbf8b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LF_NONE</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>a98d17e3bc918aa3ff400be3d33dbf8b9a4bbc9cd2e4dd4f04236fd966d3f06fcb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LF_COMPACT</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>a98d17e3bc918aa3ff400be3d33dbf8b9a58275803de0d7646da690c54932fd832</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>QWidget</type>
       <name>BaseClass</name>
@@ -39512,8 +39544,8 @@
       <type></type>
       <name>CMultiPageWidget</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
-      <anchor>a2790ff0c5f4f7e4903be43865d92c3fc</anchor>
-      <arglist>(QWidget *parentWidgetPtr=NULL, int designMode=DT_SIMPLE, Qt::Orientation orientation=Qt::Vertical)</arglist>
+      <anchor>aaa4a3a84bb981c9e3ff18e4ddb62ebd1</anchor>
+      <arglist>(QWidget *parentWidgetPtr=NULL, int designMode=DT_SIMPLE, int layoutFlags=LF_NONE, Qt::Orientation orientation=Qt::Vertical)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QWidget *</type>

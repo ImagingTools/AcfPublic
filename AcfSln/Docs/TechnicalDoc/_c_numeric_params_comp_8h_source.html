@@ -30,74 +30,79 @@
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_serializable_8h.html">iser/ISerializable.h</a>&quot;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="comment">// ACF-Solutions incldues</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_unit_info_8h.html">imath/IUnitInfo.h</a>&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_numeric_constraints_8h.html">imeas/INumericConstraints.h</a>&quot;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_c_simple_numeric_value_8h.html">imeas/CSimpleNumericValue.h</a>&quot;</span>
-<a name="l00013"></a>00013 
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_c_multi_model_bridge_base_8h.html">imod/CMultiModelBridgeBase.h</a>&quot;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 <span class="comment">// ACF-Solutions incldues</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_unit_info_8h.html">imath/IUnitInfo.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_i_numeric_constraints_8h.html">imeas/INumericConstraints.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_c_simple_numeric_value_8h.html">imeas/CSimpleNumericValue.h</a>&quot;</span>
 <a name="l00014"></a>00014 
-<a name="l00015"></a>00015 <span class="keyword">namespace </span>imeas
-<a name="l00016"></a>00016 {
-<a name="l00017"></a>00017 
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016 <span class="keyword">namespace </span>imeas
+<a name="l00017"></a>00017 {
 <a name="l00018"></a>00018 
-<a name="l00023"></a><a class="code" href="classimeas_1_1_c_numeric_params_comp.html">00023</a> <span class="keyword">class </span><a class="code" href="classimeas_1_1_c_numeric_params_comp.html" title="Component implementating imeas::INumericValue interface.">CNumericParamsComp</a>:
-<a name="l00024"></a>00024                      <span class="keyword">public</span> icomp::CComponentBase,
-<a name="l00025"></a>00025                      <span class="keyword">public</span> <a class="code" href="classimeas_1_1_c_simple_numeric_value.html" title="Basic implementation of imeas::INumericValue interface.">CSimpleNumericValue</a>,
-<a name="l00026"></a>00026                      <span class="keyword">virtual</span> <span class="keyword">protected</span> <a class="code" href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values.">INumericConstraints</a>,
-<a name="l00027"></a>00027                      <span class="keyword">virtual</span> <span class="keyword">protected</span> imath::IUnitInfo
-<a name="l00028"></a>00028 {
-<a name="l00029"></a>00029 <span class="keyword">public</span>:
-<a name="l00030"></a><a class="code" href="classimeas_1_1_c_numeric_params_comp.html#ae003eb90b23de0b2913955e449983141">00030</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#ae003eb90b23de0b2913955e449983141">BaseClass</a>;
-<a name="l00031"></a><a class="code" href="classimeas_1_1_c_numeric_params_comp.html#aa05473c3499e850f62ee7d15537cb667">00031</a>        <span class="keyword">typedef</span> <a class="code" href="classimeas_1_1_c_simple_numeric_value.html" title="Basic implementation of imeas::INumericValue interface.">CSimpleNumericValue</a> <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#aa05473c3499e850f62ee7d15537cb667">BaseClass2</a>;
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033        I_BEGIN_COMPONENT(<a class="code" href="classimeas_1_1_c_numeric_params_comp.html" title="Component implementating imeas::INumericValue interface.">CNumericParamsComp</a>);
-<a name="l00034"></a>00034               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>);
-<a name="l00035"></a>00035               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html">iser::ISerializable</a>);
-<a name="l00036"></a>00036               I_REGISTER_INTERFACE(<a class="code" href="classimeas_1_1_i_numeric_value.html" title="General parameter set containing list of numeric values.">INumericValue</a>);
-<a name="l00037"></a>00037               I_ASSIGN(m_dimensionsCountAttrPtr, <span class="stringliteral">&quot;ValuesCount&quot;</span>, <span class="stringliteral">&quot;Default number of numeric values (will be used if no constraints set)&quot;</span>, <span class="keyword">true</span>, 1);
-<a name="l00038"></a>00038               I_ASSIGN(m_minValueAttrPtr, <span class="stringliteral">&quot;MinValues&quot;</span>, <span class="stringliteral">&quot;Minimal value (will be used if no constraints set)&quot;</span>, <span class="keyword">true</span>, 1);
-<a name="l00039"></a>00039               I_ASSIGN(m_maxValueAttrPtr, <span class="stringliteral">&quot;MaxValues&quot;</span>, <span class="stringliteral">&quot;Maximal value (will be used if no constraints set)&quot;</span>, <span class="keyword">true</span>, 10);
-<a name="l00040"></a>00040               I_ASSIGN_MULTI_0(m_defaultValuesAttrPtr, <span class="stringliteral">&quot;Values&quot;</span>, <span class="stringliteral">&quot;Default values&quot;</span>, <span class="keyword">false</span>);
-<a name="l00041"></a>00041               I_ASSIGN(m_constraintsCompPtr, <span class="stringliteral">&quot;Constraints&quot;</span>, <span class="stringliteral">&quot;Constraints object describing possible parameter values&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Constraints&quot;</span>);
-<a name="l00042"></a>00042        I_END_COMPONENT;
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044        <span class="comment">// reimplemented (imeas::INumericValue)</span>
-<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values.">INumericConstraints</a>* <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#a3273fd702b83cce7a8c1726c32e53979" title="Get parameter constraints describing possible parameter values.">GetNumericConstraints</a>() <span class="keyword">const</span>;
+<a name="l00019"></a>00019 
+<a name="l00024"></a><a class="code" href="classimeas_1_1_c_numeric_params_comp.html">00024</a> <span class="keyword">class </span><a class="code" href="classimeas_1_1_c_numeric_params_comp.html" title="Component implementating imeas::INumericValue interface.">CNumericParamsComp</a>:
+<a name="l00025"></a>00025                      <span class="keyword">public</span> icomp::CComponentBase,
+<a name="l00026"></a>00026                      <span class="keyword">public</span> <a class="code" href="classimeas_1_1_c_simple_numeric_value.html" title="Basic implementation of imeas::INumericValue interface.">CSimpleNumericValue</a>,
+<a name="l00027"></a>00027                      <span class="keyword">protected</span> imod::CMultiModelBridgeBase,
+<a name="l00028"></a>00028                      <span class="keyword">virtual</span> <span class="keyword">protected</span> <a class="code" href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values.">INumericConstraints</a>,
+<a name="l00029"></a>00029                      <span class="keyword">virtual</span> <span class="keyword">protected</span> imath::IUnitInfo
+<a name="l00030"></a>00030 {
+<a name="l00031"></a>00031 <span class="keyword">public</span>:
+<a name="l00032"></a><a class="code" href="classimeas_1_1_c_numeric_params_comp.html#ae003eb90b23de0b2913955e449983141">00032</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#ae003eb90b23de0b2913955e449983141">BaseClass</a>;
+<a name="l00033"></a><a class="code" href="classimeas_1_1_c_numeric_params_comp.html#aa05473c3499e850f62ee7d15537cb667">00033</a>        <span class="keyword">typedef</span> <a class="code" href="classimeas_1_1_c_simple_numeric_value.html" title="Basic implementation of imeas::INumericValue interface.">CSimpleNumericValue</a> <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#aa05473c3499e850f62ee7d15537cb667">BaseClass2</a>;
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035        I_BEGIN_COMPONENT(<a class="code" href="classimeas_1_1_c_numeric_params_comp.html" title="Component implementating imeas::INumericValue interface.">CNumericParamsComp</a>);
+<a name="l00036"></a>00036               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html">istd::IChangeable</a>);
+<a name="l00037"></a>00037               I_REGISTER_INTERFACE(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiser_1_1_i_serializable.html">iser::ISerializable</a>);
+<a name="l00038"></a>00038               I_REGISTER_INTERFACE(<a class="code" href="classimeas_1_1_i_numeric_value.html" title="General parameter set containing list of numeric values.">INumericValue</a>);
+<a name="l00039"></a>00039               I_ASSIGN(m_dimensionsCountAttrPtr, <span class="stringliteral">&quot;ValuesCount&quot;</span>, <span class="stringliteral">&quot;Default number of numeric values (will be used if no constraints set)&quot;</span>, <span class="keyword">true</span>, 1);
+<a name="l00040"></a>00040               I_ASSIGN(m_minValueAttrPtr, <span class="stringliteral">&quot;MinValues&quot;</span>, <span class="stringliteral">&quot;Minimal value (will be used if no constraints set)&quot;</span>, <span class="keyword">true</span>, 1);
+<a name="l00041"></a>00041               I_ASSIGN(m_maxValueAttrPtr, <span class="stringliteral">&quot;MaxValues&quot;</span>, <span class="stringliteral">&quot;Maximal value (will be used if no constraints set)&quot;</span>, <span class="keyword">true</span>, 10);
+<a name="l00042"></a>00042               I_ASSIGN_MULTI_0(m_defaultValuesAttrPtr, <span class="stringliteral">&quot;Values&quot;</span>, <span class="stringliteral">&quot;Default values&quot;</span>, <span class="keyword">false</span>);
+<a name="l00043"></a>00043               I_ASSIGN(m_constraintsCompPtr, <span class="stringliteral">&quot;Constraints&quot;</span>, <span class="stringliteral">&quot;Constraints object describing possible parameter values&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Constraints&quot;</span>);
+<a name="l00044"></a>00044               <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#a286bd033bc8c01e1f24f989f11d1f545">I_ASSIGN_TO</a>(m_constraintsModelCompPtr, m_constraintsCompPtr, <span class="keyword">false</span>);
+<a name="l00045"></a>00045        I_END_COMPONENT;
 <a name="l00046"></a>00046 
-<a name="l00047"></a>00047 <span class="keyword">protected</span>:
-<a name="l00048"></a>00048        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#a66df79f5747b3d2bbb39be65805502e9">OnComponentCreated</a>();
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051        <span class="comment">// reimplemented (imeas::INumericConstraints)</span>
-<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#ac8da5149c791906ce64c7d58a86a73fb" title="Get number of expected numeric values.">GetNumericValuesCount</a>() <span class="keyword">const</span>;
-<a name="l00053"></a>00053        <span class="keyword">virtual</span> QString <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#a8e120a246115a3659eb3e7929160ecaf" title="Get human readable name of numeric value for specified list index.">GetNumericValueName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> QString <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#a9fe3317941b0928c2452a81b13ed62de" title="Get human readable description of numeric value for specified list index.">GetNumericValueDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html">imath::IUnitInfo</a>&amp; <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#a5f84432a11fa3d5e72f0781be63bca48" title="Get range of possible numeric values for specified list index.">GetNumericValueUnitInfo</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057        <span class="comment">// reimplemented (imath::IUnitInfo)</span>
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#afc86be53b80f6d8d2d67790f37f65b94">GetUnitType</a>() <span class="keyword">const</span>;
-<a name="l00059"></a>00059        <span class="keyword">virtual</span> QString <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#a577c62f05575438eda291047f6166ab0">GetUnitName</a>() <span class="keyword">const</span>;
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#ac45c462ca6aa584848e8a72b8467e30d">GetDisplayMultiplicationFactor</a>() <span class="keyword">const</span>;
-<a name="l00061"></a>00061        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a> <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#aca365623bf951247a03fb39e4fa2bfd7">GetValueRange</a>() <span class="keyword">const</span>;
-<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimath_1_1_i_double_manip.html">imath::IDoubleManip</a>&amp; <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#a67272c6b08219c5211075a7475954365">GetValueManip</a>() <span class="keyword">const</span>;
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 <span class="keyword">private</span>:
-<a name="l00065"></a>00065        I_ATTR(<span class="keywordtype">int</span>, m_dimensionsCountAttrPtr);
-<a name="l00066"></a>00066        I_ATTR(<span class="keywordtype">double</span>, m_minValueAttrPtr);
-<a name="l00067"></a>00067        I_ATTR(<span class="keywordtype">double</span>, m_maxValueAttrPtr);
-<a name="l00068"></a>00068        I_MULTIATTR(<span class="keywordtype">double</span>, m_defaultValuesAttrPtr);
-<a name="l00069"></a>00069        I_REF(<a class="code" href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values.">INumericConstraints</a>, m_constraintsCompPtr);
-<a name="l00070"></a>00070 };
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072 
-<a name="l00073"></a>00073 } <span class="comment">// namespace imeas</span>
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076 <span class="preprocessor">#endif // !imeas_CNumericParamsComp_included</span>
-<a name="l00077"></a>00077 <span class="preprocessor"></span>
-<a name="l00078"></a>00078 
+<a name="l00047"></a>00047        <span class="comment">// reimplemented (imeas::INumericValue)</span>
+<a name="l00048"></a>00048        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values.">INumericConstraints</a>* <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#a3273fd702b83cce7a8c1726c32e53979" title="Get parameter constraints describing possible parameter values.">GetNumericConstraints</a>() <span class="keyword">const</span>;
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 <span class="keyword">protected</span>:
+<a name="l00051"></a>00051        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#a66df79f5747b3d2bbb39be65805502e9">OnComponentCreated</a>();
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#ae4004edfb0bf06efd35ef479fda16cfe">OnComponentDestroyed</a>();
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055        <span class="comment">// reimplemented (imeas::INumericConstraints)</span>
+<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#ac8da5149c791906ce64c7d58a86a73fb" title="Get number of expected numeric values.">GetNumericValuesCount</a>() <span class="keyword">const</span>;
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> QString <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#a8e120a246115a3659eb3e7929160ecaf" title="Get human readable name of numeric value for specified list index.">GetNumericValueName</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> QString <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#a9fe3317941b0928c2452a81b13ed62de" title="Get human readable description of numeric value for specified list index.">GetNumericValueDescription</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimath_1_1_i_unit_info.html">imath::IUnitInfo</a>&amp; <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#a5f84432a11fa3d5e72f0781be63bca48" title="Get range of possible numeric values for specified list index.">GetNumericValueUnitInfo</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061        <span class="comment">// reimplemented (imath::IUnitInfo)</span>
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#afc86be53b80f6d8d2d67790f37f65b94">GetUnitType</a>() <span class="keyword">const</span>;
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> QString <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#a577c62f05575438eda291047f6166ab0">GetUnitName</a>() <span class="keyword">const</span>;
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#ac45c462ca6aa584848e8a72b8467e30d">GetDisplayMultiplicationFactor</a>() <span class="keyword">const</span>;
+<a name="l00065"></a>00065        <span class="keyword">virtual</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_t_range.html">istd::CRange</a> <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#aca365623bf951247a03fb39e4fa2bfd7">GetValueRange</a>() <span class="keyword">const</span>;
+<a name="l00066"></a>00066        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimath_1_1_i_double_manip.html">imath::IDoubleManip</a>&amp; <a class="code" href="classimeas_1_1_c_numeric_params_comp.html#a67272c6b08219c5211075a7475954365">GetValueManip</a>() <span class="keyword">const</span>;
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 <span class="keyword">private</span>:
+<a name="l00069"></a>00069        I_ATTR(<span class="keywordtype">int</span>, m_dimensionsCountAttrPtr);
+<a name="l00070"></a>00070        I_ATTR(<span class="keywordtype">double</span>, m_minValueAttrPtr);
+<a name="l00071"></a>00071        I_ATTR(<span class="keywordtype">double</span>, m_maxValueAttrPtr);
+<a name="l00072"></a>00072        I_MULTIATTR(<span class="keywordtype">double</span>, m_defaultValuesAttrPtr);
+<a name="l00073"></a>00073        I_REF(<a class="code" href="classimeas_1_1_i_numeric_constraints.html" title="Describe additional meta information for set of numeric values.">INumericConstraints</a>, m_constraintsCompPtr);
+<a name="l00074"></a>00074        I_REF(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classimod_1_1_i_model.html">imod::IModel</a>, m_constraintsModelCompPtr);
+<a name="l00075"></a>00075 };
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078 } <span class="comment">// namespace imeas</span>
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 <span class="preprocessor">#endif // !imeas_CNumericParamsComp_included</span>
+<a name="l00082"></a>00082 <span class="preprocessor"></span>
+<a name="l00083"></a>00083 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
