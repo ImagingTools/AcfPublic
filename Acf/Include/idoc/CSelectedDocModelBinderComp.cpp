@@ -47,6 +47,8 @@ void CSelectedDocModelBinderComp::TryConnectObservers()
 
 	const icomp::IComponent* observedObjectPtr = m_observedObjectCompPtr.GetPtr();
 	if (observedObjectPtr == NULL){
+		qDebug("CSelectedDocModelBinderComp::TryConnectObservers: Observer component was not set");
+
 		return;
 	}
 

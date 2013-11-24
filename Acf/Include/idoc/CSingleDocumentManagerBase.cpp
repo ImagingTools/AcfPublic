@@ -397,6 +397,8 @@ bool CSingleDocumentManagerBase::OpenDocument(
 				m_isDirty = false;
 
 				if (m_undoManagerPtr.IsValid()){
+					m_undoManagerPtr->ResetUndo();
+	
 					m_undoManagerPtr->StoreDocumentState();
 				}
 
