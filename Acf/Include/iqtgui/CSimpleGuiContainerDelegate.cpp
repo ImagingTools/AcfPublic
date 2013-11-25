@@ -42,9 +42,9 @@ namespace iqtgui
 {
 
 
-CSimpleGuiContainerDelegate::CSimpleGuiContainerDelegate(bool useUniformSizes, bool isCompactModeEnabled)
-	:m_useUniformSizes(useUniformSizes),
-	m_isCompactModeEnabled(isCompactModeEnabled)
+CSimpleGuiContainerDelegate::CSimpleGuiContainerDelegate()
+	:m_containerGuiFlags(CGF_NONE),
+	m_orientation(Qt::Vertical)
 {
 }
 
@@ -53,7 +53,7 @@ CSimpleGuiContainerDelegate::CSimpleGuiContainerDelegate(bool useUniformSizes, b
 
 // reimplemented (IMultiPageWidgetDelegate)
 
-QWidget* CSimpleGuiContainerDelegate::CreateContainerWidget(QWidget* parentWidgetPtr, int orientation)
+QWidget* CSimpleGuiContainerDelegate::CreateContainerWidget(QWidget* parentWidgetPtr, int containerGuiFlags, int orientation)
 {	
 	QWidget* containerPtr = new QWidget(parentWidgetPtr);
 
@@ -70,9 +70,10 @@ QWidget* CSimpleGuiContainerDelegate::CreateContainerWidget(QWidget* parentWidge
 
 	Q_ASSERT(boxLayoutPtr != NULL);
 
-	if (m_isCompactModeEnabled){
-		boxLayoutPtr->insertStretch(-1);
-	}
+	boxLayoutPtr->setMargin(0);
+
+	m_containerGuiFlags = containerGuiFlags;
+	m_orientation = orientation;
 
 	return containerPtr;
 }
@@ -105,6 +106,11 @@ int CSimpleGuiContainerDelegate::InsertPage(
 	QWidget* panelPtr = pageTitle.isEmpty() ? new QWidget(&containerWidget) : new QGroupBox(pageTitle, &containerWidget);
 	panelPtr->setObjectName(QString("Page %1").arg(pageIndex));
 	QLayout* panelLayoutPtr = new QVBoxLayout(panelPtr);
+
+	if (pageTitle.isEmpty()){
+		panelLayoutPtr->setMargin(0);
+	}
+
 	panelLayoutPtr->addWidget(pageWidgetPtr);
 
 	containerLayoutPtr->addWidget(panelPtr);
@@ -116,7 +122,7 @@ int CSimpleGuiContainerDelegate::InsertPage(
 	for (int i = 0; i < elementsCount; ++i){
 		QLayoutItem* layoutItemPtr = boxLayoutPtr->itemAt(i);
 
-		if ((layoutItemPtr != NULL) && m_useUniformSizes){
+		if ((layoutItemPtr != NULL) && (m_containerGuiFlags & CGF_UNIFORM_SIZES)){
 			QWidget* widgetPtr = layoutItemPtr->widget();
 			if (widgetPtr != NULL){
 				boxLayoutPtr->setStretchFactor(widgetPtr, 1);

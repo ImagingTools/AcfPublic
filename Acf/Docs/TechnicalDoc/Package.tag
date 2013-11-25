@@ -4242,10 +4242,9 @@
     <name>CComposedGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_composed_gui_comp_8h</filename>
-    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
-    <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <includes id="_t_restorable_gui_wrap_8h" name="TRestorableGuiWrap.h" local="yes" imported="no">iqtgui/TRestorableGuiWrap.h</includes>
+    <includes id="_c_multi_page_gui_comp_base_8h" name="CMultiPageGuiCompBase.h" local="yes" imported="no">iqtgui/CMultiPageGuiCompBase.h</includes>
     <class kind="class">iqtgui::CComposedGuiComp</class>
     <namespace>iqtgui</namespace>
   </compound>
@@ -37815,20 +37814,13 @@
   <compound kind="class">
     <name>iqtgui::CComposedGuiComp</name>
     <filename>classiqtgui_1_1_c_composed_gui_comp.html</filename>
-    <base>TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt; &gt;</base>
+    <base>TRestorableGuiWrap&lt; CMultiPageGuiCompBase &gt;</base>
     <member kind="typedef">
-      <type>iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt; &gt;</type>
+      <type>iqtgui::TRestorableGuiWrap&lt; CMultiPageGuiCompBase &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_c_composed_gui_comp.html</anchorfile>
-      <anchor>abebea3ebc69848808d85596979ce5b7d</anchor>
+      <anchor>ac58f4cf4a6241f5272c22e4952980f2c</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CComposedGuiComp</name>
-      <anchorfile>classiqtgui_1_1_c_composed_gui_comp.html</anchorfile>
-      <anchor>ac0db64a27c2d926671418f43c9712844</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -37845,17 +37837,31 @@
       <arglist>(QSettings &amp;settings) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPagesCount</name>
+      <anchorfile>classiqtgui_1_1_c_composed_gui_comp.html</anchorfile>
+      <anchor>af6802e878a17a9592aaba04c386edfeb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iqtgui::IGuiObject *</type>
+      <name>GetPageGuiComponent</name>
+      <anchorfile>classiqtgui_1_1_c_composed_gui_comp.html</anchorfile>
+      <anchor>af018702ec44b3699a4f9346e9cb6c0f9</anchor>
+      <arglist>(int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetDesignType</name>
+      <anchorfile>classiqtgui_1_1_c_composed_gui_comp.html</anchorfile>
+      <anchor>a32693f67d075c8688c6a64af4196c8fc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtgui_1_1_c_composed_gui_comp.html</anchorfile>
       <anchor>a39e95e68c62e662ff39a9ce3311dd9cf</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtgui_1_1_c_composed_gui_comp.html</anchorfile>
-      <anchor>ad3b26182b2a5455a25685082cbdf614b</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -39501,24 +39507,6 @@
       <anchor>a446c70acf2fed5b8afff103bed79e863a35c4acf6118e7016bca30cb1086bff35</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumeration">
-      <name>LayoutFlags</name>
-      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
-      <anchor>a98d17e3bc918aa3ff400be3d33dbf8b9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>LF_NONE</name>
-      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
-      <anchor>a98d17e3bc918aa3ff400be3d33dbf8b9a4bbc9cd2e4dd4f04236fd966d3f06fcb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>LF_COMPACT</name>
-      <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
-      <anchor>a98d17e3bc918aa3ff400be3d33dbf8b9a58275803de0d7646da690c54932fd832</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="typedef">
       <type>QWidget</type>
       <name>BaseClass</name>
@@ -39544,8 +39532,8 @@
       <type></type>
       <name>CMultiPageWidget</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_widget.html</anchorfile>
-      <anchor>aaa4a3a84bb981c9e3ff18e4ddb62ebd1</anchor>
-      <arglist>(QWidget *parentWidgetPtr=NULL, int designMode=DT_SIMPLE, int layoutFlags=LF_NONE, Qt::Orientation orientation=Qt::Vertical)</arglist>
+      <anchor>a6a6c6b6cb65de2670770c661957828a6</anchor>
+      <arglist>(QWidget *parentWidgetPtr=NULL, int designMode=DT_SIMPLE, int containerGuiFlags=IMultiPageWidgetDelegate::CGF_NONE, Qt::Orientation orientation=Qt::Vertical)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QWidget *</type>
@@ -39938,15 +39926,15 @@
       <type></type>
       <name>CSimpleGuiContainerDelegate</name>
       <anchorfile>classiqtgui_1_1_c_simple_gui_container_delegate.html</anchorfile>
-      <anchor>ac634d56c932fff0eb383217f00b87f4c</anchor>
-      <arglist>(bool useUniformSizes=false, bool isCompactModeEnabled=false)</arglist>
+      <anchor>ad5fd2b35599d29262f4c5cfe2ddf3089</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QWidget *</type>
       <name>CreateContainerWidget</name>
       <anchorfile>classiqtgui_1_1_c_simple_gui_container_delegate.html</anchorfile>
-      <anchor>a7fac4bb705e492c1bdc7f9bee58522e7</anchor>
-      <arglist>(QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)</arglist>
+      <anchor>a8aab4d671d0841d9b06cb8995f4665be</anchor>
+      <arglist>(QWidget *parentWidgetPtr, int containerGuiFlags=CGF_NONE, int orientation=Qt::Horizontal)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -40357,8 +40345,8 @@
       <type>virtual QWidget *</type>
       <name>CreateContainerWidget</name>
       <anchorfile>classiqtgui_1_1_c_splitter_delegate.html</anchorfile>
-      <anchor>adadf814137cf3c4b496d19c0b416e77c</anchor>
-      <arglist>(QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)</arglist>
+      <anchor>ac9d521bbaa27312a7e1d87181b6694c0</anchor>
+      <arglist>(QWidget *parentWidgetPtr, int containerGuiFlags=CGF_NONE, int orientation=Qt::Horizontal)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -40509,8 +40497,8 @@
       <type>virtual QWidget *</type>
       <name>CreateContainerWidget</name>
       <anchorfile>classiqtgui_1_1_c_stack_widget_delegate.html</anchorfile>
-      <anchor>a5801d5e877c44b1ecac3a47e3bd46ed9</anchor>
-      <arglist>(QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)</arglist>
+      <anchor>abb213027938020b39910fe1b434ec40d</anchor>
+      <arglist>(QWidget *parentWidgetPtr, int containerGuiFlags=CGF_NONE, int orientation=Qt::Horizontal)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -40821,8 +40809,8 @@
       <type></type>
       <name>CTabWidgetDelegate</name>
       <anchorfile>classiqtgui_1_1_c_tab_widget_delegate.html</anchorfile>
-      <anchor>a91dcb3275f44e137957dfa52634c1ec8</anchor>
-      <arglist>(QTabWidget::TabPosition tabPosition=QTabWidget::North, bool useDocumentMode=false, bool useCompactPageMode=false)</arglist>
+      <anchor>a4ebb788daf49c86af00382395e262995</anchor>
+      <arglist>(QTabWidget::TabPosition tabPosition=QTabWidget::North, bool useDocumentMode=false)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -40842,8 +40830,8 @@
       <type>virtual QWidget *</type>
       <name>CreateContainerWidget</name>
       <anchorfile>classiqtgui_1_1_c_tab_widget_delegate.html</anchorfile>
-      <anchor>ad0c3e0426a4d3bbb21fc125dae5abb18</anchor>
-      <arglist>(QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)</arglist>
+      <anchor>a3b4919a3a8b6a23547dfe59aedd7288a</anchor>
+      <arglist>(QWidget *parentWidgetPtr, int containerGuiFlags=CGF_NONE, int orientation=Qt::Horizontal)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -41135,8 +41123,8 @@
       <type>virtual QWidget *</type>
       <name>CreateContainerWidget</name>
       <anchorfile>classiqtgui_1_1_c_tool_box_delegate.html</anchorfile>
-      <anchor>a369950fd279a3a1ba637cda5a7bd635b</anchor>
-      <arglist>(QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)</arglist>
+      <anchor>a19dc2cb82c2c5e7c17e0f56d2c9a4076</anchor>
+      <arglist>(QWidget *parentWidgetPtr, int containerGuiFlags=CGF_NONE, int orientation=Qt::Horizontal)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -41516,12 +41504,36 @@
       <anchor>a463a78325413ff97f3f478cf485642ebaffcf4404344fabda374197d30ab68dbb</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <name>ContainerGuiFlags</name>
+      <anchorfile>classiqtgui_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>aba16a38a15aaa5ff7a9ea3549f4b0927</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CGF_NONE</name>
+      <anchorfile>classiqtgui_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>aba16a38a15aaa5ff7a9ea3549f4b0927aea87a62c541e140476919ad0e4a78da1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CGF_UNIFORM_SIZES</name>
+      <anchorfile>classiqtgui_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>aba16a38a15aaa5ff7a9ea3549f4b0927a8014b677cd47826f7a428f41b3312a0d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CGF_COMPACT</name>
+      <anchorfile>classiqtgui_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>aba16a38a15aaa5ff7a9ea3549f4b0927a08368d96fd400e1efd6272cb69aef2e7</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual QWidget *</type>
       <name>CreateContainerWidget</name>
       <anchorfile>classiqtgui_1_1_i_multi_page_widget_delegate.html</anchorfile>
-      <anchor>aca569e934a9ae7751b2051038c7ec0c6</anchor>
-      <arglist>(QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)=0</arglist>
+      <anchor>acdecbd03c91631322fd1e4fc33a22db0</anchor>
+      <arglist>(QWidget *parentWidgetPtr, int containerGuiFlags=CGF_NONE, int orientation=Qt::Horizontal)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>

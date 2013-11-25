@@ -57,11 +57,11 @@ Inheritance diagram for iqtgui::CTabWidgetDelegate:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_widget_delegate.html#a91dcb3275f44e137957dfa52634c1ec8">CTabWidgetDelegate</a> (QTabWidget::TabPosition tabPosition=QTabWidget::North, bool useDocumentMode=false, bool useCompactPageMode=false)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_widget_delegate.html#a4ebb788daf49c86af00382395e262995">CTabWidgetDelegate</a> (QTabWidget::TabPosition tabPosition=QTabWidget::North, bool useDocumentMode=false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_widget_delegate.html#a4d9ef262a0923d3450ace54e00c73758">SetTabPosition</a> (QWidget &amp;containerWidget, QTabWidget::TabPosition tabPosition)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_widget_delegate.html#a6acc0ca8138b53a08f9d10b38ddfe475">SetDocumentModeEnabled</a> (QWidget &amp;containerWidget, bool isDocumentModeEnabled=true)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_widget_delegate.html#ad0c3e0426a4d3bbb21fc125dae5abb18">CreateContainerWidget</a> (QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create container for the page widgets.  <a href="#ad0c3e0426a4d3bbb21fc125dae5abb18"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_widget_delegate.html#a3b4919a3a8b6a23547dfe59aedd7288a">CreateContainerWidget</a> (QWidget *parentWidgetPtr, int containerGuiFlags=CGF_NONE, int orientation=Qt::Horizontal)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create container for the page widgets.  <a href="#a3b4919a3a8b6a23547dfe59aedd7288a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_widget_delegate.html#a0fb226e5c768e47a5163511ba96b370d">ConnectPageIndexListener</a> (QWidget &amp;containerWidget, QObject *receiverPtr, const char *receiverSlotName)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect object, which will be notified about changing of the current selected page index.  <a href="#a0fb226e5c768e47a5163511ba96b370d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_tab_widget_delegate.html#a4d99d1996bc220a8917baa95d7a1fb1f">SetPageHeaderPosition</a> (QWidget &amp;containerWidget, <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642eb">PageHeaderPosition</a> pageHeaderPosition)</td></tr>
@@ -108,7 +108,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_tab_widget_delegate_8h_source.html#l00024">24</a> of file <a class="el" href="_c_tab_widget_delegate_8h_source.html">CTabWidgetDelegate.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a91dcb3275f44e137957dfa52634c1ec8"></a><!-- doxytag: member="iqtgui::CTabWidgetDelegate::CTabWidgetDelegate" ref="a91dcb3275f44e137957dfa52634c1ec8" args="(QTabWidget::TabPosition tabPosition=QTabWidget::North, bool useDocumentMode=false, bool useCompactPageMode=false)" -->
+<a class="anchor" id="a4ebb788daf49c86af00382395e262995"></a><!-- doxytag: member="iqtgui::CTabWidgetDelegate::CTabWidgetDelegate" ref="a4ebb788daf49c86af00382395e262995" args="(QTabWidget::TabPosition tabPosition=QTabWidget::North, bool useDocumentMode=false)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -122,13 +122,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>useDocumentMode</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>useCompactPageMode</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>useDocumentMode</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -187,7 +181,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad0c3e0426a4d3bbb21fc125dae5abb18"></a><!-- doxytag: member="iqtgui::CTabWidgetDelegate::CreateContainerWidget" ref="ad0c3e0426a4d3bbb21fc125dae5abb18" args="(QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)" -->
+<a class="anchor" id="a3b4919a3a8b6a23547dfe59aedd7288a"></a><!-- doxytag: member="iqtgui::CTabWidgetDelegate::CreateContainerWidget" ref="a3b4919a3a8b6a23547dfe59aedd7288a" args="(QWidget *parentWidgetPtr, int containerGuiFlags=CGF_NONE, int orientation=Qt::Horizontal)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -196,6 +190,12 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">QWidget *&#160;</td>
           <td class="paramname"><em>parentWidgetPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>containerGuiFlags</em> = <code>CGF_NONE</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -214,7 +214,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Create container for the page widgets. </p>
 
-<p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#aca569e934a9ae7751b2051038c7ec0c6">iqtgui::IMultiPageWidgetDelegate</a>.</p>
+<p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#acdecbd03c91631322fd1e4fc33a22db0">iqtgui::IMultiPageWidgetDelegate</a>.</p>
 
 </div>
 </div>

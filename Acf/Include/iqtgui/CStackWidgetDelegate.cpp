@@ -46,7 +46,7 @@ namespace iqtgui
 
 // reimplemented (IMultiPageWidgetDelegate)
 
-QWidget* CStackWidgetDelegate::CreateContainerWidget(QWidget* parentWidgetPtr, int /*orientation*/)
+QWidget* CStackWidgetDelegate::CreateContainerWidget(QWidget* parentWidgetPtr, int /*containerGuiFlags*/, int /*orientation*/)
 {	
 	return new QStackedWidget(parentWidgetPtr);
 }

@@ -57,9 +57,9 @@ Inheritance diagram for iqtgui::CSimpleGuiContainerDelegate:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_gui_container_delegate.html#ac634d56c932fff0eb383217f00b87f4c">CSimpleGuiContainerDelegate</a> (bool useUniformSizes=false, bool isCompactModeEnabled=false)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_gui_container_delegate.html#a7fac4bb705e492c1bdc7f9bee58522e7">CreateContainerWidget</a> (QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create container for the page widgets.  <a href="#a7fac4bb705e492c1bdc7f9bee58522e7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_gui_container_delegate.html#ad5fd2b35599d29262f4c5cfe2ddf3089">CSimpleGuiContainerDelegate</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_gui_container_delegate.html#a8aab4d671d0841d9b06cb8995f4665be">CreateContainerWidget</a> (QWidget *parentWidgetPtr, int containerGuiFlags=CGF_NONE, int orientation=Qt::Horizontal)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create container for the page widgets.  <a href="#a8aab4d671d0841d9b06cb8995f4665be"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_gui_container_delegate.html#a073ea10c9ac9194549d273ec3e308847">ConnectPageIndexListener</a> (QWidget &amp;containerWidget, QObject *receiverPtr, const char *receiverSlotName)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect object, which will be notified about changing of the current selected page index.  <a href="#a073ea10c9ac9194549d273ec3e308847"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_gui_container_delegate.html#a40078526707514b286fd8bb68c8ddada">SetPageHeaderPosition</a> (QWidget &amp;containerWidget, <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#a463a78325413ff97f3f478cf485642eb">PageHeaderPosition</a> pageHeaderPosition)</td></tr>
@@ -106,26 +106,15 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_c_simple_gui_container_delegate_8h_source.html#l00016">16</a> of file <a class="el" href="_c_simple_gui_container_delegate_8h_source.html">CSimpleGuiContainerDelegate.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ac634d56c932fff0eb383217f00b87f4c"></a><!-- doxytag: member="iqtgui::CSimpleGuiContainerDelegate::CSimpleGuiContainerDelegate" ref="ac634d56c932fff0eb383217f00b87f4c" args="(bool useUniformSizes=false, bool isCompactModeEnabled=false)" -->
+<a class="anchor" id="ad5fd2b35599d29262f4c5cfe2ddf3089"></a><!-- doxytag: member="iqtgui::CSimpleGuiContainerDelegate::CSimpleGuiContainerDelegate" ref="ad5fd2b35599d29262f4c5cfe2ddf3089" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">iqtgui::CSimpleGuiContainerDelegate::CSimpleGuiContainerDelegate </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>useUniformSizes</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isCompactModeEnabled</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div>
@@ -179,7 +168,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7fac4bb705e492c1bdc7f9bee58522e7"></a><!-- doxytag: member="iqtgui::CSimpleGuiContainerDelegate::CreateContainerWidget" ref="a7fac4bb705e492c1bdc7f9bee58522e7" args="(QWidget *parentWidgetPtr, int orientation=Qt::Horizontal)" -->
+<a class="anchor" id="a8aab4d671d0841d9b06cb8995f4665be"></a><!-- doxytag: member="iqtgui::CSimpleGuiContainerDelegate::CreateContainerWidget" ref="a8aab4d671d0841d9b06cb8995f4665be" args="(QWidget *parentWidgetPtr, int containerGuiFlags=CGF_NONE, int orientation=Qt::Horizontal)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -188,6 +177,12 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">QWidget *&#160;</td>
           <td class="paramname"><em>parentWidgetPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>containerGuiFlags</em> = <code>CGF_NONE</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -206,7 +201,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Create container for the page widgets. </p>
 
-<p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#aca569e934a9ae7751b2051038c7ec0c6">iqtgui::IMultiPageWidgetDelegate</a>.</p>
+<p>Implements <a class="el" href="classiqtgui_1_1_i_multi_page_widget_delegate.html#acdecbd03c91631322fd1e4fc33a22db0">iqtgui::IMultiPageWidgetDelegate</a>.</p>
 
 </div>
 </div>
