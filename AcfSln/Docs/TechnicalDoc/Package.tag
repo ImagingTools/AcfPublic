@@ -3061,6 +3061,19 @@
     <namespace>isig</namespace>
   </compound>
   <compound kind="file">
+    <name>CCgiManager.h</name>
+    <path>C:/Temp/AcfSln/Include/iweb/</path>
+    <filename>_c_cgi_manager_8h</filename>
+    <class kind="class">iweb::CCgiManager</class>
+    <namespace>iweb</namespace>
+  </compound>
+  <compound kind="file">
+    <name>iweb.h</name>
+    <path>C:/Temp/AcfSln/Include/iweb/</path>
+    <filename>iweb_8h</filename>
+    <namespace>iwiz</namespace>
+  </compound>
+  <compound kind="file">
     <name>CComposedStateControllerComp.h</name>
     <path>C:/Temp/AcfSln/Include/iwiz/</path>
     <filename>_c_composed_state_controller_comp_8h</filename>
@@ -26281,6 +26294,519 @@
       <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
       <anchor>a66ebe1c5c3511d7fbe95d5e8124d3887</anchor>
       <arglist>(int triggerMode)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>iweb</name>
+    <filename>namespaceiweb.html</filename>
+    <class kind="class">iweb::CCgiManager</class>
+  </compound>
+  <compound kind="class">
+    <name>iweb::CCgiManager</name>
+    <filename>classiweb_1_1_c_cgi_manager.html</filename>
+    <member kind="typedef">
+      <type>QMap&lt; QString, QString &gt;</type>
+      <name>KeyValueMap</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a1aec82a1c3dc59a80287bf8dfe249434</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CCgiManager</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a5d7f5a6bbf3ad466c5b9fcc5cd65b182</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>AddResponseHeader</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a70ef00b21de2d965d64733498b5c9336</anchor>
+      <arglist>(const QString &amp;header, const QString &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>QString</type>
+      <name>EncodeQuery</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a6b26d1fa534b22e512186af9dfe23264</anchor>
+      <arglist>(const KeyValueMap &amp;queryMap, const QString &amp;pairGlue=&quot;&amp;&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type>QString</type>
+      <name>EncodeQuery</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a0a357e9bbda4adcdd85dda178d28e11c</anchor>
+      <arglist>(const QVariantMap &amp;queryMap, const QString &amp;pairGlue=&quot;&amp;&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>WriteResponse</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a305a4e5ff49402b33394504c6273bea3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QString</type>
+      <name>GetResponseContent</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a5fe4780828703894cc468c302a626745</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>QString</type>
+      <name>GetCookie</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a4318c86060fc6548c359452487965050</anchor>
+      <arglist>(const QString &amp;cookieName) const </arglist>
+    </member>
+    <member kind="function">
+      <type>const KeyValueMap &amp;</type>
+      <name>GetCookies</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>ac72903f48c27263494d92f6600b629ef</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>QString</type>
+      <name>GetParameter</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a914f5ef3782a744b18fe116dead5926e</anchor>
+      <arglist>(const QString &amp;parameterName) const </arglist>
+    </member>
+    <member kind="function">
+      <type>const KeyValueMap &amp;</type>
+      <name>GetPostData</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a06c33414f0a90bf3aef1dc1a0a0ec97c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const KeyValueMap &amp;</type>
+      <name>GetQueryData</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a6c72b3d4bfafecf11e17241bd1aa56b0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>QString</type>
+      <name>GetRequestHeader</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>ac79094cd230698e59fb0d1a41542dae5</anchor>
+      <arglist>(const QString &amp;requestHeaderType) const </arglist>
+    </member>
+    <member kind="function">
+      <type>const KeyValueMap &amp;</type>
+      <name>GetRequestHeaders</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a863b85025c8642b2e32ddabcd2fcb977</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetResponseContent</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a3e5b358ed3e70021fe4b02db05237056</anchor>
+      <arglist>(const QString &amp;responseContent)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetResponseContentType</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>aa87df6d0e977f590fa4d0f1d69062916</anchor>
+      <arglist>(const QString &amp;contentType)</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>ContentImageGIF</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a79593e580a84ec1da685ab3ef4cce716</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>ContentImageJPEG</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>aa8cec4a1269668df3ac4ef7f8b895ec6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>ContentImageJPG</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a869ce6ff809f07c47d5eaa3a9fd57dee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>ContentImagePNG</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a69564a97edaad5f41916d107c630b430</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>ContentImageSVG</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a1c7fa609614aea99fb937994ccf3f1ae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>ContentImageTIFF</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a06efa55619aa284268d67ea12c600fa3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>ContentFont</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>aeb82905967f5e3fc28fe1667fee450f1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>ContentFontEOT</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a9b9d6ee949a18004b182123a770e22aa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>ContentFontOTF</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a493ff763525c8c0e13829a67f23728ea</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>ContentFontTTF</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a935c212ff68fd7be0977e80d288c9ad3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>ContentFontWOFF</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a772a0617a720303a205afc36ee2e6e41</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>ContentScriptECMAS</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>ac1553ad0b3119d7d43ff1ac50b84f1c3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>ContentScriptVB</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>ab768980814f63c7609b3707b4562b5be</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>ContentTypeCSS</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a968d4b7f95d2715b8d1874f46e549c91</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>ContentTypeHTML</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a448898a46ff240a8be9af2876158aac3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>ContentTypeJS</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a9f9738561848babac44797f9e60bce0f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>ContentTypeJSON</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a2966fd2a7edd735e733c8f60fcaab0e3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>ContentTypeText</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>ae68884d9405b8a8980664de0ec01164a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>ContentTypeXML</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a13767c2831321c1a661152f10dc7199e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderComSpec</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a4b1f967ba0484ed6fbd9c30646c39d3e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderDocumentRoot</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>ada148bb93926ecb6cc57c40b6bc7795e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderGatewayInterface</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a783711152480999584ea80c72d2ac7a8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderHttpAccept</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a820200e8dddbebabdc806c510fa9b721</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderHttpAcceptEncoding</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a4bc91b4f820bc685de4ebddb596481db</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderHttpAcceptLanguage</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>af5645f2890354da7043eb620041b78eb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderHttpConnection</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a7e52e748d9f5211364231862ee2dfbd3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderHttpCookie</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a895db02b52c73c6677259559b2a1da29</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderHttpHost</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a45a488916cfcf7b08eb4c5710ab3e6d5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderHttpUserAgent</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>ad7788494610e1c1c411f522217348dc2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderPath</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a41af7bdaf7dad5e89b05976205aed3bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderQueryString</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>af249abe5d1ae2ba808278dd9dbecfe97</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderRemoteAddress</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a9e87914abf53441165559dfb97239206</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderRemotePort</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>ab6d94c7cecf147209cc2beb91efba7eb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderRequestMethod</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>af8d192fb440d81332ac0a73987dcb130</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderRequestUri</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>ab53a8f460025670580f1e50ed754f158</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderScriptFilename</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a6a9179e91a9a9663df7a3299ae2f48e9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderScriptName</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>abd8c92438f32b5ff46434bea1f43a48b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderServerAddress</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a86e9cf105d0c3bd26c81794d34ae6dca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderServerAdministrator</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a23f8e5058d66ed0444c8cdd964d6c4d9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderServerName</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a8188159644a6f1f289910008e04ad6d6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderServerPort</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a361e917d5e22ffd8f1ff21494f3cbb6e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderServerProtocol</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a5c44a5f89f5956cdfff45701e9c242dd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderServerSignature</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>af7ff62bcb761088c989afd946c2759da</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>HeaderServerSoftware</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>ae240a918779765335d32f8b3a812b289</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>MethodDelete</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>afa8148c317983b42c9f9f99f4048362a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>MethodGet</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a337b02290cdeafff814e195d0c43e0bd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>MethodHead</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>ae2f79bbd1730d7dd1e072302b2bd19b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>MethodPost</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a78aefd9d4997381327fee62ec88c150e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QString</type>
+      <name>MethodPut</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a47faabd5a16aff51c9a0cad10522db9e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>ProcessCookies</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>acf2c26f56e4754b09da28e6eca1853e5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>ProcessGet</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a02cd30a8b04a3dc25474cfebec12f372</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>ProcessHeaders</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>afdef0f36a792f84397a90133abfd5a81</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>ProcessPost</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>af4589853e814cd4d9c03f2765b636f93</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SendResponseContent</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>af6696095a5e4161f479e1995644ef0b7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SendHeaders</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a26ce5a04279d3bb548333ee1683e280e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>KeyValueMap</type>
+      <name>DecodeQuery</name>
+      <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
+      <anchor>a61fe1dc0f635c0bae5ed07262bb39cb5</anchor>
+      <arglist>(const QString &amp;query, const QString &amp;pairSeparator=&quot;&amp;&quot;)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
