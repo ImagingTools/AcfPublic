@@ -40,7 +40,7 @@
 <div class="title">iprm::CMultiParamsManagerComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iprm::CMultiParamsManagerComp" --><!-- doxytag: inherits="icomp::CComponentBase,iprm::IParamsManager,iprm::IOptionsManager,imod::CMultiModelBridgeBase" -->
+<!-- doxytag: class="iprm::CMultiParamsManagerComp" --><!-- doxytag: inherits="iprm::CParamsManagerCompBase" -->
 <p>Implementation of parameter manager.  
  <a href="classiprm_1_1_c_multi_params_manager_comp.html#details">More...</a></p>
 
@@ -51,23 +51,24 @@ Inheritance diagram for iprm::CMultiParamsManagerComp:</div>
  <div class="center">
   <img src="classiprm_1_1_c_multi_params_manager_comp.png" usemap="#iprm::CMultiParamsManagerComp_map" alt=""/>
   <map id="iprm::CMultiParamsManagerComp_map" name="iprm::CMultiParamsManagerComp_map">
-<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,224,203,248"/>
-<area href="classiprm_1_1_i_params_manager.html" title="Manager of parameters set." alt="iprm::IParamsManager" shape="rect" coords="213,224,416,248"/>
-<area href="classiprm_1_1_i_options_manager.html" title="Common interface for the management of the dynamic selection constraints." alt="iprm::IOptionsManager" shape="rect" coords="426,224,629,248"/>
-<area href="classimod_1_1_c_multi_model_bridge_base.html" title="Allow to connect as observer to multiple models and call BeginChanges and EndChanges on some its chan..." alt="imod::CMultiModelBridgeBase" shape="rect" coords="745,224,948,248"/>
-<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,168,203,192"/>
-<area href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options." alt="iprm::ISelectionParam" shape="rect" coords="213,168,416,192"/>
-<area href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities." alt="iprm::IOptionsList" shape="rect" coords="426,168,629,192"/>
-<area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="639,168,842,192"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="852,168,1055,192"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,112,203,136"/>
-<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="213,112,416,136"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="426,112,629,136"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="639,112,842,136"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="852,112,1055,136"/>
-<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="213,56,416,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="426,56,629,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="213,0,416,24"/>
+<area href="classiprm_1_1_c_params_manager_comp_base.html" title="Implementation of parameter manager." alt="iprm::CParamsManagerCompBase" shape="rect" coords="321,280,525,304"/>
+<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,224,204,248"/>
+<area href="classiprm_1_1_i_params_manager.html" title="Manager of parameters set." alt="iprm::IParamsManager" shape="rect" coords="214,224,418,248"/>
+<area href="classiprm_1_1_i_options_manager.html" title="Common interface for the management of the dynamic selection constraints." alt="iprm::IOptionsManager" shape="rect" coords="428,224,632,248"/>
+<area href="classimod_1_1_c_multi_model_bridge_base.html" title="Allow to connect as observer to multiple models and call BeginChanges and EndChanges on some its chan..." alt="imod::CMultiModelBridgeBase" shape="rect" coords="749,224,953,248"/>
+<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,168,204,192"/>
+<area href="classiprm_1_1_i_selection_param.html" title="Interface allowing to select single option from list of options." alt="iprm::ISelectionParam" shape="rect" coords="214,168,418,192"/>
+<area href="classiprm_1_1_i_options_list.html" title="Constraints of selection from set of possibilities." alt="iprm::IOptionsList" shape="rect" coords="428,168,632,192"/>
+<area href="classimod_1_1_i_observer.html" title="Common interface for all classes implementing the Observer functionality in the Model/Observer design..." alt="imod::IObserver" shape="rect" coords="642,168,846,192"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="856,168,1060,192"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,112,204,136"/>
+<area href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive." alt="iser::ISerializable" shape="rect" coords="214,112,418,136"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="428,112,632,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="642,112,846,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="856,112,1060,136"/>
+<area href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed." alt="istd::IChangeable" shape="rect" coords="214,56,418,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="428,56,632,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="214,0,418,24"/>
 </map>
  </div></div>
 
@@ -79,14 +80,9 @@ Classes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html">TypeInfoList</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a8a18f0d390704106a439e7c102507c3c">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classiprm_1_1_c_params_manager_comp_base.html">CParamsManagerCompBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a136f95d8dae221adea5198e858af0e81">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#af41c57ab5db1f39e25d657cb6602287d">CMultiParamsManagerComp</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#aae371ff5b70aa68a99b95bf72fb1918a">GetIndexOperationFlags</a> (int index=-1) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get operation control flags of some paramter set or whole manager.  <a href="#aae371ff5b70aa68a99b95bf72fb1918a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a82efc76bc70b8b04eae7074421189be3">GetParamsSetsCount</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of managed set.  <a href="#a82efc76bc70b8b04eae7074421189be3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiprm_1_1_i_options_list.html">IOptionsList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#aa0f06fc4da29b3735dfb66e4aa70f55a">GetParamsTypeConstraints</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get selection contraints describing each supported type.  <a href="#aa0f06fc4da29b3735dfb66e4aa70f55a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a1a852d47c2e74a29f96f2d0d2a5fe33f">InsertParamsSet</a> (int typeIndex=-1, int index=-1)</td></tr>
@@ -101,14 +97,6 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name of specified parameter set.  <a href="#a4bc57103fed2eaf01cf163df4baab67e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a4e18ae62bbccc48fe49d5b3d6b1fd007">SetParamsSetName</a> (int index, const QString &amp;name)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set name of specified parameter set.  <a href="#a4e18ae62bbccc48fe49d5b3d6b1fd007"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classiprm_1_1_i_options_list.html">IOptionsList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a9c1fe1a044c8d5f1a327d4b6a87abd33">GetSelectionConstraints</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraints of this parameter.  <a href="#a9c1fe1a044c8d5f1a327d4b6a87abd33"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a891580615820544eca2d8b0fa7dc02e7">GetSelectedOptionIndex</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get selected index.  <a href="#a891580615820544eca2d8b0fa7dc02e7"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a95ff343301d7fdb64d6a0107a309b10e">SetSelectedOptionIndex</a> (int index)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set index of selected option.  <a href="#a95ff343301d7fdb64d6a0107a309b10e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiprm_1_1_i_selection_param.html">ISelectionParam</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a542a100c3001ad0d297fdfd1b6373056">GetSubselection</a> (int index) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get subselection for specified option.  <a href="#a542a100c3001ad0d297fdfd1b6373056"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a123d9a9901bbeeec336027d6ec0d5cbe">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a123d9a9901bbeeec336027d6ec0d5cbe"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a1fdfc2789d858d55097ab6fa2cc0c924">GetOptionOperationFlags</a> (int index=-1) const </td></tr>
@@ -141,43 +129,32 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#afe0de449c8aeba00dcce80c7ec6b2f78">EnsureParamExist</a> (int index, const QByteArray &amp;typeId, const QString &amp;name, bool isEnabled)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure some parameter exist, has correct type and attributes.  <a href="#afe0de449c8aeba00dcce80c7ec6b2f78"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a2d7398c9a740ad4a713718e843ae308e">IsParameterCreationSupported</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code> if creation of parameter sets is supported by the implementation.  <a href="#a2d7398c9a740ad4a713718e843ae308e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a4aeb15b67fa4f90944150b3f1fe07728">GetCreatedParamsSetsCount</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of parameter sets created at the run time.  <a href="#a4aeb15b67fa4f90944150b3f1fe07728"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a23952cc12c590db6db7579fb511eebac">OnComponentCreated</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#af61615da54317ad382cf08c5da5aa11f">OnComponentDestroyed</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Implementation of parameter manager. </p>
 
-<p>Definition at line <a class="el" href="_c_multi_params_manager_comp_8h_source.html#l00025">25</a> of file <a class="el" href="_c_multi_params_manager_comp_8h_source.html">CMultiParamsManagerComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_params_manager_comp_8h_source.html#l00019">19</a> of file <a class="el" href="_c_multi_params_manager_comp_8h_source.html">CMultiParamsManagerComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a8a18f0d390704106a439e7c102507c3c"></a><!-- doxytag: member="iprm::CMultiParamsManagerComp::BaseClass" ref="a8a18f0d390704106a439e7c102507c3c" args="" -->
+<a class="anchor" id="a136f95d8dae221adea5198e858af0e81"></a><!-- doxytag: member="iprm::CMultiParamsManagerComp::BaseClass" ref="a136f95d8dae221adea5198e858af0e81" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a> <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a8a18f0d390704106a439e7c102507c3c">iprm::CMultiParamsManagerComp::BaseClass</a></td>
+          <td class="memname">typedef <a class="el" href="classiprm_1_1_c_params_manager_comp_base.html">CParamsManagerCompBase</a> <a class="el" href="classiprm_1_1_c_multi_params_manager_comp.html#a136f95d8dae221adea5198e858af0e81">iprm::CMultiParamsManagerComp::BaseClass</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_multi_params_manager_comp_8h_source.html#l00032">32</a> of file <a class="el" href="_c_multi_params_manager_comp_8h_source.html">CMultiParamsManagerComp.h</a>.</p>
+<p>Reimplemented from <a class="el" href="classiprm_1_1_c_params_manager_comp_base.html#a4e3b62ad472633fb0fe6e6ca3770e18f">iprm::CParamsManagerCompBase</a>.</p>
 
-</div>
-</div>
-<hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="af41c57ab5db1f39e25d657cb6602287d"></a><!-- doxytag: member="iprm::CMultiParamsManagerComp::CMultiParamsManagerComp" ref="af41c57ab5db1f39e25d657cb6602287d" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">iprm::CMultiParamsManagerComp::CMultiParamsManagerComp </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
+<p>Definition at line <a class="el" href="_c_multi_params_manager_comp_8h_source.html#l00022">22</a> of file <a class="el" href="_c_multi_params_manager_comp_8h_source.html">CMultiParamsManagerComp.h</a>.</p>
 
 </div>
 </div>
@@ -233,31 +210,23 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aae371ff5b70aa68a99b95bf72fb1918a"></a><!-- doxytag: member="iprm::CMultiParamsManagerComp::GetIndexOperationFlags" ref="aae371ff5b70aa68a99b95bf72fb1918a" args="(int index=&#45;1) const " -->
+<a class="anchor" id="a4aeb15b67fa4f90944150b3f1fe07728"></a><!-- doxytag: member="iprm::CMultiParamsManagerComp::GetCreatedParamsSetsCount" ref="a4aeb15b67fa4f90944150b3f1fe07728" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int iprm::CMultiParamsManagerComp::GetIndexOperationFlags </td>
+          <td class="memname">virtual int iprm::CMultiParamsManagerComp::GetCreatedParamsSetsCount </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em> = <code>-1</code></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Get operation control flags of some paramter set or whole manager. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd>ManagerFlags. </dd></dl>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>index addressing position in parameter set list. For negative value general flags are returned. For example if you want to check if there is any renameable element you should call it with negative index value. To check if first element can be renamed call it with index value 0. To check if you can insert at the last position please use index value equal to current number of parameter set. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Get the number of parameter sets created at the run time. </p>
 
-<p>Implements <a class="el" href="classiprm_1_1_i_params_manager.html#a0508f9eee4a8527a026a69b39e6e0216">iprm::IParamsManager</a>.</p>
+<p>Implements <a class="el" href="classiprm_1_1_c_params_manager_comp_base.html#a9fe80952f5c936d36e16b833fb88e7b6">iprm::CParamsManagerCompBase</a>.</p>
 
 </div>
 </div>
@@ -436,26 +405,6 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a82efc76bc70b8b04eae7074421189be3"></a><!-- doxytag: member="iprm::CMultiParamsManagerComp::GetParamsSetsCount" ref="a82efc76bc70b8b04eae7074421189be3" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int iprm::CMultiParamsManagerComp::GetParamsSetsCount </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get number of managed set. </p>
-
-<p>Implements <a class="el" href="classiprm_1_1_i_params_manager.html#a5d210a6109d010b5bc4057db9b089f9c">iprm::IParamsManager</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="aa0f06fc4da29b3735dfb66e4aa70f55a"></a><!-- doxytag: member="iprm::CMultiParamsManagerComp::GetParamsTypeConstraints" ref="aa0f06fc4da29b3735dfb66e4aa70f55a" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -474,70 +423,6 @@ Protected Member Functions</h2></td></tr>
 <dl class="return"><dt><b>Returns:</b></dt><dd>NULL, if only one annonymed type is supported. </dd></dl>
 
 <p>Implements <a class="el" href="classiprm_1_1_i_params_manager.html#a317b3fc4aabae0150a933602c3ba5af8">iprm::IParamsManager</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a891580615820544eca2d8b0fa7dc02e7"></a><!-- doxytag: member="iprm::CMultiParamsManagerComp::GetSelectedOptionIndex" ref="a891580615820544eca2d8b0fa7dc02e7" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int iprm::CMultiParamsManagerComp::GetSelectedOptionIndex </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get selected index. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>index of selected option or negative value if no option is selected. </dd></dl>
-
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#a0a417884429ac3874a717cfbb5a738f6">iprm::ISelectionParam</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a9c1fe1a044c8d5f1a327d4b6a87abd33"></a><!-- doxytag: member="iprm::CMultiParamsManagerComp::GetSelectionConstraints" ref="a9c1fe1a044c8d5f1a327d4b6a87abd33" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const <a class="el" href="classiprm_1_1_i_options_list.html">IOptionsList</a>* iprm::CMultiParamsManagerComp::GetSelectionConstraints </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get constraints of this parameter. </p>
-<p>Constraints describes some additional information about allowed parameter ranges and related informations. </p>
-
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#a98e64292e21cf3531e392b14ab0468f3">iprm::ISelectionParam</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a542a100c3001ad0d297fdfd1b6373056"></a><!-- doxytag: member="iprm::CMultiParamsManagerComp::GetSubselection" ref="a542a100c3001ad0d297fdfd1b6373056" args="(int index) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="classiprm_1_1_i_selection_param.html">ISelectionParam</a>* iprm::CMultiParamsManagerComp::GetSubselection </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get subselection for specified option. </p>
-<p>Please note, that returned options tree belongs to selection data model. </p>
-
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#a65122ebc0e6fe3d5c654e63b6be39fdd">iprm::ISelectionParam</a>.</p>
 
 </div>
 </div>
@@ -650,6 +535,26 @@ Protected Member Functions</h2></td></tr>
 <p>Return <code>true</code> if the option is enabled and can be selected. </p>
 
 <p>Implements <a class="el" href="classiprm_1_1_i_options_list.html#a12fcebc0af408e94fc1bfbe2f15e7fa7">iprm::IOptionsList</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2d7398c9a740ad4a713718e843ae308e"></a><!-- doxytag: member="iprm::CMultiParamsManagerComp::IsParameterCreationSupported" ref="a2d7398c9a740ad4a713718e843ae308e" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iprm::CMultiParamsManagerComp::IsParameterCreationSupported </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return <code>true</code> if creation of parameter sets is supported by the implementation. </p>
+
+<p>Implements <a class="el" href="classiprm_1_1_c_params_manager_comp_base.html#a8b158947e6f71d6e39cb067b2030b78f">iprm::CParamsManagerCompBase</a>.</p>
 
 </div>
 </div>
@@ -878,28 +783,6 @@ Protected Member Functions</h2></td></tr>
 <p>Set name of specified parameter set. </p>
 
 <p>Implements <a class="el" href="classiprm_1_1_i_params_manager.html#a02be7cef148d7993709296e4ab4740a7">iprm::IParamsManager</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a95ff343301d7fdb64d6a0107a309b10e"></a><!-- doxytag: member="iprm::CMultiParamsManagerComp::SetSelectedOptionIndex" ref="a95ff343301d7fdb64d6a0107a309b10e" args="(int index)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool iprm::CMultiParamsManagerComp::SetSelectedOptionIndex </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Set index of selected option. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if selection change was possible. </dd></dl>
-
-<p>Implements <a class="el" href="classiprm_1_1_i_selection_param.html#a312f0ee035e39cd63d7d1c55b1e3c68a">iprm::ISelectionParam</a>.</p>
 
 </div>
 </div>

@@ -3302,13 +3302,7 @@
     <name>CMultiParamsManagerComp.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_multi_params_manager_comp_8h</filename>
-    <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="yes" imported="no">istd/TSmartPtr.h</includes>
-    <includes id="_c_multi_model_bridge_base_8h" name="CMultiModelBridgeBase.h" local="yes" imported="no">imod/CMultiModelBridgeBase.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
-    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
-    <includes id="_i_options_manager_8h" name="IOptionsManager.h" local="yes" imported="no">iprm/IOptionsManager.h</includes>
-    <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
+    <includes id="_c_params_manager_comp_base_8h" name="CParamsManagerCompBase.h" local="yes" imported="no">iprm/CParamsManagerCompBase.h</includes>
     <class kind="class">iprm::CMultiParamsManagerComp</class>
     <class kind="struct">iprm::CMultiParamsManagerComp::TypeInfo</class>
     <class kind="struct">iprm::CMultiParamsManagerComp::TypeInfoList</class>
@@ -3355,14 +3349,23 @@
     <filename>_c_params_manager_comp_8h</filename>
     <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
     <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="yes" imported="no">imod/TModelWrap.h</includes>
+    <includes id="_i_name_param_8h" name="INameParam.h" local="yes" imported="no">iprm/INameParam.h</includes>
+    <includes id="_c_params_manager_comp_base_8h" name="CParamsManagerCompBase.h" local="yes" imported="no">iprm/CParamsManagerCompBase.h</includes>
+    <class kind="class">iprm::CParamsManagerComp</class>
+    <namespace>iprm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CParamsManagerCompBase.h</name>
+    <path>C:/Temp/Acf/Include/iprm/</path>
+    <filename>_c_params_manager_comp_base_8h</filename>
+    <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="yes" imported="no">istd/TSmartPtr.h</includes>
     <includes id="_c_multi_model_bridge_base_8h" name="CMultiModelBridgeBase.h" local="yes" imported="no">imod/CMultiModelBridgeBase.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_i_options_manager_8h" name="IOptionsManager.h" local="yes" imported="no">iprm/IOptionsManager.h</includes>
-    <includes id="_i_name_param_8h" name="INameParam.h" local="yes" imported="no">iprm/INameParam.h</includes>
     <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
-    <class kind="class">iprm::CParamsManagerComp</class>
+    <class kind="class">iprm::CParamsManagerCompBase</class>
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
@@ -31275,6 +31278,7 @@
     <class kind="class">iprm::COptionsManager</class>
     <class kind="class">iprm::COptionsManagerComp</class>
     <class kind="class">iprm::CParamsManagerComp</class>
+    <class kind="class">iprm::CParamsManagerCompBase</class>
     <class kind="class">iprm::CParamsSet</class>
     <class kind="class">iprm::CSelectableParamsSetComp</class>
     <class kind="class">iprm::CSelectionConstraintsComp</class>
@@ -31507,39 +31511,15 @@
   <compound kind="class">
     <name>iprm::CMultiParamsManagerComp</name>
     <filename>classiprm_1_1_c_multi_params_manager_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">iprm::IParamsManager</base>
-    <base virtualness="virtual">iprm::IOptionsManager</base>
-    <base protection="protected">imod::CMultiModelBridgeBase</base>
+    <base>iprm::CParamsManagerCompBase</base>
     <class kind="struct">iprm::CMultiParamsManagerComp::TypeInfo</class>
     <class kind="struct">iprm::CMultiParamsManagerComp::TypeInfoList</class>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>CParamsManagerCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>a8a18f0d390704106a439e7c102507c3c</anchor>
+      <anchor>a136f95d8dae221adea5198e858af0e81</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CMultiParamsManagerComp</name>
-      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>af41c57ab5db1f39e25d657cb6602287d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetIndexOperationFlags</name>
-      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>aae371ff5b70aa68a99b95bf72fb1918a</anchor>
-      <arglist>(int index=-1) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetParamsSetsCount</name>
-      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>a82efc76bc70b8b04eae7074421189be3</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IOptionsList *</type>
@@ -31589,34 +31569,6 @@
       <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
       <anchor>a4e18ae62bbccc48fe49d5b3d6b1fd007</anchor>
       <arglist>(int index, const QString &amp;name)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const IOptionsList *</type>
-      <name>GetSelectionConstraints</name>
-      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>a9c1fe1a044c8d5f1a327d4b6a87abd33</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSelectedOptionIndex</name>
-      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>a891580615820544eca2d8b0fa7dc02e7</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetSelectedOptionIndex</name>
-      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>a95ff343301d7fdb64d6a0107a309b10e</anchor>
-      <arglist>(int index)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ISelectionParam *</type>
-      <name>GetSubselection</name>
-      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>a542a100c3001ad0d297fdfd1b6373056</anchor>
-      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -31722,6 +31674,20 @@
       <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
       <anchor>afe0de449c8aeba00dcce80c7ec6b2f78</anchor>
       <arglist>(int index, const QByteArray &amp;typeId, const QString &amp;name, bool isEnabled)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsParameterCreationSupported</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a2d7398c9a740ad4a713718e843ae308e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetCreatedParamsSetsCount</name>
+      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
+      <anchor>a4aeb15b67fa4f90944150b3f1fe07728</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -32081,23 +32047,13 @@
   <compound kind="class">
     <name>iprm::CParamsManagerComp</name>
     <filename>classiprm_1_1_c_params_manager_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">iprm::IParamsManager</base>
-    <base virtualness="virtual">iprm::IOptionsManager</base>
-    <base protection="protected">imod::CMultiModelBridgeBase</base>
+    <base>iprm::CParamsManagerCompBase</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>CParamsManagerCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a79585174aa1a7b7fc307c8096f4602e5</anchor>
+      <anchor>afe9e9cd9bb17ba451eea0711ba4d60bb</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CParamsManagerComp</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a013168e66fc171c37d0eff1db2681112</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -32105,20 +32061,6 @@
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
       <anchor>acf101f14468c4eee3e2d7e4cf25eba16</anchor>
       <arglist>(int count)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetIndexOperationFlags</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a6c6a8deb0948740fe4558d220a3c893c</anchor>
-      <arglist>(int index=-1) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetParamsSetsCount</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>abc52794b2ed4df7cb6a872bd208ca638</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IOptionsList *</type>
@@ -32168,34 +32110,6 @@
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
       <anchor>a25e7d50536b4d173e6263f3c96f16cda</anchor>
       <arglist>(int index, const QString &amp;name)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const IOptionsList *</type>
-      <name>GetSelectionConstraints</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a5a466b071923f7873d93dfab35eec419</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSelectedOptionIndex</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a4fd8b1b6be7963c766940994f118c77e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetSelectedOptionIndex</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a24df36eb5ca0da6966a6f84977b61d25</anchor>
-      <arglist>(int index)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ISelectionParam *</type>
-      <name>GetSubselection</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a4e9891005ac21c1c28d2f74a75e62a52</anchor>
-      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -32303,6 +32217,20 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsParameterCreationSupported</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
+      <anchor>a8fc4397438210c9311d1dd59c740ca29</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetCreatedParamsSetsCount</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
+      <anchor>a70eee94951c4adbd94ccf0d5bc2c195c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
@@ -32315,6 +32243,91 @@
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
       <anchor>ab43da8a12e64f6f0f444a8ccfa7b97fa</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprm::CParamsManagerCompBase</name>
+    <filename>classiprm_1_1_c_params_manager_comp_base.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iprm::IParamsManager</base>
+    <base virtualness="virtual">iprm::IOptionsManager</base>
+    <base protection="protected">imod::CMultiModelBridgeBase</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>a4e3b62ad472633fb0fe6e6ca3770e18f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CParamsManagerCompBase</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>a7156acca6064393ca2fb686272214ff3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetIndexOperationFlags</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>aa18fd3847d261ba59f3b0677dabda583</anchor>
+      <arglist>(int index=-1) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetParamsSetsCount</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>a16cf1ce78017dcf10f0910380cc9c066</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const IOptionsList *</type>
+      <name>GetSelectionConstraints</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>a6a2e37985e1df2e286f86ae6ed62f3f9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSelectedOptionIndex</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>a59874114a2c8668bced34dcb8cbfae30</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetSelectedOptionIndex</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>acdbdee6abcba79d70fafd9925dd748e5</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ISelectionParam *</type>
+      <name>GetSubselection</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>a2f221b093707f5d07e2cdf6996cb0c20</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsParameterCreationSupported</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>a8b158947e6f71d6e39cb067b2030b78f</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetCreatedParamsSetsCount</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>a9fe80952f5c936d36e16b833fb88e7b6</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_selectedIndex</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>aa997378a6328db796f15144571f4b861</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33134,6 +33147,12 @@
       <name>MF_DISABLE_ALLOWED</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
       <anchor>af0f7891ab3e905463489162a441f32e6ad0032e222a563cac392d25a034cb43e9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MF_SUPPORT_EDIT</name>
+      <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
+      <anchor>af0f7891ab3e905463489162a441f32e6a8f7baade8078e5cfa250f3188756e788</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
