@@ -211,7 +211,7 @@ int CSearchBasedFeaturesSupplierComp::ProduceObject(CFeaturesContainer& result) 
 						&searchResults);
 
 					if (searchState != iproc::IProcessor::TS_OK){
-						SendErrorMessage(0, QObject::tr("Search was not successful"));
+						SendErrorMessage(MI_SUPPLIER_RESULTS_STATUS, QObject::tr("Search was not successful"));
 						return WS_ERROR;
 					}
 
@@ -231,7 +231,7 @@ int CSearchBasedFeaturesSupplierComp::ProduceObject(CFeaturesContainer& result) 
 
 					ilog::CMessage* message = new ilog::CMessage(
 								m_defaultInformationCategory,
-								MT_SEARCH_RESULT,
+								MI_SUPPLIER_RESULTS_STATUS,
 								searchResultText,
 								multiSearchParamsManagerPtr->GetParamsSetName(searchIndex));
 
@@ -274,7 +274,7 @@ int CSearchBasedFeaturesSupplierComp::ProduceObject(CFeaturesContainer& result) 
 								&result);
 
 				if (searchState != iproc::IProcessor::TS_OK){
-					SendErrorMessage(0, QObject::tr("Search was not successful"));
+					SendErrorMessage(MI_SUPPLIER_RESULTS_STATUS, QObject::tr("Search was not successful"));
 					return WS_ERROR;
 				}
 
@@ -308,7 +308,7 @@ int CSearchBasedFeaturesSupplierComp::ProduceObject(CFeaturesContainer& result) 
 
 				ilog::CMessage* message = new ilog::CMessage(
 					m_defaultInformationCategory,
-					MT_SEARCH_RESULT,
+					MI_SUPPLIER_RESULTS_STATUS,
 					searchResultText,
 					"SearchResult");
 

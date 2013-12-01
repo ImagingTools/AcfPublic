@@ -8470,18 +8470,6 @@
     <base virtualness="virtual">i2d::IMultiCalibrationProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <base virtualness="virtual">istd::IInformationProvider</base>
-    <member kind="enumeration">
-      <name>MessageType</name>
-      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
-      <anchor>ad9b606b325a3b48c09c3567b654b8668</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MT_SEARCH_RESULT</name>
-      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
-      <anchor>ad9b606b325a3b48c09c3567b654b8668a95c3ddbc23d443bd359fc71b0fc2d3c9</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="typedef">
       <type>iproc::TSupplierCompWrap&lt; QPair&lt; iipr::CFeaturesContainer, QVector&lt; i2d::CAffineTransformation2d &gt; &gt; &gt;</type>
       <name>BaseClass</name>
@@ -15715,18 +15703,6 @@
     <base virtualness="virtual">imeas::INumericValueProvider</base>
     <base virtualness="virtual">i2d::IMultiCalibrationProvider</base>
     <base virtualness="virtual">istd::IInformationProvider</base>
-    <member kind="enumeration">
-      <name>MessageType</name>
-      <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
-      <anchor>a979d992616d1cee856befce711de5df8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MT_SEARCH_RESULT</name>
-      <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
-      <anchor>a979d992616d1cee856befce711de5df8a9f81e1e31fedab84947fc8d5e954770e</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="typedef">
       <type>iproc::TSupplierCompWrap&lt; CFeaturesContainer &gt;</type>
       <name>BaseClass</name>
@@ -19431,6 +19407,24 @@
     <base virtualness="virtual">iproc::ISupplier</base>
     <base protection="protected" virtualness="virtual">ilog::IMessageConsumer</base>
     <class kind="class">iproc::CSupplierCompBase::Timer</class>
+    <member kind="enumeration">
+      <name>MessageId</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a3ef5971e2a11ad9301790db639333eb6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_DURATION_TIME</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a3ef5971e2a11ad9301790db639333eb6af51e6cdeaae8a7a9dbd1b15f5cdecd43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_SUPPLIER_RESULTS_STATUS</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a3ef5971e2a11ad9301790db639333eb6ab3cb500d4e8f300e7efbb22f5c15da22</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -20237,18 +20231,6 @@
     <filename>classiproc_1_1_t_supplier_comp_wrap.html</filename>
     <templarg>Product</templarg>
     <base>iproc::CSupplierCompBase</base>
-    <member kind="enumeration">
-      <name>MessageId</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ae4928500a07bc7997704eb06d7effb9f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_DURATION_TIME</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ae4928500a07bc7997704eb06d7effb9faab1f299aea6b4bfa72738cc9cdb34670</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="typedef">
       <type>CSupplierCompBase</type>
       <name>BaseClass</name>
