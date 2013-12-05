@@ -19164,6 +19164,13 @@
       <anchor>abb45a7682f056c338256dce63724b730</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>FindValue</name>
+      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>ab39ba92567cf650e159485e03f2e67a3</anchor>
+      <arglist>(const Value &amp;value) const </arglist>
+    </member>
     <member kind="function">
       <type>QByteArray</type>
       <name>GetFactoryId</name>
@@ -19231,6 +19238,13 @@
   <compound kind="struct">
     <name>icomp::TMultiAttribute::Wrap</name>
     <filename>structicomp_1_1_t_multi_attribute_1_1_wrap.html</filename>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>structicomp_1_1_t_multi_attribute_1_1_wrap.html</anchorfile>
+      <anchor>a6cba82fa82a7d3fb00e8fe843aa4f8c1</anchor>
+      <arglist>(const Wrap &amp;object) const </arglist>
+    </member>
     <member kind="variable">
       <type>Value</type>
       <name>value</name>
@@ -19298,6 +19312,13 @@
       <anchorfile>classicomp_1_1_t_multi_attribute_member_base.html</anchorfile>
       <anchor>accd54ff6f8bd572166faeb2b58aaf216</anchor>
       <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>FindValue</name>
+      <anchorfile>classicomp_1_1_t_multi_attribute_member_base.html</anchorfile>
+      <anchor>a24f163ec84bf3e8dcd7c2d931c6f00e2</anchor>
+      <arglist>(const AttributeValueType &amp;value) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -26160,7 +26181,7 @@
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CTextLogGuiComp, ilog::IMessageContainer &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiloggui_1_1_c_text_log_gui_comp.html</anchorfile>
-      <anchor>a3e5442c94280c83e3f9534d375c7f912</anchor>
+      <anchor>aef7ef06afbb284e2b14967e73b29c5d7</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

@@ -33,60 +33,64 @@
 <a name="l00005"></a>00005 <span class="comment">// Qt includes</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QtGui/QTextTableCell&gt;</span>
 <a name="l00007"></a>00007 
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="comment">// ACF includes</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_i_message_container_8h.html">ilog/IMessageContainer.h</a>&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_c_message_8h.html">ilog/CMessage.h</a>&quot;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_t_designer_gui_observer_comp_base_8h.html">iqtgui/TDesignerGuiObserverCompBase.h</a>&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;GeneratedFiles/iloggui/ui_CTextLogGuiComp.h&quot;</span>
+<a name="l00008"></a>00008 <span class="comment">// ACF includes</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_i_message_container_8h.html">ilog/IMessageContainer.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="_c_message_8h.html">ilog/CMessage.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_t_designer_gui_observer_comp_base_8h.html">iqtgui/TDesignerGuiObserverCompBase.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;GeneratedFiles/iloggui/ui_CTextLogGuiComp.h&quot;</span>
+<a name="l00013"></a>00013 
 <a name="l00014"></a>00014 
-<a name="l00015"></a>00015 
-<a name="l00016"></a>00016 <span class="keyword">namespace </span>iloggui
-<a name="l00017"></a>00017 {
+<a name="l00015"></a>00015 <span class="keyword">namespace </span>iloggui
+<a name="l00016"></a>00016 {
+<a name="l00017"></a>00017 
 <a name="l00018"></a>00018 
-<a name="l00019"></a>00019 
-<a name="l00020"></a><a class="code" href="classiloggui_1_1_c_text_log_gui_comp.html">00020</a> <span class="keyword">class </span><a class="code" href="classiloggui_1_1_c_text_log_gui_comp.html">CTextLogGuiComp</a>:
-<a name="l00021"></a>00021        <span class="keyword">public</span> iqtgui::TDesignerGuiObserverCompBase&lt;Ui::CTextLogGuiComp, ilog::IMessageContainer&gt;
+<a name="l00019"></a><a class="code" href="classiloggui_1_1_c_text_log_gui_comp.html">00019</a> <span class="keyword">class </span><a class="code" href="classiloggui_1_1_c_text_log_gui_comp.html">CTextLogGuiComp</a>:
+<a name="l00020"></a>00020        <span class="keyword">public</span> iqtgui::TDesignerGuiObserverCompBase&lt;
+<a name="l00021"></a>00021                             Ui::CTextLogGuiComp, ilog::IMessageContainer&gt;
 <a name="l00022"></a>00022 {
 <a name="l00023"></a>00023        Q_OBJECT
 <a name="l00024"></a>00024 
 <a name="l00025"></a>00025 <span class="keyword">public</span>:
-<a name="l00026"></a><a class="code" href="classiloggui_1_1_c_text_log_gui_comp.html#a3e5442c94280c83e3f9534d375c7f912">00026</a>        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase&lt;Ui::CTextLogGuiComp, ilog::IMessageContainer&gt;</a> <a class="code" href="classiloggui_1_1_c_text_log_gui_comp.html#a3e5442c94280c83e3f9534d375c7f912">BaseClass</a>;
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028        I_BEGIN_COMPONENT(<a class="code" href="classiloggui_1_1_c_text_log_gui_comp.html">CTextLogGuiComp</a>);
-<a name="l00029"></a>00029        I_END_COMPONENT;
-<a name="l00030"></a>00030 
-<a name="l00031"></a>00031 <span class="keyword">protected</span>:
-<a name="l00032"></a>00032        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
-<a name="l00033"></a>00033        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiloggui_1_1_c_text_log_gui_comp.html#a572ca9a0eae55013b7b193431e180be8" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
-<a name="l00034"></a>00034 
-<a name="l00035"></a>00035        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiloggui_1_1_c_text_log_gui_comp.html#ae43ac0e2e9155653cd09604b2d19de70" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiloggui_1_1_c_text_log_gui_comp.html#adee7ecc861c2e63fae428974dfea35bf" title="Called just before GUI is released.">OnGuiDestroyed</a>();
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiloggui_1_1_c_text_log_gui_comp.html#a765f58a84765d24a57ea60735ff517a3" title="Called from widget event filter when GUI should be retranslated.">OnGuiRetranslate</a>();
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040 <span class="keyword">private</span> Q_SLOTS:
-<a name="l00041"></a>00041        <span class="keywordtype">void</span> DoFilter();
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043 <span class="keyword">private</span>:
-<a name="l00044"></a>00044        <span class="keywordtype">void</span> UpdateFilters();
-<a name="l00045"></a>00045        <span class="keywordtype">void</span> GenerateDocument(<span class="keywordtype">int</span> severityFilter, <span class="keyword">const</span> QString&amp; sourceFilter, <span class="keyword">const</span> QString&amp; textFilter);
-<a name="l00046"></a>00046        <span class="keywordtype">void</span> InsertImage(QTextTableCell cell, <span class="keyword">const</span> QImage&amp; image);
-<a name="l00047"></a>00047        <span class="keywordtype">void</span> InsertText(QTextTableCell cell, <span class="keyword">const</span> QString&amp; text, <span class="keyword">const</span> QTextTableCellFormat&amp; cellFormat);
-<a name="l00048"></a>00048        QIcon GetCategoryIcon(<span class="keywordtype">int</span> category) <span class="keyword">const</span>;
-<a name="l00049"></a>00049        QImage GetCategoryImage(<span class="keywordtype">int</span> category) <span class="keyword">const</span>;
-<a name="l00050"></a>00050        QString GetCategoryText(<span class="keywordtype">int</span> category) <span class="keyword">const</span>;
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052        QTextTableFormat m_tableFormat;
-<a name="l00053"></a>00053        QTextTableCellFormat m_okCellFormat;
-<a name="l00054"></a>00054 };
-<a name="l00055"></a>00055 
+<a name="l00026"></a>00026        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html" title="Base class for all Qt GUI components.">iqtgui::TDesignerGuiObserverCompBase</a>&lt;
+<a name="l00027"></a><a class="code" href="classiloggui_1_1_c_text_log_gui_comp.html#aef7ef06afbb284e2b14967e73b29c5d7">00027</a>                             Ui::CTextLogGuiComp, <a class="code" href="classilog_1_1_i_message_container.html" title="Common interface for a message container.">ilog::IMessageContainer</a>&gt; <a class="code" href="classiloggui_1_1_c_text_log_gui_comp.html#aef7ef06afbb284e2b14967e73b29c5d7">BaseClass</a>;
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029        I_BEGIN_COMPONENT(<a class="code" href="classiloggui_1_1_c_text_log_gui_comp.html">CTextLogGuiComp</a>);
+<a name="l00030"></a>00030               I_ASSIGN_MULTI_0(m_ignoreIdsListAttrPtr, <span class="stringliteral">&quot;IgnoreIdsList&quot;</span>, <span class="stringliteral">&quot;List if message IDs to be ignored&quot;</span>, <span class="keyword">false</span>);
+<a name="l00031"></a>00031        I_END_COMPONENT;
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033 <span class="keyword">protected</span>:
+<a name="l00034"></a>00034        <span class="comment">// reimplemented (iqtgui::TGuiObserverWrap)</span>
+<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiloggui_1_1_c_text_log_gui_comp.html#a572ca9a0eae55013b7b193431e180be8" title="Do update of the model GUI.">UpdateGui</a>(<span class="keywordtype">int</span> updateFlags = 0);
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiloggui_1_1_c_text_log_gui_comp.html#ae43ac0e2e9155653cd09604b2d19de70" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiloggui_1_1_c_text_log_gui_comp.html#adee7ecc861c2e63fae428974dfea35bf" title="Called just before GUI is released.">OnGuiDestroyed</a>();
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiloggui_1_1_c_text_log_gui_comp.html#a765f58a84765d24a57ea60735ff517a3" title="Called from widget event filter when GUI should be retranslated.">OnGuiRetranslate</a>();
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042 <span class="keyword">private</span> Q_SLOTS:
+<a name="l00043"></a>00043        <span class="keywordtype">void</span> DoFilter();
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 <span class="keyword">private</span>:
+<a name="l00046"></a>00046        <span class="keywordtype">void</span> UpdateFilters();
+<a name="l00047"></a>00047        <span class="keywordtype">void</span> GenerateDocument(<span class="keywordtype">int</span> severityFilter, <span class="keyword">const</span> QString&amp; sourceFilter, <span class="keyword">const</span> QString&amp; textFilter);
+<a name="l00048"></a>00048        <span class="keywordtype">void</span> InsertImage(QTextTableCell cell, <span class="keyword">const</span> QImage&amp; image);
+<a name="l00049"></a>00049        <span class="keywordtype">void</span> InsertText(QTextTableCell cell, <span class="keyword">const</span> QString&amp; text, <span class="keyword">const</span> QTextTableCellFormat&amp; cellFormat);
+<a name="l00050"></a>00050        QIcon GetCategoryIcon(<span class="keywordtype">int</span> category) <span class="keyword">const</span>;
+<a name="l00051"></a>00051        QImage GetCategoryImage(<span class="keywordtype">int</span> category) <span class="keyword">const</span>;
+<a name="l00052"></a>00052        QString GetCategoryText(<span class="keywordtype">int</span> category) <span class="keyword">const</span>;
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054        QTextTableFormat m_tableFormat;
+<a name="l00055"></a>00055        QTextTableCellFormat m_okCellFormat;
 <a name="l00056"></a>00056 
-<a name="l00057"></a>00057 } <span class="comment">// namespace iloggui</span>
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060 <span class="preprocessor">#endif // !iloggui_CTextLogGuiComp_included</span>
-<a name="l00061"></a>00061 <span class="preprocessor"></span>
+<a name="l00060"></a>00060        I_MULTIATTR(<span class="keywordtype">int</span>, m_ignoreIdsListAttrPtr);
+<a name="l00061"></a>00061 };
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 } <span class="comment">// namespace iloggui</span>
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 <span class="preprocessor">#endif // !iloggui_CTextLogGuiComp_included</span>
+<a name="l00068"></a>00068 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

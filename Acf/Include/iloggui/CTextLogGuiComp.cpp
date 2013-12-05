@@ -126,7 +126,10 @@ void CTextLogGuiComp::UpdateFilters()
 }
 
 
-void CTextLogGuiComp::GenerateDocument(int severityFilter, const QString& sourceFilter, const QString& textFilter)
+void CTextLogGuiComp::GenerateDocument(
+			int severityFilter,
+			const QString& sourceFilter,
+			const QString& textFilter)
 {
 #ifdef PERFORMANCE_TEST
 	QElapsedTimer timer;
@@ -163,6 +166,12 @@ void CTextLogGuiComp::GenerateDocument(int severityFilter, const QString& source
 
 		if (!sourceFilter.isEmpty() && sourceFilter != messagePtr->GetInformationSource()){
 			continue;
+		}
+
+		if (m_ignoreIdsListAttrPtr.IsValid()){
+			if (m_ignoreIdsListAttrPtr.FindValue(messagePtr->GetInformationId()) >= 0){
+				continue;
+			}
 		}
 
 		QString text(messagePtr->GetInformationDescription());
