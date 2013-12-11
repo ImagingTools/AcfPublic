@@ -33,7 +33,6 @@
 #include "imod/IModel.h"
 #include "imod/CSingleModelObserverBase.h"
 #include "icomp/CComponentBase.h"
-#include "ibase/IQtItemModelProvider.h"
 #include "ifile/IFileListProvider.h"
 #include "ifile/IFileNameParam.h"
 #include "ifile/IFileTypeInfo.h"
@@ -50,7 +49,6 @@ class CFileListProviderComp:
 			public QObject,
 			public icomp::CComponentBase,
 			virtual public ifile::IFileListProvider,
-			virtual public ibase::IQtItemModelProvider,
 			protected imod::CSingleModelObserverBase
 {
 	Q_OBJECT
@@ -60,7 +58,6 @@ public:
 	I_BEGIN_COMPONENT(CFileListProviderComp);
 		I_REGISTER_INTERFACE(istd::IChangeable);
 		I_REGISTER_INTERFACE(ifile::IFileListProvider);
-		I_REGISTER_INTERFACE(ibase::IQtItemModelProvider);
 		I_ASSIGN(m_dirParamCompPtr, "DirParam", "Parameter storing root directory", true, "DirParam");
 		I_ASSIGN(m_dirParamModelCompPtr, "DirParam", "Parameter storing root directory", false, "DirParam");
 		I_ASSIGN(m_fileTypeInfoCompPtr, "FileTypeInfo", "File type info used to create file filters", false, "FileTypeInfo");
@@ -71,9 +68,6 @@ public:
 
 	// reimplemented (ifile::IFileListProvider)
 	virtual const QFileInfoList& GetFileList() const;
-
-	// reimplemented (ibase::IQtItemModelProvider)
-	virtual const QAbstractItemModel* GetItemModel() const;
 
 protected:
 	// reimplemented (imod::CSingleModelObserverBase)
@@ -128,8 +122,6 @@ private:
 	QFileInfoList m_fileList;
 
 	QFileSystemWatcher m_directoryWatcher;
-
-	QStandardItemModel m_itemModel;
 };
 
 

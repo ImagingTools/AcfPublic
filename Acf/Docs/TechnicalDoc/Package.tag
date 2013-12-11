@@ -2084,7 +2084,6 @@
     <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
     <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_qt_item_model_provider_8h" name="IQtItemModelProvider.h" local="yes" imported="no">ibase/IQtItemModelProvider.h</includes>
     <includes id="_i_file_list_provider_8h" name="IFileListProvider.h" local="yes" imported="no">ifile/IFileListProvider.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
@@ -22092,7 +22091,6 @@
     <filename>classifile_1_1_c_file_list_provider_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">ifile::IFileListProvider</base>
-    <base virtualness="virtual">ibase::IQtItemModelProvider</base>
     <base protection="protected">imod::CSingleModelObserverBase</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -22106,13 +22104,6 @@
       <name>GetFileList</name>
       <anchorfile>classifile_1_1_c_file_list_provider_comp.html</anchorfile>
       <anchor>a175132241900a395c5a71b0f3fc1614e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const QAbstractItemModel *</type>
-      <name>GetItemModel</name>
-      <anchorfile>classifile_1_1_c_file_list_provider_comp.html</anchorfile>
-      <anchor>a13b0dd885ce7b2b439a456d29e43168d</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -32510,6 +32501,13 @@
       <anchor>ae14fd809d7d54d725a5fc82bfe9789ee</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>imod::CMultiModelBridgeBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
+      <anchor>ad1fdc0513ca60a7352c5a33c1d9f832b</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CSelectableParamsSetComp</name>
@@ -32572,6 +32570,13 @@
       <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
       <anchor>aa537c7c79285e3f418d7f6bdf2ae04f4</anchor>
       <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
+      <anchor>a6bc6dd91d66dd4926ab59163c3e3d164</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>

@@ -78,6 +78,7 @@ Inheritance diagram for iprm::CSelectableParamsSetComp:</div>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#ae14fd809d7d54d725a5fc82bfe9789ee">BaseClass</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classimod_1_1_c_multi_model_bridge_base.html">imod::CMultiModelBridgeBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#ad1fdc0513ca60a7352c5a33c1d9f832b">BaseClass2</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#a87cac9890335a0a4d45b7c553f95dbec">CSelectableParamsSetComp</a> ()</td></tr>
@@ -96,6 +97,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set index of selected option.  <a href="#a29f358621cd59a848f5b603f18ba7334"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiprm_1_1_i_selection_param.html">ISelectionParam</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#aa537c7c79285e3f418d7f6bdf2ae04f4">GetSubselection</a> (int index) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get subselection for specified option.  <a href="#aa537c7c79285e3f418d7f6bdf2ae04f4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#a6bc6dd91d66dd4926ab59163c3e3d164">AfterUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be called after update of the observer contents occures.  <a href="#a6bc6dd91d66dd4926ab59163c3e3d164"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#a368e08ba23a7cfb1631a01a59bad2894">Serialize</a> (<a class="el" href="classiser_1_1_i_archive.html">iser::IArchive</a> &amp;archive)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load or store state of this object as a archive stream.  <a href="#a368e08ba23a7cfb1631a01a59bad2894"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
@@ -137,6 +140,21 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ad1fdc0513ca60a7352c5a33c1d9f832b"></a><!-- doxytag: member="iprm::CSelectableParamsSetComp::BaseClass2" ref="ad1fdc0513ca60a7352c5a33c1d9f832b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classimod_1_1_c_multi_model_bridge_base.html">imod::CMultiModelBridgeBase</a> <a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#ad1fdc0513ca60a7352c5a33c1d9f832b">iprm::CSelectableParamsSetComp::BaseClass2</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_selectable_params_set_comp_8h_source.html#l00032">32</a> of file <a class="el" href="_c_selectable_params_set_comp_8h_source.html">CSelectableParamsSetComp.h</a>.</p>
+
+</div>
+</div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a87cac9890335a0a4d45b7c553f95dbec"></a><!-- doxytag: member="iprm::CSelectableParamsSetComp::CSelectableParamsSetComp" ref="a87cac9890335a0a4d45b7c553f95dbec" args="()" -->
 <div class="memitem">
@@ -155,6 +173,43 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a6bc6dd91d66dd4926ab59163c3e3d164"></a><!-- doxytag: member="iprm::CSelectableParamsSetComp::AfterUpdate" ref="a6bc6dd91d66dd4926ab59163c3e3d164" args="(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iprm::CSelectableParamsSetComp::AfterUpdate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *&#160;</td>
+          <td class="paramname"><em>modelPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>updateFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td>
+          <td class="paramname"><em>updateParamsPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>This function will be called after update of the observer contents occures. </p>
+
+<p>Reimplemented from <a class="el" href="classimod_1_1_c_multi_model_bridge_base.html#ad466317234597651d04fdd782d4c073c">imod::CMultiModelBridgeBase</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ab52d4e76358cc7d5c1716b81bc519587"></a><!-- doxytag: member="iprm::CSelectableParamsSetComp::GetEditableParameter" ref="ab52d4e76358cc7d5c1716b81bc519587" args="(const QByteArray &amp;id)" -->
 <div class="memitem">
 <div class="memproto">
