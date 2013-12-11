@@ -46668,8 +46668,8 @@
       <type>bool</type>
       <name>SetDimensionsCount</name>
       <anchorfile>classistd_1_1_c_var_index.html</anchorfile>
-      <anchor>a5aa4fd534ac3b431ef521cd19adc8714</anchor>
-      <arglist>(int count)</arglist>
+      <anchor>ac9a83dfc32f7d0260f764695521a173f</anchor>
+      <arglist>(int count, int value=0)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
@@ -46810,6 +46810,13 @@
       <anchorfile>classistd_1_1_c_var_index.html</anchorfile>
       <anchor>a2b8741551adfc9a4f8c4150d93121621</anchor>
       <arglist>(const CVarIndex &amp;index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CVarIndex &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classistd_1_1_c_var_index.html</anchorfile>
+      <anchor>a8fe85da2736e2221edea8220eff015dd</anchor>
+      <arglist>(const CVarIndex &amp;index)</arglist>
     </member>
     <member kind="function">
       <type>CVarIndex &amp;</type>

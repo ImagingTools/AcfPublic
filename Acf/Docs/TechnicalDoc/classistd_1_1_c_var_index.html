@@ -85,8 +85,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check, if number dimensions is fixed.  <a href="#a8a680813aeef109ef44e02208cdc38f1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_var_index.html#a5a4f5f89ad94acc72aa8a9221e45f8bc">GetDimensionsCount</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of dimensions of this index.  <a href="#a5a4f5f89ad94acc72aa8a9221e45f8bc"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_var_index.html#a5aa4fd534ac3b431ef521cd19adc8714">SetDimensionsCount</a> (int count)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set number of dimensions of this index.  <a href="#a5aa4fd534ac3b431ef521cd19adc8714"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_var_index.html#ac9a83dfc32f7d0260f764695521a173f">SetDimensionsCount</a> (int count, int value=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set number of dimensions of this index.  <a href="#ac9a83dfc32f7d0260f764695521a173f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_var_index.html#ada9136d489c8cdf5913e0d20a01f41ab">GetAt</a> (int index) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get element stored at specified index.  <a href="#ada9136d489c8cdf5913e0d20a01f41ab"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_var_index.html#a849cde61b7711bc3c1eed5db7bcab41e">SetAt</a> (int index, int value)</td></tr>
@@ -121,6 +121,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_var_index.html#a75642d5f2da70ba0798f633730b9d01d">operator&gt;</a> (const <a class="el" href="classistd_1_1_c_var_index.html">CVarIndex</a> &amp;index) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_var_index.html#a84bdb12d5d2ea373bc2dd1173cd90f9c">operator&lt;=</a> (const <a class="el" href="classistd_1_1_c_var_index.html">CVarIndex</a> &amp;index) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_var_index.html#a2b8741551adfc9a4f8c4150d93121621">operator&gt;=</a> (const <a class="el" href="classistd_1_1_c_var_index.html">CVarIndex</a> &amp;index) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_c_var_index.html">CVarIndex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_var_index.html#a8fe85da2736e2221edea8220eff015dd">operator=</a> (const <a class="el" href="classistd_1_1_c_var_index.html">CVarIndex</a> &amp;index)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_c_var_index.html">CVarIndex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_var_index.html#a54d4f952097c21e6cc12f851baff70e8">operator+=</a> (const <a class="el" href="classistd_1_1_c_var_index.html">CVarIndex</a> &amp;index)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classistd_1_1_c_var_index.html">CVarIndex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_var_index.html#a573e8db646cf4ffc7bc0826990e7e213">operator-=</a> (const <a class="el" href="classistd_1_1_c_var_index.html">CVarIndex</a> &amp;index)</td></tr>
 <tr><td colspan="2"><h2><a name="friends"></a>
@@ -248,7 +249,7 @@ template&lt;int Dimensions&gt; </div>
 
 <p>Convert fixed-size index to this object. </p>
 
-<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00383">383</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00390">390</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
 
 </div>
 </div>
@@ -270,7 +271,7 @@ template&lt;int Dimensions&gt; </div>
 <p>Get begin value of element access iterator. </p>
 <p>Please refer to general description of ACF iterators, STL iterators or Qt iterators concept. </p>
 
-<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00284">284</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00291">291</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
 
 </div>
 </div>
@@ -337,7 +338,7 @@ template&lt;int Dimensions&gt; </div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true if success. It is provided for template implementations. In this case it returns always true. </dd></dl>
 
-<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00245">245</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00252">252</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
 
 </div>
 </div>
@@ -358,7 +359,7 @@ template&lt;int Dimensions&gt; </div>
 <p>Get end value of element access iterator. </p>
 <p>Please refer to general description of ACF iterators, STL iterators or Qt iterators concept. </p>
 
-<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00290">290</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00297">297</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
 
 </div>
 </div>
@@ -379,9 +380,9 @@ template&lt;int Dimensions&gt; </div>
 
 <p>Get element stored at specified index. </p>
 
-<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00216">216</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00223">223</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_var_index_8h_source.html#l00270">GetMinDimensionsCount()</a>, <a class="el" href="_c_var_index_8h_source.html#l00256">GetProductVolume()</a>, and <a class="el" href="_c_var_index_8h_source.html#l00296">operator[]()</a>.</p>
+<p>Referenced by <a class="el" href="_c_var_index_8h_source.html#l00277">GetMinDimensionsCount()</a>, <a class="el" href="_c_var_index_8h_source.html#l00263">GetProductVolume()</a>, and <a class="el" href="_c_var_index_8h_source.html#l00303">operator[]()</a>.</p>
 
 </div>
 </div>
@@ -401,9 +402,9 @@ template&lt;int Dimensions&gt; </div>
 
 <p>Get number of dimensions of this index. </p>
 
-<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00202">202</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00203">203</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_t_var_array_8h_source.html#l00262">istd::TVarArray&lt; Element &gt;::GetElementIndex()</a>, <a class="el" href="_c_var_index_8h_source.html#l00270">GetMinDimensionsCount()</a>, and <a class="el" href="_c_var_index_8h_source.html#l00256">GetProductVolume()</a>.</p>
+<p>Referenced by <a class="el" href="_t_var_array_8h_source.html#l00262">istd::TVarArray&lt; Element &gt;::GetElementIndex()</a>, <a class="el" href="_c_var_index_8h_source.html#l00277">GetMinDimensionsCount()</a>, and <a class="el" href="_c_var_index_8h_source.html#l00263">GetProductVolume()</a>.</p>
 
 </div>
 </div>
@@ -424,9 +425,9 @@ template&lt;int Dimensions&gt; </div>
 <p>Get minimal number of dimensions needed to to represent this index. </p>
 <p>In other words this is index of last non-zero component + 1. </p>
 
-<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00270">270</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00277">277</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
 
-<p>References <a class="el" href="_c_var_index_8h_source.html#l00216">GetAt()</a>, and <a class="el" href="_c_var_index_8h_source.html#l00202">GetDimensionsCount()</a>.</p>
+<p>References <a class="el" href="_c_var_index_8h_source.html#l00223">GetAt()</a>, and <a class="el" href="_c_var_index_8h_source.html#l00203">GetDimensionsCount()</a>.</p>
 
 </div>
 </div>
@@ -447,9 +448,9 @@ template&lt;int Dimensions&gt; </div>
 <p>Get total number of elements if this index is treated as size. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>multiplication of all elements. </dd></dl>
 
-<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00256">256</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00263">263</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
 
-<p>References <a class="el" href="_c_var_index_8h_source.html#l00216">GetAt()</a>, and <a class="el" href="_c_var_index_8h_source.html#l00202">GetDimensionsCount()</a>.</p>
+<p>References <a class="el" href="_c_var_index_8h_source.html#l00223">GetAt()</a>, and <a class="el" href="_c_var_index_8h_source.html#l00203">GetDimensionsCount()</a>.</p>
 
 </div>
 </div>
@@ -498,7 +499,7 @@ template&lt;int Dimensions&gt; </div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true if success. It is provided for template implementations. In this case it returns always true. </dd></dl>
 
-<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00234">234</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00241">241</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
 
 </div>
 </div>
@@ -519,7 +520,7 @@ template&lt;int Dimensions&gt; </div>
 <p>Check, if number dimensions is fixed. </p>
 <p>It is provided for template implementations. It returns always false. </p>
 
-<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00196">196</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00197">197</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
 
 </div>
 </div>
@@ -668,7 +669,7 @@ template&lt;int Dimensions&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00312">312</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00319">319</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
 
 </div>
 </div>
@@ -687,7 +688,24 @@ template&lt;int Dimensions&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00346">346</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00353">353</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8fe85da2736e2221edea8220eff015dd"></a><!-- doxytag: member="istd::CVarIndex::operator=" ref="a8fe85da2736e2221edea8220eff015dd" args="(const CVarIndex &amp;index)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classistd_1_1_c_var_index.html">CVarIndex</a>&amp; istd::CVarIndex::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_c_var_index.html">CVarIndex</a> &amp;&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -723,7 +741,7 @@ template&lt;int Dimensions&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00329">329</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00336">336</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
 
 </div>
 </div>
@@ -742,7 +760,7 @@ template&lt;int Dimensions&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00363">363</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00370">370</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
 
 </div>
 </div>
@@ -763,9 +781,9 @@ template&lt;int Dimensions&gt; </div>
 
 <p>Get access to single index components. </p>
 
-<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00296">296</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00303">303</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
 
-<p>References <a class="el" href="_c_var_index_8h_source.html#l00216">GetAt()</a>.</p>
+<p>References <a class="el" href="_c_var_index_8h_source.html#l00223">GetAt()</a>.</p>
 
 </div>
 </div>
@@ -786,7 +804,7 @@ template&lt;int Dimensions&gt; </div>
 
 <p>Get access to single index components. </p>
 
-<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00302">302</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00309">309</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
 
 </div>
 </div>
@@ -855,11 +873,11 @@ template&lt;int Dimensions&gt; </div>
 
 <p>Set element at specified index. </p>
 
-<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00225">225</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00232">232</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a5aa4fd534ac3b431ef521cd19adc8714"></a><!-- doxytag: member="istd::CVarIndex::SetDimensionsCount" ref="a5aa4fd534ac3b431ef521cd19adc8714" args="(int count)" -->
+<a class="anchor" id="ac9a83dfc32f7d0260f764695521a173f"></a><!-- doxytag: member="istd::CVarIndex::SetDimensionsCount" ref="ac9a83dfc32f7d0260f764695521a173f" args="(int count, int value=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -867,8 +885,18 @@ template&lt;int Dimensions&gt; </div>
           <td class="memname">bool istd::CVarIndex::SetDimensionsCount </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>count</em></td><td>)</td>
-          <td><code> [inline]</code></td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -884,7 +912,7 @@ template&lt;int Dimensions&gt; </div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>always true. </dd></dl>
 
-<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00208">208</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_var_index_8h_source.html#l00209">209</a> of file <a class="el" href="_c_var_index_8h_source.html">CVarIndex.h</a>.</p>
 
 </div>
 </div>
