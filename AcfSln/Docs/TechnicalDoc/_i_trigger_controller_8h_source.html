@@ -33,28 +33,30 @@
 <a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_time_stamp_8h.html">istd/ITimeStamp.h</a>&quot;</span>
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_t_del_ptr_8h.html">istd/TDelPtr.h</a>&quot;</span>
 <a name="l00009"></a>00009 
-<a name="l00010"></a>00010 
-<a name="l00011"></a>00011 <span class="keyword">namespace </span>isig
-<a name="l00012"></a>00012 {
-<a name="l00013"></a>00013 
-<a name="l00014"></a>00014 
-<a name="l00015"></a><a class="code" href="classisig_1_1_i_trigger_controller.html">00015</a> <span class="keyword">class </span><a class="code" href="classisig_1_1_i_trigger_controller.html">ITriggerController</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IPolymorphic
-<a name="l00016"></a>00016 {
-<a name="l00017"></a>00017 <span class="keyword">public</span>:
-<a name="l00018"></a><a class="code" href="classisig_1_1_i_trigger_controller.html#a33a4bd1f99bd33dd50ac21088cf508d3">00018</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;istd::ITimeStamp&gt;</a> <a class="code" href="classisig_1_1_i_trigger_controller.html#a33a4bd1f99bd33dd50ac21088cf508d3">TimeStampPtr</a>;
-<a name="l00019"></a>00019 
-<a name="l00023"></a>00023        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisig_1_1_i_trigger_controller.html#a3b1c38fad790ed47e7f045c91d7f84ba" title="Check, if software trigger is accepted and possible.">IsSoftwareTriggerActive</a>() <span class="keyword">const</span> = 0;
-<a name="l00024"></a>00024 
-<a name="l00029"></a>00029        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisig_1_1_i_trigger_controller.html#a3ea722845ea2f4187d3576456d5d660f" title="Send software trigger to device.">SendSoftwareTrigger</a>(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">TimeStampPtr</a>* timeStampPtrPtr = NULL) = 0;
-<a name="l00030"></a>00030 };
-<a name="l00031"></a>00031 
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033 } <span class="comment">// namespace imeas</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/_i_params_set_8h.html">iprm/IParamsSet.h</a>&quot;</span>
+<a name="l00011"></a>00011 
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013 <span class="keyword">namespace </span>isig
+<a name="l00014"></a>00014 {
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016 
+<a name="l00017"></a><a class="code" href="classisig_1_1_i_trigger_controller.html">00017</a> <span class="keyword">class </span><a class="code" href="classisig_1_1_i_trigger_controller.html">ITriggerController</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IPolymorphic
+<a name="l00018"></a>00018 {
+<a name="l00019"></a>00019 <span class="keyword">public</span>:
+<a name="l00020"></a><a class="code" href="classisig_1_1_i_trigger_controller.html#a33a4bd1f99bd33dd50ac21088cf508d3">00020</a>        <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;istd::ITimeStamp&gt;</a> <a class="code" href="classisig_1_1_i_trigger_controller.html#a33a4bd1f99bd33dd50ac21088cf508d3">TimeStampPtr</a>;
+<a name="l00021"></a>00021 
+<a name="l00025"></a>00025        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisig_1_1_i_trigger_controller.html#a3b1c38fad790ed47e7f045c91d7f84ba" title="Check, if software trigger is accepted and possible.">IsSoftwareTriggerActive</a>() <span class="keyword">const</span> = 0;
+<a name="l00026"></a>00026 
+<a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classisig_1_1_i_trigger_controller.html#a237940d34eee05e54103286818f518b7" title="Send software trigger to device.">SendSoftwareTrigger</a>(<a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_t_del_ptr.html">TimeStampPtr</a>* timeStampPtrPtr = NULL, <span class="keyword">const</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a>* paramsPtr = NULL) = 0;
+<a name="l00032"></a>00032 };
+<a name="l00033"></a>00033 
 <a name="l00034"></a>00034 
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036 <span class="preprocessor">#endif // !isig_ITriggerController_included</span>
-<a name="l00037"></a>00037 <span class="preprocessor"></span>
-<a name="l00038"></a>00038 
+<a name="l00035"></a>00035 } <span class="comment">// namespace imeas</span>
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038 <span class="preprocessor">#endif // !isig_ITriggerController_included</span>
+<a name="l00039"></a>00039 <span class="preprocessor"></span>
+<a name="l00040"></a>00040 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

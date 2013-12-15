@@ -26194,8 +26194,8 @@
       <type>virtual bool</type>
       <name>SendSoftwareTrigger</name>
       <anchorfile>classisig_1_1_i_trigger_controller.html</anchorfile>
-      <anchor>a3ea722845ea2f4187d3576456d5d660f</anchor>
-      <arglist>(TimeStampPtr *timeStampPtrPtr=NULL)=0</arglist>
+      <anchor>a237940d34eee05e54103286818f518b7</anchor>
+      <arglist>(TimeStampPtr *timeStampPtrPtr=NULL, const iprm::IParamsSet *paramsPtr=NULL)=0</arglist>
     </member>
   </compound>
   <compound kind="class">

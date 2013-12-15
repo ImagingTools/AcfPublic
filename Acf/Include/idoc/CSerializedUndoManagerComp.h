@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef idoc_CSerializedUndoManager_included
-#define idoc_CSerializedUndoManager_included
+#ifndef idoc_CSerializedUndoManagerComp_included
+#define idoc_CSerializedUndoManagerComp_included
 
 
 // Qt includes
@@ -29,12 +29,10 @@
 
 // ACF includes
 #include "istd/TDelPtr.h"
-
 #include "iser/ISerializable.h"
 #include "iser/CMemoryWriteArchive.h"
-
 #include "imod/TSingleModelObserverBase.h"
-
+#include "icomp/CComponentBase.h"
 #include "idoc/IUndoManager.h"
 
 
@@ -46,12 +44,23 @@ namespace idoc
 	Implements multi level UNDO mechanism based on storing complete objects state at each step using serialization.
 	To trace if UNDO is available you can use ACF model/observer.
 */
-class CSerializedUndoManager: public imod::TSingleModelObserverBase<iser::ISerializable>, virtual public IUndoManager
+class CSerializedUndoManagerComp:
+			public icomp::CComponentBase,
+			public imod::TSingleModelObserverBase<iser::ISerializable>,
+			virtual public IUndoManager
 {
 public:
-	typedef imod::TSingleModelObserverBase<iser::ISerializable> BaseClass;
+	typedef icomp::CComponentBase BaseClass;
+	typedef imod::TSingleModelObserverBase<iser::ISerializable> BaseClass2;
 
-	CSerializedUndoManager();
+	I_BEGIN_COMPONENT(CSerializedUndoManagerComp);
+		I_REGISTER_INTERFACE(idoc::IUndoManager);
+		I_REGISTER_INTERFACE(idoc::IDocumentStateComparator);
+		I_REGISTER_INTERFACE(imod::IObserver);
+		I_ASSIGN(m_maxBufferSizeAttrPtr, "MaxBufferSizeAttrPtr", "Maximal memory size of the Undo-buffer in MByte", false, 100);
+	I_END_COMPONENT;
+
+	CSerializedUndoManagerComp();
 
 	// reimplemented (idoc::IUndoManager)
 	virtual bool IsUndoAvailable() const;
@@ -79,6 +88,9 @@ protected:
 	virtual DocumentChangeFlag GetDocumentChangeFlag() const;
 
 private:
+	qint64 GetUsedMemorySize() const;
+
+private:
 	typedef istd::TDelPtr<iser::CMemoryWriteArchive> UndoArchivePtr;
 	typedef QList<UndoArchivePtr> UndoList;
 	UndoList m_undoList;
@@ -91,12 +103,14 @@ private:
 
 	mutable DocumentChangeFlag m_stateChangedFlag;
 	mutable bool m_isStateChangedFlagValid;
+
+	I_ATTR(int, m_maxBufferSizeAttrPtr);
 };
 
 
 } // namespace idoc
 
 
-#endif // !idoc_CSerializedUndoManager_included
+#endif // !idoc_CSerializedUndoManagerComp_included
 
 

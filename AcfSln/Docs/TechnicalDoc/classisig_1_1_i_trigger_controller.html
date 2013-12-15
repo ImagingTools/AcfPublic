@@ -59,12 +59,12 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_i_trigger_controller.html#a3b1c38fad790ed47e7f045c91d7f84ba">IsSoftwareTriggerActive</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check, if software trigger is accepted and possible.  <a href="#a3b1c38fad790ed47e7f045c91d7f84ba"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_i_trigger_controller.html#a3ea722845ea2f4187d3576456d5d660f">SendSoftwareTrigger</a> (<a class="el" href="classisig_1_1_i_trigger_controller.html#a33a4bd1f99bd33dd50ac21088cf508d3">TimeStampPtr</a> *timeStampPtrPtr=<a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send software trigger to device.  <a href="#a3ea722845ea2f4187d3576456d5d660f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisig_1_1_i_trigger_controller.html#a237940d34eee05e54103286818f518b7">SendSoftwareTrigger</a> (<a class="el" href="classisig_1_1_i_trigger_controller.html#a33a4bd1f99bd33dd50ac21088cf508d3">TimeStampPtr</a> *timeStampPtrPtr=<a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *paramsPtr=<a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send software trigger to device.  <a href="#a237940d34eee05e54103286818f518b7"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_i_trigger_controller_8h_source.html#l00015">15</a> of file <a class="el" href="_i_trigger_controller_8h_source.html">ITriggerController.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_trigger_controller_8h_source.html#l00017">17</a> of file <a class="el" href="_i_trigger_controller_8h_source.html">ITriggerController.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a33a4bd1f99bd33dd50ac21088cf508d3"></a><!-- doxytag: member="isig::ITriggerController::TimeStampPtr" ref="a33a4bd1f99bd33dd50ac21088cf508d3" args="" -->
 <div class="memitem">
@@ -77,7 +77,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_i_trigger_controller_8h_source.html#l00018">18</a> of file <a class="el" href="_i_trigger_controller_8h_source.html">ITriggerController.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_trigger_controller_8h_source.html#l00020">20</a> of file <a class="el" href="_i_trigger_controller_8h_source.html">ITriggerController.h</a>.</p>
 
 </div>
 </div>
@@ -100,7 +100,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3ea722845ea2f4187d3576456d5d660f"></a><!-- doxytag: member="isig::ITriggerController::SendSoftwareTrigger" ref="a3ea722845ea2f4187d3576456d5d660f" args="(TimeStampPtr *timeStampPtrPtr=NULL)=0" -->
+<a class="anchor" id="a237940d34eee05e54103286818f518b7"></a><!-- doxytag: member="isig::ITriggerController::SendSoftwareTrigger" ref="a237940d34eee05e54103286818f518b7" args="(TimeStampPtr *timeStampPtrPtr=NULL, const iprm::IParamsSet *paramsPtr=NULL)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -108,8 +108,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual bool isig::ITriggerController::SendSoftwareTrigger </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classisig_1_1_i_trigger_controller.html#a33a4bd1f99bd33dd50ac21088cf508d3">TimeStampPtr</a> *&#160;</td>
-          <td class="paramname"><em>timeStampPtrPtr</em> = <code><a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code></td><td>)</td>
-          <td><code> [pure virtual]</code></td>
+          <td class="paramname"><em>timeStampPtrPtr</em> = <code><a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *&#160;</td>
+          <td class="paramname"><em>paramsPtr</em> = <code><a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [pure virtual]</code></td>
         </tr>
       </table>
 </div>

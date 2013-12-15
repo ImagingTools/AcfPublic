@@ -1842,15 +1842,16 @@
     <namespace>idoc</namespace>
   </compound>
   <compound kind="file">
-    <name>CSerializedUndoManager.h</name>
+    <name>CSerializedUndoManagerComp.h</name>
     <path>C:/Temp/Acf/Include/idoc/</path>
-    <filename>_c_serialized_undo_manager_8h</filename>
+    <filename>_c_serialized_undo_manager_comp_8h</filename>
     <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <includes id="_c_memory_write_archive_8h" name="CMemoryWriteArchive.h" local="yes" imported="no">iser/CMemoryWriteArchive.h</includes>
     <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_undo_manager_8h" name="IUndoManager.h" local="yes" imported="no">idoc/IUndoManager.h</includes>
-    <class kind="class">idoc::CSerializedUndoManager</class>
+    <class kind="class">idoc::CSerializedUndoManagerComp</class>
     <namespace>idoc</namespace>
   </compound>
   <compound kind="file">
@@ -19758,7 +19759,7 @@
     <class kind="class">idoc::CDocumentManagerListenerComp</class>
     <class kind="class">idoc::CMultiDocumentManagerBase</class>
     <class kind="class">idoc::CSelectedDocModelBinderComp</class>
-    <class kind="class">idoc::CSerializedUndoManager</class>
+    <class kind="class">idoc::CSerializedUndoManagerComp</class>
     <class kind="class">idoc::CSingleDocumentManagerBase</class>
     <class kind="class">idoc::CSingleDocumentTemplateBase</class>
     <class kind="class">idoc::CSingleDocumentTemplateComp</class>
@@ -20353,120 +20354,128 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>idoc::CSerializedUndoManager</name>
-    <filename>classidoc_1_1_c_serialized_undo_manager.html</filename>
+    <name>idoc::CSerializedUndoManagerComp</name>
+    <filename>classidoc_1_1_c_serialized_undo_manager_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base>TSingleModelObserverBase&lt; iser::ISerializable &gt;</base>
     <base virtualness="virtual">idoc::IUndoManager</base>
     <member kind="typedef">
-      <type>imod::TSingleModelObserverBase&lt; iser::ISerializable &gt;</type>
+      <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
-      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
-      <anchor>a4f65ffc0c248c749ef1a9ef553b33f2a</anchor>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
+      <anchor>a6636f3b6fd8c293a7d6097dd9bdab83b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::TSingleModelObserverBase&lt; iser::ISerializable &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
+      <anchor>a2694d296840a09d5d4df838fb8918a3c</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
-      <name>CSerializedUndoManager</name>
-      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
-      <anchor>a816867f931d7d5ee1cdbf94c5c1e190d</anchor>
+      <name>CSerializedUndoManagerComp</name>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
+      <anchor>adcc86d9ca7a8eb9da4562ec867e92881</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsUndoAvailable</name>
-      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
-      <anchor>a9318f7ece1e11a5d0c335988906e1961</anchor>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
+      <anchor>aaf76da60e1eab06c1087f75a2c768171</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsRedoAvailable</name>
-      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
-      <anchor>a902b2d46c25c3811561519cffbada48b</anchor>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
+      <anchor>a8f3a6d5672c1c994db6581360fe45760</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ResetUndo</name>
-      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
-      <anchor>ad30fd4de3d224d65fd889eba604157d0</anchor>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
+      <anchor>a4883cee9ba5239d35e52a59921e26060</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>DoUndo</name>
-      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
-      <anchor>ac6639ae44ded3fe9fbeb5fa2ac93b76f</anchor>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
+      <anchor>aa31baabfc58364ccc3611bc1e4b7054a</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>DoRedo</name>
-      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
-      <anchor>a4da0243e27432889bbf39224a88e2e4b</anchor>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
+      <anchor>a4708ee8bc620d3f8f6e9c6b7a39ebf17</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnAttached</name>
-      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
-      <anchor>a7da1fab13cc26a3fc2d523bf9f694110</anchor>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
+      <anchor>ad85145f127c301d30ba0eb9cf87e4b8e</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnDetached</name>
-      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
-      <anchor>abd30d0095abef4105cda83644081f8e5</anchor>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
+      <anchor>aaed99e73675f75c3f0918512ca478a93</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual iser::ISerializable *</type>
       <name>CastFromModel</name>
-      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
-      <anchor>ac5aeda935d03cb3a11c65f5b14c0d07b</anchor>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
+      <anchor>adaf7139914446b32434ba9b227a6eb3d</anchor>
       <arglist>(imod::IModel *modelPtr) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>BeforeUpdate</name>
-      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
-      <anchor>a3fc38eab935466afb59016ea54db8feb</anchor>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
+      <anchor>a26ef612e3a2758caf305ca87e252bf27</anchor>
       <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>AfterUpdate</name>
-      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
-      <anchor>a9d377b2fe7370184f1e761f414fddb7d</anchor>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
+      <anchor>a327b0391d5b57f2d6b8847a0273dd4a7</anchor>
       <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>HasStoredDocumentState</name>
-      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
-      <anchor>a7b2cef90de9d2bd36a8d0bea253d40d0</anchor>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
+      <anchor>ab784e4288269d4ab9774836178d18844</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>StoreDocumentState</name>
-      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
-      <anchor>a87a3a51707b3e53413fef352f8d585b0</anchor>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
+      <anchor>a3edf0c8802c2ec2fce3eb2726a077e1f</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>RestoreDocumentState</name>
-      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
-      <anchor>a58336477597ef11f9ae0862357549885</anchor>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
+      <anchor>af9282f9d7dbe9611d92b736f36612b00</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual DocumentChangeFlag</type>
       <name>GetDocumentChangeFlag</name>
-      <anchorfile>classidoc_1_1_c_serialized_undo_manager.html</anchorfile>
-      <anchor>a87cdc91c279b2c0675004219ddc749ab</anchor>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
+      <anchor>a98afd4d8d1bff706bc64b55e90467e60</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
