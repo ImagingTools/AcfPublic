@@ -211,7 +211,14 @@ int CSearchBasedFeaturesSupplierComp::ProduceObject(CFeaturesContainer& result) 
 						&searchResults);
 
 					if (searchState != iproc::IProcessor::TS_OK){
-						SendErrorMessage(MI_SUPPLIER_RESULTS_STATUS, QObject::tr("Search was not successful"));
+						ilog::CMessage* message = new ilog::CMessage(
+									istd::IInformationProvider::IC_NONE,
+									MI_SUPPLIER_RESULTS_STATUS,
+									QObject::tr("Search not successfull"),
+									multiSearchParamsManagerPtr->GetParamsSetName(searchIndex));
+
+						AddMessage(message);
+
 						return WS_ERROR;
 					}
 
@@ -274,7 +281,14 @@ int CSearchBasedFeaturesSupplierComp::ProduceObject(CFeaturesContainer& result) 
 								&result);
 
 				if (searchState != iproc::IProcessor::TS_OK){
-					SendErrorMessage(MI_SUPPLIER_RESULTS_STATUS, QObject::tr("Search was not successful"));
+					ilog::CMessage* message = new ilog::CMessage(
+								istd::IInformationProvider::IC_NONE,
+								MI_SUPPLIER_RESULTS_STATUS,
+								QObject::tr("Search not successfull"),
+								GetDiagnosticName());
+					
+					AddMessage(message);
+
 					return WS_ERROR;
 				}
 
@@ -306,11 +320,16 @@ int CSearchBasedFeaturesSupplierComp::ProduceObject(CFeaturesContainer& result) 
 					"Search model was found" : 
 					"Search model was not found"; 
 
+				QString sourceName = GetDiagnosticName();
+				if (sourceName.isEmpty()){
+					sourceName = "SearchResult";
+				}
+
 				ilog::CMessage* message = new ilog::CMessage(
 					m_defaultInformationCategory,
 					MI_SUPPLIER_RESULTS_STATUS,
 					searchResultText,
-					"SearchResult");
+					sourceName);
 
 				AddMessage(message);
 			}
