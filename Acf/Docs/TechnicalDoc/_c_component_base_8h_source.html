@@ -80,255 +80,256 @@
 <a name="l00069"></a>00069 
 <a name="l00070"></a>00070        <span class="comment">// static protected methods</span>
 <a name="l00071"></a>00071        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_real_component_static_info.html" title="Interface adding to component static info functionality existing only for real components.">icomp::IRealComponentStaticInfo</a>&amp; <a class="code" href="classicomp_1_1_c_component_base.html#a9aa72f8300da1433878507f90af3dff7">InitStaticInfo</a>(<a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">IComponent</a>* componentPtr);
-<a name="l00072"></a>00072 
-<a name="l00073"></a>00073 <span class="keyword">private</span>:
-<a name="l00074"></a>00074        <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_context.html" title="Provide session context of component.">IComponentContext</a>* m_contextPtr;
-<a name="l00075"></a>00075        <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_composite_component.html" title="Composite component interface.">ICompositeComponent</a>* m_parentPtr;
-<a name="l00076"></a>00076        <span class="keywordtype">bool</span> m_isParentOwner;
-<a name="l00077"></a>00077 };
-<a name="l00078"></a>00078 
+<a name="l00072"></a>00072        <span class="keyword">static</span> QByteArray <a class="code" href="classicomp_1_1_c_component_base.html#a0024c776694af9db8798416b15347d86">GetComponentId</a>(<span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_context.html" title="Provide session context of component.">icomp::IComponentContext</a>* componentContextPtr, <span class="keyword">const</span> QByteArray&amp; contextId = QByteArray());
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074 <span class="keyword">private</span>:
+<a name="l00075"></a>00075        <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component_context.html" title="Provide session context of component.">IComponentContext</a>* m_contextPtr;
+<a name="l00076"></a>00076        <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_composite_component.html" title="Composite component interface.">ICompositeComponent</a>* m_parentPtr;
+<a name="l00077"></a>00077        <span class="keywordtype">bool</span> m_isParentOwner;
+<a name="l00078"></a>00078 };
 <a name="l00079"></a>00079 
-<a name="l00080"></a>00080 <span class="comment">// inline protected methods</span>
-<a name="l00081"></a>00081 
-<a name="l00082"></a><a class="code" href="classicomp_1_1_c_component_base.html#a25b009c2dd174d3f88437ebe0605ca60">00082</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_component_base.html#a25b009c2dd174d3f88437ebe0605ca60" title="Check if component is active.">CComponentBase::IsComponentActive</a>()<span class="keyword"> const</span>
-<a name="l00083"></a>00083 <span class="keyword"></span>{
-<a name="l00084"></a>00084        <span class="keywordflow">return</span> (m_contextPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
-<a name="l00085"></a>00085 }
-<a name="l00086"></a>00086 
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 <span class="comment">// inline protected methods</span>
+<a name="l00082"></a>00082 
+<a name="l00083"></a><a class="code" href="classicomp_1_1_c_component_base.html#a25b009c2dd174d3f88437ebe0605ca60">00083</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classicomp_1_1_c_component_base.html#a25b009c2dd174d3f88437ebe0605ca60" title="Check if component is active.">CComponentBase::IsComponentActive</a>()<span class="keyword"> const</span>
+<a name="l00084"></a>00084 <span class="keyword"></span>{
+<a name="l00085"></a>00085        <span class="keywordflow">return</span> (m_contextPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);
+<a name="l00086"></a>00086 }
 <a name="l00087"></a>00087 
-<a name="l00088"></a>00088 } <span class="comment">// namespace icomp</span>
-<a name="l00089"></a>00089 
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089 } <span class="comment">// namespace icomp</span>
 <a name="l00090"></a>00090 
-<a name="l00099"></a>00099 <span class="preprocessor">#define I_BEGIN_COMPONENT(ComponentType)\</span>
-<a name="l00100"></a>00100 <span class="preprocessor">       typedef ComponentType CurrentComponentType;\</span>
-<a name="l00101"></a>00101 <span class="preprocessor">       static const icomp::IRealComponentStaticInfo&amp; InitStaticInfo(ComponentType* componentPtr)\</span>
-<a name="l00102"></a>00102 <span class="preprocessor">       {\</span>
-<a name="l00103"></a>00103 <span class="preprocessor">              static icomp::TComponentStaticInfo&lt;ComponentType&gt; staticInfo(&amp;BaseClass::InitStaticInfo(NULL));\</span>
-<a name="l00104"></a>00104 <span class="preprocessor">              static bool isStaticInitialized = false;\</span>
-<a name="l00105"></a>00105 <span class="preprocessor">              if (isStaticInitialized &amp;&amp; (componentPtr == NULL)){\</span>
-<a name="l00106"></a>00106 <span class="preprocessor">                     return staticInfo;\</span>
-<a name="l00107"></a>00107 <span class="preprocessor">              }\</span>
-<a name="l00108"></a>00108 <span class="preprocessor">              isStaticInitialized = true;\</span>
-<a name="l00109"></a>00109 <span class="preprocessor">              BaseClass::InitStaticInfo(componentPtr);</span>
-<a name="l00110"></a>00110 <span class="preprocessor"></span>
-<a name="l00117"></a>00117 <span class="preprocessor">#define I_BEGIN_BASE_COMPONENT(ComponentType)\</span>
-<a name="l00118"></a>00118 <span class="preprocessor">       typedef ComponentType CurrentComponentType;\</span>
-<a name="l00119"></a>00119 <span class="preprocessor">       static const icomp::IRealComponentStaticInfo&amp; InitStaticInfo(ComponentType* componentPtr)\</span>
-<a name="l00120"></a>00120 <span class="preprocessor">       {\</span>
-<a name="l00121"></a>00121 <span class="preprocessor">              static icomp::CBaseComponentStaticInfo staticInfo(&amp;BaseClass::InitStaticInfo(NULL));\</span>
-<a name="l00122"></a>00122 <span class="preprocessor">              static bool isStaticInitialized = false;\</span>
-<a name="l00123"></a>00123 <span class="preprocessor">              if (isStaticInitialized &amp;&amp; (componentPtr == NULL)){\</span>
-<a name="l00124"></a>00124 <span class="preprocessor">                     return staticInfo;\</span>
-<a name="l00125"></a>00125 <span class="preprocessor">              }\</span>
-<a name="l00126"></a>00126 <span class="preprocessor">              isStaticInitialized = true;\</span>
-<a name="l00127"></a>00127 <span class="preprocessor">              BaseClass::InitStaticInfo(componentPtr);</span>
-<a name="l00128"></a>00128 <span class="preprocessor"></span>
-<a name="l00136"></a>00136 <span class="preprocessor">#define I_END_COMPONENT\</span>
-<a name="l00137"></a>00137 <span class="preprocessor">              return staticInfo;\</span>
-<a name="l00138"></a>00138 <span class="preprocessor">       }\</span>
-<a name="l00139"></a>00139 <span class="preprocessor">       virtual const icomp::IRealComponentStaticInfo&amp; GetComponentStaticInfo() const\</span>
-<a name="l00140"></a>00140 <span class="preprocessor">       {\</span>
-<a name="l00141"></a>00141 <span class="preprocessor">              return InitStaticInfo(NULL);\</span>
-<a name="l00142"></a>00142 <span class="preprocessor">       }</span>
-<a name="l00143"></a>00143 <span class="preprocessor"></span>
-<a name="l00150"></a>00150 <span class="preprocessor">#define I_REGISTER_INTERFACE(InterfaceType)\</span>
-<a name="l00151"></a>00151 <span class="preprocessor">       {\</span>
-<a name="l00152"></a>00152 <span class="preprocessor">              static icomp::TInterfaceRegistrator&lt;InterfaceType&gt; staticRegistrator(staticInfo);\</span>
-<a name="l00153"></a>00153 <span class="preprocessor">       }</span>
-<a name="l00154"></a>00154 <span class="preprocessor"></span>
-<a name="l00158"></a><a class="code" href="_c_component_base_8h.html#ac4bf5ae770b4ca0f33fb13b7dcf6cb5d">00158</a> <span class="preprocessor">#define I_REGISTER_SUBELEMENT(ElementName)\</span>
-<a name="l00159"></a>00159 <span class="preprocessor">       static icomp::TSubelementStaticInfo&lt;CurrentComponentType&gt; subelementInfo_##ElementName(#ElementName, staticInfo);</span>
-<a name="l00160"></a>00160 <span class="preprocessor"></span>
-<a name="l00167"></a><a class="code" href="_c_component_base_8h.html#ab2b90c5b1e9ccfb347bfdcac76cea2fd">00167</a> <span class="preprocessor">#define I_REGISTER_SUBELEMENT_INTERFACE(ElementName, InterfaceType, extractorFunction)\</span>
-<a name="l00168"></a>00168 <span class="preprocessor">       {\</span>
-<a name="l00169"></a>00169 <span class="preprocessor">              static icomp::TSubelementStaticInfo&lt;CurrentComponentType&gt;::Registrator&lt;InterfaceType&gt; registrator(\</span>
-<a name="l00170"></a>00170 <span class="preprocessor">                                   subelementInfo_##ElementName,\</span>
-<a name="l00171"></a>00171 <span class="preprocessor">                                   extractorFunction);\</span>
-<a name="l00172"></a>00172 <span class="preprocessor">       }</span>
-<a name="l00173"></a>00173 <span class="preprocessor"></span>
-<a name="l00180"></a><a class="code" href="_c_component_base_8h.html#a066dd1fa9d7f8ae60350f54e5fe07f29">00180</a> <span class="preprocessor">#define I_REGISTER_SUBELEMENT_INTERFACE_T(ElementName, InterfaceType, extractorFunction)\</span>
-<a name="l00181"></a>00181 <span class="preprocessor">       {\</span>
-<a name="l00182"></a>00182 <span class="preprocessor">              static icomp::TSubelementStaticInfo&lt;CurrentComponentType&gt;::Registrator&lt;InterfaceType&gt; registrator(\</span>
-<a name="l00183"></a>00183 <span class="preprocessor">                                   subelementInfo_##ElementName,\</span>
-<a name="l00184"></a>00184 <span class="preprocessor">                                   extractorFunction&lt;InterfaceType&gt;);\</span>
-<a name="l00185"></a>00185 <span class="preprocessor">       }</span>
-<a name="l00186"></a>00186 <span class="preprocessor"></span>
-<a name="l00190"></a>00190 <span class="preprocessor">#define I_USER_ATTR(attrType, member)\</span>
-<a name="l00191"></a>00191 <span class="preprocessor">       typedef icomp::TAttributeMember&lt; attrType &gt; member##_Type;\</span>
-<a name="l00192"></a>00192 <span class="preprocessor">       typedef icomp::TAttributeMember&lt; attrType &gt;::AttributeType member##_AttrType;\</span>
-<a name="l00193"></a>00193 <span class="preprocessor">       icomp::TAttributeMember&lt; attrType &gt; member;</span>
-<a name="l00194"></a>00194 <span class="preprocessor"></span>
-<a name="l00206"></a>00206 <span class="preprocessor">#define I_ATTR(attrType, member)\</span>
-<a name="l00207"></a>00207 <span class="preprocessor">       I_USER_ATTR(icomp::TAttribute&lt; attrType &gt;, member)</span>
-<a name="l00208"></a>00208 <span class="preprocessor"></span>
-<a name="l00212"></a>00212 <span class="preprocessor">#define I_USER_MULTIATTR(attrType, member)\</span>
-<a name="l00213"></a>00213 <span class="preprocessor">       typedef icomp::TMultiAttributeMember&lt; attrType &gt; member##_Type;\</span>
-<a name="l00214"></a>00214 <span class="preprocessor">       typedef icomp::TMultiAttributeMember&lt; attrType &gt;::AttributeType member##_AttrType;\</span>
-<a name="l00215"></a>00215 <span class="preprocessor">       icomp::TMultiAttributeMember&lt; attrType &gt; member;</span>
-<a name="l00216"></a>00216 <span class="preprocessor"></span>
-<a name="l00227"></a>00227 <span class="preprocessor">#define I_MULTIATTR(attrType, member)\</span>
-<a name="l00228"></a>00228 <span class="preprocessor">       I_USER_MULTIATTR(icomp::TMultiAttribute&lt;attrType&gt;, member)</span>
-<a name="l00229"></a>00229 <span class="preprocessor"></span>
-<a name="l00236"></a>00236 <span class="preprocessor">#define I_REF(interfaceType, member)\</span>
-<a name="l00237"></a>00237 <span class="preprocessor">       typedef icomp::TReferenceMember&lt;interfaceType&gt; member##_Type;\</span>
-<a name="l00238"></a>00238 <span class="preprocessor">       typedef icomp::TReferenceMember&lt;interfaceType&gt;::AttributeType member##_AttrType;\</span>
-<a name="l00239"></a>00239 <span class="preprocessor">       icomp::TReferenceMember&lt;interfaceType&gt; member;</span>
-<a name="l00240"></a>00240 <span class="preprocessor"></span>
-<a name="l00244"></a>00244 <span class="preprocessor">#define I_TREF(interfaceType, member)\</span>
-<a name="l00245"></a>00245 <span class="preprocessor">       typedef icomp::TReferenceMember&lt;interfaceType&gt; member##_Type;\</span>
-<a name="l00246"></a>00246 <span class="preprocessor">       typedef typename icomp::TReferenceMember&lt;interfaceType&gt;::AttributeType member##_AttrType;\</span>
-<a name="l00247"></a>00247 <span class="preprocessor">       icomp::TReferenceMember&lt;interfaceType&gt; member;</span>
-<a name="l00248"></a>00248 <span class="preprocessor"></span>
-<a name="l00252"></a>00252 <span class="preprocessor">#define I_TMULTIREF(interfaceType, member)\</span>
-<a name="l00253"></a>00253 <span class="preprocessor">       typedef icomp::TMultiReferenceMember&lt;interfaceType&gt; member##_Type;\</span>
-<a name="l00254"></a>00254 <span class="preprocessor">       typedef typename icomp::TMultiReferenceMember&lt;interfaceType&gt;::AttributeType member##_AttrType;\</span>
-<a name="l00255"></a>00255 <span class="preprocessor">       icomp::TMultiReferenceMember&lt;interfaceType&gt; member;</span>
-<a name="l00256"></a>00256 <span class="preprocessor"></span>
-<a name="l00257"></a>00257 
-<a name="l00263"></a>00263 <span class="preprocessor">#define I_MULTIREF(interfaceType, member)\</span>
-<a name="l00264"></a>00264 <span class="preprocessor">       typedef icomp::TMultiReferenceMember&lt;interfaceType&gt; member##_Type;\</span>
-<a name="l00265"></a>00265 <span class="preprocessor">       typedef icomp::TMultiReferenceMember&lt;interfaceType&gt;::AttributeType member##_AttrType;\</span>
-<a name="l00266"></a>00266 <span class="preprocessor">       icomp::TMultiReferenceMember&lt;interfaceType&gt; member;</span>
-<a name="l00267"></a>00267 <span class="preprocessor"></span>
-<a name="l00273"></a>00273 <span class="preprocessor">#define I_FACT(interfaceType, member)\</span>
-<a name="l00274"></a>00274 <span class="preprocessor">       typedef icomp::TFactoryMember&lt;interfaceType&gt; member##_Type;\</span>
-<a name="l00275"></a>00275 <span class="preprocessor">       typedef icomp::TFactoryMember&lt;interfaceType&gt;::AttributeType member##_AttrType;\</span>
-<a name="l00276"></a>00276 <span class="preprocessor">       icomp::TFactoryMember&lt;interfaceType&gt; member;</span>
-<a name="l00277"></a>00277 <span class="preprocessor"></span>
-<a name="l00278"></a><a class="code" href="_c_component_base_8h.html#a91a1c623c0ea9f2fb0a37e19e1280f09">00278</a> <span class="preprocessor">#define I_TFACT(interfaceType, member)\</span>
-<a name="l00279"></a>00279 <span class="preprocessor">       typedef icomp::TFactoryMember&lt;interfaceType&gt; member##_Type;\</span>
-<a name="l00280"></a>00280 <span class="preprocessor">       typedef typename icomp::TFactoryMember&lt;interfaceType&gt;::AttributeType member##_AttrType;\</span>
-<a name="l00281"></a>00281 <span class="preprocessor">       icomp::TFactoryMember&lt;interfaceType&gt; member;</span>
-<a name="l00282"></a>00282 <span class="preprocessor"></span>
-<a name="l00287"></a>00287 <span class="preprocessor">#define I_MULTIFACT(interfaceType, member)\</span>
-<a name="l00288"></a>00288 <span class="preprocessor">       typedef icomp::TMultiFactoryMember&lt;interfaceType&gt; member##_Type;\</span>
-<a name="l00289"></a>00289 <span class="preprocessor">       typedef icomp::TMultiFactoryMember&lt;interfaceType&gt;::AttributeType member##_AttrType;\</span>
-<a name="l00290"></a>00290 <span class="preprocessor">       icomp::TMultiFactoryMember&lt;interfaceType&gt; member;</span>
-<a name="l00291"></a>00291 <span class="preprocessor"></span>
-<a name="l00295"></a><a class="code" href="_c_component_base_8h.html#a692ec682602616b4f635745d992efccf">00295</a> <span class="preprocessor">#define I_ASSIGN_BASE(member, id, description, isObligatory)\</span>
-<a name="l00296"></a>00296 <span class="preprocessor">       static icomp::TAttributeStaticInfo&lt;member##_AttrType&gt; member##_Info(staticInfo, id, description, &amp;member##_Default, isObligatory? member##_AttrType::DAF_OBLIGATORY: member##_AttrType::DAF_OPTIONAL, istd::CClassInfo::GetInfo&lt;member##_Type::InterfaceType&gt;());\</span>
-<a name="l00297"></a>00297 <span class="preprocessor">       if (componentPtr != NULL){\</span>
-<a name="l00298"></a>00298 <span class="preprocessor">              componentPtr-&gt;member.Init(componentPtr, member##_Info);\</span>
-<a name="l00299"></a>00299 <span class="preprocessor">       }</span>
-<a name="l00300"></a>00300 <span class="preprocessor"></span>
-<a name="l00307"></a>00307 <span class="preprocessor">#define I_ASSIGN(member, id, description, isObligatory, defaultValue)\</span>
-<a name="l00308"></a>00308 <span class="preprocessor">       static member##_AttrType member##_Default(defaultValue);\</span>
-<a name="l00309"></a>00309 <span class="preprocessor">       I_ASSIGN_BASE(member, id, description, isObligatory)</span>
-<a name="l00310"></a>00310 <span class="preprocessor"></span>
-<a name="l00314"></a><a class="code" href="_c_component_base_8h.html#a5492f482a2ce21fb20030ccd94ca4b88">00314</a> <span class="preprocessor">#define I_ASSIGN_MULTI_BASE(member, id, description, isObligatory, defaultValue)\</span>
-<a name="l00315"></a>00315 <span class="preprocessor">       static member##_AttrType member##_Default(int(sizeof(member##_DefaultElements) / sizeof(member##_AttrType::ValueType)), member##_DefaultElements);\</span>
-<a name="l00316"></a>00316 <span class="preprocessor">       I_ASSIGN_BASE(member, id, description, isObligatory)</span>
-<a name="l00317"></a>00317 <span class="preprocessor"></span>
-<a name="l00323"></a>00323 <span class="preprocessor">#define I_ASSIGN_MULTI_0(member, id, description, isObligatory)\</span>
-<a name="l00324"></a>00324 <span class="preprocessor">       static member##_AttrType member##_Default(0, NULL);\</span>
-<a name="l00325"></a>00325 <span class="preprocessor">       I_ASSIGN_BASE(member, id, description, isObligatory)</span>
-<a name="l00326"></a>00326 <span class="preprocessor"></span>
-<a name="l00332"></a>00332 <span class="preprocessor">#define I_ASSIGN_MULTI_1(member, id, description, isObligatory, defaultValue1)\</span>
-<a name="l00333"></a>00333 <span class="preprocessor">       static member##_AttrType::ValueType member##_DefaultElements[] = {defaultValue1};\</span>
-<a name="l00334"></a>00334 <span class="preprocessor">       I_ASSIGN_MULTI_BASE(member, id, description, isObligatory, defaultValue)</span>
-<a name="l00335"></a>00335 <span class="preprocessor"></span>
-<a name="l00339"></a>00339 <span class="preprocessor">#define I_ASSIGN_MULTI_2(member, id, description, isObligatory, defaultValue1, defaultValue2)\</span>
-<a name="l00340"></a>00340 <span class="preprocessor">       static member##_AttrType::ValueType member##_DefaultElements[] = {defaultValue1, defaultValue2};\</span>
-<a name="l00341"></a>00341 <span class="preprocessor">       I_ASSIGN_MULTI_BASE(member, id, description, isObligatory, defaultValue)</span>
-<a name="l00342"></a>00342 <span class="preprocessor"></span>
-<a name="l00346"></a>00346 <span class="preprocessor">#define I_ASSIGN_MULTI_3(member, id, description, isObligatory, defaultValue1, defaultValue2, defaultValue3)\</span>
-<a name="l00347"></a>00347 <span class="preprocessor">       static member##_AttrType::ValueType member##_DefaultElements[] = {defaultValue1, defaultValue2, defaultValue3};\</span>
-<a name="l00348"></a>00348 <span class="preprocessor">       I_ASSIGN_MULTI_BASE(member, id, description, isObligatory, defaultValue)</span>
-<a name="l00349"></a>00349 <span class="preprocessor"></span>
-<a name="l00353"></a>00353 <span class="preprocessor">#define I_ASSIGN_MULTI_4(member, id, description, isObligatory, defaultValue1, defaultValue2, defaultValue3, defaultValue4)\</span>
-<a name="l00354"></a>00354 <span class="preprocessor">       static member##_AttrType::ValueType member##_DefaultElements[] = {defaultValue1, defaultValue2, defaultValue3, defaultValue4};\</span>
-<a name="l00355"></a>00355 <span class="preprocessor">       I_ASSIGN_MULTI_BASE(member, id, description, isObligatory, defaultValue)</span>
-<a name="l00356"></a>00356 <span class="preprocessor"></span>
-<a name="l00360"></a>00360 <span class="preprocessor">#define I_ASSIGN_MULTI_5(member, id, description, isObligatory, defaultValue1, defaultValue2, defaultValue3, defaultValue4, defaultValue5)\</span>
-<a name="l00361"></a>00361 <span class="preprocessor">       static member##_AttrType::ValueType member##_DefaultElements[] = {defaultValue1, defaultValue2, defaultValue3, defaultValue4, defaultValue5};\</span>
-<a name="l00362"></a>00362 <span class="preprocessor">       I_ASSIGN_MULTI_BASE(member, id, description, isObligatory, defaultValue)</span>
-<a name="l00363"></a>00363 <span class="preprocessor"></span>
-<a name="l00364"></a>00364 
-<a name="l00368"></a><a class="code" href="_c_component_base_8h.html#a46b0dd488123b306c452572e00620d34">00368</a> <span class="preprocessor">#define I_TASSIGN_BASE(member, id, description, isObligatory)\</span>
-<a name="l00369"></a>00369 <span class="preprocessor">       static icomp::TAttributeStaticInfo&lt;member##_AttrType&gt; member##_Info(staticInfo, id, description, &amp;member##_Default, isObligatory? member##_AttrType::DAF_OBLIGATORY: member##_AttrType::DAF_OPTIONAL, istd::CClassInfo::GetInfo&lt;typename member##_Type::InterfaceType&gt;());\</span>
-<a name="l00370"></a>00370 <span class="preprocessor">       if (componentPtr != NULL){\</span>
-<a name="l00371"></a>00371 <span class="preprocessor">              componentPtr-&gt;member.Init(componentPtr, member##_Info);\</span>
-<a name="l00372"></a>00372 <span class="preprocessor">       }</span>
-<a name="l00373"></a>00373 <span class="preprocessor"></span>
-<a name="l00377"></a>00377 <span class="preprocessor">#define I_TASSIGN(member, id, description, isObligatory, defaultValue)\</span>
-<a name="l00378"></a>00378 <span class="preprocessor">       static member##_AttrType member##_Default(defaultValue);\</span>
-<a name="l00379"></a>00379 <span class="preprocessor">       I_TASSIGN_BASE(member, id, description, isObligatory)</span>
-<a name="l00380"></a>00380 <span class="preprocessor"></span>
-<a name="l00384"></a><a class="code" href="_c_component_base_8h.html#a96fedf19d00e2efd7073095a60e354ff">00384</a> <span class="preprocessor">#define I_TASSIGN_MULTI_BASE(member, id, description, isObligatory, defaultValue)\</span>
-<a name="l00385"></a>00385 <span class="preprocessor">       static member##_AttrType member##_Default(int(sizeof(member##_DefaultElements) / sizeof(member##_AttrType::ValueType)), member##_DefaultElements);\</span>
-<a name="l00386"></a>00386 <span class="preprocessor">       I_TASSIGN_BASE(member, id, description, isObligatory)</span>
-<a name="l00387"></a>00387 <span class="preprocessor"></span>
-<a name="l00391"></a>00391 <span class="preprocessor">#define I_TASSIGN_MULTI_0(member, id, description, isObligatory)\</span>
-<a name="l00392"></a>00392 <span class="preprocessor">       static member##_AttrType member##_Default(0, NULL);\</span>
-<a name="l00393"></a>00393 <span class="preprocessor">       I_TASSIGN_BASE(member, id, description, isObligatory)</span>
-<a name="l00394"></a>00394 <span class="preprocessor"></span>
-<a name="l00398"></a>00398 <span class="preprocessor">#define I_TASSIGN_MULTI_1(member, id, description, isObligatory, defaultValue1)\</span>
-<a name="l00399"></a>00399 <span class="preprocessor">       static member##_AttrType::ValueType member##_DefaultElements[] = {defaultValue1};\</span>
-<a name="l00400"></a>00400 <span class="preprocessor">       I_TASSIGN_MULTI_BASE(member, id, description, isObligatory, defaultValue)</span>
-<a name="l00401"></a>00401 <span class="preprocessor"></span>
-<a name="l00405"></a>00405 <span class="preprocessor">#define I_TASSIGN_MULTI_2(member, id, description, isObligatory, defaultValue1, defaultValue2)\</span>
-<a name="l00406"></a>00406 <span class="preprocessor">       static member##_AttrType::ValueType member##_DefaultElements[] = {defaultValue1, defaultValue2};\</span>
-<a name="l00407"></a>00407 <span class="preprocessor">       I_TASSIGN_MULTI_BASE(member, id, description, isObligatory, defaultValue)</span>
-<a name="l00408"></a>00408 <span class="preprocessor"></span>
-<a name="l00412"></a>00412 <span class="preprocessor">#define I_TASSIGN_MULTI_3(member, id, description, isObligatory, defaultValue1, defaultValue2, defaultValue3)\</span>
-<a name="l00413"></a>00413 <span class="preprocessor">       static member##_AttrType::ValueType member##_DefaultElements[] = {defaultValue1, defaultValue2, defaultValue3};\</span>
-<a name="l00414"></a>00414 <span class="preprocessor">       I_TASSIGN_MULTI_BASE(member, id, description, isObligatory, defaultValue)</span>
-<a name="l00415"></a>00415 <span class="preprocessor"></span>
-<a name="l00416"></a>00416 
-<a name="l00420"></a><a class="code" href="_c_component_base_8h.html#a07c8bc559dbc0c8403f6c24cf374fcb7">00420</a> <span class="preprocessor">#define I_ASSIGN_TO(member, baseAttribute, isObligatory)\</span>
-<a name="l00421"></a>00421 <span class="preprocessor">       static icomp::CRelatedInfoRegistrator member##_Info(baseAttribute##_Info, icomp::IComponentStaticInfo::MGI_INTERFACES, istd::CClassInfo::GetInfo&lt;member##_Type::InterfaceType&gt;().GetName(), isObligatory? member##_AttrType::DAF_OBLIGATORY: member##_AttrType::DAF_OPTIONAL);\</span>
-<a name="l00422"></a>00422 <span class="preprocessor">       if (componentPtr != NULL){\</span>
-<a name="l00423"></a>00423 <span class="preprocessor">              componentPtr-&gt;member.Init(componentPtr, baseAttribute##_Info);\</span>
-<a name="l00424"></a>00424 <span class="preprocessor">       }</span>
-<a name="l00425"></a>00425 <span class="preprocessor"></span>
-<a name="l00429"></a><a class="code" href="_c_component_base_8h.html#a9a604c509249dd2ff3e24581366cc0e7">00429</a> <span class="preprocessor">#define I_TASSIGN_TO(member, baseAttribute, isObligatory)\</span>
-<a name="l00430"></a>00430 <span class="preprocessor">       static icomp::CRelatedInfoRegistrator member##_Info(baseAttribute##_Info, icomp::IComponentStaticInfo::MGI_INTERFACES, istd::CClassInfo::GetInfo&lt;typename member##_Type::InterfaceType&gt;().GetName(), isObligatory? member##_AttrType::DAF_OBLIGATORY: member##_AttrType::DAF_OPTIONAL);\</span>
-<a name="l00431"></a>00431 <span class="preprocessor">       if (componentPtr != NULL){\</span>
-<a name="l00432"></a>00432 <span class="preprocessor">              componentPtr-&gt;member.Init(componentPtr, baseAttribute##_Info);\</span>
-<a name="l00433"></a>00433 <span class="preprocessor">       }</span>
-<a name="l00434"></a>00434 <span class="preprocessor"></span>
-<a name="l00439"></a>00439 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Dest&gt;
-<a name="l00440"></a><a class="code" href="_c_component_base_8h.html#a9fbc175455e20bd5d6b2f60972687344">00440</a> Dest* <a class="code" href="_c_component_base_8h.html#a9fbc175455e20bd5d6b2f60972687344" title="Cast to specified interface trying to use component interface query.">CompCastPtr</a>(<a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* objectPtr)
-<a name="l00441"></a>00441 {
-<a name="l00442"></a>00442        <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">icomp::IComponent</a>* componentPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">icomp::IComponent</a>*<span class="keyword">&gt;</span>(objectPtr);
-<a name="l00443"></a>00443        <span class="keywordflow">if</span> (componentPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00444"></a>00444               <a class="code" href="classicomp_1_1_i_composite_component.html" title="Composite component interface.">icomp::ICompositeComponent</a>* parentComponentPtr = <span class="keyword">const_cast&lt;</span><a class="code" href="classicomp_1_1_i_composite_component.html" title="Composite component interface.">icomp::ICompositeComponent</a>*<span class="keyword">&gt;</span>(componentPtr-&gt;<a class="code" href="classicomp_1_1_i_component.html#adca938957e64be16768c0cf32c4bf1e1" title="Get parent of this component.">GetParentComponent</a>(<span class="keyword">true</span>));
-<a name="l00445"></a>00445 
-<a name="l00446"></a>00446               <span class="keywordflow">if</span> (parentComponentPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00447"></a>00447                      Dest* retVal = (Dest*)parentComponentPtr-&gt;<a class="code" href="classicomp_1_1_i_component.html#ac081336b0e23bf323972601368910213" title="Get access to specified component interface.">GetInterface</a>(<a class="code" href="classistd_1_1_c_class_info.html" title="Represents platform independent type info and provide set of static class manipulation functions...">istd::CClassInfo</a>(<span class="keyword">typeid</span>(Dest)));
-<a name="l00448"></a>00448 
-<a name="l00449"></a>00449                      <span class="keywordflow">if</span> (retVal != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00450"></a>00450                             <span class="keywordflow">return</span> retVal;
-<a name="l00451"></a>00451                      }
-<a name="l00452"></a>00452               }
-<a name="l00453"></a>00453        }
-<a name="l00454"></a>00454 
-<a name="l00455"></a>00455        <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span>Dest*<span class="keyword">&gt;</span>(objectPtr);
-<a name="l00456"></a>00456 }
-<a name="l00457"></a>00457 
+<a name="l00091"></a>00091 
+<a name="l00100"></a>00100 <span class="preprocessor">#define I_BEGIN_COMPONENT(ComponentType)\</span>
+<a name="l00101"></a>00101 <span class="preprocessor">       typedef ComponentType CurrentComponentType;\</span>
+<a name="l00102"></a>00102 <span class="preprocessor">       static const icomp::IRealComponentStaticInfo&amp; InitStaticInfo(ComponentType* componentPtr)\</span>
+<a name="l00103"></a>00103 <span class="preprocessor">       {\</span>
+<a name="l00104"></a>00104 <span class="preprocessor">              static icomp::TComponentStaticInfo&lt;ComponentType&gt; staticInfo(&amp;BaseClass::InitStaticInfo(NULL));\</span>
+<a name="l00105"></a>00105 <span class="preprocessor">              static bool isStaticInitialized = false;\</span>
+<a name="l00106"></a>00106 <span class="preprocessor">              if (isStaticInitialized &amp;&amp; (componentPtr == NULL)){\</span>
+<a name="l00107"></a>00107 <span class="preprocessor">                     return staticInfo;\</span>
+<a name="l00108"></a>00108 <span class="preprocessor">              }\</span>
+<a name="l00109"></a>00109 <span class="preprocessor">              isStaticInitialized = true;\</span>
+<a name="l00110"></a>00110 <span class="preprocessor">              BaseClass::InitStaticInfo(componentPtr);</span>
+<a name="l00111"></a>00111 <span class="preprocessor"></span>
+<a name="l00118"></a>00118 <span class="preprocessor">#define I_BEGIN_BASE_COMPONENT(ComponentType)\</span>
+<a name="l00119"></a>00119 <span class="preprocessor">       typedef ComponentType CurrentComponentType;\</span>
+<a name="l00120"></a>00120 <span class="preprocessor">       static const icomp::IRealComponentStaticInfo&amp; InitStaticInfo(ComponentType* componentPtr)\</span>
+<a name="l00121"></a>00121 <span class="preprocessor">       {\</span>
+<a name="l00122"></a>00122 <span class="preprocessor">              static icomp::CBaseComponentStaticInfo staticInfo(&amp;BaseClass::InitStaticInfo(NULL));\</span>
+<a name="l00123"></a>00123 <span class="preprocessor">              static bool isStaticInitialized = false;\</span>
+<a name="l00124"></a>00124 <span class="preprocessor">              if (isStaticInitialized &amp;&amp; (componentPtr == NULL)){\</span>
+<a name="l00125"></a>00125 <span class="preprocessor">                     return staticInfo;\</span>
+<a name="l00126"></a>00126 <span class="preprocessor">              }\</span>
+<a name="l00127"></a>00127 <span class="preprocessor">              isStaticInitialized = true;\</span>
+<a name="l00128"></a>00128 <span class="preprocessor">              BaseClass::InitStaticInfo(componentPtr);</span>
+<a name="l00129"></a>00129 <span class="preprocessor"></span>
+<a name="l00137"></a>00137 <span class="preprocessor">#define I_END_COMPONENT\</span>
+<a name="l00138"></a>00138 <span class="preprocessor">              return staticInfo;\</span>
+<a name="l00139"></a>00139 <span class="preprocessor">       }\</span>
+<a name="l00140"></a>00140 <span class="preprocessor">       virtual const icomp::IRealComponentStaticInfo&amp; GetComponentStaticInfo() const\</span>
+<a name="l00141"></a>00141 <span class="preprocessor">       {\</span>
+<a name="l00142"></a>00142 <span class="preprocessor">              return InitStaticInfo(NULL);\</span>
+<a name="l00143"></a>00143 <span class="preprocessor">       }</span>
+<a name="l00144"></a>00144 <span class="preprocessor"></span>
+<a name="l00151"></a>00151 <span class="preprocessor">#define I_REGISTER_INTERFACE(InterfaceType)\</span>
+<a name="l00152"></a>00152 <span class="preprocessor">       {\</span>
+<a name="l00153"></a>00153 <span class="preprocessor">              static icomp::TInterfaceRegistrator&lt;InterfaceType&gt; staticRegistrator(staticInfo);\</span>
+<a name="l00154"></a>00154 <span class="preprocessor">       }</span>
+<a name="l00155"></a>00155 <span class="preprocessor"></span>
+<a name="l00159"></a><a class="code" href="_c_component_base_8h.html#ac4bf5ae770b4ca0f33fb13b7dcf6cb5d">00159</a> <span class="preprocessor">#define I_REGISTER_SUBELEMENT(ElementName)\</span>
+<a name="l00160"></a>00160 <span class="preprocessor">       static icomp::TSubelementStaticInfo&lt;CurrentComponentType&gt; subelementInfo_##ElementName(#ElementName, staticInfo);</span>
+<a name="l00161"></a>00161 <span class="preprocessor"></span>
+<a name="l00168"></a><a class="code" href="_c_component_base_8h.html#ab2b90c5b1e9ccfb347bfdcac76cea2fd">00168</a> <span class="preprocessor">#define I_REGISTER_SUBELEMENT_INTERFACE(ElementName, InterfaceType, extractorFunction)\</span>
+<a name="l00169"></a>00169 <span class="preprocessor">       {\</span>
+<a name="l00170"></a>00170 <span class="preprocessor">              static icomp::TSubelementStaticInfo&lt;CurrentComponentType&gt;::Registrator&lt;InterfaceType&gt; registrator(\</span>
+<a name="l00171"></a>00171 <span class="preprocessor">                                   subelementInfo_##ElementName,\</span>
+<a name="l00172"></a>00172 <span class="preprocessor">                                   extractorFunction);\</span>
+<a name="l00173"></a>00173 <span class="preprocessor">       }</span>
+<a name="l00174"></a>00174 <span class="preprocessor"></span>
+<a name="l00181"></a><a class="code" href="_c_component_base_8h.html#a066dd1fa9d7f8ae60350f54e5fe07f29">00181</a> <span class="preprocessor">#define I_REGISTER_SUBELEMENT_INTERFACE_T(ElementName, InterfaceType, extractorFunction)\</span>
+<a name="l00182"></a>00182 <span class="preprocessor">       {\</span>
+<a name="l00183"></a>00183 <span class="preprocessor">              static icomp::TSubelementStaticInfo&lt;CurrentComponentType&gt;::Registrator&lt;InterfaceType&gt; registrator(\</span>
+<a name="l00184"></a>00184 <span class="preprocessor">                                   subelementInfo_##ElementName,\</span>
+<a name="l00185"></a>00185 <span class="preprocessor">                                   extractorFunction&lt;InterfaceType&gt;);\</span>
+<a name="l00186"></a>00186 <span class="preprocessor">       }</span>
+<a name="l00187"></a>00187 <span class="preprocessor"></span>
+<a name="l00191"></a>00191 <span class="preprocessor">#define I_USER_ATTR(attrType, member)\</span>
+<a name="l00192"></a>00192 <span class="preprocessor">       typedef icomp::TAttributeMember&lt; attrType &gt; member##_Type;\</span>
+<a name="l00193"></a>00193 <span class="preprocessor">       typedef icomp::TAttributeMember&lt; attrType &gt;::AttributeType member##_AttrType;\</span>
+<a name="l00194"></a>00194 <span class="preprocessor">       icomp::TAttributeMember&lt; attrType &gt; member;</span>
+<a name="l00195"></a>00195 <span class="preprocessor"></span>
+<a name="l00207"></a>00207 <span class="preprocessor">#define I_ATTR(attrType, member)\</span>
+<a name="l00208"></a>00208 <span class="preprocessor">       I_USER_ATTR(icomp::TAttribute&lt; attrType &gt;, member)</span>
+<a name="l00209"></a>00209 <span class="preprocessor"></span>
+<a name="l00213"></a>00213 <span class="preprocessor">#define I_USER_MULTIATTR(attrType, member)\</span>
+<a name="l00214"></a>00214 <span class="preprocessor">       typedef icomp::TMultiAttributeMember&lt; attrType &gt; member##_Type;\</span>
+<a name="l00215"></a>00215 <span class="preprocessor">       typedef icomp::TMultiAttributeMember&lt; attrType &gt;::AttributeType member##_AttrType;\</span>
+<a name="l00216"></a>00216 <span class="preprocessor">       icomp::TMultiAttributeMember&lt; attrType &gt; member;</span>
+<a name="l00217"></a>00217 <span class="preprocessor"></span>
+<a name="l00228"></a>00228 <span class="preprocessor">#define I_MULTIATTR(attrType, member)\</span>
+<a name="l00229"></a>00229 <span class="preprocessor">       I_USER_MULTIATTR(icomp::TMultiAttribute&lt;attrType&gt;, member)</span>
+<a name="l00230"></a>00230 <span class="preprocessor"></span>
+<a name="l00237"></a>00237 <span class="preprocessor">#define I_REF(interfaceType, member)\</span>
+<a name="l00238"></a>00238 <span class="preprocessor">       typedef icomp::TReferenceMember&lt;interfaceType&gt; member##_Type;\</span>
+<a name="l00239"></a>00239 <span class="preprocessor">       typedef icomp::TReferenceMember&lt;interfaceType&gt;::AttributeType member##_AttrType;\</span>
+<a name="l00240"></a>00240 <span class="preprocessor">       icomp::TReferenceMember&lt;interfaceType&gt; member;</span>
+<a name="l00241"></a>00241 <span class="preprocessor"></span>
+<a name="l00245"></a>00245 <span class="preprocessor">#define I_TREF(interfaceType, member)\</span>
+<a name="l00246"></a>00246 <span class="preprocessor">       typedef icomp::TReferenceMember&lt;interfaceType&gt; member##_Type;\</span>
+<a name="l00247"></a>00247 <span class="preprocessor">       typedef typename icomp::TReferenceMember&lt;interfaceType&gt;::AttributeType member##_AttrType;\</span>
+<a name="l00248"></a>00248 <span class="preprocessor">       icomp::TReferenceMember&lt;interfaceType&gt; member;</span>
+<a name="l00249"></a>00249 <span class="preprocessor"></span>
+<a name="l00253"></a>00253 <span class="preprocessor">#define I_TMULTIREF(interfaceType, member)\</span>
+<a name="l00254"></a>00254 <span class="preprocessor">       typedef icomp::TMultiReferenceMember&lt;interfaceType&gt; member##_Type;\</span>
+<a name="l00255"></a>00255 <span class="preprocessor">       typedef typename icomp::TMultiReferenceMember&lt;interfaceType&gt;::AttributeType member##_AttrType;\</span>
+<a name="l00256"></a>00256 <span class="preprocessor">       icomp::TMultiReferenceMember&lt;interfaceType&gt; member;</span>
+<a name="l00257"></a>00257 <span class="preprocessor"></span>
+<a name="l00258"></a>00258 
+<a name="l00264"></a>00264 <span class="preprocessor">#define I_MULTIREF(interfaceType, member)\</span>
+<a name="l00265"></a>00265 <span class="preprocessor">       typedef icomp::TMultiReferenceMember&lt;interfaceType&gt; member##_Type;\</span>
+<a name="l00266"></a>00266 <span class="preprocessor">       typedef icomp::TMultiReferenceMember&lt;interfaceType&gt;::AttributeType member##_AttrType;\</span>
+<a name="l00267"></a>00267 <span class="preprocessor">       icomp::TMultiReferenceMember&lt;interfaceType&gt; member;</span>
+<a name="l00268"></a>00268 <span class="preprocessor"></span>
+<a name="l00274"></a>00274 <span class="preprocessor">#define I_FACT(interfaceType, member)\</span>
+<a name="l00275"></a>00275 <span class="preprocessor">       typedef icomp::TFactoryMember&lt;interfaceType&gt; member##_Type;\</span>
+<a name="l00276"></a>00276 <span class="preprocessor">       typedef icomp::TFactoryMember&lt;interfaceType&gt;::AttributeType member##_AttrType;\</span>
+<a name="l00277"></a>00277 <span class="preprocessor">       icomp::TFactoryMember&lt;interfaceType&gt; member;</span>
+<a name="l00278"></a>00278 <span class="preprocessor"></span>
+<a name="l00279"></a><a class="code" href="_c_component_base_8h.html#a91a1c623c0ea9f2fb0a37e19e1280f09">00279</a> <span class="preprocessor">#define I_TFACT(interfaceType, member)\</span>
+<a name="l00280"></a>00280 <span class="preprocessor">       typedef icomp::TFactoryMember&lt;interfaceType&gt; member##_Type;\</span>
+<a name="l00281"></a>00281 <span class="preprocessor">       typedef typename icomp::TFactoryMember&lt;interfaceType&gt;::AttributeType member##_AttrType;\</span>
+<a name="l00282"></a>00282 <span class="preprocessor">       icomp::TFactoryMember&lt;interfaceType&gt; member;</span>
+<a name="l00283"></a>00283 <span class="preprocessor"></span>
+<a name="l00288"></a>00288 <span class="preprocessor">#define I_MULTIFACT(interfaceType, member)\</span>
+<a name="l00289"></a>00289 <span class="preprocessor">       typedef icomp::TMultiFactoryMember&lt;interfaceType&gt; member##_Type;\</span>
+<a name="l00290"></a>00290 <span class="preprocessor">       typedef icomp::TMultiFactoryMember&lt;interfaceType&gt;::AttributeType member##_AttrType;\</span>
+<a name="l00291"></a>00291 <span class="preprocessor">       icomp::TMultiFactoryMember&lt;interfaceType&gt; member;</span>
+<a name="l00292"></a>00292 <span class="preprocessor"></span>
+<a name="l00296"></a><a class="code" href="_c_component_base_8h.html#a692ec682602616b4f635745d992efccf">00296</a> <span class="preprocessor">#define I_ASSIGN_BASE(member, id, description, isObligatory)\</span>
+<a name="l00297"></a>00297 <span class="preprocessor">       static icomp::TAttributeStaticInfo&lt;member##_AttrType&gt; member##_Info(staticInfo, id, description, &amp;member##_Default, isObligatory? member##_AttrType::DAF_OBLIGATORY: member##_AttrType::DAF_OPTIONAL, istd::CClassInfo::GetInfo&lt;member##_Type::InterfaceType&gt;());\</span>
+<a name="l00298"></a>00298 <span class="preprocessor">       if (componentPtr != NULL){\</span>
+<a name="l00299"></a>00299 <span class="preprocessor">              componentPtr-&gt;member.Init(componentPtr, member##_Info);\</span>
+<a name="l00300"></a>00300 <span class="preprocessor">       }</span>
+<a name="l00301"></a>00301 <span class="preprocessor"></span>
+<a name="l00308"></a>00308 <span class="preprocessor">#define I_ASSIGN(member, id, description, isObligatory, defaultValue)\</span>
+<a name="l00309"></a>00309 <span class="preprocessor">       static member##_AttrType member##_Default(defaultValue);\</span>
+<a name="l00310"></a>00310 <span class="preprocessor">       I_ASSIGN_BASE(member, id, description, isObligatory)</span>
+<a name="l00311"></a>00311 <span class="preprocessor"></span>
+<a name="l00315"></a><a class="code" href="_c_component_base_8h.html#a5492f482a2ce21fb20030ccd94ca4b88">00315</a> <span class="preprocessor">#define I_ASSIGN_MULTI_BASE(member, id, description, isObligatory, defaultValue)\</span>
+<a name="l00316"></a>00316 <span class="preprocessor">       static member##_AttrType member##_Default(int(sizeof(member##_DefaultElements) / sizeof(member##_AttrType::ValueType)), member##_DefaultElements);\</span>
+<a name="l00317"></a>00317 <span class="preprocessor">       I_ASSIGN_BASE(member, id, description, isObligatory)</span>
+<a name="l00318"></a>00318 <span class="preprocessor"></span>
+<a name="l00324"></a>00324 <span class="preprocessor">#define I_ASSIGN_MULTI_0(member, id, description, isObligatory)\</span>
+<a name="l00325"></a>00325 <span class="preprocessor">       static member##_AttrType member##_Default(0, NULL);\</span>
+<a name="l00326"></a>00326 <span class="preprocessor">       I_ASSIGN_BASE(member, id, description, isObligatory)</span>
+<a name="l00327"></a>00327 <span class="preprocessor"></span>
+<a name="l00333"></a>00333 <span class="preprocessor">#define I_ASSIGN_MULTI_1(member, id, description, isObligatory, defaultValue1)\</span>
+<a name="l00334"></a>00334 <span class="preprocessor">       static member##_AttrType::ValueType member##_DefaultElements[] = {defaultValue1};\</span>
+<a name="l00335"></a>00335 <span class="preprocessor">       I_ASSIGN_MULTI_BASE(member, id, description, isObligatory, defaultValue)</span>
+<a name="l00336"></a>00336 <span class="preprocessor"></span>
+<a name="l00340"></a>00340 <span class="preprocessor">#define I_ASSIGN_MULTI_2(member, id, description, isObligatory, defaultValue1, defaultValue2)\</span>
+<a name="l00341"></a>00341 <span class="preprocessor">       static member##_AttrType::ValueType member##_DefaultElements[] = {defaultValue1, defaultValue2};\</span>
+<a name="l00342"></a>00342 <span class="preprocessor">       I_ASSIGN_MULTI_BASE(member, id, description, isObligatory, defaultValue)</span>
+<a name="l00343"></a>00343 <span class="preprocessor"></span>
+<a name="l00347"></a>00347 <span class="preprocessor">#define I_ASSIGN_MULTI_3(member, id, description, isObligatory, defaultValue1, defaultValue2, defaultValue3)\</span>
+<a name="l00348"></a>00348 <span class="preprocessor">       static member##_AttrType::ValueType member##_DefaultElements[] = {defaultValue1, defaultValue2, defaultValue3};\</span>
+<a name="l00349"></a>00349 <span class="preprocessor">       I_ASSIGN_MULTI_BASE(member, id, description, isObligatory, defaultValue)</span>
+<a name="l00350"></a>00350 <span class="preprocessor"></span>
+<a name="l00354"></a>00354 <span class="preprocessor">#define I_ASSIGN_MULTI_4(member, id, description, isObligatory, defaultValue1, defaultValue2, defaultValue3, defaultValue4)\</span>
+<a name="l00355"></a>00355 <span class="preprocessor">       static member##_AttrType::ValueType member##_DefaultElements[] = {defaultValue1, defaultValue2, defaultValue3, defaultValue4};\</span>
+<a name="l00356"></a>00356 <span class="preprocessor">       I_ASSIGN_MULTI_BASE(member, id, description, isObligatory, defaultValue)</span>
+<a name="l00357"></a>00357 <span class="preprocessor"></span>
+<a name="l00361"></a>00361 <span class="preprocessor">#define I_ASSIGN_MULTI_5(member, id, description, isObligatory, defaultValue1, defaultValue2, defaultValue3, defaultValue4, defaultValue5)\</span>
+<a name="l00362"></a>00362 <span class="preprocessor">       static member##_AttrType::ValueType member##_DefaultElements[] = {defaultValue1, defaultValue2, defaultValue3, defaultValue4, defaultValue5};\</span>
+<a name="l00363"></a>00363 <span class="preprocessor">       I_ASSIGN_MULTI_BASE(member, id, description, isObligatory, defaultValue)</span>
+<a name="l00364"></a>00364 <span class="preprocessor"></span>
+<a name="l00365"></a>00365 
+<a name="l00369"></a><a class="code" href="_c_component_base_8h.html#a46b0dd488123b306c452572e00620d34">00369</a> <span class="preprocessor">#define I_TASSIGN_BASE(member, id, description, isObligatory)\</span>
+<a name="l00370"></a>00370 <span class="preprocessor">       static icomp::TAttributeStaticInfo&lt;member##_AttrType&gt; member##_Info(staticInfo, id, description, &amp;member##_Default, isObligatory? member##_AttrType::DAF_OBLIGATORY: member##_AttrType::DAF_OPTIONAL, istd::CClassInfo::GetInfo&lt;typename member##_Type::InterfaceType&gt;());\</span>
+<a name="l00371"></a>00371 <span class="preprocessor">       if (componentPtr != NULL){\</span>
+<a name="l00372"></a>00372 <span class="preprocessor">              componentPtr-&gt;member.Init(componentPtr, member##_Info);\</span>
+<a name="l00373"></a>00373 <span class="preprocessor">       }</span>
+<a name="l00374"></a>00374 <span class="preprocessor"></span>
+<a name="l00378"></a>00378 <span class="preprocessor">#define I_TASSIGN(member, id, description, isObligatory, defaultValue)\</span>
+<a name="l00379"></a>00379 <span class="preprocessor">       static member##_AttrType member##_Default(defaultValue);\</span>
+<a name="l00380"></a>00380 <span class="preprocessor">       I_TASSIGN_BASE(member, id, description, isObligatory)</span>
+<a name="l00381"></a>00381 <span class="preprocessor"></span>
+<a name="l00385"></a><a class="code" href="_c_component_base_8h.html#a96fedf19d00e2efd7073095a60e354ff">00385</a> <span class="preprocessor">#define I_TASSIGN_MULTI_BASE(member, id, description, isObligatory, defaultValue)\</span>
+<a name="l00386"></a>00386 <span class="preprocessor">       static member##_AttrType member##_Default(int(sizeof(member##_DefaultElements) / sizeof(member##_AttrType::ValueType)), member##_DefaultElements);\</span>
+<a name="l00387"></a>00387 <span class="preprocessor">       I_TASSIGN_BASE(member, id, description, isObligatory)</span>
+<a name="l00388"></a>00388 <span class="preprocessor"></span>
+<a name="l00392"></a>00392 <span class="preprocessor">#define I_TASSIGN_MULTI_0(member, id, description, isObligatory)\</span>
+<a name="l00393"></a>00393 <span class="preprocessor">       static member##_AttrType member##_Default(0, NULL);\</span>
+<a name="l00394"></a>00394 <span class="preprocessor">       I_TASSIGN_BASE(member, id, description, isObligatory)</span>
+<a name="l00395"></a>00395 <span class="preprocessor"></span>
+<a name="l00399"></a>00399 <span class="preprocessor">#define I_TASSIGN_MULTI_1(member, id, description, isObligatory, defaultValue1)\</span>
+<a name="l00400"></a>00400 <span class="preprocessor">       static member##_AttrType::ValueType member##_DefaultElements[] = {defaultValue1};\</span>
+<a name="l00401"></a>00401 <span class="preprocessor">       I_TASSIGN_MULTI_BASE(member, id, description, isObligatory, defaultValue)</span>
+<a name="l00402"></a>00402 <span class="preprocessor"></span>
+<a name="l00406"></a>00406 <span class="preprocessor">#define I_TASSIGN_MULTI_2(member, id, description, isObligatory, defaultValue1, defaultValue2)\</span>
+<a name="l00407"></a>00407 <span class="preprocessor">       static member##_AttrType::ValueType member##_DefaultElements[] = {defaultValue1, defaultValue2};\</span>
+<a name="l00408"></a>00408 <span class="preprocessor">       I_TASSIGN_MULTI_BASE(member, id, description, isObligatory, defaultValue)</span>
+<a name="l00409"></a>00409 <span class="preprocessor"></span>
+<a name="l00413"></a>00413 <span class="preprocessor">#define I_TASSIGN_MULTI_3(member, id, description, isObligatory, defaultValue1, defaultValue2, defaultValue3)\</span>
+<a name="l00414"></a>00414 <span class="preprocessor">       static member##_AttrType::ValueType member##_DefaultElements[] = {defaultValue1, defaultValue2, defaultValue3};\</span>
+<a name="l00415"></a>00415 <span class="preprocessor">       I_TASSIGN_MULTI_BASE(member, id, description, isObligatory, defaultValue)</span>
+<a name="l00416"></a>00416 <span class="preprocessor"></span>
+<a name="l00417"></a>00417 
+<a name="l00421"></a><a class="code" href="_c_component_base_8h.html#a07c8bc559dbc0c8403f6c24cf374fcb7">00421</a> <span class="preprocessor">#define I_ASSIGN_TO(member, baseAttribute, isObligatory)\</span>
+<a name="l00422"></a>00422 <span class="preprocessor">       static icomp::CRelatedInfoRegistrator member##_Info(baseAttribute##_Info, icomp::IComponentStaticInfo::MGI_INTERFACES, istd::CClassInfo::GetInfo&lt;member##_Type::InterfaceType&gt;().GetName(), isObligatory? member##_AttrType::DAF_OBLIGATORY: member##_AttrType::DAF_OPTIONAL);\</span>
+<a name="l00423"></a>00423 <span class="preprocessor">       if (componentPtr != NULL){\</span>
+<a name="l00424"></a>00424 <span class="preprocessor">              componentPtr-&gt;member.Init(componentPtr, baseAttribute##_Info);\</span>
+<a name="l00425"></a>00425 <span class="preprocessor">       }</span>
+<a name="l00426"></a>00426 <span class="preprocessor"></span>
+<a name="l00430"></a><a class="code" href="_c_component_base_8h.html#a9a604c509249dd2ff3e24581366cc0e7">00430</a> <span class="preprocessor">#define I_TASSIGN_TO(member, baseAttribute, isObligatory)\</span>
+<a name="l00431"></a>00431 <span class="preprocessor">       static icomp::CRelatedInfoRegistrator member##_Info(baseAttribute##_Info, icomp::IComponentStaticInfo::MGI_INTERFACES, istd::CClassInfo::GetInfo&lt;typename member##_Type::InterfaceType&gt;().GetName(), isObligatory? member##_AttrType::DAF_OBLIGATORY: member##_AttrType::DAF_OPTIONAL);\</span>
+<a name="l00432"></a>00432 <span class="preprocessor">       if (componentPtr != NULL){\</span>
+<a name="l00433"></a>00433 <span class="preprocessor">              componentPtr-&gt;member.Init(componentPtr, baseAttribute##_Info);\</span>
+<a name="l00434"></a>00434 <span class="preprocessor">       }</span>
+<a name="l00435"></a>00435 <span class="preprocessor"></span>
+<a name="l00440"></a>00440 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Dest&gt;
+<a name="l00441"></a><a class="code" href="_c_component_base_8h.html#a9fbc175455e20bd5d6b2f60972687344">00441</a> Dest* <a class="code" href="_c_component_base_8h.html#a9fbc175455e20bd5d6b2f60972687344" title="Cast to specified interface trying to use component interface query.">CompCastPtr</a>(<a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* objectPtr)
+<a name="l00442"></a>00442 {
+<a name="l00443"></a>00443        <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">icomp::IComponent</a>* componentPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">icomp::IComponent</a>*<span class="keyword">&gt;</span>(objectPtr);
+<a name="l00444"></a>00444        <span class="keywordflow">if</span> (componentPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00445"></a>00445               <a class="code" href="classicomp_1_1_i_composite_component.html" title="Composite component interface.">icomp::ICompositeComponent</a>* parentComponentPtr = <span class="keyword">const_cast&lt;</span><a class="code" href="classicomp_1_1_i_composite_component.html" title="Composite component interface.">icomp::ICompositeComponent</a>*<span class="keyword">&gt;</span>(componentPtr-&gt;<a class="code" href="classicomp_1_1_i_component.html#adca938957e64be16768c0cf32c4bf1e1" title="Get parent of this component.">GetParentComponent</a>(<span class="keyword">true</span>));
+<a name="l00446"></a>00446 
+<a name="l00447"></a>00447               <span class="keywordflow">if</span> (parentComponentPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00448"></a>00448                      Dest* retVal = (Dest*)parentComponentPtr-&gt;<a class="code" href="classicomp_1_1_i_component.html#ac081336b0e23bf323972601368910213" title="Get access to specified component interface.">GetInterface</a>(<a class="code" href="classistd_1_1_c_class_info.html" title="Represents platform independent type info and provide set of static class manipulation functions...">istd::CClassInfo</a>(<span class="keyword">typeid</span>(Dest)));
+<a name="l00449"></a>00449 
+<a name="l00450"></a>00450                      <span class="keywordflow">if</span> (retVal != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00451"></a>00451                             <span class="keywordflow">return</span> retVal;
+<a name="l00452"></a>00452                      }
+<a name="l00453"></a>00453               }
+<a name="l00454"></a>00454        }
+<a name="l00455"></a>00455 
+<a name="l00456"></a>00456        <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span>Dest*<span class="keyword">&gt;</span>(objectPtr);
+<a name="l00457"></a>00457 }
 <a name="l00458"></a>00458 
-<a name="l00464"></a>00464 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Dest&gt;
-<a name="l00465"></a><a class="code" href="_c_component_base_8h.html#a9c49751ab6c87d32ecea5873ee4f67dc">00465</a> <span class="keyword">const</span> Dest* <a class="code" href="_c_component_base_8h.html#a9fbc175455e20bd5d6b2f60972687344" title="Cast to specified interface trying to use component interface query.">CompCastPtr</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* objectPtr)
-<a name="l00466"></a>00466 {
-<a name="l00467"></a>00467        <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">icomp::IComponent</a>* componentPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">icomp::IComponent</a>*<span class="keyword">&gt;</span>(objectPtr);
-<a name="l00468"></a>00468        <span class="keywordflow">if</span> (componentPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00469"></a>00469               <a class="code" href="classicomp_1_1_i_composite_component.html" title="Composite component interface.">icomp::ICompositeComponent</a>* parentComponentPtr = <span class="keyword">const_cast&lt;</span><a class="code" href="classicomp_1_1_i_composite_component.html" title="Composite component interface.">icomp::ICompositeComponent</a>*<span class="keyword">&gt;</span>(componentPtr-&gt;<a class="code" href="classicomp_1_1_i_component.html#adca938957e64be16768c0cf32c4bf1e1" title="Get parent of this component.">GetParentComponent</a>(<span class="keyword">true</span>));
-<a name="l00470"></a>00470 
-<a name="l00471"></a>00471               <span class="keywordflow">if</span> (parentComponentPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00472"></a>00472                      <span class="keyword">const</span> Dest* retVal = (<span class="keyword">const</span> Dest*)parentComponentPtr-&gt;<a class="code" href="classicomp_1_1_i_component.html#ac081336b0e23bf323972601368910213" title="Get access to specified component interface.">GetInterface</a>(<a class="code" href="classistd_1_1_c_class_info.html" title="Represents platform independent type info and provide set of static class manipulation functions...">istd::CClassInfo</a>(<span class="keyword">typeid</span>(Dest)));
-<a name="l00473"></a>00473 
-<a name="l00474"></a>00474                      <span class="keywordflow">if</span> (retVal != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
-<a name="l00475"></a>00475                             <span class="keywordflow">return</span> retVal;
-<a name="l00476"></a>00476                      }
-<a name="l00477"></a>00477               }
-<a name="l00478"></a>00478        }
-<a name="l00479"></a>00479 
-<a name="l00480"></a>00480        <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span>Dest*<span class="keyword">&gt;</span>(objectPtr);
-<a name="l00481"></a>00481 }
-<a name="l00482"></a>00482 
+<a name="l00459"></a>00459 
+<a name="l00465"></a>00465 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Dest&gt;
+<a name="l00466"></a><a class="code" href="_c_component_base_8h.html#a9c49751ab6c87d32ecea5873ee4f67dc">00466</a> <span class="keyword">const</span> Dest* <a class="code" href="_c_component_base_8h.html#a9fbc175455e20bd5d6b2f60972687344" title="Cast to specified interface trying to use component interface query.">CompCastPtr</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* objectPtr)
+<a name="l00467"></a>00467 {
+<a name="l00468"></a>00468        <span class="keyword">const</span> <a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">icomp::IComponent</a>* componentPtr = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="classicomp_1_1_i_component.html" title="Main component interface.">icomp::IComponent</a>*<span class="keyword">&gt;</span>(objectPtr);
+<a name="l00469"></a>00469        <span class="keywordflow">if</span> (componentPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00470"></a>00470               <a class="code" href="classicomp_1_1_i_composite_component.html" title="Composite component interface.">icomp::ICompositeComponent</a>* parentComponentPtr = <span class="keyword">const_cast&lt;</span><a class="code" href="classicomp_1_1_i_composite_component.html" title="Composite component interface.">icomp::ICompositeComponent</a>*<span class="keyword">&gt;</span>(componentPtr-&gt;<a class="code" href="classicomp_1_1_i_component.html#adca938957e64be16768c0cf32c4bf1e1" title="Get parent of this component.">GetParentComponent</a>(<span class="keyword">true</span>));
+<a name="l00471"></a>00471 
+<a name="l00472"></a>00472               <span class="keywordflow">if</span> (parentComponentPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00473"></a>00473                      <span class="keyword">const</span> Dest* retVal = (<span class="keyword">const</span> Dest*)parentComponentPtr-&gt;<a class="code" href="classicomp_1_1_i_component.html#ac081336b0e23bf323972601368910213" title="Get access to specified component interface.">GetInterface</a>(<a class="code" href="classistd_1_1_c_class_info.html" title="Represents platform independent type info and provide set of static class manipulation functions...">istd::CClassInfo</a>(<span class="keyword">typeid</span>(Dest)));
+<a name="l00474"></a>00474 
+<a name="l00475"></a>00475                      <span class="keywordflow">if</span> (retVal != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
+<a name="l00476"></a>00476                             <span class="keywordflow">return</span> retVal;
+<a name="l00477"></a>00477                      }
+<a name="l00478"></a>00478               }
+<a name="l00479"></a>00479        }
+<a name="l00480"></a>00480 
+<a name="l00481"></a>00481        <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span>Dest*<span class="keyword">&gt;</span>(objectPtr);
+<a name="l00482"></a>00482 }
 <a name="l00483"></a>00483 
-<a name="l00484"></a>00484 <span class="preprocessor">#endif // !icomp_CComponentBase_included</span>
-<a name="l00485"></a>00485 <span class="preprocessor"></span>
+<a name="l00484"></a>00484 
+<a name="l00485"></a>00485 <span class="preprocessor">#endif // !icomp_CComponentBase_included</span>
+<a name="l00486"></a>00486 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

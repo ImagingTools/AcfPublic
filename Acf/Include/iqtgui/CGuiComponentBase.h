@@ -96,12 +96,6 @@ protected:
 
 protected:
 	/**
-		Called from widget event filter when key is pressed.
-		\return	if event was consumed returns true, otherwise false.
-	*/
-	virtual bool OnKeyPressed(QKeyEvent* event);
-
-	/**
 		Called from widget event filter when slave widget is shown.
 	*/
 	virtual void OnGuiShown();
@@ -110,6 +104,12 @@ protected:
 		Called from widget event filter when slave widget is hidden.
 	*/
 	virtual void OnGuiHidden();
+
+	/**
+		Called from widget event filter when key is pressed.
+		\return	if event was consumed returns true, otherwise false.
+	*/
+	virtual bool OnKeyPressed(QKeyEvent* event);
 
 	/**
 		Called when non-GUI elements (like commands) should be retranslated.

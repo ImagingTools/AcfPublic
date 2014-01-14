@@ -16099,6 +16099,13 @@
       <anchor>a9aa72f8300da1433878507f90af3dff7</anchor>
       <arglist>(IComponent *componentPtr)</arglist>
     </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static QByteArray</type>
+      <name>GetComponentId</name>
+      <anchorfile>classicomp_1_1_c_component_base.html</anchorfile>
+      <anchor>a0024c776694af9db8798416b15347d86</anchor>
+      <arglist>(const icomp::IComponentContext *componentContextPtr, const QByteArray &amp;contextId=QByteArray())</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>icomp::CComponentContext</name>
@@ -38669,13 +38676,6 @@
       <arglist>(bool *ignoredPtr=NULL)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnKeyPressed</name>
-      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
-      <anchor>a24980a8b71effd8ececadf88332ba23e</anchor>
-      <arglist>(QKeyEvent *event)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiShown</name>
       <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
@@ -38688,6 +38688,13 @@
       <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
       <anchor>afbd128aa3b05f07eb37b478a05715c68</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnKeyPressed</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
+      <anchor>a24980a8b71effd8ececadf88332ba23e</anchor>
+      <arglist>(QKeyEvent *event)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
