@@ -53,50 +53,51 @@
 <a name="l00028"></a>00028 {
 <a name="l00029"></a>00029 <span class="keyword">public</span>:
 <a name="l00030"></a><a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#a6dee28458fe443fac94b83f8a265265e">00030</a>        <span class="keyword">typedef</span> <a class="code" href="classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase&lt;QToolBar&gt;</a> <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#a6dee28458fe443fac94b83f8a265265e">BaseClass</a>;
-<a name="l00031"></a><a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#aa95e2f0735dd96b9e431920f5db9a705">00031</a>        <span class="keyword">enum</span> <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#aa95e2f0735dd96b9e431920f5db9a705">DockFeatures</a>
-<a name="l00032"></a>00032        {
-<a name="l00033"></a><a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#aa95e2f0735dd96b9e431920f5db9a705a94c93ed70b8ec52891abbf51b381dfc3">00033</a>               <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#aa95e2f0735dd96b9e431920f5db9a705a94c93ed70b8ec52891abbf51b381dfc3">DF_MOVEABLE</a> = 1,
-<a name="l00034"></a><a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#aa95e2f0735dd96b9e431920f5db9a705aa93834191e8bd8ff6551b3259f27262b">00034</a>               <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#aa95e2f0735dd96b9e431920f5db9a705aa93834191e8bd8ff6551b3259f27262b">DF_FLOATABLE</a> = 2
-<a name="l00035"></a>00035        };
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html" title="Basic implementation of a tool bar component.">CToolBarGuiCompBase</a>);
-<a name="l00038"></a>00038               I_REGISTER_INTERFACE(<a class="code" href="classiqtgui_1_1_i_main_window_component.html" title="A common interface for main window component such as dock widget, tool bar and so on...">iqtgui::IMainWindowComponent</a>);
-<a name="l00039"></a>00039               I_ASSIGN(m_toolBarAreaAttrPtr, <span class="stringliteral">&quot;ToolBarArea&quot;</span>, <span class="stringliteral">&quot;Specify the area for this toolbar\n 0 - left\n 1 - right\n 2 - top\n 3 - bottom&quot;</span>, <span class="keyword">false</span>, 0);
-<a name="l00040"></a>00040               I_ASSIGN(m_useVerticalOrientationAttrPtr, <span class="stringliteral">&quot;UseVerticalOrientation&quot;</span>, <span class="stringliteral">&quot;Use vertical orientation of the tool bar&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
-<a name="l00041"></a>00041               I_ASSIGN(m_dockFeaturesAttrPtr, <span class="stringliteral">&quot;DockFeatures&quot;</span>, <span class="stringliteral">&quot;Specify the dock features for this widget\nIt is combination of options:\n1 - moveable\n 2 - floatable&quot;</span>, <span class="keyword">true</span>, <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#aa95e2f0735dd96b9e431920f5db9a705a94c93ed70b8ec52891abbf51b381dfc3">DF_MOVEABLE</a> | <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#aa95e2f0735dd96b9e431920f5db9a705aa93834191e8bd8ff6551b3259f27262b">DF_FLOATABLE</a>);
-<a name="l00042"></a>00042               I_ASSIGN(m_allowedDockAreasAttrPtr, <span class="stringliteral">&quot;AllowedDockAreas&quot;</span>, <span class="stringliteral">&quot;Specify the allowed dock areas\nIt is combination of options:\n 1 - left\n 2 - right\n 4 - top\n 8 - bottom&quot;</span>, <span class="keyword">false</span>, 0);
-<a name="l00043"></a>00043               I_ASSIGN(m_titleAttrPtr, <span class="stringliteral">&quot;Title&quot;</span>, <span class="stringliteral">&quot;Tool bar title&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;&quot;</span>);
-<a name="l00044"></a>00044               I_ASSIGN(m_iconSizeAttrPtr, <span class="stringliteral">&quot;IconSize&quot;</span>, <span class="stringliteral">&quot;Size of the icon used in the tool bar&quot;</span>, <span class="keyword">false</span>, 32);
-<a name="l00045"></a>00045               I_ASSIGN(m_associatedDocumentTypeId, <span class="stringliteral">&quot;AssociatedDocumentTypeId&quot;</span>, <span class="stringliteral">&quot;ID of the associated document type ID&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Default&quot;</span>);
-<a name="l00046"></a>00046        I_END_COMPONENT;
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048        <span class="comment">// reimplemented (iqtgui::IMainWindowComponent)</span>
-<a name="l00049"></a>00049        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#ad3d805d2e31b847df10e8fb85805a1a2" title="Add this component to main window.">AddToMainWindow</a>(QMainWindow&amp; mainWindow);
-<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#aec45539053c128210f767a529604f18d" title="Remove this component from main window.">RemoveFromMainWindow</a>(QMainWindow&amp; mainWindow);
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#a2def06f1ecf19d0ffba56e86b81454ba" title="Get the type ID of the associated document.">GetAssociatedDocumentTypeId</a>() <span class="keyword">const</span>;
-<a name="l00052"></a>00052        <span class="keyword">virtual</span> QString <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#afe0e55f562f96ddfa76101a249f7e4ed" title="Get the title of the main window component.">GetTitle</a>() <span class="keyword">const</span>;
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054 <span class="keyword">protected</span>:
-<a name="l00055"></a>00055        <span class="comment">// reimplemented (CGuiComponentBase)</span>
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#a742e2309d8ca71c36cb368fca9e0922c" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058 <span class="keyword">private</span>:
-<a name="l00059"></a>00059        I_ATTR(<span class="keywordtype">int</span>, m_toolBarAreaAttrPtr);
-<a name="l00060"></a>00060        I_ATTR(<span class="keywordtype">bool</span>, m_useVerticalOrientationAttrPtr);
-<a name="l00061"></a>00061        I_ATTR(<span class="keywordtype">int</span>, m_dockFeaturesAttrPtr);
-<a name="l00062"></a>00062        I_ATTR(<span class="keywordtype">int</span>, m_allowedDockAreasAttrPtr);
-<a name="l00063"></a>00063        I_ATTR(QString, m_titleAttrPtr);
-<a name="l00064"></a>00064        I_ATTR(<span class="keywordtype">int</span>, m_iconSizeAttrPtr);
-<a name="l00065"></a>00065        I_ATTR(QByteArray, m_associatedDocumentTypeId);
-<a name="l00066"></a>00066 };
-<a name="l00067"></a>00067 
+<a name="l00031"></a>00031 
+<a name="l00032"></a><a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#aa95e2f0735dd96b9e431920f5db9a705">00032</a>        <span class="keyword">enum</span> <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#aa95e2f0735dd96b9e431920f5db9a705">DockFeatures</a>
+<a name="l00033"></a>00033        {
+<a name="l00034"></a><a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#aa95e2f0735dd96b9e431920f5db9a705a94c93ed70b8ec52891abbf51b381dfc3">00034</a>               <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#aa95e2f0735dd96b9e431920f5db9a705a94c93ed70b8ec52891abbf51b381dfc3">DF_MOVEABLE</a> = 1,
+<a name="l00035"></a><a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#aa95e2f0735dd96b9e431920f5db9a705aa93834191e8bd8ff6551b3259f27262b">00035</a>               <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#aa95e2f0735dd96b9e431920f5db9a705aa93834191e8bd8ff6551b3259f27262b">DF_FLOATABLE</a> = 2
+<a name="l00036"></a>00036        };
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038        I_BEGIN_COMPONENT(<a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html" title="Basic implementation of a tool bar component.">CToolBarGuiCompBase</a>);
+<a name="l00039"></a>00039               I_REGISTER_INTERFACE(<a class="code" href="classiqtgui_1_1_i_main_window_component.html" title="A common interface for main window component such as dock widget, tool bar and so on...">iqtgui::IMainWindowComponent</a>);
+<a name="l00040"></a>00040               I_ASSIGN(m_toolBarAreaAttrPtr, <span class="stringliteral">&quot;ToolBarArea&quot;</span>, <span class="stringliteral">&quot;Specify the area for this toolbar\n 0 - left\n 1 - right\n 2 - top\n 3 - bottom&quot;</span>, <span class="keyword">false</span>, 0);
+<a name="l00041"></a>00041               I_ASSIGN(m_useVerticalOrientationAttrPtr, <span class="stringliteral">&quot;UseVerticalOrientation&quot;</span>, <span class="stringliteral">&quot;Use vertical orientation of the tool bar&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
+<a name="l00042"></a>00042               I_ASSIGN(m_dockFeaturesAttrPtr, <span class="stringliteral">&quot;DockFeatures&quot;</span>, <span class="stringliteral">&quot;Specify the dock features for this widget\nIt is combination of options:\n1 - moveable\n 2 - floatable&quot;</span>, <span class="keyword">true</span>, <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#aa95e2f0735dd96b9e431920f5db9a705a94c93ed70b8ec52891abbf51b381dfc3">DF_MOVEABLE</a> | <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#aa95e2f0735dd96b9e431920f5db9a705aa93834191e8bd8ff6551b3259f27262b">DF_FLOATABLE</a>);
+<a name="l00043"></a>00043               I_ASSIGN(m_allowedDockAreasAttrPtr, <span class="stringliteral">&quot;AllowedDockAreas&quot;</span>, <span class="stringliteral">&quot;Specify the allowed dock areas\nIt is combination of options:\n 1 - left\n 2 - right\n 4 - top\n 8 - bottom&quot;</span>, <span class="keyword">false</span>, 0);
+<a name="l00044"></a>00044               I_ASSIGN(m_titleAttrPtr, <span class="stringliteral">&quot;Title&quot;</span>, <span class="stringliteral">&quot;Tool bar title&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;&quot;</span>);
+<a name="l00045"></a>00045               I_ASSIGN(m_iconSizeAttrPtr, <span class="stringliteral">&quot;IconSize&quot;</span>, <span class="stringliteral">&quot;Size of the icon used in the tool bar&quot;</span>, <span class="keyword">false</span>, 32);
+<a name="l00046"></a>00046               I_ASSIGN(m_associatedDocumentTypeId, <span class="stringliteral">&quot;AssociatedDocumentTypeId&quot;</span>, <span class="stringliteral">&quot;ID of the associated document type ID&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Default&quot;</span>);
+<a name="l00047"></a>00047        I_END_COMPONENT;
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049        <span class="comment">// reimplemented (iqtgui::IMainWindowComponent)</span>
+<a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#ad3d805d2e31b847df10e8fb85805a1a2" title="Add this component to main window.">AddToMainWindow</a>(QMainWindow&amp; mainWindow);
+<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#aec45539053c128210f767a529604f18d" title="Remove this component from main window.">RemoveFromMainWindow</a>(QMainWindow&amp; mainWindow);
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#a2def06f1ecf19d0ffba56e86b81454ba" title="Get the type ID of the associated document.">GetAssociatedDocumentTypeId</a>() <span class="keyword">const</span>;
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> QString <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#afe0e55f562f96ddfa76101a249f7e4ed" title="Get the title of the main window component.">GetTitle</a>() <span class="keyword">const</span>;
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 <span class="keyword">protected</span>:
+<a name="l00056"></a>00056        <span class="comment">// reimplemented (CGuiComponentBase)</span>
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#a742e2309d8ca71c36cb368fca9e0922c" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059 <span class="keyword">private</span>:
+<a name="l00060"></a>00060        I_ATTR(<span class="keywordtype">int</span>, m_toolBarAreaAttrPtr);
+<a name="l00061"></a>00061        I_ATTR(<span class="keywordtype">bool</span>, m_useVerticalOrientationAttrPtr);
+<a name="l00062"></a>00062        I_ATTR(<span class="keywordtype">int</span>, m_dockFeaturesAttrPtr);
+<a name="l00063"></a>00063        I_ATTR(<span class="keywordtype">int</span>, m_allowedDockAreasAttrPtr);
+<a name="l00064"></a>00064        I_ATTR(QString, m_titleAttrPtr);
+<a name="l00065"></a>00065        I_ATTR(<span class="keywordtype">int</span>, m_iconSizeAttrPtr);
+<a name="l00066"></a>00066        I_ATTR(QByteArray, m_associatedDocumentTypeId);
+<a name="l00067"></a>00067 };
 <a name="l00068"></a>00068 
-<a name="l00069"></a>00069 } <span class="comment">// namespace iqtgui</span>
-<a name="l00070"></a>00070 
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070 } <span class="comment">// namespace iqtgui</span>
 <a name="l00071"></a>00071 
-<a name="l00072"></a>00072 <span class="preprocessor">#endif // !iqtgui_CToolBarGuiCompBase_included</span>
-<a name="l00073"></a>00073 <span class="preprocessor"></span>
-<a name="l00074"></a>00074 
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073 <span class="preprocessor">#endif // !iqtgui_CToolBarGuiCompBase_included</span>
+<a name="l00074"></a>00074 <span class="preprocessor"></span>
+<a name="l00075"></a>00075 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

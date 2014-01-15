@@ -4076,6 +4076,21 @@
     <namespace>iqtdoc</namespace>
   </compound>
   <compound kind="file">
+    <name>CExternalOpenDocumentCommandComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtdoc/</path>
+    <filename>_c_external_open_document_command_comp_8h</filename>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="no" imported="no">imod/TSingleModelObserverBase.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="no" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="no" imported="no">ifile/IFileNameParam.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="no" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_i_file_persistence_info_8h" name="IFilePersistenceInfo.h" local="no" imported="no">ifile/IFilePersistenceInfo.h</includes>
+    <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="no" imported="no">idoc/IDocumentManager.h</includes>
+    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="no" imported="no">iqtgui/CHierarchicalCommand.h</includes>
+    <class kind="class">iqtdoc::CExternalOpenDocumentCommandComp</class>
+    <namespace>iqtdoc</namespace>
+  </compound>
+  <compound kind="file">
     <name>CHtmlHelpGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtdoc/</path>
     <filename>_c_html_help_gui_comp_8h</filename>
@@ -36351,6 +36366,7 @@
     <class kind="class">iqtdoc::CDocumentMetaInfoEditorComp</class>
     <class kind="class">iqtdoc::CDoxygenHelpFileProviderComp</class>
     <class kind="class">iqtdoc::CExtendedDocumentTemplateComp</class>
+    <class kind="class">iqtdoc::CExternalOpenDocumentCommandComp</class>
     <class kind="class">iqtdoc::CHtmlHelpGuiComp</class>
     <class kind="class">iqtdoc::CHtmlHelpViewerComp</class>
     <class kind="class">iqtdoc::CMainWindowGuiComp</class>
@@ -36577,6 +36593,76 @@
       <anchorfile>classiqtdoc_1_1_c_extended_document_template_comp.html</anchorfile>
       <anchor>a0363b20f960817f159ac407e58e57968</anchor>
       <arglist>(icomp::IComponent *componentPtr) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtdoc::CExternalOpenDocumentCommandComp</name>
+    <filename>classiqtdoc_1_1_c_external_open_document_command_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base protection="protected">TSingleModelObserverBase&lt; idoc::IDocumentManager &gt;</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
+      <anchor>afe0276e0c38788d056cef122fef02d37</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
+      <anchor>aa76a42b0905a931c0f3b1ffac415e808</anchor>
+      <arglist>(m_documentPersistenceInfoCompPtr, m_documentPersistenceCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
+      <anchor>ac58e64258f2efb9cad88f631632b01b4</anchor>
+      <arglist>(m_documentManagerModelCompPtr, m_documentManagerCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CExternalOpenDocumentCommandComp</name>
+      <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
+      <anchor>a0a8a06d7f03f9d791f8428ab9f476059</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ibase::IHierarchicalCommand *</type>
+      <name>GetCommands</name>
+      <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
+      <anchor>abc5fb98de824bef3b8a7fcbed6e6b80b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateCommands</name>
+      <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
+      <anchor>a34ca7166a2b2fe151cf290bbbae5869f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
+      <anchor>aeb9aa6f6bb3974050a53e1b95df1bc07</anchor>
+      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
+      <anchor>a8679b6ff2daadcfac7aeac57b8b951a5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
+      <anchor>a2ddfc39a6def24e83c02f00c98073127</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -40142,6 +40228,24 @@
     <name>iqtgui::CSimpleMainWindowGuiComp</name>
     <filename>classiqtgui_1_1_c_simple_main_window_gui_comp.html</filename>
     <base>TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QMainWindow &gt; &gt;</base>
+    <member kind="enumeration">
+      <name>DockFeatures</name>
+      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
+      <anchor>a1fbf154858c5911bac9f2c9127f56a46</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DF_MOVEABLE</name>
+      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
+      <anchor>a1fbf154858c5911bac9f2c9127f56a46ac48ba095ab09cae5e027f2e398af59d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DF_FLOATABLE</name>
+      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
+      <anchor>a1fbf154858c5911bac9f2c9127f56a46aceabe066f181c3045d50e517eba8c581</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="enumeration">
       <name>GroupId</name>
       <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
@@ -50660,8 +50764,15 @@
       <type>virtual void</type>
       <name>DrawArea</name>
       <anchorfile>classiview_1_1_c_annulus_segment_shape.html</anchorfile>
-      <anchor>a917c0340813e9c2981a52593149bbd8f</anchor>
-      <arglist>(QPainter &amp;painter, i2d::CVector2d center, int minRadius, int maxRadius, double startAngle, double stopAngle, bool fillFlag=true) const </arglist>
+      <anchor>abcc103dfc7329b0d3600bfebdd922ed4</anchor>
+      <arglist>(QPainter &amp;painter, i2d::CVector2d realCenter, i2d::CVector2d center, double realMinRadius, double realMaxRadius, int minRadius, int maxRadius, double startAngle, double stopAngle, bool fillFlag=true) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>double</type>
+      <name>GetDegreeAndleOfPoint</name>
+      <anchorfile>classiview_1_1_c_annulus_segment_shape.html</anchorfile>
+      <anchor>abefeef46d3c6b030cba688fae65bfddf</anchor>
+      <arglist>(const i2d::CVector2d &amp;center, const QPointF &amp;point) const </arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>bool</type>

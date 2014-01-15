@@ -58,12 +58,17 @@ public:
 protected:
 	virtual void DrawArea(
 				QPainter& painter,
+				i2d::CVector2d realCenter,
 				i2d::CVector2d center,
+				double realMinRadius,
+				double realMaxRadius,
 				int minRadius,
 				int maxRadius,
 				double startAngle,
 				double stopAngle,
 				bool fillFlag = true) const;
+
+	double GetDegreeAndleOfPoint(const i2d::CVector2d& center, const QPointF& point) const;
 
 	bool m_editableAngle;
 

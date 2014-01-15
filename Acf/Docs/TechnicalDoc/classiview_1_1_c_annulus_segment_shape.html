@@ -99,7 +99,8 @@ Protected Types</h2></td></tr>
  }</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_annulus_segment_shape.html#a917c0340813e9c2981a52593149bbd8f">DrawArea</a> (QPainter &amp;painter, <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> center, int minRadius, int maxRadius, double startAngle, double stopAngle, bool fillFlag=true) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_annulus_segment_shape.html#abcc103dfc7329b0d3600bfebdd922ed4">DrawArea</a> (QPainter &amp;painter, <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> realCenter, <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> center, double realMinRadius, double realMaxRadius, int minRadius, int maxRadius, double startAngle, double stopAngle, bool fillFlag=true) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_annulus_segment_shape.html#abefeef46d3c6b030cba688fae65bfddf">GetDegreeAndleOfPoint</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;center, const QPointF &amp;point) const </td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_annulus_segment_shape.html#a5f7d5e72ba8790abdc8161580d330e42">m_editableAngle</a></td></tr>
@@ -164,7 +165,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiview_1_1_c_annulus_shape.html#a55de96991604c07cd846004dc43917fe">iview::CAnnulusShape</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_annulus_segment_shape_8h_source.html#l00048">48</a> of file <a class="el" href="_c_annulus_segment_shape_8h_source.html">CAnnulusSegmentShape.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_annulus_segment_shape_8h_source.html#l00053">53</a> of file <a class="el" href="_c_annulus_segment_shape_8h_source.html">CAnnulusSegmentShape.h</a>.</p>
 
 </div>
 </div>
@@ -207,7 +208,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a917c0340813e9c2981a52593149bbd8f"></a><!-- doxytag: member="iview::CAnnulusSegmentShape::DrawArea" ref="a917c0340813e9c2981a52593149bbd8f" args="(QPainter &amp;painter, i2d::CVector2d center, int minRadius, int maxRadius, double startAngle, double stopAngle, bool fillFlag=true) const " -->
+<a class="anchor" id="abcc103dfc7329b0d3600bfebdd922ed4"></a><!-- doxytag: member="iview::CAnnulusSegmentShape::DrawArea" ref="abcc103dfc7329b0d3600bfebdd922ed4" args="(QPainter &amp;painter, i2d::CVector2d realCenter, i2d::CVector2d center, double realMinRadius, double realMaxRadius, int minRadius, int maxRadius, double startAngle, double stopAngle, bool fillFlag=true) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -221,7 +222,25 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a>&#160;</td>
+          <td class="paramname"><em>realCenter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a>&#160;</td>
           <td class="paramname"><em>center</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>realMinRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>realMaxRadius</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -264,6 +283,33 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="abefeef46d3c6b030cba688fae65bfddf"></a><!-- doxytag: member="iview::CAnnulusSegmentShape::GetDegreeAndleOfPoint" ref="abefeef46d3c6b030cba688fae65bfddf" args="(const i2d::CVector2d &amp;center, const QPointF &amp;point) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double iview::CAnnulusSegmentShape::GetDegreeAndleOfPoint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>center</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QPointF &amp;&#160;</td>
+          <td class="paramname"><em>point</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a3fa0a3c94c26cb3894abd2e30a9c38e0"></a><!-- doxytag: member="iview::CAnnulusSegmentShape::IsEditableAngles" ref="a3fa0a3c94c26cb3894abd2e30a9c38e0" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -278,9 +324,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_annulus_segment_shape_8h_source.html#l00056">56</a> of file <a class="el" href="_c_annulus_segment_shape_8h_source.html">CAnnulusSegmentShape.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_annulus_segment_shape_8h_source.html#l00061">61</a> of file <a class="el" href="_c_annulus_segment_shape_8h_source.html">CAnnulusSegmentShape.h</a>.</p>
 
-<p>References <a class="el" href="_c_annulus_segment_shape_8h_source.html#l00046">m_editableAngle</a>.</p>
+<p>References <a class="el" href="_c_annulus_segment_shape_8h_source.html#l00051">m_editableAngle</a>.</p>
 
 </div>
 </div>
@@ -432,9 +478,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_annulus_segment_shape_8h_source.html#l00046">46</a> of file <a class="el" href="_c_annulus_segment_shape_8h_source.html">CAnnulusSegmentShape.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_annulus_segment_shape_8h_source.html#l00051">51</a> of file <a class="el" href="_c_annulus_segment_shape_8h_source.html">CAnnulusSegmentShape.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_c_annulus_segment_shape_8h_source.html#l00056">IsEditableAngles()</a>.</p>
+<p>Referenced by <a class="el" href="_c_annulus_segment_shape_8h_source.html#l00061">IsEditableAngles()</a>.</p>
 
 </div>
 </div>

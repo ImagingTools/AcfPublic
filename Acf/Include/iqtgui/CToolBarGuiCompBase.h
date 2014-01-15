@@ -50,6 +50,7 @@ class CToolBarGuiCompBase:
 {
 public:
 	typedef iqtgui::TGuiComponentBase<QToolBar> BaseClass;
+
 	enum DockFeatures
 	{
 		DF_MOVEABLE = 1,

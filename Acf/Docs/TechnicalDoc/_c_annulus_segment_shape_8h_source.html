@@ -62,36 +62,41 @@
 <a name="l00034"></a>00034        <span class="keyword">virtual</span> <a class="code" href="classiview_1_1_i_touchable.html#aff8f4bec7213cc866469e5e41a8395e2" title="Enumeration for possible shape touch states.">TouchState</a> <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a64134b136b405a2b4dffa1cc081261aa" title="Check, if any shape is touched.">IsTouched</a>(<a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position) <span class="keyword">const</span>;
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036 <span class="keyword">protected</span>:
-<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a917c0340813e9c2981a52593149bbd8f">DrawArea</a>(
+<a name="l00037"></a>00037        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#abcc103dfc7329b0d3600bfebdd922ed4">DrawArea</a>(
 <a name="l00038"></a>00038                             QPainter&amp; painter,
-<a name="l00039"></a>00039                             <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> center,
-<a name="l00040"></a>00040                             <span class="keywordtype">int</span> minRadius,
-<a name="l00041"></a>00041                             <span class="keywordtype">int</span> maxRadius,
-<a name="l00042"></a>00042                             <span class="keywordtype">double</span> startAngle,
-<a name="l00043"></a>00043                             <span class="keywordtype">double</span> stopAngle,
-<a name="l00044"></a>00044                             <span class="keywordtype">bool</span> fillFlag = <span class="keyword">true</span>) <span class="keyword">const</span>;
-<a name="l00045"></a>00045 
-<a name="l00046"></a><a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a5f7d5e72ba8790abdc8161580d330e42">00046</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a5f7d5e72ba8790abdc8161580d330e42">m_editableAngle</a>;
-<a name="l00047"></a>00047 
-<a name="l00048"></a><a class="code" href="classiview_1_1_c_annulus_segment_shape.html#af01feddb5ae50be893daae5fca015055">00048</a>        <span class="keyword">enum</span> <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#af01feddb5ae50be893daae5fca015055">EditMode</a>
-<a name="l00049"></a>00049        {
-<a name="l00050"></a><a class="code" href="classiview_1_1_c_annulus_segment_shape.html#af01feddb5ae50be893daae5fca015055a4bb83383dad5b952e811f6d9076f163d">00050</a>               <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#af01feddb5ae50be893daae5fca015055a4bb83383dad5b952e811f6d9076f163d">EM_ANGLE1</a> = <a class="code" href="classiview_1_1_c_annulus_shape.html#a55de96991604c07cd846004dc43917fea4ca0dce95fe4b995049579724cfea94f">EM_OUTER_RADIUS</a> + 1,
-<a name="l00051"></a><a class="code" href="classiview_1_1_c_annulus_segment_shape.html#af01feddb5ae50be893daae5fca015055aca85aada95c38a2e117c047b37649105">00051</a>               <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#af01feddb5ae50be893daae5fca015055aca85aada95c38a2e117c047b37649105">EM_ANGLE2</a>
-<a name="l00052"></a>00052        };
-<a name="l00053"></a>00053 };
-<a name="l00054"></a>00054 
-<a name="l00055"></a>00055 
-<a name="l00056"></a><a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a3fa0a3c94c26cb3894abd2e30a9c38e0">00056</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a3fa0a3c94c26cb3894abd2e30a9c38e0">CAnnulusSegmentShape::IsEditableAngles</a>()<span class="keyword"> const</span>
-<a name="l00057"></a>00057 <span class="keyword"></span>{
-<a name="l00058"></a>00058        <span class="keywordflow">return</span> <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a5f7d5e72ba8790abdc8161580d330e42">m_editableAngle</a>;
-<a name="l00059"></a>00059 }
+<a name="l00039"></a>00039                             <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> realCenter,
+<a name="l00040"></a>00040                             <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a> center,
+<a name="l00041"></a>00041                             <span class="keywordtype">double</span> realMinRadius,
+<a name="l00042"></a>00042                             <span class="keywordtype">double</span> realMaxRadius,
+<a name="l00043"></a>00043                             <span class="keywordtype">int</span> minRadius,
+<a name="l00044"></a>00044                             <span class="keywordtype">int</span> maxRadius,
+<a name="l00045"></a>00045                             <span class="keywordtype">double</span> startAngle,
+<a name="l00046"></a>00046                             <span class="keywordtype">double</span> stopAngle,
+<a name="l00047"></a>00047                             <span class="keywordtype">bool</span> fillFlag = <span class="keyword">true</span>) <span class="keyword">const</span>;
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049        <span class="keywordtype">double</span> <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#abefeef46d3c6b030cba688fae65bfddf">GetDegreeAndleOfPoint</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_vector2d.html" title="Definition of position or mathematical vector on 2D plane.">i2d::CVector2d</a>&amp; center, <span class="keyword">const</span> QPointF&amp; point) <span class="keyword">const</span>;
+<a name="l00050"></a>00050 
+<a name="l00051"></a><a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a5f7d5e72ba8790abdc8161580d330e42">00051</a>        <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a5f7d5e72ba8790abdc8161580d330e42">m_editableAngle</a>;
+<a name="l00052"></a>00052 
+<a name="l00053"></a><a class="code" href="classiview_1_1_c_annulus_segment_shape.html#af01feddb5ae50be893daae5fca015055">00053</a>        <span class="keyword">enum</span> <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#af01feddb5ae50be893daae5fca015055">EditMode</a>
+<a name="l00054"></a>00054        {
+<a name="l00055"></a><a class="code" href="classiview_1_1_c_annulus_segment_shape.html#af01feddb5ae50be893daae5fca015055a4bb83383dad5b952e811f6d9076f163d">00055</a>               <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#af01feddb5ae50be893daae5fca015055a4bb83383dad5b952e811f6d9076f163d">EM_ANGLE1</a> = <a class="code" href="classiview_1_1_c_annulus_shape.html#a55de96991604c07cd846004dc43917fea4ca0dce95fe4b995049579724cfea94f">EM_OUTER_RADIUS</a> + 1,
+<a name="l00056"></a><a class="code" href="classiview_1_1_c_annulus_segment_shape.html#af01feddb5ae50be893daae5fca015055aca85aada95c38a2e117c047b37649105">00056</a>               <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#af01feddb5ae50be893daae5fca015055aca85aada95c38a2e117c047b37649105">EM_ANGLE2</a>
+<a name="l00057"></a>00057        };
+<a name="l00058"></a>00058 };
+<a name="l00059"></a>00059 
 <a name="l00060"></a>00060 
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062 } <span class="comment">// namespace iview</span>
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065 <span class="preprocessor">#endif // !iview_CAnnulusSegmentShape_included</span>
-<a name="l00066"></a>00066 <span class="preprocessor"></span>
+<a name="l00061"></a><a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a3fa0a3c94c26cb3894abd2e30a9c38e0">00061</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a3fa0a3c94c26cb3894abd2e30a9c38e0">CAnnulusSegmentShape::IsEditableAngles</a>()<span class="keyword"> const</span>
+<a name="l00062"></a>00062 <span class="keyword"></span>{
+<a name="l00063"></a>00063        <span class="keywordflow">return</span> <a class="code" href="classiview_1_1_c_annulus_segment_shape.html#a5f7d5e72ba8790abdc8161580d330e42">m_editableAngle</a>;
+<a name="l00064"></a>00064 }
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 } <span class="comment">// namespace iview</span>
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070 <span class="preprocessor">#endif // !iview_CAnnulusSegmentShape_included</span>
+<a name="l00071"></a>00071 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
