@@ -284,7 +284,7 @@ void CFileTreeViewGuiComp::DoTreeModelUpdate()
 
 	CreateDirectoryList(rootDirPtr->GetPath(),
 		filters,
-		QDir::Name | QDir::IgnoreCase,
+		QDir::Name | QDir::IgnoreCase | QDir::Reversed,
 		NULL);
 }
 

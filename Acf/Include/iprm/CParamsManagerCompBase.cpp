@@ -52,10 +52,10 @@ int CParamsManagerCompBase::GetIndexOperationFlags(int index) const
 			
 			if (*m_allowDisabledAttrPtr){
 				retVal |= MF_DISABLE_ALLOWED;
-				
-				if (*m_supportEnablingAttrPtr){
-					retVal |= OOF_SUPPORT_ENABLING;
-				}
+			}
+
+			if (*m_supportEnablingAttrPtr){
+				retVal |= OOF_SUPPORT_ENABLING;
 			}
 
 			if (GetCreatedParamsSetsCount() > 0){

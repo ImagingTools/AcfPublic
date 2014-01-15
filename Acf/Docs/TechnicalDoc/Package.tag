@@ -41107,6 +41107,24 @@
     <filename>classiqtgui_1_1_c_tool_bar_gui_comp_base.html</filename>
     <base>TGuiComponentBase&lt; QToolBar &gt;</base>
     <base virtualness="virtual">iqtgui::IMainWindowComponent</base>
+    <member kind="enumeration">
+      <name>DockFeatures</name>
+      <anchorfile>classiqtgui_1_1_c_tool_bar_gui_comp_base.html</anchorfile>
+      <anchor>aa95e2f0735dd96b9e431920f5db9a705</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DF_MOVEABLE</name>
+      <anchorfile>classiqtgui_1_1_c_tool_bar_gui_comp_base.html</anchorfile>
+      <anchor>aa95e2f0735dd96b9e431920f5db9a705a94c93ed70b8ec52891abbf51b381dfc3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DF_FLOATABLE</name>
+      <anchorfile>classiqtgui_1_1_c_tool_bar_gui_comp_base.html</anchorfile>
+      <anchor>aa95e2f0735dd96b9e431920f5db9a705aa93834191e8bd8ff6551b3259f27262b</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>iqtgui::TGuiComponentBase&lt; QToolBar &gt;</type>
       <name>BaseClass</name>
