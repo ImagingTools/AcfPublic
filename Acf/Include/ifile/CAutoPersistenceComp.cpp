@@ -25,6 +25,7 @@
 
 // Qt includes
 #include <QtCore/QtGlobal>
+#include <QtCore/QCoreApplication>
 #if QT_VERSION >= 0x050000
 #include <QtConcurrent/QtConcurrent>
 #else
@@ -94,8 +95,10 @@ void CAutoPersistenceComp::StoreObject(const istd::IChangeable& object) const
 void CAutoPersistenceComp::OnUpdate(int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
 {
 	bool storeByTimer = m_storeIntervalAttrPtr.IsValid() ? *m_storeIntervalAttrPtr : false;
-
-	if (!storeByTimer){
+	if (storeByTimer){
+		EnsureTimerConnected();
+	}
+	else{
 		if (*m_storeOnChangeAttrPtr && m_objectCompPtr.IsValid()){
 			StoreObject(*m_objectCompPtr.GetPtr());
 		}
@@ -127,11 +130,7 @@ void CAutoPersistenceComp::OnComponentCreated()
 		m_objectModelCompPtr->AttachObserver(this);
 	}
 
-	if (m_storeIntervalAttrPtr.IsValid()){
-		connect(&m_storingTimer, SIGNAL(timeout()), this, SLOT(OnTimeout()));
-
-		m_storingTimer.start(*m_storeIntervalAttrPtr * 1000);
-	}
+	EnsureTimerConnected();
 }
 
 
@@ -175,6 +174,20 @@ void CAutoPersistenceComp::OnTimeout()
 	m_storingFuture = QtConcurrent::run(this, &CAutoPersistenceComp::SaveObjectSnapshot);
 
 	m_isDataWasChanged = false;
+}
+
+
+// private methods
+
+void CAutoPersistenceComp::EnsureTimerConnected()
+{
+	if (m_storeIntervalAttrPtr.IsValid() && !QCoreApplication::startingUp()){
+		if (!m_storingTimer.isActive()){
+			connect(&m_storingTimer, SIGNAL(timeout()), this, SLOT(OnTimeout()));
+
+			m_storingTimer.start(*m_storeIntervalAttrPtr * 1000);
+		}
+	}
 }
 
 

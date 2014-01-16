@@ -89,33 +89,36 @@
 <a name="l00072"></a>00072        <span class="keywordtype">void</span> OnTimeout();
 <a name="l00073"></a>00073 
 <a name="l00074"></a>00074 private:
-<a name="l00075"></a>00075        I_REF(istd::IChangeable, m_objectCompPtr);
-<a name="l00076"></a>00076        I_REF(iser::ISerializable, m_serializeableObjectCompPtr);
-<a name="l00077"></a>00077        I_REF(imod::IModel, m_objectModelCompPtr);
-<a name="l00078"></a>00078        I_REF(ifile::<a class="code" href="classifile_1_1_i_file_persistence.html" title="Provide loading and saving of objects.">IFilePersistence</a>, m_fileLoaderCompPtr);
-<a name="l00079"></a>00079        I_REF(ifile::<a class="code" href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)">IFileNameParam</a>, m_filePathCompPtr);
-<a name="l00080"></a>00080        I_ATTR(<span class="keywordtype">bool</span>, m_restoreOnBeginAttrPtr);
-<a name="l00081"></a>00081        I_ATTR(<span class="keywordtype">bool</span>, m_storeOnEndAttrPtr);
-<a name="l00082"></a>00082        I_ATTR(<span class="keywordtype">bool</span>, m_storeOnChangeAttrPtr);
-<a name="l00083"></a>00083        I_ATTR(<span class="keywordtype">double</span>, m_storeIntervalAttrPtr);
-<a name="l00084"></a>00084 
-<a name="l00085"></a>00085        iser::CMemoryWriteArchive m_lastStoredObjectState;
-<a name="l00086"></a>00086        <span class="keywordtype">bool</span> m_isDataWasChanged;
+<a name="l00075"></a>00075        <span class="keywordtype">void</span> EnsureTimerConnected();
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077 private:
+<a name="l00078"></a>00078        I_REF(istd::IChangeable, m_objectCompPtr);
+<a name="l00079"></a>00079        I_REF(iser::ISerializable, m_serializeableObjectCompPtr);
+<a name="l00080"></a>00080        I_REF(imod::IModel, m_objectModelCompPtr);
+<a name="l00081"></a>00081        I_REF(ifile::<a class="code" href="classifile_1_1_i_file_persistence.html" title="Provide loading and saving of objects.">IFilePersistence</a>, m_fileLoaderCompPtr);
+<a name="l00082"></a>00082        I_REF(ifile::<a class="code" href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)">IFileNameParam</a>, m_filePathCompPtr);
+<a name="l00083"></a>00083        I_ATTR(<span class="keywordtype">bool</span>, m_restoreOnBeginAttrPtr);
+<a name="l00084"></a>00084        I_ATTR(<span class="keywordtype">bool</span>, m_storeOnEndAttrPtr);
+<a name="l00085"></a>00085        I_ATTR(<span class="keywordtype">bool</span>, m_storeOnChangeAttrPtr);
+<a name="l00086"></a>00086        I_ATTR(<span class="keywordtype">double</span>, m_storeIntervalAttrPtr);
 <a name="l00087"></a>00087 
-<a name="l00088"></a>00088        QTimer m_storingTimer;
-<a name="l00089"></a>00089 
-<a name="l00090"></a>00090        QFuture&lt;<span class="keywordtype">void</span>&gt; m_storingFuture;
-<a name="l00091"></a>00091 
-<a name="l00095"></a>00095        mutable istd::TDelPtr&lt;istd::IChangeable&gt; m_objectShadowPtr;
-<a name="l00096"></a>00096 };
-<a name="l00097"></a>00097 
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099 } <span class="comment">// namespace ifile</span>
+<a name="l00088"></a>00088        iser::CMemoryWriteArchive m_lastStoredObjectState;
+<a name="l00089"></a>00089        <span class="keywordtype">bool</span> m_isDataWasChanged;
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091        QTimer m_storingTimer;
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093        QFuture&lt;<span class="keywordtype">void</span>&gt; m_storingFuture;
+<a name="l00094"></a>00094 
+<a name="l00098"></a>00098        mutable istd::TDelPtr&lt;istd::IChangeable&gt; m_objectShadowPtr;
+<a name="l00099"></a>00099 };
 <a name="l00100"></a>00100 
 <a name="l00101"></a>00101 
-<a name="l00102"></a>00102 <span class="preprocessor">#endif // !ifile_CAutoPersistenceComp_included</span>
-<a name="l00103"></a>00103 <span class="preprocessor"></span>
+<a name="l00102"></a>00102 } <span class="comment">// namespace ifile</span>
+<a name="l00103"></a>00103 
 <a name="l00104"></a>00104 
+<a name="l00105"></a>00105 <span class="preprocessor">#endif // !ifile_CAutoPersistenceComp_included</span>
+<a name="l00106"></a>00106 <span class="preprocessor"></span>
+<a name="l00107"></a>00107 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
