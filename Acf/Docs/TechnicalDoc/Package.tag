@@ -2284,6 +2284,19 @@
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
+    <name>CExternalOpenDocumentCommandCompBase.h</name>
+    <path>C:/Temp/Acf/Include/ifilegui/</path>
+    <filename>_c_external_open_document_command_comp_base_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_i_file_persistence_info_8h" name="IFilePersistenceInfo.h" local="yes" imported="no">ifile/IFilePersistenceInfo.h</includes>
+    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
+    <class kind="class">ifilegui::CExternalOpenDocumentCommandCompBase</class>
+    <namespace>ifilegui</namespace>
+  </compound>
+  <compound kind="file">
     <name>CFileDialogLoaderComp.h</name>
     <path>C:/Temp/Acf/Include/ifilegui/</path>
     <filename>_c_file_dialog_loader_comp_8h</filename>
@@ -4079,14 +4092,9 @@
     <name>CExternalOpenDocumentCommandComp.h</name>
     <path>C:/Temp/Acf/Include/iqtdoc/</path>
     <filename>_c_external_open_document_command_comp_8h</filename>
-    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="no" imported="no">imod/TSingleModelObserverBase.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="no" imported="no">ibase/ICommandsProvider.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="no" imported="no">ifile/IFileNameParam.h</includes>
-    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="no" imported="no">ifile/IFilePersistence.h</includes>
-    <includes id="_i_file_persistence_info_8h" name="IFilePersistenceInfo.h" local="no" imported="no">ifile/IFilePersistenceInfo.h</includes>
-    <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="no" imported="no">idoc/IDocumentManager.h</includes>
-    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="no" imported="no">iqtgui/CHierarchicalCommand.h</includes>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
+    <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
+    <includes id="_c_external_open_document_command_comp_base_8h" name="CExternalOpenDocumentCommandCompBase.h" local="yes" imported="no">ifilegui/CExternalOpenDocumentCommandCompBase.h</includes>
     <class kind="class">iqtdoc::CExternalOpenDocumentCommandComp</class>
     <namespace>iqtdoc</namespace>
   </compound>
@@ -23116,6 +23124,7 @@
   <compound kind="namespace">
     <name>ifilegui</name>
     <filename>namespaceifilegui.html</filename>
+    <class kind="class">ifilegui::CExternalOpenDocumentCommandCompBase</class>
     <class kind="class">ifilegui::CFileDialogLoaderComp</class>
     <class kind="class">ifilegui::CFileListProviderGuiComp</class>
     <class kind="class">ifilegui::CFilePersistenceGuiComp</class>
@@ -23128,6 +23137,87 @@
       <anchorfile>namespaceifilegui.html</anchorfile>
       <anchor>a00daafd63dfaeb2d432d5464c66a1300</anchor>
       <arglist>(StyleSheetConsumer &amp;styleSheetConsumer, const QString &amp;styleSheetFilePath)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifilegui::CExternalOpenDocumentCommandCompBase</name>
+    <filename>classifilegui_1_1_c_external_open_document_command_comp_base.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
+    <member kind="enumeration">
+      <name>GroupId</name>
+      <anchorfile>classifilegui_1_1_c_external_open_document_command_comp_base.html</anchorfile>
+      <anchor>af88e57496b650fbbe35d98bf9b6f1be7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GI_EXERNAL_OPEN_COMMAND</name>
+      <anchorfile>classifilegui_1_1_c_external_open_document_command_comp_base.html</anchorfile>
+      <anchor>af88e57496b650fbbe35d98bf9b6f1be7a308fd7cf7919431d77f6007fd9aacb09</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifilegui_1_1_c_external_open_document_command_comp_base.html</anchorfile>
+      <anchor>a2f7065dc9cae6cb1cdc3dbc956d0603f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classifilegui_1_1_c_external_open_document_command_comp_base.html</anchorfile>
+      <anchor>a6f488282d5bad2ff6a9b20c72ef8d6cd</anchor>
+      <arglist>(m_documentPersistenceInfoCompPtr, m_documentPersistenceCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CExternalOpenDocumentCommandCompBase</name>
+      <anchorfile>classifilegui_1_1_c_external_open_document_command_comp_base.html</anchorfile>
+      <anchor>a1a300c2c2b0d8bebb051c74af0fd4902</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ibase::IHierarchicalCommand *</type>
+      <name>GetCommands</name>
+      <anchorfile>classifilegui_1_1_c_external_open_document_command_comp_base.html</anchorfile>
+      <anchor>acc6c9c098ec5301a2a45055504445a7e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual const istd::IChangeable *</type>
+      <name>GetDocumentPtr</name>
+      <anchorfile>classifilegui_1_1_c_external_open_document_command_comp_base.html</anchorfile>
+      <anchor>a1575cb1f5d26cf5de2846442cfbdf91a</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classifilegui_1_1_c_external_open_document_command_comp_base.html</anchorfile>
+      <anchor>a48bb6a5b18579b4daca982a6cb81b205</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_rootCommands</name>
+      <anchorfile>classifilegui_1_1_c_external_open_document_command_comp_base.html</anchorfile>
+      <anchor>a0d30110fb0359c366a465d022b3cade6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_fileCommands</name>
+      <anchorfile>classifilegui_1_1_c_external_open_document_command_comp_base.html</anchorfile>
+      <anchor>aa36b27c8a2d9402716f6413f480cb7a7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::CHierarchicalCommand</type>
+      <name>m_openDocumentCommand</name>
+      <anchorfile>classifilegui_1_1_c_external_open_document_command_comp_base.html</anchorfile>
+      <anchor>af6e4fb876091060ef198475f0d10a02f</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -36598,22 +36688,14 @@
   <compound kind="class">
     <name>iqtdoc::CExternalOpenDocumentCommandComp</name>
     <filename>classiqtdoc_1_1_c_external_open_document_command_comp.html</filename>
-    <base>icomp::CComponentBase</base>
+    <base>ifilegui::CExternalOpenDocumentCommandCompBase</base>
     <base protection="protected">TSingleModelObserverBase&lt; idoc::IDocumentManager &gt;</base>
-    <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>ifilegui::CExternalOpenDocumentCommandCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
-      <anchor>afe0276e0c38788d056cef122fef02d37</anchor>
+      <anchor>a36484ddb1de86b2853801fb346abdbc5</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
-      <anchor>aa76a42b0905a931c0f3b1ffac415e808</anchor>
-      <arglist>(m_documentPersistenceInfoCompPtr, m_documentPersistenceCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -36622,26 +36704,19 @@
       <anchor>ac58e64258f2efb9cad88f631632b01b4</anchor>
       <arglist>(m_documentManagerModelCompPtr, m_documentManagerCompPtr, true)</arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>CExternalOpenDocumentCommandComp</name>
-      <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
-      <anchor>a0a8a06d7f03f9d791f8428ab9f476059</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const ibase::IHierarchicalCommand *</type>
-      <name>GetCommands</name>
-      <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
-      <anchor>abc5fb98de824bef3b8a7fcbed6e6b80b</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateCommands</name>
       <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
       <anchor>a34ca7166a2b2fe151cf290bbbae5869f</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const istd::IChangeable *</type>
+      <name>GetDocumentPtr</name>
+      <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
+      <anchor>a2444bfd993857d2324aaea85324f3e95</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
