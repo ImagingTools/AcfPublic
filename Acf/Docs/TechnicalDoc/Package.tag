@@ -38979,6 +38979,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>SetDialogGeometry</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_dialog.html</anchorfile>
+      <anchor>a171cf05205e5b3af63e71229ff97beb5</anchor>
+      <arglist>(double screenFactor=0.0, const QPoint *positionPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
       <type>const QDialogButtonBox *</type>
       <name>GetButtonBoxPtr</name>
       <anchorfile>classiqtgui_1_1_c_gui_component_dialog.html</anchorfile>
@@ -39005,6 +39012,13 @@
       <anchorfile>classiqtgui_1_1_c_gui_component_dialog.html</anchorfile>
       <anchor>a7c5e3c3e4d7676046ec7dcefe50e201c</anchor>
       <arglist>(QKeyEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>showEvent</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_dialog.html</anchorfile>
+      <anchor>aeb4e9cb85f204805171c2aa2c189d25b</anchor>
+      <arglist>(QShowEvent *eventPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">

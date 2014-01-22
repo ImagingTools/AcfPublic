@@ -55,6 +55,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_component_dialog.html#a6d80de1b226fa53f2c14b08b17ec1b51">CGuiComponentDialog</a> (<a class="el" href="classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a> *guiObjectPtr, int buttons=0, bool isModal=true, QWidget *parentWidgetPtr=NULL)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the component dialog.  <a href="#a6d80de1b226fa53f2c14b08b17ec1b51"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_component_dialog.html#a5a45b2d0d32a7e75a799fa76501b3727">~CGuiComponentDialog</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_component_dialog.html#a171cf05205e5b3af63e71229ff97beb5">SetDialogGeometry</a> (double screenFactor=0.0, const QPoint *positionPtr=NULL)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set initial size and position of the dialog.  <a href="#a171cf05205e5b3af63e71229ff97beb5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QDialogButtonBox *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_component_dialog.html#a47c528935023117f04c3619a96ea6675">GetButtonBoxPtr</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal button box.  <a href="#a47c528935023117f04c3619a96ea6675"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_component_dialog.html#adb017d269ccf731e903985e334e2c43e">GetGuiPtr</a> () const </td></tr>
@@ -63,6 +65,7 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_component_dialog.html#a13d56ef292ce716dc37d149b09b6f1cb">closeEvent</a> (QCloseEvent *eventPtr)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_component_dialog.html#a7c5e3c3e4d7676046ec7dcefe50e201c">keyPressEvent</a> (QKeyEvent *eventPtr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_component_dialog.html#aeb4e9cb85f204805171c2aa2c189d25b">showEvent</a> (QShowEvent *eventPtr)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class to display an ACF GUI component in a dialog. </p>
@@ -192,7 +195,7 @@ Protected Member Functions</h2></td></tr>
 <p>Returns the internal button box. </p>
 <p>You can use this function to create your own connections to the signals of the button group. </p>
 
-<p>Definition at line <a class="el" href="_c_gui_component_dialog_8h_source.html#l00074">74</a> of file <a class="el" href="_c_gui_component_dialog_8h_source.html">CGuiComponentDialog.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_gui_component_dialog_8h_source.html#l00085">85</a> of file <a class="el" href="_c_gui_component_dialog_8h_source.html">CGuiComponentDialog.h</a>.</p>
 
 </div>
 </div>
@@ -212,7 +215,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Returns pointer to the connected GUI object. </p>
 
-<p>Definition at line <a class="el" href="_c_gui_component_dialog_8h_source.html#l00080">80</a> of file <a class="el" href="_c_gui_component_dialog_8h_source.html">CGuiComponentDialog.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_gui_component_dialog_8h_source.html#l00091">91</a> of file <a class="el" href="_c_gui_component_dialog_8h_source.html">CGuiComponentDialog.h</a>.</p>
 
 </div>
 </div>
@@ -224,6 +227,59 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">virtual void iqtgui::CGuiComponentDialog::keyPressEvent </td>
           <td>(</td>
           <td class="paramtype">QKeyEvent *&#160;</td>
+          <td class="paramname"><em>eventPtr</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a171cf05205e5b3af63e71229ff97beb5"></a><!-- doxytag: member="iqtgui::CGuiComponentDialog::SetDialogGeometry" ref="a171cf05205e5b3af63e71229ff97beb5" args="(double screenFactor=0.0, const QPoint *positionPtr=NULL)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iqtgui::CGuiComponentDialog::SetDialogGeometry </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>screenFactor</em> = <code>0.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QPoint *&#160;</td>
+          <td class="paramname"><em>positionPtr</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set initial size and position of the dialog. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screenFactor</td><td>Size factor related to the screen size. If the value is smaller or equal 0.0 the default size will be used. </td></tr>
+    <tr><td class="paramname">positionPtr</td><td>Position of the dialog on the screen. If not set, the dialog will be placed at the center of the screen. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aeb4e9cb85f204805171c2aa2c189d25b"></a><!-- doxytag: member="iqtgui::CGuiComponentDialog::showEvent" ref="aeb4e9cb85f204805171c2aa2c189d25b" args="(QShowEvent *eventPtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtgui::CGuiComponentDialog::showEvent </td>
+          <td>(</td>
+          <td class="paramtype">QShowEvent *&#160;</td>
           <td class="paramname"><em>eventPtr</em></td><td>)</td>
           <td><code> [protected, virtual]</code></td>
         </tr>
