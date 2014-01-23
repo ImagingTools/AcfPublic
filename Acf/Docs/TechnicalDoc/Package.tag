@@ -2761,6 +2761,16 @@
     <namespace>iloggui</namespace>
   </compound>
   <compound kind="file">
+    <name>CMessageBoxComp.h</name>
+    <path>C:/Temp/Acf/Include/iloggui/</path>
+    <filename>_c_message_box_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="yes" imported="no">ilog/IMessageConsumer.h</includes>
+    <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ilog/CMessage.h</includes>
+    <class kind="class">iloggui::CMessageBoxComp</class>
+    <namespace>iloggui</namespace>
+  </compound>
+  <compound kind="file">
     <name>CTextLogGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iloggui/</path>
     <filename>_c_text_log_gui_comp_8h</filename>
@@ -25342,6 +25352,13 @@
       <anchor>ad37a5e83729c45eebea2fc474199cd93</anchor>
       <arglist>(const CMessageContainer &amp;container)</arglist>
     </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetMessagesCount</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>af0d2ef38e92054aeefdc62991bbee5eb</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>AddChildContainer</name>
@@ -26029,6 +26046,7 @@
     <name>iloggui</name>
     <filename>namespaceiloggui.html</filename>
     <class kind="class">iloggui::CLogGuiComp</class>
+    <class kind="class">iloggui::CMessageBoxComp</class>
     <class kind="class">iloggui::CTextLogGuiComp</class>
   </compound>
   <compound kind="class">
@@ -26282,6 +26300,68 @@
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
       <anchor>af979153783166d073f890580529036e3</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iloggui::CMessageBoxComp</name>
+    <filename>classiloggui_1_1_c_message_box_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">ilog::IMessageConsumer</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiloggui_1_1_c_message_box_comp.html</anchorfile>
+      <anchor>a9e09f6df9987eac0976a8c083d72b491</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>EmitAddMessage</name>
+      <anchorfile>classiloggui_1_1_c_message_box_comp.html</anchorfile>
+      <anchor>aa4c4effafe9ffafaf730c93ef5f49a34</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMessageBoxComp</name>
+      <anchorfile>classiloggui_1_1_c_message_box_comp.html</anchorfile>
+      <anchor>aa2e81430f92b09ff801b29125fe5bacd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsMessageSupported</name>
+      <anchorfile>classiloggui_1_1_c_message_box_comp.html</anchorfile>
+      <anchor>aec58eadd7b818184970c316b2d1cc46d</anchor>
+      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddMessage</name>
+      <anchorfile>classiloggui_1_1_c_message_box_comp.html</anchorfile>
+      <anchor>a66247f72be375702120bcb9d72aa5c69</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnAddMessage</name>
+      <anchorfile>classiloggui_1_1_c_message_box_comp.html</anchorfile>
+      <anchor>a33e39d91a4cb49f3fdd54f9eb7ccfbc6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QIcon</type>
+      <name>GetCategoryIcon</name>
+      <anchorfile>classiloggui_1_1_c_message_box_comp.html</anchorfile>
+      <anchor>a5f890369bc69cbdae26e1dbb6874f93e</anchor>
+      <arglist>(int category) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiloggui_1_1_c_message_box_comp.html</anchorfile>
+      <anchor>a10c02c95dfbc4642f99ec92aa1218447</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

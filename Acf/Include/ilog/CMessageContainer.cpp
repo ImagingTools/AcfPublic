@@ -54,6 +54,12 @@ CMessageContainer::CMessageContainer(const CMessageContainer& container)
 }
 
 
+int CMessageContainer::GetMessagesCount() const
+{
+	return m_messages.count();
+}
+
+
 void CMessageContainer::AddChildContainer(IHierarchicalMessageContainer* childContainerPtr)
 {
 	Q_ASSERT(childContainerPtr != NULL);

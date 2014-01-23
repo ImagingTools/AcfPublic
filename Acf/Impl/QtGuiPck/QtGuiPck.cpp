@@ -331,6 +331,12 @@ I_EXPORT_COMPONENT(
 			"UI for showing a list of files",
 			"File List");
 
+I_EXPORT_COMPONENT(
+			MessageBox,
+			"Logging component use a dialog for message visualization",
+			"Message Log Dialog");
+
+
 } // namespace QtGuiPck
 
 

@@ -90,6 +90,7 @@
 
 #include "iloggui/CLogGuiComp.h"
 #include "iloggui/CTextLogGuiComp.h"
+#include "iloggui/CMessageBoxComp.h"
 
 
 /**
@@ -160,6 +161,7 @@ typedef iqtdoc::CDocumentMetaInfoEditorComp DocumentMetaInfoEditor;
 
 typedef iloggui::CLogGuiComp LogGui;
 typedef iloggui::CTextLogGuiComp TextLogGui;
+typedef iloggui::CMessageBoxComp MessageBox;
 
 
 } // namespace QtGuiPck

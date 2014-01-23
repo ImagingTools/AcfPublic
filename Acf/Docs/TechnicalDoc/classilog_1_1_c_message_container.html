@@ -70,6 +70,8 @@ Inheritance diagram for ilog::CMessageContainer:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_message_container.html#ae8a5f8bba07f741d2e63cb5242c04e99">CMessageContainer</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_message_container.html#ad37a5e83729c45eebea2fc474199cd93">CMessageContainer</a> (const <a class="el" href="classilog_1_1_c_message_container.html">CMessageContainer</a> &amp;container)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_message_container.html#af0d2ef38e92054aeefdc62991bbee5eb">GetMessagesCount</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of messages in the container.  <a href="#af0d2ef38e92054aeefdc62991bbee5eb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_message_container.html#a5d88edfe065e558983a6da67e865cfc4">AddChildContainer</a> (<a class="el" href="namespaceilog.html#a1fdf995bf4b4b21559fcab437deeff36">IHierarchicalMessageContainer</a> *childContainerPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a child message container to this object.  <a href="#a5d88edfe065e558983a6da67e865cfc4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classilog_1_1_c_message_container.html#a1dc07c720bb746803c997da1956e9a8c">SetSlaveConsumer</a> (<a class="el" href="classilog_1_1_i_message_consumer.html">ilog::IMessageConsumer</a> *consumerPtr)</td></tr>
@@ -278,6 +280,25 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="af0d2ef38e92054aeefdc62991bbee5eb"></a><!-- doxytag: member="ilog::CMessageContainer::GetMessagesCount" ref="af0d2ef38e92054aeefdc62991bbee5eb" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ilog::CMessageContainer::GetMessagesCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the number of messages in the container. </p>
+<dl class="note"><dt><b>Note:</b></dt><dd>Messages in the child containers are not involved in the calculation. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a88630242ac8251352a9f40c7077167b5"></a><!-- doxytag: member="ilog::CMessageContainer::GetWorstCategory" ref="a88630242ac8251352a9f40c7077167b5" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -367,7 +388,7 @@ template&lt;typename MessageType &gt; </div>
 <p>Register a new message type. </p>
 <p>Only messages of known (registered) types can be serialized. </p>
 
-<p>Definition at line <a class="el" href="_c_message_container_8h_source.html#l00107">107</a> of file <a class="el" href="_c_message_container_8h_source.html">CMessageContainer.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_message_container_8h_source.html#l00113">113</a> of file <a class="el" href="_c_message_container_8h_source.html">CMessageContainer.h</a>.</p>
 
 <p>References <a class="el" href="_t_composed_factory_8h_source.html#l00051">istd::TComposedFactory&lt; InterfaceType &gt;::RegisterFactory()</a>.</p>
 
