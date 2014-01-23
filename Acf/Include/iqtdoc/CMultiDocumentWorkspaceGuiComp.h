@@ -36,17 +36,13 @@
 
 // ACF includes
 #include "ibase/ICommandsProvider.h"
-
 #include "iprm/ISelectionParam.h"
 #include "iprm/IOptionsList.h"
-
 #include "idoc/CMultiDocumentManagerBase.h"
 #include "idoc/IDocumentTemplate.h"
-
 #include "iqtgui/TGuiComponentBase.h"
 #include "iqtgui/TRestorableGuiWrap.h"
 #include "iqtgui/CHierarchicalCommand.h"
-
 #include "iqtdoc/TQtDocumentManagerWrap.h"
 
 

@@ -1878,9 +1878,9 @@
     <name>CSingleDocumentTemplateComp.h</name>
     <path>C:/Temp/Acf/Include/idoc/</path>
     <filename>_c_single_document_template_comp_8h</filename>
-    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_c_single_document_template_base_8h" name="CSingleDocumentTemplateBase.h" local="yes" imported="no">idoc/CSingleDocumentTemplateBase.h</includes>
     <class kind="class">idoc::CSingleDocumentTemplateComp</class>
     <namespace>idoc</namespace>
@@ -1970,7 +1970,6 @@
     <name>IDocumentTypesInfo.h</name>
     <path>C:/Temp/Acf/Include/idoc/</path>
     <filename>_i_document_types_info_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
     <class kind="class">idoc::IDocumentTypesInfo</class>
     <namespace>idoc</namespace>

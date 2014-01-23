@@ -31,12 +31,13 @@
 </div>
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">iauth::ILogin Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="iauth::ILogin" --><!-- doxytag: inherits="istd::IPolymorphic" -->
+<!-- doxytag: class="iauth::ILogin" --><!-- doxytag: inherits="istd::IChangeable" -->
 <p><code>#include &lt;<a class="el" href="_i_login_8h_source.html">ILogin.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for iauth::ILogin:</div>
@@ -44,14 +45,20 @@ Inheritance diagram for iauth::ILogin:</div>
  <div class="center">
   <img src="classiauth_1_1_i_login.png" usemap="#iauth::ILogin_map" alt=""/>
   <map id="iauth::ILogin_map" name="iauth::ILogin_map">
+<area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html" alt="istd::IChangeable" shape="rect" coords="82,56,236,80"/>
 <area doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_polymorphic.html" alt="istd::IPolymorphic" shape="rect" coords="82,0,236,24"/>
-<area href="classiauth_1_1_c_simple_login_comp.html" alt="iauth::CSimpleLoginComp" shape="rect" coords="0,112,154,136"/>
-<area href="classiauth_1_1_c_user_login_comp.html" title="Implementation of user login allowing to get rights for current logged user." alt="iauth::CUserLoginComp" shape="rect" coords="164,112,318,136"/>
+<area href="classiauth_1_1_c_simple_login_comp.html" alt="iauth::CSimpleLoginComp" shape="rect" coords="0,168,154,192"/>
+<area href="classiauth_1_1_c_user_login_comp.html" title="Implementation of user login allowing to get rights for current logged user." alt="iauth::CUserLoginComp" shape="rect" coords="164,168,318,192"/>
 </map>
  </div></div>
 
 <p><a href="classiauth_1_1_i_login-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_i_login.html#a8f650a42a0393e76dfa70bb885c46cd9">ChangeFlags</a> { <a class="el" href="classiauth_1_1_i_login.html#a8f650a42a0393e76dfa70bb885c46cd9a718b764e3fab39c98bf33ddb023dd1e7">CF_LOGIN</a> =  1 &lt;&lt; 23, 
+<a class="el" href="classiauth_1_1_i_login.html#a8f650a42a0393e76dfa70bb885c46cd9a642d0d9b2027ca7fd5a54a525434275c">CF_LOGOUT</a> =  1 &lt;&lt; 24
+ }</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classiauth_1_1_c_user.html">CUser</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiauth_1_1_i_login.html#a956f0253c73fe842a2d5e15ad773eb59">GetLoggedUser</a> () const =0</td></tr>
@@ -63,8 +70,34 @@ Public Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_i_login_8h_source.html#l00020">20</a> of file <a class="el" href="_i_login_8h_source.html">ILogin.h</a>.</p>
-</div><hr/><h2>Member Function Documentation</h2>
+<p>Definition at line <a class="el" href="_i_login_8h_source.html#l00019">19</a> of file <a class="el" href="_i_login_8h_source.html">ILogin.h</a>.</p>
+</div><hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="a8f650a42a0393e76dfa70bb885c46cd9"></a><!-- doxytag: member="iauth::ILogin::ChangeFlags" ref="a8f650a42a0393e76dfa70bb885c46cd9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classiauth_1_1_i_login.html#a8f650a42a0393e76dfa70bb885c46cd9">iauth::ILogin::ChangeFlags</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a8f650a42a0393e76dfa70bb885c46cd9a718b764e3fab39c98bf33ddb023dd1e7"></a><!-- doxytag: member="CF_LOGIN" ref="a8f650a42a0393e76dfa70bb885c46cd9a718b764e3fab39c98bf33ddb023dd1e7" args="" -->CF_LOGIN</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a8f650a42a0393e76dfa70bb885c46cd9a642d0d9b2027ca7fd5a54a525434275c"></a><!-- doxytag: member="CF_LOGOUT" ref="a8f650a42a0393e76dfa70bb885c46cd9a642d0d9b2027ca7fd5a54a525434275c" args="" -->CF_LOGOUT</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Reimplemented from <a class="elRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9">istd::IChangeable</a>.</p>
+
+<p>Definition at line <a class="el" href="_i_login_8h_source.html#l00022">22</a> of file <a class="el" href="_i_login_8h_source.html">ILogin.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a956f0253c73fe842a2d5e15ad773eb59"></a><!-- doxytag: member="iauth::ILogin::GetLoggedUser" ref="a956f0253c73fe842a2d5e15ad773eb59" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">

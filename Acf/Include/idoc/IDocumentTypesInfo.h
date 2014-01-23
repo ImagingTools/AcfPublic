@@ -29,8 +29,6 @@
 #include <QtCore/QVector>
 
 // ACF includes
-#include "istd/IPolymorphic.h"
-
 #include "ifile/IFileTypeInfo.h"
 
 

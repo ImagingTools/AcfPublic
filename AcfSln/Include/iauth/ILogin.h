@@ -28,7 +28,6 @@
 #include <QtCore/QString>
 
 // ACF includes
-#include "istd/IPolymorphic.h"
 #include "iauth/CUser.h"
 
 
@@ -39,9 +38,15 @@ namespace iauth
 /*
 	Interface supporting login operation.
 */
-class ILogin: virtual public istd::IPolymorphic
+class ILogin: virtual public istd::IChangeable
 {
 public:
+	enum ChangeFlags
+	{
+		CF_LOGIN = 1 << 23,
+		CF_LOGOUT = 1 << 24
+	};
+
 	/**
 		Returns the currently logged on user.
 		\return	user is currently logged on, or NULL, if no user is logged.

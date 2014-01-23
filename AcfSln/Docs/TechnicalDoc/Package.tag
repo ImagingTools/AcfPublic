@@ -3627,7 +3627,25 @@
   <compound kind="class">
     <name>iauth::ILogin</name>
     <filename>classiauth_1_1_i_login.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="enumeration">
+      <name>ChangeFlags</name>
+      <anchorfile>classiauth_1_1_i_login.html</anchorfile>
+      <anchor>a8f650a42a0393e76dfa70bb885c46cd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_LOGIN</name>
+      <anchorfile>classiauth_1_1_i_login.html</anchorfile>
+      <anchor>a8f650a42a0393e76dfa70bb885c46cd9a718b764e3fab39c98bf33ddb023dd1e7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CF_LOGOUT</name>
+      <anchorfile>classiauth_1_1_i_login.html</anchorfile>
+      <anchor>a8f650a42a0393e76dfa70bb885c46cd9a642d0d9b2027ca7fd5a54a525434275c</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual CUser *</type>
       <name>GetLoggedUser</name>
