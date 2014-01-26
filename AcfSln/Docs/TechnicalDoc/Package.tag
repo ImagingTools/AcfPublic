@@ -27209,6 +27209,13 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SerializeParamSets</name>
+      <anchorfile>classiwiz_1_1_c_wizard_document_comp.html</anchorfile>
+      <anchor>aa132dbfe3ee771598eb987114c02f184</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiwiz_1_1_c_wizard_document_comp.html</anchorfile>

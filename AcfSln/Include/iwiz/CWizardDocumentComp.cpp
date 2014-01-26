@@ -225,7 +225,7 @@ bool CWizardDocumentComp::Serialize(iser::IArchive& archive)
 		retVal = retVal && archive.EndTag(additionalObjectsTag);
 	}
 
-	retVal = retVal && BaseClass::Serialize(archive);
+	retVal = retVal && SerializeParamSets(archive);
 
 	if (!isStoring){
 		int index = BaseClass::GetSelectedOptionIndex();
@@ -248,6 +248,12 @@ bool CWizardDocumentComp::Serialize(iser::IArchive& archive)
 
 
 // protected methods
+
+bool CWizardDocumentComp::SerializeParamSets(iser::IArchive& archive)
+{
+	return BaseClass::Serialize(archive);
+}
+
 
 // reimplemented (icomp::CComponentBase)
 
