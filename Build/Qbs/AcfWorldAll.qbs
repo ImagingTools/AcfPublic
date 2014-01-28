@@ -3,7 +3,7 @@ import qbs.base 1.0
 Project{
 	name: "AcfWorld"
 
-    moduleSearchPaths: ["../../Acf/Config/Qbs/modules", "../../3rdParty/Config/Qbs/modules"]
+    qbsSearchPaths: ["../../Acf/Config/Qbs", "../../3rdParty/Config/Qbs"]
 
 	SubProject{
 		filePath: "../../Acf/Build/Qbs/AcfProject.qbs"
