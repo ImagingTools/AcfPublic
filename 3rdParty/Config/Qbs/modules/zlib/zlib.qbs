@@ -5,7 +5,6 @@ Module{
 
 	property string selectedVersion	// the user requested version can be placed here
 
-	Depends{ name: "acf" }
 	Depends{ name: "cpp" }
 
 	cpp.libraryPaths: [
