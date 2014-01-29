@@ -2083,7 +2083,7 @@
     <filename>_c_file_list_provider_comp_8h</filename>
     <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
     <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
     <includes id="_i_file_list_provider_8h" name="IFileListProvider.h" local="yes" imported="no">ifile/IFileListProvider.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
@@ -19905,8 +19905,8 @@
       <type>virtual istd::IChangeable *</type>
       <name>CreateDocument</name>
       <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
-      <anchor>aca5446c4f52dce8c618f416c40906756</anchor>
-      <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
+      <anchor>a68ed7a0910636fbba7cfb431f97bb6d9</anchor>
+      <arglist>(QByteArray &amp;documentTypeId, bool initialize=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IPolymorphic *</type>
@@ -20192,8 +20192,8 @@
       <type>virtual SingleDocumentData *</type>
       <name>CreateDocument</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>a3725273b825005a5547f415d0a0c1d51</anchor>
-      <arglist>(const QByteArray &amp;documentTypeId, bool createView, const QByteArray &amp;viewTypeId) const </arglist>
+      <anchor>ad9db425f24eab0e116bfe32d09320cfb</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, bool createView, const QByteArray &amp;viewTypeId, bool initialize) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -20639,8 +20639,8 @@
       <type>bool</type>
       <name>NewDocument</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>a31d620e94ee71b4232135661391b40c7</anchor>
-      <arglist>(const QByteArray &amp;documentTypeId, bool createView, const QByteArray &amp;viewTypeId)</arglist>
+      <anchor>a22d5223f8d6121caee5f500567a11f3f</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, bool createView, const QByteArray &amp;viewTypeId, bool initialize)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -20881,8 +20881,8 @@
       <type>virtual istd::IChangeable *</type>
       <name>CreateDocument</name>
       <anchorfile>classidoc_1_1_c_single_document_template_comp.html</anchorfile>
-      <anchor>af7495d708afa102d31d049418f789437</anchor>
-      <arglist>(const QByteArray &amp;documentTypeId) const </arglist>
+      <anchor>ab43286be03076dfe9f6346593a366bb5</anchor>
+      <arglist>(QByteArray &amp;documentTypeId, bool initialize=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IPolymorphic *</type>
@@ -21569,8 +21569,8 @@
       <type>virtual istd::IChangeable *</type>
       <name>CreateDocument</name>
       <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
-      <anchor>ad8dd16801bac9fbc5138e34164020260</anchor>
-      <arglist>(const QByteArray &amp;documentTypeId) const =0</arglist>
+      <anchor>a921733381cdeeec8427686c850d041ad</anchor>
+      <arglist>(QByteArray &amp;documentTypeId, bool initialize=true) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::IPolymorphic *</type>
@@ -22137,14 +22137,14 @@
   <compound kind="class">
     <name>ifile::CFileListProviderComp</name>
     <filename>classifile_1_1_c_file_list_provider_comp.html</filename>
-    <base>icomp::CComponentBase</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifile::IFileListProvider</base>
     <base protection="protected">imod::CSingleModelObserverBase</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classifile_1_1_c_file_list_provider_comp.html</anchorfile>
-      <anchor>a3ae4b0ac5ba1190621fe14ea2c03474a</anchor>
+      <anchor>ab9fcaa609dd466a6e6d71028157316ae</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -22611,6 +22611,36 @@
     <filename>classifile_1_1_c_system_location_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">ifile::IFileNameParam</base>
+    <member kind="enumeration">
+      <name>SpecialLocations</name>
+      <anchorfile>classifile_1_1_c_system_location_comp.html</anchorfile>
+      <anchor>aee7a4f1d72b4f0c1028c87e6834e364d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SL_WORKING_DIRECTORY</name>
+      <anchorfile>classifile_1_1_c_system_location_comp.html</anchorfile>
+      <anchor>aee7a4f1d72b4f0c1028c87e6834e364dabd80f690d23131c957edf6e759be3c2a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SL_EXECUTABLE_DIRECTORY</name>
+      <anchorfile>classifile_1_1_c_system_location_comp.html</anchorfile>
+      <anchor>aee7a4f1d72b4f0c1028c87e6834e364da4ba41fb3f0c3102c302b409d6ac5fa88</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SL_EXECUTABLE_FILE</name>
+      <anchorfile>classifile_1_1_c_system_location_comp.html</anchorfile>
+      <anchor>aee7a4f1d72b4f0c1028c87e6834e364da669e9905cf6dba761c13a453170ef96f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SL_EXECUTABLE_CONTENT</name>
+      <anchorfile>classifile_1_1_c_system_location_comp.html</anchorfile>
+      <anchor>aee7a4f1d72b4f0c1028c87e6834e364dadba6a075080ae214eb133dce1108c53e</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>

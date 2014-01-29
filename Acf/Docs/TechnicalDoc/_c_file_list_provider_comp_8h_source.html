@@ -38,7 +38,7 @@
 <a name="l00010"></a>00010 <span class="comment">// ACF includes</span>
 <a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="_i_model_8h.html">imod/IModel.h</a>&quot;</span>
 <a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="_c_single_model_observer_base_8h.html">imod/CSingleModelObserverBase.h</a>&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_c_component_base_8h.html">icomp/CComponentBase.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="_t_logger_comp_wrap_8h.html">ilog/TLoggerCompWrap.h</a>&quot;</span>
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_list_provider_8h.html">ifile/IFileListProvider.h</a>&quot;</span>
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_name_param_8h.html">ifile/IFileNameParam.h</a>&quot;</span>
 <a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_type_info_8h.html">ifile/IFileTypeInfo.h</a>&quot;</span>
@@ -50,13 +50,13 @@
 <a name="l00022"></a>00022 
 <a name="l00026"></a><a class="code" href="classifile_1_1_c_file_list_provider_comp.html">00026</a> <span class="keyword">class </span><a class="code" href="classifile_1_1_c_file_list_provider_comp.html" title="Provide list of file pathes using recursive search of some file directory.">CFileListProviderComp</a>:
 <a name="l00027"></a>00027                      <span class="keyword">public</span> QObject,
-<a name="l00028"></a>00028                      <span class="keyword">public</span> icomp::CComponentBase,
+<a name="l00028"></a>00028                      <span class="keyword">public</span> ilog::<a class="code" href="group___main.html#ga2ac8e0a207c9bb18de1ac6883d2cf09c" title="Type defining base class for simple components outputting log messages.">CLoggerComponentBase</a>,
 <a name="l00029"></a>00029                      <span class="keyword">virtual</span> <span class="keyword">public</span> ifile::<a class="code" href="classifile_1_1_i_file_list_provider.html" title="Provide access to a list of files.">IFileListProvider</a>,
 <a name="l00030"></a>00030                      <span class="keyword">protected</span> imod::CSingleModelObserverBase
 <a name="l00031"></a>00031 {
 <a name="l00032"></a>00032        Q_OBJECT
 <a name="l00033"></a>00033 <span class="keyword">public</span>:
-<a name="l00034"></a><a class="code" href="classifile_1_1_c_file_list_provider_comp.html#a3ae4b0ac5ba1190621fe14ea2c03474a">00034</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_component_base.html" title="Base class for component implementation.">icomp::CComponentBase</a> <a class="code" href="classifile_1_1_c_file_list_provider_comp.html#a3ae4b0ac5ba1190621fe14ea2c03474a">BaseClass</a>;
+<a name="l00034"></a><a class="code" href="classifile_1_1_c_file_list_provider_comp.html#ab9fcaa609dd466a6e6d71028157316ae">00034</a>        <span class="keyword">typedef</span> <a class="code" href="classilog_1_1_t_logger_comp_wrap.html" title="Wrapper provider of log-functionality for component based implementations.">ilog::CLoggerComponentBase</a> <a class="code" href="classifile_1_1_c_file_list_provider_comp.html#ab9fcaa609dd466a6e6d71028157316ae">BaseClass</a>;
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036        I_BEGIN_COMPONENT(<a class="code" href="classifile_1_1_c_file_list_provider_comp.html" title="Provide list of file pathes using recursive search of some file directory.">CFileListProviderComp</a>);
 <a name="l00037"></a>00037               I_REGISTER_INTERFACE(<a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>);
@@ -84,23 +84,23 @@
 <a name="l00059"></a>00059        <span class="keywordtype">void</span> OnDirectoryContentChanged(<span class="keyword">const</span> QString&amp; directoryPath);
 <a name="l00060"></a>00060 
 <a name="l00061"></a>00061 <span class="keyword">private</span>:
-<a name="l00069"></a>00069        <span class="keyword">static</span> <span class="keywordtype">bool</span> CreateFileList(<span class="keyword">const</span> QDir&amp; root,
+<a name="l00069"></a>00069        <span class="keywordtype">bool</span> CreateFileList(<span class="keyword">const</span> QDir&amp; root,
 <a name="l00070"></a>00070                             <span class="keywordtype">int</span> minRecursionDepth,
 <a name="l00071"></a>00071                             <span class="keywordtype">int</span> maxRecursionDepth,
 <a name="l00072"></a>00072                             <span class="keyword">const</span> QStringList&amp; nameFilters,
 <a name="l00073"></a>00073                             QDir::SortFlags sortSpec,
-<a name="l00074"></a>00074                             QFileInfoList&amp; fileList);
+<a name="l00074"></a>00074                             QFileInfoList&amp; fileList) <span class="keyword">const</span>;
 <a name="l00075"></a>00075 
-<a name="l00081"></a>00081        <span class="keyword">static</span> <span class="keywordtype">bool</span> CreateDirectoryList(<span class="keyword">const</span> QDir&amp; root,
+<a name="l00081"></a>00081        <span class="keywordtype">bool</span> CreateDirectoryList(<span class="keyword">const</span> QDir&amp; root,
 <a name="l00082"></a>00082                             <span class="keywordtype">int</span> minRecursionDepth,
 <a name="l00083"></a>00083                             <span class="keywordtype">int</span> maxRecursionDepth,
-<a name="l00084"></a>00084                             QFileInfoList&amp; directoryList);
+<a name="l00084"></a>00084                             QFileInfoList&amp; directoryList) <span class="keyword">const</span>;
 <a name="l00085"></a>00085 
-<a name="l00086"></a>00086        <span class="keyword">static</span> <span class="keywordtype">void</span> EnumerateDirectory(
+<a name="l00086"></a>00086        <span class="keywordtype">void</span> EnumerateDirectory(
 <a name="l00087"></a>00087                             <span class="keyword">const</span> QDir&amp; root,
 <a name="l00088"></a>00088                             <span class="keywordtype">int</span> minRecursionDepth,
 <a name="l00089"></a>00089                             <span class="keywordtype">int</span> maxRecursionDepth,
-<a name="l00090"></a>00090                             QFileInfoList&amp; directoryList);
+<a name="l00090"></a>00090                             QFileInfoList&amp; directoryList) <span class="keyword">const</span>;
 <a name="l00091"></a>00091 
 <a name="l00092"></a>00092 <span class="keyword">private</span>:
 <a name="l00093"></a>00093        I_REF(<a class="code" href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)">ifile::IFileNameParam</a>, m_dirParamCompPtr);

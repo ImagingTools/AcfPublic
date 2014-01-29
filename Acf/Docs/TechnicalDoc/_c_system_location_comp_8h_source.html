@@ -49,37 +49,48 @@
 <a name="l00024"></a>00024 <span class="keyword">public</span>:
 <a name="l00025"></a><a class="code" href="classifile_1_1_c_system_location_comp.html#abf639bb50cb4e8c2d10f4d181cd1bfa5">00025</a>        <span class="keyword">typedef</span> <a class="code" href="classicomp_1_1_c_component_base.html" title="Base class for component implementation.">icomp::CComponentBase</a> <a class="code" href="classifile_1_1_c_system_location_comp.html#abf639bb50cb4e8c2d10f4d181cd1bfa5">BaseClass</a>;
 <a name="l00026"></a>00026 
-<a name="l00027"></a>00027        I_BEGIN_COMPONENT(<a class="code" href="classifile_1_1_c_system_location_comp.html" title="Provider of system pathes.">CSystemLocationComp</a>);
-<a name="l00028"></a>00028               I_REGISTER_INTERFACE(<a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>);
-<a name="l00029"></a>00029               I_REGISTER_INTERFACE(<a class="code" href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)">ifile::IFileNameParam</a>);
-<a name="l00030"></a>00030               I_ASSIGN(m_locationTypeAttrPtr, <span class="stringliteral">&quot;LocationType&quot;</span>, <span class="stringliteral">&quot;Type of system location:\n0 - user&#39;s desktop directory\n1 - user&#39;s document\n2 - user&#39;s fonts\n3 - user&#39;s applications\n4 - users music\n5 - user&#39;s movies\n6 - user&#39;s movies\n7 - system&#39;s temporary directory\n8 - user&#39;s home directory\n9 - directory location where persistent application data can be stored\n10 - Returns a directory location where user-specific non-essential (cached) data should be written&quot;</span>, <span class="keyword">true</span>, 0);
-<a name="l00031"></a>00031        I_END_COMPONENT;
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033        <span class="comment">// reimplemented (ifile::IFileNameParam)</span>
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classifile_1_1_c_system_location_comp.html#aa3abc993444cceba6dd08e67ab91c127" title="Get intended type of the path.">GetPathType</a>() <span class="keyword">const</span>;
-<a name="l00035"></a>00035        <span class="keyword">virtual</span> <span class="keyword">const</span> QString&amp; <a class="code" href="classifile_1_1_c_system_location_comp.html#a3f09731c27645c594df4d9e540f9be34" title="Get path.">GetPath</a>() <span class="keyword">const</span>;
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifile_1_1_c_system_location_comp.html#aaa4e0db3758e33e5f35e7d6d26d9a987" title="Set path.">SetPath</a>(<span class="keyword">const</span> QString&amp; path);
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038        <span class="comment">// reimplemented (iser::ISerializable)</span>
-<a name="l00039"></a>00039        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifile_1_1_c_system_location_comp.html#ac7b3f3f5f2c4b90db954943f7004622b" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041 <span class="keyword">protected</span>:
-<a name="l00042"></a>00042        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifile_1_1_c_system_location_comp.html#a2a4cf007ae148c02c5fef67ffe718cfd">OnComponentCreated</a>();
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045 <span class="keyword">private</span>:
-<a name="l00046"></a>00046        I_ATTR(<span class="keywordtype">int</span>, m_locationTypeAttrPtr);
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048        QString m_storagePath;
-<a name="l00049"></a>00049 };
+<a name="l00027"></a><a class="code" href="classifile_1_1_c_system_location_comp.html#aee7a4f1d72b4f0c1028c87e6834e364d">00027</a>        <span class="keyword">enum</span> <a class="code" href="classifile_1_1_c_system_location_comp.html#aee7a4f1d72b4f0c1028c87e6834e364d">SpecialLocations</a>
+<a name="l00028"></a>00028        {
+<a name="l00032"></a><a class="code" href="classifile_1_1_c_system_location_comp.html#aee7a4f1d72b4f0c1028c87e6834e364dabd80f690d23131c957edf6e759be3c2a">00032</a>               <a class="code" href="classifile_1_1_c_system_location_comp.html#aee7a4f1d72b4f0c1028c87e6834e364dabd80f690d23131c957edf6e759be3c2a" title="Working directory of the application.">SL_WORKING_DIRECTORY</a> = 100,
+<a name="l00033"></a>00033 
+<a name="l00037"></a><a class="code" href="classifile_1_1_c_system_location_comp.html#aee7a4f1d72b4f0c1028c87e6834e364da4ba41fb3f0c3102c302b409d6ac5fa88">00037</a>               <a class="code" href="classifile_1_1_c_system_location_comp.html#aee7a4f1d72b4f0c1028c87e6834e364da4ba41fb3f0c3102c302b409d6ac5fa88" title="Path to the directory where the executable file is located.">SL_EXECUTABLE_DIRECTORY</a> = 101,
+<a name="l00038"></a>00038 
+<a name="l00042"></a><a class="code" href="classifile_1_1_c_system_location_comp.html#aee7a4f1d72b4f0c1028c87e6834e364da669e9905cf6dba761c13a453170ef96f">00042</a>               <a class="code" href="classifile_1_1_c_system_location_comp.html#aee7a4f1d72b4f0c1028c87e6834e364da669e9905cf6dba761c13a453170ef96f" title="Path to the exectuable file.">SL_EXECUTABLE_FILE</a> = 102,
+<a name="l00043"></a>00043 
+<a name="l00048"></a><a class="code" href="classifile_1_1_c_system_location_comp.html#aee7a4f1d72b4f0c1028c87e6834e364dadba6a075080ae214eb133dce1108c53e">00048</a>               <a class="code" href="classifile_1_1_c_system_location_comp.html#aee7a4f1d72b4f0c1028c87e6834e364dadba6a075080ae214eb133dce1108c53e" title="Directory for the application&#39;s content.">SL_EXECUTABLE_CONTENT</a> = 103
+<a name="l00049"></a>00049        };
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052 } <span class="comment">// namespace ifile</span>
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054 
-<a name="l00055"></a>00055 <span class="preprocessor">#endif // !ifile_CSystemLocationComp_included</span>
-<a name="l00056"></a>00056 <span class="preprocessor"></span>
-<a name="l00057"></a>00057 
+<a name="l00051"></a>00051        I_BEGIN_COMPONENT(<a class="code" href="classifile_1_1_c_system_location_comp.html" title="Provider of system pathes.">CSystemLocationComp</a>);
+<a name="l00052"></a>00052               I_REGISTER_INTERFACE(<a class="code" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive.">iser::ISerializable</a>);
+<a name="l00053"></a>00053               I_REGISTER_INTERFACE(<a class="code" href="classifile_1_1_i_file_name_param.html" title="Common interface for any file system item name (e.g directory, file or URL path)">ifile::IFileNameParam</a>);
+<a name="l00054"></a>00054               I_ASSIGN(m_locationTypeAttrPtr, <span class="stringliteral">&quot;LocationType&quot;</span>, <span class="stringliteral">&quot;Type of system location:\n0 - user&#39;s desktop directory\n1 - user&#39;s document\n2 - user&#39;s fonts\n3 - user&#39;s applications\n4 - users music\n5 - user&#39;s movies\n6 - user&#39;s movies\n7 - system&#39;s temporary directory\n8 - user&#39;s home directory\n9 - directory location where persistent application data can be stored\n10 - Returns a directory location where user-specific non-essential (cached) data should be written\n100 - Working directory for the running executable\n101 - Directory of the executable file\n102 - Path to the executable file\n103 - Application&#39;s local content folder&quot;</span>, <span class="keyword">true</span>, 0);
+<a name="l00055"></a>00055        I_END_COMPONENT;
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057        <span class="comment">// reimplemented (ifile::IFileNameParam)</span>
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classifile_1_1_c_system_location_comp.html#aa3abc993444cceba6dd08e67ab91c127" title="Get intended type of the path.">GetPathType</a>() <span class="keyword">const</span>;
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keyword">const</span> QString&amp; <a class="code" href="classifile_1_1_c_system_location_comp.html#a3f09731c27645c594df4d9e540f9be34" title="Get path.">GetPath</a>() <span class="keyword">const</span>;
+<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifile_1_1_c_system_location_comp.html#aaa4e0db3758e33e5f35e7d6d26d9a987" title="Set path.">SetPath</a>(<span class="keyword">const</span> QString&amp; path);
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062        <span class="comment">// reimplemented (iser::ISerializable)</span>
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classifile_1_1_c_system_location_comp.html#ac7b3f3f5f2c4b90db954943f7004622b" title="Load or store state of this object as a archive stream.">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive);
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065 <span class="keyword">protected</span>:
+<a name="l00066"></a>00066        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00067"></a>00067        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifile_1_1_c_system_location_comp.html#a2a4cf007ae148c02c5fef67ffe718cfd">OnComponentCreated</a>();
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069 <span class="keyword">private</span>:
+<a name="l00070"></a>00070        I_ATTR(<span class="keywordtype">int</span>, m_locationTypeAttrPtr);
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072        QString m_storagePath;
+<a name="l00073"></a>00073 };
+<a name="l00074"></a>00074 
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076 } <span class="comment">// namespace ifile</span>
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079 <span class="preprocessor">#endif // !ifile_CSystemLocationComp_included</span>
+<a name="l00080"></a>00080 <span class="preprocessor"></span>
+<a name="l00081"></a>00081 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

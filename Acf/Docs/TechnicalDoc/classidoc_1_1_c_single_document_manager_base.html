@@ -98,8 +98,8 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a9a59002019b6ee89d2cb70be3e28d6c5">OpenDocument</a> (const QString &amp;filePath, bool createView, const QByteArray &amp;viewTypeId, QByteArray &amp;documentTypeId)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Open single document using its file path.  <a href="#a9a59002019b6ee89d2cb70be3e28d6c5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a31d620e94ee71b4232135661391b40c7">NewDocument</a> (const QByteArray &amp;documentTypeId, bool createView, const QByteArray &amp;viewTypeId)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create instance of specified document without attaching to this manager.  <a href="#a31d620e94ee71b4232135661391b40c7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a22d5223f8d6121caee5f500567a11f3f">NewDocument</a> (const QByteArray &amp;documentTypeId, bool createView, const QByteArray &amp;viewTypeId, bool initialize)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create instance of specified document without attaching to this manager.  <a href="#a22d5223f8d6121caee5f500567a11f3f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#a51ca1777268799a35e0e0a706126c906">EnsureViewRemoved</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#af841573183993aeae096b570524c7af7">GetCurrentDocumentFilePath</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_single_document_manager_base.html#af0cb10d2875063d041accad6c7e67a48">HasDocumentPendingChanges</a> () const </td></tr>
@@ -609,7 +609,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a31d620e94ee71b4232135661391b40c7"></a><!-- doxytag: member="idoc::CSingleDocumentManagerBase::NewDocument" ref="a31d620e94ee71b4232135661391b40c7" args="(const QByteArray &amp;documentTypeId, bool createView, const QByteArray &amp;viewTypeId)" -->
+<a class="anchor" id="a22d5223f8d6121caee5f500567a11f3f"></a><!-- doxytag: member="idoc::CSingleDocumentManagerBase::NewDocument" ref="a22d5223f8d6121caee5f500567a11f3f" args="(const QByteArray &amp;documentTypeId, bool createView, const QByteArray &amp;viewTypeId, bool initialize)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -629,7 +629,13 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const QByteArray &amp;&#160;</td>
-          <td class="paramname"><em>viewTypeId</em>&#160;</td>
+          <td class="paramname"><em>viewTypeId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>initialize</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

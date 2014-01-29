@@ -84,8 +84,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get human readable name of some view type ID.  <a href="#a9bcebdd6d008815161e161c86b2b0897"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classifile_1_1_i_file_persistence.html">ifile::IFilePersistence</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a71e8079f3d1dea1202f46950c4f12ba1">GetFileLoader</a> (const QByteArray &amp;documentTypeId) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file loader/saver for spacified document ID.  <a href="#a71e8079f3d1dea1202f46950c4f12ba1"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#aca5446c4f52dce8c618f416c40906756">CreateDocument</a> (const QByteArray &amp;documentTypeId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a document instance for document type <code>documentTypeId</code>.  <a href="#aca5446c4f52dce8c618f416c40906756"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a68ed7a0910636fbba7cfb431f97bb6d9">CreateDocument</a> (QByteArray &amp;documentTypeId, bool initialize=true) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a document instance for document type <code>documentTypeId</code>.  <a href="#a68ed7a0910636fbba7cfb431f97bb6d9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a4c96ba0b8e6b0d193ddf3a4ce0995a60">CreateView</a> (const QByteArray &amp;documentTypeId, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *documentPtr, const QByteArray &amp;viewTypeId=QByteArray()) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a view instance for document <code>document</code> of type <code>viewTypeId</code>.  <a href="#a4c96ba0b8e6b0d193ddf3a4ce0995a60"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classidoc_1_1_i_undo_manager.html">idoc::IUndoManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a9dcad6aa2bd3d877db8b9942ff393d2a">CreateUndoManager</a> (const QByteArray &amp;documentTypeId, <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *documentPtr) const </td></tr>
@@ -116,16 +116,26 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aca5446c4f52dce8c618f416c40906756"></a><!-- doxytag: member="idoc::CCompositeDocumentTemplateComp::CreateDocument" ref="aca5446c4f52dce8c618f416c40906756" args="(const QByteArray &amp;documentTypeId) const " -->
+<a class="anchor" id="a68ed7a0910636fbba7cfb431f97bb6d9"></a><!-- doxytag: member="idoc::CCompositeDocumentTemplateComp::CreateDocument" ref="a68ed7a0910636fbba7cfb431f97bb6d9" args="(QByteArray &amp;documentTypeId, bool initialize=true) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* idoc::CCompositeDocumentTemplateComp::CreateDocument </td>
           <td>(</td>
-          <td class="paramtype">const QByteArray &amp;&#160;</td>
-          <td class="paramname"><em>documentTypeId</em></td><td>)</td>
-          <td> const<code> [virtual]</code></td>
+          <td class="paramtype">QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>documentTypeId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>initialize</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -134,12 +144,13 @@ Protected Member Functions</h2></td></tr>
 <p>Creates a document instance for document type <code>documentTypeId</code>. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">documentTypeId</td><td>ID of document type. </td></tr>
+    <tr><td class="paramname">documentTypeId</td><td>ID of document type, can be empty for default document. If document type is undefined (empty), this field will be used to return ID of used type. </td></tr>
+    <tr><td class="paramname">initialize</td><td>If true, document should be filled with initial data (operation new), otherwise initialization is not needed (e.g. for document loading - filling of data will be done by loader). </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classidoc_1_1_i_document_template.html#ad8dd16801bac9fbc5138e34164020260">idoc::IDocumentTemplate</a>.</p>
+<p>Implements <a class="el" href="classidoc_1_1_i_document_template.html#a921733381cdeeec8427686c850d041ad">idoc::IDocumentTemplate</a>.</p>
 
 </div>
 </div>

@@ -123,8 +123,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get document info assigned to specified file.  <a href="#a230ee9606b4757ad5210b9707ddc41be"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a33c45da92ae4e15ee00044f01a2fa785">GetDocumentIndex</a> (const <a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html">SingleDocumentData</a> &amp;document) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get position index of the given document in the document list.  <a href="#a33c45da92ae4e15ee00044f01a2fa785"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html">SingleDocumentData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a3725273b825005a5547f415d0a0c1d51">CreateDocument</a> (const QByteArray &amp;documentTypeId, bool createView, const QByteArray &amp;viewTypeId) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create instance of specified document without attaching to this manager.  <a href="#a3725273b825005a5547f415d0a0c1d51"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html">SingleDocumentData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#ad9db425f24eab0e116bfe32d09320cfb">CreateDocument</a> (const QByteArray &amp;documentTypeId, bool createView, const QByteArray &amp;viewTypeId, bool initialize) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create instance of specified document without attaching to this manager.  <a href="#ad9db425f24eab0e116bfe32d09320cfb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#a5f5a652857571ffa2537ad9a7d3b52fe">RegisterDocument</a> (<a class="el" href="structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html">SingleDocumentData</a> *documentPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Register (attach) created document as new working document.  <a href="#a5f5a652857571ffa2537ad9a7d3b52fe"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_c_multi_document_manager_base.html#ad3085842a9b9c6031a06b7a8eb3f901c">OnViewRegistered</a> (<a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *viewPtr)=0</td></tr>
@@ -362,7 +362,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3725273b825005a5547f415d0a0c1d51"></a><!-- doxytag: member="idoc::CMultiDocumentManagerBase::CreateDocument" ref="a3725273b825005a5547f415d0a0c1d51" args="(const QByteArray &amp;documentTypeId, bool createView, const QByteArray &amp;viewTypeId) const " -->
+<a class="anchor" id="ad9db425f24eab0e116bfe32d09320cfb"></a><!-- doxytag: member="idoc::CMultiDocumentManagerBase::CreateDocument" ref="ad9db425f24eab0e116bfe32d09320cfb" args="(const QByteArray &amp;documentTypeId, bool createView, const QByteArray &amp;viewTypeId, bool initialize) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -382,7 +382,13 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const QByteArray &amp;&#160;</td>
-          <td class="paramname"><em>viewTypeId</em>&#160;</td>
+          <td class="paramname"><em>viewTypeId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>initialize</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

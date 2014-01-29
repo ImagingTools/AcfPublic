@@ -56,8 +56,8 @@ public:
 	virtual istd::IPolymorphic* AddViewToDocument(const istd::IChangeable& document, const QByteArray& viewTypeId = QByteArray());
 	virtual QByteArray GetDocumentTypeId(const istd::IChangeable& document) const;
 	virtual bool InsertNewDocument(
-				const QByteArray& documentTypeId, 
-				bool createView = true, 
+				const QByteArray& documentTypeId,
+				bool createView = true,
 				const QByteArray& viewTypeId = "",
 				istd::IChangeable** newDocumentPtr = NULL);
 	virtual bool OpenDocument(
@@ -150,7 +150,11 @@ protected:
 	/**
 		Create instance of specified document without attaching to this manager.
 	*/
-	virtual SingleDocumentData* CreateDocument(const QByteArray& documentTypeId, bool createView, const QByteArray& viewTypeId) const;
+	virtual SingleDocumentData* CreateDocument(
+				const QByteArray& documentTypeId,
+				bool createView,
+				const QByteArray& viewTypeId,
+				bool initialize) const;
 
 	/**
 		Register (attach) created document as new working document.

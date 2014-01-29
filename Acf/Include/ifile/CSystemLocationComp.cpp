@@ -24,6 +24,7 @@
 
 
 // Qt includes
+#include <QtCore/QDir>
 #if QT_VERSION < 0x050000
 	#include <QtGui/QDesktopServices>
 #else
@@ -79,8 +80,30 @@ void CSystemLocationComp::OnComponentCreated()
 	m_storagePath = QDesktopServices::storageLocation(QDesktopServices::StandardLocation(*m_locationTypeAttrPtr));
 #else
 	m_storagePath = QStandardPaths::writableLocation(QStandardPaths::StandardLocation(*m_locationTypeAttrPtr));
-
 #endif
+
+	switch (*m_locationTypeAttrPtr){
+		case SL_WORKING_DIRECTORY:
+			m_storagePath = QDir().absolutePath(); 
+			break;
+
+		case SL_EXECUTABLE_DIRECTORY:
+			m_storagePath = QCoreApplication::applicationDirPath(); 
+			break;
+
+		case SL_EXECUTABLE_FILE:
+			m_storagePath = QCoreApplication::applicationFilePath(); 
+			break;
+
+		case SL_EXECUTABLE_CONTENT:
+			m_storagePath = QCoreApplication::applicationDirPath();
+			if (m_storagePath.contains(".app/Contents/MacOS")){
+				m_storagePath += "../../";
+			}
+			break;
+		default:
+			break;
+	}
 }
 
 

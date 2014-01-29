@@ -57,23 +57,23 @@
 <a name="l00039"></a>00039 
 <a name="l00044"></a>00044        <span class="keyword">virtual</span> <a class="code" href="classifile_1_1_i_file_persistence.html" title="Provide loading and saving of objects.">ifile::IFilePersistence</a>* <a class="code" href="classidoc_1_1_i_document_template.html#ab7e01e2b3c635bdd04cdb57b18249439" title="Get file loader/saver for spacified document ID.">GetFileLoader</a>(<span class="keyword">const</span> QByteArray&amp; documentTypeId) <span class="keyword">const</span> = 0;
 <a name="l00045"></a>00045 
-<a name="l00050"></a>00050        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classidoc_1_1_i_document_template.html#ad8dd16801bac9fbc5138e34164020260" title="Creates a document instance for document type documentTypeId.">CreateDocument</a>(<span class="keyword">const</span> QByteArray&amp; documentTypeId) <span class="keyword">const</span> = 0;
-<a name="l00051"></a>00051 
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* <a class="code" href="classidoc_1_1_i_document_template.html#aa9dc2ddd9889c79f373dd6c1b5324690" title="Creates a view instance for document document of type viewTypeId.">CreateView</a>(
-<a name="l00059"></a>00059                             <span class="keyword">const</span> QByteArray&amp; documentTypeId,
-<a name="l00060"></a>00060                             <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* documentPtr,
-<a name="l00061"></a>00061                             <span class="keyword">const</span> QByteArray&amp; viewTypeId = QByteArray()) <span class="keyword">const</span> = 0;
-<a name="l00062"></a>00062 
-<a name="l00069"></a>00069        <span class="keyword">virtual</span> <a class="code" href="classidoc_1_1_i_undo_manager.html" title="Interface providing UNDO/REDO functionality.">idoc::IUndoManager</a>* <a class="code" href="classidoc_1_1_i_document_template.html#a870ed43b6775d4b714491a78a5170744" title="Creates an undo manger for a given document documentPtr.">CreateUndoManager</a>(<span class="keyword">const</span> QByteArray&amp; documentTypeId, <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* documentPtr) <span class="keyword">const</span> = 0;
-<a name="l00070"></a>00070 };
-<a name="l00071"></a>00071 
-<a name="l00072"></a>00072 
-<a name="l00073"></a>00073 } <span class="comment">// namespace idoc</span>
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classidoc_1_1_i_document_template.html#a921733381cdeeec8427686c850d041ad" title="Creates a document instance for document type documentTypeId.">CreateDocument</a>(QByteArray&amp; documentTypeId, <span class="keywordtype">bool</span> initialize = <span class="keyword">true</span>) <span class="keyword">const</span> = 0;
+<a name="l00054"></a>00054 
+<a name="l00061"></a>00061        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* <a class="code" href="classidoc_1_1_i_document_template.html#aa9dc2ddd9889c79f373dd6c1b5324690" title="Creates a view instance for document document of type viewTypeId.">CreateView</a>(
+<a name="l00062"></a>00062                             <span class="keyword">const</span> QByteArray&amp; documentTypeId,
+<a name="l00063"></a>00063                             <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* documentPtr,
+<a name="l00064"></a>00064                             <span class="keyword">const</span> QByteArray&amp; viewTypeId = QByteArray()) <span class="keyword">const</span> = 0;
+<a name="l00065"></a>00065 
+<a name="l00072"></a>00072        <span class="keyword">virtual</span> <a class="code" href="classidoc_1_1_i_undo_manager.html" title="Interface providing UNDO/REDO functionality.">idoc::IUndoManager</a>* <a class="code" href="classidoc_1_1_i_document_template.html#a870ed43b6775d4b714491a78a5170744" title="Creates an undo manger for a given document documentPtr.">CreateUndoManager</a>(<span class="keyword">const</span> QByteArray&amp; documentTypeId, <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* documentPtr) <span class="keyword">const</span> = 0;
+<a name="l00073"></a>00073 };
 <a name="l00074"></a>00074 
 <a name="l00075"></a>00075 
-<a name="l00076"></a>00076 <span class="preprocessor">#endif // !idoc_IDocumentTemplate_included</span>
-<a name="l00077"></a>00077 <span class="preprocessor"></span>
+<a name="l00076"></a>00076 } <span class="comment">// namespace idoc</span>
+<a name="l00077"></a>00077 
 <a name="l00078"></a>00078 
+<a name="l00079"></a>00079 <span class="preprocessor">#endif // !idoc_IDocumentTemplate_included</span>
+<a name="l00080"></a>00080 <span class="preprocessor"></span>
+<a name="l00081"></a>00081 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

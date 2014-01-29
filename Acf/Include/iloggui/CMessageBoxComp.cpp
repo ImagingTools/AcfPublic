@@ -26,7 +26,11 @@
 // Qt includes
 #include <QtCore/QDateTime>
 #include <QtCore/QMetaType>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QApplication>
+#else
 #include <QtGui/QApplication>
+#endif
 
 
 namespace iloggui
@@ -148,7 +152,7 @@ void CMessageBoxComp::OnAddMessage()
 			QString detailedText;
 			QIcon statusIcon;
 			CreateMessageText(messageText, detailedText, statusIcon);
-			
+
 			m_messageQueue.clear();
 			m_messageQueueMutex.unlock();
 
