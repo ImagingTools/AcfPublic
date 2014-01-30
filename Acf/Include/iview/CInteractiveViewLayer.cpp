@@ -145,7 +145,7 @@ bool CInteractiveViewLayer::OnMouseButton(istd::CIndex2d position, Qt::MouseButt
 						boundingBox.IsInside(position)){
 			ITouchable::TouchState touchState = uiShapePtr->IsTouched(position);
 			if (touchState != IInteractiveShape::TS_NONE){
-				if ((listenerPtr != NULL) && listenerPtr->OnMouseButton(*viewPtr, position, buttonType, downFlag, uiShapePtr)){
+				if ((listenerPtr != NULL) && listenerPtr->OnViewMouseButton(*viewPtr, position, buttonType, downFlag, uiShapePtr)){
 					return true;
 				}
 
@@ -182,7 +182,7 @@ bool CInteractiveViewLayer::OnMouseButton(istd::CIndex2d position, Qt::MouseButt
 						boundingBox.IsInside(position)){
 			ITouchable::TouchState touchState = uiShapePtr->IsTouched(position);
 			if (touchState != IInteractiveShape::TS_NONE){
-				if ((listenerPtr != NULL) && listenerPtr->OnMouseButton(*viewPtr, position, buttonType, downFlag, uiShapePtr)){
+				if ((listenerPtr != NULL) && listenerPtr->OnViewMouseButton(*viewPtr, position, buttonType, downFlag, uiShapePtr)){
 					return true;
 				}
 

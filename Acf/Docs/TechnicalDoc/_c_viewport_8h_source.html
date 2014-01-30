@@ -89,7 +89,7 @@
 <a name="l00067"></a>00067                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position,
 <a name="l00068"></a>00068                             <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_interactive_shape.html" title="Common interface for all display console shapes which can interacts with user.">iview::IInteractiveShape</a>&amp; shape,
 <a name="l00069"></a>00069                             <span class="keywordtype">bool</span> state);
-<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_viewport.html#abf8b019ac57fb70d7c90447eed008d47" title="Message handler for mouse button click.">OnMouseButton</a>(
+<a name="l00070"></a>00070        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiview_1_1_c_viewport.html#a048ad434828a0257d3985c0c89ac7073" title="Message handler for mouse button click.">OnViewMouseButton</a>(
 <a name="l00071"></a>00071                             <span class="keyword">const</span> <a class="code" href="classiview_1_1_i_shape_view.html" title="Common interface for a general shape view implementations.">iview::IShapeView</a>&amp; view,
 <a name="l00072"></a>00072                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; position,
 <a name="l00073"></a>00073                             Qt::MouseButton buttonType,
@@ -129,7 +129,7 @@
 <a name="l00110"></a>00110        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiview_1_1_c_viewport.html#a85b684dbb7dc3ee485dde550815d84c5" title="Invalidate display area.">OnAreaInvalidated</a>(<span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; beforeBox, <span class="keyword">const</span> <a class="code" href="classi2d_1_1_c_rect.html" title="Simple rectangle with integer bounds.">i2d::CRect</a>&amp; afterBox);
 <a name="l00111"></a>00111 
 <a name="l00112"></a>00112        <span class="comment">// static methods</span>
-<a name="l00113"></a>00113        <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_c_view_base.html#a8e572cd22e81ad50df4dbacb08c74ba1" title="Get state of system keys.">GetKeysState</a>(<span class="keyword">const</span> QMouseEvent&amp; event);
+<a name="l00113"></a>00113        <span class="keywordtype">int</span> <a class="code" href="classiview_1_1_c_viewport.html#a8b4cce4e838b069f5563ed732bfa6e9f">GetMouseKeysState</a>(<span class="keyword">const</span> QMouseEvent&amp; event);
 <a name="l00114"></a>00114 
 <a name="l00115"></a>00115 <span class="keyword">private</span>:
 <a name="l00116"></a>00116        QCursor m_mousePointerModes[<a class="code" href="classiview_1_1_i_selectable.html#a77236c5f1938e017c69bddfa21c3fe26ae18e208ceb893e8dc045d5dd4bc32b9a">MPM_LAST</a> + 1];

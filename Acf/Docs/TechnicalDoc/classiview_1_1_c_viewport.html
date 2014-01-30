@@ -101,8 +101,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get bounding box of client area.  <a href="#ac3aa542abbd7b163ee2e2617eb8184bf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#abe44bf463ce2699dee173a73ba0e9739">OnSelectChange</a> (const <a class="el" href="classiview_1_1_i_shape_view.html">iview::IShapeView</a> &amp;view, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;position, const <a class="el" href="classiview_1_1_i_interactive_shape.html">iview::IInteractiveShape</a> &amp;shape, bool state)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Message handler for selection changes.  <a href="#abe44bf463ce2699dee173a73ba0e9739"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#abf8b019ac57fb70d7c90447eed008d47">OnMouseButton</a> (const <a class="el" href="classiview_1_1_i_shape_view.html">iview::IShapeView</a> &amp;view, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;position, Qt::MouseButton buttonType, bool state, const <a class="el" href="classiview_1_1_i_interactive_shape.html">iview::IInteractiveShape</a> *shapePtr)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Message handler for mouse button click.  <a href="#abf8b019ac57fb70d7c90447eed008d47"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#a048ad434828a0257d3985c0c89ac7073">OnViewMouseButton</a> (const <a class="el" href="classiview_1_1_i_shape_view.html">iview::IShapeView</a> &amp;view, const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;position, Qt::MouseButton buttonType, bool state, const <a class="el" href="classiview_1_1_i_interactive_shape.html">iview::IInteractiveShape</a> *shapePtr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Message handler for mouse button click.  <a href="#a048ad434828a0257d3985c0c89ac7073"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#a5ec9b73933389a6aff56bdda659b1574">OnMouseMove</a> (<a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> position)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">It is called, when mouse is moved.  <a href="#a5ec9b73933389a6aff56bdda659b1574"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#a0c59a58bec301b238c6c3291201bbf4a">ConnectCalibrationShape</a> (<a class="el" href="classiview_1_1_i_shape.html">iview::IShape</a> *shapePtr)</td></tr>
@@ -129,7 +129,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate bounding box of all shapes.  <a href="#a3c9a3a14226cf60734b2fd88c0d5c82d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#a85b684dbb7dc3ee485dde550815d84c5">OnAreaInvalidated</a> (const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;beforeBox, const <a class="el" href="classi2d_1_1_c_rect.html">i2d::CRect</a> &amp;afterBox)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidate display area.  <a href="#a85b684dbb7dc3ee485dde550815d84c5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#afb7ba17ccf611a6a5c8895cc994be300">GetKeysState</a> (const QMouseEvent &amp;event)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#a8b4cce4e838b069f5563ed732bfa6e9f">GetMouseKeysState</a> (const QMouseEvent &amp;event)</td></tr>
 <tr><td colspan="2"><h2><a name="friends"></a>
 Friends</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiview_1_1_c_viewport.html#a97d1351fa9266c153d285189ce5e62bf">CConsoleBase</a></td></tr>
@@ -313,23 +313,6 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afb7ba17ccf611a6a5c8895cc994be300"></a><!-- doxytag: member="iview::CViewport::GetKeysState" ref="afb7ba17ccf611a6a5c8895cc994be300" args="(const QMouseEvent &amp;event)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int iview::CViewport::GetKeysState </td>
-          <td>(</td>
-          <td class="paramtype">const QMouseEvent &amp;&#160;</td>
-          <td class="paramname"><em>event</em></td><td>)</td>
-          <td><code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="ae31c5608f634a689e9d528f13df3da22"></a><!-- doxytag: member="iview::CViewport::GetLogicalPositionExact" ref="ae31c5608f634a689e9d528f13df3da22" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -345,6 +328,23 @@ Friends</h2></td></tr>
 <div class="memdoc">
 
 <p>Get number of digits after point used to display mouse position in logical units. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8b4cce4e838b069f5563ed732bfa6e9f"></a><!-- doxytag: member="iview::CViewport::GetMouseKeysState" ref="a8b4cce4e838b069f5563ed732bfa6e9f" args="(const QMouseEvent &amp;event)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int iview::CViewport::GetMouseKeysState </td>
+          <td>(</td>
+          <td class="paramtype">const QMouseEvent &amp;&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -471,55 +471,6 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abf8b019ac57fb70d7c90447eed008d47"></a><!-- doxytag: member="iview::CViewport::OnMouseButton" ref="abf8b019ac57fb70d7c90447eed008d47" args="(const iview::IShapeView &amp;view, const istd::CIndex2d &amp;position, Qt::MouseButton buttonType, bool state, const iview::IInteractiveShape *shapePtr)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool iview::CViewport::OnMouseButton </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classiview_1_1_i_shape_view.html">iview::IShapeView</a> &amp;&#160;</td>
-          <td class="paramname"><em>view</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;&#160;</td>
-          <td class="paramname"><em>position</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Qt::MouseButton&#160;</td>
-          <td class="paramname"><em>buttonType</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>state</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classiview_1_1_i_interactive_shape.html">iview::IInteractiveShape</a> *&#160;</td>
-          <td class="paramname"><em>shapePtr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Message handler for mouse button click. </p>
-
-<p>Implements <a class="el" href="classiview_1_1_i_view_event_observer.html#a03fa72609f8fd3c94b2eeaa0e0a2ad2e">iview::IViewEventObserver</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a5ec9b73933389a6aff56bdda659b1574"></a><!-- doxytag: member="iview::CViewport::OnMouseMove" ref="a5ec9b73933389a6aff56bdda659b1574" args="(istd::CIndex2d position)" -->
 <div class="memitem">
 <div class="memproto">
@@ -609,6 +560,55 @@ Friends</h2></td></tr>
 <p>Message handler for selection changes. </p>
 
 <p>Implements <a class="el" href="classiview_1_1_i_view_event_observer.html#a82cfd6b2215fcddca35150fca4cab189">iview::IViewEventObserver</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a048ad434828a0257d3985c0c89ac7073"></a><!-- doxytag: member="iview::CViewport::OnViewMouseButton" ref="a048ad434828a0257d3985c0c89ac7073" args="(const iview::IShapeView &amp;view, const istd::CIndex2d &amp;position, Qt::MouseButton buttonType, bool state, const iview::IInteractiveShape *shapePtr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool iview::CViewport::OnViewMouseButton </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classiview_1_1_i_shape_view.html">iview::IShapeView</a> &amp;&#160;</td>
+          <td class="paramname"><em>view</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Qt::MouseButton&#160;</td>
+          <td class="paramname"><em>buttonType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classiview_1_1_i_interactive_shape.html">iview::IInteractiveShape</a> *&#160;</td>
+          <td class="paramname"><em>shapePtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Message handler for mouse button click. </p>
+
+<p>Implements <a class="el" href="classiview_1_1_i_view_event_observer.html#a2bdc7c09964e96377550c6ec315ae2a9">iview::IViewEventObserver</a>.</p>
 
 </div>
 </div>

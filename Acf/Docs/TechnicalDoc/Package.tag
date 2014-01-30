@@ -52245,9 +52245,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
-      <name>OnMouseButton</name>
+      <name>OnViewMouseButton</name>
       <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
-      <anchor>a20c25121739e123a7eb603b917548b08</anchor>
+      <anchor>ad3995655fd7adcb5a00431df46d8b4f0</anchor>
       <arglist>(const iview::IShapeView &amp;view, const istd::CIndex2d &amp;position, Qt::MouseButton buttonType, bool state, const iview::IInteractiveShape *shapePtr)=0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
@@ -52561,9 +52561,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
-      <name>OnMouseButton</name>
+      <name>OnViewMouseButton</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>a0839ca484be604ce6ef73fcde794875a</anchor>
+      <anchor>a08c347101c1773c5277c7545040e6185</anchor>
       <arglist>(const iview::IShapeView &amp;view, const istd::CIndex2d &amp;position, Qt::MouseButton buttonType, bool state, const iview::IInteractiveShape *shapePtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -57005,9 +57005,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>OnMouseButton</name>
+      <name>OnViewMouseButton</name>
       <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
-      <anchor>abf8b019ac57fb70d7c90447eed008d47</anchor>
+      <anchor>a048ad434828a0257d3985c0c89ac7073</anchor>
       <arglist>(const iview::IShapeView &amp;view, const istd::CIndex2d &amp;position, Qt::MouseButton buttonType, bool state, const iview::IInteractiveShape *shapePtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -57117,9 +57117,9 @@
     </member>
     <member kind="function" protection="protected">
       <type>int</type>
-      <name>GetKeysState</name>
+      <name>GetMouseKeysState</name>
       <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
-      <anchor>afb7ba17ccf611a6a5c8895cc994be300</anchor>
+      <anchor>a8b4cce4e838b069f5563ed732bfa6e9f</anchor>
       <arglist>(const QMouseEvent &amp;event)</arglist>
     </member>
     <member kind="friend" protection="private">
@@ -58248,9 +58248,9 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
-      <name>OnMouseButton</name>
+      <name>OnViewMouseButton</name>
       <anchorfile>classiview_1_1_i_view_event_observer.html</anchorfile>
-      <anchor>a03fa72609f8fd3c94b2eeaa0e0a2ad2e</anchor>
+      <anchor>a2bdc7c09964e96377550c6ec315ae2a9</anchor>
       <arglist>(const IShapeView &amp;view, const istd::CIndex2d &amp;position, Qt::MouseButton buttonType, bool state, const iview::IInteractiveShape *shapePtr)=0</arglist>
     </member>
   </compound>
