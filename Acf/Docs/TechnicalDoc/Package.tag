@@ -36592,8 +36592,8 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
-      <anchor>a2775396d1b53607b5132291910d77db3</anchor>
-      <arglist>(m_documentPersistenceInfoCompPtr, m_documentPersistenceCompPtr, true)</arglist>
+      <anchor>a90903b675b626b40fc36337fc61d1b54</anchor>
+      <arglist>(m_documentPersistenceInfoCompPtr, m_documentPersistenceCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
