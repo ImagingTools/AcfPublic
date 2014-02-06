@@ -29,11 +29,9 @@
 // ACF includes
 #include "istd/TChangeNotifier.h"
 #include "istd/CChangeDelegator.h"
-
 #include "iprm/IParamsSet.h"
 #include "iprm/IOptionsList.h"
 #include "iprm/ISelectionParam.h"
-
 #include "iqtgui/CItemDelegate.h"
 #include "iqtgui/CWidgetUpdateBlocker.h"
 
@@ -307,7 +305,6 @@ void COptionsListEditorGuiComp::OnGuiModelAttached()
 	UpDownButtonsFrame->setVisible(*m_allowUpDownAttrPtr);
 
 	ButtonsFrame->setVisible(*m_allowAddRemoveAttrPtr || *m_allowUpDownAttrPtr);
-	ParamsTree->setItemDelegate(new iqtgui::CItemDelegate(20, this));
 
 	ParamsTree->setVisible(true);
 }
