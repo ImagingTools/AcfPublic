@@ -4845,6 +4845,20 @@
     <namespace>iqtprm</namespace>
   </compound>
   <compound kind="file">
+    <name>CExtComposedParamsSetGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtprm/</path>
+    <filename>_c_ext_composed_params_set_gui_comp_8h</filename>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
+    <includes id="_t_model_observer_comp_wrap_8h" name="TModelObserverCompWrap.h" local="yes" imported="no">ibase/TModelObserverCompWrap.h</includes>
+    <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
+    <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="yes" imported="no">iqtgui/TGuiObserverWrap.h</includes>
+    <includes id="_c_composed_gui_comp_8h" name="CComposedGuiComp.h" local="yes" imported="no">iqtgui/CComposedGuiComp.h</includes>
+    <includes id="_i_view_extender_8h" name="IViewExtender.h" local="yes" imported="no">iqt2d/IViewExtender.h</includes>
+    <includes id="iqtprm_8h" name="iqtprm.h" local="yes" imported="no">iqtprm/iqtprm.h</includes>
+    <class kind="class">iqtprm::CExtComposedParamsSetGuiComp</class>
+    <namespace>iqtprm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CFileNameParamGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtprm/</path>
     <filename>_c_file_name_param_gui_comp_8h</filename>
@@ -38126,6 +38140,13 @@
       <anchor>ac58f4cf4a6241f5272c22e4952980f2c</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type>QWidget *</type>
+      <name>GetPageContainerWidget</name>
+      <anchorfile>classiqtgui_1_1_c_composed_gui_comp.html</anchorfile>
+      <anchor>a4331d6241eaaf9ff0d8c31ea5a08e401</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnRestoreSettings</name>
@@ -39508,6 +39529,13 @@
       <anchor>a800938c522827eef7c1bd0be448888f0</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnPageChanged</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a37ded4d166ceb9f48f0957b7c0bc0973</anchor>
+      <arglist>(int pageIndex)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual int</type>
       <name>GetPagesCount</name>
@@ -39536,25 +39564,46 @@
       <anchor>ac1793aecf0a2c28cfcc61033a8c09123</anchor>
       <arglist>(iqtgui::IGuiObject &amp;pageGui, const QString &amp;pageTitle)</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>QString</type>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
       <name>GetPageGuiName</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
-      <anchor>a5c1b664e43bb8848a79e26dc49ae3a07</anchor>
+      <anchor>a3a4c74075f5bce085b34117ab74282f6</anchor>
       <arglist>(const iqtgui::IGuiObject &amp;pageGui) const </arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
       <name>CreatePage</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
-      <anchor>a07bc6b986dc6281988543c16d3a83999</anchor>
+      <anchor>a5583e078c0ede8f052f0203e8099e52e</anchor>
       <arglist>(int guiIndex)</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemovePage</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a073d656a5c4701fb1b5ce16c56eb46a4</anchor>
+      <arglist>(int pageIndex)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetCurrentPage</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a2e49934ff22ca946207347a8cc85264a</anchor>
+      <arglist>(int pageIndex)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>UpdateVisualElements</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
-      <anchor>a1eb05aac8059ad6ee9880a6f6cc6a4f1</anchor>
+      <anchor>a5a55d407a6894de09a2bc7d22bb82f43</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CreatePages</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a7fdac3f4c5d3ae60941e23c3e887bf4e</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -42180,6 +42229,7 @@
     <class kind="class">iqtprm::CCheckableOptionsEditorComp</class>
     <class kind="class">iqtprm::CComposedParamsSetGuiComp</class>
     <class kind="class">iqtprm::CEnableableParamGuiComp</class>
+    <class kind="class">iqtprm::CExtComposedParamsSetGuiComp</class>
     <class kind="class">iqtprm::CFileNameParamGuiComp</class>
     <class kind="class">iqtprm::CMultiParamsManagerGuiComp</class>
     <class kind="class">iqtprm::CNameParamGuiComp</class>
@@ -42474,6 +42524,124 @@
       <anchorfile>classiqtprm_1_1_c_enableable_param_gui_comp.html</anchorfile>
       <anchor>a2bc378b0b5b4c863d302e88659f0b47d</anchor>
       <arglist>(int state)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtprm::CExtComposedParamsSetGuiComp</name>
+    <filename>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</filename>
+    <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::CComposedGuiComp, imod::TSingleModelObserverBase&lt; iprm::IParamsSet &gt; &gt; &gt;</base>
+    <base>iqt2d::IViewExtender</base>
+    <member kind="typedef">
+      <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::CComposedGuiComp, imod::TSingleModelObserverBase&lt; iprm::IParamsSet &gt; &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>ad215328a9f3c291888de0faaae1135cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>a994b033e82c1a4b44924931106d2dfd9</anchor>
+      <arglist>(m_observersCompPtr, m_editorsCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>a3ce5c049ad24d6c2eb8afc35d276214b</anchor>
+      <arglist>(m_extendersCompPtr, m_editorsCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CExtComposedParamsSetGuiComp</name>
+      <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>ac439826e5392e7738a4c8a3032845151</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>a78a567a736d65e2639dafee2b5c89ae4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateEditor</name>
+      <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>a2a55444a7e8fb2d08b34a2ca0c081006</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>ad87b6772ee4b7bb05f894a581d740515</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>a77886de2ebd5b250a8e2a52485746ba7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddItemsToScene</name>
+      <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>a48e279cc7812459ecae8bc80acb0c4d5</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveItemsFromScene</name>
+      <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>ab6363166a32048a82d444ecb28276b22</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>AttachToScene</name>
+      <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>a05f5416e9e20031c804d6960857a0ff7</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>DetachFromScene</name>
+      <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>aed205419e6de9405a96c4ef929d69ed6</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CreatePages</name>
+      <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>ab9dd28d4cfe96076a934aaacaf9c20f0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnPageChanged</name>
+      <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>a4c196fbdc554ad7aca582b01fc4f40f3</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>a6a6c40936cc05dcda636c8f865d6feeb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>a84bac0812ef47528429176431e4dc1f5</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

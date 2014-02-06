@@ -34,6 +34,7 @@
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-slots">Protected Slots</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
@@ -48,18 +49,21 @@ Inheritance diagram for iqtgui::CMultiPageGuiCompBase:</div>
  <div class="center">
   <img src="classiqtgui_1_1_c_multi_page_gui_comp_base.png" usemap="#iqtgui::CMultiPageGuiCompBase_map" alt=""/>
   <map id="iqtgui::CMultiPageGuiCompBase_map" name="iqtgui::CMultiPageGuiCompBase_map">
-<area href="classiqtgui_1_1_c_gui_component_base.html" title="Base class for classes implementing interface iqtgui::IGuiObject." alt="iqtgui::CGuiComponentBase" shape="rect" coords="170,168,501,192"/>
-<area href="classimod_1_1_c_multi_model_dispatcher_base.html" title="Generic implementation of a data model changes notifier." alt="imod::CMultiModelDispatcherBase" shape="rect" coords="682,168,1013,192"/>
-<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,112,331,136"/>
-<area href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context." alt="iqtgui::IGuiObject" shape="rect" coords="341,112,672,136"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="682,112,1013,136"/>
-<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,56,331,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="341,56,672,80"/>
-<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,331,24"/>
-<area href="classiqtgui_1_1_c_tab_container_gui_comp.html" title="Component to create the tab widget, that shows the specified sub-UI-component in its tab page..." alt="iqtgui::CTabContainerGuiComp" shape="rect" coords="255,280,586,304"/>
-<area href="classiqtgui_1_1_t_restorable_gui_wrap.html" alt="iqtgui::TRestorableGuiWrap&lt; CMultiPageGuiCompBase &gt;" shape="rect" coords="596,280,927,304"/>
-<area href="classiqtgui_1_1_c_tabbed_multi_view_gui_comp.html" title="A multi view observer implementation." alt="iqtgui::CTabbedMultiViewGuiComp" shape="rect" coords="255,336,586,360"/>
-<area href="classiqtgui_1_1_c_composed_gui_comp.html" title="Component for the layouting/grouping of the UI-subcomponents." alt="iqtgui::CComposedGuiComp" shape="rect" coords="596,336,927,360"/>
+<area href="classiqtgui_1_1_c_gui_component_base.html" title="Base class for classes implementing interface iqtgui::IGuiObject." alt="iqtgui::CGuiComponentBase" shape="rect" coords="440,168,1310,192"/>
+<area href="classimod_1_1_c_multi_model_dispatcher_base.html" title="Generic implementation of a data model changes notifier." alt="imod::CMultiModelDispatcherBase" shape="rect" coords="1760,168,2630,192"/>
+<area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,112,870,136"/>
+<area href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context." alt="iqtgui::IGuiObject" shape="rect" coords="880,112,1750,136"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="1760,112,2630,136"/>
+<area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,56,870,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="880,56,1750,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,870,24"/>
+<area href="classiqtgui_1_1_c_tab_container_gui_comp.html" title="Component to create the tab widget, that shows the specified sub-UI-component in its tab page..." alt="iqtgui::CTabContainerGuiComp" shape="rect" coords="660,280,1530,304"/>
+<area href="classiqtgui_1_1_t_restorable_gui_wrap.html" alt="iqtgui::TRestorableGuiWrap&lt; CMultiPageGuiCompBase &gt;" shape="rect" coords="1540,280,2410,304"/>
+<area href="classiqtgui_1_1_c_tabbed_multi_view_gui_comp.html" title="A multi view observer implementation." alt="iqtgui::CTabbedMultiViewGuiComp" shape="rect" coords="660,336,1530,360"/>
+<area href="classiqtgui_1_1_c_composed_gui_comp.html" title="Component for the layouting/grouping of the UI-subcomponents." alt="iqtgui::CComposedGuiComp" shape="rect" coords="1540,336,2410,360"/>
+<area href="classiqtgui_1_1_t_gui_observer_wrap.html" alt="iqtgui::TGuiObserverWrap&lt; iqtgui::CComposedGuiComp, imod::TSingleModelObserverBase&lt; iprm::IParamsSet &gt; &gt;" shape="rect" coords="1540,392,2410,416"/>
+<area href="classibase_1_1_t_model_observer_comp_wrap.html" alt="ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::CComposedGuiComp, imod::TSingleModelObserverBase&lt; iprm::IParamsSet &gt; &gt; &gt;" shape="rect" coords="1540,448,2410,472"/>
+<area href="classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html" title="New version of parameter set UI based on standard multi page UI concept." alt="iqtprm::CExtComposedParamsSetGuiComp" shape="rect" coords="1540,504,2410,528"/>
 </map>
  </div></div>
 
@@ -81,6 +85,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a995ccb8699c96ee66a78df73c0718297">I_ASSIGN_TO</a> (m_slaveWidgetsModelCompPtr, m_slaveWidgetsVisualCompPtr, false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a81f39dd38e426c77e7b098180d18656f">I_ASSIGN_TO</a> (m_pageActivatorsModelCompPtr, m_pageActivatorsCompPtr, false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a800938c522827eef7c1bd0be448888f0">CMultiPageGuiCompBase</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pro-slots"></a>
+Protected Slots</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a37ded4d166ceb9f48f0957b7c0bc0973">OnPageChanged</a> (int pageIndex)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#ac5f441fa586dfd7796fac053e57dbcd4">GetPagesCount</a> () const =0</td></tr>
@@ -91,12 +98,18 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the container UI mode.  <a href="#ac9bbeebdff6050cde751d833da8d9b73"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#ac1793aecf0a2c28cfcc61033a8c09123">AddPageToContainerWidget</a> (<a class="el" href="classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a> &amp;pageGui, const QString &amp;pageTitle)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new page to the widget container.  <a href="#ac1793aecf0a2c28cfcc61033a8c09123"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a5c1b664e43bb8848a79e26dc49ae3a07">GetPageGuiName</a> (const <a class="el" href="classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a> &amp;pageGui) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name corresponding to a page GUI element.  <a href="#a5c1b664e43bb8848a79e26dc49ae3a07"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a07bc6b986dc6281988543c16d3a83999">CreatePage</a> (int guiIndex)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a page in the page container widget.  <a href="#a07bc6b986dc6281988543c16d3a83999"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a1eb05aac8059ad6ee9880a6f6cc6a4f1">UpdateVisualElements</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Update visual status of the page elements.  <a href="#a1eb05aac8059ad6ee9880a6f6cc6a4f1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a3a4c74075f5bce085b34117ab74282f6">GetPageGuiName</a> (const <a class="el" href="classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a> &amp;pageGui) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name corresponding to a page GUI element.  <a href="#a3a4c74075f5bce085b34117ab74282f6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a5583e078c0ede8f052f0203e8099e52e">CreatePage</a> (int guiIndex)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a page in the page container widget.  <a href="#a5583e078c0ede8f052f0203e8099e52e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a073d656a5c4701fb1b5ce16c56eb46a4">RemovePage</a> (int pageIndex)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a page from the container widget.  <a href="#a073d656a5c4701fb1b5ce16c56eb46a4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a2e49934ff22ca946207347a8cc85264a">SetCurrentPage</a> (int pageIndex)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set current page.  <a href="#a2e49934ff22ca946207347a8cc85264a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a5a55d407a6894de09a2bc7d22bb82f43">UpdateVisualElements</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Update visual status of the page elements.  <a href="#a5a55d407a6894de09a2bc7d22bb82f43"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a7fdac3f4c5d3ae60941e23c3e887bf4e">CreatePages</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create all container pages.  <a href="#a7fdac3f4c5d3ae60941e23c3e887bf4e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a914085b5ccc3377318f9703af9ddc831">InitWidgetToParent</a> (QWidget *parentPtr)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create slave widget object.  <a href="#a914085b5ccc3377318f9703af9ddc831"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#ac12668fc8e47c09d03c978e07b581fbe">OnGuiCreated</a> ()</td></tr>
@@ -127,9 +140,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#ad1f756b56b4b967ce6af21988a11c31b">iqtgui::CGuiComponentBase</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classiqtgui_1_1_c_composed_gui_comp.html#ac58f4cf4a6241f5272c22e4952980f2c">iqtgui::CComposedGuiComp</a>, <a class="el" href="classiqtgui_1_1_c_tabbed_multi_view_gui_comp.html#ac00273f0ff0c91f8811eadcfd93ac1e0">iqtgui::CTabbedMultiViewGuiComp</a>, <a class="el" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a1ed917583abc8a477ebd0f33efe481c2">iqtgui::TRestorableGuiWrap&lt; CMultiPageGuiCompBase &gt;</a>, and <a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a114cc522fe78186107efee0f664e94ea">iqtgui::CTabContainerGuiComp</a>.</p>
+<p>Reimplemented in <a class="el" href="classiqtgui_1_1_c_composed_gui_comp.html#ac58f4cf4a6241f5272c22e4952980f2c">iqtgui::CComposedGuiComp</a>, <a class="el" href="classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html#ad215328a9f3c291888de0faaae1135cb">iqtprm::CExtComposedParamsSetGuiComp</a>, <a class="el" href="classiqtgui_1_1_c_tabbed_multi_view_gui_comp.html#ac00273f0ff0c91f8811eadcfd93ac1e0">iqtgui::CTabbedMultiViewGuiComp</a>, <a class="el" href="classiqtgui_1_1_t_restorable_gui_wrap.html#a1ed917583abc8a477ebd0f33efe481c2">iqtgui::TRestorableGuiWrap&lt; CMultiPageGuiCompBase &gt;</a>, <a class="el" href="classibase_1_1_t_model_observer_comp_wrap.html#afa3fcab514bf33fbdb6ec2f83eb8f075">ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::CComposedGuiComp, imod::TSingleModelObserverBase&lt; iprm::IParamsSet &gt; &gt; &gt;</a>, and <a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a114cc522fe78186107efee0f664e94ea">iqtgui::CTabContainerGuiComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_multi_page_gui_comp_base_8h_source.html#l00027">27</a> of file <a class="el" href="_c_multi_page_gui_comp_base_8h_source.html">CMultiPageGuiCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_page_gui_comp_base_8h_source.html#l00028">28</a> of file <a class="el" href="_c_multi_page_gui_comp_base_8h_source.html">CMultiPageGuiCompBase.h</a>.</p>
 
 </div>
 </div>
@@ -146,7 +159,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiqtgui_1_1_c_tabbed_multi_view_gui_comp.html#adf198e016c39daca195271d63fd2551a">iqtgui::CTabbedMultiViewGuiComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_multi_page_gui_comp_base_8h_source.html#l00028">28</a> of file <a class="el" href="_c_multi_page_gui_comp_base_8h_source.html">CMultiPageGuiCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_page_gui_comp_base_8h_source.html#l00029">29</a> of file <a class="el" href="_c_multi_page_gui_comp_base_8h_source.html">CMultiPageGuiCompBase.h</a>.</p>
 
 </div>
 </div>
@@ -197,22 +210,42 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a07bc6b986dc6281988543c16d3a83999"></a><!-- doxytag: member="iqtgui::CMultiPageGuiCompBase::CreatePage" ref="a07bc6b986dc6281988543c16d3a83999" args="(int guiIndex)" -->
+<a class="anchor" id="a5583e078c0ede8f052f0203e8099e52e"></a><!-- doxytag: member="iqtgui::CMultiPageGuiCompBase::CreatePage" ref="a5583e078c0ede8f052f0203e8099e52e" args="(int guiIndex)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool iqtgui::CMultiPageGuiCompBase::CreatePage </td>
+          <td class="memname">virtual bool iqtgui::CMultiPageGuiCompBase::CreatePage </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>guiIndex</em></td><td>)</td>
-          <td><code> [protected]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>Create a page in the page container widget. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7fdac3f4c5d3ae60941e23c3e887bf4e"></a><!-- doxytag: member="iqtgui::CMultiPageGuiCompBase::CreatePages" ref="a7fdac3f4c5d3ae60941e23c3e887bf4e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtgui::CMultiPageGuiCompBase::CreatePages </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Create all container pages. </p>
+
+<p>Reimplemented in <a class="el" href="classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html#ab9dd28d4cfe96076a934aaacaf9c20f0">iqtprm::CExtComposedParamsSetGuiComp</a>.</p>
 
 </div>
 </div>
@@ -258,16 +291,16 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5c1b664e43bb8848a79e26dc49ae3a07"></a><!-- doxytag: member="iqtgui::CMultiPageGuiCompBase::GetPageGuiName" ref="a5c1b664e43bb8848a79e26dc49ae3a07" args="(const iqtgui::IGuiObject &amp;pageGui) const " -->
+<a class="anchor" id="a3a4c74075f5bce085b34117ab74282f6"></a><!-- doxytag: member="iqtgui::CMultiPageGuiCompBase::GetPageGuiName" ref="a3a4c74075f5bce085b34117ab74282f6" args="(const iqtgui::IGuiObject &amp;pageGui) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QString iqtgui::CMultiPageGuiCompBase::GetPageGuiName </td>
+          <td class="memname">virtual QString iqtgui::CMultiPageGuiCompBase::GetPageGuiName </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classiqtgui_1_1_i_gui_object.html">iqtgui::IGuiObject</a> &amp;&#160;</td>
           <td class="paramname"><em>pageGui</em></td><td>)</td>
-          <td> const<code> [protected]</code></td>
+          <td> const<code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -582,6 +615,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#acbe64d5e28b4059b0c34111dd7e3cc8d">iqtgui::CGuiComponentBase</a>.</p>
 
+<p>Reimplemented in <a class="el" href="classibase_1_1_t_model_observer_comp_wrap.html#ac046dfe3995e995397f20a1ebf031436">ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::CComposedGuiComp, imod::TSingleModelObserverBase&lt; iprm::IParamsSet &gt; &gt; &gt;</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a83c8323b86ba3ba0dd4aefcfd863ebd6"></a><!-- doxytag: member="iqtgui::CMultiPageGuiCompBase::OnComponentDestroyed" ref="a83c8323b86ba3ba0dd4aefcfd863ebd6" args="()" -->
@@ -599,6 +634,8 @@ Protected Attributes</h2></td></tr>
 <div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classicomp_1_1_c_component_base.html#a007550438603368acd5133e97547d73f">icomp::CComponentBase</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classibase_1_1_t_model_observer_comp_wrap.html#aacf9336769a621402f913fad75bb5cf5">ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::CComposedGuiComp, imod::TSingleModelObserverBase&lt; iprm::IParamsSet &gt; &gt; &gt;</a>.</p>
 
 </div>
 </div>
@@ -620,7 +657,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#ab66ecf3d13faa48018f89d871bd32ae3">iqtgui::CGuiComponentBase</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classiqtgui_1_1_c_composed_gui_comp.html#a39e95e68c62e662ff39a9ce3311dd9cf">iqtgui::CComposedGuiComp</a>, and <a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a70e404a18b0b9cb082f97614e33f2a02">iqtgui::CTabContainerGuiComp</a>.</p>
+<p>Reimplemented in <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#ac57a710831aca6724b034983717d1a12">iqtgui::TGuiObserverWrap&lt; iqtgui::CComposedGuiComp, imod::TSingleModelObserverBase&lt; iprm::IParamsSet &gt; &gt;</a>, <a class="el" href="classiqtgui_1_1_c_composed_gui_comp.html#a39e95e68c62e662ff39a9ce3311dd9cf">iqtgui::CComposedGuiComp</a>, <a class="el" href="classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html#ad87b6772ee4b7bb05f894a581d740515">iqtprm::CExtComposedParamsSetGuiComp</a>, and <a class="el" href="classiqtgui_1_1_c_tab_container_gui_comp.html#a70e404a18b0b9cb082f97614e33f2a02">iqtgui::CTabContainerGuiComp</a>.</p>
 
 </div>
 </div>
@@ -641,6 +678,8 @@ Protected Attributes</h2></td></tr>
 <p>Called just before GUI is released. </p>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html#a71e5a19907ff118fe8b99280b86c16ff">iqtgui::CGuiComponentBase</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#a21ea58f03167fc90ff7bccb51d1a2ead">iqtgui::TGuiObserverWrap&lt; iqtgui::CComposedGuiComp, imod::TSingleModelObserverBase&lt; iprm::IParamsSet &gt; &gt;</a>, and <a class="el" href="classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html#a77886de2ebd5b250a8e2a52485746ba7">iqtprm::CExtComposedParamsSetGuiComp</a>.</p>
 
 </div>
 </div>
@@ -679,15 +718,72 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1eb05aac8059ad6ee9880a6f6cc6a4f1"></a><!-- doxytag: member="iqtgui::CMultiPageGuiCompBase::UpdateVisualElements" ref="a1eb05aac8059ad6ee9880a6f6cc6a4f1" args="()" -->
+<a class="anchor" id="a37ded4d166ceb9f48f0957b7c0bc0973"></a><!-- doxytag: member="iqtgui::CMultiPageGuiCompBase::OnPageChanged" ref="a37ded4d166ceb9f48f0957b7c0bc0973" args="(int pageIndex)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void iqtgui::CMultiPageGuiCompBase::UpdateVisualElements </td>
+          <td class="memname">virtual void iqtgui::CMultiPageGuiCompBase::OnPageChanged </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pageIndex</em></td><td>)</td>
+          <td><code> [protected, virtual, slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html#a4c196fbdc554ad7aca582b01fc4f40f3">iqtprm::CExtComposedParamsSetGuiComp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a073d656a5c4701fb1b5ce16c56eb46a4"></a><!-- doxytag: member="iqtgui::CMultiPageGuiCompBase::RemovePage" ref="a073d656a5c4701fb1b5ce16c56eb46a4" args="(int pageIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtgui::CMultiPageGuiCompBase::RemovePage </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pageIndex</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Remove a page from the container widget. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2e49934ff22ca946207347a8cc85264a"></a><!-- doxytag: member="iqtgui::CMultiPageGuiCompBase::SetCurrentPage" ref="a2e49934ff22ca946207347a8cc85264a" args="(int pageIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtgui::CMultiPageGuiCompBase::SetCurrentPage </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pageIndex</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set current page. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5a55d407a6894de09a2bc7d22bb82f43"></a><!-- doxytag: member="iqtgui::CMultiPageGuiCompBase::UpdateVisualElements" ref="a5a55d407a6894de09a2bc7d22bb82f43" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void iqtgui::CMultiPageGuiCompBase::UpdateVisualElements </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [protected]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -709,7 +805,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_multi_page_gui_comp_base_8h_source.html#l00152">152</a> of file <a class="el" href="_c_multi_page_gui_comp_base_8h_source.html">CMultiPageGuiCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_multi_page_gui_comp_base_8h_source.html#l00170">170</a> of file <a class="el" href="_c_multi_page_gui_comp_base_8h_source.html">CMultiPageGuiCompBase.h</a>.</p>
 
 </div>
 </div>

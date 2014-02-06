@@ -64,36 +64,38 @@
 <a name="l00047"></a>00047               I_ASSIGN(m_flatViewAttrPtr, <span class="stringliteral">&quot;FlatView&quot;</span>, <span class="stringliteral">&quot;Tries to apply flat view to the design if possible (Group Box: without frame; Tab Bar: triangular tabs; Slider: transparent grip)&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);
 <a name="l00048"></a>00048        I_END_COMPONENT;
 <a name="l00049"></a>00049 
-<a name="l00050"></a>00050        <span class="comment">// reimplemented (TRestorableGuiWrap)</span>
-<a name="l00051"></a>00051        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#a6ec1012774b12128d78c8063c50fce37">OnRestoreSettings</a>(<span class="keyword">const</span> QSettings&amp; settings);
-<a name="l00052"></a>00052        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#ae817ec11da293675db10428284f76222">OnSaveSettings</a>(QSettings&amp; settings) <span class="keyword">const</span>;
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054        <span class="comment">// reimplemented (iqtgui::CMultiPageGuiCompBase)</span>
-<a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#af6802e878a17a9592aaba04c386edfeb" title="Get the number of the pages in the UI container.">GetPagesCount</a>() <span class="keyword">const</span>;
-<a name="l00056"></a>00056        <span class="keyword">virtual</span> <a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>* <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#af018702ec44b3699a4f9346e9cb6c0f9" title="Get the UI component for a given page.">GetPageGuiComponent</a>(<span class="keywordtype">int</span> pageIndex) <span class="keyword">const</span>;
-<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#a32693f67d075c8688c6a64af4196c8fc" title="Get the container UI mode.">GetDesignType</a>() <span class="keyword">const</span>;
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
-<a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#a39e95e68c62e662ff39a9ce3311dd9cf" title="Called just after GUI is initialized.">OnGuiCreated</a>();
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062 <span class="keyword">private</span>:
-<a name="l00066"></a>00066        QString GetSettingsKey() <span class="keyword">const</span>;
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068 <span class="keyword">private</span>:
-<a name="l00069"></a>00069        I_MULTIREF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_guisCompPtr);
-<a name="l00070"></a>00070        I_ATTR(<span class="keywordtype">int</span>, m_designTypeAttrPtr);
-<a name="l00071"></a>00071        I_ATTR(QString, m_settingsKeyAttrPtr);
-<a name="l00072"></a>00072        I_ATTR(<span class="keywordtype">int</span>, m_tabOrientationAttrPtr);
-<a name="l00073"></a>00073        I_ATTR(<span class="keywordtype">bool</span>, m_flatViewAttrPtr);
-<a name="l00074"></a>00074 };
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077 } <span class="comment">// namespace iqtgui</span>
+<a name="l00050"></a>00050        QWidget* <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#a4331d6241eaaf9ff0d8c31ea5a08e401">GetPageContainerWidget</a>() <span class="keyword">const</span>;
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052        <span class="comment">// reimplemented (TRestorableGuiWrap)</span>
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#a6ec1012774b12128d78c8063c50fce37">OnRestoreSettings</a>(<span class="keyword">const</span> QSettings&amp; settings);
+<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#ae817ec11da293675db10428284f76222">OnSaveSettings</a>(QSettings&amp; settings) <span class="keyword">const</span>;
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056        <span class="comment">// reimplemented (iqtgui::CMultiPageGuiCompBase)</span>
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#af6802e878a17a9592aaba04c386edfeb" title="Get the number of the pages in the UI container.">GetPagesCount</a>() <span class="keyword">const</span>;
+<a name="l00058"></a>00058        <span class="keyword">virtual</span> <a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>* <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#af018702ec44b3699a4f9346e9cb6c0f9" title="Get the UI component for a given page.">GetPageGuiComponent</a>(<span class="keywordtype">int</span> pageIndex) <span class="keyword">const</span>;
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#a32693f67d075c8688c6a64af4196c8fc" title="Get the container UI mode.">GetDesignType</a>() <span class="keyword">const</span>;
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061        <span class="comment">// reimplemented (iqtgui::CGuiComponentBase)</span>
+<a name="l00062"></a>00062        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_composed_gui_comp.html#a39e95e68c62e662ff39a9ce3311dd9cf" title="Called just after GUI is initialized.">OnGuiCreated</a>();
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 <span class="keyword">private</span>:
+<a name="l00068"></a>00068        QString GetSettingsKey() <span class="keyword">const</span>;
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070 <span class="keyword">private</span>:
+<a name="l00071"></a>00071        I_MULTIREF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">iqtgui::IGuiObject</a>, m_guisCompPtr);
+<a name="l00072"></a>00072        I_ATTR(<span class="keywordtype">int</span>, m_designTypeAttrPtr);
+<a name="l00073"></a>00073        I_ATTR(QString, m_settingsKeyAttrPtr);
+<a name="l00074"></a>00074        I_ATTR(<span class="keywordtype">int</span>, m_tabOrientationAttrPtr);
+<a name="l00075"></a>00075        I_ATTR(<span class="keywordtype">bool</span>, m_flatViewAttrPtr);
+<a name="l00076"></a>00076 };
+<a name="l00077"></a>00077 
 <a name="l00078"></a>00078 
-<a name="l00079"></a>00079 
-<a name="l00080"></a>00080 <span class="preprocessor">#endif // !iqtgui_CComposedGuiComp_included</span>
-<a name="l00081"></a>00081 <span class="preprocessor"></span>
-<a name="l00082"></a>00082 
+<a name="l00079"></a>00079 } <span class="comment">// namespace iqtgui</span>
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 <span class="preprocessor">#endif // !iqtgui_CComposedGuiComp_included</span>
+<a name="l00083"></a>00083 <span class="preprocessor"></span>
+<a name="l00084"></a>00084 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
