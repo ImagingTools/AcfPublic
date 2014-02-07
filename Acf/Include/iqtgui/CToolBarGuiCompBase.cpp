@@ -168,6 +168,8 @@ void CToolBarGuiCompBase::OnGuiCreated()
 	if (m_iconSizeAttrPtr.IsValid()){
 		widgetPtr->setIconSize(QSize(*m_iconSizeAttrPtr, *m_iconSizeAttrPtr));
 	}
+
+	widgetPtr->setToolButtonStyle(Qt::ToolButtonStyle(*m_buttonStyleAttrPtr));
 }
 
 
