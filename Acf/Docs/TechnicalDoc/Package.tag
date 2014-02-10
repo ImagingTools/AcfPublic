@@ -2460,6 +2460,15 @@
     <namespace>iimg</namespace>
   </compound>
   <compound kind="file">
+    <name>CMultiLayerBitmap.h</name>
+    <path>C:/Temp/Acf/Include/iimg/</path>
+    <filename>_c_multi_layer_bitmap_8h</filename>
+    <includes id="_i_multi_layer_bitmap_8h" name="IMultiLayerBitmap.h" local="yes" imported="no">iimg/IMultiLayerBitmap.h</includes>
+    <includes id="_c_bitmap_document_8h" name="CBitmapDocument.h" local="yes" imported="no">iimg/CBitmapDocument.h</includes>
+    <class kind="class">iimg::CMultiLayerBitmap</class>
+    <namespace>iimg</namespace>
+  </compound>
+  <compound kind="file">
     <name>CReflectedBitmapBase.h</name>
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>_c_reflected_bitmap_base_8h</filename>
@@ -2518,6 +2527,14 @@
     <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
     <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
     <class kind="class">iimg::IMultiBitmapProvider</class>
+    <namespace>iimg</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IMultiLayerBitmap.h</name>
+    <path>C:/Temp/Acf/Include/iimg/</path>
+    <filename>_i_multi_layer_bitmap_8h</filename>
+    <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iimg/IMultiBitmapProvider.h</includes>
+    <class kind="class">iimg::IMultiLayerBitmap</class>
     <namespace>iimg</namespace>
   </compound>
   <compound kind="file">
@@ -23617,11 +23634,13 @@
     <class kind="class">iimg::CBitmapSurface</class>
     <class kind="class">iimg::CComposedBitmapProviderComp</class>
     <class kind="class">iimg::CGeneralBitmap</class>
+    <class kind="class">iimg::CMultiLayerBitmap</class>
     <class kind="class">iimg::CReflectedBitmapBase</class>
     <class kind="class">iimg::CScanlineMask</class>
     <class kind="class">iimg::IBitmap</class>
     <class kind="class">iimg::IBitmapProvider</class>
     <class kind="class">iimg::IMultiBitmapProvider</class>
+    <class kind="class">iimg::IMultiLayerBitmap</class>
     <class kind="class">iimg::IQImageProvider</class>
     <class kind="class">iimg::IRasterImage</class>
     <class kind="class">iimg::TPixelConversion</class>
@@ -24417,6 +24436,47 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iimg::CMultiLayerBitmap</name>
+    <filename>classiimg_1_1_c_multi_layer_bitmap.html</filename>
+    <base>iimg::CBitmapDocument</base>
+    <base virtualness="virtual">iimg::IMultiLayerBitmap</base>
+    <member kind="typedef">
+      <type>CBitmapDocument</type>
+      <name>BaseClass</name>
+      <anchorfile>classiimg_1_1_c_multi_layer_bitmap.html</anchorfile>
+      <anchor>ad5a827ada3936aeb0e840d271bc89f74</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Reset</name>
+      <anchorfile>classiimg_1_1_c_multi_layer_bitmap.html</anchorfile>
+      <anchor>a7495949838fbf1c24b3acac8ad3d3ebb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iimg::IBitmap *</type>
+      <name>InsertBitmap</name>
+      <anchorfile>classiimg_1_1_c_multi_layer_bitmap.html</anchorfile>
+      <anchor>a81fc25555a0362e17420c9d21fbbed9b</anchor>
+      <arglist>(iimg::IBitmap::PixelFormat pixelFormat, const istd::CIndex2d &amp;size)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iimg::IBitmap *</type>
+      <name>InsertBitmap</name>
+      <anchorfile>classiimg_1_1_c_multi_layer_bitmap.html</anchorfile>
+      <anchor>a2d5bcc727e0904da2b300ae37bf3a879</anchor>
+      <arglist>(iimg::IBitmap::PixelFormat pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveBitmap</name>
+      <anchorfile>classiimg_1_1_c_multi_layer_bitmap.html</anchorfile>
+      <anchor>a7e583d00b623b1a067ec896de450fe5a</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iimg::CReflectedBitmapBase</name>
     <filename>classiimg_1_1_c_reflected_bitmap_base.html</filename>
     <base>TCachedUpdateManagerWrap&lt; iimg::CGeneralBitmap &gt;</base>
@@ -24899,6 +24959,39 @@
       <anchorfile>classiimg_1_1_i_multi_bitmap_provider.html</anchorfile>
       <anchor>a22f91cc3e748d899d717f033f9526e87</anchor>
       <arglist>(int bitmapIndex) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iimg::IMultiLayerBitmap</name>
+    <filename>classiimg_1_1_i_multi_layer_bitmap.html</filename>
+    <base virtualness="virtual">iimg::IMultiBitmapProvider</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>Reset</name>
+      <anchorfile>classiimg_1_1_i_multi_layer_bitmap.html</anchorfile>
+      <anchor>a32451c1d5ace029f2da32c24d67fe77e</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual iimg::IBitmap *</type>
+      <name>InsertBitmap</name>
+      <anchorfile>classiimg_1_1_i_multi_layer_bitmap.html</anchorfile>
+      <anchor>a570400d284b52d7c5fd4e27180cb2889</anchor>
+      <arglist>(iimg::IBitmap::PixelFormat pixelFormat, const istd::CIndex2d &amp;size)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual iimg::IBitmap *</type>
+      <name>InsertBitmap</name>
+      <anchorfile>classiimg_1_1_i_multi_layer_bitmap.html</anchorfile>
+      <anchor>a00be9c5cf880ada17ae1702a9f68f1fe</anchor>
+      <arglist>(iimg::IBitmap::PixelFormat pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>RemoveBitmap</name>
+      <anchorfile>classiimg_1_1_i_multi_layer_bitmap.html</anchorfile>
+      <anchor>a36237e22dedd1e502ccc2ee938b287ba</anchor>
+      <arglist>(int index)=0</arglist>
     </member>
   </compound>
   <compound kind="class">

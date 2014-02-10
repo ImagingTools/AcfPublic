@@ -142,6 +142,17 @@
     <namespace>icam</namespace>
   </compound>
   <compound kind="file">
+    <name>CMultiLayerBitmapSupplierComp.h</name>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
+    <filename>_c_multi_layer_bitmap_supplier_comp_8h</filename>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
+    <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="no" imported="no">imeas/INumericConstraints.h</includes>
+    <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="no" imported="no">imeas/CSimpleNumericValue.h</includes>
+    <class kind="class">icam::CMultiLayerBitmapSupplierComp</class>
+    <namespace>icam</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSelectableBitmapSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_selectable_bitmap_supplier_comp_8h</filename>
@@ -3768,6 +3779,7 @@
     <class kind="class">icam::CExposureParamsComp</class>
     <class kind="class">icam::CMemoryAcquisitionComp</class>
     <class kind="class">icam::CMultiCameraBitmapSupplierComp</class>
+    <class kind="class">icam::CMultiLayerBitmapSupplierComp</class>
     <class kind="class">icam::CSelectableBitmapSupplierComp</class>
     <class kind="class">icam::CSelectionParamCameraComp</class>
     <class kind="class">icam::CSnapBitmapSupplierComp</class>
@@ -4072,6 +4084,69 @@
       <name>ProduceObject</name>
       <anchorfile>classicam_1_1_c_multi_camera_bitmap_supplier_comp.html</anchorfile>
       <anchor>ac0f8481ef76f20d83f61197970ac0857</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icam::CMultiLayerBitmapSupplierComp</name>
+    <filename>classicam_1_1_c_multi_layer_bitmap_supplier_comp.html</filename>
+    <base>TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IMultiLayerBitmap &gt; &gt; &gt;</base>
+    <base virtualness="virtual">iimg::IMultiBitmapProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
+    <member kind="typedef">
+      <type>iproc::TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IMultiLayerBitmap &gt; &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classicam_1_1_c_multi_layer_bitmap_supplier_comp.html</anchorfile>
+      <anchor>ac200d93da37a5480824bf85c32c487ae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT</name>
+      <anchorfile>classicam_1_1_c_multi_layer_bitmap_supplier_comp.html</anchorfile>
+      <anchor>ab590b58015a5f9fef436065bcadda7c2</anchor>
+      <arglist>(ScaleConstraints)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetBitmapsCount</name>
+      <anchorfile>classicam_1_1_c_multi_layer_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a88d74ace1c1a4ecf96382c8d3ff845c5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iimg::IBitmap *</type>
+      <name>GetBitmap</name>
+      <anchorfile>classicam_1_1_c_multi_layer_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a96cd21e311776ab25a8f42f08568c5cc</anchor>
+      <arglist>(int bitmapIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iprm::IOptionsList *</type>
+      <name>GetBitmapListInfo</name>
+      <anchorfile>classicam_1_1_c_multi_layer_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a3195cf3d098d6d276e8ebfd270ba1850</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ICalibration2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classicam_1_1_c_multi_layer_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a08809f97338691f16c82e04eb6bfea40</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InitializeWork</name>
+      <anchorfile>classicam_1_1_c_multi_layer_bitmap_supplier_comp.html</anchorfile>
+      <anchor>af59598fe2fc6129ba42a9018c4f57ab5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classicam_1_1_c_multi_layer_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a16de05aff3b1dfb063239226568eaa5f</anchor>
       <arglist>(ProductType &amp;result) const </arglist>
     </member>
   </compound>

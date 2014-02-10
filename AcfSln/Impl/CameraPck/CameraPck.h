@@ -36,6 +36,7 @@
 #include "icam/CCameraDelegatorComp.h"
 #include "icam/CMultiCameraBitmapSupplierComp.h"
 #include "icam/CSelectableBitmapSupplierComp.h"
+#include "icam/CMultiLayerBitmapSupplierComp.h"
 
 
 /**
@@ -53,6 +54,7 @@ typedef icam::CSelectionParamCameraComp SelectionParamCamera;
 typedef icam::CCameraDelegatorComp CameraDelegator;
 typedef icomp::TModelCompWrap<icam::CMultiCameraBitmapSupplierComp> MultiCameraBitmapSupplier;
 typedef icomp::TModelCompWrap<icam::CSelectableBitmapSupplierComp> SelectableBitmapSupplier;
+typedef icomp::TModelCompWrap<icam::CMultiLayerBitmapSupplierComp> MultiLayerBitmapSupplier;
 
 
 } // namespace CameraPck
