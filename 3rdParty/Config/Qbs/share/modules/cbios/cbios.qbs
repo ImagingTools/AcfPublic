@@ -1,16 +1,14 @@
 import qbs.base 1.0
 
 Module{
-	name: "live555"
+	name: "cbios"
 
 	property string selectedVersion	// the user requested version can be placed here
 
 	Depends{ name: "cpp" }
 
-	cpp.staticLibraries: [
-		path + "/../../../../live555/2012.10.24/lib/libliveMedia",
-	]
+	cpp.staticLibraries: path + "/../../../../../CBios/lib/VC9/CBIOS"
 	cpp.includePaths: [
-		path + "/../../../../live555/2012.10.24/liveMedia"
+		path + "/../../../../../CBios/include"
 	]
 }

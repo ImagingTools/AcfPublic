@@ -15,11 +15,11 @@ Module{
         condition: cvModuleName != undefined
 
         cpp.includePaths: [
-			path + "/../../../../OpenCV/" + qbs.architecture + "/" + acf.compilerName + "lib/opencv_" + cvModuleName + "242"
+			path + "/../../../../../OpenCV/" + qbs.architecture + "/" + acf.compilerName + "lib/opencv_" + cvModuleName + "242"
 		]
 
 		cpp.includePaths: [
-			path + "/../../../../OpenCV/Include"
+			path + "/../../../../../OpenCV/Include"
 		]
     }
 }

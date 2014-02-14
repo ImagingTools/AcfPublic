@@ -1,19 +1,16 @@
 import qbs.base 1.0
 
 Module{
-	name: "zlib"
+	name: "dc1394"
 
 	property string selectedVersion	// the user requested version can be placed here
 
 	Depends{ name: "cpp" }
 
-	cpp.libraryPaths: [
-		path + "/../../../../zlib/lib"
-	]
 	cpp.staticLibraries: [
-		"zlib", "libmmd"
+		path + "/../../../../../libdc1394/2.2.0/lib/dc1394",
 	]
 	cpp.includePaths: [
-		path + "/../../../../zlib/include"
+		path + "/../../../../../libdc1394/2.2.0/dc1394"
 	]
 }

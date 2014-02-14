@@ -9,8 +9,8 @@ Module{
 	Depends{ name: "acf" }
 	Depends{ name: "cpp" }
 
-	cpp.staticLibraries: path + "/../../../../Qwt/6.0.0/Lib/" + acf.compilerDir + "/qwt"
+	cpp.staticLibraries: path + "/../../../../../Qwt/6.0.0/Lib/" + acf.compilerDir + "/qwt"
 	cpp.includePaths: [
-		path + "/../../../../Qwt/6.0.0/Include"
+		path + "/../../../../../Qwt/6.0.0/Include"
 	]
 }
