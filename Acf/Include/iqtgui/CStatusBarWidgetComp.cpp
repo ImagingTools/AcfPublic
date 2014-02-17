@@ -125,6 +125,12 @@ QString CStatusBarWidgetComp::GetTitle() const
 }
 
 
+int CStatusBarWidgetComp::GetFlags() const
+{
+	return WCF_PERMANENT;
+}
+
+
 } // namespace iqtgui
 
 

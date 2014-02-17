@@ -38398,6 +38398,13 @@
       <anchor>a747c6d4df875dea0e85b09665a04025c</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetFlags</name>
+      <anchorfile>classiqtgui_1_1_c_dock_widget_gui_comp.html</anchorfile>
+      <anchor>a27343beff333f884c5e2129436954f37</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
@@ -40939,6 +40946,13 @@
       <anchor>aa722848795ed91a3f0f5719731e9fa69</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetFlags</name>
+      <anchorfile>classiqtgui_1_1_c_status_bar_widget_comp.html</anchorfile>
+      <anchor>af7dbeea002f7ea984dd1e9b741bfb0ab</anchor>
+      <arglist>() const </arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtgui::CStatusGuiComp</name>
@@ -41357,6 +41371,13 @@
       <anchor>afe0e55f562f96ddfa76101a249f7e4ed</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetFlags</name>
+      <anchorfile>classiqtgui_1_1_c_tool_bar_gui_comp_base.html</anchorfile>
+      <anchor>a20b49ede0c7a288c492eb31fba0a02cb</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
@@ -41711,6 +41732,24 @@
     <name>iqtgui::IMainWindowComponent</name>
     <filename>classiqtgui_1_1_i_main_window_component.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="enumeration">
+      <name>MainWindowComponentFlags</name>
+      <anchorfile>classiqtgui_1_1_i_main_window_component.html</anchorfile>
+      <anchor>aadb803d436fa60737dcf672c727cc68d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>WCF_NONE</name>
+      <anchorfile>classiqtgui_1_1_i_main_window_component.html</anchorfile>
+      <anchor>aadb803d436fa60737dcf672c727cc68da71189974e06f93bf1bb452adc27d53db</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>WCF_PERMANENT</name>
+      <anchorfile>classiqtgui_1_1_i_main_window_component.html</anchorfile>
+      <anchor>aadb803d436fa60737dcf672c727cc68da49690a6b2bffec9025a1cabb6866bb3e</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>AddToMainWindow</name>
@@ -41737,6 +41776,13 @@
       <name>GetTitle</name>
       <anchorfile>classiqtgui_1_1_i_main_window_component.html</anchorfile>
       <anchor>ad0d71cf4369e60022046d769b4a49058</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetFlags</name>
+      <anchorfile>classiqtgui_1_1_i_main_window_component.html</anchorfile>
+      <anchor>ab08078262e0aa6bb221451fdb3238192</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>

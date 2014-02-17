@@ -372,6 +372,8 @@ bool CSingleDocumentManagerBase::OpenDocument(
 
 	bool isCloseIgnored = false;
 
+	istd::CChangeNotifier changePtr(this, CF_DOCUMENT_COUNT_CHANGED | CF_MODEL);
+
 	CloseDocument(-1, false, &isCloseIgnored);
 
 	if (isCloseIgnored){
@@ -408,6 +410,9 @@ bool CSingleDocumentManagerBase::OpenDocument(
 
 				return true;
 			}
+		}
+		else{
+			CloseDocument(-1, true, &isCloseIgnored);
 		}
 	}
 

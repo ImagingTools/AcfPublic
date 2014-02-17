@@ -45,22 +45,32 @@
 <a name="l00020"></a><a class="code" href="classiqtgui_1_1_i_main_window_component.html">00020</a> <span class="keyword">class </span><a class="code" href="classiqtgui_1_1_i_main_window_component.html" title="A common interface for main window component such as dock widget, tool bar and so on...">IMainWindowComponent</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IPolymorphic
 <a name="l00021"></a>00021 {
 <a name="l00022"></a>00022 <span class="keyword">public</span>:
-<a name="l00026"></a>00026        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_i_main_window_component.html#a3834e70dd62781859c5d5ffa5db0c8f3" title="Add this component to main window.">AddToMainWindow</a>(QMainWindow&amp; mainWindow) = 0;
-<a name="l00027"></a>00027 
-<a name="l00031"></a>00031        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_i_main_window_component.html#a4abeb613d32398f5b5908b1cde3c2544" title="Remove this component from main window.">RemoveFromMainWindow</a>(QMainWindow&amp; mainWindow) = 0;
-<a name="l00032"></a>00032 
-<a name="l00038"></a>00038        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiqtgui_1_1_i_main_window_component.html#a8a1c4e80e31f697bc4663b7d93cac330" title="Get the type ID of the associated document.">GetAssociatedDocumentTypeId</a>() <span class="keyword">const</span> = 0;
-<a name="l00039"></a>00039 
-<a name="l00043"></a>00043        <span class="keyword">virtual</span> QString <a class="code" href="classiqtgui_1_1_i_main_window_component.html#ad0d71cf4369e60022046d769b4a49058" title="Get the title of the main window component.">GetTitle</a>() <span class="keyword">const</span> = 0;
-<a name="l00044"></a>00044 };
-<a name="l00045"></a>00045 
+<a name="l00023"></a>00023 
+<a name="l00027"></a><a class="code" href="classiqtgui_1_1_i_main_window_component.html#aadb803d436fa60737dcf672c727cc68d">00027</a>        <span class="keyword">enum</span> <a class="code" href="classiqtgui_1_1_i_main_window_component.html#aadb803d436fa60737dcf672c727cc68d" title="Flags describing behaviour of the main window component.">MainWindowComponentFlags</a>
+<a name="l00028"></a>00028        {
+<a name="l00029"></a><a class="code" href="classiqtgui_1_1_i_main_window_component.html#aadb803d436fa60737dcf672c727cc68da71189974e06f93bf1bb452adc27d53db">00029</a>               <a class="code" href="classiqtgui_1_1_i_main_window_component.html#aadb803d436fa60737dcf672c727cc68da71189974e06f93bf1bb452adc27d53db">WCF_NONE</a> = 0x0,
+<a name="l00030"></a>00030 
+<a name="l00034"></a><a class="code" href="classiqtgui_1_1_i_main_window_component.html#aadb803d436fa60737dcf672c727cc68da49690a6b2bffec9025a1cabb6866bb3e">00034</a>               <a class="code" href="classiqtgui_1_1_i_main_window_component.html#aadb803d436fa60737dcf672c727cc68da49690a6b2bffec9025a1cabb6866bb3e" title="Window component is permanent shown and cannot be closed by user.">WCF_PERMANENT</a> = 0x1
+<a name="l00035"></a>00035        };
+<a name="l00036"></a>00036 
+<a name="l00040"></a>00040        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_i_main_window_component.html#a3834e70dd62781859c5d5ffa5db0c8f3" title="Add this component to main window.">AddToMainWindow</a>(QMainWindow&amp; mainWindow) = 0;
+<a name="l00041"></a>00041 
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_i_main_window_component.html#a4abeb613d32398f5b5908b1cde3c2544" title="Remove this component from main window.">RemoveFromMainWindow</a>(QMainWindow&amp; mainWindow) = 0;
 <a name="l00046"></a>00046 
-<a name="l00047"></a>00047 } <span class="comment">// namespace iqtgui</span>
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050 <span class="preprocessor">#endif // !iqtgui_IMainWindowComponent_included</span>
-<a name="l00051"></a>00051 <span class="preprocessor"></span>
-<a name="l00052"></a>00052 
+<a name="l00052"></a>00052        <span class="keyword">virtual</span> QByteArray <a class="code" href="classiqtgui_1_1_i_main_window_component.html#a8a1c4e80e31f697bc4663b7d93cac330" title="Get the type ID of the associated document.">GetAssociatedDocumentTypeId</a>() <span class="keyword">const</span> = 0;
+<a name="l00053"></a>00053 
+<a name="l00057"></a>00057        <span class="keyword">virtual</span> QString <a class="code" href="classiqtgui_1_1_i_main_window_component.html#ad0d71cf4369e60022046d769b4a49058" title="Get the title of the main window component.">GetTitle</a>() <span class="keyword">const</span> = 0;
+<a name="l00058"></a>00058 
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqtgui_1_1_i_main_window_component.html#ab08078262e0aa6bb221451fdb3238192" title="Get properties of of the window component.">GetFlags</a>() <span class="keyword">const</span> = 0;
+<a name="l00064"></a>00064 };
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 } <span class="comment">// namespace iqtgui</span>
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070 <span class="preprocessor">#endif // !iqtgui_IMainWindowComponent_included</span>
+<a name="l00071"></a>00071 <span class="preprocessor"></span>
+<a name="l00072"></a>00072 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

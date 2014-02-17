@@ -32,6 +32,7 @@
 </div>
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">iqtgui::IMainWindowComponent Class Reference</div>  </div>
@@ -59,6 +60,12 @@ Inheritance diagram for iqtgui::IMainWindowComponent:</div>
 
 <p><a href="classiqtgui_1_1_i_main_window_component-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_i_main_window_component.html#aadb803d436fa60737dcf672c727cc68d">MainWindowComponentFlags</a> { <a class="el" href="classiqtgui_1_1_i_main_window_component.html#aadb803d436fa60737dcf672c727cc68da71189974e06f93bf1bb452adc27d53db">WCF_NONE</a> =  0x0, 
+<a class="el" href="classiqtgui_1_1_i_main_window_component.html#aadb803d436fa60737dcf672c727cc68da49690a6b2bffec9025a1cabb6866bb3e">WCF_PERMANENT</a> =  0x1
+ }</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags describing behaviour of the main window component.  <a href="classiqtgui_1_1_i_main_window_component.html#aadb803d436fa60737dcf672c727cc68d">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_i_main_window_component.html#a3834e70dd62781859c5d5ffa5db0c8f3">AddToMainWindow</a> (QMainWindow &amp;mainWindow)=0</td></tr>
@@ -69,12 +76,41 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type ID of the associated document.  <a href="#a8a1c4e80e31f697bc4663b7d93cac330"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_i_main_window_component.html#ad0d71cf4369e60022046d769b4a49058">GetTitle</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the title of the main window component.  <a href="#ad0d71cf4369e60022046d769b4a49058"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_i_main_window_component.html#ab08078262e0aa6bb221451fdb3238192">GetFlags</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get properties of of the window component.  <a href="#ab08078262e0aa6bb221451fdb3238192"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>A common interface for main window component such as dock widget, tool bar and so on. </p>
 
 <p>Definition at line <a class="el" href="_i_main_window_component_8h_source.html#l00020">20</a> of file <a class="el" href="_i_main_window_component_8h_source.html">IMainWindowComponent.h</a>.</p>
-</div><hr/><h2>Member Function Documentation</h2>
+</div><hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="aadb803d436fa60737dcf672c727cc68d"></a><!-- doxytag: member="iqtgui::IMainWindowComponent::MainWindowComponentFlags" ref="aadb803d436fa60737dcf672c727cc68d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classiqtgui_1_1_i_main_window_component.html#aadb803d436fa60737dcf672c727cc68d">iqtgui::IMainWindowComponent::MainWindowComponentFlags</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Flags describing behaviour of the main window component. </p>
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="aadb803d436fa60737dcf672c727cc68da71189974e06f93bf1bb452adc27d53db"></a><!-- doxytag: member="WCF_NONE" ref="aadb803d436fa60737dcf672c727cc68da71189974e06f93bf1bb452adc27d53db" args="" -->WCF_NONE</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="aadb803d436fa60737dcf672c727cc68da49690a6b2bffec9025a1cabb6866bb3e"></a><!-- doxytag: member="WCF_PERMANENT" ref="aadb803d436fa60737dcf672c727cc68da49690a6b2bffec9025a1cabb6866bb3e" args="" -->WCF_PERMANENT</em>&nbsp;</td><td>
+<p>Window component is permanent shown and cannot be closed by user. </p>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_i_main_window_component_8h_source.html#l00027">27</a> of file <a class="el" href="_i_main_window_component_8h_source.html">IMainWindowComponent.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a3834e70dd62781859c5d5ffa5db0c8f3"></a><!-- doxytag: member="iqtgui::IMainWindowComponent::AddToMainWindow" ref="a3834e70dd62781859c5d5ffa5db0c8f3" args="(QMainWindow &amp;mainWindow)=0" -->
 <div class="memitem">
 <div class="memproto">
@@ -115,6 +151,27 @@ Public Member Functions</h2></td></tr>
 <dl class="note"><dt><b>Note:</b></dt><dd>This method is only used in the context of document-based applications. </dd></dl>
 
 <p>Implemented in <a class="el" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#a2def06f1ecf19d0ffba56e86b81454ba">iqtgui::CToolBarGuiCompBase</a>, <a class="el" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#a6cb708851d4e9f9a8d63c4c72f78b02f">iqtgui::CDockWidgetGuiComp</a>, and <a class="el" href="classiqtgui_1_1_c_status_bar_widget_comp.html#ac72055d72e2e7af3f321b7378975b3e3">iqtgui::CStatusBarWidgetComp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab08078262e0aa6bb221451fdb3238192"></a><!-- doxytag: member="iqtgui::IMainWindowComponent::GetFlags" ref="ab08078262e0aa6bb221451fdb3238192" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int iqtgui::IMainWindowComponent::GetFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get properties of of the window component. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classiqtgui_1_1_i_main_window_component.html#aadb803d436fa60737dcf672c727cc68d" title="Flags describing behaviour of the main window component.">MainWindowComponentFlags</a> </dd></dl>
+
+<p>Implemented in <a class="el" href="classiqtgui_1_1_c_tool_bar_gui_comp_base.html#a20b49ede0c7a288c492eb31fba0a02cb">iqtgui::CToolBarGuiCompBase</a>, <a class="el" href="classiqtgui_1_1_c_dock_widget_gui_comp.html#a27343beff333f884c5e2129436954f37">iqtgui::CDockWidgetGuiComp</a>, and <a class="el" href="classiqtgui_1_1_c_status_bar_widget_comp.html#af7dbeea002f7ea984dd1e9b741bfb0ab">iqtgui::CStatusBarWidgetComp</a>.</p>
 
 </div>
 </div>
