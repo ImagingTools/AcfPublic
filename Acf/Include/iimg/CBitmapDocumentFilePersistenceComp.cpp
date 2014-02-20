@@ -80,6 +80,8 @@ int CBitmapDocumentFilePersistenceComp::LoadFromFile(istd::IChangeable& data, co
 		return OS_FAILED;
 	}
 
+	istd::CChangeNotifier updater(docPtr);
+
 	docPtr->ResetPages();
 
 	if (!QFile::exists(filePath)){
