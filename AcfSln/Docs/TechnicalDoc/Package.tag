@@ -1890,6 +1890,19 @@
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
+    <name>CDataSequenceJoinerSupplierComp.h</name>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
+    <filename>_c_data_sequence_joiner_supplier_comp_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
+    <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
+    <includes id="_i_multi_data_sequence_provider_8h" name="IMultiDataSequenceProvider.h" local="yes" imported="no">imeas/IMultiDataSequenceProvider.h</includes>
+    <class kind="class">imeas::CDataSequenceJoinerSupplierComp</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
     <name>CDataSequenceStatistics.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_data_sequence_statistics_8h</filename>
@@ -1975,6 +1988,18 @@
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="yes" imported="no">imeas/CSimpleNumericValue.h</includes>
     <class kind="class">imeas::CNumericValuesJoinerComp</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CProcessedDataSequenceSupplierComp.h</name>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
+    <filename>_c_processed_data_sequence_supplier_comp_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
+    <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
+    <class kind="class">imeas::CProcessedDataSequenceSupplierComp</class>
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
@@ -15203,6 +15228,7 @@
     <filename>classiipr_1_1_c_multi_line_projection_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; QVector&lt; imeas::CGeneralDataSequence &gt; &gt;</base>
     <base virtualness="virtual">imeas::IMultiDataSequenceProvider</base>
+    <base virtualness="virtual">imeas::IDataSequenceProvider</base>
     <member kind="typedef">
       <type>iproc::TSupplierCompWrap&lt; QVector&lt; imeas::CGeneralDataSequence &gt; &gt;</type>
       <name>BaseClass</name>
@@ -15251,6 +15277,13 @@
       <anchorfile>classiipr_1_1_c_multi_line_projection_supplier_comp.html</anchorfile>
       <anchor>a9c3e9cb4455fc7119ab910a7838fe5eb</anchor>
       <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imeas::IDataSequence *</type>
+      <name>GetDataSequence</name>
+      <anchorfile>classiipr_1_1_c_multi_line_projection_supplier_comp.html</anchorfile>
+      <anchor>ac9ebf1f38e10b0d0f61a0e2b3d434cf4</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
@@ -17181,6 +17214,7 @@
     <filename>namespaceimeas.html</filename>
     <class kind="class">imeas::CCrossCorrelationProcessorComp</class>
     <class kind="class">imeas::CDataSequenceInfoBase</class>
+    <class kind="class">imeas::CDataSequenceJoinerSupplierComp</class>
     <class kind="class">imeas::CDataSequenceStatistics</class>
     <class kind="class">imeas::CDataStatistics</class>
     <class kind="class">imeas::CGeneralDataSequence</class>
@@ -17191,6 +17225,7 @@
     <class kind="class">imeas::CNumericConstraintsComp</class>
     <class kind="class">imeas::CNumericParamsComp</class>
     <class kind="class">imeas::CNumericValuesJoinerComp</class>
+    <class kind="class">imeas::CProcessedDataSequenceSupplierComp</class>
     <class kind="class">imeas::CSamplesInfo</class>
     <class kind="class">imeas::CSimpleNumericValue</class>
     <class kind="class">imeas::CSimpleNumericValueProvider</class>
@@ -17339,6 +17374,68 @@
       <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
       <anchor>af078794b6798ac77fdeb986c085f4c84</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imeas::CDataSequenceJoinerSupplierComp</name>
+    <filename>classimeas_1_1_c_data_sequence_joiner_supplier_comp.html</filename>
+    <base>TSupplierCompWrap&lt; imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt; &gt;</base>
+    <base virtualness="virtual">imeas::IDataSequenceProvider</base>
+    <member kind="typedef">
+      <type>iproc::TSupplierCompWrap&lt; imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_joiner_supplier_comp.html</anchorfile>
+      <anchor>a9168e48c8f87dadde8763c34d35a40d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_joiner_supplier_comp.html</anchorfile>
+      <anchor>a30add6abc2cce075c57c0d70a1916674</anchor>
+      <arglist>(m_dataSequenceSupplierCompPtr, m_dataSequenceProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_joiner_supplier_comp.html</anchorfile>
+      <anchor>ae3c78e483e2b2cf821df647cf5b8ebfc</anchor>
+      <arglist>(m_dataSequenceProviderModelCompPtr, m_dataSequenceProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_joiner_supplier_comp.html</anchorfile>
+      <anchor>a63ee029cc23938a14efb08d8089f7064</anchor>
+      <arglist>(m_multiDataSequenceSupplierCompPtr, m_multiDataSequenceProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_joiner_supplier_comp.html</anchorfile>
+      <anchor>a6fb62a9d7ce9e301b70f149917a1acac</anchor>
+      <arglist>(m_multiDataSequenceProviderModelCompPtr, m_multiDataSequenceProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const imeas::IDataSequence *</type>
+      <name>GetDataSequence</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_joiner_supplier_comp.html</anchorfile>
+      <anchor>ac17484ed464ef8abb1b7c40ce309252c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_joiner_supplier_comp.html</anchorfile>
+      <anchor>a1651411aea1e396a1c2e7f88888f570b</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_joiner_supplier_comp.html</anchorfile>
+      <anchor>aede609f000386dbb2b77938cb3beaa88</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -18192,6 +18289,54 @@
       <anchorfile>classimeas_1_1_c_numeric_values_joiner_comp.html</anchorfile>
       <anchor>a74f050d1e29484cc1915d8f6089ed617</anchor>
       <arglist>(imeas::INumericValue::ValueTypeId valueTypeId) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imeas::CProcessedDataSequenceSupplierComp</name>
+    <filename>classimeas_1_1_c_processed_data_sequence_supplier_comp.html</filename>
+    <base>TSupplierCompWrap&lt; imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt; &gt;</base>
+    <base virtualness="virtual">imeas::IDataSequenceProvider</base>
+    <member kind="typedef">
+      <type>iproc::TSupplierCompWrap&lt; imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classimeas_1_1_c_processed_data_sequence_supplier_comp.html</anchorfile>
+      <anchor>a3fd63a858793f8565f6d6446a3873e01</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classimeas_1_1_c_processed_data_sequence_supplier_comp.html</anchorfile>
+      <anchor>a1b19ce55295688a9d3ecd783af78dfa3</anchor>
+      <arglist>(m_dataSequenceSupplierCompPtr, m_dataSequenceProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classimeas_1_1_c_processed_data_sequence_supplier_comp.html</anchorfile>
+      <anchor>a9ac253ee0bf032735c2f60109e5a8daa</anchor>
+      <arglist>(m_dataSequenceProviderModelCompPtr, m_dataSequenceProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const imeas::IDataSequence *</type>
+      <name>GetDataSequence</name>
+      <anchorfile>classimeas_1_1_c_processed_data_sequence_supplier_comp.html</anchorfile>
+      <anchor>a7964fe910521df89463d50b131cd380f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classimeas_1_1_c_processed_data_sequence_supplier_comp.html</anchorfile>
+      <anchor>aec49812d7187c315454bbfbf28b8a5bd</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classimeas_1_1_c_processed_data_sequence_supplier_comp.html</anchorfile>
+      <anchor>a1d74dbf83961959046e84bde316f9354</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

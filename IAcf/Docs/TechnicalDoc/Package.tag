@@ -184,6 +184,13 @@
     <namespace>iqwt</namespace>
   </compound>
   <compound kind="file">
+    <name>CQwtDataSequenceViewComp.h</name>
+    <path>C:/Temp/Iacf/Include/iqwt/</path>
+    <filename>_c_qwt_data_sequence_view_comp_8h</filename>
+    <class kind="class">iqwt::CQwtDataSequenceViewComp</class>
+    <namespace>iqwt</namespace>
+  </compound>
+  <compound kind="file">
     <name>iqwt.h</name>
     <path>C:/Temp/Iacf/Include/iqwt/</path>
     <filename>iqwt_8h</filename>
@@ -1813,6 +1820,7 @@
     <filename>namespaceiqwt.html</filename>
     <class kind="class">iqwt::CHistogramViewComp</class>
     <class kind="class">iqwt::CProgressHistoryGuiComp</class>
+    <class kind="class">iqwt::CQwtDataSequenceViewComp</class>
   </compound>
   <compound kind="class">
     <name>iqwt::CHistogramViewComp</name>
@@ -1927,6 +1935,39 @@
       <name>OnComponentCreated</name>
       <anchorfile>classiqwt_1_1_c_progress_history_gui_comp.html</anchorfile>
       <anchor>a9d5083c9c19a879a6cef4a5643f844ae</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqwt::CQwtDataSequenceViewComp</name>
+    <filename>classiqwt_1_1_c_qwt_data_sequence_view_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CQwtDataSequenceViewComp, imeas::IDataSequence &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CQwtDataSequenceViewComp, imeas::IDataSequence &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqwt_1_1_c_qwt_data_sequence_view_comp.html</anchorfile>
+      <anchor>a262c1b6d7c64250e1afd7dd2a9415d3a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqwt_1_1_c_qwt_data_sequence_view_comp.html</anchorfile>
+      <anchor>a23aef00f2f7b8d5928566e2f413f13a7</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqwt_1_1_c_qwt_data_sequence_view_comp.html</anchorfile>
+      <anchor>aa4e4aba475d3aa01174be8466504f6b8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqwt_1_1_c_qwt_data_sequence_view_comp.html</anchorfile>
+      <anchor>a866052ee1e309fad38929b7b2b36de53</anchor>
       <arglist>()</arglist>
     </member>
   </compound>

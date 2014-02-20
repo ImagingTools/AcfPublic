@@ -1,0 +1,106 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2011 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the IACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the IACF.
+**
+********************************************************************************/
+
+
+#ifndef iqwt_CQwtDataSequenceViewComp_included
+#define iqwt_CQwtDataSequenceViewComp_included
+
+
+// Qwt includes
+#include "qwt_plot.h"
+#include "qwt_plot_curve.h"
+#include "qwt_plot_picker.h"
+
+
+// ACF includes
+#include "istd/TPointerVector.h"
+
+#include "imod/CModelProxy.h"
+
+#include "iqtgui/TDesignerGuiObserverCompBase.h"
+
+#include "imeas/IDataSequence.h"
+#include "imeas/IDataSequenceStatistics.h"
+
+#include "GeneratedFiles/iqwt/ui_CQwtDataSequenceViewComp.h"
+
+
+namespace iqwt
+{
+
+
+/**
+	Component for visualization of histogram data.
+*/
+class CQwtDataSequenceViewComp:
+			public iqtgui::TDesignerGuiObserverCompBase<
+						Ui::CQwtDataSequenceViewComp, imeas::IDataSequence>
+{
+	Q_OBJECT
+
+public:
+	typedef iqtgui::TDesignerGuiObserverCompBase<
+				Ui::CQwtDataSequenceViewComp, imeas::IDataSequence> BaseClass;
+
+	I_BEGIN_COMPONENT(CQwtDataSequenceViewComp);
+	I_END_COMPONENT;
+
+	// reimplemented (iqtgui::TGuiObserverWrap)
+	virtual void UpdateGui(int updateFlags = 0);
+
+protected:
+	// reimplemented (iqtgui::CGuiComponentBase)
+	virtual void OnGuiCreated();
+	virtual void OnGuiDestroyed();
+
+private Q_SLOTS:
+	void on_ChannelCombo_currentIndexChanged(int index);
+
+private:
+	void ClearPlot();
+
+private:
+	class DataSequencePlotPicker: public QwtPlotPicker
+	{
+	public:
+		typedef QwtPlotPicker BaseClass;
+
+		DataSequencePlotPicker(CQwtDataSequenceViewComp& parent, int xAxis, int yAxis, QwtPlotCanvas* canvasPtr);
+
+		// reimplemented (QwtPlotPicker)
+		virtual QwtText trackerText(const QPoint& position) const;
+
+	private:
+		CQwtDataSequenceViewComp& m_parent;
+	};
+
+private:
+	istd::TDelPtr<QwtPlot> m_plotPtr;
+	istd::TPointerVector<QwtPlotCurve> m_channelCurves;
+};
+
+
+} // namespace iqwt
+
+
+#endif // !iqwt_CQwtDataSequenceViewComp_included
+
+
