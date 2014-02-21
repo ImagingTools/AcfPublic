@@ -87,7 +87,6 @@ typedef icomp::TModelCompWrap<
 						iimg::IMultiLayerBitmap,
 						iimg::IMultiBitmapProvider,
 						idoc::IMultiPageDocument,
-						iprm::IOptionsList,
 						iser::ISerializable> > MultiLayerBitmap;
 
 
