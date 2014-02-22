@@ -41272,24 +41272,6 @@
     <filename>classiqtgui_1_1_c_tool_bar_gui_comp_base.html</filename>
     <base>TGuiComponentBase&lt; QToolBar &gt;</base>
     <base virtualness="virtual">iqtgui::IMainWindowComponent</base>
-    <member kind="enumeration">
-      <name>DockFeatures</name>
-      <anchorfile>classiqtgui_1_1_c_tool_bar_gui_comp_base.html</anchorfile>
-      <anchor>aa95e2f0735dd96b9e431920f5db9a705</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DF_MOVEABLE</name>
-      <anchorfile>classiqtgui_1_1_c_tool_bar_gui_comp_base.html</anchorfile>
-      <anchor>aa95e2f0735dd96b9e431920f5db9a705a94c93ed70b8ec52891abbf51b381dfc3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DF_FLOATABLE</name>
-      <anchorfile>classiqtgui_1_1_c_tool_bar_gui_comp_base.html</anchorfile>
-      <anchor>aa95e2f0735dd96b9e431920f5db9a705aa93834191e8bd8ff6551b3259f27262b</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="typedef">
       <type>iqtgui::TGuiComponentBase&lt; QToolBar &gt;</type>
       <name>BaseClass</name>
@@ -41686,6 +41668,30 @@
     <name>iqtgui::IMainWindowComponent</name>
     <filename>classiqtgui_1_1_i_main_window_component.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="enumeration">
+      <name>DockFeatures</name>
+      <anchorfile>classiqtgui_1_1_i_main_window_component.html</anchorfile>
+      <anchor>a46734e58745c61802bb777be1d381469</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DF_PERMANENT</name>
+      <anchorfile>classiqtgui_1_1_i_main_window_component.html</anchorfile>
+      <anchor>a46734e58745c61802bb777be1d381469a3080ccefb217bf0bfaa7345b0cbb855a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DF_MOVEABLE</name>
+      <anchorfile>classiqtgui_1_1_i_main_window_component.html</anchorfile>
+      <anchor>a46734e58745c61802bb777be1d381469a3fcc1a2f765738b40fc0b39b8980ae91</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DF_FLOATABLE</name>
+      <anchorfile>classiqtgui_1_1_i_main_window_component.html</anchorfile>
+      <anchor>a46734e58745c61802bb777be1d381469a9b0fadc78f166666d8ab0451d0764b3b</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="enumeration">
       <name>MainWindowComponentFlags</name>
       <anchorfile>classiqtgui_1_1_i_main_window_component.html</anchorfile>

@@ -20,25 +20,36 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#ifndef FileGuiPck_included
+#define FileGuiPck_included
 
 
-namespace istd
+#include "ifilegui/CFileTreeViewGuiComp.h"
+#include "ifilegui/CFileSystemExplorerGuiComp.h"
+#include "ifilegui/CFilePersistenceGuiComp.h"
+#include "ifilegui/CFileDialogLoaderComp.h"
+#include "ifilegui/CFilePreviewGuiComp.h"
+#include "ifilegui/CFileListProviderGuiComp.h"
+
+
+/**
+	File UI package.
+*/
+namespace FileGuiPck
 {
 
 
-enum RepositoryState
-{
-	RS_ORIGINAL_VERSION =  3335,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
-};
+typedef ifilegui::CFileTreeViewGuiComp FileTreeViewGui;
+typedef ifilegui::CFileSystemExplorerGuiComp FileSystemExplorerGui;
+typedef ifilegui::CFilePersistenceGuiComp FilePersistenceGui;
+typedef ifilegui::CFileDialogLoaderComp FileDialogLoader;
+typedef ifilegui::CFilePreviewGuiComp FilePreviewGui;
+typedef ifilegui::CFileListProviderGuiComp FileListProviderGui;
 
 
-} // namespace istd
+} // namespace FileGuiPck
 
 
-#endif // !istd_AcfVersion_included
+#endif // !FileGuiPck_included
 
 
