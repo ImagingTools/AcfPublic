@@ -37,7 +37,6 @@
 #include "iqtgui/CFreeWidgetGuiComp.h"
 #include "iqtgui/CTabContainerGuiComp.h"
 #include "iqtgui/CAboutWidgetGuiComp.h"
-#include "iqtgui/CTabbedMultiViewGuiComp.h"
 #include "iqtgui/CSimpleMainWindowGuiComp.h"
 #include "iqtgui/CDialogGuiComp.h"
 #include "iqtgui/CModelDialogGuiComp.h"
@@ -113,7 +112,6 @@ typedef iqtgui::CStatusBarWidgetComp StatusBarWidget;
 typedef iqtgui::CFreeWidgetGuiComp FreeWidgetGui;
 typedef iqtgui::CTabContainerGuiComp TabContainer;
 typedef iqtgui::CAboutWidgetGuiComp AboutGui;
-typedef iqtgui::CTabbedMultiViewGuiComp TabbedMultiViewGui;
 typedef iqtgui::CSimpleMainWindowGuiComp SimpleMainGui;
 typedef iqtgui::CDialogGuiComp DialogGui;
 typedef iqtgui::CModelDialogGuiComp ModelDialogGui;

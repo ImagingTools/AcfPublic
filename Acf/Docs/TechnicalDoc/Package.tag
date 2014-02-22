@@ -4583,17 +4583,6 @@
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
-    <name>CTabbedMultiViewGuiComp.h</name>
-    <path>C:/Temp/Acf/Include/iqtgui/</path>
-    <filename>_c_tabbed_multi_view_gui_comp_8h</filename>
-    <includes id="_i_model_editor_8h" name="IModelEditor.h" local="yes" imported="no">imod/IModelEditor.h</includes>
-    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
-    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="yes" imported="no">iqtgui/CHierarchicalCommand.h</includes>
-    <includes id="_c_tab_container_gui_comp_8h" name="CTabContainerGuiComp.h" local="yes" imported="no">iqtgui/CTabContainerGuiComp.h</includes>
-    <class kind="class">iqtgui::CTabbedMultiViewGuiComp</class>
-    <namespace>iqtgui</namespace>
-  </compound>
-  <compound kind="file">
     <name>CTabContainerGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_tab_container_gui_comp_8h</filename>
@@ -37968,7 +37957,6 @@
     <class kind="class">iqtgui::CStackWidgetDelegate</class>
     <class kind="class">iqtgui::CStatusBarWidgetComp</class>
     <class kind="class">iqtgui::CStatusGuiComp</class>
-    <class kind="class">iqtgui::CTabbedMultiViewGuiComp</class>
     <class kind="class">iqtgui::CTabContainerGuiComp</class>
     <class kind="class">iqtgui::CTableBasedModelEditorComp</class>
     <class kind="class">iqtgui::CTabWidgetDelegate</class>
@@ -40978,40 +40966,6 @@
       <anchorfile>classiqtgui_1_1_c_status_gui_comp.html</anchorfile>
       <anchor>a14fdec1abc89476fb18a4691e8f1d016</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtgui::CTabbedMultiViewGuiComp</name>
-    <filename>classiqtgui_1_1_c_tabbed_multi_view_gui_comp.html</filename>
-    <base>iqtgui::CTabContainerGuiComp</base>
-    <base>imod::CSingleModelObserverBase</base>
-    <member kind="typedef">
-      <type>iqtgui::CTabContainerGuiComp</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtgui_1_1_c_tabbed_multi_view_gui_comp.html</anchorfile>
-      <anchor>ac00273f0ff0c91f8811eadcfd93ac1e0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>imod::CSingleModelObserverBase</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiqtgui_1_1_c_tabbed_multi_view_gui_comp.html</anchorfile>
-      <anchor>adf198e016c39daca195271d63fd2551a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnAttached</name>
-      <anchorfile>classiqtgui_1_1_c_tabbed_multi_view_gui_comp.html</anchorfile>
-      <anchor>ade775090459568896bd31fa0c0949d9c</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnDetached</name>
-      <anchorfile>classiqtgui_1_1_c_tabbed_multi_view_gui_comp.html</anchorfile>
-      <anchor>a52397acf24a19b008fbc9ef05ef9635d</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
