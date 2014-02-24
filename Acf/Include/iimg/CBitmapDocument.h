@@ -29,7 +29,7 @@
 #include "idoc/TMultiPageDocumentWrap.h"
 #include "idoc/CStandardDocumentMetaInfo.h"
 #include "iimg/IMultiBitmapProvider.h"
-#include "iimg/CBitmap.h"
+#include "iimg/CGeneralBitmap.h"
 
 
 namespace iimg
@@ -45,7 +45,7 @@ class CBitmapDocument:
 {
 public:
 	typedef idoc::CMultiPageDocumentBase BaseClass;
-	typedef imod::TModelWrap<CBitmap> Bitmap;
+	typedef imod::TModelWrap<CGeneralBitmap> Bitmap;
 
 	enum
 	{
