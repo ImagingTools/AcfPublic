@@ -20,44 +20,38 @@
 ********************************************************************************/
 
 
-#ifndef iimg_CMultiLayerBitmap_included
-#define iimg_CMultiLayerBitmap_included
+#ifndef iimg_IMultiPageBitmapController_included
+#define iimg_IMultiPageBitmapController_included
 
 
 // ACF includes
-#include "iimg/IMultiLayerBitmap.h"
-#include "iimg/CBitmapDocument.h"
+#include "istd/IPolymorphic.h"
 
 
 namespace iimg
 {
 
 
-class CMultiLayerBitmap:
-			public CBitmapDocument,
-			virtual public iimg::IMultiLayerBitmap
+class IMultiPageBitmapController: virtual public istd::IPolymorphic
 {
 public:
-	typedef CBitmapDocument BaseClass;
-
-	// reimplemented (iimg::IMultiLayerBitmap)
-	virtual void Reset();
+	virtual void Reset() = 0;
 	virtual iimg::IBitmap* InsertBitmap(
-		iimg::IBitmap::PixelFormat pixelFormat,
-		const istd::CIndex2d& size);
+				iimg::IBitmap::PixelFormat pixelFormat,
+				const istd::CIndex2d& size) = 0;
 	virtual iimg::IBitmap* InsertBitmap(
-		iimg::IBitmap::PixelFormat pixelFormat,
-		const istd::CIndex2d& size,
-		void* dataPtr,
-		bool releaseFlag,
-		int linesDifference = 0);
-	virtual void RemoveBitmap(int index);
+				iimg::IBitmap::PixelFormat pixelFormat,
+				const istd::CIndex2d& size,
+				void* dataPtr,
+				bool releaseFlag,
+				int linesDifference = 0) = 0;
+	virtual void RemoveBitmap(int index) = 0;
 };
 
 
 } // namespace iimg
 
 
-#endif // iimg_CMultiLayerBitmap_included
+#endif // iimg_IMultiPageBitmapController_included
 
 

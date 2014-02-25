@@ -33,7 +33,7 @@
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_i_file_persistence_8h.html">ifile/IFilePersistence.h</a>&quot;</span>
 <a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_t_logger_comp_wrap_8h.html">ilog/TLoggerCompWrap.h</a>&quot;</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_c_bitmap_document_8h.html">iimg/CBitmapDocument.h</a>&quot;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_c_multi_page_bitmap_base_8h.html">iimg/CMultiPageBitmapBase.h</a>&quot;</span>
 <a name="l00009"></a>00009 
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 <span class="keyword">namespace </span>iimg
@@ -79,8 +79,8 @@
 <a name="l00060"></a>00060        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_c_bitmap_document_file_persistence_comp.html#a94561f554f281017117f98bebf0ad9e2">OnComponentCreated</a>();
 <a name="l00061"></a>00061 
 <a name="l00062"></a>00062 <span class="keyword">protected</span>:
-<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap_document_file_persistence_comp.html#af1efeebf27786756a01bac39323aa7dd">SerializeDocumentMetaInfo</a>(<a class="code" href="classiimg_1_1_c_bitmap_document.html" title="Definition of a multi-page bitmap document.">iimg::CBitmapDocument</a>&amp; document, <a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive) <span class="keyword">const</span>;
-<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap_document_file_persistence_comp.html#a023c18f3000a02163201f4d346d80cb9">SerializePageMetaInfo</a>(<a class="code" href="classiimg_1_1_c_bitmap_document.html" title="Definition of a multi-page bitmap document.">iimg::CBitmapDocument</a>&amp; document, <span class="keywordtype">int</span> pageIndex, <a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive) <span class="keyword">const</span>;
+<a name="l00063"></a>00063        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap_document_file_persistence_comp.html#a6ed914ee685f53198bbdf0d9ae9824ee">SerializeDocumentMetaInfo</a>(<a class="code" href="classiimg_1_1_c_multi_page_bitmap_base.html" title="Definition of a multi-page bitmap document.">iimg::CMultiPageBitmapBase</a>&amp; document, <a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive) <span class="keyword">const</span>;
+<a name="l00064"></a>00064        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_bitmap_document_file_persistence_comp.html#a58b396c824edd82b4799159d3276d7c6">SerializePageMetaInfo</a>(<a class="code" href="classiimg_1_1_c_multi_page_bitmap_base.html" title="Definition of a multi-page bitmap document.">iimg::CMultiPageBitmapBase</a>&amp; document, <span class="keywordtype">int</span> pageIndex, <a class="code" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive.">iser::IArchive</a>&amp; archive) <span class="keyword">const</span>;
 <a name="l00065"></a>00065 
 <a name="l00066"></a>00066 <span class="keyword">private</span>:
 <a name="l00067"></a>00067        I_REF(<a class="code" href="classifile_1_1_i_file_persistence.html" title="Provide loading and saving of objects.">ifile::IFilePersistence</a>, m_bitmapPersistenceCompPtr);

@@ -4115,14 +4115,13 @@
   <compound kind="class">
     <name>icam::CMultiLayerBitmapSupplierComp</name>
     <filename>classicam_1_1_c_multi_layer_bitmap_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IMultiLayerBitmap &gt; &gt; &gt;</base>
+    <base>TSupplierCompWrap&lt; istd::TDelPtr&lt; iimg::IMultiBitmapProvider &gt; &gt;</base>
     <base virtualness="virtual">iimg::IMultiBitmapProvider</base>
-    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IMultiLayerBitmap &gt; &gt; &gt;</type>
+      <type>iproc::TSupplierCompWrap&lt; istd::TDelPtr&lt; iimg::IMultiBitmapProvider &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_multi_layer_bitmap_supplier_comp.html</anchorfile>
-      <anchor>ac200d93da37a5480824bf85c32c487ae</anchor>
+      <anchor>a50b1f1d18581d9f06666ba2685d685ff</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -4151,13 +4150,6 @@
       <name>GetBitmapListInfo</name>
       <anchorfile>classicam_1_1_c_multi_layer_bitmap_supplier_comp.html</anchorfile>
       <anchor>a3195cf3d098d6d276e8ebfd270ba1850</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::ICalibration2d *</type>
-      <name>GetCalibration</name>
-      <anchorfile>classicam_1_1_c_multi_layer_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a08809f97338691f16c82e04eb6bfea40</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

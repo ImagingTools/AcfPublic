@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Include/iimg/IMultiLayerBitmap.h Source File</title>
+<title>Include/iimg/IMultiPageBitmapController.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -23,42 +23,42 @@
   </div>
 <div class="header">
   <div class="headertitle">
-<div class="title">Include/iimg/IMultiLayerBitmap.h</div>  </div>
+<div class="title">Include/iimg/IMultiPageBitmapController.h</div>  </div>
 </div>
 <div class="contents">
-<a href="_i_multi_layer_bitmap_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef iimg_IMultiLayerBitmap_included</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iimg_IMultiLayerBitmap_included</span>
+<a href="_i_multi_page_bitmap_controller_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef iimg_IMultiPageBitmapController_included</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define iimg_IMultiPageBitmapController_included</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 <span class="comment">// ACF includes</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_i_multi_bitmap_provider_8h.html">iimg/IMultiBitmapProvider.h</a>&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_i_polymorphic_8h.html">istd/IPolymorphic.h</a>&quot;</span>
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="keyword">namespace </span>iimg
 <a name="l00010"></a>00010 {
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 
-<a name="l00013"></a><a class="code" href="classiimg_1_1_i_multi_layer_bitmap.html">00013</a> <span class="keyword">class </span><a class="code" href="classiimg_1_1_i_multi_layer_bitmap.html">IMultiLayerBitmap</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> iimg::<a class="code" href="classiimg_1_1_i_multi_bitmap_provider.html" title="Supplier allowing to access of multiple produced bitmaps.">IMultiBitmapProvider</a>
+<a name="l00013"></a><a class="code" href="classiimg_1_1_i_multi_page_bitmap_controller.html">00013</a> <span class="keyword">class </span><a class="code" href="classiimg_1_1_i_multi_page_bitmap_controller.html">IMultiPageBitmapController</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> istd::IPolymorphic
 <a name="l00014"></a>00014 {
 <a name="l00015"></a>00015 <span class="keyword">public</span>:
-<a name="l00016"></a>00016        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_i_multi_layer_bitmap.html#a32451c1d5ace029f2da32c24d67fe77e">Reset</a>() = 0;
-<a name="l00017"></a>00017        <span class="keyword">virtual</span> <a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">iimg::IBitmap</a>* <a class="code" href="classiimg_1_1_i_multi_layer_bitmap.html#a570400d284b52d7c5fd4e27180cb2889">InsertBitmap</a>(
+<a name="l00016"></a>00016        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_i_multi_page_bitmap_controller.html#a037c695b040ad977afb17617712c5a44">Reset</a>() = 0;
+<a name="l00017"></a>00017        <span class="keyword">virtual</span> <a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">iimg::IBitmap</a>* <a class="code" href="classiimg_1_1_i_multi_page_bitmap_controller.html#a70492ad8e6ee3d010d9147f5644a7b27">InsertBitmap</a>(
 <a name="l00018"></a>00018                             <a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e" title="Bitmap pixel format description.">iimg::IBitmap::PixelFormat</a> pixelFormat,
 <a name="l00019"></a>00019                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; size) = 0;
-<a name="l00020"></a>00020        <span class="keyword">virtual</span> <a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">iimg::IBitmap</a>* <a class="code" href="classiimg_1_1_i_multi_layer_bitmap.html#a570400d284b52d7c5fd4e27180cb2889">InsertBitmap</a>(
+<a name="l00020"></a>00020        <span class="keyword">virtual</span> <a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">iimg::IBitmap</a>* <a class="code" href="classiimg_1_1_i_multi_page_bitmap_controller.html#a70492ad8e6ee3d010d9147f5644a7b27">InsertBitmap</a>(
 <a name="l00021"></a>00021                             <a class="code" href="classiimg_1_1_i_bitmap.html#a0c4e5f4e61840ce1e0330048cfa5f10e" title="Bitmap pixel format description.">iimg::IBitmap::PixelFormat</a> pixelFormat,
 <a name="l00022"></a>00022                             <span class="keyword">const</span> <a class="code" href="classistd_1_1_c_index2d.html">istd::CIndex2d</a>&amp; size,
 <a name="l00023"></a>00023                             <span class="keywordtype">void</span>* dataPtr,
 <a name="l00024"></a>00024                             <span class="keywordtype">bool</span> releaseFlag,
 <a name="l00025"></a>00025                             <span class="keywordtype">int</span> linesDifference = 0) = 0;
-<a name="l00026"></a>00026        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_i_multi_layer_bitmap.html#a36237e22dedd1e502ccc2ee938b287ba">RemoveBitmap</a>(<span class="keywordtype">int</span> index) = 0;
+<a name="l00026"></a>00026        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_i_multi_page_bitmap_controller.html#a76bbbac43674a45d028a4095ae3ce94e">RemoveBitmap</a>(<span class="keywordtype">int</span> index) = 0;
 <a name="l00027"></a>00027 };
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030 } <span class="comment">// namespace iimg</span>
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032 
-<a name="l00033"></a>00033 <span class="preprocessor">#endif // iimg_IMultiLayerBitmap_included</span>
+<a name="l00033"></a>00033 <span class="preprocessor">#endif // iimg_IMultiPageBitmapController_included</span>
 <a name="l00034"></a>00034 <span class="preprocessor"></span>
 <a name="l00035"></a>00035 
 </pre></div></div>

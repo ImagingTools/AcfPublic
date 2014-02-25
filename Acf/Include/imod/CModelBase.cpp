@@ -24,7 +24,6 @@
 
 
 // Qt includes
-#include <QtCore/QList>
 #include <QtCore/QSet>
 
 
@@ -66,20 +65,31 @@ bool CModelBase::AttachObserver(IObserver* observerPtr)
 	}
 
 	Q_ASSERT_X(!m_observers.contains(observerPtr) || (m_observers[observerPtr] >= AS_DETACHING), "Attaching observer", "Observer is already connected to this model");
-	Q_ASSERT_X(!m_pendingObservers.contains(observerPtr), "Attaching observer", "Pending observer is already connected to this model");
 
-	ObserversMap& observersMap = (m_notifyState == NS_NONE)? m_observers: m_pendingObservers;
-
-	AttachingState& state = observersMap[observerPtr];
+	AttachingState& state = m_observers[observerPtr];
 	state = AS_ATTACHING;
 
 	if (observerPtr->OnAttached(this)){
 		state = AS_ATTACHED;
 
+		// If the model already sent a notification about the begin of the transaction, do it also for the newly connected observer:
+		if (m_notifyState > NS_NONE){
+			observerPtr->BeforeUpdate(this, m_notifyFlags, NULL);
+
+			state = AS_ATTACHED_UPDATING;
+		}
+
+		// If the model already sent a notification about the end of the transaction, do it also for the newly connected observer:
+		if (m_notifyState > NS_UPDATE){
+			observerPtr->AfterUpdate(this, m_notifyFlags, NULL);
+
+			state = AS_ATTACHED;
+		}
+
 		return true;
 	}
 	else{
-		observersMap.remove(observerPtr);
+		m_observers.remove(observerPtr);
 
 		return false;
 	}
@@ -89,7 +99,6 @@ bool CModelBase::AttachObserver(IObserver* observerPtr)
 void CModelBase::DetachObserver(IObserver* observerPtr)
 {
 	Q_ASSERT(observerPtr != NULL);
-	Q_ASSERT_X(m_observers.contains(observerPtr) || m_pendingObservers.contains(observerPtr), "Detaching observer", "Unknown observer");
 
 	// try to remove from current observer list
 	ObserversMap::Iterator findIter = m_observers.find(observerPtr);
@@ -116,16 +125,6 @@ void CModelBase::DetachObserver(IObserver* observerPtr)
 		if (m_notifyState == NS_NONE){
 			m_observers.erase(findIter);
 		}
-
-		return;
-	}
-
-	// try to remove from pending observer list
-	findIter = m_pendingObservers.find(observerPtr);
-	if (findIter != m_pendingObservers.end()){
-		observerPtr->OnDetached(this);
-
-		m_pendingObservers.erase(findIter);
 
 		return;
 	}
@@ -156,15 +155,6 @@ void CModelBase::DetachAllObservers()
 	if (m_notifyState == NS_NONE){
 		m_observers.clear();
 	}
-
-	for (ObserversMap::Iterator iter = m_pendingObservers.begin(); iter != m_pendingObservers.end(); ++iter){
-		IObserver* observerPtr = iter.key();
-		Q_ASSERT(observerPtr != NULL);
-
-		observerPtr->OnDetached(this);
-	}
-
-	m_pendingObservers.clear();
 }
 
 
@@ -175,7 +165,7 @@ bool CModelBase::IsAttached(const IObserver* observerPtr) const
 		return findIter.value() < AS_DETACHING;
 	}
 
-	return m_pendingObservers.contains(const_cast<IObserver*>(observerPtr));
+	return false;
 }
 
 
@@ -183,8 +173,6 @@ bool CModelBase::IsAttached(const IObserver* observerPtr) const
 
 void CModelBase::NotifyBeforeUpdate(int updateFlags, istd::IPolymorphic* updateParamsPtr)
 {
-	Q_ASSERT(m_notifyState == NS_NONE);
-
 	m_notifyState = NS_SENDING_BEFORE;
 	m_notifyFlags = updateFlags;
 
@@ -221,8 +209,8 @@ void CModelBase::NotifyAfterUpdate(int updateFlags, istd::IPolymorphic* updatePa
 
 			observerPtr->AfterUpdate(this, updateFlags, updateParamsPtr);
 		}
-	}
-
+	}	
+	
 	CleanupObserverState();
 
 	m_notifyState = NS_NONE;
@@ -239,11 +227,6 @@ CModelBase::CModelBase(const CModelBase& /*modelBase*/)
 
 void CModelBase::CleanupObserverState()
 {
-	if (!m_pendingObservers.isEmpty()){
-		m_observers.unite(m_pendingObservers);
-		m_pendingObservers.clear();
-	}
-
 	ObserversMap::Iterator iter = m_observers.begin();
 	while (iter != m_observers.end()){
 		AttachingState& state = iter.value();
@@ -259,4 +242,5 @@ void CModelBase::CleanupObserverState()
 
 
 } // namespace imod
+
 

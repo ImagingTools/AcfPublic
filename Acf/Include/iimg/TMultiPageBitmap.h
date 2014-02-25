@@ -20,58 +20,70 @@
 ********************************************************************************/
 
 
-#ifndef iimg_CBitmapDocument_included
-#define iimg_CBitmapDocument_included
+#ifndef iimg_TMultiPageBitmap_included
+#define iimg_TMultiPageBitmap_included
 
 
 // ACF includes
-#include "imod/TModelWrap.h"
-#include "idoc/TMultiPageDocumentWrap.h"
-#include "idoc/CStandardDocumentMetaInfo.h"
-#include "iimg/IMultiBitmapProvider.h"
+#include "iimg/CMultiPageBitmapBase.h"
 #include "iimg/CGeneralBitmap.h"
+#include "iimg/CBitmap.h"
 
 
 namespace iimg
 {
 
 
-/**
-	Definition of a multi-page bitmap document.
-*/
-class CBitmapDocument:
-			public idoc::CMultiPageDocumentBase,
-			virtual public iimg::IMultiBitmapProvider
+template <class BitmapImpl>
+class TMultiPageBitmap: public CMultiPageBitmapBase
 {
 public:
-	typedef idoc::CMultiPageDocumentBase BaseClass;
-	typedef imod::TModelWrap<CGeneralBitmap> Bitmap;
-
-	enum
-	{
-		MIT_CAMERA_MODEL = idoc::IDocumentMetaInfo::MIT_USER + 1
-	};
-
-	// reimplemented (idoc::IMultiPageDocument)
-	virtual istd::IChangeable* InsertPage(
-		const QString& pageTitle = QString(),
-		const QSizeF& pageSize = QSizeF(),
-		int position = -1);
-
-	// reimplemented (iimg::IMultiBitmapProvider)
-	virtual const iprm::IOptionsList* GetBitmapListInfo() const;
-	virtual int GetBitmapsCount() const;
-	virtual const iimg::IBitmap* GetBitmap(int bitmapIndex) const;
+	typedef CMultiPageBitmapBase BaseClass;
+	typedef BitmapImpl BitmapType;
 
 	// reimplemented (istd::IChangeable)
-	virtual bool CopyFrom(const istd::IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS);
 	virtual istd::IChangeable* CloneMe(CompatibilityMode mode = CM_WITHOUT_REFS) const;
+
+protected:
+	// reimplemented (CMultiPageBitmapBase)
+	virtual IBitmap* CreateBitmap() const;
 };
+
+
+// public methods
+
+// reimplemented (istd::IChangeable)
+
+template <class BitmapImpl>
+istd::IChangeable* TMultiPageBitmap<BitmapImpl>::CloneMe(CompatibilityMode mode) const
+{
+	istd::TDelPtr< TMultiPageBitmap<BitmapImpl> > clonedPtr(new TMultiPageBitmap<BitmapImpl>);
+	if (clonedPtr->CopyFrom(*this, mode)){
+		return clonedPtr.PopPtr();
+	}
+
+	return NULL;
+}
+
+
+// protected methods
+
+// reimplemented (CMultiPageBitmapBase)
+
+template <class BitmapImpl>
+IBitmap* TMultiPageBitmap<BitmapImpl>::CreateBitmap() const
+{
+	return new BitmapImpl;
+}
+
+
+typedef TMultiPageBitmap<CGeneralBitmap> CGeneralMultiPageBitmap;
+typedef TMultiPageBitmap<CBitmap> CQImageBasedMultiPageBitmap;
 
 
 } // namespace iimg
 
 
-#endif // !iimg_CBitmapDocument_included
+#endif // !iimg_TMultiPageBitmap_included
 
 

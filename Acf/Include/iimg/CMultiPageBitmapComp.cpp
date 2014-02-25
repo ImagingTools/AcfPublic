@@ -20,38 +20,28 @@
 ********************************************************************************/
 
 
-#ifndef iimg_IMultiLayerBitmap_included
-#define iimg_IMultiLayerBitmap_included
-
-
-// ACF includes
-#include "iimg/IMultiBitmapProvider.h"
+#include "iimg/CMultiPageBitmapComp.h"
 
 
 namespace iimg
 {
 
 
-class IMultiLayerBitmap: virtual public iimg::IMultiBitmapProvider
+// protected methods
+
+// reimplemented (CMultiPageBitmapBase)
+
+IBitmap* CMultiPageBitmapComp::CreateBitmap() const
 {
-public:
-	virtual void Reset() = 0;
-	virtual iimg::IBitmap* InsertBitmap(
-				iimg::IBitmap::PixelFormat pixelFormat,
-				const istd::CIndex2d& size) = 0;
-	virtual iimg::IBitmap* InsertBitmap(
-				iimg::IBitmap::PixelFormat pixelFormat,
-				const istd::CIndex2d& size,
-				void* dataPtr,
-				bool releaseFlag,
-				int linesDifference = 0) = 0;
-	virtual void RemoveBitmap(int index) = 0;
-};
+	if (m_bitmapFactoryCompPtr.IsValid()){
+		return m_bitmapFactoryCompPtr.CreateInstance();
+	}
+
+	return NULL;
+}
+
 
 
 } // namespace iimg
-
-
-#endif // iimg_IMultiLayerBitmap_included
 
 

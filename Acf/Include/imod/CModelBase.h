@@ -117,7 +117,6 @@ private:
 
 	typedef QMap<IObserver*, AttachingState> ObserversMap;
 	ObserversMap m_observers;
-	ObserversMap m_pendingObservers;
 
 	enum NotifyState
 	{
