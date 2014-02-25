@@ -43,8 +43,7 @@ namespace iqtprm
 // public methods
 
 COptionsListEditorGuiComp::COptionsListEditorGuiComp()
-	:m_lastConnectedModelPtr(NULL),
-	m_lastSelectedIndex(-1)
+	:m_lastSelectedIndex(-1)
 {
 }
 
@@ -62,7 +61,7 @@ void COptionsListEditorGuiComp::on_AddButton_clicked()
     QByteArray defaultOptionId = QUuid::createUuid().toString().toLatin1();
 #endif
 
-	iprm::IOptionsManager* objectPtr = GetObjectPtr();
+	iprm::IOptionsManager* objectPtr = dynamic_cast<iprm::IOptionsManager*>(GetObjectPtr());
 	if (objectPtr != NULL){
 		objectPtr->InsertOption(
 					defaultOptionName,
@@ -77,7 +76,7 @@ void COptionsListEditorGuiComp::on_AddButton_clicked()
 
 void COptionsListEditorGuiComp::on_RemoveButton_clicked()
 {
-	iprm::IOptionsManager* objectPtr = GetObjectPtr();
+	iprm::IOptionsManager* objectPtr = dynamic_cast<iprm::IOptionsManager*>(GetObjectPtr());
 	if (objectPtr != NULL){
 		Q_ASSERT(m_lastSelectedIndex < objectPtr->GetOptionsCount());
 
@@ -92,7 +91,7 @@ void COptionsListEditorGuiComp::on_RemoveButton_clicked()
 
 void COptionsListEditorGuiComp::on_UpButton_clicked()
 {
-	iprm::IOptionsManager* objectPtr = GetObjectPtr();
+	iprm::IOptionsManager* objectPtr = dynamic_cast<iprm::IOptionsManager*>(GetObjectPtr());
 	if (objectPtr != NULL){
 		Q_ASSERT(m_lastSelectedIndex < objectPtr->GetOptionsCount());
 
@@ -112,7 +111,7 @@ void COptionsListEditorGuiComp::on_UpButton_clicked()
 
 void COptionsListEditorGuiComp::on_DownButton_clicked()
 {
-	iprm::IOptionsManager* objectPtr = GetObjectPtr();
+	iprm::IOptionsManager* objectPtr = dynamic_cast<iprm::IOptionsManager*>(GetObjectPtr());
 	if (objectPtr != NULL){
 		Q_ASSERT(m_lastSelectedIndex < objectPtr->GetOptionsCount());
 
@@ -132,14 +131,20 @@ void COptionsListEditorGuiComp::on_DownButton_clicked()
 
 void COptionsListEditorGuiComp::on_ParamsTree_itemSelectionChanged()
 {
-	m_lastSelectedIndex = GetSelectedIndex();
+	if (!IsUpdateBlocked()){
+		UpdateBlocker updateBlocker(this);
 
-	iprm::ISelectionParam* selectionPtr = dynamic_cast<iprm::ISelectionParam*>(GetObjectPtr());
-	if (selectionPtr != NULL){
-		selectionPtr->SetSelectedOptionIndex(m_lastSelectedIndex);
+		m_lastSelectedIndex = GetSelectedIndex();
+
+		iprm::ISelectionParam* selectionPtr = dynamic_cast<iprm::ISelectionParam*>(GetObjectPtr());
+		if (selectionPtr != NULL){
+			istd::CChangeNotifier changePtr(selectionPtr, iprm::ISelectionParam::CF_SELECTION_CHANGED);
+
+			selectionPtr->SetSelectedOptionIndex(m_lastSelectedIndex);
+		}
+
+		UpdateActions();
 	}
-
-	UpdateActions();
 }
 
 
@@ -162,7 +167,7 @@ void COptionsListEditorGuiComp::on_ParamsTree_itemChanged(QTreeWidgetItem* item,
 
 	UpdateBlocker updateBlocker(this);
 
-	iprm::IOptionsManager* objectPtr = GetObjectPtr();
+	iprm::IOptionsManager* objectPtr = dynamic_cast<iprm::IOptionsManager*>(GetObjectPtr());
 	if (objectPtr != NULL){
 		int setIndex = item->data(0, Qt::UserRole).toInt();
 
@@ -184,7 +189,7 @@ void COptionsListEditorGuiComp::UpdateActions()
 
 	EnsureSelectedIndexUpdated();
 
-	iprm::IOptionsManager* objectPtr = GetObjectPtr();
+	iprm::IOptionsManager* objectPtr = dynamic_cast<iprm::IOptionsManager*>(GetObjectPtr());
 	if (objectPtr == NULL){
 		AddButton->setEnabled(false);
 		RemoveButton->setEnabled(false);
@@ -221,27 +226,37 @@ void COptionsListEditorGuiComp::UpdateTree()
 		ParamsTree->setHeaderHidden(false);
 	}
 
-	iprm::IOptionsManager* objectPtr = GetObjectPtr();
+	iprm::IOptionsList* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
 		int setsCount = objectPtr->GetOptionsCount();
 
-		for (int paramSetIndex = 0; paramSetIndex < setsCount; ++paramSetIndex){
+		for (int optionIndex = 0; optionIndex < setsCount; ++optionIndex){
 
-			Qt::ItemFlags itemFlags = Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsEditable;
+			Qt::ItemFlags itemFlags = Qt::ItemIsEnabled | Qt::ItemIsSelectable;
 
-			QString name = objectPtr->GetOptionName(paramSetIndex);
-			QString description = objectPtr->GetOptionDescription(paramSetIndex);
-			QTreeWidgetItem* paramsSetItemPtr = new QTreeWidgetItem();
-			paramsSetItemPtr->setText(0, name);
-			if (*m_showDescriptionAttrPtr){
-				paramsSetItemPtr->setText(1, description);
+			iprm::IOptionsManager* managerPtr = dynamic_cast<iprm::IOptionsManager*>(objectPtr);
+			if (managerPtr != NULL){
+				int operationFlags = managerPtr->GetOptionOperationFlags(optionIndex);
+				if (operationFlags & iprm::IOptionsManager::OOF_SUPPORT_RENAME){
+					itemFlags |= Qt::ItemIsEditable;
+				}
 			}
-			paramsSetItemPtr->setData(0, Qt::UserRole, paramSetIndex);
-			paramsSetItemPtr->setFlags(itemFlags);
 
-			ParamsTree->addTopLevelItem(paramsSetItemPtr);
+			QString name = objectPtr->GetOptionName(optionIndex);
+			QString description = objectPtr->GetOptionDescription(optionIndex);
+			QTreeWidgetItem* optionItemPtr = new QTreeWidgetItem();
+			optionItemPtr->setText(0, name);
 
-			paramsSetItemPtr->setSelected(paramSetIndex == lastSelectedIndex);	
+			if (*m_showDescriptionAttrPtr){
+				optionItemPtr->setText(1, description);
+			}
+
+			optionItemPtr->setData(0, Qt::UserRole, optionIndex);
+			optionItemPtr->setFlags(itemFlags);
+
+			ParamsTree->addTopLevelItem(optionItemPtr);
+
+			optionItemPtr->setSelected(optionIndex == lastSelectedIndex);	
 		}
 	}
 }
@@ -266,19 +281,6 @@ int COptionsListEditorGuiComp::GetSelectedIndex() const
 }
 
 
-void COptionsListEditorGuiComp::EnsureParamsGuiDetached()
-{
-	if ((m_lastObserverPtr != NULL) && (m_lastConnectedModelPtr != NULL)){
-		if (m_lastObserverPtr->IsModelAttached(m_lastConnectedModelPtr)){
-			m_lastConnectedModelPtr->DetachObserver(m_lastObserverPtr);
-		}
-	}
-
-	m_lastConnectedModelPtr = NULL;
-	m_lastObserverPtr = NULL;
-}
-
-
 void COptionsListEditorGuiComp::EnsureSelectedIndexUpdated() const
 {
 	iprm::ISelectionParam* selectionPtr = dynamic_cast<iprm::ISelectionParam*>(GetObjectPtr());
@@ -296,15 +298,15 @@ void COptionsListEditorGuiComp::OnGuiModelAttached()
 {
 	BaseClass::OnGuiModelAttached();
 
-	iprm::IOptionsManager* objectPtr = GetObjectPtr();
+	iprm::IOptionsManager* objectPtr = dynamic_cast<iprm::IOptionsManager*>(GetObjectPtr());
 	if (objectPtr != NULL){
 		m_startVariableMenus.clear();
 	}
 
-	AddRemoveButtonsFrame->setVisible(*m_allowAddRemoveAttrPtr);
-	UpDownButtonsFrame->setVisible(*m_allowUpDownAttrPtr);
+	AddRemoveButtonsFrame->setVisible((objectPtr != NULL) && *m_allowAddRemoveAttrPtr);
+	UpDownButtonsFrame->setVisible((objectPtr != NULL) && *m_allowUpDownAttrPtr);
 
-	ButtonsFrame->setVisible(*m_allowAddRemoveAttrPtr || *m_allowUpDownAttrPtr);
+	ButtonsFrame->setVisible(AddRemoveButtonsFrame->isVisible() || UpDownButtonsFrame->isVisible());
 
 	ParamsTree->setVisible(true);
 }
@@ -312,12 +314,9 @@ void COptionsListEditorGuiComp::OnGuiModelAttached()
 
 void COptionsListEditorGuiComp::OnGuiModelDetached()
 {
-	EnsureParamsGuiDetached();
-
 	ParamsTree->setVisible(false);
 
-	AddRemoveButtonsFrame->setVisible(false);
-	UpDownButtonsFrame->setVisible(false);
+	ButtonsFrame->setVisible(false);
 
 	BaseClass::OnGuiModelDetached();
 }

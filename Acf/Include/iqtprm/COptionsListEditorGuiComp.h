@@ -46,14 +46,14 @@ namespace iqtprm
 
 class COptionsListEditorGuiComp: public iqtgui::TDesignerGuiObserverCompBase<
 			Ui::COptionsListEditorGuiComp,
-			iprm::IOptionsManager>
+			iprm::IOptionsList>
 {
 	Q_OBJECT
 
 public:
 	typedef iqtgui::TDesignerGuiObserverCompBase<
 				Ui::COptionsListEditorGuiComp,
-				iprm::IOptionsManager> BaseClass;
+				iprm::IOptionsList> BaseClass;
 
 	I_BEGIN_COMPONENT(COptionsListEditorGuiComp);
 		I_ASSIGN(m_allowAddRemoveAttrPtr, "AllowAddRemove", "If it is false, 'Add' and 'Remove' buttons will be always hidden", true, true);
@@ -78,7 +78,6 @@ protected:
 	void UpdateActions();
 	void UpdateTree();
 	int GetSelectedIndex() const;
-	void EnsureParamsGuiDetached();
 	void EnsureSelectedIndexUpdated() const;
 	QByteArray GetSelectedParamsSetTypeId() const;
 
@@ -97,8 +96,6 @@ private:
 	I_ATTR(bool, m_showListHeaderAttrPtr);
 	I_MULTIATTR(QString, m_headerListAttrPtr);
 
-	imod::IModel* m_lastConnectedModelPtr;
-	imod::IObserver* m_lastObserverPtr;
 	QMenu m_startVariableMenus;
 
 	mutable int m_lastSelectedIndex;

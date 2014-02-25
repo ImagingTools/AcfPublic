@@ -42933,12 +42933,12 @@
   <compound kind="class">
     <name>iqtprm::COptionsListEditorGuiComp</name>
     <filename>classiqtprm_1_1_c_options_list_editor_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::COptionsListEditorGuiComp, iprm::IOptionsManager &gt;</base>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::COptionsListEditorGuiComp, iprm::IOptionsList &gt;</base>
     <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::COptionsListEditorGuiComp, iprm::IOptionsManager &gt;</type>
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::COptionsListEditorGuiComp, iprm::IOptionsList &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>a1860095e2dab50fa0ecf52a2ff57983d</anchor>
+      <anchor>a27acfeb18c4d1c113279e09e215e2cc7</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -43017,13 +43017,6 @@
       <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
       <anchor>a2725c25a2a49b6fb8b7dd826c7e9954f</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>EnsureParamsGuiDetached</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>a83122c29a9d44ea11ce920ba978150ec</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
