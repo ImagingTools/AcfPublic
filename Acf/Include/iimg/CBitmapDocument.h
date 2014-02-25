@@ -45,7 +45,7 @@ class CBitmapDocument:
 {
 public:
 	typedef idoc::CMultiPageDocumentBase BaseClass;
-	typedef imod::TModelWrap<CBitmap> Bitmap;
+	typedef imod::TModelWrap<CGeneralBitmap> Bitmap;
 
 	enum
 	{
