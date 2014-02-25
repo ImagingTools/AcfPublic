@@ -29,7 +29,7 @@
 #include "idoc/TMultiPageDocumentWrap.h"
 #include "idoc/CStandardDocumentMetaInfo.h"
 #include "iimg/IMultiBitmapProvider.h"
-#include "iimg/CBitmap.h"
+#include "iimg/CGeneralBitmap.h"
 
 
 namespace iimg
