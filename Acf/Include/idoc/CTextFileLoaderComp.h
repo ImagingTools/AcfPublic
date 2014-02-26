@@ -24,8 +24,8 @@
 #define idoc_CTextFileLoaderComp_included
 
 
+// ACF includes
 #include "ifile/IFilePersistence.h"
-
 #include "icomp/CComponentBase.h"
 
 

@@ -1978,7 +1978,6 @@
     <name>IHelpFileProvider.h</name>
     <path>C:/Temp/Acf/Include/idoc/</path>
     <filename>_i_help_file_provider_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <includes id="_i_help_info_provider_8h" name="IHelpInfoProvider.h" local="yes" imported="no">idoc/IHelpInfoProvider.h</includes>
     <class kind="class">idoc::IHelpFileProvider</class>
     <namespace>idoc</namespace>
@@ -2006,6 +2005,14 @@
     <filename>_i_multi_page_document_8h</filename>
     <includes id="_i_changeable_8h" name="IChangeable.h" local="no" imported="no">istd/IChangeable.h</includes>
     <class kind="class">idoc::IMultiPageDocument</class>
+    <namespace>idoc</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IMultiPageDocumentProvider.h</name>
+    <path>C:/Temp/Acf/Include/idoc/</path>
+    <filename>_i_multi_page_document_provider_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <class kind="class">idoc::IMultiPageDocumentProvider</class>
     <namespace>idoc</namespace>
   </compound>
   <compound kind="file">
@@ -19835,6 +19842,7 @@
     <class kind="class">idoc::IHelpInfoProvider</class>
     <class kind="class">idoc::IHelpViewer</class>
     <class kind="class">idoc::IMultiPageDocument</class>
+    <class kind="class">idoc::IMultiPageDocumentProvider</class>
     <class kind="class">idoc::ITextDocument</class>
     <class kind="class">idoc::IUndoManager</class>
     <class kind="class">idoc::TMultiPageDocumentWrap</class>
@@ -21772,6 +21780,18 @@
       <name>GetDocumentMetaInfo</name>
       <anchorfile>classidoc_1_1_i_multi_page_document.html</anchorfile>
       <anchor>a2cd96ca541f00544904a5b9bc987c39d</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>idoc::IMultiPageDocumentProvider</name>
+    <filename>classidoc_1_1_i_multi_page_document_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const IMultiPageDocument *</type>
+      <name>GetDocument</name>
+      <anchorfile>classidoc_1_1_i_multi_page_document_provider.html</anchorfile>
+      <anchor>a793ee58582dac7c1edf412d2d110d0c8</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>

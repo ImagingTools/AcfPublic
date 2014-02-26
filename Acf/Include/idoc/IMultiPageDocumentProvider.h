@@ -20,37 +20,31 @@
 ********************************************************************************/
 
 
-#ifndef idoc_IHelpFileProvider_included
-#define idoc_IHelpFileProvider_included
+#ifndef idoc_IMultiPageDocumentProvider_included
+#define idoc_IMultiPageDocumentProvider_included
 
-
-// Qt includes
-#include <QtCore/QString>
 
 // ACF includes
-#include "idoc/IHelpInfoProvider.h"
+#include "istd/IChangeable.h"
 
 
 namespace idoc
 {
 
 
-/**
-	Allow to show help document to specified object or text.
-*/
-class IHelpFileProvider: virtual public IHelpInfoProvider
+class IMultiPageDocument;
+
+
+class IMultiPageDocumentProvider: virtual public istd::IChangeable
 {
 public:
-	/**
-		Get access to help file path for specified help information.
-	*/
-	virtual QString GetHelpFilePath(const QString& contextText, const istd::IPolymorphic* contextObjectPtr) const = 0;
+	virtual const IMultiPageDocument* GetDocument() const = 0;
 };
 
 
 } // namespace idoc
 
 
-#endif // !idoc_IHelpFileProvider_included
+#endif // !idoc_IMultiPageDocumentProvider_included
 
 

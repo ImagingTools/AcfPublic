@@ -24,10 +24,9 @@
 #define idoc_CSelectedDocModelBinderComp_included
 
 
+// ACF includes
 #include "imod/TSingleModelObserverBase.h"
-
 #include "icomp/CComponentBase.h"
-
 #include "idoc/IDocumentManager.h"
 
 

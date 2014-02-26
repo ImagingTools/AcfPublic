@@ -33,7 +33,6 @@
 
 // ACF includes
 #include "istd/IChangeable.h"
-
 #include "idoc/IUndoManager.h"
 #include "idoc/IDocumentTypesInfo.h"
 

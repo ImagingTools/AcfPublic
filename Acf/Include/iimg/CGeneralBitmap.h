@@ -24,8 +24,8 @@
 #define iimg_CGeneralBitmap_included
 
 
+// ACF includes
 #include "istd/TOptDelPtr.h"
-
 #include "iimg/CBitmapBase.h"
 
 
