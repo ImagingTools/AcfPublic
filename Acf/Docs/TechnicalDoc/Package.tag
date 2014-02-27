@@ -38823,6 +38823,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InitializeApplication</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>a5ee29b876e104b3cda86f6b6a7faf209</anchor>
+      <arglist>(int argc, char **argv)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>Execute</name>
       <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>

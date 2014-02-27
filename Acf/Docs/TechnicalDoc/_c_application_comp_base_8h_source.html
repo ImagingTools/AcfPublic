@@ -59,47 +59,45 @@
 <a name="l00036"></a>00036               I_ASSIGN(m_styleSheetAttrPtr, <span class="stringliteral">&quot;StyleSheet&quot;</span>, <span class="stringliteral">&quot;Style sheet for the GUI&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;&quot;</span>);
 <a name="l00037"></a>00037               I_ASSIGN(m_iconPathAttrPtr, <span class="stringliteral">&quot;IconPath&quot;</span>, <span class="stringliteral">&quot;file path for the application icon&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;:/Icons/AcfLogo.svg&quot;</span>);
 <a name="l00038"></a>00038               I_ASSIGN(m_titleFormatAttrPtr, <span class="stringliteral">&quot;TitleFormat&quot;</span>, <span class="stringliteral">&quot;Describe format of title bar, tags:\n\t$(CompanyName) - name of company\n\t$(ProductName) - product name\n\t$(AppName) - application name\n\t$(AppSubName) - application sub name\n\t$(AppType) - type of application\n\t$(Version) - main application version&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;$(AppName)&quot;</span>);
-<a name="l00039"></a>00039               I_ASSIGN(m_useMenuIconsOnMacAttrPtr, <span class="stringliteral">&quot;UseMenuIconsOnMac&quot;</span>, <span class="stringliteral">&quot;If enabled, the menu icons will be used in the application&#39;s menu bar on Mac OS&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);
-<a name="l00040"></a>00040        I_END_COMPONENT;
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042        <span class="comment">// reimplemented (ibase::IApplication)</span>
-<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_application_comp_base.html#a84c4c944544a25c77fa4fa16c13599f1" title="Initialize the application object.">InitializeApplication</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv);
-<a name="l00044"></a>00044        <span class="keyword">virtual</span> QStringList <a class="code" href="classiqtgui_1_1_c_application_comp_base.html#ab31d3ca22aec3065ea2f663343fac4fa" title="Get the command line arguments of this application.">GetApplicationArguments</a>() <span class="keyword">const</span>;
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046 <span class="keyword">protected</span>:
-<a name="l00047"></a>00047        QApplication* <a class="code" href="classiqtgui_1_1_c_application_comp_base.html#adecd091af7d03682c9996e64b29f301c">GetQtApplication</a>() <span class="keyword">const</span>;
-<a name="l00048"></a>00048        <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_application_comp_base.html#acb809bb740a3221a7f72c78f435816ae">TryShowSplashScreen</a>();
-<a name="l00049"></a>00049        <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_application_comp_base.html#acfcaf67ecd1e90711f3a868bad6de0f9">HideSplashScreen</a>();
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051        <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_application_comp_base.html#a44957c1cf1d3b71e1606b3d3e23539df">InitializeComponentApplication</a>();
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00054"></a>00054        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_application_comp_base.html#ab236d74fd25f21bd155906efb25b80d7">OnComponentCreated</a>();
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056 <span class="keyword">private</span>:
-<a name="l00057"></a>00057        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">IGuiObject</a>, m_splashScreenCompPtr);
-<a name="l00058"></a>00058        I_REF(<a class="code" href="classibase_1_1_i_application_info.html" title="This interface provides some information about the application.">ibase::IApplicationInfo</a>, m_applicationInfoCompPtr);
-<a name="l00059"></a>00059        I_REF(<a class="code" href="classiqt_1_1_i_translation_manager.html">iqt::ITranslationManager</a>, m_translationManagerCompPtr);
-<a name="l00060"></a>00060        I_ATTR(<span class="keywordtype">double</span>, m_splashTimeAttrPtr);
-<a name="l00061"></a>00061        I_ATTR(QString, m_styleSheetAttrPtr);
-<a name="l00062"></a>00062        I_ATTR(QString, m_iconPathAttrPtr);
-<a name="l00063"></a>00063        I_ATTR(QString, m_titleFormatAttrPtr);
-<a name="l00064"></a>00064        I_ATTR(<span class="keywordtype">bool</span>, m_useMenuIconsOnMacAttrPtr);
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066        <span class="keywordtype">bool</span> m_useSplashScreen;
-<a name="l00067"></a>00067        <a class="code" href="classistd_1_1_c_general_time_stamp.html" title="A general time stamp implementation.">istd::CGeneralTimeStamp</a> m_splashScreenTimer;
+<a name="l00039"></a>00039        I_END_COMPONENT;
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041        <span class="comment">// reimplemented (ibase::IApplication)</span>
+<a name="l00042"></a>00042        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_application_comp_base.html#a84c4c944544a25c77fa4fa16c13599f1" title="Initialize the application object.">InitializeApplication</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv);
+<a name="l00043"></a>00043        <span class="keyword">virtual</span> QStringList <a class="code" href="classiqtgui_1_1_c_application_comp_base.html#ab31d3ca22aec3065ea2f663343fac4fa" title="Get the command line arguments of this application.">GetApplicationArguments</a>() <span class="keyword">const</span>;
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 <span class="keyword">protected</span>:
+<a name="l00046"></a>00046        QApplication* <a class="code" href="classiqtgui_1_1_c_application_comp_base.html#adecd091af7d03682c9996e64b29f301c">GetQtApplication</a>() <span class="keyword">const</span>;
+<a name="l00047"></a>00047        <span class="keywordtype">bool</span> <a class="code" href="classiqtgui_1_1_c_application_comp_base.html#acb809bb740a3221a7f72c78f435816ae">TryShowSplashScreen</a>();
+<a name="l00048"></a>00048        <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_application_comp_base.html#acfcaf67ecd1e90711f3a868bad6de0f9">HideSplashScreen</a>();
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050        <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_application_comp_base.html#a44957c1cf1d3b71e1606b3d3e23539df">InitializeComponentApplication</a>();
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00053"></a>00053        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_application_comp_base.html#ab236d74fd25f21bd155906efb25b80d7">OnComponentCreated</a>();
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 <span class="keyword">private</span>:
+<a name="l00056"></a>00056        I_REF(<a class="code" href="classiqtgui_1_1_i_gui_object.html" title="Common interface for GUI objects using in component context.">IGuiObject</a>, m_splashScreenCompPtr);
+<a name="l00057"></a>00057        I_REF(<a class="code" href="classibase_1_1_i_application_info.html" title="This interface provides some information about the application.">ibase::IApplicationInfo</a>, m_applicationInfoCompPtr);
+<a name="l00058"></a>00058        I_REF(<a class="code" href="classiqt_1_1_i_translation_manager.html">iqt::ITranslationManager</a>, m_translationManagerCompPtr);
+<a name="l00059"></a>00059        I_ATTR(<span class="keywordtype">double</span>, m_splashTimeAttrPtr);
+<a name="l00060"></a>00060        I_ATTR(QString, m_styleSheetAttrPtr);
+<a name="l00061"></a>00061        I_ATTR(QString, m_iconPathAttrPtr);
+<a name="l00062"></a>00062        I_ATTR(QString, m_titleFormatAttrPtr);
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064        <span class="keywordtype">bool</span> m_useSplashScreen;
+<a name="l00065"></a>00065        <a class="code" href="classistd_1_1_c_general_time_stamp.html" title="A general time stamp implementation.">istd::CGeneralTimeStamp</a> m_splashScreenTimer;
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;QApplication&gt;</a> m_applicationPtr;
 <a name="l00068"></a>00068 
-<a name="l00069"></a>00069        <a class="code" href="classistd_1_1_t_del_ptr.html">istd::TDelPtr&lt;QApplication&gt;</a> m_applicationPtr;
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071        QStringList m_applicationArguments;
-<a name="l00072"></a>00072 };
-<a name="l00073"></a>00073 
+<a name="l00069"></a>00069        QStringList m_applicationArguments;
+<a name="l00070"></a>00070 };
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073 } <span class="comment">// namespace iqtgui</span>
 <a name="l00074"></a>00074 
-<a name="l00075"></a>00075 } <span class="comment">// namespace iqtgui</span>
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077 
-<a name="l00078"></a>00078 <span class="preprocessor">#endif // iqtgui_CApplicationCompBase_included</span>
-<a name="l00079"></a>00079 <span class="preprocessor"></span>
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076 <span class="preprocessor">#endif // iqtgui_CApplicationCompBase_included</span>
+<a name="l00077"></a>00077 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
