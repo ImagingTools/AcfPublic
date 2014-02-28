@@ -34,7 +34,6 @@ namespace ifileproc
 // public methods
 
 CFileConvertOverProcessorComp::CFileConvertOverProcessorComp()
-:	m_progressSessionId(0)
 {
 }
 

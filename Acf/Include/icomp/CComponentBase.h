@@ -173,6 +173,7 @@ inline bool CComponentBase::IsComponentActive() const
 #define I_REGISTER_INTERFACE(InterfaceType)\
 	{\
 		static icomp::TInterfaceRegistrator<InterfaceType> staticRegistrator(staticInfo);\
+		Q_UNUSED(staticRegistrator);\
 	}
 
 /**
@@ -189,9 +190,10 @@ inline bool CComponentBase::IsComponentActive() const
 */
 #define I_REGISTER_SUBELEMENT_INTERFACE(ElementName, InterfaceType, extractorFunction)\
 	{\
-		static icomp::TSubelementStaticInfo<CurrentComponentType>::Registrator<InterfaceType> registrator(\
+		static icomp::TSubelementStaticInfo<CurrentComponentType>::Registrator<InterfaceType> staticRegistrator(\
 					subelementInfo_##ElementName,\
 					extractorFunction);\
+		Q_UNUSED(staticRegistrator);\
 	}
 
 /**
@@ -202,9 +204,10 @@ inline bool CComponentBase::IsComponentActive() const
 */
 #define I_REGISTER_SUBELEMENT_INTERFACE_T(ElementName, InterfaceType, extractorFunction)\
 	{\
-		static icomp::TSubelementStaticInfo<CurrentComponentType>::Registrator<InterfaceType> registrator(\
+		static icomp::TSubelementStaticInfo<CurrentComponentType>::Registrator<InterfaceType> staticRegistrator(\
 					subelementInfo_##ElementName,\
 					extractorFunction<InterfaceType>);\
+		Q_UNUSED(staticRegistrator);\
 	}
 
 /**
@@ -441,7 +444,6 @@ inline bool CComponentBase::IsComponentActive() const
 	Used to assign value for overloaded attributes or references.
 */
 #define I_ASSIGN_TO(member, baseAttribute, isObligatory)\
-	static icomp::CRelatedInfoRegistrator member##_Info(baseAttribute##_Info, icomp::IComponentStaticInfo::MGI_INTERFACES, istd::CClassInfo::GetInfo<member##_Type::InterfaceType>().GetName(), isObligatory? member##_AttrType::DAF_OBLIGATORY: member##_AttrType::DAF_OPTIONAL);\
 	if (componentPtr != NULL){\
 		componentPtr->member.Init(componentPtr, baseAttribute##_Info);\
 	}
@@ -450,7 +452,6 @@ inline bool CComponentBase::IsComponentActive() const
 	Used to assign value for overloaded attributes or references.
 */
 #define I_TASSIGN_TO(member, baseAttribute, isObligatory)\
-	static icomp::CRelatedInfoRegistrator member##_Info(baseAttribute##_Info, icomp::IComponentStaticInfo::MGI_INTERFACES, istd::CClassInfo::GetInfo<typename member##_Type::InterfaceType>().GetName(), isObligatory? member##_AttrType::DAF_OBLIGATORY: member##_AttrType::DAF_OPTIONAL);\
 	if (componentPtr != NULL){\
 		componentPtr->member.Init(componentPtr, baseAttribute##_Info);\
 	}

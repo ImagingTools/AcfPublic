@@ -78,37 +78,32 @@
 <a name="l00055"></a>00055        <span class="keyword">public</span>:
 <a name="l00056"></a>00056               <span class="keyword">typedef</span> <a class="codeRef" doxygen="Package.tag:../../../Acf/Docs/TechnicalDoc" href="../../../Acf/Docs/TechnicalDoc/classiqtgui_1_1_c_item_delegate.html">iqtgui::CItemDelegate</a> <a class="code" href="classiprop_1_1_c_properties_editor_comp.html#a9a521c9008e88de86ca3c12df139a799">BaseClass</a>;
 <a name="l00057"></a>00057 
-<a name="l00058"></a>00058               EditorDelegate(<a class="code" href="classiprop_1_1_c_properties_editor_comp.html" title="Tree view based property editor component.">CPropertiesEditorComp</a>&amp; parent);
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060               <span class="comment">// reimplemented (QItemDelegate)</span>
-<a name="l00061"></a>00061               <span class="keyword">virtual</span> QWidget* createEditor(QWidget* parent, <span class="keyword">const</span> QStyleOptionViewItem&amp; <span class="comment">/*option*/</span>, <span class="keyword">const</span> QModelIndex&amp; index) <span class="keyword">const</span>;
-<a name="l00062"></a>00062               <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEditorData(QWidget* editor, <span class="keyword">const</span> QModelIndex&amp; index) <span class="keyword">const</span>;
-<a name="l00063"></a>00063               <span class="keyword">virtual</span> <span class="keywordtype">void</span> setModelData(QWidget* editor,QAbstractItemModel* model, <span class="keyword">const</span> QModelIndex&amp; index) <span class="keyword">const</span>;
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065        <span class="keyword">private</span>:
-<a name="l00066"></a>00066               <a class="code" href="classiprop_1_1_c_properties_editor_comp.html" title="Tree view based property editor component.">CPropertiesEditorComp</a>&amp; m_parent;
-<a name="l00067"></a>00067        };
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069 <span class="keyword">private</span>:
-<a name="l00070"></a>00070        <span class="keywordtype">void</span> UpdatePropertyEditor(
-<a name="l00071"></a>00071                             <span class="keyword">const</span> IProperty&amp; objectProperty,
-<a name="l00072"></a>00072                             <span class="keyword">const</span> QString&amp; propertyId,
-<a name="l00073"></a>00073                             <span class="keyword">const</span> QString&amp; propertyDescription);
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075        QString GetPropertyId(<span class="keyword">const</span> QTreeWidgetItem&amp; propertyItem) <span class="keyword">const</span>;
+<a name="l00058"></a>00058               <span class="comment">// reimplemented (QItemDelegate)</span>
+<a name="l00059"></a>00059               <span class="keyword">virtual</span> QWidget* createEditor(QWidget* parent, <span class="keyword">const</span> QStyleOptionViewItem&amp; <span class="comment">/*option*/</span>, <span class="keyword">const</span> QModelIndex&amp; index) <span class="keyword">const</span>;
+<a name="l00060"></a>00060               <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEditorData(QWidget* editor, <span class="keyword">const</span> QModelIndex&amp; index) <span class="keyword">const</span>;
+<a name="l00061"></a>00061               <span class="keyword">virtual</span> <span class="keywordtype">void</span> setModelData(QWidget* editor,QAbstractItemModel* model, <span class="keyword">const</span> QModelIndex&amp; index) <span class="keyword">const</span>;
+<a name="l00062"></a>00062        };
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 <span class="keyword">private</span>:
+<a name="l00065"></a>00065        <span class="keywordtype">void</span> UpdatePropertyEditor(
+<a name="l00066"></a>00066                             <span class="keyword">const</span> IProperty&amp; objectProperty,
+<a name="l00067"></a>00067                             <span class="keyword">const</span> QString&amp; propertyId,
+<a name="l00068"></a>00068                             <span class="keyword">const</span> QString&amp; propertyDescription);
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070        QString GetPropertyId(<span class="keyword">const</span> QTreeWidgetItem&amp; propertyItem) <span class="keyword">const</span>;
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072        QTreeWidgetItem* FindPropertyItem(<span class="keyword">const</span> QString&amp; propertyId) <span class="keyword">const</span>;
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074        <span class="keywordtype">void</span> SetDataToEditor(<span class="keyword">const</span> IProperty&amp; objectProperty, QTreeWidgetItem&amp; propertyItem);
+<a name="l00075"></a>00075 };
 <a name="l00076"></a>00076 
-<a name="l00077"></a>00077        QTreeWidgetItem* FindPropertyItem(<span class="keyword">const</span> QString&amp; propertyId) <span class="keyword">const</span>;
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079        <span class="keywordtype">void</span> SetDataToEditor(<span class="keyword">const</span> IProperty&amp; objectProperty, QTreeWidgetItem&amp; propertyItem);
-<a name="l00080"></a>00080 };
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083 } <span class="comment">// namespace iqtgui</span>
-<a name="l00084"></a>00084 
-<a name="l00085"></a>00085 
-<a name="l00086"></a>00086 <span class="preprocessor">#endif // !iprop_CPropertiesEditorComp_included</span>
-<a name="l00087"></a>00087 <span class="preprocessor"></span>
-<a name="l00088"></a>00088 
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078 } <span class="comment">// namespace iqtgui</span>
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 <span class="preprocessor">#endif // !iprop_CPropertiesEditorComp_included</span>
+<a name="l00082"></a>00082 <span class="preprocessor"></span>
+<a name="l00083"></a>00083 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
