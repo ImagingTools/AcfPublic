@@ -35,11 +35,9 @@
 #if QT_VERSION >= 0x050000
 #include <QtWidgets/QMessageBox>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QStatusBar>
 #else
 #include <QtGui/QMessageBox>
 #include <QtGui/QApplication>
-#include <QtGui/QStatusBar>
 #endif
 
 // ACF includes
@@ -64,7 +62,6 @@ CMainWindowGuiComp::CMainWindowGuiComp()
 	m_saveCommand("", 33, ibase::ICommand::CF_GLOBAL_MENU | ibase::ICommand::CF_TOOLBAR),
 	m_undoCommand("", 100, ibase::ICommand::CF_GLOBAL_MENU | ibase::ICommand::CF_TOOLBAR),
 	m_redoCommand("", 100, ibase::ICommand::CF_GLOBAL_MENU | ibase::ICommand::CF_TOOLBAR),
-	m_fullScreenCommand("", 100, ibase::ICommand::CF_GLOBAL_MENU | ibase::ICommand::CF_ONOFF),
 	m_copyPathToClipboardCommand("", 100, ibase::ICommand::CF_GLOBAL_MENU),
 	m_openDocumentFolderCommand("", 100, ibase::ICommand::CF_GLOBAL_MENU)
 {
@@ -75,7 +72,6 @@ CMainWindowGuiComp::CMainWindowGuiComp()
 	m_saveCommand.setShortcut(Qt::CTRL + Qt::Key_S);
 	m_undoCommand.setShortcut(Qt::CTRL + Qt::Key_Z);
 	m_redoCommand.setShortcut(Qt::CTRL + Qt::SHIFT + Qt::Key_Z);
-	m_fullScreenCommand.setShortcut(Qt::Key_F11);
 
 	connect(&m_newCommand, SIGNAL(triggered()), this, SLOT(OnNew()));
 	connect(&m_openCommand, SIGNAL(triggered()), this, SLOT(OnOpen()));
@@ -84,7 +80,6 @@ CMainWindowGuiComp::CMainWindowGuiComp()
 	connect(&m_quitCommand, SIGNAL(triggered()), this, SLOT(OnQuit()));
 	connect(&m_undoCommand, SIGNAL(triggered()), this, SLOT(OnUndo()));
 	connect(&m_redoCommand, SIGNAL(triggered()), this, SLOT(OnRedo()));
-	connect(&m_fullScreenCommand, SIGNAL(triggered()), this, SLOT(OnFullScreen()));
 	connect(&m_copyPathToClipboardCommand, SIGNAL(triggered()), this, SLOT(OnCopyPathToClipboard()));
 	connect(&m_openDocumentFolderCommand, SIGNAL(triggered()), this, SLOT(OnOpenDocumentFolder()));
 }
@@ -377,7 +372,6 @@ void CMainWindowGuiComp::UpdateMainWindowComponentsVisibility()
 					QByteArray associatedTypeId = mainWindowComponentPtr->GetAssociatedDocumentTypeId();
 
 					bool hideComponent = !associatedTypeId.isEmpty() && (associatedTypeId != activeDocumentTypeId);
-
 					if (!hideComponent){
 						hideComponent = !m_mainComponentVisibilityMap[mainWindowComponentPtr];
 					}
@@ -593,14 +587,6 @@ void CMainWindowGuiComp::UpdateFixedCommands(iqtgui::CHierarchicalCommand& fixed
 }
 
 
-void CMainWindowGuiComp::UpdateViewCommands(iqtgui::CHierarchicalCommand& viewCommand)
-{
-	BaseClass::UpdateViewCommands(viewCommand);
-
-	viewCommand.InsertChild(&m_fullScreenCommand, false);
-}
-
-
 void CMainWindowGuiComp::UpdateToolsCommands(iqtgui::CHierarchicalCommand& toolsCommand)
 {
 	BaseClass::UpdateToolsCommands(toolsCommand);
@@ -727,9 +713,6 @@ void CMainWindowGuiComp::OnRetranslate()
 	m_quitCommand.SetVisuals(tr("&Quit"), tr("Quit"), tr("Quits this application"), QIcon(":/Icons/Shutdown.svg"));
 	m_undoCommand.SetVisuals(tr("&Undo"), tr("Undo"), tr("Undo last document changes"), QIcon(":/Icons/Undo.svg"));
 	m_redoCommand.SetVisuals(tr("&Redo"), tr("Redo"), tr("Redo last document changes"), QIcon(":/Icons/Redo.svg"));
-
-	// View commands
-	m_fullScreenCommand.SetVisuals(tr("&Full Screen"), tr("Full Screen"), tr("Turn full screen mode on/off"));
 
 	// Tools commands
 	m_copyPathToClipboardCommand.SetVisuals(tr("&Copy Document Path"), tr("Copy Path"), tr("Copy current document path to system clipboard"));
@@ -949,40 +932,6 @@ void CMainWindowGuiComp::OnRedo()
 	m_activeUndoManager.GetObjectPtr()->DoRedo();
 
 	UpdateUndoMenu();
-}
-
-
-void CMainWindowGuiComp::OnFullScreen()
-{
-	QMainWindow* mainWidgetPtr = GetQtWidget();
-
-	Q_ASSERT(mainWidgetPtr != NULL);
-
-	QWidget* parentWidgetPtr = mainWidgetPtr->parentWidget();
-	if (parentWidgetPtr == NULL){
-		parentWidgetPtr = mainWidgetPtr;
-	}
-
-	if (parentWidgetPtr == NULL){
-		return;
-	}
-
-	QStatusBar* statusBarPtr = mainWidgetPtr->statusBar();
-	if (parentWidgetPtr->isFullScreen()){
-		parentWidgetPtr->showNormal();
-		statusBarPtr->show();
-
-		mainWidgetPtr->restoreGeometry(m_beforeFullScreenGeometry);
-		mainWidgetPtr->restoreState(m_beforeFullScreenState);
-	}
-	else{
-		m_beforeFullScreenGeometry = mainWidgetPtr->saveGeometry();
-		m_beforeFullScreenState = mainWidgetPtr->saveState();
-
-		statusBarPtr->hide();
-		SetToolBarsVisible(false);
-		parentWidgetPtr->showFullScreen();
-	}
 }
 
 

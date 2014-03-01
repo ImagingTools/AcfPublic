@@ -117,7 +117,6 @@ protected:
 
 	// reimplemented (iqtgui::CSimpleMainWindowGuiComp)
 	virtual void UpdateFixedCommands(iqtgui::CHierarchicalCommand& fixedCommands);
-	virtual void UpdateViewCommands(iqtgui::CHierarchicalCommand& viewCommand);
 	virtual void UpdateToolsCommands(iqtgui::CHierarchicalCommand& toolsCommand);
 	virtual void UpdateMenuActions(iqtgui::CHierarchicalCommand& menuCommands);
 
@@ -144,7 +143,6 @@ protected Q_SLOTS:
 	void OnQuit();
 	void OnUndo();
 	void OnRedo();
-	void OnFullScreen();
 	void OnCopyPathToClipboard();
 	void OnOpenDocumentFolder();
 
@@ -227,8 +225,6 @@ private:
 	// edit menu group
 	iqtgui::CHierarchicalCommand m_undoCommand;
 	iqtgui::CHierarchicalCommand m_redoCommand;
-	// view menu group
-	iqtgui::CHierarchicalCommand m_fullScreenCommand;
 	// tools menu group
 	iqtgui::CHierarchicalCommand m_copyPathToClipboardCommand;
 	iqtgui::CHierarchicalCommand m_openDocumentFolderCommand;
@@ -247,9 +243,6 @@ private:
 	I_ATTR(int, m_maxRecentFilesCountAttrPtr);
 	I_ATTR(bool, m_isOpenCommandVisibleAttrPtr);
 	I_ATTR(bool, m_isSaveCommandVisibleAttrPtr);
-
-	QByteArray m_beforeFullScreenGeometry;
-	QByteArray m_beforeFullScreenState;
 };
 
 

@@ -33577,6 +33577,12 @@
       <anchor>af0f7891ab3e905463489162a441f32e6a8f7baade8078e5cfa250f3188756e788</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <name>MF_INACTIVE</name>
+      <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
+      <anchor>af0f7891ab3e905463489162a441f32e6aa1750af2b52abdaac09d0de3e412b06f</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="enumeration">
       <name>ChangeFlags</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
@@ -37242,13 +37248,6 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>OnFullScreen</name>
-      <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>ab11a02ea9be567c7f5f601af11012722</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
       <name>OnCopyPathToClipboard</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
       <anchor>ab0f5c2098090c1f610cd38a2c98cd1a8</anchor>
@@ -37358,13 +37357,6 @@
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
       <anchor>aaf4283360bfbf112011c5fbad7bea239</anchor>
       <arglist>(iqtgui::CHierarchicalCommand &amp;fixedCommands)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateViewCommands</name>
-      <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>aa8f531018d02718ae4b0c89fd65b3da2</anchor>
-      <arglist>(iqtgui::CHierarchicalCommand &amp;viewCommand)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -40494,6 +40486,13 @@
       <name>OnShowToolbars</name>
       <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
       <anchor>a17c7bf3c34a529b36e8c812d4ddc91e4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnFullScreen</name>
+      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
+      <anchor>a35f4050fc57c011a1e9ecedff18b8de0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
