@@ -348,7 +348,7 @@ bool CGuiComponentBase::LanguageChangeEventFilter::eventFilter(QObject* sourcePt
 
 // public methods of embedded class VisualStatus
 
-// reimplemented (iqtgui::IVisualStatusProvider)
+// reimplemented (iqtgui::IVisualStatus)
 
 QIcon CGuiComponentBase::VisualStatus::GetStatusIcon() const
 {

@@ -2803,7 +2803,6 @@
     <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_c_message_container_8h" name="CMessageContainer.h" local="yes" imported="no">ilog/CMessageContainer.h</includes>
     <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ilog/CMessage.h</includes>
-    <includes id="_i_visual_status_provider_8h" name="IVisualStatusProvider.h" local="yes" imported="no">iqtgui/IVisualStatusProvider.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <class kind="class">iloggui::CLogGuiComp</class>
     <namespace>iloggui</namespace>
@@ -4406,7 +4405,7 @@
     <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="yes" imported="no">imod/TModelWrap.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_gui_object_8h" name="IGuiObject.h" local="yes" imported="no">iqtgui/IGuiObject.h</includes>
-    <includes id="_i_visual_status_provider_8h" name="IVisualStatusProvider.h" local="yes" imported="no">iqtgui/IVisualStatusProvider.h</includes>
+    <includes id="_i_visual_status_8h" name="IVisualStatus.h" local="yes" imported="no">iqtgui/IVisualStatus.h</includes>
     <class kind="class">iqtgui::CGuiComponentBase</class>
     <class kind="class">iqtgui::CGuiComponentBase::VisualStatus</class>
     <namespace>iqtgui</namespace>
@@ -4770,11 +4769,11 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>IVisualStatusProvider.h</name>
+    <name>IVisualStatus.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
-    <filename>_i_visual_status_provider_8h</filename>
+    <filename>_i_visual_status_8h</filename>
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <class kind="class">iqtgui::IVisualStatusProvider</class>
+    <class kind="class">iqtgui::IVisualStatus</class>
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
@@ -38060,7 +38059,7 @@
     <class kind="class">iqtgui::IIconProvider</class>
     <class kind="class">iqtgui::IMainWindowComponent</class>
     <class kind="class">iqtgui::IMultiPageWidgetDelegate</class>
-    <class kind="class">iqtgui::IVisualStatusProvider</class>
+    <class kind="class">iqtgui::IVisualStatus</class>
     <class kind="class">iqtgui::TDesignerBasicGui</class>
     <class kind="class">iqtgui::TDesignerGuiCompBase</class>
     <class kind="class">iqtgui::TDesignerGuiObserverCompBase</class>
@@ -38881,8 +38880,8 @@
       <type></type>
       <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
       <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
-      <anchor>a802ecc5a078cc5174be199622d559601</anchor>
-      <arglist>(VisualStatus, IVisualStatusProvider, ExtractVisualStatus)</arglist>
+      <anchor>ac093b764e283528e6989af17cf8d36e3</anchor>
+      <arglist>(VisualStatus, IVisualStatus, ExtractVisualStatus)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -39042,7 +39041,7 @@
   <compound kind="class">
     <name>iqtgui::CGuiComponentBase::VisualStatus</name>
     <filename>classiqtgui_1_1_c_gui_component_base_1_1_visual_status.html</filename>
-    <base virtualness="virtual">iqtgui::IVisualStatusProvider</base>
+    <base virtualness="virtual">iqtgui::IVisualStatus</base>
     <member kind="function" virtualness="virtual">
       <type>virtual QIcon</type>
       <name>GetStatusIcon</name>
@@ -42059,21 +42058,21 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqtgui::IVisualStatusProvider</name>
-    <filename>classiqtgui_1_1_i_visual_status_provider.html</filename>
+    <name>iqtgui::IVisualStatus</name>
+    <filename>classiqtgui_1_1_i_visual_status.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual QIcon</type>
       <name>GetStatusIcon</name>
-      <anchorfile>classiqtgui_1_1_i_visual_status_provider.html</anchorfile>
-      <anchor>a361fe72659bb2392222c20404d63e304</anchor>
+      <anchorfile>classiqtgui_1_1_i_visual_status.html</anchorfile>
+      <anchor>a37bc3c3c7e1259f3c1c8749b7be20d75</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
       <name>GetStatusText</name>
-      <anchorfile>classiqtgui_1_1_i_visual_status_provider.html</anchorfile>
-      <anchor>ad053c7a04497eb1f490c02859b9f716c</anchor>
+      <anchorfile>classiqtgui_1_1_i_visual_status.html</anchorfile>
+      <anchor>a226f75c1be2fa7758f9bdfb6f02ded7b</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>

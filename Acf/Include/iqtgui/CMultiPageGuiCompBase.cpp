@@ -153,7 +153,7 @@ void CMultiPageGuiCompBase::UpdateVisualElements()
 		QString pageToolTip;
 
 		if (guiIndex < visualProvidersCount){
-			const IVisualStatusProvider* visualProviderPtr = m_slaveWidgetsVisualCompPtr[guiIndex];
+			const IVisualStatus* visualProviderPtr = m_slaveWidgetsVisualCompPtr[guiIndex];
 			if (visualProviderPtr != NULL){
 				pageIcon = visualProviderPtr->GetStatusIcon();
 				pageToolTip = visualProviderPtr->GetStatusText();
