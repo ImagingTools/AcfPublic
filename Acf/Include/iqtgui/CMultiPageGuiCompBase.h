@@ -33,9 +33,9 @@
 #include "iprm/IEnableableParam.h"
 #include "iprm/CSelectionParam.h"
 #include "iprm/COptionsManager.h"
+#include "iqtgui/IMultiVisualStatusProvider.h"
 #include "iqtgui/CGuiComponentBase.h"
 #include "iqtgui/CMultiPageWidget.h"
-
 
 namespace iqtgui
 {
@@ -57,6 +57,7 @@ public:
 		I_REGISTER_SUBELEMENT_INTERFACE_T(PageModel, iser::ISerializable, ExtractPageModel);
 		I_REGISTER_SUBELEMENT_INTERFACE_T(PageModel, imod::IModel, ExtractPageModel);
 		I_REGISTER_SUBELEMENT_INTERFACE_T(PageModel, istd::IChangeable, ExtractPageModel);
+		I_REGISTER_SUBELEMENT_INTERFACE_T(PageModel, IMultiVisualStatusProvider, ExtractPageModel);
 		I_ASSIGN_MULTI_0(m_slaveWidgetsVisualCompPtr, "GuiVisualInfos", "Provide visual information for each GUI", false);
 		I_ASSIGN_TO(m_slaveWidgetsModelCompPtr, m_slaveWidgetsVisualCompPtr, false);
 		I_ASSIGN_MULTI_0(m_pageActivatorsCompPtr, "PageActivators", "Optional activators for each page", false);
@@ -143,7 +144,8 @@ private:
 	class PageModel:
 				public iprm::CSelectionParam,
 				public imod::CMultiModelBridgeBase,
-				public iprm::IOptionsList
+				public iprm::IOptionsList,
+				public IMultiVisualStatusProvider
 	{
 	public:
 		typedef iprm::CSelectionParam BaseClass;
@@ -163,6 +165,10 @@ private:
 		virtual QString GetOptionDescription(int index) const;
 		virtual QByteArray GetOptionId(int index) const;
 		virtual bool IsOptionEnabled(int index) const;
+
+		// reimplemented (IMultiVisualStatusProvider)
+		virtual int GetStatusesCount() const;
+		virtual const IVisualStatus* GetVisualStatus(int statusIndex) const;
 
 	protected:
 		// reimplemented (istd::IChangeable)

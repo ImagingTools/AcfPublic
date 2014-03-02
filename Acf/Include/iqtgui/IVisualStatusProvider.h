@@ -20,25 +20,28 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#ifndef iqtgui_IVisualStatusProvider_included
+#define iqtgui_IVisualStatusProvider_included
 
 
-namespace istd
+// ACF includes
+#include "iqtgui/IVisualStatus.h"
+
+
+namespace iqtgui
 {
 
 
-enum RepositoryState
+class IVisualStatusProvider: virtual public istd::IChangeable
 {
-	RS_ORIGINAL_VERSION =  3358,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+public:
+	virtual const IVisualStatus* GetVisualStatus() const;
 };
 
 
-} // namespace istd
+} // namespace iqtgui
 
 
-#endif // !istd_AcfVersion_included
+#endif // !iqtgui_IVisualStatusProvider_included
 
 

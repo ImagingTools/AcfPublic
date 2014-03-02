@@ -20,25 +20,39 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#ifndef iqtgui_IMultiVisualStatusProvider_included
+#define iqtgui_IMultiVisualStatusProvider_included
 
 
-namespace istd
+// ACF includes
+#include "iqtgui/IVisualStatus.h"
+
+
+namespace iqtgui
 {
 
 
-enum RepositoryState
+/**
+	Common interface for a provider of the multiple visual statuses.
+*/
+class IMultiVisualStatusProvider: virtual public istd::IChangeable
 {
-	RS_ORIGINAL_VERSION =  3358,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+public:
+	/**
+		Get the number of visual statuses.
+	*/
+	virtual int GetStatusesCount() const = 0;
+	
+	/**
+		Get the visual status at a given index \c statusIndex.
+	*/
+	virtual const IVisualStatus* GetVisualStatus(int statusIndex) const = 0;
 };
 
 
-} // namespace istd
+} // namespace iqtgui
 
 
-#endif // !istd_AcfVersion_included
+#endif // !iqtgui_IMultiVisualStatusProvider_included
 
 

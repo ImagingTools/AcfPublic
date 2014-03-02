@@ -32,6 +32,7 @@
 #include "iprm/IParamsSet.h"
 #include "iprm/IOptionsList.h"
 #include "iprm/ISelectionParam.h"
+#include "iqtgui/IMultiVisualStatusProvider.h"
 #include "iqtgui/CItemDelegate.h"
 #include "iqtgui/CWidgetUpdateBlocker.h"
 
@@ -129,7 +130,7 @@ void COptionsListEditorGuiComp::on_DownButton_clicked()
 }
 
 
-void COptionsListEditorGuiComp::on_ParamsTree_itemSelectionChanged()
+void COptionsListEditorGuiComp::on_OptionsList_itemSelectionChanged()
 {
 	if (!IsUpdateBlocked()){
 		UpdateBlocker updateBlocker(this);
@@ -148,19 +149,8 @@ void COptionsListEditorGuiComp::on_ParamsTree_itemSelectionChanged()
 }
 
 
-void COptionsListEditorGuiComp::on_ParamsTree_itemChanged(QTreeWidgetItem* item, int column)
+void COptionsListEditorGuiComp::on_OptionsList_itemChanged(QListWidgetItem* item)
 {
-	if (*m_showDescriptionAttrPtr){
-		if (column != 0 && column != 1){
-			return;
-		}
-	}
-	else{
-		if (column != 0){
-			return;
-		}
-	}
-
 	if (IsUpdateBlocked()){
 		return;
 	}
@@ -169,14 +159,9 @@ void COptionsListEditorGuiComp::on_ParamsTree_itemChanged(QTreeWidgetItem* item,
 
 	iprm::IOptionsManager* objectPtr = dynamic_cast<iprm::IOptionsManager*>(GetObjectPtr());
 	if (objectPtr != NULL){
-		int setIndex = item->data(0, Qt::UserRole).toInt();
+		int optionIndex = item->data(Qt::UserRole).toInt();
 
-		if (column == 0){
-			objectPtr->SetOptionName(setIndex, item->text(column));
-		}
-		else{
-			objectPtr->SetOptionDescription(setIndex, item->text(column));
-		}
+		objectPtr->SetOptionName(optionIndex, item->text());
 	}
 }
 
@@ -206,57 +191,51 @@ void COptionsListEditorGuiComp::UpdateActions()
 }
 
 
-void COptionsListEditorGuiComp::UpdateTree()
+void COptionsListEditorGuiComp::UpdateList()
 {
 	UpdateBlocker updateBlocker(this);
 
 	int lastSelectedIndex = m_lastSelectedIndex;
 
-	ParamsTree->clear();
-
-	if (*m_showListHeaderAttrPtr){
-		QStringList headers;
-		if (m_headerListAttrPtr.IsValid()){
-			int listCount = m_headerListAttrPtr.GetCount();
-			for (int listIndex = 0; listIndex < listCount; listIndex++){
-				headers << m_headerListAttrPtr[listIndex];
-			}
-		}
-		ParamsTree->setHeaderLabels(headers);
-		ParamsTree->setHeaderHidden(false);
-	}
-
+	OptionsList->clear();
+	
 	iprm::IOptionsList* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
-		int setsCount = objectPtr->GetOptionsCount();
+		int optionsCount = objectPtr->GetOptionsCount();
 
-		for (int optionIndex = 0; optionIndex < setsCount; ++optionIndex){
+		for (int optionIndex = 0; optionIndex < optionsCount; ++optionIndex){
 
-			Qt::ItemFlags itemFlags = Qt::ItemIsEnabled | Qt::ItemIsSelectable;
+			Qt::ItemFlags itemFlags = objectPtr->IsOptionEnabled(optionIndex) ? Qt::ItemIsEnabled | Qt::ItemIsSelectable : Qt::NoItemFlags;
 
 			iprm::IOptionsManager* managerPtr = dynamic_cast<iprm::IOptionsManager*>(objectPtr);
 			if (managerPtr != NULL){
 				int operationFlags = managerPtr->GetOptionOperationFlags(optionIndex);
-				if (operationFlags & iprm::IOptionsManager::OOF_SUPPORT_RENAME){
+				if (objectPtr->IsOptionEnabled(optionIndex) && (operationFlags & iprm::IOptionsManager::OOF_SUPPORT_RENAME)){
 					itemFlags |= Qt::ItemIsEditable;
 				}
 			}
 
 			QString name = objectPtr->GetOptionName(optionIndex);
 			QString description = objectPtr->GetOptionDescription(optionIndex);
-			QTreeWidgetItem* optionItemPtr = new QTreeWidgetItem();
-			optionItemPtr->setText(0, name);
+			QListWidgetItem* optionItemPtr = new QListWidgetItem();
+			optionItemPtr->setText(name);
 
-			if (*m_showDescriptionAttrPtr){
-				optionItemPtr->setText(1, description);
+			const iqtgui::IMultiVisualStatusProvider* visualStatusProviderPtr = dynamic_cast<const iqtgui::IMultiVisualStatusProvider*>(objectPtr);
+			if (visualStatusProviderPtr != NULL){
+				const iqtgui::IVisualStatus* visualStatusPtr = visualStatusProviderPtr->GetVisualStatus(optionIndex);
+				if (visualStatusPtr != NULL){
+					optionItemPtr->setIcon(visualStatusPtr->GetStatusIcon());
+				}
 			}
 
-			optionItemPtr->setData(0, Qt::UserRole, optionIndex);
+			optionItemPtr->setData(Qt::UserRole, optionIndex);
 			optionItemPtr->setFlags(itemFlags);
 
-			ParamsTree->addTopLevelItem(optionItemPtr);
+			OptionsList->addItem(optionItemPtr);
 
-			optionItemPtr->setSelected(optionIndex == lastSelectedIndex);	
+			if (itemFlags == Qt::ItemIsSelectable){
+				optionItemPtr->setSelected(optionIndex == lastSelectedIndex);
+			}
 		}
 	}
 }
@@ -268,12 +247,12 @@ int COptionsListEditorGuiComp::GetSelectedIndex() const
 
 	int retVal = -1;
 
-	QList<QTreeWidgetItem*> items = ParamsTree->selectedItems();
+	QList<QListWidgetItem*> items = OptionsList->selectedItems();
 	if (!items.isEmpty()){
-		QTreeWidgetItem* itemPtr = items.first();
+		QListWidgetItem* itemPtr = items.first();
 
 		if (itemPtr != NULL){
-			retVal = itemPtr->data(0, Qt::UserRole).toInt();
+			retVal = itemPtr->data(Qt::UserRole).toInt();
 		}
 	}
 
@@ -308,13 +287,13 @@ void COptionsListEditorGuiComp::OnGuiModelAttached()
 
 	ButtonsFrame->setVisible(AddRemoveButtonsFrame->isVisible() || UpDownButtonsFrame->isVisible());
 
-	ParamsTree->setVisible(true);
+	OptionsList->setVisible(true);
 }
 
 
 void COptionsListEditorGuiComp::OnGuiModelDetached()
 {
-	ParamsTree->setVisible(false);
+	OptionsList->setVisible(false);
 
 	ButtonsFrame->setVisible(false);
 
@@ -326,7 +305,7 @@ void COptionsListEditorGuiComp::UpdateGui(int /*updateFlags*/)
 {
 	Q_ASSERT(IsGuiCreated());
 	
-	UpdateTree();
+	UpdateList();
 }
 
 
@@ -334,21 +313,28 @@ void COptionsListEditorGuiComp::UpdateGui(int /*updateFlags*/)
 
 void COptionsListEditorGuiComp::OnGuiCreated()
 {
-	ParamsTree->setVisible(false);
+	OptionsList->setVisible(false);
 
 	AddRemoveButtonsFrame->setVisible(false);
 	UpDownButtonsFrame->setVisible(false);
 
 	ButtonsFrame->setVisible(*m_allowAddRemoveAttrPtr);
 
-	if (*m_showDescriptionAttrPtr){
-		ParamsTree->setColumnCount(2);
-	}
-	else{
-		ParamsTree->setColumnCount(1);
+	BaseClass::OnGuiCreated();
+
+	if (m_fixedWidthAttrPtr.IsValid()){
+		OptionsList->setMinimumWidth(*m_fixedWidthAttrPtr);
+		OptionsList->setSizePolicy(QSizePolicy::Maximum, OptionsList->sizePolicy().verticalPolicy());
 	}
 
-	BaseClass::OnGuiCreated();
+	if (m_fixedHeightAttrPtr.IsValid()){
+		OptionsList->setMinimumHeight(*m_fixedHeightAttrPtr);
+		OptionsList->setSizePolicy(OptionsList->sizePolicy().horizontalPolicy(), QSizePolicy::Maximum);
+	}
+
+	if (m_iconSizeAttrPtr.IsValid()){
+		OptionsList->setIconSize(QSize(*m_iconSizeAttrPtr, *m_iconSizeAttrPtr));
+	}
 
 	UpdateActions();
 }

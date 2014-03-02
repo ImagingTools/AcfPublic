@@ -85,13 +85,13 @@ Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_options_list_editor_gui_comp.html#a60ddd2ebbe9653421c80416d7b81ded6">on_RemoveButton_clicked</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_options_list_editor_gui_comp.html#a249476a8ba198869dd303af06fb2e47b">on_UpButton_clicked</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_options_list_editor_gui_comp.html#abeefb5c3b1d00357816fd7d48548185d">on_DownButton_clicked</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_options_list_editor_gui_comp.html#a91453ec3f4b2c5b5803483eaf9c06c94">on_ParamsTree_itemSelectionChanged</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_options_list_editor_gui_comp.html#accde2eac7f3ed1629a60513d48b5cfbd">on_ParamsTree_itemChanged</a> (QTreeWidgetItem *item, int column)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_options_list_editor_gui_comp.html#a085027fbe948b5fffa1a4d5f7af26b7a">on_OptionsList_itemSelectionChanged</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_options_list_editor_gui_comp.html#a357dfaf2be01abe8abf8167ee5fd2128">on_OptionsList_itemChanged</a> (QListWidgetItem *item)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_options_list_editor_gui_comp.html#adb0fb74c6046e079f2322b71dc6dd517">OnAddMenuOptionClicked</a> (QAction *action)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_options_list_editor_gui_comp.html#a321a0d42b80bd7b4ecf0609eb9e18e55">UpdateActions</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_options_list_editor_gui_comp.html#af1cc9b21d179c8c6e1e1de2db554c2a4">UpdateTree</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_options_list_editor_gui_comp.html#a7fe0792d9f4b119017cbac7a79509651">UpdateList</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_options_list_editor_gui_comp.html#a2725c25a2a49b6fb8b7dd826c7e9954f">GetSelectedIndex</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_options_list_editor_gui_comp.html#ab1b5dcb20f5f2be03c3933847c9146af">EnsureSelectedIndexUpdated</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtprm_1_1_c_options_list_editor_gui_comp.html#acea6b561134306f613845c823236af1c">GetSelectedParamsSetTypeId</a> () const </td></tr>
@@ -223,26 +223,16 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="accde2eac7f3ed1629a60513d48b5cfbd"></a><!-- doxytag: member="iqtprm::COptionsListEditorGuiComp::on_ParamsTree_itemChanged" ref="accde2eac7f3ed1629a60513d48b5cfbd" args="(QTreeWidgetItem *item, int column)" -->
+<a class="anchor" id="a357dfaf2be01abe8abf8167ee5fd2128"></a><!-- doxytag: member="iqtprm::COptionsListEditorGuiComp::on_OptionsList_itemChanged" ref="a357dfaf2be01abe8abf8167ee5fd2128" args="(QListWidgetItem *item)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void iqtprm::COptionsListEditorGuiComp::on_ParamsTree_itemChanged </td>
+          <td class="memname">void iqtprm::COptionsListEditorGuiComp::on_OptionsList_itemChanged </td>
           <td>(</td>
-          <td class="paramtype">QTreeWidgetItem *&#160;</td>
-          <td class="paramname"><em>item</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>column</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [protected, slot]</code></td>
+          <td class="paramtype">QListWidgetItem *&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td><code> [protected, slot]</code></td>
         </tr>
       </table>
 </div>
@@ -250,12 +240,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a91453ec3f4b2c5b5803483eaf9c06c94"></a><!-- doxytag: member="iqtprm::COptionsListEditorGuiComp::on_ParamsTree_itemSelectionChanged" ref="a91453ec3f4b2c5b5803483eaf9c06c94" args="()" -->
+<a class="anchor" id="a085027fbe948b5fffa1a4d5f7af26b7a"></a><!-- doxytag: member="iqtprm::COptionsListEditorGuiComp::on_OptionsList_itemSelectionChanged" ref="a085027fbe948b5fffa1a4d5f7af26b7a" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void iqtprm::COptionsListEditorGuiComp::on_ParamsTree_itemSelectionChanged </td>
+          <td class="memname">void iqtprm::COptionsListEditorGuiComp::on_OptionsList_itemSelectionChanged </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [protected, slot]</code></td>
@@ -412,12 +402,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af1cc9b21d179c8c6e1e1de2db554c2a4"></a><!-- doxytag: member="iqtprm::COptionsListEditorGuiComp::UpdateTree" ref="af1cc9b21d179c8c6e1e1de2db554c2a4" args="()" -->
+<a class="anchor" id="a7fe0792d9f4b119017cbac7a79509651"></a><!-- doxytag: member="iqtprm::COptionsListEditorGuiComp::UpdateList" ref="a7fe0792d9f4b119017cbac7a79509651" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void iqtprm::COptionsListEditorGuiComp::UpdateTree </td>
+          <td class="memname">void iqtprm::COptionsListEditorGuiComp::UpdateList </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [protected]</code></td>

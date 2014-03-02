@@ -4506,6 +4506,7 @@
     <includes id="_i_enableable_param_8h" name="IEnableableParam.h" local="yes" imported="no">iprm/IEnableableParam.h</includes>
     <includes id="_c_selection_param_8h" name="CSelectionParam.h" local="yes" imported="no">iprm/CSelectionParam.h</includes>
     <includes id="_c_options_manager_8h" name="COptionsManager.h" local="yes" imported="no">iprm/COptionsManager.h</includes>
+    <includes id="_i_multi_visual_status_provider_8h" name="IMultiVisualStatusProvider.h" local="yes" imported="no">iqtgui/IMultiVisualStatusProvider.h</includes>
     <includes id="_c_gui_component_base_8h" name="CGuiComponentBase.h" local="yes" imported="no">iqtgui/CGuiComponentBase.h</includes>
     <includes id="_c_multi_page_widget_8h" name="CMultiPageWidget.h" local="yes" imported="no">iqtgui/CMultiPageWidget.h</includes>
     <class kind="class">iqtgui::CMultiPageGuiCompBase</class>
@@ -4755,6 +4756,14 @@
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
+    <name>IMultiVisualStatusProvider.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_i_multi_visual_status_provider_8h</filename>
+    <includes id="_i_visual_status_8h" name="IVisualStatus.h" local="yes" imported="no">iqtgui/IVisualStatus.h</includes>
+    <class kind="class">iqtgui::IMultiVisualStatusProvider</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
     <name>iqtgui.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>iqtgui_8h</filename>
@@ -4774,6 +4783,14 @@
     <filename>_i_visual_status_8h</filename>
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <class kind="class">iqtgui::IVisualStatus</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IVisualStatusProvider.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_i_visual_status_provider_8h</filename>
+    <includes id="_i_visual_status_8h" name="IVisualStatus.h" local="yes" imported="no">iqtgui/IVisualStatus.h</includes>
+    <class kind="class">iqtgui::IVisualStatusProvider</class>
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
@@ -38059,7 +38076,9 @@
     <class kind="class">iqtgui::IIconProvider</class>
     <class kind="class">iqtgui::IMainWindowComponent</class>
     <class kind="class">iqtgui::IMultiPageWidgetDelegate</class>
+    <class kind="class">iqtgui::IMultiVisualStatusProvider</class>
     <class kind="class">iqtgui::IVisualStatus</class>
+    <class kind="class">iqtgui::IVisualStatusProvider</class>
     <class kind="class">iqtgui::TDesignerBasicGui</class>
     <class kind="class">iqtgui::TDesignerGuiCompBase</class>
     <class kind="class">iqtgui::TDesignerGuiObserverCompBase</class>
@@ -39687,6 +39706,13 @@
       <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
       <anchor>a942bec340e7a8189ebb5a103df2064c5</anchor>
       <arglist>(PageModel, istd::IChangeable, ExtractPageModel)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>acb335851274c7db51447325b7d59c2eb</anchor>
+      <arglist>(PageModel, IMultiVisualStatusProvider, ExtractPageModel)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -42058,6 +42084,25 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqtgui::IMultiVisualStatusProvider</name>
+    <filename>classiqtgui_1_1_i_multi_visual_status_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetStatusesCount</name>
+      <anchorfile>classiqtgui_1_1_i_multi_visual_status_provider.html</anchorfile>
+      <anchor>a2264101709e1a2014a7b8b3c13d6b3dc</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const IVisualStatus *</type>
+      <name>GetVisualStatus</name>
+      <anchorfile>classiqtgui_1_1_i_multi_visual_status_provider.html</anchorfile>
+      <anchor>a5d78195a11577a7b774eb98742d0e073</anchor>
+      <arglist>(int statusIndex) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iqtgui::IVisualStatus</name>
     <filename>classiqtgui_1_1_i_visual_status.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
@@ -42074,6 +42119,18 @@
       <anchorfile>classiqtgui_1_1_i_visual_status.html</anchorfile>
       <anchor>a226f75c1be2fa7758f9bdfb6f02ded7b</anchor>
       <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::IVisualStatusProvider</name>
+    <filename>classiqtgui_1_1_i_visual_status_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const IVisualStatus *</type>
+      <name>GetVisualStatus</name>
+      <anchorfile>classiqtgui_1_1_i_visual_status_provider.html</anchorfile>
+      <anchor>ae33c34f63daa796a61c5698e673f106a</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -43077,17 +43134,17 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>on_ParamsTree_itemSelectionChanged</name>
+      <name>on_OptionsList_itemSelectionChanged</name>
       <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>a91453ec3f4b2c5b5803483eaf9c06c94</anchor>
+      <anchor>a085027fbe948b5fffa1a4d5f7af26b7a</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>on_ParamsTree_itemChanged</name>
+      <name>on_OptionsList_itemChanged</name>
       <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>accde2eac7f3ed1629a60513d48b5cfbd</anchor>
-      <arglist>(QTreeWidgetItem *item, int column)</arglist>
+      <anchor>a357dfaf2be01abe8abf8167ee5fd2128</anchor>
+      <arglist>(QListWidgetItem *item)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -43105,9 +43162,9 @@
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>UpdateTree</name>
+      <name>UpdateList</name>
       <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>af1cc9b21d179c8c6e1e1de2db554c2a4</anchor>
+      <anchor>a7fe0792d9f4b119017cbac7a79509651</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
