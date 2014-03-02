@@ -213,7 +213,7 @@ bool TMultiPageDocumentWrap<Base>::Serialize(iser::IArchive& archive)
 	// Serialize meta info:
 	static iser::CArchiveTag metaInfoTag("MetaInfo", "Meta information about the document");
 	bool retVal = archive.BeginTag(metaInfoTag);
-	retVal = retVal && CStandardDocumentMetaInfo::Serialize(archive);
+	retVal = retVal && BaseClass2::Serialize(archive);
 	retVal = retVal && archive.EndTag(metaInfoTag);
 
 	// Serialize document pages:
@@ -262,7 +262,7 @@ bool TMultiPageDocumentWrap<Base>::CopyFrom(const istd::IChangeable& object, Com
 		m_documentPages.clear();
 
 		for (int pageIndex = 0; pageIndex < sourcePtr->m_documentPages.count(); ++pageIndex){
-			istd::IChangeable* pagePtr = InsertPage();
+			istd::IChangeable* pagePtr = this->InsertPage();
 			if (pagePtr == NULL){
 				return false;
 			}
@@ -279,7 +279,7 @@ bool TMultiPageDocumentWrap<Base>::CopyFrom(const istd::IChangeable& object, Com
 			}
 		}
 
-		if (!CStandardDocumentMetaInfo::CopyFrom(object, mode)){
+		if (!BaseClass2::CopyFrom(object, mode)){
 			return false;
 		}
 

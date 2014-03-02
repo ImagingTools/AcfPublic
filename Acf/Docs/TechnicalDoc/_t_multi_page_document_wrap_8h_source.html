@@ -213,7 +213,7 @@
 <a name="l00191"></a>00191        <span class="comment">// Serialize meta info:</span>
 <a name="l00192"></a>00192        <span class="keyword">static</span> <a class="code" href="classiser_1_1_c_archive_tag.html" title="Process tag used to group data in archive stream.">iser::CArchiveTag</a> metaInfoTag(<span class="stringliteral">&quot;MetaInfo&quot;</span>, <span class="stringliteral">&quot;Meta information about the document&quot;</span>);
 <a name="l00193"></a>00193        <span class="keywordtype">bool</span> retVal = archive.<a class="code" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f" title="Begin of archive tag.">BeginTag</a>(metaInfoTag);
-<a name="l00194"></a>00194        retVal = retVal &amp;&amp; <a class="code" href="classidoc_1_1_c_standard_document_meta_info.html#a89a50d39a44d0181981997015e7f2fcf" title="Load or store state of this object as a archive stream.">CStandardDocumentMetaInfo::Serialize</a>(archive);
+<a name="l00194"></a>00194        retVal = retVal &amp;&amp; BaseClass2::Serialize(archive);
 <a name="l00195"></a>00195        retVal = retVal &amp;&amp; archive.<a class="code" href="classiser_1_1_i_archive.html#a2a74d7d22900ea47335e9c7a5fe88f9a" title="End of archive tag.">EndTag</a>(metaInfoTag);
 <a name="l00196"></a>00196 
 <a name="l00197"></a>00197        <span class="comment">// Serialize document pages:</span>
@@ -262,7 +262,7 @@
 <a name="l00240"></a>00240               m_documentPages.clear();
 <a name="l00241"></a>00241 
 <a name="l00242"></a>00242               <span class="keywordflow">for</span> (<span class="keywordtype">int</span> pageIndex = 0; pageIndex &lt; sourcePtr-&gt;<a class="code" href="classidoc_1_1_t_multi_page_document_wrap.html#a49918c5f92f9611dbb86363fca61c0e8">m_documentPages</a>.count(); ++pageIndex){
-<a name="l00243"></a>00243                      <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* pagePtr = InsertPage();
+<a name="l00243"></a>00243                      <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* pagePtr = this-&gt;InsertPage();
 <a name="l00244"></a>00244                      <span class="keywordflow">if</span> (pagePtr == <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){
 <a name="l00245"></a>00245                             <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00246"></a>00246                      }
@@ -279,7 +279,7 @@
 <a name="l00257"></a>00257                      }
 <a name="l00258"></a>00258               }
 <a name="l00259"></a>00259 
-<a name="l00260"></a>00260               <span class="keywordflow">if</span> (!<a class="code" href="classidoc_1_1_c_standard_document_meta_info.html#a997cf798dabb131c38f90a9fcc266110">CStandardDocumentMetaInfo::CopyFrom</a>(<span class="keywordtype">object</span>, mode)){
+<a name="l00260"></a>00260               <span class="keywordflow">if</span> (!BaseClass2::CopyFrom(<span class="keywordtype">object</span>, mode)){
 <a name="l00261"></a>00261                      <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00262"></a>00262               }
 <a name="l00263"></a>00263 
