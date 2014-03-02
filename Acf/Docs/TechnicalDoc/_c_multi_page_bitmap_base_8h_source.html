@@ -56,9 +56,9 @@
 <a name="l00031"></a>00031        };
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033        <span class="comment">// reimplemented (idoc::IMultiPageDocument)</span>
-<a name="l00034"></a>00034        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classiimg_1_1_c_multi_page_bitmap_base.html#a120dffd4d847fdb5d4196f0e15d8ce3c">InsertPage</a>(
-<a name="l00035"></a>00035               <span class="keyword">const</span> QString&amp; pageTitle = QString(),
-<a name="l00036"></a>00036               <span class="keyword">const</span> QSizeF&amp; pageSize = QSizeF(),
+<a name="l00034"></a>00034        <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>* <a class="code" href="classiimg_1_1_c_multi_page_bitmap_base.html#a9a519a3abb331d1391ae1e6b56d5ca9e">InsertPage</a>(
+<a name="l00035"></a>00035               <span class="keyword">const</span> <a class="code" href="classidoc_1_1_i_document_meta_info.html" title="Interface for document meta-information.">idoc::IDocumentMetaInfo</a>* pageMetaInfoPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
+<a name="l00036"></a>00036               <span class="keyword">const</span> <a class="code" href="classiprm_1_1_i_params_set.html" title="Set of general parameters.">iprm::IParamsSet</a>* pageParameterPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,
 <a name="l00037"></a>00037               <span class="keywordtype">int</span> position = -1);
 <a name="l00038"></a>00038 
 <a name="l00039"></a>00039        <span class="comment">// reimplemented (iimg::IMultiBitmapProvider)</span>
@@ -79,20 +79,18 @@
 <a name="l00054"></a>00054               <span class="keywordtype">int</span> linesDifference = 0);
 <a name="l00055"></a>00055        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiimg_1_1_c_multi_page_bitmap_base.html#a01f2f6ac1b51f9b031aeff3f455b322c">RemoveBitmap</a>(<span class="keywordtype">int</span> index);
 <a name="l00056"></a>00056 
-<a name="l00057"></a>00057        <span class="comment">// reimplemented (istd::IChangeable)</span>
-<a name="l00058"></a>00058        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiimg_1_1_c_multi_page_bitmap_base.html#ab8096c46d30eee7fdc5052ab06085e5e" title="Copy this object from another one.">CopyFrom</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed.">istd::IChangeable</a>&amp; <span class="keywordtype">object</span>, <a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de" title="Control how relationship betweeen objects are interpreted.">CompatibilityMode</a> mode = <a class="code" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af" title="External references are simple ignored.">CM_WITHOUT_REFS</a>);
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060 <span class="keyword">protected</span>:
-<a name="l00061"></a>00061        <span class="keyword">virtual</span> <a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">IBitmap</a>* <a class="code" href="classiimg_1_1_c_multi_page_bitmap_base.html#a8c4030a7056882ae786bb4dd05ec0261">CreateBitmap</a>() <span class="keyword">const</span> = 0;
-<a name="l00062"></a>00062 };
-<a name="l00063"></a>00063 
+<a name="l00057"></a>00057 <span class="keyword">protected</span>:
+<a name="l00058"></a>00058        <span class="comment">// abstract methods</span>
+<a name="l00059"></a>00059        <span class="keyword">virtual</span> <a class="code" href="classiimg_1_1_i_bitmap.html" title="Definition of single plane bitmap.">IBitmap</a>* <a class="code" href="classiimg_1_1_c_multi_page_bitmap_base.html#a8c4030a7056882ae786bb4dd05ec0261">CreateBitmap</a>() <span class="keyword">const</span> = 0;
+<a name="l00060"></a>00060 };
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063 } <span class="comment">// namespace iimg</span>
 <a name="l00064"></a>00064 
-<a name="l00065"></a>00065 } <span class="comment">// namespace iimg</span>
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068 <span class="preprocessor">#endif // !iimg_CMultiPageBitmapBase_included</span>
-<a name="l00069"></a>00069 <span class="preprocessor"></span>
-<a name="l00070"></a>00070 
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 <span class="preprocessor">#endif // !iimg_CMultiPageBitmapBase_included</span>
+<a name="l00067"></a>00067 <span class="preprocessor"></span>
+<a name="l00068"></a>00068 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

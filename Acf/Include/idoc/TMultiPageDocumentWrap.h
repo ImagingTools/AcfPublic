@@ -47,10 +47,12 @@ namespace idoc
 template <class Base>
 class TMultiPageDocumentWrap:
 			virtual public Base,
+			public CStandardDocumentMetaInfo,
 			virtual public iprm::IOptionsList
 {
 public:
 	typedef Base BaseClass;
+	typedef CStandardDocumentMetaInfo BaseClass2;
 
 	// pseudo-reimplemented (IMultiPageDocument)
 	virtual int GetPagesCount() const;
@@ -71,6 +73,9 @@ public:
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
 
+	// reimplemented (istd::IChangeable)
+	virtual bool CopyFrom(const istd::IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS);
+
 protected:
 	struct Page
 	{
@@ -88,8 +93,6 @@ protected:
 	typedef QVector<Page> Pages;
 
 	Pages m_documentPages;
-
-	CStandardDocumentMetaInfo m_metaInfo;
 };
 
 
@@ -151,7 +154,7 @@ bool TMultiPageDocumentWrap<Base>::RemovePage(int pageIndex)
 template <class Base>
 const IDocumentMetaInfo& TMultiPageDocumentWrap<Base>::GetDocumentMetaInfo() const
 {
-	return m_metaInfo;
+	return *this;
 }
 
 
@@ -210,7 +213,7 @@ bool TMultiPageDocumentWrap<Base>::Serialize(iser::IArchive& archive)
 	// Serialize meta info:
 	static iser::CArchiveTag metaInfoTag("MetaInfo", "Meta information about the document");
 	bool retVal = archive.BeginTag(metaInfoTag);
-	retVal = retVal && m_metaInfo.Serialize(archive);
+	retVal = retVal && CStandardDocumentMetaInfo::Serialize(archive);
 	retVal = retVal && archive.EndTag(metaInfoTag);
 
 	// Serialize document pages:
@@ -234,7 +237,7 @@ bool TMultiPageDocumentWrap<Base>::Serialize(iser::IArchive& archive)
 		m_documentPages.clear();
 
 		for (int pageIndex = 0; pageIndex < pagesCount; ++pageIndex){
-			this->InsertPage(QString(), QSizeF(), pageIndex);
+			this->InsertPage(NULL, NULL, pageIndex);
 
 			retVal = retVal && archive.BeginTag(pageTag);
 			retVal = retVal && SerializePage(archive, m_documentPages[pageIndex]);
@@ -245,6 +248,45 @@ bool TMultiPageDocumentWrap<Base>::Serialize(iser::IArchive& archive)
 	retVal = retVal && archive.EndTag(pagesTag);
 
 	return retVal;
+}
+
+
+// reimplemented (istd::IChangeable)
+template <class Base>
+bool TMultiPageDocumentWrap<Base>::CopyFrom(const istd::IChangeable& object, CompatibilityMode mode)
+{
+	const TMultiPageDocumentWrap<Base>* sourcePtr = dynamic_cast<const TMultiPageDocumentWrap<Base>*>(&object);
+	if (sourcePtr != NULL){
+		istd::CChangeNotifier changePtr(this);
+
+		m_documentPages.clear();
+
+		for (int pageIndex = 0; pageIndex < sourcePtr->m_documentPages.count(); ++pageIndex){
+			istd::IChangeable* pagePtr = InsertPage();
+			if (pagePtr == NULL){
+				return false;
+			}
+
+			const istd::IChangeable* sourcePagePtr = sourcePtr->m_documentPages.at(pageIndex).pagePtr.GetPtr();
+			Q_ASSERT(sourcePagePtr != NULL);
+
+			if (!pagePtr->CopyFrom(*sourcePagePtr)){
+				return false;
+			}
+
+			if (!m_documentPages[pageIndex].pageMetaInfo.CopyFrom(sourcePtr->m_documentPages.at(pageIndex).pageMetaInfo)){
+				return false;
+			}
+		}
+
+		if (!CStandardDocumentMetaInfo::CopyFrom(object, mode)){
+			return false;
+		}
+
+		return true;
+	}
+
+	return false;
 }
 
 

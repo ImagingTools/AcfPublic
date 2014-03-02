@@ -54,8 +54,8 @@ public:
 
 	// reimplemented (idoc::IMultiPageDocument)
 	virtual istd::IChangeable* InsertPage(
-		const QString& pageTitle = QString(),
-		const QSizeF& pageSize = QSizeF(),
+		const idoc::IDocumentMetaInfo* pageMetaInfoPtr = NULL,
+		const iprm::IParamsSet* pageParameterPtr = NULL,
 		int position = -1);
 
 	// reimplemented (iimg::IMultiBitmapProvider)
@@ -76,10 +76,8 @@ public:
 		int linesDifference = 0);
 	virtual void RemoveBitmap(int index);
 
-	// reimplemented (istd::IChangeable)
-	virtual bool CopyFrom(const istd::IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS);
-
 protected:
+	// abstract methods
 	virtual IBitmap* CreateBitmap() const = 0;
 };
 

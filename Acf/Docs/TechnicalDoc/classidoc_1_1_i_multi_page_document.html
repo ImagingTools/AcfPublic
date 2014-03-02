@@ -66,8 +66,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get meta info of the given page if exists.  <a href="#a3ef4f5482a3cf48b9f811a74d6d300be"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_multi_page_document.html#a26498368e7501c88e59f57f2c7b6ba0c">ResetPages</a> ()=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all pages and their content from the document.  <a href="#a26498368e7501c88e59f57f2c7b6ba0c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_multi_page_document.html#affc10fa80f242ef5d27245e935946008">InsertPage</a> (const QString &amp;pageTitle=QString(), const QSizeF &amp;pageSize=QSizeF(), int position=-1)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a new document page at the given position.  <a href="#affc10fa80f242ef5d27245e935946008"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_multi_page_document.html#a4b742230340dd49d6ed018adad638d52">InsertPage</a> (const <a class="el" href="classidoc_1_1_i_document_meta_info.html">idoc::IDocumentMetaInfo</a> *pageMetaInfoPtr=NULL, const <a class="el" href="classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *pageParameterPtr=NULL, int position=-1)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a new document page at the given position.  <a href="#a4b742230340dd49d6ed018adad638d52"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_multi_page_document.html#ac7e39f5324340ffb6f4f38c34848be68">RemovePage</a> (int pageIndex)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the page at the given index.  <a href="#ac7e39f5324340ffb6f4f38c34848be68"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classidoc_1_1_i_document_meta_info.html">IDocumentMetaInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classidoc_1_1_i_multi_page_document.html#a2cd96ca541f00544904a5b9bc987c39d">GetDocumentMetaInfo</a> () const =0</td></tr>
@@ -77,7 +77,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Simple interface for a structured document. </p>
 <p>Document is container of the pages. A page is the owner of the content. </p>
 
-<p>Definition at line <a class="el" href="_i_multi_page_document_8h_source.html#l00024">24</a> of file <a class="el" href="_i_multi_page_document_8h_source.html">IMultiPageDocument.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_multi_page_document_8h_source.html#l00030">30</a> of file <a class="el" href="_i_multi_page_document_8h_source.html">IMultiPageDocument.h</a>.</p>
 </div><hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a2cd96ca541f00544904a5b9bc987c39d"></a><!-- doxytag: member="idoc::IMultiPageDocument::GetDocumentMetaInfo" ref="a2cd96ca541f00544904a5b9bc987c39d" args="() const =0" -->
 <div class="memitem">
@@ -153,21 +153,21 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="affc10fa80f242ef5d27245e935946008"></a><!-- doxytag: member="idoc::IMultiPageDocument::InsertPage" ref="affc10fa80f242ef5d27245e935946008" args="(const QString &amp;pageTitle=QString(), const QSizeF &amp;pageSize=QSizeF(), int position=&#45;1)=0" -->
+<a class="anchor" id="a4b742230340dd49d6ed018adad638d52"></a><!-- doxytag: member="idoc::IMultiPageDocument::InsertPage" ref="a4b742230340dd49d6ed018adad638d52" args="(const idoc::IDocumentMetaInfo *pageMetaInfoPtr=NULL, const iprm::IParamsSet *pageParameterPtr=NULL, int position=&#45;1)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* idoc::IMultiPageDocument::InsertPage </td>
           <td>(</td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>pageTitle</em> = <code>QString()</code>, </td>
+          <td class="paramtype">const <a class="el" href="classidoc_1_1_i_document_meta_info.html">idoc::IDocumentMetaInfo</a> *&#160;</td>
+          <td class="paramname"><em>pageMetaInfoPtr</em> = <code>NULL</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const QSizeF &amp;&#160;</td>
-          <td class="paramname"><em>pageSize</em> = <code>QSizeF()</code>, </td>
+          <td class="paramtype">const <a class="el" href="classiprm_1_1_i_params_set.html">iprm::IParamsSet</a> *&#160;</td>
+          <td class="paramname"><em>pageParameterPtr</em> = <code>NULL</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

@@ -199,6 +199,7 @@
 , <a class="el" href="classiprm_1_1_c_variable_param_comp.html#aeeb53d42c3942e10b1c855402b66db14">iprm::CVariableParamComp</a>
 , <a class="el" href="classiview_1_1_c_parallelogram_shape.html#a8eef9d77266c68d7c07405fbf9a857ce">iview::CParallelogramShape</a>
 , <a class="el" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#a436e895c8664c39a3ed83af5b6598097">iview::CPerspectiveCalibrationBoundsShape</a>
+, <a class="el" href="classidoc_1_1_c_document_manager_listener_comp.html#a15203874a80cb98e282c3843a7a3d7a9">idoc::CDocumentManagerListenerComp</a>
 , <a class="el" href="classiview_1_1_i_shape_view.html#aff6357f12d41ab7a7dfbf7562aee4e38">iview::IShapeView</a>
 , <a class="el" href="classiview_1_1_c_viewport.html#aa894e9822e1ecde84212a4be707965d1">iview::CViewport</a>
 , <a class="el" href="classiview_1_1_c_tube_polyline_shape.html#a48544efe679deb05e8ef96bcc5f2c984">iview::CTubePolylineShape</a>
@@ -211,7 +212,6 @@
 , <a class="el" href="classiview_1_1_c_screen_transform.html#a64e2071cae866b00c7069a6dc4b23941">iview::CScreenTransform</a>
 , <a class="el" href="classiview_1_1_c_rectangle_shape.html#a090d70a74ddfddc10ae466f992b68973">iview::CRectangleShape</a>
 , <a class="el" href="classiview_1_1_c_polypoint_shape.html#aa9680c0d326ccc283b544715940b3993">iview::CPolypointShape</a>
-, <a class="el" href="classidoc_1_1_c_document_manager_listener_comp.html#a15203874a80cb98e282c3843a7a3d7a9">idoc::CDocumentManagerListenerComp</a>
 , <a class="el" href="classiprm_1_1_t_params_ptr.html#a855054d12e5abf4b6f3afa2d5ad67ea0">iprm::TParamsPtr&lt; ParameterInterace &gt;</a>
 , <a class="el" href="classiview_1_1_c_perspective_calibration_shape.html#a5d3c89099346571f9a69f9fc6e064aa2">iview::CPerspectiveCalibrationShape</a>
 , <a class="el" href="classiview_1_1_c_pin_shape.html#a28949f93f64bd2a1ba8aff946f7035bf">iview::CPinShape</a>
@@ -275,6 +275,7 @@
 , <a class="el" href="classiqt2d_1_1_c_tube_polyline_params_gui_comp.html#aab46485e640d300b8ccc30c8d042b875">iqt2d::CTubePolylineParamsGuiComp</a>
 , <a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a8b23d37e2179b3996b6ad136f47f81ed">iqt2d::CViewProviderGuiComp</a>
 , <a class="el" href="classibase_1_1_t_serializable_container.html#afb9cc42d2d54b61a04026019f6969e9b">ibase::TSerializableContainer&lt; ItemClass &gt;</a>
+, <a class="el" href="classifile_1_1_c_generated_file_name_param_comp.html#aac49f37c65478e4b3059457cf7659607">ifile::CGeneratedFileNameParamComp</a>
 , <a class="el" href="classiqtprm_1_1_c_name_param_gui_comp.html#adfc3bfba3b6856cfeb20376eb6022d6d">iqtprm::CNameParamGuiComp</a>
 , <a class="el" href="classiqtprm_1_1_c_multi_params_manager_gui_comp.html#a2f091d9204e46a154b67b2a869eb70b6">iqtprm::CMultiParamsManagerGuiComp</a>
 , <a class="el" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#a255ad14a29672ad07951f2614884987e">iqtprm::CFileNameParamGuiComp</a>
@@ -338,7 +339,6 @@
 , <a class="el" href="classiqtdoc_1_1_c_doxygen_help_file_provider_comp.html#a9768cd386f7a5adf94054729489f0bfb">iqtdoc::CDoxygenHelpFileProviderComp</a>
 , <a class="el" href="classiqtdoc_1_1_c_document_meta_info_editor_comp.html#a1f5e5b93439df2795c7b669571559cb8">iqtdoc::CDocumentMetaInfoEditorComp</a>
 , <a class="el" href="classiqtdoc_1_1_c_document_import_export_command_comp.html#abff3cca02b4d9993a7d322dadf93d353">iqtdoc::CDocumentImportExportCommandComp</a>
-, <a class="el" href="classifile_1_1_c_generated_file_name_param_comp.html#aac49f37c65478e4b3059457cf7659607">ifile::CGeneratedFileNameParamComp</a>
 , <a class="el" href="classiqt2d_1_1_t_multi_view_extender_delegator_comp_wrap.html#ac1e7eff245c7089c3b95e2747316ad53">iqt2d::TMultiViewExtenderDelegatorCompWrap&lt; Base &gt;</a>
 , <a class="el" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#a51d350a1c29667e93f4e175024635864">iqt2d::TPolygonBasedParamsGuiComp&lt; PolygonBasedShape, PolygonBasedModel &gt;</a>
 , <a class="el" href="classifile_1_1_c_relative_file_name_param_comp.html#ae0bc05b807c6b3e2c2d7daa6053e2181">ifile::CRelativeFileNameParamComp</a>
@@ -410,71 +410,72 @@
 </li>
 <li>BaseClass2
 : <a class="el" href="classicomp_1_1_t_reference_member.html#ab535baa2c4cfd4253bcdcb2fb9f7fa06">icomp::TReferenceMember&lt; Interface &gt;</a>
-, <a class="el" href="classicomp_1_1_t_multi_reference_member.html#a40d83c82c02f6484744616b6b1a57b5c">icomp::TMultiReferenceMember&lt; Interface &gt;</a>
+, <a class="el" href="classicomp_1_1_t_make_component_wrap.html#a0b35c16d25c9e2e9ce82fc0f6865d878">icomp::TMakeComponentWrap&lt; Base, Interface1, Interface2, Interface3, Interface4, Interface5, Interface6, Interface7, Interface8, Interface9, Interface10 &gt;</a>
 , <a class="el" href="classiprm_1_1_c_selectable_params_set_comp.html#ad1fdc0513ca60a7352c5a33c1d9f832b">iprm::CSelectableParamsSetComp</a>
 , <a class="el" href="classiview_1_1_c_viewport.html#a03b0200176f4dd404cbf9cbb57e90894">iview::CViewport</a>
 , <a class="el" href="classiqt_1_1_c_settings_read_archive.html#a53bcd75a56b7d025fbaac43f43ee76e6">iqt::CSettingsReadArchive</a>
 , <a class="el" href="classiqtgui_1_1_c_gui_application_comp.html#a5e97d72d9f4a86ac973bb3cb0e58637b">iqtgui::CGuiApplicationComp</a>
 , <a class="el" href="classiqt_1_1_c_settings_write_archive.html#a6d1daa00c0128a2a1ee7dcd880769cd0">iqt::CSettingsWriteArchive</a>
 , <a class="el" href="classicomp_1_1_t_factory_member.html#aaa2d2c5f16be710978699d376c87a99b">icomp::TFactoryMember&lt; Interface &gt;</a>
-, <a class="el" href="classiqt_1_1_c_xml_file_write_archive.html#aaa2f13c1b0457e6748c19a170d028324">iqt::CXmlFileWriteArchive</a>
-, <a class="el" href="classipackage_1_1_c_packages_loader_comp.html#a8394b87cadcdb7c5da2e31998ea4c547">ipackage::CPackagesLoaderComp</a>
-, <a class="el" href="classidoc_1_1_c_serialized_undo_manager_comp.html#a2694d296840a09d5d4df838fb8918a3c">idoc::CSerializedUndoManagerComp</a>
-, <a class="el" href="classilog_1_1_t_ext_message.html#a3513017c4a204f8903811d0c6f8b5795">ilog::TExtMessage&lt; Element &gt;</a>
 , <a class="el" href="classidoc_1_1_c_single_document_template_comp.html#aeaebc293774d20d1f2381ba23743ca31">idoc::CSingleDocumentTemplateComp</a>
-, <a class="el" href="classibase_1_1_t_composed_factory_comp.html#a0077c0618b2911b86e3cfe12a1e5bba2">ibase::TComposedFactoryComp&lt; Interface &gt;</a>
-, <a class="el" href="classiimg_1_1_c_bitmap_surface.html#ab15621ea0629e5dcaf5c71ddc74cef25">iimg::CBitmapSurface</a>
-, <a class="el" href="classimod_1_1_t_model_wrap.html#a5356515fa14e64d7bf539c7464294f12">imod::TModelWrap&lt; Base &gt;</a>
-, <a class="el" href="classicomp_1_1_t_make_component_wrap.html#a0b35c16d25c9e2e9ce82fc0f6865d878">icomp::TMakeComponentWrap&lt; Base, Interface1, Interface2, Interface3, Interface4, Interface5, Interface6, Interface7, Interface8, Interface9, Interface10 &gt;</a>
-, <a class="el" href="classi2d_1_1_t_object2d_comp_wrap.html#af4791b7bcfeb29877dfb95f86bea181e">i2d::TObject2dCompWrap&lt; BaseObject2d &gt;</a>
-, <a class="el" href="classiqtgui_1_1_c_model_dialog_gui_comp.html#a1002b22d110554dd7150d5ee5defd419">iqtgui::CModelDialogGuiComp</a>
-, <a class="el" href="classimath_1_1_t_fulcrum_grid_function_base.html#a0a4cbbd3fee132a4868d64207c316d9a">imath::TFulcrumGridFunctionBase&lt; Argument, Result, Fulcrums &gt;</a>
-, <a class="el" href="classifile_1_1_c_file_write_archive.html#ac74ce31db748a06341ee4a43c5e6e4de">ifile::CFileWriteArchive</a>
-, <a class="el" href="classidoc_1_1_c_document_manager_listener_comp.html#ac47461e8fe9e5ed6387ee15dceb4824d">idoc::CDocumentManagerListenerComp</a>
-, <a class="el" href="classidoc_1_1_c_selected_doc_model_binder_comp.html#a19c092159be6da42891fd40c19f9f95b">idoc::CSelectedDocModelBinderComp</a>
-, <a class="el" href="classilog_1_1_c_log_comp.html#ae611fbd9ecc49f8397da7871b6e4a162">ilog::CLogComp</a>
-, <a class="el" href="classiqtdoc_1_1_c_singleton_doc_application_comp.html#a60bd63eaaa4c4982716b0b49cb5306a4">iqtdoc::CSingletonDocApplicationComp</a>
-, <a class="el" href="classiprm_1_1_c_name_param_comp.html#aad1cac20189a6f254e8b947d1cb8d529">iprm::CNameParamComp</a>
-, <a class="el" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a9c88a73118d3c5e53cf384b7cc2d5cd8">iqtdoc::CMainWindowGuiComp</a>
-, <a class="el" href="classistd_1_1_t_change_binder.html#a13fca783bae6e7251bfb0420f1986860">istd::TChangeBinder&lt; Base, Base2 &gt;</a>
-, <a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a08b5e789e141a54f216e8d01a2c67b41">iqtgui::CMultiPageGuiCompBase</a>
-, <a class="el" href="classiqtgui_1_1_c_selectable_commands_provider_comp.html#a464ce9581b0eb69d3be2a198345180d6">iqtgui::CSelectableCommandsProviderComp</a>
-, <a class="el" href="classicomp_1_1_t_sim_component_wrap.html#a0104d6349df913a0885ce046bfdab1a9">icomp::TSimComponentWrap&lt; Base &gt;</a>
-, <a class="el" href="classicomp_1_1_t_multi_factory_member.html#a756f0a72628c889ed3b20889f89b46c6">icomp::TMultiFactoryMember&lt; Interface &gt;</a>
-, <a class="el" href="classiprm_1_1_c_composed_params_set_comp.html#aa1c85d8b8b605d30d71147e6342067bd">iprm::CComposedParamsSetComp</a>
-, <a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a5fe23233393b6c8575d3a11654d8b708">iqt2d::CMultiBitmapViewComp</a>
-, <a class="el" href="classiqt2d_1_1_c_selectable_scene_extender_comp.html#ae1686836bdaeb07a7d8bea4f87944cfb">iqt2d::CSelectableSceneExtenderComp</a>
-, <a class="el" href="classibase_1_1_c_model_proxy_comp.html#afe876a44572176704385529bceb122bd">ibase::CModelProxyComp</a>
-, <a class="el" href="classifile_1_1_c_xml_file_read_archive.html#accb1f095c1961e209a97e1d748ee4106">ifile::CXmlFileReadArchive</a>
-, <a class="el" href="classi2d_1_1_c_affine_transformation2d_comp.html#a1e32c28289a50c785c68f9503f9cb6fa">i2d::CAffineTransformation2dComp</a>
-, <a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#ac5fd62c659faa11c16fb4829eb66ed28">iqtgui::CHierarchicalCommand</a>
+, <a class="el" href="classipackage_1_1_c_packages_loader_comp.html#a8394b87cadcdb7c5da2e31998ea4c547">ipackage::CPackagesLoaderComp</a>
 , <a class="el" href="classiloggui_1_1_c_log_gui_comp.html#a90e3909d73dccd9a0e2fa4c1a9b641d3">iloggui::CLogGuiComp</a>
-, <a class="el" href="classifile_1_1_c_file_read_archive.html#a48bb1b1a5f1801b95c794ee40f199810">ifile::CFileReadArchive</a>
-, <a class="el" href="classifile_1_1_c_xml_file_write_archive.html#a250254ac4adee9581b6b23ee36862fdd">ifile::CXmlFileWriteArchive</a>
+, <a class="el" href="classilog_1_1_t_ext_message.html#a3513017c4a204f8903811d0c6f8b5795">ilog::TExtMessage&lt; Element &gt;</a>
+, <a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html#aeee7dbd83cd9aafae794b668d85fdf3f">idoc::TMultiPageDocumentWrap&lt; Base &gt;</a>
+, <a class="el" href="classibase_1_1_c_model_proxy_comp.html#afe876a44572176704385529bceb122bd">ibase::CModelProxyComp</a>
+, <a class="el" href="classicomp_1_1_t_multi_factory_member.html#a756f0a72628c889ed3b20889f89b46c6">icomp::TMultiFactoryMember&lt; Interface &gt;</a>
+, <a class="el" href="classimath_1_1_t_fulcrum_grid_function_base.html#a0a4cbbd3fee132a4868d64207c316d9a">imath::TFulcrumGridFunctionBase&lt; Argument, Result, Fulcrums &gt;</a>
+, <a class="el" href="classimod_1_1_t_model_wrap.html#a5356515fa14e64d7bf539c7464294f12">imod::TModelWrap&lt; Base &gt;</a>
+, <a class="el" href="classi2d_1_1_t_object2d_comp_wrap.html#af4791b7bcfeb29877dfb95f86bea181e">i2d::TObject2dCompWrap&lt; BaseObject2d &gt;</a>
+, <a class="el" href="classiqtdoc_1_1_c_singleton_doc_application_comp.html#a60bd63eaaa4c4982716b0b49cb5306a4">iqtdoc::CSingletonDocApplicationComp</a>
+, <a class="el" href="classilog_1_1_c_log_comp.html#ae611fbd9ecc49f8397da7871b6e4a162">ilog::CLogComp</a>
+, <a class="el" href="classidoc_1_1_c_serialized_undo_manager_comp.html#a2694d296840a09d5d4df838fb8918a3c">idoc::CSerializedUndoManagerComp</a>
+, <a class="el" href="classicomp_1_1_t_sim_component_wrap.html#a0104d6349df913a0885ce046bfdab1a9">icomp::TSimComponentWrap&lt; Base &gt;</a>
+, <a class="el" href="classidoc_1_1_c_selected_doc_model_binder_comp.html#a19c092159be6da42891fd40c19f9f95b">idoc::CSelectedDocModelBinderComp</a>
+, <a class="el" href="classiimg_1_1_c_bitmap_surface.html#ab15621ea0629e5dcaf5c71ddc74cef25">iimg::CBitmapSurface</a>
+, <a class="el" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a9c88a73118d3c5e53cf384b7cc2d5cd8">iqtdoc::CMainWindowGuiComp</a>
+, <a class="el" href="classiprm_1_1_c_composed_params_set_comp.html#aa1c85d8b8b605d30d71147e6342067bd">iprm::CComposedParamsSetComp</a>
+, <a class="el" href="classiqt2d_1_1_c_selectable_scene_extender_comp.html#ae1686836bdaeb07a7d8bea4f87944cfb">iqt2d::CSelectableSceneExtenderComp</a>
+, <a class="el" href="classiqtgui_1_1_c_selectable_commands_provider_comp.html#a464ce9581b0eb69d3be2a198345180d6">iqtgui::CSelectableCommandsProviderComp</a>
+, <a class="el" href="classiqtgui_1_1_c_model_dialog_gui_comp.html#a1002b22d110554dd7150d5ee5defd419">iqtgui::CModelDialogGuiComp</a>
+, <a class="el" href="classiqtgui_1_1_c_multi_page_gui_comp_base.html#a08b5e789e141a54f216e8d01a2c67b41">iqtgui::CMultiPageGuiCompBase</a>
+, <a class="el" href="classistd_1_1_t_change_binder.html#a13fca783bae6e7251bfb0420f1986860">istd::TChangeBinder&lt; Base, Base2 &gt;</a>
+, <a class="el" href="classicomp_1_1_t_multi_reference_member.html#a40d83c82c02f6484744616b6b1a57b5c">icomp::TMultiReferenceMember&lt; Interface &gt;</a>
+, <a class="el" href="classibase_1_1_t_composed_factory_comp.html#a0077c0618b2911b86e3cfe12a1e5bba2">ibase::TComposedFactoryComp&lt; Interface &gt;</a>
+, <a class="el" href="classiprm_1_1_c_name_param_comp.html#aad1cac20189a6f254e8b947d1cb8d529">iprm::CNameParamComp</a>
+, <a class="el" href="classiqt2d_1_1_c_multi_bitmap_view_comp.html#a5fe23233393b6c8575d3a11654d8b708">iqt2d::CMultiBitmapViewComp</a>
+, <a class="el" href="classi2d_1_1_c_affine_transformation2d_comp.html#a1e32c28289a50c785c68f9503f9cb6fa">i2d::CAffineTransformation2dComp</a>
+, <a class="el" href="classifile_1_1_c_xml_file_read_archive.html#accb1f095c1961e209a97e1d748ee4106">ifile::CXmlFileReadArchive</a>
+, <a class="el" href="classifile_1_1_c_file_write_archive.html#ac74ce31db748a06341ee4a43c5e6e4de">ifile::CFileWriteArchive</a>
 , <a class="el" href="classiqt2d_1_1_c_view_provider_gui_comp.html#a4627941fbe791699d2c1e0f940b3986f">iqt2d::CViewProviderGuiComp</a>
+, <a class="el" href="classifile_1_1_c_xml_file_write_archive.html#a250254ac4adee9581b6b23ee36862fdd">ifile::CXmlFileWriteArchive</a>
+, <a class="el" href="classidoc_1_1_c_document_manager_listener_comp.html#ac47461e8fe9e5ed6387ee15dceb4824d">idoc::CDocumentManagerListenerComp</a>
+, <a class="el" href="classifile_1_1_c_file_read_archive.html#a48bb1b1a5f1801b95c794ee40f199810">ifile::CFileReadArchive</a>
+, <a class="el" href="classiqt_1_1_c_xml_file_write_archive.html#aaa2f13c1b0457e6748c19a170d028324">iqt::CXmlFileWriteArchive</a>
+, <a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#ac5fd62c659faa11c16fb4829eb66ed28">iqtgui::CHierarchicalCommand</a>
 , <a class="el" href="classiqtgui_1_1_c_progress_manager_gui_comp.html#a023eb4e9a4aab3992f0d2b91d02f3a2e">iqtgui::CProgressManagerGuiComp</a>
 </li>
 <li>BaseClass3
 : <a class="el" href="classiqtgui_1_1_c_hierarchical_command.html#a746852630fba2c048cb2de454ff53d2a">iqtgui::CHierarchicalCommand</a>
 </li>
 <li>BeforeUpdate()
-: <a class="el" href="classimod_1_1_c_single_model_observer_base.html#a27b16edc19f76f96aec64bdf284ac0cb">imod::CSingleModelObserverBase</a>
+: <a class="el" href="classiqtprm_1_1_c_selectable_params_set_gui_comp.html#ae25102ae2c71823cd311ec7f74d4880f">iqtprm::CSelectableParamsSetGuiComp</a>
 , <a class="el" href="classidoc_1_1_c_serialized_undo_manager_comp.html#a26ef612e3a2758caf305ca87e252bf27">idoc::CSerializedUndoManagerComp</a>
-, <a class="el" href="classiqtprm_1_1_c_selectable_params_set_gui_comp.html#ae25102ae2c71823cd311ec7f74d4880f">iqtprm::CSelectableParamsSetGuiComp</a>
-, <a class="el" href="classimod_1_1_c_multi_model_observer_base.html#a22234401b6906764d85a3a9b86f21686">imod::CMultiModelObserverBase</a>
-, <a class="el" href="classimod_1_1_c_multi_model_bridge_base.html#a9b7e27e61bd22e7777c719fb5300291e">imod::CMultiModelBridgeBase</a>
-, <a class="el" href="classiqt2d_1_1_c_selectable_scene_extender_comp.html#a1c44cac3d48628822bc08939fb203d6d">iqt2d::CSelectableSceneExtenderComp</a>
-, <a class="el" href="classimod_1_1_i_observer.html#a407ce419579e7f7856ba450492121b4d">imod::IObserver</a>
-, <a class="el" href="classibase_1_1_c_multi_observer_binder_comp.html#a7b1b8d30bd44c2ef234e09c9cff5d6ae">ibase::CMultiObserverBinderComp</a>
 , <a class="el" href="classidoc_1_1_c_selected_doc_model_binder_comp.html#a32b4556f05eeb7a12b20f5ab928813cf">idoc::CSelectedDocModelBinderComp</a>
 , <a class="el" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#ae0dc25d39a40faf7c8930c30e630ab99">iqtprm::CParamsManagerGuiCompBase</a>
+, <a class="el" href="classimod_1_1_c_multi_model_observer_base.html#a22234401b6906764d85a3a9b86f21686">imod::CMultiModelObserverBase</a>
+, <a class="el" href="classimod_1_1_c_single_model_observer_base.html#a27b16edc19f76f96aec64bdf284ac0cb">imod::CSingleModelObserverBase</a>
+, <a class="el" href="classiqt2d_1_1_c_selectable_scene_extender_comp.html#a1c44cac3d48628822bc08939fb203d6d">iqt2d::CSelectableSceneExtenderComp</a>
+, <a class="el" href="classibase_1_1_c_multi_observer_binder_comp.html#a7b1b8d30bd44c2ef234e09c9cff5d6ae">ibase::CMultiObserverBinderComp</a>
+, <a class="el" href="classimod_1_1_c_multi_model_bridge_base.html#a9b7e27e61bd22e7777c719fb5300291e">imod::CMultiModelBridgeBase</a>
+, <a class="el" href="classimod_1_1_i_observer.html#a407ce419579e7f7856ba450492121b4d">imod::IObserver</a>
 </li>
 <li>Begin()
 : <a class="el" href="classistd_1_1_t_array.html#abab51963c97526d23c6de156fceadaef">istd::TArray&lt; Element, Dimensions &gt;</a>
 , <a class="el" href="classistd_1_1_t_index.html#a36811e38148da42aca4192999d5cf276">istd::TIndex&lt; Dimensions &gt;</a>
 , <a class="el" href="classistd_1_1_t_var_array.html#a536f6907c76e1d1253cccc1b5674cd47">istd::TVarArray&lt; Element &gt;</a>
-, <a class="el" href="classistd_1_1_c_fast_binary_index.html#a425c82ef4756a2f6dfd5f01a7fd7b655">istd::CFastBinaryIndex</a>
 , <a class="el" href="classistd_1_1_c_var_index.html#a4068e7ead8704fbf7eca8256e1d253fd">istd::CVarIndex</a>
+, <a class="el" href="classistd_1_1_c_fast_binary_index.html#a425c82ef4756a2f6dfd5f01a7fd7b655">istd::CFastBinaryIndex</a>
 </li>
 <li>BeginChanges()
 : <a class="el" href="classistd_1_1_c_change_delegator.html#ab5bd9e015ddfa3f39760e4e52b622169">istd::CChangeDelegator</a>
@@ -484,53 +485,53 @@
 </li>
 <li>BeginDrag()
 : <a class="el" href="classiview_1_1_i_draggable.html#afb96b90eab903a8f879bdf47ad46895d">iview::IDraggable</a>
-, <a class="el" href="classiview_1_1_c_interactive_shape_base.html#a1230c65b77dd6ce1710ab256571518be">iview::CInteractiveShapeBase</a>
 , <a class="el" href="classiview_1_1_c_view_base.html#a5d94168060c755e0f840f0f8d0dcfffc">iview::CViewBase</a>
+, <a class="el" href="classiview_1_1_c_interactive_shape_base.html#a1230c65b77dd6ce1710ab256571518be">iview::CInteractiveShapeBase</a>
 , <a class="el" href="classiview_1_1_c_interactive_view_layer.html#a8c9e2a0c50b75ab551f23163e2e505c4">iview::CInteractiveViewLayer</a>
 </li>
 <li>BeginLogDrag()
 : <a class="el" href="classiview_1_1_c_perspective_calibration_bounds_shape.html#af08ea2b237d12e208c6b794561ec6809">iview::CPerspectiveCalibrationBoundsShape</a>
-, <a class="el" href="classiview_1_1_c_arrow_shape.html#ac0500a3940c16d59a0951b9f54eeca87">iview::CArrowShape</a>
-, <a class="el" href="classiview_1_1_c_affine_transformation2d_shape.html#a3999fad8ccd57045a3ab4662be184769">iview::CAffineTransformation2dShape</a>
-, <a class="el" href="classiview_1_1_c_parallelogram_shape.html#a63111d7234a70d3d569778cc95418a81">iview::CParallelogramShape</a>
-, <a class="el" href="classiview_1_1_c_interactive_shape_base.html#a2fe6873ccd865367059e41372bbc2401">iview::CInteractiveShapeBase</a>
-, <a class="el" href="classiview_1_1_c_transformable_rectangle_shape.html#ad9a8aae68a801486d8df5bb7c71a4e1a">iview::CTransformableRectangleShape</a>
-, <a class="el" href="classiview_1_1_c_pin_shape.html#a9b8360bea904af1fcaee56f7185d6a46">iview::CPinShape</a>
-, <a class="el" href="classiview_1_1_c_none_calibration_shape.html#aa121b4e05b51323f36b578d4414debef">iview::CNoneCalibrationShape</a>
 , <a class="el" href="classiview_1_1_c_rectangle_shape.html#a92e68faeac21216af1bfe038f728e405">iview::CRectangleShape</a>
-, <a class="el" href="classiview_1_1_c_line_shape.html#aa3bb982b7a41a22f1d466c9f72fb2150">iview::CLineShape</a>
+, <a class="el" href="classiview_1_1_c_none_calibration_shape.html#aa121b4e05b51323f36b578d4414debef">iview::CNoneCalibrationShape</a>
+, <a class="el" href="classiview_1_1_c_arrow_shape.html#ac0500a3940c16d59a0951b9f54eeca87">iview::CArrowShape</a>
+, <a class="el" href="classiview_1_1_c_pin_shape.html#a9b8360bea904af1fcaee56f7185d6a46">iview::CPinShape</a>
+, <a class="el" href="classiview_1_1_c_interactive_shape_base.html#a2fe6873ccd865367059e41372bbc2401">iview::CInteractiveShapeBase</a>
+, <a class="el" href="classiview_1_1_c_parallelogram_shape.html#a63111d7234a70d3d569778cc95418a81">iview::CParallelogramShape</a>
+, <a class="el" href="classiview_1_1_c_transformable_rectangle_shape.html#ad9a8aae68a801486d8df5bb7c71a4e1a">iview::CTransformableRectangleShape</a>
 , <a class="el" href="classiview_1_1_c_polygon_shape.html#ac13215b71d067a27a93f1eaffca10b2b">iview::CPolygonShape</a>
+, <a class="el" href="classiview_1_1_c_affine_transformation2d_shape.html#a3999fad8ccd57045a3ab4662be184769">iview::CAffineTransformation2dShape</a>
+, <a class="el" href="classiview_1_1_c_line_shape.html#aa3bb982b7a41a22f1d466c9f72fb2150">iview::CLineShape</a>
 </li>
 <li>BeginModelChanges()
 : <a class="el" href="classiview_1_1_c_interactive_shape_base.html#a83c37f04fab3eb2e9bf8d7c3336c9ef7">iview::CInteractiveShapeBase</a>
 </li>
 <li>BeginMultiTag()
 : <a class="el" href="classiqt_1_1_c_xml_file_read_archive.html#a247ca4ea07aa1f68836ba846cfd4ada3">iqt::CXmlFileReadArchive</a>
-, <a class="el" href="classiser_1_1_c_archive_base.html#a339665cea7bc9ebf4d3ecfd74d70d9ac">iser::CArchiveBase</a>
 , <a class="el" href="classiser_1_1_c_xml_write_archive_base.html#af8df321e9c4c694a987dd090278988cf">iser::CXmlWriteArchiveBase</a>
-, <a class="el" href="classiqt_1_1_c_settings_read_archive.html#ad165bbc201f0d39a87017cdfceae73f1">iqt::CSettingsReadArchive</a>
 , <a class="el" href="classiser_1_1_i_archive.html#aae3a60247b5538e7fdbe0250b0b8729e">iser::IArchive</a>
-, <a class="el" href="classiser_1_1_c_xml_read_archive_base.html#a1691fbe3480c5bf84e765d34bd04a2a4">iser::CXmlReadArchiveBase</a>
 , <a class="el" href="classiqt_1_1_c_xml_file_write_archive.html#ac545294a619a5acc6d9d763fd51db1e7">iqt::CXmlFileWriteArchive</a>
+, <a class="el" href="classiser_1_1_c_xml_read_archive_base.html#a1691fbe3480c5bf84e765d34bd04a2a4">iser::CXmlReadArchiveBase</a>
+, <a class="el" href="classiser_1_1_c_archive_base.html#a339665cea7bc9ebf4d3ecfd74d70d9ac">iser::CArchiveBase</a>
+, <a class="el" href="classiqt_1_1_c_settings_read_archive.html#ad165bbc201f0d39a87017cdfceae73f1">iqt::CSettingsReadArchive</a>
 , <a class="el" href="classiqt_1_1_c_settings_write_archive.html#a94d2ba208f6c175b7325b5c8b824b9b4">iqt::CSettingsWriteArchive</a>
 </li>
 <li>BeginProgressSession()
-: <a class="el" href="classibase_1_1_c_delegated_progress_manager.html#acd1908a958a22e8a8917f0a4333848ff">ibase::CDelegatedProgressManager</a>
-, <a class="el" href="classibase_1_1_i_progress_manager.html#ad3d3005f01be4ad7192e461550cd59cc">ibase::IProgressManager</a>
+: <a class="el" href="classibase_1_1_i_progress_manager.html#ad3d3005f01be4ad7192e461550cd59cc">ibase::IProgressManager</a>
 , <a class="el" href="classiqtgui_1_1_c_progress_manager_gui_comp.html#ae654249d7ea94668547dab9663791e70">iqtgui::CProgressManagerGuiComp</a>
+, <a class="el" href="classibase_1_1_c_delegated_progress_manager.html#acd1908a958a22e8a8917f0a4333848ff">ibase::CDelegatedProgressManager</a>
 </li>
 <li>BeginTag()
-: <a class="el" href="classiqt_1_1_c_settings_write_archive.html#abc5a62b39684185e1e5d3ce928abddaf">iqt::CSettingsWriteArchive</a>
-, <a class="el" href="classiser_1_1_c_xml_read_archive_base.html#a16726dfa26654ada979b8e9a72ce6f14">iser::CXmlReadArchiveBase</a>
-, <a class="el" href="classifile_1_1_c_file_read_archive.html#ad24f052beca32ef60daea1abdd15d0d1">ifile::CFileReadArchive</a>
-, <a class="el" href="classiqt_1_1_c_xml_file_read_archive.html#a90625c626003ff3b9c3867dca8eaad0b">iqt::CXmlFileReadArchive</a>
+: <a class="el" href="classifile_1_1_c_file_read_archive.html#ad24f052beca32ef60daea1abdd15d0d1">ifile::CFileReadArchive</a>
 , <a class="el" href="classiser_1_1_c_binary_write_archive_base.html#a31671a29269c86b4f8ea42759127225b">iser::CBinaryWriteArchiveBase</a>
-, <a class="el" href="classiser_1_1_c_binary_read_archive_base.html#a80a623c1bcc846091f88d0405eb864e8">iser::CBinaryReadArchiveBase</a>
-, <a class="el" href="classifile_1_1_c_file_write_archive.html#aa916bc5ed885551a4f46b49c144664b0">ifile::CFileWriteArchive</a>
 , <a class="el" href="classiser_1_1_c_xml_write_archive_base.html#a2ac6ac1a174a45ac9b4ead5906435eee">iser::CXmlWriteArchiveBase</a>
-, <a class="el" href="classiqt_1_1_c_xml_file_write_archive.html#a2953c8d45ea8baa1f3dc896b85129cfd">iqt::CXmlFileWriteArchive</a>
-, <a class="el" href="classiqt_1_1_c_settings_read_archive.html#a560e7054e474388cecdc995880d828e9">iqt::CSettingsReadArchive</a>
+, <a class="el" href="classifile_1_1_c_file_write_archive.html#aa916bc5ed885551a4f46b49c144664b0">ifile::CFileWriteArchive</a>
+, <a class="el" href="classiser_1_1_c_xml_read_archive_base.html#a16726dfa26654ada979b8e9a72ce6f14">iser::CXmlReadArchiveBase</a>
+, <a class="el" href="classiqt_1_1_c_settings_write_archive.html#abc5a62b39684185e1e5d3ce928abddaf">iqt::CSettingsWriteArchive</a>
 , <a class="el" href="classiser_1_1_i_archive.html#ae1d867fd7aed755f7cd52d2d0340347f">iser::IArchive</a>
+, <a class="el" href="classiser_1_1_c_binary_read_archive_base.html#a80a623c1bcc846091f88d0405eb864e8">iser::CBinaryReadArchiveBase</a>
+, <a class="el" href="classiqt_1_1_c_settings_read_archive.html#a560e7054e474388cecdc995880d828e9">iqt::CSettingsReadArchive</a>
+, <a class="el" href="classiqt_1_1_c_xml_file_write_archive.html#a2953c8d45ea8baa1f3dc896b85129cfd">iqt::CXmlFileWriteArchive</a>
+, <a class="el" href="classiqt_1_1_c_xml_file_read_archive.html#a90625c626003ff3b9c3867dca8eaad0b">iqt::CXmlFileReadArchive</a>
 </li>
 <li>BitmapType
 : <a class="el" href="classiimg_1_1_t_multi_page_bitmap.html#a564ca332f6b2297f6844db5246218358">iimg::TMultiPageBitmap&lt; BitmapImpl &gt;</a>
@@ -563,7 +564,7 @@
 : <a class="el" href="classistd_1_1_c_bit_manip.html#a2923405cc83a85ad6ee90051f7ac5c15">istd::CBitManip</a>
 </li>
 <li>CBitmap()
-: <a class="el" href="classiimg_1_1_c_bitmap.html#a23cbae3186d6ff34745c6f3ee1727891">iimg::CBitmap</a>
+: <a class="el" href="classiimg_1_1_c_bitmap.html#a784eb752df2a6980c56b3054af45b5fb">iimg::CBitmap</a>
 </li>
 <li>CBitmapSurface()
 : <a class="el" href="classiimg_1_1_c_bitmap_surface.html#a04009edb264e7de140646b01fb8b820e">iimg::CBitmapSurface</a>

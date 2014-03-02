@@ -66,9 +66,6 @@ Inheritance diagram for iqtgui::CSimpleMainWindowGuiComp:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#a1fbf154858c5911bac9f2c9127f56a46">DockFeatures</a> { <a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#a1fbf154858c5911bac9f2c9127f56a46ac48ba095ab09cae5e027f2e398af59d4">DF_MOVEABLE</a> =  1, 
-<a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#a1fbf154858c5911bac9f2c9127f56a46aceabe066f181c3045d50e517eba8c581">DF_FLOATABLE</a> =  2
- }</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#a70f504edf7d3d9ab42c4d0f144ff0634">GroupId</a> { <a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#a70f504edf7d3d9ab42c4d0f144ff0634a5f89e2980dd00dbe41c40a441de7907d">GI_SETTINGS</a> =  0x400
  }</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
@@ -77,7 +74,7 @@ Public Types</h2></td></tr>
 &lt; QMainWindow &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#a3ab0ae18afcd5903bd6ed541d4ae6bcd">BaseClass</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#a16f541dd9a59ca9aee90604519a07e68">I_ASSIGN_TO</a> (m_workspaceCompPtr, m_workspaceCommandsCompPtr, true)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#afcd1e8439df50b0459d93bd5de7b2cd0">I_ASSIGN_TO</a> (m_workspaceCommandsCompPtr, m_workspaceCompPtr, false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#acb3b847be66deb18bad5331998322a04">I_ASSIGN_TO</a> (m_mainWindowCommandsCompPtr, m_mainWindowComponentsCompPtr, false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#ac9989e751fd3aab8360af01bce735f04">CSimpleMainWindowGuiComp</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#a0ac1b556080cb7f1e383727c0c2fe1f1">OnTryClose</a> (bool *ignoredPtr=NULL)</td></tr>
@@ -157,34 +154,11 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html#l00127">127</a> of file <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html">CSimpleMainWindowGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html#l00121">121</a> of file <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html">CSimpleMainWindowGuiComp.h</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Enumeration Documentation</h2>
-<a class="anchor" id="a1fbf154858c5911bac9f2c9127f56a46"></a><!-- doxytag: member="iqtgui::CSimpleMainWindowGuiComp::DockFeatures" ref="a1fbf154858c5911bac9f2c9127f56a46" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="classiqtgui_1_1_c_simple_main_window_gui_comp.html#a1fbf154858c5911bac9f2c9127f56a46">iqtgui::CSimpleMainWindowGuiComp::DockFeatures</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em><a class="anchor" id="a1fbf154858c5911bac9f2c9127f56a46ac48ba095ab09cae5e027f2e398af59d4"></a><!-- doxytag: member="DF_MOVEABLE" ref="a1fbf154858c5911bac9f2c9127f56a46ac48ba095ab09cae5e027f2e398af59d4" args="" -->DF_MOVEABLE</em>&nbsp;</td><td>
-</td></tr>
-<tr><td valign="top"><em><a class="anchor" id="a1fbf154858c5911bac9f2c9127f56a46aceabe066f181c3045d50e517eba8c581"></a><!-- doxytag: member="DF_FLOATABLE" ref="a1fbf154858c5911bac9f2c9127f56a46aceabe066f181c3045d50e517eba8c581" args="" -->DF_FLOATABLE</em>&nbsp;</td><td>
-</td></tr>
-</table>
-</dd>
-</dl>
-
-<p>Definition at line <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html#l00038">38</a> of file <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html">CSimpleMainWindowGuiComp.h</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a70f504edf7d3d9ab42c4d0f144ff0634"></a><!-- doxytag: member="iqtgui::CSimpleMainWindowGuiComp::GroupId" ref="a70f504edf7d3d9ab42c4d0f144ff0634" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -204,7 +178,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiqtdoc_1_1_c_main_window_gui_comp.html#a37f570cb3786da9479dbb3ced2083621">iqtdoc::CMainWindowGuiComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html#l00061">61</a> of file <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html">CSimpleMainWindowGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html#l00055">55</a> of file <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html">CSimpleMainWindowGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -306,26 +280,26 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a16f541dd9a59ca9aee90604519a07e68"></a><!-- doxytag: member="iqtgui::CSimpleMainWindowGuiComp::I_ASSIGN_TO" ref="a16f541dd9a59ca9aee90604519a07e68" args="(m_workspaceCompPtr, m_workspaceCommandsCompPtr, true)" -->
+<a class="anchor" id="afcd1e8439df50b0459d93bd5de7b2cd0"></a><!-- doxytag: member="iqtgui::CSimpleMainWindowGuiComp::I_ASSIGN_TO" ref="afcd1e8439df50b0459d93bd5de7b2cd0" args="(m_workspaceCommandsCompPtr, m_workspaceCompPtr, false)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">iqtgui::CSimpleMainWindowGuiComp::I_ASSIGN_TO </td>
           <td>(</td>
-          <td class="paramtype">m_workspaceCompPtr&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">m_workspaceCommandsCompPtr&#160;</td>
           <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">true&#160;</td>
+          <td class="paramtype">m_workspaceCompPtr&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">false&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -768,7 +742,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html#l00125">125</a> of file <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html">CSimpleMainWindowGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html#l00119">119</a> of file <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html">CSimpleMainWindowGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -783,7 +757,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html#l00129">129</a> of file <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html">CSimpleMainWindowGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html#l00123">123</a> of file <a class="el" href="_c_simple_main_window_gui_comp_8h_source.html">CSimpleMainWindowGuiComp.h</a>.</p>
 
 </div>
 </div>

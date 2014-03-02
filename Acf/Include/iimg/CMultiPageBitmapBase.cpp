@@ -32,8 +32,8 @@ namespace iimg
 // reimplemented (idoc::IMultiPageDocument)
 
 istd::IChangeable* CMultiPageBitmapBase::InsertPage(
-			const QString& pageTitle,
-			const QSizeF& /*pageSize*/,
+			const idoc::IDocumentMetaInfo* pageMetaInfoPtr,
+			const iprm::IParamsSet* /*pageParameterPtr*/,
 			int position)
 {
 	istd::CChangeNotifier changePtr(this);
@@ -42,7 +42,10 @@ istd::IChangeable* CMultiPageBitmapBase::InsertPage(
 
 	IBitmap* bitmapPtr = CreateBitmap();
 
-	newPage.pageMetaInfo.SetDocumentMetaInfo(idoc::IDocumentMetaInfo::MIT_TITLE, pageTitle);
+	if (pageMetaInfoPtr != NULL){
+		newPage.pageMetaInfo.CopyFrom(*pageMetaInfoPtr);
+	}
+
 	newPage.pagePtr.SetPtr(bitmapPtr);
 
 	if (position < 0){
@@ -122,45 +125,6 @@ iimg::IBitmap* CMultiPageBitmapBase::InsertBitmap(
 void CMultiPageBitmapBase::RemoveBitmap(int index)
 {
 	RemovePage(index);
-}
-
-
-// reimplemented (istd::IChangeable)
-
-bool CMultiPageBitmapBase::CopyFrom(const istd::IChangeable& object, CompatibilityMode /*mode*/)
-{
-	const CMultiPageBitmapBase* sourcePtr = dynamic_cast<const CMultiPageBitmapBase*>(&object);
-	if (sourcePtr != NULL){
-		istd::CChangeNotifier changePtr(this);
-
-		m_documentPages.clear();
-
-		for (int pageIndex = 0; pageIndex < sourcePtr->m_documentPages.count(); ++pageIndex){
-			istd::IChangeable* pagePtr = InsertPage();
-			if (pagePtr == NULL){
-				return false;
-			}
-
-			const istd::IChangeable* sourcePagePtr = sourcePtr->m_documentPages.at(pageIndex).pagePtr.GetPtr();
-			Q_ASSERT(sourcePagePtr != NULL);
-
-			if (!pagePtr->CopyFrom(*sourcePagePtr)){
-				return false;
-			}
-
-			if (!m_documentPages[pageIndex].pageMetaInfo.CopyFrom(sourcePtr->m_documentPages.at(pageIndex).pageMetaInfo)){
-				return false;
-			}
-		}
-
-		if (!m_metaInfo.CopyFrom(sourcePtr->m_metaInfo)){
-			return false;
-		}
-
-		return true;
-	}
-
-	return false;
 }
 
 

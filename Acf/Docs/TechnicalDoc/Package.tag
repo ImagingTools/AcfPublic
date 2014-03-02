@@ -2005,6 +2005,7 @@
     <filename>_i_multi_page_document_8h</filename>
     <includes id="_i_changeable_8h" name="IChangeable.h" local="no" imported="no">istd/IChangeable.h</includes>
     <class kind="class">idoc::IMultiPageDocument</class>
+    <namespace>iprm</namespace>
     <namespace>idoc</namespace>
   </compound>
   <compound kind="file">
@@ -21781,8 +21782,8 @@
       <type>virtual istd::IChangeable *</type>
       <name>InsertPage</name>
       <anchorfile>classidoc_1_1_i_multi_page_document.html</anchorfile>
-      <anchor>affc10fa80f242ef5d27245e935946008</anchor>
-      <arglist>(const QString &amp;pageTitle=QString(), const QSizeF &amp;pageSize=QSizeF(), int position=-1)=0</arglist>
+      <anchor>a4b742230340dd49d6ed018adad638d52</anchor>
+      <arglist>(const idoc::IDocumentMetaInfo *pageMetaInfoPtr=NULL, const iprm::IParamsSet *pageParameterPtr=NULL, int position=-1)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -21873,8 +21874,9 @@
   <compound kind="class">
     <name>idoc::TMultiPageDocumentWrap</name>
     <filename>classidoc_1_1_t_multi_page_document_wrap.html</filename>
-    <templarg></templarg>
+    <templarg>Base</templarg>
     <base virtualness="virtual">Base</base>
+    <base>idoc::CStandardDocumentMetaInfo</base>
     <base virtualness="virtual">iprm::IOptionsList</base>
     <class kind="struct">idoc::TMultiPageDocumentWrap::Page</class>
     <member kind="typedef">
@@ -21882,6 +21884,13 @@
       <name>BaseClass</name>
       <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
       <anchor>a18c4f12c76b060a504bd198577569c69</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CStandardDocumentMetaInfo</type>
+      <name>BaseClass2</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>aeee7dbd83cd9aafae794b668d85fdf3f</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -21975,6 +21984,13 @@
       <anchor>a54c26fdb7854b18c0bf276c4c31f0f4a</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a36e186bc048adedac51c48788a6f0bce</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
     <member kind="typedef" protection="protected">
       <type>QVector&lt; Page &gt;</type>
       <name>Pages</name>
@@ -21994,13 +22010,6 @@
       <name>m_documentPages</name>
       <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
       <anchor>a49918c5f92f9611dbb86363fca61c0e8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>CStandardDocumentMetaInfo</type>
-      <name>m_metaInfo</name>
-      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
-      <anchor>ac1fd4adcb3266b0fa85a868b787a6872</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -24454,8 +24463,8 @@
       <type>virtual istd::IChangeable *</type>
       <name>InsertPage</name>
       <anchorfile>classiimg_1_1_c_multi_page_bitmap_base.html</anchorfile>
-      <anchor>a120dffd4d847fdb5d4196f0e15d8ce3c</anchor>
-      <arglist>(const QString &amp;pageTitle=QString(), const QSizeF &amp;pageSize=QSizeF(), int position=-1)</arglist>
+      <anchor>a9a519a3abb331d1391ae1e6b56d5ca9e</anchor>
+      <arglist>(const idoc::IDocumentMetaInfo *pageMetaInfoPtr=NULL, const iprm::IParamsSet *pageParameterPtr=NULL, int position=-1)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iprm::IOptionsList *</type>
@@ -24505,13 +24514,6 @@
       <anchorfile>classiimg_1_1_c_multi_page_bitmap_base.html</anchorfile>
       <anchor>a01f2f6ac1b51f9b031aeff3f455b322c</anchor>
       <arglist>(int index)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CopyFrom</name>
-      <anchorfile>classiimg_1_1_c_multi_page_bitmap_base.html</anchorfile>
-      <anchor>ab8096c46d30eee7fdc5052ab06085e5e</anchor>
-      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual IBitmap *</type>
@@ -40435,24 +40437,6 @@
     <filename>classiqtgui_1_1_c_simple_main_window_gui_comp.html</filename>
     <base>TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QMainWindow &gt; &gt;</base>
     <member kind="enumeration">
-      <name>DockFeatures</name>
-      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
-      <anchor>a1fbf154858c5911bac9f2c9127f56a46</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DF_MOVEABLE</name>
-      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
-      <anchor>a1fbf154858c5911bac9f2c9127f56a46ac48ba095ab09cae5e027f2e398af59d4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DF_FLOATABLE</name>
-      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
-      <anchor>a1fbf154858c5911bac9f2c9127f56a46aceabe066f181c3045d50e517eba8c581</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
       <name>GroupId</name>
       <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
       <anchor>a70f504edf7d3d9ab42c4d0f144ff0634</anchor>
@@ -40475,8 +40459,8 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
-      <anchor>a16f541dd9a59ca9aee90604519a07e68</anchor>
-      <arglist>(m_workspaceCompPtr, m_workspaceCommandsCompPtr, true)</arglist>
+      <anchor>afcd1e8439df50b0459d93bd5de7b2cd0</anchor>
+      <arglist>(m_workspaceCommandsCompPtr, m_workspaceCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
