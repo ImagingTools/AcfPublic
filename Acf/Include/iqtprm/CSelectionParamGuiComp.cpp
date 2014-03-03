@@ -283,6 +283,11 @@ void CSelectionParamGuiComp::UpdateComboBoxesView()
 			}
 
 			switchBoxPtr->setCurrentIndex(selectedIndex);
+
+			if(m_disableWhenEmptyAttrPtr.IsValid() && *m_disableWhenEmptyAttrPtr && optionsCount == 0)
+			{
+				switchBoxPtr->setEnabled(false);
+			}
 		}
 	}
 
