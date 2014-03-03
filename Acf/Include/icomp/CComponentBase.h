@@ -444,6 +444,8 @@ inline bool CComponentBase::IsComponentActive() const
 	Used to assign value for overloaded attributes or references.
 */
 #define I_ASSIGN_TO(member, baseAttribute, isObligatory)\
+	static icomp::CRelatedInfoRegistrator member##_Info(baseAttribute##_Info, icomp::IComponentStaticInfo::MGI_INTERFACES, istd::CClassInfo::GetInfo<member##_Type::InterfaceType>().GetName(), isObligatory? member##_AttrType::DAF_OBLIGATORY: member##_AttrType::DAF_OPTIONAL);\
+	Q_UNUSED(member##_Info);\
 	if (componentPtr != NULL){\
 		componentPtr->member.Init(componentPtr, baseAttribute##_Info);\
 	}
@@ -452,6 +454,8 @@ inline bool CComponentBase::IsComponentActive() const
 	Used to assign value for overloaded attributes or references.
 */
 #define I_TASSIGN_TO(member, baseAttribute, isObligatory)\
+	static icomp::CRelatedInfoRegistrator member##_Info(baseAttribute##_Info, icomp::IComponentStaticInfo::MGI_INTERFACES, istd::CClassInfo::GetInfo<typename member##_Type::InterfaceType>().GetName(), isObligatory? member##_AttrType::DAF_OBLIGATORY: member##_AttrType::DAF_OPTIONAL);\
+	Q_UNUSED(member##_Info);\
 	if (componentPtr != NULL){\
 		componentPtr->member.Init(componentPtr, baseAttribute##_Info);\
 	}

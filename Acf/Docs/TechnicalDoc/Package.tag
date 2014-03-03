@@ -20972,9 +20972,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QVariant</type>
-      <name>GetDocumentMetaInfo</name>
+      <name>GetMetaInfo</name>
       <anchorfile>classidoc_1_1_c_standard_document_meta_info.html</anchorfile>
-      <anchor>a13d1ee096ac4133227142a35bdc61368</anchor>
+      <anchor>a86323e65b8f9a58f2ea5c00d5145a83c</anchor>
       <arglist>(int metaInfoType) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -21494,9 +21494,9 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QVariant</type>
-      <name>GetDocumentMetaInfo</name>
+      <name>GetMetaInfo</name>
       <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
-      <anchor>af3c0ca6bae4d26d4153022bd92708768</anchor>
+      <anchor>a93ac7703e86911077913bf90c2bb9226</anchor>
       <arglist>(int metaInfoType) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
