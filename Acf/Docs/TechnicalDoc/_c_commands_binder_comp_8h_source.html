@@ -57,31 +57,35 @@
 <a name="l00032"></a>00032               I_ASSIGN_MULTI_0(m_commandProvidersCompPtr, <span class="stringliteral">&quot;CommandProviders&quot;</span>, <span class="stringliteral">&quot;List of command providers&quot;</span>, <span class="keyword">true</span>);
 <a name="l00033"></a>00033        I_END_COMPONENT;
 <a name="l00034"></a>00034 
-<a name="l00035"></a>00035        <span class="comment">// reimplemented (ibase::ICommandsProvider)</span>
-<a name="l00036"></a>00036        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_hierarchical.html" title="Common interface to define the hierarchical graph structures.">ibase::IHierarchicalCommand</a>* <a class="code" href="classiqtgui_1_1_c_commands_binder_comp.html#ae4a6b550b802ac54f905067c8cbb3844" title="Get list of menu commands.">GetCommands</a>() <span class="keyword">const</span>;
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038 <span class="keyword">protected</span>:
-<a name="l00039"></a>00039        <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
-<a name="l00040"></a>00040        <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_commands_binder_comp.html#a3251e22119e35288f631a0c9ba587ac6">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
-<a name="l00043"></a>00043        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_commands_binder_comp.html#acf64dcb32d40d64f0edd6f1c106ec22d">OnComponentCreated</a>();
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045 <span class="keyword">private</span>:
-<a name="l00046"></a>00046        <span class="keywordtype">void</span> CreateCommands();
+<a name="l00035"></a>00035        <a class="code" href="classiqtgui_1_1_c_commands_binder_comp.html#a662b2b06bfd0a929f79ab30e432b0da9">CCommandsBinderComp</a>();
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037        <span class="comment">// reimplemented (ibase::ICommandsProvider)</span>
+<a name="l00038"></a>00038        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classistd_1_1_t_i_hierarchical.html" title="Common interface to define the hierarchical graph structures.">ibase::IHierarchicalCommand</a>* <a class="code" href="classiqtgui_1_1_c_commands_binder_comp.html#ae4a6b550b802ac54f905067c8cbb3844" title="Get list of menu commands.">GetCommands</a>() <span class="keyword">const</span>;
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040 <span class="keyword">protected</span>:
+<a name="l00041"></a>00041        <span class="comment">// reimplemented (imod::CMultiModelDispatcherBase)</span>
+<a name="l00042"></a>00042        <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_commands_binder_comp.html#a3251e22119e35288f631a0c9ba587ac6">OnModelChanged</a>(<span class="keywordtype">int</span> modelId, <span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations.">istd::IPolymorphic</a>* updateParamsPtr);
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044        <span class="comment">// reimplemented (icomp::CComponentBase)</span>
+<a name="l00045"></a>00045        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtgui_1_1_c_commands_binder_comp.html#acf64dcb32d40d64f0edd6f1c106ec22d">OnComponentCreated</a>();
+<a name="l00046"></a>00046 
 <a name="l00047"></a>00047 <span class="keyword">private</span>:
-<a name="l00048"></a>00048        I_MULTIREF(<a class="code" href="classibase_1_1_i_commands_provider.html">ibase::ICommandsProvider</a>, m_commandProvidersCompPtr);
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050        <span class="keyword">mutable</span> <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_commands;
-<a name="l00051"></a>00051 };
-<a name="l00052"></a>00052 
+<a name="l00048"></a>00048        <span class="keywordtype">void</span> CreateCommands();
+<a name="l00049"></a>00049 <span class="keyword">private</span>:
+<a name="l00050"></a>00050        I_MULTIREF(<a class="code" href="classibase_1_1_i_commands_provider.html">ibase::ICommandsProvider</a>, m_commandProvidersCompPtr);
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052        <span class="keyword">mutable</span> <a class="code" href="classiqtgui_1_1_c_hierarchical_command.html" title="Implementation of hierarchical command based on QAction from Qt.">iqtgui::CHierarchicalCommand</a> m_commands;
 <a name="l00053"></a>00053 
-<a name="l00054"></a>00054 } <span class="comment">// namespace iqtgui</span>
-<a name="l00055"></a>00055 
+<a name="l00054"></a>00054        <span class="keywordtype">bool</span> m_isUpdateLocked;
+<a name="l00055"></a>00055 };
 <a name="l00056"></a>00056 
-<a name="l00057"></a>00057 <span class="preprocessor">#endif // !iqtgui_CCommandsBinderComp_included</span>
-<a name="l00058"></a>00058 <span class="preprocessor"></span>
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058 } <span class="comment">// namespace iqtgui</span>
 <a name="l00059"></a>00059 
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061 <span class="preprocessor">#endif // !iqtgui_CCommandsBinderComp_included</span>
+<a name="l00062"></a>00062 <span class="preprocessor"></span>
+<a name="l00063"></a>00063 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

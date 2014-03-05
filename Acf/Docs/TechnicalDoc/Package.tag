@@ -38250,6 +38250,13 @@
       <anchor>a53a2725fb55293f4d25db7a3da416e5c</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CCommandsBinderComp</name>
+      <anchorfile>classiqtgui_1_1_c_commands_binder_comp.html</anchorfile>
+      <anchor>a662b2b06bfd0a929f79ab30e432b0da9</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ibase::IHierarchicalCommand *</type>
       <name>GetCommands</name>

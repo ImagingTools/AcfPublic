@@ -30,6 +30,14 @@ namespace iqtgui
 {
 
 
+// public methods
+
+CCommandsBinderComp::CCommandsBinderComp()
+	:m_isUpdateLocked(false)
+{
+}
+
+
 // reimplemented (ibase::ICommandsProvider)
 
 const ibase::IHierarchicalCommand* CCommandsBinderComp::GetCommands() const
@@ -44,13 +52,17 @@ const ibase::IHierarchicalCommand* CCommandsBinderComp::GetCommands() const
 
 void CCommandsBinderComp::OnModelChanged(int /*modelId*/, int changeFlags, istd::IPolymorphic* updateParamsPtr)
 {
+	if (m_isUpdateLocked){
+		return;
+	}
+
 	UnregisterAllModels();
+
+	istd::CChangeNotifier changePtr(this, changeFlags, updateParamsPtr);
 
 	m_commands.ResetChilds();
 
 	CreateCommands();
-
-	istd::CChangeNotifier changePtr(this, changeFlags, updateParamsPtr);
 }
 
 
@@ -68,6 +80,8 @@ void CCommandsBinderComp::OnComponentCreated()
 
 void CCommandsBinderComp::CreateCommands()
 {
+	m_isUpdateLocked = true;
+
 	if (m_commandProvidersCompPtr.IsValid()){
 		for (int index = 0; index < m_commandProvidersCompPtr.GetCount(); index++){
 			ibase::ICommandsProvider* commandsProviderPtr = m_commandProvidersCompPtr[index];
@@ -84,6 +98,8 @@ void CCommandsBinderComp::CreateCommands()
 			}
 		}
 	}
+
+	m_isUpdateLocked = false;
 }
 
 

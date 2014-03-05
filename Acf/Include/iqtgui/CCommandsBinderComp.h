@@ -54,6 +54,8 @@ public:
 		I_ASSIGN_MULTI_0(m_commandProvidersCompPtr, "CommandProviders", "List of command providers", true);
 	I_END_COMPONENT;
 
+	CCommandsBinderComp();
+
 	// reimplemented (ibase::ICommandsProvider)
 	virtual const ibase::IHierarchicalCommand* GetCommands() const;
 
@@ -70,6 +72,8 @@ private:
 	I_MULTIREF(ibase::ICommandsProvider, m_commandProvidersCompPtr);
 
 	mutable iqtgui::CHierarchicalCommand m_commands;
+
+	bool m_isUpdateLocked;
 };
 
 
