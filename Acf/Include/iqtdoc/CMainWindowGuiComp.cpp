@@ -601,9 +601,9 @@ void CMainWindowGuiComp::UpdateToolsCommands(iqtgui::CHierarchicalCommand& tools
 }
 
 
-void CMainWindowGuiComp::UpdateMenuActions(iqtgui::CHierarchicalCommand& menuCommands)
+void CMainWindowGuiComp::AppendMenuActions(iqtgui::CHierarchicalCommand& menuCommands)
 {
-	BaseClass::UpdateMenuActions(menuCommands);
+	BaseClass::AppendMenuActions(menuCommands);
 
 	int allowedOperationFlags = 0;
 

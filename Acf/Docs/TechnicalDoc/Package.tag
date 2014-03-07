@@ -37385,9 +37385,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateMenuActions</name>
+      <name>AppendMenuActions</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>a9d6c5c134afcc9aeec3636c544bddd7a</anchor>
+      <anchor>ade3896cc69b4f9dc0c94f07ea21dd54a</anchor>
       <arglist>(iqtgui::CHierarchicalCommand &amp;menuCommands)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -40618,9 +40618,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateMenuActions</name>
+      <name>AppendMenuActions</name>
       <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
-      <anchor>a3ae7aae5bf3d26c06330ec488d5d4287</anchor>
+      <anchor>ac8b4fe03d6b15a58d7b2a0eb4e19d2c8</anchor>
       <arglist>(iqtgui::CHierarchicalCommand &amp;menuCommands)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
