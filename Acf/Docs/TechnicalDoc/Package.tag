@@ -20979,9 +20979,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>SetDocumentMetaInfo</name>
+      <name>SetMetaInfo</name>
       <anchorfile>classidoc_1_1_c_standard_document_meta_info.html</anchorfile>
-      <anchor>a52183f7d55a4cb9328c72d93afbedfd4</anchor>
+      <anchor>a2e24371783856081906bff958e580d21</anchor>
       <arglist>(int metaInfoType, const QVariant &amp;metaInfo)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -21501,9 +21501,9 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
-      <name>SetDocumentMetaInfo</name>
+      <name>SetMetaInfo</name>
       <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
-      <anchor>a3809ed2455e9509fb6f8db2415fe768d</anchor>
+      <anchor>a92ad9f03e2a33aa3358c5d2b7c4579d5</anchor>
       <arglist>(int metaInfoType, const QVariant &amp;metaInfo)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -36887,6 +36887,13 @@
       <anchorfile>classiqtdoc_1_1_c_document_meta_info_editor_comp.html</anchorfile>
       <anchor>a1f5e5b93439df2795c7b669571559cb8</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnItemEditingFinished</name>
+      <anchorfile>classiqtdoc_1_1_c_document_meta_info_editor_comp.html</anchorfile>
+      <anchor>a52a4c2fa185c60ffac81b4486a8d84ab</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>

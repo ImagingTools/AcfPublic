@@ -71,6 +71,9 @@ protected:
 	// reimplemented (iqtgui::CComponentBase)
 	virtual void OnGuiCreated();
 
+protected Q_SLOTS:
+	void OnItemEditingFinished();
+
 private:
 	void ResetItems();
 

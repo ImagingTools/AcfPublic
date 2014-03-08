@@ -77,34 +77,37 @@
 <a name="l00049"></a>00049        <span class="comment">// reimplemented (iqtgui::CComponentBase)</span>
 <a name="l00050"></a>00050        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_document_meta_info_editor_comp.html#aeb05edd41a85c265cd0aa4873832fecb" title="Called just after GUI is initialized.">OnGuiCreated</a>();
 <a name="l00051"></a>00051 
-<a name="l00052"></a>00052 <span class="keyword">private</span>:
-<a name="l00053"></a>00053        <span class="keywordtype">void</span> ResetItems();
+<a name="l00052"></a>00052 <span class="keyword">protected</span> Q_SLOTS:
+<a name="l00053"></a>00053        <span class="keywordtype">void</span> <a class="code" href="classiqtdoc_1_1_c_document_meta_info_editor_comp.html#a52a4c2fa185c60ffac81b4486a8d84ab">OnItemEditingFinished</a>();
 <a name="l00054"></a>00054 
 <a name="l00055"></a>00055 <span class="keyword">private</span>:
-<a name="l00056"></a>00056        <span class="keyword">struct </span>MetaInfoItem
-<a name="l00057"></a>00057        {
-<a name="l00058"></a>00058               MetaInfoItem()
-<a name="l00059"></a>00059                      :labelPtr(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>),
-<a name="l00060"></a>00060                      editPtr(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)
-<a name="l00061"></a>00061               {
-<a name="l00062"></a>00062               }
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064               QLabel* labelPtr;
-<a name="l00065"></a>00065               QLineEdit* editPtr;
-<a name="l00066"></a>00066        };
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068        <span class="keyword">typedef</span> QMap&lt;int, MetaInfoItem&gt; MetaInfoItemsMap;
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070        MetaInfoItemsMap m_metaInfoItemsMap;
-<a name="l00071"></a>00071 };
+<a name="l00056"></a>00056        <span class="keywordtype">void</span> ResetItems();
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058 <span class="keyword">private</span>:
+<a name="l00059"></a>00059        <span class="keyword">struct </span>MetaInfoItem
+<a name="l00060"></a>00060        {
+<a name="l00061"></a>00061               MetaInfoItem()
+<a name="l00062"></a>00062                      :labelPtr(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>),
+<a name="l00063"></a>00063                      editPtr(<a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)
+<a name="l00064"></a>00064               {
+<a name="l00065"></a>00065               }
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067               QLabel* labelPtr;
+<a name="l00068"></a>00068               QLineEdit* editPtr;
+<a name="l00069"></a>00069        };
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071        <span class="keyword">typedef</span> QMap&lt;int, MetaInfoItem&gt; MetaInfoItemsMap;
 <a name="l00072"></a>00072 
-<a name="l00073"></a>00073 
-<a name="l00074"></a>00074 } <span class="comment">// namespace iqtdoc</span>
+<a name="l00073"></a>00073        MetaInfoItemsMap m_metaInfoItemsMap;
+<a name="l00074"></a>00074 };
 <a name="l00075"></a>00075 
 <a name="l00076"></a>00076 
-<a name="l00077"></a>00077 <span class="preprocessor">#endif // !iqtdoc_CDocumentMetaInfoEditorComp_included</span>
-<a name="l00078"></a>00078 <span class="preprocessor"></span>
+<a name="l00077"></a>00077 } <span class="comment">// namespace iqtdoc</span>
+<a name="l00078"></a>00078 
 <a name="l00079"></a>00079 
+<a name="l00080"></a>00080 <span class="preprocessor">#endif // !iqtdoc_CDocumentMetaInfoEditorComp_included</span>
+<a name="l00081"></a>00081 <span class="preprocessor"></span>
+<a name="l00082"></a>00082 
 </pre></div></div>
 </div>
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
