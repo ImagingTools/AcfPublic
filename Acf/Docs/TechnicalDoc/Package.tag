@@ -42193,6 +42193,20 @@
       <anchor>a5fd4bd071b17d67ebfc151794f14c4ea</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetReadOnly</name>
+      <anchorfile>classiqtgui_1_1_t_designer_gui_observer_comp_base.html</anchorfile>
+      <anchor>a79a6e89759412a5264ed5c7444dd4d7a</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtgui_1_1_t_designer_gui_observer_comp_base.html</anchorfile>
+      <anchor>a1976d40edc946ca755d00480947e722e</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtgui::TGuiComponentBase</name>
