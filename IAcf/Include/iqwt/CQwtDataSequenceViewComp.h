@@ -28,6 +28,7 @@
 #include "qwt_plot.h"
 #include "qwt_plot_curve.h"
 #include "qwt_plot_picker.h"
+#include "qwt_plot_marker.h"
 
 
 // ACF includes
@@ -39,6 +40,7 @@
 
 #include "imeas/IDataSequence.h"
 #include "imeas/IDataSequenceStatistics.h"
+#include "imeas/INumericValue.h"
 
 #include "GeneratedFiles/iqwt/ui_CQwtDataSequenceViewComp.h"
 
@@ -61,6 +63,8 @@ public:
 				Ui::CQwtDataSequenceViewComp, imeas::IDataSequence> BaseClass;
 
 	I_BEGIN_COMPONENT(CQwtDataSequenceViewComp);
+		I_ASSIGN_MULTI_0(m_horizontalLinesCompPtr, "HorizontalLines", "List of y-coordinates of horizontal lines", false);
+		I_ASSIGN_MULTI_0(m_verticalLinesCompPtr, "VerticalLines", "List of x-coordinates of vertical lines", false);
 	I_END_COMPONENT;
 
 	// reimplemented (iqtgui::TGuiObserverWrap)
@@ -76,6 +80,7 @@ private Q_SLOTS:
 
 private:
 	void ClearPlot();
+	void ClearMarkers();
 
 private:
 	class DataSequencePlotPicker: public QwtPlotPicker
@@ -95,6 +100,11 @@ private:
 private:
 	istd::TDelPtr<QwtPlot> m_plotPtr;
 	istd::TPointerVector<QwtPlotCurve> m_channelCurves;
+	istd::TPointerVector<QwtPlotMarker> m_verticalMarkers;
+	istd::TPointerVector<QwtPlotMarker> m_horizontalMarkers;
+
+	I_MULTIREF(imeas::INumericValue, m_verticalLinesCompPtr);
+	I_MULTIREF(imeas::INumericValue, m_horizontalLinesCompPtr);
 };
 
 

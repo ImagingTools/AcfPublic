@@ -57,6 +57,7 @@ int CProcessedDataSequenceSupplierComp::ProduceObject(ProductType& result) const
 
 	istd::CChangeNotifier updater(&result);
 
+	m_dataSequenceProcessorCompPtr->InitProcessor(GetModelParametersSet());
 	int status = m_dataSequenceProcessorCompPtr->DoProcessing(GetModelParametersSet(), dataSequencePtr, &result);
 	switch (status){
 	case iproc::IProcessor::TS_OK:
