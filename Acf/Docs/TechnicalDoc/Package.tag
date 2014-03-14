@@ -1012,6 +1012,8 @@
     <name>TComposedColorGradient.h</name>
     <path>C:/Temp/Acf/Include/icmm/</path>
     <filename>_t_composed_color_gradient_8h</filename>
+    <includes id="_t_range_8h" name="TRange.h" local="yes" imported="no">istd/TRange.h</includes>
+    <includes id="_t_color_gradient_8h" name="TColorGradient.h" local="yes" imported="no">icmm/TColorGradient.h</includes>
     <class kind="class">icmm::TComposedColorGradient</class>
     <namespace>icmm</namespace>
     <member kind="typedef">
@@ -15695,8 +15697,8 @@
       <anchor>a79e116f11276706590cdbe1b03f75e11</anchor>
       <arglist>(double value)</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classicmm_1_1_t_composed_color.html</anchorfile>
       <anchor>a61e1e8aff788f717cb73c21f1354aa6e</anchor>

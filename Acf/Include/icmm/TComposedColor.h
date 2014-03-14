@@ -29,14 +29,11 @@
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
-
 #include "iser/ISerializable.h"
 #include "iser/CArchiveTag.h"
-
 #include "imath/IDoubleManip.h"
 #include "imath/TVector.h"
 #include "imath/CVarVector.h"
-
 #include "icmm/icmm.h"
 
 
@@ -115,7 +112,7 @@ public:
 	const TComposedColor<Size>& operator/=(double value);
 
 	// reimplemented (iser::ISerializable)
-	bool Serialize(iser::IArchive& archive);
+	virtual bool Serialize(iser::IArchive& archive);
 };
 
 
