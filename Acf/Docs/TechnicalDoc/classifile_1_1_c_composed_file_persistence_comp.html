@@ -33,12 +33,13 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ifile::CComposedFilePersistenceComp Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="ifile::CComposedFilePersistenceComp" --><!-- doxytag: inherits="icomp::CComponentBase,ifile::IFilePersistence" -->
+<!-- doxytag: class="ifile::CComposedFilePersistenceComp" --><!-- doxytag: inherits="icomp::CComponentBase,ifile::IFilePersistence,ifile::IFilePersistenceInfo" -->
 <p>Loader component, which delegates the persistence functionality to its slave loaders.  
  <a href="classifile_1_1_c_composed_file_persistence_comp.html#details">More...</a></p>
 
@@ -51,8 +52,10 @@ Inheritance diagram for ifile::CComposedFilePersistenceComp:</div>
   <map id="ifile::CComposedFilePersistenceComp_map" name="ifile::CComposedFilePersistenceComp_map">
 <area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation." alt="icomp::CComponentBase" shape="rect" coords="0,112,225,136"/>
 <area href="classifile_1_1_i_file_persistence.html" title="Provide loading and saving of objects." alt="ifile::IFilePersistence" shape="rect" coords="235,112,460,136"/>
+<area href="classifile_1_1_i_file_persistence_info.html" title="Provide some information about file loader state." alt="ifile::IFilePersistenceInfo" shape="rect" coords="470,112,695,136"/>
 <area href="classicomp_1_1_i_component.html" title="Main component interface." alt="icomp::IComponent" shape="rect" coords="0,56,225,80"/>
 <area href="classifile_1_1_i_file_type_info.html" title="Provide loading and saving of objects." alt="ifile::IFileTypeInfo" shape="rect" coords="235,56,460,80"/>
+<area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="470,56,695,80"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="0,0,225,24"/>
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations." alt="istd::IPolymorphic" shape="rect" coords="235,0,460,24"/>
 </map>
@@ -75,11 +78,16 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file extensions supported by this loader.  <a href="#a0ae84e330cb2a72c8fc9a8f3a023c05d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifile_1_1_c_composed_file_persistence_comp.html#a1a24c151ac58ad166872c0c270ac8df8">GetTypeDescription</a> (const QString *extensionPtr=NULL) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get description of object type associated with single extension.  <a href="#a1a24c151ac58ad166872c0c270ac8df8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifile_1_1_c_composed_file_persistence_comp.html#ac16510e504da3912b99385e6b4c06965">GetLastFilePath</a> (<a class="el" href="classifile_1_1_i_file_persistence_info.html#a5ec4c7b4003e0dcf02fc98e847513a35">OperationType</a> operationType=OT_UNKNOWN, <a class="el" href="classifile_1_1_i_file_persistence_info.html#aedaa95c7411b564c00535ce42c0cebf5">PathType</a> pathType=PT_COMPLETE) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the last opened file name.  <a href="#ac16510e504da3912b99385e6b4c06965"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifile_1_1_c_composed_file_persistence_comp.html#a9e6603a1b4db33c9b229d45b108f80ba">GetPathForType</a> (const QFileInfo &amp;fileInfo, <a class="el" href="classifile_1_1_i_file_persistence_info.html#aedaa95c7411b564c00535ce42c0cebf5">PathType</a> pathType) const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Loader component, which delegates the persistence functionality to its slave loaders. </p>
 
-<p>Definition at line <a class="el" href="_c_composed_file_persistence_comp_8h_source.html#l00017">17</a> of file <a class="el" href="_c_composed_file_persistence_comp_8h_source.html">CComposedFilePersistenceComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_composed_file_persistence_comp_8h_source.html#l00022">22</a> of file <a class="el" href="_c_composed_file_persistence_comp_8h_source.html">CComposedFilePersistenceComp.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a3cd405d28a2f71e7fbe91611287c64c7"></a><!-- doxytag: member="ifile::CComposedFilePersistenceComp::BaseClass" ref="a3cd405d28a2f71e7fbe91611287c64c7" args="" -->
 <div class="memitem">
@@ -92,7 +100,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_composed_file_persistence_comp_8h_source.html#l00022">22</a> of file <a class="el" href="_c_composed_file_persistence_comp_8h_source.html">CComposedFilePersistenceComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_composed_file_persistence_comp_8h_source.html#l00028">28</a> of file <a class="el" href="_c_composed_file_persistence_comp_8h_source.html">CComposedFilePersistenceComp.h</a>.</p>
 
 </div>
 </div>
@@ -145,6 +153,64 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Implements <a class="el" href="classifile_1_1_i_file_type_info.html#acb9ac14845f9ea67dca2e7a24b391cde">ifile::IFileTypeInfo</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac16510e504da3912b99385e6b4c06965"></a><!-- doxytag: member="ifile::CComposedFilePersistenceComp::GetLastFilePath" ref="ac16510e504da3912b99385e6b4c06965" args="(OperationType operationType=OT_UNKNOWN, PathType pathType=PT_COMPLETE) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString ifile::CComposedFilePersistenceComp::GetLastFilePath </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classifile_1_1_i_file_persistence_info.html#a5ec4c7b4003e0dcf02fc98e847513a35">OperationType</a>&#160;</td>
+          <td class="paramname"><em>operationType</em> = <code>OT_UNKNOWN</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classifile_1_1_i_file_persistence_info.html#aedaa95c7411b564c00535ce42c0cebf5">PathType</a>&#160;</td>
+          <td class="paramname"><em>pathType</em> = <code>PT_COMPLETE</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns the last opened file name. </p>
+
+<p>Implements <a class="el" href="classifile_1_1_i_file_persistence_info.html#a2f86e9b5a4f767d18bb4246636e7222d">ifile::IFilePersistenceInfo</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9e6603a1b4db33c9b229d45b108f80ba"></a><!-- doxytag: member="ifile::CComposedFilePersistenceComp::GetPathForType" ref="a9e6603a1b4db33c9b229d45b108f80ba" args="(const QFileInfo &amp;fileInfo, PathType pathType) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString ifile::CComposedFilePersistenceComp::GetPathForType </td>
+          <td>(</td>
+          <td class="paramtype">const QFileInfo &amp;&#160;</td>
+          <td class="paramname"><em>fileInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classifile_1_1_i_file_persistence_info.html#aedaa95c7411b564c00535ce42c0cebf5">PathType</a>&#160;</td>
+          <td class="paramname"><em>pathType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>

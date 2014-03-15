@@ -962,6 +962,16 @@
     <namespace>icmm</namespace>
   </compound>
   <compound kind="file">
+    <name>ICieColorValuesProvider.h</name>
+    <path>C:/Temp/Acf/Include/icmm/</path>
+    <filename>_i_cie_color_values_provider_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <includes id="_c_lab_8h" name="CLab.h" local="yes" imported="no">icmm/CLab.h</includes>
+    <includes id="_c_var_color_8h" name="CVarColor.h" local="yes" imported="no">icmm/CVarColor.h</includes>
+    <class kind="class">icmm::ICieColorValuesProvider</class>
+    <namespace>icmm</namespace>
+  </compound>
+  <compound kind="file">
     <name>icmm.h</name>
     <path>C:/Temp/Acf/Include/icmm/</path>
     <filename>icmm_8h</filename>
@@ -2075,6 +2085,7 @@
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_c_composed_file_persistence_comp_8h</filename>
     <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_i_file_persistence_info_8h" name="IFilePersistenceInfo.h" local="yes" imported="no">ifile/IFilePersistenceInfo.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <class kind="class">ifile::CComposedFilePersistenceComp</class>
     <namespace>ifile</namespace>
@@ -13824,6 +13835,7 @@
     <class kind="class">icmm::CRgbToXyzTransformation</class>
     <class kind="class">icmm::CVarColor</class>
     <class kind="class">icmm::CXyzToCieLabTransformation</class>
+    <class kind="class">icmm::ICieColorValuesProvider</class>
     <class kind="class">icmm::IColorTransformation</class>
     <class kind="class">icmm::LinearGradientFunction</class>
     <class kind="class">icmm::TColorGradient</class>
@@ -15464,6 +15476,39 @@
       <anchorfile>classicmm_1_1_c_xyz_to_cie_lab_transformation.html</anchorfile>
       <anchor>af4a4b2236ef959129e9aff9f4fbbacae</anchor>
       <arglist>(const icmm::CVarColor &amp;argument) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icmm::ICieColorValuesProvider</name>
+    <filename>classicmm_1_1_i_cie_color_values_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="typedef">
+      <type>QVector&lt; icmm::CLab &gt;</type>
+      <name>LabValues</name>
+      <anchorfile>classicmm_1_1_i_cie_color_values_provider.html</anchorfile>
+      <anchor>a67a6380f05223dc0de882ed359990b2a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QVector&lt; icmm::CVarColor &gt;</type>
+      <name>XyzValues</name>
+      <anchorfile>classicmm_1_1_i_cie_color_values_provider.html</anchorfile>
+      <anchor>af6c440ccede66cf985d27f73ac701f74</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const LabValues &amp;</type>
+      <name>GetLabValues</name>
+      <anchorfile>classicmm_1_1_i_cie_color_values_provider.html</anchorfile>
+      <anchor>a2f1fc0fc168ed9a7c1ffb4f817c2046a</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const XyzValues &amp;</type>
+      <name>GetXyzValues</name>
+      <anchorfile>classicmm_1_1_i_cie_color_values_provider.html</anchorfile>
+      <anchor>afa53464312bf30e894d2761620deb333</anchor>
+      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -22132,6 +22177,7 @@
     <filename>classifile_1_1_c_composed_file_persistence_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">ifile::IFilePersistence</base>
+    <base virtualness="virtual">ifile::IFilePersistenceInfo</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -22173,6 +22219,20 @@
       <anchorfile>classifile_1_1_c_composed_file_persistence_comp.html</anchorfile>
       <anchor>a1a24c151ac58ad166872c0c270ac8df8</anchor>
       <arglist>(const QString *extensionPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetLastFilePath</name>
+      <anchorfile>classifile_1_1_c_composed_file_persistence_comp.html</anchorfile>
+      <anchor>ac16510e504da3912b99385e6b4c06965</anchor>
+      <arglist>(OperationType operationType=OT_UNKNOWN, PathType pathType=PT_COMPLETE) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QString</type>
+      <name>GetPathForType</name>
+      <anchorfile>classifile_1_1_c_composed_file_persistence_comp.html</anchorfile>
+      <anchor>a9e6603a1b4db33c9b229d45b108f80ba</anchor>
+      <arglist>(const QFileInfo &amp;fileInfo, PathType pathType) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -42201,6 +42261,13 @@
       <anchorfile>classiqtgui_1_1_t_designer_gui_observer_comp_base.html</anchorfile>
       <anchor>a79a6e89759412a5264ed5c7444dd4d7a</anchor>
       <arglist>(bool state)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtgui_1_1_t_designer_gui_observer_comp_base.html</anchorfile>
+      <anchor>a482be2f2e094f1fbd7c242ed1572fe2e</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>

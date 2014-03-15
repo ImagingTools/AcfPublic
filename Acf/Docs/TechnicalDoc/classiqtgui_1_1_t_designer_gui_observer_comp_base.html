@@ -86,6 +86,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set flag that the model data can be changed.  <a href="#a79a6e89759412a5264ed5c7444dd4d7a"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html#a482be2f2e094f1fbd7c242ed1572fe2e">OnGuiCreated</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#a482be2f2e094f1fbd7c242ed1572fe2e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html#a1976d40edc946ca755d00480947e722e">OnComponentCreated</a> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -138,7 +140,33 @@ template&lt;class UI , class Model , class WidgetType &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#a08633ded9ecfa0fa4d1fb639efe19328">ifilegui::CFileTreeViewGuiComp</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_designer_gui_observer_comp_base_8h_source.html#l00076">76</a> of file <a class="el" href="_t_designer_gui_observer_comp_base_8h_source.html">TDesignerGuiObserverCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_designer_gui_observer_comp_base_8h_source.html#l00092">92</a> of file <a class="el" href="_t_designer_gui_observer_comp_base_8h_source.html">TDesignerGuiObserverCompBase.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a482be2f2e094f1fbd7c242ed1572fe2e"></a><!-- doxytag: member="iqtgui::TDesignerGuiObserverCompBase::OnGuiCreated" ref="a482be2f2e094f1fbd7c242ed1572fe2e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class UI , class Model , class WidgetType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classiqtgui_1_1_t_designer_gui_observer_comp_base.html">iqtgui::TDesignerGuiObserverCompBase</a>&lt; UI, Model, WidgetType &gt;::OnGuiCreated </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Called just after GUI is initialized. </p>
+
+<p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#ac57a710831aca6724b034983717d1a12">iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; UI, WidgetType &gt;, imod::TSingleModelObserverBase&lt; Model &gt; &gt;</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classiqtprm_1_1_c_selection_param_gui_comp.html#a9fe4691ae12e6aecfe32a25bc415a2bd">iqtprm::CSelectionParamGuiComp</a>, <a class="el" href="classiqtprm_1_1_c_params_manager_gui_comp_base.html#a6488e3212baef31550423fb2e6fedea4">iqtprm::CParamsManagerGuiCompBase</a>, <a class="el" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#a639829115b16468f337578e9eb36855b">iqt2d::TPolygonBasedParamsGuiComp&lt; PolygonBasedShape, PolygonBasedModel &gt;</a>, <a class="el" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#a639829115b16468f337578e9eb36855b">iqt2d::TPolygonBasedParamsGuiComp&lt; iview::CTubePolylineShape, i2d::CTubePolyline &gt;</a>, <a class="el" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#a639829115b16468f337578e9eb36855b">iqt2d::TPolygonBasedParamsGuiComp&lt; iview::CPolygonShape, i2d::CPolygon &gt;</a>, <a class="el" href="classiqt2d_1_1_t_polygon_based_params_gui_comp.html#a639829115b16468f337578e9eb36855b">iqt2d::TPolygonBasedParamsGuiComp&lt; iview::CPolylineShape, i2d::CPolyline &gt;</a>, <a class="el" href="classiqtprm_1_1_c_options_manager_gui_comp.html#a431ce611466edaf18c930cb03e9261ae">iqtprm::COptionsManagerGuiComp</a>, <a class="el" href="classifilegui_1_1_c_file_tree_view_gui_comp.html#ae669f50548fe831d6ed9958ce8159a4d">ifilegui::CFileTreeViewGuiComp</a>, <a class="el" href="classifilegui_1_1_c_file_system_explorer_gui_comp.html#ace9559f82c725ae5fa104fab4f15b528">ifilegui::CFileSystemExplorerGuiComp</a>, <a class="el" href="classiqtprm_1_1_c_options_list_editor_gui_comp.html#a7ba77be3c64c199cd9fbc71f9c8ad0aa">iqtprm::COptionsListEditorGuiComp</a>, <a class="el" href="classiqtprm_1_1_c_composed_params_set_gui_comp.html#ab699f38faf310ad6af06f75006453fd3">iqtprm::CComposedParamsSetGuiComp</a>, <a class="el" href="classiqtprm_1_1_c_variable_param_gui_comp.html#af13fd6a926b99606d8f1b9b89f47cdf4">iqtprm::CVariableParamGuiComp</a>, <a class="el" href="classiqtprm_1_1_c_name_param_gui_comp.html#a6ba097e6db6101e45035f62ebbd5e9b4">iqtprm::CNameParamGuiComp</a>, <a class="el" href="classifilegui_1_1_c_file_preview_gui_comp.html#a24f0028ea59859367e027ba487b3a3c2">ifilegui::CFilePreviewGuiComp</a>, <a class="el" href="classiqtprm_1_1_c_file_name_param_gui_comp.html#abb5d137c83b17c15eb3e47e3807936f6">iqtprm::CFileNameParamGuiComp</a>, <a class="el" href="classiqtprm_1_1_c_selectable_gui_comp.html#a8fc467b4153ba752ef11fe98b525f76b">iqtprm::CSelectableGuiComp</a>, <a class="el" href="classiqt2d_1_1_c_polyline_params_gui_comp.html#a8309556e62a995aac3b35988dffa1f7b">iqt2d::CPolylineParamsGuiComp</a>, <a class="el" href="classiqt2d_1_1_c_annulus_params_gui_comp.html#a2a3acff6702b3034d0c628a03c3f00bd">iqt2d::CAnnulusParamsGuiComp</a>, <a class="el" href="classiqt2d_1_1_c_line2d_params_gui_comp.html#a0d731464e8a55cf48edcbc5a68b509c2">iqt2d::CLine2dParamsGuiComp</a>, <a class="el" href="classiqt2d_1_1_c_quadrangle_params_gui_comp.html#ac41012fbfb60892cae62b4404794896b">iqt2d::CQuadrangleParamsGuiComp</a>, <a class="el" href="classiqtprm_1_1_c_multi_params_manager_gui_comp.html#a58192505c8fbafcf748e477b9230f9a1">iqtprm::CMultiParamsManagerGuiComp</a>, <a class="el" href="classiqt2d_1_1_c_annulus_segment_params_gui_comp.html#a03c857e9a2794fef735cf97386e978c8">iqt2d::CAnnulusSegmentParamsGuiComp</a>, <a class="el" href="classiqt2d_1_1_c_circle_params_gui_comp.html#a7270bb772e1e5107eb9186311cc7fa3c">iqt2d::CCircleParamsGuiComp</a>, <a class="el" href="classiqt2d_1_1_c_oriented_circle_editor_comp.html#a284ac9482b2ec65bbc7c189fb00ddf0a">iqt2d::COrientedCircleEditorComp</a>, <a class="el" href="classiloggui_1_1_c_text_log_gui_comp.html#ae43ac0e2e9155653cd09604b2d19de70">iloggui::CTextLogGuiComp</a>, <a class="el" href="classiqtprm_1_1_c_enableable_param_gui_comp.html#add16698d4cd9dff40abd971a4bce9e55">iqtprm::CEnableableParamGuiComp</a>, and <a class="el" href="classiqtprm_1_1_c_params_manager_gui_comp.html#a44198abdf51405019a50dc7d85e7027b">iqtprm::CParamsManagerGuiComp</a>.</p>
+
+<p>Definition at line <a class="el" href="_t_designer_gui_observer_comp_base_8h_source.html#l00079">79</a> of file <a class="el" href="_t_designer_gui_observer_comp_base_8h_source.html">TDesignerGuiObserverCompBase.h</a>.</p>
 
 </div>
 </div>
@@ -164,7 +192,7 @@ template&lt;class UI , class Model , class WidgetType &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classiqtgui_1_1_t_gui_observer_wrap.html#a71927e7a9688911c9b1071434e9f17d5">iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; UI, WidgetType &gt;, imod::TSingleModelObserverBase&lt; Model &gt; &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_t_designer_gui_observer_comp_base_8h_source.html#l00060">60</a> of file <a class="el" href="_t_designer_gui_observer_comp_base_8h_source.html">TDesignerGuiObserverCompBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_t_designer_gui_observer_comp_base_8h_source.html#l00063">63</a> of file <a class="el" href="_t_designer_gui_observer_comp_base_8h_source.html">TDesignerGuiObserverCompBase.h</a>.</p>
 
 </div>
 </div>

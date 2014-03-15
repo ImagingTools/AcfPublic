@@ -29,7 +29,6 @@
 
 // ACF includes
 #include "iprm/IParamsSet.h"
-
 #include "iproc/IProcessor.h"
 
 

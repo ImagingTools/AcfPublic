@@ -20,25 +20,34 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#ifndef icmm_ICieColorValuesProviderr_included
+#define icmm_ICieColorValuesProviderr_included
 
 
-namespace istd
+// ACF includes
+#include "istd/IChangeable.h"
+#include "icmm/CLab.h"
+#include "icmm/CVarColor.h"
+
+
+namespace icmm
 {
 
 
-enum RepositoryState
+class ICieColorValuesProvider: virtual public istd::IChangeable
 {
-	RS_ORIGINAL_VERSION =  3386,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+public:
+	typedef QVector<icmm::CLab> LabValues;
+	typedef QVector<icmm::CVarColor> XyzValues;
+
+	virtual const LabValues& GetLabValues() const = 0;
+	virtual const XyzValues& GetXyzValues() const = 0;
 };
 
 
-} // namespace istd
+} // namespace icmm
 
 
-#endif // !istd_AcfVersion_included
+#endif // !icmm_ICieColorValuesProviderr_included
 
 

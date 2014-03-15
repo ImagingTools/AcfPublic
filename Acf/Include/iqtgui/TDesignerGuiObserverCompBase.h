@@ -66,6 +66,9 @@ public:
 	virtual void SetReadOnly(bool state);
 
 protected:
+	// reimplemented (iqtgui::CGuiComponentBase)
+	virtual void OnGuiCreated();
+
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();
 
@@ -92,6 +95,19 @@ void TDesignerGuiObserverCompBase<UI, Model, WidgetType>::SetReadOnly(bool state
 
 // protected methods
 
+// reimplemented (iqtgui::CGuiComponentBase)
+
+template <class UI, class Model, class WidgetType>
+void TDesignerGuiObserverCompBase<UI, Model, WidgetType>::OnGuiCreated()
+{
+	BaseClass::OnGuiCreated();
+
+	if (m_isReadOnlyAttrPtr.IsValid() && *m_isReadOnlyAttrPtr){
+		BaseClass::SetReadOnly(true);
+	}
+}
+
+
 // reimplemented (icomp::CComponentBase)
 
 template <class UI, class Model, class WidgetType>
@@ -100,7 +116,7 @@ void TDesignerGuiObserverCompBase<UI, Model, WidgetType>::OnComponentCreated()
 	BaseClass::OnComponentCreated();
 
 	if (m_isReadOnlyAttrPtr.IsValid()){
-		m_isReadOnly = *m_isReadOnlyAttrPtr;
+		this->m_isReadOnly = *m_isReadOnlyAttrPtr;
 	}
 }
 
