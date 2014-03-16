@@ -19897,24 +19897,24 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>QVector&lt; icmm::CVarColor &gt;</type>
+      <type>QVector&lt; imath::CVarVector &gt;</type>
       <name>XyzValues</name>
       <anchorfile>classicmm_1_1_i_cie_color_values_provider.html</anchorfile>
-      <anchor>af6c440ccede66cf985d27f73ac701f74</anchor>
+      <anchor>ae1ebc84e1dad1e342d9aaa6b68426f62</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const LabValues &amp;</type>
+      <type>virtual LabValues</type>
       <name>GetLabValues</name>
       <anchorfile>classicmm_1_1_i_cie_color_values_provider.html</anchorfile>
-      <anchor>a2f1fc0fc168ed9a7c1ffb4f817c2046a</anchor>
+      <anchor>ae9879bae46a5b8ba3b4c236171a70df8</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const XyzValues &amp;</type>
+      <type>virtual XyzValues</type>
       <name>GetXyzValues</name>
       <anchorfile>classicmm_1_1_i_cie_color_values_provider.html</anchorfile>
-      <anchor>afa53464312bf30e894d2761620deb333</anchor>
+      <anchor>afc87332f697f55121b67136ed9554696</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
