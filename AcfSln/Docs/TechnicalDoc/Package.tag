@@ -1,13 +1,5 @@
-<?xml version='1.0' encoding='ISO-8859-1' standalone='yes' ?>
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
 <tagfile>
-  <compound kind="page">
-    <name>index</name>
-    <title></title>
-    <filename>index</filename>
-    <docanchor file="index">Tutorials</docanchor>
-    <docanchor file="index">Introduction</docanchor>
-    <docanchor file="index">Example</docanchor>
-  </compound>
   <compound kind="file">
     <name>AcfSln.h</name>
     <path>C:/Temp/AcfSln/Include/</path>
@@ -1769,12 +1761,14 @@
     <includes id="imeas_8h" name="imeas.h" local="yes" imported="no">imeas/imeas.h</includes>
     <namespace>iipr</namespace>
     <member kind="enumeration">
+      <type></type>
       <name>VersionId</name>
       <anchorfile>namespaceiipr.html</anchorfile>
       <anchor>a310caaf2e3e829aef8247d0eb1e37aad</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>IacfVersionId</name>
       <anchorfile>namespaceiipr.html</anchorfile>
       <anchor>a310caaf2e3e829aef8247d0eb1e37aada28eae46bbb14021d34f46b02f4ecc45f</anchor>
@@ -3177,58 +3171,6 @@
     <title>ACF-Solutions</title>
     <filename>group___acf_sln.html</filename>
   </compound>
-  <compound kind="class">
-    <name>IBitmapAcquisition</name>
-    <filename>class_i_bitmap_acquisition.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>ICaliperProcessor</name>
-    <filename>class_i_caliper_processor.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>IDataSequenceCorrelationProcessor</name>
-    <filename>class_i_data_sequence_correlation_processor.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>IDataSequenceStatisticsProcessor</name>
-    <filename>class_i_data_sequence_statistics_processor.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>IEdgeLinesProcessor</name>
-    <filename>class_i_edge_lines_processor.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>IEdgesExtractor</name>
-    <filename>class_i_edges_extractor.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>IFeatureToFeatureProcessor</name>
-    <filename>class_i_feature_to_feature_processor.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>IImageToFeatureProcessor</name>
-    <filename>class_i_image_to_feature_processor.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>ILineProjectionProcessor</name>
-    <filename>class_i_line_projection_processor.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>QGraphicsRectItem</name>
-    <filename>class_q_graphics_rect_item.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>QObject</name>
-    <filename>class_q_object.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>TModelObserverCompWrap</name>
-    <filename>class_t_model_observer_comp_wrap.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>TVector</name>
-    <filename>class_t_vector.html</filename>
-  </compound>
   <compound kind="namespace">
     <name>iauth</name>
     <filename>namespaceiauth.html</filename>
@@ -3339,6 +3281,27 @@
       <name>BaseClass</name>
       <anchorfile>classiauth_1_1_c_simple_login_comp.html</anchorfile>
       <anchor>aa2654dbbafa3f209b3f3cea4bdb19b20</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ChangeFlags</name>
+      <anchorfile>classiauth_1_1_i_login.html</anchorfile>
+      <anchor>a8f650a42a0393e76dfa70bb885c46cd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_LOGIN</name>
+      <anchorfile>classiauth_1_1_i_login.html</anchorfile>
+      <anchor>a8f650a42a0393e76dfa70bb885c46cd9a718b764e3fab39c98bf33ddb023dd1e7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_LOGOUT</name>
+      <anchorfile>classiauth_1_1_i_login.html</anchorfile>
+      <anchor>a8f650a42a0393e76dfa70bb885c46cd9a642d0d9b2027ca7fd5a54a525434275c</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -3664,24 +3627,6 @@
     <name>iauth::ILogin</name>
     <filename>classiauth_1_1_i_login.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="enumeration">
-      <name>ChangeFlags</name>
-      <anchorfile>classiauth_1_1_i_login.html</anchorfile>
-      <anchor>a8f650a42a0393e76dfa70bb885c46cd9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_LOGIN</name>
-      <anchorfile>classiauth_1_1_i_login.html</anchorfile>
-      <anchor>a8f650a42a0393e76dfa70bb885c46cd9a718b764e3fab39c98bf33ddb023dd1e7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_LOGOUT</name>
-      <anchorfile>classiauth_1_1_i_login.html</anchorfile>
-      <anchor>a8f650a42a0393e76dfa70bb885c46cd9a642d0d9b2027ca7fd5a54a525434275c</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual CUser *</type>
       <name>GetLoggedUser</name>
@@ -3867,6 +3812,104 @@
       <anchor>a341af101bb2dff0d381a2bc45d29cc1b</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>MessageId</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a71f0e6f70fcf044073f7055a0e0f5225</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_BAD_PARAMS</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a71f0e6f70fcf044073f7055a0e0f5225a0670e38ef8e7cadcc77fcffde5b01b06</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_PROCESSING_ERROR</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a71f0e6f70fcf044073f7055a0e0f5225a128a151b6f04fa2eda6e912ac1480d4b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ProcessorState</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>aa94aa4786e71ae61cf56e58d93675e7a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PS_UNKNOWN</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>aa94aa4786e71ae61cf56e58d93675e7aab1e7cabfb9d1020ee100b6ee1fbe5620</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PS_INITIALIZATION</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>aa94aa4786e71ae61cf56e58d93675e7aa2d7a7e4db57eeef7e5be24d2dbc6dc63</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PS_READY</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>aa94aa4786e71ae61cf56e58d93675e7aabad97a2c4f0c515bd712963edecdbbba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PS_INVALID</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>aa94aa4786e71ae61cf56e58d93675e7aabbd46d78a0723b57d57c31298901e5f8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>TaskState</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a53fe9860f57b67e209887f985cf3ea73</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TS_NONE</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a53fe9860f57b67e209887f985cf3ea73a4193a2826a1a3ecb44b5a47247656aaa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TS_WAIT</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a53fe9860f57b67e209887f985cf3ea73a66a293521f3e1288297befd306c46b85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TS_OK</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a53fe9860f57b67e209887f985cf3ea73a012c8b8611b7e4dd198a6ce37aa6bf57</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TS_CANCELED</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a53fe9860f57b67e209887f985cf3ea73a1fad2f44bdf50b7c30ddda7738995a43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TS_INVALID</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a53fe9860f57b67e209887f985cf3ea73ae6084d2b3eadd5d5928353a9d5b59594</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CIndex2d</type>
       <name>GetBitmapSize</name>
@@ -4041,6 +4084,13 @@
       <anchor>a8e2b85db8d1a00078de79ba9d66c89ca</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>IBitmapAcquisition</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3b21fc424b686e6bcf4537b75d89adf3</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
@@ -4055,6 +4105,69 @@
       <anchor>a394e0c7c42c4be073bb754043d0ade71</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>TSyncProcessorWrap</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a33b9338307557966bc5e0f87e375de37</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetProcessorState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>adc1704c346843a8bcaf57e055e902b71</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AreParamsAccepted</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>ae97572f44492b12a88117a22db51483d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a06c427a3f188b18011a3c842be354183</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>WaitTaskFinished</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a5e249d7e56f018e4e4f3ce872f1d622d</anchor>
+      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a0a5cd08f5800f4d01eeae041dd5a5aa7</anchor>
+      <arglist>(int taskId=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetReadyTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a7644b6e2edc8e32f3e4a9987a2a97ab9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTaskState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>aeea1cf5b8c422a59cb9c76550cb83a81</anchor>
+      <arglist>(int taskId=-1) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>icam::CMultiCameraBitmapSupplierComp</name>
@@ -4067,6 +4180,139 @@
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_multi_camera_bitmap_supplier_comp.html</anchorfile>
       <anchor>a6ae28fb24e53c51727c9009cd4d74d00</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>istd::TPointerVector&lt; const iimg::IBitmap &gt;</type>
+      <name>ProductType</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>MessageId</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a3ef5971e2a11ad9301790db639333eb6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_DURATION_TIME</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a3ef5971e2a11ad9301790db639333eb6af51e6cdeaae8a7a9dbd1b15f5cdecd43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_SUPPLIER_RESULTS_STATUS</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a3ef5971e2a11ad9301790db639333eb6ab3cb500d4e8f300e7efbb22f5c15da22</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a329d63030d2ab5b6cb9a08e0c255f4a7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>WorkStatus</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>ad3b7143c610c4f271745217854b1251e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>WS_INVALID</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>ad3b7143c610c4f271745217854b1251eab14d115e664be0ece856109431395207</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>WS_INIT</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>ad3b7143c610c4f271745217854b1251eaff938cd606e9e8d2cc881b961277aa18</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>WS_LOCKED</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>ad3b7143c610c4f271745217854b1251ead862cf2007aad54dfe8699bc4bf209d6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>WS_OK</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>ad3b7143c610c4f271745217854b1251ea596371c0c9bd5c243242a539c7dff8ed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>WS_CANCELED</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>ad3b7143c610c4f271745217854b1251ea23c568cf4592b40eb81cd7d8974b891c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>WS_ERROR</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>ad3b7143c610c4f271745217854b1251eaf0443c3e05e1a6d255e1208a747453bf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>WS_CRITICAL</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>ad3b7143c610c4f271745217854b1251ea2d1a51d4de4791dafa4219f8a0c75032</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ChangeFlags</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>a493b9bac260cff15679441656b15f3ca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_SUPPLIER_RESULTS</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>a493b9bac260cff15679441656b15f3caabe63c0459792ec8459c0304337047833</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>WorkMessageType</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>abbc42b61a9c35ce3f0821db967c5d449</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>WMT_TEMP</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>abbc42b61a9c35ce3f0821db967c5d449aea621e71f727c49c2b8b523c265e32d0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>WMT_RESULTS</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>abbc42b61a9c35ce3f0821db967c5d449a0bc9bc0b3bb53a7866afa8b1d15d8d69</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -4097,6 +4343,111 @@
       <anchor>a714b60e1ef75d753e096f8c71336a084</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a3eef45449f5614dff66cd6ebe401e901</anchor>
+      <arglist>(TaskLog)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a5d79650c946b54aa6cd6a938398ad19f</anchor>
+      <arglist>(TaskLog, ilog::IMessageConsumer, ExtractTaskLog)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>aed1cddb7d6f03d20422959a7ecce8b72</anchor>
+      <arglist>(TaskLog, istd::IPolymorphic, ExtractTaskLog)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>ae8e1cdfb5c9cec0ee1edee26f57f9a00</anchor>
+      <arglist>(TempMessages)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a4ced0cad1394112445f489c57995a858</anchor>
+      <arglist>(TempMessages, ilog::IMessageConsumer, ExtractTempMessages)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a3a0d38f8467bbcdfe9308e8dcdfcc036</anchor>
+      <arglist>(TempMessages, istd::IPolymorphic, ExtractTempMessages)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a19debc36963c129cc999774f4e57f7e1</anchor>
+      <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSupplierCompBase</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>ad453c1a96e4ebae5a8bc29fd9b92ee29</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetWorkStatus</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a857163a36ec16cf7a5dc4186cf53cd0e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InvalidateSupplier</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a03a2fe837887070a5ff58a28a40aa14c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkInitialized</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a015048dee6c4de8635031f29faf45293</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ilog::IMessageContainer *</type>
+      <name>GetWorkMessages</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a09125c4ab95caf42e045c7d5842fe321</anchor>
+      <arglist>(int messageType) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iprm::IParamsSet *</type>
+      <name>GetModelParametersSet</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>ad87e7e4fb0157c93ce2c158f5725bb37</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>InitializeWork</name>
@@ -4111,6 +4462,104 @@
       <anchor>ac0f8481ef76f20d83f61197970ac0857</anchor>
       <arglist>(ProductType &amp;result) const </arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>const istd::TPointerVector&lt; const iimg::IBitmap &gt; *</type>
+      <name>GetWorkProduct</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6230575f0d5b0ccfd28cdf7082866c62</anchor>
+      <arglist>(istd::TPointerVector&lt; const iimg::IBitmap &gt; &amp;result) const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnParametersChanged</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>abd3db22bdf1f16c2828cb137179cf9b6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RegisterSupplierInput</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a48d7e1c26473266c2b60409b5171852d</anchor>
+      <arglist>(imod::IModel *modelPtr, ISupplier *supplierPtr=NULL)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UnregisterSupplierInput</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>add07a57031037d60c26628f9cb52f811</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetDiagnosticName</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a12b7c1c099eca829dd19814d84a2ee87</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddMessage</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>aad40686b67a71362476a4db5e69de885</anchor>
+      <arglist>(const ilog::CMessage *messagePtr) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsMessageSupported</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a0561b4da80df642d7e9ed4c180be1cd7</anchor>
+      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddMessage</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a2ac3e3c6bc9d902e831c73576f6b6e6f</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a55e1e7daefec816c55e46d629bb20751</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a08829340301aed9acda31308797da725</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; istd::TPointerVector&lt; const iimg::IBitmap &gt; &gt;</type>
+      <name>m_productPtr</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_workStatus</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a960a57e39a555f8e1aaff58d75ac5d85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::CChangeNotifier</type>
+      <name>m_productChangeNotifier</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a7fc326b1a7dd7f54d40d6d5b90b20a4e</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>icam::CMultiLayerBitmapSupplierComp</name>
@@ -4122,6 +4571,20 @@
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_multi_layer_bitmap_supplier_comp.html</anchorfile>
       <anchor>a50b1f1d18581d9f06666ba2685d685ff</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>istd::TDelPtr&lt; iimg::IMultiBitmapProvider &gt;</type>
+      <name>ProductType</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -4152,6 +4615,20 @@
       <anchor>a3195cf3d098d6d276e8ebfd270ba1850</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>InitializeWork</name>
@@ -4166,6 +4643,27 @@
       <anchor>a16de05aff3b1dfb063239226568eaa5f</anchor>
       <arglist>(ProductType &amp;result) const </arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>const istd::TDelPtr&lt; iimg::IMultiBitmapProvider &gt; *</type>
+      <name>GetWorkProduct</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6230575f0d5b0ccfd28cdf7082866c62</anchor>
+      <arglist>(istd::TDelPtr&lt; iimg::IMultiBitmapProvider &gt; &amp;result) const =0</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; istd::TDelPtr&lt; iimg::IMultiBitmapProvider &gt; &gt;</type>
+      <name>m_productPtr</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>icam::CSelectableBitmapSupplierComp</name>
@@ -4178,6 +4676,20 @@
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
       <anchor>a5cae1596e25e8b4e3caecc7b706e7067</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</type>
+      <name>ProductType</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -4229,6 +4741,20 @@
       <anchor>a4fe2d0373d534a41447547696a54b3ea</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>ProduceObject</name>
@@ -4249,6 +4775,34 @@
       <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
       <anchor>afdcf1d6f121248edc60232a2ece8349f</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>const QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; *</type>
+      <name>GetWorkProduct</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6230575f0d5b0ccfd28cdf7082866c62</anchor>
+      <arglist>(QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &amp;result) const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InitializeWork</name>
+      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>ac37e116184f83fb9407a6243391222b0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
+      <name>m_productPtr</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -4427,96 +4981,174 @@
       <anchor>ad1fd013eaa11fd644b41f2959b29fd7a</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const =0</arglist>
     </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetProcessorState</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a21bebcb085e8e93dc6920ad3dcf6c4ce</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>AreParamsAccepted</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a18d945c422d423fa69be5c2a136e1258</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>ad5afd83168811f2e276fa4d57821b013</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>BeginTask</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>af214e4076c2fa524b9aa6de572e90170</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>WaitTaskFinished</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>abb082ed0fb7e87d975848e53aad84f89</anchor>
+      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>aa73693c6c682f31cf5bb344c6e816d6f</anchor>
+      <arglist>(int taskId=-1)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetReadyTask</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a4afcb910ebe56624cb240a09b998581a</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetTaskState</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>ab8c6e1b11221b853398eadc0953b2f07</anchor>
+      <arglist>(int taskId=-1) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a71cf33bedd0292459b281926cb2df448</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)=0</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>icam::ICameraInfo</name>
     <filename>classicam_1_1_i_camera_info.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="enumeration">
+      <type></type>
       <name>CameraAttribute</name>
       <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
       <anchor>a7650f9df161d473e5e92cb718c46535b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CA_VENDOR</name>
       <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
       <anchor>a7650f9df161d473e5e92cb718c46535bab9b9c6bb37222632f8ac0e8765e93bdb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CA_MODEL</name>
       <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
       <anchor>a7650f9df161d473e5e92cb718c46535ba2055d84f7217930a6bb45a1a0c43f414</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CA_DEVICE_VERSION</name>
       <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
       <anchor>a7650f9df161d473e5e92cb718c46535ba000c5bcba5b24c19366a0cb374d1442d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CA_FIRMWARE_VERSION</name>
       <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
       <anchor>a7650f9df161d473e5e92cb718c46535bafa3a18573b74fd3db9cc77764916dcfe</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CA_DEVICE_ID</name>
       <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
       <anchor>a7650f9df161d473e5e92cb718c46535baa610038d8aed1695551cb39ce20c2bf3</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CA_DEVICE_NAME</name>
       <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
       <anchor>a7650f9df161d473e5e92cb718c46535ba872b6ec8547c0e584381e7e3686c13dd</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CA_DEVICE_CLASS</name>
       <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
       <anchor>a7650f9df161d473e5e92cb718c46535ba564f0e899c548d590a0049fe73f6ce0c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CA_SERIAL_NUMBER</name>
       <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
       <anchor>a7650f9df161d473e5e92cb718c46535baedb0f16f1064b1df1a5207c3cce7e4fe</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CA_IP_ADDRESS</name>
       <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
       <anchor>a7650f9df161d473e5e92cb718c46535baadff78f7ff5fb81df049af0f9716be9e</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CA_MAC_ADDRESS</name>
       <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
       <anchor>a7650f9df161d473e5e92cb718c46535ba72c2a4f984676f59ffcc8e9107328629</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CA_MAX_WIDTH</name>
       <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
       <anchor>a7650f9df161d473e5e92cb718c46535ba49668fa867b469983c0356e369cae73d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CA_MAX_HEIGHT</name>
       <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
       <anchor>a7650f9df161d473e5e92cb718c46535ba17c1bdb7795f4697c5c195883e70c407</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CA_PORT</name>
       <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
       <anchor>a7650f9df161d473e5e92cb718c46535ba4f96f0759f524a7f3bae7a4212be73f4</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CA_USER</name>
       <anchorfile>classicam_1_1_i_camera_info.html</anchorfile>
       <anchor>a7650f9df161d473e5e92cb718c46535ba914d067a371f322e28285df4d264ac8b</anchor>
@@ -4652,156 +5284,182 @@
     <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CAttributeEditorComp &gt;, CElementSelectionInfoManagerBase &gt; &gt;</base>
     <class kind="struct">icmpstr::CAttributeEditorComp::AttrInfo</class>
     <member kind="enumeration">
+      <type></type>
       <name>TabIndex</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>a263dc5f2a5775ec1b68ce8fc3ad608cf</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>TI_GENERAL</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>a263dc5f2a5775ec1b68ce8fc3ad608cfa0e928a8edaae0a3da5b4377ba5e8b90f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>TI_ATTRIBUTES</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>a263dc5f2a5775ec1b68ce8fc3ad608cfa3955b50958ad4e43667c0ad5d574982b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>TI_INTERFACES</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>a263dc5f2a5775ec1b68ce8fc3ad608cfa1fdf0011261b28706cc1184bd7839676</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>TI_FLAGS</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>a263dc5f2a5775ec1b68ce8fc3ad608cfa3088f77da3bf9e6a97a447e8b72a51db</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>TI_EXPORTS</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>a263dc5f2a5775ec1b68ce8fc3ad608cfadcf691a496c3238c11aaf4ebffc20418</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
+      <type></type>
       <name>AttrMeaning</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>ad8b45c49f2f9036d9a63fbb828752a03</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>AM_NONE</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>ad8b45c49f2f9036d9a63fbb828752a03a37ac90fb66977119a4d84f9cfa342e19</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>AM_REFERENCE</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>ad8b45c49f2f9036d9a63fbb828752a03a86eaede74d385e14b136c7508037aa6e</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>AM_MULTI_REFERENCE</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>ad8b45c49f2f9036d9a63fbb828752a03a6974b9498aebbd6f3c3f384a75ab94b5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>AM_ATTRIBUTE</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>ad8b45c49f2f9036d9a63fbb828752a03a6cc3fee462776ac9cb3bf5b62eca5c6a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>AM_BOOL_ATTRIBUTE</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>ad8b45c49f2f9036d9a63fbb828752a03a53a7cded218bb7c51b08bf77a2e4f12f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>AM_MULTI_ATTRIBUTE</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>ad8b45c49f2f9036d9a63fbb828752a03adb98c2aec039784d63ab2198c5992ebb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>AM_EXPORTED_ATTR</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>ad8b45c49f2f9036d9a63fbb828752a03a47d6e3869de7aa1be5316609f3ae04af</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>AM_EXPORTED_COMP</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>ad8b45c49f2f9036d9a63fbb828752a03ac1310d8b63af960cb18f4c5da12fb836</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>AM_MULTI</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>ad8b45c49f2f9036d9a63fbb828752a03ac0320d866128224f20d79a19261ee68a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
+      <type></type>
       <name>AttributeColumns</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>a9ea46939bda9debd7aa6f5c1a753dc44</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>AC_NAME</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>a9ea46939bda9debd7aa6f5c1a753dc44aa8114038ec7df403009f611a6ead3420</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>AC_VALUE</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>a9ea46939bda9debd7aa6f5c1a753dc44a610be4595e2cacca973e4a73f2989895</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
+      <type></type>
       <name>AttributeRole</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>a1a4a9e9cbf809497cf176f751f9f5648</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>AttributeMining</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>a1a4a9e9cbf809497cf176f751f9f5648a23130885ba3e0afe66dcf40e11b671bd</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>AttributeId</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>a1a4a9e9cbf809497cf176f751f9f5648a476002d65af7e52c853ae13fb0b6ebe6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>AttributeValue</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>a1a4a9e9cbf809497cf176f751f9f5648ab095570a7737336e8c2fdf58107400d1</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>AttributeTypeId</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>a1a4a9e9cbf809497cf176f751f9f5648a056649771f29361711e45eed782cc345</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>ElementId</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>a1a4a9e9cbf809497cf176f751f9f5648ae8f8eed7e4c407484b35087254739966</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>InterfaceName</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>a1a4a9e9cbf809497cf176f751f9f5648aa7f09407789928d47b7994a5507f2db8</anchor>
@@ -5241,13 +5899,15 @@
       <anchor>a922592539adbef1b4100bb691afbd64c</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="enumeration">
+    <member kind="enumeration" protection="protected">
+      <type></type>
       <name>GroupId</name>
       <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
       <anchor>adbd5d01ec79756ee7949da2d46193b8d</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
       <name>GI_COMPONENT</name>
       <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
       <anchor>adbd5d01ec79756ee7949da2d46193b8dae63e8798886e3adcff68f133aba86dd5</anchor>
@@ -5437,44 +6097,50 @@
   <compound kind="class">
     <name>icmpstr::CGraphicsConnectorItem</name>
     <filename>classicmpstr_1_1_c_graphics_connector_item.html</filename>
-    <base>QObject</base>
     <member kind="enumeration">
+      <type></type>
       <name>ConnectFlags</name>
       <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
       <anchor>aafa4ad7fca0c1dc726dcbf3a6529473f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CF_FACTORY</name>
       <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
       <anchor>aafa4ad7fca0c1dc726dcbf3a6529473fa8022861d140c5b2cfcf7c9e80e5c9f63</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CF_EMBEDDED</name>
       <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
       <anchor>aafa4ad7fca0c1dc726dcbf3a6529473fa7cf74bf67bb4ac63280831b07942fdbb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
+      <type></type>
       <name>GeometricParams</name>
       <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
       <anchor>a021656cdf63c4b66f3c77f117243b4be</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>GP_RADIUS</name>
       <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
       <anchor>a021656cdf63c4b66f3c77f117243b4bea1ee09fcc7a1251afd1d17dea89c7708f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>GP_RADIUS2</name>
       <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
       <anchor>a021656cdf63c4b66f3c77f117243b4bea34dd3eff551ac2ab82d91d55aec3d31f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>GP_OFFSET</name>
       <anchorfile>classicmpstr_1_1_c_graphics_connector_item.html</anchorfile>
       <anchor>a021656cdf63c4b66f3c77f117243b4bea0b4893e636b7fb96159af730e94d8d9f</anchor>
@@ -6041,58 +6707,66 @@
   <compound kind="class">
     <name>icmpstr::CRegistryConsistInfoComp</name>
     <filename>classicmpstr_1_1_c_registry_consist_info_comp.html</filename>
-    <base>QObject</base>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">icmpstr::IRegistryConsistInfo</base>
     <member kind="enumeration">
+      <type></type>
       <name>MessageId</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
       <anchor>aab12518eeda711c1c8d273992696f049</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_COMPONENT_INACTIVE</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
       <anchor>aab12518eeda711c1c8d273992696f049afafc18991d48f9a8131072c66492663f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_NO_ELEMENT_INFO</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
       <anchor>aab12518eeda711c1c8d273992696f049a3420392b68d4746df5541351b39695ed</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_BAD_ATTRIBUTE_TYPE</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
       <anchor>aab12518eeda711c1c8d273992696f049a4aabf1085305ed323a137ed2da971ced</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_UNDEF_ATTRIBUTE</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
       <anchor>aab12518eeda711c1c8d273992696f049af52eb982c907c853a7f07a8ab805f09f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_COMPOSITE_FOUND</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
       <anchor>aab12518eeda711c1c8d273992696f049ae8b0e88158df0469f656010b7af39a11</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_WRONG_INTERFACE</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
       <anchor>aab12518eeda711c1c8d273992696f049ac1fc527cf4157d915218e9f1b692665a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_COMPONENT_NOT_FOUND</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
       <anchor>aab12518eeda711c1c8d273992696f049a430c03a159b6efadaa2f6797b35242be</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_REF_NOT_RESOLVED</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
       <anchor>aab12518eeda711c1c8d273992696f049a7e584ceefd04f9653147e241a199e7e0</anchor>
@@ -6103,6 +6777,34 @@
       <name>BaseClass</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
       <anchor>aa1de6d51343fecb39f7d3534ab54ac61</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>QueryFlags</name>
+      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
+      <anchor>a17277f70a9bf291a4806d392aa37d8b2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>QF_NONE</name>
+      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
+      <anchor>a17277f70a9bf291a4806d392aa37d8b2af792ec43d28e8c197e6c2ffc97a6fc39</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>QF_ANY_INTERFACE</name>
+      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
+      <anchor>a17277f70a9bf291a4806d392aa37d8b2a2c72e2bab99955b0093b8b84dd8c3b49</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>QF_INCLUDE_UNDEFINED</name>
+      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
+      <anchor>a17277f70a9bf291a4806d392aa37d8b2af050992c4fda62f91eb3d6eada5fc7e8</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -6194,6 +6896,34 @@
       <anchor>afe07580ce056cae717b8307a6b122543</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>TShapeBase&lt; QGraphicsRectItem &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>ad00993b61767d1e229adc4d44ac5ab11</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::TSingleModelObserverBase&lt; CVisualRegistryElement &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>a1b67ca20d9bf006d4785967132783363</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ColorSheme</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>adb37f975550e5ea266069cd8be2492d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QGraphicsRectItem</type>
+      <name>BaseClass</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>aee3e0d45b8ff2d4aa2bcb57e20a456ef</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="signal">
       <type>void</type>
       <name>RectChanged</name>
@@ -6264,13 +6994,85 @@
       <anchor>a693615243f8ff1c87ea04d7f5c035e61</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="function">
+      <type></type>
+      <name>TObjectShapeBase</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>ac62d4216e3dbdb96aa8d03dc9fc41c79</anchor>
+      <arglist>(bool isEditable=false, const ISceneProvider *providerPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TShapeBase</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>ae05a49a0a7568d04500d86c1a5661b9c</anchor>
+      <arglist>(bool isEditable=false, const ISceneProvider *providerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPen</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>aab947758d35d34a6fe99bfd0129e6b40</anchor>
+      <arglist>(int colorSheme, const QPen &amp;pen)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QPen</type>
+      <name>GetPen</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>ac1d04b1443ef89f4ff8c5ec02c29cb7b</anchor>
+      <arglist>(int colorSheme) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetBrush</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>a162a42318f015b6c41e33c89ef40a64f</anchor>
+      <arglist>(int colorSheme, const QBrush &amp;pen)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QBrush</type>
+      <name>GetBrush</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>ae650176339fa229e9d0331333da6fd88</anchor>
+      <arglist>(int colorSheme) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SwitchColorSheme</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>a2726d891662771b491ec857006d6566b</anchor>
+      <arglist>(int colorSheme)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsEditable</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>a9d35d412ba88bb7e6b5a76442e4d647b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetEditable</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>aef8dd96943692c410942dda156a73b90</anchor>
+      <arglist>(bool isEditable)</arglist>
+    </member>
+    <member kind="function">
+      <type>const ISceneProvider *</type>
+      <name>GetSceneProvider</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>a09bb67f9285d42126fe2294b8059afb0</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
       <name>SIDE_OFFSET</name>
       <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
       <anchor>ae4545d9b49a6256e86a61a5e7b5468eeaef8e9470aa7f146aa93268980192b5bb</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
       <name>SHADOW_OFFSET</name>
       <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
       <anchor>ae4545d9b49a6256e86a61a5e7b5468eeabc25da06cff09b155ba1cb7b96603cd1</anchor>
@@ -6297,25 +7099,90 @@
       <anchor>a72c8520bcdcff16b7c959988af0cea1e</anchor>
       <arglist>(bool isSelected)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnPositionChanged</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>ab1b2bd8ac222118c71dff0c559cf4a74</anchor>
+      <arglist>(const QPointF &amp;position)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QVariant</type>
+      <name>itemChange</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>a8966ba6b1d04cf1d2ef745c1e5681d61</anchor>
+      <arglist>(QGraphicsItem::GraphicsItemChange change, const QVariant &amp;value)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>mousePressEvent</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>ac52bce6b8a08b75c49a751814cb8d3b3</anchor>
+      <arglist>(QGraphicsSceneMouseEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>mouseReleaseEvent</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>a389d48028358fc515c793acce9bccbec</anchor>
+      <arglist>(QGraphicsSceneMouseEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>aa38243f1b9a880253096d0fb4d64ee62</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>i2d::CVector2d</type>
+      <name>GetPosFromLocal</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>a2479bbb32e3f1819643ceff4a558442a</anchor>
+      <arglist>(const QPointF &amp;position) const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QPointF</type>
+      <name>GetLocalFromPos</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>a1b2b890ade200162309cbdf264ac9896</anchor>
+      <arglist>(const i2d::CVector2d &amp;position) const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>hoverEnterEvent</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>a258ec40b12ec5724346b2949e9166864</anchor>
+      <arglist>(QGraphicsSceneHoverEvent *event)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>hoverLeaveEvent</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>acbda29c594f7c3dccf1a7c63c0e951ec</anchor>
+      <arglist>(QGraphicsSceneHoverEvent *event)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>icmpstr::CRegistryLoaderComp</name>
     <filename>classicmpstr_1_1_c_registry_loader_comp.html</filename>
-    <base>QObject</base>
     <base>TFileSerializerComp&lt; ifile::CXmlFileReadArchive, ifile::CXmlFileWriteArchive &gt;</base>
     <member kind="enumeration">
+      <type></type>
       <name>MessageId</name>
       <anchorfile>classicmpstr_1_1_c_registry_loader_comp.html</anchorfile>
       <anchor>a83c4d161fe2bb108d55f1051d28143f9</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_LOAD_ERROR</name>
       <anchorfile>classicmpstr_1_1_c_registry_loader_comp.html</anchorfile>
       <anchor>a83c4d161fe2bb108d55f1051d28143f9aee13cf0577e10f86f2bd7aa869d6ace4</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_CANNOT_READ_LAYOUT</name>
       <anchorfile>classicmpstr_1_1_c_registry_loader_comp.html</anchorfile>
       <anchor>a83c4d161fe2bb108d55f1051d28143f9a4baa9032bbcba7487917ab57b033d2a8</anchor>
@@ -6374,7 +7241,6 @@
   <compound kind="class">
     <name>icmpstr::CRegistryPreviewComp</name>
     <filename>classicmpstr_1_1_c_registry_preview_comp.html</filename>
-    <base>QObject</base>
     <base>ilog::TLoggerCompWrap</base>
     <base>icmpstr::IRegistryPreview</base>
     <member kind="typedef">
@@ -6454,42 +7320,49 @@
     <base>TDesignerGuiObserverCompBase&lt; Ui::CRegistryPropEditorComp, icomp::IRegistry &gt;</base>
     <class kind="class">icmpstr::CRegistryPropEditorComp::TextLog</class>
     <member kind="enumeration">
+      <type></type>
       <name>ItemType</name>
       <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
       <anchor>ad9ff19a492913cba2e361bf84d6268a6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>IT_EXPORTED_INTERFACE</name>
       <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
       <anchor>ad9ff19a492913cba2e361bf84d6268a6a4f5ef2bf067c535d3d308bb54e5b1121</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>IT_EXPORTED_COMPONENT</name>
       <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
       <anchor>ad9ff19a492913cba2e361bf84d6268a6a167a416c365d71eb70eeda2e1eaaea48</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
+      <type></type>
       <name>DataRole</name>
       <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
       <anchor>a2017d4c1d45860a5b900029b7ce5bddd</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>DR_COMPONENT_ID</name>
       <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
       <anchor>a2017d4c1d45860a5b900029b7ce5bddda2a1ffc2d21f0ea8a43c680e002f69bd7</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>DR_ITEM_TYPE</name>
       <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
       <anchor>a2017d4c1d45860a5b900029b7ce5bddda1d6ced433a05697d0220136b43b300a0</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>DR_EXPORT_ID</name>
       <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
       <anchor>a2017d4c1d45860a5b900029b7ce5bdddabbe08122217fef89e12ea11dcff0c2aa</anchor>
@@ -6605,60 +7478,70 @@
     <base>TDesignerGuiObserverCompBase&lt; Ui::CRegistryTreeViewComp, icomp::IRegistry &gt;</base>
     <class kind="class">icmpstr::CRegistryTreeViewComp::EnvironmentObserver</class>
     <member kind="enumeration">
+      <type></type>
       <name>DataRole</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
       <anchor>af56c18fb33e6389cffc4e4a1581c77bb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>DR_MESSAGE_LIST</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
       <anchor>af56c18fb33e6389cffc4e4a1581c77bba7649d00cac82dd7253a55f0b618b111e</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>DR_ELEMENT_NAME</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
       <anchor>af56c18fb33e6389cffc4e4a1581c77bbabb6366637b72b83e69ac1e9a3e28f29c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>DR_ELEMENT_ID</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
       <anchor>af56c18fb33e6389cffc4e4a1581c77bba72c3a3163d1de45387797a91b7510632</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>DR_ELEMENT_PACKAGE_ID</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
       <anchor>af56c18fb33e6389cffc4e4a1581c77bba694ecd5d537a428ac06f2d7845b47aa4</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>DR_REGISTRY</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
       <anchor>af56c18fb33e6389cffc4e4a1581c77bba1b202c3c89c9e423cd36fe6b79561c34</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
+      <type></type>
       <name>ColumnTypes</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
       <anchor>a2c6d8ecaf6a25ff33c8559d523768971</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CT_NAME</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
       <anchor>a2c6d8ecaf6a25ff33c8559d523768971a2b35f9b630dfdd3b8e1a4ccf61d33dc1</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CT_ID</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
       <anchor>a2c6d8ecaf6a25ff33c8559d523768971afe74034586cdca0554e64583f39d9aea</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CT_PACKAGE</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
       <anchor>a2c6d8ecaf6a25ff33c8559d523768971aa74f98bb082c7285a53b070fcd4087fe</anchor>
@@ -6861,42 +7744,49 @@
     <base virtualness="virtual">i2d::ISceneController</base>
     <class kind="class">icmpstr::CSceneProviderGuiComp::CScene</class>
     <member kind="enumeration">
+      <type></type>
       <name>BackgroundMode</name>
       <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
       <anchor>a47c91d6e3ead1cfdc34d82377baa724b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>BM_NORMAL</name>
       <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
       <anchor>a47c91d6e3ead1cfdc34d82377baa724bafc68d3c8e62e0483af5da521808859a8</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>BM_SOLID</name>
       <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
       <anchor>a47c91d6e3ead1cfdc34d82377baa724baa6b141bd3afec7c472b076e920b9ae82</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>BM_GRID</name>
       <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
       <anchor>a47c91d6e3ead1cfdc34d82377baa724ba51df2ce255658c352d7be519fc72b4f6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>BM_CHECKERBOARD</name>
       <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
       <anchor>a47c91d6e3ead1cfdc34d82377baa724ba7efd4d9a24f1a3372a5873aaf5fefb1b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>BM_DOT_GRID</name>
       <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
       <anchor>a47c91d6e3ead1cfdc34d82377baa724ba6220fda529744e6286d74e4c0efb271e</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>BM_TRANSPARENT</name>
       <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
       <anchor>a47c91d6e3ead1cfdc34d82377baa724baf6b00fe5c0d1b53ce82737888d501839</anchor>
@@ -6907,6 +7797,27 @@
       <name>BaseClass</name>
       <anchorfile>classicmpstr_1_1_c_scene_provider_gui_comp.html</anchorfile>
       <anchor>a4b82e25cb9b5ba1717af8bf62066f548</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>SceneFlags</name>
+      <anchorfile>classicmpstr_1_1_i_scene_provider.html</anchorfile>
+      <anchor>a5b04222d7e3b4e9542b1a26ab3ec3245</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SF_FIXED_SIZE</name>
+      <anchorfile>classicmpstr_1_1_i_scene_provider.html</anchorfile>
+      <anchor>a5b04222d7e3b4e9542b1a26ab3ec3245adee81a2a0fa3944e96e781d1f662b3fd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SF_ALIGNED</name>
+      <anchorfile>classicmpstr_1_1_i_scene_provider.html</anchorfile>
+      <anchor>a5b04222d7e3b4e9542b1a26ab3ec3245a6ed7d94c9b5ff12650ac39718ec4cb6e</anchor>
       <arglist></arglist>
     </member>
     <member kind="signal">
@@ -7246,16 +8157,17 @@
   <compound kind="class">
     <name>icmpstr::CVisualRegistry</name>
     <filename>classicmpstr_1_1_c_visual_registry.html</filename>
-    <base>QObject</base>
     <base>icomp::CRegistry</base>
     <base virtualness="virtual">icmpstr::IComponentNoteController</base>
     <member kind="enumeration">
+      <type></type>
       <name>MessageId</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
       <anchor>a12990af2da6dc5fcb708ec39d3747f4a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_CANNOT_CREATE_ELEMENT</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
       <anchor>a12990af2da6dc5fcb708ec39d3747f4aac1fab72877a37ca1f0ab6b3936a6e4a3</anchor>
@@ -7266,6 +8178,20 @@
       <name>BaseClass</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry.html</anchorfile>
       <anchor>abeafd65eeb1a68562890d8eef10d4ef5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ChangeFlags</name>
+      <anchorfile>classicmpstr_1_1_i_component_note_controller.html</anchorfile>
+      <anchor>acdc9337112c091fe77639f15a5e93f17</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_NOTE_CHANGED</name>
+      <anchorfile>classicmpstr_1_1_i_component_note_controller.html</anchorfile>
+      <anchor>acdc9337112c091fe77639f15a5e93f17a51d310e3bfd3ae1cd4bb970c2fc6ff63</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -7515,43 +8441,50 @@
       <anchor>a4c891c183b1f408f0591b672152f8fb2</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumeration">
+    <member kind="enumeration" protection="protected">
+      <type></type>
       <name>GroupId</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
       <anchor>a233b273076b25fa833a2a3b2123386d7</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
       <name>GI_COMPONENT</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
       <anchor>a233b273076b25fa833a2a3b2123386d7a1db9f4469a5b86bf612026a67d2e0c06</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
       <name>GI_EMBEDDED_REGISTRY</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
       <anchor>a233b273076b25fa833a2a3b2123386d7a19b58792dc1b6b504b35c25a762c6d63</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
       <name>GI_CODEGEN</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
       <anchor>a233b273076b25fa833a2a3b2123386d7a27da63bde2eb1d0247950e53258ce708</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
       <name>GI_PREVIEW</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
       <anchor>a233b273076b25fa833a2a3b2123386d7a333f46c00846751c89c0429f428a437d</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
       <name>GI_EDIT</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
       <anchor>a233b273076b25fa833a2a3b2123386d7a059bb57882415ccd6c208015f6113fa1</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
       <name>GI_TOOLS</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
       <anchor>a233b273076b25fa833a2a3b2123386d7a1d489f3ab152d5ed5d36be0cbb347422</anchor>
@@ -8010,18 +8943,6 @@
     <name>icmpstr::IComponentNoteController</name>
     <filename>classicmpstr_1_1_i_component_note_controller.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="enumeration">
-      <name>ChangeFlags</name>
-      <anchorfile>classicmpstr_1_1_i_component_note_controller.html</anchorfile>
-      <anchor>acdc9337112c091fe77639f15a5e93f17</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_NOTE_CHANGED</name>
-      <anchorfile>classicmpstr_1_1_i_component_note_controller.html</anchorfile>
-      <anchor>acdc9337112c091fe77639f15a5e93f17a51d310e3bfd3ae1cd4bb970c2fc6ff63</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
       <name>GetComponentNote</name>
@@ -8042,12 +8963,14 @@
     <filename>classicmpstr_1_1_i_element_selection_info.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
     <member kind="enumeration">
+      <type></type>
       <name>ChangeFlags</name>
       <anchorfile>classicmpstr_1_1_i_element_selection_info.html</anchorfile>
       <anchor>a63c33646e2066bbeeef15c7f176c7429</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CF_SELECTION</name>
       <anchorfile>classicmpstr_1_1_i_element_selection_info.html</anchorfile>
       <anchor>a63c33646e2066bbeeef15c7f176c7429a541f91a51e5f77609236592592524fed</anchor>
@@ -8098,30 +9021,6 @@
     <name>icmpstr::IRegistryConsistInfo</name>
     <filename>classicmpstr_1_1_i_registry_consist_info.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="enumeration">
-      <name>QueryFlags</name>
-      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
-      <anchor>a17277f70a9bf291a4806d392aa37d8b2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>QF_NONE</name>
-      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
-      <anchor>a17277f70a9bf291a4806d392aa37d8b2af792ec43d28e8c197e6c2ffc97a6fc39</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>QF_ANY_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
-      <anchor>a17277f70a9bf291a4806d392aa37d8b2a2c72e2bab99955b0093b8b84dd8c3b49</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>QF_INCLUDE_UNDEFINED</name>
-      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
-      <anchor>a17277f70a9bf291a4806d392aa37d8b2af050992c4fda62f91eb3d6eada5fc7e8</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual icomp::IRegistry::Ids</type>
       <name>GetCompatibleElements</name>
@@ -8188,24 +9087,6 @@
     <name>icmpstr::ISceneProvider</name>
     <filename>classicmpstr_1_1_i_scene_provider.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="enumeration">
-      <name>SceneFlags</name>
-      <anchorfile>classicmpstr_1_1_i_scene_provider.html</anchorfile>
-      <anchor>a5b04222d7e3b4e9542b1a26ab3ec3245</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SF_FIXED_SIZE</name>
-      <anchorfile>classicmpstr_1_1_i_scene_provider.html</anchorfile>
-      <anchor>a5b04222d7e3b4e9542b1a26ab3ec3245adee81a2a0fa3944e96e781d1f662b3fd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SF_ALIGNED</name>
-      <anchorfile>classicmpstr_1_1_i_scene_provider.html</anchorfile>
-      <anchor>a5b04222d7e3b4e9542b1a26ab3ec3245a6ed7d94c9b5ff12650ac39718ec4cb6e</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetSceneId</name>
@@ -8256,100 +9137,36 @@
       <anchor>a1b67ca20d9bf006d4785967132783363</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>TObjectShapeBase</name>
-      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>ac62d4216e3dbdb96aa8d03dc9fc41c79</anchor>
-      <arglist>(bool isEditable=false, const ISceneProvider *providerPtr=NULL)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnSelectionChanged</name>
-      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>a3967ef9d1790a4bdb85a27c5b860f320</anchor>
-      <arglist>(bool isSelected)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnPositionChanged</name>
-      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>ab1b2bd8ac222118c71dff0c559cf4a74</anchor>
-      <arglist>(const QPointF &amp;position)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QVariant</type>
-      <name>itemChange</name>
-      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>a8966ba6b1d04cf1d2ef745c1e5681d61</anchor>
-      <arglist>(QGraphicsItem::GraphicsItemChange change, const QVariant &amp;value)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>mousePressEvent</name>
-      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>ac52bce6b8a08b75c49a751814cb8d3b3</anchor>
-      <arglist>(QGraphicsSceneMouseEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>mouseReleaseEvent</name>
-      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>a389d48028358fc515c793acce9bccbec</anchor>
-      <arglist>(QGraphicsSceneMouseEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>mouseDoubleClickEvent</name>
-      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>a73dcd1ce65c9108b85d2a07209e7c6c0</anchor>
-      <arglist>(QGraphicsSceneMouseEvent *eventPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AfterUpdate</name>
-      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>aa38243f1b9a880253096d0fb4d64ee62</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>UpdateGraphicsItem</name>
-      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>ab7b096e6f596a53bf1331dbdb25ec99e</anchor>
-      <arglist>(const ObjectClass &amp;object)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmpstr::TShapeBase</name>
-    <filename>classicmpstr_1_1_t_shape_base.html</filename>
-    <templarg>GraphicsItemClass</templarg>
-    <base>QObject</base>
     <member kind="enumeration">
+      <type></type>
       <name>ColorSheme</name>
       <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
       <anchor>adb37f975550e5ea266069cd8be2492d4</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>SelectedColor</name>
       <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
       <anchor>adb37f975550e5ea266069cd8be2492d4a4f884b3d7b931a32410aeaf74f380f85</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>EditableColor</name>
       <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
       <anchor>adb37f975550e5ea266069cd8be2492d4afd9c4969f64c4761ebc51f9ff2cb68bd</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>InactiveColor</name>
       <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
       <anchor>adb37f975550e5ea266069cd8be2492d4a23b64324649d03e6a5b58f76f31f90df</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>DefaultColor</name>
       <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
       <anchor>adb37f975550e5ea266069cd8be2492d4a42c4eff6a251e42cbe140127b78c0669</anchor>
@@ -8361,6 +9178,13 @@
       <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
       <anchor>aee3e0d45b8ff2d4aa2bcb57e20a456ef</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TObjectShapeBase</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>ac62d4216e3dbdb96aa8d03dc9fc41c79</anchor>
+      <arglist>(bool isEditable=false, const ISceneProvider *providerPtr=NULL)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -8425,6 +9249,62 @@
       <anchor>a09bb67f9285d42126fe2294b8059afb0</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSelectionChanged</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>a3967ef9d1790a4bdb85a27c5b860f320</anchor>
+      <arglist>(bool isSelected)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnPositionChanged</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>ab1b2bd8ac222118c71dff0c559cf4a74</anchor>
+      <arglist>(const QPointF &amp;position)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QVariant</type>
+      <name>itemChange</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>a8966ba6b1d04cf1d2ef745c1e5681d61</anchor>
+      <arglist>(QGraphicsItem::GraphicsItemChange change, const QVariant &amp;value)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>mousePressEvent</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>ac52bce6b8a08b75c49a751814cb8d3b3</anchor>
+      <arglist>(QGraphicsSceneMouseEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>mouseReleaseEvent</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>a389d48028358fc515c793acce9bccbec</anchor>
+      <arglist>(QGraphicsSceneMouseEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>mouseDoubleClickEvent</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>a73dcd1ce65c9108b85d2a07209e7c6c0</anchor>
+      <arglist>(QGraphicsSceneMouseEvent *eventPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>aa38243f1b9a880253096d0fb4d64ee62</anchor>
+      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>UpdateGraphicsItem</name>
+      <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
+      <anchor>ab7b096e6f596a53bf1331dbdb25ec99e</anchor>
+      <arglist>(const ObjectClass &amp;object)=0</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>i2d::CVector2d</type>
       <name>GetPosFromLocal</name>
@@ -8438,27 +9318,6 @@
       <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
       <anchor>a1b2b890ade200162309cbdf264ac9896</anchor>
       <arglist>(const i2d::CVector2d &amp;position) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnSelectionChanged</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>a8272ebe7d40e5720c16b0a2545f8cf61</anchor>
-      <arglist>(bool isSelected)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnPositionChanged</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>a071dae8731f249d895feecf3d34cfad4</anchor>
-      <arglist>(const QPointF &amp;position)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QVariant</type>
-      <name>itemChange</name>
-      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
-      <anchor>a153b4a35041c83a6f4df18387f7bb263</anchor>
-      <arglist>(QGraphicsItem::GraphicsItemChange change, const QVariant &amp;value)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -8494,6 +9353,32 @@
       <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
       <anchor>a39fd5e47f354db3203d15a5b448af941</anchor>
       <arglist>(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icmpstr::TShapeBase</name>
+    <filename>classicmpstr_1_1_t_shape_base.html</filename>
+    <templarg>GraphicsItemClass</templarg>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSelectionChanged</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>a8272ebe7d40e5720c16b0a2545f8cf61</anchor>
+      <arglist>(bool isSelected)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnPositionChanged</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>a071dae8731f249d895feecf3d34cfad4</anchor>
+      <arglist>(const QPointF &amp;position)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QVariant</type>
+      <name>itemChange</name>
+      <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
+      <anchor>a153b4a35041c83a6f4df18387f7bb263</anchor>
+      <arglist>(QGraphicsItem::GraphicsItemChange change, const QVariant &amp;value)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -8585,6 +9470,20 @@
       <name>BaseClass</name>
       <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
       <anchor>a6e57cd4f77b10129961c6f3b05ffd27b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QPair&lt; iipr::CFeaturesContainer, QVector&lt; i2d::CAffineTransformation2d &gt; &gt;</type>
+      <name>ProductType</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -8706,6 +9605,20 @@
       <anchor>abcff719ae088ebb2b741268004e9b24c</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>InitializeWork</name>
@@ -8733,6 +9646,20 @@
       <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
       <anchor>a5c9e22bef4a356697299f6b6a1fdae16</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>const QPair&lt; iipr::CFeaturesContainer, QVector&lt; i2d::CAffineTransformation2d &gt; &gt; *</type>
+      <name>GetWorkProduct</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; QPair&lt; iipr::CFeaturesContainer, QVector&lt; i2d::CAffineTransformation2d &gt; &gt; &gt;</type>
+      <name>m_productPtr</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9092,6 +10019,34 @@
       <anchor>aa2637eca8885f690f8d8b28d51c16886</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>a89a981e20fa8a2d09462bb32d933509e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iproc::TSyncProcessorWrap&lt; IEdgeLinesProcessor &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>ae7231378d49277f210d184366095ac75</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>IEdgeLinesProcessor</type>
+      <name>InterfaceType</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>aeb82b61f5619c5cfd1cfdefe18320b2d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>IEdgeLinesProcessor</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3b21fc424b686e6bcf4537b75d89adf3</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type>void</type>
       <name>GetReducedLine</name>
@@ -9148,6 +10103,69 @@
       <anchor>a6ee826594fd1b0796444a45fe559281d</anchor>
       <arglist>(int index) const </arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>TSyncProcessorWrap</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a33b9338307557966bc5e0f87e375de37</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetProcessorState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>adc1704c346843a8bcaf57e055e902b71</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AreParamsAccepted</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>ae97572f44492b12a88117a22db51483d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a06c427a3f188b18011a3c842be354183</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>WaitTaskFinished</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a5e249d7e56f018e4e4f3ce872f1d622d</anchor>
+      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a0a5cd08f5800f4d01eeae041dd5a5aa7</anchor>
+      <arglist>(int taskId=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetReadyTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a7644b6e2edc8e32f3e4a9987a2a97ab9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTaskState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>aeea1cf5b8c422a59cb9c76550cb83a81</anchor>
+      <arglist>(int taskId=-1) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
     <member kind="typedef" protection="protected">
       <type>QVector&lt; bool &gt;</type>
       <name>NodesToRemove</name>
@@ -9173,6 +10191,20 @@
       <name>BaseClass</name>
       <anchorfile>classiedge_1_1_c_extracted_edge_lines_supplier_comp.html</anchorfile>
       <anchor>af2da081411d7876340fdd6e819e01c65</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CEdgeLineContainer</type>
+      <name>ProductType</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -9210,6 +10242,20 @@
       <anchor>a16f686c9572681f70634cd341ca4dc50</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>ProduceObject</name>
@@ -9224,6 +10270,27 @@
       <anchor>a12acbdda8cdb713a7d7b7ff6675720f0</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>const CEdgeLineContainer *</type>
+      <name>GetWorkProduct</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6230575f0d5b0ccfd28cdf7082866c62</anchor>
+      <arglist>(CEdgeLineContainer &amp;result) const =0</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; CEdgeLineContainer &gt;</type>
+      <name>m_productPtr</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iedge::CFastEdgesExtractorComp</name>
@@ -9235,6 +10302,34 @@
       <name>BaseClass</name>
       <anchorfile>classiedge_1_1_c_fast_edges_extractor_comp.html</anchorfile>
       <anchor>ada3b21847c4d709f1784be2b8eb4b95c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>a89a981e20fa8a2d09462bb32d933509e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iproc::TSyncProcessorWrap&lt; IEdgesExtractor &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>ae7231378d49277f210d184366095ac75</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>IEdgesExtractor</type>
+      <name>InterfaceType</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>aeb82b61f5619c5cfd1cfdefe18320b2d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>IEdgesExtractor</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3b21fc424b686e6bcf4537b75d89adf3</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9278,6 +10373,69 @@
       <anchorfile>classiedge_1_1_c_fast_edges_extractor_comp.html</anchorfile>
       <anchor>a74560029de9e7e9afe2d25b0817afef1</anchor>
       <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSyncProcessorWrap</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a33b9338307557966bc5e0f87e375de37</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetProcessorState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>adc1704c346843a8bcaf57e055e902b71</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AreParamsAccepted</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>ae97572f44492b12a88117a22db51483d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a06c427a3f188b18011a3c842be354183</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>WaitTaskFinished</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a5e249d7e56f018e4e4f3ce872f1d622d</anchor>
+      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a0a5cd08f5800f4d01eeae041dd5a5aa7</anchor>
+      <arglist>(int taskId=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetReadyTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a7644b6e2edc8e32f3e4a9987a2a97ab9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTaskState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>aeea1cf5b8c422a59cb9c76550cb83a81</anchor>
+      <arglist>(int taskId=-1) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9544,16 +10702,17 @@
   <compound kind="class">
     <name>ifileproc::CComposedCopyFilesComp</name>
     <filename>classifileproc_1_1_c_composed_copy_files_comp.html</filename>
-    <base>QObject</base>
     <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifileproc::IFileConvertCopy</base>
     <member kind="enumeration">
+      <type></type>
       <name>MessageId</name>
       <anchorfile>classifileproc_1_1_c_composed_copy_files_comp.html</anchorfile>
       <anchor>a46fd5318f44016f9d726664794f0036c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_CRITICAL</name>
       <anchorfile>classifileproc_1_1_c_composed_copy_files_comp.html</anchorfile>
       <anchor>a46fd5318f44016f9d726664794f0036ca86db1a20b4dbfd2d2bc1dff7f6a2e342</anchor>
@@ -9564,6 +10723,27 @@
       <name>BaseClass</name>
       <anchorfile>classifileproc_1_1_c_composed_copy_files_comp.html</anchorfile>
       <anchor>a0df0adc24aaac2ebf2bf467908d45767</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>MessageId</name>
+      <anchorfile>classifileproc_1_1_i_file_convert_copy.html</anchorfile>
+      <anchor>a9bf8a92485d6aed2f4f2f637d0f7a3fc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_INPUT_PATH</name>
+      <anchorfile>classifileproc_1_1_i_file_convert_copy.html</anchorfile>
+      <anchor>a9bf8a92485d6aed2f4f2f637d0f7a3fca3654f6111f278f34ca126b14f51038ba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_OUTPUT_PATH</name>
+      <anchorfile>classifileproc_1_1_i_file_convert_copy.html</anchorfile>
+      <anchor>a9bf8a92485d6aed2f4f2f637d0f7a3fcae95ef1aeac79e1b589c105de291b0e16</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9618,28 +10798,31 @@
   <compound kind="class">
     <name>ifileproc::CCopyFilesTreeComp</name>
     <filename>classifileproc_1_1_c_copy_files_tree_comp.html</filename>
-    <base>QObject</base>
     <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifileproc::IFileConvertCopy</base>
     <member kind="enumeration">
+      <type></type>
       <name>MessageId</name>
       <anchorfile>classifileproc_1_1_c_copy_files_tree_comp.html</anchorfile>
       <anchor>a6137b5797b1cc367c7b357bc5ee54f09</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_END_STATUS</name>
       <anchorfile>classifileproc_1_1_c_copy_files_tree_comp.html</anchorfile>
       <anchor>a6137b5797b1cc367c7b357bc5ee54f09af937f53d8c4da3e4f4496b6117345b8b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_NO_INPUT</name>
       <anchorfile>classifileproc_1_1_c_copy_files_tree_comp.html</anchorfile>
       <anchor>a6137b5797b1cc367c7b357bc5ee54f09aeedd166f3d9357169423701f8ba7cfc8</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_NO_OUTPUT</name>
       <anchorfile>classifileproc_1_1_c_copy_files_tree_comp.html</anchorfile>
       <anchor>a6137b5797b1cc367c7b357bc5ee54f09ae2e847f67e424be0a0de5a93f6310f64</anchor>
@@ -9684,7 +10867,6 @@
   <compound kind="class">
     <name>ifileproc::CExternalFileConverterComp</name>
     <filename>classifileproc_1_1_c_external_file_converter_comp.html</filename>
-    <base>QObject</base>
     <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifileproc::IFileConvertCopy</base>
     <member kind="typedef">
@@ -9759,40 +10941,45 @@
   <compound kind="class">
     <name>ifileproc::CFileInfoCopyComp</name>
     <filename>classifileproc_1_1_c_file_info_copy_comp.html</filename>
-    <base>QObject</base>
     <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifileproc::IFileConvertCopy</base>
     <member kind="enumeration">
+      <type></type>
       <name>MessageId</name>
       <anchorfile>classifileproc_1_1_c_file_info_copy_comp.html</anchorfile>
       <anchor>ac2dd887626237cc16a13320e4705080a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_FILE_INFO</name>
       <anchorfile>classifileproc_1_1_c_file_info_copy_comp.html</anchorfile>
       <anchor>ac2dd887626237cc16a13320e4705080aa428a6d4924b0027f0e18c7acb835820e</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_INPUT_OPEN</name>
       <anchorfile>classifileproc_1_1_c_file_info_copy_comp.html</anchorfile>
       <anchor>ac2dd887626237cc16a13320e4705080aa1aacee068dd24988095abf3e448f0f61</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_OUTPUT_OPEN</name>
       <anchorfile>classifileproc_1_1_c_file_info_copy_comp.html</anchorfile>
       <anchor>ac2dd887626237cc16a13320e4705080aabed66d804ba6e8f6a2626d88d7d72ee4</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_LICENSE_OPEN</name>
       <anchorfile>classifileproc_1_1_c_file_info_copy_comp.html</anchorfile>
       <anchor>ac2dd887626237cc16a13320e4705080aa57de1b9606026da64900a7ac8e536f87</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_BAD_TAG</name>
       <anchorfile>classifileproc_1_1_c_file_info_copy_comp.html</anchorfile>
       <anchor>ac2dd887626237cc16a13320e4705080aa96fa99ae7e5d64e0f14c3aeac36b1919</anchor>
@@ -9831,12 +11018,103 @@
       <anchor>ae92f67ceb959557a369a51b5540c98ae</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>a89a981e20fa8a2d09462bb32d933509e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iproc::TSyncProcessorWrap&lt; Base &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>ae7231378d49277f210d184366095ac75</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Interface</type>
+      <name>InterfaceType</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>aeb82b61f5619c5cfd1cfdefe18320b2d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Base</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3b21fc424b686e6bcf4537b75d89adf3</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classifileproc_1_1_c_file_list_converter_comp.html</anchorfile>
       <anchor>ae6f3bf67ff0fa426a4aae8ad5c3da853</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSyncProcessorWrap</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a33b9338307557966bc5e0f87e375de37</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetProcessorState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>adc1704c346843a8bcaf57e055e902b71</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AreParamsAccepted</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>ae97572f44492b12a88117a22db51483d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a06c427a3f188b18011a3c842be354183</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>WaitTaskFinished</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a5e249d7e56f018e4e4f3ce872f1d622d</anchor>
+      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a0a5cd08f5800f4d01eeae041dd5a5aa7</anchor>
+      <arglist>(int taskId=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetReadyTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a7644b6e2edc8e32f3e4a9987a2a97ab9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTaskState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>aeea1cf5b8c422a59cb9c76550cb83a81</anchor>
+      <arglist>(int taskId=-1) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9869,6 +11147,27 @@
       <name>BaseClass</name>
       <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
       <anchor>a9f93a7d613e1f76e2e5651e6a5f08149</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>OverwriteStrategy</name>
+      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
+      <anchor>af6cdb3ee75db6fc1062869bc23f4abd2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>RM_OVERWRITE</name>
+      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
+      <anchor>af6cdb3ee75db6fc1062869bc23f4abd2ac2af4cd344ad51fc08436eac8747539a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>RM_NUMBERING</name>
+      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
+      <anchor>af6cdb3ee75db6fc1062869bc23f4abd2aba08a396fb1f24a745551c9585c3d5bd</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -9940,6 +11239,13 @@
       <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
       <anchor>a7bcdbd60b2cd6089b7f3c354a4edef08</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetOverwriteStrategy</name>
+      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
+      <anchor>a213e37f01756a3c6b2594137a2df9d20</anchor>
+      <arglist>(OverwriteStrategy overwriteStrategy)=0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -10182,24 +11488,6 @@
     <name>ifileproc::IFileConvertCopy</name>
     <filename>classifileproc_1_1_i_file_convert_copy.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="enumeration">
-      <name>MessageId</name>
-      <anchorfile>classifileproc_1_1_i_file_convert_copy.html</anchorfile>
-      <anchor>a9bf8a92485d6aed2f4f2f637d0f7a3fc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_INPUT_PATH</name>
-      <anchorfile>classifileproc_1_1_i_file_convert_copy.html</anchorfile>
-      <anchor>a9bf8a92485d6aed2f4f2f637d0f7a3fca3654f6111f278f34ca126b14f51038ba</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_OUTPUT_PATH</name>
-      <anchorfile>classifileproc_1_1_i_file_convert_copy.html</anchorfile>
-      <anchor>a9bf8a92485d6aed2f4f2f637d0f7a3fcae95ef1aeac79e1b589c105de291b0e16</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>ConvertFiles</name>
@@ -10224,37 +11512,12 @@
     <name>ifileproc::IFileNamingParams</name>
     <filename>classifileproc_1_1_i_file_naming_params.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="enumeration">
-      <name>OverwriteStrategy</name>
-      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>af6cdb3ee75db6fc1062869bc23f4abd2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>RM_OVERWRITE</name>
-      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>af6cdb3ee75db6fc1062869bc23f4abd2ac2af4cd344ad51fc08436eac8747539a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>RM_NUMBERING</name>
-      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>af6cdb3ee75db6fc1062869bc23f4abd2aba08a396fb1f24a745551c9585c3d5bd</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual OverwriteStrategy</type>
       <name>GetOverwriteStrategy</name>
       <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
       <anchor>a676375f2aadf7f987715775c9e380aa4</anchor>
       <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetOverwriteStrategy</name>
-      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>a213e37f01756a3c6b2594137a2df9d20</anchor>
-      <arglist>(OverwriteStrategy overwriteStrategy)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
@@ -10416,6 +11679,83 @@
       <anchor>a4b7e6d06c734ab27994d3b3a58b40efe</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ObserveItems</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>aba7cd67705b39172ff78ff0d3d9f04da</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OI_DIR</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>aba7cd67705b39172ff78ff0d3d9f04daa7599e9ab1b619df49c4ba4a579ce2b4f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OI_FILES</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>aba7cd67705b39172ff78ff0d3d9f04daa984e2752588ae89b46df21ab093cbc92</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OI_DRIVES</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>aba7cd67705b39172ff78ff0d3d9f04daad7d8730b118ed354976bbd5b09122f57</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OI_ALL</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>aba7cd67705b39172ff78ff0d3d9f04daa24fb33171c88e54a19eba621060e7399</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ObserveChanges</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>aab9a67f159dcfee92c8c5bc4714f0eeb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OC_ADD</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>aab9a67f159dcfee92c8c5bc4714f0eebab48e14500184a2cc3c29f400a70a02ab</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OC_REMOVE</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>aab9a67f159dcfee92c8c5bc4714f0eeba506e8db021cea2079d03cb71e9694dab</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OC_MODIFIED</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>aab9a67f159dcfee92c8c5bc4714f0eebaac7357818cd8c40f1b7ebcc34fb2e41c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OC_ATTR_CHANGED</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>aab9a67f159dcfee92c8c5bc4714f0eeba084d631c7fd91017d212ad0964e9e369</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OC_ALL</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>aab9a67f159dcfee92c8c5bc4714f0eebaf0a2a07efc2f4f0b5a851383c8a0f9ff</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>ihotf::CDirectoryMonitorParamsComp</name>
@@ -10483,30 +11823,76 @@
       <anchor>a08e4420303355c52698f9626dd8857e2</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ChangeFlags</name>
+      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>a72f67a9f80343898c6948aaecc6836aa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_NEW</name>
+      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>a72f67a9f80343898c6948aaecc6836aaaa7cb08d2291d9bd5aa48ebf4d7179d7d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_REMOVED</name>
+      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>a72f67a9f80343898c6948aaecc6836aaa6e9f6c9972ea2c7250091f234b798b9e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_MODIFIED</name>
+      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>a72f67a9f80343898c6948aaecc6836aaa85e1559051304b6e5460c957f25eeebd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_ATTRIBUTE_CHANGED</name>
+      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>a72f67a9f80343898c6948aaecc6836aaa56203ba063dd39bc72d4223e95758a57</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_SOME_CHANGES</name>
+      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>a72f67a9f80343898c6948aaecc6836aaa40ae541377854ec43214278f63031e29</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>ihotf::CHotfolderLoaderComp</name>
     <filename>classihotf_1_1_c_hotfolder_loader_comp.html</filename>
     <base>TFileSerializerComp&lt; ifile::CXmlFileReadArchive, ifile::CXmlFileWriteArchive &gt;</base>
     <member kind="enumeration">
+      <type></type>
       <name>MessageId</name>
       <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
       <anchor>ad7d06d35a1cbd2df0a7e5680ee0165f7</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_LOAD_ERROR</name>
       <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
       <anchor>ad7d06d35a1cbd2df0a7e5680ee0165f7a540b9547bdc5551e9c5ee0c0149af7ac</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_CANNOT_READ_STATIC_PARAMS</name>
       <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
       <anchor>ad7d06d35a1cbd2df0a7e5680ee0165f7a3fadb5a59a47e69b165a130cce118457</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_CANNOT_READ_DYNAMIC_PARAMS</name>
       <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
       <anchor>ad7d06d35a1cbd2df0a7e5680ee0165f7a499e1ff10c7dcd34442b0473102c9f7b</anchor>
@@ -10671,6 +12057,41 @@
       <anchor>a05f372d4424c24c7ca989687824ba8c9</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ChangeFlags</name>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_info.html</anchorfile>
+      <anchor>a4d64c7e746a2122f52bb2b18cc28ba89</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_FILE_ADDED</name>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_info.html</anchorfile>
+      <anchor>a4d64c7e746a2122f52bb2b18cc28ba89a5f5275d6317c0068e41cd827294b9e7f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_FILE_REMOVED</name>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_info.html</anchorfile>
+      <anchor>a4d64c7e746a2122f52bb2b18cc28ba89afb6246c4bf61925bc19cacbfec7c4734</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_WORKING_STATE_CHANGED</name>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_info.html</anchorfile>
+      <anchor>a4d64c7e746a2122f52bb2b18cc28ba89a99c81350ac27623901fbfd7fa70551f3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_CREATE</name>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_info.html</anchorfile>
+      <anchor>a4d64c7e746a2122f52bb2b18cc28ba89a7dcd29a108550be035ae8b1f13b571c4</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>ihotf::CHotfolderProcessingItem</name>
@@ -10766,6 +12187,20 @@
       <anchorfile>classihotf_1_1_c_hotfolder_processing_item.html</anchorfile>
       <anchor>a4a5b7ceaee00dece3594f289b3912453</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ChangeFlags</name>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_item.html</anchorfile>
+      <anchor>af500e562d7ce2615b264150f3c0f5a16</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_STATE_CHANGED</name>
+      <anchorfile>classihotf_1_1_i_hotfolder_processing_item.html</anchorfile>
+      <anchor>af500e562d7ce2615b264150f3c0f5a16a055f4eb86715c9ece526d77e12c5be82</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10884,6 +12319,27 @@
       <name>BaseClass</name>
       <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
       <anchor>a4dc24c9aa9845bf9489148eb74c87068</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ChangeFlags</name>
+      <anchorfile>classihotf_1_1_i_hotfolder_workflow.html</anchorfile>
+      <anchor>af3a689fc2dc0f735daad899539473023</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_HOTFOLDER_ADDED</name>
+      <anchorfile>classihotf_1_1_i_hotfolder_workflow.html</anchorfile>
+      <anchor>af3a689fc2dc0f735daad899539473023a32f637509feecae4f56b8b3908b94b9d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_HOTFOLDER_REMOVED</name>
+      <anchorfile>classihotf_1_1_i_hotfolder_workflow.html</anchorfile>
+      <anchor>af3a689fc2dc0f735daad899539473023a671b99a9e0012c06ce56e945b42985a2</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -11055,6 +12511,13 @@
       <anchor>a98206d4f1a0c5385174ad74978003046</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="typedef">
+      <type>QMap&lt; QString, QDateTime &gt;</type>
+      <name>FileItems</name>
+      <anchorfile>classihotf_1_1_i_monitoring_session.html</anchorfile>
+      <anchor>a856b68b006a506022046e5fedcbc69db</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>ihotf::CMonitoringSessionsManager</name>
@@ -11088,24 +12551,28 @@
     <filename>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</filename>
     <base>TLoggerCompWrap&lt; ihotf::CHotfolderWorkflowComp &gt;</base>
     <member kind="enumeration">
+      <type></type>
       <name>ChangeFlags</name>
       <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
       <anchor>a0438f1d88c246a7bed7b8aa055abb10f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CF_SELECTION</name>
       <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
       <anchor>a0438f1d88c246a7bed7b8aa055abb10fa69962f55481ec648dab0b77f27a63bc4</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
+      <type></type>
       <name>MessageId</name>
       <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
       <anchor>aef3922c988e971d564a955ffb887aa02</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_CANNOT_CREATE_ELEMENT</name>
       <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
       <anchor>aef3922c988e971d564a955ffb887aa02a4c91f8c3b3a94e6f9b64bfbbd1adc145</anchor>
@@ -11211,72 +12678,6 @@
     <name>ihotf::IDirectoryMonitorParams</name>
     <filename>classihotf_1_1_i_directory_monitor_params.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="enumeration">
-      <name>ObserveItems</name>
-      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>aba7cd67705b39172ff78ff0d3d9f04da</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>OI_DIR</name>
-      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>aba7cd67705b39172ff78ff0d3d9f04daa7599e9ab1b619df49c4ba4a579ce2b4f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>OI_FILES</name>
-      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>aba7cd67705b39172ff78ff0d3d9f04daa984e2752588ae89b46df21ab093cbc92</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>OI_DRIVES</name>
-      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>aba7cd67705b39172ff78ff0d3d9f04daad7d8730b118ed354976bbd5b09122f57</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>OI_ALL</name>
-      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>aba7cd67705b39172ff78ff0d3d9f04daa24fb33171c88e54a19eba621060e7399</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>ObserveChanges</name>
-      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>aab9a67f159dcfee92c8c5bc4714f0eeb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>OC_ADD</name>
-      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>aab9a67f159dcfee92c8c5bc4714f0eebab48e14500184a2cc3c29f400a70a02ab</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>OC_REMOVE</name>
-      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>aab9a67f159dcfee92c8c5bc4714f0eeba506e8db021cea2079d03cb71e9694dab</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>OC_MODIFIED</name>
-      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>aab9a67f159dcfee92c8c5bc4714f0eebaac7357818cd8c40f1b7ebcc34fb2e41c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>OC_ATTR_CHANGED</name>
-      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>aab9a67f159dcfee92c8c5bc4714f0eeba084d631c7fd91017d212ad0964e9e369</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>OC_ALL</name>
-      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>aab9a67f159dcfee92c8c5bc4714f0eebaf0a2a07efc2f4f0b5a851383c8a0f9ff</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetPoolingIntervall</name>
@@ -11352,42 +12753,6 @@
     <name>ihotf::IFileSystemChangeStorage</name>
     <filename>classihotf_1_1_i_file_system_change_storage.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="enumeration">
-      <name>ChangeFlags</name>
-      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
-      <anchor>a72f67a9f80343898c6948aaecc6836aa</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_NEW</name>
-      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
-      <anchor>a72f67a9f80343898c6948aaecc6836aaaa7cb08d2291d9bd5aa48ebf4d7179d7d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_REMOVED</name>
-      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
-      <anchor>a72f67a9f80343898c6948aaecc6836aaa6e9f6c9972ea2c7250091f234b798b9e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_MODIFIED</name>
-      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
-      <anchor>a72f67a9f80343898c6948aaecc6836aaa85e1559051304b6e5460c957f25eeebd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_ATTRIBUTE_CHANGED</name>
-      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
-      <anchor>a72f67a9f80343898c6948aaecc6836aaa56203ba063dd39bc72d4223e95758a57</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_SOME_CHANGES</name>
-      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
-      <anchor>a72f67a9f80343898c6948aaecc6836aaa40ae541377854ec43214278f63031e29</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetStorageItemsCount</name>
@@ -11440,36 +12805,6 @@
     <name>ihotf::IHotfolderProcessingInfo</name>
     <filename>classihotf_1_1_i_hotfolder_processing_info.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="enumeration">
-      <name>ChangeFlags</name>
-      <anchorfile>classihotf_1_1_i_hotfolder_processing_info.html</anchorfile>
-      <anchor>a4d64c7e746a2122f52bb2b18cc28ba89</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_FILE_ADDED</name>
-      <anchorfile>classihotf_1_1_i_hotfolder_processing_info.html</anchorfile>
-      <anchor>a4d64c7e746a2122f52bb2b18cc28ba89a5f5275d6317c0068e41cd827294b9e7f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_FILE_REMOVED</name>
-      <anchorfile>classihotf_1_1_i_hotfolder_processing_info.html</anchorfile>
-      <anchor>a4d64c7e746a2122f52bb2b18cc28ba89afb6246c4bf61925bc19cacbfec7c4734</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_WORKING_STATE_CHANGED</name>
-      <anchorfile>classihotf_1_1_i_hotfolder_processing_info.html</anchorfile>
-      <anchor>a4d64c7e746a2122f52bb2b18cc28ba89a99c81350ac27623901fbfd7fa70551f3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_CREATE</name>
-      <anchorfile>classihotf_1_1_i_hotfolder_processing_info.html</anchorfile>
-      <anchor>a4d64c7e746a2122f52bb2b18cc28ba89a7dcd29a108550be035ae8b1f13b571c4</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual const ihotf::IHotfolderProcessingItem *</type>
       <name>AddProcessingItem</name>
@@ -11517,18 +12852,6 @@
     <name>ihotf::IHotfolderProcessingItem</name>
     <filename>classihotf_1_1_i_hotfolder_processing_item.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="enumeration">
-      <name>ChangeFlags</name>
-      <anchorfile>classihotf_1_1_i_hotfolder_processing_item.html</anchorfile>
-      <anchor>af500e562d7ce2615b264150f3c0f5a16</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_STATE_CHANGED</name>
-      <anchorfile>classihotf_1_1_i_hotfolder_processing_item.html</anchorfile>
-      <anchor>af500e562d7ce2615b264150f3c0f5a16a055f4eb86715c9ece526d77e12c5be82</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual QByteArray</type>
       <name>GetItemUuid</name>
@@ -11663,24 +12986,6 @@
     <name>ihotf::IHotfolderWorkflow</name>
     <filename>classihotf_1_1_i_hotfolder_workflow.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="enumeration">
-      <name>ChangeFlags</name>
-      <anchorfile>classihotf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>af3a689fc2dc0f735daad899539473023</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_HOTFOLDER_ADDED</name>
-      <anchorfile>classihotf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>af3a689fc2dc0f735daad899539473023a32f637509feecae4f56b8b3908b94b9d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_HOTFOLDER_REMOVED</name>
-      <anchorfile>classihotf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>af3a689fc2dc0f735daad899539473023a671b99a9e0012c06ce56e945b42985a2</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual ihotf::IHotfolderWorkflowItem *</type>
       <name>AddHotfolder</name>
@@ -11740,13 +13045,6 @@
     <name>ihotf::IMonitoringSession</name>
     <filename>classihotf_1_1_i_monitoring_session.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="typedef">
-      <type>QMap&lt; QString, QDateTime &gt;</type>
-      <name>FileItems</name>
-      <anchorfile>classihotf_1_1_i_monitoring_session.html</anchorfile>
-      <anchor>a856b68b006a506022046e5fedcbc69db</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual const FileItems &amp;</type>
       <name>GetFileInfoList</name>
@@ -12216,7 +13514,6 @@
   <compound kind="class">
     <name>ihotfgui::CHotfolderProcessingComp</name>
     <filename>classihotfgui_1_1_c_hotfolder_processing_comp.html</filename>
-    <base>QObject</base>
     <base>ilog::TLoggerCompWrap</base>
     <class kind="class">ihotfgui::CHotfolderProcessingComp::ItemProcessor</class>
     <member kind="typedef">
@@ -12659,18 +13956,21 @@
     <base virtualness="virtual">istd::IInformationProvider</base>
     <base protection="protected">imod::CMultiModelBridgeBase</base>
     <member kind="enumeration">
+      <type></type>
       <name>MessageId</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
       <anchor>a3e985c30cb550692ee98a936a2db3b15</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_BAD_PARAMS_COUNT</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
       <anchor>a3e985c30cb550692ee98a936a2db3b15ad0dcd41e7c7bbf97f38c68031c4eb165</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_NO_SUBTASK</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
       <anchor>a3e985c30cb550692ee98a936a2db3b15a9c33ede4146cbac207d291410f040d94</anchor>
@@ -13050,12 +14350,14 @@
       <arglist></arglist>
     </member>
     <member kind="enumeration">
+      <type></type>
       <name>VersionId</name>
       <anchorfile>namespaceiipr.html</anchorfile>
       <anchor>a310caaf2e3e829aef8247d0eb1e37aad</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>IacfVersionId</name>
       <anchorfile>namespaceiipr.html</anchorfile>
       <anchor>a310caaf2e3e829aef8247d0eb1e37aada28eae46bbb14021d34f46b02f4ecc45f</anchor>
@@ -13073,12 +14375,33 @@
       <anchor>a30932dcadedb53a49e5dec6e6c7183cc</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
+      <anchor>a4f0faf686d5922e785d6c1bbb79ced8b</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>ProcessImage</name>
       <anchorfile>classiipr_1_1_c_auto_image_normalize_processor_comp.html</anchorfile>
       <anchor>aecb157d7d2edaba7721a2f7d4f63344c</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CImageProcessorCompBase</name>
+      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
+      <anchor>addfe1f9df169bab88cf503a7e414883b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
+      <anchor>a5c47a52b01a6dd05800b16d66374657e</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13091,6 +14414,20 @@
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_bitmap_joiner_supplier_comp.html</anchorfile>
       <anchor>a74711c1f51b6884ec52038cf89ee307a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QPair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</type>
+      <name>ProductType</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -13106,6 +14443,20 @@
       <anchorfile>classiipr_1_1_c_bitmap_joiner_supplier_comp.html</anchorfile>
       <anchor>a0a90c14ad7ab253d26e62db2fe06bc58</anchor>
       <arglist>(m_bitmapsProviderModelCompPtr, m_bitmapsProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -13142,47 +14493,68 @@
       <anchor>add36d2addc89c5d2a8f7b3f17e7be2c2</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>const QPair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; *</type>
+      <name>GetWorkProduct</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; QPair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
+      <name>m_productPtr</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CBitmapOperations</name>
     <filename>classiipr_1_1_c_bitmap_operations.html</filename>
     <member kind="enumeration">
+      <type></type>
       <name>JoinMode</name>
       <anchorfile>classiipr_1_1_c_bitmap_operations.html</anchorfile>
       <anchor>a0e4ef04c58a1d3aebfed0333e3969ff7</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>JM_VERTICAL</name>
       <anchorfile>classiipr_1_1_c_bitmap_operations.html</anchorfile>
       <anchor>a0e4ef04c58a1d3aebfed0333e3969ff7a46695c669d3e4260b85b8cd9c8ba5b0a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>JM_HORIZONTAL</name>
       <anchorfile>classiipr_1_1_c_bitmap_operations.html</anchorfile>
       <anchor>a0e4ef04c58a1d3aebfed0333e3969ff7a2e6cbef8a8bdae6c9eafae50ea9ef3b7</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
+      <type></type>
       <name>CombineMode</name>
       <anchorfile>classiipr_1_1_c_bitmap_operations.html</anchorfile>
       <anchor>a453d103ab8a538a89ec62cdbcef38dc6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CM_AVERAGE</name>
       <anchorfile>classiipr_1_1_c_bitmap_operations.html</anchorfile>
       <anchor>a453d103ab8a538a89ec62cdbcef38dc6a91630f65a16f58050f373faabf7f992f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CM_MAX</name>
       <anchorfile>classiipr_1_1_c_bitmap_operations.html</anchorfile>
       <anchor>a453d103ab8a538a89ec62cdbcef38dc6aee95590809cfa1e200e2429474e78950</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CM_MIN</name>
       <anchorfile>classiipr_1_1_c_bitmap_operations.html</anchorfile>
       <anchor>a453d103ab8a538a89ec62cdbcef38dc6a9bbc2287c904ef039521e61468e92113</anchor>
@@ -13263,6 +14635,97 @@
       <anchor>a9b7eead80a3eeda0c75a6bf6cdb82e54</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>imeas::CSimpleNumericValue</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a942a2ec0b1e221f063e1add3ebc43705</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>i2d::CLine2d</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>acd13265a487dd486ecc37a58e1007ba2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ValueTypeId</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>VTI_AUTO</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a2f29849ba4f91e77a319950f14906c88</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>VTI_WEIGHT</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a7da2b23a42572b65b520efc699d8954f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>VTI_POSITION</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a3202e36c514857630781b3f7ca0a15fe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>VTI_RADIUS</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a283de4d8f4ea03b1995dd9df7998879b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>VTI_SCALE</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a6323f380af6a4ef0b36a1cf9335c7c92</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>VTI_ANGLE</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a29f01062af8ba6db91e14da24ba7824b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>VTI_ALPHA</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a441014f84f906a518a4e2d694be03e40</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>VTI_LENGTH</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a464ba9647d480f0169d3254768f13041</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>VTI_2D_TRANSFORM</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1ac9e3594d6f5cda3e637138b200d6b25a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>VTI_2D_LINE</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1ad67213851e48e283a12e1a09fd45d4cb</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CCaliperDistanceFeature</name>
@@ -13291,24 +14754,97 @@
       <anchor>ad282f669af970cf814e10d0aab5c6271</anchor>
       <arglist>(ValueTypeId valueTypeId) const </arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>TWeightedFeatureWrap</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a5b9c8031e18165d0b5c85f7838814a84</anchor>
+      <arglist>(double weight=1.0)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetWeight</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a670784cb0eb876758dd5b47eaa40395f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetWeight</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>aef12a2739f789cde29f56b01944cda48</anchor>
+      <arglist>(double weight)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a97ae2b01e85ae32c589aa154cee0e9e4</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>af46630f53b557371604ee44bc032bd8b</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const INumericConstraints *</type>
+      <name>GetNumericConstraints</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
+      <anchor>aa8251e0134e3a7c8706bfaf71d2115fd</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual imath::CVarVector</type>
+      <name>GetValues</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
+      <anchor>a4c85027810c725fdaac439b18007fbdf</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetValues</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
+      <anchor>a0bc635bfc29198638308d81786abe212</anchor>
+      <arglist>(const imath::CVarVector &amp;values)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>m_weight</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a48120fa2978f81cf33d685fddc69bab9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>imath::CVarVector</type>
+      <name>m_values</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
+      <anchor>a98fa43cc574e0e7bf15178d0b23f1e74</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CCaliperFeature</name>
     <filename>classiipr_1_1_c_caliper_feature.html</filename>
     <base>imeas::CSimpleNumericValue</base>
     <member kind="enumeration">
+      <type></type>
       <name>EdgeMode</name>
       <anchorfile>classiipr_1_1_c_caliper_feature.html</anchorfile>
       <anchor>a1ef6f7b6f8f7def20efeb84820baf696</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>EM_FALLING</name>
       <anchorfile>classiipr_1_1_c_caliper_feature.html</anchorfile>
       <anchor>a1ef6f7b6f8f7def20efeb84820baf696a9e8832f69d2207498492f17347f370cb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>EM_RISING</name>
       <anchorfile>classiipr_1_1_c_caliper_feature.html</anchorfile>
       <anchor>a1ef6f7b6f8f7def20efeb84820baf696a8f575a8fe5a3b6aa4781539dae560ca7</anchor>
@@ -13370,6 +14906,13 @@
       <anchor>a7034ea0be5223bcb799fe8e6b3a2dd26</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
+      <anchor>a833755f3d5d6f4a241be958b3ea3e011</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CCaliperParams</name>
@@ -13430,6 +14973,76 @@
       <anchorfile>classiipr_1_1_c_caliper_params.html</anchorfile>
       <anchor>a70d74c0f5c104b0be376ed111ff019a6</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>PolarityMode</name>
+      <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
+      <anchor>ae471a4b8c280d7adba77f143171bcbab</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PM_RISED</name>
+      <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
+      <anchor>ae471a4b8c280d7adba77f143171bcbaba1a5d75a46d36784357ca274b4d12ebd5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PM_DROPPED</name>
+      <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
+      <anchor>ae471a4b8c280d7adba77f143171bcbaba83236bea164dd05e104cb117d1a0d7c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PM_ALL</name>
+      <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
+      <anchor>ae471a4b8c280d7adba77f143171bcbaba65b61dbd64a101a9f920bd04cf291e48</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>DirectionMode</name>
+      <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
+      <anchor>acfc2af162ba0eabf68119a357bfe976b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>DM_FORWARD</name>
+      <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
+      <anchor>acfc2af162ba0eabf68119a357bfe976bab07ebaa67cae21dad74ff40d3fb5d31f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>DM_BACKWARD</name>
+      <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
+      <anchor>acfc2af162ba0eabf68119a357bfe976ba274b95f7bb8230adb71d9b12292b8835</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>DM_OUTSIDE</name>
+      <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
+      <anchor>acfc2af162ba0eabf68119a357bfe976ba94167bf296fc6c9b374f82f878d1982a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>DM_INSIDE</name>
+      <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
+      <anchor>acfc2af162ba0eabf68119a357bfe976ba5cef37ae2e4a39e46052c04274c4bb9b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>DM_DONT_CARE</name>
+      <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
+      <anchor>acfc2af162ba0eabf68119a357bfe976bafd71f277d0e54b252f1363cb1f7f50c1</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13545,6 +15158,27 @@
       <anchor>a8bd5fd71e31982cd7ac3b4dee6050a54</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>CaliperMode</name>
+      <anchorfile>classiipr_1_1_i_circle_finder_params.html</anchorfile>
+      <anchor>ab2aeddd171659f7ce82e652ea4ab21b6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CCM_FIRST</name>
+      <anchorfile>classiipr_1_1_i_circle_finder_params.html</anchorfile>
+      <anchor>ab2aeddd171659f7ce82e652ea4ab21b6a88bcb86572818a775a668b63edc5b44c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CCM_BEST</name>
+      <anchorfile>classiipr_1_1_i_circle_finder_params.html</anchorfile>
+      <anchor>ab2aeddd171659f7ce82e652ea4ab21b6a29414c918eed02023599262335abe095</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CCircleFinderParamsComp</name>
@@ -13574,12 +15208,14 @@
     <class kind="struct">iipr::CCircleFindProcessorComp::Point</class>
     <class kind="struct">iipr::CCircleFindProcessorComp::Ray</class>
     <member kind="enumeration">
+      <type></type>
       <name>MessageId</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
       <anchor>a78fa0804a118fd14132fe69a4cfc2a3f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_INTERMEDIATE</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
       <anchor>a78fa0804a118fd14132fe69a4cfc2a3fa83534702da49b48ce78e46071f692efb</anchor>
@@ -13590,6 +15226,13 @@
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
       <anchor>a5d7a01981508c9b0c6b2609ad8286e1d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>IImageToFeatureProcessor</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3b21fc424b686e6bcf4537b75d89adf3</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -13612,6 +15255,69 @@
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
       <anchor>acc4c657f22e7822a4ff54206a332ca31</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSyncProcessorWrap</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a33b9338307557966bc5e0f87e375de37</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetProcessorState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>adc1704c346843a8bcaf57e055e902b71</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AreParamsAccepted</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>ae97572f44492b12a88117a22db51483d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a06c427a3f188b18011a3c842be354183</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>WaitTaskFinished</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a5e249d7e56f018e4e4f3ce872f1d622d</anchor>
+      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a0a5cd08f5800f4d01eeae041dd5a5aa7</anchor>
+      <arglist>(int taskId=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetReadyTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a7644b6e2edc8e32f3e4a9987a2a97ab9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTaskState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>aeea1cf5b8c422a59cb9c76550cb83a81</anchor>
+      <arglist>(int taskId=-1) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>TWeightedFeatureWrap&lt; i2d::CCircle &gt;</type>
@@ -13740,6 +15446,20 @@
       <anchor>ab5c425288f38a39899ffff27916c6e64</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>CSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>istd::TPointerVector&lt; iimg::IBitmap &gt;</type>
+      <name>ProductType</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
@@ -13774,6 +15494,20 @@
       <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
       <anchor>a6c9a06dc1983c4716926ded9c6118571</anchor>
       <arglist>(int bitmapIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -13838,6 +15572,20 @@
       <anchor>adcf275024a5a474346cc994f96543b31</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>const istd::TPointerVector&lt; iimg::IBitmap &gt; *</type>
+      <name>GetWorkProduct</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; istd::TPointerVector&lt; iimg::IBitmap &gt; &gt;</type>
+      <name>m_productPtr</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CColorPatternComparatorComp</name>
@@ -13850,6 +15598,20 @@
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
       <anchor>aed98b3a5b0d9bf92f7598c78addcfc7f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imeas::CSimpleNumericValue</type>
+      <name>ProductType</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -13929,6 +15691,20 @@
       <anchor>a52449a437a25b2075ee69f4871a1ee8b</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>ProduceObject</name>
@@ -13949,6 +15725,20 @@
       <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
       <anchor>a10fc506c8134e0ee37b4179469593a38</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>const imeas::CSimpleNumericValue *</type>
+      <name>GetWorkProduct</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; imeas::CSimpleNumericValue &gt;</type>
+      <name>m_productPtr</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -14021,6 +15811,13 @@
       <anchorfile>classiipr_1_1_c_color_pattern_controller_comp.html</anchorfile>
       <anchor>ab344b8dde436bfbbfdd97dc9f82a90df</anchor>
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const int</type>
+      <name>CF_PATTERN_LEARNED</name>
+      <anchorfile>classiipr_1_1_i_pattern_controller.html</anchorfile>
+      <anchor>a3d226246f98359f2e2ba103feb56db22</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -14130,12 +15927,26 @@
       <anchor>ab48905a537869b8ef04de439029ab8e6</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>CImageProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_t_image_param_processor_comp_base.html</anchorfile>
+      <anchor>a38b457b2c6b6ceed4de13dea3d592617</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>ParamProcessImage</name>
       <anchorfile>classiipr_1_1_c_convolution_processor_comp.html</anchorfile>
       <anchor>af26a1888cdbeb4d9828ab0221433c1dd</anchor>
       <arglist>(const IConvolutionKernel2d *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ProcessImage</name>
+      <anchorfile>classiipr_1_1_t_image_param_processor_comp_base.html</anchorfile>
+      <anchor>a4cc06678e44cdfcc49f2e343b695182f</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -14287,6 +16098,20 @@
       <anchor>aca0598d7dbc5acac22ed70b229097d7b</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>CSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QPair&lt; i2d::ICalibration2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</type>
+      <name>ProductType</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
@@ -14314,6 +16139,20 @@
       <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
       <anchor>a1d987c43044f33658cef033d4c6ad103</anchor>
       <arglist>(m_secondBitmapProviderModelCompPtr, m_secondBitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -14349,6 +16188,20 @@
       <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
       <anchor>af7a48968a480ea74b04691e80632c748</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>const QPair&lt; i2d::ICalibration2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; *</type>
+      <name>GetWorkProduct</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; QPair&lt; i2d::ICalibration2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
+      <name>m_productPtr</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -14456,6 +16309,20 @@
       <anchor>aa6659152de54a0578a90afb12748bfa7</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>CSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CFeaturesContainer</type>
+      <name>ProductType</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
@@ -14484,6 +16351,20 @@
       <anchor>aba80ac7e00e77a881351ae87eb6fed9d</anchor>
       <arglist>(int index) const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>ProduceObject</name>
@@ -14497,6 +16378,27 @@
       <anchorfile>classiipr_1_1_c_edge_distances_supplier_comp.html</anchorfile>
       <anchor>a9caa4f1976582446a196a7e9d07594d1</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>const CFeaturesContainer *</type>
+      <name>GetWorkProduct</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6230575f0d5b0ccfd28cdf7082866c62</anchor>
+      <arglist>(CFeaturesContainer &amp;result) const =0</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; CFeaturesContainer &gt;</type>
+      <name>m_productPtr</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -14517,6 +16419,13 @@
       <name>BaseClass2</name>
       <anchorfile>classiipr_1_1_c_extremum_caliper_processor_comp.html</anchorfile>
       <anchor>a9207ff246d6ee7eeadb6b1e27ff48a28</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ICaliperProcessor</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3b21fc424b686e6bcf4537b75d89adf3</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -14540,24 +16449,90 @@
       <anchor>ab0a494edf0cb0492e547ba87f014051d</anchor>
       <arglist>(const imeas::INumericValue &amp;feature, const iprm::IParamsSet *paramsPtr, double &amp;result) const </arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>TSyncProcessorWrap</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a33b9338307557966bc5e0f87e375de37</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetProcessorState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>adc1704c346843a8bcaf57e055e902b71</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AreParamsAccepted</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>ae97572f44492b12a88117a22db51483d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a06c427a3f188b18011a3c842be354183</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>WaitTaskFinished</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a5e249d7e56f018e4e4f3ce872f1d622d</anchor>
+      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a0a5cd08f5800f4d01eeae041dd5a5aa7</anchor>
+      <arglist>(int taskId=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetReadyTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a7644b6e2edc8e32f3e4a9987a2a97ab9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTaskState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>aeea1cf5b8c422a59cb9c76550cb83a81</anchor>
+      <arglist>(int taskId=-1) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CFastGaussianProcessorComp</name>
     <filename>classiipr_1_1_c_fast_gaussian_processor_comp.html</filename>
     <base>iipr::CImageRegionProcessorCompBase</base>
     <member kind="enumeration">
+      <type></type>
       <name>KernelTypes</name>
       <anchorfile>classiipr_1_1_c_fast_gaussian_processor_comp.html</anchorfile>
       <anchor>a8a4510b231c73b22030a5fa021772936</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>KT_3x3</name>
       <anchorfile>classiipr_1_1_c_fast_gaussian_processor_comp.html</anchorfile>
       <anchor>a8a4510b231c73b22030a5fa021772936a87db3fe91e4cd562bed66961e35ebe0c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>KT_3x3_OPTIMIZED</name>
       <anchorfile>classiipr_1_1_c_fast_gaussian_processor_comp.html</anchorfile>
       <anchor>a8a4510b231c73b22030a5fa021772936ab8ec6ee1bc26c9623d15f88b60937048</anchor>
@@ -14570,12 +16545,26 @@
       <anchor>a4c1f4c594af2a189813a88045b2ae95c</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_image_region_processor_comp_base.html</anchorfile>
+      <anchor>afa13537de800360da28b6a28ed5e8a43</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>ProcessImageRegion</name>
       <anchorfile>classiipr_1_1_c_fast_gaussian_processor_comp.html</anchorfile>
       <anchor>a4e617f09eefd049a321939b2bc1be0c3</anchor>
       <arglist>(const iimg::IBitmap &amp;inputBitmap, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiipr_1_1_c_image_region_processor_comp_base.html</anchorfile>
+      <anchor>a9c9f584d8942176ebc6f1247f62ac93c</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -14638,6 +16627,13 @@
       <anchor>aaa8c46d044be33f0c3b1631656bf34b8</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>IFeatureToFeatureProcessor</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3b21fc424b686e6bcf4537b75d89adf3</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoConvertFeatures</name>
@@ -14651,6 +16647,69 @@
       <anchorfile>classiipr_1_1_c_feature_to_image_mapper_processor_comp.html</anchorfile>
       <anchor>a7770ab3b8cab2048912c19352f3ae320</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSyncProcessorWrap</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a33b9338307557966bc5e0f87e375de37</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetProcessorState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>adc1704c346843a8bcaf57e055e902b71</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AreParamsAccepted</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>ae97572f44492b12a88117a22db51483d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a06c427a3f188b18011a3c842be354183</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>WaitTaskFinished</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a5e249d7e56f018e4e4f3ce872f1d622d</anchor>
+      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a0a5cd08f5800f4d01eeae041dd5a5aa7</anchor>
+      <arglist>(int taskId=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetReadyTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a7644b6e2edc8e32f3e4a9987a2a97ab9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTaskState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>aeea1cf5b8c422a59cb9c76550cb83a81</anchor>
+      <arglist>(int taskId=-1) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>TWeightedFeatureWrap&lt; i2d::CPosition2d &gt;</type>
@@ -14776,6 +16835,104 @@
       <anchor>ad30d749d8e11338c6decf19b32b53caf</anchor>
       <arglist>(int index) const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSequenceInfoFlags</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
+      <anchor>ab8742552b73f99a3b0c3a2215cbead96</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetDefaultSamplesCount</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
+      <anchor>aa920243bbfc4bbd954ea23c0a7a77f6e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetDefaultChannelsCount</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
+      <anchor>a4a74931ff01bae453404a7e69d9531f0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetWeightMode</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
+      <anchor>a946cf8663a6c859940e218187f6412c0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imath::IUnitInfo &amp;</type>
+      <name>GetNumericValueUnitInfo</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
+      <anchor>aa8ca79fcd8edca25b46a4763e29494e9</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
+      <anchor>af078794b6798ac77fdeb986c085f4c84</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>SequenceInfoFlags</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
+      <anchor>a799d2bc45d0c73ed828937ba43d1623e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SIF_SAMPLES_COUNT_FIXED</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
+      <anchor>a799d2bc45d0c73ed828937ba43d1623eaffbf9ceb24b3cd902d878fd04e0c139c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SIF_CHANNELS_COUNT_FIXED</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
+      <anchor>a799d2bc45d0c73ed828937ba43d1623eaf7e0ba28364c2f0a90e5d5e5c3c8255e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>WeightMode</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
+      <anchor>ac9385a6602e6b92291cd1ae403dff2a1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>WM_NONE</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
+      <anchor>ac9385a6602e6b92291cd1ae403dff2a1acd19b3c481e23c09e28ab37f8344b2d5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>WM_LAST</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
+      <anchor>ac9385a6602e6b92291cd1ae403dff2a1a9f2597f45365d41a85ddbfaae5165d06</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>WM_INTERLEAVED</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
+      <anchor>ac9385a6602e6b92291cd1ae403dff2a1a0c727a1b26aed71f8cdbd7ddb284746d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>WM_UNKNOWN</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
+      <anchor>ac9385a6602e6b92291cd1ae403dff2a1ad876765fa8242bf6d2d364db62965f79</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CImageHistogramSupplierComp</name>
@@ -14787,6 +16944,20 @@
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_image_histogram_supplier_comp.html</anchorfile>
       <anchor>a636643990fb25f17f94961bc30ed145e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::TModelWrap&lt; imeas::CSimpleSamplesSequence32 &gt;</type>
+      <name>ProductType</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -14810,6 +16981,20 @@
       <anchor>abb70c62e378cf6a328152f39be5360ae</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>ProduceObject</name>
@@ -14830,6 +17015,20 @@
       <anchorfile>classiipr_1_1_c_image_histogram_supplier_comp.html</anchorfile>
       <anchor>ab9ba65caee0274ca5ede18448d82a5e9</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>const imod::TModelWrap&lt; imeas::CSimpleSamplesSequence32 &gt; *</type>
+      <name>GetWorkProduct</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; imod::TModelWrap&lt; imeas::CSimpleSamplesSequence32 &gt; &gt;</type>
+      <name>m_productPtr</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -14863,6 +17062,34 @@
       <anchorfile>classiipr_1_1_c_image_interpolation_params.html</anchorfile>
       <anchor>a89fea018e32246d01c6eaa7422c6c850</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>InterpolationMode</name>
+      <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
+      <anchor>a3f5eaf6d182d9706c9751576996898b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>IM_NO_INTERPOLATION</name>
+      <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
+      <anchor>a3f5eaf6d182d9706c9751576996898b9a7c6a2bf96b3cfef55d066705272cc756</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>IM_BILINEAR</name>
+      <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
+      <anchor>a3f5eaf6d182d9706c9751576996898b9a3c12d59a96fcaf8dbff8a0b7cf54e43d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>IM_BICUBIC</name>
+      <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
+      <anchor>a3f5eaf6d182d9706c9751576996898b9a0852c8e1474636b67406bb440f8383bc</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -14907,27 +17134,6 @@
     <name>iipr::CImageProcessorCompBase</name>
     <filename>classiipr_1_1_c_image_processor_comp_base.html</filename>
     <base>iproc::TSyncProcessorCompBase</base>
-    <member kind="typedef">
-      <type>iproc::CSyncProcessorCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>a4f0faf686d5922e785d6c1bbb79ced8b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CImageProcessorCompBase</name>
-      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>addfe1f9df169bab88cf503a7e414883b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>DoProcessing</name>
-      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>a5c47a52b01a6dd05800b16d66374657e</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
       <name>ProcessImage</name>
@@ -14940,20 +17146,6 @@
     <name>iipr::CImageRegionProcessorCompBase</name>
     <filename>classiipr_1_1_c_image_region_processor_comp_base.html</filename>
     <base>iproc::TSyncProcessorCompBase</base>
-    <member kind="typedef">
-      <type>iproc::CSyncProcessorCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_c_image_region_processor_comp_base.html</anchorfile>
-      <anchor>afa13537de800360da28b6a28ed5e8a43</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>DoProcessing</name>
-      <anchorfile>classiipr_1_1_c_image_region_processor_comp_base.html</anchorfile>
-      <anchor>a9c9f584d8942176ebc6f1247f62ac93c</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
       <name>ProcessImageRegion</name>
@@ -14981,6 +17173,13 @@
       <name>BaseClass2</name>
       <anchorfile>classiipr_1_1_c_line_projection_processor_comp.html</anchorfile>
       <anchor>ad9fac4a1c20d04d75899dfce2858e020</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ILineProjectionProcessor</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3b21fc424b686e6bcf4537b75d89adf3</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -15039,6 +17238,69 @@
       <anchor>ae4689c1dbe38814e18759c3669a2724e</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>TSyncProcessorWrap</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a33b9338307557966bc5e0f87e375de37</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetProcessorState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>adc1704c346843a8bcaf57e055e902b71</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AreParamsAccepted</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>ae97572f44492b12a88117a22db51483d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a06c427a3f188b18011a3c842be354183</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>WaitTaskFinished</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a5e249d7e56f018e4e4f3ce872f1d622d</anchor>
+      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a0a5cd08f5800f4d01eeae041dd5a5aa7</anchor>
+      <arglist>(int taskId=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetReadyTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a7644b6e2edc8e32f3e4a9987a2a97ab9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTaskState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>aeea1cf5b8c422a59cb9c76550cb83a81</anchor>
+      <arglist>(int taskId=-1) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CLineProjectionSupplierComp</name>
@@ -15050,6 +17312,20 @@
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_line_projection_supplier_comp.html</anchorfile>
       <anchor>a5bde4403e33afa66b1753583a84739ed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imeas::CGeneralDataSequence</type>
+      <name>ProductType</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -15073,6 +17349,20 @@
       <anchor>af47da20ba23508739186cab85cf2e65e</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>ProduceObject</name>
@@ -15087,36 +17377,55 @@
       <anchor>a949009c368a09afc4275e4257471251f</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>const imeas::CGeneralDataSequence *</type>
+      <name>GetWorkProduct</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; imeas::CGeneralDataSequence &gt;</type>
+      <name>m_productPtr</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CMorphologicalProcessorComp</name>
     <filename>classiipr_1_1_c_morphological_processor_comp.html</filename>
     <base>iipr::CImageRegionProcessorCompBase</base>
     <member kind="enumeration">
+      <type></type>
       <name>ProcessingMode</name>
       <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
       <anchor>a647cec348b95ec86f153c44508962228</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>PM_EROSION</name>
       <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
       <anchor>a647cec348b95ec86f153c44508962228a448e664dbee5a2c8ba527d7dc7891fcb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>PM_DILATATION</name>
       <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
       <anchor>a647cec348b95ec86f153c44508962228a1b11f08282c852e60404285ce08a43fb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>PM_OPENING</name>
       <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
       <anchor>a647cec348b95ec86f153c44508962228a3d41ed4ae74ff62b402c8adb068e6dce</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>PM_CLOSING</name>
       <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
       <anchor>a647cec348b95ec86f153c44508962228a2f2a6b1e8b700f6027d8f13d07187592</anchor>
@@ -15228,6 +17537,20 @@
       <anchor>adda6b02abcebff43b2d4f18379692a45</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>CSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QVector&lt; imeas::CGeneralDataSequence &gt;</type>
+      <name>ProductType</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
@@ -15277,6 +17600,20 @@
       <anchor>ac9ebf1f38e10b0d0f61a0e2b3d434cf4</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>ProduceObject</name>
@@ -15291,6 +17628,20 @@
       <anchor>ab3a5e09127f068c0ce91bef710001175</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>const QVector&lt; imeas::CGeneralDataSequence &gt; *</type>
+      <name>GetWorkProduct</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; QVector&lt; imeas::CGeneralDataSequence &gt; &gt;</type>
+      <name>m_productPtr</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CMultiLineSupplierCompBase</name>
@@ -15302,6 +17653,20 @@
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_multi_line_supplier_comp_base.html</anchorfile>
       <anchor>aa5cdb0909d9ea73ee021f71a41007ae3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QVector&lt; i2d::CLine2d &gt;</type>
+      <name>ProductType</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -15318,6 +17683,41 @@
       <anchor>abda18c7e53c7039843f73250a06e8840</anchor>
       <arglist>(int index) const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>const QVector&lt; i2d::CLine2d &gt; *</type>
+      <name>GetWorkProduct</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6230575f0d5b0ccfd28cdf7082866c62</anchor>
+      <arglist>(QVector&lt; i2d::CLine2d &gt; &amp;result) const =0</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; QVector&lt; i2d::CLine2d &gt; &gt;</type>
+      <name>m_productPtr</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CPositionFromImageSupplierComp</name>
@@ -15330,6 +17730,20 @@
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
       <anchor>a3e002dd32b58421c16923f0ed442f03d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>istd::TDelPtr&lt; imeas::INumericValue &gt;</type>
+      <name>ProductType</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -15367,6 +17781,20 @@
       <anchor>a24d0ac12a39463061ed891ac9d884bae</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>ProduceObject</name>
@@ -15381,6 +17809,27 @@
       <anchor>a59c8e8cd4b452ab79c986998f3dd0542</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>const istd::TDelPtr&lt; imeas::INumericValue &gt; *</type>
+      <name>GetWorkProduct</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6230575f0d5b0ccfd28cdf7082866c62</anchor>
+      <arglist>(istd::TDelPtr&lt; imeas::INumericValue &gt; &amp;result) const =0</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; istd::TDelPtr&lt; imeas::INumericValue &gt; &gt;</type>
+      <name>m_productPtr</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CProcessedAcquisitionComp</name>
@@ -15391,6 +17840,34 @@
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_processed_acquisition_comp.html</anchorfile>
       <anchor>ab1c5cf6d39965df854374d8f37a4b804</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>a89a981e20fa8a2d09462bb32d933509e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iproc::TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>ae7231378d49277f210d184366095ac75</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>icam::IBitmapAcquisition</type>
+      <name>InterfaceType</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>aeb82b61f5619c5cfd1cfdefe18320b2d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>icam::IBitmapAcquisition</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3b21fc424b686e6bcf4537b75d89adf3</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -15407,6 +17884,69 @@
       <anchor>a091c75e055017e50953a49462a557bc1</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>TSyncProcessorWrap</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a33b9338307557966bc5e0f87e375de37</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetProcessorState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>adc1704c346843a8bcaf57e055e902b71</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AreParamsAccepted</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>ae97572f44492b12a88117a22db51483d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a06c427a3f188b18011a3c842be354183</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>WaitTaskFinished</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a5e249d7e56f018e4e4f3ce872f1d622d</anchor>
+      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a0a5cd08f5800f4d01eeae041dd5a5aa7</anchor>
+      <arglist>(int taskId=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetReadyTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a7644b6e2edc8e32f3e4a9987a2a97ab9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTaskState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>aeea1cf5b8c422a59cb9c76550cb83a81</anchor>
+      <arglist>(int taskId=-1) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CProcessedBitmapSupplierComp</name>
@@ -15418,6 +17958,20 @@
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
       <anchor>a857e2002f2138bb2f1d092c1c864af30</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>istd::TDelPtr&lt; iimg::IBitmap &gt;</type>
+      <name>ProductType</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -15433,6 +17987,20 @@
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
       <anchor>a6ddc62f438e357669453ca2d2a22e68d</anchor>
       <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -15461,6 +18029,20 @@
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
       <anchor>a81741a268acf9a5682ee358f508b4746</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>const istd::TDelPtr&lt; iimg::IBitmap &gt; *</type>
+      <name>GetWorkProduct</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</type>
+      <name>m_productPtr</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -15595,42 +18177,49 @@
     <base virtualness="virtual">imeas::INumericConstraints</base>
     <base protection="protected" virtualness="virtual">imath::IUnitInfo</base>
     <member kind="enumeration">
+      <type></type>
       <name>UnitMode</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
       <anchor>a6a302fd9b6fc9ac67432739fafe1bb07</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>UM_PIXEL</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
       <anchor>a6a302fd9b6fc9ac67432739fafe1bb07ab28553b7c306ff1825b1ff21b6d750a1</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>UM_PERCENT</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
       <anchor>a6a302fd9b6fc9ac67432739fafe1bb07a1063df1d933edf7499c9043279e63d75</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>UM_PERCENT_DIAG</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
       <anchor>a6a302fd9b6fc9ac67432739fafe1bb07a3cc9ffa6d7e917ee1ba0812ce808df67</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
+      <type></type>
       <name>BorderMode</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
       <anchor>a422831e53fd05b466cf556e2dd4496fd</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>BM_STRETCH_KERNEL</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
       <anchor>a422831e53fd05b466cf556e2dd4496fda0414b55b177555e38d1317c23c5e5b8c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>BM_REDUCE_OUTPUT</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
       <anchor>a422831e53fd05b466cf556e2dd4496fda2608d03700f7c34decee025890bb3b3a</anchor>
@@ -15641,6 +18230,13 @@
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
       <anchor>a877ade4a9f8feea3f78345e322f0ae74</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CImageProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_t_image_param_processor_comp_base.html</anchorfile>
+      <anchor>a38b457b2c6b6ceed4de13dea3d592617</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -15713,6 +18309,13 @@
       <anchor>adbf9f15b2cf3d9c99818945965c1aabd</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ProcessImage</name>
+      <anchorfile>classiipr_1_1_t_image_param_processor_comp_base.html</anchorfile>
+      <anchor>a4cc06678e44cdfcc49f2e343b695182f</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CRgbToGrayProcessorComp</name>
@@ -15762,6 +18365,27 @@
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_ring_pattern_generator_params_comp.html</anchorfile>
       <anchor>ac9f1bcac1b6bc7801ad3c798b238d5d7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>PatternType</name>
+      <anchorfile>classiipr_1_1_i_ring_pattern_generator_params.html</anchorfile>
+      <anchor>ab0eb05ccf4f5043115303d2e02d54fd6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PT_FIXED_WAVELENGTH</name>
+      <anchorfile>classiipr_1_1_i_ring_pattern_generator_params.html</anchorfile>
+      <anchor>ab0eb05ccf4f5043115303d2e02d54fd6af0a7bff0f5f63c5e5c4521091fa4bf85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PT_DYNAMIC_WAVELENGTH</name>
+      <anchorfile>classiipr_1_1_i_ring_pattern_generator_params.html</anchorfile>
+      <anchor>ab0eb05ccf4f5043115303d2e02d54fd6a3682f898ddb8894121d74d20ed611a0c</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -15966,6 +18590,20 @@
       <anchor>a30b11c38202107f51cf451b7414fbfae</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>imeas::CSimpleNumericValue</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a942a2ec0b1e221f063e1add3ebc43705</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>i2d::CPosition2d</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>acd13265a487dd486ecc37a58e1007ba2</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CSearchFeature</name>
@@ -16070,6 +18708,34 @@
       <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
       <anchor>aa40ab32d71e62f80941426236e6f1f1e</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TWeightedFeatureWrap</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a5b9c8031e18165d0b5c85f7838814a84</anchor>
+      <arglist>(double weight=1.0)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetWeight</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a670784cb0eb876758dd5b47eaa40395f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetWeight</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>aef12a2739f789cde29f56b01944cda48</anchor>
+      <arglist>(double weight)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>m_weight</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a48120fa2978f81cf33d685fddc69bab9</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -16270,24 +18936,28 @@
     <base virtualness="virtual">iipr::IFeaturesConsumer</base>
     <base virtualness="virtual">imeas::INumericValueProvider</base>
     <member kind="enumeration">
+      <type></type>
       <name>FeaturePolicy</name>
       <anchorfile>classiipr_1_1_c_single_feature_consumer.html</anchorfile>
       <anchor>a2d23349d96dd0fa958edac3f6ffbaa26</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>FP_FIRST</name>
       <anchorfile>classiipr_1_1_c_single_feature_consumer.html</anchorfile>
       <anchor>a2d23349d96dd0fa958edac3f6ffbaa26a6f8d96b66180c395af47ddd7584a6693</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>FP_LAST</name>
       <anchorfile>classiipr_1_1_c_single_feature_consumer.html</anchorfile>
       <anchor>a2d23349d96dd0fa958edac3f6ffbaa26a9f68d24547d86e96993a8bf6212e328c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>FP_HEAVIEST</name>
       <anchorfile>classiipr_1_1_c_single_feature_consumer.html</anchorfile>
       <anchor>a2d23349d96dd0fa958edac3f6ffbaa26a9c9f26fe7d71cb585ea66646c1d85308</anchor>
@@ -16420,66 +19090,6 @@
     <name>iipr::ICaliperParams</name>
     <filename>classiipr_1_1_i_caliper_params.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="enumeration">
-      <name>PolarityMode</name>
-      <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>ae471a4b8c280d7adba77f143171bcbab</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PM_RISED</name>
-      <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>ae471a4b8c280d7adba77f143171bcbaba1a5d75a46d36784357ca274b4d12ebd5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PM_DROPPED</name>
-      <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>ae471a4b8c280d7adba77f143171bcbaba83236bea164dd05e104cb117d1a0d7c0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PM_ALL</name>
-      <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>ae471a4b8c280d7adba77f143171bcbaba65b61dbd64a101a9f920bd04cf291e48</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>DirectionMode</name>
-      <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>acfc2af162ba0eabf68119a357bfe976b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DM_FORWARD</name>
-      <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>acfc2af162ba0eabf68119a357bfe976bab07ebaa67cae21dad74ff40d3fb5d31f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DM_BACKWARD</name>
-      <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>acfc2af162ba0eabf68119a357bfe976ba274b95f7bb8230adb71d9b12292b8835</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DM_OUTSIDE</name>
-      <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>acfc2af162ba0eabf68119a357bfe976ba94167bf296fc6c9b374f82f878d1982a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DM_INSIDE</name>
-      <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>acfc2af162ba0eabf68119a357bfe976ba5cef37ae2e4a39e46052c04274c4bb9b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DM_DONT_CARE</name>
-      <anchorfile>classiipr_1_1_i_caliper_params.html</anchorfile>
-      <anchor>acfc2af162ba0eabf68119a357bfe976bafd71f277d0e54b252f1363cb1f7f50c1</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetWeightThreshold</name>
@@ -16528,12 +19138,14 @@
     <filename>classiipr_1_1_i_caliper_processor.html</filename>
     <base virtualness="virtual">iproc::IProcessor</base>
     <member kind="enumeration">
+      <type></type>
       <name>FeatureTypeId</name>
       <anchorfile>classiipr_1_1_i_caliper_processor.html</anchorfile>
       <anchor>acea6148351b3caf403322067cab8e7f6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>FTI_CALIPER_FEATURE</name>
       <anchorfile>classiipr_1_1_i_caliper_processor.html</anchorfile>
       <anchor>acea6148351b3caf403322067cab8e7f6a33cb9204f988cd6fac6c895a0b0f4e1a</anchor>
@@ -16551,24 +19163,6 @@
     <name>iipr::ICircleFinderParams</name>
     <filename>classiipr_1_1_i_circle_finder_params.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="enumeration">
-      <name>CaliperMode</name>
-      <anchorfile>classiipr_1_1_i_circle_finder_params.html</anchorfile>
-      <anchor>ab2aeddd171659f7ce82e652ea4ab21b6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CCM_FIRST</name>
-      <anchorfile>classiipr_1_1_i_circle_finder_params.html</anchorfile>
-      <anchor>ab2aeddd171659f7ce82e652ea4ab21b6a88bcb86572818a775a668b63edc5b44c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CCM_BEST</name>
-      <anchorfile>classiipr_1_1_i_circle_finder_params.html</anchorfile>
-      <anchor>ab2aeddd171659f7ce82e652ea4ab21b6a29414c918eed02023599262335abe095</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetCaliperMode</name>
@@ -16718,30 +19312,6 @@
     <name>iipr::IImageInterpolationParams</name>
     <filename>classiipr_1_1_i_image_interpolation_params.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="enumeration">
-      <name>InterpolationMode</name>
-      <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
-      <anchor>a3f5eaf6d182d9706c9751576996898b9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>IM_NO_INTERPOLATION</name>
-      <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
-      <anchor>a3f5eaf6d182d9706c9751576996898b9a7c6a2bf96b3cfef55d066705272cc756</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>IM_BILINEAR</name>
-      <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
-      <anchor>a3f5eaf6d182d9706c9751576996898b9a3c12d59a96fcaf8dbff8a0b7cf54e43d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>IM_BICUBIC</name>
-      <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
-      <anchor>a3f5eaf6d182d9706c9751576996898b9a0852c8e1474636b67406bb440f8383bc</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetInterpolationMode</name>
@@ -16812,13 +19382,6 @@
       <anchorfile>classiipr_1_1_i_pattern_controller.html</anchorfile>
       <anchor>a3b316b91ccff2af05e674bd013735474</anchor>
       <arglist>() const =0</arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const int</type>
-      <name>CF_PATTERN_LEARNED</name>
-      <anchorfile>classiipr_1_1_i_pattern_controller.html</anchorfile>
-      <anchor>a3d226246f98359f2e2ba103feb56db22</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -16898,24 +19461,6 @@
     <name>iipr::IRingPatternGeneratorParams</name>
     <filename>classiipr_1_1_i_ring_pattern_generator_params.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="enumeration">
-      <name>PatternType</name>
-      <anchorfile>classiipr_1_1_i_ring_pattern_generator_params.html</anchorfile>
-      <anchor>ab0eb05ccf4f5043115303d2e02d54fd6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PT_FIXED_WAVELENGTH</name>
-      <anchorfile>classiipr_1_1_i_ring_pattern_generator_params.html</anchorfile>
-      <anchor>ab0eb05ccf4f5043115303d2e02d54fd6af0a7bff0f5f63c5e5c4521091fa4bf85</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PT_DYNAMIC_WAVELENGTH</name>
-      <anchorfile>classiipr_1_1_i_ring_pattern_generator_params.html</anchorfile>
-      <anchor>ab0eb05ccf4f5043115303d2e02d54fd6a3682f898ddb8894121d74d20ed611a0c</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetPatternMode</name>
@@ -17193,6 +19738,20 @@
       <anchor>af46630f53b557371604ee44bc032bd8b</anchor>
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsValueTypeSupported</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
+      <anchor>ae171179f75cd4fd22ae95940c175ca95</anchor>
+      <arglist>(ValueTypeId valueTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual imath::CVarVector</type>
+      <name>GetComponentValue</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
+      <anchor>ab86360165a5bf223fe42f8602185c4cf</anchor>
+      <arglist>(ValueTypeId valueTypeId) const </arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>double</type>
       <name>m_weight</name>
@@ -17278,6 +19837,34 @@
       <anchor>a71bf365d11361c6100b38ec05cda8696</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>a89a981e20fa8a2d09462bb32d933509e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iproc::TSyncProcessorWrap&lt; IDataSequenceCorrelationProcessor &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>ae7231378d49277f210d184366095ac75</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>IDataSequenceCorrelationProcessor</type>
+      <name>InterfaceType</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>aeb82b61f5619c5cfd1cfdefe18320b2d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>IDataSequenceCorrelationProcessor</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3b21fc424b686e6bcf4537b75d89adf3</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CalculateCorrelation</name>
@@ -17292,6 +19879,69 @@
       <anchor>ae68926a9f0a220253ce635b6a5a9f5fc</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>TSyncProcessorWrap</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a33b9338307557966bc5e0f87e375de37</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetProcessorState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>adc1704c346843a8bcaf57e055e902b71</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AreParamsAccepted</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>ae97572f44492b12a88117a22db51483d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a06c427a3f188b18011a3c842be354183</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>WaitTaskFinished</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a5e249d7e56f018e4e4f3ce872f1d622d</anchor>
+      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a0a5cd08f5800f4d01eeae041dd5a5aa7</anchor>
+      <arglist>(int taskId=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetReadyTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a7644b6e2edc8e32f3e4a9987a2a97ab9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTaskState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>aeea1cf5b8c422a59cb9c76550cb83a81</anchor>
+      <arglist>(int taskId=-1) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
     <member kind="function" protection="protected" static="yes">
       <type>static double</type>
       <name>GetSampleAverage</name>
@@ -17304,34 +19954,6 @@
     <name>imeas::CDataSequenceInfoBase</name>
     <filename>classimeas_1_1_c_data_sequence_info_base.html</filename>
     <base virtualness="virtual">imeas::IDataSequenceInfo</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSequenceInfoFlags</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
-      <anchor>ab8742552b73f99a3b0c3a2215cbead96</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetDefaultSamplesCount</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
-      <anchor>aa920243bbfc4bbd954ea23c0a7a77f6e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetDefaultChannelsCount</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
-      <anchor>a4a74931ff01bae453404a7e69d9531f0</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetWeightMode</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
-      <anchor>a946cf8663a6c859940e218187f6412c0</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetNumericValuesCount</name>
@@ -17353,20 +19975,6 @@
       <anchor>a2b8ac66049cf3e28f4b76004ec5c4944</anchor>
       <arglist>(int index) const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const imath::IUnitInfo &amp;</type>
-      <name>GetNumericValueUnitInfo</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
-      <anchor>aa8ca79fcd8edca25b46a4763e29494e9</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
-      <anchor>af078794b6798ac77fdeb986c085f4c84</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>imeas::CDataSequenceJoinerSupplierComp</name>
@@ -17378,6 +19986,20 @@
       <name>BaseClass</name>
       <anchorfile>classimeas_1_1_c_data_sequence_joiner_supplier_comp.html</anchorfile>
       <anchor>a9168e48c8f87dadde8763c34d35a40d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt;</type>
+      <name>ProductType</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -17408,6 +20030,20 @@
       <anchor>a6fb62a9d7ce9e301b70f149917a1acac</anchor>
       <arglist>(m_multiDataSequenceProviderModelCompPtr, m_multiDataSequenceProviderCompPtr, false)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual const imeas::IDataSequence *</type>
       <name>GetDataSequence</name>
@@ -17428,6 +20064,20 @@
       <anchorfile>classimeas_1_1_c_data_sequence_joiner_supplier_comp.html</anchorfile>
       <anchor>aede609f000386dbb2b77938cb3beaa88</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>const imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt; *</type>
+      <name>GetWorkProduct</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt; &gt;</type>
+      <name>m_productPtr</name>
+      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -17777,6 +20427,34 @@
       <anchor>afa724b1a6a21e7a3c5593e9d4757465d</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>a89a981e20fa8a2d09462bb32d933509e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iproc::TSyncProcessorWrap&lt; IDataSequenceStatisticsProcessor &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>ae7231378d49277f210d184366095ac75</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>IDataSequenceStatisticsProcessor</type>
+      <name>InterfaceType</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>aeb82b61f5619c5cfd1cfdefe18320b2d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>IDataSequenceStatisticsProcessor</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3b21fc424b686e6bcf4537b75d89adf3</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
@@ -17790,6 +20468,69 @@
       <anchorfile>classimeas_1_1_c_histogram_statistics_processor_comp.html</anchorfile>
       <anchor>a752c3cabf1d60be07e799c526c4172dd</anchor>
       <arglist>(const imeas::IDataSequence &amp;dataSequence, imeas::IDataSequenceStatistics &amp;dataStatistics) const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSyncProcessorWrap</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a33b9338307557966bc5e0f87e375de37</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetProcessorState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>adc1704c346843a8bcaf57e055e902b71</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AreParamsAccepted</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>ae97572f44492b12a88117a22db51483d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a06c427a3f188b18011a3c842be354183</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>WaitTaskFinished</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a5e249d7e56f018e4e4f3ce872f1d622d</anchor>
+      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a0a5cd08f5800f4d01eeae041dd5a5aa7</anchor>
+      <arglist>(int taskId=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetReadyTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a7644b6e2edc8e32f3e4a9987a2a97ab9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTaskState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>aeea1cf5b8c422a59cb9c76550cb83a81</anchor>
+      <arglist>(int taskId=-1) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -18163,6 +20904,13 @@
       <anchor>a3273fd702b83cce7a8c1726c32e53979</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
+      <anchor>aa341d29fce408c873157321b379a0e91</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
@@ -18382,62 +21130,6 @@
     <name>imeas::CSimpleNumericValue</name>
     <filename>classimeas_1_1_c_simple_numeric_value.html</filename>
     <base virtualness="virtual">imeas::INumericValue</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsValueTypeSupported</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>ae171179f75cd4fd22ae95940c175ca95</anchor>
-      <arglist>(ValueTypeId valueTypeId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const INumericConstraints *</type>
-      <name>GetNumericConstraints</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>aa8251e0134e3a7c8706bfaf71d2115fd</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual imath::CVarVector</type>
-      <name>GetComponentValue</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>ab86360165a5bf223fe42f8602185c4cf</anchor>
-      <arglist>(ValueTypeId valueTypeId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual imath::CVarVector</type>
-      <name>GetValues</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>a4c85027810c725fdaac439b18007fbdf</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetValues</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>a0bc635bfc29198638308d81786abe212</anchor>
-      <arglist>(const imath::CVarVector &amp;values)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>aa341d29fce408c873157321b379a0e91</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CopyFrom</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>a833755f3d5d6f4a241be958b3ea3e011</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>imath::CVarVector</type>
-      <name>m_values</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>a98fa43cc574e0e7bf15178d0b23f1e74</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>imeas::CSimpleNumericValueProvider</name>
@@ -18519,25 +21211,29 @@
       <anchor>a31dc76bacfe8d22ce67bb58597204bf7</anchor>
       <arglist>(const QString *extensionPtr=NULL) const </arglist>
     </member>
-    <member kind="enumeration">
+    <member kind="enumeration" protection="protected">
+      <type></type>
       <name>WavContaints</name>
       <anchorfile>classimeas_1_1_c_wav_samples_loader_comp.html</anchorfile>
       <anchor>a6dd5c66f580cd92133fec237be325e8b</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
       <name>WC_BYTES_PER_SAMPLE</name>
       <anchorfile>classimeas_1_1_c_wav_samples_loader_comp.html</anchorfile>
       <anchor>a6dd5c66f580cd92133fec237be325e8ba79987808a0332e703388eaa74c9cff8b</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
       <name>WC_BITS_PER_SAMPLE</name>
       <anchorfile>classimeas_1_1_c_wav_samples_loader_comp.html</anchorfile>
       <anchor>a6dd5c66f580cd92133fec237be325e8ba6fc431ab4f3cbd3d07295a5d200b5f71</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
       <name>WC_WAVE_FORMAT_PCM</name>
       <anchorfile>classimeas_1_1_c_wav_samples_loader_comp.html</anchorfile>
       <anchor>a6dd5c66f580cd92133fec237be325e8bae7fc72301093211ede0a482ee917fe64</anchor>
@@ -18629,54 +21325,6 @@
     <filename>classimeas_1_1_i_data_sequence_info.html</filename>
     <base virtualness="virtual">imeas::INumericConstraints</base>
     <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="enumeration">
-      <name>SequenceInfoFlags</name>
-      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
-      <anchor>a799d2bc45d0c73ed828937ba43d1623e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SIF_SAMPLES_COUNT_FIXED</name>
-      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
-      <anchor>a799d2bc45d0c73ed828937ba43d1623eaffbf9ceb24b3cd902d878fd04e0c139c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SIF_CHANNELS_COUNT_FIXED</name>
-      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
-      <anchor>a799d2bc45d0c73ed828937ba43d1623eaf7e0ba28364c2f0a90e5d5e5c3c8255e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>WeightMode</name>
-      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
-      <anchor>ac9385a6602e6b92291cd1ae403dff2a1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>WM_NONE</name>
-      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
-      <anchor>ac9385a6602e6b92291cd1ae403dff2a1acd19b3c481e23c09e28ab37f8344b2d5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>WM_LAST</name>
-      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
-      <anchor>ac9385a6602e6b92291cd1ae403dff2a1a9f2597f45365d41a85ddbfaae5165d06</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>WM_INTERLEAVED</name>
-      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
-      <anchor>ac9385a6602e6b92291cd1ae403dff2a1a0c727a1b26aed71f8cdbd7ddb284746d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>WM_UNKNOWN</name>
-      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
-      <anchor>ac9385a6602e6b92291cd1ae403dff2a1ad876765fa8242bf6d2d364db62965f79</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetSequenceInfoFlags</name>
@@ -18704,6 +21352,34 @@
       <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
       <anchor>a05f4844ae3c9b5d23cb9c318f1e4d03d</anchor>
       <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetNumericValuesCount</name>
+      <anchorfile>classimeas_1_1_i_numeric_constraints.html</anchorfile>
+      <anchor>afb5236f4459c18f02f9e62df438e5eee</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetNumericValueName</name>
+      <anchorfile>classimeas_1_1_i_numeric_constraints.html</anchorfile>
+      <anchor>adbde228cdec587b904b887db335fbb5d</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetNumericValueDescription</name>
+      <anchorfile>classimeas_1_1_i_numeric_constraints.html</anchorfile>
+      <anchor>a04e085fa7191e9ba6b778c69c2f6b012</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const imath::IUnitInfo &amp;</type>
+      <name>GetNumericValueUnitInfo</name>
+      <anchorfile>classimeas_1_1_i_numeric_constraints.html</anchorfile>
+      <anchor>afc12e7bbf5f51a8c2cb12076c5a2acfd</anchor>
+      <arglist>(int index) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -18925,105 +21601,11 @@
     <name>imeas::INumericConstraints</name>
     <filename>classimeas_1_1_i_numeric_constraints.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetNumericValuesCount</name>
-      <anchorfile>classimeas_1_1_i_numeric_constraints.html</anchorfile>
-      <anchor>afb5236f4459c18f02f9e62df438e5eee</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetNumericValueName</name>
-      <anchorfile>classimeas_1_1_i_numeric_constraints.html</anchorfile>
-      <anchor>adbde228cdec587b904b887db335fbb5d</anchor>
-      <arglist>(int index) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetNumericValueDescription</name>
-      <anchorfile>classimeas_1_1_i_numeric_constraints.html</anchorfile>
-      <anchor>a04e085fa7191e9ba6b778c69c2f6b012</anchor>
-      <arglist>(int index) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const imath::IUnitInfo &amp;</type>
-      <name>GetNumericValueUnitInfo</name>
-      <anchorfile>classimeas_1_1_i_numeric_constraints.html</anchorfile>
-      <anchor>afc12e7bbf5f51a8c2cb12076c5a2acfd</anchor>
-      <arglist>(int index) const =0</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>imeas::INumericValue</name>
     <filename>classimeas_1_1_i_numeric_value.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="enumeration">
-      <name>ValueTypeId</name>
-      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>VTI_AUTO</name>
-      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a2f29849ba4f91e77a319950f14906c88</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>VTI_WEIGHT</name>
-      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a7da2b23a42572b65b520efc699d8954f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>VTI_POSITION</name>
-      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a3202e36c514857630781b3f7ca0a15fe</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>VTI_RADIUS</name>
-      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a283de4d8f4ea03b1995dd9df7998879b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>VTI_SCALE</name>
-      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a6323f380af6a4ef0b36a1cf9335c7c92</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>VTI_ANGLE</name>
-      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a29f01062af8ba6db91e14da24ba7824b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>VTI_ALPHA</name>
-      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a441014f84f906a518a4e2d694be03e40</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>VTI_LENGTH</name>
-      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a464ba9647d480f0169d3254768f13041</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>VTI_2D_TRANSFORM</name>
-      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1ac9e3594d6f5cda3e637138b200d6b25a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>VTI_2D_LINE</name>
-      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1ad67213851e48e283a12e1a09fd45d4cb</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsValueTypeSupported</name>
@@ -19229,48 +21811,56 @@
     <base virtualness="virtual">istd::IChangeable</base>
     <base virtualness="virtual">ifile::IFileTypeInfo</base>
     <member kind="enumeration">
+      <type></type>
       <name>ChangeFlags</name>
       <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
       <anchor>ad820c57afd1272ae3bcd813f71c6e3fe</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CF_STATUS</name>
       <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
       <anchor>ad820c57afd1272ae3bcd813f71c6e3fea1dec1bff679d77f6124c17a8b6b4476d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CF_MEDIA_POSITION</name>
       <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
       <anchor>ad820c57afd1272ae3bcd813f71c6e3feae439a98cbcc8c795731c62792f0d6797</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
+      <type></type>
       <name>SupportedFeatures</name>
       <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
       <anchor>a98e93bc476c1ce47e84b78937e885e19</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>SF_OPEN_MEDIA</name>
       <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
       <anchor>a98e93bc476c1ce47e84b78937e885e19a6d81c8319e25aa88aaaaf95ca7e0ebc4</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>SF_PLAY</name>
       <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
       <anchor>a98e93bc476c1ce47e84b78937e885e19a1896a0372549e1d6f42b4b515a80ea11</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>SF_SEEK</name>
       <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
       <anchor>a98e93bc476c1ce47e84b78937e885e19af6a6d1b7a8fd246f2389dbf05a5c641d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>SF_AUTO_PLAY</name>
       <anchorfile>classimm_1_1_i_media_controller.html</anchorfile>
       <anchor>a98e93bc476c1ce47e84b78937e885e19ad642806ddd9ed2bb3a5ba8202234c285</anchor>
@@ -19346,12 +21936,14 @@
     <base virtualness="virtual">imm::IMediaController</base>
     <base virtualness="virtual">imm::IVideoInfo</base>
     <member kind="enumeration">
+      <type></type>
       <name>SupportedFeatures</name>
       <anchorfile>classimm_1_1_i_video_controller.html</anchorfile>
       <anchor>a10c1c0b9aa0bfe9801ef4d214d6f3567</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>SF_GRAB_ANY</name>
       <anchorfile>classimm_1_1_i_video_controller.html</anchorfile>
       <anchor>a10c1c0b9aa0bfe9801ef4d214d6f3567a6612a0dbec929f89e574f5f2576f28df</anchor>
@@ -19371,11 +21963,6 @@
       <anchor>a231971797056e643f1ebcf8cad4aaa24</anchor>
       <arglist>(int frameIndex)=0</arglist>
     </member>
-  </compound>
-  <compound kind="class">
-    <name>imm::IVideoInfo</name>
-    <filename>classimm_1_1_i_video_info.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetFramesCount</name>
@@ -19404,6 +21991,11 @@
       <anchor>a0b40fbd17d7be62d702032088b63e82f</anchor>
       <arglist>() const =0</arglist>
     </member>
+  </compound>
+  <compound kind="class">
+    <name>imm::IVideoInfo</name>
+    <filename>classimm_1_1_i_video_info.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
   </compound>
   <compound kind="namespace">
     <name>iproc</name>
@@ -19493,12 +22085,14 @@
     <base>iproc::TSyncProcessorWrap</base>
     <base virtualness="virtual">iprm::IOptionsList</base>
     <member kind="enumeration">
+      <type></type>
       <name>MessageId</name>
       <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
       <anchor>a5c38e80996484bd73eaf8524eedba0ec</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_BAD_BUFFER</name>
       <anchorfile>classiproc_1_1_c_iterative_processor_comp.html</anchorfile>
       <anchor>a5c38e80996484bd73eaf8524eedba0eca1bc0a262d6eed674d2e8526d7d9dd46a</anchor>
@@ -19637,108 +22231,6 @@
     <base virtualness="virtual">iproc::ISupplier</base>
     <base protection="protected" virtualness="virtual">ilog::IMessageConsumer</base>
     <class kind="class">iproc::CSupplierCompBase::Timer</class>
-    <member kind="enumeration">
-      <name>MessageId</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a3ef5971e2a11ad9301790db639333eb6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_DURATION_TIME</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a3ef5971e2a11ad9301790db639333eb6af51e6cdeaae8a7a9dbd1b15f5cdecd43</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_SUPPLIER_RESULTS_STATUS</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a3ef5971e2a11ad9301790db639333eb6ab3cb500d4e8f300e7efbb22f5c15da22</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ilog::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a329d63030d2ab5b6cb9a08e0c255f4a7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a3eef45449f5614dff66cd6ebe401e901</anchor>
-      <arglist>(TaskLog)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a5d79650c946b54aa6cd6a938398ad19f</anchor>
-      <arglist>(TaskLog, ilog::IMessageConsumer, ExtractTaskLog)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>aed1cddb7d6f03d20422959a7ecce8b72</anchor>
-      <arglist>(TaskLog, istd::IPolymorphic, ExtractTaskLog)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>ae8e1cdfb5c9cec0ee1edee26f57f9a00</anchor>
-      <arglist>(TempMessages)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a4ced0cad1394112445f489c57995a858</anchor>
-      <arglist>(TempMessages, ilog::IMessageConsumer, ExtractTempMessages)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a3a0d38f8467bbcdfe9308e8dcdfcc036</anchor>
-      <arglist>(TempMessages, istd::IPolymorphic, ExtractTempMessages)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a19debc36963c129cc999774f4e57f7e1</anchor>
-      <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CSupplierCompBase</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>ad453c1a96e4ebae5a8bc29fd9b92ee29</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetWorkStatus</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a857163a36ec16cf7a5dc4186cf53cd0e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>InvalidateSupplier</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a03a2fe837887070a5ff58a28a40aa14c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkInitialized</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a015048dee6c4de8635031f29faf45293</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ClearWorkResults</name>
@@ -19746,103 +22238,12 @@
       <anchor>a442a80a344dff5d01993a699a7567691</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const ilog::IMessageContainer *</type>
-      <name>GetWorkMessages</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a09125c4ab95caf42e045c7d5842fe321</anchor>
-      <arglist>(int messageType) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual iprm::IParamsSet *</type>
-      <name>GetModelParametersSet</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>ad87e7e4fb0157c93ce2c158f5725bb37</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>InitializeWork</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>ac37e116184f83fb9407a6243391222b0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" virtualness="pure">
       <type>virtual void</type>
-      <name>OnParametersChanged</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>abd3db22bdf1f16c2828cb137179cf9b6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>RegisterSupplierInput</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a48d7e1c26473266c2b60409b5171852d</anchor>
-      <arglist>(imod::IModel *modelPtr, ISupplier *supplierPtr=NULL)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UnregisterSupplierInput</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>add07a57031037d60c26628f9cb52f811</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetDiagnosticName</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a12b7c1c099eca829dd19814d84a2ee87</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AddMessage</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>aad40686b67a71362476a4db5e69de885</anchor>
-      <arglist>(const ilog::CMessage *messagePtr) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsMessageSupported</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a0561b4da80df642d7e9ed4c180be1cd7</anchor>
-      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AddMessage</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a2ac3e3c6bc9d902e831c73576f6b6e6f</anchor>
-      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a55e1e7daefec816c55e46d629bb20751</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a08829340301aed9acda31308797da725</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>int</type>
-      <name>m_workStatus</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a960a57e39a555f8e1aaff58d75ac5d85</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>istd::CChangeNotifier</type>
-      <name>m_productChangeNotifier</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a7fc326b1a7dd7f54d40d6d5b90b20a4e</anchor>
-      <arglist></arglist>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
+      <anchor>a8407cf9f0d773e91bfa10d6616a36e4d</anchor>
+      <arglist>()=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -19879,183 +22280,41 @@
     <name>iproc::IProcessor</name>
     <filename>classiproc_1_1_i_processor.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="enumeration">
-      <name>MessageId</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>a71f0e6f70fcf044073f7055a0e0f5225</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_BAD_PARAMS</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>a71f0e6f70fcf044073f7055a0e0f5225a0670e38ef8e7cadcc77fcffde5b01b06</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>MI_PROCESSING_ERROR</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>a71f0e6f70fcf044073f7055a0e0f5225a128a151b6f04fa2eda6e912ac1480d4b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>ProcessorState</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>aa94aa4786e71ae61cf56e58d93675e7a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PS_UNKNOWN</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>aa94aa4786e71ae61cf56e58d93675e7aab1e7cabfb9d1020ee100b6ee1fbe5620</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PS_INITIALIZATION</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>aa94aa4786e71ae61cf56e58d93675e7aa2d7a7e4db57eeef7e5be24d2dbc6dc63</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PS_READY</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>aa94aa4786e71ae61cf56e58d93675e7aabad97a2c4f0c515bd712963edecdbbba</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PS_INVALID</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>aa94aa4786e71ae61cf56e58d93675e7aabbd46d78a0723b57d57c31298901e5f8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>TaskState</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>a53fe9860f57b67e209887f985cf3ea73</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TS_NONE</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>a53fe9860f57b67e209887f985cf3ea73a4193a2826a1a3ecb44b5a47247656aaa</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TS_WAIT</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>a53fe9860f57b67e209887f985cf3ea73a66a293521f3e1288297befd306c46b85</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TS_OK</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>a53fe9860f57b67e209887f985cf3ea73a012c8b8611b7e4dd198a6ce37aa6bf57</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TS_CANCELED</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>a53fe9860f57b67e209887f985cf3ea73a1fad2f44bdf50b7c30ddda7738995a43</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TS_INVALID</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>a53fe9860f57b67e209887f985cf3ea73ae6084d2b3eadd5d5928353a9d5b59594</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetProcessorState</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>a21bebcb085e8e93dc6920ad3dcf6c4ce</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>AreParamsAccepted</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>a18d945c422d423fa69be5c2a136e1258</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>DoProcessing</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>ad5afd83168811f2e276fa4d57821b013</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>BeginTask</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>af214e4076c2fa524b9aa6de572e90170</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>WaitTaskFinished</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>abb082ed0fb7e87d975848e53aad84f89</anchor>
-      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>CancelTask</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>aa73693c6c682f31cf5bb344c6e816d6f</anchor>
-      <arglist>(int taskId=-1)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetReadyTask</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>a4afcb910ebe56624cb240a09b998581a</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetTaskState</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>ab8c6e1b11221b853398eadc0953b2f07</anchor>
-      <arglist>(int taskId=-1) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>InitProcessor</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>a71cf33bedd0292459b281926cb2df448</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr)=0</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iproc::IStateController</name>
     <filename>classiproc_1_1_i_state_controller.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
     <member kind="enumeration">
+      <type></type>
       <name>ChangeFlags</name>
       <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
       <anchor>a689c37ae7122c3dcf699bd8d0f721a2e</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CF_STATE_ENTERED</name>
       <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
       <anchor>a689c37ae7122c3dcf699bd8d0f721a2eac4e9320a483212dc73c200dcce456e8c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CF_STATE_LEAVED</name>
       <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
       <anchor>a689c37ae7122c3dcf699bd8d0f721a2ea99855149be815e58d177b0986ace78fe</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CF_GRAPH_CHANGED</name>
       <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
       <anchor>a689c37ae7122c3dcf699bd8d0f721a2eaf1c410d785c523a7bc0f7dcbb40bdec5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CF_STATE_ENABLED</name>
       <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
       <anchor>a689c37ae7122c3dcf699bd8d0f721a2ea15711255a2b455bd2c63d245d2fd68aa</anchor>
@@ -20115,84 +22374,6 @@
     <name>iproc::ISupplier</name>
     <filename>classiproc_1_1_i_supplier.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="enumeration">
-      <name>WorkStatus</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>ad3b7143c610c4f271745217854b1251e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>WS_INVALID</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>ad3b7143c610c4f271745217854b1251eab14d115e664be0ece856109431395207</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>WS_INIT</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>ad3b7143c610c4f271745217854b1251eaff938cd606e9e8d2cc881b961277aa18</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>WS_LOCKED</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>ad3b7143c610c4f271745217854b1251ead862cf2007aad54dfe8699bc4bf209d6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>WS_OK</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>ad3b7143c610c4f271745217854b1251ea596371c0c9bd5c243242a539c7dff8ed</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>WS_CANCELED</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>ad3b7143c610c4f271745217854b1251ea23c568cf4592b40eb81cd7d8974b891c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>WS_ERROR</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>ad3b7143c610c4f271745217854b1251eaf0443c3e05e1a6d255e1208a747453bf</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>WS_CRITICAL</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>ad3b7143c610c4f271745217854b1251ea2d1a51d4de4791dafa4219f8a0c75032</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>ChangeFlags</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>a493b9bac260cff15679441656b15f3ca</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_SUPPLIER_RESULTS</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>a493b9bac260cff15679441656b15f3caabe63c0459792ec8459c0304337047833</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <name>WorkMessageType</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>abbc42b61a9c35ce3f0821db967c5d449</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>WMT_TEMP</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>abbc42b61a9c35ce3f0821db967c5d449aea621e71f727c49c2b8b523c265e32d0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>WMT_RESULTS</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>abbc42b61a9c35ce3f0821db967c5d449a0bc9bc0b3bb53a7866afa8b1d15d8d69</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetWorkStatus</name>
@@ -20212,13 +22393,6 @@
       <name>EnsureWorkInitialized</name>
       <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
       <anchor>a1d5a8103b4fc07f82c8d5f44794bb78e</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>a8407cf9f0d773e91bfa10d6616a36e4d</anchor>
       <arglist>()=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -20518,103 +22692,11 @@
     <templarg>Interface</templarg>
     <base>ilog::TLoggerCompWrap</base>
     <base>iproc::TSyncProcessorWrap</base>
-    <member kind="typedef">
-      <type>ilog::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
-      <anchor>a89a981e20fa8a2d09462bb32d933509e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>iproc::TSyncProcessorWrap&lt; Base &gt;</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
-      <anchor>ae7231378d49277f210d184366095ac75</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Interface</type>
-      <name>InterfaceType</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
-      <anchor>aeb82b61f5619c5cfd1cfdefe18320b2d</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iproc::TSyncProcessorWrap</name>
     <filename>classiproc_1_1_t_sync_processor_wrap.html</filename>
     <templarg>Base</templarg>
-    <base>Base</base>
-    <member kind="typedef">
-      <type>Base</type>
-      <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>a3b21fc424b686e6bcf4537b75d89adf3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TSyncProcessorWrap</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>a33b9338307557966bc5e0f87e375de37</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetProcessorState</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>adc1704c346843a8bcaf57e055e902b71</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>AreParamsAccepted</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>ae97572f44492b12a88117a22db51483d</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>BeginTask</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>a06c427a3f188b18011a3c842be354183</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>WaitTaskFinished</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>a5e249d7e56f018e4e4f3ce872f1d622d</anchor>
-      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>CancelTask</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>a0a5cd08f5800f4d01eeae041dd5a5aa7</anchor>
-      <arglist>(int taskId=-1)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetReadyTask</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>a7644b6e2edc8e32f3e4a9987a2a97ab9</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetTaskState</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>aeea1cf5b8c422a59cb9c76550cb83a81</anchor>
-      <arglist>(int taskId=-1) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>InitProcessor</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
-    </member>
   </compound>
   <compound kind="namespace">
     <name>iprocgui</name>
@@ -20636,6 +22718,13 @@
       <anchor>af63c16e07912eb65d20eca7af83e987b</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>ae409c890d1aef50212a784fcbbb730d2</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>DoDocumentProcessing</name>
@@ -20643,39 +22732,12 @@
       <anchor>a0b56a66d2926f88dd6caf65246816564</anchor>
       <arglist>(const istd::IChangeable *inputDocumentPtr, const QByteArray &amp;documentTypeId)</arglist>
     </member>
-  </compound>
-  <compound kind="class">
-    <name>iprocgui::CDocumentProcessingManagerComp</name>
-    <filename>classiprocgui_1_1_c_document_processing_manager_comp.html</filename>
-    <base>iprocgui::CDocumentProcessingManagerCompBase</base>
-    <member kind="typedef">
-      <type>iprocgui::CDocumentProcessingManagerCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp.html</anchorfile>
-      <anchor>a41404d8cdb42bdfac96c979471b7f207</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>DoDocumentProcessing</name>
-      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp.html</anchorfile>
-      <anchor>a7ab898bbc70d5fbef752ca0a19db0b6a</anchor>
-      <arglist>(const istd::IChangeable *inputDocumentPtr, const QByteArray &amp;documentTypeId)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iprocgui::CDocumentProcessingManagerCompBase</name>
-    <filename>classiprocgui_1_1_c_document_processing_manager_comp_base.html</filename>
-    <base>QObject</base>
-    <base>ilog::TLoggerCompWrap</base>
-    <base protection="protected">imod::CMultiModelDispatcherBase</base>
-    <base virtualness="virtual">ibase::ICommandsProvider</base>
-    <member kind="typedef">
-      <type>ilog::CLoggerComponentBase</type>
-      <name>BaseClass</name>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
       <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
-      <anchor>ae409c890d1aef50212a784fcbbb730d2</anchor>
-      <arglist></arglist>
+      <anchor>abfc0b10a9d2dfc534f26e1899b158cf7</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -20726,20 +22788,6 @@
       <anchor>a89a8acd22b4aaf27f7472adaf164b78c</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>DoDocumentProcessing</name>
-      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
-      <anchor>ae67ec59dda6ef0c8e0387cb1c3dcf10e</anchor>
-      <arglist>(const istd::IChangeable *inputDocumentPtr, const QByteArray &amp;documentTypeId)=0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnModelChanged</name>
-      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
-      <anchor>abfc0b10a9d2dfc534f26e1899b158cf7</anchor>
-      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
     <member kind="variable" protection="protected">
       <type>iqtgui::CHierarchicalCommand</type>
       <name>m_processingMenu</name>
@@ -20763,9 +22811,41 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iprocgui::CDocumentProcessingManagerComp</name>
+    <filename>classiprocgui_1_1_c_document_processing_manager_comp.html</filename>
+    <base>iprocgui::CDocumentProcessingManagerCompBase</base>
+    <member kind="typedef">
+      <type>iprocgui::CDocumentProcessingManagerCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp.html</anchorfile>
+      <anchor>a41404d8cdb42bdfac96c979471b7f207</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>DoDocumentProcessing</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp.html</anchorfile>
+      <anchor>a7ab898bbc70d5fbef752ca0a19db0b6a</anchor>
+      <arglist>(const istd::IChangeable *inputDocumentPtr, const QByteArray &amp;documentTypeId)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprocgui::CDocumentProcessingManagerCompBase</name>
+    <filename>classiprocgui_1_1_c_document_processing_manager_comp_base.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>DoDocumentProcessing</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>ae67ec59dda6ef0c8e0387cb1c3dcf10e</anchor>
+      <arglist>(const istd::IChangeable *inputDocumentPtr, const QByteArray &amp;documentTypeId)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iprocgui::CProcessorCommandComp</name>
     <filename>classiprocgui_1_1_c_processor_command_comp.html</filename>
-    <base>QObject</base>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="typedef">
@@ -21001,30 +23081,35 @@
     <filename>classiprop_1_1_c_properties_editor_comp.html</filename>
     <base>TDesignerGuiObserverCompBase&lt; Ui::CPropertiesEditorComp, IPropertiesManager &gt;</base>
     <member kind="enumeration">
+      <type></type>
       <name>ColumnType</name>
       <anchorfile>classiprop_1_1_c_properties_editor_comp.html</anchorfile>
       <anchor>a7135d1b571e933816afb5f5f2890acc5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CT_PROPERTY</name>
       <anchorfile>classiprop_1_1_c_properties_editor_comp.html</anchorfile>
       <anchor>a7135d1b571e933816afb5f5f2890acc5a0bf83c1ab439c224f507088709c0400b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CT_VALUE</name>
       <anchorfile>classiprop_1_1_c_properties_editor_comp.html</anchorfile>
       <anchor>a7135d1b571e933816afb5f5f2890acc5a64052d14e6938f5148999e686980ef84</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
+      <type></type>
       <name>DataRole</name>
       <anchorfile>classiprop_1_1_c_properties_editor_comp.html</anchorfile>
       <anchor>a96870a06596923d38c98deee924873c5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>DR_PROPERTY_ID</name>
       <anchorfile>classiprop_1_1_c_properties_editor_comp.html</anchorfile>
       <anchor>a96870a06596923d38c98deee924873c5a6a314b864451544d1669a5a86941d8a7</anchor>
@@ -21155,6 +23240,27 @@
       <anchor>ab2ee6b37a6e929edf8a37a082c409aee</anchor>
       <arglist>(iser::IArchive &amp;archive, const iser::CArchiveTag &amp;propertiesTag, const iser::CArchiveTag &amp;propertyTag) const </arglist>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ChangeFlags</name>
+      <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
+      <anchor>a0fbea1b08f6348eafea994bbc13b64b2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_RESET</name>
+      <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
+      <anchor>a0fbea1b08f6348eafea994bbc13b64b2a81ba63b7ec777b1ba5bc3e2ce539cfc1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_ADD_PROPERTY</name>
+      <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
+      <anchor>a0fbea1b08f6348eafea994bbc13b64b2a01f8a92e043e3d76dc7b75571d02e9a5</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>iprop::CPropertiesManager::PropertyInfo</name>
@@ -21239,24 +23345,6 @@
     <name>iprop::IPropertiesManager</name>
     <filename>classiprop_1_1_i_properties_manager.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="enumeration">
-      <name>ChangeFlags</name>
-      <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
-      <anchor>a0fbea1b08f6348eafea994bbc13b64b2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_RESET</name>
-      <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
-      <anchor>a0fbea1b08f6348eafea994bbc13b64b2a81ba63b7ec777b1ba5bc3e2ce539cfc1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CF_ADD_PROPERTY</name>
-      <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
-      <anchor>a0fbea1b08f6348eafea994bbc13b64b2a01f8a92e043e3d76dc7b75571d02e9a5</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>ResetProperties</name>
@@ -21312,12 +23400,14 @@
     <filename>classiprop_1_1_i_property.html</filename>
     <base virtualness="virtual">iser::IObject</base>
     <member kind="enumeration">
+      <type></type>
       <name>PropertyFlags</name>
       <anchorfile>classiprop_1_1_i_property.html</anchorfile>
       <anchor>a99af505245ee2046b16ab69bc239844e</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>PF_PERSISTENT</name>
       <anchorfile>classiprop_1_1_i_property.html</anchorfile>
       <anchor>a99af505245ee2046b16ab69bc239844ea937799e06875e1f14dd7bdddbe37c08d</anchor>
@@ -23227,18 +25317,21 @@
     <base>iqtinsp::CInspectionTaskGuiCompBase</base>
     <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="enumeration">
+      <type></type>
       <name>DataRole</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
       <anchor>aaf567d81493ff1fd3b1e02461dd7f453</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>DR_TASK_INDEX</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
       <anchor>aaf567d81493ff1fd3b1e02461dd7f453af4ee775a7ab84f68029768c86bf4e4ba</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>DR_SHAPE_INDEX</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
       <anchor>aaf567d81493ff1fd3b1e02461dd7f453a05d6708a666b15d413ee95e52937d050</anchor>
@@ -24507,42 +26600,49 @@
     <filename>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</filename>
     <base>TSupplierGuiCompBase&lt; Ui::CSearchBasedFeaturesSupplierGuiComp &gt;</base>
     <member kind="enumeration">
+      <type></type>
       <name>ColumnType</name>
       <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
       <anchor>a987696d6998db2f2a611815f942cc9be</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CT_ID</name>
       <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
       <anchor>a987696d6998db2f2a611815f942cc9bea515f77ffe0e55ae4723df93e725660d9</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CT_SCORE</name>
       <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
       <anchor>a987696d6998db2f2a611815f942cc9bea82d5f2e058036ad010b8e53e2fe0702b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CT_POSITION</name>
       <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
       <anchor>a987696d6998db2f2a611815f942cc9bea013d7f8ef61e2a2137788a37e13da714</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CT_ANGLE</name>
       <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
       <anchor>a987696d6998db2f2a611815f942cc9beaee2a3086187a80c2f954350b547ba5f6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CT_SCALE</name>
       <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
       <anchor>a987696d6998db2f2a611815f942cc9bea2fb054ab6e9ea7a9bc933e0dfcd72b24</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>CT_LAST</name>
       <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
       <anchor>a987696d6998db2f2a611815f942cc9bea65c85a9695b949cd34884e8fff7c39b5</anchor>
@@ -25080,7 +27180,6 @@
   <compound kind="class">
     <name>iqtmm::CFrameSeqVideoControllerComp</name>
     <filename>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</filename>
-    <base>QObject</base>
     <base>TSyncProcessorCompBase&lt; icam::IBitmapAcquisition &gt;</base>
     <base virtualness="virtual">imm::IVideoController</base>
     <base protection="protected">imod::CSingleModelObserverBase</base>
@@ -25242,28 +27341,31 @@
   <compound kind="class">
     <name>iqtmm::CMediaLoaderComp</name>
     <filename>classiqtmm_1_1_c_media_loader_comp.html</filename>
-    <base>QObject</base>
     <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifile::IFilePersistence</base>
     <member kind="enumeration">
+      <type></type>
       <name>MessageId</name>
       <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
       <anchor>abfe262925b385db6acd4c72ba1cf0cd3</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_BAD_EXTENSION</name>
       <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
       <anchor>abfe262925b385db6acd4c72ba1cf0cd3a3a42aedf094e46ddd36ccb2f540f419b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_FILE_NOT_EXIST</name>
       <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
       <anchor>abfe262925b385db6acd4c72ba1cf0cd3a0788b7124d3bb82f4fbbe0b818ebfb98</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_BAD_FORMAT</name>
       <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
       <anchor>abfe262925b385db6acd4c72ba1cf0cd3a9207dd4779261f20991d0a35f62b13a5</anchor>
@@ -25348,34 +27450,38 @@
   <compound kind="class">
     <name>iqtmm::CSvgBitmapLoaderComp</name>
     <filename>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</filename>
-    <base>QObject</base>
     <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifile::IFilePersistence</base>
     <member kind="enumeration">
+      <type></type>
       <name>MessageId</name>
       <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
       <anchor>ada050c80d54608502eac377685442414</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_BAD_EXTENSION</name>
       <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
       <anchor>ada050c80d54608502eac377685442414a550efe30c51ffa56478377a8c24c8fa5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_FILE_NOT_EXIST</name>
       <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
       <anchor>ada050c80d54608502eac377685442414ae59647782c05f5326569833d51e24ac9</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_BAD_FORMAT</name>
       <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
       <anchor>ada050c80d54608502eac377685442414a5f2be7a8b2922bd1c946f18b0c9ee582</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_BITMAP_TYPE</name>
       <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
       <anchor>ada050c80d54608502eac377685442414af10d7a8e0c0328f1484c439b67cfcc45</anchor>
@@ -25979,6 +28085,41 @@
       <anchor>a78621ba7d6de0be67d8ea1b3818a1398</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>SamplingMode</name>
+      <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
+      <anchor>af3fded8527fd5d3658143ff3fbbbfbb1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SM_SINGLE</name>
+      <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
+      <anchor>af3fded8527fd5d3658143ff3fbbbfbb1ae09c80c5d30b5b67f6a3f39a3734e9b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SM_PERIODIC</name>
+      <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
+      <anchor>af3fded8527fd5d3658143ff3fbbbfbb1ae62a987faf4e073d2b9acc4c63f8cbd1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SM_SYNCHRONIZED</name>
+      <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
+      <anchor>af3fded8527fd5d3658143ff3fbbbfbb1aeb5f27a8faa3fe5b3e39a46ef76e852e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SM_LAST</name>
+      <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
+      <anchor>af3fded8527fd5d3658143ff3fbbbfbb1ab79088096685516dac12e9d921811be6</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CSamplingParamsComp</name>
@@ -26048,6 +28189,69 @@
       <name>BaseClass</name>
       <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
       <anchor>ad16135821778b4f3a13bad5309635a42</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>TriggerMode</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>a283940d30e3c2ac921ff3d7976ddb124</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TM_NONE</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>a283940d30e3c2ac921ff3d7976ddb124aeec4255e489c1752afee8ba975583c71</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TM_CONTINUOUS</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>a283940d30e3c2ac921ff3d7976ddb124a912d4ed4ec34a814156359bb766f2a6a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TM_RISING_EDGE</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>a283940d30e3c2ac921ff3d7976ddb124a2f3d73f8b6544a6294b5a2536e89de0f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TM_FALLING_EDGE</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>a283940d30e3c2ac921ff3d7976ddb124a058e033dc8b13ea678ec231784dae8d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TM_POSITIVE_LEVEL</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>a283940d30e3c2ac921ff3d7976ddb124a56371f2edfe1d8d0ea2d968fac8c6ad5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TM_NEGATIVE_LEVEL</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>a283940d30e3c2ac921ff3d7976ddb124a9588d9376705b9578c1a434ac19baff1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TM_SOFTWARE</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>a283940d30e3c2ac921ff3d7976ddb124a948567cdf845741a89ba68394a29128c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TM_LAST</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>a283940d30e3c2ac921ff3d7976ddb124ad1972346830602a219fea2d78944d878</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -26175,30 +28379,35 @@
     <filename>classisig_1_1_i_pulse_constraints.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
     <member kind="enumeration">
+      <type></type>
       <name>PulseSupportedFlags</name>
       <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
       <anchor>a125134ee442e4c6cf8ad963ddf7f7bd6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>PSF_NONE</name>
       <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
       <anchor>a125134ee442e4c6cf8ad963ddf7f7bd6a7c012755c7c71fc55601ed51aab5e699</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>PSF_DELAY_TIME</name>
       <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
       <anchor>a125134ee442e4c6cf8ad963ddf7f7bd6ac22eaf1311809da5d444fb80a6fcf597</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>PSF_PULSE_DURATION</name>
       <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
       <anchor>a125134ee442e4c6cf8ad963ddf7f7bd6ae0d2b922870fd21bacf900986462cbe7</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>PSF_RELAXING_TIME</name>
       <anchorfile>classisig_1_1_i_pulse_constraints.html</anchorfile>
       <anchor>a125134ee442e4c6cf8ad963ddf7f7bd6a0cadd24a4b30e81e0d427a40ca378fab</anchor>
@@ -26324,36 +28533,6 @@
     <name>isig::ISamplingParams</name>
     <filename>classisig_1_1_i_sampling_params.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="enumeration">
-      <name>SamplingMode</name>
-      <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
-      <anchor>af3fded8527fd5d3658143ff3fbbbfbb1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SM_SINGLE</name>
-      <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
-      <anchor>af3fded8527fd5d3658143ff3fbbbfbb1ae09c80c5d30b5b67f6a3f39a3734e9b8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SM_PERIODIC</name>
-      <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
-      <anchor>af3fded8527fd5d3658143ff3fbbbfbb1ae62a987faf4e073d2b9acc4c63f8cbd1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SM_SYNCHRONIZED</name>
-      <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
-      <anchor>af3fded8527fd5d3658143ff3fbbbfbb1aeb5f27a8faa3fe5b3e39a46ef76e852e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>SM_LAST</name>
-      <anchorfile>classisig_1_1_i_sampling_params.html</anchorfile>
-      <anchor>af3fded8527fd5d3658143ff3fbbbfbb1ab79088096685516dac12e9d921811be6</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual const ISamplingConstraints *</type>
       <name>GetSamplingConstraints</name>
@@ -26432,60 +28611,6 @@
     <name>isig::ITriggerParams</name>
     <filename>classisig_1_1_i_trigger_params.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="enumeration">
-      <name>TriggerMode</name>
-      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>a283940d30e3c2ac921ff3d7976ddb124</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TM_NONE</name>
-      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>a283940d30e3c2ac921ff3d7976ddb124aeec4255e489c1752afee8ba975583c71</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TM_CONTINUOUS</name>
-      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>a283940d30e3c2ac921ff3d7976ddb124a912d4ed4ec34a814156359bb766f2a6a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TM_RISING_EDGE</name>
-      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>a283940d30e3c2ac921ff3d7976ddb124a2f3d73f8b6544a6294b5a2536e89de0f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TM_FALLING_EDGE</name>
-      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>a283940d30e3c2ac921ff3d7976ddb124a058e033dc8b13ea678ec231784dae8d4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TM_POSITIVE_LEVEL</name>
-      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>a283940d30e3c2ac921ff3d7976ddb124a56371f2edfe1d8d0ea2d968fac8c6ad5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TM_NEGATIVE_LEVEL</name>
-      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>a283940d30e3c2ac921ff3d7976ddb124a9588d9376705b9578c1a434ac19baff1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TM_SOFTWARE</name>
-      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>a283940d30e3c2ac921ff3d7976ddb124a948567cdf845741a89ba68394a29128c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TM_LAST</name>
-      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
-      <anchor>a283940d30e3c2ac921ff3d7976ddb124ad1972346830602a219fea2d78944d878</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual const ITriggerConstraints *</type>
       <name>GetTriggerConstraints</name>
@@ -27447,11 +29572,6 @@
       <anchor>ab28c47df3df34a3fc0bb3d0bd2c429a5</anchor>
       <arglist>(int pageIndex) const =0</arglist>
     </member>
-  </compound>
-  <compound kind="class">
-    <name>iwiz::IWizardNavigationController</name>
-    <filename>classiwiz_1_1_i_wizard_navigation_controller.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsFinishAllowed</name>
@@ -27481,6 +29601,11 @@
       <arglist>()=0</arglist>
     </member>
   </compound>
+  <compound kind="class">
+    <name>iwiz::IWizardNavigationController</name>
+    <filename>classiwiz_1_1_i_wizard_navigation_controller.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+  </compound>
   <compound kind="namespace">
     <name>iwizgui</name>
     <filename>namespaceiwizgui.html</filename>
@@ -27491,12 +29616,14 @@
     <filename>classiwizgui_1_1_c_wizard_options_list_gui_comp.html</filename>
     <base>TDesignerGuiObserverCompBase&lt; Ui::CWizardOptionsListGuiComp, iwiz::IParamsManagerWizard &gt;</base>
     <member kind="enumeration">
+      <type></type>
       <name>DataRole</name>
       <anchorfile>classiwizgui_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
       <anchor>a5bb9855fc7af858d3d396694b8fda38e</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>DR_PAGE_INDEX</name>
       <anchorfile>classiwizgui_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
       <anchor>a5bb9855fc7af858d3d396694b8fda38ea1efcbaf7c9991dace6ae18ff869b1656</anchor>
@@ -27537,5 +29664,547 @@
       <anchor>a0a2ff23e8f6a039465b37725d09c904e</anchor>
       <arglist>()</arglist>
     </member>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iauth</name>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
+    <filename>dir_b4883bb8fd90455e4a712223a3312662.html</filename>
+    <file>CRightsBasedEnablerComp.h</file>
+    <file>CSimpleLoginComp.h</file>
+    <file>CStaticRightsProviderComp.h</file>
+    <file>CUser.h</file>
+    <file>CUserLoginComp.h</file>
+    <file>CUsersManagerComp.h</file>
+    <file>ILogin.h</file>
+    <file>IPasswordChanger.h</file>
+    <file>IRightsProvider.h</file>
+    <file>IUsersManager.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/icam</name>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
+    <filename>dir_f2296beff96c253567dc2b95d81f611c.html</filename>
+    <file>CAcquisitionConstraintsComp.h</file>
+    <file>CCameraDelegatorComp.h</file>
+    <file>CExposureParamsComp.h</file>
+    <file>CMemoryAcquisitionComp.h</file>
+    <file>CMultiCameraBitmapSupplierComp.h</file>
+    <file>CMultiLayerBitmapSupplierComp.h</file>
+    <file>CSelectableBitmapSupplierComp.h</file>
+    <file>CSelectionParamCameraComp.h</file>
+    <file>CSnapBitmapSupplierComp.h</file>
+    <file>IBitmapAcquisition.h</file>
+    <file>icam.h</file>
+    <file>ICameraInfo.h</file>
+    <file>IExposureConstraints.h</file>
+    <file>IExposureParams.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/icmpstr</name>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
+    <filename>dir_c00f6ae34efe356f1720d5d668a167d3.html</filename>
+    <file>CAttributeEditorComp.h</file>
+    <file>CComponentHelpFileProviderComp.h</file>
+    <file>CComponentNoteEditorComp.h</file>
+    <file>CComponentPromotorDialogComp.h</file>
+    <file>CElementSelectionInfoManagerBase.h</file>
+    <file>CGraphicsConnectorItem.h</file>
+    <file>CMultiAttributeDelegateWidget.h</file>
+    <file>CMultiAttributeEditor.h</file>
+    <file>CPackageOverviewComp.h</file>
+    <file>CPackagesLoaderExtComp.h</file>
+    <file>CQuickHelpGuiComp.h</file>
+    <file>CRegistryConsistInfoComp.h</file>
+    <file>CRegistryElementShape.h</file>
+    <file>CRegistryLoaderComp.h</file>
+    <file>CRegistryPreviewComp.h</file>
+    <file>CRegistryPropEditorComp.h</file>
+    <file>CRegistryTreeViewComp.h</file>
+    <file>CSceneProviderGuiComp.h</file>
+    <file>CVisualRegistry.h</file>
+    <file>CVisualRegistryEditorComp.h</file>
+    <file>CVisualRegistryElement.h</file>
+    <file>CXpcEditorComp.h</file>
+    <file>IAttributeSelectionObserver.h</file>
+    <file>icmpstr.h</file>
+    <file>IComponentNoteController.h</file>
+    <file>IElementSelectionInfo.h</file>
+    <file>IExternalMetaInfoManager.h</file>
+    <file>IRegistryConsistInfo.h</file>
+    <file>IRegistryPreview.h</file>
+    <file>ISceneProvider.h</file>
+    <file>TObjectShapeBase.h</file>
+    <file>TShapeBase.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/idocproc</name>
+    <path>C:/Temp/AcfSln/Include/idocproc/</path>
+    <filename>dir_dd6e29a3219fe8cd5ed282d0d72d5b87.html</filename>
+    <file>CRenderedDocumentPreviewGeneratorComp.h</file>
+    <file>idocproc.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iedge</name>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
+    <filename>dir_9f5ef926fd5d264c2adfe296c2bd1f1c.html</filename>
+    <file>CEdgeBasedFeaturesSupplierComp.h</file>
+    <file>CEdgeLine.h</file>
+    <file>CEdgeLineContainer.h</file>
+    <file>CEdgeNode.h</file>
+    <file>CEdgesReductorComp.h</file>
+    <file>CExtractedEdgeLinesSupplierComp.h</file>
+    <file>CFastEdgesExtractorComp.h</file>
+    <file>CProcessedEdgeLinesSupplierComp.h</file>
+    <file>iedge.h</file>
+    <file>IEdgeLinesProcessor.h</file>
+    <file>IEdgeLinesProvider.h</file>
+    <file>IEdgesExtractor.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iedgegui</name>
+    <path>C:/Temp/AcfSln/Include/iedgegui/</path>
+    <filename>dir_961a74b7e7646907c05fbaac4d7138ad.html</filename>
+    <file>CEdgeLineContainerShape.h</file>
+    <file>CEdgeLinesSupplierGuiComp.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/ifileproc</name>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
+    <filename>dir_5d85a8015148fee33a9f79f2a69171c7.html</filename>
+    <file>CComposedCopyFilesComp.h</file>
+    <file>CCopyAppComp.h</file>
+    <file>CCopyFilesTreeComp.h</file>
+    <file>CExternalFileConverterComp.h</file>
+    <file>CFileConvertOverProcessorComp.h</file>
+    <file>CFileCopyOverLoaderComp.h</file>
+    <file>CFileInfoCopyComp.h</file>
+    <file>CFileListConverterComp.h</file>
+    <file>CFileNamingComp.h</file>
+    <file>CFileNamingParamsComp.h</file>
+    <file>CFilePathesContainer.h</file>
+    <file>CProcessingResultsReviewComp.h</file>
+    <file>CRenderedObjectFileLoaderComp.h</file>
+    <file>CSelectableFileConverterComp.h</file>
+    <file>IFileConvertCopy.h</file>
+    <file>IFileNaming.h</file>
+    <file>IFileNamingParams.h</file>
+    <file>ifileproc.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/ihotf</name>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
+    <filename>dir_2256aa99abe6d83449dc85ed6bdc9ec2.html</filename>
+    <file>CDirectoryMonitorParams.h</file>
+    <file>CDirectoryMonitorParamsComp.h</file>
+    <file>CFileSystemChangeStorage.h</file>
+    <file>CHotfolderLoaderComp.h</file>
+    <file>CHotfolderProcessingInfo.h</file>
+    <file>CHotfolderProcessingItem.h</file>
+    <file>CHotfolderStatistics.h</file>
+    <file>CHotfolderWorkflowComp.h</file>
+    <file>CHotfolderWorkflowItem.h</file>
+    <file>CMonitoringSession.h</file>
+    <file>CMonitoringSessionsManager.h</file>
+    <file>CVisualHotfolderWorkflowComp.h</file>
+    <file>CVisualHotfolderWorkflowItem.h</file>
+    <file>IDirectoryMonitor.h</file>
+    <file>IDirectoryMonitorParams.h</file>
+    <file>IFileSystemChangeStorage.h</file>
+    <file>ihotf.h</file>
+    <file>IHotfolderInfoManager.h</file>
+    <file>IHotfolderProcessingInfo.h</file>
+    <file>IHotfolderProcessingItem.h</file>
+    <file>IHotfolderStatistics.h</file>
+    <file>IHotfolderTaskManager.h</file>
+    <file>IHotfolderWorkflow.h</file>
+    <file>IHotfolderWorkflowItem.h</file>
+    <file>IMonitoringSession.h</file>
+    <file>IMonitoringSessionManager.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/ihotfgui</name>
+    <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
+    <filename>dir_a2405bc7aae86aa911e3f3eadbe3ed99.html</filename>
+    <file>CDirectoryItemGuiComp.h</file>
+    <file>CDirectoryMonitorComp.h</file>
+    <file>CDirectoryMonitorParamsGui.h</file>
+    <file>CHotfolderContainerGuiComp.h</file>
+    <file>CHotfolderGuiComp.h</file>
+    <file>CHotfolderProcessingComp.h</file>
+    <file>CHotfolderTaskManagerComp.h</file>
+    <file>CProcessingItemPreviewGuiComp.h</file>
+    <file>ihotfgui.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iinsp</name>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
+    <filename>dir_5022365cd8d99ebf720fac90c1fea03f.html</filename>
+    <file>CComposedInformationProviderComp.h</file>
+    <file>CIdProviderCacheComp.h</file>
+    <file>CInformationProviderCacheComp.h</file>
+    <file>CInspectionTaskComp.h</file>
+    <file>IIdProvider.h</file>
+    <file>iinsp.h</file>
+    <file>IInspectionTask.h</file>
+    <file>ITimeStampProvider.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iipr</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>dir_1af4026a7aa3fbc90e13dff6479b1905.html</filename>
+    <file>CAutoImageNormalizeProcessorComp.h</file>
+    <file>CBitmapJoinerSupplierComp.h</file>
+    <file>CBitmapOperations.h</file>
+    <file>CBitmapProviderCacheComp.h</file>
+    <file>CCaliperDistanceFeature.h</file>
+    <file>CCaliperFeature.h</file>
+    <file>CCaliperParams.h</file>
+    <file>CCaliperParamsComp.h</file>
+    <file>CCheckerboardPatternGeneratorComp.h</file>
+    <file>CCircleFinderParams.h</file>
+    <file>CCircleFinderParamsComp.h</file>
+    <file>CCircleFindProcessorComp.h</file>
+    <file>CColorBitmapSeparatorSupplierComp.h</file>
+    <file>CColorPatternComparatorComp.h</file>
+    <file>CColorPatternControllerComp.h</file>
+    <file>CConvolutionKernel2d.h</file>
+    <file>CConvolutionKernel2dComp.h</file>
+    <file>CConvolutionProcessorComp.h</file>
+    <file>CDelegatedBitmapSupplierComp.h</file>
+    <file>CDifferenceBitmapSupplierComp.h</file>
+    <file>CEdgeDistanceProcessorComp.h</file>
+    <file>CEdgeDistancesSupplierComp.h</file>
+    <file>CExtremumCaliperProcessorComp.h</file>
+    <file>CFastGaussianProcessorComp.h</file>
+    <file>CFeaturesContainer.h</file>
+    <file>CFeatureToImageMapperProcessorComp.h</file>
+    <file>CImageBinarizeProcessorComp.h</file>
+    <file>CImageCropProcessorComp.h</file>
+    <file>CImageFlipProcessorComp.h</file>
+    <file>CImageHistogramProcessorComp.h</file>
+    <file>CImageHistogramSupplierComp.h</file>
+    <file>CImageInterpolationParams.h</file>
+    <file>CImageNormalizeProcessorComp.h</file>
+    <file>CImagePolarTransformProcessorComp.h</file>
+    <file>CImageProcessorCompBase.h</file>
+    <file>CImageRegionProcessorCompBase.h</file>
+    <file>CLineProjectionProcessorComp.h</file>
+    <file>CLineProjectionSupplierComp.h</file>
+    <file>CMorphologicalProcessorComp.h</file>
+    <file>CMultiBitmapCacheComp.h</file>
+    <file>CMultiLineProjectionSupplierComp.h</file>
+    <file>CMultiLineSupplierCompBase.h</file>
+    <file>CPositionFromImageSupplierComp.h</file>
+    <file>CProcessedAcquisitionComp.h</file>
+    <file>CProcessedBitmapSupplierComp.h</file>
+    <file>CRectDerivativeProcessor.h</file>
+    <file>CRectDerivativeProcessorComp.h</file>
+    <file>CRectImageSmoothProcessorComp.h</file>
+    <file>CRgbToGrayProcessorComp.h</file>
+    <file>CRingPatternGeneratorComp.h</file>
+    <file>CRingPatternGeneratorParamsComp.h</file>
+    <file>CSearchBasedFeaturesSupplierComp.h</file>
+    <file>CSearchFeature.h</file>
+    <file>CSearchParams.h</file>
+    <file>CSearchParamsComp.h</file>
+    <file>CSelectableCalibrationProviderComp.h</file>
+    <file>CSingleFeatureConsumer.h</file>
+    <file>CTubeProjectionLinesProviderComp.h</file>
+    <file>CTubeProjectionsGenerator.h</file>
+    <file>ICaliperParams.h</file>
+    <file>ICaliperProcessor.h</file>
+    <file>ICircleFinderParams.h</file>
+    <file>IConvolutionKernel2d.h</file>
+    <file>IFeaturesConsumer.h</file>
+    <file>IFeatureToFeatureProcessor.h</file>
+    <file>IFeatureToImageMapper.h</file>
+    <file>IFeatureToProjectionMapper.h</file>
+    <file>IImageInterpolationParams.h</file>
+    <file>IImageToFeatureProcessor.h</file>
+    <file>iipr.h</file>
+    <file>ILineProjectionProcessor.h</file>
+    <file>IPatternController.h</file>
+    <file>IProjectionConstraints.h</file>
+    <file>IProjectionParams.h</file>
+    <file>IRingPatternGeneratorParams.h</file>
+    <file>ISearchConstraints.h</file>
+    <file>ISearchParams.h</file>
+    <file>TImageParamProcessorCompBase.h</file>
+    <file>TImagePixelInterpolator.h</file>
+    <file>TUnaryTransformProcessorComp.h</file>
+    <file>TWeightedFeatureWrap.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/imeas</name>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
+    <filename>dir_e592bbcd5a2a1afe8c7af0cb6d8b6366.html</filename>
+    <file>CCrossCorrelationProcessorComp.h</file>
+    <file>CDataSequenceInfoBase.h</file>
+    <file>CDataSequenceJoinerSupplierComp.h</file>
+    <file>CDataSequenceStatistics.h</file>
+    <file>CDataStatistics.h</file>
+    <file>CGeneralDataSequence.h</file>
+    <file>CGeneralNumericValue.h</file>
+    <file>CHistogramStatisticsProcessorComp.h</file>
+    <file>CLinearAdjustParamsComp.h</file>
+    <file>CMeasurementRange.h</file>
+    <file>CNumericConstraintsComp.h</file>
+    <file>CNumericParamsComp.h</file>
+    <file>CNumericValuesJoinerComp.h</file>
+    <file>CProcessedDataSequenceSupplierComp.h</file>
+    <file>CSamplesInfo.h</file>
+    <file>CSimpleNumericValue.h</file>
+    <file>CSimpleNumericValueProvider.h</file>
+    <file>CWavSamplesLoaderComp.h</file>
+    <file>IDataSequence.h</file>
+    <file>IDataSequenceCorrelationProcessor.h</file>
+    <file>IDataSequenceInfo.h</file>
+    <file>IDataSequenceProvider.h</file>
+    <file>IDataSequenceStatistics.h</file>
+    <file>IDataSequenceStatisticsProcessor.h</file>
+    <file>IDataStatistics.h</file>
+    <file>IDiscreteDataSequence.h</file>
+    <file>ILinearAdjustConstraints.h</file>
+    <file>ILinearAdjustParams.h</file>
+    <file>imeas.h</file>
+    <file>IMultiDataSequenceProvider.h</file>
+    <file>INumericConstraints.h</file>
+    <file>INumericValue.h</file>
+    <file>INumericValueProvider.h</file>
+    <file>ISampleAcquisition.h</file>
+    <file>TDiscreteDataSequence.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/imm</name>
+    <path>C:/Temp/AcfSln/Include/imm/</path>
+    <filename>dir_957349cdd27335858e2acc73aeead3db.html</filename>
+    <file>IMediaController.h</file>
+    <file>imm.h</file>
+    <file>IVideoController.h</file>
+    <file>IVideoInfo.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include</name>
+    <path>C:/Temp/AcfSln/Include/</path>
+    <filename>dir_856524284ebe840938865dc061f982fb.html</filename>
+    <dir>Include/iauth</dir>
+    <dir>Include/icam</dir>
+    <dir>Include/icmpstr</dir>
+    <dir>Include/idocproc</dir>
+    <dir>Include/iedge</dir>
+    <dir>Include/iedgegui</dir>
+    <dir>Include/ifileproc</dir>
+    <dir>Include/ihotf</dir>
+    <dir>Include/ihotfgui</dir>
+    <dir>Include/iinsp</dir>
+    <dir>Include/iipr</dir>
+    <dir>Include/imeas</dir>
+    <dir>Include/imm</dir>
+    <dir>Include/iproc</dir>
+    <dir>Include/iprocgui</dir>
+    <dir>Include/iprop</dir>
+    <dir>Include/iqtauth</dir>
+    <dir>Include/iqtcam</dir>
+    <dir>Include/iqtex</dir>
+    <dir>Include/iqtinsp</dir>
+    <dir>Include/iqtipr</dir>
+    <dir>Include/iqtmeas</dir>
+    <dir>Include/iqtmm</dir>
+    <dir>Include/iqtsig</dir>
+    <dir>Include/isig</dir>
+    <dir>Include/iweb</dir>
+    <dir>Include/iwiz</dir>
+    <dir>Include/iwizgui</dir>
+    <file>AcfSln.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iproc</name>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
+    <filename>dir_35b63edebbc85fd32ca1956302d75540.html</filename>
+    <file>CCascadedProcessorComp.h</file>
+    <file>CIterativeProcessorComp.h</file>
+    <file>CModelBasedProcessingTriggerComp.h</file>
+    <file>CSupplierCompBase.h</file>
+    <file>IElapsedTimeProvider.h</file>
+    <file>iproc.h</file>
+    <file>IProcessor.h</file>
+    <file>IStateController.h</file>
+    <file>ISupplier.h</file>
+    <file>TFileCachedProducerCompBase.h</file>
+    <file>TILockedProducer.h</file>
+    <file>TMemCachedProducerComp.h</file>
+    <file>TMorphLockedProducerBase.h</file>
+    <file>TSupplierCompWrap.h</file>
+    <file>TSyncProcessorCompBase.h</file>
+    <file>TSyncProcessorWrap.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iprocgui</name>
+    <path>C:/Temp/AcfSln/Include/iprocgui/</path>
+    <filename>dir_4ef4624ab837c0b70234531fc34525bd.html</filename>
+    <file>CDocumentProcessingCommandComp.h</file>
+    <file>CDocumentProcessingManagerComp.h</file>
+    <file>CDocumentProcessingManagerCompBase.h</file>
+    <file>CProcessorCommandComp.h</file>
+    <file>CProcessorControlGuiComp.h</file>
+    <file>iprocgui.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iprop</name>
+    <path>C:/Temp/AcfSln/Include/iprop/</path>
+    <filename>dir_967b0e1d7289ab227a87d38c12b4dc8a.html</filename>
+    <file>CPropertiesEditorComp.h</file>
+    <file>CPropertiesManager.h</file>
+    <file>CPropertyBase.h</file>
+    <file>iprop.h</file>
+    <file>IPropertiesManager.h</file>
+    <file>IProperty.h</file>
+    <file>TMultiProperty.h</file>
+    <file>TObjectProperty.h</file>
+    <file>TProperty.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iqtauth</name>
+    <path>C:/Temp/AcfSln/Include/iqtauth/</path>
+    <filename>dir_44d4bb04ef3f71afb5a0346bee65d3e7.html</filename>
+    <file>CChangePasswordDialog.h</file>
+    <file>CLoginBarGuiComp.h</file>
+    <file>CUserGuiComp.h</file>
+    <file>CUserManagerDialog.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iqtcam</name>
+    <path>C:/Temp/AcfSln/Include/iqtcam/</path>
+    <filename>dir_655be44ac571be23939b7466cddddfaa.html</filename>
+    <file>CBitmapSupplierGuiComp.h</file>
+    <file>CCameraInfoGuiComp.h</file>
+    <file>CExposureParamsGuiComp.h</file>
+    <file>CFileAcquisitionComp.h</file>
+    <file>CMultiBitmapSupplierGuiComp.h</file>
+    <file>CScaleCalibrationEditorComp.h</file>
+    <file>CSnapImageGuiComp.h</file>
+    <file>iqtcam.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iqtex</name>
+    <path>C:/Temp/AcfSln/Include/iqtex/</path>
+    <filename>dir_8ef51eba0ad30b11b79d6aec9be05ac6.html</filename>
+    <file>CTcpTerminalGuiComp.h</file>
+    <file>CXslSerializerComp.h</file>
+    <file>CXslTransformationReadArchive.h</file>
+    <file>CXslTransformationWriteArchive.h</file>
+    <file>iqtex.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iqtinsp</name>
+    <path>C:/Temp/AcfSln/Include/iqtinsp/</path>
+    <filename>dir_20452451cdb86f26cfdbc571306ad63f.html</filename>
+    <file>CGeneralSupplierGuiComp.h</file>
+    <file>CInspectionTaskGuiComp.h</file>
+    <file>iqtinsp.h</file>
+    <file>TSupplierGuiCompBase.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iqtipr</name>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
+    <filename>dir_b828160de37cf0f89aaea561af4e0419.html</filename>
+    <file>CCaliperParamsGuiComp.h</file>
+    <file>CCircleFinderParamsGuiComp.h</file>
+    <file>CColorPatternComparatorGuiComp.h</file>
+    <file>CConvolution2dParamsGuiComp.h</file>
+    <file>CGeneralSearchParamsGuiComp.h</file>
+    <file>CLineProjectionSupplierGuiComp.h</file>
+    <file>CMultiLineProjectionSupplierGuiComp.h</file>
+    <file>CMultiLineSupplierGuiComp.h</file>
+    <file>CPatternTeachingControllerGuiComp.h</file>
+    <file>CProcessedBitmapView.h</file>
+    <file>CProcessedMultiBitmapView.h</file>
+    <file>CProjectionShape.h</file>
+    <file>CSearchBasedFeaturesSupplierGuiComp.h</file>
+    <file>CValueSupplierGuiComp.h</file>
+    <file>iqtipr.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iqtmeas</name>
+    <path>C:/Temp/AcfSln/Include/iqtmeas/</path>
+    <filename>dir_2668d1904daa9fc9f571e054d25b2a5f.html</filename>
+    <file>CDataSequenceSupplierResultsViewComp.h</file>
+    <file>CDataSequenceViewComp.h</file>
+    <file>CDataStatisticsGuiComp.h</file>
+    <file>CNumericParamsGuiComp.h</file>
+    <file>CNumericValueWidget.h</file>
+    <file>iqtmeas.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iqtmm</name>
+    <path>C:/Temp/AcfSln/Include/iqtmm/</path>
+    <filename>dir_6936e4e65cb8d63779b421527daf14df.html</filename>
+    <file>CFrameSeqVideoControllerComp.h</file>
+    <file>CMediaLoaderComp.h</file>
+    <file>CPlaybackControllerGuiComp.h</file>
+    <file>CSvgBitmapLoaderComp.h</file>
+    <file>CVideoPlayerGuiComp.h</file>
+    <file>iqtmm.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iqtsig</name>
+    <path>C:/Temp/AcfSln/Include/iqtsig/</path>
+    <filename>dir_c3e31566ffb39fa927630f25cb798f6f.html</filename>
+    <file>CPulseParamsGuiComp.h</file>
+    <file>CSampleAcquisitionGuiComp.h</file>
+    <file>CSampleContainerView.h</file>
+    <file>CSamplingParamsGuiComp.h</file>
+    <file>CScriptDataProcessorComp.h</file>
+    <file>CTriggerParamsGuiComp.h</file>
+    <file>iqtsig.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/isig</name>
+    <path>C:/Temp/AcfSln/Include/isig/</path>
+    <filename>dir_ae96225a580a5bd73a232be9f1c5e552.html</filename>
+    <file>CPulseParamsComp.h</file>
+    <file>CSamplingParamsComp.h</file>
+    <file>CTriggerParamsComp.h</file>
+    <file>IPulseConstraints.h</file>
+    <file>IPulseParams.h</file>
+    <file>ISamplingConstraints.h</file>
+    <file>ISamplingParams.h</file>
+    <file>isig.h</file>
+    <file>ITriggerConstraints.h</file>
+    <file>ITriggerController.h</file>
+    <file>ITriggerParams.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iweb</name>
+    <path>C:/Temp/AcfSln/Include/iweb/</path>
+    <filename>dir_3b55590aa0ae0f87f2d4ce3a62dc55c7.html</filename>
+    <file>CCgiManager.h</file>
+    <file>iweb.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iwiz</name>
+    <path>C:/Temp/AcfSln/Include/iwiz/</path>
+    <filename>dir_1ebb3448cfb747307492cb5b25ceb4c6.html</filename>
+    <file>CComposedStateControllerComp.h</file>
+    <file>CSelectionConsistencyControllerComp.h</file>
+    <file>CStateControllerCompBase.h</file>
+    <file>CWizardDocumentComp.h</file>
+    <file>IParamsManagerWizard.h</file>
+    <file>iwiz.h</file>
+    <file>IWizardNavigationController.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iwizgui</name>
+    <path>C:/Temp/AcfSln/Include/iwizgui/</path>
+    <filename>dir_b516595be2c3c1ba340fb7b397360b2d.html</filename>
+    <file>CWizardOptionsListGuiComp.h</file>
+  </compound>
+  <compound kind="page">
+    <name>index</name>
+    <title></title>
+    <filename>index</filename>
+    <docanchor file="index">Introduction</docanchor>
+    <docanchor file="index">Example</docanchor>
+    <docanchor file="index">Tutorials</docanchor>
   </compound>
 </tagfile>

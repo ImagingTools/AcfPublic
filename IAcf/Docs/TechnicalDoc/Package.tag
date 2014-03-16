@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='ISO-8859-1' standalone='yes' ?>
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
 <tagfile>
   <compound kind="file">
     <name>CServiceApplicationComp.h</name>
@@ -258,14 +258,6 @@
     <filename>izlib_8h</filename>
     <namespace>izlib</namespace>
   </compound>
-  <compound kind="class">
-    <name>TSingleModelObserverBase</name>
-    <filename>class_t_single_model_observer_base.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>TViewExtenderCompBase</name>
-    <filename>class_t_view_extender_comp_base.html</filename>
-  </compound>
   <compound kind="namespace">
     <name>iabc</name>
     <filename>namespaceiabc.html</filename>
@@ -274,7 +266,6 @@
   <compound kind="class">
     <name>iabc::CServiceApplicationComp</name>
     <filename>classiabc_1_1_c_service_application_comp.html</filename>
-    <base>QObject</base>
     <base>ilog::TLoggerCompWrap</base>
     <base>ibase::IApplication</base>
     <class kind="class">iabc::CServiceApplicationComp::CService</class>
@@ -406,12 +397,14 @@
     <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifile::IFilePersistence</base>
     <member kind="enumeration">
+      <type></type>
       <name>MessageId</name>
       <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
       <anchor>ad09059de033cc8d5eeca18f4c0306b79</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_CBIOS_ERROR</name>
       <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
       <anchor>ad09059de033cc8d5eeca18f4c0306b79a5e8cfd94201e0696c3922a69e09c1a12</anchor>
@@ -527,18 +520,21 @@
     <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;</base>
     <member kind="enumeration">
+      <type></type>
       <name>MessageId</name>
       <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
       <anchor>ad730c02b8989c060e5f1debdbbce0e74</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_CANNOT_FIND_CAMERA</name>
       <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
       <anchor>ad730c02b8989c060e5f1debdbbce0e74a0cd4b261466e4ea1fcb0ecfc5443cefd</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_CAMERA</name>
       <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
       <anchor>ad730c02b8989c060e5f1debdbbce0e74af1b7d9e878abd4917ef49c7bae523b1b</anchor>
@@ -715,18 +711,21 @@
     <base virtualness="virtual">imeas::ISampleAcquisition</base>
     <base virtualness="virtual">imm::IVideoController</base>
     <member kind="enumeration">
+      <type></type>
       <name>MessageId</name>
       <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
       <anchor>aec4a8c42ef500a7f0e557494f67616fd</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_CANNOT_OPEN</name>
       <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
       <anchor>aec4a8c42ef500a7f0e557494f67616fda3d9b23ac652c8788e877198a922d8d12</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <type>@</type>
       <name>MI_FORMAT_PROBLEM</name>
       <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
       <anchor>aec4a8c42ef500a7f0e557494f67616fdac376a6eb16842b46299048e72319fb1e</anchor>
@@ -949,43 +948,50 @@
       <anchor>aeabc3c4dd1a46490eeac9e6671e76e62</anchor>
       <arglist>(const QString *extensionPtr=NULL) const </arglist>
     </member>
-    <member kind="enumeration">
+    <member kind="enumeration" protection="protected">
+      <type></type>
       <name>FrameType</name>
       <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
       <anchor>ab98135d5291c87415f4bfd03727bb113</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
       <name>FT_ERROR</name>
       <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
       <anchor>ab98135d5291c87415f4bfd03727bb113af0e448932695ba5e7b7b81dc0b1b93c0</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
       <name>FT_END</name>
       <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
       <anchor>ab98135d5291c87415f4bfd03727bb113acc2dd7b18d9d6a02a0c0ce25cba5ea98</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
       <name>FT_AUDIO_SAMPLE</name>
       <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
       <anchor>ab98135d5291c87415f4bfd03727bb113a8f56ca8d22864c5343d53accfb76815b</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
       <name>FT_IMAGE</name>
       <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
       <anchor>ab98135d5291c87415f4bfd03727bb113a50335d24b1847f1560e407ca732fc022</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
       <name>FT_SKIPPED_AUDIO_SAMPLE</name>
       <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
       <anchor>ab98135d5291c87415f4bfd03727bb113a98a52e2fa584ff8dd900df58d2cb7dc5</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
       <name>FT_SKIPPED_IMAGE</name>
       <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
       <anchor>ab98135d5291c87415f4bfd03727bb113a68a6fed94fdcfc7b1e0e7d3165a68ede</anchor>
@@ -1052,6 +1058,7 @@
     <base virtualness="virtual">isig::ITriggerConstraints</base>
     <base virtualness="virtual">TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;</base>
     <member kind="enumeration">
+      <type></type>
       <name>MessageId</name>
       <anchorfile>classiocv_1_1_c_ocv_acquisition_comp.html</anchorfile>
       <anchor>aeccc867e45d338bbb44145d69b62e24d</anchor>
@@ -1982,6 +1989,7 @@
     <base>TDesignerGuiObserverCompBase&lt; Ui::CSurfaceViewComp, imath::ISampledFunction2d &gt;</base>
     <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="enumvalue">
+      <type>@</type>
       <name>GI_QWT3D</name>
       <anchorfile>classiqwt3d_1_1_c_surface_view_comp.html</anchorfile>
       <anchor>aeaf554c308f948855bb7911c7f31063ea207fb1c05fde188e8364c877e04ca0df</anchor>
@@ -2398,7 +2406,8 @@
       <anchor>af380eda41be2e5719dcfd848f213f8f4</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
       <name>CHUNK_SIZE</name>
       <anchorfile>classizlib_1_1_c_gz_xml_write_archive.html</anchorfile>
       <anchor>a91c18a2111f340f8df2fbec9a0691308ab4c9af7dde403e879c814c7dd6fabfab</anchor>
@@ -2415,5 +2424,123 @@
   <compound kind="namespace">
     <name>Qwt3D</name>
     <filename>namespace_qwt3_d.html</filename>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iabc</name>
+    <path>C:/Temp/Iacf/Include/iabc/</path>
+    <filename>dir_aa6f23f82e64cf71e616d3471422f959.html</filename>
+    <file>CServiceApplicationComp.h</file>
+    <file>iabc.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/icbox</name>
+    <path>C:/Temp/Iacf/Include/icbox/</path>
+    <filename>dir_2737d69eb66a4f45a39e1c8d1b2bcc09.html</filename>
+    <file>CMemoryBankSerializerComp.h</file>
+    <file>icbox.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/idc1394</name>
+    <path>C:/Temp/Iacf/Include/idc1394/</path>
+    <filename>dir_4ff46735f2d9b14cc625f958c7c6f49c.html</filename>
+    <file>CSimpleCameraComp.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/ilibav</name>
+    <path>C:/Temp/Iacf/Include/ilibav/</path>
+    <filename>dir_e511f70e8c459ad2a566a0e7856b34c5.html</filename>
+    <file>CLibAvConverter.h</file>
+    <file>CLibAvVideoDecoderComp.h</file>
+    <file>ilibav.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/inat</name>
+    <path>C:/Temp/Iacf/Include/inat/</path>
+    <filename>dir_1d5e059fa2828db014614bc8a1001335.html</filename>
+    <file>inat.h</file>
+    <file>TComPtr.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include</name>
+    <path>C:/Temp/Iacf/Include/</path>
+    <filename>dir_856524284ebe840938865dc061f982fb.html</filename>
+    <dir>Include/iabc</dir>
+    <dir>Include/icbox</dir>
+    <dir>Include/idc1394</dir>
+    <dir>Include/ilibav</dir>
+    <dir>Include/inat</dir>
+    <dir>Include/iocv</dir>
+    <dir>Include/iphonon</dir>
+    <dir>Include/iqaxmm</dir>
+    <dir>Include/iqsci</dir>
+    <dir>Include/iqwt</dir>
+    <dir>Include/iqwt3d</dir>
+    <dir>Include/iwin</dir>
+    <dir>Include/izlib</dir>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iocv</name>
+    <path>C:/Temp/Iacf/Include/iocv/</path>
+    <filename>dir_ef2d50ad1eb08c82cfa91c345faf6524.html</filename>
+    <file>COcvAcquisitionComp.h</file>
+    <file>COcvImage.h</file>
+    <file>COcvVideoControllerComp.h</file>
+    <file>iocv.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iphonon</name>
+    <path>C:/Temp/Iacf/Include/iphonon/</path>
+    <filename>dir_f52723c1dc8b5702504200984a6fa807.html</filename>
+    <file>CPhononVideoViewGuiComp.h</file>
+    <file>iphonon.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iqaxmm</name>
+    <path>C:/Temp/Iacf/Include/iqaxmm/</path>
+    <filename>dir_5bf9ccbfb76ce83c0ef90d0e634c1812.html</filename>
+    <file>CVlcVideoViewGuiComp.h</file>
+    <file>iqaxmm.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iqsci</name>
+    <path>C:/Temp/Iacf/Include/iqsci/</path>
+    <filename>dir_bb264ae4829889bdcd206d8e92fc140b.html</filename>
+    <file>CTextEditor.h</file>
+    <file>CTextEditorGuiComp.h</file>
+    <file>iqsci.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iqwt</name>
+    <path>C:/Temp/Iacf/Include/iqwt/</path>
+    <filename>dir_a02dd45ed13aa908c1f6757a6f9347cb.html</filename>
+    <file>CHistogramViewComp.h</file>
+    <file>CProgressHistoryGuiComp.h</file>
+    <file>CQwtDataSequenceViewComp.h</file>
+    <file>iqwt.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iqwt3d</name>
+    <path>C:/Temp/Iacf/Include/iqwt3d/</path>
+    <filename>dir_f5aa4777a9750c09b15a066344715fdb.html</filename>
+    <file>CSurfaceViewComp.h</file>
+    <file>iqwt3d.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iwin</name>
+    <path>C:/Temp/Iacf/Include/iwin/</path>
+    <filename>dir_2651b4372c0752e5b1e25e46db705489.html</filename>
+    <file>CPerformanceTimeStamp.h</file>
+    <file>CSystem.h</file>
+    <file>CTimeStampCacheComp.h</file>
+    <file>iwin.h</file>
+    <file>TComPtr.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/izlib</name>
+    <path>C:/Temp/Iacf/Include/izlib/</path>
+    <filename>dir_4333160135b7d0337645edbeb16890e8.html</filename>
+    <file>CGzXmlReadArchive.h</file>
+    <file>CGzXmlWriteArchive.h</file>
+    <file>izlib.h</file>
   </compound>
 </tagfile>
