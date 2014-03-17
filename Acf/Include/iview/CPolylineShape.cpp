@@ -101,8 +101,6 @@ bool CPolylineShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butt
 						if (tickerBox.IsInside(position - spLast)){
 							BeginModelChanges();
 
-							istd::CChangeNotifier notifier(polylinePtr);
-
 							if (polylinePtr->InsertNode(cpLast)){
 								m_referencePosition = cpLast - GetLogPosition(position);
 								m_referenceIndex = nodesCount;
@@ -117,8 +115,6 @@ bool CPolylineShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butt
 							istd::CIndex2d sp = GetScreenPosition(middle).ToIndex2d();
 							if (tickerBox.IsInside(position - sp)){
 								BeginModelChanges();
-
-								istd::CChangeNotifier notifier(polylinePtr);
 
 								if (polylinePtr->InsertNode(i + 1, middle)){
 									m_referencePosition = middle - GetLogPosition(position);
@@ -135,8 +131,6 @@ bool CPolylineShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butt
 							istd::CIndex2d spFirst = GetScreenPosition(cpFirst).ToIndex2d();
 							if (tickerBox.IsInside(position - spFirst)){
 								BeginModelChanges();
-
-								istd::CChangeNotifier notifier(polylinePtr);
 
 								if (polylinePtr->InsertNode(0, cpFirst)){
 									m_referencePosition = cpFirst - GetLogPosition(position);
@@ -160,8 +154,6 @@ bool CPolylineShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butt
 							istd::CIndex2d sp = GetScreenPosition(cp).ToIndex2d();
 							if (tickerBox.IsInside(position - sp)){
 								BeginModelChanges();
-
-								istd::CChangeNotifier notifier(polylinePtr);
 
 								polylinePtr->RemoveNode(i);
 
