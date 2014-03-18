@@ -33,7 +33,7 @@
 
 
 /**
-	Contains interfaces and implementations of file related components.
+	Contains interfaces and implementations of file system related components.
 */
 namespace ifile
 {

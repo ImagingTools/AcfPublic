@@ -63,12 +63,13 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_id_manip_base.html">CIdManipBase</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_index2d.html">CIndex2d</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index implementation for addressing elements in 2D-space.  <a href="classistd_1_1_c_index2d.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_random_number.html">CRandomNumber</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class for calculation of a random number.  <a href="classistd_1_1_c_random_number.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_system.html">CSystem</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of global system helpers based on QT.  <a href="classistd_1_1_c_system.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of global system helpers.  <a href="classistd_1_1_c_system.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_c_var_index.html">CVarIndex</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multidimensional index used to addressing index.  <a href="classistd_1_1_c_var_index.html#details">More...</a><br/></td></tr>
@@ -207,10 +208,11 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:aa0638fe9e87cbd6a7fcf1d639e7f8a7f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceistd.html#aa0638fe9e87cbd6a7fcf1d639e7f8a7f">RepositoryState</a> { <a class="el" href="namespaceistd.html#aa0638fe9e87cbd6a7fcf1d639e7f8a7fa67c1e81c84c57002cec5a4788238a121">RS_ORIGINAL_VERSION</a> = 3388, 
+<tr class="memitem:aa0638fe9e87cbd6a7fcf1d639e7f8a7f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceistd.html#aa0638fe9e87cbd6a7fcf1d639e7f8a7f">RepositoryState</a> { <a class="el" href="namespaceistd.html#aa0638fe9e87cbd6a7fcf1d639e7f8a7fa67c1e81c84c57002cec5a4788238a121">RS_ORIGINAL_VERSION</a> = 3392, 
 <a class="el" href="namespaceistd.html#aa0638fe9e87cbd6a7fcf1d639e7f8a7fad0bb65de1fb76cce1d5f5495641c4cda">RS_DIRTY_FLAG</a> = 0, 
 <a class="el" href="namespaceistd.html#aa0638fe9e87cbd6a7fcf1d639e7f8a7fa6f29e9b940e6f1179dfdd41a39e59741">RS_USE_VERSION</a> = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
  }</td></tr>
+<tr class="memdesc:aa0638fe9e87cbd6a7fcf1d639e7f8a7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration for reflecting the state of ACF's SVN repository.  <a href="namespaceistd.html#aa0638fe9e87cbd6a7fcf1d639e7f8a7f">More...</a><br/></td></tr>
 <tr class="separator:aa0638fe9e87cbd6a7fcf1d639e7f8a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -344,6 +346,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enumeration for reflecting the state of ACF's SVN repository. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="aa0638fe9e87cbd6a7fcf1d639e7f8a7fa67c1e81c84c57002cec5a4788238a121"></a>RS_ORIGINAL_VERSION</em>&#160;</td><td class="fielddoc">
 </td></tr>
@@ -353,7 +357,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="_acf_version_8h_source.html#l00009">9</a> of file <a class="el" href="_acf_version_8h_source.html">AcfVersion.h</a>.</p>
+<p>Definition at line <a class="el" href="_acf_version_8h_source.html#l00011">11</a> of file <a class="el" href="_acf_version_8h_source.html">AcfVersion.h</a>.</p>
 
 </div>
 </div>

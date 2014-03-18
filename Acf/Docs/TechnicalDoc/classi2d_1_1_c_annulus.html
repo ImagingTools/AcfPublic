@@ -61,7 +61,7 @@ Inheritance diagram for i2d::CAnnulus:</div>
 <area href="classi2d_1_1_c_annulus_segment.html" title="Radial segment of the annulus object. " alt="i2d::CAnnulusSegment" shape="rect" coords="0,392,282,416"/>
 <area href="classi2d_1_1_t_object2d_comp_wrap.html" alt="i2d::TObject2dCompWrap&lt; CAnnulus &gt;" shape="rect" coords="292,392,574,416"/>
 <area href="classi2d_1_1_t_object2d_comp_wrap.html" alt="i2d::TObject2dCompWrap&lt; CAnnulusSegment &gt;" shape="rect" coords="0,448,282,472"/>
-<area href="classi2d_1_1_c_annulus_comp.html" title="Implementation of a annulus as a component. " alt="i2d::CAnnulusComp" shape="rect" coords="292,448,574,472"/>
+<area href="classi2d_1_1_c_annulus_comp.html" title="Implementation of an annulus as a component. " alt="i2d::CAnnulusComp" shape="rect" coords="292,448,574,472"/>
 <area href="classi2d_1_1_c_annulus_segment_comp.html" title="Implementation of a annulus segment as a component. " alt="i2d::CAnnulusSegmentComp" shape="rect" coords="0,504,282,528"/>
 </map>
  </div></div>
@@ -107,26 +107,37 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a09e6185368adb086ab5612b8f8a954ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_annulus.html#a09e6185368adb086ab5612b8f8a954ee">CAnnulus</a> ()</td></tr>
+<tr class="memdesc:a09e6185368adb086ab5612b8f8a954ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an empty annulus object.  <a href="#a09e6185368adb086ab5612b8f8a954ee">More...</a><br/></td></tr>
 <tr class="separator:a09e6185368adb086ab5612b8f8a954ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3011c60f14817a6eadb17fdcab657e80"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_annulus.html#a3011c60f14817a6eadb17fdcab657e80">CAnnulus</a> (const <a class="el" href="classi2d_1_1_c_vector2d.html">i2d::CVector2d</a> &amp;center, double innerRadius, double outerRadius)</td></tr>
+<tr class="memdesc:a3011c60f14817a6eadb17fdcab657e80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an annulus object by the given position, inner and outer radius.  <a href="#a3011c60f14817a6eadb17fdcab657e80">More...</a><br/></td></tr>
 <tr class="separator:a3011c60f14817a6eadb17fdcab657e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b32d9e5d369870e0893033402f46a0b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_annulus.html#a7b32d9e5d369870e0893033402f46a0b">IsAnnulusValid</a> () const </td></tr>
+<tr class="memdesc:a7b32d9e5d369870e0893033402f46a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check, if the annulus is valid.  <a href="#a7b32d9e5d369870e0893033402f46a0b">More...</a><br/></td></tr>
 <tr class="separator:a7b32d9e5d369870e0893033402f46a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab83948b58649267e80a91e69312632ef"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_annulus.html#ab83948b58649267e80a91e69312632ef">GetInnerRadius</a> () const </td></tr>
+<tr class="memdesc:ab83948b58649267e80a91e69312632ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the inner radius of the annulus.  <a href="#ab83948b58649267e80a91e69312632ef">More...</a><br/></td></tr>
 <tr class="separator:ab83948b58649267e80a91e69312632ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39c070bf4668b7b43799a0425a777f87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_annulus.html#a39c070bf4668b7b43799a0425a777f87">SetInnerRadius</a> (double innerRadius)</td></tr>
+<tr class="memdesc:a39c070bf4668b7b43799a0425a777f87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the inner radius of the annulus.  <a href="#a39c070bf4668b7b43799a0425a777f87">More...</a><br/></td></tr>
 <tr class="separator:a39c070bf4668b7b43799a0425a777f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dc7c0082d84000c1bf1344ebd4fa33f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_annulus.html#a6dc7c0082d84000c1bf1344ebd4fa33f">GetOuterRadius</a> () const </td></tr>
+<tr class="memdesc:a6dc7c0082d84000c1bf1344ebd4fa33f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the outer radius of the annulus.  <a href="#a6dc7c0082d84000c1bf1344ebd4fa33f">More...</a><br/></td></tr>
 <tr class="separator:a6dc7c0082d84000c1bf1344ebd4fa33f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acea1cffebb50bf4f1e3558d8ff93dd19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_annulus.html#acea1cffebb50bf4f1e3558d8ff93dd19">SetOuterRadius</a> (double outerRadius)</td></tr>
+<tr class="memdesc:acea1cffebb50bf4f1e3558d8ff93dd19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the outer radius of the annulus.  <a href="#acea1cffebb50bf4f1e3558d8ff93dd19">More...</a><br/></td></tr>
 <tr class="separator:acea1cffebb50bf4f1e3558d8ff93dd19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b6657336f1584ead9aeb59b247af242"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_circle.html">CCircle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_annulus.html#a2b6657336f1584ead9aeb59b247af242">GetInnerCircle</a> () const </td></tr>
+<tr class="memdesc:a2b6657336f1584ead9aeb59b247af242"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the inner circle of the annulus object.  <a href="#a2b6657336f1584ead9aeb59b247af242">More...</a><br/></td></tr>
 <tr class="separator:a2b6657336f1584ead9aeb59b247af242"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abed33ca2ccca59a25d06e28e0d3a6af6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classi2d_1_1_c_circle.html">CCircle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_annulus.html#abed33ca2ccca59a25d06e28e0d3a6af6">GetOuterCircle</a> () const </td></tr>
+<tr class="memdesc:abed33ca2ccca59a25d06e28e0d3a6af6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the outer circle of the annulus object.  <a href="#abed33ca2ccca59a25d06e28e0d3a6af6">More...</a><br/></td></tr>
 <tr class="separator:abed33ca2ccca59a25d06e28e0d3a6af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4af62f6dbdaa1bb08d7a28ab7c1e20d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_annulus.html#ae4af62f6dbdaa1bb08d7a28ab7c1e20d">operator==</a> (const <a class="el" href="classi2d_1_1_c_annulus.html">CAnnulus</a> &amp;annulus) const </td></tr>
+<tr class="memdesc:ae4af62f6dbdaa1bb08d7a28ab7c1e20d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare with another annulus.  <a href="#ae4af62f6dbdaa1bb08d7a28ab7c1e20d">More...</a><br/></td></tr>
 <tr class="separator:ae4af62f6dbdaa1bb08d7a28ab7c1e20d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a396c24871c18b3c44379e0634e92e453"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_annulus.html#a396c24871c18b3c44379e0634e92e453">operator!=</a> (const <a class="el" href="classi2d_1_1_c_annulus.html">CAnnulus</a> &amp;annulus) const </td></tr>
+<tr class="memdesc:a396c24871c18b3c44379e0634e92e453"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare with another annulus.  <a href="#a396c24871c18b3c44379e0634e92e453">More...</a><br/></td></tr>
 <tr class="separator:a396c24871c18b3c44379e0634e92e453"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14075121660042631e65d078a1607349"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classi2d_1_1_c_rectangle.html">CRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classi2d_1_1_c_annulus.html#a14075121660042631e65d078a1607349">GetBoundingBox</a> () const </td></tr>
 <tr class="memdesc:a14075121660042631e65d078a1607349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get bounding box of this shape.  <a href="#a14075121660042631e65d078a1607349">More...</a><br/></td></tr>
@@ -257,6 +268,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Construct an empty annulus object. </p>
+
 </div>
 </div>
 <a class="anchor" id="a3011c60f14817a6eadb17fdcab657e80"></a>
@@ -288,6 +301,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Construct an annulus object by the given position, inner and outer radius. </p>
 
 </div>
 </div>
@@ -404,6 +419,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set the inner circle of the annulus object. </p>
+
 </div>
 </div>
 <a class="anchor" id="ab83948b58649267e80a91e69312632ef"></a>
@@ -418,6 +435,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the inner radius of the annulus. </p>
 
 </div>
 </div>
@@ -494,6 +513,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set the outer circle of the annulus object. </p>
+
 </div>
 </div>
 <a class="anchor" id="a6dc7c0082d84000c1bf1344ebd4fa33f"></a>
@@ -508,6 +529,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the outer radius of the annulus. </p>
 
 </div>
 </div>
@@ -667,6 +690,10 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Check, if the annulus is valid. </p>
+<p>An annulus is valid, if its radius range is valid. </p>
+<dl class="section see"><dt>See Also</dt><dd>TRange::IsValid() </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a396c24871c18b3c44379e0634e92e453"></a>
@@ -683,6 +710,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Compare with another annulus. </p>
+
 </div>
 </div>
 <a class="anchor" id="ae4af62f6dbdaa1bb08d7a28ab7c1e20d"></a>
@@ -698,6 +727,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Compare with another annulus. </p>
 
 </div>
 </div>
@@ -747,6 +778,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set the inner radius of the annulus. </p>
+
 </div>
 </div>
 <a class="anchor" id="acea1cffebb50bf4f1e3558d8ff93dd19"></a>
@@ -762,6 +795,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set the outer radius of the annulus. </p>
 
 </div>
 </div>
@@ -837,7 +872,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_annulus_8h_source.html#l00071">71</a> of file <a class="el" href="_c_annulus_8h_source.html">CAnnulus.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_annulus_8h_source.html#l00111">111</a> of file <a class="el" href="_c_annulus_8h_source.html">CAnnulus.h</a>.</p>
 
 </div>
 </div>

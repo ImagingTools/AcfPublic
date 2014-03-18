@@ -34,7 +34,7 @@ namespace i2d
 
 
 /**
-	This class defines an affine 2D transformation.
+	This class defines an affine 2D-transformation.
 */
 class CAffine2d
 {

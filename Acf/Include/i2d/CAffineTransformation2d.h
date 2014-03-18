@@ -34,7 +34,7 @@ namespace i2d
 
 
 /**
-	Affine transformation for 2D spaces.
+	Definition of an affine transformation for 2D-spaces.
 */
 class CAffineTransformation2d: virtual public ICalibration2d
 {

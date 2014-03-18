@@ -27,10 +27,12 @@
 namespace istd
 {
 
-
+/**
+	Enumeration for reflecting the state of ACF's SVN repository.
+*/
 enum RepositoryState
 {
-	RS_ORIGINAL_VERSION =  3388,
+	RS_ORIGINAL_VERSION =  3392,
 	RS_DIRTY_FLAG = 0,
 	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
 };

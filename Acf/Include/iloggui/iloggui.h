@@ -20,43 +20,25 @@
 ********************************************************************************/
 
 
-#ifndef imod_IModelSelection_included
-#define imod_IModelSelection_included
+#ifndef iloggui_included
+#define iloggui_included
 
 
 // ACF includes
-#include "istd/IChangeable.h"
-#include "imod/IModel.h"
-
-
-namespace imod
-{
-
+#include "iqtgui/iqtgui.h"
+#include "ilog/ilog.h"
 
 /**
-	Interface for model selection.
-	\deprecated
-
-	\ingroup ModelObserver
+	GUI specific interfaces and components for logging functionality.
+	This package use following ACF packages:
+	\li	iqtgui
+	\li	ilog
 */
-class IModelSelection: virtual public istd::IChangeable
+namespace iloggui
 {
-public:
-	/**
-		Get selected model.
-	*/
-	virtual imod::IModel* GetSelectedModel() const = 0;
-
-	/**
-		Set selected model.
-	*/
-	virtual void SetSelectedModel(imod::IModel* modelPtr) = 0;
-};
+} // namespace iloggui
 
 
-} // namespace imod
-
-
-#endif // !imod_IModelSelection_included
+#endif // !iloggui_included
 
 

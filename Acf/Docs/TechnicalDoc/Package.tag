@@ -2378,15 +2378,9 @@
     <name>ifilegui.h</name>
     <path>C:/Temp/Acf/Include/ifilegui/</path>
     <filename>ifilegui_8h</filename>
-    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
+    <includes id="iqtgui_8h" name="iqtgui.h" local="yes" imported="no">iqtgui/iqtgui.h</includes>
+    <includes id="ifile_8h" name="ifile.h" local="yes" imported="no">ifile/ifile.h</includes>
     <namespace>ifilegui</namespace>
-    <member kind="function" static="yes">
-      <type>static bool</type>
-      <name>SetStyleSheet</name>
-      <anchorfile>namespaceifilegui.html</anchorfile>
-      <anchor>a00daafd63dfaeb2d432d5464c66a1300</anchor>
-      <arglist>(StyleSheetConsumer &amp;styleSheetConsumer, const QString &amp;styleSheetFilePath)</arglist>
-    </member>
   </compound>
   <compound kind="file">
     <name>CBitmap.h</name>
@@ -2835,6 +2829,14 @@
     <namespace>iloggui</namespace>
   </compound>
   <compound kind="file">
+    <name>iloggui.h</name>
+    <path>C:/Temp/Acf/Include/iloggui/</path>
+    <filename>iloggui_8h</filename>
+    <includes id="iqtgui_8h" name="iqtgui.h" local="yes" imported="no">iqtgui/iqtgui.h</includes>
+    <includes id="ilog_8h" name="ilog.h" local="yes" imported="no">ilog/ilog.h</includes>
+    <namespace>iloggui</namespace>
+  </compound>
+  <compound kind="file">
     <name>CAkimaInterpolator.h</name>
     <path>C:/Temp/Acf/Include/imath/</path>
     <filename>_c_akima_interpolator_8h</filename>
@@ -3209,14 +3211,15 @@
     <path>C:/Temp/Acf/Include/imod/</path>
     <filename>imod_8h</filename>
     <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
+    <includes id="iser_8h" name="iser.h" local="yes" imported="no">iser/iser.h</includes>
     <namespace>imod</namespace>
   </compound>
   <compound kind="file">
     <name>IModel.h</name>
     <path>C:/Temp/Acf/Include/imod/</path>
     <filename>_i_model_8h</filename>
-    <includes id="imod_8h" name="imod.h" local="yes" imported="no">imod/imod.h</includes>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="imod_8h" name="imod.h" local="yes" imported="no">imod/imod.h</includes>
     <class kind="class">imod::IModel</class>
     <namespace>imod</namespace>
   </compound>
@@ -15222,6 +15225,20 @@
       <name>operator QSize</name>
       <anchorfile>classistd_1_1_c_index2d.html</anchorfile>
       <anchor>a2261d61157ceaa729601034bf0e75216</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator QPoint</name>
+      <anchorfile>classistd_1_1_c_index2d.html</anchorfile>
+      <anchor>afcfb4d2618f3b93e1e114ce85e17f141</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator QPointF</name>
+      <anchorfile>classistd_1_1_c_index2d.html</anchorfile>
+      <anchor>a363d71a63fa58e2cbfc9b74831f5bac5</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -29930,13 +29947,6 @@
     <class kind="class">ifilegui::CFilePreviewGuiComp</class>
     <class kind="class">ifilegui::CFileSystemExplorerGuiComp</class>
     <class kind="class">ifilegui::CFileTreeViewGuiComp</class>
-    <member kind="function" static="yes">
-      <type>static bool</type>
-      <name>SetStyleSheet</name>
-      <anchorfile>namespaceifilegui.html</anchorfile>
-      <anchor>a00daafd63dfaeb2d432d5464c66a1300</anchor>
-      <arglist>(StyleSheetConsumer &amp;styleSheetConsumer, const QString &amp;styleSheetFilePath)</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>ifilegui::CExternalOpenDocumentCommandCompBase</name>
@@ -68914,6 +68924,7 @@
     <file>CLogGuiComp.h</file>
     <file>CMessageBoxComp.h</file>
     <file>CTextLogGuiComp.h</file>
+    <file>iloggui.h</file>
   </compound>
   <compound kind="dir">
     <name>Include/imath</name>
