@@ -955,16 +955,6 @@
     <namespace>icmm</namespace>
   </compound>
   <compound kind="file">
-    <name>ICieColorValuesProvider.h</name>
-    <path>C:/Temp/Acf/Include/icmm/</path>
-    <filename>_i_cie_color_values_provider_8h</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <includes id="_c_lab_8h" name="CLab.h" local="yes" imported="no">icmm/CLab.h</includes>
-    <includes id="_c_var_color_8h" name="CVarColor.h" local="yes" imported="no">icmm/CVarColor.h</includes>
-    <class kind="class">icmm::ICieColorValuesProvider</class>
-    <namespace>icmm</namespace>
-  </compound>
-  <compound kind="file">
     <name>icmm.h</name>
     <path>C:/Temp/Acf/Include/icmm/</path>
     <filename>icmm_8h</filename>
@@ -16821,7 +16811,6 @@
     <class kind="class">icmm::CRgbToXyzTransformation</class>
     <class kind="class">icmm::CVarColor</class>
     <class kind="class">icmm::CXyzToCieLabTransformation</class>
-    <class kind="class">icmm::ICieColorValuesProvider</class>
     <class kind="class">icmm::IColorTransformation</class>
     <class kind="class">icmm::LinearGradientFunction</class>
     <class kind="class">icmm::TColorGradient</class>
@@ -19900,39 +19889,6 @@
       <anchorfile>classicmm_1_1_c_xyz_to_cie_lab_transformation.html</anchorfile>
       <anchor>af4a4b2236ef959129e9aff9f4fbbacae</anchor>
       <arglist>(const icmm::CVarColor &amp;argument) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icmm::ICieColorValuesProvider</name>
-    <filename>classicmm_1_1_i_cie_color_values_provider.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="typedef">
-      <type>QVector&lt; icmm::CLab &gt;</type>
-      <name>LabValues</name>
-      <anchorfile>classicmm_1_1_i_cie_color_values_provider.html</anchorfile>
-      <anchor>a67a6380f05223dc0de882ed359990b2a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>QVector&lt; imath::CVarVector &gt;</type>
-      <name>XyzValues</name>
-      <anchorfile>classicmm_1_1_i_cie_color_values_provider.html</anchorfile>
-      <anchor>ae1ebc84e1dad1e342d9aaa6b68426f62</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual LabValues</type>
-      <name>GetLabValues</name>
-      <anchorfile>classicmm_1_1_i_cie_color_values_provider.html</anchorfile>
-      <anchor>ae9879bae46a5b8ba3b4c236171a70df8</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual XyzValues</type>
-      <name>GetXyzValues</name>
-      <anchorfile>classicmm_1_1_i_cie_color_values_provider.html</anchorfile>
-      <anchor>afc87332f697f55121b67136ed9554696</anchor>
-      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -68729,7 +68685,6 @@
     <file>CRgbToXyzTransformation.h</file>
     <file>CVarColor.h</file>
     <file>CXyzToCieLabTransformation.h</file>
-    <file>ICieColorValuesProvider.h</file>
     <file>icmm.h</file>
     <file>IColorTransformation.h</file>
     <file>TColorGradient.h</file>
