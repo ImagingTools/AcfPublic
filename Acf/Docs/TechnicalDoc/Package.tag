@@ -7193,6 +7193,13 @@
       <anchor>a1f340e515832d48750480eefe4d7b4b4</anchor>
       <arglist>(const IChangeable &amp;object) const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
+      <anchor>a16d24f1caa10d1acd45b702c47168dc5</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>CAffine2d</type>
       <name>m_transformation</name>

@@ -39,7 +39,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p>Common interface for model objects, which can be changed.  
+<p>Common interface for data model objects, which can be changed.  
  <a href="classistd_1_1_i_changeable.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>&gt;</code></p>
@@ -138,6 +138,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aca17d0aedcec31b0ae88d233033622bc"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classistd_1_1_i_changeable.html">IChangeable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_i_changeable.html#aca17d0aedcec31b0ae88d233033622bc">CloneMe</a> (<a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=<a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af">CM_WITHOUT_REFS</a>) const </td></tr>
 <tr class="memdesc:aca17d0aedcec31b0ae88d233033622bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a copy of this object.  <a href="#aca17d0aedcec31b0ae88d233033622bc">More...</a><br/></td></tr>
 <tr class="separator:aca17d0aedcec31b0ae88d233033622bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16d24f1caa10d1acd45b702c47168dc5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_i_changeable.html#a16d24f1caa10d1acd45b702c47168dc5">ResetData</a> (<a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a> mode=<a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af">CM_WITHOUT_REFS</a>)</td></tr>
+<tr class="memdesc:a16d24f1caa10d1acd45b702c47168dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset data to its default state.  <a href="#a16d24f1caa10d1acd45b702c47168dc5">More...</a><br/></td></tr>
+<tr class="separator:a16d24f1caa10d1acd45b702c47168dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classistd_1_1_i_polymorphic"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classistd_1_1_i_polymorphic')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a></td></tr>
 <tr class="memitem:a238d6167615349bf27ebc13f8f397902 inherit pub_methods_classistd_1_1_i_polymorphic"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classistd_1_1_i_polymorphic.html#a238d6167615349bf27ebc13f8f397902">~IPolymorphic</a> ()</td></tr>
 <tr class="separator:a238d6167615349bf27ebc13f8f397902 inherit pub_methods_classistd_1_1_i_polymorphic"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,10 +155,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a2a2491de06d52ac09889c20ed72d2529"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Common interface for model objects, which can be changed. </p>
-<p>Model changes are executed in two steps: begin and end. The caller can also put some flags and additional data to the update functions, to control the update logic. </p>
+<div class="textblock"><p>Common interface for data model objects, which can be changed. </p>
+<p>Data model changes are executed in two steps: begin and end. The caller can also put some flags and additional data to the update functions, to control the update logic. </p>
 
-<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00018">18</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00019">19</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="acd46630510ac7a16b6c6e73a7db43fb9"></a>
 <div class="memitem">
@@ -185,7 +188,7 @@ Protected Member Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00021">21</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00022">22</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
 
 </div>
 </div>
@@ -220,7 +223,7 @@ Protected Member Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00082">82</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00083">83</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
 
 </div>
 </div>
@@ -254,7 +257,7 @@ Protected Member Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00050">50</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00051">51</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
 
 </div>
 </div>
@@ -297,9 +300,9 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classistd_1_1_c_change_delegator.html#ab5bd9e015ddfa3f39760e4e52b622169">istd::CChangeDelegator</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#a32992a115b93d87e64cbd956fb1938e4">istd::TUpdateManagerWrap&lt; iser::ISerializable &gt;</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#a32992a115b93d87e64cbd956fb1938e4">istd::TUpdateManagerWrap&lt; iimg::CBitmap &gt;</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#a32992a115b93d87e64cbd956fb1938e4">istd::TUpdateManagerWrap&lt; iqtgui::CGuiComponentBase::VisualStatus &gt;</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#a32992a115b93d87e64cbd956fb1938e4">istd::TUpdateManagerWrap&lt; iser::IObject &gt;</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#a32992a115b93d87e64cbd956fb1938e4">istd::TUpdateManagerWrap&lt; iimg::CGeneralBitmap &gt;</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#a32992a115b93d87e64cbd956fb1938e4">istd::TUpdateManagerWrap&lt; ibase::ICommandsProvider &gt;</a>, <a class="el" href="classistd_1_1_t_change_binder.html#a1e7618a528226aac5afcda4d0d98f60f">istd::TChangeBinder&lt; IHierarchicalMessageContainer, CChangeDelegator &gt;</a>, <a class="el" href="classistd_1_1_t_change_binder.html#a1e7618a528226aac5afcda4d0d98f60f">istd::TChangeBinder&lt; ibase::IHierarchicalCommand, CChangeDelegator &gt;</a>, and <a class="el" href="classistd_1_1_t_change_binder.html#a1e7618a528226aac5afcda4d0d98f60f">istd::TChangeBinder&lt; Base, CChangeDelegator &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00164">164</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00172">172</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
 
-<p>References <a class="el" href="_i_changeable_8h_source.html#l00202">OnBeginChanges()</a>.</p>
+<p>References <a class="el" href="_i_changeable_8h_source.html#l00216">OnBeginChanges()</a>.</p>
 
 </div>
 </div>
@@ -330,7 +333,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classi2d_1_1_c_rectangle.html#a47acd20c0d15a18c4e68159b2bec777d">i2d::CRectangle</a>, <a class="el" href="classi2d_1_1_c_line2d.html#a838ff36e94875672ef45934e1914cdc8">i2d::CLine2d</a>, <a class="el" href="classi2d_1_1_c_polygon.html#acd7a8230afdef605df6e5af2b3087942">i2d::CPolygon</a>, <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a3c9948feacb694c7d267b06baf189f65">i2d::CAffineTransformation2d</a>, <a class="el" href="classi2d_1_1_c_annulus.html#ac5eef045f364f087eedd7236f54034cb">i2d::CAnnulus</a>, <a class="el" href="classi2d_1_1_c_circle.html#abc57f7333051577a82fbe51aba4acd82">i2d::CCircle</a>, <a class="el" href="classi2d_1_1_c_spline_segment.html#a0ddb620da9b2139299568e0a49730a6b">i2d::CSplineSegment</a>, <a class="el" href="classi2d_1_1_c_calibration2d_proxy_comp.html#a288ae9c5a1b5edc8a845bf56b4cae325">i2d::CCalibration2dProxyComp</a>, <a class="el" href="classiimg_1_1_c_bitmap.html#a91a94521afcd443d1fafab6fcc7c7a02">iimg::CBitmap</a>, <a class="el" href="classi2d_1_1_c_quadrangle.html#adea52bba69fa9c5ea3e76a049e980ce5">i2d::CQuadrangle</a>, <a class="el" href="classilog_1_1_c_message.html#a805ee7a0049df207360ad4eefa2e877c">ilog::CMessage</a>, <a class="el" href="classi2d_1_1_c_parallelogram.html#a1675026761ed80a2fbaab5f757e8b5b3">i2d::CParallelogram</a>, <a class="el" href="classi2d_1_1_c_polypoint.html#abe756bd10ce843d244c44c1b28ff0e67">i2d::CPolypoint</a>, <a class="el" href="classi2d_1_1_c_polyline.html#a7857fdab9bc3805daaee664939a8b3b8">i2d::CPolyline</a>, <a class="el" href="classi2d_1_1_c_position2d.html#a6bd001f163d333a7d3d0bfa7eac5d3ee">i2d::CPosition2d</a>, <a class="el" href="classi2d_1_1_c_label.html#a5d359f71f7b3568b5996fc298e14bbb8">i2d::CLabel</a>, <a class="el" href="classi2d_1_1_c_spline.html#aff4d063109249f9c98e64b481a40375c">i2d::CSpline</a>, <a class="el" href="classi2d_1_1_c_annulus_segment.html#a0b1bd8b0b43711e837f2edc50b4f82ab">i2d::CAnnulusSegment</a>, <a class="el" href="classiimg_1_1_c_general_bitmap.html#a569fc8271b73c9581c1f8b1ed2f9bc2e">iimg::CGeneralBitmap</a>, <a class="el" href="classilog_1_1_t_ext_message.html#a572fe6c36d40c0705a5078603936f2a3">ilog::TExtMessage&lt; Element &gt;</a>, <a class="el" href="classi2d_1_1_c_oriented_circle.html#a626e6add9aacef287e7ee61eca76cbde">i2d::COrientedCircle</a>, <a class="el" href="classimod_1_1_t_model_wrap.html#a13b4683118869c290d1545f18b6197f0">imod::TModelWrap&lt; iimg::CBitmap &gt;</a>, <a class="el" href="classimod_1_1_t_model_wrap.html#a13b4683118869c290d1545f18b6197f0">imod::TModelWrap&lt; iqtgui::CGuiComponentBase::VisualStatus &gt;</a>, <a class="el" href="classimod_1_1_t_model_wrap.html#a13b4683118869c290d1545f18b6197f0">imod::TModelWrap&lt; ibase::ICommandsProvider &gt;</a>, and <a class="el" href="classiimg_1_1_t_multi_page_bitmap.html#a581ec3746b7cdf8594492eda81e3d763">iimg::TMultiPageBitmap&lt; BitmapImpl &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00194">194</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00202">202</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
 
 <p>References <a class="el" href="istd_8h_source.html#l00061">NULL</a>.</p>
 
@@ -369,11 +372,11 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Copy this object from another one. </p>
-<p>Default implementation in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for model objects, which can be changed. ">istd::IChangeable</a> do nothing. </p>
+<p>Default implementation in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for data model objects, which can be changed. ">istd::IChangeable</a> does nothing. </p>
 
 <p>Reimplemented in <a class="el" href="classi2d_1_1_c_affine_transformation2d.html#a60acaed5eecce2e4ec38ee1d81b4bdd8">i2d::CAffineTransformation2d</a>, <a class="el" href="classilog_1_1_c_message_container.html#a05d8995c947602a97f7c5f54c9abd32d">ilog::CMessageContainer</a>, <a class="el" href="classiimg_1_1_c_bitmap.html#a88de0962374314b86b1dc0a2933aaf71">iimg::CBitmap</a>, <a class="el" href="classilog_1_1_c_message.html#a76afdc8bbbab808ef216559367deea3f">ilog::CMessage</a>, <a class="el" href="classidoc_1_1_t_multi_page_document_wrap.html#a36e186bc048adedac51c48788a6f0bce">idoc::TMultiPageDocumentWrap&lt; Base &gt;</a>, <a class="el" href="classiser_1_1_c_reader_version_info.html#a75589f441c950aba0819bf70394a1def">iser::CReaderVersionInfo</a>, <a class="el" href="classi2d_1_1_c_object2d_base.html#a6c871718d770f05d6d67177967f621ff">i2d::CObject2dBase</a>, <a class="el" href="classiimg_1_1_c_general_bitmap.html#ade736643c98955ef44175848afb407f0">iimg::CGeneralBitmap</a>, <a class="el" href="classilog_1_1_t_ext_message.html#acc73fdc45c895338bcd47afe99464ff4">ilog::TExtMessage&lt; Element &gt;</a>, <a class="el" href="classiser_1_1_t_copy_serialized_wrap.html#aa367df7912c41ac6e13b1a1b53b4bc2a">iser::TCopySerializedWrap&lt; iimg::CBitmap &gt;</a>, <a class="el" href="classiser_1_1_t_copy_serialized_wrap.html#aa367df7912c41ac6e13b1a1b53b4bc2a">iser::TCopySerializedWrap&lt; iqtgui::CGuiComponentBase::VisualStatus &gt;</a>, <a class="el" href="classiser_1_1_t_copy_serialized_wrap.html#aa367df7912c41ac6e13b1a1b53b4bc2a">iser::TCopySerializedWrap&lt; iser::IObject &gt;</a>, and <a class="el" href="classiser_1_1_t_copy_serialized_wrap.html#aa367df7912c41ac6e13b1a1b53b4bc2a">iser::TCopySerializedWrap&lt; ibase::ICommandsProvider &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00182">182</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00190">190</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_t_multi_page_document_wrap_8h_source.html#l00234">idoc::TMultiPageDocumentWrap&lt; Base &gt;::CopyFrom()</a>.</p>
 
@@ -417,9 +420,9 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classistd_1_1_c_change_delegator.html#ab62c01f17c5c13b3f3b482bb16b181a9">istd::CChangeDelegator</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#a0fa0301895011cbad08b00cee882e7bb">istd::TUpdateManagerWrap&lt; iser::ISerializable &gt;</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#a0fa0301895011cbad08b00cee882e7bb">istd::TUpdateManagerWrap&lt; iimg::CBitmap &gt;</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#a0fa0301895011cbad08b00cee882e7bb">istd::TUpdateManagerWrap&lt; iqtgui::CGuiComponentBase::VisualStatus &gt;</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#a0fa0301895011cbad08b00cee882e7bb">istd::TUpdateManagerWrap&lt; iser::IObject &gt;</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#a0fa0301895011cbad08b00cee882e7bb">istd::TUpdateManagerWrap&lt; iimg::CGeneralBitmap &gt;</a>, <a class="el" href="classistd_1_1_t_update_manager_wrap.html#a0fa0301895011cbad08b00cee882e7bb">istd::TUpdateManagerWrap&lt; ibase::ICommandsProvider &gt;</a>, <a class="el" href="classistd_1_1_t_change_binder.html#a1872440622c281fff3753320519ca873">istd::TChangeBinder&lt; IHierarchicalMessageContainer, CChangeDelegator &gt;</a>, <a class="el" href="classistd_1_1_t_change_binder.html#a1872440622c281fff3753320519ca873">istd::TChangeBinder&lt; ibase::IHierarchicalCommand, CChangeDelegator &gt;</a>, and <a class="el" href="classistd_1_1_t_change_binder.html#a1872440622c281fff3753320519ca873">istd::TChangeBinder&lt; Base, CChangeDelegator &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00170">170</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00178">178</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
 
-<p>References <a class="el" href="_i_changeable_8h_source.html#l00207">OnEndChanges()</a>.</p>
+<p>References <a class="el" href="_i_changeable_8h_source.html#l00221">OnEndChanges()</a>.</p>
 
 </div>
 </div>
@@ -449,9 +452,9 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classi2d_1_1_c_rectangle.html#af23062c4fe5ecf27807a8245475f9346">i2d::CRectangle</a>, <a class="el" href="classi2d_1_1_c_line2d.html#aea6c8b8bb641970802eaa89b411a0aaa">i2d::CLine2d</a>, <a class="el" href="classi2d_1_1_c_polygon.html#ab2e6665ff802d40b6817ee549c43bcf2">i2d::CPolygon</a>, <a class="el" href="classi2d_1_1_c_annulus.html#af257e630f78a9106f9897a83c302bfe1">i2d::CAnnulus</a>, <a class="el" href="classi2d_1_1_c_circle.html#a7d1b521356a76871f7de96a2c15ca119">i2d::CCircle</a>, <a class="el" href="classi2d_1_1_c_spline_segment.html#a03ec87e00f08cd51ba0bcc3272435165">i2d::CSplineSegment</a>, <a class="el" href="classiimg_1_1_c_bitmap.html#a3d9e82b028b10761c4686f974b4ba61d">iimg::CBitmap</a>, <a class="el" href="classi2d_1_1_c_quadrangle.html#a87d55a1c7acbed3b3ba8812e4f7745ca">i2d::CQuadrangle</a>, <a class="el" href="classi2d_1_1_c_parallelogram.html#ae53461a7455838ce31845f2f1c1b3d84">i2d::CParallelogram</a>, <a class="el" href="classi2d_1_1_c_polypoint.html#add29cacdf51401c27d444511753efac0">i2d::CPolypoint</a>, <a class="el" href="classi2d_1_1_c_polyline.html#a99b3a4ca1ce41057e822aa6094e9e96e">i2d::CPolyline</a>, <a class="el" href="classi2d_1_1_c_position2d.html#a92f14c245c32228d6c124d97c216974d">i2d::CPosition2d</a>, <a class="el" href="classi2d_1_1_c_label.html#a88bbc4e2f20eed021041a2c42f1d8ef1">i2d::CLabel</a>, <a class="el" href="classi2d_1_1_c_spline.html#a3d965097a12e35cb0dfd437126970136">i2d::CSpline</a>, <a class="el" href="classi2d_1_1_c_annulus_segment.html#a072d67b4d6db058f3d7c5364951db4af">i2d::CAnnulusSegment</a>, <a class="el" href="classiimg_1_1_c_general_bitmap.html#ad51b27c6848f363b8d84053bae680d71">iimg::CGeneralBitmap</a>, <a class="el" href="classi2d_1_1_c_oriented_circle.html#a52f6b6a9b9c028ba402b153e873a4a66">i2d::COrientedCircle</a>, <a class="el" href="classimod_1_1_t_model_wrap.html#ad966302f81af1f39e6fba986afff28bd">imod::TModelWrap&lt; iimg::CBitmap &gt;</a>, <a class="el" href="classimod_1_1_t_model_wrap.html#ad966302f81af1f39e6fba986afff28bd">imod::TModelWrap&lt; iqtgui::CGuiComponentBase::VisualStatus &gt;</a>, and <a class="el" href="classimod_1_1_t_model_wrap.html#ad966302f81af1f39e6fba986afff28bd">imod::TModelWrap&lt; ibase::ICommandsProvider &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00176">176</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00184">184</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
 
-<p>References <a class="el" href="_i_changeable_8h_source.html#l00055">SO_NONE</a>.</p>
+<p>References <a class="el" href="_i_changeable_8h_source.html#l00056">SO_NONE</a>.</p>
 
 </div>
 </div>
@@ -488,7 +491,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classi2d_1_1_c_position2d.html#ac954efb4f64c9cceef747c97fc7f82af">i2d::CPosition2d</a>, <a class="el" href="classiser_1_1_t_copy_serialized_wrap.html#af3d40308b3497f10d37d531ca9a509f2">iser::TCopySerializedWrap&lt; iimg::CBitmap &gt;</a>, <a class="el" href="classiser_1_1_t_copy_serialized_wrap.html#af3d40308b3497f10d37d531ca9a509f2">iser::TCopySerializedWrap&lt; iqtgui::CGuiComponentBase::VisualStatus &gt;</a>, <a class="el" href="classiser_1_1_t_copy_serialized_wrap.html#af3d40308b3497f10d37d531ca9a509f2">iser::TCopySerializedWrap&lt; iser::IObject &gt;</a>, and <a class="el" href="classiser_1_1_t_copy_serialized_wrap.html#af3d40308b3497f10d37d531ca9a509f2">iser::TCopySerializedWrap&lt; ibase::ICommandsProvider &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00188">188</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00196">196</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
 
 </div>
 </div>
@@ -529,9 +532,9 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classimod_1_1_t_model_wrap.html#ab0a814285ae59f414c9877b42f862586">imod::TModelWrap&lt; iimg::CBitmap &gt;</a>, <a class="el" href="classimod_1_1_t_model_wrap.html#ab0a814285ae59f414c9877b42f862586">imod::TModelWrap&lt; iqtgui::CGuiComponentBase::VisualStatus &gt;</a>, and <a class="el" href="classimod_1_1_t_model_wrap.html#ab0a814285ae59f414c9877b42f862586">imod::TModelWrap&lt; ibase::ICommandsProvider &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00202">202</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00216">216</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_i_changeable_8h_source.html#l00164">BeginChanges()</a>.</p>
+<p>Referenced by <a class="el" href="_i_changeable_8h_source.html#l00172">BeginChanges()</a>.</p>
 
 </div>
 </div>
@@ -571,9 +574,39 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html#a4f0ad658f66df2426edac723df87e9ab">iqtdoc::CMultiDocumentWorkspaceGuiComp</a>, <a class="el" href="classiqtdoc_1_1_c_single_document_workspace_gui_comp.html#a2b4d958077fa93a481d34b7967d123c2">iqtdoc::CSingleDocumentWorkspaceGuiComp</a>, <a class="el" href="classibase_1_1_c_delegated_progress_manager.html#ae51cbd932a049004406056b13ab2cc82">ibase::CDelegatedProgressManager</a>, <a class="el" href="classiqtgui_1_1_c_progress_manager_gui_comp.html#aa418c6e00a574e88439b5ea57ef647aa">iqtgui::CProgressManagerGuiComp</a>, <a class="el" href="classistd_1_1_t_cached_update_manager_wrap.html#a9b9685633ade684d6da181677f1d2a66">istd::TCachedUpdateManagerWrap&lt; iser::ISerializable &gt;</a>, <a class="el" href="classistd_1_1_t_cached_update_manager_wrap.html#a9b9685633ade684d6da181677f1d2a66">istd::TCachedUpdateManagerWrap&lt; iimg::CGeneralBitmap &gt;</a>, <a class="el" href="classimod_1_1_t_model_wrap.html#a734c5e8a960de41c38971c56dbf47cfa">imod::TModelWrap&lt; iimg::CBitmap &gt;</a>, <a class="el" href="classimod_1_1_t_model_wrap.html#a734c5e8a960de41c38971c56dbf47cfa">imod::TModelWrap&lt; iqtgui::CGuiComponentBase::VisualStatus &gt;</a>, <a class="el" href="classimod_1_1_t_model_wrap.html#a734c5e8a960de41c38971c56dbf47cfa">imod::TModelWrap&lt; ibase::ICommandsProvider &gt;</a>, and <a class="el" href="classiimg_1_1_c_bitmap_surface.html#a458a6acb54491d46ec29926570430502">iimg::CBitmapSurface</a>.</p>
 
-<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00207">207</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
+<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00221">221</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_i_changeable_8h_source.html#l00170">EndChanges()</a>.</p>
+<p>Referenced by <a class="el" href="_i_changeable_8h_source.html#l00178">EndChanges()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a16d24f1caa10d1acd45b702c47168dc5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool istd::IChangeable::ResetData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495de">CompatibilityMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code><a class="el" href="classistd_1_1_i_changeable.html#a4e78e759485a497c072bd70566f495dea360315f3f10738b9debae463434bc1af">CM_WITHOUT_REFS</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset data to its default state. </p>
+<p>Default implementation in <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for data model objects, which can be changed. ">istd::IChangeable</a> does nothing. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the operation was successful, and <code>false</code> otherwise. </dd></dl>
+
+<p>Definition at line <a class="el" href="_i_changeable_8h_source.html#l00208">208</a> of file <a class="el" href="_i_changeable_8h_source.html">IChangeable.h</a>.</p>
 
 </div>
 </div>
