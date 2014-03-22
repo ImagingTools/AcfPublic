@@ -34,11 +34,11 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classiqt_1_1_c_settings_write_archive-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">iqt::CSettingsWriteArchive Class Reference</div>  </div>
+<div class="title">iqt::CSettingsWriteArchive Class Reference<div class="ingroups"><a class="el" href="group___persistence.html">Persistence concept.</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Archive class for serialization based on QSettings implementation.  
+<p>Write archive implementation for serialization based on QSettings.  
  <a href="classiqt_1_1_c_settings_write_archive.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_c_settings_write_archive_8h_source.html">CSettingsWriteArchive.h</a>&gt;</code></p>
@@ -49,7 +49,7 @@ Inheritance diagram for iqt::CSettingsWriteArchive:</div>
   <img src="classiqt_1_1_c_settings_write_archive.png" usemap="#iqt::CSettingsWriteArchive_map" alt=""/>
   <map id="iqt::CSettingsWriteArchive_map" name="iqt::CSettingsWriteArchive_map">
 <area href="classiser_1_1_c_text_write_archive_base.html" title="Common archive implementation of text-based storing archives. " alt="iser::CTextWriteArchiveBase" shape="rect" coords="91,224,264,248"/>
-<area href="classiqt_1_1_c_settings_archive_base.html" alt="iqt::CSettingsArchiveBase" shape="rect" coords="274,224,447,248"/>
+<area href="classiqt_1_1_c_settings_archive_base.html" title="Basic implementation for an archive used Qt settings implementation as persistence medium..." alt="iqt::CSettingsArchiveBase" shape="rect" coords="274,224,447,248"/>
 <area href="classiser_1_1_c_write_archive_base.html" title="Basic implementation of an abstract archive for data writting. " alt="iser::CWriteArchiveBase" shape="rect" coords="91,168,264,192"/>
 <area href="classiser_1_1_c_archive_base.html" title="Base implementation of iser::IArchive interface. " alt="iser::CArchiveBase" shape="rect" coords="91,112,264,136"/>
 <area href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive. " alt="iser::IArchive" shape="rect" coords="0,56,173,80"/>
@@ -75,6 +75,7 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac68aa2e89eec010c998228b010cfc067"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_write_archive.html#ac68aa2e89eec010c998228b010cfc067">CSettingsWriteArchive</a> (const QString &amp;organizationName, const QString &amp;applicationName, const QString &amp;rootKey, QSettings::Scope settingsScope=QSettings::UserScope, const <a class="el" href="classiser_1_1_i_version_info.html">iser::IVersionInfo</a> *versionInfoPtr=<a class="el" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr class="memdesc:ac68aa2e89eec010c998228b010cfc067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ac68aa2e89eec010c998228b010cfc067">More...</a><br/></td></tr>
 <tr class="separator:ac68aa2e89eec010c998228b010cfc067"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc5a62b39684185e1e5d3ce928abddaf"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_write_archive.html#abc5a62b39684185e1e5d3ce928abddaf">BeginTag</a> (const <a class="el" href="classiser_1_1_c_archive_tag.html">iser::CArchiveTag</a> &amp;tag)</td></tr>
 <tr class="memdesc:abc5a62b39684185e1e5d3ce928abddaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin of archive tag.  <a href="#abc5a62b39684185e1e5d3ce928abddaf">More...</a><br/></td></tr>
@@ -150,6 +151,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a238d6167615349bf27ebc13f8f397902 inherit pub_methods_classistd_1_1_i_polymorphic"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classiqt_1_1_c_settings_archive_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classiqt_1_1_c_settings_archive_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classiqt_1_1_c_settings_archive_base.html">iqt::CSettingsArchiveBase</a></td></tr>
 <tr class="memitem:a98b0203cbdbdd111ba5a92c4289d938d inherit pub_methods_classiqt_1_1_c_settings_archive_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_archive_base.html#a98b0203cbdbdd111ba5a92c4289d938d">CSettingsArchiveBase</a> (const QString &amp;organizationName, const QString &amp;applicationName, const QString &amp;rootKey, QSettings::Scope settingsScope=QSettings::UserScope)</td></tr>
+<tr class="memdesc:a98b0203cbdbdd111ba5a92c4289d938d inherit pub_methods_classiqt_1_1_c_settings_archive_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a98b0203cbdbdd111ba5a92c4289d938d">More...</a><br/></td></tr>
 <tr class="separator:a98b0203cbdbdd111ba5a92c4289d938d inherit pub_methods_classiqt_1_1_c_settings_archive_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -209,9 +211,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:af37185cf961a49405088cd05130cbfef inherit pro_static_attribs_classiser_1_1_c_archive_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Archive class for serialization based on QSettings implementation. </p>
+<div class="textblock"><p>Write archive implementation for serialization based on QSettings. </p>
 
-<p>Definition at line <a class="el" href="_c_settings_write_archive_8h_source.html#l00017">17</a> of file <a class="el" href="_c_settings_write_archive_8h_source.html">CSettingsWriteArchive.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_settings_write_archive_8h_source.html#l00019">19</a> of file <a class="el" href="_c_settings_write_archive_8h_source.html">CSettingsWriteArchive.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a6b9d228ba2ac9b94dbd788c1acf688cf"></a>
 <div class="memitem">
@@ -223,7 +225,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_settings_write_archive_8h_source.html#l00020">20</a> of file <a class="el" href="_c_settings_write_archive_8h_source.html">CSettingsWriteArchive.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_settings_write_archive_8h_source.html#l00022">22</a> of file <a class="el" href="_c_settings_write_archive_8h_source.html">CSettingsWriteArchive.h</a>.</p>
 
 </div>
 </div>
@@ -237,7 +239,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_settings_write_archive_8h_source.html#l00021">21</a> of file <a class="el" href="_c_settings_write_archive_8h_source.html">CSettingsWriteArchive.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_settings_write_archive_8h_source.html#l00023">23</a> of file <a class="el" href="_c_settings_write_archive_8h_source.html">CSettingsWriteArchive.h</a>.</p>
 
 </div>
 </div>
@@ -283,6 +285,18 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">organizationName</td><td>Name of the organization. </td></tr>
+    <tr><td class="paramname">applicationName</td><td>Name of the application. </td></tr>
+    <tr><td class="paramname">rootKey</td><td>The root key. </td></tr>
+    <tr><td class="paramname">settingsScope</td><td>(Optional) the settings scope. </td></tr>
+    <tr><td class="paramname">versionInfoPtr</td><td>(Optional) pointer to the version information instance. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

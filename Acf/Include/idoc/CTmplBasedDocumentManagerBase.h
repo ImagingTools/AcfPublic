@@ -37,7 +37,8 @@ class IDocumentTemplate;
 
 /**
 	Base implementation of document manager.
-	This implementation base on document template concept.
+	This implementation base on the document template concept.
+	\sa IDocumentTemplate
 */
 class CTmplBasedDocumentManagerBase: virtual public idoc::IDocumentManager
 {

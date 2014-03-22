@@ -28,10 +28,7 @@ namespace iqt
 {
 
 
-CApplicationSettingsProviderComp::CApplicationSettingsProviderComp()
-{
-}
-
+// public methods
 
 // reimplemented (iqt::ISettingsProvider)
 

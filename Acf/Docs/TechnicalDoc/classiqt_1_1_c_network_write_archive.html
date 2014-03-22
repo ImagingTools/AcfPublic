@@ -34,9 +34,12 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classiqt_1_1_c_network_write_archive-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">iqt::CNetworkWriteArchive Class Reference</div>  </div>
+<div class="title">iqt::CNetworkWriteArchive Class Reference<div class="ingroups"><a class="el" href="group___persistence.html">Persistence concept.</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A write archive working over network connection.  
+ <a href="classiqt_1_1_c_network_write_archive.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_c_network_write_archive_8h_source.html">CNetworkWriteArchive.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -70,6 +73,7 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7e8e4440c646ac97bc9fb8dde6181ccc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_network_write_archive.html#a7e8e4440c646ac97bc9fb8dde6181ccc">CNetworkWriteArchive</a> (const QString &amp;hostAddress, int port, const QString &amp;userName=QString(), const QString &amp;password=QString(), const <a class="el" href="classiser_1_1_i_version_info.html">iser::IVersionInfo</a> *versionInfoPtr=<a class="el" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, bool serializeHeader=true)</td></tr>
+<tr class="memdesc:a7e8e4440c646ac97bc9fb8dde6181ccc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a7e8e4440c646ac97bc9fb8dde6181ccc">More...</a><br/></td></tr>
 <tr class="separator:a7e8e4440c646ac97bc9fb8dde6181ccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a664dde32d22b76014151a212f0c65718"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_network_write_archive.html#a664dde32d22b76014151a212f0c65718">~CNetworkWriteArchive</a> ()</td></tr>
 <tr class="separator:a664dde32d22b76014151a212f0c65718"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,8 +207,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:af37185cf961a49405088cd05130cbfef inherit pro_static_attribs_classiser_1_1_c_archive_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_c_network_write_archive_8h_source.html#l00020">20</a> of file <a class="el" href="_c_network_write_archive_8h_source.html">CNetworkWriteArchive.h</a>.</p>
+<div class="textblock"><p>A write archive working over network connection. </p>
+
+<p>Definition at line <a class="el" href="_c_network_write_archive_8h_source.html#l00024">24</a> of file <a class="el" href="_c_network_write_archive_8h_source.html">CNetworkWriteArchive.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a3792260e95e56f4436b6143686be1281"></a>
 <div class="memitem">
@@ -216,7 +221,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_network_write_archive_8h_source.html#l00027">27</a> of file <a class="el" href="_c_network_write_archive_8h_source.html">CNetworkWriteArchive.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_network_write_archive_8h_source.html#l00031">31</a> of file <a class="el" href="_c_network_write_archive_8h_source.html">CNetworkWriteArchive.h</a>.</p>
 
 </div>
 </div>
@@ -268,6 +273,19 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hostAddress</td><td>The host address. </td></tr>
+    <tr><td class="paramname">port</td><td>The used communication port. </td></tr>
+    <tr><td class="paramname">userName</td><td>(Optional) name of the user. </td></tr>
+    <tr><td class="paramname">password</td><td>(Optional) the password. </td></tr>
+    <tr><td class="paramname">versionInfoPtr</td><td>(Optional) pointer to the version information instance. </td></tr>
+    <tr><td class="paramname">serializeHeader</td><td>(Optional) true to serialize the archive's header. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

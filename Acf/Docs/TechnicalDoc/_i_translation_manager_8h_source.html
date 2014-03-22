@@ -45,35 +45,34 @@
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>iqt</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classiqt_1_1_i_translation_manager.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classiqt_1_1_i_translation_manager.html">ITranslationManager</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;       <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqt_1_1_i_translation_manager.html#a498ebb8cfaf7473f1adc14fa06602a2a">GetLanguagesCount</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;       <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqt_1_1_i_translation_manager.html#a253a71ab19a57ec78225aeb07b4cbdf6">GetCurrentLanguageIndex</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;       <span class="keyword">virtual</span> <span class="keyword">const</span> QTranslator* <a class="code" href="classiqt_1_1_i_translation_manager.html#a858f4aebe6c49894adb7b5c44b7fad68">GetLanguageTranslator</a>(<span class="keywordtype">int</span> languageIndex) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;       <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiqt_1_1_i_translation_manager.html">ITranslationManager</a>* <a class="code" href="classiqt_1_1_i_translation_manager.html#a4d6a1a11b7866f06f20f40edf21086d6">GetSlaveTranslationManager</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt_1_1_i_translation_manager.html#add6d42b1f13e3be1614be0c66db4da9f">SwitchLanguage</a>(<span class="keywordtype">int</span> languageIndex) = 0;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt_1_1_i_translation_manager.html#a57b9ec2f907adde61d09c840a8e6543b">SetSystemLanguage</a>() = 0;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;} <span class="comment">// namespace iqt</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classiqt_1_1_i_translation_manager.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classiqt_1_1_i_translation_manager.html">ITranslationManager</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;       <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqt_1_1_i_translation_manager.html#a498ebb8cfaf7473f1adc14fa06602a2a">GetLanguagesCount</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;       <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiqt_1_1_i_translation_manager.html#a253a71ab19a57ec78225aeb07b4cbdf6">GetCurrentLanguageIndex</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;       <span class="keyword">virtual</span> <span class="keyword">const</span> QTranslator* <a class="code" href="classiqt_1_1_i_translation_manager.html#a858f4aebe6c49894adb7b5c44b7fad68">GetLanguageTranslator</a>(<span class="keywordtype">int</span> languageIndex) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;       <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classiqt_1_1_i_translation_manager.html">ITranslationManager</a>* <a class="code" href="classiqt_1_1_i_translation_manager.html#a4d6a1a11b7866f06f20f40edf21086d6">GetSlaveTranslationManager</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt_1_1_i_translation_manager.html#add6d42b1f13e3be1614be0c66db4da9f">SwitchLanguage</a>(<span class="keywordtype">int</span> languageIndex) = 0;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiqt_1_1_i_translation_manager.html#a57b9ec2f907adde61d09c840a8e6543b">SetSystemLanguage</a>() = 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif // !iqt_ITranslationManager_included</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;} <span class="comment">// namespace iqt</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif // !iqt_ITranslationManager_included</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
 <div class="ttc" id="classiqt_1_1_i_translation_manager_html_a498ebb8cfaf7473f1adc14fa06602a2a"><div class="ttname"><a href="classiqt_1_1_i_translation_manager.html#a498ebb8cfaf7473f1adc14fa06602a2a">iqt::ITranslationManager::GetLanguagesCount</a></div><div class="ttdeci">virtual int GetLanguagesCount() const =0</div><div class="ttdoc">Get number of provided languages. </div></div>
 <div class="ttc" id="classiqt_1_1_i_translation_manager_html_a57b9ec2f907adde61d09c840a8e6543b"><div class="ttname"><a href="classiqt_1_1_i_translation_manager.html#a57b9ec2f907adde61d09c840a8e6543b">iqt::ITranslationManager::SetSystemLanguage</a></div><div class="ttdeci">virtual void SetSystemLanguage()=0</div><div class="ttdoc">Set default system&#39;s language. </div></div>
 <div class="ttc" id="classistd_1_1_i_polymorphic_html"><div class="ttname"><a href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a></div><div class="ttdoc">Base interface for all used interfaces and implementations. </div><div class="ttdef"><b>Definition:</b> <a href="_i_polymorphic_8h_source.html#l00018">IPolymorphic.h:18</a></div></div>
 <div class="ttc" id="_i_polymorphic_8h_html"><div class="ttname"><a href="_i_polymorphic_8h.html">IPolymorphic.h</a></div></div>
-<div class="ttc" id="classiqt_1_1_i_translation_manager_html"><div class="ttname"><a href="classiqt_1_1_i_translation_manager.html">iqt::ITranslationManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_translation_manager_8h_source.html#l00016">ITranslationManager.h:16</a></div></div>
+<div class="ttc" id="classiqt_1_1_i_translation_manager_html"><div class="ttname"><a href="classiqt_1_1_i_translation_manager.html">iqt::ITranslationManager</a></div><div class="ttdoc">Common interface for the localization manager. </div><div class="ttdef"><b>Definition:</b> <a href="_i_translation_manager_8h_source.html#l00018">ITranslationManager.h:18</a></div></div>
 <div class="ttc" id="classiqt_1_1_i_translation_manager_html_a4d6a1a11b7866f06f20f40edf21086d6"><div class="ttname"><a href="classiqt_1_1_i_translation_manager.html#a4d6a1a11b7866f06f20f40edf21086d6">iqt::ITranslationManager::GetSlaveTranslationManager</a></div><div class="ttdeci">virtual const ITranslationManager * GetSlaveTranslationManager() const =0</div><div class="ttdoc">Get slave translation manager, if set. </div></div>
 <div class="ttc" id="classiqt_1_1_i_translation_manager_html_a858f4aebe6c49894adb7b5c44b7fad68"><div class="ttname"><a href="classiqt_1_1_i_translation_manager.html#a858f4aebe6c49894adb7b5c44b7fad68">iqt::ITranslationManager::GetLanguageTranslator</a></div><div class="ttdeci">virtual const QTranslator * GetLanguageTranslator(int languageIndex) const =0</div><div class="ttdoc">Get Qt translator for a given language. </div></div>
 <div class="ttc" id="classiqt_1_1_i_translation_manager_html_a253a71ab19a57ec78225aeb07b4cbdf6"><div class="ttname"><a href="classiqt_1_1_i_translation_manager.html#a253a71ab19a57ec78225aeb07b4cbdf6">iqt::ITranslationManager::GetCurrentLanguageIndex</a></div><div class="ttdeci">virtual int GetCurrentLanguageIndex() const =0</div><div class="ttdoc">Get current language index. </div></div>

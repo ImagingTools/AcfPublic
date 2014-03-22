@@ -44,7 +44,6 @@
 
 #include "idoc/CSingleDocumentTemplateComp.h"
 #include "idoc/CCompositeDocumentTemplateComp.h"
-#include "idoc/CDocumentManagerListenerComp.h"
 #include "idoc/CSelectedDocModelBinderComp.h"
 #include "idoc/CSerializedUndoManagerComp.h"
 #include "idoc/CTextFileLoaderComp.h"
@@ -53,7 +52,6 @@
 #include "ibase/CInstantiatorComp.h"
 #include "ibase/CVersionInfoComp.h"
 #include "ibase/CApplicationInfoComp.h"
-#include "ibase/CModelProxyComp.h"
 #include "ibase/CModelBinderComp.h"
 #include "ibase/CUuidComp.h"
 #include "ibase/CObjectQueueComp.h"
@@ -111,7 +109,6 @@ typedef ifile::CFileTypeInfoComp FileTypeInfo;
 typedef ibase::CInstantiatorComp Instantiator;
 typedef ibase::CVersionInfoComp VersionInfo;
 typedef ibase::CApplicationInfoComp ApplicationInfo;
-typedef ibase::CModelProxyComp ModelProxy;
 typedef ibase::CModelBinderComp ModelBinder;
 typedef icomp::TModelCompWrap<ibase::CUuidComp> Uuid;
 typedef ibase::CObjectQueueComp ObjectQueue;
@@ -131,7 +128,6 @@ typedef icomp::TModelCompWrap<iprm::CNameParamComp> NameParam;
 
 typedef idoc::CSingleDocumentTemplateComp SingleDocumentTemplate;
 typedef idoc::CCompositeDocumentTemplateComp CompositeDocumentTemplate;
-typedef icomp::TModelCompWrap<idoc::CDocumentManagerListenerComp> DocumentManagerListener;
 typedef idoc::CSelectedDocModelBinderComp SelectedDocModelBinder;
 typedef icomp::TModelCompWrap<idoc::CSerializedUndoManagerComp> SerializedUndoManager;
 typedef idoc::CTextFileLoaderComp TextFileLoader;

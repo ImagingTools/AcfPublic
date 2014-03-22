@@ -38,34 +38,32 @@
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Qt includes</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QtCore/QSettings&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// ACF includes</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_polymorphic_8h.html">istd/IPolymorphic.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// ACF includes</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_polymorphic_8h.html">istd/IPolymorphic.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="iqt_8h.html">iqt/iqt.h</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="iqt_8h.html">iqt/iqt.h</a>&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>iqt</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classiqt_1_1_i_settings_provider.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classiqt_1_1_i_settings_provider.html">ISettingsProvider</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;       <span class="keyword">virtual</span> QSettings&amp; <a class="code" href="classiqt_1_1_i_settings_provider.html#adf17d4229dcda179e8afbeb16a2ba685">GetSettings</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>iqt</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classiqt_1_1_i_settings_provider.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classiqt_1_1_i_settings_provider.html">ISettingsProvider</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;       <span class="keyword">virtual</span> QSettings&amp; <a class="code" href="classiqt_1_1_i_settings_provider.html#adf17d4229dcda179e8afbeb16a2ba685">GetSettings</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;} <span class="comment">// namespace iqt</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;} <span class="comment">// namespace iqt</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif // !iqt_ISettingsProvider_included</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="ttc" id="classiqt_1_1_i_settings_provider_html_adf17d4229dcda179e8afbeb16a2ba685"><div class="ttname"><a href="classiqt_1_1_i_settings_provider.html#adf17d4229dcda179e8afbeb16a2ba685">iqt::ISettingsProvider::GetSettings</a></div><div class="ttdeci">virtual QSettings &amp; GetSettings() const =0</div></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif // !iqt_ISettingsProvider_included</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="ttc" id="classiqt_1_1_i_settings_provider_html_adf17d4229dcda179e8afbeb16a2ba685"><div class="ttname"><a href="classiqt_1_1_i_settings_provider.html#adf17d4229dcda179e8afbeb16a2ba685">iqt::ISettingsProvider::GetSettings</a></div><div class="ttdeci">virtual QSettings &amp; GetSettings() const =0</div><div class="ttdoc">Get the instance of the Qt settings. </div></div>
 <div class="ttc" id="classistd_1_1_i_polymorphic_html"><div class="ttname"><a href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a></div><div class="ttdoc">Base interface for all used interfaces and implementations. </div><div class="ttdef"><b>Definition:</b> <a href="_i_polymorphic_8h_source.html#l00018">IPolymorphic.h:18</a></div></div>
 <div class="ttc" id="_i_polymorphic_8h_html"><div class="ttname"><a href="_i_polymorphic_8h.html">IPolymorphic.h</a></div></div>
-<div class="ttc" id="classiqt_1_1_i_settings_provider_html"><div class="ttname"><a href="classiqt_1_1_i_settings_provider.html">iqt::ISettingsProvider</a></div><div class="ttdoc">Interface for access the application settings object. </div><div class="ttdef"><b>Definition:</b> <a href="_i_settings_provider_8h_source.html#l00022">ISettingsProvider.h:22</a></div></div>
+<div class="ttc" id="classiqt_1_1_i_settings_provider_html"><div class="ttname"><a href="classiqt_1_1_i_settings_provider.html">iqt::ISettingsProvider</a></div><div class="ttdoc">Interface for access the application settings object. </div><div class="ttdef"><b>Definition:</b> <a href="_i_settings_provider_8h_source.html#l00020">ISettingsProvider.h:20</a></div></div>
 <div class="ttc" id="iqt_8h_html"><div class="ttname"><a href="iqt_8h.html">iqt.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

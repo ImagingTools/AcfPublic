@@ -76,11 +76,6 @@ I_EXPORT_COMPONENT(
 			"Application Meta Information" IM_CATEGORY(I_SERVICE) IM_TAG("Version"));
 
 I_EXPORT_COMPONENT(
-			ModelProxy,
-			"Model proxy",
-			"Proxy" IM_CATEGORY(I_DATA_MODEL) IM_TAG("Model"));
-
-I_EXPORT_COMPONENT(
 			ModelBinder,
 			"Model binder",
 			"Observer Bind Composition Connection" IM_CATEGORY(I_DATA_MODEL) IM_TAG("Model Composition"));
@@ -184,11 +179,6 @@ I_EXPORT_COMPONENT(
 			CompositeDocumentTemplate,
 			"Composite document template supporting more type of documents.It delegates document functionality to set of slave templates",
 			"Composite Template MVC" IM_CATEGORY(I_APPLICATION_LOGIC) IM_TAG("Document Composition"));
-
-I_EXPORT_COMPONENT(
-			DocumentManagerListener,
-			"Document workspace controller",
-			"Model Proxy Composite Template MVC" IM_CATEGORY(I_APPLICATION_LOGIC) IM_TAG("Document"));
 
 I_EXPORT_COMPONENT(
 			SelectedDocModelBinder,

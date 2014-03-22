@@ -38,9 +38,12 @@
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classiqt_1_1_c_settings_archive_base-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">iqt::CSettingsArchiveBase Class Reference</div>  </div>
+<div class="title">iqt::CSettingsArchiveBase Class Reference<div class="ingroups"><a class="el" href="group___persistence.html">Persistence concept.</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Basic implementation for an archive used Qt settings implementation as persistence medium.  
+ <a href="classiqt_1_1_c_settings_archive_base.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_c_settings_archive_base_8h_source.html">CSettingsArchiveBase.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -49,8 +52,8 @@ Inheritance diagram for iqt::CSettingsArchiveBase:</div>
  <div class="center">
   <img src="classiqt_1_1_c_settings_archive_base.png" usemap="#iqt::CSettingsArchiveBase_map" alt=""/>
   <map id="iqt::CSettingsArchiveBase_map" name="iqt::CSettingsArchiveBase_map">
-<area href="classiqt_1_1_c_settings_read_archive.html" alt="iqt::CSettingsReadArchive" shape="rect" coords="0,112,157,136"/>
-<area href="classiqt_1_1_c_settings_write_archive.html" title="Archive class for serialization based on QSettings implementation. " alt="iqt::CSettingsWriteArchive" shape="rect" coords="167,112,324,136"/>
+<area href="classiqt_1_1_c_settings_read_archive.html" title="The read archive used global system settings mechansim (by example Windows registry or INI file) as m..." alt="iqt::CSettingsReadArchive" shape="rect" coords="0,112,157,136"/>
+<area href="classiqt_1_1_c_settings_write_archive.html" title="Write archive implementation for serialization based on QSettings. " alt="iqt::CSettingsWriteArchive" shape="rect" coords="167,112,324,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -67,6 +70,7 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a98b0203cbdbdd111ba5a92c4289d938d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqt_1_1_c_settings_archive_base.html#a98b0203cbdbdd111ba5a92c4289d938d">CSettingsArchiveBase</a> (const QString &amp;organizationName, const QString &amp;applicationName, const QString &amp;rootKey, QSettings::Scope settingsScope=QSettings::UserScope)</td></tr>
+<tr class="memdesc:a98b0203cbdbdd111ba5a92c4289d938d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a98b0203cbdbdd111ba5a92c4289d938d">More...</a><br/></td></tr>
 <tr class="separator:a98b0203cbdbdd111ba5a92c4289d938d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
@@ -97,8 +101,9 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a29a36c4f45406bd8ef71c76ed919b70a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_c_settings_archive_base_8h_source.html#l00017">17</a> of file <a class="el" href="_c_settings_archive_base_8h_source.html">CSettingsArchiveBase.h</a>.</p>
+<div class="textblock"><p>Basic implementation for an archive used Qt settings implementation as persistence medium. </p>
+
+<p>Definition at line <a class="el" href="_c_settings_archive_base_8h_source.html#l00022">22</a> of file <a class="el" href="_c_settings_archive_base_8h_source.html">CSettingsArchiveBase.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a4a61061dd13d4d89441a64df9f9a2be5"></a>
 <div class="memitem">
@@ -110,7 +115,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_settings_archive_base_8h_source.html#l00020">20</a> of file <a class="el" href="_c_settings_archive_base_8h_source.html">CSettingsArchiveBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_settings_archive_base_8h_source.html#l00025">25</a> of file <a class="el" href="_c_settings_archive_base_8h_source.html">CSettingsArchiveBase.h</a>.</p>
 
 </div>
 </div>
@@ -132,7 +137,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_settings_archive_base_8h_source.html#l00047">47</a> of file <a class="el" href="_c_settings_archive_base_8h_source.html">CSettingsArchiveBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_settings_archive_base_8h_source.html#l00059">59</a> of file <a class="el" href="_c_settings_archive_base_8h_source.html">CSettingsArchiveBase.h</a>.</p>
 
 </div>
 </div>
@@ -172,6 +177,17 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">organizationName</td><td>Name of the organization. </td></tr>
+    <tr><td class="paramname">applicationName</td><td>Name of the application. </td></tr>
+    <tr><td class="paramname">rootKey</td><td>The root key. </td></tr>
+    <tr><td class="paramname">settingsScope</td><td>(Optional) the settings scope. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -312,7 +328,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_settings_archive_base_8h_source.html#l00048">48</a> of file <a class="el" href="_c_settings_archive_base_8h_source.html">CSettingsArchiveBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_settings_archive_base_8h_source.html#l00060">60</a> of file <a class="el" href="_c_settings_archive_base_8h_source.html">CSettingsArchiveBase.h</a>.</p>
 
 </div>
 </div>
@@ -334,7 +350,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_settings_archive_base_8h_source.html#l00050">50</a> of file <a class="el" href="_c_settings_archive_base_8h_source.html">CSettingsArchiveBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_settings_archive_base_8h_source.html#l00062">62</a> of file <a class="el" href="_c_settings_archive_base_8h_source.html">CSettingsArchiveBase.h</a>.</p>
 
 </div>
 </div>
@@ -356,7 +372,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_settings_archive_base_8h_source.html#l00052">52</a> of file <a class="el" href="_c_settings_archive_base_8h_source.html">CSettingsArchiveBase.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_settings_archive_base_8h_source.html#l00064">64</a> of file <a class="el" href="_c_settings_archive_base_8h_source.html">CSettingsArchiveBase.h</a>.</p>
 
 </div>
 </div>

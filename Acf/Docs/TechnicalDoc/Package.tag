@@ -539,17 +539,6 @@
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
-    <name>CModelProxyComp.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_c_model_proxy_comp_8h</filename>
-    <includes id="_c_model_proxy_8h" name="CModelProxy.h" local="yes" imported="no">imod/CModelProxy.h</includes>
-    <includes id="_i_model_selection_8h" name="IModelSelection.h" local="yes" imported="no">imod/IModelSelection.h</includes>
-    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <class kind="class">ibase::CModelProxyComp</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
     <name>CMultiObserverBinderComp.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_multi_observer_binder_comp_8h</filename>
@@ -1077,20 +1066,6 @@
     <includes id="_c_related_info_registrator_8h" name="CRelatedInfoRegistrator.h" local="yes" imported="no">icomp/CRelatedInfoRegistrator.h</includes>
     <class kind="class">icomp::CComponentBase</class>
     <namespace>icomp</namespace>
-    <member kind="define">
-      <type>#define</type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>_c_component_base_8h.html</anchorfile>
-      <anchor>ac4bf5ae770b4ca0f33fb13b7dcf6cb5d</anchor>
-      <arglist>(ElementName)</arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>_c_component_base_8h.html</anchorfile>
-      <anchor>ab2b90c5b1e9ccfb347bfdcac76cea2fd</anchor>
-      <arglist>(ElementName, InterfaceType, extractorFunction)</arglist>
-    </member>
     <member kind="define">
       <type>#define</type>
       <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
@@ -1798,17 +1773,6 @@
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_document_template_8h" name="IDocumentTemplate.h" local="yes" imported="no">idoc/IDocumentTemplate.h</includes>
     <class kind="class">idoc::CCompositeDocumentTemplateComp</class>
-    <namespace>idoc</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CDocumentManagerListenerComp.h</name>
-    <path>C:/Temp/Acf/Include/idoc/</path>
-    <filename>_c_document_manager_listener_comp_8h</filename>
-    <includes id="_i_model_selection_8h" name="IModelSelection.h" local="yes" imported="no">imod/IModelSelection.h</includes>
-    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="yes" imported="no">idoc/IDocumentManager.h</includes>
-    <class kind="class">idoc::CDocumentManagerListenerComp</class>
     <namespace>idoc</namespace>
   </compound>
   <compound kind="file">
@@ -3220,15 +3184,6 @@
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <includes id="imod_8h" name="imod.h" local="yes" imported="no">imod/imod.h</includes>
     <class kind="class">imod::IModelEditor</class>
-    <namespace>imod</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IModelSelection.h</name>
-    <path>C:/Temp/Acf/Include/imod/</path>
-    <filename>_i_model_selection_8h</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
-    <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
-    <class kind="class">imod::IModelSelection</class>
     <namespace>imod</namespace>
   </compound>
   <compound kind="file">
@@ -6492,7 +6447,6 @@
     <class kind="class">imod::CSingleModelObserverBase</class>
     <class kind="class">imod::IModel</class>
     <class kind="class">imod::IModelEditor</class>
-    <class kind="class">imod::IModelSelection</class>
     <class kind="class">imod::IObserver</class>
     <class kind="class">imod::TModelWrap</class>
     <class kind="class">imod::TMultiModelObserverBase</class>
@@ -6513,6 +6467,12 @@
     <class kind="class">ifile::IFilePersistence</class>
     <class kind="class">ifile::IFilePersistenceInfo</class>
     <class kind="class">ifile::IFileTypeInfo</class>
+    <class kind="class">iqt::CClipboardSerializerComp</class>
+    <class kind="class">iqt::CNetworkWriteArchive</class>
+    <class kind="class">iqt::CSettingsArchiveBase</class>
+    <class kind="class">iqt::CSettingsReadArchive</class>
+    <class kind="class">iqt::CSettingsSerializerComp</class>
+    <class kind="class">iqt::CSettingsWriteArchive</class>
     <class kind="class">iser::CArchiveTag</class>
     <class kind="class">iser::CBitMemoryReadArchive</class>
     <class kind="class">iser::CBitMemoryWriteArchive</class>
@@ -14106,7 +14066,6 @@
     <class kind="class">ibase::CDelegatedProgressManager</class>
     <class kind="class">ibase::CInstantiatorComp</class>
     <class kind="class">ibase::CModelBinderComp</class>
-    <class kind="class">ibase::CModelProxyComp</class>
     <class kind="class">ibase::CMultiObserverBinderComp</class>
     <class kind="class">ibase::CObjectQueueComp</class>
     <class kind="class">ibase::CObjectSynchronizerComp</class>
@@ -14495,103 +14454,6 @@
       <name>OnComponentDestroyed</name>
       <anchorfile>classibase_1_1_c_model_binder_comp.html</anchorfile>
       <anchor>a7fd8a40020af6cee118af440c5937b7d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::CModelProxyComp</name>
-    <filename>classibase_1_1_c_model_proxy_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>imod::CModelProxy</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_c_model_proxy_comp.html</anchorfile>
-      <anchor>aac4419463be4d1b0eb9b6165a0ed506e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>imod::CModelProxy</type>
-      <name>BaseClass2</name>
-      <anchorfile>classibase_1_1_c_model_proxy_comp.html</anchorfile>
-      <anchor>afe876a44572176704385529bceb122bd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classibase_1_1_c_model_proxy_comp.html</anchorfile>
-      <anchor>a46821550c5626ceda667bc7fd1e29eac</anchor>
-      <arglist>(m_selectionModelCompPtr, m_modelSelectionCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CModelProxyComp</name>
-      <anchorfile>classibase_1_1_c_model_proxy_comp.html</anchorfile>
-      <anchor>abdc4b34dea8e3b65f67fac540e9adbaf</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CModelProxy</name>
-      <anchorfile>classimod_1_1_c_model_proxy.html</anchorfile>
-      <anchor>aee5fa8b6205e55d3856f23c3f6e48e23</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetModelPtr</name>
-      <anchorfile>classimod_1_1_c_model_proxy.html</anchorfile>
-      <anchor>a118907cec28a381505875c6a3f6a1ff3</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>ResetModel</name>
-      <anchorfile>classimod_1_1_c_model_proxy.html</anchorfile>
-      <anchor>ab2b6101f92ba5089c577bedc7ed7fb34</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>AttachObserver</name>
-      <anchorfile>classimod_1_1_c_model_proxy.html</anchorfile>
-      <anchor>af53eca2c218ffed1fd8191e96f419202</anchor>
-      <arglist>(IObserver *observerPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>DetachObserver</name>
-      <anchorfile>classimod_1_1_c_model_proxy.html</anchorfile>
-      <anchor>a91b766842c09e073ca5a17bf8b1325cd</anchor>
-      <arglist>(IObserver *observerPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>DetachAllObservers</name>
-      <anchorfile>classimod_1_1_c_model_proxy.html</anchorfile>
-      <anchor>af2f98f5f056f3c1d711046326c1caba6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsAttached</name>
-      <anchorfile>classimod_1_1_c_model_proxy.html</anchorfile>
-      <anchor>a235287696e4ce69f2b9094004bb95681</anchor>
-      <arglist>(const IObserver *observerPtr) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classibase_1_1_c_model_proxy_comp.html</anchorfile>
-      <anchor>a551fddefbe271a97dd69697b3d4e5cfa</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classibase_1_1_c_model_proxy_comp.html</anchorfile>
-      <anchor>a41351f38c6494814937c5cdd55099e6d</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -24931,7 +24793,6 @@
     <name>idoc</name>
     <filename>namespaceidoc.html</filename>
     <class kind="class">idoc::CCompositeDocumentTemplateComp</class>
-    <class kind="class">idoc::CDocumentManagerListenerComp</class>
     <class kind="class">idoc::CMultiDocumentManagerBase</class>
     <class kind="class">idoc::CSelectedDocModelBinderComp</class>
     <class kind="class">idoc::CSerializedUndoManagerComp</class>
@@ -25107,111 +24968,6 @@
       <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
       <anchor>a229766861ac7870c3c82d750acd96a6e</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>idoc::CDocumentManagerListenerComp</name>
-    <filename>classidoc_1_1_c_document_manager_listener_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>TSingleModelObserverBase&lt; idoc::IDocumentManager &gt;</base>
-    <base virtualness="virtual">imod::IModelSelection</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classidoc_1_1_c_document_manager_listener_comp.html</anchorfile>
-      <anchor>a15203874a80cb98e282c3843a7a3d7a9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>imod::TSingleModelObserverBase&lt; idoc::IDocumentManager &gt;</type>
-      <name>BaseClass2</name>
-      <anchorfile>classidoc_1_1_c_document_manager_listener_comp.html</anchorfile>
-      <anchor>ac47461e8fe9e5ed6387ee15dceb4824d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>CSingleModelObserverBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a4183ada6ca430e22ee43b62c1e03ef5d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>idoc::IDocumentManager</type>
-      <name>ModelType</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CDocumentManagerListenerComp</name>
-      <anchorfile>classidoc_1_1_c_document_manager_listener_comp.html</anchorfile>
-      <anchor>af6a1c08453f66b9ee9c2aba7aaf3208b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual imod::IModel *</type>
-      <name>GetSelectedModel</name>
-      <anchorfile>classidoc_1_1_c_document_manager_listener_comp.html</anchorfile>
-      <anchor>a9c7f6c5b5bb273a201ff1814a0f30f0e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetSelectedModel</name>
-      <anchorfile>classidoc_1_1_c_document_manager_listener_comp.html</anchorfile>
-      <anchor>a73c6ec1c82b31d3fb545c958b005b21c</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnUpdate</name>
-      <anchorfile>classidoc_1_1_c_document_manager_listener_comp.html</anchorfile>
-      <anchor>a7586fc76333efa1bc090764850635a7f</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TSingleModelObserverBase</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>idoc::IDocumentManager *</type>
-      <name>GetObjectPtr</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>AttachOrSetObject</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
-      <arglist>(idoc::IDocumentManager *objectPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnAttached</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a1fa929d4bb7490af4db5e9c4bc4b3282</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnDetached</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a72c8c671df6a05c06e182085bb96f028</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual idoc::IDocumentManager *</type>
-      <name>CastFromModel</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
-      <arglist>(imod::IModel *modelPtr) const</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -30205,13 +29961,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
-      <anchor>a6b2579df675948f9b9f5e4d1107a22c1</anchor>
-      <arglist>(VisualStatus)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
       <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
       <anchor>ac093b764e283528e6989af17cf8d36e3</anchor>
@@ -30539,69 +30288,6 @@
       <anchor>ad334cae08d80140ad989549eb17c10ee</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
-      <anchor>a4b183810e7146350f4df5567093c2377</anchor>
-      <arglist>(CurrentFile)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
-      <anchor>a2f811c559bb2fc8d49b8e94384bfdf00</anchor>
-      <arglist>(CurrentFile, ifile::IFileNameParam, ExtractCurrentFile)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
-      <anchor>acb82fb9d0e53df12906f116b9c4df879</anchor>
-      <arglist>(CurrentFile, imod::IModel, ExtractCurrentFile)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
-      <anchor>a0f23345fc4ea3559c6c48f5e9e3175ab</anchor>
-      <arglist>(CurrentFile, istd::IChangeable, ExtractCurrentFile)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
-      <anchor>acc7091a58ec5316d324c39bd5566ab39</anchor>
-      <arglist>(CurrentFile, iser::ISerializable, ExtractCurrentFile)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>RegisterModel</name>
-      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
-      <anchor>a276d11f3ca9488e2fc47127916a20b39</anchor>
-      <arglist>(IModel *modelPtr, int modelId=0, int relevantFlags=istd::IChangeable::CF_MODEL)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>UnregisterModel</name>
-      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
-      <anchor>ae131419147b8d67ae7600f426465804b</anchor>
-      <arglist>(int modelId=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>UnregisterAllModels</name>
-      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
-      <anchor>a870c0f1ab69a56f2b01fbc136d36ce76</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Object *</type>
-      <name>GetObjectAt</name>
-      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
-      <anchor>ac95053e3935765098a79b3dcf127e968</anchor>
-      <arglist>(int modelId) const </arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
@@ -30643,6 +30329,34 @@
       <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
       <anchor>ab336987dc363f285a687e73e2dc018e4</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>RegisterModel</name>
+      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
+      <anchor>a276d11f3ca9488e2fc47127916a20b39</anchor>
+      <arglist>(IModel *modelPtr, int modelId=0, int relevantFlags=istd::IChangeable::CF_MODEL)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>UnregisterModel</name>
+      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
+      <anchor>ae131419147b8d67ae7600f426465804b</anchor>
+      <arglist>(int modelId=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>UnregisterAllModels</name>
+      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
+      <anchor>a870c0f1ab69a56f2b01fbc136d36ce76</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Object *</type>
+      <name>GetObjectAt</name>
+      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
+      <anchor>ac95053e3935765098a79b3dcf127e968</anchor>
+      <arglist>(int modelId) const </arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -38192,7 +37906,6 @@
     <class kind="class">imod::CSingleModelObserverBase</class>
     <class kind="class">imod::IModel</class>
     <class kind="class">imod::IModelEditor</class>
-    <class kind="class">imod::IModelSelection</class>
     <class kind="class">imod::IObserver</class>
     <class kind="class">imod::TModelWrap</class>
     <class kind="class">imod::TMultiModelObserverBase</class>
@@ -38207,6 +37920,55 @@
     <name>imod::CModelProxy</name>
     <filename>classimod_1_1_c_model_proxy.html</filename>
     <base virtualness="virtual">imod::IModel</base>
+    <member kind="function">
+      <type></type>
+      <name>CModelProxy</name>
+      <anchorfile>classimod_1_1_c_model_proxy.html</anchorfile>
+      <anchor>aee5fa8b6205e55d3856f23c3f6e48e23</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetModelPtr</name>
+      <anchorfile>classimod_1_1_c_model_proxy.html</anchorfile>
+      <anchor>a118907cec28a381505875c6a3f6a1ff3</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ResetModel</name>
+      <anchorfile>classimod_1_1_c_model_proxy.html</anchorfile>
+      <anchor>ab2b6101f92ba5089c577bedc7ed7fb34</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AttachObserver</name>
+      <anchorfile>classimod_1_1_c_model_proxy.html</anchorfile>
+      <anchor>af53eca2c218ffed1fd8191e96f419202</anchor>
+      <arglist>(IObserver *observerPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DetachObserver</name>
+      <anchorfile>classimod_1_1_c_model_proxy.html</anchorfile>
+      <anchor>a91b766842c09e073ca5a17bf8b1325cd</anchor>
+      <arglist>(IObserver *observerPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DetachAllObservers</name>
+      <anchorfile>classimod_1_1_c_model_proxy.html</anchorfile>
+      <anchor>af2f98f5f056f3c1d711046326c1caba6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsAttached</name>
+      <anchorfile>classimod_1_1_c_model_proxy.html</anchorfile>
+      <anchor>a235287696e4ce69f2b9094004bb95681</anchor>
+      <arglist>(const IObserver *observerPtr) const </arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>imod::CMultiModelBridgeBase</name>
@@ -38334,25 +38096,6 @@
       <anchorfile>classimod_1_1_i_model_editor.html</anchorfile>
       <anchor>ac80139ae19594687dafb5e1c2b1d4614</anchor>
       <arglist>(bool state)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>imod::IModelSelection</name>
-    <filename>classimod_1_1_i_model_selection.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual imod::IModel *</type>
-      <name>GetSelectedModel</name>
-      <anchorfile>classimod_1_1_i_model_selection.html</anchorfile>
-      <anchor>ad22c95f8f886db9d8f835cf511953a9d</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetSelectedModel</name>
-      <anchorfile>classimod_1_1_i_model_selection.html</anchorfile>
-      <anchor>a003b1b4d1e82afe4076790b3270c6af9</anchor>
-      <arglist>(imod::IModel *modelPtr)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -41288,13 +41031,6 @@
       <anchorfile>classiqt_1_1_c_application_settings_provider_comp.html</anchorfile>
       <anchor>afd275f0dad7fae011bebb10ebac4aaa2</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CApplicationSettingsProviderComp</name>
-      <anchorfile>classiqt_1_1_c_application_settings_provider_comp.html</anchorfile>
-      <anchor>a2e6af537ab9bbd58891fd2c6f3fe4c28</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QSettings &amp;</type>
@@ -45904,6 +45640,48 @@
       <anchor>aca1127338a71fa7912562977c935050a</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual idoc::IDocumentManager *</type>
+      <name>CastFromModel</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
+      <arglist>(imod::IModel *modelPtr) const</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSingleModelObserverBase</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>idoc::IDocumentManager *</type>
+      <name>GetObjectPtr</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>AttachOrSetObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
+      <arglist>(idoc::IDocumentManager *objectPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnAttached</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a1fa929d4bb7490af4db5e9c4bc4b3282</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnDetached</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a72c8c671df6a05c06e182085bb96f028</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>iqtgui::CHierarchicalCommand</type>
       <name>m_rootCommands</name>
@@ -45930,6 +45708,20 @@
       <name>m_exportCommand</name>
       <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
       <anchor>a6f614e53ace69d271bac7f714c57ba50</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSingleModelObserverBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a4183ada6ca430e22ee43b62c1e03ef5d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>idoc::IDocumentManager</type>
+      <name>ModelType</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -47048,41 +46840,6 @@
       <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
       <anchor>a71d48e5e9425438c80e0d95aa88fa782</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a26500833dd562b1e7b52a55a8df342a4</anchor>
-      <arglist>(DocumentSelection)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>acdff88af57bd5bbf8c8e25b92fc386f4</anchor>
-      <arglist>(DocumentSelection, iprm::ISelectionParam, ExtractSelectionInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>af16ab0c417f1056f6a9318a8e067cf61</anchor>
-      <arglist>(DocumentSelection, imod::IModel, ExtractSelectionInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a1a0c247b5704fa11c108103536f62adf</anchor>
-      <arglist>(DocumentSelection, istd::IChangeable, ExtractSelectionInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a10a297edbea9920181c3451a0c31ef8f</anchor>
-      <arglist>(DocumentSelection, iprm::IOptionsList, ExtractSelectionInfo)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -48297,13 +48054,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
-      <anchor>abdb6d6f8bbe1c3a1533bd0b82b4b22b0</anchor>
-      <arglist>(PageModel)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
       <anchor>a39323ee5015f377748292b4ddd548751</anchor>
@@ -48913,34 +48663,6 @@
       <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
       <anchor>a5e97d72d9f4a86ac973bb3cb0e58637b</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
-      <anchor>ad8a2d4c6c2b2320e73a43c6ceed07836</anchor>
-      <arglist>(RuntimeStatus)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
-      <anchor>a871ea02cd646880d9157d599813c2930</anchor>
-      <arglist>(RuntimeStatus, ibase::IRuntimeStatusProvider, ExtractRuntimeStatus)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
-      <anchor>a2b8db1c860b980e31e57e896e20ec030</anchor>
-      <arglist>(RuntimeStatus, imod::IModel, ExtractRuntimeStatus)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
-      <anchor>a32e5f55f912a98b560f64b93da49a8a8</anchor>
-      <arglist>(RuntimeStatus, istd::IChangeable, ExtractRuntimeStatus)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -68649,7 +68371,6 @@
     <file>CDelegatedProgressManager.h</file>
     <file>CInstantiatorComp.h</file>
     <file>CModelBinderComp.h</file>
-    <file>CModelProxyComp.h</file>
     <file>CMultiObserverBinderComp.h</file>
     <file>CObjectQueueComp.h</file>
     <file>CObjectSynchronizerComp.h</file>
@@ -68770,7 +68491,6 @@
     <path>C:/Temp/Acf/Include/idoc/</path>
     <filename>dir_d08bd8536f8e18e7586d85ced0bcc772.html</filename>
     <file>CCompositeDocumentTemplateComp.h</file>
-    <file>CDocumentManagerListenerComp.h</file>
     <file>CMultiDocumentManagerBase.h</file>
     <file>CSelectedDocModelBinderComp.h</file>
     <file>CSerializedUndoManagerComp.h</file>
@@ -68932,7 +68652,6 @@
     <file>imod.h</file>
     <file>IModel.h</file>
     <file>IModelEditor.h</file>
-    <file>IModelSelection.h</file>
     <file>IObserver.h</file>
     <file>TModelWrap.h</file>
     <file>TMultiModelObserverBase.h</file>
@@ -69325,7 +69044,8 @@
     <title></title>
     <filename>index</filename>
     <docanchor file="index">Introduction</docanchor>
-    <docanchor file="index">Example</docanchor>
+    <docanchor file="index">Basics</docanchor>
+    <docanchor file="index">Features</docanchor>
     <docanchor file="index">Tutorials</docanchor>
   </compound>
 </tagfile>

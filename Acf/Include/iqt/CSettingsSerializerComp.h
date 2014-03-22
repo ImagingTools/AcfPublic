@@ -29,12 +29,9 @@
 
 // ACF includes
 #include "ifile/IFilePersistence.h"
-
 #include "icomp/CComponentBase.h"
-
 #include "ibase/IApplicationInfo.h"
 #include "ilog/TLoggerCompWrap.h"
-
 #include "iqt/iqt.h"
 
 
@@ -44,6 +41,8 @@ namespace iqt
 
 /**
 	Store and load parameter as global settings.
+
+	\ingroup Persistence
 */
 class CSettingsSerializerComp:
 			public ilog::CLoggerComponentBase,

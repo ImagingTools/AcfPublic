@@ -50,13 +50,13 @@ Inheritance diagram for idoc::IDocumentTypesInfo:</div>
   <map id="idoc::IDocumentTypesInfo_map" name="idoc::IDocumentTypesInfo_map">
 <area href="classistd_1_1_i_polymorphic.html" title="Base interface for all used interfaces and implementations. " alt="istd::IPolymorphic" shape="rect" coords="1077,0,1929,24"/>
 <area href="classidoc_1_1_i_document_manager.html" title="Provide set of user actions needed to manage documents in MVC (Model View Controller) concept..." alt="idoc::IDocumentManager" shape="rect" coords="431,112,1283,136"/>
-<area href="classidoc_1_1_i_document_template.html" title="Document template creating and controling views and models. " alt="idoc::IDocumentTemplate" shape="rect" coords="1724,112,2576,136"/>
+<area href="classidoc_1_1_i_document_template.html" title="Common interface for a document template. " alt="idoc::IDocumentTemplate" shape="rect" coords="1724,112,2576,136"/>
 <area href="classidoc_1_1_c_tmpl_based_document_manager_base.html" title="Base implementation of document manager. " alt="idoc::CTmplBasedDocumentManagerBase" shape="rect" coords="431,168,1283,192"/>
 <area href="classidoc_1_1_c_composite_document_template_comp.html" title="Complex document template consists of more simple templates. " alt="idoc::CCompositeDocumentTemplateComp" shape="rect" coords="1293,168,2145,192"/>
 <area href="classidoc_1_1_c_single_document_template_base.html" title="Base class implementing document template for single document type. " alt="idoc::CSingleDocumentTemplateBase" shape="rect" coords="2155,168,3007,192"/>
-<area href="classidoc_1_1_c_multi_document_manager_base.html" alt="idoc::CMultiDocumentManagerBase" shape="rect" coords="0,224,852,248"/>
-<area href="classidoc_1_1_c_single_document_manager_base.html" alt="idoc::CSingleDocumentManagerBase" shape="rect" coords="862,224,1714,248"/>
-<area href="classidoc_1_1_c_single_document_template_comp.html" alt="idoc::CSingleDocumentTemplateComp" shape="rect" coords="2155,224,3007,248"/>
+<area href="classidoc_1_1_c_multi_document_manager_base.html" title="Basic implementation of a template-based multiple document manager. " alt="idoc::CMultiDocumentManagerBase" shape="rect" coords="0,224,852,248"/>
+<area href="classidoc_1_1_c_single_document_manager_base.html" title="Basic implementation of a template-based single document manager. " alt="idoc::CSingleDocumentManagerBase" shape="rect" coords="862,224,1714,248"/>
+<area href="classidoc_1_1_c_single_document_template_comp.html" title="Document template component supported only one type of the provided document. " alt="idoc::CSingleDocumentTemplateComp" shape="rect" coords="2155,224,3007,248"/>
 <area href="classiqtdoc_1_1_t_qt_document_manager_wrap.html" alt="iqtdoc::TQtDocumentManagerWrap&lt; idoc::CMultiDocumentManagerBase, iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QMdiArea &gt; &gt; &gt;" shape="rect" coords="0,280,852,304"/>
 <area href="classiqtdoc_1_1_t_qt_document_manager_wrap.html" alt="iqtdoc::TQtDocumentManagerWrap&lt; idoc::CSingleDocumentManagerBase, iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt; &gt; &gt;" shape="rect" coords="862,280,1714,304"/>
 <area href="classiqtdoc_1_1_c_extended_document_template_comp.html" title="Extension of idoc::CSingleDocumentTemplateComp providing additional Qt-specified functionality. " alt="iqtdoc::CExtendedDocumentTemplateComp" shape="rect" coords="2155,280,3007,304"/>
@@ -189,7 +189,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a4eddbd1b6aae7d49799596a18c92d193">idoc::CSingleDocumentTemplateBase</a>, <a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#ad0a93693455eef75dcd2eeb49a7eade9">idoc::CTmplBasedDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a9267e276ce03cefb682ac01235ac2e01">idoc::CCompositeDocumentTemplateComp</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a4eddbd1b6aae7d49799596a18c92d193">idoc::CSingleDocumentTemplateBase</a>, <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a9267e276ce03cefb682ac01235ac2e01">idoc::CCompositeDocumentTemplateComp</a>, and <a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#ad0a93693455eef75dcd2eeb49a7eade9">idoc::CTmplBasedDocumentManagerBase</a>.</p>
 
 </div>
 </div>
@@ -223,7 +223,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#aab5ad5ae4e5b76f0eb2cecf46fda4863">idoc::CSingleDocumentTemplateBase</a>, <a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a7c3ecbe9e11705c176388bf5c31aaf5f">idoc::CTmplBasedDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a05582ef4889b0a543ad4696adb2efe22">idoc::CCompositeDocumentTemplateComp</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#aab5ad5ae4e5b76f0eb2cecf46fda4863">idoc::CSingleDocumentTemplateBase</a>, <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a05582ef4889b0a543ad4696adb2efe22">idoc::CCompositeDocumentTemplateComp</a>, and <a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a7c3ecbe9e11705c176388bf5c31aaf5f">idoc::CTmplBasedDocumentManagerBase</a>.</p>
 
 </div>
 </div>
@@ -250,7 +250,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get list of supported document ID's can be created for specified file. </p>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a2ae522b582bf3cad811c0c1f7b5f3174">idoc::CSingleDocumentTemplateBase</a>, <a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a082e64c2e0932a5455ea3c568c907709">idoc::CTmplBasedDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a36a49944186f968922c25eea76dd10e3">idoc::CCompositeDocumentTemplateComp</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a2ae522b582bf3cad811c0c1f7b5f3174">idoc::CSingleDocumentTemplateBase</a>, <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a36a49944186f968922c25eea76dd10e3">idoc::CCompositeDocumentTemplateComp</a>, and <a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a082e64c2e0932a5455ea3c568c907709">idoc::CTmplBasedDocumentManagerBase</a>.</p>
 
 </div>
 </div>
@@ -278,7 +278,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get list of supported document ID's can be created for specified file. </p>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a01ecb4b6a888720f7ddf7996b4e149f5">idoc::CSingleDocumentTemplateBase</a>, <a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a0a4a8a7c6ddc1a90855c250be0fad73f">idoc::CTmplBasedDocumentManagerBase</a>, <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#afed347f34994e0dc9994aeef70398862">idoc::CCompositeDocumentTemplateComp</a>, and <a class="el" href="classiqtdoc_1_1_c_extended_document_template_comp.html#a36c2eb6f425ea16f42a8f0328ef8cedb">iqtdoc::CExtendedDocumentTemplateComp</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a01ecb4b6a888720f7ddf7996b4e149f5">idoc::CSingleDocumentTemplateBase</a>, <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#afed347f34994e0dc9994aeef70398862">idoc::CCompositeDocumentTemplateComp</a>, <a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a0a4a8a7c6ddc1a90855c250be0fad73f">idoc::CTmplBasedDocumentManagerBase</a>, and <a class="el" href="classiqtdoc_1_1_c_extended_document_template_comp.html#a36c2eb6f425ea16f42a8f0328ef8cedb">iqtdoc::CExtendedDocumentTemplateComp</a>.</p>
 
 </div>
 </div>
@@ -312,7 +312,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a2b76df2b569c11e8c5891cdf9961545a">idoc::CSingleDocumentTemplateBase</a>, <a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#acf218584bffc04b5c93346208d1da05c">idoc::CTmplBasedDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#ab001914b4a5c5368ecef0cea93f758ab">idoc::CCompositeDocumentTemplateComp</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a2b76df2b569c11e8c5891cdf9961545a">idoc::CSingleDocumentTemplateBase</a>, <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#ab001914b4a5c5368ecef0cea93f758ab">idoc::CCompositeDocumentTemplateComp</a>, and <a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#acf218584bffc04b5c93346208d1da05c">idoc::CTmplBasedDocumentManagerBase</a>.</p>
 
 </div>
 </div>
@@ -350,7 +350,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Return <code>true</code>, if the feature(s) is supported by this document template. </p>
 
-<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a3edfc383a06584be11b1fbbb164dcf4c">idoc::CSingleDocumentTemplateBase</a>, <a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a71075057c8c586240b4b568edbff2fce">idoc::CTmplBasedDocumentManagerBase</a>, and <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a8f114a7307b76eec8ecb2c96a118c1b6">idoc::CCompositeDocumentTemplateComp</a>.</p>
+<p>Implemented in <a class="el" href="classidoc_1_1_c_single_document_template_base.html#a3edfc383a06584be11b1fbbb164dcf4c">idoc::CSingleDocumentTemplateBase</a>, <a class="el" href="classidoc_1_1_c_composite_document_template_comp.html#a8f114a7307b76eec8ecb2c96a118c1b6">idoc::CCompositeDocumentTemplateComp</a>, and <a class="el" href="classidoc_1_1_c_tmpl_based_document_manager_base.html#a71075057c8c586240b4b568edbff2fce">idoc::CTmplBasedDocumentManagerBase</a>.</p>
 
 </div>
 </div>

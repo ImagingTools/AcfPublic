@@ -71,12 +71,6 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ac4bf5ae770b4ca0f33fb13b7dcf6cb5d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_component_base_8h.html#ac4bf5ae770b4ca0f33fb13b7dcf6cb5d">I_REGISTER_SUBELEMENT</a>(ElementName)&#160;&#160;&#160;static <a class="el" href="classicomp_1_1_t_subelement_static_info.html">icomp::TSubelementStaticInfo</a>&lt;CurrentComponentType&gt; subelementInfo_##ElementName(#ElementName, staticInfo);</td></tr>
-<tr class="memdesc:ac4bf5ae770b4ca0f33fb13b7dcf6cb5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register subelement of component.  <a href="#ac4bf5ae770b4ca0f33fb13b7dcf6cb5d">More...</a><br/></td></tr>
-<tr class="separator:ac4bf5ae770b4ca0f33fb13b7dcf6cb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2b90c5b1e9ccfb347bfdcac76cea2fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_component_base_8h.html#ab2b90c5b1e9ccfb347bfdcac76cea2fd">I_REGISTER_SUBELEMENT_INTERFACE</a>(ElementName, InterfaceType, extractorFunction)</td></tr>
-<tr class="memdesc:ab2b90c5b1e9ccfb347bfdcac76cea2fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register interface extractor for some subelement.  <a href="#ab2b90c5b1e9ccfb347bfdcac76cea2fd">More...</a><br/></td></tr>
-<tr class="separator:ab2b90c5b1e9ccfb347bfdcac76cea2fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a066dd1fa9d7f8ae60350f54e5fe07f29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_component_base_8h.html#a066dd1fa9d7f8ae60350f54e5fe07f29">I_REGISTER_SUBELEMENT_INTERFACE_T</a>(ElementName, InterfaceType, extractorFunction)</td></tr>
 <tr class="memdesc:a066dd1fa9d7f8ae60350f54e5fe07f29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register interface extractor for some subelement with template extractor function.  <a href="#a066dd1fa9d7f8ae60350f54e5fe07f29">More...</a><br/></td></tr>
 <tr class="separator:a066dd1fa9d7f8ae60350f54e5fe07f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -253,77 +247,6 @@ Functions</h2></td></tr>
 <p>Used to assign value for overloaded attributes or references. </p>
 
 <p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00424">424</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ac4bf5ae770b4ca0f33fb13b7dcf6cb5d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define I_REGISTER_SUBELEMENT</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">ElementName</td><td>)</td>
-          <td>&#160;&#160;&#160;static <a class="el" href="classicomp_1_1_t_subelement_static_info.html">icomp::TSubelementStaticInfo</a>&lt;CurrentComponentType&gt; subelementInfo_##ElementName(#ElementName, staticInfo);</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Register subelement of component. </p>
-
-<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00160">160</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab2b90c5b1e9ccfb347bfdcac76cea2fd"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define I_REGISTER_SUBELEMENT_INTERFACE</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">ElementName, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">InterfaceType, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">extractorFunction&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{\</div>
-<div class="line">              static <a class="code" href="classicomp_1_1_t_subelement_static_info_1_1_registrator.html">icomp::TSubelementStaticInfo&lt;CurrentComponentType&gt;::Registrator</a>&lt;InterfaceType&gt; staticRegistrator(\</div>
-<div class="line">                                   subelementInfo_##ElementName,\</div>
-<div class="line">                                   extractorFunction);\</div>
-<div class="line">              Q_UNUSED(staticRegistrator);\</div>
-<div class="line">       }</div>
-<div class="ttc" id="classicomp_1_1_t_subelement_static_info_1_1_registrator_html"><div class="ttname"><a href="classicomp_1_1_t_subelement_static_info_1_1_registrator.html">icomp::TSubelementStaticInfo::Registrator</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_subelement_static_info_8h_source.html#l00049">TSubelementStaticInfo.h:49</a></div></div>
-</div><!-- fragment -->
-<p>Register interface extractor for some subelement. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ElementName</td><td>name of subelement. </td></tr>
-    <tr><td class="paramname">InterfaceType</td><td>type of registered interface. </td></tr>
-    <tr><td class="paramname">extractorFunction</td><td>function returning pointer to casted type (must be 'InterfaceType* Foo(MyComponent&amp; component)')". </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00169">169</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
 
 </div>
 </div>

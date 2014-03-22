@@ -23,10 +23,47 @@
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="Introduction"></a>
 Introduction</h1>
-<p>ACF (Advanced Component Framework) is a C++ based component framework that was especially designed for creation of very complex applications. ACF contains many standard implementations of most usefull design patterns, such Serialization, Model/Observer, Factory and so on. ACF implements a component concept and includes many standard components, which you can directly use in your application.</p>
-<p>See <a href="http://www.ilena.org,">http://www.ilena.org,</a> write <a href="#" onclick="location.href='mai'+'lto:'+'inf'+'o@'+'ima'+'gi'+'ngt'+'oo'+'ls.'+'de'; return false;">info@<span style="display: none;">.nosp@m.</span>imag<span style="display: none;">.nosp@m.</span>ingto<span style="display: none;">.nosp@m.</span>ols.<span style="display: none;">.nosp@m.</span>de</a> or contact by Skype to ACF_infoline for further information about the ACF.</p>
-<h1><a class="anchor" id="Example"></a>
-Example</h1>
+<p>ACF is a C++ based, cross-plattform component framework, that was especially designed for creation of very complex, customizable and highly scalable applications. ACF provides instruments to build software from reusable components and serves interfaces and concepts to create those components. It contains several standard implementations of most usefull design patterns, such Serialization, Model/Observer, Factory, Dependency Injection. ACF implements a powerfull component concept and includes many well designed components, which you can directly use in your application. The UI-part of the framework is based on Qt library provided by Digia. ACF is open source and released under the terms of the GNU Lesser General Public License (LGPL).</p>
+<p>See <a href="http://www.ilena.org">http://www.ilena.org</a> or write <a href="#" onclick="location.href='mai'+'lto:'+'inf'+'o@'+'ima'+'gi'+'ngt'+'oo'+'ls.'+'de'; return false;">info@<span style="display: none;">.nosp@m.</span>imag<span style="display: none;">.nosp@m.</span>ingto<span style="display: none;">.nosp@m.</span>ols.<span style="display: none;">.nosp@m.</span>de</a> or contact by Skype to ACF_infoline for further information about the ACF.</p>
+<h1><a class="anchor" id="Basics"></a>
+Basics</h1>
+<p>The main idea behind ACF is to see each software product as a composition of components with clearly defined interfaces. Interface is also the only way for communication between components. The usual steps to implement a component are:</p>
+<ul>
+<li>A C++ interface must be defined.</li>
+<li>A class which implements this interface must be created.There are several ways to make a "normal" C++ class to a ACF-Component, simplest is to derive from a corresponding basic implementation or use a generic macro. A component can have dependencies from other components (e.g. component <b>A</b> needs component <b>B</b> to realize some functionality) and can have attributes. Via attributes it is possible, to parameterize some behaviour aspects of the component. Another way to create a component is to combine more existing components into a composition. This composition is also perceived by the framework as a component. Creates a composition with the framework tool called <b>ACF Compositor</b>. ACF Compositor provides graphical editing for the component dependencies and attributes. The compositions are stored in so-called ARX files (we also call them registries).</li>
+<li>After a component is implemented, it must be registered in a so called Package. Component packages are logical containers of components. There are two kinds of packages:<ul>
+<li>For C++ based component the package is a DLL with special export interface.</li>
+<li>For component compositions the package is a special folder in the file system.</li>
+</ul>
+</li>
+</ul>
+<p>To keep the management component packages consistent, all kind of packages have the same file extension - ARP (ACF Registry Package).</p>
+<p>If all the necessary components have been implemented, the application can be executed. There are two basic ways. A composition of components can be run directly by Framework-Runtime. However, this mechanism is usefull only in the prototyping stage. For the final application a different approach can be used. ACF provides a special source-code generator, which makes it possible to produce source code back from component compositions. The resulting source code is then compiled by the usual way. This has the advantage that during the runtime of the application no modules (DLLs) must be loaded.</p>
+<h1><a class="anchor" id="Features"></a>
+Features</h1>
+<p>Below are some of the main features of ACF:</p>
+<ul>
+<li>Graphical overview and editing of component connections and properties in UML-like manner</li>
+<li>Definition of composite components</li>
+<li>C++ Code Generator (ARX Compiler)</li>
+<li>C++ library containing several implementatons of common business logik components, which can be used in every application</li>
+<li>Component library for abstract data model definition, visualization and processing</li>
+<li>High level components for data binding and persistence</li>
+<li>Multi-Document Interface application framework</li>
+<li>Component library for industrial and scientic image processing</li>
+<li>Component library for 2D and 3D visualization</li>
+<li>Component wrappers for popular 3rd-party libraries such:<ul>
+<li>Qt/Qt Solutions</li>
+<li>Qwt</li>
+<li>Qwt3d</li>
+<li>OpenCV</li>
+<li>phonon</li>
+<li>FFMpeg</li>
+<li>zlib</li>
+<li>QScintilla</li>
+</ul>
+</li>
+</ul>
 <h1><a class="anchor" id="Tutorials"></a>
 Tutorials</h1>
 <p>See <code>Docs/Tutorial</code> for tutorials. </p>

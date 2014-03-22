@@ -42,58 +42,57 @@
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// ACF includes</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_c_memory_write_archive_8h.html">iser/CMemoryWriteArchive.h</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="iqt_8h.html">iqt/iqt.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="iqt_8h.html">iqt/iqt.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>iqt</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classiqt_1_1_c_network_write_archive.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classiqt_1_1_c_network_write_archive.html">CNetworkWriteArchive</a>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                     <span class="keyword">public</span> QObject,</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                     <span class="keyword">public</span> <a class="code" href="classiser_1_1_c_memory_write_archive.html">iser::CMemoryWriteArchive</a></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;       Q_OBJECT</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classiqt_1_1_c_network_write_archive.html#a3792260e95e56f4436b6143686be1281">   27</a></span>&#160;       <span class="keyword">typedef</span> <a class="code" href="classiser_1_1_c_memory_write_archive.html">iser::CMemoryWriteArchive</a> <a class="code" href="classiqt_1_1_c_network_write_archive.html#a3792260e95e56f4436b6143686be1281">BaseClass</a>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;       <a class="code" href="classiqt_1_1_c_network_write_archive.html#a7e8e4440c646ac97bc9fb8dde6181ccc">CNetworkWriteArchive</a>(</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                            <span class="keyword">const</span> QString&amp; hostAddress,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                            <span class="keywordtype">int</span> port,</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                            <span class="keyword">const</span> QString&amp; userName = QString(),</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                            <span class="keyword">const</span> QString&amp; password = QString(),</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                            <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_version_info.html">iser::IVersionInfo</a>* versionInfoPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                            <span class="keywordtype">bool</span> serializeHeader = <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;       <a class="code" href="classiqt_1_1_c_network_write_archive.html#a664dde32d22b76014151a212f0c65718">~CNetworkWriteArchive</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_network_write_archive.html#a3bc0843e39a8c1ee8d6179ae9fe8ab4c">Flush</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;       <span class="comment">// reimplemented (iser::IArchive)</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_network_write_archive.html#aced76891b36a1dab4e5f6f1ef3bf9123">ProcessData</a>(<span class="keywordtype">void</span>* dataPtr, <span class="keywordtype">int</span> size);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;       </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">private</span> Q_SLOTS:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;       <span class="keywordtype">void</span> OnAuthentificationtRequired(<span class="keyword">const</span> QNetworkProxy&amp; proxy, QAuthenticator* authenticator) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;       QTcpSocket m_socket;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;       QString m_userName;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;       QString m_password;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>iqt</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;       </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classiqt_1_1_c_network_write_archive.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classiqt_1_1_c_network_write_archive.html">CNetworkWriteArchive</a>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                     <span class="keyword">public</span> QObject,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                     <span class="keyword">public</span> <a class="code" href="classiser_1_1_c_memory_write_archive.html">iser::CMemoryWriteArchive</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;       Q_OBJECT</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classiqt_1_1_c_network_write_archive.html#a3792260e95e56f4436b6143686be1281">   31</a></span>&#160;       <span class="keyword">typedef</span> <a class="code" href="classiser_1_1_c_memory_write_archive.html">iser::CMemoryWriteArchive</a> <a class="code" href="classiqt_1_1_c_network_write_archive.html#a3792260e95e56f4436b6143686be1281">BaseClass</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;       <a class="code" href="classiqt_1_1_c_network_write_archive.html#a7e8e4440c646ac97bc9fb8dde6181ccc">CNetworkWriteArchive</a>(</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                            <span class="keyword">const</span> QString&amp; hostAddress,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                            <span class="keywordtype">int</span> port,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                            <span class="keyword">const</span> QString&amp; userName = QString(),</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                            <span class="keyword">const</span> QString&amp; password = QString(),</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                            <span class="keyword">const</span> <a class="code" href="classiser_1_1_i_version_info.html">iser::IVersionInfo</a>* versionInfoPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                            <span class="keywordtype">bool</span> serializeHeader = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;       <a class="code" href="classiqt_1_1_c_network_write_archive.html#a664dde32d22b76014151a212f0c65718">~CNetworkWriteArchive</a>();</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;} <span class="comment">// namespace iqt</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif // !iqt_CNetworkWriteArchive_included</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="ttc" id="classiqt_1_1_c_network_write_archive_html"><div class="ttname"><a href="classiqt_1_1_c_network_write_archive.html">iqt::CNetworkWriteArchive</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_network_write_archive_8h_source.html#l00020">CNetworkWriteArchive.h:20</a></div></div>
-<div class="ttc" id="classiqt_1_1_c_network_write_archive_html_a7e8e4440c646ac97bc9fb8dde6181ccc"><div class="ttname"><a href="classiqt_1_1_c_network_write_archive.html#a7e8e4440c646ac97bc9fb8dde6181ccc">iqt::CNetworkWriteArchive::CNetworkWriteArchive</a></div><div class="ttdeci">CNetworkWriteArchive(const QString &amp;hostAddress, int port, const QString &amp;userName=QString(), const QString &amp;password=QString(), const iser::IVersionInfo *versionInfoPtr=NULL, bool serializeHeader=true)</div></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_network_write_archive.html#a3bc0843e39a8c1ee8d6179ae9fe8ab4c">Flush</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;       <span class="comment">// reimplemented (iser::IArchive)</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiqt_1_1_c_network_write_archive.html#aced76891b36a1dab4e5f6f1ef3bf9123">ProcessData</a>(<span class="keywordtype">void</span>* dataPtr, <span class="keywordtype">int</span> size);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;       </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">private</span> Q_SLOTS:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;       <span class="keywordtype">void</span> OnAuthentificationtRequired(<span class="keyword">const</span> QNetworkProxy&amp; proxy, QAuthenticator* authenticator) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;       QTcpSocket m_socket;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;       QString m_userName;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;       QString m_password;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;} <span class="comment">// namespace iqt</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif // !iqt_CNetworkWriteArchive_included</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="ttc" id="classiqt_1_1_c_network_write_archive_html"><div class="ttname"><a href="classiqt_1_1_c_network_write_archive.html">iqt::CNetworkWriteArchive</a></div><div class="ttdoc">A write archive working over network connection. </div><div class="ttdef"><b>Definition:</b> <a href="_c_network_write_archive_8h_source.html#l00024">CNetworkWriteArchive.h:24</a></div></div>
+<div class="ttc" id="classiqt_1_1_c_network_write_archive_html_a7e8e4440c646ac97bc9fb8dde6181ccc"><div class="ttname"><a href="classiqt_1_1_c_network_write_archive.html#a7e8e4440c646ac97bc9fb8dde6181ccc">iqt::CNetworkWriteArchive::CNetworkWriteArchive</a></div><div class="ttdeci">CNetworkWriteArchive(const QString &amp;hostAddress, int port, const QString &amp;userName=QString(), const QString &amp;password=QString(), const iser::IVersionInfo *versionInfoPtr=NULL, bool serializeHeader=true)</div><div class="ttdoc">Constructor. </div></div>
 <div class="ttc" id="classiser_1_1_i_version_info_html"><div class="ttname"><a href="classiser_1_1_i_version_info.html">iser::IVersionInfo</a></div><div class="ttdoc">Provides access to version information. </div><div class="ttdef"><b>Definition:</b> <a href="_i_version_info_8h_source.html#l00022">IVersionInfo.h:22</a></div></div>
-<div class="ttc" id="classiqt_1_1_c_network_write_archive_html_a3792260e95e56f4436b6143686be1281"><div class="ttname"><a href="classiqt_1_1_c_network_write_archive.html#a3792260e95e56f4436b6143686be1281">iqt::CNetworkWriteArchive::BaseClass</a></div><div class="ttdeci">iser::CMemoryWriteArchive BaseClass</div><div class="ttdef"><b>Definition:</b> <a href="_c_network_write_archive_8h_source.html#l00027">CNetworkWriteArchive.h:27</a></div></div>
+<div class="ttc" id="classiqt_1_1_c_network_write_archive_html_a3792260e95e56f4436b6143686be1281"><div class="ttname"><a href="classiqt_1_1_c_network_write_archive.html#a3792260e95e56f4436b6143686be1281">iqt::CNetworkWriteArchive::BaseClass</a></div><div class="ttdeci">iser::CMemoryWriteArchive BaseClass</div><div class="ttdef"><b>Definition:</b> <a href="_c_network_write_archive_8h_source.html#l00031">CNetworkWriteArchive.h:31</a></div></div>
 <div class="ttc" id="_c_memory_write_archive_8h_html"><div class="ttname"><a href="_c_memory_write_archive_8h.html">CMemoryWriteArchive.h</a></div></div>
 <div class="ttc" id="classiqt_1_1_c_network_write_archive_html_a664dde32d22b76014151a212f0c65718"><div class="ttname"><a href="classiqt_1_1_c_network_write_archive.html#a664dde32d22b76014151a212f0c65718">iqt::CNetworkWriteArchive::~CNetworkWriteArchive</a></div><div class="ttdeci">~CNetworkWriteArchive()</div></div>
 <div class="ttc" id="classiqt_1_1_c_network_write_archive_html_a3bc0843e39a8c1ee8d6179ae9fe8ab4c"><div class="ttname"><a href="classiqt_1_1_c_network_write_archive.html#a3bc0843e39a8c1ee8d6179ae9fe8ab4c">iqt::CNetworkWriteArchive::Flush</a></div><div class="ttdeci">virtual bool Flush()</div></div>

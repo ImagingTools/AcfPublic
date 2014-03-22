@@ -40,9 +40,15 @@ namespace idoc
 {
 
 
+/**
+	Basic implementation of a template-based multiple document manager.
+*/
 class CMultiDocumentManagerBase: public idoc::CTmplBasedDocumentManagerBase
 {
 public:
+	/**
+		Default constructor.
+	*/
 	CMultiDocumentManagerBase();
 
 	// reimplemented (idoc::IDocumentManager)
@@ -86,6 +92,10 @@ protected:
 	};
 	typedef QList<ViewInfo> Views;
 
+
+	/**
+		Document data definition.
+	*/
 	struct SingleDocumentData: public DocumentInfo, public imod::CMultiModelObserverBase
 	{
 		SingleDocumentData(
@@ -125,6 +135,9 @@ protected:
 
 	virtual void CloseAllDocuments();
 
+	/**
+		Get internal document data object.
+	*/
 	SingleDocumentData& GetSingleDocumentData(int index) const;
 
 	/**
