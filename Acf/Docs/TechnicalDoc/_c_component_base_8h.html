@@ -88,12 +88,6 @@ Macros</h2></td></tr>
 <tr class="memitem:a96fedf19d00e2efd7073095a60e354ff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_component_base_8h.html#a96fedf19d00e2efd7073095a60e354ff">I_TASSIGN_MULTI_BASE</a>(member, id, description, isObligatory, defaultValue)</td></tr>
 <tr class="memdesc:a96fedf19d00e2efd7073095a60e354ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to assign value for multiply parameters with template type (attributes, references or factories).  <a href="#a96fedf19d00e2efd7073095a60e354ff">More...</a><br/></td></tr>
 <tr class="separator:a96fedf19d00e2efd7073095a60e354ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07c8bc559dbc0c8403f6c24cf374fcb7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_component_base_8h.html#a07c8bc559dbc0c8403f6c24cf374fcb7">I_ASSIGN_TO</a>(member, baseAttribute, isObligatory)</td></tr>
-<tr class="memdesc:a07c8bc559dbc0c8403f6c24cf374fcb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to assign value for overloaded attributes or references.  <a href="#a07c8bc559dbc0c8403f6c24cf374fcb7">More...</a><br/></td></tr>
-<tr class="separator:a07c8bc559dbc0c8403f6c24cf374fcb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a604c509249dd2ff3e24581366cc0e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_component_base_8h.html#a9a604c509249dd2ff3e24581366cc0e7">I_TASSIGN_TO</a>(member, baseAttribute, isObligatory)</td></tr>
-<tr class="memdesc:a9a604c509249dd2ff3e24581366cc0e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to assign value for overloaded attributes or references.  <a href="#a9a604c509249dd2ff3e24581366cc0e7">More...</a><br/></td></tr>
-<tr class="separator:a9a604c509249dd2ff3e24581366cc0e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -203,50 +197,6 @@ Functions</h2></td></tr>
 <p>Used to assign value for multiply parameters (attributes, references or factories). </p>
 
 <p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00318">318</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a07c8bc559dbc0c8403f6c24cf374fcb7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define I_ASSIGN_TO</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">member, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">baseAttribute, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">isObligatory&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">static</span> <a class="code" href="classicomp_1_1_c_related_info_registrator.html">icomp::CRelatedInfoRegistrator</a> member##_Info(baseAttribute##_Info, <a class="code" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233a83c16248487642a0b4e09b4c1658afd5">icomp::IComponentStaticInfo::MGI_INTERFACES</a>, istd::CClassInfo::GetInfo&lt;member##_Type::InterfaceType&gt;().GetName(), isObligatory? member##_AttrType::DAF_OBLIGATORY: member##_AttrType::DAF_OPTIONAL);\</div>
-<div class="line">       Q_UNUSED(member##_Info);\</div>
-<div class="line">       if (componentPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){\</div>
-<div class="line">              componentPtr-&gt;member.Init(componentPtr, baseAttribute##_Info);\</div>
-<div class="line">       }</div>
-<div class="ttc" id="classicomp_1_1_c_related_info_registrator_html"><div class="ttname"><a href="classicomp_1_1_c_related_info_registrator.html">icomp::CRelatedInfoRegistrator</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_related_info_registrator_8h_source.html#l00016">CRelatedInfoRegistrator.h:16</a></div></div>
-<div class="ttc" id="istd_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="istd_8h_source.html#l00061">istd.h:61</a></div></div>
-<div class="ttc" id="classicomp_1_1_i_element_static_info_html_ab7838599fa53c50c56f57227e7982233a83c16248487642a0b4e09b4c1658afd5"><div class="ttname"><a href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233a83c16248487642a0b4e09b4c1658afd5">icomp::IElementStaticInfo::MGI_INTERFACES</a></div><div class="ttdoc">ID of meta group storing list of supported interfaces. </div><div class="ttdef"><b>Definition:</b> <a href="_i_element_static_info_8h_source.html#l00030">IElementStaticInfo.h:30</a></div></div>
-</div><!-- fragment -->
-<p>Used to assign value for overloaded attributes or references. </p>
-
-<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00424">424</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
 
 </div>
 </div>
@@ -397,50 +347,6 @@ Functions</h2></td></tr>
 <p>Used to assign value for multiply parameters with template type (attributes, references or factories). </p>
 
 <p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00388">388</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a9a604c509249dd2ff3e24581366cc0e7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define I_TASSIGN_TO</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">member, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">baseAttribute, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">isObligatory&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">static</span> <a class="code" href="classicomp_1_1_c_related_info_registrator.html">icomp::CRelatedInfoRegistrator</a> member##_Info(baseAttribute##_Info, <a class="code" href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233a83c16248487642a0b4e09b4c1658afd5">icomp::IComponentStaticInfo::MGI_INTERFACES</a>, istd::CClassInfo::GetInfo&lt;typename member##_Type::InterfaceType&gt;().GetName(), isObligatory? member##_AttrType::DAF_OBLIGATORY: member##_AttrType::DAF_OPTIONAL);\</div>
-<div class="line">       Q_UNUSED(member##_Info);\</div>
-<div class="line">       if (componentPtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){\</div>
-<div class="line">              componentPtr-&gt;member.Init(componentPtr, baseAttribute##_Info);\</div>
-<div class="line">       }</div>
-<div class="ttc" id="classicomp_1_1_c_related_info_registrator_html"><div class="ttname"><a href="classicomp_1_1_c_related_info_registrator.html">icomp::CRelatedInfoRegistrator</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_related_info_registrator_8h_source.html#l00016">CRelatedInfoRegistrator.h:16</a></div></div>
-<div class="ttc" id="istd_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="istd_8h_source.html#l00061">istd.h:61</a></div></div>
-<div class="ttc" id="classicomp_1_1_i_element_static_info_html_ab7838599fa53c50c56f57227e7982233a83c16248487642a0b4e09b4c1658afd5"><div class="ttname"><a href="classicomp_1_1_i_element_static_info.html#ab7838599fa53c50c56f57227e7982233a83c16248487642a0b4e09b4c1658afd5">icomp::IElementStaticInfo::MGI_INTERFACES</a></div><div class="ttdoc">ID of meta group storing list of supported interfaces. </div><div class="ttdef"><b>Definition:</b> <a href="_i_element_static_info_8h_source.html#l00030">IElementStaticInfo.h:30</a></div></div>
-</div><!-- fragment -->
-<p>Used to assign value for overloaded attributes or references. </p>
-
-<p>Definition at line <a class="el" href="_c_component_base_8h_source.html#l00434">434</a> of file <a class="el" href="_c_component_base_8h_source.html">CComponentBase.h</a>.</p>
 
 </div>
 </div>

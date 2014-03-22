@@ -1108,20 +1108,6 @@
       <anchor>a96fedf19d00e2efd7073095a60e354ff</anchor>
       <arglist>(member, id, description, isObligatory, defaultValue)</arglist>
     </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>_c_component_base_8h.html</anchorfile>
-      <anchor>a07c8bc559dbc0c8403f6c24cf374fcb7</anchor>
-      <arglist>(member, baseAttribute, isObligatory)</arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>I_TASSIGN_TO</name>
-      <anchorfile>_c_component_base_8h.html</anchorfile>
-      <anchor>a9a604c509249dd2ff3e24581366cc0e7</anchor>
-      <arglist>(member, baseAttribute, isObligatory)</arglist>
-    </member>
     <member kind="function">
       <type>Dest *</type>
       <name>CompCastPtr</name>
@@ -7972,13 +7958,6 @@
       <anchor>afcea2322ac14ad36950af9b66b7d36d5</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>ac3cebb0b1f631ef198ef2123d1af68a8</anchor>
-      <arglist>(m_calibrationProviderModelCompPtr, m_calibrationProviderCompPtr, true)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imath::IUnitInfo *</type>
       <name>GetArgumentUnitInfo</name>
@@ -11822,13 +11801,6 @@
       <anchor>aeb916b741626129487f8c00d902f453f</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classi2d_1_1_c_static_calibration_provider_comp.html</anchorfile>
-      <anchor>a2776a0221652b5b0026065995e60a839</anchor>
-      <arglist>(m_calibrationModelCompPtr, m_calibrationCompPtr, false)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ICalibration2d *</type>
       <name>GetCalibration</name>
@@ -14486,13 +14458,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classibase_1_1_c_multi_observer_binder_comp.html</anchorfile>
-      <anchor>a2974027f344ef4a2f06718b0f3afa9de</anchor>
-      <arglist>(m_modelEditorsCompPtr, m_observersCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CMultiObserverBinderComp</name>
       <anchorfile>classibase_1_1_c_multi_observer_binder_comp.html</anchorfile>
       <anchor>a8acbfa299281d1f8fafd7175fc465549</anchor>
@@ -14706,13 +14671,6 @@
       <anchorfile>classibase_1_1_c_object_synchronizer_comp.html</anchorfile>
       <anchor>a9d912ba9c1750a714b77cd11b4392da0</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classibase_1_1_c_object_synchronizer_comp.html</anchorfile>
-      <anchor>a09a71138dd1ec80fdafd3233676192bd</anchor>
-      <arglist>(m_referenceObjectModelCompPtr, m_referenceObjectCompPtr, true)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -16533,13 +16491,6 @@
       <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
       <anchor>afa3fcab514bf33fbdb6ec2f83eb8f075</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_TASSIGN_TO</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>ab672696dd1d69d5c990ff6ab1bf845f6</anchor>
-      <arglist>(m_defaultObjectCompPtr, m_defaultModelCompPtr, false)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -25539,13 +25490,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classidoc_1_1_c_selected_doc_model_binder_comp.html</anchorfile>
-      <anchor>ae56171f3694d45e22e23f0fc66239daf</anchor>
-      <arglist>(m_documentManagerModelCompPtr, m_documentManagerCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CSelectedDocModelBinderComp</name>
       <anchorfile>classidoc_1_1_c_selected_doc_model_binder_comp.html</anchorfile>
       <anchor>aa79ae2cc2bbc2fce9b986d556c66e77a</anchor>
@@ -26218,20 +26162,6 @@
       <anchorfile>classidoc_1_1_c_single_document_template_comp.html</anchorfile>
       <anchor>aeaebc293774d20d1f2381ba23743ca31</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classidoc_1_1_c_single_document_template_comp.html</anchorfile>
-      <anchor>a01c29c76c88954fc0afadcbdfcad415a</anchor>
-      <arglist>(m_modelCompFact, m_documentCompFact, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classidoc_1_1_c_single_document_template_comp.html</anchorfile>
-      <anchor>a4529aa8885aa7695612b4c828567c45b</anchor>
-      <arglist>(m_undoManagerObserverCompFact, m_undoManagerCompFact, true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ifile::IFilePersistence *</type>
@@ -27337,20 +27267,6 @@
       <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
       <anchor>ad6cca8229f651bdf1501961558f36172</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
-      <anchor>af1a234862731074648d76dcf9b4a1e09</anchor>
-      <arglist>(m_objectModelCompPtr, m_objectCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
-      <anchor>a306085c29ed56391216d406b5d66a634</anchor>
-      <arglist>(m_serializeableObjectCompPtr, m_objectCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -28683,13 +28599,6 @@
       <anchor>aa796620cca275e7834d7a0d5599f73af</anchor>
       <arglist>() const</arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
-      <anchor>a3a335fd8efa00466f6c0d75713a9e288</anchor>
-      <arglist>(m_relativeToModelCompPtr, m_relativeToCompPtr, false)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
       <name>GetPath</name>
@@ -29697,13 +29606,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classifilegui_1_1_c_external_open_document_command_comp_base.html</anchorfile>
-      <anchor>a6f488282d5bad2ff6a9b20c72ef8d6cd</anchor>
-      <arglist>(m_documentPersistenceInfoCompPtr, m_documentPersistenceCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CExternalOpenDocumentCommandCompBase</name>
       <anchorfile>classifilegui_1_1_c_external_open_document_command_comp_base.html</anchorfile>
       <anchor>a1a300c2c2b0d8bebb051c74af0fd4902</anchor>
@@ -30144,41 +30046,6 @@
       <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
-      <anchor>a38ef11959558df0f9cd5ba944ecbceaa</anchor>
-      <arglist>(m_objectModelCompPtr, m_objectCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
-      <anchor>ab52f8d09fad93e7067eb8ffa59add971</anchor>
-      <arglist>(m_objectGuiCompPtr, m_objectObserverCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TSingleModelObserverBase</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>ifile::IFileNameParam *</type>
-      <name>GetObjectPtr</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>AttachOrSetObject</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
-      <arglist>(ifile::IFileNameParam *objectPtr)</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
@@ -30220,6 +30087,27 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
       <arglist>(imod::IModel *modelPtr) const</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSingleModelObserverBase</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>ifile::IFileNameParam *</type>
+      <name>GetObjectPtr</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>AttachOrSetObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
+      <arglist>(ifile::IFileNameParam *objectPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31273,13 +31161,6 @@
       <anchorfile>classiimg_1_1_c_composed_bitmap_provider_comp.html</anchorfile>
       <anchor>aef94529a4fc450e7b71cc0f0d9751b10</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiimg_1_1_c_composed_bitmap_provider_comp.html</anchorfile>
-      <anchor>a1310b12a73e5ab316a7d73dde735337c</anchor>
-      <arglist>(m_bitmapProviderModelsCompPtr, m_bitmapProvidersCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iprm::IOptionsList *</type>
@@ -33109,13 +32990,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classilog_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>aa24a4e3ef2bb6dea2d905568b1d2904e</anchor>
-      <arglist>(m_fileNameModelCompPtr, m_fileNameCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CTextFileLogComp</name>
       <anchorfile>classilog_1_1_c_text_file_log_comp.html</anchorfile>
       <anchor>ac30bd25eb2212388ab11ecdfe71a0ed5</anchor>
@@ -33605,13 +33479,6 @@
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
       <anchor>a2d6f12f1f392ba8da020850ef14f0d99</anchor>
       <arglist>(const MessagePtr &amp;messagePtr)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a814af1f2cca4f93765ae93462c2e5311</anchor>
-      <arglist>(m_slaveMessageContainerCompPtr, m_slaveMessageConsumerCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -38617,13 +38484,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>ade93df136dbced04e1a5c5b5384464ee</anchor>
-      <arglist>(m_extPackagesManagerCompPtr, m_packagesManagerCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CRegistryCodeSaverComp</name>
       <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
       <anchor>a58212abcdfec4314b18ea8272a2a646f</anchor>
@@ -39165,13 +39025,6 @@
       <anchorfile>classiprm_1_1_c_manager_params_set_shadower_comp.html</anchorfile>
       <anchor>af103c5d1efdf47c1e725cf653dc005ac</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiprm_1_1_c_manager_params_set_shadower_comp.html</anchorfile>
-      <anchor>afe551f500f9e6c7edaeac092acf26169</anchor>
-      <arglist>(m_paramsManagerModelCompPtr, m_paramsManagerCompPtr, true)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -41565,13 +41418,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
-      <anchor>a282b44f6fd043160a0269e1894f8611b</anchor>
-      <arglist>(m_languageSelectionModelCompPtr, m_languageSelectionCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CTranslationManagerComp</name>
       <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
       <anchor>a9cfbd2bce1984296b73fa9261e72e78f</anchor>
@@ -42907,13 +42753,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_TASSIGN_TO</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>ab672696dd1d69d5c990ff6ab1bf845f6</anchor>
-      <arglist>(m_defaultObjectCompPtr, m_defaultModelCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>TGuiObserverWrap</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
       <anchor>a5aeac1835aa60016ff9440290b495581</anchor>
@@ -43246,76 +43085,6 @@
       <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
-      <anchor>ac6e1ce1de2314e0c22b2442ade7ec3c6</anchor>
-      <arglist>(m_informationModelsCompPtr, m_informationProvidersCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
-      <anchor>a049307260422e6c1e681a6518f1ebc97</anchor>
-      <arglist>(m_generalInformationModelCompPtr, m_generalInformationProviderCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_TASSIGN_TO</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>ab672696dd1d69d5c990ff6ab1bf845f6</anchor>
-      <arglist>(m_defaultObjectCompPtr, m_defaultModelCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TGuiObserverWrap</name>
-      <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a5aeac1835aa60016ff9440290b495581</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnAttached</name>
-      <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a1e5ea143e01a0798090e8989ded7fb94</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnDetached</name>
-      <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>adc9cd1c668357a08d839a51b6403a40c</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QWidget *</type>
-      <name>InitWidgetToParent</name>
-      <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
-      <anchor>af1f0ecd895436f9c04f0b4944bdaa846</anchor>
-      <arglist>(QWidget *parentPtr)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TSingleModelObserverBase</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>iimg::IMultiBitmapProvider *</type>
-      <name>GetObjectPtr</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>AttachOrSetObject</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
-      <arglist>(iimg::IMultiBitmapProvider *objectPtr)</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual CSingleView *</type>
       <name>CreateView</name>
@@ -43574,6 +43343,55 @@
       <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
       <anchor>a266b374301305cf5690a3c3abb769c1b</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TGuiObserverWrap</name>
+      <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
+      <anchor>a5aeac1835aa60016ff9440290b495581</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnAttached</name>
+      <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
+      <anchor>a1e5ea143e01a0798090e8989ded7fb94</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnDetached</name>
+      <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
+      <anchor>adc9cd1c668357a08d839a51b6403a40c</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QWidget *</type>
+      <name>InitWidgetToParent</name>
+      <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
+      <anchor>af1f0ecd895436f9c04f0b4944bdaa846</anchor>
+      <arglist>(QWidget *parentPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSingleModelObserverBase</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>iimg::IMultiBitmapProvider *</type>
+      <name>GetObjectPtr</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>AttachOrSetObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
+      <arglist>(iimg::IMultiBitmapProvider *objectPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -44456,34 +44274,6 @@
       <anchor>a95c4409ea6ec80ac1b9a230e1ed43fae</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqt2d_1_1_c_scene_connector_gui_comp.html</anchorfile>
-      <anchor>ac91a58c117540dc24f5f42b70dddfdd8</anchor>
-      <arglist>(m_sceneCommandsCompPtr, m_sceneGuiCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqt2d_1_1_c_scene_connector_gui_comp.html</anchorfile>
-      <anchor>ab6eb69af974c1a92d9545d4272e57976</anchor>
-      <arglist>(m_sceneProviderCompPtr, m_sceneGuiCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqt2d_1_1_c_scene_connector_gui_comp.html</anchorfile>
-      <anchor>a5fb2cb795151ce70cf79f64d1449934d</anchor>
-      <arglist>(m_extenderCommandsCompPtr, m_extenderGuiCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqt2d_1_1_c_scene_connector_gui_comp.html</anchorfile>
-      <anchor>a97a6dfd9213c0f4b83b886fb5cc25d3d</anchor>
-      <arglist>(m_extenderCompPtr, m_extenderGuiCompPtr, true)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ibase::IHierarchicalCommand *</type>
       <name>GetCommands</name>
@@ -44916,13 +44706,6 @@
       <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
       <anchor>a71d48e5e9425438c80e0d95aa88fa782</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
-      <anchor>a5a446304bcd751300a98850b720eb25e</anchor>
-      <arglist>(m_calibrationProviderModelCompPtr, m_calibrationProviderCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ibase::IHierarchicalCommand *</type>
@@ -45572,20 +45355,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
-      <anchor>a90903b675b626b40fc36337fc61d1b54</anchor>
-      <arglist>(m_documentPersistenceInfoCompPtr, m_documentPersistenceCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
-      <anchor>a94f8fa5c5eac04486559815e38f8dc5f</anchor>
-      <arglist>(m_documentManagerModelCompPtr, m_documentManagerCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CDocumentImportExportCommandComp</name>
       <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
       <anchor>a85dec1f567b262226142d05337beb912</anchor>
@@ -45913,13 +45682,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_TASSIGN_TO</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>ab672696dd1d69d5c990ff6ab1bf845f6</anchor>
-      <arglist>(m_defaultObjectCompPtr, m_defaultModelCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>TGuiObserverWrap</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
       <anchor>a5aeac1835aa60016ff9440290b495581</anchor>
@@ -46046,13 +45808,6 @@
       <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
       <anchor>a36484ddb1de86b2853801fb346abdbc5</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
-      <anchor>ac58e64258f2efb9cad88f631632b01b4</anchor>
-      <arglist>(m_documentManagerModelCompPtr, m_documentManagerCompPtr, true)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -46305,20 +46060,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>acb9f13784f7fe43f61460c8d7b4bb144</anchor>
-      <arglist>(m_documentManagerModelCompPtr, m_documentManagerCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>ae3ec01cbf92b9ae792820d627ccea9fb</anchor>
-      <arglist>(m_documentManagerCommandsCompPtr, m_documentManagerCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CMainWindowGuiComp</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
       <anchor>a8b2dc9e130d2d76dd837ba0dd5fc5773</anchor>
@@ -46337,20 +46078,6 @@
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
       <anchor>ad6a9a9384cabf9b3e2eac048775026fb</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
-      <anchor>afcd1e8439df50b0459d93bd5de7b2cd0</anchor>
-      <arglist>(m_workspaceCommandsCompPtr, m_workspaceCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
-      <anchor>acb3b847be66deb18bad5331998322a04</anchor>
-      <arglist>(m_mainWindowCommandsCompPtr, m_mainWindowComponentsCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -47338,20 +47065,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtdoc_1_1_c_singleton_doc_application_comp.html</anchorfile>
-      <anchor>a08a91eb761b5b01215ac0c52782c48e3</anchor>
-      <arglist>(m_slaveGuiApplicationCompPtr, m_slaveApplicationCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtdoc_1_1_c_singleton_doc_application_comp.html</anchorfile>
-      <anchor>a2d80fbc1ff2b77ab4e0a794c0a56be38</anchor>
-      <arglist>(m_runtimeStatusProviderModelCompPtr, m_runtimeStatusProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CSingletonDocApplicationComp</name>
       <anchorfile>classiqtdoc_1_1_c_singleton_doc_application_comp.html</anchorfile>
       <anchor>a04845e534b9bf884567d90ca37376cde</anchor>
@@ -48096,20 +47809,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
-      <anchor>a995ccb8699c96ee66a78df73c0718297</anchor>
-      <arglist>(m_slaveWidgetsModelCompPtr, m_slaveWidgetsVisualCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
-      <anchor>a81f39dd38e426c77e7b098180d18656f</anchor>
-      <arglist>(m_pageActivatorsModelCompPtr, m_pageActivatorsCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CMultiPageGuiCompBase</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
       <anchor>a800938c522827eef7c1bd0be448888f0</anchor>
@@ -48663,13 +48362,6 @@
       <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
       <anchor>a5e97d72d9f4a86ac973bb3cb0e58637b</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
-      <anchor>ad27af51f9198b2754b42ce53c03ba630</anchor>
-      <arglist>(m_allowApplicationCloseModelCompPtr, m_allowApplicationCloseCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -49410,13 +49102,6 @@
       <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtgui_1_1_c_model_dialog_gui_comp.html</anchorfile>
-      <anchor>ac7e9436fe8305fde110856f4df382ac8</anchor>
-      <arglist>(m_workingDataFactoryCompPtr, m_workingModelFactoryCompPtr, true)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>ExecuteDialog</name>
@@ -49479,20 +49164,6 @@
       <anchorfile>classiqtgui_1_1_c_model_editor_gui_comp.html</anchorfile>
       <anchor>a1371c7ed5bf8f44dc19bd2061752336e</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtgui_1_1_c_model_editor_gui_comp.html</anchorfile>
-      <anchor>a9b878cf5670e53a1ac6587a6df26a576</anchor>
-      <arglist>(m_slaveGuiCompPtr, m_slaveEditorCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtgui_1_1_c_model_editor_gui_comp.html</anchorfile>
-      <anchor>a2dfaf78b1fb1838cc062c7d57df8fa48</anchor>
-      <arglist>(m_slaveObserverCompPtr, m_slaveEditorCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -49964,13 +49635,6 @@
       <anchorfile>classiqtgui_1_1_c_selectable_commands_provider_comp.html</anchorfile>
       <anchor>a464ce9581b0eb69d3be2a198345180d6</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtgui_1_1_c_selectable_commands_provider_comp.html</anchorfile>
-      <anchor>a00726c80266e8b2058416898c7cf3581</anchor>
-      <arglist>(m_commandSelectionModelCompPtr, m_commandSelectionCompPtr, true)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -50906,13 +50570,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_TASSIGN_TO</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>ab672696dd1d69d5c990ff6ab1bf845f6</anchor>
-      <arglist>(m_defaultObjectCompPtr, m_defaultModelCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>TGuiObserverWrap</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
       <anchor>a5aeac1835aa60016ff9440290b495581</anchor>
@@ -51214,13 +50871,6 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
       <arglist>(imod::IModel *modelPtr) const</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_TASSIGN_TO</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>ab672696dd1d69d5c990ff6ab1bf845f6</anchor>
-      <arglist>(m_defaultObjectCompPtr, m_defaultModelCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -52243,13 +51893,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_TASSIGN_TO</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>ab672696dd1d69d5c990ff6ab1bf845f6</anchor>
-      <arglist>(m_defaultObjectCompPtr, m_defaultModelCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>TGuiObserverWrap</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
       <anchor>a5aeac1835aa60016ff9440290b495581</anchor>
@@ -52799,13 +52442,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_TASSIGN_TO</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>ab672696dd1d69d5c990ff6ab1bf845f6</anchor>
-      <arglist>(m_defaultObjectCompPtr, m_defaultModelCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>TGuiObserverWrap</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
       <anchor>a5aeac1835aa60016ff9440290b495581</anchor>
@@ -53086,27 +52722,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtprm_1_1_c_composed_params_set_gui_comp.html</anchorfile>
-      <anchor>ab9fa9effb192704b01eed9bb11fd0e0c</anchor>
-      <arglist>(m_guisCompPtr, m_editorsCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtprm_1_1_c_composed_params_set_gui_comp.html</anchorfile>
-      <anchor>a6d5fcf02b7a217691dbc3bdf2e8f7196</anchor>
-      <arglist>(m_observersCompPtr, m_editorsCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtprm_1_1_c_composed_params_set_gui_comp.html</anchorfile>
-      <anchor>a3d2d79322d1d3c55064801a7b2523b61</anchor>
-      <arglist>(m_extendersCompPtr, m_editorsCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CComposedParamsSetGuiComp</name>
       <anchorfile>classiqtprm_1_1_c_composed_params_set_gui_comp.html</anchorfile>
       <anchor>a2cef5ffe5287e4372ad684e0a4e973b7</anchor>
@@ -53307,20 +52922,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
-      <anchor>a994b033e82c1a4b44924931106d2dfd9</anchor>
-      <arglist>(m_observersCompPtr, m_editorsCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
-      <anchor>a3ce5c049ad24d6c2eb8afc35d276214b</anchor>
-      <arglist>(m_extendersCompPtr, m_editorsCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CExtComposedParamsSetGuiComp</name>
       <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
       <anchor>ac439826e5392e7738a4c8a3032845151</anchor>
@@ -53367,13 +52968,6 @@
       <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
       <anchor>ab6363166a32048a82d444ecb28276b22</anchor>
       <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_TASSIGN_TO</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>ab672696dd1d69d5c990ff6ab1bf845f6</anchor>
-      <arglist>(m_defaultObjectCompPtr, m_defaultModelCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -53644,62 +53238,6 @@
       <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtprm_1_1_c_multi_params_manager_gui_comp.html</anchorfile>
-      <anchor>a2732a325838684d3aba822cbc6afe71b</anchor>
-      <arglist>(m_paramsObserverCompPtr, m_paramsGuiCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtprm_1_1_c_multi_params_manager_gui_comp.html</anchorfile>
-      <anchor>a8f4ad4fcc9d665313dc6fd3fafc8b180</anchor>
-      <arglist>(m_viewExtendersCompPtr, m_paramsGuiCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CParamsManagerGuiCompBase</name>
-      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
-      <anchor>ac6c19b8ea97872a572d9eceeaae52c0b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AddItemsToScene</name>
-      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
-      <anchor>a16969fb83b7cf4a305098bd7ab17b466</anchor>
-      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>RemoveItemsFromScene</name>
-      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
-      <anchor>a273c46617d34bd3cc8b669484b7b0494</anchor>
-      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TSingleModelObserverBase</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>iprm::IParamsManager *</type>
-      <name>GetObjectPtr</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>AttachOrSetObject</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
-      <arglist>(iprm::IParamsManager *objectPtr)</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual imod::IObserver *</type>
       <name>GetObserverPtr</name>
@@ -53825,6 +53363,48 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
       <arglist>(imod::IModel *modelPtr) const</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CParamsManagerGuiCompBase</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>ac6c19b8ea97872a572d9eceeaae52c0b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddItemsToScene</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a16969fb83b7cf4a305098bd7ab17b466</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveItemsFromScene</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a273c46617d34bd3cc8b669484b7b0494</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSingleModelObserverBase</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>iprm::IParamsManager *</type>
+      <name>GetObjectPtr</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>AttachOrSetObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
+      <arglist>(iprm::IParamsManager *objectPtr)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -54383,13 +53963,6 @@
       <anchor>a511f88ed3d578924f8fa8392db3e15e6</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtprm_1_1_c_selectable_gui_comp.html</anchorfile>
-      <anchor>a8cb34b0612e80b7edc6e988c790f465c</anchor>
-      <arglist>(m_selectorObserverCompPtr, m_selectorGuiCompPtr, false)</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
@@ -54733,27 +54306,6 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtprm_1_1_c_variable_param_gui_comp.html</anchorfile>
-      <anchor>a820149c75921895854413de2b42cf22c</anchor>
-      <arglist>(m_guisCompPtr, m_editorsCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtprm_1_1_c_variable_param_gui_comp.html</anchorfile>
-      <anchor>a8a8c1626c4cb4a96d4f01e5bb3ab3632</anchor>
-      <arglist>(m_observersCompPtr, m_editorsCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtprm_1_1_c_variable_param_gui_comp.html</anchorfile>
-      <anchor>ad47b4774be401ee0f87f35a4ad0724b8</anchor>
-      <arglist>(m_extendersCompPtr, m_editorsCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -69046,6 +68598,5 @@
     <docanchor file="index">Introduction</docanchor>
     <docanchor file="index">Basics</docanchor>
     <docanchor file="index">Features</docanchor>
-    <docanchor file="index">Tutorials</docanchor>
   </compound>
 </tagfile>

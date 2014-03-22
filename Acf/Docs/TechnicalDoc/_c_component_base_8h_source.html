@@ -284,14 +284,14 @@
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;<span class="preprocessor">       I_TASSIGN_MULTI_BASE(member, id, description, isObligatory, defaultValue)</span></div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;</div>
-<div class="line"><a name="l00424"></a><span class="lineno"><a class="line" href="_c_component_base_8h.html#a07c8bc559dbc0c8403f6c24cf374fcb7">  424</a></span>&#160;<span class="preprocessor">#define I_ASSIGN_TO(member, baseAttribute, isObligatory)\</span></div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;<span class="preprocessor">#define I_ASSIGN_TO(member, baseAttribute, isObligatory)\</span></div>
 <div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;<span class="preprocessor">       static icomp::CRelatedInfoRegistrator member##_Info(baseAttribute##_Info, icomp::IComponentStaticInfo::MGI_INTERFACES, istd::CClassInfo::GetInfo&lt;member##_Type::InterfaceType&gt;().GetName(), isObligatory? member##_AttrType::DAF_OBLIGATORY: member##_AttrType::DAF_OPTIONAL);\</span></div>
 <div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;<span class="preprocessor">       Q_UNUSED(member##_Info);\</span></div>
 <div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;<span class="preprocessor">       if (componentPtr != NULL){\</span></div>
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;<span class="preprocessor">              componentPtr-&gt;member.Init(componentPtr, baseAttribute##_Info);\</span></div>
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;<span class="preprocessor">       }</span></div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00434"></a><span class="lineno"><a class="line" href="_c_component_base_8h.html#a9a604c509249dd2ff3e24581366cc0e7">  434</a></span>&#160;<span class="preprocessor">#define I_TASSIGN_TO(member, baseAttribute, isObligatory)\</span></div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="preprocessor">#define I_TASSIGN_TO(member, baseAttribute, isObligatory)\</span></div>
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;<span class="preprocessor">       static icomp::CRelatedInfoRegistrator member##_Info(baseAttribute##_Info, icomp::IComponentStaticInfo::MGI_INTERFACES, istd::CClassInfo::GetInfo&lt;typename member##_Type::InterfaceType&gt;().GetName(), isObligatory? member##_AttrType::DAF_OBLIGATORY: member##_AttrType::DAF_OPTIONAL);\</span></div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="preprocessor">       Q_UNUSED(member##_Info);\</span></div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<span class="preprocessor">       if (componentPtr != NULL){\</span></div>

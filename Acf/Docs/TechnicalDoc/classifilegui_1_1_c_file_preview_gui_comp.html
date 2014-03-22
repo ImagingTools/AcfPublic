@@ -31,7 +31,6 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classifilegui_1_1_c_file_preview_gui_comp-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -95,12 +94,58 @@ Public Types</h2></td></tr>
  }</td></tr>
 <tr class="separator:a0cf035746389143d88bf7373bff50cbe inherit pub_types_classimod_1_1_i_model_editor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a38ef11959558df0f9cd5ba944ecbceaa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifilegui_1_1_c_file_preview_gui_comp.html#a38ef11959558df0f9cd5ba944ecbceaa">I_ASSIGN_TO</a> (m_objectModelCompPtr, m_objectCompPtr, true)</td></tr>
-<tr class="separator:a38ef11959558df0f9cd5ba944ecbceaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab52f8d09fad93e7067eb8ffa59add971"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifilegui_1_1_c_file_preview_gui_comp.html#ab52f8d09fad93e7067eb8ffa59add971">I_ASSIGN_TO</a> (m_objectGuiCompPtr, m_objectObserverCompPtr, true)</td></tr>
-<tr class="separator:ab52f8d09fad93e7067eb8ffa59add971"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ae40c7a2205322a2bf3311f6a6096ab31"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifilegui_1_1_c_file_preview_gui_comp.html#ae40c7a2205322a2bf3311f6a6096ab31">OnGuiModelAttached</a> ()</td></tr>
+<tr class="memdesc:ae40c7a2205322a2bf3311f6a6096ab31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when model is attached and GUI is created.  <a href="#ae40c7a2205322a2bf3311f6a6096ab31">More...</a><br/></td></tr>
+<tr class="separator:ae40c7a2205322a2bf3311f6a6096ab31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc4ed9cc8c029d3aeb7ccf65f33639c6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifilegui_1_1_c_file_preview_gui_comp.html#acc4ed9cc8c029d3aeb7ccf65f33639c6">OnGuiModelDetached</a> ()</td></tr>
+<tr class="memdesc:acc4ed9cc8c029d3aeb7ccf65f33639c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when model is detached or GUI is destroyed.  <a href="#acc4ed9cc8c029d3aeb7ccf65f33639c6">More...</a><br/></td></tr>
+<tr class="separator:acc4ed9cc8c029d3aeb7ccf65f33639c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a440c805ac50b1a78bbad20530c895ef9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifilegui_1_1_c_file_preview_gui_comp.html#a440c805ac50b1a78bbad20530c895ef9">UpdateGui</a> (int updateFlags=0)</td></tr>
+<tr class="memdesc:a440c805ac50b1a78bbad20530c895ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do update of the model GUI.  <a href="#a440c805ac50b1a78bbad20530c895ef9">More...</a><br/></td></tr>
+<tr class="separator:a440c805ac50b1a78bbad20530c895ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24f0028ea59859367e027ba487b3a3c2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifilegui_1_1_c_file_preview_gui_comp.html#a24f0028ea59859367e027ba487b3a3c2">OnGuiCreated</a> ()</td></tr>
+<tr class="memdesc:a24f0028ea59859367e027ba487b3a3c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#a24f0028ea59859367e027ba487b3a3c2">More...</a><br/></td></tr>
+<tr class="separator:a24f0028ea59859367e027ba487b3a3c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f118ad984cf1c881a28b6e0dcd8678c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifilegui_1_1_c_file_preview_gui_comp.html#a2f118ad984cf1c881a28b6e0dcd8678c">OnGuiDestroyed</a> ()</td></tr>
+<tr class="memdesc:a2f118ad984cf1c881a28b6e0dcd8678c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just before GUI is released.  <a href="#a2f118ad984cf1c881a28b6e0dcd8678c">More...</a><br/></td></tr>
+<tr class="separator:a2f118ad984cf1c881a28b6e0dcd8678c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classiqtgui_1_1_c_gui_component_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classiqtgui_1_1_c_gui_component_base')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html">iqtgui::CGuiComponentBase</a></td></tr>
+<tr class="memitem:a24980a8b71effd8ececadf88332ba23e inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_component_base.html#a24980a8b71effd8ececadf88332ba23e">OnKeyPressed</a> (QKeyEvent *event)</td></tr>
+<tr class="memdesc:a24980a8b71effd8ececadf88332ba23e inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called from widget event filter when key is pressed.  <a href="#a24980a8b71effd8ececadf88332ba23e">More...</a><br/></td></tr>
+<tr class="separator:a24980a8b71effd8ececadf88332ba23e inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e04cf7eb9bba927ee9dd4e20f4f211b inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_component_base.html#a3e04cf7eb9bba927ee9dd4e20f4f211b">OnRetranslate</a> ()</td></tr>
+<tr class="memdesc:a3e04cf7eb9bba927ee9dd4e20f4f211b inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when non-GUI elements (like commands) should be retranslated.  <a href="#a3e04cf7eb9bba927ee9dd4e20f4f211b">More...</a><br/></td></tr>
+<tr class="separator:a3e04cf7eb9bba927ee9dd4e20f4f211b inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bb5acae654dd8033f72f7d3b4dc2ce3 inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_component_base.html#a7bb5acae654dd8033f72f7d3b4dc2ce3">SetStatusIcon</a> (const QIcon &amp;icon)</td></tr>
+<tr class="memdesc:a7bb5acae654dd8033f72f7d3b4dc2ce3 inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set status icon;.  <a href="#a7bb5acae654dd8033f72f7d3b4dc2ce3">More...</a><br/></td></tr>
+<tr class="separator:a7bb5acae654dd8033f72f7d3b4dc2ce3 inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaebf9e40fa2b193e2e3f7d4e8ce97877 inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_component_base.html#aaebf9e40fa2b193e2e3f7d4e8ce97877">SetStatusText</a> (const QString &amp;text)</td></tr>
+<tr class="memdesc:aaebf9e40fa2b193e2e3f7d4e8ce97877 inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set status text;.  <a href="#aaebf9e40fa2b193e2e3f7d4e8ce97877">More...</a><br/></td></tr>
+<tr class="separator:aaebf9e40fa2b193e2e3f7d4e8ce97877 inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7d034ff8f69f4102e8df829f71802f5 inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_component_base.html#af7d034ff8f69f4102e8df829f71802f5">eventFilter</a> (QObject *sourcePtr, QEvent *eventPtr)</td></tr>
+<tr class="separator:af7d034ff8f69f4102e8df829f71802f5 inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classicomp_1_1_c_component_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classicomp_1_1_c_component_base')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a></td></tr>
+<tr class="memitem:a25b009c2dd174d3f88437ebe0605ca60 inherit pro_methods_classicomp_1_1_c_component_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_component_base.html#a25b009c2dd174d3f88437ebe0605ca60">IsComponentActive</a> () const </td></tr>
+<tr class="memdesc:a25b009c2dd174d3f88437ebe0605ca60 inherit pro_methods_classicomp_1_1_c_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if component is active.  <a href="#a25b009c2dd174d3f88437ebe0605ca60">More...</a><br/></td></tr>
+<tr class="separator:a25b009c2dd174d3f88437ebe0605ca60 inherit pro_methods_classicomp_1_1_c_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc2c8dff393cdef2161b626979c7dbd0 inherit pro_methods_classicomp_1_1_c_component_base"><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
+<a class="el" href="classicomp_1_1_i_real_component_static_info.html">icomp::IRealComponentStaticInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_component_base.html#acc2c8dff393cdef2161b626979c7dbd0">GetComponentStaticInfo</a> () const =0</td></tr>
+<tr class="memdesc:acc2c8dff393cdef2161b626979c7dbd0 inherit pro_methods_classicomp_1_1_c_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to static info of this component.  <a href="#acc2c8dff393cdef2161b626979c7dbd0">More...</a><br/></td></tr>
+<tr class="separator:acc2c8dff393cdef2161b626979c7dbd0 inherit pro_methods_classicomp_1_1_c_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classimod_1_1_t_single_model_observer_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classimod_1_1_t_single_model_observer_base')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase&lt; ifile::IFileNameParam &gt;</a></td></tr>
+<tr class="memitem:a5715370ed94fe45f1ff07aa542d042af inherit pro_methods_classimod_1_1_t_single_model_observer_base"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classifile_1_1_i_file_name_param.html">ifile::IFileNameParam</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_t_single_model_observer_base.html#a5715370ed94fe45f1ff07aa542d042af">CastFromModel</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr) const</td></tr>
+<tr class="separator:a5715370ed94fe45f1ff07aa542d042af inherit pro_methods_classimod_1_1_t_single_model_observer_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classimod_1_1_c_single_model_observer_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classimod_1_1_c_single_model_observer_base')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classimod_1_1_c_single_model_observer_base.html">imod::CSingleModelObserverBase</a></td></tr>
+<tr class="memitem:aaed65edfc15ffaabacc45627ea7a38b4 inherit pro_methods_classimod_1_1_c_single_model_observer_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_single_model_observer_base.html#aaed65edfc15ffaabacc45627ea7a38b4">SetModelPtr</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
+<tr class="memdesc:aaed65edfc15ffaabacc45627ea7a38b4 inherit pro_methods_classimod_1_1_c_single_model_observer_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set internal model pointer to specified value.  <a href="#aaed65edfc15ffaabacc45627ea7a38b4">More...</a><br/></td></tr>
+<tr class="separator:aaed65edfc15ffaabacc45627ea7a38b4 inherit pro_methods_classimod_1_1_c_single_model_observer_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66f8d05283672d798a57262434229e93 inherit pro_methods_classimod_1_1_c_single_model_observer_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_single_model_observer_base.html#a66f8d05283672d798a57262434229e93">OnUpdate</a> (int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
+<tr class="separator:a66f8d05283672d798a57262434229e93 inherit pro_methods_classimod_1_1_c_single_model_observer_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_methods_classiqtgui_1_1_t_gui_component_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classiqtgui_1_1_t_gui_component_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classiqtgui_1_1_t_gui_component_base.html">iqtgui::TGuiComponentBase&lt; QWidget &gt;</a></td></tr>
 <tr class="memitem:a1f5e57c7009a5942c96a2ddb7b8fb57c inherit pub_methods_classiqtgui_1_1_t_gui_component_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_t_gui_component_base.html#a1f5e57c7009a5942c96a2ddb7b8fb57c">TGuiComponentBase</a> ()</td></tr>
 <tr class="separator:a1f5e57c7009a5942c96a2ddb7b8fb57c inherit pub_methods_classiqtgui_1_1_t_gui_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,59 +221,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a27b16edc19f76f96aec64bdf284ac0cb inherit pub_methods_classimod_1_1_c_single_model_observer_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_single_model_observer_base.html#a27b16edc19f76f96aec64bdf284ac0cb">BeforeUpdate</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr, int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
 <tr class="memdesc:a27b16edc19f76f96aec64bdf284ac0cb inherit pub_methods_classimod_1_1_c_single_model_observer_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be called before update of the observer contents occures.  <a href="#a27b16edc19f76f96aec64bdf284ac0cb">More...</a><br/></td></tr>
 <tr class="separator:a27b16edc19f76f96aec64bdf284ac0cb inherit pub_methods_classimod_1_1_c_single_model_observer_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:ae40c7a2205322a2bf3311f6a6096ab31"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifilegui_1_1_c_file_preview_gui_comp.html#ae40c7a2205322a2bf3311f6a6096ab31">OnGuiModelAttached</a> ()</td></tr>
-<tr class="memdesc:ae40c7a2205322a2bf3311f6a6096ab31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when model is attached and GUI is created.  <a href="#ae40c7a2205322a2bf3311f6a6096ab31">More...</a><br/></td></tr>
-<tr class="separator:ae40c7a2205322a2bf3311f6a6096ab31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc4ed9cc8c029d3aeb7ccf65f33639c6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifilegui_1_1_c_file_preview_gui_comp.html#acc4ed9cc8c029d3aeb7ccf65f33639c6">OnGuiModelDetached</a> ()</td></tr>
-<tr class="memdesc:acc4ed9cc8c029d3aeb7ccf65f33639c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when model is detached or GUI is destroyed.  <a href="#acc4ed9cc8c029d3aeb7ccf65f33639c6">More...</a><br/></td></tr>
-<tr class="separator:acc4ed9cc8c029d3aeb7ccf65f33639c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a440c805ac50b1a78bbad20530c895ef9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifilegui_1_1_c_file_preview_gui_comp.html#a440c805ac50b1a78bbad20530c895ef9">UpdateGui</a> (int updateFlags=0)</td></tr>
-<tr class="memdesc:a440c805ac50b1a78bbad20530c895ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do update of the model GUI.  <a href="#a440c805ac50b1a78bbad20530c895ef9">More...</a><br/></td></tr>
-<tr class="separator:a440c805ac50b1a78bbad20530c895ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24f0028ea59859367e027ba487b3a3c2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifilegui_1_1_c_file_preview_gui_comp.html#a24f0028ea59859367e027ba487b3a3c2">OnGuiCreated</a> ()</td></tr>
-<tr class="memdesc:a24f0028ea59859367e027ba487b3a3c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just after GUI is initialized.  <a href="#a24f0028ea59859367e027ba487b3a3c2">More...</a><br/></td></tr>
-<tr class="separator:a24f0028ea59859367e027ba487b3a3c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f118ad984cf1c881a28b6e0dcd8678c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifilegui_1_1_c_file_preview_gui_comp.html#a2f118ad984cf1c881a28b6e0dcd8678c">OnGuiDestroyed</a> ()</td></tr>
-<tr class="memdesc:a2f118ad984cf1c881a28b6e0dcd8678c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just before GUI is released.  <a href="#a2f118ad984cf1c881a28b6e0dcd8678c">More...</a><br/></td></tr>
-<tr class="separator:a2f118ad984cf1c881a28b6e0dcd8678c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classiqtgui_1_1_c_gui_component_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classiqtgui_1_1_c_gui_component_base')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html">iqtgui::CGuiComponentBase</a></td></tr>
-<tr class="memitem:a24980a8b71effd8ececadf88332ba23e inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_component_base.html#a24980a8b71effd8ececadf88332ba23e">OnKeyPressed</a> (QKeyEvent *event)</td></tr>
-<tr class="memdesc:a24980a8b71effd8ececadf88332ba23e inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called from widget event filter when key is pressed.  <a href="#a24980a8b71effd8ececadf88332ba23e">More...</a><br/></td></tr>
-<tr class="separator:a24980a8b71effd8ececadf88332ba23e inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e04cf7eb9bba927ee9dd4e20f4f211b inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_component_base.html#a3e04cf7eb9bba927ee9dd4e20f4f211b">OnRetranslate</a> ()</td></tr>
-<tr class="memdesc:a3e04cf7eb9bba927ee9dd4e20f4f211b inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when non-GUI elements (like commands) should be retranslated.  <a href="#a3e04cf7eb9bba927ee9dd4e20f4f211b">More...</a><br/></td></tr>
-<tr class="separator:a3e04cf7eb9bba927ee9dd4e20f4f211b inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bb5acae654dd8033f72f7d3b4dc2ce3 inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_component_base.html#a7bb5acae654dd8033f72f7d3b4dc2ce3">SetStatusIcon</a> (const QIcon &amp;icon)</td></tr>
-<tr class="memdesc:a7bb5acae654dd8033f72f7d3b4dc2ce3 inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set status icon;.  <a href="#a7bb5acae654dd8033f72f7d3b4dc2ce3">More...</a><br/></td></tr>
-<tr class="separator:a7bb5acae654dd8033f72f7d3b4dc2ce3 inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaebf9e40fa2b193e2e3f7d4e8ce97877 inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_component_base.html#aaebf9e40fa2b193e2e3f7d4e8ce97877">SetStatusText</a> (const QString &amp;text)</td></tr>
-<tr class="memdesc:aaebf9e40fa2b193e2e3f7d4e8ce97877 inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set status text;.  <a href="#aaebf9e40fa2b193e2e3f7d4e8ce97877">More...</a><br/></td></tr>
-<tr class="separator:aaebf9e40fa2b193e2e3f7d4e8ce97877 inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7d034ff8f69f4102e8df829f71802f5 inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_component_base.html#af7d034ff8f69f4102e8df829f71802f5">eventFilter</a> (QObject *sourcePtr, QEvent *eventPtr)</td></tr>
-<tr class="separator:af7d034ff8f69f4102e8df829f71802f5 inherit pro_methods_classiqtgui_1_1_c_gui_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classicomp_1_1_c_component_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classicomp_1_1_c_component_base')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a></td></tr>
-<tr class="memitem:a25b009c2dd174d3f88437ebe0605ca60 inherit pro_methods_classicomp_1_1_c_component_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_component_base.html#a25b009c2dd174d3f88437ebe0605ca60">IsComponentActive</a> () const </td></tr>
-<tr class="memdesc:a25b009c2dd174d3f88437ebe0605ca60 inherit pro_methods_classicomp_1_1_c_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if component is active.  <a href="#a25b009c2dd174d3f88437ebe0605ca60">More...</a><br/></td></tr>
-<tr class="separator:a25b009c2dd174d3f88437ebe0605ca60 inherit pro_methods_classicomp_1_1_c_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc2c8dff393cdef2161b626979c7dbd0 inherit pro_methods_classicomp_1_1_c_component_base"><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classicomp_1_1_i_real_component_static_info.html">icomp::IRealComponentStaticInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_component_base.html#acc2c8dff393cdef2161b626979c7dbd0">GetComponentStaticInfo</a> () const =0</td></tr>
-<tr class="memdesc:acc2c8dff393cdef2161b626979c7dbd0 inherit pro_methods_classicomp_1_1_c_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get access to static info of this component.  <a href="#acc2c8dff393cdef2161b626979c7dbd0">More...</a><br/></td></tr>
-<tr class="separator:acc2c8dff393cdef2161b626979c7dbd0 inherit pro_methods_classicomp_1_1_c_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classimod_1_1_t_single_model_observer_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classimod_1_1_t_single_model_observer_base')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classimod_1_1_t_single_model_observer_base.html">imod::TSingleModelObserverBase&lt; ifile::IFileNameParam &gt;</a></td></tr>
-<tr class="memitem:a5715370ed94fe45f1ff07aa542d042af inherit pro_methods_classimod_1_1_t_single_model_observer_base"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classifile_1_1_i_file_name_param.html">ifile::IFileNameParam</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_t_single_model_observer_base.html#a5715370ed94fe45f1ff07aa542d042af">CastFromModel</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr) const</td></tr>
-<tr class="separator:a5715370ed94fe45f1ff07aa542d042af inherit pro_methods_classimod_1_1_t_single_model_observer_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classimod_1_1_c_single_model_observer_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classimod_1_1_c_single_model_observer_base')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classimod_1_1_c_single_model_observer_base.html">imod::CSingleModelObserverBase</a></td></tr>
-<tr class="memitem:aaed65edfc15ffaabacc45627ea7a38b4 inherit pro_methods_classimod_1_1_c_single_model_observer_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_single_model_observer_base.html#aaed65edfc15ffaabacc45627ea7a38b4">SetModelPtr</a> (<a class="el" href="classimod_1_1_i_model.html">imod::IModel</a> *modelPtr)</td></tr>
-<tr class="memdesc:aaed65edfc15ffaabacc45627ea7a38b4 inherit pro_methods_classimod_1_1_c_single_model_observer_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set internal model pointer to specified value.  <a href="#aaed65edfc15ffaabacc45627ea7a38b4">More...</a><br/></td></tr>
-<tr class="separator:aaed65edfc15ffaabacc45627ea7a38b4 inherit pro_methods_classimod_1_1_c_single_model_observer_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66f8d05283672d798a57262434229e93 inherit pro_methods_classimod_1_1_c_single_model_observer_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimod_1_1_c_single_model_observer_base.html#a66f8d05283672d798a57262434229e93">OnUpdate</a> (int updateFlags, <a class="el" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a> *updateParamsPtr)</td></tr>
-<tr class="separator:a66f8d05283672d798a57262434229e93 inherit pro_methods_classimod_1_1_c_single_model_observer_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_static_methods_classicomp_1_1_c_component_base"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classicomp_1_1_c_component_base')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classicomp_1_1_c_component_base.html">icomp::CComponentBase</a></td></tr>
 <tr class="memitem:a9aa72f8300da1433878507f90af3dff7 inherit pro_static_methods_classicomp_1_1_c_component_base"><td class="memItemLeft" align="right" valign="top">static const <br class="typebreak"/>
 <a class="el" href="classicomp_1_1_i_real_component_static_info.html">icomp::IRealComponentStaticInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classicomp_1_1_c_component_base.html#a9aa72f8300da1433878507f90af3dff7">InitStaticInfo</a> (<a class="el" href="classicomp_1_1_i_component.html">IComponent</a> *componentPtr)</td></tr>
@@ -260,70 +252,6 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a38ef11959558df0f9cd5ba944ecbceaa"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ifilegui::CFilePreviewGuiComp::I_ASSIGN_TO </td>
-          <td>(</td>
-          <td class="paramtype">m_objectModelCompPtr&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">m_objectCompPtr&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">true&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ab52f8d09fad93e7067eb8ffa59add971"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ifilegui::CFilePreviewGuiComp::I_ASSIGN_TO </td>
-          <td>(</td>
-          <td class="paramtype">m_objectGuiCompPtr&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">m_objectObserverCompPtr&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">true&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a24f0028ea59859367e027ba487b3a3c2"></a>
 <div class="memitem">
 <div class="memproto">
