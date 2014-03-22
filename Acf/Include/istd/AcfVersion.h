@@ -1,6 +1,6 @@
 /********************************************************************************
 **
-**	Copyright (C) 2007-2013 Witold Gantzke & Kirill Lepskiy
+**	Copyright (C) 2007-2014 Witold Gantzke & Kirill Lepskiy
 **
 **	This file is part of the ACF Toolkit.
 **
@@ -32,7 +32,7 @@ namespace istd
 */
 enum RepositoryState
 {
-	RS_ORIGINAL_VERSION =  3397,
+	RS_ORIGINAL_VERSION =  3399,
 	RS_DIRTY_FLAG = 0,
 	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
 };
