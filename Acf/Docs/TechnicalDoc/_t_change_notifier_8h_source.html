@@ -35,163 +35,164 @@
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define istd_TChangeNotifier_included</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_changeable_8h.html">istd/IChangeable.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_t_pointer_base_8h.html">istd/TPointerBase.h</a>&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// ACF includes</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_changeable_8h.html">istd/IChangeable.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_t_pointer_base_8h.html">istd/TPointerBase.h</a>&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>istd</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>istd</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classistd_1_1_t_change_notifier.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classistd_1_1_t_change_notifier.html">TChangeNotifier</a>: <span class="keyword">public</span> <a class="code" href="classistd_1_1_t_pointer_base.html">istd::TPointerBase</a>&lt;Changeable&gt;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classistd_1_1_t_change_notifier.html#a5024ec97b43bf3650a5772e23253577d">   24</a></span>&#160;       <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_pointer_base.html">istd::TPointerBase&lt;Changeable&gt;</a> <a class="code" href="classistd_1_1_t_change_notifier.html#a5024ec97b43bf3650a5772e23253577d">BaseClass</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;       <span class="keyword">explicit</span> <a class="code" href="classistd_1_1_t_change_notifier.html#ac267b77aef0fa073097601bd43e3ba53">TChangeNotifier</a>(Changeable* changeablePtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <span class="keywordtype">int</span> changeFlags = <a class="code" href="classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9a3c86ebce4c2fe9371a8409708979b789">IChangeable::CF_MODEL</a>, <a class="code" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;       <a class="code" href="classistd_1_1_t_change_notifier.html#ac267b77aef0fa073097601bd43e3ba53">TChangeNotifier</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_change_notifier.html">TChangeNotifier</a>&amp; notifier);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;       <span class="keyword">virtual</span>  <a class="code" href="classistd_1_1_t_change_notifier.html#a33bf4698dea9d20c7922c0fc39a0bf71">~TChangeNotifier</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_change_notifier.html#a3bd524813e6c66d33ce42cc42a8be71b">SetPtr</a>(Changeable* changeablePtr);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_change_notifier.html#a254c668d925984c4d9eaafd3da70dbec">Reset</a>();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_change_notifier.html#a0f6d24bb1c85f83cf0571b169683b87a">Abort</a>();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;       <span class="keyword">const</span> Changeable* <a class="code" href="classistd_1_1_t_change_notifier.html#abacf580696db63dfe09dfb8fd91e0ca5">operator-&gt;</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;       Changeable* <a class="code" href="classistd_1_1_t_change_notifier.html#abacf580696db63dfe09dfb8fd91e0ca5">operator-&gt;</a>();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;       <span class="keyword">operator</span> Changeable*() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;       <span class="keywordtype">int</span> m_changeFlags;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;       <a class="code" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* m_updateParamsPtr;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classistd_1_1_t_change_notifier.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classistd_1_1_t_change_notifier.html">TChangeNotifier</a>: <span class="keyword">public</span> <a class="code" href="classistd_1_1_t_pointer_base.html">istd::TPointerBase</a>&lt;Changeable&gt;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classistd_1_1_t_change_notifier.html#a5024ec97b43bf3650a5772e23253577d">   25</a></span>&#160;       <span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_pointer_base.html">istd::TPointerBase&lt;Changeable&gt;</a> <a class="code" href="classistd_1_1_t_change_notifier.html#a5024ec97b43bf3650a5772e23253577d">BaseClass</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;       <span class="keyword">explicit</span> <a class="code" href="classistd_1_1_t_change_notifier.html#ac267b77aef0fa073097601bd43e3ba53">TChangeNotifier</a>(Changeable* changeablePtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <span class="keywordtype">int</span> changeFlags = <a class="code" href="classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9a3c86ebce4c2fe9371a8409708979b789">IChangeable::CF_MODEL</a>, <a class="code" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;       <a class="code" href="classistd_1_1_t_change_notifier.html#ac267b77aef0fa073097601bd43e3ba53">TChangeNotifier</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_change_notifier.html">TChangeNotifier</a>&amp; notifier);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;       <span class="keyword">virtual</span>  <a class="code" href="classistd_1_1_t_change_notifier.html#a33bf4698dea9d20c7922c0fc39a0bf71">~TChangeNotifier</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_change_notifier.html#a3bd524813e6c66d33ce42cc42a8be71b">SetPtr</a>(Changeable* changeablePtr);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_change_notifier.html#a254c668d925984c4d9eaafd3da70dbec">Reset</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_change_notifier.html#a0f6d24bb1c85f83cf0571b169683b87a">Abort</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;       <span class="keyword">const</span> Changeable* <a class="code" href="classistd_1_1_t_change_notifier.html#abacf580696db63dfe09dfb8fd91e0ca5">operator-&gt;</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;       Changeable* <a class="code" href="classistd_1_1_t_change_notifier.html#abacf580696db63dfe09dfb8fd91e0ca5">operator-&gt;</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;       <span class="keyword">operator</span> Changeable*() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;       <span class="keywordtype">int</span> m_changeFlags;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;       <a class="code" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* m_updateParamsPtr;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classistd_1_1_t_change_notifier.html#ac267b77aef0fa073097601bd43e3ba53">   64</a></span>&#160;<a class="code" href="classistd_1_1_t_change_notifier.html#ac267b77aef0fa073097601bd43e3ba53">TChangeNotifier&lt;Changeable&gt;::TChangeNotifier</a>(Changeable* changeablePtr, <span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;:      <a class="code" href="classistd_1_1_t_pointer_base.html">BaseClass</a>(changeablePtr),</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;       m_changeFlags(changeFlags),</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;       m_updateParamsPtr(updateParamsPtr)</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;       <span class="keywordflow">if</span> (changeablePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;              changeablePtr-&gt;BeginChanges(m_changeFlags, m_updateParamsPtr);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;       }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classistd_1_1_t_change_notifier.html#ac267b77aef0fa073097601bd43e3ba53">   65</a></span>&#160;<a class="code" href="classistd_1_1_t_change_notifier.html#ac267b77aef0fa073097601bd43e3ba53">TChangeNotifier&lt;Changeable&gt;::TChangeNotifier</a>(Changeable* changeablePtr, <span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* updateParamsPtr)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;:      <a class="code" href="classistd_1_1_t_pointer_base.html">BaseClass</a>(changeablePtr),</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;       m_changeFlags(changeFlags),</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;       m_updateParamsPtr(updateParamsPtr)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;       <span class="keywordflow">if</span> (changeablePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;              changeablePtr-&gt;BeginChanges(m_changeFlags, m_updateParamsPtr);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;       }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;</div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classistd_1_1_t_change_notifier.html#a85b92a76d2b6da1e7e92dd131b5fee70">   76</a></span>&#160;<a class="code" href="classistd_1_1_t_change_notifier.html#ac267b77aef0fa073097601bd43e3ba53">TChangeNotifier&lt;Changeable&gt;::TChangeNotifier</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_change_notifier.html">TChangeNotifier</a>&amp; notifier)</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;:      <a class="code" href="classistd_1_1_t_pointer_base.html">BaseClass</a>(notifier),</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;       m_changeFlags(notifier.m_changeFlags),</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;       m_updateParamsPtr(notifier.m_updateParamsPtr)</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;       <span class="keywordflow">if</span> (<a class="code" href="classistd_1_1_t_pointer_base.html#ade2adaa3f705bd7e98adbdf1bb79dabf">BaseClass::IsValid</a>()){</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;              <a class="code" href="classistd_1_1_t_pointer_base.html#a3eed23fa98f315a8cbfd153e334f5928">BaseClass::operator-&gt;</a>()-&gt;BeginChanges(notifier.m_changeFlags, notifier.m_updateParamsPtr);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;       }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classistd_1_1_t_change_notifier.html#a85b92a76d2b6da1e7e92dd131b5fee70">   77</a></span>&#160;<a class="code" href="classistd_1_1_t_change_notifier.html#ac267b77aef0fa073097601bd43e3ba53">TChangeNotifier&lt;Changeable&gt;::TChangeNotifier</a>(<span class="keyword">const</span> <a class="code" href="classistd_1_1_t_change_notifier.html">TChangeNotifier</a>&amp; notifier)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;:      <a class="code" href="classistd_1_1_t_pointer_base.html">BaseClass</a>(notifier),</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;       m_changeFlags(notifier.m_changeFlags),</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;       m_updateParamsPtr(notifier.m_updateParamsPtr)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;       <span class="keywordflow">if</span> (<a class="code" href="classistd_1_1_t_pointer_base.html#ade2adaa3f705bd7e98adbdf1bb79dabf">BaseClass::IsValid</a>()){</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;              <a class="code" href="classistd_1_1_t_pointer_base.html#a3eed23fa98f315a8cbfd153e334f5928">BaseClass::operator-&gt;</a>()-&gt;BeginChanges(notifier.m_changeFlags, notifier.m_updateParamsPtr);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;       }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;</div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classistd_1_1_t_change_notifier.html#a33bf4698dea9d20c7922c0fc39a0bf71">   88</a></span>&#160;<a class="code" href="classistd_1_1_t_change_notifier.html#a33bf4698dea9d20c7922c0fc39a0bf71">TChangeNotifier&lt;Changeable&gt;::~TChangeNotifier</a>()</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;       Reset();</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classistd_1_1_t_change_notifier.html#a33bf4698dea9d20c7922c0fc39a0bf71">   89</a></span>&#160;<a class="code" href="classistd_1_1_t_change_notifier.html#a33bf4698dea9d20c7922c0fc39a0bf71">TChangeNotifier&lt;Changeable&gt;::~TChangeNotifier</a>()</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;       Reset();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;</div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classistd_1_1_t_change_notifier.html#a3bd524813e6c66d33ce42cc42a8be71b">   95</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_change_notifier.html#a3bd524813e6c66d33ce42cc42a8be71b">TChangeNotifier&lt;Changeable&gt;::SetPtr</a>(Changeable* changeablePtr)</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;       <span class="keywordflow">if</span> (changeablePtr != BaseClass::GetPtr()){</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;              Reset();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;              BaseClass::SetPtr(changeablePtr);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;              <span class="keywordflow">if</span> (changeablePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                     changeablePtr-&gt;BeginChanges(m_changeFlags, m_updateParamsPtr);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;              }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;       }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classistd_1_1_t_change_notifier.html#a3bd524813e6c66d33ce42cc42a8be71b">   96</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_change_notifier.html#a3bd524813e6c66d33ce42cc42a8be71b">TChangeNotifier&lt;Changeable&gt;::SetPtr</a>(Changeable* changeablePtr)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;       <span class="keywordflow">if</span> (changeablePtr != BaseClass::GetPtr()){</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;              Reset();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;              BaseClass::SetPtr(changeablePtr);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;              <span class="keywordflow">if</span> (changeablePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                     changeablePtr-&gt;BeginChanges(m_changeFlags, m_updateParamsPtr);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;              }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;       }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;</div>
-<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classistd_1_1_t_change_notifier.html#a254c668d925984c4d9eaafd3da70dbec">  110</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_change_notifier.html#a254c668d925984c4d9eaafd3da70dbec">TChangeNotifier&lt;Changeable&gt;::Reset</a>()</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;       Changeable* changeablePtr = BaseClass::GetPtr();</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;       <span class="keywordflow">if</span> (changeablePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;              BaseClass::Reset();</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;              changeablePtr-&gt;EndChanges(m_changeFlags, m_updateParamsPtr);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;       }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classistd_1_1_t_change_notifier.html#a254c668d925984c4d9eaafd3da70dbec">  111</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_change_notifier.html#a254c668d925984c4d9eaafd3da70dbec">TChangeNotifier&lt;Changeable&gt;::Reset</a>()</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;{</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;       Changeable* changeablePtr = BaseClass::GetPtr();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;       <span class="keywordflow">if</span> (changeablePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;              BaseClass::Reset();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;              changeablePtr-&gt;EndChanges(m_changeFlags, m_updateParamsPtr);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;       }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;</div>
-<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classistd_1_1_t_change_notifier.html#a0f6d24bb1c85f83cf0571b169683b87a">  123</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_change_notifier.html#a0f6d24bb1c85f83cf0571b169683b87a">TChangeNotifier&lt;Changeable&gt;::Abort</a>()</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;       Changeable* changeablePtr = BaseClass::GetPtr();</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;       <span class="keywordflow">if</span> (changeablePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;              changeablePtr-&gt;EndChanges(m_changeFlags | <a class="code" href="classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9aba633d7cd1bffe89c299e032f286db6c">IChangeable::CF_ABORTED</a>, m_updateParamsPtr);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;              BaseClass::Reset();</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;       }</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classistd_1_1_t_change_notifier.html#a0f6d24bb1c85f83cf0571b169683b87a">  124</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_t_change_notifier.html#a0f6d24bb1c85f83cf0571b169683b87a">TChangeNotifier&lt;Changeable&gt;::Abort</a>()</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;{</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;       Changeable* changeablePtr = BaseClass::GetPtr();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;       <span class="keywordflow">if</span> (changeablePtr != <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>){</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;              changeablePtr-&gt;EndChanges(m_changeFlags | <a class="code" href="classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9aba633d7cd1bffe89c299e032f286db6c">IChangeable::CF_ABORTED</a>, m_updateParamsPtr);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;              BaseClass::Reset();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;       }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;</div>
-<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="classistd_1_1_t_change_notifier.html#abacf580696db63dfe09dfb8fd91e0ca5">  136</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> Changeable* <a class="code" href="classistd_1_1_t_change_notifier.html#abacf580696db63dfe09dfb8fd91e0ca5">TChangeNotifier&lt;Changeable&gt;::operator-&gt;</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;       Q_ASSERT(BaseClass::IsValid());</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;       <span class="keywordflow">return</span> BaseClass::GetPtr();</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;}</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classistd_1_1_t_change_notifier.html#abacf580696db63dfe09dfb8fd91e0ca5">  137</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> Changeable* <a class="code" href="classistd_1_1_t_change_notifier.html#abacf580696db63dfe09dfb8fd91e0ca5">TChangeNotifier&lt;Changeable&gt;::operator-&gt;</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;       Q_ASSERT(BaseClass::IsValid());</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;       <span class="keywordflow">return</span> BaseClass::GetPtr();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;</div>
-<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="classistd_1_1_t_change_notifier.html#a9a9abe8f4fdfe595060a732abac79caf">  145</a></span>&#160;<span class="keyword">inline</span> Changeable* <a class="code" href="classistd_1_1_t_change_notifier.html#abacf580696db63dfe09dfb8fd91e0ca5">TChangeNotifier&lt;Changeable&gt;::operator-&gt;</a>()</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;{</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;       Q_ASSERT(BaseClass::IsValid());</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;       <span class="keywordflow">return</span> BaseClass::GetPtr();</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="classistd_1_1_t_change_notifier.html#a9a9abe8f4fdfe595060a732abac79caf">  146</a></span>&#160;<span class="keyword">inline</span> Changeable* <a class="code" href="classistd_1_1_t_change_notifier.html#abacf580696db63dfe09dfb8fd91e0ca5">TChangeNotifier&lt;Changeable&gt;::operator-&gt;</a>()</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;{</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;       Q_ASSERT(BaseClass::IsValid());</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;       <span class="keywordflow">return</span> BaseClass::GetPtr();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;</div>
-<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="classistd_1_1_t_change_notifier.html#a53f041d888a7f79f57dc4c9533495909">  154</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="classistd_1_1_t_change_notifier.html">TChangeNotifier&lt;Changeable&gt;::operator</a> Changeable*() <span class="keyword">const</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;{</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;       Q_ASSERT(BaseClass::IsValid());</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;       <span class="keywordflow">return</span> BaseClass::GetPtr();</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Changeable&gt;</div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="classistd_1_1_t_change_notifier.html#a53f041d888a7f79f57dc4c9533495909">  155</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="classistd_1_1_t_change_notifier.html">TChangeNotifier&lt;Changeable&gt;::operator</a> Changeable*() <span class="keyword">const</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;{</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;       Q_ASSERT(BaseClass::IsValid());</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;       <span class="keywordflow">return</span> BaseClass::GetPtr();</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="group___helpers.html#gab98382213939466dbfecbece782468d4">  169</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_change_notifier.html">TChangeNotifier&lt;IChangeable&gt;</a> <a class="code" href="group___helpers.html#gab98382213939466dbfecbece782468d4">CChangeNotifier</a>;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="group___helpers.html#gab98382213939466dbfecbece782468d4">  170</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="classistd_1_1_t_change_notifier.html">TChangeNotifier&lt;IChangeable&gt;</a> <a class="code" href="group___helpers.html#gab98382213939466dbfecbece782468d4">CChangeNotifier</a>;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;} <span class="comment">// namespace istd</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;} <span class="comment">// namespace istd</span></div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor">#endif // !istd_TChangeNotifier_included</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor"></span></div>
-<div class="ttc" id="classistd_1_1_t_pointer_base_html"><div class="ttname"><a href="classistd_1_1_t_pointer_base.html">istd::TPointerBase</a></div><div class="ttdoc">Implementation of pointer wrapper. </div><div class="ttdef"><b>Definition:</b> <a href="_t_pointer_base_8h_source.html#l00052">TPointerBase.h:52</a></div></div>
-<div class="ttc" id="classistd_1_1_t_change_notifier_html_a5024ec97b43bf3650a5772e23253577d"><div class="ttname"><a href="classistd_1_1_t_change_notifier.html#a5024ec97b43bf3650a5772e23253577d">istd::TChangeNotifier::BaseClass</a></div><div class="ttdeci">istd::TPointerBase&lt; Changeable &gt; BaseClass</div><div class="ttdef"><b>Definition:</b> <a href="_t_change_notifier_8h_source.html#l00024">TChangeNotifier.h:24</a></div></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">#endif // !istd_TChangeNotifier_included</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="preprocessor"></span></div>
+<div class="ttc" id="classistd_1_1_t_pointer_base_html"><div class="ttname"><a href="classistd_1_1_t_pointer_base.html">istd::TPointerBase</a></div><div class="ttdoc">Implementation of pointer wrapper. </div><div class="ttdef"><b>Definition:</b> <a href="_t_pointer_base_8h_source.html#l00053">TPointerBase.h:53</a></div></div>
+<div class="ttc" id="classistd_1_1_t_change_notifier_html_a5024ec97b43bf3650a5772e23253577d"><div class="ttname"><a href="classistd_1_1_t_change_notifier.html#a5024ec97b43bf3650a5772e23253577d">istd::TChangeNotifier::BaseClass</a></div><div class="ttdeci">istd::TPointerBase&lt; Changeable &gt; BaseClass</div><div class="ttdef"><b>Definition:</b> <a href="_t_change_notifier_8h_source.html#l00025">TChangeNotifier.h:25</a></div></div>
 <div class="ttc" id="classistd_1_1_t_pointer_base_html_ade2adaa3f705bd7e98adbdf1bb79dabf"><div class="ttname"><a href="classistd_1_1_t_pointer_base.html#ade2adaa3f705bd7e98adbdf1bb79dabf">istd::TPointerBase&lt; Changeable &gt;::IsValid</a></div><div class="ttdeci">bool IsValid() const</div><div class="ttdoc">Check if internal pointer not NULL. </div></div>
-<div class="ttc" id="group___helpers_html_gab98382213939466dbfecbece782468d4"><div class="ttname"><a href="group___helpers.html#gab98382213939466dbfecbece782468d4">istd::CChangeNotifier</a></div><div class="ttdeci">TChangeNotifier&lt; IChangeable &gt; CChangeNotifier</div><div class="ttdoc">Basic change notifier for unspecified type. </div><div class="ttdef"><b>Definition:</b> <a href="_t_change_notifier_8h_source.html#l00169">TChangeNotifier.h:169</a></div></div>
-<div class="ttc" id="classistd_1_1_t_change_notifier_html_a33bf4698dea9d20c7922c0fc39a0bf71"><div class="ttname"><a href="classistd_1_1_t_change_notifier.html#a33bf4698dea9d20c7922c0fc39a0bf71">istd::TChangeNotifier::~TChangeNotifier</a></div><div class="ttdeci">virtual ~TChangeNotifier()</div><div class="ttdef"><b>Definition:</b> <a href="_t_change_notifier_8h_source.html#l00088">TChangeNotifier.h:88</a></div></div>
-<div class="ttc" id="classistd_1_1_t_change_notifier_html_ac267b77aef0fa073097601bd43e3ba53"><div class="ttname"><a href="classistd_1_1_t_change_notifier.html#ac267b77aef0fa073097601bd43e3ba53">istd::TChangeNotifier::TChangeNotifier</a></div><div class="ttdeci">TChangeNotifier(Changeable *changeablePtr=NULL, int changeFlags=IChangeable::CF_MODEL, istd::IPolymorphic *updateParamsPtr=NULL)</div><div class="ttdef"><b>Definition:</b> <a href="_t_change_notifier_8h_source.html#l00064">TChangeNotifier.h:64</a></div></div>
-<div class="ttc" id="classistd_1_1_i_polymorphic_html"><div class="ttname"><a href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a></div><div class="ttdoc">Base interface for all used interfaces and implementations. </div><div class="ttdef"><b>Definition:</b> <a href="_i_polymorphic_8h_source.html#l00017">IPolymorphic.h:17</a></div></div>
-<div class="ttc" id="classistd_1_1_t_change_notifier_html_a0f6d24bb1c85f83cf0571b169683b87a"><div class="ttname"><a href="classistd_1_1_t_change_notifier.html#a0f6d24bb1c85f83cf0571b169683b87a">istd::TChangeNotifier::Abort</a></div><div class="ttdeci">void Abort()</div><div class="ttdoc">Similiar like method Reset(), but update will be called with active flag CF_ABORTED. </div><div class="ttdef"><b>Definition:</b> <a href="_t_change_notifier_8h_source.html#l00123">TChangeNotifier.h:123</a></div></div>
+<div class="ttc" id="group___helpers_html_gab98382213939466dbfecbece782468d4"><div class="ttname"><a href="group___helpers.html#gab98382213939466dbfecbece782468d4">istd::CChangeNotifier</a></div><div class="ttdeci">TChangeNotifier&lt; IChangeable &gt; CChangeNotifier</div><div class="ttdoc">Basic change notifier for unspecified type. </div><div class="ttdef"><b>Definition:</b> <a href="_t_change_notifier_8h_source.html#l00170">TChangeNotifier.h:170</a></div></div>
+<div class="ttc" id="classistd_1_1_t_change_notifier_html_a33bf4698dea9d20c7922c0fc39a0bf71"><div class="ttname"><a href="classistd_1_1_t_change_notifier.html#a33bf4698dea9d20c7922c0fc39a0bf71">istd::TChangeNotifier::~TChangeNotifier</a></div><div class="ttdeci">virtual ~TChangeNotifier()</div><div class="ttdef"><b>Definition:</b> <a href="_t_change_notifier_8h_source.html#l00089">TChangeNotifier.h:89</a></div></div>
+<div class="ttc" id="classistd_1_1_t_change_notifier_html_ac267b77aef0fa073097601bd43e3ba53"><div class="ttname"><a href="classistd_1_1_t_change_notifier.html#ac267b77aef0fa073097601bd43e3ba53">istd::TChangeNotifier::TChangeNotifier</a></div><div class="ttdeci">TChangeNotifier(Changeable *changeablePtr=NULL, int changeFlags=IChangeable::CF_MODEL, istd::IPolymorphic *updateParamsPtr=NULL)</div><div class="ttdef"><b>Definition:</b> <a href="_t_change_notifier_8h_source.html#l00065">TChangeNotifier.h:65</a></div></div>
+<div class="ttc" id="classistd_1_1_i_polymorphic_html"><div class="ttname"><a href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a></div><div class="ttdoc">Base interface for all used interfaces and implementations. </div><div class="ttdef"><b>Definition:</b> <a href="_i_polymorphic_8h_source.html#l00018">IPolymorphic.h:18</a></div></div>
+<div class="ttc" id="classistd_1_1_t_change_notifier_html_a0f6d24bb1c85f83cf0571b169683b87a"><div class="ttname"><a href="classistd_1_1_t_change_notifier.html#a0f6d24bb1c85f83cf0571b169683b87a">istd::TChangeNotifier::Abort</a></div><div class="ttdeci">void Abort()</div><div class="ttdoc">Similiar like method Reset(), but update will be called with active flag CF_ABORTED. </div><div class="ttdef"><b>Definition:</b> <a href="_t_change_notifier_8h_source.html#l00124">TChangeNotifier.h:124</a></div></div>
 <div class="ttc" id="_i_changeable_8h_html"><div class="ttname"><a href="_i_changeable_8h.html">IChangeable.h</a></div></div>
 <div class="ttc" id="istd_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="istd_8h_source.html#l00061">istd.h:61</a></div></div>
 <div class="ttc" id="_t_pointer_base_8h_html"><div class="ttname"><a href="_t_pointer_base_8h.html">TPointerBase.h</a></div></div>
-<div class="ttc" id="classistd_1_1_t_change_notifier_html_abacf580696db63dfe09dfb8fd91e0ca5"><div class="ttname"><a href="classistd_1_1_t_change_notifier.html#abacf580696db63dfe09dfb8fd91e0ca5">istd::TChangeNotifier::operator-&gt;</a></div><div class="ttdeci">const Changeable * operator-&gt;() const </div><div class="ttdoc">Method call operator returning slave &#39;changeable&#39; pointer. </div><div class="ttdef"><b>Definition:</b> <a href="_t_change_notifier_8h_source.html#l00136">TChangeNotifier.h:136</a></div></div>
-<div class="ttc" id="classistd_1_1_t_change_notifier_html_a254c668d925984c4d9eaafd3da70dbec"><div class="ttname"><a href="classistd_1_1_t_change_notifier.html#a254c668d925984c4d9eaafd3da70dbec">istd::TChangeNotifier::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdoc">Call update on attached object and detach it. </div><div class="ttdef"><b>Definition:</b> <a href="_t_change_notifier_8h_source.html#l00110">TChangeNotifier.h:110</a></div></div>
+<div class="ttc" id="classistd_1_1_t_change_notifier_html_abacf580696db63dfe09dfb8fd91e0ca5"><div class="ttname"><a href="classistd_1_1_t_change_notifier.html#abacf580696db63dfe09dfb8fd91e0ca5">istd::TChangeNotifier::operator-&gt;</a></div><div class="ttdeci">const Changeable * operator-&gt;() const </div><div class="ttdoc">Method call operator returning slave &#39;changeable&#39; pointer. </div><div class="ttdef"><b>Definition:</b> <a href="_t_change_notifier_8h_source.html#l00137">TChangeNotifier.h:137</a></div></div>
+<div class="ttc" id="classistd_1_1_t_change_notifier_html_a254c668d925984c4d9eaafd3da70dbec"><div class="ttname"><a href="classistd_1_1_t_change_notifier.html#a254c668d925984c4d9eaafd3da70dbec">istd::TChangeNotifier::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdoc">Call update on attached object and detach it. </div><div class="ttdef"><b>Definition:</b> <a href="_t_change_notifier_8h_source.html#l00111">TChangeNotifier.h:111</a></div></div>
 <div class="ttc" id="classistd_1_1_i_changeable_html_acd46630510ac7a16b6c6e73a7db43fb9aba633d7cd1bffe89c299e032f286db6c"><div class="ttname"><a href="classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9aba633d7cd1bffe89c299e032f286db6c">istd::IChangeable::CF_ABORTED</a></div><div class="ttdoc">Indicate, that update was aborted by user. </div><div class="ttdef"><b>Definition:</b> <a href="_i_changeable_8h_source.html#l00036">IChangeable.h:36</a></div></div>
 <div class="ttc" id="classistd_1_1_t_pointer_base_html_a3eed23fa98f315a8cbfd153e334f5928"><div class="ttname"><a href="classistd_1_1_t_pointer_base.html#a3eed23fa98f315a8cbfd153e334f5928">istd::TPointerBase&lt; Changeable &gt;::operator-&gt;</a></div><div class="ttdeci">Changeable * operator-&gt;() const</div></div>
 <div class="ttc" id="classistd_1_1_i_changeable_html_acd46630510ac7a16b6c6e73a7db43fb9a3c86ebce4c2fe9371a8409708979b789"><div class="ttname"><a href="classistd_1_1_i_changeable.html#acd46630510ac7a16b6c6e73a7db43fb9a3c86ebce4c2fe9371a8409708979b789">istd::IChangeable::CF_MODEL</a></div><div class="ttdoc">Indicate that data model is changed. </div><div class="ttdef"><b>Definition:</b> <a href="_i_changeable_8h_source.html#l00032">IChangeable.h:32</a></div></div>
-<div class="ttc" id="classistd_1_1_t_change_notifier_html_a3bd524813e6c66d33ce42cc42a8be71b"><div class="ttname"><a href="classistd_1_1_t_change_notifier.html#a3bd524813e6c66d33ce42cc42a8be71b">istd::TChangeNotifier::SetPtr</a></div><div class="ttdeci">void SetPtr(Changeable *changeablePtr)</div><div class="ttdoc">Allow Attach to some &#39;changeable&#39; pointer. </div><div class="ttdef"><b>Definition:</b> <a href="_t_change_notifier_8h_source.html#l00095">TChangeNotifier.h:95</a></div></div>
-<div class="ttc" id="classistd_1_1_t_change_notifier_html"><div class="ttname"><a href="classistd_1_1_t_change_notifier.html">istd::TChangeNotifier</a></div><div class="ttdoc">Help class which provides the automatic update mechanism of the model. </div><div class="ttdef"><b>Definition:</b> <a href="_t_change_notifier_8h_source.html#l00021">TChangeNotifier.h:21</a></div></div>
+<div class="ttc" id="classistd_1_1_t_change_notifier_html_a3bd524813e6c66d33ce42cc42a8be71b"><div class="ttname"><a href="classistd_1_1_t_change_notifier.html#a3bd524813e6c66d33ce42cc42a8be71b">istd::TChangeNotifier::SetPtr</a></div><div class="ttdeci">void SetPtr(Changeable *changeablePtr)</div><div class="ttdoc">Allow Attach to some &#39;changeable&#39; pointer. </div><div class="ttdef"><b>Definition:</b> <a href="_t_change_notifier_8h_source.html#l00096">TChangeNotifier.h:96</a></div></div>
+<div class="ttc" id="classistd_1_1_t_change_notifier_html"><div class="ttname"><a href="classistd_1_1_t_change_notifier.html">istd::TChangeNotifier</a></div><div class="ttdoc">Help class which provides the automatic update mechanism of the model. </div><div class="ttdef"><b>Definition:</b> <a href="_t_change_notifier_8h_source.html#l00022">TChangeNotifier.h:22</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>

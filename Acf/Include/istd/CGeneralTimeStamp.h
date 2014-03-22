@@ -24,6 +24,7 @@
 #define istd_CGeneralTimeStamp_included
 
 
+// Qt includes
 #include <QtCore/QObject>
 #if QT_VERSION >= 0x040700
 	#include <QtCore/QElapsedTimer>
@@ -31,6 +32,7 @@
     #include <QtCore/QDateTime>
 #endif
 
+// ACF includes
 #include "istd/ITimeStamp.h"
 
 

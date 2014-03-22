@@ -6571,6 +6571,7 @@
     <class kind="class">istd::TArray</class>
     <class kind="class">istd::TChangeNotifier</class>
     <class kind="class">istd::TDelPtr</class>
+    <class kind="class">istd::TOptDelPtr</class>
     <class kind="class">istd::TRange</class>
     <class kind="class">istd::TSmartPtr</class>
     <member kind="typedef">
