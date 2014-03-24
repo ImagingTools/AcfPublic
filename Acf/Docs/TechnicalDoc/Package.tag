@@ -2368,7 +2368,6 @@
     <name>CBitmapSurface.h</name>
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>_c_bitmap_surface_8h</filename>
-    <includes id="_t_change_delegator_8h" name="TChangeDelegator.h" local="yes" imported="no">istd/TChangeDelegator.h</includes>
     <includes id="_c_sampled_function2d_8h" name="CSampledFunction2d.h" local="yes" imported="no">imath/CSampledFunction2d.h</includes>
     <includes id="_c_bitmap_8h" name="CBitmap.h" local="yes" imported="no">iimg/CBitmap.h</includes>
     <class kind="class">iimg::CBitmapSurface</class>
@@ -3382,7 +3381,6 @@
     <name>CParamsSet.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_params_set_8h</filename>
-    <includes id="_t_change_delegator_8h" name="TChangeDelegator.h" local="yes" imported="no">istd/TChangeDelegator.h</includes>
     <includes id="_t_opt_del_ptr_8h" name="TOptDelPtr.h" local="yes" imported="no">istd/TOptDelPtr.h</includes>
     <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="yes" imported="no">istd/TPointerVector.h</includes>
     <includes id="_c_multi_model_bridge_base_8h" name="CMultiModelBridgeBase.h" local="yes" imported="no">imod/CMultiModelBridgeBase.h</includes>
@@ -6432,6 +6430,7 @@
     <class kind="class">istd::TChangeDelegator</class>
     <class kind="class">istd::TChangeNotifier</class>
     <class kind="class">istd::TUpdateManagerWrap</class>
+    <docanchor file="group___data_model" title="Delegating of changes">DelegatingOfChanges</docanchor>
   </compound>
   <compound kind="group">
     <name>ModelObserver</name>
@@ -68574,7 +68573,7 @@
     <title></title>
     <filename>index</filename>
     <docanchor file="index">Introduction</docanchor>
-    <docanchor file="index">Basics</docanchor>
+    <docanchor file="index" title="How it works">HowItWorks</docanchor>
     <docanchor file="index">Features</docanchor>
   </compound>
 </tagfile>

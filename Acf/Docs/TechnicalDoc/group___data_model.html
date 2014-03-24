@@ -24,7 +24,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p>Several basic interfaces and implementation for abstract definition of the data model.  
+<p>Basic interfaces and implementations for abstract definition of the data model.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -55,11 +55,14 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Several basic interfaces and implementation for abstract definition of the data model. </p>
+<p>Basic interfaces and implementations for abstract definition of the data model. </p>
 <p>The most important interface for a general data model definition is <a class="el" href="classistd_1_1_i_changeable.html" title="Common interface for data model objects, which can be changed. ">istd::IChangeable</a>. This is a common interface for describing of objects which change their state during the run time of the application. The interface provides methods for managing data change transaction (<a class="el" href="classistd_1_1_i_changeable.html#ae9b6d7665bb5c81fab25a16350c0da85" title="Starts the change transaction. ">istd::IChangeable::BeginChanges()</a> and <a class="el" href="classistd_1_1_i_changeable.html#a93c184672f907feae1f8093352139799" title="Ends the change transaction. ">istd::IChangeable::EndChanges()</a>), methods for coping, cloning, reseting and comparison of objects. The realization of change notification mechanism is also based on this interface. Following example demonstrates implementation of a simple data object: </p>
 <div class="fragment"><div class="line"><span class="keyword">class </span>CPerson: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classistd_1_1_i_changeable.html">istd::IChangeable</a></div>
 <div class="line">{</div>
 <div class="line"><span class="keyword">public</span>:</div>
+<div class="line">       CPerson(<span class="keyword">const</span> QString&amp; firstName = QString(), <span class="keyword">const</span> QString&amp; lastName = QString());</div>
+<div class="line">       CPerson(<span class="keyword">const</span> CPerson&amp; person);</div>
+<div class="line"></div>
 <div class="line">       QString GetFirstName() <span class="keyword">const</span>;</div>
 <div class="line">       <span class="keywordtype">void</span> SetFirstName(<span class="keyword">const</span> QString&amp; firstName);</div>
 <div class="line">       QString GetLastName() <span class="keyword">const</span>;</div>
@@ -101,7 +104,7 @@ Classes</h2></td></tr>
 <div class="line">              EndChanges();</div>
 <div class="line">       }</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>In order to guarantee that the transaction block is always consistent, you could also use a helper class - <a class="el" href="group___main.html#gab98382213939466dbfecbece782468d4" title="Basic change notifier for unspecified type. ">istd::CChangeNotifier</a>:</p>
+</div><!-- fragment --><p>To ensure that the transaction block is always consistent, you could also use a helper class - <a class="el" href="group___main.html#gab98382213939466dbfecbece782468d4" title="Basic change notifier for unspecified type. ">istd::CChangeNotifier</a>:</p>
 <div class="fragment"><div class="line">QString CPerson::SetFirstName(<span class="keyword">const</span> QString&amp; firstName)</div>
 <div class="line">{</div>
 <div class="line">       <span class="keywordflow">if</span> (m_firstName != firstName){</div>
@@ -110,7 +113,56 @@ Classes</h2></td></tr>
 <div class="line">              m_firstName = firstName;</div>
 <div class="line">       }</div>
 <div class="line">}</div>
-</div><!-- fragment --><p><a class="el" href="group___main.html#gab98382213939466dbfecbece782468d4" title="Basic change notifier for unspecified type. ">istd::CChangeNotifier</a> calls BeginChanges in its constructor and EndChanges in the destructor. </p>
+</div><!-- fragment --><p><a class="el" href="group___main.html#gab98382213939466dbfecbece782468d4" title="Basic change notifier for unspecified type. ">istd::CChangeNotifier</a> calls BeginChanges in its constructor and EndChanges in the destructor.</p>
+<h1><a class="anchor" id="DelegatingOfChanges"></a>
+Delegating of changes</h1>
+<p>Let us consider also the following situation - the data object of class CPerson could "live" in any container class (eg. in a database). In this case we want the container implentation will also notice about the changes of the CPerson instance. What we have to do is to extend our CPerson implementation as following:</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>CPerson: <span class="keyword">public</span> <a class="code" href="classistd_1_1_t_change_delegator.html">istd::TChangeDelegator</a>&lt;istd::IChangeable&gt;</div>
+</div><!-- fragment --><p>Then our container class can be defined as: </p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>CPersonDatabase: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classistd_1_1_i_changeable.html">istd::IChangeable</a></div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">       <span class="keywordtype">int</span> GetPersonsCount()<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">       </span>{</div>
+<div class="line">              <span class="keywordflow">return</span> m_persons.count();</div>
+<div class="line">       }</div>
+<div class="line"></div>
+<div class="line">       <span class="keyword">const</span> CPerson&amp; GetPerson(<span class="keywordtype">int</span> personIndex)<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">       </span>{</div>
+<div class="line">              <span class="keywordflow">return</span> m_persons[personIndex];</div>
+<div class="line">       }</div>
+<div class="line"></div>
+<div class="line">       CPerson&amp; AddNewPerson(<span class="keyword">const</span> QString&amp; firstName, <span class="keyword">const</span> QString&amp; lastName);</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">protected</span>:</div>
+<div class="line">       <span class="comment">// reimplemented (istd::IChangeable)</span></div>
+<div class="line">       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_i_changeable.html#a2a2491de06d52ac09889c20ed72d2529">OnEndChanges</a>(<span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* changeParamsPtr)</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">       QVector&lt;CPerson&gt; m_persons;</div>
+<div class="line">};</div>
+<div class="line"></div>
+<div class="line">CPerson&amp; CPersonDatabase::AddNewPerson(<span class="keyword">const</span> QString&amp; firstName, <span class="keyword">const</span> QString&amp; lastName)</div>
+<div class="line">{</div>
+<div class="line">       CPerson person(firstName, lastName);</div>
+<div class="line"></div>
+<div class="line">       m_persons.push_back(person);</div>
+<div class="line"></div>
+<div class="line">       <span class="comment">// Register the container as change notification target:</span></div>
+<div class="line">       m_persons.back().SetSlavePtr(<span class="keyword">this</span>);</div>
+<div class="line"></div>
+<div class="line">       <span class="keywordflow">return</span> m_persons.back();</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Now we can catch the changes of person instances in the implementation of the method OnEndChanges():</p>
+<div class="fragment"><div class="line"><span class="comment">// reimplemented (istd::IChangeable)</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> CPersonDatabase::OnEndChanges(<span class="keywordtype">int</span> changeFlags, <a class="code" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* changeParamsPtr)</div>
+<div class="line">{</div>
+<div class="line">       <span class="keywordflow">if</span> (changeFlags &amp; CF_DELEGATED){</div>
+<div class="line">              qDebug(<span class="stringliteral">&quot;Some person data have been changed&quot;</span>);</div>
+<div class="line">       }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>In this section we have considered situations in which a decision that a data model would delegate its changes has been made in the design phase. For situations where this is not the case, we must rely on other mechanisms. These are described in the <a class="el" href="group___model_observer.html">Model/Observer concept</a> Section. </p>
 </div><!-- contents -->
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold
 Gantzke and Kirill Lepskiy</P>
