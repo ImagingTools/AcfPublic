@@ -34,8 +34,6 @@ namespace iprm
 
 /**
 	Basic implementation of IEnableableParam interface.
-
-	\ingroup Helpers
 */
 class CEnableableParam: virtual public iprm::IEnableableParam
 {

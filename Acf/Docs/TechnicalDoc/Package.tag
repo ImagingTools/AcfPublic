@@ -2901,15 +2901,15 @@
     <member kind="variable" static="yes">
       <type>static const double</type>
       <name>I_PI</name>
-      <anchorfile>group___main.html</anchorfile>
-      <anchor>ga1333edce51c7bb35eb2c60f3a02e787a</anchor>
+      <anchorfile>imath_8h.html</anchorfile>
+      <anchor>a1333edce51c7bb35eb2c60f3a02e787a</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" static="yes">
       <type>static const double</type>
       <name>I_2PI</name>
-      <anchorfile>group___main.html</anchorfile>
-      <anchor>ga162a1bb3b8d3047f22ed10e9d8cab1e3</anchor>
+      <anchorfile>imath_8h.html</anchorfile>
+      <anchor>a162a1bb3b8d3047f22ed10e9d8cab1e3</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -5532,7 +5532,7 @@
     <member kind="typedef">
       <type>TChangeNotifier&lt; IChangeable &gt;</type>
       <name>CChangeNotifier</name>
-      <anchorfile>group___helpers.html</anchorfile>
+      <anchorfile>group___main.html</anchorfile>
       <anchor>gab98382213939466dbfecbece782468d4</anchor>
       <arglist></arglist>
     </member>
@@ -6413,12 +6413,25 @@
     <name>ACF</name>
     <title>ACF</title>
     <filename>group___a_c_f.html</filename>
+    <subgroup>DataModel</subgroup>
     <subgroup>ModelObserver</subgroup>
     <subgroup>Persistence</subgroup>
-    <subgroup>Helpers</subgroup>
     <subgroup>Main</subgroup>
-    <subgroup>System</subgroup>
+    <subgroup>SystemDefines</subgroup>
     <subgroup>ComponentConcept</subgroup>
+  </compound>
+  <compound kind="group">
+    <name>DataModel</name>
+    <title>Data model</title>
+    <filename>group___data_model.html</filename>
+    <class kind="class">istd::CChangeDelegator</class>
+    <class kind="class">istd::CEventBasedNotifier</class>
+    <class kind="class">istd::IChangeable</class>
+    <class kind="class">istd::IChangeDelegator</class>
+    <class kind="class">istd::TChangeBinder</class>
+    <class kind="class">istd::TChangeDelegator</class>
+    <class kind="class">istd::TChangeNotifier</class>
+    <class kind="class">istd::TUpdateManagerWrap</class>
   </compound>
   <compound kind="group">
     <name>ModelObserver</name>
@@ -6443,7 +6456,7 @@
   </compound>
   <compound kind="group">
     <name>Persistence</name>
-    <title>Persistence concept.</title>
+    <title>Persistence concept</title>
     <filename>group___persistence.html</filename>
     <namespace>iser</namespace>
     <class kind="class">ifile::CFileReadArchive</class>
@@ -6476,50 +6489,23 @@
     <class kind="class">iser::TVersionInfoSerializer</class>
   </compound>
   <compound kind="group">
-    <name>Helpers</name>
-    <title>Set of helper classes.</title>
-    <filename>group___helpers.html</filename>
-    <class kind="class">icomp::TMakeComponentWrap</class>
-    <class kind="class">icomp::TModelCompWrap</class>
-    <class kind="class">imod::TModelWrap</class>
-    <class kind="class">iprm::CEnableableParam</class>
-    <class kind="class">iprm::CNameParam</class>
-    <class kind="class">iqtgui::TGuiObserverWrap</class>
-    <class kind="class">iqtgui::TRestorableGuiWrap</class>
-    <class kind="class">istd::TChangeNotifier</class>
-    <member kind="typedef">
-      <type>TChangeNotifier&lt; IChangeable &gt;</type>
-      <name>CChangeNotifier</name>
-      <anchorfile>group___helpers.html</anchorfile>
-      <anchor>gab98382213939466dbfecbece782468d4</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="group">
     <name>Main</name>
     <title>Main concepts and implementations</title>
     <filename>group___main.html</filename>
     <namespace>icomp</namespace>
-    <namespace>imath</namespace>
     <namespace>imod</namespace>
     <namespace>iser</namespace>
     <namespace>istd</namespace>
-    <class kind="class">ibase::CSize</class>
     <class kind="class">ibase::IApplication</class>
     <class kind="class">ibase::IApplicationInfo</class>
     <class kind="class">icomp::CComponentBase</class>
     <class kind="class">ilog::IMessageConsumer</class>
-    <class kind="class">iser::CPrimitiveTypesSerializer</class>
     <class kind="class">iser::IArchive</class>
     <class kind="class">iser::ISerializable</class>
-    <class kind="class">istd::CClassInfo</class>
     <class kind="class">istd::IPolymorphic</class>
-    <class kind="class">istd::TArray</class>
     <class kind="class">istd::TChangeNotifier</class>
     <class kind="class">istd::TDelPtr</class>
-    <class kind="class">istd::TIFactory</class>
     <class kind="class">istd::TOptDelPtr</class>
-    <class kind="class">istd::TRange</class>
     <class kind="class">istd::TSmartPtr</class>
     <member kind="typedef">
       <type>TLoggerCompWrap&lt; icomp::CComponentBase &gt;</type>
@@ -6528,26 +6514,18 @@
       <anchor>ga2ac8e0a207c9bb18de1ac6883d2cf09c</anchor>
       <arglist></arglist>
     </member>
-    <member kind="variable" static="yes">
-      <type>static const double</type>
-      <name>I_PI</name>
+    <member kind="typedef">
+      <type>TChangeNotifier&lt; IChangeable &gt;</type>
+      <name>CChangeNotifier</name>
       <anchorfile>group___main.html</anchorfile>
-      <anchor>ga1333edce51c7bb35eb2c60f3a02e787a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const double</type>
-      <name>I_2PI</name>
-      <anchorfile>group___main.html</anchorfile>
-      <anchor>ga162a1bb3b8d3047f22ed10e9d8cab1e3</anchor>
+      <anchor>gab98382213939466dbfecbece782468d4</anchor>
       <arglist></arglist>
     </member>
   </compound>
   <compound kind="group">
-    <name>System</name>
-    <title>Defines access to operating system dependent implementation</title>
-    <filename>group___system.html</filename>
-    <class kind="class">istd::ITimeStamp</class>
+    <name>SystemDefines</name>
+    <title>Operation system services</title>
+    <filename>group___system_defines.html</filename>
   </compound>
   <compound kind="group">
     <name>ComponentConcept</name>
@@ -55457,7 +55435,7 @@
     <member kind="typedef">
       <type>TChangeNotifier&lt; IChangeable &gt;</type>
       <name>CChangeNotifier</name>
-      <anchorfile>group___helpers.html</anchorfile>
+      <anchorfile>group___main.html</anchorfile>
       <anchor>gab98382213939466dbfecbece782468d4</anchor>
       <arglist></arglist>
     </member>

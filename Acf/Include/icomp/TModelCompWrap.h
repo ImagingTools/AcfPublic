@@ -41,7 +41,6 @@ namespace icomp
 	This model wrapper extends functionality of \c icomp::TModelWrap for components.
 
 	\ingroup ComponentConcept
-	\ingroup Helpers
 */
 template <class Base>
 class TModelCompWrap: public icomp::TComponentCloneWrap<imod::TModelWrap<Base> >

@@ -35,8 +35,6 @@ namespace ibase
 
 /**
 	Definition of simple 2D size based on integer values.
-
-	\ingroup Main
 */
 class CSize: public istd::CIndex2d
 {

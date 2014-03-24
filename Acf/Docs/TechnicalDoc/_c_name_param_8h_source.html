@@ -43,35 +43,35 @@
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classiprm_1_1_c_name_param.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classiprm_1_1_c_name_param.html">CNameParam</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiprm_1_1_i_name_param.html">INameParam</a></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;       <span class="comment">// reimplemented (iprm::INameParam)</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;       <span class="keyword">virtual</span> <span class="keyword">const</span> QString&amp; <a class="code" href="classiprm_1_1_c_name_param.html#a2a43b77332f91a27c2b41b03324e3921">GetName</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_name_param.html#a2efc0ca157b9658762f02398975e823d">SetName</a>(<span class="keyword">const</span> QString&amp; name);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_name_param.html#adde19c4f919f311774afc68c047a535e">IsNameFixed</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;       <span class="comment">// reimplemented (iser::ISerializable)</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_name_param.html#a549884650b1015594460b3d60648dbc7">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classiprm_1_1_c_name_param.html#a5e626257df92d10cb48445269ea7406b">   30</a></span>&#160;       QString <a class="code" href="classiprm_1_1_c_name_param.html#a5e626257df92d10cb48445269ea7406b">m_name</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classiprm_1_1_c_name_param.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classiprm_1_1_c_name_param.html">CNameParam</a>: <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classiprm_1_1_i_name_param.html">INameParam</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;       <span class="comment">// reimplemented (iprm::INameParam)</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;       <span class="keyword">virtual</span> <span class="keyword">const</span> QString&amp; <a class="code" href="classiprm_1_1_c_name_param.html#a2a43b77332f91a27c2b41b03324e3921">GetName</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiprm_1_1_c_name_param.html#a2efc0ca157b9658762f02398975e823d">SetName</a>(<span class="keyword">const</span> QString&amp; name);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_name_param.html#adde19c4f919f311774afc68c047a535e">IsNameFixed</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;       <span class="comment">// reimplemented (iser::ISerializable)</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiprm_1_1_c_name_param.html#a549884650b1015594460b3d60648dbc7">Serialize</a>(<a class="code" href="classiser_1_1_i_archive.html">iser::IArchive</a>&amp; archive);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classiprm_1_1_c_name_param.html#a5e626257df92d10cb48445269ea7406b">   28</a></span>&#160;       QString <a class="code" href="classiprm_1_1_c_name_param.html#a5e626257df92d10cb48445269ea7406b">m_name</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;} <span class="comment">// namespace iprm</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;} <span class="comment">// namespace iprm</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif // !iprm_CNameParam_included</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif // !iprm_CNameParam_included</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
 <div class="ttc" id="classiprm_1_1_i_name_param_html"><div class="ttname"><a href="classiprm_1_1_i_name_param.html">iprm::INameParam</a></div><div class="ttdoc">Interface for a object containing its name. </div><div class="ttdef"><b>Definition:</b> <a href="_i_name_param_8h_source.html#l00018">INameParam.h:18</a></div></div>
-<div class="ttc" id="classiprm_1_1_c_name_param_html"><div class="ttname"><a href="classiprm_1_1_c_name_param.html">iprm::CNameParam</a></div><div class="ttdoc">Implementation of a named object over iprm::INameParam interface. </div><div class="ttdef"><b>Definition:</b> <a href="_c_name_param_8h_source.html#l00018">CNameParam.h:18</a></div></div>
+<div class="ttc" id="classiprm_1_1_c_name_param_html"><div class="ttname"><a href="classiprm_1_1_c_name_param.html">iprm::CNameParam</a></div><div class="ttdoc">Implementation of a named object over iprm::INameParam interface. </div><div class="ttdef"><b>Definition:</b> <a href="_c_name_param_8h_source.html#l00016">CNameParam.h:16</a></div></div>
 <div class="ttc" id="classiprm_1_1_c_name_param_html_a2a43b77332f91a27c2b41b03324e3921"><div class="ttname"><a href="classiprm_1_1_c_name_param.html#a2a43b77332f91a27c2b41b03324e3921">iprm::CNameParam::GetName</a></div><div class="ttdeci">virtual const QString &amp; GetName() const </div><div class="ttdoc">Get the object name. </div></div>
 <div class="ttc" id="classiprm_1_1_c_name_param_html_adde19c4f919f311774afc68c047a535e"><div class="ttname"><a href="classiprm_1_1_c_name_param.html#adde19c4f919f311774afc68c047a535e">iprm::CNameParam::IsNameFixed</a></div><div class="ttdeci">virtual bool IsNameFixed() const </div><div class="ttdoc">Return true, if the name setting is enabled. </div></div>
 <div class="ttc" id="classiser_1_1_i_archive_html"><div class="ttname"><a href="classiser_1_1_i_archive.html">iser::IArchive</a></div><div class="ttdoc">Represent input/output persistence archive. </div><div class="ttdef"><b>Definition:</b> <a href="_i_archive_8h_source.html#l00031">IArchive.h:31</a></div></div>
 <div class="ttc" id="_i_name_param_8h_html"><div class="ttname"><a href="_i_name_param_8h.html">INameParam.h</a></div></div>
-<div class="ttc" id="classiprm_1_1_c_name_param_html_a5e626257df92d10cb48445269ea7406b"><div class="ttname"><a href="classiprm_1_1_c_name_param.html#a5e626257df92d10cb48445269ea7406b">iprm::CNameParam::m_name</a></div><div class="ttdeci">QString m_name</div><div class="ttdef"><b>Definition:</b> <a href="_c_name_param_8h_source.html#l00030">CNameParam.h:30</a></div></div>
+<div class="ttc" id="classiprm_1_1_c_name_param_html_a5e626257df92d10cb48445269ea7406b"><div class="ttname"><a href="classiprm_1_1_c_name_param.html#a5e626257df92d10cb48445269ea7406b">iprm::CNameParam::m_name</a></div><div class="ttdeci">QString m_name</div><div class="ttdef"><b>Definition:</b> <a href="_c_name_param_8h_source.html#l00028">CNameParam.h:28</a></div></div>
 <div class="ttc" id="classiprm_1_1_c_name_param_html_a549884650b1015594460b3d60648dbc7"><div class="ttname"><a href="classiprm_1_1_c_name_param.html#a549884650b1015594460b3d60648dbc7">iprm::CNameParam::Serialize</a></div><div class="ttdeci">virtual bool Serialize(iser::IArchive &amp;archive)</div><div class="ttdoc">Load or store state of this object as a archive stream. </div></div>
 <div class="ttc" id="classiprm_1_1_c_name_param_html_a2efc0ca157b9658762f02398975e823d"><div class="ttname"><a href="classiprm_1_1_c_name_param.html#a2efc0ca157b9658762f02398975e823d">iprm::CNameParam::SetName</a></div><div class="ttdeci">virtual void SetName(const QString &amp;name)</div><div class="ttdoc">Set the object name. </div></div>
 </div><!-- fragment --></div><!-- contents -->

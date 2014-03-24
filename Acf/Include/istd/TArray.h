@@ -37,8 +37,6 @@ namespace istd
 
 /**
 	Multidimensional array with fixed number of dimensions.
-
-	\ingroup Main
 */
 template <class Element, int Dimensions>
 class TArray

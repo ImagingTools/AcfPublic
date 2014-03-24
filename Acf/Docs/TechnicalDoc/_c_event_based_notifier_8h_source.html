@@ -50,58 +50,58 @@
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">class </span>NotificationTarget;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classistd_1_1_c_event_based_notifier.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classistd_1_1_c_event_based_notifier.html">CEventBasedNotifier</a></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;       <span class="keyword">explicit</span> <a class="code" href="classistd_1_1_c_event_based_notifier.html#a924d9bb08360887919f2660f71d4764a">CEventBasedNotifier</a>(<a class="code" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* slavePtr, <span class="keywordtype">int</span> changeFlags = 0, <a class="code" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* changeParamsPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;       <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_event_based_notifier.html#a5bcaef5388dc370a7fbef0ffc12fbf00">~CEventBasedNotifier</a>();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;       <a class="code" href="classistd_1_1_notification_target.html">NotificationTarget</a>* m_notificationTarget;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classistd_1_1_notification_target.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="classistd_1_1_notification_target.html">NotificationTarget</a>: <span class="keyword">protected</span> QObject</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;       Q_OBJECT</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classistd_1_1_notification_target.html#a81738a7f244213e999195c97b3bf610a">   43</a></span>&#160;       <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classistd_1_1_c_event_based_notifier.html">CEventBasedNotifier</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classistd_1_1_c_event_based_notifier.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classistd_1_1_c_event_based_notifier.html">CEventBasedNotifier</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;       <span class="keyword">explicit</span> <a class="code" href="classistd_1_1_c_event_based_notifier.html#a924d9bb08360887919f2660f71d4764a">CEventBasedNotifier</a>(<a class="code" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* slavePtr, <span class="keywordtype">int</span> changeFlags = 0, <a class="code" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* changeParamsPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;       <span class="keyword">virtual</span> <a class="code" href="classistd_1_1_c_event_based_notifier.html#a5bcaef5388dc370a7fbef0ffc12fbf00">~CEventBasedNotifier</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;       <a class="code" href="classistd_1_1_notification_target.html">NotificationTarget</a>* m_notificationTarget;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classistd_1_1_notification_target.html">   41</a></span>&#160;<span class="keyword">class </span><a class="code" href="classistd_1_1_notification_target.html">NotificationTarget</a>: <span class="keyword">protected</span> QObject</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;       Q_OBJECT</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;       <a class="code" href="classistd_1_1_notification_target.html#a1342a337156f24530bd4b56f26720867">NotificationTarget</a>(<a class="code" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* slavePtr, <span class="keywordtype">int</span> changeFlags = 0, <a class="code" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* changeParamsPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_notification_target.html#a6baeab22a9507b5062d4b0e288c4eb51">Reset</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classistd_1_1_notification_target.html#a81738a7f244213e999195c97b3bf610a">   45</a></span>&#160;       <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classistd_1_1_c_event_based_notifier.html">CEventBasedNotifier</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;       <a class="code" href="classistd_1_1_notification_target.html#a1342a337156f24530bd4b56f26720867">NotificationTarget</a>(<a class="code" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* slavePtr, <span class="keywordtype">int</span> changeFlags = 0, <a class="code" href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a>* changeParamsPtr = <a class="code" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">protected</span> Q_SLOTS:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_notification_target.html#a5972bc29835a79e45596bd8068157e3d">DoBeginChanges</a>();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_notification_target.html#a332fc526c7c4c82f24bfd78892ab2604">DoEndChanges</a>();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;Q_SIGNALS:</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_notification_target.html#a58973f2ab04ebf7894e0c6eaed894089">EmitBeginChanges</a>();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_notification_target.html#ada45f38951df9b0e9a4e079e0cc202b7">EmitEndChanges</a>();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;       <a class="code" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* m_slavePtr;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;       <span class="keywordtype">int</span> m_changeFlags;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;       <a class="code" href="classistd_1_1_t_opt_del_ptr.html">istd::TOptDelPtr&lt;istd::IPolymorphic&gt;</a> m_changeParamsPtr;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;       <span class="keywordtype">bool</span> m_isBeginPending;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;} <span class="comment">// namespace istd</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_notification_target.html#a6baeab22a9507b5062d4b0e288c4eb51">Reset</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">protected</span> Q_SLOTS:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_notification_target.html#a5972bc29835a79e45596bd8068157e3d">DoBeginChanges</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_notification_target.html#a332fc526c7c4c82f24bfd78892ab2604">DoEndChanges</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;Q_SIGNALS:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_notification_target.html#a58973f2ab04ebf7894e0c6eaed894089">EmitBeginChanges</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;       <span class="keywordtype">void</span> <a class="code" href="classistd_1_1_notification_target.html#ada45f38951df9b0e9a4e079e0cc202b7">EmitEndChanges</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;       <a class="code" href="classistd_1_1_i_changeable.html">istd::IChangeable</a>* m_slavePtr;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;       <span class="keywordtype">int</span> m_changeFlags;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;       <a class="code" href="classistd_1_1_t_opt_del_ptr.html">istd::TOptDelPtr&lt;istd::IPolymorphic&gt;</a> m_changeParamsPtr;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;       <span class="keywordtype">bool</span> m_isBeginPending;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif // !istd_CEventBasedNotifier_included</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;} <span class="comment">// namespace istd</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif // !istd_CEventBasedNotifier_included</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
 <div class="ttc" id="_t_change_notifier_8h_html"><div class="ttname"><a href="_t_change_notifier_8h.html">TChangeNotifier.h</a></div></div>
-<div class="ttc" id="classistd_1_1_notification_target_html"><div class="ttname"><a href="classistd_1_1_notification_target.html">istd::NotificationTarget</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_event_based_notifier_8h_source.html#l00039">CEventBasedNotifier.h:39</a></div></div>
+<div class="ttc" id="classistd_1_1_notification_target_html"><div class="ttname"><a href="classistd_1_1_notification_target.html">istd::NotificationTarget</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_event_based_notifier_8h_source.html#l00041">CEventBasedNotifier.h:41</a></div></div>
 <div class="ttc" id="classistd_1_1_c_event_based_notifier_html_a924d9bb08360887919f2660f71d4764a"><div class="ttname"><a href="classistd_1_1_c_event_based_notifier.html#a924d9bb08360887919f2660f71d4764a">istd::CEventBasedNotifier::CEventBasedNotifier</a></div><div class="ttdeci">CEventBasedNotifier(istd::IChangeable *slavePtr, int changeFlags=0, istd::IPolymorphic *changeParamsPtr=NULL)</div></div>
 <div class="ttc" id="classistd_1_1_t_opt_del_ptr_html"><div class="ttname"><a href="classistd_1_1_t_opt_del_ptr.html">istd::TOptDelPtr</a></div><div class="ttdoc">Pointer wrapper providing activatable deleting pointed object during destruction. ...</div><div class="ttdef"><b>Definition:</b> <a href="_t_opt_del_ptr_8h_source.html#l00019">TOptDelPtr.h:19</a></div></div>
-<div class="ttc" id="classistd_1_1_c_event_based_notifier_html"><div class="ttname"><a href="classistd_1_1_c_event_based_notifier.html">istd::CEventBasedNotifier</a></div><div class="ttdoc">Implementation of model changes notification between different threads. </div><div class="ttdef"><b>Definition:</b> <a href="_c_event_based_notifier_8h_source.html#l00023">CEventBasedNotifier.h:23</a></div></div>
+<div class="ttc" id="classistd_1_1_c_event_based_notifier_html"><div class="ttname"><a href="classistd_1_1_c_event_based_notifier.html">istd::CEventBasedNotifier</a></div><div class="ttdoc">Implementation of model changes notification between different threads. </div><div class="ttdef"><b>Definition:</b> <a href="_c_event_based_notifier_8h_source.html#l00025">CEventBasedNotifier.h:25</a></div></div>
 <div class="ttc" id="classistd_1_1_notification_target_html_ada45f38951df9b0e9a4e079e0cc202b7"><div class="ttname"><a href="classistd_1_1_notification_target.html#ada45f38951df9b0e9a4e079e0cc202b7">istd::NotificationTarget::EmitEndChanges</a></div><div class="ttdeci">void EmitEndChanges()</div></div>
-<div class="ttc" id="classistd_1_1_i_changeable_html"><div class="ttname"><a href="classistd_1_1_i_changeable.html">istd::IChangeable</a></div><div class="ttdoc">Common interface for data model objects, which can be changed. </div><div class="ttdef"><b>Definition:</b> <a href="_i_changeable_8h_source.html#l00019">IChangeable.h:19</a></div></div>
+<div class="ttc" id="classistd_1_1_i_changeable_html"><div class="ttname"><a href="classistd_1_1_i_changeable.html">istd::IChangeable</a></div><div class="ttdoc">Common interface for data model objects, which can be changed. </div><div class="ttdef"><b>Definition:</b> <a href="_i_changeable_8h_source.html#l00021">IChangeable.h:21</a></div></div>
 <div class="ttc" id="classistd_1_1_i_polymorphic_html"><div class="ttname"><a href="classistd_1_1_i_polymorphic.html">istd::IPolymorphic</a></div><div class="ttdoc">Base interface for all used interfaces and implementations. </div><div class="ttdef"><b>Definition:</b> <a href="_i_polymorphic_8h_source.html#l00018">IPolymorphic.h:18</a></div></div>
 <div class="ttc" id="classistd_1_1_c_event_based_notifier_html_a5bcaef5388dc370a7fbef0ffc12fbf00"><div class="ttname"><a href="classistd_1_1_c_event_based_notifier.html#a5bcaef5388dc370a7fbef0ffc12fbf00">istd::CEventBasedNotifier::~CEventBasedNotifier</a></div><div class="ttdeci">virtual ~CEventBasedNotifier()</div></div>
 <div class="ttc" id="_t_opt_del_ptr_8h_html"><div class="ttname"><a href="_t_opt_del_ptr_8h.html">TOptDelPtr.h</a></div></div>
