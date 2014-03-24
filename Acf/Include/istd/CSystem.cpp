@@ -284,6 +284,20 @@ bool CSystem::EnsurePathExists(const QString& filePath)
 }
 
 
+QString CSystem::GetCurrentUserName()
+{
+	QString userName;
+
+#if defined(Q_OS_MAC)
+	userName = QString(getenv("USER"));
+#elif defined(Q_OS_WIN32)
+	userName = QString(getenv("USERNAME"));
+#endif
+
+	return userName;
+}
+
+
 } // namespace istd
 
 

@@ -4566,6 +4566,7 @@
     <filename>classicam_1_1_c_multi_layer_bitmap_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; istd::TDelPtr&lt; iimg::IMultiBitmapProvider &gt; &gt;</base>
     <base virtualness="virtual">iimg::IMultiBitmapProvider</base>
+    <base virtualness="virtual">idoc::IMultiPageDocumentProvider</base>
     <member kind="typedef">
       <type>iproc::TSupplierCompWrap&lt; istd::TDelPtr&lt; iimg::IMultiBitmapProvider &gt; &gt;</type>
       <name>BaseClass</name>
@@ -4613,6 +4614,13 @@
       <name>GetBitmapListInfo</name>
       <anchorfile>classicam_1_1_c_multi_layer_bitmap_supplier_comp.html</anchorfile>
       <anchor>a3195cf3d098d6d276e8ebfd270ba1850</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const idoc::IMultiPageDocument *</type>
+      <name>GetDocument</name>
+      <anchorfile>classicam_1_1_c_multi_layer_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a560b63fd4715178ddff33b2b616e689e</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">

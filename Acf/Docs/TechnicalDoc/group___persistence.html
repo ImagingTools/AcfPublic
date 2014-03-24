@@ -21,7 +21,7 @@
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<div class="title">Persistence concept<div class="ingroups"><a class="el" href="group___a_c_f.html">ACF</a></div></div>  </div>
+<div class="title">Persistence concept<div class="ingroups"><a class="el" href="group___acf_core.html">ACF Core Libraries</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -123,7 +123,11 @@ Classes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Common interfaces and implementations for file based persistence and general object serialization. </p>
-<p>ACF provides own implementation of an archive-based serialization.</p>
+<h1><a class="anchor" id="ObjectSerialization"></a>
+Archive-based object serialization</h1>
+<p>Objects that provide serialization must implement the <a class="el" href="classiser_1_1_i_serializable.html" title="Common class for all classes which objects can be archived or restored from archive. ">iser::ISerializable</a> interface. The most important method of this interface is Serialize(). Serialize method becomes as input an so called archive (<a class="el" href="classiser_1_1_i_archive.html" title="Represent input/output persistence archive. ">iser::IArchive</a>). An archive provides an abstract low level read/write access to a data medium. By example an archive can represent a file, a memory block, a database or a network resource, but the concrete kind of the archive is completely hidden from data object's point of view. Thus, we create a complete separation between the data model and the medium on which it is to be made persistent.</p>
+<h1><a class="anchor" id="FilePersistence"></a>
+File-based persistence</h1>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___data_model.html" title="Basic interfaces and implementations for abstract definition of the data model. ">Data model</a> </dd></dl>
 </div><!-- contents -->
 <P ALIGN=RIGHT STYLE="margin-bottom: 0cm">&copy; 2007-2011 Witold

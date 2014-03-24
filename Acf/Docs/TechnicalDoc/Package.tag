@@ -6408,9 +6408,9 @@
     <namespace>iview</namespace>
   </compound>
   <compound kind="group">
-    <name>ACF</name>
-    <title>ACF</title>
-    <filename>group___a_c_f.html</filename>
+    <name>AcfCore</name>
+    <title>ACF Core Libraries</title>
+    <filename>group___acf_core.html</filename>
     <subgroup>DataModel</subgroup>
     <subgroup>ModelObserver</subgroup>
     <subgroup>Persistence</subgroup>
@@ -6486,6 +6486,8 @@
     <class kind="class">iser::ISerializable</class>
     <class kind="class">iser::IVersionInfo</class>
     <class kind="class">iser::TVersionInfoSerializer</class>
+    <docanchor file="group___persistence" title="Archive-based object serialization">ObjectSerialization</docanchor>
+    <docanchor file="group___persistence" title="File-based persistence">FilePersistence</docanchor>
   </compound>
   <compound kind="group">
     <name>Main</name>
@@ -6525,6 +6527,7 @@
     <name>SystemDefines</name>
     <title>Operation system services</title>
     <filename>group___system_defines.html</filename>
+    <class kind="class">istd::CSystem</class>
   </compound>
   <compound kind="group">
     <name>ComponentConcept</name>
@@ -56313,6 +56316,13 @@
       <anchorfile>classistd_1_1_c_system.html</anchorfile>
       <anchor>a5e1521202395d7ed4a91a84accda949e</anchor>
       <arglist>(const QString &amp;filePath)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QString</type>
+      <name>GetCurrentUserName</name>
+      <anchorfile>classistd_1_1_c_system.html</anchorfile>
+      <anchor>abb66daac937fc6e4adfd611a356591e9</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

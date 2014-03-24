@@ -40,6 +40,8 @@ namespace istd
 
 /**
 	Implementation of global system helpers.
+
+	\ingroup SystemDefines
 */
 class CSystem
 {
@@ -101,6 +103,11 @@ public:
 		Ensure that the given path exists.
 	*/
 	static bool EnsurePathExists(const QString& filePath);
+
+	/**
+		Get the name of the currently logged user.
+	*/
+	static QString GetCurrentUserName();
 };
 
 
