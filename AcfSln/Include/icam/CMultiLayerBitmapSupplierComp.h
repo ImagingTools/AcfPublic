@@ -30,6 +30,7 @@
 // ACF includes
 #include "istd/TDelPtr.h"
 #include "iimg/CMultiPageBitmapBase.h"
+#include "idoc/IMultiPageDocumentProvider.h"
 
 // ACF-Solutions includes
 #include "iproc/TSupplierCompWrap.h"
@@ -47,13 +48,15 @@ namespace icam
 */
 class CMultiLayerBitmapSupplierComp:
 			public iproc::TSupplierCompWrap< istd::TDelPtr<iimg::IMultiBitmapProvider> >,
-			virtual public iimg::IMultiBitmapProvider
+			virtual public iimg::IMultiBitmapProvider,
+			virtual public idoc::IMultiPageDocumentProvider
 {
 public:
 	typedef iproc::TSupplierCompWrap< istd::TDelPtr<iimg::IMultiBitmapProvider> > BaseClass;
 
 	I_BEGIN_COMPONENT(CMultiLayerBitmapSupplierComp);
 		I_REGISTER_INTERFACE(iimg::IMultiBitmapProvider);
+		I_REGISTER_INTERFACE(idoc::IMultiPageDocumentProvider);
 		I_REGISTER_SUBELEMENT(ScaleConstraints);		
 		I_ASSIGN(m_bitmapCompFact, "BitmapFactory", "Use to create bitmap object", true, "BitmapFactory");
 		I_ASSIGN(m_bitmapAcquisitionCompPtr, "BitmapAcquisition", "Bitmap acquisition object for image snap", true, "BitmapAcquisition");
@@ -63,6 +66,9 @@ public:
 	virtual int GetBitmapsCount() const;
 	virtual const iimg::IBitmap* GetBitmap(int bitmapIndex) const;
 	virtual const iprm::IOptionsList* GetBitmapListInfo() const;
+
+	// reimplemented (idoc::IMultiPageDocumentProvider)
+	virtual const idoc::IMultiPageDocument* GetDocument() const;
 
 protected:
 	// reimplemented (iproc::TSupplierCompWrap)
