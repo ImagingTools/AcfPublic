@@ -100,7 +100,10 @@ bool CBitmapLoaderComp::IsOperationSupported(
 }
 
 
-int CBitmapLoaderComp::LoadFromFile(istd::IChangeable& data, const QString& filePath) const
+int CBitmapLoaderComp::LoadFromFile(
+			istd::IChangeable& data,
+			const QString& filePath,
+			ibase::IProgressManager* /*progressManagerPtr*/) const
 {
 	istd::CChangeNotifier notifier(&data);
 
@@ -133,7 +136,10 @@ int CBitmapLoaderComp::LoadFromFile(istd::IChangeable& data, const QString& file
 }
 
 
-int CBitmapLoaderComp::SaveToFile(const istd::IChangeable& data, const QString& filePath) const
+int CBitmapLoaderComp::SaveToFile(
+			const istd::IChangeable& data,
+			const QString& filePath,
+			ibase::IProgressManager* /*progressManagerPtr*/) const
 {
 	const iimg::IQImageProvider* imageProviderPtr = dynamic_cast<const iimg::IQImageProvider*>(&data);
 

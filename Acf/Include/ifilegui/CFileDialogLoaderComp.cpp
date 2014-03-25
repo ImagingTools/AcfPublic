@@ -73,7 +73,10 @@ bool CFileDialogLoaderComp::IsOperationSupported(
 }
 
 
-int CFileDialogLoaderComp::LoadFromFile(istd::IChangeable& data, const QString& filePath) const
+int CFileDialogLoaderComp::LoadFromFile(
+			istd::IChangeable& data,
+			const QString& filePath,
+			ibase::IProgressManager* /*progressManagerPtr*/) const
 {
 	int selectionIndex = -1;
 	QString openFileName = GetFileName(filePath, false, selectionIndex);
@@ -90,7 +93,10 @@ int CFileDialogLoaderComp::LoadFromFile(istd::IChangeable& data, const QString& 
 }
 
 
-int CFileDialogLoaderComp::SaveToFile(const istd::IChangeable& data, const QString& filePath) const
+int CFileDialogLoaderComp::SaveToFile(
+			const istd::IChangeable& data,
+			const QString& filePath,
+			ibase::IProgressManager* /*progressManagerPtr*/) const
 {
 	int selectionIndex = -1;
 

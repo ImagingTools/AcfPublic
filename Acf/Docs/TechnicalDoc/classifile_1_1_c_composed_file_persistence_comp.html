@@ -50,7 +50,7 @@ Inheritance diagram for ifile::CComposedFilePersistenceComp:</div>
   <img src="classifile_1_1_c_composed_file_persistence_comp.png" usemap="#ifile::CComposedFilePersistenceComp_map" alt=""/>
   <map id="ifile::CComposedFilePersistenceComp_map" name="ifile::CComposedFilePersistenceComp_map">
 <area href="classicomp_1_1_c_component_base.html" title="Base class for component implementation. " alt="icomp::CComponentBase" shape="rect" coords="0,112,225,136"/>
-<area href="classifile_1_1_i_file_persistence.html" title="Provide loading and saving of objects. " alt="ifile::IFilePersistence" shape="rect" coords="235,112,460,136"/>
+<area href="classifile_1_1_i_file_persistence.html" title="Interface providing loading and saving of data objects. " alt="ifile::IFilePersistence" shape="rect" coords="235,112,460,136"/>
 <area href="classifile_1_1_i_file_persistence_info.html" title="Provide some information about file loader state. " alt="ifile::IFilePersistenceInfo" shape="rect" coords="470,112,695,136"/>
 <area href="classicomp_1_1_i_component.html" title="Main component interface. " alt="icomp::IComponent" shape="rect" coords="0,56,225,80"/>
 <area href="classifile_1_1_i_file_type_info.html" title="Provide loading and saving of objects. " alt="ifile::IFileTypeInfo" shape="rect" coords="235,56,460,80"/>
@@ -81,7 +81,7 @@ Public Types</h2></td></tr>
 <a class="el" href="classifile_1_1_i_file_persistence.html#a24e35495e0c1f4d128ed1513c8907376a98b0c49404ab528a72d1778acfa9bd0f">MI_CANNOT_LOAD</a>, 
 <a class="el" href="classifile_1_1_i_file_persistence.html#a24e35495e0c1f4d128ed1513c8907376a43ac0d6482c1c806777158e9e9e0cc0b">MI_CANNOT_SAVE</a>
  }</td></tr>
-<tr class="memdesc:a24e35495e0c1f4d128ed1513c8907376"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of possible message ids used in context of this interface.  <a href="classifile_1_1_i_file_persistence.html#a24e35495e0c1f4d128ed1513c8907376">More...</a><br/></td></tr>
+<tr class="memdesc:a24e35495e0c1f4d128ed1513c8907376"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of possible message IDs used in context of this interface.  <a href="classifile_1_1_i_file_persistence.html#a24e35495e0c1f4d128ed1513c8907376">More...</a><br/></td></tr>
 <tr class="separator:a24e35495e0c1f4d128ed1513c8907376 inherit pub_types_classifile_1_1_i_file_persistence"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classifile_1_1_i_file_type_info"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classifile_1_1_i_file_type_info')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classifile_1_1_i_file_type_info.html">ifile::IFileTypeInfo</a></td></tr>
 <tr class="memitem:a327f9848e8ae67a4a3c227b62b07fb1a inherit pub_types_classifile_1_1_i_file_type_info"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifile_1_1_i_file_type_info.html#a327f9848e8ae67a4a3c227b62b07fb1a">QueryFlags</a> { <br/>
@@ -112,12 +112,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a32f2f428b257d5ee32a37231feec352e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifile_1_1_c_composed_file_persistence_comp.html#a32f2f428b257d5ee32a37231feec352e">IsOperationSupported</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> *dataObjectPtr, const QString *filePathPtr=<a class="el" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, int flags=-1, bool beQuiet=true) const </td></tr>
 <tr class="memdesc:a32f2f428b257d5ee32a37231feec352e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if object <code>dataObject</code> can be loaded/saved.  <a href="#a32f2f428b257d5ee32a37231feec352e">More...</a><br/></td></tr>
 <tr class="separator:a32f2f428b257d5ee32a37231feec352e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3ea050b1c70043dc62cf57dee590e87"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifile_1_1_c_composed_file_persistence_comp.html#af3ea050b1c70043dc62cf57dee590e87">LoadFromFile</a> (<a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const QString &amp;filePath=QString()) const </td></tr>
-<tr class="memdesc:af3ea050b1c70043dc62cf57dee590e87"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function loads data <code>data</code> from file <code>filePath</code>.  <a href="#af3ea050b1c70043dc62cf57dee590e87">More...</a><br/></td></tr>
-<tr class="separator:af3ea050b1c70043dc62cf57dee590e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae08266f40d877719e2b86791e0e2ac38"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifile_1_1_c_composed_file_persistence_comp.html#ae08266f40d877719e2b86791e0e2ac38">SaveToFile</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const QString &amp;filePath=QString()) const </td></tr>
-<tr class="memdesc:ae08266f40d877719e2b86791e0e2ac38"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function saves data <code>data</code> to file <code>filePath</code>.  <a href="#ae08266f40d877719e2b86791e0e2ac38">More...</a><br/></td></tr>
-<tr class="separator:ae08266f40d877719e2b86791e0e2ac38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e8f2ec0642099ae6c4e36c130bc4fb9"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifile_1_1_c_composed_file_persistence_comp.html#a2e8f2ec0642099ae6c4e36c130bc4fb9">LoadFromFile</a> (<a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const QString &amp;filePath=QString(), <a class="el" href="classibase_1_1_i_progress_manager.html">ibase::IProgressManager</a> *progressManagerPtr=<a class="el" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) const </td></tr>
+<tr class="memdesc:a2e8f2ec0642099ae6c4e36c130bc4fb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function loads data <code>data</code> from file <code>filePath</code>.  <a href="#a2e8f2ec0642099ae6c4e36c130bc4fb9">More...</a><br/></td></tr>
+<tr class="separator:a2e8f2ec0642099ae6c4e36c130bc4fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9a226fe9a4340ba93dac1b466a0a3d6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifile_1_1_c_composed_file_persistence_comp.html#ab9a226fe9a4340ba93dac1b466a0a3d6">SaveToFile</a> (const <a class="el" href="classistd_1_1_i_changeable.html">istd::IChangeable</a> &amp;data, const QString &amp;filePath=QString(), <a class="el" href="classibase_1_1_i_progress_manager.html">ibase::IProgressManager</a> *progressManagerPtr=<a class="el" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) const </td></tr>
+<tr class="memdesc:ab9a226fe9a4340ba93dac1b466a0a3d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function saves data <code>data</code> to file <code>filePath</code>.  <a href="#ab9a226fe9a4340ba93dac1b466a0a3d6">More...</a><br/></td></tr>
+<tr class="separator:ab9a226fe9a4340ba93dac1b466a0a3d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ae84e330cb2a72c8fc9a8f3a023c05d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifile_1_1_c_composed_file_persistence_comp.html#a0ae84e330cb2a72c8fc9a8f3a023c05d">GetFileExtensions</a> (QStringList &amp;result, int flags=-1, bool doAppend=false) const </td></tr>
 <tr class="memdesc:a0ae84e330cb2a72c8fc9a8f3a023c05d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file extensions supported by this loader.  <a href="#a0ae84e330cb2a72c8fc9a8f3a023c05d">More...</a><br/></td></tr>
 <tr class="separator:a0ae84e330cb2a72c8fc9a8f3a023c05d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -410,7 +410,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af3ea050b1c70043dc62cf57dee590e87"></a>
+<a class="anchor" id="a2e8f2ec0642099ae6c4e36c130bc4fb9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -427,7 +427,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>filePath</em> = <code>QString()</code>&#160;</td>
+          <td class="paramname"><em>filePath</em> = <code>QString()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classibase_1_1_i_progress_manager.html">ibase::IProgressManager</a> *&#160;</td>
+          <td class="paramname"><em>progressManagerPtr</em> = <code><a class="el" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -446,11 +452,11 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>File loading state. </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classifile_1_1_i_file_persistence.html#a674791f4173d2b57c1e6d6aa30228f76" title="Result of operation. ">OperationState</a> </dd></dl>
 
-<p>Implements <a class="el" href="classifile_1_1_i_file_persistence.html#ac3e349d549b4aeabc33a4555d2482385">ifile::IFilePersistence</a>.</p>
+<p>Implements <a class="el" href="classifile_1_1_i_file_persistence.html#a9e6910aeb48467396144d89cd5c6aaa9">ifile::IFilePersistence</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae08266f40d877719e2b86791e0e2ac38"></a>
+<a class="anchor" id="ab9a226fe9a4340ba93dac1b466a0a3d6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -467,7 +473,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>filePath</em> = <code>QString()</code>&#160;</td>
+          <td class="paramname"><em>filePath</em> = <code>QString()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classibase_1_1_i_progress_manager.html">ibase::IProgressManager</a> *&#160;</td>
+          <td class="paramname"><em>progressManagerPtr</em> = <code><a class="el" href="istd_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -486,7 +498,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>File saving state. </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classifile_1_1_i_file_persistence.html#a674791f4173d2b57c1e6d6aa30228f76" title="Result of operation. ">OperationState</a> </dd></dl>
 
-<p>Implements <a class="el" href="classifile_1_1_i_file_persistence.html#afe328c38bf1f522f666fe2bf72beeca3">ifile::IFilePersistence</a>.</p>
+<p>Implements <a class="el" href="classifile_1_1_i_file_persistence.html#abf75c2854344188a996a1ea7400412ef">ifile::IFilePersistence</a>.</p>
 
 </div>
 </div>

@@ -41,7 +41,10 @@ namespace icmpstr
 
 // reimplemented (ifile::IFilePersistence)
 
-int CRegistryLoaderComp::LoadFromFile(istd::IChangeable& data, const QString& filePath) const
+int CRegistryLoaderComp::LoadFromFile(
+			istd::IChangeable& data,
+			const QString& filePath,
+			ibase::IProgressManager* progressManagerPtr) const
 {
 	istd::CChangeNotifier notifier(&data);
 
@@ -79,7 +82,10 @@ int CRegistryLoaderComp::LoadFromFile(istd::IChangeable& data, const QString& fi
 }
 
 
-int CRegistryLoaderComp::SaveToFile(const istd::IChangeable& data, const QString& filePath) const
+int CRegistryLoaderComp::SaveToFile(
+			const istd::IChangeable& data,
+			const QString& filePath,
+			ibase::IProgressManager* /*progressManagerPtr*/) const
 {
 	if (!IsOperationSupported(&data, &filePath, QF_SAVE | QF_FILE, false)){
 		return OS_FAILED;

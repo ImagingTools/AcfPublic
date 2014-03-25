@@ -435,15 +435,15 @@
       <type>virtual int</type>
       <name>LoadFromFile</name>
       <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
-      <anchor>a9feb8a6bfddb2b4373dc4711f694b4f5</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+      <anchor>a59cd8154119ebf295c6149f2660c4b34</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>SaveToFile</name>
       <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
-      <anchor>addbf48f5c3d47927affbdcc6b36b3c41</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+      <anchor>a0edf34d03ae7d92e3c781df2bca076a1</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>

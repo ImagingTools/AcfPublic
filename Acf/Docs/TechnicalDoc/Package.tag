@@ -2206,6 +2206,7 @@
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
     <class kind="class">ifile::IFilePersistence</class>
+    <namespace>ibase</namespace>
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
@@ -2230,6 +2231,7 @@
     <filename>_t_file_serializer_comp_8h</filename>
     <includes id="_t_change_notifier_8h" name="TChangeNotifier.h" local="yes" imported="no">istd/TChangeNotifier.h</includes>
     <includes id="_c_system_8h" name="CSystem.h" local="yes" imported="no">istd/CSystem.h</includes>
+    <includes id="_i_progress_manager_8h" name="IProgressManager.h" local="yes" imported="no">ibase/IProgressManager.h</includes>
     <includes id="_c_file_serializer_comp_base_8h" name="CFileSerializerCompBase.h" local="yes" imported="no">ifile/CFileSerializerCompBase.h</includes>
     <class kind="class">ifile::TFileSerializerComp</class>
     <class kind="class">ifile::TFileSerializerComp::ReadArchiveEx</class>
@@ -26522,15 +26524,15 @@
       <type>virtual int</type>
       <name>LoadFromFile</name>
       <anchorfile>classidoc_1_1_c_text_file_loader_comp.html</anchorfile>
-      <anchor>a2d15e61cd84d128061003c0ec638ce3e</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+      <anchor>a30651d9144b033307fcc10845f5fa4b3</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>SaveToFile</name>
       <anchorfile>classidoc_1_1_c_text_file_loader_comp.html</anchorfile>
-      <anchor>a668323dd55994d0365ea966b75714976</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+      <anchor>ac7cc1cbc975faf31ccbc49be16befdd4</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -27371,15 +27373,15 @@
       <type>virtual int</type>
       <name>LoadFromFile</name>
       <anchorfile>classifile_1_1_c_composed_file_persistence_comp.html</anchorfile>
-      <anchor>af3ea050b1c70043dc62cf57dee590e87</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+      <anchor>a2e8f2ec0642099ae6c4e36c130bc4fb9</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>SaveToFile</name>
       <anchorfile>classifile_1_1_c_composed_file_persistence_comp.html</anchorfile>
-      <anchor>ae08266f40d877719e2b86791e0e2ac38</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+      <anchor>ab9a226fe9a4340ba93dac1b466a0a3d6</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -28071,15 +28073,15 @@
       <type>virtual int</type>
       <name>LoadFromFile</name>
       <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
-      <anchor>ac3e349d549b4aeabc33a4555d2482385</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const =0</arglist>
+      <anchor>a9e6910aeb48467396144d89cd5c6aaa9</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>SaveToFile</name>
       <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
-      <anchor>afe328c38bf1f522f666fe2bf72beeca3</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const =0</arglist>
+      <anchor>abf75c2854344188a996a1ea7400412ef</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -29465,15 +29467,15 @@
       <type>virtual int</type>
       <name>LoadFromFile</name>
       <anchorfile>classifile_1_1_t_file_serializer_comp.html</anchorfile>
-      <anchor>a3abdf0610148cdf646e744ecb4c082c0</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+      <anchor>ae0ce960d0d42381cf8fc969cfdb611a0</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>SaveToFile</name>
       <anchorfile>classifile_1_1_t_file_serializer_comp.html</anchorfile>
-      <anchor>ac47b8a80bdb7078648f06e633f22b19c</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+      <anchor>a11c61accfe5ebaa8700f38ed8e0c35c4</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -29672,15 +29674,15 @@
       <type>virtual int</type>
       <name>LoadFromFile</name>
       <anchorfile>classifilegui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>a4f6967ee34f6a09b145794e25f5f1b37</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+      <anchor>a932fc3335cf917901c2ed618ebc94248</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>SaveToFile</name>
       <anchorfile>classifilegui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>afa9e3683090b740160c35f22111e2ff9</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+      <anchor>a98aee51a8af9a75a18e5aaa9dc6f6d8f</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -30783,15 +30785,15 @@
       <type>virtual int</type>
       <name>LoadFromFile</name>
       <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
-      <anchor>a0c4cfcc4fd0656a0a4ed903a0a17058c</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+      <anchor>aa580f87bba68736df318994ba4c2da54</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>SaveToFile</name>
       <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
-      <anchor>a773ca9169c1140a801c288e3c0d1abe7</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+      <anchor>acce779c1bb2179409b1424cf22869f75</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -30880,15 +30882,15 @@
       <type>virtual int</type>
       <name>LoadFromFile</name>
       <anchorfile>classiimg_1_1_c_bitmap_loader_comp.html</anchorfile>
-      <anchor>a40725836416135c09ce73674d6e09f65</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
+      <anchor>acc6611bb5e0a8d5b9750f0e1009dd927</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>SaveToFile</name>
       <anchorfile>classiimg_1_1_c_bitmap_loader_comp.html</anchorfile>
-      <anchor>a24e929137a97830d5338c99e37fe048b</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
+      <anchor>afc865543e2ea8b9e6d0f9138f518102e</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -33034,15 +33036,15 @@
       <type>virtual int</type>
       <name>LoadFromFile</name>
       <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
-      <anchor>aaa8134f1bac5d7d82b84a5612d2a061d</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+      <anchor>a87684a3c2060d2587a48819245485a59</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>SaveToFile</name>
       <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
-      <anchor>a35f7544be0b8604b60ccb749a1d93042</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+      <anchor>ad3086f82793552a1163174b5d222968c</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -38480,15 +38482,15 @@
       <type>virtual int</type>
       <name>LoadFromFile</name>
       <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>aab03c7fc4a5f1458e74217d06c25a323</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+      <anchor>a45b544d1e0e3471616f13cf31744c5bd</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>SaveToFile</name>
       <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>aae462949e73206c312df53ea0d4a7caa</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+      <anchor>a4581b8d8e8948951281821ada42df179</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -40903,15 +40905,15 @@
       <type>virtual int</type>
       <name>LoadFromFile</name>
       <anchorfile>classiqt_1_1_c_clipboard_serializer_comp.html</anchorfile>
-      <anchor>adda3964a8d73b8e71b09c0471a012cb6</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+      <anchor>a74190619da45683a1e08344a7072aec0</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>SaveToFile</name>
       <anchorfile>classiqt_1_1_c_clipboard_serializer_comp.html</anchorfile>
-      <anchor>accb52f11ece6837c9f76cd5bf07a393d</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+      <anchor>a8f1e70e2ae9f89669468d2df6eb64f7a</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -41278,15 +41280,15 @@
       <type>virtual int</type>
       <name>LoadFromFile</name>
       <anchorfile>classiqt_1_1_c_settings_serializer_comp.html</anchorfile>
-      <anchor>a8709bbe01cbc5ae537416819812509f0</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+      <anchor>ae9842f96fdb4206552cd23fe2cdd062b</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>SaveToFile</name>
       <anchorfile>classiqt_1_1_c_settings_serializer_comp.html</anchorfile>
-      <anchor>aa41d4dd5f51c193309175f99c6844c27</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString()) const </arglist>
+      <anchor>a34d73b46ab6e061095474ff1d9e843f8</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>

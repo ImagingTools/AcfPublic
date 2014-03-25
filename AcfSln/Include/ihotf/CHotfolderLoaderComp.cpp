@@ -42,7 +42,10 @@ namespace ihotf
 
 // reimplemented (ifile::IFilePersistence)
 
-int CHotfolderLoaderComp::LoadFromFile(istd::IChangeable& data, const QString& filePath) const
+int CHotfolderLoaderComp::LoadFromFile(
+			istd::IChangeable& data,
+			const QString& filePath,
+			ibase::IProgressManager* /*progressManagerPtr*/) const
 {
 	if (!IsOperationSupported(&data, &filePath, QF_LOAD | QF_FILE, false)){
 		return OS_FAILED;
@@ -67,7 +70,10 @@ int CHotfolderLoaderComp::LoadFromFile(istd::IChangeable& data, const QString& f
 }
 
 
-int CHotfolderLoaderComp::SaveToFile(const istd::IChangeable& data, const QString& filePath) const
+int CHotfolderLoaderComp::SaveToFile(
+			const istd::IChangeable& data,
+			const QString& filePath,
+			ibase::IProgressManager* /*progressManagerPtr*/) const
 {
 	if (!IsOperationSupported(&data, &filePath, QF_SAVE | QF_FILE, false)){
 		return OS_FAILED;

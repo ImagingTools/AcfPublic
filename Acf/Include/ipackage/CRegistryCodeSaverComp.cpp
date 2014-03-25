@@ -34,6 +34,7 @@
 #include "icomp/icomp.h"
 #include "icomp/CCachedEnvironmentManager.h"
 #include "iser/CMemoryWriteArchive.h"
+#include "ibase/IProgressManager.h"
 
 
 namespace ipackage
@@ -68,13 +69,19 @@ bool CRegistryCodeSaverComp::IsOperationSupported(
 }
 
 
-int CRegistryCodeSaverComp::LoadFromFile(istd::IChangeable& /*data*/, const QString& /*filePath*/) const
+int CRegistryCodeSaverComp::LoadFromFile(
+			istd::IChangeable& /*data*/,
+			const QString& /*filePath*/,
+			ibase::IProgressManager* /*progressManagerPtr*/) const
 {
 	return OS_FAILED;
 }
 
 
-int CRegistryCodeSaverComp::SaveToFile(const istd::IChangeable& data, const QString& filePath) const
+int CRegistryCodeSaverComp::SaveToFile(
+			const istd::IChangeable& data,
+			const QString& filePath,
+			ibase::IProgressManager* /*progressManagerPtr*/) const
 {
 	const icomp::IRegistry* registryPtr = dynamic_cast<const icomp::IRegistry*>(&data);
 	if (registryPtr == NULL){
