@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<Acf>
+  <AcfHeader>
+    <VersionInfos count="3">
+      <Version>
+        <Id>
+          0
+        </Id>
+        <Number>
+          2934
+        </Number>
+        <Description>
+          ACF
+        </Description>
+      </Version>
+      <Version>
+        <Id>
+          1
+        </Id>
+        <Number>
+          920
+        </Number>
+        <Description>
+          ACF-Solutions
+        </Description>
+      </Version>
+      <Version>
+        <Id>
+          1023
+        </Id>
+        <Number>
+          264194
+        </Number>
+        <Description>
+          Qt Framework
+        </Description>
+      </Version>
+    </VersionInfos>
+  </AcfHeader>
+  <PositionMap count="5">
+    <Element>
+      <ComponentName>
+        FileNameParamGui
+      </ComponentName>
+      <X>
+        250
+      </X>
+      <X>
+        575
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        ComposedGui
+      </ComponentName>
+      <X>
+        625
+      </X>
+      <X>
+        400
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        StandaloneApp
+      </ComponentName>
+      <X>
+        625
+      </X>
+      <X>
+        225
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        BitmapFileExplorer
+      </ComponentName>
+      <X>
+        250
+      </X>
+      <X>
+        225
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        VersionInfo
+      </ComponentName>
+      <X>
+        950
+      </X>
+      <X>
+        225
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+  </PositionMap>
+  <EmbeddedRegistries count="0">
+  </EmbeddedRegistries>
+</Acf>
