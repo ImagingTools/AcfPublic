@@ -128,7 +128,7 @@ QTreeWidgetItem* CRegistryTreeViewComp::AddRegistryElementItem(
 						&messageContainer);
 		}
 
-		static QIcon errorIcon(":/Icons/Warning.svg");
+		static QIcon errorIcon(":/Icons/Warning");
 
 		if (!isConsistent){
 			elementItemPtr->setIcon(CT_NAME, errorIcon);
@@ -220,7 +220,7 @@ void CRegistryTreeViewComp::UpdateRegistryStatus()
 	if (registryPtr != NULL){		
 		bool isValid = IsRegistryValid(*registryPtr);
 			
-		static QIcon errorIcon(":/Icons/Warning.svg");
+		static QIcon errorIcon(":/Icons/Warning");
 		static QIcon okIcon(":/Icons/Ok");
 
 		SetStatusIcon(isValid ? okIcon : errorIcon);

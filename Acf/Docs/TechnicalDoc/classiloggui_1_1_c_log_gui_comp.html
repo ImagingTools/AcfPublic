@@ -285,7 +285,7 @@ Protected Types</h2></td></tr>
 <a class="el" href="classiloggui_1_1_c_log_gui_comp.html#a35c2d73166d9d3a251bc0c85cebfaf40afe872c24bae7b4fc25f67290bd508026">CT_MESSAGE</a>
  }</td></tr>
 <tr class="separator:a35c2d73166d9d3a251bc0c85cebfaf40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4f7ee116ce3e30fd050af573c8b6c20"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiloggui_1_1_c_log_gui_comp.html#ab4f7ee116ce3e30fd050af573c8b6c20">MessageMode</a> { <a class="el" href="classiloggui_1_1_c_log_gui_comp.html#ab4f7ee116ce3e30fd050af573c8b6c20a04adfc8cd36e48c8accf6964ced35a20">MM_INFO</a> = istd::IInformationProvider::IC_INFO, 
+<tr class="memitem:ab4f7ee116ce3e30fd050af573c8b6c20"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiloggui_1_1_c_log_gui_comp.html#ab4f7ee116ce3e30fd050af573c8b6c20">MessageMode</a> { <a class="el" href="classiloggui_1_1_c_log_gui_comp.html#ab4f7ee116ce3e30fd050af573c8b6c20a04adfc8cd36e48c8accf6964ced35a20">MM_INFO</a> = istd::IInformationProvider::IC_NONE, 
 <a class="el" href="classiloggui_1_1_c_log_gui_comp.html#ab4f7ee116ce3e30fd050af573c8b6c20a3aab94fd14c7ed201b7c314fcad9ef9c">MM_WARNING</a> = istd::IInformationProvider::IC_WARNING, 
 <a class="el" href="classiloggui_1_1_c_log_gui_comp.html#ab4f7ee116ce3e30fd050af573c8b6c20af679c278fd5c9bead5105fc5c45d1010">MM_ERROR</a> = istd::IInformationProvider::IC_ERROR, 
 <a class="el" href="classiloggui_1_1_c_log_gui_comp.html#ab4f7ee116ce3e30fd050af573c8b6c20a8143df4401b638cd0951ff81c7bb5e8a">MM_ALL</a> = istd::IInformationProvider::IC_CRITICAL
@@ -378,16 +378,18 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a232f459dc92bb0dbc5e74ba1eaf5e256"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiloggui_1_1_c_log_gui_comp.html#a232f459dc92bb0dbc5e74ba1eaf5e256">m_infoAction</a></td></tr>
-<tr class="separator:a232f459dc92bb0dbc5e74ba1eaf5e256"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bc66e57bce8962a2568bcd408054c0c"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiloggui_1_1_c_log_gui_comp.html#a3bc66e57bce8962a2568bcd408054c0c">m_warningAction</a></td></tr>
-<tr class="separator:a3bc66e57bce8962a2568bcd408054c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5537eeecc58f98e301410dd29971d6a"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiloggui_1_1_c_log_gui_comp.html#ad5537eeecc58f98e301410dd29971d6a">m_errorAction</a></td></tr>
-<tr class="separator:ad5537eeecc58f98e301410dd29971d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53e15398089edb7f16106621d6b68d58"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiloggui_1_1_c_log_gui_comp.html#a53e15398089edb7f16106621d6b68d58">m_clearAction</a></td></tr>
-<tr class="separator:a53e15398089edb7f16106621d6b68d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af979153783166d073f890580529036e3"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiloggui_1_1_c_log_gui_comp.html#af979153783166d073f890580529036e3">m_exportAction</a></td></tr>
-<tr class="separator:af979153783166d073f890580529036e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9081e1d753df0d2c52ad369d7190e8d"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiloggui_1_1_c_log_gui_comp.html#af9081e1d753df0d2c52ad369d7190e8d">m_infoActionPtr</a></td></tr>
+<tr class="separator:af9081e1d753df0d2c52ad369d7190e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4978f826fdbe67403eb435797f401ff"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiloggui_1_1_c_log_gui_comp.html#ae4978f826fdbe67403eb435797f401ff">m_warningActionPtr</a></td></tr>
+<tr class="separator:ae4978f826fdbe67403eb435797f401ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a744ac30714244c9fc29b3f38d1c1806b"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiloggui_1_1_c_log_gui_comp.html#a744ac30714244c9fc29b3f38d1c1806b">m_errorActionPtr</a></td></tr>
+<tr class="separator:a744ac30714244c9fc29b3f38d1c1806b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d8325dca22c35feccdcdd14b215ad3"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiloggui_1_1_c_log_gui_comp.html#ae0d8325dca22c35feccdcdd14b215ad3">m_clearActionPtr</a></td></tr>
+<tr class="separator:ae0d8325dca22c35feccdcdd14b215ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a657254db6adb6551ccb969e862633df8"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiloggui_1_1_c_log_gui_comp.html#a657254db6adb6551ccb969e862633df8">m_exportActionPtr</a></td></tr>
+<tr class="separator:a657254db6adb6551ccb969e862633df8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43aeef7a228396ff7f8070b3efc8a68f"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiloggui_1_1_c_log_gui_comp.html#a43aeef7a228396ff7f8070b3efc8a68f">m_diagnosticModeActionPtr</a></td></tr>
+<tr class="separator:a43aeef7a228396ff7f8070b3efc8a68f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classiqtgui_1_1_c_gui_component_base"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classiqtgui_1_1_c_gui_component_base')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classiqtgui_1_1_c_gui_component_base.html">iqtgui::CGuiComponentBase</a></td></tr>
 <tr class="memitem:a95516a7b4cf2482c46b21d2faec812b1 inherit pro_attribs_classiqtgui_1_1_c_gui_component_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classimod_1_1_t_model_wrap.html">imod::TModelWrap</a>&lt; <a class="el" href="classiqtgui_1_1_c_gui_component_base_1_1_visual_status.html">VisualStatus</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiqtgui_1_1_c_gui_component_base.html#a95516a7b4cf2482c46b21d2faec812b1">m_visualStatus</a></td></tr>
 <tr class="separator:a95516a7b4cf2482c46b21d2faec812b1 inherit pro_attribs_classiqtgui_1_1_c_gui_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -472,7 +474,7 @@ Additional Inherited Members</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00053">53</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00054">54</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -498,7 +500,7 @@ Additional Inherited Members</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00069">69</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00070">70</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -530,7 +532,7 @@ Additional Inherited Members</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00061">61</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00062">62</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
 
 </div>
 </div>
@@ -982,7 +984,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a53e15398089edb7f16106621d6b68d58"></a>
+<a class="anchor" id="ae0d8325dca22c35feccdcdd14b215ad3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -990,51 +992,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QAction* iloggui::CLogGuiComp::m_clearAction</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00127">127</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad5537eeecc58f98e301410dd29971d6a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QAction* iloggui::CLogGuiComp::m_errorAction</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00126">126</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af979153783166d073f890580529036e3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QAction* iloggui::CLogGuiComp::m_exportAction</td>
+          <td class="memname">QAction* iloggui::CLogGuiComp::m_clearActionPtr</td>
         </tr>
       </table>
   </td>
@@ -1048,7 +1006,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a232f459dc92bb0dbc5e74ba1eaf5e256"></a>
+<a class="anchor" id="a43aeef7a228396ff7f8070b3efc8a68f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1056,7 +1014,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QAction* iloggui::CLogGuiComp::m_infoAction</td>
+          <td class="memname">QAction* iloggui::CLogGuiComp::m_diagnosticModeActionPtr</td>
         </tr>
       </table>
   </td>
@@ -1066,11 +1024,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00124">124</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00130">130</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3bc66e57bce8962a2568bcd408054c0c"></a>
+<a class="anchor" id="a744ac30714244c9fc29b3f38d1c1806b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1078,7 +1036,51 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QAction* iloggui::CLogGuiComp::m_warningAction</td>
+          <td class="memname">QAction* iloggui::CLogGuiComp::m_errorActionPtr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00127">127</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a657254db6adb6551ccb969e862633df8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QAction* iloggui::CLogGuiComp::m_exportActionPtr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00129">129</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af9081e1d753df0d2c52ad369d7190e8d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QAction* iloggui::CLogGuiComp::m_infoActionPtr</td>
         </tr>
       </table>
   </td>
@@ -1089,6 +1091,28 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00125">125</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae4978f826fdbe67403eb435797f401ff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QAction* iloggui::CLogGuiComp::m_warningActionPtr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_c_log_gui_comp_8h_source.html#l00126">126</a> of file <a class="el" href="_c_log_gui_comp_8h_source.html">CLogGuiComp.h</a>.</p>
 
 </div>
 </div>

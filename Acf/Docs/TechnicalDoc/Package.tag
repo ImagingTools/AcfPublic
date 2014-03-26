@@ -33660,37 +33660,44 @@
     </member>
     <member kind="variable" protection="protected">
       <type>QAction *</type>
-      <name>m_infoAction</name>
+      <name>m_infoActionPtr</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a232f459dc92bb0dbc5e74ba1eaf5e256</anchor>
+      <anchor>af9081e1d753df0d2c52ad369d7190e8d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>QAction *</type>
-      <name>m_warningAction</name>
+      <name>m_warningActionPtr</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a3bc66e57bce8962a2568bcd408054c0c</anchor>
+      <anchor>ae4978f826fdbe67403eb435797f401ff</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>QAction *</type>
-      <name>m_errorAction</name>
+      <name>m_errorActionPtr</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ad5537eeecc58f98e301410dd29971d6a</anchor>
+      <anchor>a744ac30714244c9fc29b3f38d1c1806b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>QAction *</type>
-      <name>m_clearAction</name>
+      <name>m_clearActionPtr</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a53e15398089edb7f16106621d6b68d58</anchor>
+      <anchor>ae0d8325dca22c35feccdcdd14b215ad3</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>QAction *</type>
-      <name>m_exportAction</name>
+      <name>m_exportActionPtr</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>af979153783166d073f890580529036e3</anchor>
+      <anchor>a657254db6adb6551ccb969e862633df8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction *</type>
+      <name>m_diagnosticModeActionPtr</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a43aeef7a228396ff7f8070b3efc8a68f</anchor>
       <arglist></arglist>
     </member>
   </compound>
