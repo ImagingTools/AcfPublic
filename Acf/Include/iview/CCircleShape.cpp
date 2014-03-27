@@ -106,7 +106,7 @@ bool CCircleShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton button
 							tickerBox.IsInside(position - ticker4.ToIndex2d())){
 				m_editMode = EM_RADIUS;
 
-				BeginModelChanges();
+				BeginTickerDrag();
 
 				return true;
 			}
@@ -117,7 +117,7 @@ bool CCircleShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton button
 			return BaseClass::OnMouseButton(position, buttonType, downFlag);
 		}
 		else{
-			EndModelChanges();
+			EndTickerDrag();
 		}
 	}
 	return false;

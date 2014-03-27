@@ -84,7 +84,7 @@ bool CPolygonShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butto
 								m_referencePosition = cp - GetLogPosition(position);
 								m_referenceIndex = i;
 
-								BeginModelChanges();
+								BeginTickerDrag();
 
 								return true;
 							}
@@ -101,7 +101,7 @@ bool CPolygonShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butto
 						const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IColorSchema::TT_INSERT);
 
 						if (tickerBox.IsInside(position - spLast)){
-							BeginModelChanges();
+							BeginTickerDrag();
 
 							if (polygonPtr->InsertNode(cpLast)){
 								m_referencePosition = cpLast - GetLogPosition(position);
@@ -115,7 +115,7 @@ bool CPolygonShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butto
 							i2d::CVector2d middle = GetSegmentMiddle(i);
 							istd::CIndex2d sp = GetScreenPosition(middle).ToIndex2d();
 							if (tickerBox.IsInside(position - sp)){
-								BeginModelChanges();
+								BeginTickerDrag();
 
 								if (polygonPtr->InsertNode(i + 1, middle)){
 									m_referencePosition = middle - GetLogPosition(position);
@@ -137,11 +137,12 @@ bool CPolygonShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butto
 							const i2d::CVector2d& cp = polygonPtr->GetNode(i);
 							istd::CIndex2d sp = GetScreenPosition(cp).ToIndex2d();
 							if (tickerBox.IsInside(position - sp)){
-								BeginModelChanges();
+								BeginTickerDrag();
 
 								polygonPtr->RemoveNode(i);
 
-								EndModelChanges();
+								EndTickerDrag();
+
 								return true;
 							}
 						}
@@ -151,7 +152,7 @@ bool CPolygonShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butto
 			}
 		}
 
-		EndModelChanges();
+		EndTickerDrag();
 	}
 
 	return false;
@@ -609,8 +610,6 @@ void CPolygonShape::SetLogDragPosition(const i2d::CVector2d& position)
 		istd::TChangeNotifier<i2d::CPolygon> polygonPtr(dynamic_cast<i2d::CPolygon*>(modelPtr));
 		Q_ASSERT(polygonPtr.IsValid());
 
-		BeginModelChanges();
-
 		int nodesCount = polygonPtr->GetNodesCount();
 		if (nodesCount == int(m_references.size())){
 			for (int i = 0; i < nodesCount; i++){
@@ -618,7 +617,7 @@ void CPolygonShape::SetLogDragPosition(const i2d::CVector2d& position)
 			}
 		}
 
-		EndModelChanges();
+		UpdateModelChanges();
 	}
 }
 

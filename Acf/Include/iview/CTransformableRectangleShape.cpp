@@ -158,12 +158,13 @@ bool CTransformableRectangleShape::OnMouseButton(istd::CIndex2d position, Qt::Mo
 		}
 
 		if (m_mouseMode != MM_NONE){
-			BeginModelChanges();
+			BeginTickerDrag();
+
 			return true;
 		}
 	}
 
-	EndModelChanges();
+	EndTickerDrag();
 
 	return false;
 }
@@ -557,11 +558,9 @@ void CTransformableRectangleShape::SetLogDragPosition(const i2d::CVector2d& posi
 	imod::IModel* modelPtr = GetModelPtr();
 	i2d::CParallelogram* parallelogramPtr = dynamic_cast<i2d::CParallelogram*>(modelPtr);
 	if (parallelogramPtr != NULL){
-		BeginModelChanges();
-
 		parallelogramPtr->MoveCenterTo(m_referencePosition + position);
 
-		EndModelChanges();
+		UpdateModelChanges();
 	}
 }
 

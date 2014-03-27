@@ -107,7 +107,7 @@ bool CPinShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton buttonTyp
 	BaseClass::OnMouseButton(position, buttonType, downFlag);
 
 	if (!IsEditablePosition()){
-		EndModelChanges();
+		EndTickerDrag();
 		return false;
 	}
 
@@ -122,13 +122,14 @@ bool CPinShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton buttonTyp
 			if (tickerBox.IsInside(position - screenCenter.ToIndex2d())){
 				m_referencePosition = center - GetLogPosition(position);
 
-				BeginModelChanges();
+				BeginTickerDrag();
+
 				return true;
 			}
 		}
 	}
 
-	EndModelChanges();
+	EndTickerDrag();
 
 	return false;
 }
@@ -212,14 +213,12 @@ void CPinShape::SetLogDragPosition(const i2d::CVector2d& position)
 	if (IsEditablePosition()){
 		imod::IModel* modelPtr = GetModelPtr();
 		if (modelPtr != NULL){
-			BeginModelChanges();
-
 			i2d::CPosition2d& pin = *dynamic_cast<i2d::CPosition2d*>(modelPtr);
 			Q_ASSERT(&pin != NULL);
 
 			pin.SetPosition(m_referencePosition + position);
 
-			EndModelChanges();
+			UpdateModelChanges();
 		}
 	}
 }

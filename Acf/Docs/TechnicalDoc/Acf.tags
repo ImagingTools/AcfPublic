@@ -60402,16 +60402,16 @@
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>BeginModelChanges</name>
+      <name>BeginTickerDrag</name>
       <anchorfile>classiview_1_1_c_interactive_shape_base.html</anchorfile>
-      <anchor>a83c37f04fab3eb2e9bf8d7c3336c9ef7</anchor>
+      <anchor>a4b4adccd84b8d24728428d8e32896e57</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>EndModelChanges</name>
+      <name>EndTickerDrag</name>
       <anchorfile>classiview_1_1_c_interactive_shape_base.html</anchorfile>
-      <anchor>a794944580fea5150eb611fc1e172af63</anchor>
+      <anchor>ae821561e8d9dca58536410fbcebed65a</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">

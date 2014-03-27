@@ -322,8 +322,6 @@ void CAffineTransformation2dShape::SetLogDragPosition(const i2d::CVector2d& posi
 		return;
 	}
 
-	BeginModelChanges();
-
 	i2d::CVector2d offset = position - m_referencePosition;
 	const ControlPoints& cp = GetControlPoints();
 	ControlPoints points;
@@ -380,7 +378,7 @@ void CAffineTransformation2dShape::SetLogDragPosition(const i2d::CVector2d& posi
 
 	transformationPtr->Reset(translation, angle, scale);
 
-	EndModelChanges();
+	UpdateModelChanges();
 
 	m_referencePosition = position;
 }

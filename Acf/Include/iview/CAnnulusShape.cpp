@@ -147,7 +147,7 @@ bool CAnnulusShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butto
 								tickerBox.IsInside(position - ticker4)){
 					m_editMode = EM_INNER_RADIUS;
 
-					BeginModelChanges();
+					BeginTickerDrag();
 
 					return true;
 				}
@@ -160,7 +160,7 @@ bool CAnnulusShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butto
 								tickerBox.IsInside(position - ticker8)){
 					m_editMode = EM_OUTER_RADIUS;
 
-					BeginModelChanges();
+					BeginTickerDrag();
 
 					return true;
 				}
