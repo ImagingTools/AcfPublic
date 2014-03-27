@@ -68601,5 +68601,6 @@
     <docanchor file="index">Introduction</docanchor>
     <docanchor file="index" title="How it works">HowItWorks</docanchor>
     <docanchor file="index">Features</docanchor>
+    <docanchor file="index" title="Tutorials">BasicTutorials</docanchor>
   </compound>
 </tagfile>
