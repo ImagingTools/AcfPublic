@@ -1,0 +1,36 @@
+General:
+========
+* Better support for "one-way" operations, both on the client side and on the server side (now using "HTTP 204 No Content").
+
+Client-side:
+============
+* Remove encodingStyle attribute, as Microsoft EWS servers reject it. Please contact
+KDSoap support if this causes a regression with any other SOAP server.
+
+* Add support for ignoring a specific list of SSL errors: KDSoapClientInterface::ignoreSslErrors(QList<QSslError>)
+and KDSoapSslHandler::ignoreSslErrors(QList<QSslError>) (SOAP-92)
+
+* Fix crash when using sslHandler() and making a synchronous call (SOAP-79/issue29)
+
+* Fix race conditions in KDSoapNamespaceManager on Windows, because MSVC doesn't implement threadsafe statics (issue41).
+
+Server-side:
+============
+* Fix crash when sending delayed reply to disconnected client (SOAP-34/SOAP-67)
+
+* Add doneProcessingRequestWithPath() for copying fault info and response headers from secondary object to primary one.
+  The method is to be called after processRequestWithPath delegates the request to another object interface.
+
+* Fix support for multiple message parts in RPC mode.
+
+Code generator changes, applying to both client and server side:
+================================================================
+* Only set xsi:nil="true" on elements that are marked as nillable in the WSDL file.
+* Omit non-nillable empty elements of a complex type.
+* Support for minOccurs=0 for elements and use=optional for attributes:
+   omit such elements/attributes when they haven't been set by the C++ code explicitely. (SOAP-93/SOAP-80)
+* Support for attributes marked as "prohibited", ensuring they are not settable nor sent in the request. (SOAP-102)
+* Generate <service> element automatically if there's none in the WSDL file. (SOAP-60/issue9)
+* Implement support for inheritance between complex types, using QSharedPointer as internal storage. (issue26/SOAP-87/SOAP-62)
+* Implement support for substitutionGroup, in order to send the correct element name (SOAP-87 followup, SOAP-97).
+

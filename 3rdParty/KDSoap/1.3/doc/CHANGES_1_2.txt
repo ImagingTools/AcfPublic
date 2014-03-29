@@ -1,0 +1,31 @@
+General:
+========
+* Fix compilation with gcc-4.6, and fix behavior with Qt-4.8
+
+Client-side:
+============
+* Generic soapError() signal, for central processing of all SOAP errors (faults) [Jira SOAP-6]
+* Fix support for the "short" and "unsignedShort" data types
+* Apply end point configuration changes also if interface was already used
+* Support for network cookies, see setCookieJar(). Requires Qt >= 4.7.0
+* Support for network proxies, see setProxy() and the class QNetworkProxy in Qt.
+* Generated code: make clientInterface() public, add const overload.
+* Generate additional job-based API for asynchronous calls.
+
+Server-side:
+============
+* Support for delayed responses
+* Fix support for messages with no input or output arguments
+* Set response namespace automatically in generated processRequest, so as to not rely on the namespace
+  of the incoming request.
+* Fix parsing of requests with Qt-4.8.
+* Fix crash in Qt-4.8 at server shutdown.
+* Return an error if receiving a GET request (other than when retrieving the .wsdl file)
+
+Code generator changes, applying to both client and server side:
+================================================================
+* Handle paths with non-ascii letters (url encoding issues).
+* Handle wsdl files with multiple service definitions
+* Reworked parsing of XML namespaces.
+* New option -namespace <...> to kdwsdl2cpp, in order to put all the generated code into a C++ namespace.
+* Better handling of whether elements are "qualified" or not, and writing out the correct namespace for them.

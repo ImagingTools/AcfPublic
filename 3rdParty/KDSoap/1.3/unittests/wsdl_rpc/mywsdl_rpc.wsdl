@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<definitions  name ='MyWsdl'   targetNamespace = 'http://www.kdab.com/xml/MyWsdl/'
+  xmlns:kdab='http://www.kdab.com/xml/MyWsdl/' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema' 
+	 xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/' 
+	 xmlns:soap-enc='http://schemas.xmlsoap.org/soap/encoding/' 
+	 xmlns='http://schemas.xmlsoap.org/wsdl/'>
+  <types>
+    <xsd:schema targetNamespace='http://www.kdab.com/xml/MyWsdl/' xmlns='http://www.w3.org/2001/XMLSchema'>
+      <simpleType name="LimitedString">
+        <restriction base="xsd:string">
+          <minLength value="1"/>
+          <maxLength value="128"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="EmployeeName">
+        <restriction base="kdab:LimitedString">
+        </restriction>
+      </simpleType>
+      <simpleType name="TeamName">
+        <restriction base="kdab:LimitedString">
+        </restriction>
+      </simpleType>
+      <simpleType name="EmployeeTypeEnum">
+        <restriction base="xsd:string">
+          <enumeration value="Janitor"/>
+          <enumeration value="Developer"/>
+          <enumeration value="Tester"/>
+          <enumeration value="TeamLeader"/>
+          <enumeration value="CEO"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="EmployeeTypeEnumList">
+        <list itemType="kdab:EmployeeTypeEnum"/> <!-- space-separated list of enum values -->
+      </simpleType>
+      <simpleType name="LottoNumbers">
+        <list itemType="xsd:int"/> <!-- space-separated list of ints -->
+      </simpleType>
+      <element name="EmployeeType">
+        <complexType>
+          <sequence>
+            <element name="otherRoles" type="kdab:EmployeeTypeEnum" minOccurs="0" maxOccurs="unbounded"/>
+            <element name="otherRolesAsList" type="kdab:EmployeeTypeEnumList"/>
+            <element name="lottoNumbers" type="kdab:LottoNumbers"/>
+            <sequence maxOccurs="3">
+             <element name="team" type="kdab:TeamName"/>
+            </sequence>
+            <element name="anonList" type="kdab:AnonListType"/>
+          </sequence>
+          <attribute name="type" type="kdab:EmployeeTypeEnum"/>
+        </complexType>
+      </element>
+      <complexType name="EmployeeAchievement">
+        <all>
+         <element name="type" type="xsd:string"/>
+         <element name="label" type="xsd:string"/>
+        </all>
+        <anyAttribute namespace="http://schemas.xmlsoap.org/soap/envelope/">
+          <annotation>
+            <documentation>Allow attributes in the soap namespace to be used here</documentation>
+          </annotation>
+        </anyAttribute>
+      </complexType>
+      <complexType name="EmployeeAchievements">
+        <complexContent>
+          <restriction base="soap-enc:Array">
+            <attribute ref="soap-enc:arrayType" arrayType="kdab:EmployeeAchievement[]"/>
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="Employee">
+        <sequence>
+          <element name='employeeType' type='kdab:EmployeeType'/>
+          <element name='employeeName' type='kdab:EmployeeName'/>
+          <element name='employeeCountry' type='kdab:LimitedString'/>
+          <element name='employeeAchievements' type='kdab:EmployeeAchievements'/>
+          <element name='employeeJeansSize' type='kdab:JeansSize'/>
+        </sequence>
+      </complexType>
+      <simpleType name="Telegram">
+        <restriction base="xsd:hexBinary">
+          <minLength value="1"></minLength>
+          <maxLength value="255"></maxLength>
+        </restriction>
+      </simpleType>
+
+      <!-- Union example from http://www.w3schools.com/schema/el_union.asp -->
+      <xsd:simpleType name="JeansSize">
+         <xsd:union memberTypes="sizebyno sizebystring">
+           <!-- TODO add a simpleType child here to test the other way of specifying types -->
+         </xsd:union>
+      </xsd:simpleType>
+      <xsd:simpleType name="sizebyno">
+        <xsd:restriction base="xsd:positiveInteger">
+          <xsd:maxInclusive value="42"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="sizebystring">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="small"/>
+          <xsd:enumeration value="medium"/>
+          <xsd:enumeration value="large"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+
+      <!-- Test for anonymous type in list -->
+      <xsd:simpleType name="AnonListType">
+        <xsd:list>
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:enumeration value="None" />
+              <xsd:enumeration value="MergedOnly" />
+              <xsd:enumeration value="FreeBusy" />
+              <xsd:enumeration value="FreeBusyMerged" />
+              <xsd:enumeration value="Detailed" />
+              <xsd:enumeration value="DetailedMerged" />
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:list>
+      </xsd:simpleType>
+
+      <element name="LoginElement">
+        <complexType>
+          <sequence>
+          <element name="user" type="xsd:string"/>
+          <element name="pass" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SessionElement">
+        <complexType>
+          <sequence>
+          <element name="sessionId" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+    </xsd:schema>
+  </types>
+  <message name='addEmployee'>
+    <part name='employeeType' type='kdab:EmployeeType'/>
+    <part name='employeeName' type='kdab:EmployeeName'/>
+    <part name='employeeCountry' type='kdab:LimitedString'/>
+    <part name='employeeAchievements' type='kdab:EmployeeAchievements'/>
+    <part name='employeeJeansSize' type='kdab:JeansSize'/>
+  </message>
+  <message name='addEmployeeResponse'>
+    <part name='bstrReturn' type='xsd:string'/>
+  </message>
+
+  <message name='getEmployee'>
+     <part name='employeeName' type='kdab:EmployeeName'/>
+  </message>
+  <message name='getEmployeeResponse'>
+     <part name='employee' type='kdab:Employee'/>
+  </message>
+
+  <message name='getEmployeeCountry'>
+     <part name='employeeName' type='kdab:EmployeeName'/>
+  </message>
+  <message name='getEmployeeCountryResponse'>
+     <part name='employeeCountry' type='kdab:LimitedString'/>
+  </message>
+
+  <message name='getEmployeeType'>
+     <part name='employeeName' type='kdab:EmployeeName'/>
+  </message>
+  <message name='getEmployeeTypeResponse'>
+     <part name='employeeType' type='kdab:EmployeeType'/>
+  </message>
+
+  <message name='sendTelegram'>
+     <part name='telegram' type='kdab:Telegram'/>
+  </message>
+  <message name='sendTelegramResponse'>
+     <part name='telegram' type='kdab:Telegram'/>
+  </message>
+
+
+
+  <message name="Header">
+    <part type="kdab:LoginElement" name="LoginHeader"/>
+    <part type="kdab:SessionElement" name="SessionHeader"/>
+  </message>
+
+  <portType name='MyWsdlPortType'>
+    <operation name='addEmployee'>
+      <input message='kdab:addEmployee' />
+      <output message='kdab:addEmployeeResponse' />
+    </operation>
+    <operation name='getEmployee'>
+      <input message='kdab:getEmployee' />
+      <output message='kdab:getEmployeeResponse' />
+    </operation>
+    <operation name='getEmployeeCountry'>
+      <input message='kdab:getEmployeeCountry' />
+      <output message='kdab:getEmployeeCountryResponse' />
+    </operation>
+    <operation name='getEmployeeType'>
+      <input message='kdab:getEmployeeType' />
+      <output message='kdab:getEmployeeTypeResponse' />
+    </operation>
+    <operation name='sendTelegram'>
+      <input message='kdab:sendTelegram' />
+      <output message='kdab:sendTelegramResponse' />
+    </operation>
+  </portType>
+  <binding name='MyWsdlBinding' type='kdab:MyWsdlPortType' >
+    <soap:binding style='rpc' transport='http://schemas.xmlsoap.org/soap/http' />
+    <operation name='addEmployee' >
+      <soap:operation soapAction='http://www.kdab.com/AddEmployee' />
+      <input>
+        <soap:header use="encoded" message="kdab:Header" part="LoginHeader"/>
+        <soap:header use="encoded" message="kdab:Header" part="SessionHeader"/>
+        <soap:body use='encoded'/>
+      </input>
+      <output>
+        <soap:body use='encoded'/>
+      </output>
+    </operation>
+    <operation name='getEmployee'>
+      <input>
+        <soap:body use='encoded'/>
+      </input>
+      <output>
+        <soap:body use='encoded'/>
+      </output>
+    </operation>
+    <operation name='getEmployeeCountry'>
+      <input>
+        <soap:body use='literal'/>
+      </input>
+      <output>
+        <soap:body use='literal'/>
+      </output>
+    </operation>
+    <operation name='getEmployeeType'>
+      <input>
+        <soap:body use='encoded'/>
+      </input>
+      <output>
+        <soap:body use='encoded'/>
+      </output>
+    </operation>
+    <operation name='sendTelegram'>
+      <input>
+        <soap:body use='literal'/>
+      </input>
+      <output>
+        <soap:body use='literal'/>
+      </output>
+    </operation>
+  </binding>
+  <service name='MyWsdl' >
+    <port name='MyWsdlPortType' binding='kdab:MyWsdlBinding' >
+      <soap:address location='http://127.0.0.1:4242/xml/mywsdl.wsdl' />
+    </port>
+  </service>
+</definitions>
