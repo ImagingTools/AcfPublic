@@ -1,0 +1,93 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2014 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iqtgui_CDockWidgetGuiComp_included
+#define iqtgui_CDockWidgetGuiComp_included
+
+
+// Qt includes
+#include <QtCore/QtGlobal>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QDockWidget>
+#else
+#include <QtGui/QDockWidget>
+#endif
+
+// ACF includes
+#include "iqtgui/IMainWindowComponent.h"
+#include "iqtgui/TGuiComponentBase.h"
+
+
+namespace iqtgui
+{
+
+
+/**
+	Wrapper for docking windows for main window.
+*/
+class CDockWidgetGuiComp:
+			public TGuiComponentBase<QDockWidget>,
+			virtual public IMainWindowComponent
+{
+	Q_OBJECT
+public:
+	typedef TGuiComponentBase<QDockWidget> BaseClass;
+
+	I_BEGIN_COMPONENT(CDockWidgetGuiComp);
+		I_REGISTER_INTERFACE(IMainWindowComponent);
+		I_ASSIGN(m_slaveGuiCompPtr, "SlaveGui", "Slave GUI for this dock widget", true, "SlaveGui");
+		I_ASSIGN(m_dockAreaAttrPtr, "DockArea", "Specify the dock area for this widget\n 0 - left\n 1 - right\n 2 - top\n 3 - bottom", false, 0);
+		I_ASSIGN(m_dockFeaturesAttrPtr, "DockFeatures", "Specify the dock features for this widget\nIt is combination of options:\n0 - permanent\n1 - closeable\n 2 - moveable\n 4 - floatable\n 8 - vertical title", true, DF_MOVEABLE | DF_FLOATABLE);
+		I_ASSIGN(m_allowedDockAreasAttrPtr, "AllowedDockAreas", "Specify the allowed dock areas\nIt is combination of options:\n 1 - left\n 2 - right\n 4 - top\n 8 - bottom", false, 0);
+		I_ASSIGN(m_dockTitleAttrPtr, "DockTitle", "Specify the dock title ", false, "DockTitle");
+		I_ASSIGN(m_associatedDocumentTypeId, "AssociatedDocumentTypeId", "ID of the associated document type ID", false, "Default");
+	I_END_COMPONENT;
+
+	// reimplemented (iqtgui::IMainWindowComponent)
+	virtual bool AddToMainWindow(QMainWindow& mainWindow);
+	virtual bool RemoveFromMainWindow(QMainWindow& mainWindow);
+	virtual QByteArray GetAssociatedDocumentTypeId() const;
+	virtual QString GetTitle() const;
+	virtual int GetFlags() const;
+
+protected:
+	// reimplemented (CGuiComponentBase)
+	virtual void OnGuiCreated();
+	virtual void OnGuiDestroyed();
+	virtual void OnGuiRetranslate();
+
+private:
+	I_REF(iqtgui::IGuiObject, m_slaveGuiCompPtr);
+	I_ATTR(int, m_dockAreaAttrPtr);
+	I_ATTR(int, m_dockFeaturesAttrPtr);
+	I_ATTR(int, m_allowedDockAreasAttrPtr);
+	I_ATTR(QString, m_dockTitleAttrPtr);
+	I_ATTR(QByteArray, m_associatedDocumentTypeId);
+};
+
+
+} // namespace iqtgui
+
+
+#endif // !iqtgui_CDockWidgetGuiComp_included
+
+
