@@ -28,12 +28,10 @@
 #include <QtCore/QFileInfo>
 
 // ACF includes
-#include "ifile/CXmlFileReadArchive.h"
-
+#include "istd/CSystem.h"
 #include "icomp/CRegistry.h"
 #include "icomp/CXpcModel.h"
-
-#include "istd/CSystem.h"
+#include "ifile/CXmlFileReadArchive.h"
 
 
 namespace ipackage

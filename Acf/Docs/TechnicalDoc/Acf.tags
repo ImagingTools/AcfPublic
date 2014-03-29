@@ -3258,15 +3258,25 @@
     <name>CRegistryCodeSaverComp.h</name>
     <path>C:/Temp/Acf/Include/ipackage/</path>
     <filename>_c_registry_code_saver_comp_8h</filename>
-    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_registry_8h" name="IRegistry.h" local="yes" imported="no">icomp/IRegistry.h</includes>
     <includes id="_i_ext_packages_manager_8h" name="IExtPackagesManager.h" local="yes" imported="no">icomp/IExtPackagesManager.h</includes>
     <includes id="_i_registries_manager_8h" name="IRegistriesManager.h" local="yes" imported="no">icomp/IRegistriesManager.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <class kind="class">ipackage::CRegistryCodeSaverComp</class>
+    <namespace>ipackage</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ipackage.h</name>
+    <path>C:/Temp/Acf/Include/ipackage/</path>
+    <filename>ipackage_8h</filename>
+    <includes id="icomp_8h" name="icomp.h" local="yes" imported="no">icomp/icomp.h</includes>
+    <includes id="iprm_8h" name="iprm.h" local="yes" imported="no">iprm/iprm.h</includes>
+    <includes id="ilog_8h" name="ilog.h" local="yes" imported="no">ilog/ilog.h</includes>
+    <includes id="ifile_8h" name="ifile.h" local="yes" imported="no">ifile/ifile.h</includes>
     <namespace>ipackage</namespace>
   </compound>
   <compound kind="file">
@@ -6432,6 +6442,8 @@
     <class kind="class">istd::TChangeDelegator</class>
     <class kind="class">istd::TChangeNotifier</class>
     <class kind="class">istd::TUpdateManagerWrap</class>
+    <docanchor file="group___data_model" title="Motivation">BasicMotivation</docanchor>
+    <docanchor file="group___data_model" title="Overview">DataModelOverview</docanchor>
     <docanchor file="group___data_model" title="Delegating of changes">DelegatingOfChanges</docanchor>
   </compound>
   <compound kind="group">
@@ -6454,6 +6466,7 @@
     <class kind="class">iqtgui::TDesignerGuiObserverCompBase</class>
     <class kind="class">iqtgui::TGuiObserverWrap</class>
     <class kind="class">istd::TChangeNotifier</class>
+    <docanchor file="group___model_observer" title="External Links">ModelObserverExternalLinks</docanchor>
   </compound>
   <compound kind="group">
     <name>Persistence</name>
@@ -6543,6 +6556,7 @@
     <title>Component concept</title>
     <filename>group___component_concept.html</filename>
     <namespace>icomp</namespace>
+    <namespace>ipackage</namespace>
     <class kind="class">ibase::IApplication</class>
     <class kind="class">icomp::CComponentAddress</class>
     <class kind="class">icomp::CComponentBase</class>
@@ -6557,6 +6571,7 @@
     <class kind="class">icomp::TModelCompWrap</class>
     <class kind="class">icomp::TSimComponentsFactory</class>
     <class kind="class">icomp::TSimComponentWrap</class>
+    <docanchor file="C:/Temp/Acf/Include/ACF.h">Expectation</docanchor>
   </compound>
   <compound kind="class">
     <name>Size</name>
@@ -68249,6 +68264,7 @@
     <file>CPackagesLoaderComp.h</file>
     <file>CRegistriesManagerComp.h</file>
     <file>CRegistryCodeSaverComp.h</file>
+    <file>ipackage.h</file>
   </compound>
   <compound kind="dir">
     <name>Include/iprm</name>
