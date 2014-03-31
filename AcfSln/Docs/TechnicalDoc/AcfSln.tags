@@ -798,13 +798,6 @@
     <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
-    <name>CHotfolderLoaderComp.h</name>
-    <path>C:/Temp/AcfSln/Include/ihotf/</path>
-    <filename>_c_hotfolder_loader_comp_8h</filename>
-    <class kind="class">ihotf::CHotfolderLoaderComp</class>
-    <namespace>ihotf</namespace>
-  </compound>
-  <compound kind="file">
     <name>CHotfolderProcessingInfo.h</name>
     <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_c_hotfolder_processing_info_8h</filename>
@@ -831,26 +824,6 @@
     <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
-    <name>CHotfolderWorkflowComp.h</name>
-    <path>C:/Temp/AcfSln/Include/ihotf/</path>
-    <filename>_c_hotfolder_workflow_comp_8h</filename>
-    <includes id="_i_hotfolder_workflow_8h" name="IHotfolderWorkflow.h" local="yes" imported="no">ihotf/IHotfolderWorkflow.h</includes>
-    <includes id="_i_hotfolder_info_manager_8h" name="IHotfolderInfoManager.h" local="yes" imported="no">ihotf/IHotfolderInfoManager.h</includes>
-    <includes id="_c_hotfolder_workflow_item_8h" name="CHotfolderWorkflowItem.h" local="yes" imported="no">ihotf/CHotfolderWorkflowItem.h</includes>
-    <class kind="class">ihotf::CHotfolderWorkflowComp</class>
-    <class kind="struct">ihotf::CHotfolderWorkflowComp::HotfolderItem</class>
-    <namespace>ihotf</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CHotfolderWorkflowItem.h</name>
-    <path>C:/Temp/AcfSln/Include/ihotf/</path>
-    <filename>_c_hotfolder_workflow_item_8h</filename>
-    <includes id="_i_hotfolder_workflow_item_8h" name="IHotfolderWorkflowItem.h" local="yes" imported="no">ihotf/IHotfolderWorkflowItem.h</includes>
-    <includes id="_i_hotfolder_info_manager_8h" name="IHotfolderInfoManager.h" local="yes" imported="no">ihotf/IHotfolderInfoManager.h</includes>
-    <class kind="class">ihotf::CHotfolderWorkflowItem</class>
-    <namespace>ihotf</namespace>
-  </compound>
-  <compound kind="file">
     <name>CMonitoringSession.h</name>
     <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_c_monitoring_session_8h</filename>
@@ -865,23 +838,6 @@
     <includes id="_i_monitoring_session_manager_8h" name="IMonitoringSessionManager.h" local="yes" imported="no">ihotf/IMonitoringSessionManager.h</includes>
     <includes id="_c_monitoring_session_8h" name="CMonitoringSession.h" local="yes" imported="no">ihotf/CMonitoringSession.h</includes>
     <class kind="class">ihotf::CMonitoringSessionsManager</class>
-    <namespace>ihotf</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CVisualHotfolderWorkflowComp.h</name>
-    <path>C:/Temp/AcfSln/Include/ihotf/</path>
-    <filename>_c_visual_hotfolder_workflow_comp_8h</filename>
-    <includes id="_c_hotfolder_workflow_comp_8h" name="CHotfolderWorkflowComp.h" local="yes" imported="no">ihotf/CHotfolderWorkflowComp.h</includes>
-    <includes id="_c_visual_hotfolder_workflow_item_8h" name="CVisualHotfolderWorkflowItem.h" local="yes" imported="no">ihotf/CVisualHotfolderWorkflowItem.h</includes>
-    <class kind="class">ihotf::CVisualHotfolderWorkflowComp</class>
-    <namespace>ihotf</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CVisualHotfolderWorkflowItem.h</name>
-    <path>C:/Temp/AcfSln/Include/ihotf/</path>
-    <filename>_c_visual_hotfolder_workflow_item_8h</filename>
-    <includes id="_c_hotfolder_workflow_item_8h" name="CHotfolderWorkflowItem.h" local="yes" imported="no">ihotf/CHotfolderWorkflowItem.h</includes>
-    <class kind="class">ihotf::CVisualHotfolderWorkflowItem</class>
     <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
@@ -947,21 +903,6 @@
     <filename>_i_hotfolder_task_manager_8h</filename>
     <includes id="_i_hotfolder_processing_item_8h" name="IHotfolderProcessingItem.h" local="yes" imported="no">ihotf/IHotfolderProcessingItem.h</includes>
     <class kind="class">ihotf::IHotfolderTaskManager</class>
-    <namespace>ihotf</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IHotfolderWorkflow.h</name>
-    <path>C:/Temp/AcfSln/Include/ihotf/</path>
-    <filename>_i_hotfolder_workflow_8h</filename>
-    <includes id="_i_hotfolder_workflow_item_8h" name="IHotfolderWorkflowItem.h" local="yes" imported="no">ihotf/IHotfolderWorkflowItem.h</includes>
-    <class kind="class">ihotf::IHotfolderWorkflow</class>
-    <namespace>ihotf</namespace>
-  </compound>
-  <compound kind="file">
-    <name>IHotfolderWorkflowItem.h</name>
-    <path>C:/Temp/AcfSln/Include/ihotf/</path>
-    <filename>_i_hotfolder_workflow_item_8h</filename>
-    <class kind="class">ihotf::IHotfolderWorkflowItem</class>
     <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
@@ -11571,16 +11512,11 @@
     <class kind="class">ihotf::CDirectoryMonitorParams</class>
     <class kind="class">ihotf::CDirectoryMonitorParamsComp</class>
     <class kind="class">ihotf::CFileSystemChangeStorage</class>
-    <class kind="class">ihotf::CHotfolderLoaderComp</class>
     <class kind="class">ihotf::CHotfolderProcessingInfo</class>
     <class kind="class">ihotf::CHotfolderProcessingItem</class>
     <class kind="class">ihotf::CHotfolderStatistics</class>
-    <class kind="class">ihotf::CHotfolderWorkflowComp</class>
-    <class kind="class">ihotf::CHotfolderWorkflowItem</class>
     <class kind="class">ihotf::CMonitoringSession</class>
     <class kind="class">ihotf::CMonitoringSessionsManager</class>
-    <class kind="class">ihotf::CVisualHotfolderWorkflowComp</class>
-    <class kind="class">ihotf::CVisualHotfolderWorkflowItem</class>
     <class kind="class">ihotf::IDirectoryMonitor</class>
     <class kind="class">ihotf::IDirectoryMonitorParams</class>
     <class kind="class">ihotf::IFileSystemChangeStorage</class>
@@ -11589,8 +11525,6 @@
     <class kind="class">ihotf::IHotfolderProcessingItem</class>
     <class kind="class">ihotf::IHotfolderStatistics</class>
     <class kind="class">ihotf::IHotfolderTaskManager</class>
-    <class kind="class">ihotf::IHotfolderWorkflow</class>
-    <class kind="class">ihotf::IHotfolderWorkflowItem</class>
     <class kind="class">ihotf::IMonitoringSession</class>
     <class kind="class">ihotf::IMonitoringSessionManager</class>
   </compound>
@@ -11867,88 +11801,6 @@
       <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
       <anchor>a72f67a9f80343898c6948aaecc6836aaa40ae541377854ec43214278f63031e29</anchor>
       <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ihotf::CHotfolderLoaderComp</name>
-    <filename>classihotf_1_1_c_hotfolder_loader_comp.html</filename>
-    <base>TFileSerializerComp&lt; ifile::CXmlFileReadArchive, ifile::CXmlFileWriteArchive &gt;</base>
-    <member kind="enumeration">
-      <type></type>
-      <name>MessageId</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>ad7d06d35a1cbd2df0a7e5680ee0165f7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_LOAD_ERROR</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>ad7d06d35a1cbd2df0a7e5680ee0165f7a540b9547bdc5551e9c5ee0c0149af7ac</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_CANNOT_READ_STATIC_PARAMS</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>ad7d06d35a1cbd2df0a7e5680ee0165f7a3fadb5a59a47e69b165a130cce118457</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_CANNOT_READ_DYNAMIC_PARAMS</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>ad7d06d35a1cbd2df0a7e5680ee0165f7a499e1ff10c7dcd34442b0473102c9f7b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ifile::TFileSerializerComp&lt; ifile::CXmlFileReadArchive, ifile::CXmlFileWriteArchive &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>a87ab7dbe4eb455ac32fdb34e85d05c48</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>LoadFromFile</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>aacb7b569ee718e9a5bd06f828fe94127</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>SaveToFile</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>a9790ffd6b3414be07f2ab8d3c6ad66b9</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetFileExtensions</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>a4d9d2c0a575b9457621fa1c2af1fc581</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetTypeDescription</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>ace302b59822a6f767859e7c704dbff1c</anchor>
-      <arglist>(const QString *extensionPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>QString</type>
-      <name>GetStaticParamsPath</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>a563f842fb8310521a0150e7151bcf753</anchor>
-      <arglist>(const QString &amp;objectPath) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnReadError</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_loader_comp.html</anchorfile>
-      <anchor>a769d09a36f92481bd173a3e5195a907a</anchor>
-      <arglist>(const ifile::CXmlFileReadArchive &amp;archive, const istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12311,185 +12163,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>ihotf::CHotfolderWorkflowComp</name>
-    <filename>classihotf_1_1_c_hotfolder_workflow_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">ihotf::IHotfolderWorkflow</base>
-    <base virtualness="virtual">ihotf::IHotfolderInfoManager</base>
-    <class kind="struct">ihotf::CHotfolderWorkflowComp::HotfolderItem</class>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a4dc24c9aa9845bf9489148eb74c87068</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>ChangeFlags</name>
-      <anchorfile>classihotf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>af3a689fc2dc0f735daad899539473023</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>CF_HOTFOLDER_ADDED</name>
-      <anchorfile>classihotf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>af3a689fc2dc0f735daad899539473023a32f637509feecae4f56b8b3908b94b9d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>CF_HOTFOLDER_REMOVED</name>
-      <anchorfile>classihotf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>af3a689fc2dc0f735daad899539473023a671b99a9e0012c06ce56e945b42985a2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CHotfolderWorkflowComp</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a9692c015f3b1b386d8ffc20d530270d7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ihotf::IHotfolderProcessingInfo *</type>
-      <name>GetProcessingInfo</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>acf2343827c9984b41e308f64962f2b54</anchor>
-      <arglist>(const QString &amp;hotfolderName) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ihotf::IHotfolderWorkflowItem *</type>
-      <name>AddHotfolder</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a79261ef40cd0cb9ff1d6e0564afc7c4f</anchor>
-      <arglist>(const QString &amp;hotfolderName, const QString &amp;hotfolderId=QString())</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>RemoveHotfolder</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>af74d150d059d4ba89f77e0a0b37d2076</anchor>
-      <arglist>(const QString &amp;hotfolderName)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QStringList</type>
-      <name>GetHotfolderIds</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>aed30e3cff2a2076b046d9b5be568d4aa</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QStringList</type>
-      <name>GetHotfolderList</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>ae6a8775bbc7e066beac0a325dfd533f2</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ihotf::IHotfolderWorkflowItem *</type>
-      <name>GetHotfolder</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>ad38d30e005c7f7c0813df6af4f850760</anchor>
-      <arglist>(const QString &amp;hotfolderName) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a3f7239803a9d00d714f4f1ea6ad64baf</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>istd::TPointerVector&lt; HotfolderItem &gt;</type>
-      <name>Hotfolders</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a8c7fc532ac7bdd307b4ada28dbc9c386</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual HotfolderItem *</type>
-      <name>CreateHotfolder</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a4340a67825fe69ec21db4ab9d7ac455f</anchor>
-      <arglist>(const QString &amp;hotfolderName, const QString &amp;hotfolderId=QString()) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual ihotf::IHotfolderWorkflowItem *</type>
-      <name>CreateWorkflowItem</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>adbd0216823589c3b55d6a8f91bcd9207</anchor>
-      <arglist>(const QString &amp;hotfolderId) const </arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>ihotf::CHotfolderWorkflowComp::HotfolderItem</name>
-    <filename>structihotf_1_1_c_hotfolder_workflow_comp_1_1_hotfolder_item.html</filename>
-    <member kind="variable">
-      <type>istd::TDelPtr&lt; iprm::IParamsSet &gt;</type>
-      <name>hotfolderParamsPtr</name>
-      <anchorfile>structihotf_1_1_c_hotfolder_workflow_comp_1_1_hotfolder_item.html</anchorfile>
-      <anchor>ad71b3f4afc3ee5f3581a32ca83441b4a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>istd::TDelPtr&lt; ihotf::IHotfolderWorkflowItem &gt;</type>
-      <name>elementPtr</name>
-      <anchorfile>structihotf_1_1_c_hotfolder_workflow_comp_1_1_hotfolder_item.html</anchorfile>
-      <anchor>a46f3fe0b691bdb1b702a57c5dec36510</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ihotf::CHotfolderWorkflowItem</name>
-    <filename>classihotf_1_1_c_hotfolder_workflow_item.html</filename>
-    <base>iprm::CNameParam</base>
-    <base virtualness="virtual">ihotf::IHotfolderWorkflowItem</base>
-    <member kind="typedef">
-      <type>iprm::CNameParam</type>
-      <name>BaseClass</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a8ed20d4a216a0dbdd5a0b25d7e5a3fcb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Initialize</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a6e191db912f16975328ad4e0eb0b30ab</anchor>
-      <arglist>(const QString &amp;hotfolderId, const ihotf::IHotfolderInfoManager *infoManagerPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetHotfolderId</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a6d76012a7d34e8bd9a093877161a4ebf</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QStringList</type>
-      <name>GetInputDirectories</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a3c3450b0c27018ca947a04906f3e7474</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetOutputDirectory</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a98a65b936824b5b50361d7182967f968</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classihotf_1_1_c_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a9c2f6d54e3c0c467cf393f62d7c8de5c</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>ihotf::CMonitoringSession</name>
     <filename>classihotf_1_1_c_monitoring_session.html</filename>
     <base virtualness="virtual">ihotf::IMonitoringSession</base>
@@ -12546,115 +12219,6 @@
       <name>Serialize</name>
       <anchorfile>classihotf_1_1_c_monitoring_sessions_manager.html</anchorfile>
       <anchor>a03da74bfc7b31080aa2fac00463ffba3</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ihotf::CVisualHotfolderWorkflowComp</name>
-    <filename>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</filename>
-    <base>TLoggerCompWrap&lt; ihotf::CHotfolderWorkflowComp &gt;</base>
-    <member kind="enumeration">
-      <type></type>
-      <name>ChangeFlags</name>
-      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a0438f1d88c246a7bed7b8aa055abb10f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>CF_SELECTION</name>
-      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a0438f1d88c246a7bed7b8aa055abb10fa69962f55481ec648dab0b77f27a63bc4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>MessageId</name>
-      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>aef3922c988e971d564a955ffb887aa02</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_CANNOT_CREATE_ELEMENT</name>
-      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>aef3922c988e971d564a955ffb887aa02a4c91f8c3b3a94e6f9b64bfbbd1adc145</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ilog::TLoggerCompWrap&lt; ihotf::CHotfolderWorkflowComp &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>af84a5ea0c1a2dc1b9115ce5991066319</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SerializeLayout</name>
-      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>ac9569bfa774e798436218b9beeea42c0</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SerializeWorkflow</name>
-      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>af55713b790e601f749df2cfb58e53294</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a93df6e2db895d20b2246d12bc4113cc5</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>imod::TModelWrap&lt; istd::TChangeDelegator&lt; CVisualHotfolderWorkflowItem &gt; &gt;</type>
-      <name>Element</name>
-      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a45f349022b206dff0e46140926a4848a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SerializeItemPosition</name>
-      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a4ef63a3c5611a87c6c22af6efdf7431c</anchor>
-      <arglist>(iser::IArchive &amp;archive, QString &amp;hotfolderName, i2d::CVector2d &amp;position)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual ihotf::IHotfolderWorkflowItem *</type>
-      <name>CreateWorkflowItem</name>
-      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_comp.html</anchorfile>
-      <anchor>a41ce366d60010a3acb90c7bf037c8266</anchor>
-      <arglist>(const QString &amp;hotfolderId) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ihotf::CVisualHotfolderWorkflowItem</name>
-    <filename>classihotf_1_1_c_visual_hotfolder_workflow_item.html</filename>
-    <base>ihotf::CHotfolderWorkflowItem</base>
-    <base>i2d::CPosition2d</base>
-    <member kind="typedef">
-      <type>ihotf::CHotfolderWorkflowItem</type>
-      <name>BaseClass</name>
-      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_item.html</anchorfile>
-      <anchor>adc4a3fc40f1938ae2bd8d6292740c31a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>i2d::CPosition2d</type>
-      <name>BaseClass2</name>
-      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a136784fa2293f34eba97b9d4b5049210</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classihotf_1_1_c_visual_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a2f7222bc640145a7ca90148dbbff2114</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
@@ -12982,65 +12546,6 @@
       <name>GetNextProcessingTask</name>
       <anchorfile>classihotf_1_1_i_hotfolder_task_manager.html</anchorfile>
       <anchor>ac68c6227fa8950a53d2058807c239867</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ihotf::IHotfolderWorkflow</name>
-    <filename>classihotf_1_1_i_hotfolder_workflow.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual ihotf::IHotfolderWorkflowItem *</type>
-      <name>AddHotfolder</name>
-      <anchorfile>classihotf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>a8322dfe27aa50dda45b133defe283af1</anchor>
-      <arglist>(const QString &amp;hotfolderName, const QString &amp;hotfolderId=QString())=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>RemoveHotfolder</name>
-      <anchorfile>classihotf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>ad5afb985d01ab83c089bd1c0fce0612d</anchor>
-      <arglist>(const QString &amp;hotfolderName)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QStringList</type>
-      <name>GetHotfolderIds</name>
-      <anchorfile>classihotf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>a20fbcc9eea9c6cf0a114401595f459f2</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QStringList</type>
-      <name>GetHotfolderList</name>
-      <anchorfile>classihotf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>a99daf2b9c61a0af34b6d43c51c8556db</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual ihotf::IHotfolderWorkflowItem *</type>
-      <name>GetHotfolder</name>
-      <anchorfile>classihotf_1_1_i_hotfolder_workflow.html</anchorfile>
-      <anchor>aedf0aa123890a858c3169bff14d3788f</anchor>
-      <arglist>(const QString &amp;hotfolderName) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ihotf::IHotfolderWorkflowItem</name>
-    <filename>classihotf_1_1_i_hotfolder_workflow_item.html</filename>
-    <base virtualness="virtual">iprm::INameParam</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual QStringList</type>
-      <name>GetInputDirectories</name>
-      <anchorfile>classihotf_1_1_i_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a6a5af997d419ff7d7b1dbaf1839e0a81</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetOutputDirectory</name>
-      <anchorfile>classihotf_1_1_i_hotfolder_workflow_item.html</anchorfile>
-      <anchor>a0eadeb63404f5495861804e342678199</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -29800,16 +29305,11 @@
     <file>CDirectoryMonitorParams.h</file>
     <file>CDirectoryMonitorParamsComp.h</file>
     <file>CFileSystemChangeStorage.h</file>
-    <file>CHotfolderLoaderComp.h</file>
     <file>CHotfolderProcessingInfo.h</file>
     <file>CHotfolderProcessingItem.h</file>
     <file>CHotfolderStatistics.h</file>
-    <file>CHotfolderWorkflowComp.h</file>
-    <file>CHotfolderWorkflowItem.h</file>
     <file>CMonitoringSession.h</file>
     <file>CMonitoringSessionsManager.h</file>
-    <file>CVisualHotfolderWorkflowComp.h</file>
-    <file>CVisualHotfolderWorkflowItem.h</file>
     <file>IDirectoryMonitor.h</file>
     <file>IDirectoryMonitorParams.h</file>
     <file>IFileSystemChangeStorage.h</file>
@@ -29819,8 +29319,6 @@
     <file>IHotfolderProcessingItem.h</file>
     <file>IHotfolderStatistics.h</file>
     <file>IHotfolderTaskManager.h</file>
-    <file>IHotfolderWorkflow.h</file>
-    <file>IHotfolderWorkflowItem.h</file>
     <file>IMonitoringSession.h</file>
     <file>IMonitoringSessionManager.h</file>
   </compound>
