@@ -34,6 +34,9 @@ namespace ibase
 {
 
 
+/**
+	Generic implementation for a version component.
+*/
 template <class BaseComponent>
 class TVersionInfoBase: public BaseComponent, virtual public iser::IVersionInfo
 {

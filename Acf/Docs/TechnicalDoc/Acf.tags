@@ -6434,6 +6434,8 @@
     <name>DataModel</name>
     <title>Data model</title>
     <filename>group___data_model.html</filename>
+    <class kind="class">ibase::CObjectSynchronizerComp</class>
+    <class kind="class">ibase::TModelObserverCompWrap</class>
     <class kind="class">istd::CChangeDelegator</class>
     <class kind="class">istd::CEventBasedNotifier</class>
     <class kind="class">istd::IChangeable</class>
@@ -6444,6 +6446,7 @@
     <class kind="class">istd::TUpdateManagerWrap</class>
     <docanchor file="group___data_model" title="Motivation">BasicMotivation</docanchor>
     <docanchor file="group___data_model" title="Overview">DataModelOverview</docanchor>
+    <docanchor file="group___data_model" title="Why do we need begin-end notification of the changes of data?">WhyTransaction</docanchor>
     <docanchor file="group___data_model" title="Delegating of changes">DelegatingOfChanges</docanchor>
   </compound>
   <compound kind="group">
@@ -6451,6 +6454,8 @@
     <title>Model/Observer concept</title>
     <filename>group___model_observer.html</filename>
     <namespace>imod</namespace>
+    <class kind="class">ibase::CModelBinderComp</class>
+    <class kind="class">ibase::CMultiObserverBinderComp</class>
     <class kind="class">imod::CModelBase</class>
     <class kind="class">imod::CModelProxy</class>
     <class kind="class">imod::CMultiModelBridgeBase</class>
@@ -6572,6 +6577,59 @@
     <class kind="class">icomp::TSimComponentsFactory</class>
     <class kind="class">icomp::TSimComponentWrap</class>
     <docanchor file="C:/Temp/Acf/Include/ACF.h">Expectation</docanchor>
+  </compound>
+  <compound kind="group">
+    <name>ApplicationFramework</name>
+    <title>Application Framework</title>
+    <filename>group___application_framework.html</filename>
+    <subgroup>BasicUi</subgroup>
+    <subgroup>UiEditors</subgroup>
+    <subgroup>ParameterManagement</subgroup>
+    <subgroup>DocumentBasedFramework</subgroup>
+  </compound>
+  <compound kind="group">
+    <name>BasicUi</name>
+    <title>Basic UI</title>
+    <filename>group___basic_ui.html</filename>
+  </compound>
+  <compound kind="group">
+    <name>UiEditors</name>
+    <title>UI-based Editors</title>
+    <filename>group___ui_editors.html</filename>
+  </compound>
+  <compound kind="group">
+    <name>ParameterManagement</name>
+    <title>Parameter Management</title>
+    <filename>group___parameter_management.html</filename>
+    <namespace>iprm</namespace>
+    <namespace>iqtprm</namespace>
+  </compound>
+  <compound kind="group">
+    <name>DocumentBasedFramework</name>
+    <title>Document-based Framework</title>
+    <filename>group___document_based_framework.html</filename>
+    <namespace>idoc</namespace>
+    <namespace>iqtdoc</namespace>
+  </compound>
+  <compound kind="group">
+    <name>NumericalBase</name>
+    <title>Numerical Basics &amp; Algorithms</title>
+    <filename>group___numerical_base.html</filename>
+    <subgroup>Geometry</subgroup>
+    <namespace>imath</namespace>
+  </compound>
+  <compound kind="group">
+    <name>Geometry</name>
+    <title>Geometry</title>
+    <filename>group___geometry.html</filename>
+    <namespace>i2d</namespace>
+    <namespace>i3d</namespace>
+  </compound>
+  <compound kind="group">
+    <name>Color</name>
+    <title>Color</title>
+    <filename>group___color.html</filename>
+    <namespace>icmm</namespace>
   </compound>
   <compound kind="class">
     <name>Size</name>

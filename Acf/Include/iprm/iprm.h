@@ -32,6 +32,8 @@
 
 /**
 	Contains interfaces and implementations of flexible parameter concept.
+
+	\ingroup ParameterManagement
 */
 namespace iprm
 {

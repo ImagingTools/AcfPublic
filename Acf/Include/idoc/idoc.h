@@ -26,6 +26,8 @@
 
 /**
 	Contains the system indenendent basic implementations of Document/View design pattern.
+
+	\ingroup DocumentBasedFramework
 */
 namespace idoc
 {

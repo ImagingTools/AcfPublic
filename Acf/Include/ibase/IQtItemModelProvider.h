@@ -37,6 +37,7 @@ namespace ibase
 
 /**
 	Interface for getting access to the	Qt's item based data model.
+	\deprecated
 */
 class IQtItemModelProvider: virtual public istd::IPolymorphic
 {

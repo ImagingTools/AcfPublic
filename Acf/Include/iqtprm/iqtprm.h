@@ -34,6 +34,8 @@
 	\li iser
 	\li	iqt
 	\li	iqt2d
+
+	\ingroup ParameterManagement
 */
 namespace iqtprm
 {

@@ -34,6 +34,8 @@
 	\li istd
 	\li iser
 	\li imath
+
+	\ingroup Geometry
 */
 namespace i3d
 {

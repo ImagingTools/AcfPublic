@@ -29,9 +29,7 @@
 
 // ACF includes
 #include "iser/ISerializable.h"
-
 #include "icomp/CComponentBase.h"
-
 #include "ibase/IObjectQueue.h"
 
 

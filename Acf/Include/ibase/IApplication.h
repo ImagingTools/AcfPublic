@@ -24,8 +24,11 @@
 #define ibase_IApplication_included
 
 
-#include "istd/IPolymorphic.h"
+// Qt includes
 #include <QtCore/QString>
+
+// ACF includes
+#include "istd/IPolymorphic.h"
 
 
 namespace ibase
@@ -33,7 +36,7 @@ namespace ibase
 
 
 /**
-	Main entry point of component-based application.
+	Interface for the main entry point of a component-based application.
 
 	\ingroup Main
 	\ingroup ComponentConcept
