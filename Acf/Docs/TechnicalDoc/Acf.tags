@@ -6576,7 +6576,6 @@
     <class kind="class">icomp::TModelCompWrap</class>
     <class kind="class">icomp::TSimComponentsFactory</class>
     <class kind="class">icomp::TSimComponentWrap</class>
-    <docanchor file="C:/Temp/Acf/Include/ACF.h">Expectation</docanchor>
   </compound>
   <compound kind="group">
     <name>ApplicationFramework</name>
@@ -47617,51 +47616,37 @@
     </member>
     <member kind="enumeration">
       <type></type>
-      <name>DockFeatures</name>
+      <name>WindowComponentFlags</name>
       <anchorfile>classiqtgui_1_1_i_main_window_component.html</anchorfile>
-      <anchor>a46734e58745c61802bb777be1d381469</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>DF_PERMANENT</name>
-      <anchorfile>classiqtgui_1_1_i_main_window_component.html</anchorfile>
-      <anchor>a46734e58745c61802bb777be1d381469a3080ccefb217bf0bfaa7345b0cbb855a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>DF_MOVEABLE</name>
-      <anchorfile>classiqtgui_1_1_i_main_window_component.html</anchorfile>
-      <anchor>a46734e58745c61802bb777be1d381469a3fcc1a2f765738b40fc0b39b8980ae91</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>DF_FLOATABLE</name>
-      <anchorfile>classiqtgui_1_1_i_main_window_component.html</anchorfile>
-      <anchor>a46734e58745c61802bb777be1d381469a9b0fadc78f166666d8ab0451d0764b3b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>MainWindowComponentFlags</name>
-      <anchorfile>classiqtgui_1_1_i_main_window_component.html</anchorfile>
-      <anchor>aadb803d436fa60737dcf672c727cc68d</anchor>
+      <anchor>a2b947976991fc4e0f00dacb02f562cfb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>WCF_NONE</name>
       <anchorfile>classiqtgui_1_1_i_main_window_component.html</anchorfile>
-      <anchor>aadb803d436fa60737dcf672c727cc68da71189974e06f93bf1bb452adc27d53db</anchor>
+      <anchor>a2b947976991fc4e0f00dacb02f562cfba71189974e06f93bf1bb452adc27d53db</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
-      <name>WCF_PERMANENT</name>
+      <name>WCF_CLOSABLE</name>
       <anchorfile>classiqtgui_1_1_i_main_window_component.html</anchorfile>
-      <anchor>aadb803d436fa60737dcf672c727cc68da49690a6b2bffec9025a1cabb6866bb3e</anchor>
+      <anchor>a2b947976991fc4e0f00dacb02f562cfba875fa251a9b1a602494f3ba92b8c1973</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>WCF_MOVEABLE</name>
+      <anchorfile>classiqtgui_1_1_i_main_window_component.html</anchorfile>
+      <anchor>a2b947976991fc4e0f00dacb02f562cfbad27bb83bed81d8d02cc1546e9d37eacc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>WCF_FLOATABLE</name>
+      <anchorfile>classiqtgui_1_1_i_main_window_component.html</anchorfile>
+      <anchor>a2b947976991fc4e0f00dacb02f562cfba0bff0d1bef72caba0933e1ae649a4938</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
