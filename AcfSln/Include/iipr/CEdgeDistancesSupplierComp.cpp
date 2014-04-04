@@ -54,7 +54,7 @@ const imeas::INumericValue& CEdgeDistancesSupplierComp::GetNumericValue(int inde
 
 // protected methods
 
-// reimplemented (iproc::TSupplierCompWrap)
+// reimplemented (iinsp::TSupplierCompWrap)
 
 int CEdgeDistancesSupplierComp::ProduceObject(ProductType& result) const
 {

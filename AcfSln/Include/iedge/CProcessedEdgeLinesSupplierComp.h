@@ -25,8 +25,8 @@
 
 
 // ACF includes
-#include "iproc/ISupplier.h"
-#include "iproc/TSupplierCompWrap.h"
+#include "iinsp/ISupplier.h"
+#include "iinsp/TSupplierCompWrap.h"
 #include "iedge/IEdgeLinesProvider.h"
 #include "iedge/IEdgeLinesProcessor.h"
 #include "iedge/CEdgeLineContainer.h"
@@ -37,11 +37,11 @@ namespace iedge
 
 
 class CProcessedEdgeLinesSupplierComp:
-			public iproc::TSupplierCompWrap<CEdgeLineContainer>,
+			public iinsp::TSupplierCompWrap<CEdgeLineContainer>,
 			virtual public IEdgeLinesProvider
 {
 public:
-	typedef iproc::TSupplierCompWrap<CEdgeLineContainer> BaseClass;
+	typedef iinsp::TSupplierCompWrap<CEdgeLineContainer> BaseClass;
 
 	I_BEGIN_COMPONENT(CProcessedEdgeLinesSupplierComp);
 		I_REGISTER_INTERFACE(IEdgeLinesProvider);
@@ -55,7 +55,7 @@ public:
 	virtual const CEdgeLineContainer* GetEdgesContainer() const;
 
 protected:
-	// reimplemented (iproc::TSupplierCompWrap)
+	// reimplemented (iinsp::TSupplierCompWrap)
 	virtual int ProduceObject(CEdgeLineContainer& result) const;
 
 	// reimplemented (icomp::CComponentBase)
@@ -63,7 +63,7 @@ protected:
 
 private:
 	I_REF(IEdgeLinesProvider, m_edgeLinesProviderCompPtr);
-	I_REF(iproc::ISupplier, m_edgeLinesSupplierCompPtr);
+	I_REF(iinsp::ISupplier, m_edgeLinesSupplierCompPtr);
 	I_REF(imod::IModel, m_edgeLinesProviderModelCompPtr);
 	I_REF(IEdgeLinesProcessor, m_edgesProcessorCompPtr);
 };

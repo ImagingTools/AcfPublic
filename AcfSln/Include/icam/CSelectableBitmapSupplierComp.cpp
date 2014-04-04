@@ -61,7 +61,7 @@ const i2d::ICalibration2d* CSelectableBitmapSupplierComp::GetCalibration() const
 
 // protected methods
 
-// reimplemented (iproc::TSupplierCompWrap)
+// reimplemented (iinsp::TSupplierCompWrap)
 
 int CSelectableBitmapSupplierComp::ProduceObject(ProductType& result) const
 {

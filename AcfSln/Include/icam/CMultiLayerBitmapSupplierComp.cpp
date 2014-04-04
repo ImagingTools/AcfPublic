@@ -82,7 +82,7 @@ const idoc::IMultiPageDocument* CMultiLayerBitmapSupplierComp::GetDocument() con
 
 // protected methods
 
-// reimplemented (iproc::TSupplierCompWrap)
+// reimplemented (iinsp::TSupplierCompWrap)
 
 bool CMultiLayerBitmapSupplierComp::InitializeWork()
 {

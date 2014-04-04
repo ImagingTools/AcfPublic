@@ -124,7 +124,7 @@ void CValueSupplierGuiComp::UpdateGui(int updateFlags)
 	imath::CVarVector position;
 	imath::CVarVector radius;
 
-	iproc::ISupplier* supplierPtr = GetObjectPtr();
+	iinsp::ISupplier* supplierPtr = GetObjectPtr();
 	if (supplierPtr != NULL){
 		imeas::INumericValueProvider* providerPtr = dynamic_cast<imeas::INumericValueProvider*>(supplierPtr);
 		if (providerPtr != NULL && providerPtr->GetValuesCount() > 0){

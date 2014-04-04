@@ -128,7 +128,7 @@
     <name>CMultiCameraBitmapSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_multi_camera_bitmap_supplier_comp_8h</filename>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
     <class kind="class">icam::CMultiCameraBitmapSupplierComp</class>
     <namespace>icam</namespace>
@@ -137,7 +137,7 @@
     <name>CMultiLayerBitmapSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_multi_layer_bitmap_supplier_comp_8h</filename>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
     <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="no" imported="no">imeas/INumericConstraints.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="no" imported="no">imeas/CSimpleNumericValue.h</includes>
@@ -148,8 +148,8 @@
     <name>CSelectableBitmapSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_selectable_bitmap_supplier_comp_8h</filename>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <class kind="class">icam::CSelectableBitmapSupplierComp</class>
     <namespace>icam</namespace>
   </compound>
@@ -166,7 +166,7 @@
     <name>CSnapBitmapSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_snap_bitmap_supplier_comp_8h</filename>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
     <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="no" imported="no">imeas/INumericConstraints.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="no" imported="no">imeas/CSimpleNumericValue.h</includes>
@@ -501,8 +501,8 @@
     <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_c_edge_based_features_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_c_features_container_8h" name="CFeaturesContainer.h" local="yes" imported="no">iipr/CFeaturesContainer.h</includes>
     <includes id="_i_edge_lines_provider_8h" name="IEdgeLinesProvider.h" local="yes" imported="no">iedge/IEdgeLinesProvider.h</includes>
@@ -547,8 +547,8 @@
     <name>CExtractedEdgeLinesSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_c_extracted_edge_lines_supplier_comp_8h</filename>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_edge_lines_provider_8h" name="IEdgeLinesProvider.h" local="yes" imported="no">iedge/IEdgeLinesProvider.h</includes>
     <includes id="_i_edges_extractor_8h" name="IEdgesExtractor.h" local="yes" imported="no">iedge/IEdgesExtractor.h</includes>
     <includes id="_c_edge_line_container_8h" name="CEdgeLineContainer.h" local="yes" imported="no">iedge/CEdgeLineContainer.h</includes>
@@ -570,8 +570,8 @@
     <name>CProcessedEdgeLinesSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_c_processed_edge_lines_supplier_comp_8h</filename>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_edge_lines_provider_8h" name="IEdgeLinesProvider.h" local="yes" imported="no">iedge/IEdgeLinesProvider.h</includes>
     <includes id="_i_edge_lines_processor_8h" name="IEdgeLinesProcessor.h" local="yes" imported="no">iedge/IEdgeLinesProcessor.h</includes>
     <includes id="_c_edge_line_container_8h" name="CEdgeLineContainer.h" local="yes" imported="no">iedge/CEdgeLineContainer.h</includes>
@@ -727,7 +727,7 @@
     <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_processing_results_review_comp_8h</filename>
     <includes id="_i_file_convert_copy_8h" name="IFileConvertCopy.h" local="yes" imported="no">ifileproc/IFileConvertCopy.h</includes>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
     <class kind="class">ifileproc::CProcessingResultsReviewComp</class>
     <namespace>ifileproc</namespace>
   </compound>
@@ -1032,6 +1032,15 @@
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
+    <name>CSupplierCompBase.h</name>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
+    <filename>_c_supplier_comp_base_8h</filename>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
+    <class kind="class">iinsp::CSupplierCompBase</class>
+    <class kind="class">iinsp::CSupplierCompBase::Timer</class>
+    <namespace>iinsp</namespace>
+  </compound>
+  <compound kind="file">
     <name>IIdProvider.h</name>
     <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_i_id_provider_8h</filename>
@@ -1049,8 +1058,15 @@
     <name>IInspectionTask.h</name>
     <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_i_inspection_task_8h</filename>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
     <class kind="class">iinsp::IInspectionTask</class>
+    <namespace>iinsp</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ISupplier.h</name>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
+    <filename>_i_supplier_8h</filename>
+    <class kind="class">iinsp::ISupplier</class>
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
@@ -1058,6 +1074,14 @@
     <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_i_time_stamp_provider_8h</filename>
     <class kind="class">iinsp::ITimeStampProvider</class>
+    <namespace>iinsp</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TSupplierCompWrap.h</name>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
+    <filename>_t_supplier_comp_wrap_8h</filename>
+    <includes id="_c_supplier_comp_base_8h" name="CSupplierCompBase.h" local="yes" imported="no">iinsp/CSupplierCompBase.h</includes>
+    <class kind="class">iinsp::TSupplierCompWrap</class>
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
@@ -1074,8 +1098,8 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_bitmap_joiner_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <class kind="class">iipr::CBitmapJoinerSupplierComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -1169,8 +1193,8 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_color_bitmap_separator_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <class kind="class">iipr::CColorBitmapSeparatorSupplierComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -1178,7 +1202,7 @@
     <name>CColorPatternComparatorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_color_pattern_comparator_comp_8h</filename>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
     <includes id="_i_data_sequence_statistics_processor_8h" name="IDataSequenceStatisticsProcessor.h" local="yes" imported="no">imeas/IDataSequenceStatisticsProcessor.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
@@ -1227,7 +1251,7 @@
     <name>CDelegatedBitmapSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_delegated_bitmap_supplier_comp_8h</filename>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <class kind="class">iipr::CDelegatedBitmapSupplierComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -1236,7 +1260,7 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_difference_bitmap_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <class kind="class">iipr::CDifferenceBitmapSupplierComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -1260,8 +1284,8 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_edge_distances_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="yes" imported="no">imeas/CSimpleNumericValue.h</includes>
     <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="yes" imported="no">iipr/IImageToFeatureProcessor.h</includes>
@@ -1350,8 +1374,8 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_histogram_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_t_discrete_data_sequence_8h" name="TDiscreteDataSequence.h" local="yes" imported="no">imeas/TDiscreteDataSequence.h</includes>
     <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
     <class kind="class">iipr::CImageHistogramSupplierComp</class>
@@ -1415,8 +1439,8 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_line_projection_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
     <includes id="_i_line_projection_processor_8h" name="ILineProjectionProcessor.h" local="yes" imported="no">iipr/ILineProjectionProcessor.h</includes>
@@ -1442,8 +1466,8 @@
     <name>CMultiLineProjectionSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_multi_line_projection_supplier_comp_8h</filename>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_line_projection_processor_8h" name="ILineProjectionProcessor.h" local="yes" imported="no">iipr/ILineProjectionProcessor.h</includes>
     <includes id="_i_multi_data_sequence_provider_8h" name="IMultiDataSequenceProvider.h" local="yes" imported="no">imeas/IMultiDataSequenceProvider.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
@@ -1455,7 +1479,7 @@
     <name>CMultiLineSupplierCompBase.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_multi_line_supplier_comp_base_8h</filename>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <class kind="class">iipr::CMultiLineSupplierCompBase</class>
     <namespace>iipr</namespace>
@@ -1465,8 +1489,8 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_position_from_image_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="yes" imported="no">imeas/CSimpleNumericValue.h</includes>
     <class kind="class">iipr::CPositionFromImageSupplierComp</class>
@@ -1486,8 +1510,8 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_processed_bitmap_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <class kind="class">iipr::CProcessedBitmapSupplierComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -1548,8 +1572,8 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_search_based_features_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_c_features_container_8h" name="CFeaturesContainer.h" local="yes" imported="no">iipr/CFeaturesContainer.h</includes>
     <class kind="class">iipr::CSearchBasedFeaturesSupplierComp</class>
@@ -1829,8 +1853,8 @@
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_data_sequence_joiner_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
     <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
     <includes id="_i_multi_data_sequence_provider_8h" name="IMultiDataSequenceProvider.h" local="yes" imported="no">imeas/IMultiDataSequenceProvider.h</includes>
@@ -1930,8 +1954,8 @@
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_processed_data_sequence_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iproc/TSupplierCompWrap.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
     <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
     <class kind="class">imeas::CProcessedDataSequenceSupplierComp</class>
@@ -2183,15 +2207,6 @@
     <namespace>iproc</namespace>
   </compound>
   <compound kind="file">
-    <name>CSupplierCompBase.h</name>
-    <path>C:/Temp/AcfSln/Include/iproc/</path>
-    <filename>_c_supplier_comp_base_8h</filename>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
-    <class kind="class">iproc::CSupplierCompBase</class>
-    <class kind="class">iproc::CSupplierCompBase::Timer</class>
-    <namespace>iproc</namespace>
-  </compound>
-  <compound kind="file">
     <name>IElapsedTimeProvider.h</name>
     <path>C:/Temp/AcfSln/Include/iproc/</path>
     <filename>_i_elapsed_time_provider_8h</filename>
@@ -2216,13 +2231,6 @@
     <path>C:/Temp/AcfSln/Include/iproc/</path>
     <filename>_i_state_controller_8h</filename>
     <class kind="class">iproc::IStateController</class>
-    <namespace>iproc</namespace>
-  </compound>
-  <compound kind="file">
-    <name>ISupplier.h</name>
-    <path>C:/Temp/AcfSln/Include/iproc/</path>
-    <filename>_i_supplier_8h</filename>
-    <class kind="class">iproc::ISupplier</class>
     <namespace>iproc</namespace>
   </compound>
   <compound kind="file">
@@ -2255,14 +2263,6 @@
     <filename>_t_morph_locked_producer_base_8h</filename>
     <includes id="_t_i_locked_producer_8h" name="TILockedProducer.h" local="yes" imported="no">iproc/TILockedProducer.h</includes>
     <class kind="class">iproc::TMorphLockedProducerBase</class>
-    <namespace>iproc</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TSupplierCompWrap.h</name>
-    <path>C:/Temp/AcfSln/Include/iproc/</path>
-    <filename>_t_supplier_comp_wrap_8h</filename>
-    <includes id="_c_supplier_comp_base_8h" name="CSupplierCompBase.h" local="yes" imported="no">iproc/CSupplierCompBase.h</includes>
-    <class kind="class">iproc::TSupplierCompWrap</class>
     <namespace>iproc</namespace>
   </compound>
   <compound kind="file">
@@ -2628,7 +2628,7 @@
     <name>CGeneralSupplierGuiComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtinsp/</path>
     <filename>_c_general_supplier_gui_comp_8h</filename>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <class kind="class">iqtinsp::CGeneralSupplierGuiComp</class>
     <namespace>iqtinsp</namespace>
@@ -2652,7 +2652,7 @@
     <name>TSupplierGuiCompBase.h</name>
     <path>C:/Temp/AcfSln/Include/iqtinsp/</path>
     <filename>_t_supplier_gui_comp_base_8h</filename>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
     <includes id="iqtinsp_8h" name="iqtinsp.h" local="yes" imported="no">iqtinsp/iqtinsp.h</includes>
     <class kind="class">iqtinsp::TSupplierGuiCompBase</class>
     <class kind="class">iqtinsp::TSupplierGuiCompBase::ParamsObserver</class>
@@ -2793,7 +2793,7 @@
     <name>CDataSequenceSupplierResultsViewComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtmeas/</path>
     <filename>_c_data_sequence_supplier_results_view_comp_8h</filename>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iproc/ISupplier.h</includes>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
     <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
     <class kind="class">iqtmeas::CDataSequenceSupplierResultsViewComp</class>
     <namespace>iqtmeas</namespace>
@@ -4112,143 +4112,143 @@
     <base virtualness="virtual">iimg::IMultiBitmapProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; istd::TPointerVector&lt; const iimg::IBitmap &gt; &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; istd::TPointerVector&lt; const iimg::IBitmap &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_multi_camera_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a6ae28fb24e53c51727c9009cd4d74d00</anchor>
+      <anchor>abd71f05231b06a5816729eab3ac8909d</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CSupplierCompBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>istd::TPointerVector&lt; const iimg::IBitmap &gt;</type>
       <name>ProductType</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <type></type>
       <name>MessageId</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a3ef5971e2a11ad9301790db639333eb6</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>abbfdc8f28f1a4d4b4494193d183b49e6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>MI_DURATION_TIME</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a3ef5971e2a11ad9301790db639333eb6af51e6cdeaae8a7a9dbd1b15f5cdecd43</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>abbfdc8f28f1a4d4b4494193d183b49e6a400093eda83ea463299164ff3a364929</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>MI_SUPPLIER_RESULTS_STATUS</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a3ef5971e2a11ad9301790db639333eb6ab3cb500d4e8f300e7efbb22f5c15da22</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>abbfdc8f28f1a4d4b4494193d183b49e6a3716eb5f2abf9b6cc8dc4e02786903d5</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a329d63030d2ab5b6cb9a08e0c255f4a7</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a55ffd70d22f3e5d7b4c083e76ff2b5c9</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <type></type>
       <name>WorkStatus</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>ad3b7143c610c4f271745217854b1251e</anchor>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a4b8a7542f5a8558d5c7563b16d51a931</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>WS_INVALID</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>ad3b7143c610c4f271745217854b1251eab14d115e664be0ece856109431395207</anchor>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a4b8a7542f5a8558d5c7563b16d51a931ab42284a0eb865a3b6b60119be87ad7dd</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>WS_INIT</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>ad3b7143c610c4f271745217854b1251eaff938cd606e9e8d2cc881b961277aa18</anchor>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a4b8a7542f5a8558d5c7563b16d51a931a5a71b5134014bd63bfa7fe261d6831ad</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>WS_LOCKED</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>ad3b7143c610c4f271745217854b1251ead862cf2007aad54dfe8699bc4bf209d6</anchor>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a4b8a7542f5a8558d5c7563b16d51a931a7f175383c1c10b9c35dbe8a38b4276a0</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>WS_OK</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>ad3b7143c610c4f271745217854b1251ea596371c0c9bd5c243242a539c7dff8ed</anchor>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a4b8a7542f5a8558d5c7563b16d51a931a10156819b1a278b20f4ce5a155188bff</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>WS_CANCELED</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>ad3b7143c610c4f271745217854b1251ea23c568cf4592b40eb81cd7d8974b891c</anchor>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a4b8a7542f5a8558d5c7563b16d51a931a2ab1471e219a0a506d69b467ca474f79</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>WS_ERROR</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>ad3b7143c610c4f271745217854b1251eaf0443c3e05e1a6d255e1208a747453bf</anchor>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a4b8a7542f5a8558d5c7563b16d51a931ac67ed7f5de78b6b5714203746ae2e12c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>WS_CRITICAL</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>ad3b7143c610c4f271745217854b1251ea2d1a51d4de4791dafa4219f8a0c75032</anchor>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a4b8a7542f5a8558d5c7563b16d51a931a874c7249820809dfb9c88c9f81802367</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <type></type>
       <name>ChangeFlags</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>a493b9bac260cff15679441656b15f3ca</anchor>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>ae97639e72c8c7e1eeaeb1e31db0d298b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>CF_SUPPLIER_RESULTS</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>a493b9bac260cff15679441656b15f3caabe63c0459792ec8459c0304337047833</anchor>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>ae97639e72c8c7e1eeaeb1e31db0d298baa6897abd0392050d48c45bcf9537961b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <type></type>
       <name>WorkMessageType</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>abbc42b61a9c35ce3f0821db967c5d449</anchor>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a48a85d5c275253bdb8189ebb8cbe583b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>WMT_TEMP</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>abbc42b61a9c35ce3f0821db967c5d449aea621e71f727c49c2b8b523c265e32d0</anchor>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a48a85d5c275253bdb8189ebb8cbe583baf767b8fe54970c10eb71f1fd1b34bef7</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>WMT_RESULTS</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>abbc42b61a9c35ce3f0821db967c5d449a0bc9bc0b3bb53a7866afa8b1d15d8d69</anchor>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a48a85d5c275253bdb8189ebb8cbe583ba0b0872a09830d9194de1de289bb7523b</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -4282,106 +4282,106 @@
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureWorkFinished</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ClearWorkResults</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a3eef45449f5614dff66cd6ebe401e901</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>af050d92dab439d66d7b6e90a4c2361df</anchor>
       <arglist>(TaskLog)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a5d79650c946b54aa6cd6a938398ad19f</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a709c5399d433c85fa3590db56e213fd0</anchor>
       <arglist>(TaskLog, ilog::IMessageConsumer, ExtractTaskLog)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>aed1cddb7d6f03d20422959a7ecce8b72</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a8b1a31480fff27b440870152be0d4729</anchor>
       <arglist>(TaskLog, istd::IPolymorphic, ExtractTaskLog)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>ae8e1cdfb5c9cec0ee1edee26f57f9a00</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>ac7cf356c6579260ffbff7f38db5eb04c</anchor>
       <arglist>(TempMessages)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a4ced0cad1394112445f489c57995a858</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a6438c6aab34161254ff6f4e6b01a0182</anchor>
       <arglist>(TempMessages, ilog::IMessageConsumer, ExtractTempMessages)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a3a0d38f8467bbcdfe9308e8dcdfcc036</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>ae7acf94cfc0cd5a390e8a47141ced0f6</anchor>
       <arglist>(TempMessages, istd::IPolymorphic, ExtractTempMessages)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a19debc36963c129cc999774f4e57f7e1</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>adac55032e7172e8d21f43aa6e00d2ea3</anchor>
       <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CSupplierCompBase</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>ad453c1a96e4ebae5a8bc29fd9b92ee29</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a5993fa8a5016e337d77ddc4a5f864229</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetWorkStatus</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a857163a36ec16cf7a5dc4186cf53cd0e</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a4070eeadfa92f0aac998d711bd914893</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>InvalidateSupplier</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a03a2fe837887070a5ff58a28a40aa14c</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a23692f65180541df30f3250f709262aa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureWorkInitialized</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a015048dee6c4de8635031f29faf45293</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>ac9d1fbf8101955db8edca1f1392f3293</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ilog::IMessageContainer *</type>
       <name>GetWorkMessages</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a09125c4ab95caf42e045c7d5842fe321</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a458f3baaeafea198c5af45816a118390</anchor>
       <arglist>(int messageType) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iprm::IParamsSet *</type>
       <name>GetModelParametersSet</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>ad87e7e4fb0157c93ce2c158f5725bb37</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>ab100f15035b9ac575a4b4fc626a61563</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -4401,99 +4401,99 @@
     <member kind="function" protection="protected">
       <type>const istd::TPointerVector&lt; const iimg::IBitmap &gt; *</type>
       <name>GetWorkProduct</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual int</type>
       <name>ProduceObject</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6230575f0d5b0ccfd28cdf7082866c62</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ac0753e739d6fc72adcb31b01b7dec782</anchor>
       <arglist>(istd::TPointerVector&lt; const iimg::IBitmap &gt; &amp;result) const =0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnParametersChanged</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>abd3db22bdf1f16c2828cb137179cf9b6</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a90580e272a79ca373ad20670ecf9ce7d</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>RegisterSupplierInput</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a48d7e1c26473266c2b60409b5171852d</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a8d006081213faceddffad73cd129490f</anchor>
       <arglist>(imod::IModel *modelPtr, ISupplier *supplierPtr=NULL)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UnregisterSupplierInput</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>add07a57031037d60c26628f9cb52f811</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a093d1b7ec56b7145f757c319a5107ed4</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetDiagnosticName</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a12b7c1c099eca829dd19814d84a2ee87</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a0d817cfc8b271dc014345407519b208d</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>AddMessage</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>aad40686b67a71362476a4db5e69de885</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>adf257cd3e17a348a9555d13d94aa43e2</anchor>
       <arglist>(const ilog::CMessage *messagePtr) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsMessageSupported</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a0561b4da80df642d7e9ed4c180be1cd7</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a9a9eefc8f17940f30aaab4455232d0d2</anchor>
       <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>AddMessage</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a2ac3e3c6bc9d902e831c73576f6b6e6f</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a01c1c3d147e621380b49c159aecdd7cb</anchor>
       <arglist>(const MessagePtr &amp;messagePtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a55e1e7daefec816c55e46d629bb20751</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a04da513ad11a6b369de2483658533b92</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a08829340301aed9acda31308797da725</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>aa0e46038cab3a1fffb4b8f4f62ea46e7</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; istd::TPointerVector&lt; const iimg::IBitmap &gt; &gt;</type>
       <name>m_productPtr</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>int</type>
       <name>m_workStatus</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a960a57e39a555f8e1aaff58d75ac5d85</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a2856802443d8313ae09a174ed7efb1cf</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::CChangeNotifier</type>
       <name>m_productChangeNotifier</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a7fc326b1a7dd7f54d40d6d5b90b20a4e</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a2fa20a7be869640062ec01cfd45aeb8f</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -4504,24 +4504,24 @@
     <base virtualness="virtual">iimg::IMultiBitmapProvider</base>
     <base virtualness="virtual">idoc::IMultiPageDocumentProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; istd::TDelPtr&lt; iimg::IMultiBitmapProvider &gt; &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; istd::TDelPtr&lt; iimg::IMultiBitmapProvider &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_multi_layer_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a50b1f1d18581d9f06666ba2685d685ff</anchor>
+      <anchor>abb3ea524b70247d6dfd475115b219e9d</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CSupplierCompBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>istd::TDelPtr&lt; iimg::IMultiBitmapProvider &gt;</type>
       <name>ProductType</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -4562,15 +4562,15 @@
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureWorkFinished</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ClearWorkResults</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -4590,22 +4590,22 @@
     <member kind="function" protection="protected">
       <type>const istd::TDelPtr&lt; iimg::IMultiBitmapProvider &gt; *</type>
       <name>GetWorkProduct</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual int</type>
       <name>ProduceObject</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6230575f0d5b0ccfd28cdf7082866c62</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ac0753e739d6fc72adcb31b01b7dec782</anchor>
       <arglist>(istd::TDelPtr&lt; iimg::IMultiBitmapProvider &gt; &amp;result) const =0</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; istd::TDelPtr&lt; iimg::IMultiBitmapProvider &gt; &gt;</type>
       <name>m_productPtr</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -4616,24 +4616,24 @@
     <base virtualness="virtual">iimg::IBitmapProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a5cae1596e25e8b4e3caecc7b706e7067</anchor>
+      <anchor>a7ff515d2630c9c80ad904fba45db23b1</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CSupplierCompBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</type>
       <name>ProductType</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -4688,15 +4688,15 @@
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureWorkFinished</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ClearWorkResults</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -4723,29 +4723,29 @@
     <member kind="function" protection="protected">
       <type>const QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; *</type>
       <name>GetWorkProduct</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual int</type>
       <name>ProduceObject</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6230575f0d5b0ccfd28cdf7082866c62</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ac0753e739d6fc72adcb31b01b7dec782</anchor>
       <arglist>(QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &amp;result) const =0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>InitializeWork</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>ac37e116184f83fb9407a6243391222b0</anchor>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a2dc9191f754fd23179884f3596d09539</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>m_productPtr</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -4872,10 +4872,10 @@
     <base virtualness="virtual">iimg::IBitmapProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
-      <anchor>af44b1b5c0db08b4d2dfe5f8746c2252f</anchor>
+      <anchor>ada01c494ee698bd8240260913306b290</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -9410,24 +9410,24 @@
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <base virtualness="virtual">istd::IInformationProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; QPair&lt; iipr::CFeaturesContainer, QVector&lt; i2d::CAffineTransformation2d &gt; &gt; &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; QPair&lt; iipr::CFeaturesContainer, QVector&lt; i2d::CAffineTransformation2d &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
-      <anchor>a6e57cd4f77b10129961c6f3b05ffd27b</anchor>
+      <anchor>a9f69a9c65edca1bae2aaac684e9d46a4</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CSupplierCompBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>QPair&lt; iipr::CFeaturesContainer, QVector&lt; i2d::CAffineTransformation2d &gt; &gt;</type>
       <name>ProductType</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -9552,15 +9552,15 @@
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureWorkFinished</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ClearWorkResults</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -9594,15 +9594,15 @@
     <member kind="function" protection="protected">
       <type>const QPair&lt; iipr::CFeaturesContainer, QVector&lt; i2d::CAffineTransformation2d &gt; &gt; *</type>
       <name>GetWorkProduct</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; QPair&lt; iipr::CFeaturesContainer, QVector&lt; i2d::CAffineTransformation2d &gt; &gt; &gt;</type>
       <name>m_productPtr</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -10131,24 +10131,24 @@
     <base>TSupplierCompWrap&lt; CEdgeLineContainer &gt;</base>
     <base virtualness="virtual">iedge::IEdgeLinesProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; CEdgeLineContainer &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; CEdgeLineContainer &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiedge_1_1_c_extracted_edge_lines_supplier_comp.html</anchorfile>
-      <anchor>af2da081411d7876340fdd6e819e01c65</anchor>
+      <anchor>a692147e8b30e40cfb278c70098345562</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CSupplierCompBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CEdgeLineContainer</type>
       <name>ProductType</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -10189,15 +10189,15 @@
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureWorkFinished</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ClearWorkResults</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -10217,22 +10217,22 @@
     <member kind="function" protection="protected">
       <type>const CEdgeLineContainer *</type>
       <name>GetWorkProduct</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual int</type>
       <name>ProduceObject</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6230575f0d5b0ccfd28cdf7082866c62</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ac0753e739d6fc72adcb31b01b7dec782</anchor>
       <arglist>(CEdgeLineContainer &amp;result) const =0</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; CEdgeLineContainer &gt;</type>
       <name>m_productPtr</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -10388,10 +10388,10 @@
     <base>TSupplierCompWrap&lt; CEdgeLineContainer &gt;</base>
     <base virtualness="virtual">iedge::IEdgeLinesProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; CEdgeLineContainer &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; CEdgeLineContainer &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiedge_1_1_c_processed_edge_lines_supplier_comp.html</anchorfile>
-      <anchor>a5fc34147894b2d3fefa7341a671fe0e1</anchor>
+      <anchor>a116140b58cde817200b828bf036f1874</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -13271,9 +13271,12 @@
     <class kind="class">iinsp::CIdProviderCacheComp</class>
     <class kind="class">iinsp::CInformationProviderCacheComp</class>
     <class kind="class">iinsp::CInspectionTaskComp</class>
+    <class kind="class">iinsp::CSupplierCompBase</class>
     <class kind="class">iinsp::IIdProvider</class>
     <class kind="class">iinsp::IInspectionTask</class>
+    <class kind="class">iinsp::ISupplier</class>
     <class kind="class">iinsp::ITimeStampProvider</class>
+    <class kind="class">iinsp::TSupplierCompWrap</class>
   </compound>
   <compound kind="class">
     <name>iinsp::CComposedInformationProviderComp</name>
@@ -13460,7 +13463,7 @@
     <filename>classiinsp_1_1_c_inspection_task_comp.html</filename>
     <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">iinsp::IInspectionTask</base>
-    <base virtualness="virtual">iproc::ISupplier</base>
+    <base virtualness="virtual">iinsp::ISupplier</base>
     <base virtualness="virtual">istd::IInformationProvider</base>
     <base protection="protected">imod::CMultiModelBridgeBase</base>
     <member kind="enumeration">
@@ -13576,10 +13579,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual iproc::ISupplier *</type>
+      <type>virtual iinsp::ISupplier *</type>
       <name>GetSubtask</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>a6939fea0173b71740845be7683c9eb40</anchor>
+      <anchor>afa188349fe530ef0edb8e8a9f5a7e11b</anchor>
       <arglist>(int subtaskIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -13717,6 +13720,46 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iinsp::CSupplierCompBase</name>
+    <filename>classiinsp_1_1_c_supplier_comp_base.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base virtualness="virtual">iinsp::ISupplier</base>
+    <base protection="protected" virtualness="virtual">ilog::IMessageConsumer</base>
+    <class kind="class">iinsp::CSupplierCompBase::Timer</class>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>aa6aade048f067aab9c6579680be5ff2c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>af7066d9359298b7a7bec92b29bf0f734</anchor>
+      <arglist>()=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iinsp::CSupplierCompBase::Timer</name>
+    <filename>classiinsp_1_1_c_supplier_comp_base_1_1_timer.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Timer</name>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base_1_1_timer.html</anchorfile>
+      <anchor>a37c0122887749dc8310c1fdebf0fac0f</anchor>
+      <arglist>(const CSupplierCompBase *parentPtr, const QString &amp;measuredFeatureName)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Timer</name>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base_1_1_timer.html</anchorfile>
+      <anchor>aebb1e31f727bf4885e22c206eefcee33</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iinsp::IIdProvider</name>
     <filename>classiinsp_1_1_i_id_provider.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
@@ -13740,10 +13783,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual iproc::ISupplier *</type>
+      <type>virtual iinsp::ISupplier *</type>
       <name>GetSubtask</name>
       <anchorfile>classiinsp_1_1_i_inspection_task.html</anchorfile>
-      <anchor>ab712f2316f4406c10d17b0e505a3dc25</anchor>
+      <anchor>a167d56d4f39d7cd1b275125a670e61fc</anchor>
       <arglist>(int subtaskIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -13751,6 +13794,53 @@
       <name>GetGeneralParameters</name>
       <anchorfile>classiinsp_1_1_i_inspection_task.html</anchorfile>
       <anchor>acc84ce65b152a98a4121084041212f92</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iinsp::ISupplier</name>
+    <filename>classiinsp_1_1_i_supplier.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetWorkStatus</name>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a036fc62dc455392c6974201d9819ed24</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>InvalidateSupplier</name>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a033646f2c95eaba98b21925a319d9a0f</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>EnsureWorkInitialized</name>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a97a77bd08359c882299150cf4515de03</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a4f897c21e931245a7aa432d775a68881</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const ilog::IMessageContainer *</type>
+      <name>GetWorkMessages</name>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a8a8e4a785500d734ed358ed318d3c081</anchor>
+      <arglist>(int messageType) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual iprm::IParamsSet *</type>
+      <name>GetModelParametersSet</name>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a4837a527075f7b2cb7eb7b38afcaea71</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -13764,6 +13854,61 @@
       <anchorfile>classiinsp_1_1_i_time_stamp_provider.html</anchorfile>
       <anchor>a4ccdc9a5c90fb230664dfae71f2f3723</anchor>
       <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iinsp::TSupplierCompWrap</name>
+    <filename>classiinsp_1_1_t_supplier_comp_wrap.html</filename>
+    <templarg>Product</templarg>
+    <base>iinsp::CSupplierCompBase</base>
+    <member kind="typedef">
+      <type>CSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Product</type>
+      <name>ProductType</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>const Product *</type>
+      <name>GetWorkProduct</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ac0753e739d6fc72adcb31b01b7dec782</anchor>
+      <arglist>(Product &amp;result) const =0</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; Product &gt;</type>
+      <name>m_productPtr</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -13918,24 +14063,24 @@
     <base>TSupplierCompWrap&lt; QPair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
     <base virtualness="virtual">iimg::IBitmapProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; QPair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; QPair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_bitmap_joiner_supplier_comp.html</anchorfile>
-      <anchor>a74711c1f51b6884ec52038cf89ee307a</anchor>
+      <anchor>a91a293fb43631639c7f73eb911f1a263</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CSupplierCompBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>QPair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</type>
       <name>ProductType</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -13955,15 +14100,15 @@
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureWorkFinished</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ClearWorkResults</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -14004,15 +14149,15 @@
     <member kind="function" protection="protected">
       <type>const QPair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; *</type>
       <name>GetWorkProduct</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; QPair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>m_productPtr</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -14948,24 +15093,24 @@
     <base virtualness="virtual">iimg::IMultiBitmapProvider</base>
     <base protection="protected" virtualness="virtual">iprm::IOptionsList</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; istd::TPointerVector&lt; iimg::IBitmap &gt; &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; istd::TPointerVector&lt; iimg::IBitmap &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>ab5c425288f38a39899ffff27916c6e64</anchor>
+      <anchor>a08c6016bb33ed007b0040b69f15c52e2</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CSupplierCompBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>istd::TPointerVector&lt; iimg::IBitmap &gt;</type>
       <name>ProductType</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -15006,15 +15151,15 @@
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureWorkFinished</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ClearWorkResults</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -15083,15 +15228,15 @@
     <member kind="function" protection="protected">
       <type>const istd::TPointerVector&lt; iimg::IBitmap &gt; *</type>
       <name>GetWorkProduct</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; istd::TPointerVector&lt; iimg::IBitmap &gt; &gt;</type>
       <name>m_productPtr</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -15102,24 +15247,24 @@
     <base virtualness="virtual">imeas::INumericValueProvider</base>
     <base virtualness="virtual">istd::IInformationProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; imeas::CSimpleNumericValue &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; imeas::CSimpleNumericValue &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
-      <anchor>aed98b3a5b0d9bf92f7598c78addcfc7f</anchor>
+      <anchor>a2195d6d7b3b1b1433c95e0ab53b18128</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CSupplierCompBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>imeas::CSimpleNumericValue</type>
       <name>ProductType</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -15202,15 +15347,15 @@
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureWorkFinished</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ClearWorkResults</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -15237,15 +15382,15 @@
     <member kind="function" protection="protected">
       <type>const imeas::CSimpleNumericValue *</type>
       <name>GetWorkProduct</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; imeas::CSimpleNumericValue &gt;</type>
       <name>m_productPtr</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -15461,7 +15606,7 @@
     <name>iipr::CDelegatedBitmapSupplierComp</name>
     <filename>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</filename>
     <base>ilog::TLoggerCompWrap</base>
-    <base virtualness="virtual">iproc::ISupplier</base>
+    <base virtualness="virtual">iinsp::ISupplier</base>
     <base virtualness="virtual">istd::IChangeable</base>
     <base virtualness="virtual">iimg::IBitmapProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
@@ -15600,24 +15745,24 @@
     <base virtualness="virtual">iimg::IBitmapProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; QPair&lt; i2d::ICalibration2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; QPair&lt; i2d::ICalibration2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
-      <anchor>aca0598d7dbc5acac22ed70b229097d7b</anchor>
+      <anchor>a1c400f94619e20a206d806ccda4a039f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CSupplierCompBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>QPair&lt; i2d::ICalibration2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</type>
       <name>ProductType</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -15651,15 +15796,15 @@
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureWorkFinished</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ClearWorkResults</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -15700,15 +15845,15 @@
     <member kind="function" protection="protected">
       <type>const QPair&lt; i2d::ICalibration2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; *</type>
       <name>GetWorkProduct</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; QPair&lt; i2d::ICalibration2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>m_productPtr</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -15811,24 +15956,24 @@
     <base>TSupplierCompWrap&lt; CFeaturesContainer &gt;</base>
     <base virtualness="virtual">imeas::INumericValueProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; CFeaturesContainer &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; CFeaturesContainer &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_edge_distances_supplier_comp.html</anchorfile>
-      <anchor>aa6659152de54a0578a90afb12748bfa7</anchor>
+      <anchor>a13d065c91355c6c8c989123201d5d580</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CSupplierCompBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CFeaturesContainer</type>
       <name>ProductType</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -15862,15 +16007,15 @@
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureWorkFinished</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ClearWorkResults</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -15890,22 +16035,22 @@
     <member kind="function" protection="protected">
       <type>const CFeaturesContainer *</type>
       <name>GetWorkProduct</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual int</type>
       <name>ProduceObject</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6230575f0d5b0ccfd28cdf7082866c62</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ac0753e739d6fc72adcb31b01b7dec782</anchor>
       <arglist>(CFeaturesContainer &amp;result) const =0</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; CFeaturesContainer &gt;</type>
       <name>m_productPtr</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -16448,24 +16593,24 @@
     <base>TSupplierCompWrap&lt; imod::TModelWrap&lt; imeas::CSimpleSamplesSequence32 &gt; &gt;</base>
     <base virtualness="virtual">imeas::IDataSequenceProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; imod::TModelWrap&lt; imeas::CSimpleSamplesSequence32 &gt; &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; imod::TModelWrap&lt; imeas::CSimpleSamplesSequence32 &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_image_histogram_supplier_comp.html</anchorfile>
-      <anchor>a636643990fb25f17f94961bc30ed145e</anchor>
+      <anchor>a1135128c11df02379d2e1353f40b68de</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CSupplierCompBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>imod::TModelWrap&lt; imeas::CSimpleSamplesSequence32 &gt;</type>
       <name>ProductType</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -16492,15 +16637,15 @@
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureWorkFinished</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ClearWorkResults</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -16527,15 +16672,15 @@
     <member kind="function" protection="protected">
       <type>const imod::TModelWrap&lt; imeas::CSimpleSamplesSequence32 &gt; *</type>
       <name>GetWorkProduct</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; imod::TModelWrap&lt; imeas::CSimpleSamplesSequence32 &gt; &gt;</type>
       <name>m_productPtr</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -16816,24 +16961,24 @@
     <base>TSupplierCompWrap&lt; imeas::CGeneralDataSequence &gt;</base>
     <base virtualness="virtual">imeas::IDataSequenceProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; imeas::CGeneralDataSequence &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; imeas::CGeneralDataSequence &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_line_projection_supplier_comp.html</anchorfile>
-      <anchor>a5bde4403e33afa66b1753583a84739ed</anchor>
+      <anchor>af1675b24f9b5b5c96dd0e52c533459b1</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CSupplierCompBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>imeas::CGeneralDataSequence</type>
       <name>ProductType</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -16860,15 +17005,15 @@
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureWorkFinished</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ClearWorkResults</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -16888,15 +17033,15 @@
     <member kind="function" protection="protected">
       <type>const imeas::CGeneralDataSequence *</type>
       <name>GetWorkProduct</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; imeas::CGeneralDataSequence &gt;</type>
       <name>m_productPtr</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -17039,24 +17184,24 @@
     <base virtualness="virtual">imeas::IMultiDataSequenceProvider</base>
     <base virtualness="virtual">imeas::IDataSequenceProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; QVector&lt; imeas::CGeneralDataSequence &gt; &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; QVector&lt; imeas::CGeneralDataSequence &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_multi_line_projection_supplier_comp.html</anchorfile>
-      <anchor>adda6b02abcebff43b2d4f18379692a45</anchor>
+      <anchor>a06dd29f7480f6c97a32fb9a3c4fe1cf3</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CSupplierCompBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>QVector&lt; imeas::CGeneralDataSequence &gt;</type>
       <name>ProductType</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -17111,15 +17256,15 @@
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureWorkFinished</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ClearWorkResults</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -17139,15 +17284,15 @@
     <member kind="function" protection="protected">
       <type>const QVector&lt; imeas::CGeneralDataSequence &gt; *</type>
       <name>GetWorkProduct</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; QVector&lt; imeas::CGeneralDataSequence &gt; &gt;</type>
       <name>m_productPtr</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -17157,24 +17302,24 @@
     <base>TSupplierCompWrap&lt; QVector&lt; i2d::CLine2d &gt; &gt;</base>
     <base virtualness="virtual">imeas::INumericValueProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; QVector&lt; i2d::CLine2d &gt; &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; QVector&lt; i2d::CLine2d &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_multi_line_supplier_comp_base.html</anchorfile>
-      <anchor>aa5cdb0909d9ea73ee021f71a41007ae3</anchor>
+      <anchor>ad9998fe9786f4fe639af96af0e9a3fc6</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CSupplierCompBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>QVector&lt; i2d::CLine2d &gt;</type>
       <name>ProductType</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -17194,36 +17339,36 @@
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureWorkFinished</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ClearWorkResults</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>const QVector&lt; i2d::CLine2d &gt; *</type>
       <name>GetWorkProduct</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual int</type>
       <name>ProduceObject</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6230575f0d5b0ccfd28cdf7082866c62</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ac0753e739d6fc72adcb31b01b7dec782</anchor>
       <arglist>(QVector&lt; i2d::CLine2d &gt; &amp;result) const =0</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; QVector&lt; i2d::CLine2d &gt; &gt;</type>
       <name>m_productPtr</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -17234,24 +17379,24 @@
     <base virtualness="virtual">imeas::INumericValueProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; istd::TDelPtr&lt; imeas::INumericValue &gt; &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; istd::TDelPtr&lt; imeas::INumericValue &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
-      <anchor>a3e002dd32b58421c16923f0ed442f03d</anchor>
+      <anchor>a7363dd0e23035784f08037b2a4702b2c</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CSupplierCompBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>istd::TDelPtr&lt; imeas::INumericValue &gt;</type>
       <name>ProductType</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -17292,15 +17437,15 @@
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureWorkFinished</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ClearWorkResults</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -17320,22 +17465,22 @@
     <member kind="function" protection="protected">
       <type>const istd::TDelPtr&lt; imeas::INumericValue &gt; *</type>
       <name>GetWorkProduct</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual int</type>
       <name>ProduceObject</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6230575f0d5b0ccfd28cdf7082866c62</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ac0753e739d6fc72adcb31b01b7dec782</anchor>
       <arglist>(istd::TDelPtr&lt; imeas::INumericValue &gt; &amp;result) const =0</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; istd::TDelPtr&lt; imeas::INumericValue &gt; &gt;</type>
       <name>m_productPtr</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -17462,24 +17607,24 @@
     <base>TSupplierCompWrap&lt; istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</base>
     <base virtualness="virtual">iimg::IBitmapProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a857e2002f2138bb2f1d092c1c864af30</anchor>
+      <anchor>a74f368428ae0c704238a6b3a604fe7aa</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CSupplierCompBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>istd::TDelPtr&lt; iimg::IBitmap &gt;</type>
       <name>ProductType</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -17499,15 +17644,15 @@
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureWorkFinished</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ClearWorkResults</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -17541,15 +17686,15 @@
     <member kind="function" protection="protected">
       <type>const istd::TDelPtr&lt; iimg::IBitmap &gt; *</type>
       <name>GetWorkProduct</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</type>
       <name>m_productPtr</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -17954,10 +18099,10 @@
     <base virtualness="virtual">i2d::IMultiCalibrationProvider</base>
     <base virtualness="virtual">istd::IInformationProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; CFeaturesContainer &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; CFeaturesContainer &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
-      <anchor>af22caa63961730d177fe0d64e9d29ddb</anchor>
+      <anchor>ad1b20fdb1d45bba362b5db6e3b9b1547</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -19490,24 +19635,24 @@
     <base>TSupplierCompWrap&lt; imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt; &gt;</base>
     <base virtualness="virtual">imeas::IDataSequenceProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt; &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classimeas_1_1_c_data_sequence_joiner_supplier_comp.html</anchorfile>
-      <anchor>a9168e48c8f87dadde8763c34d35a40d4</anchor>
+      <anchor>a0f1c48c776a130d0037acad8da017692</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CSupplierCompBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt;</type>
       <name>ProductType</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -19541,15 +19686,15 @@
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureWorkFinished</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ClearWorkResults</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -19576,15 +19721,15 @@
     <member kind="function" protection="protected">
       <type>const imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt; *</type>
       <name>GetWorkProduct</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt; &gt;</type>
       <name>m_productPtr</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -20545,10 +20690,10 @@
     <base>TSupplierCompWrap&lt; imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt; &gt;</base>
     <base virtualness="virtual">imeas::IDataSequenceProvider</base>
     <member kind="typedef">
-      <type>iproc::TSupplierCompWrap&lt; imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt; &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classimeas_1_1_c_processed_data_sequence_supplier_comp.html</anchorfile>
-      <anchor>a3fd63a858793f8565f6d6446a3873e01</anchor>
+      <anchor>a5c5c5d955c1c03ca76952af4ea7b30d4</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -21511,16 +21656,13 @@
     <class kind="class">iproc::CCascadedProcessorComp</class>
     <class kind="class">iproc::CIterativeProcessorComp</class>
     <class kind="class">iproc::CModelBasedProcessingTriggerComp</class>
-    <class kind="class">iproc::CSupplierCompBase</class>
     <class kind="class">iproc::IElapsedTimeProvider</class>
     <class kind="class">iproc::IProcessor</class>
     <class kind="class">iproc::IStateController</class>
-    <class kind="class">iproc::ISupplier</class>
     <class kind="class">iproc::TFileCachedProducerCompBase</class>
     <class kind="class">iproc::TILockedProducer</class>
     <class kind="class">iproc::TMemCachedProducerComp</class>
     <class kind="class">iproc::TMorphLockedProducerBase</class>
-    <class kind="class">iproc::TSupplierCompWrap</class>
     <class kind="class">iproc::TSyncProcessorCompBase</class>
     <class kind="class">iproc::TSyncProcessorWrap</class>
     <member kind="typedef">
@@ -21733,46 +21875,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iproc::CSupplierCompBase</name>
-    <filename>classiproc_1_1_c_supplier_comp_base.html</filename>
-    <base>ilog::TLoggerCompWrap</base>
-    <base virtualness="virtual">iproc::ISupplier</base>
-    <base protection="protected" virtualness="virtual">ilog::IMessageConsumer</base>
-    <class kind="class">iproc::CSupplierCompBase::Timer</class>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ClearWorkResults</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a442a80a344dff5d01993a699a7567691</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>a8407cf9f0d773e91bfa10d6616a36e4d</anchor>
-      <arglist>()=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iproc::CSupplierCompBase::Timer</name>
-    <filename>classiproc_1_1_c_supplier_comp_base_1_1_timer.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>Timer</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base_1_1_timer.html</anchorfile>
-      <anchor>a95dcc5c23ae599b53ad2271734a42bba</anchor>
-      <arglist>(const CSupplierCompBase *parentPtr, const QString &amp;measuredFeatureName)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~Timer</name>
-      <anchorfile>classiproc_1_1_c_supplier_comp_base_1_1_timer.html</anchorfile>
-      <anchor>a0444901d0fd4897688d136541a325b20</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iproc::IElapsedTimeProvider</name>
     <filename>classiproc_1_1_i_elapsed_time_provider.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
@@ -21875,53 +21977,6 @@
       <name>IsResetAllowed</name>
       <anchorfile>classiproc_1_1_i_state_controller.html</anchorfile>
       <anchor>a4b9408b12c5261468ff9c400a3dbae85</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iproc::ISupplier</name>
-    <filename>classiproc_1_1_i_supplier.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetWorkStatus</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>afcc7cf98a07ad365e35635eab32d8bcb</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>InvalidateSupplier</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>a0496343d4f5ae9a3f71caf5163b35d13</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>EnsureWorkInitialized</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>a1d5a8103b4fc07f82c8d5f44794bb78e</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>ClearWorkResults</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>a9ca6810fbb13f002e9eaaece19ddf31a</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const ilog::IMessageContainer *</type>
-      <name>GetWorkMessages</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>a10e73f09e5c780d884071e9326d085d7</anchor>
-      <arglist>(int messageType) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual iprm::IParamsSet *</type>
-      <name>GetModelParametersSet</name>
-      <anchorfile>classiproc_1_1_i_supplier.html</anchorfile>
-      <anchor>a676cd5ff0426c1f72076c1847cb84a52</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>
@@ -22136,61 +22191,6 @@
       <anchorfile>classiproc_1_1_t_morph_locked_producer_base.html</anchorfile>
       <anchor>ae925e0d1801b26435fd4ce86bd92867e</anchor>
       <arglist>(const Key &amp;key, const SourceObject *sourcePtr)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iproc::TSupplierCompWrap</name>
-    <filename>classiproc_1_1_t_supplier_comp_wrap.html</filename>
-    <templarg>Product</templarg>
-    <base>iproc::CSupplierCompBase</base>
-    <member kind="typedef">
-      <type>CSupplierCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a481319fde7e45b0fbdf44aebd6b19bd9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Product</type>
-      <name>ProductType</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6c07595d7aa93d9e7ddecd35f6b44557</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a94292879cc623a44e70067a7ef78c05e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ClearWorkResults</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a0a5893f9c6a884949e2ccb5286c37921</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>const Product *</type>
-      <name>GetWorkProduct</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a9afc17fb076daf8bd801d1fa979fd2f3</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual int</type>
-      <name>ProduceObject</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6230575f0d5b0ccfd28cdf7082866c62</anchor>
-      <arglist>(Product &amp;result) const =0</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>istd::TDelPtr&lt; Product &gt;</type>
-      <name>m_productPtr</name>
-      <anchorfile>classiproc_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a3f76c2f61203897be191c592a936dc83</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -24721,12 +24721,12 @@
   <compound kind="class">
     <name>iqtinsp::CGeneralSupplierGuiComp</name>
     <filename>classiqtinsp_1_1_c_general_supplier_gui_comp.html</filename>
-    <base>TSupplierGuiCompBase&lt; Ui::CGeneralSupplierGuiComp, iproc::ISupplier &gt;</base>
+    <base>TSupplierGuiCompBase&lt; Ui::CGeneralSupplierGuiComp, iinsp::ISupplier &gt;</base>
     <member kind="typedef">
-      <type>TSupplierGuiCompBase&lt; Ui::CGeneralSupplierGuiComp, iproc::ISupplier &gt;</type>
+      <type>TSupplierGuiCompBase&lt; Ui::CGeneralSupplierGuiComp, iinsp::ISupplier &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
-      <anchor>ab4cbcaf8324cd8511e57b35f5cbbfbb2</anchor>
+      <anchor>a58e92a94c2079a4ffcf363b294724711</anchor>
       <arglist></arglist>
     </member>
     <member kind="signal">
@@ -25082,13 +25082,13 @@
     <filename>classiqtinsp_1_1_t_supplier_gui_comp_base.html</filename>
     <templarg>UI</templarg>
     <templarg>WidgetType</templarg>
-    <base>TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iproc::ISupplier &gt; &gt;</base>
+    <base>TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iinsp::ISupplier &gt; &gt;</base>
     <class kind="class">iqtinsp::TSupplierGuiCompBase::ParamsObserver</class>
     <member kind="typedef">
-      <type>iqt2d::TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iproc::ISupplier &gt; &gt;</type>
+      <type>iqt2d::TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iinsp::ISupplier &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>afafc39b2e578fb4a77a7e25cb599ba40</anchor>
+      <anchor>a5116ba15e03516fcd9181dec19ce0f0f</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -29344,10 +29344,13 @@
     <file>CIdProviderCacheComp.h</file>
     <file>CInformationProviderCacheComp.h</file>
     <file>CInspectionTaskComp.h</file>
+    <file>CSupplierCompBase.h</file>
     <file>IIdProvider.h</file>
     <file>iinsp.h</file>
     <file>IInspectionTask.h</file>
+    <file>ISupplier.h</file>
     <file>ITimeStampProvider.h</file>
+    <file>TSupplierCompWrap.h</file>
   </compound>
   <compound kind="dir">
     <name>Include/iipr</name>
@@ -29525,17 +29528,14 @@
     <file>CCascadedProcessorComp.h</file>
     <file>CIterativeProcessorComp.h</file>
     <file>CModelBasedProcessingTriggerComp.h</file>
-    <file>CSupplierCompBase.h</file>
     <file>IElapsedTimeProvider.h</file>
     <file>iproc.h</file>
     <file>IProcessor.h</file>
     <file>IStateController.h</file>
-    <file>ISupplier.h</file>
     <file>TFileCachedProducerCompBase.h</file>
     <file>TILockedProducer.h</file>
     <file>TMemCachedProducerComp.h</file>
     <file>TMorphLockedProducerBase.h</file>
-    <file>TSupplierCompWrap.h</file>
     <file>TSyncProcessorCompBase.h</file>
     <file>TSyncProcessorWrap.h</file>
   </compound>

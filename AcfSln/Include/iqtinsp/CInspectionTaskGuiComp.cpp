@@ -56,7 +56,7 @@ namespace iqtinsp
 
 
 static const char InspectionTaskMimeType[] = "acf/iqtinsp::CInspectionTask";
-static const char SupplierTaskMimeType[] = "acf/iproc::ISupplier";
+static const char SupplierTaskMimeType[] = "acf/iinsp::ISupplier";
 
 
 CInspectionTaskGuiComp::CInspectionTaskGuiComp()
@@ -199,9 +199,9 @@ bool CInspectionTaskGuiComp::OnDetached(imod::IModel* modelPtr)
 
 void CInspectionTaskGuiComp::UpdateProcessingState()
 {
-	int workStatus = iproc::ISupplier::WS_INVALID;
+	int workStatus = iinsp::ISupplier::WS_INVALID;
 
-	const iproc::ISupplier* supplierPtr = dynamic_cast<const iproc::ISupplier*>(GetObjectPtr());
+	const iinsp::ISupplier* supplierPtr = dynamic_cast<const iinsp::ISupplier*>(GetObjectPtr());
 	if (supplierPtr != NULL){
 		workStatus = supplierPtr->GetWorkStatus();
 	}
@@ -209,7 +209,7 @@ void CInspectionTaskGuiComp::UpdateProcessingState()
 	const istd::IInformationProvider* infoProviderPtr = dynamic_cast<const istd::IInformationProvider*>(supplierPtr);
 
 	switch (workStatus){
-		case iproc::ISupplier::WS_OK:
+		case iinsp::ISupplier::WS_OK:
 			if (infoProviderPtr != NULL){
 				switch (infoProviderPtr->GetInformationCategory()){
 					case istd::IInformationProvider::IC_NONE:
@@ -235,11 +235,11 @@ void CInspectionTaskGuiComp::UpdateProcessingState()
 			}
 			break;
 
-		case iproc::ISupplier::WS_ERROR:
+		case iinsp::ISupplier::WS_ERROR:
 			StateIconLabel->setPixmap(QPixmap(":/Icons/StateInvalid"));
 			break;
 
-		case iproc::ISupplier::WS_CRITICAL:
+		case iinsp::ISupplier::WS_CRITICAL:
 			StateIconLabel->setPixmap(QPixmap(":/Icons/Error"));
 			break;
 
@@ -571,7 +571,7 @@ void CInspectionTaskGuiComp::OnAutoTest()
 	MessageList->clear();
 	m_resultShapesMap.clear();
 
-	iproc::ISupplier* supplierPtr = dynamic_cast<iproc::ISupplier*>(GetObjectPtr());
+	iinsp::ISupplier* supplierPtr = dynamic_cast<iinsp::ISupplier*>(GetObjectPtr());
 	if (supplierPtr != NULL){
 		supplierPtr->InvalidateSupplier();
 		supplierPtr->EnsureWorkInitialized();
@@ -650,7 +650,7 @@ void CInspectionTaskGuiComp::OnCopyCurrent()
 {
 	iinsp::IInspectionTask* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
-		iproc::ISupplier* supplierPtr = objectPtr->GetSubtask(m_currentGuiIndex);
+		iinsp::ISupplier* supplierPtr = objectPtr->GetSubtask(m_currentGuiIndex);
 		if (supplierPtr != NULL){
 			iprm::IParamsSet* paramsPtr = supplierPtr->GetModelParametersSet();
 			if (paramsPtr != NULL){
@@ -667,7 +667,7 @@ void CInspectionTaskGuiComp::OnPasteCurrent()
 {
 	iinsp::IInspectionTask* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
-		iproc::ISupplier* supplierPtr = objectPtr->GetSubtask(m_currentGuiIndex);
+		iinsp::ISupplier* supplierPtr = objectPtr->GetSubtask(m_currentGuiIndex);
 		if (supplierPtr != NULL){
 			iprm::IParamsSet* paramsPtr = supplierPtr->GetModelParametersSet();
 			if (paramsPtr != NULL){
@@ -828,9 +828,9 @@ void CInspectionTaskGuiComp::UpdateTaskMessages()
 	if (taskPtr != NULL){
 		int subtasksCount = taskPtr->GetSubtasksCount();
 		for (int subTaskIndex = 0; subTaskIndex < subtasksCount; subTaskIndex++){
-			iproc::ISupplier* subTaskPtr = taskPtr->GetSubtask(subTaskIndex);
+			iinsp::ISupplier* subTaskPtr = taskPtr->GetSubtask(subTaskIndex);
 			if (subTaskPtr != NULL){
-				const ilog::IMessageContainer* messageContainerPtr = subTaskPtr->GetWorkMessages(iproc::ISupplier::WMT_RESULTS);
+				const ilog::IMessageContainer* messageContainerPtr = subTaskPtr->GetWorkMessages(iinsp::ISupplier::WMT_RESULTS);
 				if (messageContainerPtr != NULL){
 					AddTaskMessagesToLog(*messageContainerPtr, subTaskIndex);
 				}

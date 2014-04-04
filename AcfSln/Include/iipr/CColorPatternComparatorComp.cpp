@@ -138,7 +138,7 @@ int CColorPatternComparatorComp::GetInformationFlags() const
 
 // protected methods
 
-// reimplemented (iproc::TSupplierCompWrap)
+// reimplemented (iinsp::TSupplierCompWrap)
 
 int CColorPatternComparatorComp::ProduceObject(ProductType& result) const
 {

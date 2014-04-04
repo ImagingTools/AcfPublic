@@ -28,8 +28,8 @@
 #include "i2d/ICalibrationProvider.h"
 
 // ACF-Solutions includes
-#include "iproc/ISupplier.h"
-#include "iproc/TSupplierCompWrap.h"
+#include "iinsp/ISupplier.h"
+#include "iinsp/TSupplierCompWrap.h"
 #include "iimg/IBitmapProvider.h"
 
 #include "iedge/IEdgeLinesProvider.h"
@@ -42,11 +42,11 @@ namespace iedge
 
 
 class CExtractedEdgeLinesSupplierComp:
-			public iproc::TSupplierCompWrap<CEdgeLineContainer>,
+			public iinsp::TSupplierCompWrap<CEdgeLineContainer>,
 			virtual public IEdgeLinesProvider
 {
 public:
-	typedef iproc::TSupplierCompWrap<CEdgeLineContainer> BaseClass;
+	typedef iinsp::TSupplierCompWrap<CEdgeLineContainer> BaseClass;
 
 	I_BEGIN_COMPONENT(CExtractedEdgeLinesSupplierComp);
 		I_REGISTER_INTERFACE(IEdgeLinesProvider);
@@ -63,7 +63,7 @@ public:
 	virtual const CEdgeLineContainer* GetEdgesContainer() const;
 
 protected:
-	// reimplemented (iproc::TSupplierCompWrap)
+	// reimplemented (iinsp::TSupplierCompWrap)
 	virtual int ProduceObject(CEdgeLineContainer& result) const;
 
 	// reimplemented (icomp::CComponentBase)
@@ -71,10 +71,10 @@ protected:
 
 private:
 	I_REF(iimg::IBitmapProvider, m_bitmapProviderCompPtr);
-	I_REF(iproc::ISupplier, m_bitmapSupplierCompPtr);
+	I_REF(iinsp::ISupplier, m_bitmapSupplierCompPtr);
 	I_REF(imod::IModel, m_bitmapProviderModelCompPtr);
 	I_REF(i2d::ICalibrationProvider, m_calibrationProviderCompPtr);
-	I_REF(iproc::ISupplier, m_calibrationSupplierCompPtr);
+	I_REF(iinsp::ISupplier, m_calibrationSupplierCompPtr);
 	I_REF(imod::IModel, m_calibrationProviderModelCompPtr);
 	I_REF(IEdgesExtractor, m_edgesExtractorCompPtr);
 };

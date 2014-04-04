@@ -37,7 +37,7 @@ const CEdgeLineContainer* CProcessedEdgeLinesSupplierComp::GetEdgesContainer() c
 
 // protected methods
 
-// reimplemented (iproc::TSupplierCompWrap)
+// reimplemented (iinsp::TSupplierCompWrap)
 
 int CProcessedEdgeLinesSupplierComp::ProduceObject(CEdgeLineContainer& result) const
 {

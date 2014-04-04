@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iproc/CSupplierCompBase.h"
+#include "iinsp/CSupplierCompBase.h"
 
 
 // Qt includes
@@ -30,7 +30,7 @@
 #include "istd/TChangeNotifier.h"
 
 
-namespace iproc
+namespace iinsp
 {
 
 
@@ -44,7 +44,7 @@ CSupplierCompBase::CSupplierCompBase()
 }
 
 
-// reimplemented (iproc::ISupplier)
+// reimplemented (iinsp::ISupplier)
 
 int CSupplierCompBase::GetWorkStatus() const
 {
@@ -307,6 +307,6 @@ void CSupplierCompBase::ParamsObserver::AfterUpdate(imod::IModel* /*modelPtr*/, 
 }
 
 
-} // namespace iproc
+} // namespace iinsp
 
 

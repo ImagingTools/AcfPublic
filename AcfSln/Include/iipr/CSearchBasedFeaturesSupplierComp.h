@@ -33,8 +33,8 @@
 
 // ACF-Solutions includes
 #include "iproc/IProcessor.h"
-#include "iproc/ISupplier.h"
-#include "iproc/TSupplierCompWrap.h"
+#include "iinsp/ISupplier.h"
+#include "iinsp/TSupplierCompWrap.h"
 #include "imeas/INumericValueProvider.h"
 #include "iimg/IBitmapProvider.h"
 #include "iipr/CFeaturesContainer.h"
@@ -45,13 +45,13 @@ namespace iipr
 
 
 class CSearchBasedFeaturesSupplierComp:
-			public iproc::TSupplierCompWrap<CFeaturesContainer>,
+			public iinsp::TSupplierCompWrap<CFeaturesContainer>,
 			virtual public imeas::INumericValueProvider,
 			virtual public i2d::IMultiCalibrationProvider,
 			virtual public istd::IInformationProvider
 {
 public:
-	typedef iproc::TSupplierCompWrap<CFeaturesContainer> BaseClass;
+	typedef iinsp::TSupplierCompWrap<CFeaturesContainer> BaseClass;
 
 	I_BEGIN_COMPONENT(CSearchBasedFeaturesSupplierComp);
 		I_REGISTER_INTERFACE(imeas::INumericValueProvider);
@@ -86,7 +86,7 @@ public:
 	virtual int GetInformationFlags() const;
 
 protected:
-	// reimplemented (iproc::TSupplierCompWrap)
+	// reimplemented (iinsp::TSupplierCompWrap)
 	virtual bool InitializeWork();
 	virtual int ProduceObject(CFeaturesContainer& result) const;
 
@@ -96,7 +96,7 @@ protected:
 
 private:
 	I_REF(iimg::IBitmapProvider, m_bitmapProviderCompPtr);
-	I_REF(iproc::ISupplier, m_bitmapSupplierCompPtr);
+	I_REF(iinsp::ISupplier, m_bitmapSupplierCompPtr);
 	I_REF(imod::IModel, m_bitmapProviderModelCompPtr);
 	I_REF(iproc::IProcessor, m_searchProcessorCompPtr);
 	I_REF(istd::IInformationProvider, m_slaveInformationProviderCompPtr);

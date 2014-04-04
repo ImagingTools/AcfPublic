@@ -26,8 +26,8 @@
 
 // ACF-Solutions includes
 #include "iproc/IProcessor.h"
-#include "iproc/ISupplier.h"
-#include "iproc/TSupplierCompWrap.h"
+#include "iinsp/ISupplier.h"
+#include "iinsp/TSupplierCompWrap.h"
 #include "imeas/CGeneralDataSequence.h"
 #include "imeas/IDataSequenceProvider.h"
 #include "imeas/IMultiDataSequenceProvider.h"
@@ -38,12 +38,12 @@ namespace imeas
 
 
 class CDataSequenceJoinerSupplierComp:
-			public iproc::TSupplierCompWrap<
+			public iinsp::TSupplierCompWrap<
 						imod::TModelWrap< imeas::CGeneralDataSequence> >,
 			virtual public imeas::IDataSequenceProvider
 {
 public:
-	typedef iproc::TSupplierCompWrap<
+	typedef iinsp::TSupplierCompWrap<
 				imod::TModelWrap< imeas::CGeneralDataSequence> > BaseClass;
 
 	I_BEGIN_COMPONENT(CDataSequenceJoinerSupplierComp);
@@ -60,7 +60,7 @@ protected:
 	// reimplemented (imeas::IDataSequenceProvider)
 	virtual const imeas::IDataSequence* GetDataSequence() const;
 
-	// reimplemented (iproc::TSupplierCompWrap)
+	// reimplemented (iinsp::TSupplierCompWrap)
 	virtual int ProduceObject(ProductType& result) const;
 
 	// reimplemented (icomp::CComponentBase)
@@ -68,10 +68,10 @@ protected:
 
 private:
 	I_MULTIREF(imeas::IDataSequenceProvider, m_dataSequenceProviderCompPtr);
-	I_MULTIREF(iproc::ISupplier, m_dataSequenceSupplierCompPtr);
+	I_MULTIREF(iinsp::ISupplier, m_dataSequenceSupplierCompPtr);
 	I_MULTIREF(imod::IModel, m_dataSequenceProviderModelCompPtr);
 	I_MULTIREF(imeas::IMultiDataSequenceProvider, m_multiDataSequenceProviderCompPtr);
-	I_MULTIREF(iproc::ISupplier, m_multiDataSequenceSupplierCompPtr);
+	I_MULTIREF(iinsp::ISupplier, m_multiDataSequenceSupplierCompPtr);
 	I_MULTIREF(imod::IModel, m_multiDataSequenceProviderModelCompPtr);
 };
 

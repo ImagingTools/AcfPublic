@@ -41,7 +41,7 @@ const imeas::IDataSequence* CDataSequenceJoinerSupplierComp::GetDataSequence() c
 }
 
 
-// reimplemented (iproc::TSupplierCompWrap)
+// reimplemented (iinsp::TSupplierCompWrap)
 
 int CDataSequenceJoinerSupplierComp::ProduceObject(ProductType& result) const
 {

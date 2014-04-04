@@ -30,8 +30,8 @@
 
 // ACF-Solutions includes
 #include "iproc/IProcessor.h"
-#include "iproc/ISupplier.h"
-#include "iproc/TSupplierCompWrap.h"
+#include "iinsp/ISupplier.h"
+#include "iinsp/TSupplierCompWrap.h"
 #include "iimg/IBitmapProvider.h"
 #include "iimg/IMultiBitmapProvider.h"
 
@@ -43,11 +43,11 @@ namespace iipr
 	Supplier of bitmap's vector built on bitmap 
 */
 class CBitmapJoinerSupplierComp:
-			public iproc::TSupplierCompWrap< QPair<i2d::ITransformation2d*,  istd::TDelPtr<iimg::IBitmap> > >,
+			public iinsp::TSupplierCompWrap< QPair<i2d::ITransformation2d*,  istd::TDelPtr<iimg::IBitmap> > >,
 			virtual public iimg::IBitmapProvider
 {
 public:
-	typedef iproc::TSupplierCompWrap< QPair<i2d::ITransformation2d*,  istd::TDelPtr<iimg::IBitmap> > > BaseClass;
+	typedef iinsp::TSupplierCompWrap< QPair<i2d::ITransformation2d*,  istd::TDelPtr<iimg::IBitmap> > > BaseClass;
 
 	I_BEGIN_COMPONENT(CBitmapJoinerSupplierComp);
 		I_REGISTER_INTERFACE(iimg::IBitmapProvider);
@@ -65,7 +65,7 @@ protected:
 	virtual const iimg::IBitmap* GetBitmap() const;
 	virtual const i2d::ITransformation2d* GetLogTransform() const;	
 
-	// reimplemented (iproc::TSupplierCompWrap)
+	// reimplemented (iinsp::TSupplierCompWrap)
 	virtual int ProduceObject(ProductType& result) const;
 
 	// reimplemented (icomp::CComponentBase)
@@ -75,7 +75,7 @@ private:
 	I_FACT(iimg::IBitmap, m_bitmapCompFact);
 
 	I_REF(iimg::IMultiBitmapProvider, m_bitmapsProviderCompPtr);
-	I_REF(iproc::ISupplier, m_bitmapsSupplierCompPtr);
+	I_REF(iinsp::ISupplier, m_bitmapsSupplierCompPtr);
 	I_REF(imod::IModel, m_bitmapsProviderModelCompPtr);
 
 	I_ATTR(bool, m_useHorizontalJoinAttrPtr);

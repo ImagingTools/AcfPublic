@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef iproc_ISupplier_included
-#define iproc_ISupplier_included
+#ifndef iinsp_ISupplier_included
+#define iinsp_ISupplier_included
 
 
 // ACF includes
@@ -30,15 +30,14 @@
 #include "iprm/IParamsSet.h"
 
 
-namespace iproc
+namespace iinsp
 {
 
 
 /**
-	Base interface for suppliers providing synchrone processing of single object with <em>"pull data" model</em>.
-	Additional interfaces (providers) should provide access to intern stored produced objects.
-	For example image provider should provide method \c{const i2d::CRectangle* GetAoi() const}.
-	The internal stored object should be created on demand.
+	Base interface for suppliers providing calculating of objects on demand <em>("pull data" model)</em>.
+	Additional interfaces (providers) should provide access to intern stored calculated output objects.
+	For example image provider should provide method \c{const iimg::IImage* GetImage() const}, where the image will be calculated on demand.
 	\image html SupplierStates.svg
 */
 class ISupplier: virtual public istd::IChangeable
@@ -93,7 +92,7 @@ public:
 	/**
 		Get status of last work.
 		Please note, that this status is not a part of supplier model and can be changed without any notification.
-		\return	work status defined in iproc::ISupplier::WorkStatus.
+		\return	work status defined in iinsp::ISupplier::WorkStatus.
 	*/
 	virtual int GetWorkStatus() const = 0;
 
@@ -138,9 +137,9 @@ public:
 };
 
 
-} // namespace iproc
+} // namespace iinsp
 
 
-#endif // !iproc_ISupplier_included
+#endif // !iinsp_ISupplier_included
 
 

@@ -56,7 +56,7 @@ const i2d::ITransformation2d* CBitmapJoinerSupplierComp::GetLogTransform() const
 	}
 }
 
-// reimplemented (iproc::TSupplierCompWrap)
+// reimplemented (iinsp::TSupplierCompWrap)
 
 int CBitmapJoinerSupplierComp::ProduceObject(ProductType& result) const
 {

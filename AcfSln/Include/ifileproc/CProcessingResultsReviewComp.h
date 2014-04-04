@@ -32,7 +32,7 @@
 #include "ilog/TLoggerCompWrap.h"
 
 // ACF-Solutions includes
-#include "iproc/ISupplier.h"
+#include "iinsp/ISupplier.h"
 
 
 namespace ifileproc
@@ -88,7 +88,7 @@ private:
 
 	I_REF(ifile::IFileNameParam, m_inputPathCompPtr);
 	I_REF(ifile::IFileNameParam, m_currentProcessedFilePathCompPtr);
-	I_REF(iproc::ISupplier, m_outputSupplierCompPtr);
+	I_REF(iinsp::ISupplier, m_outputSupplierCompPtr);
 	I_REF(iser::ISerializable, m_outputSupplierSerializerCompPtr);
 	I_REF(ifile::IFilePersistence, m_outputFileSerializerCompPtr);
 	I_REF(ifile::IFileTypeInfo, m_inputFileTypeInfoCompPtr);

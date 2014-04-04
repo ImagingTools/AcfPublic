@@ -20,20 +20,20 @@
 ********************************************************************************/
 
 
-#ifndef iproc_TSupplierCompWrap_included
-#define iproc_TSupplierCompWrap_included
+#ifndef iinsp_TSupplierCompWrap_included
+#define iinsp_TSupplierCompWrap_included
 
 
 // ACF-Solutions includes
-#include "iproc/CSupplierCompBase.h"
+#include "iinsp/CSupplierCompBase.h"
 
 
-namespace iproc
+namespace iinsp
 {
 
 
 /**
-	Standard implementation of interface iproc::ISupplier with preparation for component implementation.
+	Standard implementation of interface iinsp::ISupplier with preparation for component implementation.
 	During component initialization you should call \c RegisterSupplierInput for all suppliers used by this component as an input.
 */
 template <class Product>
@@ -46,7 +46,7 @@ public:
 	I_BEGIN_BASE_COMPONENT(TSupplierCompWrap);
 	I_END_COMPONENT;
 
-	// reimplemented (iproc::ISupplier)
+	// reimplemented (iinsp::ISupplier)
 	virtual void EnsureWorkFinished();
 	virtual void ClearWorkResults();
 
@@ -59,7 +59,7 @@ protected:
 	// abstract methods
 	/**
 		Produce single object.
-		\return	work status. \sa iproc::WorkStatus
+		\return	work status. \sa iinsp::WorkStatus
 	*/
 	virtual int ProduceObject(Product& result) const = 0;
 
@@ -70,7 +70,7 @@ protected:
 
 // public methods
 
-// reimplemented (iproc::ISupplier)
+// reimplemented (iinsp::ISupplier)
 
 template <class Product>
 void TSupplierCompWrap<Product>::EnsureWorkFinished()
@@ -121,9 +121,9 @@ const Product* TSupplierCompWrap<Product>::GetWorkProduct() const
 }
 
 
-} // namespace iproc
+} // namespace iinsp
 
 
-#endif // !iproc_TSupplierCompWrap_included
+#endif // !iinsp_TSupplierCompWrap_included
 
 
