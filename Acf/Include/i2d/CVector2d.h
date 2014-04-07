@@ -50,7 +50,7 @@ public:
 
 	/**
 		Default constructor.
-		Please note, elements will be not initilized.
+		Please note, elements will be not initialized.
 	 */
 	CVector2d();
 	
@@ -108,6 +108,8 @@ public:
 		Return Z coordinate of two vectors cross product.
 	 */
 	double GetCrossProductZ(const imath::TVector<2>& vector) const;
+
+	double GetDotProduct(const CVector2d& vector) const;
 	/**
 		Get angle of this vector.
 	 */
@@ -225,6 +227,12 @@ inline CVector2d CVector2d::GetVerticalTranslated(double offsetY) const
 inline double CVector2d::GetCrossProductZ(const imath::TVector<2>& vector) const
 {
 	return GetX() * vector[1] - GetY() * vector[0];
+}
+
+
+inline double CVector2d::GetDotProduct(const CVector2d& vector) const
+{
+	return GetX() * vector.GetX() + GetY() * vector.GetY();
 }
 
 

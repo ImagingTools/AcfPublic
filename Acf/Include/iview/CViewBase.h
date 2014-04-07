@@ -148,6 +148,8 @@ public:
 		\return	shape under mouse pointer, or NULL if there is no shape.
 	*/
 	IInteractiveShape* GetMouseShapePtr() const;
+	
+	IInteractiveShape* GetFirstActiveShape() const;
 
 	// reimplemented (iview::IShapeView)
 	virtual void Update();
@@ -171,8 +173,8 @@ public:
 	virtual void DeselectAllShapes();
 	virtual int GetKeysState() const;
 	virtual int GetEditMode() const;
-	virtual void OnShapeFocused(IInteractiveShape* /*shapePtr*/){}
-	virtual void OnShapeDefocused(IInteractiveShape* /*shapePtr*/){}
+	virtual void OnShapeFocused(IInteractiveShape* /*shapePtr*/)	{}
+	virtual void OnShapeDefocused(IInteractiveShape* /*shapePtr*/)	{}
 
 	// reimplemented (iview::ITouchable)
 	virtual TouchState IsTouched(istd::CIndex2d position) const;
@@ -237,8 +239,8 @@ protected:
 	void DisconnectAllShapes();
 	
 	/**
-		Invalidate whole backgroud buffer.
-		By next call Update() backgroud buffer will be full repainted.
+		Invalidate whole background buffer.
+		By next call Update() background buffer will be full repainted.
 	*/
 	virtual void InvalidateBackground();
 
@@ -400,6 +402,7 @@ inline IInteractiveShape* CViewBase::GetMouseShapePtr() const
 		CalcMouseShape();
 		m_isMouseShapeValid = true;
 	}
+	
 	return m_mouseShapePtr;
 }
 

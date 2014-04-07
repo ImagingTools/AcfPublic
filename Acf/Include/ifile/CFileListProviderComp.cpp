@@ -48,7 +48,7 @@ const QFileInfoList& CFileListProviderComp::GetFileList() const
 }
 
 
-// private methods
+// public static methods
 
 bool CFileListProviderComp::CreateFileList(
 			const QDir& root,
@@ -56,10 +56,11 @@ bool CFileListProviderComp::CreateFileList(
 			int maxRecursionDepth,
 			const QStringList& nameFilters,
 			QDir::SortFlags sortSpec,
-			QFileInfoList& fileList) const
+			QFileInfoList& fileList,
+			istd::ILogger* loggerPtr)
 {
 	QFileInfoList directories;
-	if (!CreateDirectoryList(root, minRecursionDepth, maxRecursionDepth, directories)){
+	if (!CreateDirectoryList(root, minRecursionDepth, maxRecursionDepth, directories, loggerPtr)){
 		return false;
 	}
 
@@ -93,7 +94,8 @@ bool CFileListProviderComp::CreateDirectoryList(
 			const QDir& root,
 			int minRecursionDepth,
 			int maxRecursionDepth,
-			QFileInfoList& directoryList) const
+			QFileInfoList& directoryList,
+			istd::ILogger* loggerPtr)
 {
 	Q_ASSERT(minRecursionDepth >= 0);
 
@@ -105,7 +107,14 @@ bool CFileListProviderComp::CreateDirectoryList(
 
 	QFileInfo fileInfo(rootPath);
 	if (!fileInfo.isDir()){
-		SendErrorMessage(0, QString(tr("Specified path '%1' is not a directory")).arg(root.absolutePath()));
+		if (loggerPtr != NULL){
+			loggerPtr->SendLogMessage(
+						istd::IInformationProvider::IC_ERROR,
+						0,
+						QString(tr("Specified path '%1' is not a directory")).arg(root.absolutePath()),
+						"File List Provder",
+						0);
+		}
 
 		return false;
 	}
@@ -116,13 +125,13 @@ bool CFileListProviderComp::CreateDirectoryList(
 }
 
 
-// protected methods
+// protected static methods
 
 void CFileListProviderComp::EnumerateDirectory(
 			const QDir& root,
 			int minRecursionDepth,
 			int maxRecursionDepth,
-			QFileInfoList& directories) const
+			QFileInfoList& directories)
 {
 	if (minRecursionDepth <= 0){
 		QString rootPath = root.absolutePath();
@@ -148,6 +157,8 @@ void CFileListProviderComp::EnumerateDirectory(
 	}
 }
 
+
+// protected methods
 
 // reimplemented (imod::CSingleModelObserverBase)
 

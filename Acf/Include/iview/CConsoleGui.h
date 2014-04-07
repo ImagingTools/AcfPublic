@@ -77,9 +77,10 @@ public:
 	enum CommandGroupId
 	{
 		CGI_ZOOM = ibase::ICommand::GI_USER + 1,
-		CGI_SHAPE_EDITOR = ibase::ICommand::GI_USER + 2,
-		CGI_CALIBRATION = ibase::ICommand::GI_USER + 3,
-		CGI_VIEW_CONTROL = ibase::ICommand::GI_USER + 4
+		CGI_SHAPE_EDITOR,
+		CGI_CALIBRATION,
+		CGI_VIEW_CONTROL,
+		CGI_SHAPE_TOOLS
 	};
 
 	explicit CConsoleGui(QWidget* parent = NULL);
@@ -107,6 +108,11 @@ public Q_SLOTS:
 	void OnPoinsMove();
 	void OnPointsAdd();
 	void OnPointsSub();
+	void OnFlipHorizontal();
+	void OnFlipVertical();
+	void OnRotateCW();
+	void OnRotateCCW();
+	void OnReverse();
 	void OnShowScrollbars(bool state);
 	void OnShowGrid(bool state);
 	void OnShowRuler(bool state);
@@ -174,6 +180,12 @@ private:
 	iqtgui::CHierarchicalCommand m_pointsMoveCommand;
 	iqtgui::CHierarchicalCommand m_pointsAddCommand;
 	iqtgui::CHierarchicalCommand m_pointsSubCommand;
+
+	iqtgui::CHierarchicalCommand m_flipHorizontalCommand;
+	iqtgui::CHierarchicalCommand m_flipVerticalCommand;
+	iqtgui::CHierarchicalCommand m_rotateCWCommand;
+	iqtgui::CHierarchicalCommand m_rotateCCWCommand;
+	iqtgui::CHierarchicalCommand m_reverseLineCommand;
 
 	IShapeStatusInfo* m_shapeStatusInfoPtr;
 

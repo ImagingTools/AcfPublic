@@ -12166,6 +12166,13 @@
     </member>
     <member kind="function">
       <type>double</type>
+      <name>GetDotProduct</name>
+      <anchorfile>classi2d_1_1_c_vector2d.html</anchorfile>
+      <anchor>a562122269bf3d74089ffc104ea055350</anchor>
+      <arglist>(const CVector2d &amp;vector) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
       <name>GetAngle</name>
       <anchorfile>classi2d_1_1_c_vector2d.html</anchorfile>
       <anchor>a47b96dc110036d6cc05d9dfa40825177</anchor>
@@ -27578,6 +27585,20 @@
       <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
       <anchor>aa796620cca275e7834d7a0d5599f73af</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>CreateFileList</name>
+      <anchorfile>classifile_1_1_c_file_list_provider_comp.html</anchorfile>
+      <anchor>ac1ce20db57173a4ab18870feab8f8122</anchor>
+      <arglist>(const QDir &amp;root, int minRecursionDepth, int maxRecursionDepth, const QStringList &amp;nameFilters, QDir::SortFlags sortSpec, QFileInfoList &amp;fileList, istd::ILogger *loggerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>CreateDirectoryList</name>
+      <anchorfile>classifile_1_1_c_file_list_provider_comp.html</anchorfile>
+      <anchor>a90d5ba116de608e476a30457de5ff9ed</anchor>
+      <arglist>(const QDir &amp;root, int minRecursionDepth, int maxRecursionDepth, QFileInfoList &amp;directoryList, istd::ILogger *loggerPtr=NULL)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -60269,6 +60290,48 @@
       <anchor>a2519be921b203b8d599a02ec2917c9e6</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ShapeAction</name>
+      <anchorfile>classiview_1_1_i_interactive_shape.html</anchorfile>
+      <anchor>a5215456781aeaa111113a93772bf93af</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>ActionFlipHorizontally</name>
+      <anchorfile>classiview_1_1_i_interactive_shape.html</anchorfile>
+      <anchor>a5215456781aeaa111113a93772bf93afa8d53bcf02676b468cfd1bf017031b64c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>ActionFlipVertically</name>
+      <anchorfile>classiview_1_1_i_interactive_shape.html</anchorfile>
+      <anchor>a5215456781aeaa111113a93772bf93afa7c1cf94a26d28cf3b70a60c3c2be58c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>ActionRotateClockwise</name>
+      <anchorfile>classiview_1_1_i_interactive_shape.html</anchorfile>
+      <anchor>a5215456781aeaa111113a93772bf93afa97b0f7f9579280ea683cd925411205c6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>ActionRotateCounterclockwise</name>
+      <anchorfile>classiview_1_1_i_interactive_shape.html</anchorfile>
+      <anchor>a5215456781aeaa111113a93772bf93afa136ddbe384b91d2cfe85dabce1521eaf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>ActionReverseLine</name>
+      <anchorfile>classiview_1_1_i_interactive_shape.html</anchorfile>
+      <anchor>a5215456781aeaa111113a93772bf93afa49129bb20e8991630fad057e910430de</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CAffineTransformation2dShape</name>
@@ -60352,6 +60415,20 @@
       <anchorfile>classiview_1_1_c_interactive_shape_base.html</anchorfile>
       <anchor>af5672788c47adb44feea0b6e52739c3c</anchor>
       <arglist>(bool selectFlag=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsActionAvailable</name>
+      <anchorfile>classiview_1_1_c_interactive_shape_base.html</anchorfile>
+      <anchor>a38624ae850c4ef5ad000b992074b7679</anchor>
+      <arglist>(ShapeAction action) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ExecuteAction</name>
+      <anchorfile>classiview_1_1_c_interactive_shape_base.html</anchorfile>
+      <anchor>a3f4399bd368a4f84dc9dce08b7a2de8b</anchor>
+      <arglist>(ShapeAction action)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -61603,6 +61680,13 @@
       <name>GetMouseShapePtr</name>
       <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
       <anchor>ad0bb83b68ad5bb3e82dda53963f97078</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>IInteractiveShape *</type>
+      <name>GetFirstActiveShape</name>
+      <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
+      <anchor>a01ef295f63bea9737c9b8bd2818209fc</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -63247,6 +63331,13 @@
       <anchor>adcdfbd863f48b01faef69948040312eda4f96629465537a3e25bad2a4ae84ef56</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CGI_SHAPE_TOOLS</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>adcdfbd863f48b01faef69948040312eda28649cccc0c20f49454b3f689c1f7526</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>iview::CConsoleBase</type>
       <name>BaseClass</name>
@@ -63315,6 +63406,41 @@
       <name>OnPointsSub</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
       <anchor>a0eb7451b2d6a54625ea18a346b08b024</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnFlipHorizontal</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>af680d594dfb771967e10310523644344</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnFlipVertical</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>ab267d32208cb56b8bb7a5f92b7d43997</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnRotateCW</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>a4567b8fe7af5e6cc1d238c5277a7dc5f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnRotateCCW</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>ab4262fa9c431efe648a0c8ffc721d41d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnReverse</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>af669eea33fe21bab4bbe9d502cc037c1</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot">
@@ -63863,6 +63989,13 @@
       <anchorfile>classiview_1_1_c_interactive_view_layer.html</anchorfile>
       <anchor>a9a83a1a9ebd46b32b7811090ec295bac</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>IInteractiveShape *</type>
+      <name>GetFirstActiveShape</name>
+      <anchorfile>classiview_1_1_c_interactive_view_layer.html</anchorfile>
+      <anchor>ae02e6d39915ad4299a84a8c26e08d651</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual i2d::CRect</type>
@@ -65386,6 +65519,20 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
+      <name>IsActionAvailable</name>
+      <anchorfile>classiview_1_1_c_polygon_shape.html</anchorfile>
+      <anchor>a7481b56eba1c547b9e74f8cc3afcbc68</anchor>
+      <arglist>(ShapeAction action) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ExecuteAction</name>
+      <anchorfile>classiview_1_1_c_polygon_shape.html</anchorfile>
+      <anchor>ac4ccae47fbb1388381eea500349e63df</anchor>
+      <arglist>(ShapeAction action)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
       <name>IsFirstVisible</name>
       <anchorfile>classiview_1_1_c_polygon_shape.html</anchorfile>
       <anchor>ab1738a4dadcf5566ab947c582ef3cac6</anchor>
@@ -65941,6 +66088,20 @@
       <anchorfile>classiview_1_1_c_polyline_shape.html</anchorfile>
       <anchor>aa1a1621f075276e19378c16b2c5a9138</anchor>
       <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsActionAvailable</name>
+      <anchorfile>classiview_1_1_c_polyline_shape.html</anchorfile>
+      <anchor>a51b17c476952fbd653428b60b12083b8</anchor>
+      <arglist>(ShapeAction action) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ExecuteAction</name>
+      <anchorfile>classiview_1_1_c_polyline_shape.html</anchorfile>
+      <anchor>a3e9b0ee8927370a330dee2309b183b1e</anchor>
+      <arglist>(ShapeAction action)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -67216,6 +67377,20 @@
       <anchorfile>classiview_1_1_i_interactive_shape.html</anchorfile>
       <anchor>a069a38f4b619109d9e6153825b61c411</anchor>
       <arglist>(bool selectFlag=true)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsActionAvailable</name>
+      <anchorfile>classiview_1_1_i_interactive_shape.html</anchorfile>
+      <anchor>a4fce0d89ab047c146b23c300486d509a</anchor>
+      <arglist>(ShapeAction action) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>ExecuteAction</name>
+      <anchorfile>classiview_1_1_i_interactive_shape.html</anchorfile>
+      <anchor>a2149bcb11c8e68b3cbe425226d902aa8</anchor>
+      <arglist>(ShapeAction action)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
