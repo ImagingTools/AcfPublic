@@ -78,7 +78,7 @@ int CFileListConverterComp::DoProcessing(
 	for (int inputFileIndex = 0; inputFileIndex < filesCount; inputFileIndex++){
 		const QString& inputFile = fileList[inputFileIndex].absoluteFilePath();
 
-		const QString outputFileName = m_outputFileNameCompPtr->GetFilePath(inputFile);
+		const QString outputFileName = m_outputFileNameCompPtr->CalculateFileName(inputFile, NULL);
 
 		QFileInfo outputFileInfo(outputFileName);
 

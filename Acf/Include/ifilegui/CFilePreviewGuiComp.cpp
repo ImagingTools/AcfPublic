@@ -25,6 +25,7 @@
 
 // Qt includes
 #include <QtCore/QFileInfo>
+#include <QtCore/QTimer>
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
@@ -70,6 +71,38 @@ void CFilePreviewGuiComp::UpdateGui(int /*updateFlags*/)
 		return;
 	}
 
+	UpdateFilePreview();
+
+
+}
+
+
+// reimplemented (iqtgui::CGuiComponentBase)
+
+void CFilePreviewGuiComp::OnGuiCreated()
+{
+	BaseClass::OnGuiCreated();
+
+	if (m_objectGuiCompPtr.IsValid()){
+		m_objectGuiCompPtr->CreateGui(ObjectViewFrame);	
+	}
+
+	connect(&m_fileSystemObserver, SIGNAL(fileChanged(const QString&)), this, SLOT(UpdateObjectFromFile()));
+}
+
+
+void CFilePreviewGuiComp::OnGuiDestroyed()
+{
+	if (m_objectGuiCompPtr.IsValid()){
+		m_objectGuiCompPtr->DestroyGui();	
+	}
+
+	BaseClass::OnGuiDestroyed();
+}
+
+
+void CFilePreviewGuiComp::UpdateFilePreview()
+{
 	ifile::IFileNameParam* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
 		QString newFilePath = objectPtr->GetPath();
@@ -98,40 +131,21 @@ void CFilePreviewGuiComp::UpdateGui(int /*updateFlags*/)
 		}
 		else{
 			m_lastFilePath = QString();
+
+			if (m_objectCompPtr.IsValid()){
+				m_objectCompPtr->ResetData();
+			}
+
+			if (!newFilePath.isEmpty()){
+				 QTimer::singleShot(1000, this, SLOT(UpdateFilePreview()));
+			}
 		}
 	}
-}
-
-
-// reimplemented (iqtgui::CGuiComponentBase)
-
-void CFilePreviewGuiComp::OnGuiCreated()
-{
-	BaseClass::OnGuiCreated();
-
-	if (m_objectGuiCompPtr.IsValid()){
-		m_objectGuiCompPtr->CreateGui(ObjectViewFrame);	
+	else{
+		if (m_objectCompPtr.IsValid()){
+			m_objectCompPtr->ResetData();
+		}
 	}
-
-	connect(&m_fileSystemObserver, SIGNAL(fileChanged(const QString&)), this, SLOT(OnFileChanged(const QString&)));
-}
-
-
-void CFilePreviewGuiComp::OnGuiDestroyed()
-{
-	if (m_objectGuiCompPtr.IsValid()){
-		m_objectGuiCompPtr->DestroyGui();	
-	}
-
-	BaseClass::OnGuiDestroyed();
-}
-
-
-// private slots
-
-void CFilePreviewGuiComp::OnFileChanged(const QString&/* filePath*/)
-{
-	UpdateObjectFromFile();
 }
 
 
@@ -139,9 +153,17 @@ void CFilePreviewGuiComp::OnFileChanged(const QString&/* filePath*/)
 
 void CFilePreviewGuiComp::UpdateObjectFromFile()
 {
+	if (!m_objectCompPtr.IsValid()){
+		return;
+	}
+
 	QFileInfo fileInfo(m_lastFilePath);
 
-	bool disableView = !fileInfo.exists();
+	if (!fileInfo.exists()){
+		m_objectCompPtr->ResetData();
+
+		return;
+	}
 
 	if (fileInfo.lastModified() != m_lastModificationTimeStamp){
 		m_lastModificationTimeStamp = fileInfo.lastModified();
@@ -151,20 +173,7 @@ void CFilePreviewGuiComp::UpdateObjectFromFile()
 		if (m_fileLoaderCompPtr.IsValid()){
 			int retVal = m_fileLoaderCompPtr->LoadFromFile(*m_objectCompPtr.GetPtr(), m_lastFilePath);
 			if (retVal != ifile::IFilePersistence::OS_OK){
-				disableView = true;
-			}
-		}
-	}
-
-	if (m_objectModelCompPtr.IsValid() && m_objectObserverCompPtr.IsValid()){
-		if (disableView){
-			if (m_objectModelCompPtr->IsAttached(m_objectObserverCompPtr.GetPtr())){
-				m_objectModelCompPtr->DetachObserver(m_objectObserverCompPtr.GetPtr());
-			}
-		}
-		else{
-			if (!m_objectModelCompPtr->IsAttached(m_objectObserverCompPtr.GetPtr())){
-				m_objectModelCompPtr->AttachObserver(m_objectObserverCompPtr.GetPtr());
+				m_objectCompPtr->ResetData();
 			}
 		}
 	}

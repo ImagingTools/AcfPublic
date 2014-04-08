@@ -30708,6 +30708,13 @@
       <anchor>a136e4c19f5859a78d3866ac80095d022</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classiimg_1_1_c_bitmap_base.html</anchorfile>
+      <anchor>a8e0cc2546902be76780c9424a350602b</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>QImage::Format</type>
       <name>CalcQtFormat</name>

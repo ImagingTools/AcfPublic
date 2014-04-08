@@ -73,7 +73,7 @@ protected:
 	virtual void OnGuiDestroyed();
 
 private Q_SLOTS:
-	void OnFileChanged(const QString& filePath);
+	void UpdateFilePreview();
 
 private:
 	void UpdateObjectFromFile();
