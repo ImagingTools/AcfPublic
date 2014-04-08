@@ -33,9 +33,10 @@
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
-
 #include "iprm/IOptionsList.h"
 #include "iprm/INameParam.h"
+#include "iqt/CSignalBlocker.h"
+
 
 
 namespace iqtprm
@@ -313,6 +314,8 @@ void COptionsManagerGuiComp::OnTextEdited(const QString& /*text*/)
 
 void COptionsManagerGuiComp::UpdateComboBox()
 {
+	iqt:: CSignalBlocker blockSelector(Selector, true);
+
 	Selector->clear();
 
 	iprm::ISelectionParam* selectionPtr = CompCastPtr<iprm::ISelectionParam>(GetObjectPtr());
