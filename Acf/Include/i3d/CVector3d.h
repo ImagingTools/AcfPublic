@@ -29,9 +29,7 @@
 
 // ACF includes
 #include "imath/TVector.h"
-
 #include "i2d/CVector2d.h"
-
 #include "i3d/i3d.h"
 
 

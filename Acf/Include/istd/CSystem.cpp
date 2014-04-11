@@ -200,6 +200,38 @@ void CSystem::Sleep(double seconds)
 }
 
 
+bool CSystem::CopyDirectory(const QString& sourcePath, const QString& destinationPath)
+{
+	RemoveDirectory(destinationPath);
+
+	QDir parentDstDir(QFileInfo(destinationPath).path());
+	if (!parentDstDir.mkdir(QFileInfo(destinationPath).fileName())){
+		return false;
+	}
+
+	QDir sourceDir(sourcePath);
+	foreach(const QFileInfo &info, sourceDir.entryInfoList(QDir::Dirs | QDir::Files | QDir::NoDotAndDotDot)){
+		QString sourceItemPath = sourcePath + "/" + info.fileName();
+		QString destinationItemPath = destinationPath + "/" + info.fileName();
+		if (info.isDir()){
+			if (!CopyDirectory(sourceItemPath, destinationItemPath)){
+				return false;
+			}
+		}
+		else if (info.isFile()){
+			if (!QFile::copy(sourceItemPath, destinationItemPath)){
+				return false;
+			}
+		}
+		else{
+			qDebug(qPrintable(QString("CSystem::CopyDirectory: Unhandled item").arg(info.filePath())));
+		}
+	}
+
+	return true;
+}
+
+
 bool CSystem::RemoveDirectory(const QString& directoryPath)
 {
 	bool retVal = true;

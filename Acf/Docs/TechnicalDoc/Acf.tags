@@ -2005,7 +2005,7 @@
     <filename>_c_auto_persistence_comp_8h</filename>
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <includes id="_i_model_8h" name="IModel.h" local="yes" imported="no">imod/IModel.h</includes>
-    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="yes" imported="no">imod/CSingleModelObserverBase.h</includes>
+    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_c_memory_write_archive_8h" name="CMemoryWriteArchive.h" local="yes" imported="no">iser/CMemoryWriteArchive.h</includes>
     <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
@@ -27328,12 +27328,40 @@
     <name>ifile::CAutoPersistenceComp</name>
     <filename>classifile_1_1_c_auto_persistence_comp.html</filename>
     <base>icomp::CComponentBase</base>
-    <base protection="protected">imod::CSingleModelObserverBase</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>ModelIds</name>
+      <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
+      <anchor>a2ac9564356038249c50a827770eafd7f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_OBJECT</name>
+      <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
+      <anchor>a2ac9564356038249c50a827770eafd7faffa3c67a363ad9b048fceba2df5269d9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_FILEPATH</name>
+      <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
+      <anchor>a2ac9564356038249c50a827770eafd7fa6b4043d38879af0b6100e92c3523bff2</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
       <anchor>ad6cca8229f651bdf1501961558f36172</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::CMultiModelDispatcherBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
+      <anchor>ae0616e09d800836d9e1943af078fbdf4</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -27359,13 +27387,6 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnUpdate</name>
-      <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
-      <anchor>a4754be947328fe820ba24ea0fc798b4f</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
       <anchor>a4fe381aa34d289980a5c2b4cd5e9ee5c</anchor>
@@ -27377,6 +27398,41 @@
       <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
       <anchor>ad348970648bc84ca8a98da2ca4128c28</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
+      <anchor>a040dce5beb0f55af237d28ccd8f147f7</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>RegisterModel</name>
+      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
+      <anchor>a276d11f3ca9488e2fc47127916a20b39</anchor>
+      <arglist>(IModel *modelPtr, int modelId=0, int relevantFlags=istd::IChangeable::CF_MODEL)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>UnregisterModel</name>
+      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
+      <anchor>ae131419147b8d67ae7600f426465804b</anchor>
+      <arglist>(int modelId=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>UnregisterAllModels</name>
+      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
+      <anchor>a870c0f1ab69a56f2b01fbc136d36ce76</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Object *</type>
+      <name>GetObjectAt</name>
+      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
+      <anchor>ac95053e3935765098a79b3dcf127e968</anchor>
+      <arglist>(int modelId) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -30299,34 +30355,6 @@
       <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
       <anchor>ab336987dc363f285a687e73e2dc018e4</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>RegisterModel</name>
-      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
-      <anchor>a276d11f3ca9488e2fc47127916a20b39</anchor>
-      <arglist>(IModel *modelPtr, int modelId=0, int relevantFlags=istd::IChangeable::CF_MODEL)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>UnregisterModel</name>
-      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
-      <anchor>ae131419147b8d67ae7600f426465804b</anchor>
-      <arglist>(int modelId=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>UnregisterAllModels</name>
-      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
-      <anchor>a870c0f1ab69a56f2b01fbc136d36ce76</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Object *</type>
-      <name>GetObjectAt</name>
-      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
-      <anchor>ac95053e3935765098a79b3dcf127e968</anchor>
-      <arglist>(int modelId) const </arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -56397,6 +56425,13 @@
       <anchorfile>classistd_1_1_c_system.html</anchorfile>
       <anchor>a370555a3f4d5651054f3a8257ff5e4d2</anchor>
       <arglist>(double seconds)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>CopyDirectory</name>
+      <anchorfile>classistd_1_1_c_system.html</anchorfile>
+      <anchor>af6983ede19adb549a7c4d716e54f9a8f</anchor>
+      <arglist>(const QString &amp;srcPath, const QString &amp;dstPath)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>

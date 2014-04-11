@@ -89,6 +89,11 @@ public:
 	*/
 	static void Sleep(double seconds);
 
+	/** 
+		Copy files and directories from one folder to another.
+	*/
+	static bool CopyDirectory(const QString &srcPath, const QString &dstPath);
+
 	/**
 		Remove a given directory with all contents.
 	*/
