@@ -53,6 +53,11 @@ public:
 
 	CStreamLogCompBase();
 
+	/**
+		Get worse category (highest code) of all outputed messages.
+	*/
+	istd::IInformationProvider::InformationCategory GetWorseCategory() const;
+
 	// reimplemented (ilog::IMessageConsumer)
 	virtual bool IsMessageSupported(
 				int messageCategory = -1,
@@ -76,12 +81,7 @@ protected:
 	/**
 		Write a text line to the output stream.
 	*/
-	virtual void WriteText(const QString& text) = 0;
-
-	/**
-		Make new line.
-	*/
-	virtual void NewLine() = 0;
+	virtual void WriteText(const QString& text, istd::IInformationProvider::InformationCategory category) = 0;
 
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentDestroyed();
@@ -94,6 +94,8 @@ private:
 	I_ATTR(bool, m_useTimeStampAttrPtr);
 
 	bool m_isLastDotShown;
+	istd::IInformationProvider::InformationCategory m_lastDotCategory;
+	istd::IInformationProvider::InformationCategory m_worseCategory;
 };
 
 
