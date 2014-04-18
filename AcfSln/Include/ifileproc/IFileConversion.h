@@ -24,16 +24,12 @@
 #define ifileproc_IFileConvertCopy_included
 
 
-#include "istd/IPolymorphic.h"
+// Qt includes
+#include <QtCore/QString>
 
-
-class QString;
-
-
-namespace iprm
-{
-	class IParamsSet;
-}
+// ACF includes
+#include "iprm/IParamsSet.h"
+#include "ibase/IProgressManager.h"
 
 
 namespace ifileproc
@@ -41,11 +37,14 @@ namespace ifileproc
 
 
 /**
-	Common interface for file copying.
+	General interface for conversion of files.
 */
-class IFileConvertCopy: virtual public istd::IPolymorphic
+class IFileConversion: virtual public istd::IPolymorphic
 {
 public:
+	/**
+		Types of messages which can be produced during execution of ConvertFiles method.
+	*/
 	enum MessageId
 	{
 		/**
@@ -60,12 +59,19 @@ public:
 
 	/**
 		Copy a file or files from \c inputPath to destination \c outputPath.
-		Optionally, you can use \c paramsPtr to control the copy process.
+
+		\param inputPath	Path to the input file or directory.
+		\param outputPath	Path to the output file or directory.
+		\param paramsPtr	File conversion parameters
+		\param progressManagerPtr	Progress manager used for getting information about file conversion progress state and canceling.
+
+		\return \c true if the file conversion was successful or \c false otherwise.
 	*/
 	virtual bool ConvertFiles(
 				const QString& inputPath,
 				const QString& outputPath,
-				const iprm::IParamsSet* paramsPtr = NULL) const = 0;
+				const iprm::IParamsSet* paramsPtr = NULL,
+				ibase::IProgressManager* progressManagerPtr = NULL) const = 0;
 };
 
 

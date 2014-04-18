@@ -633,7 +633,7 @@
     <name>CComposedCopyFilesComp.h</name>
     <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_composed_copy_files_comp_8h</filename>
-    <includes id="_i_file_convert_copy_8h" name="IFileConvertCopy.h" local="yes" imported="no">ifileproc/IFileConvertCopy.h</includes>
+    <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <class kind="class">ifileproc::CComposedCopyFilesComp</class>
     <namespace>ifileproc</namespace>
   </compound>
@@ -641,7 +641,7 @@
     <name>CCopyAppComp.h</name>
     <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_copy_app_comp_8h</filename>
-    <includes id="_i_file_convert_copy_8h" name="IFileConvertCopy.h" local="yes" imported="no">ifileproc/IFileConvertCopy.h</includes>
+    <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <class kind="class">ifileproc::CCopyAppComp</class>
     <namespace>ifileproc</namespace>
   </compound>
@@ -649,7 +649,7 @@
     <name>CCopyFilesTreeComp.h</name>
     <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_copy_files_tree_comp_8h</filename>
-    <includes id="_i_file_convert_copy_8h" name="IFileConvertCopy.h" local="yes" imported="no">ifileproc/IFileConvertCopy.h</includes>
+    <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <class kind="class">ifileproc::CCopyFilesTreeComp</class>
     <namespace>ifileproc</namespace>
   </compound>
@@ -657,7 +657,7 @@
     <name>CExternalFileConverterComp.h</name>
     <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_external_file_converter_comp_8h</filename>
-    <includes id="_i_file_convert_copy_8h" name="IFileConvertCopy.h" local="yes" imported="no">ifileproc/IFileConvertCopy.h</includes>
+    <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <class kind="class">ifileproc::CExternalFileConverterComp</class>
     <namespace>ifileproc</namespace>
   </compound>
@@ -665,7 +665,7 @@
     <name>CFileConvertOverProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_file_convert_over_processor_comp_8h</filename>
-    <includes id="_i_file_convert_copy_8h" name="IFileConvertCopy.h" local="yes" imported="no">ifileproc/IFileConvertCopy.h</includes>
+    <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">ifileproc::CFileConvertOverProcessorComp</class>
     <namespace>ifileproc</namespace>
@@ -674,7 +674,7 @@
     <name>CFileCopyOverLoaderComp.h</name>
     <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_file_copy_over_loader_comp_8h</filename>
-    <includes id="_i_file_convert_copy_8h" name="IFileConvertCopy.h" local="yes" imported="no">ifileproc/IFileConvertCopy.h</includes>
+    <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <class kind="class">ifileproc::CFileCopyOverLoaderComp</class>
     <namespace>ifileproc</namespace>
   </compound>
@@ -682,7 +682,7 @@
     <name>CFileInfoCopyComp.h</name>
     <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_file_info_copy_comp_8h</filename>
-    <includes id="_i_file_convert_copy_8h" name="IFileConvertCopy.h" local="yes" imported="no">ifileproc/IFileConvertCopy.h</includes>
+    <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <includes id="ifileproc_8h" name="ifileproc.h" local="yes" imported="no">ifileproc/ifileproc.h</includes>
     <class kind="class">ifileproc::CFileInfoCopyComp</class>
     <namespace>ifileproc</namespace>
@@ -692,7 +692,7 @@
     <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_file_list_converter_comp_8h</filename>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
-    <includes id="_i_file_convert_copy_8h" name="IFileConvertCopy.h" local="yes" imported="no">ifileproc/IFileConvertCopy.h</includes>
+    <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <includes id="_i_file_naming_8h" name="IFileNaming.h" local="yes" imported="no">ifileproc/IFileNaming.h</includes>
     <class kind="class">ifileproc::CFileListConverterComp</class>
     <namespace>ifileproc</namespace>
@@ -726,7 +726,7 @@
     <name>CProcessingResultsReviewComp.h</name>
     <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_processing_results_review_comp_8h</filename>
-    <includes id="_i_file_convert_copy_8h" name="IFileConvertCopy.h" local="yes" imported="no">ifileproc/IFileConvertCopy.h</includes>
+    <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
     <class kind="class">ifileproc::CProcessingResultsReviewComp</class>
     <namespace>ifileproc</namespace>
@@ -742,15 +742,15 @@
     <name>CSelectableFileConverterComp.h</name>
     <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_selectable_file_converter_comp_8h</filename>
-    <includes id="_i_file_convert_copy_8h" name="IFileConvertCopy.h" local="yes" imported="no">ifileproc/IFileConvertCopy.h</includes>
+    <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <class kind="class">ifileproc::CSelectableFileConverterComp</class>
     <namespace>ifileproc</namespace>
   </compound>
   <compound kind="file">
-    <name>IFileConvertCopy.h</name>
+    <name>IFileConversion.h</name>
     <path>C:/Temp/AcfSln/Include/ifileproc/</path>
-    <filename>_i_file_convert_copy_8h</filename>
-    <class kind="class">ifileproc::IFileConvertCopy</class>
+    <filename>_i_file_conversion_8h</filename>
+    <class kind="class">ifileproc::IFileConversion</class>
     <namespace>ifileproc</namespace>
   </compound>
   <compound kind="file">
@@ -968,7 +968,7 @@
     <name>CHotfolderProcessingComp.h</name>
     <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
     <filename>_c_hotfolder_processing_comp_8h</filename>
-    <includes id="_i_file_convert_copy_8h" name="IFileConvertCopy.h" local="yes" imported="no">ifileproc/IFileConvertCopy.h</includes>
+    <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <includes id="_i_hotfolder_processing_info_8h" name="IHotfolderProcessingInfo.h" local="yes" imported="no">ihotf/IHotfolderProcessingInfo.h</includes>
     <includes id="_i_hotfolder_task_manager_8h" name="IHotfolderTaskManager.h" local="yes" imported="no">ihotf/IHotfolderTaskManager.h</includes>
     <class kind="class">ihotfgui::CHotfolderProcessingComp</class>
@@ -10639,7 +10639,7 @@
     <class kind="class">ifileproc::CProcessingResultsReviewComp</class>
     <class kind="class">ifileproc::CRenderedObjectFileLoaderComp</class>
     <class kind="class">ifileproc::CSelectableFileConverterComp</class>
-    <class kind="class">ifileproc::IFileConvertCopy</class>
+    <class kind="class">ifileproc::IFileConversion</class>
     <class kind="class">ifileproc::IFileNaming</class>
     <class kind="class">ifileproc::IFileNamingParams</class>
   </compound>
@@ -10647,7 +10647,7 @@
     <name>ifileproc::CComposedCopyFilesComp</name>
     <filename>classifileproc_1_1_c_composed_copy_files_comp.html</filename>
     <base>ilog::TLoggerCompWrap</base>
-    <base virtualness="virtual">ifileproc::IFileConvertCopy</base>
+    <base virtualness="virtual">ifileproc::IFileConversion</base>
     <member kind="enumeration">
       <type></type>
       <name>MessageId</name>
@@ -10672,30 +10672,30 @@
     <member kind="enumeration">
       <type></type>
       <name>MessageId</name>
-      <anchorfile>classifileproc_1_1_i_file_convert_copy.html</anchorfile>
-      <anchor>a9bf8a92485d6aed2f4f2f637d0f7a3fc</anchor>
+      <anchorfile>classifileproc_1_1_i_file_conversion.html</anchorfile>
+      <anchor>a7ab816f5c053f9ae166a2445fee920b7</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>MI_INPUT_PATH</name>
-      <anchorfile>classifileproc_1_1_i_file_convert_copy.html</anchorfile>
-      <anchor>a9bf8a92485d6aed2f4f2f637d0f7a3fca3654f6111f278f34ca126b14f51038ba</anchor>
+      <anchorfile>classifileproc_1_1_i_file_conversion.html</anchorfile>
+      <anchor>a7ab816f5c053f9ae166a2445fee920b7afb1f5630ed522f1a9ad35857bfe78fa9</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>MI_OUTPUT_PATH</name>
-      <anchorfile>classifileproc_1_1_i_file_convert_copy.html</anchorfile>
-      <anchor>a9bf8a92485d6aed2f4f2f637d0f7a3fcae95ef1aeac79e1b589c105de291b0e16</anchor>
+      <anchorfile>classifileproc_1_1_i_file_conversion.html</anchorfile>
+      <anchor>a7ab816f5c053f9ae166a2445fee920b7a387c5a08ef14763e3fca5112ecd7c09f</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_composed_copy_files_comp.html</anchorfile>
-      <anchor>a15d3213f968cc6b3d07d8c91c3bf5c98</anchor>
-      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
+      <anchor>a2507a0ba5e2a59160613108c26cfdde8</anchor>
+      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10743,7 +10743,7 @@
     <name>ifileproc::CCopyFilesTreeComp</name>
     <filename>classifileproc_1_1_c_copy_files_tree_comp.html</filename>
     <base>ilog::TLoggerCompWrap</base>
-    <base virtualness="virtual">ifileproc::IFileConvertCopy</base>
+    <base virtualness="virtual">ifileproc::IFileConversion</base>
     <member kind="enumeration">
       <type></type>
       <name>MessageId</name>
@@ -10783,8 +10783,8 @@
       <type>virtual bool</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_copy_files_tree_comp.html</anchorfile>
-      <anchor>a678f9f26e04b15c2c24a74996a25849e</anchor>
-      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
+      <anchor>ab4ff13886816209a03fb6c02ee00e68d</anchor>
+      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -10812,7 +10812,7 @@
     <name>ifileproc::CExternalFileConverterComp</name>
     <filename>classifileproc_1_1_c_external_file_converter_comp.html</filename>
     <base>ilog::TLoggerCompWrap</base>
-    <base virtualness="virtual">ifileproc::IFileConvertCopy</base>
+    <base virtualness="virtual">ifileproc::IFileConversion</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -10824,8 +10824,8 @@
       <type>virtual bool</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_external_file_converter_comp.html</anchorfile>
-      <anchor>a7531ac0e78bdd21af099c7aa7f3442c5</anchor>
-      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
+      <anchor>a30668153fc7fc0702d95c00b3a376134</anchor>
+      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -10839,7 +10839,7 @@
     <name>ifileproc::CFileConvertOverProcessorComp</name>
     <filename>classifileproc_1_1_c_file_convert_over_processor_comp.html</filename>
     <base>ilog::TLoggerCompWrap</base>
-    <base virtualness="virtual">ifileproc::IFileConvertCopy</base>
+    <base virtualness="virtual">ifileproc::IFileConversion</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -10858,15 +10858,15 @@
       <type>virtual bool</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_file_convert_over_processor_comp.html</anchorfile>
-      <anchor>a3f2a1745ad9b0327658cd5e163d4607a</anchor>
-      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
+      <anchor>aaaeda69048b01726157900c2fd6205ca</anchor>
+      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>ifileproc::CFileCopyOverLoaderComp</name>
     <filename>classifileproc_1_1_c_file_copy_over_loader_comp.html</filename>
     <base>ilog::TLoggerCompWrap</base>
-    <base virtualness="virtual">ifileproc::IFileConvertCopy</base>
+    <base virtualness="virtual">ifileproc::IFileConversion</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -10878,15 +10878,15 @@
       <type>virtual bool</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_file_copy_over_loader_comp.html</anchorfile>
-      <anchor>a1bb539653e0b59a7af2dfa670f920570</anchor>
-      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
+      <anchor>a19d483692c0ba814671de2260fdbb7ec</anchor>
+      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>ifileproc::CFileInfoCopyComp</name>
     <filename>classifileproc_1_1_c_file_info_copy_comp.html</filename>
     <base>ilog::TLoggerCompWrap</base>
-    <base virtualness="virtual">ifileproc::IFileConvertCopy</base>
+    <base virtualness="virtual">ifileproc::IFileConversion</base>
     <member kind="enumeration">
       <type></type>
       <name>MessageId</name>
@@ -10940,8 +10940,8 @@
       <type>virtual bool</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_file_info_copy_comp.html</anchorfile>
-      <anchor>adf559119e0d6aa5d058649fa2378c50d</anchor>
-      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
+      <anchor>ada773d24b02f071624f4eb995d36d49d</anchor>
+      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -11229,7 +11229,7 @@
     <name>ifileproc::CProcessingResultsReviewComp</name>
     <filename>classifileproc_1_1_c_processing_results_review_comp.html</filename>
     <base>ilog::TLoggerCompWrap</base>
-    <base virtualness="virtual">ifileproc::IFileConvertCopy</base>
+    <base virtualness="virtual">ifileproc::IFileConversion</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -11248,8 +11248,8 @@
       <type>virtual bool</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_processing_results_review_comp.html</anchorfile>
-      <anchor>ad6c4ab9149671a87422bc9f678360acb</anchor>
-      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
+      <anchor>ae35f1b65c47df11fbbffef72dc8893c3</anchor>
+      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -11319,7 +11319,7 @@
     <name>ifileproc::CSelectableFileConverterComp</name>
     <filename>classifileproc_1_1_c_selectable_file_converter_comp.html</filename>
     <base>icomp::CComponentBase</base>
-    <base virtualness="virtual">ifileproc::IFileConvertCopy</base>
+    <base virtualness="virtual">ifileproc::IFileConversion</base>
     <base virtualness="virtual">iprm::ISelectionParam</base>
     <base protection="protected" virtualness="virtual">iprm::IOptionsList</base>
     <member kind="typedef">
@@ -11340,8 +11340,8 @@
       <type>virtual bool</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_selectable_file_converter_comp.html</anchorfile>
-      <anchor>af30b8b5e925b0e9b32743758a1625a16</anchor>
-      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL) const </arglist>
+      <anchor>a9a74591bd206b0259ca7bbe96fa482a1</anchor>
+      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IOptionsList *</type>
@@ -11429,15 +11429,15 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>ifileproc::IFileConvertCopy</name>
-    <filename>classifileproc_1_1_i_file_convert_copy.html</filename>
+    <name>ifileproc::IFileConversion</name>
+    <filename>classifileproc_1_1_i_file_conversion.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>ConvertFiles</name>
-      <anchorfile>classifileproc_1_1_i_file_convert_copy.html</anchorfile>
-      <anchor>a93acd5c4e2cfa400220ab4ed502e6b5f</anchor>
-      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL) const =0</arglist>
+      <anchorfile>classifileproc_1_1_i_file_conversion.html</anchorfile>
+      <anchor>a1105ade1a3adf6812f5eda22b256214e</anchor>
+      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -29293,7 +29293,7 @@
     <file>CProcessingResultsReviewComp.h</file>
     <file>CRenderedObjectFileLoaderComp.h</file>
     <file>CSelectableFileConverterComp.h</file>
-    <file>IFileConvertCopy.h</file>
+    <file>IFileConversion.h</file>
     <file>IFileNaming.h</file>
     <file>IFileNamingParams.h</file>
     <file>ifileproc.h</file>
