@@ -37,7 +37,7 @@ namespace ifileproc
 
 // reimplemented (ifileproc::IFileConversion)
 
-bool CCopyFilesTreeComp::ConvertFiles(
+int CCopyFilesTreeComp::ConvertFiles(
 			const QString& inputPath,
 			const QString& outputPath,
 			const iprm::IParamsSet* paramsPtr,
@@ -46,7 +46,7 @@ bool CCopyFilesTreeComp::ConvertFiles(
 	if (!m_fileCopyCompPtr.IsValid()){
 		SendErrorMessage(MI_END_STATUS, tr("File copy provider is not present"));
 
-		return false;
+		return iproc::IProcessor::TS_INVALID;
 	}
 
 	QStringList filters;
@@ -86,12 +86,12 @@ bool CCopyFilesTreeComp::ConvertFiles(
 				counter)){
 		SendInfoMessage(MI_END_STATUS, tr("Success: %1 files copied").arg(counter));
 
-		return true;
+		return iproc::IProcessor::TS_OK;
 	}
 	else{
 		SendErrorMessage(MI_END_STATUS, tr("Failed: %1 files copied").arg(counter));
 
-		return false;
+		return iproc::IProcessor::TS_INVALID;
 	}
 }
 
@@ -180,7 +180,7 @@ bool CCopyFilesTreeComp::CopyFileTree(
 
 		Q_ASSERT(m_fileCopyCompPtr.IsValid());	// it should be checked before whole process started
 
-		if (m_fileCopyCompPtr->ConvertFiles(inputFilePath, outputPath, paramsPtr)){
+		if (m_fileCopyCompPtr->ConvertFiles(inputFilePath, outputPath, paramsPtr) == iproc::IProcessor::TS_OK){
 			counter++;
 		}
 	}

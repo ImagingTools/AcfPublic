@@ -90,7 +90,7 @@ int CFileListConverterComp::DoProcessing(
 		bool isConverted = false;
 
 		if (m_fileConvertCompPtr.IsValid()){
-			isConverted = m_fileConvertCompPtr->ConvertFiles(inputFile, outputFileName, paramsPtr);
+			isConverted = (m_fileConvertCompPtr->ConvertFiles(inputFile, outputFileName, paramsPtr) == iproc::IProcessor::TS_OK);
 		}
 		else{
 			isConverted = QFile::copy(inputFile, outputFileName);

@@ -45,7 +45,7 @@ CSelectableFileConverterComp::CSelectableFileConverterComp()
 
 // reimplemented (ifileproc::IFileConversion)
 
-bool CSelectableFileConverterComp::ConvertFiles(
+int CSelectableFileConverterComp::ConvertFiles(
 			const QString& inputPath,
 			const QString& outputPath,
 			const iprm::IParamsSet* /*paramsPtr*/,
@@ -55,7 +55,7 @@ bool CSelectableFileConverterComp::ConvertFiles(
 		return m_slaveConvertersCompPtr[m_selectedOptionIndex]->ConvertFiles(inputPath, outputPath);
 	}
 
-	return false;
+	return iproc::IProcessor::TS_INVALID;
 }
 
 

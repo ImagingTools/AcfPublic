@@ -52,7 +52,7 @@ namespace
 
 // reimplemented (ifileproc::IFileConversion)
 
-bool CProcessingResultsReviewComp::ConvertFiles(
+int CProcessingResultsReviewComp::ConvertFiles(
 			const QString& inputPath,
 			const QString& outputPath,
 			const iprm::IParamsSet* /*paramsPtr*/,
@@ -64,7 +64,7 @@ bool CProcessingResultsReviewComp::ConvertFiles(
 				!m_outputFileSerializerCompPtr.IsValid()){
 		SendErrorMessage(0, "Bad component definition");
 
-		return false;
+		return iproc::IProcessor::TS_INVALID;
 	}
 
 	if (m_inputPathCompPtr.IsValid()){
@@ -78,10 +78,10 @@ bool CProcessingResultsReviewComp::ConvertFiles(
 	ProcessSerializer processSerializer(this, inputPath);
 
 	if (m_outputFileSerializerCompPtr->SaveToFile(processSerializer, outputPath) == ifile::IFilePersistence::OS_OK){
-		return true;
+		return iproc::IProcessor::TS_OK;
 	}
 
-	return false;
+	return iproc::IProcessor::TS_INVALID;
 }
 
 

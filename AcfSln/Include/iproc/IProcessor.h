@@ -24,8 +24,8 @@
 #define iproc_IProcessor_included
 
 
+// ACF includes
 #include "iprm/IParamsSet.h"
-
 #include "ibase/IProgressManager.h"
 
 
@@ -87,20 +87,24 @@ public:
 			Task state is undefined.
 		 */
 		TS_NONE,
+
 		/**
 			Task is during execution.
 		 */
 		TS_WAIT,
+
 		/**
 			Task finished correctly.
 		 */
 		TS_OK,
+
 		/**
 			Task was canceled by user.
 		 */
 		TS_CANCELED,
+
 		/**
-			Task finished but error is occured.
+			Task finished but an error is occured.
 		 */
 		TS_INVALID
 	};

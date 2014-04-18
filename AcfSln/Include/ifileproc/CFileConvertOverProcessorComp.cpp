@@ -33,14 +33,9 @@ namespace ifileproc
 
 // public methods
 
-CFileConvertOverProcessorComp::CFileConvertOverProcessorComp()
-{
-}
-
-
 // reimplemented (ifileproc::IFileConversion)
 
-bool CFileConvertOverProcessorComp::ConvertFiles(
+int CFileConvertOverProcessorComp::ConvertFiles(
 			const QString& inputPath,
 			const QString& outputPath,
 			const iprm::IParamsSet* paramsSetPtr,
@@ -51,19 +46,19 @@ bool CFileConvertOverProcessorComp::ConvertFiles(
 	if (!m_inputFileLoaderCompPtr.IsValid()){
 		SendErrorMessage(0, "No file loader defined", "File processing component");
 
-		return false;
+		return iproc::IProcessor::TS_INVALID;
 	}
 
 	if (!m_inputDataCompPtr.IsValid()){
 		SendErrorMessage(0, "Input data definition was not set", "File processing component");
 
-		return false;
+		return iproc::IProcessor::TS_INVALID;
 	}
 
 	if (!m_outputDataCompPtr.IsValid()){
 		SendErrorMessage(0, "Output data definition was not set", "File processing component");
 
-		return false;
+		return iproc::IProcessor::TS_INVALID;
 	}
 
 	if (!m_inputFileLoaderCompPtr->IsOperationSupported(
@@ -72,19 +67,19 @@ bool CFileConvertOverProcessorComp::ConvertFiles(
 					ifile::IFilePersistence::QF_LOAD | ifile::IFilePersistence::QF_FILE)){
 		SendErrorMessage(0, "File could not be loaded", "File processing component");
 		
-		return false;
+		return iproc::IProcessor::TS_INVALID;
 	}
 
 	if (m_inputFileLoaderCompPtr->LoadFromFile(*m_inputDataCompPtr.GetPtr(), inputPath) != ifile::IFilePersistence::OS_OK){
 		SendErrorMessage(0, "File could not be loaded", "File processing component");
 		
-		return false;
+		return iproc::IProcessor::TS_INVALID;
 	}
 
 	if (!m_processorCompPtr.IsValid()){
 		SendErrorMessage(0, "File processor not set", "File processing component");
 
-		return false;
+		return iproc::IProcessor::TS_INVALID;
 	}
 
 	const iprm::IParamsSet* processingParamsPtr = (paramsSetPtr != NULL) ? paramsSetPtr : m_processingParamsSetCompPtr.GetPtr();
@@ -98,7 +93,7 @@ bool CFileConvertOverProcessorComp::ConvertFiles(
 	if (processingResult != iproc::IProcessor::TS_OK){
 		SendErrorMessage(0, "File conversion failed", "File processing component");
 
-		return false;
+		return processingResult;
 	}
 
 	ifile::IFilePersistence* outputFileLoader = m_inputFileLoaderCompPtr.GetPtr();
@@ -108,7 +103,7 @@ bool CFileConvertOverProcessorComp::ConvertFiles(
 
 	Q_ASSERT(outputFileLoader != NULL);
 
-	return (outputFileLoader->SaveToFile(*m_outputDataCompPtr.GetPtr(), outputPath) == ifile::IFilePersistence::OS_OK);
+	return (outputFileLoader->SaveToFile(*m_outputDataCompPtr.GetPtr(), outputPath) == ifile::IFilePersistence::OS_OK) ? iproc::IProcessor::TS_OK : iproc::IProcessor::TS_INVALID;
 }
 
 

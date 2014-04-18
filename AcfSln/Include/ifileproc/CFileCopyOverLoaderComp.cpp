@@ -34,7 +34,7 @@ namespace ifileproc
 
 // reimplemented (ifileproc::IFileConversion)
 
-bool CFileCopyOverLoaderComp::ConvertFiles(
+int CFileCopyOverLoaderComp::ConvertFiles(
 			const QString& inputPath,
 			const QString& outputPath,
 			const iprm::IParamsSet* /*paramsSetPtr*/,
@@ -43,19 +43,19 @@ bool CFileCopyOverLoaderComp::ConvertFiles(
 	if (!m_inputLoaderCompPtr.IsValid()){
 		SendErrorMessage(0, "Input data loader is not defined", "FileCopyOverLoader");
 
-		return false;
+		return iproc::IProcessor::TS_INVALID;
 	}
 
 	if (!m_outputLoaderCompPtr.IsValid()){
 		SendErrorMessage(0, "Output data loader is not defined", "FileCopyOverLoader");
 
-		return false;
+		return iproc::IProcessor::TS_INVALID;
 	}
 
 	if (!m_objectCompPtr.IsValid()){
 		SendErrorMessage(0, "Data object for copy operaration is not set", "FileCopyOverLoader");
 
-		return false;
+		return iproc::IProcessor::TS_INVALID;
 	}
 
 	QString usedOutputPath = outputPath;
@@ -67,7 +67,7 @@ bool CFileCopyOverLoaderComp::ConvertFiles(
 		if (extensions.isEmpty()){
 			SendErrorMessage(0, "File extension list is empty", "FileCopyOverLoader");
 	
-			return false;
+			return iproc::IProcessor::TS_INVALID;
 		}
 
 		int pointPos = inputPath.lastIndexOf(".");
@@ -88,17 +88,17 @@ bool CFileCopyOverLoaderComp::ConvertFiles(
 	if (loadState != ifile::IFilePersistence::OS_OK){
 		SendErrorMessage(0, "Data could not be loaded", "FileCopyOverLoader");
 
-		return false;
+		return iproc::IProcessor::TS_INVALID;
 	}
 
 	int saveState = m_outputLoaderCompPtr->SaveToFile(*m_objectCompPtr, usedOutputPath);
 	if (saveState != ifile::IFilePersistence::OS_OK){
 		SendErrorMessage(0, "Data could not be saved", "FileCopyOverLoader");
 
-		return false;
+		return iproc::IProcessor::TS_INVALID;
 	}
 
-	return true;
+	return iproc::IProcessor::TS_OK;
 }
 
 

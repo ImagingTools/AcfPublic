@@ -750,6 +750,7 @@
     <name>IFileConversion.h</name>
     <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_i_file_conversion_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">ifileproc::IFileConversion</class>
     <namespace>ifileproc</namespace>
   </compound>
@@ -10691,10 +10692,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
+      <type>virtual int</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_composed_copy_files_comp.html</anchorfile>
-      <anchor>a2507a0ba5e2a59160613108c26cfdde8</anchor>
+      <anchor>ad5cec548b25e9fbb6cc44e6353f7f2fd</anchor>
       <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
   </compound>
@@ -10780,10 +10781,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
+      <type>virtual int</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_copy_files_tree_comp.html</anchorfile>
-      <anchor>ab4ff13886816209a03fb6c02ee00e68d</anchor>
+      <anchor>a4fb8ef10ecbbec5bd29d87fbe26ccdc0</anchor>
       <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected">
@@ -10821,10 +10822,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
+      <type>virtual int</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_external_file_converter_comp.html</anchorfile>
-      <anchor>a30668153fc7fc0702d95c00b3a376134</anchor>
+      <anchor>a6e2b61b35ce8c1327f8550ec8106061f</anchor>
       <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -10847,18 +10848,11 @@
       <anchor>a49552aaca4c72b8d6ba52b7a6df3bc57</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>CFileConvertOverProcessorComp</name>
-      <anchorfile>classifileproc_1_1_c_file_convert_over_processor_comp.html</anchorfile>
-      <anchor>a5e5b7e0cd41d6e60c34d314db3e34c1d</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
+      <type>virtual int</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_file_convert_over_processor_comp.html</anchorfile>
-      <anchor>aaaeda69048b01726157900c2fd6205ca</anchor>
+      <anchor>ab687a4d1c880d1cb6597eeeb3513875a</anchor>
       <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
   </compound>
@@ -10875,10 +10869,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
+      <type>virtual int</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_file_copy_over_loader_comp.html</anchorfile>
-      <anchor>a19d483692c0ba814671de2260fdbb7ec</anchor>
+      <anchor>a2c7ee1fd09286229cc5f9d94a34333d2</anchor>
       <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
   </compound>
@@ -10937,10 +10931,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
+      <type>virtual int</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_file_info_copy_comp.html</anchorfile>
-      <anchor>ada773d24b02f071624f4eb995d36d49d</anchor>
+      <anchor>a7c90db51faf8f142478fd44140230ece</anchor>
       <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected">
@@ -11245,10 +11239,10 @@
       <arglist>(m_outputSupplierSerializerCompPtr, m_outputSupplierCompPtr, true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
+      <type>virtual int</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_processing_results_review_comp.html</anchorfile>
-      <anchor>ae35f1b65c47df11fbbffef72dc8893c3</anchor>
+      <anchor>a6e962a5794f926744d2642acdb8b1e4a</anchor>
       <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -11337,10 +11331,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
+      <type>virtual int</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_selectable_file_converter_comp.html</anchorfile>
-      <anchor>a9a74591bd206b0259ca7bbe96fa482a1</anchor>
+      <anchor>aa1d85871a99c7f6a54903602bae52e78</anchor>
       <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -11433,10 +11427,10 @@
     <filename>classifileproc_1_1_i_file_conversion.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
+      <type>virtual int</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_i_file_conversion.html</anchorfile>
-      <anchor>a1105ade1a3adf6812f5eda22b256214e</anchor>
+      <anchor>acd185582d8341405ad2891be60f4ce1e</anchor>
       <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const =0</arglist>
     </member>
   </compound>

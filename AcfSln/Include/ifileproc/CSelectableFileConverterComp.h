@@ -58,7 +58,7 @@ public:
 	CSelectableFileConverterComp();
 
 	// reimplemented (ifileproc::IFileConversion)
-	virtual bool ConvertFiles(
+	virtual int ConvertFiles(
 				const QString& inputPath,
 				const QString& outputPath,
 				const iprm::IParamsSet* paramsPtr = NULL,
