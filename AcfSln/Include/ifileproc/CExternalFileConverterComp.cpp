@@ -169,7 +169,6 @@ void CExternalFileConverterComp::OnReadyReadStandardOutput()
 }
 
 
-
 } // namespace ifileproc
 
 
