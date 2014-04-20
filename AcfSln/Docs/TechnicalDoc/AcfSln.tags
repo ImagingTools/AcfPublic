@@ -12209,6 +12209,13 @@
       <arglist>(const QString &amp;directoryPath) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveSession</name>
+      <anchorfile>classihotf_1_1_c_monitoring_sessions_manager.html</anchorfile>
+      <anchor>a77c99e470cc96e18e9e0d8ae4d9ee490</anchor>
+      <arglist>(const QString &amp;directoryPath)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classihotf_1_1_c_monitoring_sessions_manager.html</anchorfile>
@@ -12565,7 +12572,7 @@
   <compound kind="class">
     <name>ihotf::IMonitoringSessionManager</name>
     <filename>classihotf_1_1_i_monitoring_session_manager.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>ResetSessions</name>
@@ -12579,6 +12586,13 @@
       <anchorfile>classihotf_1_1_i_monitoring_session_manager.html</anchorfile>
       <anchor>ac6f39fdad769ed38cce2931ae03c962c</anchor>
       <arglist>(const QString &amp;directoryPath) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>RemoveSession</name>
+      <anchorfile>classihotf_1_1_i_monitoring_session_manager.html</anchorfile>
+      <anchor>a9fd408d20027d7e45ac462858434ade6</anchor>
+      <arglist>(const QString &amp;directoryPath)=0</arglist>
     </member>
   </compound>
   <compound kind="namespace">

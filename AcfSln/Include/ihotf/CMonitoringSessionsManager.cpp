@@ -40,6 +40,8 @@ namespace ihotf
 
 void CMonitoringSessionsManager::ResetSessions()
 {
+	istd::CChangeNotifier changePtr(this);
+
 	m_monitorSessionsMap.clear();
 }
 
@@ -56,6 +58,14 @@ ihotf::IMonitoringSession* CMonitoringSessionsManager::GetSession(const QString&
 	m_monitorSessionsMap[directoryPath] = newSessionPtr;
 
 	return newSessionPtr;
+}
+
+
+void CMonitoringSessionsManager::RemoveSession(const QString& directoryPath)
+{
+	istd::CChangeNotifier changePtr(this);
+
+	m_monitorSessionsMap.remove(directoryPath);
 }
 
 

@@ -24,12 +24,11 @@
 #define ihotf_IMonitoringSessionManager_included
 
 
-// ACF includes
-#include "istd/IPolymorphic.h"
+// Qt includes
 #include <QtCore/QString>
 
-
-// ACF-Solutions includes
+// ACF includes
+#include "istd/IChangeable.h"
 #include "ihotf/IMonitoringSession.h"
 
 
@@ -41,7 +40,7 @@ namespace ihotf
 	Common interface for a monitoring session's manager.
 	Over this interface a directory monitor can get its monitoring session object for a given directory path.
 */
-class IMonitoringSessionManager: virtual public istd::IPolymorphic
+class IMonitoringSessionManager: virtual public istd::IChangeable
 {
 public:
 
@@ -54,6 +53,11 @@ public:
 		Get monitoring session for the given monitor and directory path.
 	*/
 	virtual ihotf::IMonitoringSession* GetSession(const QString& directoryPath) const = 0;
+
+	/**
+		Remove the monitoring session for a given directory path.
+	*/
+	virtual void RemoveSession(const QString& directoryPath) = 0;
 };
 
 
