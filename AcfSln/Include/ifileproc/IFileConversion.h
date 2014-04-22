@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef ifileproc_IFileConvertCopy_included
-#define ifileproc_IFileConvertCopy_included
+#ifndef ifileproc_IFileConversion_included
+#define ifileproc_IFileConversion_included
 
 
 // Qt includes
@@ -79,6 +79,6 @@ public:
 } // namespace ifileproc
 
 
-#endif // !ifileproc_IFileConvertCopy_included
+#endif // !ifileproc_IFileConversion_included
 
 

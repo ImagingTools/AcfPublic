@@ -12175,6 +12175,13 @@
       <arglist>(const FileItems &amp;fileList)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveFile</name>
+      <anchorfile>classihotf_1_1_c_monitoring_session.html</anchorfile>
+      <anchor>a1c5505fbf85ea3dc52a2bdbed360c8c0</anchor>
+      <arglist>(const QString &amp;filePath)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classihotf_1_1_c_monitoring_session.html</anchorfile>
@@ -12567,6 +12574,13 @@
       <anchorfile>classihotf_1_1_i_monitoring_session.html</anchorfile>
       <anchor>af5a67e59e7db4016ad58e7b792dd862f</anchor>
       <arglist>(const FileItems &amp;fileList)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>RemoveFile</name>
+      <anchorfile>classihotf_1_1_i_monitoring_session.html</anchorfile>
+      <anchor>ad3760f53f222affee75a92e1040c75e5</anchor>
+      <arglist>(const QString &amp;filePath)=0</arglist>
     </member>
   </compound>
   <compound kind="class">

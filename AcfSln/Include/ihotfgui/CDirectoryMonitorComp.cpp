@@ -60,7 +60,7 @@ bool CDirectoryMonitorComp::StartObserving(const iprm::IParamsSet* paramsSetPtr)
 	}
 
 	if ((paramsSetPtr == NULL) && (!m_paramsSetCompPtr.IsValid() || !m_paramsSetModelCompPtr.IsValid())){
-		SendInfoMessage(0, "Directory monitoring parameters are invalid or not set");
+		SendVerboseMessage("Directory monitoring parameters are invalid or not set");
 
 		return false;
 	}
@@ -76,7 +76,7 @@ bool CDirectoryMonitorComp::StartObserving(const iprm::IParamsSet* paramsSetPtr)
 		return true;
 	}
 
-	SendErrorMessage(0, "Directory monitoring parameters could not be set");
+	SendVerboseMessage("Directory monitoring parameters could not be set");
 
 	return false;
 }
@@ -172,7 +172,7 @@ void CDirectoryMonitorComp::run()
 						removedFiles.push_back(filePath);
 						fileIter = m_directoryFiles.erase(fileIter);
 
-						I_IF_DEBUG(SendInfoMessage(0, QObject::tr("File %1 was removed").arg(filePath)));
+						I_IF_DEBUG(SendVerboseMessage(QObject::tr("File %1 was removed").arg(filePath)));
 					}
 					else{
 						++fileIter;
@@ -227,7 +227,7 @@ void CDirectoryMonitorComp::run()
 
 						m_directoryFiles[currentFilePath] = QFileInfo(file).lastModified();
 
-						I_IF_DEBUG(SendInfoMessage(0, QObject::tr("File %1 was added").arg(currentFilePath)));
+						I_IF_DEBUG(SendVerboseMessage(QObject::tr("File %1 was added").arg(currentFilePath)));
 					}
 					else{
 						m_nonAccessedFiles.insert(currentFilePath);
@@ -257,7 +257,7 @@ void CDirectoryMonitorComp::run()
 
 						previousModifiedTime = currentModifiedTime;
 
-						I_IF_DEBUG(SendInfoMessage(0, QObject::tr("File % 1 was modified").arg(filePath)));
+						I_IF_DEBUG(SendVerboseMessage(QObject::tr("File % 1 was modified").arg(filePath)));
 					}
 				}
 /*
@@ -267,7 +267,7 @@ void CDirectoryMonitorComp::run()
 					if (currentPermissions != previousPermissions){
 						attributeChangedFiles.push_back(fileInfo.absoluteFilePath());
 
-						I_IF_DEBUG(SendInfoMessage(0, QString("Attributes of") + fileInfo.absoluteFilePath() + " have been changed"));
+						I_IF_DEBUG(SendVerboseMessage(QString("Attributes of") + fileInfo.absoluteFilePath() + " have been changed"));
 					}
 				}
 */
@@ -305,11 +305,11 @@ void CDirectoryMonitorComp::run()
 		I_IF_DEBUG(
 			double processingTime = measurementTimer.GetElapsed();
 
-			SendInfoMessage(0,
-				QString("Folder monitoring of ") +
-				m_currentDirectory.absolutePath() +
-				QString(": ") +
-				QString().setNum(processingTime) + " seconds");
+			SendVerboseMessage(
+						QString("Folder monitoring of ") +
+						m_currentDirectory.absolutePath() +
+						QString(": ") +
+						QString().setNum(processingTime) + " seconds");
 		)
 	}
 }
@@ -415,7 +415,7 @@ void CDirectoryMonitorComp::StartObserverThread()
 
 	QFileInfo fileInfo(m_currentDirectory.absolutePath());
 	if (fileInfo.exists()){
-		SendInfoMessage(0, QString("Start observing of: ") + m_currentDirectory.absolutePath(), "DirectoryMonitor");
+		SendVerboseMessage(QString("Start observing of: ") + m_currentDirectory.absolutePath(), "DirectoryMonitor");
 
 		BaseClass2::start(QThread::LowPriority);
 	}
