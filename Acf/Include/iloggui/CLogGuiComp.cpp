@@ -37,8 +37,8 @@
 #endif
 
 // ACF includes
-#include "iqtgui/CItemDelegate.h"
-#include "iqtgui/CWidgetUpdateBlocker.h"
+#include "iwidgets/CItemDelegate.h"
+#include "iwidgets/CWidgetUpdateBlocker.h"
 
 
 namespace iloggui
@@ -188,7 +188,7 @@ void CLogGuiComp::OnGuiCreated()
 
 	LogView->header()->setStretchLastSection(true);
 
-	iqtgui::CItemDelegate* itemDelegate = new iqtgui::CItemDelegate(20, this);
+	iwidgets::CItemDelegate* itemDelegate = new iwidgets::CItemDelegate(20, this);
 	LogView->setItemDelegate(itemDelegate);
 	LogView->header()->hide();
 
@@ -348,7 +348,7 @@ void CLogGuiComp::GenerateMessageList()
 
 void CLogGuiComp::AddMessageToList(const MessagePtr& messagePtr)
 {
-	iqtgui::CWidgetUpdateBlocker widgetUpdateBlocker(LogView);
+	iwidgets::CWidgetUpdateBlocker widgetUpdateBlocker(LogView);
 
 	Q_ASSERT(messagePtr.IsValid());
 
@@ -433,7 +433,7 @@ void CLogGuiComp::OnExportAction()
 
 void CLogGuiComp::OnRemoveMessagesTimer()
 {
-	iqtgui::CWidgetUpdateBlocker widgetUpdateBlocker(LogView);
+	iwidgets::CWidgetUpdateBlocker widgetUpdateBlocker(LogView);
 
 	if (m_maxMessagesCountAttrPtr.IsValid() && (*m_maxMessagesCountAttrPtr > 0)){
 		int count = LogView->topLevelItemCount();

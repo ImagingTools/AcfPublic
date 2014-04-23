@@ -38,7 +38,7 @@
 #include "istd/TChangeNotifier.h"
 #include "istd/CSystem.h"
 #include "iqt/CSignalBlocker.h"
-#include "iqtgui/CExtLineEdit.h"
+#include "iwidgets/CExtLineEdit.h"
 #include "ifilegui/CFileDialogLoaderComp.h"
 
 
@@ -140,7 +140,7 @@ void CFileNameParamGuiComp::OnGuiCreated()
 		}
 	}
 
-	iqtgui::CExtLineEdit* lineEdit = new iqtgui::CExtLineEdit(startHint, 2, DirEdit);
+	iwidgets::CExtLineEdit* lineEdit = new iwidgets::CExtLineEdit(startHint, 2, DirEdit);
 
 	// add "cd up" button:
 	if (!*m_readOnlyAttrPtr){
@@ -277,7 +277,7 @@ void CFileNameParamGuiComp::SetPathToEditor(const QString& path) const
 	int cursorPosition = DirEdit->lineEdit()->cursorPosition();
 
 	QString normalizedPath;
-	iqtgui::CExtLineEdit* lineEdit = dynamic_cast<iqtgui::CExtLineEdit*>(DirEdit->lineEdit());
+	iwidgets::CExtLineEdit* lineEdit = dynamic_cast<iwidgets::CExtLineEdit*>(DirEdit->lineEdit());
 	Q_ASSERT(lineEdit != NULL);
 
 	int pathType = objectPtr->GetPathType();
@@ -387,7 +387,7 @@ void CFileNameParamGuiComp::OnPathEdited(const QString& path) const
 
 QString CFileNameParamGuiComp::GetPathFromEditor() const
 {
-	iqtgui::CExtLineEdit* lineEdit = dynamic_cast<iqtgui::CExtLineEdit*>(DirEdit->lineEdit());
+	iwidgets::CExtLineEdit* lineEdit = dynamic_cast<iwidgets::CExtLineEdit*>(DirEdit->lineEdit());
 	if (lineEdit != NULL){
 		QString path = DirEdit->currentText();
 		if (path == lineEdit->GetStartupText()){
