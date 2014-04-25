@@ -69,6 +69,7 @@
 #include "iqtprm/COptionsListEditorGuiComp.h"
 #include "iqtprm/CCheckableOptionsEditorComp.h"
 #include "iqtprm/CExtComposedParamsSetGuiComp.h"
+#include "iqtprm/CExtParamsManagerGuiComp.h"
 
 // DocumentGuiPck
 #include "iqtdoc/CMainWindowGuiComp.h"
@@ -81,6 +82,7 @@
 #include "iqtdoc/CDocumentImportExportCommandComp.h"
 #include "iqtdoc/CExternalOpenDocumentCommandComp.h"
 
+// LogGuiPck
 #include "iloggui/CLogGuiComp.h"
 #include "iloggui/CTextLogGuiComp.h"
 #include "iloggui/CMessageBoxComp.h"
@@ -137,6 +139,7 @@ typedef iqtprm::CEnableableParamGuiComp EnableableParamGui;
 typedef iqtprm::CButtonBasedSelectionParamGuiComp ButtonBasedSelectionEditor;
 typedef iqtprm::CMultiParamsManagerGuiComp MultiParamsManagerGui;
 typedef iqtprm::CExtComposedParamsSetGuiComp ExtComposedParamsSetGui;
+typedef iqtprm::CExtParamsManagerGuiComp ExtParamsManagerGui;
 
 typedef iqtdoc::CMainWindowGuiComp MainWindowGui;
 typedef icomp::TModelCompWrap<iqtdoc::CSingleDocumentWorkspaceGuiComp> SingleDocWorkspaceGui;
