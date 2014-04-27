@@ -66,14 +66,6 @@ int CDialogGuiComp::ExecuteDialog(IGuiObject* parentPtr)
 }
 
 
-// reimplemented (ibase::ICommandsProvider)
-
-const ibase::IHierarchicalCommand* CDialogGuiComp::GetCommands() const
-{
-	return &m_rootCommand;
-}
-
-
 // protected methods
 
 iqtgui::CGuiComponentDialog* CDialogGuiComp::CreateComponentDialog(int buttons, IGuiObject* parentPtr) const
@@ -111,6 +103,30 @@ iqtgui::CGuiComponentDialog* CDialogGuiComp::CreateComponentDialog(int buttons, 
 }
 
 
+void CDialogGuiComp::OnRetranslate()
+{
+	istd::CChangeNotifier changePtr(&m_commandsProvider);
+
+	m_rootMenuCommand.SetName(*m_rootMenuNameAttrPtr);
+	m_dialogCommand.SetVisuals(*m_menuNameAttrPtr, *m_menuNameAttrPtr, *m_menuDescriptionAttrPtr);
+}
+
+
+// reimplemented (QObject)
+
+bool CDialogGuiComp::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
+{
+	Q_ASSERT(eventPtr != NULL);
+	Q_ASSERT(sourcePtr != NULL);
+
+	if ((eventPtr->type() == QEvent::LanguageChange) && (sourcePtr == qApp)){
+		OnRetranslate();
+	}
+
+	return BaseClass2::eventFilter(sourcePtr, eventPtr);
+}
+
+
 // reimplemented (icomp::CComponentBase)
 
 void CDialogGuiComp::OnComponentCreated()
@@ -124,6 +140,8 @@ void CDialogGuiComp::OnComponentCreated()
 	m_rootCommand.InsertChild(&m_rootMenuCommand);
 
 	connect(&m_dialogCommand, SIGNAL(triggered()), this, SLOT(OnCommandActivated()));
+
+	qApp->installEventFilter(this);
 }
 
 
@@ -132,6 +150,30 @@ void CDialogGuiComp::OnComponentCreated()
 void CDialogGuiComp::OnCommandActivated()
 {
 	ExecuteDialog(NULL);
+}
+
+
+// public methods of the embedded class CommandsProvider
+
+CDialogGuiComp::CommandsProvider::CommandsProvider()
+	:m_parentPtr(NULL)
+{
+}
+
+
+void CDialogGuiComp::CommandsProvider::SetParent(CDialogGuiComp* parentPtr)
+{
+	m_parentPtr = parentPtr;
+}
+
+
+// reimplemented (ibase::ICommandsProvider)
+
+const ibase::IHierarchicalCommand* CDialogGuiComp::CommandsProvider::GetCommands() const
+{
+	Q_ASSERT(m_parentPtr != NULL);
+
+	return &m_parentPtr->m_rootCommand;
 }
 
 

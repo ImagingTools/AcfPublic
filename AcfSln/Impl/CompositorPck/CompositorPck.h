@@ -54,7 +54,7 @@ namespace CompositorPck
 
 
 typedef icmpstr::CAttributeEditorComp AttributeEditor;
-typedef icmpstr::CPackageOverviewComp PackageOverview;
+typedef icomp::TModelCompWrap<icmpstr::CPackageOverviewComp> PackageOverview;
 typedef icmpstr::CRegistryLoaderComp RegistryLoader;
 typedef icmpstr::CRegistryPreviewComp RegistryPreview;
 typedef icmpstr::CComponentHelpFileProviderComp ComponentHelpFileProvider;
@@ -65,7 +65,7 @@ typedef icomp::TMakeComponentWrap<
 			istd::IChangeable,
 			imod::IModel,
 			icmpstr::IComponentNoteController> VisualRegistry;
-typedef icmpstr::CVisualRegistryEditorComp VisualRegistryScenographer;
+typedef icomp::TModelCompWrap<icmpstr::CVisualRegistryEditorComp> VisualRegistryScenographer;
 typedef icmpstr::CRegistryConsistInfoComp RegistryConsistInfo;
 typedef icmpstr::CRegistryPropEditorComp RegistryPropEditor;
 typedef icmpstr::CQuickHelpGuiComp QuickHelpGui;

@@ -8668,6 +8668,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnRetranslate</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>a9ec868140501d6e984c5e7c585b698c1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
       <anchor>a8205212eeb4d97087b2ac4b2d47686b4</anchor>

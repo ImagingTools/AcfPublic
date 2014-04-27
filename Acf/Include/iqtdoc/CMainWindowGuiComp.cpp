@@ -699,8 +699,6 @@ void CMainWindowGuiComp::OnGuiCreated()
 
 void CMainWindowGuiComp::OnRetranslate()
 {
-	BaseClass::OnRetranslate();
-
 	// Main commands
 	m_fileCommand.SetName(tr("&File"));
 	m_editCommand.SetName(tr("&Edit"));
@@ -717,6 +715,8 @@ void CMainWindowGuiComp::OnRetranslate()
 	// Tools commands
 	m_copyPathToClipboardCommand.SetVisuals(tr("&Copy Document Path"), tr("Copy Path"), tr("Copy current document path to system clipboard"));
 	m_openDocumentFolderCommand.SetVisuals(tr("&Open Containing Folder"), tr("Open Containing Folder"), tr("Open folder containing the current document"));
+
+	BaseClass::OnRetranslate();
 }
 
 
