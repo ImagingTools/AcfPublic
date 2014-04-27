@@ -11756,6 +11756,13 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
+      <name>RemoveStorageItem</name>
+      <anchorfile>classihotf_1_1_c_file_system_change_storage.html</anchorfile>
+      <anchor>a4c30742669bb664f9ddcf8d0a0f6f562</anchor>
+      <arglist>(int itemIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
       <name>ResetStorage</name>
       <anchorfile>classihotf_1_1_c_file_system_change_storage.html</anchorfile>
       <anchor>a08e4420303355c52698f9626dd8857e2</anchor>
@@ -12362,6 +12369,13 @@
       <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
       <anchor>aa54010e1bffdb791eec448fdf67a6475</anchor>
       <arglist>(const QString &amp;path, int itemFlags)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>RemoveStorageItem</name>
+      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>ae1dbdb828046a653ffea68f4e0901975</anchor>
+      <arglist>(int itemIndex)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
