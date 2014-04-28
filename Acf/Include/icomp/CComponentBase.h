@@ -94,6 +94,8 @@ protected:
 	static QByteArray GetComponentId(const icomp::IComponentContext* componentContextPtr, const QByteArray& contextId = QByteArray());
 
 private:
+	CComponentBase(const CComponentBase& /*component*/){}
+
 	const IComponentContext* m_contextPtr;
 	const ICompositeComponent* m_parentPtr;
 	bool m_isParentOwner;
