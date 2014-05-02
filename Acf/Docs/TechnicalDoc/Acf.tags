@@ -48206,6 +48206,13 @@
       <anchor>a21f47e8b415a99cfe6c901931b823203</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CDialogGuiComp</name>
+      <anchorfile>classiqtgui_1_1_c_dialog_gui_comp.html</anchorfile>
+      <anchor>ab72877ed5884daa2b3f7429b5fc62500</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>ExecuteDialog</name>
