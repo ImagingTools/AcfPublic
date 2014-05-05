@@ -65,21 +65,27 @@ public:
 				const QByteArray& documentTypeId,
 				bool createView = true,
 				const QByteArray& viewTypeId = "",
-				istd::IChangeable** newDocumentPtr = NULL);
+				istd::IChangeable** newDocumentPtr = NULL,
+				bool beQuiet = false,
+				bool* ignoredPtr = NULL);
 	virtual bool OpenDocument(
 				const QByteArray* documentTypeIdPtr,
 				const QString* fileNamePtr = NULL,
 				bool createView = true,
 				const QByteArray& viewTypeId = "",
 				istd::IChangeable** documentPtr = NULL,
-				FileToTypeMap* loadedMapPtr = NULL);
+				FileToTypeMap* loadedMapPtr = NULL,
+				bool beQuiet = false,
+				bool* ignoredPtr = NULL);
 	virtual bool SaveDocument(
 				int documentIndex = -1,
 				bool requestFileName = false,
-				FileToTypeMap* savedMapPtr = NULL);
+				FileToTypeMap* savedMapPtr = NULL,
+				bool beQuiet = false,
+				bool* ignoredPtr = NULL);
 	virtual bool SaveDirtyDocuments(bool beQuiet = false, bool* ignoredPtr = NULL);
-	virtual void CloseDocument(int documentIndex = -1, bool beQuiet = false, bool* ignoredPtr = NULL);
-	virtual void CloseCurrentView(bool beQuiet = false, bool* ignoredPtr = NULL);
+	virtual bool CloseDocument(int documentIndex = -1, bool beQuiet = false, bool* ignoredPtr = NULL);
+	virtual bool CloseCurrentView(bool beQuiet = false, bool* ignoredPtr = NULL);
 
 protected:
 	typedef istd::TDelPtr<istd::IChangeable> DocumentPtr;
@@ -131,7 +137,9 @@ protected:
 				const QString& filePath,
 				bool createView,
 				const QByteArray& viewTypeId,
-				QByteArray& documentTypeId);
+				QByteArray& documentTypeId,
+				bool beQuiet,
+				bool* ignoredPtr);
 
 	virtual void CloseAllDocuments();
 
@@ -167,7 +175,9 @@ protected:
 				const QByteArray& documentTypeId,
 				bool createView,
 				const QByteArray& viewTypeId,
-				bool initialize) const;
+				bool initialize,
+				bool beQuiet,
+				bool* ignoredPtr) const;
 
 	/**
 		Register (attach) created document as new working document.

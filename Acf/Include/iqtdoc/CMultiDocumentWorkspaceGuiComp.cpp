@@ -233,7 +233,9 @@ istd::IChangeable* CMultiDocumentWorkspaceGuiComp::OpenDocument(
 			const QString& filePath,
 			bool createView,
 			const QByteArray& viewTypeId,
-			QByteArray& documentTypeId)
+			QByteArray& documentTypeId,
+			bool beQuiet,
+			bool* ignoredPtr)
 {
 	bool allowViewRepeating = true;
 	if (m_allowViewRepeatingAttrPtr.IsValid()){
@@ -245,7 +247,7 @@ istd::IChangeable* CMultiDocumentWorkspaceGuiComp::OpenDocument(
 		createView = false;
 	}
 
-	return BaseClass::OpenDocument(filePath, createView, viewTypeId, documentTypeId);
+	return BaseClass::OpenDocument(filePath, createView, viewTypeId, documentTypeId, beQuiet, ignoredPtr);
 }
 
 
@@ -454,6 +456,7 @@ bool CMultiDocumentWorkspaceGuiComp::QueryDocumentSave(const SingleDocumentData&
 	QMessageBox::StandardButtons buttons = QMessageBox::Yes | QMessageBox::No;
 
 	if (ignoredPtr != NULL){
+		*ignoredPtr = false;
 		buttons |= QMessageBox::Cancel;
 	}
 

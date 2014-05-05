@@ -196,9 +196,11 @@ bool CMultiDocumentManagerBase::InsertNewDocument(
 			const QByteArray& documentTypeId,
 			bool createView,
 			const QByteArray& viewTypeId,
-			istd::IChangeable** newDocumentPtr)
+			istd::IChangeable** newDocumentPtr,
+			bool beQuiet,
+			bool* ignoredPtr)
 {
-	istd::TDelPtr<SingleDocumentData> newInfoPtr(CreateDocument(documentTypeId, createView, viewTypeId, true));
+	istd::TDelPtr<SingleDocumentData> newInfoPtr(CreateDocument(documentTypeId, createView, viewTypeId, true, beQuiet, ignoredPtr));
 	if (newInfoPtr.IsValid() && RegisterDocument(newInfoPtr.PopPtr())){
 		SingleDocumentData* newDocumentDataPtr = m_documentInfos.GetAt(m_documentInfos.GetCount() - 1);
 		Q_ASSERT(newDocumentDataPtr != NULL);
@@ -221,8 +223,14 @@ bool CMultiDocumentManagerBase::OpenDocument(
 			bool createView,
 			const QByteArray& viewTypeId,
 			istd::IChangeable** documentPtr,
-			FileToTypeMap* loadedMapPtr)
+			FileToTypeMap* loadedMapPtr,
+			bool beQuiet,
+			bool* ignoredPtr)
 {
+	if (ignoredPtr != NULL){
+		*ignoredPtr = false;
+	}
+
 	bool retVal = true;
 
 	QStringList files;
@@ -231,6 +239,10 @@ bool CMultiDocumentManagerBase::OpenDocument(
 		files.push_back(*fileNamePtr);
 	}
 	else{
+		if (beQuiet){
+			return false;
+		}
+
 		files = GetOpenFilePaths(documentTypeIdPtr);
 	}
 
@@ -240,7 +252,7 @@ bool CMultiDocumentManagerBase::OpenDocument(
 		const QString& fileName = *iter;
 
 		QByteArray documentTypeId;
-		istd::IChangeable* openDocumentPtr = OpenDocument(fileName, createView, viewTypeId, documentTypeId);
+		istd::IChangeable* openDocumentPtr = OpenDocument(fileName, createView, viewTypeId, documentTypeId, beQuiet, ignoredPtr);
 		if (openDocumentPtr != NULL){
 			if (loadedMapPtr != NULL){
 				loadedMapPtr->operator[](fileName) = documentTypeId;
@@ -248,6 +260,10 @@ bool CMultiDocumentManagerBase::OpenDocument(
 		}
 		else{
 			retVal = false;
+
+			if ((ignoredPtr != NULL) && *ignoredPtr){
+				break;
+			}
 		}
 
 		if (documentPtr != NULL){
@@ -262,8 +278,14 @@ bool CMultiDocumentManagerBase::OpenDocument(
 bool CMultiDocumentManagerBase::SaveDocument(
 			int documentIndex,
 			bool requestFileName,
-			FileToTypeMap* savedMapPtr)
+			FileToTypeMap* savedMapPtr,
+			bool beQuiet,
+			bool* ignoredPtr)
 {
+	if (ignoredPtr != NULL){
+		*ignoredPtr = false;
+	}
+
 	const IDocumentTemplate* documentTemplatePtr = GetDocumentTemplate();
 	if (documentTemplatePtr == NULL){
 		return false;
@@ -291,6 +313,10 @@ bool CMultiDocumentManagerBase::SaveDocument(
 	requestFileName  = requestFileName || filePath.isEmpty();
 
 	if (requestFileName){
+		if (beQuiet){
+			return false;
+		}
+
 		filePath = GetSaveFilePath(infoPtr->documentTypeId, filePath);
 		if (filePath.isEmpty()){
 			return true;
@@ -309,7 +335,12 @@ bool CMultiDocumentManagerBase::SaveDocument(
 	}
 
 	const ifile::IFilePersistence* loaderPtr = documentTemplatePtr->GetFileLoader(infoPtr->documentTypeId);
-	if ((loaderPtr != NULL) && loaderPtr->SaveToFile(*infoPtr->documentPtr, filePath) == ifile::IFilePersistence::OS_OK){
+	if (loaderPtr == NULL){
+		return false;
+	}
+
+	int saveState = loaderPtr->SaveToFile(*infoPtr->documentPtr, filePath);
+	if (saveState == ifile::IFilePersistence::OS_OK){
 		if ((infoPtr->filePath != filePath) || infoPtr->isDirty){
 			istd::CChangeNotifier notifierPtr(this);
 
@@ -327,6 +358,9 @@ bool CMultiDocumentManagerBase::SaveDocument(
 
 		return true;
 	}
+	else if ((saveState == ifile::IFilePersistence::OS_CANCELED) && (ignoredPtr != NULL)){
+		*ignoredPtr = true;
+	}
 
 	return false;
 }
@@ -334,6 +368,10 @@ bool CMultiDocumentManagerBase::SaveDocument(
 
 bool CMultiDocumentManagerBase::SaveDirtyDocuments(bool beQuiet, bool* ignoredPtr)
 {
+	if (ignoredPtr != NULL){
+		*ignoredPtr = false;
+	}
+
 	int documentsCount = m_documentInfos.GetCount();
 	for (int documentIndex = 0; documentIndex < documentsCount; ++documentIndex){
 		SingleDocumentData* infoPtr = m_documentInfos.GetAt(documentIndex);
@@ -347,16 +385,16 @@ bool CMultiDocumentManagerBase::SaveDirtyDocuments(bool beQuiet, bool* ignoredPt
 
 					SetActiveView(firstViewInfo.viewPtr.GetPtr());
 				}
+			}
 
-				if (QueryDocumentSave(*infoPtr, ignoredPtr)){
-					if (!SaveDocument(documentIndex, false) && (ignoredPtr != NULL)){
-						*ignoredPtr = true;	// Cannot save, set cancel
-					}
-				}
-
-				if ((ignoredPtr != NULL) && *ignoredPtr){
+			if (beQuiet || QueryDocumentSave(*infoPtr, ignoredPtr)){
+				if (!SaveDocument(documentIndex, false, NULL, beQuiet, ignoredPtr)){
 					return false;
 				}
+			}
+
+			if ((ignoredPtr != NULL) && *ignoredPtr){
+				return false;
 			}
 		}
 	}
@@ -365,7 +403,7 @@ bool CMultiDocumentManagerBase::SaveDirtyDocuments(bool beQuiet, bool* ignoredPt
 }
 
 
-void CMultiDocumentManagerBase::CloseDocument(int documentIndex, bool beQuiet, bool* ignoredPtr)
+bool CMultiDocumentManagerBase::CloseDocument(int documentIndex, bool beQuiet, bool* ignoredPtr)
 {
 	if (documentIndex < 0){
 		int documentsCount = m_documentInfos.GetCount();
@@ -399,16 +437,16 @@ void CMultiDocumentManagerBase::CloseDocument(int documentIndex, bool beQuiet, b
 
 				SetActiveView(firstViewInfo.viewPtr.GetPtr());
 			}
+		}
 
-			if (QueryDocumentSave(*infoPtr, ignoredPtr)){
-				if (!SaveDocument(documentIndex, false) && (ignoredPtr != NULL)){
-					*ignoredPtr = true;	// Cannot save, set cancel
-				}
+		if (beQuiet || QueryDocumentSave(*infoPtr, ignoredPtr)){
+			if (!SaveDocument(documentIndex, false, NULL, beQuiet, ignoredPtr)){
+				return false;
 			}
+		}
 
-			if ((ignoredPtr != NULL) && *ignoredPtr){
-				return;
-			}
+		if ((ignoredPtr != NULL) && *ignoredPtr){
+			return false;
 		}
 	}
 
@@ -437,11 +475,17 @@ void CMultiDocumentManagerBase::CloseDocument(int documentIndex, bool beQuiet, b
 	istd::CChangeNotifier notifier(this, changeFlags);
 
 	m_documentInfos.RemoveAt(documentIndex);
+
+	return true;
 }
 
 
-void CMultiDocumentManagerBase::CloseCurrentView(bool beQuiet, bool* ignoredPtr)
+bool CMultiDocumentManagerBase::CloseCurrentView(bool beQuiet, bool* ignoredPtr)
 {
+	if (ignoredPtr != NULL){
+		*ignoredPtr = false;
+	}
+
 	int documentsCount = m_documentInfos.GetCount();
 	for (int documentIndex = 0; documentIndex < documentsCount; ++documentIndex){
 		SingleDocumentData* infoPtr = m_documentInfos.GetAt(documentIndex);
@@ -455,11 +499,7 @@ void CMultiDocumentManagerBase::CloseCurrentView(bool beQuiet, bool* ignoredPtr)
 
 			if (viewInfo.viewPtr == m_activeViewPtr){
 				if (infoPtr->views.size() == 1){	// is it the last view? If yes then simple close document
-					CloseDocument(documentIndex, beQuiet, ignoredPtr);
-
-					if ((ignoredPtr != NULL) && *ignoredPtr){	// Is close operation canceled?
-						return;
-					}
+					return CloseDocument(documentIndex, beQuiet, ignoredPtr);
 				}
 				else{
 					OnViewRemoved(viewInfo.viewPtr.GetPtr());
@@ -469,10 +509,12 @@ void CMultiDocumentManagerBase::CloseCurrentView(bool beQuiet, bool* ignoredPtr)
 					m_activeViewPtr = NULL;
 				}
 
-				return;
+				return true;
 			}
 		}
 	}
+
+	return false;
 }
 
 
@@ -492,8 +534,14 @@ istd::IChangeable* CMultiDocumentManagerBase::OpenDocument(
 			const QString& filePath,
 			bool createView,
 			const QByteArray& viewTypeId,
-			QByteArray& documentTypeId)
+			QByteArray& documentTypeId,
+			bool beQuiet,
+			bool* ignoredPtr)
 {
+	if (ignoredPtr != NULL){
+		*ignoredPtr = false;
+	}
+
 	const IDocumentTemplate* documentTemplatePtr = GetDocumentTemplate();
 	if (filePath.isEmpty() || (documentTemplatePtr == NULL)){
 		return NULL;
@@ -537,7 +585,7 @@ istd::IChangeable* CMultiDocumentManagerBase::OpenDocument(
 
 	if (!documentIds.isEmpty()){
 		documentTypeId = documentIds.front();
-		istd::TDelPtr<SingleDocumentData> infoPtr(CreateDocument(documentTypeId, createView, viewTypeId, false));
+		istd::TDelPtr<SingleDocumentData> infoPtr(CreateDocument(documentTypeId, createView, viewTypeId, false, beQuiet, ignoredPtr));
 		if (infoPtr.IsValid()){
 			Q_ASSERT(infoPtr->documentPtr.IsValid());
 
@@ -545,6 +593,7 @@ istd::IChangeable* CMultiDocumentManagerBase::OpenDocument(
 			infoPtr->documentTypeId = documentTypeId;
 
 			istd::CChangeNotifier notifier(this, CF_DOCUMENT_COUNT_CHANGED | CF_DOCUMENT_CREATED | CF_MODEL);
+			Q_UNUSED(notifier);
 			istd::CChangeNotifier documentNotifier(infoPtr->documentPtr.GetPtr(), istd::IChangeable::CF_NO_UNDO);
 
 			ifile::IFilePersistence* loaderPtr = documentTemplatePtr->GetFileLoader(documentTypeId);
@@ -656,13 +705,19 @@ CMultiDocumentManagerBase::SingleDocumentData* CMultiDocumentManagerBase::Create
 			const QByteArray& documentTypeId,
 			bool createView,
 			const QByteArray& viewTypeId,
-			bool initialize) const
+			bool initialize,
+			bool beQuiet,
+			bool* ignoredPtr) const
 {
+	if (ignoredPtr != NULL){
+		*ignoredPtr = false;
+	}
+
 	const IDocumentTemplate* documentTemplatePtr = GetDocumentTemplate();
 	if (documentTemplatePtr != NULL){
 		QByteArray realDocumentTypeId = documentTypeId;
 
-		istd::IChangeable* documentPtr = documentTemplatePtr->CreateDocument(realDocumentTypeId, initialize);
+		istd::IChangeable* documentPtr = documentTemplatePtr->CreateDocument(realDocumentTypeId, initialize, beQuiet, ignoredPtr);
 
 		istd::TDelPtr<SingleDocumentData> infoPtr(new SingleDocumentData(
 					const_cast<CMultiDocumentManagerBase*>(this),
@@ -797,7 +852,7 @@ bool CMultiDocumentManagerBase::SerializeOpenDocumentList(iser::IArchive& archiv
 			retVal = retVal && archive.Process(documentTypeId);
 			retVal = retVal && archive.EndTag(documentTypeIdTag);
 
-			istd::IChangeable* openDocumentPtr = OpenDocument(filePath, false, "", documentTypeId);
+			istd::IChangeable* openDocumentPtr = OpenDocument(filePath, false, "", documentTypeId, true, NULL);
 			if (openDocumentPtr == NULL){
 				return false;
 			}

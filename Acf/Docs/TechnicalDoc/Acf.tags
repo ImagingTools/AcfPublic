@@ -24980,8 +24980,8 @@
       <type>virtual istd::IChangeable *</type>
       <name>CreateDocument</name>
       <anchorfile>classidoc_1_1_c_composite_document_template_comp.html</anchorfile>
-      <anchor>a68ed7a0910636fbba7cfb431f97bb6d9</anchor>
-      <arglist>(QByteArray &amp;documentTypeId, bool initialize=true) const </arglist>
+      <anchor>a2ac956d8d3fbfe1b629fb6351ff1c670</anchor>
+      <arglist>(QByteArray &amp;documentTypeId, bool initialize=true, bool beQuiet=false, bool *ignoredFlagPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IPolymorphic *</type>
@@ -25092,22 +25092,22 @@
       <type>virtual bool</type>
       <name>InsertNewDocument</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>a6db6d6371496c0b43a10c86e17c0d098</anchor>
-      <arglist>(const QByteArray &amp;documentTypeId, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **newDocumentPtr=NULL)</arglist>
+      <anchor>a7ad9ebe4832b049f275a1a6d25f27a95</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **newDocumentPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OpenDocument</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>a5eff449f3902852670821bd96af2a081</anchor>
-      <arglist>(const QByteArray *documentTypeIdPtr, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **documentPtr=NULL, FileToTypeMap *loadedMapPtr=NULL)</arglist>
+      <anchor>af00b72a50b8496a3fd65016ce57c2fb3</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **documentPtr=NULL, FileToTypeMap *loadedMapPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SaveDocument</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>af5df7dde1eb42813d5867ce5a96e1e82</anchor>
-      <arglist>(int documentIndex=-1, bool requestFileName=false, FileToTypeMap *savedMapPtr=NULL)</arglist>
+      <anchor>ac5a4445ba49c7d73bdd0399ae8ae37ab</anchor>
+      <arglist>(int documentIndex=-1, bool requestFileName=false, FileToTypeMap *savedMapPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -25117,17 +25117,17 @@
       <arglist>(bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>CloseDocument</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>a400888ac32c068ce273bce95b4e1fd08</anchor>
+      <anchor>ad13aca6c026ffb7e2ce47f4d331e31ca</anchor>
       <arglist>(int documentIndex=-1, bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>CloseCurrentView</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>aa9c6064f3034c7fcc110335be7a77148</anchor>
+      <anchor>af0f00b1768f02aa3fe911db05840dfc0</anchor>
       <arglist>(bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
     </member>
     <member kind="function">
@@ -25225,8 +25225,8 @@
       <type>virtual istd::IChangeable *</type>
       <name>OpenDocument</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>a40ab2ca8dab4bd7a2dd1939a97eac17b</anchor>
-      <arglist>(const QString &amp;filePath, bool createView, const QByteArray &amp;viewTypeId, QByteArray &amp;documentTypeId)</arglist>
+      <anchor>af0cbf6f390f1a4308fa482d7dbcf17b0</anchor>
+      <arglist>(const QString &amp;filePath, bool createView, const QByteArray &amp;viewTypeId, QByteArray &amp;documentTypeId, bool beQuiet, bool *ignoredPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -25274,8 +25274,8 @@
       <type>virtual SingleDocumentData *</type>
       <name>CreateDocument</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>ad9db425f24eab0e116bfe32d09320cfb</anchor>
-      <arglist>(const QByteArray &amp;documentTypeId, bool createView, const QByteArray &amp;viewTypeId, bool initialize) const </arglist>
+      <anchor>a559c80d698a40c3237ec9b68df40c458</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, bool createView, const QByteArray &amp;viewTypeId, bool initialize, bool beQuiet, bool *ignoredPtr) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -25960,22 +25960,22 @@
       <type>virtual bool</type>
       <name>InsertNewDocument</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>ac002abd457ff05fdc83c8afae3902cae</anchor>
-      <arglist>(const QByteArray &amp;documentTypeId, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **newDocumentPtr=NULL)</arglist>
+      <anchor>a713aed3d91317a5b9eff2b25a5bfad51</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **newDocumentPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OpenDocument</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>a6af23f61a992bfccda507956f08e123a</anchor>
-      <arglist>(const QByteArray *documentTypeIdPtr, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **documentPtr=NULL, FileToTypeMap *loadedMapPtr=NULL)</arglist>
+      <anchor>abbb1df12e3a0b756079aa9a20d45ee71</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **documentPtr=NULL, FileToTypeMap *loadedMapPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SaveDocument</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>aa69fc1a688f70a4418a053a450d3f3dc</anchor>
-      <arglist>(int documentIndex=-1, bool requestFileName=false, FileToTypeMap *savedMapPtr=NULL)</arglist>
+      <anchor>a1608b4568230e118a495787fcb31820e</anchor>
+      <arglist>(int documentIndex=-1, bool requestFileName=false, FileToTypeMap *savedMapPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -25985,32 +25985,32 @@
       <arglist>(bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>CloseDocument</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>af8296b88f9a5fe6f1f4183ed2b6a5862</anchor>
+      <anchor>a91772d919fa26f01f37990add1a10612</anchor>
       <arglist>(int documentIndex=-1, bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>CloseCurrentView</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>aa09de6aebaba063b4182e5fbc7891d0b</anchor>
+      <anchor>ab202a72a51d63928d27da1957ba4f32d</anchor>
       <arglist>(bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>OpenDocument</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>a9a59002019b6ee89d2cb70be3e28d6c5</anchor>
-      <arglist>(const QString &amp;filePath, bool createView, const QByteArray &amp;viewTypeId, QByteArray &amp;documentTypeId)</arglist>
+      <anchor>aea188ff34979422a64a8bffded70b621</anchor>
+      <arglist>(const QString &amp;filePath, bool createView, const QByteArray &amp;viewTypeId, QByteArray &amp;documentTypeId, bool beQuiet, bool *ignoredPtr)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>NewDocument</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>a22d5223f8d6121caee5f500567a11f3f</anchor>
-      <arglist>(const QByteArray &amp;documentTypeId, bool createView, const QByteArray &amp;viewTypeId, bool initialize)</arglist>
+      <anchor>a55956d843060df89f514a839e5d85c66</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, bool createView, const QByteArray &amp;viewTypeId, bool initialize, bool beQuiet, bool *ignoredPtr)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -26203,8 +26203,8 @@
       <type>virtual istd::IChangeable *</type>
       <name>CreateDocument</name>
       <anchorfile>classidoc_1_1_i_document_template.html</anchorfile>
-      <anchor>a921733381cdeeec8427686c850d041ad</anchor>
-      <arglist>(QByteArray &amp;documentTypeId, bool initialize=true) const =0</arglist>
+      <anchor>adb454cbb6de07a54259eb122541048ed</anchor>
+      <arglist>(QByteArray &amp;documentTypeId, bool initialize=true, bool beQuiet=false, bool *ignoredFlagPtr=NULL) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::IPolymorphic *</type>
@@ -26265,8 +26265,8 @@
       <type>virtual istd::IChangeable *</type>
       <name>CreateDocument</name>
       <anchorfile>classidoc_1_1_c_single_document_template_comp.html</anchorfile>
-      <anchor>ab43286be03076dfe9f6346593a366bb5</anchor>
-      <arglist>(QByteArray &amp;documentTypeId, bool initialize=true) const </arglist>
+      <anchor>ad00f122d24be77892d26bae804befb25</anchor>
+      <arglist>(QByteArray &amp;documentTypeId, bool initialize=true, bool beQuiet=false, bool *ignoredFlagPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IPolymorphic *</type>
@@ -26729,22 +26729,22 @@
       <type>virtual bool</type>
       <name>InsertNewDocument</name>
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a23d616bc99dd8d37aae275cebbcdc4d3</anchor>
-      <arglist>(const QByteArray &amp;documentTypeId, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **newDocumentPtr=NULL)=0</arglist>
+      <anchor>a141044520f3c5f28d488ab1fd42aa098</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **newDocumentPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>OpenDocument</name>
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>ae41bc6c65bdd3acc9fd835a8bb189c41</anchor>
-      <arglist>(const QByteArray *documentTypeIdPtr=NULL, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **documentPtr=NULL, FileToTypeMap *loadedMapPtr=NULL)=0</arglist>
+      <anchor>a52cb7b7a949a15e282b60ff1be1fa7c0</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr=NULL, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **documentPtr=NULL, FileToTypeMap *loadedMapPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>SaveDocument</name>
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>afff6a0ce9d63789e8dfb95dbb8fb2fdc</anchor>
-      <arglist>(int documentIndex=-1, bool requestFileName=false, FileToTypeMap *savedMapPtr=NULL)=0</arglist>
+      <anchor>a55293b6c42d7dfbbb3380f2094755bd1</anchor>
+      <arglist>(int documentIndex=-1, bool requestFileName=false, FileToTypeMap *savedMapPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -26754,17 +26754,17 @@
       <arglist>(bool beQuiet=false, bool *ignoredPtr=NULL)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>CloseDocument</name>
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>aecdcf733c25c32c92f20b42b73754e72</anchor>
+      <anchor>a87ce8c6be24772f5145669e3f88f9e3b</anchor>
       <arglist>(int documentIndex=-1, bool beQuiet=false, bool *ignoredPtr=NULL)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>CloseCurrentView</name>
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a0c25044c53ff043006b7395089fd6d57</anchor>
+      <anchor>ac54d1c814b482784727fde4dde55c79c</anchor>
       <arglist>(bool beQuiet=false, bool *ignoredPtr=NULL)=0</arglist>
     </member>
   </compound>
@@ -47014,8 +47014,8 @@
       <type>virtual istd::IChangeable *</type>
       <name>OpenDocument</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>ac61bdc23e3d416bb7cbcadb2c9fd92cf</anchor>
-      <arglist>(const QString &amp;filePath, bool createView, const QByteArray &amp;viewTypeId, QByteArray &amp;documentTypeId)</arglist>
+      <anchor>a23a493a3757c5e8dc47710729d25ef2c</anchor>
+      <arglist>(const QString &amp;filePath, bool createView, const QByteArray &amp;viewTypeId, QByteArray &amp;documentTypeId, bool beQuiet, bool *ignoredPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
