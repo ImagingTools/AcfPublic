@@ -67,7 +67,7 @@ bool CVarIndex::IsZero() const
 		}
 	}
 
-	return true;
+	return m_elements.isEmpty();
 }
 
 
@@ -79,7 +79,7 @@ bool CVarIndex::IsSizeEmpty() const
 		}
 	}
 
-	return false;
+	return m_elements.isEmpty();
 }
 
 
