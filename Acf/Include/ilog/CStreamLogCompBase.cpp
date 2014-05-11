@@ -96,7 +96,7 @@ void CStreamLogCompBase::WriteMessageToStream(const istd::IInformationProvider& 
 {
 	QString messageText = GenerateMessageText(message);
 	
-	WriteText(messageText + "/n", message.GetInformationCategory());
+	WriteText(messageText + "\n", message.GetInformationCategory());
 }
 
 
