@@ -43732,8 +43732,8 @@
       <type>virtual void</type>
       <name>Init</name>
       <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
-      <anchor>a0dc8d1cfd6a5a48ec467fae5cfc26a87</anchor>
-      <arglist>(bool hasStatusLabel, bool hasStatusBackground)</arglist>
+      <anchor>aa7d45833f3d7d6c34e55d48bef29ce2d</anchor>
+      <arglist>(bool hasStatusLabel, bool hasStatusBackground, bool useVerticalLayout)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>

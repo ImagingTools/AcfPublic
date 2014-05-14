@@ -74,8 +74,6 @@ protected:
 
 private Q_SLOTS:
 	void UpdateFilePreview();
-
-private:
 	void UpdateObjectFromFile();
 
 private:
