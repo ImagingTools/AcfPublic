@@ -123,6 +123,11 @@ protected:
 	*/
 	virtual void CreatePages();
 
+	/**
+		Clear all container pages.
+	*/
+	virtual void ResetPages();
+
 	// reimplemented (iqtgui::CGuiComponentBase)
 	virtual QWidget* InitWidgetToParent(QWidget* parentPtr);
 

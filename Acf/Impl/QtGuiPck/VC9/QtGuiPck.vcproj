@@ -122,7 +122,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="qtmaind.lib QtCored4.lib QtGuid4.lib"
+				AdditionalDependencies="qtmaind.lib QtCored4.lib QtGuid4.lib "
 				OutputFile="$(OutDir)\$(ProjectName).arp"
 				AdditionalLibraryDirectories=""
 				GenerateDebugInformation="true"
