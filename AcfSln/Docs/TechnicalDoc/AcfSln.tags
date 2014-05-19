@@ -4154,6 +4154,13 @@
       <anchor>abbfdc8f28f1a4d4b4494193d183b49e6a3716eb5f2abf9b6cc8dc4e02786903d5</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_INTERMEDIATE</name>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>abbfdc8f28f1a4d4b4494193d183b49e6a530ec8696df2f3436bbb3c819390661f</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -13530,6 +13537,13 @@
       <anchor>a3e985c30cb550692ee98a936a2db3b15a9c33ede4146cbac207d291410f040d94</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_LOCAL</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a3e985c30cb550692ee98a936a2db3b15aba4e36ee85984aecd07752d52c3e455c</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -14903,20 +14917,6 @@
     <base>TSyncProcessorWrap&lt; IImageToFeatureProcessor &gt;</base>
     <class kind="struct">iipr::CCircleFindProcessorComp::Point</class>
     <class kind="struct">iipr::CCircleFindProcessorComp::Ray</class>
-    <member kind="enumeration">
-      <type></type>
-      <name>MessageId</name>
-      <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>a78fa0804a118fd14132fe69a4cfc2a3f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_INTERMEDIATE</name>
-      <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>a78fa0804a118fd14132fe69a4cfc2a3fa83534702da49b48ce78e46071f692efb</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
