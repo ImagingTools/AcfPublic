@@ -4454,12 +4454,15 @@
     <filename>_c_simple_main_window_gui_comp_8h</filename>
     <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_i_options_manager_8h" name="IOptionsManager.h" local="yes" imported="no">iprm/IOptionsManager.h</includes>
     <includes id="_i_main_window_component_8h" name="IMainWindowComponent.h" local="yes" imported="no">iqtgui/IMainWindowComponent.h</includes>
     <includes id="_i_dialog_8h" name="IDialog.h" local="yes" imported="no">iqtgui/IDialog.h</includes>
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <includes id="_t_restorable_gui_wrap_8h" name="TRestorableGuiWrap.h" local="yes" imported="no">iqtgui/TRestorableGuiWrap.h</includes>
     <includes id="_c_command_tools_8h" name="CCommandTools.h" local="yes" imported="no">iqtgui/CCommandTools.h</includes>
+    <class kind="class">iqtgui::CSimpleMainWindowGuiCompBase</class>
     <class kind="class">iqtgui::CSimpleMainWindowGuiComp</class>
+    <class kind="class">iqtgui::CSimpleMainWindowGuiComp::CommandsObserver</class>
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
@@ -46354,10 +46357,17 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QMainWindow &gt; &gt;</type>
+      <type>CSimpleMainWindowGuiCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
-      <anchor>a3ab0ae18afcd5903bd6ed541d4ae6bcd</anchor>
+      <anchor>a0051fc2dab146ee071a330f44e57383c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iqtgui::TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QMainWindow &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp_base.html</anchorfile>
+      <anchor>aee199361f0a509b2d69ef0d5eb2da6ca</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -47606,6 +47616,7 @@
     <class kind="class">iqtgui::CMultiPageGuiCompBase</class>
     <class kind="class">iqtgui::CProgressManagerGuiComp</class>
     <class kind="class">iqtgui::CSelectableCommandsProviderComp</class>
+    <class kind="class">iqtgui::CSimpleMainWindowGuiCompBase</class>
     <class kind="class">iqtgui::CSimpleMainWindowGuiComp</class>
     <class kind="class">iqtgui::CSplashScreenGuiComp</class>
     <class kind="class">iqtgui::CStatusBarWidgetComp</class>
@@ -49403,9 +49414,29 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqtgui::CSimpleMainWindowGuiCompBase</name>
+    <filename>classiqtgui_1_1_c_simple_main_window_gui_comp_base.html</filename>
+    <base>TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QMainWindow &gt; &gt;</base>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>OnRestoreSettings</name>
+      <anchorfile>classiqtgui_1_1_t_restorable_gui_wrap.html</anchorfile>
+      <anchor>a8d9133ac255ebcd27bf7d34e2f080250</anchor>
+      <arglist>(const QSettings &amp;settings)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>OnSaveSettings</name>
+      <anchorfile>classiqtgui_1_1_t_restorable_gui_wrap.html</anchorfile>
+      <anchor>af2c77312dacc51064f1a99946c01338d</anchor>
+      <arglist>(QSettings &amp;settings) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iqtgui::CSimpleMainWindowGuiComp</name>
     <filename>classiqtgui_1_1_c_simple_main_window_gui_comp.html</filename>
-    <base>TRestorableGuiWrap&lt; iqtgui::TGuiComponentBase&lt; QMainWindow &gt; &gt;</base>
+    <base>iqtgui::CSimpleMainWindowGuiCompBase</base>
+    <class kind="class">iqtgui::CSimpleMainWindowGuiComp::CommandsObserver</class>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateFixedCommands</name>
@@ -49447,6 +49478,32 @@
       <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
       <anchor>a5b5eb20b30b78dad0eb25d0391e0c7d0</anchor>
       <arglist>(QObject *sourcePtr, QEvent *eventPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CSimpleMainWindowGuiComp::CommandsObserver</name>
+    <filename>classiqtgui_1_1_c_simple_main_window_gui_comp_1_1_commands_observer.html</filename>
+    <base>imod::CMultiModelDispatcherBase</base>
+    <member kind="typedef">
+      <type>imod::CMultiModelDispatcherBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp_1_1_commands_observer.html</anchorfile>
+      <anchor>a790637ebabe541fc51e961b373d426d3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CommandsObserver</name>
+      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp_1_1_commands_observer.html</anchorfile>
+      <anchor>a95d4f3f3c72b2effe4bc4cb22ad267da</anchor>
+      <arglist>(CSimpleMainWindowGuiComp &amp;parent)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp_1_1_commands_observer.html</anchorfile>
+      <anchor>a9a4b45946dc215b6f333094d0f6d9b30</anchor>
+      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
