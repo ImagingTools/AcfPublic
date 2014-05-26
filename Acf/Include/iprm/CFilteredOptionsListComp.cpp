@@ -1,0 +1,153 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2014 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
+#include "iprm/CFilteredOptionsListComp.h"
+
+
+namespace iprm
+{
+
+
+// reimplemented (iprm::IOptionsList)
+
+int CFilteredOptionsListComp::GetOptionsFlags() const
+{
+	if (!m_inputOptionsCompPtr.IsValid()){
+		return m_inputOptionsCompPtr->GetOptionsFlags();
+	}
+
+	return SCF_NONE;
+}
+
+
+int CFilteredOptionsListComp::GetOptionsCount() const
+{
+	return m_options.count();
+}
+
+
+QString CFilteredOptionsListComp::GetOptionName(int index) const
+{
+	Q_ASSERT(m_options.count() > index);
+	Q_ASSERT(index >= 0);
+
+	return m_options[index].name;
+}
+
+
+QString CFilteredOptionsListComp::GetOptionDescription(int index) const
+{
+	Q_ASSERT(index >= 0);
+
+	if (index < m_options.count()){
+		return m_options[index].description;
+	}
+
+	return QString();
+}
+
+
+QByteArray CFilteredOptionsListComp::GetOptionId(int index) const
+{
+	Q_ASSERT(index >= 0);
+
+	if (index < m_options.count()){
+		return m_options[index].id;
+	}
+
+	return QByteArray();
+}
+
+
+bool CFilteredOptionsListComp::IsOptionEnabled(int index) const
+{
+	Q_ASSERT(index >= 0);
+
+	if (index < m_options.count()){
+		return m_options[index].isEnabled;
+	}
+
+	return false;
+}
+
+
+// reimplemented (icomp::CComponentBase)
+
+void CFilteredOptionsListComp::OnComponentCreated()
+{
+	BaseClass::OnComponentCreated();
+
+	UpdateOptions();
+}
+
+
+// private methods
+
+void CFilteredOptionsListComp::UpdateOptions()
+{
+	if (!m_inputOptionsCompPtr.IsValid()){
+		return;
+	}
+
+	istd::CChangeNotifier changePtr(this, CF_MODEL | CF_OPTIONS_CHANGED);
+
+	m_options.clear();
+
+	for (int i = 0; i < m_includeIdsAttrPtr.GetCount(); ++i){
+		QByteArray id = m_includeIdsAttrPtr[i];
+
+		int index = GetOptionById(*m_inputOptionsCompPtr.GetPtr(), id);
+		if (index >= 0){
+			Option option;
+
+			option.id = id;
+			option.name = m_inputOptionsCompPtr->GetOptionName(i);
+			option.description = m_inputOptionsCompPtr->GetOptionDescription(i);
+			option.isEnabled = m_inputOptionsCompPtr->IsOptionEnabled(i);
+
+			m_options.push_back(option);
+		}
+	}
+}
+
+
+// private static methods
+	
+int CFilteredOptionsListComp::GetOptionById(const iprm::IOptionsList& options, const QByteArray& optionId)
+{
+	int optionsCount = options.GetOptionsCount();
+
+	for (int optionIndex = 0; optionIndex < optionsCount; optionIndex++){
+		QByteArray id = options.GetOptionId(optionIndex);
+
+		if (optionId == id){
+			return optionIndex;
+		}
+	}
+
+	return -1;
+}
+
+
+} // namespace iprm
+
+
