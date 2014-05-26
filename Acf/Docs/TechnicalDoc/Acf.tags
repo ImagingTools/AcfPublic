@@ -2219,6 +2219,16 @@
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
+    <name>IFileSystemInfoProvider.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_i_file_system_info_provider_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
+    <includes id="_c_system_8h" name="CSystem.h" local="yes" imported="no">istd/CSystem.h</includes>
+    <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
+    <class kind="class">ifile::IFileSystemInfoProvider</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
     <name>IFileTypeInfo.h</name>
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_i_file_type_info_8h</filename>
@@ -5250,6 +5260,7 @@
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_c_system_8h</filename>
     <class kind="class">istd::CSystem</class>
+    <class kind="struct">istd::CSystem::FileDriveInfo</class>
     <namespace>istd</namespace>
   </compound>
   <compound kind="file">
@@ -27347,6 +27358,7 @@
     <class kind="class">ifile::IFileNameParam</class>
     <class kind="class">ifile::IFilePersistence</class>
     <class kind="class">ifile::IFilePersistenceInfo</class>
+    <class kind="class">ifile::IFileSystemInfoProvider</class>
     <class kind="class">ifile::IFileTypeInfo</class>
     <class kind="class">ifile::TFileSerializerComp</class>
   </compound>
@@ -29623,6 +29635,25 @@
       <anchorfile>classifile_1_1_i_file_persistence_info.html</anchorfile>
       <anchor>a2f86e9b5a4f767d18bb4246636e7222d</anchor>
       <arglist>(OperationType operationType=OT_UNKNOWN, PathType pathType=PT_COMPLETE) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::IFileSystemInfoProvider</name>
+    <filename>classifile_1_1_i_file_system_info_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const iprm::IOptionsList &amp;</type>
+      <name>GetDriveList</name>
+      <anchorfile>classifile_1_1_i_file_system_info_provider.html</anchorfile>
+      <anchor>ae65d185ab96a404c599b9bd37189c466</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const istd::CSystem::FileDriveInfo *</type>
+      <name>GetFileDriveInfo</name>
+      <anchorfile>classifile_1_1_i_file_system_info_provider.html</anchorfile>
+      <anchor>a00cba40d3b2867e40eaf2a8527ee0de7</anchor>
+      <arglist>(int driveIndex=-1) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -55088,6 +55119,7 @@
   <compound kind="class">
     <name>istd::CSystem</name>
     <filename>classistd_1_1_c_system.html</filename>
+    <class kind="struct">istd::CSystem::FileDriveInfo</class>
     <member kind="typedef">
       <type>QMap&lt; QString, QString &gt;</type>
       <name>EnvironmentVariables</name>
@@ -55178,6 +55210,38 @@
       <anchorfile>classistd_1_1_c_system.html</anchorfile>
       <anchor>abb66daac937fc6e4adfd611a356591e9</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static FileDriveInfo</type>
+      <name>GetFileDriveInfo</name>
+      <anchorfile>classistd_1_1_c_system.html</anchorfile>
+      <anchor>af504c48d0de808166c90d8cea2db2682</anchor>
+      <arglist>(const QString &amp;fileDrivePath)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>istd::CSystem::FileDriveInfo</name>
+    <filename>structistd_1_1_c_system_1_1_file_drive_info.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>FileDriveInfo</name>
+      <anchorfile>structistd_1_1_c_system_1_1_file_drive_info.html</anchorfile>
+      <anchor>a6968ad6d2c693bb3b280cc838a0ff4db</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>quint64</type>
+      <name>totalBytes</name>
+      <anchorfile>structistd_1_1_c_system_1_1_file_drive_info.html</anchorfile>
+      <anchor>a7e128276e6865e351d2662cdb3f106fe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>quint64</type>
+      <name>freeBytes</name>
+      <anchorfile>structistd_1_1_c_system_1_1_file_drive_info.html</anchorfile>
+      <anchor>a2043752d01146b5cc291274e9fb141ee</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -68846,6 +68910,7 @@
     <file>IFileNameParam.h</file>
     <file>IFilePersistence.h</file>
     <file>IFilePersistenceInfo.h</file>
+    <file>IFileSystemInfoProvider.h</file>
     <file>IFileTypeInfo.h</file>
     <file>TFileSerializerComp.h</file>
   </compound>

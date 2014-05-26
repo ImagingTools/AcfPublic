@@ -20,27 +20,43 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#ifndef ifile_IFileSystemInfoProvider_included
+#define ifile_IFileSystemInfoProvider_included
 
 
-namespace istd
+// ACF includes
+#include "istd/IChangeable.h"
+#include "istd/CSystem.h"
+#include "iprm/IOptionsList.h"
+
+
+namespace ifile
 {
+
 
 /**
-	Enumeration for reflecting the state of ACF's SVN repository.
+	Provider of file system related informations.
 */
-enum RepositoryState
+class IFileSystemInfoProvider: virtual public istd::IChangeable
 {
-	RS_ORIGINAL_VERSION =  3491,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+public:
+	/**
+		Get the list of drives available on the local machine.
+	*/
+	virtual const iprm::IOptionsList& GetDriveList() const = 0;
+
+	/**
+		Get info about a given file drive.
+		\param driveIndex	Index of the file drive specified as index of the element inside of the list returned by GetDriveList.
+							Negative values mean that information about all available file drives will be cummulated.
+	*/
+	virtual const istd::CSystem::FileDriveInfo* GetFileDriveInfo(int driveIndex = -1) const = 0;
 };
 
 
-} // namespace istd
+} // namespace ifile
 
 
-#endif // !istd_AcfVersion_included
+#endif // !ifile_IFileSystemInfoProvider_included
 
 
