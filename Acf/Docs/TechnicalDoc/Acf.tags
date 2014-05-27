@@ -2076,6 +2076,16 @@
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
+    <name>CFileSystemInfoProviderComp.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_file_system_info_provider_comp_8h</filename>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
+    <includes id="_i_file_system_info_provider_8h" name="IFileSystemInfoProvider.h" local="yes" imported="no">ifile/IFileSystemInfoProvider.h</includes>
+    <class kind="class">ifile::CFileSystemInfoProviderComp</class>
+    <class kind="struct">ifile::CFileSystemInfoProviderComp::DriveInfo</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
     <name>CFileTypeInfoComp.h</name>
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_c_file_type_info_comp_8h</filename>
@@ -27356,6 +27366,7 @@
     <class kind="class">ifile::CFileNameParamComp</class>
     <class kind="class">ifile::CFileReadArchive</class>
     <class kind="class">ifile::CFileSerializerCompBase</class>
+    <class kind="class">ifile::CFileSystemInfoProviderComp</class>
     <class kind="class">ifile::CFileTypeInfoComp</class>
     <class kind="class">ifile::CFileWriteArchive</class>
     <class kind="class">ifile::CGeneratedFileNameParamComp</class>
@@ -28426,6 +28437,151 @@
       <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
       <anchor>abeeedb5fce3b703e62b314beb2dc9ae2</anchor>
       <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::CFileSystemInfoProviderComp</name>
+    <filename>classifile_1_1_c_file_system_info_provider_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base virtualness="virtual">ifile::IFileSystemInfoProvider</base>
+    <base virtualness="virtual">iprm::IOptionsList</base>
+    <class kind="struct">ifile::CFileSystemInfoProviderComp::DriveInfo</class>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_file_system_info_provider_comp.html</anchorfile>
+      <anchor>ac60f40d5c592d4c583f5fe1c88a70a98</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>EmitUpdate</name>
+      <anchorfile>classifile_1_1_c_file_system_info_provider_comp.html</anchorfile>
+      <anchor>a0142ff5e4ac83b5e82a8320e0c1f63fa</anchor>
+      <arglist>(const DriveInfos &amp;driveInfos)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CFileSystemInfoProviderComp</name>
+      <anchorfile>classifile_1_1_c_file_system_info_provider_comp.html</anchorfile>
+      <anchor>ad1514164899cd73ab689ceed44d0c14b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iprm::IOptionsList &amp;</type>
+      <name>GetDriveList</name>
+      <anchorfile>classifile_1_1_c_file_system_info_provider_comp.html</anchorfile>
+      <anchor>a1b0d5f47f9bbe7c1f95778894d825ab6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const istd::CSystem::FileDriveInfo *</type>
+      <name>GetFileDriveInfo</name>
+      <anchorfile>classifile_1_1_c_file_system_info_provider_comp.html</anchorfile>
+      <anchor>a9af951395c8276cc984a83a4da835b67</anchor>
+      <arglist>(int driveIndex=-1) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsFlags</name>
+      <anchorfile>classifile_1_1_c_file_system_info_provider_comp.html</anchorfile>
+      <anchor>a32d990135b741d0d4cd4575dfaa8c1b8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classifile_1_1_c_file_system_info_provider_comp.html</anchorfile>
+      <anchor>a5c84276f790e03ec0fa3b8312a7fc285</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classifile_1_1_c_file_system_info_provider_comp.html</anchorfile>
+      <anchor>a4b12b9edce95c6aea80d29f4c5aa3be7</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classifile_1_1_c_file_system_info_provider_comp.html</anchorfile>
+      <anchor>a0da0d50a46331818a831a539a122c658</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetOptionId</name>
+      <anchorfile>classifile_1_1_c_file_system_info_provider_comp.html</anchorfile>
+      <anchor>a1822700d9129b854063ee6cf1aa314af</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classifile_1_1_c_file_system_info_provider_comp.html</anchorfile>
+      <anchor>aa8b09a169ff1585ed74da74509f0b05e</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>QVector&lt; DriveInfo &gt;</type>
+      <name>DriveInfos</name>
+      <anchorfile>classifile_1_1_c_file_system_info_provider_comp.html</anchorfile>
+      <anchor>a2d00cd38b7d17d3e0b223dcb03439b27</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classifile_1_1_c_file_system_info_provider_comp.html</anchorfile>
+      <anchor>a1ba320ddb19b0afa204f90e68fbe7eda</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classifile_1_1_c_file_system_info_provider_comp.html</anchorfile>
+      <anchor>a7e9b48a5b220460d99d06d3446183883</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>run</name>
+      <anchorfile>classifile_1_1_c_file_system_info_provider_comp.html</anchorfile>
+      <anchor>a8fbaed1ad4175c96eba9e2965613636f</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>ifile::CFileSystemInfoProviderComp::DriveInfo</name>
+    <filename>structifile_1_1_c_file_system_info_provider_comp_1_1_drive_info.html</filename>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>structifile_1_1_c_file_system_info_provider_comp_1_1_drive_info.html</anchorfile>
+      <anchor>a281a32a1b7d5e9d9086608c3083df93c</anchor>
+      <arglist>(const DriveInfo &amp;driveInfo) const </arglist>
+    </member>
+    <member kind="variable">
+      <type>istd::CSystem::FileDriveInfo</type>
+      <name>info</name>
+      <anchorfile>structifile_1_1_c_file_system_info_provider_comp_1_1_drive_info.html</anchorfile>
+      <anchor>a076631d51111b76bf25aa2e2c9cc81a4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>name</name>
+      <anchorfile>structifile_1_1_c_file_system_info_provider_comp_1_1_drive_info.html</anchorfile>
+      <anchor>ad1eb4e8c74887f4770f207487797ea47</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QByteArray</type>
+      <name>id</name>
+      <anchorfile>structifile_1_1_c_file_system_info_provider_comp_1_1_drive_info.html</anchorfile>
+      <anchor>aafc0b750f5dd7c8acfb9306333e455d1</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -55302,6 +55458,13 @@
       <anchor>a6968ad6d2c693bb3b280cc838a0ff4db</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>structistd_1_1_c_system_1_1_file_drive_info.html</anchorfile>
+      <anchor>a68928fe15debad065f9cf3bca9f1dc8b</anchor>
+      <arglist>(const FileDriveInfo &amp;info) const </arglist>
+    </member>
     <member kind="variable">
       <type>quint64</type>
       <name>totalBytes</name>
@@ -68970,6 +69133,7 @@
     <file>CFileNameParamComp.h</file>
     <file>CFileReadArchive.h</file>
     <file>CFileSerializerCompBase.h</file>
+    <file>CFileSystemInfoProviderComp.h</file>
     <file>CFileTypeInfoComp.h</file>
     <file>CFileWriteArchive.h</file>
     <file>CGeneratedFileNameParamComp.h</file>

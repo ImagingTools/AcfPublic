@@ -56,6 +56,11 @@ public:
 		{
 		}
 
+		bool operator ==(const FileDriveInfo& info) const
+		{
+			return (totalBytes == info.totalBytes) && (freeBytes == info.freeBytes);
+		}
+
 		quint64 totalBytes;
 		quint64 freeBytes;
 	};
