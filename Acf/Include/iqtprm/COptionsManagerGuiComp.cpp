@@ -35,8 +35,6 @@
 #include "istd/TChangeNotifier.h"
 #include "iprm/IOptionsList.h"
 #include "iprm/INameParam.h"
-#include "iqt/CSignalBlocker.h"
-
 
 
 namespace iqtprm
@@ -46,9 +44,11 @@ namespace iqtprm
 // public methods
 
 COptionsManagerGuiComp::COptionsManagerGuiComp()
-	:m_isEditingFlag(false)
+	:m_isEditingFlag(false),
+	m_isUpdateBlocked(false)
 {
 }
+
 
 // reimplemented (imod::IModelEditor)
 
@@ -243,6 +243,10 @@ void COptionsManagerGuiComp::OnModelChanged(int /*modelId*/, int /*changeFlags*/
 
 void COptionsManagerGuiComp::OnSelectionChanged(int /*index*/)
 {
+	if (m_isUpdateBlocked){
+		return;
+	}
+
 	if (DoUpdateModel()){
 		UpdateDescriptionFrame();
 	}
@@ -253,6 +257,10 @@ void COptionsManagerGuiComp::OnSelectionChanged(int /*index*/)
 
 void COptionsManagerGuiComp::OnEditingFinished()
 {
+	if (m_isUpdateBlocked){
+		return;
+	}
+
 	QString newOptionName;
 	iprm::INameParam* nameParamsPtr = CompCastPtr<iprm::INameParam>(GetObjectPtr());
 	if (nameParamsPtr != NULL){
@@ -295,6 +303,10 @@ void COptionsManagerGuiComp::OnEditingFinished()
 
 void COptionsManagerGuiComp::OnTextChanged(const QString& text)
 {
+	if (m_isUpdateBlocked){
+		return;
+	}
+
 	iprm::INameParam* nameParamsPtr = CompCastPtr<iprm::INameParam>(GetObjectPtr());
 	if (nameParamsPtr != NULL){
 		UpdateBlocker updateBlocker(this);
@@ -306,6 +318,10 @@ void COptionsManagerGuiComp::OnTextChanged(const QString& text)
 
 void COptionsManagerGuiComp::OnTextEdited(const QString& /*text*/)
 {
+	if (m_isUpdateBlocked){
+		return;
+	}
+
 	m_isEditingFlag = true;
 }
 
@@ -314,12 +330,12 @@ void COptionsManagerGuiComp::OnTextEdited(const QString& /*text*/)
 
 void COptionsManagerGuiComp::UpdateComboBox()
 {
-	iqt::CSignalBlocker blockSelector(Selector, true);
-
 	Selector->clear();
 
 	iprm::ISelectionParam* selectionPtr = CompCastPtr<iprm::ISelectionParam>(GetObjectPtr());
 	if (selectionPtr != NULL){
+		m_isUpdateBlocked = true;
+
 		int selectedIndex = selectionPtr->GetSelectedOptionIndex();
 		const iprm::IOptionsList* constraintsPtr = selectionPtr->GetSelectionConstraints();
 		if (constraintsPtr != NULL){
@@ -335,10 +351,12 @@ void COptionsManagerGuiComp::UpdateComboBox()
 		}
 		Selector->setCurrentIndex(selectedIndex);
 
+		m_isUpdateBlocked = false;
+
 		OnTextChanged((selectedIndex >= 0) ? Selector->itemText(selectedIndex) : QString());
 	}
 
-	UpdateDescriptionFrame();
+	UpdateDescriptionFrame();	
 }
 
 
