@@ -26,6 +26,7 @@
 // ACF includes
 #include "i2d/CAnnulusSegment.h"
 #include "i2d/CTubePolyline.h"
+#include "i2d/CArc.h"
 #include "iview/IViewLayer.h"
 #include "iview/CAnnulusSegmentShape.h"
 #include "iview/CCircleShape.h"
@@ -33,6 +34,7 @@
 #include "iview/CLineShape.h"
 #include "iview/CTubePolylineShape.h"
 #include "iview/CLabelShape.h"
+#include "iview/CArcShape.h"
 
 
 namespace iview
@@ -151,6 +153,13 @@ CInteractiveShapeBase* CSimpleShapeFactoryComp::CreateShapeInstance(const i2d::I
 	const i2d::CPosition2d* positionPtr = dynamic_cast<const i2d::CPosition2d*>(&object);
 	if (positionPtr != NULL){
 		iview::CPinShape* objectShapePtr = new iview::CPinShape();
+
+		return objectShapePtr;
+	}
+
+	const i2d::CArc* arcPtr = dynamic_cast<const i2d::CArc*>(&object);
+	if (arcPtr != NULL) {
+		iview::CArcShape* objectShapePtr = new iview::CArcShape();
 
 		return objectShapePtr;
 	}

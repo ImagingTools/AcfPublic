@@ -180,6 +180,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CArcParamsGuiComp.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\CCircleParamsGuiComp.cpp"
 				>
 			</File>
@@ -255,6 +259,10 @@
 			</File>
 			<File
 				RelativePath="..\CAnnulusSegmentParamsGuiComp.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CArcParamsGuiComp.h"
 				>
 			</File>
 			<File
@@ -382,6 +390,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\GeneratedFiles\iqt2d\moc_CArcParamsGuiComp.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\..\GeneratedFiles\iqt2d\moc_CCircleParamsGuiComp.cpp"
 				>
 			</File>
@@ -430,6 +442,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\GeneratedFiles\iqt2d\ui_CArcParamsGuiComp.h"
+				>
+			</File>
+			<File
 				RelativePath="..\..\GeneratedFiles\iqt2d\ui_CCircleParamsGuiComp.h"
 				>
 			</File>
@@ -468,6 +484,10 @@
 			</File>
 			<File
 				RelativePath="..\CAnnulusSegmentParamsGuiComp.ui"
+				>
+			</File>
+			<File
+				RelativePath="..\CArcParamsGuiComp.ui"
 				>
 			</File>
 			<File
@@ -516,6 +536,10 @@
 			</File>
 			<File
 				RelativePath="..\CAnnulusSegmentParamsGuiComp.moc"
+				>
+			</File>
+			<File
+				RelativePath="..\CArcParamsGuiComp.moc"
 				>
 			</File>
 			<File
