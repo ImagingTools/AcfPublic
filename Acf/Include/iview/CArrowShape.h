@@ -24,9 +24,9 @@
 #define iview_CArrowShape_included
 
 
+// ACF includes
 #include "i2d/CVector2d.h"
 #include "i2d/CLine2d.h"
-
 #include "iview/CInteractiveShapeBase.h"
 
 
@@ -71,10 +71,10 @@ protected:
 
 	// static methods
 	static bool CheckLine(
-					const istd::CIndex2d& firstPoint,
-					const istd::CIndex2d& secondPoint,
-					const istd::CIndex2d& point,
-					double maxDistance);
+				const istd::CIndex2d& firstPoint,
+				const istd::CIndex2d& secondPoint,
+				const istd::CIndex2d& point,
+				double maxDistance);
 
 	i2d::CVector2d m_referencePosition;
 	double m_arrowLinesProportion;

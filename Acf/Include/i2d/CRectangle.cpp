@@ -211,7 +211,7 @@ void CRectangle::SetBottomLeft(const CVector2d& bottomLeft)
 		m_horizontalRange.SetMinValue(bottomLeft.GetX());
 		m_verticalRange.SetMaxValue(bottomLeft.GetY());
 	}
-}	
+}
 
 
 CVector2d CRectangle::GetRightBottom() const
@@ -664,7 +664,7 @@ bool CRectangle::CopyFrom(const IChangeable& object, CompatibilityMode mode)
 		CObject2dBase::CopyFrom(object, mode);
 
 		return true;
-	}	
+	}
 
 	return false;
 }

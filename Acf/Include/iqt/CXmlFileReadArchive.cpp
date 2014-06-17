@@ -55,7 +55,7 @@ bool CXmlFileReadArchive::OpenFile(const QString& filePath)
 		return false;
 	}
 
-	if (!m_document.setContent(&file)) {
+	if (!m_document.setContent(&file)){
 		file.close();
 
 		return false;

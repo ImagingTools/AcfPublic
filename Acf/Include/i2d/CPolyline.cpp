@@ -146,7 +146,7 @@ bool CPolyline::CopyFrom(const IChangeable& object, CompatibilityMode mode)
 		SetClosed(polylinePtr->IsClosed());
 
 		return true;
-	}	
+	}
 
 	return false;
 }

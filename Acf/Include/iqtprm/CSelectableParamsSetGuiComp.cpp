@@ -130,7 +130,7 @@ void CSelectableParamsSetGuiComp::ConnectCurrentEditor()
 					if (paramsSetModelPtr != NULL && observerPtr != NULL){
 						paramsSetModelPtr->AttachObserver(observerPtr);
 					}
-				}	
+				}
 			}
 		}
 	}

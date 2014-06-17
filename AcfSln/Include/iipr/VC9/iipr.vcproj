@@ -154,10 +154,6 @@
 			Filter="cpp"
 			>
 			<File
-				RelativePath="..\CArcProjectionProcessorComp.cpp"
-				>
-			</File>
-			<File
 				RelativePath="..\CAutoImageNormalizeProcessorComp.cpp"
 				>
 			</File>
@@ -382,10 +378,6 @@
 				>
 			</File>
 			<File
-				RelativePath="..\CSingleArcProjectionSupplierComp.cpp"
-				>
-			</File>
-			<File
 				RelativePath="..\CSingleFeatureConsumer.cpp"
 				>
 			</File>
@@ -402,10 +394,6 @@
 			Name="Header Files"
 			Filter="h"
 			>
-			<File
-				RelativePath="..\CArcProjectionProcessorComp.h"
-				>
-			</File>
 			<File
 				RelativePath="..\CAutoImageNormalizeProcessorComp.h"
 				>
@@ -628,10 +616,6 @@
 			</File>
 			<File
 				RelativePath="..\CSelectableCalibrationProviderComp.h"
-				>
-			</File>
-			<File
-				RelativePath="..\CSingleArcProjectionSupplierComp.h"
 				>
 			</File>
 			<File

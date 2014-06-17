@@ -130,7 +130,7 @@ bool CSplineSegment::CopyFrom(const IChangeable& object, CompatibilityMode /*mod
 		D(splineSegmentPtr->D());
 
 		return true;
-	}	
+	}
 
 	return false;
 }

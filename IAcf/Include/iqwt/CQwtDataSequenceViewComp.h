@@ -42,8 +42,6 @@
 #include "imeas/IDataSequenceStatistics.h"
 #include "imeas/INumericValue.h"
 
-#include "iview/IColorSchema.h"
-
 #include "GeneratedFiles/iqwt/ui_CQwtDataSequenceViewComp.h"
 
 
@@ -67,8 +65,6 @@ public:
 	I_BEGIN_COMPONENT(CQwtDataSequenceViewComp);
 		I_ASSIGN_MULTI_0(m_horizontalLinesCompPtr, "HorizontalLines", "List of y-coordinates of horizontal lines", false);
 		I_ASSIGN_MULTI_0(m_verticalLinesCompPtr, "VerticalLines", "List of x-coordinates of vertical lines", false);
-		I_ASSIGN(m_generalColorSchema, "GeneralColorSchema", "Color schema for background and channels if ChannelColorSchema is not set", false, "GeneralColorSchema");
-		I_ASSIGN_MULTI_0(m_chanelColorSchema, "ChanelColorSchema", "Color schema for each chanel", false);
 	I_END_COMPONENT;
 
 	// reimplemented (iqtgui::TGuiObserverWrap)
@@ -109,8 +105,6 @@ private:
 
 	I_MULTIREF(imeas::INumericValue, m_verticalLinesCompPtr);
 	I_MULTIREF(imeas::INumericValue, m_horizontalLinesCompPtr);
-	I_REF(iview::IColorSchema, m_generalColorSchema);
-	I_MULTIREF(iview::IColorSchema, m_chanelColorSchema);
 };
 
 

@@ -47,25 +47,29 @@ void CArcParamsGuiComp::UpdateModel() const
 	i2d::CVector2d postion(XSpin->value(), YSpin->value());
 	if (objectPtr->GetCenter() != postion){
 		notifier.SetPtr(objectPtr);
+
 		objectPtr->SetPosition(postion);
 	}
 
 	double radius = RadiusSpin->value();
 	if (objectPtr->GetRadius() != radius){
 		notifier.SetPtr(objectPtr);
+
 		objectPtr->SetRadius(radius);
 	}
 
 	double startAngle = StartAngleSpin->value();
 	if (objectPtr->GetStartAngle() != startAngle){
 		notifier.SetPtr(objectPtr);
+
 		objectPtr->SetStartAngle(startAngle);
 	}
 
-	double angleWidth = AngleWidthSpin->value();
-	if (objectPtr->GetAngleWidth() != angleWidth){
+	double endAngle = EndAngleSpin->value();
+	if (objectPtr->GetEndAngle() != endAngle){
 		notifier.SetPtr(objectPtr);
-		objectPtr->SetAngleWidth(angleWidth);
+		
+		objectPtr->SetEndAngle(endAngle);
 	}
 }
 
@@ -89,7 +93,7 @@ void CArcParamsGuiComp::UpdateGui(int /*updateFlags*/)
 
 		StartAngleSpin->setValue(objectPtr->GetStartAngle());
 
-		AngleWidthSpin->setValue(objectPtr->GetAngleWidth());
+		EndAngleSpin->setValue(objectPtr->GetEndAngle());
 
 		UpdateAllViews();
 	}
@@ -106,7 +110,7 @@ void CArcParamsGuiComp::OnGuiCreated()
 	QObject::connect(YSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
 	QObject::connect(RadiusSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
 	QObject::connect(StartAngleSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
-	QObject::connect(AngleWidthSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
+	QObject::connect(EndAngleSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
 }
 
 
@@ -116,7 +120,7 @@ void CArcParamsGuiComp::OnGuiDestroyed()
 	QObject::disconnect(YSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
 	QObject::disconnect(RadiusSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
 	QObject::disconnect(StartAngleSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
-	QObject::disconnect(AngleWidthSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
+	QObject::disconnect(EndAngleSpin, SIGNAL(valueChanged(double)), this, SLOT(OnParamsChanged(double)));
 
 	BaseClass::OnGuiDestroyed();
 }

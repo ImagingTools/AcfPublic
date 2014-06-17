@@ -76,8 +76,6 @@
 #include "iipr/CImageHistogramSupplierComp.h"
 #include "iipr/CFastGaussianProcessorComp.h"
 #include "iipr/CAutoImageNormalizeProcessorComp.h"
-#include "iipr/CArcProjectionProcessorComp.h"
-#include "iipr/CSingleArcProjectionSupplierComp.h"
 
 
 /**
@@ -150,8 +148,6 @@ typedef icomp::TModelCompWrap<iipr::CColorPatternComparatorComp> ColorPatternCom
 typedef icomp::TModelCompWrap<iipr::CImageHistogramSupplierComp> ImageHistogramSupplier;
 typedef iipr::CFastGaussianProcessorComp FastGaussianProcessor;
 typedef iipr::CAutoImageNormalizeProcessorComp AutoImageNormalizeProcessor;
-typedef iipr::CArcProjectionProcessorComp ArcProjectionProcessor;
-typedef icomp::TModelCompWrap<iipr::CSingleArcProjectionSupplierComp> SingleArcProjectionSupplier;
 
 
 } // namespace IprPck

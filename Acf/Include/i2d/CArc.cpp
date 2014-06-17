@@ -1,12 +1,32 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2014 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
 #include "i2d/CArc.h"
 
 
 // ACF includes
 #include "istd/TChangeNotifier.h"
-
 #include "i2d/CAffine2d.h"
 #include "i2d/CRectangle.h"
-
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
 #include "istd/TDelPtr.h"
@@ -16,15 +36,23 @@ namespace i2d
 {
 
 
+// public methods
+
 CArc::CArc()
 :	m_startAngle(0), 
-	m_angleWidth(0)
+	m_endAngle(0)
 {
 }
 
 
-CArc::CArc(double startAngle, double angleWidth, const double radius, const CVector2d& center)
-:	BaseClass(radius, center), m_startAngle(startAngle), m_angleWidth(angleWidth)
+CArc::CArc(
+			double startAngle,
+			double endAngle,
+			const double radius,
+			const CVector2d& center)
+	:BaseClass(radius, center),
+	m_startAngle(startAngle),
+	m_endAngle(endAngle)
 {
 }
 
@@ -39,19 +67,22 @@ void CArc::SetStartAngle(double angle)
 }
 
 
-void CArc::SetAngleWidth(double angle)
+void CArc::SetEndAngle(double angle)
 {
-	if (angle != m_angleWidth){
+	if (angle != m_endAngle){
 		istd::CChangeNotifier notifier(this);
 
-		m_angleWidth = angle;
+		m_endAngle = angle;
 	}
 }
 
 
 bool CArc::operator==(const CArc& ref) const
 {
-	return (ref.GetStartAngle() == GetStartAngle() && ref.GetAngleWidth() == GetAngleWidth() && ref.GetRadius() == GetRadius() && ref.GetPosition() == GetPosition());
+	return (ref.GetStartAngle() == GetStartAngle() &&
+				ref.GetEndAngle() == GetEndAngle() &&
+				ref.GetRadius() == GetRadius() &&
+				ref.GetPosition() == GetPosition());
 }
 
 
@@ -74,9 +105,9 @@ CRectangle CArc::GetBoundingBox() const
 
 
 bool CArc::Transform(
-						const ITransformation2d& transformation,
-						ITransformation2d::ExactnessMode mode,
-						double* errorFactorPtr)
+			const ITransformation2d& transformation,
+			ITransformation2d::ExactnessMode mode,
+			double* errorFactorPtr)
 {
 	CVector2d transPos;
 	if (!transformation.GetPositionAt(m_position, transPos, mode)){
@@ -104,9 +135,9 @@ bool CArc::Transform(
 
 
 bool CArc::InvTransform(
-						   const ITransformation2d& transformation,
-						   ITransformation2d::ExactnessMode mode,
-						   double* errorFactorPtr)
+			const ITransformation2d& transformation,
+			ITransformation2d::ExactnessMode mode,
+			double* errorFactorPtr)
 {
 	CVector2d transPos;
 	if (!transformation.GetInvPositionAt(m_position, transPos, mode)){
@@ -134,10 +165,10 @@ bool CArc::InvTransform(
 
 
 bool CArc::GetTransformed(
-							 const ITransformation2d& transformation,
-							 IObject2d& result,
-							 ITransformation2d::ExactnessMode mode,
-							 double* errorFactorPtr) const
+			const ITransformation2d& transformation,
+			IObject2d& result,
+			ITransformation2d::ExactnessMode mode,
+			double* errorFactorPtr) const
 {
 	CArc* arcPtr = dynamic_cast<CArc*>(&result);
 	if (arcPtr == NULL){
@@ -149,17 +180,17 @@ bool CArc::GetTransformed(
 	arcPtr->SetPosition(m_position);
 	arcPtr->SetRadius(m_radius);
 	arcPtr->SetStartAngle(m_startAngle);
-	arcPtr->SetAngleWidth(m_angleWidth);
+	arcPtr->SetEndAngle(m_endAngle);
 
 	return arcPtr->Transform(transformation, mode, errorFactorPtr);
 }
 
 
 bool CArc::GetInvTransformed(
-								const ITransformation2d& transformation,
-								IObject2d& result,
-								ITransformation2d::ExactnessMode mode,
-								double* errorFactorPtr) const
+			const ITransformation2d& transformation,
+			IObject2d& result,
+			ITransformation2d::ExactnessMode mode,
+			double* errorFactorPtr) const
 {
 	CArc* arcPtr = dynamic_cast<CArc*>(&result);
 	if (arcPtr == NULL){
@@ -171,7 +202,7 @@ bool CArc::GetInvTransformed(
 	arcPtr->SetPosition(m_position);
 	arcPtr->SetRadius(m_radius);
 	arcPtr->SetStartAngle(m_startAngle);
-	arcPtr->SetAngleWidth(m_angleWidth);
+	arcPtr->SetEndAngle(m_endAngle);
 
 	return arcPtr->InvTransform(transformation, mode, errorFactorPtr);
 }
@@ -193,13 +224,12 @@ bool CArc::CopyFrom(const IChangeable& object, CompatibilityMode mode)
 		istd::CChangeNotifier notifier(this);
 
 		SetStartAngle(arcPtr->GetStartAngle());
-		SetAngleWidth(arcPtr->GetAngleWidth());
+		SetEndAngle(arcPtr->GetEndAngle());
 
-		CCircle::CopyFrom(object, CM_STRICT);
-
+		CCircle::CopyFrom(object, mode);
 
 		return true;
-	}	
+	}
 
 	return false;
 }
@@ -221,22 +251,21 @@ istd::IChangeable* CArc::CloneMe(CompatibilityMode mode) const
 
 bool CArc::Serialize(iser::IArchive& archive)
 {
-	static iser::CArchiveTag startAngleTag("StartAngle", "Start angle");
-	static iser::CArchiveTag angleWidthTag("AngleWidth", "Width of angle");
-
 	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this, CF_OBJECT_POSITION | CF_MODEL);
 
 	bool retVal = true;
 
 	retVal = retVal && BaseClass::Serialize(archive);
 
+	static iser::CArchiveTag startAngleTag("StartAngle", "Start angle");
 	retVal = retVal && archive.BeginTag(startAngleTag);
 	retVal = retVal && archive.Process(m_startAngle);
 	retVal = retVal && archive.EndTag(startAngleTag);
 
-	retVal = retVal && archive.BeginTag(angleWidthTag);
-	retVal = retVal && archive.Process(m_angleWidth);
-	retVal = retVal && archive.EndTag(angleWidthTag);
+	static iser::CArchiveTag endAngleTag("EndAngle", "End angle");
+	retVal = retVal && archive.BeginTag(endAngleTag);
+	retVal = retVal && archive.Process(m_endAngle);
+	retVal = retVal && archive.EndTag(endAngleTag);
 
 	return retVal;
 }

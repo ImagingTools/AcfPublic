@@ -1,3 +1,25 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2014 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
 #include "iview/CArcShape.h"
 
 
@@ -6,9 +28,7 @@
 
 // ACF includes
 #include "imod/IModel.h"
-
 #include "i2d/CArc.h"
-
 #include "iview/IColorSchema.h"
 #include "iview/CScreenTransform.h"
 
@@ -102,14 +122,14 @@ bool CArcShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton buttonTyp
 			i2d::CVector2d center = arcPtr->GetPosition();
 			double radius = arcPtr->GetRadius();
 			double startAngle = arcPtr->GetStartAngle();
-			double angleWidth = arcPtr->GetAngleWidth();
+			double angleWidth = arcPtr->GetEndAngle() - startAngle;
 
 			QLineF line(center.GetX(), center.GetY(), center.GetX()+radius, center.GetY());
 			line.setAngle(startAngle);
 			i2d::CVector2d startTicker = GetScreenPosition(i2d::CVector2d(line.p2().x(), line.p2().y()));
 			line.setAngle(startAngle + (angleWidth/2));
 			i2d::CVector2d radiusTicker = GetScreenPosition(i2d::CVector2d(line.p2().x(), line.p2().y()));
-			line.setAngle(startAngle + angleWidth);
+			line.setAngle(arcPtr->GetEndAngle());
 			i2d::CVector2d endTicker = GetScreenPosition(i2d::CVector2d(line.p2().x(), line.p2().y()));
 
 			const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IsSelected()? IColorSchema::TT_NORMAL: IColorSchema::TT_INACTIVE);
@@ -128,7 +148,7 @@ bool CArcShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton buttonTyp
 
 				return true;
 			}
-			else if (tickerBox.IsInside(position - endTicker.ToIndex2d())) {
+			else if (tickerBox.IsInside(position - endTicker.ToIndex2d())){
 				m_editMode = EM_ANGLEWIDTH;
 
 				BeginTickerDrag();
@@ -200,10 +220,9 @@ bool CArcShape::OnMouseMove(istd::CIndex2d position)
 		QLineF line(center.GetX(), center.GetY(), cp.GetX(), cp.GetY());
 
 		double newEndAngle = line.angle();
-		double newAngleWidth = newEndAngle-arc.GetStartAngle();
 
-		if (arc.GetAngleWidth() != newAngleWidth){
-			arc.SetAngleWidth(newAngleWidth);
+		if (arc.GetEndAngle() != newEndAngle){
+			arc.SetEndAngle(newEndAngle);
 
 			UpdateModelChanges();
 		}
@@ -242,9 +261,9 @@ void CArcShape::Draw(QPainter& drawContext) const
 
 	line.setAngle(arc.GetStartAngle());
 	i2d::CVector2d startTicker = GetScreenPosition(i2d::CVector2d(line.p2().x(), line.p2().y()));
-	line.setAngle(arc.GetStartAngle() + (arc.GetAngleWidth()/2));
+	line.setAngle(arc.GetStartAngle() + (arc.GetEndAngle() - arc.GetStartAngle()) / 2);
 	i2d::CVector2d radiusTicker = GetScreenPosition(i2d::CVector2d(line.p2().x(), line.p2().y()));
-	line.setAngle(arc.GetStartAngle() + arc.GetAngleWidth());
+	line.setAngle(arc.GetEndAngle());
 	i2d::CVector2d endTicker = GetScreenPosition(i2d::CVector2d(line.p2().x(), line.p2().y()));
 
 	double screenRadius = (
@@ -267,7 +286,7 @@ void CArcShape::Draw(QPainter& drawContext) const
 	drawContext.drawArc(QRect(
 		QPoint(int(screenCenter.GetX() - screenRadius), int(screenCenter.GetY() - screenRadius)),
 		QPoint(int(screenCenter.GetX() + screenRadius), int(screenCenter.GetY() + screenRadius))),
-		arc.GetStartAngle()*16, arc.GetAngleWidth()*16);
+		arc.GetStartAngle() * 16, (arc.GetEndAngle() - arc.GetStartAngle()) * 16);
 
 	if (IsEditableRadius() && IsSelected()){
 		colorSchema.DrawTicker(drawContext, startTicker.ToIndex2d(), IColorSchema::TT_NORMAL);
@@ -298,7 +317,7 @@ ITouchable::TouchState CArcShape::IsTouched(istd::CIndex2d position) const
 		i2d::CVector2d center = arcPtr->GetPosition();
 		double radius = arcPtr->GetRadius();
 		double startAngle = arcPtr->GetStartAngle();
-		double angleWidth = arcPtr->GetAngleWidth();
+		double angleWidth = arcPtr->GetEndAngle() - startAngle;
 
 		i2d::CVector2d screenCenter = GetScreenPosition(center);
 
@@ -308,7 +327,7 @@ ITouchable::TouchState CArcShape::IsTouched(istd::CIndex2d position) const
 		i2d::CVector2d startTicker = GetScreenPosition(i2d::CVector2d(line.p2().x(), line.p2().y()));
 		line.setAngle(startAngle + (angleWidth/2));
 		i2d::CVector2d radiusTicker = GetScreenPosition(i2d::CVector2d(line.p2().x(), line.p2().y()));
-		line.setAngle(startAngle + angleWidth);
+		line.setAngle(arcPtr->GetEndAngle());
 		i2d::CVector2d endTicker = GetScreenPosition(i2d::CVector2d(line.p2().x(), line.p2().y()));
 
 		double screenRadius = (
@@ -359,7 +378,7 @@ i2d::CRect CArcShape::CalcBoundingBox() const
 		const i2d::CVector2d& center = arcPtr->GetPosition();
 		double radius = arcPtr->GetRadius();
 		double startAngle = arcPtr->GetStartAngle();
-		double angleWidth = arcPtr->GetAngleWidth();
+		double angleWidth = arcPtr->GetEndAngle() - startAngle;
 
 		i2d::CVector2d screenCenter = GetScreenPosition(center);
 
@@ -367,9 +386,9 @@ i2d::CRect CArcShape::CalcBoundingBox() const
 
 		line.setAngle(startAngle);
 		i2d::CVector2d startTicker = GetScreenPosition(i2d::CVector2d(line.p2().x(), line.p2().y()));
-		line.setAngle(startAngle + (angleWidth/2));
+		line.setAngle(startAngle + (angleWidth / 2));
 		i2d::CVector2d radiusTicker = GetScreenPosition(i2d::CVector2d(line.p2().x(), line.p2().y()));
-		line.setAngle(startAngle + angleWidth);
+		line.setAngle(arcPtr->GetEndAngle());
 		i2d::CVector2d endTicker = GetScreenPosition(i2d::CVector2d(line.p2().x(), line.p2().y()));
 
 		double screenRadius = (

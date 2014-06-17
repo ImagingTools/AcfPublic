@@ -47,7 +47,7 @@ void CColorSchemaComp::OnComponentCreated()
 
 	if (m_normalPenColorAttrPtr.IsValid()){
 		SetPen(SP_NORMAL, QColor(QString(*m_normalPenColorAttrPtr)));
-	}	
+	}
 
 	if (m_normalPenWidthAttrPtr.IsValid()){		
 		QPen& p = const_cast<QPen&>(GetPen(SP_NORMAL));
@@ -62,11 +62,11 @@ void CColorSchemaComp::OnComponentCreated()
 	if (m_selectedPenWidthAttrPtr.IsValid()){		
 		QPen& p = const_cast<QPen&>(GetPen(SP_SELECTED));
 		p.setWidthF(*m_selectedPenWidthAttrPtr);			
-	}		
+	}	
 
 	if (m_selectedTickerPenColorAttrPtr.IsValid()){
 		SetPen(SP_SELECTED_TICKER, QColor(QString(*m_selectedTickerPenColorAttrPtr)));
-	}	
+	}
 
 	if (m_normalPenWidthAttrPtr.IsValid()){		
 		QPen& p = const_cast<QPen&>(GetPen(SP_NORMAL));
@@ -85,7 +85,7 @@ void CColorSchemaComp::OnComponentCreated()
 	if (m_importantPenWidthAttrPtr.IsValid()){		
 		QPen& p = const_cast<QPen&>(GetPen(SP_IMPORTANT));
 		p.setWidthF(*m_importantPenWidthAttrPtr);			
-	}	
+	}
 
 	if (m_orientDarkPenColorAttrPtr.IsValid()){
 		SetPen(SP_ORIENT_DARK, QColor(QString(*m_orientDarkPenColorAttrPtr)));
@@ -93,7 +93,7 @@ void CColorSchemaComp::OnComponentCreated()
 
 	if (m_orientBrightPenColorAttrPtr.IsValid()){
 		SetPen(SP_ORIENT_BRIGHT, QColor(QString(*m_orientBrightPenColorAttrPtr)));
-	}	
+	}
 
 	// brushs set
 
@@ -111,7 +111,7 @@ void CColorSchemaComp::OnComponentCreated()
 
 	if (m_tickerBrushColorAttrPtr.IsValid()){
 		SetBrush(SB_TICKER, QBrush(QColor(QString(*m_tickerBrushColorAttrPtr))));
-	}	
+	}
 
 	if (m_importantBrushColorAttrPtr.IsValid()){
 		SetBrush(SB_IMPORTANT, QBrush(QColor(QString(*m_importantBrushColorAttrPtr))));
@@ -119,7 +119,7 @@ void CColorSchemaComp::OnComponentCreated()
 
 	if (m_backgroundBrushColorAttrPtr.IsValid()){		
 		SetBrush(SB_BACKGROUND, QBrush(QColor(QString(*m_backgroundBrushColorAttrPtr))));
-	}	
+	}
 
 	if (m_halfTransparentBrushColorAttrPtr.IsValid()){
 		QColor c;

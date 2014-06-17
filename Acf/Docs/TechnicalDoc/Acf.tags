@@ -69,6 +69,23 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CArc.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_arc_8h</filename>
+    <includes id="_c_circle_8h" name="CCircle.h" local="yes" imported="no">i2d/CCircle.h</includes>
+    <class kind="class">i2d::CArc</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CArcComp.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_arc_comp_8h</filename>
+    <includes id="_t_object2d_comp_wrap_8h" name="TObject2dCompWrap.h" local="yes" imported="no">i2d/TObject2dCompWrap.h</includes>
+    <includes id="_c_arc_8h" name="CArc.h" local="yes" imported="no">i2d/CArc.h</includes>
+    <class kind="class">i2d::CArcComp</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CCalibration2dProxyComp.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_calibration2d_proxy_comp_8h</filename>
@@ -3816,6 +3833,16 @@
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CArcParamsGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqt2d/</path>
+    <filename>_c_arc_params_gui_comp_8h</filename>
+    <includes id="_c_arc_8h" name="CArc.h" local="yes" imported="no">i2d/CArc.h</includes>
+    <includes id="_c_arc_shape_8h" name="CArcShape.h" local="yes" imported="no">iview/CArcShape.h</includes>
+    <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <class kind="class">iqt2d::CArcParamsGuiComp</class>
+    <namespace>iqt2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CCircleParamsGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_circle_params_gui_comp_8h</filename>
@@ -5722,6 +5749,14 @@
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
+    <name>CArcShape.h</name>
+    <path>C:/Temp/Acf/Include/iview/</path>
+    <filename>_c_arc_shape_8h</filename>
+    <includes id="_c_pin_shape_8h" name="CPinShape.h" local="yes" imported="no">iview/CPinShape.h</includes>
+    <class kind="class">iview::CArcShape</class>
+    <namespace>iview</namespace>
+  </compound>
+  <compound kind="file">
     <name>CArrowShape.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_arrow_shape_8h</filename>
@@ -6705,6 +6740,8 @@
     <class kind="class">i2d::CAnnulusComp</class>
     <class kind="class">i2d::CAnnulusSegment</class>
     <class kind="class">i2d::CAnnulusSegmentComp</class>
+    <class kind="class">i2d::CArc</class>
+    <class kind="class">i2d::CArcComp</class>
     <class kind="class">i2d::CCalibration2dProxyComp</class>
     <class kind="class">i2d::CCircle</class>
     <class kind="class">i2d::CCircleComp</class>
@@ -8064,6 +8101,268 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>i2d::CArc</name>
+    <filename>classi2d_1_1_c_arc.html</filename>
+    <base>i2d::CCircle</base>
+    <member kind="typedef">
+      <type>CCircle</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
+      <anchor>a3e0fbe0185df76097f674e8a74acf51a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CPosition2d</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>a78d0cf38aa5166bc45483f9e815c2e46</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CArc</name>
+      <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
+      <anchor>acd298a1a825c06f03a312be2a563e103</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CArc</name>
+      <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
+      <anchor>ad5aae5e79e09a360847573b634d6e116</anchor>
+      <arglist>(double startAngle, double endAngle, const double radius, const CVector2d &amp;center)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetStartAngle</name>
+      <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
+      <anchor>a565b34b35c313c0825f0d251bf1fd0b6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetStartAngle</name>
+      <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
+      <anchor>a8c537ffd693c96ef59fadd4787a600a1</anchor>
+      <arglist>(double angle)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetEndAngle</name>
+      <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
+      <anchor>ad803363a3aca3e9edb398b7b39fbb9df</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetEndAngle</name>
+      <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
+      <anchor>a4c2a1989e078537fb6881537dccc4b63</anchor>
+      <arglist>(double angle)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
+      <anchor>a176664687031d3417aae15440c441ff1</anchor>
+      <arglist>(const CArc &amp;arc) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
+      <anchor>af39662b845f38e4d66b62139c676ca87</anchor>
+      <arglist>(const CArc &amp;arc) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual CRectangle</type>
+      <name>GetBoundingBox</name>
+      <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
+      <anchor>ad319b038890bfd3729a64bb828551b46</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Transform</name>
+      <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
+      <anchor>a34b2e1d505f93f0f0b1d8b67976611df</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InvTransform</name>
+      <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
+      <anchor>a044239d65b93f128a269b8a159be9530</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetTransformed</name>
+      <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
+      <anchor>afe643c993a58a3a870af51b379fc073d</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvTransformed</name>
+      <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
+      <anchor>a47bb46b7db8e683cf595ea1310ec8b4a</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
+      <anchor>a42c03e8fd7144736603e515891496a71</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
+      <anchor>a2d14f93dd77d458137ffca5587742452</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
+      <anchor>a843f8d2f1516f67cd9f53cccd6799925</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
+      <anchor>adde3531e1a8c6a21fbf0fb095500fc0a</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CCircle</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>a631a09ea71ce0097cd833d2f21c03805</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CCircle</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>ad08a5bcf7dbf5d348f29e1e0a8aeff0f</anchor>
+      <arglist>(double radius, const CVector2d &amp;center)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetRadius</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>a3073d475f9fffdfe3d1a70e7d1296c57</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetRadius</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>a188908a05dd12664adad71b2b14d640c</anchor>
+      <arglist>(double radius)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>a0ab8bf18687abf4ef70fed3787836d24</anchor>
+      <arglist>(const CCircle &amp;circle) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>a6d1242b3528e7742d741661f17d9c3d8</anchor>
+      <arglist>(const CCircle &amp;circle) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsIntersectedBy</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>a5dbbb1dddb323a340aeb56a40e28c391</anchor>
+      <arglist>(const CCircle &amp;circle, bool isFilled=false) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsIntersectedBy</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>a4e4e900646e593ea03f45864848244d3</anchor>
+      <arglist>(const CLine2d &amp;line, bool isFilled=false) const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetIntersectionAlphas</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>a6e07dfa8c212afa7489ed004c04946ac</anchor>
+      <arglist>(const CLine2d &amp;line, double result[2]) const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetIntersectionPoints</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>ac0866f1d0c873a1bf2013bc59a2a149b</anchor>
+      <arglist>(const CLine2d &amp;line, i2d::CVector2d &amp;result1, i2d::CVector2d &amp;result2) const </arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>m_startAngle</name>
+      <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
+      <anchor>a3d6c92e4973d2a7b94cbd77868afbb7f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>m_endAngle</name>
+      <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
+      <anchor>ab8a0a643e4c08972f08aaae226a4cc04</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>m_radius</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>a62fefbfbe664cd46152b361336a9db23</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CArcComp</name>
+    <filename>classi2d_1_1_c_arc_comp.html</filename>
+    <base>TObject2dCompWrap&lt; CArc &gt;</base>
+    <member kind="typedef">
+      <type>TObject2dCompWrap&lt; CArc &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_arc_comp.html</anchorfile>
+      <anchor>a2ef34f0efe5ea1a7b47ac1e350afb941</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_t_object2d_comp_wrap.html</anchorfile>
+      <anchor>a4e7dbee55ab86d2b0e51e17fa162fa3f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CArc</type>
+      <name>BaseClass2</name>
+      <anchorfile>classi2d_1_1_t_object2d_comp_wrap.html</anchorfile>
+      <anchor>af4791b7bcfeb29877dfb95f86bea181e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classi2d_1_1_c_arc_comp.html</anchorfile>
+      <anchor>a7cbd098bb536b9bc7d6ca36b596b58f0</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>i2d::CCalibration2dProxyComp</name>
     <filename>classi2d_1_1_c_calibration2d_proxy_comp.html</filename>
     <base>icomp::CComponentBase</base>
@@ -8270,83 +8569,6 @@
     <name>i2d::CCircle</name>
     <filename>classi2d_1_1_c_circle.html</filename>
     <base>i2d::CPosition2d</base>
-    <member kind="typedef">
-      <type>CPosition2d</type>
-      <name>BaseClass</name>
-      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>a78d0cf38aa5166bc45483f9e815c2e46</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CCircle</name>
-      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>a631a09ea71ce0097cd833d2f21c03805</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CCircle</name>
-      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>ad08a5bcf7dbf5d348f29e1e0a8aeff0f</anchor>
-      <arglist>(double radius, const CVector2d &amp;center)</arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetRadius</name>
-      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>a3073d475f9fffdfe3d1a70e7d1296c57</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetRadius</name>
-      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>a188908a05dd12664adad71b2b14d640c</anchor>
-      <arglist>(double radius)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator==</name>
-      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>a0ab8bf18687abf4ef70fed3787836d24</anchor>
-      <arglist>(const CCircle &amp;circle) const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator!=</name>
-      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>a6d1242b3528e7742d741661f17d9c3d8</anchor>
-      <arglist>(const CCircle &amp;circle) const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsIntersectedBy</name>
-      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>a5dbbb1dddb323a340aeb56a40e28c391</anchor>
-      <arglist>(const CCircle &amp;circle, bool isFilled=false) const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsIntersectedBy</name>
-      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>a4e4e900646e593ea03f45864848244d3</anchor>
-      <arglist>(const CLine2d &amp;line, bool isFilled=false) const </arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetIntersectionAlphas</name>
-      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>a6e07dfa8c212afa7489ed004c04946ac</anchor>
-      <arglist>(const CLine2d &amp;line, double result[2]) const </arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetIntersectionPoints</name>
-      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>ac0866f1d0c873a1bf2013bc59a2a149b</anchor>
-      <arglist>(const CLine2d &amp;line, i2d::CVector2d &amp;result1, i2d::CVector2d &amp;result2) const </arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual CRectangle</type>
       <name>GetBoundingBox</name>
@@ -8409,13 +8631,6 @@
       <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
       <anchor>a192c7508130cf4243165eed039f7a253</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>double</type>
-      <name>m_radius</name>
-      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>a62fefbfbe664cd46152b361336a9db23</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -42501,6 +42716,7 @@
     <class kind="class">iqt2d::CAffineTransformationParamsGuiComp</class>
     <class kind="class">iqt2d::CAnnulusParamsGuiComp</class>
     <class kind="class">iqt2d::CAnnulusSegmentParamsGuiComp</class>
+    <class kind="class">iqt2d::CArcParamsGuiComp</class>
     <class kind="class">iqt2d::CCircleParamsGuiComp</class>
     <class kind="class">iqt2d::CExtendedConsoleGuiComp</class>
     <class kind="class">iqt2d::CImageViewComp</class>
@@ -42848,6 +43064,102 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual i2d::CAnnulusSegment *</type>
+      <name>CastFromModel</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
+      <arglist>(imod::IModel *modelPtr) const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::CArcParamsGuiComp</name>
+    <filename>classiqt2d_1_1_c_arc_params_gui_comp.html</filename>
+    <base>TShapeParamsGuiCompBase&lt; Ui::CArcParamsGuiComp, iview::CArcShape, i2d::CArc &gt;</base>
+    <member kind="typedef">
+      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CArcParamsGuiComp, iview::CArcShape, i2d::CCircle &gt;</type>
+      <name>CArc</name>
+      <anchorfile>classiqt2d_1_1_c_arc_params_gui_comp.html</anchorfile>
+      <anchor>ad4a20f0554ff1bc92573168dd486c124</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSingleModelObserverBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a4183ada6ca430e22ee43b62c1e03ef5d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>i2d::CArc</type>
+      <name>ModelType</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqt2d_1_1_c_arc_params_gui_comp.html</anchorfile>
+      <anchor>a9f40cb437bb72858a523132fe59fe998</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSingleModelObserverBase</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CArc *</type>
+      <name>GetObjectPtr</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>AttachOrSetObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
+      <arglist>(i2d::CArc *objectPtr)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnParamsChanged</name>
+      <anchorfile>classiqt2d_1_1_c_arc_params_gui_comp.html</anchorfile>
+      <anchor>abadd2f5dfdfe8e96091de71951f5b3c0</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqt2d_1_1_c_arc_params_gui_comp.html</anchorfile>
+      <anchor>ac25de7d570865abfb42877562e3ca76f</anchor>
+      <arglist>(int updateFlags=0)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqt2d_1_1_c_arc_params_gui_comp.html</anchorfile>
+      <anchor>a799f5b47041c33797bfe433d4911a8ff</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqt2d_1_1_c_arc_params_gui_comp.html</anchorfile>
+      <anchor>afa3a173c4372ad873abc342116f6d4c6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqt2d_1_1_c_arc_params_gui_comp.html</anchorfile>
+      <anchor>a85466bcca1e13df8e0b4ba40a1c9ff3a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual i2d::CArc *</type>
       <name>CastFromModel</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
@@ -59152,6 +59464,7 @@
     <class kind="class">iview::CAffiniteCalibrationShape</class>
     <class kind="class">iview::CAnnulusSegmentShape</class>
     <class kind="class">iview::CAnnulusShape</class>
+    <class kind="class">iview::CArcShape</class>
     <class kind="class">iview::CArrowShape</class>
     <class kind="class">iview::CCalibratedViewBase</class>
     <class kind="class">iview::CCenterPinShape</class>
@@ -60085,6 +60398,200 @@
       <anchorfile>classiview_1_1_c_annulus_shape.html</anchorfile>
       <anchor>a511ba0fb54843f112dd0544e9361f885</anchor>
       <arglist>(istd::CIndex2d position) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iview::CArcShape</name>
+    <filename>classiview_1_1_c_arc_shape.html</filename>
+    <base>iview::CPinShape</base>
+    <member kind="typedef">
+      <type>CPinShape</type>
+      <name>BaseClass</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>a103f34456f148738c553f6c315d14e46</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CInteractiveShapeBase</type>
+      <name>ShapeBaseClass</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>ad631e505e39c92e3555f70c0828d57fd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CArcShape</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>ab9f526c586a7cd027a2557099a09c5fa</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEditableRadius</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>a8a8b171f2e6e4a42a24f999ac238da8f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetEditableRadius</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>a23931686111e0b286188422519ead4d4</anchor>
+      <arglist>(bool editable=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEditableStartAngle</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>a284a54a6bdab15be8b2d5c157b6d3c9c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetEditableStartAngle</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>a11d26d417821c30d9425916461b8928a</anchor>
+      <arglist>(bool editable=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEditableAngleWidth</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>a29a50a9e57bb105d421c8092c8c0f2b2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetEditableAngleWidth</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>a7f84d7080c81340a94e46a01f1980039</anchor>
+      <arglist>(bool editable=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsCenterVisible</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>a3fdbb0ed0509131df5976744c73ccadc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetCenterVisible</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>a7900c39b2ce20ee91f8c83e2af670ba6</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnMouseButton</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>ad639ece2189e133b98e09e05402da0f6</anchor>
+      <arglist>(istd::CIndex2d position, Qt::MouseButton buttonType, bool downFlag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnMouseMove</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>a189c35370d1f24830eeba032a91efaaf</anchor>
+      <arglist>(istd::CIndex2d position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Draw</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>a1b93ec0d5b0ac2b21284d7c674a708cd</anchor>
+      <arglist>(QPainter &amp;drawContext) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnAttached</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>a166466e2f121773a34c6254babf555d0</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual TouchState</type>
+      <name>IsTouched</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>a959e874fec8b764959101ac87530973f</anchor>
+      <arglist>(istd::CIndex2d position) const </arglist>
+    </member>
+    <member kind="enumeration" protection="protected">
+      <type></type>
+      <name>EditMode</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>a78f07311335382f987f79fc59000a07c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
+      <name>EM_NONE</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>a78f07311335382f987f79fc59000a07caf7d761b5efc6191dbfc7b3a73682acbf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
+      <name>EM_RADIUS</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>a78f07311335382f987f79fc59000a07ca21b621999e88c25c42ea355dd7a7aa37</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
+      <name>EM_STARTANGLE</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>a78f07311335382f987f79fc59000a07cae00d92cb56775cea325564784c76bb97</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
+      <name>EM_ANGLEWIDTH</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>a78f07311335382f987f79fc59000a07caf8fe61af34ddc066be36cc0e837b4dab</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual i2d::CRect</type>
+      <name>CalcBoundingBox</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>a26ffc01b54f02c178b458c7ea16829f0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_isEditableRadius</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>aaebcc5409e745c66a8f6febc9133b12e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_isCenterVisible</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>a2066ecc813c4044688a5ba0ee1ec5aeb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_isEditableStartAngle</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>a2f0820edc349548abe3a8b11d9f345f0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_isEditableAngleWidth</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>a5649ed9e0eb542613959ad26f882fb56</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_editMode</name>
+      <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
+      <anchor>aba03d7516bd125db46a54e21f8a4ad89</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -68917,6 +69424,8 @@
     <file>CAnnulusComp.h</file>
     <file>CAnnulusSegment.h</file>
     <file>CAnnulusSegmentComp.h</file>
+    <file>CArc.h</file>
+    <file>CArcComp.h</file>
     <file>CCalibration2dProxyComp.h</file>
     <file>CCircle.h</file>
     <file>CCircleComp.h</file>
@@ -69365,6 +69874,7 @@
     <file>CAffineTransformationParamsGuiComp.h</file>
     <file>CAnnulusParamsGuiComp.h</file>
     <file>CAnnulusSegmentParamsGuiComp.h</file>
+    <file>CArcParamsGuiComp.h</file>
     <file>CCircleParamsGuiComp.h</file>
     <file>CExtendedConsoleGuiComp.h</file>
     <file>CImageViewComp.h</file>
@@ -69577,6 +70087,7 @@
     <file>CAffiniteCalibrationShape.h</file>
     <file>CAnnulusSegmentShape.h</file>
     <file>CAnnulusShape.h</file>
+    <file>CArcShape.h</file>
     <file>CArrowShape.h</file>
     <file>CCalibratedViewBase.h</file>
     <file>CCenterPinShape.h</file>

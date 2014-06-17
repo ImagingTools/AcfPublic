@@ -82,7 +82,7 @@ bool CSpline::CopyFrom(const IChangeable& object, CompatibilityMode /*mode*/)
 		m_segments = splinePtr->m_segments;
 
 		return true;
-	}	
+	}
 
 	return false;
 }

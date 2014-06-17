@@ -209,7 +209,7 @@ void CModelBase::NotifyAfterUpdate(int updateFlags, istd::IPolymorphic* updatePa
 
 			observerPtr->AfterUpdate(this, updateFlags, updateParamsPtr);
 		}
-	}	
+	}
 	
 	CleanupObserverState();
 

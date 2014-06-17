@@ -245,7 +245,7 @@ bool CParamsManagerCompBase::SetParamsSetName(int index, const QString& name)
 	}
 
 	return true;
-}	
+}
 
 
 QString CParamsManagerCompBase::GetParamsSetDescription(int index) const
@@ -355,7 +355,7 @@ QString CParamsManagerCompBase::CalculateNewDefaultName() const
 			if (FindParamSetIndex(defaultSetName) < 0){
 				break;
 			}
-		}		
+		}	
 	}
 
 	return defaultSetName;

@@ -71,17 +71,7 @@ void CQwtDataSequenceViewComp::UpdateGui(int /*updateFlags*/)
 			for (int channelIndex = 0; channelIndex < channelsCount; channelIndex++){
 				QwtPlotCurve* curvePtr = new QwtPlotCurve();
 
-				if (m_chanelColorSchema.IsValid() && m_chanelColorSchema.GetCount() > channelIndex) {
-					iview::IColorSchema* colorSchema = m_chanelColorSchema[channelIndex];
-					curvePtr->setPen(colorSchema->GetPen(iview::IColorSchema::SP_NORMAL));
-				}
-				else if (m_generalColorSchema.IsValid()) {
-					iview::IColorSchema* colorSchema = m_generalColorSchema.GetPtr();
-					curvePtr->setPen(colorSchema->GetPen(iview::IColorSchema::SP_NORMAL));
-				}
-				else{
-					curvePtr->setPen(QPen(Qt::GlobalColor(Qt::cyan + channelIndex)));
-				}
+				curvePtr->setPen(QPen(Qt::GlobalColor(Qt::cyan + channelIndex)));
 				
 				curvePtr->setStyle(QwtPlotCurve::Steps);
 			
@@ -215,19 +205,8 @@ void CQwtDataSequenceViewComp::OnGuiCreated()
 	QwtPlotGrid* plotGridPtr = new QwtPlotGrid;
 	plotGridPtr->enableXMin(true);
 	plotGridPtr->enableYMin(true);
-	if (m_generalColorSchema.IsValid()) {
-		const iview::IColorSchema* colorSchema = m_generalColorSchema.GetPtr();
-		QPen majPen = colorSchema->GetPen(iview::IColorSchema::SP_SELECTED_DASH);
-		QPen minPen = colorSchema->GetPen(iview::IColorSchema::SP_NORMAL_DASH);
-		plotGridPtr->setMajPen(majPen);
-		plotGridPtr->setMinPen(minPen);
-
-		m_plotPtr->setCanvasBackground(colorSchema->GetBrush(iview::IColorSchema::SB_BACKGROUND));
-	}
-	else{
-		plotGridPtr->setMajPen(QPen(Qt::black, 0, Qt::DotLine));
-		plotGridPtr->setMinPen(QPen(Qt::gray, 0 , Qt::DotLine));
-	}
+	plotGridPtr->setMajPen(QPen(Qt::black, 0, Qt::DotLine));
+	plotGridPtr->setMinPen(QPen(Qt::gray, 0 , Qt::DotLine));
 	plotGridPtr->attach(m_plotPtr.GetPtr());
 
 	QLayout* layoutPtr = PlotFrame->layout();
