@@ -101,7 +101,9 @@ bool CViewLayer::IsShapeConnected(IShape* shapePtr)
 bool CViewLayer::ConnectShape(IShape* shapePtr)
 {
 	shapePtr->OnConnectDisplay(this);
-	shapePtr->OnDisplayChange(CF_ALL);
+
+	static istd::IChangeable::ChangeSet changeSet(istd::IChangeable::CF_ALL_DATA);
+	shapePtr->OnDisplayChange(changeSet);
 
 	i2d::CRect boundingBox = shapePtr->GetBoundingBox();
 	Q_ASSERT(boundingBox.IsValid());
@@ -120,9 +122,9 @@ int CViewLayer::GetShapesCount() const
 }
 
 
-void CViewLayer::UpdateAllShapes(int changeFlag)
+void CViewLayer::UpdateAllShapes(const istd::IChangeable::ChangeSet& changeSet)
 {
-	m_boundingBox = RecalcAllShapes(changeFlag);
+	m_boundingBox = RecalcAllShapes(changeSet);
 	m_isBoundingBoxValid = true;
 }
 
@@ -362,7 +364,7 @@ void CViewLayer::SetBoundingBoxValid() const
 }
 
 
-i2d::CRect CViewLayer::RecalcAllShapes(int changeFlag)
+i2d::CRect CViewLayer::RecalcAllShapes(const istd::IChangeable::ChangeSet& changeSet)
 {
 	i2d::CRect boundingBox = i2d::CRect::GetEmpty();
 
@@ -371,7 +373,7 @@ i2d::CRect CViewLayer::RecalcAllShapes(int changeFlag)
 			IShape* shapePtr = iter.key();
 			i2d::CRect& shapeBox = iter.value();
 
-			if (shapePtr->OnDisplayChange(changeFlag)){
+			if (shapePtr->OnDisplayChange(changeSet)){
 				shapeBox = shapePtr->GetBoundingBox();
 			}
 			boundingBox.Union(shapeBox);

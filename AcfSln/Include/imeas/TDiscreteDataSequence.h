@@ -31,7 +31,7 @@
 #include <QtCore/qmath.h>
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 #include "istd/TOptDelPtr.h"
 #include "istd/TSmartPtr.h"
 #include "iser/IArchive.h"
@@ -328,7 +328,7 @@ bool TDiscreteDataSequence<Element>::Serialize(iser::IArchive& archive)
 
 	bool isStoring = archive.IsStoring();
 
-	istd::CChangeNotifier notifier(NULL);
+	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this);
 
 	if (isStoring){
 		for (int i = 0; i < samplesCount; ++i){
@@ -342,7 +342,6 @@ bool TDiscreteDataSequence<Element>::Serialize(iser::IArchive& archive)
 		}
 	}
 	else{
-		notifier.SetPtr(this);
 		if ((samplesCount < 0) || (channelsCount < 0) || !CreateSequence(samplesCount, channelsCount)){
 			return false;
 		}

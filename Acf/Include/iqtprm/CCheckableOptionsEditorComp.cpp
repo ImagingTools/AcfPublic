@@ -54,7 +54,7 @@ void CCheckableOptionsEditorComp::UpdateModel() const
 		return;
 	}
 
-	istd::TChangeNotifier<iprm::IOptionsManager> updatePtr(managerPtr);
+	istd::CChangeNotifier notifier(managerPtr);
 
 	int optionsCount = managerPtr->GetOptionsCount();
 	QWidget* widget = GetQtWidget();
@@ -81,7 +81,7 @@ void CCheckableOptionsEditorComp::OnParameterChanged()
 
 // reimplemented (iqtgui::TGuiObserverWrap)
 
-void CCheckableOptionsEditorComp::UpdateGui(int updateFlags)
+void CCheckableOptionsEditorComp::UpdateGui(const istd::IChangeable::ChangeSet& changeSet)
 {
 	Q_ASSERT(IsGuiCreated());
 
@@ -96,13 +96,11 @@ void CCheckableOptionsEditorComp::UpdateGui(int updateFlags)
 		return;
 	}
 
-	bool added = updateFlags & iprm::IOptionsManager::CF_OPTION_ADDED;
-	bool removed = updateFlags & iprm::IOptionsManager::CF_OPTION_REMOVED;
-	bool changed = updateFlags & iprm::IOptionsManager::CF_OPTIONS_CHANGED;
-	bool renamed = updateFlags & iprm::IOptionsManager::CF_OPTION_RENAMED;
-	bool init = updateFlags & imod::IModelEditor::CF_INIT_EDITOR;
-
-	if (added || removed || changed || renamed || init){
+	if (		changeSet.Contains(iprm::IOptionsManager::CF_OPTION_ADDED) ||
+				changeSet.Contains(iprm::IOptionsManager::CF_OPTION_REMOVED) ||
+				changeSet.Contains(iprm::IOptionsManager::CF_OPTIONS_CHANGED) ||
+				changeSet.Contains(iprm::IOptionsManager::CF_OPTION_RENAMED) ||
+				changeSet.Contains(imod::IModelEditor::CF_INIT_EDITOR)){
 		delete widgetPtr->layout();
 
 		int optionCount = managerPtr->GetOptionsCount();

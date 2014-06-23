@@ -24,7 +24,7 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 #include "i2d/CAffine2d.h"
 #include "i2d/CRectangle.h"
 #include "iser/IArchive.h"
@@ -45,12 +45,11 @@ CArc::CArc()
 }
 
 
-CArc::CArc(
-			double startAngle,
+CArc::CArc(	double startAngle,
 			double endAngle,
 			const double radius,
 			const CVector2d& center)
-	:BaseClass(radius, center),
+:	BaseClass(radius, center),
 	m_startAngle(startAngle),
 	m_endAngle(endAngle)
 {
@@ -251,7 +250,7 @@ istd::IChangeable* CArc::CloneMe(CompatibilityMode mode) const
 
 bool CArc::Serialize(iser::IArchive& archive)
 {
-	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this, CF_OBJECT_POSITION | CF_MODEL);
+	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this);
 
 	bool retVal = true;
 
@@ -271,3 +270,5 @@ bool CArc::Serialize(iser::IArchive& archive)
 }
 
 } // namespace i2d
+
+

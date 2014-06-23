@@ -1014,7 +1014,7 @@ bool CPackageOverviewComp::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
 
 // reimplemented (iqtgui::TGuiObserverWrap)
 
-void CPackageOverviewComp::UpdateGui(int updateFlags)
+void CPackageOverviewComp::UpdateGui(const istd::IChangeable::ChangeSet& changeSet)
 {
 	Q_ASSERT(IsGuiCreated());
 
@@ -1031,7 +1031,7 @@ void CPackageOverviewComp::UpdateGui(int updateFlags)
 			}
 		}
 
-		if ((updateFlags & IElementSelectionInfo::CF_SELECTION) == 0){	// ignore selection only changes
+		if (!changeSet.Contains(IElementSelectionInfo::CF_SELECTION)){	// ignore selection only changes
 			GenerateComponentTree(false);
 		}
 	}
@@ -1090,7 +1090,8 @@ void CPackageOverviewComp::OnRetranslate()
 {
 	BaseClass::OnRetranslate();
 
-	istd::CChangeNotifier changePtr(this, CF_COMMANDS);
+	static istd::IChangeable::ChangeSet commandsChangeSet(ibase::ICommandsProvider::CF_COMMANDS);
+	istd::CChangeNotifier commandsNotifier(this, commandsChangeSet);
 
 	m_packagesCommand.SetVisuals(tr("&Packages"), tr("Packages"), tr("Menu for packages"));
 	m_reloadCommand.SetVisuals(tr("&Reload All Packages"), tr("Reload"), tr("Reloads all packages form configuration file"), QIcon(":/Icons/Reload"));
@@ -1203,9 +1204,9 @@ CPackageOverviewComp::RegistryObserver::RegistryObserver(CPackageOverviewComp* p
 
 // reimplemented (imod::CSingleModelObserverBase)
 
-void CPackageOverviewComp::RegistryObserver::OnUpdate(int updateFlags, istd::IPolymorphic* /*updateParamsPtr*/)
+void CPackageOverviewComp::RegistryObserver::OnUpdate(const istd::IChangeable::ChangeSet& changeSet)
 {
-	if ((updateFlags & icomp::IRegistry::CF_EMBEDDED) != 0){
+	if (changeSet.Contains(icomp::IRegistry::CF_EMBEDDED)){
 		if (m_parent.IsUpdateBlocked()){
 			return;
 		}
@@ -1230,7 +1231,7 @@ CPackageOverviewComp::ConfigObserver::ConfigObserver(CPackageOverviewComp* paren
 
 // reimplemented (imod::CSingleModelObserverBase)
 
-void CPackageOverviewComp::ConfigObserver::OnUpdate(int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
+void CPackageOverviewComp::ConfigObserver::OnUpdate(const ChangeSet& /*changeSet*/)
 {
 	if (!m_parent.m_envManagerCompPtr.IsValid()){
 		return;

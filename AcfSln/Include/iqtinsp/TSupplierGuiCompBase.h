@@ -33,7 +33,7 @@
 #endif
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 #include "istd/TOptDelPtr.h"
 #include "ifile/IFilePersistence.h"
 #include "imod/IObserver.h"
@@ -125,7 +125,7 @@ protected:
 	virtual void CreateShapes(int sceneId, Shapes& result);
 
 	// reimplemented (imod::IObserver)
-	virtual void AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr);
+	virtual void AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet);
 
 	// abstract methods
 	/**
@@ -145,7 +145,7 @@ protected:
 
 	protected:
 		// reimplemented (imod::CSingleModelObserverBase)
-		virtual void OnUpdate(int updateFlags, istd::IPolymorphic* updateParamsPtr);
+		virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet);
 
 	private:
 		TSupplierGuiCompBase& m_parent;
@@ -439,10 +439,10 @@ void TSupplierGuiCompBase<UI, WidgetType>::CreateShapes(int /*sceneId*/, Shapes&
 // reimplemented (imod::IObserver)
 
 template <class UI, class WidgetType>
-void TSupplierGuiCompBase<UI, WidgetType>::AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr)
+void TSupplierGuiCompBase<UI, WidgetType>::AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet)
 {
 	if (!BaseClass::IsGuiCreated()){
-		BaseClass::AfterUpdate(modelPtr, updateFlags, updateParamsPtr);
+		BaseClass::AfterUpdate(modelPtr, changeSet);
 
 		return;
 	}
@@ -508,7 +508,7 @@ void TSupplierGuiCompBase<UI, WidgetType>::AfterUpdate(imod::IModel* modelPtr, i
 	BaseClass::SetStatusIcon(statusIcon);
 	BaseClass::SetStatusText(statusText);
 
-	BaseClass::AfterUpdate(modelPtr, updateFlags, updateParamsPtr);
+	BaseClass::AfterUpdate(modelPtr, changeSet);
 }
 
 
@@ -524,11 +524,9 @@ TSupplierGuiCompBase<UI, WidgetType>::ParamsObserver::ParamsObserver(TSupplierGu
 
 // reimplemented (imod::CSingleModelObserverBase)
 template <class UI, class WidgetType>
-void TSupplierGuiCompBase<UI, WidgetType>::ParamsObserver::OnUpdate(int updateFlags, istd::IPolymorphic* /*updateParamsPtr*/)
+void TSupplierGuiCompBase<UI, WidgetType>::ParamsObserver::OnUpdate(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
-	if ((updateFlags & istd::IChangeable::CF_MODEL) != 0){
-		m_parent.OnSupplierParamsChanged();
-	}
+	m_parent.OnSupplierParamsChanged();
 }
 
 } // namespace iqtinsp

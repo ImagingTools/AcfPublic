@@ -33,7 +33,7 @@
 
 // ACF includes
 #include "iqt/iqt.h"
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 
 
 namespace iqtauth
@@ -88,7 +88,7 @@ void CChangePasswordDialog::on_ButtonBox_accepted()
 	}
 
 
-	istd::TChangeNotifier<iauth::IUsersManager> updatePtr(&m_usersManager);
+	istd::CChangeNotifier notifier(&m_usersManager);
 
 	if (m_loggedUser.SetPassword(newPassword)){
 		accept();

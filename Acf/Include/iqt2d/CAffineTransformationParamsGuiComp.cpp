@@ -76,7 +76,7 @@ void CAffineTransformationParamsGuiComp::OnGuiModelDetached()
 }
 
 
-void CAffineTransformationParamsGuiComp::UpdateGui(int /*updateFlags*/)
+void CAffineTransformationParamsGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	Q_ASSERT(IsGuiCreated());
 

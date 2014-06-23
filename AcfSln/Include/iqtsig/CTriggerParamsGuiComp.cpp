@@ -23,7 +23,7 @@
 #include "iqtsig/CTriggerParamsGuiComp.h"
 
 
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 
 #include "isig/ITriggerConstraints.h"
 
@@ -107,7 +107,7 @@ void CTriggerParamsGuiComp::OnGuiModelAttached()
 }
 
 
-void CTriggerParamsGuiComp::UpdateGui(int /*updateFlags*/)
+void CTriggerParamsGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	Q_ASSERT(IsGuiCreated());
 

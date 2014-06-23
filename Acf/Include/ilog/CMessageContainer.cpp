@@ -24,7 +24,7 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 #include "istd/IFactoryInfo.h"
 #include "istd/TDelPtr.h"
 #include "iser/IObject.h"
@@ -119,7 +119,8 @@ bool CMessageContainer::Serialize(iser::IArchive& archive)
 		return false;
 	}
 
-	istd::CChangeNotifier changePtr(archive.IsStoring() ? NULL : this);
+	static ChangeSet changeSet(CF_ALL_DATA);
+	istd::CChangeNotifier notifier(archive.IsStoring() ? NULL : this, changeSet);
 
 	if (archive.IsStoring()){
 		for (		MessageList::ConstIterator iter = m_messages.constBegin();
@@ -260,15 +261,14 @@ void CMessageContainer::AddMessage(const IMessageConsumer::MessagePtr& messagePt
 		return;
 	}
 
-	{
-		istd::CChangeNotifier changePtr(this, CF_MODEL | CF_MESSAGE_ADDED, const_cast<istd::IInformationProvider*>(messagePtr.GetPtr()));
+	static ChangeSet changeSet(CF_MESSAGE_ADDED);
+	istd::CChangeNotifier notifier(this, changeSet);
 
-		m_messages.push_front(messagePtr);
+	m_messages.push_front(messagePtr);
 
-		int messageCategory = messagePtr->GetInformationCategory();
-		if ((m_worstCategory >= 0) && (messageCategory > m_worstCategory)){
-			m_worstCategory = messageCategory;
-		}
+	int messageCategory = messagePtr->GetInformationCategory();
+	if ((m_worstCategory >= 0) && (messageCategory > m_worstCategory)){
+		m_worstCategory = messageCategory;
 	}
 
 	if (m_maxMessagesCount >= 0){
@@ -276,7 +276,7 @@ void CMessageContainer::AddMessage(const IMessageConsumer::MessagePtr& messagePt
 			Q_ASSERT(!m_messages.isEmpty());
 			const IMessageConsumer::MessagePtr& messageToRemovePtr = m_messages.back();
 
-			istd::CChangeNotifier changePtr(this, CF_MODEL | CF_MESSAGE_REMOVED, const_cast<istd::IInformationProvider*>(messageToRemovePtr.GetPtr()));
+			notifier.AppendChangeId(CF_MESSAGE_REMOVED);
 
 			int removeCategory = messageToRemovePtr->GetInformationCategory();
 			if (removeCategory >= m_worstCategory){
@@ -296,7 +296,8 @@ void CMessageContainer::AddMessage(const IMessageConsumer::MessagePtr& messagePt
 void CMessageContainer::ClearMessages()
 {
 	if (!m_messages.isEmpty()){
-		istd::CChangeNotifier changePtr(this, CF_MODEL | CF_RESET);
+		static ChangeSet changeSet(CF_RESET, CF_MESSAGE_REMOVED);
+		istd::CChangeNotifier notifier(this, changeSet);
 		
 		m_messages.clear();
 
@@ -334,7 +335,8 @@ bool CMessageContainer::CopyFrom(const istd::IChangeable& object, CompatibilityM
 {
 	m_messages.clear();
 
-	istd::CChangeNotifier changePtr(this, CF_MODEL | CF_RESET | CF_MESSAGE_ADDED);
+	static ChangeSet changeSet(CF_ALL_DATA, CF_RESET, CF_MESSAGE_ADDED, CF_MESSAGE_REMOVED);
+	istd::CChangeNotifier notifier(this, changeSet);
 
 	switch (mode){
 		case CM_STRICT:

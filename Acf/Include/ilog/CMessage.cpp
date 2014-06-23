@@ -24,7 +24,7 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 #include "istd/CClassInfo.h"
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
@@ -33,6 +33,10 @@
 
 namespace ilog
 {		
+
+
+// local variables
+static istd::IChangeable::ChangeSet allDataChangeIds(istd::IChangeable::CF_ALL_DATA);
 
 
 CMessage::CMessage()
@@ -74,7 +78,7 @@ void CMessage::SetMessageValues(
 			int flags,
 			const QDateTime* timeStampPtr)
 {
-	istd::CChangeNotifier notifier(this);
+	istd::CChangeNotifier notifier(this, allDataChangeIds);
 
 	m_category = category;
 	m_id = id;
@@ -94,7 +98,7 @@ void CMessage::SetMessageValues(
 void CMessage::SetCategory(istd::IInformationProvider::InformationCategory category)
 {
 	if (category != m_category){
-		istd::CChangeNotifier notifier(this);
+		istd::CChangeNotifier notifier(this, allDataChangeIds);
 
 		m_category = category;
 	}
@@ -104,7 +108,7 @@ void CMessage::SetCategory(istd::IInformationProvider::InformationCategory categ
 void CMessage::SetText(const QString& text)
 {
 	if (text != m_text){
-		istd::CChangeNotifier notifier(this);
+		istd::CChangeNotifier notifier(this, allDataChangeIds);
 
 		m_text = text;
 	}
@@ -114,7 +118,7 @@ void CMessage::SetText(const QString& text)
 void CMessage::SetSource(const QString& source)
 {
 	if (source != m_source){
-		istd::CChangeNotifier notifier(this);
+		istd::CChangeNotifier notifier(this, allDataChangeIds);
 
 		m_source = source;
 	}

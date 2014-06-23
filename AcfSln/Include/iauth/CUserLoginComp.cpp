@@ -24,7 +24,7 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 
 
 namespace iauth
@@ -59,7 +59,8 @@ bool CUserLoginComp::Login(const QString& userName, const QString& password)
 					}
 				}
 
-				istd::CChangeNotifier changePtr(this, CF_LOGIN | CF_MODEL);
+				static ChangeSet changeSet(CF_LOGIN);
+				istd::CChangeNotifier changePtr(this, changeSet);
 
 				m_loggedUserName = userName;
 
@@ -76,7 +77,8 @@ bool CUserLoginComp::Logout()
 {
 	if (m_usersManagerIfPtr.IsValid()){
 		if (!m_loggedUserName.isEmpty()){
-			istd::CChangeNotifier changePtr(this, CF_LOGOUT | CF_MODEL);
+			static ChangeSet changeSet(CF_LOGOUT);
+			istd::CChangeNotifier changePtr(this, changeSet);
 
 			m_loggedUserName.clear();
 

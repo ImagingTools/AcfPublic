@@ -27,7 +27,7 @@
 #include <QtCore/QElapsedTimer>
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 #include "iprm/IParamsSet.h"
 #include "iprm/TParamsPtr.h"
 #include "iimg/IBitmap.h"
@@ -61,10 +61,12 @@ int CSimpleCameraComp::DoProcessing(
 		return TS_OK;
 	}
 
-	istd::TChangeNotifier<iimg::IBitmap> bitmapPtr(dynamic_cast<iimg::IBitmap*>(outputPtr));
-	if (!bitmapPtr.IsValid()){
+	iimg::IBitmap* bitmapPtr = dynamic_cast<iimg::IBitmap*>(outputPtr);
+	if (bitmapPtr == NULL){
 		return TS_INVALID;
 	}
+
+	istd::CChangeNotifier notifier(bitmapPtr);
 
 	SetParametersToCamera(paramsPtr);
 

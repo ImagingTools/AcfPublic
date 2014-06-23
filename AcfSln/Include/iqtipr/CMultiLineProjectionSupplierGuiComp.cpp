@@ -101,9 +101,9 @@ void CMultiLineProjectionSupplierGuiComp::OnGuiModelDetached()
 }
 
 
-void CMultiLineProjectionSupplierGuiComp::UpdateGui(int updateFlags)
+void CMultiLineProjectionSupplierGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& changeSet)
 {
-	BaseClass::UpdateGui(updateFlags);
+	BaseClass::UpdateGui(changeSet);
 
 	Q_ASSERT(IsGuiCreated());
 
@@ -157,7 +157,7 @@ QWidget* CMultiLineProjectionSupplierGuiComp::GetParamsWidget() const
 void CMultiLineProjectionSupplierGuiComp::OnProjectionIndexChanged(int index)
 {
 	if (m_projectionSelectorCompPtr.IsValid() && (m_projectionSelectorCompPtr->GetSelectedOptionIndex() != index)){
-		UpdateGui();
+		UpdateGui(istd::IChangeable::GetAllChanges());
 	
 		m_projectionSelectorCompPtr->SetSelectedOptionIndex(index);
 	}

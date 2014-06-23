@@ -67,7 +67,7 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemenented (iqtgui::TGuiObserverWrap)
-	virtual void UpdateGui(int updateFlags = 0);
+	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet);
 
 protected:
 	// reimplemented (iqtgui::CGuiComponentBase)

@@ -30,7 +30,7 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 
 #include "iimg/IQImageProvider.h"
 #include "iimg/CBitmap.h"

@@ -25,7 +25,7 @@
 
 
 // ACF includes
-#include "istd/IPolymorphic.h"
+#include "istd/IChangeable.h"
 #include "imod/imod.h"
 
 
@@ -49,6 +49,8 @@ public:
 		Attaches model object to observer \c observerPtr.
 		\warning Please note, that  double call of this function 
 		for the same \c observer will cause an assertion.
+		\param	observerPtr	observer, cannot be \c NULL.
+		\param	changeMask	set of change ID's. Only changes containing any of selected ID will be signalized to observer.
 	*/
 	virtual bool AttachObserver(IObserver* observerPtr) = 0;
 

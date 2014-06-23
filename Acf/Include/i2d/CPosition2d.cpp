@@ -24,7 +24,7 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 
 #include "i2d/CRectangle.h"
 
@@ -52,7 +52,8 @@ CPosition2d::CPosition2d(const CVector2d& position)
 void CPosition2d::SetPosition(const CVector2d& position)
 {
 	if (position != m_position){
-		istd::CChangeNotifier notifier(this, CF_OBJECT_POSITION | CF_MODEL);
+		static ChangeSet changeSet(CF_OBJECT_POSITION);
+		istd::CChangeNotifier notifier(this, changeSet);
 
 		m_position = position;
 	}
@@ -226,7 +227,8 @@ bool CPosition2d::Serialize(iser::IArchive& archive)
 {
 	static iser::CArchiveTag centerTag("Center", "Center position");
 
-	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this, CF_OBJECT_POSITION | CF_MODEL);
+	static ChangeSet changeSet(CF_OBJECT_POSITION);
+	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this, changeSet);
 
 	bool retVal = true;
 

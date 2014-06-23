@@ -56,8 +56,8 @@ public:
 	TGuiObserverWrap();
 
 	// pseudo-reimplemented (imod::IObserver)
-	virtual bool OnAttached(imod::IModel* modelPtr);
-	virtual bool OnDetached(imod::IModel* modelPtr);
+	virtual bool OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask);
+	virtual bool OnModelDetached(imod::IModel* modelPtr);
 
 protected:
 	class UpdateBlocker
@@ -69,12 +69,6 @@ protected:
 	private:
 		TGuiObserverWrap<Gui, Observer>& m_parent;
 	};
-
-	/**
-		Sets update flags for the editor.
-		GUI editor will ignore all update events, which not matches the previously set filter.
-	*/
-	virtual void SetUpdateFilter(int updateFlags);
 
 	/**
 		Called when model is attached and GUI is shown.
@@ -110,10 +104,10 @@ protected:
 	/**
 		Do update of the model GUI.
 	*/
-	virtual void UpdateGui(int updateFlags);
+	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet);
 
 	// reimplemented (imod::IModelEditor)
-	virtual void UpdateEditor(int updateFlags = 0);
+	virtual void UpdateEditor(const istd::IChangeable::ChangeSet& changeSet);
 	virtual void UpdateModel() const;
 
 	// pseudo-reimplemented (iqtgui::CGuiComponentBase)
@@ -124,7 +118,7 @@ protected:
 	virtual void OnGuiDestroyed();
 
 	// pseudo-reimplemented (imod::IObserver)
-	virtual void AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr);
+	virtual void AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet);
 
 	// pseudo-reimplemented (imod::IModelEditor)
 	virtual bool IsReadOnly() const;
@@ -134,11 +128,10 @@ protected:
 	bool m_isReadOnly;
 
 private:
-	void DoUpdate(int updateFlags);
+	void DoUpdate(const istd::IChangeable::ChangeSet& changeSet);
 
 private:
 	int m_ignoreUpdatesCounter;
-	int m_updateFilter;
 
 	/**
 		Do editor update, if the gui change its state to visible.
@@ -148,7 +141,7 @@ private:
 	/**
 		Cumulated flags for UI-update after it becomes visible state.
 	*/
-	int m_updateOnShowFlags;
+	istd::IChangeable::ChangeSet m_onShowChangeIds;
 };
 
 
@@ -158,9 +151,7 @@ template <class Gui, class Observer>
 TGuiObserverWrap<Gui, Observer>::TGuiObserverWrap()
 :	m_isReadOnly(false),
 	m_ignoreUpdatesCounter(0),
-	m_updateFilter(0),
-	m_updateOnShow(false),
-	m_updateOnShowFlags(0)
+	m_updateOnShow(false)
 {
 }
 
@@ -168,13 +159,14 @@ TGuiObserverWrap<Gui, Observer>::TGuiObserverWrap()
 // pseudo-reimplemented (imod::IObserver)
 
 template <class Gui, class Observer>
-bool TGuiObserverWrap<Gui, Observer>::OnAttached(imod::IModel* modelPtr)
+bool TGuiObserverWrap<Gui, Observer>::OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask)
 {
-	bool retVal;
+	bool retVal = false;
+
 	{
 		UpdateBlocker block(this);
 
-		retVal = Observer::OnAttached(modelPtr);
+		retVal = Observer::OnModelAttached(modelPtr, changeMask);
 	}
 
 	if (retVal && Gui::IsGuiCreated()){
@@ -188,7 +180,7 @@ bool TGuiObserverWrap<Gui, Observer>::OnAttached(imod::IModel* modelPtr)
 
 
 template <class Gui, class Observer>
-bool TGuiObserverWrap<Gui, Observer>::OnDetached(imod::IModel* modelPtr)
+bool TGuiObserverWrap<Gui, Observer>::OnModelDetached(imod::IModel* modelPtr)
 {
 	if (Observer::IsModelAttached(modelPtr)){
 		if (Gui::IsGuiCreated()){
@@ -202,18 +194,11 @@ bool TGuiObserverWrap<Gui, Observer>::OnDetached(imod::IModel* modelPtr)
 		}
 	}
 
-	return Observer::OnDetached(modelPtr);
+	return Observer::OnModelDetached(modelPtr);
 }
 
 
 // protected methods
-
-template <class Gui, class Observer>
-void TGuiObserverWrap<Gui, Observer>::SetUpdateFilter(int updateFlags)
-{
-	m_updateFilter = updateFlags;
-}
-
 
 template <class Gui, class Observer>
 void TGuiObserverWrap<Gui, Observer>::OnGuiModelShown()
@@ -233,7 +218,8 @@ void TGuiObserverWrap<Gui, Observer>::OnGuiModelAttached()
 	Q_ASSERT(Gui::IsGuiCreated());
 	Q_ASSERT(Observer::IsModelAttached(NULL));
 
-	UpdateEditor(CF_INIT_EDITOR);
+	static istd::IChangeable::ChangeSet initChangeSet(CF_INIT_EDITOR);
+	UpdateEditor(initChangeSet);
 }
 
 
@@ -271,7 +257,7 @@ bool TGuiObserverWrap<Gui, Observer>::DoUpdateModel()
 
 
 template <class Gui, class Observer>
-void TGuiObserverWrap<Gui, Observer>::UpdateGui(int /*updateFlags*/)
+void TGuiObserverWrap<Gui, Observer>::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 }
 
@@ -279,15 +265,15 @@ void TGuiObserverWrap<Gui, Observer>::UpdateGui(int /*updateFlags*/)
 // reimplemented (imod::IModelEditor)
 
 template <class Gui, class Observer>
-void TGuiObserverWrap<Gui, Observer>::UpdateEditor(int updateFlags)
+void TGuiObserverWrap<Gui, Observer>::UpdateEditor(const istd::IChangeable::ChangeSet& changeSet)
 {
 	if (Gui::IsGuiShown()){
-		DoUpdate(updateFlags);
+		DoUpdate(changeSet);
 	}
 	else{
 		// prepare postponed update
 		m_updateOnShow = true;
-		m_updateOnShowFlags = m_updateOnShowFlags | updateFlags;
+		m_onShowChangeIds += changeSet;
 
 		return;
 	}
@@ -310,9 +296,9 @@ void TGuiObserverWrap<Gui, Observer>::OnGuiShown()
 	if (Observer::IsModelAttached(NULL)){
 		if (m_updateOnShow){
 			// skip update if the UI is not visible:
-			DoUpdate(m_updateOnShowFlags);
+			DoUpdate(m_onShowChangeIds);
 
-			m_updateOnShowFlags = 0;
+			m_onShowChangeIds.Reset();
 			m_updateOnShow = false;
 		}
 
@@ -366,18 +352,18 @@ void TGuiObserverWrap<Gui, Observer>::OnGuiDestroyed()
 // pseudo-reimplemented (imod::IObserver)
 
 template <class Gui, class Observer>
-void TGuiObserverWrap<Gui, Observer>::AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr)
+void TGuiObserverWrap<Gui, Observer>::AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet)
 {
 	Q_ASSERT(modelPtr != NULL);
 	Q_ASSERT(Observer::IsModelAttached(modelPtr));
 
-	Observer::AfterUpdate(modelPtr, updateFlags, updateParamsPtr);
+	Observer::AfterUpdate(modelPtr, changeSet);
 
 	if (!Gui::IsGuiCreated()){
 		return;
 	}
 
-	UpdateEditor(updateFlags);
+	UpdateEditor(changeSet);
 }
 
 
@@ -408,22 +394,15 @@ void TGuiObserverWrap<Gui, Observer>::SetReadOnly(bool state)
 // private methods
 
 template <class Gui, class Observer>
-void TGuiObserverWrap<Gui, Observer>::DoUpdate(int updateFlags)
+void TGuiObserverWrap<Gui, Observer>::DoUpdate(const istd::IChangeable::ChangeSet& changeSet)
 {
-	bool skipUpdate = false;
-	if ((m_updateFilter != 0) && (updateFlags != 0)){
-		if ((updateFlags & CF_INIT_EDITOR) == 0){
-			skipUpdate = ((m_updateFilter & updateFlags) == 0);
-		}
+	if (changeSet.IsEmpty() || IsUpdateBlocked() || !Gui::IsGuiCreated()){
+		return;
 	}
 
-	if (!skipUpdate){
-		if (!IsUpdateBlocked() && Gui::IsGuiCreated()){
-			UpdateBlocker updateBlocker(this);
+	UpdateBlocker updateBlocker(this);
 
-			UpdateGui(updateFlags);
-		}
-	}
+	UpdateGui(changeSet);
 }
 
 

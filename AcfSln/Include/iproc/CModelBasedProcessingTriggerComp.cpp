@@ -24,7 +24,7 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 #include "imod/IModel.h"
 #include "ibase/IProgressManager.h"
 
@@ -64,7 +64,7 @@ void CModelBasedProcessingTriggerComp::OnComponentDestroyed()
 	
 // reimplemented (imod::CSingleModelObserverBase)
 
-void CModelBasedProcessingTriggerComp::OnUpdate(int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
+void CModelBasedProcessingTriggerComp::OnUpdate(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	DoProcessing();
 }
@@ -112,7 +112,7 @@ CModelBasedProcessingTriggerComp::ParamsObserver::ParamsObserver(CModelBasedProc
 
 // reimplemented (imod::CSingleModelObserverBase)
 
-void CModelBasedProcessingTriggerComp::ParamsObserver::OnUpdate(int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
+void CModelBasedProcessingTriggerComp::ParamsObserver::OnUpdate(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	m_parent.DoProcessing();
 }

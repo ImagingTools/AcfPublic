@@ -24,7 +24,7 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeGroup.h"
 
 
 namespace iqt2d
@@ -42,37 +42,26 @@ void CAnnulusSegmentParamsGuiComp::UpdateModel() const
 	i2d::CAnnulusSegment* objectPtr = GetObjectPtr();
 	Q_ASSERT(objectPtr != NULL);
 
-	istd::CChangeNotifier notifier(NULL);
+	istd::CChangeGroup changeGroup(objectPtr);
 
 	i2d::CVector2d postion(XSpin->value(), YSpin->value());
-	if (objectPtr->GetCenter() != postion){
-		notifier.SetPtr(objectPtr);
-		objectPtr->SetPosition(postion);
-	}
+	objectPtr->SetPosition(postion);
 
 	double innerRadius = InnerRadiusSpin->value();
-	if (objectPtr->GetInnerRadius() != innerRadius){
-		notifier.SetPtr(objectPtr);
-		objectPtr->SetInnerRadius(innerRadius);
-	}
+	objectPtr->SetInnerRadius(innerRadius);
 
 	double outerRadius = OuterRadiusSpin->value();
-	if (objectPtr->GetOuterRadius() != outerRadius){
-		notifier.SetPtr(objectPtr);
-		objectPtr->SetOuterRadius(outerRadius);
-	}
+	objectPtr->SetOuterRadius(outerRadius);
 
 	double beginAngle = imath::GetRadianFromDegree(BeginAngleSB->value());
 	double prec = qPow(0.1, BeginAngleSB->decimals() + 1);
 	if (beginAngle - objectPtr->GetBeginAngle() > prec){
-		notifier.SetPtr(objectPtr);
 		objectPtr->SetBeginAngle(beginAngle);
 	}
 
 	double endAngle = imath::GetRadianFromDegree(EndAngleSB->value());
 	prec = qPow(0.1, EndAngleSB->decimals() + 1);
 	if (endAngle - objectPtr->GetEndAngle() > prec){
-		notifier.SetPtr(objectPtr);
 		objectPtr->SetEndAngle(endAngle);
 	}
 }
@@ -82,7 +71,7 @@ void CAnnulusSegmentParamsGuiComp::UpdateModel() const
 
 // reimplemented (iqtgui::TGuiObserverWrap)
 
-void CAnnulusSegmentParamsGuiComp::UpdateGui(int /*updateFlags*/)
+void CAnnulusSegmentParamsGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	Q_ASSERT(IsGuiCreated());
 

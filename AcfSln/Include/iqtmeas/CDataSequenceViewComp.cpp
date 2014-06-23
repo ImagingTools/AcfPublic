@@ -48,7 +48,7 @@ CDataSequenceViewComp::CDataSequenceViewComp()
 
 // reimplemenented (iqtgui::TGuiObserverWrap)
 
-void CDataSequenceViewComp::UpdateGui(int /*updateFlags*/)
+void CDataSequenceViewComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	Q_ASSERT(IsGuiCreated());
 
@@ -109,43 +109,43 @@ void CDataSequenceViewComp::OnGuiCreated()
 
 void CDataSequenceViewComp::on_TimeSpanCB_toggled(bool /*state*/)
 {
-	UpdateGui();
+	UpdateGui(istd::IChangeable::GetAllChanges());
 }
 
 
 void CDataSequenceViewComp::on_ScaleCB_toggled(bool /*state*/)
 {
-	UpdateGui();
+	UpdateGui(istd::IChangeable::GetAllChanges());
 }
 
 
 void CDataSequenceViewComp::on_TimeBeginSB_valueChanged(double /*value*/)
 {
-	UpdateGui();
+	UpdateGui(istd::IChangeable::GetAllChanges());
 }
 
 
 void CDataSequenceViewComp::on_TimeEndSB_valueChanged(double /*value*/)
 {
-	UpdateGui();
+	UpdateGui(istd::IChangeable::GetAllChanges());
 }
 
 
 void CDataSequenceViewComp::on_ValueMinSB_valueChanged(double /*value*/)
 {
-	UpdateGui();
+	UpdateGui(istd::IChangeable::GetAllChanges());
 }
 
 
 void CDataSequenceViewComp::on_ValueMaxSB_valueChanged(double /*value*/)
 {
-	UpdateGui();
+	UpdateGui(istd::IChangeable::GetAllChanges());
 }
 
 
 void CDataSequenceViewComp::on_ChannelSelectorCB_currentIndexChanged(int /*index*/)
 {
-	UpdateGui();
+	UpdateGui(istd::IChangeable::GetAllChanges());
 }
 
 
@@ -163,7 +163,7 @@ void CDataSequenceViewComp::on_ZoomInButton_clicked()
 	TimeBeginSB->setValue((TimeBeginSB->value() + center) * 0.5);
 	TimeEndSB->setValue((TimeEndSB->value() + center) * 0.5);
 
-	UpdateGui();
+	UpdateGui(istd::IChangeable::GetAllChanges());
 }
 
 
@@ -190,7 +190,7 @@ void CDataSequenceViewComp::on_ZoomOutButton_clicked()
 	TimeBeginSB->setValue(qMax(0.0, TimeBeginSB->value() * 2 - center));
 	TimeEndSB->setValue(qMin(TimeEndSB->value() * 2 - center, maxTimeSpan));
 
-	UpdateGui();
+	UpdateGui(istd::IChangeable::GetAllChanges());
 }
 
 
@@ -215,7 +215,7 @@ void CDataSequenceViewComp::on_PrevButton_clicked()
 	TimeBeginSB->setValue(TimeBeginSB->value() - shift);
 	TimeEndSB->setValue(TimeEndSB->value() - shift);
 
-	UpdateGui();
+	UpdateGui(istd::IChangeable::GetAllChanges());
 }
 
 
@@ -249,7 +249,7 @@ void CDataSequenceViewComp::on_NextButton_clicked()
 	TimeBeginSB->setValue(TimeBeginSB->value() + shift);
 	TimeEndSB->setValue(TimeEndSB->value() + shift);
 
-	UpdateGui();
+	UpdateGui(istd::IChangeable::GetAllChanges());
 }
 
 

@@ -25,10 +25,9 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
-
+#include "istd/CChangeGroup.h"
+#include "istd/TDelPtr.h"
 #include "imod/IModel.h"
-
 #include "iview/IInteractiveShape.h"
 #include "iview/IDraggable.h"
 #include "iview/ISelectable.h"
@@ -75,8 +74,8 @@ public:
 	virtual void EndDrag();
 
 	// reimplemented (imod::IObserver)
-	virtual bool OnAttached(imod::IModel* modelPtr);
-	virtual bool OnDetached(imod::IModel* modelPtr);
+	virtual bool OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask);
+	virtual bool OnModelDetached(imod::IModel* modelPtr);
 
 protected:
 	void BeginTickerDrag();
@@ -101,7 +100,7 @@ protected:
 	void DrawText(QPainter& drawContext, istd::CIndex2d point, const QString& text) const;
 
 	// reimplemented (iview::CShapeBase)
-	virtual int GetDisplayChangesMask();
+	virtual bool IsDisplayChangeImportant(const istd::IChangeable::ChangeSet& changeSet);
 
 	// abstract methods
 	virtual void BeginLogDrag(const i2d::CVector2d& reference) = 0;
@@ -111,7 +110,7 @@ private:
 	bool m_isSelected;
 	bool m_isEditablePosition;
 
-	istd::TChangeNotifier<istd::IChangeable> m_changeNotifier;
+	istd::TDelPtr<istd::CChangeGroup> m_dragNotifierPtr;
 };
 
 
@@ -171,9 +170,9 @@ inline bool CInteractiveShapeBase::ExecuteAction(IInteractiveShape::ShapeAction 
 
 // reimplemented (iview::CShapeBase)
 
-inline int CInteractiveShapeBase::GetDisplayChangesMask()
+inline bool CInteractiveShapeBase::IsDisplayChangeImportant(const istd::IChangeable::ChangeSet& changeSet)
 {
-	return BaseClass::GetDisplayChangesMask() | CF_EDIT_MODE;
+	return BaseClass::IsDisplayChangeImportant(changeSet) || changeSet.Contains(IDisplay::CF_EDIT_MODE);
 }
 
 

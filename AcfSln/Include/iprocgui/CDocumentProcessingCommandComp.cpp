@@ -24,7 +24,7 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 #include "istd/CGeneralTimeStamp.h"
 
 #include "iqtgui/CGuiComponentDialog.h"

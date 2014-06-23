@@ -197,9 +197,9 @@ void CMultiBitmapSupplierGuiComp::OnGuiModelAttached()
 }
 
 
-void CMultiBitmapSupplierGuiComp::UpdateGui(int updateFlags)
+void CMultiBitmapSupplierGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& changeSet)
 {
-	BaseClass::UpdateGui(updateFlags);
+	BaseClass::UpdateGui(changeSet);
 
 	Q_ASSERT(IsGuiCreated());
 

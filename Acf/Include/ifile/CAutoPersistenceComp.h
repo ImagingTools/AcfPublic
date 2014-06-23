@@ -28,6 +28,7 @@
 #include <QtCore/QObject>
 #include <QtCore/QTimer>
 #include <QtCore/QFuture>
+#include <QtCore/QFileSystemWatcher>
 
 // ACF includes
 #include "istd/IChangeable.h"
@@ -91,7 +92,8 @@ public:
 		I_ASSIGN(m_restoreOnBeginAttrPtr, "RestoreOnBegin", "Flag indicating that object should be restored on begin", true, true);
 		I_ASSIGN(m_storeOnEndAttrPtr, "StoreOnEnd", "Flag indicating that object should be stored on end", true, true);
 		I_ASSIGN(m_storeOnChangeAttrPtr, "StoreOnChange", "Flag indicating that object should be stored on each data change", true, false);
-		I_ASSIGN(m_storeIntervalAttrPtr, "StoreInterval", "Time interval in seconds for automatic object storing", false, 10)
+		I_ASSIGN(m_storeIntervalAttrPtr, "StoreInterval", "Time interval in seconds for automatic object storing", false, 10);
+		I_ASSIGN(m_reloadOnFileChangeAttrPtr, "AutoReload", "Update data model if the file was changed", true, false);
 	I_END_COMPONENT;
 
 	/**
@@ -115,13 +117,15 @@ protected:
 	virtual void OnComponentDestroyed();
 
 	// reimplemented (imod::CMultiModelDispatcherBase)
-	virtual void OnModelChanged(int modelId, int changeFlags, istd::IPolymorphic* updateParamsPtr);
+	virtual void OnModelChanged(int modelId, const istd::IChangeable::ChangeSet& changeSet);
 
 private Q_SLOTS:
 	/**
 		Slot triggered if the persistence timer expired and trigger object saving.
 	*/
 	void OnTimeout();
+
+	void OnFileContentsChanged(const QString& path);
 
 private:
 	/**
@@ -162,12 +166,16 @@ private:
 	*/
 	I_ATTR(bool, m_storeOnChangeAttrPtr);
 
-
 	/**
 		Attribute for defining the store interval.
 		If set the data object wil be saved in the given interval, of the object's data has been changed.
 	*/
 	I_ATTR(double, m_storeIntervalAttrPtr);
+
+	/**
+		If set the data object wil be reloaded if the file was changed.
+	*/
+	I_ATTR(bool, m_reloadOnFileChangeAttrPtr);
 
 	iser::CMemoryWriteArchive m_lastStoredObjectState;
 
@@ -189,6 +197,10 @@ private:
 		Object copy used for multi-threading barrier.
 	*/
 	mutable istd::TDelPtr<istd::IChangeable> m_objectShadowPtr;
+
+	QFileSystemWatcher m_fileWatcher;
+
+	bool m_isReloading;
 };
 
 

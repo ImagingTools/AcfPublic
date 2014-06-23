@@ -24,7 +24,7 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 
 #include "iprm/IOptionsList.h"
 
@@ -106,7 +106,7 @@ void CSelectableGuiComp::OnGuiModelDetached()
 }
 
 
-void CSelectableGuiComp::UpdateGui(int /*updateFlags*/)
+void CSelectableGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	Q_ASSERT(IsGuiCreated());
 

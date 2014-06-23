@@ -66,7 +66,7 @@ public:
 
 
 	// reimplemented (imod::IObserver)
-	virtual bool OnDetached(imod::IModel* modelPtr);
+	virtual bool OnModelDetached(imod::IModel* modelPtr);
 
 	// reimplemented (iqt2d::IViewExtender)
 	virtual void AddItemsToScene(iqt2d::IViewProvider* providerPtr, int flags);
@@ -77,7 +77,7 @@ protected:
 	void DetachCurrentType();
 
 	// reimplemented (iqtgui::TGuiObserverWrap)
-	virtual void UpdateGui(int updateFlags = 0);
+	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet);
 
 	// reimplemented (iqtgui::CGuiComponentBase)
 	virtual void OnGuiCreated();

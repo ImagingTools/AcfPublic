@@ -24,7 +24,7 @@
 
 
  // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 #include "iprm/TParamsPtr.h"
 
 #include "ibase/CSize.h"

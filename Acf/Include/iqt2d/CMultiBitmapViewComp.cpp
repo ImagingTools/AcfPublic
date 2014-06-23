@@ -67,7 +67,7 @@ QIcon CMultiBitmapViewComp::GetCategoryIcon(istd::IInformationProvider::Informat
 
 // reimplemented (imod::CMultiModelDispatcherBase)
 
-void CMultiBitmapViewComp::OnModelChanged(int modelId, int /*changeFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
+void CMultiBitmapViewComp::OnModelChanged(int modelId, const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	// update general status if available
 	if (modelId == GeneralStatusModelId){
@@ -89,7 +89,7 @@ void CMultiBitmapViewComp::OnModelChanged(int modelId, int /*changeFlags*/, istd
 
 // reimplemented (iqtgui::TGuiObserverWrap)
 
-void CMultiBitmapViewComp::UpdateGui(int updateFlags)
+void CMultiBitmapViewComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	EnsureViewsCreated();
 
@@ -134,7 +134,7 @@ void CMultiBitmapViewComp::UpdateGui(int updateFlags)
 			Q_ASSERT(viewPtr != NULL);
 
 			viewExtenderPtr->RemoveItemsFromScene(viewPtr);
-			viewExtenderPtr->AddItemsToScene(viewPtr, updateFlags);
+			viewExtenderPtr->AddItemsToScene(viewPtr, iqt2d::IViewExtender::SF_DIRECT);
 		}
 	}
 }

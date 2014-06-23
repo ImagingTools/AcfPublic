@@ -24,7 +24,7 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 
 #include "iprm/IOptionsList.h"
 
@@ -203,13 +203,13 @@ bool CSelectionConsistencyControllerComp::CheckParamConsistency(const iprm::ISel
 
 // reimplemented (imod::IObserver)
 
-void CSelectionConsistencyControllerComp::BeforeUpdate(imod::IModel* /*modelPtr*/, int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
+void CSelectionConsistencyControllerComp::BeforeUpdate(imod::IModel* /*modelPtr*/)
 {
 	m_isCacheValid = false;
 }
 
 
-void CSelectionConsistencyControllerComp::AfterUpdate(imod::IModel* /*modelPtr*/, int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
+void CSelectionConsistencyControllerComp::AfterUpdate(imod::IModel* /*modelPtr*/, const ChangeSet& /*changeSet*/)
 {
 	m_isCacheValid = false;
 }

@@ -90,7 +90,7 @@ public:
 	virtual const ibase::IHierarchicalCommand* GetCommands() const;
 
 	// reimplemented (iqtgui::TGuiObserverWrap)
-	virtual void UpdateGui(int updateFlags = 0);
+	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet);
 	virtual void OnGuiModelAttached();
 	virtual void OnGuiModelDetached();
 
@@ -122,7 +122,7 @@ private:
 
 	protected:
 		// reimplemented (imod::TSingleModelObserverBase)
-		virtual void OnUpdate(int updateFlags, istd::IPolymorphic* updateParamsPtr);
+		virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet);
 
 	private:
 		CHotfolderGuiComp& m_parent;
@@ -159,7 +159,7 @@ private:
 
 	protected:
 		// reimplemented (imod::TSingleModelObserverBase)
-		virtual void OnUpdate(int updateFlags, istd::IPolymorphic* updateParamsPtr);
+		virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet);
 
 	private:
 		CHotfolderGuiComp& m_parent;

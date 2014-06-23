@@ -26,7 +26,7 @@
 // ACF includes
 #include "imath/CVarVector.h"
 
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 #include "iser/CMemoryReadArchive.h"
 
 // IACF includes
@@ -98,9 +98,9 @@ void CLineProjectionSupplierGuiComp::OnGuiModelAttached()
 }
 
 
-void CLineProjectionSupplierGuiComp::UpdateGui(int updateFlags)
+void CLineProjectionSupplierGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& changeSet)
 {
-	BaseClass::UpdateGui(updateFlags);
+	BaseClass::UpdateGui(changeSet);
 
 	Q_ASSERT(IsGuiCreated());
 

@@ -24,7 +24,7 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 
 #include "icomp/CComponentMetaDescriptionEncoder.h"
 #include "icomp/CCompositeComponentStaticInfo.h"
@@ -151,7 +151,7 @@ void CRegistryPropEditorComp::OnGuiModelDetached()
 }
 
 
-void CRegistryPropEditorComp::UpdateGui(int /*updateFlags*/)
+void CRegistryPropEditorComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	Q_ASSERT(IsGuiCreated());
 
@@ -209,7 +209,7 @@ void CRegistryPropEditorComp::OnGuiCreated()
 
 void CRegistryPropEditorComp::OnUpdateExportsTree()
 {
-	UpdateEditor();
+	UpdateEditor(istd::IChangeable::GetAnyChange());
 }
 
 

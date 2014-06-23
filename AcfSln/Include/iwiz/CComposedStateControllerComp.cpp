@@ -24,7 +24,7 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 
 
 namespace iwiz
@@ -118,7 +118,8 @@ bool CComposedStateControllerComp::TryEnterState(bool isActionAllowed, const ISt
 		}
 	}
 
-	istd::CChangeNotifier notifier(this, CF_STATE_ENTERED | CF_MODEL);
+	static ChangeSet changeSet(CF_STATE_ENTERED);
+	istd::CChangeNotifier notifier(this, changeSet);
 
 	m_isStateActive = true;
 
@@ -140,7 +141,8 @@ bool CComposedStateControllerComp::TryLeaveState(bool isActionAllowed, const ISt
 		}
 	}
 
-	istd::CChangeNotifier notifier(this, CF_STATE_LEAVED | CF_MODEL);
+	static ChangeSet changeSet(CF_STATE_LEAVED);
+	istd::CChangeNotifier notifier(this, changeSet);
 
 	m_isStateActive = false;
 
@@ -180,7 +182,8 @@ void CComposedStateControllerComp::UpdateAllMembers()
 	}
 
 	if (m_isStateEnabled != isEnabled){
-		istd::CChangeNotifier notifier(this, CF_STATE_ENABLED | CF_MODEL);
+		static ChangeSet changeSet(CF_STATE_ENABLED);
+		istd::CChangeNotifier notifier(this, changeSet);
 
 		m_isStateEnabled = isEnabled;
 	}
@@ -189,10 +192,13 @@ void CComposedStateControllerComp::UpdateAllMembers()
 
 // reimplemented (imod::CMultiModelDispatcherBase)
 
-void CComposedStateControllerComp::OnModelChanged(int /*modelId*/, int changeFlags, istd::IPolymorphic* /*updateParamsPtr*/)
+void CComposedStateControllerComp::OnModelChanged(int /*modelId*/, const ChangeSet& changeSet)
 {
-	if ((changeFlags & (CF_STATE_ENTERED | CF_STATE_LEAVED | CF_GRAPH_CHANGED | CF_STATE_ENABLED)) != 0){
-		istd::CChangeNotifier notifier(this, changeFlags);
+	if (		changeSet.Contains(CF_STATE_ENTERED) ||
+				changeSet.Contains(CF_STATE_LEAVED) ||
+				changeSet.Contains(CF_GRAPH_CHANGED) ||
+				changeSet.Contains(CF_STATE_ENABLED)){
+		istd::CChangeNotifier notifier(this, changeSet);
 
 		UpdateAllMembers();
 	}

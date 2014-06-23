@@ -61,7 +61,7 @@ void CAnnulusShape::SetEditableRadiusInner(bool editable)
 {
 	if (m_isEditableRadius != editable){
 		m_isEditableRadius = editable;
-		Invalidate(CS_CONSOLE);
+		Invalidate()		;
 	}
 }
 
@@ -76,7 +76,7 @@ void CAnnulusShape::SetEditableRadiusOuter(bool editable)
 {
 	if (m_isEditableRadius2 != editable){
 		m_isEditableRadius2 = editable;
-		Invalidate(CS_CONSOLE);
+		Invalidate();
 	}
 }
 
@@ -91,7 +91,7 @@ void CAnnulusShape::SetEditableRadius(bool editable)
 {
 	if (m_isEditableRadius != editable || m_isEditableRadius2 != editable){
 		m_isEditableRadius2 = m_isEditableRadius = editable;
-		Invalidate(CS_CONSOLE);
+		Invalidate();
 	}
 }
 
@@ -107,7 +107,7 @@ void CAnnulusShape::SetCenterVisible(bool state)
 	if (m_isCenterVisible != state){
 		m_isCenterVisible = state;
 
-		Invalidate(CS_CONSOLE);
+		Invalidate();
 	}
 }
 
@@ -288,11 +288,11 @@ void CAnnulusShape::Draw(QPainter& drawContext) const
 
 // reimplemented (imod::IObserver)
 
-bool CAnnulusShape::OnAttached(imod::IModel* modelPtr)
+bool CAnnulusShape::OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask)
 {
 	Q_ASSERT(dynamic_cast<i2d::CAnnulus*>(modelPtr) != NULL);
 
-	return BaseClass::OnAttached(modelPtr);
+	return BaseClass::OnModelAttached(modelPtr, changeMask);
 }
 
 

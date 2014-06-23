@@ -46,7 +46,7 @@ CAffineTransformation2dShape::CAffineTransformation2dShape(void)
 void CAffineTransformation2dShape::SetActiveControlPoints(ControlPoint points)
 {
 	m_activeControlPoints = points;
-	Invalidate(CS_CONSOLE);
+	Invalidate();
 }
 
 
@@ -162,11 +162,11 @@ void CAffineTransformation2dShape::Draw(QPainter& drawContext) const
 }
 
 
-bool CAffineTransformation2dShape::OnAttached(imod::IModel* modelPtr)
+bool CAffineTransformation2dShape::OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask)
 {
 	Q_ASSERT(dynamic_cast<i2d::CAffineTransformation2d*>(modelPtr) != NULL);
 
-	return BaseClass::OnAttached(modelPtr);
+	return BaseClass::OnModelAttached(modelPtr, changeMask);
 }
 
 

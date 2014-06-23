@@ -118,9 +118,9 @@ void CEdgeLinesSupplierGuiComp::OnGuiModelAttached()
 }
 
 
-void CEdgeLinesSupplierGuiComp::UpdateGui(int updateFlags)
+void CEdgeLinesSupplierGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& changeSet)
 {
-	BaseClass::UpdateGui(updateFlags);
+	BaseClass::UpdateGui(changeSet);
 
 	Q_ASSERT(IsGuiCreated());
 
@@ -165,7 +165,7 @@ void CEdgeLinesSupplierGuiComp::OnGuiHidden()
 
 // reimplemented (imod::IObserver)
 
-void CEdgeLinesSupplierGuiComp::AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr)
+void CEdgeLinesSupplierGuiComp::AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet)
 {
 	iedge::IEdgeLinesProvider* providerPtr = CompCastPtr<iedge::IEdgeLinesProvider>(GetObjectPtr());
 	if (providerPtr != NULL ){
@@ -176,7 +176,7 @@ void CEdgeLinesSupplierGuiComp::AfterUpdate(imod::IModel* modelPtr, int updateFl
 		}
 	}
 
-	BaseClass::AfterUpdate(modelPtr, updateFlags, updateParamsPtr);
+	BaseClass::AfterUpdate(modelPtr, changeSet);
 }
 
 

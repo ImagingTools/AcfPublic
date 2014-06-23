@@ -36,8 +36,7 @@ namespace iinsp
 CInspectionTaskComp::CInspectionTaskComp()
 :	m_isStatusKnown(false),
 	m_resultCategory(IC_NONE),
-	m_messageContainer(this),
-	m_productChangeNotifier(NULL, CF_SUPPLIER_RESULTS | CF_MODEL)
+	m_messageContainer(this)
 {
 	// Only processing time message allowed:
 	m_messageContainer.SetMaxMessageCount(1);
@@ -160,7 +159,8 @@ void CInspectionTaskComp::InvalidateSupplier()
 
 void CInspectionTaskComp::EnsureWorkInitialized()
 {
-	m_productChangeNotifier.SetPtr(this);
+	static ChangeSet changeSet(CF_SUPPLIER_RESULTS);
+	m_productChangeNotifierPtr.SetPtr(new istd::CChangeNotifier(this, changeSet));
 
 	int inspectionsCount = m_subtasksCompPtr.GetCount();
 
@@ -168,7 +168,10 @@ void CInspectionTaskComp::EnsureWorkInitialized()
 	for (int i = 0; i < inspectionsCount; ++i){
 		iinsp::ISupplier* supplierPtr = m_subtasksCompPtr[i];
 		if (supplierPtr != NULL){
-			m_subtaskNotifiers[supplierPtr].SetPtr(supplierPtr);
+			NotifierPtr& notifierPtr = m_subtaskNotifiers[supplierPtr];
+			if (!notifierPtr.IsValid()){
+				notifierPtr.SetPtr(new istd::CChangeNotifier(supplierPtr));
+			}
 		}
 	}
 
@@ -177,7 +180,10 @@ void CInspectionTaskComp::EnsureWorkInitialized()
 	for (int i = 0; i < addSuppliersCount; ++i){
 		iinsp::ISupplier* supplierPtr = m_additionalSupppliersCompPtr[i];
 		if (supplierPtr != NULL){
-			m_subtaskNotifiers[supplierPtr].SetPtr(supplierPtr);
+			NotifierPtr& notifierPtr = m_subtaskNotifiers[supplierPtr];
+			if (!notifierPtr.IsValid()){
+				notifierPtr.SetPtr(new istd::CChangeNotifier(supplierPtr));
+			}
 		}
 	}
 
@@ -231,7 +237,8 @@ void CInspectionTaskComp::EnsureWorkFinished()
 	}
 
 	m_subtaskNotifiers.clear();
-	m_productChangeNotifier.Reset();
+
+	m_productChangeNotifierPtr.Reset();
 }
 
 
@@ -254,7 +261,7 @@ void CInspectionTaskComp::ClearWorkResults()
 		}
 	}
 
-	m_productChangeNotifier.Reset();
+	m_productChangeNotifierPtr.Reset();
 }
 
 
@@ -415,7 +422,8 @@ void CInspectionTaskComp::OnComponentDestroyed()
 {
 	m_subtaskNotifiers.clear();
 	m_subtasks.clear();
-	m_productChangeNotifier.Reset();
+
+	m_productChangeNotifierPtr.Reset();
 
 	EnsureModelsDetached();
 
@@ -426,11 +434,11 @@ void CInspectionTaskComp::OnComponentDestroyed()
 
 // reimplemented (imod::IObserver)
 
-void CInspectionTaskComp::AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr)
+void CInspectionTaskComp::AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet)
 {
 	m_isStatusKnown = false;
 
-	BaseClass2::AfterUpdate(modelPtr, updateFlags, updateParamsPtr);
+	BaseClass2::AfterUpdate(modelPtr, changeSet);
 }
 
 

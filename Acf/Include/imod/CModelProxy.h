@@ -69,7 +69,7 @@ private:
 		ModelObserver(CModelProxy& parent);
 
 		// reimplemented (imod::IObserver)
-		virtual bool OnDetached(imod::IModel* modelPtr);
+		virtual bool OnModelDetached(imod::IModel* modelPtr);
 
 	private:
 		CModelProxy& m_parent;

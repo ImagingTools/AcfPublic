@@ -28,7 +28,9 @@
 #include <QtCore/QCoreApplication>
 #if QT_VERSION >= 0x050000
 #include <QtConcurrent/QtConcurrent>
+#include <QtCore/QStandardPaths>
 #else
+#include <QtGui/QDesktopServices>
 #include <QtCore>
 #endif
 
@@ -44,7 +46,8 @@ namespace ifile
 
 CAutoPersistenceComp::CAutoPersistenceComp()
 	:m_isDataWasChanged(false),
-	m_wasLoadingSuceeded(false)
+	m_wasLoadingSuceeded(false),
+	m_isReloading(false)
 {
 }
 
@@ -107,6 +110,10 @@ void CAutoPersistenceComp::OnComponentCreated()
 				filePath = m_filePathCompPtr->GetPath();
 			}
 
+			if (*m_reloadOnFileChangeAttrPtr){
+				m_fileWatcher.addPath(filePath);
+			}
+			
 			if (m_fileLoaderCompPtr->LoadFromFile(*m_objectCompPtr, filePath) == ifile::IFilePersistence::OS_OK)
 			{
 				m_wasLoadingSuceeded = true;
@@ -125,6 +132,9 @@ void CAutoPersistenceComp::OnComponentCreated()
 		BaseClass2::RegisterModel(filePathModelPtr, MI_FILEPATH);
 	}
 
+	if (*m_reloadOnFileChangeAttrPtr){
+		connect(&m_fileWatcher, SIGNAL(fileChanged(const QString&)), this, SLOT(OnFileContentsChanged(const QString&)));
+	}
 
 	EnsureTimerConnected();
 }
@@ -133,12 +143,13 @@ void CAutoPersistenceComp::OnComponentCreated()
 void CAutoPersistenceComp::OnComponentDestroyed()
 {
 	disconnect(&m_storingTimer, SIGNAL(timeout()), this, SLOT(OnTimeout()));
+	disconnect(&m_fileWatcher, SIGNAL(fileChanged(const QString&)), this, SLOT(OnFileContentsChanged(const QString&)));
 
 	m_storingFuture.waitForFinished();
 
 	BaseClass2::UnregisterAllModels();
 
-	if (*m_storeOnEndAttrPtr && m_objectCompPtr.IsValid()){
+	if (*m_storeOnEndAttrPtr && m_objectCompPtr.IsValid() && !m_isReloading){
 		StoreObject(*m_objectCompPtr.GetPtr());
 	}
 
@@ -148,7 +159,7 @@ void CAutoPersistenceComp::OnComponentDestroyed()
 
 // reimplemented (imod::CMultiModelDispatcherBase)
 
-void CAutoPersistenceComp::OnModelChanged(int modelId, int /*changeFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
+void CAutoPersistenceComp::OnModelChanged(int modelId, const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	switch (modelId)
 	{
@@ -159,7 +170,7 @@ void CAutoPersistenceComp::OnModelChanged(int modelId, int /*changeFlags*/, istd
 				EnsureTimerConnected();
 			}
 			else{
-				if (*m_storeOnChangeAttrPtr && m_objectCompPtr.IsValid()){
+				if (*m_storeOnChangeAttrPtr && m_objectCompPtr.IsValid() && !m_isReloading){
 					StoreObject(*m_objectCompPtr.GetPtr());
 				}
 			}
@@ -170,16 +181,24 @@ void CAutoPersistenceComp::OnModelChanged(int modelId, int /*changeFlags*/, istd
 
 		case MI_FILEPATH:
 		{
-			if (*m_restoreOnBeginAttrPtr && !m_wasLoadingSuceeded)
-			{
-				QString fileName;
+			if (*m_reloadOnFileChangeAttrPtr){
+				m_fileWatcher.removePaths(m_fileWatcher.files());
+			}
+
+			if (*m_restoreOnBeginAttrPtr && !m_wasLoadingSuceeded){
+				QString filePath;
 				if (m_filePathCompPtr.IsValid()){
-					fileName = m_filePathCompPtr->GetPath();
+					filePath = m_filePathCompPtr->GetPath();
 				}
 
-				QFileInfo fileInfo(fileName);
+				QFileInfo fileInfo(filePath);
 				if(fileInfo.exists()){
-					QString filePath = fileInfo.absoluteFilePath();
+					filePath = fileInfo.absoluteFilePath();
+
+					if (*m_reloadOnFileChangeAttrPtr){
+						m_fileWatcher.addPath(filePath);
+					}
+
 					if (m_fileLoaderCompPtr.IsValid() && m_objectCompPtr.IsValid()){
 						if(m_fileLoaderCompPtr->LoadFromFile(*m_objectCompPtr, filePath) == ifile::IFilePersistence::OS_OK){
 							m_wasLoadingSuceeded = true;
@@ -220,6 +239,43 @@ void CAutoPersistenceComp::OnTimeout()
 	m_storingFuture = QtConcurrent::run(this, &CAutoPersistenceComp::SaveObjectSnapshot);
 
 	m_isDataWasChanged = false;
+}
+
+
+void CAutoPersistenceComp::OnFileContentsChanged(const QString& path)
+{
+	if (!m_objectCompPtr.IsValid() || !m_fileLoaderCompPtr.IsValid()){
+		return;
+	}
+
+	QString tempPath;
+
+#if QT_VERSION < 0x050000
+	tempPath = QDesktopServices::storageLocation(QDesktopServices::TempLocation);
+#else
+	tempPath = QStandardPaths::writableLocation(QStandardPaths::TempLocation);
+#endif
+
+	QString tempFileName = tempPath + "/" + QUuid::createUuid().toString() + "_" + QFileInfo(path).fileName();
+
+	if (QFile::copy(path, tempFileName)){
+		m_wasLoadingSuceeded = false;
+
+		m_isReloading = true;
+
+		if (m_fileLoaderCompPtr->LoadFromFile(*m_objectCompPtr, tempFileName) == ifile::IFilePersistence::OS_OK)
+		{
+			m_wasLoadingSuceeded = true;
+		}
+
+		QFile::remove(tempFileName);
+
+		m_isReloading = false;
+
+		
+		m_fileWatcher.removePaths(m_fileWatcher.files());
+		m_fileWatcher.addPath(path);
+	}
 }
 
 

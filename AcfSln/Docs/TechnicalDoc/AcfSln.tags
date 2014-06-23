@@ -3236,8 +3236,8 @@
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classiauth_1_1_c_rights_based_enabler_comp.html</anchorfile>
-      <anchor>af00fdcc8c5ebb11608d61d30701eb5f2</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>ac3b8a6ef65bbc4f0205becebc4c629af</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -3647,7 +3647,7 @@
   <compound kind="class">
     <name>iauth::IUsersManager</name>
     <filename>classiauth_1_1_i_users_manager.html</filename>
-    <base>iser::ISerializable</base>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetUsersCount</name>
@@ -4532,10 +4532,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>istd::CChangeNotifier</type>
-      <name>m_productChangeNotifier</name>
+      <type>istd::TDelPtr&lt; istd::CChangeNotifier &gt;</type>
+      <name>m_productChangeNotifierPtr</name>
       <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a2fa20a7be869640062ec01cfd45aeb8f</anchor>
+      <anchor>a483afc5fe1653a73e52c7596a9a3dfe0</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -5651,8 +5651,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>acb0af3380168193e389704b9e94847a0</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a1bbd3af9fafba0118c069ca341ae2b48</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -5793,8 +5793,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
-      <anchor>aa0d788190aa022ff2668ddfdd0480fd2</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>aaf01f0208fb5cbf3e7cf065829cd129a</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -5835,8 +5835,8 @@
       <type>virtual void</type>
       <name>OnModelChanged</name>
       <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
-      <anchor>aeb2d73b45d65c9f9666746e44297cf79</anchor>
-      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>a62efc0cb339f1cf4a2652f881685dec9</anchor>
+      <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5980,8 +5980,8 @@
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a4136f63962638b63db18fe7c73c1df9a</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>ab7c6ba20a10de128ea5d754c006b145b</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6069,8 +6069,8 @@
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>a3ec91ab7a63798f542d47364226d3b6a</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>aac28a64436be0577234474659bd59e17</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>AddressToInfoMap</type>
@@ -6516,8 +6516,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a60eadf25d6215b97ea125aec323ea4bf</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>aa1b27a3c19090ddc1ca98e05b188c81f</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -6975,10 +6975,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>OnAttached</name>
+      <name>OnModelAttached</name>
       <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>a693615243f8ff1c87ea04d7f5c035e61</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>a12878bf6b940e3e48409cef31a8c3b8e</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -7117,8 +7117,8 @@
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>aa38243f1b9a880253096d0fb4d64ee62</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>afb4115244845cd9eb405b20ae505209a</anchor>
+      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>i2d::CVector2d</type>
@@ -7428,8 +7428,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>a2ef0b396eda6f0a1e4297c466f4c7ea0</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a29877cc3fb49c77a729f2c9198826d65</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -7656,8 +7656,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a4d5155c05d5e02929088bc6108f67eef</anchor>
-      <arglist>(int updateFlags)</arglist>
+      <anchor>aae750fd08a987e97ac591ae955111137</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -7677,8 +7677,8 @@
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a66f86e419648241c45b4bd15aaa58a9e</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>a787fcb3ba74a3cb14abb5352d4a6532d</anchor>
+      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -7717,8 +7717,8 @@
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp_1_1_environment_observer.html</anchorfile>
-      <anchor>aec246857ab34e971d2ef23d29004ad48</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>ae91f414500366269db6bb29b7471174e</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8422,9 +8422,9 @@
     </member>
     <member kind="variable">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CVisualRegistryEditorComp, icomp::IRegistry &gt;</type>
-      <name>BaseClass2</name>
+      <name>BaseClass</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a4c891c183b1f408f0591b672152f8fb2</anchor>
+      <anchor>a5c72260c469fdca32ae1454920756506</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration" protection="protected">
@@ -8676,35 +8676,35 @@
       <type>virtual void</type>
       <name>UpdateScene</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>ac86b77de39ddc462410c4ecb69ee1c58</anchor>
-      <arglist>(int updateFlags)</arglist>
+      <anchor>af979a2f19b51f7debc6ed2988da2378a</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnModelChanged</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a31a0816128118d47d543d9d51d80b7af</anchor>
-      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>aaf0f498748cc11acbdb4c0b778f05170</anchor>
+      <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a241d14550bf848be92bd5a7efcd73936</anchor>
-      <arglist>(int updateFlags)</arglist>
+      <anchor>ab686e9bed43ae91e1588b30b6edf5c90</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
-      <name>OnAttached</name>
+      <name>OnModelAttached</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a323000d3138c35b7c48bbf8a015d6045</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>a92d4ace0d4f29a0bc164e3263a0a484c</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
-      <name>OnDetached</name>
+      <name>OnModelDetached</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>af4d64289ff0173a223146e2a0a72445f</anchor>
+      <anchor>ab0983e4c60becef1acfc1ba30bf94a87</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -8751,8 +8751,8 @@
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp_1_1_environment_observer.html</anchorfile>
-      <anchor>a35514abd8c7a95bc6a473a8d699b0301</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>aba0827a46c4626cc83622893eaf05678</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8909,8 +8909,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classicmpstr_1_1_c_xpc_editor_comp.html</anchorfile>
-      <anchor>a900d91744aecb668a1b18270ba4eaa9e</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a5b5b4670cc4f2e80d2cc2a0c82386538</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -9288,8 +9288,8 @@
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classicmpstr_1_1_t_object_shape_base.html</anchorfile>
-      <anchor>aa38243f1b9a880253096d0fb4d64ee62</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>afb4115244845cd9eb405b20ae505209a</anchor>
+      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
@@ -9422,17 +9422,17 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
-      <name>OnDetached</name>
+      <name>OnModelDetached</name>
       <anchorfile>classidocproc_1_1_c_rendered_document_preview_generator_comp.html</anchorfile>
-      <anchor>a52d2eeb57af33a829af2c9e7be1136e6</anchor>
+      <anchor>a13dab73802725165b82bb1469b143595</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classidocproc_1_1_c_rendered_document_preview_generator_comp.html</anchorfile>
-      <anchor>a7ffd50d2d4334bf1015fc5dee2794603</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>a7f1f07914007f61c326334ce8e1b11bd</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -9852,8 +9852,8 @@
       <type>virtual void</type>
       <name>OnEndChanges</name>
       <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
-      <anchor>ae91a83126a1c2ef14b7a30d67bd4390c</anchor>
-      <arglist>(int changeFlags, istd::IPolymorphic *changeParamsPtr)</arglist>
+      <anchor>a8968ce9b1d1d150f480b16342293084a</anchor>
+      <arglist>(const ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10541,10 +10541,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>OnAttached</name>
+      <name>OnModelAttached</name>
       <anchorfile>classiedgegui_1_1_c_edge_line_container_shape.html</anchorfile>
-      <anchor>ab3c7f66d069d03df5ef85678c3f9f13d</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>a6a9af305681583a7ea1e24f5d0c9de57</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual i2d::CRect</type>
@@ -10639,8 +10639,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
-      <anchor>ad9b46b22a6c328fc653c29e2e3e5fa89</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a9edf03827eac2adb6bcf3fb60c3a1a1e</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -10667,8 +10667,8 @@
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
-      <anchor>a1dfec64cedacf82fae78846a74076f13</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>aa4f487db1058949088e265bbeeeb9d9a</anchor>
+      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -11792,8 +11792,8 @@
       <type>virtual void</type>
       <name>UpdateStorageItem</name>
       <anchorfile>classihotf_1_1_c_file_system_change_storage.html</anchorfile>
-      <anchor>a77c682c9330e9c4120c384bee66f48cf</anchor>
-      <arglist>(const QString &amp;path, int itemFlags)</arglist>
+      <anchor>a6deb9505f2961dd110ab03088c78bbd3</anchor>
+      <arglist>(const QString &amp;path, int changeFlag)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -11842,13 +11842,6 @@
       <name>CF_ATTRIBUTE_CHANGED</name>
       <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
       <anchor>a72f67a9f80343898c6948aaecc6836aaa56203ba063dd39bc72d4223e95758a57</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>CF_SOME_CHANGES</name>
-      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
-      <anchor>a72f67a9f80343898c6948aaecc6836aaa40ae541377854ec43214278f63031e29</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -12165,15 +12158,15 @@
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classihotf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>a164fba56570ef3365175ba4172706f71</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>ab05a3e952661b2b82b6678d180657563</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>OnAttached</name>
+      <name>OnModelAttached</name>
       <anchorfile>classihotf_1_1_c_hotfolder_statistics.html</anchorfile>
-      <anchor>aab663606ccdfa4723432e534e51c7895</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>a88c549dc065f5d61639f9f5de34e30ab</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -12741,8 +12734,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classihotfgui_1_1_c_directory_item_gui_comp.html</anchorfile>
-      <anchor>a3e0723ff2cc4009e5e191b63d6ebe9c4</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a352db759a47d7bfd458b250b91152027</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12768,8 +12761,8 @@
       <type>void</type>
       <name>FolderChanged</name>
       <anchorfile>classihotfgui_1_1_c_directory_monitor_comp.html</anchorfile>
-      <anchor>ab9492b82f6ae39cf864be2422f29d843</anchor>
-      <arglist>(int changeFlags)</arglist>
+      <anchor>ae900b3d8b1ef23e630ec799c9fbdae22</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -12843,8 +12836,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>a6a5c281cd1c3e96256b4cd3c3e51c6a5</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>ad2c10cb6427a46decb930c6752042ce4</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -13071,8 +13064,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classihotfgui_1_1_c_hotfolder_gui_comp.html</anchorfile>
-      <anchor>a584fe1bca6d146db5d631d3f31569893</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a3338936b96e8e5a8f540ff0919e123ca</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -13316,8 +13309,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classihotfgui_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
-      <anchor>a670bd8b5c61b729bdb534b73363b5424</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a22de5e7ee0a72a28249df0a9f3af17e1</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -13806,8 +13799,8 @@
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>af7ff85eeaf73e1b17c3054716c241df0</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>ae3280369ae6c607923044856b3125dc1</anchor>
+      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -15690,6 +15683,20 @@
       <anchor>a880abbc88f48496f8224c79696c052aa</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ChangeFlags</name>
+      <anchorfile>classiipr_1_1_i_pattern_controller.html</anchorfile>
+      <anchor>a88bf6a95f165a21f08139bf2dbcf1e5b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_PATTERN_LEARNED</name>
+      <anchorfile>classiipr_1_1_i_pattern_controller.html</anchorfile>
+      <anchor>a88bf6a95f165a21f08139bf2dbcf1e5ba28b98c36994bcefda0826cebf4d47d95</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>TeachPattern</name>
@@ -15745,13 +15752,6 @@
       <anchorfile>classiipr_1_1_c_color_pattern_controller_comp.html</anchorfile>
       <anchor>ab344b8dde436bfbbfdd97dc9f82a90df</anchor>
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
-    </member>
-    <member kind="variable" static="yes">
-      <type>static const int</type>
-      <name>CF_PATTERN_LEARNED</name>
-      <anchorfile>classiipr_1_1_i_pattern_controller.html</anchorfile>
-      <anchor>a3d226246f98359f2e2ba103feb56db22</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -22121,8 +22121,8 @@
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classiproc_1_1_c_model_based_processing_trigger_comp.html</anchorfile>
-      <anchor>af09dd325ea51accbb9ff63c452f247f4</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>aade901eb9daab15d93e85fdcf061f66c</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -22495,8 +22495,8 @@
       <type>virtual void</type>
       <name>OnModelChanged</name>
       <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
-      <anchor>abfc0b10a9d2dfc534f26e1899b158cf7</anchor>
-      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>ad18327d1f372363d799dff5ac1ddf951</anchor>
+      <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -22885,8 +22885,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiprop_1_1_c_properties_editor_comp.html</anchorfile>
-      <anchor>a85c14911ebfa130035a09311c63e7549</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>ab68fd806cece2d37aaef210eafc5eb93</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -23068,8 +23068,8 @@
       <type></type>
       <name>CPropertyBase</name>
       <anchorfile>classiprop_1_1_c_property_base.html</anchorfile>
-      <anchor>a6876d0b0a2ea98e93dce5d0fdd10d1d9</anchor>
-      <arglist>(IPropertiesManager *propertyOwnerPtr, const QByteArray &amp;propertyId, const QByteArray &amp;propertyDescription, int propertyFlags, int changeFlags=0)</arglist>
+      <anchor>a2e6e7ac49de04d207513dd6b53c00175</anchor>
+      <arglist>(IPropertiesManager *propertyOwnerPtr, const QByteArray &amp;propertyId, const QByteArray &amp;propertyDescription, int propertyFlags, int changeFlag=0)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -23094,9 +23094,9 @@
     </member>
     <member kind="variable" protection="protected">
       <type>int</type>
-      <name>m_changeFlags</name>
+      <name>m_changeFlag</name>
       <anchorfile>classiprop_1_1_c_property_base.html</anchorfile>
-      <anchor>ae34a533b9856610d0bcc8eb7314c25d5</anchor>
+      <anchor>a8e82b7583cb2fb6fe72a4e40df0952b4</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -23427,8 +23427,8 @@
       <type></type>
       <name>TObjectProperty</name>
       <anchorfile>classiprop_1_1_t_object_property.html</anchorfile>
-      <anchor>afb76d06416d02298da59228820805a3d</anchor>
-      <arglist>(IPropertiesManager *propertyOwnerPtr, const QByteArray &amp;propertyName, const QByteArray &amp;propertyDescription, int propertyFlags, int changeFlags=0, const ValueType &amp;defaultValue=ValueType())</arglist>
+      <anchor>a8268cc99f9b868b3fbd6160ce635259a</anchor>
+      <arglist>(IPropertiesManager *propertyOwnerPtr, const QByteArray &amp;propertyName, const QByteArray &amp;propertyDescription, int propertyFlags, int changeFlag=0, const ValueType &amp;defaultValue=ValueType())</arglist>
     </member>
     <member kind="function">
       <type>const Value &amp;</type>
@@ -23797,8 +23797,8 @@
       <type>virtual void</type>
       <name>OnModelChanged</name>
       <anchorfile>classiqtauth_1_1_c_user_gui_comp.html</anchorfile>
-      <anchor>ae0310e4ba23a0306d0b309a281aa1ae9</anchor>
-      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>ada9086fac12502f64f23e17e5331a779</anchor>
+      <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -23979,15 +23979,15 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>ace6a629516d2430b02e4ef4dad4268b3</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>aca2baa38ae82c628f5570fe6caae274c</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>a09679cc02dbb54b0470d77ac459f0fae</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>a688cfe7622545cd4998803b65d71da99</anchor>
+      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -24005,8 +24005,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtcam_1_1_c_camera_info_gui_comp.html</anchorfile>
-      <anchor>ad7f8b30cdec8590ba602226ef2118538</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a2cc5f6d1301c127fa1325d38a8b88c27</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -24038,8 +24038,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtcam_1_1_c_exposure_params_gui_comp.html</anchorfile>
-      <anchor>ad17ddebf3c197a1dafc87bfc23a1ecb2</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>afb2bc2f8617f5818f36258a2bc0adfbc</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -24271,8 +24271,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>a51534ba19224e0b52ac8930f83cbb83d</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a42e1c059783339e6f4ec39ca789d71ec</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -24304,8 +24304,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtcam_1_1_c_scale_calibration_editor_comp.html</anchorfile>
-      <anchor>a54c2805661f1a0c3f1fd6eb886a4d7c7</anchor>
-      <arglist>(int changeFlags)</arglist>
+      <anchor>af7a5ebb53f6fb5a3cd7545c1b7d30c15</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -24547,8 +24547,8 @@
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classiqtex_1_1_c_tcp_terminal_gui_comp.html</anchorfile>
-      <anchor>a72083547deade224d75e50a69380bf95</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>af978673b8441d3174e7f3476b9457c72</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -25054,8 +25054,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
-      <anchor>aa635fb30331f46d5efc33b4adb2f192f</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>ae871e421c2c8835e6ebe23873e83d030</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -25184,21 +25184,21 @@
       <type>virtual void</type>
       <name>UpdateEditor</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>ac51d6d24325bcd194b3716c47b8fc393</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>ad7f0740a13a02899e137318ce2bf2e7b</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>OnAttached</name>
+      <name>OnModelAttached</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>ab3b2edce0b992c95cae41f1e2d077647</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>a076071b4da69338faafe971219596e6b</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>OnDetached</name>
+      <name>OnModelDetached</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>acc6411cb93ad635b4ad96c6fcaf88f58</anchor>
+      <anchor>ad9058807cc1e70f35c76cf5ae0acb41c</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -25324,8 +25324,8 @@
       <type>virtual void</type>
       <name>OnModelChanged</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a5456e17087ad36bbf8cc26c9a5c29a5e</anchor>
-      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>a42dc658c6fe4765fff7d191bf6ffb6f5</anchor>
+      <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -25458,8 +25458,8 @@
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>aab1c890054066dea7a34f819ef086882</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>a1906e95d947b7174ea6bf4148d3d1d76</anchor>
+      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual QWidget *</type>
@@ -25491,8 +25491,8 @@
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html</anchorfile>
-      <anchor>a7f0d77ec6f93ed6c5e44067e4e0601f0</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>a6210521ab97b6c286875808178040da7</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -25556,8 +25556,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtipr_1_1_c_caliper_params_gui_comp.html</anchorfile>
-      <anchor>aec23a0f33b5231159b8cd1d5b728ecf6</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>ae728e449e1bd6361e48bb65541f3ee11</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -25610,8 +25610,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtipr_1_1_c_circle_finder_params_gui_comp.html</anchorfile>
-      <anchor>ac7946e515605ac530c82aff1f6e0475d</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>af2f8ffd3824af188a542cc2929aae2d9</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -25664,8 +25664,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtipr_1_1_c_color_pattern_comparator_gui_comp.html</anchorfile>
-      <anchor>acfdbda5d1b83beac73006a9d46291568</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>ae580b21b0f75bf9789e0235ee97beb51</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -25725,8 +25725,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtipr_1_1_c_convolution2d_params_gui_comp.html</anchorfile>
-      <anchor>ad18bdff28d9e9946b9f036ae366d9113</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a7c8ee3d00db29d8a7eab4b0784342b38</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -25786,8 +25786,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtipr_1_1_c_general_search_params_gui_comp.html</anchorfile>
-      <anchor>a2e15fb6e8a75efc33895e34a83db5978</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a213a4a6d9675631abd3f415c73662c3c</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -25854,8 +25854,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
-      <anchor>a4bfc1b681d2ac1f8a401e332c72c7b17</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>ae90c1ddf1efdd7f8b5583e832fc31061</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -25950,8 +25950,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html</anchorfile>
-      <anchor>aed9490183efcab057212b2e7e79fab20</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>af0dfae1d801f1897561302fbe822f300</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -26013,8 +26013,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
-      <anchor>a06ed1c6537419851c4cc4a8653c67d9a</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>ab2dc64aeeff4a40356f091374bed872a</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -26103,8 +26103,8 @@
       <type>virtual void</type>
       <name>OnModelChanged</name>
       <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_shape.html</anchorfile>
-      <anchor>afc3e5c5aff53a42da6f5c89a016d1f3d</anchor>
-      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>a7b898d32a0f2214a38ef6cf06dd3fb18</anchor>
+      <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual i2d::CRect</type>
@@ -26204,8 +26204,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html</anchorfile>
-      <anchor>a4f5464421cf5f6a38ac4fb8b727e10fa</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>ad09aa82ec863caad3845922c0a8f3f34</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -26343,8 +26343,8 @@
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classiqtipr_1_1_c_projection_shape.html</anchorfile>
-      <anchor>a4be8acc861e1d2e09d3a80babde1f0c5</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>aa19daa892a8a04cd199dac8f625f92af</anchor>
+      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -26495,8 +26495,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
-      <anchor>a5b0ba931a51005936119096efb7011d3</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>ae02d4298f7cd640a14b3bda593d88d44</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -26584,8 +26584,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
-      <anchor>afbfa844c008eb0d274bd8dd48d0a5b40</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a60aa50cad0f9a02b2abd643929e271ab</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -26647,8 +26647,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtmeas_1_1_c_data_sequence_supplier_results_view_comp.html</anchorfile>
-      <anchor>a10647e2ffd293d065388415297d0c157</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>adbdd02b407ad01d18453db91eaa87626</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -26688,8 +26688,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtmeas_1_1_c_data_sequence_view_comp.html</anchorfile>
-      <anchor>a988b5d25cbcef08e6e9fe1cb5ec5f089</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>ab20b358e9f6e3b6cda4f4ff16b8dec51</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -26809,8 +26809,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtmeas_1_1_c_data_statistics_gui_comp.html</anchorfile>
-      <anchor>a95585af16a644d1ae1888a4c5cc4d5c9</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>ab6c1ec252eb558bac205954593457484</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -26856,8 +26856,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
-      <anchor>a63dc4b15868a9b8127ed99b95c71d04d</anchor>
-      <arglist>(int changeFlags)</arglist>
+      <anchor>ae27be25e01b6709a79cd285ff9e182aa</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -27188,8 +27188,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtmm_1_1_c_playback_controller_gui_comp.html</anchorfile>
-      <anchor>a4eb4b21cb9bc3b9efe904f5cc2010bb6</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a20cb8df3d768ac7c869170a35047c1bd</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -27326,8 +27326,8 @@
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classiqtmm_1_1_c_video_player_gui_comp.html</anchorfile>
-      <anchor>a7e07a16a5ddfdcb86104352e57fb8963</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>ac078d7f9cf9ee01876b961d152f2aad4</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -27404,8 +27404,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtsig_1_1_c_pulse_params_gui_comp.html</anchorfile>
-      <anchor>aa86660f6e3ae2ddce6e98b3923e313be</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a638248563a0c6bf05deb8e5d5e523a46</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -27540,8 +27540,8 @@
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classiqtsig_1_1_c_sample_container_view.html</anchorfile>
-      <anchor>a431ab0d32f8ecba1c02143a52c8a5f97</anchor>
-      <arglist>(int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>acf75609416a4a781793b389f1e8068a1</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -27573,8 +27573,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtsig_1_1_c_sampling_params_gui_comp.html</anchorfile>
-      <anchor>a7bd0afc921e1c8eae36bf3bca954927d</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>ab6b0d6ef2f8ca9070b8cc58011ab02ce</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -27731,8 +27731,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtsig_1_1_c_trigger_params_gui_comp.html</anchorfile>
-      <anchor>a39d71be5c2777aecdf47f6faa0fb4c06</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a78fc4419d82486ae9d8d98b815e68f4f</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -29009,8 +29009,8 @@
       <type>virtual void</type>
       <name>OnModelChanged</name>
       <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
-      <anchor>aa059cd59fabdcd78ae888eba79471e28</anchor>
-      <arglist>(int modelId, int changeFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>aad485993c76ca3882c3930aadb202c08</anchor>
+      <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -29135,15 +29135,15 @@
       <type>virtual void</type>
       <name>BeforeUpdate</name>
       <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
-      <anchor>a850e765b710a67ade3d79d2579653b05</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>ab35b3b7b12366fbfc90c45be37c6c891</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
-      <anchor>af96287d76a58b6a6d2a9d5af136a995c</anchor>
-      <arglist>(imod::IModel *modelPtr, int updateFlags, istd::IPolymorphic *updateParamsPtr)</arglist>
+      <anchor>a57e671da1582b1fd70ef47b3e5a9c09d</anchor>
+      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -29413,8 +29413,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiwizgui_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
-      <anchor>af3d7eedc91ca5d28d0135347ecd1a2d7</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a4409246a1ef3536e8df20e5edbad55a8</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>

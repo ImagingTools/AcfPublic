@@ -29,7 +29,7 @@
 #include <QtGui/QVBoxLayout>
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 #include "istd/CGeneralTimeStamp.h"
 
 
@@ -104,7 +104,8 @@ bool CVlcVideoViewGuiComp::OpenMediumUrl(const QString& url, bool autoPlay)
 			layoutPtr->addWidget(m_vlcWidgetPtr);
 		}
 
-		istd::CChangeNotifier notifier(this, CF_STATUS | CF_MEDIA_POSITION);
+		static ChangeSet changeSet(CF_STATUS, CF_MEDIA_POSITION);
+		istd::CChangeNotifier notifier(this, changeSet);
 
 		m_vlcInputPtr = m_vlcWidgetPtr->input();
 
@@ -133,7 +134,8 @@ bool CVlcVideoViewGuiComp::OpenMediumUrl(const QString& url, bool autoPlay)
 void CVlcVideoViewGuiComp::CloseMedium()
 {
 	if (m_playlistPtr != NULL){
-		istd::CChangeNotifier notifier(this, CF_STATUS);
+		static ChangeSet changeSet(CF_STATUS);
+		istd::CChangeNotifier notifier(this, changeSet);
 
 		m_playlistPtr->stop();
 		m_playlistPtr->clear();
@@ -154,7 +156,8 @@ bool CVlcVideoViewGuiComp::IsPlaying() const
 bool CVlcVideoViewGuiComp::SetPlaying(bool state)
 {
 	if (state != IsPlaying()){
-		istd::CChangeNotifier notifier(this, CF_STATUS);
+		static ChangeSet changeSet(CF_STATUS);
+		istd::CChangeNotifier notifier(this, changeSet);
 
 		if (m_playlistPtr != NULL){
 			m_playlistPtr->togglePause();
@@ -190,7 +193,8 @@ double CVlcVideoViewGuiComp::GetCurrentPosition() const
 bool CVlcVideoViewGuiComp::SetCurrentPosition(double position)
 {
 	if (m_vlcInputPtr != NULL){
-		istd::CChangeNotifier notifier(this, CF_MEDIA_POSITION);
+		static ChangeSet changeSet(CF_MEDIA_POSITION);
+		istd::CChangeNotifier notifier(this, changeSet);
 
 		m_vlcInputPtr->SetTime(int(position * 1000));
 

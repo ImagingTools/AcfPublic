@@ -102,7 +102,7 @@ void CPatternTeachingControllerGuiComp::on_EditButton_clicked()
 
 // reimplemented (iqtgui::TGuiObserverWrap)
 
-void CPatternTeachingControllerGuiComp::UpdateGui(int /*updateFlags*/)
+void CPatternTeachingControllerGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	iipr::IPatternController* objectPtr = GetObjectPtr();
 	if (objectPtr == NULL){

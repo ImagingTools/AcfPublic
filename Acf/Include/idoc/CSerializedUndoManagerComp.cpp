@@ -24,7 +24,7 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 #include "iser/CMemoryReadArchive.h"
 #include "icomp/CComponentBase.h"
 
@@ -34,7 +34,8 @@ namespace idoc
 
 
 CSerializedUndoManagerComp::CSerializedUndoManagerComp()
-:	m_hasStoredDocumentState(false)
+:	m_hasStoredDocumentState(false),
+	m_isBlocked(false)
 {
 }
 
@@ -55,7 +56,7 @@ bool CSerializedUndoManagerComp::IsRedoAvailable() const
 
 void CSerializedUndoManagerComp::ResetUndo()
 {
-	istd::CChangeNotifier selfNotifierPtr(this);
+	istd::CChangeNotifier notifier(this);
 
 	m_undoList.clear();
 	m_redoList.clear();
@@ -64,12 +65,18 @@ void CSerializedUndoManagerComp::ResetUndo()
 
 bool CSerializedUndoManagerComp::DoUndo()
 {
+	bool retVal = false;
+
 	UndoArchivePtr redoArchivePtr(new iser::CMemoryWriteArchive());
 	if (IsUndoAvailable() && redoArchivePtr.IsValid()){
 		istd::CChangeNotifier notifier(this);
 
-		istd::TChangeNotifier<iser::ISerializable> objectPtr(GetObjectPtr(), istd::IChangeable::CF_NO_UNDO);
-		if (objectPtr.IsValid()){
+		iser::ISerializable* objectPtr = GetObjectPtr();
+
+		if (objectPtr != NULL){
+			Q_ASSERT(!m_isBlocked);
+			m_isBlocked = true;
+
 			if (objectPtr->Serialize(*redoArchivePtr)){
 				m_redoList.push_back(UndoArchivePtr());
 				m_redoList.back().TakeOver(redoArchivePtr);
@@ -83,23 +90,30 @@ bool CSerializedUndoManagerComp::DoUndo()
 			if (objectPtr->Serialize(readArchive)){
 				m_undoList.pop_back();
 
-				return true;
+				retVal = true;
 			}
+
+			m_isBlocked = false;
 		}
 	}
 
-	return false;
+	return retVal;
 }
 
 
 bool CSerializedUndoManagerComp::DoRedo()
 {
+	bool retVal = false;
+
 	UndoArchivePtr undoArchivePtr(new iser::CMemoryWriteArchive());
 	if (IsRedoAvailable() && undoArchivePtr.IsValid()){
 		istd::CChangeNotifier notifier(this);
 
-		istd::TChangeNotifier<iser::ISerializable> objectPtr(GetObjectPtr(), istd::IChangeable::CF_NO_UNDO);
-		if (objectPtr.IsValid()){
+		iser::ISerializable* objectPtr = GetObjectPtr();
+		if (objectPtr != NULL){
+			Q_ASSERT(!m_isBlocked);
+			m_isBlocked = true;
+
 			if (objectPtr->Serialize(*undoArchivePtr)){
 				m_undoList.push_back(UndoArchivePtr());
 				m_undoList.back().TakeOver(undoArchivePtr);
@@ -113,25 +127,26 @@ bool CSerializedUndoManagerComp::DoRedo()
 			if (objectPtr->Serialize(readArchive)){
 				m_redoList.pop_back();
 
-				return true;
+				retVal = true;
 			}
+
+			m_isBlocked = false;
 		}
 	}
 
-	return false;
+	return retVal;
 }
 
 
 // reimplemented (imod::IObserver)
 
-bool CSerializedUndoManagerComp::OnAttached(imod::IModel* modelPtr)
+bool CSerializedUndoManagerComp::OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask)
 {
-	if (BaseClass2::OnAttached(modelPtr)){
+	if (BaseClass2::OnModelAttached(modelPtr, changeMask)){
 		m_hasStoredDocumentState = false;
 		m_storedStateArchive.Reset();
 
 		m_stateChangedFlag = DCF_UNKNOWN;
-		m_hasStoredDocumentState = false;
 
 		return true;
 	}
@@ -140,14 +155,13 @@ bool CSerializedUndoManagerComp::OnAttached(imod::IModel* modelPtr)
 }
 
 
-bool CSerializedUndoManagerComp::OnDetached(imod::IModel* modelPtr)
+bool CSerializedUndoManagerComp::OnModelDetached(imod::IModel* modelPtr)
 {
-	if (BaseClass2::OnDetached(modelPtr)){
+	if (BaseClass2::OnModelDetached(modelPtr)){
 		m_hasStoredDocumentState = false;
 		m_storedStateArchive.Reset();
 
 		m_stateChangedFlag = DCF_UNKNOWN;
-		m_hasStoredDocumentState = false;
 
 		return true;
 	}
@@ -168,11 +182,11 @@ iser::ISerializable* CSerializedUndoManagerComp::CastFromModel(imod::IModel* mod
 
 // reimplemented (imod::IObserver)
 
-void CSerializedUndoManagerComp::BeforeUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr)
+void CSerializedUndoManagerComp::BeforeUpdate(imod::IModel* modelPtr)
 {
-	BaseClass2::BeforeUpdate(modelPtr, updateFlags, updateParamsPtr);
+	BaseClass2::BeforeUpdate(modelPtr);
 
-	if (((updateFlags & istd::IChangeable::CF_NO_UNDO) == 0) && !m_beginStateArchivePtr.IsValid()){
+	if (!m_isBlocked && !m_beginStateArchivePtr.IsValid()){
 		iser::ISerializable* objectPtr = GetObjectPtr();
 		if (objectPtr != NULL){
 			UndoArchivePtr archivePtr(new iser::CMemoryWriteArchive());
@@ -187,17 +201,21 @@ void CSerializedUndoManagerComp::BeforeUpdate(imod::IModel* modelPtr, int update
 }
 
 
-void CSerializedUndoManagerComp::AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr)
+void CSerializedUndoManagerComp::AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet)
 {
-	istd::CChangeNotifier selfNotifierPtr(NULL);
+	Q_ASSERT(!changeSet.IsEmpty());
 
-	if (((updateFlags & istd::IChangeable::CF_NO_UNDO) == 0) && m_beginStateArchivePtr.IsValid()){
+	m_isStateChangedFlagValid = false;
+
+	if (		!m_isBlocked &&
+				!changeSet.Contains(istd::IChangeable::CF_NO_UNDO) &&
+				m_beginStateArchivePtr.IsValid()){
 		iser::ISerializable* objectPtr = GetObjectPtr();
 		if (objectPtr != NULL){
 			UndoArchivePtr archivePtr(new iser::CMemoryWriteArchive());
 
 			if (objectPtr->Serialize(*archivePtr) && (*archivePtr != *m_beginStateArchivePtr)){
-				selfNotifierPtr.SetPtr(this);
+				istd::CChangeNotifier notifier(this);
 
 				m_undoList.push_back(UndoArchivePtr());
 				m_undoList.back().TakeOver(m_beginStateArchivePtr);
@@ -205,6 +223,7 @@ void CSerializedUndoManagerComp::AfterUpdate(imod::IModel* modelPtr, int updateF
 				if (m_maxBufferSizeAttrPtr.IsValid() && (GetUsedMemorySize() > *m_maxBufferSizeAttrPtr * (1 << 20))){
 					m_undoList.pop_front();
 				}
+
 				m_redoList.clear();
 			}
 		}
@@ -212,9 +231,7 @@ void CSerializedUndoManagerComp::AfterUpdate(imod::IModel* modelPtr, int updateF
 		m_beginStateArchivePtr.Reset();
 	}
 
-	m_isStateChangedFlagValid = false;
-
-	BaseClass2::AfterUpdate(modelPtr, updateFlags, updateParamsPtr);
+	BaseClass2::AfterUpdate(modelPtr, changeSet);
 }
 
 
@@ -228,7 +245,7 @@ bool CSerializedUndoManagerComp::HasStoredDocumentState() const
 
 bool CSerializedUndoManagerComp::StoreDocumentState()
 {
-	istd::CChangeNotifier selfNotifierPtr(this);
+	istd::CChangeNotifier notifier(this);
 
 	m_storedStateArchive.Reset();
 
@@ -252,14 +269,21 @@ bool CSerializedUndoManagerComp::RestoreDocumentState()
 	iser::CMemoryReadArchive restoreArchive(m_storedStateArchive);
 
 	if (m_hasStoredDocumentState){
-		istd::CChangeNotifier selfNotifierPtr(this);
+		istd::CChangeNotifier notifier(this);
 
-		istd::TChangeNotifier<iser::ISerializable> serializablePtr(GetObjectPtr(), istd::IChangeable::CF_NO_UNDO);
-		if (serializablePtr.IsValid() && serializablePtr->Serialize(restoreArchive)){
-			m_stateChangedFlag = DCF_EQUAL;
-			m_isStateChangedFlagValid = true;
+		iser::ISerializable* objectPtr = GetObjectPtr();
+		if (objectPtr != NULL){
+			Q_ASSERT(!m_isBlocked);
+			m_isBlocked = true;
 
-			return true;
+			if (objectPtr->Serialize(restoreArchive)){
+				m_stateChangedFlag = DCF_EQUAL;
+				m_isStateChangedFlagValid = true;
+
+				return true;
+			}
+
+			m_isBlocked = false;
 		}
 
 		m_stateChangedFlag = DCF_UNKNOWN;
@@ -276,15 +300,15 @@ bool CSerializedUndoManagerComp::RestoreDocumentState()
 IDocumentStateComparator::DocumentChangeFlag CSerializedUndoManagerComp::GetDocumentChangeFlag() const
 {
 	if (!m_isStateChangedFlagValid){
-		iser::CMemoryWriteArchive compareArchive;
+		m_stateChangedFlag = DCF_UNKNOWN;
 
-		iser::ISerializable* serializablePtr = GetObjectPtr();
-		if (serializablePtr != NULL){
-			const_cast<iser::ISerializable*>(serializablePtr)->Serialize(compareArchive);
-			m_stateChangedFlag = (compareArchive != m_storedStateArchive)? DCF_DIFFERENT: DCF_EQUAL;
-		}
-		else{
-			m_stateChangedFlag = DCF_UNKNOWN;
+		if (m_hasStoredDocumentState){
+			iser::CMemoryWriteArchive compareArchive;
+
+			iser::ISerializable* serializablePtr = GetObjectPtr();
+			if ((serializablePtr != NULL) && const_cast<iser::ISerializable*>(serializablePtr)->Serialize(compareArchive)){
+				m_stateChangedFlag = (compareArchive != m_storedStateArchive)? DCF_DIFFERENT: DCF_EQUAL;
+			}
 		}
 
 		m_isStateChangedFlagValid = true;

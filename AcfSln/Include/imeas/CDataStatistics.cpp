@@ -23,14 +23,16 @@
 #include "imeas/CDataStatistics.h"
 
 
-#include "istd/TChangeNotifier.h"
-
+// ACF includes
+#include "istd/CChangeNotifier.h"
+#include "istd/CChangeGroup.h"
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
 
 
 namespace imeas
 {
+
 
 CDataStatistics::CDataStatistics()
 	:m_average(0.0),
@@ -48,28 +50,28 @@ void CDataStatistics::CreateStatistics(
 			double standardDeviation,
 			const istd::CRange& dataBoundaries)
 {
-	istd::CChangeNotifier changePtr(NULL);
+	istd::CChangeGroup changeGroup(this);
 
 	if (dataBoundaries != m_dataBoundaries){
-		changePtr.SetPtr(this);
+		istd::CChangeNotifier notifier(this);
 
 		m_dataBoundaries = dataBoundaries;
 	}
 
 	if (standardDeviation != m_standardDeviation){
-		changePtr.SetPtr(this);
+		istd::CChangeNotifier notifier(this);
 
 		m_standardDeviation = standardDeviation;
 	}
 	
 	if (average != m_average){
-		changePtr.SetPtr(this);
+		istd::CChangeNotifier notifier(this);
 
 		m_average = average;
 	}
 	
 	if (median != m_median){
-		changePtr.SetPtr(this);
+		istd::CChangeNotifier notifier(this);
 
 		m_median = median;
 	}
@@ -149,3 +151,5 @@ bool CDataStatistics::Serialize(iser::IArchive& archive)
 
 
 } // namespace imeas
+
+

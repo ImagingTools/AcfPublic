@@ -155,7 +155,7 @@ protected:
 
 protected:
 	int m_workStatus;
-	istd::CChangeNotifier m_productChangeNotifier;
+	istd::TDelPtr<istd::CChangeNotifier> m_productChangeNotifierPtr;
 
 private:
 	class InputsObserver: public imod::CMultiModelObserverBase
@@ -167,7 +167,7 @@ private:
 
 	protected:
 		// reimplemented (imod::CMultiModelObserverBase)
-		virtual void BeforeUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr);
+		virtual void BeforeUpdate(imod::IModel* modelPtr);
 
 		CSupplierCompBase& m_parent;
 	};
@@ -181,8 +181,8 @@ private:
 
 	protected:
 		// reimplemented (imod::CMultiModelObserverBase)
-		virtual void BeforeUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr);
-		virtual void AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr);
+		virtual void BeforeUpdate(imod::IModel* modelPtr);
+		virtual void AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet);
 
 		CSupplierCompBase& m_parent;
 	};

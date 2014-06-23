@@ -27,7 +27,7 @@
 #include <QtCore/QThread>
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 
 
 class ThreadBrute: public QThread
@@ -67,7 +67,8 @@ double CGeneralTimeStamp::GetTimeTo(const CGeneralTimeStamp& timeStamp) const
 
 void CGeneralTimeStamp::Start(double elapsedTime)
 {
-	istd::CChangeNotifier notifier(this);
+	static ChangeSet changeSet(CF_START_SET);
+	istd::CChangeNotifier notifier(this, changeSet);
 
 	m_timeShift = elapsedTime;
 

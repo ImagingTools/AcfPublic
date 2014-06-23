@@ -33,7 +33,7 @@
 #endif
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 
 
 namespace ifile
@@ -162,7 +162,7 @@ void CFileListProviderComp::EnumerateDirectory(
 
 // reimplemented (imod::CSingleModelObserverBase)
 
-void CFileListProviderComp::OnUpdate(int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
+void CFileListProviderComp::OnUpdate(const ChangeSet& /*changeSet*/)
 {
 	istd::CChangeNotifier notifier(this);
 
@@ -222,7 +222,7 @@ void CFileListProviderComp::OnComponentCreated()
 		m_dirParamModelCompPtr->AttachObserver(this);
 	}
 	else{
-		OnUpdate(0, NULL);
+		OnUpdate(GetAnyChange());
 	}
 }
 
@@ -239,7 +239,7 @@ void CFileListProviderComp::OnComponentDestroyed()
 
 void CFileListProviderComp::OnDirectoryContentChanged(const QString& /*directoryPath*/)
 {
-	OnUpdate(0, NULL);
+	OnUpdate(GetAnyChange());
 }
 
 

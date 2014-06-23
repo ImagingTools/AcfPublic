@@ -24,7 +24,7 @@
 
 
 // ACF inlcudes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 #include "istd/TRange.h"
 #include "imod/IModel.h"
 #include "imath/CAkimaInterpolator.h"
@@ -38,7 +38,7 @@ namespace itutacf
 
 // reimplemented (imod::CSingleModelObserverBase)
 
-void CInterpolationTestComp::OnUpdate(int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
+void CInterpolationTestComp::OnUpdate(const ChangeSet& /*changeSet*/)
 {
 	if (!m_slaveObjectCompPtr.IsValid()){
 		return;

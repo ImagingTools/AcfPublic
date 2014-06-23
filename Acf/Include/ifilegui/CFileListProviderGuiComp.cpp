@@ -31,7 +31,7 @@ namespace ifilegui
 
 // reimplemented (iqtgui::TGuiObserverWrap)
 
-void CFileListProviderGuiComp::UpdateGui(int /*updateFlags*/)
+void CFileListProviderGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	Q_ASSERT(IsGuiCreated());
 

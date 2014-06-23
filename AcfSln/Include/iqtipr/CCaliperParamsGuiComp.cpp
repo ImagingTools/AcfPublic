@@ -24,7 +24,7 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeGroup.h"
 
 
 namespace iqtipr
@@ -40,23 +40,20 @@ void CCaliperParamsGuiComp::UpdateModel() const
 	iipr::ICaliperParams* objectPtr = GetObjectPtr();
 	Q_ASSERT(objectPtr != NULL);
 
-	istd::CChangeNotifier notifier(NULL);
+	istd::CChangeGroup notifier(objectPtr);
 
 	double threshold = ThresholdSB->value() * 0.01;
 	if (qAbs(objectPtr->GetWeightThreshold() - threshold) > I_BIG_EPSILON){
-		notifier.SetPtr(objectPtr);
 		objectPtr->SetWeightThreshold(threshold);
 	}
 
 	int edgePolarity = EdgePolarityCB->currentIndex();
 	if (objectPtr->GetPolarityMode() != edgePolarity){
-		notifier.SetPtr(objectPtr);
 		objectPtr->SetPolarityMode(edgePolarity);
 	}
 
 	int direction = DirectionCB->currentIndex();
 	if (objectPtr->GetDirectionMode() != direction){
-		notifier.SetPtr(objectPtr);
 		objectPtr->SetDirectionMode(direction);
 	}
 }
@@ -66,7 +63,7 @@ void CCaliperParamsGuiComp::UpdateModel() const
 
 // reimplemented (iqtgui::TGuiObserverWrap)
 
-void CCaliperParamsGuiComp::UpdateGui(int /*updateFlags*/)
+void CCaliperParamsGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	Q_ASSERT(IsGuiCreated());
 

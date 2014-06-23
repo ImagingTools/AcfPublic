@@ -115,9 +115,9 @@ void CValueSupplierGuiComp::OnGuiModelAttached()
 }
 
 
-void CValueSupplierGuiComp::UpdateGui(int updateFlags)
+void CValueSupplierGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& changeSet)
 {
-	BaseClass::UpdateGui(updateFlags);
+	BaseClass::UpdateGui(changeSet);
 
 	Q_ASSERT(IsGuiCreated());
 

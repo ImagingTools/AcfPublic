@@ -42,7 +42,7 @@ namespace iauth
 /**
 	Provide management of users.
 */
-class IUsersManager: public iser::ISerializable
+class IUsersManager: virtual public iser::ISerializable
 {
 public:
 	/**

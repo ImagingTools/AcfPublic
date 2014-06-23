@@ -85,7 +85,7 @@ void TSupplierCompWrap<Product>::EnsureWorkFinished()
 		m_workStatus = ProduceObject(*m_productPtr);
 		Q_ASSERT(m_workStatus >= WS_OK);	// No initial states are possible
 
-		m_productChangeNotifier.Reset();
+		m_productChangeNotifierPtr.Reset();
 	}
 }
 
@@ -101,7 +101,7 @@ void TSupplierCompWrap<Product>::ClearWorkResults()
 
 	BaseClass::ClearWorkResults();
 
-	m_productChangeNotifier.Reset();
+	m_productChangeNotifierPtr.Reset();
 }
 
 

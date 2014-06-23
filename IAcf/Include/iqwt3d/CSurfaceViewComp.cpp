@@ -28,7 +28,7 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 
 
 namespace iqwt3d
@@ -68,7 +68,7 @@ CSurfaceViewComp::CSurfaceViewComp()
 
 // reimplemenented (iqtgui::TGuiObserverWrap)
 
-void CSurfaceViewComp::UpdateGui(int /*updateFlags*/)
+void CSurfaceViewComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	Q_ASSERT(IsGuiCreated());
 

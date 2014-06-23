@@ -27,7 +27,7 @@
 #include <QtCore/QMutexLocker>
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
 #include "iproc/IProcessor.h"
@@ -81,10 +81,10 @@ const ihotf::IHotfolderProcessingItem* CHotfolderProcessingInfo::AddProcessingIt
 		return foundItemPtr;
 	}
 
+	static ChangeSet changeSet(CF_FILE_ADDED);
+	istd::CChangeNotifier changePtr(this, changeSet);
+
 	ProcessingItem* itemPtr = new ProcessingItem;
-
-	istd::CChangeNotifier changePtr(this, CF_MODEL | CF_FILE_ADDED, itemPtr);
-
 	itemPtr->SetInputFile(inputFilePath);
 	itemPtr->SetOutputFile(outputFilePath);
 	itemPtr->SetProcessingState(iproc::IProcessor::TS_NONE);
@@ -107,7 +107,8 @@ void CHotfolderProcessingInfo::RemoveProcessingItem(ihotf::IHotfolderProcessingI
 		return;
 	}
 
-	istd::CChangeNotifier changePtr(this, CF_MODEL | CF_FILE_REMOVED, fileItemPtr);
+	static ChangeSet changeSet(CF_FILE_REMOVED);
+	istd::CChangeNotifier changePtr(this, changeSet);
 
 	if (!m_processingItems.Remove(fileItemPtr)){
 		changePtr.Abort();
@@ -140,7 +141,8 @@ bool CHotfolderProcessingInfo::IsWorking() const
 void CHotfolderProcessingInfo::SetWorking(bool working)
 {
 	if (working != m_isWorking){
-		istd::CChangeNotifier changePtr(this, CF_MODEL | CF_WORKING_STATE_CHANGED);
+		static ChangeSet changeSet(CF_WORKING_STATE_CHANGED);
+		istd::CChangeNotifier changePtr(this, changeSet);
 	
 		m_isWorking = working;
 	}
@@ -151,6 +153,9 @@ void CHotfolderProcessingInfo::SetWorking(bool working)
 
 bool CHotfolderProcessingInfo::Serialize(iser::IArchive& archive)
 {
+	static ChangeSet changeSet(CF_ALL_DATA, CF_CREATE);
+	istd::CChangeNotifier changePtr(archive.IsStoring()? NULL: this, changeSet);
+
 	QMutexLocker locker(&m_mutex);
 
 	bool retVal = true;
@@ -159,8 +164,6 @@ bool CHotfolderProcessingInfo::Serialize(iser::IArchive& archive)
 	if (!archive.IsStoring() && m_isWorking){
 		SetWorking(false);
 	}
-
-	istd::CChangeNotifier changePtr(NULL, CF_MODEL | CF_CREATE);
 
 	static iser::CArchiveTag isWorkingTag("Working", "Hotfolder is in running state");
 	retVal = retVal && archive.BeginTag(isWorkingTag);
@@ -199,12 +202,6 @@ bool CHotfolderProcessingInfo::Serialize(iser::IArchive& archive)
 	}
 
 	retVal = retVal && archive.EndTag(processingItemsTag);
-
-	if (retVal && !archive.IsStoring()){
-		locker.unlock();
-
-		changePtr.SetPtr(this);
-	}
 
 	return retVal;
 }

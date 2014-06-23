@@ -75,12 +75,15 @@ public:
 		WS_CRITICAL
 	};
 
+	/**
+		Data model change notification flags.
+	*/
 	enum ChangeFlags
 	{
 		/**
 			Supplier result changed.
 		*/
-		CF_SUPPLIER_RESULTS = 1 << 22
+		CF_SUPPLIER_RESULTS = 0x6326415
 	};
 
 	enum WorkMessageType

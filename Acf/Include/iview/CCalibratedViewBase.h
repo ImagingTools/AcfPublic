@@ -113,7 +113,7 @@ public:
 
 	// reimplemented (iview::CViewBase)
 	virtual const iview::IColorSchema& GetDefaultColorSchema() const;
-	virtual void UpdateAllShapes(int changeFlag);
+	virtual void UpdateAllShapes(const istd::IChangeable::ChangeSet& changeSet);
 	virtual void InsertDefaultLayers();
 
 	// reimplemented (iview::IShapeView)

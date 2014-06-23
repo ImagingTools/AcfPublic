@@ -28,7 +28,7 @@
 #include <QtCore/QTimer>
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 
 
 namespace ifilegui
@@ -63,7 +63,7 @@ void CFilePreviewGuiComp::OnGuiModelDetached()
 }
 
 
-void CFilePreviewGuiComp::UpdateGui(int /*updateFlags*/)
+void CFilePreviewGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	Q_ASSERT(IsGuiCreated());
 

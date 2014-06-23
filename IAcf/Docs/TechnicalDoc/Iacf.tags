@@ -1783,8 +1783,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
-      <anchor>ac2664adf63eb9bae26d7b38c21efb313</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a7e97d91f1f8dd1c7aba7d8e9fd247fcc</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -1851,8 +1851,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqwt_1_1_c_histogram_view_comp.html</anchorfile>
-      <anchor>aa88a1d049ee6c41896d36d6254ac9c46</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a4426f0397cea85ccc88b900b90ce4bbc</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -1960,8 +1960,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqwt_1_1_c_qwt_data_sequence_view_comp.html</anchorfile>
-      <anchor>a23aef00f2f7b8d5928566e2f413f13a7</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a7dbbe97b3d4cd1df234e9a23f1327f34</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -2013,8 +2013,8 @@
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqwt3d_1_1_c_surface_view_comp.html</anchorfile>
-      <anchor>aa34808beb19fd88d8dc07960869a3a14</anchor>
-      <arglist>(int updateFlags=0)</arglist>
+      <anchor>a021ea689dbf11ec9d502b7933307229d</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ibase::IHierarchicalCommand *</type>

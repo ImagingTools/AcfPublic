@@ -24,7 +24,7 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeGroup.h"
 
 
 // Tutorial includes
@@ -38,10 +38,10 @@ void CAbGuiComp::UpdateModel() const
 	IAb* objectPtr = GetObjectPtr();
 	Q_ASSERT(objectPtr != NULL);
 
-	istd::TChangeNotifier<IAb> changePtr(objectPtr);
+	istd::CChangeGroup changeGroup(objectPtr);
 
-	changePtr->SetA(AValueSpinBox->value());
-	changePtr->SetB(BValueEdit->text().toLocal8Bit());
+	objectPtr->SetA(AValueSpinBox->value());
+	objectPtr->SetB(BValueEdit->text().toLocal8Bit());
 }
 
 
@@ -49,7 +49,7 @@ void CAbGuiComp::UpdateModel() const
 
 // reimplemented (iqtgui::TGuiObserverWrap)
 
-void CAbGuiComp::UpdateGui(int /*updateFlags*/)
+void CAbGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	Q_ASSERT(IsGuiCreated());
 

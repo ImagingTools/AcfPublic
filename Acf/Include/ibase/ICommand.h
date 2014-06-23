@@ -42,6 +42,10 @@ class ICommand:
 			virtual public iprm::IEnableableParam
 {
 public:
+	/**
+		Flags indicating attributes of command.
+		This flags can be binary combined.
+	*/
 	enum StaticFlags
 	{
 		/**

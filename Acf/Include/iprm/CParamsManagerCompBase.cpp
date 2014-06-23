@@ -24,7 +24,7 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 #include "imod/IModel.h"
 #include "imod/TModelWrap.h"
 #include "iprm/ISelectionParam.h"
@@ -55,7 +55,8 @@ int CParamsManagerCompBase::InsertParamsSet(int typeIndex, int index)
 		return -1;
 	}
 
-	istd::CChangeNotifier notifier(this, CF_SET_INSERTED | CF_OPTIONS_CHANGED | CF_MODEL);
+	static ChangeSet changeSet(CF_SET_INSERTED, CF_OPTIONS_CHANGED);
+	istd::CChangeNotifier notifier(this, changeSet);
 
 	ParamSetPtr paramsSetPtr(new imod::TModelWrap<ParamSet>());
 
@@ -100,7 +101,8 @@ bool CParamsManagerCompBase::RemoveParamsSet(int index)
 		return false;
 	}
 
-	istd::CChangeNotifier notifier(this, CF_SET_REMOVED | CF_OPTIONS_CHANGED | CF_SELECTION_CHANGED | CF_MODEL);
+	static ChangeSet changeSet(CF_SET_REMOVED, CF_OPTIONS_CHANGED, CF_SELECTION_CHANGED);
+	istd::CChangeNotifier notifier(this, changeSet);
 	
 	int removeIndex = index - fixedParamsCount;
 
@@ -129,7 +131,8 @@ bool CParamsManagerCompBase::SwapParamsSet(int index1, int index2)
 		return false;
 	}
 
-	istd::CChangeNotifier notifier(this, CF_SET_REMOVED | CF_OPTIONS_CHANGED | CF_SELECTION_CHANGED | CF_MODEL);
+	static ChangeSet changeSet(CF_SET_ENABLE_CHANGED, CF_SET_REMOVED, CF_SELECTION_CHANGED);
+	istd::CChangeNotifier notifier(this, changeSet);
 
 	ParamSet& paramsSet1 = *m_paramSets[index1 - fixedParamsCount];
 	ParamSet& paramsSet2 = *m_paramSets[index2 - fixedParamsCount];
@@ -239,7 +242,8 @@ bool CParamsManagerCompBase::SetParamsSetName(int index, const QString& name)
 	}
 
 	if (m_paramSets[index - fixedSetsCount]->name != name){
-		istd::CChangeNotifier notifier(this, CF_SET_NAME_CHANGED | CF_OPTION_RENAMED | CF_MODEL);
+		static ChangeSet changeSet(CF_SET_NAME_CHANGED, CF_OPTION_RENAMED);
+		istd::CChangeNotifier notifier(this, changeSet);
 
 		m_paramSets[index - fixedSetsCount]->name = name;
 	}
@@ -278,7 +282,8 @@ void CParamsManagerCompBase::SetParamsSetDescription(int index, const QString& d
 	}
 
 	if (m_paramSets[index - fixedSetsCount]->description != description){
-		istd::CChangeNotifier notifier(this, CF_OPTIONS_CHANGED | CF_MODEL);
+		static ChangeSet changeSet(CF_OPTIONS_CHANGED);
+		istd::CChangeNotifier notifier(this, changeSet);
 
 		m_paramSets[index - fixedSetsCount]->description = description;
 	}
@@ -303,7 +308,8 @@ bool CParamsManagerCompBase::SetSelectedOptionIndex(int index)
 {
 	if (index < GetOptionsCount()){
 		if (index != m_selectedIndex){
-			istd::CChangeNotifier notifier(this, CF_SELECTION_CHANGED | CF_OPTIONS_CHANGED | CF_MODEL);
+			static ChangeSet changeSet(CF_OPTIONS_CHANGED, CF_SELECTION_CHANGED);
+			istd::CChangeNotifier notifier(this, changeSet);
 
 			m_selectedIndex = index;
 		}

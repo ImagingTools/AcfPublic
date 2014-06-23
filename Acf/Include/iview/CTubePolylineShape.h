@@ -110,7 +110,8 @@ inline void CTubePolylineShape::SetOrientationVisible(bool state)
 {
 	if (m_isOrientationVisible != state){
 		m_isOrientationVisible = state;
-		Invalidate(iview::CS_CONSOLE);
+
+		Invalidate();
 	}
 }
 

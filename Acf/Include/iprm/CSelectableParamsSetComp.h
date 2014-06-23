@@ -81,7 +81,7 @@ public:
 	virtual ISelectionParam* GetSubselection(int index) const;
 
 	// reimplemented (imod::IObserver)
-	virtual void AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr);
+	virtual void AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet);
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
@@ -117,8 +117,8 @@ private:
 		CurrentParamsSetObserver(CSelectableParamsSetComp& parent);
 
 		// reimplemented (imod::CSingleModelObserverBase)
-		virtual void BeforeUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr);
-		virtual void AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr);
+		virtual void BeforeUpdate(imod::IModel* modelPtr);
+		virtual void AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet);
 
 	private:
 		CSelectableParamsSetComp& m_parent;

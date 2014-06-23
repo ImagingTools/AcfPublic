@@ -26,7 +26,7 @@
 
 // ACF includes
 #include "istd/TDelPtr.h"
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 #include "istd/CClassInfo.h"
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
@@ -104,7 +104,7 @@ TProperty<Value>::TProperty(
 			int propertyFlags,
 			int changeFlags,
 			const ValueType& defaultValue)
-	:BaseClass(propertyOwnerPtr, propertyName, propertyDescription, propertyFlags, changeFlags),
+:	BaseClass(propertyOwnerPtr, propertyName, propertyDescription, propertyFlags, changeFlags),
 	m_value(defaultValue)
 {
 	if (!m_defaultPropertyValuePtr.IsValid()){
@@ -126,7 +126,11 @@ template <typename Value>
 void TProperty<Value>::SetValue(const Value& value)
 {
 	if (m_value != value){
-		istd::CChangeNotifier changePtr(m_propertyOwnerPtr, m_changeFlags);
+		istd::IChangeable::ChangeSet changeSet;
+		if (m_changeFlag != 0){
+			changeSet += m_changeFlag;
+		}
+		istd::CChangeNotifier notifier(m_propertyOwnerPtr, changeSet);
 
 		m_value = value;
 	}

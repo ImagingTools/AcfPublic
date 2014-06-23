@@ -35,7 +35,7 @@ namespace ibase
 
 // reimplemented (imod::CSingleModelObserverBase)
 
-void CObjectSynchronizerComp::OnUpdate(int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
+void CObjectSynchronizerComp::OnUpdate(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	int slaveCounts = m_slaveObjectsCompPtr.GetCount();
 

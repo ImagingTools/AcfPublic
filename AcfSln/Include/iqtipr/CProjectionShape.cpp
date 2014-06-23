@@ -77,7 +77,7 @@ i2d::CRect CProjectionShape::CalcBoundingBox() const
 	
 // reimplemented (imod::IObserver)
 
-void CProjectionShape::AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr)
+void CProjectionShape::AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet)
 {
 	const i2d::CLine2d* linePtr = dynamic_cast<const i2d::CLine2d*>(modelPtr);
 	if (linePtr != NULL){
@@ -88,7 +88,7 @@ void CProjectionShape::AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd
 
 	UpdateFigure();
 
-	BaseClass::AfterUpdate(modelPtr, updateFlags, updateParamsPtr);
+	BaseClass::AfterUpdate(modelPtr, changeSet);
 }
 
 

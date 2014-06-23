@@ -35,7 +35,7 @@
 #endif
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 #include "istd/CSystem.h"
 #include "iqt/CSignalBlocker.h"
 #include "iwidgets/CExtLineEdit.h"
@@ -83,7 +83,7 @@ void CFileNameParamGuiComp::OnGuiModelAttached()
 }
 
 
-void CFileNameParamGuiComp::UpdateGui(int /*updateFlags*/)
+void CFileNameParamGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	Q_ASSERT(IsGuiCreated());
 

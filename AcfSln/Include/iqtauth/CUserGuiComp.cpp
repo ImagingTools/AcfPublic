@@ -24,7 +24,7 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 #include "iser/CMemoryReadArchive.h"
 
 // ACF-Solutions includes
@@ -40,8 +40,10 @@ namespace iqtauth
 
 bool CUserGuiComp::TryChangePassword(iauth::CUser& user) const
 {
-	istd::TChangeNotifier<iauth::IUsersManager> managerPtr(GetObjectPtr());
-	if (managerPtr.IsValid()){
+	iauth::IUsersManager* managerPtr = GetObjectPtr();
+	if (managerPtr != NULL){
+		istd::CChangeNotifier notifier(managerPtr);
+
 		CChangePasswordDialog dialog(*managerPtr, user);
 		dialog.exec();
 
@@ -109,7 +111,7 @@ void CUserGuiComp::OnComponentDestroyed()
 
 // reimplemented (imod::CMultiModelDispatcherBase)
 
-void CUserGuiComp::OnModelChanged(int /*modelId*/, int /*changeFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
+void CUserGuiComp::OnModelChanged(int /*modelId*/, const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	UpdateButtonsState();
 }
@@ -132,8 +134,10 @@ void CUserGuiComp::on_PushOpenUserManager_clicked()
 {
 
 	if (m_userLoginIfPtr.IsValid()){
-		istd::TChangeNotifier<iauth::IUsersManager> managerPtr(GetObjectPtr());
-		if (managerPtr.IsValid()){
+		iauth::IUsersManager* managerPtr = GetObjectPtr();
+		if (managerPtr != NULL){
+			istd::CChangeNotifier notifier(managerPtr);
+
 			CUserManagerDialog dialog(*m_userLoginIfPtr, *managerPtr);
 
 			dialog.exec();

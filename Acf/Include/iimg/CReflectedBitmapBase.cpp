@@ -24,7 +24,7 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 
 
 namespace iimg
@@ -43,7 +43,8 @@ const QImage& CReflectedBitmapBase::GetQImage() const
 
 bool CReflectedBitmapBase::CopyImageFrom(const QImage& image)
 {
-	istd::CChangeNotifier notifier(this, CF_BLOCK_BITMAP_CONVERSION | CF_MODEL);
+	static ChangeSet changeSet(CF_BLOCK_BITMAP_CONVERSION);
+	istd::CChangeNotifier notifier(this, changeSet);
 
 	if (ConvertFromQImage(image)){
 		m_image = image;
@@ -61,9 +62,9 @@ bool CReflectedBitmapBase::CopyImageFrom(const QImage& image)
 
 // reimplmented (istd::TCachedUpdateManagerWrap)
 
-bool CReflectedBitmapBase::CalculateCache(int changeFlags)
+bool CReflectedBitmapBase::CalculateCache(const ChangeSet& changeSet)
 {
-	if ((changeFlags & CF_BLOCK_BITMAP_CONVERSION) == 0){
+	if (!changeSet.Contains(CF_BLOCK_BITMAP_CONVERSION)){
 		return ConvertToQImage(m_image);
 	}
 

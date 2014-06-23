@@ -90,11 +90,11 @@ void CTransformableRectangleShape::Draw(QPainter& drawContext) const
 
 // reimplemented (imod::IObserver)
 
-bool CTransformableRectangleShape::OnAttached(imod::IModel* modelPtr)
+bool CTransformableRectangleShape::OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask)
 {
 	Q_ASSERT(dynamic_cast<i2d::CParallelogram*>(modelPtr) != NULL);
 
-	return BaseClass::OnAttached(modelPtr);
+	return BaseClass::OnModelAttached(modelPtr, changeMask);
 }
 
 

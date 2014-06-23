@@ -24,7 +24,7 @@
 
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 
 // ACF-Solutions includes
 #include "isig/IPulseConstraints.h"
@@ -110,7 +110,7 @@ void CPulseParamsGuiComp::OnGuiModelAttached()
 }
 
 
-void CPulseParamsGuiComp::UpdateGui(int /*updateFlags*/)
+void CPulseParamsGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	Q_ASSERT(IsGuiCreated());
 

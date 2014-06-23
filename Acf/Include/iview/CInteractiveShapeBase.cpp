@@ -73,7 +73,7 @@ void CInteractiveShapeBase::SetSelected(bool selectFlag)
 	if (m_isSelected != selectFlag){
 		m_isSelected = selectFlag;
 
-		Invalidate(CS_CONSOLE);
+		Invalidate();
 	
 		ISelectable* observerPtr = dynamic_cast<ISelectable*>(GetDisplayPtr());
 		if (observerPtr != NULL){
@@ -99,10 +99,10 @@ bool CInteractiveShapeBase::OnMouseMove(istd::CIndex2d)
 
 // reimplemented (imod::IObserver)
 
-bool CInteractiveShapeBase::OnAttached(imod::IModel* modelPtr)
+bool CInteractiveShapeBase::OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask)
 {
-	if (BaseClass::OnAttached(modelPtr)){
-		Invalidate(CS_CONSOLE);
+	if (BaseClass::OnModelAttached(modelPtr, changeMask)){
+		Invalidate();
 
 		return true;
 	}
@@ -111,11 +111,11 @@ bool CInteractiveShapeBase::OnAttached(imod::IModel* modelPtr)
 }
 
 
-bool CInteractiveShapeBase::OnDetached(imod::IModel* modelPtr)
+bool CInteractiveShapeBase::OnModelDetached(imod::IModel* modelPtr)
 {
-	Invalidate(CS_CONSOLE);
+	Invalidate();
 
-	return BaseClass::OnDetached(modelPtr);
+	return BaseClass::OnModelDetached(modelPtr);
 }
 
 
@@ -129,24 +129,28 @@ bool CInteractiveShapeBase::IsDraggable() const
 
 void CInteractiveShapeBase::BeginDrag(const istd::CIndex2d& position)
 {
-	istd::IChangeable* objectPtr = dynamic_cast<istd::IChangeable*>(GetModelPtr());
-	m_changeNotifier.SetPtr(objectPtr);
-
 	BeginLogDrag(GetLogPosition(position));
 }
 
 
 void CInteractiveShapeBase::SetDragPosition(const istd::CIndex2d& position)
 {
+	if (!m_dragNotifierPtr.IsValid()){
+		istd::IChangeable* objectPtr = dynamic_cast<istd::IChangeable*>(GetModelPtr());
+
+		static istd::IChangeable::ChangeSet dragChangeSet(IDisplay::CS_CONSOLE, i2d::IObject2d::CF_OBJECT_POSITION);
+		m_dragNotifierPtr.SetPtr(new istd::CChangeGroup(objectPtr, dragChangeSet));
+	}
+
 	SetLogDragPosition(GetLogPosition(position));
 
-	Invalidate(CS_CONSOLE);
+	Invalidate();
 }
 
 
 void CInteractiveShapeBase::EndDrag()
 {
-	m_changeNotifier.Reset();
+	m_dragNotifierPtr.Reset();
 }
 
 
@@ -155,7 +159,8 @@ void CInteractiveShapeBase::EndDrag()
 void CInteractiveShapeBase::BeginTickerDrag()
 {
 	istd::IChangeable* objectPtr = dynamic_cast<istd::IChangeable*>(GetModelPtr());
-	m_changeNotifier.SetPtr(objectPtr);
+	static istd::IChangeable::ChangeSet dragChangeSet(IDisplay::CS_CONSOLE, i2d::IObject2d::CF_OBJECT_POSITION);
+	m_dragNotifierPtr.SetPtr(new istd::CChangeGroup(objectPtr, dragChangeSet));
 
 	ISelectable* controllerPtr = dynamic_cast<ISelectable*>(GetDisplayPtr());
 	if (controllerPtr != NULL){
@@ -173,13 +178,13 @@ void CInteractiveShapeBase::EndTickerDrag()
 		controllerPtr->OnShapeDefocused(this);
 	}
 
-	m_changeNotifier.Reset();
+	m_dragNotifierPtr.Reset();
 }
 
 
 void CInteractiveShapeBase::UpdateModelChanges()
 {
-	Invalidate(CS_CONSOLE);
+	Invalidate();
 }
 
 

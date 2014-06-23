@@ -163,7 +163,7 @@ private:
 		FileSystemChangeStorageObserver(CHotfolderTaskManagerComp& parent);
 
 		// reimplemented (imod::IObserver)
-		virtual void AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr);
+		virtual void AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet);
 
 	private:
 		CHotfolderTaskManagerComp& m_parent;
@@ -179,7 +179,8 @@ private:
 		ParametersObserver(CHotfolderTaskManagerComp& parent);
 		
 		// reimplemented (imod::IObserver)
-		virtual void AfterUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr);
+		virtual void AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet);
+
 	private:
 		CHotfolderTaskManagerComp& m_parent;
 	};

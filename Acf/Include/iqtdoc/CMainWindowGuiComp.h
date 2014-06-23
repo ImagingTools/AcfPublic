@@ -105,8 +105,8 @@ public:
 	CMainWindowGuiComp();
 
 	// reimplemented (imod::IObserver)
-	virtual bool OnAttached(imod::IModel* modelPtr);
-	virtual bool OnDetached(imod::IModel* modelPtr);
+	virtual bool OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask);
+	virtual bool OnModelDetached(imod::IModel* modelPtr);
 
 protected:
 	virtual bool OpenFile(const QString& fileName);
@@ -137,7 +137,7 @@ protected:
 	virtual void OnRetranslate();
 
 	// reimplemented (imod::TSingleModelObserverBase)
-	virtual void OnUpdate(int updateFlags, istd::IPolymorphic* updateParamsPtr);
+	virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet);
 
 	// reimplemented (QObject)
 	virtual bool eventFilter(QObject* sourcePtr, QEvent* eventPtr);
@@ -210,11 +210,11 @@ private:
 		ActiveUndoManager(CMainWindowGuiComp& parent);
 
 		// reimplemented (imod::IObserver)
-		virtual bool OnAttached(imod::IModel* modelPtr);
+		virtual bool OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask);
 
 	protected:
 		// reimplemented (imod::CSingleModelObserverBase)
-		virtual void OnUpdate(int updateFlags, istd::IPolymorphic* updateParamsPtr);
+		virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet);
 
 	private:
 		CMainWindowGuiComp& m_parent;

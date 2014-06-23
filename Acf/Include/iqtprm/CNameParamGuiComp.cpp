@@ -33,7 +33,7 @@
 #endif
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 
 
 namespace iqtprm
@@ -59,7 +59,7 @@ void CNameParamGuiComp::UpdateModel() const
 
 // reimplemented (iqtgui::TGuiObserverWrap)
 
-void CNameParamGuiComp::UpdateGui(int /*updateFlags*/)
+void CNameParamGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	iprm::INameParam* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){

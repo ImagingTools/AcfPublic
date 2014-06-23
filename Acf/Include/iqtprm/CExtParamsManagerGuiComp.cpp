@@ -34,7 +34,7 @@
 
 
 // ACF includes
-#include <istd/TChangeNotifier.h>
+#include "istd/CChangeNotifier.h"
 #include <iprm/IOptionsList.h>
 #include <iprm/TParamsPtr.h>
 #include <iprm/CParamsSet.h>
@@ -100,7 +100,7 @@ void CExtParamsManagerGuiComp::OnGuiCreated()
 }
 
 
-void CExtParamsManagerGuiComp::UpdateGui(int /*updateFlags = 0*/)
+void CExtParamsManagerGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	iprm::IParamsManager* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){

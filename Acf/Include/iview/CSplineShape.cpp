@@ -44,11 +44,11 @@ namespace iview
 
 // reimplemented (imod::IObserver)
 
-bool CSplineShape::OnAttached(imod::IModel* modelPtr)
+bool CSplineShape::OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask)
 {
 	Q_ASSERT(dynamic_cast<i2d::CSpline*>(modelPtr) != NULL);
 
-	return BaseClass::OnAttached(modelPtr);
+	return BaseClass::OnModelAttached(modelPtr, changeMask);
 }
 
 

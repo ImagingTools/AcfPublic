@@ -189,7 +189,7 @@ protected:
 
 	// reimplemented (iqt::TGuiObserverWrap)
 	virtual void OnGuiModelDetached();
-	virtual void UpdateGui(int updateFlags = 0);
+	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet);
 
 	// reimplemented (CGuiComponentBase)
 	virtual void OnGuiCreated();
@@ -234,7 +234,7 @@ private:
 
 	protected:
 		// reimplemented (imod::CSingleModelObserverBase)
-		virtual void OnUpdate(int updateFlags, istd::IPolymorphic* updateParamsPtr);
+		virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet);
 
 	private:
 		CAttributeEditorComp& m_parent;

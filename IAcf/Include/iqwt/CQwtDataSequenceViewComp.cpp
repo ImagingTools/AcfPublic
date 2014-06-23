@@ -39,7 +39,7 @@ namespace iqwt
 
 // reimplemented (iqtgui::TGuiObserverWrap)
 
-void CQwtDataSequenceViewComp::UpdateGui(int /*updateFlags*/)
+void CQwtDataSequenceViewComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	Q_ASSERT(IsGuiCreated());
 

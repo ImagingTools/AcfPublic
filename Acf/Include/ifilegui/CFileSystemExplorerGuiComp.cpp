@@ -35,7 +35,7 @@
 #endif
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 #include "istd/CSystem.h"
 
 
@@ -66,7 +66,7 @@ QStringList CFileSystemExplorerGuiComp::GetDefaultFilters() const
 
 // reimplemented (iqtgui::TGuiObserverWrap)
 
-void CFileSystemExplorerGuiComp::UpdateGui(int /*updateFlags*/)
+void CFileSystemExplorerGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	Q_ASSERT(IsGuiCreated());
 

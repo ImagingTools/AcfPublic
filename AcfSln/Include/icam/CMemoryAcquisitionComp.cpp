@@ -23,7 +23,7 @@
 #include "icam/CMemoryAcquisitionComp.h"
 
 
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 
 #include "iprm/IParamsSet.h"
 

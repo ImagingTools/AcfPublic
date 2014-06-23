@@ -107,8 +107,7 @@ protected:
 		SingleDocumentData(
 					CMultiDocumentManagerBase* parentPtr,
 					const QByteArray& documentTypeId,
-					istd::IChangeable* documentPtr,
-					idoc::IUndoManager* undoManagerPtr);
+					istd::IChangeable* documentPtr);
 
 		CMultiDocumentManagerBase* parentPtr;
 		DocumentPtr documentPtr;
@@ -117,7 +116,7 @@ protected:
 
 	protected:
 		// reimplemented (imod::CMultiModelObserverBase)
-		virtual void OnUpdate(imod::IModel* modelPtr, int updateFlags, istd::IPolymorphic* updateParamsPtr);
+		virtual void OnUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet);
 	};
 
 	/**
@@ -171,7 +170,7 @@ protected:
 	/**
 		Create instance of specified document without attaching to this manager.
 	*/
-	virtual SingleDocumentData* CreateDocument(
+	virtual SingleDocumentData* CreateUnregisteredDocument(
 				const QByteArray& documentTypeId,
 				bool createView,
 				const QByteArray& viewTypeId,

@@ -31,7 +31,7 @@
 #include <QtCore/QCoreApplication>
 
 // ACF includes
-#include "istd/TChangeNotifier.h"
+#include "istd/CChangeNotifier.h"
 #include "ibase/CSize.h"
 #include "iimg/IBitmap.h"
 #include "iimg/CScanlineMask.h"

@@ -363,9 +363,9 @@ void CComponentPromotorDialogComp::DoRetranslate()
 
 // reimplemented (imod::CSingleModelObserverBase)
 
-void CComponentPromotorDialogComp::OnUpdate(int updateFlags, istd::IPolymorphic* updateParamsPtr)
+void CComponentPromotorDialogComp::OnUpdate(const istd::IChangeable::ChangeSet& changeSet)
 {
-	BaseClass::OnUpdate(updateFlags, updateParamsPtr);
+	BaseClass::OnUpdate(changeSet);
 
 	const IElementSelectionInfo* objectPtr = GetObjectPtr();
 
@@ -450,7 +450,8 @@ void CComponentPromotorDialogComp::OnPromoteCommand()
 					PackageNameCB->currentText().toLatin1(),
 					ComponentNameCB->currentText().toLatin1());
 
-		istd::CChangeNotifier registryNotifier(registryPtr, icomp::IRegistry::CF_ELEMENT_REMOVED | icomp::IRegistry::CF_ELEMENT_ADDED | istd::IChangeable::CF_MODEL);
+		static istd::IChangeable::ChangeSet registryChangeSet(icomp::IRegistry::CF_ELEMENT_REMOVED, icomp::IRegistry::CF_ELEMENT_ADDED);
+		istd::CChangeNotifier registryNotifier(registryPtr, registryChangeSet);
 
 		for (		IElementSelectionInfo::Elements::Iterator iter = elements.begin();
 					iter != elements.end();

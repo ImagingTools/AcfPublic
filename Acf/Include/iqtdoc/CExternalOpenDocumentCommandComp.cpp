@@ -68,7 +68,7 @@ const istd::IChangeable* CExternalOpenDocumentCommandComp::GetDocumentPtr() cons
 
 // reimplemented (imod::CSingleModelObserverBase)
 
-void CExternalOpenDocumentCommandComp::OnUpdate(int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
+void CExternalOpenDocumentCommandComp::OnUpdate(const ChangeSet& /*changeSet*/)
 {
 	UpdateCommands();
 }

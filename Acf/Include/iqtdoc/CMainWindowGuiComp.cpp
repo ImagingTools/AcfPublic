@@ -90,9 +90,9 @@ CMainWindowGuiComp::CMainWindowGuiComp()
 
 // reimplemented (imod::IObserver)
 
-bool CMainWindowGuiComp::OnAttached(imod::IModel* modelPtr)
+bool CMainWindowGuiComp::OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask)
 {
-	bool retVal = BaseClass2::OnAttached(modelPtr);
+	bool retVal = BaseClass2::OnModelAttached(modelPtr, changeMask);
 
 	if (retVal){
 		const idoc::IDocumentManager* managerPtr = GetObjectPtr();
@@ -168,9 +168,9 @@ bool CMainWindowGuiComp::OnAttached(imod::IModel* modelPtr)
 }
 
 
-bool CMainWindowGuiComp::OnDetached(imod::IModel* modelPtr)
+bool CMainWindowGuiComp::OnModelDetached(imod::IModel* modelPtr)
 {
-	bool retVal = BaseClass2::OnDetached(modelPtr);
+	bool retVal = BaseClass2::OnModelDetached(modelPtr);
 
 	if (retVal){
 		if (m_applicationInfoCompPtr.IsValid()){
@@ -693,7 +693,8 @@ void CMainWindowGuiComp::OnGuiCreated()
 	if (m_documentManagerCommandsCompPtr.IsValid()){
 		imod::IModel* modelPtr = CompCastPtr<imod::IModel>(m_documentManagerCommandsCompPtr.GetPtr());
 		if (modelPtr != NULL){
-			m_commandsObserver.RegisterModel(modelPtr, CPI_DOCUMENT_MANAGER, ibase::ICommandsProvider::CF_COMMANDS);
+			static istd::IChangeable::ChangeSet commandsChangeSet(ibase::ICommandsProvider::CF_COMMANDS);
+			m_commandsObserver.RegisterModel(modelPtr, CPI_DOCUMENT_MANAGER, commandsChangeSet);
 		}
 	}
 
@@ -726,9 +727,11 @@ void CMainWindowGuiComp::OnRetranslate()
 
 // reimplemented (imod::TSingleModelObserverBase)
 
-void CMainWindowGuiComp::OnUpdate(int updateFlags, istd::IPolymorphic* /*updateParamsPtr*/)
+void CMainWindowGuiComp::OnUpdate(const istd::IChangeable::ChangeSet& changeSet)
 {
-	if ((updateFlags & idoc::IDocumentManager::CF_VIEW_ACTIVATION_CHANGED) != 0){
+	static istd::IChangeable::ChangeSet commandsChangeSet(ibase::ICommandsProvider::CF_COMMANDS);
+
+	if (changeSet.Contains(idoc::IDocumentManager::CF_VIEW_ACTIVATION_CHANGED)){
 		idoc::IDocumentManager* documentManagerPtr = GetObjectPtr();
 		if (documentManagerPtr != NULL){
 			istd::IChangeable* documentPtr = NULL;
@@ -747,7 +750,7 @@ void CMainWindowGuiComp::OnUpdate(int updateFlags, istd::IPolymorphic* /*updateP
 				ibase::ICommandsProvider* commandsProviderPtr = CompCastPtr<ibase::ICommandsProvider>(activeViewPtr);
 				imod::IModel* modelPtr = dynamic_cast<imod::IModel*>(commandsProviderPtr);
 				if (modelPtr != NULL){
-					m_commandsObserver.RegisterModel(modelPtr, CPI_ACTIVE_VIEW, ibase::ICommandsProvider::CF_COMMANDS);
+					m_commandsObserver.RegisterModel(modelPtr, CPI_ACTIVE_VIEW, commandsChangeSet);
 				}
 			}
 
@@ -756,7 +759,7 @@ void CMainWindowGuiComp::OnUpdate(int updateFlags, istd::IPolymorphic* /*updateP
 				ibase::ICommandsProvider* commandsProviderPtr = CompCastPtr<ibase::ICommandsProvider>(documentPtr);
 				imod::IModel* modelPtr = dynamic_cast<imod::IModel*>(commandsProviderPtr);
 				if (modelPtr != NULL){
-					m_commandsObserver.RegisterModel(modelPtr, CPI_ACTIVE_DOCUMENT, ibase::ICommandsProvider::CF_COMMANDS);
+					m_commandsObserver.RegisterModel(modelPtr, CPI_ACTIVE_DOCUMENT, commandsChangeSet);
 				}
 			}
 
@@ -1028,11 +1031,11 @@ CMainWindowGuiComp::ActiveUndoManager::ActiveUndoManager(CMainWindowGuiComp& par
 
 // reimplemented (imod::IObserver)
 
-bool CMainWindowGuiComp::ActiveUndoManager::OnAttached(imod::IModel* modelPtr)
+bool CMainWindowGuiComp::ActiveUndoManager::OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask)
 {
 	EnsureModelDetached();
 
-	return BaseClass::OnAttached(modelPtr);
+	return BaseClass::OnModelAttached(modelPtr, changeMask);
 }
 
 
@@ -1040,7 +1043,7 @@ bool CMainWindowGuiComp::ActiveUndoManager::OnAttached(imod::IModel* modelPtr)
 
 // reimplemented (imod::CSingleModelObserverBase)
 
-void CMainWindowGuiComp::ActiveUndoManager::OnUpdate(int /*updateFlags*/, istd::IPolymorphic* /*updateParamsPtr*/)
+void CMainWindowGuiComp::ActiveUndoManager::OnUpdate(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	m_parent.UpdateUndoMenu();
 }

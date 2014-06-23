@@ -52,7 +52,7 @@ protected:
 				const QByteArray& propertyId,
 				const QByteArray& propertyDescription,
 				int propertyFlags,
-				int changeFlags = 0);
+				int changeFlag = 0);
 
 	// reimplemented (iprop::IProperty)
 	virtual void ResetValue();
@@ -60,7 +60,7 @@ protected:
 
 protected:
 	IPropertiesManager* m_propertyOwnerPtr;
-	int m_changeFlags;
+	int m_changeFlag;
 };
 
 
