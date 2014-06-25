@@ -15,10 +15,10 @@
 	</Platforms>
 	<ToolFiles>
 		<ToolFile
-			RelativePath="..\..\..\..\Acf\Config\VC8\QtUIForm.rules"
+			RelativePath="..\..\..\..\Acf\Config\VC9\QtUIForm.rules"
 		/>
 		<ToolFile
-			RelativePath="..\..\..\..\Acf\Config\VC8\Acf.rules"
+			RelativePath="..\..\..\..\Acf\Config\VC9\Acf.rules"
 		/>
 	</ToolFiles>
 	<Configurations>
@@ -42,13 +42,13 @@
 				Name="QT Designer Form"
 			/>
 			<Tool
+				Name="Qt Linguist"
+			/>
+			<Tool
 				Name="Arxc"
 			/>
 			<Tool
 				Name="DeployCopy"
-			/>
-			<Tool
-				Name="SubVersionTransform"
 			/>
 			<Tool
 				Name="FileConvertCopy"
@@ -125,13 +125,13 @@
 				Name="QT Designer Form"
 			/>
 			<Tool
+				Name="Qt Linguist"
+			/>
+			<Tool
 				Name="Arxc"
 			/>
 			<Tool
 				Name="DeployCopy"
-			/>
-			<Tool
-				Name="SubVersionTransform"
 			/>
 			<Tool
 				Name="FileConvertCopy"
