@@ -230,7 +230,7 @@ void QwtPainter::fillRect( QPainter *painter,
 
     QRectF r = rect;
     if ( deviceClipping )
-        r = r.intersect( clipRect );
+        r = r.intersected( clipRect );
 
     if ( r.isValid() )
         painter->fillRect( r, brush );
@@ -404,7 +404,7 @@ void QwtPainter::drawPolyline( QPainter *painter,
     if ( deviceClipping )
     {
         QPolygonF polygon( pointCount );
-        qMemCopy( polygon.data(), points, pointCount * sizeof( QPointF ) );
+        std::memcpy( polygon.data(), points, pointCount * sizeof( QPointF ) );
 
         polygon = QwtClipper::clipPolygonF( clipRect, polygon );
         ::drawPolyline( painter,

@@ -21,10 +21,10 @@ win32-msvc*{
 }
 
 CONFIG(debug, debug|release){
-	COMPILER_DIR = Debug$$COMPILER_NAME
+        COMPILER_DIR = "Debug$$COMPILER_NAME"_"Qt$$QT_MAJOR_VERSION"
 }
 CONFIG(release, debug|release){
-	COMPILER_DIR = Release$$COMPILER_NAME
+        COMPILER_DIR = "Release$$COMPILER_NAME"_"Qt$$QT_MAJOR_VERSION"
 }
 
 DESTDIR = ./Lib/$$COMPILER_DIR

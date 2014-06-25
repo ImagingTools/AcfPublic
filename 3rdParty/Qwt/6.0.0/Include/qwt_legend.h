@@ -11,7 +11,13 @@
 #define QWT_LEGEND_H
 
 #include "qwt_global.h"
-#include <qframe.h>
+
+#if QT_VERSION >= 0x050000
+    #include <QtWidgets/QFrame>
+#else
+    #include <QtGui/QFrame>
+#endif
+
 #include <qlist.h>
 
 class QScrollBar;

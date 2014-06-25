@@ -11,10 +11,16 @@
 #define QWT_PLOT_CANVAS_H
 
 #include "qwt_global.h"
-#include <qframe.h>
-#include <qpen.h>
-#include <qpainterpath.h>
-#include <qbitmap.h>
+
+#if QT_VERSION >= 0x050000
+    #include <QtWidgets/QFrame>
+#else
+    #include <QtGui/QFrame>
+#endif
+
+#include <QtGui/QPen>
+#include <QtGui/QPainterPath>
+#include <QtGui/QBitmap>
 
 class QwtPlot;
 class QPixmap;

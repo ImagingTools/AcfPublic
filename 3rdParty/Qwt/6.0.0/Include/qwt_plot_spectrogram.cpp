@@ -17,11 +17,18 @@
 #include <qpainter.h>
 #include <qmath.h>
 #include <qalgorithms.h>
-#if QT_VERSION >= 0x040400
+
+#if QT_VERSION >= 0x050000
+#include <QThread>
+#include <QFuture>
+#include <QtConcurrent/QtConcurrentMap>
+#include <QtConcurrent/QtConcurrentRun>
+#elif QT_VERSION >= 0x040400
 #include <qthread.h>
 #include <qfuture.h>
 #include <qtconcurrentrun.h>
 #endif
+
 
 class QwtPlotSpectrogram::PrivateData
 {

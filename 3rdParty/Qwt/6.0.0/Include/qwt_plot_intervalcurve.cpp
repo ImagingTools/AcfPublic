@@ -411,12 +411,12 @@ void QwtPlotIntervalCurve::drawTube( QPainter *painter,
             QPolygonF p;
 
             p.resize( size );
-            qMemCopy( p.data(), points, size * sizeof( QPointF ) );
+            std::memcpy( p.data(), points, size * sizeof( QPointF ) );
             p = QwtClipper::clipPolygonF( canvasRect, p );
             QwtPainter::drawPolyline( painter, p );
 
             p.resize( size );
-            qMemCopy( p.data(), points + size, size * sizeof( QPointF ) );
+            std::memcpy( p.data(), points + size, size * sizeof( QPointF ) );
             p = QwtClipper::clipPolygonF( canvasRect, p );
             QwtPainter::drawPolyline( painter, p );
         }

@@ -23,7 +23,6 @@
 #include <qpainter.h>
 #include <qpaintengine.h>
 #include <qtransform.h>
-#include <qprinter.h>
 #include <qstyle.h>
 #include <qstyleoption.h>
 #include <qimagewriter.h>
@@ -33,6 +32,8 @@
 #include <qsvggenerator.h>
 #endif
 #endif
+
+#include <QPrinter>
 
 class QwtPlotRenderer::PrivateData
 {
@@ -247,7 +248,13 @@ void QwtPlotRenderer::renderDocument( QwtPlot *plot,
         printer.setDocName( title );
         printer.setOutputFileName( fileName );
         printer.setOutputFormat( ( format == "pdf" )
-            ? QPrinter::PdfFormat : QPrinter::PostScriptFormat );
+            ? QPrinter::PdfFormat :
+#if QT_VERSION >= 0x050000
+              QPrinter::NativeFormat
+#else
+              QPrinter::PostScriptFormat
+#endif
+              );
         printer.setResolution( resolution );
 
         QPainter painter( &printer );

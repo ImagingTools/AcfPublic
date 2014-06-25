@@ -15,7 +15,12 @@
 #include "qwt_plot_dict.h"
 #include "qwt_scale_map.h"
 #include "qwt_interval.h"
-#include <qframe.h>
+
+#if QT_VERSION >= 0x050000
+    #include <QtWidgets/QFrame>
+#else
+    #include <QtGui/QFrame>
+#endif
 
 class QwtPlotLayout;
 class QwtLegend;
