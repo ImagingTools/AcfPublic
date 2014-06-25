@@ -1322,13 +1322,13 @@
   <compound kind="class">
     <name>iphonon::CPhononVideoViewGuiComp</name>
     <filename>classiphonon_1_1_c_phonon_video_view_gui_comp.html</filename>
-    <base>TGuiComponentBase&lt; Phonon::VideoWidget &gt;</base>
+    <base>TGuiComponentBase&lt; QVideoWidget &gt;</base>
     <base virtualness="virtual">imm::IVideoController</base>
     <member kind="typedef">
-      <type>iqtgui::TGuiComponentBase&lt; Phonon::VideoWidget &gt;</type>
+      <type>iqtgui::TGuiComponentBase&lt; QVideoWidget &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a18d77e72abf75e27eb9e396dc95bfbd9</anchor>
+      <anchor>a709d9e9563f74654e5e87fb7d186d7fe</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">

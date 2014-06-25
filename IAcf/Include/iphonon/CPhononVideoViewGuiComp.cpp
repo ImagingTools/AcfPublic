@@ -50,7 +50,7 @@ QString CPhononVideoViewGuiComp::GetOpenedMediumUrl() const
 {
 	EnsureSync();
 
-	return m_mediaObject.currentSource().url().path();
+	return m_mediaPlayer.currentMedia().canonicalUrl().path();
 }
 
 
@@ -59,13 +59,13 @@ bool CPhononVideoViewGuiComp::OpenMediumUrl(const QString& url, bool autoPlay)
 	static ChangeSet changeSet(CF_STATUS, CF_MEDIA_POSITION);
 	istd::CChangeNotifier notifier(this, changeSet);
 
-	m_mediaObject.setCurrentSource(url);
+	m_mediaPlayer.setMedia(QUrl(url));
 
 	if (autoPlay){
-		m_mediaObject.play();
+		m_mediaPlayer.play();
 	}
 	else{
-		m_mediaObject.pause();
+		m_mediaPlayer.pause();
 	}
 
 	return true;
@@ -77,8 +77,7 @@ void CPhononVideoViewGuiComp::CloseMedium()
 	static ChangeSet changeSet(CF_STATUS);
 	istd::CChangeNotifier notifier(this, changeSet);
 
-	m_mediaObject.stop();
-	m_mediaObject.clearQueue();
+	m_mediaPlayer.stop();
 }
 
 
@@ -86,9 +85,10 @@ bool CPhononVideoViewGuiComp::IsPlaying() const
 {
 	EnsureSync();
 
-	Phonon::State state = m_mediaObject.state();
+	QMediaPlayer::State state = m_mediaPlayer.state();
+	QMediaPlayer::MediaStatus mediaStatus = m_mediaPlayer.mediaStatus();
 
-	return (state == Phonon::PlayingState) || (state == Phonon::BufferingState);
+	return (state == QMediaPlayer::PlayingState) || (mediaStatus == QMediaPlayer::BufferingMedia);
 }
 
 
@@ -98,10 +98,10 @@ bool CPhononVideoViewGuiComp::SetPlaying(bool state)
 	istd::CChangeNotifier notifier(this, changeSet);
 
 	if (state){
-		m_mediaObject.play();
+		m_mediaPlayer.play();
 	}
 	else{
-		m_mediaObject.pause();
+		m_mediaPlayer.pause();
 	}
 
 	return true;
@@ -112,7 +112,7 @@ double CPhononVideoViewGuiComp::GetMediumLength() const
 {
 	EnsureSync();
 
-	return m_mediaObject.totalTime() * 0.001;
+	return m_mediaPlayer.duration() * 0.001;
 }
 
 
@@ -128,11 +128,11 @@ bool CPhononVideoViewGuiComp::SetCurrentPosition(double position)
 		return true;
 	}
 
-	if (m_mediaObject.isSeekable()){
+	if (m_mediaPlayer.isSeekable()){
 		static ChangeSet changeSet(CF_MEDIA_POSITION);
 		istd::CChangeNotifier notifier(this, changeSet);
 
-		m_mediaObject.seek(qint64(position * 1000));
+		m_mediaPlayer.setPosition(qint64(position * 1000));
 
 		m_currentPosition = position;
 
@@ -147,7 +147,7 @@ int CPhononVideoViewGuiComp::GetSupportedFeatures() const
 {
 	int flags = SF_OPEN_MEDIA | SF_PLAY | SF_AUTO_PLAY;
 
-	if (m_mediaObject.isSeekable()){
+	if (m_mediaPlayer.isSeekable()){
 		flags = flags | SF_SEEK;
 	}
 
@@ -228,8 +228,8 @@ QString CPhononVideoViewGuiComp::GetTypeDescription(const QString* /*extensionPt
 void CPhononVideoViewGuiComp::EnsureSync() const
 {
 	for (;;){
-		int state = m_mediaObject.state();
-		if ((state == Phonon::BufferingState) || (state == Phonon::LoadingState)){
+		QMediaPlayer::MediaStatus mediaStatus = m_mediaPlayer.mediaStatus();
+		if ((mediaStatus == QMediaPlayer::BufferingMedia) || (mediaStatus == QMediaPlayer::LoadingMedia)){
 			QCoreApplication::processEvents(QEventLoop::ExcludeUserInputEvents);
 		}
 		else{
@@ -245,7 +245,7 @@ void CPhononVideoViewGuiComp::OnGuiCreated()
 {
 	BaseClass::OnGuiCreated();
 
-	Phonon::createPath(&m_mediaObject, GetQtWidget());
+	m_mediaPlayer.setVideoOutput(GetQtWidget());
 }
 
 

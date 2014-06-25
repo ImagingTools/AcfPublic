@@ -24,9 +24,13 @@
 
 
 // Qt includes
+#include <QtCore/QtGLobal>
 #include <QtCore/QUrl>
-#include <QtGui/QFrame>
+#if QT_VERSION < 0x050000
 #include <QtGui/QVBoxLayout>
+#else
+#include <QtWidgets/QVBoxLayout>
+#endif
 
 // ACF includes
 #include "istd/CChangeNotifier.h"
@@ -45,7 +49,6 @@ CVlcVideoViewGuiComp::CVlcVideoViewGuiComp()
 	m_playlistPtr(NULL)
 {
 }
-
 
 // reimplemented (iqtgui::CGuiComponentBase)
 
