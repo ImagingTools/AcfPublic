@@ -62,7 +62,6 @@ LIBRARY_SUFIX =
 
 CONFIG(debug, debug|release){
         COMPILER_DIR = Debug$$COMPILER_NAME
-        LIBRARY_SUFIX = d
 }
 CONFIG(release, debug|release){
         COMPILER_DIR = Release$$COMPILER_NAME
