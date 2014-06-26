@@ -69,14 +69,3 @@ CONFIG(release, debug|release){
         CONFIG += sse2
 }
 
-greaterThan(QT_MAJOR_VERSION, 4) {
-    CONFIG(debug, debug|release){
-            COMPILER_DIR = DebugQt5$$COMPILER_NAME
-            LIBRARY_SUFIX = d
-    }
-    CONFIG(release, debug|release){
-            COMPILER_DIR = ReleaseQt5$$COMPILER_NAME
-            CONFIG += sse2
-    }
-}
-
