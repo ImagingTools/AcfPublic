@@ -135,6 +135,7 @@ private:
 
 		// reimplemented (imod::IObserver)
 		virtual void AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet);
+
 	private:
 		CHotfolderProcessingComp& m_parent;
 	};

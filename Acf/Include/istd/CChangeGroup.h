@@ -45,7 +45,7 @@ class CChangeGroup
 public:
 	/**
 		Constructs the group.
-		\param	changeablePtr	Your object prepared to change. It cannot be \c NULL.
+		\param	changeablePtr	Your object prepared to change. If it is NULL, nothing will be done.
 		\param	changeSet		Set of change flags (its IDs).
 	*/
 	explicit CChangeGroup(IChangeable* changeablePtr, const IChangeable::ChangeSet& changeSet = IChangeable::GetNoChanges());
@@ -85,9 +85,9 @@ inline CChangeGroup::CChangeGroup(IChangeable* changeablePtr, const IChangeable:
 :	m_changeablePtr(changeablePtr),
 	m_changeIds(changeSet)
 {
-	Q_ASSERT(m_changeablePtr != NULL);
-
-	m_changeablePtr->BeginChangeGroup(changeSet);
+	if (m_changeablePtr != NULL){
+		m_changeablePtr->BeginChangeGroup(changeSet);
+	}
 }
 
 

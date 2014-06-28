@@ -54,7 +54,7 @@ void CXmlDocumentInfoBase::EncodeXml(const QByteArray& text, QByteArray& xmlText
 
 void CXmlDocumentInfoBase::DecodeXml(const QByteArray& xmlText, QByteArray& text)
 {
-	text = "";
+	text.clear();
 
 	int actPos = 0;
 
@@ -142,7 +142,7 @@ void CXmlDocumentInfoBase::DecodeXml(const QByteArray& xmlText, QString& text)
 				if (xmlText[ampPos + 1] == '#'){
 					QString number(xmlText.mid(ampPos + 2, semicolonPos - ampPos - 2));
 
-					text += char(number.toInt());
+					text += QChar(number.toInt());
 				}
 				else{
 					QByteArray entityId = xmlText.mid(ampPos, semicolonPos - ampPos + 1);

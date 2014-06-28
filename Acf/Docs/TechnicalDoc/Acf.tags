@@ -16305,17 +16305,31 @@
       <arglist>(const imod::IObserver *observerPtr) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>NotifyBeforeChange</name>
-      <anchorfile>classimod_1_1_c_model_base.html</anchorfile>
-      <anchor>a5a205db815b1be2c6ff0815f1156a360</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet, bool isGroup)</arglist>
+      <type>virtual void</type>
+      <name>OnBeginGlobalChanges</name>
+      <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
+      <anchor>aceb231d5e9520566e35f9ba5c1d1bc76</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
+      <type>virtual void</type>
+      <name>OnEndGlobalChanges</name>
+      <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
+      <anchor>a64f53c4d57bdd469a002399b69506921</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>NotifyBeforeChange</name>
+      <anchorfile>classimod_1_1_c_model_base.html</anchorfile>
+      <anchor>a70773b74e15e3cea773513f9e6840ff3</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet, bool isGroup)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
       <name>NotifyAfterChange</name>
       <anchorfile>classimod_1_1_c_model_base.html</anchorfile>
-      <anchor>a083840896ca9403e7e8a89dfe3636d2e</anchor>
+      <anchor>af81f7e50e875817dda2d5b91ea06e192</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -24162,6 +24176,20 @@
       <anchorfile>classiser_1_1_t_copy_serialized_wrap.html</anchorfile>
       <anchor>af3d40308b3497f10d37d531ca9a509f2</anchor>
       <arglist>(const istd::IChangeable &amp;object) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnBeginGlobalChanges</name>
+      <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
+      <anchor>aceb231d5e9520566e35f9ba5c1d1bc76</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnEndGlobalChanges</name>
+      <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
+      <anchor>a64f53c4d57bdd469a002399b69506921</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33849,6 +33877,20 @@
       <anchor>af3d40308b3497f10d37d531ca9a509f2</anchor>
       <arglist>(const istd::IChangeable &amp;object) const</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnBeginGlobalChanges</name>
+      <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
+      <anchor>aceb231d5e9520566e35f9ba5c1d1bc76</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnEndGlobalChanges</name>
+      <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
+      <anchor>a64f53c4d57bdd469a002399b69506921</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>ilog::TLoggerCompWrap</name>
@@ -38211,6 +38253,20 @@
     <name>imod::CModelBase</name>
     <filename>classimod_1_1_c_model_base.html</filename>
     <base virtualness="virtual">imod::IModel</base>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>OnBeginGlobalChanges</name>
+      <anchorfile>classimod_1_1_c_model_base.html</anchorfile>
+      <anchor>a8f8838725dc5028391369f4a1134be0f</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>OnEndGlobalChanges</name>
+      <anchorfile>classimod_1_1_c_model_base.html</anchorfile>
+      <anchor>abfe8cbefeb3544d3f43ed93f7801afd3</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)=0</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>imod::CModelProxy</name>
