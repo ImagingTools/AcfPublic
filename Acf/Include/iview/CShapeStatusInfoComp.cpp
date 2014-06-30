@@ -41,7 +41,7 @@ CShapeStatusInfoComp::CShapeStatusInfoComp()
 }
 
 
-// reimplemented (IShapeStatusInfo)
+// reimplemented (iview::IShapeStatusInfo)
 
 i2d::CVector2d CShapeStatusInfoComp::GetLogicalPosition() const
 {

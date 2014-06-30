@@ -66462,20 +66462,6 @@
       <anchor>a13c2641ae9dca5a42c05254c0265f298</anchor>
       <arglist>(int mode)</arglist>
     </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetPixelPositionExact</name>
-      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
-      <anchor>a731acdbd8f68e779d08899a62a58461c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetLogicalPositionExact</name>
-      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
-      <anchor>ae31c5608f634a689e9d528f13df3da22</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetFitArea</name>

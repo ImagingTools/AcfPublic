@@ -194,7 +194,7 @@ bool CVisualRegistry::SerializeUserData(iser::IArchive& archive)
 }
 
 
-// reimplemented (IComponentNoteController)
+// reimplemented (icmpstr::IComponentNoteController)
 
 QString CVisualRegistry::GetComponentNote(const QByteArray& componentName)
 {

@@ -39,7 +39,7 @@ namespace iwidgets
 
 // public methods
 
-// reimplemented (IMultiPageWidgetDelegate)
+// reimplemented (iwidgets::IMultiPageWidgetDelegate)
 
 CTabWidgetDelegate::CTabWidgetDelegate(QTabWidget::TabPosition tabPosition, bool useDocumentMode)
 	:m_tabPosition(tabPosition),
@@ -66,7 +66,7 @@ void CTabWidgetDelegate::SetDocumentModeEnabled(QWidget& containerWidget, bool i
 }
 
 
-// reimplemented (IMultiPageWidgetDelegate)
+// reimplemented (iwidgets::IMultiPageWidgetDelegate)
 
 QWidget* CTabWidgetDelegate::CreateContainerWidget(QWidget* parentWidgetPtr, int containerGuiFlags,int /*orientation*/)
 {

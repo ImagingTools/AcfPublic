@@ -29,7 +29,7 @@ namespace i2d
 
 // public methods
 
-// reimplemented (ICalibrationProvider)
+// reimplemented (i2d::ICalibrationProvider)
 
 const ICalibration2d* CStaticCalibrationProviderComp::GetCalibration() const
 {

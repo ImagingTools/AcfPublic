@@ -34,7 +34,7 @@ namespace iipr
 {
 
 	
-// reimplemented (IPatternController)
+// reimplemented (iipr::IPatternController)
 
 bool CColorPatternControllerComp::TeachPattern(const istd::IChangeable* /*sourceObjectPtr*/)
 {

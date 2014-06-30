@@ -65,7 +65,7 @@ int CHistogramStatisticsProcessorComp::DoProcessing(
 }
 
 
-// reimplemented (IDataSequenceStatisticsProcessor)
+// reimplemented (imeas::IDataSequenceStatisticsProcessor)
 
 int CHistogramStatisticsProcessorComp::CalculateDataStatistics(
 			const imeas::IDataSequence& dataSequence,
