@@ -57,6 +57,7 @@ bool CSerializedUndoManagerComp::IsRedoAvailable() const
 void CSerializedUndoManagerComp::ResetUndo()
 {
 	istd::CChangeNotifier notifier(this);
+	Q_UNUSED(notifier);
 
 	m_undoList.clear();
 	m_redoList.clear();
@@ -70,6 +71,7 @@ bool CSerializedUndoManagerComp::DoUndo()
 	UndoArchivePtr redoArchivePtr(new iser::CMemoryWriteArchive());
 	if (IsUndoAvailable() && redoArchivePtr.IsValid()){
 		istd::CChangeNotifier notifier(this);
+		Q_UNUSED(notifier);
 
 		iser::ISerializable* objectPtr = GetObjectPtr();
 
@@ -108,6 +110,7 @@ bool CSerializedUndoManagerComp::DoRedo()
 	UndoArchivePtr undoArchivePtr(new iser::CMemoryWriteArchive());
 	if (IsRedoAvailable() && undoArchivePtr.IsValid()){
 		istd::CChangeNotifier notifier(this);
+		Q_UNUSED(notifier);
 
 		iser::ISerializable* objectPtr = GetObjectPtr();
 		if (objectPtr != NULL){
@@ -216,6 +219,7 @@ void CSerializedUndoManagerComp::AfterUpdate(imod::IModel* modelPtr, const istd:
 
 			if (objectPtr->Serialize(*archivePtr) && (*archivePtr != *m_beginStateArchivePtr)){
 				istd::CChangeNotifier notifier(this);
+				Q_UNUSED(notifier);
 
 				m_undoList.push_back(UndoArchivePtr());
 				m_undoList.back().TakeOver(m_beginStateArchivePtr);
@@ -246,6 +250,7 @@ bool CSerializedUndoManagerComp::HasStoredDocumentState() const
 bool CSerializedUndoManagerComp::StoreDocumentState()
 {
 	istd::CChangeNotifier notifier(this);
+	Q_UNUSED(notifier);
 
 	m_storedStateArchive.Reset();
 
@@ -270,6 +275,7 @@ bool CSerializedUndoManagerComp::RestoreDocumentState()
 
 	if (m_hasStoredDocumentState){
 		istd::CChangeNotifier notifier(this);
+		Q_UNUSED(notifier);
 
 		iser::ISerializable* objectPtr = GetObjectPtr();
 		if (objectPtr != NULL){

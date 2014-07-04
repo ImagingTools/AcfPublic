@@ -1,6 +1,7 @@
 import qbs.base 1.0
 import qbs.TextFile
-import "fileinfo.js" as FileInfo
+import qbs.FileInfo
+import "AcfService.js" as AcfService
 
 Module{
 	name: "acf"
@@ -9,10 +10,6 @@ Module{
 	Depends{ name: "cpp" }
 
 	readonly property string qtBinPath: Qt.core.binPath
-
-	// root of the whole project
-	property path projectRoot
-	property path projectName
 
 	readonly property string acfRootDir: FileInfo.joinPaths(path, "/../../..")
 	property string compilerName
@@ -31,32 +28,32 @@ Module{
 		compilerName: "MinGW"
 	}
 	Properties{
-		condition: qbs.toolchain.contains("msvc") && (cpp.toolchainInstallPath.search(/Studio 8/i) >= 0 || cpp.toolchainInstallPath.search(/2005/i) >= 0)
+		condition: qbs.toolchain.contains("msvc") && (cpp.compilerPath.search(/Studio 8/i) >= 0 || cpp.compilerPath.search(/2005/i) >= 0 || cpp.toolchainInstallPath.search(/Studio 8/i) >= 0)
 		compilerName: "VC8"
 	}
 	Properties{
-		condition: qbs.toolchain.contains("msvc") && (cpp.toolchainInstallPath.search(/Studio 9/i) >= 0 || cpp.toolchainInstallPath.search(/2008/i) >= 0)
+		condition: qbs.toolchain.contains("msvc") && (cpp.compilerPath.search(/Studio 9/i) >= 0 || cpp.compilerPath.search(/2008/i) >= 0 || cpp.toolchainInstallPath.search(/Studio 9/i) >= 0)
 		compilerName: "VC9"
 	}
 	Properties{
-		condition: qbs.toolchain.contains("msvc") && (cpp.toolchainInstallPath.search(/Studio 10/i) >= 0 || cpp.toolchainInstallPath.search(/2010/i) >= 0)
+		condition: qbs.toolchain.contains("msvc") && (cpp.compilerPath.search(/Studio 10/i) >= 0 || cpp.compilerPath.search(/2010/i) >= 0 || cpp.toolchainInstallPath.search(/Studio 10/i) >= 0)
 		compilerName: "VC10"
 	}
 	Properties{
-		condition: qbs.toolchain.contains("msvc") && (cpp.toolchainInstallPath.search(/Studio 11/i) >= 0 || cpp.toolchainInstallPath.search(/2012/i) >= 0)
+		condition: qbs.toolchain.contains("msvc") && (cpp.compilerPath.search(/Studio 11/i) >= 0 || cpp.compilerPath.search(/2012/i) >= 0 || cpp.toolchainInstallPath.search(/Studio 11/i) >= 0)
 		compilerName: "VC11"
 	}
 	Properties{
-		condition: qbs.toolchain.contains("msvc") && (cpp.toolchainInstallPath.search(/Studio 12/i) >= 0 || cpp.toolchainInstallPath.search(/2013/i) >= 0)
+		condition: qbs.toolchain.contains("msvc") && (cpp.compilerPath.search(/Studio 12/i) >= 0 || cpp.compilerPath.search(/2013/i) >= 0 || cpp.toolchainInstallPath.search(/Studio 12/i) >= 0)
 		compilerName: "VC12"
 	}
 
 	Properties{
-		condition: cpp.debugInformation == true
+		condition: qbs.debugInformation == true
 		compileMode: "Debug"
 	}
 	Properties{
-		condition: cpp.debugInformation == false
+		condition: qbs.debugInformation == false
 		compileMode: "Release"
 	}
 
@@ -74,22 +71,22 @@ Module{
 	property stringList xpcPackageDirs								// Extra directories placed into generated XPC file
 
 	FileTagger{
-		pattern: "*.arx"
+		patterns: ["*.arx"]
 		fileTags: ["arx"]
 	}
 
 	FileTagger{
-		pattern: "*.xtracf"
+		patterns: ["*.xtracf"]
 		fileTags: ["xtracf"]
 	}
 
 	FileTagger{
-		pattern: "*.arp"
+		patterns: ["*.arp"]
 		fileTags: ["acfComponent"]
 	}
 
 	FileTagger{
-		pattern: "*.xpc"
+		patterns: ["*.xpc"]
 		fileTags: ["xpc_file"]
 	}
 
@@ -99,11 +96,11 @@ Module{
 		usings: ["application", "dynamiclibrary", "xpc"]
 
 		Artifact{
-			fileName: FileInfo.getGeneratedPath() + "/C" + input.baseName + ".cpp"
+			fileName: AcfService.getGeneratedPath(product) + "/C" + input.completeBaseName + ".cpp"
 			fileTags: ["cpp"]
 		}
 		Artifact{
-			fileName: FileInfo.getGeneratedPath() + "/C" + input.baseName + ".h"
+			fileName: AcfService.getGeneratedPath(product) + "/C" + input.completeBaseName + ".h"
 			fileTags: ["hpp", "c++_pch"]
 		}
 
@@ -136,10 +133,10 @@ Module{
 			}
 
 			var cmd = new Command(acfBinDirectory + "/" + product.moduleProperty("cpp", "executablePrefix") + "Arxc" + product.moduleProperty("cpp", "executableSuffix"), [
-						inputs.arx[0].fileName,
+						inputs.arx[0].filePath,
 						'-config', acfConfigurationFile,
-						'-o', outputs.cpp[0].fileName]);
-			cmd.description = 'arxc ' + FileInfo.fileName(inputs.arx[0].fileName)
+						'-o', outputs.cpp[0].filePath]);
+			cmd.description = 'arxc ' + FileInfo.fileName(inputs.arx[0].filePath)
 			cmd.highlight = 'codegen';
 			cmd.workingDirectory = product.moduleProperty("Qt.core", "binPath");
 
@@ -152,7 +149,7 @@ Module{
 		inputs: ["xtracf"]
 
 		Artifact{
-			fileName: FileInfo.getGeneratedPath() + "/" + input.completeBaseName
+			filePath: AcfService.getGeneratedPath(product) + "/" + input.completeBaseName
 			fileTags: { return product.moduleProperty("acf", "trOutputType"); }
 		}
 
@@ -185,11 +182,11 @@ Module{
 			}
 
 			var cmd = new Command(acfBinDirectory + '/' + product.moduleProperty("cpp", "executablePrefix") + 'Acf' + product.moduleProperty("cpp", "executableSuffix"), [
-						product.moduleProperty("acf", "trRegFile").fileName,
+						product.moduleProperty("acf", "trRegFile").filePath,
 						'-config', acfConfigurationFile,
-						'-input', input.fileName,
-						'-o', output.fileName]);
-			cmd.description = 'acf transformation ' + FileInfo.fileName(input.fileName)
+						'-input', input.filePath,
+						'-o', output.filePath]);
+			cmd.description = 'acf transformation ' + FileInfo.fileName(input.filePath)
 			cmd.highlight = 'codegen';
 			cmd.workingDirectory = acfBinDirectory;
 
@@ -204,7 +201,7 @@ Module{
 		explicitlyDependsOn: ["qm"]
 
 		Artifact{
-			fileName: FileInfo.getGeneratedPath() + "/qrc_" + input.completeBaseName + ".cpp"
+			fileName: AcfService.getGeneratedPath(product) + "/qrc_" + input.completeBaseName + ".cpp"
 			fileTags: ["cpp"]
 		}
 		prepare:{
@@ -212,20 +209,20 @@ Module{
 
 			var copyCmd;
 			if (product.moduleProperty("qbs", "targetOS").contains("windows")){
-				copyCmd = new Command('xcopy', ['/Y', FileInfo.toWindowsSeparators(input.fileName), FileInfo.toWindowsSeparators(tempResourceDir)]);
+				copyCmd = new Command('xcopy', ['/Y', FileInfo.toWindowsSeparators(input.filePath), FileInfo.toWindowsSeparators(tempResourceDir)]);
 			}
 			else{
-				copyCmd = new Command('cp', [input.fileName, tempResourceDir]);
+				copyCmd = new Command('cp', [input.filePath, tempResourceDir]);
 			}
 			var rccCmd = new Command(product.moduleProperty(product.moduleName, "qtBinPath") + "/rcc", [
-						tempResourceDir + FileInfo.fileName(input.fileName),
-						"-name", FileInfo.completeBaseName(input.fileName),
-						"-o", output.fileName]);
+						tempResourceDir + FileInfo.fileName(input.filePath),
+						"-name", FileInfo.completeBaseName(input.filePath),
+						"-o", output.filePath]);
 
-			copyCmd.description = 'copy to generated ' + FileInfo.fileName(input.fileName);
+			copyCmd.description = 'copy to generated ' + FileInfo.fileName(input.filePath);
 			copyCmd.highlight = 'codegen';
 
-			rccCmd.description = 'rcc from generated ' + FileInfo.fileName(input.fileName);
+			rccCmd.description = 'rcc from generated ' + FileInfo.fileName(input.filePath);
 			rccCmd.highlight = 'codegen';
 
 			var commands = [];
@@ -250,7 +247,7 @@ Module{
 			cmd.description = "generating shared module " + product.name;
 			cmd.highlight = "codegen";
 			cmd.sourceCode = function(){
-				var outputFilePath = output.fileName;
+				var outputFilePath = output.filePath;
 
 				var pkginfo = new TextFile(outputFilePath, TextFile.WriteOnly);
 				pkginfo.write("import qbs 1.0\n");
@@ -290,7 +287,7 @@ Module{
 
 					var outputDir = FileInfo.path(outputFilePath);
 
-					var projectRoot = product.moduleProperty("acf", "projectRoot");
+					var projectRoot = project.projectRoot;
 					if (projectRoot !== undefined && !FileInfo.isAbsolutePath(projectRoot)){
 						projectRoot = FileInfo.joinPaths(product.sourceDirectory, projectRoot);
 					}
@@ -298,9 +295,9 @@ Module{
 					var correctedPathsMap = {};
 					for (i in includePaths){
 						var includePath = includePaths[i];
-						if (		FileInfo.isSubpath(product.buildDirectory, includePath) ||
-									(projectRoot !== undefined && FileInfo.isSubpath(projectRoot, includePath))){
-							correctedPathsMap[FileInfo.relativePath(outputDir, includePath)] = true;
+                        if (		AcfService.isSubpath(product.buildDirectory, includePath) ||
+                                    (projectRoot !== undefined && AcfService.isSubpath(projectRoot, includePath))){
+							correctedPathsMap[AcfService.relativePath(outputDir, includePath)] = true;
 						}
 					}
 
@@ -340,7 +337,7 @@ Module{
 			cmd.description = "Create XPC file " + product.name;
 			cmd.highlight = "codegen";
 			cmd.sourceCode = function(){
-				var outputFilePath = output.fileName;
+				var outputFilePath = output.filePath;
 				var outputDir = FileInfo.path(outputFilePath);
 
 				var pkginfo = new TextFile(outputFilePath, TextFile.WriteOnly);
@@ -368,17 +365,17 @@ Module{
 
 				for (var inputIndex in inputs.xpc_file){
 					var inputProduct = inputs.xpc_file[inputIndex];
-					configsList.push(FileInfo.relativePath(outputDir, inputProduct.fileName));
+					configsList.push(AcfService.relativePath(outputDir, inputProduct.filePath));
 				}
 
 				for (var dependencyIndex in dependencies){
 					var dependency = dependencies[dependencyIndex];
 					var dependencyFilePath = product.moduleProperty(dependency.name, "xpcFilePath");
 					if (dependencyFilePath != null){
-						configsList.push(FileInfo.relativePath(outputDir, dependencyFilePath));
+						configsList.push(AcfService.relativePath(outputDir, dependencyFilePath));
 					}
 					else if (dependency.type.contains("xpc")){
-						configsList.push(FileInfo.relativePath(product.destinationDirectory, dependency.destinationDirectory + "/" + dependency.name + ".xpc"));
+						configsList.push(AcfService.relativePath(product.destinationDirectory, dependency.destinationDirectory + "/" + dependency.name + ".xpc"));
 					}
 				}
 
@@ -395,7 +392,7 @@ Module{
 
 				for (var inputIndex in inputs.acfComponent) {
 					var inputProduct = inputs.acfComponent[inputIndex];
-					packagesList.push(FileInfo.relativePath(outputDir, inputProduct.fileName));
+					packagesList.push(AcfService.relativePath(outputDir, inputProduct.filePath));
 				}
 
 				for (var dependencyIndex in dependencies) {
@@ -403,10 +400,10 @@ Module{
 					if (dependency.type.contains("acfComponent")){
 						var dependencyFilePath = product.moduleProperty(dependency.name, "componentFilePath");
 						if (dependencyFilePath != null){
-							packagesList.push(FileInfo.relativePath(outputDir, dependencyFilePath));
+							packagesList.push(AcfService.relativePath(outputDir, dependencyFilePath));
 						}
 						else{
-							packagesList.push(FileInfo.relativePath(product.destinationDirectory, dependency.destinationDirectory + "/" + dependency.name + ".arp"));
+							packagesList.push(AcfService.relativePath(product.destinationDirectory, dependency.destinationDirectory + "/" + dependency.name + ".arp"));
 						}
 					}
 				}
