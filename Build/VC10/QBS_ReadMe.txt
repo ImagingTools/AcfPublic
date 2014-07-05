@@ -1,3 +1,3 @@
-QBS compilation need qbs.exe in %PATH% and profile 'qtc_VC10'.
+QBS compilation need qbs.exe in %PATH% and profile 'VC10'.
 
-Profile 'qtc_VC10' will be created if you create kit named 'VC10' in QtCreator.
+For QBS profile setup see QBS online documentation (http://qt-project.org/doc/qbs-1.2/setup.html)
