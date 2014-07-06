@@ -8146,6 +8146,13 @@
       <anchor>af39662b845f38e4d66b62139c676ca87</anchor>
       <arglist>(const CArc &amp;arc) const </arglist>
     </member>
+    <member kind="function">
+      <type>CVector2d</type>
+      <name>GetPositionFromAlpha</name>
+      <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
+      <anchor>a903c1740cf6cb08f77c917a949b5255c</anchor>
+      <arglist>(double alpha) const </arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual CRectangle</type>
       <name>GetBoundingBox</name>

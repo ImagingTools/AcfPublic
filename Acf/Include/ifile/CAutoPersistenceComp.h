@@ -39,6 +39,9 @@
 #include "ifile/IFilePersistence.h"
 #include "ifile/IFileNameParam.h"
 
+#if QT_VERSION >= 0x050000
+#include <QtCore/QLockFile>
+#endif
 
 namespace ifile
 {
@@ -133,6 +136,9 @@ private:
 	*/
 	void EnsureTimerConnected();
 
+	bool LockFile() const;
+	void UnlockFile() const;
+
 private:
 	/**
 		Reference to the object to be made persisitent.
@@ -201,6 +207,11 @@ private:
 	QFileSystemWatcher m_fileWatcher;
 
 	bool m_isReloading;
+
+
+#if QT_VERSION >= 0x050000
+	mutable istd::TDelPtr<QLockFile> m_lockFilePtr;
+#endif
 };
 
 
