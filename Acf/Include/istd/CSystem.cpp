@@ -97,7 +97,7 @@ QString CSystem::GetNormalizedPath(const QString& path)
 }
 
 
-QString CSystem::GetEnrolledPath(const QString& path)
+QString CSystem::GetEnrolledPath(const QString& path, bool osEnv)
 {
 	QString retVal = path;
 
@@ -113,7 +113,7 @@ QString CSystem::GetEnrolledPath(const QString& path)
 
 		QString varName = retVal.mid(beginIndex + 2, endIndex - beginIndex - 2);
 
-		retVal = retVal.left(beginIndex) + FindVariableValue(varName) + retVal.mid(endIndex + 1);
+		retVal = retVal.left(beginIndex) + FindVariableValue(varName, osEnv) + retVal.mid(endIndex + 1);
 
 		retVal = QDir::toNativeSeparators(retVal);
 	}
@@ -122,7 +122,7 @@ QString CSystem::GetEnrolledPath(const QString& path)
 }
 
 
-QString CSystem::FindVariableValue(const QString& varName)
+QString CSystem::FindVariableValue(const QString& varName, bool osEnv)
 {
 	if (varName == "ConfigurationName"){
 #ifndef QT_NO_DEBUG
@@ -161,11 +161,13 @@ QString CSystem::FindVariableValue(const QString& varName)
 		return QDir::currentPath();
 	}
 
-	EnvironmentVariables environmentVariables = GetEnvironmentVariables();
+	if (osEnv){
+		EnvironmentVariables environmentVariables = GetEnvironmentVariables();
 
-	EnvironmentVariables::ConstIterator foundVarIter = environmentVariables.constFind(varName.toUpper());
-	if (foundVarIter != environmentVariables.constEnd()){
-		return foundVarIter.value();
+		EnvironmentVariables::ConstIterator foundVarIter = environmentVariables.constFind(varName.toUpper());
+		if (foundVarIter != environmentVariables.constEnd()){
+			return foundVarIter.value();
+		}
 	}
 
 	return QString();
