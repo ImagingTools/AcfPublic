@@ -20,14 +20,14 @@ defineReplace(qwtLibraryTarget) {
         export(QMAKE_FRAMEWORK_BUNDLE_NAME)
     }
 
-    contains(TEMPLATE, .*lib):CONFIG(debug, debug|release) {
+#    contains(TEMPLATE, .*lib):CONFIG(debug, debug|release) {
 
-        !debug_and_release|build_pass {
-
-            mac:RET = $$member(LIBRARY_NAME, 0)_debug
-            win32:RET = $$member(LIBRARY_NAME, 0)d
-        }
-    }
+        #!debug_and_release|build_pass {
+#
+ #           mac:RET = $$member(LIBRARY_NAME, 0)_debug
+  #          win32:RET = $$member(LIBRARY_NAME, 0)d
+   #     }
+    #}
 
     isEmpty(RET):RET = $$LIBRARY_NAME
     return($$RET)
