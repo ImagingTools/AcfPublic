@@ -41,6 +41,8 @@ void CButtonBasedSelectionParamGuiComp::OnGuiModelAttached()
 {
 	BaseClass::OnGuiModelAttached();
 
+	m_buttonsGroup.setExclusive(true);
+
 	const iprm::ISelectionParam* paramPtr = GetObjectPtr();
 	if (paramPtr != NULL){
 		const iprm::IOptionsList* constraintsPtr = paramPtr->GetSelectionConstraints();
@@ -63,6 +65,7 @@ void CButtonBasedSelectionParamGuiComp::OnGuiModelAttached()
 			int totalButtons = 0;
 			CreateButtons(paramPtr, NULL, totalButtons);
 
+			m_buttonsGroup.disconnect();
 			connect(&m_buttonsGroup, SIGNAL(buttonClicked(int)), this, SLOT(OnButtonClicked(int)));
 		}
 	}
@@ -71,21 +74,7 @@ void CButtonBasedSelectionParamGuiComp::OnGuiModelAttached()
 
 void CButtonBasedSelectionParamGuiComp::OnGuiModelDetached()
 {
-	QList<QAbstractButton*> buttons = m_buttonsGroup.buttons();
-	for (int i = 0; i < buttons.count(); i++){
-		QAbstractButton* buttonPtr = buttons.at(i);
-
-		SelectionFrame->layout()->removeWidget(buttonPtr);
-
-		m_buttonsGroup.removeButton(buttonPtr);
-
-		delete buttonPtr;
-	}
-
-	m_selectionInfos.clear();
-
-	qDeleteAll(m_allSelectionInfos);
-	m_allSelectionInfos.clear();
+	DestroyButtons();
 
 	BaseClass::OnGuiModelDetached();
 }
@@ -96,16 +85,8 @@ void CButtonBasedSelectionParamGuiComp::UpdateGui(const istd::IChangeable::Chang
 	Q_ASSERT(IsGuiCreated());
 
 	const iprm::ISelectionParam* paramPtr = GetObjectPtr();
-	if ((paramPtr != NULL) && !changeSet.IsEmpty()){
-		QList<QAbstractButton*> buttons = m_buttonsGroup.buttons();
-		for (int i = 0; i < buttons.size(); i++){
-			m_buttonsGroup.removeButton(buttons[i]);
-		}
-
-		m_selectionInfos.clear();
-
-		qDeleteAll(m_allSelectionInfos);
-		m_allSelectionInfos.clear();
+	if ((paramPtr != NULL) && (!changeSet.IsEmpty())){
+		DestroyButtons();
 
 		int totalButtons = 0;
 
@@ -137,18 +118,19 @@ void CButtonBasedSelectionParamGuiComp::UpdateGui(const istd::IChangeable::Chang
 		// restore selectionInfo
 		selectionInfo = m_selectionInfos.at(i);
 
-		QCommandLinkButton* buttonPtr = static_cast<QCommandLinkButton*>(buttons.at(i));
+		QAbstractButton* buttonPtr = buttons.at(i);
+		QCommandLinkButton* commandButtonPtr = dynamic_cast<QCommandLinkButton*>(buttonPtr);
 		Q_ASSERT(buttonPtr != NULL && selectionInfo != NULL);
 
 		const iprm::IOptionsList* constraintsPtr = selectionInfo->paramPtr->GetSelectionConstraints();
 
+		buttonPtr->setChecked(isChecked);
+
 		// should this button be checked?
 		if (isChecked){
-			buttonPtr->setChecked(true);
-
 			if (isCompactDescription){
-				if (constraintsPtr != NULL){
-					buttonPtr->setDescription(constraintsPtr->GetOptionDescription(selectionInfo->index));
+				if (constraintsPtr != NULL && commandButtonPtr != NULL){
+					commandButtonPtr->setDescription(constraintsPtr->GetOptionDescription(selectionInfo->index));
 				}
 
 				if (useHorizontalLayout){
@@ -158,15 +140,12 @@ void CButtonBasedSelectionParamGuiComp::UpdateGui(const istd::IChangeable::Chang
 					buttonPtr->setMinimumWidth(minWidth);
 				}
 			}
-			else{
-				break;
-			}
 		}
 		else{
-			buttonPtr->setChecked(false);
-
 			if (isCompactDescription){
-				buttonPtr->setDescription(QString::null);
+				if (commandButtonPtr != NULL){
+					commandButtonPtr->setDescription(QString::null);
+				}
 
 				if (useHorizontalLayout){
 					QSizePolicy sizePolicy = buttonPtr->sizePolicy();
@@ -301,6 +280,20 @@ QAbstractButton* CButtonBasedSelectionParamGuiComp::CreateButton(QWidget* parent
 	}
 
 	return commandButtonPtr;
+}
+
+
+void CButtonBasedSelectionParamGuiComp::DestroyButtons()
+{
+	m_buttonsGroup.disconnect();
+
+	QList<QAbstractButton*> buttons = m_buttonsGroup.buttons();
+	qDeleteAll(buttons);
+
+	m_selectionInfos.clear();
+
+	qDeleteAll(m_allSelectionInfos);
+	m_allSelectionInfos.clear();
 }
 
 
