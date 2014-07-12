@@ -19544,8 +19544,8 @@
       <type>PixelComponentType</type>
       <name>GetInterpolatedValue</name>
       <anchorfile>classiipr_1_1_t_image_pixel_interpolator.html</anchorfile>
-      <anchor>af982690722c84baed74f922aa1efd37f</anchor>
-      <arglist>(double x, double y, int componentIndex) const </arglist>
+      <anchor>ac386d85439e84f332326a682150d000e</anchor>
+      <arglist>(float x, float y, int componentIndex) const </arglist>
     </member>
   </compound>
   <compound kind="class">
