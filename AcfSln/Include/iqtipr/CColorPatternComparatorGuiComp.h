@@ -31,7 +31,6 @@
 #include "imeas/CGeneralDataSequence.h"
 #include "imeas/INumericValueProvider.h"
 #include "iqtinsp/TSupplierGuiCompBase.h"
-
 #include "GeneratedFiles/iqtipr/ui_CColorPatternComparatorGuiComp.h"
 
 
@@ -39,9 +38,10 @@ namespace iqtipr
 {
 
 
-class CColorPatternComparatorGuiComp: public iqtinsp::TSupplierGuiCompBase<
-			Ui::CColorPatternComparatorGuiComp,
-			istd::IInformationProvider>
+class CColorPatternComparatorGuiComp:
+			public iqtinsp::TSupplierGuiCompBase<
+						Ui::CColorPatternComparatorGuiComp,
+						istd::IInformationProvider>
 {
 	Q_OBJECT
 
@@ -57,20 +57,12 @@ protected Q_SLOTS:
 	void on_TestButton_clicked();
 
 protected:
-	// reimplemented (iqtgui::IGuiObject)
-	virtual void OnGuiCreated();
-	virtual void OnGuiDestroyed();
-
 	// reimplemented (iqtgui::TGuiObserverWrap)
-	virtual void OnGuiModelAttached();
-	virtual void OnGuiModelDetached();
 	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet);
 
 	// reimplemented (iqtinsp::TSupplierGuiCompBase)
 	virtual void OnSupplierParamsChanged();
 	virtual QWidget* GetParamsWidget() const;
-
-private:
 };
 
 
@@ -78,3 +70,5 @@ private:
 
 
 #endif // !iqtipr_CColorPatternComparatorGuiComp_included
+
+

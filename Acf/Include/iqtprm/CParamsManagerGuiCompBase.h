@@ -48,8 +48,6 @@ class CParamsManagerGuiCompBase:
 			public iqtgui::TDesignerGuiObserverCompBase<
 						Ui::CParamsManagerGuiCompBase, iprm::IParamsManager>,
 			virtual public iqt2d::IViewExtender
-
-
 {
 	Q_OBJECT
 

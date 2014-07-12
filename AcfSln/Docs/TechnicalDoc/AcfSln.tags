@@ -2736,6 +2736,14 @@
     <namespace>iqtipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CImageInterpolationParamsGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
+    <filename>_c_image_interpolation_params_gui_comp_8h</filename>
+    <includes id="_i_image_interpolation_params_8h" name="IImageInterpolationParams.h" local="yes" imported="no">iipr/IImageInterpolationParams.h</includes>
+    <class kind="class">iqtipr::CImageInterpolationParamsGuiComp</class>
+    <namespace>iqtipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CLineProjectionSupplierGuiComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_line_projection_supplier_gui_comp_8h</filename>
@@ -25503,6 +25511,7 @@
     <class kind="class">iqtipr::CColorPatternComparatorGuiComp</class>
     <class kind="class">iqtipr::CConvolution2dParamsGuiComp</class>
     <class kind="class">iqtipr::CGeneralSearchParamsGuiComp</class>
+    <class kind="class">iqtipr::CImageInterpolationParamsGuiComp</class>
     <class kind="class">iqtipr::CLineProjectionSupplierGuiComp</class>
     <class kind="class">iqtipr::CMultiLineProjectionSupplierGuiComp</class>
     <class kind="class">iqtipr::CMultiLineSupplierGuiComp</class>
@@ -25634,34 +25643,6 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtipr_1_1_c_color_pattern_comparator_gui_comp.html</anchorfile>
-      <anchor>a64006342b4bc7069cfc19f6fd88790a6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtipr_1_1_c_color_pattern_comparator_gui_comp.html</anchorfile>
-      <anchor>a83c83976678ef0d77d8db3033057a3dd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classiqtipr_1_1_c_color_pattern_comparator_gui_comp.html</anchorfile>
-      <anchor>a30b5f958f7b7efa787b23430f26904b4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classiqtipr_1_1_c_color_pattern_comparator_gui_comp.html</anchorfile>
-      <anchor>ab2baac77053987c0c62df6328fe72981</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtipr_1_1_c_color_pattern_comparator_gui_comp.html</anchorfile>
       <anchor>ae580b21b0f75bf9789e0235ee97beb51</anchor>
@@ -25788,6 +25769,53 @@
       <anchorfile>classiqtipr_1_1_c_general_search_params_gui_comp.html</anchorfile>
       <anchor>a213a4a6d9675631abd3f415c73662c3c</anchor>
       <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtipr::CImageInterpolationParamsGuiComp</name>
+    <filename>classiqtipr_1_1_c_image_interpolation_params_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CImageInterpolationParamsGuiComp, iipr::IImageInterpolationParams &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CImageInterpolationParamsGuiComp, iipr::IImageInterpolationParams &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtipr_1_1_c_image_interpolation_params_gui_comp.html</anchorfile>
+      <anchor>a4784c345d97d4287469aeea32df9b474</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtipr_1_1_c_image_interpolation_params_gui_comp.html</anchorfile>
+      <anchor>a0a16c003f9a5a5e7c7fb47ee3bff6b4e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_InterpolationModeCombo_currentIndexChanged</name>
+      <anchorfile>classiqtipr_1_1_c_image_interpolation_params_gui_comp.html</anchorfile>
+      <anchor>af9147e27b60560c700f22a282889e3b9</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtipr_1_1_c_image_interpolation_params_gui_comp.html</anchorfile>
+      <anchor>a45344bc7d9d826cfc25bb4dceb82d7ce</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtipr_1_1_c_image_interpolation_params_gui_comp.html</anchorfile>
+      <anchor>a4dfcef92a42a5610be24527443249551</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqtipr_1_1_c_image_interpolation_params_gui_comp.html</anchorfile>
+      <anchor>ab5074b4a8b6fe10cd5a65af7602b2223</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -29868,6 +29896,7 @@
     <file>CColorPatternComparatorGuiComp.h</file>
     <file>CConvolution2dParamsGuiComp.h</file>
     <file>CGeneralSearchParamsGuiComp.h</file>
+    <file>CImageInterpolationParamsGuiComp.h</file>
     <file>CLineProjectionSupplierGuiComp.h</file>
     <file>CMultiLineProjectionSupplierGuiComp.h</file>
     <file>CMultiLineSupplierGuiComp.h</file>

@@ -36,6 +36,7 @@
 #include "iqtipr/CMultiLineProjectionSupplierGuiComp.h"
 #include "iqtipr/CColorPatternComparatorGuiComp.h"
 #include "iqtipr/CPatternTeachingControllerGuiComp.h"
+#include "iqtipr/CImageInterpolationParamsGuiComp.h"
 
 
 /**
@@ -56,6 +57,7 @@ typedef iqtipr::CMultiLineSupplierGuiComp MultiLineSupplierGui;
 typedef iqtipr::CMultiLineProjectionSupplierGuiComp MultiLineProjectionSupplierGui;
 typedef iqtipr::CPatternTeachingControllerGuiComp PatternTeachingControllerGui;
 typedef iqtipr::CColorPatternComparatorGuiComp ColorPatternComparatorGui;
+typedef iqtipr::CImageInterpolationParamsGuiComp ImageInterpolationParamsGui;
 
 
 } // namespace QtIprPck
