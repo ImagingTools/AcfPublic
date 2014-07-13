@@ -20,30 +20,46 @@
 ********************************************************************************/
 
 
-#include "iipr/CArcProjectionSupplierComp.h"
+#include "iipr/CProjectionSupplierComp.h"
 
 
 namespace iipr
 {
 
 
+// public methods
+	
+// reimplemented (imeas::IDataSequenceProvider)
+
+const imeas::IDataSequence* CProjectionSupplierComp::GetDataSequence() const
+{
+	return GetWorkProduct();
+}
+
+
+// protected methods
+
 // reimplemented (iinsp::TSupplierCompWrap)
 
-int CArcProjectionSupplierComp::ProduceObject(ProductType& result) const
+int CProjectionSupplierComp::ProduceObject(ProductType& result) const
 {
 	if (		m_bitmapProviderCompPtr.IsValid() &&
-				m_arcCompPtr.IsValid()){
+				m_projectionProcessorCompPtr.IsValid()){
+		Timer performanceTimer(this, "Projection calculation");
 		const iimg::IBitmap* bitmapPtr = m_bitmapProviderCompPtr->GetBitmap();
-
-		bool isOk = m_projectionProcessorCompPtr->DoProjection(*bitmapPtr, *m_arcCompPtr, NULL, result);
-		if (!isOk){
-			return WS_ERROR;
+		
+		int processingState = m_projectionProcessorCompPtr->DoProcessing(GetModelParametersSet(), bitmapPtr, &result);
+		switch (processingState){
+			case iproc::IProcessor::TS_OK:
+				return WS_OK;
+			case iproc::IProcessor::TS_CANCELED:
+				return WS_CANCELED;
+			default:
+				return WS_ERROR;
 		}
-
-		return WS_OK;
 	}
 
-	SendCriticalMessage(0, "Bad component archtecture. Bitmap provider or arc were not set");
+	SendCriticalMessage(0, "Bad component archtecture. Bitmap provider or projecttion processor were not set");
 	
 	return WS_CRITICAL;
 }
@@ -51,25 +67,13 @@ int CArcProjectionSupplierComp::ProduceObject(ProductType& result) const
 
 // reimplemented (icomp::CComponentBase)
 
-void CArcProjectionSupplierComp::OnComponentCreated()
+void CProjectionSupplierComp::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
 	if (m_bitmapProviderModelCompPtr.IsValid()){
 		RegisterSupplierInput(m_bitmapProviderModelCompPtr.GetPtr(), m_bitmapSupplierCompPtr.GetPtr());
 	}
-
-	if (m_arcModelCompPtr.IsValid()){
-		RegisterSupplierInput(m_arcModelCompPtr.GetPtr());
-	}
-}
-
-
-// reimplemented (imeas::IDataSequenceProvider)
-
-const imeas::IDataSequence* CArcProjectionSupplierComp::GetDataSequence() const
-{
-	return GetWorkProduct();
 }
 
 

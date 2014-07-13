@@ -45,7 +45,6 @@
 #include "iipr/CSingleFeatureConsumer.h"
 #include "iipr/CFeatureToImageMapperProcessorComp.h"
 #include "iipr/CSearchBasedFeaturesSupplierComp.h"
-#include "iipr/CLineProjectionSupplierComp.h"
 #include "iipr/CImageHistogramProcessorComp.h"
 #include "iipr/CCircleFinderParamsComp.h"
 #include "iipr/CImagePolarTransformProcessorComp.h"
@@ -77,7 +76,7 @@
 #include "iipr/CFastGaussianProcessorComp.h"
 #include "iipr/CAutoImageNormalizeProcessorComp.h"
 #include "iipr/CArcProjectionProcessorComp.h"
-#include "iipr/CArcProjectionSupplierComp.h"
+#include "iipr/CProjectionSupplierComp.h"
 
 
 /**
@@ -107,7 +106,6 @@ typedef icomp::TModelCompWrap<iipr::CDelegatedBitmapSupplierComp> DelegatedBitma
 typedef icomp::TModelCompWrap<iipr::CProcessedBitmapSupplierComp> ProcessedBitmapSupplier;
 typedef icomp::TModelCompWrap<iipr::CPositionFromImageSupplierComp> PositionFromImageSupplier;
 typedef icomp::TModelCompWrap<iipr::CSearchBasedFeaturesSupplierComp> SearchBasedFeaturesSupplier;
-typedef icomp::TModelCompWrap<iipr::CLineProjectionSupplierComp> ProjectionSupplier;
 
 typedef iipr::CRectDerivativeProcessorComp RectDerivativeProcessor;
 typedef iipr::CImageHistogramProcessorComp ImageHistogramProcessor;
@@ -151,7 +149,7 @@ typedef icomp::TModelCompWrap<iipr::CImageHistogramSupplierComp> ImageHistogramS
 typedef iipr::CFastGaussianProcessorComp FastGaussianProcessor;
 typedef iipr::CAutoImageNormalizeProcessorComp AutoImageNormalizeProcessor;
 typedef iipr::CArcProjectionProcessorComp ArcProjectionProcessor;
-typedef icomp::TModelCompWrap<iipr::CArcProjectionSupplierComp> ArcProjectionSupplier;
+typedef icomp::TModelCompWrap<iipr::CProjectionSupplierComp> ProjectionSupplier;
 
 
 } // namespace IprPck
