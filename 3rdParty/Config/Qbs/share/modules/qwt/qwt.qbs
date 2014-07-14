@@ -10,8 +10,8 @@ Module{
 	Depends{ name: "cpp" }
 	Depends{ name: "Qt.opengl" }
 
-	cpp.staticLibraries: path + "/../../../../../Qwt/6.0.0/Lib/" + acf.compilerDir + "/qwt"
+	cpp.staticLibraries: path + "/../../../../../Qwt/6.1.0/Lib/" + acf.compilerDir + "/qwt"
 	cpp.includePaths: [
-		path + "/../../../../../Qwt/6.0.0/Include"
+		path + "/../../../../../Qwt/6.1.0/src"
 	]
 }
