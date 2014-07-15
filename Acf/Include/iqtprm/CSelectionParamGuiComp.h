@@ -33,6 +33,7 @@
 #else
 #include <QtGui/QComboBox>
 #include <QtGui/QRadioButton>
+#include <QtGui/QPushButton>
 #endif
 
 // ACF includes

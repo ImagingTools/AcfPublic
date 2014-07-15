@@ -1662,15 +1662,6 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
-    <name>IArcProjectionProcessor.h</name>
-    <path>C:/Temp/AcfSln/Include/iipr/</path>
-    <filename>_i_arc_projection_processor_8h</filename>
-    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
-    <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
-    <class kind="class">iipr::IArcProjectionProcessor</class>
-    <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
     <name>ICaliperParams.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_caliper_params_8h</filename>
@@ -14067,7 +14058,6 @@
     <class kind="class">iipr::CSingleFeatureConsumer</class>
     <class kind="class">iipr::CTubeProjectionLinesProviderComp</class>
     <class kind="class">iipr::CTubeProjectionsGenerator</class>
-    <class kind="class">iipr::IArcProjectionProcessor</class>
     <class kind="class">iipr::ICaliperParams</class>
     <class kind="class">iipr::ICaliperProcessor</class>
     <class kind="class">iipr::ICircleFinderParams</class>
@@ -16299,6 +16289,7 @@
     <name>iipr::CExtremumCaliperSupplierComp</name>
     <filename>classiipr_1_1_c_extremum_caliper_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; iipr::CFeaturesContainer &gt;</base>
+    <base virtualness="virtual">imeas::INumericValueProvider</base>
     <member kind="typedef">
       <type>public iinsp::TSupplierCompWrap&lt; iipr::CFeaturesContainer &gt;</type>
       <name>BaseClass</name>
@@ -16333,6 +16324,20 @@
       <anchorfile>classiipr_1_1_c_extremum_caliper_supplier_comp.html</anchorfile>
       <anchor>a3ae765b098a7fd895a1980303c97d02a</anchor>
       <arglist>(m_sequenceProviderModelCompPtr, m_sequenceProviderCompPtr, false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetValuesCount</name>
+      <anchorfile>classiipr_1_1_c_extremum_caliper_supplier_comp.html</anchorfile>
+      <anchor>a1c260e32732e021e76776f6f2a9d42d1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imeas::INumericValue &amp;</type>
+      <name>GetNumericValue</name>
+      <anchorfile>classiipr_1_1_c_extremum_caliper_supplier_comp.html</anchorfile>
+      <anchor>a518d81046c084ea16430da4f137100bc</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -18948,18 +18953,6 @@
       <anchorfile>classiipr_1_1_c_tube_projections_generator.html</anchorfile>
       <anchor>af232bf77406199ccdbcab83f8a05ec7f</anchor>
       <arglist>(const i2d::CTubePolyline &amp;tube, int projectionsCount, ProjectionLines &amp;projections)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::IArcProjectionProcessor</name>
-    <filename>classiipr_1_1_i_arc_projection_processor.html</filename>
-    <base virtualness="virtual">iproc::IProcessor</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>DoProjection</name>
-      <anchorfile>classiipr_1_1_i_arc_projection_processor.html</anchorfile>
-      <anchor>a25d391a4780a7dd48ee6b50021f0c716</anchor>
-      <arglist>(const iimg::IBitmap &amp;bitmap, const i2d::CArc &amp;projectionLine, const IProjectionParams *paramsPtr, imeas::IDataSequence &amp;results)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -29660,7 +29653,6 @@
     <file>CSingleFeatureConsumer.h</file>
     <file>CTubeProjectionLinesProviderComp.h</file>
     <file>CTubeProjectionsGenerator.h</file>
-    <file>IArcProjectionProcessor.h</file>
     <file>ICaliperParams.h</file>
     <file>ICaliperProcessor.h</file>
     <file>ICircleFinderParams.h</file>
