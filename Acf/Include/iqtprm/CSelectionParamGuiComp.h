@@ -29,6 +29,7 @@
 #if QT_VERSION >= 0x050000
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QRadioButton>
+#include <QtWidgets/QPushButton>
 #else
 #include <QtGui/QComboBox>
 #include <QtGui/QRadioButton>
@@ -111,7 +112,7 @@ public:
 		I_ASSIGN(m_infoLabelAttrPtr, "InfoLabel", "Information label for the options selector", false, "Info");
 		I_ASSIGN(m_infoIconProviderCompPtr, "InfoIconProvider", "Provider of the info icon", false, "InfoIconProvider");
 		I_ASSIGN(m_iconSizeAttrPtr, "IconSize", "Size of the used icons", false, 32);
-		I_ASSIGN(m_uiModeAttrPtr, "UiMode", "Selection representation mode.\n0 - Combo box,\n1 - Horizontally layouted radio button group\n2 - Vertically layouted radio button group", true, UM_COMBOBOX);
+		I_ASSIGN(m_uiModeAttrPtr, "UiMode", "Selection representation mode.\n0 - Combo box\n1 - Horizontally layouted radio button group\n2 - Vertically layouted radio button group", true, UM_COMBOBOX);
 		I_ASSIGN(m_labelPositionAttrPtr, "LabelPosition", "Selection label position.\n0 - Left from the selector,\n1 - On top of the selector", false, LP_LEFT);
 		I_ASSIGN(m_labelAlignAttrPtr, "LabelAlignment", "Selection label alignment.\n0 - Left-Top,\n1 - Center-Top,\n2 - Right-Top,\n3 - Left-Center,\n4 - Center,\n5 - Right-Center,\n6 - Left-Bottom,\n7 - Center-Bottom,\n8 - Right-Bottom", false, LA_LEFT_CENTER);
 		I_ASSIGN(m_labelWidthAttrPtr, "LabelWidth", "Fixed label width (in pixels)", false, 100);
@@ -137,6 +138,7 @@ protected:
 protected Q_SLOTS:
 	void OnSelectionChanged(int index);
 	void OnRadioButtonSelectionChanged(bool isSelected);
+	void OnResetButtonClicked();
 
 private:
 	void UpdateComboBoxesView();
@@ -172,7 +174,7 @@ private:
 					QButtonGroup* buttonGroupPtr,
 					QWidget& parentFrame);
 
-		QRadioButton* GetRadionButton() const;
+		QRadioButton* GetRadioButton() const;
 
 	private:
 		QRadioButton* m_radioButtonPtr;
@@ -184,6 +186,7 @@ private:
 	istd::TPointerVector<RadioButtonWidget> m_radioButtons;
 	istd::TPointerVector<QButtonGroup> m_radioButtonGroups;
 	istd::TDelPtr<QFrame> m_radioButtonFramePtr;
+	QPushButton* m_resetButtonWidget;
 };
 
 

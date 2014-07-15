@@ -27670,8 +27670,8 @@
       <type>bool</type>
       <name>RegisterModel</name>
       <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
-      <anchor>a92e5469be3d313667f26b4a3e36b5c2d</anchor>
-      <arglist>(IModel *modelPtr, int modelId=0, const istd::IChangeable::ChangeSet &amp;relevantFlags=istd::IChangeable::GetAnyChange())</arglist>
+      <anchor>a86e533cd9e891f37137809dcfe60b4b6</anchor>
+      <arglist>(IModel *modelPtr, int modelId=0, const istd::IChangeable::ChangeSet &amp;relevantFlags=istd::IChangeable::GetAllChanges())</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -53464,6 +53464,13 @@
       <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
       <anchor>af0bc6b8f70e8c927ee23b41976b8a5f6</anchor>
       <arglist>(bool isSelected)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnResetButtonClicked</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>ab37905e1efb51df0fd859c86e5bc822d</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>

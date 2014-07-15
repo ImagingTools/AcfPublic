@@ -193,7 +193,7 @@ void CQwtDataSequenceViewComp::OnGuiCreated()
 	BaseClass::OnGuiCreated();
 
 	m_plotPtr.SetPtr(new QwtPlot(PlotFrame));
-	m_plotPtr->setCanvasLineWidth(0);
+	m_plotPtr->setLineWidth(0);
 	m_plotPtr->setAxisFont(QwtPlot::xBottom, qApp->font());
 	m_plotPtr->setAxisFont(QwtPlot::yLeft, qApp->font());
 	m_plotPtr->setAutoReplot(true);
@@ -205,8 +205,8 @@ void CQwtDataSequenceViewComp::OnGuiCreated()
 	QwtPlotGrid* plotGridPtr = new QwtPlotGrid;
 	plotGridPtr->enableXMin(true);
 	plotGridPtr->enableYMin(true);
-	plotGridPtr->setMajPen(QPen(Qt::black, 0, Qt::DotLine));
-	plotGridPtr->setMinPen(QPen(Qt::gray, 0 , Qt::DotLine));
+	plotGridPtr->setMajorPen(QPen(Qt::black, 0, Qt::DotLine));
+	plotGridPtr->setMinorPen(QPen(Qt::gray, 0 , Qt::DotLine));
 	plotGridPtr->attach(m_plotPtr.GetPtr());
 
 	QLayout* layoutPtr = PlotFrame->layout();
@@ -273,7 +273,7 @@ void CQwtDataSequenceViewComp::ClearMarkers()
 
 // public methods of the embedded class DataSequencePlotPicker
 
-CQwtDataSequenceViewComp::DataSequencePlotPicker::DataSequencePlotPicker(CQwtDataSequenceViewComp& parent, int xAxis, int yAxis, QwtPlotCanvas* canvasPtr)
+CQwtDataSequenceViewComp::DataSequencePlotPicker::DataSequencePlotPicker(CQwtDataSequenceViewComp& parent, int xAxis, int yAxis, QWidget* canvasPtr)
 	:BaseClass(xAxis, yAxis, canvasPtr),
 	m_parent(parent)
 {

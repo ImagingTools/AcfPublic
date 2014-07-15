@@ -35,6 +35,7 @@
 #include "iipr/TUnaryTransformProcessorComp.h"
 #include "iipr/CCaliperParamsComp.h"
 #include "iipr/CExtremumCaliperProcessorComp.h"
+#include "iipr/CExtremumCaliperSupplierComp.h"
 #include "iipr/CLineProjectionProcessorComp.h"
 #include "iipr/CCircleFindProcessorComp.h"
 #include "iipr/CDelegatedBitmapSupplierComp.h"
@@ -92,6 +93,8 @@ typedef iipr::CInvertOperatorComp InvertOperator;
 typedef icomp::TModelCompWrap<iipr::CCaliperParamsComp> CaliperParams;
 typedef icomp::TModelCompWrap<iipr::CCircleFinderParamsComp> CircleFinderParams;
 typedef iipr::CExtremumCaliperProcessorComp ExtremumCaliperProcessor;
+typedef icomp::TModelCompWrap<
+			iipr::CExtremumCaliperSupplierComp> ExtremumCaliperSupplier;
 typedef iipr::CLineProjectionProcessorComp LineProjectionProcessor;
 typedef iipr::CCircleFindProcessorComp CircleFindProcessor;
 typedef icomp::TMakeComponentWrap<
