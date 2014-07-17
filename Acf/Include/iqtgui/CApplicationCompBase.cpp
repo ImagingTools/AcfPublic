@@ -50,12 +50,6 @@ namespace iqtgui
 
 bool CApplicationCompBase::InitializeApplication(int argc, char** argv)
 {
-	QByteArray appStyle;
-	QString styleSheetFile;
-	if (m_styleSheetAttrPtr.IsValid()){
-		styleSheetFile = *m_styleSheetAttrPtr;
-	}
-
 	m_applicationArguments.clear();
 
 	// parse arguments:
@@ -64,12 +58,12 @@ bool CApplicationCompBase::InitializeApplication(int argc, char** argv)
 
 		if (argIndex + 1 < argc){	// two argument parameters
 			if (arg == "-style"){
-				appStyle = argv[++argIndex];
+				m_appStyle = argv[++argIndex];
 				continue;
 			}
 
 			if (arg == "-stylesheet"){
-				styleSheetFile = QString::fromLocal8Bit(argv[++argIndex]);
+				m_styleSheetFile = QString::fromLocal8Bit(argv[++argIndex]);
 				continue;
 			}
 		}
@@ -78,8 +72,6 @@ bool CApplicationCompBase::InitializeApplication(int argc, char** argv)
 
 		qDebug(argv[argIndex]);
 	}
-
-	QApplication::setStyle(appStyle);
 
 	if (!m_applicationPtr.IsValid()){
 		m_applicationPtr.SetPtr(new QApplication(argc, argv));
@@ -101,13 +93,6 @@ bool CApplicationCompBase::InitializeApplication(int argc, char** argv)
 
 		if (rootComponentPtr != NULL){
 			rootComponentPtr->EnsureAutoInitComponentsCreated();
-		}
-
-		// set up style sheet
-		if (!styleSheetFile.isEmpty()){
-			if (!iqtgui::SetStyleSheet(*m_applicationPtr, styleSheetFile)){
-				qDebug("Style sheet file could not be set: %s", styleSheetFile.toLocal8Bit().constData());
-			}
 		}
 	}
 
@@ -170,6 +155,21 @@ void CApplicationCompBase::InitializeComponentApplication()
 {
 	Q_ASSERT(IsComponentActive());
 	Q_ASSERT(m_applicationPtr.IsValid());
+
+	if (m_styleSheetFile.isEmpty() && m_styleSheetAttrPtr.IsValid()){
+		m_styleSheetFile = *m_styleSheetAttrPtr;
+	}
+
+	if (!m_appStyle.isEmpty()){
+		QApplication::setStyle(m_appStyle);
+	}
+
+	// set up style sheet
+	if (!m_styleSheetFile.isEmpty()){
+		if (!iqtgui::SetStyleSheet(*m_applicationPtr, m_styleSheetFile)){
+			qDebug("Style sheet file could not be set: %s", m_styleSheetFile.toLocal8Bit().constData());
+		}
+	}
 
 	// set up current language
 	if (m_translationManagerCompPtr.IsValid() && (m_translationManagerCompPtr->GetCurrentLanguageIndex() < 0)){

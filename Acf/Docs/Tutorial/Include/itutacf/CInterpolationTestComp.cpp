@@ -38,7 +38,7 @@ namespace itutacf
 
 // reimplemented (imod::CSingleModelObserverBase)
 
-void CInterpolationTestComp::OnUpdate(const ChangeSet& /*changeSet*/)
+void CInterpolationTestComp::OnUpdate(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	if (!m_slaveObjectCompPtr.IsValid()){
 		return;

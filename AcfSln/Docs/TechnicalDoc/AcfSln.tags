@@ -16291,10 +16291,10 @@
     <base>TSupplierCompWrap&lt; iipr::CFeaturesContainer &gt;</base>
     <base virtualness="virtual">imeas::INumericValueProvider</base>
     <member kind="typedef">
-      <type>public iinsp::TSupplierCompWrap&lt; iipr::CFeaturesContainer &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; iipr::CFeaturesContainer &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_extremum_caliper_supplier_comp.html</anchorfile>
-      <anchor>abce2697266aa7f551a5a9cce092432b4</anchor>
+      <anchor>a9bea5327045287e5df3f8cf2044b5370</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
