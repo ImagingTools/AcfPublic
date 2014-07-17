@@ -5,13 +5,27 @@ Project{
 
 	qbsSearchPaths: ["../../Acf/Config/Qbs", "../../3rdParty/Config/Qbs/share"]
 
-	SubProject{
-		filePath: "../../Acf/Build/Qbs/AcfProject.qbs"
+	Project{
+		name: "Acf"
+
+		property string acfInstallSubDir: "Acf"
+
+		references: ["../../Acf/Build/Qbs/AcfProject.qbs", "../../Acf/Docs/Tutorial/Build/Qbs/TutorialAcfProject.qbs"]
 	}
-	SubProject{
-		filePath: "../../AcfSln/Build/Qbs/AcfSlnProject.qbs"
+
+	Project{
+		name: "AcfSln"
+
+		property string acfInstallSubDir: "AcfSln"
+
+		references: ["../../AcfSln/Build/Qbs/AcfSlnProject.qbs"]
 	}
-	SubProject{
-		filePath: "../../Iacf/Build/Qbs/IacfProject.qbs"
+
+	Project{
+		name: "Iacf"
+
+		property string acfInstallSubDir: "Iacf"
+
+		references: ["../../Iacf/Build/Qbs/IacfProject.qbs"]
 	}
 }
