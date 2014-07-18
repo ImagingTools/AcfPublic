@@ -5298,16 +5298,16 @@
     </member>
     <member kind="enumvalue">
       <type>@</type>
-      <name>TI_FLAGS</name>
+      <name>TI_EXPORTS</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a263dc5f2a5775ec1b68ce8fc3ad608cfa3088f77da3bf9e6a97a447e8b72a51db</anchor>
+      <anchor>a263dc5f2a5775ec1b68ce8fc3ad608cfadcf691a496c3238c11aaf4ebffc20418</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
-      <name>TI_EXPORTS</name>
+      <name>TI_FLAGS</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a263dc5f2a5775ec1b68ce8fc3ad608cfadcf691a496c3238c11aaf4ebffc20418</anchor>
+      <anchor>a263dc5f2a5775ec1b68ce8fc3ad608cfa3088f77da3bf9e6a97a447e8b72a51db</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">

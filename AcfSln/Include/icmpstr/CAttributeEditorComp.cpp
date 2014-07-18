@@ -1003,7 +1003,7 @@ bool CAttributeEditorComp::SetAttributeToItem(
 		hasWarning = true;
 	}
 	else{
-		attributeItem.setBackgroundColor(AC_VALUE, Qt::white);
+		attributeItem.setBackgroundColor(AC_VALUE, Qt::transparent);
 	}
 
 	importItemPtr->setText(AC_NAME, tr("<import>"));
@@ -1057,7 +1057,7 @@ bool CAttributeEditorComp::SetInterfaceToItem(
 		item.setText(0, interfaceName);
 		item.setCheckState(0, hasExport? Qt::Checked: Qt::Unchecked);
 		item.setToolTip(0, "");
-		item.setBackgroundColor(0, Qt::white);
+		item.setBackgroundColor(0, Qt::transparent);
 	}
 	else{
 		item.setText(0, elementId + ": " + interfaceName);
@@ -1083,7 +1083,7 @@ bool CAttributeEditorComp::ResetItem(QTreeWidgetItem& item)
 	item.setText(0, "");
 	item.setData(0, Qt::CheckStateRole, QVariant());
 	item.setToolTip(0, "");
-	item.setBackgroundColor(0, Qt::white);
+	item.setBackgroundColor(0, Qt::transparent);
 	item.setIcon(0, QIcon());
 
 	return true;
@@ -1445,6 +1445,7 @@ void CAttributeEditorComp::CreateInterfacesTree(
 					}
 					else{
 						itemPtr = new QTreeWidgetItem();
+						itemPtr->setExpanded(true);
 						InterfacesTree->addTopLevelItem(itemPtr);
 					}
 				}
