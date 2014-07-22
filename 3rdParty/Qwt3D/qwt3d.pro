@@ -18,6 +18,12 @@ win32-msvc*{
 	win32-msvc2010{
 		COMPILER_NAME = VC10
 	}
+	win32-msvc2012{
+		COMPILER_NAME = VC11
+	}
+	win32-msvc2013{
+		COMPILER_NAME = VC12
+	}
 }
 
 CONFIG(debug, debug|release){
