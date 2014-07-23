@@ -70,7 +70,7 @@ int CSamplesInfo::GetDefaultChannelsCount() const
 
 bool CSamplesInfo::Serialize(iser::IArchive& archive)
 {
-	static iser::CArchiveTag logicalRangeTag("LogicalSamplesRange", "Logical range of samples axis, e.g. sampled time span");
+	static iser::CArchiveTag logicalRangeTag("LogicalSamplesRange", "Logical range of samples axis, e.g. sampled time span", iser::CArchiveTag::TT_GROUP);
 
 	bool retVal = true;
 
@@ -83,6 +83,7 @@ bool CSamplesInfo::Serialize(iser::IArchive& archive)
 	}
 	else{
 		istd::CChangeNotifier notifier(this);
+		Q_UNUSED(notifier);
 
 		double minValue = 0;
 		double maxValue = 0;

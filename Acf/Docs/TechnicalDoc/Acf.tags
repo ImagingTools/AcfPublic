@@ -53867,12 +53867,47 @@
   <compound kind="class">
     <name>iser::CArchiveTag</name>
     <filename>classiser_1_1_c_archive_tag.html</filename>
+    <member kind="enumeration">
+      <type></type>
+      <name>TagType</name>
+      <anchorfile>classiser_1_1_c_archive_tag.html</anchorfile>
+      <anchor>a35dd0e956c4b10f5a2f5a304f6958b12</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TT_UNKNOWN</name>
+      <anchorfile>classiser_1_1_c_archive_tag.html</anchorfile>
+      <anchor>a35dd0e956c4b10f5a2f5a304f6958b12a51fcfae9e540803b6a22606cf09e2551</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TT_GROUP</name>
+      <anchorfile>classiser_1_1_c_archive_tag.html</anchorfile>
+      <anchor>a35dd0e956c4b10f5a2f5a304f6958b12a0135f65a7151af8cfdf7e2d7f5a599e3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TT_MULTIPLE</name>
+      <anchorfile>classiser_1_1_c_archive_tag.html</anchorfile>
+      <anchor>a35dd0e956c4b10f5a2f5a304f6958b12afdf9a86b63e60729c5fc1fed775befe3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TT_LEAF</name>
+      <anchorfile>classiser_1_1_c_archive_tag.html</anchorfile>
+      <anchor>a35dd0e956c4b10f5a2f5a304f6958b12a095c13cf629cfe82a8ba5650eea856ef</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CArchiveTag</name>
       <anchorfile>classiser_1_1_c_archive_tag.html</anchorfile>
-      <anchor>add980dc48e9207dbecae9b13dafb6ebb</anchor>
-      <arglist>(const QByteArray &amp;id, const QByteArray &amp;comment, bool isTagSkippingUsed=false)</arglist>
+      <anchor>a6aa7e420b9b8588afcadf21da1fa4a46</anchor>
+      <arglist>(const QByteArray &amp;id, const QByteArray &amp;comment, TagType tagType=TT_UNKNOWN, CArchiveTag *parentPtr=NULL, bool isTagSkippingUsed=false)</arglist>
     </member>
     <member kind="function">
       <type>const QByteArray &amp;</type>
@@ -53893,6 +53928,20 @@
       <name>GetComment</name>
       <anchorfile>classiser_1_1_c_archive_tag.html</anchorfile>
       <anchor>ac2879adf17e924e83dfb1025efc602ed</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>TagType</type>
+      <name>GetTagType</name>
+      <anchorfile>classiser_1_1_c_archive_tag.html</anchorfile>
+      <anchor>a942af225e6d043022dc6a5aadf1dfb90</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>CArchiveTag *</type>
+      <name>GetParentTag</name>
+      <anchorfile>classiser_1_1_c_archive_tag.html</anchorfile>
+      <anchor>a523efeee850c6aae5a90fdcd51d077b9</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">

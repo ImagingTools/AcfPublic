@@ -154,13 +154,18 @@ void CPropertiesManager::InsertProperty(
 }
 
 
+static iser::CArchiveTag propertiesTag("Properties", "List of object properties", iser::CArchiveTag::TT_MULTIPLE);
+static iser::CArchiveTag propertyTag("Property", "Object property", iser::CArchiveTag::TT_GROUP, &propertiesTag);
+static iser::CArchiveTag propertyTypeIdTag("PropertyTypeId", "ID of the property object", iser::CArchiveTag::TT_LEAF, &propertyTag);
+static iser::CArchiveTag propertyIdTag("PropertyId", "Name of the property object", iser::CArchiveTag::TT_LEAF, &propertyTag);
+static iser::CArchiveTag propertyFlagsTag("PropertyFlags", "Property flags", iser::CArchiveTag::TT_LEAF, &propertyTag);
+static iser::CArchiveTag propertyDescriptionTag("PropertyDescription", "Property description", iser::CArchiveTag::TT_LEAF, &propertyTag);
+static iser::CArchiveTag propertyObjectTag("PropertyObject", "Property object", iser::CArchiveTag::TT_GROUP, &propertyTag);
+
 // reimplemented (iser::ISerializable)
 
 bool CPropertiesManager::Serialize(iser::IArchive& archive)
 {
-	static iser::CArchiveTag propertiesTag("Properties", "List of object properties");
-	static iser::CArchiveTag propertyTag("Property", "Object property");
-
 	if (archive.IsStoring()){
 		return WriteProperties(archive, propertiesTag, propertyTag);
 	}
@@ -201,6 +206,7 @@ bool CPropertiesManager::ReadProperties(
 {
 	static ChangeSet changeSet(CF_RESET);
 	istd::CChangeNotifier notifier(this, changeSet);
+	Q_UNUSED(notifier);
 
 	bool retVal = true;
 
@@ -216,12 +222,10 @@ bool CPropertiesManager::ReadProperties(
 		int propertyFlags = 0;
 		QByteArray propertyDescription;
 
-		static iser::CArchiveTag propertyTypeIdTag("PropertyTypeId", "ID of the property object");
 		retVal = retVal && archive.BeginTag(propertyTypeIdTag);
 		retVal = retVal && archive.Process(propertyTypeId);
 		retVal = retVal && archive.EndTag(propertyTypeIdTag);
 
-		static iser::CArchiveTag propertyIdTag("PropertyId", "Name of the property object");
 		retVal = retVal && archive.BeginTag(propertyIdTag);
 		retVal = retVal && archive.Process(propertyId);
 		retVal = retVal && archive.EndTag(propertyIdTag);
@@ -230,12 +234,10 @@ bool CPropertiesManager::ReadProperties(
 
 		quint32 versionNumber = 0;
 		if (!versionInfo.GetVersionNumber(1, versionNumber) || (versionNumber > 931)){
-			static iser::CArchiveTag propertyFlagsTag("PropertyFlags", "Property flags");
 			retVal = retVal && archive.BeginTag(propertyFlagsTag);
 			retVal = retVal && archive.Process(propertyFlags);
 			retVal = retVal && archive.EndTag(propertyFlagsTag);
 
-			static iser::CArchiveTag propertyDescriptionTag("PropertyDescription", "Property description");
 			retVal = retVal && archive.BeginTag(propertyDescriptionTag);
 			retVal = retVal && archive.Process(propertyDescription);
 			retVal = retVal && archive.EndTag(propertyDescriptionTag);
@@ -299,8 +301,6 @@ bool CPropertiesManager::ReadProperties(
 				return false;
 			}
 		
-			static iser::CArchiveTag propertyObjectTag("PropertyObject", "Property object");
-
 			if (versionNumber > 931){
 				retVal = retVal && archive.BeginTag(propertyObjectTag);
 			}
@@ -363,12 +363,10 @@ bool CPropertiesManager::WriteProperties(
 
 		retVal = retVal && archive.BeginTag(propertyTag);
 
-		static iser::CArchiveTag propertyTypeIdTag("PropertyTypeId", "ID of the property object");
 		retVal = retVal && archive.BeginTag(propertyTypeIdTag);
 		retVal = retVal && archive.Process(propertyTypeId);
 		retVal = retVal && archive.EndTag(propertyTypeIdTag);
 
-		static iser::CArchiveTag propertyIdTag("PropertyId", "Name of the property object");
 		retVal = retVal && archive.BeginTag(propertyIdTag);
 		retVal = retVal && archive.Process(propertyId);
 		retVal = retVal && archive.EndTag(propertyIdTag);
@@ -377,18 +375,15 @@ bool CPropertiesManager::WriteProperties(
 
 		quint32 versionNumber = 0;
 		if (!versionInfo.GetVersionNumber(1, versionNumber) || (versionNumber > 931)){
-			static iser::CArchiveTag propertyFlagsTag("PropertyFlags", "Property flags");
 			retVal = retVal && archive.BeginTag(propertyFlagsTag);
 			retVal = retVal && archive.Process(propertyFlags);
 			retVal = retVal && archive.EndTag(propertyFlagsTag);
 
-			static iser::CArchiveTag propertyDescriptionTag("PropertyDescription", "Property description");
 			retVal = retVal && archive.BeginTag(propertyDescriptionTag);
 			retVal = retVal && archive.Process(propertyDescription);
 			retVal = retVal && archive.EndTag(propertyDescriptionTag);
 		}
 
-		static iser::CArchiveTag propertyObjectTag("PropertyObject", "Property object");
 		retVal = retVal && archive.BeginTag(propertyObjectTag);
 		retVal = retVal && objectPtr->Serialize(archive);
 		retVal = retVal && archive.EndTag(propertyObjectTag);

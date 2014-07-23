@@ -229,11 +229,11 @@ bool CPolygon::GetInvTransformed(
 
 bool CPolygon::Serialize(iser::IArchive& archive)
 {
-	static iser::CArchiveTag polygonTag("Polygon", "Polygon");
-	static iser::CArchiveTag vectorTag("V", "Vector");
+	static iser::CArchiveTag polygonTag("Polygon", "Polygon", iser::CArchiveTag::TT_MULTIPLE);
+	static iser::CArchiveTag vectorTag("V", "Vector", iser::CArchiveTag::TT_GROUP, &polygonTag);
 
-	static ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA);
-	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this, changeSet);
+	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this, GetAllChanges());
+	Q_UNUSED(notifier);
 
 	int nodesCount = m_nodes.size();
 	bool retVal = true;
@@ -248,6 +248,7 @@ bool CPolygon::Serialize(iser::IArchive& archive)
 		retVal = retVal && m_nodes[nodeIndex].Serialize(archive);
 		retVal = retVal && archive.EndTag(vectorTag);
 	}
+
 	retVal = retVal && archive.EndTag(polygonTag);
 
 	return retVal;

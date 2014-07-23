@@ -80,10 +80,10 @@ bool CConvolutionKernel2d::SetKernelElement(const istd::CIndex2d& index, double 
 
 bool CConvolutionKernel2d::Serialize(iser::IArchive& archive)
 {
-	static iser::CArchiveTag sizeTag("KernelSize", "Size of convolution kernel");
-	static iser::CArchiveTag widthTag("Width", "Width");
-	static iser::CArchiveTag heightTag("Height", "Height");
-	static iser::CArchiveTag valuesTag("Values", "values of convolution kernel");
+	static iser::CArchiveTag sizeTag("KernelSize", "Size of convolution kernel", iser::CArchiveTag::TT_GROUP);
+	static iser::CArchiveTag widthTag("Width", "Width", iser::CArchiveTag::TT_LEAF);
+	static iser::CArchiveTag heightTag("Height", "Height", iser::CArchiveTag::TT_LEAF);
+	static iser::CArchiveTag valuesTag("Values", "values of convolution kernel", iser::CArchiveTag::TT_GROUP);
 
 	bool retVal = true;
 
@@ -116,6 +116,7 @@ bool CConvolutionKernel2d::Serialize(iser::IArchive& archive)
 	}
 	else{
 		istd::CChangeNotifier notifier(this);
+		Q_UNUSED(notifier);
 
 		istd::CIndex2d size(0, 0);
 
