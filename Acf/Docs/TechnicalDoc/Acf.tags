@@ -2866,6 +2866,14 @@
     <namespace>imath</namespace>
   </compound>
   <compound kind="file">
+    <name>CLinearInterpolator.h</name>
+    <path>C:/Temp/Acf/Include/imath/</path>
+    <filename>_c_linear_interpolator_8h</filename>
+    <includes id="_t_i_math_function_8h" name="TIMathFunction.h" local="yes" imported="no">imath/TIMathFunction.h</includes>
+    <class kind="class">imath::CLinearInterpolator</class>
+    <namespace>imath</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSampledFunction2d.h</name>
     <path>C:/Temp/Acf/Include/imath/</path>
     <filename>_c_sampled_function2d_8h</filename>
@@ -34364,6 +34372,7 @@
     <class kind="class">imath::CDoubleManip</class>
     <class kind="class">imath::CFixedPointManip</class>
     <class kind="class">imath::CGeneralUnitInfo</class>
+    <class kind="class">imath::CLinearInterpolator</class>
     <class kind="class">imath::CSampledFunction2d</class>
     <class kind="class">imath::CSplineSegmentFunction</class>
     <class kind="class">imath::CVarMatrix</class>
@@ -35544,6 +35553,32 @@
       <anchorfile>classimath_1_1_i_unit_info.html</anchorfile>
       <anchor>a39c7d5baaf4bf092560d5d30c3cb9d28a8a58bd5e3173d68b23c658bd0080afa2</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imath::CLinearInterpolator</name>
+    <filename>classimath_1_1_c_linear_interpolator.html</filename>
+    <base virtualness="virtual">imath::TIMathFunction</base>
+    <member kind="function">
+      <type>void</type>
+      <name>SetNodes</name>
+      <anchorfile>classimath_1_1_c_linear_interpolator.html</anchorfile>
+      <anchor>a3e18222a065debe566981486437acadb</anchor>
+      <arglist>(double *positions, double *values, int nodesCount)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetValueAt</name>
+      <anchorfile>classimath_1_1_c_linear_interpolator.html</anchorfile>
+      <anchor>a4537bd8a4c61cc2f08abfce5412dc917</anchor>
+      <arglist>(const double &amp;argument, double &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetValueAt</name>
+      <anchorfile>classimath_1_1_c_linear_interpolator.html</anchorfile>
+      <anchor>a2354ff20f726456efc24f4bb9cdde074</anchor>
+      <arglist>(const double &amp;argument) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -53902,6 +53937,20 @@
       <anchor>a35dd0e956c4b10f5a2f5a304f6958b12a095c13cf629cfe82a8ba5650eea856ef</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TT_WEAK</name>
+      <anchorfile>classiser_1_1_c_archive_tag.html</anchorfile>
+      <anchor>a35dd0e956c4b10f5a2f5a304f6958b12a32db7dbd42f9e3d17a54cdb030c773ef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CArchiveTag</name>
+      <anchorfile>classiser_1_1_c_archive_tag.html</anchorfile>
+      <anchor>afd4a5d994df0bba0f6cab2128894abf3</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CArchiveTag</name>
@@ -69604,6 +69653,7 @@
     <file>CDoubleManip.h</file>
     <file>CFixedPointManip.h</file>
     <file>CGeneralUnitInfo.h</file>
+    <file>CLinearInterpolator.h</file>
     <file>CSampledFunction2d.h</file>
     <file>CSplineSegmentFunction.h</file>
     <file>CVarMatrix.h</file>
