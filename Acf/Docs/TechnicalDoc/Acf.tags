@@ -34466,6 +34466,20 @@
     <filename>classimath_1_1_c_akima_interpolator.html</filename>
     <base virtualness="virtual">imath::TIMathFunction</base>
     <member kind="function">
+      <type></type>
+      <name>CAkimaInterpolator</name>
+      <anchorfile>classimath_1_1_c_akima_interpolator.html</anchorfile>
+      <anchor>a289a55ef5b14ba8af55c384ef6ae21ef</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CAkimaInterpolator</name>
+      <anchorfile>classimath_1_1_c_akima_interpolator.html</anchorfile>
+      <anchor>a88b265bb23ba298b970722daeac98e61</anchor>
+      <arglist>(double *positions, double *values, int nodesCount)</arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>SetNodes</name>
       <anchorfile>classimath_1_1_c_akima_interpolator.html</anchorfile>
@@ -35559,6 +35573,20 @@
     <name>imath::CLinearInterpolator</name>
     <filename>classimath_1_1_c_linear_interpolator.html</filename>
     <base virtualness="virtual">imath::TIMathFunction</base>
+    <member kind="function">
+      <type></type>
+      <name>CLinearInterpolator</name>
+      <anchorfile>classimath_1_1_c_linear_interpolator.html</anchorfile>
+      <anchor>a39017cfa63931b7691a4db98aedf1d8f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CLinearInterpolator</name>
+      <anchorfile>classimath_1_1_c_linear_interpolator.html</anchorfile>
+      <anchor>aae3eeb754d076baabb634b5e3c935e12</anchor>
+      <arglist>(double *positions, double *values, int nodesCount)</arglist>
+    </member>
     <member kind="function">
       <type>void</type>
       <name>SetNodes</name>

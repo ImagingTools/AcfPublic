@@ -41,6 +41,9 @@ namespace imath
 class CLinearInterpolator: public virtual IDoubleFunction
 {
 public:
+	CLinearInterpolator();
+	CLinearInterpolator(double* positions, double* values, int nodesCount);
+
 	void SetNodes(double* positions, double* values, int nodesCount);
 
 	// reimplemented (imath::TIMathFunction<double, double>)
@@ -48,7 +51,8 @@ public:
 	virtual double GetValueAt(const double& argument) const;
 
 private:
-	QMap<double, double> m_nodes;
+	typedef QMap<double, double> Nodes;
+	Nodes m_nodes;
 };
 
 
