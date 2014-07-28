@@ -1192,7 +1192,7 @@
     <name>CCircleFindProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_circle_find_processor_comp_8h</filename>
-    <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="yes" imported="no">iipr/IImageToFeatureProcessor.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_i_feature_to_image_mapper_8h" name="IFeatureToImageMapper.h" local="yes" imported="no">iipr/IFeatureToImageMapper.h</includes>
@@ -14982,15 +14982,35 @@
   <compound kind="class">
     <name>iipr::CCircleFindProcessorComp</name>
     <filename>classiipr_1_1_c_circle_find_processor_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>TSyncProcessorWrap&lt; IImageToFeatureProcessor &gt;</base>
+    <base>TSyncProcessorCompBase&lt; IImageToFeatureProcessor &gt;</base>
     <class kind="struct">iipr::CCircleFindProcessorComp::Point</class>
     <class kind="struct">iipr::CCircleFindProcessorComp::Ray</class>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>iproc::TSyncProcessorCompBase&lt; IImageToFeatureProcessor &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>a5d7a01981508c9b0c6b2609ad8286e1d</anchor>
+      <anchor>a5f6850b789bfee2e9ba1891b1a7049e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>a89a981e20fa8a2d09462bb32d933509e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iproc::TSyncProcessorWrap&lt; IImageToFeatureProcessor &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>ae7231378d49277f210d184366095ac75</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>IImageToFeatureProcessor</type>
+      <name>InterfaceType</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>aeb82b61f5619c5cfd1cfdefe18320b2d</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">

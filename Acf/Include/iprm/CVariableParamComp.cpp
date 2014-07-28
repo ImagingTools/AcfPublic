@@ -31,7 +31,7 @@ namespace iprm
 {
 
 
-// reimplemented (iprm::IParamsSet)
+// reimplemented (iprm::IVariableParam)
 
 IVariableParam::TypeIds CVariableParamComp::GetKnownTypeIds() const
 {
