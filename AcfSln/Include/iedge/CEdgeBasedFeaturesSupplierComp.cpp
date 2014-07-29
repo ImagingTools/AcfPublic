@@ -231,7 +231,7 @@ int CEdgeBasedFeaturesSupplierComp::ProduceObject(ProductType& result) const
 						ilog::CMessage* message = new ilog::CMessage(
 									istd::IInformationProvider::IC_NONE,
 									MI_SUPPLIER_RESULTS_STATUS,
-									QObject::tr("Search not successfull"),
+									QObject::tr("Search not successful"),
 									multiSearchParamsManagerPtr->GetParamsSetName(searchIndex));
 						AddMessage(message);
 
@@ -246,7 +246,7 @@ int CEdgeBasedFeaturesSupplierComp::ProduceObject(ProductType& result) const
 					}
 
 					m_defaultInformationCategory = IC_INFO;
-					QString searchResultText = QObject::tr("Models OK");
+					QString searchResultText = QObject::tr("Search of geometric pattern successful");
 
 					// check feature type and set correct ID
 					int featuresCount = localFeatures.GetValuesCount();
@@ -297,7 +297,7 @@ int CEdgeBasedFeaturesSupplierComp::ProduceObject(ProductType& result) const
 					ilog::CMessage* message = new ilog::CMessage(
 								istd::IInformationProvider::IC_NONE,
 								MI_SUPPLIER_RESULTS_STATUS,
-								QObject::tr("Search not successfull"),
+								QObject::tr("Search not successful"),
 								GetDiagnosticName());
 					
 					AddMessage(message);
@@ -313,7 +313,7 @@ int CEdgeBasedFeaturesSupplierComp::ProduceObject(ProductType& result) const
 				}
 
 				m_defaultInformationCategory = IC_INFO;
-				QString searchResultText = QObject::tr("Models OK");
+				QString searchResultText = QObject::tr("Search of geometric pattern successful");
 
 				int featuresCount = result.first.GetValuesCount();
 				for (int featureIndex = 0; featureIndex < featuresCount; featureIndex++){
