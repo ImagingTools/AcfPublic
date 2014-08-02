@@ -80,6 +80,8 @@ void CFileSystemExplorerGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /
 		if (index.isValid()){
 			QItemSelectionModel* selectionModelPtr = FileTree->selectionModel();
 			if (selectionModelPtr != NULL){
+				UpdateBlocker blocker(this);
+
 				selectionModelPtr->select(index, QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows);
 
 				FileTree->scrollTo(index);
@@ -199,6 +201,12 @@ void CFileSystemExplorerGuiComp::OnFilterChanged()
 
 void CFileSystemExplorerGuiComp::OnSelectionChanged(const QItemSelection& selected, const QItemSelection&/* deselected*/)
 {
+	if (IsUpdateBlocked() ){
+		return;
+	}
+
+	UpdateBlocker blocker(this);
+
 	if (!selected.indexes().isEmpty()){
 		ifile::IFileNameParam* objectPtr = GetObjectPtr();
 		if (objectPtr != NULL){

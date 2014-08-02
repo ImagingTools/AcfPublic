@@ -100,8 +100,6 @@ void TSupplierCompWrap<Product>::ClearWorkResults()
 	m_productPtr.Reset();
 
 	BaseClass::ClearWorkResults();
-
-	m_productChangeNotifierPtr.Reset();
 }
 
 

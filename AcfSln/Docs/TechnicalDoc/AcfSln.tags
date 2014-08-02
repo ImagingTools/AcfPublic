@@ -6548,9 +6548,9 @@
     </member>
     <member kind="friend" protection="private">
       <type>friend class</type>
-      <name>CItemDelegate</name>
+      <name>CPackageItemDelegate</name>
       <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>acce93f48e2b49be54476ce114be4fcb2</anchor>
+      <anchor>afccd7c6cdd5e8f432e8e6aafd6ae20b0</anchor>
       <arglist></arglist>
     </member>
   </compound>
