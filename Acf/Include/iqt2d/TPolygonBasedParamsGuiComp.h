@@ -66,22 +66,22 @@ public:
 
 	/**
 		Cell index
-	 */
+	*/
 	enum CellIndex
 	{
 		/**
 			Index of the table cell for the X coordinate of the polygon node
-		 */
+		*/
 		CI_X,
 
 		/**
 			Index of the table cell for the X coordinate of the polygon node
-		 */
+		*/
 		CI_Y,
 
 		/**
 			Last used cell index
-		 */
+		*/
 		CI_LAST = CI_Y
 	};
 
@@ -99,7 +99,7 @@ public:
 protected:
 	/**
 		Get the table with the node data.
-	 */
+	*/
 	QTableWidget* GetNodeTable();
 
 	virtual void OnInsertNode();
@@ -116,11 +116,11 @@ protected:
 	virtual void OnGuiCreated();
 
 	/**
-		Enable or disable the Tools button depending on model type and dynamically build its menu.
-	 */
-	void UpdateToolsMenuButton();
+		Enable or disable the tools button depending on model type and dynamically build its menu.
+	*/
+	virtual void UpdateToolsMenuButton();
 
-	void OnToolsButtonMenuActionTriggered(QAction* action);
+	virtual void OnToolsButtonMenuActionTriggered(QAction* action);
 
 protected:
 	using BaseClass::GetObjectPtr;
@@ -130,7 +130,7 @@ protected:
 
 	/**
 		Internal item delegate class for input validation
-	 */
+	*/
 	class CPolygonParamsGuiItemDelegate: public QItemDelegate
 	{
 	public:

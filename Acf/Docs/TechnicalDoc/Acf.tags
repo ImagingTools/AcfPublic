@@ -44670,15 +44670,15 @@
       <anchor>a639829115b16468f337578e9eb36855b</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>UpdateToolsMenuButton</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a1d0ab5de4589426871b97f361da07ce4</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnToolsButtonMenuActionTriggered</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a449dd47e6f484eb6415de32521f31731</anchor>
@@ -44878,15 +44878,15 @@
       <anchor>a639829115b16468f337578e9eb36855b</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>UpdateToolsMenuButton</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a1d0ab5de4589426871b97f361da07ce4</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnToolsButtonMenuActionTriggered</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a449dd47e6f484eb6415de32521f31731</anchor>
@@ -45492,15 +45492,15 @@
       <anchor>a639829115b16468f337578e9eb36855b</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>UpdateToolsMenuButton</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a1d0ab5de4589426871b97f361da07ce4</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnToolsButtonMenuActionTriggered</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a449dd47e6f484eb6415de32521f31731</anchor>
@@ -45923,15 +45923,15 @@
       <anchor>a639829115b16468f337578e9eb36855b</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>UpdateToolsMenuButton</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a1d0ab5de4589426871b97f361da07ce4</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnToolsButtonMenuActionTriggered</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a449dd47e6f484eb6415de32521f31731</anchor>
