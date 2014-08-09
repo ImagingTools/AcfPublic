@@ -1452,7 +1452,7 @@
     <name>CLineProjectionProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_line_projection_processor_comp_8h</filename>
-    <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <includes id="_i_line_projection_processor_8h" name="ILineProjectionProcessor.h" local="yes" imported="no">iipr/ILineProjectionProcessor.h</includes>
     <includes id="_i_projection_constraints_8h" name="IProjectionConstraints.h" local="yes" imported="no">iipr/IProjectionConstraints.h</includes>
     <includes id="_i_feature_to_image_mapper_8h" name="IFeatureToImageMapper.h" local="yes" imported="no">iipr/IFeatureToImageMapper.h</includes>
@@ -17046,22 +17046,35 @@
   <compound kind="class">
     <name>iipr::CLineProjectionProcessorComp</name>
     <filename>classiipr_1_1_c_line_projection_processor_comp.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>TSyncProcessorWrap&lt; ILineProjectionProcessor &gt;</base>
+    <base>TSyncProcessorCompBase&lt; ILineProjectionProcessor &gt;</base>
     <base virtualness="virtual">iipr::IFeatureToImageMapper</base>
     <base virtualness="virtual">iipr::IProjectionConstraints</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>iproc::TSyncProcessorCompBase&lt; ILineProjectionProcessor &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_line_projection_processor_comp.html</anchorfile>
-      <anchor>ae5ab7befa020f77a6d1a0f81ab5c6fce</anchor>
+      <anchor>a7c0f1bfa35cc68a26fb8ae1adb3d88d6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>a89a981e20fa8a2d09462bb32d933509e</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>iproc::TSyncProcessorWrap&lt; ILineProjectionProcessor &gt;</type>
       <name>BaseClass2</name>
-      <anchorfile>classiipr_1_1_c_line_projection_processor_comp.html</anchorfile>
-      <anchor>ad9fac4a1c20d04d75899dfce2858e020</anchor>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>ae7231378d49277f210d184366095ac75</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ILineProjectionProcessor</type>
+      <name>InterfaceType</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>aeb82b61f5619c5cfd1cfdefe18320b2d</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
