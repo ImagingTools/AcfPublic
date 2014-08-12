@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef iqtdoc_CMainWindowComp_included
-#define iqtdoc_CMainWindowComp_included
+#ifndef iqtdoc_CMainWindowGuiComp_included
+#define iqtdoc_CMainWindowGuiComp_included
 
 
 // Qt includes
@@ -124,6 +124,10 @@ protected:
 	void OnNewDocument(const QByteArray& documentTypeId);
 
 	virtual bool SerializeRecentFileList(iser::IArchive& archive);
+	/**
+		Updates displayed list of recent used files.
+		\param	fileToTypeMap	list of new files and corresponding types.
+	*/
 	virtual void UpdateRecentFileList(const idoc::IDocumentManager::FileToTypeMap& fileToTypeMap);
 	virtual void RemoveFromRecentFileList(const QString& filePath);
 
@@ -273,5 +277,6 @@ private:
 } // namespace iqtdoc
 
 
-#endif // !iqtdoc_CMainWindowComp_included
+#endif // !iqtdoc_CMainWindowGuiComp_included
+
 

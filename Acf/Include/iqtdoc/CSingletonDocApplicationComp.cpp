@@ -36,7 +36,8 @@ namespace iqtdoc
 
 
 CSingletonDocApplicationComp::CSingletonDocApplicationComp()
-	:m_isAlreadyRunning(false)
+:	m_isAlreadyRunning(false),
+	m_isApplicationInitialized(false)
 {
 }
 
@@ -45,7 +46,7 @@ CSingletonDocApplicationComp::CSingletonDocApplicationComp()
 
 bool CSingletonDocApplicationComp::InitializeApplication(int argc, char** argv)
 {
-	if (m_slaveApplicationCompPtr.IsValid()){
+	if (!m_isApplicationInitialized && m_slaveApplicationCompPtr.IsValid()){
 		if (m_slaveApplicationCompPtr->InitializeApplication(argc, argv)){
 			if (m_runtimeStatusProviderModelCompPtr.IsValid()){
 				if (m_runtimeStatusProviderModelCompPtr->AttachObserver(this)){
@@ -53,11 +54,11 @@ bool CSingletonDocApplicationComp::InitializeApplication(int argc, char** argv)
 				}
 			}
 
-			return true;
+			m_isApplicationInitialized = true;
 		}
 	}
 
-	return false;
+	return m_isApplicationInitialized;
 }
 
 

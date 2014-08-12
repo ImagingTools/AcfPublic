@@ -2260,6 +2260,7 @@
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_i_file_type_info_8h</filename>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <class kind="class">ifile::IFileTypeInfo</class>
     <namespace>ifile</namespace>
   </compound>
@@ -7393,6 +7394,13 @@
       <name>CF_ANY</name>
       <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
       <anchor>acd46630510ac7a16b6c6e73a7db43fb9a683e28bcbe3c13b6f96d3acfcceb412b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_DESTROYING</name>
+      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
+      <anchor>acd46630510ac7a16b6c6e73a7db43fb9a7edeb69a4497ad44758fef850d9d3516</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
@@ -25452,9 +25460,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
-      <name>OpenDocument</name>
+      <name>OpenSingleDocument</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>af0cbf6f390f1a4308fa482d7dbcf17b0</anchor>
+      <anchor>adbff4d56f0f2c3e01ed8e22dbe17039e</anchor>
       <arglist>(const QString &amp;filePath, bool createView, const QByteArray &amp;viewTypeId, QByteArray &amp;documentTypeId, bool beQuiet, bool *ignoredPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -25517,8 +25525,8 @@
       <type>virtual void</type>
       <name>OnViewRegistered</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>ad3085842a9b9c6031a06b7a8eb3f901c</anchor>
-      <arglist>(istd::IPolymorphic *viewPtr)=0</arglist>
+      <anchor>a7e3dfc1001e331e5d5de5387bb1b87ce</anchor>
+      <arglist>(istd::IPolymorphic *viewPtr, const SingleDocumentData &amp;documentData)=0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
@@ -25538,8 +25546,8 @@
       <type>virtual QString</type>
       <name>GetSaveFilePath</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>a7f82067efd187c08a2d9edc1f0c14d66</anchor>
-      <arglist>(const QByteArray &amp;documentTypeId, const QString &amp;currentFilePath) const =0</arglist>
+      <anchor>ad7b303a6fdd970080522223a47c74a09</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, const istd::IChangeable *dataObjectPtr, const QString &amp;currentFilePath) const =0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
@@ -25671,6 +25679,13 @@
       <anchorfile>structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html</anchorfile>
       <anchor>a80e360f1d009809febacde08d53fa2c4</anchor>
       <arglist>(CMultiDocumentManagerBase *parentPtr, const QByteArray &amp;documentTypeId, istd::IChangeable *documentPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~SingleDocumentData</name>
+      <anchorfile>structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html</anchorfile>
+      <anchor>a6c3bb8ebdd65c973b65155f106c8630a</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -26236,9 +26251,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
-      <name>OpenDocument</name>
+      <name>OpenSingleDocument</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>aea188ff34979422a64a8bffded70b621</anchor>
+      <anchor>aa4f03c5f3cb5be560e067b06cfc4f57d</anchor>
       <arglist>(const QString &amp;filePath, bool createView, const QByteArray &amp;viewTypeId, QByteArray &amp;documentTypeId, bool beQuiet, bool *ignoredPtr)</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -26308,8 +26323,8 @@
       <type>virtual QString</type>
       <name>GetSaveFilePath</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>ab55d201a25fd24623bdbe89430c017d4</anchor>
-      <arglist>(const QByteArray &amp;documentTypeId, const QString &amp;currentFilePath) const =0</arglist>
+      <anchor>add9b62cea9c8cc88e47367aa897fe7f1</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, const istd::IChangeable *dataObjectPtr, const QString &amp;currentFilePath) const =0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
@@ -26890,8 +26905,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classidoc_1_1_c_text_file_loader_comp.html</anchorfile>
-      <anchor>ad71cf1d9193c8754bc1f6b866a18a076</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>aac6f21e5853db75850aa00cc03d7cd95</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -27797,8 +27812,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classifile_1_1_c_composed_file_persistence_comp.html</anchorfile>
-      <anchor>a0ae84e330cb2a72c8fc9a8f3a023c05d</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>af1f91e82ebc7f3d7aef08a50ec422f6e</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -28511,8 +28526,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
-      <anchor>acb9ac14845f9ea67dca2e7a24b391cde</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const =0</arglist>
+      <anchor>a8ace1caf9c906a8ad564bdcea681be90</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
@@ -28830,8 +28845,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classifile_1_1_c_file_type_info_comp.html</anchorfile>
-      <anchor>a90145770f14f3e639675793f21d7e1c6</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>ae993e49cae1acd05a4940cf74d2113ac</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -30276,8 +30291,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classifilegui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>a9a025f38ecfc22b1e61bde99b558bf4d</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>a91576de809819f25b49876679448c1de</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -30297,8 +30312,8 @@
       <type>static void</type>
       <name>AppendLoaderFilterList</name>
       <anchorfile>classifilegui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>adc4e078614a767ae437c4293e38b119a</anchor>
-      <arglist>(const ifile::IFileTypeInfo &amp;fileTypeInfo, int flags, QStringList &amp;allExt, QStringList &amp;result)</arglist>
+      <anchor>af4ba5055adb30dceaba73d094c256a08</anchor>
+      <arglist>(const ifile::IFileTypeInfo &amp;fileTypeInfo, const istd::IChangeable *dataObjectPtr, int flags, QStringList &amp;allExt, QStringList &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>QString</type>
@@ -30311,15 +30326,15 @@
       <type>virtual QString</type>
       <name>GetFileName</name>
       <anchorfile>classifilegui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>ac2391296f939755bd48753ad83fdcd53</anchor>
-      <arglist>(const QString &amp;filePath, bool isSaving, int &amp;selectionIndex) const </arglist>
+      <anchor>a3ad1e88cf3dbe4f0935967967a45a9be</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath, bool isSaving, int &amp;selectionIndex) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>ifile::IFilePersistence *</type>
       <name>GetLoaderFor</name>
       <anchorfile>classifilegui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>aabd5c5170ced901fc7035b588d3cdc83</anchor>
-      <arglist>(const QString &amp;filePath, int selectionIndex, int flags, bool beQuiet) const </arglist>
+      <anchor>a0dd0df1ae025f10732e2724342afe4de</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString &amp;filePath, int selectionIndex, int flags, bool beQuiet) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -31366,8 +31381,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
-      <anchor>a51ce9946bf913fa3e3d4dc335cb464e1</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>aaf1ea7a86ca8a055cf175a1aaa567276</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -31463,8 +31478,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classiimg_1_1_c_bitmap_loader_comp.html</anchorfile>
-      <anchor>a3816ab48aef95df95fd12518c12c2296</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>a62388832436a6a8acdd6fe0686f98e3c</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -33575,8 +33590,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
-      <anchor>abb176aead284f00d8a03bc0ce0af5518</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>a5107695f7f80838aa364e93034564638</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -39069,8 +39084,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>aabb50b01f12bb84ded0bd28900f16893</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>a5de6c2610933f1840235b03212ad0615</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -41738,8 +41753,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classiqt_1_1_c_clipboard_serializer_comp.html</anchorfile>
-      <anchor>a482e3424edb3df25ae829a136aa2fbf5</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>adcd04f39691e8b5a818fbdd2940ee7fe</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -42113,8 +42128,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classiqt_1_1_c_settings_serializer_comp.html</anchorfile>
-      <anchor>a572acce33d1bda09a55187db1e1dcc05</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>a5324f849d62564e65d86236ffd1364f0</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -44251,9 +44266,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QWidget *</type>
-      <name>InitWidgetToParent</name>
+      <name>CreateQtWidget</name>
       <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
-      <anchor>af1f0ecd895436f9c04f0b4944bdaa846</anchor>
+      <anchor>a395cae67d0bc56a71332359d863138c7</anchor>
       <arglist>(QWidget *parentPtr)</arglist>
     </member>
     <member kind="function">
@@ -45621,9 +45636,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QWidget *</type>
-      <name>InitWidgetToParent</name>
+      <name>CreateQtWidget</name>
       <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
-      <anchor>af1f0ecd895436f9c04f0b4944bdaa846</anchor>
+      <anchor>a395cae67d0bc56a71332359d863138c7</anchor>
       <arglist>(QWidget *parentPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -46771,9 +46786,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QWidget *</type>
-      <name>InitWidgetToParent</name>
+      <name>CreateQtWidget</name>
       <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
-      <anchor>af1f0ecd895436f9c04f0b4944bdaa846</anchor>
+      <anchor>a395cae67d0bc56a71332359d863138c7</anchor>
       <arglist>(QWidget *parentPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -47000,9 +47015,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QWidget *</type>
-      <name>InitWidgetToParent</name>
+      <name>CreateQtWidget</name>
       <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
-      <anchor>af1f0ecd895436f9c04f0b4944bdaa846</anchor>
+      <anchor>a395cae67d0bc56a71332359d863138c7</anchor>
       <arglist>(QWidget *parentPtr)</arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -47484,8 +47499,8 @@
       <type>virtual QString</type>
       <name>GetSaveFilePath</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
-      <anchor>a64cf2461202fc1a33bba0630b80dd004</anchor>
-      <arglist>(const QByteArray &amp;documentTypeId, const QString &amp;currentFilePath) const</arglist>
+      <anchor>a48180871b7e3ae26790668972dc98f5d</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, const istd::IChangeable *dataObjectPtr, const QString &amp;currentFilePath) const</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -47503,9 +47518,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QWidget *</type>
-      <name>InitWidgetToParent</name>
+      <name>CreateQtWidget</name>
       <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
-      <anchor>af1f0ecd895436f9c04f0b4944bdaa846</anchor>
+      <anchor>a395cae67d0bc56a71332359d863138c7</anchor>
       <arglist>(QWidget *parentPtr)</arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -47587,9 +47602,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
-      <name>OpenDocument</name>
+      <name>OpenSingleDocument</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a23a493a3757c5e8dc47710729d25ef2c</anchor>
+      <anchor>a2838b54f95150de5618e769e67beccac</anchor>
       <arglist>(const QString &amp;filePath, bool createView, const QByteArray &amp;viewTypeId, QByteArray &amp;documentTypeId, bool beQuiet, bool *ignoredPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -47638,8 +47653,8 @@
       <type>virtual void</type>
       <name>OnViewRegistered</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a903124d67c39939cc1030e1b09edaf1b</anchor>
-      <arglist>(istd::IPolymorphic *viewPtr)</arglist>
+      <anchor>ae4e87b5c49cb7f95808d318f193b454c</anchor>
+      <arglist>(istd::IPolymorphic *viewPtr, const SingleDocumentData &amp;documentData)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -47701,8 +47716,8 @@
       <type>QStringList</type>
       <name>CreateFileDialogFilters</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
-      <anchor>aa8a660ca9060d2f9b99d71238e2d0fa1</anchor>
-      <arglist>(const QByteArray *documentTypeIdPtr=NULL, int flags=0) const</arglist>
+      <anchor>af8ff35826786445a00f7629d1c3bdc57</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr, const istd::IChangeable *dataObjectPtr, int flags) const</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -47825,8 +47840,8 @@
       <type>virtual QString</type>
       <name>GetSaveFilePath</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
-      <anchor>a64cf2461202fc1a33bba0630b80dd004</anchor>
-      <arglist>(const QByteArray &amp;documentTypeId, const QString &amp;currentFilePath) const</arglist>
+      <anchor>a48180871b7e3ae26790668972dc98f5d</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, const istd::IChangeable *dataObjectPtr, const QString &amp;currentFilePath) const</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -47902,8 +47917,8 @@
       <type>QStringList</type>
       <name>CreateFileDialogFilters</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
-      <anchor>aa8a660ca9060d2f9b99d71238e2d0fa1</anchor>
-      <arglist>(const QByteArray *documentTypeIdPtr=NULL, int flags=0) const</arglist>
+      <anchor>af8ff35826786445a00f7629d1c3bdc57</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr, const istd::IChangeable *dataObjectPtr, int flags) const</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -48131,15 +48146,15 @@
       <type>virtual QString</type>
       <name>GetSaveFilePath</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
-      <anchor>a64cf2461202fc1a33bba0630b80dd004</anchor>
-      <arglist>(const QByteArray &amp;documentTypeId, const QString &amp;currentFilePath) const </arglist>
+      <anchor>a48180871b7e3ae26790668972dc98f5d</anchor>
+      <arglist>(const QByteArray &amp;documentTypeId, const istd::IChangeable *dataObjectPtr, const QString &amp;currentFilePath) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>QStringList</type>
       <name>CreateFileDialogFilters</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
-      <anchor>aa8a660ca9060d2f9b99d71238e2d0fa1</anchor>
-      <arglist>(const QByteArray *documentTypeIdPtr=NULL, int flags=0) const </arglist>
+      <anchor>af8ff35826786445a00f7629d1c3bdc57</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr, const istd::IChangeable *dataObjectPtr, int flags) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -48470,9 +48485,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QWidget *</type>
-      <name>InitWidgetToParent</name>
+      <name>CreateQtWidget</name>
       <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
-      <anchor>af1f0ecd895436f9c04f0b4944bdaa846</anchor>
+      <anchor>a395cae67d0bc56a71332359d863138c7</anchor>
       <arglist>(QWidget *parentPtr)</arglist>
     </member>
   </compound>
@@ -48703,9 +48718,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QWidget *</type>
-      <name>InitWidgetToParent</name>
+      <name>CreateQtWidget</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
-      <anchor>a914085b5ccc3377318f9703af9ddc831</anchor>
+      <anchor>aa31e042e37f846097405268471fee638</anchor>
       <arglist>(QWidget *parentPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -48909,9 +48924,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QWidget *</type>
-      <name>InitWidgetToParent</name>
+      <name>CreateQtWidget</name>
       <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
-      <anchor>af1f0ecd895436f9c04f0b4944bdaa846</anchor>
+      <anchor>a395cae67d0bc56a71332359d863138c7</anchor>
       <arglist>(QWidget *parentPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -49110,9 +49125,9 @@
     <class kind="class">iqtgui::CGuiComponentBase::VisualStatus</class>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual QWidget *</type>
-      <name>InitWidgetToParent</name>
+      <name>CreateQtWidget</name>
       <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
-      <anchor>ab8c3155f4a124ce0f0e29621cb015b62</anchor>
+      <anchor>aa3251abcb5271553c0a1774d32c9ac9f</anchor>
       <arglist>(QWidget *parentPtr)=0</arglist>
     </member>
   </compound>
@@ -50375,9 +50390,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QWidget *</type>
-      <name>InitWidgetToParent</name>
+      <name>CreateQtWidget</name>
       <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
-      <anchor>af1f0ecd895436f9c04f0b4944bdaa846</anchor>
+      <anchor>a395cae67d0bc56a71332359d863138c7</anchor>
       <arglist>(QWidget *parentPtr)</arglist>
     </member>
     <member kind="function">
@@ -50672,9 +50687,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QWidget *</type>
-      <name>InitWidgetToParent</name>
+      <name>CreateQtWidget</name>
       <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
-      <anchor>af1f0ecd895436f9c04f0b4944bdaa846</anchor>
+      <anchor>a395cae67d0bc56a71332359d863138c7</anchor>
       <arglist>(QWidget *parentPtr)</arglist>
     </member>
     <member kind="function">
@@ -50998,9 +51013,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QWidget *</type>
-      <name>InitWidgetToParent</name>
+      <name>CreateQtWidget</name>
       <anchorfile>classiqtgui_1_1_t_designer_gui_comp_base.html</anchorfile>
-      <anchor>a5e562d88fb0680e446fbe7741285648f</anchor>
+      <anchor>a9a6f9a4f3a6fefe932e97c88c21c547a</anchor>
       <arglist>(QWidget *parentPtr)</arglist>
     </member>
     <member kind="function">
@@ -51257,9 +51272,9 @@
     <base>iqtgui::CGuiComponentBase</base>
     <member kind="function" virtualness="virtual">
       <type>virtual QWidget *</type>
-      <name>InitWidgetToParent</name>
+      <name>CreateQtWidget</name>
       <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
-      <anchor>af1f0ecd895436f9c04f0b4944bdaa846</anchor>
+      <anchor>a395cae67d0bc56a71332359d863138c7</anchor>
       <arglist>(QWidget *parentPtr)</arglist>
     </member>
   </compound>
@@ -51632,9 +51647,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QWidget *</type>
-      <name>InitWidgetToParent</name>
+      <name>CreateQtWidget</name>
       <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
-      <anchor>af1f0ecd895436f9c04f0b4944bdaa846</anchor>
+      <anchor>a395cae67d0bc56a71332359d863138c7</anchor>
       <arglist>(QWidget *parentPtr)</arglist>
     </member>
     <member kind="variable" protection="protected">

@@ -131,7 +131,7 @@ protected:
 	void OnViewsCountChanged();
 
 	// reimplemented (idoc::CMultiDocumentManagerBase)
-	virtual istd::IChangeable* OpenDocument(
+	virtual istd::IChangeable* OpenSingleDocument(
 				const QString& filePath,
 				bool createView,
 				const QByteArray& viewTypeId,
@@ -150,7 +150,7 @@ protected:
 	// reimplemented (idoc::CMultiDocumentManagerBase)
 	virtual void CloseAllDocuments();
 	virtual QStringList GetOpenFilePaths(const QByteArray* documentTypeIdPtr = NULL) const;
-	virtual void OnViewRegistered(istd::IPolymorphic* viewPtr);
+	virtual void OnViewRegistered(istd::IPolymorphic* viewPtr, const SingleDocumentData& documentData);
 	virtual void OnViewRemoved(istd::IPolymorphic* viewPtr);
 	virtual bool QueryDocumentSave(const SingleDocumentData& info, bool* ignoredPtr);
 

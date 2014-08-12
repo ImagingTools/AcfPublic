@@ -7198,8 +7198,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classicmpstr_1_1_c_registry_loader_comp.html</anchorfile>
-      <anchor>a4c5e1a519d9385c197c3bb87ab4918b7</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>acc11c9914b76e3a64fb7cbdfea7b8f29</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -11338,8 +11338,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classifileproc_1_1_c_rendered_object_file_loader_comp.html</anchorfile>
-      <anchor>a5d27e1d05b83ef8699669435626d53f3</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>a88096c21c8d419eb233811cd951206a5</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -21103,8 +21103,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classimeas_1_1_c_wav_samples_loader_comp.html</anchorfile>
-      <anchor>a4a0fdf7f0ad3a68ff81cf1cb959eaaf0</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>a5aca08c39248e37481dc1a20556b1be9</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -27118,8 +27118,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
-      <anchor>a10938d38c762a36ed9b0f24746cf4571</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>a58f7329ec4bc9e5be244502c5453ba34</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -27201,8 +27201,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
-      <anchor>a431f9ebdb48b2af9c461a54c03ce6388</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>acab41833f87d6a8627dba5084e02f812</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -27317,8 +27317,8 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
-      <anchor>ac1c82d8943ab51d37c92ef3cb3347db6</anchor>
-      <arglist>(QStringList &amp;result, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>afafe55c818352869f3860818afd840ba</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>

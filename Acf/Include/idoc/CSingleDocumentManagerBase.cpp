@@ -216,7 +216,7 @@ bool CSingleDocumentManagerBase::OpenDocument(
 
 	if (!fileName.isEmpty()){
 		QByteArray documentTypeId;
-		if (OpenDocument(fileName, createView, viewTypeId, documentTypeId, beQuiet, ignoredPtr)){
+		if (OpenSingleDocument(fileName, createView, viewTypeId, documentTypeId, beQuiet, ignoredPtr)){
 			if (loadedMapPtr != NULL){
 				loadedMapPtr->operator[](fileName) = documentTypeId;
 			}
@@ -259,7 +259,7 @@ bool CSingleDocumentManagerBase::SaveDocument(
 			return false;
 		}
 
-		filePath = GetSaveFilePath(m_documentTypeId, filePath);
+		filePath = GetSaveFilePath(m_documentTypeId, m_documentPtr.GetPtr(), filePath);
 
 		if (filePath.isEmpty()){
 			return true;
@@ -370,7 +370,7 @@ bool CSingleDocumentManagerBase::CloseCurrentView(bool beQuiet, bool* ignoredPtr
 
 // protected methods
 
-bool CSingleDocumentManagerBase::OpenDocument(
+bool CSingleDocumentManagerBase::OpenSingleDocument(
 			const QString& filePath,
 			bool createView,
 			const QByteArray& viewTypeId,
@@ -600,7 +600,7 @@ bool CSingleDocumentManagerBase::SerializeOpenDocument(iser::IArchive& archive)
 		retVal = retVal && archive.EndTag(viewTypeIdTag);
 
 		if (retVal && !filePath.isEmpty()){
-			OpenDocument(filePath, true, viewTypeId, documentTypeId, true, NULL);
+			OpenSingleDocument(filePath, true, viewTypeId, documentTypeId, true, NULL);
 		}
 	}
 

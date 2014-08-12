@@ -109,6 +109,8 @@ protected:
 					const QByteArray& documentTypeId,
 					istd::IChangeable* documentPtr);
 
+		virtual ~SingleDocumentData();
+
 		CMultiDocumentManagerBase* parentPtr;
 		DocumentPtr documentPtr;
 		UndoManagerPtr undoManagerPtr;
@@ -132,7 +134,7 @@ protected:
 		\param	documentTypeId	output parameter returning loaded ducument type ID.
 		\return	instance of created document or NULL if error is occured.
 	*/
-	virtual istd::IChangeable* OpenDocument(
+	virtual istd::IChangeable* OpenSingleDocument(
 				const QString& filePath,
 				bool createView,
 				const QByteArray& viewTypeId,
@@ -188,7 +190,7 @@ protected:
 	/**
 		Called after view is registered.
 	*/
-	virtual void OnViewRegistered(istd::IPolymorphic* viewPtr) = 0;
+	virtual void OnViewRegistered(istd::IPolymorphic* viewPtr, const SingleDocumentData& documentData) = 0;
 
 	/**
 		Called before view is removed.
@@ -203,7 +205,7 @@ protected:
 	/**
 		Gets save file name.
 	*/
-	virtual QString GetSaveFilePath(const QByteArray& documentTypeId, const QString& currentFilePath) const = 0;
+	virtual QString GetSaveFilePath(const QByteArray& documentTypeId, const istd::IChangeable* dataObjectPtr, const QString& currentFilePath) const = 0;
 
 	/**
 		Query user if this document should be saved.
