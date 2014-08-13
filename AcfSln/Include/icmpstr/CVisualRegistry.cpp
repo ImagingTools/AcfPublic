@@ -28,6 +28,7 @@
 
 // ACF includes
 #include "istd/CChangeNotifier.h"
+#include "istd/CChangeGroup.h"
 #include "istd/TChangeDelegator.h"
 #include "istd/CClassInfo.h"
 
@@ -289,6 +290,9 @@ bool CVisualRegistry::RenameElement(const QByteArray& oldElementId, const QByteA
 
 bool CVisualRegistry::Serialize(iser::IArchive& archive)
 {
+	istd::CChangeGroup changeGroup(archive.IsStoring()? NULL: this);
+	Q_UNUSED(changeGroup);
+
 	bool retVal = SerializeRegistry(archive);
 
 	if (m_serializeUserData){

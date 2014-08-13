@@ -20639,18 +20639,18 @@
       <arglist>(const QByteArray &amp;attributeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const IElementStaticInfo *</type>
-      <name>GetSubelementInfo</name>
-      <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
-      <anchor>a6025bd16a9dd7b0744f9e6f1ce5e706a</anchor>
-      <arglist>(const QByteArray &amp;subcomponentId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
       <name>GetMetaIds</name>
       <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
       <anchor>a10ae26844c9f939b7ea229bfd99acbb7</anchor>
       <arglist>(int metaGroupId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const IElementStaticInfo *</type>
+      <name>GetSubelementInfo</name>
+      <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
+      <anchor>a6025bd16a9dd7b0744f9e6f1ce5e706a</anchor>
+      <arglist>(const QByteArray &amp;subcomponentId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -20869,18 +20869,18 @@
       <arglist>(const QByteArray &amp;embeddedId, const IComponentStaticInfo *componentInfoPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const IComponentStaticInfo *</type>
-      <name>GetEmbeddedComponentInfo</name>
-      <anchorfile>classicomp_1_1_c_package_static_info.html</anchorfile>
-      <anchor>af04fc4e27d5fb19b39d854e4631991d0</anchor>
-      <arglist>(const QByteArray &amp;embeddedId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
       <name>GetMetaIds</name>
       <anchorfile>classicomp_1_1_c_package_static_info.html</anchorfile>
       <anchor>a3fc6a8ebc16ac9af0e1b8fd699da626d</anchor>
       <arglist>(int metaGroupId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const IComponentStaticInfo *</type>
+      <name>GetEmbeddedComponentInfo</name>
+      <anchorfile>classicomp_1_1_c_package_static_info.html</anchorfile>
+      <anchor>af04fc4e27d5fb19b39d854e4631991d0</anchor>
+      <arglist>(const QByteArray &amp;embeddedId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
@@ -21506,18 +21506,18 @@
       <arglist>(const QByteArray &amp;componentId)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const IComponentStaticInfo *</type>
-      <name>GetEmbeddedComponentInfo</name>
-      <anchorfile>classicomp_1_1_c_composite_package_static_info.html</anchorfile>
-      <anchor>ae40288ab8c7f40468b580685db11d800</anchor>
-      <arglist>(const QByteArray &amp;embeddedId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
       <name>GetMetaIds</name>
       <anchorfile>classicomp_1_1_c_composite_package_static_info.html</anchorfile>
       <anchor>aa98cc7be247625e483a82230268240cf</anchor>
       <arglist>(int metaGroupId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const IComponentStaticInfo *</type>
+      <name>GetEmbeddedComponentInfo</name>
+      <anchorfile>classicomp_1_1_c_composite_package_static_info.html</anchorfile>
+      <anchor>ae40288ab8c7f40468b580685db11d800</anchor>
+      <arglist>(const QByteArray &amp;embeddedId) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -23083,18 +23083,18 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const IElementStaticInfo *</type>
-      <name>GetSubelementInfo</name>
-      <anchorfile>classicomp_1_1_i_element_static_info.html</anchorfile>
-      <anchor>a65860027853d03374e9398ebb1c86b4d</anchor>
-      <arglist>(const QByteArray &amp;subcomponentId) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
       <type>virtual Ids</type>
       <name>GetMetaIds</name>
       <anchorfile>classicomp_1_1_i_element_static_info.html</anchorfile>
       <anchor>a989651fb00da877c874e9ddad6d204d5</anchor>
       <arglist>(int metaGroupId) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const IElementStaticInfo *</type>
+      <name>GetSubelementInfo</name>
+      <anchorfile>classicomp_1_1_i_element_static_info.html</anchorfile>
+      <anchor>a65860027853d03374e9398ebb1c86b4d</anchor>
+      <arglist>(const QByteArray &amp;subcomponentId) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -25028,18 +25028,18 @@
       <arglist>(const QByteArray &amp;interfaceName, InterfaceExtractorPtr extractorPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const IElementStaticInfo *</type>
-      <name>GetSubelementInfo</name>
-      <anchorfile>classicomp_1_1_t_subelement_static_info.html</anchorfile>
-      <anchor>a8460f8b764c6a1b58bb8ee12eba28a45</anchor>
-      <arglist>(const QByteArray &amp;subcomponentId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
       <name>GetMetaIds</name>
       <anchorfile>classicomp_1_1_t_subelement_static_info.html</anchorfile>
       <anchor>a2aef48658bfcded09f62e81fd97c3543</anchor>
       <arglist>(int metaGroupId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const IElementStaticInfo *</type>
+      <name>GetSubelementInfo</name>
+      <anchorfile>classicomp_1_1_t_subelement_static_info.html</anchorfile>
+      <anchor>a8460f8b764c6a1b58bb8ee12eba28a45</anchor>
+      <arglist>(const QByteArray &amp;subcomponentId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void *</type>
@@ -56300,6 +56300,13 @@
       <name>Contains</name>
       <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
       <anchor>a4e56be67b558dac52a48398df97b5581</anchor>
+      <arglist>(int changeId) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>ContainsExplicit</name>
+      <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
+      <anchor>ae8266ff53930f6b486486c2bfb8350f3</anchor>
       <arglist>(int changeId) const </arglist>
     </member>
     <member kind="function">

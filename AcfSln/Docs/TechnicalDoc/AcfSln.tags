@@ -385,6 +385,7 @@
     <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
     <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
     <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">icmpstr/ISceneProvider.h</includes>
+    <class kind="class">icmpstr::CVisualRegistryEditorCompBase</class>
     <class kind="class">icmpstr::CVisualRegistryEditorComp</class>
     <class kind="class">icmpstr::CVisualRegistryEditorComp::EnvironmentObserver</class>
     <namespace>icmpstr</namespace>
@@ -5250,6 +5251,7 @@
     <class kind="class">icmpstr::CRegistryTreeViewComp</class>
     <class kind="class">icmpstr::CSceneProviderGuiComp</class>
     <class kind="class">icmpstr::CVisualRegistry</class>
+    <class kind="class">icmpstr::CVisualRegistryEditorCompBase</class>
     <class kind="class">icmpstr::CVisualRegistryEditorComp</class>
     <class kind="class">icmpstr::CVisualRegistryElement</class>
     <class kind="class">icmpstr::CXpcEditorComp</class>
@@ -5493,10 +5495,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const icomp::IComponentEnvironmentManager *</type>
+      <type>virtual const icomp::IMetaInfoManager *</type>
       <name>GetMetaInfoManagerPtr</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>ad466c87b2391669b99abb9a164b96869</anchor>
+      <anchor>afc536b9ad7900c905a810a2208361b38</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -6016,13 +6018,6 @@
       <arglist>(const QByteArray &amp;attributeName) const </arglist>
     </member>
     <member kind="function">
-      <type>const icomp::IComponentStaticInfo *</type>
-      <name>GetComponentMetaInfo</name>
-      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>afba3914c48939b71805ac721888fcc6d</anchor>
-      <arglist>(const icomp::CComponentAddress &amp;address) const </arglist>
-    </member>
-    <member kind="function">
       <type>const iser::IObject *</type>
       <name>GetAttributeObject</name>
       <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
@@ -6037,10 +6032,10 @@
       <arglist>(const QByteArray &amp;attributeId, const icomp::IRegistry::ElementInfo &amp;elementInfo) const </arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const icomp::IComponentEnvironmentManager *</type>
+      <type>virtual const icomp::IMetaInfoManager *</type>
       <name>GetMetaInfoManagerPtr</name>
       <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>ad683a111edd593e83b5a1f855784f78e</anchor>
+      <anchor>a758816d330480b466b8a069a672b30c1</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -6049,34 +6044,6 @@
       <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
       <anchor>af115f5b82bd6d6781ba9a4430421099c</anchor>
       <arglist>() const =0</arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>QMap&lt; icomp::CComponentAddress, istd::TOptDelPtr&lt; const icomp::IComponentStaticInfo &gt; &gt;</type>
-      <name>AddressToInfoMap</name>
-      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>a6c2356df966bf08fabf429468f191868</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateAddressToMetaInfoMap</name>
-      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>a5312c1a21a331c4d6b107a33697edb58</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnUpdate</name>
-      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>aac28a64436be0577234474659bd59e17</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>AddressToInfoMap</type>
-      <name>m_adressToMetaInfoMap</name>
-      <anchorfile>classicmpstr_1_1_c_element_selection_info_manager_base.html</anchorfile>
-      <anchor>a9772d07e41ecc103d5d4fdf1b9737e2e</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6342,6 +6309,41 @@
       <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
       <anchor>a5bb11af954b4b08f97e4ebe20290ec04</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT</name>
+      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
+      <anchor>a8b171dbd7c4fbf323c9189489507b603</anchor>
+      <arglist>(LocalMetaInfoManager)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
+      <anchor>a3a49177911d7448069f14ab1699654fe</anchor>
+      <arglist>(LocalMetaInfoManager, icomp::IMetaInfoManager, ExtractLocalMetaInfoManager)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
+      <anchor>a2c3c201d2c7012f7cde0743b1e05276f</anchor>
+      <arglist>(LocalMetaInfoManager, imod::IModel, ExtractLocalMetaInfoManager)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
+      <anchor>a8b18eee98011bf27ed88c77cda927b5d</anchor>
+      <arglist>(LocalMetaInfoManager, istd::IChangeable, ExtractLocalMetaInfoManager)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
+      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
+      <anchor>a102a5ade5707c63f28d324153771ab83</anchor>
+      <arglist>(LocalMetaInfoManager, istd::IPolymorphic, ExtractLocalMetaInfoManager)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -8286,13 +8288,60 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>icmpstr::CVisualRegistryEditorComp</name>
-    <filename>classicmpstr_1_1_c_visual_registry_editor_comp.html</filename>
+    <name>icmpstr::CVisualRegistryEditorCompBase</name>
+    <filename>classicmpstr_1_1_c_visual_registry_editor_comp_base.html</filename>
     <base>TDesignerGuiObserverCompBase&lt; Ui::CVisualRegistryEditorComp, icomp::IRegistry &gt;</base>
     <base virtualness="virtual">iqtgui::IDropConsumer</base>
     <base virtualness="virtual">ibase::ICommandsProvider</base>
     <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CVisualRegistryEditorComp, icomp::IRegistry &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp_base.html</anchorfile>
+      <anchor>a8bde19038c405bf85939599c80693224</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp_base.html</anchorfile>
+      <anchor>a1c6daea90e7196a42d8565595fe956a0</anchor>
+      <arglist>(m_sceneProviderGuiCompPtr, m_sceneProviderCompPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp_base.html</anchorfile>
+      <anchor>a8d1773717fad2d53f7ec8d1dcfded0e0</anchor>
+      <arglist>(m_metaInfoManagerModelCompPtr, m_metaInfoManagerCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp_base.html</anchorfile>
+      <anchor>a8dc4c061ccdcc8f5a352d8d6c3b8b583</anchor>
+      <arglist>(m_registryObserverCompPtr, m_registryTopologyGuiCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp_base.html</anchorfile>
+      <anchor>aa41987260af9b071724e075a429f5aaa</anchor>
+      <arglist>(m_registryValidationStatusModelCompPtr, m_registryValidationStatusCompPtr, false)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icmpstr::CVisualRegistryEditorComp</name>
+    <filename>classicmpstr_1_1_c_visual_registry_editor_comp.html</filename>
+    <base>icmpstr::CVisualRegistryEditorCompBase</base>
     <class kind="class">icmpstr::CVisualRegistryEditorComp::EnvironmentObserver</class>
+    <member kind="typedef">
+      <type>CVisualRegistryEditorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
+      <anchor>afec9f78cd282f30af42c3c0af3d5143f</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>I_REGISTER_SUBELEMENT</name>
@@ -8323,34 +8372,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a0c4a36fcb6f07ee291614101d9c3f2d2</anchor>
-      <arglist>(m_sceneProviderGuiCompPtr, m_sceneProviderCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>ab3b9115aaaf6bd8e11e484fcd50f0c49</anchor>
-      <arglist>(m_envManagerModelCompPtr, m_envManagerCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>ae7389e7d6c27724af87baf8d5956cf04</anchor>
-      <arglist>(m_registryObserverCompPtr, m_registryTopologyGuiCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a5b5ce2f2865f8a6c0e8c6397a0ce25cc</anchor>
-      <arglist>(m_registryValidationStatusModelCompPtr, m_registryValidationStatusCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CVisualRegistryEditorComp</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
       <anchor>afd688e7ecb8ec53f2444fdf2c9178d7b</anchor>
@@ -8371,10 +8392,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>const icomp::IComponentEnvironmentManager *</type>
-      <name>GetEnvironmentManager</name>
+      <type>const icomp::IMetaInfoManager *</type>
+      <name>GetMetaInfoManager</name>
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>aa98b336168a19656fae79d8f6433a6e2</anchor>
+      <anchor>a93132684137acee94f0e93ef4158af64</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -8418,13 +8439,6 @@
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
       <anchor>a26988087a87aba5b3f993877ea80f412</anchor>
       <arglist>(const QMimeData &amp;mimeData, QEvent *eventPtr)</arglist>
-    </member>
-    <member kind="variable">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CVisualRegistryEditorComp, icomp::IRegistry &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a5c72260c469fdca32ae1454920756506</anchor>
-      <arglist></arglist>
     </member>
     <member kind="enumeration" protection="protected">
       <type></type>
@@ -8738,7 +8752,7 @@
   <compound kind="class">
     <name>icmpstr::CVisualRegistryEditorComp::EnvironmentObserver</name>
     <filename>classicmpstr_1_1_c_visual_registry_editor_comp_1_1_environment_observer.html</filename>
-    <base>TSingleModelObserverBase&lt; icomp::IComponentEnvironmentManager &gt;</base>
+    <base>TSingleModelObserverBase&lt; icomp::IMetaInfoManager &gt;</base>
     <member kind="function">
       <type></type>
       <name>EnvironmentObserver</name>

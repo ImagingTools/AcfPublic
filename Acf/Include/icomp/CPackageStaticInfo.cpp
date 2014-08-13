@@ -76,19 +76,7 @@ void CPackageStaticInfo::RegisterEmbeddedComponentInfo(const QByteArray& embedde
 }
 
 
-// reimplemented (icomp::IPackageStaticInfo)
-
-const IComponentStaticInfo* CPackageStaticInfo::GetEmbeddedComponentInfo(const QByteArray& embeddedId) const
-{
-	EmbeddedComponentInfos::ConstIterator foundIter = m_embeddedComponentInfos.constFind(embeddedId);
-	if (foundIter != m_embeddedComponentInfos.constEnd()){
-		return foundIter.value();
-	}
-	else{
-		return NULL;
-	}
-}
-
+// reimplemented (icomp::IElementStaticInfo)
 
 IElementStaticInfo::Ids CPackageStaticInfo::GetMetaIds(int metaGroupId) const
 {
@@ -105,6 +93,20 @@ IElementStaticInfo::Ids CPackageStaticInfo::GetMetaIds(int metaGroupId) const
 	return retVal;
 }
 
+
+const IComponentStaticInfo* CPackageStaticInfo::GetEmbeddedComponentInfo(const QByteArray& embeddedId) const
+{
+	EmbeddedComponentInfos::ConstIterator foundIter = m_embeddedComponentInfos.constFind(embeddedId);
+	if (foundIter != m_embeddedComponentInfos.constEnd()){
+		return foundIter.value();
+	}
+	else{
+		return NULL;
+	}
+}
+
+
+// reimplemented (icomp::IPackageStaticInfo)
 
 const QString& CPackageStaticInfo::GetDescription() const
 {

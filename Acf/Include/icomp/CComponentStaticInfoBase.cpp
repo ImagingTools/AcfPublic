@@ -65,17 +65,17 @@ const QString& CComponentStaticInfoBase::GetKeywords() const
 
 //	reimplemented (icomp::IElementStaticInfo)
 
-const IElementStaticInfo* CComponentStaticInfoBase::GetSubelementInfo(const QByteArray& /*subcomponentId*/) const
-{
-	return NULL;
-}
-
-
 IElementStaticInfo::Ids CComponentStaticInfoBase::GetMetaIds(int /*metaGroupId*/) const
 {
 	Ids retVal;
 
 	return retVal;
+}
+
+
+const IElementStaticInfo* CComponentStaticInfoBase::GetSubelementInfo(const QByteArray& /*subcomponentId*/) const
+{
+	return NULL;
 }
 
 

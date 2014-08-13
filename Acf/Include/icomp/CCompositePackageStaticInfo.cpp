@@ -50,6 +50,22 @@ void CCompositePackageStaticInfo::RegisterEmbeddedComponent(const QByteArray& co
 
 //	reimplemented (icomp::IComponentStaticInfo)
 
+IElementStaticInfo::Ids CCompositePackageStaticInfo::GetMetaIds(int metaGroupId) const
+{
+	Ids retVal;
+
+	if (metaGroupId == MGI_EMBEDDED_COMPONENTS){
+		for (		EmbeddedComponentInfos::const_iterator iter = m_embeddedComponentInfos.begin();
+					iter != m_embeddedComponentInfos.end();
+					++iter){
+			retVal.insert(iter.key());
+		}
+	}
+
+	return retVal;
+}
+
+
 const IComponentStaticInfo* CCompositePackageStaticInfo::GetEmbeddedComponentInfo(const QByteArray& embeddedId) const
 {
 	EmbeddedComponentInfos::iterator infoIter = m_embeddedComponentInfos.find(embeddedId);
@@ -71,22 +87,6 @@ const IComponentStaticInfo* CCompositePackageStaticInfo::GetEmbeddedComponentInf
 	}
 
 	return NULL;
-}
-
-
-IElementStaticInfo::Ids CCompositePackageStaticInfo::GetMetaIds(int metaGroupId) const
-{
-	Ids retVal;
-
-	if (metaGroupId == MGI_EMBEDDED_COMPONENTS){
-		for (		EmbeddedComponentInfos::const_iterator iter = m_embeddedComponentInfos.begin();
-					iter != m_embeddedComponentInfos.end();
-					++iter){
-			retVal.insert(iter.key());
-		}
-	}
-
-	return retVal;
 }
 
 
