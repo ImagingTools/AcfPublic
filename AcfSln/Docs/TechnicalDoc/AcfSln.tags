@@ -7587,8 +7587,8 @@
       <type>void</type>
       <name>AddSubcomponents</name>
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a864e7bc271c06612822a45be997336e5</anchor>
-      <arglist>(const icomp::CComponentAddress &amp;address, QTreeWidgetItem *registryElementItemPtr)</arglist>
+      <anchor>ab40e2a90be9713abfdf414f678984be4</anchor>
+      <arglist>(const icomp::IRegistry &amp;registry, const icomp::CComponentAddress &amp;address, QTreeWidgetItem *registryElementItemPtr)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
