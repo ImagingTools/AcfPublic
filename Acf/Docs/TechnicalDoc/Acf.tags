@@ -49398,6 +49398,48 @@
       <anchor>a7fa01faf2be21e32cebf99c9cf19a61b</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classiqtgui_1_1_c_hierarchical_command.html</anchorfile>
+      <anchor>a74f08a11d70d23685e3c2fd3b4923656</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiqtgui_1_1_c_hierarchical_command.html</anchorfile>
+      <anchor>aa39c07fdca13bd1073027b0203c37fb5</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEqual</name>
+      <anchorfile>classiqtgui_1_1_c_hierarchical_command.html</anchorfile>
+      <anchor>a70e15bc77d79be65af667d0fb8d39171</anchor>
+      <arglist>(const istd::IChangeable &amp;object) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classiqtgui_1_1_c_hierarchical_command.html</anchorfile>
+      <anchor>a3fd2adf0e59179aea6866af6a6630c52</anchor>
+      <arglist>(const CHierarchicalCommand &amp;command) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classiqtgui_1_1_c_hierarchical_command.html</anchorfile>
+      <anchor>a4100265504505a722c28574267117a5c</anchor>
+      <arglist>(const CHierarchicalCommand &amp;command) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CHierarchicalCommand &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classiqtgui_1_1_c_hierarchical_command.html</anchorfile>
+      <anchor>ad170254cec121f75c64a9d4cf566d3c9</anchor>
+      <arglist>(const CHierarchicalCommand &amp;command)</arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>THierarchicalBase</name>

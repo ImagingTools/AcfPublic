@@ -127,15 +127,16 @@ bool CPrimitiveTypesSerializer::SerializeRanges(iser::IArchive& archive, istd::C
 		switchPoints.clear();
 
 		for (int i = 0; i < pointsCount; ++i){
-			retVal = retVal && archive.BeginTag(positionTag);
-
 			double position = 0;
+			retVal = retVal && archive.BeginTag(positionTag);
 			retVal = retVal && archive.Process(position);
-			if(retVal){
-				switchPoints.insert(position);
+			retVal = retVal && archive.EndTag(positionTag);
+
+			if (!retVal){
+				return false;
 			}
 
-			retVal = retVal && archive.EndTag(positionTag);
+			switchPoints.insert(position);
 		}
 	}
 
@@ -197,15 +198,16 @@ bool CPrimitiveTypesSerializer::SerializeIntRanges(iser::IArchive& archive, istd
 		switchPoints.clear();
 
 		for (int i = 0; i < pointsCount; ++i){
-			retVal = retVal && archive.BeginTag(positionTag);
-
 			int position = 0;
+			retVal = retVal && archive.BeginTag(positionTag);
 			retVal = retVal && archive.Process(position);
-			if (retVal){
-				switchPoints.insert(position);
+			retVal = retVal && archive.EndTag(positionTag);
+
+			if (!retVal){
+				return false;
 			}
 
-			retVal = retVal && archive.EndTag(positionTag);
+			switchPoints.insert(position);
 		}
 	}
 
@@ -268,8 +270,8 @@ bool CPrimitiveTypesSerializer::SerializeQStringList(
 			const QByteArray& containerTagName,
 			const QByteArray& elementTagName)
 {
-	static iser::CArchiveTag elementsTag(containerTagName, "List of elements", iser::CArchiveTag::TT_MULTIPLE);
-	static iser::CArchiveTag elementTag(elementTagName, "Single container element", iser::CArchiveTag::TT_LEAF, &elementsTag);
+	iser::CArchiveTag elementsTag(containerTagName, "List of elements", iser::CArchiveTag::TT_MULTIPLE);
+	iser::CArchiveTag elementTag(elementTagName, "Single container element", iser::CArchiveTag::TT_LEAF, &elementsTag);
 
 	bool retVal = true;
 

@@ -651,7 +651,7 @@ void CSimpleMainWindowGuiComp::OnShowOtherCommandTriggered(bool enabled)
 }
 
 
-// public methods of embedded class ActiveUndoManager
+// public methods of embedded class CommandsObserver
 
 CSimpleMainWindowGuiComp::CommandsObserver::CommandsObserver(CSimpleMainWindowGuiComp& parent)
 :	m_parent(parent)
@@ -659,7 +659,7 @@ CSimpleMainWindowGuiComp::CommandsObserver::CommandsObserver(CSimpleMainWindowGu
 }
 
 
-// protected methods of embedded class ActiveUndoManager
+// protected methods of embedded class CommandsObserver
 
 // reimplemented (imod::CMultiModelDispatcherBase)
 
