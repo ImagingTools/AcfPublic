@@ -1038,11 +1038,15 @@ void CPackageOverviewComp::UpdateGui(const istd::IChangeable::ChangeSet& changeS
 		}
 
 		if (!changeSet.Contains(IElementSelectionInfo::CF_SELECTION)){	// ignore selection only changes
+			m_localMetaInfoManager.UpdateLocalMetaInfoMap();
+
 			GenerateComponentTree(false);
 		}
 	}
 	else{
 		m_registryObserver.EnsureModelDetached();
+
+		m_localMetaInfoManager.UpdateLocalMetaInfoMap();
 
 		GenerateComponentTree(false);
 	}

@@ -98,18 +98,6 @@ bool CDockWidgetGuiComp::RemoveFromMainWindow(QMainWindow& /*mainWindow*/)
 }
 
 
-QByteArray CDockWidgetGuiComp::GetAssociatedDocumentTypeId() const
-{
-	static QByteArray emptyId;
-
-	if (m_associatedDocumentTypeId.IsValid()){
-		return *m_associatedDocumentTypeId;
-	}
-
-	return emptyId;
-}
-
-
 QString CDockWidgetGuiComp::GetTitle() const
 {
 	static QString emptyTitle;
