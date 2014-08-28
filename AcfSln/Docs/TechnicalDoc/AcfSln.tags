@@ -6299,15 +6299,15 @@
   <compound kind="class">
     <name>icmpstr::CPackageOverviewComp</name>
     <filename>classicmpstr_1_1_c_package_overview_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CPackageOverviewComp, IElementSelectionInfo &gt;</base>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CPackageOverviewComp, icomp::IRegistry &gt;</base>
     <base virtualness="virtual">ibase::ICommandsProvider</base>
     <base virtualness="virtual">icmpstr::IAttributeSelectionObserver</base>
     <class kind="struct">icmpstr::CPackageOverviewComp::RootInfo</class>
     <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CPackageOverviewComp, IElementSelectionInfo &gt;</type>
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CPackageOverviewComp, icomp::IRegistry &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a5bb11af954b4b08f97e4ebe20290ec04</anchor>
+      <anchor>ac91e3ef060a4eb209522563da1380be6</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
