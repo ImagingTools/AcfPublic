@@ -33132,6 +33132,13 @@
       <anchor>a05d8995c947602a97f7c5f54c9abd32d</anchor>
       <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>a316ad1224b0b8a332452027b6c6f950e</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>THierarchicalBase</name>
