@@ -26563,9 +26563,9 @@
     <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="virtual">
       <type>virtual MetaInfoTypes</type>
-      <name>GetSupportedMetaInfoTypes</name>
+      <name>GetMetaInfoTypes</name>
       <anchorfile>classidoc_1_1_c_standard_document_meta_info.html</anchorfile>
-      <anchor>a29b7d55c4aead87bf9338e09537f4b91</anchor>
+      <anchor>aff6fc6a9ec4cb0a33946b61f939aa284</anchor>
       <arglist>(bool allowReadOnly=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -27114,9 +27114,9 @@
     <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual MetaInfoTypes</type>
-      <name>GetSupportedMetaInfoTypes</name>
+      <name>GetMetaInfoTypes</name>
       <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
-      <anchor>aa4b4cc6046d9e45732e9f882b5dd4513</anchor>
+      <anchor>acacec933513aa29cc1c17c220a89431b</anchor>
       <arglist>(bool allowReadOnly=true) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -27542,10 +27542,10 @@
       <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>QVector&lt; Page &gt;</type>
+      <type>QList&lt; Page &gt;</type>
       <name>Pages</name>
       <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
-      <anchor>aea9499115a55a3b2f76d3c790cc3ef4d</anchor>
+      <anchor>abcd6a98c6d526bac2deb5c6f0ada04a2</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
