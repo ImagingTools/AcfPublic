@@ -35,7 +35,8 @@ namespace idoc
 
 CSerializedUndoManagerComp::CSerializedUndoManagerComp()
 :	m_hasStoredDocumentState(false),
-	m_isBlocked(false)
+	m_isBlocked(false),
+	m_isStateChangedFlagValid(false)
 {
 }
 

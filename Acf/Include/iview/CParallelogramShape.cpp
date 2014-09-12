@@ -42,6 +42,7 @@ namespace iview
 
 
 CParallelogramShape::CParallelogramShape()
+:	m_editNode(EN_NONE)
 {
 	m_isEditableRotation = true;
 	m_isEditableWidth = true;

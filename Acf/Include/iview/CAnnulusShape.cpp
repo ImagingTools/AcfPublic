@@ -43,7 +43,8 @@ namespace iview
 
 CAnnulusShape::CAnnulusShape()
 :	BaseClass(),
-	m_editMode(EM_NONE)
+	m_editMode(EM_NONE),
+	m_isCenterVisible(true)
 {
 
 	m_isEditableRadius2 = true;

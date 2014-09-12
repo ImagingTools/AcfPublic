@@ -38,6 +38,12 @@ namespace idoc
 {
 
 
+CSingleDocumentManagerBase::CSingleDocumentManagerBase()
+: m_isDirty(false)
+{
+}
+
+
 // reimplemented (idoc::IDocumentManager)
 
 idoc::IUndoManager* CSingleDocumentManagerBase::GetUndoManagerForDocument(const istd::IChangeable* documentPtr) const

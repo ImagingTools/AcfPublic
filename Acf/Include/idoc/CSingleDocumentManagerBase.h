@@ -47,6 +47,8 @@ class CSingleDocumentManagerBase:
 			protected imod::CSingleModelObserverBase
 {
 public:
+	CSingleDocumentManagerBase();
+
 	// reimplemented (idoc::IDocumentManager)
 	virtual idoc::IUndoManager* GetUndoManagerForDocument(const istd::IChangeable* documentPtr) const;
 	virtual int GetDocumentsCount() const;

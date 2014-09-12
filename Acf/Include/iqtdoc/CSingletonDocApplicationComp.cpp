@@ -227,9 +227,9 @@ QStringList CSingletonDocApplicationComp::PopDocumentsForOpening() const
 					retVal.push_back(filePath);
 				}
 			}
-		}
 
-		memset(dataPtr->requestedDocuments, 0, sizeof(dataPtr->requestedDocuments));
+			memset(dataPtr->requestedDocuments, 0, sizeof(dataPtr->requestedDocuments));
+		}
 	}
 
 	m_processDataPtr->unlock();

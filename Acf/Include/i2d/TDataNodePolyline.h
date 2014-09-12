@@ -171,7 +171,7 @@ bool TDataNodePolyline<NodeData>::CopyFrom(const IChangeable& object, Compatibil
 	const TDataNodePolyline<NodeData>* polygonPtr = dynamic_cast<const TDataNodePolyline<NodeData>*>(&object);
 
 	if (polygonPtr != NULL){		
-		istd::CChangeNotifier notifier(this);
+		BeginChanges(GetAnyChange());;
 
 		int sourceNodesCount = polygonPtr->GetNodesCount();
 		for (int nodesIndex = 0; nodesIndex < sourceNodesCount; nodesIndex++){		
@@ -181,6 +181,8 @@ bool TDataNodePolyline<NodeData>::CopyFrom(const IChangeable& object, Compatibil
 		}
 
 		CObject2dBase::CopyFrom(object, mode);
+
+		EndChanges(GetAnyChange());
 
 		return true;
 	}

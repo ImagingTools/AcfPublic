@@ -41,7 +41,8 @@ namespace iview
 
 
 CRectangleShape::CRectangleShape()
-	:m_editNode(EN_NONE)
+	:m_editNode(EN_NONE),
+	m_arePointsValid(false)
 {
 }
 

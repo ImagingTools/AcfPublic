@@ -40,7 +40,8 @@ namespace iimg
 // public methods
 
 CScanlineMask::CScanlineMask()
-:	m_isBoundingBoxValid(false)
+:	m_isBoundingBoxValid(false),
+	m_firstLinePos(0)
 {
 }
 
@@ -150,7 +151,7 @@ void CScanlineMask::CreateFromCircle(const i2d::CCircle& circle, const i2d::CRec
 	double radius2 = radius * radius;
 
 #if QT_VERSION >= 0x040700
-    m_rangesContainer.reserve(linesCount);
+	m_rangesContainer.reserve(linesCount);
 #endif
 
 	for (int lineIndex = 0; lineIndex < linesCount; lineIndex++){
@@ -244,7 +245,7 @@ void CScanlineMask::CreateFromAnnulus(const i2d::CAnnulus& annulus, const i2d::C
 	m_scanlines.resize(linesCount);
 
 #if QT_VERSION >= 0x040700
-    m_rangesContainer.reserve(linesCount);
+	m_rangesContainer.reserve(linesCount);
 #endif
 
 	for (int lineIndex = 0; lineIndex < linesCount; lineIndex++){
@@ -375,7 +376,7 @@ void CScanlineMask::CreateFromPolygon(const i2d::CPolygon& polygon, const i2d::C
 	m_scanlines.resize(linesCount);
 
 #if QT_VERSION >= 0x040700
-    m_rangesContainer.reserve(linesCount);
+	m_rangesContainer.reserve(linesCount);
 #endif
 
 	for (int lineIndex = 0; lineIndex < linesCount; lineIndex++){

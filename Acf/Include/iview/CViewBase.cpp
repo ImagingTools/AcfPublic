@@ -42,6 +42,7 @@ namespace iview
 // public constructors
 
 CViewBase::CViewBase()
+:	m_isSelectEventActive(false)
 {
 	m_transform.Reset();
 

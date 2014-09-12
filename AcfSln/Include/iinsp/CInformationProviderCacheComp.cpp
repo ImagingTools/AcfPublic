@@ -28,7 +28,9 @@ namespace iinsp
 
 
 CInformationProviderCacheComp::CInformationProviderCacheComp()
-:	m_category(istd::IInformationProvider::IC_NONE)
+:	m_category(istd::IInformationProvider::IC_NONE),
+	m_flags(0),
+	m_id(0)
 {
 }
 

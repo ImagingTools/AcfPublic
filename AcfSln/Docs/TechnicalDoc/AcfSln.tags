@@ -26584,6 +26584,13 @@
       <anchor>a57344afe1ef47fe90364bbba2fc1c8ef</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CValueSupplierGuiComp</name>
+      <anchorfile>classiqtipr_1_1_c_value_supplier_gui_comp.html</anchorfile>
+      <anchor>a7d8efb5edf206b772927592e9e447f89</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_TestButton_clicked</name>

@@ -4304,6 +4304,14 @@
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
+    <name>CCalendarGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_c_calendar_gui_comp_8h</filename>
+    <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
+    <class kind="class">iqtgui::CCalendarGuiComp</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
     <name>CCommandsBinderComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_commands_binder_comp_8h</filename>
@@ -26145,6 +26153,13 @@
     <filename>classidoc_1_1_c_single_document_manager_base.html</filename>
     <base>idoc::CTmplBasedDocumentManagerBase</base>
     <base protection="protected">imod::CSingleModelObserverBase</base>
+    <member kind="function">
+      <type></type>
+      <name>CSingleDocumentManagerBase</name>
+      <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
+      <anchor>ae59d1917701a5b552463f121eee4c1fb</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual idoc::IUndoManager *</type>
       <name>GetUndoManagerForDocument</name>
@@ -26346,6 +26361,13 @@
     <name>idoc::CSingleDocumentTemplateBase</name>
     <filename>classidoc_1_1_c_single_document_template_base.html</filename>
     <base virtualness="virtual">idoc::IDocumentTemplate</base>
+    <member kind="function">
+      <type></type>
+      <name>CSingleDocumentTemplateBase</name>
+      <anchorfile>classidoc_1_1_c_single_document_template_base.html</anchorfile>
+      <anchor>a2ce5f146091cc1e7f0259f2bea7bf23c</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function">
       <type>const QByteArray &amp;</type>
       <name>GetDocumentTypeId</name>
@@ -29610,6 +29632,13 @@
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
       <anchor>ac74b69ebe0e7f311c3d70c5f5aa24fd4</anchor>
       <arglist>(void *dataPtr, int size)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CXmlDocumentInfoBase</name>
+      <anchorfile>classiser_1_1_c_xml_document_info_base.html</anchorfile>
+      <anchor>a60b8deb5c01d4402a045fc2b06fe7167</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -33715,10 +33744,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>QVector&lt; ilog::IMessageConsumer::MessagePtr &gt;</type>
+      <type>QList&lt; ilog::IMessageConsumer::MessagePtr &gt;</type>
       <name>Messages</name>
       <anchorfile>classilog_1_1_i_message_container.html</anchorfile>
-      <anchor>abe432c7d9cbab21ff1056c1301eb277e</anchor>
+      <anchor>ab26f572385d29923dc8ea32eb0f69720</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -48239,6 +48268,7 @@
     <filename>namespaceiqtgui.html</filename>
     <class kind="class">iqtgui::CAboutWidgetGuiComp</class>
     <class kind="class">iqtgui::CApplicationCompBase</class>
+    <class kind="class">iqtgui::CCalendarGuiComp</class>
     <class kind="class">iqtgui::CCommandsBinderComp</class>
     <class kind="class">iqtgui::CCommandsToolBarGuiComp</class>
     <class kind="class">iqtgui::CCommandTools</class>
@@ -48331,6 +48361,13 @@
       <anchor>a79f597bef8787deed5eb451bf2ec76f0</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CApplicationCompBase</name>
+      <anchorfile>classiqtgui_1_1_c_application_comp_base.html</anchorfile>
+      <anchor>a653fbad364f24f4f76da32bdfacacd00</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InitializeApplication</name>
@@ -48378,6 +48415,32 @@
       <name>OnComponentCreated</name>
       <anchorfile>classiqtgui_1_1_c_application_comp_base.html</anchorfile>
       <anchor>ab236d74fd25f21bd155906efb25b80d7</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CCalendarGuiComp</name>
+    <filename>classiqtgui_1_1_c_calendar_gui_comp.html</filename>
+    <base>TDesignerGuiCompBase&lt; Ui::CCalendarGuiComp &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CCalendarGuiComp &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_c_calendar_gui_comp.html</anchorfile>
+      <anchor>a4e41b04452dc5b759ee4bfc2280c4c68</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtgui_1_1_c_calendar_gui_comp.html</anchorfile>
+      <anchor>a953683d53bc901aee93f60c81ac58a6b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqtgui_1_1_c_calendar_gui_comp.html</anchorfile>
+      <anchor>a54534905bd054c0229e6cad025c71386</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -50146,18 +50209,11 @@
       <anchor>a71d48e5e9425438c80e0d95aa88fa782</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
+    <member kind="function">
+      <type></type>
+      <name>CSplashScreenGuiComp</name>
       <anchorfile>classiqtgui_1_1_c_splash_screen_gui_comp.html</anchorfile>
-      <anchor>a38937135aed53a58846672b3e5f9ded7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiRetranslate</name>
-      <anchorfile>classiqtgui_1_1_c_splash_screen_gui_comp.html</anchorfile>
-      <anchor>a9b7a8ca5f00380c1561a00d8f341e42e</anchor>
+      <anchor>a2e4d80fc89a0f375c0456f9359471c43</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
@@ -50173,6 +50229,20 @@
       <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
       <anchor>a3db7c383e14f4f5c9605cebd90c44e1a</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtgui_1_1_c_splash_screen_gui_comp.html</anchorfile>
+      <anchor>a38937135aed53a58846672b3e5f9ded7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqtgui_1_1_c_splash_screen_gui_comp.html</anchorfile>
+      <anchor>a9b7a8ca5f00380c1561a00d8f341e42e</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -65394,13 +65464,6 @@
       <arglist>(const i2d::CVector2d &amp;center, const i2d::CVector2d &amp;isPos, const i2d::CVector2d &amp;shouldPos)</arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>i2d::CVector2d</type>
-      <name>m_referencePosition</name>
-      <anchorfile>classiview_1_1_c_polygon_shape.html</anchorfile>
-      <anchor>ab66d0686b620c4430cb2730f88d21103</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
       <type>int</type>
       <name>m_referenceIndex</name>
       <anchorfile>classiview_1_1_c_polygon_shape.html</anchorfile>
@@ -69919,6 +69982,7 @@
     <filename>dir_22a623bb1540ee519dc76f8731049248.html</filename>
     <file>CAboutWidgetGuiComp.h</file>
     <file>CApplicationCompBase.h</file>
+    <file>CCalendarGuiComp.h</file>
     <file>CCommandsBinderComp.h</file>
     <file>CCommandsToolBarGuiComp.h</file>
     <file>CCommandTools.h</file>

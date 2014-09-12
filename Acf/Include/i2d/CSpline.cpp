@@ -56,7 +56,11 @@ const CSplineSegment& CSpline::GetSplineSegment(int index) const
 
 bool CSpline::InsertSplineSegment(const CSplineSegment& segment)
 {
+	BeginChanges(GetAnyChange());
+
 	m_segments.push_back(segment);
+
+	EndChanges(GetAnyChange());
 
 	return true;
 }
@@ -75,11 +79,13 @@ bool CSpline::CopyFrom(const IChangeable& object, CompatibilityMode /*mode*/)
 	const CSpline* splinePtr = dynamic_cast<const CSpline*>(&object);
 
 	if (splinePtr != NULL){	
-		istd::CChangeNotifier notifier(this);		
+		BeginChanges(GetAnyChange());;
 
 		BaseClass::CopyFrom(object);
 
 		m_segments = splinePtr->m_segments;
+
+		EndChanges(GetAnyChange());
 
 		return true;
 	}
@@ -130,8 +136,8 @@ void CSpline::CalcAllSegments() const
 			segment.A(i2d::CVector2d(coeffX[i + 1] - coeffX[i], coeffY[i + 1] - coeffY[i]));
 		}
 	}
-	delete coeffX;
-	delete coeffY;
+	delete[] coeffX;
+	delete[] coeffY;
 
 	m_isInvalidated = false;
 }

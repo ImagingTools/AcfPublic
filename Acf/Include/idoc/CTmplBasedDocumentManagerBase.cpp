@@ -31,7 +31,8 @@ namespace idoc
 
 
 CTmplBasedDocumentManagerBase::CTmplBasedDocumentManagerBase()
-:	m_documentTemplatePtr(NULL)
+:	m_documentTemplatePtr(NULL),
+	m_baseAllowedFlags(0)
 {
 }
 

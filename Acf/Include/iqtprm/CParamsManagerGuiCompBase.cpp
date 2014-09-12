@@ -40,7 +40,8 @@ namespace iqtprm
 // public methods
 
 CParamsManagerGuiCompBase::CParamsManagerGuiCompBase()
-:	m_lastConnectedModelPtr(NULL)
+:	m_lastConnectedModelPtr(NULL),
+	m_lastObserverPtr(NULL)
 {
 	static istd::IChangeable::ChangeSet changeMask(
 				iprm::IOptionsList::CF_OPTIONS_CHANGED,

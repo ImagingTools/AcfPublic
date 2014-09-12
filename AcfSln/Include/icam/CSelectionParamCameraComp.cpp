@@ -143,7 +143,7 @@ void CSelectionParamCameraComp::InitProcessor(const iprm::IParamsSet* paramsPtr)
 {
 	ParamSetPtr extParamsPtr(CreateParamsSet(paramsPtr));
 
-	return BaseClass::InitProcessor(extParamsPtr.GetPtr());
+	BaseClass::InitProcessor(extParamsPtr.GetPtr());
 }
 
 

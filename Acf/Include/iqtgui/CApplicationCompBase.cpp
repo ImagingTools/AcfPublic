@@ -46,6 +46,11 @@ namespace iqtgui
 {
 
 
+CApplicationCompBase::CApplicationCompBase()
+:	m_useSplashScreen(false)
+{
+}
+
 // reimplemented (ibase::IApplication)
 
 bool CApplicationCompBase::InitializeApplication(int argc, char** argv)

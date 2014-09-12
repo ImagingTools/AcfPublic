@@ -220,6 +220,11 @@ I_EXPORT_COMPONENT(
 			"Table");
 
 I_EXPORT_COMPONENT(
+			CalendarGui,
+			"Calendar UI",
+			"Calendar Widget Date Time");
+
+I_EXPORT_COMPONENT(
 			ImagePropertyGui,
 			"Image property viewer",
 			"Observer Display GUI Image Bitmap Property");

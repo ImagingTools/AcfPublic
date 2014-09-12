@@ -38,7 +38,8 @@ CComplexDoubleManip::CComplexDoubleManip(
 :	BaseClass(precision, roundingType),
 	m_scaleFactor(scaleFactor),
 	m_offset(offset),
-	m_range(range)
+	m_range(range),
+	m_scaledPrecision(1)
 {
 }
 

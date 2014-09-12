@@ -674,7 +674,8 @@ void CMultiDocumentWorkspaceGuiComp::OnWorkspaceModeChanged()
 // public methods of the embedded class DocumentSelectionInfo
 
 CMultiDocumentWorkspaceGuiComp::DocumentSelectionInfo::DocumentSelectionInfo()
-	:m_selectedDocumentIndex(iprm::ISelectionParam::NO_SELECTION)
+	:m_selectedDocumentIndex(iprm::ISelectionParam::NO_SELECTION),
+	m_parent(NULL)
 {
 }
 
