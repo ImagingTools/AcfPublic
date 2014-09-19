@@ -61,7 +61,7 @@ CLine2d::CLine2d(double x1, double y1, double x2, double y2)
 void CLine2d::SetPoint1(const CVector2d& point)
 {
 	if (point != m_point1){
-		BeginChanges(GetAnyChange());;
+		BeginChanges(GetAnyChange());
 
 		m_point1 = point;
 
@@ -73,7 +73,7 @@ void CLine2d::SetPoint1(const CVector2d& point)
 void CLine2d::SetPoint2(const CVector2d& point)
 {
 	if (point != m_point2){
-		BeginChanges(GetAnyChange());;
+		BeginChanges(GetAnyChange());
 
 		m_point2 = point;
 

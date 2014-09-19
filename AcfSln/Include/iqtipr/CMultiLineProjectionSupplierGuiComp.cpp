@@ -22,6 +22,9 @@
 
 #include "iqtipr/CMultiLineProjectionSupplierGuiComp.h"
 
+// Qt includes
+#include <QtCore/QTimer>
+
 
 namespace iqtipr
 {
@@ -136,10 +139,8 @@ void CMultiLineProjectionSupplierGuiComp::UpdateGui(const istd::IChangeable::Cha
 
 void CMultiLineProjectionSupplierGuiComp::OnSupplierParamsChanged()
 {
-	if (IsGuiCreated()){
-		if (AutoUpdateButton->isChecked()){
-			on_TestButton_clicked();
-		}
+	if (IsGuiCreated() && AutoUpdateButton->isChecked()){
+		QTimer::singleShot(1, this, SLOT(on_TestButton_clicked()));
 	}
 }
 

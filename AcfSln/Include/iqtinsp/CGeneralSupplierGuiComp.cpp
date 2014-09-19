@@ -22,6 +22,8 @@
 
 #include "iqtinsp/CGeneralSupplierGuiComp.h"
 
+// Qt includes
+#include <QtCore/QTimer>
 
 // ACF includes
 #include "istd/CChangeNotifier.h"
@@ -33,17 +35,10 @@ namespace iqtinsp
 
 CGeneralSupplierGuiComp::CGeneralSupplierGuiComp()
 {
-	connect(this, SIGNAL(DoAutoTest()), SLOT(OnAutoTest()), Qt::QueuedConnection);
 }
 
 
 // protected slots
-
-void CGeneralSupplierGuiComp::OnAutoTest()
-{
-	DoTest();
-}
-
 
 void CGeneralSupplierGuiComp::on_TestButton_clicked()
 {
@@ -94,7 +89,7 @@ QWidget* CGeneralSupplierGuiComp::GetParamsWidget() const
 void CGeneralSupplierGuiComp::OnSupplierParamsChanged()
 {
 	if (IsGuiCreated() && AutoTestButton->isChecked()){
-		emit DoAutoTest();
+		QTimer::singleShot(1, this, SLOT(on_TestButton_clicked()));
 	}
 }
 

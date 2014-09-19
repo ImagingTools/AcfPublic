@@ -330,7 +330,7 @@ bool CCircle::CopyFrom(const IChangeable& object, CompatibilityMode mode)
 	const CCircle* circlePtr = dynamic_cast<const CCircle*>(&object);
 
 	if (circlePtr != NULL){
-		BeginChanges(GetAnyChange());;
+		BeginChanges(GetAnyChange());
 		
 		SetPosition(circlePtr->GetPosition());
 		SetRadius(circlePtr->GetRadius());

@@ -22,6 +22,8 @@
 
 #include "iqtipr/CValueSupplierGuiComp.h"
 
+// Qt includes
+#include <QtCore/QTimer>
 
 // ACF includes
 #include "imath/CVarVector.h"
@@ -76,7 +78,7 @@ QWidget* CValueSupplierGuiComp::GetParamsWidget() const
 void CValueSupplierGuiComp::OnSupplierParamsChanged()
 {
 	if (IsGuiCreated() && AutoUpdateButton->isChecked()){
-		DoTest();
+		QTimer::singleShot(1, this, SLOT(on_TestButton_clicked()));
 	}
 }
 
@@ -248,8 +250,12 @@ void CValueSupplierGuiComp::OnGuiCreated()
 		IntResultsFrame->setVisible(true);
 	}
 	else{
-		IntResultsFrame->setVisible(false);
+		IntResultsFrame->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
+		IntResultsFrame->hide();
 	}
+
+	ParamsGB->adjustSize();
+	IntResultsFrame->adjustSize();
 }
 
 

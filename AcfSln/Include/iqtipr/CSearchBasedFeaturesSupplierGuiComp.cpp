@@ -22,13 +22,14 @@
 
 #include "iqtipr/CSearchBasedFeaturesSupplierGuiComp.h"
 
+// Qt includes
+#include <QtCore/QTimer>
 
 // ACF includes
 #include "imath/CVarVector.h"
 
 // ACF-Solutions includes
 #include "imeas/INumericValueProvider.h"
-
 #include "iipr/CSearchFeature.h"
 
 
@@ -39,7 +40,6 @@ namespace iqtipr
 CSearchBasedFeaturesSupplierGuiComp::CSearchBasedFeaturesSupplierGuiComp()
 :	m_lastViewPtr(NULL)
 {
-	connect(this, SIGNAL(DoAutoTest()), SLOT(OnAutoTest()), Qt::QueuedConnection);
 }
 
 
@@ -58,7 +58,7 @@ QWidget* CSearchBasedFeaturesSupplierGuiComp::GetParamsWidget() const
 void CSearchBasedFeaturesSupplierGuiComp::OnSupplierParamsChanged()
 {
 	if (IsGuiCreated() && AutoTestButton->isChecked()){
-		emit DoAutoTest();
+		QTimer::singleShot(1, this, SLOT(on_TestButton_clicked()));
 	}
 }
 
@@ -212,12 +212,6 @@ void CSearchBasedFeaturesSupplierGuiComp::OnComponentDestroyed()
 
 
 // protected slots
-
-void CSearchBasedFeaturesSupplierGuiComp::OnAutoTest()
-{
-	DoTest();
-}
-
 
 void CSearchBasedFeaturesSupplierGuiComp::on_TestButton_clicked()
 {

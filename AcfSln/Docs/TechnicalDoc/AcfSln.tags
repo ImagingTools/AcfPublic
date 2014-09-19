@@ -24992,25 +24992,11 @@
       <anchor>a58e92a94c2079a4ffcf363b294724711</anchor>
       <arglist></arglist>
     </member>
-    <member kind="signal">
-      <type>void</type>
-      <name>DoAutoTest</name>
-      <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
-      <anchor>a0432c588bd31d4134f24f414cbecbdae</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function">
       <type></type>
       <name>CGeneralSupplierGuiComp</name>
       <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
       <anchor>a85e95c986f00250524d95981f868f00e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnAutoTest</name>
-      <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
-      <anchor>ae562a8e8e36bbd0d86ccb83c12a42d96</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -26467,25 +26453,11 @@
       <anchor>ae08774f52b192b30c9f8cfaa2fd6f988</anchor>
       <arglist></arglist>
     </member>
-    <member kind="signal">
-      <type>void</type>
-      <name>DoAutoTest</name>
-      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
-      <anchor>a15f303b32448f8bd63b8da7b997831c9</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function">
       <type></type>
       <name>CSearchBasedFeaturesSupplierGuiComp</name>
       <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
       <anchor>ada57267820c20e102cc354fa63f5a08f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnAutoTest</name>
-      <anchorfile>classiqtipr_1_1_c_search_based_features_supplier_gui_comp.html</anchorfile>
-      <anchor>a54945bb340a2bd9e998193cdb78843c0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">

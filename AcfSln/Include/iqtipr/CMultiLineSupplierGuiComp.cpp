@@ -22,6 +22,8 @@
 
 #include "iqtipr/CMultiLineSupplierGuiComp.h"
 
+// Qt includes
+#include <QtCore/QTimer>
 
 // ACF includes
 #include "iview/CPolylineShape.h"
@@ -60,7 +62,7 @@ void CMultiLineSupplierGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& ch
 void CMultiLineSupplierGuiComp::OnSupplierParamsChanged()
 {
 	if (IsGuiCreated() && AutoUpdateButton->isChecked()){
-		on_TestButton_clicked();
+		QTimer::singleShot(1, this, SLOT(on_TestButton_clicked()));
 	}
 }
 

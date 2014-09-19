@@ -82,9 +82,11 @@ bool CSimpleNumericValue::SetValues(const imath::CVarVector& values)
 			return false;
 		}
 
-		istd::CChangeNotifier notifier(this);
+		BeginChanges(GetAnyChange());
 
 		m_values = values;
+
+		EndChanges(GetAnyChange());
 	}
 
 	return true;
@@ -131,9 +133,11 @@ bool CSimpleNumericValue::CopyFrom(const IChangeable& object, CompatibilityMode 
 		}
 
 		if (values != m_values){
-			istd::CChangeNotifier notifier(this);
+			BeginChanges(GetAnyChange());
 
 			m_values = sourcePtr->GetValues();
+
+			EndChanges(GetAnyChange());
 		}
 
 		return true;

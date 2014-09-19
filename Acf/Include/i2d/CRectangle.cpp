@@ -106,7 +106,7 @@ void CRectangle::Reset()
 void CRectangle::SetLeft(double left)
 {
 	if (GetLeft() != left){
-		BeginChanges(GetAnyChange());;
+		BeginChanges(GetAnyChange());
 
 		m_horizontalRange.SetMinValue(left);
 
@@ -118,7 +118,7 @@ void CRectangle::SetLeft(double left)
 void CRectangle::SetTop(double top)
 {
 	if (GetTop() != top){
-		BeginChanges(GetAnyChange());;
+		BeginChanges(GetAnyChange());
 
 		m_verticalRange.SetMinValue(top);
 
@@ -130,7 +130,7 @@ void CRectangle::SetTop(double top)
 void CRectangle::SetRight(double right)
 {
 	if (GetRight() != right){
-		BeginChanges(GetAnyChange());;
+		BeginChanges(GetAnyChange());
 
 		m_horizontalRange.SetMaxValue(right);
 
@@ -142,7 +142,7 @@ void CRectangle::SetRight(double right)
 void CRectangle::SetBottom(double bottom)
 {
 	if (GetBottom() != bottom){
-		BeginChanges(GetAnyChange());;
+		BeginChanges(GetAnyChange());
 
 		m_verticalRange.SetMaxValue(bottom);
 
@@ -154,7 +154,7 @@ void CRectangle::SetBottom(double bottom)
 void CRectangle::SetHorizontalRange(const istd::CRange& range)
 {
 	if (range != m_horizontalRange){
-		BeginChanges(GetAnyChange());;
+		BeginChanges(GetAnyChange());
 
 		m_horizontalRange = range;
 
@@ -166,7 +166,7 @@ void CRectangle::SetHorizontalRange(const istd::CRange& range)
 void CRectangle::SetVerticalRange(const istd::CRange& range)
 {
 	if (range != m_verticalRange){
-		BeginChanges(GetAnyChange());;
+		BeginChanges(GetAnyChange());
 
 		m_verticalRange = range;
 
@@ -184,7 +184,7 @@ CVector2d CRectangle::GetLeftTop() const
 void CRectangle::SetTopLeft(const CVector2d& topLeft)
 {
 	if (topLeft != GetLeftTop()){
-		BeginChanges(GetAnyChange());;
+		BeginChanges(GetAnyChange());
 
 		m_horizontalRange.SetMinValue(topLeft.GetX());
 		m_verticalRange.SetMinValue(topLeft.GetY());
@@ -203,7 +203,7 @@ CVector2d CRectangle::GetRightTop() const
 void CRectangle::SetTopRight(const CVector2d& topRight)
 {
 	if (topRight != GetRightTop()){
-		BeginChanges(GetAnyChange());;
+		BeginChanges(GetAnyChange());
 
 		m_horizontalRange.SetMaxValue(topRight.GetX());
 		m_verticalRange.SetMinValue(topRight.GetY());
@@ -222,7 +222,7 @@ CVector2d CRectangle::GetLeftBottom() const
 void CRectangle::SetBottomLeft(const CVector2d& bottomLeft)
 {
 	if (bottomLeft != GetLeftBottom()){
-		BeginChanges(GetAnyChange());;
+		BeginChanges(GetAnyChange());
 
 		m_horizontalRange.SetMinValue(bottomLeft.GetX());
 		m_verticalRange.SetMaxValue(bottomLeft.GetY());
@@ -241,7 +241,7 @@ CVector2d CRectangle::GetRightBottom() const
 void CRectangle::SetBottomRight(const CVector2d& bottomRight)
 {
 	if (bottomRight != GetRightBottom()){
-		BeginChanges(GetAnyChange());;
+		BeginChanges(GetAnyChange());
 
 		m_horizontalRange.SetMaxValue(bottomRight.GetX());
 		m_verticalRange.SetMaxValue(bottomRight.GetY());
@@ -696,7 +696,7 @@ bool CRectangle::CopyFrom(const IChangeable& object, CompatibilityMode mode)
 	const CRectangle* rectanglePtr = dynamic_cast<const CRectangle*>(&object);
 
 	if (rectanglePtr != NULL){
-		BeginChanges(GetAnyChange());;
+		BeginChanges(GetAnyChange());
 
 		SetHorizontalRange(rectanglePtr->GetHorizontalRange());
 		SetVerticalRange(rectanglePtr->GetVerticalRange());

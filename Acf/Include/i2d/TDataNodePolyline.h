@@ -24,9 +24,11 @@
 #define i2d_TDataNodePolyline_included
 
 
+// Qt includes
+#include <QVector>
+
 // ACF includes
 #include "i2d/CDataNodePolylineBase.h"
-
 #include "istd/CChangeNotifier.h"
 
 
@@ -171,7 +173,7 @@ bool TDataNodePolyline<NodeData>::CopyFrom(const IChangeable& object, Compatibil
 	const TDataNodePolyline<NodeData>* polygonPtr = dynamic_cast<const TDataNodePolyline<NodeData>*>(&object);
 
 	if (polygonPtr != NULL){		
-		BeginChanges(GetAnyChange());;
+		BeginChanges(GetAnyChange());
 
 		int sourceNodesCount = polygonPtr->GetNodesCount();
 		for (int nodesIndex = 0; nodesIndex < sourceNodesCount; nodesIndex++){		

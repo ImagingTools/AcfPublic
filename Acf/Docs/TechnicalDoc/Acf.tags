@@ -10603,6 +10603,13 @@
     <name>i2d::CPolypoint</name>
     <filename>classi2d_1_1_c_polypoint.html</filename>
     <base>i2d::CObject2dBase</base>
+    <member kind="typedef">
+      <type>QVector&lt; i2d::CVector2d &gt;</type>
+      <name>Points</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a210ed83aece191588222eb88568b21d5</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CPolypoint</name>
@@ -10639,10 +10646,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>const QVector&lt; i2d::CVector2d &gt; &amp;</type>
+      <type>const Points &amp;</type>
       <name>GetPoints</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>aedd9eb3cdfd66e24ea7fd02dc7ff0442</anchor>
+      <anchor>a7e344f88ad0e12e640746211c13842c8</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -43360,6 +43367,13 @@
       <anchor>a160cab8c1311151a7e89e84f21e9c042</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>eventFilter</name>
+      <anchorfile>classiqt2d_1_1_c_extended_console_gui_comp.html</anchorfile>
+      <anchor>a7e00cef6242e36c2aa83b45759713b58</anchor>
+      <arglist>(QObject *sourcePtr, QEvent *eventPtr)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqt2d::CImageViewComp</name>
@@ -66304,11 +66318,11 @@
       <anchor>ab876f759b4fbe669cc73173510bede85</anchor>
       <arglist>(const i2d::IObject2d &amp;object, bool connectToModel=false) const </arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>CInteractiveShapeBase *</type>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual CInteractiveShapeBase *</type>
       <name>CreateShapeInstance</name>
       <anchorfile>classiview_1_1_c_simple_shape_factory_comp.html</anchorfile>
-      <anchor>a5ae16fd0f734fc3b2685211af7a2c3d0</anchor>
+      <anchor>a640e3da03408c72832b77019fec37bff</anchor>
       <arglist>(const i2d::IObject2d &amp;object) const </arglist>
     </member>
   </compound>
