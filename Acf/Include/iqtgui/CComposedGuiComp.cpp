@@ -125,7 +125,7 @@ void CComposedGuiComp::OnGuiCreated()
 	QTabWidget* tabWidgetPtr = dynamic_cast<QTabWidget*>(GetPageContainerWidget());
 	if (tabWidgetPtr != NULL){
 		if (isFlat){
-			tabWidgetPtr->setTabShape(QTabWidget::Triangular);
+			tabWidgetPtr->setDocumentMode(true);
 		}
 
 		tabWidgetPtr->setTabPosition(QTabWidget::TabPosition(*m_tabOrientationAttrPtr));
