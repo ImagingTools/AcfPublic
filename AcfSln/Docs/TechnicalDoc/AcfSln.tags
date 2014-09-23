@@ -10186,6 +10186,13 @@
       <anchor>a4432385e9d790cdb5d37b23b8a9ec1c3</anchor>
       <arglist>(const CEdgeLine &amp;edgeLine, double positionTolerance, double weightTolerance, int firstIndex, int lastIndex, NodesToRemove &amp;nodesToRemove, int &amp;firstInsideIndex, int &amp;lastInsideIndex) const </arglist>
     </member>
+    <member kind="variable" protection="protected">
+      <type>NodesToRemove</type>
+      <name>m_nodesToRemove</name>
+      <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
+      <anchor>a7fd1ac51d1ac4bfc9285eb1a009089ac</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iedge::CExtractedEdgeLinesSupplierComp</name>

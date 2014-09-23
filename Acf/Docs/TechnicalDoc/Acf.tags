@@ -4685,9 +4685,9 @@
     <namespace>iqtgui</namespace>
     <member kind="function" static="yes">
       <type>static bool</type>
-      <name>SetStyleSheet</name>
+      <name>SetStyleSheetFromFile</name>
       <anchorfile>namespaceiqtgui.html</anchorfile>
-      <anchor>af602612c1f34a2ec8ef67e734a13a7e0</anchor>
+      <anchor>ab139d1db099b47b0558a8bcf4c3a14fe</anchor>
       <arglist>(StyleSheetConsumer &amp;styleSheetConsumer, const QString &amp;styleSheetFilePath)</arglist>
     </member>
   </compound>
@@ -48331,9 +48331,9 @@
     <class kind="class">iqtgui::TRestorableGuiWrap</class>
     <member kind="function" static="yes">
       <type>static bool</type>
-      <name>SetStyleSheet</name>
+      <name>SetStyleSheetFromFile</name>
       <anchorfile>namespaceiqtgui.html</anchorfile>
-      <anchor>af602612c1f34a2ec8ef67e734a13a7e0</anchor>
+      <anchor>ab139d1db099b47b0558a8bcf4c3a14fe</anchor>
       <arglist>(StyleSheetConsumer &amp;styleSheetConsumer, const QString &amp;styleSheetFilePath)</arglist>
     </member>
   </compound>

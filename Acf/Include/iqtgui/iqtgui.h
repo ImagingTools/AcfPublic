@@ -43,7 +43,7 @@ namespace iqtgui
 	Set style sheet to any supported object.
 */
 template <class StyleSheetConsumer>
-static bool SetStyleSheet(StyleSheetConsumer& styleSheetConsumer, const QString& styleSheetFilePath)
+static bool SetStyleSheetFromFile(StyleSheetConsumer& styleSheetConsumer, const QString& styleSheetFilePath)
 {
 	if (styleSheetFilePath.isEmpty()){
 		styleSheetConsumer.setStyleSheet("");

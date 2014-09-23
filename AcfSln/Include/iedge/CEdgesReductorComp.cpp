@@ -57,7 +57,7 @@ void CEdgesReductorComp::GetReducedLine(
 		}
 	}
 
-	NodesToRemove nodesToRemove(nodesCount, false);
+	m_nodesToRemove.fill(false, nodesCount);
 
 	int firstInsideIndex = 0;
 	int lastInsideIndex = 0;
@@ -67,7 +67,7 @@ void CEdgesReductorComp::GetReducedLine(
 				weightTolerance,
 				0,
 				isClosed? nodesCount: nodesCount - 1,
-				nodesToRemove,
+				m_nodesToRemove,
 				firstInsideIndex,
 				lastInsideIndex);
 
@@ -78,7 +78,7 @@ void CEdgesReductorComp::GetReducedLine(
 		for (		int nodeIndex = 0;
 					nodeIndex < nodesCount;
 					++nodeIndex){
-			if (!nodesToRemove[nodeIndex]){
+			if (!m_nodesToRemove[nodeIndex]){
 				const CEdgeNode& node = edgeLine.GetNode(nodeIndex);
 
 				result.InsertNode(node);
