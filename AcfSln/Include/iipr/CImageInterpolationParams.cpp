@@ -26,8 +26,6 @@
 // ACF includes
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
-
-
 #include "istd/CChangeNotifier.h"
 
 

@@ -1417,6 +1417,14 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CImageInterpolationParamsComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_image_interpolation_params_comp_8h</filename>
+    <includes id="_c_image_interpolation_params_8h" name="CImageInterpolationParams.h" local="yes" imported="no">iipr/CImageInterpolationParams.h</includes>
+    <class kind="class">iipr::CImageInterpolationParamsComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CImageNormalizeProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_normalize_processor_comp_8h</filename>
@@ -14052,6 +14060,7 @@
     <class kind="class">iipr::CImageHistogramProcessorComp</class>
     <class kind="class">iipr::CImageHistogramSupplierComp</class>
     <class kind="class">iipr::CImageInterpolationParams</class>
+    <class kind="class">iipr::CImageInterpolationParamsComp</class>
     <class kind="class">iipr::CImageNormalizeProcessorComp</class>
     <class kind="class">iipr::CImagePolarTransformProcessorComp</class>
     <class kind="class">iipr::CImageProcessorCompBase</class>
@@ -17000,6 +17009,26 @@
       <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
       <anchor>a3f5eaf6d182d9706c9751576996898b9a0852c8e1474636b67406bb440f8383bc</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CImageInterpolationParamsComp</name>
+    <filename>classiipr_1_1_c_image_interpolation_params_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>iipr::CImageInterpolationParams</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_image_interpolation_params_comp.html</anchorfile>
+      <anchor>a21023cfdb0452cb26a2dd4f201b4debd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_image_interpolation_params_comp.html</anchorfile>
+      <anchor>a28f185bc0b27922b8720d226395663ef</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -29680,6 +29709,7 @@
     <file>CImageHistogramProcessorComp.h</file>
     <file>CImageHistogramSupplierComp.h</file>
     <file>CImageInterpolationParams.h</file>
+    <file>CImageInterpolationParamsComp.h</file>
     <file>CImageNormalizeProcessorComp.h</file>
     <file>CImagePolarTransformProcessorComp.h</file>
     <file>CImageProcessorCompBase.h</file>
