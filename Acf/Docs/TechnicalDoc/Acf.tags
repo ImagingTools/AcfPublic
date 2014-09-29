@@ -3444,7 +3444,7 @@
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_i_options_manager_8h" name="IOptionsManager.h" local="yes" imported="no">iprm/IOptionsManager.h</includes>
     <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
-    <includes id="_i_name_param_8h" name="INameParam.h" local="yes" imported="no">iprm/INameParam.h</includes>
+    <includes id="_c_name_param_8h" name="CNameParam.h" local="yes" imported="no">iprm/CNameParam.h</includes>
     <class kind="class">iprm::CParamsManagerCompBase</class>
     <class kind="class">iprm::CParamsManagerCompBase::ParamSet</class>
     <namespace>iprm</namespace>
@@ -40772,10 +40772,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>QString</type>
+      <type>iprm::CNameParam</type>
       <name>description</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set.html</anchorfile>
-      <anchor>aacce54c9b0a626b3552fbcf91b0ddbce</anchor>
+      <anchor>a36435c99fade752f82015b6ed492f522</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
