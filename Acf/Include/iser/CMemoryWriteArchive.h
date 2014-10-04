@@ -25,7 +25,7 @@
 
 
 // Qt includes
-#include <QtCore/QVector>
+#include <QtCore/QByteArray>
 
 // ACF includes
 #include "iser/CBinaryWriteArchiveBase.h"
@@ -65,7 +65,7 @@ public:
 	virtual bool ProcessData(void* data, int size);
 	
 protected:
-	typedef QVector<unsigned char> DataBuffer;
+	typedef QByteArray DataBuffer;
 
 	DataBuffer m_dataBuffer;
 

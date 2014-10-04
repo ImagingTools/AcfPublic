@@ -46,12 +46,14 @@
 #include "iqtgui/CModelEditorGuiComp.h"
 #include "iqtgui/CImagePropertiesFrameComp.h"
 #include "iqtgui/CCommandsToolBarGuiComp.h"
-#include "iqtgui/CSelectableCommandsProviderComp.h"
+#include "iqtgui/CCommandBasedSelectionControllerComp.h"
 #include "iqtgui/CVersionInfoGuiComp.h"
 #include "iqtgui/CProgressManagerGuiComp.h"
 #include "iqtgui/CTableBasedModelEditorComp.h"
 #include "iqtgui/CStatusGuiComp.h"
 #include "iqtgui/CCalendarGuiComp.h"
+#include "iqtgui/CCalendarGuiComp.h"
+#include "iqtgui/CCommandsMultiplexerComp.h"
 
 // ParamGuiPck
 #include "iqtprm/CFileNameParamGuiComp.h"
@@ -115,12 +117,13 @@ typedef iqtgui::CImagePropertyGuiComp ImagePropertyGui;
 typedef iqtgui::CModelEditorGuiComp ModelEditorGui;
 typedef iqtgui::CImagePropertiesFrameComp ImagePropertiesFrame;
 typedef iqtgui::CCommandsToolBarGuiComp CommandsToolBar;
-typedef icomp::TModelCompWrap<iqtgui::CSelectableCommandsProviderComp> SelectableCommandsProvider;
+typedef icomp::TModelCompWrap<iqtgui::CCommandBasedSelectionControllerComp> CommandBasedSelectionController;
 typedef iqtgui::CVersionInfoGuiComp VersionInfoGui;
 typedef iqtgui::CProgressManagerGuiComp ProgressManagerGui;
 typedef iqtgui::CTableBasedModelEditorComp TableBasedModelEditor;
 typedef iqtgui::CStatusGuiComp StatusGui;
 typedef iqtgui::CCalendarGuiComp CalendarGui;
+typedef icomp::TModelCompWrap<iqtgui::CCommandsMultiplexerComp> CommandsMultiplexer;
 
 typedef iqtdoc::CSingletonDocApplicationComp SingletonDocApplication;
 typedef iqtdoc::CDocumentImportExportCommandComp DocumentImportExportCommand;

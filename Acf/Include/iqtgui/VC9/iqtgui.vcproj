@@ -201,7 +201,15 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CCommandBasedSelectionControllerComp.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\CCommandsBinderComp.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\CCommandsMultiplexerComp.cpp"
 				>
 			</File>
 			<File
@@ -277,10 +285,6 @@
 				>
 			</File>
 			<File
-				RelativePath="..\CSelectableCommandsProviderComp.cpp"
-				>
-			</File>
-			<File
 				RelativePath="..\CSimpleMainWindowGuiComp.cpp"
 				>
 			</File>
@@ -335,7 +339,15 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CCommandBasedSelectionControllerComp.h"
+				>
+			</File>
+			<File
 				RelativePath="..\CCommandsBinderComp.h"
+				>
+			</File>
+			<File
+				RelativePath="..\CCommandsMultiplexerComp.h"
 				>
 			</File>
 			<File
@@ -433,10 +445,6 @@
 				>
 			</File>
 			<File
-				RelativePath="..\CSelectableCommandsProviderComp.h"
-				>
-			</File>
-			<File
 				RelativePath="..\CSimpleMainWindowGuiComp.h"
 				>
 			</File>
@@ -494,6 +502,10 @@
 			</File>
 			<File
 				RelativePath="..\IMainWindowComponent.h"
+				>
+			</File>
+			<File
+				RelativePath="..\IMultiVisualStatusProvider.h"
 				>
 			</File>
 			<File
@@ -558,6 +570,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\..\AuxInclude\Qt5\GeneratedFiles\iqtgui\moc_CCommandBasedSelectionControllerComp.cpp"
+				>
+			</File>
+			<File
 				RelativePath="../../../AuxInclude/Qt5/GeneratedFiles\iqtgui\moc_CDialogGuiComp.cpp"
 				>
 			</File>
@@ -583,10 +599,6 @@
 			</File>
 			<File
 				RelativePath="../../../AuxInclude/Qt5/GeneratedFiles\iqtgui\moc_CProgressManagerGuiComp.cpp"
-				>
-			</File>
-			<File
-				RelativePath="../../../AuxInclude/Qt5/GeneratedFiles\iqtgui\moc_CSelectableCommandsProviderComp.cpp"
 				>
 			</File>
 			<File
@@ -662,6 +674,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CCommandBasedSelectionControllerComp.moc"
+				>
+			</File>
+			<File
 				RelativePath="..\CDialogGuiComp.moc"
 				>
 			</File>
@@ -687,10 +703,6 @@
 			</File>
 			<File
 				RelativePath="..\CProgressManagerGuiComp.moc"
-				>
-			</File>
-			<File
-				RelativePath="..\CSelectableCommandsProviderComp.moc"
 				>
 			</File>
 			<File

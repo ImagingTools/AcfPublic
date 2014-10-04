@@ -29,9 +29,8 @@
 
 
 // ACF includes
-#include "iqtgui/iqtgui.h"
-
 #include "istd/IPolymorphic.h"
+#include "iqtgui/iqtgui.h"
 
 
 namespace iqtgui

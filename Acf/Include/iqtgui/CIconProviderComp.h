@@ -25,9 +25,8 @@
 
 
 // ACF includes
-#include "iqtgui/IIconProvider.h"
-
 #include "icomp/CComponentBase.h"
+#include "iqtgui/IIconProvider.h"
 
 
 namespace iqtgui
