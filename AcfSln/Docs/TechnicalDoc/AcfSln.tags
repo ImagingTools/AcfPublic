@@ -10181,10 +10181,10 @@
       <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>QVector&lt; bool &gt;</type>
+      <type>QBitArray</type>
       <name>NodesToRemove</name>
       <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
-      <anchor>a664cc0a3374e48d9b259f8ed6604840b</anchor>
+      <anchor>aa8b182d045e9a4dda95bfafb0ce2af91</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -23791,6 +23791,27 @@
       <anchorfile>classiqtauth_1_1_c_user_gui_comp.html</anchorfile>
       <anchor>a3832299a62fd380f25a0ab65909650c2</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtauth_1_1_c_user_gui_comp.html</anchorfile>
+      <anchor>aec1e605ea2236f595c3c7c72d8d0c2fa</anchor>
+      <arglist>(m_rightsModelIfPtr, m_rightsProviderIfPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtauth_1_1_c_user_gui_comp.html</anchorfile>
+      <anchor>a74807b1fcd8d6b8bf6b9019201da976c</anchor>
+      <arglist>(m_userLoginIfPtr, m_rightsProviderIfPtr, true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CUserGuiComp</name>
+      <anchorfile>classiqtauth_1_1_c_user_gui_comp.html</anchorfile>
+      <anchor>ae64e824e407db530f0a3092549b395d7</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>

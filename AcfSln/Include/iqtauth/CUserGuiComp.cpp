@@ -36,6 +36,13 @@ namespace iqtauth
 {
 
 
+CUserGuiComp::CUserGuiComp()
+	:m_userManagerDialogPtr(NULL),
+	m_passwordDialogPtr(NULL)
+{
+}
+
+
 // reimplemented (iauth::IPasswordChanger)
 
 bool CUserGuiComp::TryChangePassword(iauth::CUser& user) const
@@ -45,7 +52,9 @@ bool CUserGuiComp::TryChangePassword(iauth::CUser& user) const
 		istd::CChangeNotifier notifier(managerPtr);
 
 		CChangePasswordDialog dialog(*managerPtr, user);
+		m_passwordDialogPtr = &dialog;
 		dialog.exec();
+		m_passwordDialogPtr = NULL;
 
 		return true;
 	}
@@ -103,7 +112,7 @@ void CUserGuiComp::OnComponentCreated()
 
 void CUserGuiComp::OnComponentDestroyed()
 {
-	UnregisterModel();
+	UnregisterAllModels();
 
 	BaseClass::OnComponentDestroyed();
 }
@@ -113,6 +122,18 @@ void CUserGuiComp::OnComponentDestroyed()
 
 void CUserGuiComp::OnModelChanged(int /*modelId*/, const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
+	if (m_userLoginIfPtr.IsValid() && m_userLoginIfPtr->GetLoggedUser() == NULL){
+		if (m_passwordDialogPtr != NULL){
+			m_passwordDialogPtr->reject();
+			m_passwordDialogPtr = NULL;
+		}
+
+		if (m_userManagerDialogPtr != NULL){
+			m_userManagerDialogPtr->reject();
+			m_userManagerDialogPtr = NULL;
+		}
+	}
+
 	UpdateButtonsState();
 }
 
@@ -132,15 +153,15 @@ void CUserGuiComp::on_PushChangePassword_clicked()
 
 void CUserGuiComp::on_PushOpenUserManager_clicked()
 {
-
 	if (m_userLoginIfPtr.IsValid()){
 		iauth::IUsersManager* managerPtr = GetObjectPtr();
 		if (managerPtr != NULL){
 			istd::CChangeNotifier notifier(managerPtr);
 
 			CUserManagerDialog dialog(*m_userLoginIfPtr, *managerPtr);
-
+			m_userManagerDialogPtr = &dialog;
 			dialog.exec();
+			m_userManagerDialogPtr = NULL;
 		}
 	}
 }
