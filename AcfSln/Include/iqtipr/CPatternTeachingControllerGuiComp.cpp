@@ -123,10 +123,10 @@ void CPatternTeachingControllerGuiComp::UpdateGui(const istd::IChangeable::Chang
 		imod::IModel* patternModelPtr = const_cast<imod::IModel*>(dynamic_cast<const imod::IModel*>(objectPtr->GetPatternObject()));
 		if (patternModelPtr != NULL){
 			if (!patternModelPtr->IsAttached(m_patternViewObserverCompPtr.GetPtr())){
+				//istd::CChangeNotifier updateModelPtr(dynamic_cast<istd::IChangeable*>(patternModelPtr));
+
 				patternModelPtr->AttachObserver(m_patternViewObserverCompPtr.GetPtr());
 			}
-
-			istd::CChangeNotifier updateModelPtr(dynamic_cast<istd::IChangeable*>(patternModelPtr));
 		}
 	}
 }
