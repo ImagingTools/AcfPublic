@@ -1,7 +1,19 @@
 TEMPLATE = lib
 TARGET = qwt3dlib
 
-COMPILER_NAME = QMake
+QT += gui core opengl
+
+CONFIG += staticlib
+
+INCLUDEPATH += Include Include/3rdparty/gl2ps
+
+HEADERS += $$files(Include/*.h) $$files(Include/3rdparty/gl2ps/*.h)
+SOURCES += $$files(Src/*.cpp) $$files(Include/3rdparty/gl2ps/*.c)
+RESOURCES += Src/Qwt3d.qrc
+
+win32-g++{
+    COMPILER_NAME = MinGW
+}
 
 win32-msvc*{
 	COMPILER_NAME = VC
@@ -34,12 +46,6 @@ CONFIG(release, debug|release){
 }
 
 DESTDIR = ./Lib/$$COMPILER_DIR
-CONFIG += staticlib
 
-INCLUDEPATH += Include Include/3rdparty/gl2ps
-
-HEADERS += Include/*.h Include/3rdparty/gl2ps/*.h
-SOURCES += Src/*.cpp Include/3rdparty/gl2ps/*.c
  
-QT += gui core opengl
 
