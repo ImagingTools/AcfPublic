@@ -17010,6 +17010,13 @@
       <anchor>a3f5eaf6d182d9706c9751576996898b9a0852c8e1474636b67406bb440f8383bc</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>IM_NEAREST_NEIGHBOR</name>
+      <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
+      <anchor>a3f5eaf6d182d9706c9751576996898b9ac2d0f616afa8f4b1e74d195e5c603803</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CImageInterpolationParamsComp</name>

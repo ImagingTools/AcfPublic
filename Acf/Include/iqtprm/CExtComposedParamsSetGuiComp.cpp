@@ -171,9 +171,11 @@ void CExtComposedParamsSetGuiComp::AttachToScene(iqt2d::IViewProvider* providerP
 
 	iview::IShapeView* viewPtr = NULL;
 
-	if ((m_currentPageIndex >= 0) && !*m_showAllShapesAttrPtr){
-		if (m_currentPageIndex < elementsCount){
-			iqt2d::IViewExtender* extenderPtr = m_extendersCompPtr[m_currentPageIndex];
+	int currentPageIndex = m_pageModel.GetSelectedOptionIndex();
+
+	if ((currentPageIndex >= 0) && !*m_showAllShapesAttrPtr){
+		if (currentPageIndex < elementsCount){
+			iqt2d::IViewExtender* extenderPtr = m_extendersCompPtr[currentPageIndex];
 			if (extenderPtr != NULL){
 				extenderPtr->AddItemsToScene(providerPtr, flags);
 
@@ -204,11 +206,13 @@ void CExtComposedParamsSetGuiComp::DetachFromScene(iqt2d::IViewProvider* provide
 
 	int elementsCount = m_extendersCompPtr.GetCount();
 
+	int currentPageIndex = m_pageModel.GetSelectedOptionIndex();
+
 	iview::IShapeView* viewPtr = NULL;
 
-	if ((m_currentPageIndex >= 0) && !*m_showAllShapesAttrPtr){
-		if (m_currentPageIndex < elementsCount){
-			iqt2d::IViewExtender* extenderPtr = m_extendersCompPtr[m_currentPageIndex];
+	if ((currentPageIndex >= 0) && !*m_showAllShapesAttrPtr){
+		if (currentPageIndex < elementsCount){
+			iqt2d::IViewExtender* extenderPtr = m_extendersCompPtr[currentPageIndex];
 			if (extenderPtr != NULL){
 				extenderPtr->RemoveItemsFromScene(providerPtr);
 
@@ -243,7 +247,9 @@ void CExtComposedParamsSetGuiComp::CreatePages()
 
 void CExtComposedParamsSetGuiComp::OnPageChanged(int index)
 {
-	if (index != m_currentPageIndex){
+	int currentPageIndex = m_pageModel.GetSelectedOptionIndex();
+
+	if (index != currentPageIndex){
 		for (ConnectedSceneFlags::const_iterator iter = m_connectedSceneFlags.begin();
 				iter != m_connectedSceneFlags.end();
 				++iter){
@@ -252,7 +258,7 @@ void CExtComposedParamsSetGuiComp::OnPageChanged(int index)
 			DetachFromScene(providerPtr);
 		}
 
-		m_currentPageIndex = index;
+		m_pageModel.SetSelectedOptionIndex(index);
 
 		for (ConnectedSceneFlags::const_iterator iter = m_connectedSceneFlags.begin();
 				iter != m_connectedSceneFlags.end();
@@ -276,6 +282,8 @@ void CExtComposedParamsSetGuiComp::OnGuiModelAttached()
 
 	iprm::IParamsSet* paramsSetPtr = GetObjectPtr();
 	Q_ASSERT(paramsSetPtr != NULL);
+
+	int currentPageIndex = m_pageModel.GetSelectedOptionIndex();
 
 	bool keepGlobalVisible = false;
 
@@ -318,7 +326,7 @@ void CExtComposedParamsSetGuiComp::OnGuiModelAttached()
 	}
 
 	// Restore selection:
-	SetCurrentPage(m_currentPageIndex);
+	SetCurrentPage(currentPageIndex);
 
 	GetWidget()->setVisible(keepGlobalVisible);
 

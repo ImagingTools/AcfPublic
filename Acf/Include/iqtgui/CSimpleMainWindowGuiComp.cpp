@@ -25,12 +25,15 @@
 
 // Qt includes
 #include <QtCore/QSettings>
+#include <QtCore/QUrl>
 
 #if QT_VERSION >= 0x050000
 #include <QtWidgets/QStatusBar>
 #else
 #include <QtGui/QStatusBar>
 #endif
+
+#include <QtGui/QDesktopServices>
 
 // ACF includes
 #include "iqt/CSignalBlocker.h"
@@ -90,6 +93,11 @@ void CSimpleMainWindowGuiComp::UpdateMenuActions()
 	}
 
 	if (!m_menuBarPtr.IsValid() && !m_standardToolBarPtr.IsValid()){
+		// if there are no visible menu items: add the command directly to the widget
+		if (m_helpFilePathPtr.IsValid()){
+			GetQtWidget()->addAction(&m_manualCommand);
+		}
+
 		return;
 	}
 
@@ -334,6 +342,11 @@ void CSimpleMainWindowGuiComp::UpdateToolsCommands(iqtgui::CHierarchicalCommand&
 
 void CSimpleMainWindowGuiComp::UpdateHelpCommands(iqtgui::CHierarchicalCommand& helpCommand)
 {
+	if (m_helpFilePathPtr.IsValid()){
+		connect(&m_manualCommand, SIGNAL(triggered()), this, SLOT(OnHelpManual()));
+		helpCommand.InsertChild(&m_manualCommand, false);
+	}
+
 	if (m_aboutDialogCompPtr.IsValid()){
 		helpCommand.InsertChild(&m_aboutCommand, false);
 	}
@@ -564,11 +577,16 @@ void CSimpleMainWindowGuiComp::OnRetranslate()
 
 	// Tools commands
 	m_settingsCommand.SetVisuals(tr("&Preferences"), tr("Preferences"), tr("Show global application preferences"), QIcon(":/Icons/Settings"));
+	m_settingsCommand.setShortcut(QKeySequence::Preferences);
 	m_settingsCommand.setMenuRole(QAction::PreferencesRole);
 
 	// Help commands
 	m_aboutCommand.SetVisuals(tr("&About..."), tr("About"), tr("Shows information about this application"), QIcon(":/Icons/About"));
 	m_aboutCommand.setMenuRole(QAction::AboutRole);
+
+	m_manualCommand.SetVisuals(tr("&Help..."), tr("Help"), tr("Shows application manual"), QIcon(":/Icons/Help"));
+	m_manualCommand.setShortcut(QKeySequence::HelpContents);
+	m_manualCommand.setMenuRole(QAction::AboutRole);
 
 	UpdateMenuActions();
 }
@@ -647,6 +665,14 @@ void CSimpleMainWindowGuiComp::OnAbout()
 {
 	if (m_aboutDialogCompPtr.IsValid()){
 		m_aboutDialogCompPtr->ExecuteDialog(this);
+	}
+}
+
+
+void CSimpleMainWindowGuiComp::OnHelpManual()
+{
+	if (m_helpFilePathPtr.IsValid()){
+		QDesktopServices::openUrl(QUrl::fromLocalFile(m_helpFilePathPtr->GetPath()));
 	}
 }
 

@@ -25,13 +25,13 @@
 
 
 // ACF includes
-#include "istd/IPolymorphic.h"
+#include "iimg/IBitmap.h"
 
 
 namespace iimg
 {
 
-	
+
 /**
 	Interface of a controller for handling multi-page bitmaps.
 */

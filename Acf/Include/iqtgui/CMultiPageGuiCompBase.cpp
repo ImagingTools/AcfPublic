@@ -42,7 +42,6 @@ namespace iqtgui
 // public methods
 
 CMultiPageGuiCompBase::CMultiPageGuiCompBase()
-	:m_currentPageIndex(-1)
 {
 }
 
@@ -68,7 +67,7 @@ int CMultiPageGuiCompBase::AddPageToContainerWidget(
 
 	int retVal = multiPageWidgetPtr->InsertPage(pageContainerPtr, pageTitle);
 	if (retVal >= 0){
-		m_currentPageIndex = multiPageWidgetPtr->GetCurrentPage();
+		m_pageModel.SetSelectedOptionIndex(multiPageWidgetPtr->GetCurrentPage());
 	}
 
 	return retVal;
@@ -236,7 +235,7 @@ QWidget* CMultiPageGuiCompBase::CreateQtWidget(QWidget* parentPtr)
 
 	connect(widgetPtr, SIGNAL(EmitPageIndexChanged(int)), this, SLOT(OnPageChanged(int)));
 
-	m_currentPageIndex = widgetPtr->GetCurrentPage();
+	m_pageModel.SetSelectedOptionIndex(widgetPtr->GetCurrentPage());
 
 	return widgetPtr;
 }
@@ -313,7 +312,7 @@ void CMultiPageGuiCompBase::OnModelChanged(int /*modelId*/, const istd::IChangea
 
 void CMultiPageGuiCompBase::OnPageChanged(int pageIndex)
 {
-	m_currentPageIndex = pageIndex;
+	m_pageModel.SetSelectedOptionIndex(pageIndex);
 }
 
 

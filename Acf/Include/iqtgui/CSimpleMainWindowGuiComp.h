@@ -37,6 +37,7 @@
 // ACF includes
 #include "imod/CMultiModelDispatcherBase.h"
 #include "ibase/ICommandsProvider.h"
+#include "ifile/IFileNameParam.h"
 #include "iprm/IOptionsManager.h"
 #include "iqtgui/IMainWindowComponent.h"
 #include "iqtgui/IDialog.h"
@@ -49,7 +50,10 @@ namespace iqtgui
 {
 
 
-// Base class as work-around of static variable limit in ACF macros
+/**
+	\internal
+	Base class as work-around of static variable limit in ACF macros
+*/
 class CSimpleMainWindowGuiCompBase: public iqtgui::TRestorableGuiWrap< iqtgui::TGuiComponentBase<QMainWindow> >
 {
 public:
@@ -72,6 +76,7 @@ public:
 		I_ASSIGN(m_toolBarDockFeaturesAttrPtr, "ToolBarDockFeatures", "Specify the dock features for the standard tool bar\nIt is combination of options:\n2 - moveable\n4 - floatable", true, IMainWindowComponent::WCF_MOVEABLE | IMainWindowComponent::WCF_FLOATABLE);
 		I_ASSIGN(m_iconSizeAttrPtr, "IconSize", "Size of icons using in the main window", false, 16);
 		I_ASSIGN(m_useIconTextAttrPtr, "UseIconText", "Enable text under the tool bar icons", false, false);
+		I_ASSIGN(m_helpFilePathPtr, "HelpFile", "Path to the help (manual) file opened by F1", false, "HelpFile");
 	I_END_COMPONENT;
 
 protected:
@@ -91,6 +96,7 @@ protected:
 	I_ATTR(int, m_toolBarDockFeaturesAttrPtr);
 	I_ATTR(int, m_iconSizeAttrPtr);
 	I_ATTR(bool, m_useIconTextAttrPtr);
+	I_REF(ifile::IFileNameParam, m_helpFilePathPtr);
 };
 
 
@@ -164,6 +170,7 @@ protected Q_SLOTS:
 	void OnShowToolbars();
 	void OnFullScreen();
 	void OnAbout();
+    void OnHelpManual();
 	void OnSettings();
 	void OnShowOtherCommandTriggered(bool enabled);
 
@@ -246,6 +253,7 @@ private:
 
 	// help menu group
 	iqtgui::CHierarchicalCommand m_aboutCommand;
+    iqtgui::CHierarchicalCommand m_manualCommand;
 
 	iqtgui::CHierarchicalCommand m_fixedCommands;
 

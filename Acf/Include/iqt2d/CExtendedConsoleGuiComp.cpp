@@ -46,6 +46,8 @@ void CExtendedConsoleGuiComp::OnGuiCreated()
 			CommandsFrame->setParent(ViewFrame);
 			CommandsFrame->setFrameShape(QFrame::StyledPanel);
 			CommandsFrame->setAutoFillBackground(true);
+			CommandsFrame->setWindowFlags(Qt::FramelessWindowHint);
+			CommandsFrame->setWindowOpacity(0.5);
 		}
 	}
 	else

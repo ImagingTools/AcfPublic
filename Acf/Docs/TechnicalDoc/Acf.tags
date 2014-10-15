@@ -2521,7 +2521,7 @@
     <name>IMultiPageBitmapController.h</name>
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>_i_multi_page_bitmap_controller_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
     <class kind="class">iimg::IMultiPageBitmapController</class>
     <namespace>iimg</namespace>
   </compound>
@@ -4542,6 +4542,7 @@
     <filename>_c_simple_main_window_gui_comp_8h</filename>
     <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_i_options_manager_8h" name="IOptionsManager.h" local="yes" imported="no">iprm/IOptionsManager.h</includes>
     <includes id="_i_main_window_component_8h" name="IMainWindowComponent.h" local="yes" imported="no">iqtgui/IMainWindowComponent.h</includes>
     <includes id="_i_dialog_8h" name="IDialog.h" local="yes" imported="no">iqtgui/IDialog.h</includes>
@@ -44676,13 +44677,6 @@
       <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
       <arglist>(i2d::CPolygon *objectPtr)</arglist>
     </member>
-    <member kind="enumeration" protection="protected">
-      <type></type>
-      <name>MenuAction</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>ae2b46c30185beae1811d6885681e143c</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" protection="protected">
       <type>QTableWidget *</type>
       <name>GetNodeTable</name>
@@ -45002,13 +44996,6 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
       <arglist>(i2d::CPolyline *objectPtr)</arglist>
-    </member>
-    <member kind="enumeration" protection="protected">
-      <type></type>
-      <name>MenuAction</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>ae2b46c30185beae1811d6885681e143c</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -45589,13 +45576,6 @@
       <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
       <arglist>(imod::IModel *modelPtr) const</arglist>
     </member>
-    <member kind="enumeration" protection="protected">
-      <type></type>
-      <name>MenuAction</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>ae2b46c30185beae1811d6885681e143c</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iqt2d::CViewProviderGuiComp</name>
@@ -45893,48 +45873,6 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
       <arglist>(PolygonBasedModel *objectPtr)</arglist>
-    </member>
-    <member kind="enumeration" protection="protected">
-      <type></type>
-      <name>MenuAction</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>ae2b46c30185beae1811d6885681e143c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue" protection="protected">
-      <type>@</type>
-      <name>ActionFlipHorizontally</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>ae2b46c30185beae1811d6885681e143ca71d750e0f97a331eedc769df3c737ce4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue" protection="protected">
-      <type>@</type>
-      <name>ActionFlipVertically</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>ae2b46c30185beae1811d6885681e143ca46ffba8bfb34b7ab1685db1fb7f2e729</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue" protection="protected">
-      <type>@</type>
-      <name>ActionRotateClockwise</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>ae2b46c30185beae1811d6885681e143ca98391b249b20cc54f1722f756911d90d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue" protection="protected">
-      <type>@</type>
-      <name>ActionRotateCounterclockwise</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>ae2b46c30185beae1811d6885681e143ca18094062aa98692d6b52fb86982352a3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue" protection="protected">
-      <type>@</type>
-      <name>ActionReverseLine</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>ae2b46c30185beae1811d6885681e143ca6c5bd3432ca3727e12f7077dc1eb05e5</anchor>
-      <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
       <type>QTableWidget *</type>
@@ -47009,6 +46947,13 @@
       <name>OnAbout</name>
       <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
       <anchor>af7d72fd382158a5717444c298311ce33</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnHelpManual</name>
+      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
+      <anchor>ad233575d2c7bce287cf1fa8c33b0e08c</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -49043,10 +48988,10 @@
       <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>int</type>
-      <name>m_currentPageIndex</name>
+      <type>imod::TModelWrap&lt; PageModel &gt;</type>
+      <name>m_pageModel</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
-      <anchor>a5c23492ea22b0d75b4ac6bef591872cd</anchor>
+      <anchor>a5fcad1d1d9a9a96120bb2af15d5eb208</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -64506,14 +64451,14 @@
       <anchor>a6b1fd7805d0a15791f5851ec431c010f</anchor>
       <arglist>(QPainter &amp;drawContext) const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classiview_1_1_c_oriented_circle_shape.html</anchorfile>
       <anchor>a4621621be4a43d7cf073933b5f9d10fb</anchor>
       <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual i2d::CRect</type>
       <name>CalcBoundingBox</name>
       <anchorfile>classiview_1_1_c_oriented_circle_shape.html</anchorfile>
