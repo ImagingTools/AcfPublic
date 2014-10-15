@@ -2005,6 +2005,7 @@
     <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
     <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
     <includes id="_i_multi_page_document_8h" name="IMultiPageDocument.h" local="yes" imported="no">idoc/IMultiPageDocument.h</includes>
+    <includes id="_i_multi_page_document_provider_8h" name="IMultiPageDocumentProvider.h" local="yes" imported="no">idoc/IMultiPageDocumentProvider.h</includes>
     <includes id="_c_standard_document_meta_info_8h" name="CStandardDocumentMetaInfo.h" local="yes" imported="no">idoc/CStandardDocumentMetaInfo.h</includes>
     <class kind="class">idoc::TMultiPageDocumentWrap</class>
     <class kind="struct">idoc::TMultiPageDocumentWrap::Page</class>
