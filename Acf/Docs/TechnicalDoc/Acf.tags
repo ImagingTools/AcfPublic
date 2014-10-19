@@ -4842,8 +4842,9 @@
     <name>CExtParamsManagerGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtprm/</path>
     <filename>_c_ext_params_manager_gui_comp_8h</filename>
-    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
+    <includes id="_i_icon_provider_8h" name="IIconProvider.h" local="no" imported="no">iqtgui/IIconProvider.h</includes>
+    <includes id="_i_params_manager_8h" name="IParamsManager.h" local="no" imported="no">iprm/IParamsManager.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="no" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <class kind="class">iqtprm::CExtParamsManagerGuiComp</class>
     <class kind="class">iqtprm::CExtParamsManagerGuiComp::CElementItemDelegate</class>
     <class kind="class">iqtprm::CExtParamsManagerGuiComp::CElementEditorDialog</class>
@@ -52464,30 +52465,30 @@
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
-      <name>DR_DESCRIPTION_ROLE</name>
+      <name>DR_DESCRIPTION</name>
       <anchorfile>classiqtprm_1_1_c_ext_params_manager_gui_comp.html</anchorfile>
-      <anchor>a8027d55656d217519dc4489adeb1bfe5ae5443761b3c63ad246d2e2f6dafb2798</anchor>
+      <anchor>a8027d55656d217519dc4489adeb1bfe5a0b013b08e21f31082795a8f0f930e290</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
-      <name>DR_VERSION_ROLE</name>
+      <name>DR_PARAMETER_TYPE</name>
       <anchorfile>classiqtprm_1_1_c_ext_params_manager_gui_comp.html</anchorfile>
-      <anchor>a8027d55656d217519dc4489adeb1bfe5a8b1d724610ee014051090d3c01a10097</anchor>
+      <anchor>a8027d55656d217519dc4489adeb1bfe5a355916ae25465e3e19e599e13f0cd076</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
-      <name>DR_PARAMETER_TYPE_ROLE</name>
+      <name>DR_INDEX</name>
       <anchorfile>classiqtprm_1_1_c_ext_params_manager_gui_comp.html</anchorfile>
-      <anchor>a8027d55656d217519dc4489adeb1bfe5a9a97493b0494d939038a210556bf6060</anchor>
+      <anchor>a8027d55656d217519dc4489adeb1bfe5a14ef214d29af8b6a83928daec90ef786</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
-      <name>DR_INDEX_ROLE</name>
+      <name>DR_UUID</name>
       <anchorfile>classiqtprm_1_1_c_ext_params_manager_gui_comp.html</anchorfile>
-      <anchor>a8027d55656d217519dc4489adeb1bfe5ab3a7a86b57d4303f75dc5ee10b1f0678</anchor>
+      <anchor>a8027d55656d217519dc4489adeb1bfe5a2852f4f3c4789a5d2e6d8672657f8a09</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
@@ -52502,13 +52503,6 @@
       <name>on_AddButton_clicked</name>
       <anchorfile>classiqtprm_1_1_c_ext_params_manager_gui_comp.html</anchorfile>
       <anchor>a88c6a41d9ffefdd56238c256ddf8ea8a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_ConfigureButton_clicked</name>
-      <anchorfile>classiqtprm_1_1_c_ext_params_manager_gui_comp.html</anchorfile>
-      <anchor>aa70974dc0a7765316dbd9557f7a0d790</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -52534,10 +52528,10 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>on_ElementList_currentRowChanged</name>
+      <name>on_ReloadButton_clicked</name>
       <anchorfile>classiqtprm_1_1_c_ext_params_manager_gui_comp.html</anchorfile>
-      <anchor>a93bfd3ba906df516d61c96df549962bb</anchor>
-      <arglist>(int)</arglist>
+      <anchor>a56dbda71400cdb86b553b599996cd590</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -52546,12 +52540,26 @@
       <anchor>ae4f3f45156c4f9eb49f8470253e61f6c</anchor>
       <arglist>(const QModelIndex &amp;index)</arglist>
     </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ElementList_itemSelectionChanged</name>
+      <anchorfile>classiqtprm_1_1_c_ext_params_manager_gui_comp.html</anchorfile>
+      <anchor>a9ad437fcb1ef8d2e5c5c15f16db4bd10</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>int</type>
       <name>GetParameterTypeIndexById</name>
       <anchorfile>classiqtprm_1_1_c_ext_params_manager_gui_comp.html</anchorfile>
       <anchor>affc045e0d8423737d73146e0274a5dce</anchor>
       <arglist>(const QByteArray &amp;parameterTypeId) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateCommands</name>
+      <anchorfile>classiqtprm_1_1_c_ext_params_manager_gui_comp.html</anchorfile>
+      <anchor>ab6b94337e007ac73c675f2fafc5cf3e1</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -52576,9 +52584,16 @@
     </member>
     <member kind="variable" protection="protected">
       <type>ParameterEditorMap</type>
-      <name>_parameterEditorMap</name>
+      <name>m_parameterEditorMap</name>
       <anchorfile>classiqtprm_1_1_c_ext_params_manager_gui_comp.html</anchorfile>
-      <anchor>a39e21f1646c43350511144e739d90915</anchor>
+      <anchor>a09d0190c3b733130a9b9c305e0229e02</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QByteArray</type>
+      <name>m_lastSelectedParameterSetId</name>
+      <anchorfile>classiqtprm_1_1_c_ext_params_manager_gui_comp.html</anchorfile>
+      <anchor>a0b2c2ce8b48aa482f60f8e6b0d4b9070</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -52613,12 +52628,19 @@
       <anchor>a232a2808f1cc3d48802b8e80f300413d</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CElementEditorDialog</name>
+      <anchorfile>classiqtprm_1_1_c_ext_params_manager_gui_comp_1_1_c_element_editor_dialog.html</anchorfile>
+      <anchor>a215fbd9c9bd9409abdac9e5a292740dc</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function">
-      <type>bool</type>
+      <type>int</type>
       <name>Execute</name>
       <anchorfile>classiqtprm_1_1_c_ext_params_manager_gui_comp_1_1_c_element_editor_dialog.html</anchorfile>
-      <anchor>a1bcdd3e1256450690690a784d77c7133</anchor>
-      <arglist>(QString &amp;name, QString &amp;description)</arglist>
+      <anchor>adf3b27435232afa148028ac56b57e51d</anchor>
+      <arglist>(QString &amp;name, QString &amp;description, iqtgui::IGuiObject *paramsGuiPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -54514,6 +54536,13 @@
       <anchorfile>classiser_1_1_c_primitive_types_serializer.html</anchorfile>
       <anchor>a479cbded59d35c92ce27a04a8380592c</anchor>
       <arglist>(iser::IArchive &amp;archive, QDateTime &amp;dateTime)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>SerializeDate</name>
+      <anchorfile>classiser_1_1_c_primitive_types_serializer.html</anchorfile>
+      <anchor>ae8ce57c2799639b1d2489f54fc42e809</anchor>
+      <arglist>(iser::IArchive &amp;archive, QDate &amp;date)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
