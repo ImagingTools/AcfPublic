@@ -23013,6 +23013,13 @@
       <arglist>(int propertyIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>FindPropertyIndex</name>
+      <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
+      <anchor>a6d98269ff545536a25429d5f1674f0d2</anchor>
+      <arglist>(const QByteArray &amp;propertyId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>InsertProperty</name>
       <anchorfile>classiprop_1_1_c_properties_manager.html</anchorfile>
@@ -23200,6 +23207,13 @@
       <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
       <anchor>ad794e09a9b925ccf2c1537a6c0c84e9a</anchor>
       <arglist>(int propertyIndex) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>FindPropertyIndex</name>
+      <anchorfile>classiprop_1_1_i_properties_manager.html</anchorfile>
+      <anchor>ae274fdbbfc4e50dc186f9171a2d7cf93</anchor>
+      <arglist>(const QByteArray &amp;propertyId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
