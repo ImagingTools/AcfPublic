@@ -5478,6 +5478,13 @@
       <anchor>a070d2ce7b6bb7e5c05602aa8c308d0c4</anchor>
       <arglist></arglist>
     </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>I_DECLARE_ENUM</name>
+      <anchorfile>istd_8h.html</anchorfile>
+      <anchor>a2000828e9a6335eacc6bcd239acd240f</anchor>
+      <arglist>(Enum,...)</arglist>
+    </member>
     <member kind="variable" static="yes">
       <type>static const double</type>
       <name>I_BIG_EPSILON</name>
@@ -54569,8 +54576,15 @@
       <type>static bool</type>
       <name>SerializeEnum</name>
       <anchorfile>classiser_1_1_c_primitive_types_serializer.html</anchorfile>
-      <anchor>a1ae8dbc47deee0813a560775297a8b96</anchor>
-      <arglist>(iser::IArchive &amp;archive, EnumType &amp;enumValue, const QObject *objectPtr=NULL)</arglist>
+      <anchor>a4b4ba1c539715d209174005197c3aac8</anchor>
+      <arglist>(iser::IArchive &amp;archive, EnumType &amp;enumValue)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>SerializeEnum</name>
+      <anchorfile>classiser_1_1_c_primitive_types_serializer.html</anchorfile>
+      <anchor>a95db2766bdaba1174d0650e4be5ab142</anchor>
+      <arglist>(iser::IArchive &amp;archive, EnumType &amp;enumValue, const QObject *objectPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
