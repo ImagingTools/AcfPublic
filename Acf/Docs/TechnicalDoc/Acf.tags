@@ -2458,6 +2458,16 @@
     <namespace>iimg</namespace>
   </compound>
   <compound kind="file">
+    <name>CMultiPageBitmapSequenceComp.h</name>
+    <path>C:/Temp/Acf/Include/iimg/</path>
+    <filename>_c_multi_page_bitmap_sequence_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_t_multi_page_document_wrap_8h" name="TMultiPageDocumentWrap.h" local="yes" imported="no">idoc/TMultiPageDocumentWrap.h</includes>
+    <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iimg/IMultiBitmapProvider.h</includes>
+    <class kind="class">iimg::CMultiPageBitmapSequenceComp</class>
+    <namespace>iimg</namespace>
+  </compound>
+  <compound kind="file">
     <name>CReflectedBitmapBase.h</name>
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>_c_reflected_bitmap_base_8h</filename>
@@ -30873,6 +30883,7 @@
     <class kind="class">iimg::CGeneralBitmap</class>
     <class kind="class">iimg::CMultiPageBitmapBase</class>
     <class kind="class">iimg::CMultiPageBitmapComp</class>
+    <class kind="class">iimg::CMultiPageBitmapSequenceComp</class>
     <class kind="class">iimg::CReflectedBitmapBase</class>
     <class kind="class">iimg::CScanlineMask</class>
     <class kind="class">iimg::IBitmap</class>
@@ -32170,7 +32181,7 @@
   <compound kind="class">
     <name>iimg::CMultiPageBitmapBase</name>
     <filename>classiimg_1_1_c_multi_page_bitmap_base.html</filename>
-    <base>idoc::TMultiPageDocumentWrap</base>
+    <base>TMultiPageDocumentWrap&lt; idoc::IMultiPageDocument &gt;</base>
     <base virtualness="virtual">iimg::IMultiBitmapProvider</base>
     <base virtualness="virtual">iimg::IMultiPageBitmapController</base>
     <member kind="enumvalue">
@@ -32185,6 +32196,20 @@
       <name>BaseClass</name>
       <anchorfile>classiimg_1_1_c_multi_page_bitmap_base.html</anchorfile>
       <anchor>a541df9be31fd87811869db11972cca85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>idoc::IMultiPageDocument</type>
+      <name>BaseClass</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a18c4f12c76b060a504bd198577569c69</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CStandardDocumentMetaInfo</type>
+      <name>BaseClass2</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>aeee7dbd83cd9aafae794b668d85fdf3f</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -32243,12 +32268,131 @@
       <anchor>a01f2f6ac1b51f9b031aeff3f455b322c</anchor>
       <arglist>(int index)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPagesCount</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a4f531004368818c09f1c4b524d4a39e1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const istd::IChangeable &amp;</type>
+      <name>GetDocumentPage</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>af72332a3891d4485e4da3061b49e30fb</anchor>
+      <arglist>(int pageIndex) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const idoc::IDocumentMetaInfo *</type>
+      <name>GetPageMetaInfo</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a6aaab6aec665106cb27a0aa90a435f5d</anchor>
+      <arglist>(int pageIndex) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetPages</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a07e189d60ffab78b0dc29a71b3bb4d53</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemovePage</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a7630992d240ac0eb74d869d7521650a4</anchor>
+      <arglist>(int pageIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const IDocumentMetaInfo &amp;</type>
+      <name>GetDocumentMetaInfo</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a525e559a0a2f666ec8fd383dc6274505</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsFlags</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a393acef7c2dcbc2f987b2dd47f7e4e42</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a3bc58d3f6db839fc81b33d39421bf0a7</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>aa24c2372623f11c676e4754f062b1a65</anchor>
+      <arglist>(int index) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a352dd6922955773dad49b6b51643946e</anchor>
+      <arglist>(int index) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetOptionId</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>aa6656737c337c27f1ecb2884efadddcb</anchor>
+      <arglist>(int index) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a9b9e62ad6291f25e0d8cc3c1cbacd04a</anchor>
+      <arglist>(int index) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a54c26fdb7854b18c0bf276c4c31f0f4a</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a36e186bc048adedac51c48788a6f0bce</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual IBitmap *</type>
       <name>CreateBitmap</name>
       <anchorfile>classiimg_1_1_c_multi_page_bitmap_base.html</anchorfile>
       <anchor>a8c4030a7056882ae786bb4dd05ec0261</anchor>
       <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SerializePage</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a555844d4f823bf72e6b5eaf41628b753</anchor>
+      <arglist>(iser::IArchive &amp;archive, Page &amp;pageItem)</arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>QList&lt; Page &gt;</type>
+      <name>Pages</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>abcd6a98c6d526bac2deb5c6f0ada04a2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Pages</type>
+      <name>m_documentPages</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a49918c5f92f9611dbb86363fca61c0e8</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -32269,6 +32413,26 @@
       <anchorfile>classiimg_1_1_c_multi_page_bitmap_comp.html</anchorfile>
       <anchor>acede4d192b074a71b984e91a9d04cb0f</anchor>
       <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iimg::CMultiPageBitmapSequenceComp</name>
+    <filename>classiimg_1_1_c_multi_page_bitmap_sequence_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>TMultiPageDocumentWrap&lt; idoc::IMultiPageDocument &gt;</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiimg_1_1_c_multi_page_bitmap_sequence_comp.html</anchorfile>
+      <anchor>a08ad19af8a3f5d88ddd3b25a1bdce400</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>InsertPage</name>
+      <anchorfile>classiimg_1_1_c_multi_page_bitmap_sequence_comp.html</anchorfile>
+      <anchor>ac39abb0aaf74bbbcd5816a0103c44105</anchor>
+      <arglist>(const idoc::IDocumentMetaInfo *pageMetaInfoPtr=NULL, const iprm::IParamsSet *pageParameterPtr=NULL, int position=-1)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -69820,6 +69984,7 @@
     <file>CGeneralBitmap.h</file>
     <file>CMultiPageBitmapBase.h</file>
     <file>CMultiPageBitmapComp.h</file>
+    <file>CMultiPageBitmapSequenceComp.h</file>
     <file>CReflectedBitmapBase.h</file>
     <file>CScanlineMask.h</file>
     <file>IBitmap.h</file>

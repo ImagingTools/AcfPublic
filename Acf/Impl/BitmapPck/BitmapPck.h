@@ -34,6 +34,7 @@
 #include "iimg/CMultiPageBitmapComp.h"
 #include "iimg/CComposedBitmapProviderComp.h"
 #include "iimg/CBitmapDocumentFilePersistenceComp.h"
+#include "iimg/CMultiPageBitmapSequenceComp.h"
 
 
 /**
@@ -74,6 +75,8 @@ typedef icomp::TModelCompWrap<iimg::CMultiPageBitmapComp> MultiPageBitmap;
 typedef icomp::TModelCompWrap<iimg::CComposedBitmapProviderComp> ComposedBitmapProvider;
 
 typedef iimg::CBitmapDocumentFilePersistenceComp BitmapDocumentLoader;
+
+typedef icomp::TModelCompWrap<iimg::CMultiPageBitmapSequenceComp> MultiPageBitmapSequence;
 
 
 } // namespace BitmapPck
