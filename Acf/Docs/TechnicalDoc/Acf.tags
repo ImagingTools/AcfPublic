@@ -5072,6 +5072,20 @@
     <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
     <class kind="class">iser::CPrimitiveTypesSerializer</class>
     <namespace>iser</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>I_SERIALIZE_FLAG</name>
+      <anchorfile>_c_primitive_types_serializer_8h.html</anchorfile>
+      <anchor>a92aca13f6ac603c29defb4e77589ea5d</anchor>
+      <arglist>(Enum, archive, flag)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>I_SERIALIZE_ENUM</name>
+      <anchorfile>_c_primitive_types_serializer_8h.html</anchorfile>
+      <anchor>afcf25a1cabde3479d9610ded11f3423a</anchor>
+      <arglist>(Enum, archive, enumValue)</arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>CReadArchiveBase.h</name>
