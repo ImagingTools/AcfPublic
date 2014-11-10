@@ -15197,6 +15197,13 @@
       <anchor>a1af6de12864db222804c5f68ba7d161a</anchor>
       <arglist>(Rays &amp;outRays)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
+      <anchor>a60378c8dd703f61271956e3234524068</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>iipr::CCircleFindProcessorComp::Point</name>
