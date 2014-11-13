@@ -519,6 +519,188 @@
     <namespace>i3d</namespace>
   </compound>
   <compound kind="file">
+    <name>CAttributesManager.h</name>
+    <path>C:/Temp/Acf/Include/iattr/</path>
+    <filename>_c_attributes_manager_8h</filename>
+    <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
+    <includes id="_t_opt_del_ptr_8h" name="TOptDelPtr.h" local="yes" imported="no">istd/TOptDelPtr.h</includes>
+    <includes id="_t_composed_factory_8h" name="TComposedFactory.h" local="yes" imported="no">istd/TComposedFactory.h</includes>
+    <includes id="_t_single_factory_8h" name="TSingleFactory.h" local="yes" imported="no">istd/TSingleFactory.h</includes>
+    <includes id="_c_multi_model_observer_base_8h" name="CMultiModelObserverBase.h" local="yes" imported="no">imod/CMultiModelObserverBase.h</includes>
+    <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
+    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
+    <includes id="_i_attributes_manager_8h" name="IAttributesManager.h" local="yes" imported="no">iattr/IAttributesManager.h</includes>
+    <includes id="_c_standard_attributes_factory_8h" name="CStandardAttributesFactory.h" local="yes" imported="no">iattr/CStandardAttributesFactory.h</includes>
+    <class kind="class">iattr::CAttributesManager</class>
+    <namespace>iattr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CEnumAttributeMetaInfo.h</name>
+    <path>C:/Temp/Acf/Include/iattr/</path>
+    <filename>_c_enum_attribute_meta_info_8h</filename>
+    <includes id="_t_opt_del_ptr_8h" name="TOptDelPtr.h" local="yes" imported="no">istd/TOptDelPtr.h</includes>
+    <includes id="_i_enum_attribute_meta_info_8h" name="IEnumAttributeMetaInfo.h" local="yes" imported="no">iattr/IEnumAttributeMetaInfo.h</includes>
+    <includes id="_i_attributes_provider_8h" name="IAttributesProvider.h" local="yes" imported="no">iattr/IAttributesProvider.h</includes>
+    <class kind="class">iattr::CEnumAttributeMetaInfo</class>
+    <namespace>iattr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CStandardAttributesFactory.h</name>
+    <path>C:/Temp/Acf/Include/iattr/</path>
+    <filename>_c_standard_attributes_factory_8h</filename>
+    <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
+    <class kind="class">iattr::CStandardAttributesFactory</class>
+    <namespace>iattr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>iattr.h</name>
+    <path>C:/Temp/Acf/Include/iattr/</path>
+    <filename>iattr_8h</filename>
+    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
+    <includes id="iser_8h" name="iser.h" local="yes" imported="no">iser/iser.h</includes>
+    <namespace>iattr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IAttributeMetaInfo.h</name>
+    <path>C:/Temp/Acf/Include/iattr/</path>
+    <filename>_i_attribute_meta_info_8h</filename>
+    <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
+    <class kind="class">iattr::IAttributeMetaInfo</class>
+    <namespace>iattr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IAttributesManager.h</name>
+    <path>C:/Temp/Acf/Include/iattr/</path>
+    <filename>_i_attributes_manager_8h</filename>
+    <includes id="_i_attributes_provider_8h" name="IAttributesProvider.h" local="yes" imported="no">iattr/IAttributesProvider.h</includes>
+    <class kind="class">iattr::IAttributesManager</class>
+    <namespace>iattr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IAttributesMetaInfoProvider.h</name>
+    <path>C:/Temp/Acf/Include/iattr/</path>
+    <filename>_i_attributes_meta_info_provider_8h</filename>
+    <includes id="_i_attributes_provider_8h" name="IAttributesProvider.h" local="yes" imported="no">iattr/IAttributesProvider.h</includes>
+    <includes id="_i_attribute_meta_info_8h" name="IAttributeMetaInfo.h" local="yes" imported="no">iattr/IAttributeMetaInfo.h</includes>
+    <class kind="class">iattr::IAttributesMetaInfoProvider</class>
+    <namespace>iattr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IAttributesProvider.h</name>
+    <path>C:/Temp/Acf/Include/iattr/</path>
+    <filename>_i_attributes_provider_8h</filename>
+    <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
+    <class kind="class">iattr::IAttributesProvider</class>
+    <namespace>iattr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IEnumAttributeMetaInfo.h</name>
+    <path>C:/Temp/Acf/Include/iattr/</path>
+    <filename>_i_enum_attribute_meta_info_8h</filename>
+    <includes id="_i_attribute_meta_info_8h" name="IAttributeMetaInfo.h" local="yes" imported="no">iattr/IAttributeMetaInfo.h</includes>
+    <class kind="class">iattr::IEnumAttributeMetaInfo</class>
+    <namespace>iattr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TAttribute.h</name>
+    <path>C:/Temp/Acf/Include/iattr/</path>
+    <filename>_t_attribute_8h</filename>
+    <includes id="_c_change_notifier_8h" name="CChangeNotifier.h" local="yes" imported="no">istd/CChangeNotifier.h</includes>
+    <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
+    <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
+    <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
+    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
+    <includes id="_t_copy_serialized_wrap_8h" name="TCopySerializedWrap.h" local="yes" imported="no">iser/TCopySerializedWrap.h</includes>
+    <includes id="_i_attribute_meta_info_8h" name="IAttributeMetaInfo.h" local="yes" imported="no">iattr/IAttributeMetaInfo.h</includes>
+    <class kind="class">iattr::TAttribute</class>
+    <namespace>iattr</namespace>
+    <member kind="typedef">
+      <type>TAttribute&lt; int &gt;</type>
+      <name>CIntegerAttribute</name>
+      <anchorfile>namespaceiattr.html</anchorfile>
+      <anchor>a1e6059fe0650e2fc5adde8b0efb42ab8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TAttribute&lt; double &gt;</type>
+      <name>CRealAttribute</name>
+      <anchorfile>namespaceiattr.html</anchorfile>
+      <anchor>ae991ee183ff3dc780e903f9b1913b986</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TAttribute&lt; bool &gt;</type>
+      <name>CBooleanAttribute</name>
+      <anchorfile>namespaceiattr.html</anchorfile>
+      <anchor>ab6cb4eda3d2e4bbb9dd192461cc690d8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TAttribute&lt; QString &gt;</type>
+      <name>CStringAttribute</name>
+      <anchorfile>namespaceiattr.html</anchorfile>
+      <anchor>a4f9be3c71256e8b23e4a28c7ac82e4dc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TAttribute&lt; QByteArray &gt;</type>
+      <name>CIdAttribute</name>
+      <anchorfile>namespaceiattr.html</anchorfile>
+      <anchor>a85c8cc45779e1c77f46b9d671c3ed8a6</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>TMultiAttribute.h</name>
+    <path>C:/Temp/Acf/Include/iattr/</path>
+    <filename>_t_multi_attribute_8h</filename>
+    <includes id="_c_change_notifier_8h" name="CChangeNotifier.h" local="yes" imported="no">istd/CChangeNotifier.h</includes>
+    <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
+    <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
+    <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
+    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
+    <includes id="_t_copy_serialized_wrap_8h" name="TCopySerializedWrap.h" local="yes" imported="no">iser/TCopySerializedWrap.h</includes>
+    <includes id="_i_attribute_meta_info_8h" name="IAttributeMetaInfo.h" local="yes" imported="no">iattr/IAttributeMetaInfo.h</includes>
+    <class kind="class">iattr::TMultiAttribute</class>
+    <class kind="struct">iattr::TMultiAttribute::Wrap</class>
+    <namespace>iattr</namespace>
+    <member kind="typedef">
+      <type>TMultiAttribute&lt; int &gt;</type>
+      <name>CIntegerListAttribute</name>
+      <anchorfile>namespaceiattr.html</anchorfile>
+      <anchor>ad3eb81f2ad7b36d61950067c6730d97c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TMultiAttribute&lt; double &gt;</type>
+      <name>CRealListAttribute</name>
+      <anchorfile>namespaceiattr.html</anchorfile>
+      <anchor>ae066e36551c0c24b47ed2bbe1ea56851</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TMultiAttribute&lt; bool &gt;</type>
+      <name>CBooleanListAttribute</name>
+      <anchorfile>namespaceiattr.html</anchorfile>
+      <anchor>a4956b630ff562fb0b911e694fe00ef6d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TMultiAttribute&lt; QString &gt;</type>
+      <name>CStringListAttribute</name>
+      <anchorfile>namespaceiattr.html</anchorfile>
+      <anchor>aac669ba57c3f591c07844785f4e6289a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TMultiAttribute&lt; QByteArray &gt;</type>
+      <name>CIdListAttribute</name>
+      <anchorfile>namespaceiattr.html</anchorfile>
+      <anchor>aa2b34a03eedf6fc3956ad9ba526e32b9</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
     <name>CApplicationInfoComp.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_application_info_comp_8h</filename>
@@ -1064,12 +1246,12 @@
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_c_component_base_8h</filename>
     <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
+    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">iattr/TAttribute.h</includes>
+    <includes id="_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">iattr/TMultiAttribute.h</includes>
     <includes id="_i_component_8h" name="IComponent.h" local="yes" imported="no">icomp/IComponent.h</includes>
     <includes id="_i_composite_component_8h" name="ICompositeComponent.h" local="yes" imported="no">icomp/ICompositeComponent.h</includes>
     <includes id="_i_real_component_static_info_8h" name="IRealComponentStaticInfo.h" local="yes" imported="no">icomp/IRealComponentStaticInfo.h</includes>
     <includes id="_t_interface_registrator_8h" name="TInterfaceRegistrator.h" local="yes" imported="no">icomp/TInterfaceRegistrator.h</includes>
-    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
-    <includes id="_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">icomp/TMultiAttribute.h</includes>
     <includes id="_t_attribute_member_8h" name="TAttributeMember.h" local="yes" imported="no">icomp/TAttributeMember.h</includes>
     <includes id="_t_multi_attribute_member_8h" name="TMultiAttributeMember.h" local="yes" imported="no">icomp/TMultiAttributeMember.h</includes>
     <includes id="_t_reference_member_8h" name="TReferenceMember.h" local="yes" imported="no">icomp/TReferenceMember.h</includes>
@@ -1245,7 +1427,8 @@
     <name>CMultiReferenceAttribute.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_c_multi_reference_attribute_8h</filename>
-    <includes id="_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">icomp/TMultiAttribute.h</includes>
+    <includes id="_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">iattr/TMultiAttribute.h</includes>
+    <includes id="_i_attribute_static_info_8h" name="IAttributeStaticInfo.h" local="yes" imported="no">icomp/IAttributeStaticInfo.h</includes>
     <class kind="class">icomp::CMultiReferenceAttribute</class>
     <namespace>icomp</namespace>
   </compound>
@@ -1262,7 +1445,8 @@
     <name>CReferenceAttribute.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_c_reference_attribute_8h</filename>
-    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
+    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">iattr/TAttribute.h</includes>
+    <includes id="_i_attribute_static_info_8h" name="IAttributeStaticInfo.h" local="yes" imported="no">icomp/IAttributeStaticInfo.h</includes>
     <class kind="class">icomp::CReferenceAttribute</class>
     <namespace>icomp</namespace>
   </compound>
@@ -1299,11 +1483,11 @@
     <filename>_c_sim_component_context_base_8h</filename>
     <includes id="_t_i_factory_8h" name="TIFactory.h" local="yes" imported="no">istd/TIFactory.h</includes>
     <includes id="_c_id_manip_base_8h" name="CIdManipBase.h" local="yes" imported="no">istd/CIdManipBase.h</includes>
+    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">iattr/TAttribute.h</includes>
+    <includes id="_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">iattr/TMultiAttribute.h</includes>
     <includes id="_i_component_8h" name="IComponent.h" local="yes" imported="no">icomp/IComponent.h</includes>
     <includes id="_i_component_context_8h" name="IComponentContext.h" local="yes" imported="no">icomp/IComponentContext.h</includes>
     <includes id="_i_component_static_info_8h" name="IComponentStaticInfo.h" local="yes" imported="no">icomp/IComponentStaticInfo.h</includes>
-    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
-    <includes id="_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">icomp/TMultiAttribute.h</includes>
     <includes id="_c_registry_element_8h" name="CRegistryElement.h" local="yes" imported="no">icomp/CRegistryElement.h</includes>
     <class kind="class">icomp::CSimComponentContextBase</class>
     <namespace>icomp</namespace>
@@ -1322,7 +1506,8 @@
     <filename>_i_attribute_static_info_8h</filename>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
-    <includes id="_i_component_static_info_8h" name="IComponentStaticInfo.h" local="yes" imported="no">icomp/IComponentStaticInfo.h</includes>
+    <includes id="_i_attribute_meta_info_8h" name="IAttributeMetaInfo.h" local="yes" imported="no">iattr/IAttributeMetaInfo.h</includes>
+    <includes id="_i_element_static_info_8h" name="IElementStaticInfo.h" local="yes" imported="no">icomp/IElementStaticInfo.h</includes>
     <class kind="class">icomp::IAttributeStaticInfo</class>
     <namespace>icomp</namespace>
   </compound>
@@ -1374,6 +1559,7 @@
     <name>IComponentStaticInfo.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_i_component_static_info_8h</filename>
+    <includes id="_i_attributes_meta_info_provider_8h" name="IAttributesMetaInfoProvider.h" local="yes" imported="no">iattr/IAttributesMetaInfoProvider.h</includes>
     <includes id="_i_element_static_info_8h" name="IElementStaticInfo.h" local="yes" imported="no">icomp/IElementStaticInfo.h</includes>
     <class kind="class">icomp::IComponentStaticInfo</class>
     <namespace>icomp</namespace>
@@ -1466,6 +1652,7 @@
     <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
+    <includes id="_i_attributes_provider_8h" name="IAttributesProvider.h" local="yes" imported="no">iattr/IAttributesProvider.h</includes>
     <class kind="class">icomp::IRegistryElement</class>
     <class kind="struct">icomp::IRegistryElement::AttributeInfo</class>
     <namespace>icomp</namespace>
@@ -1479,66 +1666,17 @@
     <namespace>icomp</namespace>
   </compound>
   <compound kind="file">
-    <name>TAttribute.h</name>
-    <path>C:/Temp/Acf/Include/icomp/</path>
-    <filename>_t_attribute_8h</filename>
-    <includes id="_c_change_notifier_8h" name="CChangeNotifier.h" local="yes" imported="no">istd/CChangeNotifier.h</includes>
-    <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
-    <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
-    <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
-    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
-    <includes id="_t_copy_serialized_wrap_8h" name="TCopySerializedWrap.h" local="yes" imported="no">iser/TCopySerializedWrap.h</includes>
-    <includes id="_i_attribute_static_info_8h" name="IAttributeStaticInfo.h" local="yes" imported="no">icomp/IAttributeStaticInfo.h</includes>
-    <class kind="class">icomp::TAttribute</class>
-    <namespace>icomp</namespace>
-    <member kind="typedef">
-      <type>TAttribute&lt; int &gt;</type>
-      <name>CIntegerAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a7a97baa626cbe19dbcf51760d974ffd2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TAttribute&lt; double &gt;</type>
-      <name>CRealAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>afc71fb7a40b243943e76f1e36322b4ec</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TAttribute&lt; bool &gt;</type>
-      <name>CBooleanAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a1fcd474ee984c8067dc65f3f5ebb7e36</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TAttribute&lt; QString &gt;</type>
-      <name>CStringAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a13767d93be75cf3593a4b0bef02c6831</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TAttribute&lt; QByteArray &gt;</type>
-      <name>CIdAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a97fc5d054b20605049466e07efde54a1</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>TAttributeMember.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_t_attribute_member_8h</filename>
+    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">iattr/TAttribute.h</includes>
     <includes id="_i_composite_component_8h" name="ICompositeComponent.h" local="yes" imported="no">icomp/ICompositeComponent.h</includes>
     <includes id="_i_component_context_8h" name="IComponentContext.h" local="yes" imported="no">icomp/IComponentContext.h</includes>
     <includes id="_i_real_attribute_static_info_8h" name="IRealAttributeStaticInfo.h" local="yes" imported="no">icomp/IRealAttributeStaticInfo.h</includes>
-    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
     <includes id="_c_component_context_8h" name="CComponentContext.h" local="yes" imported="no">icomp/CComponentContext.h</includes>
     <class kind="class">icomp::TAttributeMemberBase</class>
     <class kind="class">icomp::TAttributeMember</class>
-    <class kind="class">icomp::TAttributeMember&lt; TAttribute&lt; QString &gt; &gt;</class>
+    <class kind="class">icomp::TAttributeMember&lt; iattr::TAttribute&lt; QString &gt; &gt;</class>
     <namespace>icomp</namespace>
   </compound>
   <compound kind="file">
@@ -1632,64 +1770,14 @@
     <namespace>icomp</namespace>
   </compound>
   <compound kind="file">
-    <name>TMultiAttribute.h</name>
-    <path>C:/Temp/Acf/Include/icomp/</path>
-    <filename>_t_multi_attribute_8h</filename>
-    <includes id="_c_change_notifier_8h" name="CChangeNotifier.h" local="yes" imported="no">istd/CChangeNotifier.h</includes>
-    <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
-    <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
-    <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
-    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
-    <includes id="_t_copy_serialized_wrap_8h" name="TCopySerializedWrap.h" local="yes" imported="no">iser/TCopySerializedWrap.h</includes>
-    <includes id="_i_attribute_static_info_8h" name="IAttributeStaticInfo.h" local="yes" imported="no">icomp/IAttributeStaticInfo.h</includes>
-    <class kind="class">icomp::TMultiAttribute</class>
-    <class kind="struct">icomp::TMultiAttribute::Wrap</class>
-    <namespace>icomp</namespace>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; int &gt;</type>
-      <name>CIntegerListAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>ad56a49d55c906568b857958eed740600</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; double &gt;</type>
-      <name>CRealListAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a833bca691b1565887b6d7d87125fbae2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; bool &gt;</type>
-      <name>CBooleanListAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a84fd27bf28b0b2498350da9ed48d7095</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; QString &gt;</type>
-      <name>CStringListAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a7f0238135fe61df7092584a7839e82f8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; QByteArray &gt;</type>
-      <name>CIdListAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>aedd957caf1f344d978ee81e7257ba077</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>TMultiAttributeMember.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_t_multi_attribute_member_8h</filename>
+    <includes id="_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">iattr/TMultiAttribute.h</includes>
     <includes id="_i_component_context_8h" name="IComponentContext.h" local="yes" imported="no">icomp/IComponentContext.h</includes>
-    <includes id="_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">icomp/TMultiAttribute.h</includes>
     <class kind="class">icomp::TMultiAttributeMemberBase</class>
     <class kind="class">icomp::TMultiAttributeMember</class>
-    <class kind="class">icomp::TMultiAttributeMember&lt; TMultiAttribute&lt; QString &gt; &gt;</class>
+    <class kind="class">icomp::TMultiAttributeMember&lt; iattr::TMultiAttribute&lt; QString &gt; &gt;</class>
     <namespace>icomp</namespace>
   </compound>
   <compound kind="file">
@@ -3606,7 +3694,7 @@
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_t_params_ptr_8h</filename>
     <includes id="_t_pointer_base_8h" name="TPointerBase.h" local="yes" imported="no">istd/TPointerBase.h</includes>
-    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
+    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">iattr/TAttribute.h</includes>
     <includes id="_t_attribute_member_8h" name="TAttributeMember.h" local="yes" imported="no">icomp/TAttributeMember.h</includes>
     <includes id="_t_reference_member_8h" name="TReferenceMember.h" local="yes" imported="no">icomp/TReferenceMember.h</includes>
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
@@ -4569,8 +4657,8 @@
     <name>CSplashScreenGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_splash_screen_gui_comp_8h</filename>
+    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">iattr/TAttribute.h</includes>
     <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
-    <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">icomp/TAttribute.h</includes>
     <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
     <class kind="class">iqtgui::CSplashScreenGuiComp</class>
     <namespace>iqtgui</namespace>
@@ -5197,9 +5285,17 @@
     <name>IObject.h</name>
     <path>C:/Temp/Acf/Include/iser/</path>
     <filename>_i_object_8h</filename>
+    <includes id="_t_i_factory_8h" name="TIFactory.h" local="yes" imported="no">istd/TIFactory.h</includes>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <class kind="class">iser::IObject</class>
     <namespace>iser</namespace>
+    <member kind="typedef">
+      <type>istd::TIFactory&lt; IObject &gt;</type>
+      <name>IObjectFactory</name>
+      <anchorfile>namespaceiser.html</anchorfile>
+      <anchor>a1f4aa821cb983a9dc62f6e03096a6f04</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>iser.h</name>
@@ -14427,6 +14523,877 @@
     </member>
   </compound>
   <compound kind="namespace">
+    <name>iattr</name>
+    <filename>namespaceiattr.html</filename>
+    <class kind="class">iattr::CAttributesManager</class>
+    <class kind="class">iattr::CEnumAttributeMetaInfo</class>
+    <class kind="class">iattr::CStandardAttributesFactory</class>
+    <class kind="class">iattr::IAttributeMetaInfo</class>
+    <class kind="class">iattr::IAttributesManager</class>
+    <class kind="class">iattr::IAttributesMetaInfoProvider</class>
+    <class kind="class">iattr::IAttributesProvider</class>
+    <class kind="class">iattr::IEnumAttributeMetaInfo</class>
+    <class kind="class">iattr::TAttribute</class>
+    <class kind="class">iattr::TMultiAttribute</class>
+    <member kind="typedef">
+      <type>TAttribute&lt; int &gt;</type>
+      <name>CIntegerAttribute</name>
+      <anchorfile>namespaceiattr.html</anchorfile>
+      <anchor>a1e6059fe0650e2fc5adde8b0efb42ab8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TAttribute&lt; double &gt;</type>
+      <name>CRealAttribute</name>
+      <anchorfile>namespaceiattr.html</anchorfile>
+      <anchor>ae991ee183ff3dc780e903f9b1913b986</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TAttribute&lt; bool &gt;</type>
+      <name>CBooleanAttribute</name>
+      <anchorfile>namespaceiattr.html</anchorfile>
+      <anchor>ab6cb4eda3d2e4bbb9dd192461cc690d8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TAttribute&lt; QString &gt;</type>
+      <name>CStringAttribute</name>
+      <anchorfile>namespaceiattr.html</anchorfile>
+      <anchor>a4f9be3c71256e8b23e4a28c7ac82e4dc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TAttribute&lt; QByteArray &gt;</type>
+      <name>CIdAttribute</name>
+      <anchorfile>namespaceiattr.html</anchorfile>
+      <anchor>a85c8cc45779e1c77f46b9d671c3ed8a6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TMultiAttribute&lt; int &gt;</type>
+      <name>CIntegerListAttribute</name>
+      <anchorfile>namespaceiattr.html</anchorfile>
+      <anchor>ad3eb81f2ad7b36d61950067c6730d97c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TMultiAttribute&lt; double &gt;</type>
+      <name>CRealListAttribute</name>
+      <anchorfile>namespaceiattr.html</anchorfile>
+      <anchor>ae066e36551c0c24b47ed2bbe1ea56851</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TMultiAttribute&lt; bool &gt;</type>
+      <name>CBooleanListAttribute</name>
+      <anchorfile>namespaceiattr.html</anchorfile>
+      <anchor>a4956b630ff562fb0b911e694fe00ef6d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TMultiAttribute&lt; QString &gt;</type>
+      <name>CStringListAttribute</name>
+      <anchorfile>namespaceiattr.html</anchorfile>
+      <anchor>aac669ba57c3f591c07844785f4e6289a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TMultiAttribute&lt; QByteArray &gt;</type>
+      <name>CIdListAttribute</name>
+      <anchorfile>namespaceiattr.html</anchorfile>
+      <anchor>aa2b34a03eedf6fc3956ad9ba526e32b9</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iattr::CAttributesManager</name>
+    <filename>classiattr_1_1_c_attributes_manager.html</filename>
+    <base virtualness="virtual">iattr::IAttributesManager</base>
+    <base protection="protected">imod::CMultiModelObserverBase</base>
+    <member kind="function">
+      <type></type>
+      <name>CAttributesManager</name>
+      <anchorfile>classiattr_1_1_c_attributes_manager.html</anchorfile>
+      <anchor>a34c7c8b7d494541f4294a8930fa5eaed</anchor>
+      <arglist>(const iser::IObjectFactory *factoryPtr=&amp;CStandardAttributesFactory::GetInstance())</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetAttributesFactory</name>
+      <anchorfile>classiattr_1_1_c_attributes_manager.html</anchorfile>
+      <anchor>a102ca5c6b2cf36ffb019f1ce424836ed</anchor>
+      <arglist>(const iser::IObjectFactory *factoryPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveAllAttributes</name>
+      <anchorfile>classiattr_1_1_c_attributes_manager.html</anchorfile>
+      <anchor>a243048f145076686ccbed7d9b4e21205</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertAttribute</name>
+      <anchorfile>classiattr_1_1_c_attributes_manager.html</anchorfile>
+      <anchor>ae079ae4136e09db213be1daf021180b5</anchor>
+      <arglist>(const QByteArray &amp;attributeId, iser::IObject *attributePtr, bool releaseFlag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual AttributeIds</type>
+      <name>GetAttributeIds</name>
+      <anchorfile>classiattr_1_1_c_attributes_manager.html</anchorfile>
+      <anchor>a83ee72e4dc2def6bd177e044d7184bd4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iser::IObject *</type>
+      <name>GetAttribute</name>
+      <anchorfile>classiattr_1_1_c_attributes_manager.html</anchorfile>
+      <anchor>aa687bb26e525d27b75f88cf31605758c</anchor>
+      <arglist>(const QByteArray &amp;attributeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiattr_1_1_c_attributes_manager.html</anchorfile>
+      <anchor>a61e4bf8658eaa3a811452a8f398b3e3f</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>BeforeUpdate</name>
+      <anchorfile>classiattr_1_1_c_attributes_manager.html</anchorfile>
+      <anchor>ab63920c6bd09148f0313c03b073ca227</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classiattr_1_1_c_attributes_manager.html</anchorfile>
+      <anchor>aeffdde9b5b42ddffec17a9623b6c9a39</anchor>
+      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>EnsureModelsDetached</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>a6bfa8b39bc6680c04dbfc20966257289</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>a49b4ebda2cb807c57bbdea726ecc2f8f</anchor>
+      <arglist>(IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMultiModelObserverBase</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>aeadfce921ec80b2066bec1294403cdb0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CMultiModelObserverBase</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>abeb03f6db4c68b652dce9307e3d307a3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>IModel *</type>
+      <name>GetModelPtr</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>a44e4ecc264d102606dd19b954b4b861e</anchor>
+      <arglist>(int modelIndex) const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetModelCount</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>a9b9d05f1e8eed6f32dd8458746860cce</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetObservedIds</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>a37bb58c2bb0a2a4745badfce29d8d80d</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsModelAttached</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>a92391a2b6e1dcccfc3987e89ace6da32</anchor>
+      <arglist>(const IModel *modelPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnModelAttached</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>a4244448c597d00be69db6acf256d09fc</anchor>
+      <arglist>(IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnModelDetached</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>aa95c00bb92acfa85585ecc6fccabd410</anchor>
+      <arglist>(IModel *modelPtr)</arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ChangeFlags</name>
+      <anchorfile>classiattr_1_1_i_attributes_provider.html</anchorfile>
+      <anchor>ad4c3341081a786f5ad81cc6a15ad4358</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_RESET</name>
+      <anchorfile>classiattr_1_1_i_attributes_provider.html</anchorfile>
+      <anchor>ad4c3341081a786f5ad81cc6a15ad4358af042aacf2418c01e4267d997ff3c3db3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_ATTR_REMOVED</name>
+      <anchorfile>classiattr_1_1_i_attributes_provider.html</anchorfile>
+      <anchor>ad4c3341081a786f5ad81cc6a15ad4358a374a92ced07a102d606a9f2eedb12bdd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_ATTR_ADDED</name>
+      <anchorfile>classiattr_1_1_i_attributes_provider.html</anchorfile>
+      <anchor>ad4c3341081a786f5ad81cc6a15ad4358a113b327e231901768e363bac3b7806cc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QSet&lt; QByteArray &gt;</type>
+      <name>AttributeIds</name>
+      <anchorfile>classiattr_1_1_i_attributes_provider.html</anchorfile>
+      <anchor>a8e2ee2446ea830316f14d91a5e8d23df</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iattr::CEnumAttributeMetaInfo</name>
+    <filename>classiattr_1_1_c_enum_attribute_meta_info.html</filename>
+    <base virtualness="virtual">iattr::IEnumAttributeMetaInfo</base>
+    <base protection="protected" virtualness="virtual">iattr::IAttributesProvider</base>
+    <member kind="function">
+      <type></type>
+      <name>CEnumAttributeMetaInfo</name>
+      <anchorfile>classiattr_1_1_c_enum_attribute_meta_info.html</anchorfile>
+      <anchor>ac326a598e751185b7731d06948f81bf8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetOtherValueAllowed</name>
+      <anchorfile>classiattr_1_1_c_enum_attribute_meta_info.html</anchorfile>
+      <anchor>af18ecf050f9b3ee556f89e9e94e7db84</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>InsertOption</name>
+      <anchorfile>classiattr_1_1_c_enum_attribute_meta_info.html</anchorfile>
+      <anchor>a2f932752a7bf9a3ccd1591e343a469e4</anchor>
+      <arglist>(const QString &amp;description, const iser::IObject *valuePtr, bool releaseFlag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsAnyValueAllowed</name>
+      <anchorfile>classiattr_1_1_c_enum_attribute_meta_info.html</anchorfile>
+      <anchor>ad78fe2bdbe0f6317f119270ec5c1ba55</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetEnumsCount</name>
+      <anchorfile>classiattr_1_1_c_enum_attribute_meta_info.html</anchorfile>
+      <anchor>a2d657ffac6bbbc4110f2e3d293661192</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetEnumDescription</name>
+      <anchorfile>classiattr_1_1_c_enum_attribute_meta_info.html</anchorfile>
+      <anchor>a663100d29178d9b0688f962f7c51443a</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iser::IObject &amp;</type>
+      <name>GetEnum</name>
+      <anchorfile>classiattr_1_1_c_enum_attribute_meta_info.html</anchorfile>
+      <anchor>afd5e7813de1d5dfdbf15e5bb89ad6cb4</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetAttributeDescription</name>
+      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
+      <anchor>a971a50836d2d878aaa8749a4e8d95820</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const iser::IObject *</type>
+      <name>GetAttributeDefaultValue</name>
+      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
+      <anchor>ac2991a1acea7f4d8e0ac3c2b422af5a9</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QByteArray</type>
+      <name>GetAttributeTypeId</name>
+      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
+      <anchor>aa0dcb4eb5c1a1f2d9bb15b1ea683dedc</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetAttributeFlags</name>
+      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
+      <anchor>a3d0223df6f4bcc08070fea917097e79f</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>AttributeFlags</name>
+      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
+      <anchor>aa1cdd9cacdaa49d1f55506586e57141e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>AF_OBLIGATORY</name>
+      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
+      <anchor>aa1cdd9cacdaa49d1f55506586e57141ea263cd13ba95d8395ec0614632f11ae77</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>AF_NULLABLE</name>
+      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
+      <anchor>aa1cdd9cacdaa49d1f55506586e57141ea705825a95e413f1d29f7b2504fbff044</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>AF_SINGLE</name>
+      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
+      <anchor>aa1cdd9cacdaa49d1f55506586e57141ea7f7103a65f7061358641925ee0999094</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>AF_MULTIPLE</name>
+      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
+      <anchor>aa1cdd9cacdaa49d1f55506586e57141ea837a670f0b53029709991017675e8cd1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>AF_VALUE</name>
+      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
+      <anchor>aa1cdd9cacdaa49d1f55506586e57141eaa6ec3f3871ebb1a14b240e826d2c24e5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual AttributeIds</type>
+      <name>GetAttributeIds</name>
+      <anchorfile>classiattr_1_1_i_attributes_provider.html</anchorfile>
+      <anchor>a6c95be450ce2ffeaff8fc9d67d23924d</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual iser::IObject *</type>
+      <name>GetAttribute</name>
+      <anchorfile>classiattr_1_1_i_attributes_provider.html</anchorfile>
+      <anchor>aff2e34e5fe7aa267ee7238ce73c3c5d1</anchor>
+      <arglist>(const QByteArray &amp;attributeId) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iattr::CStandardAttributesFactory</name>
+    <filename>classiattr_1_1_c_standard_attributes_factory.html</filename>
+    <base virtualness="virtual">istd::TIFactory</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iser::IObject *</type>
+      <name>CreateInstance</name>
+      <anchorfile>classiattr_1_1_c_standard_attributes_factory.html</anchorfile>
+      <anchor>abc96a7be2406d73c8cb2b710165151c4</anchor>
+      <arglist>(const QByteArray &amp;keyId=&quot;&quot;) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual KeyList</type>
+      <name>GetFactoryKeys</name>
+      <anchorfile>classiattr_1_1_c_standard_attributes_factory.html</anchorfile>
+      <anchor>a3de178fc2c85af1798f43eb2ddeccf25</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const CStandardAttributesFactory &amp;</type>
+      <name>GetInstance</name>
+      <anchorfile>classiattr_1_1_c_standard_attributes_factory.html</anchorfile>
+      <anchor>aa45674326e2738b9d4344cedfd36bc1a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="typedef">
+      <type>Interface</type>
+      <name>InterfaceType</name>
+      <anchorfile>classistd_1_1_t_i_factory.html</anchorfile>
+      <anchor>a4a533e49b6efed0c5a2cc5fa02729bcd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QVector&lt; QByteArray &gt;</type>
+      <name>KeyList</name>
+      <anchorfile>classistd_1_1_i_factory_info.html</anchorfile>
+      <anchor>ac357ea42763cc3625d85f4cce9fb2312</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iattr::IAttributeMetaInfo</name>
+    <filename>classiattr_1_1_i_attribute_meta_info.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+  </compound>
+  <compound kind="class">
+    <name>iattr::IAttributesManager</name>
+    <filename>classiattr_1_1_i_attributes_manager.html</filename>
+    <base virtualness="virtual">iattr::IAttributesProvider</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>RemoveAllAttributes</name>
+      <anchorfile>classiattr_1_1_i_attributes_manager.html</anchorfile>
+      <anchor>afe0e54272eede603f497ac338909a506</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>InsertAttribute</name>
+      <anchorfile>classiattr_1_1_i_attributes_manager.html</anchorfile>
+      <anchor>a9cb73abe8d949c35416f997068980823</anchor>
+      <arglist>(const QByteArray &amp;attributeId, iser::IObject *attributePtr, bool releaseFlag)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iattr::IAttributesMetaInfoProvider</name>
+    <filename>classiattr_1_1_i_attributes_meta_info_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual IAttributesProvider::AttributeIds</type>
+      <name>GetAttributeMetaIds</name>
+      <anchorfile>classiattr_1_1_i_attributes_meta_info_provider.html</anchorfile>
+      <anchor>a537ef668fc7be70d9984d23f63b37fe6</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const IAttributeMetaInfo *</type>
+      <name>GetAttributeMetaInfo</name>
+      <anchorfile>classiattr_1_1_i_attributes_meta_info_provider.html</anchorfile>
+      <anchor>a47ee4f4004c234bb9eb194549ada8d74</anchor>
+      <arglist>(const QByteArray &amp;attributeId) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iattr::IAttributesProvider</name>
+    <filename>classiattr_1_1_i_attributes_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+  </compound>
+  <compound kind="class">
+    <name>iattr::IEnumAttributeMetaInfo</name>
+    <filename>classiattr_1_1_i_enum_attribute_meta_info.html</filename>
+    <base>iattr::IAttributeMetaInfo</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsAnyValueAllowed</name>
+      <anchorfile>classiattr_1_1_i_enum_attribute_meta_info.html</anchorfile>
+      <anchor>ad1210ffc2cbb1f665b07e3f82baf51fe</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetEnumsCount</name>
+      <anchorfile>classiattr_1_1_i_enum_attribute_meta_info.html</anchorfile>
+      <anchor>a31be3bba13ca832b1a9a140430f28cad</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetEnumDescription</name>
+      <anchorfile>classiattr_1_1_i_enum_attribute_meta_info.html</anchorfile>
+      <anchor>ad2b220f441c00bd1b340fc8b6a27638e</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const iser::IObject &amp;</type>
+      <name>GetEnum</name>
+      <anchorfile>classiattr_1_1_i_enum_attribute_meta_info.html</anchorfile>
+      <anchor>a95bc16c1bcd27fedbeeb1898a985e52c</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iattr::TAttribute</name>
+    <filename>classiattr_1_1_t_attribute.html</filename>
+    <templarg>Value</templarg>
+    <base virtualness="virtual">TCopySerializedWrap&lt; iser::IObject &gt;</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>DefaultAttributeFlags</name>
+      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
+      <anchor>a01f1d786f0c566af71fcc4cafaa84a9e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>DAF_OBLIGATORY</name>
+      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
+      <anchor>a01f1d786f0c566af71fcc4cafaa84a9ea17f7fe382e27dee8e8e097e9f7d77855</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>DAF_OPTIONAL</name>
+      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
+      <anchor>a01f1d786f0c566af71fcc4cafaa84a9ea5c5d3aceae308a9c35334c5acc8026ed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Value</type>
+      <name>ValueType</name>
+      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
+      <anchor>aae568507bc87c076732e047b8413b6b5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iser::TCopySerializedWrap&lt; iser::IObject &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
+      <anchor>a9734cf7f4ecaf9f70e147edf86f62308</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iser::IObject</type>
+      <name>BaseClass</name>
+      <anchorfile>classiser_1_1_t_copy_serialized_wrap.html</anchorfile>
+      <anchor>afb8e46d31eab921576865897cd65f46e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TAttribute</name>
+      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
+      <anchor>a08fecc770cf4c537047ae45018100210</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TAttribute</name>
+      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
+      <anchor>a4f32964e3d8608ca5746d9761f099d88</anchor>
+      <arglist>(const TAttribute &amp;attribute)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TAttribute</name>
+      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
+      <anchor>a022c725e408b43abe25fdde88695175e</anchor>
+      <arglist>(const Value &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const Value &amp;</type>
+      <name>GetValue</name>
+      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
+      <anchor>ac610ebe980c20935f50aa607219734cb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetValue</name>
+      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
+      <anchor>abcb55aa76d2974024014986ccbf9f2bf</anchor>
+      <arglist>(const Value &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
+      <anchor>a8448e0250b45906c6bac13154cbde452</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
+      <anchor>a6c01dced06bb15c6ca30c7a5ccc910d0</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
+      <anchor>a451a2cc1e4e07e0c3431b1a65cf9f571</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
+      <anchor>a6e8990418bc5655529ab4e0cd9caf4c9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
+      <anchor>a500fa1feea9a81e4b2fb2a71369d4d26</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
+      <anchor>a608568bffddb7fe2406e96a8053abf28</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
+      <anchor>ab9a6ebe0b84332b0d9f921a7a881e69e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classiser_1_1_t_copy_serialized_wrap.html</anchorfile>
+      <anchor>abb076ddd411d9cd425963b0dffa21f18</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiser_1_1_t_copy_serialized_wrap.html</anchorfile>
+      <anchor>aa76477d92d3f5d0a55b6a19af4561a47</anchor>
+      <arglist>(const istd::IChangeable &amp;object, istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEqual</name>
+      <anchorfile>classiser_1_1_t_copy_serialized_wrap.html</anchorfile>
+      <anchor>af3d40308b3497f10d37d531ca9a509f2</anchor>
+      <arglist>(const istd::IChangeable &amp;object) const</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
+      <anchor>aab4c3f97c68a4e0ab1ff51c0276db27c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Value</type>
+      <name>m_value</name>
+      <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
+      <anchor>a1b7af508fcc3481171319efc30d8e2ea</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iattr::TMultiAttribute</name>
+    <filename>classiattr_1_1_t_multi_attribute.html</filename>
+    <templarg>Value</templarg>
+    <base virtualness="virtual">TCopySerializedWrap&lt; iser::IObject &gt;</base>
+    <class kind="struct">iattr::TMultiAttribute::Wrap</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>DefaultAttributeFlags</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>a32adf1d602de4b6a85f2412fb252d74f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>DAF_OBLIGATORY</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>a32adf1d602de4b6a85f2412fb252d74faf1ab8e71757f95662b6d8949ea480be6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>DAF_OPTIONAL</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>a32adf1d602de4b6a85f2412fb252d74fa46d46f8d4895d2f19141a594c8a14530</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Value</type>
+      <name>ValueType</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>afa06be808341d3f3a0f79a7bc475aeae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iser::TCopySerializedWrap&lt; iser::IObject &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>aaf2e19e32853bfb1b4bb18b7c87c378c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TMultiAttribute</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>a03b71f2ff4379d2b4e254633d44ba917</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TMultiAttribute</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>a0d7496c9f7b3e0f09b3988d9d2e1fb58</anchor>
+      <arglist>(const TMultiAttribute &amp;attribute)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TMultiAttribute</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>aba43df01147bdca798eb805c27852e15</anchor>
+      <arglist>(int elementsCount, Value *valuesPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetValuesCount</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>a232d00d6676cd7783fda3f1788c59c3e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const Value &amp;</type>
+      <name>GetValueAt</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>a750620e5ecde7c8ed8dd9dfbfd3259ff</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetValueAt</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>a1dcfbf20398cddc8166ecd983a218642</anchor>
+      <arglist>(int index, const Value &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InsertValue</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>ae92f65e6d54783f28868cb9276d1cf02</anchor>
+      <arglist>(const Value &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Reset</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>a418034b8257a353f63bb3f4ab2871682</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>FindValue</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>aa0d24050a74af82f4eb05530399691ff</anchor>
+      <arglist>(const Value &amp;value) const </arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>a504ad81c4e8ac480b29dd46eee7f055d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>a521e39e50902c95dcb34d42c8c7376c9</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>a42e24aa63739af188283e0baaa670be4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>ad075d6d836cde9ec38631c21ba0654e7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>af357253d96fa8535c968aac7c7ce587f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>abc17b579e3a26ea7d77b71dd1f3cd82a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>abd07b1f914b70b83bc6b4491f06ed5c0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>a41f94643670ad6c8d63f43ac1cfccb34</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QVector&lt; Wrap &gt;</type>
+      <name>m_values</name>
+      <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
+      <anchor>aa931581d18e82e71f72ac30fc9333ca1</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>iattr::TMultiAttribute::Wrap</name>
+    <filename>structiattr_1_1_t_multi_attribute_1_1_wrap.html</filename>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>structiattr_1_1_t_multi_attribute_1_1_wrap.html</anchorfile>
+      <anchor>acff0f47b40334d341d5ee095cc14431f</anchor>
+      <arglist>(const Wrap &amp;object) const </arglist>
+    </member>
+    <member kind="variable">
+      <type>Value</type>
+      <name>value</name>
+      <anchorfile>structiattr_1_1_t_multi_attribute_1_1_wrap.html</anchorfile>
+      <anchor>aedb22530319ddc23e9ad18cb5246aa81</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
     <name>ibase</name>
     <filename>namespaceibase.html</filename>
     <class kind="class">ibase::CApplicationInfoComp</class>
@@ -16441,20 +17408,6 @@
       <name>FactoryInterface</name>
       <anchorfile>classistd_1_1_t_composed_factory.html</anchorfile>
       <anchor>a13696347c79fff4a75fdca6bbf80de00</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Interface</type>
-      <name>InterfaceType</name>
-      <anchorfile>classistd_1_1_t_i_factory.html</anchorfile>
-      <anchor>a4a533e49b6efed0c5a2cc5fa02729bcd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>QVector&lt; QByteArray &gt;</type>
-      <name>KeyList</name>
-      <anchorfile>classistd_1_1_i_factory_info.html</anchorfile>
-      <anchor>ac357ea42763cc3625d85f4cce9fb2312</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -20445,10 +21398,9 @@
     <class kind="class">icomp::IRegistry</class>
     <class kind="class">icomp::IRegistryElement</class>
     <class kind="class">icomp::IRegistryLoader</class>
-    <class kind="class">icomp::TAttribute</class>
     <class kind="class">icomp::TAttributeMemberBase</class>
     <class kind="class">icomp::TAttributeMember</class>
-    <class kind="class">icomp::TAttributeMember&lt; TAttribute&lt; QString &gt; &gt;</class>
+    <class kind="class">icomp::TAttributeMember&lt; iattr::TAttribute&lt; QString &gt; &gt;</class>
     <class kind="class">icomp::TAttributeStaticInfo</class>
     <class kind="class">icomp::TComponentCloneWrap</class>
     <class kind="class">icomp::TComponentRegistrator</class>
@@ -20458,86 +21410,15 @@
     <class kind="class">icomp::TInterfaceRegistrator</class>
     <class kind="class">icomp::TMakeComponentWrap</class>
     <class kind="class">icomp::TModelCompWrap</class>
-    <class kind="class">icomp::TMultiAttribute</class>
     <class kind="class">icomp::TMultiAttributeMemberBase</class>
     <class kind="class">icomp::TMultiAttributeMember</class>
-    <class kind="class">icomp::TMultiAttributeMember&lt; TMultiAttribute&lt; QString &gt; &gt;</class>
+    <class kind="class">icomp::TMultiAttributeMember&lt; iattr::TMultiAttribute&lt; QString &gt; &gt;</class>
     <class kind="class">icomp::TMultiFactoryMember</class>
     <class kind="class">icomp::TMultiReferenceMember</class>
     <class kind="class">icomp::TReferenceMember</class>
     <class kind="class">icomp::TSimComponentsFactory</class>
     <class kind="class">icomp::TSimComponentWrap</class>
     <class kind="class">icomp::TSubelementStaticInfo</class>
-    <member kind="typedef">
-      <type>TAttribute&lt; int &gt;</type>
-      <name>CIntegerAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a7a97baa626cbe19dbcf51760d974ffd2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TAttribute&lt; double &gt;</type>
-      <name>CRealAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>afc71fb7a40b243943e76f1e36322b4ec</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TAttribute&lt; bool &gt;</type>
-      <name>CBooleanAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a1fcd474ee984c8067dc65f3f5ebb7e36</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TAttribute&lt; QString &gt;</type>
-      <name>CStringAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a13767d93be75cf3593a4b0bef02c6831</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TAttribute&lt; QByteArray &gt;</type>
-      <name>CIdAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a97fc5d054b20605049466e07efde54a1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; int &gt;</type>
-      <name>CIntegerListAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>ad56a49d55c906568b857958eed740600</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; double &gt;</type>
-      <name>CRealListAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a833bca691b1565887b6d7d87125fbae2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; bool &gt;</type>
-      <name>CBooleanListAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a84fd27bf28b0b2498350da9ed48d7095</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; QString &gt;</type>
-      <name>CStringListAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a7f0238135fe61df7092584a7839e82f8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiAttribute&lt; QByteArray &gt;</type>
-      <name>CIdListAttribute</name>
-      <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>aedd957caf1f344d978ee81e7257ba077</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function">
       <type>uint</type>
       <name>qHash</name>
@@ -20602,16 +21483,16 @@
     </member>
     <member kind="enumvalue">
       <type>@</type>
-      <name>MGI_ATTRIBUTES</name>
+      <name>MGI_EMBEDDED_COMPONENTS</name>
       <anchorfile>classicomp_1_1_i_component_static_info.html</anchorfile>
-      <anchor>ad81479e87967938dbcfdf09433c265eba4b20bcc50b025ef6404d66b3614406bc</anchor>
+      <anchor>ad81479e87967938dbcfdf09433c265eba5c8bd8a1af78edbf4d5ec817c6d302ba</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
-      <name>MGI_EMBEDDED_COMPONENTS</name>
+      <name>MGI_LAST</name>
       <anchorfile>classicomp_1_1_i_component_static_info.html</anchorfile>
-      <anchor>ad81479e87967938dbcfdf09433c265eba5c8bd8a1af78edbf4d5ec817c6d302ba</anchor>
+      <anchor>ad81479e87967938dbcfdf09433c265eba3007d4732e48374fe52484daa3a7dec7</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -20711,6 +21592,20 @@
       <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
       <anchor>a6025bd16a9dd7b0744f9e6f1ce5e706a</anchor>
       <arglist>(const QByteArray &amp;subcomponentId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iattr::IAttributesProvider::AttributeIds</type>
+      <name>GetAttributeMetaIds</name>
+      <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
+      <anchor>a22fb54751144c992d558935ebd9df921</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iattr::IAttributeMetaInfo *</type>
+      <name>GetAttributeMetaInfo</name>
+      <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
+      <anchor>af3b94509bfc28829308fdfcc81bc217c</anchor>
+      <arglist>(const QByteArray &amp;attributeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -20969,6 +21864,20 @@
       <anchorfile>classicomp_1_1_c_component_static_info_base.html</anchorfile>
       <anchor>a2b26b96fe471edeaf1dc3f62589d64b2</anchor>
       <arglist>(const QByteArray &amp;subcomponentId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iattr::IAttributesProvider::AttributeIds</type>
+      <name>GetAttributeMetaIds</name>
+      <anchorfile>classicomp_1_1_c_component_static_info_base.html</anchorfile>
+      <anchor>aa902dc62db9a9a0fff7240cdce61fdb8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iattr::IAttributeMetaInfo *</type>
+      <name>GetAttributeMetaInfo</name>
+      <anchorfile>classicomp_1_1_c_component_static_info_base.html</anchorfile>
+      <anchor>a7dd9a18ee97d408202f64a1dd8a81907</anchor>
+      <arglist>(const QByteArray &amp;attributeId) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -21449,10 +22358,17 @@
       <arglist>(const IAttributeStaticInfo *slavePtr, const iser::IObject *defaultValuePtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const QByteArray &amp;</type>
+      <type>virtual IElementStaticInfo::Ids</type>
+      <name>GetRelatedMetaIds</name>
+      <anchorfile>classicomp_1_1_c_composite_component_static_info_1_1_attr_as_optional_delegator.html</anchorfile>
+      <anchor>aee9b16fd99b8f94bba6c3ea41637b419</anchor>
+      <arglist>(int metaGroupId, int flags, int flagsMask) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
       <name>GetAttributeDescription</name>
       <anchorfile>classicomp_1_1_c_composite_component_static_info_1_1_attr_as_optional_delegator.html</anchorfile>
-      <anchor>a2d2732554db71c24db333b024a1f0900</anchor>
+      <anchor>a9ed9a0a6272b7e5a8b7a428319740d73</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -21464,17 +22380,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
-      <name>GetAttributeTypeName</name>
+      <name>GetAttributeTypeId</name>
       <anchorfile>classicomp_1_1_c_composite_component_static_info_1_1_attr_as_optional_delegator.html</anchorfile>
-      <anchor>a8d3a9e46e5a64e86fa89f8781dd04bb2</anchor>
+      <anchor>a79d04d0e1f325db65acd59ea652a4223</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual IElementStaticInfo::Ids</type>
-      <name>GetRelatedMetaIds</name>
-      <anchorfile>classicomp_1_1_c_composite_component_static_info_1_1_attr_as_optional_delegator.html</anchorfile>
-      <anchor>aee9b16fd99b8f94bba6c3ea41637b419</anchor>
-      <arglist>(int metaGroupId, int flags, int flagsMask) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -21488,41 +22397,6 @@
       <name>AttributeFlags</name>
       <anchorfile>classicomp_1_1_i_attribute_static_info.html</anchorfile>
       <anchor>ae025080e9458b4c432cc607b5be883d2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>AF_OBLIGATORY</name>
-      <anchorfile>classicomp_1_1_i_attribute_static_info.html</anchorfile>
-      <anchor>ae025080e9458b4c432cc607b5be883d2a1a785ee164947b56152234baaeaa9ace</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>AF_NULLABLE</name>
-      <anchorfile>classicomp_1_1_i_attribute_static_info.html</anchorfile>
-      <anchor>ae025080e9458b4c432cc607b5be883d2a8d45d95ffcc50f5611339a3c23bf69a4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>AF_SINGLE</name>
-      <anchorfile>classicomp_1_1_i_attribute_static_info.html</anchorfile>
-      <anchor>ae025080e9458b4c432cc607b5be883d2ac967dab5fe6c208f51fa972ee295fa92</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>AF_MULTIPLE</name>
-      <anchorfile>classicomp_1_1_i_attribute_static_info.html</anchorfile>
-      <anchor>ae025080e9458b4c432cc607b5be883d2aba97c2ca3c8105b1e9589db51253973e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>AF_VALUE</name>
-      <anchorfile>classicomp_1_1_i_attribute_static_info.html</anchorfile>
-      <anchor>ae025080e9458b4c432cc607b5be883d2a539016ee0900591d80ff7eeac1abbc9a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
@@ -21647,52 +22521,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>CIdAttribute</type>
+      <type>iattr::CIdAttribute</type>
       <name>BaseClass</name>
       <anchorfile>classicomp_1_1_c_reference_attribute.html</anchorfile>
-      <anchor>af7407ffc1a6148d65211c38a8bfcbedb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>DefaultAttributeFlags</name>
-      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>a8173a2000651679885dcb09981e1dcf8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>DAF_OBLIGATORY</name>
-      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>a8173a2000651679885dcb09981e1dcf8af197da49cda8f0a78de18c54218e785a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>DAF_OPTIONAL</name>
-      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>a8173a2000651679885dcb09981e1dcf8a7b9aac69b1c64ac47882ca9215227d93</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Value</type>
-      <name>ValueType</name>
-      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>aaf371b4a9945b9ba5c7388c17436221d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>iser::TCopySerializedWrap&lt; iser::IObject &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>a18a978e04801c79a8d7f037f61ba2cc9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>iser::IObject</type>
-      <name>BaseClass</name>
-      <anchorfile>classiser_1_1_t_copy_serialized_wrap.html</anchorfile>
-      <anchor>afb8e46d31eab921576865897cd65f46e</anchor>
+      <anchor>a4065cf46765fb995016ce1c0ff3a0da9</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -21751,104 +22583,6 @@
       <anchor>a3004a18bfba5b0ceba61676496dbc509</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>TAttribute</name>
-      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>af5ca1d0124e7a5fe224a167fddbd9b58</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TAttribute</name>
-      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>af0ed4a27ee9fcdeae6047a57d5daca43</anchor>
-      <arglist>(const TAttribute &amp;attribute)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TAttribute</name>
-      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>a64236ba5805d57fdf07dc22b090bfc1b</anchor>
-      <arglist>(const Value &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const Value &amp;</type>
-      <name>GetValue</name>
-      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>a4b8313c84bb9d6f30091c1e0094503d0</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetValue</name>
-      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>ad33d47a655c0becf4b3ecf7be4e67c58</anchor>
-      <arglist>(const Value &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>ad99aedb4eb7abf946b0edc904d246341</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function">
-      <type>QByteArray</type>
-      <name>GetTypeName</name>
-      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>a7d2701920956442ca9cedd2935ccd38f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>QByteArray</type>
-      <name>GetTypeName</name>
-      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>af2ea94e1db979f91daa9024811aa5a5d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>QByteArray</type>
-      <name>GetTypeName</name>
-      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>aaf08b5cfc3630ee627777a543fbda610</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>QByteArray</type>
-      <name>GetTypeName</name>
-      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>a2ebdbfac7183b806e49e3bf107ceb138</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>QByteArray</type>
-      <name>GetTypeName</name>
-      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>a2c13e49615ac1548c2215db2020c89a2</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSupportedOperations</name>
-      <anchorfile>classiser_1_1_t_copy_serialized_wrap.html</anchorfile>
-      <anchor>abb076ddd411d9cd425963b0dffa21f18</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CopyFrom</name>
-      <anchorfile>classiser_1_1_t_copy_serialized_wrap.html</anchorfile>
-      <anchor>aa76477d92d3f5d0a55b6a19af4561a47</anchor>
-      <arglist>(const istd::IChangeable &amp;object, istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsEqual</name>
-      <anchorfile>classiser_1_1_t_copy_serialized_wrap.html</anchorfile>
-      <anchor>af3d40308b3497f10d37d531ca9a509f2</anchor>
-      <arglist>(const istd::IChangeable &amp;object) const</arglist>
-    </member>
     <member kind="function" static="yes">
       <type>static QByteArray</type>
       <name>GetTypeName</name>
@@ -21862,20 +22596,6 @@
       <anchorfile>classicomp_1_1_c_reference_attribute.html</anchorfile>
       <anchor>a5af019251c023dedfee6a8d437664cb9</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static QByteArray</type>
-      <name>GetTypeName</name>
-      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>ac1000074cad417e0189757734873b310</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>Value</type>
-      <name>m_value</name>
-      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>a190bdd62d7fe4e7c3755f96f47064c61</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -21937,45 +22657,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>CIdListAttribute</type>
+      <type>iattr::CIdListAttribute</type>
       <name>BaseClass</name>
       <anchorfile>classicomp_1_1_c_multi_reference_attribute.html</anchorfile>
-      <anchor>a21ec393d8727707ae761da4e93b8e31c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>DefaultAttributeFlags</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a1352ec1aac120a3a95c3ff2f1f75ebf2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>DAF_OBLIGATORY</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a1352ec1aac120a3a95c3ff2f1f75ebf2af42d49e83bec1e5801a9d959e21759bf</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>DAF_OPTIONAL</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a1352ec1aac120a3a95c3ff2f1f75ebf2a6693cc17a844fb489852f6d15d73023e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Value</type>
-      <name>ValueType</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a388df96973dc20c8e541d8a962513350</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>iser::TCopySerializedWrap&lt; iser::IObject &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>ab1bd4498b7d01e6dc30b5fda6f9afa1d</anchor>
+      <anchor>ad5d37126eda7c358ecdb48d9bc18fccf</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -22034,118 +22719,6 @@
       <anchor>a1c038fb3519924d9144114937dea7f24</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>TMultiAttribute</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>abf5f89580062c65357f6554ad9d3b03d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TMultiAttribute</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a2b33ec9e3ca66022aa18ddb470977937</anchor>
-      <arglist>(const TMultiAttribute &amp;attribute)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TMultiAttribute</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>aee8395508a0622a6be188317070a26c4</anchor>
-      <arglist>(int elementsCount, Value *valuesPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetValuesCount</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a37348f35a6c6c53aa291a3e550b6b3c7</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const Value &amp;</type>
-      <name>GetValueAt</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a5840e42476ebb0a560bcdd1580b30b2d</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetValueAt</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>aa4cec5469b031988a151b864dd9fc9d9</anchor>
-      <arglist>(int index, const Value &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>InsertValue</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a9e56288747c422302cbcefb615d487c8</anchor>
-      <arglist>(const Value &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>Reset</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>abb45a7682f056c338256dce63724b730</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>FindValue</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>ab39ba92567cf650e159485e03f2e67a3</anchor>
-      <arglist>(const Value &amp;value) const </arglist>
-    </member>
-    <member kind="function">
-      <type>QByteArray</type>
-      <name>GetFactoryId</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a5686b663690be39098262db5469c8fe8</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a8f5501147cb3282be1873454817c45d7</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function">
-      <type>QByteArray</type>
-      <name>GetTypeName</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a605079361ad59e621fbbc7fe06842658</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>QByteArray</type>
-      <name>GetTypeName</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>ab2186a60f1fae36160d2972d082231c5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>QByteArray</type>
-      <name>GetTypeName</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a3480a41eec13df40514ba324bfca9051</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>QByteArray</type>
-      <name>GetTypeName</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a42fae8a10c72c2d1aa93c633e0ecb831</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>QByteArray</type>
-      <name>GetTypeName</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>ad775948eda2451a712b621a0a419846b</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" static="yes">
       <type>static QByteArray</type>
       <name>GetTypeName</name>
@@ -22160,25 +22733,11 @@
       <anchor>a786b0367a2e08d298c3840087242062b</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" static="yes">
-      <type>static QByteArray</type>
-      <name>GetTypeName</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>ab5e8333cc76fb65e7464e01bdbded9e2</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QVector&lt; Wrap &gt;</type>
-      <name>m_values</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a7071721db197760b6a38a95c6afd7695</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>icomp::CMultiReferenceAttribute</name>
     <filename>classicomp_1_1_c_multi_reference_attribute.html</filename>
-    <base>icomp::TMultiAttribute</base>
+    <base>iattr::TMultiAttribute</base>
   </compound>
   <compound kind="class">
     <name>icomp::CPackageStaticInfo</name>
@@ -22188,7 +22747,7 @@
   <compound kind="class">
     <name>icomp::CReferenceAttribute</name>
     <filename>classicomp_1_1_c_reference_attribute.html</filename>
-    <base>icomp::TAttribute</base>
+    <base>iattr::TAttribute</base>
   </compound>
   <compound kind="class">
     <name>icomp::CRegistry</name>
@@ -22501,13 +23060,6 @@
       <arglist>(quint32 flags)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual Ids</type>
-      <name>GetAttributeIds</name>
-      <anchorfile>classicomp_1_1_c_registry_element.html</anchorfile>
-      <anchor>ad9b22526be5a419ac6c5130a537a4ce7</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual AttributeInfo *</type>
       <name>InsertAttributeInfo</name>
       <anchorfile>classicomp_1_1_c_registry_element.html</anchorfile>
@@ -22534,6 +23086,20 @@
       <anchorfile>classicomp_1_1_c_registry_element.html</anchorfile>
       <anchor>ac978fab2635340db1bb7fc204f22f602</anchor>
       <arglist>(const QByteArray &amp;attributeId)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual AttributeIds</type>
+      <name>GetAttributeIds</name>
+      <anchorfile>classicomp_1_1_c_registry_element.html</anchorfile>
+      <anchor>a668bb3129977eed77f0da78bc0d3283a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iser::IObject *</type>
+      <name>GetAttribute</name>
+      <anchorfile>classicomp_1_1_c_registry_element.html</anchorfile>
+      <anchor>a7f6c39ae171d04dfa56143e3c8c2e005</anchor>
+      <arglist>(const QByteArray &amp;attributeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -22575,13 +23141,6 @@
       <name>EF_AUTO_INSTANCE</name>
       <anchorfile>classicomp_1_1_i_registry_element.html</anchorfile>
       <anchor>acf042457ccccd5a4f00f8b840a2dfe4ba5fac9427da0260475ba2230f16b22413</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>QSet&lt; QByteArray &gt;</type>
-      <name>Ids</name>
-      <anchorfile>classicomp_1_1_i_registry_element.html</anchorfile>
-      <anchor>aa2927c794355dbaac82da8e3b77d0a98</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -22925,41 +23484,13 @@
   <compound kind="class">
     <name>icomp::IAttributeStaticInfo</name>
     <filename>classicomp_1_1_i_attribute_static_info.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual const QByteArray &amp;</type>
-      <name>GetAttributeDescription</name>
-      <anchorfile>classicomp_1_1_i_attribute_static_info.html</anchorfile>
-      <anchor>a09e50179a6ed9b58e0bdb22e930a902f</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const iser::IObject *</type>
-      <name>GetAttributeDefaultValue</name>
-      <anchorfile>classicomp_1_1_i_attribute_static_info.html</anchorfile>
-      <anchor>aa80838789b803591b3a373a91601e070</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QByteArray</type>
-      <name>GetAttributeTypeName</name>
-      <anchorfile>classicomp_1_1_i_attribute_static_info.html</anchorfile>
-      <anchor>a733e48286d0d6c83359604d3c6819990</anchor>
-      <arglist>() const =0</arglist>
-    </member>
+    <base virtualness="virtual">iattr::IAttributeMetaInfo</base>
     <member kind="function" virtualness="pure">
       <type>virtual IElementStaticInfo::Ids</type>
       <name>GetRelatedMetaIds</name>
       <anchorfile>classicomp_1_1_i_attribute_static_info.html</anchorfile>
       <anchor>abb4080e2c50bca861f76b9270c278f51</anchor>
       <arglist>(int metaGroupId, int flags, int flagsMask) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetAttributeFlags</name>
-      <anchorfile>classicomp_1_1_i_attribute_static_info.html</anchorfile>
-      <anchor>a11731fa4869453bd098b0a00e8c524a7</anchor>
-      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -23107,6 +23638,7 @@
     <name>icomp::IComponentStaticInfo</name>
     <filename>classicomp_1_1_i_component_static_info.html</filename>
     <base virtualness="virtual">icomp::IElementStaticInfo</base>
+    <base virtualness="virtual">iattr::IAttributesMetaInfoProvider</base>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetComponentType</name>
@@ -23456,6 +23988,7 @@
   <compound kind="class">
     <name>icomp::IRegistryElement</name>
     <filename>classicomp_1_1_i_registry_element.html</filename>
+    <base virtualness="virtual">iattr::IAttributesProvider</base>
     <base virtualness="virtual">iser::ISerializable</base>
     <class kind="struct">icomp::IRegistryElement::AttributeInfo</class>
     <member kind="function" virtualness="pure">
@@ -23471,13 +24004,6 @@
       <anchorfile>classicomp_1_1_i_registry_element.html</anchorfile>
       <anchor>afb588669e8ab74482ab16cb74d5dcc2b</anchor>
       <arglist>(quint32 flags)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual Ids</type>
-      <name>GetAttributeIds</name>
-      <anchorfile>classicomp_1_1_i_registry_element.html</anchorfile>
-      <anchor>a947554393887bd9570bc85390d36200a</anchor>
-      <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual AttributeInfo *</type>
@@ -23543,19 +24069,6 @@
       <anchorfile>classicomp_1_1_i_registry_loader.html</anchorfile>
       <anchor>a08d89ee7bf1763891e119b0d2fb58148</anchor>
       <arglist>(const QString &amp;path) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>icomp::TAttribute</name>
-    <filename>classicomp_1_1_t_attribute.html</filename>
-    <templarg>Value</templarg>
-    <base virtualness="virtual">TCopySerializedWrap&lt; iser::IObject &gt;</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QByteArray</type>
-      <name>GetFactoryId</name>
-      <anchorfile>classicomp_1_1_t_attribute.html</anchorfile>
-      <anchor>a92bb29d17d5071dae4f257b1eb5cc44a</anchor>
-      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -23654,14 +24167,14 @@
     <base>icomp::TAttributeMemberBase</base>
   </compound>
   <compound kind="class">
-    <name>icomp::TAttributeMember&lt; TAttribute&lt; QString &gt; &gt;</name>
-    <filename>classicomp_1_1_t_attribute_member_3_01_t_attribute_3_01_q_string_01_4_01_4.html</filename>
-    <base>TAttributeMemberBase&lt; TAttribute&lt; QString &gt; &gt;</base>
+    <name>icomp::TAttributeMember&lt; iattr::TAttribute&lt; QString &gt; &gt;</name>
+    <filename>classicomp_1_1_t_attribute_member_3_01iattr_1_1_t_attribute_3_01_q_string_01_4_01_4.html</filename>
+    <base>TAttributeMemberBase&lt; iattr::TAttribute&lt; QString &gt; &gt;</base>
     <member kind="function">
       <type>QString</type>
       <name>operator*</name>
-      <anchorfile>classicomp_1_1_t_attribute_member_3_01_t_attribute_3_01_q_string_01_4_01_4.html</anchorfile>
-      <anchor>af62f88563e61cbb53c3c5ac3e73ac83f</anchor>
+      <anchorfile>classicomp_1_1_t_attribute_member_3_01iattr_1_1_t_attribute_3_01_q_string_01_4_01_4.html</anchorfile>
+      <anchor>acb4e94c849b5a26d40db3450b69edc30</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -23686,7 +24199,7 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const TAttribute&lt; QString &gt; *</type>
+      <type>const iattr::TAttribute&lt; QString &gt; *</type>
       <name>GetAttributePtr</name>
       <anchorfile>classicomp_1_1_t_attribute_member_base.html</anchorfile>
       <anchor>a954033811b2adce62f76cc3c8cfaf51c</anchor>
@@ -23700,7 +24213,7 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const TAttribute&lt; QString &gt; *</type>
+      <type>const iattr::TAttribute&lt; QString &gt; *</type>
       <name>operator-&gt;</name>
       <anchorfile>classicomp_1_1_t_attribute_member_base.html</anchorfile>
       <anchor>ac73004f2f4da9afd9766e2f7a9a5c8b4</anchor>
@@ -23714,14 +24227,14 @@
       <arglist>() const</arglist>
     </member>
     <member kind="typedef">
-      <type>TAttribute&lt; QString &gt;</type>
+      <type>iattr::TAttribute&lt; QString &gt;</type>
       <name>AttributeType</name>
       <anchorfile>classicomp_1_1_t_attribute_member_base.html</anchorfile>
       <anchor>a6164f043005f2a5b3b84b098a459252b</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TAttribute&lt; QString &gt;::ValueType</type>
+      <type>iattr::TAttribute&lt; QString &gt;::ValueType</type>
       <name>AttributeValueType</name>
       <anchorfile>classicomp_1_1_t_attribute_member_base.html</anchorfile>
       <anchor>a62cde3967d11b248cba7bf25518f53a2</anchor>
@@ -23739,7 +24252,7 @@
       <name>SetAttribute</name>
       <anchorfile>classicomp_1_1_t_attribute_member_base.html</anchorfile>
       <anchor>af6067c6dfd567f736f06eae27dff865c</anchor>
-      <arglist>(const TAttribute&lt; QString &gt; *attributePtr)</arglist>
+      <arglist>(const iattr::TAttribute&lt; QString &gt; *attributePtr)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -23758,8 +24271,8 @@
       <type></type>
       <name>TAttributeStaticInfo</name>
       <anchorfile>classicomp_1_1_t_attribute_static_info.html</anchorfile>
-      <anchor>a701b7c79eb0fc5a48c5bbfdd1c53c8ea</anchor>
-      <arglist>(icomp::CBaseComponentStaticInfo &amp;staticInfo, const QByteArray &amp;id, const QByteArray &amp;description, const Attribute *defaultValuePtr, int flags, const istd::CClassInfo &amp;relatedInterfaceInfo)</arglist>
+      <anchor>ae23b80d7c24149a662a9b4e71dab8375</anchor>
+      <arglist>(icomp::CBaseComponentStaticInfo &amp;staticInfo, const QByteArray &amp;id, const QString &amp;description, const Attribute *defaultValuePtr, int flags, const istd::CClassInfo &amp;relatedInterfaceInfo)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QByteArray &amp;</type>
@@ -23776,10 +24289,17 @@
       <arglist>(int metaGroupId, const QByteArray &amp;id, int flags)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const QByteArray &amp;</type>
+      <type>virtual IElementStaticInfo::Ids</type>
+      <name>GetRelatedMetaIds</name>
+      <anchorfile>classicomp_1_1_t_attribute_static_info.html</anchorfile>
+      <anchor>a36b454830417ebad8cab0b70cad1bac7</anchor>
+      <arglist>(int metaGroupId, int flags, int flagsMask) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
       <name>GetAttributeDescription</name>
       <anchorfile>classicomp_1_1_t_attribute_static_info.html</anchorfile>
-      <anchor>aff40f2e7c6dde21ba9bacf86f405303e</anchor>
+      <anchor>a06d6767cd9c9184f454765207303f399</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -23791,17 +24311,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
-      <name>GetAttributeTypeName</name>
+      <name>GetAttributeTypeId</name>
       <anchorfile>classicomp_1_1_t_attribute_static_info.html</anchorfile>
-      <anchor>a2a74c2f0f60c15a68d73097abaec5db8</anchor>
+      <anchor>a46c544ba1bf3966d271e54c2c3dd790c</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual IElementStaticInfo::Ids</type>
-      <name>GetRelatedMetaIds</name>
-      <anchorfile>classicomp_1_1_t_attribute_static_info.html</anchorfile>
-      <anchor>a36b454830417ebad8cab0b70cad1bac7</anchor>
-      <arglist>(int metaGroupId, int flags, int flagsMask) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -24276,31 +24789,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>icomp::TMultiAttribute</name>
-    <filename>classicomp_1_1_t_multi_attribute.html</filename>
-    <templarg>Value</templarg>
-    <base virtualness="virtual">TCopySerializedWrap&lt; iser::IObject &gt;</base>
-    <class kind="struct">icomp::TMultiAttribute::Wrap</class>
-  </compound>
-  <compound kind="struct">
-    <name>icomp::TMultiAttribute::Wrap</name>
-    <filename>structicomp_1_1_t_multi_attribute_1_1_wrap.html</filename>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator==</name>
-      <anchorfile>structicomp_1_1_t_multi_attribute_1_1_wrap.html</anchorfile>
-      <anchor>a6cba82fa82a7d3fb00e8fe843aa4f8c1</anchor>
-      <arglist>(const Wrap &amp;object) const </arglist>
-    </member>
-    <member kind="variable">
-      <type>Value</type>
-      <name>value</name>
-      <anchorfile>structicomp_1_1_t_multi_attribute_1_1_wrap.html</anchorfile>
-      <anchor>a1d6edd5d94c78db978037fa18154bb3a</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>icomp::TMultiAttributeMemberBase</name>
     <filename>classicomp_1_1_t_multi_attribute_member_base.html</filename>
     <templarg>Attribute</templarg>
@@ -24382,14 +24870,14 @@
     <base>icomp::TMultiAttributeMemberBase</base>
   </compound>
   <compound kind="class">
-    <name>icomp::TMultiAttributeMember&lt; TMultiAttribute&lt; QString &gt; &gt;</name>
-    <filename>classicomp_1_1_t_multi_attribute_member_3_01_t_multi_attribute_3_01_q_string_01_4_01_4.html</filename>
-    <base>TMultiAttributeMemberBase&lt; TMultiAttribute&lt; QString &gt; &gt;</base>
+    <name>icomp::TMultiAttributeMember&lt; iattr::TMultiAttribute&lt; QString &gt; &gt;</name>
+    <filename>classicomp_1_1_t_multi_attribute_member_3_01iattr_1_1_t_multi_attribute_3_01_q_string_01_4_01_4.html</filename>
+    <base>TMultiAttributeMemberBase&lt; iattr::TMultiAttribute&lt; QString &gt; &gt;</base>
     <member kind="function">
       <type>QString</type>
       <name>operator[]</name>
-      <anchorfile>classicomp_1_1_t_multi_attribute_member_3_01_t_multi_attribute_3_01_q_string_01_4_01_4.html</anchorfile>
-      <anchor>a9123cd8365af3fb870b55ef9f2aa2cc3</anchor>
+      <anchorfile>classicomp_1_1_t_multi_attribute_member_3_01iattr_1_1_t_multi_attribute_3_01_q_string_01_4_01_4.html</anchorfile>
+      <anchor>a09630288e1f339287e25b6a06e044771</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function">
@@ -24435,14 +24923,14 @@
       <arglist>(const AttributeValueType &amp;value) const</arglist>
     </member>
     <member kind="typedef">
-      <type>TMultiAttribute&lt; QString &gt;</type>
+      <type>iattr::TMultiAttribute&lt; QString &gt;</type>
       <name>AttributeType</name>
       <anchorfile>classicomp_1_1_t_multi_attribute_member_base.html</anchorfile>
       <anchor>ae4fd40da6bf1eaad4697668b78a3d55e</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TMultiAttribute&lt; QString &gt;::ValueType</type>
+      <type>iattr::TMultiAttribute&lt; QString &gt;::ValueType</type>
       <name>AttributeValueType</name>
       <anchorfile>classicomp_1_1_t_multi_attribute_member_base.html</anchorfile>
       <anchor>a68844bea941444c01c9bb0448c7bbfe5</anchor>
@@ -25747,62 +26235,6 @@
       <anchor>a6c3bb8ebdd65c973b65155f106c8630a</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>CMultiModelObserverBase</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>aeadfce921ec80b2066bec1294403cdb0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~CMultiModelObserverBase</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>abeb03f6db4c68b652dce9307e3d307a3</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>IModel *</type>
-      <name>GetModelPtr</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a44e4ecc264d102606dd19b954b4b861e</anchor>
-      <arglist>(int modelIndex) const </arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetModelCount</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a9b9d05f1e8eed6f32dd8458746860cce</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetObservedIds</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a37bb58c2bb0a2a4745badfce29d8d80d</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsModelAttached</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a92391a2b6e1dcccfc3987e89ace6da32</anchor>
-      <arglist>(const IModel *modelPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnModelAttached</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a4244448c597d00be69db6acf256d09fc</anchor>
-      <arglist>(IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnModelDetached</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>aa95c00bb92acfa85585ecc6fccabd410</anchor>
-      <arglist>(IModel *modelPtr)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeforeUpdate</name>
@@ -25851,13 +26283,6 @@
       <anchorfile>structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html</anchorfile>
       <anchor>a0627443324f49c884a928a506478778f</anchor>
       <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>EnsureModelsDetached</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a6bfa8b39bc6680c04dbfc20966257289</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -38698,13 +39123,6 @@
     <name>imod::CMultiModelObserverBase</name>
     <filename>classimod_1_1_c_multi_model_observer_base.html</filename>
     <base virtualness="virtual">imod::IObserver</base>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnUpdate</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a49b4ebda2cb807c57bbdea726ecc2f8f</anchor>
-      <arglist>(IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>imod::CSingleModelObserverBase</name>
@@ -41650,8 +42068,8 @@
       <type></type>
       <name>TParamsPtr</name>
       <anchorfile>classiprm_1_1_t_params_ptr.html</anchorfile>
-      <anchor>a8d108019353aa114153829ddbc21a0f8</anchor>
-      <arglist>(const IParamsSet *parameterSetPtr, const icomp::TAttributeMember&lt; icomp::CIdAttribute &gt; &amp;parameterIdAttribute, const icomp::TReferenceMember&lt; ParameterInterace &gt; &amp;defaultRef, bool isObligatory=true)</arglist>
+      <anchor>aadf98cd05a0dc62a26a370fc65fc3bb0</anchor>
+      <arglist>(const IParamsSet *parameterSetPtr, const icomp::TAttributeMember&lt; iattr::CIdAttribute &gt; &amp;parameterIdAttribute, const icomp::TReferenceMember&lt; ParameterInterace &gt; &amp;defaultRef, bool isObligatory=true)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -41664,8 +42082,8 @@
       <type>void</type>
       <name>Init</name>
       <anchorfile>classiprm_1_1_t_params_ptr.html</anchorfile>
-      <anchor>a831d16c739a8145bfe514ee9a6adf7a2</anchor>
-      <arglist>(const IParamsSet *parameterSetPtr, const icomp::TAttributeMember&lt; icomp::CIdAttribute &gt; &amp;parameterIdAttribute, const icomp::TReferenceMember&lt; ParameterInterace &gt; &amp;defaultRef, bool isObligatory=true)</arglist>
+      <anchor>adc8ec23a3bc0ef0462e70f7ea94e64c4</anchor>
+      <arglist>(const IParamsSet *parameterSetPtr, const icomp::TAttributeMember&lt; iattr::CIdAttribute &gt; &amp;parameterIdAttribute, const icomp::TReferenceMember&lt; ParameterInterace &gt; &amp;defaultRef, bool isObligatory=true)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -54134,6 +54552,13 @@
     <class kind="class">iser::IVersionInfo</class>
     <class kind="class">iser::TCopySerializedWrap</class>
     <class kind="class">iser::TVersionInfoSerializer</class>
+    <member kind="typedef">
+      <type>istd::TIFactory&lt; IObject &gt;</type>
+      <name>IObjectFactory</name>
+      <anchorfile>namespaceiser.html</anchorfile>
+      <anchor>a1f4aa821cb983a9dc62f6e03096a6f04</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iser::CArchiveBase</name>
@@ -69791,6 +70216,22 @@
     <file>i3d.h</file>
   </compound>
   <compound kind="dir">
+    <name>Include/iattr</name>
+    <path>C:/Temp/Acf/Include/iattr/</path>
+    <filename>dir_26e52b3ca1ace008377d609d523e8da3.html</filename>
+    <file>CAttributesManager.h</file>
+    <file>CEnumAttributeMetaInfo.h</file>
+    <file>CStandardAttributesFactory.h</file>
+    <file>iattr.h</file>
+    <file>IAttributeMetaInfo.h</file>
+    <file>IAttributesManager.h</file>
+    <file>IAttributesMetaInfoProvider.h</file>
+    <file>IAttributesProvider.h</file>
+    <file>IEnumAttributeMetaInfo.h</file>
+    <file>TAttribute.h</file>
+    <file>TMultiAttribute.h</file>
+  </compound>
+  <compound kind="dir">
     <name>Include/ibase</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>dir_3766dd90a8cfbfdbeb9081de0065bff7.html</filename>
@@ -69893,7 +70334,6 @@
     <file>IRegistry.h</file>
     <file>IRegistryElement.h</file>
     <file>IRegistryLoader.h</file>
-    <file>TAttribute.h</file>
     <file>TAttributeMember.h</file>
     <file>TAttributeStaticInfo.h</file>
     <file>TComponentCloneWrap.h</file>
@@ -69904,7 +70344,6 @@
     <file>TInterfaceRegistrator.h</file>
     <file>TMakeComponentWrap.h</file>
     <file>TModelCompWrap.h</file>
-    <file>TMultiAttribute.h</file>
     <file>TMultiAttributeMember.h</file>
     <file>TMultiFactoryMember.h</file>
     <file>TMultiReferenceMember.h</file>
@@ -70094,6 +70533,7 @@
     <filename>dir_856524284ebe840938865dc061f982fb.html</filename>
     <dir>Include/i2d</dir>
     <dir>Include/i3d</dir>
+    <dir>Include/iattr</dir>
     <dir>Include/ibase</dir>
     <dir>Include/icmm</dir>
     <dir>Include/icomp</dir>

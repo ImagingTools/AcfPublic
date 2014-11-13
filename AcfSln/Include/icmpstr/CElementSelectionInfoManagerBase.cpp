@@ -75,6 +75,11 @@ const iser::IObject* CElementSelectionInfoManagerBase::GetAttributeObject(
 			const QByteArray& attributeId,
 			const icomp::IRegistry::ElementInfo& elementInfo) const
 {
+	const iser::IObject* attributePtr = elementInfo.elementPtr->GetAttribute(attributeId);
+	if (attributePtr != NULL){
+		return attributePtr;
+	}
+
 	const icomp::IMetaInfoManager* metaInfoManagerPtr = GetMetaInfoManagerPtr();
 	if (metaInfoManagerPtr == NULL){
 		return NULL;
@@ -86,17 +91,11 @@ const iser::IObject* CElementSelectionInfoManagerBase::GetAttributeObject(
 	}
 
 	const icomp::IAttributeStaticInfo* staticInfoPtr = componentInfoPtr->GetAttributeInfo(attributeId);
-
-	const iser::IObject* attributePtr = NULL;
-	const icomp::IRegistryElement::AttributeInfo* attributeInfoPtr = elementInfo.elementPtr->GetAttributeInfo(attributeId);
-	if ((attributeInfoPtr != NULL) && attributeInfoPtr->attributePtr.IsValid()){
-		attributePtr = attributeInfoPtr->attributePtr.GetPtr();
-	}
-	else if (staticInfoPtr != NULL){
-		attributePtr = staticInfoPtr->GetAttributeDefaultValue();
+	if (staticInfoPtr != NULL){
+		return staticInfoPtr->GetAttributeDefaultValue();
 	}
 
-	return attributePtr;
+	return NULL;
 }
 
 

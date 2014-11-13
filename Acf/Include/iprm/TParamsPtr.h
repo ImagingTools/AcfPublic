@@ -29,7 +29,7 @@
 
 // ACF includes
 #include "istd/TPointerBase.h"
-#include "icomp/TAttribute.h"
+#include "iattr/TAttribute.h"
 #include "icomp/TAttributeMember.h"
 #include "icomp/TReferenceMember.h"
 #include "iprm/IParamsSet.h"
@@ -66,7 +66,7 @@ public:
 		\param	isObligatory			indicate, that this parameter is obligatory.
 	*/
 	TParamsPtr(	const IParamsSet* parameterSetPtr,
-				const icomp::TAttributeMember<icomp::CIdAttribute>& parameterIdAttribute,
+				const icomp::TAttributeMember<iattr::CIdAttribute>& parameterIdAttribute,
 				const icomp::TReferenceMember<ParameterInterace>& defaultRef,
 				bool isObligatory = true);
 
@@ -86,7 +86,7 @@ public:
 		\param	isObligatory			indicate, that this parameter is obligatory.
 	*/
 	void Init(	const IParamsSet* parameterSetPtr,
-				const icomp::TAttributeMember<icomp::CIdAttribute>& parameterIdAttribute,
+				const icomp::TAttributeMember<iattr::CIdAttribute>& parameterIdAttribute,
 				const icomp::TReferenceMember<ParameterInterace>& defaultRef,
 				bool isObligatory = true);
 };
@@ -111,7 +111,7 @@ TParamsPtr<ParameterInterace>::TParamsPtr(const IParamsSet* parameterSetPtr, con
 template <class ParameterInterace>
 TParamsPtr<ParameterInterace>::TParamsPtr(
 			const IParamsSet* parameterSetPtr,
-			const icomp::TAttributeMember<icomp::CIdAttribute>& parameterIdAttribute,
+			const icomp::TAttributeMember<iattr::CIdAttribute>& parameterIdAttribute,
 			const icomp::TReferenceMember<ParameterInterace>& defaultRef,
 			bool isObligatory)
 {
@@ -155,7 +155,7 @@ void TParamsPtr<ParameterInterace>::Init(const IParamsSet* parameterSetPtr, cons
 template <class ParameterInterace>
 void TParamsPtr<ParameterInterace>::Init(
 			const IParamsSet* parameterSetPtr,
-			const icomp::TAttributeMember<icomp::CIdAttribute>& parameterIdAttribute,
+			const icomp::TAttributeMember<iattr::CIdAttribute>& parameterIdAttribute,
 			const icomp::TReferenceMember<ParameterInterace>& defaultRef,
 			bool I_IF_DEBUG(isObligatory))
 {

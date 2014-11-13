@@ -57,16 +57,16 @@ CAttributeEditorComp::CAttributeEditorComp()
 	m_registryObserver(this),
 	m_lastRegistryModelPtr(NULL)
 {
-	m_attributeTypesMap[icomp::CIntegerAttribute::GetTypeName()] = tr("Integer number");
-	m_attributeTypesMap[icomp::CRealAttribute::GetTypeName()] = tr("Real number");
-	m_attributeTypesMap[icomp::CBooleanAttribute::GetTypeName()] = tr("Boolean value");
-	m_attributeTypesMap[icomp::CStringAttribute::GetTypeName()] = tr("String");
-	m_attributeTypesMap[icomp::CIdAttribute::GetTypeName()] = tr("ID");
-	m_attributeTypesMap[icomp::CIntegerListAttribute::GetTypeName()] = tr("List of integer numbers");
-	m_attributeTypesMap[icomp::CRealListAttribute::GetTypeName()] = tr("List of real numbers");
-	m_attributeTypesMap[icomp::CBooleanListAttribute::GetTypeName()] = tr("List of boolean values");
-	m_attributeTypesMap[icomp::CStringListAttribute::GetTypeName()] = tr("List of strings");
-	m_attributeTypesMap[icomp::CIdListAttribute::GetTypeName()] = tr("List of ID's");
+	m_attributeTypesMap[iattr::CIntegerAttribute::GetTypeName()] = tr("Integer number");
+	m_attributeTypesMap[iattr::CRealAttribute::GetTypeName()] = tr("Real number");
+	m_attributeTypesMap[iattr::CBooleanAttribute::GetTypeName()] = tr("Boolean value");
+	m_attributeTypesMap[iattr::CStringAttribute::GetTypeName()] = tr("String");
+	m_attributeTypesMap[iattr::CIdAttribute::GetTypeName()] = tr("ID");
+	m_attributeTypesMap[iattr::CIntegerListAttribute::GetTypeName()] = tr("List of integer numbers");
+	m_attributeTypesMap[iattr::CRealListAttribute::GetTypeName()] = tr("List of real numbers");
+	m_attributeTypesMap[iattr::CBooleanListAttribute::GetTypeName()] = tr("List of boolean values");
+	m_attributeTypesMap[iattr::CStringListAttribute::GetTypeName()] = tr("List of strings");
+	m_attributeTypesMap[iattr::CIdListAttribute::GetTypeName()] = tr("List of ID's");
 	m_attributeTypesMap[icomp::CReferenceAttribute::GetTypeName()] = tr("Component reference");
 	m_attributeTypesMap[icomp::CMultiReferenceAttribute::GetTypeName()] = tr("List of component reference");
 	m_attributeTypesMap[icomp::CFactoryAttribute::GetTypeName()] = tr("Component factory");
@@ -457,8 +457,8 @@ void CAttributeEditorComp::UpdateAttributesView()
 				// creating map of attributes based on registry element data
 				icomp::IRegistryElement* elementPtr = selectedInfoPtr->elementPtr.GetPtr();
 				if (elementPtr != NULL){
-					icomp::IRegistryElement::Ids attributeIds = elementPtr->GetAttributeIds();
-					for (		icomp::IRegistryElement::Ids::ConstIterator attrIter = attributeIds.constBegin();
+					iattr::IAttributesProvider::AttributeIds attributeIds = elementPtr->GetAttributeIds();
+					for (		iattr::IAttributesProvider::AttributeIds::ConstIterator attrIter = attributeIds.constBegin();
 								attrIter != attributeIds.constEnd();
 								++attrIter){
 						const QByteArray& attributeId = *attrIter;
@@ -477,8 +477,8 @@ void CAttributeEditorComp::UpdateAttributesView()
 				if (m_metaInfoManagerCompPtr.IsValid()){
 					const icomp::IComponentStaticInfo* infoPtr = m_metaInfoManagerCompPtr->GetComponentMetaInfo(selectedInfoPtr->address);
 					if (infoPtr != NULL){
-						icomp::IElementStaticInfo::Ids attributeIds = infoPtr->GetMetaIds(icomp::IComponentStaticInfo::MGI_ATTRIBUTES);
-						for (		icomp::IElementStaticInfo::Ids::ConstIterator attrIter = attributeIds.constBegin();
+						iattr::IAttributesProvider::AttributeIds attributeIds = infoPtr->GetAttributeMetaIds();
+						for (		iattr::IAttributesProvider::AttributeIds::ConstIterator attrIter = attributeIds.constBegin();
 									attrIter != attributeIds.constEnd();
 									++attrIter){
 							const QByteArray& attributeId = *attrIter;
@@ -836,7 +836,7 @@ bool CAttributeEditorComp::SetAttributeToItem(
 		}
 
 		if (attrInfo.staticInfoPtr != NULL){
-			QByteArray statAttrTypeId = attrInfo.staticInfoPtr->GetAttributeTypeName();
+			QByteArray statAttrTypeId = attrInfo.staticInfoPtr->GetAttributeTypeId();
 			if (attributeStatTypeId.isEmpty()){
 				attributeStatTypeId = statAttrTypeId;
 			}
@@ -866,7 +866,7 @@ bool CAttributeEditorComp::SetAttributeToItem(
 					meaning = AM_MULTI_ATTRIBUTE;
 				}
 				else{
-					if (statAttrTypeId == icomp::TAttribute<bool>::GetTypeName()){
+					if (statAttrTypeId == iattr::TAttribute<bool>::GetTypeName()){
 						meaning = AM_BOOL_ATTRIBUTE;
 					}
 					else{
@@ -1099,7 +1099,7 @@ bool CAttributeEditorComp::DecodeAttribute(
 			QString& text,
 			int& meaning) const
 {
-	const icomp::CIntegerAttribute* intAttribute = dynamic_cast<const icomp::CIntegerAttribute*>(&attribute);
+	const iattr::CIntegerAttribute* intAttribute = dynamic_cast<const iattr::CIntegerAttribute*>(&attribute);
 	if (intAttribute != NULL){
 		text = QString::number(intAttribute->GetValue());
 		meaning = AM_ATTRIBUTE;
@@ -1107,7 +1107,7 @@ bool CAttributeEditorComp::DecodeAttribute(
 		return true;
 	}
 
-	const icomp::CRealAttribute* doubleAttribute = dynamic_cast<const icomp::CRealAttribute*>(&attribute);
+	const iattr::CRealAttribute* doubleAttribute = dynamic_cast<const iattr::CRealAttribute*>(&attribute);
 	if (doubleAttribute != NULL){
 		text = QString::number(doubleAttribute->GetValue());
 		meaning = AM_ATTRIBUTE;
@@ -1115,7 +1115,7 @@ bool CAttributeEditorComp::DecodeAttribute(
 		return true;
 	}
 
-	const icomp::CBooleanAttribute* boolAttribute = dynamic_cast<const icomp::CBooleanAttribute*>(&attribute);
+	const iattr::CBooleanAttribute* boolAttribute = dynamic_cast<const iattr::CBooleanAttribute*>(&attribute);
 	if (boolAttribute != NULL){
 		text = boolAttribute->GetValue()? "true": "false";
 		meaning = AM_BOOL_ATTRIBUTE;
@@ -1123,7 +1123,7 @@ bool CAttributeEditorComp::DecodeAttribute(
 		return true;
 	}
 
-	const icomp::CStringAttribute* stringAttribute = dynamic_cast<const icomp::CStringAttribute*>(&attribute);
+	const iattr::CStringAttribute* stringAttribute = dynamic_cast<const iattr::CStringAttribute*>(&attribute);
 	if (stringAttribute != NULL){
 		text = EncodeToEdit(stringAttribute->GetValue());
 		meaning = AM_ATTRIBUTE;
@@ -1131,7 +1131,7 @@ bool CAttributeEditorComp::DecodeAttribute(
 		return true;
 	}
 
-	const icomp::CIdAttribute* idPtr = dynamic_cast<const icomp::CIdAttribute*>(&attribute);
+	const iattr::CIdAttribute* idPtr = dynamic_cast<const iattr::CIdAttribute*>(&attribute);
 	if (idPtr != NULL){
 		text = EncodeToEdit(idPtr->GetValue());
 
@@ -1145,7 +1145,7 @@ bool CAttributeEditorComp::DecodeAttribute(
 		return true;
 	}
 
-	const icomp::CStringListAttribute* stringListAttribute = dynamic_cast<const icomp::CStringListAttribute*>(&attribute);
+	const iattr::CStringListAttribute* stringListAttribute = dynamic_cast<const iattr::CStringListAttribute*>(&attribute);
 	if (stringListAttribute != NULL){
 		text.clear();
 
@@ -1162,7 +1162,7 @@ bool CAttributeEditorComp::DecodeAttribute(
 		return true;
 	}
 
-	const icomp::CIntegerListAttribute* intListAttribute = dynamic_cast<const icomp::CIntegerListAttribute*>(&attribute);
+	const iattr::CIntegerListAttribute* intListAttribute = dynamic_cast<const iattr::CIntegerListAttribute*>(&attribute);
 	if (intListAttribute != NULL){
 		text.clear();
 
@@ -1179,7 +1179,7 @@ bool CAttributeEditorComp::DecodeAttribute(
 		return true;
 	}
 
-	const icomp::CRealListAttribute* doubleListAttribute = dynamic_cast<const icomp::CRealListAttribute*>(&attribute);
+	const iattr::CRealListAttribute* doubleListAttribute = dynamic_cast<const iattr::CRealListAttribute*>(&attribute);
 	if (doubleListAttribute != NULL){
 		text.clear();
 
@@ -1196,7 +1196,7 @@ bool CAttributeEditorComp::DecodeAttribute(
 		return true;
 	}
 
-	const icomp::CBooleanListAttribute* boolListAttribute = dynamic_cast<const icomp::CBooleanListAttribute*>(&attribute);
+	const iattr::CBooleanListAttribute* boolListAttribute = dynamic_cast<const iattr::CBooleanListAttribute*>(&attribute);
 	if (boolListAttribute != NULL){
 		text.clear();
 
@@ -1213,7 +1213,7 @@ bool CAttributeEditorComp::DecodeAttribute(
 		return true;
 	}
 
-	const icomp::CIdListAttribute* multiIdPtr = dynamic_cast<const icomp::CIdListAttribute*>(&attribute);
+	const iattr::CIdListAttribute* multiIdPtr = dynamic_cast<const iattr::CIdListAttribute*>(&attribute);
 	if (multiIdPtr != NULL){
 		QString dependecyString;
 
@@ -1249,7 +1249,7 @@ bool CAttributeEditorComp::EncodeAttribute(
 {
 	// set single reference of factory data
 	if (attributeStatMeaning == AM_REFERENCE){
-		icomp::TAttribute<QByteArray>* referenceAttributePtr = dynamic_cast<icomp::TAttribute<QByteArray>*>(&result);
+		iattr::TAttribute<QByteArray>* referenceAttributePtr = dynamic_cast<iattr::TAttribute<QByteArray>*>(&result);
 		if (referenceAttributePtr != NULL){
 			referenceAttributePtr->SetValue(DecodeFromEdit(text).toLocal8Bit());
 
@@ -1260,7 +1260,7 @@ bool CAttributeEditorComp::EncodeAttribute(
 	else if (attributeStatMeaning == AM_MULTI_REFERENCE){
 		QStringList references = text.split(';',QString::SkipEmptyParts);
 
-		icomp::TMultiAttribute<QByteArray>* multiReferenceAttributePtr = dynamic_cast<icomp::TMultiAttribute<QByteArray>*>(&result);
+		iattr::TMultiAttribute<QByteArray>* multiReferenceAttributePtr = dynamic_cast<iattr::TMultiAttribute<QByteArray>*>(&result);
 
 		if (multiReferenceAttributePtr != NULL){
 			multiReferenceAttributePtr->Reset();
@@ -1273,28 +1273,28 @@ bool CAttributeEditorComp::EncodeAttribute(
 	}
 	// set attribute data:
 	else if (attributeStatMeaning == AM_ATTRIBUTE){
-		icomp::CIntegerAttribute* intAttributePtr = dynamic_cast<icomp::CIntegerAttribute*>(&result);
+		iattr::CIntegerAttribute* intAttributePtr = dynamic_cast<iattr::CIntegerAttribute*>(&result);
 		if (intAttributePtr != NULL){
 			intAttributePtr->SetValue(text.toInt());
 
 			return true;
 		}
 
-		icomp::CRealAttribute* doubleAttributePtr = dynamic_cast<icomp::CRealAttribute*>(&result);
+		iattr::CRealAttribute* doubleAttributePtr = dynamic_cast<iattr::CRealAttribute*>(&result);
 		if (doubleAttributePtr != NULL){
 			doubleAttributePtr->SetValue(text.toDouble());
 
 			return true;
 		}
 
-		icomp::CStringAttribute* stringAttributePtr = dynamic_cast<icomp::CStringAttribute*>(&result);
+		iattr::CStringAttribute* stringAttributePtr = dynamic_cast<iattr::CStringAttribute*>(&result);
 		if (stringAttributePtr != NULL){
 			stringAttributePtr->SetValue(DecodeFromEdit(text));
 
 			return true;
 		}
 
-		icomp::CIdAttribute* idAttributePtr = dynamic_cast<icomp::CIdAttribute*>(&result);
+		iattr::CIdAttribute* idAttributePtr = dynamic_cast<iattr::CIdAttribute*>(&result);
 		if (idAttributePtr != NULL){
 			idAttributePtr->SetValue(DecodeFromEdit(text).toLocal8Bit());
 
@@ -1302,7 +1302,7 @@ bool CAttributeEditorComp::EncodeAttribute(
 		}
 	}
 	else if (attributeStatMeaning == AM_BOOL_ATTRIBUTE){
-		icomp::CBooleanAttribute* boolAttributePtr = dynamic_cast<icomp::CBooleanAttribute*>(&result);
+		iattr::CBooleanAttribute* boolAttributePtr = dynamic_cast<iattr::CBooleanAttribute*>(&result);
 		if (boolAttributePtr != NULL){
 			boolAttributePtr->SetValue(text == "true");
 
@@ -1312,7 +1312,7 @@ bool CAttributeEditorComp::EncodeAttribute(
 	else if (attributeStatMeaning == AM_MULTI_ATTRIBUTE){
 		QStringList values = text.split(';');
 
-		icomp::CIntegerListAttribute* intListAttributePtr = dynamic_cast<icomp::CIntegerListAttribute*>(&result);
+		iattr::CIntegerListAttribute* intListAttributePtr = dynamic_cast<iattr::CIntegerListAttribute*>(&result);
 		if (intListAttributePtr != NULL){
 			intListAttributePtr->Reset();
 			for (int index = 0; index < values.count(); index++){
@@ -1322,7 +1322,7 @@ bool CAttributeEditorComp::EncodeAttribute(
 			return true;
 		}
 
-		icomp::CRealListAttribute* doubleListAttributePtr = dynamic_cast<icomp::CRealListAttribute*>(&result);
+		iattr::CRealListAttribute* doubleListAttributePtr = dynamic_cast<iattr::CRealListAttribute*>(&result);
 		if (doubleListAttributePtr != NULL){
 			doubleListAttributePtr->Reset();
 			for (int index = 0; index < values.count(); index++){
@@ -1332,7 +1332,7 @@ bool CAttributeEditorComp::EncodeAttribute(
 			return true;
 		}
 
-		icomp::CBooleanListAttribute* boolListAttributePtr = dynamic_cast<icomp::CBooleanListAttribute*>(&result);
+		iattr::CBooleanListAttribute* boolListAttributePtr = dynamic_cast<iattr::CBooleanListAttribute*>(&result);
 		if (boolListAttributePtr != NULL){
 			boolListAttributePtr->Reset();
 			for (int index = 0; index < values.count(); index++){
@@ -1342,7 +1342,7 @@ bool CAttributeEditorComp::EncodeAttribute(
 			return true;
 		}
 
-		icomp::CStringListAttribute* stringListAttributePtr = dynamic_cast<icomp::CStringListAttribute*>(&result);
+		iattr::CStringListAttribute* stringListAttributePtr = dynamic_cast<iattr::CStringListAttribute*>(&result);
 		if (stringListAttributePtr != NULL){
 			stringListAttributePtr->Reset();
 			for (int index = 0; index < values.count(); index++){
@@ -1352,7 +1352,7 @@ bool CAttributeEditorComp::EncodeAttribute(
 			return true;
 		}
 
-		icomp::CIdListAttribute* idListAttributePtr = dynamic_cast<icomp::CIdListAttribute*>(&result);
+		iattr::CIdListAttribute* idListAttributePtr = dynamic_cast<iattr::CIdListAttribute*>(&result);
 		if (idListAttributePtr != NULL){
 			idListAttributePtr->Reset();
 			for (int index = 0; index < values.count(); index++){
@@ -1981,7 +1981,7 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 			}
 		}
 		else if (propertyMining == AM_ATTRIBUTE){
-			const icomp::CIntegerAttribute* intAttributePtr = dynamic_cast<const icomp::CIntegerAttribute*>(attributePtr);
+			const iattr::CIntegerAttribute* intAttributePtr = dynamic_cast<const iattr::CIntegerAttribute*>(attributePtr);
 			if (intAttributePtr != NULL){
 				int value = intAttributePtr->GetValue();
 				editor.setProperty("text", QVariant(value));
@@ -1989,7 +1989,7 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 				return true;
 			}
 
-			const icomp::CRealAttribute* doubleAttributePtr = dynamic_cast<const icomp::CRealAttribute*>(attributePtr);
+			const iattr::CRealAttribute* doubleAttributePtr = dynamic_cast<const iattr::CRealAttribute*>(attributePtr);
 			if (doubleAttributePtr != NULL){
 				double value = doubleAttributePtr->GetValue();
 				editor.setProperty("text", QVariant(value));
@@ -1997,7 +1997,7 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 				return true;
 			}
 
-			const icomp::CStringAttribute* stringAttributePtr = dynamic_cast<const icomp::CStringAttribute*>(attributePtr);
+			const iattr::CStringAttribute* stringAttributePtr = dynamic_cast<const iattr::CStringAttribute*>(attributePtr);
 			if (stringAttributePtr != NULL){
 				const QString& value = stringAttributePtr->GetValue();
 				editor.setProperty("text", QVariant(value));
@@ -2005,7 +2005,7 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 				return true;
 			}
 
-			const icomp::CIdAttribute* idAttributePtr = dynamic_cast<const icomp::CIdAttribute*>(attributePtr);
+			const iattr::CIdAttribute* idAttributePtr = dynamic_cast<const iattr::CIdAttribute*>(attributePtr);
 			if (idAttributePtr != NULL){
 				const QByteArray& value = idAttributePtr->GetValue();
 				editor.setProperty("text", QVariant(value));
@@ -2014,7 +2014,7 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 			}
 		}
 		else if (propertyMining == AM_BOOL_ATTRIBUTE){
-			const icomp::CBooleanAttribute* boolAttributePtr = dynamic_cast<const icomp::CBooleanAttribute*>(attributePtr);
+			const iattr::CBooleanAttribute* boolAttributePtr = dynamic_cast<const iattr::CBooleanAttribute*>(attributePtr);
 			if (boolAttributePtr != NULL){
 				Q_ASSERT(comboEditor != NULL);
 
@@ -2030,7 +2030,7 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 				return false;
 			}
 
-			const icomp::CIntegerListAttribute* intListAttributePtr = dynamic_cast<const icomp::CIntegerListAttribute*>(attributePtr);
+			const iattr::CIntegerListAttribute* intListAttributePtr = dynamic_cast<const iattr::CIntegerListAttribute*>(attributePtr);
 			if (intListAttributePtr != NULL){
 				QString outputValue;
 				for (int index = 0; index < intListAttributePtr->GetValuesCount(); index++){
@@ -2046,7 +2046,7 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 				return true;
 			}
 
-			const icomp::CRealListAttribute* doubleListAttributePtr = dynamic_cast<const icomp::CRealListAttribute*>(attributePtr);
+			const iattr::CRealListAttribute* doubleListAttributePtr = dynamic_cast<const iattr::CRealListAttribute*>(attributePtr);
 			if (doubleListAttributePtr != NULL){
 				QString outputValue;
 				for (int index = 0; index < doubleListAttributePtr->GetValuesCount(); index++){
@@ -2062,7 +2062,7 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 				return true;
 			}
 
-			const icomp::CBooleanListAttribute* boolListAttributePtr = dynamic_cast<const icomp::CBooleanListAttribute*>(attributePtr);
+			const iattr::CBooleanListAttribute* boolListAttributePtr = dynamic_cast<const iattr::CBooleanListAttribute*>(attributePtr);
 			if (boolListAttributePtr != NULL){
 				QString outputValue;
 				for (int index = 0; index < boolListAttributePtr->GetValuesCount(); index++){
@@ -2078,7 +2078,7 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 				return true;
 			}
 
-			const icomp::CStringListAttribute* stringListAttributePtr = dynamic_cast<const icomp::CStringListAttribute*>(attributePtr);
+			const iattr::CStringListAttribute* stringListAttributePtr = dynamic_cast<const iattr::CStringListAttribute*>(attributePtr);
 			if (stringListAttributePtr != NULL){
 				QString outputValue;
 				for (int index = 0; index < stringListAttributePtr->GetValuesCount(); index++){
@@ -2094,7 +2094,7 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 				return true;
 			}
 
-			const icomp::CIdListAttribute* idListAttributePtr = dynamic_cast<const icomp::CIdListAttribute*>(attributePtr);
+			const iattr::CIdListAttribute* idListAttributePtr = dynamic_cast<const iattr::CIdListAttribute*>(attributePtr);
 			if (idListAttributePtr != NULL){
 				QString outputValue;
 				for (int index = 0; index < idListAttributePtr->GetValuesCount(); index++){
@@ -2151,7 +2151,7 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetComponentValue(const QByteA
 		if ((attributeInfoPtr == NULL) && !value.isEmpty()){
 			Q_ASSERT(attributeInfo.staticInfoPtr != NULL);	// attributeInfo.infoPtr or attributeInfo.staticInfoPtr must be valid for attribute!
 
-			QByteArray attributeValueTypeId = attributeInfo.staticInfoPtr->GetAttributeTypeName();
+			QByteArray attributeValueTypeId = attributeInfo.staticInfoPtr->GetAttributeTypeId();
 
 			attributeInfoPtr = attributeInfo.elementPtr->InsertAttributeInfo(attributeId, attributeValueTypeId);
 		}

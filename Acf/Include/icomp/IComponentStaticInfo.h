@@ -29,6 +29,7 @@
 
 
 // ACF includes
+#include "iattr/IAttributesMetaInfoProvider.h"
 #include "icomp/IElementStaticInfo.h"
 
 
@@ -46,7 +47,9 @@ class IAttributeStaticInfo;
 
 	\ingroup ComponentConcept
 */
-class IComponentStaticInfo: virtual public IElementStaticInfo
+class IComponentStaticInfo:
+			virtual public IElementStaticInfo,
+			virtual public iattr::IAttributesMetaInfoProvider
 {
 public:
 	/**
@@ -73,13 +76,10 @@ public:
 	enum MetaGroupId
 	{
 		/**
-			ID of meta group storing list of attributes.
-		*/
-		MGI_ATTRIBUTES = IElementStaticInfo::MGI_LAST + 1,
-		/**
 			ID of group for embedded types.
 		*/
-		MGI_EMBEDDED_COMPONENTS
+		MGI_EMBEDDED_COMPONENTS = IElementStaticInfo::MGI_LAST + 1,
+		MGI_LAST = MGI_EMBEDDED_COMPONENTS
 	};
 
 	/**

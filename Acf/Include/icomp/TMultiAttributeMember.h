@@ -25,8 +25,8 @@
 
 
 // ACF includes
+#include "iattr/TMultiAttribute.h"
 #include "icomp/IComponentContext.h"
-#include "icomp/TMultiAttribute.h"
 
 
 namespace icomp
@@ -201,12 +201,12 @@ class TMultiAttributeMember: public TMultiAttributeMemberBase<Attribute>
 
 
 template <>
-class TMultiAttributeMember< TMultiAttribute<QString> >: public TMultiAttributeMemberBase< TMultiAttribute<QString> >
+class TMultiAttributeMember< iattr::TMultiAttribute<QString> >: public TMultiAttributeMemberBase< iattr::TMultiAttribute<QString> >
 {
 public:
 	QString operator[](int index) const
 	{
-		return QCoreApplication::translate("Attribute", TMultiAttributeMemberBase< TMultiAttribute<QString> >::operator[](index).toLatin1());
+		return QCoreApplication::translate("Attribute", TMultiAttributeMemberBase< iattr::TMultiAttribute<QString> >::operator[](index).toLatin1());
 	}
 };
 
