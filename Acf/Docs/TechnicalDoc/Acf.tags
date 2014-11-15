@@ -1883,6 +1883,16 @@
     <namespace>idoc</namespace>
   </compound>
   <compound kind="file">
+    <name>CMultiPageDocumentFilePersistenceComp.h</name>
+    <path>C:/Temp/Acf/Include/idoc/</path>
+    <filename>_c_multi_page_document_file_persistence_comp_8h</filename>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
+    <includes id="_i_multi_page_document_8h" name="IMultiPageDocument.h" local="yes" imported="no">idoc/IMultiPageDocument.h</includes>
+    <class kind="class">idoc::CMultiPageDocumentFilePersistenceComp</class>
+    <namespace>idoc</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSelectedDocModelBinderComp.h</name>
     <path>C:/Temp/Acf/Include/idoc/</path>
     <filename>_c_selected_doc_model_binder_comp_8h</filename>
@@ -2471,16 +2481,6 @@
     <includes id="_c_object2d_base_8h" name="CObject2dBase.h" local="yes" imported="no">i2d/CObject2dBase.h</includes>
     <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
     <class kind="class">iimg::CBitmapBase</class>
-    <namespace>iimg</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CBitmapDocumentFilePersistenceComp.h</name>
-    <path>C:/Temp/Acf/Include/iimg/</path>
-    <filename>_c_bitmap_document_file_persistence_comp_8h</filename>
-    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
-    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
-    <includes id="_c_multi_page_bitmap_base_8h" name="CMultiPageBitmapBase.h" local="yes" imported="no">iimg/CMultiPageBitmapBase.h</includes>
-    <class kind="class">iimg::CBitmapDocumentFilePersistenceComp</class>
     <namespace>iimg</namespace>
   </compound>
   <compound kind="file">
@@ -25621,6 +25621,7 @@
     <filename>namespaceidoc.html</filename>
     <class kind="class">idoc::CCompositeDocumentTemplateComp</class>
     <class kind="class">idoc::CMultiDocumentManagerBase</class>
+    <class kind="class">idoc::CMultiPageDocumentFilePersistenceComp</class>
     <class kind="class">idoc::CSelectedDocModelBinderComp</class>
     <class kind="class">idoc::CSerializedUndoManagerComp</class>
     <class kind="class">idoc::CSingleDocumentManagerBase</class>
@@ -26301,6 +26302,362 @@
       <anchorfile>structidoc_1_1_c_multi_document_manager_base_1_1_view_info.html</anchorfile>
       <anchor>a6c9b9cd8fbc412f63d18d51dbcdaeaed</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>idoc::CMultiPageDocumentFilePersistenceComp</name>
+    <filename>classidoc_1_1_c_multi_page_document_file_persistence_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base virtualness="virtual">ifile::IFilePersistence</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>OperationMode</name>
+      <anchorfile>classidoc_1_1_c_multi_page_document_file_persistence_comp.html</anchorfile>
+      <anchor>a9a4571a88282336076db1850e800eed3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OM_FLAT</name>
+      <anchorfile>classidoc_1_1_c_multi_page_document_file_persistence_comp.html</anchorfile>
+      <anchor>a9a4571a88282336076db1850e800eed3a6533ca94f437a8338cf85f7c69c2fa2e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OM_FOLDER</name>
+      <anchorfile>classidoc_1_1_c_multi_page_document_file_persistence_comp.html</anchorfile>
+      <anchor>a9a4571a88282336076db1850e800eed3a2a5da8ded07a194f18fc5581aee5e999</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OM_COMPRESSED_FOLDER</name>
+      <anchorfile>classidoc_1_1_c_multi_page_document_file_persistence_comp.html</anchorfile>
+      <anchor>a9a4571a88282336076db1850e800eed3af568cdb9f604fde4333933f0746debc0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classidoc_1_1_c_multi_page_document_file_persistence_comp.html</anchorfile>
+      <anchor>abfe3a816e22ce93e2c173c3d440eea85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::TLoggerWrap&lt; Base &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
+      <anchor>a590fd3e388adbdb4dc9bf584b9c9cd2a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>OperationState</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>a674791f4173d2b57c1e6d6aa30228f76</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OS_OK</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>a674791f4173d2b57c1e6d6aa30228f76ad3ad24e4a04c8d4066a3b6b91489a5a9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OS_CANCELED</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>a674791f4173d2b57c1e6d6aa30228f76aadbf3ed4fda32f09ef7ffdcb43476914</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OS_FAILED</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>a674791f4173d2b57c1e6d6aa30228f76a629c8d6d55c0333a880c31d11f12308b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ErrorType</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>acfb011fb0ecccb52b85c52881552ec6e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>ET_NO_WRITE_PERMISSIONS</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>acfb011fb0ecccb52b85c52881552ec6eaf324b5c735ae1d026b5332359f5eb625</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>ET_NO_READ_PERMISSIONS</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>acfb011fb0ecccb52b85c52881552ec6ea2b54136a4bd2a25a44b1051f34352ca9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>ET_FILE_NOT_EXIST</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>acfb011fb0ecccb52b85c52881552ec6ea2b2029b1572f7d8353782db9d8f93819</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>MessageId</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>a24e35495e0c1f4d128ed1513c8907376</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_BAD_OBJECT_TYPE</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>a24e35495e0c1f4d128ed1513c8907376aea48adb715464da4c32c8537d5051f57</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_CANNOT_LOAD</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>a24e35495e0c1f4d128ed1513c8907376a98b0c49404ab528a72d1778acfa9bd0f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_CANNOT_SAVE</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>a24e35495e0c1f4d128ed1513c8907376a43ac0d6482c1c806777158e9e9e0cc0b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>QueryFlags</name>
+      <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
+      <anchor>a327f9848e8ae67a4a3c227b62b07fb1a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>QF_SAVE</name>
+      <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
+      <anchor>a327f9848e8ae67a4a3c227b62b07fb1aac65cfe44dd19de2a48738f0175386d1d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>QF_LOAD</name>
+      <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
+      <anchor>a327f9848e8ae67a4a3c227b62b07fb1aaaa7d8800b08ce989914b9782c6820dca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>QF_FILE</name>
+      <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
+      <anchor>a327f9848e8ae67a4a3c227b62b07fb1aa82cd5447d3bc54b765421f5b50c617ab</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>QF_DIRECTORY</name>
+      <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
+      <anchor>a327f9848e8ae67a4a3c227b62b07fb1aa62e2f4e2f6c7481be353a5929d750a1c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>QF_ANONYMOUS</name>
+      <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
+      <anchor>a327f9848e8ae67a4a3c227b62b07fb1aa0c229a4527df0a04ac6d68e494e66f88</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOperationSupported</name>
+      <anchorfile>classidoc_1_1_c_multi_page_document_file_persistence_comp.html</anchorfile>
+      <anchor>a2c61836d1ff8b3bb4a1d4105b9558bed</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>LoadFromFile</name>
+      <anchorfile>classidoc_1_1_c_multi_page_document_file_persistence_comp.html</anchorfile>
+      <anchor>adcd80722263b05817337f6956b6a7966</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>SaveToFile</name>
+      <anchorfile>classidoc_1_1_c_multi_page_document_file_persistence_comp.html</anchorfile>
+      <anchor>ad91d4960c999609e80cadebbf05ead22</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classidoc_1_1_c_multi_page_document_file_persistence_comp.html</anchorfile>
+      <anchor>a7a0a535ab8ab34bbd55c44c40dbcd02b</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classidoc_1_1_c_multi_page_document_file_persistence_comp.html</anchorfile>
+      <anchor>a8c09e654934ea81ed1637c30cfb4df90</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TLoggerWrap</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>a57511dfea9c5c1e102647f1f7ca826aa</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetLogPtr</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>a87506bdfa64e0509f5fb7a3d430a5dd4</anchor>
+      <arglist>(ilog::IMessageConsumer *logPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ilog::IMessageConsumer *</type>
+      <name>GetLogPtr</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>ab6314c71cabb4562e7229c3c8c06761c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetTracingEnabled</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>ae9e590b90904a64afde7a5ad10f3bca8</anchor>
+      <arglist>(bool trace)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsTracingEnabled</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>aa796620cca275e7834d7a0d5599f73af</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classidoc_1_1_c_multi_page_document_file_persistence_comp.html</anchorfile>
+      <anchor>a320352c10333e31fc4196cac27c237f6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SerializeDocumentMetaInfo</name>
+      <anchorfile>classidoc_1_1_c_multi_page_document_file_persistence_comp.html</anchorfile>
+      <anchor>a6ee59b8d0eabd94fe21f64f214d41ced</anchor>
+      <arglist>(const idoc::IMultiPageDocument &amp;document, iser::IArchive &amp;archive) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SerializePageMetaInfo</name>
+      <anchorfile>classidoc_1_1_c_multi_page_document_file_persistence_comp.html</anchorfile>
+      <anchor>acc5b04bdcc75b8247e09bfa2e06e16df</anchor>
+      <arglist>(idoc::IMultiPageDocument &amp;document, int pageIndex, iser::IArchive &amp;archive) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>IsVerboseEnabled</name>
+      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
+      <anchor>a9d1245fd121084ca782a70267cf7d9cb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SendVerboseMessage</name>
+      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
+      <anchor>a1f22cbf9121836e55c06f535f1db9ecb</anchor>
+      <arglist>(const QString &amp;message, const QString &amp;messageSource=QString()) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DecorateMessage</name>
+      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
+      <anchor>a148b8b1a78a6265cc95bb8434fb1e3c7</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendInfoMessage</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>adc0cc2f5c3b599a9824a0ed6ebe9124c</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendWarningMessage</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>adb540f7def3c56fecc5f7eef36d26ef7</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendErrorMessage</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>aa0a071c19b2b632b147df41207bf979c</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendCriticalMessage</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>abadaac82ecdb83f794136c894ab487ca</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendInfoMessageOnce</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>a80fd5dff3aa3d83e4d39b24e4fc63f52</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendWarningMessageOnce</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>aa0d77dbf2bb831b29438936446f0a393</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendErrorMessageOnce</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>a31e82291cfe271a91013cccf67dbb716</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendCriticalMessageOnce</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>a1d6acbc0e51abd89a4b2fe22b4b15781</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsLogConsumed</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>ab4b51ebab3e9634407680f35ef4afa98</anchor>
+      <arglist>(const istd::IInformationProvider::InformationCategory *categoryPtr=NULL, const int *flagsPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SendLogMessage</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>abeeedb5fce3b703e62b314beb2dc9ae2</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -27251,132 +27608,6 @@
       <name>BaseClass</name>
       <anchorfile>classidoc_1_1_c_text_file_loader_comp.html</anchorfile>
       <anchor>af2414b3863ee6607314ea29432d844c1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>OperationState</name>
-      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
-      <anchor>a674791f4173d2b57c1e6d6aa30228f76</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>OS_OK</name>
-      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
-      <anchor>a674791f4173d2b57c1e6d6aa30228f76ad3ad24e4a04c8d4066a3b6b91489a5a9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>OS_CANCELED</name>
-      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
-      <anchor>a674791f4173d2b57c1e6d6aa30228f76aadbf3ed4fda32f09ef7ffdcb43476914</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>OS_FAILED</name>
-      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
-      <anchor>a674791f4173d2b57c1e6d6aa30228f76a629c8d6d55c0333a880c31d11f12308b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>ErrorType</name>
-      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
-      <anchor>acfb011fb0ecccb52b85c52881552ec6e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>ET_NO_WRITE_PERMISSIONS</name>
-      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
-      <anchor>acfb011fb0ecccb52b85c52881552ec6eaf324b5c735ae1d026b5332359f5eb625</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>ET_NO_READ_PERMISSIONS</name>
-      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
-      <anchor>acfb011fb0ecccb52b85c52881552ec6ea2b54136a4bd2a25a44b1051f34352ca9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>ET_FILE_NOT_EXIST</name>
-      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
-      <anchor>acfb011fb0ecccb52b85c52881552ec6ea2b2029b1572f7d8353782db9d8f93819</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>MessageId</name>
-      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
-      <anchor>a24e35495e0c1f4d128ed1513c8907376</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_BAD_OBJECT_TYPE</name>
-      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
-      <anchor>a24e35495e0c1f4d128ed1513c8907376aea48adb715464da4c32c8537d5051f57</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_CANNOT_LOAD</name>
-      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
-      <anchor>a24e35495e0c1f4d128ed1513c8907376a98b0c49404ab528a72d1778acfa9bd0f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_CANNOT_SAVE</name>
-      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
-      <anchor>a24e35495e0c1f4d128ed1513c8907376a43ac0d6482c1c806777158e9e9e0cc0b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>QueryFlags</name>
-      <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
-      <anchor>a327f9848e8ae67a4a3c227b62b07fb1a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>QF_SAVE</name>
-      <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
-      <anchor>a327f9848e8ae67a4a3c227b62b07fb1aac65cfe44dd19de2a48738f0175386d1d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>QF_LOAD</name>
-      <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
-      <anchor>a327f9848e8ae67a4a3c227b62b07fb1aaaa7d8800b08ce989914b9782c6820dca</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>QF_FILE</name>
-      <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
-      <anchor>a327f9848e8ae67a4a3c227b62b07fb1aa82cd5447d3bc54b765421f5b50c617ab</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>QF_DIRECTORY</name>
-      <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
-      <anchor>a327f9848e8ae67a4a3c227b62b07fb1aa62e2f4e2f6c7481be353a5929d750a1c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>QF_ANONYMOUS</name>
-      <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
-      <anchor>a327f9848e8ae67a4a3c227b62b07fb1aa0c229a4527df0a04ac6d68e494e66f88</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -28375,53 +28606,11 @@
       <anchor>ab9fcaa609dd466a6e6d71028157316ae</anchor>
       <arglist></arglist>
     </member>
-    <member kind="typedef">
-      <type>ilog::TLoggerWrap&lt; Base &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
-      <anchor>a590fd3e388adbdb4dc9bf584b9c9cd2a</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QFileInfoList &amp;</type>
       <name>GetFileList</name>
       <anchorfile>classifile_1_1_c_file_list_provider_comp.html</anchorfile>
       <anchor>a175132241900a395c5a71b0f3fc1614e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TLoggerWrap</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a57511dfea9c5c1e102647f1f7ca826aa</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetLogPtr</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a87506bdfa64e0509f5fb7a3d430a5dd4</anchor>
-      <arglist>(ilog::IMessageConsumer *logPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ilog::IMessageConsumer *</type>
-      <name>GetLogPtr</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>ab6314c71cabb4562e7229c3c8c06761c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetTracingEnabled</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>ae9e590b90904a64afde7a5ad10f3bca8</anchor>
-      <arglist>(bool trace)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsTracingEnabled</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>aa796620cca275e7834d7a0d5599f73af</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" static="yes">
@@ -28458,97 +28647,6 @@
       <anchorfile>classifile_1_1_c_file_list_provider_comp.html</anchorfile>
       <anchor>a69e67eda0bc0fd2ed52fc8ff6738381a</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>IsVerboseEnabled</name>
-      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
-      <anchor>a9d1245fd121084ca782a70267cf7d9cb</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>SendVerboseMessage</name>
-      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
-      <anchor>a1f22cbf9121836e55c06f535f1db9ecb</anchor>
-      <arglist>(const QString &amp;message, const QString &amp;messageSource=QString()) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>DecorateMessage</name>
-      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
-      <anchor>a148b8b1a78a6265cc95bb8434fb1e3c7</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendInfoMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>adc0cc2f5c3b599a9824a0ed6ebe9124c</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendWarningMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>adb540f7def3c56fecc5f7eef36d26ef7</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendErrorMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>aa0a071c19b2b632b147df41207bf979c</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendCriticalMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>abadaac82ecdb83f794136c894ab487ca</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendInfoMessageOnce</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a80fd5dff3aa3d83e4d39b24e4fc63f52</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendWarningMessageOnce</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>aa0d77dbf2bb831b29438936446f0a393</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendErrorMessageOnce</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a31e82291cfe271a91013cccf67dbb716</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendCriticalMessageOnce</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a1d6acbc0e51abd89a4b2fe22b4b15781</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsLogConsumed</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>ab4b51ebab3e9634407680f35ef4afa98</anchor>
-      <arglist>(const istd::IInformationProvider::InformationCategory *categoryPtr=NULL, const int *flagsPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SendLogMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>abeeedb5fce3b703e62b314beb2dc9ae2</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31315,7 +31413,6 @@
     <filename>namespaceiimg.html</filename>
     <class kind="class">iimg::CBitmap</class>
     <class kind="class">iimg::CBitmapBase</class>
-    <class kind="class">iimg::CBitmapDocumentFilePersistenceComp</class>
     <class kind="class">iimg::CBitmapLoaderComp</class>
     <class kind="class">iimg::CBitmapSurface</class>
     <class kind="class">iimg::CComposedBitmapProviderComp</class>
@@ -31821,103 +31918,6 @@
       <anchorfile>classiimg_1_1_i_raster_image.html</anchorfile>
       <anchor>a4a784fb8ff21098450892345638c0f68</anchor>
       <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iimg::CBitmapDocumentFilePersistenceComp</name>
-    <filename>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</filename>
-    <base>ilog::TLoggerCompWrap</base>
-    <base virtualness="virtual">ifile::IFilePersistence</base>
-    <member kind="enumeration">
-      <type></type>
-      <name>OperationMode</name>
-      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
-      <anchor>acfe83e99b27f4018c5d85054a538f743</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>OM_FLAT</name>
-      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
-      <anchor>acfe83e99b27f4018c5d85054a538f743a99ba696c32f0101dbfd4b3c556d21594</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>OM_FOLDER</name>
-      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
-      <anchor>acfe83e99b27f4018c5d85054a538f743aa94bd3b57672617539bf9aaac7a82aac</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>OM_COMPRESSED_FOLDER</name>
-      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
-      <anchor>acfe83e99b27f4018c5d85054a538f743ac2020dce2250643be323ed735db513f0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ilog::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
-      <anchor>ab84b5d1830b1ef25551fb7fdf2e1f1b2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsOperationSupported</name>
-      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
-      <anchor>a7a387868462afbc6879ef79dfb170333</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>LoadFromFile</name>
-      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
-      <anchor>aa580f87bba68736df318994ba4c2da54</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>SaveToFile</name>
-      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
-      <anchor>acce779c1bb2179409b1424cf22869f75</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetFileExtensions</name>
-      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
-      <anchor>aaf1ea7a86ca8a055cf175a1aaa567276</anchor>
-      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetTypeDescription</name>
-      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
-      <anchor>ac986556164c2b9ad2df05ef5e0f62aff</anchor>
-      <arglist>(const QString *extensionPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
-      <anchor>a94561f554f281017117f98bebf0ad9e2</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SerializeDocumentMetaInfo</name>
-      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
-      <anchor>a6ed914ee685f53198bbdf0d9ae9824ee</anchor>
-      <arglist>(iimg::CMultiPageBitmapBase &amp;document, iser::IArchive &amp;archive) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SerializePageMetaInfo</name>
-      <anchorfile>classiimg_1_1_c_bitmap_document_file_persistence_comp.html</anchorfile>
-      <anchor>a58b396c824edd82b4799159d3276d7c6</anchor>
-      <arglist>(iimg::CMultiPageBitmapBase &amp;document, int pageIndex, iser::IArchive &amp;archive) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -70358,6 +70358,7 @@
     <filename>dir_d08bd8536f8e18e7586d85ced0bcc772.html</filename>
     <file>CCompositeDocumentTemplateComp.h</file>
     <file>CMultiDocumentManagerBase.h</file>
+    <file>CMultiPageDocumentFilePersistenceComp.h</file>
     <file>CSelectedDocModelBinderComp.h</file>
     <file>CSerializedUndoManagerComp.h</file>
     <file>CSingleDocumentManagerBase.h</file>
@@ -70430,7 +70431,6 @@
     <filename>dir_c46c93fd4f608fc536893cbafac98421.html</filename>
     <file>CBitmap.h</file>
     <file>CBitmapBase.h</file>
-    <file>CBitmapDocumentFilePersistenceComp.h</file>
     <file>CBitmapLoaderComp.h</file>
     <file>CBitmapSurface.h</file>
     <file>CComposedBitmapProviderComp.h</file>

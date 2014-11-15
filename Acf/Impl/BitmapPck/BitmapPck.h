@@ -33,7 +33,6 @@
 #include "iimg/CGeneralBitmap.h"
 #include "iimg/CMultiPageBitmapComp.h"
 #include "iimg/CComposedBitmapProviderComp.h"
-#include "iimg/CBitmapDocumentFilePersistenceComp.h"
 #include "iimg/CMultiPageBitmapSequenceComp.h"
 
 
@@ -69,13 +68,8 @@ typedef icomp::TModelCompWrap<
 						imath::ISampledFunction2d> > BitmapSurface;
 
 typedef iimg::CBitmapLoaderComp BitmapLoader;
-
 typedef icomp::TModelCompWrap<iimg::CMultiPageBitmapComp> MultiPageBitmap;
-
 typedef icomp::TModelCompWrap<iimg::CComposedBitmapProviderComp> ComposedBitmapProvider;
-
-typedef iimg::CBitmapDocumentFilePersistenceComp BitmapDocumentLoader;
-
 typedef icomp::TModelCompWrap<iimg::CMultiPageBitmapSequenceComp> MultiPageBitmapSequence;
 
 
