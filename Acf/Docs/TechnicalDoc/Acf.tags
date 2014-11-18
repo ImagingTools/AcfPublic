@@ -519,6 +519,15 @@
     <namespace>i3d</namespace>
   </compound>
   <compound kind="file">
+    <name>CAttributeMetaInfo.h</name>
+    <path>C:/Temp/Acf/Include/iattr/</path>
+    <filename>_c_attribute_meta_info_8h</filename>
+    <includes id="_t_opt_del_ptr_8h" name="TOptDelPtr.h" local="yes" imported="no">istd/TOptDelPtr.h</includes>
+    <includes id="_i_attribute_meta_info_8h" name="IAttributeMetaInfo.h" local="yes" imported="no">iattr/IAttributeMetaInfo.h</includes>
+    <class kind="class">iattr::CAttributeMetaInfo</class>
+    <namespace>iattr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CAttributesManager.h</name>
     <path>C:/Temp/Acf/Include/iattr/</path>
     <filename>_c_attributes_manager_8h</filename>
@@ -535,13 +544,32 @@
     <namespace>iattr</namespace>
   </compound>
   <compound kind="file">
+    <name>CAttributesMetaInfoProvider.h</name>
+    <path>C:/Temp/Acf/Include/iattr/</path>
+    <filename>_c_attributes_meta_info_provider_8h</filename>
+    <includes id="_t_opt_del_ptr_8h" name="TOptDelPtr.h" local="yes" imported="no">istd/TOptDelPtr.h</includes>
+    <includes id="_i_attributes_meta_info_provider_8h" name="IAttributesMetaInfoProvider.h" local="yes" imported="no">iattr/IAttributesMetaInfoProvider.h</includes>
+    <class kind="class">iattr::CAttributesMetaInfoProvider</class>
+    <namespace>iattr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CEnumAttributeMetaInfo.h</name>
     <path>C:/Temp/Acf/Include/iattr/</path>
     <filename>_c_enum_attribute_meta_info_8h</filename>
     <includes id="_t_opt_del_ptr_8h" name="TOptDelPtr.h" local="yes" imported="no">istd/TOptDelPtr.h</includes>
     <includes id="_i_enum_attribute_meta_info_8h" name="IEnumAttributeMetaInfo.h" local="yes" imported="no">iattr/IEnumAttributeMetaInfo.h</includes>
-    <includes id="_i_attributes_provider_8h" name="IAttributesProvider.h" local="yes" imported="no">iattr/IAttributesProvider.h</includes>
+    <includes id="_c_attribute_meta_info_8h" name="CAttributeMetaInfo.h" local="yes" imported="no">iattr/CAttributeMetaInfo.h</includes>
     <class kind="class">iattr::CEnumAttributeMetaInfo</class>
+    <namespace>iattr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CNumericAttributeMetaInfo.h</name>
+    <path>C:/Temp/Acf/Include/iattr/</path>
+    <filename>_c_numeric_attribute_meta_info_8h</filename>
+    <includes id="_t_opt_del_ptr_8h" name="TOptDelPtr.h" local="yes" imported="no">istd/TOptDelPtr.h</includes>
+    <includes id="_i_numeric_attribute_meta_info_8h" name="INumericAttributeMetaInfo.h" local="yes" imported="no">iattr/INumericAttributeMetaInfo.h</includes>
+    <includes id="_c_attribute_meta_info_8h" name="CAttributeMetaInfo.h" local="yes" imported="no">iattr/CAttributeMetaInfo.h</includes>
+    <class kind="class">iattr::CNumericAttributeMetaInfo</class>
     <namespace>iattr</namespace>
   </compound>
   <compound kind="file">
@@ -599,6 +627,14 @@
     <filename>_i_enum_attribute_meta_info_8h</filename>
     <includes id="_i_attribute_meta_info_8h" name="IAttributeMetaInfo.h" local="yes" imported="no">iattr/IAttributeMetaInfo.h</includes>
     <class kind="class">iattr::IEnumAttributeMetaInfo</class>
+    <namespace>iattr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>INumericAttributeMetaInfo.h</name>
+    <path>C:/Temp/Acf/Include/iattr/</path>
+    <filename>_i_numeric_attribute_meta_info_8h</filename>
+    <includes id="_i_attribute_meta_info_8h" name="IAttributeMetaInfo.h" local="yes" imported="no">iattr/IAttributeMetaInfo.h</includes>
+    <class kind="class">iattr::INumericAttributeMetaInfo</class>
     <namespace>iattr</namespace>
   </compound>
   <compound kind="file">
@@ -14525,14 +14561,18 @@
   <compound kind="namespace">
     <name>iattr</name>
     <filename>namespaceiattr.html</filename>
+    <class kind="class">iattr::CAttributeMetaInfo</class>
     <class kind="class">iattr::CAttributesManager</class>
+    <class kind="class">iattr::CAttributesMetaInfoProvider</class>
     <class kind="class">iattr::CEnumAttributeMetaInfo</class>
+    <class kind="class">iattr::CNumericAttributeMetaInfo</class>
     <class kind="class">iattr::CStandardAttributesFactory</class>
     <class kind="class">iattr::IAttributeMetaInfo</class>
     <class kind="class">iattr::IAttributesManager</class>
     <class kind="class">iattr::IAttributesMetaInfoProvider</class>
     <class kind="class">iattr::IAttributesProvider</class>
     <class kind="class">iattr::IEnumAttributeMetaInfo</class>
+    <class kind="class">iattr::INumericAttributeMetaInfo</class>
     <class kind="class">iattr::TAttribute</class>
     <class kind="class">iattr::TMultiAttribute</class>
     <member kind="typedef">
@@ -14603,6 +14643,109 @@
       <name>CIdListAttribute</name>
       <anchorfile>namespaceiattr.html</anchorfile>
       <anchor>aa2b34a03eedf6fc3956ad9ba526e32b9</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iattr::CAttributeMetaInfo</name>
+    <filename>classiattr_1_1_c_attribute_meta_info.html</filename>
+    <base virtualness="virtual">iattr::IAttributeMetaInfo</base>
+    <member kind="function">
+      <type>void</type>
+      <name>SetAttributeDescription</name>
+      <anchorfile>classiattr_1_1_c_attribute_meta_info.html</anchorfile>
+      <anchor>aaff5fdc632ac0998b6369925b0b1683e</anchor>
+      <arglist>(const QString &amp;description)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetAttributeTypeId</name>
+      <anchorfile>classiattr_1_1_c_attribute_meta_info.html</anchorfile>
+      <anchor>ab5020b7c723e1bf7c15dbad1fb1e35b2</anchor>
+      <arglist>(const QByteArray &amp;typeId)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetAttributeFlags</name>
+      <anchorfile>classiattr_1_1_c_attribute_meta_info.html</anchorfile>
+      <anchor>ac21db4736d4ab34855ac36e3b3c8429d</anchor>
+      <arglist>(int attributeFlags)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetAttributeDefaultValue</name>
+      <anchorfile>classiattr_1_1_c_attribute_meta_info.html</anchorfile>
+      <anchor>abe91069fd3e73b693b7c584436664a60</anchor>
+      <arglist>(const iser::IObject *defaultValuePtr, bool releaseFlag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetAttributeDescription</name>
+      <anchorfile>classiattr_1_1_c_attribute_meta_info.html</anchorfile>
+      <anchor>ae90deb2772569e6e2ae5f923c591e695</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iser::IObject *</type>
+      <name>GetAttributeDefaultValue</name>
+      <anchorfile>classiattr_1_1_c_attribute_meta_info.html</anchorfile>
+      <anchor>ad5d755a8c510cded02bc084d89db1936</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetAttributeTypeId</name>
+      <anchorfile>classiattr_1_1_c_attribute_meta_info.html</anchorfile>
+      <anchor>a6314ca72be6f826794d73382d4dd5a04</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetAttributeFlags</name>
+      <anchorfile>classiattr_1_1_c_attribute_meta_info.html</anchorfile>
+      <anchor>aa37bc6c7cc7bad2e69dce8b08490b353</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>AttributeFlags</name>
+      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
+      <anchor>aa1cdd9cacdaa49d1f55506586e57141e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>AF_OBLIGATORY</name>
+      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
+      <anchor>aa1cdd9cacdaa49d1f55506586e57141ea263cd13ba95d8395ec0614632f11ae77</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>AF_NULLABLE</name>
+      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
+      <anchor>aa1cdd9cacdaa49d1f55506586e57141ea705825a95e413f1d29f7b2504fbff044</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>AF_SINGLE</name>
+      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
+      <anchor>aa1cdd9cacdaa49d1f55506586e57141ea7f7103a65f7061358641925ee0999094</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>AF_MULTIPLE</name>
+      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
+      <anchor>aa1cdd9cacdaa49d1f55506586e57141ea837a670f0b53029709991017675e8cd1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>AF_VALUE</name>
+      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
+      <anchor>aa1cdd9cacdaa49d1f55506586e57141eaa6ec3f3871ebb1a14b240e826d2c24e5</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -14781,10 +14924,43 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iattr::CAttributesMetaInfoProvider</name>
+    <filename>classiattr_1_1_c_attributes_meta_info_provider.html</filename>
+    <base virtualness="virtual">iattr::IAttributesMetaInfoProvider</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveAllAttributeMetaInfos</name>
+      <anchorfile>classiattr_1_1_c_attributes_meta_info_provider.html</anchorfile>
+      <anchor>a2f61eebec64a91a3f4e4e6759faa8a8c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertAttributeMetaInfo</name>
+      <anchorfile>classiattr_1_1_c_attributes_meta_info_provider.html</anchorfile>
+      <anchor>a0c3b998d4dc99345140cf61af6587fb6</anchor>
+      <arglist>(const QByteArray &amp;attributeId, IAttributeMetaInfo *attributeMetaInfoPtr, bool releaseFlag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual IAttributesProvider::AttributeIds</type>
+      <name>GetAttributeMetaIds</name>
+      <anchorfile>classiattr_1_1_c_attributes_meta_info_provider.html</anchorfile>
+      <anchor>a6e17eb662a1b5629489920902fa01312</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const IAttributeMetaInfo *</type>
+      <name>GetAttributeMetaInfo</name>
+      <anchorfile>classiattr_1_1_c_attributes_meta_info_provider.html</anchorfile>
+      <anchor>afea22a96a4c01416dbae56b45469c0f8</anchor>
+      <arglist>(const QByteArray &amp;attributeId) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iattr::CEnumAttributeMetaInfo</name>
     <filename>classiattr_1_1_c_enum_attribute_meta_info.html</filename>
+    <base>iattr::CAttributeMetaInfo</base>
     <base virtualness="virtual">iattr::IEnumAttributeMetaInfo</base>
-    <base protection="protected" virtualness="virtual">iattr::IAttributesProvider</base>
     <member kind="function">
       <type></type>
       <name>CEnumAttributeMetaInfo</name>
@@ -14834,89 +15010,46 @@
       <anchor>afd5e7813de1d5dfdbf15e5bb89ad6cb4</anchor>
       <arglist>(int index) const </arglist>
     </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetAttributeDescription</name>
-      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
-      <anchor>a971a50836d2d878aaa8749a4e8d95820</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const iser::IObject *</type>
-      <name>GetAttributeDefaultValue</name>
-      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
-      <anchor>ac2991a1acea7f4d8e0ac3c2b422af5a9</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QByteArray</type>
-      <name>GetAttributeTypeId</name>
-      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
-      <anchor>aa0dcb4eb5c1a1f2d9bb15b1ea683dedc</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetAttributeFlags</name>
-      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
-      <anchor>a3d0223df6f4bcc08070fea917097e79f</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="enumeration">
+  </compound>
+  <compound kind="class">
+    <name>iattr::CNumericAttributeMetaInfo</name>
+    <filename>classiattr_1_1_c_numeric_attribute_meta_info.html</filename>
+    <base>iattr::CAttributeMetaInfo</base>
+    <base virtualness="virtual">iattr::INumericAttributeMetaInfo</base>
+    <member kind="function">
       <type></type>
-      <name>AttributeFlags</name>
-      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
-      <anchor>aa1cdd9cacdaa49d1f55506586e57141e</anchor>
-      <arglist></arglist>
+      <name>CNumericAttributeMetaInfo</name>
+      <anchorfile>classiattr_1_1_c_numeric_attribute_meta_info.html</anchorfile>
+      <anchor>a15ea2004eedf3ba5432bd59171d88557</anchor>
+      <arglist>()</arglist>
     </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>AF_OBLIGATORY</name>
-      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
-      <anchor>aa1cdd9cacdaa49d1f55506586e57141ea263cd13ba95d8395ec0614632f11ae77</anchor>
-      <arglist></arglist>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetMinAttributeValue</name>
+      <anchorfile>classiattr_1_1_c_numeric_attribute_meta_info.html</anchorfile>
+      <anchor>a18f1bf60dd28baeb9275c0b65ec20b94</anchor>
+      <arglist>(const iser::IObject *valuePtr, bool releaseFlag)</arglist>
     </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>AF_NULLABLE</name>
-      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
-      <anchor>aa1cdd9cacdaa49d1f55506586e57141ea705825a95e413f1d29f7b2504fbff044</anchor>
-      <arglist></arglist>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetMaxAttributeValue</name>
+      <anchorfile>classiattr_1_1_c_numeric_attribute_meta_info.html</anchorfile>
+      <anchor>a9435621c781219d3d93382963546a21b</anchor>
+      <arglist>(const iser::IObject *valuePtr, bool releaseFlag)</arglist>
     </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>AF_SINGLE</name>
-      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
-      <anchor>aa1cdd9cacdaa49d1f55506586e57141ea7f7103a65f7061358641925ee0999094</anchor>
-      <arglist></arglist>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetMinimalValue</name>
+      <anchorfile>classiattr_1_1_c_numeric_attribute_meta_info.html</anchorfile>
+      <anchor>acb584065cac7281d00ca6b920872bd7c</anchor>
+      <arglist>(iser::IObject &amp;result) const </arglist>
     </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>AF_MULTIPLE</name>
-      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
-      <anchor>aa1cdd9cacdaa49d1f55506586e57141ea837a670f0b53029709991017675e8cd1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>AF_VALUE</name>
-      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
-      <anchor>aa1cdd9cacdaa49d1f55506586e57141eaa6ec3f3871ebb1a14b240e826d2c24e5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual AttributeIds</type>
-      <name>GetAttributeIds</name>
-      <anchorfile>classiattr_1_1_i_attributes_provider.html</anchorfile>
-      <anchor>a6c95be450ce2ffeaff8fc9d67d23924d</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual iser::IObject *</type>
-      <name>GetAttribute</name>
-      <anchorfile>classiattr_1_1_i_attributes_provider.html</anchorfile>
-      <anchor>aff2e34e5fe7aa267ee7238ce73c3c5d1</anchor>
-      <arglist>(const QByteArray &amp;attributeId) const =0</arglist>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetMaximalValue</name>
+      <anchorfile>classiattr_1_1_c_numeric_attribute_meta_info.html</anchorfile>
+      <anchor>a0083555704bc3020eac332a0d95d8fef</anchor>
+      <arglist>(iser::IObject &amp;result) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -14963,6 +15096,34 @@
     <name>iattr::IAttributeMetaInfo</name>
     <filename>classiattr_1_1_i_attribute_meta_info.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetAttributeDescription</name>
+      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
+      <anchor>a971a50836d2d878aaa8749a4e8d95820</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const iser::IObject *</type>
+      <name>GetAttributeDefaultValue</name>
+      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
+      <anchor>ac2991a1acea7f4d8e0ac3c2b422af5a9</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QByteArray</type>
+      <name>GetAttributeTypeId</name>
+      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
+      <anchor>aa0dcb4eb5c1a1f2d9bb15b1ea683dedc</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetAttributeFlags</name>
+      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
+      <anchor>a3d0223df6f4bcc08070fea917097e79f</anchor>
+      <arglist>() const =0</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iattr::IAttributesManager</name>
@@ -14981,6 +15142,20 @@
       <anchorfile>classiattr_1_1_i_attributes_manager.html</anchorfile>
       <anchor>a9cb73abe8d949c35416f997068980823</anchor>
       <arglist>(const QByteArray &amp;attributeId, iser::IObject *attributePtr, bool releaseFlag)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual AttributeIds</type>
+      <name>GetAttributeIds</name>
+      <anchorfile>classiattr_1_1_i_attributes_provider.html</anchorfile>
+      <anchor>a6c95be450ce2ffeaff8fc9d67d23924d</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual iser::IObject *</type>
+      <name>GetAttribute</name>
+      <anchorfile>classiattr_1_1_i_attributes_provider.html</anchorfile>
+      <anchor>aff2e34e5fe7aa267ee7238ce73c3c5d1</anchor>
+      <arglist>(const QByteArray &amp;attributeId) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -15038,6 +15213,25 @@
       <anchorfile>classiattr_1_1_i_enum_attribute_meta_info.html</anchorfile>
       <anchor>a95bc16c1bcd27fedbeeb1898a985e52c</anchor>
       <arglist>(int index) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iattr::INumericAttributeMetaInfo</name>
+    <filename>classiattr_1_1_i_numeric_attribute_meta_info.html</filename>
+    <base>iattr::IAttributeMetaInfo</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>GetMinimalValue</name>
+      <anchorfile>classiattr_1_1_i_numeric_attribute_meta_info.html</anchorfile>
+      <anchor>ac99d3436ea9f7fcb1daf6caacec239d7</anchor>
+      <arglist>(iser::IObject &amp;result) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>GetMaximalValue</name>
+      <anchorfile>classiattr_1_1_i_numeric_attribute_meta_info.html</anchorfile>
+      <anchor>af53ed61bbec140a41213370e761092a0</anchor>
+      <arglist>(iser::IObject &amp;result) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -70219,8 +70413,11 @@
     <name>Include/iattr</name>
     <path>C:/Temp/Acf/Include/iattr/</path>
     <filename>dir_26e52b3ca1ace008377d609d523e8da3.html</filename>
+    <file>CAttributeMetaInfo.h</file>
     <file>CAttributesManager.h</file>
+    <file>CAttributesMetaInfoProvider.h</file>
     <file>CEnumAttributeMetaInfo.h</file>
+    <file>CNumericAttributeMetaInfo.h</file>
     <file>CStandardAttributesFactory.h</file>
     <file>iattr.h</file>
     <file>IAttributeMetaInfo.h</file>
@@ -70228,6 +70425,7 @@
     <file>IAttributesMetaInfoProvider.h</file>
     <file>IAttributesProvider.h</file>
     <file>IEnumAttributeMetaInfo.h</file>
+    <file>INumericAttributeMetaInfo.h</file>
     <file>TAttribute.h</file>
     <file>TMultiAttribute.h</file>
   </compound>
