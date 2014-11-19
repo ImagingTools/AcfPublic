@@ -1031,6 +1031,8 @@
     <filename>_c_inspection_task_comp_8h</filename>
     <includes id="_i_inspection_task_8h" name="IInspectionTask.h" local="yes" imported="no">iinsp/IInspectionTask.h</includes>
     <class kind="class">iinsp::CInspectionTaskComp</class>
+    <class kind="class">iinsp::CInspectionTaskComp::MessageContainer</class>
+    <class kind="class">iinsp::CInspectionTaskComp::Parameters</class>
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
@@ -13436,6 +13438,8 @@
     <base virtualness="virtual">iinsp::ISupplier</base>
     <base virtualness="virtual">istd::IInformationProvider</base>
     <base protection="protected">imod::CMultiModelBridgeBase</base>
+    <class kind="class">iinsp::CInspectionTaskComp::MessageContainer</class>
+    <class kind="class">iinsp::CInspectionTaskComp::Parameters</class>
     <member kind="enumeration">
       <type></type>
       <name>MessageId</name>
@@ -13667,6 +13671,34 @@
       <anchor>a136a36971cb1ece1303a522dfffefe7c</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="typedef" protection="protected">
+      <type>QVector&lt; iinsp::ISupplier * &gt;</type>
+      <name>Suppliers</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>ad9ddc5a2570af656f861486fd543a939</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>imod::TModelWrap&lt; Parameters &gt;</type>
+      <name>ParametersModel</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>ad76e7a9250888a29012b87a0d2f55b5b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>istd::TDelPtr&lt; istd::CChangeNotifier &gt;</type>
+      <name>NotifierPtr</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a5cb357627d43b2e600faa4758ba384f2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>QMap&lt; iinsp::ISupplier *, NotifierPtr &gt;</type>
+      <name>SubtaskNotifiers</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a4b11c1950bb2c65684546310c5af7ca4</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>EnsureStatusKnown</name>
@@ -13694,6 +13726,171 @@
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
       <anchor>ae3280369ae6c607923044856b3125dc1</anchor>
       <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static InterfaceType *</type>
+      <name>ExtractParameters</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a5689219d94d24960abeadcc46fcd9849</anchor>
+      <arglist>(CInspectionTaskComp &amp;component)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Suppliers</type>
+      <name>m_subtasks</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a49cb888529c57be8d1b1b9459b531815</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ParametersModel</type>
+      <name>m_parameters</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a32396330173add08a77f7a56ad6efc75</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_isStatusKnown</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a1cf9cdb0d51c6235292ca5803d4dafd7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QDateTime</type>
+      <name>m_resultTypeStamp</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a73cd914cf1c4feb0dd36de855f51d1c3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>InformationCategory</type>
+      <name>m_resultCategory</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>ad26973179fcca66c29521b58b38746db</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QString</type>
+      <name>m_resultDescription</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a9ed7a71f3a12d8e42f83801da4d00b22</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>MessageContainer</type>
+      <name>m_messageContainer</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a09fb65b8bd085efc84bde6da7c5d82fa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>NotifierPtr</type>
+      <name>m_productChangeNotifierPtr</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a4c0c239c027efff8b0b8a159f7b7fb20</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>SubtaskNotifiers</type>
+      <name>m_subtaskNotifiers</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a4a83932311e9844e4fe5a41e164d7f98</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iinsp::CInspectionTaskComp::MessageContainer</name>
+    <filename>classiinsp_1_1_c_inspection_task_comp_1_1_message_container.html</filename>
+    <base virtualness="virtual">ilog::CMessageContainer</base>
+    <member kind="typedef">
+      <type>ilog::CMessageContainer</type>
+      <name>BaseClass</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_message_container.html</anchorfile>
+      <anchor>a5bd475dd52321d6389f6133ff6044141</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>MessageContainer</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_message_container.html</anchorfile>
+      <anchor>a94b481318a35c828a37b4fe779bf79d8</anchor>
+      <arglist>(CInspectionTaskComp *parentPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetWorstCategory</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_message_container.html</anchorfile>
+      <anchor>a33defe011ea592c0f9a111bb3c34bc41</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Messages</type>
+      <name>GetMessages</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_message_container.html</anchorfile>
+      <anchor>a45edc1b909421cfc1c60a96e2ba526de</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearMessages</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_message_container.html</anchorfile>
+      <anchor>a73b4372cd2c70b0eb6069eff888e1e60</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_message_container.html</anchorfile>
+      <anchor>a9b3cada3feee06f13cffcf6acff937dd</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iinsp::CInspectionTaskComp::Parameters</name>
+    <filename>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</filename>
+    <base>imod::CMultiModelBridgeBase</base>
+    <base virtualness="virtual">iprm::IParamsSet</base>
+    <member kind="function">
+      <type></type>
+      <name>Parameters</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
+      <anchor>a18eab05a477eaa118e0e4d1914f11344</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetParent</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
+      <anchor>aec5b532e2cc11122abc37e0602238069</anchor>
+      <arglist>(CInspectionTaskComp *parentPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Ids</type>
+      <name>GetParamIds</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
+      <anchor>a050452b093a50c4998d16a06c270641b</anchor>
+      <arglist>(bool editableOnly=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iser::ISerializable *</type>
+      <name>GetParameter</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
+      <anchor>a003c433c1ceb1c32cde7c7a828257a2d</anchor>
+      <arglist>(const QByteArray &amp;id) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iser::ISerializable *</type>
+      <name>GetEditableParameter</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
+      <anchor>a18ac508eea9cfa753c859fa7cdd94c08</anchor>
+      <arglist>(const QByteArray &amp;id)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
+      <anchor>afa621d1a2e2d77f2fcdb9c7e54fbe275</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
