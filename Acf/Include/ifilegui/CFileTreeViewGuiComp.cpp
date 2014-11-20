@@ -61,11 +61,6 @@ void CFileTreeViewGuiComp::OnGuiCreated()
 {
 	BaseClass::OnGuiCreated();
 
-#if QT_VERSION >= 0x050000
-	FileList->header()->setSectionResizeMode(QHeaderView::Stretch);
-#else
-	FileList->header()->setResizeMode(QHeaderView::Stretch);
-#endif
 	FileList->setModel(&m_itemModel);
 
 	QItemSelectionModel* selectionModelPtr = FileList->selectionModel();
@@ -197,6 +192,11 @@ void CFileTreeViewGuiComp::OnTreeModelUpdated()
 
 	FileList->setUpdatesEnabled(true);
 	FileList->expandAll();
+#if QT_VERSION >= 0x050000
+	FileList->header()->setSectionResizeMode(QHeaderView::Stretch);
+#else
+	FileList->header()->setResizeMode(QHeaderView::Stretch);
+#endif
 
 	FilterText->setFocus();
 
