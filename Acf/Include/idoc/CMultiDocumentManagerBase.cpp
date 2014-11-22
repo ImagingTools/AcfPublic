@@ -472,8 +472,10 @@ bool CMultiDocumentManagerBase::CloseDocument(int documentIndex, bool beQuiet, b
 	}
 	istd::CChangeNotifier notifier(this, changeSet);
 	Q_UNUSED(notifier);
+	SingleDocumentData* removedObjectPtr = m_documentInfos.PopAt(documentIndex);
+	notifier.Reset();
 
-	m_documentInfos.RemoveAt(documentIndex);
+	delete removedObjectPtr;
 
 	return true;
 }

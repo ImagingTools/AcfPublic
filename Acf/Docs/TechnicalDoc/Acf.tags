@@ -15017,13 +15017,6 @@
     <base>iattr::CAttributeMetaInfo</base>
     <base virtualness="virtual">iattr::INumericAttributeMetaInfo</base>
     <member kind="function">
-      <type></type>
-      <name>CNumericAttributeMetaInfo</name>
-      <anchorfile>classiattr_1_1_c_numeric_attribute_meta_info.html</anchorfile>
-      <anchor>a15ea2004eedf3ba5432bd59171d88557</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
       <type>bool</type>
       <name>SetMinAttributeValue</name>
       <anchorfile>classiattr_1_1_c_numeric_attribute_meta_info.html</anchorfile>
@@ -15185,7 +15178,7 @@
   <compound kind="class">
     <name>iattr::IEnumAttributeMetaInfo</name>
     <filename>classiattr_1_1_i_enum_attribute_meta_info.html</filename>
-    <base>iattr::IAttributeMetaInfo</base>
+    <base virtualness="virtual">iattr::IAttributeMetaInfo</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsAnyValueAllowed</name>
@@ -15218,7 +15211,7 @@
   <compound kind="class">
     <name>iattr::INumericAttributeMetaInfo</name>
     <filename>classiattr_1_1_i_numeric_attribute_meta_info.html</filename>
-    <base>iattr::IAttributeMetaInfo</base>
+    <base virtualness="virtual">iattr::IAttributeMetaInfo</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>GetMinimalValue</name>
