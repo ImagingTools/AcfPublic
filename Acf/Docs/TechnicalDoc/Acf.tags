@@ -40758,48 +40758,6 @@
       <anchor>a095a48338f21066a55b28e1b9c139e28</anchor>
       <arglist>(int optionIndex, const QString &amp;optionDescription)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetOptionsFlags</name>
-      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>a1cc53aa3d030d9a1665a06af3726a336</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetOptionsCount</name>
-      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>a4278fa18405a7caf92af87848e907c79</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetOptionName</name>
-      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>a6f29e4475da3694a0fc09c5ccdcb3b89</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetOptionDescription</name>
-      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>a84c9efb3b0cde90880876afc250faf14</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QByteArray</type>
-      <name>GetOptionId</name>
-      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>a28a207370d92c50e9b5ea9f5a9ace120</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsOptionEnabled</name>
-      <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>aaf7beca237ea3254593d4968d73812d5</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
     <member kind="function">
       <type></type>
       <name>CParamsManagerCompBase</name>
@@ -40903,6 +40861,48 @@
       <name>GetSubselection</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
       <anchor>a2f221b093707f5d07e2cdf6996cb0c20</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsFlags</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>aea77d1990d6235ef28ba651949854841</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>a4ce4170fccafffa2304951ead28509ef</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>a069e69b8d6e3372a37f2b4e629465414</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>ae4aaa2bc4d1013fc22f83058c4d972d4</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetOptionId</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>a832e602e13d160989a94eab428d8361f</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>aa5c3154bc9d59446950c21a112e5882d</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected">
@@ -41250,48 +41250,6 @@
       <anchor>a42fe4fbbb887c65ea01fc9556dde1ebc</anchor>
       <arglist>(int optionIndex, const QString &amp;optionDescription)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetOptionsFlags</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a52b8ffe289e490221bd0d42c376f4157</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetOptionsCount</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>ac0839252bfb7cdb764554ac7a3887847</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetOptionName</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>aefd514c92e09c35941681d03ed36cc60</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetOptionDescription</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a7ea78cdcbcc6fc415d97c9ce1a3f2533</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QByteArray</type>
-      <name>GetOptionId</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a42ef743ef676f52d8adf082ecb0fda26</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsOptionEnabled</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a8673e0236772ead7203a0c8eedc01768</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsParameterCreationSupported</name>
@@ -41391,48 +41349,6 @@
       <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
       <anchor>a2564f4a7e2576aefc8bd56575eb05554</anchor>
       <arglist>(int optionIndex, const QString &amp;optionDescription)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetOptionsFlags</name>
-      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
-      <anchor>ab5b5157f0e5e6d68c30b772b8e3ecc2a</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetOptionsCount</name>
-      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
-      <anchor>a37659b5d1cae689b3d715304a48ef929</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetOptionName</name>
-      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
-      <anchor>ab30d9ae1759e0a1953751154f9983b3e</anchor>
-      <arglist>(int index) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetOptionDescription</name>
-      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
-      <anchor>adf6d315fe048e3a617ea5f803845393b</anchor>
-      <arglist>(int index) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QByteArray</type>
-      <name>GetOptionId</name>
-      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
-      <anchor>aa7af53aa0f41e2b65bfd0128792d18d2</anchor>
-      <arglist>(int index) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsOptionEnabled</name>
-      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
-      <anchor>a12fcebc0af408e94fc1bfbe2f15e7fa7</anchor>
-      <arglist>(int index) const =0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
@@ -42052,6 +41968,48 @@
     <name>iprm::IOptionsList</name>
     <filename>classiprm_1_1_i_options_list.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetOptionsFlags</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>ab5b5157f0e5e6d68c30b772b8e3ecc2a</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>a37659b5d1cae689b3d715304a48ef929</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>ab30d9ae1759e0a1953751154f9983b3e</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>adf6d315fe048e3a617ea5f803845393b</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QByteArray</type>
+      <name>GetOptionId</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>aa7af53aa0f41e2b65bfd0128792d18d2</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>a12fcebc0af408e94fc1bfbe2f15e7fa7</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iprm::IOptionsManager</name>
