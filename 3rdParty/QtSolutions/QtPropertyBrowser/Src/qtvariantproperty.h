@@ -100,6 +100,8 @@ public:
     static int flagTypeId();
     static int groupTypeId();
     static int iconMapTypeId();
+    static int fileOpenTypeId();
+
 public Q_SLOTS:
     virtual void setValue(QtProperty *property, const QVariant &val);
     virtual void setAttribute(QtProperty *property,
@@ -154,6 +156,8 @@ private:
     Q_PRIVATE_SLOT(d_func(), void slotFlagNamesChanged(QtProperty *, const QStringList &))
     Q_PRIVATE_SLOT(d_func(), void slotReadOnlyChanged(QtProperty *, bool))
     Q_PRIVATE_SLOT(d_func(), void slotTextVisibleChanged(QtProperty *, bool))
+    Q_PRIVATE_SLOT(d_func(), void slotFilterChanged(QtProperty *, const QString &))
+    Q_PRIVATE_SLOT(d_func(), void slotDirectoryChanged(QtProperty *, const QString &))
     Q_PRIVATE_SLOT(d_func(), void slotPropertyInserted(QtProperty *, QtProperty *, QtProperty *))
     Q_PRIVATE_SLOT(d_func(), void slotPropertyRemoved(QtProperty *, QtProperty *))
     Q_DECLARE_PRIVATE(QtVariantPropertyManager)

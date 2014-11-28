@@ -69,6 +69,10 @@ class QtGroupPropertyType
 {
 };
 
+
+class QtFileOpenPropertyType //дописали
+{
+};
 #if QT_VERSION >= 0x040400
 QT_END_NAMESPACE
 #endif
@@ -76,10 +80,16 @@ QT_END_NAMESPACE
 Q_DECLARE_METATYPE(QtEnumPropertyType)
 Q_DECLARE_METATYPE(QtFlagPropertyType)
 Q_DECLARE_METATYPE(QtGroupPropertyType)
+Q_DECLARE_METATYPE(QtFileOpenPropertyType)//дописали
 
 #if QT_VERSION >= 0x040400
 QT_BEGIN_NAMESPACE
 #endif
+
+int QtVariantPropertyManager::fileOpenTypeId()//дописали
+{
+    return qMetaTypeId<QtFileOpenPropertyType>();
+}
 
 /*!
     Returns the type id for an enum property.
@@ -345,6 +355,8 @@ public:
     void slotFlagNamesChanged(QtProperty *property, const QStringList &flagNames);
     void slotReadOnlyChanged(QtProperty *property, bool readOnly);
     void slotTextVisibleChanged(QtProperty *property, bool textVisible);
+    void slotFilterChanged(QtProperty *property, const QString &val);
+    void slotDirectoryChanged(QtProperty *property, const QString &val);
     void slotPropertyInserted(QtProperty *property, QtProperty *parent, QtProperty *after);
     void slotPropertyRemoved(QtProperty *property, QtProperty *parent);
 
@@ -377,6 +389,8 @@ public:
     const QString m_echoModeAttribute;
     const QString m_readOnlyAttribute;
     const QString m_textVisibleAttribute;
+    const QString m_filtersAttribute;
+    const QString m_defaultPathAttribute;
 };
 
 QtVariantPropertyManagerPrivate::QtVariantPropertyManagerPrivate() :
@@ -391,7 +405,9 @@ QtVariantPropertyManagerPrivate::QtVariantPropertyManagerPrivate() :
     m_regExpAttribute(QLatin1String("regExp")),
     m_echoModeAttribute(QLatin1String("echoMode")),
     m_readOnlyAttribute(QLatin1String("readOnly")),
-    m_textVisibleAttribute(QLatin1String("textVisible"))
+    m_textVisibleAttribute(QLatin1String("textVisible")),
+    m_filtersAttribute(QLatin1String("filter")),
+    m_defaultPathAttribute(QLatin1String("defaultPath"))
 {
 }
 
@@ -563,6 +579,18 @@ void QtVariantPropertyManagerPrivate::slotTextVisibleChanged(QtProperty *propert
 {
     if (QtVariantProperty *varProp = m_internalToProperty.value(property, 0))
         emit q_ptr->attributeChanged(varProp, m_textVisibleAttribute, QVariant(textVisible));
+}
+
+void QtVariantPropertyManagerPrivate::slotFilterChanged(QtProperty *property, const QString &filters)
+{
+    if (QtVariantProperty *varProp = m_internalToProperty.value(property, 0))
+        emit q_ptr->attributeChanged(varProp, m_filtersAttribute, QVariant(filters));
+}
+
+void QtVariantPropertyManagerPrivate::slotDirectoryChanged(QtProperty *property, const QString &path)
+{
+    if (QtVariantProperty *varProp = m_internalToProperty.value(property, 0))
+        emit q_ptr->attributeChanged(varProp, m_defaultPathAttribute, QVariant(path));
 }
 
 void QtVariantPropertyManagerPrivate::slotValueChanged(QtProperty *property, const QDate &val)
@@ -1287,6 +1315,21 @@ QtVariantPropertyManager::QtVariantPropertyManager(QObject *parent)
     QtGroupPropertyManager *groupPropertyManager = new QtGroupPropertyManager(this);
     d_ptr->m_typeToPropertyManager[groupId] = groupPropertyManager;
     d_ptr->m_typeToValueType[groupId] = QVariant::Invalid;
+
+    // FileOpenPropertyManager     ---дописали---
+    int fileOpenIdint = fileOpenTypeId();
+    QtFileOpenPropertyManager *filePropertyManager = new QtFileOpenPropertyManager(this);
+    d_ptr->m_typeToPropertyManager[fileOpenIdint] = filePropertyManager;
+    d_ptr->m_typeToValueType[fileOpenIdint] = QVariant::String;
+	d_ptr->m_typeToAttributeToAttributeType[fileOpenIdint][d_ptr->m_filtersAttribute] =	QVariant::String;
+	d_ptr->m_typeToAttributeToAttributeType[fileOpenIdint][d_ptr->m_defaultPathAttribute] =	QVariant::String;
+
+    connect(filePropertyManager, SIGNAL(valueChanged(QtProperty *, const QString &)),
+                this, SLOT(slotValueChanged(QtProperty *, const QString &)));
+    connect(filePropertyManager, SIGNAL(filterChanged(QtProperty *, const QString &)),
+                this, SLOT(slotFilterChanged(QtProperty *, const QString &)));
+    connect(filePropertyManager, SIGNAL(directoryChanged(QtProperty *, const QString &)),
+                this, SLOT(slotDirectoryChanged(QtProperty *, const QString &)));
 }
 
 /*!
@@ -1425,7 +1468,10 @@ QVariant QtVariantPropertyManager::value(const QtProperty *property) const
 #endif
     } else if (QtFlagPropertyManager *flagManager = qobject_cast<QtFlagPropertyManager *>(manager)) {
         return flagManager->value(internProp);
+    } else if (QtFileOpenPropertyManager *fileOpenManager = qobject_cast<QtFileOpenPropertyManager *>(manager)) { //дописали
+        return fileOpenManager->value(internProp); //дописали
     }
+
     return QVariant();
 }
 
@@ -1577,7 +1623,14 @@ QVariant QtVariantPropertyManager::attributeValue(const QtProperty *property, co
         if (attribute == d_ptr->m_flagNamesAttribute)
             return flagManager->flagNames(internProp);
         return QVariant();
+    } else if (QtFileOpenPropertyManager *fileManager = qobject_cast<QtFileOpenPropertyManager *>(manager)) {
+        if (attribute == d_ptr->m_filtersAttribute)
+            return fileManager->filters(internProp);
+        if (attribute == d_ptr->m_defaultPathAttribute)
+            return fileManager->defaultPath(internProp);
+        return QVariant();
     }
+
     return QVariant();
 }
 
@@ -1717,7 +1770,10 @@ void QtVariantPropertyManager::setValue(QtProperty *property, const QVariant &va
     } else if (QtFlagPropertyManager *flagManager = qobject_cast<QtFlagPropertyManager *>(manager)) {
         flagManager->setValue(internProp, qVariantValue<int>(val));
         return;
-    }
+    } else if (QtFileOpenPropertyManager *fileOpenManager = qobject_cast<QtFileOpenPropertyManager *>(manager)) {//дописали
+            fileOpenManager->setValue(internProp, qVariantValue<QString>(val));//дописали
+            return;
+       }
 }
 
 /*!
@@ -1828,6 +1884,12 @@ void QtVariantPropertyManager::setAttribute(QtProperty *property,
     } else if (QtFlagPropertyManager *flagManager = qobject_cast<QtFlagPropertyManager *>(manager)) {
         if (attribute == d_ptr->m_flagNamesAttribute)
             flagManager->setFlagNames(internProp, qVariantValue<QStringList>(value));
+        return;
+    } else if (QtFileOpenPropertyManager *fileManager = qobject_cast<QtFileOpenPropertyManager *>(manager)) {
+        if (attribute == d_ptr->m_filtersAttribute)
+            fileManager->setFileFilters(internProp, qVariantValue<QString>(value));
+        if (attribute == d_ptr->m_defaultPathAttribute)
+            fileManager->setDefaultPath(internProp, qVariantValue<QString>(value));
         return;
     }
 }
@@ -1949,6 +2011,7 @@ public:
     QtCursorEditorFactory      *m_cursorEditorFactory;
     QtColorEditorFactory       *m_colorEditorFactory;
     QtFontEditorFactory        *m_fontEditorFactory;
+    QtFileOpenFactory          *m_fileOpenFactory; //дописали
 
     QMap<QtAbstractEditorFactoryBase *, int> m_factoryToType;
     QMap<int, QtAbstractEditorFactoryBase *> m_typeToFactory;
@@ -2072,6 +2135,12 @@ QtVariantEditorFactory::QtVariantEditorFactory(QObject *parent)
     const int enumId = QtVariantPropertyManager::enumTypeId();
     d_ptr->m_factoryToType[d_ptr->m_comboBoxFactory] = enumId;
     d_ptr->m_typeToFactory[enumId] = d_ptr->m_comboBoxFactory;
+
+    //дописали
+        d_ptr->m_fileOpenFactory = new QtFileOpenFactory(this);
+        const int fileOID = QtVariantPropertyManager::fileOpenTypeId();
+        d_ptr->m_factoryToType[d_ptr->m_fileOpenFactory] = fileOID;
+        d_ptr->m_typeToFactory[fileOID] = d_ptr->m_fileOpenFactory;
 }
 
 /*!
@@ -2209,6 +2278,12 @@ void QtVariantEditorFactory::connectPropertyManager(QtVariantPropertyManager *ma
     QListIterator<QtFlagPropertyManager *> itFlag(flagPropertyManagers);
     while (itFlag.hasNext())
         d_ptr->m_checkBoxFactory->addPropertyManager(itFlag.next()->subBoolPropertyManager());
+
+    //дописали
+        QList<QtFileOpenPropertyManager *> fileOpenPropertyManagers = qFindChildren<QtFileOpenPropertyManager *>(manager);
+        QListIterator<QtFileOpenPropertyManager *> itFileOpen(fileOpenPropertyManagers);
+        while (itFileOpen.hasNext())
+            d_ptr->m_fileOpenFactory->addPropertyManager(itFileOpen.next());
 }
 
 /*!
@@ -2353,6 +2428,12 @@ void QtVariantEditorFactory::disconnectPropertyManager(QtVariantPropertyManager 
     QListIterator<QtFlagPropertyManager *> itFlag(flagPropertyManagers);
     while (itFlag.hasNext())
         d_ptr->m_checkBoxFactory->removePropertyManager(itFlag.next()->subBoolPropertyManager());
+
+    //дописали
+    QList<QtFileOpenPropertyManager *> fileOpenPropertyManagers = qFindChildren<QtFileOpenPropertyManager *>(manager);
+    QListIterator<QtFileOpenPropertyManager *> itFileOpen(fileOpenPropertyManagers);
+    while (itFileOpen.hasNext())
+        d_ptr->m_fileOpenFactory->removePropertyManager(itFileOpen.next());
 }
 
 #if QT_VERSION >= 0x040400

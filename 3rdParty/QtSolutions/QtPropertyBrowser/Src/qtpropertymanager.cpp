@@ -56,6 +56,8 @@
 #include <QCheckBox>
 #include <QLineEdit>
 
+#include "myfileopenwidget.h"
+
 #include <limits.h>
 #include <float.h>
 
@@ -6639,6 +6641,134 @@ void QtCursorPropertyManager::uninitializeProperty(QtProperty *property)
 {
     d_ptr->m_values.remove(property);
 }
+
+
+// QtFileOpenPropertyManager
+
+class QtFileOpenPropertyManagerPrivate
+{
+    QtFileOpenPropertyManager *q_ptr;
+    Q_DECLARE_PUBLIC(QtFileOpenPropertyManager)
+public:
+
+    struct Data
+    {
+        Data()
+        {
+        }
+
+        QString val;
+        QString filters;
+        QString startDir;
+    };
+
+    typedef QMap<const QtProperty *, Data> PropertyValueMap;
+    QMap<const QtProperty *, Data> m_values;
+};
+
+QtFileOpenPropertyManager::QtFileOpenPropertyManager(QObject *parent)
+    : QtAbstractPropertyManager(parent)
+{
+    d_ptr = new QtFileOpenPropertyManagerPrivate;
+    d_ptr->q_ptr = this;
+}
+
+QtFileOpenPropertyManager::~QtFileOpenPropertyManager()
+{
+    clear();
+    delete d_ptr;
+}
+
+QString QtFileOpenPropertyManager::value(const QtProperty *property) const
+{
+    return getValue<QString>(d_ptr->m_values, property);
+}
+
+QString QtFileOpenPropertyManager::filters(const QtProperty *property) const
+{
+    return getData<QString>(d_ptr->m_values, &QtFileOpenPropertyManagerPrivate::Data::filters, property, "");
+}
+
+QString QtFileOpenPropertyManager::defaultPath(const QtProperty *property) const
+{
+    return getData<QString>(d_ptr->m_values, &QtFileOpenPropertyManagerPrivate::Data::startDir, property, "");
+}
+
+void QtFileOpenPropertyManager::setFileFilters(QtProperty *property, const QString& fileFilters)
+{
+    typedef QtFileOpenPropertyManagerPrivate::PropertyValueMap::iterator PropertyToDataIterator;
+    const PropertyToDataIterator it = d_ptr->m_values.find(property);
+    if (it == d_ptr->m_values.end())
+        return;
+
+    QtFileOpenPropertyManagerPrivate::Data &data = it.value();
+    data.filters = fileFilters;
+
+    emit filterChanged(property, data.filters);
+}
+
+void QtFileOpenPropertyManager::setDefaultPath(QtProperty *property, const QString& path)
+{
+    typedef QtFileOpenPropertyManagerPrivate::PropertyValueMap::iterator PropertyToDataIterator;
+    const PropertyToDataIterator it = d_ptr->m_values.find(property);
+    if (it == d_ptr->m_values.end())
+        return;
+
+    QtFileOpenPropertyManagerPrivate::Data &data = it.value();
+    data.startDir = path;
+
+    emit directoryChanged(property, data.startDir);
+}
+
+QString QtFileOpenPropertyManager::valueText(const QtProperty *property) const
+{
+    const QtFileOpenPropertyManagerPrivate::PropertyValueMap::const_iterator it = d_ptr->m_values.constFind(property);
+    if (it == d_ptr->m_values.constEnd())
+        return QString();
+
+    return it.value().val;
+}
+
+QString QtFileOpenPropertyManager::displayText(const QtProperty *property) const
+{
+    const QtFileOpenPropertyManagerPrivate::PropertyValueMap::const_iterator it = d_ptr->m_values.constFind(property);
+    if (it == d_ptr->m_values.constEnd())
+        return QString();
+
+    myFileOpenWidget edit;
+    edit.setText(it.value().val);
+    return edit.displayText();
+}
+
+void QtFileOpenPropertyManager::setValue(QtProperty *property, const QString &val)
+{
+    const QtFileOpenPropertyManagerPrivate::PropertyValueMap::iterator it = d_ptr->m_values.find(property);
+    if (it == d_ptr->m_values.end())
+        return;
+
+    QtFileOpenPropertyManagerPrivate::Data data = it.value();
+
+    if (data.val == val)
+        return;
+
+    data.val = val;
+
+    it.value() = data;
+
+    emit propertyChanged(property);
+    emit valueChanged(property, data.val);
+}
+
+void QtFileOpenPropertyManager::initializeProperty(QtProperty *property)
+{
+    d_ptr->m_values[property] = QtFileOpenPropertyManagerPrivate::Data();
+}
+
+void QtFileOpenPropertyManager::uninitializeProperty(QtProperty *property)
+{
+    d_ptr->m_values.remove(property);
+}
+
 
 #if QT_VERSION >= 0x040400
 QT_END_NAMESPACE
