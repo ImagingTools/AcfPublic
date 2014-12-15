@@ -2524,6 +2524,7 @@
     <filename>_c_general_supplier_gui_comp_8h</filename>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
+    <class kind="class">iqtinsp::TGeneralSupplierGuiComp</class>
     <class kind="class">iqtinsp::CGeneralSupplierGuiComp</class>
     <namespace>iqtinsp</namespace>
   </compound>
@@ -24229,20 +24230,202 @@
   <compound kind="namespace">
     <name>iqtinsp</name>
     <filename>namespaceiqtinsp.html</filename>
+    <class kind="class">iqtinsp::TGeneralSupplierGuiComp</class>
     <class kind="class">iqtinsp::CGeneralSupplierGuiComp</class>
     <class kind="class">iqtinsp::CInspectionTaskGuiCompBase</class>
     <class kind="class">iqtinsp::CInspectionTaskGuiComp</class>
     <class kind="class">iqtinsp::TSupplierGuiCompBase</class>
   </compound>
   <compound kind="class">
+    <name>iqtinsp::TGeneralSupplierGuiComp</name>
+    <filename>classiqtinsp_1_1_t_general_supplier_gui_comp.html</filename>
+    <templarg>UI</templarg>
+    <base>TSupplierGuiCompBase&lt; UI, iinsp::ISupplier &gt;</base>
+    <member kind="typedef">
+      <type>TSupplierGuiCompBase&lt; UI, iinsp::ISupplier &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtinsp_1_1_t_general_supplier_gui_comp.html</anchorfile>
+      <anchor>ae59f9b8cd0e962681c4d86b077b3e914</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iqt2d::TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iinsp::ISupplier &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a5116ba15e03516fcd9181dec19ce0f0f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Test</name>
+      <anchorfile>classiqtinsp_1_1_t_general_supplier_gui_comp.html</anchorfile>
+      <anchor>acfafea14122c8b2da1d7ea2e1cd62a59</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QWidget *</type>
+      <name>GetParamsWidget</name>
+      <anchorfile>classiqtinsp_1_1_t_general_supplier_gui_comp.html</anchorfile>
+      <anchor>aa5121a53a0580560e331f38eb11271bd</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSupplierParamsChanged</name>
+      <anchorfile>classiqtinsp_1_1_t_general_supplier_gui_comp.html</anchorfile>
+      <anchor>a0d9457f85c00b1de124181c71102d3fd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtinsp_1_1_t_general_supplier_gui_comp.html</anchorfile>
+      <anchor>af58349e754b3fc8e03d380adb60c0042</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiHidden</name>
+      <anchorfile>classiqtinsp_1_1_t_general_supplier_gui_comp.html</anchorfile>
+      <anchor>a62545f05edbbd0f232c7749b85269271</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtinsp_1_1_t_general_supplier_gui_comp.html</anchorfile>
+      <anchor>a884d71139e7a4e7efaea8e78c5709cf6</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>AreParamsEditable</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a9381e23de0731ff450f46b140b8e5436</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>IsLoadParamsSupported</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a5b135f5bdaf8c57bc957c43beaadcb27</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>IsSaveParamsSupported</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>ae768663d0842e6ea748260107fc5c5b9</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>LoadParams</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a596baed6d56db375721673757cd7f4e2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SaveParams</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a12252b5f658c5140ce9a50e0efa5d4d5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>DoTest</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>acf07d958d1c85d95214a89437e58aff5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a8c94b477ef9e003078f52435ca5eebd7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CreateShapes</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>ad494e2beac100236a61573856ca6de8c</anchor>
+      <arglist>(int sceneId, Shapes &amp;result)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a1906e95d947b7174ea6bf4148d3d1d76</anchor>
+      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a5e276cdf38b14ab332ff4ca2f85da2c9</anchor>
+      <arglist>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_ASSIGN_TO</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a732f6395c68bbc94e97905d1daa91108</anchor>
+      <arglist>(m_paramsSetExtenderCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSupplierGuiCompBase</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a93a1e2eb77a8f09cc034a697315e4613</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddItemsToScene</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a455a346553f22519cc62f8a2283d5b66</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveItemsFromScene</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a93745769f36d860dc445b1c8319851b4</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>BaseClass::Shapes</type>
+      <name>Shapes</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>afced065323dcfedc4e755d24b667c05d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ParamsObserver</type>
+      <name>m_paramsObserver</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a6de84d5d7a40d17563f8918342445f07</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iqtinsp::CGeneralSupplierGuiComp</name>
     <filename>classiqtinsp_1_1_c_general_supplier_gui_comp.html</filename>
-    <base>TSupplierGuiCompBase&lt; Ui::CGeneralSupplierGuiComp, iinsp::ISupplier &gt;</base>
+    <base>TGeneralSupplierGuiComp&lt;&gt;</base>
+    <member kind="typedef">
+      <type>TGeneralSupplierGuiComp</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>a9c69805a06aa8c9b680fa5e540abd256</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>TSupplierGuiCompBase&lt; Ui::CGeneralSupplierGuiComp, iinsp::ISupplier &gt;</type>
       <name>BaseClass</name>
-      <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
-      <anchor>a58e92a94c2079a4ffcf363b294724711</anchor>
+      <anchorfile>classiqtinsp_1_1_t_general_supplier_gui_comp.html</anchorfile>
+      <anchor>ae59f9b8cd0e962681c4d86b077b3e914</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -24274,38 +24457,45 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Test</name>
+      <anchorfile>classiqtinsp_1_1_t_general_supplier_gui_comp.html</anchorfile>
+      <anchor>acfafea14122c8b2da1d7ea2e1cd62a59</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QWidget *</type>
       <name>GetParamsWidget</name>
-      <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
-      <anchor>ab8ca1190d3a8ced0d9b69bac1ed5c497</anchor>
-      <arglist>() const </arglist>
+      <anchorfile>classiqtinsp_1_1_t_general_supplier_gui_comp.html</anchorfile>
+      <anchor>aa5121a53a0580560e331f38eb11271bd</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnSupplierParamsChanged</name>
-      <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
-      <anchor>aa59fc0079d42002a462aee69a91541e7</anchor>
+      <anchorfile>classiqtinsp_1_1_t_general_supplier_gui_comp.html</anchorfile>
+      <anchor>a0d9457f85c00b1de124181c71102d3fd</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
-      <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
-      <anchor>a292de76a8651f5a98731df87c0d6c82a</anchor>
+      <anchorfile>classiqtinsp_1_1_t_general_supplier_gui_comp.html</anchorfile>
+      <anchor>af58349e754b3fc8e03d380adb60c0042</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiHidden</name>
-      <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
-      <anchor>a40e3de099ffff8e7f5700ec7e612f911</anchor>
+      <anchorfile>classiqtinsp_1_1_t_general_supplier_gui_comp.html</anchorfile>
+      <anchor>a62545f05edbbd0f232c7749b85269271</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
-      <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
-      <anchor>ae871e421c2c8835e6ebe23873e83d030</anchor>
+      <anchorfile>classiqtinsp_1_1_t_general_supplier_gui_comp.html</anchorfile>
+      <anchor>a884d71139e7a4e7efaea8e78c5709cf6</anchor>
       <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>

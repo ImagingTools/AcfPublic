@@ -47,6 +47,7 @@ CParamsManagerGuiCompBase::CParamsManagerGuiCompBase()
 				iprm::IOptionsList::CF_OPTIONS_CHANGED,
 				iprm::IParamsManager::CF_SET_INSERTED,
 				iprm::IParamsManager::CF_SET_REMOVED,
+				iprm::IParamsManager::CF_SET_NAME_CHANGED,
 				CF_INIT_EDITOR);
 	SetObservedIds(changeMask);
 }
@@ -243,7 +244,7 @@ void CParamsManagerGuiCompBase::on_ParamsComboBox_currentIndexChanged(int /*inde
 
 	int selectedIndex = GetSelectedIndex();
 
-	ParamsComboBox->setEditable(selectedIndex >= 0);
+	ParamsComboBox->setEditable(selectedIndex >= 0 && *m_comboBoxEditableAttrPtr);
 
 	iprm::ISelectionParam* selectionPtr = GetObjectPtr();
 	if (selectionPtr == NULL){
@@ -373,13 +374,8 @@ void CParamsManagerGuiCompBase::UpdateTree()
 	if (objectPtr != NULL){
 		int setsCount = objectPtr->GetParamsSetsCount();
 
-		const iprm::IOptionsList* paramsListPtr = NULL;
-		iprm::ISelectionParam* selectionPtr = GetObjectPtr();
-		if (selectionPtr != NULL){
-			selectedIndex = selectionPtr->GetSelectedOptionIndex();
-		
-			paramsListPtr = selectionPtr->GetSelectionConstraints(); 
-		}
+		const iprm::IOptionsList* paramsListPtr = objectPtr->GetSelectionConstraints();
+		selectedIndex = objectPtr->GetSelectedOptionIndex();
 
 		for (int paramSetIndex = 0; paramSetIndex < setsCount; ++paramSetIndex){
 			int flags = objectPtr->GetIndexOperationFlags(paramSetIndex);
@@ -443,10 +439,8 @@ void CParamsManagerGuiCompBase::UpdateComboBox()
 	if (objectPtr != NULL){
 		int setsCount = objectPtr->GetParamsSetsCount();
 
-		iprm::ISelectionParam* selectionPtr = GetObjectPtr();
-		if (selectionPtr != NULL){
-			selectedIndex = selectionPtr->GetSelectedOptionIndex();
-		}
+		const iprm::IOptionsList* paramsListPtr = objectPtr->GetSelectionConstraints();
+		selectedIndex = objectPtr->GetSelectedOptionIndex();		
 
 		for (int paramSetIndex = 0; paramSetIndex < setsCount; ++paramSetIndex){
 			int flags = objectPtr->GetIndexOperationFlags(paramSetIndex);
@@ -468,11 +462,20 @@ void CParamsManagerGuiCompBase::UpdateComboBox()
 			}
 
 			ParamsComboBox->addItem(icon, name, paramSetIndex);
+
+			if (*m_supportEnablingAttrPtr && 
+				(paramsListPtr != NULL) && 
+				(flags & iprm::IOptionsManager::OOF_SUPPORT_ENABLING) != 0)
+			{
+				bool isOptionEnabled = (paramsListPtr == NULL) ? true : paramsListPtr->IsOptionEnabled(paramSetIndex);
+
+				ParamsComboBox->setItemData(paramSetIndex, isOptionEnabled ? Qt::Checked : Qt::Unchecked, Qt::CheckStateRole);
+			}
 		}
 	}
 
 	ParamsComboBox->setCurrentIndex(selectedIndex);
-	ParamsComboBox->setEditable(selectedIndex >= 0);
+	ParamsComboBox->setEditable(selectedIndex >= 0 && *m_comboBoxEditableAttrPtr);
 	ParamsComboBox->setEnabled(ParamsComboBox->count() > 0);
 
 	UpdateParamsView(selectedIndex);
