@@ -176,11 +176,6 @@ void CApplicationCompBase::InitializeComponentApplication()
 		}
 	}
 
-	// set up current language
-	if (m_translationManagerCompPtr.IsValid() && (m_translationManagerCompPtr->GetCurrentLanguageIndex() < 0)){
-		m_translationManagerCompPtr->SetSystemLanguage();
-	}
-
 	// set up application name
 	QString applicationFullName;
 	if (m_applicationInfoCompPtr.IsValid()){
@@ -219,6 +214,11 @@ void CApplicationCompBase::InitializeComponentApplication()
 
 	// set up palette
 	m_applicationPtr->setPalette(QApplication::style()->standardPalette());
+
+	// set up current language
+	if (m_translationManagerCompPtr.IsValid() && (m_translationManagerCompPtr->GetCurrentLanguageIndex() < 0)){
+		m_translationManagerCompPtr->SetSystemLanguage();
+	}
 }
 
 
