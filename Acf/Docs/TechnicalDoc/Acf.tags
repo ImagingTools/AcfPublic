@@ -3580,6 +3580,7 @@
     <includes id="_i_options_manager_8h" name="IOptionsManager.h" local="yes" imported="no">iprm/IOptionsManager.h</includes>
     <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
     <includes id="_c_name_param_8h" name="CNameParam.h" local="yes" imported="no">iprm/CNameParam.h</includes>
+    <class kind="class">iprm::CParamsManagerCompBaseAttr</class>
     <class kind="class">iprm::CParamsManagerCompBase</class>
     <class kind="class">iprm::CParamsManagerCompBase::ParamSet</class>
     <namespace>iprm</namespace>
@@ -40138,6 +40139,7 @@
     <class kind="class">iprm::COptionsManager</class>
     <class kind="class">iprm::COptionsManagerComp</class>
     <class kind="class">iprm::CParamsManagerComp</class>
+    <class kind="class">iprm::CParamsManagerCompBaseAttr</class>
     <class kind="class">iprm::CParamsManagerCompBase</class>
     <class kind="class">iprm::CParamsSet</class>
     <class kind="class">iprm::CSelectableParamsSetComp</class>
@@ -40563,10 +40565,17 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>CParamsManagerCompBaseAttr</type>
       <name>BaseClass</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
-      <anchor>a4e3b62ad472633fb0fe6e6ca3770e18f</anchor>
+      <anchor>a61f232ce0a51160c2de190ac6e316f12</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_attr.html</anchorfile>
+      <anchor>a6e5fd2f56f971ba2463f3c9891e4510f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -40968,6 +40977,13 @@
       <anchor>a52b517d6828cdb5091a055a3d60ea60d</anchor>
       <arglist>(const QString &amp;name) const </arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>int</type>
+      <name>FindFixedParamSetIndex</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>ad1cc5217a9e5fdc7a2d8a3cd1736c948</anchor>
+      <arglist>(const QString &amp;name) const </arglist>
+    </member>
     <member kind="typedef" protection="protected">
       <type>istd::TDelPtr&lt; ParamSet &gt;</type>
       <name>ParamSetPtr</name>
@@ -41287,9 +41303,14 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iprm::CParamsManagerCompBaseAttr</name>
+    <filename>classiprm_1_1_c_params_manager_comp_base_attr.html</filename>
+    <base>icomp::CComponentBase</base>
+  </compound>
+  <compound kind="class">
     <name>iprm::CParamsManagerCompBase</name>
     <filename>classiprm_1_1_c_params_manager_comp_base.html</filename>
-    <base>icomp::CComponentBase</base>
+    <base>iprm::CParamsManagerCompBaseAttr</base>
     <base virtualness="virtual">iprm::IParamsManager</base>
     <base virtualness="virtual">iprm::IOptionsManager</base>
     <base protection="protected">imod::CMultiModelBridgeBase</base>
@@ -41484,6 +41505,13 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
+      <type>QByteArray</type>
+      <name>uuid</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set.html</anchorfile>
+      <anchor>ac8ac729f54252f1865bd78706b9e30ee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
       <type>QString</type>
       <name>name</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set.html</anchorfile>
@@ -41505,10 +41533,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>const CParamsManagerCompBase *</type>
+      <type>CParamsManagerCompBase *</type>
       <name>parentPtr</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set.html</anchorfile>
-      <anchor>a89e052b7055f3f5bfb451dcc7796fd01</anchor>
+      <anchor>a38d2503d1da843cb352d97614cbfc201</anchor>
       <arglist></arglist>
     </member>
   </compound>

@@ -106,13 +106,18 @@ bool CParamsManagerCompBase::RemoveParamsSet(int index)
 	
 	int removeIndex = index - fixedParamsCount;
 
-	for (int i = removeIndex; i < m_paramSets.size() - 1; ++i){
-		m_paramSets[i].TakeOver(m_paramSets[i + 1]);
-	}
-
-	m_paramSets.pop_back();
-
 	m_selectedIndex = index - 1;
+
+	if (removeIndex >= 0 && removeIndex < m_paramSets.count()){
+		istd::TDelPtr<ParamSet> removedParamsSetPtr;
+		removedParamsSetPtr.TakeOver(m_paramSets[removeIndex]);
+
+		EnsureParamsSetModelDetached(removedParamsSetPtr->paramSetPtr.GetPtr());
+
+		m_paramSets.removeAt(removeIndex);
+
+		notifier.Reset();
+	}
 
 	return true;
 }
@@ -369,7 +374,12 @@ QByteArray CParamsManagerCompBase::GetOptionId(int index) const
 		}
 	}
 
-	return GetParamsSetName(index).toLocal8Bit();
+	QByteArray uuid = m_paramSets[index - fixedSetsCount]->uuid;
+	if (uuid.isEmpty()){
+		uuid = GetParamsSetName(index).toLocal8Bit();
+	}
+
+	return uuid;
 }
 
 
@@ -407,7 +417,7 @@ QString CParamsManagerCompBase::CalculateNewDefaultName() const
 			for (int suffixIndex = 1; suffixIndex < 1000; ++suffixIndex){
 				tmpName = defaultSetName;
 				tmpName.replace(QString("%1"), QString::number(suffixIndex));
-				if (FindParamSetIndex(tmpName) < 0){
+				if (FindParamSetIndex(tmpName) < 0 && FindFixedParamSetIndex(tmpName) < 0){
 					defaultSetName = tmpName;
 					break;
 				}
@@ -417,7 +427,7 @@ QString CParamsManagerCompBase::CalculateNewDefaultName() const
 	else {
 		for (int suffixIndex = 1; suffixIndex < 1000; ++suffixIndex){
 			defaultSetName = QObject::tr("unnamed-%1").arg(suffixIndex);
-			if (FindParamSetIndex(defaultSetName) < 0){
+			if (FindParamSetIndex(defaultSetName) < 0 && FindFixedParamSetIndex(defaultSetName) < 0){
 				break;
 			}
 		}
@@ -433,6 +443,23 @@ int CParamsManagerCompBase::FindParamSetIndex(const QString& name) const
 	for (int i = 0; i < paramsCount; ++i){
 		const ParamSetPtr& paramSetPtr = m_paramSets[i];
 		if (paramSetPtr.IsValid() && (paramSetPtr->name == name)){
+			return i;
+		}
+	}
+
+	return -1;
+}
+
+
+int CParamsManagerCompBase::FindFixedParamSetIndex(const QString& name) const
+{
+	if (!m_fixedParamSetsCompPtr.IsValid()){
+		return -1;
+	}
+
+	int paramsCount = qMin(m_fixedParamSetsCompPtr.GetCount(), m_fixedSetNamesAttrPtr.GetCount());;
+	for (int i = 0; i < paramsCount; ++i){
+		if (m_fixedSetNamesAttrPtr[i] == name){
 			return i;
 		}
 	}
@@ -552,7 +579,7 @@ const QString& CParamsManagerCompBase::ParamSet::GetName() const
 
 
 void CParamsManagerCompBase::ParamSet::SetName(const QString& /*name*/)
-{	// it is read only interface imeplementation
+{	// it is read only interface implementation
 }
 
 
