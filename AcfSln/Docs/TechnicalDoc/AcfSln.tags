@@ -19755,6 +19755,20 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
+      <name>IsValueTypeSupported</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a39b91b30529f0e4fb72213edb60d348a</anchor>
+      <arglist>(ValueTypeId valueTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual imath::CVarVector</type>
+      <name>GetComponentValue</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>abbe79baccd058ab1ae43c086d12a717a</anchor>
+      <arglist>(ValueTypeId valueTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
       <anchor>a97ae2b01e85ae32c589aa154cee0e9e4</anchor>
@@ -19766,20 +19780,6 @@
       <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
       <anchor>af46630f53b557371604ee44bc032bd8b</anchor>
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsValueTypeSupported</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>ae171179f75cd4fd22ae95940c175ca95</anchor>
-      <arglist>(ValueTypeId valueTypeId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual imath::CVarVector</type>
-      <name>GetComponentValue</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>ab86360165a5bf223fe42f8602185c4cf</anchor>
-      <arglist>(ValueTypeId valueTypeId) const </arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>double</type>
@@ -20932,6 +20932,20 @@
       <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
       <anchor>a3273fd702b83cce7a8c1726c32e53979</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsValueTypeSupported</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
+      <anchor>ae171179f75cd4fd22ae95940c175ca95</anchor>
+      <arglist>(ValueTypeId valueTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual imath::CVarVector</type>
+      <name>GetComponentValue</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
+      <anchor>ab86360165a5bf223fe42f8602185c4cf</anchor>
+      <arglist>(ValueTypeId valueTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>

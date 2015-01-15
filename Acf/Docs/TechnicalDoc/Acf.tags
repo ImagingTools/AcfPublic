@@ -1519,6 +1519,7 @@
     <filename>_c_sim_component_context_base_8h</filename>
     <includes id="_t_i_factory_8h" name="TIFactory.h" local="yes" imported="no">istd/TIFactory.h</includes>
     <includes id="_c_id_manip_base_8h" name="CIdManipBase.h" local="yes" imported="no">istd/CIdManipBase.h</includes>
+    <includes id="_i_attribute_static_info_8h" name="IAttributeStaticInfo.h" local="yes" imported="no">icomp/IAttributeStaticInfo.h</includes>
     <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">iattr/TAttribute.h</includes>
     <includes id="_t_multi_attribute_8h" name="TMultiAttribute.h" local="yes" imported="no">iattr/TMultiAttribute.h</includes>
     <includes id="_i_component_8h" name="IComponent.h" local="yes" imported="no">icomp/IComponent.h</includes>
@@ -14747,6 +14748,13 @@
       <name>AF_VALUE</name>
       <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
       <anchor>aa1cdd9cacdaa49d1f55506586e57141eaa6ec3f3871ebb1a14b240e826d2c24e5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>AF_READ_ONLY</name>
+      <anchorfile>classiattr_1_1_i_attribute_meta_info.html</anchorfile>
+      <anchor>aa1cdd9cacdaa49d1f55506586e57141ea046e73a3e279d0ffa9a6ad2852ecb8be</anchor>
       <arglist></arglist>
     </member>
   </compound>

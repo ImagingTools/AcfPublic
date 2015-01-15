@@ -24,6 +24,9 @@
 #define iser_CPrimitiveTypesSerializer_included
 
 
+// STL includes
+#include <typeinfo>
+
 // Qt includes
 #include <QtCore/QDateTime>
 #include <QtCore/QPointF>
