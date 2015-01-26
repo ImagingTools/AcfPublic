@@ -1136,6 +1136,14 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CBlobFeature.h</name>
+    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <filename>_c_blob_feature_8h</filename>
+    <includes id="_c_object_feature_8h" name="CObjectFeature.h" local="yes" imported="no">iipr/CObjectFeature.h</includes>
+    <class kind="class">iipr::CBlobFeature</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CCaliperDistanceFeature.h</name>
     <path>C:/Temp/Acfsln/Include/iipr/</path>
     <filename>_c_caliper_distance_feature_8h</filename>
@@ -1509,6 +1517,14 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CObjectFeature.h</name>
+    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <filename>_c_object_feature_8h</filename>
+    <includes id="_t_weighted_feature_wrap_8h" name="TWeightedFeatureWrap.h" local="yes" imported="no">iipr/TWeightedFeatureWrap.h</includes>
+    <class kind="class">iipr::CObjectFeature</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CPositionFromImageSupplierComp.h</name>
     <path>C:/Temp/Acfsln/Include/iipr/</path>
     <filename>_c_position_from_image_supplier_comp_8h</filename>
@@ -1620,7 +1636,7 @@
     <name>CSearchFeature.h</name>
     <path>C:/Temp/Acfsln/Include/iipr/</path>
     <filename>_c_search_feature_8h</filename>
-    <includes id="_t_weighted_feature_wrap_8h" name="TWeightedFeatureWrap.h" local="yes" imported="no">iipr/TWeightedFeatureWrap.h</includes>
+    <includes id="_c_object_feature_8h" name="CObjectFeature.h" local="yes" imported="no">iipr/CObjectFeature.h</includes>
     <class kind="class">iipr::CSearchFeature</class>
     <namespace>iipr</namespace>
   </compound>
@@ -14094,6 +14110,7 @@
     <class kind="class">iipr::CBitmapJoinerSupplierComp</class>
     <class kind="class">iipr::CBitmapOperations</class>
     <class kind="class">iipr::CBitmapProviderCacheComp</class>
+    <class kind="class">iipr::CBlobFeature</class>
     <class kind="class">iipr::CCaliperDistanceFeature</class>
     <class kind="class">iipr::CCaliperFeature</class>
     <class kind="class">iipr::CCaliperParams</class>
@@ -14133,6 +14150,7 @@
     <class kind="class">iipr::CMultiBitmapCacheComp</class>
     <class kind="class">iipr::CMultiLineProjectionSupplierComp</class>
     <class kind="class">iipr::CMultiLineSupplierCompBase</class>
+    <class kind="class">iipr::CObjectFeature</class>
     <class kind="class">iipr::CPositionFromImageSupplierComp</class>
     <class kind="class">iipr::CProcessedAcquisitionComp</class>
     <class kind="class">iipr::CProcessedBitmapSupplierComp</class>
@@ -14497,14 +14515,21 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iipr::CCaliperDistanceFeature</name>
-    <filename>classiipr_1_1_c_caliper_distance_feature.html</filename>
-    <base>TWeightedFeatureWrap&lt; i2d::CLine2d &gt;</base>
+    <name>iipr::CBlobFeature</name>
+    <filename>classiipr_1_1_c_blob_feature.html</filename>
+    <base>iipr::CObjectFeature</base>
     <member kind="typedef">
-      <type>iipr::TWeightedFeatureWrap&lt; i2d::CLine2d &gt;</type>
+      <type>iipr::CObjectFeature</type>
       <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_c_caliper_distance_feature.html</anchorfile>
-      <anchor>a9b7eead80a3eeda0c75a6bf6cdb82e54</anchor>
+      <anchorfile>classiipr_1_1_c_blob_feature.html</anchorfile>
+      <anchor>a223c2787f19a9ae1696d7e9fc472c174</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TWeightedFeatureWrap&lt; i2d::CPosition2d &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>a91bcdab32fdeeb81c0f5205097d8b157</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -14515,7 +14540,7 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>i2d::CLine2d</type>
+      <type>i2d::CPosition2d</type>
       <name>BaseClass2</name>
       <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
       <anchor>acd13265a487dd486ecc37a58e1007ba2</anchor>
@@ -14600,6 +14625,193 @@
     </member>
     <member kind="function">
       <type></type>
+      <name>CBlobFeature</name>
+      <anchorfile>classiipr_1_1_c_blob_feature.html</anchorfile>
+      <anchor>a9ebd33d10276477933b5ad4a3830c2b3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CBlobFeature</name>
+      <anchorfile>classiipr_1_1_c_blob_feature.html</anchorfile>
+      <anchor>a8a64f6b3166409b885f336a63226ed2b</anchor>
+      <arglist>(int pixelCount, int perimeter, const i2d::CVector2d &amp;position, double angle=0.0)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetCircularity</name>
+      <anchorfile>classiipr_1_1_c_blob_feature.html</anchorfile>
+      <anchor>a8565ff0d03c5fd7003b7993f9faebfa4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiipr_1_1_c_blob_feature.html</anchorfile>
+      <anchor>a136b4e232d02cd9c22cf037e10dadce1</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiipr_1_1_c_blob_feature.html</anchorfile>
+      <anchor>a8b5ed30f46e36ad7dbd29781c6db9929</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classiipr_1_1_c_blob_feature.html</anchorfile>
+      <anchor>a0d2be223e7379b01f69164728f82ece3</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CObjectFeature</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>aba4955b8438510850eb84231728724ab</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CObjectFeature</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>a1af29eab9362f95bd60a4213795503be</anchor>
+      <arglist>(double weight, const i2d::CVector2d &amp;position, double angle=0.0, const i2d::CVector2d &amp;scale=i2d::CVector2d(1.0, 1.0))</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetAngle</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>afcb0e7d4c7e1880c49ce6e85efa049f3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CVector2d</type>
+      <name>GetScale</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>a89225c376285d0961cbe164d26ae9bed</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetObjectId</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>ab555d01219e186eaefa886c9b584d5ac</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetObjectId</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>ab5170a366b62e5b611e04ba6331d9ba8</anchor>
+      <arglist>(const QByteArray &amp;objectId)</arglist>
+    </member>
+    <member kind="function">
+      <type>const i2d::ITransformation2d &amp;</type>
+      <name>GetTransformation</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>a3d20716c3b35381aa0583acb8d92f173</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsValueTypeSupported</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>ad6696d8f36a2de9d4db085547f8c098d</anchor>
+      <arglist>(ValueTypeId valueTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual imath::CVarVector</type>
+      <name>GetComponentValue</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>a1a4d1851c26c98ca17bea2ddce002816</anchor>
+      <arglist>(ValueTypeId valueTypeId) const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TWeightedFeatureWrap</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a5b9c8031e18165d0b5c85f7838814a84</anchor>
+      <arglist>(double weight=1.0)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetWeight</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a670784cb0eb876758dd5b47eaa40395f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetWeight</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>aef12a2739f789cde29f56b01944cda48</anchor>
+      <arglist>(double weight)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const INumericConstraints *</type>
+      <name>GetNumericConstraints</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
+      <anchor>aa8251e0134e3a7c8706bfaf71d2115fd</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual imath::CVarVector</type>
+      <name>GetValues</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
+      <anchor>a4c85027810c725fdaac439b18007fbdf</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetValues</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
+      <anchor>a0bc635bfc29198638308d81786abe212</anchor>
+      <arglist>(const imath::CVarVector &amp;values)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>m_weight</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a48120fa2978f81cf33d685fddc69bab9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>imath::CVarVector</type>
+      <name>m_values</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
+      <anchor>a98fa43cc574e0e7bf15178d0b23f1e74</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CCaliperDistanceFeature</name>
+    <filename>classiipr_1_1_c_caliper_distance_feature.html</filename>
+    <base>TWeightedFeatureWrap&lt; i2d::CLine2d &gt;</base>
+    <member kind="typedef">
+      <type>iipr::TWeightedFeatureWrap&lt; i2d::CLine2d &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_caliper_distance_feature.html</anchorfile>
+      <anchor>a9b7eead80a3eeda0c75a6bf6cdb82e54</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imeas::CSimpleNumericValue</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a942a2ec0b1e221f063e1add3ebc43705</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>i2d::CLine2d</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>acd13265a487dd486ecc37a58e1007ba2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
       <name>CCaliperDistanceFeature</name>
       <anchorfile>classiipr_1_1_c_caliper_distance_feature.html</anchorfile>
       <anchor>a2e6242a89efa7a9cdf1012808f62970f</anchor>
@@ -14661,39 +14873,11 @@
       <anchor>af46630f53b557371604ee44bc032bd8b</anchor>
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const INumericConstraints *</type>
-      <name>GetNumericConstraints</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>aa8251e0134e3a7c8706bfaf71d2115fd</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual imath::CVarVector</type>
-      <name>GetValues</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>a4c85027810c725fdaac439b18007fbdf</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetValues</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>a0bc635bfc29198638308d81786abe212</anchor>
-      <arglist>(const imath::CVarVector &amp;values)</arglist>
-    </member>
     <member kind="variable" protection="protected">
       <type>double</type>
       <name>m_weight</name>
       <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
       <anchor>a48120fa2978f81cf33d685fddc69bab9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>imath::CVarVector</type>
-      <name>m_values</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>a98fa43cc574e0e7bf15178d0b23f1e74</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -17659,6 +17843,32 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iipr::CObjectFeature</name>
+    <filename>classiipr_1_1_c_object_feature.html</filename>
+    <base>TWeightedFeatureWrap&lt; i2d::CPosition2d &gt;</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>ad747179555c63a51e8eb307e3a6727a8</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>afa5429742a2f847c275d0fe03b681e34</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>a1e53fe5cc766129d06f84f5e2c211ae0</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iipr::CPositionFromImageSupplierComp</name>
     <filename>classiipr_1_1_c_position_from_image_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; istd::TDelPtr&lt; imeas::INumericValue &gt; &gt;</base>
@@ -18611,26 +18821,12 @@
   <compound kind="class">
     <name>iipr::CSearchFeature</name>
     <filename>classiipr_1_1_c_search_feature.html</filename>
-    <base>TWeightedFeatureWrap&lt; i2d::CPosition2d &gt;</base>
+    <base>iipr::CObjectFeature</base>
     <member kind="typedef">
-      <type>TWeightedFeatureWrap&lt; i2d::CPosition2d &gt;</type>
+      <type>CObjectFeature</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
-      <anchor>a30b11c38202107f51cf451b7414fbfae</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>imeas::CSimpleNumericValue</type>
-      <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
-      <anchor>a942a2ec0b1e221f063e1add3ebc43705</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>i2d::CPosition2d</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
-      <anchor>acd13265a487dd486ecc37a58e1007ba2</anchor>
+      <anchor>aafa9267e5c7cdbd594cc57b8e78052a6</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -18644,22 +18840,8 @@
       <type></type>
       <name>CSearchFeature</name>
       <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
-      <anchor>ab0b5b7ce1ecde0e620b34b51429d5dbf</anchor>
-      <arglist>(double weight, const i2d::CVector2d &amp;position, double angle, const i2d::CVector2d &amp;scale, bool negativeModel=false, int index=-1, const QString &amp;id=&quot;&quot;)</arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetAngle</name>
-      <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
-      <anchor>a1f8e680c24cd7adcc7ffa5555904d623</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>const i2d::CVector2d &amp;</type>
-      <name>GetScale</name>
-      <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
-      <anchor>aac77c713ab574967a412a0c7884361ab</anchor>
-      <arglist>() const </arglist>
+      <anchor>a902d1291621ed76d0e038d200f7dd383</anchor>
+      <arglist>(double weight, const i2d::CVector2d &amp;position, double angle, const i2d::CVector2d &amp;scale, bool negativeModel=false, int index=-1, const QByteArray &amp;objectId=QByteArray())</arglist>
     </member>
     <member kind="function">
       <type>int</type>
@@ -18667,20 +18849,6 @@
       <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
       <anchor>a1b9b60d3ee8b06a83b64ddab6a369bce</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>const QString &amp;</type>
-      <name>GetId</name>
-      <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
-      <anchor>a900d79d8c73354c11e90644bf312848c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetId</name>
-      <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
-      <anchor>a00461e0d5e7c8d6838cddfba94a57827</anchor>
-      <arglist>(QString id)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -18695,27 +18863,6 @@
       <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
       <anchor>a17081b2644d62aa1e89aecedc655f870</anchor>
       <arglist>(bool enable)</arglist>
-    </member>
-    <member kind="function">
-      <type>const i2d::ITransformation2d &amp;</type>
-      <name>GetTransformation</name>
-      <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
-      <anchor>a9b75f993741fe8ff834b767cb98b754e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsValueTypeSupported</name>
-      <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
-      <anchor>a38734f1485a38e5ddaba4cfd4c1f6959</anchor>
-      <arglist>(ValueTypeId valueTypeId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual imath::CVarVector</type>
-      <name>GetComponentValue</name>
-      <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
-      <anchor>ac402a8ca167f9c0d8f0794c927a6d813</anchor>
-      <arglist>(ValueTypeId valueTypeId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -18737,34 +18884,6 @@
       <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
       <anchor>aa40ab32d71e62f80941426236e6f1f1e</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TWeightedFeatureWrap</name>
-      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
-      <anchor>a5b9c8031e18165d0b5c85f7838814a84</anchor>
-      <arglist>(double weight=1.0)</arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetWeight</name>
-      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
-      <anchor>a670784cb0eb876758dd5b47eaa40395f</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetWeight</name>
-      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
-      <anchor>aef12a2739f789cde29f56b01944cda48</anchor>
-      <arglist>(double weight)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>double</type>
-      <name>m_weight</name>
-      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
-      <anchor>a48120fa2978f81cf33d685fddc69bab9</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -29101,6 +29220,7 @@
     <file>CBitmapJoinerSupplierComp.h</file>
     <file>CBitmapOperations.h</file>
     <file>CBitmapProviderCacheComp.h</file>
+    <file>CBlobFeature.h</file>
     <file>CCaliperDistanceFeature.h</file>
     <file>CCaliperFeature.h</file>
     <file>CCaliperParams.h</file>
@@ -29140,6 +29260,7 @@
     <file>CMultiBitmapCacheComp.h</file>
     <file>CMultiLineProjectionSupplierComp.h</file>
     <file>CMultiLineSupplierCompBase.h</file>
+    <file>CObjectFeature.h</file>
     <file>CPositionFromImageSupplierComp.h</file>
     <file>CProcessedAcquisitionComp.h</file>
     <file>CProcessedBitmapSupplierComp.h</file>

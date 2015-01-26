@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef iipr_TFeatureWrap_included
-#define iipr_TFeatureWrap_included
+#pragma once
 
 
 // ACF includes
@@ -152,8 +151,5 @@ bool TWeightedFeatureWrap<BaseObject>::CopyFrom(const IChangeable& object, Compa
 
 
 } // namespace iipr
-
-
-#endif // !iipr_TFeatureWrap_included
 
 
