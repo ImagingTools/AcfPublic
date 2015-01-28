@@ -90,6 +90,51 @@
     <namespace>iauth</namespace>
   </compound>
   <compound kind="file">
+    <name>CBlobDescriptorInfo.h</name>
+    <path>C:/Temp/Acfsln/Include/iblob/</path>
+    <filename>_c_blob_descriptor_info_8h</filename>
+    <class kind="class">iblob::CBlobDescriptorInfo</class>
+    <namespace>iblob</namespace>
+    <member kind="typedef">
+      <type>QList&lt; CBlobDescriptorInfo &gt;</type>
+      <name>BlobDescriptorInfoList</name>
+      <anchorfile>namespaceiblob.html</anchorfile>
+      <anchor>a0721ce046be2012b246acc0e72d40ab5</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>CBlobFeature.h</name>
+    <path>C:/Temp/Acfsln/Include/iblob/</path>
+    <filename>_c_blob_feature_8h</filename>
+    <includes id="_c_object_feature_8h" name="CObjectFeature.h" local="yes" imported="no">iipr/CObjectFeature.h</includes>
+    <class kind="class">iblob::CBlobFeature</class>
+    <namespace>iblob</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CBlobFilterParams.h</name>
+    <path>C:/Temp/Acfsln/Include/iblob/</path>
+    <filename>_c_blob_filter_params_8h</filename>
+    <includes id="_i_blob_filter_params_8h" name="IBlobFilterParams.h" local="yes" imported="no">iblob/IBlobFilterParams.h</includes>
+    <class kind="class">iblob::CBlobFilterParams</class>
+    <namespace>iblob</namespace>
+  </compound>
+  <compound kind="file">
+    <name>iblob.h</name>
+    <path>C:/Temp/Acfsln/Include/iblob/</path>
+    <filename>iblob_8h</filename>
+    <includes id="iipr_8h" name="iipr.h" local="yes" imported="no">iipr/iipr.h</includes>
+    <namespace>iblob</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IBlobFilterParams.h</name>
+    <path>C:/Temp/Acfsln/Include/iblob/</path>
+    <filename>_i_blob_filter_params_8h</filename>
+    <includes id="_c_blob_descriptor_info_8h" name="CBlobDescriptorInfo.h" local="no" imported="no">iblob/CBlobDescriptorInfo.h</includes>
+    <class kind="class">iblob::IBlobFilterParams</class>
+    <namespace>iblob</namespace>
+  </compound>
+  <compound kind="file">
     <name>CAcquisitionConstraintsComp.h</name>
     <path>C:/Temp/Acfsln/Include/icam/</path>
     <filename>_c_acquisition_constraints_comp_8h</filename>
@@ -1133,14 +1178,6 @@
     <path>C:/Temp/Acfsln/Include/iipr/</path>
     <filename>_c_bitmap_provider_cache_comp_8h</filename>
     <class kind="class">iipr::CBitmapProviderCacheComp</class>
-    <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CBlobFeature.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
-    <filename>_c_blob_feature_8h</filename>
-    <includes id="_c_object_feature_8h" name="CObjectFeature.h" local="yes" imported="no">iipr/CObjectFeature.h</includes>
-    <class kind="class">iipr::CBlobFeature</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -3594,6 +3631,607 @@
       <anchorfile>classiauth_1_1_i_users_manager.html</anchorfile>
       <anchor>ae35796766dd076c20eee154754deafed</anchor>
       <arglist>(int groupIndex) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>iblob</name>
+    <filename>namespaceiblob.html</filename>
+    <class kind="class">iblob::CBlobDescriptorInfo</class>
+    <class kind="class">iblob::CBlobFeature</class>
+    <class kind="class">iblob::CBlobFilterParams</class>
+    <class kind="class">iblob::IBlobFilterParams</class>
+    <member kind="typedef">
+      <type>QList&lt; CBlobDescriptorInfo &gt;</type>
+      <name>BlobDescriptorInfoList</name>
+      <anchorfile>namespaceiblob.html</anchorfile>
+      <anchor>a0721ce046be2012b246acc0e72d40ab5</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iblob::CBlobDescriptorInfo</name>
+    <filename>classiblob_1_1_c_blob_descriptor_info.html</filename>
+    <member kind="enumeration">
+      <type></type>
+      <name>BlobDescriptorType</name>
+      <anchorfile>classiblob_1_1_c_blob_descriptor_info.html</anchorfile>
+      <anchor>ad5c740638adaab6ec170136e0470b97d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>BDT_PERIMETER</name>
+      <anchorfile>classiblob_1_1_c_blob_descriptor_info.html</anchorfile>
+      <anchor>ad5c740638adaab6ec170136e0470b97dac4225d4d01c0820fd5764fc212f4acd7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>BDT_AREA</name>
+      <anchorfile>classiblob_1_1_c_blob_descriptor_info.html</anchorfile>
+      <anchor>ad5c740638adaab6ec170136e0470b97da11146ae22e059ccb884a682c3f18c828</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>BDT_CIRCULARITY</name>
+      <anchorfile>classiblob_1_1_c_blob_descriptor_info.html</anchorfile>
+      <anchor>ad5c740638adaab6ec170136e0470b97da1d5b43cad99a87a584901812dbb81a2d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>BDT_USER</name>
+      <anchorfile>classiblob_1_1_c_blob_descriptor_info.html</anchorfile>
+      <anchor>ad5c740638adaab6ec170136e0470b97da92ca3355e1e3a9c0713b45bd0e23137e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CBlobDescriptorInfo</name>
+      <anchorfile>classiblob_1_1_c_blob_descriptor_info.html</anchorfile>
+      <anchor>a1b27b2eb46319167de663f7fb90b44f5</anchor>
+      <arglist>(int descriptorType, const QString &amp;fullName, const QString &amp;shortName, const QString &amp;description=QString())</arglist>
+    </member>
+    <member kind="function">
+      <type>QString</type>
+      <name>GetFullName</name>
+      <anchorfile>classiblob_1_1_c_blob_descriptor_info.html</anchorfile>
+      <anchor>a636490194ee6ffbc3cc8a7e6b3f8bf76</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>QString</type>
+      <name>GetShortName</name>
+      <anchorfile>classiblob_1_1_c_blob_descriptor_info.html</anchorfile>
+      <anchor>a842d4906f3ed2bb4d09df583f43c5448</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>QString</type>
+      <name>GetDescription</name>
+      <anchorfile>classiblob_1_1_c_blob_descriptor_info.html</anchorfile>
+      <anchor>ada438b1f0eacffdbbbaf6bda9349b858</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetDescriptorType</name>
+      <anchorfile>classiblob_1_1_c_blob_descriptor_info.html</anchorfile>
+      <anchor>a9b6162993e7eca93151d84ccfce04acb</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iblob::CBlobFeature</name>
+    <filename>classiblob_1_1_c_blob_feature.html</filename>
+    <base>iipr::CObjectFeature</base>
+    <member kind="typedef">
+      <type>iipr::CObjectFeature</type>
+      <name>BaseClass</name>
+      <anchorfile>classiblob_1_1_c_blob_feature.html</anchorfile>
+      <anchor>a1ecf09264902e93c7ca46ef871a6d5d7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TWeightedFeatureWrap&lt; i2d::CPosition2d &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>a91bcdab32fdeeb81c0f5205097d8b157</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imeas::CSimpleNumericValue</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a942a2ec0b1e221f063e1add3ebc43705</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>i2d::CPosition2d</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>acd13265a487dd486ecc37a58e1007ba2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ValueTypeId</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>VTI_AUTO</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a2f29849ba4f91e77a319950f14906c88</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>VTI_WEIGHT</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a7da2b23a42572b65b520efc699d8954f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>VTI_POSITION</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a3202e36c514857630781b3f7ca0a15fe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>VTI_RADIUS</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a283de4d8f4ea03b1995dd9df7998879b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>VTI_SCALE</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a6323f380af6a4ef0b36a1cf9335c7c92</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>VTI_ANGLE</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a29f01062af8ba6db91e14da24ba7824b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>VTI_ALPHA</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a441014f84f906a518a4e2d694be03e40</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>VTI_LENGTH</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a464ba9647d480f0169d3254768f13041</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>VTI_2D_TRANSFORM</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1ac9e3594d6f5cda3e637138b200d6b25a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>VTI_2D_LINE</name>
+      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
+      <anchor>a840dc03c17a580cc816b8bf799ddc9e1ad67213851e48e283a12e1a09fd45d4cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CBlobFeature</name>
+      <anchorfile>classiblob_1_1_c_blob_feature.html</anchorfile>
+      <anchor>ab5fab12b98cc37b9a513f8f8567a41dd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CBlobFeature</name>
+      <anchorfile>classiblob_1_1_c_blob_feature.html</anchorfile>
+      <anchor>a09b759f9203f1770e4919069a4a696ba</anchor>
+      <arglist>(double area, double perimeter, const i2d::CVector2d &amp;position, double angle=0.0)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetCircularity</name>
+      <anchorfile>classiblob_1_1_c_blob_feature.html</anchorfile>
+      <anchor>a36e22ddaf8b43c6d7519336b86fe471b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetPerimeter</name>
+      <anchorfile>classiblob_1_1_c_blob_feature.html</anchorfile>
+      <anchor>a866bdcb82ab7b919e9000ab8a210b4f5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetArea</name>
+      <anchorfile>classiblob_1_1_c_blob_feature.html</anchorfile>
+      <anchor>aa825b9f2f3875d5412d01e921686ff5b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiblob_1_1_c_blob_feature.html</anchorfile>
+      <anchor>ab3eb1cdc1e6d27af61079e295c0d0b78</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiblob_1_1_c_blob_feature.html</anchorfile>
+      <anchor>ac337781271eb3809b6ed72c9c70d457d</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classiblob_1_1_c_blob_feature.html</anchorfile>
+      <anchor>a96ba3f0b68993a5d0d9225af6a538cf0</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CObjectFeature</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>aba4955b8438510850eb84231728724ab</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CObjectFeature</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>a1af29eab9362f95bd60a4213795503be</anchor>
+      <arglist>(double weight, const i2d::CVector2d &amp;position, double angle=0.0, const i2d::CVector2d &amp;scale=i2d::CVector2d(1.0, 1.0))</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetAngle</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>afcb0e7d4c7e1880c49ce6e85efa049f3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CVector2d</type>
+      <name>GetScale</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>a89225c376285d0961cbe164d26ae9bed</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetObjectId</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>ab555d01219e186eaefa886c9b584d5ac</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetObjectId</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>ab5170a366b62e5b611e04ba6331d9ba8</anchor>
+      <arglist>(const QByteArray &amp;objectId)</arglist>
+    </member>
+    <member kind="function">
+      <type>const i2d::ITransformation2d &amp;</type>
+      <name>GetTransformation</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>a3d20716c3b35381aa0583acb8d92f173</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsValueTypeSupported</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>ad6696d8f36a2de9d4db085547f8c098d</anchor>
+      <arglist>(ValueTypeId valueTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual imath::CVarVector</type>
+      <name>GetComponentValue</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>a1a4d1851c26c98ca17bea2ddce002816</anchor>
+      <arglist>(ValueTypeId valueTypeId) const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TWeightedFeatureWrap</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a5b9c8031e18165d0b5c85f7838814a84</anchor>
+      <arglist>(double weight=1.0)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetWeight</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a670784cb0eb876758dd5b47eaa40395f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetWeight</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>aef12a2739f789cde29f56b01944cda48</anchor>
+      <arglist>(double weight)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const INumericConstraints *</type>
+      <name>GetNumericConstraints</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
+      <anchor>aa8251e0134e3a7c8706bfaf71d2115fd</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual imath::CVarVector</type>
+      <name>GetValues</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
+      <anchor>a4c85027810c725fdaac439b18007fbdf</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetValues</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
+      <anchor>a0bc635bfc29198638308d81786abe212</anchor>
+      <arglist>(const imath::CVarVector &amp;values)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>m_weight</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a48120fa2978f81cf33d685fddc69bab9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>imath::CVarVector</type>
+      <name>m_values</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
+      <anchor>a98fa43cc574e0e7bf15178d0b23f1e74</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iblob::CBlobFilterParams</name>
+    <filename>classiblob_1_1_c_blob_filter_params.html</filename>
+    <base virtualness="virtual">iblob::IBlobFilterParams</base>
+    <member kind="function">
+      <type></type>
+      <name>CBlobFilterParams</name>
+      <anchorfile>classiblob_1_1_c_blob_filter_params.html</anchorfile>
+      <anchor>a2a669f42fb0746e28fd6fbe3513ae249</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsFiltersEnabled</name>
+      <anchorfile>classiblob_1_1_c_blob_filter_params.html</anchorfile>
+      <anchor>ae0830982c07a5f20c68567e79b3abe37</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetFiltersEnabled</name>
+      <anchorfile>classiblob_1_1_c_blob_filter_params.html</anchorfile>
+      <anchor>ac259fd752159c288579203db5593200f</anchor>
+      <arglist>(bool enabled=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetFiltersCount</name>
+      <anchorfile>classiblob_1_1_c_blob_filter_params.html</anchorfile>
+      <anchor>acd2e5c0ada185eeb280ea1e6b108e094</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Filter &amp;</type>
+      <name>GetFilterAt</name>
+      <anchorfile>classiblob_1_1_c_blob_filter_params.html</anchorfile>
+      <anchor>a9f416a6bc7a094ac9e178e481c22ebf6</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const Filter &amp;</type>
+      <name>GetFilterAt</name>
+      <anchorfile>classiblob_1_1_c_blob_filter_params.html</anchorfile>
+      <anchor>ada2999a1c91f68d3f3df521dc17cb07d</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveFilterAt</name>
+      <anchorfile>classiblob_1_1_c_blob_filter_params.html</anchorfile>
+      <anchor>ad5e7bd7eed22219da646607e62792b88</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetFilters</name>
+      <anchorfile>classiblob_1_1_c_blob_filter_params.html</anchorfile>
+      <anchor>ac6a4bfb7ff0ecb851fec747cdbc65949</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddFilter</name>
+      <anchorfile>classiblob_1_1_c_blob_filter_params.html</anchorfile>
+      <anchor>af9b9f86529f7fa8fb14cc7150b900746</anchor>
+      <arglist>(const Filter &amp;filterInfo)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiblob_1_1_c_blob_filter_params.html</anchorfile>
+      <anchor>a1bbec75ec34576314dfa6bf0ad300d80</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_DECLARE_ENUM</name>
+      <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
+      <anchor>ab579506f1caa28b636bf6f218435f527</anchor>
+      <arglist>(FilterCondition, FC_BETWEEN, FC_OUTSIDE, FC_LESS, FC_EQUAL, FC_GREATER, FC_LESS_EQUAL, FC_GREATER_EQUAL, FC_NOT_EQUAL) struct Filter</arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>FilterOperation</name>
+      <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
+      <anchor>a1a43587f396233d9d6464867ed6ce0ff</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>FO_INCLUDE</name>
+      <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
+      <anchor>a1a43587f396233d9d6464867ed6ce0ffabbfa3c7b3685851360e728ac574c83fa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>FO_EXCLUDE</name>
+      <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
+      <anchor>a1a43587f396233d9d6464867ed6ce0ffa11ec2ed2e5a8ba50d33e12423f4103d7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>FilterCondition</name>
+      <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
+      <anchor>a95dd017a3b43542749be25e816f66b43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>FC_BETWEEN</name>
+      <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
+      <anchor>a95dd017a3b43542749be25e816f66b43a3228ea7edcb240ed271ab06116486d0a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>FC_OUTSIDE</name>
+      <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
+      <anchor>a95dd017a3b43542749be25e816f66b43abfc477fc497842f169cfc0b16ce003de</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>FC_LESS</name>
+      <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
+      <anchor>a95dd017a3b43542749be25e816f66b43aa7b4c45fb46cf752e82a975d5eeb2c7c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>FC_EQUAL</name>
+      <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
+      <anchor>a95dd017a3b43542749be25e816f66b43a112f20f538e34677c35911bf6864af1b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>FC_GREATER</name>
+      <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
+      <anchor>a95dd017a3b43542749be25e816f66b43ad2716f36df67894b76a79a9b8ca05064</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>FC_LESS_EQUAL</name>
+      <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
+      <anchor>a95dd017a3b43542749be25e816f66b43abf05796c24f4d0b370dc8a59ffbf7eca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>FC_GREATER_EQUAL</name>
+      <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
+      <anchor>a95dd017a3b43542749be25e816f66b43a7d2d844a42401ea2fa87cc09fa781968</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>FC_NOT_EQUAL</name>
+      <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
+      <anchor>a95dd017a3b43542749be25e816f66b43a25fad676448ebfb6b34214a9287c173f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iblob::IBlobFilterParams</name>
+    <filename>classiblob_1_1_i_blob_filter_params.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsFiltersEnabled</name>
+      <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
+      <anchor>aca97bee40f02bd3c6b49c7386cf20394</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetFiltersEnabled</name>
+      <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
+      <anchor>ad5fbf3da0215bef55909ab2ca484ff07</anchor>
+      <arglist>(bool enabled=true)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetFiltersCount</name>
+      <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
+      <anchor>addeeb80a11dfa985125a8c9d89375d9e</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual Filter &amp;</type>
+      <name>GetFilterAt</name>
+      <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
+      <anchor>a0e87c9e1e209dd68858f3cc74dc44c69</anchor>
+      <arglist>(int index)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const Filter &amp;</type>
+      <name>GetFilterAt</name>
+      <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
+      <anchor>aee76ec082fc349e6417a10d7bac9cee0</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>RemoveFilterAt</name>
+      <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
+      <anchor>a8cee945e573f2f5208e12b3019c62c23</anchor>
+      <arglist>(int index)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>ResetFilters</name>
+      <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
+      <anchor>ab64bceca8b87768aba660ad7d757ed1f</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>AddFilter</name>
+      <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
+      <anchor>a2ce9714039b756a9269b8ca9e90b39e8</anchor>
+      <arglist>(const Filter &amp;filterInfo)=0</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -14110,7 +14748,6 @@
     <class kind="class">iipr::CBitmapJoinerSupplierComp</class>
     <class kind="class">iipr::CBitmapOperations</class>
     <class kind="class">iipr::CBitmapProviderCacheComp</class>
-    <class kind="class">iipr::CBlobFeature</class>
     <class kind="class">iipr::CCaliperDistanceFeature</class>
     <class kind="class">iipr::CCaliperFeature</class>
     <class kind="class">iipr::CCaliperParams</class>
@@ -14512,277 +15149,6 @@
       <anchorfile>classiipr_1_1_c_bitmap_provider_cache_comp.html</anchorfile>
       <anchor>aa5b3aef85624cb3f666328f1a9c3942d</anchor>
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::CBlobFeature</name>
-    <filename>classiipr_1_1_c_blob_feature.html</filename>
-    <base>iipr::CObjectFeature</base>
-    <member kind="typedef">
-      <type>iipr::CObjectFeature</type>
-      <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_c_blob_feature.html</anchorfile>
-      <anchor>a223c2787f19a9ae1696d7e9fc472c174</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TWeightedFeatureWrap&lt; i2d::CPosition2d &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
-      <anchor>a91bcdab32fdeeb81c0f5205097d8b157</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>imeas::CSimpleNumericValue</type>
-      <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
-      <anchor>a942a2ec0b1e221f063e1add3ebc43705</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>i2d::CPosition2d</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
-      <anchor>acd13265a487dd486ecc37a58e1007ba2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>ValueTypeId</name>
-      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>VTI_AUTO</name>
-      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a2f29849ba4f91e77a319950f14906c88</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>VTI_WEIGHT</name>
-      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a7da2b23a42572b65b520efc699d8954f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>VTI_POSITION</name>
-      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a3202e36c514857630781b3f7ca0a15fe</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>VTI_RADIUS</name>
-      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a283de4d8f4ea03b1995dd9df7998879b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>VTI_SCALE</name>
-      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a6323f380af6a4ef0b36a1cf9335c7c92</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>VTI_ANGLE</name>
-      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a29f01062af8ba6db91e14da24ba7824b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>VTI_ALPHA</name>
-      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a441014f84f906a518a4e2d694be03e40</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>VTI_LENGTH</name>
-      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1a464ba9647d480f0169d3254768f13041</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>VTI_2D_TRANSFORM</name>
-      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1ac9e3594d6f5cda3e637138b200d6b25a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>VTI_2D_LINE</name>
-      <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
-      <anchor>a840dc03c17a580cc816b8bf799ddc9e1ad67213851e48e283a12e1a09fd45d4cb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CBlobFeature</name>
-      <anchorfile>classiipr_1_1_c_blob_feature.html</anchorfile>
-      <anchor>a9ebd33d10276477933b5ad4a3830c2b3</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CBlobFeature</name>
-      <anchorfile>classiipr_1_1_c_blob_feature.html</anchorfile>
-      <anchor>a8a64f6b3166409b885f336a63226ed2b</anchor>
-      <arglist>(int pixelCount, int perimeter, const i2d::CVector2d &amp;position, double angle=0.0)</arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetCircularity</name>
-      <anchorfile>classiipr_1_1_c_blob_feature.html</anchorfile>
-      <anchor>a8565ff0d03c5fd7003b7993f9faebfa4</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiipr_1_1_c_blob_feature.html</anchorfile>
-      <anchor>a136b4e232d02cd9c22cf037e10dadce1</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CopyFrom</name>
-      <anchorfile>classiipr_1_1_c_blob_feature.html</anchorfile>
-      <anchor>a8b5ed30f46e36ad7dbd29781c6db9929</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
-      <name>CloneMe</name>
-      <anchorfile>classiipr_1_1_c_blob_feature.html</anchorfile>
-      <anchor>a0d2be223e7379b01f69164728f82ece3</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CObjectFeature</name>
-      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
-      <anchor>aba4955b8438510850eb84231728724ab</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CObjectFeature</name>
-      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
-      <anchor>a1af29eab9362f95bd60a4213795503be</anchor>
-      <arglist>(double weight, const i2d::CVector2d &amp;position, double angle=0.0, const i2d::CVector2d &amp;scale=i2d::CVector2d(1.0, 1.0))</arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetAngle</name>
-      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
-      <anchor>afcb0e7d4c7e1880c49ce6e85efa049f3</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>i2d::CVector2d</type>
-      <name>GetScale</name>
-      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
-      <anchor>a89225c376285d0961cbe164d26ae9bed</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>QByteArray</type>
-      <name>GetObjectId</name>
-      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
-      <anchor>ab555d01219e186eaefa886c9b584d5ac</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetObjectId</name>
-      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
-      <anchor>ab5170a366b62e5b611e04ba6331d9ba8</anchor>
-      <arglist>(const QByteArray &amp;objectId)</arglist>
-    </member>
-    <member kind="function">
-      <type>const i2d::ITransformation2d &amp;</type>
-      <name>GetTransformation</name>
-      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
-      <anchor>a3d20716c3b35381aa0583acb8d92f173</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsValueTypeSupported</name>
-      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
-      <anchor>ad6696d8f36a2de9d4db085547f8c098d</anchor>
-      <arglist>(ValueTypeId valueTypeId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual imath::CVarVector</type>
-      <name>GetComponentValue</name>
-      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
-      <anchor>a1a4d1851c26c98ca17bea2ddce002816</anchor>
-      <arglist>(ValueTypeId valueTypeId) const </arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TWeightedFeatureWrap</name>
-      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
-      <anchor>a5b9c8031e18165d0b5c85f7838814a84</anchor>
-      <arglist>(double weight=1.0)</arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetWeight</name>
-      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
-      <anchor>a670784cb0eb876758dd5b47eaa40395f</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetWeight</name>
-      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
-      <anchor>aef12a2739f789cde29f56b01944cda48</anchor>
-      <arglist>(double weight)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const INumericConstraints *</type>
-      <name>GetNumericConstraints</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>aa8251e0134e3a7c8706bfaf71d2115fd</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual imath::CVarVector</type>
-      <name>GetValues</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>a4c85027810c725fdaac439b18007fbdf</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetValues</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>a0bc635bfc29198638308d81786abe212</anchor>
-      <arglist>(const imath::CVarVector &amp;values)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>double</type>
-      <name>m_weight</name>
-      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
-      <anchor>a48120fa2978f81cf33d685fddc69bab9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>imath::CVarVector</type>
-      <name>m_values</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>a98fa43cc574e0e7bf15178d0b23f1e74</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -29048,6 +29414,16 @@
     <file>IUsersManager.h</file>
   </compound>
   <compound kind="dir">
+    <name>Include/iblob</name>
+    <path>C:/Temp/Acfsln/Include/iblob/</path>
+    <filename>dir_6b8f21da56aeb41654e138de0cf01fb3.html</filename>
+    <file>CBlobDescriptorInfo.h</file>
+    <file>CBlobFeature.h</file>
+    <file>CBlobFilterParams.h</file>
+    <file>iblob.h</file>
+    <file>IBlobFilterParams.h</file>
+  </compound>
+  <compound kind="dir">
     <name>Include/icam</name>
     <path>C:/Temp/Acfsln/Include/icam/</path>
     <filename>dir_f2296beff96c253567dc2b95d81f611c.html</filename>
@@ -29220,7 +29596,6 @@
     <file>CBitmapJoinerSupplierComp.h</file>
     <file>CBitmapOperations.h</file>
     <file>CBitmapProviderCacheComp.h</file>
-    <file>CBlobFeature.h</file>
     <file>CCaliperDistanceFeature.h</file>
     <file>CCaliperFeature.h</file>
     <file>CCaliperParams.h</file>
@@ -29356,6 +29731,7 @@
     <path>C:/Temp/Acfsln/Include/</path>
     <filename>dir_856524284ebe840938865dc061f982fb.html</filename>
     <dir>Include/iauth</dir>
+    <dir>Include/iblob</dir>
     <dir>Include/icam</dir>
     <dir>Include/icmpstr</dir>
     <dir>Include/idocproc</dir>
