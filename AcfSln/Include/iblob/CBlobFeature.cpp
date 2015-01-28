@@ -48,7 +48,7 @@ CBlobFeature::CBlobFeature(
 			double perimeter,
 			const i2d::CVector2d& position,
 			double angle)
-	:BaseClass(1.0, position, angle),
+	:BaseClass(0.0, position, angle),
 	m_area(area),
 	m_perimeter(perimeter)
 {

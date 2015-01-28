@@ -41,6 +41,7 @@ CObjectFeature::CObjectFeature()
 {
 }
 
+
 CObjectFeature::CObjectFeature(
 			double weight,
 			const i2d::CVector2d& position,
@@ -62,7 +63,6 @@ CObjectFeature::CObjectFeature(
 
 	SetValues(values);
 }
-
 
 
 double CObjectFeature::GetAngle() const
