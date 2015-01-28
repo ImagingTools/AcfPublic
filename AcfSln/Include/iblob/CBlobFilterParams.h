@@ -37,6 +37,7 @@ public:
 	CBlobFilterParams();
 
 	// reimplemented (IBlobFilterParams)
+	virtual const BlobDescriptorInfoList* GetSupportedDescriptorsList() const;
 	virtual bool IsFiltersEnabled() const;
 	virtual void SetFiltersEnabled(bool enabled = true);
 	virtual int GetFiltersCount() const;

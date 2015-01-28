@@ -135,6 +135,22 @@
     <namespace>iblob</namespace>
   </compound>
   <compound kind="file">
+    <name>CBlobFilterGui.h</name>
+    <path>C:/Temp/Acfsln/Include/iblobgui/</path>
+    <filename>_c_blob_filter_gui_8h</filename>
+    <includes id="_i_blob_filter_params_8h" name="IBlobFilterParams.h" local="yes" imported="no">iblob/IBlobFilterParams.h</includes>
+    <class kind="class">iblobgui::CBlobFilterGui</class>
+    <namespace>iblobgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CBlobFilterParamsGuiComp.h</name>
+    <path>C:/Temp/Acfsln/Include/iblobgui/</path>
+    <filename>_c_blob_filter_params_gui_comp_8h</filename>
+    <includes id="_i_blob_filter_params_8h" name="IBlobFilterParams.h" local="yes" imported="no">iblob/IBlobFilterParams.h</includes>
+    <class kind="class">iblobgui::CBlobFilterParamsGuiComp</class>
+    <namespace>iblobgui</namespace>
+  </compound>
+  <compound kind="file">
     <name>CAcquisitionConstraintsComp.h</name>
     <path>C:/Temp/Acfsln/Include/icam/</path>
     <filename>_c_acquisition_constraints_comp_8h</filename>
@@ -4019,6 +4035,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual const BlobDescriptorInfoList *</type>
+      <name>GetSupportedDescriptorsList</name>
+      <anchorfile>classiblob_1_1_c_blob_filter_params.html</anchorfile>
+      <anchor>ab3ca43f5ba55caa3475f6f9fcad808fa</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsFiltersEnabled</name>
       <anchorfile>classiblob_1_1_c_blob_filter_params.html</anchorfile>
@@ -4178,6 +4201,13 @@
     <filename>classiblob_1_1_i_blob_filter_params.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
+      <type>virtual const BlobDescriptorInfoList *</type>
+      <name>GetSupportedDescriptorsList</name>
+      <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
+      <anchor>a5f149673b23e46b2ae7b2c24c3e51c83</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsFiltersEnabled</name>
       <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
@@ -4232,6 +4262,175 @@
       <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
       <anchor>a2ce9714039b756a9269b8ca9e90b39e8</anchor>
       <arglist>(const Filter &amp;filterInfo)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>iblobgui</name>
+    <filename>namespaceiblobgui.html</filename>
+    <class kind="class">iblobgui::CBlobFilterGui</class>
+    <class kind="class">iblobgui::CBlobFilterParamsGuiComp</class>
+  </compound>
+  <compound kind="class">
+    <name>iblobgui::CBlobFilterGui</name>
+    <filename>classiblobgui_1_1_c_blob_filter_gui.html</filename>
+    <member kind="signal">
+      <type>void</type>
+      <name>FilterChanged</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_gui.html</anchorfile>
+      <anchor>a5d9731562aaddd33f7332504bc47aa66</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>RemoveFilter</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_gui.html</anchorfile>
+      <anchor>a161d98ae5a505455c33ec7ade0bdae2b</anchor>
+      <arglist>(QWidget *filterGui)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CBlobFilterGui</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_gui.html</anchorfile>
+      <anchor>a49505eb5a10df1bb878fe80d05280ba7</anchor>
+      <arglist>(QWidget *parentPtr=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>retranslateUi</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_gui.html</anchorfile>
+      <anchor>aa9fe05de0e5c50cc8e9bb66366cb76e2</anchor>
+      <arglist>(QWidget *widgetPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetFilterInfo</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_gui.html</anchorfile>
+      <anchor>a8534e5c57d1aa9d5c294a1a1082e38e6</anchor>
+      <arglist>(const iblob::IBlobFilterParams::Filter &amp;info)</arglist>
+    </member>
+    <member kind="function">
+      <type>iblob::IBlobFilterParams::Filter</type>
+      <name>GetFilterInfo</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_gui.html</anchorfile>
+      <anchor>ac261123775b95f369869d9bd72ea7e2b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetFeatures</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_gui.html</anchorfile>
+      <anchor>aec6df85633038057eb52db5f0a0d886a</anchor>
+      <arglist>(const iblob::BlobDescriptorInfoList &amp;features)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnFilterParameterChanged</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_gui.html</anchorfile>
+      <anchor>ad25d2e6a57a2ee9d475ef51232aead38</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_RemoveButton_clicked</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_gui.html</anchorfile>
+      <anchor>a00a0c8e900f50bcb953b969b22ce42b7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateComboBoxes</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_gui.html</anchorfile>
+      <anchor>a74242913ace23b8eb22bdb230b156d08</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateFilter</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_gui.html</anchorfile>
+      <anchor>a74b2dd8c008b98c5be2b2ed1ea66e911</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iblobgui::CBlobFilterParamsGuiComp</name>
+    <filename>classiblobgui_1_1_c_blob_filter_params_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CBlobFilterParamsGuiComp, iblob::IBlobFilterParams &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CBlobFilterParamsGuiComp, iblob::IBlobFilterParams &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_params_gui_comp.html</anchorfile>
+      <anchor>ad6e4115098c9d36e837e3d632117f295</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_params_gui_comp.html</anchorfile>
+      <anchor>a3ce93887c488ff8b37ccf551f006a7a9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_params_gui_comp.html</anchorfile>
+      <anchor>a2b83e06936dd3db2897b811145a28845</anchor>
+      <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnFilterParameterChanged</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_params_gui_comp.html</anchorfile>
+      <anchor>a3525ae034e6e2899e962ad7a8ec9e920</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ActivateFilterCheckBox_toggled</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_params_gui_comp.html</anchorfile>
+      <anchor>acf579e6464b706f8ca8be0a0ec4fa20b</anchor>
+      <arglist>(bool)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_AddFilterButton_clicked</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_params_gui_comp.html</anchorfile>
+      <anchor>ab099da69da3ca18f3214191a08b43068</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_RemoveAllButton_clicked</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_params_gui_comp.html</anchorfile>
+      <anchor>a6f88864bb6a8c86f675398f417b3b20c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnRemoveFilter</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_params_gui_comp.html</anchorfile>
+      <anchor>ad26148fa267f779cd51440e163b0254a</anchor>
+      <arglist>(QWidget *filterGui)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_params_gui_comp.html</anchorfile>
+      <anchor>aa9e96aa446763792ace032d9d43f2e35</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_params_gui_comp.html</anchorfile>
+      <anchor>a4a0664606520d974cd67eeb816d8126c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_params_gui_comp.html</anchorfile>
+      <anchor>aca8b463dc088e23e282d8dc0498ff4f3</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -29424,6 +29623,13 @@
     <file>IBlobFilterParams.h</file>
   </compound>
   <compound kind="dir">
+    <name>Include/iblobgui</name>
+    <path>C:/Temp/Acfsln/Include/iblobgui/</path>
+    <filename>dir_ed19c58fd00418302dbbe2b01fb71973.html</filename>
+    <file>CBlobFilterGui.h</file>
+    <file>CBlobFilterParamsGuiComp.h</file>
+  </compound>
+  <compound kind="dir">
     <name>Include/icam</name>
     <path>C:/Temp/Acfsln/Include/icam/</path>
     <filename>dir_f2296beff96c253567dc2b95d81f611c.html</filename>
@@ -29732,6 +29938,7 @@
     <filename>dir_856524284ebe840938865dc061f982fb.html</filename>
     <dir>Include/iauth</dir>
     <dir>Include/iblob</dir>
+    <dir>Include/iblobgui</dir>
     <dir>Include/icam</dir>
     <dir>Include/icmpstr</dir>
     <dir>Include/idocproc</dir>
