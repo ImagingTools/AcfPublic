@@ -14653,6 +14653,13 @@
     <filename>classiattr_1_1_c_attribute_meta_info.html</filename>
     <base virtualness="virtual">iattr::IAttributeMetaInfo</base>
     <member kind="function">
+      <type></type>
+      <name>CAttributeMetaInfo</name>
+      <anchorfile>classiattr_1_1_c_attribute_meta_info.html</anchorfile>
+      <anchor>acad876b7aa9edb24dcde49d30add2650</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>SetAttributeDescription</name>
       <anchorfile>classiattr_1_1_c_attribute_meta_info.html</anchorfile>
