@@ -22801,6 +22801,13 @@
       <anchor>afca74bcd67ce8a03e9ef1f1d02a07b26</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiproc_1_1_c_cascaded_processor_comp.html</anchorfile>
+      <anchor>ab2a09738d7de5afe1ba7168d46251a95</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iproc::CIterativeProcessorComp</name>

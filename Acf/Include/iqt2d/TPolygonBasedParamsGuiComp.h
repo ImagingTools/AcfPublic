@@ -134,6 +134,11 @@ protected:
 	class CPolygonParamsGuiItemDelegate: public QItemDelegate
 	{
 	public:
+		CPolygonParamsGuiItemDelegate(QObject* parent): QItemDelegate(parent)
+		{
+
+		}
+
 		virtual QWidget* createEditor(QWidget* parent, const QStyleOptionViewItem&, const QModelIndex&) const
 		{
 			QLineEdit* editorPtr = new QLineEdit(parent);
@@ -321,7 +326,7 @@ void TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::OnGuiCrea
 	NodeParamsTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 #endif
 
-	CPolygonParamsGuiItemDelegate* columnDelegate = new CPolygonParamsGuiItemDelegate();
+	CPolygonParamsGuiItemDelegate* columnDelegate = new CPolygonParamsGuiItemDelegate(NodeParamsTable);
 	NodeParamsTable->setItemDelegateForColumn(0, columnDelegate);
 	NodeParamsTable->setItemDelegateForColumn(1, columnDelegate);
 

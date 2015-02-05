@@ -39,6 +39,7 @@ namespace iview
 
 
 CArrowShape::CArrowShape()
+	:m_referencePosition(0.0, 0.0)
 {
 	m_arrowLinesProportion = 0.4;
 	m_maxArrowLines = 10;

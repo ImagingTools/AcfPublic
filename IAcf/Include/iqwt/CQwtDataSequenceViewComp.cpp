@@ -22,6 +22,8 @@
 
 #include "iqwt/CQwtDataSequenceViewComp.h"
 
+// for DBL_MAX
+#include <float.h>
 
 // ACF includes
 #include "imath/CVarVector.h"

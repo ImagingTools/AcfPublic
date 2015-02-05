@@ -46755,6 +46755,13 @@
   <compound kind="class">
     <name>iqt2d::TPolygonBasedParamsGuiComp::CPolygonParamsGuiItemDelegate</name>
     <filename>classiqt2d_1_1_t_polygon_based_params_gui_comp_1_1_c_polygon_params_gui_item_delegate.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CPolygonParamsGuiItemDelegate</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp_1_1_c_polygon_params_gui_item_delegate.html</anchorfile>
+      <anchor>a03d2f842bcf1d3a2c1f319b1946cd22d</anchor>
+      <arglist>(QObject *parent)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QWidget *</type>
       <name>createEditor</name>
@@ -60099,6 +60106,13 @@
       <anchorfile>classistd_1_1_t_smart_ptr_1_1_ref_counter.html</anchorfile>
       <anchor>a96ebd3e13fb4935ba9fb64022b847666</anchor>
       <arglist>(Type *pointer)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~RefCounter</name>
+      <anchorfile>classistd_1_1_t_smart_ptr_1_1_ref_counter.html</anchorfile>
+      <anchor>ae8360c6c9ee0ad66abba9f441165177b</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
