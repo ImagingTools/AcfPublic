@@ -31826,8 +31826,8 @@
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiimg_1_1_c_bitmap.html</anchorfile>
-      <anchor>a06672150e1885e1f2a232dc08ef1b41e</anchor>
-      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size)</arglist>
+      <anchor>a0c19c18696c5949f78f48518a42d8656</anchor>
+      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size, int pixelBitsCount=0, int componentsCount=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -32049,8 +32049,8 @@
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
-      <anchor>a6591ed392c0fa6e0d4b32f3a7ac7cf9d</anchor>
-      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size)=0</arglist>
+      <anchor>afdfec46fa5dfde895b855b4c13bd9fcb</anchor>
+      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size, int pixelBitsCount=0, int componentsCount=0)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -32711,8 +32711,8 @@
       <type>virtual bool</type>
       <name>CreateBitmap</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>acc089ff6c0beb9d4aac7b0b7d814f1f8</anchor>
-      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size)</arglist>
+      <anchor>a82c917d07719166926edc61e1e30fec7</anchor>
+      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size, int pixelBitsCount=0, int componentsCount=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
