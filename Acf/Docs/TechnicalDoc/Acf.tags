@@ -1892,7 +1892,7 @@
     <includes id="_i_element_static_info_8h" name="IElementStaticInfo.h" local="yes" imported="no">icomp/IElementStaticInfo.h</includes>
     <includes id="_c_base_component_static_info_8h" name="CBaseComponentStaticInfo.h" local="yes" imported="no">icomp/CBaseComponentStaticInfo.h</includes>
     <class kind="class">icomp::TSubelementStaticInfo</class>
-    <class kind="class">icomp::TSubelementStaticInfo::Registrator</class>
+    <class kind="class">icomp::SubElementInterfaceRegistrator</class>
     <namespace>icomp</namespace>
   </compound>
   <compound kind="file">
@@ -21622,6 +21622,7 @@
     <class kind="class">icomp::TSimComponentsFactory</class>
     <class kind="class">icomp::TSimComponentWrap</class>
     <class kind="class">icomp::TSubelementStaticInfo</class>
+    <class kind="class">icomp::SubElementInterfaceRegistrator</class>
     <member kind="function">
       <type>uint</type>
       <name>qHash</name>
@@ -25753,10 +25754,9 @@
   <compound kind="class">
     <name>icomp::TSubelementStaticInfo</name>
     <filename>classicomp_1_1_t_subelement_static_info.html</filename>
-    <templarg></templarg>
+    <templarg>ComponentType</templarg>
     <base virtualness="virtual">icomp::IElementStaticInfo</base>
     <base virtualness="virtual">icomp::IComponentInterfaceExtractor</base>
-    <class kind="class">icomp::TSubelementStaticInfo::Registrator</class>
     <member kind="typedef">
       <type>void *(*</type>
       <name>InterfaceExtractorPtr</name>
@@ -25801,22 +25801,30 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>icomp::TSubelementStaticInfo::Registrator</name>
-    <filename>classicomp_1_1_t_subelement_static_info_1_1_registrator.html</filename>
+    <name>icomp::SubElementInterfaceRegistrator</name>
+    <filename>classicomp_1_1_sub_element_interface_registrator.html</filename>
     <templarg></templarg>
+    <templarg></templarg>
+    <member kind="typedef">
+      <type>void *(*</type>
+      <name>InterfaceExtractorPtr</name>
+      <anchorfile>classicomp_1_1_sub_element_interface_registrator.html</anchorfile>
+      <anchor>a912407c7a1bc9614e049ca18cf63ead7</anchor>
+      <arglist>)(ComponentType &amp;component)</arglist>
+    </member>
     <member kind="typedef">
       <type>InterfaceType *(*</type>
       <name>ExtractorPtr</name>
-      <anchorfile>classicomp_1_1_t_subelement_static_info_1_1_registrator.html</anchorfile>
-      <anchor>a6362dcdeb2fd5df58b58ebc499e987de</anchor>
+      <anchorfile>classicomp_1_1_sub_element_interface_registrator.html</anchorfile>
+      <anchor>acf031a001210de31da68e4fbcd0a7cd0</anchor>
       <arglist>)(ComponentType &amp;component)</arglist>
     </member>
     <member kind="function">
       <type></type>
-      <name>Registrator</name>
-      <anchorfile>classicomp_1_1_t_subelement_static_info_1_1_registrator.html</anchorfile>
-      <anchor>aa682e8cde9239fb891b2542eff8bd872</anchor>
-      <arglist>(TSubelementStaticInfo &amp;staticInfo, ExtractorPtr extractorPtr)</arglist>
+      <name>SubElementInterfaceRegistrator</name>
+      <anchorfile>classicomp_1_1_sub_element_interface_registrator.html</anchorfile>
+      <anchor>afa2fac3273c7e583c02f83997813a772</anchor>
+      <arglist>(TSubelementStaticInfo&lt; ComponentType &gt; &amp;staticInfo, ExtractorPtr extractorPtr)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
