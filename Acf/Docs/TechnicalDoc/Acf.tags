@@ -5638,9 +5638,30 @@
     </member>
     <member kind="define">
       <type>#define</type>
+      <name>I_ENUM_GET_VALUES</name>
+      <anchorfile>istd_8h.html</anchorfile>
+      <anchor>a2a0ff24b0d484969200920ee4322322b</anchor>
+      <arglist>(Enum,...)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>I_ENUM_GET_STRINGS</name>
+      <anchorfile>istd_8h.html</anchorfile>
+      <anchor>ac42a75ac409ef5b2474f608302ed60d0</anchor>
+      <arglist>(Enum,...)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
       <name>I_DECLARE_ENUM</name>
       <anchorfile>istd_8h.html</anchorfile>
       <anchor>a2000828e9a6335eacc6bcd239acd240f</anchor>
+      <arglist>(Enum,...)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>I_DECLARE_FLAGS</name>
+      <anchorfile>istd_8h.html</anchorfile>
+      <anchor>a13f8a102bad10fc9688d7840eb5ff6d1</anchor>
       <arglist>(Enum,...)</arglist>
     </member>
     <member kind="variable" static="yes">
@@ -68832,8 +68853,15 @@
       <type></type>
       <name>CExtLineEdit</name>
       <anchorfile>classiwidgets_1_1_c_ext_line_edit.html</anchorfile>
-      <anchor>a0582fcb87e6d8f4bbb35f0e3fce96b14</anchor>
-      <arglist>(const QString &amp;startupText=QString(), int margins=2, QWidget *parent=NULL)</arglist>
+      <anchor>aaaa9165cb8f4ccf86414b6532a2e9e14</anchor>
+      <arglist>(QWidget *parent=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CExtLineEdit</name>
+      <anchorfile>classiwidgets_1_1_c_ext_line_edit.html</anchorfile>
+      <anchor>ab56f81375512a93016af8634216fbf45</anchor>
+      <arglist>(const QString &amp;startupText, int margins, QWidget *parent=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
