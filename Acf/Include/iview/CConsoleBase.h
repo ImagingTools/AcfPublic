@@ -100,7 +100,7 @@ public:
 	bool IsGridInMm() const;
 	void SetGridInMm(bool state = true);
 
-	// gui visibility
+	// GUI visibility
 	bool IsButtonsPanelVisible() const;
 	void SetButtonsPanelVisible(bool state = true);
 	bool IsButtonsPanelVertical() const;
@@ -125,6 +125,10 @@ public:
 	void SetRulerButtonVisible(bool state = true);
 	bool IsMmButtonVisible() const;
 	void SetMmButtonVisible(bool state = true);
+
+	// fullscreen
+	bool IsFullScreenAllowed() const;
+	void SetFullScreenAllowed(bool allow = true);
 
 	/**
 		Check if background object is present and active.
@@ -199,8 +203,8 @@ private:
 	iview::CScreenTransform m_storedTransform;
 
 	bool m_isZoomToFit;
-
 	bool m_isBkActive;
+	bool m_isFullScreenAllowed;
 
 	friend class CViewport;
 };

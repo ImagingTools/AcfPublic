@@ -63757,6 +63757,20 @@
     </member>
     <member kind="function">
       <type>bool</type>
+      <name>IsFullScreenAllowed</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>ace1c2b801b46e9cddc04fba15e678585</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetFullScreenAllowed</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>af4ab12e8005a42678e8f0200e3e301d8</anchor>
+      <arglist>(bool allow=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
       <name>IsBackgroundActive</name>
       <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
       <anchor>a7296591b320981355219d739c4b9a5f0</anchor>

@@ -270,6 +270,7 @@ void CConsoleBase::Init()
 	m_isBkActive = false;
 	m_isZoomToFit = false;
 	m_fitMode = FM_BOTH;
+	m_isFullScreenAllowed = true;
 }
 
 
@@ -377,6 +378,18 @@ bool CConsoleBase::IsMmButtonVisible() const
 bool CConsoleBase::IsBackgroundActive() const
 {
 	return m_isBkActive;
+}
+
+
+bool CConsoleBase::IsFullScreenAllowed() const
+{
+	return m_isFullScreenAllowed;
+}
+
+
+void CConsoleBase::SetFullScreenAllowed(bool allow /*= true*/)
+{
+	m_isFullScreenAllowed = allow;
 }
 
 
