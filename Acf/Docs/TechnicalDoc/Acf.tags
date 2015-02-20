@@ -2282,6 +2282,7 @@
     <filename>_c_system_location_comp_8h</filename>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
     <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <class kind="class">ifile::CSystemLocationComp</class>
@@ -30179,6 +30180,13 @@
       <name>SL_EXECUTABLE_CONTENT</name>
       <anchorfile>classifile_1_1_c_system_location_comp.html</anchorfile>
       <anchor>aee7a4f1d72b4f0c1028c87e6834e364dadba6a075080ae214eb133dce1108c53e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SL_SHARED_APPDATA_DIRECTORY</name>
+      <anchorfile>classifile_1_1_c_system_location_comp.html</anchorfile>
+      <anchor>aee7a4f1d72b4f0c1028c87e6834e364da84ca5f60ae2f570a760f6aaf354ba9d4</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
