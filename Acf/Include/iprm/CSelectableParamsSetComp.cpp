@@ -136,7 +136,7 @@ bool CSelectableParamsSetComp::SetSelectedOptionIndex(int index)
 		Q_ASSERT(m_paramsManagerCompPtr.IsValid());
 
 		if (m_paramsManagerCompPtr->SetSelectedOptionIndex(index)){
-			static ChangeSet changeSet(CF_SELECTION_CHANGED);
+			ChangeSet changeSet(CF_SELECTION_CHANGED);
 			istd::CChangeNotifier notifier(this, changeSet);
 
 			m_selectedIndex = index;
@@ -348,8 +348,7 @@ void CSelectableParamsSetComp::CurrentParamsSetObserver::BeforeUpdate(imod::IMod
 {
 	Q_ASSERT(IsModelAttached(modelPtr));
 
-	static ChangeSet delegatedIds(CF_DELEGATED);
-	m_parent.BeginChanges(delegatedIds);
+	m_parent.BeginChanges(GetDelegatedChanges());
 }
 
 
@@ -357,8 +356,7 @@ void CSelectableParamsSetComp::CurrentParamsSetObserver::AfterUpdate(imod::IMode
 {
 	Q_ASSERT(IsModelAttached(modelPtr));
 
-	static ChangeSet delegatedIds(CF_DELEGATED);
-	m_parent.EndChanges(delegatedIds);
+	m_parent.EndChanges(GetDelegatedChanges());
 }
 
 

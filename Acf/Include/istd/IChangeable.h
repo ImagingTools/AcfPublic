@@ -120,22 +120,27 @@ public:
 			Indicate that internal update is done.
 		*/
 		CF_ACF_INTERNAL = 0,
+
 		/**
 			All object data are changed.
 		*/
 		CF_ALL_DATA,
+
 		/**
 			Indicate anonymous change.
 		*/
 		CF_ANY,
+
 		/**
 			Change flag indicate that model is during destruction.
 		*/
 		CF_DESTROYING,
+
 		/**
 			Change flag indicate that this change was delegated (is indirect) for example from aggregated object.
 		*/
 		CF_DELEGATED,
+
 		/**
 			Used to avoid adding of changes to undo list.
 		*/
@@ -283,6 +288,11 @@ public:
 	*/
 	static const ChangeSet& GetAllChanges();
 
+	/**
+		Get delegated change set.
+	*/
+	static const ChangeSet& GetDelegatedChanges();
+
 protected:
 	/**
 		Callback function for begin change event.
@@ -299,6 +309,7 @@ protected:
 	static ChangeSet s_emptyChanges;
 	static ChangeSet s_anyChanges;
 	static ChangeSet s_allChanges;
+	static ChangeSet s_delegatedChanges;
 };
 
 
@@ -375,6 +386,12 @@ inline const IChangeable::ChangeSet& IChangeable::GetAnyChange()
 inline const IChangeable::ChangeSet& IChangeable::GetAllChanges()
 {
 	return s_allChanges;
+}
+
+
+inline const IChangeable::ChangeSet& IChangeable::GetDelegatedChanges()
+{
+	return s_delegatedChanges;
 }
 
 

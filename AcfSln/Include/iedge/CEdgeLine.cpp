@@ -177,24 +177,25 @@ void CEdgeLine::CopyFromPolyline(const i2d::CPolyline& polyline, double weight, 
 
 void CEdgeLine::CopyToPolyline(i2d::CPolyline& polyline, const i2d::CAffine2d* transformPtr) const
 {
-	polyline.Clear();
+	polyline.SetNodesCountQuiet(m_nodes.size());
+	int index = 0;
 
 	if (transformPtr != NULL){
-		for (		Nodes::ConstIterator iter = m_nodes.constBegin();
-					iter != m_nodes.constEnd();
+		for (		Nodes::const_iterator iter = m_nodes.begin();
+					iter != m_nodes.end();
 					++iter){
 			const CEdgeNode& node = *iter;
 
-			polyline.InsertNode(transformPtr->GetApply(node.GetPosition()));
+			polyline.SetNode(index++, transformPtr->GetApply(node.GetPosition()));
 		}
 	}
 	else{
-		for (		Nodes::ConstIterator iter = m_nodes.constBegin();
-					iter != m_nodes.constEnd();
+		for (		Nodes::const_iterator iter = m_nodes.begin();
+					iter != m_nodes.end();
 					++iter){
 			const CEdgeNode& node = *iter;
 
-			polyline.InsertNode(node.GetPosition());
+			polyline.SetNode(index++, node.GetPosition());
 		}
 	}
 
@@ -220,7 +221,7 @@ void CEdgeLine::MoveCenterTo(const i2d::CVector2d& position)
 
 	i2d::CVector2d diffVector = position - m_center;
 
-	for (		Nodes::Iterator iter = m_nodes.begin();
+	for (		Nodes::iterator iter = m_nodes.begin();
 				iter != m_nodes.end();
 				++iter){
 		CEdgeNode& node = *iter;
@@ -250,7 +251,7 @@ bool CEdgeLine::Transform(
 		i2d::CAffine2d localTransform;
 		transformation.GetLocalTransform(i2d::CVector2d(0, 0), localTransform);
 
-		for (		Nodes::Iterator iter = m_nodes.begin();
+		for (		Nodes::iterator iter = m_nodes.begin();
 					iter != m_nodes.end();
 					++iter){
 			CEdgeNode& node = *iter;
@@ -259,7 +260,7 @@ bool CEdgeLine::Transform(
 		}
 	}
 	else{
-		for (		Nodes::Iterator iter = m_nodes.begin();
+		for (		Nodes::iterator iter = m_nodes.begin();
 					iter != m_nodes.end();
 					++iter){
 			CEdgeNode& node = *iter;
@@ -296,7 +297,7 @@ bool CEdgeLine::InvTransform(
 		i2d::CAffine2d localInvTransform;
 		transformation.GetLocalInvTransform(i2d::CVector2d(0, 0), localInvTransform);
 
-		for (		Nodes::Iterator iter = m_nodes.begin();
+		for (		Nodes::iterator iter = m_nodes.begin();
 					iter != m_nodes.end();
 					++iter){
 			CEdgeNode& node = *iter;
@@ -305,7 +306,7 @@ bool CEdgeLine::InvTransform(
 		}
 	}
 	else{
-		for (		Nodes::Iterator iter = m_nodes.begin();
+		for (		Nodes::iterator iter = m_nodes.begin();
 					iter != m_nodes.end();
 					++iter){
 			CEdgeNode& node = *iter;
@@ -337,15 +338,16 @@ bool CEdgeLine::GetTransformed(
 {
 	CEdgeLine* resultEdgeLinePtr = dynamic_cast<CEdgeLine*>(&result);
 	if (resultEdgeLinePtr != NULL){
-		resultEdgeLinePtr->Clear();
+		resultEdgeLinePtr->SetNodesCountQuiet(m_nodes.size());
 
 		int transFlag = transformation.GetTransformationFlags();
 		if ((transFlag & i2d::ITransformation2d::TF_AFFINE) != 0){
 			i2d::CAffine2d localTransform;
 			transformation.GetLocalTransform(i2d::CVector2d(0, 0), localTransform);
 
-			for (		Nodes::ConstIterator iter = m_nodes.constBegin();
-						iter != m_nodes.constEnd();
+			int index = 0;
+			for (		Nodes::const_iterator iter = m_nodes.begin();
+						iter != m_nodes.end();
 						++iter){
 				const CEdgeNode& node = *iter;
 
@@ -353,12 +355,13 @@ bool CEdgeLine::GetTransformed(
 							localTransform.GetApply(node.GetPosition()),
 							node.GetWeight());
 
-				resultEdgeLinePtr->InsertNode(resultNode);
+				resultEdgeLinePtr->SetNodeQuiet(index++, resultNode);
 			}
 		}
 		else{
-			for (		Nodes::ConstIterator iter = m_nodes.constBegin();
-						iter != m_nodes.constEnd();
+			int index = 0;
+			for (		Nodes::const_iterator iter = m_nodes.begin();
+						iter != m_nodes.end();
 						++iter){
 				const CEdgeNode& node = *iter;
 
@@ -374,7 +377,7 @@ bool CEdgeLine::GetTransformed(
 							resultPosition,
 							node.GetWeight());
 
-				resultEdgeLinePtr->InsertNode(resultNode);
+				resultEdgeLinePtr->SetNodeQuiet(index++, resultNode);
 			}
 		}
 
@@ -414,15 +417,16 @@ bool CEdgeLine::GetInvTransformed(
 {
 	CEdgeLine* resultEdgeLinePtr = dynamic_cast<CEdgeLine*>(&result);
 	if (resultEdgeLinePtr != NULL){
-		resultEdgeLinePtr->Clear();
+		resultEdgeLinePtr->SetNodesCountQuiet(m_nodes.size());
 
 		int transFlag = transformation.GetTransformationFlags();
 		if ((transFlag & i2d::ITransformation2d::TF_AFFINE) != 0){
 			i2d::CAffine2d localInvTransform;
 			transformation.GetLocalInvTransform(i2d::CVector2d(0, 0), localInvTransform);
 
-			for (		Nodes::ConstIterator iter = m_nodes.constBegin();
-						iter != m_nodes.constEnd();
+			int index = 0;
+			for (		Nodes::const_iterator iter = m_nodes.begin();
+						iter != m_nodes.end();
 						++iter){
 				const CEdgeNode& node = *iter;
 
@@ -430,12 +434,13 @@ bool CEdgeLine::GetInvTransformed(
 							localInvTransform.GetApply(node.GetPosition()),
 							node.GetWeight());
 
-				resultEdgeLinePtr->InsertNode(resultNode);
+				resultEdgeLinePtr->SetNodeQuiet(index++, resultNode);
 			}
 		}
 		else{
-			for (		Nodes::ConstIterator iter = m_nodes.constBegin();
-						iter != m_nodes.constEnd();
+			int index = 0;
+			for (		Nodes::const_iterator iter = m_nodes.begin();
+						iter != m_nodes.end();
 						++iter){
 				const CEdgeNode& node = *iter;
 
@@ -451,7 +456,7 @@ bool CEdgeLine::GetInvTransformed(
 							resultPosition,
 							node.GetWeight());
 
-				resultEdgeLinePtr->InsertNode(resultNode);
+				resultEdgeLinePtr->SetNodeQuiet(index++, resultNode);
 			}
 		}
 
@@ -480,7 +485,7 @@ bool CEdgeLine::Serialize(iser::IArchive& archive)
 		int nodesCount = m_nodes.size();
 
 		retVal = retVal && archive.BeginMultiTag(nodesTag, nodeTag, nodesCount);
-		for (		Nodes::Iterator iter = m_nodes.begin();
+		for (		Nodes::iterator iter = m_nodes.begin();
 					iter != m_nodes.end();
 					++iter){
 			CEdgeNode& node = *iter;
@@ -539,7 +544,7 @@ void CEdgeLine::CalcVolatile() const
 
 	int nodesCount = m_nodes.size();
 	if (nodesCount > 0){
-		const CEdgeNode& firstNode = m_nodes.first();
+		const CEdgeNode& firstNode = m_nodes[0];
 		double prevWeight = firstNode.GetWeight();
 		i2d::CVector2d prevPosition = firstNode.GetPosition();
 

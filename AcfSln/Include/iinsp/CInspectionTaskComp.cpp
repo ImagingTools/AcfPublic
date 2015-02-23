@@ -159,8 +159,7 @@ void CInspectionTaskComp::InvalidateSupplier()
 
 void CInspectionTaskComp::EnsureWorkInitialized()
 {
-	static ChangeSet changeSet(CF_SUPPLIER_RESULTS);
-	m_productChangeNotifierPtr.SetPtr(new istd::CChangeNotifier(this, changeSet));
+	m_productChangeNotifierPtr.SetPtr(new istd::CChangeNotifier(this, ChangeSet(CF_SUPPLIER_RESULTS)));
 
 	int inspectionsCount = m_subtasksCompPtr.GetCount();
 
@@ -379,6 +378,9 @@ void CInspectionTaskComp::EnsureStatusKnown()
 void CInspectionTaskComp::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
+
+	m_generalParamsCompPtr.EnsureInitialized();
+	m_generalParamsModelCompPtr.EnsureInitialized();
 
 	int modelsCount = m_subtaskModelsCompPtr.GetCount();
 	for (int i = 0; i < modelsCount; ++i){

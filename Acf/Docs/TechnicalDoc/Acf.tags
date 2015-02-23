@@ -7724,6 +7724,13 @@
       <anchor>a0f013d5ae23907e8192be88574a825de</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static const ChangeSet &amp;</type>
+      <name>GetDelegatedChanges</name>
+      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
+      <anchor>a8336bd93515b3c96e2151a11a2888536</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnBeginChanges</name>
@@ -7757,6 +7764,13 @@
       <name>s_allChanges</name>
       <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
       <anchor>ab70bbe06a7def4a470ec44ca2f58c71e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static ChangeSet</type>
+      <name>s_delegatedChanges</name>
+      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
+      <anchor>a9b525f2b5a39492a667130b3e4f730f3</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -8132,6 +8146,20 @@
       <name>m_position</name>
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
       <anchor>ac52dc2bacd2db9e64c8f164987e29ba2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static ChangeSet</type>
+      <name>s_objectPositionChangeSet</name>
+      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
+      <anchor>ab95bd0741c68a87adace4c93717824cc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static ChangeSet</type>
+      <name>s_objectPositionAllDataChangeSet</name>
+      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
+      <anchor>a4e4934634e39a1b8c607443887d1b076</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -9041,6 +9069,27 @@
       <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
       <anchor>a9ae30d587ee316efdc1bd8ed5ab73ad1</anchor>
       <arglist>(int index)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>InsertNodeQuiet</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>adf71ff206b51388390aa07b73bca0280</anchor>
+      <arglist>(const i2d::CVector2d &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>InsertNodeQuiet</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a96670b2ebea56a6588f67903a401ebe0</anchor>
+      <arglist>(int index, const i2d::CVector2d &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetNodesCountQuiet</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a537c71711fd5387ebf5299608cf0d118</anchor>
+      <arglist>(int count)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
@@ -34143,6 +34192,13 @@
       <anchor>ad3713733bfce4d91e896080a3e962428</anchor>
       <arglist></arglist>
     </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static ChangeSet</type>
+      <name>s_addMessageChangeSet</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>acee5ef25e69ce5a857eae0424f7bd68c</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>ilog::CMessage</name>
@@ -56743,6 +56799,13 @@
       <anchorfile>classistd_1_1_c_general_time_stamp.html</anchorfile>
       <anchor>a71d69301e765f85dfa565d218400821d</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static ChangeSet</type>
+      <name>s_startChangeSet</name>
+      <anchorfile>classistd_1_1_c_general_time_stamp.html</anchorfile>
+      <anchor>a89cfd611e097e05f5114905d069f0778</anchor>
+      <arglist></arglist>
     </member>
     <member kind="enumeration">
       <type></type>

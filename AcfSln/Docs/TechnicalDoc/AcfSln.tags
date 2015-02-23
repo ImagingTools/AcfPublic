@@ -227,11 +227,19 @@
     <name>CSnapBitmapSupplierComp.h</name>
     <path>C:/Temp/Acfsln/Include/icam/</path>
     <filename>_c_snap_bitmap_supplier_comp_8h</filename>
+    <includes id="_c_snap_bitmap_supplier_comp_base_8h" name="CSnapBitmapSupplierCompBase.h" local="yes" imported="no">icam/CSnapBitmapSupplierCompBase.h</includes>
+    <class kind="class">icam::CSnapBitmapSupplierComp</class>
+    <namespace>icam</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CSnapBitmapSupplierCompBase.h</name>
+    <path>C:/Temp/Acfsln/Include/icam/</path>
+    <filename>_c_snap_bitmap_supplier_comp_base_8h</filename>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
     <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="no" imported="no">imeas/INumericConstraints.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="no" imported="no">imeas/CSimpleNumericValue.h</includes>
-    <class kind="class">icam::CSnapBitmapSupplierComp</class>
+    <class kind="class">icam::CSnapBitmapSupplierCompBase</class>
     <namespace>icam</namespace>
   </compound>
   <compound kind="file">
@@ -270,6 +278,14 @@
     <filename>_i_exposure_params_8h</filename>
     <includes id="icam_8h" name="icam.h" local="yes" imported="no">icam/icam.h</includes>
     <class kind="class">icam::IExposureParams</class>
+    <namespace>icam</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TSnapBitmapSupplierComp.h</name>
+    <path>C:/Temp/Acfsln/Include/icam/</path>
+    <filename>_t_snap_bitmap_supplier_comp_8h</filename>
+    <includes id="_c_snap_bitmap_supplier_comp_base_8h" name="CSnapBitmapSupplierCompBase.h" local="yes" imported="no">icam/CSnapBitmapSupplierCompBase.h</includes>
+    <class kind="class">icam::TSnapBitmapSupplierComp</class>
     <namespace>icam</namespace>
   </compound>
   <compound kind="file">
@@ -4445,10 +4461,12 @@
     <class kind="class">icam::CSelectableBitmapSupplierComp</class>
     <class kind="class">icam::CSelectionParamCameraComp</class>
     <class kind="class">icam::CSnapBitmapSupplierComp</class>
+    <class kind="class">icam::CSnapBitmapSupplierCompBase</class>
     <class kind="class">icam::IBitmapAcquisition</class>
     <class kind="class">icam::ICameraInfo</class>
     <class kind="class">icam::IExposureConstraints</class>
     <class kind="class">icam::IExposureParams</class>
+    <class kind="class">icam::TSnapBitmapSupplierComp</class>
   </compound>
   <compound kind="class">
     <name>icam::CAcquisitionConstraintsComp</name>
@@ -4671,6 +4689,13 @@
       <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
       <anchor>a1c7d0d5aacae6a6476dfaafd1e4f36b9</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
+      <anchor>abec1e4055b981c2fd5fb07e2d32abccc</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5631,50 +5656,83 @@
   <compound kind="class">
     <name>icam::CSnapBitmapSupplierComp</name>
     <filename>classicam_1_1_c_snap_bitmap_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
-    <base virtualness="virtual">iimg::IBitmapProvider</base>
-    <base virtualness="virtual">i2d::ICalibrationProvider</base>
+    <base>icam::CSnapBitmapSupplierCompBase</base>
+    <member kind="typedef">
+      <type>CSnapBitmapSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a7ca2eeb6479dcd3c50d0fc5020141a95</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
-      <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
-      <anchor>ada01c494ee698bd8240260913306b290</anchor>
+      <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp_base.html</anchorfile>
+      <anchor>ac45493d84831c9f006eca69a25a35448</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual iimg::IBitmap *</type>
+      <name>CreateBitmap</name>
       <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
-      <anchor>aaee9c247a6db7b9333ba3e16b9ab16c0</anchor>
-      <arglist>(ScaleConstraints)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const iimg::IBitmap *</type>
-      <name>GetBitmap</name>
-      <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a75c695192e6efec5d1cf378b5da900a6</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::ICalibration2d *</type>
-      <name>GetCalibration</name>
-      <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a34a3e67be1704a857449eb887cea5f97</anchor>
+      <anchor>ad3015412c2e4ccdc054f5f1e4b49eaf7</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>InitializeWork</name>
-      <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
-      <anchor>aa38cc48770f8ea39cba9ee46d57fac65</anchor>
+      <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp_base.html</anchorfile>
+      <anchor>a5c520169b41394ff9bbcc7cb46a9b215</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>ProduceObject</name>
-      <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp.html</anchorfile>
-      <anchor>aa51d7c3220ef8671ea5db87d90c004d3</anchor>
+      <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp_base.html</anchorfile>
+      <anchor>a01c4996b6acbd84ac94b8d7480fab8e0</anchor>
       <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp_base.html</anchorfile>
+      <anchor>a516bd50c77fcf844cbeda46ecc524600</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT</name>
+      <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp_base.html</anchorfile>
+      <anchor>aa82590882a059a1992e8e29a23001e77</anchor>
+      <arglist>(ScaleConstraints)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iimg::IBitmap *</type>
+      <name>GetBitmap</name>
+      <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp_base.html</anchorfile>
+      <anchor>a7b34c587515f2f34f530023a6d3a8433</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ICalibration2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp_base.html</anchorfile>
+      <anchor>a79d63b2d3f3328c1f4837f1c2e531639</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icam::CSnapBitmapSupplierCompBase</name>
+    <filename>classicam_1_1_c_snap_bitmap_supplier_comp_base.html</filename>
+    <base>TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <base virtualness="virtual">iimg::IBitmapProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual iimg::IBitmap *</type>
+      <name>CreateBitmap</name>
+      <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp_base.html</anchorfile>
+      <anchor>adc1d5ac82369798bbdd3c2ceb09e2781</anchor>
+      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5947,6 +6005,33 @@
       <anchorfile>classicam_1_1_i_exposure_params.html</anchorfile>
       <anchor>a5b4f1e2f64bb83c43e5db5f4fbc5766a</anchor>
       <arglist>(double time)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icam::TSnapBitmapSupplierComp</name>
+    <filename>classicam_1_1_t_snap_bitmap_supplier_comp.html</filename>
+    <templarg></templarg>
+    <base>icam::CSnapBitmapSupplierCompBase</base>
+    <member kind="typedef">
+      <type>Bitmap</type>
+      <name>BitmapType</name>
+      <anchorfile>classicam_1_1_t_snap_bitmap_supplier_comp.html</anchorfile>
+      <anchor>aed051ca620f7b7c2c9eebca94cf492cf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSnapBitmapSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classicam_1_1_t_snap_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a13194740928c5aed67b6cb6c9f95d8bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual iimg::IBitmap *</type>
+      <name>CreateBitmap</name>
+      <anchorfile>classicam_1_1_t_snap_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a04149eba3639ed590b476a234b25faec</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -10505,6 +10590,27 @@
       <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
       <anchor>acde2e468afa74d7c098a98955e696c28</anchor>
       <arglist>(const CEdgeNode &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>InsertNodeQuiet</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>a30771a21371de49ec009a9d34631ea9c</anchor>
+      <arglist>(const CEdgeNode &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetNodeQuiet</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>a19c8f4c5863ee818d9e16642e893ed88</anchor>
+      <arglist>(int index, const CEdgeNode &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetNodesCountQuiet</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>aa92180e5e17bcf9c50cf602295325eef</anchor>
+      <arglist>(int count)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -18078,6 +18184,13 @@
       <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
       <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_line_projection_processor_comp.html</anchorfile>
+      <anchor>ae9751af21d70b358e6a0a27de69bdc28</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -29649,11 +29762,13 @@
     <file>CSelectableBitmapSupplierComp.h</file>
     <file>CSelectionParamCameraComp.h</file>
     <file>CSnapBitmapSupplierComp.h</file>
+    <file>CSnapBitmapSupplierCompBase.h</file>
     <file>IBitmapAcquisition.h</file>
     <file>icam.h</file>
     <file>ICameraInfo.h</file>
     <file>IExposureConstraints.h</file>
     <file>IExposureParams.h</file>
+    <file>TSnapBitmapSupplierComp.h</file>
   </compound>
   <compound kind="dir">
     <name>Include/icmpstr</name>

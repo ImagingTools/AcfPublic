@@ -290,7 +290,7 @@ public:
 
 private:
 	CVector2d m_point1;
-	CVector2d m_point2;		
+	CVector2d m_point2;
 };
 
 

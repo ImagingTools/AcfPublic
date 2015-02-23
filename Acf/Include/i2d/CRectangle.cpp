@@ -513,16 +513,14 @@ CRectangle CRectangle::GetTranslated(const i2d::CVector2d& delta) const
 
 void CRectangle::Translate(const i2d::CVector2d& delta)
 {
-	static ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA);
-
-	BeginChanges(changeSet);
+	BeginChanges(s_objectPositionAllDataChangeSet);
 
 	m_horizontalRange.SetMinValue(m_horizontalRange.GetMinValue() + delta.GetX());
 	m_verticalRange.SetMinValue(m_verticalRange.GetMinValue() + delta.GetY());
 	m_horizontalRange.SetMaxValue(m_horizontalRange.GetMaxValue() + delta.GetX());
 	m_verticalRange.SetMaxValue(m_verticalRange.GetMaxValue() + delta.GetY());
 
-	EndChanges(changeSet);
+	EndChanges(s_objectPositionAllDataChangeSet);
 }
 
 
@@ -560,9 +558,7 @@ void CRectangle::MoveCenterTo(const CVector2d& position)
 {
 	i2d::CVector2d offset = position - GetCenter();
 	if (offset != i2d::CVector2d(0, 0)){
-		static ChangeSet changeSet(CF_OBJECT_POSITION);
-
-		BeginChanges(changeSet);
+		BeginChanges(s_objectPositionChangeSet);
 
 		m_verticalRange.SetMinValue(m_verticalRange.GetMinValue() + offset.GetY());
 		m_verticalRange.SetMaxValue(m_verticalRange.GetMaxValue() + offset.GetY());
@@ -570,7 +566,7 @@ void CRectangle::MoveCenterTo(const CVector2d& position)
 		m_horizontalRange.SetMinValue(m_horizontalRange.GetMinValue() + offset.GetX());
 		m_horizontalRange.SetMaxValue(m_horizontalRange.GetMaxValue() + offset.GetX());
 
-		EndChanges(changeSet);
+		EndChanges(s_objectPositionChangeSet);
 	}
 }
 
@@ -594,9 +590,7 @@ bool CRectangle::Transform(
 
 	if (		transformation.GetPositionAt(leftTop, transLeftTop, mode) &&
 				transformation.GetPositionAt(rightBottom, transRightBottom, mode)){
-		static ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA);
-
-		BeginChanges(changeSet);
+		BeginChanges(s_objectPositionAllDataChangeSet);
 		
 		if (errorFactorPtr != NULL){
 			*errorFactorPtr = 0;
@@ -608,7 +602,7 @@ bool CRectangle::Transform(
 		m_verticalRange = istd::CRange(transLeftTop.GetY(), transRightBottom.GetY());
 		m_verticalRange.Validate();
 
-		EndChanges(changeSet);
+		EndChanges(s_objectPositionAllDataChangeSet);
 
 		return true;
 	}
@@ -630,9 +624,7 @@ bool CRectangle::InvTransform(
 
 	if (		transformation.GetInvPositionAt(leftTop, transLeftTop, mode) &&
 				transformation.GetInvPositionAt(rightBottom, transRightBottom, mode)){
-		static ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA);
-
-		BeginChanges(changeSet);
+		BeginChanges(s_objectPositionAllDataChangeSet);
 		
 		if (errorFactorPtr != NULL){
 			*errorFactorPtr = 0;
@@ -644,7 +636,7 @@ bool CRectangle::InvTransform(
 		m_horizontalRange.Validate();
 		m_verticalRange.Validate();
 
-		EndChanges(changeSet);
+		EndChanges(s_objectPositionAllDataChangeSet);
 
 		return true;
 	}
@@ -761,7 +753,7 @@ bool CRectangle::Serialize(iser::IArchive& archive)
 }
 
 
-// static atributes
+// static attributes
 
 CRectangle CRectangle::s_empty(0, 0, 0, 0);
 

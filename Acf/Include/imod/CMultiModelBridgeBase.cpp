@@ -108,8 +108,7 @@ void CMultiModelBridgeBase::BeforeUpdate(IModel* I_IF_DEBUG(modelPtr))
 {
 	Q_ASSERT(IsModelAttached(modelPtr));
 
-	static ChangeSet delegatedIds(CF_DELEGATED);
-	BeginChanges(delegatedIds);
+	BeginChanges(GetDelegatedChanges());
 }
 
 
@@ -117,8 +116,7 @@ void CMultiModelBridgeBase::AfterUpdate(IModel* I_IF_DEBUG(modelPtr), const istd
 {
 	Q_ASSERT(IsModelAttached(modelPtr));
 
-	static ChangeSet delegatedIds(CF_DELEGATED);
-	EndChanges(delegatedIds);
+	EndChanges(GetDelegatedChanges());
 }
 
 

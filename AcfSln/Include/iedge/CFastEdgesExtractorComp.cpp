@@ -648,6 +648,15 @@ void CFastEdgesExtractorComp::InternalContainer::ExtractLines(
 			CEdgeLine& resultLine = result.PushBack(CEdgeLine());
 			resultLine.SetClosed(false);
 
+			// count nodes
+			int nodesCount = 0;
+			for (const ExtNode* nodeElementPtr = &node; nodeElementPtr != NULL;	nodeElementPtr = nodeElementPtr->nextPtr){
+				nodesCount++;
+			}
+
+			resultLine.SetNodesCountQuiet(nodesCount);
+
+			int index = 0;
 			for (		const ExtNode* nodeElementPtr = &node;
 						nodeElementPtr != NULL;
 						nodeElementPtr = nodeElementPtr->nextPtr){
@@ -660,7 +669,7 @@ void CFastEdgesExtractorComp::InternalContainer::ExtractLines(
 							nodeElementPtr->position,
 							nodeElementPtr->derivative.GetLength() * weightScale);
 
-				resultLine.InsertNode(node);
+				resultLine.SetNodeQuiet(index++, node);
 			}
 		}
 	}
@@ -678,7 +687,18 @@ void CFastEdgesExtractorComp::InternalContainer::ExtractLines(
 			CEdgeLine& resultLine = result.PushBack(CEdgeLine());
 			resultLine.SetClosed(true);
 
+			// count nodes
+			int nodesCount = 0;
 			const ExtNode* nodeElementPtr = &node;
+			do{
+				nodeElementPtr = nodeElementPtr->nextPtr;
+				nodesCount++;
+			} while (nodeElementPtr != &node);
+
+			resultLine.SetNodesCountQuiet(nodesCount);
+
+			nodeElementPtr = &node;
+			int index = 0;
 			do{
 				Q_ASSERT(nodeElementPtr->nextPtr != NULL);
 				Q_ASSERT(nodeElementPtr->prevPtr != NULL);
@@ -691,7 +711,7 @@ void CFastEdgesExtractorComp::InternalContainer::ExtractLines(
 							nodeElementPtr->position,
 							nodeElementPtr->derivative.GetLength() * weightScale);
 
-				resultLine.InsertNode(node);
+				resultLine.SetNodeQuiet(index++, node);
 
 				nodeElementPtr = nodeElementPtr->nextPtr;
 			} while (nodeElementPtr != &node);

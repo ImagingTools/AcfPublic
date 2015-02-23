@@ -37,6 +37,10 @@ namespace idoc
 {
 
 
+// static members
+istd::IChangeable::ChangeSet CStandardDocumentMetaInfo::s_metaInfoChangeSet(CF_METAINFO);
+
+
 // public methods
 
 // reimplemented (idoc::IDocumentMetaInfo)
@@ -62,8 +66,7 @@ QVariant CStandardDocumentMetaInfo::GetMetaInfo(int metaInfoType) const
 bool CStandardDocumentMetaInfo::SetMetaInfo(int metaInfoType, const QVariant& metaInfo)
 {
 	if (m_infosMap[metaInfoType] != metaInfo){
-		static ChangeSet changeSet(CF_METAINFO);
-		istd::CChangeNotifier changePtr(this, changeSet);
+		istd::CChangeNotifier changePtr(this, s_metaInfoChangeSet);
 
 		m_infosMap[metaInfoType] = metaInfo;
 	}
@@ -184,7 +187,7 @@ bool CStandardDocumentMetaInfo::Serialize(iser::IArchive& archive)
 		}
 	}
 	else{
-		static ChangeSet changeSet(CF_ALL_DATA, CF_METAINFO);
+		ChangeSet changeSet(CF_ALL_DATA, CF_METAINFO);
 		istd::CChangeNotifier changePtr(this, changeSet);
 
 		m_infosMap.clear();

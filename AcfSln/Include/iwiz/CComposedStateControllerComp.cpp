@@ -118,7 +118,7 @@ bool CComposedStateControllerComp::TryEnterState(bool isActionAllowed, const ISt
 		}
 	}
 
-	static ChangeSet changeSet(CF_STATE_ENTERED);
+	ChangeSet changeSet(CF_STATE_ENTERED);
 	istd::CChangeNotifier notifier(this, changeSet);
 
 	m_isStateActive = true;
@@ -141,7 +141,7 @@ bool CComposedStateControllerComp::TryLeaveState(bool isActionAllowed, const ISt
 		}
 	}
 
-	static ChangeSet changeSet(CF_STATE_LEAVED);
+	ChangeSet changeSet(CF_STATE_LEAVED);
 	istd::CChangeNotifier notifier(this, changeSet);
 
 	m_isStateActive = false;
@@ -182,7 +182,7 @@ void CComposedStateControllerComp::UpdateAllMembers()
 	}
 
 	if (m_isStateEnabled != isEnabled){
-		static ChangeSet changeSet(CF_STATE_ENABLED);
+		ChangeSet changeSet(CF_STATE_ENABLED);
 		istd::CChangeNotifier notifier(this, changeSet);
 
 		m_isStateEnabled = isEnabled;

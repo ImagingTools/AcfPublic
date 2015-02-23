@@ -128,14 +128,12 @@ void CQuadrangle::MoveCenterTo(const CVector2d& position)
 {
 	CVector2d delta = position - GetCenter();
 	if (delta != CVector2d(0, 0)){
-		static ChangeSet changeSet(CF_OBJECT_POSITION);
-
-		BeginChanges(changeSet);
+		BeginChanges(s_objectPositionChangeSet);
 
 		m_firstDiagonal.MoveCenterTo(delta + m_firstDiagonal.GetCenter());
 		m_secondDiagonal.MoveCenterTo(delta + m_secondDiagonal.GetCenter());
 
-		EndChanges(changeSet);
+		EndChanges(s_objectPositionChangeSet);
 	}
 }
 
@@ -151,9 +149,7 @@ bool CQuadrangle::Transform(
 			ITransformation2d::ExactnessMode mode,
 			double* errorFactorPtr)
 {
-	static ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA);
-
-	BeginChanges(changeSet);
+	BeginChanges(s_objectPositionAllDataChangeSet);
 
 	bool retVal = false;
 
@@ -170,7 +166,7 @@ bool CQuadrangle::Transform(
 					m_secondDiagonal.Transform(transformation, mode);
 	}
 
-	EndChanges(changeSet);
+	EndChanges(s_objectPositionAllDataChangeSet);
 
 	return retVal;
 }
@@ -181,8 +177,7 @@ bool CQuadrangle::InvTransform(
 			ITransformation2d::ExactnessMode mode,
 			double* errorFactorPtr)
 {
-	static ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA);
-	BeginChanges(changeSet);
+	BeginChanges(s_objectPositionAllDataChangeSet);
 
 	bool retVal = false;
 
@@ -201,7 +196,7 @@ bool CQuadrangle::InvTransform(
 				m_secondDiagonal.InvTransform(transformation, mode);
 	}
 
-	EndChanges(changeSet);
+	EndChanges(s_objectPositionAllDataChangeSet);
 
 	return retVal;
 }
@@ -218,9 +213,7 @@ bool CQuadrangle::GetTransformed(
 		return false;
 	}
 
-	static ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA);
-
-	resultQuadranglePtr->BeginChanges(changeSet);
+	resultQuadranglePtr->BeginChanges(s_objectPositionAllDataChangeSet);
 
 	bool retVal = false;
 
@@ -238,7 +231,7 @@ bool CQuadrangle::GetTransformed(
 				m_secondDiagonal.GetTransformed(transformation, resultQuadranglePtr->m_secondDiagonal, mode);
 	}
 
-	 resultQuadranglePtr->EndChanges(changeSet);
+	 resultQuadranglePtr->EndChanges(s_objectPositionAllDataChangeSet);
 
 	 return retVal;
 }
@@ -255,9 +248,7 @@ bool CQuadrangle::GetInvTransformed(
 		return false;
 	}
 
-	static ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA);
-
-	resultQuadranglePtr->BeginChanges(changeSet);
+	resultQuadranglePtr->BeginChanges(s_objectPositionAllDataChangeSet);
 
 	bool retVal = false;
 
@@ -275,7 +266,7 @@ bool CQuadrangle::GetInvTransformed(
 					m_secondDiagonal.GetInvTransformed(transformation, resultQuadranglePtr->m_secondDiagonal, mode);
 	}
 
-	resultQuadranglePtr->EndChanges(changeSet);
+	resultQuadranglePtr->EndChanges(s_objectPositionAllDataChangeSet);
 
 	return retVal;
 }

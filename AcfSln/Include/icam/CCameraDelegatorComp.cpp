@@ -145,6 +145,17 @@ void CCameraDelegatorComp::InitProcessor(const iprm::IParamsSet* paramsPtr)
 }
 
 
+// reimplemented (icomp::CComponentBase)
+
+void CCameraDelegatorComp::OnComponentCreated()
+{
+	BaseClass::OnComponentCreated();
+
+	// initilaize components
+	m_slaveCameraCompPtr.EnsureInitialized();
+}
+
+
 } // namespace icam
 
 

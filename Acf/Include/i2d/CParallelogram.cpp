@@ -43,8 +43,7 @@ i2d::CVector2d CParallelogram::GetCenter() const
 void CParallelogram::MoveCenterTo(const i2d::CVector2d& position)
 {
 	if (m_transform.GetTranslation() != position){
-		static ChangeSet changeSet(CF_OBJECT_POSITION);
-		istd::CChangeNotifier notifier(this, changeSet);
+		istd::CChangeNotifier notifier(this, s_objectPositionChangeSet);
 
 		m_transform.SetTranslation(position);
 	}
@@ -62,8 +61,7 @@ bool CParallelogram::Transform(
 {
 	i2d::CAffine2d localTransform;
 	if (transformation.GetLocalTransform(GetCenter(), localTransform, mode)){
-		static ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA);
-		istd::CChangeNotifier notifier(this, changeSet);
+		istd::CChangeNotifier notifier(this, s_objectPositionAllDataChangeSet);
 
 		m_transform.Apply(localTransform);
 
@@ -81,8 +79,7 @@ bool CParallelogram::InvTransform(
 {
 	i2d::CAffine2d localTransform;
 	if (transformation.GetLocalInvTransform(GetCenter(), localTransform, mode)){
-		static ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA);
-		istd::CChangeNotifier notifier(this, changeSet);
+		istd::CChangeNotifier notifier(this, s_objectPositionAllDataChangeSet);
 
 		m_transform.Apply(localTransform);
 
@@ -101,8 +98,7 @@ bool CParallelogram::GetTransformed(
 {
 	CParallelogram* parallelogramPtr = dynamic_cast<CParallelogram*>(&result);
 	if (parallelogramPtr != NULL){
-		static ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA);
-		istd::CChangeNotifier notifier(parallelogramPtr, changeSet);
+		istd::CChangeNotifier notifier(parallelogramPtr, s_objectPositionAllDataChangeSet);
 
 		return parallelogramPtr->Transform(transformation, mode, errorFactorPtr);
 	}
@@ -119,8 +115,7 @@ bool CParallelogram::GetInvTransformed(
 {
 	CParallelogram* parallelogramPtr = dynamic_cast<CParallelogram*>(&result);
 	if (parallelogramPtr != NULL){
-		static ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA);
-		istd::CChangeNotifier notifier(parallelogramPtr, changeSet);
+		istd::CChangeNotifier notifier(parallelogramPtr, s_objectPositionAllDataChangeSet);
 
 		return parallelogramPtr->InvTransform(transformation, mode, errorFactorPtr);
 	}
