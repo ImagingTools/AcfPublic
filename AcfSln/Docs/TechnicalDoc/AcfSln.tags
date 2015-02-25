@@ -1166,6 +1166,15 @@
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
+    <name>CAdaptiveImageBinarizeProcessorComp.h</name>
+    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <filename>_c_adaptive_image_binarize_processor_comp_8h</filename>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
+    <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
+    <class kind="class">iipr::CAdaptiveImageBinarizeProcessorComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CArcProjectionProcessorComp.h</name>
     <path>C:/Temp/Acfsln/Include/iipr/</path>
     <filename>_c_arc_projection_processor_comp_8h</filename>
@@ -15048,6 +15057,7 @@
   <compound kind="namespace">
     <name>iipr</name>
     <filename>namespaceiipr.html</filename>
+    <class kind="class">iipr::CAdaptiveImageBinarizeProcessorComp</class>
     <class kind="class">iipr::CArcProjectionProcessorComp</class>
     <class kind="class">iipr::CAutoImageNormalizeProcessorComp</class>
     <class kind="class">iipr::CBitmapJoinerSupplierComp</class>
@@ -15153,6 +15163,25 @@
       <anchorfile>namespaceiipr.html</anchorfile>
       <anchor>a310caaf2e3e829aef8247d0eb1e37aada28eae46bbb14021d34f46b02f4ecc45f</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CAdaptiveImageBinarizeProcessorComp</name>
+    <filename>classiipr_1_1_c_adaptive_image_binarize_processor_comp.html</filename>
+    <base>iproc::TSyncProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_adaptive_image_binarize_processor_comp.html</anchorfile>
+      <anchor>a5b05f6c045cd2e1f07ae8c6095cdd6b6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiipr_1_1_c_adaptive_image_binarize_processor_comp.html</anchorfile>
+      <anchor>a31e859d9aede7a2f538d85838fda2054</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -19183,6 +19212,13 @@
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
       <anchor>ab2304a9a781bee83df0ab648b7a77c29</anchor>
       <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>DoImageFilter</name>
+      <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
+      <anchor>a93e3cb4b84fb3a0c2c38c9d3dfbfcfcf</anchor>
+      <arglist>(const iimg::IBitmap &amp;inputBitmap, iimg::IBitmap &amp;outputBitmap, int filterWidth, int filterHeight, BorderMode borderMode)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -29919,6 +29955,7 @@
     <name>Include/iipr</name>
     <path>C:/Temp/Acfsln/Include/iipr/</path>
     <filename>dir_1af4026a7aa3fbc90e13dff6479b1905.html</filename>
+    <file>CAdaptiveImageBinarizeProcessorComp.h</file>
     <file>CArcProjectionProcessorComp.h</file>
     <file>CAutoImageNormalizeProcessorComp.h</file>
     <file>CBitmapJoinerSupplierComp.h</file>
