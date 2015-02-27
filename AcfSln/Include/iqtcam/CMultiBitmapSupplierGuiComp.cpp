@@ -85,7 +85,7 @@ void CMultiBitmapSupplierGuiComp::on_SaveImageButton_clicked()
 			QDateTime currentDateTime = QDateTime::currentDateTime();
 			QString dateText = currentDateTime.toString("yyyyMMdd");
 			QString timeText = currentDateTime.toString("hhmmss");
-			QString channelndexText = QString::number(IconsView->currentRow());
+			QString channelndexText = QString::number(BitmapPreview->currentRow());
 
 			istd::CIndex2d bitmapSize = m_bitmap.GetImageSize();
 			QString resolutionText = QString("(%1x%2)").arg(bitmapSize.GetX()).arg(bitmapSize.GetY());
@@ -118,7 +118,7 @@ void CMultiBitmapSupplierGuiComp::on_SaveParamsButton_clicked()
 }
 
 
-void CMultiBitmapSupplierGuiComp::on_IconsView_currentItemChanged(QListWidgetItem* current, QListWidgetItem* /*previous*/)
+void CMultiBitmapSupplierGuiComp::on_BitmapPreview_currentItemChanged(QListWidgetItem* current, QListWidgetItem* /*previous*/)
 {
 	QVariant bitmapIndex = current->data(Qt::UserRole);
 	if (!bitmapIndex.isNull()){
@@ -147,7 +147,11 @@ void CMultiBitmapSupplierGuiComp::OnGuiCreated()
 	BaseClass::OnGuiCreated();
 
 	SaveImageButton->setVisible(m_bitmapLoaderCompPtr.IsValid());
-	IconsView->setIconSize(QSize(*m_iconSizeAttrPtr, *m_iconSizeAttrPtr));
+	BitmapPreview->setIconSize(QSize(*m_iconSizeAttrPtr, *m_iconSizeAttrPtr));
+
+	if (*m_iconSizeAttrPtr == 0){
+		BitmapPreview->setVisible(false);
+	}
 }
 
 
@@ -203,8 +207,8 @@ void CMultiBitmapSupplierGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& 
 
 	Q_ASSERT(IsGuiCreated());
 
-	IconsView->reset();
-	IconsView->clear();
+	BitmapPreview->reset();
+	BitmapPreview->clear();
 	m_icons.clear();
 
 	iimg::IMultiBitmapProvider* providerPtr = dynamic_cast<iimg::IMultiBitmapProvider*>(GetObjectPtr());
@@ -235,15 +239,15 @@ void CMultiBitmapSupplierGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& 
 				iconText = selectionConstraintsPtr->GetOptionName(bitmapIndex);
 			}
 
-			QListWidgetItem* newItem = new QListWidgetItem(m_icons.back(), iconText, IconsView, 0);
+			QListWidgetItem* newItem = new QListWidgetItem(m_icons.back(), iconText, BitmapPreview, 0);
 			newItem->setData(Qt::UserRole, bitmapIndex); // store a number to be used for bitmap selection
-			IconsView->addItem(newItem);
+			BitmapPreview->addItem(newItem);
 		}
 	}
 
 	istd::CIndex2d bitmapSize = m_bitmap.GetImageSize();
 	if (bitmapsCount > 0){
-		if (IconsView->selectedItems().empty()){
+		if (BitmapPreview->selectedItems().empty()){
 			SizeLabel->setText("");
 		}
 		else{
@@ -291,8 +295,6 @@ void CMultiBitmapSupplierGuiComp::SelectBitmap(int bitmapIndex)
 	}
 }
 
-
-// reimplemented (imod::IObserver)
 
 } // namespace iqtcam
 
