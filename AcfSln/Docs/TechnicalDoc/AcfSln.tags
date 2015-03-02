@@ -24319,13 +24319,6 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>on_SaveImageButton_clicked</name>
-      <anchorfile>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>a8ef006872bacc874d1afbbf4001548d5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
       <name>on_LoadParamsButton_clicked</name>
       <anchorfile>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</anchorfile>
       <anchor>ab7a29cc8eab3c81c8f31f3898df57625</anchor>
@@ -24340,10 +24333,24 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>on_IconsView_currentItemChanged</name>
+      <name>on_BitmapPreview_currentItemChanged</name>
       <anchorfile>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>a7ef8f07730b8dfddef44f0e7d19dbf25</anchor>
+      <anchor>a2061fdc90baf451b3ea8e12058ffa200</anchor>
       <arglist>(QListWidgetItem *current, QListWidgetItem *previous)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ExportSelectedImageButton_clicked</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a8220eb88da3add85e876517a965f6ee5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ExportBitmapDocumentButton_clicked</name>
+      <anchorfile>classiqtcam_1_1_c_multi_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>afb0dd2cf05281b36c4a6fcac702a5934</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>

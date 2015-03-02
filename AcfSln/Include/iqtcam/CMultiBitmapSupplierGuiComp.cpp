@@ -25,26 +25,29 @@
 
 // Qt includes
 #include <QtCore/QDateTime>
-// Qt includes
 #include<QtCore/QtGlobal>
 #if QT_VERSION >= 0x050000
 #include <QtWidgets/QMessageBox>
+#include <QtWidgets/QFileDialog>
 #else
 #include <QtGui/QMessageBox>
+#include <QtGui/QFileDialog>
 #endif
 
 // ACF includes
 #include "iview/CImageShape.h"
 
+
 namespace iqtcam
 {
 
 
-// protected slots
+// public methods
 
 CMultiBitmapSupplierGuiComp::CMultiBitmapSupplierGuiComp()
 {
 	m_timer.setInterval(40);
+
 	QObject::connect(&m_timer, SIGNAL(timeout()), this, SLOT(OnTimerReady()));
 }
 
@@ -60,6 +63,19 @@ void CMultiBitmapSupplierGuiComp::on_SnapImageButton_clicked()
 		if (supplierPtr->GetWorkStatus() >= iinsp::ISupplier::WS_ERROR){
 			SizeLabel->setText("Snap Error");
 		}
+
+		iimg::IMultiBitmapProvider* providerPtr = dynamic_cast<iimg::IMultiBitmapProvider*>(GetObjectPtr());
+		if (providerPtr != NULL){
+			m_bitmapDocument.CopyFrom(*providerPtr);
+		}
+
+		if (ContiniousSaveSelectedImageButton->isChecked()){
+			ExportSelectedBitmap();
+		}
+
+		if (ContiniousSaveBitmapDocumentButton->isChecked()){
+			ExportBitmapDocument();
+		}
 	}
 }
 
@@ -71,37 +87,6 @@ void CMultiBitmapSupplierGuiComp::on_LiveImageButton_toggled(bool checked)
 	}
 	else{
 		m_timer.stop();
-	}
-}
-
-
-void CMultiBitmapSupplierGuiComp::on_SaveImageButton_clicked()
-{
-	if (m_bitmapLoaderCompPtr.IsValid()){
-		QString newFilePath;
-
-		if (m_filePathFormatAttrPtr.IsValid()){
-			// prepare a new filename
-			QDateTime currentDateTime = QDateTime::currentDateTime();
-			QString dateText = currentDateTime.toString("yyyyMMdd");
-			QString timeText = currentDateTime.toString("hhmmss");
-			QString channelndexText = QString::number(BitmapPreview->currentRow());
-
-			istd::CIndex2d bitmapSize = m_bitmap.GetImageSize();
-			QString resolutionText = QString("(%1x%2)").arg(bitmapSize.GetX()).arg(bitmapSize.GetY());
-
-			newFilePath = (*m_filePathFormatAttrPtr).arg(dateText).arg(timeText).arg(channelndexText).arg(resolutionText);
-		}
-
-		if (m_bitmapLoaderCompPtr->SaveToFile(m_bitmap, newFilePath) == ifile::IFilePersistence::OS_FAILED){
-			QMessageBox::warning(
-						GetQtWidget(),
-						QObject::tr("Error"),
-						QObject::tr("Cannot save image"));
-		}
-		else{
-			SaveImageButton->setEnabled(false);
-		}
 	}
 }
 
@@ -123,7 +108,6 @@ void CMultiBitmapSupplierGuiComp::on_BitmapPreview_currentItemChanged(QListWidge
 	QVariant bitmapIndex = current->data(Qt::UserRole);
 	if (!bitmapIndex.isNull()){
 		SelectBitmap(bitmapIndex.toInt());
-		SaveImageButton->setEnabled(true);
 
 		// display image size
 		istd::CIndex2d bitmapSize = m_bitmap.GetImageSize();
@@ -138,6 +122,32 @@ void CMultiBitmapSupplierGuiComp::OnTimerReady()
 }
 
 
+void CMultiBitmapSupplierGuiComp::on_ExportSelectedImageButton_clicked()
+{
+	Q_ASSERT(m_singleBitmapPersistenceCompPtr.IsValid());
+
+	QString fileFilter = CreateFileFilterForPersistence(*m_singleBitmapPersistenceCompPtr.GetPtr());
+
+	QString filePath = QFileDialog::getSaveFileName(GetWidget(), tr("Save selected image..."), "", fileFilter);
+	if (!filePath.isEmpty()){
+		ExportSelectedBitmap(filePath);
+	}
+}
+
+
+void CMultiBitmapSupplierGuiComp::on_ExportBitmapDocumentButton_clicked()
+{
+	Q_ASSERT(m_multiBitmapPersistenceCompPtr.IsValid());
+
+	QString fileFilter = CreateFileFilterForPersistence(*m_multiBitmapPersistenceCompPtr.GetPtr());
+
+	QString filePath = QFileDialog::getSaveFileName(GetWidget(), tr("Save selected image..."), "", fileFilter);
+	if (!filePath.isEmpty()){
+		ExportBitmapDocument(filePath);
+	}
+}
+
+
 // protected methods
 
 // reimplemented (iqtgui::CGuiComponentBase)
@@ -146,7 +156,9 @@ void CMultiBitmapSupplierGuiComp::OnGuiCreated()
 {
 	BaseClass::OnGuiCreated();
 
-	SaveImageButton->setVisible(m_bitmapLoaderCompPtr.IsValid());
+	ContiniousSaveSelectedImageButton->setVisible(m_singleBitmapPersistenceCompPtr.IsValid());
+	ExportSelectedImageButton->setVisible(m_singleBitmapPersistenceCompPtr.IsValid());
+
 	BitmapPreview->setIconSize(QSize(*m_iconSizeAttrPtr, *m_iconSizeAttrPtr));
 
 	if (*m_iconSizeAttrPtr == 0){
@@ -220,6 +232,8 @@ void CMultiBitmapSupplierGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& 
 
 	int bitmapsCount = providerPtr->GetBitmapsCount();
 
+// 	BitmapPreview->setGridSize(QSize(1, bitmapsCount));
+
 	// create bitmap thumbnails
 	for (int bitmapIndex = 0; bitmapIndex < bitmapsCount; bitmapIndex++){
 		const iimg::CBitmap* bitmapPtr = dynamic_cast<const iimg::CBitmap*> (providerPtr->GetBitmap(bitmapIndex));
@@ -258,9 +272,9 @@ void CMultiBitmapSupplierGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& 
 		SizeLabel->setText(tr("No image"));
 	}
 
-	SaveImageButton->setEnabled(!bitmapSize.IsSizeEmpty());
-
 	UpdateAllViews();
+
+	UpdateCommands();
 }
 
 
@@ -293,6 +307,85 @@ void CMultiBitmapSupplierGuiComp::SelectBitmap(int bitmapIndex)
 			viewPtr->SetFitArea(imageBox);
 		}
 	}
+
+	UpdateCommands();
+}
+
+
+void CMultiBitmapSupplierGuiComp::ExportSelectedBitmap(const QString& filePath)
+{
+	if (m_singleBitmapPersistenceCompPtr.IsValid()){
+		QString newFilePath = filePath;
+
+		if (newFilePath.isEmpty()){
+			// Prepare a new filename
+			QDateTime currentDateTime = QDateTime::currentDateTime();
+			QString dateText = currentDateTime.toString("yyyyMMdd");
+			QString timeText = currentDateTime.toString("hhmmsszzz");
+
+			int imageIndex = BitmapPreview->currentRow();
+			QString channelndexText;
+			if (imageIndex >= 0){
+				channelndexText = QString::number(BitmapPreview->currentRow());
+			}
+
+			istd::CIndex2d bitmapSize = m_bitmap.GetImageSize();
+			QString resolutionText = QString("(%1x%2)").arg(bitmapSize.GetX()).arg(bitmapSize.GetY());
+
+			newFilePath = (*m_filePathFormatAttrPtr).arg(dateText).arg(timeText).arg(channelndexText).arg(resolutionText);
+		}
+
+		m_singleBitmapPersistenceCompPtr->SaveToFile(m_bitmap, newFilePath);
+	}
+}
+
+
+void CMultiBitmapSupplierGuiComp::ExportBitmapDocument(const QString& filePath)
+{
+	if (m_multiBitmapPersistenceCompPtr.IsValid()){
+		QString newFilePath = filePath;
+
+		if (newFilePath.isEmpty()){
+			// Prepare a new filename
+			QDateTime currentDateTime = QDateTime::currentDateTime();
+			QString dateText = currentDateTime.toString("dd.MM.yyyy");
+			QString timeText = currentDateTime.toString("hh_mm_ss_zzz");
+
+			newFilePath = dateText + timeText;
+		}
+
+		m_multiBitmapPersistenceCompPtr->SaveToFile(m_bitmapDocument, newFilePath);
+	}
+}
+
+
+void CMultiBitmapSupplierGuiComp::UpdateCommands()
+{
+	ContiniousSaveSelectedImageButton->setEnabled(!m_bitmap.IsEmpty());
+	ExportSelectedImageButton->setEnabled(!m_bitmap.IsEmpty());
+}
+
+
+// private static methods
+
+QString CMultiBitmapSupplierGuiComp::CreateFileFilterForPersistence(const ifile::IFilePersistence& persistence)
+{
+	QStringList extensions;
+	persistence.GetFileExtensions(extensions);
+
+	QString fileFilter = "Image files(";
+	for (int i = 0; i < extensions.count(); ++i){
+		fileFilter += "*." + extensions[i];
+
+		if (i != extensions.count() - 1){
+			fileFilter += ";";
+		}
+
+	}
+
+	fileFilter += ")";
+
+	return fileFilter;
 }
 
 

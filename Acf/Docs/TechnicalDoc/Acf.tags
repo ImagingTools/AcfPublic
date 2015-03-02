@@ -15905,7 +15905,7 @@
       <type>@</type>
       <name>UnknownVersion</name>
       <anchorfile>classiser_1_1_i_version_info.html</anchorfile>
-      <anchor>a60cc015d568ce2139b8d17245f6ebef9af9fa112e0f25b4bc6c7b7b7bc3ee742f</anchor>
+      <anchor>a41704f75da7d978f4be5064bd72ab3cdaf9fa112e0f25b4bc6c7b7b7bc3ee742f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -32912,13 +32912,6 @@
     <base>TMultiPageDocumentWrap&lt; idoc::IMultiPageDocument &gt;</base>
     <base virtualness="virtual">iimg::IMultiBitmapProvider</base>
     <base virtualness="virtual">iimg::IMultiPageBitmapController</base>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MIT_CAMERA_MODEL</name>
-      <anchorfile>classiimg_1_1_c_multi_page_bitmap_base.html</anchorfile>
-      <anchor>ab2e4a1b0e4ff178d486ce56c4fee423dab53825723ccfef7af160312334595f4d</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="typedef">
       <type>idoc::CMultiPageDocumentBase</type>
       <name>BaseClass</name>
@@ -32995,6 +32988,13 @@
       <anchorfile>classiimg_1_1_c_multi_page_bitmap_base.html</anchorfile>
       <anchor>a01f2f6ac1b51f9b031aeff3f455b322c</anchor>
       <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiimg_1_1_c_multi_page_bitmap_base.html</anchorfile>
+      <anchor>ab8096c46d30eee7fdc5052ab06085e5e</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -33087,13 +33087,6 @@
       <anchor>a54c26fdb7854b18c0bf276c4c31f0f4a</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CopyFrom</name>
-      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
-      <anchor>a36e186bc048adedac51c48788a6f0bce</anchor>
-      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual IBitmap *</type>
       <name>CreateBitmap</name>
@@ -33161,6 +33154,13 @@
       <anchorfile>classiimg_1_1_c_multi_page_bitmap_sequence_comp.html</anchorfile>
       <anchor>ac39abb0aaf74bbbcd5816a0103c44105</anchor>
       <arglist>(const idoc::IDocumentMetaInfo *pageMetaInfoPtr=NULL, const iprm::IParamsSet *pageParameterPtr=NULL, int position=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a36e186bc048adedac51c48788a6f0bce</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -35760,7 +35760,7 @@
       <type>@</type>
       <name>PRECISION</name>
       <anchorfile>classimath_1_1_c_double_manip.html</anchorfile>
-      <anchor>abb18076f5fee9fc9fb04fd4c069d2b9fa9c44114731a4fbde7f474759bcb26fa4</anchor>
+      <anchor>af91456f078ffaa8d334fc7b1f35ca858a9c44114731a4fbde7f474759bcb26fa4</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -37156,7 +37156,7 @@
       <type>@</type>
       <name>MAX_ELEMENTS_COUNT</name>
       <anchorfile>classimath_1_1_t_fast_vector.html</anchorfile>
-      <anchor>a887cb8a3482c08199f7142c94926466ea9d7088773a8584e0410aee31b776e2ba</anchor>
+      <anchor>a2f65d3cc933b8aa7337ab7d9c7f1ce96a9d7088773a8584e0410aee31b776e2ba</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -40809,7 +40809,7 @@
       <type>@</type>
       <name>NO_SELECTION</name>
       <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
-      <anchor>a991db11ac0dc689ba0b1d31a7f806f8ba7c687b23162301178cafe954f53c7702</anchor>
+      <anchor>a9ea81a6e88b19a936ed2e63265117c27a7c687b23162301178cafe954f53c7702</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -56480,7 +56480,7 @@
       <type>@</type>
       <name>MAX_ELEMENTS_COUNT</name>
       <anchorfile>classistd_1_1_c_fast_binary_index.html</anchorfile>
-      <anchor>a02e0e12d1e6d33cd315f7a1dca5481a2abbd51a4d709be2d7e1ab0cc554dd3944</anchor>
+      <anchor>a4d4814acfbe44c2399618e1aafc532b7abbd51a4d709be2d7e1ab0cc554dd3944</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -57782,7 +57782,7 @@
       <type>@</type>
       <name>DIMENSIONS</name>
       <anchorfile>classistd_1_1_t_index.html</anchorfile>
-      <anchor>afc1b837ba113166e458223c75ae33bc8a45842b3fa4ac21fb16cb7a478a51ad6a</anchor>
+      <anchor>ae5a570876a164730b812843080a1b375a45842b3fa4ac21fb16cb7a478a51ad6a</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -59285,7 +59285,7 @@
       <type>@</type>
       <name>InvalidIndex</name>
       <anchorfile>classistd_1_1_t_pointer_vector.html</anchorfile>
-      <anchor>ad91619ce68c064307824cfc03e86506ea5e9e43a0fe51bd123229d4b73c161110</anchor>
+      <anchor>a01df72dd3f97b868188f2c6bb493e66aa5e9e43a0fe51bd123229d4b73c161110</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -60881,14 +60881,14 @@
       <type>@</type>
       <name>CONTROL_POINTS_COUNT</name>
       <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
-      <anchor>a831886a6fcce6333778844a28eeec141a7fb66a1f5e3ce4190017f22939c36afb</anchor>
+      <anchor>a2ea8a0c3aee041ada14f7dd3ad0ca8eba7fb66a1f5e3ce4190017f22939c36afb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>ACTIVE_POINTS_COUNT</name>
       <anchorfile>classiview_1_1_c_affine_transformation2d_shape.html</anchorfile>
-      <anchor>a831886a6fcce6333778844a28eeec141a3776b7e973707d0c8d2a86abccc207e3</anchor>
+      <anchor>a2ea8a0c3aee041ada14f7dd3ad0ca8eba3776b7e973707d0c8d2a86abccc207e3</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
@@ -62972,28 +62972,28 @@
       <type>@</type>
       <name>NORMAL_SET_SIZE</name>
       <anchorfile>classiview_1_1_c_color_schema.html</anchorfile>
-      <anchor>a2f928f35cd24d71381c922ed894b2213a82b6f7e4fa5cdcfe8a3073430eb883ef</anchor>
+      <anchor>aff301eff627298d9deb0a4432b0f9523a82b6f7e4fa5cdcfe8a3073430eb883ef</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>TICKER_SIZE</name>
       <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
-      <anchor>ae5716ecce487b63ee2549c7222d9d1dba7b9aaadf57b04e96b6d901d25229edec</anchor>
+      <anchor>abad75a2cde30f933a0eaf07d907b6131a7b9aaadf57b04e96b6d901d25229edec</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>SMALL_TICKER_SIZE</name>
       <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
-      <anchor>ae5716ecce487b63ee2549c7222d9d1dbab62460c925c9513455eea5005dc64220</anchor>
+      <anchor>abad75a2cde30f933a0eaf07d907b6131ab62460c925c9513455eea5005dc64220</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>LOGICAL_LINE_WIDTH</name>
       <anchorfile>classiview_1_1_c_color_schema_base.html</anchorfile>
-      <anchor>ae5716ecce487b63ee2549c7222d9d1dba664c9e6063e60c758b4ae1ee3ee48a9c</anchor>
+      <anchor>abad75a2cde30f933a0eaf07d907b6131a664c9e6063e60c758b4ae1ee3ee48a9c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
