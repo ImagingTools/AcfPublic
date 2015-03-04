@@ -24,8 +24,8 @@
 #define i2d_CPolypoint_included
 
 
-// Qt includes
-#include <QtCore/QVector>
+// STL includes
+#include <vector>
 
 // ACF includes
 #include "iser/CArchiveTag.h"
@@ -46,7 +46,7 @@ class CPolypoint: public CObject2dBase
 public:
 	CPolypoint();
 
-	typedef QVector<i2d::CVector2d> Points;
+	typedef std::vector<i2d::CVector2d> Points;
 
 	const i2d::CVector2d& GetPoint(int index) const;
 	int GetPointsCount() const;

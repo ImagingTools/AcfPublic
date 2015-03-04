@@ -10716,13 +10716,13 @@
   <compound kind="class">
     <name>iedge::CEdgeLineContainer</name>
     <filename>classiedge_1_1_c_edge_line_container.html</filename>
-    <base>TSerializableContainer&lt; CEdgeLine &gt;</base>
+    <base>TSerializableContainer&lt; CEdgeLine, std::vector&lt; CEdgeLine &gt; &gt;</base>
     <base>i2d::CObject2dBase</base>
     <member kind="typedef">
-      <type>ibase::TSerializableContainer&lt; CEdgeLine &gt;</type>
+      <type>ibase::TSerializableContainer&lt; CEdgeLine, std::vector&lt; CEdgeLine &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiedge_1_1_c_edge_line_container.html</anchorfile>
-      <anchor>a8c3a57e718166975b61b3129319c7ae2</anchor>
+      <anchor>a182dd4660de537f49dc7f9d30deabc7b</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -11030,6 +11030,13 @@
       <anchor>a4432385e9d790cdb5d37b23b8a9ec1c3</anchor>
       <arglist>(const CEdgeLine &amp;edgeLine, double positionTolerance, double weightTolerance, int firstIndex, int lastIndex, NodesToRemove &amp;nodesToRemove, int &amp;firstInsideIndex, int &amp;lastInsideIndex) const </arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
+      <anchor>a049307336f889e5939ff0af9cddca4a5</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>NodesToRemove</type>
       <name>m_nodesToRemove</name>
@@ -11293,6 +11300,13 @@
       <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
       <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiedge_1_1_c_fast_edges_extractor_comp.html</anchorfile>
+      <anchor>a120e0c6a0865079f25a94882f23042d5</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -15224,6 +15238,13 @@
       <anchor>aa19aee38ca94408ad60192b1c0ed0579</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_arc_projection_processor_comp.html</anchorfile>
+      <anchor>a72f7b1bb60c94a744e513c699c53a1c0</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CAutoImageNormalizeProcessorComp</name>
@@ -16096,17 +16117,17 @@
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>QVector&lt; Point &gt;</type>
+      <type>std::vector&lt; Point &gt;</type>
       <name>Points</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>abf01d2e12804cca814361cc85e3ec29e</anchor>
+      <anchor>a24559d656470188cd7b8544a50146d2f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>QVector&lt; Ray &gt;</type>
+      <type>std::vector&lt; Ray &gt;</type>
       <name>Rays</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>a5430fcfe2feb8d0410eb25233711776e</anchor>
+      <anchor>ae4913fda706279f64eb20b0889fcb3bb</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -17009,10 +17030,10 @@
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>QVector&lt; CaliperLine &gt;</type>
+      <type>std::vector&lt; CaliperLine &gt;</type>
       <name>CaliperLines</name>
       <anchorfile>classiipr_1_1_c_edge_distance_processor_comp.html</anchorfile>
-      <anchor>a01bd153b7c1a590a9968734867b06e8d</anchor>
+      <anchor>a76725aa8c1184ea8d8c4fa06c905f241</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -21115,21 +21136,21 @@
       <type>virtual int</type>
       <name>GetChannelsCount</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>ad808de1c3091e9126eb5cf97b0b5242d</anchor>
+      <anchor>a684e561633393c73a926e54c60458c17</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetSample</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>aa9283e96016674a47186ae9f48b5fc86</anchor>
+      <anchor>a3f681c847fb752239d08237e9d8915ed</anchor>
       <arglist>(int index, int channel=0) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetSample</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>a418b1ef75d3a13cbee6a76cfd79c4c46</anchor>
+      <anchor>a7fdf540be2ed54328e754be5edcb0524</anchor>
       <arglist>(int index, int channel, double value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">

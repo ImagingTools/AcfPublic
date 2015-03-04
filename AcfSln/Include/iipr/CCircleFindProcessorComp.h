@@ -94,7 +94,7 @@ protected:
 		i2d::CVector2d position;
 	};
 
-	typedef QVector<Point> Points;
+	typedef std::vector<Point> Points;
 
 	struct Ray
 	{
@@ -109,7 +109,7 @@ protected:
 		int usedIndex;
 	};
 
-	typedef QVector<Ray> Rays;
+	typedef std::vector<Ray> Rays;
 
 	bool AddAoiToRays(
 				const istd::IChangeable& aoiObject,

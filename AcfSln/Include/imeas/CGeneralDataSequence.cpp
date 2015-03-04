@@ -112,7 +112,7 @@ const IDataSequenceInfo* CGeneralDataSequence::GetSequenceInfo() const
 
 bool CGeneralDataSequence::IsEmpty() const
 {
-	return m_samples.isEmpty();
+	return m_samples.empty();
 }
 
 
@@ -130,32 +130,6 @@ int CGeneralDataSequence::GetSamplesCount() const
 	else{
 		return 0;
 	}
-}
-
-
-int CGeneralDataSequence::GetChannelsCount() const
-{
-	return m_channelsCount;
-}
-
-
-double CGeneralDataSequence::GetSample(int index, int channel) const
-{
-	Q_ASSERT(index >= 0);
-	Q_ASSERT(index * m_channelsCount + channel < int(m_samples.size()));
-
-	return m_samples[index * m_channelsCount + channel];
-}
-
-
-void CGeneralDataSequence::SetSample(int index, int channel, double value)
-{
-	Q_ASSERT(index >= 0);
-	Q_ASSERT(index * m_channelsCount + channel < int(m_samples.size()));
-	Q_ASSERT(channel >= 0);
-	Q_ASSERT(channel < m_channelsCount);
-
-	m_samples[index * m_channelsCount + channel] = value;
 }
 
 
@@ -235,9 +209,8 @@ bool CGeneralDataSequence::GetValueAt(const ArgumentType& argument, ResultType& 
 
 		return true;
 	}
-	else{
-		return false;
-	}
+
+	return false;
 }
 
 

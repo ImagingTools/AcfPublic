@@ -86,6 +86,13 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CArcPointsCalculator.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_arc_points_calculator_8h</filename>
+    <class kind="class">i2d::CArcPointsCalculator</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CCalibration2dProxyComp.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_calibration2d_proxy_comp_8h</filename>
@@ -6876,6 +6883,7 @@
     <class kind="class">i2d::CAnnulusSegmentComp</class>
     <class kind="class">i2d::CArc</class>
     <class kind="class">i2d::CArcComp</class>
+    <class kind="class">i2d::CArcPointsCalculator</class>
     <class kind="class">i2d::CCalibration2dProxyComp</class>
     <class kind="class">i2d::CCircle</class>
     <class kind="class">i2d::CCircleComp</class>
@@ -8595,6 +8603,24 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>i2d::CArcPointsCalculator</name>
+    <filename>classi2d_1_1_c_arc_points_calculator.html</filename>
+    <member kind="typedef">
+      <type>std::vector&lt; int &gt;</type>
+      <name>Coordinates</name>
+      <anchorfile>classi2d_1_1_c_arc_points_calculator.html</anchorfile>
+      <anchor>a803f6d6251b4e1fc0ea1bf9d203f2c53</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>GetArcPoints</name>
+      <anchorfile>classi2d_1_1_c_arc_points_calculator.html</anchorfile>
+      <anchor>ab7ece3ac1404ebbc43f7d5d7ef2ca36f</anchor>
+      <arglist>(int centerX, int centerY, int radius, int startAngle, int endAngle, Coordinates &amp;xPoints, Coordinates &amp;yPoints)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>i2d::CCalibration2dProxyComp</name>
     <filename>classi2d_1_1_c_calibration2d_proxy_comp.html</filename>
     <base>icomp::CComponentBase</base>
@@ -9573,6 +9599,34 @@
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
       <anchor>a886ead014d7c87da035397a7b8ef69bf</anchor>
       <arglist>(const i2d::CVector2d &amp;newEndPoint)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>PushBeginPointQuiet</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>ac30f25599829657dc7a3e4b1a5033248</anchor>
+      <arglist>(const i2d::CVector2d &amp;newBeginPoint)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>PushEndPointQuiet</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>a2fbd8d42f3abf2a88a49084133406a9a</anchor>
+      <arglist>(const i2d::CVector2d &amp;newEndPoint)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetPoint1Quiet</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>ae182b09902f2370fc95925f942b1d852</anchor>
+      <arglist>(const CVector2d &amp;point)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetPoint2Quiet</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>acf341d67807101021caf51cb4b26167c</anchor>
+      <arglist>(const CVector2d &amp;point)</arglist>
     </member>
     <member kind="function">
       <type>double</type>
@@ -10853,10 +10907,10 @@
     <filename>classi2d_1_1_c_polypoint.html</filename>
     <base>i2d::CObject2dBase</base>
     <member kind="typedef">
-      <type>QVector&lt; i2d::CVector2d &gt;</type>
+      <type>std::vector&lt; i2d::CVector2d &gt;</type>
       <name>Points</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a210ed83aece191588222eb88568b21d5</anchor>
+      <anchor>a3d2277552f8523ce21c9eb43367004f8</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -17738,6 +17792,7 @@
     <name>ibase::TContainer</name>
     <filename>classibase_1_1_t_container.html</filename>
     <templarg>ItemClass</templarg>
+    <templarg>ContainerType</templarg>
     <base virtualness="virtual">istd::IContainerInfo</base>
     <member kind="enumeration">
       <type></type>
@@ -17750,133 +17805,168 @@
       <type>@</type>
       <name>CF_ELEMENT_ADDED</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a2e9013618def6a035172448c054db9eaa39cd440515a39ecacfb95abd90ec8ae3</anchor>
+      <anchor>a2e9013618def6a035172448c054db9eaa0c50b570cba07d2b64dda538e7d190d1</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>CF_ELEMENT_REMOVED</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a2e9013618def6a035172448c054db9eaa861191854ed2ad9d176c34ed83ffb080</anchor>
+      <anchor>a2e9013618def6a035172448c054db9eaaebbffcc564fe721bf49b063ffd888fe4</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>CF_RESET</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a2e9013618def6a035172448c054db9eaab9cad8af653d9a35ba913c1044dfbac3</anchor>
+      <anchor>a2e9013618def6a035172448c054db9eaa7a36fdff27f38e7d9259895380f40a6b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ContainerType</type>
+      <name>Container</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>a7f42134e6d273cf6b7b144d151c22253</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type>const ItemClass &amp;</type>
       <name>GetAt</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a7790c9cbb969e063f68301eec854baae</anchor>
+      <anchor>adc1e9a40acc1c8f22decdace3f7ff126</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function">
       <type>ItemClass &amp;</type>
       <name>GetAt</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>ac95925eda2764ef0a0bc5ef523871642</anchor>
+      <anchor>aee0119602f20c1776f838edc26e5fdaa</anchor>
       <arglist>(int index)</arglist>
     </member>
     <member kind="function">
       <type>ItemClass &amp;</type>
       <name>PushBack</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a403ba514ed797a203804d88f62d9adb0</anchor>
+      <anchor>a3822e302cf81ef61ccd9999de5571ac0</anchor>
       <arglist>(const ItemClass &amp;item)</arglist>
     </member>
     <member kind="function">
       <type>ItemClass &amp;</type>
       <name>PushFront</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a7332abf2a1625e0755dc40fa42866abd</anchor>
+      <anchor>a4fff946c4de05ef0220ba3b5fe1e6f1f</anchor>
       <arglist>(const ItemClass &amp;item)</arglist>
     </member>
     <member kind="function">
       <type>ItemClass &amp;</type>
       <name>InsertAt</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>aa4b1142236969d36b28d71773b9869e4</anchor>
+      <anchor>a662fda7c77be01f02e9e0ce1b56535b4</anchor>
       <arglist>(const ItemClass &amp;item, int index)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>PopBack</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a09ac63c55d7524b9bf6e683f6ada16cd</anchor>
+      <anchor>a00208a8c04d9aa7abf100c6617095c37</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>PopFront</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a9e8fc08d4962c192fdd98cde9068c4c2</anchor>
+      <anchor>a145f41b6f9f3380a8dae5db750e2f328</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>RemoveAt</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>aca11536415c0702446e81344ee54c797</anchor>
+      <anchor>a1ce07aec5f9899cdec63119a5e3e7c40</anchor>
       <arglist>(int index)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>Reset</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a0c41d14c6ccd399b328e11b79fb1aec3</anchor>
+      <anchor>ab378632e45c0da29a3a0f8e4ac8264a9</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>TContainer &amp;</type>
       <name>operator=</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>ae0647082bc6789b802aa4e966201f56a</anchor>
+      <anchor>a32039e78ce584515bebe4478ff0a96ee</anchor>
       <arglist>(const TContainer &amp;container)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetItemsCount</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a91764cb2cbbdf3513c7ffb3940e4c71c</anchor>
+      <anchor>ae157537f44b37545cd845047491326ab</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsEmpty</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>ab2fb65b570efb9bcefc394c5854dfe5c</anchor>
+      <anchor>ae88cbc56abc4235d83d0aa3bc6945790</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsIndexValid</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a7557997a798717cbe52b7f4e51dc21b6</anchor>
+      <anchor>a12332b984c99494da96a9721f45fb86f</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>ae2f7a06383d81e89017e46915ae40b0a</anchor>
+      <anchor>a25a42a20f69a3a2e785ce1664b6eb699</anchor>
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>Reserve</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>a33ec3dfb9373b87bd937bee3a2621a9b</anchor>
+      <arglist>(ContainerType &amp;, int)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>Resize</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>a2a942bd7e35d0cd97a9033f26150e1b7</anchor>
+      <arglist>(ContainerType &amp;, int)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>Reserve</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>a0d34f9fbc5dd5db25156a47daa159cad</anchor>
+      <arglist>(std::vector&lt; ItemClass &gt; &amp;container, int count)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>Reserve</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>a371149b6a9074d5f70173255b4fc482e</anchor>
+      <arglist>(QVector&lt; ItemClass &gt; &amp;container, int count)</arglist>
+    </member>
     <member kind="typedef" protection="protected">
-      <type>QList&lt; ItemClass &gt;</type>
+      <type>ContainerType</type>
       <name>Items</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>ac7750c3f39765264f9ce3a0bfd546ddd</anchor>
+      <anchor>acf622391830abe7e26207f6ecdc2b6ac</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>Items</type>
       <name>m_items</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a5f84d758c861c6bc6af8435cca6655a3</anchor>
+      <anchor>a30d0adb8fe0158651a851ca31d2649c5</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -17900,10 +17990,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TContainer&lt; QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &gt;</type>
+      <type>TContainer&lt; QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt;, TContainer&lt; QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &gt;::Container &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classibase_1_1_t_serializable_container.html</anchorfile>
-      <anchor>afb9cc42d2d54b61a04026019f6969e9b</anchor>
+      <anchor>a72e5e01f995a211b827c4a6a2a2c134b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -17911,6 +18001,13 @@
       <name>ChangeFlags</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
       <anchor>a2e9013618def6a035172448c054db9ea</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TContainer&lt; QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &gt;::Container</type>
+      <name>Container</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>a7f42134e6d273cf6b7b144d151c22253</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -17980,98 +18077,98 @@
       <type>const QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &amp;</type>
       <name>GetAt</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a7790c9cbb969e063f68301eec854baae</anchor>
+      <anchor>adc1e9a40acc1c8f22decdace3f7ff126</anchor>
       <arglist>(int index) const</arglist>
     </member>
     <member kind="function">
       <type>QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &amp;</type>
       <name>GetAt</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>ac95925eda2764ef0a0bc5ef523871642</anchor>
+      <anchor>aee0119602f20c1776f838edc26e5fdaa</anchor>
       <arglist>(int index)</arglist>
     </member>
     <member kind="function">
       <type>QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &amp;</type>
       <name>PushBack</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a403ba514ed797a203804d88f62d9adb0</anchor>
+      <anchor>a3822e302cf81ef61ccd9999de5571ac0</anchor>
       <arglist>(const QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &amp;item)</arglist>
     </member>
     <member kind="function">
       <type>QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &amp;</type>
       <name>PushFront</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a7332abf2a1625e0755dc40fa42866abd</anchor>
+      <anchor>a4fff946c4de05ef0220ba3b5fe1e6f1f</anchor>
       <arglist>(const QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &amp;item)</arglist>
     </member>
     <member kind="function">
       <type>QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &amp;</type>
       <name>InsertAt</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>aa4b1142236969d36b28d71773b9869e4</anchor>
+      <anchor>a662fda7c77be01f02e9e0ce1b56535b4</anchor>
       <arglist>(const QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &amp;item, int index)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>PopBack</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a09ac63c55d7524b9bf6e683f6ada16cd</anchor>
+      <anchor>a00208a8c04d9aa7abf100c6617095c37</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>PopFront</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a9e8fc08d4962c192fdd98cde9068c4c2</anchor>
+      <anchor>a145f41b6f9f3380a8dae5db750e2f328</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>RemoveAt</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>aca11536415c0702446e81344ee54c797</anchor>
+      <anchor>a1ce07aec5f9899cdec63119a5e3e7c40</anchor>
       <arglist>(int index)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>Reset</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a0c41d14c6ccd399b328e11b79fb1aec3</anchor>
+      <anchor>ab378632e45c0da29a3a0f8e4ac8264a9</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>TContainer &amp;</type>
       <name>operator=</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>ae0647082bc6789b802aa4e966201f56a</anchor>
+      <anchor>a32039e78ce584515bebe4478ff0a96ee</anchor>
       <arglist>(const TContainer &amp;container)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetItemsCount</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a91764cb2cbbdf3513c7ffb3940e4c71c</anchor>
+      <anchor>ae157537f44b37545cd845047491326ab</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsEmpty</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>ab2fb65b570efb9bcefc394c5854dfe5c</anchor>
+      <anchor>ae88cbc56abc4235d83d0aa3bc6945790</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsIndexValid</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a7557997a798717cbe52b7f4e51dc21b6</anchor>
+      <anchor>a12332b984c99494da96a9721f45fb86f</anchor>
       <arglist>(int index) const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>ae2f7a06383d81e89017e46915ae40b0a</anchor>
+      <anchor>a25a42a20f69a3a2e785ce1664b6eb699</anchor>
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -18106,14 +18203,42 @@
       <type>Items</type>
       <name>m_items</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a5f84d758c861c6bc6af8435cca6655a3</anchor>
+      <anchor>a30d0adb8fe0158651a851ca31d2649c5</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>Reserve</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>a33ec3dfb9373b87bd937bee3a2621a9b</anchor>
+      <arglist>(TContainer&lt; QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &gt;::Container &amp;, int)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>Reserve</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>a0d34f9fbc5dd5db25156a47daa159cad</anchor>
+      <arglist>(std::vector&lt; QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &gt; &amp;container, int count)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>Reserve</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>a371149b6a9074d5f70173255b4fc482e</anchor>
+      <arglist>(QVector&lt; QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &gt; &amp;container, int count)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>Resize</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>a2a942bd7e35d0cd97a9033f26150e1b7</anchor>
+      <arglist>(TContainer&lt; QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &gt;::Container &amp;, int)</arglist>
+    </member>
     <member kind="typedef" protection="protected">
-      <type>QList&lt; QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &gt;</type>
+      <type>TContainer&lt; QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &gt;::Container</type>
       <name>Items</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>ac7750c3f39765264f9ce3a0bfd546ddd</anchor>
+      <anchor>acf622391830abe7e26207f6ecdc2b6ac</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -18194,27 +18319,28 @@
     <name>ibase::TSerializableContainer</name>
     <filename>classibase_1_1_t_serializable_container.html</filename>
     <templarg>ItemClass</templarg>
+    <templarg>ContainerType</templarg>
     <base>ibase::TContainer</base>
     <base virtualness="virtual">iser::ISerializable</base>
     <member kind="typedef">
-      <type>TContainer&lt; ItemClass &gt;</type>
+      <type>TContainer&lt; ItemClass, ContainerType &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classibase_1_1_t_serializable_container.html</anchorfile>
-      <anchor>afb9cc42d2d54b61a04026019f6969e9b</anchor>
+      <anchor>a72e5e01f995a211b827c4a6a2a2c134b</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classibase_1_1_t_serializable_container.html</anchorfile>
-      <anchor>a5bb8aa62a58dc387e177f9302ac8c771</anchor>
+      <anchor>ad6b0e1e9b43eec524ba53864b2fcaf94</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
       <name>SerializeItem</name>
       <anchorfile>classibase_1_1_t_serializable_container.html</anchorfile>
-      <anchor>a26b6da882324306b54c95b86a0c7d842</anchor>
+      <anchor>a1b6c981daac279a481a6f0855ae7ba25</anchor>
       <arglist>(ItemClass &amp;item, iser::IArchive &amp;archive)=0</arglist>
     </member>
   </compound>
@@ -20798,10 +20924,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>QVector&lt; double &gt;</type>
+      <type>std::vector&lt; double &gt;</type>
       <name>Elements</name>
       <anchorfile>classimath_1_1_c_var_vector.html</anchorfile>
-      <anchor>a2f2aa27019a7b50df25303ddd19af9d1</anchor>
+      <anchor>afc00e6f432209e05a2bda17464f459cf</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -33280,10 +33406,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>QVector&lt; int &gt;</type>
+      <type>std::vector&lt; int &gt;</type>
       <name>Scanlines</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
-      <anchor>aaf078dcb50eaf66b9d4825a61bb4c12b</anchor>
+      <anchor>a2cd525cdea089284f0e19e07b4731632</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -37007,10 +37133,10 @@
       <arglist>(CVarMatrix matrixA, CVarMatrix &amp;matrixY, CVarMatrix &amp;matrixX, double minHhNorm=I_BIG_EPSILON)</arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>QVector&lt; double &gt;</type>
+      <type>std::vector&lt; double &gt;</type>
       <name>Elements</name>
       <anchorfile>classistd_1_1_t_array.html</anchorfile>
-      <anchor>abdcab1871532ba4f912a22efb0afb55a</anchor>
+      <anchor>ae3ed6a04a6cb64172b3d8170923073d5</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -57739,10 +57865,10 @@
       <arglist>(const IndexType &amp;index)</arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>QVector&lt; Element &gt;</type>
+      <type>std::vector&lt; Element &gt;</type>
       <name>Elements</name>
       <anchorfile>classistd_1_1_t_array.html</anchorfile>
-      <anchor>abdcab1871532ba4f912a22efb0afb55a</anchor>
+      <anchor>ae3ed6a04a6cb64172b3d8170923073d5</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -70486,6 +70612,7 @@
     <file>CAnnulusSegmentComp.h</file>
     <file>CArc.h</file>
     <file>CArcComp.h</file>
+    <file>CArcPointsCalculator.h</file>
     <file>CCalibration2dProxyComp.h</file>
     <file>CCircle.h</file>
     <file>CCircleComp.h</file>

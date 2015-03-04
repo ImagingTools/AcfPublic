@@ -24,9 +24,6 @@
 #define i2d_CPolygon_included
 
 
-// Qt includes
-#include <QtCore/QVector>
-
 // ACF includes
 #include "iser/CArchiveTag.h"
 #include "i2d/CObject2dBase.h"

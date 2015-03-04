@@ -37,7 +37,7 @@ namespace i2d
 CVector2d CPolypoint::GetCenter() const
 {
 	CVector2d sumVector(0, 0);
-	for (		Points::ConstIterator iter = m_points.begin();
+	for (		Points::const_iterator iter = m_points.begin();
 				iter != m_points.end();
 				++iter){
 		sumVector += *iter;
@@ -53,7 +53,7 @@ void CPolypoint::MoveCenterTo(const CVector2d& position)
 
 	BeginChanges(s_objectPositionChangeSet);
 
-	for (		Points::Iterator iter = m_points.begin();
+	for (		Points::iterator iter = m_points.begin();
 				iter != m_points.end();
 				++iter){
 		*iter += diffVector;
@@ -65,9 +65,9 @@ void CPolypoint::MoveCenterTo(const CVector2d& position)
 
 CRectangle CPolypoint::GetBoundingBox() const
 {	
-	if (!m_points.isEmpty()){
-		Points::ConstIterator iter = m_points.constBegin();
-		Q_ASSERT(iter != m_points.constEnd());
+	if (!m_points.empty()){
+		Points::const_iterator iter = m_points.begin();
+		Q_ASSERT(iter != m_points.end());
 
 		const i2d::CVector2d& firstPoint = *iter;
 		i2d::CRectangle boundingBox(firstPoint, firstPoint);
@@ -92,7 +92,7 @@ bool CPolypoint::Transform(
 		ITransformation2d::ExactnessMode mode,
 		double* /*errorFactorPtr*/)
 {
-	for (		Points::Iterator iter = m_points.begin();
+	for (		Points::iterator iter = m_points.begin();
 				iter != m_points.end();
 				++iter){
 		CVector2d transformedPos;
@@ -112,7 +112,7 @@ bool CPolypoint::InvTransform(
 		ITransformation2d::ExactnessMode mode,
 		double* /*errorFactorPtr*/)
 {
-	for (		Points::Iterator iter = m_points.begin();
+	for (		Points::iterator iter = m_points.begin();
 				iter != m_points.end();
 				++iter){
 		CVector2d transformedPos;

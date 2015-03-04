@@ -24,6 +24,9 @@
 #define iimg_CScanlineMask_included
 
 
+// STL includes
+#include <vector>
+
 // Qt includes
 #include <QtCore/QList>
 
@@ -51,7 +54,7 @@ class CScanlineMask:
 {
 public:
 	typedef QList<istd::CIntRanges> RangesContainer;
-	typedef QVector<int> Scanlines;	// Index of container element for each scan line, negative value for empty element
+	typedef std::vector<int> Scanlines;	// Index of container element for each scan line, negative value for empty element
 
 	CScanlineMask();
 
