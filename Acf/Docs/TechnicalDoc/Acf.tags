@@ -17829,6 +17829,20 @@
       <anchor>a7f42134e6d273cf6b7b144d151c22253</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Reserve</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>aa37be5552e6f772b3d4b364f8c9ba3df</anchor>
+      <arglist>(int count)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Resize</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>a0e38e76f3d7f76904886b06b7816a5b4</anchor>
+      <arglist>(int count)</arglist>
+    </member>
     <member kind="function">
       <type>const ItemClass &amp;</type>
       <name>GetAt</name>
@@ -17926,34 +17940,6 @@
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
       <anchor>a25a42a20f69a3a2e785ce1664b6eb699</anchor>
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static void</type>
-      <name>Reserve</name>
-      <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a33ec3dfb9373b87bd937bee3a2621a9b</anchor>
-      <arglist>(ContainerType &amp;, int)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static void</type>
-      <name>Resize</name>
-      <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a2a942bd7e35d0cd97a9033f26150e1b7</anchor>
-      <arglist>(ContainerType &amp;, int)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static void</type>
-      <name>Reserve</name>
-      <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a0d34f9fbc5dd5db25156a47daa159cad</anchor>
-      <arglist>(std::vector&lt; ItemClass &gt; &amp;container, int count)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static void</type>
-      <name>Reserve</name>
-      <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a371149b6a9074d5f70173255b4fc482e</anchor>
-      <arglist>(QVector&lt; ItemClass &gt; &amp;container, int count)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>ContainerType</type>
@@ -18072,6 +18058,20 @@
       <anchorfile>classibase_1_1_t_factorisable_container.html</anchorfile>
       <anchor>afe309e6db604f59a38df28eee66795e9</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Reserve</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>aa37be5552e6f772b3d4b364f8c9ba3df</anchor>
+      <arglist>(int count)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Resize</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>a0e38e76f3d7f76904886b06b7816a5b4</anchor>
+      <arglist>(int count)</arglist>
     </member>
     <member kind="function">
       <type>const QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &amp;</type>
@@ -18205,34 +18205,6 @@
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
       <anchor>a30d0adb8fe0158651a851ca31d2649c5</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static void</type>
-      <name>Reserve</name>
-      <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a33ec3dfb9373b87bd937bee3a2621a9b</anchor>
-      <arglist>(TContainer&lt; QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &gt;::Container &amp;, int)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static void</type>
-      <name>Reserve</name>
-      <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a0d34f9fbc5dd5db25156a47daa159cad</anchor>
-      <arglist>(std::vector&lt; QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &gt; &amp;container, int count)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static void</type>
-      <name>Reserve</name>
-      <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a371149b6a9074d5f70173255b4fc482e</anchor>
-      <arglist>(QVector&lt; QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &gt; &amp;container, int count)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static void</type>
-      <name>Resize</name>
-      <anchorfile>classibase_1_1_t_container.html</anchorfile>
-      <anchor>a2a942bd7e35d0cd97a9033f26150e1b7</anchor>
-      <arglist>(TContainer&lt; QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &gt;::Container &amp;, int)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>TContainer&lt; QPair&lt; istd::TSmartPtr&lt; InterfaceClass &gt;, QByteArray &gt; &gt;::Container</type>

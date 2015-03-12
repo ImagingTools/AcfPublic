@@ -29,7 +29,7 @@ namespace iipr
 
 // reimplemented (iimg::IBitmapProvider)
 
-const iimg::IBitmap* CProcessedBitmapSupplierComp::GetBitmap() const
+const iimg::IBitmap* CProcessedBitmapSupplierBase::GetBitmap() const
 {
 	const ProductType* productPtr = GetWorkProduct();
 	if (productPtr != NULL){
@@ -42,14 +42,10 @@ const iimg::IBitmap* CProcessedBitmapSupplierComp::GetBitmap() const
 
 //protected methods
 
-bool CProcessedBitmapSupplierComp::EnsureBitmapCreated(ProductType& result) const
+bool CProcessedBitmapSupplierBase::EnsureBitmapCreated(ProductType& result) const
 {
-	if (!m_bitmapCompFact.IsValid()){
-		return false;
-	}
-
 	if (!result.IsValid()){
-		result.SetPtr(m_bitmapCompFact.CreateInstance());
+		result.SetPtr(CreateBitmap());
 	}
 
 	return result.IsValid();
@@ -58,7 +54,7 @@ bool CProcessedBitmapSupplierComp::EnsureBitmapCreated(ProductType& result) cons
 
 // reimplemented (iinsp::TSupplierCompWrap)
 
-int CProcessedBitmapSupplierComp::ProduceObject(ProductType& result) const
+int CProcessedBitmapSupplierBase::ProduceObject(ProductType& result) const
 {
 	if (!m_bitmapProviderCompPtr.IsValid() || !m_imageProcessorCompPtr.IsValid()){
 		return WS_CRITICAL;
@@ -92,13 +88,17 @@ int CProcessedBitmapSupplierComp::ProduceObject(ProductType& result) const
 
 // reimplemented (icomp::CComponentBase)
 
-void CProcessedBitmapSupplierComp::OnComponentCreated()
+void CProcessedBitmapSupplierBase::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
-	if (m_bitmapProviderModelCompPtr.IsValid()){
+	if (m_bitmapProviderModelCompPtr.IsValid() && m_bitmapSupplierCompPtr.IsValid()){
 		RegisterSupplierInput(m_bitmapProviderModelCompPtr.GetPtr(), m_bitmapSupplierCompPtr.GetPtr());
 	}
+
+	m_bitmapProviderCompPtr.EnsureInitialized();
+	m_imageProcessorCompPtr.EnsureInitialized();
+	m_defaultCalibrationCompPtr.EnsureInitialized();
 }
 
 

@@ -180,6 +180,7 @@ void CCascadedProcessorComp::OnComponentCreated()
 		int processorsCount = m_processorsCompPtr.GetCount();
 		for (int i = 0; i < processorsCount; ++i){
 			iproc::IProcessor* processorPtr = m_processorsCompPtr[i];
+			Q_UNUSED(processorPtr);
 			Q_ASSERT(processorPtr != NULL);
 		}
 	}
@@ -188,6 +189,7 @@ void CCascadedProcessorComp::OnComponentCreated()
 		int buffersCount = m_buffersCompPtr.GetCount();
 		for (int i = 0; i < buffersCount; ++i){
 			istd::IChangeable* bufferPtr = m_buffersCompPtr[i];
+			Q_UNUSED(bufferPtr);
 			Q_ASSERT(bufferPtr != NULL);
 		}
 	}

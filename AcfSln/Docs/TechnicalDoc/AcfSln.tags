@@ -1630,6 +1630,7 @@
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
+    <class kind="class">iipr::CProcessedBitmapSupplierBase</class>
     <class kind="class">iipr::CProcessedBitmapSupplierComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -1936,6 +1937,14 @@
     <filename>_t_image_pixel_interpolator_8h</filename>
     <includes id="_i_image_interpolation_params_8h" name="IImageInterpolationParams.h" local="yes" imported="no">iipr/IImageInterpolationParams.h</includes>
     <class kind="class">iipr::TImagePixelInterpolator</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TProcessedBitmapSupplierComp.h</name>
+    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <filename>_t_processed_bitmap_supplier_comp_8h</filename>
+    <includes id="_c_processed_bitmap_supplier_comp_8h" name="CProcessedBitmapSupplierComp.h" local="yes" imported="no">iipr/CProcessedBitmapSupplierComp.h</includes>
+    <class kind="class">iipr::TProcessedBitmapSupplierComp</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -10734,6 +10743,20 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
+      <name>Reserve</name>
+      <anchorfile>classiedge_1_1_c_edge_line_container.html</anchorfile>
+      <anchor>a2e8d146ac24d675bc8514e6ff3604397</anchor>
+      <arglist>(int count)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Resize</name>
+      <anchorfile>classiedge_1_1_c_edge_line_container.html</anchorfile>
+      <anchor>a26585b11b7568da53b9d99ef9d2d69d4</anchor>
+      <arglist>(int count)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
       <name>SetCalibration</name>
       <anchorfile>classiedge_1_1_c_edge_line_container.html</anchorfile>
       <anchor>acc135a4a96abf8a67ed94c38d9f0d02a</anchor>
@@ -15119,6 +15142,7 @@
     <class kind="class">iipr::CObjectFeature</class>
     <class kind="class">iipr::CPositionFromImageSupplierComp</class>
     <class kind="class">iipr::CProcessedAcquisitionComp</class>
+    <class kind="class">iipr::CProcessedBitmapSupplierBase</class>
     <class kind="class">iipr::CProcessedBitmapSupplierComp</class>
     <class kind="class">iipr::CProjectionSupplierComp</class>
     <class kind="class">iipr::CRectDerivativeProcessor</class>
@@ -15154,6 +15178,7 @@
     <class kind="class">iipr::ISearchParams</class>
     <class kind="class">iipr::TImageParamProcessorCompBase</class>
     <class kind="class">iipr::TImagePixelInterpolator</class>
+    <class kind="class">iipr::TProcessedBitmapSupplierComp</class>
     <class kind="class">iipr::InvertFunction</class>
     <class kind="class">iipr::TUnaryTransformProcessorComp</class>
     <class kind="class">iipr::TWeightedFeatureWrap</class>
@@ -18826,15 +18851,15 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iipr::CProcessedBitmapSupplierComp</name>
-    <filename>classiipr_1_1_c_processed_bitmap_supplier_comp.html</filename>
+    <name>iipr::CProcessedBitmapSupplierBase</name>
+    <filename>classiipr_1_1_c_processed_bitmap_supplier_base.html</filename>
     <base>TSupplierCompWrap&lt; istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</base>
     <base virtualness="virtual">iimg::IBitmapProvider</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</type>
       <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a74f368428ae0c704238a6b3a604fe7aa</anchor>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_base.html</anchorfile>
+      <anchor>a9cf9d9d15eb4c22637deb2d08ff6f9d0</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -18854,15 +18879,15 @@
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a54bca2ebc021d243d25d683ecec4f761</anchor>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_base.html</anchorfile>
+      <anchor>a9c5dc0bdb23d7b93637566f77b248dce</anchor>
       <arglist>(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a6ddc62f438e357669453ca2d2a22e68d</anchor>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_base.html</anchorfile>
+      <anchor>a7bd51906b15608cb24d721aa69ea3933</anchor>
       <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -18882,29 +18907,36 @@
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>EnsureBitmapCreated</name>
-      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>ae30a377d05d1f6711b35fe9fddbdf1d4</anchor>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_base.html</anchorfile>
+      <anchor>adad5c951f9d5be363e0c717ee2f55a4e</anchor>
       <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual iimg::IBitmap *</type>
+      <name>CreateBitmap</name>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_base.html</anchorfile>
+      <anchor>a3c557c9c59d62c9f8c4d4e0ef5ac7b08</anchor>
+      <arglist>() const =0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual const iimg::IBitmap *</type>
       <name>GetBitmap</name>
-      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a4688ddf6927eaf785b7297c8acadaf9e</anchor>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_base.html</anchorfile>
+      <anchor>a4793eb6519151884fa07dee2021e624e</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>ProduceObject</name>
-      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a857ccf41fffe37d31452115c0a0b77fa</anchor>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_base.html</anchorfile>
+      <anchor>a99b0d6b2ef954fd0ec1d9f902c29af84</anchor>
       <arglist>(ProductType &amp;result) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
-      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a81741a268acf9a5682ee358f508b4746</anchor>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_base.html</anchorfile>
+      <anchor>a159fab163e419f801fced883ab57facf</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -18920,6 +18952,25 @@
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CProcessedBitmapSupplierComp</name>
+    <filename>classiipr_1_1_c_processed_bitmap_supplier_comp.html</filename>
+    <base>iipr::CProcessedBitmapSupplierBase</base>
+    <member kind="typedef">
+      <type>CProcessedBitmapSupplierBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a57abcd933394cbe50e4346f3479ee064</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual iimg::IBitmap *</type>
+      <name>CreateBitmap</name>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a70d14bfaf71d2a46de681c87ba3f62a5</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -20525,6 +20576,33 @@
       <anchorfile>classiipr_1_1_t_image_pixel_interpolator.html</anchorfile>
       <anchor>ac386d85439e84f332326a682150d000e</anchor>
       <arglist>(float x, float y, int componentIndex) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::TProcessedBitmapSupplierComp</name>
+    <filename>classiipr_1_1_t_processed_bitmap_supplier_comp.html</filename>
+    <templarg></templarg>
+    <base>iipr::CProcessedBitmapSupplierBase</base>
+    <member kind="typedef">
+      <type>Bitmap</type>
+      <name>BitmapType</name>
+      <anchorfile>classiipr_1_1_t_processed_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a1e851d9748a0e30d4f4e65ec705bdafd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CProcessedBitmapSupplierBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_t_processed_bitmap_supplier_comp.html</anchorfile>
+      <anchor>acd8a02ca713399dd06d4f812f1caa6e5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual iimg::IBitmap *</type>
+      <name>CreateBitmap</name>
+      <anchorfile>classiipr_1_1_t_processed_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a19361840f843a973ab2c26446af3fdd9</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -30067,6 +30145,7 @@
     <file>ISearchParams.h</file>
     <file>TImageParamProcessorCompBase.h</file>
     <file>TImagePixelInterpolator.h</file>
+    <file>TProcessedBitmapSupplierComp.h</file>
     <file>TUnaryTransformProcessorComp.h</file>
     <file>TWeightedFeatureWrap.h</file>
   </compound>
