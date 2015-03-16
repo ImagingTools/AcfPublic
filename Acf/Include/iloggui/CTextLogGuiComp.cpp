@@ -34,6 +34,9 @@
 #include <QtCore/QElapsedTimer>
 #endif
 
+// ACF includes
+#include "iqt/CSignalBlocker.h"
+
 
 namespace iloggui
 {
@@ -102,7 +105,8 @@ void CTextLogGuiComp::DoFilter()
 
 void CTextLogGuiComp::UpdateFilters()
 {
-	SourceFilterCB->blockSignals(true);
+	iqt::CSignalBlocker blocker(SourceFilterCB);
+	Q_UNUSED(blocker);
 
 	SourceFilterCB->clear();
 	SourceFilterCB->addItem(tr("Any"));
@@ -121,8 +125,6 @@ void CTextLogGuiComp::UpdateFilters()
 			SourceFilterCB->addItems(sources.toList());
 		}
 	}
-
-	SourceFilterCB->blockSignals(false);
 }
 
 

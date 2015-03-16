@@ -538,12 +538,10 @@
     <name>CAttributesManager.h</name>
     <path>C:/Temp/Acf/Include/iattr/</path>
     <filename>_c_attributes_manager_8h</filename>
-    <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
     <includes id="_t_opt_del_ptr_8h" name="TOptDelPtr.h" local="yes" imported="no">istd/TOptDelPtr.h</includes>
-    <includes id="_t_composed_factory_8h" name="TComposedFactory.h" local="yes" imported="no">istd/TComposedFactory.h</includes>
-    <includes id="_t_single_factory_8h" name="TSingleFactory.h" local="yes" imported="no">istd/TSingleFactory.h</includes>
-    <includes id="_c_multi_model_observer_base_8h" name="CMultiModelObserverBase.h" local="yes" imported="no">imod/CMultiModelObserverBase.h</includes>
+    <includes id="_c_multi_model_bridge_base_8h" name="CMultiModelBridgeBase.h" local="yes" imported="no">imod/CMultiModelBridgeBase.h</includes>
     <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
+    <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
     <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
     <includes id="_i_attributes_manager_8h" name="IAttributesManager.h" local="yes" imported="no">iattr/IAttributesManager.h</includes>
     <includes id="_c_standard_attributes_factory_8h" name="CStandardAttributesFactory.h" local="yes" imported="no">iattr/CStandardAttributesFactory.h</includes>
@@ -8633,6 +8631,13 @@
       <anchor>afcea2322ac14ad36950af9b66b7d36d5</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CCalibration2dProxyComp</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>a438b1d7da4cdc9e4fb7610bfe4c87232</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imath::IUnitInfo *</type>
       <name>GetArgumentUnitInfo</name>
@@ -8758,6 +8763,13 @@
       <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
       <anchor>abfec9c6c557c8cc7fce427de3ad826be</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMultiModelBridgeBase</name>
+      <anchorfile>classimod_1_1_c_multi_model_bridge_base.html</anchorfile>
+      <anchor>a5ed2beb8761fa6716867c3c15a9349ca</anchor>
+      <arglist>(istd::IChangeable *changeablePtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual</type>
@@ -12448,6 +12460,13 @@
       <anchor>aeb916b741626129487f8c00d902f453f</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CStaticCalibrationProviderComp</name>
+      <anchorfile>classi2d_1_1_c_static_calibration_provider_comp.html</anchorfile>
+      <anchor>a7f402f7bcc942111b0f70058cb28a084</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ICalibration2d *</type>
       <name>GetCalibration</name>
@@ -14781,15 +14800,8 @@
       <type></type>
       <name>CAttributeMetaInfo</name>
       <anchorfile>classiattr_1_1_c_attribute_meta_info.html</anchorfile>
-      <anchor>acad876b7aa9edb24dcde49d30add2650</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetAttributeDescription</name>
-      <anchorfile>classiattr_1_1_c_attribute_meta_info.html</anchorfile>
-      <anchor>aaff5fdc632ac0998b6369925b0b1683e</anchor>
-      <arglist>(const QString &amp;description)</arglist>
+      <anchor>ab7472f0a63204b9dc2c3e460ff0b03e9</anchor>
+      <arglist>(const QByteArray &amp;typeId=&quot;&quot;)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -14797,6 +14809,13 @@
       <anchorfile>classiattr_1_1_c_attribute_meta_info.html</anchorfile>
       <anchor>ab5020b7c723e1bf7c15dbad1fb1e35b2</anchor>
       <arglist>(const QByteArray &amp;typeId)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetAttributeDescription</name>
+      <anchorfile>classiattr_1_1_c_attribute_meta_info.html</anchorfile>
+      <anchor>aaff5fdc632ac0998b6369925b0b1683e</anchor>
+      <arglist>(const QString &amp;description)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -14894,7 +14913,6 @@
     <name>iattr::CAttributesManager</name>
     <filename>classiattr_1_1_c_attributes_manager.html</filename>
     <base virtualness="virtual">iattr::IAttributesManager</base>
-    <base protection="protected">imod::CMultiModelObserverBase</base>
     <member kind="function">
       <type></type>
       <name>CAttributesManager</name>
@@ -14943,90 +14961,6 @@
       <anchorfile>classiattr_1_1_c_attributes_manager.html</anchorfile>
       <anchor>a61e4bf8658eaa3a811452a8f398b3e3f</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>BeforeUpdate</name>
-      <anchorfile>classiattr_1_1_c_attributes_manager.html</anchorfile>
-      <anchor>ab63920c6bd09148f0313c03b073ca227</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AfterUpdate</name>
-      <anchorfile>classiattr_1_1_c_attributes_manager.html</anchorfile>
-      <anchor>aeffdde9b5b42ddffec17a9623b6c9a39</anchor>
-      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnUpdate</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a49b4ebda2cb807c57bbdea726ecc2f8f</anchor>
-      <arglist>(IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CMultiModelObserverBase</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>aeadfce921ec80b2066bec1294403cdb0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~CMultiModelObserverBase</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>abeb03f6db4c68b652dce9307e3d307a3</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>IModel *</type>
-      <name>GetModelPtr</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a44e4ecc264d102606dd19b954b4b861e</anchor>
-      <arglist>(int modelIndex) const </arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetModelCount</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a9b9d05f1e8eed6f32dd8458746860cce</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>EnsureModelsDetached</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a6bfa8b39bc6680c04dbfc20966257289</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetObservedIds</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a37bb58c2bb0a2a4745badfce29d8d80d</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsModelAttached</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a92391a2b6e1dcccfc3987e89ace6da32</anchor>
-      <arglist>(const IModel *modelPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnModelAttached</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a4244448c597d00be69db6acf256d09fc</anchor>
-      <arglist>(IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnModelDetached</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>aa95c00bb92acfa85585ecc6fccabd410</anchor>
-      <arglist>(IModel *modelPtr)</arglist>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -15082,6 +15016,13 @@
       <anchor>a0c3b998d4dc99345140cf61af6587fb6</anchor>
       <arglist>(const QByteArray &amp;attributeId, IAttributeMetaInfo *attributeMetaInfoPtr, bool releaseFlag)</arglist>
     </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>HasAttributeMetaId</name>
+      <anchorfile>classiattr_1_1_c_attributes_meta_info_provider.html</anchorfile>
+      <anchor>a8e5bdb06b2f2331149adcaece229504d</anchor>
+      <arglist>(const QByteArray &amp;attributeId) const </arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IAttributesProvider::AttributeIds</type>
       <name>GetAttributeMetaIds</name>
@@ -15102,12 +15043,19 @@
     <filename>classiattr_1_1_c_enum_attribute_meta_info.html</filename>
     <base>iattr::CAttributeMetaInfo</base>
     <base virtualness="virtual">iattr::IEnumAttributeMetaInfo</base>
+    <member kind="typedef">
+      <type>CAttributeMetaInfo</type>
+      <name>BaseClass</name>
+      <anchorfile>classiattr_1_1_c_enum_attribute_meta_info.html</anchorfile>
+      <anchor>a75ec1e55eabab9decd1268869b264f91</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CEnumAttributeMetaInfo</name>
       <anchorfile>classiattr_1_1_c_enum_attribute_meta_info.html</anchorfile>
-      <anchor>ac326a598e751185b7731d06948f81bf8</anchor>
-      <arglist>()</arglist>
+      <anchor>a64dff11a198e86878fa41b062773a686</anchor>
+      <arglist>(const QByteArray &amp;typeId=&quot;&quot;)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -15157,6 +15105,20 @@
     <filename>classiattr_1_1_c_numeric_attribute_meta_info.html</filename>
     <base>iattr::CAttributeMetaInfo</base>
     <base virtualness="virtual">iattr::INumericAttributeMetaInfo</base>
+    <member kind="typedef">
+      <type>CAttributeMetaInfo</type>
+      <name>BaseClass</name>
+      <anchorfile>classiattr_1_1_c_numeric_attribute_meta_info.html</anchorfile>
+      <anchor>a8ab400e56d3f8d5f697050cbb4e98f85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CNumericAttributeMetaInfo</name>
+      <anchorfile>classiattr_1_1_c_numeric_attribute_meta_info.html</anchorfile>
+      <anchor>abedbacb5432db54f445f0e46375fbe94</anchor>
+      <arglist>(const QByteArray &amp;typeId=&quot;&quot;)</arglist>
+    </member>
     <member kind="function">
       <type>bool</type>
       <name>SetMinAttributeValue</name>
@@ -26616,6 +26578,69 @@
       <anchor>a6c3bb8ebdd65c973b65155f106c8630a</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CMultiModelObserverBase</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>aeadfce921ec80b2066bec1294403cdb0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CMultiModelObserverBase</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>abeb03f6db4c68b652dce9307e3d307a3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>IModel *</type>
+      <name>GetModelPtr</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>a44e4ecc264d102606dd19b954b4b861e</anchor>
+      <arglist>(int modelIndex) const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetModelCount</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>a9b9d05f1e8eed6f32dd8458746860cce</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>EnsureModelsDetached</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>a6bfa8b39bc6680c04dbfc20966257289</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetObservedIds</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>a37bb58c2bb0a2a4745badfce29d8d80d</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsModelAttached</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>a92391a2b6e1dcccfc3987e89ace6da32</anchor>
+      <arglist>(const IModel *modelPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnModelAttached</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>a4244448c597d00be69db6acf256d09fc</anchor>
+      <arglist>(IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnModelDetached</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>aa95c00bb92acfa85585ecc6fccabd410</anchor>
+      <arglist>(IModel *modelPtr)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeforeUpdate</name>
@@ -30149,6 +30174,13 @@
       <anchor>aa796620cca275e7834d7a0d5599f73af</anchor>
       <arglist>() const</arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CRelativeFileNameParamComp</name>
+      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
+      <anchor>aacaf35c9c4a6d06dd33befae97f69cb1</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
       <name>GetPath</name>
@@ -32626,6 +32658,13 @@
       <anchorfile>classiimg_1_1_c_composed_bitmap_provider_comp.html</anchorfile>
       <anchor>aef94529a4fc450e7b71cc0f0d9751b10</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CComposedBitmapProviderComp</name>
+      <anchorfile>classiimg_1_1_c_composed_bitmap_provider_comp.html</anchorfile>
+      <anchor>ab95cecb7ed39fe7838b8b1b406842691</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iprm::IOptionsList *</type>
@@ -39479,7 +39518,6 @@
     <name>imod::CMultiModelBridgeBase</name>
     <filename>classimod_1_1_c_multi_model_bridge_base.html</filename>
     <base virtualness="virtual">imod::IObserver</base>
-    <base virtualness="virtual">istd::IChangeable</base>
   </compound>
   <compound kind="class">
     <name>imod::CMultiModelDispatcherBase</name>
@@ -39524,6 +39562,13 @@
     <name>imod::CMultiModelObserverBase</name>
     <filename>classimod_1_1_c_multi_model_observer_base.html</filename>
     <base virtualness="virtual">imod::IObserver</base>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>a49b4ebda2cb807c57bbdea726ecc2f8f</anchor>
+      <arglist>(IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>imod::CSingleModelObserverBase</name>
@@ -49564,6 +49609,13 @@
       <anchorfile>classiqtgui_1_1_c_commands_multiplexer_comp.html</anchorfile>
       <anchor>a2c0851e3e6848befdd68809f2bd7c672</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CCommandsMultiplexerComp</name>
+      <anchorfile>classiqtgui_1_1_c_commands_multiplexer_comp.html</anchorfile>
+      <anchor>a972813c7faf7cbca8c4233561d107f72</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ibase::IHierarchicalCommand *</type>

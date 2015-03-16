@@ -34,7 +34,8 @@ namespace iprm
 
 
 CSelectableParamsSetComp::CSelectableParamsSetComp()
-:	m_selectedIndex(-1),
+:	BaseClass2(this),
+	m_selectedIndex(-1),
 	m_currentParamsSetObserver(*this)
 {
 }

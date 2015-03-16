@@ -56,6 +56,8 @@ public:
 		I_ASSIGN_TO(m_commandProviderModelsCompPtr, m_commandProvidersCompPtr, false);
 	I_END_COMPONENT;
 
+	CCommandsMultiplexerComp();
+
 	// reimpemented (ibase::ICommandsProvider)
 	virtual const ibase::IHierarchicalCommand* GetCommands() const;
 

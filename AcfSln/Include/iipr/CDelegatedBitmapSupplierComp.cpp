@@ -27,6 +27,12 @@ namespace iipr
 {
 
 
+CDelegatedBitmapSupplierComp::CDelegatedBitmapSupplierComp()
+:	BaseClass2(this)
+{
+}
+
+
 // reimplemented (iimg::IBitmapProvider)
 
 const iimg::IBitmap* CDelegatedBitmapSupplierComp::GetBitmap() const
@@ -126,6 +132,8 @@ iprm::IParamsSet* CDelegatedBitmapSupplierComp::GetModelParametersSet() const
 	return NULL;
 }
 
+
+// protected methods
 
 // reimplemented (icomp::CComponentBase)
 

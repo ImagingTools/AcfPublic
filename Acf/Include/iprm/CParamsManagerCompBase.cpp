@@ -35,7 +35,8 @@ namespace iprm
 
 
 CParamsManagerCompBase::CParamsManagerCompBase()
-	:m_selectedIndex(-1)
+:	imod::CMultiModelBridgeBase(this),
+	m_selectedIndex(-1)
 {
 }
 
@@ -471,7 +472,8 @@ int CParamsManagerCompBase::FindFixedParamSetIndex(const QString& name) const
 // public methods of embedded class ParamSet
 
 CParamsManagerCompBase::ParamSet::ParamSet()
-:	isEnabled(true)
+:	CMultiModelBridgeBase(this),
+	isEnabled(true)
 {
 	parentPtr = NULL;
 }

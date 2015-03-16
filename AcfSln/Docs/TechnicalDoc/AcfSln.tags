@@ -14276,6 +14276,13 @@
       <anchor>a42da488ee2705a6ac0617665ef94daa1</anchor>
       <arglist>(m_slaveInformationProviderModelsCompPtr, m_slaveInformationProvidersCompPtr, false)</arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CComposedInformationProviderComp</name>
+      <anchorfile>classiinsp_1_1_c_composed_information_provider_comp.html</anchorfile>
+      <anchor>a601e7b6d8c1ac5def17231b14c7edec5</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QDateTime</type>
       <name>GetInformationTimeStamp</name>
@@ -14854,8 +14861,8 @@
   <compound kind="class">
     <name>iinsp::CInspectionTaskComp::Parameters</name>
     <filename>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</filename>
-    <base>imod::CMultiModelBridgeBase</base>
     <base virtualness="virtual">iprm::IParamsSet</base>
+    <base>imod::CMultiModelBridgeBase</base>
     <member kind="function">
       <type></type>
       <name>Parameters</name>
@@ -16775,10 +16782,10 @@
     <name>iipr::CDelegatedBitmapSupplierComp</name>
     <filename>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</filename>
     <base>ilog::TLoggerCompWrap</base>
-    <base virtualness="virtual">iinsp::ISupplier</base>
     <base virtualness="virtual">istd::IChangeable</base>
     <base virtualness="virtual">iimg::IBitmapProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
+    <base virtualness="virtual">iinsp::ISupplier</base>
     <base protection="protected">imod::CMultiModelBridgeBase</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -16829,63 +16836,70 @@
       <anchor>a6fc6c2088c400c245635a6d28eff6f71</anchor>
       <arglist>(m_calibrationProviderCompPtr, m_bitmapProviderCompPtr, false)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function">
+      <type></type>
+      <name>CDelegatedBitmapSupplierComp</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a9bd70bff67cb4b0411083bce50002aca</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual const iimg::IBitmap *</type>
       <name>GetBitmap</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
       <anchor>a45c7c3568ba2c8cb44a1a35e1fb9a74e</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" virtualness="virtual">
       <type>virtual const i2d::ICalibration2d *</type>
       <name>GetCalibration</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
       <anchor>a02a4b87632584389261adf3934db213c</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetWorkStatus</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
       <anchor>a41e2d09d2166cbcfa375f22dfbffc1af</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>InvalidateSupplier</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
       <anchor>a351380bb7bcfa58eb3b54d674b653feb</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureWorkInitialized</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
       <anchor>a944f5e65aba9af254b6f4e5355434d59</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureWorkFinished</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
       <anchor>a05cc33d0a5668cb2301476fb33bd9ba4</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ClearWorkResults</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
       <anchor>a0489251b80e02af442241147d89c7d1d</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" virtualness="virtual">
       <type>virtual const ilog::IMessageContainer *</type>
       <name>GetWorkMessages</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
       <anchor>a2f7bbfafbd8ac6451106c9087b90b31f</anchor>
       <arglist>(int messageType) const </arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" virtualness="virtual">
       <type>virtual iprm::IParamsSet *</type>
       <name>GetModelParametersSet</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
@@ -21857,6 +21871,13 @@
       <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
       <anchor>a286bd033bc8c01e1f24f989f11d1f545</anchor>
       <arglist>(m_constraintsModelCompPtr, m_constraintsCompPtr, false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CNumericParamsComp</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>a4c43e38693f3f26771693bd0b8bddadd</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const INumericConstraints *</type>

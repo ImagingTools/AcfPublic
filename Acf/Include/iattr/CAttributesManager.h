@@ -28,12 +28,10 @@
 #include <QtCore/QMap>
 
 // ACF includes
-#include "istd/TDelPtr.h"
 #include "istd/TOptDelPtr.h"
-#include "istd/TComposedFactory.h"
-#include "istd/TSingleFactory.h"
-#include "imod/CMultiModelObserverBase.h"
+#include "imod/CMultiModelBridgeBase.h"
 #include "iser/IArchive.h"
+#include "iser/IObject.h"
 #include "iser/CArchiveTag.h"
 #include "iattr/IAttributesManager.h"
 #include "iattr/CStandardAttributesFactory.h"
@@ -46,9 +44,7 @@ namespace iattr
 /**
 	Basic implementation of an property container.
 */
-class CAttributesManager:
-			virtual public IAttributesManager,
-			protected imod::CMultiModelObserverBase
+class CAttributesManager: virtual public IAttributesManager
 {
 public:
 	explicit CAttributesManager(const iser::IObjectFactory* factoryPtr = &CStandardAttributesFactory::GetInstance());
@@ -69,17 +65,14 @@ public:
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
 
-protected:
-	// reimplemented (imod::IObserver)
-	virtual void BeforeUpdate(imod::IModel* modelPtr);
-	virtual void AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet);
-
 private:
 	typedef istd::TOptDelPtr<iser::IObject> AttributePtr;
 	typedef QMap<QByteArray, AttributePtr> AttributesMap;
 	AttributesMap m_attributesMap;
 
 	const iser::IObjectFactory* m_attributesFactoryPtr;
+
+	imod::CMultiModelBridgeBase m_attributesUpdateBridge;
 };
 
 

@@ -45,6 +45,8 @@ public:
 		I_ASSIGN_TO(m_relativeToModelCompPtr, m_relativeToCompPtr, false);
 	I_END_COMPONENT;
 
+	CRelativeFileNameParamComp();
+
 	// reimplemented (ifile::IFileNameParam)
 	virtual const QString& GetPath() const;
 	virtual void SetPath(const QString& path);

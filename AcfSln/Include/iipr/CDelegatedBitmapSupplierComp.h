@@ -47,10 +47,10 @@ namespace iipr
 */
 class CDelegatedBitmapSupplierComp:
 			public ilog::CLoggerComponentBase,
-			virtual public iinsp::ISupplier,
 			virtual public istd::IChangeable,
 			virtual public iimg::IBitmapProvider,
 			virtual public i2d::ICalibrationProvider,
+			virtual public iinsp::ISupplier,
 			protected imod::CMultiModelBridgeBase
 {
 public:
@@ -71,7 +71,8 @@ public:
 		I_ASSIGN_TO(m_calibrationProviderCompPtr, m_bitmapProviderCompPtr, false);
 	I_END_COMPONENT;
 
-protected:
+	CDelegatedBitmapSupplierComp();
+
 	// reimplemented (iimg::IBitmapProvider)
 	virtual const iimg::IBitmap* GetBitmap() const;
 
@@ -87,6 +88,7 @@ protected:
 	virtual const ilog::IMessageContainer* GetWorkMessages(int messageType) const;
 	virtual iprm::IParamsSet* GetModelParametersSet() const;
 
+protected:
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();
 	virtual void OnComponentDestroyed();

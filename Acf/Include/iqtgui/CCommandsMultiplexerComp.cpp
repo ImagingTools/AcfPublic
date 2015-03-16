@@ -27,7 +27,11 @@ namespace iqtgui
 {
 
 
-// public methods
+CCommandsMultiplexerComp::CCommandsMultiplexerComp()
+:	BaseClass2(this)
+{
+}
+
 
 // reimpemented (ibase::ICommandsProvider)
 

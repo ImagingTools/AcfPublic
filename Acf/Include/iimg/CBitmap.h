@@ -24,6 +24,9 @@
 #define iimg_CBitmap_included
 
 
+// Qt includes
+#include <QtCore/QMutex>
+
 // ACF includes
 #include "istd/TOptDelPtr.h"
 #include "ibase/IObjectSnap.h"
