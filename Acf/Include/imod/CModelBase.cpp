@@ -41,6 +41,8 @@ CModelBase::CModelBase()
 CModelBase::~CModelBase()
 {
 	m_cumulatedChangeIds += istd::IChangeable::CF_DESTROYING;
+	m_blockCounter++;
+	m_isDuringChanges = true;
 
 	DetachAllObservers();
 }
