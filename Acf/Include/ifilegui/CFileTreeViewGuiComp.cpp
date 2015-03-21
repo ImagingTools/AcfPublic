@@ -43,6 +43,8 @@ void CFileTreeViewGuiComp::OnComponentCreated()
 
 	m_fileModelUpdateAllowed = true;
 
+	m_fileTypeInfoCompPtr.EnsureInitialized();
+
 	RegisterModel(&m_currentFile);
 }
 
@@ -148,6 +150,10 @@ void CFileTreeViewGuiComp::on_Refresh_clicked()
 
 void CFileTreeViewGuiComp::UpdateChildItems(QStandardItem* itemPtr)
 {
+	if (itemPtr == NULL){
+		return;
+	}
+
 	if (itemPtr->data(DR_ISDIR).toBool()){
 		itemPtr->setIcon(m_iconProvider.icon(QFileIconProvider::Folder));
 	} else {

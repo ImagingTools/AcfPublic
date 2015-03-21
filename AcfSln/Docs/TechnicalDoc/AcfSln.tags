@@ -813,6 +813,7 @@
     <name>CRenderedObjectFileLoaderComp.h</name>
     <path>C:/Temp/Acfsln/Include/ifileproc/</path>
     <filename>_c_rendered_object_file_loader_comp_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">ifileproc::CRenderedObjectFileLoaderComp</class>
     <namespace>ifileproc</namespace>
   </compound>

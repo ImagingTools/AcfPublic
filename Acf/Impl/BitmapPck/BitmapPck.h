@@ -48,7 +48,6 @@ typedef icomp::TModelCompWrap<
 						iimg::CBitmap,
 						iimg::IBitmap,
 						iimg::IRasterImage,
-						ibase::IObjectSnap,
 						iser::ISerializable> > Bitmap;
 
 typedef icomp::TModelCompWrap<
@@ -56,7 +55,6 @@ typedef icomp::TModelCompWrap<
 						iimg::CGeneralBitmap,
 						iimg::IBitmap,
 						iimg::IRasterImage,
-						ibase::IObjectSnap,
 						iser::ISerializable> > GeneralBitmap;
 
 typedef icomp::TModelCompWrap<
