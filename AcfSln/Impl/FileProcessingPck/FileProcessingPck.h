@@ -41,6 +41,7 @@
 #include "ifileproc/CFileCopyOverLoaderComp.h"
 #include "ifileproc/CCopyAppComp.h"
 #include "ifileproc/CRenderedObjectFileLoaderComp.h"
+#include "ifileproc/CBitmapPreviewGeneratorComp.h"
 
 
 /**
@@ -71,6 +72,8 @@ typedef ifileproc::CFileInfoCopyComp FileInfoCopy;
 typedef ifileproc::CFileCopyOverLoaderComp FileCopyOverLoader;
 typedef ifileproc::CCopyAppComp CopyApp;
 typedef ifileproc::CRenderedObjectFileLoaderComp RenderedObjectFileLoader;
+typedef ifileproc::CBitmapPreviewGeneratorComp BitmapPreviewGenerator;
+
 
 } // namespace FileProcessingPck
 

@@ -708,6 +708,14 @@
     <namespace>iedgegui</namespace>
   </compound>
   <compound kind="file">
+    <name>CBitmapPreviewGeneratorComp.h</name>
+    <path>C:/Temp/Acfsln/Include/ifileproc/</path>
+    <filename>_c_bitmap_preview_generator_comp_8h</filename>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
+    <class kind="class">ifileproc::CBitmapPreviewGeneratorComp</class>
+    <namespace>ifileproc</namespace>
+  </compound>
+  <compound kind="file">
     <name>CComposedCopyFilesComp.h</name>
     <path>C:/Temp/Acfsln/Include/ifileproc/</path>
     <filename>_c_composed_copy_files_comp_8h</filename>
@@ -11576,6 +11584,7 @@
   <compound kind="namespace">
     <name>ifileproc</name>
     <filename>namespaceifileproc.html</filename>
+    <class kind="class">ifileproc::CBitmapPreviewGeneratorComp</class>
     <class kind="class">ifileproc::CComposedCopyFilesComp</class>
     <class kind="class">ifileproc::CCopyAppComp</class>
     <class kind="class">ifileproc::CCopyFilesTreeComp</class>
@@ -11593,6 +11602,116 @@
     <class kind="class">ifileproc::IFileConversion</class>
     <class kind="class">ifileproc::IFileNaming</class>
     <class kind="class">ifileproc::IFileNamingParams</class>
+  </compound>
+  <compound kind="class">
+    <name>ifileproc::CBitmapPreviewGeneratorComp</name>
+    <filename>classifileproc_1_1_c_bitmap_preview_generator_comp.html</filename>
+    <base>iproc::TSyncProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifileproc_1_1_c_bitmap_preview_generator_comp.html</anchorfile>
+      <anchor>a631c65eb61c159b14fbc919e59cb3146</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>a89a981e20fa8a2d09462bb32d933509e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iproc::TSyncProcessorWrap&lt; Base &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>ae7231378d49277f210d184366095ac75</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Interface</type>
+      <name>InterfaceType</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>aeb82b61f5619c5cfd1cfdefe18320b2d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Base</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3b21fc424b686e6bcf4537b75d89adf3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classifileproc_1_1_c_bitmap_preview_generator_comp.html</anchorfile>
+      <anchor>a456516179e64f1691590ad208bef3050</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSyncProcessorWrap</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a33b9338307557966bc5e0f87e375de37</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetProcessorState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>adc1704c346843a8bcaf57e055e902b71</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AreParamsAccepted</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>ae97572f44492b12a88117a22db51483d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a06c427a3f188b18011a3c842be354183</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>WaitTaskFinished</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a5e249d7e56f018e4e4f3ce872f1d622d</anchor>
+      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a0a5cd08f5800f4d01eeae041dd5a5aa7</anchor>
+      <arglist>(int taskId=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetReadyTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a7644b6e2edc8e32f3e4a9987a2a97ab9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTaskState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>aeea1cf5b8c422a59cb9c76550cb83a81</anchor>
+      <arglist>(int taskId=-1) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>ifileproc::CComposedCopyFilesComp</name>
@@ -11906,103 +12025,12 @@
       <anchor>ae92f67ceb959557a369a51b5540c98ae</anchor>
       <arglist></arglist>
     </member>
-    <member kind="typedef">
-      <type>ilog::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
-      <anchor>a89a981e20fa8a2d09462bb32d933509e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>iproc::TSyncProcessorWrap&lt; Base &gt;</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
-      <anchor>ae7231378d49277f210d184366095ac75</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Interface</type>
-      <name>InterfaceType</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
-      <anchor>aeb82b61f5619c5cfd1cfdefe18320b2d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Base</type>
-      <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>a3b21fc424b686e6bcf4537b75d89adf3</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
       <anchorfile>classifileproc_1_1_c_file_list_converter_comp.html</anchorfile>
       <anchor>ae6f3bf67ff0fa426a4aae8ad5c3da853</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TSyncProcessorWrap</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>a33b9338307557966bc5e0f87e375de37</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetProcessorState</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>adc1704c346843a8bcaf57e055e902b71</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>AreParamsAccepted</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>ae97572f44492b12a88117a22db51483d</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>BeginTask</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>a06c427a3f188b18011a3c842be354183</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>WaitTaskFinished</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>a5e249d7e56f018e4e4f3ce872f1d622d</anchor>
-      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>CancelTask</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>a0a5cd08f5800f4d01eeae041dd5a5aa7</anchor>
-      <arglist>(int taskId=-1)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetReadyTask</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>a7644b6e2edc8e32f3e4a9987a2a97ab9</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetTaskState</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>aeea1cf5b8c422a59cb9c76550cb83a81</anchor>
-      <arglist>(int taskId=-1) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>InitProcessor</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -30006,6 +30034,7 @@
     <name>Include/ifileproc</name>
     <path>C:/Temp/Acfsln/Include/ifileproc/</path>
     <filename>dir_5d85a8015148fee33a9f79f2a69171c7.html</filename>
+    <file>CBitmapPreviewGeneratorComp.h</file>
     <file>CComposedCopyFilesComp.h</file>
     <file>CCopyAppComp.h</file>
     <file>CCopyFilesTreeComp.h</file>
