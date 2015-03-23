@@ -31673,6 +31673,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
+      <anchor>a54789eec0a1c05ae5719c417fe2270af</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual ifile::IFileNameParam *</type>
       <name>CastFromModel</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
