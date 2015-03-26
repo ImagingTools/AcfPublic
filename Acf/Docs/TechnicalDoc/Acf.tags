@@ -64365,9 +64365,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
-      <name>OnKeyReleaseEvent</name>
+      <name>OnKeyPressEvent</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>ad686389fcd038311f1826e83743b21a7</anchor>
+      <anchor>a561e2dd5d45414bf990fdba754cec60a</anchor>
       <arglist>(QKeyEvent *eventPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -64421,9 +64421,9 @@
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>keyReleaseEvent</name>
+      <name>keyPressEvent</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>a44267df68b56bd67b9f9e39074b9f136</anchor>
+      <anchor>a8eee5454fa4198a5c27ddf7d8c554880</anchor>
       <arglist>(QKeyEvent *event)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
