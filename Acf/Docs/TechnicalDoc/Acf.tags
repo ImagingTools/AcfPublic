@@ -46700,6 +46700,13 @@
       <anchor>a00c5aee16212fa2937f7a6d7670a5796</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>adccb3305428d7d058282fe4cb54d8e47</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>OnModelChanged</name>
@@ -64293,6 +64300,20 @@
       <anchor>ac1b8c003b4521efc9da19589949faec3</anchor>
       <arglist>(IShapeStatusInfo *shapeStatusInfoPtr)</arglist>
     </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsFullScreenMode</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>a25513c912a9558abdb0ffa4731225ec9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetFullScreenMode</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>a500fdff5123071a74315fd1a7976d83c</anchor>
+      <arglist>(bool isFullScreen)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const CViewport &amp;</type>
       <name>GetView</name>
@@ -64334,20 +64355,6 @@
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
       <anchor>af1d787905207f1c2243074aff63d06de</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>IsFullScreenMode</name>
-      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>a25513c912a9558abdb0ffa4731225ec9</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>SetFullScreenMode</name>
-      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>a500fdff5123071a74315fd1a7976d83c</anchor>
-      <arglist>(bool isFullScreen)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -64418,13 +64425,6 @@
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
       <anchor>a40493b9b08232ae94350dd9eaeed6a59</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>keyPressEvent</name>
-      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>a8eee5454fa4198a5c27ddf7d8c554880</anchor>
-      <arglist>(QKeyEvent *event)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>

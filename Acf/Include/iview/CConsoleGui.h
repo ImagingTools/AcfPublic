@@ -26,9 +26,7 @@
 
 // ACF includes
 #include "iqtgui/CHierarchicalCommand.h"
-
 #include "ibase/ICommandsProvider.h"
-
 #include "iview/CConsoleBase.h"
 #include "iview/CViewport.h"
 #include "iview/IShapeStatusInfo.h"
@@ -47,7 +45,7 @@ namespace iview
 {
 
 
-class CConsoleGui: 
+class CConsoleGui:
 			public iview::CConsoleBase,
 			public ibase::ICommandsProvider
 {
@@ -90,6 +88,9 @@ public:
 	*/
 	void SetShapeStatusInfo(IShapeStatusInfo* shapeStatusInfoPtr);
 
+	bool IsFullScreenMode() const;
+	void SetFullScreenMode(bool isFullScreen);	
+
 	// reimplemented (iview::CConsoleBase)
 	virtual const CViewport& GetView() const;
 	virtual CViewport& GetViewRef();
@@ -128,8 +129,6 @@ Q_SIGNALS:
 protected:
 	void UpdateZoomInOutState();
 	void UpdateScrollbarsValues();
-	bool IsFullScreenMode() const;
-	void SetFullScreenMode(bool isFullScreen);	
 
 	// events
 	virtual bool OnWheelEvent(QWheelEvent* eventPtr);
@@ -144,9 +143,6 @@ protected:
 	virtual bool OnSelectChange(const iview::IShapeView& view, const istd::CIndex2d& position, const iview::IInteractiveShape& shape, bool state);
 	virtual bool OnViewMouseButton(const iview::IShapeView& view, const istd::CIndex2d& position, Qt::MouseButton buttonType, bool state, const iview::IInteractiveShape* shapePtr);
 	virtual void OnBoundingBoxChanged();
-
-	// reimplemented Qt (QWidget)
-	void keyPressEvent(QKeyEvent* event);	
 	
 	// reimplemented (QObject)
 	virtual bool eventFilter(QObject* sourcePtr, QEvent* eventPtr);	
