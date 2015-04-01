@@ -35419,13 +35419,6 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiloggui_1_1_c_text_log_gui_comp.html</anchorfile>
-      <anchor>adee7ecc861c2e63fae428974dfea35bf</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>OnGuiRetranslate</name>
       <anchorfile>classiloggui_1_1_c_text_log_gui_comp.html</anchorfile>
       <anchor>a765f58a84765d24a57ea60735ff517a3</anchor>
