@@ -44646,6 +44646,13 @@
       <anchor>ab121962cf9345f48d3aa1deedc65422d</anchor>
       <arglist>(bool state)</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetDisableUiIfReadOnly</name>
+      <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
+      <anchor>a9e8f9d7bbc660a4dd26eb1aa0240e1d9</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>DrawBitmap</name>
@@ -45244,6 +45251,13 @@
       <name>SetReadOnly</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
       <anchor>ab121962cf9345f48d3aa1deedc65422d</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetDisableUiIfReadOnly</name>
+      <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
+      <anchor>a9e8f9d7bbc660a4dd26eb1aa0240e1d9</anchor>
       <arglist>(bool state)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -47574,6 +47588,13 @@
       <name>SetReadOnly</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
       <anchor>ab121962cf9345f48d3aa1deedc65422d</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetDisableUiIfReadOnly</name>
+      <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
+      <anchor>a9e8f9d7bbc660a4dd26eb1aa0240e1d9</anchor>
       <arglist>(bool state)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -51509,6 +51530,13 @@
       <anchor>ab121962cf9345f48d3aa1deedc65422d</anchor>
       <arglist>(bool state)</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetDisableUiIfReadOnly</name>
+      <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
+      <anchor>a9e8f9d7bbc660a4dd26eb1aa0240e1d9</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual istd::IInformationProvider *</type>
       <name>CastFromModel</name>
@@ -51804,6 +51832,13 @@
       <name>SetReadOnly</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
       <anchor>ab121962cf9345f48d3aa1deedc65422d</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetDisableUiIfReadOnly</name>
+      <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
+      <anchor>a9e8f9d7bbc660a4dd26eb1aa0240e1d9</anchor>
       <arglist>(bool state)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -52406,6 +52441,13 @@
       <anchor>afee371d7a2c525948e04be390c07076f</anchor>
       <arglist>() const</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetDisableUiIfReadOnly</name>
+      <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
+      <anchor>a9e8f9d7bbc660a4dd26eb1aa0240e1d9</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual Model *</type>
       <name>CastFromModel</name>
@@ -52579,6 +52621,13 @@
       <name>SetReadOnly</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
       <anchor>ab121962cf9345f48d3aa1deedc65422d</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetDisableUiIfReadOnly</name>
+      <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
+      <anchor>a9e8f9d7bbc660a4dd26eb1aa0240e1d9</anchor>
       <arglist>(bool state)</arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -52764,6 +52813,13 @@
       <name>SetReadOnly</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
       <anchor>ab121962cf9345f48d3aa1deedc65422d</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetDisableUiIfReadOnly</name>
+      <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
+      <anchor>a9e8f9d7bbc660a4dd26eb1aa0240e1d9</anchor>
       <arglist>(bool state)</arglist>
     </member>
     <member kind="function">
@@ -53442,6 +53498,13 @@
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
       <anchor>afee371d7a2c525948e04be390c07076f</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetDisableUiIfReadOnly</name>
+      <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
+      <anchor>a9e8f9d7bbc660a4dd26eb1aa0240e1d9</anchor>
+      <arglist>(bool state)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>bool</type>
