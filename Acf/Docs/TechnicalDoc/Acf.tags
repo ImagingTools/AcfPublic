@@ -2159,6 +2159,7 @@
     <includes id="_c_memory_write_archive_8h" name="CMemoryWriteArchive.h" local="yes" imported="no">iser/CMemoryWriteArchive.h</includes>
     <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <includes id="_i_runtime_status_provider_8h" name="IRuntimeStatusProvider.h" local="yes" imported="no">ibase/IRuntimeStatusProvider.h</includes>
     <class kind="class">ifile::CAutoPersistenceComp</class>
     <namespace>ifile</namespace>
   </compound>
@@ -2229,6 +2230,8 @@
     <filename>_c_file_system_info_provider_comp_8h</filename>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="yes" imported="no">ilog/TLoggerCompWrap.h</includes>
     <includes id="_i_file_system_info_provider_8h" name="IFileSystemInfoProvider.h" local="yes" imported="no">ifile/IFileSystemInfoProvider.h</includes>
+    <includes id="_i_runtime_status_provider_8h" name="IRuntimeStatusProvider.h" local="yes" imported="no">ibase/IRuntimeStatusProvider.h</includes>
+    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <class kind="class">ifile::CFileSystemInfoProviderComp</class>
     <class kind="struct">ifile::CFileSystemInfoProviderComp::DriveInfo</class>
     <namespace>ifile</namespace>
@@ -28751,6 +28754,13 @@
       <anchor>a2ac9564356038249c50a827770eafd7fa6b4043d38879af0b6100e92c3523bff2</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_RUNTIME_STATUS</name>
+      <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
+      <anchor>a2ac9564356038249c50a827770eafd7fa4c9b9d65d73680c6943008122b3351b2</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -29654,7 +29664,22 @@
     <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifile::IFileSystemInfoProvider</base>
     <base virtualness="virtual">iprm::IOptionsList</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <class kind="struct">ifile::CFileSystemInfoProviderComp::DriveInfo</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>ModelId</name>
+      <anchorfile>classifile_1_1_c_file_system_info_provider_comp.html</anchorfile>
+      <anchor>abd8b0d606a042a2a64da1af5ced965e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_RUNTIME_STATUS</name>
+      <anchorfile>classifile_1_1_c_file_system_info_provider_comp.html</anchorfile>
+      <anchor>abd8b0d606a042a2a64da1af5ced965e1aeb52c87fe01df77df9121dc75780f7df</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -29733,10 +29758,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>QVector&lt; DriveInfo &gt;</type>
+      <type>std::vector&lt; DriveInfo &gt;</type>
       <name>DriveInfos</name>
       <anchorfile>classifile_1_1_c_file_system_info_provider_comp.html</anchorfile>
-      <anchor>a2d00cd38b7d17d3e0b223dcb03439b27</anchor>
+      <anchor>ad527854b6b26adaaafa659c6e95e076a</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -29752,6 +29777,13 @@
       <anchorfile>classifile_1_1_c_file_system_info_provider_comp.html</anchorfile>
       <anchor>a7e9b48a5b220460d99d06d3446183883</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classifile_1_1_c_file_system_info_provider_comp.html</anchorfile>
+      <anchor>a8f9dd825bd252e809d009e7f19e4367d</anchor>
+      <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -56994,13 +57026,6 @@
       <anchorfile>classistd_1_1_c_general_time_stamp.html</anchorfile>
       <anchor>a71d69301e765f85dfa565d218400821d</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="variable" protection="protected" static="yes">
-      <type>static ChangeSet</type>
-      <name>s_startChangeSet</name>
-      <anchorfile>classistd_1_1_c_general_time_stamp.html</anchorfile>
-      <anchor>a89cfd611e097e05f5114905d069f0778</anchor>
-      <arglist></arglist>
     </member>
     <member kind="enumeration">
       <type></type>

@@ -25,6 +25,7 @@
 
 // Qt includes
 #include <QtCore/QtGlobal>
+#include <QtCore/QDebug>
 #if QT_VERSION >= 0x050000
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QVBoxLayout>
@@ -316,6 +317,9 @@ void CComposedParamsSetGuiComp::OnGuiModelAttached()
 			if (paramId != "*"){
 				iser::ISerializable* parameterPtr = paramsSetPtr->GetEditableParameter(paramId);
 				parameterModelPtr = dynamic_cast<imod::IModel*>(parameterPtr);
+				if (parameterModelPtr == NULL){
+					qDebug() << "Parameter with ID: " << paramId << " doesn't support imod::IModel interface and cannot be connected to the UI editor";
+				}
 
 				keepVisible = (parameterPtr != NULL);
 			}
