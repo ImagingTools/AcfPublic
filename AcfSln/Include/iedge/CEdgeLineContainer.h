@@ -83,6 +83,20 @@ protected:
 };
 
 
+inline void CEdgeLineContainer::Reserve(int count)
+{
+	if (count >= 0)
+		m_items.reserve(count);
+}
+
+
+inline void CEdgeLineContainer::Resize(int count)
+{
+	if (count >= 0)
+		m_items.resize(count);
+}
+
+
 } // namespace iedge
 
 

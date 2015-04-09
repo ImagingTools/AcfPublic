@@ -26,10 +26,8 @@
 
 // ACF includes
 #include "istd/IInformationProvider.h"
-#include "iinsp/TSupplierCompWrap.h"
 #include "icmm/CHsv.h"
-
-// ACF-Solutions includes
+#include "iinsp/TInspectionSupplierCompWrap.h"
 #include "imeas/IDataSequenceProvider.h"
 #include "imeas/IDataSequenceStatisticsProcessor.h"
 #include "imeas/INumericValueProvider.h"
@@ -49,12 +47,12 @@ namespace iipr
 	2. istd::IInformationProvider - Comparison status provider.
 */
 class CColorPatternComparatorComp:
-			public iinsp::TSupplierCompWrap<imeas::CSimpleNumericValue>,
+			public iinsp::TInspectionSupplierCompWrap<imeas::CSimpleNumericValue>,
 			virtual public imeas::INumericValueProvider,
 			virtual public istd::IInformationProvider
 {
 public:
-	typedef iinsp::TSupplierCompWrap<imeas::CSimpleNumericValue> BaseClass;
+	typedef iinsp::TInspectionSupplierCompWrap<imeas::CSimpleNumericValue> BaseClass;
 
 	I_BEGIN_COMPONENT(CColorPatternComparatorComp);
 		I_REGISTER_INTERFACE(imeas::INumericValueProvider);

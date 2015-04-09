@@ -198,6 +198,8 @@ TSupplierGuiCompBase<UI, WidgetType>::TSupplierGuiCompBase()
 	:m_paramsObserver(this),
 	m_areParamsEditable(false)
 {
+	BaseClass::SetStatusIcon(QIcon(":/Icons/StateUnknown"));
+	BaseClass::SetStatusText("Not yet processed");
 }
 
 

@@ -56,7 +56,7 @@ int CEdgeBasedFeaturesSupplierComp::GetCalibrationsCount() const
 {
 	const ProductType* productPtr = GetWorkProduct();
 	if (productPtr != NULL){
-		return productPtr->second.count();
+		return productPtr->second.size();
 	}
 
 	return 0;
@@ -69,7 +69,7 @@ const i2d::ICalibration2d* CEdgeBasedFeaturesSupplierComp::GetCalibration(int ca
 
 	const ProductType* productPtr = GetWorkProduct();
 	Q_ASSERT(productPtr != NULL);
-	Q_ASSERT(calibrationIndex < productPtr->second.size());
+	Q_ASSERT(calibrationIndex < int(productPtr->second.size()));
 
 	return &productPtr->second.at(calibrationIndex);
 }
@@ -80,8 +80,8 @@ const i2d::ICalibration2d* CEdgeBasedFeaturesSupplierComp::GetCalibration(int ca
 const i2d::ICalibration2d* CEdgeBasedFeaturesSupplierComp::GetCalibration() const
 {
 	const ProductType* productPtr = GetWorkProduct();
-	if ((productPtr != NULL) && !productPtr->second.isEmpty()){
-		return &productPtr->second.first();
+	if ((productPtr != NULL) && !productPtr->second.empty()){
+		return &productPtr->second[0];
 	}
 
 	return NULL;
@@ -148,7 +148,7 @@ QString CEdgeBasedFeaturesSupplierComp::GetInformationDescription() const
 		return m_slaveInformationProviderCompPtr->GetInformationDescription();
 	}
 
-	return "";
+	return QString();
 }
 
 
@@ -158,7 +158,7 @@ QString CEdgeBasedFeaturesSupplierComp::GetInformationSource() const
 		return m_slaveInformationProviderCompPtr->GetInformationSource();
 	}
 
-	return "";
+	return QString();
 }
 
 
@@ -285,6 +285,11 @@ int CEdgeBasedFeaturesSupplierComp::ProduceObject(ProductType& result) const
 								searchResultText,
 								multiSearchParamsManagerPtr->GetParamsSetName(searchIndex));
 					AddMessage(message);
+
+					// add group error message
+					if (m_defaultInformationCategory == istd::IInformationProvider::IC_ERROR){
+						AddGroupError();
+					}
 				}
 			}
 			else{ // Single search
@@ -350,6 +355,12 @@ int CEdgeBasedFeaturesSupplierComp::ProduceObject(ProductType& result) const
 							searchResultText,
 							sourceName);
 				AddMessage(message);
+
+				// add group error message
+				if (m_defaultInformationCategory == istd::IInformationProvider::IC_ERROR){
+					AddGroupError();
+				}
+
 			}
 
 			// Update calibration list
