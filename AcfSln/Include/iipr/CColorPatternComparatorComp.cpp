@@ -309,11 +309,6 @@ int CColorPatternComparatorComp::ProduceObject(ProductType& result) const
 		
 	AddMessage(message);	
 
-	// add group error message
-	if (!m_isColorPatternMatched){
-		AddGroupError();
-	}
-
 	return WS_OK;
 }
 

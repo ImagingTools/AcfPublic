@@ -285,11 +285,6 @@ int CEdgeBasedFeaturesSupplierComp::ProduceObject(ProductType& result) const
 								searchResultText,
 								multiSearchParamsManagerPtr->GetParamsSetName(searchIndex));
 					AddMessage(message);
-
-					// add group error message
-					if (m_defaultInformationCategory == istd::IInformationProvider::IC_ERROR){
-						AddGroupError();
-					}
 				}
 			}
 			else{ // Single search
@@ -355,12 +350,6 @@ int CEdgeBasedFeaturesSupplierComp::ProduceObject(ProductType& result) const
 							searchResultText,
 							sourceName);
 				AddMessage(message);
-
-				// add group error message
-				if (m_defaultInformationCategory == istd::IInformationProvider::IC_ERROR){
-					AddGroupError();
-				}
-
 			}
 
 			// Update calibration list
