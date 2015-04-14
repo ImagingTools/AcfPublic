@@ -27,6 +27,7 @@
 #include <QtCore/QVector>
 
 // ACF includes
+#include "istd/istd.h"
 #include "imath/CSplineSegmentFunction.h"
 
 

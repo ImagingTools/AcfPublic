@@ -28,7 +28,6 @@
 #include <QtCore/QByteArray>
 
 // ACF includes
-#include "istd/istd.h"
 #include "istd/IChangeable.h"
 
 

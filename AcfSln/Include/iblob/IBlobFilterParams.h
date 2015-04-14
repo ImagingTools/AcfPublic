@@ -27,6 +27,7 @@
 #include <QtCore/QStringList>
 
 // ACF includes
+#include <istd/istd.h>
 #include <istd/TRange.h>
 #include <iser/ISerializable.h>
 

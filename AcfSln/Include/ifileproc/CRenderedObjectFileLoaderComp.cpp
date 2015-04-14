@@ -24,6 +24,7 @@
 
 
 // Qt includes
+#include <QtCore/QString>
 #include <QtCore/QFileInfo>
 
 // ACF includes
@@ -147,8 +148,8 @@ int CRenderedObjectFileLoaderComp::LoadFromFile(
 
 
 int CRenderedObjectFileLoaderComp::SaveToFile(
-			const istd::IChangeable& data,
-			const QString& filePath,
+			const istd::IChangeable& /*data*/,
+			const QString& /*filePath*/,
 			ibase::IProgressManager* /*progressManagerPtr*/) const
 {
 	return ifile::IFilePersistence::OS_FAILED;

@@ -589,7 +589,6 @@
     <name>iattr.h</name>
     <path>C:/Temp/Acf/Include/iattr/</path>
     <filename>iattr_8h</filename>
-    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <includes id="iser_8h" name="iser.h" local="yes" imported="no">iser/iser.h</includes>
     <namespace>iattr</namespace>
   </compound>
@@ -1659,7 +1658,6 @@
     <name>IRegistriesManager.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_i_registries_manager_8h</filename>
-    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <includes id="_i_changeable_8h" name="IChangeable.h" local="yes" imported="no">istd/IChangeable.h</includes>
     <class kind="class">icomp::IRegistriesManager</class>
     <namespace>icomp</namespace>
@@ -1680,7 +1678,6 @@
     <name>IRegistryElement.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_i_registry_element_8h</filename>
-    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
@@ -3029,6 +3026,7 @@
     <name>CVarMatrix.h</name>
     <path>C:/Temp/Acf/Include/imath/</path>
     <filename>_c_var_matrix_8h</filename>
+    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <includes id="_t_array_8h" name="TArray.h" local="yes" imported="no">istd/TArray.h</includes>
     <includes id="_c_index2d_8h" name="CIndex2d.h" local="yes" imported="no">istd/CIndex2d.h</includes>
     <class kind="class">imath::CVarMatrix</class>
@@ -3252,7 +3250,6 @@
     <name>TWeightedNumber.h</name>
     <path>C:/Temp/Acf/Include/imath/</path>
     <filename>_t_weighted_number_8h</filename>
-    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <class kind="class">imath::TWeightedNumber</class>
     <namespace>imath</namespace>
     <member kind="typedef">
@@ -5126,7 +5123,6 @@
     <name>CArchiveTag.h</name>
     <path>C:/Temp/Acf/Include/iser/</path>
     <filename>_c_archive_tag_8h</filename>
-    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <class kind="class">iser::CArchiveTag</class>
     <namespace>iser</namespace>
   </compound>
@@ -5312,7 +5308,6 @@
     <name>IArchive.h</name>
     <path>C:/Temp/Acf/Include/iser/</path>
     <filename>_i_archive_8h</filename>
-    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
     <class kind="class">iser::IArchive</class>
     <namespace>iser</namespace>
@@ -5369,6 +5364,7 @@
     <name>TVersionInfoSerializer.h</name>
     <path>C:/Temp/Acf/Include/iser/</path>
     <filename>_t_version_info_serializer_8h</filename>
+    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <includes id="_i_archive_8h" name="IArchive.h" local="yes" imported="no">iser/IArchive.h</includes>
     <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
     <class kind="class">iser::TVersionInfoSerializer</class>
@@ -5412,7 +5408,6 @@
     <name>CBitManip.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_c_bit_manip_8h</filename>
-    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <class kind="class">istd::CBitManip</class>
     <namespace>istd</namespace>
   </compound>
@@ -5452,7 +5447,6 @@
     <name>CCrcCalculator.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_c_crc_calculator_8h</filename>
-    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <class kind="class">istd::CCrcCalculator</class>
     <namespace>istd</namespace>
   </compound>
@@ -5583,7 +5577,6 @@
     <name>IPolymorphic.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_i_polymorphic_8h</filename>
-    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <class kind="class">istd::IPolymorphic</class>
     <namespace>istd</namespace>
   </compound>
@@ -5724,6 +5717,7 @@
     <name>TDelPtr.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_t_del_ptr_8h</filename>
+    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <includes id="_t_pointer_base_8h" name="TPointerBase.h" local="yes" imported="no">istd/TPointerBase.h</includes>
     <class kind="class">istd::TDelPtr</class>
     <namespace>istd</namespace>
@@ -5732,7 +5726,6 @@
     <name>THierarchicalBase.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_t_hierarchical_base_8h</filename>
-    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <includes id="_t_i_hierarchical_8h" name="TIHierarchical.h" local="yes" imported="no">istd/TIHierarchical.h</includes>
     <includes id="_t_change_delegator_8h" name="TChangeDelegator.h" local="yes" imported="no">istd/TChangeDelegator.h</includes>
     <class kind="class">istd::THierarchicalBase</class>
@@ -5787,7 +5780,6 @@
     <name>TIndex.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_t_index_8h</filename>
-    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <class kind="class">istd::TIndex</class>
     <namespace>istd</namespace>
   </compound>
@@ -5795,6 +5787,7 @@
     <name>TOptDelPtr.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_t_opt_del_ptr_8h</filename>
+    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <includes id="_t_pointer_base_8h" name="TPointerBase.h" local="yes" imported="no">istd/TPointerBase.h</includes>
     <class kind="class">istd::TOptDelPtr</class>
     <namespace>istd</namespace>
@@ -5813,7 +5806,6 @@
     <name>TPointerBase.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_t_pointer_base_8h</filename>
-    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <class kind="class">istd::DefaultAccessor</class>
     <class kind="class">istd::ArrayAccessor</class>
     <class kind="class">istd::TPointerBase</class>
@@ -5832,7 +5824,6 @@
     <name>TRange.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_t_range_8h</filename>
-    <includes id="istd_8h" name="istd.h" local="yes" imported="no">istd/istd.h</includes>
     <class kind="class">istd::TRange</class>
     <namespace>istd</namespace>
     <member kind="typedef">

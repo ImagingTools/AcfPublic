@@ -24,9 +24,6 @@
 #define imath_TWeightedNumber_included
 
 
-#include "istd/istd.h"
-
-
 namespace imath
 {
 

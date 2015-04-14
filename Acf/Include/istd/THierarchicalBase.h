@@ -24,8 +24,6 @@
 #define istd_THierarchicalBase_included
 
 
-#include "istd/istd.h"
-
 #include "istd/TIHierarchical.h"
 #include "istd/TChangeDelegator.h"
 
