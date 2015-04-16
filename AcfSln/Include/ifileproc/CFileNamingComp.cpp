@@ -38,10 +38,17 @@ namespace ifileproc
 
 QString CFileNamingComp::CalculateFileName(
 			const QString& inputFilePath,
+			const QString& outputDirectoryPath,
 			const ifileproc::IFileNamingParams* fileNamingParamsPtr) const
 {
-	if (!m_directoryPathCompPtr.IsValid()){
-		return QString();
+	QString targetDirectoryPath = outputDirectoryPath;
+
+	if (targetDirectoryPath.isEmpty()){
+		if (!m_directoryPathCompPtr.IsValid()){
+			return QString();
+		}
+
+		targetDirectoryPath = m_directoryPathCompPtr->GetPath();
 	}
 
 	QFileInfo inputFileInfo(inputFilePath);
@@ -82,10 +89,8 @@ QString CFileNamingComp::CalculateFileName(
 		newFileName += QString(".") + outputExtension;
 	}
 
-	QString outputDirectoryPath = m_directoryPathCompPtr->GetPath();
-
-	if (!outputDirectoryPath.isEmpty()){
-		QDir outputDirectory(outputDirectoryPath);
+	if (!targetDirectoryPath.isEmpty()){
+		QDir outputDirectory(targetDirectoryPath);
 
 		QString outputFilePath = outputDirectory.absoluteFilePath(newFileName);
 

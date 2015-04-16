@@ -12049,8 +12049,8 @@
       <type>virtual QString</type>
       <name>CalculateFileName</name>
       <anchorfile>classifileproc_1_1_c_file_naming_comp.html</anchorfile>
-      <anchor>a1aadb0661765b87d3370bde4ca3d539d</anchor>
-      <arglist>(const QString &amp;inputFileName, const ifileproc::IFileNamingParams *fileNamingParamsPtr) const </arglist>
+      <anchor>ac0037c8f1d0a8dc62dc0d05b75424fe8</anchor>
+      <arglist>(const QString &amp;inputFileName, const QString &amp;outputDirectoryPath, const ifileproc::IFileNamingParams *fileNamingParamsPtr) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12420,8 +12420,8 @@
       <type>virtual QString</type>
       <name>CalculateFileName</name>
       <anchorfile>classifileproc_1_1_i_file_naming.html</anchorfile>
-      <anchor>a2304090910d5324a596cd9e2388c8f9a</anchor>
-      <arglist>(const QString &amp;inputFileName, const ifileproc::IFileNamingParams *fileNamingParamsPtr) const =0</arglist>
+      <anchor>aedbe3fea423613386d1147f1407635f5</anchor>
+      <arglist>(const QString &amp;inputFileName, const QString &amp;outputDirectoryPath, const ifileproc::IFileNamingParams *fileNamingParamsPtr) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">

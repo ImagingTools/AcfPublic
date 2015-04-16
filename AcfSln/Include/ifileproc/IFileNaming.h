@@ -46,6 +46,7 @@ public:
 	*/
 	virtual QString CalculateFileName(
 				const QString& inputFileName,
+				const QString& outputDirectoryPath,
 				const ifileproc::IFileNamingParams* fileNamingParamsPtr) const = 0;
 };
 
