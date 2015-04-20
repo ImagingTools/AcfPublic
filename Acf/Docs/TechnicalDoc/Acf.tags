@@ -3621,9 +3621,11 @@
     <name>CSelectionParam.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_selection_param_8h</filename>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <class kind="class">iprm::CSelectionParam</class>
+    <class kind="class">iprm::CSelectionParam::ConstraintsObserver</class>
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
@@ -42064,6 +42066,7 @@
     <name>iprm::CSelectionParam</name>
     <filename>classiprm_1_1_c_selection_param.html</filename>
     <base virtualness="virtual">iprm::ISelectionParam</base>
+    <class kind="class">iprm::CSelectionParam::ConstraintsObserver</class>
     <member kind="function">
       <type></type>
       <name>CSelectionParam</name>
@@ -42091,6 +42094,13 @@
       <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
       <anchor>a25c45d6ac68349909993e7f2b7e08b23</anchor>
       <arglist>(const QByteArray &amp;selectedOptionId)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetOptionIndexById</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>af619e54ee0dfe4aa53e5b9ed02bd7998</anchor>
+      <arglist>(const QByteArray &amp;optionId) const </arglist>
     </member>
     <member kind="function">
       <type>ISelectionParam *</type>
@@ -42140,6 +42150,81 @@
       <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
       <anchor>aa422b035a4b1f4c7dd838f6963c22b38</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprm::CSelectionParam::ConstraintsObserver</name>
+    <filename>classiprm_1_1_c_selection_param_1_1_constraints_observer.html</filename>
+    <base>TSingleModelObserverBase&lt; iprm::IOptionsList &gt;</base>
+    <member kind="function">
+      <type></type>
+      <name>ConstraintsObserver</name>
+      <anchorfile>classiprm_1_1_c_selection_param_1_1_constraints_observer.html</anchorfile>
+      <anchor>aa7714cebfe4606a86e6d7e0f5aa8964c</anchor>
+      <arglist>(CSelectionParam &amp;parent)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classiprm_1_1_c_selection_param_1_1_constraints_observer.html</anchorfile>
+      <anchor>aa4a2293b25e7f61926e9c2d0f2485dad</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSingleModelObserverBase</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>iprm::IOptionsList *</type>
+      <name>GetObjectPtr</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>AttachOrSetObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
+      <arglist>(iprm::IOptionsList *objectPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnModelAttached</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a4b565abfc347af34875a8d12063acd71</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnModelDetached</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>afd910059cfc9f6cc7f92d524f1252667</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSingleModelObserverBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a4183ada6ca430e22ee43b62c1e03ef5d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iprm::IOptionsList</type>
+      <name>ModelType</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual iprm::IOptionsList *</type>
+      <name>CastFromModel</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
+      <arglist>(imod::IModel *modelPtr) const</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -54192,47 +54277,12 @@
       <anchor>a27acfeb18c4d1c113279e09e215e2cc7</anchor>
       <arglist></arglist>
     </member>
-    <member kind="typedef">
-      <type>CSingleModelObserverBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a4183ada6ca430e22ee43b62c1e03ef5d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>iprm::IOptionsList</type>
-      <name>ModelType</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function">
       <type></type>
       <name>COptionsListEditorGuiComp</name>
       <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
       <anchor>ac5852635f05c224d30456e06161afe0a</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TSingleModelObserverBase</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>iprm::IOptionsList *</type>
-      <name>GetObjectPtr</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>AttachOrSetObject</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
-      <arglist>(iprm::IOptionsList *objectPtr)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -54345,13 +54395,6 @@
       <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
       <anchor>a7ba77be3c64c199cd9fbc71f9c8ad0aa</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual iprm::IOptionsList *</type>
-      <name>CastFromModel</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
-      <arglist>(imod::IModel *modelPtr) const</arglist>
     </member>
   </compound>
   <compound kind="class">
