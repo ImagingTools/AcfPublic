@@ -23,7 +23,7 @@
 #include "iipr/CSingleFeatureConsumer.h"
 
 
-// IACF includes
+// ACF-Solutions includes
 #include "imeas/INumericValue.h"
 
 
@@ -83,11 +83,15 @@ bool CSingleFeatureConsumer::AddFeature(const imeas::INumericValue* featurePtr, 
 				
 					if (featureWeight > currentWeight){
 						m_featurePtr.SetPtr(featurePtr);
+						break;
 					}
 				}
-				else{
-					delete featurePtr;
-				}
+
+				delete featurePtr;
+				break;
+
+			default:
+				delete featurePtr;
 				break;
 		}
 	}
