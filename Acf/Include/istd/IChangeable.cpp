@@ -32,20 +32,29 @@ IChangeable::ChangeSet::ChangeSet()
 }
 
 
-IChangeable::ChangeSet::ChangeSet(int id1)
+IChangeable::ChangeSet::ChangeSet(const QString& description)
+:	m_description(description)
+{
+}
+
+
+IChangeable::ChangeSet::ChangeSet(int id1, const QString& description)
+:	m_description(description)
 {
 	m_ids << id1;
 }
 
 
-IChangeable::ChangeSet::ChangeSet(int id1, int id2)
+IChangeable::ChangeSet::ChangeSet(int id1, int id2, const QString& description)
+:	m_description(description)
 {
 	m_ids << id1;
 	m_ids << id2;
 }
 
 
-IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3)
+IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, const QString& description)
+:	m_description(description)
 {
 	m_ids << id1;
 	m_ids << id2;
@@ -53,7 +62,8 @@ IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3)
 }
 
 
-IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, int id4)
+IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, int id4, const QString& description)
+:	m_description(description)
 {
 	m_ids << id1;
 	m_ids << id2;
@@ -62,7 +72,8 @@ IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, int id4)
 }
 
 
-IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, int id4, int id5)
+IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, int id4, int id5, const QString& description)
+:	m_description(description)
 {
 	m_ids << id1;
 	m_ids << id2;
@@ -72,7 +83,8 @@ IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, int id4, int id5)
 }
 
 
-IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, int id4, int id5, int id6)
+IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, int id4, int id5, int id6, const QString& description)
+:	m_description(description)
 {
 	m_ids << id1;
 	m_ids << id2;
@@ -83,7 +95,8 @@ IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, int id4, int id5, i
 }
 
 
-IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, int id4, int id5, int id6, int id7)
+IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, int id4, int id5, int id6, int id7, const QString& description)
+:	m_description(description)
 {
 	m_ids << id1;
 	m_ids << id2;
@@ -95,7 +108,8 @@ IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, int id4, int id5, i
 }
 
 
-IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, int id4, int id5, int id6, int id7, int id8)
+IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, int id4, int id5, int id6, int id7, int id8, const QString& description)
+:	m_description(description)
 {
 	m_ids << id1;
 	m_ids << id2;
@@ -108,7 +122,8 @@ IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, int id4, int id5, i
 }
 
 
-IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, int id4, int id5, int id6, int id7, int id8, int id9)
+IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, int id4, int id5, int id6, int id7, int id8, int id9, const QString& description)
+:	m_description(description)
 {
 	m_ids << id1;
 	m_ids << id2;
@@ -122,7 +137,8 @@ IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, int id4, int id5, i
 }
 
 
-IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, int id4, int id5, int id6, int id7, int id8, int id9, int id10)
+IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, int id4, int id5, int id6, int id7, int id8, int id9, int id10, const QString& description)
+:	m_description(description)
 {
 	m_ids << id1;
 	m_ids << id2;
@@ -192,6 +208,13 @@ IChangeable::ChangeSet IChangeable::ChangeSet::operator+(const ChangeSet& change
 	retVal.m_ids += m_ids;
 	retVal.m_ids += changeSet.m_ids;
 
+	if (m_description.isEmpty()){
+		retVal.m_description = changeSet.m_description;
+	}
+	else{
+		retVal.m_description = m_description;
+	}
+
 	return retVal;
 }
 
@@ -207,6 +230,10 @@ IChangeable::ChangeSet& IChangeable::ChangeSet::operator+=(int changeId)
 IChangeable::ChangeSet& IChangeable::ChangeSet::operator+=(const ChangeSet& changeSet)
 {
 	m_ids += changeSet.m_ids;
+
+	if (m_description.isEmpty()){
+		m_description = changeSet.m_description;
+	}
 
 	return *this;
 }

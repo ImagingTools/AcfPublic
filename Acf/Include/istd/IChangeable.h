@@ -25,6 +25,7 @@
 
 
 // Qt includes
+#include <QtCore/QString>
 #include <QtCore/QSet>
 
 // ACF includes
@@ -52,16 +53,17 @@ public:
 	{
 	public:
 		ChangeSet();
-		explicit ChangeSet(int id1);
-		ChangeSet(int id1, int id2);
-		ChangeSet(int id1, int id2, int id3);
-		ChangeSet(int id1, int id2, int id3, int id4);
-		ChangeSet(int id1, int id2, int id3, int id4, int id5);
-		ChangeSet(int id1, int id2, int id3, int id4, int id5, int id6);
-		ChangeSet(int id1, int id2, int id3, int id4, int id5, int id6, int id7);
-		ChangeSet(int id1, int id2, int id3, int id4, int id5, int id6, int id7, int id8);
-		ChangeSet(int id1, int id2, int id3, int id4, int id5, int id6, int id7, int id8, int id9);
-		ChangeSet(int id1, int id2, int id3, int id4, int id5, int id6, int id7, int id8, int id9, int id10);
+		explicit ChangeSet(const QString& description);
+		explicit ChangeSet(int id1, const QString& description = "");
+		ChangeSet(int id1, int id2, const QString& description = "");
+		ChangeSet(int id1, int id2, int id3, const QString& description = "");
+		ChangeSet(int id1, int id2, int id3, int id4, const QString& description = "");
+		ChangeSet(int id1, int id2, int id3, int id4, int id5, const QString& description = "");
+		ChangeSet(int id1, int id2, int id3, int id4, int id5, int id6, const QString& description = "");
+		ChangeSet(int id1, int id2, int id3, int id4, int id5, int id6, int id7, const QString& description = "");
+		ChangeSet(int id1, int id2, int id3, int id4, int id5, int id6, int id7, int id8, const QString& description = "");
+		ChangeSet(int id1, int id2, int id3, int id4, int id5, int id6, int id7, int id8, int id9, const QString& description = "");
+		ChangeSet(int id1, int id2, int id3, int id4, int id5, int id6, int id7, int id8, int id9, int id10, const QString& description = "");
 
 		/**
 			Remove all IDs.
@@ -92,6 +94,11 @@ public:
 		void MaskOut(const ChangeSet& changeSet);
 
 		/**
+			Get textual description of this change set.
+		*/
+		const QString& GetDescription() const;
+
+		/**
 			Get the union of two change sets.
 		*/
 		ChangeSet operator+(const ChangeSet& changeSet) const;
@@ -108,6 +115,8 @@ public:
 
 	private:
 		QSet<int> m_ids;
+
+		QString m_description;
 	};
 
 	/**
@@ -305,6 +314,7 @@ protected:
 	*/
 	virtual void OnEndChanges(const ChangeSet& changeSet);
 
+private:
 	// static attributes
 	static ChangeSet s_emptyChanges;
 	static ChangeSet s_anyChanges;

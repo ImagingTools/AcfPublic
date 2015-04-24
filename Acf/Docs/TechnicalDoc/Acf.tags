@@ -7736,34 +7736,6 @@
       <anchor>af0679b84b065bd0e9bb4ba875addb8da</anchor>
       <arglist>(const ChangeSet &amp;changeSet)</arglist>
     </member>
-    <member kind="variable" protection="protected" static="yes">
-      <type>static ChangeSet</type>
-      <name>s_emptyChanges</name>
-      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
-      <anchor>a60eb91af79b9e76fb5509e3f64659e5d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected" static="yes">
-      <type>static ChangeSet</type>
-      <name>s_anyChanges</name>
-      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
-      <anchor>a4152ce9699e40a831a65f40d33d6a107</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected" static="yes">
-      <type>static ChangeSet</type>
-      <name>s_allChanges</name>
-      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
-      <anchor>ab70bbe06a7def4a470ec44ca2f58c71e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected" static="yes">
-      <type>static ChangeSet</type>
-      <name>s_delegatedChanges</name>
-      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
-      <anchor>a9b525f2b5a39492a667130b3e4f730f3</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>i2d::CAffineTransformation2dComp</name>
@@ -57542,71 +57514,78 @@
       <type></type>
       <name>ChangeSet</name>
       <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
-      <anchor>a892e41019f8177d3751e9fb20fcd21e2</anchor>
-      <arglist>(int id1)</arglist>
+      <anchor>a3513058da4c58285c6743be7ab96e18a</anchor>
+      <arglist>(const QString &amp;description)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ChangeSet</name>
       <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
-      <anchor>ab798514f7dc07634f139351916c55170</anchor>
-      <arglist>(int id1, int id2)</arglist>
+      <anchor>a604da27e7946950b3a3ba63e6863dd25</anchor>
+      <arglist>(int id1, const QString &amp;description=&quot;&quot;)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ChangeSet</name>
       <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
-      <anchor>a2053960b2b0efd49cd4b4d02737d17f2</anchor>
-      <arglist>(int id1, int id2, int id3)</arglist>
+      <anchor>a4108c3b5fd122838b7e22b9c8a010e91</anchor>
+      <arglist>(int id1, int id2, const QString &amp;description=&quot;&quot;)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ChangeSet</name>
       <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
-      <anchor>ae8e2b0225ef5a49f7cf9d583a1f571b0</anchor>
-      <arglist>(int id1, int id2, int id3, int id4)</arglist>
+      <anchor>acd88524d5c5ade9d7767c1ea9d2f657d</anchor>
+      <arglist>(int id1, int id2, int id3, const QString &amp;description=&quot;&quot;)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ChangeSet</name>
       <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
-      <anchor>a5ab3318b236e59367cd950c75010c4d2</anchor>
-      <arglist>(int id1, int id2, int id3, int id4, int id5)</arglist>
+      <anchor>a0bce3486481ca8c7e497387dd40f4e33</anchor>
+      <arglist>(int id1, int id2, int id3, int id4, const QString &amp;description=&quot;&quot;)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ChangeSet</name>
       <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
-      <anchor>a4acee6ea0e5b5bde4674c6e89d98b756</anchor>
-      <arglist>(int id1, int id2, int id3, int id4, int id5, int id6)</arglist>
+      <anchor>ab8e9994b5da80cf38ff17ee6df8b2ab2</anchor>
+      <arglist>(int id1, int id2, int id3, int id4, int id5, const QString &amp;description=&quot;&quot;)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ChangeSet</name>
       <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
-      <anchor>a486ff15471220ab2235af4ebf4340173</anchor>
-      <arglist>(int id1, int id2, int id3, int id4, int id5, int id6, int id7)</arglist>
+      <anchor>a741a548d3ade3b9d65399b3cf91b1363</anchor>
+      <arglist>(int id1, int id2, int id3, int id4, int id5, int id6, const QString &amp;description=&quot;&quot;)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ChangeSet</name>
       <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
-      <anchor>a300087036459b17c4f5119d2314d820b</anchor>
-      <arglist>(int id1, int id2, int id3, int id4, int id5, int id6, int id7, int id8)</arglist>
+      <anchor>ac3beff2e22123a47f359eca052a7aa31</anchor>
+      <arglist>(int id1, int id2, int id3, int id4, int id5, int id6, int id7, const QString &amp;description=&quot;&quot;)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ChangeSet</name>
       <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
-      <anchor>ad48b5248cf9055e705710e0b16f3468b</anchor>
-      <arglist>(int id1, int id2, int id3, int id4, int id5, int id6, int id7, int id8, int id9)</arglist>
+      <anchor>a218673c63ead4656ee17eccbcc92405b</anchor>
+      <arglist>(int id1, int id2, int id3, int id4, int id5, int id6, int id7, int id8, const QString &amp;description=&quot;&quot;)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ChangeSet</name>
       <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
-      <anchor>a74e0002d486a451e948a683e2f173bb5</anchor>
-      <arglist>(int id1, int id2, int id3, int id4, int id5, int id6, int id7, int id8, int id9, int id10)</arglist>
+      <anchor>a8271cbcbc08dc863aae7206d7e3ef956</anchor>
+      <arglist>(int id1, int id2, int id3, int id4, int id5, int id6, int id7, int id8, int id9, const QString &amp;description=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ChangeSet</name>
+      <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
+      <anchor>aaa5b631d87f1d17826258bbc6a471723</anchor>
+      <arglist>(int id1, int id2, int id3, int id4, int id5, int id6, int id7, int id8, int id9, int id10, const QString &amp;description=&quot;&quot;)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -57649,6 +57628,13 @@
       <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
       <anchor>a4b10aa1dffa37f518f9cc5ef397c71e9</anchor>
       <arglist>(const ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function">
+      <type>const QString &amp;</type>
+      <name>GetDescription</name>
+      <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
+      <anchor>a785168e2a23845cbdf53df298e28f329</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>ChangeSet</type>

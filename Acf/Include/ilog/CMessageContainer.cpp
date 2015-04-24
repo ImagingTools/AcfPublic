@@ -124,7 +124,7 @@ bool CMessageContainer::Serialize(iser::IArchive& archive)
 		return false;
 	}
 
-	istd::CChangeNotifier notifier(archive.IsStoring() ? NULL : this, s_allChanges);
+	istd::CChangeNotifier notifier(archive.IsStoring() ? NULL : this, GetAllChanges());
 
 	if (archive.IsStoring()){
 		for (		MessageList::ConstIterator iter = m_messages.constBegin();
