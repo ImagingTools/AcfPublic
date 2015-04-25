@@ -5311,6 +5311,13 @@
       <anchor>a483afc5fe1653a73e52c7596a9a3dfe0</anchor>
       <arglist></arglist>
     </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static const ChangeSet</type>
+      <name>s_supplierResultsSet</name>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>ad691de5f77cdc3d3ac7635dd6fbc7056</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>icam::CMultiLayerBitmapSupplierComp</name>
@@ -13331,8 +13338,8 @@
       <type>virtual void</type>
       <name>UpdateStorageItem</name>
       <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
-      <anchor>aa54010e1bffdb791eec448fdf67a6475</anchor>
-      <arglist>(const QString &amp;path, int itemFlags)=0</arglist>
+      <anchor>af387080841c045439b3cfc8adc482366</anchor>
+      <arglist>(const QString &amp;path, int changeFlag)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>

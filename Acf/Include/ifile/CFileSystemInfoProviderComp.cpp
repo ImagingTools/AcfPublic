@@ -52,7 +52,7 @@ const iprm::IOptionsList& CFileSystemInfoProviderComp::GetDriveList() const
 
 const istd::CSystem::FileDriveInfo* CFileSystemInfoProviderComp::GetFileDriveInfo(int driveIndex) const
 {
-	Q_ASSERT(driveIndex >= 0 && driveIndex < m_driveInfos.size());
+	Q_ASSERT((driveIndex >= 0) && (driveIndex < int(m_driveInfos.size())));
 
 	return &m_driveInfos[driveIndex].info;
 }
@@ -74,7 +74,7 @@ int CFileSystemInfoProviderComp::GetOptionsCount() const
 
 QString CFileSystemInfoProviderComp::GetOptionName(int index) const
 {
-	Q_ASSERT(index >= 0 && index < m_driveInfos.size());
+	Q_ASSERT((index >= 0) && (index < int(m_driveInfos.size())));
 
 	return m_driveInfos[index].name;
 }
@@ -82,7 +82,7 @@ QString CFileSystemInfoProviderComp::GetOptionName(int index) const
 
 QString CFileSystemInfoProviderComp::GetOptionDescription(int index) const
 {
-	Q_ASSERT(index >= 0 && index < m_driveInfos.size());
+	Q_ASSERT((index >= 0) && (index < int(m_driveInfos.size())));
 
 	return m_driveInfos[index].name;
 }
@@ -90,7 +90,7 @@ QString CFileSystemInfoProviderComp::GetOptionDescription(int index) const
 
 QByteArray CFileSystemInfoProviderComp::GetOptionId(int index) const
 {
-	Q_ASSERT(index >= 0 && index < m_driveInfos.size());
+	Q_ASSERT((index >= 0) && (index < int(m_driveInfos.size())));
 
 	return m_driveInfos[index].id;
 }

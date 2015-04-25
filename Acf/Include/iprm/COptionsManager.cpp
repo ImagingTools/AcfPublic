@@ -218,8 +218,9 @@ bool COptionsManager::SetOptionEnabled(int index, bool isEnabled)
 
 	Q_ASSERT(index < m_options.size());
 	if (m_options[index].isEnabled != isEnabled){
-		ChangeSet changeSet(CF_OPTIONS_CHANGED);
-		istd::CChangeNotifier changePtr(this, changeSet);
+		static const ChangeSet changeSet(CF_OPTIONS_CHANGED);
+		istd::CChangeNotifier notifier(this, &changeSet);
+		Q_UNUSED(notifier);
 
 		m_options[index].isEnabled = isEnabled;
 	}
@@ -243,8 +244,9 @@ bool COptionsManager::RemoveOption(int index)
 		index -= fixedOptionsCount;
 	}
 
-	ChangeSet changeSet(CF_OPTIONS_CHANGED, CF_OPTION_REMOVED);
-	istd::CChangeNotifier changePtr(this, changeSet);
+	static const ChangeSet changeSet(CF_OPTIONS_CHANGED, CF_OPTION_REMOVED);
+	istd::CChangeNotifier notifier(this, &changeSet);
+	Q_UNUSED(notifier);
 
 	Q_ASSERT(index < m_options.size());
 	m_options.erase(m_options.begin() + index);
@@ -267,8 +269,9 @@ bool COptionsManager::InsertOption(
 	OptionInfo optionInfo(optionName, realOptionId, optionDescription);
 
 	if (index < 0 || index >= int(m_options.size())){
-		ChangeSet changeSet(CF_OPTIONS_CHANGED, CF_OPTION_ADDED);
-		istd::CChangeNotifier changePtr(this, changeSet);
+		static const ChangeSet changeSet(CF_OPTIONS_CHANGED, CF_OPTION_ADDED);
+		istd::CChangeNotifier notifier(this, &changeSet);
+		Q_UNUSED(notifier);
 
 		m_options.push_back(optionInfo);
 	}
@@ -283,8 +286,9 @@ bool COptionsManager::InsertOption(
 			index -= fixedOptionsCount;
 		}
 
-		ChangeSet changeSet(CF_OPTIONS_CHANGED, CF_OPTION_ADDED);
-		istd::CChangeNotifier changePtr(this, changeSet);
+		static const ChangeSet changeSet(CF_OPTIONS_CHANGED, CF_OPTION_ADDED);
+		istd::CChangeNotifier notifier(this, &changeSet);
+		Q_UNUSED(notifier);
 
 		m_options.insert(m_options.begin() + index, optionInfo);
 	}
@@ -315,8 +319,9 @@ bool COptionsManager::SwapOptions(int index1, int index2)
 	Q_ASSERT(index2 < m_options.size());
 
 	if (index1 != index2){
-		ChangeSet changeSet(CF_OPTIONS_CHANGED);
-		istd::CChangeNotifier changePtr(this, changeSet);
+		static const ChangeSet changeSet(CF_OPTIONS_CHANGED);
+		istd::CChangeNotifier notifier(this, &changeSet);
+		Q_UNUSED(notifier);
 
 		OptionInfo tempInfo = m_options[index1];
 		m_options[index1] = m_options[index2];
@@ -344,8 +349,9 @@ bool COptionsManager::SetOptionName(int index, const QString& optionName)
 
 	Q_ASSERT(index < m_options.size());
 	if (m_options[index].optionName != optionName){
-		ChangeSet changeSet(CF_OPTION_RENAMED);
-		istd::CChangeNotifier changePtr(this, changeSet);
+		static const ChangeSet changeSet(CF_OPTION_RENAMED);
+		istd::CChangeNotifier notifier(this, &changeSet);
+		Q_UNUSED(notifier);
 
 		m_options[index].optionName = optionName;
 	}
@@ -371,8 +377,9 @@ bool COptionsManager::SetOptionDescription(int index, const QString& optionDescr
 
 	Q_ASSERT(index < m_options.size());
 	if (m_options[index].optionDescription != optionDescription){
-		ChangeSet changeSet(CF_OPTIONS_CHANGED);
-		istd::CChangeNotifier changePtr(this, changeSet);
+		static const ChangeSet changeSet(CF_OPTIONS_CHANGED);
+		istd::CChangeNotifier notifier(this, &changeSet);
+		Q_UNUSED(notifier);
 
 		m_options[index].optionDescription = optionDescription;
 	}

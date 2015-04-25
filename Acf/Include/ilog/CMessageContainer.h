@@ -128,7 +128,7 @@ private:
 	int m_worstCategory;
 
 protected:
-	static ChangeSet s_addMessageChangeSet;
+	static const ChangeSet s_addMessageChangeSet;
 };
 
 

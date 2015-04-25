@@ -90,7 +90,7 @@ void CProcessedBitmapView::SetBitmap(const iimg::IBitmap* bitmapPtr)
 
 	iview::CViewport& view = m_ui.ImageView->GetViewRef();
 
-	static istd::IChangeable::ChangeSet changeSet(iview::IDisplay::CF_TRANSFORM);
+	static const istd::IChangeable::ChangeSet changeSet(iview::IDisplay::CF_TRANSFORM);
 	view.UpdateAllShapes(changeSet);
 }
 

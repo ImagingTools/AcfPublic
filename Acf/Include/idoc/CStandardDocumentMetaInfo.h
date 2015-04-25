@@ -65,7 +65,7 @@ private:
 	MetaInfoMap m_infosMap;
 
 	// static members
-	static ChangeSet s_metaInfoChangeSet;
+	static const ChangeSet s_metaInfoChangeSet;
 };
 
 

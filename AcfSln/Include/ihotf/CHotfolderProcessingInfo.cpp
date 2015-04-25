@@ -81,8 +81,9 @@ const ihotf::IHotfolderProcessingItem* CHotfolderProcessingInfo::AddProcessingIt
 		return foundItemPtr;
 	}
 
-	ChangeSet changeSet(CF_FILE_ADDED);
-	istd::CChangeNotifier changePtr(this, changeSet);
+	static const ChangeSet changeSet(CF_FILE_ADDED);
+	istd::CChangeNotifier notifier(this, &changeSet);
+	Q_UNUSED(notifier);
 
 	ProcessingItem* itemPtr = new ProcessingItem;
 	itemPtr->SetInputFile(inputFilePath);
@@ -107,11 +108,11 @@ void CHotfolderProcessingInfo::RemoveProcessingItem(ihotf::IHotfolderProcessingI
 		return;
 	}
 
-	ChangeSet changeSet(CF_FILE_REMOVED);
-	istd::CChangeNotifier changePtr(this, changeSet);
+	static const ChangeSet changeSet(CF_FILE_REMOVED);
+	istd::CChangeNotifier notifier(this, &changeSet);
 
 	if (!m_processingItems.Remove(fileItemPtr)){
-		changePtr.Abort();
+		notifier.Abort();
 	}
 }
 
@@ -141,9 +142,10 @@ bool CHotfolderProcessingInfo::IsWorking() const
 void CHotfolderProcessingInfo::SetWorking(bool working)
 {
 	if (working != m_isWorking){
-		ChangeSet changeSet(CF_WORKING_STATE_CHANGED);
-		istd::CChangeNotifier changePtr(this, changeSet);
-	
+		static const ChangeSet changeSet(CF_WORKING_STATE_CHANGED);
+		istd::CChangeNotifier notifier(this, &changeSet);
+		Q_UNUSED(notifier);
+
 		m_isWorking = working;
 	}
 }
@@ -153,8 +155,8 @@ void CHotfolderProcessingInfo::SetWorking(bool working)
 
 bool CHotfolderProcessingInfo::Serialize(iser::IArchive& archive)
 {
-	ChangeSet changeSet(CF_ALL_DATA, CF_CREATE);
-	istd::CChangeNotifier changePtr(archive.IsStoring()? NULL: this, changeSet);
+	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this, &GetAllChanges());
+	Q_UNUSED(notifier);
 
 	QMutexLocker locker(&m_mutex);
 

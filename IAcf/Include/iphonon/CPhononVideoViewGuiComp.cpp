@@ -56,8 +56,9 @@ QString CPhononVideoViewGuiComp::GetOpenedMediumUrl() const
 
 bool CPhononVideoViewGuiComp::OpenMediumUrl(const QString& url, bool autoPlay)
 {
-	ChangeSet changeSet(CF_STATUS, CF_MEDIA_POSITION);
-	istd::CChangeNotifier notifier(this, changeSet);
+	static const ChangeSet changeSet(CF_STATUS, CF_MEDIA_POSITION);
+	istd::CChangeNotifier notifier(this, &changeSet);
+	Q_UNUSED(notifier);
 
 	m_mediaPlayer.setMedia(QUrl(url));
 
@@ -74,8 +75,9 @@ bool CPhononVideoViewGuiComp::OpenMediumUrl(const QString& url, bool autoPlay)
 
 void CPhononVideoViewGuiComp::CloseMedium()
 {
-	ChangeSet changeSet(CF_STATUS);
-	istd::CChangeNotifier notifier(this, changeSet);
+	static const ChangeSet changeSet(CF_STATUS);
+	istd::CChangeNotifier notifier(this, &changeSet);
+	Q_UNUSED(notifier);
 
 	m_mediaPlayer.stop();
 }
@@ -94,8 +96,9 @@ bool CPhononVideoViewGuiComp::IsPlaying() const
 
 bool CPhononVideoViewGuiComp::SetPlaying(bool state)
 {
-	ChangeSet changeSet(CF_STATUS);
-	istd::CChangeNotifier notifier(this, changeSet);
+	static const ChangeSet changeSet(CF_STATUS);
+	istd::CChangeNotifier notifier(this, &changeSet);
+	Q_UNUSED(notifier);
 
 	if (state){
 		m_mediaPlayer.play();
@@ -129,8 +132,9 @@ bool CPhononVideoViewGuiComp::SetCurrentPosition(double position)
 	}
 
 	if (m_mediaPlayer.isSeekable()){
-		ChangeSet changeSet(CF_MEDIA_POSITION);
-		istd::CChangeNotifier notifier(this, changeSet);
+		static const ChangeSet changeSet(CF_MEDIA_POSITION);
+		istd::CChangeNotifier notifier(this, &changeSet);
+		Q_UNUSED(notifier);
 
 		m_mediaPlayer.setPosition(qint64(position * 1000));
 

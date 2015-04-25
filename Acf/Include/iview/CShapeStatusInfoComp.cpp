@@ -52,8 +52,9 @@ i2d::CVector2d CShapeStatusInfoComp::GetLogicalPosition() const
 void CShapeStatusInfoComp::SetLogicalPosition(const i2d::CVector2d& logicalPosition)
 {
 	if (m_logicalPosition != logicalPosition){
-		static istd::IChangeable::ChangeSet changeSet(IDisplay::CS_CONSOLE, i2d::IObject2d::CF_OBJECT_POSITION);
-		istd::CChangeNotifier changePtr(this, changeSet);
+		static const istd::IChangeable::ChangeSet changeSet(IDisplay::CS_CONSOLE, i2d::IObject2d::CF_OBJECT_POSITION);
+		istd::CChangeNotifier notifier(this, &changeSet);
+		Q_UNUSED(notifier);
 
 		m_logicalPosition = logicalPosition;
 	}
@@ -69,8 +70,9 @@ i2d::CVector2d CShapeStatusInfoComp::GetPixelPosition() const
 void CShapeStatusInfoComp::SetPixelPosition(const i2d::CVector2d& pixelPosition)
 {
 	if (m_pixelPosition != pixelPosition){
-		static istd::IChangeable::ChangeSet changeSet(IDisplay::CS_CONSOLE);
-		istd::CChangeNotifier changePtr(this);
+		static const istd::IChangeable::ChangeSet changeSet(IDisplay::CS_CONSOLE);
+		istd::CChangeNotifier notifier(this, &changeSet);
+		Q_UNUSED(notifier);
 
 		m_pixelPosition = pixelPosition;
 	}
@@ -86,8 +88,9 @@ QString CShapeStatusInfoComp::GetInfoText() const
 void CShapeStatusInfoComp::SetInfoText(const QString& infoText)
 {
 	if (m_infoText != infoText){
-		static istd::IChangeable::ChangeSet changeSet(IDisplay::CS_CONSOLE);
-		istd::CChangeNotifier changePtr(this);
+		static const istd::IChangeable::ChangeSet changeSet(IDisplay::CS_CONSOLE);
+		istd::CChangeNotifier notifier(this, &changeSet);
+		Q_UNUSED(notifier);
 
 		m_infoText = infoText;
 	}

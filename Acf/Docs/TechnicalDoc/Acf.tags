@@ -8112,17 +8112,17 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected" static="yes">
-      <type>static ChangeSet</type>
+      <type>static const ChangeSet</type>
       <name>s_objectPositionChangeSet</name>
       <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
-      <anchor>ab95bd0741c68a87adace4c93717824cc</anchor>
+      <anchor>aedb5c0bd4e2429a30098a28c5bd036e0</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected" static="yes">
-      <type>static ChangeSet</type>
+      <type>static const ChangeSet</type>
       <name>s_objectPositionAllDataChangeSet</name>
       <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
-      <anchor>a4e4934634e39a1b8c607443887d1b076</anchor>
+      <anchor>ae17c14fe02d7a595ceb20d981700ccb4</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -34309,10 +34309,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected" static="yes">
-      <type>static ChangeSet</type>
+      <type>static const ChangeSet</type>
       <name>s_addMessageChangeSet</name>
       <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
-      <anchor>acee5ef25e69ce5a857eae0424f7bd68c</anchor>
+      <anchor>a6d09e97a4b57aabb857bfc5c89bc1616</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -56351,8 +56351,8 @@
       <type></type>
       <name>CChangeGroup</name>
       <anchorfile>classistd_1_1_c_change_group.html</anchorfile>
-      <anchor>a400742ffabaa44d25e2743793c4994ee</anchor>
-      <arglist>(IChangeable *changeablePtr, const IChangeable::ChangeSet &amp;changeSet=IChangeable::GetNoChanges())</arglist>
+      <anchor>ada8e0ddf81853b83a6c159234da63077</anchor>
+      <arglist>(IChangeable *changeablePtr, const IChangeable::ChangeSet *changeSetPtr=&amp;IChangeable::GetNoChanges())</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -56360,20 +56360,6 @@
       <anchorfile>classistd_1_1_c_change_group.html</anchorfile>
       <anchor>a9ca65d11909b9704f8a16a0cabcd9576</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>AppendChangeId</name>
-      <anchorfile>classistd_1_1_c_change_group.html</anchorfile>
-      <anchor>a702c62197a094995fbd128a86939d12d</anchor>
-      <arglist>(int changeId)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>AppendChangeIds</name>
-      <anchorfile>classistd_1_1_c_change_group.html</anchorfile>
-      <anchor>a78d03a939c520ae764c7d7480d157647</anchor>
-      <arglist>(const IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -56397,8 +56383,8 @@
       <type></type>
       <name>CChangeNotifier</name>
       <anchorfile>classistd_1_1_c_change_notifier.html</anchorfile>
-      <anchor>a25c0408025aed2f06acf37928e7e9523</anchor>
-      <arglist>(IChangeable *changeablePtr, const IChangeable::ChangeSet &amp;changeSet=IChangeable::GetAnyChange())</arglist>
+      <anchor>ac4f5fce657893ea73e0b7e58295a3f51</anchor>
+      <arglist>(IChangeable *changeablePtr, const IChangeable::ChangeSet *changeSetPtr=&amp;IChangeable::GetAnyChange())</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -56655,8 +56641,8 @@
       <type></type>
       <name>CEventBasedNotifier</name>
       <anchorfile>classistd_1_1_c_event_based_notifier.html</anchorfile>
-      <anchor>ab6738e665c09c605e703cb8ce52e9bef</anchor>
-      <arglist>(istd::IChangeable *slavePtr, const IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a4d8d497b9f5c7d7bddb0191c10bb1602</anchor>
+      <arglist>(istd::IChangeable *slavePtr, const IChangeable::ChangeSet *changeSetPtr=&amp;IChangeable::GetAnyChange())</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual</type>

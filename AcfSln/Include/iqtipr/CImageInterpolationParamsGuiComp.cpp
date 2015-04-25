@@ -40,6 +40,7 @@ void CImageInterpolationParamsGuiComp::UpdateModel() const
 	iipr::IImageInterpolationParams* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
 		istd::CChangeGroup changeGroup(objectPtr);
+		Q_UNUSED(changeGroup);
 
 		int currentIndex = InterpolationModeCombo->currentIndex();
 
