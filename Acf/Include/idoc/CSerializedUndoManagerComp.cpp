@@ -62,6 +62,7 @@ void CSerializedUndoManagerComp::ResetUndo()
 
 	m_undoList.clear();
 	m_redoList.clear();
+	m_beginStateArchivePtr.Reset();
 }
 
 
