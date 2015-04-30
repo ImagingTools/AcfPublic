@@ -53739,17 +53739,17 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtprm_1_1_c_ext_params_manager_gui_comp.html</anchorfile>
-      <anchor>ad478eb1b7f2df1dd955fdaa4350e8e3e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtprm_1_1_c_ext_params_manager_gui_comp.html</anchorfile>
       <anchor>a39261bb1e983df6d777f8ca08ff56867</anchor>
       <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtprm_1_1_c_ext_params_manager_gui_comp.html</anchorfile>
+      <anchor>ad478eb1b7f2df1dd955fdaa4350e8e3e</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual iprm::IParamsManager *</type>
