@@ -15023,6 +15023,20 @@
       <arglist>(bool state)</arglist>
     </member>
     <member kind="function">
+      <type>const QString &amp;</type>
+      <name>GetUnknownDescription</name>
+      <anchorfile>classiattr_1_1_c_enum_attribute_meta_info.html</anchorfile>
+      <anchor>abb79fec4c489909c37e625d7ca1caf64</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetUnknownDescription</name>
+      <anchorfile>classiattr_1_1_c_enum_attribute_meta_info.html</anchorfile>
+      <anchor>a92853d2cc7de72525e38f7b4d4207c57</anchor>
+      <arglist>(const QString &amp;description)</arglist>
+    </member>
+    <member kind="function">
       <type>bool</type>
       <name>InsertOption</name>
       <anchorfile>classiattr_1_1_c_enum_attribute_meta_info.html</anchorfile>
@@ -15045,10 +15059,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
-      <name>GetEnumDescription</name>
+      <name>GetValueDescription</name>
       <anchorfile>classiattr_1_1_c_enum_attribute_meta_info.html</anchorfile>
-      <anchor>a663100d29178d9b0688f962f7c51443a</anchor>
-      <arglist>(int index) const </arglist>
+      <anchor>a5265105045b4958467c61c7f0925d49c</anchor>
+      <arglist>(const iser::IObject &amp;value) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iser::IObject &amp;</type>
@@ -15256,10 +15270,10 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
-      <name>GetEnumDescription</name>
+      <name>GetValueDescription</name>
       <anchorfile>classiattr_1_1_i_enum_attribute_meta_info.html</anchorfile>
-      <anchor>ad2b220f441c00bd1b340fc8b6a27638e</anchor>
-      <arglist>(int index) const =0</arglist>
+      <anchor>a330f759d5652a694d36325e0fff41a48</anchor>
+      <arglist>(const iser::IObject &amp;value) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const iser::IObject &amp;</type>

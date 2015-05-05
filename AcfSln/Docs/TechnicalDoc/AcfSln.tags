@@ -27390,6 +27390,13 @@
       <anchor>a65082783af4ceab4e60bc7621bf2c924</anchor>
       <arglist>(double value)</arglist>
     </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetupValueEditor</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>a0c41ba24dc341676c01654ae8f25fb86</anchor>
+      <arglist>(int editPrecision, double stepValue)</arglist>
+    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_ValueSB_valueChanged</name>
