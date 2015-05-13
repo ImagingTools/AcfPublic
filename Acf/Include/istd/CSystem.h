@@ -120,7 +120,7 @@ public:
 	static bool RemoveDirectory(const QString& directoryPath);
 
 	/**
-		Copy file to directory. When result directory doesn't exist create it.
+		Copy file to directory. When result directory doesn't exist, create it.
 	*/
 	static bool FileCopy(const QString& source, const QString& result, bool overWrite = false);
 
