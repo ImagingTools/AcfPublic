@@ -37,7 +37,6 @@ win32-msvc*{
 	}
 	win32-msvc2013{
     	QMAKE_CXXFLAGS += /wd4996 /Qpar /Gy /Gw
-		QMAKE_LFLAGS += /LTCG:PGO
 		COMPILER_NAME = VC12
 	}
 

@@ -68,7 +68,7 @@ int CFileSystemInfoProviderComp::GetOptionsFlags() const
 
 int CFileSystemInfoProviderComp::GetOptionsCount() const
 {
-	return m_driveInfos.size();
+	return int(m_driveInfos.size());
 }
 
 
