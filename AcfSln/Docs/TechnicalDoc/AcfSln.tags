@@ -6548,6 +6548,13 @@
       <anchor>a795950d025b2307374cceb127a2c4f73</anchor>
       <arglist></arglist>
     </member>
+    <member kind="variable">
+      <type>const icomp::IComponentStaticInfo *</type>
+      <name>componentStaticInfoPtr</name>
+      <anchorfile>structicmpstr_1_1_c_attribute_editor_comp_1_1_attr_info.html</anchorfile>
+      <anchor>af50ee380d11d1c1229c237cf94aa2b1a</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>icmpstr::CComponentHelpFileProviderComp</name>
@@ -7673,8 +7680,8 @@
       <type>virtual bool</type>
       <name>IsAttributeValid</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a0a226e70c01872c46624ef5cb0db8618</anchor>
-      <arglist>(const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ilog::IMessageConsumer *reasonConsumerPtr) const </arglist>
+      <anchor>a2ac7142ef8930b78e864b389017be0f8</anchor>
+      <arglist>(const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ilog::IMessageConsumer *reasonConsumerPtr, const icomp::IComponentStaticInfo *componentMetaInfoPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QIcon</type>
@@ -9892,8 +9899,8 @@
       <type>virtual bool</type>
       <name>IsAttributeValid</name>
       <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
-      <anchor>a8b4add4bfd257ba94d2d81c8967eb280</anchor>
-      <arglist>(const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ilog::IMessageConsumer *reasonConsumerPtr) const =0</arglist>
+      <anchor>a952f132ed6ce0fbdf4c011aa445c573c</anchor>
+      <arglist>(const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ilog::IMessageConsumer *reasonConsumerPtr, const icomp::IComponentStaticInfo *componentMetaInfoPtr=NULL) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QIcon</type>

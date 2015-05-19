@@ -141,6 +141,7 @@ protected:
 		icomp::IRegistryElement* elementPtr;
 		icomp::IRegistryElement::AttributeInfo* infoPtr;
 		const icomp::IAttributeStaticInfo* staticInfoPtr;
+		const icomp::IComponentStaticInfo* componentStaticInfoPtr;
 	};
 
 	typedef QMap<QByteArray, AttrInfo> ElementIdToAttrInfoMap;
