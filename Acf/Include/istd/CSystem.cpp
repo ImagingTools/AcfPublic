@@ -155,7 +155,13 @@ QString CSystem::FindVariableValue(const QString& varName, bool osEnv)
 	QString retVal = "VC";
 	#endif
 
-	return retVal;
+	if (sizeof(void*) > 4){
+		return retVal + "_64";
+	}
+	else{
+		return retVal;
+	}
+
 #else
 	return "Unknown";
 #endif

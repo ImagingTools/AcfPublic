@@ -7,8 +7,13 @@ CONFIG += rtti
 CONFIG += debug_and_release
 
 PLATFORM_CODE = i86
-win32:contains(QMAKE_HOST.arch, x86_64) | *-64{
+PLATTFORM_SUFFIX = 
+
+win32:contains(QMAKE_HOST.arch, x86_64):{
 	PLATFORM_CODE = x64
+	PLATTFORM_SUFFIX = _64
+	
+	message (64-bit plattoform used)
 }
 
 COMPILER_NAME = QMake
@@ -69,6 +74,10 @@ CONFIG(debug, debug|release){
 CONFIG(release, debug|release){
 	COMPILER_DIR = Release$$COMPILER_NAME
 	CONFIG += sse2
+}
+
+win32:contains(QMAKE_HOST.arch, x86_64) | *-64{
+	COMPILER_DIR = $$COMPILER_DIR$$PLATTFORM_SUFFIX
 }
 
 !win32-msvc*{
