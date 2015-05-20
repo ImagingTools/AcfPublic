@@ -161,7 +161,7 @@ AcfModule{
 			return commands;
 		}
 	}
-/*
+
 	Rule{
 		condition: product.name.indexOf("_") != 0	// prefix '_' will be used for temporary products
 		id: acfShareGenerator
@@ -251,7 +251,7 @@ AcfModule{
 			return cmd;
 		}
 	}
-*/
+
 	// Rule for generating XPC files
 	Rule{
 		id: acfXpcGenerator

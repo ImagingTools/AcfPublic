@@ -52,12 +52,12 @@ void CVarVector::SetElementsFrom(const CVarVector& vector, double expansionValue
 
 bool CVarVector::EnsureElementsCount(int count, double value)
 {
-	size_t oldSize = m_elements.size();
+	int oldSize = m_elements.size();
 	if (count > oldSize){
 		m_elements.resize(count);
 
 		if (value != 0){
-			for (size_t i = oldSize; i < count; ++i){
+			for (int i = oldSize; i < count; ++i){
 				m_elements[i] = value;
 			}
 		}

@@ -289,11 +289,11 @@ inline bool CVarVector::SetElementsCount(int count, double value)
 {
 	Q_ASSERT(count >= 0);
 
-	size_t oldCount = m_elements.size();
+	int oldCount = m_elements.size();
 
 	m_elements.resize(count);
 
-	for (size_t i = oldCount; i < count; ++i){
+	for (int i = oldCount; i < count; ++i){
 		m_elements[i] = value;
 	}
 
@@ -451,10 +451,10 @@ inline bool CVarVector::operator!=(const CVarVector& vector) const
 
 inline bool CVarVector::operator<(const CVarVector& vector) const
 {
-	size_t count = m_elements.size();
-	size_t vectorCount = vector.m_elements.size();
-	size_t commonSize = qMin(count, vectorCount);
-	for (size_t i = 0; i < commonSize; ++i){
+	int count = m_elements.size();
+	int vectorCount = vector.m_elements.size();
+	int commonSize = qMin(count, vectorCount);
+	for (int i = 0; i < commonSize; ++i){
 		int element = m_elements[i];
 		int vectorElement = vector.m_elements[i];
 		if (element != vectorElement){
@@ -468,10 +468,10 @@ inline bool CVarVector::operator<(const CVarVector& vector) const
 
 inline bool CVarVector::operator>(const CVarVector& vector) const
 {
-	size_t count = m_elements.size();
-	size_t vectorCount = vector.m_elements.size();
-	size_t commonSize = qMin(count, vectorCount);
-	for (size_t i = 0; i < commonSize; ++i){
+	int count = m_elements.size();
+	int vectorCount = vector.m_elements.size();
+	int commonSize = qMin(count, vectorCount);
+	for (int i = 0; i < commonSize; ++i){
 		int element = m_elements[i];
 		int vectorElement = vector.m_elements[i];
 		if (element != vectorElement){
@@ -485,10 +485,10 @@ inline bool CVarVector::operator>(const CVarVector& vector) const
 
 inline bool CVarVector::operator<=(const CVarVector& vector) const
 {
-	size_t count = m_elements.size();
-	size_t vectorCount = vector.m_elements.size();
-	size_t commonSize = qMin(count, vectorCount);
-	for (size_t i = 0; i < commonSize; ++i){
+	int count = m_elements.size();
+	int vectorCount = vector.m_elements.size();
+	int commonSize = qMin(count, vectorCount);
+	for (int i = 0; i < commonSize; ++i){
 		int element = m_elements[i];
 		int vectorElement = vector.m_elements[i];
 		if (element != vectorElement){
@@ -502,10 +502,10 @@ inline bool CVarVector::operator<=(const CVarVector& vector) const
 
 inline bool CVarVector::operator>=(const CVarVector& vector) const
 {
-	size_t count = m_elements.size();
-	size_t vectorCount = vector.m_elements.size();
-	size_t commonSize = qMin(count, vectorCount);
-	for (size_t i = 0; i < commonSize; ++i){
+	int count = m_elements.size();
+	int vectorCount = vector.m_elements.size();
+	int commonSize = qMin(count, vectorCount);
+	for (int i = 0; i < commonSize; ++i){
 		int element = m_elements[i];
 		int vectorElement = vector.m_elements[i];
 		if (element != vectorElement){

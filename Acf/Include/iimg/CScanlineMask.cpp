@@ -139,7 +139,7 @@ void CScanlineMask::CreateFromCircle(const i2d::CCircle& circle, const i2d::CRec
 
 	InitFromBoudingBox(recalibratedCircle.GetBoundingBox(), clipAreaPtr);
 
-	size_t linesCount = m_scanlines.size();
+	int linesCount = m_scanlines.size();
 
 	if (linesCount <= 0){
 		ResetImage();
@@ -152,10 +152,10 @@ void CScanlineMask::CreateFromCircle(const i2d::CCircle& circle, const i2d::CRec
 	double radius2 = radius * radius;
 
 #if QT_VERSION >= 0x040700
-	m_rangesContainer.reserve(int(linesCount));
+	m_rangesContainer.reserve(linesCount);
 #endif
 
-	for (size_t lineIndex = 0; lineIndex < linesCount; lineIndex++){
+	for (int lineIndex = 0; lineIndex < linesCount; lineIndex++){
 		m_scanlines[lineIndex] = -1;
 
 		double y = (lineIndex + m_firstLinePos - center.GetY());
@@ -198,7 +198,7 @@ void CScanlineMask::CreateFromRectangle(const i2d::CRectangle& rect, const i2d::
 
 	InitFromBoudingBox(recalibratedRect, clipAreaPtr);
 
-	size_t linesCount = m_scanlines.size();
+	int linesCount = m_scanlines.size();
 
 	if (linesCount <= 0){
 		ResetImage();
@@ -212,7 +212,7 @@ void CScanlineMask::CreateFromRectangle(const i2d::CRectangle& rect, const i2d::
 	rangeList.InsertSwitchPoint(int(recalibratedRect.GetRight() + 0.5));
 
 
-	for (size_t lineIndex = 0; lineIndex < linesCount; lineIndex++){
+	for (int lineIndex = 0; lineIndex < linesCount; lineIndex++){
 		m_scanlines[lineIndex] = 0;	// set all lines to the same range
 	}
 }
@@ -225,7 +225,7 @@ void CScanlineMask::CreateFromAnnulus(const i2d::CAnnulus& annulus, const i2d::C
 	recalibratedAnnulus.CopyFrom(annulus, istd::IChangeable::CM_CONVERT);
 
 	InitFromBoudingBox(recalibratedAnnulus.GetBoundingBox(), clipAreaPtr);
-	size_t linesCount = m_scanlines.size();
+	int linesCount = m_scanlines.size();
 
 	if (linesCount <= 0){
 		ResetImage();
@@ -246,10 +246,10 @@ void CScanlineMask::CreateFromAnnulus(const i2d::CAnnulus& annulus, const i2d::C
 	m_scanlines.resize(linesCount);
 
 #if QT_VERSION >= 0x040700
-	m_rangesContainer.reserve(int(linesCount));
+	m_rangesContainer.reserve(linesCount);
 #endif
 
-	for (size_t lineIndex = 0; lineIndex < linesCount; lineIndex++){
+	for (int lineIndex = 0; lineIndex < linesCount; lineIndex++){
 		istd::CIntRanges rangeList;
 
 		double y = (lineIndex + m_firstLinePos - centerY);
@@ -313,7 +313,7 @@ void CScanlineMask::CreateFromPolygon(const i2d::CPolygon& polygon, const i2d::C
 	recalibratedPolygon.CopyFrom(polygon, istd::IChangeable::CM_CONVERT);
 
 	InitFromBoudingBox(recalibratedPolygon.GetBoundingBox(), clipAreaPtr);
-	int linesCount = int(m_scanlines.size());
+	int linesCount = m_scanlines.size();
 
 	if (linesCount <= 0){
 		ResetImage();
@@ -466,18 +466,18 @@ void CScanlineMask::GetUnion(const CScanlineMask& mask, CScanlineMask& result) c
 	result.m_isBoundingBoxValid = false;
 
 	result.m_firstLinePos = qMin(m_firstLinePos, mask.m_firstLinePos);
-	size_t endLineY = qMax(m_firstLinePos + m_scanlines.size(), mask.m_firstLinePos + mask.m_scanlines.size());
+	int endLineY = qMax(m_firstLinePos + m_scanlines.size(), mask.m_firstLinePos + mask.m_scanlines.size());
 
 	result.m_scanlines.resize(endLineY - m_firstLinePos);
 
-	for (size_t resultLineIndex = 0; resultLineIndex < result.m_scanlines.size(); ++resultLineIndex){
-		size_t y = resultLineIndex + result.m_firstLinePos;
+	for (int resultLineIndex = 0; resultLineIndex < int(result.m_scanlines.size()); ++resultLineIndex){
+		int y = resultLineIndex + result.m_firstLinePos;
 
 		const istd::CIntRanges* rangesPtr = NULL;
 		const istd::CIntRanges* maskRangesPtr = NULL;
 
-		size_t lineIndex = y - m_firstLinePos;
-		if ((lineIndex >= 0) && (lineIndex < m_scanlines.size())){
+		int lineIndex = y - m_firstLinePos;
+		if ((lineIndex >= 0) && (lineIndex < int(m_scanlines.size()))){
 			int containerIndex = m_scanlines[lineIndex];
 			if (containerIndex >= 0){
 				Q_ASSERT(containerIndex < m_rangesContainer.size());
@@ -486,8 +486,8 @@ void CScanlineMask::GetUnion(const CScanlineMask& mask, CScanlineMask& result) c
 			}
 		}
 
-		size_t maskLineIndex = y - mask.m_firstLinePos;
-		if ((maskLineIndex >= 0) && (maskLineIndex < mask.m_scanlines.size())){
+		int maskLineIndex = y - mask.m_firstLinePos;
+		if ((maskLineIndex >= 0) && (maskLineIndex < int(mask.m_scanlines.size()))){
 			int containerIndex = mask.m_scanlines[lineIndex];
 			if (containerIndex >= 0){
 				Q_ASSERT(containerIndex < mask.m_rangesContainer.size());
@@ -541,10 +541,8 @@ void CScanlineMask::GetIntersection(const CScanlineMask& mask, CScanlineMask& re
 {
 	result.m_isBoundingBoxValid = false;
 
-	int linesCount = int(m_scanlines.size());
-
 	result.m_firstLinePos = qMax(m_firstLinePos, mask.m_firstLinePos);
-	int endLineY = qMin(m_firstLinePos + linesCount, mask.m_firstLinePos + linesCount);
+	int endLineY = qMin(m_firstLinePos + m_scanlines.size(), mask.m_firstLinePos + mask.m_scanlines.size());
 
 	if (result.m_firstLinePos >= endLineY){
 		result.ResetImage();
@@ -650,12 +648,10 @@ void CScanlineMask::MoveCenterTo(const i2d::CVector2d& position)
 
 i2d::CRectangle CScanlineMask::GetBoundingBox() const
 {
-	int linesCount = int(m_scanlines.size());
-
 	if (!m_isBoundingBoxValid){
 		istd::CIntRange rangeX = istd::CIntRange::GetInvalid();
 
-		for (int i = 0; i < linesCount; ++i){
+		for (int i = 0; i < int(m_scanlines.size()); ++i){
 			int containerIndex = m_scanlines[i];
 
 			if (containerIndex >= 0){
@@ -680,7 +676,7 @@ i2d::CRectangle CScanlineMask::GetBoundingBox() const
 		if (rangeX.IsValid()){
 			m_boundingBox.SetTop(m_firstLinePos);
 			m_boundingBox.SetLeft(rangeX.GetMinValue());
-			m_boundingBox.SetBottom(m_firstLinePos + linesCount);
+			m_boundingBox.SetBottom(m_firstLinePos + m_scanlines.size());
 			m_boundingBox.SetRight(rangeX.GetMaxValue());
 		}
 		else{
@@ -786,7 +782,7 @@ bool CScanlineMask::Serialize(iser::IArchive& archive)
 
 		retVal = retVal && archive.EndTag(lineContainerTag);
 
-		int indicesCount = int(m_scanlines.size());
+		int indicesCount = m_scanlines.size();
 
 		retVal = retVal && archive.BeginMultiTag(containerIndicesTag, indexTag, indicesCount);
 		for (		Scanlines::const_iterator indexIter = m_scanlines.begin();
