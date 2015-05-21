@@ -3,7 +3,6 @@
 	ProjectType="Visual C++"
 	Version="8.00"
 	Name="ACF Static Library"
-	OutputDirectory="..\..\..\Lib\$(ConfigurationName)VC9"
 	ConfigurationType="4"
 	InheritedPropertySheets=".\General.vsprops"
 	>
@@ -11,5 +10,10 @@
 		Name="VCCLCompilerTool"
 		AdditionalIncludeDirectories=""
 		ProgramDataBaseFileName="$(OutDir)/$(ProjectName).pdb"
+	/>
+	<UserMacro
+		Name="PlattformDependentBaseOutputDir"
+		Value="../../../Lib"
+		PerformEnvironmentSet="true"
 	/>
 </VisualStudioPropertySheet>
