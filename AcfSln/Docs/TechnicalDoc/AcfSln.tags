@@ -12564,8 +12564,8 @@
       <type>virtual void</type>
       <name>SetObservedChanges</name>
       <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
-      <anchor>a7a8e689cec5fe1f0111450ccd0b44b6e</anchor>
-      <arglist>(int ovservedChanges)</arglist>
+      <anchor>a093e712da55fa8bf3e0d11b743f5ebcf</anchor>
+      <arglist>(int observedChanges)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QStringList</type>
@@ -13284,8 +13284,8 @@
       <type>virtual void</type>
       <name>SetObservedChanges</name>
       <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>a92755ba04060747845adee35cfb05d35</anchor>
-      <arglist>(int ovservedChanges)=0</arglist>
+      <anchor>a4724da2ab7e750fdd7f43cfcfe481e50</anchor>
+      <arglist>(int observedChanges)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QStringList</type>
