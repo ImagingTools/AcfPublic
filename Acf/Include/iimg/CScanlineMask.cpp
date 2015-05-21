@@ -139,7 +139,7 @@ void CScanlineMask::CreateFromCircle(const i2d::CCircle& circle, const i2d::CRec
 
 	InitFromBoudingBox(recalibratedCircle.GetBoundingBox(), clipAreaPtr);
 
-	int linesCount = m_scanlines.size();
+	int linesCount = int(m_scanlines.size());
 
 	if (linesCount <= 0){
 		ResetImage();
@@ -198,7 +198,7 @@ void CScanlineMask::CreateFromRectangle(const i2d::CRectangle& rect, const i2d::
 
 	InitFromBoudingBox(recalibratedRect, clipAreaPtr);
 
-	int linesCount = m_scanlines.size();
+	int linesCount = int(m_scanlines.size());
 
 	if (linesCount <= 0){
 		ResetImage();
@@ -225,7 +225,7 @@ void CScanlineMask::CreateFromAnnulus(const i2d::CAnnulus& annulus, const i2d::C
 	recalibratedAnnulus.CopyFrom(annulus, istd::IChangeable::CM_CONVERT);
 
 	InitFromBoudingBox(recalibratedAnnulus.GetBoundingBox(), clipAreaPtr);
-	int linesCount = m_scanlines.size();
+	int linesCount = int(m_scanlines.size());
 
 	if (linesCount <= 0){
 		ResetImage();
@@ -313,7 +313,7 @@ void CScanlineMask::CreateFromPolygon(const i2d::CPolygon& polygon, const i2d::C
 	recalibratedPolygon.CopyFrom(polygon, istd::IChangeable::CM_CONVERT);
 
 	InitFromBoudingBox(recalibratedPolygon.GetBoundingBox(), clipAreaPtr);
-	int linesCount = m_scanlines.size();
+	int linesCount = int(m_scanlines.size());
 
 	if (linesCount <= 0){
 		ResetImage();
@@ -466,7 +466,7 @@ void CScanlineMask::GetUnion(const CScanlineMask& mask, CScanlineMask& result) c
 	result.m_isBoundingBoxValid = false;
 
 	result.m_firstLinePos = qMin(m_firstLinePos, mask.m_firstLinePos);
-	int endLineY = qMax(m_firstLinePos + m_scanlines.size(), mask.m_firstLinePos + mask.m_scanlines.size());
+	int endLineY = qMax(m_firstLinePos + int(m_scanlines.size()), mask.m_firstLinePos + int(mask.m_scanlines.size()));
 
 	result.m_scanlines.resize(endLineY - m_firstLinePos);
 
@@ -542,7 +542,7 @@ void CScanlineMask::GetIntersection(const CScanlineMask& mask, CScanlineMask& re
 	result.m_isBoundingBoxValid = false;
 
 	result.m_firstLinePos = qMax(m_firstLinePos, mask.m_firstLinePos);
-	int endLineY = qMin(m_firstLinePos + m_scanlines.size(), mask.m_firstLinePos + mask.m_scanlines.size());
+	int endLineY = qMin(m_firstLinePos + int(m_scanlines.size()), mask.m_firstLinePos + int(mask.m_scanlines.size()));
 
 	if (result.m_firstLinePos >= endLineY){
 		result.ResetImage();
@@ -676,7 +676,7 @@ i2d::CRectangle CScanlineMask::GetBoundingBox() const
 		if (rangeX.IsValid()){
 			m_boundingBox.SetTop(m_firstLinePos);
 			m_boundingBox.SetLeft(rangeX.GetMinValue());
-			m_boundingBox.SetBottom(m_firstLinePos + m_scanlines.size());
+			m_boundingBox.SetBottom(m_firstLinePos + int(m_scanlines.size()));
 			m_boundingBox.SetRight(rangeX.GetMaxValue());
 		}
 		else{
@@ -782,7 +782,7 @@ bool CScanlineMask::Serialize(iser::IArchive& archive)
 
 		retVal = retVal && archive.EndTag(lineContainerTag);
 
-		int indicesCount = m_scanlines.size();
+		int indicesCount = int(m_scanlines.size());
 
 		retVal = retVal && archive.BeginMultiTag(containerIndicesTag, indexTag, indicesCount);
 		for (		Scanlines::const_iterator indexIter = m_scanlines.begin();
