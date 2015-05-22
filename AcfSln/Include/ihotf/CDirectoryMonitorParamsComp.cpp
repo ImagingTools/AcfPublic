@@ -64,6 +64,10 @@ void CDirectoryMonitorParamsComp::OnComponentCreated()
 
 		SetIgnorePatterns(ignorePatterns);
 	}
+
+	if (m_minLastModificationTimeDifferenceAttrPtr.IsValid()){
+		SetMinLastModificationTimeDifference(*m_minLastModificationTimeDifferenceAttrPtr);
+	}
 }
 
 

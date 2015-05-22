@@ -12541,6 +12541,20 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
+      <name>GetMinLastModificationTimeDifference</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
+      <anchor>a33f7fcebe883d9516b938a6ff93bc82d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetMinLastModificationTimeDifference</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
+      <anchor>a918038ee508e57950f3c20d011c0d351</anchor>
+      <arglist>(int minLastModificationTimeDifference)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
       <name>GetObservedItemTypes</name>
       <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
       <anchor>ae01934c15e8f1fdd86e7ded7d6b84141</anchor>
@@ -13258,6 +13272,20 @@
       <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
       <anchor>a9a36c4a7bb84ffe0d6d084adc5377515</anchor>
       <arglist>(double poolingIntervall)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetMinLastModificationTimeDifference</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>a1bd29a07bf1aff67251b63d8676b4af4</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetMinLastModificationTimeDifference</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>a5309df93ed35b162732f761c5192baaa</anchor>
+      <arglist>(int minLastModificationTimeDifference)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>

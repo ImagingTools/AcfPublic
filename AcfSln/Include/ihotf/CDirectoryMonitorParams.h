@@ -47,6 +47,8 @@ public:
 	// reimüplemented (ihotf::IDirectoryMonitorParams)
 	virtual double GetPoolingIntervall() const;
 	virtual void SetPoolingIntervall(double poolingIntervall);
+	virtual int GetMinLastModificationTimeDifference() const;
+	virtual void SetMinLastModificationTimeDifference(int minLastModificationTimeDifference);
 	virtual int GetObservedItemTypes() const;
 	virtual void SetObservedItemTypes(int observedItemTypes);
 	virtual int GetObservedChanges() const;
@@ -63,6 +65,7 @@ private:
 	double m_poolingIntervall;
 	int m_observedItemTypes;
 	int m_observedChanges;
+	int m_minLastModificationTimeDifference;
 
 	QStringList m_acceptPatterns;
 	QStringList m_ignorePatterns;

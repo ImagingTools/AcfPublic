@@ -113,6 +113,7 @@ private:
 	bool ConnectToParameterModel(const iprm::IParamsSet& paramsSet);
 	void DisconnectFromParameterModel();
 	void UpdateMonitoringSession() const;
+	bool HasFileAccess(const QString& filePath) const;
 
 private:
 	struct FileSystemChanges
@@ -172,6 +173,7 @@ private:
 	QStringList m_fileFilterExpressions;
 	int m_observingItemTypes;
 	int m_observingChanges;
+	int m_lastModificationMinDifference;
 
 	MonitoringParamsObserver m_monitoringParamsObserver;
 	DirectoryParamsObserver m_directoryParamsObserver;

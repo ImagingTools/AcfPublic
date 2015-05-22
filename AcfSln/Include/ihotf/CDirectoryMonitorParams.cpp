@@ -25,7 +25,6 @@
 
 // ACF includes
 #include "istd/CChangeNotifier.h"
-
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
 
@@ -55,9 +54,25 @@ double CDirectoryMonitorParams::GetPoolingIntervall() const
 void CDirectoryMonitorParams::SetPoolingIntervall(double poolingIntervall)
 {
 	if (m_poolingIntervall != poolingIntervall){
-		istd::CChangeNotifier changePtr(this);
+		istd::CChangeNotifier changeNotifier(this);
 
 		m_poolingIntervall = poolingIntervall;
+	}
+}
+
+
+int CDirectoryMonitorParams::GetMinLastModificationTimeDifference() const
+{
+	return m_minLastModificationTimeDifference;
+}
+
+
+void CDirectoryMonitorParams::SetMinLastModificationTimeDifference(int minLastModificationTimeDifference)
+{
+	if (m_minLastModificationTimeDifference != minLastModificationTimeDifference){
+		istd::CChangeNotifier changeNotifier(this);
+
+		m_minLastModificationTimeDifference = minLastModificationTimeDifference;
 	}
 }
 
@@ -71,7 +86,7 @@ int CDirectoryMonitorParams::GetObservedItemTypes() const
 void CDirectoryMonitorParams::SetObservedItemTypes(int observedItemTypes)
 {
 	if (m_observedItemTypes != observedItemTypes){
-		istd::CChangeNotifier changePtr(this);
+		istd::CChangeNotifier changeNotifier(this);
 
 		m_observedItemTypes = observedItemTypes;
 	}
@@ -87,7 +102,7 @@ int CDirectoryMonitorParams::GetObservedChanges() const
 void CDirectoryMonitorParams::SetObservedChanges(int observedChanges)
 {
 	if (m_observedChanges != observedChanges){
-		istd::CChangeNotifier changePtr(this);
+		istd::CChangeNotifier changeNotifier(this);
 
 		m_observedChanges = observedChanges;
 	}
@@ -103,7 +118,7 @@ QStringList CDirectoryMonitorParams::GetAcceptPatterns() const
 void CDirectoryMonitorParams::SetAcceptPatterns(const QStringList& acceptPatterns)
 {
 	if (acceptPatterns != m_acceptPatterns){
-		istd::CChangeNotifier changePtr(this);
+		istd::CChangeNotifier changeNotifier(this);
 
 		m_acceptPatterns = acceptPatterns;
 	}
@@ -120,7 +135,7 @@ QStringList CDirectoryMonitorParams::GetIgnorePatterns() const
 void CDirectoryMonitorParams::SetIgnorePatterns(const QStringList& ignorePatterns)
 {
 	if (ignorePatterns != m_acceptPatterns){
-		istd::CChangeNotifier changePtr(this);
+		istd::CChangeNotifier changeNotifier(this);
 
 		m_ignorePatterns = ignorePatterns;
 	}
@@ -138,8 +153,9 @@ bool CDirectoryMonitorParams::Serialize(iser::IArchive& archive)
 	static iser::CArchiveTag acceptPatternTag("AcceptPattern", "Single accepted file name pattern", iser::CArchiveTag::TT_LEAF, &acceptPatternsTag);
 	static iser::CArchiveTag ignorePatternsTag("IgnorePatterns", "List of ingored file name patterns", iser::CArchiveTag::TT_MULTIPLE);
 	static iser::CArchiveTag ignorePatternTag("IgnorePattern", "Single ignored file name pattern", iser::CArchiveTag::TT_LEAF, &ignorePatternsTag);
+	static iser::CArchiveTag minLastModificationTimeDifferenceTag("MinLastModificationTimeDifference", "Minimal last modification time diffrence for operating on the file", iser::CArchiveTag::TT_LEAF);
 
-	istd::CChangeNotifier changePtr(!archive.IsStoring()? this : NULL);
+	istd::CChangeNotifier changeNotifier(!archive.IsStoring()? this : NULL);
 
 	bool retVal = true;
 
@@ -154,6 +170,10 @@ bool CDirectoryMonitorParams::Serialize(iser::IArchive& archive)
 	retVal = retVal && archive.BeginTag(observedChangesTag);
 	retVal = retVal && archive.Process(m_observedChanges);
 	retVal = retVal && archive.EndTag(observedChangesTag);
+
+	retVal = retVal && archive.BeginTag(minLastModificationTimeDifferenceTag);
+	retVal = retVal && archive.Process(m_minLastModificationTimeDifference);
+	retVal = retVal && archive.EndTag(minLastModificationTimeDifferenceTag);
 
 	int acceptPatternsCount = m_acceptPatterns.size();
 	retVal = retVal && archive.BeginMultiTag(acceptPatternsTag, acceptPatternTag, acceptPatternsCount);
