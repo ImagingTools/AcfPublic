@@ -71,7 +71,7 @@ int CEdgeDistanceProcessorComp::DoExtractFeatures(
 		return TS_INVALID;
 	}
 
-	int foundLinesCount = caliperLines.size();
+	int foundLinesCount = int(caliperLines.size());
 
 	for (int lineIndex = 0; lineIndex < foundLinesCount; lineIndex++){
 		CaliperLine& caliperLine = caliperLines[lineIndex];
