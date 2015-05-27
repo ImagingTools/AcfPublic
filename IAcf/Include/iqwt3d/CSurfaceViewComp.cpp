@@ -24,7 +24,7 @@
 
 
 // Qwt3d includes
-#include "qwt3d_surfaceplot.h"
+#include "qwt3d_gridplot.h"
 
 
 // ACF includes
@@ -100,7 +100,7 @@ void CSurfaceViewComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet
 		istd::CRange xAxisRange = objectPtr->GetLogicalRange(0);
 		istd::CRange yAxisRange = objectPtr->GetLogicalRange(1);
 
-		m_surfacePlotPtr->loadFromData(
+		m_surfacePlotPtr->createDataset(
 				dataPtr,
 				height, 
 				width,
@@ -168,7 +168,7 @@ void CSurfaceViewComp::SetupLighting()
 
 void CSurfaceViewComp::OnGuiCreated()
 {
-	m_surfacePlotPtr = new Qwt3D::SurfacePlot(SurfacePlotFrame);
+	m_surfacePlotPtr = new Qwt3D::GridPlot(SurfacePlotFrame);
 	QLayout* layoutPtr = SurfacePlotFrame->layout();
 	if (layoutPtr == NULL){
 		layoutPtr = new QVBoxLayout(SurfacePlotFrame);

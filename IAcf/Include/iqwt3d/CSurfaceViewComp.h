@@ -37,7 +37,7 @@
 
 namespace Qwt3D
 {
-	class SurfacePlot;
+	class GridPlot;
 }
 
 
@@ -102,7 +102,7 @@ private:
 	I_ATTR(bool, m_enableShaderAttrPtr);
 	I_ATTR(bool, m_enableLegendAttrPtr);
 
-	Qwt3D::SurfacePlot* m_surfacePlotPtr;
+	Qwt3D::GridPlot* m_surfacePlotPtr;
 
 	iqtgui::CHierarchicalCommand m_rootCommand;
 	iqtgui::CHierarchicalCommand m_plotCommands;
