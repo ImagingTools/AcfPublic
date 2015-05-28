@@ -207,6 +207,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
+				CommandLine="copy $(QTDIR)\bin\*.dll ..\..\..\bin\$(ConfigurationName)VC9_64"
 			/>
 		</Configuration>
 		<Configuration
@@ -394,6 +395,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
+				CommandLine="copy $(QTDIR)\bin\*.dll ..\..\..\bin\$(ConfigurationName)VC9_64"
 			/>
 		</Configuration>
 	</Configurations>

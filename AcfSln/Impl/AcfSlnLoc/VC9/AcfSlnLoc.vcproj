@@ -99,7 +99,6 @@
 				Name="VCLibrarianTool"
 				ExecutionBucket="14"
 				LinkLibraryDependencies="true"
-				OutputFile="$(OutDir)/$(ProjectName).lib"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -199,7 +198,6 @@
 				Name="VCLibrarianTool"
 				ExecutionBucket="13"
 				LinkLibraryDependencies="true"
-				OutputFile="$(OutDir)/$(ProjectName).lib"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -296,7 +294,6 @@
 				Name="VCLibrarianTool"
 				ExecutionBucket="14"
 				LinkLibraryDependencies="true"
-				OutputFile="$(OutDir)/$(ProjectName).lib"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -394,7 +391,6 @@
 				Name="VCLibrarianTool"
 				ExecutionBucket="13"
 				LinkLibraryDependencies="true"
-				OutputFile="$(OutDir)/$(ProjectName).lib"
 			/>
 			<Tool
 				Name="VCALinkTool"
