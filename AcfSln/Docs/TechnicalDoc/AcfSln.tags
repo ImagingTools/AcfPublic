@@ -2962,6 +2962,64 @@
     <namespace>iqtsig</namespace>
   </compound>
   <compound kind="file">
+    <name>CServiceApplicationComp.h</name>
+    <path>C:/Temp/Acfsln/Include/iservice/</path>
+    <filename>_c_service_application_comp_8h</filename>
+    <includes id="qtservice_8h" name="qtservice.h" local="yes" imported="no">iservice/QtService.h</includes>
+    <class kind="class">iservice::CServiceApplicationComp</class>
+    <class kind="class">iservice::CServiceApplicationComp::CService</class>
+    <namespace>iservice</namespace>
+  </compound>
+  <compound kind="file">
+    <name>qtservice.h</name>
+    <path>C:/Temp/Acfsln/Include/iservice/</path>
+    <filename>qtservice_8h</filename>
+    <class kind="class">QtServiceController</class>
+    <class kind="class">QtServiceBase</class>
+    <class kind="class">QtService</class>
+    <member kind="define">
+      <type>#define</type>
+      <name>QT_QTSERVICE_EXPORT</name>
+      <anchorfile>qtservice_8h.html</anchorfile>
+      <anchor>af0392777c937e1ee2b9219b0bf516084</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>qtservice_p.h</name>
+    <path>C:/Temp/Acfsln/Include/iservice/</path>
+    <filename>qtservice__p_8h</filename>
+    <includes id="qtservice_8h" name="qtservice.h" local="yes" imported="no">qtservice.h</includes>
+    <class kind="class">QtServiceControllerPrivate</class>
+    <class kind="class">QtServiceBasePrivate</class>
+  </compound>
+  <compound kind="file">
+    <name>qtservice_win.h</name>
+    <path>C:/Temp/Acfsln/Include/iservice/</path>
+    <filename>qtservice__win_8h</filename>
+    <includes id="qtservice_8h" name="qtservice.h" local="yes" imported="no">iservice/qtservice.h</includes>
+    <class kind="class">QtServiceSysPrivate</class>
+    <class kind="class">QtServiceControllerHandler</class>
+  </compound>
+  <compound kind="file">
+    <name>qtservicestarter.h</name>
+    <path>C:/Temp/Acfsln/Include/iservice/</path>
+    <filename>qtservicestarter_8h</filename>
+    <class kind="class">QtServiceStarter</class>
+  </compound>
+  <compound kind="file">
+    <name>qtunixserversocket.h</name>
+    <path>C:/Temp/Acfsln/Include/iservice/</path>
+    <filename>qtunixserversocket_8h</filename>
+    <class kind="class">QtUnixServerSocket</class>
+  </compound>
+  <compound kind="file">
+    <name>qtunixsocket.h</name>
+    <path>C:/Temp/Acfsln/Include/iservice/</path>
+    <filename>qtunixsocket_8h</filename>
+    <class kind="class">QtUnixSocket</class>
+  </compound>
+  <compound kind="file">
     <name>CPulseParamsComp.h</name>
     <path>C:/Temp/Acfsln/Include/isig/</path>
     <filename>_c_pulse_params_comp_8h</filename>
@@ -3121,6 +3179,769 @@
     <includes id="_i_params_manager_wizard_8h" name="IParamsManagerWizard.h" local="yes" imported="no">iwiz/IParamsManagerWizard.h</includes>
     <class kind="class">iwizgui::CWizardOptionsListGuiComp</class>
     <namespace>iwizgui</namespace>
+  </compound>
+  <compound kind="class">
+    <name>QtService</name>
+    <filename>class_qt_service.html</filename>
+    <templarg></templarg>
+    <base>QtServiceBase</base>
+    <member kind="function">
+      <type></type>
+      <name>QtService</name>
+      <anchorfile>class_qt_service.html</anchorfile>
+      <anchor>aca39304919f89cbb95fca64f44a761ae</anchor>
+      <arglist>(int argc, char **argv, const QString &amp;name)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~QtService</name>
+      <anchorfile>class_qt_service.html</anchorfile>
+      <anchor>a96af408261dfa13bd8034f67949d6c2d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>QtServiceBase</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>a75e3f82739df6dc0b9aa899b3f9552eb</anchor>
+      <arglist>(int argc, char **argv, const QString &amp;name)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~QtServiceBase</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>ac75cae24e4604d2f57390aed9918cdd5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QString</type>
+      <name>serviceName</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>af097c068d1ee24173eb1de3583665cd3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>QString</type>
+      <name>serviceDescription</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>a7a9b380b5f03d3409d418c1a51b0e2e6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setServiceDescription</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>a09d7547436c65a900f18c58b2a650286</anchor>
+      <arglist>(const QString &amp;description)</arglist>
+    </member>
+    <member kind="function">
+      <type>QtServiceController::StartupType</type>
+      <name>startupType</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>aee7e25b0f104c594ab4f591f85cc432b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setStartupType</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>a6beddd54c973c3a7d81075b2f3f80df2</anchor>
+      <arglist>(QtServiceController::StartupType startupType)</arglist>
+    </member>
+    <member kind="function">
+      <type>ServiceFlags</type>
+      <name>serviceFlags</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>a27b6922e5110a22a5d6ce160894172df</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setServiceFlags</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>a3f8a07d0cf536720e7fcf1ec562635d1</anchor>
+      <arglist>(ServiceFlags flags)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>exec</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>afae2e589de71c1ae3ae8db3dc9ab9c64</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>logMessage</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>ac071ce0b30547e17c3b3ca9dcb0108c9</anchor>
+      <arglist>(const QString &amp;message, MessageType type=Success, int id=0, uint category=0, const QByteArray &amp;data=QByteArray())</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Application *</type>
+      <name>application</name>
+      <anchorfile>class_qt_service.html</anchorfile>
+      <anchor>aecdf4cd34e4b51ace9c4911a5829cd69</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>createApplication</name>
+      <anchorfile>class_qt_service.html</anchorfile>
+      <anchor>a930e5145198be34b147ddc3e01d568eb</anchor>
+      <arglist>(int &amp;argc, char **argv)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>executeApplication</name>
+      <anchorfile>class_qt_service.html</anchorfile>
+      <anchor>a270f8a4224f14fac473bf56123883db5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>start</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>a64703b42393ebe5386d67abad8293370</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>stop</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>ac887b1dbaeb7c4e9512698f17df6d360</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>pause</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>a71ace20c979904202417ca8b0d660707</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>resume</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>ab009e454cbdc167a1c3bba2fd404828f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>processCommand</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>a044cecde82fd9f42b2f8ef4e6cf3efe5</anchor>
+      <arglist>(int code)</arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>MessageType</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>acffd9389fe7178bf1f35d8bf3dae1095</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>Success</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>acffd9389fe7178bf1f35d8bf3dae1095afb2ada59803d0e000106b41b6d5127d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>Error</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>acffd9389fe7178bf1f35d8bf3dae1095a78136902bf4b447146b9cf9032bb18e7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>Warning</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>acffd9389fe7178bf1f35d8bf3dae1095a4b54741a94722a7a63e737e2d25873ed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>Information</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>acffd9389fe7178bf1f35d8bf3dae1095a84e71978b571923b18bf2f72d94e7e02</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ServiceFlag</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>af6e74a87329ef64760783364538e5d51</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>Default</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>af6e74a87329ef64760783364538e5d51a4d96fbb4f188ad226630c426184e1d7e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CanBeSuspended</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>af6e74a87329ef64760783364538e5d51af3246f46860cdfe45055cc47381fcc7a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CannotBeStopped</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>af6e74a87329ef64760783364538e5d51aaabef7aa1d1a451bf240546d3d8fc2ba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>NeedsStopOnShutdown</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>af6e74a87329ef64760783364538e5d51a6bc13130f21bc2ec7fe9253c7f1b3a81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QtServiceBase *</type>
+      <name>instance</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>ab977668f7546d1be70ea4bb7ff9f9f5c</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>QtServiceBase</name>
+    <filename>class_qt_service_base.html</filename>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>createApplication</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>abb8ca4ed7c39f0a96f229c2517a2d5ef</anchor>
+      <arglist>(int &amp;argc, char **argv)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual int</type>
+      <name>executeApplication</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>ac4f48d0fad15d2a285a073074e9c83c1</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>QtServiceSysPrivate</name>
+      <anchorfile>class_qt_service_base.html</anchorfile>
+      <anchor>a3101d1ae35029ba305c82b8f49512d6f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>QtServiceBasePrivate</name>
+    <filename>class_qt_service_base_private.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>QtServiceBasePrivate</name>
+      <anchorfile>class_qt_service_base_private.html</anchorfile>
+      <anchor>a0a0e43286fe71580c6b6683b6afb3315</anchor>
+      <arglist>(const QString &amp;name)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~QtServiceBasePrivate</name>
+      <anchorfile>class_qt_service_base_private.html</anchorfile>
+      <anchor>ab2dd7cf2e7d0cd19223c4f2f610b7615</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>startService</name>
+      <anchorfile>class_qt_service_base_private.html</anchorfile>
+      <anchor>aba9704ace725a9c8603abac51b548173</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>run</name>
+      <anchorfile>class_qt_service_base_private.html</anchorfile>
+      <anchor>a2ea81782bcb13927a60e0bf0d0772cc8</anchor>
+      <arglist>(bool asService, const QStringList &amp;argList)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>install</name>
+      <anchorfile>class_qt_service_base_private.html</anchorfile>
+      <anchor>abd194ef7534f7c7c61e3a6126291cef2</anchor>
+      <arglist>(const QString &amp;account, const QString &amp;password)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>start</name>
+      <anchorfile>class_qt_service_base_private.html</anchorfile>
+      <anchor>a9f6c57d4daaaf630740d68357ab8b190</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QString</type>
+      <name>filePath</name>
+      <anchorfile>class_qt_service_base_private.html</anchorfile>
+      <anchor>a376a765aca3c7bb8ed7a7f83ff915224</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>sysInit</name>
+      <anchorfile>class_qt_service_base_private.html</anchorfile>
+      <anchor>a33b5a1053664ec5fcffa1190e6321ed8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>sysSetPath</name>
+      <anchorfile>class_qt_service_base_private.html</anchorfile>
+      <anchor>aa94178427a8a87d0d1e3a7051a51c1bb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>sysCleanup</name>
+      <anchorfile>class_qt_service_base_private.html</anchorfile>
+      <anchor>a0543878130d3a883380e14bc17c166ad</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>QtServiceBase *</type>
+      <name>q_ptr</name>
+      <anchorfile>class_qt_service_base_private.html</anchorfile>
+      <anchor>a3d7df7326eb36764f5311c58b086e973</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>serviceDescription</name>
+      <anchorfile>class_qt_service_base_private.html</anchorfile>
+      <anchor>a3ad509ab3841b61bd30435d19b636712</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QtServiceController::StartupType</type>
+      <name>startupType</name>
+      <anchorfile>class_qt_service_base_private.html</anchorfile>
+      <anchor>a90e9a3f158cbeafd8fd336e03b46b364</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QtServiceBase::ServiceFlags</type>
+      <name>serviceFlags</name>
+      <anchorfile>class_qt_service_base_private.html</anchorfile>
+      <anchor>a2628f9a219995932e09d65708e0a1755</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QStringList</type>
+      <name>args</name>
+      <anchorfile>class_qt_service_base_private.html</anchorfile>
+      <anchor>a5f37fde173f2a524c191489b8ed8d7df</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QtServiceController</type>
+      <name>controller</name>
+      <anchorfile>class_qt_service_base_private.html</anchorfile>
+      <anchor>abb527bd1c6933e4c947597c96198fe14</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>class QtServiceSysPrivate *</type>
+      <name>sysd</name>
+      <anchorfile>class_qt_service_base_private.html</anchorfile>
+      <anchor>a73030b7b6e1d0c3f6f8bbc96e0901751</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static class QtServiceBase *</type>
+      <name>instance</name>
+      <anchorfile>class_qt_service_base_private.html</anchorfile>
+      <anchor>a39614ae711871212a33511aa1ae8d419</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>QtServiceController</name>
+    <filename>class_qt_service_controller.html</filename>
+    <member kind="enumeration">
+      <type></type>
+      <name>StartupType</name>
+      <anchorfile>class_qt_service_controller.html</anchorfile>
+      <anchor>a946ac2b079d9760503da923c2eaf0aac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>AutoStartup</name>
+      <anchorfile>class_qt_service_controller.html</anchorfile>
+      <anchor>a946ac2b079d9760503da923c2eaf0aaca04b30fbcd3059d3186fd85cd7a57e01f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>ManualStartup</name>
+      <anchorfile>class_qt_service_controller.html</anchorfile>
+      <anchor>a946ac2b079d9760503da923c2eaf0aacaf7bdf7d6bc457c96fb92938c758a87f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>QtServiceController</name>
+      <anchorfile>class_qt_service_controller.html</anchorfile>
+      <anchor>ab5c5bb7d168d2e59f0784ded380d7adf</anchor>
+      <arglist>(const QString &amp;name)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~QtServiceController</name>
+      <anchorfile>class_qt_service_controller.html</anchorfile>
+      <anchor>ab26dcc71cb33784aa6ab339edd6dc3b1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isInstalled</name>
+      <anchorfile>class_qt_service_controller.html</anchorfile>
+      <anchor>af97566001289f59c3dd3a7ee4b643e6a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isRunning</name>
+      <anchorfile>class_qt_service_controller.html</anchorfile>
+      <anchor>a910fa443150aa7cdc84423bdf373dce7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>QString</type>
+      <name>serviceName</name>
+      <anchorfile>class_qt_service_controller.html</anchorfile>
+      <anchor>a3a1b487492eb74e4ff95c75876ff655d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>QString</type>
+      <name>serviceDescription</name>
+      <anchorfile>class_qt_service_controller.html</anchorfile>
+      <anchor>a293e1582c858e073ba960c3d2c837cad</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>StartupType</type>
+      <name>startupType</name>
+      <anchorfile>class_qt_service_controller.html</anchorfile>
+      <anchor>ab98f9256bff90fb5ab65892587c5d82d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>QString</type>
+      <name>serviceFilePath</name>
+      <anchorfile>class_qt_service_controller.html</anchorfile>
+      <anchor>a350fb28332d5549bf31e2640ceeedda9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>uninstall</name>
+      <anchorfile>class_qt_service_controller.html</anchorfile>
+      <anchor>a25cd2f1f6868ece5de77976eb55cb74c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>start</name>
+      <anchorfile>class_qt_service_controller.html</anchorfile>
+      <anchor>a70f274d3f4f5a5fea60b8fd7331b31fb</anchor>
+      <arglist>(const QStringList &amp;arguments)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>start</name>
+      <anchorfile>class_qt_service_controller.html</anchorfile>
+      <anchor>a5e9d6da5081d70f31611456d0ef0687e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>stop</name>
+      <anchorfile>class_qt_service_controller.html</anchorfile>
+      <anchor>ad06afa647666769e309474b18bf7cf90</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>pause</name>
+      <anchorfile>class_qt_service_controller.html</anchorfile>
+      <anchor>aeee2fcc9469f77c7ed8a7955c4fa3a07</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>resume</name>
+      <anchorfile>class_qt_service_controller.html</anchorfile>
+      <anchor>a2d71eab6146427fc7b431386bf72eaec</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>sendCommand</name>
+      <anchorfile>class_qt_service_controller.html</anchorfile>
+      <anchor>a1428c7d51403416bc7663ae37c446cfc</anchor>
+      <arglist>(int code)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>install</name>
+      <anchorfile>class_qt_service_controller.html</anchorfile>
+      <anchor>a7f37c0a867374f5b1bc991269f14ea7e</anchor>
+      <arglist>(const QString &amp;serviceFilePath, const QString &amp;account=QString(), const QString &amp;password=QString())</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>QtServiceControllerHandler</name>
+    <filename>class_qt_service_controller_handler.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>QtServiceControllerHandler</name>
+      <anchorfile>class_qt_service_controller_handler.html</anchorfile>
+      <anchor>aececaafe4c1381e632ff5da78187d136</anchor>
+      <arglist>(QtServiceSysPrivate *sys)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>customEvent</name>
+      <anchorfile>class_qt_service_controller_handler.html</anchorfile>
+      <anchor>a92e2fafac640400c4defe718024f5340</anchor>
+      <arglist>(QEvent *e)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>QtServiceControllerPrivate</name>
+    <filename>class_qt_service_controller_private.html</filename>
+    <member kind="variable">
+      <type>QString</type>
+      <name>serviceName</name>
+      <anchorfile>class_qt_service_controller_private.html</anchorfile>
+      <anchor>ab0c1b3e4f6189e131073b85d869a9823</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QtServiceController *</type>
+      <name>q_ptr</name>
+      <anchorfile>class_qt_service_controller_private.html</anchorfile>
+      <anchor>ac02268c462ca6440fddb3c319639da11</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>QtServiceStarter</name>
+    <filename>class_qt_service_starter.html</filename>
+    <member kind="slot">
+      <type>void</type>
+      <name>slotStart</name>
+      <anchorfile>class_qt_service_starter.html</anchorfile>
+      <anchor>adfd8ef0a999b55ca6eeefafee52cf8dc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>QtServiceStarter</name>
+      <anchorfile>class_qt_service_starter.html</anchorfile>
+      <anchor>ac192dd9044e8ff6a663a456d88e16fdc</anchor>
+      <arglist>(QtServiceBasePrivate *service)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>QtServiceSysPrivate</name>
+    <filename>class_qt_service_sys_private.html</filename>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>QTSERVICE_STARTUP</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>a703b74abeb0f7abebd7cb86d4473de1fa70a139c76d7516e5661626df0e341c21</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>QtServiceSysPrivate</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>a81b8ed3ef0289b5c1214185d93bb1b3e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setStatus</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>a1d33416e766b6f475d36038467bdd69a</anchor>
+      <arglist>(DWORD dwState)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setServiceFlags</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>a8d9929e1406f32ac3f71446ab86d0577</anchor>
+      <arglist>(QtServiceBase::ServiceFlags flags)</arglist>
+    </member>
+    <member kind="function">
+      <type>DWORD</type>
+      <name>serviceFlags</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>a5d7fef0ea06f1aee99530c06fdbd0291</anchor>
+      <arglist>(QtServiceBase::ServiceFlags flags) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>available</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>aa1d1fb08896838e8f199f5cc7cebcd01</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>handleCustomEvent</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>aeb0603830564cf6d730549866020bf0a</anchor>
+      <arglist>(QEvent *e)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void WINAPI</type>
+      <name>serviceMain</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>a6406cbdd241c6aa8bd129c6f151f84e2</anchor>
+      <arglist>(DWORD dwArgc, wchar_t **lpszArgv)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void WINAPI</type>
+      <name>handler</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>af60973c03e36077ffc062926d63dc754</anchor>
+      <arglist>(DWORD dwOpcode)</arglist>
+    </member>
+    <member kind="variable">
+      <type>SERVICE_STATUS</type>
+      <name>status</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>a4eaa8c9fb344d5fcbe52e13d9b563749</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>SERVICE_STATUS_HANDLE</type>
+      <name>serviceStatus</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>a5794a5ac189b478c944426805b41ae2c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QStringList</type>
+      <name>serviceArgs</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>aece0e34030f5abf3ec7bee64b4ab22a3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QWaitCondition</type>
+      <name>condition</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>a8fc09bc3f805b5afe18e5d2a5d42f466</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QMutex</type>
+      <name>mutex</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>a13840c7d50506cea8ac099d75ed5bd94</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSemaphore</type>
+      <name>startSemaphore</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>a2b96b9ff0db26655accab99d6527fe3d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QSemaphore</type>
+      <name>startSemaphore2</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>ab81c4cc12732b32d6962253868fde059</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QtServiceControllerHandler *</type>
+      <name>controllerHandler</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>ac8834f0ad3dd97b1dfb9e7de563ee5cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QtServiceSysPrivate *</type>
+      <name>instance</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>a6968645487b75189c478e889e8174ba0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static QCoreApplication::EventFilter</type>
+      <name>nextFilter</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>aeb77807c5daf3c8f1386ffec7a9157c7</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>QtUnixServerSocket</name>
+    <filename>class_qt_unix_server_socket.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>QtUnixServerSocket</name>
+      <anchorfile>class_qt_unix_server_socket.html</anchorfile>
+      <anchor>a9b6133aa5f66a9acf58529cdf865efe4</anchor>
+      <arglist>(const QString &amp;path, QObject *parent=0)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>QtUnixServerSocket</name>
+      <anchorfile>class_qt_unix_server_socket.html</anchorfile>
+      <anchor>aa73dd123bc2ff7a7a90eb408fce90194</anchor>
+      <arglist>(QObject *parent=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setPath</name>
+      <anchorfile>class_qt_unix_server_socket.html</anchorfile>
+      <anchor>a733cf66cddbbf31d8a37675f349d2ca8</anchor>
+      <arglist>(const QString &amp;path)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>close</name>
+      <anchorfile>class_qt_unix_server_socket.html</anchorfile>
+      <anchor>a74bdb3e24b99bb55d7101651a2e86205</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>QtUnixSocket</name>
+    <filename>class_qt_unix_socket.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>QtUnixSocket</name>
+      <anchorfile>class_qt_unix_socket.html</anchorfile>
+      <anchor>a5c8729be0bb51069bc5011c131a3c396</anchor>
+      <arglist>(QObject *parent=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>connectTo</name>
+      <anchorfile>class_qt_unix_socket.html</anchorfile>
+      <anchor>a412e4407c955f2cfceabdae69f1626ff</anchor>
+      <arglist>(const QString &amp;path)</arglist>
+    </member>
   </compound>
   <compound kind="namespace">
     <name>iauth</name>
@@ -28270,6 +29091,149 @@
     </member>
   </compound>
   <compound kind="namespace">
+    <name>iservice</name>
+    <filename>namespaceiservice.html</filename>
+    <class kind="class">iservice::CServiceApplicationComp</class>
+  </compound>
+  <compound kind="class">
+    <name>iservice::CServiceApplicationComp</name>
+    <filename>classiservice_1_1_c_service_application_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base>ibase::IApplication</base>
+    <class kind="class">iservice::CServiceApplicationComp::CService</class>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiservice_1_1_c_service_application_comp.html</anchorfile>
+      <anchor>a5c83c10f31049c4ee854bdd5e4ff0fe4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QObject</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiservice_1_1_c_service_application_comp.html</anchorfile>
+      <anchor>ad1b7b9c0aafe91cfa14ca5610bc193dc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>QStringList</type>
+      <name>GetApplicationArguments</name>
+      <anchorfile>classiservice_1_1_c_service_application_comp.html</anchorfile>
+      <anchor>a9fc319566d3a71563d3b0e81b9af5e81</anchor>
+      <arglist>(int argc, char **argv) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InitializeApplication</name>
+      <anchorfile>classiservice_1_1_c_service_application_comp.html</anchorfile>
+      <anchor>acb243f94860565e86565692d56a9f410</anchor>
+      <arglist>(int argc, char **argv)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>Execute</name>
+      <anchorfile>classiservice_1_1_c_service_application_comp.html</anchorfile>
+      <anchor>adf61f0dcf087993b470d54edd613a6e2</anchor>
+      <arglist>(int argc, char **argv)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetHelpText</name>
+      <anchorfile>classiservice_1_1_c_service_application_comp.html</anchorfile>
+      <anchor>afdfc56d24cfed1baef980fdc52f0e200</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QStringList</type>
+      <name>GetApplicationArguments</name>
+      <anchorfile>classiservice_1_1_c_service_application_comp.html</anchorfile>
+      <anchor>a037d8ea3cb8c04495e02fb558743a14b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>eventFilter</name>
+      <anchorfile>classiservice_1_1_c_service_application_comp.html</anchorfile>
+      <anchor>a9ed3cf15580af8a88a7652a9b647199d</anchor>
+      <arglist>(QObject *sourcePtr, QEvent *eventPtr)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnTrayIconActivated</name>
+      <anchorfile>classiservice_1_1_c_service_application_comp.html</anchorfile>
+      <anchor>af1c868feb80d511cc26ea68ea8b0dd63</anchor>
+      <arglist>(QSystemTrayIcon::ActivationReason reason)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; CService &gt;</type>
+      <name>m_servicePtr</name>
+      <anchorfile>classiservice_1_1_c_service_application_comp.html</anchorfile>
+      <anchor>a64c05cc6714cebe1be062ef7d41449ce</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iservice::CServiceApplicationComp::CService</name>
+    <filename>classiservice_1_1_c_service_application_comp_1_1_c_service.html</filename>
+    <base>QtServiceBase</base>
+    <member kind="typedef">
+      <type>QtServiceBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiservice_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
+      <anchor>afbe301919faa0ac07d59b26830966f56</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CService</name>
+      <anchorfile>classiservice_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
+      <anchor>a85dbacfc89b4f71b9093b30c004803a2</anchor>
+      <arglist>(CServiceApplicationComp &amp;parent, ibase::IApplication &amp;application, int serviceArgc, char **serviceArgv, const QString &amp;name)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>start</name>
+      <anchorfile>classiservice_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
+      <anchor>ab1e75b661a89cf459f0b70bd8c7b9d61</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>stop</name>
+      <anchorfile>classiservice_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
+      <anchor>a3c3b5e0aca8d58efb4635aa86e66ad18</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>pause</name>
+      <anchorfile>classiservice_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
+      <anchor>a58677ad350a9b81ee8e4d879aa8c23fb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>resume</name>
+      <anchorfile>classiservice_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
+      <anchor>ab97a1e264130576e1328c50c0bff95cb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>createApplication</name>
+      <anchorfile>classiservice_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
+      <anchor>a4e6a64e7158db2362d9375be75a72bb4</anchor>
+      <arglist>(int &amp;argc, char **argv)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>executeApplication</name>
+      <anchorfile>classiservice_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
+      <anchor>aedc2a9c4e4ce3d6088bdef003cec807c</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
     <name>isig</name>
     <filename>namespaceisig.html</filename>
     <class kind="class">isig::CPulseParamsComp</class>
@@ -30327,6 +31291,7 @@
     <dir>Include/iqtmeas</dir>
     <dir>Include/iqtmm</dir>
     <dir>Include/iqtsig</dir>
+    <dir>Include/iservice</dir>
     <dir>Include/isig</dir>
     <dir>Include/iweb</dir>
     <dir>Include/iwiz</dir>
@@ -30457,6 +31422,18 @@
     <file>CScriptDataProcessorComp.h</file>
     <file>CTriggerParamsGuiComp.h</file>
     <file>iqtsig.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iservice</name>
+    <path>C:/Temp/Acfsln/Include/iservice/</path>
+    <filename>dir_7f078004b07ba33cc29dfe42da6d60c2.html</filename>
+    <file>CServiceApplicationComp.h</file>
+    <file>qtservice.h</file>
+    <file>qtservice_p.h</file>
+    <file>qtservice_win.h</file>
+    <file>qtservicestarter.h</file>
+    <file>qtunixserversocket.h</file>
+    <file>qtunixsocket.h</file>
   </compound>
   <compound kind="dir">
     <name>Include/isig</name>

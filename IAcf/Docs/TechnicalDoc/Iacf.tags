@@ -1,21 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
 <tagfile>
   <compound kind="file">
-    <name>CServiceApplicationComp.h</name>
-    <path>C:/Temp/Iacf/Include/iabc/</path>
-    <filename>_c_service_application_comp_8h</filename>
-    <includes id="iabc_8h" name="iabc.h" local="yes" imported="no">iabc/iabc.h</includes>
-    <class kind="class">iabc::CServiceApplicationComp</class>
-    <class kind="class">iabc::CServiceApplicationComp::CService</class>
-    <namespace>iabc</namespace>
-  </compound>
-  <compound kind="file">
-    <name>iabc.h</name>
-    <path>C:/Temp/Iacf/Include/iabc/</path>
-    <filename>iabc_8h</filename>
-    <namespace>iabc</namespace>
-  </compound>
-  <compound kind="file">
     <name>CMemoryBankSerializerComp.h</name>
     <path>C:/Temp/Iacf/Include/icbox/</path>
     <filename>_c_memory_bank_serializer_comp_8h</filename>
@@ -264,134 +249,6 @@
     <path>C:/Temp/Iacf/Include/izlib/</path>
     <filename>izlib_8h</filename>
     <namespace>izlib</namespace>
-  </compound>
-  <compound kind="namespace">
-    <name>iabc</name>
-    <filename>namespaceiabc.html</filename>
-    <class kind="class">iabc::CServiceApplicationComp</class>
-  </compound>
-  <compound kind="class">
-    <name>iabc::CServiceApplicationComp</name>
-    <filename>classiabc_1_1_c_service_application_comp.html</filename>
-    <base>ilog::TLoggerCompWrap</base>
-    <base>ibase::IApplication</base>
-    <class kind="class">iabc::CServiceApplicationComp::CService</class>
-    <member kind="typedef">
-      <type>ilog::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiabc_1_1_c_service_application_comp.html</anchorfile>
-      <anchor>acd06d02b7b4243ce5b18738f5c441d44</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>QStringList</type>
-      <name>GetApplicationArguments</name>
-      <anchorfile>classiabc_1_1_c_service_application_comp.html</anchorfile>
-      <anchor>af0ad88325091c94bff1f4414bbe197e4</anchor>
-      <arglist>(int argc, char **argv) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>InitializeApplication</name>
-      <anchorfile>classiabc_1_1_c_service_application_comp.html</anchorfile>
-      <anchor>a973951097579aa9f68d44a2c9ad58043</anchor>
-      <arglist>(int argc, char **argv)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>Execute</name>
-      <anchorfile>classiabc_1_1_c_service_application_comp.html</anchorfile>
-      <anchor>a738880bcae6c629c232bb6447a4c1607</anchor>
-      <arglist>(int argc, char **argv)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetHelpText</name>
-      <anchorfile>classiabc_1_1_c_service_application_comp.html</anchorfile>
-      <anchor>aac355bc2223551a3bfcf0dc58b08d0b1</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QStringList</type>
-      <name>GetApplicationArguments</name>
-      <anchorfile>classiabc_1_1_c_service_application_comp.html</anchorfile>
-      <anchor>a490abd014bca7b6a40e38af648de6bb9</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>eventFilter</name>
-      <anchorfile>classiabc_1_1_c_service_application_comp.html</anchorfile>
-      <anchor>a97b07f99dc5a13359b3828eb88813b6c</anchor>
-      <arglist>(QObject *sourcePtr, QEvent *eventPtr)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnTrayIconActivated</name>
-      <anchorfile>classiabc_1_1_c_service_application_comp.html</anchorfile>
-      <anchor>a5d118a7b88c87d47b2dde416d77b9274</anchor>
-      <arglist>(QSystemTrayIcon::ActivationReason reason)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iabc::CServiceApplicationComp::CService</name>
-    <filename>classiabc_1_1_c_service_application_comp_1_1_c_service.html</filename>
-    <member kind="typedef">
-      <type>QtServiceBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiabc_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
-      <anchor>a17eabad554f96b428dc5dadc96c9f6cd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CService</name>
-      <anchorfile>classiabc_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
-      <anchor>aeeb73bad539599de6c1a84b7b37faf87</anchor>
-      <arglist>(CServiceApplicationComp &amp;parent, ibase::IApplication &amp;application, int serviceArgc, char **serviceArgv, const QString &amp;name)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>start</name>
-      <anchorfile>classiabc_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
-      <anchor>a90fb654732229bddd2afb9c0e4e467f7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>stop</name>
-      <anchorfile>classiabc_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
-      <anchor>aacebb9f0ab09618aa407cc83cbae89c6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>pause</name>
-      <anchorfile>classiabc_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
-      <anchor>a5db36bfb82755a1e28bce7a7b4587514</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>resume</name>
-      <anchorfile>classiabc_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
-      <anchor>ade6a6ab3898db148ce96ce01b0734a3d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>createApplication</name>
-      <anchorfile>classiabc_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
-      <anchor>a4ded0cc6081d44a2fd7f2575cfbacea9</anchor>
-      <arglist>(int &amp;argc, char **argv)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual int</type>
-      <name>executeApplication</name>
-      <anchorfile>classiabc_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
-      <anchor>a8fa6866557e7c238c9d74593592e2660</anchor>
-      <arglist>()</arglist>
-    </member>
   </compound>
   <compound kind="namespace">
     <name>icbox</name>
@@ -2474,13 +2331,6 @@
     <filename>namespace_qwt3_d.html</filename>
   </compound>
   <compound kind="dir">
-    <name>Include/iabc</name>
-    <path>C:/Temp/Iacf/Include/iabc/</path>
-    <filename>dir_aa6f23f82e64cf71e616d3471422f959.html</filename>
-    <file>CServiceApplicationComp.h</file>
-    <file>iabc.h</file>
-  </compound>
-  <compound kind="dir">
     <name>Include/icbox</name>
     <path>C:/Temp/Iacf/Include/icbox/</path>
     <filename>dir_2737d69eb66a4f45a39e1c8d1b2bcc09.html</filename>
@@ -2512,7 +2362,6 @@
     <name>Include</name>
     <path>C:/Temp/Iacf/Include/</path>
     <filename>dir_856524284ebe840938865dc061f982fb.html</filename>
-    <dir>Include/iabc</dir>
     <dir>Include/icbox</dir>
     <dir>Include/idc1394</dir>
     <dir>Include/ilibav</dir>
