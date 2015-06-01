@@ -41041,6 +41041,13 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual IParamsSet *</type>
+      <name>CreateParameterSet</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>a50e037738f2906a38fc20a0532a89fb8</anchor>
+      <arglist>(int typeIndex=-1, int index=-1) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetIndexOperationFlags</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
@@ -41715,18 +41722,18 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set.html</anchorfile>
+      <anchor>a6e181929d89b4d9367a174b5d7044f65</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set.html</anchorfile>
       <anchor>a2fe68873772d7f948b337642e8ee7b0d</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QByteArray</type>
-      <name>GetFactoryId</name>
-      <anchorfile>classiser_1_1_i_object.html</anchorfile>
-      <anchor>abae3ddcb3be9fcd24ec21b87445e5d7e</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="variable">
       <type>istd::TDelPtr&lt; IParamsSet &gt;</type>
@@ -42412,6 +42419,13 @@
       <arglist>(int index) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
+      <type>virtual IParamsSet *</type>
+      <name>CreateParameterSet</name>
+      <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
+      <anchor>ad595d98925c5db05d27f276766f556fb</anchor>
+      <arglist>(int typeIndex=-1, int index=-1) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
       <type>virtual QString</type>
       <name>GetParamsSetName</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
@@ -42492,6 +42506,13 @@
       <anchorfile>classiprm_1_1_i_params_set.html</anchorfile>
       <anchor>a2eb6b638293e7b23e93f84e928bbd071</anchor>
       <arglist>(const QByteArray &amp;id)=0</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classiser_1_1_i_object.html</anchorfile>
+      <anchor>abae3ddcb3be9fcd24ec21b87445e5d7e</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
