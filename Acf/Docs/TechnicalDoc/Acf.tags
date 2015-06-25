@@ -57203,6 +57203,13 @@
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
+      <name>FileMove</name>
+      <anchorfile>classistd_1_1_c_system.html</anchorfile>
+      <anchor>a2121b9066fdfb6fe69bd740b617f9231</anchor>
+      <arglist>(const QString &amp;source, const QString &amp;targetFolder, bool overWrite=false)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
       <name>EnsurePathExists</name>
       <anchorfile>classistd_1_1_c_system.html</anchorfile>
       <anchor>a5e1521202395d7ed4a91a84accda949e</anchor>

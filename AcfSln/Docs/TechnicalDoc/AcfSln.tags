@@ -2,12 +2,12 @@
 <tagfile>
   <compound kind="file">
     <name>AcfSln.h</name>
-    <path>C:/Temp/Acfsln/Include/</path>
+    <path>C:/Temp/AcfSln/Include/</path>
     <filename>_acf_sln_8h</filename>
   </compound>
   <compound kind="file">
     <name>CRightsBasedEnablerComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iauth/</path>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
     <filename>_c_rights_based_enabler_comp_8h</filename>
     <includes id="_i_rights_provider_8h" name="IRightsProvider.h" local="yes" imported="no">iauth/IRightsProvider.h</includes>
     <class kind="class">iauth::CRightsBasedEnablerComp</class>
@@ -15,7 +15,7 @@
   </compound>
   <compound kind="file">
     <name>CSimpleLoginComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iauth/</path>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
     <filename>_c_simple_login_comp_8h</filename>
     <includes id="_i_login_8h" name="ILogin.h" local="yes" imported="no">iauth/ILogin.h</includes>
     <includes id="_i_rights_provider_8h" name="IRightsProvider.h" local="yes" imported="no">iauth/IRightsProvider.h</includes>
@@ -25,7 +25,7 @@
   </compound>
   <compound kind="file">
     <name>CStaticRightsProviderComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iauth/</path>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
     <filename>_c_static_rights_provider_comp_8h</filename>
     <includes id="_i_rights_provider_8h" name="IRightsProvider.h" local="yes" imported="no">iauth/IRightsProvider.h</includes>
     <class kind="class">iauth::CStaticRightsProviderComp</class>
@@ -33,14 +33,14 @@
   </compound>
   <compound kind="file">
     <name>CUser.h</name>
-    <path>C:/Temp/Acfsln/Include/iauth/</path>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
     <filename>_c_user_8h</filename>
     <class kind="class">iauth::CUser</class>
     <namespace>iauth</namespace>
   </compound>
   <compound kind="file">
     <name>CUserLoginComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iauth/</path>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
     <filename>_c_user_login_comp_8h</filename>
     <includes id="_i_rights_provider_8h" name="IRightsProvider.h" local="yes" imported="no">iauth/IRightsProvider.h</includes>
     <includes id="_i_login_8h" name="ILogin.h" local="yes" imported="no">iauth/ILogin.h</includes>
@@ -51,7 +51,7 @@
   </compound>
   <compound kind="file">
     <name>CUsersManagerComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iauth/</path>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
     <filename>_c_users_manager_comp_8h</filename>
     <includes id="_i_users_manager_8h" name="IUsersManager.h" local="yes" imported="no">iauth/IUsersManager.h</includes>
     <includes id="_c_user_8h" name="CUser.h" local="yes" imported="no">iauth/CUser.h</includes>
@@ -60,7 +60,7 @@
   </compound>
   <compound kind="file">
     <name>ILogin.h</name>
-    <path>C:/Temp/Acfsln/Include/iauth/</path>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
     <filename>_i_login_8h</filename>
     <includes id="_c_user_8h" name="CUser.h" local="yes" imported="no">iauth/CUser.h</includes>
     <class kind="class">iauth::ILogin</class>
@@ -68,7 +68,7 @@
   </compound>
   <compound kind="file">
     <name>IPasswordChanger.h</name>
-    <path>C:/Temp/Acfsln/Include/iauth/</path>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
     <filename>_i_password_changer_8h</filename>
     <includes id="_c_user_8h" name="CUser.h" local="yes" imported="no">iauth/CUser.h</includes>
     <class kind="class">iauth::IPasswordChanger</class>
@@ -76,14 +76,14 @@
   </compound>
   <compound kind="file">
     <name>IRightsProvider.h</name>
-    <path>C:/Temp/Acfsln/Include/iauth/</path>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
     <filename>_i_rights_provider_8h</filename>
     <class kind="class">iauth::IRightsProvider</class>
     <namespace>iauth</namespace>
   </compound>
   <compound kind="file">
     <name>IUsersManager.h</name>
-    <path>C:/Temp/Acfsln/Include/iauth/</path>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
     <filename>_i_users_manager_8h</filename>
     <includes id="_c_user_8h" name="CUser.h" local="yes" imported="no">iauth/CUser.h</includes>
     <class kind="class">iauth::IUsersManager</class>
@@ -91,7 +91,7 @@
   </compound>
   <compound kind="file">
     <name>CBlobDescriptorInfo.h</name>
-    <path>C:/Temp/Acfsln/Include/iblob/</path>
+    <path>C:/Temp/AcfSln/Include/iblob/</path>
     <filename>_c_blob_descriptor_info_8h</filename>
     <class kind="class">iblob::CBlobDescriptorInfo</class>
     <namespace>iblob</namespace>
@@ -105,7 +105,7 @@
   </compound>
   <compound kind="file">
     <name>CBlobFeature.h</name>
-    <path>C:/Temp/Acfsln/Include/iblob/</path>
+    <path>C:/Temp/AcfSln/Include/iblob/</path>
     <filename>_c_blob_feature_8h</filename>
     <includes id="_c_object_feature_8h" name="CObjectFeature.h" local="yes" imported="no">iipr/CObjectFeature.h</includes>
     <class kind="class">iblob::CBlobFeature</class>
@@ -113,7 +113,7 @@
   </compound>
   <compound kind="file">
     <name>CBlobFilterParams.h</name>
-    <path>C:/Temp/Acfsln/Include/iblob/</path>
+    <path>C:/Temp/AcfSln/Include/iblob/</path>
     <filename>_c_blob_filter_params_8h</filename>
     <includes id="_i_blob_filter_params_8h" name="IBlobFilterParams.h" local="yes" imported="no">iblob/IBlobFilterParams.h</includes>
     <class kind="class">iblob::CBlobFilterParams</class>
@@ -121,14 +121,14 @@
   </compound>
   <compound kind="file">
     <name>iblob.h</name>
-    <path>C:/Temp/Acfsln/Include/iblob/</path>
+    <path>C:/Temp/AcfSln/Include/iblob/</path>
     <filename>iblob_8h</filename>
     <includes id="iipr_8h" name="iipr.h" local="yes" imported="no">iipr/iipr.h</includes>
     <namespace>iblob</namespace>
   </compound>
   <compound kind="file">
     <name>IBlobFilterParams.h</name>
-    <path>C:/Temp/Acfsln/Include/iblob/</path>
+    <path>C:/Temp/AcfSln/Include/iblob/</path>
     <filename>_i_blob_filter_params_8h</filename>
     <includes id="_c_blob_descriptor_info_8h" name="CBlobDescriptorInfo.h" local="no" imported="no">iblob/CBlobDescriptorInfo.h</includes>
     <class kind="class">iblob::IBlobFilterParams</class>
@@ -136,7 +136,7 @@
   </compound>
   <compound kind="file">
     <name>CBlobFilterGui.h</name>
-    <path>C:/Temp/Acfsln/Include/iblobgui/</path>
+    <path>C:/Temp/AcfSln/Include/iblobgui/</path>
     <filename>_c_blob_filter_gui_8h</filename>
     <includes id="_i_blob_filter_params_8h" name="IBlobFilterParams.h" local="yes" imported="no">iblob/IBlobFilterParams.h</includes>
     <class kind="class">iblobgui::CBlobFilterGui</class>
@@ -144,7 +144,7 @@
   </compound>
   <compound kind="file">
     <name>CBlobFilterParamsGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iblobgui/</path>
+    <path>C:/Temp/AcfSln/Include/iblobgui/</path>
     <filename>_c_blob_filter_params_gui_comp_8h</filename>
     <includes id="_i_blob_filter_params_8h" name="IBlobFilterParams.h" local="yes" imported="no">iblob/IBlobFilterParams.h</includes>
     <class kind="class">iblobgui::CBlobFilterParamsGuiComp</class>
@@ -152,7 +152,7 @@
   </compound>
   <compound kind="file">
     <name>CAcquisitionConstraintsComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icam/</path>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_acquisition_constraints_comp_8h</filename>
     <includes id="_i_exposure_constraints_8h" name="IExposureConstraints.h" local="yes" imported="no">icam/IExposureConstraints.h</includes>
     <includes id="_i_trigger_constraints_8h" name="ITriggerConstraints.h" local="yes" imported="no">isig/ITriggerConstraints.h</includes>
@@ -161,7 +161,7 @@
   </compound>
   <compound kind="file">
     <name>CCameraDelegatorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icam/</path>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_camera_delegator_comp_8h</filename>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
     <class kind="class">icam::CCameraDelegatorComp</class>
@@ -169,7 +169,7 @@
   </compound>
   <compound kind="file">
     <name>CExposureParamsComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icam/</path>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_exposure_params_comp_8h</filename>
     <includes id="_i_exposure_params_8h" name="IExposureParams.h" local="yes" imported="no">icam/IExposureParams.h</includes>
     <includes id="_i_exposure_constraints_8h" name="IExposureConstraints.h" local="yes" imported="no">icam/IExposureConstraints.h</includes>
@@ -178,7 +178,7 @@
   </compound>
   <compound kind="file">
     <name>CMemoryAcquisitionComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icam/</path>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_memory_acquisition_comp_8h</filename>
     <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
@@ -187,7 +187,7 @@
   </compound>
   <compound kind="file">
     <name>CMultiCameraBitmapSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icam/</path>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_multi_camera_bitmap_supplier_comp_8h</filename>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
@@ -196,7 +196,7 @@
   </compound>
   <compound kind="file">
     <name>CMultiLayerBitmapSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icam/</path>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_multi_layer_bitmap_supplier_comp_8h</filename>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
@@ -207,7 +207,7 @@
   </compound>
   <compound kind="file">
     <name>CSelectableBitmapSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icam/</path>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_selectable_bitmap_supplier_comp_8h</filename>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
@@ -216,7 +216,7 @@
   </compound>
   <compound kind="file">
     <name>CSelectionParamCameraComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icam/</path>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_selection_param_camera_comp_8h</filename>
     <includes id="_c_camera_delegator_comp_8h" name="CCameraDelegatorComp.h" local="yes" imported="no">icam/CCameraDelegatorComp.h</includes>
     <class kind="class">icam::CSelectionParamCameraComp</class>
@@ -225,7 +225,7 @@
   </compound>
   <compound kind="file">
     <name>CSnapBitmapSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icam/</path>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_snap_bitmap_supplier_comp_8h</filename>
     <includes id="_c_snap_bitmap_supplier_comp_base_8h" name="CSnapBitmapSupplierCompBase.h" local="yes" imported="no">icam/CSnapBitmapSupplierCompBase.h</includes>
     <class kind="class">icam::CSnapBitmapSupplierComp</class>
@@ -233,7 +233,7 @@
   </compound>
   <compound kind="file">
     <name>CSnapBitmapSupplierCompBase.h</name>
-    <path>C:/Temp/Acfsln/Include/icam/</path>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_snap_bitmap_supplier_comp_base_8h</filename>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
@@ -244,7 +244,7 @@
   </compound>
   <compound kind="file">
     <name>IBitmapAcquisition.h</name>
-    <path>C:/Temp/Acfsln/Include/icam/</path>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_i_bitmap_acquisition_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">icam::IBitmapAcquisition</class>
@@ -252,21 +252,21 @@
   </compound>
   <compound kind="file">
     <name>icam.h</name>
-    <path>C:/Temp/Acfsln/Include/icam/</path>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>icam_8h</filename>
     <includes id="iproc_8h" name="iproc.h" local="yes" imported="no">iproc/iproc.h</includes>
     <namespace>icam</namespace>
   </compound>
   <compound kind="file">
     <name>ICameraInfo.h</name>
-    <path>C:/Temp/Acfsln/Include/icam/</path>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_i_camera_info_8h</filename>
     <class kind="class">icam::ICameraInfo</class>
     <namespace>icam</namespace>
   </compound>
   <compound kind="file">
     <name>IExposureConstraints.h</name>
-    <path>C:/Temp/Acfsln/Include/icam/</path>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_i_exposure_constraints_8h</filename>
     <includes id="icam_8h" name="icam.h" local="yes" imported="no">icam/icam.h</includes>
     <class kind="class">icam::IExposureConstraints</class>
@@ -274,7 +274,7 @@
   </compound>
   <compound kind="file">
     <name>IExposureParams.h</name>
-    <path>C:/Temp/Acfsln/Include/icam/</path>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_i_exposure_params_8h</filename>
     <includes id="icam_8h" name="icam.h" local="yes" imported="no">icam/icam.h</includes>
     <class kind="class">icam::IExposureParams</class>
@@ -282,7 +282,7 @@
   </compound>
   <compound kind="file">
     <name>TSnapBitmapSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icam/</path>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_t_snap_bitmap_supplier_comp_8h</filename>
     <includes id="_c_snap_bitmap_supplier_comp_base_8h" name="CSnapBitmapSupplierCompBase.h" local="yes" imported="no">icam/CSnapBitmapSupplierCompBase.h</includes>
     <class kind="class">icam::TSnapBitmapSupplierComp</class>
@@ -290,7 +290,7 @@
   </compound>
   <compound kind="file">
     <name>CAttributeEditorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_attribute_editor_comp_8h</filename>
     <includes id="_c_element_selection_info_manager_base_8h" name="CElementSelectionInfoManagerBase.h" local="yes" imported="no">icmpstr/CElementSelectionInfoManagerBase.h</includes>
     <includes id="_c_multi_attribute_editor_8h" name="CMultiAttributeEditor.h" local="yes" imported="no">icmpstr/CMultiAttributeEditor.h</includes>
@@ -300,7 +300,7 @@
   </compound>
   <compound kind="file">
     <name>CComponentHelpFileProviderComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_component_help_file_provider_comp_8h</filename>
     <includes id="_i_external_meta_info_manager_8h" name="IExternalMetaInfoManager.h" local="yes" imported="no">icmpstr/IExternalMetaInfoManager.h</includes>
     <class kind="class">icmpstr::CComponentHelpFileProviderComp</class>
@@ -308,7 +308,7 @@
   </compound>
   <compound kind="file">
     <name>CComponentNoteEditorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_component_note_editor_comp_8h</filename>
     <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
     <class kind="class">icmpstr::CComponentNoteEditorComp</class>
@@ -316,7 +316,7 @@
   </compound>
   <compound kind="file">
     <name>CComponentPromotorDialogComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_component_promotor_dialog_comp_8h</filename>
     <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
     <class kind="class">icmpstr::CComponentPromotorDialogCompBase</class>
@@ -325,7 +325,7 @@
   </compound>
   <compound kind="file">
     <name>CElementSelectionInfoManagerBase.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_element_selection_info_manager_base_8h</filename>
     <includes id="_i_attribute_selection_observer_8h" name="IAttributeSelectionObserver.h" local="yes" imported="no">icmpstr/IAttributeSelectionObserver.h</includes>
     <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
@@ -335,7 +335,7 @@
   </compound>
   <compound kind="file">
     <name>CGraphicsConnectorItem.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_graphics_connector_item_8h</filename>
     <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">icmpstr/ISceneProvider.h</includes>
     <class kind="class">icmpstr::CGraphicsConnectorItem</class>
@@ -343,7 +343,7 @@
   </compound>
   <compound kind="file">
     <name>CMultiAttributeDelegateWidget.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_multi_attribute_delegate_widget_8h</filename>
     <includes id="_c_element_selection_info_manager_base_8h" name="CElementSelectionInfoManagerBase.h" local="yes" imported="no">icmpstr/CElementSelectionInfoManagerBase.h</includes>
     <class kind="class">icmpstr::CMultiAttributeDelegateWidget</class>
@@ -351,7 +351,7 @@
   </compound>
   <compound kind="file">
     <name>CMultiAttributeEditor.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_multi_attribute_editor_8h</filename>
     <includes id="_c_element_selection_info_manager_base_8h" name="CElementSelectionInfoManagerBase.h" local="yes" imported="no">icmpstr/CElementSelectionInfoManagerBase.h</includes>
     <class kind="class">icmpstr::CMultiAttributeEditor</class>
@@ -359,7 +359,7 @@
   </compound>
   <compound kind="file">
     <name>CPackageOverviewComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_package_overview_comp_8h</filename>
     <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
     <includes id="_i_attribute_selection_observer_8h" name="IAttributeSelectionObserver.h" local="yes" imported="no">icmpstr/IAttributeSelectionObserver.h</includes>
@@ -370,7 +370,7 @@
   </compound>
   <compound kind="file">
     <name>CPackagesLoaderExtComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_packages_loader_ext_comp_8h</filename>
     <includes id="_i_external_meta_info_manager_8h" name="IExternalMetaInfoManager.h" local="yes" imported="no">icmpstr/IExternalMetaInfoManager.h</includes>
     <class kind="class">icmpstr::CPackagesLoaderExtComp</class>
@@ -378,7 +378,7 @@
   </compound>
   <compound kind="file">
     <name>CQuickHelpGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_quick_help_gui_comp_8h</filename>
     <includes id="_i_external_meta_info_manager_8h" name="IExternalMetaInfoManager.h" local="yes" imported="no">icmpstr/IExternalMetaInfoManager.h</includes>
     <class kind="class">icmpstr::CQuickHelpGuiComp</class>
@@ -386,7 +386,7 @@
   </compound>
   <compound kind="file">
     <name>CRegistryConsistInfoComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_registry_consist_info_comp_8h</filename>
     <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
     <includes id="_i_external_meta_info_manager_8h" name="IExternalMetaInfoManager.h" local="yes" imported="no">icmpstr/IExternalMetaInfoManager.h</includes>
@@ -395,7 +395,7 @@
   </compound>
   <compound kind="file">
     <name>CRegistryElementShape.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_registry_element_shape_8h</filename>
     <includes id="_t_object_shape_base_8h" name="TObjectShapeBase.h" local="yes" imported="no">icmpstr/TObjectShapeBase.h</includes>
     <includes id="_c_visual_registry_element_8h" name="CVisualRegistryElement.h" local="yes" imported="no">icmpstr/CVisualRegistryElement.h</includes>
@@ -404,14 +404,14 @@
   </compound>
   <compound kind="file">
     <name>CRegistryLoaderComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_registry_loader_comp_8h</filename>
     <class kind="class">icmpstr::CRegistryLoaderComp</class>
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
     <name>CRegistryPreviewComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_registry_preview_comp_8h</filename>
     <includes id="_i_registry_preview_8h" name="IRegistryPreview.h" local="yes" imported="no">icmpstr/IRegistryPreview.h</includes>
     <class kind="class">icmpstr::CRegistryPreviewComp</class>
@@ -419,7 +419,7 @@
   </compound>
   <compound kind="file">
     <name>CRegistryPropEditorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_registry_prop_editor_comp_8h</filename>
     <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
     <class kind="class">icmpstr::CRegistryPropEditorComp</class>
@@ -428,7 +428,7 @@
   </compound>
   <compound kind="file">
     <name>CRegistryTreeViewComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_registry_tree_view_comp_8h</filename>
     <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
     <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
@@ -438,7 +438,7 @@
   </compound>
   <compound kind="file">
     <name>CSceneProviderGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_scene_provider_gui_comp_8h</filename>
     <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">icmpstr/ISceneProvider.h</includes>
     <class kind="class">icmpstr::CSceneProviderGuiComp</class>
@@ -447,7 +447,7 @@
   </compound>
   <compound kind="file">
     <name>CVisualRegistry.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_visual_registry_8h</filename>
     <includes id="_i_component_note_controller_8h" name="IComponentNoteController.h" local="yes" imported="no">icmpstr/IComponentNoteController.h</includes>
     <includes id="_c_visual_registry_element_8h" name="CVisualRegistryElement.h" local="yes" imported="no">icmpstr/CVisualRegistryElement.h</includes>
@@ -456,7 +456,7 @@
   </compound>
   <compound kind="file">
     <name>CVisualRegistryEditorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_visual_registry_editor_comp_8h</filename>
     <includes id="_i_registry_preview_8h" name="IRegistryPreview.h" local="yes" imported="no">icmpstr/IRegistryPreview.h</includes>
     <includes id="_i_registry_consist_info_8h" name="IRegistryConsistInfo.h" local="yes" imported="no">icmpstr/IRegistryConsistInfo.h</includes>
@@ -469,7 +469,7 @@
   </compound>
   <compound kind="file">
     <name>CVisualRegistryElement.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_visual_registry_element_8h</filename>
     <includes id="icmpstr_8h" name="icmpstr.h" local="yes" imported="no">icmpstr/icmpstr.h</includes>
     <class kind="class">icmpstr::CVisualRegistryElement</class>
@@ -477,14 +477,14 @@
   </compound>
   <compound kind="file">
     <name>CXpcEditorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_xpc_editor_comp_8h</filename>
     <class kind="class">icmpstr::CXpcEditorComp</class>
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
     <name>IAttributeSelectionObserver.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_i_attribute_selection_observer_8h</filename>
     <includes id="icmpstr_8h" name="icmpstr.h" local="yes" imported="no">icmpstr/icmpstr.h</includes>
     <class kind="class">icmpstr::IAttributeSelectionObserver</class>
@@ -492,13 +492,13 @@
   </compound>
   <compound kind="file">
     <name>icmpstr.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>icmpstr_8h</filename>
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
     <name>IComponentNoteController.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_i_component_note_controller_8h</filename>
     <includes id="icmpstr_8h" name="icmpstr.h" local="yes" imported="no">icmpstr/icmpstr.h</includes>
     <class kind="class">icmpstr::IComponentNoteController</class>
@@ -506,7 +506,7 @@
   </compound>
   <compound kind="file">
     <name>IElementSelectionInfo.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_i_element_selection_info_8h</filename>
     <includes id="icmpstr_8h" name="icmpstr.h" local="yes" imported="no">icmpstr/icmpstr.h</includes>
     <class kind="class">icmpstr::IElementSelectionInfo</class>
@@ -514,14 +514,14 @@
   </compound>
   <compound kind="file">
     <name>IExternalMetaInfoManager.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_i_external_meta_info_manager_8h</filename>
     <class kind="class">icmpstr::IExternalMetaInfoManager</class>
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
     <name>IRegistryConsistInfo.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_i_registry_consist_info_8h</filename>
     <includes id="icmpstr_8h" name="icmpstr.h" local="yes" imported="no">icmpstr/icmpstr.h</includes>
     <class kind="class">icmpstr::IRegistryConsistInfo</class>
@@ -529,7 +529,7 @@
   </compound>
   <compound kind="file">
     <name>IRegistryPreview.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_i_registry_preview_8h</filename>
     <includes id="icmpstr_8h" name="icmpstr.h" local="yes" imported="no">icmpstr/icmpstr.h</includes>
     <class kind="class">icmpstr::IRegistryPreview</class>
@@ -537,7 +537,7 @@
   </compound>
   <compound kind="file">
     <name>ISceneProvider.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_i_scene_provider_8h</filename>
     <includes id="icmpstr_8h" name="icmpstr.h" local="yes" imported="no">icmpstr/icmpstr.h</includes>
     <class kind="class">icmpstr::ISceneProvider</class>
@@ -545,7 +545,7 @@
   </compound>
   <compound kind="file">
     <name>TObjectShapeBase.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_t_object_shape_base_8h</filename>
     <includes id="_t_shape_base_8h" name="TShapeBase.h" local="yes" imported="no">icmpstr/TShapeBase.h</includes>
     <class kind="class">icmpstr::TObjectShapeBase</class>
@@ -553,7 +553,7 @@
   </compound>
   <compound kind="file">
     <name>TShapeBase.h</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_t_shape_base_8h</filename>
     <includes id="_i_scene_provider_8h" name="ISceneProvider.h" local="yes" imported="no">icmpstr/ISceneProvider.h</includes>
     <class kind="class">icmpstr::TShapeBase</class>
@@ -561,7 +561,7 @@
   </compound>
   <compound kind="file">
     <name>CRenderedDocumentPreviewGeneratorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/idocproc/</path>
+    <path>C:/Temp/AcfSln/Include/idocproc/</path>
     <filename>_c_rendered_document_preview_generator_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="no" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">idocproc::CRenderedDocumentPreviewGeneratorComp</class>
@@ -569,14 +569,14 @@
   </compound>
   <compound kind="file">
     <name>idocproc.h</name>
-    <path>C:/Temp/Acfsln/Include/idocproc/</path>
+    <path>C:/Temp/AcfSln/Include/idocproc/</path>
     <filename>idocproc_8h</filename>
     <includes id="iproc_8h" name="iproc.h" local="yes" imported="no">iproc/iproc.h</includes>
     <namespace>idocproc</namespace>
   </compound>
   <compound kind="file">
     <name>CEdgeBasedFeaturesSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iedge/</path>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_c_edge_based_features_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
@@ -589,7 +589,7 @@
   </compound>
   <compound kind="file">
     <name>CEdgeLine.h</name>
-    <path>C:/Temp/Acfsln/Include/iedge/</path>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_c_edge_line_8h</filename>
     <includes id="_c_edge_node_8h" name="CEdgeNode.h" local="yes" imported="no">iedge/CEdgeNode.h</includes>
     <class kind="class">iedge::CEdgeLine</class>
@@ -597,7 +597,7 @@
   </compound>
   <compound kind="file">
     <name>CEdgeLineContainer.h</name>
-    <path>C:/Temp/Acfsln/Include/iedge/</path>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_c_edge_line_container_8h</filename>
     <includes id="_c_edge_line_8h" name="CEdgeLine.h" local="yes" imported="no">iedge/CEdgeLine.h</includes>
     <class kind="class">iedge::CEdgeLineContainer</class>
@@ -605,14 +605,14 @@
   </compound>
   <compound kind="file">
     <name>CEdgeNode.h</name>
-    <path>C:/Temp/Acfsln/Include/iedge/</path>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_c_edge_node_8h</filename>
     <class kind="class">iedge::CEdgeNode</class>
     <namespace>iedge</namespace>
   </compound>
   <compound kind="file">
     <name>CEdgesReductorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iedge/</path>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_c_edges_reductor_comp_8h</filename>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
@@ -623,7 +623,7 @@
   </compound>
   <compound kind="file">
     <name>CExtractedEdgeLinesSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iedge/</path>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_c_extracted_edge_lines_supplier_comp_8h</filename>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
@@ -635,7 +635,7 @@
   </compound>
   <compound kind="file">
     <name>CFastEdgesExtractorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iedge/</path>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_c_fast_edges_extractor_comp_8h</filename>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
@@ -646,7 +646,7 @@
   </compound>
   <compound kind="file">
     <name>CProcessedEdgeLinesSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iedge/</path>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_c_processed_edge_lines_supplier_comp_8h</filename>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
@@ -658,14 +658,14 @@
   </compound>
   <compound kind="file">
     <name>iedge.h</name>
-    <path>C:/Temp/Acfsln/Include/iedge/</path>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>iedge_8h</filename>
     <includes id="iproc_8h" name="iproc.h" local="yes" imported="no">iproc/iproc.h</includes>
     <namespace>iedge</namespace>
   </compound>
   <compound kind="file">
     <name>IEdgeLinesProcessor.h</name>
-    <path>C:/Temp/Acfsln/Include/iedge/</path>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_i_edge_lines_processor_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_c_edge_line_container_8h" name="CEdgeLineContainer.h" local="yes" imported="no">iedge/CEdgeLineContainer.h</includes>
@@ -674,7 +674,7 @@
   </compound>
   <compound kind="file">
     <name>IEdgeLinesProvider.h</name>
-    <path>C:/Temp/Acfsln/Include/iedge/</path>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_i_edge_lines_provider_8h</filename>
     <includes id="_c_edge_line_container_8h" name="CEdgeLineContainer.h" local="yes" imported="no">iedge/CEdgeLineContainer.h</includes>
     <class kind="class">iedge::IEdgeLinesProvider</class>
@@ -682,7 +682,7 @@
   </compound>
   <compound kind="file">
     <name>IEdgesExtractor.h</name>
-    <path>C:/Temp/Acfsln/Include/iedge/</path>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>_i_edges_extractor_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_c_edge_line_container_8h" name="CEdgeLineContainer.h" local="yes" imported="no">iedge/CEdgeLineContainer.h</includes>
@@ -691,14 +691,14 @@
   </compound>
   <compound kind="file">
     <name>CEdgeLineContainerShape.h</name>
-    <path>C:/Temp/Acfsln/Include/iedgegui/</path>
+    <path>C:/Temp/AcfSln/Include/iedgegui/</path>
     <filename>_c_edge_line_container_shape_8h</filename>
     <class kind="class">iedgegui::CEdgeLineContainerShape</class>
     <namespace>iedgegui</namespace>
   </compound>
   <compound kind="file">
     <name>CEdgeLinesSupplierGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iedgegui/</path>
+    <path>C:/Temp/AcfSln/Include/iedgegui/</path>
     <filename>_c_edge_lines_supplier_gui_comp_8h</filename>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_c_edge_line_container_8h" name="CEdgeLineContainer.h" local="yes" imported="no">iedge/CEdgeLineContainer.h</includes>
@@ -709,7 +709,7 @@
   </compound>
   <compound kind="file">
     <name>CBitmapPreviewGeneratorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/ifileproc/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_bitmap_preview_generator_comp_8h</filename>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <class kind="class">ifileproc::CBitmapPreviewGeneratorComp</class>
@@ -717,7 +717,7 @@
   </compound>
   <compound kind="file">
     <name>CComposedCopyFilesComp.h</name>
-    <path>C:/Temp/Acfsln/Include/ifileproc/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_composed_copy_files_comp_8h</filename>
     <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <class kind="class">ifileproc::CComposedCopyFilesComp</class>
@@ -725,7 +725,7 @@
   </compound>
   <compound kind="file">
     <name>CCopyAppComp.h</name>
-    <path>C:/Temp/Acfsln/Include/ifileproc/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_copy_app_comp_8h</filename>
     <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <class kind="class">ifileproc::CCopyAppComp</class>
@@ -733,7 +733,7 @@
   </compound>
   <compound kind="file">
     <name>CCopyFilesTreeComp.h</name>
-    <path>C:/Temp/Acfsln/Include/ifileproc/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_copy_files_tree_comp_8h</filename>
     <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <class kind="class">ifileproc::CCopyFilesTreeComp</class>
@@ -741,7 +741,7 @@
   </compound>
   <compound kind="file">
     <name>CExternalFileConverterComp.h</name>
-    <path>C:/Temp/Acfsln/Include/ifileproc/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_external_file_converter_comp_8h</filename>
     <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <class kind="class">ifileproc::CExternalFileConverterComp</class>
@@ -749,7 +749,7 @@
   </compound>
   <compound kind="file">
     <name>CFileConvertOverProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/ifileproc/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_file_convert_over_processor_comp_8h</filename>
     <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
@@ -758,7 +758,7 @@
   </compound>
   <compound kind="file">
     <name>CFileCopyOverLoaderComp.h</name>
-    <path>C:/Temp/Acfsln/Include/ifileproc/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_file_copy_over_loader_comp_8h</filename>
     <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <class kind="class">ifileproc::CFileCopyOverLoaderComp</class>
@@ -766,7 +766,7 @@
   </compound>
   <compound kind="file">
     <name>CFileInfoCopyComp.h</name>
-    <path>C:/Temp/Acfsln/Include/ifileproc/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_file_info_copy_comp_8h</filename>
     <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <includes id="ifileproc_8h" name="ifileproc.h" local="yes" imported="no">ifileproc/ifileproc.h</includes>
@@ -775,7 +775,7 @@
   </compound>
   <compound kind="file">
     <name>CFileListConverterComp.h</name>
-    <path>C:/Temp/Acfsln/Include/ifileproc/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_file_list_converter_comp_8h</filename>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
@@ -785,7 +785,7 @@
   </compound>
   <compound kind="file">
     <name>CFileNamingComp.h</name>
-    <path>C:/Temp/Acfsln/Include/ifileproc/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_file_naming_comp_8h</filename>
     <includes id="_i_file_naming_8h" name="IFileNaming.h" local="yes" imported="no">ifileproc/IFileNaming.h</includes>
     <includes id="_i_file_naming_params_8h" name="IFileNamingParams.h" local="yes" imported="no">ifileproc/IFileNamingParams.h</includes>
@@ -794,7 +794,7 @@
   </compound>
   <compound kind="file">
     <name>CFileNamingParamsComp.h</name>
-    <path>C:/Temp/Acfsln/Include/ifileproc/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_file_naming_params_comp_8h</filename>
     <includes id="_i_file_naming_params_8h" name="IFileNamingParams.h" local="yes" imported="no">ifileproc/IFileNamingParams.h</includes>
     <class kind="class">ifileproc::CFileNamingParamsComp</class>
@@ -802,7 +802,7 @@
   </compound>
   <compound kind="file">
     <name>CFilePathesContainer.h</name>
-    <path>C:/Temp/Acfsln/Include/ifileproc/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_file_pathes_container_8h</filename>
     <includes id="ifileproc_8h" name="ifileproc.h" local="yes" imported="no">ifileproc/ifileproc.h</includes>
     <class kind="class">ifileproc::CFilePathesContainer</class>
@@ -810,7 +810,7 @@
   </compound>
   <compound kind="file">
     <name>CProcessingResultsReviewComp.h</name>
-    <path>C:/Temp/Acfsln/Include/ifileproc/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_processing_results_review_comp_8h</filename>
     <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
@@ -819,7 +819,7 @@
   </compound>
   <compound kind="file">
     <name>CRenderedObjectFileLoaderComp.h</name>
-    <path>C:/Temp/Acfsln/Include/ifileproc/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_rendered_object_file_loader_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">ifileproc::CRenderedObjectFileLoaderComp</class>
@@ -827,7 +827,7 @@
   </compound>
   <compound kind="file">
     <name>CSelectableFileConverterComp.h</name>
-    <path>C:/Temp/Acfsln/Include/ifileproc/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_selectable_file_converter_comp_8h</filename>
     <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <class kind="class">ifileproc::CSelectableFileConverterComp</class>
@@ -835,7 +835,7 @@
   </compound>
   <compound kind="file">
     <name>IFileConversion.h</name>
-    <path>C:/Temp/Acfsln/Include/ifileproc/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_i_file_conversion_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">ifileproc::IFileConversion</class>
@@ -843,27 +843,27 @@
   </compound>
   <compound kind="file">
     <name>IFileNaming.h</name>
-    <path>C:/Temp/Acfsln/Include/ifileproc/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_i_file_naming_8h</filename>
     <class kind="class">ifileproc::IFileNaming</class>
     <namespace>ifileproc</namespace>
   </compound>
   <compound kind="file">
     <name>IFileNamingParams.h</name>
-    <path>C:/Temp/Acfsln/Include/ifileproc/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_i_file_naming_params_8h</filename>
     <class kind="class">ifileproc::IFileNamingParams</class>
     <namespace>ifileproc</namespace>
   </compound>
   <compound kind="file">
     <name>ifileproc.h</name>
-    <path>C:/Temp/Acfsln/Include/ifileproc/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>ifileproc_8h</filename>
     <namespace>ifileproc</namespace>
   </compound>
   <compound kind="file">
     <name>CDirectoryMonitorParams.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_c_directory_monitor_params_8h</filename>
     <includes id="_i_directory_monitor_params_8h" name="IDirectoryMonitorParams.h" local="yes" imported="no">ihotf/IDirectoryMonitorParams.h</includes>
     <class kind="class">ihotf::CDirectoryMonitorParams</class>
@@ -871,7 +871,7 @@
   </compound>
   <compound kind="file">
     <name>CDirectoryMonitorParamsComp.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_c_directory_monitor_params_comp_8h</filename>
     <includes id="_c_directory_monitor_params_8h" name="CDirectoryMonitorParams.h" local="yes" imported="no">ihotf/CDirectoryMonitorParams.h</includes>
     <class kind="class">ihotf::CDirectoryMonitorParamsComp</class>
@@ -879,7 +879,7 @@
   </compound>
   <compound kind="file">
     <name>CFileSystemChangeStorage.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_c_file_system_change_storage_8h</filename>
     <includes id="_i_file_system_change_storage_8h" name="IFileSystemChangeStorage.h" local="yes" imported="no">ihotf/IFileSystemChangeStorage.h</includes>
     <class kind="class">ihotf::CFileSystemChangeStorage</class>
@@ -887,7 +887,7 @@
   </compound>
   <compound kind="file">
     <name>CHotfolderProcessingInfo.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_c_hotfolder_processing_info_8h</filename>
     <includes id="_i_hotfolder_processing_info_8h" name="IHotfolderProcessingInfo.h" local="yes" imported="no">ihotf/IHotfolderProcessingInfo.h</includes>
     <includes id="_c_hotfolder_processing_item_8h" name="CHotfolderProcessingItem.h" local="yes" imported="no">ihotf/CHotfolderProcessingItem.h</includes>
@@ -896,7 +896,7 @@
   </compound>
   <compound kind="file">
     <name>CHotfolderProcessingItem.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_c_hotfolder_processing_item_8h</filename>
     <includes id="_i_hotfolder_processing_item_8h" name="IHotfolderProcessingItem.h" local="yes" imported="no">ihotf/IHotfolderProcessingItem.h</includes>
     <class kind="class">ihotf::CHotfolderProcessingItem</class>
@@ -904,7 +904,7 @@
   </compound>
   <compound kind="file">
     <name>CHotfolderStatistics.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_c_hotfolder_statistics_8h</filename>
     <includes id="_i_hotfolder_statistics_8h" name="IHotfolderStatistics.h" local="yes" imported="no">ihotf/IHotfolderStatistics.h</includes>
     <includes id="_i_hotfolder_processing_info_8h" name="IHotfolderProcessingInfo.h" local="yes" imported="no">ihotf/IHotfolderProcessingInfo.h</includes>
@@ -913,7 +913,7 @@
   </compound>
   <compound kind="file">
     <name>CMonitoringSession.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_c_monitoring_session_8h</filename>
     <includes id="_i_monitoring_session_8h" name="IMonitoringSession.h" local="yes" imported="no">ihotf/IMonitoringSession.h</includes>
     <class kind="class">ihotf::CMonitoringSession</class>
@@ -921,7 +921,7 @@
   </compound>
   <compound kind="file">
     <name>CMonitoringSessionsManager.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_c_monitoring_sessions_manager_8h</filename>
     <includes id="_i_monitoring_session_manager_8h" name="IMonitoringSessionManager.h" local="yes" imported="no">ihotf/IMonitoringSessionManager.h</includes>
     <includes id="_c_monitoring_session_8h" name="CMonitoringSession.h" local="yes" imported="no">ihotf/CMonitoringSession.h</includes>
@@ -930,34 +930,34 @@
   </compound>
   <compound kind="file">
     <name>IDirectoryMonitor.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_directory_monitor_8h</filename>
     <class kind="class">ihotf::IDirectoryMonitor</class>
     <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>IDirectoryMonitorParams.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_directory_monitor_params_8h</filename>
     <class kind="class">ihotf::IDirectoryMonitorParams</class>
     <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>IFileSystemChangeStorage.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_file_system_change_storage_8h</filename>
     <class kind="class">ihotf::IFileSystemChangeStorage</class>
     <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>ihotf.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>ihotf_8h</filename>
     <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>IHotfolderInfoManager.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_hotfolder_info_manager_8h</filename>
     <includes id="_i_hotfolder_processing_info_8h" name="IHotfolderProcessingInfo.h" local="yes" imported="no">ihotf/IHotfolderProcessingInfo.h</includes>
     <class kind="class">ihotf::IHotfolderInfoManager</class>
@@ -965,7 +965,7 @@
   </compound>
   <compound kind="file">
     <name>IHotfolderProcessingInfo.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_hotfolder_processing_info_8h</filename>
     <includes id="_i_hotfolder_processing_item_8h" name="IHotfolderProcessingItem.h" local="yes" imported="no">ihotf/IHotfolderProcessingItem.h</includes>
     <class kind="class">ihotf::IHotfolderProcessingInfo</class>
@@ -973,21 +973,21 @@
   </compound>
   <compound kind="file">
     <name>IHotfolderProcessingItem.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_hotfolder_processing_item_8h</filename>
     <class kind="class">ihotf::IHotfolderProcessingItem</class>
     <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>IHotfolderStatistics.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_hotfolder_statistics_8h</filename>
     <class kind="class">ihotf::IHotfolderStatistics</class>
     <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>IHotfolderTaskManager.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_hotfolder_task_manager_8h</filename>
     <includes id="_i_hotfolder_processing_item_8h" name="IHotfolderProcessingItem.h" local="yes" imported="no">ihotf/IHotfolderProcessingItem.h</includes>
     <class kind="class">ihotf::IHotfolderTaskManager</class>
@@ -995,14 +995,14 @@
   </compound>
   <compound kind="file">
     <name>IMonitoringSession.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_monitoring_session_8h</filename>
     <class kind="class">ihotf::IMonitoringSession</class>
     <namespace>ihotf</namespace>
   </compound>
   <compound kind="file">
     <name>IMonitoringSessionManager.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>_i_monitoring_session_manager_8h</filename>
     <includes id="_i_monitoring_session_8h" name="IMonitoringSession.h" local="yes" imported="no">ihotf/IMonitoringSession.h</includes>
     <class kind="class">ihotf::IMonitoringSessionManager</class>
@@ -1010,7 +1010,7 @@
   </compound>
   <compound kind="file">
     <name>CDirectoryItemGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotfgui/</path>
+    <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
     <filename>_c_directory_item_gui_comp_8h</filename>
     <includes id="_i_hotfolder_statistics_8h" name="IHotfolderStatistics.h" local="yes" imported="no">ihotf/IHotfolderStatistics.h</includes>
     <class kind="class">ihotfgui::CDirectoryItemGuiComp</class>
@@ -1018,7 +1018,7 @@
   </compound>
   <compound kind="file">
     <name>CDirectoryMonitorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotfgui/</path>
+    <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
     <filename>_c_directory_monitor_comp_8h</filename>
     <includes id="_i_file_system_change_storage_8h" name="IFileSystemChangeStorage.h" local="yes" imported="no">ihotf/IFileSystemChangeStorage.h</includes>
     <includes id="_i_directory_monitor_8h" name="IDirectoryMonitor.h" local="yes" imported="no">ihotf/IDirectoryMonitor.h</includes>
@@ -1029,7 +1029,7 @@
   </compound>
   <compound kind="file">
     <name>CDirectoryMonitorParamsGui.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotfgui/</path>
+    <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
     <filename>_c_directory_monitor_params_gui_8h</filename>
     <includes id="_i_directory_monitor_params_8h" name="IDirectoryMonitorParams.h" local="yes" imported="no">ihotf/IDirectoryMonitorParams.h</includes>
     <class kind="class">ihotfgui::CDirectoryMonitorParamsGui</class>
@@ -1037,14 +1037,14 @@
   </compound>
   <compound kind="file">
     <name>CHotfolderContainerGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotfgui/</path>
+    <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
     <filename>_c_hotfolder_container_gui_comp_8h</filename>
     <class kind="class">ihotfgui::CHotfolderContainerGuiComp</class>
     <namespace>ihotfgui</namespace>
   </compound>
   <compound kind="file">
     <name>CHotfolderGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotfgui/</path>
+    <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
     <filename>_c_hotfolder_gui_comp_8h</filename>
     <includes id="_i_hotfolder_processing_info_8h" name="IHotfolderProcessingInfo.h" local="yes" imported="no">ihotf/IHotfolderProcessingInfo.h</includes>
     <includes id="_i_hotfolder_processing_item_8h" name="IHotfolderProcessingItem.h" local="yes" imported="no">ihotf/IHotfolderProcessingItem.h</includes>
@@ -1054,7 +1054,7 @@
   </compound>
   <compound kind="file">
     <name>CHotfolderProcessingComp.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotfgui/</path>
+    <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
     <filename>_c_hotfolder_processing_comp_8h</filename>
     <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <includes id="_i_hotfolder_processing_info_8h" name="IHotfolderProcessingInfo.h" local="yes" imported="no">ihotf/IHotfolderProcessingInfo.h</includes>
@@ -1065,7 +1065,7 @@
   </compound>
   <compound kind="file">
     <name>CHotfolderTaskManagerComp.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotfgui/</path>
+    <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
     <filename>_c_hotfolder_task_manager_comp_8h</filename>
     <includes id="_i_file_naming_8h" name="IFileNaming.h" local="yes" imported="no">ifileproc/IFileNaming.h</includes>
     <includes id="_i_file_system_change_storage_8h" name="IFileSystemChangeStorage.h" local="yes" imported="no">ihotf/IFileSystemChangeStorage.h</includes>
@@ -1077,7 +1077,7 @@
   </compound>
   <compound kind="file">
     <name>CProcessingItemPreviewGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotfgui/</path>
+    <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
     <filename>_c_processing_item_preview_gui_comp_8h</filename>
     <includes id="_i_hotfolder_processing_item_8h" name="IHotfolderProcessingItem.h" local="yes" imported="no">ihotf/IHotfolderProcessingItem.h</includes>
     <class kind="class">ihotfgui::CProcessingItemPreviewGuiComp</class>
@@ -1085,20 +1085,20 @@
   </compound>
   <compound kind="file">
     <name>ihotfgui.h</name>
-    <path>C:/Temp/Acfsln/Include/ihotfgui/</path>
+    <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
     <filename>ihotfgui_8h</filename>
     <namespace>ihotfgui</namespace>
   </compound>
   <compound kind="file">
     <name>CComposedInformationProviderComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iinsp/</path>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_c_composed_information_provider_comp_8h</filename>
     <class kind="class">iinsp::CComposedInformationProviderComp</class>
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
     <name>CIdProviderCacheComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iinsp/</path>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_c_id_provider_cache_comp_8h</filename>
     <includes id="_i_id_provider_8h" name="IIdProvider.h" local="yes" imported="no">iinsp/IIdProvider.h</includes>
     <class kind="class">iinsp::CIdProviderCacheComp</class>
@@ -1106,14 +1106,14 @@
   </compound>
   <compound kind="file">
     <name>CInformationProviderCacheComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iinsp/</path>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_c_information_provider_cache_comp_8h</filename>
     <class kind="class">iinsp::CInformationProviderCacheComp</class>
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
     <name>CInspectionTaskComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iinsp/</path>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_c_inspection_task_comp_8h</filename>
     <includes id="_i_inspection_task_8h" name="IInspectionTask.h" local="yes" imported="no">iinsp/IInspectionTask.h</includes>
     <class kind="class">iinsp::CInspectionTaskComp</class>
@@ -1123,7 +1123,7 @@
   </compound>
   <compound kind="file">
     <name>CSupplierCompBase.h</name>
-    <path>C:/Temp/Acfsln/Include/iinsp/</path>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_c_supplier_comp_base_8h</filename>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
     <class kind="class">iinsp::CSupplierCompBase</class>
@@ -1132,21 +1132,21 @@
   </compound>
   <compound kind="file">
     <name>IIdProvider.h</name>
-    <path>C:/Temp/Acfsln/Include/iinsp/</path>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_i_id_provider_8h</filename>
     <class kind="class">iinsp::IIdProvider</class>
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
     <name>iinsp.h</name>
-    <path>C:/Temp/Acfsln/Include/iinsp/</path>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>iinsp_8h</filename>
     <includes id="iproc_8h" name="iproc.h" local="yes" imported="no">iproc/iproc.h</includes>
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
     <name>IInspectionTask.h</name>
-    <path>C:/Temp/Acfsln/Include/iinsp/</path>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_i_inspection_task_8h</filename>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
     <class kind="class">iinsp::IInspectionTask</class>
@@ -1154,21 +1154,21 @@
   </compound>
   <compound kind="file">
     <name>ISupplier.h</name>
-    <path>C:/Temp/Acfsln/Include/iinsp/</path>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_i_supplier_8h</filename>
     <class kind="class">iinsp::ISupplier</class>
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
     <name>ITimeStampProvider.h</name>
-    <path>C:/Temp/Acfsln/Include/iinsp/</path>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_i_time_stamp_provider_8h</filename>
     <class kind="class">iinsp::ITimeStampProvider</class>
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
     <name>TSupplierCompWrap.h</name>
-    <path>C:/Temp/Acfsln/Include/iinsp/</path>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_t_supplier_comp_wrap_8h</filename>
     <includes id="_c_supplier_comp_base_8h" name="CSupplierCompBase.h" local="yes" imported="no">iinsp/CSupplierCompBase.h</includes>
     <class kind="class">iinsp::TSupplierCompWrap</class>
@@ -1176,7 +1176,7 @@
   </compound>
   <compound kind="file">
     <name>CAdaptiveImageBinarizeProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_adaptive_image_binarize_processor_comp_8h</filename>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
@@ -1185,7 +1185,7 @@
   </compound>
   <compound kind="file">
     <name>CArcProjectionProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_arc_projection_processor_comp_8h</filename>
     <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
     <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
@@ -1199,7 +1199,7 @@
   </compound>
   <compound kind="file">
     <name>CAutoImageNormalizeProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_auto_image_normalize_processor_comp_8h</filename>
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
     <includes id="_c_image_processor_comp_base_8h" name="CImageProcessorCompBase.h" local="yes" imported="no">iipr/CImageProcessorCompBase.h</includes>
@@ -1208,7 +1208,7 @@
   </compound>
   <compound kind="file">
     <name>CBitmapJoinerSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_bitmap_joiner_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
@@ -1218,21 +1218,21 @@
   </compound>
   <compound kind="file">
     <name>CBitmapOperations.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_bitmap_operations_8h</filename>
     <class kind="class">iipr::CBitmapOperations</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>CBitmapProviderCacheComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_bitmap_provider_cache_comp_8h</filename>
     <class kind="class">iipr::CBitmapProviderCacheComp</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>CCaliperDistanceFeature.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_caliper_distance_feature_8h</filename>
     <includes id="_t_weighted_feature_wrap_8h" name="TWeightedFeatureWrap.h" local="no" imported="no">iipr/TWeightedFeatureWrap.h</includes>
     <class kind="class">iipr::CCaliperDistanceFeature</class>
@@ -1240,7 +1240,7 @@
   </compound>
   <compound kind="file">
     <name>CCaliperFeature.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_caliper_feature_8h</filename>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="yes" imported="no">imeas/CSimpleNumericValue.h</includes>
     <class kind="class">iipr::CCaliperFeature</class>
@@ -1248,7 +1248,7 @@
   </compound>
   <compound kind="file">
     <name>CCaliperParams.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_caliper_params_8h</filename>
     <includes id="_i_caliper_params_8h" name="ICaliperParams.h" local="yes" imported="no">iipr/ICaliperParams.h</includes>
     <class kind="class">iipr::CCaliperParams</class>
@@ -1256,7 +1256,7 @@
   </compound>
   <compound kind="file">
     <name>CCaliperParamsComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_caliper_params_comp_8h</filename>
     <includes id="_c_caliper_params_8h" name="CCaliperParams.h" local="yes" imported="no">iipr/CCaliperParams.h</includes>
     <class kind="class">iipr::CCaliperParamsComp</class>
@@ -1264,7 +1264,7 @@
   </compound>
   <compound kind="file">
     <name>CCheckerboardPatternGeneratorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_checkerboard_pattern_generator_comp_8h</filename>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <class kind="class">iipr::CCheckerboardPatternGeneratorComp</class>
@@ -1272,7 +1272,7 @@
   </compound>
   <compound kind="file">
     <name>CCircleFinderParams.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_circle_finder_params_8h</filename>
     <includes id="_i_circle_finder_params_8h" name="ICircleFinderParams.h" local="yes" imported="no">iipr/ICircleFinderParams.h</includes>
     <class kind="class">iipr::CCircleFinderParams</class>
@@ -1280,7 +1280,7 @@
   </compound>
   <compound kind="file">
     <name>CCircleFinderParamsComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_circle_finder_params_comp_8h</filename>
     <includes id="_c_circle_finder_params_8h" name="CCircleFinderParams.h" local="yes" imported="no">iipr/CCircleFinderParams.h</includes>
     <class kind="class">iipr::CCircleFinderParamsComp</class>
@@ -1288,7 +1288,7 @@
   </compound>
   <compound kind="file">
     <name>CCircleFindProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_circle_find_processor_comp_8h</filename>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="yes" imported="no">iipr/IImageToFeatureProcessor.h</includes>
@@ -1303,7 +1303,7 @@
   </compound>
   <compound kind="file">
     <name>CColorBitmapSeparatorSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_color_bitmap_separator_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
@@ -1313,7 +1313,7 @@
   </compound>
   <compound kind="file">
     <name>CColorPatternComparatorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_color_pattern_comparator_comp_8h</filename>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
@@ -1326,7 +1326,7 @@
   </compound>
   <compound kind="file">
     <name>CColorPatternControllerComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_color_pattern_controller_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
@@ -1337,7 +1337,7 @@
   </compound>
   <compound kind="file">
     <name>CConvolutionKernel2d.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_convolution_kernel2d_8h</filename>
     <includes id="_i_convolution_kernel2d_8h" name="IConvolutionKernel2d.h" local="yes" imported="no">iipr/IConvolutionKernel2d.h</includes>
     <class kind="class">iipr::CConvolutionKernel2d</class>
@@ -1345,7 +1345,7 @@
   </compound>
   <compound kind="file">
     <name>CConvolutionKernel2dComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_convolution_kernel2d_comp_8h</filename>
     <includes id="_c_convolution_kernel2d_8h" name="CConvolutionKernel2d.h" local="yes" imported="no">iipr/CConvolutionKernel2d.h</includes>
     <class kind="class">iipr::CConvolutionKernel2dComp</class>
@@ -1353,7 +1353,7 @@
   </compound>
   <compound kind="file">
     <name>CConvolutionProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_convolution_processor_comp_8h</filename>
     <includes id="_t_image_param_processor_comp_base_8h" name="TImageParamProcessorCompBase.h" local="yes" imported="no">iipr/TImageParamProcessorCompBase.h</includes>
     <includes id="_i_convolution_kernel2d_8h" name="IConvolutionKernel2d.h" local="yes" imported="no">iipr/IConvolutionKernel2d.h</includes>
@@ -1362,7 +1362,7 @@
   </compound>
   <compound kind="file">
     <name>CDelegatedBitmapSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_delegated_bitmap_supplier_comp_8h</filename>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <class kind="class">iipr::CDelegatedBitmapSupplierComp</class>
@@ -1370,7 +1370,7 @@
   </compound>
   <compound kind="file">
     <name>CDifferenceBitmapSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_difference_bitmap_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
@@ -1379,7 +1379,7 @@
   </compound>
   <compound kind="file">
     <name>CEdgeDistanceProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_edge_distance_processor_comp_8h</filename>
     <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="yes" imported="no">iipr/IImageToFeatureProcessor.h</includes>
@@ -1394,7 +1394,7 @@
   </compound>
   <compound kind="file">
     <name>CEdgeDistancesSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_edge_distances_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
@@ -1409,7 +1409,7 @@
   </compound>
   <compound kind="file">
     <name>CExtremumCaliperProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_extremum_caliper_processor_comp_8h</filename>
     <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="_i_caliper_processor_8h" name="ICaliperProcessor.h" local="yes" imported="no">iipr/ICaliperProcessor.h</includes>
@@ -1419,7 +1419,7 @@
   </compound>
   <compound kind="file">
     <name>CExtremumCaliperSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_extremum_caliper_supplier_comp_8h</filename>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_c_features_container_8h" name="CFeaturesContainer.h" local="yes" imported="no">iipr/CFeaturesContainer.h</includes>
@@ -1430,7 +1430,7 @@
   </compound>
   <compound kind="file">
     <name>CFastGaussianProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_fast_gaussian_processor_comp_8h</filename>
     <includes id="_c_image_region_processor_comp_base_8h" name="CImageRegionProcessorCompBase.h" local="yes" imported="no">iipr/CImageRegionProcessorCompBase.h</includes>
     <class kind="class">iipr::CFastGaussianProcessorComp</class>
@@ -1438,7 +1438,7 @@
   </compound>
   <compound kind="file">
     <name>CFeaturesContainer.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_features_container_8h</filename>
     <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="yes" imported="no">iipr/IFeaturesConsumer.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
@@ -1447,7 +1447,7 @@
   </compound>
   <compound kind="file">
     <name>CFeatureToImageMapperProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_feature_to_image_mapper_processor_comp_8h</filename>
     <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="_i_feature_to_feature_processor_8h" name="IFeatureToFeatureProcessor.h" local="yes" imported="no">iipr/IFeatureToFeatureProcessor.h</includes>
@@ -1458,7 +1458,7 @@
   </compound>
   <compound kind="file">
     <name>CImageBinarizeProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_binarize_processor_comp_8h</filename>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
@@ -1467,7 +1467,7 @@
   </compound>
   <compound kind="file">
     <name>CImageCropProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_crop_processor_comp_8h</filename>
     <includes id="_i_discrete_data_sequence_8h" name="IDiscreteDataSequence.h" local="yes" imported="no">imeas/IDiscreteDataSequence.h</includes>
     <includes id="_c_image_region_processor_comp_base_8h" name="CImageRegionProcessorCompBase.h" local="yes" imported="no">iipr/CImageRegionProcessorCompBase.h</includes>
@@ -1476,7 +1476,7 @@
   </compound>
   <compound kind="file">
     <name>CImageFlipProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_flip_processor_comp_8h</filename>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <class kind="class">iipr::CImageFlipProcessorComp</class>
@@ -1484,7 +1484,7 @@
   </compound>
   <compound kind="file">
     <name>CImageHistogramProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_histogram_processor_comp_8h</filename>
     <includes id="_i_discrete_data_sequence_8h" name="IDiscreteDataSequence.h" local="yes" imported="no">imeas/IDiscreteDataSequence.h</includes>
     <includes id="_c_data_sequence_info_base_8h" name="CDataSequenceInfoBase.h" local="yes" imported="no">imeas/CDataSequenceInfoBase.h</includes>
@@ -1495,7 +1495,7 @@
   </compound>
   <compound kind="file">
     <name>CImageHistogramSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_histogram_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
@@ -1507,7 +1507,7 @@
   </compound>
   <compound kind="file">
     <name>CImageInterpolationParams.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_interpolation_params_8h</filename>
     <includes id="_i_image_interpolation_params_8h" name="IImageInterpolationParams.h" local="yes" imported="no">iipr/IImageInterpolationParams.h</includes>
     <class kind="class">iipr::CImageInterpolationParams</class>
@@ -1515,7 +1515,7 @@
   </compound>
   <compound kind="file">
     <name>CImageInterpolationParamsComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_interpolation_params_comp_8h</filename>
     <includes id="_c_image_interpolation_params_8h" name="CImageInterpolationParams.h" local="yes" imported="no">iipr/CImageInterpolationParams.h</includes>
     <class kind="class">iipr::CImageInterpolationParamsComp</class>
@@ -1523,7 +1523,7 @@
   </compound>
   <compound kind="file">
     <name>CImageNormalizeProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_normalize_processor_comp_8h</filename>
     <includes id="_i_linear_adjust_params_8h" name="ILinearAdjustParams.h" local="yes" imported="no">imeas/ILinearAdjustParams.h</includes>
     <includes id="_c_image_processor_comp_base_8h" name="CImageProcessorCompBase.h" local="yes" imported="no">iipr/CImageProcessorCompBase.h</includes>
@@ -1532,7 +1532,7 @@
   </compound>
   <compound kind="file">
     <name>CImagePolarTransformProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_polar_transform_processor_comp_8h</filename>
     <includes id="_c_image_region_processor_comp_base_8h" name="CImageRegionProcessorCompBase.h" local="yes" imported="no">iipr/CImageRegionProcessorCompBase.h</includes>
     <class kind="class">iipr::CImagePolarTransformProcessorComp</class>
@@ -1540,7 +1540,7 @@
   </compound>
   <compound kind="file">
     <name>CImageProcessorCompBase.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_processor_comp_base_8h</filename>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <class kind="class">iipr::CImageProcessorCompBase</class>
@@ -1548,7 +1548,7 @@
   </compound>
   <compound kind="file">
     <name>CImageRegionProcessorCompBase.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_region_processor_comp_base_8h</filename>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <class kind="class">iipr::CImageRegionProcessorCompBase</class>
@@ -1556,7 +1556,7 @@
   </compound>
   <compound kind="file">
     <name>CLineProjectionProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_line_projection_processor_comp_8h</filename>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <includes id="_i_line_projection_processor_8h" name="ILineProjectionProcessor.h" local="yes" imported="no">iipr/ILineProjectionProcessor.h</includes>
@@ -1568,7 +1568,7 @@
   </compound>
   <compound kind="file">
     <name>CMorphologicalProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_morphological_processor_comp_8h</filename>
     <includes id="_c_image_region_processor_comp_base_8h" name="CImageRegionProcessorCompBase.h" local="yes" imported="no">iipr/CImageRegionProcessorCompBase.h</includes>
     <class kind="class">iipr::CMorphologicalProcessorComp</class>
@@ -1576,14 +1576,14 @@
   </compound>
   <compound kind="file">
     <name>CMultiBitmapCacheComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_multi_bitmap_cache_comp_8h</filename>
     <class kind="class">iipr::CMultiBitmapCacheComp</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>CMultiLineProjectionSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_multi_line_projection_supplier_comp_8h</filename>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
@@ -1596,7 +1596,7 @@
   </compound>
   <compound kind="file">
     <name>CMultiLineSupplierCompBase.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_multi_line_supplier_comp_base_8h</filename>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
@@ -1605,7 +1605,7 @@
   </compound>
   <compound kind="file">
     <name>CObjectFeature.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_object_feature_8h</filename>
     <includes id="_t_weighted_feature_wrap_8h" name="TWeightedFeatureWrap.h" local="yes" imported="no">iipr/TWeightedFeatureWrap.h</includes>
     <class kind="class">iipr::CObjectFeature</class>
@@ -1613,7 +1613,7 @@
   </compound>
   <compound kind="file">
     <name>CPositionFromImageSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_position_from_image_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
@@ -1625,7 +1625,7 @@
   </compound>
   <compound kind="file">
     <name>CProcessedAcquisitionComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_processed_acquisition_comp_8h</filename>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
@@ -1634,7 +1634,7 @@
   </compound>
   <compound kind="file">
     <name>CProcessedBitmapSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_processed_bitmap_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
@@ -1645,7 +1645,7 @@
   </compound>
   <compound kind="file">
     <name>CProjectionSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_projection_supplier_comp_8h</filename>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
@@ -1658,7 +1658,7 @@
   </compound>
   <compound kind="file">
     <name>CRectDerivativeProcessor.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_rect_derivative_processor_8h</filename>
     <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
@@ -1668,7 +1668,7 @@
   </compound>
   <compound kind="file">
     <name>CRectDerivativeProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_rect_derivative_processor_comp_8h</filename>
     <includes id="_c_rect_derivative_processor_8h" name="CRectDerivativeProcessor.h" local="yes" imported="no">iipr/CRectDerivativeProcessor.h</includes>
     <class kind="class">iipr::CRectDerivativeProcessorComp</class>
@@ -1676,7 +1676,7 @@
   </compound>
   <compound kind="file">
     <name>CRectImageSmoothProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_rect_image_smooth_processor_comp_8h</filename>
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
     <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="yes" imported="no">imeas/INumericConstraints.h</includes>
@@ -1686,7 +1686,7 @@
   </compound>
   <compound kind="file">
     <name>CRgbToGrayProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_rgb_to_gray_processor_comp_8h</filename>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <class kind="class">iipr::CRgbToGrayProcessorComp</class>
@@ -1694,7 +1694,7 @@
   </compound>
   <compound kind="file">
     <name>CRingPatternGeneratorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_ring_pattern_generator_comp_8h</filename>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <class kind="class">iipr::CRingPatternGeneratorComp</class>
@@ -1702,7 +1702,7 @@
   </compound>
   <compound kind="file">
     <name>CRingPatternGeneratorParamsComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_ring_pattern_generator_params_comp_8h</filename>
     <includes id="_i_ring_pattern_generator_params_8h" name="IRingPatternGeneratorParams.h" local="yes" imported="no">iipr/IRingPatternGeneratorParams.h</includes>
     <class kind="class">iipr::CRingPatternGeneratorParamsComp</class>
@@ -1710,7 +1710,7 @@
   </compound>
   <compound kind="file">
     <name>CSearchBasedFeaturesSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_search_based_features_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
@@ -1722,7 +1722,7 @@
   </compound>
   <compound kind="file">
     <name>CSearchFeature.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_search_feature_8h</filename>
     <includes id="_c_object_feature_8h" name="CObjectFeature.h" local="yes" imported="no">iipr/CObjectFeature.h</includes>
     <class kind="class">iipr::CSearchFeature</class>
@@ -1730,7 +1730,7 @@
   </compound>
   <compound kind="file">
     <name>CSearchParams.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_search_params_8h</filename>
     <includes id="_i_search_params_8h" name="ISearchParams.h" local="yes" imported="no">iipr/ISearchParams.h</includes>
     <class kind="class">iipr::CSearchParams</class>
@@ -1738,7 +1738,7 @@
   </compound>
   <compound kind="file">
     <name>CSearchParamsComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_search_params_comp_8h</filename>
     <includes id="_i_search_constraints_8h" name="ISearchConstraints.h" local="yes" imported="no">iipr/ISearchConstraints.h</includes>
     <includes id="_c_search_params_8h" name="CSearchParams.h" local="yes" imported="no">iipr/CSearchParams.h</includes>
@@ -1747,14 +1747,14 @@
   </compound>
   <compound kind="file">
     <name>CSelectableCalibrationProviderComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_selectable_calibration_provider_comp_8h</filename>
     <class kind="class">iipr::CSelectableCalibrationProviderComp</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>CSingleFeatureConsumer.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_single_feature_consumer_8h</filename>
     <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="yes" imported="no">iipr/IFeaturesConsumer.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
@@ -1763,7 +1763,7 @@
   </compound>
   <compound kind="file">
     <name>CTubeProjectionLinesProviderComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_tube_projection_lines_provider_comp_8h</filename>
     <includes id="_c_multi_line_supplier_comp_base_8h" name="CMultiLineSupplierCompBase.h" local="yes" imported="no">iipr/CMultiLineSupplierCompBase.h</includes>
     <class kind="class">iipr::CTubeProjectionLinesProviderComp</class>
@@ -1771,14 +1771,14 @@
   </compound>
   <compound kind="file">
     <name>CTubeProjectionsGenerator.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_tube_projections_generator_8h</filename>
     <class kind="class">iipr::CTubeProjectionsGenerator</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>ICaliperParams.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_caliper_params_8h</filename>
     <includes id="iipr_8h" name="iipr.h" local="yes" imported="no">iipr/iipr.h</includes>
     <class kind="class">iipr::ICaliperParams</class>
@@ -1786,7 +1786,7 @@
   </compound>
   <compound kind="file">
     <name>ICaliperProcessor.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_caliper_processor_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
@@ -1796,7 +1796,7 @@
   </compound>
   <compound kind="file">
     <name>ICircleFinderParams.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_circle_finder_params_8h</filename>
     <includes id="iipr_8h" name="iipr.h" local="yes" imported="no">iipr/iipr.h</includes>
     <class kind="class">iipr::ICircleFinderParams</class>
@@ -1804,14 +1804,14 @@
   </compound>
   <compound kind="file">
     <name>IConvolutionKernel2d.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_convolution_kernel2d_8h</filename>
     <class kind="class">iipr::IConvolutionKernel2d</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>IFeaturesConsumer.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_features_consumer_8h</filename>
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
     <class kind="class">iipr::IFeaturesConsumer</class>
@@ -1819,7 +1819,7 @@
   </compound>
   <compound kind="file">
     <name>IFeatureToFeatureProcessor.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_feature_to_feature_processor_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="yes" imported="no">iipr/IFeaturesConsumer.h</includes>
@@ -1829,7 +1829,7 @@
   </compound>
   <compound kind="file">
     <name>IFeatureToImageMapper.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_feature_to_image_mapper_8h</filename>
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
     <class kind="class">iipr::IFeatureToImageMapper</class>
@@ -1837,7 +1837,7 @@
   </compound>
   <compound kind="file">
     <name>IFeatureToProjectionMapper.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_feature_to_projection_mapper_8h</filename>
     <class kind="class">iipr::IFeatureToProjectionMapper</class>
     <namespace>imeas</namespace>
@@ -1845,14 +1845,14 @@
   </compound>
   <compound kind="file">
     <name>IImageInterpolationParams.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_image_interpolation_params_8h</filename>
     <class kind="class">iipr::IImageInterpolationParams</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>IImageToFeatureProcessor.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_image_to_feature_processor_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="yes" imported="no">iipr/IFeaturesConsumer.h</includes>
@@ -1861,7 +1861,7 @@
   </compound>
   <compound kind="file">
     <name>iipr.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>iipr_8h</filename>
     <includes id="iproc_8h" name="iproc.h" local="yes" imported="no">iproc/iproc.h</includes>
     <includes id="imeas_8h" name="imeas.h" local="yes" imported="no">imeas/imeas.h</includes>
@@ -1883,7 +1883,7 @@
   </compound>
   <compound kind="file">
     <name>ILineProjectionProcessor.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_line_projection_processor_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
@@ -1892,49 +1892,49 @@
   </compound>
   <compound kind="file">
     <name>IPatternController.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_pattern_controller_8h</filename>
     <class kind="class">iipr::IPatternController</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>IProjectionConstraints.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_projection_constraints_8h</filename>
     <class kind="class">iipr::IProjectionConstraints</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>IProjectionParams.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_projection_params_8h</filename>
     <class kind="class">iipr::IProjectionParams</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>IRingPatternGeneratorParams.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_ring_pattern_generator_params_8h</filename>
     <class kind="class">iipr::IRingPatternGeneratorParams</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>ISearchConstraints.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_search_constraints_8h</filename>
     <class kind="class">iipr::ISearchConstraints</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>ISearchParams.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_search_params_8h</filename>
     <class kind="class">iipr::ISearchParams</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
     <name>TImageParamProcessorCompBase.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_t_image_param_processor_comp_base_8h</filename>
     <includes id="_c_image_processor_comp_base_8h" name="CImageProcessorCompBase.h" local="yes" imported="no">iipr/CImageProcessorCompBase.h</includes>
     <class kind="class">iipr::TImageParamProcessorCompBase</class>
@@ -1942,7 +1942,7 @@
   </compound>
   <compound kind="file">
     <name>TImagePixelInterpolator.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_t_image_pixel_interpolator_8h</filename>
     <includes id="_i_image_interpolation_params_8h" name="IImageInterpolationParams.h" local="yes" imported="no">iipr/IImageInterpolationParams.h</includes>
     <class kind="class">iipr::TImagePixelInterpolator</class>
@@ -1950,7 +1950,7 @@
   </compound>
   <compound kind="file">
     <name>TProcessedBitmapSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_t_processed_bitmap_supplier_comp_8h</filename>
     <includes id="_c_processed_bitmap_supplier_comp_8h" name="CProcessedBitmapSupplierComp.h" local="yes" imported="no">iipr/CProcessedBitmapSupplierComp.h</includes>
     <class kind="class">iipr::TProcessedBitmapSupplierComp</class>
@@ -1958,7 +1958,7 @@
   </compound>
   <compound kind="file">
     <name>TUnaryTransformProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_t_unary_transform_processor_comp_8h</filename>
     <includes id="_c_image_processor_comp_base_8h" name="CImageProcessorCompBase.h" local="yes" imported="no">iipr/CImageProcessorCompBase.h</includes>
     <class kind="class">iipr::InvertFunction</class>
@@ -1974,7 +1974,7 @@
   </compound>
   <compound kind="file">
     <name>TWeightedFeatureWrap.h</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_t_weighted_feature_wrap_8h</filename>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="yes" imported="no">imeas/CSimpleNumericValue.h</includes>
     <class kind="class">iipr::TWeightedFeatureWrap</class>
@@ -1982,7 +1982,7 @@
   </compound>
   <compound kind="file">
     <name>CCrossCorrelationProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_cross_correlation_processor_comp_8h</filename>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <includes id="_i_data_sequence_correlation_processor_8h" name="IDataSequenceCorrelationProcessor.h" local="yes" imported="no">imeas/IDataSequenceCorrelationProcessor.h</includes>
@@ -1991,7 +1991,7 @@
   </compound>
   <compound kind="file">
     <name>CDataSequenceInfoBase.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_data_sequence_info_base_8h</filename>
     <includes id="_i_data_sequence_info_8h" name="IDataSequenceInfo.h" local="yes" imported="no">imeas/IDataSequenceInfo.h</includes>
     <class kind="class">imeas::CDataSequenceInfoBase</class>
@@ -1999,7 +1999,7 @@
   </compound>
   <compound kind="file">
     <name>CDataSequenceJoinerSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_data_sequence_joiner_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
@@ -2012,7 +2012,7 @@
   </compound>
   <compound kind="file">
     <name>CDataSequenceStatistics.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_data_sequence_statistics_8h</filename>
     <includes id="_i_data_sequence_statistics_8h" name="IDataSequenceStatistics.h" local="yes" imported="no">imeas/IDataSequenceStatistics.h</includes>
     <includes id="_c_data_statistics_8h" name="CDataStatistics.h" local="yes" imported="no">imeas/CDataStatistics.h</includes>
@@ -2021,7 +2021,7 @@
   </compound>
   <compound kind="file">
     <name>CDataStatistics.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_data_statistics_8h</filename>
     <includes id="_i_data_statistics_8h" name="IDataStatistics.h" local="yes" imported="no">imeas/IDataStatistics.h</includes>
     <class kind="class">imeas::CDataStatistics</class>
@@ -2029,7 +2029,7 @@
   </compound>
   <compound kind="file">
     <name>CGeneralDataSequence.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_general_data_sequence_8h</filename>
     <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
     <class kind="class">imeas::CGeneralDataSequence</class>
@@ -2037,7 +2037,7 @@
   </compound>
   <compound kind="file">
     <name>CGeneralNumericValue.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_general_numeric_value_8h</filename>
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
     <class kind="class">imeas::CGeneralNumericValue</class>
@@ -2045,7 +2045,7 @@
   </compound>
   <compound kind="file">
     <name>CHistogramStatisticsProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_histogram_statistics_processor_comp_8h</filename>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <includes id="_i_data_sequence_statistics_processor_8h" name="IDataSequenceStatisticsProcessor.h" local="yes" imported="no">imeas/IDataSequenceStatisticsProcessor.h</includes>
@@ -2054,7 +2054,7 @@
   </compound>
   <compound kind="file">
     <name>CLinearAdjustParamsComp.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_linear_adjust_params_comp_8h</filename>
     <includes id="_i_linear_adjust_params_8h" name="ILinearAdjustParams.h" local="yes" imported="no">imeas/ILinearAdjustParams.h</includes>
     <includes id="_i_linear_adjust_constraints_8h" name="ILinearAdjustConstraints.h" local="yes" imported="no">imeas/ILinearAdjustConstraints.h</includes>
@@ -2065,7 +2065,7 @@
   </compound>
   <compound kind="file">
     <name>CMeasurementRange.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_measurement_range_8h</filename>
     <includes id="imeas_8h" name="imeas.h" local="yes" imported="no">imeas/imeas.h</includes>
     <class kind="class">imeas::CMeasurementRange</class>
@@ -2073,7 +2073,7 @@
   </compound>
   <compound kind="file">
     <name>CNumericConstraintsComp.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_numeric_constraints_comp_8h</filename>
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
     <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="yes" imported="no">imeas/INumericConstraints.h</includes>
@@ -2082,7 +2082,7 @@
   </compound>
   <compound kind="file">
     <name>CNumericParamsComp.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_numeric_params_comp_8h</filename>
     <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="yes" imported="no">imeas/INumericConstraints.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="yes" imported="no">imeas/CSimpleNumericValue.h</includes>
@@ -2091,7 +2091,7 @@
   </compound>
   <compound kind="file">
     <name>CNumericValuesJoinerComp.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_numeric_values_joiner_comp_8h</filename>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="yes" imported="no">imeas/CSimpleNumericValue.h</includes>
@@ -2100,7 +2100,7 @@
   </compound>
   <compound kind="file">
     <name>CProcessedDataSequenceSupplierComp.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_processed_data_sequence_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
@@ -2112,7 +2112,7 @@
   </compound>
   <compound kind="file">
     <name>CSamplesInfo.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_samples_info_8h</filename>
     <includes id="_c_data_sequence_info_base_8h" name="CDataSequenceInfoBase.h" local="yes" imported="no">imeas/CDataSequenceInfoBase.h</includes>
     <class kind="class">imeas::CSamplesInfo</class>
@@ -2120,7 +2120,7 @@
   </compound>
   <compound kind="file">
     <name>CSimpleNumericValue.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_simple_numeric_value_8h</filename>
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
     <class kind="class">imeas::CSimpleNumericValue</class>
@@ -2128,7 +2128,7 @@
   </compound>
   <compound kind="file">
     <name>CSimpleNumericValueProvider.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_simple_numeric_value_provider_8h</filename>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="yes" imported="no">imeas/CSimpleNumericValue.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
@@ -2137,14 +2137,14 @@
   </compound>
   <compound kind="file">
     <name>CWavSamplesLoaderComp.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_wav_samples_loader_comp_8h</filename>
     <class kind="class">imeas::CWavSamplesLoaderComp</class>
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
     <name>IDataSequence.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_i_data_sequence_8h</filename>
     <includes id="_i_data_sequence_info_8h" name="IDataSequenceInfo.h" local="yes" imported="no">imeas/IDataSequenceInfo.h</includes>
     <class kind="class">imeas::IDataSequence</class>
@@ -2152,7 +2152,7 @@
   </compound>
   <compound kind="file">
     <name>IDataSequenceCorrelationProcessor.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_i_data_sequence_correlation_processor_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">imeas::IDataSequenceCorrelationProcessor</class>
@@ -2160,7 +2160,7 @@
   </compound>
   <compound kind="file">
     <name>IDataSequenceInfo.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_i_data_sequence_info_8h</filename>
     <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="yes" imported="no">imeas/INumericConstraints.h</includes>
     <class kind="class">imeas::IDataSequenceInfo</class>
@@ -2168,7 +2168,7 @@
   </compound>
   <compound kind="file">
     <name>IDataSequenceProvider.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_i_data_sequence_provider_8h</filename>
     <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
     <class kind="class">imeas::IDataSequenceProvider</class>
@@ -2176,14 +2176,14 @@
   </compound>
   <compound kind="file">
     <name>IDataSequenceStatistics.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_i_data_sequence_statistics_8h</filename>
     <class kind="class">imeas::IDataSequenceStatistics</class>
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
     <name>IDataSequenceStatisticsProcessor.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_i_data_sequence_statistics_processor_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">imeas::IDataSequenceStatisticsProcessor</class>
@@ -2191,14 +2191,14 @@
   </compound>
   <compound kind="file">
     <name>IDataStatistics.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_i_data_statistics_8h</filename>
     <class kind="class">imeas::IDataStatistics</class>
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
     <name>IDiscreteDataSequence.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_i_discrete_data_sequence_8h</filename>
     <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
     <class kind="class">imeas::IDiscreteDataSequence</class>
@@ -2206,7 +2206,7 @@
   </compound>
   <compound kind="file">
     <name>ILinearAdjustConstraints.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_i_linear_adjust_constraints_8h</filename>
     <includes id="imeas_8h" name="imeas.h" local="yes" imported="no">imeas/imeas.h</includes>
     <class kind="class">imeas::ILinearAdjustConstraints</class>
@@ -2214,20 +2214,20 @@
   </compound>
   <compound kind="file">
     <name>ILinearAdjustParams.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_i_linear_adjust_params_8h</filename>
     <class kind="class">imeas::ILinearAdjustParams</class>
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
     <name>imeas.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>imeas_8h</filename>
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
     <name>IMultiDataSequenceProvider.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_i_multi_data_sequence_provider_8h</filename>
     <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
     <class kind="class">imeas::IMultiDataSequenceProvider</class>
@@ -2235,7 +2235,7 @@
   </compound>
   <compound kind="file">
     <name>INumericConstraints.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_i_numeric_constraints_8h</filename>
     <includes id="imeas_8h" name="imeas.h" local="yes" imported="no">imeas/imeas.h</includes>
     <class kind="class">imeas::INumericConstraints</class>
@@ -2243,14 +2243,14 @@
   </compound>
   <compound kind="file">
     <name>INumericValue.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_i_numeric_value_8h</filename>
     <class kind="class">imeas::INumericValue</class>
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
     <name>INumericValueProvider.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_i_numeric_value_provider_8h</filename>
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
     <class kind="class">imeas::INumericValueProvider</class>
@@ -2258,7 +2258,7 @@
   </compound>
   <compound kind="file">
     <name>ISampleAcquisition.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_i_sample_acquisition_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">imeas::ISampleAcquisition</class>
@@ -2266,7 +2266,7 @@
   </compound>
   <compound kind="file">
     <name>TDiscreteDataSequence.h</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_t_discrete_data_sequence_8h</filename>
     <includes id="_i_discrete_data_sequence_8h" name="IDiscreteDataSequence.h" local="yes" imported="no">imeas/IDiscreteDataSequence.h</includes>
     <class kind="class">imeas::TDiscreteDataSequence</class>
@@ -2302,7 +2302,7 @@
   </compound>
   <compound kind="file">
     <name>IMediaController.h</name>
-    <path>C:/Temp/Acfsln/Include/imm/</path>
+    <path>C:/Temp/AcfSln/Include/imm/</path>
     <filename>_i_media_controller_8h</filename>
     <includes id="imm_8h" name="imm.h" local="yes" imported="no">imm/imm.h</includes>
     <class kind="class">imm::IMediaController</class>
@@ -2310,13 +2310,13 @@
   </compound>
   <compound kind="file">
     <name>imm.h</name>
-    <path>C:/Temp/Acfsln/Include/imm/</path>
+    <path>C:/Temp/AcfSln/Include/imm/</path>
     <filename>imm_8h</filename>
     <namespace>imm</namespace>
   </compound>
   <compound kind="file">
     <name>IVideoController.h</name>
-    <path>C:/Temp/Acfsln/Include/imm/</path>
+    <path>C:/Temp/AcfSln/Include/imm/</path>
     <filename>_i_video_controller_8h</filename>
     <includes id="_i_media_controller_8h" name="IMediaController.h" local="yes" imported="no">imm/IMediaController.h</includes>
     <includes id="_i_video_info_8h" name="IVideoInfo.h" local="yes" imported="no">imm/IVideoInfo.h</includes>
@@ -2325,7 +2325,7 @@
   </compound>
   <compound kind="file">
     <name>IVideoInfo.h</name>
-    <path>C:/Temp/Acfsln/Include/imm/</path>
+    <path>C:/Temp/AcfSln/Include/imm/</path>
     <filename>_i_video_info_8h</filename>
     <includes id="imm_8h" name="imm.h" local="yes" imported="no">imm/imm.h</includes>
     <class kind="class">imm::IVideoInfo</class>
@@ -2333,7 +2333,7 @@
   </compound>
   <compound kind="file">
     <name>CCascadedProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iproc/</path>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
     <filename>_c_cascaded_processor_comp_8h</filename>
     <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <class kind="class">iproc::CCascadedProcessorComp</class>
@@ -2341,7 +2341,7 @@
   </compound>
   <compound kind="file">
     <name>CIterativeProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iproc/</path>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
     <filename>_c_iterative_processor_comp_8h</filename>
     <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <class kind="class">iproc::CIterativeProcessorComp</class>
@@ -2349,7 +2349,7 @@
   </compound>
   <compound kind="file">
     <name>CModelBasedProcessingTriggerComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iproc/</path>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
     <filename>_c_model_based_processing_trigger_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">iproc::CModelBasedProcessingTriggerComp</class>
@@ -2357,34 +2357,34 @@
   </compound>
   <compound kind="file">
     <name>IElapsedTimeProvider.h</name>
-    <path>C:/Temp/Acfsln/Include/iproc/</path>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
     <filename>_i_elapsed_time_provider_8h</filename>
     <class kind="class">iproc::IElapsedTimeProvider</class>
     <namespace>iproc</namespace>
   </compound>
   <compound kind="file">
     <name>iproc.h</name>
-    <path>C:/Temp/Acfsln/Include/iproc/</path>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
     <filename>iproc_8h</filename>
     <namespace>iproc</namespace>
   </compound>
   <compound kind="file">
     <name>IProcessor.h</name>
-    <path>C:/Temp/Acfsln/Include/iproc/</path>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
     <filename>_i_processor_8h</filename>
     <class kind="class">iproc::IProcessor</class>
     <namespace>iproc</namespace>
   </compound>
   <compound kind="file">
     <name>IStateController.h</name>
-    <path>C:/Temp/Acfsln/Include/iproc/</path>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
     <filename>_i_state_controller_8h</filename>
     <class kind="class">iproc::IStateController</class>
     <namespace>iproc</namespace>
   </compound>
   <compound kind="file">
     <name>TFileCachedProducerCompBase.h</name>
-    <path>C:/Temp/Acfsln/Include/iproc/</path>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
     <filename>_t_file_cached_producer_comp_base_8h</filename>
     <includes id="_t_i_locked_producer_8h" name="TILockedProducer.h" local="yes" imported="no">iproc/TILockedProducer.h</includes>
     <class kind="class">iproc::TFileCachedProducerCompBase</class>
@@ -2392,7 +2392,7 @@
   </compound>
   <compound kind="file">
     <name>TILockedProducer.h</name>
-    <path>C:/Temp/Acfsln/Include/iproc/</path>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
     <filename>_t_i_locked_producer_8h</filename>
     <includes id="iproc_8h" name="iproc.h" local="yes" imported="no">iproc/iproc.h</includes>
     <class kind="class">iproc::TILockedProducer</class>
@@ -2400,7 +2400,7 @@
   </compound>
   <compound kind="file">
     <name>TMemCachedProducerComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iproc/</path>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
     <filename>_t_mem_cached_producer_comp_8h</filename>
     <includes id="_t_i_locked_producer_8h" name="TILockedProducer.h" local="yes" imported="no">iproc/TILockedProducer.h</includes>
     <class kind="class">iproc::TMemCachedProducerComp</class>
@@ -2408,7 +2408,7 @@
   </compound>
   <compound kind="file">
     <name>TMorphLockedProducerBase.h</name>
-    <path>C:/Temp/Acfsln/Include/iproc/</path>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
     <filename>_t_morph_locked_producer_base_8h</filename>
     <includes id="_t_i_locked_producer_8h" name="TILockedProducer.h" local="yes" imported="no">iproc/TILockedProducer.h</includes>
     <class kind="class">iproc::TMorphLockedProducerBase</class>
@@ -2416,7 +2416,7 @@
   </compound>
   <compound kind="file">
     <name>TSyncProcessorCompBase.h</name>
-    <path>C:/Temp/Acfsln/Include/iproc/</path>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
     <filename>_t_sync_processor_comp_base_8h</filename>
     <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <class kind="class">iproc::TSyncProcessorCompBase</class>
@@ -2431,7 +2431,7 @@
   </compound>
   <compound kind="file">
     <name>TSyncProcessorWrap.h</name>
-    <path>C:/Temp/Acfsln/Include/iproc/</path>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
     <filename>_t_sync_processor_wrap_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">iproc::TSyncProcessorWrap</class>
@@ -2446,7 +2446,7 @@
   </compound>
   <compound kind="file">
     <name>CDocumentProcessingCommandComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iprocgui/</path>
+    <path>C:/Temp/AcfSln/Include/iprocgui/</path>
     <filename>_c_document_processing_command_comp_8h</filename>
     <includes id="_c_document_processing_manager_comp_base_8h" name="CDocumentProcessingManagerCompBase.h" local="yes" imported="no">iprocgui/CDocumentProcessingManagerCompBase.h</includes>
     <class kind="class">iprocgui::CDocumentProcessingCommandComp</class>
@@ -2454,7 +2454,7 @@
   </compound>
   <compound kind="file">
     <name>CDocumentProcessingManagerComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iprocgui/</path>
+    <path>C:/Temp/AcfSln/Include/iprocgui/</path>
     <filename>_c_document_processing_manager_comp_8h</filename>
     <includes id="_c_document_processing_manager_comp_base_8h" name="CDocumentProcessingManagerCompBase.h" local="yes" imported="no">iprocgui/CDocumentProcessingManagerCompBase.h</includes>
     <class kind="class">iprocgui::CDocumentProcessingManagerComp</class>
@@ -2462,7 +2462,7 @@
   </compound>
   <compound kind="file">
     <name>CDocumentProcessingManagerCompBase.h</name>
-    <path>C:/Temp/Acfsln/Include/iprocgui/</path>
+    <path>C:/Temp/AcfSln/Include/iprocgui/</path>
     <filename>_c_document_processing_manager_comp_base_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">iprocgui::CDocumentProcessingManagerCompBase</class>
@@ -2470,7 +2470,7 @@
   </compound>
   <compound kind="file">
     <name>CProcessorCommandComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iprocgui/</path>
+    <path>C:/Temp/AcfSln/Include/iprocgui/</path>
     <filename>_c_processor_command_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">iprocgui::CProcessorCommandComp</class>
@@ -2478,7 +2478,7 @@
   </compound>
   <compound kind="file">
     <name>CProcessorControlGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iprocgui/</path>
+    <path>C:/Temp/AcfSln/Include/iprocgui/</path>
     <filename>_c_processor_control_gui_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">iprocgui::CProcessorControlGuiComp</class>
@@ -2486,13 +2486,13 @@
   </compound>
   <compound kind="file">
     <name>iprocgui.h</name>
-    <path>C:/Temp/Acfsln/Include/iprocgui/</path>
+    <path>C:/Temp/AcfSln/Include/iprocgui/</path>
     <filename>iprocgui_8h</filename>
     <namespace>iqproc</namespace>
   </compound>
   <compound kind="file">
     <name>CChangePasswordDialog.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtauth/</path>
+    <path>C:/Temp/AcfSln/Include/iqtauth/</path>
     <filename>_c_change_password_dialog_8h</filename>
     <includes id="_i_users_manager_8h" name="IUsersManager.h" local="yes" imported="no">iauth/IUsersManager.h</includes>
     <includes id="_c_user_8h" name="CUser.h" local="yes" imported="no">iauth/CUser.h</includes>
@@ -2501,7 +2501,7 @@
   </compound>
   <compound kind="file">
     <name>CLoginBarGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtauth/</path>
+    <path>C:/Temp/AcfSln/Include/iqtauth/</path>
     <filename>_c_login_bar_gui_comp_8h</filename>
     <includes id="_i_login_8h" name="ILogin.h" local="yes" imported="no">iauth/ILogin.h</includes>
     <class kind="class">iqtauth::CLoginBarGuiComp</class>
@@ -2509,7 +2509,7 @@
   </compound>
   <compound kind="file">
     <name>CUserGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtauth/</path>
+    <path>C:/Temp/AcfSln/Include/iqtauth/</path>
     <filename>_c_user_gui_comp_8h</filename>
     <includes id="_i_rights_provider_8h" name="IRightsProvider.h" local="yes" imported="no">iauth/IRightsProvider.h</includes>
     <includes id="_i_login_8h" name="ILogin.h" local="yes" imported="no">iauth/ILogin.h</includes>
@@ -2520,7 +2520,7 @@
   </compound>
   <compound kind="file">
     <name>CUserManagerDialog.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtauth/</path>
+    <path>C:/Temp/AcfSln/Include/iqtauth/</path>
     <filename>_c_user_manager_dialog_8h</filename>
     <includes id="_i_login_8h" name="ILogin.h" local="yes" imported="no">iauth/ILogin.h</includes>
     <includes id="_i_users_manager_8h" name="IUsersManager.h" local="yes" imported="no">iauth/IUsersManager.h</includes>
@@ -2529,7 +2529,7 @@
   </compound>
   <compound kind="file">
     <name>CBitmapSupplierGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtcam/</path>
+    <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>_c_bitmap_supplier_gui_comp_8h</filename>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="iqtcam_8h" name="iqtcam.h" local="yes" imported="no">iqtcam/iqtcam.h</includes>
@@ -2538,7 +2538,7 @@
   </compound>
   <compound kind="file">
     <name>CCameraInfoGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtcam/</path>
+    <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>_c_camera_info_gui_comp_8h</filename>
     <includes id="_i_camera_info_8h" name="ICameraInfo.h" local="yes" imported="no">icam/ICameraInfo.h</includes>
     <class kind="class">iqtcam::CCameraInfoGuiComp</class>
@@ -2546,7 +2546,7 @@
   </compound>
   <compound kind="file">
     <name>CExposureParamsGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtcam/</path>
+    <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>_c_exposure_params_gui_comp_8h</filename>
     <includes id="_i_exposure_params_8h" name="IExposureParams.h" local="yes" imported="no">icam/IExposureParams.h</includes>
     <class kind="class">iqtcam::CExposureParamsGuiComp</class>
@@ -2554,7 +2554,7 @@
   </compound>
   <compound kind="file">
     <name>CFileAcquisitionComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtcam/</path>
+    <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>_c_file_acquisition_comp_8h</filename>
     <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
@@ -2565,7 +2565,7 @@
   </compound>
   <compound kind="file">
     <name>CMultiBitmapSupplierGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtcam/</path>
+    <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>_c_multi_bitmap_supplier_gui_comp_8h</filename>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <class kind="class">iqtcam::CMultiBitmapSupplierGuiComp</class>
@@ -2573,7 +2573,7 @@
   </compound>
   <compound kind="file">
     <name>CScaleCalibrationEditorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtcam/</path>
+    <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>_c_scale_calibration_editor_comp_8h</filename>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <class kind="class">iqtcam::CScaleCalibrationEditorComp</class>
@@ -2581,7 +2581,7 @@
   </compound>
   <compound kind="file">
     <name>CSnapImageGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtcam/</path>
+    <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>_c_snap_image_gui_comp_8h</filename>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
     <includes id="iqtcam_8h" name="iqtcam.h" local="yes" imported="no">iqtcam/iqtcam.h</includes>
@@ -2590,27 +2590,27 @@
   </compound>
   <compound kind="file">
     <name>iqtcam.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtcam/</path>
+    <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>iqtcam_8h</filename>
     <namespace>iqtcam</namespace>
   </compound>
   <compound kind="file">
     <name>CTcpTerminalGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtex/</path>
+    <path>C:/Temp/AcfSln/Include/iqtex/</path>
     <filename>_c_tcp_terminal_gui_comp_8h</filename>
     <class kind="class">iqtex::CTcpTerminalGuiComp</class>
     <namespace>iqtex</namespace>
   </compound>
   <compound kind="file">
     <name>CXslSerializerComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtex/</path>
+    <path>C:/Temp/AcfSln/Include/iqtex/</path>
     <filename>_c_xsl_serializer_comp_8h</filename>
     <class kind="class">iqtex::CXslSerializerComp</class>
     <namespace>iqtex</namespace>
   </compound>
   <compound kind="file">
     <name>CXslTransformationReadArchive.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtex/</path>
+    <path>C:/Temp/AcfSln/Include/iqtex/</path>
     <filename>_c_xsl_transformation_read_archive_8h</filename>
     <includes id="iqtex_8h" name="iqtex.h" local="yes" imported="no">iqtex/iqtex.h</includes>
     <class kind="class">iqtex::CXslTransformationReadArchive</class>
@@ -2618,7 +2618,7 @@
   </compound>
   <compound kind="file">
     <name>CXslTransformationWriteArchive.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtex/</path>
+    <path>C:/Temp/AcfSln/Include/iqtex/</path>
     <filename>_c_xsl_transformation_write_archive_8h</filename>
     <includes id="iqtex_8h" name="iqtex.h" local="yes" imported="no">iqtex/iqtex.h</includes>
     <class kind="class">iqtex::CXslTransformationWriteArchive</class>
@@ -2626,13 +2626,13 @@
   </compound>
   <compound kind="file">
     <name>iqtex.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtex/</path>
+    <path>C:/Temp/AcfSln/Include/iqtex/</path>
     <filename>iqtex_8h</filename>
     <namespace>iqtex</namespace>
   </compound>
   <compound kind="file">
     <name>CGeneralSupplierGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtinsp/</path>
+    <path>C:/Temp/AcfSln/Include/iqtinsp/</path>
     <filename>_c_general_supplier_gui_comp_8h</filename>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
@@ -2642,7 +2642,7 @@
   </compound>
   <compound kind="file">
     <name>CInspectionTaskGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtinsp/</path>
+    <path>C:/Temp/AcfSln/Include/iqtinsp/</path>
     <filename>_c_inspection_task_gui_comp_8h</filename>
     <includes id="_i_inspection_task_8h" name="IInspectionTask.h" local="yes" imported="no">iinsp/IInspectionTask.h</includes>
     <class kind="class">iqtinsp::CInspectionTaskGuiCompBase</class>
@@ -2651,13 +2651,13 @@
   </compound>
   <compound kind="file">
     <name>iqtinsp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtinsp/</path>
+    <path>C:/Temp/AcfSln/Include/iqtinsp/</path>
     <filename>iqtinsp_8h</filename>
     <namespace>iqtinsp</namespace>
   </compound>
   <compound kind="file">
     <name>TSupplierGuiCompBase.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtinsp/</path>
+    <path>C:/Temp/AcfSln/Include/iqtinsp/</path>
     <filename>_t_supplier_gui_comp_base_8h</filename>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
     <includes id="iqtinsp_8h" name="iqtinsp.h" local="yes" imported="no">iqtinsp/iqtinsp.h</includes>
@@ -2667,7 +2667,7 @@
   </compound>
   <compound kind="file">
     <name>CCaliperParamsGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtipr/</path>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_caliper_params_gui_comp_8h</filename>
     <includes id="_i_caliper_params_8h" name="ICaliperParams.h" local="yes" imported="no">iipr/ICaliperParams.h</includes>
     <class kind="class">iqtipr::CCaliperParamsGuiComp</class>
@@ -2675,7 +2675,7 @@
   </compound>
   <compound kind="file">
     <name>CCircleFinderParamsGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtipr/</path>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_circle_finder_params_gui_comp_8h</filename>
     <includes id="_i_circle_finder_params_8h" name="ICircleFinderParams.h" local="yes" imported="no">iipr/ICircleFinderParams.h</includes>
     <class kind="class">iqtipr::CCircleFinderParamsGuiComp</class>
@@ -2683,7 +2683,7 @@
   </compound>
   <compound kind="file">
     <name>CColorPatternComparatorGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtipr/</path>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_color_pattern_comparator_gui_comp_8h</filename>
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
@@ -2693,7 +2693,7 @@
   </compound>
   <compound kind="file">
     <name>CConvolution2dParamsGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtipr/</path>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_convolution2d_params_gui_comp_8h</filename>
     <includes id="_i_convolution_kernel2d_8h" name="IConvolutionKernel2d.h" local="yes" imported="no">iipr/IConvolutionKernel2d.h</includes>
     <class kind="class">iqtipr::CConvolution2dParamsGuiComp</class>
@@ -2701,7 +2701,7 @@
   </compound>
   <compound kind="file">
     <name>CGeneralSearchParamsGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtipr/</path>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_general_search_params_gui_comp_8h</filename>
     <includes id="_i_search_params_8h" name="ISearchParams.h" local="yes" imported="no">iipr/ISearchParams.h</includes>
     <class kind="class">iqtipr::CGeneralSearchParamsGuiComp</class>
@@ -2709,7 +2709,7 @@
   </compound>
   <compound kind="file">
     <name>CImageInterpolationParamsGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtipr/</path>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_image_interpolation_params_gui_comp_8h</filename>
     <includes id="_i_image_interpolation_params_8h" name="IImageInterpolationParams.h" local="yes" imported="no">iipr/IImageInterpolationParams.h</includes>
     <class kind="class">iqtipr::CImageInterpolationParamsGuiComp</class>
@@ -2717,7 +2717,7 @@
   </compound>
   <compound kind="file">
     <name>CLineProjectionSupplierGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtipr/</path>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_line_projection_supplier_gui_comp_8h</filename>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
@@ -2729,7 +2729,7 @@
   </compound>
   <compound kind="file">
     <name>CMultiLineProjectionSupplierGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtipr/</path>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_multi_line_projection_supplier_gui_comp_8h</filename>
     <includes id="_i_multi_data_sequence_provider_8h" name="IMultiDataSequenceProvider.h" local="yes" imported="no">imeas/IMultiDataSequenceProvider.h</includes>
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
@@ -2739,7 +2739,7 @@
   </compound>
   <compound kind="file">
     <name>CMultiLineSupplierGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtipr/</path>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_multi_line_supplier_gui_comp_8h</filename>
     <includes id="_c_simple_numeric_value_provider_8h" name="CSimpleNumericValueProvider.h" local="yes" imported="no">imeas/CSimpleNumericValueProvider.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
@@ -2750,7 +2750,7 @@
   </compound>
   <compound kind="file">
     <name>CPatternTeachingControllerGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtipr/</path>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_pattern_teaching_controller_gui_comp_8h</filename>
     <includes id="_i_pattern_controller_8h" name="IPatternController.h" local="yes" imported="no">iipr/IPatternController.h</includes>
     <class kind="class">iqtipr::CPatternTeachingControllerGuiComp</class>
@@ -2758,21 +2758,21 @@
   </compound>
   <compound kind="file">
     <name>CProcessedBitmapView.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtipr/</path>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_processed_bitmap_view_8h</filename>
     <class kind="class">iqtipr::CProcessedBitmapView</class>
     <namespace>iqtipr</namespace>
   </compound>
   <compound kind="file">
     <name>CProcessedMultiBitmapView.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtipr/</path>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_processed_multi_bitmap_view_8h</filename>
     <class kind="class">iqtipr::CProcessedMultiBitmapView</class>
     <namespace>iqtipr</namespace>
   </compound>
   <compound kind="file">
     <name>CProjectionShape.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtipr/</path>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_projection_shape_8h</filename>
     <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
     <includes id="iqtipr_8h" name="iqtipr.h" local="yes" imported="no">iqtipr/iqtipr.h</includes>
@@ -2781,7 +2781,7 @@
   </compound>
   <compound kind="file">
     <name>CSearchBasedFeaturesSupplierGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtipr/</path>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_search_based_features_supplier_gui_comp_8h</filename>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="iqtipr_8h" name="iqtipr.h" local="yes" imported="no">iqtipr/iqtipr.h</includes>
@@ -2790,7 +2790,7 @@
   </compound>
   <compound kind="file">
     <name>CValueSupplierGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtipr/</path>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_value_supplier_gui_comp_8h</filename>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
@@ -2800,13 +2800,13 @@
   </compound>
   <compound kind="file">
     <name>iqtipr.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtipr/</path>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>iqtipr_8h</filename>
     <namespace>iqtipr</namespace>
   </compound>
   <compound kind="file">
     <name>CDataSequenceSupplierResultsViewComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtmeas/</path>
+    <path>C:/Temp/AcfSln/Include/iqtmeas/</path>
     <filename>_c_data_sequence_supplier_results_view_comp_8h</filename>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
     <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
@@ -2815,7 +2815,7 @@
   </compound>
   <compound kind="file">
     <name>CDataSequenceViewComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtmeas/</path>
+    <path>C:/Temp/AcfSln/Include/iqtmeas/</path>
     <filename>_c_data_sequence_view_comp_8h</filename>
     <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
     <class kind="class">iqtmeas::CDataSequenceViewComp</class>
@@ -2824,7 +2824,7 @@
   </compound>
   <compound kind="file">
     <name>CDataStatisticsGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtmeas/</path>
+    <path>C:/Temp/AcfSln/Include/iqtmeas/</path>
     <filename>_c_data_statistics_gui_comp_8h</filename>
     <includes id="_i_data_statistics_8h" name="IDataStatistics.h" local="yes" imported="no">imeas/IDataStatistics.h</includes>
     <class kind="class">iqtmeas::CDataStatisticsGuiComp</class>
@@ -2832,7 +2832,7 @@
   </compound>
   <compound kind="file">
     <name>CNumericParamsGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtmeas/</path>
+    <path>C:/Temp/AcfSln/Include/iqtmeas/</path>
     <filename>_c_numeric_params_gui_comp_8h</filename>
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
     <includes id="_c_numeric_value_widget_8h" name="CNumericValueWidget.h" local="yes" imported="no">iqtmeas/CNumericValueWidget.h</includes>
@@ -2841,21 +2841,21 @@
   </compound>
   <compound kind="file">
     <name>CNumericValueWidget.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtmeas/</path>
+    <path>C:/Temp/AcfSln/Include/iqtmeas/</path>
     <filename>_c_numeric_value_widget_8h</filename>
     <class kind="class">iqtmeas::CNumericValueWidget</class>
     <namespace>iqtmeas</namespace>
   </compound>
   <compound kind="file">
     <name>iqtmeas.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtmeas/</path>
+    <path>C:/Temp/AcfSln/Include/iqtmeas/</path>
     <filename>iqtmeas_8h</filename>
     <includes id="imeas_8h" name="imeas.h" local="yes" imported="no">imeas/imeas.h</includes>
     <namespace>iqtmeas</namespace>
   </compound>
   <compound kind="file">
     <name>CFrameSeqVideoControllerComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtmm/</path>
+    <path>C:/Temp/AcfSln/Include/iqtmm/</path>
     <filename>_c_frame_seq_video_controller_comp_8h</filename>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
@@ -2865,7 +2865,7 @@
   </compound>
   <compound kind="file">
     <name>CMediaLoaderComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtmm/</path>
+    <path>C:/Temp/AcfSln/Include/iqtmm/</path>
     <filename>_c_media_loader_comp_8h</filename>
     <includes id="iqtmm_8h" name="iqtmm.h" local="yes" imported="no">iqtmm/iqtmm.h</includes>
     <class kind="class">iqtmm::CMediaLoaderComp</class>
@@ -2873,7 +2873,7 @@
   </compound>
   <compound kind="file">
     <name>CPlaybackControllerGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtmm/</path>
+    <path>C:/Temp/AcfSln/Include/iqtmm/</path>
     <filename>_c_playback_controller_gui_comp_8h</filename>
     <includes id="_i_video_controller_8h" name="IVideoController.h" local="yes" imported="no">imm/IVideoController.h</includes>
     <class kind="class">iqtmm::CPlaybackControllerGuiComp</class>
@@ -2881,7 +2881,7 @@
   </compound>
   <compound kind="file">
     <name>CSvgBitmapLoaderComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtmm/</path>
+    <path>C:/Temp/AcfSln/Include/iqtmm/</path>
     <filename>_c_svg_bitmap_loader_comp_8h</filename>
     <includes id="iqtmm_8h" name="iqtmm.h" local="yes" imported="no">iqtmm/iqtmm.h</includes>
     <class kind="class">iqtmm::CSvgBitmapLoaderComp</class>
@@ -2889,7 +2889,7 @@
   </compound>
   <compound kind="file">
     <name>CVideoPlayerGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtmm/</path>
+    <path>C:/Temp/AcfSln/Include/iqtmm/</path>
     <filename>_c_video_player_gui_comp_8h</filename>
     <includes id="_i_media_controller_8h" name="IMediaController.h" local="yes" imported="no">imm/IMediaController.h</includes>
     <class kind="class">iqtmm::CVideoPlayerGuiComp</class>
@@ -2897,13 +2897,13 @@
   </compound>
   <compound kind="file">
     <name>iqtmm.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtmm/</path>
+    <path>C:/Temp/AcfSln/Include/iqtmm/</path>
     <filename>iqtmm_8h</filename>
     <namespace>iqtmm</namespace>
   </compound>
   <compound kind="file">
     <name>CPulseParamsGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtsig/</path>
+    <path>C:/Temp/AcfSln/Include/iqtsig/</path>
     <filename>_c_pulse_params_gui_comp_8h</filename>
     <includes id="_i_pulse_params_8h" name="IPulseParams.h" local="yes" imported="no">isig/IPulseParams.h</includes>
     <includes id="iqtsig_8h" name="iqtsig.h" local="yes" imported="no">iqtsig/iqtsig.h</includes>
@@ -2912,7 +2912,7 @@
   </compound>
   <compound kind="file">
     <name>CSampleAcquisitionGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtsig/</path>
+    <path>C:/Temp/AcfSln/Include/iqtsig/</path>
     <filename>_c_sample_acquisition_gui_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
@@ -2922,7 +2922,7 @@
   </compound>
   <compound kind="file">
     <name>CSampleContainerView.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtsig/</path>
+    <path>C:/Temp/AcfSln/Include/iqtsig/</path>
     <filename>_c_sample_container_view_8h</filename>
     <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
     <class kind="class">iqtsig::CSampleContainerView</class>
@@ -2930,7 +2930,7 @@
   </compound>
   <compound kind="file">
     <name>CSamplingParamsGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtsig/</path>
+    <path>C:/Temp/AcfSln/Include/iqtsig/</path>
     <filename>_c_sampling_params_gui_comp_8h</filename>
     <includes id="_i_sampling_params_8h" name="ISamplingParams.h" local="yes" imported="no">isig/ISamplingParams.h</includes>
     <includes id="iqtsig_8h" name="iqtsig.h" local="yes" imported="no">iqtsig/iqtsig.h</includes>
@@ -2939,7 +2939,7 @@
   </compound>
   <compound kind="file">
     <name>CScriptDataProcessorComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtsig/</path>
+    <path>C:/Temp/AcfSln/Include/iqtsig/</path>
     <filename>_c_script_data_processor_comp_8h</filename>
     <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="iqtsig_8h" name="iqtsig.h" local="yes" imported="no">iqtsig/iqtsig.h</includes>
@@ -2948,7 +2948,7 @@
   </compound>
   <compound kind="file">
     <name>CTriggerParamsGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtsig/</path>
+    <path>C:/Temp/AcfSln/Include/iqtsig/</path>
     <filename>_c_trigger_params_gui_comp_8h</filename>
     <includes id="_i_trigger_params_8h" name="ITriggerParams.h" local="yes" imported="no">isig/ITriggerParams.h</includes>
     <includes id="iqtsig_8h" name="iqtsig.h" local="yes" imported="no">iqtsig/iqtsig.h</includes>
@@ -2957,13 +2957,13 @@
   </compound>
   <compound kind="file">
     <name>iqtsig.h</name>
-    <path>C:/Temp/Acfsln/Include/iqtsig/</path>
+    <path>C:/Temp/AcfSln/Include/iqtsig/</path>
     <filename>iqtsig_8h</filename>
     <namespace>iqtsig</namespace>
   </compound>
   <compound kind="file">
     <name>CServiceApplicationComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iservice/</path>
+    <path>C:/Temp/AcfSln/Include/iservice/</path>
     <filename>_c_service_application_comp_8h</filename>
     <includes id="qtservice_8h" name="qtservice.h" local="yes" imported="no">iservice/QtService.h</includes>
     <class kind="class">iservice::CServiceApplicationComp</class>
@@ -2972,7 +2972,7 @@
   </compound>
   <compound kind="file">
     <name>qtservice.h</name>
-    <path>C:/Temp/Acfsln/Include/iservice/</path>
+    <path>C:/Temp/AcfSln/Include/iservice/</path>
     <filename>qtservice_8h</filename>
     <class kind="class">QtServiceController</class>
     <class kind="class">QtServiceBase</class>
@@ -2987,7 +2987,7 @@
   </compound>
   <compound kind="file">
     <name>qtservice_p.h</name>
-    <path>C:/Temp/Acfsln/Include/iservice/</path>
+    <path>C:/Temp/AcfSln/Include/iservice/</path>
     <filename>qtservice__p_8h</filename>
     <includes id="qtservice_8h" name="qtservice.h" local="yes" imported="no">qtservice.h</includes>
     <class kind="class">QtServiceControllerPrivate</class>
@@ -2995,7 +2995,7 @@
   </compound>
   <compound kind="file">
     <name>qtservice_win.h</name>
-    <path>C:/Temp/Acfsln/Include/iservice/</path>
+    <path>C:/Temp/AcfSln/Include/iservice/</path>
     <filename>qtservice__win_8h</filename>
     <includes id="qtservice_8h" name="qtservice.h" local="yes" imported="no">iservice/qtservice.h</includes>
     <class kind="class">QtServiceSysPrivate</class>
@@ -3003,25 +3003,25 @@
   </compound>
   <compound kind="file">
     <name>qtservicestarter.h</name>
-    <path>C:/Temp/Acfsln/Include/iservice/</path>
+    <path>C:/Temp/AcfSln/Include/iservice/</path>
     <filename>qtservicestarter_8h</filename>
     <class kind="class">QtServiceStarter</class>
   </compound>
   <compound kind="file">
     <name>qtunixserversocket.h</name>
-    <path>C:/Temp/Acfsln/Include/iservice/</path>
+    <path>C:/Temp/AcfSln/Include/iservice/</path>
     <filename>qtunixserversocket_8h</filename>
     <class kind="class">QtUnixServerSocket</class>
   </compound>
   <compound kind="file">
     <name>qtunixsocket.h</name>
-    <path>C:/Temp/Acfsln/Include/iservice/</path>
+    <path>C:/Temp/AcfSln/Include/iservice/</path>
     <filename>qtunixsocket_8h</filename>
     <class kind="class">QtUnixSocket</class>
   </compound>
   <compound kind="file">
     <name>CPulseParamsComp.h</name>
-    <path>C:/Temp/Acfsln/Include/isig/</path>
+    <path>C:/Temp/AcfSln/Include/isig/</path>
     <filename>_c_pulse_params_comp_8h</filename>
     <includes id="_i_pulse_params_8h" name="IPulseParams.h" local="yes" imported="no">isig/IPulseParams.h</includes>
     <includes id="_i_pulse_constraints_8h" name="IPulseConstraints.h" local="yes" imported="no">isig/IPulseConstraints.h</includes>
@@ -3030,7 +3030,7 @@
   </compound>
   <compound kind="file">
     <name>CSamplingParamsComp.h</name>
-    <path>C:/Temp/Acfsln/Include/isig/</path>
+    <path>C:/Temp/AcfSln/Include/isig/</path>
     <filename>_c_sampling_params_comp_8h</filename>
     <includes id="_i_sampling_constraints_8h" name="ISamplingConstraints.h" local="yes" imported="no">isig/ISamplingConstraints.h</includes>
     <includes id="_i_sampling_params_8h" name="ISamplingParams.h" local="yes" imported="no">isig/ISamplingParams.h</includes>
@@ -3039,7 +3039,7 @@
   </compound>
   <compound kind="file">
     <name>CTriggerParamsComp.h</name>
-    <path>C:/Temp/Acfsln/Include/isig/</path>
+    <path>C:/Temp/AcfSln/Include/isig/</path>
     <filename>_c_trigger_params_comp_8h</filename>
     <includes id="_i_trigger_constraints_8h" name="ITriggerConstraints.h" local="yes" imported="no">isig/ITriggerConstraints.h</includes>
     <includes id="_i_trigger_params_8h" name="ITriggerParams.h" local="yes" imported="no">isig/ITriggerParams.h</includes>
@@ -3048,21 +3048,21 @@
   </compound>
   <compound kind="file">
     <name>IPulseConstraints.h</name>
-    <path>C:/Temp/Acfsln/Include/isig/</path>
+    <path>C:/Temp/AcfSln/Include/isig/</path>
     <filename>_i_pulse_constraints_8h</filename>
     <class kind="class">isig::IPulseConstraints</class>
     <namespace>isig</namespace>
   </compound>
   <compound kind="file">
     <name>IPulseParams.h</name>
-    <path>C:/Temp/Acfsln/Include/isig/</path>
+    <path>C:/Temp/AcfSln/Include/isig/</path>
     <filename>_i_pulse_params_8h</filename>
     <class kind="class">isig::IPulseParams</class>
     <namespace>isig</namespace>
   </compound>
   <compound kind="file">
     <name>ISamplingConstraints.h</name>
-    <path>C:/Temp/Acfsln/Include/isig/</path>
+    <path>C:/Temp/AcfSln/Include/isig/</path>
     <filename>_i_sampling_constraints_8h</filename>
     <includes id="isig_8h" name="isig.h" local="yes" imported="no">isig/isig.h</includes>
     <class kind="class">isig::ISamplingConstraints</class>
@@ -3070,7 +3070,7 @@
   </compound>
   <compound kind="file">
     <name>ISamplingParams.h</name>
-    <path>C:/Temp/Acfsln/Include/isig/</path>
+    <path>C:/Temp/AcfSln/Include/isig/</path>
     <filename>_i_sampling_params_8h</filename>
     <includes id="isig_8h" name="isig.h" local="yes" imported="no">isig/isig.h</includes>
     <class kind="class">isig::ISamplingParams</class>
@@ -3078,27 +3078,27 @@
   </compound>
   <compound kind="file">
     <name>isig.h</name>
-    <path>C:/Temp/Acfsln/Include/isig/</path>
+    <path>C:/Temp/AcfSln/Include/isig/</path>
     <filename>isig_8h</filename>
     <namespace>isig</namespace>
   </compound>
   <compound kind="file">
     <name>ITriggerConstraints.h</name>
-    <path>C:/Temp/Acfsln/Include/isig/</path>
+    <path>C:/Temp/AcfSln/Include/isig/</path>
     <filename>_i_trigger_constraints_8h</filename>
     <class kind="class">isig::ITriggerConstraints</class>
     <namespace>isig</namespace>
   </compound>
   <compound kind="file">
     <name>ITriggerController.h</name>
-    <path>C:/Temp/Acfsln/Include/isig/</path>
+    <path>C:/Temp/AcfSln/Include/isig/</path>
     <filename>_i_trigger_controller_8h</filename>
     <class kind="class">isig::ITriggerController</class>
     <namespace>isig</namespace>
   </compound>
   <compound kind="file">
     <name>ITriggerParams.h</name>
-    <path>C:/Temp/Acfsln/Include/isig/</path>
+    <path>C:/Temp/AcfSln/Include/isig/</path>
     <filename>_i_trigger_params_8h</filename>
     <includes id="isig_8h" name="isig.h" local="yes" imported="no">isig/isig.h</includes>
     <class kind="class">isig::ITriggerParams</class>
@@ -3106,20 +3106,20 @@
   </compound>
   <compound kind="file">
     <name>CCgiManager.h</name>
-    <path>C:/Temp/Acfsln/Include/iweb/</path>
+    <path>C:/Temp/AcfSln/Include/iweb/</path>
     <filename>_c_cgi_manager_8h</filename>
     <class kind="class">iweb::CCgiManager</class>
     <namespace>iweb</namespace>
   </compound>
   <compound kind="file">
     <name>iweb.h</name>
-    <path>C:/Temp/Acfsln/Include/iweb/</path>
+    <path>C:/Temp/AcfSln/Include/iweb/</path>
     <filename>iweb_8h</filename>
     <namespace>iwiz</namespace>
   </compound>
   <compound kind="file">
     <name>CComposedStateControllerComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iwiz/</path>
+    <path>C:/Temp/AcfSln/Include/iwiz/</path>
     <filename>_c_composed_state_controller_comp_8h</filename>
     <includes id="_i_state_controller_8h" name="IStateController.h" local="yes" imported="no">iproc/IStateController.h</includes>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
@@ -3128,7 +3128,7 @@
   </compound>
   <compound kind="file">
     <name>CSelectionConsistencyControllerComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iwiz/</path>
+    <path>C:/Temp/AcfSln/Include/iwiz/</path>
     <filename>_c_selection_consistency_controller_comp_8h</filename>
     <includes id="_i_state_controller_8h" name="IStateController.h" local="yes" imported="no">iproc/IStateController.h</includes>
     <class kind="class">iwiz::CSelectionConsistencyControllerComp</class>
@@ -3136,7 +3136,7 @@
   </compound>
   <compound kind="file">
     <name>CStateControllerCompBase.h</name>
-    <path>C:/Temp/Acfsln/Include/iwiz/</path>
+    <path>C:/Temp/AcfSln/Include/iwiz/</path>
     <filename>_c_state_controller_comp_base_8h</filename>
     <includes id="_i_state_controller_8h" name="IStateController.h" local="yes" imported="no">iproc/IStateController.h</includes>
     <class kind="class">iwiz::CStateControllerCompBase</class>
@@ -3144,7 +3144,7 @@
   </compound>
   <compound kind="file">
     <name>CWizardDocumentComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iwiz/</path>
+    <path>C:/Temp/AcfSln/Include/iwiz/</path>
     <filename>_c_wizard_document_comp_8h</filename>
     <includes id="_i_wizard_navigation_controller_8h" name="IWizardNavigationController.h" local="yes" imported="no">iwiz/IWizardNavigationController.h</includes>
     <includes id="_i_params_manager_wizard_8h" name="IParamsManagerWizard.h" local="yes" imported="no">iwiz/IParamsManagerWizard.h</includes>
@@ -3153,7 +3153,7 @@
   </compound>
   <compound kind="file">
     <name>IParamsManagerWizard.h</name>
-    <path>C:/Temp/Acfsln/Include/iwiz/</path>
+    <path>C:/Temp/AcfSln/Include/iwiz/</path>
     <filename>_i_params_manager_wizard_8h</filename>
     <includes id="_i_wizard_navigation_controller_8h" name="IWizardNavigationController.h" local="yes" imported="no">iwiz/IWizardNavigationController.h</includes>
     <class kind="class">iwiz::IParamsManagerWizard</class>
@@ -3161,20 +3161,20 @@
   </compound>
   <compound kind="file">
     <name>iwiz.h</name>
-    <path>C:/Temp/Acfsln/Include/iwiz/</path>
+    <path>C:/Temp/AcfSln/Include/iwiz/</path>
     <filename>iwiz_8h</filename>
     <namespace>iwiz</namespace>
   </compound>
   <compound kind="file">
     <name>IWizardNavigationController.h</name>
-    <path>C:/Temp/Acfsln/Include/iwiz/</path>
+    <path>C:/Temp/AcfSln/Include/iwiz/</path>
     <filename>_i_wizard_navigation_controller_8h</filename>
     <class kind="class">iwiz::IWizardNavigationController</class>
     <namespace>iwiz</namespace>
   </compound>
   <compound kind="file">
     <name>CWizardOptionsListGuiComp.h</name>
-    <path>C:/Temp/Acfsln/Include/iwizgui/</path>
+    <path>C:/Temp/AcfSln/Include/iwizgui/</path>
     <filename>_c_wizard_options_list_gui_comp_8h</filename>
     <includes id="_i_params_manager_wizard_8h" name="IParamsManagerWizard.h" local="yes" imported="no">iwiz/IParamsManagerWizard.h</includes>
     <class kind="class">iwizgui::CWizardOptionsListGuiComp</class>
@@ -26965,8 +26965,8 @@
       <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqtipr_1_1_c_color_pattern_comparator_gui_comp.html</anchorfile>
-      <anchor>a43ba6d4390cda6460c2e53b10e4e87dd</anchor>
-      <arglist>()</arglist>
+      <anchor>a35f15af6ce55e0907d850686839bc0c5</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -30924,7 +30924,7 @@
   </compound>
   <compound kind="dir">
     <name>Include/iauth</name>
-    <path>C:/Temp/Acfsln/Include/iauth/</path>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
     <filename>dir_b4883bb8fd90455e4a712223a3312662.html</filename>
     <file>CRightsBasedEnablerComp.h</file>
     <file>CSimpleLoginComp.h</file>
@@ -30939,7 +30939,7 @@
   </compound>
   <compound kind="dir">
     <name>Include/iblob</name>
-    <path>C:/Temp/Acfsln/Include/iblob/</path>
+    <path>C:/Temp/AcfSln/Include/iblob/</path>
     <filename>dir_6b8f21da56aeb41654e138de0cf01fb3.html</filename>
     <file>CBlobDescriptorInfo.h</file>
     <file>CBlobFeature.h</file>
@@ -30949,14 +30949,14 @@
   </compound>
   <compound kind="dir">
     <name>Include/iblobgui</name>
-    <path>C:/Temp/Acfsln/Include/iblobgui/</path>
+    <path>C:/Temp/AcfSln/Include/iblobgui/</path>
     <filename>dir_ed19c58fd00418302dbbe2b01fb71973.html</filename>
     <file>CBlobFilterGui.h</file>
     <file>CBlobFilterParamsGuiComp.h</file>
   </compound>
   <compound kind="dir">
     <name>Include/icam</name>
-    <path>C:/Temp/Acfsln/Include/icam/</path>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>dir_f2296beff96c253567dc2b95d81f611c.html</filename>
     <file>CAcquisitionConstraintsComp.h</file>
     <file>CCameraDelegatorComp.h</file>
@@ -30977,7 +30977,7 @@
   </compound>
   <compound kind="dir">
     <name>Include/icmpstr</name>
-    <path>C:/Temp/Acfsln/Include/icmpstr/</path>
+    <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>dir_c00f6ae34efe356f1720d5d668a167d3.html</filename>
     <file>CAttributeEditorComp.h</file>
     <file>CComponentHelpFileProviderComp.h</file>
@@ -31014,14 +31014,14 @@
   </compound>
   <compound kind="dir">
     <name>Include/idocproc</name>
-    <path>C:/Temp/Acfsln/Include/idocproc/</path>
+    <path>C:/Temp/AcfSln/Include/idocproc/</path>
     <filename>dir_dd6e29a3219fe8cd5ed282d0d72d5b87.html</filename>
     <file>CRenderedDocumentPreviewGeneratorComp.h</file>
     <file>idocproc.h</file>
   </compound>
   <compound kind="dir">
     <name>Include/iedge</name>
-    <path>C:/Temp/Acfsln/Include/iedge/</path>
+    <path>C:/Temp/AcfSln/Include/iedge/</path>
     <filename>dir_9f5ef926fd5d264c2adfe296c2bd1f1c.html</filename>
     <file>CEdgeBasedFeaturesSupplierComp.h</file>
     <file>CEdgeLine.h</file>
@@ -31038,14 +31038,14 @@
   </compound>
   <compound kind="dir">
     <name>Include/iedgegui</name>
-    <path>C:/Temp/Acfsln/Include/iedgegui/</path>
+    <path>C:/Temp/AcfSln/Include/iedgegui/</path>
     <filename>dir_961a74b7e7646907c05fbaac4d7138ad.html</filename>
     <file>CEdgeLineContainerShape.h</file>
     <file>CEdgeLinesSupplierGuiComp.h</file>
   </compound>
   <compound kind="dir">
     <name>Include/ifileproc</name>
-    <path>C:/Temp/Acfsln/Include/ifileproc/</path>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>dir_5d85a8015148fee33a9f79f2a69171c7.html</filename>
     <file>CBitmapPreviewGeneratorComp.h</file>
     <file>CComposedCopyFilesComp.h</file>
@@ -31069,7 +31069,7 @@
   </compound>
   <compound kind="dir">
     <name>Include/ihotf</name>
-    <path>C:/Temp/Acfsln/Include/ihotf/</path>
+    <path>C:/Temp/AcfSln/Include/ihotf/</path>
     <filename>dir_2256aa99abe6d83449dc85ed6bdc9ec2.html</filename>
     <file>CDirectoryMonitorParams.h</file>
     <file>CDirectoryMonitorParamsComp.h</file>
@@ -31093,7 +31093,7 @@
   </compound>
   <compound kind="dir">
     <name>Include/ihotfgui</name>
-    <path>C:/Temp/Acfsln/Include/ihotfgui/</path>
+    <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
     <filename>dir_a2405bc7aae86aa911e3f3eadbe3ed99.html</filename>
     <file>CDirectoryItemGuiComp.h</file>
     <file>CDirectoryMonitorComp.h</file>
@@ -31107,7 +31107,7 @@
   </compound>
   <compound kind="dir">
     <name>Include/iinsp</name>
-    <path>C:/Temp/Acfsln/Include/iinsp/</path>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>dir_5022365cd8d99ebf720fac90c1fea03f.html</filename>
     <file>CComposedInformationProviderComp.h</file>
     <file>CIdProviderCacheComp.h</file>
@@ -31123,7 +31123,7 @@
   </compound>
   <compound kind="dir">
     <name>Include/iipr</name>
-    <path>C:/Temp/Acfsln/Include/iipr/</path>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>dir_1af4026a7aa3fbc90e13dff6479b1905.html</filename>
     <file>CAdaptiveImageBinarizeProcessorComp.h</file>
     <file>CArcProjectionProcessorComp.h</file>
@@ -31215,7 +31215,7 @@
   </compound>
   <compound kind="dir">
     <name>Include/imeas</name>
-    <path>C:/Temp/Acfsln/Include/imeas/</path>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>dir_e592bbcd5a2a1afe8c7af0cb6d8b6366.html</filename>
     <file>CCrossCorrelationProcessorComp.h</file>
     <file>CDataSequenceInfoBase.h</file>
@@ -31255,7 +31255,7 @@
   </compound>
   <compound kind="dir">
     <name>Include/imm</name>
-    <path>C:/Temp/Acfsln/Include/imm/</path>
+    <path>C:/Temp/AcfSln/Include/imm/</path>
     <filename>dir_957349cdd27335858e2acc73aeead3db.html</filename>
     <file>IMediaController.h</file>
     <file>imm.h</file>
@@ -31264,7 +31264,7 @@
   </compound>
   <compound kind="dir">
     <name>Include</name>
-    <path>C:/Temp/Acfsln/Include/</path>
+    <path>C:/Temp/AcfSln/Include/</path>
     <filename>dir_856524284ebe840938865dc061f982fb.html</filename>
     <dir>Include/iauth</dir>
     <dir>Include/iblob</dir>
@@ -31300,7 +31300,7 @@
   </compound>
   <compound kind="dir">
     <name>Include/iproc</name>
-    <path>C:/Temp/Acfsln/Include/iproc/</path>
+    <path>C:/Temp/AcfSln/Include/iproc/</path>
     <filename>dir_35b63edebbc85fd32ca1956302d75540.html</filename>
     <file>CCascadedProcessorComp.h</file>
     <file>CIterativeProcessorComp.h</file>
@@ -31318,7 +31318,7 @@
   </compound>
   <compound kind="dir">
     <name>Include/iprocgui</name>
-    <path>C:/Temp/Acfsln/Include/iprocgui/</path>
+    <path>C:/Temp/AcfSln/Include/iprocgui/</path>
     <filename>dir_4ef4624ab837c0b70234531fc34525bd.html</filename>
     <file>CDocumentProcessingCommandComp.h</file>
     <file>CDocumentProcessingManagerComp.h</file>
@@ -31329,7 +31329,7 @@
   </compound>
   <compound kind="dir">
     <name>Include/iqtauth</name>
-    <path>C:/Temp/Acfsln/Include/iqtauth/</path>
+    <path>C:/Temp/AcfSln/Include/iqtauth/</path>
     <filename>dir_44d4bb04ef3f71afb5a0346bee65d3e7.html</filename>
     <file>CChangePasswordDialog.h</file>
     <file>CLoginBarGuiComp.h</file>
@@ -31338,7 +31338,7 @@
   </compound>
   <compound kind="dir">
     <name>Include/iqtcam</name>
-    <path>C:/Temp/Acfsln/Include/iqtcam/</path>
+    <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>dir_655be44ac571be23939b7466cddddfaa.html</filename>
     <file>CBitmapSupplierGuiComp.h</file>
     <file>CCameraInfoGuiComp.h</file>
@@ -31351,7 +31351,7 @@
   </compound>
   <compound kind="dir">
     <name>Include/iqtex</name>
-    <path>C:/Temp/Acfsln/Include/iqtex/</path>
+    <path>C:/Temp/AcfSln/Include/iqtex/</path>
     <filename>dir_8ef51eba0ad30b11b79d6aec9be05ac6.html</filename>
     <file>CTcpTerminalGuiComp.h</file>
     <file>CXslSerializerComp.h</file>
@@ -31361,7 +31361,7 @@
   </compound>
   <compound kind="dir">
     <name>Include/iqtinsp</name>
-    <path>C:/Temp/Acfsln/Include/iqtinsp/</path>
+    <path>C:/Temp/AcfSln/Include/iqtinsp/</path>
     <filename>dir_20452451cdb86f26cfdbc571306ad63f.html</filename>
     <file>CGeneralSupplierGuiComp.h</file>
     <file>CInspectionTaskGuiComp.h</file>
@@ -31370,7 +31370,7 @@
   </compound>
   <compound kind="dir">
     <name>Include/iqtipr</name>
-    <path>C:/Temp/Acfsln/Include/iqtipr/</path>
+    <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>dir_b828160de37cf0f89aaea561af4e0419.html</filename>
     <file>CCaliperParamsGuiComp.h</file>
     <file>CCircleFinderParamsGuiComp.h</file>
@@ -31391,7 +31391,7 @@
   </compound>
   <compound kind="dir">
     <name>Include/iqtmeas</name>
-    <path>C:/Temp/Acfsln/Include/iqtmeas/</path>
+    <path>C:/Temp/AcfSln/Include/iqtmeas/</path>
     <filename>dir_2668d1904daa9fc9f571e054d25b2a5f.html</filename>
     <file>CDataSequenceSupplierResultsViewComp.h</file>
     <file>CDataSequenceViewComp.h</file>
@@ -31402,7 +31402,7 @@
   </compound>
   <compound kind="dir">
     <name>Include/iqtmm</name>
-    <path>C:/Temp/Acfsln/Include/iqtmm/</path>
+    <path>C:/Temp/AcfSln/Include/iqtmm/</path>
     <filename>dir_6936e4e65cb8d63779b421527daf14df.html</filename>
     <file>CFrameSeqVideoControllerComp.h</file>
     <file>CMediaLoaderComp.h</file>
@@ -31413,7 +31413,7 @@
   </compound>
   <compound kind="dir">
     <name>Include/iqtsig</name>
-    <path>C:/Temp/Acfsln/Include/iqtsig/</path>
+    <path>C:/Temp/AcfSln/Include/iqtsig/</path>
     <filename>dir_c3e31566ffb39fa927630f25cb798f6f.html</filename>
     <file>CPulseParamsGuiComp.h</file>
     <file>CSampleAcquisitionGuiComp.h</file>
@@ -31425,7 +31425,7 @@
   </compound>
   <compound kind="dir">
     <name>Include/iservice</name>
-    <path>C:/Temp/Acfsln/Include/iservice/</path>
+    <path>C:/Temp/AcfSln/Include/iservice/</path>
     <filename>dir_7f078004b07ba33cc29dfe42da6d60c2.html</filename>
     <file>CServiceApplicationComp.h</file>
     <file>qtservice.h</file>
@@ -31437,7 +31437,7 @@
   </compound>
   <compound kind="dir">
     <name>Include/isig</name>
-    <path>C:/Temp/Acfsln/Include/isig/</path>
+    <path>C:/Temp/AcfSln/Include/isig/</path>
     <filename>dir_ae96225a580a5bd73a232be9f1c5e552.html</filename>
     <file>CPulseParamsComp.h</file>
     <file>CSamplingParamsComp.h</file>
@@ -31453,14 +31453,14 @@
   </compound>
   <compound kind="dir">
     <name>Include/iweb</name>
-    <path>C:/Temp/Acfsln/Include/iweb/</path>
+    <path>C:/Temp/AcfSln/Include/iweb/</path>
     <filename>dir_3b55590aa0ae0f87f2d4ce3a62dc55c7.html</filename>
     <file>CCgiManager.h</file>
     <file>iweb.h</file>
   </compound>
   <compound kind="dir">
     <name>Include/iwiz</name>
-    <path>C:/Temp/Acfsln/Include/iwiz/</path>
+    <path>C:/Temp/AcfSln/Include/iwiz/</path>
     <filename>dir_1ebb3448cfb747307492cb5b25ceb4c6.html</filename>
     <file>CComposedStateControllerComp.h</file>
     <file>CSelectionConsistencyControllerComp.h</file>
@@ -31472,7 +31472,7 @@
   </compound>
   <compound kind="dir">
     <name>Include/iwizgui</name>
-    <path>C:/Temp/Acfsln/Include/iwizgui/</path>
+    <path>C:/Temp/AcfSln/Include/iwizgui/</path>
     <filename>dir_b516595be2c3c1ba340fb7b397360b2d.html</filename>
     <file>CWizardOptionsListGuiComp.h</file>
   </compound>

@@ -7,13 +7,13 @@ AcfModule{
     condition: true
 
 	Depends{ name: "Qt.core" }
+	Depends{ name: "Qt.gui" }
 
     name: "acf"
 
 	Rule{
 		id: arxCompiler
 		inputs: ["arx"]
-        inputsFromDependencies: ["application", "dynamiclibrary", "xpc"]
 
 		Artifact{
             filePath: AcfService.getGeneratedPath(product) + "/C" + input.completeBaseName + ".cpp"
@@ -27,23 +27,24 @@ AcfModule{
 		prepare:{
 			// get the ACF binary directory
 			var acfBinDirectory = product.moduleProperty("ArxcExe", "acfBinDirectory");
-			if (acfBinDirectory == null){
-				acfBinDirectory = product.buildDirectory;
-			}
-
-			// get the ACF configuration file
 			var acfConfigurationFile = product.moduleProperty("acf", "acfConfigurationFile");
-			if (acfConfigurationFile == null){
-				var dependencies = product.dependencies;
-				for (var dependencyIndex in dependencies) {
-					var dependency = dependencies[dependencyIndex];
+
+			// check all dependencies
+			var dependencies = product.dependencies;
+			for (var dependencyIndex in dependencies) {
+				var dependency = dependencies[dependencyIndex];
+				if (acfConfigurationFile == null){
 					var dependencyFilePath = product.moduleProperty(dependency.name, "xpcFilePath");
 					if (dependencyFilePath != null){
 						acfConfigurationFile = dependencyFilePath;
 					}
-					else if (dependency.type.contains("xpc")){
-						acfConfigurationFile = product.buildDirectory + "/" + dependency.destinationDirectory + "/" + dependency.name + ".xpc";
+					else if (dependency.type != null && dependency.type.contains("xpc")){
+						acfConfigurationFile = AcfService.joinPaths(product.buildDirectory, dependency.destinationDirectory) + "/" + dependency.name + ".xpc";
 					}
+				}
+
+				if ((acfBinDirectory == null) && (dependency.name == "ArxcExe")){
+					acfBinDirectory = dependency.buildDirectory;
 				}
 			}
 
@@ -52,13 +53,18 @@ AcfModule{
 				throw new Error("No ACF configuration specified (using dependency or acf.acfConfigurationFile) in " + product.name);
 			}
 
+			// if there is no ArxcExe directory - error
+			if (acfBinDirectory == null){
+				throw new Error("No ArxcExe dependency specified in " + product.name);
+			}
+
 			var cmd = new Command(acfBinDirectory + "/" + product.moduleProperty("cpp", "executablePrefix") + "Arxc" + product.moduleProperty("cpp", "executableSuffix"), [
 						inputs.arx[0].filePath,
 						'-config', acfConfigurationFile,
 						'-o', outputs.cpp[0].filePath]);
 			cmd.description = 'arxc ' + FileInfo.fileName(inputs.arx[0].filePath)
 			cmd.highlight = 'codegen';
-			cmd.workingDirectory = product.moduleProperty(product.moduleName, "qtBinPath");
+			cmd.workingDirectory = product.moduleProperty("Qt.core", "binPath");
 
 			return cmd;
 		}
@@ -76,25 +82,26 @@ AcfModule{
 		prepare:{
 			// get the ACF binary directory
 			var acfBinDirectory = product.moduleProperty("AcfExe", "acfBinDirectory");
-			if (acfBinDirectory == null){
-				acfBinDirectory = product.buildDirectory;
-			}
-
 			var acfRegistryFile = product.moduleProperty("acf", "trRegFile");
-
-			// get the ACF configuration file
 			var acfConfigurationFile = product.moduleProperty("acf", "trConfigurationFile");
-			if (acfConfigurationFile == null){
-				var dependencies = product.dependencies;
-				for (var dependencyIndex in dependencies) {
-					var dependency = dependencies[dependencyIndex];
+
+			// check all dependencies
+			var dependencies = product.dependencies;
+			for (var dependencyIndex in dependencies) {
+				var dependency = dependencies[dependencyIndex];
+
+				if (acfConfigurationFile == null){
 					var dependencyFilePath = product.moduleProperty(dependency.name, "xpcFilePath");
 					if (dependencyFilePath != null){
 						acfConfigurationFile = dependencyFilePath;
 					}
-					else if (dependency.type.contains("xpc")){
-						acfConfigurationFile = product.buildDirectory + "/" + dependency.destinationDirectory + "/" + dependency.name + ".xpc";
+					else if (dependency.type != null && dependency.type.contains("xpc")){
+						acfConfigurationFile = AcfService.joinPaths(product.buildDirectory, dependency.destinationDirectory) + "/" + dependency.name + ".xpc";
 					}
+				}
+
+				if ((acfBinDirectory == null) && (dependency.name == "AcfExe")){
+					acfBinDirectory = dependency.buildDirectory;
 				}
 			}
 
@@ -108,6 +115,11 @@ AcfModule{
 				throw new Error("no ACF configuration specified (using dependency or acf.trConfigurationFile) in " + product.name);
 			}
 
+			// if there is no AcfExe directory - error
+			if (acfBinDirectory == null){
+				throw new Error("No ArxcExe dependency specified in " + product.name);
+			}
+
 			var cmd = new Command(acfBinDirectory + '/' + product.moduleProperty("cpp", "executablePrefix") + 'Acf' + product.moduleProperty("cpp", "executableSuffix"), [
 						acfRegistryFile,
 						'-config', acfConfigurationFile,
@@ -115,50 +127,9 @@ AcfModule{
 						'-o', output.filePath]);
 			cmd.description = 'acf transformation ' + FileInfo.fileName(input.filePath)
 			cmd.highlight = 'codegen';
-			cmd.workingDirectory = product.moduleProperty(product.moduleName, "qtBinPath");
+			cmd.workingDirectory = product.moduleProperty("Qt.core", "binPath");
 
 			return cmd;
-		}
-	}
-
-	// local property to get path of Qt
-	readonly property string qtBinPath: Qt.core.binPath
-
-	// Special rule for rcc compiler for resource files using generated files
-	// It set the rcc root to project in generated directory
-	Rule{
-		inputs: ["qrc_generated"]
-		explicitlyDependsOn: ["qm"]
-
-		Artifact{
-            filePath: AcfService.getGeneratedPath(product) + "/qrc_" + input.completeBaseName + ".cpp"
-			fileTags: ["cpp"]
-		}
-		prepare:{
-			var tempResourceDir = product.buildDirectory + "/GeneratedFiles/";
-
-			var copyCmd;
-			if (product.moduleProperty("qbs", "targetOS").contains("windows")){
-				copyCmd = new Command('xcopy', ['/Y', FileInfo.toWindowsSeparators(input.filePath), FileInfo.toWindowsSeparators(tempResourceDir)]);
-			}
-			else{
-				copyCmd = new Command('cp', [input.filePath, tempResourceDir]);
-			}
-			var rccCmd = new Command(product.moduleProperty(product.moduleName, "qtBinPath") + "/rcc", [
-						tempResourceDir + FileInfo.fileName(input.filePath),
-						"-name", FileInfo.completeBaseName(input.filePath),
-						"-o", output.filePath]);
-
-			copyCmd.description = 'copy to generated ' + FileInfo.fileName(input.filePath);
-			copyCmd.highlight = 'codegen';
-
-			rccCmd.description = 'rcc from generated ' + FileInfo.fileName(input.filePath);
-			rccCmd.highlight = 'codegen';
-
-			var commands = [];
-			commands.push(copyCmd);
-			commands.push(rccCmd);
-			return commands;
 		}
 	}
 
@@ -187,10 +158,14 @@ AcfModule{
 				if (!product.type.contains("xpc")){
 					var dependencies = product.dependencies;
 					for (var dependencyIndex in dependencies) {
-						var dependencyName = dependencies[dependencyIndex].name.replace("/", ".");
-						if ((dependencyName != "qbs") && (dependencyName.indexOf("_") != 0)){
-							pkginfo.write("	Depends{ name: '" + dependencyName + "' }\n");
+						var dependency = dependencies[dependencyIndex];
+						if ((dependency != null) && (dependency.name != null)){
+							var dependencyName = dependency.name.replace("/", ".");
+							if ((dependencyName != "qbs") && (dependencyName.indexOf("_") != 0)){
+								pkginfo.write("	Depends{ name: '" + dependencyName + "' }\n");
+							}
 						}
+
 					}
 
 					pkginfo.write("\n");
@@ -289,8 +264,6 @@ AcfModule{
 				pkginfo.write("		</VersionInfos>\n");
 				pkginfo.write("	</AcfHeader>\n");
 
-				var dependencies = product.dependencies;
-
 				var configsList = [];
 
 				for (var inputIndex in inputs.xpc_file){
@@ -298,13 +271,14 @@ AcfModule{
 					configsList.push(AcfService.relativePath(outputDir, inputProduct.filePath));
 				}
 
+				var dependencies = product.dependencies;
 				for (var dependencyIndex in dependencies){
 					var dependency = dependencies[dependencyIndex];
 					var dependencyFilePath = product.moduleProperty(dependency.name, "xpcFilePath");
 					if (dependencyFilePath != null){
 						configsList.push(AcfService.relativePath(outputDir, dependencyFilePath));
 					}
-					else if (dependency.type.contains("xpc")){
+					else if (dependency.type != null && dependency.type.contains("xpc")){
 						configsList.push(AcfService.relativePath(product.destinationDirectory, dependency.destinationDirectory + "/" + dependency.name + ".xpc"));
 					}
 				}
@@ -327,7 +301,7 @@ AcfModule{
 
 				for (var dependencyIndex in dependencies) {
 					var dependency = dependencies[dependencyIndex];
-					if (dependency.type.contains("acfComponent")){
+					if (dependency.type != null && dependency.type.contains("acfComponent")){
 						var dependencyFilePath = product.moduleProperty(dependency.name, "componentFilePath");
 						if (dependencyFilePath != null){
 							packagesList.push(AcfService.relativePath(outputDir, dependencyFilePath));
@@ -367,4 +341,63 @@ AcfModule{
 			return cmd;
 		}
     }
+
+	// Special rule for rcc compiler for resource files using generated files
+	// It set the rcc root to project in generated directory
+	Rule{
+		inputs: ["qrc_generated"]
+		explicitlyDependsOn: ["qm"]
+
+		Artifact{
+            filePath: AcfService.getGeneratedPath(product) + "/qrc_" + input.completeBaseName + ".cpp"
+			fileTags: ["cpp"]
+		}
+		prepare:{
+			var tempResourceDir = product.buildDirectory + "/GeneratedFiles/";
+
+			var copyCmd;
+			if (product.moduleProperty("qbs", "targetOS").contains("windows")){
+				copyCmd = new Command('xcopy', ['/Y', FileInfo.toWindowsSeparators(input.filePath), FileInfo.toWindowsSeparators(tempResourceDir)]);
+			}
+			else{
+				copyCmd = new Command('cp', [input.filePath, tempResourceDir]);
+			}
+			var rccCmd = new Command(product.moduleProperty("Qt.core", "binPath") + "/rcc", [
+						tempResourceDir + FileInfo.fileName(input.filePath),
+						"-name", FileInfo.completeBaseName(input.filePath),
+						"-o", output.filePath]);
+
+			copyCmd.description = 'copy to generated ' + FileInfo.fileName(input.filePath);
+			copyCmd.highlight = 'codegen';
+
+			rccCmd.description = 'rcc from generated ' + FileInfo.fileName(input.filePath);
+			rccCmd.highlight = 'codegen';
+
+			var commands = [];
+			commands.push(copyCmd);
+			commands.push(rccCmd);
+			return commands;
+		}
+	}
+
+	// Correction of QT directory structure
+    Rule{
+        inputs: ["ui_corr"]
+
+        Artifact{
+            filePath: AcfService.getGeneratedPath(product) + '/ui_' + input.completeBaseName + '.h'
+            fileTags: ["hpp"]
+        }
+
+        prepare:{
+            var cmd = new Command(product.moduleProperty("Qt.core", "binPath") + '/'
+                                  + product.moduleProperty("Qt.gui", "uicName"),
+                                  [input.filePath, '-o', output.filePath])
+            cmd.description = 'uic ' + input.fileName;
+            cmd.highlight = 'codegen';
+            return cmd;
+        }
+    }
+
+	cpp.includePaths: product.buildDirectory
 }

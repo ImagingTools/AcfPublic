@@ -96,7 +96,7 @@ function relativePath(base, rel) {
     var j = i;
     var r = [];
 
-    var useAbsolutePath = (i == 0) && (rell.length > 0) && (rell[0] == "" || (rell[0].search(":") >= 0));
+	var useAbsolutePath = (i == 0) && (rell.length > 0) && (rell[0] === "" || (rell[0].search(":") >= 0));
 
     if (!useAbsolutePath) {
         for (; i < basel.length; i++)
@@ -107,4 +107,43 @@ function relativePath(base, rel) {
         r.push(rell[j]);
 
     return r.join('/');
+}
+
+function joinPaths(base, rel) {
+    var basel = base.split('/');
+    var rell = rel.split('/');
+    var i;
+    for (i = rell.length; i-- >= 0; ) {
+        if (rell[i] === '.')
+            rell.splice(i, 1);
+    }
+    for (i = rell.length; i-- >= 1; ) {
+        if (rell[i] === '')
+            rell.splice(i, 1);
+    }
+
+	var isRelAbsolute = (rell.length > 0) && (rell[0] === "" || (rell[0].search(":") >= 0));
+    if (isRelAbsolute){
+        return rell.join('/');
+    }
+
+    for (i = basel.length; i-- >= 0; ) {
+        if (basel[i] === '.')
+            basel.splice(i, 1);
+    }
+    for (i = basel.length; i-- >= 1; ) {
+        if (basel[i] === '')
+            basel.splice(i, 1);
+    }
+
+    for (i = 0; i++ < rell.length; ) {
+        if (basel.length > 0 && rell[i] === '..'){
+            basel.pop();
+        }
+        else{
+            basel.push(rell[i]);
+        }
+    }
+
+    return basel.join('/');
 }

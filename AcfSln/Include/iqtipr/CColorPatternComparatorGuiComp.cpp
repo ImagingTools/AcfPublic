@@ -61,7 +61,7 @@ void CColorPatternComparatorGuiComp::OnGuiCreated()
 }
 
 
-void CColorPatternComparatorGuiComp::UpdateModel()
+void CColorPatternComparatorGuiComp::UpdateModel() const
 {
 	const imeas::INumericValueProvider* numericValueProviderPtr = CompCastPtr<const imeas::INumericValueProvider>(GetObjectPtr());
 	if (numericValueProviderPtr != NULL){
