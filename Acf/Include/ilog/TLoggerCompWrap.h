@@ -92,7 +92,7 @@ bool TLoggerCompWrap<Base>::IsVerboseEnabled() const
 template <class Base>
 void TLoggerCompWrap<Base>::SendVerboseMessage(const QString& message, const QString& messageSource) const
 {
-	if (*m_verboseEnabledAttrPtr){
+	if (IsVerboseEnabled()){
 		BaseClass::SendLogMessage(istd::IInformationProvider::IC_NONE, 0, message, messageSource);
 	}
 }
