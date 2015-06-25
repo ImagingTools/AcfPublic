@@ -37,6 +37,7 @@
 // ACF includes
 #include "istd/TPointerVector.h"
 #include "imod/TModelWrap.h"
+#include "imod/CMultiModelDispatcherBase.h"
 #include "iqtgui/TDesignerGuiObserverCompBase.h"
 
 // ACF-Solutions includes
@@ -52,7 +53,8 @@ class CNumericParamsGuiComp:
 			public ibase::TModelObserverCompWrap<
 						iqtgui::TGuiObserverWrap<
 									iqtgui::TGuiComponentBase<QWidget>,
-									imod::TSingleModelObserverBase<imeas::INumericValue> > >
+									imod::TSingleModelObserverBase<imeas::INumericValue> > >,
+			protected imod::CMultiModelDispatcherBase
 {
 	Q_OBJECT
 public:
@@ -60,6 +62,7 @@ public:
 				iqtgui::TGuiObserverWrap<
 							iqtgui::TGuiComponentBase<QWidget>,
 							imod::TSingleModelObserverBase<imeas::INumericValue> > > BaseClass;
+	typedef imod::CMultiModelDispatcherBase BaseClass2;
 
 	I_BEGIN_COMPONENT(CNumericParamsGuiComp);
 		I_REGISTER_INTERFACE(imod::IModelEditor);
@@ -81,7 +84,12 @@ protected:
 	virtual void OnGuiDestroyed();
 
 	// reimplemented (iqtgui::TGuiObserverWrap)
+	virtual void OnGuiModelAttached();
+	virtual void OnGuiModelDetached();
 	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet);
+
+	// reimplemented (imod::CMultiModelDispatcherBase)
+	virtual void OnModelChanged(int modelId, const istd::IChangeable::ChangeSet& changeSet);
 
 public Q_SLOTS:
 	void OnValueChanged();

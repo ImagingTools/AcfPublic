@@ -1114,7 +1114,7 @@ bool CAttributeEditorComp::DecodeAttribute(
 
 	const iattr::CRealAttribute* doubleAttribute = dynamic_cast<const iattr::CRealAttribute*>(&attribute);
 	if (doubleAttribute != NULL){
-		text = QString::number(doubleAttribute->GetValue());
+		text = QString::number(doubleAttribute->GetValue(), 'g', 12);
 		meaning = AM_ATTRIBUTE;
 
 		return true;
@@ -1193,7 +1193,7 @@ bool CAttributeEditorComp::DecodeAttribute(
 				text += ";";
 			}
 
-			text += QString::number(doubleListAttribute->GetValueAt(index));
+			text += QString::number(doubleListAttribute->GetValueAt(index), 'g', 12);
 		}
 
 		meaning = AM_MULTI_ATTRIBUTE;
@@ -1997,7 +1997,7 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 			const iattr::CRealAttribute* doubleAttributePtr = dynamic_cast<const iattr::CRealAttribute*>(attributePtr);
 			if (doubleAttributePtr != NULL){
 				double value = doubleAttributePtr->GetValue();
-				editor.setProperty("text", QVariant(value));
+				editor.setProperty("text", QString::number(value, 'g', 12));
 
 				return true;
 			}
@@ -2059,7 +2059,7 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 						outputValue += ";";
 					}
 
-					outputValue += QString::number(doubleListAttributePtr->GetValueAt(index));
+					outputValue += QString::number(doubleListAttributePtr->GetValueAt(index), 'g', 12);
 				}
 
 				multiEditorPtr->SetText(outputValue);

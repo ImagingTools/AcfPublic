@@ -22741,8 +22741,6 @@
     <base>icomp::CComponentBase</base>
     <base>imeas::CSimpleNumericValue</base>
     <base protection="protected">imod::CMultiModelBridgeBase</base>
-    <base protection="protected" virtualness="virtual">imeas::INumericConstraints</base>
-    <base protection="protected" virtualness="virtual">imath::IUnitInfo</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -22812,69 +22810,6 @@
       <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
       <anchor>ae4004edfb0bf06efd35ef479fda16cfe</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetNumericValuesCount</name>
-      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>ac8da5149c791906ce64c7d58a86a73fb</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueName</name>
-      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>a8e120a246115a3659eb3e7929160ecaf</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueDescription</name>
-      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>a9fe3317941b0928c2452a81b13ed62de</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual const imath::IUnitInfo &amp;</type>
-      <name>GetNumericValueUnitInfo</name>
-      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>a5f84432a11fa3d5e72f0781be63bca48</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetUnitType</name>
-      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>afc86be53b80f6d8d2d67790f37f65b94</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetUnitName</name>
-      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>a577c62f05575438eda291047f6166ab0</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetDisplayMultiplicationFactor</name>
-      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>ac45c462ca6aa584848e8a72b8467e30d</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual istd::CRange</type>
-      <name>GetValueRange</name>
-      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>aca365623bf951247a03fb39e4fa2bfd7</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual const imath::IDoubleManip &amp;</type>
-      <name>GetValueManip</name>
-      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
-      <anchor>a67272c6b08219c5211075a7475954365</anchor>
-      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -28165,11 +28100,19 @@
     <name>iqtmeas::CNumericParamsGuiComp</name>
     <filename>classiqtmeas_1_1_c_numeric_params_gui_comp.html</filename>
     <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; imeas::INumericValue &gt; &gt; &gt;</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="typedef">
       <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; imeas::INumericValue &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
       <anchor>a8d2ee2c442102f9565c29a92f10309ab</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::CMultiModelDispatcherBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
+      <anchor>a83d204aa404d5f1eb8f3f12038c5f5cf</anchor>
       <arglist></arglist>
     </member>
     <member kind="slot">
@@ -28202,10 +28145,31 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
+      <anchor>a47b1bfaea54e4c6c902bebb624c75d03</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
+      <anchor>ad41c002aad0aeadae241aebc6c96e19d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
       <anchor>ae27be25e01b6709a79cd285ff9e182aa</anchor>
       <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
+      <anchor>abdf77cd059352cc93c34bf3e8ffae5c8</anchor>
+      <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
