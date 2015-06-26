@@ -97,7 +97,9 @@ bool CTextWriteArchiveBase::Process(float& value)
 
 bool CTextWriteArchiveBase::Process(double& value)
 {
-	return Process(QString::number(value, 'g', 12));
+	QString text = QString::number(value, 'g', 12);
+
+	return Process(text);
 }
 
 

@@ -23,11 +23,7 @@
 #include "imeas/CNumericParamsComp.h"
 
 
-#include "istd/CChangeNotifier.h"
-
-#include "iser/IArchive.h"
-#include "iser/CArchiveTag.h"
-
+// ACF includes
 #include "imath/CDoubleManip.h"
 
 
@@ -35,11 +31,7 @@ namespace imeas
 {
 
 
-CNumericParamsComp::CNumericParamsComp()
-:	imod::CMultiModelBridgeBase(this)
-{
-}
-
+// public methods
 
 // reimplemented (imeas::INumericValue)
 
@@ -61,13 +53,18 @@ void CNumericParamsComp::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
-	const INumericConstraints* constraintsPtr = GetNumericConstraints();
-	Q_ASSERT(constraintsPtr != NULL);
-
-	int count = constraintsPtr->GetNumericValuesCount();
-	m_values.SetElementsCount(count);
-
+	int count = 0;
 	int defaultValuesCount = m_defaultValuesAttrPtr.GetCount();
+
+	const INumericConstraints* constraintsPtr = GetNumericConstraints();
+	if (constraintsPtr != NULL){
+		count = constraintsPtr->GetNumericValuesCount();
+	}
+	else{
+		count = defaultValuesCount;
+	}
+
+	m_values.SetElementsCount(count);
 
 	double lastValue = 0;
 	for (int i = 0; i < count; ++i){
@@ -75,26 +72,17 @@ void CNumericParamsComp::OnComponentCreated()
 			lastValue = m_defaultValuesAttrPtr[i];
 		}
 
-		// correct the value according to the constraints
-		const imath::IUnitInfo& unitInfo = constraintsPtr->GetNumericValueUnitInfo(i);
-		if (unitInfo.GetValueRange().IsValid()){
-			m_values[i] = unitInfo.GetValueRange().GetClipped(lastValue);
-		} else {
-			m_values[i] = lastValue;
+		if (constraintsPtr != NULL){
+			// correct the value according to the constraints
+			const imath::IUnitInfo& unitInfo = constraintsPtr->GetNumericValueUnitInfo(i);
+			if (unitInfo.GetValueRange().IsValid()){
+				m_values[i] = unitInfo.GetValueRange().GetClipped(lastValue);
+			}
+			else{
+				m_values[i] = lastValue;
+			}
 		}
 	}
-
-	if (m_constraintsModelCompPtr.IsValid()){
-		m_constraintsModelCompPtr->AttachObserver(this);
-	}
-}
-
-
-void CNumericParamsComp::OnComponentDestroyed()
-{
-	EnsureModelsDetached();
-
-	BaseClass::OnComponentDestroyed();
 }
 
 

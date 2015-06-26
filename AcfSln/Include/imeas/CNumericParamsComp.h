@@ -25,8 +25,6 @@
 
 
 // ACF includes
-#include "iser/ISerializable.h"
-#include "imod/CMultiModelBridgeBase.h"
 #include "icomp/CComponentBase.h"
 
 // ACF-Solutions incldues
@@ -45,8 +43,7 @@ namespace imeas
 */
 class CNumericParamsComp:
 			public icomp::CComponentBase,
-			public CSimpleNumericValue,
-			protected imod::CMultiModelBridgeBase
+			public CSimpleNumericValue
 {
 public:
 	typedef icomp::CComponentBase BaseClass;
@@ -58,10 +55,7 @@ public:
 		I_REGISTER_INTERFACE(INumericValue);
 		I_ASSIGN_MULTI_0(m_defaultValuesAttrPtr, "Values", "Default values", false);
 		I_ASSIGN(m_constraintsCompPtr, "Constraints", "Constraints object describing possible parameter values", false, "Constraints");
-		I_ASSIGN_TO(m_constraintsModelCompPtr, m_constraintsCompPtr, false);
 	I_END_COMPONENT;
-
-	CNumericParamsComp();
 
 	// reimplemented (imeas::INumericValue)
 	virtual const INumericConstraints* GetNumericConstraints() const;
@@ -69,12 +63,10 @@ public:
 protected:
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();
-	virtual void OnComponentDestroyed();
 
 private:
 	I_MULTIATTR(double, m_defaultValuesAttrPtr);
 	I_REF(INumericConstraints, m_constraintsCompPtr);
-	I_REF(imod::IModel, m_constraintsModelCompPtr);
 };
 
 
