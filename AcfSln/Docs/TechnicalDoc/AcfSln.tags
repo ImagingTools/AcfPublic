@@ -2994,6 +2994,16 @@
     <class kind="class">QtServiceBasePrivate</class>
   </compound>
   <compound kind="file">
+    <name>qtservice_unix.h</name>
+    <path>C:/Temp/AcfSln/Include/iservice/</path>
+    <filename>qtservice__unix_8h</filename>
+    <includes id="qtservice_8h" name="qtservice.h" local="yes" imported="no">qtservice.h</includes>
+    <includes id="qtservice__p_8h" name="qtservice_p.h" local="yes" imported="no">qtservice_p.h</includes>
+    <includes id="qtunixsocket_8h" name="qtunixsocket.h" local="yes" imported="no">qtunixsocket.h</includes>
+    <includes id="qtunixserversocket_8h" name="qtunixserversocket.h" local="yes" imported="no">qtunixserversocket.h</includes>
+    <class kind="class">QtServiceSysPrivate</class>
+  </compound>
+  <compound kind="file">
     <name>qtservice_win.h</name>
     <path>C:/Temp/AcfSln/Include/iservice/</path>
     <filename>qtservice__win_8h</filename>
@@ -3759,12 +3769,27 @@
   <compound kind="class">
     <name>QtServiceSysPrivate</name>
     <filename>class_qt_service_sys_private.html</filename>
+    <base>QtUnixServerSocket</base>
     <member kind="enumvalue">
       <type>@</type>
       <name>QTSERVICE_STARTUP</name>
       <anchorfile>class_qt_service_sys_private.html</anchorfile>
       <anchor>a703b74abeb0f7abebd7cb86d4473de1fa70a139c76d7516e5661626df0e341c21</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>QtServiceSysPrivate</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>a81b8ed3ef0289b5c1214185d93bb1b3e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~QtServiceSysPrivate</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>a746e1aec41cd80c35f1fe386f5ff0dcc</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -3808,6 +3833,34 @@
       <anchor>aeb0603830564cf6d730549866020bf0a</anchor>
       <arglist>(QEvent *e)</arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>QtUnixServerSocket</name>
+      <anchorfile>class_qt_unix_server_socket.html</anchorfile>
+      <anchor>a9b6133aa5f66a9acf58529cdf865efe4</anchor>
+      <arglist>(const QString &amp;path, QObject *parent=0)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>QtUnixServerSocket</name>
+      <anchorfile>class_qt_unix_server_socket.html</anchorfile>
+      <anchor>aa73dd123bc2ff7a7a90eb408fce90194</anchor>
+      <arglist>(QObject *parent=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setPath</name>
+      <anchorfile>class_qt_unix_server_socket.html</anchorfile>
+      <anchor>a733cf66cddbbf31d8a37675f349d2ca8</anchor>
+      <arglist>(const QString &amp;path)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>close</name>
+      <anchorfile>class_qt_unix_server_socket.html</anchorfile>
+      <anchor>a74bdb3e24b99bb55d7101651a2e86205</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" static="yes">
       <type>static void WINAPI</type>
       <name>serviceMain</name>
@@ -3821,6 +3874,20 @@
       <anchorfile>class_qt_service_sys_private.html</anchorfile>
       <anchor>af60973c03e36077ffc062926d63dc754</anchor>
       <arglist>(DWORD dwOpcode)</arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>ident</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>a5b718dc890ba28a1a8ecc2c292ed3683</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QtServiceBase::ServiceFlags</type>
+      <name>serviceFlags</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>a710884b0cac58a3977ff3c27ca79a7b1</anchor>
+      <arglist></arglist>
     </member>
     <member kind="variable">
       <type>SERVICE_STATUS</type>
@@ -3892,38 +3959,17 @@
       <anchor>aeb77807c5daf3c8f1386ffec7a9157c7</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>incomingConnection</name>
+      <anchorfile>class_qt_service_sys_private.html</anchorfile>
+      <anchor>aef4490778cdd725fe8a76839e4afe86a</anchor>
+      <arglist>(int socketDescriptor)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>QtUnixServerSocket</name>
     <filename>class_qt_unix_server_socket.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>QtUnixServerSocket</name>
-      <anchorfile>class_qt_unix_server_socket.html</anchorfile>
-      <anchor>a9b6133aa5f66a9acf58529cdf865efe4</anchor>
-      <arglist>(const QString &amp;path, QObject *parent=0)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>QtUnixServerSocket</name>
-      <anchorfile>class_qt_unix_server_socket.html</anchorfile>
-      <anchor>aa73dd123bc2ff7a7a90eb408fce90194</anchor>
-      <arglist>(QObject *parent=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setPath</name>
-      <anchorfile>class_qt_unix_server_socket.html</anchorfile>
-      <anchor>a733cf66cddbbf31d8a37675f349d2ca8</anchor>
-      <arglist>(const QString &amp;path)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>close</name>
-      <anchorfile>class_qt_unix_server_socket.html</anchorfile>
-      <anchor>a74bdb3e24b99bb55d7101651a2e86205</anchor>
-      <arglist>()</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>QtUnixSocket</name>
@@ -31372,6 +31418,7 @@
     <file>CServiceApplicationComp.h</file>
     <file>qtservice.h</file>
     <file>qtservice_p.h</file>
+    <file>qtservice_unix.h</file>
     <file>qtservice_win.h</file>
     <file>qtservicestarter.h</file>
     <file>qtunixserversocket.h</file>
