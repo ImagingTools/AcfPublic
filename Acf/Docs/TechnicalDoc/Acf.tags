@@ -3624,6 +3624,7 @@
     <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
+    <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
     <class kind="class">iprm::CSelectionParam</class>
     <class kind="class">iprm::CSelectionParam::ConstraintsObserver</class>
     <namespace>iprm</namespace>
@@ -60484,13 +60485,6 @@
       <anchorfile>classistd_1_1_t_smart_ptr_1_1_ref_counter.html</anchorfile>
       <anchor>a96ebd3e13fb4935ba9fb64022b847666</anchor>
       <arglist>(Type *pointer)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~RefCounter</name>
-      <anchorfile>classistd_1_1_t_smart_ptr_1_1_ref_counter.html</anchorfile>
-      <anchor>ae8360c6c9ee0ad66abba9f441165177b</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>

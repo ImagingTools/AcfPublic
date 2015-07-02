@@ -83,6 +83,9 @@ int CProcessedBitmapSupplierBase::ProduceObject(ProductType& result) const
 		default:
 			return WS_ERROR;
 	}
+
+	// should not get here
+	return WS_CRITICAL;
 }
 
 

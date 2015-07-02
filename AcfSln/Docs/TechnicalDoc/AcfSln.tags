@@ -15735,6 +15735,13 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
+      <type>istd::IChangeable::ChangeSet</type>
+      <name>m_supplierResultsChangeSet</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>adaf3839e290aa393bfd13a1f566b6108</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
       <type>NotifierPtr</type>
       <name>m_productChangeNotifierPtr</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
