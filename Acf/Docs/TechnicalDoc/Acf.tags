@@ -41183,9 +41183,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual iprm::IParamsSet *</type>
-      <name>CreateParamsSet</name>
+      <name>CreateParamsSetInstance</name>
       <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>ae6bd7bdea5b52692344a6f981a04b5b0</anchor>
+      <anchor>a8db39470dc4a64a71af39fbad877504c</anchor>
       <arglist>(int typeIndex=-1) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -41528,9 +41528,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual iprm::IParamsSet *</type>
-      <name>CreateParamsSet</name>
+      <name>CreateParamsSetInstance</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a8d67f6b234d4109d736c7bc02e6dd473</anchor>
+      <anchor>a2ab9c7b77d42c186623172442d5f8a17</anchor>
       <arglist>(int typeIndex=-1) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -41633,9 +41633,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual iprm::IParamsSet *</type>
-      <name>CreateParamsSet</name>
+      <name>CreateParamsSetInstance</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
-      <anchor>a7002636176eceed4d69dbc41de66ebb2</anchor>
+      <anchor>acc40137ae80c8528c71b04fc3226a16e</anchor>
       <arglist>(int typeIndex=-1) const =0</arglist>
     </member>
   </compound>
