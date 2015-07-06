@@ -3002,6 +3002,13 @@
     <includes id="qtunixsocket_8h" name="qtunixsocket.h" local="yes" imported="no">qtunixsocket.h</includes>
     <includes id="qtunixserversocket_8h" name="qtunixserversocket.h" local="yes" imported="no">qtunixserversocket.h</includes>
     <class kind="class">QtServiceSysPrivate</class>
+    <member kind="typedef">
+      <type>int</type>
+      <name>qintptr</name>
+      <anchorfile>qtservice__unix_8h.html</anchorfile>
+      <anchor>a4849f81f766e82358b7b6e89c77ae45f</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>qtservice_win.h</name>
@@ -3963,8 +3970,8 @@
       <type>void</type>
       <name>incomingConnection</name>
       <anchorfile>class_qt_service_sys_private.html</anchorfile>
-      <anchor>aef4490778cdd725fe8a76839e4afe86a</anchor>
-      <arglist>(int socketDescriptor)</arglist>
+      <anchor>aa3ef83a896ef54acde27a5b121729d00</anchor>
+      <arglist>(qintptr socketDescriptor)</arglist>
     </member>
   </compound>
   <compound kind="class">

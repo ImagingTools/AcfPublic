@@ -112,7 +112,7 @@ bool CMultiModelBridgeBase::OnModelDetached(IModel* modelPtr)
 
 void CMultiModelBridgeBase::BeforeUpdate(IModel* I_IF_DEBUG(modelPtr))
 {
-	Q_ASSERT(IsModelAttached(modelPtr));
+	I_IF_DEBUG(Q_ASSERT(IsModelAttached(modelPtr)));
 
 	m_changeablePtr->BeginChanges(istd::IChangeable::GetDelegatedChanges());
 }
@@ -120,7 +120,7 @@ void CMultiModelBridgeBase::BeforeUpdate(IModel* I_IF_DEBUG(modelPtr))
 
 void CMultiModelBridgeBase::AfterUpdate(IModel* I_IF_DEBUG(modelPtr), const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
-	Q_ASSERT(IsModelAttached(modelPtr));
+	I_IF_DEBUG(Q_ASSERT(IsModelAttached(modelPtr)));
 
 	m_changeablePtr->EndChanges(istd::IChangeable::GetDelegatedChanges());
 }

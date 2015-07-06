@@ -84,6 +84,10 @@
 #include <QSettings>
 #include <QProcess>
 
+#if QT_VERSION < 0x050000
+typedef int qintptr;
+#endif
+
 class QtServiceSysPrivate : public QtUnixServerSocket
 {
 	Q_OBJECT
@@ -96,7 +100,7 @@ public:
 	QtServiceBase::ServiceFlags serviceFlags;
 
 protected:
-	void incomingConnection(int socketDescriptor);
+	void incomingConnection(qintptr socketDescriptor);
 
 private slots:
 	void slotReady();

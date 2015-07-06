@@ -24,6 +24,7 @@
 
 
 // Qt includes
+#include <QtCore/QDataStream>
 #include <QtNetwork/QAuthenticator>
 
 
