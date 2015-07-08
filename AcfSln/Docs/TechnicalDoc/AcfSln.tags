@@ -3197,6 +3197,11 @@
     <class kind="class">iwizgui::CWizardOptionsListGuiComp</class>
     <namespace>iwizgui</namespace>
   </compound>
+  <compound kind="group">
+    <name>AcfSln</name>
+    <title>ACF-Solutions</title>
+    <filename>group___acf_sln.html</filename>
+  </compound>
   <compound kind="class">
     <name>QtService</name>
     <filename>class_qt_service.html</filename>

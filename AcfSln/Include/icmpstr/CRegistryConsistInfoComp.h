@@ -44,6 +44,8 @@ class CRegistryConsistInfoComp:
 			public icomp::CComponentBase,
 			virtual public IRegistryConsistInfo
 {
+	Q_OBJECT
+
 public:
 	typedef icomp::CComponentBase BaseClass;
 

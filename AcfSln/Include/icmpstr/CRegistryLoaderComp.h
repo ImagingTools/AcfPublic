@@ -46,6 +46,8 @@ class CRegistryLoaderComp:
 	public QObject,
 	public ifile::TFileSerializerComp<ifile::CXmlFileReadArchive, ifile::CXmlFileWriteArchive>
 {
+	Q_OBJECT
+
 public:
 	typedef ifile::TFileSerializerComp<ifile::CXmlFileReadArchive, ifile::CXmlFileWriteArchive> BaseClass;
 

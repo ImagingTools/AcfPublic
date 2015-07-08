@@ -46,6 +46,8 @@ class CCopyFilesTreeComp:
 			public ilog::CLoggerComponentBase,
 			virtual public ifileproc::IFileConversion
 {
+	Q_OBJECT
+
 public:
 	typedef ilog::CLoggerComponentBase BaseClass;
 
