@@ -166,8 +166,8 @@ int CColorPatternComparatorComp::ProduceObject(ProductType& result) const
 		}
 	}
 
-	if (!m_workingPatternProviderCompPtr.IsValid() || !m_teachedPatternProviderCompPtr.IsValid()){
-		SendCriticalMessage(0, "Bad component architecture, 'WorkingPatternProvider' or 'TeachedPatternProvider' component references are not set");
+	if (!m_workingPatternProviderCompPtr.IsValid() || !m_taughtPatternProviderCompPtr.IsValid()){
+		SendCriticalMessage(0, "Bad component architecture, 'WorkingPatternProvider' or 'TaughtPatternProvider' component references are not set");
 
 		return WS_CRITICAL;
 	}
@@ -185,22 +185,22 @@ int CColorPatternComparatorComp::ProduceObject(ProductType& result) const
 		return WS_ERROR;
 	}
 
-	const imeas::IDataSequence* teachedHistogramPtr = m_teachedPatternProviderCompPtr->GetDataSequence();
-	if (teachedHistogramPtr == NULL){
-		SendErrorMessage(0, "Teached histogram not available");
+	const imeas::IDataSequence* taughtHistogramPtr = m_taughtPatternProviderCompPtr->GetDataSequence();
+	if (taughtHistogramPtr == NULL){
+		SendErrorMessage(0, "Taught histogram not available");
 
 		return WS_ERROR;
 	}
 
 	int workingSamplesCount = workingHistogramPtr->GetSamplesCount();
-	int teachedSamplesCount= teachedHistogramPtr->GetSamplesCount();
-	if (workingSamplesCount != teachedSamplesCount){
-		SendErrorMessage(0, "Working and teached histograms have different dimensions");
+	int taughtSamplesCount= taughtHistogramPtr->GetSamplesCount();
+	if (workingSamplesCount != taughtSamplesCount){
+		SendErrorMessage(0, "Working and taught histograms have different dimensions");
 
 		return WS_ERROR;
 	}
 
-	int channelsCount = teachedHistogramPtr->GetChannelsCount();
+	int channelsCount = taughtHistogramPtr->GetChannelsCount();
 
 	if ((workingHistogramPtr->GetChannelsCount() != channelsCount) || ((channelsCount != 3) && (channelsCount != 1))){
 		SendErrorMessage(0, "A histogram has wrong dimension. Only histograms for gray value and RGB images are supported");
@@ -215,8 +215,8 @@ int CColorPatternComparatorComp::ProduceObject(ProductType& result) const
 		return WS_ERROR;
 	}
 
-	imeas::CDataSequenceStatistics teachedStatistics;
-	if (m_dataStatisticsProcessorCompPtr->CalculateDataStatistics(*teachedHistogramPtr, teachedStatistics) != iproc::IProcessor::TS_OK){
+	imeas::CDataSequenceStatistics taughtStatistics;
+	if (m_dataStatisticsProcessorCompPtr->CalculateDataStatistics(*taughtHistogramPtr, taughtStatistics) != iproc::IProcessor::TS_OK){
 		SendErrorMessage(0, "Calculation of the histogram statistics data failed");
 
 		return WS_ERROR;
@@ -229,7 +229,7 @@ int CColorPatternComparatorComp::ProduceObject(ProductType& result) const
 		return WS_CRITICAL;
 	}
 
-	Q_ASSERT(teachedStatistics.GetChannelsCount() == workingStatistics.GetChannelsCount());
+	Q_ASSERT(taughtStatistics.GetChannelsCount() == workingStatistics.GetChannelsCount());
 
 	imath::CVarVector thresholdValues = comparsionThresholdPtr->GetValues();
 	if (thresholdValues.GetElementsCount() != channelsCount){
@@ -238,10 +238,10 @@ int CColorPatternComparatorComp::ProduceObject(ProductType& result) const
 		return WS_ERROR;
 	}
 
-	// Input image is RGB. Differences between teached and working images are done in HSV color space:
+	// Input image is RGB. Differences between taught and working images are done in HSV color space:
 	if (channelsCount == 3){
-		icmm::CHsv teachedHsvColor;
-		if (!GetHsvColorValue(teachedStatistics, teachedHsvColor)){
+		icmm::CHsv taughtHsvColor;
+		if (!GetHsvColorValue(taughtStatistics, taughtHsvColor)){
 			return WS_ERROR;
 		}
 
@@ -255,18 +255,18 @@ int CColorPatternComparatorComp::ProduceObject(ProductType& result) const
 		values[1] = workingHsvColor.GetSaturation() * 255;
 		values[2] = workingHsvColor.GetValue() * 255;
 
-		values[3] = teachedHsvColor.GetHue();
-		values[4] = teachedHsvColor.GetSaturation() * 255;
-		values[5] = teachedHsvColor.GetValue() * 255;
+		values[3] = taughtHsvColor.GetHue();
+		values[4] = taughtHsvColor.GetSaturation() * 255;
+		values[5] = taughtHsvColor.GetValue() * 255;
 
 		result.SetValues(values);
 
-		i2d::CDirection2d teachedHue = i2d::CDirection2d::FromDegree(teachedHsvColor.GetHue());
+		i2d::CDirection2d taughtHue = i2d::CDirection2d::FromDegree(taughtHsvColor.GetHue());
 		i2d::CDirection2d workingHue = i2d::CDirection2d::FromDegree(workingHsvColor.GetHue());
 
-		double hueDifference = workingHue.DistInDegree(teachedHue) / 360.0;
-		double saturationDifference = fabs(teachedHsvColor.GetSaturation() - workingHsvColor.GetSaturation());
-		double valueDifference = fabs(teachedHsvColor.GetValue() - workingHsvColor.GetValue());
+		double hueDifference = workingHue.DistInDegree(taughtHue) / 360.0;
+		double saturationDifference = fabs(taughtHsvColor.GetSaturation() - workingHsvColor.GetSaturation());
+		double valueDifference = fabs(taughtHsvColor.GetValue() - workingHsvColor.GetValue());
 
 		double maxHueDifference = thresholdValues[0];
 		double maxSaturationDifference = thresholdValues[1];
@@ -278,21 +278,21 @@ int CColorPatternComparatorComp::ProduceObject(ProductType& result) const
 					(valueDifference <= maxValueDifference);
 	}
 	else if(channelsCount == 1){
-		const imeas::IDataStatistics* teachedStatisticsPtr = teachedStatistics.GetChannelStatistics(0);
-		Q_ASSERT(teachedStatisticsPtr != NULL);
-		double teachedMedian = teachedStatisticsPtr->GetMedian();
+		const imeas::IDataStatistics* taughtStatisticsPtr = taughtStatistics.GetChannelStatistics(0);
+		Q_ASSERT(taughtStatisticsPtr != NULL);
+		double taughtMedian = taughtStatisticsPtr->GetMedian();
 
 		const imeas::IDataStatistics* workingStatisticsPtr = workingStatistics.GetChannelStatistics(0);
-		Q_ASSERT(teachedStatisticsPtr != NULL);
+		Q_ASSERT(taughtStatisticsPtr != NULL);
 		double workingMedian = workingStatisticsPtr->GetMedian();
 
-		double medianDifference = fabs(workingMedian - teachedMedian);
+		double medianDifference = fabs(workingMedian - taughtMedian);
 
 		m_isColorPatternMatched = (medianDifference <= thresholdValues[0]);
 
 		imath::CVarVector values(2);
 		values[0] = workingMedian;
-		values[1] = teachedMedian;
+		values[1] = taughtMedian;
 
 		result.SetValues(values);
 	}
@@ -323,13 +323,13 @@ void CColorPatternComparatorComp::OnComponentCreated()
 		RegisterSupplierInput(m_workingPatternProviderModelCompPtr.GetPtr(), m_workingPatternSupplierCompPtr.GetPtr());
 	}
 
-	if (m_teachedPatternProviderModelCompPtr.IsValid()){
-		RegisterSupplierInput(m_teachedPatternProviderModelCompPtr.GetPtr(), m_teachedPatternSupplierCompPtr.GetPtr());
+	if (m_taughtPatternProviderModelCompPtr.IsValid()){
+		RegisterSupplierInput(m_taughtPatternProviderModelCompPtr.GetPtr(), m_taughtPatternSupplierCompPtr.GetPtr());
 	}
 
 	// Force components initialization
 	m_workingPatternProviderCompPtr.EnsureInitialized();
-	m_teachedPatternProviderCompPtr.EnsureInitialized();
+	m_taughtPatternProviderCompPtr.EnsureInitialized();
 	m_dataStatisticsProcessorCompPtr.EnsureInitialized();
 }
 
@@ -340,8 +340,8 @@ void CColorPatternComparatorComp::OnComponentDestroyed()
 		UnregisterSupplierInput(m_workingPatternProviderModelCompPtr.GetPtr());
 	}
 
-	if (m_teachedPatternProviderModelCompPtr.IsValid()){
-		UnregisterSupplierInput(m_teachedPatternProviderModelCompPtr.GetPtr());
+	if (m_taughtPatternProviderModelCompPtr.IsValid()){
+		UnregisterSupplierInput(m_taughtPatternProviderModelCompPtr.GetPtr());
 	}
 
 	BaseClass::OnComponentDestroyed();

@@ -17397,15 +17397,15 @@
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
-      <anchor>afe877561ec1e373026339d1a1dd30842</anchor>
-      <arglist>(m_teachedPatternProviderModelCompPtr, m_teachedPatternProviderCompPtr, false)</arglist>
+      <anchor>aecf0be28ca04f3130e6fbcfbf9051913</anchor>
+      <arglist>(m_taughtPatternProviderModelCompPtr, m_taughtPatternProviderCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>I_ASSIGN_TO</name>
       <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
-      <anchor>a6a4e19e97580d504a5c4aa680e24c170</anchor>
-      <arglist>(m_teachedPatternSupplierCompPtr, m_teachedPatternProviderCompPtr, false)</arglist>
+      <anchor>a2015db46e92b5c8b579e31c7298004fc</anchor>
+      <arglist>(m_taughtPatternSupplierCompPtr, m_taughtPatternProviderCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
