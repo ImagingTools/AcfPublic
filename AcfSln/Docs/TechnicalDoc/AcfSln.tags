@@ -160,6 +160,14 @@
     <namespace>icam</namespace>
   </compound>
   <compound kind="file">
+    <name>CCalibratedCameraComp.h</name>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
+    <filename>_c_calibrated_camera_comp_8h</filename>
+    <includes id="_c_camera_delegator_comp_8h" name="CCameraDelegatorComp.h" local="yes" imported="no">icam/CCameraDelegatorComp.h</includes>
+    <class kind="class">icam::CCalibratedCameraComp</class>
+    <namespace>icam</namespace>
+  </compound>
+  <compound kind="file">
     <name>CCameraDelegatorComp.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_camera_delegator_comp_8h</filename>
@@ -3786,7 +3794,7 @@
       <type>@</type>
       <name>QTSERVICE_STARTUP</name>
       <anchorfile>class_qt_service_sys_private.html</anchorfile>
-      <anchor>a703b74abeb0f7abebd7cb86d4473de1fa70a139c76d7516e5661626df0e341c21</anchor>
+      <anchor>a2b309fedb8acfa79c0cfead9d499ff81a70a139c76d7516e5661626df0e341c21</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -5359,6 +5367,7 @@
     <name>icam</name>
     <filename>namespaceicam.html</filename>
     <class kind="class">icam::CAcquisitionConstraintsComp</class>
+    <class kind="class">icam::CCalibratedCameraComp</class>
     <class kind="class">icam::CCameraDelegatorComp</class>
     <class kind="class">icam::CExposureParamsComp</class>
     <class kind="class">icam::CMemoryAcquisitionComp</class>
@@ -5417,10 +5426,23 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>icam::CCameraDelegatorComp</name>
-    <filename>classicam_1_1_c_camera_delegator_comp.html</filename>
-    <base>ilog::TLoggerCompWrap</base>
-    <base>icam::IBitmapAcquisition</base>
+    <name>icam::CCalibratedCameraComp</name>
+    <filename>classicam_1_1_c_calibrated_camera_comp.html</filename>
+    <base>icam::CCameraDelegatorComp</base>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>RESOLUTION_PATTERN</name>
+      <anchorfile>classicam_1_1_c_calibrated_camera_comp.html</anchorfile>
+      <anchor>a1c57ad6fe472f6483b765dc8ffe15b10afcf6f9045007c54caaa550be7d4ac4c9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>icam::CCameraDelegatorComp</type>
+      <name>BaseClass</name>
+      <anchorfile>classicam_1_1_c_calibrated_camera_comp.html</anchorfile>
+      <anchor>a727040d89dd4a43b4969ede6b84158d8</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -5527,6 +5549,13 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classicam_1_1_c_calibrated_camera_comp.html</anchorfile>
+      <anchor>a3ef684989a519978dd8eeb296633b950</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual istd::CIndex2d</type>
       <name>GetBitmapSize</name>
       <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
@@ -5546,13 +5575,6 @@
       <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
       <anchor>a3b43b16f507b61c04a47d352469f93cf</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>DoProcessing</name>
-      <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
-      <anchor>abbec32b705b72834aff73bea16fd6303</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -5596,12 +5618,39 @@
       <anchor>a1c7d0d5aacae6a6476dfaafd1e4f36b9</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>ReadImageResolution</name>
+      <anchorfile>classicam_1_1_c_calibrated_camera_comp.html</anchorfile>
+      <anchor>a80beb178bbc1ae07a2411a8244bdb23d</anchor>
+      <arglist>(const iimg::IBitmap &amp;bitmap, double &amp;resolution)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>WriteImageResolution</name>
+      <anchorfile>classicam_1_1_c_calibrated_camera_comp.html</anchorfile>
+      <anchor>a243a67bc3b3553d40414676fb4b099a5</anchor>
+      <arglist>(iimg::IBitmap &amp;bitmap, double resolution)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
       <anchor>abec1e4055b981c2fd5fb07e2d32abccc</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icam::CCameraDelegatorComp</name>
+    <filename>classicam_1_1_c_camera_delegator_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base>icam::IBitmapAcquisition</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
+      <anchor>abbec32b705b72834aff73bea16fd6303</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8781,14 +8830,14 @@
       <type>@</type>
       <name>SIDE_OFFSET</name>
       <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>ae4545d9b49a6256e86a61a5e7b5468eeaef8e9470aa7f146aa93268980192b5bb</anchor>
+      <anchor>a85b56976b7f1f6dbe1b8d932aaa83c84aef8e9470aa7f146aa93268980192b5bb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>SHADOW_OFFSET</name>
       <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>ae4545d9b49a6256e86a61a5e7b5468eeabc25da06cff09b155ba1cb7b96603cd1</anchor>
+      <anchor>a85b56976b7f1f6dbe1b8d932aaa83c84abc25da06cff09b155ba1cb7b96603cd1</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -19695,6 +19744,13 @@
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>ac0753e739d6fc72adcb31b01b7dec782</anchor>
       <arglist>(istd::TDelPtr&lt; imeas::INumericValue &gt; &amp;result) const =0</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; const i2d::ICalibration2d &gt;</type>
+      <name>m_outputCalibrationPtr</name>
+      <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
+      <anchor>ad2ed01ca1a3ed5c8d263f999b75adb98</anchor>
+      <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; istd::TDelPtr&lt; imeas::INumericValue &gt; &gt;</type>
@@ -30966,6 +31022,7 @@
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>dir_f2296beff96c253567dc2b95d81f611c.html</filename>
     <file>CAcquisitionConstraintsComp.h</file>
+    <file>CCalibratedCameraComp.h</file>
     <file>CCameraDelegatorComp.h</file>
     <file>CExposureParamsComp.h</file>
     <file>CMemoryAcquisitionComp.h</file>

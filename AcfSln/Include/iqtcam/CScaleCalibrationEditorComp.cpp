@@ -44,8 +44,6 @@ namespace iqtcam
 
 void CScaleCalibrationEditorComp::UpdateModel() const
 {
-	BaseClass::UpdateModel();
-
 	imeas::INumericValue* model = dynamic_cast<imeas::INumericValue*>(GetModelPtr());
 	if (model == NULL){
 		return;
@@ -62,6 +60,8 @@ void CScaleCalibrationEditorComp::UpdateModel() const
 
 void CScaleCalibrationEditorComp::OnGuiCreated()
 {
+	BaseClass::OnGuiCreated();
+
 	connect(ScaleXSpinBox, SIGNAL(valueChanged(double)), this, SLOT(OnValueChanged(double)));
 	connect(ScaleYSpinBox, SIGNAL(valueChanged(double)), this, SLOT(OnValueChanged(double)));
 

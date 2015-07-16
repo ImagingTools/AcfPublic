@@ -31,6 +31,7 @@
 #include "icomp/TModelCompWrap.h"
 #include "icomp/TMakeComponentWrap.h"
 
+#include "icam/TSnapBitmapSupplierComp.h"
 #include "icam/CExposureParamsComp.h"
 #include "icam/CMemoryAcquisitionComp.h"
 #include "icam/CAcquisitionConstraintsComp.h"
@@ -40,7 +41,7 @@
 #include "icam/CSelectableBitmapSupplierComp.h"
 #include "icam/CMultiLayerBitmapSupplierComp.h"
 #include "icam/CSnapBitmapSupplierComp.h"
-#include "icam/TSnapBitmapSupplierComp.h"
+#include "icam/CCalibratedCameraComp.h"
 
 
 /**
@@ -61,6 +62,7 @@ typedef icomp::TModelCompWrap<icam::CMultiLayerBitmapSupplierComp> MultiLayerBit
 
 typedef icomp::TModelCompWrap<icam::CSnapBitmapSupplierComp> SnapBitmapSupplier;
 typedef icomp::TModelCompWrap<icam::TSnapBitmapSupplierComp<iimg::CBitmap> > StandardQtBitmapSnapSupplier;
+typedef icam::CCalibratedCameraComp CalibratedCamera;
 
 
 } // namespace CameraPck

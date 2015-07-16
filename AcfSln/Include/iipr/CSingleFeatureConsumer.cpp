@@ -115,7 +115,7 @@ int CSingleFeatureConsumer::GetValuesCount() const
 const imeas::INumericValue& CSingleFeatureConsumer::GetNumericValue(int I_IF_DEBUG(index)) const
 {
 	Q_ASSERT(m_featurePtr.IsValid());
-	Q_ASSERT(index == 0);
+	I_IF_DEBUG(Q_ASSERT(index == 0));
 
 	return *m_featurePtr.GetPtr();
 }
