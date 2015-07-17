@@ -25,13 +25,9 @@
 
 
 #include "ifile/IFilePersistence.h"
-
 #include "icomp/CComponentBase.h"
-
 #include "ilog/TLoggerCompWrap.h"
-
 #include "iimg/CBitmap.h"%
-
 #include "iqtmm/iqtmm.h"
 
 
