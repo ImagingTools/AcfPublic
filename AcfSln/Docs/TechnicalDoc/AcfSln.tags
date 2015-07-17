@@ -20096,13 +20096,6 @@
     <base>iproc::TSyncProcessorWrap</base>
     <base virtualness="virtual">imeas::INumericConstraints</base>
     <base protection="protected" virtualness="virtual">imath::IUnitInfo</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>DoDerivativeProcessing</name>
-      <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>ac9bbc82c23c938299e0ac69cd8d69c89</anchor>
-      <arglist>(const imeas::IDataSequence &amp;source, double filterLength, imeas::IDataSequence &amp;results)</arglist>
-    </member>
     <member kind="function">
       <type>const QByteArray &amp;</type>
       <name>GetFilterParamsId</name>
@@ -20186,6 +20179,20 @@
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
       <anchor>acaa2fddf52ca73f302a3b00ee6436947</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>DoDerivativeProcessing</name>
+      <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
+      <anchor>a001347e240b687e5ad45a615f672335d</anchor>
+      <arglist>(const double *channelData, int samplesCount, double filterLength, double *results)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>DoDerivativeProcessing</name>
+      <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
+      <anchor>ab182ae84320cec51f3da553ee4da25f7</anchor>
+      <arglist>(const imeas::IDataSequence &amp;source, double filterLength, imeas::IDataSequence &amp;results)</arglist>
     </member>
   </compound>
   <compound kind="class">
