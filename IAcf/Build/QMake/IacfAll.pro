@@ -9,14 +9,19 @@ CONFIG += ordered
 #Static
 
 win32{
-	SUBDIRS += iocv
-	iocv.file = ../../Include/iocv/QMake/iocv.pro
+    win32-msvc*{
+		#SUBDIRS += iocv
+		#iocv.file = ../../Include/iocv/QMake/iocv.pro
 
-	SUBDIRS += ilibav
-	ilibav.file = ../../Include/ilibav/QMake/ilibav.pro
+		#SUBDIRS += ilibav
+		#ilibav.file = ../../Include/ilibav/QMake/ilibav.pro
 
-        SUBDIRS += iqaxmm
-        iqaxmm.file = ../../Include/iqaxmm/QMake/iqaxmm.pro
+		#SUBDIRS += iqaxmm
+		#iqaxmm.file = ../../Include/iqaxmm/QMake/iqaxmm.pro
+
+        SUBDIRS += izlib
+        izlib.file = ../../Include/izlib/QMake/izlib.pro
+    }
 
 	SUBDIRS += iqwt
 	iqwt.file = ../../Include/iqwt/QMake/iqwt.pro
@@ -24,22 +29,18 @@ win32{
 	SUBDIRS += iqwt3d
 	iqwt3d.file = ../../Include/iqwt3d/QMake/iqwt3d.pro
 
-	SUBDIRS += izlib
-	izlib.file = ../../Include/izlib/QMake/izlib.pro
-
 	SUBDIRS += iwin
 	iwin.file = ../../Include/iwin/QMake/iwin.pro
 
 
 	win32-msvc2005 | win32-msvc2008{
-#		SUBDIRS += iabc
-#		iabc.file = ../../Include/iabc/QMake/iabc.pro
+		win32:contains(QMAKE_HOST.arch, i86){
+			SUBDIRS += icbox
+			icbox.file = ../../Include/icbox/QMake/icbox.pro
 
-#		SUBDIRS += icbox
-#		icbox.file = ../../Include/icbox/QMake/icbox.pro
-
-		SUBDIRS += iqsci
-		iqsci.file = ../../Include/iqsci/QMake/iqsci.pro
+			SUBDIRS += iqsci
+			iqsci.file = ../../Include/iqsci/QMake/iqsci.pro
+		}
 	}
 }
 
@@ -52,33 +53,34 @@ macx{
 #Component
 
 win32{
-	SUBDIRS += OpenCvPck
-	OpenCvPck.file = ../../Impl/OpenCvPck/QMake/OpenCvPck.pro
+    win32-msvc*{
+	#SUBDIRS += OpenCvPck
+	#OpenCvPck.file = ../../Impl/OpenCvPck/QMake/OpenCvPck.pro
 
-	SUBDIRS += FfMpegPck
-	FfMpegPck.file = ../../Impl/FfMpegPck/QMake/FfMpegPck.pro
+	#SUBDIRS += FfMpegPck
+	#FfMpegPck.file = ../../Impl/FfMpegPck/QMake/FfMpegPck.pro
 
-        SUBDIRS += QaxPck
-        QaxPck.file = ../../Impl/QaxPck/QMake/QaxPck.pro
-
-	SUBDIRS += QwtPck
-	QwtPck.file = ../../Impl/QwtPck/QMake/QwtPck.pro
+	#SUBDIRS += QaxPck
+	#QaxPck.file = ../../Impl/QaxPck/QMake/QaxPck.pro
 
 	SUBDIRS += ZlibPck
 	ZlibPck.file = ../../Impl/ZlibPck/QMake/ZlibPck.pro
+    }
+
+	SUBDIRS += QwtPck
+	QwtPck.file = ../../Impl/QwtPck/QMake/QwtPck.pro
 
 	SUBDIRS += WinPck
 	WinPck.file = ../../Impl/WinPck/QMake/WinPck.pro
 
 	win32-msvc2005 | win32-msvc2008{
-#		SUBDIRS += AbcPck
-#		AbcPck.file = ../../Impl/AbcPck/QMake/AbcPck.pro
+		win32:contains(QMAKE_HOST.arch, i86){
+			SUBDIRS += CboxPck
+			CboxPck.file = ../../Impl/CboxPck/QMake/CboxPck.pro
 
-#		SUBDIRS += CboxPck
-#		CboxPck.file = ../../Impl/CboxPck/QMake/CboxPck.pro
-
-		SUBDIRS += QsciPck
-		QsciPck.file = ../../Impl/QsciPck/QMake/QsciPck.pro
+			SUBDIRS += QsciPck
+			QsciPck.file = ../../Impl/QsciPck/QMake/QsciPck.pro
+		}
 	}
 }
 
