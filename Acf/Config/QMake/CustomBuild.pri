@@ -62,7 +62,7 @@ QMAKE_EXTRA_COMPILERS += updateqm
 generatedResources.name = Generated Resources Compiler
 generatedResources.CONFIG += no_link target_predeps
 generatedResources.output = $${ACF_TRANSLATIONS_OUTDIR}/qrc_${QMAKE_FILE_BASE}.cpp
-generatedResources.commands = $$QMAKE_COPY $$system_quote($$system_path($$OUT_PWD/../${QMAKE_FILE_BASE}.qrc)) $$system_quote($$system_path($$OUT_PWD/$$AUXINCLUDEPATH/GeneratedFiles/${QMAKE_FILE_BASE}.qrc)) && $$system_quote($$system_path($$[QT_INSTALL_BINS]/$$QMAKE_RCC)) $$system_quote($$system_path($$AUXINCLUDEPATH/GeneratedFiles/${QMAKE_FILE_BASE}.qrc)) -o $$system_quote($$system_path($${ACF_TRANSLATIONS_OUTDIR}//qrc_${QMAKE_FILE_BASE}.cpp))
+generatedResources.commands = $$QMAKE_COPY $$system_quote($$system_path($$OUT_PWD/../${QMAKE_FILE_BASE}.qrc)) $$system_quote($$system_path($$OUT_PWD/$$AUXINCLUDEPATH/GeneratedFiles/${QMAKE_FILE_BASE}.qrc)) && $$system_quote($$system_path($$[QT_INSTALL_BINS]/$$QMAKE_RCC)) -name ${QMAKE_FILE_BASE} $$system_quote($$system_path($$AUXINCLUDEPATH/GeneratedFiles/${QMAKE_FILE_BASE}.qrc)) -o $$system_quote($$system_path($${ACF_TRANSLATIONS_OUTDIR}//qrc_${QMAKE_FILE_BASE}.cpp))
 
 generatedResources.input = GENERATED_RESOURCES
 generatedResources.variable_out = SOURCES
