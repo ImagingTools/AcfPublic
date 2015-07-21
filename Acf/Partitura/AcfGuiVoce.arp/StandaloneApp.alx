@@ -18,7 +18,7 @@
           0
         </Id>
         <Number>
-          3729
+          3694
         </Number>
         <Description>
           ACF
@@ -29,7 +29,7 @@
           1
         </Id>
         <Number>
-          1275
+          1244
         </Number>
         <Description>
           ACF-Solutions
@@ -38,20 +38,6 @@
     </VersionInfos>
   </AcfHeader>
   <PositionMap count="4">
-    <Element>
-      <ComponentName>
-        ApplicationInfo
-      </ComponentName>
-      <X>
-        925
-      </X>
-      <Y>
-        225
-      </Y>
-      <Note>
-        
-      </Note>
-    </Element>
     <Element>
       <ComponentName>
         SettingsProvider
@@ -72,6 +58,20 @@
       </ComponentName>
       <X>
         575
+      </X>
+      <Y>
+        225
+      </Y>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        ApplicationInfo
+      </ComponentName>
+      <X>
+        925
       </X>
       <Y>
         225
