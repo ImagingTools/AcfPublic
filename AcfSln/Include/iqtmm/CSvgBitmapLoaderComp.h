@@ -24,14 +24,13 @@
 #define iqtmm_CSvgBitmapLoaderComp_included
 
 
+// ACF includes
 #include "ifile/IFilePersistence.h"
-
 #include "icomp/CComponentBase.h"
-
 #include "ilog/TLoggerCompWrap.h"
+#include "iimg/CBitmap.h"
 
-#include "iimg/CBitmap.h"%
-
+// ACF-Solutions includes
 #include "iqtmm/iqtmm.h"
 
 

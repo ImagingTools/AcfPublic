@@ -4,6 +4,7 @@ include($(ACFCONFIGDIR)/QMake/StaticConfig.pri)
 include($(ACFCONFIGDIR)/QMake/QtGuiBaseConfig.pri)
 
 INCLUDEPATH += ../..
-INCLUDEPATH += "$(QWT3DDIR_0_3_1)/Include"
+INCLUDEPATH += "$(QWT3DDIR)/Include"
 
 FORMS += ../*.ui
+UI_DIR = ../../GeneratedFiles/iqwt3d
