@@ -1,25 +1,3 @@
-/********************************************************************************
-**
-**	Copyright (c) 2007-2014 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the ACF-Solutions Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.ilena.org, write info@imagingtools.de or contact
-**	by Skype to ACF_infoline for further information about the ACF-Solutions.
-**
-********************************************************************************/
-
-
 #ifndef iipr_CRectDerivativeProcessor_included
 #define iipr_CRectDerivativeProcessor_included
 
@@ -46,12 +24,18 @@ class CRectDerivativeProcessor:
 			virtual protected imath::IUnitInfo
 {
 public:
-	static bool DoDerivativeProcessing(const double* channelData, int samplesCount, double filterLength, double* results);
+	CRectDerivativeProcessor();
+
+    template<typename InData, typename OutData, typename PrecisionData>
+    static bool CalculateDerivative(const InData* channelData, int samplesCount, double filterLength, OutData* results);
+
+    template<typename PrecisionData>
+    static bool CalculateDerivative(const imeas::IDataSequence& source, double filterLength, imeas::IDataSequence& results);
 
 	/**
 		Do extremum features analyze.
 	*/
-	static bool DoDerivativeProcessing(const imeas::IDataSequence& source, double filterLength, imeas::IDataSequence& results);
+	static bool DoDerivativeProcessing(const imeas::IDataSequence& source, double filterLength, imeas::IDataSequence& results, bool doublePrecision = false);
 
 	/**
 		Get parameter ID used to extract caliper parameter object from parameter set.
@@ -63,6 +47,11 @@ public:
 		It is only needed while using general processing interface iproc::IProcessor.
 	*/
 	void SetFilterParamsId(const QByteArray& id);
+
+	/**
+		Sets calculation precision to use (true = double, false = float).
+	*/
+	void UseDoublePrecision(bool on);
 
 	// reimplemented (iproc::IProcessor)
 	virtual int DoProcessing(
@@ -86,6 +75,7 @@ public:
 
 private:
 	QByteArray m_filterParamsId;
+	bool m_doublePrecision;
 };
 
 
@@ -100,6 +90,143 @@ inline const QByteArray& CRectDerivativeProcessor::GetFilterParamsId() const
 inline void CRectDerivativeProcessor::SetFilterParamsId(const QByteArray& id)
 {
 	m_filterParamsId = id;
+}
+
+
+inline void CRectDerivativeProcessor::UseDoublePrecision(bool on)
+{
+	m_doublePrecision = on;
+}
+
+
+template<typename InData, typename OutData, typename PrecisionData>
+bool CRectDerivativeProcessor::CalculateDerivative(const InData* channelData, int samplesCount, double filterLength, OutData* results)
+{
+    if (samplesCount < 2){
+        return false;
+    }
+
+    PrecisionData halfRealLength = qMax(1.0, filterLength * 0.5);
+
+    int sumOffset = int(halfRealLength);
+    PrecisionData sumLastAlpha = halfRealLength - sumOffset;
+    PrecisionData sumLastAlphaInv = 1 - sumLastAlpha;
+
+    int projectionWidth = samplesCount - 1;
+
+    PrecisionData leftSum = 0;
+    PrecisionData leftWeight = 0;
+    PrecisionData rightSum = channelData[0] * sumLastAlpha;
+    PrecisionData rightWeight = sumLastAlpha;
+
+    for (int x = -sumOffset; x < projectionWidth; ++x){
+        if (x < projectionWidth - sumOffset){
+            rightSum +=	channelData[x + sumOffset + 1] * sumLastAlpha +
+                        channelData[x + sumOffset] * sumLastAlphaInv;
+
+            rightWeight += 1;
+        }
+        else if (x == projectionWidth - sumOffset){
+            rightSum += channelData[x + sumOffset] * sumLastAlphaInv;
+
+            rightWeight += sumLastAlphaInv;
+        }
+
+        if (x >= 0){
+            PrecisionData diff = channelData[x];
+            leftSum += diff;
+
+            if (x > sumOffset){
+                leftSum -= channelData[x - sumOffset] * sumLastAlphaInv;
+                leftSum -= channelData[x - sumOffset - 1] * sumLastAlpha;
+            }
+            else if (x == sumOffset){
+                leftSum -= channelData[x - sumOffset] * sumLastAlphaInv;
+
+                leftWeight += sumLastAlpha;
+            }
+            else{
+                leftWeight += 1;
+            }
+
+            rightSum -= diff;
+            rightWeight -= 1;
+
+            results[x] = rightSum / rightWeight - leftSum / leftWeight;
+        }
+    }
+
+    return true;
+}
+
+
+template<typename PrecisionData>
+bool CRectDerivativeProcessor::CalculateDerivative(const imeas::IDataSequence& source, double filterLength, imeas::IDataSequence& results)
+{
+    int samplesCount = source.GetSamplesCount();
+    int channelsCount = source.GetChannelsCount();
+    if ((samplesCount < 2) || (channelsCount < 1)){
+        return false;
+    }
+
+    PrecisionData halfRealLength = qMax(1.0, filterLength * 0.5);
+
+    int sumOffset = int(halfRealLength);
+    PrecisionData sumLastAlpha = halfRealLength - sumOffset;
+    PrecisionData sumLastAlphaInv = 1 - sumLastAlpha;
+
+    int projectionWidth = samplesCount - 1;
+
+    // Buffer to speed up data access (brings ca. 10%):
+    std::vector<PrecisionData> channelData(samplesCount);
+
+    for (int channelIndex = 0; channelIndex < channelsCount; ++channelIndex){
+        for (int i = 0; i < samplesCount; ++i){
+            channelData[i] = source.GetSample(i, channelIndex);
+        }
+
+        PrecisionData leftSum = 0;
+        PrecisionData leftWeight = 0;
+        PrecisionData rightSum = channelData[0] * sumLastAlpha;
+        PrecisionData rightWeight = sumLastAlpha;
+
+        for (int x = -sumOffset; x < projectionWidth; ++x){
+            if (x < projectionWidth - sumOffset){
+                rightSum +=	channelData[x + sumOffset + 1] * sumLastAlpha +
+                            channelData[x + sumOffset] * sumLastAlphaInv;
+
+                rightWeight += 1;
+            }
+            else if (x == projectionWidth - sumOffset){
+                rightSum += channelData[x + sumOffset] * sumLastAlphaInv;
+                rightWeight += sumLastAlphaInv;
+            }
+
+            if (x >= 0){
+                PrecisionData diff = channelData[x];
+                leftSum += diff;
+
+                if (x > sumOffset){
+                    leftSum -= channelData[x - sumOffset] * sumLastAlphaInv;
+                    leftSum -= channelData[x - sumOffset - 1] * sumLastAlpha;
+                }
+                else if (x == sumOffset){
+                    leftSum -= channelData[x - sumOffset] * sumLastAlphaInv;
+                    leftWeight += sumLastAlpha;
+                }
+                else{
+                    leftWeight += 1;
+                }
+
+                rightSum -= diff;
+                rightWeight -= 1;
+
+                results.SetSample(x, channelIndex, rightSum / rightWeight - leftSum / leftWeight);
+            }
+        }
+    }
+
+    return true;
 }
 
 
