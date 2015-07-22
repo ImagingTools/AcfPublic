@@ -54,12 +54,7 @@ macx{
 win32{
 	SUBDIRS += OpenCvPck
 	OpenCvPck.file = ../../Impl/OpenCvPck/QMake/OpenCvPck.pro
-
-	SUBDIRS += FfMpegPck
-	FfMpegPck.file = ../../Impl/FfMpegPck/QMake/FfMpegPck.pro
-
-        SUBDIRS += QaxPck
-        QaxPck.file = ../../Impl/QaxPck/QMake/QaxPck.pro
+	
 
 	SUBDIRS += QwtPck
 	QwtPck.file = ../../Impl/QwtPck/QMake/QwtPck.pro
@@ -71,6 +66,11 @@ win32{
 	WinPck.file = ../../Impl/WinPck/QMake/WinPck.pro
 
 	win32-msvc2005 | win32-msvc2008{
+		SUBDIRS += FfMpegPck
+		FfMpegPck.file = ../../Impl/FfMpegPck/QMake/FfMpegPck.pro
+
+        SUBDIRS += QaxPck
+        QaxPck.file = ../../Impl/QaxPck/QMake/QaxPck.pro
 #		SUBDIRS += AbcPck
 #		AbcPck.file = ../../Impl/AbcPck/QMake/AbcPck.pro
 
