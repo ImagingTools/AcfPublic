@@ -6,7 +6,6 @@
   <PropertyGroup>
     <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
     <_PropertySheetDisplayName>ACF General</_PropertySheetDisplayName>
-    <OutDir>$(Configuration)\</OutDir>
     <EmbedManifest>true</EmbedManifest>
   </PropertyGroup>
   <ItemDefinitionGroup>
