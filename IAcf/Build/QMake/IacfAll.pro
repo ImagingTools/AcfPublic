@@ -15,8 +15,8 @@ win32{
 	SUBDIRS += ilibav
 	ilibav.file = ../../Include/ilibav/QMake/ilibav.pro
 
-        SUBDIRS += iqaxmm
-        iqaxmm.file = ../../Include/iqaxmm/QMake/iqaxmm.pro
+    SUBDIRS += iqaxmm
+    iqaxmm.file = ../../Include/iqaxmm/QMake/iqaxmm.pro
 
 	SUBDIRS += iqwt
 	iqwt.file = ../../Include/iqwt/QMake/iqwt.pro
@@ -24,14 +24,14 @@ win32{
 	SUBDIRS += iqwt3d
 	iqwt3d.file = ../../Include/iqwt3d/QMake/iqwt3d.pro
 
-	SUBDIRS += izlib
-	izlib.file = ../../Include/izlib/QMake/izlib.pro
-
 	SUBDIRS += iwin
 	iwin.file = ../../Include/iwin/QMake/iwin.pro
 
 
 	win32-msvc2005 | win32-msvc2008{
+		SUBDIRS += izlib
+		izlib.file = ../../Include/izlib/QMake/izlib.pro
+
 #		SUBDIRS += iabc
 #		iabc.file = ../../Include/iabc/QMake/iabc.pro
 
@@ -59,13 +59,13 @@ win32{
 	SUBDIRS += QwtPck
 	QwtPck.file = ../../Impl/QwtPck/QMake/QwtPck.pro
 
-	SUBDIRS += ZlibPck
-	ZlibPck.file = ../../Impl/ZlibPck/QMake/ZlibPck.pro
-
 	SUBDIRS += WinPck
 	WinPck.file = ../../Impl/WinPck/QMake/WinPck.pro
 
 	win32-msvc2005 | win32-msvc2008{
+		SUBDIRS += ZlibPck
+		ZlibPck.file = ../../Impl/ZlibPck/QMake/ZlibPck.pro
+
 		SUBDIRS += FfMpegPck
 		FfMpegPck.file = ../../Impl/FfMpegPck/QMake/FfMpegPck.pro
 
