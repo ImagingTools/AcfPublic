@@ -18,7 +18,7 @@
           0
         </Id>
         <Number>
-          3757
+          3694
         </Number>
         <Description>
           ACF
@@ -29,7 +29,7 @@
           1
         </Id>
         <Number>
-          1308
+          1244
         </Number>
         <Description>
           ACF-Solutions
@@ -40,20 +40,6 @@
   <PositionMap count="4">
     <Element>
       <ComponentName>
-        GuiApplication
-      </ComponentName>
-      <X>
-        575
-      </X>
-      <Y>
-        225
-      </Y>
-      <Note>
-        
-      </Note>
-    </Element>
-    <Element>
-      <ComponentName>
         SettingsProvider
       </ComponentName>
       <X>
@@ -61,6 +47,20 @@
       </X>
       <Y>
         575
+      </Y>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        GuiApplication
+      </ComponentName>
+      <X>
+        575
+      </X>
+      <Y>
+        225
       </Y>
       <Note>
         

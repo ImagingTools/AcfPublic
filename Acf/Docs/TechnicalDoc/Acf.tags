@@ -8984,13 +8984,6 @@
       <arglist>(int nodeIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSupportedOperations</name>
-      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
-      <anchor>a99b3a4ca1ce41057e822aa6094e9e96e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
@@ -9003,6 +8996,13 @@
       <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
       <anchor>a7857fdab9bc3805daaee664939a8b3b8</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEqual</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>a0b5ea6d5911ab8a4c3846cd9e81f2f3e</anchor>
+      <arglist>(const IChangeable &amp;object) const </arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -9145,11 +9145,11 @@
       <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsEqual</name>
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
       <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a360cc7895316bc492388eb48b678fefe</anchor>
-      <arglist>(const IChangeable &amp;object) const </arglist>
+      <anchor>ab2e6665ff802d40b6817ee549c43bcf2</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10781,13 +10781,6 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSupportedOperations</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>ab2e6665ff802d40b6817ee549c43bcf2</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
@@ -10800,6 +10793,13 @@
       <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
       <anchor>acd7a8230afdef605df6e5af2b3087942</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEqual</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a360cc7895316bc492388eb48b678fefe</anchor>
+      <arglist>(const IChangeable &amp;object) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -45812,6 +45812,13 @@
       <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
       <arglist>(i2d::CPolygon *objectPtr)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetObjectFromEditor</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a2a47cac7113bb8f03b1972e339d2541b</anchor>
+      <arglist>(i2d::CPolygon &amp;object) const</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>QTableWidget *</type>
       <name>GetNodeTable</name>
@@ -46047,6 +46054,13 @@
       <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
       <anchor>a5faec4dbebf465c38af818f4212e752a</anchor>
       <arglist>(QAction *action)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetObjectFromEditor</name>
+      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
+      <anchor>a1b00f12f24559159b817a5e621c63819</anchor>
+      <arglist>(i2d::CPolyline &amp;object) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>QTableWidget *</type>
@@ -46641,6 +46655,13 @@
       <anchor>a5a749fbcb90d12a93006670d4f7a5e09</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetObjectFromEditor</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a2a47cac7113bb8f03b1972e339d2541b</anchor>
+      <arglist>(i2d::CTubePolyline &amp;object) const</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>QTableWidget *</type>
       <name>GetNodeTable</name>
@@ -47015,6 +47036,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
       <arglist>(PolygonBasedModel *objectPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetObjectFromEditor</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a2a47cac7113bb8f03b1972e339d2541b</anchor>
+      <arglist>(PolygonBasedModel &amp;object) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>QTableWidget *</type>

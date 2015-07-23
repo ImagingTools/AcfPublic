@@ -32,9 +32,6 @@ win32{
 		SUBDIRS += izlib
 		izlib.file = ../../Include/izlib/QMake/izlib.pro
 
-#		SUBDIRS += iabc
-#		iabc.file = ../../Include/iabc/QMake/iabc.pro
-
 #		SUBDIRS += icbox
 #		icbox.file = ../../Include/icbox/QMake/icbox.pro
 
@@ -71,8 +68,6 @@ win32{
 
         SUBDIRS += QaxPck
         QaxPck.file = ../../Impl/QaxPck/QMake/QaxPck.pro
-#		SUBDIRS += AbcPck
-#		AbcPck.file = ../../Impl/AbcPck/QMake/AbcPck.pro
 
 #		SUBDIRS += CboxPck
 #		CboxPck.file = ../../Impl/CboxPck/QMake/CboxPck.pro

@@ -20097,6 +20097,13 @@
     <base virtualness="virtual">imeas::INumericConstraints</base>
     <base protection="protected" virtualness="virtual">imath::IUnitInfo</base>
     <member kind="function">
+      <type></type>
+      <name>CRectDerivativeProcessor</name>
+      <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
+      <anchor>a2254a9580e151033e2607db3d33ef7ec</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
       <type>const QByteArray &amp;</type>
       <name>GetFilterParamsId</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
@@ -20109,6 +20116,13 @@
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
       <anchor>a46137174a88b447ec9f62e72aa3be75c</anchor>
       <arglist>(const QByteArray &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>UseDoublePrecision</name>
+      <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
+      <anchor>a1121ebe39b913bf6ab7720deaf996e63</anchor>
+      <arglist>(bool on)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -20182,17 +20196,24 @@
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
-      <name>DoDerivativeProcessing</name>
+      <name>CalculateDerivative</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>a001347e240b687e5ad45a615f672335d</anchor>
-      <arglist>(const double *channelData, int samplesCount, double filterLength, double *results)</arglist>
+      <anchor>acb04f305d6965453d6445685924eddd2</anchor>
+      <arglist>(const InData *channelData, int samplesCount, double filterLength, OutData *results)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>CalculateDerivative</name>
+      <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
+      <anchor>ab3df732683948945921c6474e68ce47f</anchor>
+      <arglist>(const imeas::IDataSequence &amp;source, double filterLength, imeas::IDataSequence &amp;results)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
       <name>DoDerivativeProcessing</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>ab182ae84320cec51f3da553ee4da25f7</anchor>
-      <arglist>(const imeas::IDataSequence &amp;source, double filterLength, imeas::IDataSequence &amp;results)</arglist>
+      <anchor>a466a82bf1eb848eac97b3a44291756b8</anchor>
+      <arglist>(const imeas::IDataSequence &amp;source, double filterLength, imeas::IDataSequence &amp;results, bool doublePrecision=false)</arglist>
     </member>
   </compound>
   <compound kind="class">
