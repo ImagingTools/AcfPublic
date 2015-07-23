@@ -281,7 +281,7 @@ bool CPolygon::Serialize(iser::IArchive& archive)
 
 int CPolygon::GetSupportedOperations() const
 {
-	return SO_COPY | SO_CLONE;
+	return SO_COPY | SO_CLONE | SO_COMPARE;
 }
 
 
@@ -319,9 +319,18 @@ istd::IChangeable* CPolygon::CloneMe(CompatibilityMode mode) const
 bool CPolygon::IsEqual(const IChangeable& object) const
 {
 	const CPolygon* polygonPtr = dynamic_cast<const CPolygon*>(&object);
-	if (polygonPtr != NULL)
-	{
-		return (m_nodes == polygonPtr->m_nodes);
+	if (polygonPtr != NULL){
+		if (m_nodes.size() != polygonPtr->m_nodes.size()){
+			return false;
+		}
+
+		for (int i = 0; i < int(m_nodes.size()); ++i){		
+			if (m_nodes[i] != polygonPtr->m_nodes[i]){
+				return false;
+			}
+		}
+
+		return true;
 	}
 
 	return false;

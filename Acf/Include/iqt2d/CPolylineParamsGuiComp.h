@@ -26,9 +26,7 @@
 
 // ACF includes
 #include "i2d/CPolyline.h"
-
 #include "iview/CPolylineShape.h"
-
 #include "iqt2d/TPolygonBasedParamsGuiComp.h"
 
 
@@ -44,14 +42,16 @@ public:
 	typedef TPolygonBasedParamsGuiComp<iview::CPolylineShape, i2d::CPolyline> BaseClass;
 
 	I_BEGIN_COMPONENT(CPolylineParamsGuiComp);
-	I_ASSIGN(m_showOrientationAttrPtr, "ShowOrientation", "Show orientation on display console", true, false);
+		I_ASSIGN(m_showOrientationAttrPtr, "ShowOrientation", "Show orientation on display console", true, false);
 	I_END_COMPONENT;
 
 	// reimplemented (iview::IShapeFactory)
 	virtual iview::IShape* CreateShape(const istd::IChangeable* objectPtr, bool connectToModel = false) const;
 
 protected:
-	protected Q_SLOTS:
+	virtual bool GetObjectFromEditor(i2d::CPolyline& object) const;
+	
+protected Q_SLOTS:
 	void OnParamsChanged();
 
 	void on_InsertButton_clicked();
