@@ -101,7 +101,7 @@ contains(QMAKE_HOST.arch, x86_64){
 win32-msvc*{
 	# activate debug info
 	QMAKE_CXXFLAGS += /Zi /Fd../../../Bin/$$COMPILER_DIR/"$$TARGET".pdb
-	QMAKE_LFLAGS += /DEBUG
+	QMAKE_LFLAGS += /DEBUG	
 }
 
 # path definition
@@ -109,5 +109,8 @@ INCLUDEPATH += $$AUXINCLUDEPATH
 UI_DIR = $$AUXINCLUDEPATH/GeneratedFiles/"$$TARGET"
 MOC_DIR = $$AUXINCLUDEPATH/GeneratedFiles/"$$TARGET"
 ACF_TRANSLATIONS_OUTDIR = $$AUXINCLUDEPATH/GeneratedFiles/"$$TARGET"
+
+# objects directory
+OBJECTS_DIR = $$AUXINCLUDEPATH/GeneratedFiles/"$$COMPILER_DIR"/"$$TARGET"
 
 INCLUDEPATH += $$PWD/../../Include
