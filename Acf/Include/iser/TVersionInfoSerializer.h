@@ -124,6 +124,7 @@ bool TVersionInfoSerializer<VersionInfo>::WriteVersion(const VersionInfo* versio
 	bool retVal = archive.BeginTag(s_headerTag);
 
 	IVersionInfo::VersionIds ids;
+
 	if (versionInfoPtr != NULL){
 		ids = versionInfoPtr->GetVersionIds();
 	}

@@ -105,7 +105,7 @@ contains(QMAKE_HOST.arch, x86_64){
 win32-msvc*{
 	# activate debug info
 	QMAKE_CXXFLAGS += /Zi /Fd../../../Bin/$$COMPILER_DIR/"$$TARGET".pdb
-	QMAKE_LFLAGS += /DEBUG	
+	QMAKE_LFLAGS += /DEBUG
 }
 
 # path definition
