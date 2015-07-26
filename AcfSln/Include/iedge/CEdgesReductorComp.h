@@ -28,6 +28,7 @@
 
 // ACF includes
 #include "istd/TSmartPtr.h"
+#include "imath/CGeneralUnitInfo.h"
 #include "iproc/TSyncProcessorCompBase.h"
 
 // ACF-Solutions includes
@@ -55,6 +56,8 @@ public:
 		I_ASSIGN(m_toleranceParamsIdAttrPtr, "ToleranceParamsId", "Parameter ID (imeas::INumericValue) for reduction tolerance", false, "ReductionTolerances");
 		I_ASSIGN(m_distanceUnitInfoCompPtr, "DistanceUnitInfo", "Unit information used for distance tolerance", false, "DistanceUnit");
 	I_END_COMPONENT;
+
+	CEdgesReductorComp();
 
 	void GetReducedLine(
 				const CEdgeLine& edgeLine,
@@ -85,7 +88,7 @@ public:
 	virtual int GetNumericValuesCount() const;
 	virtual QString GetNumericValueName(int index) const;
 	virtual QString GetNumericValueDescription(int index) const;
-	virtual const imath::IUnitInfo& GetNumericValueUnitInfo(int index) const;
+	virtual const imath::IUnitInfo* GetNumericValueUnitInfo(int index) const;
 
 protected:
 	typedef QBitArray NodesToRemove;
@@ -114,6 +117,8 @@ private:
 	I_REF(imeas::INumericValue, m_defaultToleranceParamsCompPtr);
 	I_ATTR(QByteArray, m_toleranceParamsIdAttrPtr);
 	I_REF(imath::IUnitInfo, m_distanceUnitInfoCompPtr);
+
+	imath::CGeneralUnitInfo m_distanceUnitInfo;
 };
 
 

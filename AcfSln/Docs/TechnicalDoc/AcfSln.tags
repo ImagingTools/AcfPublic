@@ -1806,7 +1806,6 @@
     <name>ICircleFinderParams.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_circle_finder_params_8h</filename>
-    <includes id="iipr_8h" name="iipr.h" local="yes" imported="no">iipr/iipr.h</includes>
     <class kind="class">iipr::ICircleFinderParams</class>
     <namespace>iipr</namespace>
   </compound>
@@ -11872,6 +11871,13 @@
       <arglist></arglist>
     </member>
     <member kind="function">
+      <type></type>
+      <name>CEdgesReductorComp</name>
+      <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
+      <anchor>acdf52d5722ff66c23bc4307fcde1a00d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>GetReducedLine</name>
       <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
@@ -11921,10 +11927,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const imath::IUnitInfo &amp;</type>
+      <type>virtual const imath::IUnitInfo *</type>
       <name>GetNumericValueUnitInfo</name>
       <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
-      <anchor>a6ee826594fd1b0796444a45fe559281d</anchor>
+      <anchor>a60b048937bfa9c2d71a0697aee8319e4</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function">
@@ -12206,10 +12212,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const imath::IUnitInfo &amp;</type>
+      <type>virtual const imath::IUnitInfo *</type>
       <name>GetNumericValueUnitInfo</name>
       <anchorfile>classiedge_1_1_c_fast_edges_extractor_comp.html</anchorfile>
-      <anchor>a74560029de9e7e9afe2d25b0817afef1</anchor>
+      <anchor>a12a1ba01a93affdf00db4c1fb2ca7159</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function">
@@ -16953,6 +16959,13 @@
       <arglist>(double minOutlierDistance)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual const imath::IUnitInfo *</type>
+      <name>GetDistanceUnitInfo</name>
+      <anchorfile>classiipr_1_1_c_circle_finder_params.html</anchorfile>
+      <anchor>a0b63b6b666ab9d8320cc4b633cfe1acc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetRaysCount</name>
       <anchorfile>classiipr_1_1_c_circle_finder_params.html</anchorfile>
@@ -17006,6 +17019,13 @@
       <anchorfile>classiipr_1_1_c_circle_finder_params_comp.html</anchorfile>
       <anchor>ada88e590e126e771bba1b6274a709afa</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imath::IUnitInfo *</type>
+      <name>GetDistanceUnitInfo</name>
+      <anchorfile>classiipr_1_1_c_circle_finder_params_comp.html</anchorfile>
+      <anchor>a10ea20d53adf540cf909f6d86df57f9b</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -18803,10 +18823,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const imath::IUnitInfo &amp;</type>
+      <type>virtual const imath::IUnitInfo *</type>
       <name>GetNumericValueUnitInfo</name>
       <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
-      <anchor>aa8ca79fcd8edca25b46a4763e29494e9</anchor>
+      <anchor>a7c6fd21adae9cbca60ffda621d99dd2c</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -20153,10 +20173,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const imath::IUnitInfo &amp;</type>
+      <type>virtual const imath::IUnitInfo *</type>
       <name>GetNumericValueUnitInfo</name>
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>adeea235002e305aca9a54846dc660235</anchor>
+      <anchor>a7f306e90febf8811bda727f36263db7a</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -20334,10 +20354,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const imath::IUnitInfo &amp;</type>
+      <type>virtual const imath::IUnitInfo *</type>
       <name>GetNumericValueUnitInfo</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>ab2304a9a781bee83df0ab648b7a77c29</anchor>
+      <anchor>a9e11b813d91445b5e8fde4e12e34d7d0</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" static="yes">
@@ -21193,6 +21213,13 @@
       <anchorfile>classiipr_1_1_i_circle_finder_params.html</anchorfile>
       <anchor>a5df59d9f737cda1858fe2c2fbcc32c79</anchor>
       <arglist>(double minOutlierDistance)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const imath::IUnitInfo *</type>
+      <name>GetDistanceUnitInfo</name>
+      <anchorfile>classiipr_1_1_i_circle_finder_params.html</anchorfile>
+      <anchor>a0858373bbb9d17973a4e98be3b2e61b1</anchor>
+      <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
@@ -22669,10 +22696,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual const imath::IUnitInfo &amp;</type>
+      <type>virtual const imath::IUnitInfo *</type>
       <name>GetNumericValueUnitInfo</name>
       <anchorfile>classimeas_1_1_c_linear_adjust_params_comp.html</anchorfile>
-      <anchor>aeaecd46cf90ff10762dd7167d7201465</anchor>
+      <anchor>ae7813362a6da5624112aa340565ee7c4</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -22828,10 +22855,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const imath::IUnitInfo &amp;</type>
+      <type>virtual const imath::IUnitInfo *</type>
       <name>GetNumericValueUnitInfo</name>
       <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
-      <anchor>ae8f0e5ca2194c91cbecb1836476c3fd3</anchor>
+      <anchor>a1bfb009fbc7de4b552259a9f53823986</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -23325,10 +23352,10 @@
       <arglist>(int index) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const imath::IUnitInfo &amp;</type>
+      <type>virtual const imath::IUnitInfo *</type>
       <name>GetNumericValueUnitInfo</name>
       <anchorfile>classimeas_1_1_i_numeric_constraints.html</anchorfile>
-      <anchor>afc12e7bbf5f51a8c2cb12076c5a2acfd</anchor>
+      <anchor>ab4892bbc0cc461ebe7caa8cfcf399e72</anchor>
       <arglist>(int index) const =0</arglist>
     </member>
   </compound>
@@ -28320,8 +28347,8 @@
       <type>void</type>
       <name>SetUnitInfo</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
-      <anchor>af4f16faa9ca6ced21c1ce8dccecacdd6</anchor>
-      <arglist>(const QString &amp;description, const imath::IUnitInfo &amp;unitInfo)</arglist>
+      <anchor>aebda2ea838e93f8ca0354db9f627eca0</anchor>
+      <arglist>(const QString &amp;description, const imath::IUnitInfo *unitInfoPtr)</arglist>
     </member>
     <member kind="function">
       <type>double</type>
@@ -28357,6 +28384,13 @@
       <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
       <anchor>a02af3b5f5b151fda2ebbe7321a126a9a</anchor>
       <arglist>(int value)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ValueSlider_sliderReleased</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>a0684845f4eff67bef0576af5c63e0373</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>

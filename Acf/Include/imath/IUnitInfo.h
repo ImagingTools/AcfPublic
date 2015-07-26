@@ -86,7 +86,8 @@ public:
 	virtual double GetDisplayMultiplicationFactor() const = 0;
 
 	/**
-		Get range of possible value.
+		Get range of possible values.
+		If invalid range is returned, there is no restrictions.
 	*/
 	virtual istd::CRange GetValueRange() const = 0;
 

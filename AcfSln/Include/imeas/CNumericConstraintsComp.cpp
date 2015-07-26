@@ -62,9 +62,9 @@ QString CNumericConstraintsComp::GetNumericValueDescription(int index) const
 }
 
 
-const imath::IUnitInfo& CNumericConstraintsComp::GetNumericValueUnitInfo(int /*index*/) const
+const imath::IUnitInfo* CNumericConstraintsComp::GetNumericValueUnitInfo(int /*index*/) const
 {
-	return *this;
+	return this;
 }
 
 

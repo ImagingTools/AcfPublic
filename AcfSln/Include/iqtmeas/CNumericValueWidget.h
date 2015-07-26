@@ -51,7 +51,7 @@ class CNumericValueWidget:
 public:
 	CNumericValueWidget(QWidget* parentPtr = NULL, bool showSlilder = true, bool showButtons = true, int inputPolicy = 0);
 
-	void SetUnitInfo(const QString& description, const imath::IUnitInfo& unitInfo);
+	void SetUnitInfo(const QString& description, const imath::IUnitInfo* unitInfoPtr);
 
 	double GetValue() const;
 	void SetValue(double value);
@@ -67,6 +67,7 @@ Q_SIGNALS:
 protected Q_SLOTS:
 	void on_ValueSB_valueChanged(double value);
 	void on_ValueSlider_valueChanged(int value);
+	void on_ValueSlider_sliderReleased();
 	void on_MinButton_clicked();
 	void on_MaxButton_clicked();
 
