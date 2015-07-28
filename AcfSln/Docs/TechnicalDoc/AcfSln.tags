@@ -705,14 +705,14 @@
     <namespace>iedgegui</namespace>
   </compound>
   <compound kind="file">
-    <name>CEdgeLinesSupplierGuiComp.h</name>
+    <name>CEdgeLinesSupplierEditorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iedgegui/</path>
-    <filename>_c_edge_lines_supplier_gui_comp_8h</filename>
+    <filename>_c_edge_lines_supplier_editor_comp_8h</filename>
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_c_edge_line_container_8h" name="CEdgeLineContainer.h" local="yes" imported="no">iedge/CEdgeLineContainer.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="yes" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="iqtipr_8h" name="iqtipr.h" local="yes" imported="no">iqtipr/iqtipr.h</includes>
-    <class kind="class">iedgegui::CEdgeLinesSupplierGuiComp</class>
+    <class kind="class">iedgegui::CEdgeLinesSupplierEditorComp</class>
     <namespace>iedgegui</namespace>
   </compound>
   <compound kind="file">
@@ -1192,20 +1192,6 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
-    <name>CArcProjectionProcessorComp.h</name>
-    <path>C:/Temp/AcfSln/Include/iipr/</path>
-    <filename>_c_arc_projection_processor_comp_8h</filename>
-    <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
-    <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
-    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="yes" imported="no">iproc/TSyncProcessorCompBase.h</includes>
-    <includes id="_i_projection_constraints_8h" name="IProjectionConstraints.h" local="yes" imported="no">iipr/IProjectionConstraints.h</includes>
-    <includes id="_i_feature_to_image_mapper_8h" name="IFeatureToImageMapper.h" local="yes" imported="no">iipr/IFeatureToImageMapper.h</includes>
-    <includes id="_i_feature_to_projection_mapper_8h" name="IFeatureToProjectionMapper.h" local="yes" imported="no">iipr/IFeatureToProjectionMapper.h</includes>
-    <includes id="_i_projection_params_8h" name="IProjectionParams.h" local="yes" imported="no">iipr/IProjectionParams.h</includes>
-    <class kind="class">iipr::CArcProjectionProcessorComp</class>
-    <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
     <name>CAutoImageNormalizeProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_auto_image_normalize_processor_comp_8h</filename>
@@ -1307,16 +1293,6 @@
     <class kind="class">iipr::CCircleFindProcessorComp</class>
     <class kind="struct">iipr::CCircleFindProcessorComp::Point</class>
     <class kind="struct">iipr::CCircleFindProcessorComp::Ray</class>
-    <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CColorBitmapSeparatorSupplierComp.h</name>
-    <path>C:/Temp/AcfSln/Include/iipr/</path>
-    <filename>_c_color_bitmap_separator_supplier_comp_8h</filename>
-    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
-    <class kind="class">iipr::CColorBitmapSeparatorSupplierComp</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -2005,19 +1981,6 @@
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
-    <name>CDataSequenceJoinerSupplierComp.h</name>
-    <path>C:/Temp/AcfSln/Include/imeas/</path>
-    <filename>_c_data_sequence_joiner_supplier_comp_8h</filename>
-    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
-    <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
-    <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
-    <includes id="_i_multi_data_sequence_provider_8h" name="IMultiDataSequenceProvider.h" local="yes" imported="no">imeas/IMultiDataSequenceProvider.h</includes>
-    <class kind="class">imeas::CDataSequenceJoinerSupplierComp</class>
-    <namespace>imeas</namespace>
-  </compound>
-  <compound kind="file">
     <name>CDataSequenceStatistics.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_data_sequence_statistics_8h</filename>
@@ -2103,18 +2066,6 @@
     <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="yes" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="yes" imported="no">imeas/CSimpleNumericValue.h</includes>
     <class kind="class">imeas::CNumericValuesJoinerComp</class>
-    <namespace>imeas</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CProcessedDataSequenceSupplierComp.h</name>
-    <path>C:/Temp/AcfSln/Include/imeas/</path>
-    <filename>_c_processed_data_sequence_supplier_comp_8h</filename>
-    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="yes" imported="no">iinsp/ISupplier.h</includes>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
-    <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="yes" imported="no">imeas/CGeneralDataSequence.h</includes>
-    <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="yes" imported="no">imeas/IDataSequenceProvider.h</includes>
-    <class kind="class">imeas::CProcessedDataSequenceSupplierComp</class>
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
@@ -12377,7 +12328,7 @@
     <name>iedgegui</name>
     <filename>namespaceiedgegui.html</filename>
     <class kind="class">iedgegui::CEdgeLineContainerShape</class>
-    <class kind="class">iedgegui::CEdgeLinesSupplierGuiComp</class>
+    <class kind="class">iedgegui::CEdgeLinesSupplierEditorComp</class>
   </compound>
   <compound kind="class">
     <name>iedgegui::CEdgeLineContainerShape</name>
@@ -12427,105 +12378,105 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iedgegui::CEdgeLinesSupplierGuiComp</name>
-    <filename>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</filename>
-    <base>TSupplierGuiCompBase&lt; Ui::CEdgeLinesSupplierGuiComp &gt;</base>
+    <name>iedgegui::CEdgeLinesSupplierEditorComp</name>
+    <filename>classiedgegui_1_1_c_edge_lines_supplier_editor_comp.html</filename>
+    <base>TSupplierGuiCompBase&lt; Ui::CEdgeLinesSupplierEditorComp &gt;</base>
     <member kind="typedef">
-      <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CEdgeLinesSupplierGuiComp &gt;</type>
+      <type>iqtinsp::TSupplierGuiCompBase&lt; Ui::CEdgeLinesSupplierEditorComp &gt;</type>
       <name>BaseClass</name>
-      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
-      <anchor>afb5e2a56499f91b992ab609b24207004</anchor>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_editor_comp.html</anchorfile>
+      <anchor>a3aff8e77666b79959eddc1877b0263f6</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
-      <name>CEdgeLinesSupplierGuiComp</name>
-      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
-      <anchor>a5c15f077830bd7c70cf24eb2ccad9e00</anchor>
+      <name>CEdgeLinesSupplierEditorComp</name>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_editor_comp.html</anchorfile>
+      <anchor>aabaf4da03003324c65522f50a4bf5859</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>on_TestButton_clicked</name>
-      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
-      <anchor>a0875219ecc3d656b484f402d4f1f63de</anchor>
+      <name>on_ProcessButton_clicked</name>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_editor_comp.html</anchorfile>
+      <anchor>a4b31422c080d8f30ebecd92ca220fc7b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_SaveDataButton_clicked</name>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_editor_comp.html</anchorfile>
+      <anchor>ac11421a39a9a9fbd86f6ddd4f0b5f68b</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_LoadParamsButton_clicked</name>
-      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
-      <anchor>a3b03d47f9c59bf8b86f5778301d84e14</anchor>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_editor_comp.html</anchorfile>
+      <anchor>ad6bf714a560f50c5e06172c3dbe38528</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_SaveParamsButton_clicked</name>
-      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
-      <anchor>ae9cc9fee2bec5fcb709e771628ad7b5f</anchor>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_editor_comp.html</anchorfile>
+      <anchor>a6c6a29f8bf83dcae870f2c998fbeaa14</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QWidget *</type>
       <name>GetParamsWidget</name>
-      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
-      <anchor>a7ca8ff8dadc20a3d1823b5c41fc55492</anchor>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_editor_comp.html</anchorfile>
+      <anchor>a0c94b8182e70ca8833ae2c03ed8c5ecb</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnSupplierParamsChanged</name>
-      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
-      <anchor>a9830edf0fc0c450453224784fc5ecc2d</anchor>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_editor_comp.html</anchorfile>
+      <anchor>a4f3bd5b86f4b9fdef877e85af972225f</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>CreateShapes</name>
-      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
-      <anchor>abdb629d6974c35e2fa4e326f7ba340f9</anchor>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_editor_comp.html</anchorfile>
+      <anchor>a9ba90a042968a4d5228c12ab078c39c6</anchor>
       <arglist>(int sceneId, Shapes &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
-      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
-      <anchor>a4990a6661fa7dd20bbc1b5c8d830fe61</anchor>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_editor_comp.html</anchorfile>
+      <anchor>af5359077d9a0bac7d9a6d8931eba057a</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
-      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
-      <anchor>a9edf03827eac2adb6bcf3fb60c3a1a1e</anchor>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_editor_comp.html</anchorfile>
+      <anchor>a59a3bb033b0aca5bcbbcac6a5072003f</anchor>
       <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
-      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
-      <anchor>ac068b930cd22438a00577e27587b209f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
-      <anchor>ae39027385cb4dd7b787db097bc9c7766</anchor>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_editor_comp.html</anchorfile>
+      <anchor>a23e834db4af042cff77a88b97c43defe</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiHidden</name>
-      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
-      <anchor>a9e36be4744673dc4d25952fe0fb1a5d7</anchor>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_editor_comp.html</anchorfile>
+      <anchor>acbeb8cb7123d69fbc367b07fbbf19140</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>AfterUpdate</name>
-      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_gui_comp.html</anchorfile>
-      <anchor>aa4f487db1058949088e265bbeeeb9d9a</anchor>
+      <anchorfile>classiedgegui_1_1_c_edge_lines_supplier_editor_comp.html</anchorfile>
+      <anchor>a409e761b1261f8bc902374e37486dc72</anchor>
       <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
@@ -16114,7 +16065,6 @@
     <name>iipr</name>
     <filename>namespaceiipr.html</filename>
     <class kind="class">iipr::CAdaptiveImageBinarizeProcessorComp</class>
-    <class kind="class">iipr::CArcProjectionProcessorComp</class>
     <class kind="class">iipr::CAutoImageNormalizeProcessorComp</class>
     <class kind="class">iipr::CBitmapJoinerSupplierComp</class>
     <class kind="class">iipr::CBitmapOperations</class>
@@ -16127,7 +16077,6 @@
     <class kind="class">iipr::CCircleFinderParams</class>
     <class kind="class">iipr::CCircleFinderParamsComp</class>
     <class kind="class">iipr::CCircleFindProcessorComp</class>
-    <class kind="class">iipr::CColorBitmapSeparatorSupplierComp</class>
     <class kind="class">iipr::CColorPatternComparatorComp</class>
     <class kind="class">iipr::CColorPatternControllerComp</class>
     <class kind="class">iipr::CConvolutionKernel2d</class>
@@ -16240,54 +16189,6 @@
       <anchorfile>classiipr_1_1_c_adaptive_image_binarize_processor_comp.html</anchorfile>
       <anchor>a31e859d9aede7a2f538d85838fda2054</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::CArcProjectionProcessorComp</name>
-    <filename>classiipr_1_1_c_arc_projection_processor_comp.html</filename>
-    <base>iproc::TSyncProcessorCompBase</base>
-    <base virtualness="virtual">iipr::IFeatureToImageMapper</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_c_arc_projection_processor_comp.html</anchorfile>
-      <anchor>a28446ce1da28e5e14b7e48f849889b3c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>iproc::CSyncProcessorCompBase</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiipr_1_1_c_arc_projection_processor_comp.html</anchorfile>
-      <anchor>a699f3bf3d61650662fdb2dd92fc6c006</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>DoProjection</name>
-      <anchorfile>classiipr_1_1_c_arc_projection_processor_comp.html</anchorfile>
-      <anchor>ab86c5dada46d3e636c5a15cf75a59baa</anchor>
-      <arglist>(const iimg::IBitmap &amp;bitmap, const i2d::CArc &amp;projectionArc, const IProjectionParams *paramsPtr, imeas::IDataSequence &amp;results)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetImagePosition</name>
-      <anchorfile>classiipr_1_1_c_arc_projection_processor_comp.html</anchorfile>
-      <anchor>acc9ed87dddfc185b7b45fbccb3e734d7</anchor>
-      <arglist>(const imeas::INumericValue &amp;feature, const iprm::IParamsSet *paramsPtr, i2d::CVector2d &amp;result) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>DoProcessing</name>
-      <anchorfile>classiipr_1_1_c_arc_projection_processor_comp.html</anchorfile>
-      <anchor>aa19aee38ca94408ad60192b1c0ed0579</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiipr_1_1_c_arc_projection_processor_comp.html</anchorfile>
-      <anchor>a72f7b1bb60c94a744e513c699c53a1c0</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -17278,160 +17179,6 @@
       <name>usedIndex</name>
       <anchorfile>structiipr_1_1_c_circle_find_processor_comp_1_1_ray.html</anchorfile>
       <anchor>a157e595d699602049b7004b02d4313fd</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::CColorBitmapSeparatorSupplierComp</name>
-    <filename>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; istd::TPointerVector&lt; iimg::IBitmap &gt; &gt;</base>
-    <base virtualness="virtual">iimg::IMultiBitmapProvider</base>
-    <base protection="protected" virtualness="virtual">iprm::IOptionsList</base>
-    <member kind="typedef">
-      <type>iinsp::TSupplierCompWrap&lt; istd::TPointerVector&lt; iimg::IBitmap &gt; &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>a08c6016bb33ed007b0040b69f15c52e2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>CSupplierCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>istd::TPointerVector&lt; iimg::IBitmap &gt;</type>
-      <name>ProductType</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>aa09a9c1fd7c4dba7a4db96d04a459202</anchor>
-      <arglist>(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>a8154330a73be7f8d65f0ccd26dd8d48a</anchor>
-      <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const iprm::IOptionsList *</type>
-      <name>GetBitmapListInfo</name>
-      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>a420b01b37237ae504f95a5416f051ee3</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetBitmapsCount</name>
-      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>abb9fcd1011858fb991e00e8c276bc04b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const iimg::IBitmap *</type>
-      <name>GetBitmap</name>
-      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>a6c9a06dc1983c4716926ded9c6118571</anchor>
-      <arglist>(int bitmapIndex) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ClearWorkResults</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>EnsureBitmapCreated</name>
-      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>adbeea9ccf7c93c398844005ead7e2ea6</anchor>
-      <arglist>(ProductType &amp;result) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetOptionsFlags</name>
-      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>a4927ebf3398e9685578ccb7f78beecec</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetOptionsCount</name>
-      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>a0db7889559855c54fe44674b2785d305</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetOptionName</name>
-      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>a3f6649862bc81b5bea6b9e2b100f6ff9</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetOptionDescription</name>
-      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>ad02605c7913eff9f86132ff779dc1366</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QByteArray</type>
-      <name>GetOptionId</name>
-      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>accfe764f0b9dcce4f12bdd8fc75dc681</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsOptionEnabled</name>
-      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>a36c9599e43c7d8fedecc0fd1041a7a01</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual int</type>
-      <name>ProduceObject</name>
-      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>a008b04ae9dba20b8821be8bf8f15610c</anchor>
-      <arglist>(ProductType &amp;result) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiipr_1_1_c_color_bitmap_separator_supplier_comp.html</anchorfile>
-      <anchor>adcf275024a5a474346cc994f96543b31</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>const istd::TPointerVector&lt; iimg::IBitmap &gt; *</type>
-      <name>GetWorkProduct</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>istd::TDelPtr&lt; istd::TPointerVector&lt; iimg::IBitmap &gt; &gt;</type>
-      <name>m_productPtr</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -21808,7 +21555,6 @@
     <filename>namespaceimeas.html</filename>
     <class kind="class">imeas::CCrossCorrelationProcessorComp</class>
     <class kind="class">imeas::CDataSequenceInfoBase</class>
-    <class kind="class">imeas::CDataSequenceJoinerSupplierComp</class>
     <class kind="class">imeas::CDataSequenceStatistics</class>
     <class kind="class">imeas::CDataStatistics</class>
     <class kind="class">imeas::CGeneralDataSequence</class>
@@ -21819,7 +21565,6 @@
     <class kind="class">imeas::CNumericConstraintsComp</class>
     <class kind="class">imeas::CNumericParamsComp</class>
     <class kind="class">imeas::CNumericValuesJoinerComp</class>
-    <class kind="class">imeas::CProcessedDataSequenceSupplierComp</class>
     <class kind="class">imeas::CSamplesInfo</class>
     <class kind="class">imeas::CSimpleNumericValue</class>
     <class kind="class">imeas::CSimpleNumericValueProvider</class>
@@ -22017,110 +21762,6 @@
       <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
       <anchor>a2b8ac66049cf3e28f4b76004ec5c4944</anchor>
       <arglist>(int index) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>imeas::CDataSequenceJoinerSupplierComp</name>
-    <filename>classimeas_1_1_c_data_sequence_joiner_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt; &gt;</base>
-    <base virtualness="virtual">imeas::IDataSequenceProvider</base>
-    <member kind="typedef">
-      <type>iinsp::TSupplierCompWrap&lt; imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt; &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_joiner_supplier_comp.html</anchorfile>
-      <anchor>a0f1c48c776a130d0037acad8da017692</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>CSupplierCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt;</type>
-      <name>ProductType</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_joiner_supplier_comp.html</anchorfile>
-      <anchor>a30add6abc2cce075c57c0d70a1916674</anchor>
-      <arglist>(m_dataSequenceSupplierCompPtr, m_dataSequenceProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_joiner_supplier_comp.html</anchorfile>
-      <anchor>ae3c78e483e2b2cf821df647cf5b8ebfc</anchor>
-      <arglist>(m_dataSequenceProviderModelCompPtr, m_dataSequenceProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_joiner_supplier_comp.html</anchorfile>
-      <anchor>a63ee029cc23938a14efb08d8089f7064</anchor>
-      <arglist>(m_multiDataSequenceSupplierCompPtr, m_multiDataSequenceProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_joiner_supplier_comp.html</anchorfile>
-      <anchor>a6fb62a9d7ce9e301b70f149917a1acac</anchor>
-      <arglist>(m_multiDataSequenceProviderModelCompPtr, m_multiDataSequenceProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ClearWorkResults</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual const imeas::IDataSequence *</type>
-      <name>GetDataSequence</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_joiner_supplier_comp.html</anchorfile>
-      <anchor>ac17484ed464ef8abb1b7c40ce309252c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual int</type>
-      <name>ProduceObject</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_joiner_supplier_comp.html</anchorfile>
-      <anchor>a1651411aea1e396a1c2e7f88888f570b</anchor>
-      <arglist>(ProductType &amp;result) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_joiner_supplier_comp.html</anchorfile>
-      <anchor>aede609f000386dbb2b77938cb3beaa88</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>const imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt; *</type>
-      <name>GetWorkProduct</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>istd::TDelPtr&lt; imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt; &gt;</type>
-      <name>m_productPtr</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -23006,54 +22647,6 @@
       <anchorfile>classimeas_1_1_c_numeric_values_joiner_comp.html</anchorfile>
       <anchor>a74f050d1e29484cc1915d8f6089ed617</anchor>
       <arglist>(imeas::INumericValue::ValueTypeId valueTypeId) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>imeas::CProcessedDataSequenceSupplierComp</name>
-    <filename>classimeas_1_1_c_processed_data_sequence_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt; &gt;</base>
-    <base virtualness="virtual">imeas::IDataSequenceProvider</base>
-    <member kind="typedef">
-      <type>iinsp::TSupplierCompWrap&lt; imod::TModelWrap&lt; imeas::CGeneralDataSequence &gt; &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classimeas_1_1_c_processed_data_sequence_supplier_comp.html</anchorfile>
-      <anchor>a5c5c5d955c1c03ca76952af4ea7b30d4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classimeas_1_1_c_processed_data_sequence_supplier_comp.html</anchorfile>
-      <anchor>a1b19ce55295688a9d3ecd783af78dfa3</anchor>
-      <arglist>(m_dataSequenceSupplierCompPtr, m_dataSequenceProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classimeas_1_1_c_processed_data_sequence_supplier_comp.html</anchorfile>
-      <anchor>a9ac253ee0bf032735c2f60109e5a8daa</anchor>
-      <arglist>(m_dataSequenceProviderModelCompPtr, m_dataSequenceProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual const imeas::IDataSequence *</type>
-      <name>GetDataSequence</name>
-      <anchorfile>classimeas_1_1_c_processed_data_sequence_supplier_comp.html</anchorfile>
-      <anchor>a7964fe910521df89463d50b131cd380f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual int</type>
-      <name>ProduceObject</name>
-      <anchorfile>classimeas_1_1_c_processed_data_sequence_supplier_comp.html</anchorfile>
-      <anchor>aec49812d7187c315454bbfbf28b8a5bd</anchor>
-      <arglist>(ProductType &amp;result) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classimeas_1_1_c_processed_data_sequence_supplier_comp.html</anchorfile>
-      <anchor>a1d74dbf83961959046e84bde316f9354</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31167,7 +30760,7 @@
     <path>C:/Temp/AcfSln/Include/iedgegui/</path>
     <filename>dir_961a74b7e7646907c05fbaac4d7138ad.html</filename>
     <file>CEdgeLineContainerShape.h</file>
-    <file>CEdgeLinesSupplierGuiComp.h</file>
+    <file>CEdgeLinesSupplierEditorComp.h</file>
   </compound>
   <compound kind="dir">
     <name>Include/ifileproc</name>
@@ -31252,7 +30845,6 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>dir_1af4026a7aa3fbc90e13dff6479b1905.html</filename>
     <file>CAdaptiveImageBinarizeProcessorComp.h</file>
-    <file>CArcProjectionProcessorComp.h</file>
     <file>CAutoImageNormalizeProcessorComp.h</file>
     <file>CBitmapJoinerSupplierComp.h</file>
     <file>CBitmapOperations.h</file>
@@ -31265,7 +30857,6 @@
     <file>CCircleFinderParams.h</file>
     <file>CCircleFinderParamsComp.h</file>
     <file>CCircleFindProcessorComp.h</file>
-    <file>CColorBitmapSeparatorSupplierComp.h</file>
     <file>CColorPatternComparatorComp.h</file>
     <file>CColorPatternControllerComp.h</file>
     <file>CConvolutionKernel2d.h</file>
@@ -31345,7 +30936,6 @@
     <filename>dir_e592bbcd5a2a1afe8c7af0cb6d8b6366.html</filename>
     <file>CCrossCorrelationProcessorComp.h</file>
     <file>CDataSequenceInfoBase.h</file>
-    <file>CDataSequenceJoinerSupplierComp.h</file>
     <file>CDataSequenceStatistics.h</file>
     <file>CDataStatistics.h</file>
     <file>CGeneralDataSequence.h</file>
@@ -31356,7 +30946,6 @@
     <file>CNumericConstraintsComp.h</file>
     <file>CNumericParamsComp.h</file>
     <file>CNumericValuesJoinerComp.h</file>
-    <file>CProcessedDataSequenceSupplierComp.h</file>
     <file>CSamplesInfo.h</file>
     <file>CSimpleNumericValue.h</file>
     <file>CSimpleNumericValueProvider.h</file>

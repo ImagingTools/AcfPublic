@@ -33,8 +33,7 @@
 #include "iedge/CExtractedEdgeLinesSupplierComp.h"
 #include "iedge/CProcessedEdgeLinesSupplierComp.h"
 #include "iedge/CEdgeBasedFeaturesSupplierComp.h"
-
-#include "iedgegui/CEdgeLinesSupplierGuiComp.h"
+#include "iedgegui/CEdgeLinesSupplierEditorComp.h"
 
 
 /**
@@ -50,7 +49,7 @@ typedef iedge::CFastEdgesExtractorComp FastEdgesExtractor;
 typedef icomp::TModelCompWrap<iedge::CExtractedEdgeLinesSupplierComp> ExtractedEdgeLinesSupplier;
 typedef icomp::TModelCompWrap<iedge::CProcessedEdgeLinesSupplierComp> ProcessedEdgeLinesSupplier;
 typedef icomp::TModelCompWrap<iedge::CEdgeBasedFeaturesSupplierComp> EdgeBasedFeaturesSupplier;
-typedef iedgegui::CEdgeLinesSupplierGuiComp EdgeLinesSupplierGui;
+typedef iedgegui::CEdgeLinesSupplierEditorComp EdgeLinesSupplierEditor;
 
 
 } // namespace EdgePck
