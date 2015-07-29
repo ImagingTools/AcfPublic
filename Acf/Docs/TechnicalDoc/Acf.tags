@@ -3540,8 +3540,8 @@
     <name>COptionsManager.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_options_manager_8h</filename>
-    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <includes id="_i_options_manager_8h" name="IOptionsManager.h" local="yes" imported="no">iprm/IOptionsManager.h</includes>
+    <includes id="_c_selection_param_8h" name="CSelectionParam.h" local="yes" imported="no">iprm/CSelectionParam.h</includes>
     <class kind="class">iprm::COptionsManager</class>
     <namespace>iprm</namespace>
   </compound>
@@ -3678,6 +3678,7 @@
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_i_options_manager_8h</filename>
     <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
+    <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="yes" imported="no">iprm/ISelectionParam.h</includes>
     <class kind="class">iprm::IOptionsManager</class>
     <namespace>iprm</namespace>
   </compound>
@@ -4685,6 +4686,7 @@
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <includes id="_t_restorable_gui_wrap_8h" name="TRestorableGuiWrap.h" local="yes" imported="no">iqtgui/TRestorableGuiWrap.h</includes>
     <includes id="_c_command_tools_8h" name="CCommandTools.h" local="yes" imported="no">iqtgui/CCommandTools.h</includes>
+    <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="yes" imported="no">ilog/IMessageConsumer.h</includes>
     <class kind="class">iqtgui::CSimpleMainWindowGuiCompBase</class>
     <class kind="class">iqtgui::CSimpleMainWindowGuiComp</class>
     <class kind="class">iqtgui::CSimpleMainWindowGuiComp::CommandsObserver</class>
@@ -4697,6 +4699,7 @@
     <includes id="_t_attribute_8h" name="TAttribute.h" local="yes" imported="no">iattr/TAttribute.h</includes>
     <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
     <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
+    <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="yes" imported="no">ilog/IMessageConsumer.h</includes>
     <class kind="class">iqtgui::CSplashScreenGuiComp</class>
     <namespace>iqtgui</namespace>
   </compound>
@@ -5015,12 +5018,21 @@
     <namespace>iqtprm</namespace>
   </compound>
   <compound kind="file">
-    <name>COptionsListEditorGuiComp.h</name>
+    <name>COptionsListEditorComp.h</name>
     <path>C:/Temp/Acf/Include/iqtprm/</path>
-    <filename>_c_options_list_editor_gui_comp_8h</filename>
+    <filename>_c_options_list_editor_comp_8h</filename>
     <includes id="_i_options_manager_8h" name="IOptionsManager.h" local="yes" imported="no">iprm/IOptionsManager.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
-    <class kind="class">iqtprm::COptionsListEditorGuiComp</class>
+    <class kind="class">iqtprm::COptionsListEditorComp</class>
+    <namespace>iqtprm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>COptionsManagerEditorComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtprm/</path>
+    <filename>_c_options_manager_editor_comp_8h</filename>
+    <includes id="_i_options_manager_8h" name="IOptionsManager.h" local="yes" imported="no">iprm/IOptionsManager.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <class kind="class">iqtprm::COptionsManagerEditorComp</class>
     <namespace>iqtprm</namespace>
   </compound>
   <compound kind="file">
@@ -32724,6 +32736,20 @@
       <anchor>a505aba759f876568de6599f05a8c7b0c</anchor>
       <arglist>(const QString &amp;optionName) const </arglist>
     </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsSelectionSerialized</name>
+      <anchorfile>classiprm_1_1_c_options_manager.html</anchorfile>
+      <anchor>af0840191ff7d33707d787cd98ea75034</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetSelectionSerialized</name>
+      <anchorfile>classiprm_1_1_c_options_manager.html</anchorfile>
+      <anchor>ad17828477db94f2725ee15533f1646c8</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetOptionsFlags</name>
@@ -32822,6 +32848,104 @@
       <anchor>a99b6c32efe101e940b4452e4a0fea984</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CSelectionParam</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>a682856613dedea8993eb43c39494dd28</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetSelectionConstraints</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>a68fe7677019e17ec87a7cd9206b65855</anchor>
+      <arglist>(const IOptionsList *constraintsPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetSubselection</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>aedd786e17d3d57b37a3a3e6e01c40f2f</anchor>
+      <arglist>(int selectionIndex, ISelectionParam *selectionPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetSelectedOptionById</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>a25c45d6ac68349909993e7f2b7e08b23</anchor>
+      <arglist>(const QByteArray &amp;selectedOptionId)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetOptionIndexById</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>af619e54ee0dfe4aa53e5b9ed02bd7998</anchor>
+      <arglist>(const QByteArray &amp;optionId) const </arglist>
+    </member>
+    <member kind="function">
+      <type>ISelectionParam *</type>
+      <name>GetActiveSubselection</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>aca40eeff3ae32951568150e8532f3f30</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const IOptionsList *</type>
+      <name>GetSelectionConstraints</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>aa9d8bc9a5ccbc639e94e672d6f99e4ab</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSelectedOptionIndex</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>a83de7a8b64b9a62a5ca877cf8ef03833</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetSelectedOptionIndex</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>a15a4c0f6a678cbce6057640185ce12e2</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ISelectionParam *</type>
+      <name>GetSubselection</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>acfc90335e62fb551c2b3db2b9daa67f7</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSelectionParam</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprm_1_1_c_options_manager.html</anchorfile>
+      <anchor>a53e7baf7bff9e425520feecd5de4d475</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ChangeFlags</name>
+      <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
+      <anchor>a092f5d4176d748b596be4ec0464827b3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_SELECTION_CHANGED</name>
+      <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
+      <anchor>a092f5d4176d748b596be4ec0464827b3ac597b3a6b80fed78027d9e3caf50db6d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>NO_SELECTION</name>
+      <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
+      <anchor>a9ea81a6e88b19a936ed2e63265117c27a7c687b23162301178cafe954f53c7702</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="enumeration">
       <type></type>
       <name>ChangeFlags</name>
@@ -32897,6 +33021,13 @@
       <name>OOF_SUPPORT_ENABLING</name>
       <anchorfile>classiprm_1_1_i_options_manager.html</anchorfile>
       <anchor>a791cc29e0b7b69402a02568a15f6f471a2667b5ef0b6ee8af4b6392bc9395cbe0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_selectedOptionIndex</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>aa422b035a4b1f4c7dd838f6963c22b38</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -40922,27 +41053,6 @@
       <anchor>a6db60f072b7d018848a44746727eaf8f</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>ChangeFlags</name>
-      <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
-      <anchor>a092f5d4176d748b596be4ec0464827b3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>CF_SELECTION_CHANGED</name>
-      <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
-      <anchor>a092f5d4176d748b596be4ec0464827b3ac597b3a6b80fed78027d9e3caf50db6d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>NO_SELECTION</name>
-      <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
-      <anchor>a9ea81a6e88b19a936ed2e63265117c27a7c687b23162301178cafe954f53c7702</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IOptionsList *</type>
       <name>GetParamsTypeConstraints</name>
@@ -41401,8 +41511,8 @@
   <compound kind="class">
     <name>iprm::COptionsManager</name>
     <filename>classiprm_1_1_c_options_manager.html</filename>
+    <base>iprm::CSelectionParam</base>
     <base virtualness="virtual">iprm::IOptionsManager</base>
-    <base virtualness="virtual">iser::ISerializable</base>
   </compound>
   <compound kind="class">
     <name>iprm::COptionsManagerComp</name>
@@ -42062,89 +42172,12 @@
     <filename>classiprm_1_1_c_selection_param.html</filename>
     <base virtualness="virtual">iprm::ISelectionParam</base>
     <class kind="class">iprm::CSelectionParam::ConstraintsObserver</class>
-    <member kind="function">
-      <type></type>
-      <name>CSelectionParam</name>
-      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
-      <anchor>a682856613dedea8993eb43c39494dd28</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetSelectionConstraints</name>
-      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
-      <anchor>a68fe7677019e17ec87a7cd9206b65855</anchor>
-      <arglist>(const IOptionsList *constraintsPtr)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetSubselection</name>
-      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
-      <anchor>aedd786e17d3d57b37a3a3e6e01c40f2f</anchor>
-      <arglist>(int selectionIndex, ISelectionParam *selectionPtr)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>SetSelectedOptionById</name>
-      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
-      <anchor>a25c45d6ac68349909993e7f2b7e08b23</anchor>
-      <arglist>(const QByteArray &amp;selectedOptionId)</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetOptionIndexById</name>
-      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
-      <anchor>af619e54ee0dfe4aa53e5b9ed02bd7998</anchor>
-      <arglist>(const QByteArray &amp;optionId) const </arglist>
-    </member>
-    <member kind="function">
-      <type>ISelectionParam *</type>
-      <name>GetActiveSubselection</name>
-      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
-      <anchor>aca40eeff3ae32951568150e8532f3f30</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const IOptionsList *</type>
-      <name>GetSelectionConstraints</name>
-      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
-      <anchor>aa9d8bc9a5ccbc639e94e672d6f99e4ab</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSelectedOptionIndex</name>
-      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
-      <anchor>a83de7a8b64b9a62a5ca877cf8ef03833</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetSelectedOptionIndex</name>
-      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
-      <anchor>a15a4c0f6a678cbce6057640185ce12e2</anchor>
-      <arglist>(int index)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ISelectionParam *</type>
-      <name>GetSubselection</name>
-      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
-      <anchor>acfc90335e62fb551c2b3db2b9daa67f7</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
       <anchor>a9181ff52653483ce16ba8d67268a8e86</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>int</type>
-      <name>m_selectedOptionIndex</name>
-      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
-      <anchor>aa422b035a4b1f4c7dd838f6963c22b38</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -42372,6 +42405,35 @@
     <name>iprm::IOptionsManager</name>
     <filename>classiprm_1_1_i_options_manager.html</filename>
     <base virtualness="virtual">iprm::IOptionsList</base>
+    <base virtualness="virtual">iprm::ISelectionParam</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const IOptionsList *</type>
+      <name>GetSelectionConstraints</name>
+      <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
+      <anchor>a98e64292e21cf3531e392b14ab0468f3</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetSelectedOptionIndex</name>
+      <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
+      <anchor>a0a417884429ac3874a717cfbb5a738f6</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>SetSelectedOptionIndex</name>
+      <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
+      <anchor>a312f0ee035e39cd63d7d1c55b1e3c68a</anchor>
+      <arglist>(int index)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual ISelectionParam *</type>
+      <name>GetSubselection</name>
+      <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
+      <anchor>a65122ebc0e6fe3d5c654e63b6be39fdd</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iprm::IParamsManager</name>
@@ -42453,34 +42515,6 @@
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
       <anchor>ac2a35d4d7ba334ccf1935cd1924f6756</anchor>
       <arglist>(int index, const QString &amp;description)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const IOptionsList *</type>
-      <name>GetSelectionConstraints</name>
-      <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
-      <anchor>a98e64292e21cf3531e392b14ab0468f3</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetSelectedOptionIndex</name>
-      <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
-      <anchor>a0a417884429ac3874a717cfbb5a738f6</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>SetSelectedOptionIndex</name>
-      <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
-      <anchor>a312f0ee035e39cd63d7d1c55b1e3c68a</anchor>
-      <arglist>(int index)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual ISelectionParam *</type>
-      <name>GetSubselection</name>
-      <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
-      <anchor>a65122ebc0e6fe3d5c654e63b6be39fdd</anchor>
-      <arglist>(int index) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -51413,6 +51447,7 @@
     <name>iqtgui::CSplashScreenGuiComp</name>
     <filename>classiqtgui_1_1_c_splash_screen_gui_comp.html</filename>
     <base>TDesignerGuiCompBase&lt; Ui::CSplashScreenGuiComp, QSplashScreen &gt;</base>
+    <base virtualness="virtual">ilog::IMessageConsumer</base>
     <member kind="typedef">
       <type>TDesignerGuiCompBase&lt; Ui::CSplashScreenGuiComp, QSplashScreen &gt;</type>
       <name>BaseClass</name>
@@ -51427,12 +51462,33 @@
       <anchor>a71d48e5e9425438c80e0d95aa88fa782</anchor>
       <arglist></arglist>
     </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>EmitAddMessage</name>
+      <anchorfile>classiqtgui_1_1_c_splash_screen_gui_comp.html</anchorfile>
+      <anchor>a7be122a79c0435d9babeb2977b7eef53</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CSplashScreenGuiComp</name>
       <anchorfile>classiqtgui_1_1_c_splash_screen_gui_comp.html</anchorfile>
       <anchor>a2e4d80fc89a0f375c0456f9359471c43</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsMessageSupported</name>
+      <anchorfile>classiqtgui_1_1_c_splash_screen_gui_comp.html</anchorfile>
+      <anchor>a6476851906bb5deae4e27b031ada1493</anchor>
+      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddMessage</name>
+      <anchorfile>classiqtgui_1_1_c_splash_screen_gui_comp.html</anchorfile>
+      <anchor>a54159c389c483fcddb821dc9310598b5</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -51447,6 +51503,13 @@
       <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
       <anchor>a3db7c383e14f4f5c9605cebd90c44e1a</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnAddMessage</name>
+      <anchorfile>classiqtgui_1_1_c_splash_screen_gui_comp.html</anchorfile>
+      <anchor>a5d44ced63b0fba30af3ee8cc63ef6b68</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -53070,7 +53133,8 @@
     <class kind="class">iqtprm::CFileNameParamGuiComp</class>
     <class kind="class">iqtprm::CMultiParamsManagerGuiComp</class>
     <class kind="class">iqtprm::CNameParamGuiComp</class>
-    <class kind="class">iqtprm::COptionsListEditorGuiComp</class>
+    <class kind="class">iqtprm::COptionsListEditorComp</class>
+    <class kind="class">iqtprm::COptionsManagerEditorComp</class>
     <class kind="class">iqtprm::COptionsManagerGuiComp</class>
     <class kind="class">iqtprm::CParamsManagerGuiComp</class>
     <class kind="class">iqtprm::CParamsManagerGuiCompBase</class>
@@ -54313,133 +54377,208 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqtprm::COptionsListEditorGuiComp</name>
-    <filename>classiqtprm_1_1_c_options_list_editor_gui_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::COptionsListEditorGuiComp, iprm::IOptionsList &gt;</base>
+    <name>iqtprm::COptionsListEditorComp</name>
+    <filename>classiqtprm_1_1_c_options_list_editor_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::COptionsListEditorComp, iprm::IOptionsList &gt;</base>
     <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::COptionsListEditorGuiComp, iprm::IOptionsList &gt;</type>
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::COptionsListEditorComp, iprm::IOptionsList &gt;</type>
       <name>BaseClass</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>a27acfeb18c4d1c113279e09e215e2cc7</anchor>
+      <anchorfile>classiqtprm_1_1_c_options_list_editor_comp.html</anchorfile>
+      <anchor>a2886a819ef58af05b6bc673230a8d4c4</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
-      <name>COptionsListEditorGuiComp</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>ac5852635f05c224d30456e06161afe0a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_AddButton_clicked</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>a23fd1374cb33ee4dadc3b93a4ebe9da5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_RemoveButton_clicked</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>a60ddd2ebbe9653421c80416d7b81ded6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_UpButton_clicked</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>a249476a8ba198869dd303af06fb2e47b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_DownButton_clicked</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>abeefb5c3b1d00357816fd7d48548185d</anchor>
+      <name>COptionsListEditorComp</name>
+      <anchorfile>classiqtprm_1_1_c_options_list_editor_comp.html</anchorfile>
+      <anchor>a030e9a13c41d1890dafe8ad15bf8189b</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_OptionsList_itemSelectionChanged</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>a085027fbe948b5fffa1a4d5f7af26b7a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_OptionsList_itemChanged</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>a357dfaf2be01abe8abf8167ee5fd2128</anchor>
-      <arglist>(QListWidgetItem *item)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnAddMenuOptionClicked</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>adb0fb74c6046e079f2322b71dc6dd517</anchor>
-      <arglist>(QAction *action)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>UpdateActions</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>a321a0d42b80bd7b4ecf0609eb9e18e55</anchor>
+      <anchorfile>classiqtprm_1_1_c_options_list_editor_comp.html</anchorfile>
+      <anchor>a3fe4e5f37e712bb2acd7247a843addbc</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>UpdateList</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>a7fe0792d9f4b119017cbac7a79509651</anchor>
+      <anchorfile>classiqtprm_1_1_c_options_list_editor_comp.html</anchorfile>
+      <anchor>a5d8a985057f48aefb623d7926ee48366</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>int</type>
       <name>GetSelectedIndex</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>a2725c25a2a49b6fb8b7dd826c7e9954f</anchor>
+      <anchorfile>classiqtprm_1_1_c_options_list_editor_comp.html</anchorfile>
+      <anchor>a536fc95852fc569591bd939fe8dd5831</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>EnsureSelectedIndexUpdated</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>ab1b5dcb20f5f2be03c3933847c9146af</anchor>
+      <anchorfile>classiqtprm_1_1_c_options_list_editor_comp.html</anchorfile>
+      <anchor>ae408bb65a15ef72fd6f8c0797b49dcdf</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>QByteArray</type>
       <name>GetSelectedParamsSetTypeId</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>acea6b561134306f613845c823236af1c</anchor>
+      <anchorfile>classiqtprm_1_1_c_options_list_editor_comp.html</anchorfile>
+      <anchor>a4000ad395d65fa288cafb5a54d314813</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>a00ea938a154129fc8a81cc225564667f</anchor>
+      <anchorfile>classiqtprm_1_1_c_options_list_editor_comp.html</anchorfile>
+      <anchor>a544de30a58f78f4ab3f1480fe68a6427</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelDetached</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>aa2e3a9d7628ae3952b9b54164a9d77c1</anchor>
+      <anchorfile>classiqtprm_1_1_c_options_list_editor_comp.html</anchorfile>
+      <anchor>a8b5f335a09db2b56f157a4b5f6eb55d2</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>a2dbef2a109c232c0d7b89fa01dcec705</anchor>
+      <anchorfile>classiqtprm_1_1_c_options_list_editor_comp.html</anchorfile>
+      <anchor>ac8c91e0b0a5bf99c2753359db566bb00</anchor>
       <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_editor_gui_comp.html</anchorfile>
-      <anchor>a7ba77be3c64c199cd9fbc71f9c8ad0aa</anchor>
+      <anchorfile>classiqtprm_1_1_c_options_list_editor_comp.html</anchorfile>
+      <anchor>adda332804d53dfc1bf1415645301d9c2</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtprm::COptionsManagerEditorComp</name>
+    <filename>classiqtprm_1_1_c_options_manager_editor_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::COptionsManagerEditorComp, iprm::IOptionsManager &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::COptionsManagerEditorComp, iprm::IOptionsManager &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_editor_comp.html</anchorfile>
+      <anchor>a436ac4179c463c97a1e3f7c93bd8876e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>COptionsManagerEditorComp</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_editor_comp.html</anchorfile>
+      <anchor>a8f0f52e7bb5597d1314664971c888c74</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_AddButton_clicked</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_editor_comp.html</anchorfile>
+      <anchor>a082f7e5357d7bed9e2941b022a7adbf1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_RemoveButton_clicked</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_editor_comp.html</anchorfile>
+      <anchor>a156a77ace12333720b0da997117568ff</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_UpButton_clicked</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_editor_comp.html</anchorfile>
+      <anchor>aefff7d8eafccaeb5a5adf2455c8fe468</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_DownButton_clicked</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_editor_comp.html</anchorfile>
+      <anchor>a5000dfa265b4ad3718524c3e2780a92a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_OptionsList_itemSelectionChanged</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_editor_comp.html</anchorfile>
+      <anchor>a149effd33e7adb6cf6fee3c72eea5ba4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_OptionsList_itemChanged</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_editor_comp.html</anchorfile>
+      <anchor>abc56e0ab40d619dddfeaf7e6f931ca52</anchor>
+      <arglist>(QListWidgetItem *item)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateActions</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_editor_comp.html</anchorfile>
+      <anchor>a7d464c66839be847e9f794ba72d2a45e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateList</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_editor_comp.html</anchorfile>
+      <anchor>a823ae88f937c4f7753cd1faa3ea5d6c4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>int</type>
+      <name>GetSelectedIndex</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_editor_comp.html</anchorfile>
+      <anchor>a45c3c1a3812579a782e3bdd44825e1b2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>EnsureSelectedIndexUpdated</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_editor_comp.html</anchorfile>
+      <anchor>a8e5277b7af218e5b8049aa542490060e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QByteArray</type>
+      <name>GetSelectedParamsSetTypeId</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_editor_comp.html</anchorfile>
+      <anchor>ae5224314aabaf086135f4bd80c48f884</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_editor_comp.html</anchorfile>
+      <anchor>a3b9e0baf08562442c61b8b720516445c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_editor_comp.html</anchorfile>
+      <anchor>a12b4b4deaddb632ca19d742bc107af8d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_editor_comp.html</anchorfile>
+      <anchor>aac6a5c0eb8cd8966aaa4cf8aae48b9a5</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_editor_comp.html</anchorfile>
+      <anchor>a936fb24097917b35cd3fa65db5d7c493</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -71360,7 +71499,8 @@
     <file>CFileNameParamGuiComp.h</file>
     <file>CMultiParamsManagerGuiComp.h</file>
     <file>CNameParamGuiComp.h</file>
-    <file>COptionsListEditorGuiComp.h</file>
+    <file>COptionsListEditorComp.h</file>
+    <file>COptionsManagerEditorComp.h</file>
     <file>COptionsManagerGuiComp.h</file>
     <file>CParamsManagerGuiComp.h</file>
     <file>CParamsManagerGuiCompBase.h</file>

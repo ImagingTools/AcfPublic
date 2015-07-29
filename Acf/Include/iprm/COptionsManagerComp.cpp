@@ -36,6 +36,7 @@ void COptionsManagerComp::OnComponentCreated()
 	BaseClass::OnComponentCreated();
 
 	SetFixedOptionsList(m_fixedOptionsListCompPtr.GetPtr());
+	SetSelectionSerialized(*m_serializeSelectionAttrPtr);
 }
 
 

@@ -1,10 +1,31 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2014 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org, write info@imagingtools.de or contact
+**	by Skype to ACF_infoline for further information about the ACF.
+**
+********************************************************************************/
+
+
 #include "iqtgui/CSimpleMainWindowGuiComp.h"
 
 
 // Qt includes
 #include <QtCore/QSettings>
 #include <QtCore/QUrl>
-#include <QtCore/QDebug>
 
 #if QT_VERSION >= 0x050000
 #include <QtWidgets/QStatusBar>
@@ -827,6 +848,38 @@ bool CSimpleMainWindowGuiComp::VisibleWindowsManager::IsOptionEnabled(int index)
 		return commandPtr->isChecked();
 	}
 
+	return false;
+}
+
+
+const iprm::IOptionsList* CSimpleMainWindowGuiComp::VisibleWindowsManager::GetSelectionConstraints() const
+{
+	return this;
+}
+
+
+int CSimpleMainWindowGuiComp::VisibleWindowsManager::GetSelectedOptionIndex() const
+{
+	return -1;
+}
+
+
+bool CSimpleMainWindowGuiComp::VisibleWindowsManager::SetSelectedOptionIndex(int /*index*/)
+{
+	return false;
+}
+
+
+iprm::ISelectionParam* CSimpleMainWindowGuiComp::VisibleWindowsManager::GetSubselection(int /*index*/) const
+{
+	return NULL;
+}
+
+
+// reimplemented (iser::ISerializable)
+
+bool CSimpleMainWindowGuiComp::VisibleWindowsManager::Serialize(iser::IArchive& /*archive*/)
+{
 	return false;
 }
 

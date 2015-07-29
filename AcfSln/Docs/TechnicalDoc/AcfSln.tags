@@ -26556,6 +26556,13 @@
       <anchor>ae728e449e1bd6361e48bb65541f3ee11</anchor>
       <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtipr_1_1_c_caliper_params_gui_comp.html</anchorfile>
+      <anchor>a133d8f36a0ab97758bef3d955584b433</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtipr::CCircleFinderParamsGuiComp</name>

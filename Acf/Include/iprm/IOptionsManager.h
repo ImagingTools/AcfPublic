@@ -26,6 +26,7 @@
 
 // ACF includes
 #include "iprm/IOptionsList.h"
+#include "iprm/ISelectionParam.h"
 
 
 namespace iprm
@@ -35,7 +36,7 @@ namespace iprm
 /**
 	Common interface for the management of the dynamic selection constraints.
 */
-class IOptionsManager: virtual public IOptionsList
+class IOptionsManager: virtual public IOptionsList, virtual public ISelectionParam
 {
 public:
 	/**
