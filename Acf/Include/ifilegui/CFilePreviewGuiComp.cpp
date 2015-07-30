@@ -88,6 +88,8 @@ void CFilePreviewGuiComp::OnGuiCreated()
 {
 	BaseClass::OnGuiCreated();
 
+	m_fileLoaderCompPtr.EnsureInitialized();
+
 	if (m_objectGuiCompPtr.IsValid()){
 		m_objectGuiCompPtr->CreateGui(ObjectViewFrame);	
 	}
@@ -126,6 +128,10 @@ void CFilePreviewGuiComp::OnComponentCreated()
 
 void CFilePreviewGuiComp::UpdateFilePreview()
 {
+	if (m_currentPreviewObjectCompPtr.IsValid()){
+		m_currentPreviewObjectCompPtr->ResetData();
+	}
+
 	ifile::IFileNameParam* objectPtr = GetObjectPtr();
 	if (objectPtr != NULL){
 		QString newFilePath = objectPtr->GetPath();
@@ -176,10 +182,18 @@ void CFilePreviewGuiComp::OnPreviewGenerationFinished()
 {
 	QMutexLocker lock(&m_mutex);
 
-	istd::CChangeNotifier changePtr(m_previewObjectPtr.GetPtr());
-
 	if (m_previewObjectPtr.IsValid() && m_workingObjectPtr.IsValid()){
+
+		// Copy data from working object to the preview:
+		istd::CChangeNotifier changePtr(m_previewObjectPtr.GetPtr());
+
 		m_previewObjectPtr->CopyFrom(*m_workingObjectPtr.GetPtr());
+
+		if (m_currentPreviewObjectCompPtr.IsValid()){
+			istd::CChangeNotifier copyChangePtr(m_currentPreviewObjectCompPtr.GetPtr());
+
+			m_currentPreviewObjectCompPtr->CopyFrom(*m_workingObjectPtr);
+		}
 	}
 }
 
@@ -189,10 +203,6 @@ void CFilePreviewGuiComp::OnPreviewGenerationFinished()
 void CFilePreviewGuiComp::UpdateObjectFromFile()
 {
 	QMutexLocker lock(&m_mutex);
-
-	if (m_objectCopyCompPtr.IsValid()){
-		m_objectCopyCompPtr->ResetData();
-	}
 
 	if (!m_workingObjectPtr.IsValid()){
 		return;
@@ -213,9 +223,6 @@ void CFilePreviewGuiComp::UpdateObjectFromFile()
 			int retVal = m_fileLoaderCompPtr->LoadFromFile(*m_workingObjectPtr.GetPtr(), m_lastFilePath);
 			if (retVal != ifile::IFilePersistence::OS_OK){
 				m_workingObjectPtr->ResetData();
-			}
-			else if (m_objectCopyCompPtr.IsValid()){
-				m_objectCopyCompPtr->CopyFrom(*m_workingObjectPtr);
 			}
 		}
 	}
