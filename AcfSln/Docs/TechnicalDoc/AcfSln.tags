@@ -7102,6 +7102,41 @@
     </member>
     <member kind="enumeration">
       <type></type>
+      <name>AttributeGroupType</name>
+      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
+      <anchor>a27f884f8a4f97c883ae299048460e8ab</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>AGT_ATTRIBUTE</name>
+      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
+      <anchor>a27f884f8a4f97c883ae299048460e8abae319fc79a624e497da313c9c3f7055da</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>AGT_REFERENCE</name>
+      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
+      <anchor>a27f884f8a4f97c883ae299048460e8ababdc96d7958c62b9bddaed1ee0e0a2d70</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>AGT_FACTORY</name>
+      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
+      <anchor>a27f884f8a4f97c883ae299048460e8abaf249401e74696c5b48c6471e0422fe5e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>AGT_LAST</name>
+      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
+      <anchor>a27f884f8a4f97c883ae299048460e8aba7c3ed6172e590f62dc27d5508c43f775</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
       <name>AttributeColumns</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>a9ea46939bda9debd7aa6f5c1a753dc44</anchor>
@@ -7314,8 +7349,8 @@
       <type>bool</type>
       <name>SetAttributeToItem</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a41af6ccf2e52cb2fecd7f347f931b0c0</anchor>
-      <arglist>(QTreeWidgetItem &amp;attributeItem, const icomp::IRegistry &amp;registry, const QByteArray &amp;attributeId, const ElementIdToAttrInfoMap &amp;infos, bool &amp;hasError, bool &amp;hasWarning, bool &amp;hasExport) const </arglist>
+      <anchor>a6f62fb68c2a7030f2c1cc46c939793ab</anchor>
+      <arglist>(AttributeGroupType groupType, int &amp;itemIndex, const icomp::IRegistry &amp;registry, const QByteArray &amp;attributeId, const ElementIdToAttrInfoMap &amp;infos, bool &amp;hasError, bool &amp;hasWarning, bool &amp;hasExport) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
