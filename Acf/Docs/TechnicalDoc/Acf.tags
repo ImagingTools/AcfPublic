@@ -28654,6 +28654,13 @@
       <anchor>a36e186bc048adedac51c48788a6f0bce</anchor>
       <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a0b695fc36fae74eb1e1f6cb9aba7722c</anchor>
+      <arglist>(CompatibilityMode mode)</arglist>
+    </member>
     <member kind="typedef" protection="protected">
       <type>QList&lt; Page &gt;</type>
       <name>Pages</name>
@@ -33349,6 +33356,13 @@
       <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
       <anchor>a54c26fdb7854b18c0bf276c4c31f0f4a</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a0b695fc36fae74eb1e1f6cb9aba7722c</anchor>
+      <arglist>(CompatibilityMode mode)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual IBitmap *</type>
