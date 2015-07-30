@@ -54553,6 +54553,13 @@
       <anchor>ae5224314aabaf086135f4bd80c48f884</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>QString</type>
+      <name>CalculateNewDefaultName</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_editor_comp.html</anchorfile>
+      <anchor>a114f0cc229cfd38fdabda6a2b63f476e</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
