@@ -2481,7 +2481,6 @@
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
     <includes id="_c_file_name_param_comp_8h" name="CFileNameParamComp.h" local="yes" imported="no">ifile/CFileNameParamComp.h</includes>
-    <includes id="_i_qt_item_model_provider_8h" name="IQtItemModelProvider.h" local="yes" imported="no">ibase/IQtItemModelProvider.h</includes>
     <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <class kind="class">ifilegui::CFileTreeViewGuiComp</class>
@@ -34363,6 +34362,13 @@
       <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
       <anchor>a316ad1224b0b8a332452027b6c6f950e</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>a8580bb45010ffafeae93e328e7162a13</anchor>
+      <arglist>(CompatibilityMode mode)</arglist>
     </member>
     <member kind="function">
       <type></type>
