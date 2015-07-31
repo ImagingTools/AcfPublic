@@ -26,11 +26,8 @@
 
 // ACF includes
 #include "imod/TSingleModelObserverBase.h"
-
 #include "icomp/CComponentBase.h"
-
 #include "iprm/ISelectionParam.h"
-
 #include "iqt2d/IViewExtender.h"
 
 

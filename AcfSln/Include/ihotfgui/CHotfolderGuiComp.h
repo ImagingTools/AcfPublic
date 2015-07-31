@@ -112,6 +112,9 @@ private Q_SLOTS:
 	void OnTextFilterChanged(const QString& filterText);
 
 private:
+	/**
+		\internal
+	*/
 	class ProcessingItem: public QTreeWidgetItem, public imod::TSingleModelObserverBase<ihotf::IHotfolderProcessingItem>
 	{
 	public:

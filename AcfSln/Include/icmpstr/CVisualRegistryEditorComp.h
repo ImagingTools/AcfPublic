@@ -160,6 +160,10 @@ protected:
 		GI_TOOLS
 	};
 
+	/**
+		\internal
+		Observes changes of component environment to force update if it has changed.
+	*/
 	class EnvironmentObserver: public imod::TSingleModelObserverBase<icomp::IMetaInfoManager>
 	{
 	public:
