@@ -56,11 +56,10 @@ const CSplineSegment& CSpline::GetSplineSegment(int index) const
 
 bool CSpline::InsertSplineSegment(const CSplineSegment& segment)
 {
-	BeginChanges(GetAnyChange());
+	istd::CChangeNotifier changeNotifier(this);
+	Q_UNUSED(changeNotifier);
 
 	m_segments.push_back(segment);
-
-	EndChanges(GetAnyChange());
 
 	return true;
 }
@@ -79,13 +78,12 @@ bool CSpline::CopyFrom(const IChangeable& object, CompatibilityMode /*mode*/)
 	const CSpline* splinePtr = dynamic_cast<const CSpline*>(&object);
 
 	if (splinePtr != NULL){	
-		BeginChanges(GetAnyChange());
+		istd::CChangeNotifier changeNotifier(this);
+		Q_UNUSED(changeNotifier);
 
 		BaseClass::CopyFrom(object);
 
 		m_segments = splinePtr->m_segments;
-
-		EndChanges(GetAnyChange());
 
 		return true;
 	}

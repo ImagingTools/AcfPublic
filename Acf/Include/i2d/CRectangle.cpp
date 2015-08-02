@@ -24,14 +24,12 @@
 
 
 // ACF includes
+#include "istd/TDelPtr.h"
 #include "istd/CChangeNotifier.h"
-
-#include "i2d/CVector2d.h"
-#include "i2d/CRect.h"
-
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
-#include "istd/TDelPtr.h"
+#include "i2d/CVector2d.h"
+#include "i2d/CRect.h"
 
 
 namespace i2d
@@ -98,6 +96,10 @@ bool CRectangle::IsValidNonEmpty() const
 
 void CRectangle::Reset()
 {
+	istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Reset rectangle");
+	istd::CChangeNotifier changeNotifier(this, &changeSet);
+	Q_UNUSED(changeNotifier);
+
 	m_horizontalRange.Reset();
 	m_verticalRange.Reset();
 }
@@ -106,11 +108,11 @@ void CRectangle::Reset()
 void CRectangle::SetLeft(double left)
 {
 	if (GetLeft() != left){
-		BeginChanges(GetAnyChange());
+		istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Set rectangle's left side");
+		istd::CChangeNotifier changeNotifier(this, &changeSet);
+		Q_UNUSED(changeNotifier);
 
 		m_horizontalRange.SetMinValue(left);
-
-		EndChanges(GetAnyChange());
 	}
 }
 
@@ -118,11 +120,11 @@ void CRectangle::SetLeft(double left)
 void CRectangle::SetTop(double top)
 {
 	if (GetTop() != top){
-		BeginChanges(GetAnyChange());
+		istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Set rectangle's top side");
+		istd::CChangeNotifier changeNotifier(this, &changeSet);
+		Q_UNUSED(changeNotifier);
 
 		m_verticalRange.SetMinValue(top);
-
-		EndChanges(GetAnyChange());
 	}
 }
 
@@ -130,11 +132,11 @@ void CRectangle::SetTop(double top)
 void CRectangle::SetRight(double right)
 {
 	if (GetRight() != right){
-		BeginChanges(GetAnyChange());
+		istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Set rectangle's right side");
+		istd::CChangeNotifier changeNotifier(this, &changeSet);
+		Q_UNUSED(changeNotifier);
 
 		m_horizontalRange.SetMaxValue(right);
-
-		EndChanges(GetAnyChange());
 	}
 }
 
@@ -142,11 +144,11 @@ void CRectangle::SetRight(double right)
 void CRectangle::SetBottom(double bottom)
 {
 	if (GetBottom() != bottom){
-		BeginChanges(GetAnyChange());
+		istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Set rectangle's bottom side");
+		istd::CChangeNotifier changeNotifier(this, &changeSet);
+		Q_UNUSED(changeNotifier);
 
 		m_verticalRange.SetMaxValue(bottom);
-
-		EndChanges(GetAnyChange());
 	}
 }
 
@@ -154,11 +156,11 @@ void CRectangle::SetBottom(double bottom)
 void CRectangle::SetHorizontalRange(const istd::CRange& range)
 {
 	if (range != m_horizontalRange){
-		BeginChanges(GetAnyChange());
+		istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Modify object");
+		istd::CChangeNotifier changeNotifier(this, &changeSet);
+		Q_UNUSED(changeNotifier);
 
 		m_horizontalRange = range;
-
-		EndChanges(GetAnyChange());
 	}
 }
 
@@ -166,11 +168,11 @@ void CRectangle::SetHorizontalRange(const istd::CRange& range)
 void CRectangle::SetVerticalRange(const istd::CRange& range)
 {
 	if (range != m_verticalRange){
-		BeginChanges(GetAnyChange());
+		istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Modify object");
+		istd::CChangeNotifier changeNotifier(this, &changeSet);
+		Q_UNUSED(changeNotifier);
 
 		m_verticalRange = range;
-
-		EndChanges(GetAnyChange());
 	}
 }
 
@@ -184,12 +186,12 @@ CVector2d CRectangle::GetLeftTop() const
 void CRectangle::SetTopLeft(const CVector2d& topLeft)
 {
 	if (topLeft != GetLeftTop()){
-		BeginChanges(GetAnyChange());
+		istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Set rectange's  top-left position");
+		istd::CChangeNotifier changeNotifier(this, &changeSet);
+		Q_UNUSED(changeNotifier);
 
 		m_horizontalRange.SetMinValue(topLeft.GetX());
 		m_verticalRange.SetMinValue(topLeft.GetY());
-
-		EndChanges(GetAnyChange());
 	}
 }
 
@@ -203,12 +205,12 @@ CVector2d CRectangle::GetRightTop() const
 void CRectangle::SetTopRight(const CVector2d& topRight)
 {
 	if (topRight != GetRightTop()){
-		BeginChanges(GetAnyChange());
+		istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Set rectange's  top-right position");
+		istd::CChangeNotifier changeNotifier(this, &changeSet);
+		Q_UNUSED(changeNotifier);
 
 		m_horizontalRange.SetMaxValue(topRight.GetX());
 		m_verticalRange.SetMinValue(topRight.GetY());
-
-		EndChanges(GetAnyChange());
 	}
 }
 
@@ -222,12 +224,12 @@ CVector2d CRectangle::GetLeftBottom() const
 void CRectangle::SetBottomLeft(const CVector2d& bottomLeft)
 {
 	if (bottomLeft != GetLeftBottom()){
-		BeginChanges(GetAnyChange());
+		istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Set rectange's  bottom-left position");
+		istd::CChangeNotifier changeNotifier(this, &changeSet);
+		Q_UNUSED(changeNotifier);
 
 		m_horizontalRange.SetMinValue(bottomLeft.GetX());
 		m_verticalRange.SetMaxValue(bottomLeft.GetY());
-
-		EndChanges(GetAnyChange());
 	}
 }
 
@@ -241,12 +243,12 @@ CVector2d CRectangle::GetRightBottom() const
 void CRectangle::SetBottomRight(const CVector2d& bottomRight)
 {
 	if (bottomRight != GetRightBottom()){
-		BeginChanges(GetAnyChange());
+		istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Set rectange's  bottom-right position");
+		istd::CChangeNotifier changeNotifier(this, &changeSet);
+		Q_UNUSED(changeNotifier);
 
 		m_horizontalRange.SetMaxValue(bottomRight.GetX());
 		m_verticalRange.SetMaxValue(bottomRight.GetY());
-
-		EndChanges(GetAnyChange());
 	}
 }
 
@@ -351,6 +353,10 @@ CLine2d CRectangle::GetIntersection(const CLine2d& line) const
 
 void CRectangle::Intersect(const CRectangle& rectangle)
 {
+	istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Intersect with another rectangle");
+	istd::CChangeNotifier changeNotifier(this, &changeSet);
+	Q_UNUSED(changeNotifier);
+
 	*this = GetIntersection(rectangle);
 }
 
@@ -368,7 +374,9 @@ CRectangle CRectangle::GetUnion(const CRectangle& rect) const
 
 void CRectangle::Unite(const CRectangle& rect)
 {
-	BeginChanges(GetAnyChange());
+	istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Unite with another rectangle");
+	istd::CChangeNotifier changeNotifier(this, &changeSet);
+	Q_UNUSED(changeNotifier);
 
 	double outputLeft = qMin(rect.GetLeft(), GetLeft());
 	double outputTop = qMin(rect.GetTop(), GetTop());
@@ -377,8 +385,6 @@ void CRectangle::Unite(const CRectangle& rect)
 
 	m_horizontalRange = istd::CRange(outputLeft, outputRight);
 	m_verticalRange = istd::CRange(outputTop, outputBottom);
-
-	EndChanges(GetAnyChange());
 }
 
 
@@ -424,12 +430,12 @@ CRectangle CRectangle::GetExpanded(const CRectangle& rect) const
 
 void CRectangle::Expand(const CRectangle& rect)
 {
-	BeginChanges(GetAnyChange());
+	istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Expand rectangle");
+	istd::CChangeNotifier changeNotifier(this, &changeSet);
+	Q_UNUSED(changeNotifier);
 
 	m_horizontalRange.Expand(rect.m_horizontalRange);
 	m_verticalRange.Expand(rect.m_verticalRange);
-
-	EndChanges(GetAnyChange());
 }
 
 
@@ -513,14 +519,14 @@ CRectangle CRectangle::GetTranslated(const i2d::CVector2d& delta) const
 
 void CRectangle::Translate(const i2d::CVector2d& delta)
 {
-	BeginChanges(s_objectPositionAllDataChangeSet);
+	istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, "Move object");
+	istd::CChangeNotifier changeNotifier(this, &changeSet);
+	Q_UNUSED(changeNotifier);
 
 	m_horizontalRange.SetMinValue(m_horizontalRange.GetMinValue() + delta.GetX());
 	m_verticalRange.SetMinValue(m_verticalRange.GetMinValue() + delta.GetY());
 	m_horizontalRange.SetMaxValue(m_horizontalRange.GetMaxValue() + delta.GetX());
 	m_verticalRange.SetMaxValue(m_verticalRange.GetMaxValue() + delta.GetY());
-
-	EndChanges(s_objectPositionAllDataChangeSet);
 }
 
 
@@ -558,15 +564,15 @@ void CRectangle::MoveCenterTo(const CVector2d& position)
 {
 	i2d::CVector2d offset = position - GetCenter();
 	if (offset != i2d::CVector2d(0, 0)){
-		BeginChanges(s_objectPositionChangeSet);
+		istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, "Move object");
+		istd::CChangeNotifier changeNotifier(this, &changeSet);
+		Q_UNUSED(changeNotifier);
 
 		m_verticalRange.SetMinValue(m_verticalRange.GetMinValue() + offset.GetY());
 		m_verticalRange.SetMaxValue(m_verticalRange.GetMaxValue() + offset.GetY());
 
 		m_horizontalRange.SetMinValue(m_horizontalRange.GetMinValue() + offset.GetX());
 		m_horizontalRange.SetMaxValue(m_horizontalRange.GetMaxValue() + offset.GetX());
-
-		EndChanges(s_objectPositionChangeSet);
 	}
 }
 
@@ -594,7 +600,9 @@ bool CRectangle::Transform(
 				transformation.GetPositionAt(rightBottom, transRightBottom, mode) &&
 				transformation.GetPositionAt(leftBottom, transLeftBottom, mode) &&
 				transformation.GetPositionAt(rightTop, transRightTop, mode)			){
-		BeginChanges(s_objectPositionAllDataChangeSet);
+		istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Modify object");
+		istd::CChangeNotifier changeNotifier(this, &changeSet);
+		Q_UNUSED(changeNotifier);
 		
 		if (errorFactorPtr != NULL){
 			*errorFactorPtr = 0;
@@ -611,8 +619,6 @@ bool CRectangle::Transform(
 
 		m_verticalRange = istd::CRange(ymin, ymax);
 		m_verticalRange.Validate();
-
-		EndChanges(s_objectPositionAllDataChangeSet);
 
 		return true;
 	}
@@ -634,7 +640,9 @@ bool CRectangle::InvTransform(
 
 	if (		transformation.GetInvPositionAt(leftTop, transLeftTop, mode) &&
 				transformation.GetInvPositionAt(rightBottom, transRightBottom, mode)){
-		BeginChanges(s_objectPositionAllDataChangeSet);
+		istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Modify object");
+		istd::CChangeNotifier changeNotifier(this, &changeSet);
+		Q_UNUSED(changeNotifier);
 		
 		if (errorFactorPtr != NULL){
 			*errorFactorPtr = 0;
@@ -645,8 +653,6 @@ bool CRectangle::InvTransform(
 
 		m_horizontalRange.Validate();
 		m_verticalRange.Validate();
-
-		EndChanges(s_objectPositionAllDataChangeSet);
 
 		return true;
 	}
@@ -698,14 +704,14 @@ bool CRectangle::CopyFrom(const IChangeable& object, CompatibilityMode mode)
 	const CRectangle* rectanglePtr = dynamic_cast<const CRectangle*>(&object);
 
 	if (rectanglePtr != NULL){
-		BeginChanges(GetAnyChange());
+		istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Modify object");
+		istd::CChangeNotifier changeNotifier(this, &changeSet);
+		Q_UNUSED(changeNotifier);
 
 		SetHorizontalRange(rectanglePtr->GetHorizontalRange());
 		SetVerticalRange(rectanglePtr->GetVerticalRange());
 
 		CObject2dBase::CopyFrom(object, mode);
-
-		EndChanges(GetAnyChange());
 
 		return true;
 	}
@@ -735,8 +741,8 @@ bool CRectangle::Serialize(iser::IArchive& archive)
 	static iser::CArchiveTag leftTag("Left", "Rectangle left edge position", iser::CArchiveTag::TT_LEAF);
 	static iser::CArchiveTag rightTag("Right", "Rectangle right edge position", iser::CArchiveTag::TT_LEAF);
 
-	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this, &GetAllChanges());
-	Q_UNUSED(notifier);
+	istd::CChangeNotifier changeNotifier(archive.IsStoring()? NULL: this, &GetAllChanges());
+	Q_UNUSED(changeNotifier);
 
 	double& top = m_verticalRange.GetMinValueRef();
 	double& bottom = m_verticalRange.GetMaxValueRef();

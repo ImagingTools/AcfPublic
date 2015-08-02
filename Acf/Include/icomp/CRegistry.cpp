@@ -86,7 +86,7 @@ IRegistry::ElementInfo* CRegistry::InsertElementInfo(
 		}
 	}
 
-	static const ChangeSet changeSet(CF_ELEMENT_ADDED, "Add element");
+	ChangeSet changeSet(CF_ELEMENT_ADDED, "Add element");
 	istd::CChangeNotifier notifier(this, &changeSet);
 	Q_UNUSED(notifier);
 
@@ -100,7 +100,7 @@ IRegistry::ElementInfo* CRegistry::InsertElementInfo(
 
 bool CRegistry::RemoveElementInfo(const QByteArray& elementId)
 {
-	static const ChangeSet changeSet(CF_ELEMENT_REMOVED, "Remove element");
+	ChangeSet changeSet(CF_ELEMENT_REMOVED, "Remove element");
 	istd::CChangeNotifier notifier(this, &changeSet);
 	Q_UNUSED(notifier);
 
@@ -279,7 +279,7 @@ bool CRegistry::RenameElement(const QByteArray& oldElementId, const QByteArray& 
 		return false;
 	}
 
-	static const ChangeSet changeSet(CF_ELEMENT_RENAMED, "Rename element");
+	ChangeSet changeSet(CF_ELEMENT_RENAMED, "Rename element");
 	istd::CChangeNotifier notifier(this, &changeSet);
 	Q_UNUSED(notifier);
 

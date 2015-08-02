@@ -138,7 +138,7 @@ http://ilena.org/redmine/projects/acf/wiki/ModelObserver-Tutorial
 	QString CPerson::SetFirstName(const QString& firstName)
 	{
 		if (m_firstName != firstName){
-			static const ChangeSet changeSet(CF_NAME_CHANGED, "Change first name");
+			ChangeSet changeSet(CF_NAME_CHANGED, "Change first name");
 			BeginChanges(changeSet);
 
 			m_firstName = firstName;
@@ -155,7 +155,7 @@ http://ilena.org/redmine/projects/acf/wiki/ModelObserver-Tutorial
 	QString CPerson::SetLastName(const QString& lastName)
 	{
 		if (m_lastName != lastName){
-			static const ChangeSet changeSet(CF_NAME_CHANGED, "Change last name");
+			ChangeSet changeSet(CF_NAME_CHANGED, "Change last name");
 			BeginChanges(changeSet);
 
 			m_lastName = lastName;
@@ -171,7 +171,7 @@ http://ilena.org/redmine/projects/acf/wiki/ModelObserver-Tutorial
 	QString CPerson::SetFirstName(const QString& firstName)
 	{
 		if (m_firstName != firstName){
-			static const ChangeSet changeSet(CF_NAME_CHANGED, "Change first name");
+			ChangeSet changeSet(CF_NAME_CHANGED, "Change first name");
 			istd::CChangeNotifier notifier(this, &changeSet);
 			Q_UNUSED(notifier);
 

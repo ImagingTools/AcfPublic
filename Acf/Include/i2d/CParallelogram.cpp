@@ -24,13 +24,15 @@
 
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
 #include "istd/TDelPtr.h"
+#include "istd/CChangeNotifier.h"
 
 
 namespace i2d
 {
 
+
+// public methods
 
 // reimplemented (i2d::IObject2d)
 
@@ -43,8 +45,9 @@ i2d::CVector2d CParallelogram::GetCenter() const
 void CParallelogram::MoveCenterTo(const i2d::CVector2d& position)
 {
 	if (m_transform.GetTranslation() != position){
-		istd::CChangeNotifier notifier(this, &s_objectPositionChangeSet);
-		Q_UNUSED(notifier);
+		ChangeSet changeSet(CF_OBJECT_POSITION, "Move object");
+		istd::CChangeNotifier changeNotifier(this, &changeSet);
+		Q_UNUSED(changeNotifier);
 
 		m_transform.SetTranslation(position);
 	}
@@ -62,8 +65,9 @@ bool CParallelogram::Transform(
 {
 	i2d::CAffine2d localTransform;
 	if (transformation.GetLocalTransform(GetCenter(), localTransform, mode)){
-		istd::CChangeNotifier notifier(this, &s_objectPositionAllDataChangeSet);
-		Q_UNUSED(notifier);
+		istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Modify object");
+		istd::CChangeNotifier changeNotifier(this, &changeSet);
+		Q_UNUSED(changeNotifier);
 
 		m_transform.Apply(localTransform);
 
@@ -81,8 +85,9 @@ bool CParallelogram::InvTransform(
 {
 	i2d::CAffine2d localTransform;
 	if (transformation.GetLocalInvTransform(GetCenter(), localTransform, mode)){
-		istd::CChangeNotifier notifier(this, &s_objectPositionAllDataChangeSet);
-		Q_UNUSED(notifier);
+		istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Modify object");
+		istd::CChangeNotifier changeNotifier(this, &changeSet);
+		Q_UNUSED(changeNotifier);
 
 		m_transform.Apply(localTransform);
 
@@ -101,8 +106,9 @@ bool CParallelogram::GetTransformed(
 {
 	CParallelogram* parallelogramPtr = dynamic_cast<CParallelogram*>(&result);
 	if (parallelogramPtr != NULL){
-		istd::CChangeNotifier notifier(parallelogramPtr, &s_objectPositionAllDataChangeSet);
-		Q_UNUSED(notifier);
+		istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Modify object");
+		istd::CChangeNotifier changeNotifier(parallelogramPtr, &changeSet);
+		Q_UNUSED(changeNotifier);
 
 		return parallelogramPtr->Transform(transformation, mode, errorFactorPtr);
 	}
@@ -119,8 +125,9 @@ bool CParallelogram::GetInvTransformed(
 {
 	CParallelogram* parallelogramPtr = dynamic_cast<CParallelogram*>(&result);
 	if (parallelogramPtr != NULL){
-		istd::CChangeNotifier notifier(parallelogramPtr, &s_objectPositionAllDataChangeSet);
-		Q_UNUSED(notifier);
+		istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Modify object");
+		istd::CChangeNotifier changeNotifier(parallelogramPtr, &changeSet);
+		Q_UNUSED(changeNotifier);
 
 		return parallelogramPtr->InvTransform(transformation, mode, errorFactorPtr);
 	}
@@ -142,7 +149,9 @@ bool CParallelogram::CopyFrom(const IChangeable& object, CompatibilityMode mode)
 	const CParallelogram* parallelogramPtr = dynamic_cast<const CParallelogram*>(&object);
 
 	if (parallelogramPtr != NULL){
-		istd::CChangeNotifier notifier(this);
+		istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Modify object");
+		istd::CChangeNotifier changeNotifier(this, &changeSet);
+		Q_UNUSED(changeNotifier);
 		
 		SetTransform(parallelogramPtr->GetTransform());
 

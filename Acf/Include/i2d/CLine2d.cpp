@@ -24,11 +24,10 @@
 
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
 #include "istd/TDelPtr.h"
+#include "istd/CChangeNotifier.h"
 #include "iser/IArchive.h"
 #include "iser/CArchiveTag.h"
-
 #include "i2d/CRectangle.h"
 
 
@@ -62,11 +61,10 @@ CLine2d::CLine2d(double x1, double y1, double x2, double y2)
 void CLine2d::SetPoint1(const CVector2d& point)
 {
 	if (point != m_point1){
-		BeginChanges(GetAnyChange());
+		istd::CChangeNotifier changeNotifier(this);
+		Q_UNUSED(changeNotifier);
 
 		m_point1 = point;
-
-		EndChanges(GetAnyChange());
 	}
 }
 
@@ -74,11 +72,10 @@ void CLine2d::SetPoint1(const CVector2d& point)
 void CLine2d::SetPoint2(const CVector2d& point)
 {
 	if (point != m_point2){
-		BeginChanges(GetAnyChange());
+		istd::CChangeNotifier changeNotifier(this);
+		Q_UNUSED(changeNotifier);
 
 		m_point2 = point;
-
-		EndChanges(GetAnyChange());
 	}
 }
 
@@ -518,12 +515,11 @@ void CLine2d::MoveCenterTo(const CVector2d& position)
 	i2d::CVector2d offset = position - GetCenter();
 
 	if (offset != i2d::CVector2d(0, 0)){
-		BeginChanges(s_objectPositionChangeSet);
+		ChangeSet changeSet(CF_OBJECT_POSITION, "Move object");
+		istd::CChangeNotifier changeNotifier(this, &changeSet);
 
 		SetPoint1(GetPoint1() + offset);
 		SetPoint2(GetPoint2() + offset);
-
-		EndChanges(s_objectPositionChangeSet);
 	}
 }
 
@@ -567,12 +563,11 @@ bool CLine2d::Transform(
 		}
 	}
 
-    BeginChanges(s_objectPositionChangeSet);
+	ChangeSet changeSet(CF_OBJECT_POSITION, "Move object");
+	istd::CChangeNotifier changeNotifier(this, &changeSet);
 
 	m_point1 = transPos1;
 	m_point2 = transPos2;
-
-    EndChanges(s_objectPositionChangeSet);
 
 	return true;
 }
@@ -606,12 +601,11 @@ bool CLine2d::InvTransform(
 		}
 	}
 
-	BeginChanges(s_objectPositionChangeSet);
+	ChangeSet changeSet(CF_OBJECT_POSITION, "Move object");
+	istd::CChangeNotifier changeNotifier(this, &changeSet);
 
 	m_point1 = transPos1;
 	m_point2 = transPos2;
-
-	EndChanges(s_objectPositionChangeSet);
 
 	return true;
 }
@@ -651,12 +645,11 @@ bool CLine2d::GetTransformed(
 		}
 	}
 
-	resultLinePtr->BeginChanges(s_objectPositionChangeSet);
+	ChangeSet changeSet(CF_OBJECT_POSITION, "Move object");
+	istd::CChangeNotifier changeNotifier(resultLinePtr, &changeSet);
 
 	resultLinePtr->SetPoint1(transPos1);
 	resultLinePtr->SetPoint2(transPos2);
-
-	resultLinePtr->EndChanges(s_objectPositionChangeSet);
 
 	return true;
 }
@@ -696,12 +689,11 @@ bool CLine2d::GetInvTransformed(
 		}
 	}
 
-	resultLinePtr->BeginChanges(s_objectPositionChangeSet);
+	ChangeSet changeSet(CF_OBJECT_POSITION, "Move object");
+	istd::CChangeNotifier changeNotifier(resultLinePtr, &changeSet);
 
 	resultLinePtr->SetPoint1(transPos1);
 	resultLinePtr->SetPoint2(transPos2);
-
-    resultLinePtr->EndChanges(s_objectPositionChangeSet);
 
 	return true;
 }
@@ -720,14 +712,13 @@ bool CLine2d::CopyFrom(const IChangeable& object, CompatibilityMode mode)
 	const CLine2d* line2dPtr = dynamic_cast<const CLine2d*>(&object);
 
 	if (line2dPtr != NULL){
-		BeginChanges(s_objectPositionChangeSet);
-		
+		ChangeSet changeSet(CF_OBJECT_POSITION, "Move object");
+		istd::CChangeNotifier changeNotifier(this, &changeSet);
+			
 		SetPoint1(line2dPtr->GetPoint1());
 		SetPoint2(line2dPtr->GetPoint2());
 
 		CObject2dBase::CopyFrom(object, mode);
-
-		EndChanges(s_objectPositionChangeSet);
 
 		return true;
 	}

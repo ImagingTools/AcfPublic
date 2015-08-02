@@ -117,7 +117,7 @@ const ItemClass& TContainer<ItemClass, ContainerType>::GetAt(int index) const
 template <typename ItemClass, typename ContainerType>
 ItemClass& TContainer<ItemClass, ContainerType>::PushBack(const ItemClass& item)
 {
-	static const ChangeSet changeSet(CF_ELEMENT_ADDED);
+	ChangeSet changeSet(CF_ELEMENT_ADDED);
 	istd::CChangeNotifier notifier(this, &changeSet);
 	Q_UNUSED(notifier);
 
@@ -130,7 +130,7 @@ ItemClass& TContainer<ItemClass, ContainerType>::PushBack(const ItemClass& item)
 template <typename ItemClass, typename ContainerType>
 ItemClass& TContainer<ItemClass, ContainerType>::PushFront(const ItemClass& item)
 {
-	static const ChangeSet changeSet(CF_ELEMENT_ADDED);
+	ChangeSet changeSet(CF_ELEMENT_ADDED);
 	istd::CChangeNotifier notifier(this, &changeSet);
 	Q_UNUSED(notifier);
 
@@ -143,7 +143,7 @@ ItemClass& TContainer<ItemClass, ContainerType>::PushFront(const ItemClass& item
 template <typename ItemClass, typename ContainerType>
 ItemClass& TContainer<ItemClass, ContainerType>::InsertAt(const ItemClass& item, int index)
 {
-	static const ChangeSet changeSet(CF_ELEMENT_ADDED);
+	ChangeSet changeSet(CF_ELEMENT_ADDED);
 	istd::CChangeNotifier notifier(this, &changeSet);
 	Q_UNUSED(notifier);
 
@@ -163,7 +163,7 @@ ItemClass& TContainer<ItemClass, ContainerType>::InsertAt(const ItemClass& item,
 template <typename ItemClass, typename ContainerType>
 void TContainer<ItemClass, ContainerType>::PopBack()
 {
-	static const ChangeSet changeSet(CF_ELEMENT_REMOVED);
+	ChangeSet changeSet(CF_ELEMENT_REMOVED);
 	istd::CChangeNotifier notifier(this, &changeSet);
 	Q_UNUSED(notifier);
 
@@ -174,7 +174,7 @@ void TContainer<ItemClass, ContainerType>::PopBack()
 template <typename ItemClass, typename ContainerType>
 void TContainer<ItemClass, ContainerType>::PopFront()
 {
-	static const ChangeSet changeSet(CF_ELEMENT_REMOVED);
+	ChangeSet changeSet(CF_ELEMENT_REMOVED);
 	istd::CChangeNotifier notifier(this, &changeSet);
 	Q_UNUSED(notifier);
 
@@ -189,7 +189,7 @@ void TContainer<ItemClass, ContainerType>::RemoveAt(int index)
 	Q_ASSERT(index < int(m_items.size()));
 
 	if (index < int(m_items.size())){
-		static const ChangeSet changeSet(CF_ELEMENT_REMOVED);
+		ChangeSet changeSet(CF_ELEMENT_REMOVED);
 		istd::CChangeNotifier notifier(this, &changeSet);
 		Q_UNUSED(notifier);
 	
@@ -201,7 +201,7 @@ void TContainer<ItemClass, ContainerType>::RemoveAt(int index)
 template <typename ItemClass, typename ContainerType>
 void TContainer<ItemClass, ContainerType>::Reset()
 {
-	static const ChangeSet changeSet(CF_RESET, CF_ALL_DATA);
+	ChangeSet changeSet(CF_RESET, CF_ALL_DATA);
 	istd::CChangeNotifier notifier(this, &changeSet);
 	Q_UNUSED(notifier);
 

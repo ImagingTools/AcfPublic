@@ -8143,20 +8143,6 @@
       <anchor>ac52dc2bacd2db9e64c8f164987e29ba2</anchor>
       <arglist></arglist>
     </member>
-    <member kind="variable" protection="protected" static="yes">
-      <type>static const ChangeSet</type>
-      <name>s_objectPositionChangeSet</name>
-      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
-      <anchor>aedb5c0bd4e2429a30098a28c5bd036e0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected" static="yes">
-      <type>static const ChangeSet</type>
-      <name>s_objectPositionAllDataChangeSet</name>
-      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
-      <anchor>ae17c14fe02d7a595ceb20d981700ccb4</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>i2d::CAnnulusComp</name>
@@ -34533,13 +34519,6 @@
       <name>m_parentPtr</name>
       <anchorfile>classistd_1_1_t_hierarchical_base.html</anchorfile>
       <anchor>ad3713733bfce4d91e896080a3e962428</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected" static="yes">
-      <type>static const ChangeSet</type>
-      <name>s_addMessageChangeSet</name>
-      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
-      <anchor>a6d09e97a4b57aabb857bfc5c89bc1616</anchor>
       <arglist></arglist>
     </member>
   </compound>

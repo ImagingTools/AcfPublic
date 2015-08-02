@@ -107,7 +107,7 @@ void CSceneConnectorGuiComp::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
-	static const ChangeSet commandsChangeSet(ibase::ICommandsProvider::CF_COMMANDS);
+	ChangeSet commandsChangeSet(ibase::ICommandsProvider::CF_COMMANDS);
 	istd::CChangeNotifier commandsNotifier(this, &commandsChangeSet);
 	Q_UNUSED(commandsNotifier);
 
@@ -129,7 +129,7 @@ void CSceneConnectorGuiComp::OnComponentCreated()
 
 void CSceneConnectorGuiComp::OnComponentDestroyed()
 {
-	static const ChangeSet commandsChangeSet(ibase::ICommandsProvider::CF_COMMANDS);
+	ChangeSet commandsChangeSet(ibase::ICommandsProvider::CF_COMMANDS);
 	istd::CChangeNotifier commandsNotifier(this, &commandsChangeSet);
 	Q_UNUSED(commandsNotifier);
 

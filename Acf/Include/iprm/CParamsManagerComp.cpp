@@ -47,7 +47,7 @@ bool CParamsManagerComp::SetSetsCount(int count)
 			return false;
 		}
 
-		static const ChangeSet changeSet(CF_OPTIONS_CHANGED);
+		ChangeSet changeSet(CF_OPTIONS_CHANGED);
 		istd::CChangeNotifier notifier(this, &changeSet);
 		Q_UNUSED(notifier);
 
@@ -70,7 +70,7 @@ bool CParamsManagerComp::SetSetsCount(int count)
 					return false;
 				}
 
-				static const ChangeSet changeSet(CF_OPTIONS_CHANGED);
+				ChangeSet changeSet(CF_OPTIONS_CHANGED);
 				istd::CChangeNotifier notifier(this, &changeSet);
 				Q_UNUSED(notifier);
 
@@ -250,7 +250,7 @@ bool CParamsManagerComp::SetOptionEnabled(int index, bool isEnabled)
 	}
 
 	if (m_paramSets[index - fixedSetsCount]->isEnabled != isEnabled){
-		static const ChangeSet changeSet(CF_SET_ENABLE_CHANGED);
+		ChangeSet changeSet(CF_SET_ENABLE_CHANGED);
 		istd::CChangeNotifier notifier(this, &changeSet);
 		Q_UNUSED(notifier);
 

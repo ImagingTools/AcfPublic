@@ -235,7 +235,7 @@ bool COptionsManager::SetOptionEnabled(int index, bool isEnabled)
 
 	Q_ASSERT(index < m_options.size());
 	if (m_options[index].isEnabled != isEnabled){
-		static const ChangeSet changeSet(CF_OPTIONS_CHANGED);
+		ChangeSet changeSet(CF_OPTIONS_CHANGED);
 		istd::CChangeNotifier notifier(this, &changeSet);
 		Q_UNUSED(notifier);
 
@@ -261,7 +261,7 @@ bool COptionsManager::RemoveOption(int index)
 		index -= fixedOptionsCount;
 	}
 
-	static const ChangeSet changeSet(CF_OPTIONS_CHANGED, CF_OPTION_REMOVED);
+	ChangeSet changeSet(CF_OPTIONS_CHANGED, CF_OPTION_REMOVED);
 	istd::CChangeNotifier notifier(this, &changeSet);
 	Q_UNUSED(notifier);
 
@@ -286,7 +286,7 @@ bool COptionsManager::InsertOption(
 	OptionInfo optionInfo(optionName, realOptionId, optionDescription);
 
 	if (index < 0 || index >= int(m_options.size())){
-		static const ChangeSet changeSet(CF_OPTIONS_CHANGED, CF_OPTION_ADDED);
+		ChangeSet changeSet(CF_OPTIONS_CHANGED, CF_OPTION_ADDED);
 		istd::CChangeNotifier notifier(this, &changeSet);
 		Q_UNUSED(notifier);
 
@@ -303,7 +303,7 @@ bool COptionsManager::InsertOption(
 			index -= fixedOptionsCount;
 		}
 
-		static const ChangeSet changeSet(CF_OPTIONS_CHANGED, CF_OPTION_ADDED);
+		ChangeSet changeSet(CF_OPTIONS_CHANGED, CF_OPTION_ADDED);
 		istd::CChangeNotifier notifier(this, &changeSet);
 		Q_UNUSED(notifier);
 
@@ -336,7 +336,7 @@ bool COptionsManager::SwapOptions(int index1, int index2)
 	Q_ASSERT(index2 < m_options.size());
 
 	if (index1 != index2){
-		static const ChangeSet changeSet(CF_OPTIONS_CHANGED);
+		ChangeSet changeSet(CF_OPTIONS_CHANGED);
 		istd::CChangeNotifier notifier(this, &changeSet);
 		Q_UNUSED(notifier);
 
@@ -366,7 +366,7 @@ bool COptionsManager::SetOptionName(int index, const QString& optionName)
 
 	Q_ASSERT(index < m_options.size());
 	if (m_options[index].optionName != optionName){
-		static const ChangeSet changeSet(CF_OPTION_RENAMED);
+		ChangeSet changeSet(CF_OPTION_RENAMED);
 		istd::CChangeNotifier notifier(this, &changeSet);
 		Q_UNUSED(notifier);
 
@@ -394,7 +394,7 @@ bool COptionsManager::SetOptionDescription(int index, const QString& optionDescr
 
 	Q_ASSERT(index < m_options.size());
 	if (m_options[index].optionDescription != optionDescription){
-		static const ChangeSet changeSet(CF_OPTIONS_CHANGED);
+		ChangeSet changeSet(CF_OPTIONS_CHANGED);
 		istd::CChangeNotifier notifier(this, &changeSet);
 		Q_UNUSED(notifier);
 

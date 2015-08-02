@@ -51,11 +51,10 @@ CCircle::CCircle(double radius, const CVector2d& center)
 void CCircle::SetRadius(double radius)
 {
 	if (radius != m_radius){
-		BeginChanges(GetAnyChange());
+		istd::CChangeNotifier changeNotifier(this);
+		Q_UNUSED(changeNotifier);
 
 		m_radius = radius;
-
-		EndChanges(GetAnyChange());
 	}
 }
 
@@ -220,7 +219,8 @@ bool CCircle::Transform(
 		return false;
 	}
 
-	BeginChanges(GetAnyChange());
+	istd::CChangeNotifier changeNotifier(this);
+	Q_UNUSED(changeNotifier);
 
 	double scale = affine.GetDeformMatrix().GetApproxScale();
 
@@ -230,8 +230,6 @@ bool CCircle::Transform(
 	if (errorFactorPtr != NULL){
 		*errorFactorPtr = 0;
 	}
-
-	EndChanges(GetAnyChange());
 
 	return true;
 }
@@ -252,7 +250,8 @@ bool CCircle::InvTransform(
 		return false;
 	}
 
-	BeginChanges(GetAnyChange());
+	istd::CChangeNotifier changeNotifier(this);
+	Q_UNUSED(changeNotifier);
 
 	double scale = affine.GetDeformMatrix().GetApproxScale();
 
@@ -262,8 +261,6 @@ bool CCircle::InvTransform(
 	if (errorFactorPtr != NULL){
 		*errorFactorPtr = 0;
 	}
-
-	EndChanges(GetAnyChange());
 
 	return true;
 }
@@ -280,16 +277,13 @@ bool CCircle::GetTransformed(
 		return false;
 	}
 
-	circlePtr->BeginChanges(GetAnyChange());
+	istd::CChangeNotifier changeNotifier(circlePtr);
+	Q_UNUSED(changeNotifier);
 
 	circlePtr->SetPosition(m_position);
 	circlePtr->SetRadius(m_radius);
 
-	bool retVal = circlePtr->Transform(transformation, mode, errorFactorPtr);
-
-	circlePtr->EndChanges(GetAnyChange());
-
-	return retVal;
+	return circlePtr->Transform(transformation, mode, errorFactorPtr);
 }
 
 
@@ -304,16 +298,13 @@ bool CCircle::GetInvTransformed(
 		return false;
 	}
 
-	circlePtr->BeginChanges(GetAnyChange());
+	istd::CChangeNotifier changeNotifier(circlePtr);
+	Q_UNUSED(changeNotifier);
 
 	circlePtr->SetPosition(m_position);
 	circlePtr->SetRadius(m_radius);
 
-	bool retVal = circlePtr->InvTransform(transformation, mode, errorFactorPtr);
-
-	circlePtr->EndChanges(GetAnyChange());
-
-	return retVal;
+	return circlePtr->InvTransform(transformation, mode, errorFactorPtr);
 }
 
 
@@ -330,14 +321,13 @@ bool CCircle::CopyFrom(const IChangeable& object, CompatibilityMode mode)
 	const CCircle* circlePtr = dynamic_cast<const CCircle*>(&object);
 
 	if (circlePtr != NULL){
-		BeginChanges(GetAnyChange());
+		istd::CChangeNotifier changeNotifier(this);
+		Q_UNUSED(changeNotifier);
 		
 		SetPosition(circlePtr->GetPosition());
 		SetRadius(circlePtr->GetRadius());
 
 		CObject2dBase::CopyFrom(object, mode);
-
-		EndChanges(GetAnyChange());
 
 		return true;
 	}
