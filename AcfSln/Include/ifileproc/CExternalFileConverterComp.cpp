@@ -41,7 +41,7 @@ namespace ifileproc
 
 int CExternalFileConverterComp::ConvertFiles(
 			const QString& inputPath,
-			const QString& outputPath,
+			QString& outputPath,
 			const iprm::IParamsSet* paramsSetPtr,
 			ibase::IProgressManager* /*progressManagerPtr*/) const
 {
@@ -167,6 +167,7 @@ void CExternalFileConverterComp::OnReadyReadStandardOutput()
 
 	SendInfoMessage(0, standardOutput);
 }
+
 
 
 } // namespace ifileproc

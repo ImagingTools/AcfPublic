@@ -37,7 +37,7 @@ namespace ifileproc
 
 int CFileConvertOverProcessorComp::ConvertFiles(
 			const QString& inputPath,
-			const QString& outputPath,
+			QString& outputPath,
 			const iprm::IParamsSet* paramsSetPtr,
 			ibase::IProgressManager* progressManagerPtr) const
 {

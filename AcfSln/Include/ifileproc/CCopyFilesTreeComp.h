@@ -29,8 +29,10 @@
 #include <QtCore/QDir>
 
 // ACF includes
-#include "ifileproc/IFileConversion.h"
 #include "ilog/TLoggerCompWrap.h"
+
+// ACF-Solutions includes
+#include "ifileproc/IFileConversion.h"
 
 
 namespace ifileproc
@@ -42,12 +44,9 @@ namespace ifileproc
 	This component is part of installation concept. It is designed to use it as free component.
 */
 class CCopyFilesTreeComp:
-			public QObject,
 			public ilog::CLoggerComponentBase,
 			virtual public ifileproc::IFileConversion
 {
-	Q_OBJECT
-
 public:
 	typedef ilog::CLoggerComponentBase BaseClass;
 
@@ -71,7 +70,7 @@ public:
 	// reimplemented (ifileproc::IFileConversion)
 	virtual int ConvertFiles(
 				const QString& inputPath,
-				const QString& outputPath,
+				QString& outputPath,
 				const iprm::IParamsSet* paramsPtr = NULL,
 				ibase::IProgressManager* progressManagerPtr = NULL) const;
 

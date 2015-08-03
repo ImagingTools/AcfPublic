@@ -27,15 +27,12 @@
 // Qt includes
 #include <QtCore/QString>
 
-
 // ACF includes
-#include <QtCore/QString>
-
 #include "ibase/IApplicationInfo.h"
 #include "ilog/TLoggerCompWrap.h"
-#include "ifileproc/IFileConversion.h"
 
-#include "ifileproc/ifileproc.h"
+// ACF-Solutions includes
+#include "ifileproc/IFileConversion.h"
 
 
 namespace ifileproc
@@ -88,7 +85,7 @@ public:
 	// reimplemented (ifileproc::IFileConversion)
 	virtual int ConvertFiles(
 				const QString& inputPath,
-				const QString& outputPath,
+				QString& outputPath,
 				const iprm::IParamsSet* paramsPtr = NULL,
 				ibase::IProgressManager* progressManagerPtr = NULL) const;
 

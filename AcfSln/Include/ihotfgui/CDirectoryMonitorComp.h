@@ -77,6 +77,7 @@ public:
 	CDirectoryMonitorComp();
 
 	// reimplemented (ihotf::IDirectoryMonitor)
+	virtual bool IsRunning() const;
 	virtual bool StartObserving(const iprm::IParamsSet* paramsSetPtr = NULL);
 	virtual void StopObserving();
 

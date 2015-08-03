@@ -759,8 +759,8 @@
     <name>CFileConvertOverProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_file_convert_over_processor_comp_8h</filename>
-    <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
     <class kind="class">ifileproc::CFileConvertOverProcessorComp</class>
     <namespace>ifileproc</namespace>
   </compound>
@@ -777,7 +777,6 @@
     <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_file_info_copy_comp_8h</filename>
     <includes id="_i_file_conversion_8h" name="IFileConversion.h" local="yes" imported="no">ifileproc/IFileConversion.h</includes>
-    <includes id="ifileproc_8h" name="ifileproc.h" local="yes" imported="no">ifileproc/ifileproc.h</includes>
     <class kind="class">ifileproc::CFileInfoCopyComp</class>
     <namespace>ifileproc</namespace>
   </compound>
@@ -12698,8 +12697,8 @@
       <type>virtual int</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_composed_copy_files_comp.html</anchorfile>
-      <anchor>ad5cec548b25e9fbb6cc44e6353f7f2fd</anchor>
-      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
+      <anchor>a693ed11e35bb2f7badf820ce6b5c58a2</anchor>
+      <arglist>(const QString &amp;inputPath, QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12787,8 +12786,8 @@
       <type>virtual int</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_copy_files_tree_comp.html</anchorfile>
-      <anchor>a4fb8ef10ecbbec5bd29d87fbe26ccdc0</anchor>
-      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
+      <anchor>aff6f56213cbeb4e60e5ce4cd1bba5721</anchor>
+      <arglist>(const QString &amp;inputPath, QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -12828,8 +12827,8 @@
       <type>virtual int</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_external_file_converter_comp.html</anchorfile>
-      <anchor>a6e2b61b35ce8c1327f8550ec8106061f</anchor>
-      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
+      <anchor>a95b9a4d9eaaae60ae842e6ce843e1173</anchor>
+      <arglist>(const QString &amp;inputPath, QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -12855,8 +12854,8 @@
       <type>virtual int</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_file_convert_over_processor_comp.html</anchorfile>
-      <anchor>ab687a4d1c880d1cb6597eeeb3513875a</anchor>
-      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
+      <anchor>a3500c08971398e43a824a871f185b8d4</anchor>
+      <arglist>(const QString &amp;inputPath, QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12875,8 +12874,8 @@
       <type>virtual int</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_file_copy_over_loader_comp.html</anchorfile>
-      <anchor>a2c7ee1fd09286229cc5f9d94a34333d2</anchor>
-      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
+      <anchor>a9622d2a4feba50fadef56131e1d77416</anchor>
+      <arglist>(const QString &amp;inputPath, QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12937,8 +12936,8 @@
       <type>virtual int</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_file_info_copy_comp.html</anchorfile>
-      <anchor>a7c90db51faf8f142478fd44140230ece</anchor>
-      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
+      <anchor>ad8628e82e4d84887c848945e5e575ced</anchor>
+      <arglist>(const QString &amp;inputPath, QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -13154,8 +13153,8 @@
       <type>virtual int</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_processing_results_review_comp.html</anchorfile>
-      <anchor>a6e962a5794f926744d2642acdb8b1e4a</anchor>
-      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
+      <anchor>a6e2fe403d558814c83287c6d4876f345</anchor>
+      <arglist>(const QString &amp;inputPath, QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -13246,8 +13245,8 @@
       <type>virtual int</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_c_selectable_file_converter_comp.html</anchorfile>
-      <anchor>aa1d85871a99c7f6a54903602bae52e78</anchor>
-      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
+      <anchor>aa9a6f8088197852426dad8ea6c2d13ae</anchor>
+      <arglist>(const QString &amp;inputPath, QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IOptionsList *</type>
@@ -13342,8 +13341,8 @@
       <type>virtual int</type>
       <name>ConvertFiles</name>
       <anchorfile>classifileproc_1_1_i_file_conversion.html</anchorfile>
-      <anchor>acd185582d8341405ad2891be60f4ce1e</anchor>
-      <arglist>(const QString &amp;inputPath, const QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const =0</arglist>
+      <anchor>a329053d71db65ecba24b7e5819eec1d2</anchor>
+      <arglist>(const QString &amp;inputPath, QString &amp;outputPath, const iprm::IParamsSet *paramsPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -14162,6 +14161,13 @@
     <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
+      <name>IsRunning</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor.html</anchorfile>
+      <anchor>a5f84f59dd69ce82c464dca6d64ddf827</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
       <name>StartObserving</name>
       <anchorfile>classihotf_1_1_i_directory_monitor.html</anchorfile>
       <anchor>a078a128b76defee3d300fb98ea4be56c</anchor>
@@ -14669,6 +14675,13 @@
       <anchorfile>classihotfgui_1_1_c_directory_monitor_comp.html</anchorfile>
       <anchor>a2741ecbed1c7043af72a998401c25718</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsRunning</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_comp.html</anchorfile>
+      <anchor>a25054e6e8b33a022d8d83d7c440ee911</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>

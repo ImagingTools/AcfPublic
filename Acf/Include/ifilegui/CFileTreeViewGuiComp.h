@@ -155,7 +155,6 @@ private:
 		return &component.m_currentFile;
 	}
 
-
 	class InternalThread: public QThread
 	{
 	public:

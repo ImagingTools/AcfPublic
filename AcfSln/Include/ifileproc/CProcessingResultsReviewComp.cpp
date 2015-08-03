@@ -54,7 +54,7 @@ namespace
 
 int CProcessingResultsReviewComp::ConvertFiles(
 			const QString& inputPath,
-			const QString& outputPath,
+			QString& outputPath,
 			const iprm::IParamsSet* /*paramsPtr*/,
 			ibase::IProgressManager* progressManagerPtr) const
 {

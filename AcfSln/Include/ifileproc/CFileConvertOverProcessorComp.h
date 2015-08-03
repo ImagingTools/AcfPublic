@@ -29,14 +29,13 @@
 
 // ACF includes
 #include "istd/TSmartPtr.h"
-
 #include "ifile/IFilePersistence.h"
-
-#include "ifileproc/IFileConversion.h"
 #include "ilog/TLoggerCompWrap.h"
-
 #include "ibase/IProgressManager.h"
+
+// ACF-Solutions includes
 #include "iproc/IProcessor.h"
+#include "ifileproc/IFileConversion.h"
 
 
 namespace ifileproc
@@ -67,7 +66,7 @@ public:
 	// reimplemented (ifileproc::IFileConversion)
 	virtual int ConvertFiles(
 				const QString& inputPath,
-				const QString& outputPath,
+				QString& outputPath,
 				const iprm::IParamsSet* paramsPtr = NULL,
 				ibase::IProgressManager* progressManagerPtr = NULL) const;
 

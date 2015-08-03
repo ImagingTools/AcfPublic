@@ -36,7 +36,7 @@ namespace ifileproc
 
 int CFileCopyOverLoaderComp::ConvertFiles(
 			const QString& inputPath,
-			const QString& outputPath,
+			QString& outputPath,
 			const iprm::IParamsSet* /*paramsSetPtr*/,
 			ibase::IProgressManager* /*progressManagerPtr*/) const
 {
@@ -62,7 +62,7 @@ int CFileCopyOverLoaderComp::ConvertFiles(
 
 	if (usedOutputPath.isEmpty()){
 		QStringList extensions;
-		m_outputLoaderCompPtr->GetFileExtensions(extensions, m_objectCompPtr.GetPtr(), ifile::IFileTypeInfo::QF_SAVE);
+		m_outputLoaderCompPtr->GetFileExtensions(extensions);
 
 		if (extensions.isEmpty()){
 			SendErrorMessage(0, "File extension list is empty", "FileCopyOverLoader");

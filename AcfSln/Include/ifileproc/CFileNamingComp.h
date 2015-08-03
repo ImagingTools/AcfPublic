@@ -26,13 +26,10 @@
 
 // ACF includes
 #include "ifile/IFilePersistence.h"
-
 #include "ilog/TLoggerCompWrap.h"
-
 #include "ifile/IFileNameParam.h"
 
-
-// AcfSln includes
+// ACF-Solutions includes
 #include "ifileproc/IFileNaming.h"
 #include "ifileproc/IFileNamingParams.h"
 
@@ -55,7 +52,7 @@ public:
 	I_BEGIN_COMPONENT(CFileNamingComp);
 		I_REGISTER_INTERFACE(ifileproc::IFileNaming);
 		I_ASSIGN(m_fileTypeInfoCompPtr, "OutputFileInfo", "Output file info, which will be used for file name calculation", false, "OutputFileInfo");
-		I_ASSIGN(m_directoryPathCompPtr, "DirectoryPath", "Default output directory path", false, "DirectoryPath"); 
+		I_ASSIGN(m_directoryPathCompPtr, "DirectoryPath", "Default path of the output directory", false, "DirectoryPath"); 
 		I_ASSIGN(m_fileNamingParamsCompPtr, "FileNamingParams", "Rules for the file naming", false, "FileNamingParams"); 
 	I_END_COMPONENT;
 

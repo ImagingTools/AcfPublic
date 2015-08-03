@@ -24,11 +24,7 @@
 
 
 // Qt includes
-#include <QtCore/QRegExp>
-
-
-// ACF includes
-#include "istd/CSystem.h"
+#include <QtCore/QObject>
 
 
 namespace ifileproc
@@ -39,7 +35,7 @@ namespace ifileproc
 
 int CComposedCopyFilesComp::ConvertFiles(
 			const QString& inputPath,
-			const QString& outputPath,
+			QString& outputPath,
 			const iprm::IParamsSet* paramsPtr,
 			ibase::IProgressManager* /*progressManagerPtr*/) const
 {
@@ -52,7 +48,7 @@ int CComposedCopyFilesComp::ConvertFiles(
 			retVal = qMax(retVal, copierPtr->ConvertFiles(inputPath, outputPath, paramsPtr));
 		}
 		else{
-			SendErrorMessage(MI_CRITICAL, tr("File copy provider is not present"));
+			SendErrorMessage(MI_CRITICAL, QObject::tr("File copy provider is not present"));
 
 			return iproc::IProcessor::TS_INVALID;
 		}
