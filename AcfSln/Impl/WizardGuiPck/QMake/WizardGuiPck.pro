@@ -1,9 +1,9 @@
-include($(ACFCONFIGDIR)/QMake/ComponentConfig.pri)
-include($(ACFCONFIGDIR)/QMake/QtBaseConfig.pri)
+include(../../../../Acf/Config/QMake/ComponentConfig.pri)
+include(../../../../Acf/Config/QMake/QtBaseConfig.pri)
 
 TARGET = WizardGuiPck
 
-LIBS += -L../../../Lib/$$COMPILER_DIR -liwizgui
+LIBS += -L../../../Lib/$COMPILER_DIR -liwizgui
 
-include($(ACFCONFIGDIR)/QMake/AcfQt.pri)
-include($(ACFCONFIGDIR)/QMake/AcfStd.pri)
+include(../../../../Acf/Config/QMake/AcfQt.pri)
+include(../../../../Acf/Config/QMake/AcfStd.pri)

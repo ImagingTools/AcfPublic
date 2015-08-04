@@ -1,9 +1,9 @@
 TARGET = InspectionPck
 
-include($(ACFCONFIGDIR)/QMake/ComponentConfig.pri)
-include($(ACFCONFIGDIR)/QMake/QtBaseConfig.pri)
+include(../../../../Acf/Config/QMake/ComponentConfig.pri)
+include(../../../../Acf/Config/QMake/QtBaseConfig.pri)
 
-LIBS += -L../../../Lib/$$COMPILER_DIR -liinsp
+LIBS += -L../../../Lib/$COMPILER_DIR -liinsp
 
-include($(ACFCONFIGDIR)/QMake/AcfQt.pri)
-include($(ACFCONFIGDIR)/QMake/AcfStd.pri)
+include(../../../../Acf/Config/QMake/AcfQt.pri)
+include(../../../../Acf/Config/QMake/AcfStd.pri)

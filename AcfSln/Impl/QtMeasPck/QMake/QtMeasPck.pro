@@ -1,9 +1,9 @@
-include($(ACFCONFIGDIR)/QMake/ComponentConfig.pri)
-include($(ACFCONFIGDIR)/QMake/QtBaseConfig.pri)
+include(../../../../Acf/Config/QMake/ComponentConfig.pri)
+include(../../../../Acf/Config/QMake/QtBaseConfig.pri)
 
 TARGET = QtMeasPck
 
-LIBS += -L../../../Lib/$$COMPILER_DIR -liqtmeas -limeas
+LIBS += -L../../../Lib/$COMPILER_DIR -liqtmeas -limeas
 
-include($(ACFCONFIGDIR)/QMake/AcfQt.pri)
-include($(ACFCONFIGDIR)/QMake/AcfStd.pri)
+include(../../../../Acf/Config/QMake/AcfQt.pri)
+include(../../../../Acf/Config/QMake/AcfStd.pri)

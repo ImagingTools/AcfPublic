@@ -1,9 +1,9 @@
 TARGET = iqwt3d
 
-include($(ACFCONFIGDIR)/QMake/StaticConfig.pri)
-include($(ACFCONFIGDIR)/QMake/QtGuiBaseConfig.pri)
+include(../../../../Acf/Config/QMake/StaticConfig.pri)
+include(../../../../Acf/Config/QMake/QtGuiBaseConfig.pri)
 
 INCLUDEPATH += ../..
-INCLUDEPATH += "$(QWT3DDIR_0_3_1)/Include"
+INCLUDEPATH += "C:\Temp\AcfPublic\3rdParty\Qwt3D\0.3.1/Include"
 
 FORMS += ../*.ui

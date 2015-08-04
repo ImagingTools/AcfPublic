@@ -1,14 +1,14 @@
 TARGET = Compositor
 
-include($(ACFCONFIGDIR)/QMake/ApplicationConfig.pri)
-include($(ACFCONFIGDIR)/QMake/QtBaseConfig.pri)
+include(../../../../Acf/Config/QMake/ApplicationConfig.pri)
+include(../../../../Acf/Config/QMake/QtBaseConfig.pri)
 
 INCLUDEPATH += ../../../Include
 INCLUDEPATH += ../../../Impl
 
 RESOURCES += ../*.qrc
 
-LIBS += -L../../../Lib/$$COMPILER_DIR -licmpstr -lAcfSlnLoc
+LIBS += -L../../../Lib/$COMPILER_DIR -licmpstr -lAcfSlnLoc
 LIBS += -lAcfLoc
 
 HEADERS -= ../*.h
@@ -44,6 +44,6 @@ win*{
 }
 
 
-include($(ACFCONFIGDIR)/QMake/CustomBuild.pri)
-include($(ACFCONFIGDIR)/QMake/AcfQt.pri)
-include($(ACFCONFIGDIR)/QMake/AcfStd.pri)
+include(../../../../Acf/Config/QMake/CustomBuild.pri)
+include(../../../../Acf/Config/QMake/AcfQt.pri)
+include(../../../../Acf/Config/QMake/AcfStd.pri)

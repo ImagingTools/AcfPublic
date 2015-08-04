@@ -12943,8 +12943,8 @@
       <type>bool</type>
       <name>ProcessSubstitutionTag</name>
       <anchorfile>classifileproc_1_1_c_file_info_copy_comp.html</anchorfile>
-      <anchor>abec737577225e73bf1a51e885b230ec2</anchor>
-      <arglist>(const QString &amp;tag, QString &amp;result) const </arglist>
+      <anchor>a3fa29f8ffbaa02f4d6a609a5a8c04661</anchor>
+      <arglist>(const QString &amp;tag, const QString &amp;rawTag, QString &amp;result) const </arglist>
     </member>
   </compound>
   <compound kind="class">

@@ -1,9 +1,9 @@
-include($(ACFCONFIGDIR)/QMake/ComponentConfig.pri)
-include($(ACFCONFIGDIR)/QMake/AcfStd.pri)
+include(../../../../Acf/Config/QMake/ComponentConfig.pri)
+include(../../../../Acf/Config/QMake/AcfStd.pri)
 
 TARGET = WinPck
 
-INCLUDEPATH += $(ACFSLNDIR)/Include
+INCLUDEPATH += C:\Temp\AcfSln/Include
 
-LIBS += -L../../../Lib/$$COMPILER_DIR -liwin
+LIBS += -L../../../Lib/$COMPILER_DIR -liwin
 

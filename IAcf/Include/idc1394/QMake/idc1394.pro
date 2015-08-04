@@ -1,7 +1,7 @@
-include($(ACFCONFIGDIR)/QMake/StaticConfig.pri)
+include(../../../../Acf/Config/QMake/StaticConfig.pri)
 
 TARGET = idc1394
 
-INCLUDEPATH += $(ACFSLNDIR)/Include
-INCLUDEPATH += $(LIBDC1394_2_2_0)
+INCLUDEPATH += C:\Temp\AcfSln/Include
+INCLUDEPATH += C:\Temp\AcfPublic\3rdParty\libdc1394\2.2.0
 

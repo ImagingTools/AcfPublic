@@ -1,9 +1,9 @@
-include($(ACFCONFIGDIR)/QMake/ComponentConfig.pri)
-include($(ACFCONFIGDIR)/QMake/QtBaseConfig.pri)
+include(../../../../Acf/Config/QMake/ComponentConfig.pri)
+include(../../../../Acf/Config/QMake/QtBaseConfig.pri)
 
 TARGET = QtAuthorizationPck
 
-LIBS += -L../../../Lib/$$COMPILER_DIR -liqtauth -liauth
+LIBS += -L../../../Lib/$COMPILER_DIR -liqtauth -liauth
 
-include($(ACFCONFIGDIR)/QMake/AcfQt.pri)
-include($(ACFCONFIGDIR)/QMake/AcfStd.pri)
+include(../../../../Acf/Config/QMake/AcfQt.pri)
+include(../../../../Acf/Config/QMake/AcfStd.pri)

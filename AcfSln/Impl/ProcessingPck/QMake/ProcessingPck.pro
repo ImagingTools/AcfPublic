@@ -1,7 +1,7 @@
-include($(ACFCONFIGDIR)/QMake/ComponentConfig.pri)
+include(../../../../Acf/Config/QMake/ComponentConfig.pri)
 
 TARGET = ProcessingPck
 
-LIBS += -L../../../Lib/$$COMPILER_DIR -liproc
+LIBS += -L../../../Lib/$COMPILER_DIR -liproc
 
-include($(ACFCONFIGDIR)/QMake/AcfStd.pri)
+include(../../../../Acf/Config/QMake/AcfStd.pri)

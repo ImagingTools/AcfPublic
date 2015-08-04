@@ -1,7 +1,7 @@
-include($(ACFCONFIGDIR)/QMake/StaticConfig.pri)
+include(../../../../Acf/Config/QMake/StaticConfig.pri)
 
 TARGET = iocv
 
-INCLUDEPATH += $(ACFSLNDIR)/Include
-INCLUDEPATH += $(OPENCVDIR_2_4_10)/Include
+INCLUDEPATH += C:\Temp\AcfSln/Include
+INCLUDEPATH += C:\Temp\AcfPublic\3rdParty\OpenCV\2.4.10/Include
 

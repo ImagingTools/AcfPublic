@@ -1,5 +1,5 @@
 TARGET = idocproc
 
-include($(ACFCONFIGDIR)/QMake/StaticConfig.pri)
-include($(ACFCONFIGDIR)/QMake/QtBaseConfig.pri)
+include(../../../../Acf/Config/QMake/StaticConfig.pri)
+include(../../../../Acf/Config/QMake/QtBaseConfig.pri)
 

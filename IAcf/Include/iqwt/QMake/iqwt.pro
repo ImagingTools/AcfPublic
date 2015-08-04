@@ -1,9 +1,9 @@
 TARGET = iqwt
 
-include($(ACFCONFIGDIR)/QMake/StaticConfig.pri)
-include($(ACFCONFIGDIR)/QMake/QtGuiBaseConfig.pri)
+include(../../../../Acf/Config/QMake/StaticConfig.pri)
+include(../../../../Acf/Config/QMake/QtGuiBaseConfig.pri)
 
-INCLUDEPATH += $(ACFSLNDIR)/Include
-INCLUDEPATH += $(QWTDIR_6_1_0)/Src
+INCLUDEPATH += C:\Temp\AcfSln/Include
+INCLUDEPATH += C:\Temp\AcfPublic\3rdParty\Qwt\6.1.0/Src
 
 FORMS += ../*.ui

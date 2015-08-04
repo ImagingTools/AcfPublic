@@ -1,5 +1,5 @@
 TARGET = icam
 
-include($(ACFCONFIGDIR)/QMake/GeneralConfig.pri)
-include($(ACFCONFIGDIR)/QMake/StaticConfig.pri)
+include(../../../../Acf/Config/QMake/GeneralConfig.pri)
+include(../../../../Acf/Config/QMake/StaticConfig.pri)
 

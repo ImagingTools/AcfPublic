@@ -1,11 +1,11 @@
-include($(ACFCONFIGDIR)/QMake/ComponentConfig.pri)
-include($(ACFCONFIGDIR)/QMake/QtBaseConfig.pri)
+include(../../../../Acf/Config/QMake/ComponentConfig.pri)
+include(../../../../Acf/Config/QMake/QtBaseConfig.pri)
 
 TARGET = QtSignalPck
 
-LIBS += -L../../../Lib/$$COMPILER_DIR -liqtsig -limeas
+LIBS += -L../../../Lib/$COMPILER_DIR -liqtsig -limeas
 
 QT += script
 
-include($(ACFCONFIGDIR)/QMake/AcfQt.pri)
-include($(ACFCONFIGDIR)/QMake/AcfStd.pri)
+include(../../../../Acf/Config/QMake/AcfQt.pri)
+include(../../../../Acf/Config/QMake/AcfStd.pri)
