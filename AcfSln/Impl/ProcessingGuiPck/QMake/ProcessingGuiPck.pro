@@ -8,5 +8,5 @@ QT += xml
 include(../../../../Acf/Config/QMake/AcfStd.pri)
 include(../../../../Acf/Config/QMake/AcfQt.pri)
 
-LIBS += -L../../../Lib/$COMPILER_DIR -liprocgui -liproc
+LIBS += -L../../../Lib/$$COMPILER_DIR -liprocgui -liproc
 

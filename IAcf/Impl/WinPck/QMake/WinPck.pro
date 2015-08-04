@@ -5,5 +5,5 @@ TARGET = WinPck
 
 INCLUDEPATH += C:\Temp\AcfSln/Include
 
-LIBS += -L../../../Lib/$COMPILER_DIR -liwin
+LIBS += -L../../../Lib/$$COMPILER_DIR -liwin
 

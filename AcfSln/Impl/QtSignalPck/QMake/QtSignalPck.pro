@@ -3,7 +3,7 @@ include(../../../../Acf/Config/QMake/QtBaseConfig.pri)
 
 TARGET = QtSignalPck
 
-LIBS += -L../../../Lib/$COMPILER_DIR -liqtsig -limeas
+LIBS += -L../../../Lib/$$COMPILER_DIR -liqtsig -limeas
 
 QT += script
 

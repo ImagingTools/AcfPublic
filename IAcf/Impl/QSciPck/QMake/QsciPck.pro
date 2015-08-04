@@ -10,6 +10,6 @@ QT += xml
 INCLUDEPATH += ../../../Include
 INCLUDEPATH += "C:\Temp\AcfPublic\3rdParty\QScintilla/Include"
 
-LIBS += -L../../../Lib/$COMPILER_DIR -liqsci
-LIBS += -LC:\Temp\AcfPublic\3rdParty\QScintilla/Lib/$COMPILER_DIR -lQScintilla
+LIBS += -L../../../Lib/$$COMPILER_DIR -liqsci
+LIBS += -LC:\Temp\AcfPublic\3rdParty\QScintilla/Lib/$$COMPILER_DIR -lQScintilla
 

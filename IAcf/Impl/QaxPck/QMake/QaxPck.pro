@@ -9,8 +9,8 @@ QT += multimedia axcontainer
 
 INCLUDEPATH += C:\Temp\AcfSln/Include
 
-#LIBS += -LC:\Temp\AcfSln/Lib/$COMPILER_DIR -limm
-LIBS += -L../../../Lib/$COMPILER_DIR -liqaxmm
+#LIBS += -LC:\Temp\AcfSln/Lib/$$COMPILER_DIR -limm
+LIBS += -L../../../Lib/$$COMPILER_DIR -liqaxmm
 
 CONFIG(debug, debug|release){
         LIBS += -lQt5AxContainerd -lQt5AxBased

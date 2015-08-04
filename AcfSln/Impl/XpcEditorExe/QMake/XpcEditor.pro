@@ -6,11 +6,11 @@ include(../../../../Acf/Config/QMake/QtBaseConfig.pri)
 INCLUDEPATH += ../../../Include
 INCLUDEPATH += ../../../Impl
 
-INCLUDEPATH += $AUXINCLUDEPATH
+INCLUDEPATH += $$AUXINCLUDEPATH
 
 RESOURCES += ../*.qrc
 
-LIBS += -L../../../Lib/$COMPILER_DIR -licmpstr -lAcfSlnLoc
+LIBS += -L../../../Lib/$$COMPILER_DIR -licmpstr -lAcfSlnLoc
 LIBS += -lAcfLoc
 
 HEADERS -= ../*.h

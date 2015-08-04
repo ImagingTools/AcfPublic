@@ -7,6 +7,6 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 include(../../../Config/QMake/AcfStd.pri)
 
-LIBS += -L$(QTDIR)/lib
+LIBS += -LC:\Qt\Qt-5.3.1-VS2008/lib
 
 greaterThan(QT_MAJOR_VERSION, 4): LIBS += -lQt5Concurrent

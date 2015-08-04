@@ -1,6 +1,6 @@
 /********************************************************************************
 **
-**	Copyright (C) 2007-2014 Witold Gantzke & Kirill Lepskiy
+**	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
 **
 **	This file is part of the ACF Toolkit.
 **
@@ -14,8 +14,8 @@
 **	If you are unsure which license is appropriate for your use, please
 **	contact us at info@imagingtools.de.
 **
-** 	See http://www.ilena.org, write info@imagingtools.de or contact
-**	by Skype to ACF_infoline for further information about the ACF.
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
 **
 ********************************************************************************/
 
@@ -32,7 +32,7 @@ namespace istd
 */
 enum RepositoryState
 {
-	RS_ORIGINAL_VERSION =  3790,
+	RS_ORIGINAL_VERSION =  3792,
 	RS_DIRTY_FLAG = 0,
 	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
 };
