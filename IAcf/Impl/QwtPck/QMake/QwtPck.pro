@@ -5,16 +5,16 @@ include(../../../../Acf/Config/QMake/AcfQt.pri)
 
 TARGET = QwtPck
 
-INCLUDEPATH += C:\Temp\AcfSln/Include
-INCLUDEPATH += "C:\Temp\AcfPublic\3rdParty\Qwt\6.1.0/Src"
-INCLUDEPATH += "C:\Temp\AcfPublic\3rdParty\Qwt3D\0.3.1/Include"
+INCLUDEPATH += ../../../../AcfSln/Include
+INCLUDEPATH += "$(QWTDIR_6_1_0)/Src"
+INCLUDEPATH += "$(QWT3DDIR_0_3_1)/Include"
 
 LIBS += -L../../../Lib/$$COMPILER_DIR -liqwt -liqwt3d
-LIBS += -LC:\Temp\AcfPublic\3rdParty\Qwt\6.1.0/Lib/$$COMPILER_DIR -lqwt
-LIBS += -LC:\Temp\AcfPublic\3rdParty\Qwt3D\0.3.1/Lib/$$COMPILER_DIR -lqwt3d
+LIBS += -L$(QWTDIR_6_1_0)/Lib/$$COMPILER_DIR -lqwt
+LIBS += -L$(QWT3DDIR_0_3_1)/Lib/$$COMPILER_DIR -lqwt3d
 
 INCLUDEPATH += ../../../Include
 
 QT += opengl
-LIBS += -LC:\Temp\Acf/Lib/$$COMPILER_DIR -liprm
+LIBS += -L../../../../Acf/Lib/$$COMPILER_DIR -liprm
 

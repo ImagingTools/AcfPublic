@@ -7,9 +7,9 @@ TARGET = QaxPck
 
 QT += multimedia axcontainer
 
-INCLUDEPATH += C:\Temp\AcfSln/Include
+INCLUDEPATH += ../../../../AcfSln/Include
 
-#LIBS += -LC:\Temp\AcfSln/Lib/$$COMPILER_DIR -limm
+#LIBS += -L../../../../AcfSln/Lib/$$COMPILER_DIR -limm
 LIBS += -L../../../Lib/$$COMPILER_DIR -liqaxmm
 
 CONFIG(debug, debug|release){

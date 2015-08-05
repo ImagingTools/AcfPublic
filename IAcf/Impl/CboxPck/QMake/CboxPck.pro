@@ -6,9 +6,9 @@ TARGET = CboxPck
 QT -= gui core
 
 LIBS += -L../../../Lib/$$COMPILER_DIR -licbox
-LIBS += -L"C:\Temp\AcfPublic\3rdParty\CBios/lib/$$COMPILER_NAME" -lcbios -lwsock32
+LIBS += -L"$(CBIOSDIR)/lib/$$COMPILER_NAME" -lcbios -lwsock32
 
 INCLUDEPATH += ../../../Include
-INCLUDEPATH += "C:\Temp\AcfPublic\3rdParty\CBios/include" 
+INCLUDEPATH += "$(CBIOSDIR)/include" 
 
 

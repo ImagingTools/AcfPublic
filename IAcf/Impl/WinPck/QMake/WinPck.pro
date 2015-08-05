@@ -3,7 +3,7 @@ include(../../../../Acf/Config/QMake/AcfStd.pri)
 
 TARGET = WinPck
 
-INCLUDEPATH += C:\Temp\AcfSln/Include
+INCLUDEPATH += ../../../../AcfSln/Include
 
 LIBS += -L../../../Lib/$$COMPILER_DIR -liwin
 

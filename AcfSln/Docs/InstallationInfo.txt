@@ -1,4 +1,4 @@
-Installation creation time: Mi Aug 5 06:03:29 2015
-ACF-Solutions Version: 1.0.1.25 (1334)
-Based on ACF Version: 1.9.0.30 (3793)
-Compiler code: VC9
+Installation creation time: Mi Aug 5 13:02:53 2015
+ACF-Solutions Version: 1.0.1.27 (1336)
+Based on ACF Version: 1.9.0.33 (3796)
+Compiler code: $CompilerName$

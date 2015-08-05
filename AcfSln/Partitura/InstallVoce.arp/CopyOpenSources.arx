@@ -18,7 +18,7 @@
           0
         </Id>
         <Number>
-          3785
+          3793
         </Number>
         <Description>
           ACF
@@ -29,7 +29,7 @@
           1
         </Id>
         <Number>
-          1324
+          1335
         </Number>
         <Description>
           ACF-Solutions
@@ -897,9 +897,15 @@
               <IsEnabled>
                 true
               </IsEnabled>
-              <Values count="1">
+              <Values count="3">
                 <Value>
-                  $(ACFCONFIGDIR)
+                  ACFDIR
+                </Value>
+                <Value>
+                  ACFCONFIGDIR
+                </Value>
+                <Value>
+                  ACFSLNDIR
                 </Value>
               </Values>
             </Data>
@@ -918,9 +924,15 @@
               <IsEnabled>
                 true
               </IsEnabled>
-              <Values count="1">
+              <Values count="3">
+                <Value>
+                  ../../../../Acf
+                </Value>
                 <Value>
                   ../../../../Acf/Config
+                </Value>
+                <Value>
+                  ../../../../AcfSln
                 </Value>
               </Values>
             </Data>
@@ -1779,9 +1791,15 @@
               <IsEnabled>
                 true
               </IsEnabled>
-              <Values count="1">
+              <Values count="3">
                 <Value>
-                  $(ACFCONFIGDIR)
+                  ACFDIR
+                </Value>
+                <Value>
+                  ACFCONFIGDIR
+                </Value>
+                <Value>
+                  ACFSLNDIR
                 </Value>
               </Values>
             </Data>
@@ -1800,9 +1818,15 @@
               <IsEnabled>
                 true
               </IsEnabled>
-              <Values count="1">
+              <Values count="3">
+                <Value>
+                  ../../../../Acf
+                </Value>
                 <Value>
                   ../../../../Acf/Config
+                </Value>
+                <Value>
+                  ../../../../AcfSln
                 </Value>
               </Values>
             </Data>

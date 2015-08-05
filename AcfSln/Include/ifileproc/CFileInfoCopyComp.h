@@ -74,10 +74,10 @@ public:
 
 	I_BEGIN_COMPONENT(CFileInfoCopyComp);
 		I_REGISTER_INTERFACE(ifileproc::IFileConversion);
-
 		I_ASSIGN(m_applicationInfoCompPtr, "ApplicationInfo", "Provide information about versions for substitution", false, "VersionInfo");
 		I_ASSIGN(m_licensePathAttrPtr, "LicensePath", "Path of license file will be included at begin of copied file", false, "License.txt");
-		I_ASSIGN(m_useSubstitutionAttrPtr, "UseSubstitution", "If enabled strings like $AcfVersion:n$ will be substituted", true, false);
+		I_ASSIGN(m_useSubstitutionAttrPtr, "UseSubstitution", "If enabled, strings like $AcfVersion:n$ will be substituted", true, false);
+		I_ASSIGN(m_replaceEnvironmentVariablesAttrPtr, "ReplaceEnvironmentVariables", "If enabled, environment variables will be replaced", true, false);
 		I_ASSIGN_MULTI_0(m_userSubstitutionTagsAttrPtr, "UserSubstitutionTags", "List of user defined substitution tags will be replaced with specified values", false);
 		I_ASSIGN_MULTI_0(m_userSubstitutionValuesAttrPtr, "UserSubstitutionValues", "List of user substitution values according to specified user tags", false);
 	I_END_COMPONENT;
@@ -90,13 +90,14 @@ public:
 				ibase::IProgressManager* progressManagerPtr = NULL) const;
 
 protected:
-	bool ProcessSubstitutionTag(const QString& tag, const QString& rawTag, QString& result) const;
+	bool ProcessSubstitutionTag(const QString& tag, QString& result) const;
 
 private:
 	I_REF(ibase::IApplicationInfo, m_applicationInfoCompPtr);
 
 	I_ATTR(QString, m_licensePathAttrPtr);
 	I_ATTR(bool, m_useSubstitutionAttrPtr);
+	I_ATTR(bool, m_replaceEnvironmentVariablesAttrPtr);
 	I_MULTIATTR(QString, m_userSubstitutionTagsAttrPtr);
 	I_MULTIATTR(QString, m_userSubstitutionValuesAttrPtr);
 };

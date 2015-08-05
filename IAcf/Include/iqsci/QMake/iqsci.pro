@@ -5,7 +5,7 @@ TARGET = iqsci
 
 QT += xml
 
-INCLUDEPATH += C:\Temp\AcfPublic\3rdParty\QScintilla/Include
+INCLUDEPATH += $(QSCINTILLA)/Include
 
 FORMS += ../*.ui
 UI_DIR = ../../GeneratedFiles/iqsci
