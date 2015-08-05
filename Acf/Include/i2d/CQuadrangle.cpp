@@ -35,6 +35,9 @@ namespace i2d
 {
 
 
+static const istd::IChangeable::ChangeSet s_setDiagonalChange(CQuadrangle::CF_OBJECT_POSITION, "Set diagnal");
+
+
 // public methods
 
 CQuadrangle::CQuadrangle()
@@ -82,8 +85,7 @@ const CLine2d& CQuadrangle::GetFirstDiagonal() const
 void CQuadrangle::SetFirstDiagonal(const CLine2d& firstDiagonal)
 {
 	if (m_firstDiagonal != firstDiagonal){
-		ChangeSet changeSet(CF_OBJECT_POSITION, "Set diagnal");
-		istd::CChangeNotifier changeNotifier(this, &changeSet);
+		istd::CChangeNotifier changeNotifier(this, &s_setDiagonalChange);
 		Q_UNUSED(changeNotifier);
 		
 		m_firstDiagonal = firstDiagonal;
@@ -100,8 +102,7 @@ const CLine2d& CQuadrangle::GetSecondDiagonal() const
 void CQuadrangle::SetSecondDiagonal(const CLine2d& secondDiagonal)
 {
 	if (m_secondDiagonal != secondDiagonal){
-		ChangeSet changeSet(CF_OBJECT_POSITION, "Set diagonal");
-		istd::CChangeNotifier changeNotifier(this, &changeSet);
+		istd::CChangeNotifier changeNotifier(this, &s_setDiagonalChange);
 		Q_UNUSED(changeNotifier);
 		
 		m_secondDiagonal = secondDiagonal;
@@ -126,8 +127,7 @@ void CQuadrangle::MoveCenterTo(const CVector2d& position)
 {
 	CVector2d delta = position - GetCenter();
 	if (delta != CVector2d(0, 0)){
-		ChangeSet changeSet(CF_OBJECT_POSITION, "Move object");
-		istd::CChangeNotifier changeNotifier(this, &changeSet);
+		istd::CChangeNotifier changeNotifier(this, &s_objectMovedChange);
 		Q_UNUSED(changeNotifier);
 
 		m_firstDiagonal.MoveCenterTo(delta + m_firstDiagonal.GetCenter());
@@ -147,8 +147,7 @@ bool CQuadrangle::Transform(
 			ITransformation2d::ExactnessMode mode,
 			double* errorFactorPtr)
 {
-	istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Modify object");
-	istd::CChangeNotifier changeNotifier(this, &changeSet);
+	istd::CChangeNotifier changeNotifier(this, &s_objectModifiedChange);
 	Q_UNUSED(changeNotifier);
 
 	bool retVal = false;
@@ -173,8 +172,7 @@ bool CQuadrangle::InvTransform(
 			ITransformation2d::ExactnessMode mode,
 			double* errorFactorPtr)
 {
-	istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Modify object");
-	istd::CChangeNotifier changeNotifier(this, &changeSet);
+	istd::CChangeNotifier changeNotifier(this, &s_objectModifiedChange);
 	Q_UNUSED(changeNotifier);
 
 	bool retVal = false;
@@ -206,8 +204,7 @@ bool CQuadrangle::GetTransformed(
 		return false;
 	}
 
-	istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Modify object");
-	istd::CChangeNotifier changeNotifier(resultQuadranglePtr, &changeSet);
+	istd::CChangeNotifier changeNotifier(resultQuadranglePtr, &s_objectModifiedChange);
 	Q_UNUSED(changeNotifier);
 
 	bool retVal = false;
@@ -241,8 +238,7 @@ bool CQuadrangle::GetInvTransformed(
 		return false;
 	}
 
-	istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Modify object");
-	istd::CChangeNotifier changeNotifier(resultQuadranglePtr, &changeSet);
+	istd::CChangeNotifier changeNotifier(resultQuadranglePtr, &s_objectModifiedChange);
 	Q_UNUSED(changeNotifier);
 
 	bool retVal = false;
@@ -278,8 +274,7 @@ bool CQuadrangle::CopyFrom(const IChangeable& object, CompatibilityMode mode)
 	const CQuadrangle* quadranglesPtr = dynamic_cast<const CQuadrangle*>(&object);
 
 	if (quadranglesPtr != NULL){
-		istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Modify object");
-		istd::CChangeNotifier changeNotifier(this, &changeSet);
+		istd::CChangeNotifier changeNotifier(this, &s_objectModifiedChange);
 		Q_UNUSED(changeNotifier);
 		
 		SetFirstDiagonal(quadranglesPtr->GetFirstDiagonal());
@@ -313,8 +308,7 @@ bool CQuadrangle::Serialize(iser::IArchive& archive)
 	static iser::CArchiveTag firstDiagonalTag("FirstDiagonal", "FirstDiagonal", iser::CArchiveTag::TT_GROUP);
 	static iser::CArchiveTag secondDiagonalTag("SecondDiagonal", "SecondDiagonal", iser::CArchiveTag::TT_GROUP);
 
-	istd::IChangeable::ChangeSet changeSet(CF_OBJECT_POSITION, CF_ALL_DATA, "Modify object");
-	istd::CChangeNotifier changeNotifier(this, &changeSet);
+	istd::CChangeNotifier changeNotifier(this, &GetAllChanges());
 	Q_UNUSED(changeNotifier);
 
 	bool retVal = archive.BeginTag(firstDiagonalTag);

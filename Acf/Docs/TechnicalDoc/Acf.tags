@@ -8143,6 +8143,20 @@
       <anchor>ac52dc2bacd2db9e64c8f164987e29ba2</anchor>
       <arglist></arglist>
     </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static const ChangeSet</type>
+      <name>s_objectMovedChange</name>
+      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
+      <anchor>ad934ddd8be06ca629f6b65749a823dfd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static const ChangeSet</type>
+      <name>s_objectModifiedChange</name>
+      <anchorfile>classi2d_1_1_c_object2d_base.html</anchorfile>
+      <anchor>a6339384ebc6f5fd95e7325bb292751a5</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>i2d::CAnnulusComp</name>
@@ -16417,6 +16431,13 @@
       <anchor>adeffd06c6d708f47c7cdaab30cd2b978</anchor>
       <arglist></arglist>
     </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static const istd::IChangeable::ChangeSet</type>
+      <name>s_undoChanges</name>
+      <anchorfile>classimod_1_1_c_single_model_observer_base.html</anchorfile>
+      <anchor>a39513f269e2412bd5c48fe1a9927f860</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>ibase::CQtVersionInfoComp</name>
@@ -17893,6 +17914,27 @@
       <anchor>a30d0adb8fe0158651a851ca31d2649c5</anchor>
       <arglist></arglist>
     </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static const ChangeSet</type>
+      <name>s_elementAddChange</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>a6b268816ac6f70f80e8d9bee7f74ff4a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static const ChangeSet</type>
+      <name>s_elementRemoveChange</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>a9c477928937a0ba3c5a56727beccf79c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static const ChangeSet</type>
+      <name>s_resetChange</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>a501b81f47325fe321743130bae1cd5a4</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>ibase::TFactorisableContainer</name>
@@ -18149,6 +18191,27 @@
       <name>Items</name>
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
       <anchor>acf622391830abe7e26207f6ecdc2b6ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static const ChangeSet</type>
+      <name>s_elementAddChange</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>a6b268816ac6f70f80e8d9bee7f74ff4a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static const ChangeSet</type>
+      <name>s_elementRemoveChange</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>a9c477928937a0ba3c5a56727beccf79c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static const ChangeSet</type>
+      <name>s_resetChange</name>
+      <anchorfile>classibase_1_1_t_container.html</anchorfile>
+      <anchor>a501b81f47325fe321743130bae1cd5a4</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -38056,6 +38119,13 @@
       <anchorfile>classistd_1_1_t_cached_update_manager_wrap.html</anchorfile>
       <anchor>aa853fce4eab0ed12a5979b2573324ccb</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static const ChangeSet</type>
+      <name>s_fulcrumPositionChange</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
+      <anchor>ad6d77f1ff09e5808dddb10e037032232</anchor>
+      <arglist>(CF_SORT_LAYERS,&quot;Change fulcrum position&quot;)</arglist>
     </member>
   </compound>
   <compound kind="class">
