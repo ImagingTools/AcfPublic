@@ -24,7 +24,7 @@
 		<Configuration
 			Name="Release|Win32"
 			ConfigurationType="4"
-			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Release.vsprops;$(ACFCONFIGDIR)\VC9\Static.vsprops;$(ACFCONFIGDIR)\VC9\Win32.vsprops"
+			InheritedPropertySheets="../../../../Acf/Config\VC9\Release.vsprops;../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Win32.vsprops"
 			UseOfMFC="0"
 			ATLMinimizesCRunTimeLibraryUsage="false"
 			>
@@ -123,7 +123,7 @@
 		<Configuration
 			Name="Release|x64"
 			ConfigurationType="4"
-			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Release.vsprops;$(ACFCONFIGDIR)\VC9\Static.vsprops;$(ACFCONFIGDIR)\VC9\Win64.vsprops"
+			InheritedPropertySheets="../../../../Acf/Config\VC9\Release.vsprops;../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Win64.vsprops"
 			UseOfMFC="0"
 			ATLMinimizesCRunTimeLibraryUsage="false"
 			>
@@ -221,7 +221,7 @@
 		<Configuration
 			Name="Debug|Win32"
 			ConfigurationType="4"
-			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Debug.vsprops;$(ACFCONFIGDIR)\VC9\Static.vsprops;$(ACFCONFIGDIR)\VC9\Win32.vsprops"
+			InheritedPropertySheets="../../../../Acf/Config\VC9\Debug.vsprops;../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Win32.vsprops"
 			UseOfMFC="0"
 			ATLMinimizesCRunTimeLibraryUsage="false"
 			>
@@ -268,7 +268,7 @@
 				Name="VCCLCompilerTool"
 				ExecutionBucket="10"
 				Optimization="0"
-				AdditionalIncludeDirectories="../../;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtXml&quot;"
+				AdditionalIncludeDirectories="../../;&quot;C:\Qt\Qt-5.3.1-VS2008\include&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtCore&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtGui&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtXml&quot;"
 				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS"
 				RuntimeLibrary="3"
 				RuntimeTypeInfo="true"
@@ -318,7 +318,7 @@
 		<Configuration
 			Name="Debug|x64"
 			ConfigurationType="4"
-			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Debug.vsprops;$(ACFCONFIGDIR)\VC9\Static.vsprops;$(ACFCONFIGDIR)\VC9\Win64.vsprops"
+			InheritedPropertySheets="../../../../Acf/Config\VC9\Debug.vsprops;../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Win64.vsprops"
 			UseOfMFC="0"
 			ATLMinimizesCRunTimeLibraryUsage="false"
 			>
@@ -365,7 +365,7 @@
 				Name="VCCLCompilerTool"
 				ExecutionBucket="9"
 				Optimization="0"
-				AdditionalIncludeDirectories="../../;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtXml&quot;"
+				AdditionalIncludeDirectories="../../;&quot;C:\Qt\Qt-5.3.1-VS2008\include&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtCore&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtGui&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtXml&quot;"
 				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS"
 				RuntimeLibrary="3"
 				RuntimeTypeInfo="true"
@@ -434,7 +434,7 @@
 					>
 					<Tool
 						Name="QT Resources"
-						AdditionalDependencies="$(QTDIR)\bin\rcc.exe;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_en_US.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_de_DE.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_ru_RU.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_pl_PL.qm"
+						AdditionalDependencies="C:\Qt\Qt-5.3.1-VS2008\bin\rcc.exe;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_en_US.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_de_DE.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_ru_RU.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_pl_PL.qm"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -442,7 +442,7 @@
 					>
 					<Tool
 						Name="QT Resources"
-						AdditionalDependencies="$(QTDIR)\bin\rcc.exe;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_en_US.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_de_DE.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_ru_RU.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_pl_PL.qm"
+						AdditionalDependencies="C:\Qt\Qt-5.3.1-VS2008\bin\rcc.exe;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_en_US.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_de_DE.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_ru_RU.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_pl_PL.qm"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -450,7 +450,7 @@
 					>
 					<Tool
 						Name="QT Resources"
-						AdditionalDependencies="$(QTDIR)\bin\rcc.exe;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_en_US.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_de_DE.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_ru_RU.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_pl_PL.qm"
+						AdditionalDependencies="C:\Qt\Qt-5.3.1-VS2008\bin\rcc.exe;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_en_US.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_de_DE.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_ru_RU.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_pl_PL.qm"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -458,7 +458,7 @@
 					>
 					<Tool
 						Name="QT Resources"
-						AdditionalDependencies="$(QTDIR)\bin\rcc.exe;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_en_US.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_de_DE.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_ru_RU.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_pl_PL.qm"
+						AdditionalDependencies="C:\Qt\Qt-5.3.1-VS2008\bin\rcc.exe;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_en_US.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_de_DE.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_ru_RU.qm;../../../AuxInclude/Qt5/GeneratedFiles\AcfSlLoc\AcfSln_pl_PL.qm"
 					/>
 				</FileConfiguration>
 			</File>

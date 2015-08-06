@@ -1,5 +1,5 @@
-include(../../../../Acf/Config/QMake/StaticConfig.pri)
-include(../../../../Acf/Config/QMake/QtGuiBaseConfig.pri)
+include($(ACFCONFIGDIR)/QMake/StaticConfig.pri)
+include($(ACFCONFIGDIR)/QMake/QtGuiBaseConfig.pri)
 
 TARGET = iphonon
 

@@ -28,7 +28,7 @@
   </AcfHeader>
   <ConfigFiles count="1">
     <FilePath>
-      $(ACFDIR)/Config/BaseOnly.xpc
+      ../../Acf/Config/BaseOnly.xpc
     </FilePath>
   </ConfigFiles>
   <PackageDirs count="0">
@@ -41,7 +41,7 @@
       ../Partitura/FileProcessingVoce.arp
     </FilePath>
     <FilePath>
-      ../Bin/$(ConfigurationDir)FileProcessingPck.arp
+      ../Bin/DebugVC9/FileProcessingPck.arp
     </FilePath>
   </PackageFiles>
   <RegistryFiles count="0">

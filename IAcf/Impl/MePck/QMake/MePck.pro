@@ -1,9 +1,9 @@
-include(../../../../Acf/Config/QMake/ComponentConfig.pri)
-include(../../../../Acf/Config/QMake/AcfStd.pri)
+include($(ACFCONFIGDIR)/QMake/ComponentConfig.pri)
+include($(ACFCONFIGDIR)/QMake/AcfStd.pri)
 
 TARGET = MePck
 
-INCLUDEPATH += ../../../../AcfSln/Include
+INCLUDEPATH += $(ACFSLNDIR)/Include
 INCLUDEPATH += $(MEIDSDIR)/include
 
 LIBS += -L$(MEIDSDIR)/lib -lmeIDSmain

@@ -1,6 +1,6 @@
 TARGET = iwin
 
-include(../../../../Acf/Config/QMake/StaticConfig.pri)
+include($(ACFCONFIGDIR)/QMake/StaticConfig.pri)
 
-INCLUDEPATH += ../../../../AcfSln/Include
+INCLUDEPATH += $(ACFSLNDIR)/Include
 
