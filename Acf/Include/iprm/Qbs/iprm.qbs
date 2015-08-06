@@ -1,14 +1,16 @@
 import qbs.base 1.0
-import AcfStaticLibrary as AcfStaticLibrary
+import AcfLibrary as AcfLibrary
 
-AcfStaticLibrary{
+AcfLibrary{
 	name: "iprm"
 
 	files: ["../*.h", "../*.cpp"]
 
 	Depends{ name: "iser" }
+	Depends{ name: "icomp" }
 
 	Export{
 		Depends{ name: "iser" }
+		Depends{ name: "icomp" }
 	}
 }

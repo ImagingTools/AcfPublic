@@ -1,20 +1,22 @@
 import qbs.base 1.0
-import AcfStaticLibrary as AcfStaticLibrary
+import AcfLibrary as AcfLibrary
 
-AcfStaticLibrary{
+AcfLibrary{
 	name: "iqtprm"
 
 	files: ["../*.h", "../*.cpp", "../*.ui"]
 
-	Depends{ name: "iqtgui" }
-	Depends{ name: "iprm" }
 	Depends{ name: "Qt.gui" }
 	Depends{ name: "Qt.widgets" }
+	Depends{ name: "iprm" }
+	Depends{ name: "iqtgui" }
+	Depends{ name: "ifilegui" }
 
 	Export{
-		Depends{ name: "iqtgui" }
-		Depends{ name: "iprm" }
 		Depends{ name: "Qt.gui" }
 		Depends{ name: "Qt.widgets" }
+		Depends{ name: "iprm" }
+		Depends{ name: "iqtgui" }
+		Depends{ name: "ifilegui" }
 	}
 }

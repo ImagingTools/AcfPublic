@@ -1,18 +1,24 @@
 import qbs.base 1.0
-import AcfStaticLibrary as AcfStaticLibrary
+import AcfLibrary as AcfLibrary
 
-AcfStaticLibrary{
+AcfLibrary{
 	name: "iqt"
 
 	files: ["../*.h", "../*.cpp"]
 
+	Depends{ name: "Qt.xml" }
+	Depends{ name: "Qt.network" }
 	Depends{ name: "i2d" }
 	Depends{ name: "icomp" }
-	Depends{ name: "Qt.xml" }
+	Depends{ name: "ilog" }
+	Depends{ name: "ifile" }
 
 	Export{
+		Depends{ name: "Qt.xml" }
+		Depends{ name: "Qt.network" }
 		Depends{ name: "i2d" }
 		Depends{ name: "icomp" }
-		Depends{ name: "Qt.xml" }
+		Depends{ name: "ilog" }
+		Depends{ name: "ifile" }
 	}
 }

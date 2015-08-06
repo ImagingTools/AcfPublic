@@ -4387,6 +4387,7 @@
     <path>C:/Temp/Acf/Include/iqtdoc/</path>
     <filename>_c_single_document_workspace_gui_comp_8h</filename>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="yes" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_i_document_template_8h" name="IDocumentTemplate.h" local="yes" imported="no">idoc/IDocumentTemplate.h</includes>
     <includes id="_c_single_document_manager_base_8h" name="CSingleDocumentManagerBase.h" local="yes" imported="no">idoc/CSingleDocumentManagerBase.h</includes>
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="yes" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <includes id="_t_restorable_gui_wrap_8h" name="TRestorableGuiWrap.h" local="yes" imported="no">iqtgui/TRestorableGuiWrap.h</includes>
