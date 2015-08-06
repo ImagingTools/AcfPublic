@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ModuleDependencies Name="AcfPublic" Version="FlavorOfTheDay">
+<ModuleDependencies Name="AcfPublic" Version="Main">
 
 	<Targets>
 		<Target Default="True" Language="CPP" Name="AcfPublic"/>
@@ -69,7 +69,8 @@
 			<Build IfPlatform="WinOS">
 				<QMakeToMakefile Project="AcfSln/Build/QMake/AcfSlnAll.pro" VisualStudioVersion="2010"/>
 				<NMake Makefile="AcfSln/Build/QMake/Makefile" Version="2010">
-					<EnvironmentVariable Name="ACFDIR" Value="$BUILD_PRODUCT_FOLDER\3rdParty\AcfPublic\Acf"/>
+          <EnvironmentVariable Name="ACFCONFIGFDIR" Value="$BUILD_PRODUCT_FOLDER\3rdParty\AcfPublic\Acf\Config"/>
+          <EnvironmentVariable Name="ACFDIR" Value="$BUILD_PRODUCT_FOLDER\3rdParty\AcfPublic\Acf"/>
 					<EnvironmentVariable Name="ACFSLNDIR" Value="$BUILD_PRODUCT_FOLDER\3rdParty\AcfPublic\AcfSln"/>
 					<EnvironmentVariable Name="QTDIR" Value="$CONFIG_QTDIR_WINOS"/>
 					<EnvironmentVariable Name="PATH" Value="%PATH%;$CONFIG_QTDIR_WINOS\Bin"/>
@@ -78,7 +79,8 @@
 			<Build IfPlatform="MacOS">
 				<QMakeToMakefile Project="AcfSln/Build/QMake/AcfSlnAll.pro"/>
 				<Make Makefile="AcfSln/Build/QMake/Makefile" Version="1">
-					<EnvironmentVariable Name="ACFDIR" Value="$BUILD_PRODUCT_FOLDER/3rdParty/AcfPublic/Acf"/>
+          <EnvironmentVariable Name="ACFCONFIGFDIR" Value="$BUILD_PRODUCT_FOLDER/3rdParty/AcfPublic/Acf/Config"/>
+          <EnvironmentVariable Name="ACFDIR" Value="$BUILD_PRODUCT_FOLDER/3rdParty/AcfPublic/Acf"/>
 					<EnvironmentVariable Name="ACFSLNDIR" Value="$BUILD_PRODUCT_FOLDER/3rdParty/AcfPublic/AcfSln"/>
 					<EnvironmentVariable Name="QTDIR" Value="$CONFIG_QTDIR_MACOS"/>
 					<EnvironmentVariable Name="PATH" Value="$PATH:$CONFIG_QTDIR_MACOS/Bin"/>
