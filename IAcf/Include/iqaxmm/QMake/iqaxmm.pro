@@ -1,9 +1,9 @@
-include($(ACFCONFIGDIR)/QMake/StaticConfig.pri)
+include(../../../../Acf/Config/QMake/StaticConfig.pri)
 
 TARGET = iqaxmm
 QT += multimedia axcontainer
 
-INCLUDEPATH += $(ACFSLNDIR)/Include
+INCLUDEPATH += ../../../../AcfSln/Include
 
 HEADERS += ../Wrapped/*.h
 SOURCES += ../Wrapped/*.cpp

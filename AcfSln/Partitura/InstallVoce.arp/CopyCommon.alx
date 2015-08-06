@@ -4,21 +4,10 @@
     <VersionInfos count="3">
       <Version>
         <Id>
-          1023
-        </Id>
-        <Number>
-          328706
-        </Number>
-        <Description>
-          Qt Framework
-        </Description>
-      </Version>
-      <Version>
-        <Id>
           0
         </Id>
         <Number>
-          3796
+          3534
         </Number>
         <Description>
           ACF
@@ -26,10 +15,21 @@
       </Version>
       <Version>
         <Id>
+          1023
+        </Id>
+        <Number>
+          328449
+        </Number>
+        <Description>
+          Qt Framework
+        </Description>
+      </Version>
+      <Version>
+        <Id>
           1
         </Id>
         <Number>
-          1336
+          1154
         </Number>
         <Description>
           ACF-Solutions
@@ -37,31 +37,17 @@
       </Version>
     </VersionInfos>
   </AcfHeader>
-  <PositionMap count="13">
+  <PositionMap count="12">
     <Element>
       <ComponentName>
-        CopyInstallInfo
+        CopyDocs
       </ComponentName>
       <X>
-        825
+        800
       </X>
-      <Y>
-        200
-      </Y>
-      <Note>
-        
-      </Note>
-    </Element>
-    <Element>
-      <ComponentName>
-        CopyTutorialOther
-      </ComponentName>
       <X>
-        450
+        650
       </X>
-      <Y>
-        200
-      </Y>
       <Note>
         
       </Note>
@@ -73,65 +59,9 @@
       <X>
         1050
       </X>
-      <Y>
+      <X>
         100
-      </Y>
-      <Note>
-        
-      </Note>
-    </Element>
-    <Element>
-      <ComponentName>
-        CopyTexts
-      </ComponentName>
-      <X>
-        700
       </X>
-      <Y>
-        775
-      </Y>
-      <Note>
-        
-      </Note>
-    </Element>
-    <Element>
-      <ComponentName>
-        CopyPartitura
-      </ComponentName>
-      <X>
-        1050
-      </X>
-      <Y>
-        400
-      </Y>
-      <Note>
-        
-      </Note>
-    </Element>
-    <Element>
-      <ComponentName>
-        CopyAllFiles
-      </ComponentName>
-      <X>
-        150
-      </X>
-      <Y>
-        300
-      </Y>
-      <Note>
-        
-      </Note>
-    </Element>
-    <Element>
-      <ComponentName>
-        CopyIncludes
-      </ComponentName>
-      <X>
-        450
-      </X>
-      <Y>
-        525
-      </Y>
       <Note>
         
       </Note>
@@ -143,37 +73,9 @@
       <X>
         950
       </X>
-      <Y>
+      <X>
         525
-      </Y>
-      <Note>
-        
-      </Note>
-    </Element>
-    <Element>
-      <ComponentName>
-        CopyRoot
-      </ComponentName>
-      <X>
-        350
       </X>
-      <Y>
-        650
-      </Y>
-      <Note>
-        
-      </Note>
-    </Element>
-    <Element>
-      <ComponentName>
-        CopyTutorialProjects
-      </ComponentName>
-      <X>
-        325
-      </X>
-      <Y>
-        100
-      </Y>
       <Note>
         
       </Note>
@@ -185,23 +87,79 @@
       <X>
         550
       </X>
-      <Y>
+      <X>
         400
-      </Y>
+      </X>
       <Note>
         
       </Note>
     </Element>
     <Element>
       <ComponentName>
-        CopyDocs
+        CopyIncludes
       </ComponentName>
       <X>
-        800
+        450
       </X>
-      <Y>
-        650
-      </Y>
+      <X>
+        525
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        CopyAllFiles
+      </ComponentName>
+      <X>
+        150
+      </X>
+      <X>
+        300
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        CopyPartitura
+      </ComponentName>
+      <X>
+        1050
+      </X>
+      <X>
+        400
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        CopyTutorialOther
+      </ComponentName>
+      <X>
+        450
+      </X>
+      <X>
+        200
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        CopyInstallInfo
+      </ComponentName>
+      <X>
+        825
+      </X>
+      <X>
+        200
+      </X>
       <Note>
         
       </Note>
@@ -213,9 +171,37 @@
       <X>
         625
       </X>
-      <Y>
+      <X>
         75
-      </Y>
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        CopyTexts
+      </ComponentName>
+      <X>
+        700
+      </X>
+      <X>
+        775
+      </X>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        CopyRoot
+      </ComponentName>
+      <X>
+        350
+      </X>
+      <X>
+        650
+      </X>
       <Note>
         
       </Note>

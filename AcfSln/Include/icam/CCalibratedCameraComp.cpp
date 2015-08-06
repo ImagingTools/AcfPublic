@@ -93,7 +93,7 @@ bool CCalibratedCameraComp::WriteImageResolution(iimg::IBitmap& bitmap, double r
 	istd::CIndex2d imageSize = bitmap.GetImageSize();
 	if (!imageSize.IsSizeEmpty()){
 		if (imageSize.GetX() >= sizeof(double) + sizeof(RESOLUTION_PATTERN)){
-			quint8* rawData = (quint8*)bitmap.GetLinePtr(0);
+			qint8* rawData = (qint8*)bitmap.GetLinePtr(0);
 			Q_ASSERT(rawData != NULL);
 
 			if (pixelFormat != iimg::IBitmap::PF_RGB){
@@ -111,7 +111,7 @@ bool CCalibratedCameraComp::WriteImageResolution(iimg::IBitmap& bitmap, double r
 				rawData[5] = 0xff; 
 				rawData[6] = 0x00;
 
-				quint8* resolutionData = (quint8*)&resolution;
+				qint8* resolutionData = (qint8*)&resolution;
 
 				rawData[9] = resolutionData[0];
 				rawData[10] = resolutionData[1];

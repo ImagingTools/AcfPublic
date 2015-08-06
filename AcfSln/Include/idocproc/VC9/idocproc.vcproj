@@ -25,7 +25,7 @@
 		<Configuration
 			Name="Release|Win32"
 			ConfigurationType="4"
-			InheritedPropertySheets="../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Release.vsprops;../../../../Acf/Config\VC9\Win32.vsprops"
+			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Static.vsprops;$(ACFCONFIGDIR)\VC9\Release.vsprops;$(ACFCONFIGDIR)\VC9\Win32.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -58,7 +58,7 @@
 				Name="VCCLCompilerTool"
 				InlineFunctionExpansion="0"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;"
+				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
 				StringPooling="true"
 				RuntimeLibrary="2"
@@ -97,7 +97,7 @@
 		<Configuration
 			Name="Release|x64"
 			ConfigurationType="4"
-			InheritedPropertySheets="../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Release.vsprops;../../../../Acf/Config\VC9\Win64.vsprops"
+			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Static.vsprops;$(ACFCONFIGDIR)\VC9\Release.vsprops;$(ACFCONFIGDIR)\VC9\Win64.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -131,7 +131,7 @@
 				Name="VCCLCompilerTool"
 				InlineFunctionExpansion="0"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;"
+				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
 				StringPooling="true"
 				RuntimeLibrary="2"
@@ -170,7 +170,7 @@
 		<Configuration
 			Name="Debug|Win32"
 			ConfigurationType="4"
-			InheritedPropertySheets="../../../../Acf/Config\VC9\Debug.vsprops;../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Win32.vsprops"
+			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Debug.vsprops;$(ACFCONFIGDIR)\VC9\Static.vsprops;$(ACFCONFIGDIR)\VC9\Win32.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -202,7 +202,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;"
+				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
 				StringPooling="true"
 				RuntimeLibrary="3"
@@ -239,7 +239,7 @@
 		<Configuration
 			Name="Debug|x64"
 			ConfigurationType="4"
-			InheritedPropertySheets="../../../../Acf/Config\VC9\Debug.vsprops;../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Win64.vsprops"
+			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Debug.vsprops;$(ACFCONFIGDIR)\VC9\Static.vsprops;$(ACFCONFIGDIR)\VC9\Win64.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -272,7 +272,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;"
+				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
 				StringPooling="true"
 				RuntimeLibrary="3"
@@ -353,7 +353,7 @@
 	<Globals>
 		<Global
 			Name="MocDir"
-			Value="\GeneratedFiles"
+			Value="$(InputDir)\GeneratedFiles"
 		/>
 		<Global
 			Name="QtVersion"
@@ -361,7 +361,7 @@
 		/>
 		<Global
 			Name="UicDir"
-			Value="\GeneratedFiles"
+			Value="$(InputDir)\GeneratedFiles"
 		/>
 	</Globals>
 </VisualStudioProject>

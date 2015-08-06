@@ -27,7 +27,7 @@
 		<Configuration
 			Name="Release|Win32"
 			ConfigurationType="1"
-			InheritedPropertySheets="../../../../Acf/Config\VC9\Release.vsprops;../../../../Acf/Config\VC9\Application.vsprops;../../../../Acf/Config\VC9\Win32.vsprops"
+			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Release.vsprops;$(ACFCONFIGDIR)\VC9\Application.vsprops;$(ACFCONFIGDIR)\VC9\Win32.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -45,7 +45,7 @@
 				Name="FileConvertCopy"
 				RegistryFile="../../../Partitura/AcfInfoCopyApp.arx"
 				ConfigFile="../../../Config/BaseOnly.xpc"
-				OutputDir="/../../../AuxInclude/Qt5/GeneratedFiles/"
+				OutputDir="$(InputDir)/../../../AuxInclude/Qt5/GeneratedFiles/$(ProjectName)"
 			/>
 			<Tool
 				Name="DeployCopy"
@@ -73,7 +73,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;;&quot;../../../../Acf/Impl&quot;"
+				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;;&quot;$(ACFDIR)/Impl&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
 			/>
 			<Tool
@@ -88,9 +88,9 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="AcfQt.lib AcfStd.lib AcfLoc.lib Qt5PrintSupport.lib"
-				OutputFile="\.exe"
-				AdditionalLibraryDirectories="&quot;../../../../Acf/Lib/DebugVC9&quot;"
-				AssemblyLinkResource=".res"
+				OutputFile="$(OutDir)\$(ProjectName).exe"
+				AdditionalLibraryDirectories="&quot;$(ACFDIR)/Lib/$(ConfigurationName)$(CompilerCode)&quot;"
+				AssemblyLinkResource="$(IntDir)$(ProjectName).res"
 				SubSystem="2"
 			/>
 			<Tool
@@ -113,13 +113,13 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="copy C:\Qt\Qt-5.3.1-VS2008\bin\*.dll ..\..\..\bin\DebugVC9"
+				CommandLine="copy $(QTDIR)\bin\*.dll ..\..\..\bin\$(ConfigurationName)$(CompilerCode)"
 			/>
 		</Configuration>
 		<Configuration
 			Name="Release|x64"
 			ConfigurationType="1"
-			InheritedPropertySheets="../../../../Acf/Config\VC9\Release.vsprops;../../../../Acf/Config\VC9\Application.vsprops;../../../../Acf/Config\VC9\Win64.vsprops"
+			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Release.vsprops;$(ACFCONFIGDIR)\VC9\Application.vsprops;$(ACFCONFIGDIR)\VC9\Win64.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -137,7 +137,7 @@
 				Name="FileConvertCopy"
 				RegistryFile="../../../Partitura/AcfInfoCopyApp.arx"
 				ConfigFile="../../../Config/BaseOnly.xpc"
-				OutputDir="/../../../AuxInclude/Qt5/GeneratedFiles/"
+				OutputDir="$(InputDir)/../../../AuxInclude/Qt5/GeneratedFiles/$(ProjectName)"
 			/>
 			<Tool
 				Name="DeployCopy"
@@ -166,7 +166,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;;&quot;../../../../Acf/Impl&quot;"
+				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;;&quot;$(ACFDIR)/Impl&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
 			/>
 			<Tool
@@ -181,9 +181,9 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="AcfQt.lib AcfStd.lib AcfLoc.lib Qt5PrintSupport.lib"
-				OutputFile="\.exe"
-				AdditionalLibraryDirectories="&quot;../../../../Acf/Lib/DebugVC9&quot;"
-				AssemblyLinkResource=".res"
+				OutputFile="$(OutDir)\$(ProjectName).exe"
+				AdditionalLibraryDirectories="&quot;$(ACFDIR)/Lib/$(ConfigurationName)$(CompilerCode)&quot;"
+				AssemblyLinkResource="$(IntDir)$(ProjectName).res"
 				SubSystem="2"
 				TargetMachine="17"
 			/>
@@ -207,13 +207,13 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="copy C:\Qt\Qt-5.3.1-VS2008\bin\*.dll ..\..\..\bin\DebugVC9"
+				CommandLine="copy $(QTDIR)\bin\*.dll ..\..\..\bin\$(ConfigurationName)$(CompilerCode)"
 			/>
 		</Configuration>
 		<Configuration
 			Name="Debug|Win32"
 			ConfigurationType="1"
-			InheritedPropertySheets="../../../../Acf/Config\VC9\Debug.vsprops;../../../../Acf/Config\VC9\Application.vsprops;../../../../Acf/Config\VC9\Win32.vsprops"
+			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Debug.vsprops;$(ACFCONFIGDIR)\VC9\Application.vsprops;$(ACFCONFIGDIR)\VC9\Win32.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -231,7 +231,7 @@
 				Name="FileConvertCopy"
 				RegistryFile="../../../Partitura/AcfInfoCopyApp.arx"
 				ConfigFile="../../../Config/BaseOnly.xpc"
-				OutputDir="/../../../AuxInclude/Qt5/GeneratedFiles/"
+				OutputDir="$(InputDir)/../../../AuxInclude/Qt5/GeneratedFiles/$(ProjectName)"
 			/>
 			<Tool
 				Name="DeployCopy"
@@ -261,7 +261,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;;&quot;../../../../Acf/Impl&quot;"
+				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;;&quot;$(ACFDIR)/Impl&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
 			/>
 			<Tool
@@ -276,9 +276,9 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="AcfQt.lib AcfStd.lib AcfLoc.lib Qt5PrintSupport.lib"
-				OutputFile="\.exe"
-				AdditionalLibraryDirectories="&quot;../../../../Acf/Lib/DebugVC9&quot;"
-				AssemblyLinkResource=".res"
+				OutputFile="$(OutDir)\$(ProjectName).exe"
+				AdditionalLibraryDirectories="&quot;$(ACFDIR)/Lib/$(ConfigurationName)$(CompilerCode)&quot;"
+				AssemblyLinkResource="$(IntDir)$(ProjectName).res"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -300,13 +300,13 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="copy C:\Qt\Qt-5.3.1-VS2008\bin\*.dll ..\..\..\bin\DebugVC9"
+				CommandLine="copy $(QTDIR)\bin\*.dll ..\..\..\bin\$(ConfigurationName)$(CompilerCode)"
 			/>
 		</Configuration>
 		<Configuration
 			Name="Debug|x64"
 			ConfigurationType="1"
-			InheritedPropertySheets="../../../../Acf/Config\VC9\Debug.vsprops;../../../../Acf/Config\VC9\Application.vsprops;../../../../Acf/Config\VC9\Win64.vsprops"
+			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Debug.vsprops;$(ACFCONFIGDIR)\VC9\Application.vsprops;$(ACFCONFIGDIR)\VC9\Win64.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -324,7 +324,7 @@
 				Name="FileConvertCopy"
 				RegistryFile="../../../Partitura/AcfInfoCopyApp.arx"
 				ConfigFile="../../../Config/BaseOnly.xpc"
-				OutputDir="/../../../AuxInclude/Qt5/GeneratedFiles/"
+				OutputDir="$(InputDir)/../../../AuxInclude/Qt5/GeneratedFiles/$(ProjectName)"
 			/>
 			<Tool
 				Name="DeployCopy"
@@ -355,7 +355,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;;&quot;../../../../Acf/Impl&quot;"
+				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;;&quot;$(ACFDIR)/Impl&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
 			/>
 			<Tool
@@ -370,9 +370,9 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="AcfQt.lib AcfStd.lib AcfLoc.lib Qt5PrintSupport.lib"
-				OutputFile="\.exe"
-				AdditionalLibraryDirectories="&quot;../../../../Acf/Lib/DebugVC9&quot;"
-				AssemblyLinkResource=".res"
+				OutputFile="$(OutDir)\$(ProjectName).exe"
+				AdditionalLibraryDirectories="&quot;$(ACFDIR)/Lib/$(ConfigurationName)$(CompilerCode)&quot;"
+				AssemblyLinkResource="$(IntDir)$(ProjectName).res"
 				TargetMachine="17"
 			/>
 			<Tool
@@ -395,7 +395,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="copy C:\Qt\Qt-5.3.1-VS2008\bin\*.dll ..\..\..\bin\DebugVC9"
+				CommandLine="copy $(QTDIR)\bin\*.dll ..\..\..\bin\$(ConfigurationName)$(CompilerCode)"
 			/>
 		</Configuration>
 	</Configurations>
@@ -440,7 +440,7 @@
 					>
 					<Tool
 						Name="Arxc"
-						ConfigFile="../../../Config/Full.xpc;"
+						ConfigFile="../../../Config/Full.xpc;$(NOINHERIT)"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -448,7 +448,7 @@
 					>
 					<Tool
 						Name="Arxc"
-						ConfigFile="../../../Config/Full.xpc;"
+						ConfigFile="../../../Config/Full.xpc;$(NOINHERIT)"
 					/>
 				</FileConfiguration>
 			</File>

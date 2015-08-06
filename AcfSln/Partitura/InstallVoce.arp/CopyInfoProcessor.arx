@@ -4,21 +4,10 @@
     <VersionInfos count="3">
       <Version>
         <Id>
-          1023
-        </Id>
-        <Number>
-          328706
-        </Number>
-        <Description>
-          Qt Framework
-        </Description>
-      </Version>
-      <Version>
-        <Id>
           0
         </Id>
         <Number>
-          3796
+          2934
         </Number>
         <Description>
           ACF
@@ -29,10 +18,21 @@
           1
         </Id>
         <Number>
-          1336
+          920
         </Number>
         <Description>
           ACF-Solutions
+        </Description>
+      </Version>
+      <Version>
+        <Id>
+          1023
+        </Id>
+        <Number>
+          264194
+        </Number>
+        <Description>
+          Qt Framework
         </Description>
       </Version>
     </VersionInfos>
@@ -210,7 +210,7 @@
         <Flags>
           0
         </Flags>
-        <AttributeInfoMap count="9">
+        <AttributeInfoMap count="7">
           <AttributeInfo>
             <Id>
               ApplicationInfo
@@ -248,22 +248,6 @@
           </AttributeInfo>
           <AttributeInfo>
             <Id>
-              IgnoreUnknownTags
-            </Id>
-            <Type>
-              Boolean
-            </Type>
-            <ExportId>
-              IgnoreUnknownTags
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                false
-              </IsEnabled>
-            </Data>
-          </AttributeInfo>
-          <AttributeInfo>
-            <Id>
               LicensePath
             </Id>
             <Type>
@@ -296,32 +280,13 @@
           </AttributeInfo>
           <AttributeInfo>
             <Id>
-              ReplaceEnvironmentVariables
+              UseSubstitution
             </Id>
             <Type>
               Boolean
             </Type>
             <ExportId>
-              
-            </ExportId>
-            <Data>
-              <IsEnabled>
-                true
-              </IsEnabled>
-              <Value>
-                true
-              </Value>
-            </Data>
-          </AttributeInfo>
-          <AttributeInfo>
-            <Id>
-              SubstitutionTagExpr
-            </Id>
-            <Type>
-              String
-            </Type>
-            <ExportId>
-              SubstitutionTagExpr
+              UseSubstitution
             </ExportId>
             <Data>
               <IsEnabled>

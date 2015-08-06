@@ -28,12 +28,12 @@
   </AcfHeader>
   <ConfigFiles count="1">
     <FilePath>
-      ../../Acf/Config/Core.xpc
+      $(ACFDIR)/Config/Core.xpc
     </FilePath>
   </ConfigFiles>
   <PackageDirs count="2">
     <Dir>
-      ../Bin/DebugVC9/
+      ../Bin/$(ConfigurationDir)
     </Dir>
     <Dir>
       ../Partitura

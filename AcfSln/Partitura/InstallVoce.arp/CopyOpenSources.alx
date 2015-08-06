@@ -7,7 +7,7 @@
           1023
         </Id>
         <Number>
-          328706
+          328449
         </Number>
         <Description>
           Qt Framework
@@ -18,7 +18,7 @@
           0
         </Id>
         <Number>
-          3796
+          3793
         </Number>
         <Description>
           ACF
@@ -29,7 +29,7 @@
           1
         </Id>
         <Number>
-          1336
+          1335
         </Number>
         <Description>
           ACF-Solutions
@@ -37,49 +37,7 @@
       </Version>
     </VersionInfos>
   </AcfHeader>
-  <PositionMap count="10">
-    <Element>
-      <ComponentName>
-        CopyImplResources
-      </ComponentName>
-      <X>
-        650
-      </X>
-      <Y>
-        225
-      </Y>
-      <Note>
-        
-      </Note>
-    </Element>
-    <Element>
-      <ComponentName>
-        CopyIncludeProjects
-      </ComponentName>
-      <X>
-        775
-      </X>
-      <Y>
-        475
-      </Y>
-      <Note>
-        
-      </Note>
-    </Element>
-    <Element>
-      <ComponentName>
-        CopyIncludeSources
-      </ComponentName>
-      <X>
-        475
-      </X>
-      <Y>
-        475
-      </Y>
-      <Note>
-        
-      </Note>
-    </Element>
+  <PositionMap count="11">
     <Element>
       <ComponentName>
         CopyImplSources
@@ -89,20 +47,6 @@
       </X>
       <Y>
         125
-      </Y>
-      <Note>
-        
-      </Note>
-    </Element>
-    <Element>
-      <ComponentName>
-        CopyIncludeResources
-      </ComponentName>
-      <X>
-        650
-      </X>
-      <Y>
-        625
       </Y>
       <Note>
         
@@ -124,13 +68,13 @@
     </Element>
     <Element>
       <ComponentName>
-        CopyImplProjects
+        CopyBuild
       </ComponentName>
       <X>
-        950
+        1000
       </X>
       <Y>
-        300
+        350
       </Y>
       <Note>
         
@@ -138,7 +82,21 @@
     </Element>
     <Element>
       <ComponentName>
-        CopyImplOther
+        CopyImplResources
+      </ComponentName>
+      <X>
+        650
+      </X>
+      <Y>
+        225
+      </Y>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        CopyImplQMake
       </ComponentName>
       <X>
         225
@@ -152,7 +110,7 @@
     </Element>
     <Element>
       <ComponentName>
-        CopyIncludeOther
+        CopyIncludeQMake
       </ComponentName>
       <X>
         200
@@ -173,6 +131,62 @@
       </X>
       <Y>
         525
+      </Y>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        CopyImplOther
+      </ComponentName>
+      <X>
+        850
+      </X>
+      <Y>
+        125
+      </Y>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        CopyIncludeOther
+      </ComponentName>
+      <X>
+        850
+      </X>
+      <Y>
+        475
+      </Y>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        CopyIncludeResources
+      </ComponentName>
+      <X>
+        650
+      </X>
+      <Y>
+        625
+      </Y>
+      <Note>
+        
+      </Note>
+    </Element>
+    <Element>
+      <ComponentName>
+        CopyIncludeSources
+      </ComponentName>
+      <X>
+        475
+      </X>
+      <Y>
+        475
       </Y>
       <Note>
         
