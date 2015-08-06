@@ -57453,15 +57453,15 @@
       <type>static QString</type>
       <name>FindVariableValue</name>
       <anchorfile>classistd_1_1_c_system.html</anchorfile>
-      <anchor>a908d367f5d913a09e81f2fc452769c17</anchor>
-      <arglist>(const QString &amp;varName, bool osEnv=true)</arglist>
+      <anchor>ad6754c643631e9a9c67e34f5e8751f9d</anchor>
+      <arglist>(const QString &amp;varName, bool envVars=true, bool embeddedVars=true)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static QString</type>
       <name>GetEnrolledPath</name>
       <anchorfile>classistd_1_1_c_system.html</anchorfile>
-      <anchor>a77a689eff459138fb6a5cac98827f574</anchor>
-      <arglist>(const QString &amp;path, bool osEnv=true)</arglist>
+      <anchor>a2cbecd65ff751cb618740c4f60792403</anchor>
+      <arglist>(const QString &amp;path, bool envVars=true, bool embeddedVars=true)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static EnvironmentVariables</type>

@@ -1,4 +1,4 @@
-include(../../../../Acf/Config/QMake/StaticConfig.pri)
+include($(ACFCONFIGDIR)/QMake/StaticConfig.pri)
 
 TARGET = icbox
 

@@ -1,11 +1,11 @@
-include(../../../../Acf/Config/QMake/ComponentConfig.pri)
-include(../../../../Acf/Config/QMake/QtBaseConfig.pri)
-include(../../../../Acf/Config/QMake/AcfStd.pri)
-include(../../../../Acf/Config/QMake/AcfQt.pri)
+include($(ACFCONFIGDIR)/QMake/ComponentConfig.pri)
+include($(ACFCONFIGDIR)/QMake/QtBaseConfig.pri)
+include($(ACFCONFIGDIR)/QMake/AcfStd.pri)
+include($(ACFCONFIGDIR)/QMake/AcfQt.pri)
 
 TARGET = QwtPck
 
-INCLUDEPATH += ../../../../AcfSln/Include
+INCLUDEPATH += $(ACFSLNDIR)/Include
 INCLUDEPATH += "$(QWTDIR_6_1_0)/Src"
 INCLUDEPATH += "$(QWT3DDIR_0_3_1)/Include"
 
@@ -16,5 +16,5 @@ LIBS += -L$(QWT3DDIR_0_3_1)/Lib/$$COMPILER_DIR -lqwt3d
 INCLUDEPATH += ../../../Include
 
 QT += opengl
-LIBS += -L../../../../Acf/Lib/$$COMPILER_DIR -liprm
+LIBS += -L$(ACFDIR)/Lib/$$COMPILER_DIR -liprm
 

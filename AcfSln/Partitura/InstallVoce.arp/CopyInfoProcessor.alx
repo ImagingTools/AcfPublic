@@ -4,21 +4,10 @@
     <VersionInfos count="3">
       <Version>
         <Id>
-          0
-        </Id>
-        <Number>
-          2934
-        </Number>
-        <Description>
-          ACF
-        </Description>
-      </Version>
-      <Version>
-        <Id>
           1
         </Id>
         <Number>
-          920
+          1336
         </Number>
         <Description>
           ACF-Solutions
@@ -29,10 +18,21 @@
           1023
         </Id>
         <Number>
-          264194
+          328706
         </Number>
         <Description>
           Qt Framework
+        </Description>
+      </Version>
+      <Version>
+        <Id>
+          0
+        </Id>
+        <Number>
+          3796
+        </Number>
+        <Description>
+          ACF
         </Description>
       </Version>
     </VersionInfos>
@@ -40,28 +40,28 @@
   <PositionMap count="2">
     <Element>
       <ComponentName>
-        FileCopy
+        CopyFilesTree
       </ComponentName>
       <X>
         550
       </X>
-      <X>
-        350
-      </X>
+      <Y>
+        475
+      </Y>
       <Note>
         
       </Note>
     </Element>
     <Element>
       <ComponentName>
-        CopyFilesTree
+        FileCopy
       </ComponentName>
       <X>
         550
       </X>
-      <X>
-        475
-      </X>
+      <Y>
+        350
+      </Y>
       <Note>
         
       </Note>
