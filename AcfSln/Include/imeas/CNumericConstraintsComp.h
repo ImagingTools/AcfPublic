@@ -20,7 +20,6 @@
 ********************************************************************************/
 
 
-
 #ifndef imeas_CNumericConstraintsComp_included
 #define imeas_CNumericConstraintsComp_included
 
