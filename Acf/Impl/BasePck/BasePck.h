@@ -32,6 +32,7 @@
 #include "ilog/CTextFileLogStreamerComp.h"
 
 #include "ifile/TFileSerializerComp.h"
+#include "ifile/TXmlFileSerializerComp.h"
 #include "ifile/CXmlFileReadArchive.h"
 #include "ifile/CXmlFileWriteArchive.h"
 #include "ifile/CFileReadArchive.h"
@@ -104,7 +105,7 @@ typedef ilog::CConsoleLogComp ConsoleLog;
 typedef icomp::TModelCompWrap<ilog::CLogComp> Log;
 typedef ilog::CTextFileLogStreamerComp TextFileLogStreamer;
 
-typedef ifile::TFileSerializerComp<ifile::CXmlFileReadArchive, ifile::CXmlFileWriteArchive> XmlFileSerializer;
+typedef ifile::TXmlFileSerializerComp<ifile::CXmlFileReadArchive, ifile::CXmlFileWriteArchive> XmlFileSerializer;
 typedef ifile::TFileSerializerComp<ifile::CFileReadArchive, ifile::CFileWriteArchive> BinaryFileSerializer;
 typedef ifile::CComposedFilePersistenceComp ComposedLoader;
 typedef ifile::CFileTypeInfoComp FileTypeInfo;

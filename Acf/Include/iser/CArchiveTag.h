@@ -69,8 +69,7 @@ public:
 		*/
 		TT_LEAF,
 		/**
-			Weak group tag, will be not outputted.
-			It is designed only to create logical group.
+			Weak group tag, if possible it will be not outputted.
 		*/
 		TT_WEAK
 	};
