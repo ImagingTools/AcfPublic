@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <VisualStudioToolFile
 	Name="ACF Rules"
-	Version="9,00"
+	Version="8,00"
 	>
 	<Rules>
 		<CustomBuildRule
 			Name="Arxc"
 			DisplayName="ARX Compiler"
-			CommandLine="../../../../Acf\Bin\$(ConfigurationName)VC9\Arxc.exe &quot;$(InputPath)&quot; -o &quot;$(InputDir)\..\..\AuxInclude\Qt5\GeneratedFiles\$(ProjectName)\C$(InputName).cpp&quot; [AllOptions] [AdditionalOptions]"
+			CommandLine="..\..\..\..\Acf\Bin\$(ConfigurationName)VC9\Arxc.exe &quot;$(InputPath)&quot; -o &quot;$(InputDir)\..\..\AuxInclude\Qt5\GeneratedFiles\$(ProjectName)\C$(InputName).cpp&quot; [AllOptions] [AdditionalOptions]"
 			Outputs="&quot;$(InputDir)\..\..\AuxInclude\Qt5\GeneratedFiles\$(ProjectName)\C$(InputName).cpp&quot;;&quot;$(InputDir)\..\..\AuxInclude\Qt5\GeneratedFiles\$(ProjectName)\C$(InputName).h&quot;"
-			AdditionalDependencies="&quot;../../../../Acf\Bin\$(ConfigurationName)VC9\Arxc.exe&quot;"
+			AdditionalDependencies="&quot;..\..\..\..\Acf\Bin\$(ConfigurationName)VC9\Arxc.exe&quot;"
 			FileExtensions="*.arx"
 			ExecutionDescription="Compiling ACF Registry File..."
 			>
