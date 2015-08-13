@@ -12,10 +12,10 @@
   <ItemDefinitionGroup>
     <Arxc>
       <Verbose>False</Verbose>
-      <CommandLineTemplate>../../../../Acf\Bin\$(Configuration)VC12\Arxc.exe "%(FullPath)" -o "%(RootDir)%(Directory)\..\..\AuxInclude\Qt5\GeneratedFiles\$(ProjectName)\C%(Filename).cpp" [AllOptions] [AdditionalOptions]</CommandLineTemplate>
+      <CommandLineTemplate>..\..\..\..\Acf\Bin\$(Configuration)VC12\Arxc.exe "%(FullPath)" -o "%(RootDir)%(Directory)\..\..\AuxInclude\Qt5\GeneratedFiles\$(ProjectName)\C%(Filename).cpp" [AllOptions] [AdditionalOptions]</CommandLineTemplate>
       <Outputs>"%(RootDir)%(Directory)\..\..\AuxInclude\Qt5\GeneratedFiles\$(ProjectName)\C%(Filename).cpp";"%(RootDir)%(Directory)\..\..\AuxInclude\Qt5\GeneratedFiles\$(ProjectName)\C%(Filename).h"</Outputs>
       <ExecutionDescription>Compiling ACF Registry File...</ExecutionDescription>
-      <AdditionalDependencies>"../../../../Acf\Bin\$(Configuration)VC12\Arxc.exe"</AdditionalDependencies>
+      <AdditionalDependencies>"..\..\..\..\Acf\Bin\$(Configuration)VC12\Arxc.exe"</AdditionalDependencies>
     </Arxc>
   </ItemDefinitionGroup>
   <PropertyGroup
@@ -48,13 +48,13 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <FileConvertCopy>
-      <RegistryFile>../../../../Acf\Partitura\AcfVoce.arp\FileSubstitCopyApp.arx</RegistryFile>
-      <ConfigFile>../../../../Acf\Config\AcfBaseOnly.xpc</ConfigFile>
+      <RegistryFile>..\..\..\..\Acf\Partitura\AcfVoce.arp\FileSubstitCopyApp.arx</RegistryFile>
+      <ConfigFile>..\..\..\..\Acf\Config\AcfBaseOnly.xpc</ConfigFile>
       <OutputDir>$(OutputDir)</OutputDir>
-      <CommandLineTemplate>"../../../../Acf\Bin\$(Configuration)VC12\Acf.exe" "%(RegistryFile)" -config "%(ConfigFile)" -input "%(FullPath)" -o %(OutputDir)/%(Filename)</CommandLineTemplate>
+      <CommandLineTemplate>"..\..\..\..\Acf\Bin\$(Configuration)VC12\Acf.exe" "%(RegistryFile)" -config "%(ConfigFile)" -input "%(FullPath)" -o %(OutputDir)/%(Filename)</CommandLineTemplate>
       <Outputs>"%(OutputDir)/%(Filename)"</Outputs>
       <ExecutionDescription>Converting File With ACF transformation...</ExecutionDescription>
-      <AdditionalDependencies>"../../../../Acf\Bin\$(Configuration)VC12\Acf.exe";"%(RegistryFile)";"%(ConfigFile)"</AdditionalDependencies>
+      <AdditionalDependencies>"..\..\..\..\Acf\Bin\$(Configuration)VC12\Acf.exe";"%(RegistryFile)";"%(ConfigFile)"</AdditionalDependencies>
     </FileConvertCopy>
   </ItemDefinitionGroup>
 </Project>
