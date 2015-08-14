@@ -25324,6 +25324,13 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
+      <name>on_LoadImageButton_clicked</name>
+      <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
+      <anchor>ace55de3c2f6c6fc71382fee1288f4103</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
       <name>on_SaveImageButton_clicked</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
       <anchor>a12f3d0b735891816953921c80b4acc16</anchor>
