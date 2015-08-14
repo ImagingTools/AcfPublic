@@ -22047,6 +22047,13 @@
       <anchor>a38c319b737e3841dac674f275a642821</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="variable" static="yes">
+      <type>static istd::CClassInfo</type>
+      <name>s_compInterfaceType</name>
+      <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
+      <anchor>a5cb82bdd346ea02431b0a63409495964</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>icomp::CCachedEnvironmentManager</name>

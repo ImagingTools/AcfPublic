@@ -42,8 +42,9 @@ class CBaseComponentStaticInfo:
 {
 public:
 	typedef CComponentStaticInfoBase BaseClass;
-
 	typedef void* (*InterfaceExtractorPtr)(IComponent& component);
+
+	static istd::CClassInfo s_compInterfaceType;
 
 	CBaseComponentStaticInfo(const IRealComponentStaticInfo* baseComponentPtr = NULL);
 
