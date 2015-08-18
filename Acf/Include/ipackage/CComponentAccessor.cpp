@@ -46,6 +46,7 @@ struct Loader
 
 	Loader()
 	{
+		registryLoaderComp.InsertMultiAttr("FileExtensions", QString("arx"));
 		registryLoaderComp.InitComponent();
 
 		packagesLoaderComp.SetRef("RegistryLoader", &registryLoaderComp);
