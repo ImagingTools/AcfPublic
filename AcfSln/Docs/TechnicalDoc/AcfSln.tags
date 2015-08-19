@@ -8921,7 +8921,8 @@
   <compound kind="class">
     <name>icmpstr::CRegistryLoaderComp</name>
     <filename>classicmpstr_1_1_c_registry_loader_comp.html</filename>
-    <base>TFileSerializerComp&lt; ifile::CXmlFileReadArchive, ifile::CXmlFileWriteArchive &gt;</base>
+    <base>ilog::TLoggerCompWrap</base>
+    <base virtualness="virtual">ifile::IFilePersistence</base>
     <member kind="enumeration">
       <type></type>
       <name>MessageId</name>
@@ -8944,11 +8945,18 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ifile::TFileSerializerComp&lt; ifile::CXmlFileReadArchive, ifile::CXmlFileWriteArchive &gt;</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classicmpstr_1_1_c_registry_loader_comp.html</anchorfile>
-      <anchor>af6825bd6b191a0a8a7e0a03e3fe15291</anchor>
+      <anchor>a2b905672e6298fecd3099a96a9fcee24</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOperationSupported</name>
+      <anchorfile>classicmpstr_1_1_c_registry_loader_comp.html</anchorfile>
+      <anchor>a437e6350069c1db3a7f6ca6b79859abc</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr, int flags, bool beQuiet) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -8984,13 +8992,6 @@
       <anchorfile>classicmpstr_1_1_c_registry_loader_comp.html</anchorfile>
       <anchor>a822db6c2a2f359a0961e25a862dcc5d1</anchor>
       <arglist>(const QString &amp;registryPath) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnReadError</name>
-      <anchorfile>classicmpstr_1_1_c_registry_loader_comp.html</anchorfile>
-      <anchor>abcee5ca5617d32dfc759d1c36854da11</anchor>
-      <arglist>(const ifile::CXmlFileReadArchive &amp;archive, const istd::IChangeable &amp;data, const QString &amp;filePath) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -28308,34 +28309,6 @@
     <filename>classiqtmm_1_1_c_media_loader_comp.html</filename>
     <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifile::IFilePersistence</base>
-    <member kind="enumeration">
-      <type></type>
-      <name>MessageId</name>
-      <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
-      <anchor>abfe262925b385db6acd4c72ba1cf0cd3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_BAD_EXTENSION</name>
-      <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
-      <anchor>abfe262925b385db6acd4c72ba1cf0cd3a3a42aedf094e46ddd36ccb2f540f419b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_FILE_NOT_EXIST</name>
-      <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
-      <anchor>abfe262925b385db6acd4c72ba1cf0cd3a0788b7124d3bb82f4fbbe0b818ebfb98</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_BAD_FORMAT</name>
-      <anchorfile>classiqtmm_1_1_c_media_loader_comp.html</anchorfile>
-      <anchor>abfe262925b385db6acd4c72ba1cf0cd3a9207dd4779261f20991d0a35f62b13a5</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -28422,27 +28395,6 @@
       <name>MessageId</name>
       <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
       <anchor>ada050c80d54608502eac377685442414</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_BAD_EXTENSION</name>
-      <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
-      <anchor>ada050c80d54608502eac377685442414a550efe30c51ffa56478377a8c24c8fa5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_FILE_NOT_EXIST</name>
-      <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
-      <anchor>ada050c80d54608502eac377685442414ae59647782c05f5326569833d51e24ac9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_BAD_FORMAT</name>
-      <anchorfile>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</anchorfile>
-      <anchor>ada050c80d54608502eac377685442414a5f2be7a8b2922bd1c946f18b0c9ee582</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">

@@ -6015,16 +6015,6 @@
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
-    <name>CArrowShape.h</name>
-    <path>C:/Temp/Acf/Include/iview/</path>
-    <filename>_c_arrow_shape_8h</filename>
-    <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
-    <includes id="_c_line2d_8h" name="CLine2d.h" local="yes" imported="no">i2d/CLine2d.h</includes>
-    <includes id="_c_interactive_shape_base_8h" name="CInteractiveShapeBase.h" local="yes" imported="no">iview/CInteractiveShapeBase.h</includes>
-    <class kind="class">iview::CArrowShape</class>
-    <namespace>iview</namespace>
-  </compound>
-  <compound kind="file">
     <name>CCalibratedViewBase.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_calibrated_view_base_8h</filename>
@@ -26924,6 +26914,27 @@
       <anchor>a24e35495e0c1f4d128ed1513c8907376a43ac0d6482c1c806777158e9e9e0cc0b</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_BAD_EXTENSION</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>a24e35495e0c1f4d128ed1513c8907376a63b8f27bc23381f047355a914de708e9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_FILE_NOT_EXIST</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>a24e35495e0c1f4d128ed1513c8907376acfcfb82a4965c2abc1653c699d4af7b6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_UNSUPPORTED_VERSION</name>
+      <anchorfile>classifile_1_1_i_file_persistence.html</anchorfile>
+      <anchor>a24e35495e0c1f4d128ed1513c8907376a3ae678e0570332fdbb015e833b5011a5</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="enumeration">
       <type></type>
       <name>QueryFlags</name>
@@ -29568,27 +29579,6 @@
     <filename>classifile_1_1_c_file_serializer_comp_base.html</filename>
     <base>TLoggerCompWrap&lt; CFileTypeInfoComp &gt;</base>
     <base virtualness="virtual">ifile::IFilePersistence</base>
-    <member kind="enumeration">
-      <type></type>
-      <name>MessageId</name>
-      <anchorfile>classifile_1_1_c_file_serializer_comp_base.html</anchorfile>
-      <anchor>ae177b2fecdc0565b7d8e06b6e1b7626e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_BAD_EXTENSION</name>
-      <anchorfile>classifile_1_1_c_file_serializer_comp_base.html</anchorfile>
-      <anchor>ae177b2fecdc0565b7d8e06b6e1b7626eab79221d68fabd8152f6eeff778a88397</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_UNSUPPORTED_VERSION</name>
-      <anchorfile>classifile_1_1_c_file_serializer_comp_base.html</anchorfile>
-      <anchor>ae177b2fecdc0565b7d8e06b6e1b7626eaa0dac5d40675b82a161057bb39fc7d87</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="typedef">
       <type>ilog::TLoggerCompWrap&lt; CFileTypeInfoComp &gt;</type>
       <name>BaseClass</name>
@@ -29972,27 +29962,6 @@
     <filename>classifile_1_1_c_file_type_info_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">ifile::IFileTypeInfo</base>
-    <member kind="enumeration">
-      <type></type>
-      <name>MessageId</name>
-      <anchorfile>classifile_1_1_c_file_type_info_comp.html</anchorfile>
-      <anchor>aa225a0e44a01fa16e68fbdef891721d4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_BAD_EXTENSION</name>
-      <anchorfile>classifile_1_1_c_file_type_info_comp.html</anchorfile>
-      <anchor>aa225a0e44a01fa16e68fbdef891721d4a65c90e93ab9f4cfc99283ca860dfad8f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_UNSUPPORTED_VERSION</name>
-      <anchorfile>classifile_1_1_c_file_type_info_comp.html</anchorfile>
-      <anchor>aa225a0e44a01fa16e68fbdef891721d4aaa0c065485bb1c45aa054fb487feb4fc</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -31301,8 +31270,8 @@
       <type></type>
       <name>ReadArchiveEx</name>
       <anchorfile>classifile_1_1_t_file_serializer_comp_1_1_read_archive_ex.html</anchorfile>
-      <anchor>abcd899dd00a97a8d9764318523093e47</anchor>
-      <arglist>(const QString &amp;filePath, const TFileSerializerComp *loggerPtr)</arglist>
+      <anchor>a3cd225588f5729a82e4a44b040ee321b</anchor>
+      <arglist>(const QString &amp;filePath, const istd::ILogger *loggerPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -31333,8 +31302,8 @@
       <type></type>
       <name>WriteArchiveEx</name>
       <anchorfile>classifile_1_1_t_file_serializer_comp_1_1_write_archive_ex.html</anchorfile>
-      <anchor>aa37de8d2986fde11f6d193ebc655b33c</anchor>
-      <arglist>(const QString &amp;filePath, const iser::IVersionInfo *infoPtr, const TFileSerializerComp *loggerPtr)</arglist>
+      <anchor>ae1f6b4ce98c7aaf726428b4d86bf773d</anchor>
+      <arglist>(const QString &amp;filePath, const iser::IVersionInfo *infoPtr, const istd::ILogger *loggerPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -32625,20 +32594,6 @@
       <name>MessageId</name>
       <anchorfile>classiimg_1_1_c_bitmap_loader_comp.html</anchorfile>
       <anchor>a345866a4ee60744da1c60e2f944ec6f7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_BAD_EXTENSION</name>
-      <anchorfile>classiimg_1_1_c_bitmap_loader_comp.html</anchorfile>
-      <anchor>a345866a4ee60744da1c60e2f944ec6f7a5023aa5cc95fab376f5f2386885ad627</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_FILE_NOT_EXIST</name>
-      <anchorfile>classiimg_1_1_c_bitmap_loader_comp.html</anchorfile>
-      <anchor>a345866a4ee60744da1c60e2f944ec6f7ad73fb0f859b6398b60529a7ce789ad07</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
@@ -45766,6 +45721,13 @@
       <arglist>(double value)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual iview::CLineShape *</type>
+      <name>CreateShapeInstance</name>
+      <anchorfile>classiqt2d_1_1_c_line2d_params_gui_comp.html</anchorfile>
+      <anchor>aae91680e3bd889c00eedd048d25087e9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqt2d_1_1_c_line2d_params_gui_comp.html</anchorfile>
@@ -47898,6 +47860,13 @@
       <name>GetUnitName</name>
       <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
       <anchor>afaddbc749a2522154c48fa9f3bfa43ab</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Shape *</type>
+      <name>CreateShapeInstance</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>a42e450e1f494f70b930e83ec0421cfbd</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -61619,7 +61588,6 @@
     <class kind="class">iview::CAnnulusSegmentShape</class>
     <class kind="class">iview::CAnnulusShape</class>
     <class kind="class">iview::CArcShape</class>
-    <class kind="class">iview::CArrowShape</class>
     <class kind="class">iview::CCalibratedViewBase</class>
     <class kind="class">iview::CCenterPinShape</class>
     <class kind="class">iview::CCircleShape</class>
@@ -62682,158 +62650,6 @@
       <name>m_editMode</name>
       <anchorfile>classiview_1_1_c_arc_shape.html</anchorfile>
       <anchor>aba03d7516bd125db46a54e21f8a4ad89</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iview::CArrowShape</name>
-    <filename>classiview_1_1_c_arrow_shape.html</filename>
-    <base>iview::CInteractiveShapeBase</base>
-    <member kind="typedef">
-      <type>CInteractiveShapeBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>a595a3393854068601044446af6c61a92</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CArrowShape</name>
-      <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>a6567990ed82790695069e32392585d77</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>InvalidateBoundingBox</name>
-      <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>a8346fa58949974134d35e8e9bc7b2433</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual TouchState</type>
-      <name>IsTouched</name>
-      <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>aaa7f903a3dc0d7d983b7b5ecbd228335</anchor>
-      <arglist>(istd::CIndex2d position) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>Draw</name>
-      <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>aab9b8af95f917087138c628852ffe9e0</anchor>
-      <arglist>(QPainter &amp;drawContext) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnModelAttached</name>
-      <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>a54c1d2eedcaf703512d40d8f35a34aa3</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnMouseButton</name>
-      <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>af98afab75657dd409a8005107002bfd1</anchor>
-      <arglist>(istd::CIndex2d position, Qt::MouseButton buttonType, bool downFlag)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnMouseMove</name>
-      <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>ac83fc1a9f3e0f1d4e3d2853606351402</anchor>
-      <arglist>(istd::CIndex2d position)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>EnsurePointsAreValid</name>
-      <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>abea20e9b809001a381702e9b348f15c2</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>CalcPoints</name>
-      <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>ac7fc3320d02864fbc06c92aa966ceb8a</anchor>
-      <arglist>(const i2d::CLine2d &amp;line) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>ResetPoints</name>
-      <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>aad012a1c2c5c6f190195930aa3d41dc9</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual i2d::CRect</type>
-      <name>CalcBoundingBox</name>
-      <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>abebfd3583af044a576aa4a37958c9407</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>BeginLogDrag</name>
-      <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>ac0500a3940c16d59a0951b9f54eeca87</anchor>
-      <arglist>(const i2d::CVector2d &amp;reference)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetLogDragPosition</name>
-      <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>a5531483dda4f231ddf4efa9f34e54b56</anchor>
-      <arglist>(const i2d::CVector2d &amp;position)</arglist>
-    </member>
-    <member kind="function" protection="protected" static="yes">
-      <type>static bool</type>
-      <name>CheckLine</name>
-      <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>af13199dd2061101623b02ad896d28e6d</anchor>
-      <arglist>(const istd::CIndex2d &amp;firstPoint, const istd::CIndex2d &amp;secondPoint, const istd::CIndex2d &amp;point, double maxDistance)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>i2d::CVector2d</type>
-      <name>m_referencePosition</name>
-      <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>ab071e00b4f7187b0dc96b3476049805c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>double</type>
-      <name>m_arrowLinesProportion</name>
-      <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>aede358044fb7951db0f78c243876fefa</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>double</type>
-      <name>m_maxArrowLines</name>
-      <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>aadbb7386dfeff7fe3083a00cad8c9a86</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>int</type>
-      <name>m_referenceIndex</name>
-      <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>a02fdaa1775d9bf348928a9fd13582542</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>istd::CIndex2d</type>
-      <name>m_points</name>
-      <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>a36cde9bef9a348e3442a59be2cf98b6c</anchor>
-      <arglist>[4]</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>bool</type>
-      <name>m_arePointsValid</name>
-      <anchorfile>classiview_1_1_c_arrow_shape.html</anchorfile>
-      <anchor>a45f28c838db5055cdd075aac07a1d01b</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -66309,6 +66125,27 @@
     <name>iview::CLineShape</name>
     <filename>classiview_1_1_c_line_shape.html</filename>
     <base>iview::CInteractiveShapeBase</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>LineDisplayMode</name>
+      <anchorfile>classiview_1_1_c_line_shape.html</anchorfile>
+      <anchor>a22c54a0578acb1917e18018cba75f961</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>LDM_SIMPLE</name>
+      <anchorfile>classiview_1_1_c_line_shape.html</anchorfile>
+      <anchor>a22c54a0578acb1917e18018cba75f961ab6b0b2a496bfa7dba21ce2d92a35ec95</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>LDM_ARROW</name>
+      <anchorfile>classiview_1_1_c_line_shape.html</anchorfile>
+      <anchor>a22c54a0578acb1917e18018cba75f961ab7fa9fdefb136de0a9052dd535507762</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>CInteractiveShapeBase</type>
       <name>BaseClass</name>
@@ -66322,6 +66159,48 @@
       <anchorfile>classiview_1_1_c_line_shape.html</anchorfile>
       <anchor>a0ac383a3f7307b6307277d68e2f6e382</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetLineDisplayMode</name>
+      <anchorfile>classiview_1_1_c_line_shape.html</anchorfile>
+      <anchor>a64e80449fdea9bafc26fcd7850fb12d7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetLineDisplayMode</name>
+      <anchorfile>classiview_1_1_c_line_shape.html</anchorfile>
+      <anchor>a2fafaba9be597da78eab31ef7ed19c80</anchor>
+      <arglist>(int mode)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetArrowLinesProportion</name>
+      <anchorfile>classiview_1_1_c_line_shape.html</anchorfile>
+      <anchor>a46be2c135f38dd70cbfa8c62a996c388</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetArrowLinesProportion</name>
+      <anchorfile>classiview_1_1_c_line_shape.html</anchorfile>
+      <anchor>a7d1fec0f01b277d64cbd9f1b1f1194ed</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetMaxArrowLineLength</name>
+      <anchorfile>classiview_1_1_c_line_shape.html</anchorfile>
+      <anchor>ac8a0c2eb0aa6aae2c72fe247aa37f713</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetMaxArrowLineLength</name>
+      <anchorfile>classiview_1_1_c_line_shape.html</anchorfile>
+      <anchor>aa5663749c8eb2840663fcf4fad5356c7</anchor>
+      <arglist>(double value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -66422,6 +66301,27 @@
       <arglist>(const istd::CIndex2d &amp;firstPoint, const istd::CIndex2d &amp;secondPoint, const istd::CIndex2d &amp;point, double maxDistance)</arglist>
     </member>
     <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_lineDisplayMode</name>
+      <anchorfile>classiview_1_1_c_line_shape.html</anchorfile>
+      <anchor>aca4081c08ed1bbd387d33958642a88d7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>m_arrowLinesProportion</name>
+      <anchorfile>classiview_1_1_c_line_shape.html</anchorfile>
+      <anchor>ac4ff9423dba1aa768cd0a4d7b1578881</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>m_maxArrowLineLength</name>
+      <anchorfile>classiview_1_1_c_line_shape.html</anchorfile>
+      <anchor>af7d35b0a5cd5a6c680c27220ea236d39</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
       <type>i2d::CVector2d</type>
       <name>m_referencePosition</name>
       <anchorfile>classiview_1_1_c_line_shape.html</anchorfile>
@@ -66439,8 +66339,8 @@
       <type>istd::CIndex2d</type>
       <name>m_points</name>
       <anchorfile>classiview_1_1_c_line_shape.html</anchorfile>
-      <anchor>ac251bc0d7b100192f73908cb2b71ac72</anchor>
-      <arglist>[2]</arglist>
+      <anchor>abaed211be75481777d66a39ecdde3b3b</anchor>
+      <arglist>[4]</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>bool</type>
@@ -72242,7 +72142,6 @@
     <file>CAnnulusSegmentShape.h</file>
     <file>CAnnulusShape.h</file>
     <file>CArcShape.h</file>
-    <file>CArrowShape.h</file>
     <file>CCalibratedViewBase.h</file>
     <file>CCenterPinShape.h</file>
     <file>CCircleShape.h</file>
