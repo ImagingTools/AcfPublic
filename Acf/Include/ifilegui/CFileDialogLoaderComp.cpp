@@ -232,7 +232,7 @@ QString CFileDialogLoaderComp::GetFileName(const istd::IChangeable& data, const 
 		}
 
 		if (!isSaving){
-			if (allExt.size() > 1){
+			if (filterList.size() > 1){
 				filterList.prepend(tr("All known file types (%1)").arg("*." + allExt.join(" *.")));
 			}
 		}
@@ -245,6 +245,7 @@ QString CFileDialogLoaderComp::GetFileName(const istd::IChangeable& data, const 
 		bool useNativeDialogs = *m_useNativeAttrPtr;
 
 		if (isSaving){
+			selectedFilter = m_lastSaveInfo.suffix();
 			caption = tr("Enter file name");
 
 			if (!useNativeDialogs){
@@ -270,13 +271,14 @@ QString CFileDialogLoaderComp::GetFileName(const istd::IChangeable& data, const 
 			}
 		}
 		else{
+			selectedFilter = m_lastOpenInfo.suffix();
 			caption = tr("Select a file to open");
 
 			if (!useNativeDialogs){
 				QFileDialog dialog(
 					NULL,
 					caption,
-					m_lastSaveInfo.absoluteFilePath());
+					m_lastOpenInfo.absoluteFilePath());
 				dialog.setNameFilters(filterList);
 				dialog.setAcceptMode(QFileDialog::AcceptOpen);
 

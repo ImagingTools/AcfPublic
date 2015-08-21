@@ -2552,6 +2552,7 @@
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="yes" imported="no">icam/IBitmapAcquisition.h</includes>
     <includes id="iqtcam_8h" name="iqtcam.h" local="yes" imported="no">iqtcam/iqtcam.h</includes>
     <class kind="class">iqtcam::CSnapImageGuiComp</class>
+    <class kind="class">iqtcam::CSnapImageGuiComp::ParamsObserver</class>
     <namespace>iqtcam</namespace>
   </compound>
   <compound kind="file">
@@ -25253,6 +25254,7 @@
     <name>iqtcam::CSnapImageGuiComp</name>
     <filename>classiqtcam_1_1_c_snap_image_gui_comp.html</filename>
     <base>TViewExtenderCompBase&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSnapImageGuiComp, QWidget &gt; &gt;</base>
+    <class kind="class">iqtcam::CSnapImageGuiComp::ParamsObserver</class>
     <member kind="typedef">
       <type>iqt2d::TViewExtenderCompBase&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSnapImageGuiComp, QWidget &gt; &gt;</type>
       <name>BaseClass</name>
@@ -25318,13 +25320,6 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>on_LiveImageButton_toggled</name>
-      <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>a8903aa2ab3cc1fa6670569f4531535a3</anchor>
-      <arglist>(bool checked)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
       <name>on_LoadImageButton_clicked</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
       <anchor>ace55de3c2f6c6fc71382fee1288f4103</anchor>
@@ -25353,6 +25348,20 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
+      <name>OnIntervalSnap</name>
+      <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
+      <anchor>ae322896c2f972400f0fab4b83f37df30</anchor>
+      <arglist>(bool checked)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnSnapOnChanges</name>
+      <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
+      <anchor>a95a161cfd18487802c9f168039a888d7</anchor>
+      <arglist>(bool checked)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
       <name>OnTimerReady</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
       <anchor>a513a429bb80dd61c5859bbc42dd0e831</anchor>
@@ -25365,12 +25374,26 @@
       <anchor>a41d4d06b619c8b4a7768d1bcc603160f</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateButtonsState</name>
+      <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
+      <anchor>abd59284f68edc29f028ede629b055b44</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>CreateShapes</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
       <anchor>a8c9034b06b859bc5f7ab5da4c25b4b9e</anchor>
       <arglist>(int sceneId, Shapes &amp;result)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
+      <anchor>a446cccad4891a446092deb6a20098787</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -25399,6 +25422,25 @@
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
       <anchor>a4cad6f246901f20cb0eb1a4bcf74ce68</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtcam::CSnapImageGuiComp::ParamsObserver</name>
+    <filename>classiqtcam_1_1_c_snap_image_gui_comp_1_1_params_observer.html</filename>
+    <base>imod::CSingleModelObserverBase</base>
+    <member kind="function">
+      <type></type>
+      <name>ParamsObserver</name>
+      <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp_1_1_params_observer.html</anchorfile>
+      <anchor>a91f85666f72132c9560ff5181590cc67</anchor>
+      <arglist>(CSnapImageGuiComp *parentPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp_1_1_params_observer.html</anchorfile>
+      <anchor>ae6ff65be061e916f9e63dee1aa1e4616</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
