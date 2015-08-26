@@ -102,7 +102,7 @@ I_EXPORT_COMPONENT(
 I_EXPORT_COMPONENT(
 			XpcEditorGui,
 			"Display a GUI for editing XPC configurations",
-			IM_TAG("XPC GUI"));
+			IM_TAG("XPC AWC GUI"));
 
 I_EXPORT_COMPONENT(
 			RegistryTreeView,
