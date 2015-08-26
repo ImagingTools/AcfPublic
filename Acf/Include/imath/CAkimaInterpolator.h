@@ -46,6 +46,7 @@ public:
 		double value;
 		double derivative;
 	};
+	typedef QMap<double, Node> Nodes;
 
 	CAkimaInterpolator();
 	CAkimaInterpolator(double* positions, double* values, int nodesCount);
@@ -57,7 +58,6 @@ public:
 	virtual double GetValueAt(const double& argument) const;
 
 protected:
-	typedef QMap<double, Node> Nodes;
 
 	Nodes m_nodes;
 };

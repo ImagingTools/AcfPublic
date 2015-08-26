@@ -36098,6 +36098,27 @@
     <filename>classimath_1_1_c_akima_interpolator.html</filename>
     <base virtualness="virtual">imath::TIMathFunction</base>
     <class kind="struct">imath::CAkimaInterpolator::Node</class>
+    <member kind="typedef">
+      <type>QMap&lt; double, Node &gt;</type>
+      <name>Nodes</name>
+      <anchorfile>classimath_1_1_c_akima_interpolator.html</anchorfile>
+      <anchor>ac26c18a33b0639fd2361f10b04c9c455</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Argument</type>
+      <name>ArgumentType</name>
+      <anchorfile>classimath_1_1_t_i_math_function.html</anchorfile>
+      <anchor>a841cc046852e3530a344e4a13e81a746</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Result</type>
+      <name>ResultType</name>
+      <anchorfile>classimath_1_1_t_i_math_function.html</anchorfile>
+      <anchor>ace1c5a007a5285d3137785c9414e0297</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CAkimaInterpolator</name>
@@ -36147,32 +36168,11 @@
       <anchor>ab2196b5efdc7b096b04d4ef8e1faf470</anchor>
       <arglist>(const Argument &amp;argument) const =0</arglist>
     </member>
-    <member kind="typedef" protection="protected">
-      <type>QMap&lt; double, Node &gt;</type>
-      <name>Nodes</name>
-      <anchorfile>classimath_1_1_c_akima_interpolator.html</anchorfile>
-      <anchor>ac26c18a33b0639fd2361f10b04c9c455</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="variable" protection="protected">
       <type>Nodes</type>
       <name>m_nodes</name>
       <anchorfile>classimath_1_1_c_akima_interpolator.html</anchorfile>
       <anchor>a1d8c34d98f75b02a4b765f36487e39d3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Argument</type>
-      <name>ArgumentType</name>
-      <anchorfile>classimath_1_1_t_i_math_function.html</anchorfile>
-      <anchor>a841cc046852e3530a344e4a13e81a746</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Result</type>
-      <name>ResultType</name>
-      <anchorfile>classimath_1_1_t_i_math_function.html</anchorfile>
-      <anchor>ace1c5a007a5285d3137785c9414e0297</anchor>
       <arglist></arglist>
     </member>
   </compound>

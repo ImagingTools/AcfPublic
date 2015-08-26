@@ -18828,6 +18828,13 @@
       <anchor>a89fea018e32246d01c6eaa7422c6c850</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>I_DECLARE_ENUM</name>
+      <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
+      <anchor>a7eb154e4c44efa930df8455e679df0d1</anchor>
+      <arglist>(InterpolationMode, IM_NO_INTERPOLATION, IM_BILINEAR, IM_BICUBIC, IM_NEAREST_NEIGHBOUR)</arglist>
+    </member>
     <member kind="enumeration">
       <type></type>
       <name>InterpolationMode</name>
@@ -18858,9 +18865,9 @@
     </member>
     <member kind="enumvalue">
       <type>@</type>
-      <name>IM_NEAREST_NEIGHBOR</name>
+      <name>IM_NEAREST_NEIGHBOUR</name>
       <anchorfile>classiipr_1_1_i_image_interpolation_params.html</anchorfile>
-      <anchor>a3f5eaf6d182d9706c9751576996898b9ac2d0f616afa8f4b1e74d195e5c603803</anchor>
+      <anchor>a3f5eaf6d182d9706c9751576996898b9abe3984b39596cbe5a87b255efcd440c0</anchor>
       <arglist></arglist>
     </member>
   </compound>
