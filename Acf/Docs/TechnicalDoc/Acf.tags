@@ -2397,6 +2397,25 @@
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
+    <name>IFileResourcesManager.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_i_file_resources_manager_8h</filename>
+    <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="no" imported="no">istd/TSmartPtr.h</includes>
+    <includes id="_i_options_list_8h" name="IOptionsList.h" local="no" imported="no">iprm/IOptionsList.h</includes>
+    <includes id="_i_document_meta_info_8h" name="IDocumentMetaInfo.h" local="no" imported="no">idoc/IDocumentMetaInfo.h</includes>
+    <class kind="class">ifile::IFileResourcesManager</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IFileResourceTypeConstraints.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_i_file_resource_type_constraints_8h</filename>
+    <includes id="_i_options_list_8h" name="IOptionsList.h" local="no" imported="no">iprm/IOptionsList.h</includes>
+    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="no" imported="no">ifile/IFileTypeInfo.h</includes>
+    <class kind="interface">ifile::IFileResourceTypeConstraints</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
     <name>IFileSystemInfoProvider.h</name>
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_i_file_system_info_provider_8h</filename>
@@ -28864,6 +28883,8 @@
     <class kind="class">ifile::IFileNameParam</class>
     <class kind="class">ifile::IFilePersistence</class>
     <class kind="class">ifile::IFilePersistenceInfo</class>
+    <class kind="class">ifile::IFileResourcesManager</class>
+    <class kind="interface">ifile::IFileResourceTypeConstraints</class>
     <class kind="class">ifile::IFileSystemInfoProvider</class>
     <class kind="class">ifile::IFileTypeInfo</class>
     <class kind="class">ifile::TFileSerializerComp</class>
@@ -31208,6 +31229,135 @@
       <anchorfile>classifile_1_1_i_file_persistence_info.html</anchorfile>
       <anchor>a2f86e9b5a4f767d18bb4246636e7222d</anchor>
       <arglist>(OperationType operationType=OT_UNKNOWN, PathType pathType=PT_COMPLETE) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::IFileResourcesManager</name>
+    <filename>classifile_1_1_i_file_resources_manager.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="typedef">
+      <type>istd::TSmartPtr&lt; istd::IChangeable &gt;</type>
+      <name>DataObjectPtr</name>
+      <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
+      <anchor>ac82d3dd352e624c9822f1550b9914ef6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const IFileResourceTypeConstraints *</type>
+      <name>GetResourceTypeConstraints</name>
+      <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
+      <anchor>a5798b5e0602e45d1a1a2bf7d5ab2f858</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QByteArray</type>
+      <name>GetResourceTypeId</name>
+      <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
+      <anchor>a12004013e92556b6d70ebd06016733cb</anchor>
+      <arglist>(const QByteArray &amp;resourceId) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const iprm::IOptionsList &amp;</type>
+      <name>GetFileListInfo</name>
+      <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
+      <anchor>abc1a1728f6ee6a643c9deec5ce734200</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QByteArray</type>
+      <name>CreateNewFile</name>
+      <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
+      <anchor>a79a73f1f297f973cd87896e2c70055cb</anchor>
+      <arglist>(const QByteArray &amp;fileTypeId, const istd::IChangeable *dataObjectPtr, const QString &amp;filePath=QString(), const QString &amp;resourceName=QString())=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>RemoveFile</name>
+      <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
+      <anchor>a0c48e81012b95449f946d780e4be5dfc</anchor>
+      <arglist>(const QByteArray &amp;fileId)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual DataObjectPtr</type>
+      <name>GetDataObject</name>
+      <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
+      <anchor>a448829e6f20af96ad123310e84b67045</anchor>
+      <arglist>(const QByteArray &amp;fileId) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const idoc::IDocumentMetaInfo *</type>
+      <name>GetFileMetaInfo</name>
+      <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
+      <anchor>ab9d121137f7304aaa07d5d676b143861</anchor>
+      <arglist>(const QByteArray &amp;resourceId) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>SetResourceName</name>
+      <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
+      <anchor>a9d7ebdeac9391a79637cb46b4c3a7cb2</anchor>
+      <arglist>(const QByteArray &amp;resourceId, const QString &amp;name)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>SetResourceDescription</name>
+      <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
+      <anchor>a9ed8611ce7b4bd863f336227076fcae6</anchor>
+      <arglist>(const QByteArray &amp;resourceId, const QString &amp;description)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="interface">
+    <name>ifile::IFileResourceTypeConstraints</name>
+    <filename>classifile_1_1_i_file_resource_type_constraints.html</filename>
+    <base virtualness="virtual">iprm::IOptionsList</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const ifile::IFileTypeInfo *</type>
+      <name>GetFileTypeInfo</name>
+      <anchorfile>classifile_1_1_i_file_resource_type_constraints.html</anchorfile>
+      <anchor>ac64b9bc677aa5e332224db2df6672026</anchor>
+      <arglist>(int resourceTypeIndex) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetOptionsFlags</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>ab5b5157f0e5e6d68c30b772b8e3ecc2a</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>a37659b5d1cae689b3d715304a48ef929</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>ab30d9ae1759e0a1953751154f9983b3e</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>adf6d315fe048e3a617ea5f803845393b</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QByteArray</type>
+      <name>GetOptionId</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>aa7af53aa0f41e2b65bfd0128792d18d2</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
+      <anchor>a12fcebc0af408e94fc1bfbe2f15e7fa7</anchor>
+      <arglist>(int index) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -42625,48 +42775,6 @@
     <name>iprm::IOptionsList</name>
     <filename>classiprm_1_1_i_options_list.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetOptionsFlags</name>
-      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
-      <anchor>ab5b5157f0e5e6d68c30b772b8e3ecc2a</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetOptionsCount</name>
-      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
-      <anchor>a37659b5d1cae689b3d715304a48ef929</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetOptionName</name>
-      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
-      <anchor>ab30d9ae1759e0a1953751154f9983b3e</anchor>
-      <arglist>(int index) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetOptionDescription</name>
-      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
-      <anchor>adf6d315fe048e3a617ea5f803845393b</anchor>
-      <arglist>(int index) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QByteArray</type>
-      <name>GetOptionId</name>
-      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
-      <anchor>aa7af53aa0f41e2b65bfd0128792d18d2</anchor>
-      <arglist>(int index) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsOptionEnabled</name>
-      <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
-      <anchor>a12fcebc0af408e94fc1bfbe2f15e7fa7</anchor>
-      <arglist>(int index) const =0</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iprm::IOptionsManager</name>
@@ -71739,6 +71847,8 @@
     <file>IFileNameParam.h</file>
     <file>IFilePersistence.h</file>
     <file>IFilePersistenceInfo.h</file>
+    <file>IFileResourcesManager.h</file>
+    <file>IFileResourceTypeConstraints.h</file>
     <file>IFileSystemInfoProvider.h</file>
     <file>IFileTypeInfo.h</file>
     <file>TFileSerializerComp.h</file>
