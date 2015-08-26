@@ -3003,6 +3003,7 @@
     <filename>_c_akima_interpolator_8h</filename>
     <includes id="_t_i_math_function_8h" name="TIMathFunction.h" local="yes" imported="no">imath/TIMathFunction.h</includes>
     <class kind="class">imath::CAkimaInterpolator</class>
+    <class kind="struct">imath::CAkimaInterpolator::Node</class>
     <namespace>imath</namespace>
   </compound>
   <compound kind="file">
@@ -3747,6 +3748,14 @@
     <includes id="_i_object_8h" name="IObject.h" local="yes" imported="no">iser/IObject.h</includes>
     <includes id="iprm_8h" name="iprm.h" local="yes" imported="no">iprm/iprm.h</includes>
     <class kind="class">iprm::IParamsSet</class>
+    <namespace>iprm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IParamsSetValidator.h</name>
+    <path>C:/Temp/Acf/Include/iprm/</path>
+    <filename>_i_params_set_validator_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <class kind="class">iprm::IParamsSetValidator</class>
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
@@ -36088,6 +36097,7 @@
     <name>imath::CAkimaInterpolator</name>
     <filename>classimath_1_1_c_akima_interpolator.html</filename>
     <base virtualness="virtual">imath::TIMathFunction</base>
+    <class kind="struct">imath::CAkimaInterpolator::Node</class>
     <member kind="function">
       <type></type>
       <name>CAkimaInterpolator</name>
@@ -36137,6 +36147,20 @@
       <anchor>ab2196b5efdc7b096b04d4ef8e1faf470</anchor>
       <arglist>(const Argument &amp;argument) const =0</arglist>
     </member>
+    <member kind="typedef" protection="protected">
+      <type>QMap&lt; double, Node &gt;</type>
+      <name>Nodes</name>
+      <anchorfile>classimath_1_1_c_akima_interpolator.html</anchorfile>
+      <anchor>ac26c18a33b0639fd2361f10b04c9c455</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Nodes</type>
+      <name>m_nodes</name>
+      <anchorfile>classimath_1_1_c_akima_interpolator.html</anchorfile>
+      <anchor>a1d8c34d98f75b02a4b765f36487e39d3</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>Argument</type>
       <name>ArgumentType</name>
@@ -36149,6 +36173,24 @@
       <name>ResultType</name>
       <anchorfile>classimath_1_1_t_i_math_function.html</anchorfile>
       <anchor>ace1c5a007a5285d3137785c9414e0297</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>imath::CAkimaInterpolator::Node</name>
+    <filename>structimath_1_1_c_akima_interpolator_1_1_node.html</filename>
+    <member kind="variable">
+      <type>double</type>
+      <name>value</name>
+      <anchorfile>structimath_1_1_c_akima_interpolator_1_1_node.html</anchorfile>
+      <anchor>a11399f3199976ef4ea14fa8c5b2a7cbe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>derivative</name>
+      <anchorfile>structimath_1_1_c_akima_interpolator_1_1_node.html</anchorfile>
+      <anchor>a92c29dbe1bc1d85a1f7d6d6b8f90a674</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -40940,6 +40982,7 @@
     <class kind="class">iprm::IOptionsManager</class>
     <class kind="class">iprm::IParamsManager</class>
     <class kind="class">iprm::IParamsSet</class>
+    <class kind="class">iprm::IParamsSetValidator</class>
     <class kind="class">iprm::ISelectionParam</class>
     <class kind="class">iprm::IVariableParam</class>
     <class kind="class">iprm::TParamsPtr</class>
@@ -42923,6 +42966,32 @@
       <anchorfile>classiser_1_1_i_object.html</anchorfile>
       <anchor>abae3ddcb3be9fcd24ec21b87445e5d7e</anchor>
       <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprm::IParamsSetValidator</name>
+    <filename>classiprm_1_1_i_params_set_validator.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="typedef">
+      <type>QSet&lt; QByteArray &gt;</type>
+      <name>Ids</name>
+      <anchorfile>classiprm_1_1_i_params_set_validator.html</anchorfile>
+      <anchor>a3d03dc80d029ede732be42a575f09825</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual Ids</type>
+      <name>GetSupportedTypeIds</name>
+      <anchorfile>classiprm_1_1_i_params_set_validator.html</anchorfile>
+      <anchor>ab594cc9a081529a81b71b5ce9a5f0851</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsParamsSetConsistent</name>
+      <anchorfile>classiprm_1_1_i_params_set_validator.html</anchorfile>
+      <anchor>a23e343736863f1c07b92c53561b83fd5</anchor>
+      <arglist>(const IParamsSet &amp;paramsSet) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -72038,6 +72107,7 @@
     <file>IOptionsManager.h</file>
     <file>IParamsManager.h</file>
     <file>IParamsSet.h</file>
+    <file>IParamsSetValidator.h</file>
     <file>iprm.h</file>
     <file>ISelectionParam.h</file>
     <file>IVariableParam.h</file>
