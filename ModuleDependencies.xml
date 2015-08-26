@@ -153,12 +153,14 @@
 			<Build IfPlatform="WinOS">
 				<Build IfConfiguration="Debug">
 					<CopyFile From="$CONFIG_QTDIR_WINOS/bin" FromSelector="QtCored4.dll" To="$ModuleRoot/Acf/Bin/DebugVC10"/>
-					<CopyFile From="$CONFIG_QTDIR_WINOS/bin" FromSelector="QtGuid4.dll" To="$ModuleRoot/Acf/Bin/DebugVC10"/>
-				</Build>
+          <CopyFile From="$CONFIG_QTDIR_WINOS/bin" FromSelector="QtGuid4.dll" To="$ModuleRoot/Acf/Bin/DebugVC10"/>
+          <CopyFile From="$CONFIG_QTDIR_WINOS/bin" FromSelector="QtXmld4.dll" To="$ModuleRoot/Acf/Bin/DebugVC10"/>
+        </Build>
 				<Build IfConfiguration="Release">
 					<CopyFile From="$CONFIG_QTDIR_WINOS/bin" FromSelector="QtCore4.dll" To="$ModuleRoot/Acf/Bin/ReleaseVC10"/>
-					<CopyFile From="$CONFIG_QTDIR_WINOS/bin" FromSelector="QtGui4.dll" To="$ModuleRoot/Acf/Bin/ReleaseVC10"/>
-				</Build>
+          <CopyFile From="$CONFIG_QTDIR_WINOS/bin" FromSelector="QtGui4.dll" To="$ModuleRoot/Acf/Bin/ReleaseVC10"/>
+          <CopyFile From="$CONFIG_QTDIR_WINOS/bin" FromSelector="QtXml4.dll" To="$ModuleRoot/Acf/Bin/ReleaseVC10"/>
+        </Build>
 			</Build>
 		</Build>
 		<Build IfTarget="AcfPublic2013">
@@ -167,11 +169,13 @@
 					<CopyFile From="$BUILD_TEMP_FOLDER\QtLibraries\qtbase\bin" FromSelector="Qt5Cored.dll" To="$BUILD_MODULE_TEMP_FOLDER/Acf/Bin/DebugVC12"/>
           <CopyFile From="$BUILD_TEMP_FOLDER\QtLibraries\qtbase\bin" FromSelector="Qt5Guid.dll" To="$BUILD_MODULE_TEMP_FOLDER/Acf/Bin/DebugVC12"/>
           <CopyFile From="$BUILD_TEMP_FOLDER\QtLibraries\qtbase\bin" FromSelector="Qt5Widgetsd.dll" To="$BUILD_MODULE_TEMP_FOLDER/Acf/Bin/DebugVC12"/>
+          <CopyFile From="$BUILD_TEMP_FOLDER\QtLibraries\qtbase\bin" FromSelector="Qt5Xmld.dll" To="$BUILD_MODULE_TEMP_FOLDER/Acf/Bin/DebugVC12"/>
         </Build>
 				<Build IfConfiguration="Release">
 					<CopyFile From="$BUILD_TEMP_FOLDER\QtLibraries\qtbase\bin" FromSelector="Qt5Core.dll" To="$BUILD_MODULE_TEMP_FOLDER/Acf/Bin/ReleaseVC12"/>
           <CopyFile From="$BUILD_TEMP_FOLDER\QtLibraries\qtbase\bin" FromSelector="Qt5Gui.dll" To="$BUILD_MODULE_TEMP_FOLDER/Acf/Bin/ReleaseVC12"/>
           <CopyFile From="$BUILD_TEMP_FOLDER\QtLibraries\qtbase\bin" FromSelector="Qt5Widgets.dll" To="$BUILD_MODULE_TEMP_FOLDER/Acf/Bin/ReleaseVC12"/>
+          <CopyFile From="$BUILD_TEMP_FOLDER\QtLibraries\qtbase\bin" FromSelector="Qt5Xml.dll" To="$BUILD_MODULE_TEMP_FOLDER/Acf/Bin/DebugVC12"/>
         </Build>
 			</Build>
 		</Build>
