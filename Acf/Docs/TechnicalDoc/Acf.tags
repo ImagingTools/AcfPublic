@@ -60489,6 +60489,13 @@
       <anchor>ad2f6719f910021a8c9df158ec3a6a526</anchor>
       <arglist>(int index, const ElementType &amp;element)</arglist>
     </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SwapElements</name>
+      <anchorfile>classistd_1_1_t_pointer_vector.html</anchorfile>
+      <anchor>a8640951f06c9e8afe7901cd2e8ee6a02</anchor>
+      <arglist>(int index1, int index2)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>istd::DefaultAccessor</name>
@@ -60682,6 +60689,13 @@
       <anchorfile>classistd_1_1_t_pointer_vector.html</anchorfile>
       <anchor>ad2f6719f910021a8c9df158ec3a6a526</anchor>
       <arglist>(int index, const ElementType &amp;element)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SwapElements</name>
+      <anchorfile>classistd_1_1_t_pointer_vector.html</anchorfile>
+      <anchor>a8640951f06c9e8afe7901cd2e8ee6a02</anchor>
+      <arglist>(int index1, int index2)</arglist>
     </member>
   </compound>
   <compound kind="class">
