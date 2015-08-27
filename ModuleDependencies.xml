@@ -175,7 +175,7 @@
 					<CopyFile From="$BUILD_TEMP_FOLDER\QtLibraries\qtbase\bin" FromSelector="Qt5Core.dll" To="$BUILD_MODULE_TEMP_FOLDER/Acf/Bin/ReleaseVC12"/>
           <CopyFile From="$BUILD_TEMP_FOLDER\QtLibraries\qtbase\bin" FromSelector="Qt5Gui.dll" To="$BUILD_MODULE_TEMP_FOLDER/Acf/Bin/ReleaseVC12"/>
           <CopyFile From="$BUILD_TEMP_FOLDER\QtLibraries\qtbase\bin" FromSelector="Qt5Widgets.dll" To="$BUILD_MODULE_TEMP_FOLDER/Acf/Bin/ReleaseVC12"/>
-          <CopyFile From="$BUILD_TEMP_FOLDER\QtLibraries\qtbase\bin" FromSelector="Qt5Xml.dll" To="$BUILD_MODULE_TEMP_FOLDER/Acf/Bin/DebugVC12"/>
+          <CopyFile From="$BUILD_TEMP_FOLDER\QtLibraries\qtbase\bin" FromSelector="Qt5Xml.dll" To="$BUILD_MODULE_TEMP_FOLDER/Acf/Bin/ReleaseVC12"/>
         </Build>
 			</Build>
 		</Build>
