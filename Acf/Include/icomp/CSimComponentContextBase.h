@@ -76,6 +76,11 @@ public:
 	bool SetFactory(const QByteArray& factoryId, const ComponentsFactory* factoryPtr);
 
 	/**
+		Insert new factory instance into multi-factory attribute.
+	*/
+	bool InsertMultiFactory(const QByteArray& factoryId, const ComponentsFactory* factoryPtr);
+
+	/**
 		Set instance of \c bool attribute.
 	*/
 	bool SetBoolAttr(const QByteArray& attributeId, bool value);

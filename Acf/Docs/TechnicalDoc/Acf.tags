@@ -23656,6 +23656,13 @@
     </member>
     <member kind="function">
       <type>bool</type>
+      <name>InsertMultiFactory</name>
+      <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
+      <anchor>aac929acd37527699c5ee59928b563b55</anchor>
+      <arglist>(const QByteArray &amp;factoryId, const ComponentsFactory *factoryPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
       <name>SetBoolAttr</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
       <anchor>a72dadb0248b9fe30f535d86c4e094f1d</anchor>
