@@ -160,6 +160,7 @@ QString CSystem::FindVariableValue(const QString& varName, bool envVars, bool em
 			return QDir::currentPath();
 		}
 	}
+
 	if (envVars){
 		EnvironmentVariables environmentVariables = GetEnvironmentVariables();
 
@@ -177,10 +178,10 @@ QString CSystem::GetEnrolledPath(const QString& path, bool envVars, bool embedde
 {
 	QString retVal = path;
 
-	int endIndex = 0;
+	int	endIndex = 0;
 	for (		int beginIndex;
 				((beginIndex = retVal.indexOf("$(", endIndex)) >= 0);){
-				endIndex = retVal.indexOf(")", beginIndex + 2);
+		endIndex = retVal.indexOf(")", beginIndex + 2);
 		if (endIndex < 0){
 			break;
 		}
@@ -189,9 +190,14 @@ QString CSystem::GetEnrolledPath(const QString& path, bool envVars, bool embedde
 
 		QString varName = retVal.mid(beginIndex + 2, endIndex - beginIndex - 2);
 
-		retVal = retVal.left(beginIndex) + FindVariableValue(varName, envVars, embeddedVars) + retVal.mid(endIndex + 1);
+		QString left = retVal.left(beginIndex);
+		QString variableValue = FindVariableValue(varName, envVars, embeddedVars);
+
+		retVal = left + variableValue + retVal.mid(endIndex + 1);
 
 		retVal = QDir::toNativeSeparators(retVal);
+
+		endIndex = QString(left + variableValue).length();
 	}
 
 	return retVal;
