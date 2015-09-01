@@ -13230,6 +13230,13 @@
       <anchor>a6301b35430801c6b762e20781843126d</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classifileproc_1_1_c_rendered_object_file_loader_comp.html</anchorfile>
+      <anchor>a2a107497844fbf4147bcbf1bc7cd27f8</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>ifileproc::CSelectableFileConverterComp</name>
