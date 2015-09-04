@@ -201,6 +201,12 @@ void IChangeable::ChangeSet::MaskOut(const ChangeSet& changeSet)
 }
 
 
+const QString& IChangeable::ChangeSet::GetDescription() const
+{
+	return m_description;
+}
+
+
 IChangeable::ChangeSet IChangeable::ChangeSet::operator+(const ChangeSet& changeSet) const
 {
 	ChangeSet retVal;
