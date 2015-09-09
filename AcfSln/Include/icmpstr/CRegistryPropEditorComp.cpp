@@ -47,7 +47,7 @@ void CRegistryPropEditorComp::CreateOverview()
 	boldFont.setBold(true);
 
 	// create overview infos:
-	icomp::IRegistry* registryPtr = GetObjectPtr();
+	icomp::IRegistry* registryPtr = GetObservedObject();
 	if (registryPtr != NULL){
 		static QIcon warningIcon(":/Icons/Warning");
 	
@@ -155,7 +155,7 @@ void CRegistryPropEditorComp::UpdateGui(const istd::IChangeable::ChangeSet& /*ch
 {
 	Q_ASSERT(IsGuiCreated());
 
-	const icomp::IRegistry* registryPtr = GetObjectPtr();
+	const icomp::IRegistry* registryPtr = GetObservedObject();
 	if (registryPtr == NULL){
 		return;
 	}
@@ -215,7 +215,7 @@ void CRegistryPropEditorComp::OnUpdateExportsTree()
 
 void CRegistryPropEditorComp::OnUpdateKeywords()
 {
-	icomp::IRegistry* registryPtr = GetObjectPtr();
+	icomp::IRegistry* registryPtr = GetObservedObject();
 	if (registryPtr != NULL){
 		QString company = ConvertToKeyword(CompanyEdit->text(), "Company");
 		QString project = ConvertToKeyword(ProjectEdit->text(), "Project");
@@ -245,7 +245,7 @@ void CRegistryPropEditorComp::OnUpdateKeywords()
 
 void CRegistryPropEditorComp::on_DescriptionEdit_editingFinished()
 {
-	icomp::IRegistry* registryPtr = GetObjectPtr();
+	icomp::IRegistry* registryPtr = GetObservedObject();
 	if (registryPtr != NULL){
 		QString description = DescriptionEdit->text();
 
@@ -260,7 +260,7 @@ void CRegistryPropEditorComp::on_DescriptionEdit_editingFinished()
 
 void CRegistryPropEditorComp::on_OverviewTree_itemChanged(QTreeWidgetItem* itemPtr, int column)
 {
-	icomp::IRegistry* registryPtr = GetObjectPtr();
+	icomp::IRegistry* registryPtr = GetObservedObject();
 	if (registryPtr == NULL){
 		return;
 	}

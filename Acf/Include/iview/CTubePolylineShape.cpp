@@ -48,7 +48,7 @@ CTubePolylineShape::CTubePolylineShape()
 
 void CTubePolylineShape::DrawCurve(QPainter& drawContext) const
 {
-	const i2d::CTubePolyline* polylinePtr = dynamic_cast<const i2d::CTubePolyline*>(GetModelPtr());
+	const i2d::CTubePolyline* polylinePtr = dynamic_cast<const i2d::CTubePolyline*>(GetObservedModel());
 	if (IsDisplayConnected() && (polylinePtr != NULL)){
 		const iview::IColorSchema& colorSchema = GetColorSchema();
 
@@ -138,7 +138,7 @@ void CTubePolylineShape::DrawSelectionElements(QPainter& drawContext) const
 		return;
 	}
 
-	const i2d::CTubePolyline* polylinePtr = dynamic_cast<const i2d::CTubePolyline*>(GetModelPtr());
+	const i2d::CTubePolyline* polylinePtr = dynamic_cast<const i2d::CTubePolyline*>(GetObservedModel());
 	if (IsDisplayConnected() && (polylinePtr != NULL)){
 		const iview::IColorSchema& colorSchema = GetColorSchema();
 
@@ -179,7 +179,7 @@ i2d::CRect CTubePolylineShape::CalcBoundingBox() const
 	i2d::CRect result;
 	result.Reset();
 
-	const i2d::CTubePolyline* polylinePtr = dynamic_cast<const i2d::CTubePolyline*>(GetModelPtr());
+	const i2d::CTubePolyline* polylinePtr = dynamic_cast<const i2d::CTubePolyline*>(GetObservedModel());
 	if (IsDisplayConnected() && (polylinePtr != NULL)){
 		int nodesCount = polylinePtr->GetNodesCount();
 		if (nodesCount >= 1){
@@ -229,7 +229,7 @@ bool CTubePolylineShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton 
 
 	m_editMode = EM_NONE;
 
-	i2d::CTubePolyline* polylinePtr = dynamic_cast<i2d::CTubePolyline*>(GetModelPtr());
+	i2d::CTubePolyline* polylinePtr = dynamic_cast<i2d::CTubePolyline*>(GetObservedModel());
 
 	int editMode = GetEditMode();
 	if (editMode == iview::ISelectable::EM_MOVE){
@@ -315,12 +315,12 @@ bool CTubePolylineShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton 
 
 bool CTubePolylineShape::OnMouseMove(istd::CIndex2d position)
 {
-	imod::IModel* modelPtr = GetModelPtr();
+	imod::IModel* modelPtr = GetObservedModel();
 	if (modelPtr != NULL){
 		int editMode = GetEditMode();
 		if (editMode == iview::ISelectable::EM_MOVE){
 			if (m_editMode == EM_LEFT || m_editMode == EM_RIGHT){
-				i2d::CTubePolyline* polylinePtr = dynamic_cast<i2d::CTubePolyline*>(GetModelPtr());
+				i2d::CTubePolyline* polylinePtr = dynamic_cast<i2d::CTubePolyline*>(GetObservedModel());
 				if (IsDisplayConnected() && (polylinePtr != NULL)){
 					i2d::CVector2d kneeVector = polylinePtr->GetKneeVector(m_editedNodeIndex);
 					const i2d::CVector2d& nodePosition = polylinePtr->GetNode(m_editedNodeIndex);
@@ -407,7 +407,7 @@ ITouchable::TouchState CTubePolylineShape::IsTouched(istd::CIndex2d position) co
 		return TS_NONE;
 	}
 
-	const i2d::CTubePolyline* polylinePtr = dynamic_cast<const i2d::CTubePolyline*>(GetModelPtr());
+	const i2d::CTubePolyline* polylinePtr = dynamic_cast<const i2d::CTubePolyline*>(GetObservedModel());
 	if (IsDisplayConnected() && (polylinePtr != NULL)){
 		const iview::IColorSchema& colorSchema = GetColorSchema();
 

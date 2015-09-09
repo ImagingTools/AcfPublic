@@ -54,7 +54,7 @@ void CFileNameParamGuiComp::UpdateModel() const
 {
 	Q_ASSERT(IsGuiCreated());
 
-	ifile::IFileNameParam* objectPtr = GetObjectPtr();
+	ifile::IFileNameParam* objectPtr = GetObservedObject();
 	Q_ASSERT(objectPtr != NULL);
 
 	UpdateBlocker updateBlocker(const_cast<CFileNameParamGuiComp*>(this));
@@ -76,7 +76,7 @@ void CFileNameParamGuiComp::OnGuiModelAttached()
 {
 	BaseClass::OnGuiModelAttached();
 
-	ifile::IFileNameParam* objectPtr = GetObjectPtr();
+	ifile::IFileNameParam* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		SetPathToEditor(objectPtr->GetPath());
 	}
@@ -87,7 +87,7 @@ void CFileNameParamGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*chan
 {
 	Q_ASSERT(IsGuiCreated());
 
-	ifile::IFileNameParam* objectPtr = GetObjectPtr();
+	ifile::IFileNameParam* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		int pathType = objectPtr->GetPathType();
 
@@ -183,7 +183,7 @@ void CFileNameParamGuiComp::OnGuiRetranslate()
 
 void CFileNameParamGuiComp::on_BrowseButton_clicked()
 {
-	ifile::IFileNameParam* objectPtr = GetObjectPtr();
+	ifile::IFileNameParam* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		int pathType = objectPtr->GetPathType();
 
@@ -269,7 +269,7 @@ void CFileNameParamGuiComp::OnDirectoryUp()
 
 void CFileNameParamGuiComp::SetPathToEditor(const QString& path) const
 {
-	ifile::IFileNameParam* objectPtr = GetObjectPtr();
+	ifile::IFileNameParam* objectPtr = GetObservedObject();
 	if (objectPtr == NULL){
 		return;
 	}
@@ -311,7 +311,7 @@ void CFileNameParamGuiComp::MakeSelectionHint(const QString& text) const
 		return;
 	}
 
-	ifile::IFileNameParam* objectPtr = GetObjectPtr();
+	ifile::IFileNameParam* objectPtr = GetObservedObject();
 	Q_ASSERT(objectPtr != NULL);
 	if (objectPtr != NULL){
 		if (objectPtr->GetPathType() == ifile::IFileNameParam::PT_URL){

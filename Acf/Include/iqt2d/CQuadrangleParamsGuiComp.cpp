@@ -41,7 +41,7 @@ void CQuadrangleParamsGuiComp::UpdateModel() const
 {
 	Q_ASSERT(IsGuiCreated());
 
-	i2d::CQuadrangle* objectPtr = GetObjectPtr();
+	i2d::CQuadrangle* objectPtr = GetObservedObject();
 	Q_ASSERT(objectPtr != NULL);
 
 	istd::CChangeGroup changeGroup(objectPtr);
@@ -65,7 +65,7 @@ void CQuadrangleParamsGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*c
 {
 	Q_ASSERT(IsGuiCreated());
 
-	i2d::CQuadrangle* objectPtr = GetObjectPtr();
+	i2d::CQuadrangle* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		const i2d::CVector2d& point1 = objectPtr->GetFirstDiagonal().GetPoint1();
 		const i2d::CVector2d& point2 = objectPtr->GetFirstDiagonal().GetPoint2();

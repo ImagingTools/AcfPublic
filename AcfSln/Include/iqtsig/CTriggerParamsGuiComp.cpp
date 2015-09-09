@@ -38,7 +38,7 @@ void CTriggerParamsGuiComp::UpdateModel() const
 {
 	Q_ASSERT(IsGuiCreated());
 
-	isig::ITriggerParams* objectPtr = GetObjectPtr();
+	isig::ITriggerParams* objectPtr = GetObservedObject();
 	Q_ASSERT(objectPtr != NULL);
 
 	int triggerMode = -1;
@@ -82,7 +82,7 @@ void CTriggerParamsGuiComp::OnGuiModelAttached()
 	BaseClass::OnGuiModelAttached();
 
 	Q_ASSERT(IsGuiCreated());
-	const isig::ITriggerParams* objectPtr = GetObjectPtr();
+	const isig::ITriggerParams* objectPtr = GetObservedObject();
 	Q_ASSERT(objectPtr != NULL);
 
 	const isig::ITriggerConstraints* constraintsPtr = objectPtr->GetTriggerConstraints();
@@ -111,7 +111,7 @@ void CTriggerParamsGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*chan
 {
 	Q_ASSERT(IsGuiCreated());
 
-	const isig::ITriggerParams* objectPtr = GetObjectPtr();
+	const isig::ITriggerParams* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		int triggerMode = objectPtr->GetTriggerMode();
 

@@ -42,7 +42,7 @@ namespace iqtipr
 
 void CPatternTeachingControllerGuiComp::on_LearnButton_clicked()
 {
-	iipr::IPatternController* objectPtr = GetObjectPtr();
+	iipr::IPatternController* objectPtr = GetObservedObject();
 	Q_ASSERT(objectPtr != NULL);
 
 	if (objectPtr->IsPatternValid()){
@@ -70,7 +70,7 @@ void CPatternTeachingControllerGuiComp::on_LearnButton_clicked()
 
 void CPatternTeachingControllerGuiComp::on_EditButton_clicked()
 {
-	iipr::IPatternController* objectPtr = GetObjectPtr();
+	iipr::IPatternController* objectPtr = GetObservedObject();
 	Q_ASSERT(objectPtr != NULL);
 
 	const iser::ISerializable* patternPtr = objectPtr->GetPatternObject();
@@ -104,7 +104,7 @@ void CPatternTeachingControllerGuiComp::on_EditButton_clicked()
 
 void CPatternTeachingControllerGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
-	iipr::IPatternController* objectPtr = GetObjectPtr();
+	iipr::IPatternController* objectPtr = GetObservedObject();
 	if (objectPtr == NULL){
 		return;
 	}
@@ -138,7 +138,7 @@ void CPatternTeachingControllerGuiComp::OnGuiCreated()
 {
 	BaseClass::OnGuiCreated();
 
-	if (GetObjectPtr() == NULL){
+	if (GetObservedObject() == NULL){
 		LearnButton->setVisible(false);
 	}
 

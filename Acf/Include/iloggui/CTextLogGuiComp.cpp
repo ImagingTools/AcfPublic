@@ -105,7 +105,7 @@ void CTextLogGuiComp::UpdateFilters()
 	SourceFilterCB->clear();
 	SourceFilterCB->addItem(tr("Any"));
 
-	ilog::IMessageContainer* objectPtr = GetObjectPtr();
+	ilog::IMessageContainer* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		QSet<QString> sources;
 		const ilog::IMessageContainer::Messages messages = objectPtr->GetMessages();
@@ -136,7 +136,7 @@ void CTextLogGuiComp::GenerateDocument(
 
 	LogEditor->setPlainText("");
 
-	ilog::IMessageContainer* objectPtr = GetObjectPtr();
+	ilog::IMessageContainer* objectPtr = GetObservedObject();
 	if (objectPtr == NULL){
 		LogEditor->setUpdatesEnabled(true);
 

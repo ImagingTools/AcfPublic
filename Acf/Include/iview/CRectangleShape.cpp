@@ -61,7 +61,7 @@ ITouchable::TouchState CRectangleShape::IsTouched(istd::CIndex2d position) const
 {
 	Q_ASSERT(IsDisplayConnected());
 
-	const i2d::CRectangle* rectanglePtr = dynamic_cast<const i2d::CRectangle*>(GetModelPtr());
+	const i2d::CRectangle* rectanglePtr = dynamic_cast<const i2d::CRectangle*>(GetObservedModel());
 	if (rectanglePtr != NULL){
 		const IColorSchema& colorSchema = GetColorSchema();
 
@@ -118,7 +118,7 @@ void CRectangleShape::Draw(QPainter& drawContext) const
 {
 	Q_ASSERT(IsDisplayConnected());
 
-	const i2d::CRectangle* framePtr = dynamic_cast<const i2d::CRectangle*>(GetModelPtr());
+	const i2d::CRectangle* framePtr = dynamic_cast<const i2d::CRectangle*>(GetObservedModel());
 	if (framePtr != NULL){
 		const IColorSchema& colorSchema = GetColorSchema();
 		if (!m_arePointsValid){
@@ -169,7 +169,7 @@ bool CRectangleShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton but
 
 	BaseClass::OnMouseButton(position, buttonType, downFlag);
 
-	const i2d::CRectangle* framePtr = dynamic_cast<const i2d::CRectangle*>(GetModelPtr());
+	const i2d::CRectangle* framePtr = dynamic_cast<const i2d::CRectangle*>(GetObservedModel());
 	if (framePtr != NULL){
 		if (downFlag){
 			const IColorSchema& colorSchema = GetColorSchema();
@@ -212,7 +212,7 @@ bool CRectangleShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton but
 
 bool CRectangleShape::OnMouseMove(istd::CIndex2d position)
 {
-	imod::IModel* modelPtr = GetModelPtr();
+	imod::IModel* modelPtr = GetObservedModel();
 	if (modelPtr != NULL){
 		i2d::CRectangle& modelArea = *dynamic_cast<i2d::CRectangle*>(modelPtr);
 		Q_ASSERT(&modelArea != NULL);
@@ -311,7 +311,7 @@ void CRectangleShape::BeginLogDrag(const i2d::CVector2d& reference)
 
 void CRectangleShape::SetLogDragPosition(const i2d::CVector2d& position)
 {
-	imod::IModel* modelPtr = GetModelPtr();
+	imod::IModel* modelPtr = GetObservedModel();
 	if (modelPtr != NULL){
 		i2d::CRectangle& rectangle = *dynamic_cast<i2d::CRectangle*>(modelPtr);
 		Q_ASSERT(&rectangle != NULL);
@@ -330,7 +330,7 @@ i2d::CRect CRectangleShape::CalcBoundingBox() const
 {
 	Q_ASSERT(IsDisplayConnected());
 
-	const i2d::CRectangle* framePtr = dynamic_cast<const i2d::CRectangle*>(GetModelPtr());
+	const i2d::CRectangle* framePtr = dynamic_cast<const i2d::CRectangle*>(GetObservedModel());
 	if (framePtr != NULL){
 		const IColorSchema& colorSchema = GetColorSchema();
 		if (!m_arePointsValid){

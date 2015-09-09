@@ -148,7 +148,7 @@ void CModelProxy::AttachProxyObservers()
 
 void CModelProxy::DetachProxyObservers()
 {
-	imod::IModel* modelPtr = m_modelObserver.GetModelPtr();
+	imod::IModel* modelPtr = m_modelObserver.GetObservedModel();
 	if (modelPtr == NULL){
 		return;
 	}

@@ -33,7 +33,7 @@ void CTextEditorGuiComp::UpdateModel() const
 {
 	Q_ASSERT(IsGuiCreated());
 
-	idoc::ITextDocument* objectPtr = GetObjectPtr();
+	idoc::ITextDocument* objectPtr = GetObservedObject();
 	Q_ASSERT(objectPtr != NULL);
 
 	CTextEditor* textEditPtr = GetQtWidget();
@@ -50,7 +50,7 @@ void CTextEditorGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeS
 	CTextEditor* textEditPtr = GetQtWidget();
 	Q_ASSERT(textEditPtr != NULL);
 
-	idoc::ITextDocument* objectPtr = GetObjectPtr();
+	idoc::ITextDocument* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		textEditPtr->SetText(objectPtr->GetText());
 	}

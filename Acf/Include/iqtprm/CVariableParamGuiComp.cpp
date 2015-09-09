@@ -94,7 +94,7 @@ void CVariableParamGuiComp::RemoveItemsFromScene(iqt2d::IViewProvider* providerP
 void CVariableParamGuiComp::AttachCurrentType()
 {
 	if (m_currentTypeIndex >= 0){
-		iprm::IVariableParam* variableParamPtr = GetObjectPtr();
+		iprm::IVariableParam* variableParamPtr = GetObservedObject();
 		if (variableParamPtr != NULL){
 			imod::IModel* paramModelPtr = dynamic_cast<imod::IModel*>(variableParamPtr->GetParameter());
 			if ((paramModelPtr != NULL) && (m_currentTypeIndex < m_observersCompPtr.GetCount())){
@@ -184,7 +184,7 @@ void CVariableParamGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& change
 
 	Q_ASSERT(m_currentTypeIndex < m_typeIdsAttrPtr.GetCount());
 
-	iprm::IVariableParam* variableParamPtr = GetObjectPtr();
+	iprm::IVariableParam* variableParamPtr = GetObservedObject();
 	if (variableParamPtr == NULL){
 		return;
 	}
@@ -266,7 +266,7 @@ void CVariableParamGuiComp::on_TypeSelectorCB_currentIndexChanged(int index)
 		return;
 	}
 
-	iprm::IVariableParam* variableParamPtr = GetObjectPtr();
+	iprm::IVariableParam* variableParamPtr = GetObservedObject();
 	if (variableParamPtr == NULL){
 		return;
 	}

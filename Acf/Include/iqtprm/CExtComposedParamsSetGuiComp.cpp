@@ -39,7 +39,7 @@ namespace iqtprm
 
 void CExtComposedParamsSetGuiComp::UpdateModel() const
 {
-	Q_ASSERT(IsGuiCreated() && (GetObjectPtr() != NULL));
+	Q_ASSERT(IsGuiCreated() && (GetObservedObject() != NULL));
 
 	int editorsCount = qMin(GetPagesCount(), m_editorsCompPtr.GetCount());
 	for (int i = 0; i < editorsCount; ++i){
@@ -253,7 +253,7 @@ void CExtComposedParamsSetGuiComp::OnGuiModelAttached()
 
 	iqt::CSignalBlocker blocker(GetPageContainerWidget());
 
-	iprm::IParamsSet* paramsSetPtr = GetObjectPtr();
+	iprm::IParamsSet* paramsSetPtr = GetObservedObject();
 	Q_ASSERT(paramsSetPtr != NULL);
 
 	int currentPageIndex = m_pageModel.GetSelectedOptionIndex();
@@ -267,7 +267,7 @@ void CExtComposedParamsSetGuiComp::OnGuiModelAttached()
 		bool keepVisible = true;
 
 		if (!paramId.isEmpty()){
-			imod::IModel* parameterModelPtr = GetModelPtr();
+			imod::IModel* parameterModelPtr = GetObservedModel();
 			if (paramId != "*"){
 				iser::ISerializable* parameterPtr = paramsSetPtr->GetEditableParameter(paramId);
 				parameterModelPtr = dynamic_cast<imod::IModel*>(parameterPtr);
@@ -309,7 +309,7 @@ void CExtComposedParamsSetGuiComp::OnGuiModelAttached()
 
 void CExtComposedParamsSetGuiComp::OnGuiModelDetached()
 {
-	iprm::IParamsSet* paramsSetPtr = GetObjectPtr();
+	iprm::IParamsSet* paramsSetPtr = GetObservedObject();
 	Q_ASSERT(paramsSetPtr != NULL);
 
 	iqt::CSignalBlocker blocker(GetPageContainerWidget());
@@ -325,7 +325,7 @@ void CExtComposedParamsSetGuiComp::OnGuiModelDetached()
 		const QByteArray& paramId = m_idsAttrPtr[i];
 
 		if (!paramId.isEmpty()){
-			imod::IModel* parameterModelPtr = GetModelPtr();
+			imod::IModel* parameterModelPtr = GetObservedModel();
 			if (paramId != "*"){
 				iser::ISerializable* parameterPtr = paramsSetPtr->GetEditableParameter(paramId);
 				parameterModelPtr = dynamic_cast<imod::IModel*>(parameterPtr);

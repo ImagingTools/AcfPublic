@@ -53,7 +53,7 @@ void CStatusGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/
 
 	QIcon icon;
 
-	istd::IInformationProvider* objectPtr = GetObjectPtr();
+	istd::IInformationProvider* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		switch (objectPtr->GetInformationCategory()){
 		case istd::IInformationProvider::IC_INFO:

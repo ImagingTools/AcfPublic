@@ -37,7 +37,7 @@ namespace iqtsig
 void CSamplingParamsGuiComp::OnGuiModelAttached()
 {
 	Q_ASSERT(IsGuiCreated());
-	isig::ISamplingParams* objectPtr = GetObjectPtr();
+	isig::ISamplingParams* objectPtr = GetObservedObject();
 	Q_ASSERT(objectPtr != NULL);
 
 	istd::CRange range(0, 0.1);
@@ -56,7 +56,7 @@ void CSamplingParamsGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*cha
 {
 	Q_ASSERT(IsGuiCreated());
 
-	isig::ISamplingParams* objectPtr = GetObjectPtr();
+	isig::ISamplingParams* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		IntervalSB->setValue(objectPtr->GetInterval() * 1000);
 		ModeCB->setCurrentIndex(objectPtr->GetSamplingMode());
@@ -68,7 +68,7 @@ void CSamplingParamsGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*cha
 
 void CSamplingParamsGuiComp::on_IntervalSB_valueChanged(double value)
 {
-	isig::ISamplingParams* objectPtr = GetObjectPtr();
+	isig::ISamplingParams* objectPtr = GetObservedObject();
 	if (IsGuiCreated() && (objectPtr != NULL)){
 		double interval = value * 0.001;
 		if (qAbs(interval - objectPtr->GetInterval()) > I_EPSILON){
@@ -82,7 +82,7 @@ void CSamplingParamsGuiComp::on_IntervalSB_valueChanged(double value)
 
 void CSamplingParamsGuiComp::on_ModeCB_currentIndexChanged(int index)
 {
-	isig::ISamplingParams* objectPtr = GetObjectPtr();
+	isig::ISamplingParams* objectPtr = GetObservedObject();
 	if (!IsGuiCreated() || (objectPtr == NULL)){
 		return;
 	}

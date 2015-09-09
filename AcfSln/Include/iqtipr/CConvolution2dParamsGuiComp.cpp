@@ -49,7 +49,7 @@ void CConvolution2dParamsGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& 
 {
 	Q_ASSERT(IsGuiCreated());
 
-	iipr::IConvolutionKernel2d* objectPtr = GetObjectPtr();
+	iipr::IConvolutionKernel2d* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		UpdateTableSize();
 
@@ -111,7 +111,7 @@ void CConvolution2dParamsGuiComp::on_KernelTable_itemChanged(QTableWidgetItem* i
 		int x = item->column();
 		int y = item->row();
 
-		iipr::IConvolutionKernel2d* objectPtr = GetObjectPtr();
+		iipr::IConvolutionKernel2d* objectPtr = GetObservedObject();
 		Q_ASSERT(objectPtr != NULL);
 
 		if (objectPtr != NULL){
@@ -136,7 +136,7 @@ void CConvolution2dParamsGuiComp::UpdateTableSize()
 	int kernelWidth = KernelTable->columnCount();
 	int kernelHeight = KernelTable->rowCount();
 		
-	iipr::IConvolutionKernel2d* objectPtr = GetObjectPtr();
+	iipr::IConvolutionKernel2d* objectPtr = GetObservedObject();
 	if (objectPtr != NULL && objectPtr->GetKernelSize() != istd::CIndex2d(kernelWidth, kernelHeight)){
 		KernelTable->setRowCount(objectPtr->GetKernelSize().GetY());
 		KernelTable->setColumnCount(objectPtr->GetKernelSize().GetX());
@@ -152,7 +152,7 @@ void CConvolution2dParamsGuiComp::UpdateTableSize()
 
 void CConvolution2dParamsGuiComp::UpdateKernelSize() const
 {
-	iipr::IConvolutionKernel2d* objectPtr = GetObjectPtr();
+	iipr::IConvolutionKernel2d* objectPtr = GetObservedObject();
 	Q_ASSERT(objectPtr != NULL);
 
 	int newKernelWidth = KernelWidthSpin->value();

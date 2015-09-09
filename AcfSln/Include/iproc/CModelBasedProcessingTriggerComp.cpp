@@ -88,7 +88,7 @@ void CModelBasedProcessingTriggerComp::DoProcessing()
 
 	istd::CChangeNotifier changePtr(m_outputDataCompPtr.GetPtr());
 
-	istd::IChangeable* inputDataPtr = dynamic_cast<istd::IChangeable*>(GetModelPtr());
+	istd::IChangeable* inputDataPtr = dynamic_cast<istd::IChangeable*>(GetObservedModel());
 
 	int retVal = m_processorCompPtr->DoProcessing(
 				m_paramsSetCompPtr.GetPtr(),

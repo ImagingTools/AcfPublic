@@ -73,7 +73,7 @@ void CHotfolderGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& changeSet)
 {
 	Q_ASSERT(IsGuiCreated());
 
-	ihotf::IHotfolderProcessingInfo* objectPtr = GetObjectPtr();
+	ihotf::IHotfolderProcessingInfo* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		if (changeSet.Contains(ihotf::IHotfolderProcessingInfo::CF_CREATE)){
 			RebuildItemList();
@@ -110,7 +110,7 @@ void CHotfolderGuiComp::OnGuiModelAttached()
 	UpdateGui(changeSet);
 
 	if (m_statisticsHotfolderObserverCompPtr.IsValid()){
-		imod::IModel* hotfolderModelPtr = GetModelPtr();
+		imod::IModel* hotfolderModelPtr = GetObservedModel();
 		Q_ASSERT(hotfolderModelPtr != NULL);
 
 		hotfolderModelPtr->AttachObserver(m_statisticsHotfolderObserverCompPtr.GetPtr());
@@ -129,7 +129,7 @@ void CHotfolderGuiComp::OnGuiModelAttached()
 void CHotfolderGuiComp::OnGuiModelDetached()
 {
 	if (m_statisticsHotfolderObserverCompPtr.IsValid()){
-		imod::IModel* hotfolderModelPtr = GetModelPtr();
+		imod::IModel* hotfolderModelPtr = GetObservedModel();
 		Q_ASSERT(hotfolderModelPtr != NULL);
 
 		if (hotfolderModelPtr->IsAttached(m_statisticsHotfolderObserverCompPtr.GetPtr())){
@@ -282,7 +282,7 @@ void CHotfolderGuiComp::AddFileItem(const ihotf::IHotfolderProcessingItem& fileI
 
 void CHotfolderGuiComp::UpdateProcessingCommands()
 {
-	ihotf::IHotfolderProcessingInfo* objectPtr = GetObjectPtr();
+	ihotf::IHotfolderProcessingInfo* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		bool isWorking = objectPtr->IsWorking();
 
@@ -305,7 +305,7 @@ void CHotfolderGuiComp::UpdateItemCommands()
 	for (int itemIndex = 0; itemIndex < int(selectedItems.size()); itemIndex++){
 		Q_ASSERT(selectedItems[itemIndex] != NULL);
 
-		int itemState = selectedItems[itemIndex]->GetObjectPtr()->GetProcessingState();
+		int itemState = selectedItems[itemIndex]->GetObservedObject()->GetProcessingState();
 
 		enableRemoveAction = enableRemoveAction || (itemState != iproc::IProcessor::TS_WAIT);
 		enableCancelAction = enableCancelAction || ((itemState == iproc::IProcessor::TS_NONE) || itemState == iproc::IProcessor::TS_WAIT);
@@ -345,7 +345,7 @@ void CHotfolderGuiComp::RebuildItemList()
 		}
 	}
 
-	ihotf::IHotfolderProcessingInfo* objectPtr = GetObjectPtr();
+	ihotf::IHotfolderProcessingInfo* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		int itemsCount = objectPtr->GetProcessingItemsCount();
 		for (int itemIndex = 0; itemIndex < itemsCount; itemIndex++){
@@ -359,7 +359,7 @@ void CHotfolderGuiComp::RebuildItemList()
 
 void CHotfolderGuiComp::UpdateAddedItemList()
 {
-	ihotf::IHotfolderProcessingInfo* objectPtr = GetObjectPtr();
+	ihotf::IHotfolderProcessingInfo* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		int itemsCount = objectPtr->GetProcessingItemsCount();
 
@@ -390,7 +390,7 @@ void CHotfolderGuiComp::UpdateRemovedItemList()
 		while ((*itemsIter) != NULL){
 			ProcessingItem* processingItemPtr = dynamic_cast<ProcessingItem*>(*itemsIter);
 
-			if (processingItemPtr != NULL && processingItemPtr->GetObjectPtr() == NULL){
+			if (processingItemPtr != NULL && processingItemPtr->GetObservedObject() == NULL){
 				QTreeWidgetItem* parentItemPtr = processingItemPtr->parent();
 
 				if (processingItemPtr->isSelected()){
@@ -445,7 +445,7 @@ void CHotfolderGuiComp::UpdateItemsVisibility(const QString& textFilter, bool sh
 	while (*treeIterator){
 		ProcessingItem* itemPtr = dynamic_cast<ProcessingItem*>(*treeIterator);
 		if (itemPtr != NULL){
-			ihotf::IHotfolderProcessingItem* processingItemPtr = itemPtr->GetObjectPtr();
+			ihotf::IHotfolderProcessingItem* processingItemPtr = itemPtr->GetObservedObject();
 			if (processingItemPtr != NULL){
 				QString fileName = processingItemPtr->GetInputFile();
 				QRegExp regExp(textFilter, Qt::CaseInsensitive, QRegExp::RegExp);
@@ -466,7 +466,7 @@ void CHotfolderGuiComp::UpdateItemsVisibility(const QString& textFilter, bool sh
 
 void CHotfolderGuiComp::OnRun()
 {
-	ihotf::IHotfolderProcessingInfo* objectPtr = GetObjectPtr();
+	ihotf::IHotfolderProcessingInfo* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		objectPtr->SetWorking(true);
 	}
@@ -475,7 +475,7 @@ void CHotfolderGuiComp::OnRun()
 
 void CHotfolderGuiComp::OnHold()
 {
-	ihotf::IHotfolderProcessingInfo* objectPtr = GetObjectPtr();
+	ihotf::IHotfolderProcessingInfo* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		objectPtr->SetWorking(false);
 	}
@@ -486,7 +486,7 @@ void CHotfolderGuiComp::OnItemRemove()
 {
 	UpdateBlocker updateBlocker(this);
 
-	ihotf::IHotfolderProcessingInfo* processingInfoPtr = GetObjectPtr();
+	ihotf::IHotfolderProcessingInfo* processingInfoPtr = GetObservedObject();
 	if (processingInfoPtr != NULL){
 		istd::CChangeNotifier notifier(processingInfoPtr);
 		FileList->clearSelection();
@@ -495,7 +495,7 @@ void CHotfolderGuiComp::OnItemRemove()
 		for (int itemIndex = 0; itemIndex < int(processingItems.size()); itemIndex++){
 			ProcessingItem* processingItemPtr = processingItems[itemIndex];
 
-			ihotf::IHotfolderProcessingItem* itemPtr = processingItemPtr->GetObjectPtr();
+			ihotf::IHotfolderProcessingItem* itemPtr = processingItemPtr->GetObservedObject();
 			Q_ASSERT(itemPtr != NULL);
 			if (itemPtr != NULL && itemPtr->GetProcessingState() == iproc::IProcessor::TS_WAIT){		
 				itemPtr->SetProcessingState(iproc::IProcessor::TS_CANCELED);
@@ -519,10 +519,10 @@ void CHotfolderGuiComp::OnItemRemove()
 void CHotfolderGuiComp::OnItemCancel()
 {
 	ProcessingItems processingItems = GetSelectedProcessingItems();
-	ihotf::IHotfolderProcessingInfo* objectPtr = GetObjectPtr();
+	ihotf::IHotfolderProcessingInfo* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		for (int itemIndex = 0; itemIndex < int(processingItems.size()); itemIndex++){
-			ihotf::IHotfolderProcessingItem* processingItemPtr = processingItems[itemIndex]->GetObjectPtr();
+			ihotf::IHotfolderProcessingItem* processingItemPtr = processingItems[itemIndex]->GetObservedObject();
 			Q_ASSERT(processingItemPtr != NULL);
 
 			int itemState = processingItemPtr->GetProcessingState();
@@ -540,15 +540,15 @@ void CHotfolderGuiComp::OnRestart()
 {
 	ProcessingItems processingItems = GetSelectedProcessingItems();
 	
-	ihotf::IHotfolderProcessingInfo* objectPtr = GetObjectPtr();
+	ihotf::IHotfolderProcessingInfo* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		istd::CChangeNotifier changePtr(objectPtr);
 		bool fireChangeEvent = false;
 
 		for (int itemIndex = 0; itemIndex < int(processingItems.size()); itemIndex++){
-			int itemState = processingItems[itemIndex]->GetObjectPtr()->GetProcessingState();
+			int itemState = processingItems[itemIndex]->GetObservedObject()->GetProcessingState();
 			if (itemState != iproc::IProcessor::TS_WAIT){
-				processingItems[itemIndex]->GetObjectPtr()->SetProcessingState(iproc::IProcessor::TS_NONE);
+				processingItems[itemIndex]->GetObservedObject()->SetProcessingState(iproc::IProcessor::TS_NONE);
 				
 				fireChangeEvent = true;
 			}
@@ -589,7 +589,7 @@ void CHotfolderGuiComp::on_FileList_itemSelectionChanged()
 {
 	ProcessingItems processingItems = GetSelectedProcessingItems();
 	if (!processingItems.isEmpty()){
-		imod::IModel* itemModelPtr = processingItems[0]->GetModelPtr();
+		imod::IModel* itemModelPtr = processingItems[0]->GetObservedModel();
 		if (itemModelPtr != NULL){
 			m_itemModelProxy.SetModelPtr(itemModelPtr);
 		}
@@ -643,7 +643,7 @@ CHotfolderGuiComp::ProcessingItem::ProcessingItem(CHotfolderGuiComp& parent, QTr
 
 void CHotfolderGuiComp::ProcessingItem::OnUpdate(const ChangeSet& /*changeSet*/)
 {
-	ihotf::IHotfolderProcessingItem* objectPtr = GetObjectPtr();
+	ihotf::IHotfolderProcessingItem* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		int fileState = objectPtr->GetProcessingState();
 
@@ -736,7 +736,7 @@ CHotfolderGuiComp::InputDirectoriesObserver::InputDirectoriesObserver(CHotfolder
 
 void CHotfolderGuiComp::InputDirectoriesObserver::OnUpdate(const ChangeSet& /*changeSet*/)
 {
-	iprm::IParamsManager* objectPtr = GetObjectPtr();
+	iprm::IParamsManager* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		m_parent.RebuildItemList();
 	}

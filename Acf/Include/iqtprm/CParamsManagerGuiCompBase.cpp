@@ -85,7 +85,7 @@ void CParamsManagerGuiCompBase::RemoveItemsFromScene(iqt2d::IViewProvider* provi
 
 void CParamsManagerGuiCompBase::on_AddButton_clicked()
 {
-	iprm::IParamsManager* objectPtr = GetObjectPtr();
+	iprm::IParamsManager* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		int selectedIndex = GetSelectedIndex();
 		Q_ASSERT(selectedIndex < objectPtr->GetParamsSetsCount());
@@ -106,7 +106,7 @@ void CParamsManagerGuiCompBase::on_AddButton_clicked()
 
 void CParamsManagerGuiCompBase::on_RemoveButton_clicked()
 {
-	iprm::IParamsManager* objectPtr = GetObjectPtr();
+	iprm::IParamsManager* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		EnsureParamsGuiDetached();
 
@@ -136,7 +136,7 @@ void CParamsManagerGuiCompBase::on_RemoveButton_clicked()
 
 void CParamsManagerGuiCompBase::on_UpButton_clicked()
 {
-	iprm::IParamsManager* objectPtr = GetObjectPtr();
+	iprm::IParamsManager* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		int selectedIndex = GetSelectedIndex();
 		Q_ASSERT(selectedIndex < objectPtr->GetParamsSetsCount());
@@ -155,7 +155,7 @@ void CParamsManagerGuiCompBase::on_UpButton_clicked()
 
 void CParamsManagerGuiCompBase::on_DownButton_clicked()
 {
-	iprm::IParamsManager* objectPtr = GetObjectPtr();
+	iprm::IParamsManager* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		int selectedIndex = GetSelectedIndex();
 		Q_ASSERT(selectedIndex < objectPtr->GetParamsSetsCount());
@@ -182,7 +182,7 @@ void CParamsManagerGuiCompBase::on_ParamsTree_itemSelectionChanged()
 
 	int selectedIndex = GetSelectedIndex();
 
-	iprm::ISelectionParam* selectionPtr = GetObjectPtr();
+	iprm::ISelectionParam* selectionPtr = GetObservedObject();
 	if (selectionPtr == NULL){
 		return;
 	}
@@ -217,7 +217,7 @@ void CParamsManagerGuiCompBase::on_ParamsTree_itemChanged(QTreeWidgetItem* item,
 
 	UpdateBlocker updateBlocker(this);
 
-	iprm::IParamsManager* objectPtr = GetObjectPtr();
+	iprm::IParamsManager* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		int setIndex = item->data(0, Qt::UserRole).toInt();
 
@@ -246,7 +246,7 @@ void CParamsManagerGuiCompBase::on_ParamsComboBox_currentIndexChanged(int /*inde
 
 	ParamsComboBox->setEditable(selectedIndex >= 0 && *m_comboBoxEditableAttrPtr);
 
-	iprm::ISelectionParam* selectionPtr = GetObjectPtr();
+	iprm::ISelectionParam* selectionPtr = GetObservedObject();
 	if (selectionPtr == NULL){
 		return;
 	}
@@ -279,7 +279,7 @@ void CParamsManagerGuiCompBase::on_ParamsComboBox_editTextChanged(const QString&
 	if (selectedIndex >= 0){
 		UpdateBlocker updateBlocker(this);
 
-		iprm::IParamsManager* objectPtr = GetObjectPtr();
+		iprm::IParamsManager* objectPtr = GetObservedObject();
 		if (objectPtr != NULL){
 			int setIndex = ParamsComboBox->itemData(selectedIndex, Qt::UserRole).toInt();
 
@@ -293,7 +293,7 @@ void CParamsManagerGuiCompBase::on_ParamsComboBox_editTextChanged(const QString&
 
 void CParamsManagerGuiCompBase::OnAddMenuOptionClicked(QAction* action)
 {
-	iprm::IParamsManager* objectPtr = GetObjectPtr();
+	iprm::IParamsManager* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		int typeIndex = action->data().toInt();
 
@@ -307,7 +307,7 @@ void CParamsManagerGuiCompBase::OnAddMenuOptionClicked(QAction* action)
 
 iqt2d::IViewExtender* CParamsManagerGuiCompBase::GetCurrentViewExtenderPtr() const
 {
-	iprm::IParamsManager* objectPtr = GetObjectPtr();
+	iprm::IParamsManager* objectPtr = GetObservedObject();
 	if (objectPtr == NULL){
 		return NULL;
 	}
@@ -336,7 +336,7 @@ void CParamsManagerGuiCompBase::UpdateActions()
 	int prevFlags = 0;
 	int nextFlags = 0;
 
-	iprm::IParamsManager* objectPtr = GetObjectPtr();
+	iprm::IParamsManager* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		int currentIndex = objectPtr->GetSelectedOptionIndex();
 
@@ -370,7 +370,7 @@ void CParamsManagerGuiCompBase::UpdateTree()
 
 	int selectedIndex = -1;	
 
-	iprm::IParamsManager* objectPtr = GetObjectPtr();
+	iprm::IParamsManager* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		int setsCount = objectPtr->GetParamsSetsCount();
 
@@ -435,7 +435,7 @@ void CParamsManagerGuiCompBase::UpdateComboBox()
 
 	int selectedIndex = -1;	
 
-	iprm::IParamsManager* objectPtr = GetObjectPtr();
+	iprm::IParamsManager* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		int setsCount = objectPtr->GetParamsSetsCount();
 
@@ -487,7 +487,7 @@ void CParamsManagerGuiCompBase::UpdateParamsView(int selectedIndex)
 	imod::IModel* modelPtr = NULL;
 	imod::IObserver* paramsSetObserverPtr = NULL;
 
-	iprm::IParamsManager* objectPtr = GetObjectPtr();
+	iprm::IParamsManager* objectPtr = GetObservedObject();
 	if (objectPtr != NULL && (selectedIndex >= 0)){
 		Q_ASSERT(selectedIndex < objectPtr->GetParamsSetsCount());
 
@@ -582,7 +582,7 @@ void CParamsManagerGuiCompBase::EnsureParamsGuiDetached()
 
 QByteArray CParamsManagerGuiCompBase::GetSelectedParamsSetTypeId() const
 {
-	iprm::IParamsManager* objectPtr = GetObjectPtr();
+	iprm::IParamsManager* objectPtr = GetObservedObject();
 	if ((objectPtr != NULL) && objectPtr->GetSelectedOptionIndex() >= 0){
 		iprm::IParamsSet* paramsSetPtr = objectPtr->GetParamsSet(objectPtr->GetSelectedOptionIndex());
 		if (paramsSetPtr != NULL){
@@ -605,7 +605,7 @@ void CParamsManagerGuiCompBase::OnGuiModelAttached()
 	bool areAddRemoveButtonsNeeded = false;
 	bool areUpDownButtonsNeeded = false;
 
-	iprm::IParamsManager* objectPtr = GetObjectPtr();
+	iprm::IParamsManager* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		int flags = objectPtr->GetIndexOperationFlags();
 

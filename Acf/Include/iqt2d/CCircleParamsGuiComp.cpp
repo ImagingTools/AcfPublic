@@ -39,7 +39,7 @@ void CCircleParamsGuiComp::UpdateModel() const
 {
 	Q_ASSERT(IsGuiCreated());
 
-	i2d::CCircle* objectPtr = GetObjectPtr();
+	i2d::CCircle* objectPtr = GetObservedObject();
 	Q_ASSERT(objectPtr != NULL);
 
 	istd::CChangeGroup changeGroup(objectPtr);
@@ -61,7 +61,7 @@ void CCircleParamsGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*chang
 {
 	Q_ASSERT(IsGuiCreated());
 
-	i2d::CCircle* objectPtr = GetObjectPtr();
+	i2d::CCircle* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		const i2d::CVector2d& center = objectPtr->GetCenter();
 

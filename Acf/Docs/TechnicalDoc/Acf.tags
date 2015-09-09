@@ -8826,9 +8826,9 @@
     </member>
     <member kind="function">
       <type>imod::IModel *</type>
-      <name>GetModelPtr</name>
+      <name>GetObservedModel</name>
       <anchorfile>classimod_1_1_c_multi_model_bridge_base.html</anchorfile>
-      <anchor>a7cabcb3d27b3596194e4d62529e3d51d</anchor>
+      <anchor>a3563ce6732d27b0548a22227cf60e91d</anchor>
       <arglist>(int modelIndex) const </arglist>
     </member>
     <member kind="function">
@@ -16424,6 +16424,13 @@
       <anchorfile>classimod_1_1_c_single_model_observer_base.html</anchorfile>
       <anchor>a9704ae79559de68eb3385a771e7aa608</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>imod::IModel *</type>
+      <name>GetObservedModel</name>
+      <anchorfile>classimod_1_1_c_single_model_observer_base.html</anchorfile>
+      <anchor>a5488b88f3a093a801d2ac1539f3bf8be</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>imod::IModel *</type>
@@ -26717,18 +26724,25 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>IModel *</type>
-      <name>GetModelPtr</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a44e4ecc264d102606dd19b954b4b861e</anchor>
-      <arglist>(int modelIndex) const </arglist>
-    </member>
-    <member kind="function">
       <type>int</type>
       <name>GetModelCount</name>
       <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
       <anchor>a9b9d05f1e8eed6f32dd8458746860cce</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>IModel *</type>
+      <name>GetObservedModel</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>ac1d382a0a61d625499ffa9023cbfe835</anchor>
+      <arglist>(int modelIndex) const </arglist>
+    </member>
+    <member kind="function">
+      <type>IModel *</type>
+      <name>GetModelPtr</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>a44e4ecc264d102606dd19b954b4b861e</anchor>
+      <arglist>(int modelIndex) const </arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -27294,6 +27308,13 @@
     </member>
     <member kind="function">
       <type>IDocumentManager *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>IDocumentManager *</type>
       <name>GetObjectPtr</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
@@ -27466,6 +27487,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>iser::ISerializable *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>iser::ISerializable *</type>
@@ -31975,6 +32003,13 @@
     </member>
     <member kind="function">
       <type>ifile::IFileListProvider *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>ifile::IFileListProvider *</type>
       <name>GetObjectPtr</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
@@ -32136,6 +32171,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>ifile::IFileNameParam *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>ifile::IFileNameParam *</type>
@@ -36000,6 +36042,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>ilog::IMessageContainer *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>ilog::IMessageContainer *</type>
@@ -40287,6 +40336,13 @@
     </member>
     <member kind="function">
       <type>ModelInterface *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_multi_model_observer_base.html</anchorfile>
+      <anchor>ad97ffdf92a22fd1b8dd87abd3e09a0f7</anchor>
+      <arglist>(int objectIndex) const </arglist>
+    </member>
+    <member kind="function">
+      <type>ModelInterface *</type>
       <name>GetObjectPtr</name>
       <anchorfile>classimod_1_1_t_multi_model_observer_base.html</anchorfile>
       <anchor>ae49f4bd9d4feb3b984f0c3662e097713</anchor>
@@ -40325,6 +40381,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>ModelInterface *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>ModelInterface *</type>
@@ -42688,6 +42751,13 @@
     </member>
     <member kind="function">
       <type>iprm::IOptionsList *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>iprm::IOptionsList *</type>
       <name>GetObjectPtr</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
@@ -44885,6 +44955,13 @@
     </member>
     <member kind="function">
       <type>i2d::CAffineTransformation2d *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CAffineTransformation2d *</type>
       <name>GetObjectPtr</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
@@ -44978,6 +45055,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CAnnulus *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>i2d::CAnnulus *</type>
@@ -45077,6 +45161,13 @@
     </member>
     <member kind="function">
       <type>i2d::CAnnulusSegment *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CAnnulusSegment *</type>
       <name>GetObjectPtr</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
@@ -45173,6 +45264,13 @@
     </member>
     <member kind="function">
       <type>i2d::CArc *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CArc *</type>
       <name>GetObjectPtr</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
@@ -45266,6 +45364,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CCircle *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>i2d::CCircle *</type>
@@ -45935,6 +46040,13 @@
     </member>
     <member kind="function">
       <type>i2d::CLine2d *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CLine2d *</type>
       <name>GetObjectPtr</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
@@ -46334,6 +46446,13 @@
     </member>
     <member kind="function">
       <type>iimg::IMultiBitmapProvider *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>iimg::IMultiBitmapProvider *</type>
       <name>GetObjectPtr</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
@@ -46498,6 +46617,13 @@
     </member>
     <member kind="function">
       <type>i2d::COrientedCircle *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::COrientedCircle *</type>
       <name>GetObjectPtr</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
@@ -46654,6 +46780,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CPolygon *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>i2d::CPolygon *</type>
@@ -46820,6 +46953,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CPolyline *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>i2d::CPolyline *</type>
@@ -47045,6 +47185,13 @@
     </member>
     <member kind="function">
       <type>i2d::CQuadrangle *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CQuadrangle *</type>
       <name>GetObjectPtr</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
@@ -47138,6 +47285,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CRectangle *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>i2d::CRectangle *</type>
@@ -47341,6 +47495,13 @@
     </member>
     <member kind="function">
       <type>iprm::ISelectionParam *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>iprm::ISelectionParam *</type>
       <name>GetObjectPtr</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
@@ -47434,6 +47595,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CTubePolyline *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>i2d::CTubePolyline *</type>
@@ -47882,6 +48050,13 @@
     </member>
     <member kind="function">
       <type>PolygonBasedModel *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>PolygonBasedModel *</type>
       <name>GetObjectPtr</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
@@ -48060,6 +48235,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>ShapeModel *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>ShapeModel *</type>
@@ -48359,6 +48541,13 @@
     </member>
     <member kind="function">
       <type>idoc::IDocumentManager *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>idoc::IDocumentManager *</type>
       <name>GetObjectPtr</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
@@ -48641,6 +48830,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>idoc::IDocumentMetaInfo *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>idoc::IDocumentMetaInfo *</type>
@@ -50151,6 +50347,13 @@
     </member>
     <member kind="function">
       <type>ibase::IRuntimeStatusProvider *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>ibase::IRuntimeStatusProvider *</type>
       <name>GetObjectPtr</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
@@ -51361,6 +51564,13 @@
     </member>
     <member kind="function">
       <type>iprm::IEnableableParam *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>iprm::IEnableableParam *</type>
       <name>GetObjectPtr</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
@@ -51892,6 +52102,13 @@
     </member>
     <member kind="function">
       <type>iimg::IBitmap *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>iimg::IBitmap *</type>
       <name>GetObjectPtr</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
@@ -51970,6 +52187,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>istd::IChangeable *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>istd::IChangeable *</type>
@@ -52634,6 +52858,13 @@
     </member>
     <member kind="function">
       <type>istd::IInformationProvider *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>istd::IInformationProvider *</type>
       <name>GetObjectPtr</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
@@ -52935,6 +53166,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>ibase::IQtItemModelProvider *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>ibase::IQtItemModelProvider *</type>
@@ -53339,6 +53577,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Model *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>Model *</type>
@@ -54055,6 +54300,13 @@
     </member>
     <member kind="function">
       <type>iprm::IOptionsManager *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>iprm::IOptionsManager *</type>
       <name>GetObjectPtr</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
@@ -54206,6 +54458,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>iprm::IParamsSet *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>iprm::IParamsSet *</type>
@@ -54739,6 +54998,13 @@
     </member>
     <member kind="function">
       <type>iprm::IParamsManager *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>iprm::IParamsManager *</type>
       <name>GetObjectPtr</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
@@ -55183,6 +55449,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>iprm::INameParam *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>iprm::INameParam *</type>
@@ -56028,6 +56301,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>iprm::IVariableParam *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>iprm::IVariableParam *</type>
@@ -68417,6 +68697,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>IShapeStatusInfo *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>IShapeStatusInfo *</type>

@@ -54,7 +54,7 @@ void CDataSequenceViewComp::UpdateGui(const istd::IChangeable::ChangeSet& /*chan
 
 	int channelsCount = 0;
 
-	imeas::IDataSequence* objectPtr = GetObjectPtr();
+	imeas::IDataSequence* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		channelsCount = objectPtr->GetChannelsCount();
 		if (channelsCount != m_lastChannelsCount){
@@ -151,7 +151,7 @@ void CDataSequenceViewComp::on_ChannelSelectorCB_currentIndexChanged(int /*index
 
 void CDataSequenceViewComp::on_ZoomInButton_clicked()
 {
-	const imeas::IDataSequence* samplesPtr = GetObjectPtr();
+	const imeas::IDataSequence* samplesPtr = GetObservedObject();
 	if (samplesPtr == NULL){
 		return;
 	}
@@ -169,7 +169,7 @@ void CDataSequenceViewComp::on_ZoomInButton_clicked()
 
 void CDataSequenceViewComp::on_ZoomOutButton_clicked()
 {
-	const imeas::IDataSequence* samplesPtr = GetObjectPtr();
+	const imeas::IDataSequence* samplesPtr = GetObservedObject();
 	if (samplesPtr == NULL){
 		return;
 	}
@@ -196,7 +196,7 @@ void CDataSequenceViewComp::on_ZoomOutButton_clicked()
 
 void CDataSequenceViewComp::on_PrevButton_clicked()
 {
-	const imeas::IDataSequence* samplesPtr = GetObjectPtr();
+	const imeas::IDataSequence* samplesPtr = GetObservedObject();
 	if (samplesPtr == NULL){
 		return;
 	}
@@ -221,7 +221,7 @@ void CDataSequenceViewComp::on_PrevButton_clicked()
 
 void CDataSequenceViewComp::on_NextButton_clicked()
 {
-	const imeas::IDataSequence* samplesPtr = GetObjectPtr();
+	const imeas::IDataSequence* samplesPtr = GetObservedObject();
 	if (samplesPtr == NULL){
 		return;
 	}
@@ -270,7 +270,7 @@ void CDataSequenceViewComp::DiagramWidget::paintEvent(QPaintEvent* /*event*/)
 {
 	Q_ASSERT(m_parent.IsGuiCreated());
 
-	const imeas::IDataSequence* samplesPtr = m_parent.GetObjectPtr();
+	const imeas::IDataSequence* samplesPtr = m_parent.GetObservedObject();
 	if (samplesPtr != NULL){
 		int samplesCount = samplesPtr->GetSamplesCount();
 

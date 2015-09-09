@@ -83,7 +83,7 @@ void CSplineShape::DrawPolyBezier(QPainter& drawContext, const i2d::CVector2d* p
 
 i2d::CVector2d CSplineShape::GetSegmentMiddle(int index) const
 {
-	const imod::IModel* modelPtr = GetModelPtr();
+	const imod::IModel* modelPtr = GetObservedModel();
 	if (modelPtr != NULL){
 		const i2d::CSpline& model = *dynamic_cast<const i2d::CSpline*>(modelPtr);
 		Q_ASSERT(&model != NULL);
@@ -100,7 +100,7 @@ i2d::CVector2d CSplineShape::GetSegmentMiddle(int index) const
 
 void CSplineShape::DrawCurve(QPainter& drawContext) const
 {
-	const i2d::CSpline* splinePtr = dynamic_cast<const i2d::CSpline*>(GetModelPtr());
+	const i2d::CSpline* splinePtr = dynamic_cast<const i2d::CSpline*>(GetObservedModel());
 	if (IsDisplayConnected() && (splinePtr != NULL)){
 		const IColorSchema& colorSchema = GetColorSchema();
 
@@ -136,7 +136,7 @@ void CSplineShape::DrawCurve(QPainter& drawContext) const
 
 bool CSplineShape::IsCurveTouched(istd::CIndex2d position) const
 {
-	const i2d::CSpline* splinePtr = dynamic_cast<const i2d::CSpline*>(GetModelPtr());
+	const i2d::CSpline* splinePtr = dynamic_cast<const i2d::CSpline*>(GetObservedModel());
 	if (IsDisplayConnected() && (splinePtr != NULL)){
 		const IColorSchema& colorSchema = GetColorSchema();
 		double viewScale = GetViewToScreenTransform().GetDeformMatrix().GetApproxScale();
@@ -162,7 +162,7 @@ bool CSplineShape::IsCurveTouched(istd::CIndex2d position) const
 
 i2d::CRect CSplineShape::CalcBoundingBox() const
 {
-	const i2d::CSpline* splinePtr = dynamic_cast<const i2d::CSpline*>(GetModelPtr());
+	const i2d::CSpline* splinePtr = dynamic_cast<const i2d::CSpline*>(GetObservedModel());
 	if (IsDisplayConnected() && (splinePtr != NULL)){
 		const IColorSchema& colorSchema = GetColorSchema();
 

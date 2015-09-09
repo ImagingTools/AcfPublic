@@ -56,7 +56,7 @@ bool CPolylineShape::ExecuteAction(IInteractiveShape::ShapeAction action)
 		return true;
 	}
 
-	imod::IModel* modelPtr = GetModelPtr();
+	imod::IModel* modelPtr = GetObservedModel();
 	i2d::CPolyline* polygonPtr = dynamic_cast<i2d::CPolyline*>(modelPtr);
 	if (polygonPtr == NULL){
 		return false;
@@ -90,7 +90,7 @@ bool CPolylineShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butt
 	Q_ASSERT(IsDisplayConnected());
 
 	if (!ShapeBaseClass::OnMouseButton(position, buttonType, downFlag) && IsEditablePosition()){
-		imod::IModel* modelPtr = GetModelPtr();
+		imod::IModel* modelPtr = GetObservedModel();
 		i2d::CPolyline* polylinePtr = dynamic_cast<i2d::CPolyline*>(modelPtr);
 		if (polylinePtr != NULL){
 			if (downFlag){
@@ -294,7 +294,7 @@ void CPolylineShape::DrawCurve(QPainter& drawContext) const
 {
 	Q_ASSERT(IsDisplayConnected());
 
-	const i2d::CPolyline* polylinePtr = dynamic_cast<const i2d::CPolyline*>(GetModelPtr());
+	const i2d::CPolyline* polylinePtr = dynamic_cast<const i2d::CPolyline*>(GetObservedModel());
 	if (polylinePtr != NULL){
 		const IColorSchema& colorSchema = GetColorSchema();
 
@@ -378,7 +378,7 @@ void CPolylineShape::DrawSelectionElements(QPainter& drawContext) const
 {
 	Q_ASSERT(IsDisplayConnected());
 
-	const i2d::CPolyline* polylinePtr = dynamic_cast<const i2d::CPolyline*>(GetModelPtr());
+	const i2d::CPolyline* polylinePtr = dynamic_cast<const i2d::CPolyline*>(GetObservedModel());
 	if (polylinePtr != NULL){
 		const IColorSchema& colorSchema = GetColorSchema();
 
@@ -450,7 +450,7 @@ bool CPolylineShape::IsCurveTouched(istd::CIndex2d position) const
 {
 	Q_ASSERT(IsDisplayConnected());
 
-	const i2d::CPolyline* polylinePtr = dynamic_cast<const i2d::CPolyline*>(GetModelPtr());
+	const i2d::CPolyline* polylinePtr = dynamic_cast<const i2d::CPolyline*>(GetObservedModel());
 	if (polylinePtr != NULL){
 		int nodesCount = polylinePtr->GetNodesCount();
 		if (nodesCount < 2){
@@ -492,7 +492,7 @@ ITouchable::TouchState CPolylineShape::IsTouched(istd::CIndex2d position) const
 {
 	Q_ASSERT(IsDisplayConnected());
 
-	const i2d::CPolyline* polylinePtr = dynamic_cast<const i2d::CPolyline*>(GetModelPtr());
+	const i2d::CPolyline* polylinePtr = dynamic_cast<const i2d::CPolyline*>(GetObservedModel());
 	if (polylinePtr != NULL){
 		int editMode = GetEditMode();
 

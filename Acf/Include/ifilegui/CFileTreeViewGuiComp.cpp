@@ -261,7 +261,7 @@ void CFileTreeViewGuiComp::DoTreeModelUpdate()
 {
 	QMutexLocker lock(&m_lock);
 
-	ifile::IFileNameParam* rootDirPtr = GetObjectPtr();
+	ifile::IFileNameParam* rootDirPtr = GetObservedObject();
 	if (rootDirPtr == NULL){
 		return;
 	}

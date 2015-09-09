@@ -102,7 +102,7 @@ void CPolylineParamsGuiComp::on_NodeParamsTable_itemSelectionChanged()
 
 void CPolylineParamsGuiComp::on_CloseLineCheckBox_stateChanged(int state)
 {
-	i2d::CPolyline* polylinePtr = dynamic_cast<i2d::CPolyline*>(GetModelPtr());
+	i2d::CPolyline* polylinePtr = dynamic_cast<i2d::CPolyline*>(GetObservedModel());
 	if (polylinePtr != NULL){
 		istd::CChangeNotifier notifier(polylinePtr);
 
@@ -184,7 +184,7 @@ void CPolylineParamsGuiComp::UpdateClosedLineCheckBox(bool /*forceEnabled*/, boo
 {
 	CloseLineCheckBox->setHidden(true);
 
-	i2d::CPolyline* polylinePtr = dynamic_cast<i2d::CPolyline*>(GetModelPtr());
+	i2d::CPolyline* polylinePtr = dynamic_cast<i2d::CPolyline*>(GetObservedModel());
 	if (!forceHidden && polylinePtr != NULL){
 		CloseLineCheckBox->setChecked(polylinePtr->IsClosed());
 		CloseLineCheckBox->setHidden(false);

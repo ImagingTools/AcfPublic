@@ -77,7 +77,7 @@ void CRegistryElementShape::CheckConsistency()
 {
 	bool isConsistent = false;
 
-	const CVisualRegistryElement* objectPtr = GetObjectPtr();
+	const CVisualRegistryElement* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		const icomp::IRegistry* registryPtr = objectPtr->GetRegistry();
 		const IRegistryConsistInfo* infoPtr = m_registryView.GetRegistryConsistInfo();
@@ -112,7 +112,7 @@ QRectF CRegistryElementShape::boundingRect() const
 
 void CRegistryElementShape::paint(QPainter* painterPtr, const QStyleOptionGraphicsItem* /*stylePtr*/, QWidget* /*widgetPtr*/)
 {
-	const CVisualRegistryElement* objectPtr = GetObjectPtr();
+	const CVisualRegistryElement* objectPtr = GetObservedObject();
 	if (objectPtr == NULL){
 		return;
 	}
@@ -232,7 +232,7 @@ void CRegistryElementShape::mouseMoveEvent(QGraphicsSceneMouseEvent* eventPtr)
 
 void CRegistryElementShape::mouseDoubleClickEvent(QGraphicsSceneMouseEvent* eventPtr)
 {
-	CVisualRegistryElement* objectPtr = GetObjectPtr();
+	CVisualRegistryElement* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		m_registryView.TryOpenComponent(*objectPtr);
 	}

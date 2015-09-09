@@ -57,7 +57,7 @@ void COptionsListEditorComp::on_OptionsList_itemSelectionChanged()
 
 		m_lastSelectedIndex = GetSelectedIndex();
 
-		iprm::ISelectionParam* selectionPtr = dynamic_cast<iprm::ISelectionParam*>(GetObjectPtr());
+		iprm::ISelectionParam* selectionPtr = dynamic_cast<iprm::ISelectionParam*>(GetObservedObject());
 		if (selectionPtr != NULL){
 			static const istd::IChangeable::ChangeSet changeSet(iprm::ISelectionParam::CF_SELECTION_CHANGED);
 			istd::CChangeNotifier selectionNotifier(selectionPtr, &changeSet);
@@ -79,7 +79,7 @@ void COptionsListEditorComp::UpdateList()
 
 	OptionsList->clear();
 	
-	iprm::IOptionsList* objectPtr = GetObjectPtr();
+	iprm::IOptionsList* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		int optionsCount = objectPtr->GetOptionsCount();
 
@@ -146,7 +146,7 @@ int COptionsListEditorComp::GetSelectedIndex() const
 
 void COptionsListEditorComp::EnsureSelectedIndexUpdated() const
 {
-	iprm::ISelectionParam* selectionPtr = dynamic_cast<iprm::ISelectionParam*>(GetObjectPtr());
+	iprm::ISelectionParam* selectionPtr = dynamic_cast<iprm::ISelectionParam*>(GetObservedObject());
 	if (selectionPtr != NULL){
 		m_lastSelectedIndex = selectionPtr->GetSelectedOptionIndex();
 	}

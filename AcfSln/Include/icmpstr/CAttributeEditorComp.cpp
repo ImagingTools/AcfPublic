@@ -109,7 +109,7 @@ void CAttributeEditorComp::on_AttributeTree_itemSelectionChanged()
 
 		QByteArray attributeId = attributeItemPtr->data(AC_VALUE, AttributeId).toString().toLocal8Bit();
 		if (!attributeId.isEmpty()){
-			const IElementSelectionInfo* selectionInfoPtr = GetObjectPtr();
+			const IElementSelectionInfo* selectionInfoPtr = GetObservedObject();
 			if (selectionInfoPtr != NULL){
 				IElementSelectionInfo::Elements selectedElements = selectionInfoPtr->GetSelectedElements();
 				if (!selectedElements.isEmpty()){
@@ -136,7 +136,7 @@ void CAttributeEditorComp::on_AttributeTree_itemSelectionChanged()
 
 void CAttributeEditorComp::on_AttributeTree_itemChanged(QTreeWidgetItem* item, int column)
 {
-	const IElementSelectionInfo* objectPtr = GetObjectPtr();
+	const IElementSelectionInfo* objectPtr = GetObservedObject();
 	if (objectPtr == NULL){
 		return;
 	}
@@ -222,7 +222,7 @@ void CAttributeEditorComp::on_InterfacesTree_itemChanged(QTreeWidgetItem* item, 
 	UpdateBlocker updateBlocker(this);
 
 	if (column == 0){
-		const IElementSelectionInfo* selectionInfoPtr = GetObjectPtr();
+		const IElementSelectionInfo* selectionInfoPtr = GetObservedObject();
 		if (selectionInfoPtr == NULL){
 			return;
 		}
@@ -255,7 +255,7 @@ void CAttributeEditorComp::on_AutoInstanceCB_toggled(bool checked)
 
 	UpdateBlocker updateBlocker(this);
 
-	const IElementSelectionInfo* objectPtr = GetObjectPtr();
+	const IElementSelectionInfo* objectPtr = GetObservedObject();
 	if (objectPtr == NULL){
 		return;
 	}
@@ -296,7 +296,7 @@ void CAttributeEditorComp::on_AutoInstanceCB_toggled(bool checked)
 
 void CAttributeEditorComp::UpdateGeneralView()
 {
-	const IElementSelectionInfo* objectPtr = GetObjectPtr();
+	const IElementSelectionInfo* objectPtr = GetObservedObject();
 	if (objectPtr == NULL){
 		return;
 	}
@@ -436,7 +436,7 @@ void CAttributeEditorComp::UpdateAttributesView()
 	bool hasImport = false;
 	int itemIndex = 0;
 
-	const IElementSelectionInfo* objectPtr = GetObjectPtr();
+	const IElementSelectionInfo* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		const icomp::IRegistry* registryPtr = objectPtr->GetSelectedRegistry();
 		if (registryPtr != NULL){
@@ -560,7 +560,7 @@ void CAttributeEditorComp::UpdateInterfacesView()
 
 	bool hasWarning = false;
 	bool hasExport = false;
-	const IElementSelectionInfo* objectPtr = GetObjectPtr();
+	const IElementSelectionInfo* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		const icomp::IRegistry* registryPtr = objectPtr->GetSelectedRegistry();
 		if (registryPtr != NULL){
@@ -634,7 +634,7 @@ void CAttributeEditorComp::UpdateInterfacesView()
 
 void CAttributeEditorComp::UpdateFlagsView()
 {
-	const IElementSelectionInfo* objectPtr = GetObjectPtr();
+	const IElementSelectionInfo* objectPtr = GetObservedObject();
 	if (objectPtr == NULL){
 		return;
 	}
@@ -702,7 +702,7 @@ void CAttributeEditorComp::UpdateSubcomponentsView()
 	bool hasExport = false;
 	int itemIndex = 0;
 
-	const IElementSelectionInfo* objectPtr = GetObjectPtr();
+	const IElementSelectionInfo* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		const icomp::IRegistry* registryPtr = objectPtr->GetSelectedRegistry();
 		if (registryPtr != NULL){
@@ -1672,7 +1672,7 @@ void CAttributeEditorComp::UpdateGui(const istd::IChangeable::ChangeSet& changeS
 		AttributeTree->reset();
 	}
 
-	const IElementSelectionInfo* objectPtr = GetObjectPtr();
+	const IElementSelectionInfo* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		icomp::IRegistry* registryPtr = objectPtr->GetSelectedRegistry();
 
@@ -1937,7 +1937,7 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 		return false;
 	}
 
-	const IElementSelectionInfo* selectionInfoPtr = m_parent.GetObjectPtr();
+	const IElementSelectionInfo* selectionInfoPtr = m_parent.GetObservedObject();
 	if (selectionInfoPtr == NULL){
 		return false;
 	}

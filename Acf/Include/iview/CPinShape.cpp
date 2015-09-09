@@ -78,7 +78,7 @@ void CPinShape::Draw(QPainter& drawContext) const
 {
 	Q_ASSERT(IsDisplayConnected());
 
-	const i2d::CPosition2d* pinPtr = dynamic_cast<const i2d::CPosition2d*>(GetModelPtr());
+	const i2d::CPosition2d* pinPtr = dynamic_cast<const i2d::CPosition2d*>(GetObservedModel());
 	if (pinPtr != NULL){
 		const IColorSchema& colorSchema = GetColorSchema();
 
@@ -112,7 +112,7 @@ bool CPinShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton buttonTyp
 		return false;
 	}
 
-	const i2d::CPosition2d* pinPtr = dynamic_cast<const i2d::CPosition2d*>(GetModelPtr());
+	const i2d::CPosition2d* pinPtr = dynamic_cast<const i2d::CPosition2d*>(GetObservedModel());
 	if (IsDisplayConnected() && (pinPtr != NULL)){
 		if (downFlag){
 			const IColorSchema& colorSchema = GetColorSchema();
@@ -142,7 +142,7 @@ bool CPinShape::OnMouseMove(istd::CIndex2d position)
 		return false;
 	}
 
-	imod::IModel* modelPtr = GetModelPtr();
+	imod::IModel* modelPtr = GetObservedModel();
 	if (modelPtr != NULL){
 		i2d::CPosition2d& pin = *dynamic_cast<i2d::CPosition2d*>(modelPtr);
 		Q_ASSERT(&pin != NULL);
@@ -167,7 +167,7 @@ i2d::CRect CPinShape::CalcBoundingBox() const
 {
 	Q_ASSERT(IsDisplayConnected());
 
-	const i2d::CPosition2d* pinPtr = dynamic_cast<const i2d::CPosition2d*>(GetModelPtr());
+	const i2d::CPosition2d* pinPtr = dynamic_cast<const i2d::CPosition2d*>(GetObservedModel());
 	if (pinPtr != NULL){
 		const IColorSchema& colorSchema = GetColorSchema();
 
@@ -199,7 +199,7 @@ i2d::CRect CPinShape::CalcBoundingBox() const
 
 void CPinShape::BeginLogDrag(const i2d::CVector2d& reference)
 {
-	const imod::IModel* modelPtr = GetModelPtr();
+	const imod::IModel* modelPtr = GetObservedModel();
 	if (modelPtr != NULL){
 		const i2d::CPosition2d& pin = *dynamic_cast<const i2d::CPosition2d*>(modelPtr);
 		Q_ASSERT(&pin != NULL);
@@ -212,7 +212,7 @@ void CPinShape::BeginLogDrag(const i2d::CVector2d& reference)
 void CPinShape::SetLogDragPosition(const i2d::CVector2d& position)
 {
 	if (IsEditablePosition()){
-		imod::IModel* modelPtr = GetModelPtr();
+		imod::IModel* modelPtr = GetObservedModel();
 		if (modelPtr != NULL){
 			i2d::CPosition2d& pin = *dynamic_cast<i2d::CPosition2d*>(modelPtr);
 			Q_ASSERT(&pin != NULL);

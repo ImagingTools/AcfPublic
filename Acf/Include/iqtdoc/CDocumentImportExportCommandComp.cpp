@@ -145,7 +145,7 @@ void CDocumentImportExportCommandComp::UpdateCommands()
 {
 	m_exportCommand.SetEnabled(false);
 
-	const idoc::IDocumentManager* objectPtr = GetObjectPtr();
+	const idoc::IDocumentManager* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		istd::IPolymorphic* activeViewPtr = objectPtr->GetActiveView();
 		if (activeViewPtr != NULL){

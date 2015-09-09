@@ -51,7 +51,7 @@ void CTextEditorComp::UpdateModel() const
 	QTextEdit* textEditPtr = GetQtWidget();
 	Q_ASSERT(textEditPtr != NULL);
 
-	idoc::ITextDocument* objectPtr = GetObjectPtr();
+	idoc::ITextDocument* objectPtr = GetObservedObject();
 	Q_ASSERT(objectPtr != NULL);
 
 	objectPtr->SetText(textEditPtr->toPlainText());
@@ -67,7 +67,7 @@ void CTextEditorComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*
 	QTextEdit* textEditPtr = GetQtWidget();
 	Q_ASSERT(textEditPtr != NULL);
 
-	idoc::ITextDocument* objectPtr = GetObjectPtr();
+	idoc::ITextDocument* objectPtr = GetObservedObject();
 
 	if ((objectPtr != NULL) && !textEditPtr->signalsBlocked()){
 		textEditPtr->setText(objectPtr->GetText());

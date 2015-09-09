@@ -61,7 +61,7 @@ void COptionsManagerEditorComp::on_AddButton_clicked()
 #endif
 
 
-	iprm::IOptionsManager* objectPtr = GetObjectPtr();
+	iprm::IOptionsManager* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		QString defaultOptionName= CalculateNewDefaultName();
 
@@ -78,7 +78,7 @@ void COptionsManagerEditorComp::on_AddButton_clicked()
 
 void COptionsManagerEditorComp::on_RemoveButton_clicked()
 {
-	iprm::IOptionsManager* objectPtr = GetObjectPtr();
+	iprm::IOptionsManager* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		Q_ASSERT(m_lastSelectedIndex < objectPtr->GetOptionsCount());
 
@@ -93,7 +93,7 @@ void COptionsManagerEditorComp::on_RemoveButton_clicked()
 
 void COptionsManagerEditorComp::on_UpButton_clicked()
 {
-	iprm::IOptionsManager* objectPtr = GetObjectPtr();
+	iprm::IOptionsManager* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		Q_ASSERT(m_lastSelectedIndex < objectPtr->GetOptionsCount());
 
@@ -113,7 +113,7 @@ void COptionsManagerEditorComp::on_UpButton_clicked()
 
 void COptionsManagerEditorComp::on_DownButton_clicked()
 {
-	iprm::IOptionsManager* objectPtr = GetObjectPtr();
+	iprm::IOptionsManager* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		Q_ASSERT(m_lastSelectedIndex < objectPtr->GetOptionsCount());
 
@@ -138,7 +138,7 @@ void COptionsManagerEditorComp::on_OptionsList_itemSelectionChanged()
 
 		m_lastSelectedIndex = GetSelectedIndex();
 
-		iprm::ISelectionParam* selectionPtr = GetObjectPtr();
+		iprm::ISelectionParam* selectionPtr = GetObservedObject();
 		if (selectionPtr != NULL){
 			static const istd::IChangeable::ChangeSet changeSet(iprm::ISelectionParam::CF_SELECTION_CHANGED);
 			istd::CChangeNotifier selectionNotifier(selectionPtr, &changeSet);
@@ -160,7 +160,7 @@ void COptionsManagerEditorComp::on_OptionsList_itemChanged(QListWidgetItem* item
 
 	UpdateBlocker updateBlocker(this);
 
-	iprm::IOptionsManager* objectPtr = GetObjectPtr();
+	iprm::IOptionsManager* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		int optionIndex = item->data(Qt::UserRole).toInt();
 
@@ -182,7 +182,7 @@ void COptionsManagerEditorComp::UpdateActions()
 	bool isUpAllowed = false;
 	bool isDownAllowed = false;
 
-	iprm::IOptionsManager* objectPtr = GetObjectPtr();
+	iprm::IOptionsManager* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		int operationFlags = objectPtr->GetOptionOperationFlags(m_lastSelectedIndex);
 
@@ -210,7 +210,7 @@ void COptionsManagerEditorComp::UpdateList()
 
 	OptionsList->clear();
 	
-	iprm::IOptionsManager* objectPtr = GetObjectPtr();
+	iprm::IOptionsManager* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		int optionsCount = objectPtr->GetOptionsCount();
 
@@ -274,7 +274,7 @@ int COptionsManagerEditorComp::GetSelectedIndex() const
 
 void COptionsManagerEditorComp::EnsureSelectedIndexUpdated() const
 {
-	iprm::ISelectionParam* selectionPtr = GetObjectPtr();
+	iprm::ISelectionParam* selectionPtr = GetObservedObject();
 	if (selectionPtr != NULL){
 		m_lastSelectedIndex = selectionPtr->GetSelectedOptionIndex();
 	}
@@ -309,7 +309,7 @@ void COptionsManagerEditorComp::OnGuiModelAttached()
 {
 	BaseClass::OnGuiModelAttached();
 
-	iprm::IOptionsManager* objectPtr = GetObjectPtr();
+	iprm::IOptionsManager* objectPtr = GetObservedObject();
 
 	bool addRemoveVisible = (objectPtr != NULL) && *m_allowAddRemoveAttrPtr;
 	bool upDownVisible = (objectPtr != NULL) && *m_allowUpDownAttrPtr;

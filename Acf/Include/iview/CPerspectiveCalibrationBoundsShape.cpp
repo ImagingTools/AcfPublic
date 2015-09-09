@@ -43,7 +43,7 @@ iview::ITouchable::TouchState CPerspectiveCalibrationBoundsShape::IsTouched(istd
 {
 	Q_ASSERT(IsDisplayConnected());
 
-	const CPerspectiveCalibration* calibPtr = dynamic_cast<const CPerspectiveCalibration*>(GetModelPtr());
+	const CPerspectiveCalibration* calibPtr = dynamic_cast<const CPerspectiveCalibration*>(GetObservedModel());
 	if (calibPtr != NULL){
 		const i2d::CRectangle& bounds = calibPtr->GetBounds();
 		i2d::CVector2d viewLeftTop, viewRightTop, viewLeftBottom, viewRightBottom;
@@ -84,7 +84,7 @@ void CPerspectiveCalibrationBoundsShape::Draw(QPainter& drawContext) const
 {
 	Q_ASSERT(IsDisplayConnected());
 
-	const CPerspectiveCalibration* calibPtr = dynamic_cast<const CPerspectiveCalibration*>(GetModelPtr());
+	const CPerspectiveCalibration* calibPtr = dynamic_cast<const CPerspectiveCalibration*>(GetObservedModel());
 	if (calibPtr != NULL){
 		const i2d::CRectangle& bounds = calibPtr->GetBounds();
 		i2d::CVector2d viewLeftTop, viewRightTop, viewLeftBottom, viewRightBottom;
@@ -125,7 +125,7 @@ bool CPerspectiveCalibrationBoundsShape::OnMouseButton(istd::CIndex2d position, 
 	}
 
 	if (downFlag){
-		const CPerspectiveCalibration* calibPtr = dynamic_cast<const CPerspectiveCalibration*>(GetModelPtr());
+		const CPerspectiveCalibration* calibPtr = dynamic_cast<const CPerspectiveCalibration*>(GetObservedModel());
 		if (calibPtr != NULL){
 			const i2d::CRectangle& bounds = calibPtr->GetBounds();
 			i2d::CVector2d viewLeftTop, viewRightTop, viewLeftBottom, viewRightBottom;
@@ -194,7 +194,7 @@ bool CPerspectiveCalibrationBoundsShape::OnMouseMove(istd::CIndex2d position)
 		return false;
 	}
 
-	imod::IModel* modelPtr = GetModelPtr();
+	imod::IModel* modelPtr = GetObservedModel();
 	CPerspectiveCalibration* calibPtr = dynamic_cast<CPerspectiveCalibration*>(modelPtr);
 	if (calibPtr != NULL){
 		i2d::CRectangle bounds = calibPtr->GetBounds();

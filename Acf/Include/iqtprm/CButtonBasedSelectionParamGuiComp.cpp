@@ -43,7 +43,7 @@ void CButtonBasedSelectionParamGuiComp::OnGuiModelAttached()
 
 	m_buttonsGroup.setExclusive(true);
 
-	const iprm::ISelectionParam* paramPtr = GetObjectPtr();
+	const iprm::ISelectionParam* paramPtr = GetObservedObject();
 	if (paramPtr != NULL){
 		const iprm::IOptionsList* constraintsPtr = paramPtr->GetSelectionConstraints();
 		if (constraintsPtr != NULL){
@@ -84,7 +84,7 @@ void CButtonBasedSelectionParamGuiComp::UpdateGui(const istd::IChangeable::Chang
 {
 	Q_ASSERT(IsGuiCreated());
 
-	const iprm::ISelectionParam* paramPtr = GetObjectPtr();
+	const iprm::ISelectionParam* paramPtr = GetObservedObject();
 	if ((paramPtr != NULL) && (!changeSet.IsEmpty())){
 		DestroyButtons();
 
@@ -170,7 +170,7 @@ void CButtonBasedSelectionParamGuiComp::UpdateGui(const istd::IChangeable::Chang
 
 void CButtonBasedSelectionParamGuiComp::OnButtonClicked(int index)
 {
-	iprm::ISelectionParam* paramPtr = GetObjectPtr();
+	iprm::ISelectionParam* paramPtr = GetObservedObject();
 	if (paramPtr != NULL){
 		UpdateBlocker updateBlocker(this);
 

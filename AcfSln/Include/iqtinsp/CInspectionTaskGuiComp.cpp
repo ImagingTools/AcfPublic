@@ -81,7 +81,7 @@ CInspectionTaskGuiComp::CInspectionTaskGuiComp()
 
 void CInspectionTaskGuiComp::UpdateModel() const
 {
-	Q_ASSERT(IsGuiCreated() && (GetObjectPtr() != NULL));
+	Q_ASSERT(IsGuiCreated() && (GetObservedObject() != NULL));
 
 	for (		EditorsList::const_iterator iter = m_editorsList.constBegin();
 				iter != m_editorsList.constEnd();
@@ -116,7 +116,7 @@ bool CInspectionTaskGuiComp::OnModelAttached(imod::IModel* modelPtr, istd::IChan
 		return false;
 	}
 
-	iinsp::IInspectionTask* inspectionTaskPtr = GetObjectPtr();
+	iinsp::IInspectionTask* inspectionTaskPtr = GetObservedObject();
 	Q_ASSERT(inspectionTaskPtr != NULL);
 
 	int subtasksCount = inspectionTaskPtr->GetSubtasksCount();
@@ -165,7 +165,7 @@ bool CInspectionTaskGuiComp::OnModelDetached(imod::IModel* modelPtr)
 {
 	m_editorsList.clear();
 
-	iinsp::IInspectionTask* inspectionTaskPtr = GetObjectPtr();
+	iinsp::IInspectionTask* inspectionTaskPtr = GetObservedObject();
 	Q_ASSERT(inspectionTaskPtr != NULL);
 
 	int subtasksCount = inspectionTaskPtr->GetSubtasksCount();
@@ -209,7 +209,7 @@ void CInspectionTaskGuiComp::UpdateProcessingState()
 {
 	int workStatus = iinsp::ISupplier::WS_INVALID;
 
-	const iinsp::ISupplier* supplierPtr = dynamic_cast<const iinsp::ISupplier*>(GetObjectPtr());
+	const iinsp::ISupplier* supplierPtr = dynamic_cast<const iinsp::ISupplier*>(GetObservedObject());
 	if (supplierPtr != NULL){
 		workStatus = supplierPtr->GetWorkStatus();
 	}
@@ -583,7 +583,7 @@ void CInspectionTaskGuiComp::OnAutoTest()
 	MessageList->clear();
 	m_resultShapesMap.clear();
 
-	iinsp::ISupplier* supplierPtr = dynamic_cast<iinsp::ISupplier*>(GetObjectPtr());
+	iinsp::ISupplier* supplierPtr = dynamic_cast<iinsp::ISupplier*>(GetObservedObject());
 	if (supplierPtr != NULL){
 		supplierPtr->InvalidateSupplier();
 		supplierPtr->EnsureWorkInitialized();
@@ -622,7 +622,7 @@ void CInspectionTaskGuiComp::on_AutoTestButton_clicked()
 
 void CInspectionTaskGuiComp::OnLoadParams()
 {
-	iinsp::IInspectionTask* objectPtr = GetObjectPtr();
+	iinsp::IInspectionTask* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		m_paramsLoaderCompPtr->LoadFromFile(*objectPtr);
 	}
@@ -631,7 +631,7 @@ void CInspectionTaskGuiComp::OnLoadParams()
 
 void CInspectionTaskGuiComp::OnSaveParams()
 {
-	iinsp::IInspectionTask* objectPtr = GetObjectPtr();
+	iinsp::IInspectionTask* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		m_paramsLoaderCompPtr->SaveToFile(*objectPtr);
 	}
@@ -640,7 +640,7 @@ void CInspectionTaskGuiComp::OnSaveParams()
 
 void CInspectionTaskGuiComp::OnCopyAll()
 {
-	iinsp::IInspectionTask* objectPtr = GetObjectPtr();
+	iinsp::IInspectionTask* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		CopyTaskParametersToClipboard(objectPtr, InspectionTaskMimeType);
 	}
@@ -651,7 +651,7 @@ void CInspectionTaskGuiComp::OnCopyAll()
 
 void CInspectionTaskGuiComp::OnPasteAll()
 {
-	iinsp::IInspectionTask* objectPtr = GetObjectPtr();
+	iinsp::IInspectionTask* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		ReadTaskParametersFromClipboard(objectPtr, InspectionTaskMimeType);
 	}
@@ -660,7 +660,7 @@ void CInspectionTaskGuiComp::OnPasteAll()
 
 void CInspectionTaskGuiComp::OnCopyCurrent()
 {
-	iinsp::IInspectionTask* objectPtr = GetObjectPtr();
+	iinsp::IInspectionTask* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		iinsp::ISupplier* supplierPtr = objectPtr->GetSubtask(m_currentGuiIndex);
 		if (supplierPtr != NULL){
@@ -677,7 +677,7 @@ void CInspectionTaskGuiComp::OnCopyCurrent()
 
 void CInspectionTaskGuiComp::OnPasteCurrent()
 {
-	iinsp::IInspectionTask* objectPtr = GetObjectPtr();
+	iinsp::IInspectionTask* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		iinsp::ISupplier* supplierPtr = objectPtr->GetSubtask(m_currentGuiIndex);
 		if (supplierPtr != NULL){
@@ -835,7 +835,7 @@ void CInspectionTaskGuiComp::UpdateTaskMessages()
 	MessageList->clear();
 	m_resultShapesMap.clear();
 
-	iinsp::IInspectionTask* taskPtr = GetObjectPtr();
+	iinsp::IInspectionTask* taskPtr = GetObservedObject();
 
 	if (taskPtr != NULL){
 		int subtasksCount = taskPtr->GetSubtasksCount();

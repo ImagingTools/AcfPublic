@@ -33,7 +33,7 @@ namespace iqt2d
 
 void CTubePolylineParamsGuiComp::UpdateModel() const
 {
-	i2d::CTubePolyline* objectPtr = dynamic_cast<i2d::CTubePolyline*>(GetObjectPtr());
+	i2d::CTubePolyline* objectPtr = dynamic_cast<i2d::CTubePolyline*>(GetObservedObject());
 	
 	istd::CChangeNotifier changePtr(objectPtr);
 
@@ -124,7 +124,7 @@ void CTubePolylineParamsGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& c
 
 	Q_ASSERT(IsGuiCreated());
 
-	i2d::CTubePolyline* objectPtr = dynamic_cast<i2d::CTubePolyline*>(GetObjectPtr());
+	i2d::CTubePolyline* objectPtr = dynamic_cast<i2d::CTubePolyline*>(GetObservedObject());
 	if (objectPtr != NULL){
 		int count = objectPtr->GetNodesCount();
 		for (int i = 0; i < count; i++){

@@ -115,7 +115,7 @@ bool CArcShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton buttonTyp
 
 	ShapeBaseClass::OnMouseButton(position, buttonType, downFlag);
 
-	const i2d::CArc* arcPtr = dynamic_cast<const i2d::CArc*>(GetModelPtr());
+	const i2d::CArc* arcPtr = dynamic_cast<const i2d::CArc*>(GetObservedModel());
 	if (arcPtr != NULL){
 		if (downFlag && m_isEditableRadius){
 			const IColorSchema& colorSchema = GetColorSchema();
@@ -172,7 +172,7 @@ bool CArcShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton buttonTyp
 bool CArcShape::OnMouseMove(istd::CIndex2d position)
 {
 	if (m_editMode == EM_RADIUS){
-		imod::IModel* modelPtr = GetModelPtr();
+		imod::IModel* modelPtr = GetObservedModel();
 		i2d::CArc& arc = *dynamic_cast<i2d::CArc*>(modelPtr);
 		Q_ASSERT(&arc != NULL);
 
@@ -190,7 +190,7 @@ bool CArcShape::OnMouseMove(istd::CIndex2d position)
 		return true;
 	}
 	else if (m_editMode == EM_STARTANGLE){
-		imod::IModel* modelPtr = GetModelPtr();
+		imod::IModel* modelPtr = GetObservedModel();
 		i2d::CArc& arc = *dynamic_cast<i2d::CArc*>(modelPtr);
 		Q_ASSERT(&arc != NULL);
 
@@ -210,7 +210,7 @@ bool CArcShape::OnMouseMove(istd::CIndex2d position)
 		return true;
 	}
 	else if (m_editMode == EM_ANGLEWIDTH){
-		imod::IModel* modelPtr = GetModelPtr();
+		imod::IModel* modelPtr = GetObservedModel();
 		i2d::CArc& arc = *dynamic_cast<i2d::CArc*>(modelPtr);
 		Q_ASSERT(&arc != NULL);
 
@@ -248,7 +248,7 @@ void CArcShape::Draw(QPainter& drawContext) const
 		BaseClass::Draw(drawContext);
 	}
 
-	const imod::IModel* modelPtr = GetModelPtr();
+	const imod::IModel* modelPtr = GetObservedModel();
 	const i2d::CArc& arc = *dynamic_cast<const i2d::CArc*>(modelPtr);
 	Q_ASSERT(&arc != NULL);
 
@@ -310,7 +310,7 @@ bool CArcShape::OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::Chang
 
 ITouchable::TouchState CArcShape::IsTouched(istd::CIndex2d position) const
 {
-	const i2d::CArc* arcPtr = dynamic_cast<const i2d::CArc*>(GetModelPtr());
+	const i2d::CArc* arcPtr = dynamic_cast<const i2d::CArc*>(GetObservedModel());
 	if (IsDisplayConnected() && (arcPtr != NULL)){
 		const IColorSchema& colorSchema = GetColorSchema();
 
@@ -371,7 +371,7 @@ i2d::CRect CArcShape::CalcBoundingBox() const
 {
 	Q_ASSERT(IsDisplayConnected());
 
-	const i2d::CArc* arcPtr = dynamic_cast<const i2d::CArc*>(GetModelPtr());
+	const i2d::CArc* arcPtr = dynamic_cast<const i2d::CArc*>(GetObservedModel());
 	if (arcPtr != NULL){
 		const IColorSchema& colorSchema = GetColorSchema();
 

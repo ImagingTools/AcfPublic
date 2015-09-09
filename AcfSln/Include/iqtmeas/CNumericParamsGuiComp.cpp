@@ -43,7 +43,7 @@ CNumericParamsGuiComp::~CNumericParamsGuiComp()
 
 void CNumericParamsGuiComp::UpdateModel() const
 {
-	imeas::INumericValue* objectPtr = GetObjectPtr();
+	imeas::INumericValue* objectPtr = GetObservedObject();
 	if (objectPtr != NULL && IsGuiCreated()){
 		int valuesCount = int(m_valueWidgets.GetCount());
 		imath::CVarVector values(valuesCount);
@@ -77,7 +77,7 @@ void CNumericParamsGuiComp::OnGuiModelAttached()
 {
 	BaseClass::OnGuiModelAttached();
 
-	imeas::INumericValue* objectPtr = GetObjectPtr();
+	imeas::INumericValue* objectPtr = GetObservedObject();
 	Q_ASSERT(objectPtr != NULL);
 
 	imod::IModel* contraintsModelPtr = dynamic_cast<imod::IModel*>(const_cast<imeas::INumericConstraints*>(objectPtr->GetNumericConstraints()));
@@ -113,7 +113,7 @@ void CNumericParamsGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*chan
 	layoutPtr->setMargin(0);
 	panelPtr->setLayout(layoutPtr);
 
-	imeas::INumericValue* objectPtr = GetObjectPtr();
+	imeas::INumericValue* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		const imeas::INumericConstraints* constraintsPtr = objectPtr->GetNumericConstraints();
 

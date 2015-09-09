@@ -79,7 +79,7 @@ public:
 protected:
 	typedef typename BaseClass::Shapes Shapes;
 
-	using BaseClass::GetObjectPtr;
+	using BaseClass::GetObservedObject;
 
 	/**
 		Check, if parameters are correct connected to GUI and can be editable.
@@ -210,7 +210,7 @@ void TSupplierGuiCompBase<UI, WidgetType>::AddItemsToScene(iqt2d::IViewProvider*
 {
 	if (*m_viewCalibrationModeAttrPtr > VCM_NONE){
 		if ((*m_viewCalibrationModeAttrPtr >= VCM_ALWAYS) || ((flags & iqt2d::IViewExtender::SF_DIRECT) == 0)){
-			const i2d::ICalibrationProvider* calibrationProviderPtr = dynamic_cast<const i2d::ICalibrationProvider*>(GetObjectPtr());
+			const i2d::ICalibrationProvider* calibrationProviderPtr = dynamic_cast<const i2d::ICalibrationProvider*>(GetObservedObject());
 			iview::CCalibratedViewBase* viewPtr = dynamic_cast<iview::CCalibratedViewBase*>(providerPtr->GetView());
 
 			if ((calibrationProviderPtr != NULL) && (viewPtr != NULL)){
@@ -256,7 +256,7 @@ bool TSupplierGuiCompBase<UI, WidgetType>::AreParamsEditable() const
 template <class UI, class WidgetType>
 bool TSupplierGuiCompBase<UI, WidgetType>::IsLoadParamsSupported() const
 {
-	const iinsp::ISupplier* supplierPtr = BaseClass::GetObjectPtr();
+	const iinsp::ISupplier* supplierPtr = BaseClass::GetObservedObject();
 	if ((supplierPtr != NULL) && m_paramsLoaderCompPtr.IsValid()){
 		const iprm::IParamsSet* paramsPtr = supplierPtr->GetModelParametersSet();
 		if (paramsPtr != NULL){
@@ -276,7 +276,7 @@ bool TSupplierGuiCompBase<UI, WidgetType>::IsLoadParamsSupported() const
 template <class UI, class WidgetType>
 bool TSupplierGuiCompBase<UI, WidgetType>::IsSaveParamsSupported() const
 {
-	const iinsp::ISupplier* supplierPtr = BaseClass::GetObjectPtr();
+	const iinsp::ISupplier* supplierPtr = BaseClass::GetObservedObject();
 	if ((supplierPtr != NULL) && m_paramsLoaderCompPtr.IsValid()){
 		const iprm::IParamsSet* paramsPtr = supplierPtr->GetModelParametersSet();
 		if (paramsPtr != NULL){
@@ -296,7 +296,7 @@ bool TSupplierGuiCompBase<UI, WidgetType>::IsSaveParamsSupported() const
 template <class UI, class WidgetType>
 bool TSupplierGuiCompBase<UI, WidgetType>::LoadParams()
 {
-	iinsp::ISupplier* supplierPtr = BaseClass::GetObjectPtr();
+	iinsp::ISupplier* supplierPtr = BaseClass::GetObservedObject();
 	if ((supplierPtr != NULL) && m_paramsLoaderCompPtr.IsValid()){
 		iprm::IParamsSet* paramsPtr = supplierPtr->GetModelParametersSet();
 		if (paramsPtr != NULL){
@@ -319,7 +319,7 @@ bool TSupplierGuiCompBase<UI, WidgetType>::LoadParams()
 template <class UI, class WidgetType>
 bool TSupplierGuiCompBase<UI, WidgetType>::SaveParams()
 {
-	const iinsp::ISupplier* supplierPtr = BaseClass::GetObjectPtr();
+	const iinsp::ISupplier* supplierPtr = BaseClass::GetObservedObject();
 	if ((supplierPtr != NULL) && m_paramsLoaderCompPtr.IsValid()){
 		const iprm::IParamsSet* paramsPtr = supplierPtr->GetModelParametersSet();
 		if (paramsPtr != NULL){
@@ -342,7 +342,7 @@ bool TSupplierGuiCompBase<UI, WidgetType>::SaveParams()
 template <class UI, class WidgetType>
 bool TSupplierGuiCompBase<UI, WidgetType>::DoTest()
 {
-	iinsp::ISupplier* supplierPtr = BaseClass::GetObjectPtr();
+	iinsp::ISupplier* supplierPtr = BaseClass::GetObservedObject();
 	if (supplierPtr != NULL){
 		supplierPtr->InvalidateSupplier();
 		supplierPtr->EnsureWorkInitialized();
@@ -368,7 +368,7 @@ void TSupplierGuiCompBase<UI, WidgetType>::OnGuiModelAttached()
 {
 	BaseClass::OnGuiModelAttached();
 
-	iinsp::ISupplier* supplierPtr = BaseClass::GetObjectPtr();
+	iinsp::ISupplier* supplierPtr = BaseClass::GetObservedObject();
 	Q_ASSERT(supplierPtr != NULL);	// model must be attached
 
 	iprm::IParamsSet* paramsPtr = const_cast<iprm::IParamsSet*>(supplierPtr->GetModelParametersSet());
@@ -406,7 +406,7 @@ void TSupplierGuiCompBase<UI, WidgetType>::OnGuiModelAttached()
 template <class UI, class WidgetType>
 void TSupplierGuiCompBase<UI, WidgetType>::OnGuiModelDetached()
 {
-	iinsp::ISupplier* supplierPtr = BaseClass::GetObjectPtr();
+	iinsp::ISupplier* supplierPtr = BaseClass::GetObservedObject();
 	Q_ASSERT(supplierPtr != NULL);	// model must be attached
 
 	iprm::IParamsSet* paramsPtr = const_cast<iprm::IParamsSet*>(supplierPtr->GetModelParametersSet());
@@ -454,7 +454,7 @@ void TSupplierGuiCompBase<UI, WidgetType>::AfterUpdate(imod::IModel* modelPtr, c
 
 	QString description;
 
-	const iinsp::ISupplier* supplierPtr = BaseClass::GetObjectPtr();
+	const iinsp::ISupplier* supplierPtr = BaseClass::GetObservedObject();
 	if (supplierPtr != NULL){
 		const istd::IInformationProvider* infoProviderPtr = dynamic_cast<const istd::IInformationProvider*>(supplierPtr);
 		int category = infoProviderPtr == NULL ? 

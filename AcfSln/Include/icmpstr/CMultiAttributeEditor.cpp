@@ -229,7 +229,7 @@ QWidget* CMultiAttributeEditor::ValueItemDelegate::createEditor(QWidget* parent,
 
 void CMultiAttributeEditor::ValueItemDelegate::setEditorData(QWidget* editor, const QModelIndex& index) const
 {
-	const IElementSelectionInfo* selectionInfoPtr = m_parent.m_elementSelectionInfoManager.GetObjectPtr();
+	const IElementSelectionInfo* selectionInfoPtr = m_parent.m_elementSelectionInfoManager.GetObservedObject();
 	if (selectionInfoPtr == NULL){
 		return;
 	}

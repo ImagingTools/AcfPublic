@@ -40,7 +40,7 @@ void CPulseParamsGuiComp::UpdateModel() const
 {
 	Q_ASSERT(IsGuiCreated());
 
-	isig::IPulseParams* objectPtr = GetObjectPtr();
+	isig::IPulseParams* objectPtr = GetObservedObject();
 	Q_ASSERT(objectPtr != NULL);
 
 	if (DelayTimeSB->isVisible() && (DelayTimeSB->value() / 1000.0 != objectPtr->GetDelayTime())){
@@ -64,7 +64,7 @@ void CPulseParamsGuiComp::OnGuiModelAttached()
 	BaseClass::OnGuiModelAttached();
 
 	Q_ASSERT(IsGuiCreated());
-	const isig::IPulseParams* objectPtr = GetObjectPtr();
+	const isig::IPulseParams* objectPtr = GetObservedObject();
 	Q_ASSERT(objectPtr != NULL);
 
 	istd::CRange delayTimeRange(0, 0.1);
@@ -114,7 +114,7 @@ void CPulseParamsGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*change
 {
 	Q_ASSERT(IsGuiCreated());
 
-	const isig::IPulseParams* objectPtr = GetObjectPtr();
+	const isig::IPulseParams* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		DelayTimeSB->setValue(objectPtr->GetDelayTime() * 1000);
 		PulseTimeSB->setValue(objectPtr->GetPulseDuration() * 1000);
