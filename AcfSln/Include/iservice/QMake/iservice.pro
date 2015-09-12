@@ -11,6 +11,6 @@ win32-msvc*{
 else
 {
 SOURCES = ../CServiceApplicationComp.cpp
-HEADERS = ./CServiceApplicationComp.h
+HEADERS = ../CServiceApplicationComp.h
 }
 
