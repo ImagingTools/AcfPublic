@@ -10,7 +10,7 @@ win32-msvc*{
 }
 else
 {
-	SOURCES = $$_PRO_FILE_PWD_/CServiceApplicationComp.cpp
-	HEADERS = $$_PRO_FILE_PWD_/CServiceApplicationComp.h
+	SOURCES = $$_PRO_FILE_PWD_/../CServiceApplicationComp.cpp
+	HEADERS = $$_PRO_FILE_PWD_/../CServiceApplicationComp.h
 }
 
