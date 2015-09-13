@@ -2934,7 +2934,6 @@
     <filename>_c_service_application_comp_8h</filename>
     <includes id="qtservice_8h" name="qtservice.h" local="yes" imported="no">iservice/QtService.h</includes>
     <class kind="class">iservice::CServiceApplicationComp</class>
-    <class kind="class">iservice::CServiceApplicationComp::CService</class>
     <namespace>iservice</namespace>
   </compound>
   <compound kind="file">
@@ -28952,7 +28951,6 @@
     <filename>classiservice_1_1_c_service_application_comp.html</filename>
     <base>ilog::TLoggerCompWrap</base>
     <base>ibase::IApplication</base>
-    <class kind="class">iservice::CServiceApplicationComp::CService</class>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -29015,74 +29013,6 @@
       <anchorfile>classiservice_1_1_c_service_application_comp.html</anchorfile>
       <anchor>af1c868feb80d511cc26ea68ea8b0dd63</anchor>
       <arglist>(QSystemTrayIcon::ActivationReason reason)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>istd::TDelPtr&lt; CService &gt;</type>
-      <name>m_servicePtr</name>
-      <anchorfile>classiservice_1_1_c_service_application_comp.html</anchorfile>
-      <anchor>a64c05cc6714cebe1be062ef7d41449ce</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iservice::CServiceApplicationComp::CService</name>
-    <filename>classiservice_1_1_c_service_application_comp_1_1_c_service.html</filename>
-    <base>QtServiceBase</base>
-    <member kind="typedef">
-      <type>QtServiceBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiservice_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
-      <anchor>afbe301919faa0ac07d59b26830966f56</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CService</name>
-      <anchorfile>classiservice_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
-      <anchor>a85dbacfc89b4f71b9093b30c004803a2</anchor>
-      <arglist>(CServiceApplicationComp &amp;parent, ibase::IApplication &amp;application, int serviceArgc, char **serviceArgv, const QString &amp;name)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>start</name>
-      <anchorfile>classiservice_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
-      <anchor>ab1e75b661a89cf459f0b70bd8c7b9d61</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>stop</name>
-      <anchorfile>classiservice_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
-      <anchor>a3c3b5e0aca8d58efb4635aa86e66ad18</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>pause</name>
-      <anchorfile>classiservice_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
-      <anchor>a58677ad350a9b81ee8e4d879aa8c23fb</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>resume</name>
-      <anchorfile>classiservice_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
-      <anchor>ab97a1e264130576e1328c50c0bff95cb</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>createApplication</name>
-      <anchorfile>classiservice_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
-      <anchor>a4e6a64e7158db2362d9375be75a72bb4</anchor>
-      <arglist>(int &amp;argc, char **argv)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual int</type>
-      <name>executeApplication</name>
-      <anchorfile>classiservice_1_1_c_service_application_comp_1_1_c_service.html</anchorfile>
-      <anchor>aedc2a9c4e4ce3d6088bdef003cec807c</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="namespace">
