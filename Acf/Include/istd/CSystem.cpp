@@ -116,12 +116,18 @@ QString CSystem::FindVariableValue(const QString& varName, bool envVars, bool em
 		else if (varName == "ConfigurationName"){
 			return FindVariableValue("CompileMode", false, true) + FindVariableValue("CompilerName", false, true);
 		}
-		else if (varName == "ConfigurationDir"){
-			return FindVariableValue("ConfigurationName", false, true) + "/";
-		}
+        else if (varName == "ConfigurationDir"){
+            return FindVariableValue("ConfigurationName", false, true) + "/";
+        }
 		else if (varName == "CompilerName"){
 #ifdef __clang__
-			return "Clang";
+            QString retVal = "Clang";
+            if (sizeof(void*) > 4){
+                return retVal + "_64";
+            }
+            else{
+                return retVal;
+            }
 #elif defined(__MINGW32__)
 			return "MinGW";
 #elif defined(__MINGW64__)

@@ -335,7 +335,10 @@ bool CRegistriesManagerComp::LoadConfigFile(const QString& configFile)
 
 bool CRegistriesManagerComp::CheckAndMarkPath(PathList& pathList, const QDir& directory, const QString& path, QString& resultPath) const
 {
-	QString enrolledPath = istd::CSystem::GetEnrolledPath(path);
+    SendVerboseMessage(QString("Original path: %1").arg(path));
+    SendVerboseMessage(QString("Enrolled path: %1").arg(istd::CSystem::GetEnrolledPath(path)));
+
+    QString enrolledPath = istd::CSystem::GetEnrolledPath(path);
 	QString fullPath = QFileInfo(directory.absoluteFilePath(enrolledPath)).canonicalFilePath();
 
 	if (pathList.find(fullPath) == pathList.end()){
