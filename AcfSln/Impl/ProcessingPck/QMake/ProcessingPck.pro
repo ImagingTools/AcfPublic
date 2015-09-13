@@ -1,6 +1,6 @@
-include(../../../../Acf/Config/QMake/ComponentConfig.pri)
-
 TARGET = ProcessingPck
+
+include(../../../../Acf/Config/QMake/ComponentConfig.pri)
 
 LIBS += -L../../../Lib/$$COMPILER_DIR -liproc
 
