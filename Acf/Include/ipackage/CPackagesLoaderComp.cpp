@@ -476,9 +476,6 @@ CPackagesLoaderComp::LogingRegistry::ElementInfo* CPackagesLoaderComp::LogingReg
 
 bool CPackagesLoaderComp::CheckAndMarkPath(const QDir& directory, const QString& path, QString& resultPath) const
 {
-    SendVerboseMessage(QString("Original path: %1").arg(path));
-    SendVerboseMessage(QString("Enrolled path: %1").arg(istd::CSystem::GetEnrolledPath(path)));
-
 	QString fullPath = QFileInfo(directory.filePath(istd::CSystem::GetEnrolledPath(path))).canonicalFilePath();
 	if (!fullPath.isEmpty() && (m_usedFilesList.find(fullPath) == m_usedFilesList.end())){
 		m_usedFilesList.insert(fullPath);
