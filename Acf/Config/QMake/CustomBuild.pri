@@ -46,7 +46,7 @@ CONFIG(debug, debug|release){
 	arxCompiler.commands = $$ARXCBIN ${QMAKE_FILE_IN} -o $${ARXC_OUTDIR}/C${QMAKE_FILE_BASE}.cpp -config $${ARXC_CONFIG} -v
 }
 CONFIG(release, debug|release){
-	arxCompiler.commands = $$ARXCBIN ${QMAKE_FILE_IN} -o $${ARXC_OUTDIR}/C${QMAKE_FILE_BASE}.cpp -config $${ARXC_CONFIG}
+	arxCompiler.commands = $$ARXCBIN ${QMAKE_FILE_IN} -o $${ARXC_OUTDIR}/C${QMAKE_FILE_BASE}.cpp -config $${ARXC_CONFIG} -v
 }
 arxCompiler.input = ARXC_FILES
 arxCompiler.variable_out = SOURCES
