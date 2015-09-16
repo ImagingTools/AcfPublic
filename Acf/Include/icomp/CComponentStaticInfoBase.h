@@ -24,7 +24,7 @@
 #define icomp_CComponentStaticInfoBase_included
 
 
-// STL incldues
+// STL includes
 #include <QtCore/QByteArray>
 #include <QtCore/QMap>
 
