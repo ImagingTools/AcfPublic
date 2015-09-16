@@ -41,8 +41,8 @@ namespace iqtcam
 
 
 CSnapImageGuiComp::CSnapImageGuiComp()
-:	m_intervalSnapAction(QIcon(":/Icons/AutoUpdate"), "", NULL),
-	m_paramsObserver(this),
+:	m_paramsObserver(this),
+	m_intervalSnapAction(QIcon(":/Icons/AutoUpdate"), "", NULL),
 	m_snapOnChangesAction(QIcon(":/Icons/Reload"), "", NULL),
 	m_snapButtonMenu(NULL)
 {
