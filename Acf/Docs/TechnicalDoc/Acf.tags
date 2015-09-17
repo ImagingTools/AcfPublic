@@ -1090,8 +1090,8 @@
       <type>uint</type>
       <name>qHash</name>
       <anchorfile>namespaceicmm.html</anchorfile>
-      <anchor>a7607c8f1cf1b4dd798e17ca442eb2d1d</anchor>
-      <arglist>(const icmm::CFastColor &amp;color)</arglist>
+      <anchor>a71fb9f897e03e2439ee13b0873df2ab9</anchor>
+      <arglist>(const icmm::CFastColor &amp;color, uint seed=0)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -18462,8 +18462,8 @@
       <type>uint</type>
       <name>qHash</name>
       <anchorfile>namespaceicmm.html</anchorfile>
-      <anchor>a7607c8f1cf1b4dd798e17ca442eb2d1d</anchor>
-      <arglist>(const icmm::CFastColor &amp;color)</arglist>
+      <anchor>a71fb9f897e03e2439ee13b0873df2ab9</anchor>
+      <arglist>(const icmm::CFastColor &amp;color, uint seed=0)</arglist>
     </member>
   </compound>
   <compound kind="class">
