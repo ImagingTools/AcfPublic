@@ -3,6 +3,7 @@
 set COMPILER_EXT=VC12
 set QMAKESPEC=%QTDIR%\mkspecs\win32-msvc2013
 set path=%path%;%QTDIR%\bin
+set ACFDIR_BUILD=..\..\..\..\Acf
 
 cd %~dp0\..\..
 
