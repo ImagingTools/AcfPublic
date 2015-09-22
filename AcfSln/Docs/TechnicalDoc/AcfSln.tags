@@ -4003,13 +4003,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiauth_1_1_c_rights_based_enabler_comp.html</anchorfile>
-      <anchor>a3046867fc3b884263fb539c6932c5be6</anchor>
-      <arglist>(m_rightsProviderModelCompPtr, m_rightsProviderCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CRightsBasedEnablerComp</name>
       <anchorfile>classiauth_1_1_c_rights_based_enabler_comp.html</anchorfile>
       <anchor>ab0e12e37b6d582ed76efcd6099f7a850</anchor>
@@ -5996,55 +5989,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>af050d92dab439d66d7b6e90a4c2361df</anchor>
-      <arglist>(TaskLog)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a709c5399d433c85fa3590db56e213fd0</anchor>
-      <arglist>(TaskLog, ilog::IMessageConsumer, ExtractTaskLog)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a8b1a31480fff27b440870152be0d4729</anchor>
-      <arglist>(TaskLog, istd::IPolymorphic, ExtractTaskLog)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>ac7cf356c6579260ffbff7f38db5eb04c</anchor>
-      <arglist>(TempMessages)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a6438c6aab34161254ff6f4e6b01a0182</anchor>
-      <arglist>(TempMessages, ilog::IMessageConsumer, ExtractTempMessages)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>ae7acf94cfc0cd5a390e8a47141ced0f6</anchor>
-      <arglist>(TempMessages, istd::IPolymorphic, ExtractTempMessages)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>adac55032e7172e8d21f43aa6e00d2ea3</anchor>
-      <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CSupplierCompBase</name>
       <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
       <anchor>a5993fa8a5016e337d77ddc4a5f864229</anchor>
@@ -6232,13 +6176,6 @@
       <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classicam_1_1_c_multi_layer_bitmap_supplier_comp.html</anchorfile>
-      <anchor>ab590b58015a5f9fef436065bcadda7c2</anchor>
-      <arglist>(ScaleConstraints)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetBitmapsCount</name>
@@ -6343,41 +6280,6 @@
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a2d3a48b5d9e3aa22d76b4a430d947fe0</anchor>
-      <arglist>(m_multiBitmapCalibCompPtr, m_multiBitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
-      <anchor>ae8f6d185e45b99a0836a7082a020edcb</anchor>
-      <arglist>(m_multiBitmapMultiCalibCompPtr, m_multiBitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
-      <anchor>aafadd59b4fecb5b906276373157bc250</anchor>
-      <arglist>(m_multiBitmapSupplierCompPtr, m_multiBitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
-      <anchor>acb0ecf0fda33d6c91a9efb71c1135732</anchor>
-      <arglist>(m_multiBitmapProviderModelCompPtr, m_multiBitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
-      <anchor>aa78afc7870822ec7a0ab5320628090fe</anchor>
-      <arglist>(m_bitmapSelectionModelCompPtr, m_bitmapSelectionCompPtr, true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iimg::IBitmap *</type>
@@ -6618,13 +6520,6 @@
       <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp_base.html</anchorfile>
       <anchor>a516bd50c77fcf844cbeda46ecc524600</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp_base.html</anchorfile>
-      <anchor>aa82590882a059a1992e8e29a23001e77</anchor>
-      <arglist>(ScaleConstraints)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iimg::IBitmap *</type>
@@ -7243,13 +7138,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a56458cd23853445cef23142b218d9897</anchor>
-      <arglist>(m_registryPropObserverCompPtr, m_registryPropGuiCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CAttributeEditorComp</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>a7080437833d523b1baad9011458c7a35</anchor>
@@ -7488,13 +7376,6 @@
       <anchorfile>classicmpstr_1_1_c_component_help_file_provider_comp.html</anchorfile>
       <anchor>a32520efeac203eca187c178698476a60</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_component_help_file_provider_comp.html</anchorfile>
-      <anchor>af92279a2acf04297f97fed6cf4db2e1a</anchor>
-      <arglist>(m_externalMetaInfoManagerCompPtr, m_metaInfoManagerCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
@@ -8080,48 +7961,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a8b171dbd7c4fbf323c9189489507b603</anchor>
-      <arglist>(LocalMetaInfoManager)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a3a49177911d7448069f14ab1699654fe</anchor>
-      <arglist>(LocalMetaInfoManager, icomp::IMetaInfoManager, ExtractLocalMetaInfoManager)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a2c3c201d2c7012f7cde0743b1e05276f</anchor>
-      <arglist>(LocalMetaInfoManager, imod::IModel, ExtractLocalMetaInfoManager)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a8b18eee98011bf27ed88c77cda927b5d</anchor>
-      <arglist>(LocalMetaInfoManager, istd::IChangeable, ExtractLocalMetaInfoManager)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a102a5ade5707c63f28d324153771ab83</anchor>
-      <arglist>(LocalMetaInfoManager, istd::IPolymorphic, ExtractLocalMetaInfoManager)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a4b366692a2ed8f973b30ecc682a8dd14</anchor>
-      <arglist>(m_configFilePathModelCompPtr, m_configFilePathCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CPackageOverviewComp</name>
       <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
       <anchor>a6e7340b3f8c46f19c0d5fd2e2fa391ca</anchor>
@@ -8402,13 +8241,6 @@
       <anchor>abd6d4923c6fae328a8ebd9501bd6d467</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_quick_help_gui_comp.html</anchorfile>
-      <anchor>a1b51ecdc891608520d53a6b41416203a</anchor>
-      <arglist>(m_externalMetaInfoManagerCompPtr, m_metaInfoManagerCompPtr, false)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetHelpQuality</name>
@@ -8561,13 +8393,6 @@
       <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
       <anchor>a17277f70a9bf291a4806d392aa37d8b2af050992c4fda62f91eb3d6eada5fc7e8</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>aa2dc071addc8f3a2df5e780034a4880f</anchor>
-      <arglist>(m_externalMetaInfoManagerCompPtr, m_envManagerCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual icomp::IRegistry::Ids</type>
@@ -9138,13 +8963,6 @@
       <anchor>ad939ae74d4897aa3b0399ac4e3368ec6</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_registry_prop_editor_comp.html</anchorfile>
-      <anchor>a6c84ce3dcc221ea075e122ef7c25b2b0</anchor>
-      <arglist>(m_envManagerModelCompPtr, m_envManagerCompPtr, false)</arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnUpdateExportsTree</name>
@@ -9309,41 +9127,6 @@
       <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
       <anchor>a538501ceab1c16a3c3d3d30d8e34e530</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>aa411c26929e956e859e22c0b969e8609</anchor>
-      <arglist>(SelectionInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a3be850de34f944af6d007944c8b1d84c</anchor>
-      <arglist>(SelectionInfo, IElementSelectionInfo, ExtractSelectionInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>aa356fe794040936c194f88bee98e291b</anchor>
-      <arglist>(SelectionInfo, imod::IModel, ExtractSelectionInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a680647bcd3ed46dfb4845ad01d1b4a38</anchor>
-      <arglist>(SelectionInfo, istd::IChangeable, ExtractSelectionInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
-      <anchor>a760efde492bdaa904643a49069355ebe</anchor>
-      <arglist>(m_envManagerModelCompPtr, m_envManagerCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -10070,34 +9853,6 @@
       <anchor>a8bde19038c405bf85939599c80693224</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp_base.html</anchorfile>
-      <anchor>a1c6daea90e7196a42d8565595fe956a0</anchor>
-      <arglist>(m_sceneProviderGuiCompPtr, m_sceneProviderCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp_base.html</anchorfile>
-      <anchor>a8d1773717fad2d53f7ec8d1dcfded0e0</anchor>
-      <arglist>(m_metaInfoManagerModelCompPtr, m_metaInfoManagerCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp_base.html</anchorfile>
-      <anchor>a8dc4c061ccdcc8f5a352d8d6c3b8b583</anchor>
-      <arglist>(m_registryObserverCompPtr, m_registryTopologyGuiCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp_base.html</anchorfile>
-      <anchor>aa41987260af9b071724e075a429f5aaa</anchor>
-      <arglist>(m_registryValidationStatusModelCompPtr, m_registryValidationStatusCompPtr, false)</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>icmpstr::CVisualRegistryEditorComp</name>
@@ -10110,34 +9865,6 @@
       <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
       <anchor>afec9f78cd282f30af42c3c0af3d5143f</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a2be0ca698a596382a666aeca507de9a9</anchor>
-      <arglist>(SelectionInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a8ddf4c8f53b700d096a67c75de0adcf5</anchor>
-      <arglist>(SelectionInfo, IElementSelectionInfo, ExtractSelectionInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>abb429094bada7d2e9e7823b6760203b9</anchor>
-      <arglist>(SelectionInfo, imod::IModel, ExtractSelectionInfo)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classicmpstr_1_1_c_visual_registry_editor_comp.html</anchorfile>
-      <anchor>a86948f76cad0f1f62cacc96c31aa3eed</anchor>
-      <arglist>(SelectionInfo, istd::IChangeable, ExtractSelectionInfo)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -11271,34 +10998,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
-      <anchor>a0dd609024b1d33a96a0bb2fdd2ad533d</anchor>
-      <arglist>(m_calibrationSupplierCompPtr, m_calibrationProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
-      <anchor>a85111cd77e709a09d7e6a1f403b7e7b1</anchor>
-      <arglist>(m_calibrationProviderModelCompPtr, m_calibrationProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
-      <anchor>acf79f9e50e677f5a15853eb6786315fc</anchor>
-      <arglist>(m_edgeLinesSupplierCompPtr, m_edgeLinesProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
-      <anchor>ae74712dbd91bedf96db59de23812661a</anchor>
-      <arglist>(m_edgeLinesProviderModelCompPtr, m_edgeLinesProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CEdgeBasedFeaturesSupplierComp</name>
       <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
       <anchor>aa6292a1b57396927e74e112c89c53173</anchor>
@@ -12046,34 +11745,6 @@
       <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiedge_1_1_c_extracted_edge_lines_supplier_comp.html</anchorfile>
-      <anchor>a7238a2136a81f285f16d3b5e2d2edb6f</anchor>
-      <arglist>(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiedge_1_1_c_extracted_edge_lines_supplier_comp.html</anchorfile>
-      <anchor>a73bd9af1cf628aa0dee77ddc9f009887</anchor>
-      <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiedge_1_1_c_extracted_edge_lines_supplier_comp.html</anchorfile>
-      <anchor>accdc3c970a727d5fceda5f0e38785493</anchor>
-      <arglist>(m_calibrationSupplierCompPtr, m_calibrationProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiedge_1_1_c_extracted_edge_lines_supplier_comp.html</anchorfile>
-      <anchor>af8ba725716f4db770caa1b6ad665a22e</anchor>
-      <arglist>(m_calibrationProviderModelCompPtr, m_calibrationProviderCompPtr, false)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const CEdgeLineContainer *</type>
       <name>GetEdgesContainer</name>
@@ -12295,20 +11966,6 @@
       <anchorfile>classiedge_1_1_c_processed_edge_lines_supplier_comp.html</anchorfile>
       <anchor>a116140b58cde817200b828bf036f1874</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiedge_1_1_c_processed_edge_lines_supplier_comp.html</anchorfile>
-      <anchor>a21ed4bf0381502d7f69c2ceca62942c9</anchor>
-      <arglist>(m_edgeLinesSupplierCompPtr, m_edgeLinesProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiedge_1_1_c_processed_edge_lines_supplier_comp.html</anchorfile>
-      <anchor>ae4d475b752898e8dbae8d2941cdd1499</anchor>
-      <arglist>(m_edgeLinesProviderModelCompPtr, m_edgeLinesProviderCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const CEdgeLineContainer *</type>
@@ -13151,13 +12808,6 @@
       <anchorfile>classifileproc_1_1_c_processing_results_review_comp.html</anchorfile>
       <anchor>a45589b5b58154b1e276542d65aabefec</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classifileproc_1_1_c_processing_results_review_comp.html</anchorfile>
-      <anchor>a7c2849ad014565f3354c9efad8449e17</anchor>
-      <arglist>(m_outputSupplierSerializerCompPtr, m_outputSupplierCompPtr, true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -14681,13 +14331,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classihotfgui_1_1_c_directory_monitor_comp.html</anchorfile>
-      <anchor>aa6624f804d38a5770638cc9eafc29e07</anchor>
-      <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CDirectoryMonitorComp</name>
       <anchorfile>classihotfgui_1_1_c_directory_monitor_comp.html</anchorfile>
       <anchor>a2741ecbed1c7043af72a998401c25718</anchor>
@@ -14935,41 +14578,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classihotfgui_1_1_c_hotfolder_gui_comp.html</anchorfile>
-      <anchor>ac93816118e5147894e0c5b2bc936a109</anchor>
-      <arglist>(m_statisticsHotfolderObserverCompPtr, m_statisticsCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classihotfgui_1_1_c_hotfolder_gui_comp.html</anchorfile>
-      <anchor>a85c54f564d58c751ec5c13f37ff32dd0</anchor>
-      <arglist>(m_directoryItemObserverFactCompPtr, m_directoryItemGuiFactCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classihotfgui_1_1_c_hotfolder_gui_comp.html</anchorfile>
-      <anchor>a864b2510651b21a7e831509f6dc4a7b3</anchor>
-      <arglist>(m_directoryItemSelectionFactCompPtr, m_directoryItemGuiFactCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classihotfgui_1_1_c_hotfolder_gui_comp.html</anchorfile>
-      <anchor>ab4fce00ab6b3fca81e0a492ef901805e</anchor>
-      <arglist>(m_processingItemPreviewCompPtr, m_processingItemPreviewGuiCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classihotfgui_1_1_c_hotfolder_gui_comp.html</anchorfile>
-      <anchor>ad49f40cd4a3efb26cef39d7b8e7903fb</anchor>
-      <arglist>(m_inputDirectoriesParamsManagerModelCompPtr, m_inputDirectoriesParamsManagerCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CHotfolderGuiComp</name>
       <anchorfile>classihotfgui_1_1_c_hotfolder_gui_comp.html</anchorfile>
       <anchor>aef88f79a512eb31036203744032e2f53</anchor>
@@ -15029,13 +14637,6 @@
       <anchorfile>classihotfgui_1_1_c_hotfolder_processing_comp.html</anchorfile>
       <anchor>afc53586fa833ee1b693c5eb5f5859650</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classihotfgui_1_1_c_hotfolder_processing_comp.html</anchorfile>
-      <anchor>acb7706f3e61cd3be18a62d6e34e99586</anchor>
-      <arglist>(m_hotfolderProcessingModelCompPtr, m_hotfolderProcessingInfoCompPtr, true)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -15147,20 +14748,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classihotfgui_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
-      <anchor>af64dc511550fd21a6d176f83e9aa82be</anchor>
-      <arglist>(m_hotfolderProcessingModelCompPtr, m_hotfolderProcessingInfoCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classihotfgui_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
-      <anchor>ab6dc8c325046c80415fc73f074611f8a</anchor>
-      <arglist>(m_fileSystemChangeStorageModelCompPtr, m_fileSystemChangeStorageCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CHotfolderTaskManagerComp</name>
       <anchorfile>classihotfgui_1_1_c_hotfolder_task_manager_comp.html</anchorfile>
       <anchor>a4ebef81b935aa3dd0ca4b6355433a203</anchor>
@@ -15198,34 +14785,6 @@
       <anchorfile>classihotfgui_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
       <anchor>a7e578870c4cae295cdd229bd240064f8</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classihotfgui_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
-      <anchor>ad3197eb8660227a443c1bc744070b265</anchor>
-      <arglist>(m_inputPreviewGuiCompPtr, m_inputPreviewObserverCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classihotfgui_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
-      <anchor>aac009a09afd9671f89ca4f8b4d41ac00</anchor>
-      <arglist>(m_outputPreviewGuiCompPtr, m_outputPreviewObserverCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classihotfgui_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
-      <anchor>acb44ecac60d092ffde578c41c28f5728</anchor>
-      <arglist>(m_inputFileNameParamModelCompPtr, m_inputFileNameParamCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classihotfgui_1_1_c_processing_item_preview_gui_comp.html</anchorfile>
-      <anchor>adc1b68a48f6c8ca00de0b528691e2c7e</anchor>
-      <arglist>(m_outputFileNameParamModelCompPtr, m_outputFileNameParamCompPtr, true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -15289,13 +14848,6 @@
       <anchorfile>classiinsp_1_1_c_composed_information_provider_comp.html</anchorfile>
       <anchor>ab22255f27f4c85b0b82015727f0ed7d3</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiinsp_1_1_c_composed_information_provider_comp.html</anchorfile>
-      <anchor>a42da488ee2705a6ac0617665ef94daa1</anchor>
-      <arglist>(m_slaveInformationProviderModelsCompPtr, m_slaveInformationProvidersCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -15518,13 +15070,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>ad0a1c1648634d57c3044bf8a3e904f12</anchor>
-      <arglist>(Parameters)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
       <anchor>a5a00131624c687877f065da2f9ee2f82</anchor>
@@ -15550,34 +15095,6 @@
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
       <anchor>ab3e8598e3e7016db896112703ae1dec1</anchor>
       <arglist>(Parameters, imod::IModel, ExtractParameters)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>a8632b8377ba3c440a8319c6b06c574b7</anchor>
-      <arglist>(m_subtaskModelsCompPtr, m_subtasksCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>ab3662b80125650011f81e1d91e50231e</anchor>
-      <arglist>(m_subtaskInspectionCompPtr, m_subtasksCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>a805a1029cebadc8671793742043e042c</anchor>
-      <arglist>(m_subtaskInfoProviderCompPtr, m_subtasksCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>a8476d1be5baf4b4809bc396e3c2cf695</anchor>
-      <arglist>(m_generalParamsModelCompPtr, m_generalParamsCompPtr, true)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -15932,6 +15449,13 @@
       <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
       <anchor>afa621d1a2e2d77f2fcdb9c7e54fbe275</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
+      <anchor>a64425f71d60d22b20096a538161e6ae6</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -16322,34 +15846,6 @@
       <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_bitmap_joiner_supplier_comp.html</anchorfile>
-      <anchor>abdc934bb36194da96c1235f32c1d06b4</anchor>
-      <arglist>(m_bitmapsSupplierCompPtr, m_bitmapsProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_bitmap_joiner_supplier_comp.html</anchorfile>
-      <anchor>a0a90c14ad7ab253d26e62db2fe06bc58</anchor>
-      <arglist>(m_bitmapsProviderModelCompPtr, m_bitmapsProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ClearWorkResults</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>EnsureBitmapCreated</name>
@@ -16391,6 +15887,20 @@
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; QPair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
@@ -17276,20 +16786,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
-      <anchor>aecf0be28ca04f3130e6fbcfbf9051913</anchor>
-      <arglist>(m_taughtPatternProviderModelCompPtr, m_taughtPatternProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
-      <anchor>a2015db46e92b5c8b579e31c7298004fc</anchor>
-      <arglist>(m_taughtPatternSupplierCompPtr, m_taughtPatternProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CColorPatternComparatorComp</name>
       <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
       <anchor>a4adea046a6feea877c0e5dca211e690f</anchor>
@@ -17641,41 +17137,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a7ccbd1a36502e4e2ff19434b9d98d4b9</anchor>
-      <arglist>(m_bitmapModelCompPtr, m_bitmapCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a4d3cdff494dea97e02b218106afbac04</anchor>
-      <arglist>(m_calibrationModelCompPtr, m_calibrationCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a258a8466c947d0476691c508119df98b</anchor>
-      <arglist>(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>adfa56376699d79f69accba268e82ba7d</anchor>
-      <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a6fc6c2088c400c245635a6d28eff6f71</anchor>
-      <arglist>(m_calibrationProviderCompPtr, m_bitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CDelegatedBitmapSupplierComp</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
       <anchor>a9bd70bff67cb4b0411083bce50002aca</anchor>
@@ -17786,48 +17247,6 @@
       <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a15ecc43f76e845d2dfffdbb136bff515</anchor>
-      <arglist>(m_firstBitmapSupplierCompPtr, m_firstBitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a3dddd0889fc6a5fab2d881f81ea8b016</anchor>
-      <arglist>(m_firstBitmapProviderModelCompPtr, m_firstBitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a88e5782543bc494d2476775dcd705c6f</anchor>
-      <arglist>(m_secondBitmapSupplierCompPtr, m_secondBitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a1d987c43044f33658cef033d4c6ad103</anchor>
-      <arglist>(m_secondBitmapProviderModelCompPtr, m_secondBitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ClearWorkResults</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>EnsureBitmapCreated</name>
@@ -17869,6 +17288,20 @@
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; QPair&lt; i2d::ICalibration2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
@@ -17996,20 +17429,6 @@
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_edge_distances_supplier_comp.html</anchorfile>
-      <anchor>ab28e309c09b47af3a3e06b906b57f4b7</anchor>
-      <arglist>(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_edge_distances_supplier_comp.html</anchorfile>
-      <anchor>a0a4b575c5c2e489a84166fc44de31549</anchor>
-      <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -18212,20 +17631,6 @@
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_extremum_caliper_supplier_comp.html</anchorfile>
-      <anchor>a974475c6458f152427dce7bb98b8fd13</anchor>
-      <arglist>(m_sequenceSupplierCompPtr, m_sequenceProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_extremum_caliper_supplier_comp.html</anchorfile>
-      <anchor>a3ae765b098a7fd895a1980303c97d02a</anchor>
-      <arglist>(m_sequenceProviderModelCompPtr, m_sequenceProviderCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -18730,20 +18135,6 @@
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_image_histogram_supplier_comp.html</anchorfile>
-      <anchor>a2c2c185820cd74fe8194775012a97158</anchor>
-      <arglist>(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_image_histogram_supplier_comp.html</anchorfile>
-      <anchor>a73ffebc0679ed7b7096a23336459d63c</anchor>
-      <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imeas::IDataSequence *</type>
@@ -19286,34 +18677,6 @@
       <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_multi_line_projection_supplier_comp.html</anchorfile>
-      <anchor>a3e2108ab4974a8511bfbaf13a263a92e</anchor>
-      <arglist>(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_multi_line_projection_supplier_comp.html</anchorfile>
-      <anchor>a6a54e3a724f6080fe368e3ac712702c8</anchor>
-      <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_multi_line_projection_supplier_comp.html</anchorfile>
-      <anchor>a3045e4a227e181d9f83ba1401bcb1366</anchor>
-      <arglist>(m_linesSupplierCompPtr, m_linesProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_multi_line_projection_supplier_comp.html</anchorfile>
-      <anchor>a6ebb28e826f91e289570bdb77dcf0e40</anchor>
-      <arglist>(m_linesProviderModelCompPtr, m_linesProviderCompPtr, false)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSequencesCount</name>
@@ -19506,20 +18869,6 @@
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
-      <anchor>aa02fa1b4415ff027810681e055538c4d</anchor>
-      <arglist>(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
-      <anchor>af0e2eab9108af52e18ec896365e39493</anchor>
-      <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -19742,34 +19091,6 @@
       <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_base.html</anchorfile>
-      <anchor>a9c5dc0bdb23d7b93637566f77b248dce</anchor>
-      <arglist>(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_base.html</anchorfile>
-      <anchor>a7bd51906b15608cb24d721aa69ea3933</anchor>
-      <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ClearWorkResults</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>EnsureBitmapCreated</name>
@@ -19811,6 +19132,20 @@
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</type>
@@ -19864,20 +19199,6 @@
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_projection_supplier_comp.html</anchorfile>
-      <anchor>a44cf859a799f5dbf802bed06e3d728f7</anchor>
-      <arglist>(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_projection_supplier_comp.html</anchorfile>
-      <anchor>a3afd36d179d0f2b4878f9bb485b64c1c</anchor>
-      <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imeas::IDataSequence *</type>
@@ -20373,20 +19694,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
-      <anchor>a152a83fea5cc4dfb947e194e901f29ff</anchor>
-      <arglist>(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
-      <anchor>af443611390935b7aa23e1fd3692c4c4a</anchor>
-      <arglist>(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CSearchBasedFeaturesSupplierComp</name>
       <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
       <anchor>ac445ddb150dc8e7efc36a6798dc571aa</anchor>
@@ -20852,20 +20159,6 @@
       <anchorfile>classiipr_1_1_c_tube_projection_lines_provider_comp.html</anchorfile>
       <anchor>ab5324e2988b8106663ff0b9628111d75</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_tube_projection_lines_provider_comp.html</anchorfile>
-      <anchor>a029d1325516806b7b4e8b838502cc7c0</anchor>
-      <arglist>(m_calibrationSupplierCompPtr, m_calibrationProviderCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiipr_1_1_c_tube_projection_lines_provider_comp.html</anchorfile>
-      <anchor>a4712876f3e44f6480379aa9b0c19d5c9</anchor>
-      <arglist>(m_calibrationSupplierModelCompPtr, m_calibrationProviderCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const i2d::ICalibration2d *</type>
@@ -23898,13 +23191,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiproc_1_1_c_model_based_processing_trigger_comp.html</anchorfile>
-      <anchor>ad4e2f3e85eccbfeaa8aad7b2c29dad3d</anchor>
-      <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CModelBasedProcessingTriggerComp</name>
       <anchorfile>classiproc_1_1_c_model_based_processing_trigger_comp.html</anchorfile>
       <anchor>a9b77cdf39619f9f717c4c0fedf53338b</anchor>
@@ -24307,13 +23593,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
-      <anchor>a817892a7761181e19c02326cf686ec66</anchor>
-      <arglist>(m_documentManagerModelCompPtr, m_documentManagerCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CDocumentProcessingManagerCompBase</name>
       <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
       <anchor>a94236a24c35c7ced2fecf65eeba3f3b0</anchor>
@@ -24474,13 +23753,6 @@
       <anchorfile>classiprocgui_1_1_c_processor_control_gui_comp.html</anchorfile>
       <anchor>ae8482bc875c7c1989ed8cd3ba8e2edb1</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiprocgui_1_1_c_processor_control_gui_comp.html</anchorfile>
-      <anchor>a43407ec469164aeddee9c37a80a387a0</anchor>
-      <arglist>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -24670,20 +23942,6 @@
       <anchorfile>classiqtauth_1_1_c_user_gui_comp.html</anchorfile>
       <anchor>a3832299a62fd380f25a0ab65909650c2</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtauth_1_1_c_user_gui_comp.html</anchorfile>
-      <anchor>aec1e605ea2236f595c3c7c72d8d0c2fa</anchor>
-      <arglist>(m_rightsModelIfPtr, m_rightsProviderIfPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtauth_1_1_c_user_gui_comp.html</anchorfile>
-      <anchor>a74807b1fcd8d6b8bf6b9019201da976c</anchor>
-      <arglist>(m_userLoginIfPtr, m_rightsProviderIfPtr, true)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -25277,34 +24535,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>a403ad461a4eb12abdef546be5fd9737a</anchor>
-      <arglist>(m_bitmapModelCompPtr, m_bitmapCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>ad3ec78030023af7f6e39dad69b4cb734</anchor>
-      <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>a6333db3415850d4e26916ff5cc7063bd</anchor>
-      <arglist>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>ac92a7492c29c88c35ae70b3fc8afa39e</anchor>
-      <arglist>(m_paramsSetExtenderCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CSnapImageGuiComp</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
       <anchor>ab2b13cedf8526c1495f6975d436555ad</anchor>
@@ -25475,13 +24705,6 @@
       <anchorfile>classiqtex_1_1_c_tcp_terminal_gui_comp.html</anchorfile>
       <anchor>a3af93ca5cd40147e040914152af1738d</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtex_1_1_c_tcp_terminal_gui_comp.html</anchorfile>
-      <anchor>a7ae467ba7dd8476222308b827aa99e17</anchor>
-      <arglist>(m_urlParamModelCompPtr, m_urlParamCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -26099,20 +25322,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a5e276cdf38b14ab332ff4ca2f85da2c9</anchor>
-      <arglist>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a732f6395c68bbc94e97905d1daa91108</anchor>
-      <arglist>(m_paramsSetExtenderCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>TSupplierGuiCompBase</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
       <anchor>a93a1e2eb77a8f09cc034a697315e4613</anchor>
@@ -26290,62 +25499,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a75dfab7fe6c99369935e5afdae6c4541</anchor>
-      <arglist>(m_editorGuisCompPtr, m_editorsCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>aa404bea85349a4662982f55f6f98a983</anchor>
-      <arglist>(m_editorObserversCompPtr, m_editorsCompPtr, true)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>aa20bc3de5f262da4072a34efe3afd922</anchor>
-      <arglist>(m_editorViewExtendersCompPtr, m_editorsCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a19ab3d56db2d3aa0bab6a8a008639420</anchor>
-      <arglist>(m_editorVisualModelsCompPtr, m_editorVisualInfosCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>ac85e9cb36d628b5c9ba6edee679590b6</anchor>
-      <arglist>(m_previewObserversCompPtr, m_previewGuisCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a382d1b7091a1a22f56f1872e646e2b4b</anchor>
-      <arglist>(m_previewSceneProvidersCompPtr, m_previewGuisCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a7d19ed1ee264436b7194f0b58b83f0cf</anchor>
-      <arglist>(m_generalParamsObserverCompPtr, m_generalParamsGuiCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a5c5f5b4c45efb71fe754894f5faa94b7</anchor>
-      <arglist>(m_generalParamsEditorCompPtr, m_generalParamsGuiCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CInspectionTaskGuiComp</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
       <anchor>a78984eb4157ca41fefa1a24af00cf62e</anchor>
@@ -26519,20 +25672,6 @@
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
       <anchor>a5116ba15e03516fcd9181dec19ce0f0f</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a5e276cdf38b14ab332ff4ca2f85da2c9</anchor>
-      <arglist>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a732f6395c68bbc94e97905d1daa91108</anchor>
-      <arglist>(m_paramsSetExtenderCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -27027,13 +26166,6 @@
       <anchor>af6bb1838956213de290f68ece82680ab</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtipr_1_1_c_line_projection_supplier_gui_comp.html</anchorfile>
-      <anchor>abe8caf5790d925e9e82f39c98471e726</anchor>
-      <arglist>(m_projectionObserverGuiCompPtr, m_projectionObserverCompPtr, true)</arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_TestButton_clicked</name>
@@ -27108,13 +26240,6 @@
       <anchorfile>classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html</anchorfile>
       <anchor>a22ae29d593f583e08b22c315798e6cfa</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtipr_1_1_c_multi_line_projection_supplier_gui_comp.html</anchorfile>
-      <anchor>a489b58f1adf61f27643e299b9576294a</anchor>
-      <arglist>(m_projectionObserverGuiCompPtr, m_projectionObserverCompPtr, false)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -27206,20 +26331,6 @@
       <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
       <anchor>a41fbfc9dd9d3a98a44e9d34181eb17f0</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
-      <anchor>aad40596b785adf566f8cb7d724f43a8f</anchor>
-      <arglist>(LineSelection)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE</name>
-      <anchorfile>classiqtipr_1_1_c_multi_line_supplier_gui_comp.html</anchorfile>
-      <anchor>ac657fbaf2bedf56644edf4dd54b9bde7</anchor>
-      <arglist>(LineSelection, iprm::ISelectionParam, ExtractLineSelection)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -27404,13 +26515,6 @@
       <anchorfile>classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html</anchorfile>
       <anchor>aca3da95d0a414fba309aa54d7cfba5a6</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html</anchorfile>
-      <anchor>ac59e5da5835d8d93a616355fc0b82c56</anchor>
-      <arglist>(m_patternEditorObserverCompPtr, m_patternEditorCompPtr, false)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -27854,13 +26958,6 @@
       <anchorfile>classiqtmeas_1_1_c_data_sequence_supplier_results_view_comp.html</anchorfile>
       <anchor>a3fc4db6f3ad7950122bdba0a543f29ad</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtmeas_1_1_c_data_sequence_supplier_results_view_comp.html</anchorfile>
-      <anchor>a84a443ddce15fb9ffed0affb679a5911</anchor>
-      <arglist>(m_resultsObserverCompPtr, m_resultsGuiCompPtr, true)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -28507,13 +27604,6 @@
       <anchor>ab5217c2fcee2175a5732942aaccf0d0c</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtmm_1_1_c_video_player_gui_comp.html</anchorfile>
-      <anchor>a7c830a57d6d4d338438108154e082ead</anchor>
-      <arglist>(m_urlParamModelCompPtr, m_urlParamCompPtr, true)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
@@ -28624,20 +27714,6 @@
       <anchorfile>classiqtsig_1_1_c_sample_acquisition_gui_comp.html</anchorfile>
       <anchor>aca5ba7f42895aa248c99d9e6fe90e7c3</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtsig_1_1_c_sample_acquisition_gui_comp.html</anchorfile>
-      <anchor>ac1d265b41bf65806df4d92dfc13f231e</anchor>
-      <arglist>(m_paramsSetModelCompPtr, m_paramsSetCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqtsig_1_1_c_sample_acquisition_gui_comp.html</anchorfile>
-      <anchor>a1b21daacdcedc23868b320fae3e6a13d</anchor>
-      <arglist>(m_paramsSetObserverCompPtr, m_paramsSetGuiCompPtr, false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -30217,13 +29293,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
-      <anchor>ae01b05d894373f89e0e7fdb53e0717ff</anchor>
-      <arglist>(m_slaveControllerModelsCompPtr, m_slaveControllersCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>CComposedStateControllerComp</name>
       <anchorfile>classiwiz_1_1_c_composed_state_controller_comp.html</anchorfile>
       <anchor>ad07975defb35047a748bb9d4001dd961</anchor>
@@ -30319,20 +29388,6 @@
       <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
       <anchor>a6f3bb0f309fdcc3677ca91570af306c4</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
-      <anchor>aad41bd5d46c17e6425ce689d961b52c4</anchor>
-      <arglist>(m_enterDependenciesModelCompPtr, m_enterDependenciesCompPtr, false)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiwiz_1_1_c_selection_consistency_controller_comp.html</anchorfile>
-      <anchor>a78ffaac788513ba5a023fb951af04dea</anchor>
-      <arglist>(m_leaveCondParamModelsCompPtr, m_leaveCondParamsCompPtr, false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>

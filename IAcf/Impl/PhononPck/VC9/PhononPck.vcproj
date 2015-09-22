@@ -22,7 +22,7 @@
 		<Configuration
 			Name="Release|Win32"
 			ConfigurationType="2"
-			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Component.vsprops;$(ACFCONFIGDIR)\VC9\Release.vsprops;$(ACFCONFIGDIR)\VC9\Win32.vsprops"
+			InheritedPropertySheets="../../../../Acf/Config\VC9\Component.vsprops;../../../../Acf/Config\VC9\Release.vsprops;../../../../Acf/Config\VC9\Win32.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -42,7 +42,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;;&quot;$(ACFSLNDIR)/Include&quot;;&quot;$(ACFSLNDIR)/AuxInclude/Qt5&quot;;&quot;$(QTDIR)/include/phonon&quot;"
+				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;;&quot;../../../../AcfSln/Include&quot;;&quot;../../../../AcfSln/AuxInclude/Qt5&quot;;&quot;$(QTDIR)/include/phonon&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
 				RuntimeLibrary="2"
 				EnableEnhancedInstructionSet="2"
@@ -64,7 +64,7 @@
 				AdditionalDependencies="AcfStd.lib AcfQt.lib Qt5MultimediaWidgets.lib Qt5Multimedia.lib"
 				OutputFile="$(OutDir)\$(ProjectName).arp"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="&quot;../../../Lib/$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(ACFDIR)\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(ACFSLNDIR)\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
+				AdditionalLibraryDirectories="&quot;../../../Lib/$(ConfigurationName)$(CompilerCode)&quot;;&quot;../../../../Acf\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;../../../../AcfSln\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
 				GenerateDebugInformation="false"
 				SubSystem="1"
 			/>
@@ -93,7 +93,7 @@
 		<Configuration
 			Name="Debug|Win32"
 			ConfigurationType="2"
-			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Component.vsprops;$(ACFCONFIGDIR)\VC9\Debug.vsprops;$(ACFCONFIGDIR)\VC9\Win32.vsprops"
+			InheritedPropertySheets="../../../../Acf/Config\VC9\Component.vsprops;../../../../Acf/Config\VC9\Debug.vsprops;../../../../Acf/Config\VC9\Win32.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -113,7 +113,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;;&quot;$(ACFSLNDIR)/Include&quot;;&quot;$(ACFSLNDIR)/AuxInclude/Qt5&quot;;&quot;$(QTDIR)/include/phonon&quot;"
+				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;;&quot;../../../../AcfSln/Include&quot;;&quot;../../../../AcfSln/AuxInclude/Qt5&quot;;&quot;$(QTDIR)/include/phonon&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
 				RuntimeLibrary="3"
 				PrecompiledHeaderFile=""
@@ -134,7 +134,7 @@
 				AdditionalDependencies="Qt5Multimediad.lib Qt5MultimediaWidgetsd.lib AcfStd.lib AcfQt.lib"
 				OutputFile="$(OutDir)\$(ProjectName).arp"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="&quot;../../../Lib/$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(ACFDIR)\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(ACFSLNDIR)\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
+				AdditionalLibraryDirectories="&quot;../../../Lib/$(ConfigurationName)$(CompilerCode)&quot;;&quot;../../../../Acf\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;../../../../AcfSln\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
 				GenerateDebugInformation="true"
 				SubSystem="1"
 			/>
@@ -163,7 +163,7 @@
 		<Configuration
 			Name="Release|x64"
 			ConfigurationType="2"
-			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Component.vsprops;$(ACFCONFIGDIR)\VC9\Release.vsprops;$(ACFCONFIGDIR)\VC9\Win64.vsprops"
+			InheritedPropertySheets="../../../../Acf/Config\VC9\Component.vsprops;../../../../Acf/Config\VC9\Release.vsprops;../../../../Acf/Config\VC9\Win64.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -184,7 +184,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;;&quot;$(ACFSLNDIR)/Include&quot;;&quot;$(ACFSLNDIR)/AuxInclude/Qt5&quot;;&quot;$(QTDIR)/include/phonon&quot;"
+				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;;&quot;../../../../AcfSln/Include&quot;;&quot;../../../../AcfSln/AuxInclude/Qt5&quot;;&quot;$(QTDIR)/include/phonon&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
 				RuntimeLibrary="2"
 				EnableEnhancedInstructionSet="2"
@@ -206,7 +206,7 @@
 				AdditionalDependencies="AcfStd.lib AcfQt.lib Qt5MultimediaWidgets.lib Qt5Multimedia.lib"
 				OutputFile="$(OutDir)\$(ProjectName).arp"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="&quot;../../../Lib/$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(ACFDIR)\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(ACFSLNDIR)\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
+				AdditionalLibraryDirectories="&quot;../../../Lib/$(ConfigurationName)$(CompilerCode)&quot;;&quot;../../../../Acf\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;../../../../AcfSln\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
 				GenerateDebugInformation="false"
 				SubSystem="1"
 				TargetMachine="17"
@@ -236,7 +236,7 @@
 		<Configuration
 			Name="Debug|x64"
 			ConfigurationType="2"
-			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Component.vsprops;$(ACFCONFIGDIR)\VC9\Debug.vsprops;$(ACFCONFIGDIR)\VC9\Win64.vsprops"
+			InheritedPropertySheets="../../../../Acf/Config\VC9\Component.vsprops;../../../../Acf/Config\VC9\Debug.vsprops;../../../../Acf/Config\VC9\Win64.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -257,7 +257,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;;&quot;$(ACFSLNDIR)/Include&quot;;&quot;$(ACFSLNDIR)/AuxInclude/Qt5&quot;;&quot;$(QTDIR)/include/phonon&quot;"
+				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;;&quot;../../../../AcfSln/Include&quot;;&quot;../../../../AcfSln/AuxInclude/Qt5&quot;;&quot;$(QTDIR)/include/phonon&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
 				RuntimeLibrary="3"
 				PrecompiledHeaderFile=""
@@ -278,7 +278,7 @@
 				AdditionalDependencies="Qt5Multimediad.lib Qt5MultimediaWidgetsd.lib AcfStd.lib AcfQt.lib"
 				OutputFile="$(OutDir)\$(ProjectName).arp"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="&quot;../../../Lib/$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(ACFDIR)\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(ACFSLNDIR)\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
+				AdditionalLibraryDirectories="&quot;../../../Lib/$(ConfigurationName)$(CompilerCode)&quot;;&quot;../../../../Acf\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;../../../../AcfSln\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
 				GenerateDebugInformation="true"
 				SubSystem="1"
 				TargetMachine="17"

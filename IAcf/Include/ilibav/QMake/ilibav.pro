@@ -1,7 +1,7 @@
-include($(ACFCONFIGDIR)/QMake/StaticConfig.pri)
+include(../../../../Acf/Config/QMake/StaticConfig.pri)
 
 TARGET = ilibav
 
-INCLUDEPATH += $(ACFSLNDIR)/Include
+INCLUDEPATH += ../../../../AcfSln/Include
 INCLUDEPATH += $(FFMPEGDIR_20121010)/include $(FFMPEGDIR_20121010)/msinttypes
 

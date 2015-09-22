@@ -48278,6 +48278,13 @@
       <anchor>afaddbc749a2522154c48fa9f3bfa43ab</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>IsPositionFixed</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>a1f5b2b6075fe73081d4769c23772372b</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual Shape *</type>
       <name>CreateShapeInstance</name>

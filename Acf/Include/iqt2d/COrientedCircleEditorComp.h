@@ -37,18 +37,18 @@ namespace iqt2d
 
 
 class COrientedCircleEditorComp:
-	public iqt2d::TShapeParamsGuiCompBase<
-	Ui::COrientedCircleEditorComp,
-	iview::COrientedCircleShape,
-	i2d::COrientedCircle>
+			public iqt2d::TShapeParamsGuiCompBase<
+						Ui::COrientedCircleEditorComp,
+						iview::COrientedCircleShape,
+						i2d::COrientedCircle>
 {
 	Q_OBJECT
 
 public:
 	typedef iqt2d::TShapeParamsGuiCompBase<
-	Ui::COrientedCircleEditorComp,
-	iview::COrientedCircleShape,
-	i2d::COrientedCircle> BaseClass;
+				Ui::COrientedCircleEditorComp,
+				iview::COrientedCircleShape,
+				i2d::COrientedCircle> BaseClass;
 
 	I_BEGIN_COMPONENT(COrientedCircleEditorComp);
 	I_END_COMPONENT;
@@ -68,7 +68,6 @@ protected:
 protected Q_SLOTS:
 	void OnParamsChanged(double value);
 	void on_AxisOrientationCheckBox_stateChanged(int state);
-
 };
 
 
@@ -76,3 +75,5 @@ protected Q_SLOTS:
 
 
 #endif // !iqt2d_COrientedCircleEditorComp_included
+
+

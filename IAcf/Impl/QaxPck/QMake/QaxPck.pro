@@ -1,15 +1,15 @@
-include($(ACFCONFIGDIR)/QMake/ComponentConfig.pri)
-include($(ACFCONFIGDIR)/QMake/QtBaseConfig.pri)
-include($(ACFCONFIGDIR)/QMake/AcfStd.pri)
-include($(ACFCONFIGDIR)/QMake/AcfQt.pri)
+include(../../../../Acf/Config/QMake/ComponentConfig.pri)
+include(../../../../Acf/Config/QMake/QtBaseConfig.pri)
+include(../../../../Acf/Config/QMake/AcfStd.pri)
+include(../../../../Acf/Config/QMake/AcfQt.pri)
 
 TARGET = QaxPck
 
 QT += multimedia axcontainer
 
-INCLUDEPATH += $(ACFSLNDIR)/Include
+INCLUDEPATH += ../../../../AcfSln/Include
 
-#LIBS += -L$(ACFSLNDIR)/Lib/$$COMPILER_DIR -limm
+#LIBS += -L../../../../AcfSln/Lib/$$COMPILER_DIR -limm
 LIBS += -L../../../Lib/$$COMPILER_DIR -liqaxmm
 
 CONFIG(debug, debug|release){

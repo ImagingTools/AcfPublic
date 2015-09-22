@@ -22,7 +22,7 @@
 		<Configuration
 			Name="Release|Win32"
 			ConfigurationType="2"
-			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Component.vsprops;$(ACFCONFIGDIR)\VC9\Release.vsprops;$(ACFCONFIGDIR)\VC9\Win32.vsprops"
+			InheritedPropertySheets="../../../../Acf/Config\VC9\Component.vsprops;../../../../Acf/Config\VC9\Release.vsprops;../../../../Acf/Config\VC9\Win32.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -41,7 +41,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;;&quot;$(ACFSLNDIR)/Include&quot;;&quot;$(ACFSLNDIR)/AuxInclude/Qt5&quot;"
+				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;;&quot;../../../../AcfSln/Include&quot;;&quot;../../../../AcfSln/AuxInclude/Qt5&quot;"
 				AdditionalUsingDirectories=""
 			/>
 			<Tool
@@ -56,7 +56,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="AcfStd.lib Qt5Core.lib "
-				AdditionalLibraryDirectories="&quot;$(ACFDIR)\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(ACFSLNDIR)\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
+				AdditionalLibraryDirectories="&quot;../../../../Acf\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;../../../../AcfSln\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -83,7 +83,7 @@
 		<Configuration
 			Name="Debug|Win32"
 			ConfigurationType="2"
-			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Component.vsprops;$(ACFCONFIGDIR)\VC9\Debug.vsprops;$(ACFCONFIGDIR)\VC9\Win32.vsprops"
+			InheritedPropertySheets="../../../../Acf/Config\VC9\Component.vsprops;../../../../Acf/Config\VC9\Debug.vsprops;../../../../Acf/Config\VC9\Win32.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -102,7 +102,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;;&quot;$(ACFSLNDIR)/Include&quot;;&quot;$(ACFSLNDIR)/AuxInclude/Qt5&quot;"
+				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;;&quot;../../../../AcfSln/Include&quot;;&quot;../../../../AcfSln/AuxInclude/Qt5&quot;"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -116,7 +116,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="AcfStd.lib Qt5Cored.lib"
-				AdditionalLibraryDirectories="&quot;$(ACFDIR)\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(ACFSLNDIR)\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
+				AdditionalLibraryDirectories="&quot;../../../../Acf\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;../../../../AcfSln\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -143,7 +143,7 @@
 		<Configuration
 			Name="Release|x64"
 			ConfigurationType="2"
-			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Component.vsprops;$(ACFCONFIGDIR)\VC9\Release.vsprops;$(ACFCONFIGDIR)\VC9\Win64.vsprops"
+			InheritedPropertySheets="../../../../Acf/Config\VC9\Component.vsprops;../../../../Acf/Config\VC9\Release.vsprops;../../../../Acf/Config\VC9\Win64.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -163,7 +163,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;;&quot;$(ACFSLNDIR)/Include&quot;;&quot;$(ACFSLNDIR)/AuxInclude/Qt5&quot;"
+				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;;&quot;../../../../AcfSln/Include&quot;;&quot;../../../../AcfSln/AuxInclude/Qt5&quot;"
 				AdditionalUsingDirectories=""
 			/>
 			<Tool
@@ -178,7 +178,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="AcfStd.lib Qt5Core.lib "
-				AdditionalLibraryDirectories="&quot;$(ACFDIR)\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(ACFSLNDIR)\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
+				AdditionalLibraryDirectories="&quot;../../../../Acf\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;../../../../AcfSln\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
 				TargetMachine="17"
 			/>
 			<Tool
@@ -206,7 +206,7 @@
 		<Configuration
 			Name="Debug|x64"
 			ConfigurationType="2"
-			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Component.vsprops;$(ACFCONFIGDIR)\VC9\Debug.vsprops;$(ACFCONFIGDIR)\VC9\Win64.vsprops"
+			InheritedPropertySheets="../../../../Acf/Config\VC9\Component.vsprops;../../../../Acf/Config\VC9\Debug.vsprops;../../../../Acf/Config\VC9\Win64.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -226,7 +226,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;;&quot;$(ACFSLNDIR)/Include&quot;;&quot;$(ACFSLNDIR)/AuxInclude/Qt5&quot;"
+				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;;&quot;../../../../AcfSln/Include&quot;;&quot;../../../../AcfSln/AuxInclude/Qt5&quot;"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -240,7 +240,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="AcfStd.lib Qt5Cored.lib"
-				AdditionalLibraryDirectories="&quot;$(ACFDIR)\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(ACFSLNDIR)\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
+				AdditionalLibraryDirectories="&quot;../../../../Acf\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;../../../../AcfSln\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
 				TargetMachine="17"
 			/>
 			<Tool

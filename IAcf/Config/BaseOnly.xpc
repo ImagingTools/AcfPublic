@@ -28,7 +28,7 @@
   </AcfHeader>
   <ConfigFiles count="1">
     <FilePath>
-      $(ACFSLNDIR)/Config/BaseOnly.xpc
+      ../../AcfSln/Config/BaseOnly.xpc
     </FilePath>
   </ConfigFiles>
   <PackageDirs count="0">

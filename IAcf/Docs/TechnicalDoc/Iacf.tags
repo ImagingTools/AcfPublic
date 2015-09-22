@@ -193,7 +193,6 @@
     <path>C:/Temp/Iacf/Include/iqwt3d/</path>
     <filename>_c_surface_view_comp_8h</filename>
     <class kind="class">iqwt3d::CSurfaceViewComp</class>
-    <namespace>Qwt3D</namespace>
     <namespace>iqwt3d</namespace>
   </compound>
   <compound kind="file">
@@ -413,13 +412,6 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
-      <anchor>a1fc78353bc329ca4271282b906cad741</anchor>
-      <arglist>(AdjustConstraints)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
       <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
       <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
       <anchor>a51c6ac1942ae9aa972e9b3ae4d4dae07</anchor>
@@ -431,13 +423,6 @@
       <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
       <anchor>a6ce03d62ec88ab97a1e4afa9f8b93ba2</anchor>
       <arglist>(AdjustConstraints, istd::IChangeable, ExtractAdjustContraints)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT</name>
-      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
-      <anchor>a3ebfa80d0f88de3ec91215c4e326abde</anchor>
-      <arglist>(ExposureConstraints)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -1745,13 +1730,6 @@
       <anchor>a94274a946bd0ecf36d3e91956ddeefb3</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>I_ASSIGN_TO</name>
-      <anchorfile>classiqwt_1_1_c_histogram_view_comp.html</anchorfile>
-      <anchor>a2dc56673d7b99f4bc746993f42656806</anchor>
-      <arglist>(m_dataStatisticsObserverCompPtr, m_dataStatisticsGuiCompPtr, false)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
@@ -2325,10 +2303,6 @@
       <anchor>aed64c43c20af5ee1bee80abe4e2825d1</anchor>
       <arglist>(const QByteArray &amp;value)</arglist>
     </member>
-  </compound>
-  <compound kind="namespace">
-    <name>Qwt3D</name>
-    <filename>namespace_qwt3_d.html</filename>
   </compound>
   <compound kind="dir">
     <name>Include/icbox</name>

@@ -28,7 +28,7 @@
 		<Configuration
 			Name="Release|Win32"
 			ConfigurationType="4"
-			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Static.vsprops;$(ACFCONFIGDIR)\VC9\Release.vsprops;$(ACFCONFIGDIR)\VC9\Win32.vsprops"
+			InheritedPropertySheets="../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Release.vsprops;../../../../Acf/Config\VC9\Win32.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -68,7 +68,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;;&quot;$(ACFSLNDIR)/Include&quot;;&quot;$(ACFSLNDIR)/AuxInclude/Qt5&quot;;&quot;$(FFMPEGDIR_20121010)/include&quot;;&quot;$(FFMPEGDIR_20121010)/msinttypes&quot;;&quot;$(LIVE555DIR_20121024)/BasicUsageEnvironment/include&quot;;&quot;$(LIVE555DIR_20121024)/groupsock/include&quot;;&quot;$(LIVE555DIR_20121024)/liveMedia/include&quot;;&quot;$(LIVE555DIR_20121024)/UsageEnvironment/include/&quot;"
+				AdditionalIncludeDirectories="../../;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;;&quot;../../../../AcfSln/Include&quot;;&quot;../../../../AcfSln/AuxInclude/Qt5&quot;;&quot;$(FFMPEGDIR_20121010)/include&quot;;&quot;$(FFMPEGDIR_20121010)/msinttypes&quot;;&quot;$(LIVE555DIR_20121024)/BasicUsageEnvironment/include&quot;;&quot;$(LIVE555DIR_20121024)/groupsock/include&quot;;&quot;$(LIVE555DIR_20121024)/liveMedia/include&quot;;&quot;$(LIVE555DIR_20121024)/UsageEnvironment/include/&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB;NO_QT_STL_SUPPORT"
 			/>
 			<Tool
@@ -102,7 +102,7 @@
 		<Configuration
 			Name="Debug|Win32"
 			ConfigurationType="4"
-			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Static.vsprops;$(ACFCONFIGDIR)\VC9\Debug.vsprops;$(ACFCONFIGDIR)\VC9\Win32.vsprops"
+			InheritedPropertySheets="../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Debug.vsprops;../../../../Acf/Config\VC9\Win32.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -142,7 +142,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;;&quot;$(ACFSLNDIR)/Include&quot;;&quot;$(ACFSLNDIR)/AuxInclude/Qt5&quot;;&quot;$(FFMPEGDIR_20121010)/include&quot;;&quot;$(FFMPEGDIR_20121010)/msinttypes&quot;;&quot;$(LIVE555DIR_20121024)/BasicUsageEnvironment/include&quot;;&quot;$(LIVE555DIR_20121024)/groupsock/include&quot;;&quot;$(LIVE555DIR_20121024)/liveMedia/include&quot;;&quot;$(LIVE555DIR_20121024)/UsageEnvironment/include/&quot;"
+				AdditionalIncludeDirectories="../../;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;;&quot;../../../../AcfSln/Include&quot;;&quot;../../../../AcfSln/AuxInclude/Qt5&quot;;&quot;$(FFMPEGDIR_20121010)/include&quot;;&quot;$(FFMPEGDIR_20121010)/msinttypes&quot;;&quot;$(LIVE555DIR_20121024)/BasicUsageEnvironment/include&quot;;&quot;$(LIVE555DIR_20121024)/groupsock/include&quot;;&quot;$(LIVE555DIR_20121024)/liveMedia/include&quot;;&quot;$(LIVE555DIR_20121024)/UsageEnvironment/include/&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB;NO_QT_STL_SUPPORT"
 				WarningLevel="4"
 			/>
@@ -177,7 +177,7 @@
 		<Configuration
 			Name="Release|x64"
 			ConfigurationType="4"
-			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Static.vsprops;$(ACFCONFIGDIR)\VC9\Release.vsprops;$(ACFCONFIGDIR)\VC9\Win64.vsprops"
+			InheritedPropertySheets="../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Release.vsprops;../../../../Acf/Config\VC9\Win64.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -218,7 +218,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;;&quot;$(ACFSLNDIR)/Include&quot;;&quot;$(ACFSLNDIR)/AuxInclude/Qt5&quot;;&quot;$(FFMPEGDIR_20121010)/include&quot;;&quot;$(FFMPEGDIR_20121010)/msinttypes&quot;;&quot;$(LIVE555DIR_20121024)/BasicUsageEnvironment/include&quot;;&quot;$(LIVE555DIR_20121024)/groupsock/include&quot;;&quot;$(LIVE555DIR_20121024)/liveMedia/include&quot;;&quot;$(LIVE555DIR_20121024)/UsageEnvironment/include/&quot;"
+				AdditionalIncludeDirectories="../../;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;;&quot;../../../../AcfSln/Include&quot;;&quot;../../../../AcfSln/AuxInclude/Qt5&quot;;&quot;$(FFMPEGDIR_20121010)/include&quot;;&quot;$(FFMPEGDIR_20121010)/msinttypes&quot;;&quot;$(LIVE555DIR_20121024)/BasicUsageEnvironment/include&quot;;&quot;$(LIVE555DIR_20121024)/groupsock/include&quot;;&quot;$(LIVE555DIR_20121024)/liveMedia/include&quot;;&quot;$(LIVE555DIR_20121024)/UsageEnvironment/include/&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB;NO_QT_STL_SUPPORT"
 			/>
 			<Tool
@@ -252,7 +252,7 @@
 		<Configuration
 			Name="Debug|x64"
 			ConfigurationType="4"
-			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Static.vsprops;$(ACFCONFIGDIR)\VC9\Debug.vsprops;$(ACFCONFIGDIR)\VC9\Win64.vsprops"
+			InheritedPropertySheets="../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Debug.vsprops;../../../../Acf/Config\VC9\Win64.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -293,7 +293,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;;&quot;$(ACFSLNDIR)/Include&quot;;&quot;$(ACFSLNDIR)/AuxInclude/Qt5&quot;;&quot;$(FFMPEGDIR_20121010)/include&quot;;&quot;$(FFMPEGDIR_20121010)/msinttypes&quot;;&quot;$(LIVE555DIR_20121024)/BasicUsageEnvironment/include&quot;;&quot;$(LIVE555DIR_20121024)/groupsock/include&quot;;&quot;$(LIVE555DIR_20121024)/liveMedia/include&quot;;&quot;$(LIVE555DIR_20121024)/UsageEnvironment/include/&quot;"
+				AdditionalIncludeDirectories="../../;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;;&quot;../../../../AcfSln/Include&quot;;&quot;../../../../AcfSln/AuxInclude/Qt5&quot;;&quot;$(FFMPEGDIR_20121010)/include&quot;;&quot;$(FFMPEGDIR_20121010)/msinttypes&quot;;&quot;$(LIVE555DIR_20121024)/BasicUsageEnvironment/include&quot;;&quot;$(LIVE555DIR_20121024)/groupsock/include&quot;;&quot;$(LIVE555DIR_20121024)/liveMedia/include&quot;;&quot;$(LIVE555DIR_20121024)/UsageEnvironment/include/&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB;NO_QT_STL_SUPPORT"
 				WarningLevel="4"
 			/>

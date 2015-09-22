@@ -1,7 +1,7 @@
-include($(ACFCONFIGDIR)/QMake/StaticConfig.pri)
+include(../../../../Acf/Config/QMake/StaticConfig.pri)
 
 TARGET = iocv
 
-INCLUDEPATH += $(ACFSLNDIR)/Include
+INCLUDEPATH += ../../../../AcfSln/Include
 INCLUDEPATH += $(OPENCVDIR_2_4_10)/Include
 
