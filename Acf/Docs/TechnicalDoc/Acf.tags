@@ -26405,10 +26405,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>CloseCurrentView</name>
+      <name>CloseView</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>af0f00b1768f02aa3fe911db05840dfc0</anchor>
-      <arglist>(bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
+      <anchor>ac6aff8f95446b9ff54b697f8fa3600ba</anchor>
+      <arglist>(istd::IPolymorphic *viewPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -27692,10 +27692,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>CloseCurrentView</name>
+      <name>CloseView</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>ab202a72a51d63928d27da1957ba4f32d</anchor>
-      <arglist>(bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
+      <anchor>a185208af8b34f365f5bdbc9e1e8e2952</anchor>
+      <arglist>(istd::IPolymorphic *viewPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -28356,10 +28356,10 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
-      <name>CloseCurrentView</name>
+      <name>CloseView</name>
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>ac54d1c814b482784727fde4dde55c79c</anchor>
-      <arglist>(bool beQuiet=false, bool *ignoredPtr=NULL)=0</arglist>
+      <anchor>a1ac0db08f22a9cdae98ae00536627f1c</anchor>
+      <arglist>(istd::IPolymorphic *viewPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
