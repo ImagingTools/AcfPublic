@@ -35,6 +35,14 @@ void CAnnulusComp::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
+	ResetData();
+}
+
+
+// reimplemented (istd::IChangeable)
+
+bool CAnnulusComp::ResetData(CompatibilityMode /*mode*/)
+{
 	Q_ASSERT(m_centerXAttrPtr.IsValid());
 	Q_ASSERT(m_centerYAttrPtr.IsValid());
 	Q_ASSERT(m_innerRadiusAttrPtr.IsValid());
@@ -43,6 +51,8 @@ void CAnnulusComp::OnComponentCreated()
 	SetPosition(i2d::CVector2d(*m_centerXAttrPtr, *m_centerYAttrPtr));
 	SetOuterRadius(*m_outerRadiusAttrPtr);
 	SetInnerRadius(*m_innerRadiusAttrPtr);
+
+	return true;
 }
 
 

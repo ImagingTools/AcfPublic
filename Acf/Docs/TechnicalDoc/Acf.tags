@@ -8247,6 +8247,13 @@
       <anchor>ac1b0ecf4f05188e652047870e6756a0e</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classi2d_1_1_c_annulus_comp.html</anchorfile>
+      <anchor>aaa82fe7f5924ed225d2c4662758a2ea7</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>i2d::CAnnulusSegment</name>
@@ -8314,6 +8321,20 @@
       <anchorfile>classi2d_1_1_c_annulus_segment.html</anchorfile>
       <anchor>a86a8fc2bce1be65640919f73090296f6</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Transform</name>
+      <anchorfile>classi2d_1_1_c_annulus_segment.html</anchorfile>
+      <anchor>a18c53fb637db7b494a4b0d0349af4b39</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InvTransform</name>
+      <anchorfile>classi2d_1_1_c_annulus_segment.html</anchorfile>
+      <anchor>ab35a80b324c5177a4c079c8340609dee</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
