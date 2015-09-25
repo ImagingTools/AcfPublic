@@ -131,6 +131,7 @@
     <ClCompile Include="..\CNumericConstraintsComp.cpp" />
     <ClCompile Include="..\CNumericParamsComp.cpp" />
     <ClCompile Include="..\CNumericValuesJoinerComp.cpp" />
+    <ClCompile Include="..\CRelativeUnitSelectorComp.cpp" />
     <ClCompile Include="..\CSamplesInfo.cpp" />
     <ClCompile Include="..\CSimpleNumericValue.cpp" />
     <ClCompile Include="..\CSimpleNumericValueProvider.cpp" />
@@ -150,6 +151,7 @@
     <ClInclude Include="..\CNumericConstraintsComp.h" />
     <ClInclude Include="..\CNumericParamsComp.h" />
     <ClInclude Include="..\CNumericValuesJoinerComp.h" />
+    <ClInclude Include="..\CRelativeUnitSelectorComp.h" />
     <ClInclude Include="..\CSamplesInfo.h" />
     <ClInclude Include="..\CSimpleNumericValue.h" />
     <ClInclude Include="..\CSimpleNumericValueProvider.h" />

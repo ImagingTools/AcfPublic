@@ -2077,6 +2077,13 @@
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
+    <name>CRelativeUnitSelectorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
+    <filename>_c_relative_unit_selector_comp_8h</filename>
+    <class kind="class">imeas::CRelativeUnitSelectorComp</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSamplesInfo.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_samples_info_8h</filename>
@@ -20931,6 +20938,7 @@
     <class kind="class">imeas::CNumericConstraintsComp</class>
     <class kind="class">imeas::CNumericParamsComp</class>
     <class kind="class">imeas::CNumericValuesJoinerComp</class>
+    <class kind="class">imeas::CRelativeUnitSelectorComp</class>
     <class kind="class">imeas::CSamplesInfo</class>
     <class kind="class">imeas::CSimpleNumericValue</class>
     <class kind="class">imeas::CSimpleNumericValueProvider</class>
@@ -22074,6 +22082,196 @@
       <anchorfile>classimeas_1_1_c_numeric_values_joiner_comp.html</anchorfile>
       <anchor>a74f050d1e29484cc1915d8f6089ed617</anchor>
       <arglist>(imeas::INumericValue::ValueTypeId valueTypeId) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imeas::CRelativeUnitSelectorComp</name>
+    <filename>classimeas_1_1_c_relative_unit_selector_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">imath::IUnitInfo</base>
+    <base virtualness="virtual">iprm::ISelectionParam</base>
+    <base protection="protected" virtualness="virtual">iprm::IOptionsList</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>DisplayMode</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>a022718f1dd93ccd4c0e8f6d1942bdb8d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>DM_NONE</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>a022718f1dd93ccd4c0e8f6d1942bdb8da4cb77376ee3a0533c36258d7102b0fb7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>DM_PERCENT</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>a022718f1dd93ccd4c0e8f6d1942bdb8da602cfcf4d9bcebaf6a9053577420d543</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>DM_PERMILLE</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>a022718f1dd93ccd4c0e8f6d1942bdb8da3e5d7fb0fb2d96398643c0e81410f4ce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>DM_LAST_MODE</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>a022718f1dd93ccd4c0e8f6d1942bdb8dad7070d5c6f0fc7f0c66e6e5aff7dd809</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>a31daeb04989122b9407adb66406594a6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_DECLARE_ENUM</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>a4620d49ec0d2305bbbc4537d915ffcf8</anchor>
+      <arglist>(DisplayMode, DM_NONE, DM_PERCENT, DM_PERMILLE)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CRelativeUnitSelectorComp</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>aba0dbc1609869b9428f57db3ec35e071</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iprm::IOptionsList *</type>
+      <name>GetSelectionConstraints</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>a93fde4b497ebcfbd88d04542965c5044</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSelectedOptionIndex</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>a6f4f1e54641fdb8b2f7ef16f475b9ef9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetSelectedOptionIndex</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>ac0f96c9ecd7d85b3e7c1bf5fde77f163</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iprm::ISelectionParam *</type>
+      <name>GetSubselection</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>ab17066be4958674b8be638361031b92a</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsFlags</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>a6f6328d8e32d13afed9e38a708cc4239</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>a876fecfec14957a353b66da02b45de4d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>a7e3c608cddda6dc5808d475703827c4a</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>a6715d8aab8e04474b7e45ea1eb82240b</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetOptionId</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>ac70a2694e740f2129b2925b9e307faef</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>a7e4c1b3dc0850e26b65ce5f491f86ecb</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetUnitType</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>a778ef1e532a47d1c24bbc666e77958d2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetUnitName</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>a8edca42962cc439e673bb0f27a05d164</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetDisplayMultiplicationFactor</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>afc5239c4a496ae40aa424852c6492041</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CRange</type>
+      <name>GetValueRange</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>a69daa3273933940235fb8103817a16e3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imath::IDoubleManip &amp;</type>
+      <name>GetValueManip</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>a2c03112213f90051c6edbad272f7977f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPrecision</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>a3682a36f4566b32e8555eb13ce91db6c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>acbba4f8c86865c2894e369ac82a16c61</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classimeas_1_1_c_relative_unit_selector_comp.html</anchorfile>
+      <anchor>a7de774ab035e28462ca9844ff5a2cd1c</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -30066,6 +30264,7 @@
     <file>CNumericConstraintsComp.h</file>
     <file>CNumericParamsComp.h</file>
     <file>CNumericValuesJoinerComp.h</file>
+    <file>CRelativeUnitSelectorComp.h</file>
     <file>CSamplesInfo.h</file>
     <file>CSimpleNumericValue.h</file>
     <file>CSimpleNumericValueProvider.h</file>
