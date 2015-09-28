@@ -24,7 +24,7 @@
 		<Configuration
 			Name="Debug|Win32"
 			ConfigurationType="4"
-			InheritedPropertySheets="../../../../Acf/Config\VC9\Debug.vsprops;../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Win32.vsprops"
+			InheritedPropertySheets="..\..\..\..\Acf\Config\VC9\Debug.vsprops;..\..\..\..\Acf\Config\VC9\Static.vsprops;..\..\..\..\Acf\Config\VC9\Win32.vsprops"
 			UseOfMFC="0"
 			ATLMinimizesCRunTimeLibraryUsage="false"
 			CharacterSet="0"
@@ -59,7 +59,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/MP"
-				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;"
+				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;..\..\..\..\Acf/Include&quot;;&quot;..\..\..\..\Acf/AuxInclude/Qt5&quot;"
 				PreprocessorDefinitions="_DEBUG;WIN32;_LIB;QT_DLL;QT_THREAD_SUPPORT;_DLL"
 				EnableFunctionLevelLinking="false"
 				RuntimeTypeInfo="true"
@@ -99,7 +99,7 @@
 		<Configuration
 			Name="Debug|x64"
 			ConfigurationType="4"
-			InheritedPropertySheets="../../../../Acf/Config\VC9\Debug.vsprops;../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Win64.vsprops"
+			InheritedPropertySheets="..\..\..\..\Acf\Config\VC9\Debug.vsprops;..\..\..\..\Acf\Config\VC9\Static.vsprops;..\..\..\..\Acf\Config\VC9\Win64.vsprops"
 			UseOfMFC="0"
 			ATLMinimizesCRunTimeLibraryUsage="false"
 			CharacterSet="0"
@@ -135,7 +135,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/MP"
-				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;"
+				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;..\..\..\..\Acf/Include&quot;;&quot;..\..\..\..\Acf/AuxInclude/Qt5&quot;"
 				PreprocessorDefinitions="_DEBUG;WIN32;_LIB;QT_DLL;QT_THREAD_SUPPORT;_DLL"
 				EnableFunctionLevelLinking="false"
 				RuntimeTypeInfo="true"
@@ -175,7 +175,7 @@
 		<Configuration
 			Name="Release|Win32"
 			ConfigurationType="4"
-			InheritedPropertySheets="../../../../Acf/Config\VC9\Release.vsprops;../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Win32.vsprops"
+			InheritedPropertySheets="..\..\..\..\Acf\Config\VC9\Release.vsprops;..\..\..\..\Acf\Config\VC9\Static.vsprops;..\..\..\..\Acf\Config\VC9\Win32.vsprops"
 			UseOfMFC="0"
 			ATLMinimizesCRunTimeLibraryUsage="false"
 			CharacterSet="0"
@@ -210,7 +210,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/MP"
-				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;"
+				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;..\..\..\..\Acf/Include&quot;;&quot;..\..\..\..\Acf/AuxInclude/Qt5&quot;"
 				PreprocessorDefinitions="NDEBUG;WIN32;_LIB;QT_DLL;QT_THREAD_SUPPORT;QT_ACCESSIBILITY_SUPPORT;QT_TABLET_SUPPORT"
 				SuppressStartupBanner="true"
 			/>
@@ -247,7 +247,7 @@
 		<Configuration
 			Name="Release|x64"
 			ConfigurationType="4"
-			InheritedPropertySheets="../../../../Acf/Config\VC9\Release.vsprops;../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Win64.vsprops"
+			InheritedPropertySheets="..\..\..\..\Acf\Config\VC9\Release.vsprops;..\..\..\..\Acf\Config\VC9\Static.vsprops;..\..\..\..\Acf\Config\VC9\Win64.vsprops"
 			UseOfMFC="0"
 			ATLMinimizesCRunTimeLibraryUsage="false"
 			CharacterSet="0"
@@ -283,7 +283,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/MP"
-				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;"
+				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;..\..\..\..\Acf/Include&quot;;&quot;..\..\..\..\Acf/AuxInclude/Qt5&quot;"
 				PreprocessorDefinitions="NDEBUG;WIN32;_LIB;QT_DLL;QT_THREAD_SUPPORT;QT_ACCESSIBILITY_SUPPORT;QT_TABLET_SUPPORT"
 				SuppressStartupBanner="true"
 			/>

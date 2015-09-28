@@ -28,7 +28,7 @@
   </AcfHeader>
   <ConfigFiles count="1">
     <FilePath>
-      ../../Acf/Config/Core.xpc
+      ..\..\Acf/Config/Core.xpc
     </FilePath>
   </ConfigFiles>
   <PackageDirs count="3">

@@ -17,14 +17,14 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="Configuration">
-    <OutputDirectory>$(ACFDIR)\Lib\DebugVC10\Tutorial\</OutputDirectory>
+    <OutputDirectory>..\..\..\..\..\\Lib\DebugVC10\Tutorial\</OutputDirectory>
     <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
     <CharacterSet>NotSet</CharacterSet>
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <IntermediateDirectory>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\itutacf\</IntermediateDirectory>
   </PropertyGroup>
   <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="Configuration">
-    <OutputDirectory>$(ACFDIR)\Lib\ReleaseVC10\Tutorial\</OutputDirectory>
+    <OutputDirectory>..\..\..\..\..\\Lib\ReleaseVC10\Tutorial\</OutputDirectory>
     <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
     <CharacterSet>NotSet</CharacterSet>
     <ConfigurationType>StaticLibrary</ConfigurationType>
@@ -40,16 +40,16 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(ACFDIR)\Lib\DebugVC10\Tutorial\</OutDir>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\..\..\\Lib\DebugVC10\Tutorial\</OutDir>
     <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\itutacf\</IntDir>
     <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</IgnoreImportLibrary>
-    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(ACFDIR)\Lib\ReleaseVC10\Tutorial\</OutDir>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\..\..\\Lib\ReleaseVC10\Tutorial\</OutDir>
     <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Release\itutacf\</IntDir>
     <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</IgnoreImportLibrary>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">
     <ClCompile>
-      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC10&quot;;&quot;$(ACFDIR)\Include&quot;;&quot;$(ACFDIR)\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\Include&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtSvg&quot;;&quot;$(QTDIR)\include\QtXmlPatterns&quot;;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtConcurrent&quot;;&quot;$(QTDIR)\include\QtNetwork&quot;;&quot;$(QTDIR)\include\QtXml&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\itutacf&quot;;$(QTDIR)\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\..\..\\Include&quot;;&quot;..\..\..\..\..\\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\Include&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtSvg&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtXmlPatterns&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtWidgets&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtConcurrent&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtNetwork&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtXml&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtGui&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\itutacf&quot;;C:\Qt\Qt-5.3.1-VS2008\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 /MP /bigobj %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\itutacf\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -83,7 +83,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">
     <ClCompile>
-      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC10&quot;;&quot;$(ACFDIR)\Include&quot;;&quot;$(ACFDIR)\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\Include&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtSvg&quot;;&quot;$(QTDIR)\include\QtXmlPatterns&quot;;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtConcurrent&quot;;&quot;$(QTDIR)\include\QtNetwork&quot;;&quot;$(QTDIR)\include\QtXml&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\itutacf&quot;;$(QTDIR)\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\..\..\\Include&quot;;&quot;..\..\..\..\..\\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\Include&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtSvg&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtXmlPatterns&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtWidgets&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtConcurrent&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtNetwork&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtXml&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtGui&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\itutacf&quot;;C:\Qt\Qt-5.3.1-VS2008\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 /MP /bigobj %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Release\itutacf\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>

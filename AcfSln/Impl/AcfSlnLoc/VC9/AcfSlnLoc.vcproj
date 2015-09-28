@@ -24,7 +24,7 @@
 		<Configuration
 			Name="Release|Win32"
 			ConfigurationType="4"
-			InheritedPropertySheets="../../../../Acf/Config\VC9\Release.vsprops;../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Win32.vsprops"
+			InheritedPropertySheets="..\..\..\..\Acf\Config\VC9\Release.vsprops;..\..\..\..\Acf\Config\VC9\Static.vsprops;..\..\..\..\Acf\Config\VC9\Win32.vsprops"
 			UseOfMFC="0"
 			ATLMinimizesCRunTimeLibraryUsage="false"
 			>
@@ -123,7 +123,7 @@
 		<Configuration
 			Name="Release|x64"
 			ConfigurationType="4"
-			InheritedPropertySheets="../../../../Acf/Config\VC9\Release.vsprops;../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Win64.vsprops"
+			InheritedPropertySheets="..\..\..\..\Acf\Config\VC9\Release.vsprops;..\..\..\..\Acf\Config\VC9\Static.vsprops;..\..\..\..\Acf\Config\VC9\Win64.vsprops"
 			UseOfMFC="0"
 			ATLMinimizesCRunTimeLibraryUsage="false"
 			>
@@ -221,7 +221,7 @@
 		<Configuration
 			Name="Debug|Win32"
 			ConfigurationType="4"
-			InheritedPropertySheets="../../../../Acf/Config\VC9\Debug.vsprops;../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Win32.vsprops"
+			InheritedPropertySheets="..\..\..\..\Acf\Config\VC9\Debug.vsprops;..\..\..\..\Acf\Config\VC9\Static.vsprops;..\..\..\..\Acf\Config\VC9\Win32.vsprops"
 			UseOfMFC="0"
 			ATLMinimizesCRunTimeLibraryUsage="false"
 			>
@@ -318,7 +318,7 @@
 		<Configuration
 			Name="Debug|x64"
 			ConfigurationType="4"
-			InheritedPropertySheets="../../../../Acf/Config\VC9\Debug.vsprops;../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Win64.vsprops"
+			InheritedPropertySheets="..\..\..\..\Acf\Config\VC9\Debug.vsprops;..\..\..\..\Acf\Config\VC9\Static.vsprops;..\..\..\..\Acf\Config\VC9\Win64.vsprops"
 			UseOfMFC="0"
 			ATLMinimizesCRunTimeLibraryUsage="false"
 			>

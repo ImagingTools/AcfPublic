@@ -62,7 +62,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;"
+				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;..\..\..\/Include&quot;;&quot;..\..\..\/AuxInclude/Qt5&quot;"
 				PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS"
 				StringPooling="true"
 				RuntimeLibrary="2"
@@ -144,7 +144,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;"
+				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;..\..\..\/Include&quot;;&quot;..\..\..\/AuxInclude/Qt5&quot;"
 				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS"
 				PrecompiledHeaderFile=""
 				DebugInformationFormat="4"
@@ -220,7 +220,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;"
+				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;..\..\..\/Include&quot;;&quot;..\..\..\/AuxInclude/Qt5&quot;"
 				PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS"
 				StringPooling="true"
 				RuntimeLibrary="2"
@@ -302,7 +302,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;$(ACFDIR)/Include&quot;;&quot;$(ACFDIR)/AuxInclude/Qt5&quot;"
+				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;..\..\..\/Include&quot;;&quot;..\..\..\/AuxInclude/Qt5&quot;"
 				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS"
 				PrecompiledHeaderFile=""
 				DebugInformationFormat="3"

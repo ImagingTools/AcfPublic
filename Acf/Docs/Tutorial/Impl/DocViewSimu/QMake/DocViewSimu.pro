@@ -7,7 +7,7 @@ DESTDIR = $$OUT_PWD/../../../../../Bin/$$COMPILER_DIR/Tutorial
 
 QT += core gui
 
-INCLUDEPATH += ../.. ../../../Include "$(QScintilla)/include"
+INCLUDEPATH += ../.. ../../../Include "C:\Temp\AcfPublic\3rdParty\QScintilla/include"
 
 LIBS += -L$$OUT_PWD/../../../../../Lib/$$COMPILER_DIR/Tutorial -lDocView
 

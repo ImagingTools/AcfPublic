@@ -1,7 +1,7 @@
 TARGET = Compositor
 
-include(../../../../Acf/Config/QMake/ApplicationConfig.pri)
-include(../../../../Acf/Config/QMake/QtBaseConfig.pri)
+include(..\..\..\..\Acf\Config/QMake/ApplicationConfig.pri)
+include(..\..\..\..\Acf\Config/QMake/QtBaseConfig.pri)
 
 INCLUDEPATH += ../../../Include
 INCLUDEPATH += ../../../Impl
@@ -45,6 +45,6 @@ win*{
 	RC_INCLUDEPATH = $$_PRO_FILE_PWD_
 }
 
-include(../../../../Acf/Config/QMake/CustomBuild.pri)
-include(../../../../Acf/Config/QMake/AcfQt.pri)
-include(../../../../Acf/Config/QMake/AcfStd.pri)
+include(..\..\..\..\Acf\Config/QMake/CustomBuild.pri)
+include(..\..\..\..\Acf\Config/QMake/AcfQt.pri)
+include(..\..\..\..\Acf\Config/QMake/AcfStd.pri)

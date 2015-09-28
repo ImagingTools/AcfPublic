@@ -164,8 +164,8 @@ if (WScript.Arguments.length >= 1) {
     var replaceDirs = [];
     replaceDirs.push({ key: shell.ExpandEnvironmentStrings("%QTDIR%"), value: "$(QTDIR)" });
     replaceDirs.push({ key: shell.ExpandEnvironmentStrings("%QTDIR%").split("\\").join("/"), value: "$(QTDIR)" });
-    replaceDirs.push({ key: shell.ExpandEnvironmentStrings("%ACFDIR%"), value: "$(ACFDIR)" });
-    replaceDirs.push({ key: shell.ExpandEnvironmentStrings("%ACFDIR%").split("\\").join("/"), value: "$(ACFDIR)" });
+    replaceDirs.push({ key: shell.ExpandEnvironmentStrings("%ACFDIR%"), value: "..\..\" });
+    replaceDirs.push({ key: shell.ExpandEnvironmentStrings("%ACFDIR%").split("\\").join("/"), value: "..\..\" });
 
     ProcessFolder(shell, fileSystem, fileSystem.GetFolder("."), vcDirName, replaceDirs);
 }

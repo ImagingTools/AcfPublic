@@ -17,14 +17,14 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="Configuration">
-    <OutputDirectory>$(ACFDIR)\Lib\DebugVC12\Tutorial\</OutputDirectory>
+    <OutputDirectory>..\..\..\..\..\\Lib\DebugVC12\Tutorial\</OutputDirectory>
     <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
     <CharacterSet>NotSet</CharacterSet>
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <IntermediateDirectory>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Debug\DocView\</IntermediateDirectory>
   </PropertyGroup>
   <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="Configuration">
-    <OutputDirectory>$(ACFDIR)\Lib\ReleaseVC12\Tutorial\</OutputDirectory>
+    <OutputDirectory>..\..\..\..\..\\Lib\ReleaseVC12\Tutorial\</OutputDirectory>
     <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
     <CharacterSet>NotSet</CharacterSet>
     <ConfigurationType>StaticLibrary</ConfigurationType>
@@ -40,16 +40,16 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(ACFDIR)\Lib\DebugVC12\Tutorial\</OutDir>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\..\..\\Lib\DebugVC12\Tutorial\</OutDir>
     <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Debug\DocView\</IntDir>
     <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</IgnoreImportLibrary>
-    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(ACFDIR)\Lib\ReleaseVC12\Tutorial\</OutDir>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\..\..\\Lib\ReleaseVC12\Tutorial\</OutDir>
     <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Release\DocView\</IntDir>
     <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</IgnoreImportLibrary>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">
     <ClCompile>
-      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;$(ACFDIR)\Include&quot;;&quot;$(ACFDIR)\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Impl&quot;;&quot;..\..\..\Impl&quot;;&quot;..&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtSvg&quot;;&quot;$(QTDIR)\include\QtXmlPatterns&quot;;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtNetwork&quot;;&quot;$(QTDIR)\include\QtXml&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\DocView&quot;;$(QTDIR)\mkspecs\win32-msvc2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\..\..\\Include&quot;;&quot;..\..\..\..\..\\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Impl&quot;;&quot;..\..\..\Impl&quot;;&quot;..&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtSvg&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtXmlPatterns&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtWidgets&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtNetwork&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtXml&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtGui&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\DocView&quot;;C:\Qt\Qt-5.3.1-VS2008\mkspecs\win32-msvc2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 -FS /MP /bigobj /Qpar /Gw /FS %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Debug\DocView\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -84,7 +84,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">
     <ClCompile>
-      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;$(ACFDIR)\Include&quot;;&quot;$(ACFDIR)\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Impl&quot;;&quot;..\..\..\Impl&quot;;&quot;..&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtSvg&quot;;&quot;$(QTDIR)\include\QtXmlPatterns&quot;;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtNetwork&quot;;&quot;$(QTDIR)\include\QtXml&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\DocView&quot;;$(QTDIR)\mkspecs\win32-msvc2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\..\..\\Include&quot;;&quot;..\..\..\..\..\\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Impl&quot;;&quot;..\..\..\Impl&quot;;&quot;..&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtSvg&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtXmlPatterns&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtWidgets&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtNetwork&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtXml&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtGui&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\DocView&quot;;C:\Qt\Qt-5.3.1-VS2008\mkspecs\win32-msvc2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 -FS /MP /bigobj /Qpar /Gw /FS %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Release\DocView\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -123,11 +123,11 @@
   <ItemGroup>
     <CustomBuild Include="..\CTextEditorComp.h">
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CTextEditorComp.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I$(ACFDIR)/Docs/Tutorial/Impl/DocView/QMake -I$(ACFDIR)/Docs/Tutorial/AuxInclude/Qt5_VC12 -I$(ACFDIR)/Include -I$(ACFDIR)/AuxInclude/Qt5_VC12 -I$(ACFDIR)/Docs/Tutorial/Impl -I$(ACFDIR)/Docs/Tutorial/Impl -I$(ACFDIR)/Docs/Tutorial/Impl/DocView -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CTextEditorComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\DocView\moc_CTextEditorComp.cpp</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\Qt\Qt-5.3.1-VS2008\bin\moc.exe  -DUNICODE -DWIN32 -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -IC:\Qt\Qt-5.3.1-VS2008/mkspecs/win32-msvc2013 -I..\..\..\..\..\/Docs/Tutorial/Impl/DocView/QMake -I..\..\..\..\..\/Docs/Tutorial/AuxInclude/Qt5_VC12 -I..\..\..\..\..\/Include -I..\..\..\..\..\/AuxInclude/Qt5_VC12 -I..\..\..\..\..\/Docs/Tutorial/Impl -I..\..\..\..\..\/Docs/Tutorial/Impl -I..\..\..\..\..\/Docs/Tutorial/Impl/DocView -IC:\Qt\Qt-5.3.1-VS2008/include -IC:\Qt\Qt-5.3.1-VS2008/include/QtSvg -IC:\Qt\Qt-5.3.1-VS2008/include/QtXmlPatterns -IC:\Qt\Qt-5.3.1-VS2008/include/QtWidgets -IC:\Qt\Qt-5.3.1-VS2008/include/QtNetwork -IC:\Qt\Qt-5.3.1-VS2008/include/QtXml -IC:\Qt\Qt-5.3.1-VS2008/include/QtGui -IC:\Qt\Qt-5.3.1-VS2008/include/QtCore ..\CTextEditorComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\DocView\moc_CTextEditorComp.cpp</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CTextEditorComp.h</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\DocView\moc_CTextEditorComp.cpp;%(Outputs)</Outputs>
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CTextEditorComp.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I$(ACFDIR)/Docs/Tutorial/Impl/DocView/QMake -I$(ACFDIR)/Docs/Tutorial/AuxInclude/Qt5_VC12 -I$(ACFDIR)/Include -I$(ACFDIR)/AuxInclude/Qt5_VC12 -I$(ACFDIR)/Docs/Tutorial/Impl -I$(ACFDIR)/Docs/Tutorial/Impl -I$(ACFDIR)/Docs/Tutorial/Impl/DocView -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CTextEditorComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\DocView\moc_CTextEditorComp.cpp</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\Qt\Qt-5.3.1-VS2008\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -IC:\Qt\Qt-5.3.1-VS2008/mkspecs/win32-msvc2013 -I..\..\..\..\..\/Docs/Tutorial/Impl/DocView/QMake -I..\..\..\..\..\/Docs/Tutorial/AuxInclude/Qt5_VC12 -I..\..\..\..\..\/Include -I..\..\..\..\..\/AuxInclude/Qt5_VC12 -I..\..\..\..\..\/Docs/Tutorial/Impl -I..\..\..\..\..\/Docs/Tutorial/Impl -I..\..\..\..\..\/Docs/Tutorial/Impl/DocView -IC:\Qt\Qt-5.3.1-VS2008/include -IC:\Qt\Qt-5.3.1-VS2008/include/QtSvg -IC:\Qt\Qt-5.3.1-VS2008/include/QtXmlPatterns -IC:\Qt\Qt-5.3.1-VS2008/include/QtWidgets -IC:\Qt\Qt-5.3.1-VS2008/include/QtNetwork -IC:\Qt\Qt-5.3.1-VS2008/include/QtXml -IC:\Qt\Qt-5.3.1-VS2008/include/QtGui -IC:\Qt\Qt-5.3.1-VS2008/include/QtCore ..\CTextEditorComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\DocView\moc_CTextEditorComp.cpp</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CTextEditorComp.h</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\DocView\moc_CTextEditorComp.cpp;%(Outputs)</Outputs>
     </CustomBuild>

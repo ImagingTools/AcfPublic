@@ -21,7 +21,7 @@
 		<Configuration
 			Name="Release|Win32"
 			ConfigurationType="4"
-			InheritedPropertySheets="../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Release.vsprops;../../../../Acf/Config\VC9\Win32.vsprops"
+			InheritedPropertySheets="..\..\..\..\Acf\Config\VC9\Static.vsprops;..\..\..\..\Acf\Config\VC9\Release.vsprops;..\..\..\..\Acf\Config\VC9\Win32.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -45,7 +45,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;"
+				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;..\..\..\..\Acf/Include&quot;;&quot;..\..\..\..\Acf/AuxInclude/Qt5&quot;"
 				PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS"
 				EnableFunctionLevelLinking="true"
 				UsePrecompiledHeader="0"
@@ -85,7 +85,7 @@
 		<Configuration
 			Name="Release|x64"
 			ConfigurationType="4"
-			InheritedPropertySheets="../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Release.vsprops;../../../../Acf/Config\VC9\Win64.vsprops"
+			InheritedPropertySheets="..\..\..\..\Acf\Config\VC9\Static.vsprops;..\..\..\..\Acf\Config\VC9\Release.vsprops;..\..\..\..\Acf\Config\VC9\Win64.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -109,7 +109,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;"
+				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;..\..\..\..\Acf/Include&quot;;&quot;..\..\..\..\Acf/AuxInclude/Qt5&quot;"
 				PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS"
 				EnableFunctionLevelLinking="true"
 				UsePrecompiledHeader="0"
@@ -149,7 +149,7 @@
 		<Configuration
 			Name="Debug|Win32"
 			ConfigurationType="4"
-			InheritedPropertySheets="../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Debug.vsprops;../../../../Acf/Config\VC9\Win32.vsprops"
+			InheritedPropertySheets="..\..\..\..\Acf\Config\VC9\Static.vsprops;..\..\..\..\Acf\Config\VC9\Debug.vsprops;..\..\..\..\Acf\Config\VC9\Win32.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -173,7 +173,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;"
+				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;..\..\..\..\Acf/Include&quot;;&quot;..\..\..\..\Acf/AuxInclude/Qt5&quot;"
 				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS"
 				StringPooling="true"
 				BasicRuntimeChecks="3"
@@ -213,7 +213,7 @@
 		<Configuration
 			Name="Debug|x64"
 			ConfigurationType="4"
-			InheritedPropertySheets="../../../../Acf/Config\VC9\Static.vsprops;../../../../Acf/Config\VC9\Debug.vsprops;../../../../Acf/Config\VC9\Win64.vsprops"
+			InheritedPropertySheets="..\..\..\..\Acf\Config\VC9\Static.vsprops;..\..\..\..\Acf\Config\VC9\Debug.vsprops;..\..\..\..\Acf\Config\VC9\Win64.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -237,7 +237,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;../../../../Acf/Include&quot;;&quot;../../../../Acf/AuxInclude/Qt5&quot;"
+				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;..\..\..\..\Acf/Include&quot;;&quot;..\..\..\..\Acf/AuxInclude/Qt5&quot;"
 				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS"
 				StringPooling="true"
 				BasicRuntimeChecks="3"

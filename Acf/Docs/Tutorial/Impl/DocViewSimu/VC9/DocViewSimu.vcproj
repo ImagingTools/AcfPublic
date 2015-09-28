@@ -17,10 +17,10 @@
 	<Configurations>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="../../../../../Bin/$(ConfigurationName)$(CompilerCode)/Tutorial"
-			IntermediateDirectory="$(ConfigurationName)"
+			OutputDirectory="../../../../../Bin/ReleaseVC9$(CompilerCode)/Tutorial"
+			IntermediateDirectory="ReleaseVC9"
 			ConfigurationType="1"
-			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\General.vsprops;$(ACFCONFIGDIR)\VC9\Release.vsprops;$(ACFCONFIGDIR)\VC9\Win32.vsprops"
+			InheritedPropertySheets="..\..\..\..\..\Config\VC9\General.vsprops;..\..\..\..\..\Config\VC9\Release.vsprops;..\..\..\..\..\Config\VC9\Win32.vsprops"
 			UseOfMFC="0"
 			ATLMinimizesCRunTimeLibraryUsage="false"
 			>
@@ -48,7 +48,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				InlineFunctionExpansion="1"
-				AdditionalIncludeDirectories="..;../../../Include;../../../AuxInclude/Qt5;../../../../../Include;../../../../../AuxInclude/Qt5;..\..\..\..\..\Impl;&quot;$(QTDIR)/include&quot;;&quot;$(QTDIR)/include/QtCore&quot;;&quot;$(QTDIR)/include/QtGui&quot;;&quot;$(QTDIR)/include/QtXml&quot;;&quot;$(QTDIR)\include\QtXmlPatterns&quot;;&quot;$(QScintilla)\include&quot;"
+				AdditionalIncludeDirectories="..;../../../Include;../../../AuxInclude/Qt5;../../../../../Include;../../../../../AuxInclude/Qt5;..\..\..\..\..\Impl;&quot;C:\Qt\Qt-5.3.1-VS2008/include&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008/include/QtCore&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008/include/QtGui&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008/include/QtXml&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtXmlPatterns&quot;;&quot;C:\Temp\AcfPublic\3rdParty\QScintilla\include&quot;"
 				PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS"
 				StringPooling="true"
 				RuntimeLibrary="2"
@@ -75,7 +75,7 @@
 				Name="VCLinkerTool"
 				AdditionalDependencies="AcfStd.lib AcfQt.lib"
 				OutputFile="$(OutDir)/$(ProjectName)"
-				AdditionalLibraryDirectories="&quot;$(QTDIR)\lib&quot;;&quot;..\..\..\..\..\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
+				AdditionalLibraryDirectories="&quot;C:\Qt\Qt-5.3.1-VS2008\lib&quot;;&quot;..\..\..\..\..\Lib\ReleaseVC9$(CompilerCode)&quot;"
 				SubSystem="2"
 			/>
 			<Tool
@@ -102,10 +102,10 @@
 		</Configuration>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="../../../../../Bin/$(ConfigurationName)$(CompilerCode)/Tutorial"
-			IntermediateDirectory="$(ConfigurationName)"
+			OutputDirectory="../../../../../Bin/ReleaseVC9$(CompilerCode)/Tutorial"
+			IntermediateDirectory="ReleaseVC9"
 			ConfigurationType="1"
-			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\General.vsprops;$(ACFCONFIGDIR)\VC9\Debug.vsprops;$(ACFCONFIGDIR)\VC9\Win32.vsprops"
+			InheritedPropertySheets="..\..\..\..\..\Config\VC9\General.vsprops;..\..\..\..\..\Config\VC9\Debug.vsprops;..\..\..\..\..\Config\VC9\Win32.vsprops"
 			UseOfMFC="0"
 			ATLMinimizesCRunTimeLibraryUsage="false"
 			>
@@ -132,7 +132,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..;../../../Include;../../../AuxInclude/Qt5;../../../../../Include;../../../../../AuxInclude/Qt5;..\..\..\..\..\Impl;&quot;$(QTDIR)/include&quot;;&quot;$(QTDIR)/include/QtCore&quot;;&quot;$(QTDIR)/include/QtGui&quot;;&quot;$(QTDIR)/include/QtXml&quot;;&quot;$(QTDIR)\include\QtXmlPatterns&quot;;&quot;$(QScintilla)\include&quot;"
+				AdditionalIncludeDirectories="..;../../../Include;../../../AuxInclude/Qt5;../../../../../Include;../../../../../AuxInclude/Qt5;..\..\..\..\..\Impl;&quot;C:\Qt\Qt-5.3.1-VS2008/include&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008/include/QtCore&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008/include/QtGui&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008/include/QtXml&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtXmlPatterns&quot;;&quot;C:\Temp\AcfPublic\3rdParty\QScintilla\include&quot;"
 				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -160,7 +160,7 @@
 				Name="VCLinkerTool"
 				AdditionalDependencies="AcfStd.lib AcfQt.lib"
 				OutputFile="$(OutDir)/$(ProjectName)"
-				AdditionalLibraryDirectories="&quot;$(QTDIR)\lib&quot;;&quot;..\..\..\..\..\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
+				AdditionalLibraryDirectories="&quot;C:\Qt\Qt-5.3.1-VS2008\lib&quot;;&quot;..\..\..\..\..\Lib\ReleaseVC9$(CompilerCode)&quot;"
 				GenerateDebugInformation="true"
 				SubSystem="1"
 			/>

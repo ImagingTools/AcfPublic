@@ -17,10 +17,10 @@
 	<Configurations>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="../../../../../Bin/$(ConfigurationName)$(CompilerCode)/Tutorial"
-			IntermediateDirectory="$(ConfigurationName)"
+			OutputDirectory="../../../../../Bin/ReleaseVC9$(CompilerCode)/Tutorial"
+			IntermediateDirectory="ReleaseVC9"
 			ConfigurationType="2"
-			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Component.vsprops;$(ACFCONFIGDIR)\VC9\Release.vsprops;$(ACFCONFIGDIR)\VC9\Win32.vsprops"
+			InheritedPropertySheets="..\..\..\..\..\Config\VC9\Component.vsprops;..\..\..\..\..\Config\VC9\Release.vsprops;..\..\..\..\..\Config\VC9\Win32.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -39,7 +39,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="..\..;../../../Include;../../../AuxInclude/Qt5;../../../../../Include;../../../../../AuxInclude/Qt5;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtXml&quot;"
+				AdditionalIncludeDirectories="..\..;../../../Include;../../../AuxInclude/Qt5;../../../../../Include;../../../../../AuxInclude/Qt5;&quot;C:\Qt\Qt-5.3.1-VS2008\include&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtCore&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtGui&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtXml&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
 				RuntimeLibrary="2"
 				RuntimeTypeInfo="true"
@@ -61,7 +61,7 @@
 				Name="VCLinkerTool"
 				AdditionalDependencies="AcfStd.lib AcfQt.lib"
 				OutputFile="$(OutDir)\$(ProjectName).arp"
-				AdditionalLibraryDirectories="&quot;$(QTDIR)\lib&quot;;&quot;..\..\..\..\..\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
+				AdditionalLibraryDirectories="&quot;C:\Qt\Qt-5.3.1-VS2008\lib&quot;;&quot;..\..\..\..\..\Lib\ReleaseVC9$(CompilerCode)&quot;"
 				GenerateDebugInformation="false"
 				SubSystem="1"
 			/>
@@ -89,10 +89,10 @@
 		</Configuration>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="../../../../../Bin/$(ConfigurationName)$(CompilerCode)/Tutorial"
-			IntermediateDirectory="$(ConfigurationName)"
+			OutputDirectory="../../../../../Bin/ReleaseVC9$(CompilerCode)/Tutorial"
+			IntermediateDirectory="ReleaseVC9"
 			ConfigurationType="2"
-			InheritedPropertySheets="$(ACFCONFIGDIR)\VC9\Component.vsprops;$(ACFCONFIGDIR)\VC9\Debug.vsprops;$(ACFCONFIGDIR)\VC9\Win32.vsprops"
+			InheritedPropertySheets="..\..\..\..\..\Config\VC9\Component.vsprops;..\..\..\..\..\Config\VC9\Debug.vsprops;..\..\..\..\..\Config\VC9\Win32.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -112,7 +112,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..;../../../Include;../../../AuxInclude/Qt5;../../../../../Include;../../../../../AuxInclude/Qt5;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtXml&quot;"
+				AdditionalIncludeDirectories="..\..;../../../Include;../../../AuxInclude/Qt5;../../../../../Include;../../../../../AuxInclude/Qt5;&quot;C:\Qt\Qt-5.3.1-VS2008\include&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtCore&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtGui&quot;;&quot;C:\Qt\Qt-5.3.1-VS2008\include\QtXml&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
 				RuntimeLibrary="3"
 				RuntimeTypeInfo="true"
@@ -136,7 +136,7 @@
 				Name="VCLinkerTool"
 				AdditionalDependencies="AcfStd.lib AcfQt.lib"
 				OutputFile="$(OutDir)\$(ProjectName).arp"
-				AdditionalLibraryDirectories="&quot;$(QTDIR)\lib&quot;;&quot;..\..\..\..\..\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
+				AdditionalLibraryDirectories="&quot;C:\Qt\Qt-5.3.1-VS2008\lib&quot;;&quot;..\..\..\..\..\Lib\ReleaseVC9$(CompilerCode)&quot;"
 				GenerateDebugInformation="true"
 				SubSystem="1"
 			/>
