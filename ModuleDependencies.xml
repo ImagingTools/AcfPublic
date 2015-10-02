@@ -36,8 +36,8 @@
 	<Builds>
 		<!-- generates solution -->
 		<Build IfTarget="MakeProjects">
-			<QMakeToVisualStudio Project="Acf/Build/QMake/AcfAll.pro" VisualStudioVersion="2010"/>
-			<QMakeToVisualStudio Project="AcfSln/Build/QMake/AcfSlnAll.pro" VisualStudioVersion="2010"/>
+			<QMakeToVisualStudio Project="Acf/Build/QMake/AcfAll.pro" VisualStudioVersion="2010" Version="5.2"/>
+			<QMakeToVisualStudio Project="AcfSln/Build/QMake/AcfSlnAll.pro" VisualStudioVersion="2010" Version="5.2"/>
 		</Build>
 		<Build IfTarget="MakeProjects2013">
 			<QMakeToVisualStudio Project="Acf/Build/QMake/AcfAll.pro" VisualStudioVersion="2013" Version="5.2"/>
@@ -47,33 +47,33 @@
 		<!-- Build for ACF -->
 		<Build IfTarget="Acf">
 			<Build IfPlatform="WinOS">
-				<QMakeToMakefile Project="Acf/Build/QMake/AcfAll.pro" VisualStudioVersion="2010"/>
+				<QMakeToMakefile Project="Acf/Build/QMake/AcfAll.pro" VisualStudioVersion="2010" Version="5.2"/>
 				<NMake Makefile="Acf/Build/QMake/Makefile" Version="2010">
 					<EnvironmentVariable Name="ACFDIR" Value="$BUILD_PRODUCT_FOLDER\3rdParty\AcfPublic\Acf"/>
-					<EnvironmentVariable Name="QTDIR" Value="$CONFIG_QTDIR_WINOS"/>
-					<EnvironmentVariable Name="PATH" Value="%PATH%;$CONFIG_QTDIR_WINOS\Bin"/>
+          <!--assume Qt shadow build-->
+          <EnvironmentVariable Name="QTDIR" Value="$BUILD_TEMP_FOLDER\QtLibraries\qtbase"/>
+          <EnvironmentVariable Name="PATH" Value="%PATH%;$BUILD_TEMP_FOLDER\QtLibraries\qtbase\bin"/>
 				</NMake>
-			</Build>
-			<Build IfPlatform="MacOS">
+      </Build>
+      <Build IfPlatform="MacOS">
 				<QMakeToMakefile Project="Acf/Build/QMake/AcfAll.pro"/>
 				<Make Makefile="Acf/Build/QMake/Makefile" Version="1">
 					<EnvironmentVariable Name="ACFDIR" Value="$BUILD_PRODUCT_FOLDER/3rdParty/AcfPublic/Acf"/>
-					<EnvironmentVariable Name="QTDIR" Value="$CONFIG_QTDIR_MACOS"/>
-					<EnvironmentVariable Name="PATH" Value="$PATH:$CONFIG_QTDIR_MACOS/Bin"/>
 				</Make>
-			</Build>
+      </Build>
 		</Build>
 		
 		<!-- Build for AcfSln -->
 		<Build IfTarget="AcfSln">
 			<Build IfPlatform="WinOS">
-				<QMakeToMakefile Project="AcfSln/Build/QMake/AcfSlnAll.pro" VisualStudioVersion="2010"/>
+				<QMakeToMakefile Project="AcfSln/Build/QMake/AcfSlnAll.pro" VisualStudioVersion="2010" Version="5.2"/>
 				<NMake Makefile="AcfSln/Build/QMake/Makefile" Version="2010">
           <EnvironmentVariable Name="ACFCONFIGFDIR" Value="$BUILD_PRODUCT_FOLDER\3rdParty\AcfPublic\Acf\Config"/>
           <EnvironmentVariable Name="ACFDIR" Value="$BUILD_PRODUCT_FOLDER\3rdParty\AcfPublic\Acf"/>
 					<EnvironmentVariable Name="ACFSLNDIR" Value="$BUILD_PRODUCT_FOLDER\3rdParty\AcfPublic\AcfSln"/>
-					<EnvironmentVariable Name="QTDIR" Value="$CONFIG_QTDIR_WINOS"/>
-					<EnvironmentVariable Name="PATH" Value="%PATH%;$CONFIG_QTDIR_WINOS\Bin"/>
+          <!--assume Qt shadow build-->
+          <EnvironmentVariable Name="QTDIR" Value="$BUILD_TEMP_FOLDER\QtLibraries\qtbase"/>
+          <EnvironmentVariable Name="PATH" Value="%PATH%;$BUILD_TEMP_FOLDER\QtLibraries\qtbase\bin"/>
 				</NMake>/>
 			</Build>
 			<Build IfPlatform="MacOS">
@@ -82,8 +82,6 @@
           <EnvironmentVariable Name="ACFCONFIGFDIR" Value="$BUILD_PRODUCT_FOLDER/3rdParty/AcfPublic/Acf/Config"/>
           <EnvironmentVariable Name="ACFDIR" Value="$BUILD_PRODUCT_FOLDER/3rdParty/AcfPublic/Acf"/>
 					<EnvironmentVariable Name="ACFSLNDIR" Value="$BUILD_PRODUCT_FOLDER/3rdParty/AcfPublic/AcfSln"/>
-					<EnvironmentVariable Name="QTDIR" Value="$CONFIG_QTDIR_MACOS"/>
-					<EnvironmentVariable Name="PATH" Value="$PATH:$CONFIG_QTDIR_MACOS/Bin"/>
 				</Make>
 			</Build>
 		</Build>
@@ -151,15 +149,13 @@
 		<!--Copy QT binaries to ACF bin-->
 		<Build IfTarget="AcfPublic">
 			<Build IfPlatform="WinOS">
-				<Build IfConfiguration="Debug">
-					<CopyFile From="$CONFIG_QTDIR_WINOS/bin" FromSelector="QtCored4.dll" To="$ModuleRoot/Acf/Bin/DebugVC10"/>
-          <CopyFile From="$CONFIG_QTDIR_WINOS/bin" FromSelector="QtGuid4.dll" To="$ModuleRoot/Acf/Bin/DebugVC10"/>
-          <CopyFile From="$CONFIG_QTDIR_WINOS/bin" FromSelector="QtXmld4.dll" To="$ModuleRoot/Acf/Bin/DebugVC10"/>
+        <Build IfConfiguration="Release">
+          <Shell Command="$BUILD_TEMP_FOLDER\QtLibraries\qtbase\bin\windeployqt $BUILD_PRODUCT_FOLDER\3rdParty\AcfPublic\Acf\Bin\ReleaseVC10\Arxc.exe"/>
+          <Shell Command="$BUILD_TEMP_FOLDER\QtLibraries\qtbase\bin\windeployqt $BUILD_PRODUCT_FOLDER\3rdParty\AcfPublic\AcfSln\Bin\ReleaseVC10\Compositor.exe"/>
         </Build>
-				<Build IfConfiguration="Release">
-					<CopyFile From="$CONFIG_QTDIR_WINOS/bin" FromSelector="QtCore4.dll" To="$ModuleRoot/Acf/Bin/ReleaseVC10"/>
-          <CopyFile From="$CONFIG_QTDIR_WINOS/bin" FromSelector="QtGui4.dll" To="$ModuleRoot/Acf/Bin/ReleaseVC10"/>
-          <CopyFile From="$CONFIG_QTDIR_WINOS/bin" FromSelector="QtXml4.dll" To="$ModuleRoot/Acf/Bin/ReleaseVC10"/>
+        <Build IfConfiguration="Debug">
+          <Shell Command="$BUILD_TEMP_FOLDER\QtLibraries\qtbase\bin\windeployqt $BUILD_PRODUCT_FOLDER\3rdParty\AcfPublic\Acf\Bin\DebugVC10\Arxc.exe"/>
+          <Shell Command="$BUILD_TEMP_FOLDER\QtLibraries\qtbase\bin\windeployqt $BUILD_PRODUCT_FOLDER\3rdParty\AcfPublic\AcfSln\Bin\DebugVC10\Compositor.exe"/>
         </Build>
 			</Build>
 		</Build>
