@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{64C782E2-E583-360A-9D9E-FA49579143F7}</ProjectGuid>
+    <RootNamespace>iipr</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="Configuration">
+    <OutputDirectory>..\..\..\Lib\DebugVC10\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\iipr\</IntermediateDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="Configuration">
+    <OutputDirectory>..\..\..\Lib\ReleaseVC10\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Release\iipr\</IntermediateDirectory>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\Lib\DebugVC10\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\iipr\</IntDir>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</IgnoreImportLibrary>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\Lib\ReleaseVC10\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Release\iipr\</IntDir>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\..\Acf\Include&quot;;&quot;..\..\..\..\Acf\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\Include&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iipr&quot;;$(QTDIR)\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 /MP /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\iipr\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ObjectFileName>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\iipr\</ObjectFileName>
+      <OpenMPSupport>false</OpenMPSupport>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ResourceOutputFileName>$(OutDir)\$(InputName).res</ResourceOutputFileName>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\..\Acf\Include&quot;;&quot;..\..\..\..\Acf\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\Include&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iipr&quot;;$(QTDIR)\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 /MP /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Release\iipr\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ObjectFileName>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Release\iipr\</ObjectFileName>
+      <OpenMPSupport>false</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ResourceOutputFileName>$(OutDir)\$(InputName).res</ResourceOutputFileName>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\CAdaptiveImageBinarizeProcessorComp.cpp" />
+    <ClCompile Include="..\CAutoImageNormalizeProcessorComp.cpp" />
+    <ClCompile Include="..\CBitmapJoinerSupplierComp.cpp" />
+    <ClCompile Include="..\CBitmapOperations.cpp" />
+    <ClCompile Include="..\CBitmapProviderCacheComp.cpp" />
+    <ClCompile Include="..\CCaliperDistanceFeature.cpp" />
+    <ClCompile Include="..\CCaliperFeature.cpp" />
+    <ClCompile Include="..\CCaliperParams.cpp" />
+    <ClCompile Include="..\CCaliperParamsComp.cpp" />
+    <ClCompile Include="..\CCheckerboardPatternGeneratorComp.cpp" />
+    <ClCompile Include="..\CCircleFindProcessorComp.cpp" />
+    <ClCompile Include="..\CCircleFinderParams.cpp" />
+    <ClCompile Include="..\CCircleFinderParamsComp.cpp" />
+    <ClCompile Include="..\CColorPatternComparatorComp.cpp" />
+    <ClCompile Include="..\CColorPatternControllerComp.cpp" />
+    <ClCompile Include="..\CConvolutionKernel2d.cpp" />
+    <ClCompile Include="..\CConvolutionKernel2dComp.cpp" />
+    <ClCompile Include="..\CConvolutionProcessorComp.cpp" />
+    <ClCompile Include="..\CDelegatedBitmapSupplierComp.cpp" />
+    <ClCompile Include="..\CDifferenceBitmapSupplierComp.cpp" />
+    <ClCompile Include="..\CEdgeDistanceProcessorComp.cpp" />
+    <ClCompile Include="..\CEdgeDistancesSupplierComp.cpp" />
+    <ClCompile Include="..\CExtremumCaliperProcessorComp.cpp" />
+    <ClCompile Include="..\CExtremumCaliperSupplierComp.cpp" />
+    <ClCompile Include="..\CFastGaussianProcessorComp.cpp" />
+    <ClCompile Include="..\CFeatureToImageMapperProcessorComp.cpp" />
+    <ClCompile Include="..\CFeaturesContainer.cpp" />
+    <ClCompile Include="..\CImageBinarizeProcessorComp.cpp" />
+    <ClCompile Include="..\CImageCropProcessorComp.cpp" />
+    <ClCompile Include="..\CImageFlipProcessorComp.cpp" />
+    <ClCompile Include="..\CImageHistogramProcessorComp.cpp" />
+    <ClCompile Include="..\CImageHistogramSupplierComp.cpp" />
+    <ClCompile Include="..\CImageInterpolationParams.cpp" />
+    <ClCompile Include="..\CImageInterpolationParamsComp.cpp" />
+    <ClCompile Include="..\CImageNormalizeProcessorComp.cpp" />
+    <ClCompile Include="..\CImagePolarTransformProcessorComp.cpp" />
+    <ClCompile Include="..\CImageProcessorCompBase.cpp" />
+    <ClCompile Include="..\CImageRegionProcessorCompBase.cpp" />
+    <ClCompile Include="..\CLineProjectionProcessorComp.cpp" />
+    <ClCompile Include="..\CMorphologicalProcessorComp.cpp" />
+    <ClCompile Include="..\CMultiBitmapCacheComp.cpp" />
+    <ClCompile Include="..\CMultiLineProjectionSupplierComp.cpp" />
+    <ClCompile Include="..\CMultiLineSupplierCompBase.cpp" />
+    <ClCompile Include="..\CObjectFeature.cpp" />
+    <ClCompile Include="..\CPositionFromImageSupplierComp.cpp" />
+    <ClCompile Include="..\CProcessedAcquisitionComp.cpp" />
+    <ClCompile Include="..\CProcessedBitmapSupplierComp.cpp" />
+    <ClCompile Include="..\CProjectionSupplierComp.cpp" />
+    <ClCompile Include="..\CRectDerivativeProcessor.cpp" />
+    <ClCompile Include="..\CRectDerivativeProcessorComp.cpp" />
+    <ClCompile Include="..\CRectImageSmoothProcessorComp.cpp" />
+    <ClCompile Include="..\CRgbToGrayProcessorComp.cpp" />
+    <ClCompile Include="..\CRingPatternGeneratorComp.cpp" />
+    <ClCompile Include="..\CRingPatternGeneratorParamsComp.cpp" />
+    <ClCompile Include="..\CSearchBasedFeaturesSupplierComp.cpp" />
+    <ClCompile Include="..\CSearchFeature.cpp" />
+    <ClCompile Include="..\CSearchParams.cpp" />
+    <ClCompile Include="..\CSearchParamsComp.cpp" />
+    <ClCompile Include="..\CSelectableCalibrationProviderComp.cpp" />
+    <ClCompile Include="..\CSingleFeatureConsumer.cpp" />
+    <ClCompile Include="..\CTubeProjectionLinesProviderComp.cpp" />
+    <ClCompile Include="..\CTubeProjectionsGenerator.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\CAdaptiveImageBinarizeProcessorComp.h" />
+    <ClInclude Include="..\CAutoImageNormalizeProcessorComp.h" />
+    <ClInclude Include="..\CBitmapJoinerSupplierComp.h" />
+    <ClInclude Include="..\CBitmapOperations.h" />
+    <ClInclude Include="..\CBitmapProviderCacheComp.h" />
+    <ClInclude Include="..\CCaliperDistanceFeature.h" />
+    <ClInclude Include="..\CCaliperFeature.h" />
+    <ClInclude Include="..\CCaliperParams.h" />
+    <ClInclude Include="..\CCaliperParamsComp.h" />
+    <ClInclude Include="..\CCheckerboardPatternGeneratorComp.h" />
+    <ClInclude Include="..\CCircleFindProcessorComp.h" />
+    <ClInclude Include="..\CCircleFinderParams.h" />
+    <ClInclude Include="..\CCircleFinderParamsComp.h" />
+    <ClInclude Include="..\CColorPatternComparatorComp.h" />
+    <ClInclude Include="..\CColorPatternControllerComp.h" />
+    <ClInclude Include="..\CConvolutionKernel2d.h" />
+    <ClInclude Include="..\CConvolutionKernel2dComp.h" />
+    <ClInclude Include="..\CConvolutionProcessorComp.h" />
+    <ClInclude Include="..\CDelegatedBitmapSupplierComp.h" />
+    <ClInclude Include="..\CDifferenceBitmapSupplierComp.h" />
+    <ClInclude Include="..\CEdgeDistanceProcessorComp.h" />
+    <ClInclude Include="..\CEdgeDistancesSupplierComp.h" />
+    <ClInclude Include="..\CExtremumCaliperProcessorComp.h" />
+    <ClInclude Include="..\CExtremumCaliperSupplierComp.h" />
+    <ClInclude Include="..\CFastGaussianProcessorComp.h" />
+    <ClInclude Include="..\CFeatureToImageMapperProcessorComp.h" />
+    <ClInclude Include="..\CFeaturesContainer.h" />
+    <ClInclude Include="..\CImageBinarizeProcessorComp.h" />
+    <ClInclude Include="..\CImageCropProcessorComp.h" />
+    <ClInclude Include="..\CImageFlipProcessorComp.h" />
+    <ClInclude Include="..\CImageHistogramProcessorComp.h" />
+    <ClInclude Include="..\CImageHistogramSupplierComp.h" />
+    <ClInclude Include="..\CImageInterpolationParams.h" />
+    <ClInclude Include="..\CImageInterpolationParamsComp.h" />
+    <ClInclude Include="..\CImageNormalizeProcessorComp.h" />
+    <ClInclude Include="..\CImagePolarTransformProcessorComp.h" />
+    <ClInclude Include="..\CImageProcessorCompBase.h" />
+    <ClInclude Include="..\CImageRegionProcessorCompBase.h" />
+    <ClInclude Include="..\CLineProjectionProcessorComp.h" />
+    <ClInclude Include="..\CMorphologicalProcessorComp.h" />
+    <ClInclude Include="..\CMultiBitmapCacheComp.h" />
+    <ClInclude Include="..\CMultiLineProjectionSupplierComp.h" />
+    <ClInclude Include="..\CMultiLineSupplierCompBase.h" />
+    <ClInclude Include="..\CObjectFeature.h" />
+    <ClInclude Include="..\CPositionFromImageSupplierComp.h" />
+    <ClInclude Include="..\CProcessedAcquisitionComp.h" />
+    <ClInclude Include="..\CProcessedBitmapSupplierComp.h" />
+    <ClInclude Include="..\CProjectionSupplierComp.h" />
+    <ClInclude Include="..\CRectDerivativeProcessor.h" />
+    <ClInclude Include="..\CRectDerivativeProcessorComp.h" />
+    <ClInclude Include="..\CRectImageSmoothProcessorComp.h" />
+    <ClInclude Include="..\CRgbToGrayProcessorComp.h" />
+    <ClInclude Include="..\CRingPatternGeneratorComp.h" />
+    <ClInclude Include="..\CRingPatternGeneratorParamsComp.h" />
+    <ClInclude Include="..\CSearchBasedFeaturesSupplierComp.h" />
+    <ClInclude Include="..\CSearchFeature.h" />
+    <ClInclude Include="..\CSearchParams.h" />
+    <ClInclude Include="..\CSearchParamsComp.h" />
+    <ClInclude Include="..\CSelectableCalibrationProviderComp.h" />
+    <ClInclude Include="..\CSingleFeatureConsumer.h" />
+    <ClInclude Include="..\CTubeProjectionLinesProviderComp.h" />
+    <ClInclude Include="..\CTubeProjectionsGenerator.h" />
+    <ClInclude Include="..\ICaliperParams.h" />
+    <ClInclude Include="..\ICaliperProcessor.h" />
+    <ClInclude Include="..\ICircleFinderParams.h" />
+    <ClInclude Include="..\IConvolutionKernel2d.h" />
+    <ClInclude Include="..\IFeatureToFeatureProcessor.h" />
+    <ClInclude Include="..\IFeatureToImageMapper.h" />
+    <ClInclude Include="..\IFeatureToProjectionMapper.h" />
+    <ClInclude Include="..\IFeaturesConsumer.h" />
+    <ClInclude Include="..\IImageInterpolationParams.h" />
+    <ClInclude Include="..\IImageToFeatureProcessor.h" />
+    <ClInclude Include="..\ILineProjectionProcessor.h" />
+    <ClInclude Include="..\IPatternController.h" />
+    <ClInclude Include="..\IProjectionConstraints.h" />
+    <ClInclude Include="..\IProjectionParams.h" />
+    <ClInclude Include="..\IRingPatternGeneratorParams.h" />
+    <ClInclude Include="..\ISearchConstraints.h" />
+    <ClInclude Include="..\ISearchParams.h" />
+    <ClInclude Include="..\TImageParamProcessorCompBase.h" />
+    <ClInclude Include="..\TImagePixelInterpolator.h" />
+    <ClInclude Include="..\TProcessedBitmapSupplierComp.h" />
+    <ClInclude Include="..\TUnaryTransformProcessorComp.h" />
+    <ClInclude Include="..\TWeightedFeatureWrap.h" />
+    <ClInclude Include="..\iipr.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Qt5Version_x0020_Win32="$(DefaultQtVersion)" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
