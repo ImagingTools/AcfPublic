@@ -249,6 +249,9 @@ bool CMultiDocumentManagerBase::OpenDocument(
 		const QString& fileName = *iter;
 
 		QByteArray documentTypeId;
+		if (documentTypeIdPtr != NULL){
+			documentTypeId = *documentTypeIdPtr;
+		}
 		istd::IChangeable* openDocumentPtr = OpenSingleDocument(fileName, createView, viewTypeId, documentTypeId, beQuiet, ignoredPtr);
 		if (openDocumentPtr != NULL){
 			if (loadedMapPtr != NULL){
@@ -589,6 +592,11 @@ istd::IChangeable* CMultiDocumentManagerBase::OpenSingleDocument(
 	}
 
 	IDocumentTemplate::Ids documentIds = documentTemplatePtr->GetDocumentTypeIdsForFile(filePath);
+	if (documentIds.isEmpty()){
+		if (!documentTypeId.isEmpty()){
+			documentIds.push_back(documentTypeId);
+		}
+	}
 
 	if (!documentIds.isEmpty()){
 		documentTypeId = documentIds.front();
