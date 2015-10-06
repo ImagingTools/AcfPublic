@@ -6,7 +6,12 @@
 		<Target Language="CPP" Name="Acf"/>
 		<Target Language="CPP" Name="AcfSln"/>
 		<Target Language="CPP" Name="MakeProjects"/>
-		<!-- Targets for Visual Studio 2013 builds-->
+    <!-- Targets for Visual Studio 2010 builds with Qt5 -->
+    <Target Language="CPP" Name="AcfPublic2010Qt5"/>
+    <Target Language="CPP" Name="Acf2010Qt5"/>
+    <Target Language="CPP" Name="AcfSln2010Qt5"/>
+    <Target Language="CPP" Name="MakeProjects2010Qt5"/>
+    <!-- Targets for Visual Studio 2013 builds-->
 		<Target Language="CPP" Name="AcfPublic2013"/>
 		<Target Language="CPP" Name="Acf2013"/>
 		<Target Language="CPP" Name="AcfSln2103"/>
@@ -24,7 +29,14 @@
 			<Module Name="AcfPublic" Target="Acf"/>
 			<Module Name="AcfPublic" Target="AcfSln"/>
 		</Dependency>
-		<Dependency IfTarget="AcfSln2013">
+    <Dependency IfTarget="AcfSln2010Qt5">
+      <Module Name="AcfPublic" Target="Acf2010Qt5"/>
+    </Dependency>
+    <Dependency IfTarget="AcfPublic2010Qt5">
+      <Module Name="AcfPublic" Target="Acf2010Qt5"/>
+      <Module Name="AcfPublic" Target="AcfSln2010Qt5"/>
+    </Dependency>
+    <Dependency IfTarget="AcfSln2013">
 			<Module Name="AcfPublic" Target="Acf2013"/>
 		</Dependency>
 		<Dependency IfTarget="AcfPublic2013">
