@@ -54,9 +54,6 @@ CRegistryElementShape::CRegistryElementShape(
 			const icmpstr::ISceneProvider* providerPtr)
 :	BaseClass(true, providerPtr),
 	m_registryView(*registryViewPtr),
-	m_exportIcon(":/Icons/Export"),
-	m_noteAttachedIcon(":/Icons/NoteAttached"),
-	m_autoInitIcon(":/Icons/AutoInit"),
 	m_isConsistent(false),
 	m_componentType(0)
 {
@@ -116,6 +113,10 @@ void CRegistryElementShape::paint(QPainter* painterPtr, const QStyleOptionGraphi
 	if (objectPtr == NULL){
 		return;
 	}
+
+	static QIcon exportIcon(":/Icons/Export");
+	static QIcon noteAttachedIcon(":/Icons/NoteAttached");
+	static QIcon autoInitIcon(":/Icons/AutoInit");
 
 	painterPtr->setRenderHints(QPainter::Antialiasing, true);
 
@@ -195,7 +196,7 @@ void CRegistryElementShape::paint(QPainter* painterPtr, const QStyleOptionGraphi
 					mainRect.top(),
 					attributeIconSize,
 					attributeIconSize);
-		m_exportIcon.paint(painterPtr, iconRect.toRect());
+		exportIcon.paint(painterPtr, iconRect.toRect());
 	}
 
 	// draw element flags icon:
@@ -207,7 +208,7 @@ void CRegistryElementShape::paint(QPainter* painterPtr, const QStyleOptionGraphi
 					attributeIconSize,
 					attributeIconSize);
 
-		m_autoInitIcon.paint(painterPtr, iconRect.toRect());
+		autoInitIcon.paint(painterPtr, iconRect.toRect());
 	}
 
 	// draw 'note attached' icon:
@@ -217,7 +218,7 @@ void CRegistryElementShape::paint(QPainter* painterPtr, const QStyleOptionGraphi
 					mainRect.top(),
 					attributeIconSize,
 					attributeIconSize);
-		m_noteAttachedIcon.paint(painterPtr, iconRect.toRect());
+		noteAttachedIcon.paint(painterPtr, iconRect.toRect());
 	}
 }
 
