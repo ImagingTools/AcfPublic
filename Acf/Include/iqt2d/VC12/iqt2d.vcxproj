@@ -125,6 +125,7 @@
     <ClCompile Include="..\CCircleParamsGuiComp.cpp" />
     <ClCompile Include="..\CExtendedConsoleGuiComp.cpp" />
     <ClCompile Include="..\CImageViewComp.cpp" />
+    <ClCompile Include="..\CIntParamAction.cpp" />
     <ClCompile Include="..\CLine2dParamsGuiComp.cpp" />
     <ClCompile Include="..\CMultiBitmapViewComp.cpp" />
     <ClCompile Include="..\COrientedCircleEditorComp.cpp" />
@@ -191,6 +192,7 @@
     </CustomBuild>
     <ClInclude Include="..\CExtendedConsoleGuiComp.h" />
     <ClInclude Include="..\CImageViewComp.h" />
+    <ClInclude Include="..\CIntParamAction.h" />
     <CustomBuild Include="..\CLine2dParamsGuiComp.h">
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CLine2dParamsGuiComp.h;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I..\..\..\/Include/iqt2d/QMake -I..\..\..\/AuxInclude/Qt5_VC12 -I..\..\..\/Include -I..\..\..\/AuxInclude/Qt5_VC12 -I..\..\..\/Include -I..\..\..\/Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CLine2dParamsGuiComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqt2d\moc_CLine2dParamsGuiComp.cpp</Command>
@@ -268,6 +270,7 @@
     <ClInclude Include="..\CViewProviderGuiComp.h" />
     <ClInclude Include="..\IViewExtender.h" />
     <ClInclude Include="..\IViewProvider.h" />
+    <ClInclude Include="..\TCircleBasedParamsGuiComp.h" />
     <ClInclude Include="..\TMultiViewExtenderDelegatorCompWrap.h" />
     <ClInclude Include="..\TPolygonBasedParamsGuiComp.h" />
     <ClInclude Include="..\TShapeParamsGuiCompBase.h" />
@@ -301,7 +304,6 @@
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqt2d\ui_CCircleParamsGuiComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqt2d\ui_CExtendedConsoleGuiComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqt2d\ui_CLine2dParamsGuiComp.h" />
-    <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqt2d\ui_COrientedCircleEditorComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqt2d\ui_CPolygonParamsGuiComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqt2d\ui_CQuadrangleParamsGuiComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqt2d\ui_CRectangleParamsGuiComp.h" />
@@ -384,17 +386,6 @@
       <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\uic.exe ..\CLine2dParamsGuiComp.ui -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqt2d\ui_CLine2dParamsGuiComp.h</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ..\CLine2dParamsGuiComp.ui</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqt2d\ui_CLine2dParamsGuiComp.h;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="..\COrientedCircleEditorComp.ui">
-      <FileType>Document</FileType>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\COrientedCircleEditorComp.ui;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\uic.exe ..\COrientedCircleEditorComp.ui -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqt2d\ui_COrientedCircleEditorComp.h</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">UIC ..\COrientedCircleEditorComp.ui</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqt2d\ui_COrientedCircleEditorComp.h;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\COrientedCircleEditorComp.ui;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\uic.exe ..\COrientedCircleEditorComp.ui -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqt2d\ui_COrientedCircleEditorComp.h</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ..\COrientedCircleEditorComp.ui</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqt2d\ui_COrientedCircleEditorComp.h;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="..\CPolygonParamsGuiComp.ui">
       <FileType>Document</FileType>

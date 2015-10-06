@@ -158,12 +158,6 @@ void CPolylineParamsGuiComp::OnGuiCreated()
 }
 
 
-void CPolylineParamsGuiComp::OnToolsButtonMenuActionTriggered(QAction* action)
-{
-	BaseClass::OnToolsButtonMenuActionTriggered(action);
-}
-
-
 void CPolylineParamsGuiComp::OnGuiModelAttached()
 {
 	BaseClass::OnGuiModelAttached();
@@ -180,6 +174,8 @@ void CPolylineParamsGuiComp::OnGuiModelDetached()
 }
 
 
+// privates
+
 void CPolylineParamsGuiComp::UpdateClosedLineCheckBox(bool /*forceEnabled*/, bool forceHidden)
 {
 	CloseLineCheckBox->setHidden(true);
@@ -189,6 +185,14 @@ void CPolylineParamsGuiComp::UpdateClosedLineCheckBox(bool /*forceEnabled*/, boo
 		CloseLineCheckBox->setChecked(polylinePtr->IsClosed());
 		CloseLineCheckBox->setHidden(false);
 	}
+}
+
+
+// pseudo slots
+
+void CPolylineParamsGuiComp::OnActionTriggered(QAction* actionPtr)
+{
+	BaseClass::OnActionTriggered(actionPtr);
 }
 
 

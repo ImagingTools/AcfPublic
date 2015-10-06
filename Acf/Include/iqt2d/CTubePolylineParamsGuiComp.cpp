@@ -60,6 +60,12 @@ void CTubePolylineParamsGuiComp::OnParamsChanged()
 }
 
 
+void CTubePolylineParamsGuiComp::OnActionTriggered(QAction* actionPtr)
+{
+	BaseClass::OnActionTriggered(actionPtr);
+}
+
+
 void CTubePolylineParamsGuiComp::on_InsertButton_clicked()
 {
 	OnInsertNode();
@@ -81,12 +87,6 @@ void CTubePolylineParamsGuiComp::on_CopyButton_clicked()
 void CTubePolylineParamsGuiComp::on_PasteButton_clicked()
 {
 	OnPasteData();
-}
-
-
-void CTubePolylineParamsGuiComp::OnToolsButtonMenuActionTriggered(QAction* action)
-{
-	BaseClass::OnToolsButtonMenuActionTriggered(action);
 }
 
 

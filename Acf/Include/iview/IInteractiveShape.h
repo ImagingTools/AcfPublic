@@ -24,6 +24,7 @@
 #define iview_IInteractiveShape_included
 
 
+// ACF includes
 #include "iview/IShape.h"
 #include "iview/IMouseActionObserver.h"
 
@@ -51,20 +52,6 @@ public:
 		\param	selectFlag	if \c true - selection, else deselection.
 	*/
 	virtual void SetSelected(bool selectFlag = true) = 0;
-
-
-	enum ShapeAction
-	{
-		ActionFlipHorizontally = 100, 
-		ActionFlipVertically, 
-		ActionRotateClockwise, 
-		ActionRotateCounterclockwise, 
-		ActionReverseLine
-	};
-
-	virtual bool IsActionAvailable(ShapeAction action) const = 0;
-
-	virtual bool ExecuteAction(ShapeAction action) = 0;
 };
 
 

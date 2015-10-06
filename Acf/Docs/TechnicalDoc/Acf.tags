@@ -4075,7 +4075,7 @@
     <filename>_c_circle_params_gui_comp_8h</filename>
     <includes id="_c_circle_8h" name="CCircle.h" local="yes" imported="no">i2d/CCircle.h</includes>
     <includes id="_c_circle_shape_8h" name="CCircleShape.h" local="yes" imported="no">iview/CCircleShape.h</includes>
-    <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <includes id="_t_circle_based_params_gui_comp_8h" name="TCircleBasedParamsGuiComp.h" local="yes" imported="no">iqt2d/TCircleBasedParamsGuiComp.h</includes>
     <class kind="class">iqt2d::CCircleParamsGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -4101,6 +4101,13 @@
     <includes id="_c_image_shape_8h" name="CImageShape.h" local="yes" imported="no">iview/CImageShape.h</includes>
     <includes id="_c_view_provider_gui_comp_8h" name="CViewProviderGuiComp.h" local="yes" imported="no">iqt2d/CViewProviderGuiComp.h</includes>
     <class kind="class">iqt2d::CImageViewComp</class>
+    <namespace>iqt2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CIntParamAction.h</name>
+    <path>C:/Temp/Acf/Include/iqt2d/</path>
+    <filename>_c_int_param_action_8h</filename>
+    <class kind="class">iqt2d::CIntParamAction</class>
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
@@ -4139,7 +4146,7 @@
     <filename>_c_oriented_circle_editor_comp_8h</filename>
     <includes id="_c_oriented_circle_8h" name="COrientedCircle.h" local="yes" imported="no">i2d/COrientedCircle.h</includes>
     <includes id="_c_oriented_circle_shape_8h" name="COrientedCircleShape.h" local="yes" imported="no">iview/COrientedCircleShape.h</includes>
-    <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <includes id="_t_circle_based_params_gui_comp_8h" name="TCircleBasedParamsGuiComp.h" local="yes" imported="no">iqt2d/TCircleBasedParamsGuiComp.h</includes>
     <class kind="class">iqt2d::COrientedCircleEditorComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -4266,6 +4273,14 @@
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
+    <name>TCircleBasedParamsGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqt2d/</path>
+    <filename>_t_circle_based_params_gui_comp_8h</filename>
+    <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <class kind="class">iqt2d::TCircleBasedParamsGuiComp</class>
+    <namespace>iqt2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>TMultiViewExtenderDelegatorCompWrap.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_t_multi_view_extender_delegator_comp_wrap_8h</filename>
@@ -4305,6 +4320,7 @@
     <includes id="_i_color_schema_8h" name="IColorSchema.h" local="yes" imported="no">iview/IColorSchema.h</includes>
     <includes id="_i_shape_factory_8h" name="IShapeFactory.h" local="yes" imported="no">iview/IShapeFactory.h</includes>
     <includes id="_t_view_extender_comp_base_8h" name="TViewExtenderCompBase.h" local="yes" imported="no">iqt2d/TViewExtenderCompBase.h</includes>
+    <includes id="_c_int_param_action_8h" name="CIntParamAction.h" local="yes" imported="no">iqt2d/CIntParamAction.h</includes>
     <class kind="class">iqt2d::TShapeParamsGuiCompBase</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -9202,6 +9218,34 @@
       <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
       <anchor>a72c2492397c3e1b6c2c3b3bc702e9d7d</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>FlipByX</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>ae99e8beb6a4d5e5a1212d5bda9fff509</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>FlipByY</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a791cac2920fe1f244aa2a6d92202e884</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Rotate</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a2b6128a25aaf90bea41efd86c0030a15</anchor>
+      <arglist>(double radians)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ReverseNodes</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a3b34ee87958101bc2572acdeb0d8fd1b</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual CVector2d</type>
@@ -44873,6 +44917,7 @@
     <class kind="class">iqt2d::CCircleParamsGuiComp</class>
     <class kind="class">iqt2d::CExtendedConsoleGuiComp</class>
     <class kind="class">iqt2d::CImageViewComp</class>
+    <class kind="class">iqt2d::CIntParamAction</class>
     <class kind="class">iqt2d::CLine2dParamsGuiComp</class>
     <class kind="class">iqt2d::CMultiBitmapViewComp</class>
     <class kind="class">iqt2d::COrientedCircleEditorComp</class>
@@ -44887,6 +44932,7 @@
     <class kind="class">iqt2d::CViewProviderGuiComp</class>
     <class kind="class">iqt2d::IViewExtender</class>
     <class kind="class">iqt2d::IViewProvider</class>
+    <class kind="class">iqt2d::TCircleBasedParamsGuiComp</class>
     <class kind="class">iqt2d::TMultiViewExtenderDelegatorCompWrap</class>
     <class kind="class">iqt2d::TPolygonBasedParamsGuiComp</class>
     <class kind="class">iqt2d::TShapeParamsGuiCompBase</class>
@@ -45350,12 +45396,19 @@
   <compound kind="class">
     <name>iqt2d::CCircleParamsGuiComp</name>
     <filename>classiqt2d_1_1_c_circle_params_gui_comp.html</filename>
-    <base>TShapeParamsGuiCompBase&lt; Ui::CCircleParamsGuiComp, iview::CCircleShape, i2d::CCircle &gt;</base>
+    <base>TCircleBasedParamsGuiComp&lt; iview::CCircleShape, i2d::CCircle &gt;</base>
+    <member kind="typedef">
+      <type>iqt2d::TCircleBasedParamsGuiComp&lt; iview::CCircleShape, i2d::CCircle &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
+      <anchor>ab198641e81b75e32b1fcb2bce61a125c</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CCircleParamsGuiComp, iview::CCircleShape, i2d::CCircle &gt;</type>
       <name>BaseClass</name>
-      <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
-      <anchor>a1d094c79b24043bc9478718f443df994</anchor>
+      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
+      <anchor>a398cb6819bc1a921661dcb03f1d92234</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -45372,12 +45425,26 @@
       <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
       <arglist></arglist>
     </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnParamsChanged</name>
+      <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
+      <anchor>a55f85e6bfb1d1febeb5a8a4151b619a2</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnActionTriggered</name>
+      <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
+      <anchor>ae5c7ed92d41909ff1d442dcb18b8c652</anchor>
+      <arglist>(QAction *actionPtr)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateModel</name>
-      <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
-      <anchor>a2583ba5148363c31c957d1cc44a2f242</anchor>
-      <arglist>() const </arglist>
+      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
+      <anchor>aaf6d8505c64393aa19af3f3027f9581c</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -45407,40 +45474,40 @@
       <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
       <arglist>(i2d::CCircle *objectPtr)</arglist>
     </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnParamsChanged</name>
-      <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
-      <anchor>a55f85e6bfb1d1febeb5a8a4151b619a2</anchor>
-      <arglist>(double value)</arglist>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
+      <anchor>a38708304cbaae060ad61090774353c8d</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
-      <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
-      <anchor>a70d95191d7ee27ac88a8d79291702059</anchor>
+      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
+      <anchor>a3b98150523e50db40ca97562664b448e</anchor>
       <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
-      <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
-      <anchor>a7270bb772e1e5107eb9186311cc7fa3c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
-      <anchor>a7c9da1becddb3b3c8766aad15cd5db20</anchor>
+      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
+      <anchor>a58a9c5488e13e801ad22f0f91bd77e67</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiRetranslate</name>
-      <anchorfile>classiqt2d_1_1_c_circle_params_gui_comp.html</anchorfile>
-      <anchor>a28205a3aa9889c2fb5cd041c17f25d89</anchor>
+      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
+      <anchor>abe7ffb3fffa20d85e2983f4333ecdb3c</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnActionTriggered</name>
+      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
+      <anchor>a41b9dc74c0d86808c2b2aa44d7745f33</anchor>
+      <arglist>(QAction *actionPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual i2d::CCircle *</type>
@@ -46017,6 +46084,66 @@
       <name>m_isReadOnly</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
       <anchor>ae87c806f71e7d6f45aac777d8e5f5f25</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::CIntParamAction</name>
+    <filename>classiqt2d_1_1_c_int_param_action.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CIntParamAction</name>
+      <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
+      <anchor>aa22425628449917dc036953ff2b270a9</anchor>
+      <arglist>(const QIcon &amp;icon, const QString &amp;text, int minValue, int maxValue, int value, QObject *parentPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CIntParamAction</name>
+      <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
+      <anchor>aef1114937092edfe2f86a567eec5f8bd</anchor>
+      <arglist>(const QString &amp;text, int minValue, int maxValue, int value, QObject *parentPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetValue</name>
+      <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
+      <anchor>a53c105303e248d4739042fa48a0ca6eb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>QSpinBox *</type>
+      <name>GetEditor</name>
+      <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
+      <anchor>a2158275a0d8d212b1c0da9379f88ec7e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>QWidgetAction *</type>
+      <name>GetWidgetAction</name>
+      <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
+      <anchor>abf9eaba664afee86a37d4d82679d8e37</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>Init</name>
+      <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
+      <anchor>a5827e6f60bf5782730dc16561d0bd711</anchor>
+      <arglist>(int minValue, int maxValue, int value)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QWidgetAction *</type>
+      <name>m_widgetActionPtr</name>
+      <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
+      <anchor>a975db219464cd8d441356920b65da9b4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QSpinBox *</type>
+      <name>m_spinEditor</name>
+      <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
+      <anchor>a9117c43970d4c69ea3d118cb55964cdb</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -46600,12 +46727,19 @@
   <compound kind="class">
     <name>iqt2d::COrientedCircleEditorComp</name>
     <filename>classiqt2d_1_1_c_oriented_circle_editor_comp.html</filename>
-    <base>TShapeParamsGuiCompBase&lt; Ui::COrientedCircleEditorComp, iview::COrientedCircleShape, i2d::COrientedCircle &gt;</base>
+    <base>TCircleBasedParamsGuiComp&lt; iview::COrientedCircleShape, i2d::COrientedCircle &gt;</base>
     <member kind="typedef">
-      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::COrientedCircleEditorComp, iview::COrientedCircleShape, i2d::COrientedCircle &gt;</type>
+      <type>iqt2d::TCircleBasedParamsGuiComp&lt; iview::COrientedCircleShape, i2d::COrientedCircle &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_oriented_circle_editor_comp.html</anchorfile>
-      <anchor>a16ed23f60fabf014ea34ba0f2064b89b</anchor>
+      <anchor>a509a08e1749c78558c9dd54d0bfe4cfb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CCircleParamsGuiComp, iview::COrientedCircleShape, i2d::COrientedCircle &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
+      <anchor>a398cb6819bc1a921661dcb03f1d92234</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -46622,12 +46756,19 @@
       <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>COrientedCircleEditorComp</name>
+      <anchorfile>classiqt2d_1_1_c_oriented_circle_editor_comp.html</anchorfile>
+      <anchor>ac05a583ef77d5d50df06830f7f296d6c</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateModel</name>
-      <anchorfile>classiqt2d_1_1_c_oriented_circle_editor_comp.html</anchorfile>
-      <anchor>a935d3580272894cb35006af587b34cb3</anchor>
-      <arglist>() const </arglist>
+      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
+      <anchor>aaf6d8505c64393aa19af3f3027f9581c</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -46666,38 +46807,52 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>on_AxisOrientationCheckBox_stateChanged</name>
+      <name>OnActionTriggered</name>
       <anchorfile>classiqt2d_1_1_c_oriented_circle_editor_comp.html</anchorfile>
-      <anchor>ac653754a8553fd9dd7b6a3874b5d9bd7</anchor>
-      <arglist>(int state)</arglist>
+      <anchor>ad70c727b9a33b5d63248c3a40776f86e</anchor>
+      <arglist>(QAction *actionPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>PopulateActions</name>
+      <anchorfile>classiqt2d_1_1_c_oriented_circle_editor_comp.html</anchorfile>
+      <anchor>ad22f98a7588346d00455ecd5ed17d3ef</anchor>
+      <arglist>(QWidget &amp;host, imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
+      <anchor>a38708304cbaae060ad61090774353c8d</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
-      <anchorfile>classiqt2d_1_1_c_oriented_circle_editor_comp.html</anchorfile>
-      <anchor>aa1f0e440b1be35d6e9f3574d1a8240d3</anchor>
+      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
+      <anchor>a3b98150523e50db40ca97562664b448e</anchor>
       <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
-      <anchorfile>classiqt2d_1_1_c_oriented_circle_editor_comp.html</anchorfile>
-      <anchor>a284ac9482b2ec65bbc7c189fb00ddf0a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqt2d_1_1_c_oriented_circle_editor_comp.html</anchorfile>
-      <anchor>a72d2019f4251d1fa0f89b8c0db87d839</anchor>
+      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
+      <anchor>a58a9c5488e13e801ad22f0f91bd77e67</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiRetranslate</name>
-      <anchorfile>classiqt2d_1_1_c_oriented_circle_editor_comp.html</anchorfile>
-      <anchor>ae1b42021a314aea6e39a001068d6a848</anchor>
+      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
+      <anchor>abe7ffb3fffa20d85e2983f4333ecdb3c</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnActionTriggered</name>
+      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
+      <anchor>a41b9dc74c0d86808c2b2aa44d7745f33</anchor>
+      <arglist>(QAction *actionPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual i2d::COrientedCircle *</type>
@@ -46705,6 +46860,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
       <arglist>(imod::IModel *modelPtr) const</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction</type>
+      <name>m_reversePolarityAction</name>
+      <anchorfile>classiqt2d_1_1_c_oriented_circle_editor_comp.html</anchorfile>
+      <anchor>a0244ec69b9bf6497a5c4775216cb5893</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -46746,47 +46908,19 @@
       <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
       <arglist></arglist>
     </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnParamsChanged</name>
+    <member kind="function">
+      <type></type>
+      <name>CPolygonParamsGuiComp</name>
       <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
-      <anchor>aaebf2b248a8892df45e085fd9cc9cf1e</anchor>
+      <anchor>acda4ff08c794f4ee5a7f34d9335f3c22</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_InsertButton_clicked</name>
-      <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
-      <anchor>adedb82b77b775557991fb2052d21258c</anchor>
+    <member kind="function">
+      <type></type>
+      <name>TPolygonBasedParamsGuiComp</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>aa70f0f398f5bbc38b4ac0ad0f7e09e32</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_RemoveButton_clicked</name>
-      <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
-      <anchor>a35626fa890256d20063edea1edf0179a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_CopyButton_clicked</name>
-      <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
-      <anchor>a8dbac8ba2b0ccd30f0ffd389265f0189</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_PasteButton_clicked</name>
-      <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
-      <anchor>a3adb90150890a25794ae767f9c53eb98</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnToolsButtonMenuActionTriggered</name>
-      <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
-      <anchor>af93d9ea2ae206dfcd6d4278c8c621d05</anchor>
-      <arglist>(QAction *action)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -46822,6 +46956,48 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
       <arglist>(i2d::CPolygon *objectPtr)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnParamsChanged</name>
+      <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
+      <anchor>aaebf2b248a8892df45e085fd9cc9cf1e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnActionTriggered</name>
+      <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
+      <anchor>a13586714501f5c06ba09b649d627ac6d</anchor>
+      <arglist>(QAction *actionPtr)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_InsertButton_clicked</name>
+      <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
+      <anchor>adedb82b77b775557991fb2052d21258c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_RemoveButton_clicked</name>
+      <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
+      <anchor>a35626fa890256d20063edea1edf0179a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_CopyButton_clicked</name>
+      <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
+      <anchor>a8dbac8ba2b0ccd30f0ffd389265f0189</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_PasteButton_clicked</name>
+      <anchorfile>classiqt2d_1_1_c_polygon_params_gui_comp.html</anchorfile>
+      <anchor>a3adb90150890a25794ae767f9c53eb98</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -46888,24 +47064,38 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiShown</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a6d16bf350e992e936c5a308dea76ba8e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiHidden</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>ac0fdae358f18c600b23549b5e87d00d5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a639829115b16468f337578e9eb36855b</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateToolsMenuButton</name>
+      <type>virtual bool</type>
+      <name>PopulateActions</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a1d0ab5de4589426871b97f361da07ce4</anchor>
-      <arglist>()</arglist>
+      <anchor>ae189e89abf5305391398faf4f33bfe87</anchor>
+      <arglist>(QWidget &amp;host, imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnToolsButtonMenuActionTriggered</name>
+      <name>OnActionTriggered</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a449dd47e6f484eb6415de32521f31731</anchor>
-      <arglist>(QAction *action)</arglist>
+      <anchor>a242d199c7aaf17853bd368e24094d86d</anchor>
+      <arglist>(QAction *actionPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual i2d::CPolygon *</type>
@@ -46913,6 +47103,41 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
       <arglist>(imod::IModel *modelPtr) const</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction</type>
+      <name>m_flipHorizontalAction</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a4f48ceca294f2b522f44cbab9e4b6679</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction</type>
+      <name>m_flipVerticalAction</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a0e86ccd3217b9fe1d6b3b6540691b21e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction</type>
+      <name>m_rotateCwAction</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a1e6f301c3ebfc4f0aa1678d8132f8281</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction</type>
+      <name>m_rotateCcwAction</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a7289e13b0ebe3e1b5f2f6b55ab690f66</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction</type>
+      <name>m_reversePolarityAction</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>af7085dae6a4c8c12f9ea43fa3ff6fbc2</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -46960,6 +47185,13 @@
       <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
       <anchor>aaf3b61ce9d73608a10d70aa930979db9</anchor>
       <arglist>(const istd::IChangeable *objectPtr, bool connectToModel=false) const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TPolygonBasedParamsGuiComp</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>aa70f0f398f5bbc38b4ac0ad0f7e09e32</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -47068,10 +47300,10 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>OnToolsButtonMenuActionTriggered</name>
+      <name>OnActionTriggered</name>
       <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
-      <anchor>a5faec4dbebf465c38af818f4212e752a</anchor>
-      <arglist>(QAction *action)</arglist>
+      <anchor>a00bed9a32198563e87493705e353470f</anchor>
+      <arglist>(QAction *actionPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -47138,24 +47370,38 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiShown</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a6d16bf350e992e936c5a308dea76ba8e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiHidden</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>ac0fdae358f18c600b23549b5e87d00d5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a639829115b16468f337578e9eb36855b</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateToolsMenuButton</name>
+      <type>virtual bool</type>
+      <name>PopulateActions</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a1d0ab5de4589426871b97f361da07ce4</anchor>
-      <arglist>()</arglist>
+      <anchor>ae189e89abf5305391398faf4f33bfe87</anchor>
+      <arglist>(QWidget &amp;host, imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnToolsButtonMenuActionTriggered</name>
+      <name>OnActionTriggered</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a449dd47e6f484eb6415de32521f31731</anchor>
-      <arglist>(QAction *action)</arglist>
+      <anchor>a242d199c7aaf17853bd368e24094d86d</anchor>
+      <arglist>(QAction *actionPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual i2d::CPolyline *</type>
@@ -47163,6 +47409,41 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
       <arglist>(imod::IModel *modelPtr) const</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction</type>
+      <name>m_flipHorizontalAction</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a4f48ceca294f2b522f44cbab9e4b6679</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction</type>
+      <name>m_flipVerticalAction</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a0e86ccd3217b9fe1d6b3b6540691b21e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction</type>
+      <name>m_rotateCwAction</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a1e6f301c3ebfc4f0aa1678d8132f8281</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction</type>
+      <name>m_rotateCcwAction</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a7289e13b0ebe3e1b5f2f6b55ab690f66</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction</type>
+      <name>m_reversePolarityAction</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>af7085dae6a4c8c12f9ea43fa3ff6fbc2</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -47612,6 +47893,13 @@
     </member>
     <member kind="function">
       <type></type>
+      <name>TPolygonBasedParamsGuiComp</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>aa70f0f398f5bbc38b4ac0ad0f7e09e32</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
       <name>TSingleModelObserverBase</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
@@ -47647,6 +47935,13 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
+      <name>OnActionTriggered</name>
+      <anchorfile>classiqt2d_1_1_c_tube_polyline_params_gui_comp.html</anchorfile>
+      <anchor>a41ddca26903a48f4ab332c254e487968</anchor>
+      <arglist>(QAction *actionPtr)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
       <name>on_InsertButton_clicked</name>
       <anchorfile>classiqt2d_1_1_c_tube_polyline_params_gui_comp.html</anchorfile>
       <anchor>ac8fa0027ab5fdd821b0967221829e2b6</anchor>
@@ -47672,13 +47967,6 @@
       <anchorfile>classiqt2d_1_1_c_tube_polyline_params_gui_comp.html</anchorfile>
       <anchor>a2ac8fda09899d4fa0fbfc861c78b64ff</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnToolsButtonMenuActionTriggered</name>
-      <anchorfile>classiqt2d_1_1_c_tube_polyline_params_gui_comp.html</anchorfile>
-      <anchor>a989afead933717938d5d52fda21e234a</anchor>
-      <arglist>(QAction *action)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -47752,24 +48040,38 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiShown</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a6d16bf350e992e936c5a308dea76ba8e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiHidden</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>ac0fdae358f18c600b23549b5e87d00d5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a639829115b16468f337578e9eb36855b</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateToolsMenuButton</name>
+      <type>virtual bool</type>
+      <name>PopulateActions</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a1d0ab5de4589426871b97f361da07ce4</anchor>
-      <arglist>()</arglist>
+      <anchor>ae189e89abf5305391398faf4f33bfe87</anchor>
+      <arglist>(QWidget &amp;host, imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnToolsButtonMenuActionTriggered</name>
+      <name>OnActionTriggered</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a449dd47e6f484eb6415de32521f31731</anchor>
-      <arglist>(QAction *action)</arglist>
+      <anchor>a242d199c7aaf17853bd368e24094d86d</anchor>
+      <arglist>(QAction *actionPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual i2d::CTubePolyline *</type>
@@ -47777,6 +48079,41 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
       <arglist>(imod::IModel *modelPtr) const</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction</type>
+      <name>m_flipHorizontalAction</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a4f48ceca294f2b522f44cbab9e4b6679</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction</type>
+      <name>m_flipVerticalAction</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a0e86ccd3217b9fe1d6b3b6540691b21e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction</type>
+      <name>m_rotateCwAction</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a1e6f301c3ebfc4f0aa1678d8132f8281</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction</type>
+      <name>m_rotateCcwAction</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a7289e13b0ebe3e1b5f2f6b55ab690f66</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction</type>
+      <name>m_reversePolarityAction</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>af7085dae6a4c8c12f9ea43fa3ff6fbc2</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -47973,6 +48310,111 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqt2d::TCircleBasedParamsGuiComp</name>
+    <filename>classiqt2d_1_1_t_circle_based_params_gui_comp.html</filename>
+    <templarg>CircleBasedShape</templarg>
+    <templarg>CircleBasedModel</templarg>
+    <base>TShapeParamsGuiCompBase&lt; Ui::CCircleParamsGuiComp, CircleBasedShape, CircleBasedModel &gt;</base>
+    <member kind="typedef">
+      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CCircleParamsGuiComp, CircleBasedShape, CircleBasedModel &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
+      <anchor>a398cb6819bc1a921661dcb03f1d92234</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSingleModelObserverBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a4183ada6ca430e22ee43b62c1e03ef5d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CircleBasedModel</type>
+      <name>ModelType</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
+      <anchor>aaf6d8505c64393aa19af3f3027f9581c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSingleModelObserverBase</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>CircleBasedModel *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>CircleBasedModel *</type>
+      <name>GetObjectPtr</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>AttachOrSetObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
+      <arglist>(CircleBasedModel *objectPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
+      <anchor>a38708304cbaae060ad61090774353c8d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
+      <anchor>a3b98150523e50db40ca97562664b448e</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
+      <anchor>a58a9c5488e13e801ad22f0f91bd77e67</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
+      <anchor>abe7ffb3fffa20d85e2983f4333ecdb3c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnActionTriggered</name>
+      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
+      <anchor>a41b9dc74c0d86808c2b2aa44d7745f33</anchor>
+      <arglist>(QAction *actionPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual CircleBasedModel *</type>
+      <name>CastFromModel</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
+      <arglist>(imod::IModel *modelPtr) const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iqt2d::TMultiViewExtenderDelegatorCompWrap</name>
     <filename>classiqt2d_1_1_t_multi_view_extender_delegator_comp_wrap.html</filename>
     <templarg></templarg>
@@ -48054,6 +48496,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TPolygonBasedParamsGuiComp</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>aa70f0f398f5bbc38b4ac0ad0f7e09e32</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -48155,24 +48604,38 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiShown</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a6d16bf350e992e936c5a308dea76ba8e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiHidden</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>ac0fdae358f18c600b23549b5e87d00d5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a639829115b16468f337578e9eb36855b</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateToolsMenuButton</name>
+      <type>virtual bool</type>
+      <name>PopulateActions</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a1d0ab5de4589426871b97f361da07ce4</anchor>
-      <arglist>()</arglist>
+      <anchor>ae189e89abf5305391398faf4f33bfe87</anchor>
+      <arglist>(QWidget &amp;host, imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnToolsButtonMenuActionTriggered</name>
+      <name>OnActionTriggered</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a449dd47e6f484eb6415de32521f31731</anchor>
-      <arglist>(QAction *action)</arglist>
+      <anchor>a242d199c7aaf17853bd368e24094d86d</anchor>
+      <arglist>(QAction *actionPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual PolygonBasedModel *</type>
@@ -48180,6 +48643,41 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
       <arglist>(imod::IModel *modelPtr) const</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction</type>
+      <name>m_flipHorizontalAction</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a4f48ceca294f2b522f44cbab9e4b6679</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction</type>
+      <name>m_flipVerticalAction</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a0e86ccd3217b9fe1d6b3b6540691b21e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction</type>
+      <name>m_rotateCwAction</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a1e6f301c3ebfc4f0aa1678d8132f8281</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction</type>
+      <name>m_rotateCcwAction</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a7289e13b0ebe3e1b5f2f6b55ab690f66</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAction</type>
+      <name>m_reversePolarityAction</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>af7085dae6a4c8c12f9ea43fa3ff6fbc2</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -48228,6 +48726,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TShapeParamsGuiCompBase</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>aa7f1676a6d2fe01735033974760cb5c8</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -48306,6 +48811,62 @@
       <anchor>a1f5b2b6075fe73081d4769c23772372b</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>IsToolsMenuAllowed</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>a9031a1e523d380834123e07172929ed1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QToolBar *</type>
+      <name>GetToolBar</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>aea80e9f6c772fce56fbda5961667c88d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CreateActions</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>a101a5f62f18044dfd3378489cf884cef</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CreateToolsMenu</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>a24177816938d0f4ef68e7c721930a792</anchor>
+      <arglist>(QAbstractButton *buttonPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>PopulateActions</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>a509e3d6392260a07721ac05687fa25bc</anchor>
+      <arglist>(QWidget &amp;host, imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>ProcessActions</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>a26356910eba7b3f214f30565e5ebc107</anchor>
+      <arglist>(QWidget &amp;host)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelAttachedAndGuiShown</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>a071ee04cb97fae5825d113a9ab45072c</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelDetachedOrGuiHidden</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>aae805055fe66782ea94ae825ad19ecfa</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual Shape *</type>
       <name>CreateShapeInstance</name>
@@ -48319,6 +48880,41 @@
       <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
       <anchor>a983c22bfc8806ba26585fbcbe97bf392</anchor>
       <arglist>(int sceneId, Shapes &amp;result)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>acb24175dd030938b74035b41d3393ce2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>a1f10d3233694293c2b5e54ebd4a53733</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>abc113ec1b135cabd7cf60fc69a92e6c9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiShown</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>a5fb9bf634389f52f498a07d4d50e6b87</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiHidden</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>a91da35c0bfb6106b592d589805af92b9</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual ShapeModel *</type>
@@ -62278,48 +62874,6 @@
       <anchor>a2519be921b203b8d599a02ec2917c9e6</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>ShapeAction</name>
-      <anchorfile>classiview_1_1_i_interactive_shape.html</anchorfile>
-      <anchor>a5215456781aeaa111113a93772bf93af</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>ActionFlipHorizontally</name>
-      <anchorfile>classiview_1_1_i_interactive_shape.html</anchorfile>
-      <anchor>a5215456781aeaa111113a93772bf93afa8d53bcf02676b468cfd1bf017031b64c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>ActionFlipVertically</name>
-      <anchorfile>classiview_1_1_i_interactive_shape.html</anchorfile>
-      <anchor>a5215456781aeaa111113a93772bf93afa7c1cf94a26d28cf3b70a60c3c2be58c0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>ActionRotateClockwise</name>
-      <anchorfile>classiview_1_1_i_interactive_shape.html</anchorfile>
-      <anchor>a5215456781aeaa111113a93772bf93afa97b0f7f9579280ea683cd925411205c6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>ActionRotateCounterclockwise</name>
-      <anchorfile>classiview_1_1_i_interactive_shape.html</anchorfile>
-      <anchor>a5215456781aeaa111113a93772bf93afa136ddbe384b91d2cfe85dabce1521eaf</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>ActionReverseLine</name>
-      <anchorfile>classiview_1_1_i_interactive_shape.html</anchorfile>
-      <anchor>a5215456781aeaa111113a93772bf93afa49129bb20e8991630fad057e910430de</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function">
       <type></type>
       <name>CAffineTransformation2dShape</name>
@@ -62403,20 +62957,6 @@
       <anchorfile>classiview_1_1_c_interactive_shape_base.html</anchorfile>
       <anchor>af5672788c47adb44feea0b6e52739c3c</anchor>
       <arglist>(bool selectFlag=true)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsActionAvailable</name>
-      <anchorfile>classiview_1_1_c_interactive_shape_base.html</anchorfile>
-      <anchor>a38624ae850c4ef5ad000b992074b7679</anchor>
-      <arglist>(ShapeAction action) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ExecuteAction</name>
-      <anchorfile>classiview_1_1_c_interactive_shape_base.html</anchorfile>
-      <anchor>a3f4399bd368a4f84dc9dce08b7a2de8b</anchor>
-      <arglist>(ShapeAction action)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -65496,41 +66036,6 @@
     </member>
     <member kind="slot">
       <type>void</type>
-      <name>OnFlipHorizontal</name>
-      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>af680d594dfb771967e10310523644344</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot">
-      <type>void</type>
-      <name>OnFlipVertical</name>
-      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>ab267d32208cb56b8bb7a5f92b7d43997</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot">
-      <type>void</type>
-      <name>OnRotateCW</name>
-      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>a4567b8fe7af5e6cc1d238c5277a7dc5f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot">
-      <type>void</type>
-      <name>OnRotateCCW</name>
-      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>ab4262fa9c431efe648a0c8ffc721d41d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot">
-      <type>void</type>
-      <name>OnReverse</name>
-      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
-      <anchor>af669eea33fe21bab4bbe9d502cc037c1</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot">
-      <type>void</type>
       <name>OnShowScrollbars</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
       <anchor>a0522ed0a81a2efd4e76c5ced9050a2f5</anchor>
@@ -67682,20 +68187,6 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>IsActionAvailable</name>
-      <anchorfile>classiview_1_1_c_polygon_shape.html</anchorfile>
-      <anchor>a7481b56eba1c547b9e74f8cc3afcbc68</anchor>
-      <arglist>(ShapeAction action) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ExecuteAction</name>
-      <anchorfile>classiview_1_1_c_polygon_shape.html</anchorfile>
-      <anchor>ac4ccae47fbb1388381eea500349e63df</anchor>
-      <arglist>(ShapeAction action)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
       <name>IsFirstVisible</name>
       <anchorfile>classiview_1_1_c_polygon_shape.html</anchorfile>
       <anchor>ab1738a4dadcf5566ab947c582ef3cac6</anchor>
@@ -68244,20 +68735,6 @@
       <anchorfile>classiview_1_1_c_polyline_shape.html</anchorfile>
       <anchor>aa1a1621f075276e19378c16b2c5a9138</anchor>
       <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsActionAvailable</name>
-      <anchorfile>classiview_1_1_c_polyline_shape.html</anchorfile>
-      <anchor>a51b17c476952fbd653428b60b12083b8</anchor>
-      <arglist>(ShapeAction action) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ExecuteAction</name>
-      <anchorfile>classiview_1_1_c_polyline_shape.html</anchorfile>
-      <anchor>a3e9b0ee8927370a330dee2309b183b1e</anchor>
-      <arglist>(ShapeAction action)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -69526,20 +70003,6 @@
       <anchorfile>classiview_1_1_i_interactive_shape.html</anchorfile>
       <anchor>a069a38f4b619109d9e6153825b61c411</anchor>
       <arglist>(bool selectFlag=true)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsActionAvailable</name>
-      <anchorfile>classiview_1_1_i_interactive_shape.html</anchorfile>
-      <anchor>a4fce0d89ab047c146b23c300486d509a</anchor>
-      <arglist>(ShapeAction action) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>ExecuteAction</name>
-      <anchorfile>classiview_1_1_i_interactive_shape.html</anchorfile>
-      <anchor>a2149bcb11c8e68b3cbe425226d902aa8</anchor>
-      <arglist>(ShapeAction action)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
@@ -72496,6 +72959,7 @@
     <file>CCircleParamsGuiComp.h</file>
     <file>CExtendedConsoleGuiComp.h</file>
     <file>CImageViewComp.h</file>
+    <file>CIntParamAction.h</file>
     <file>CLine2dParamsGuiComp.h</file>
     <file>CMultiBitmapViewComp.h</file>
     <file>COrientedCircleEditorComp.h</file>
@@ -72511,6 +72975,7 @@
     <file>iqt2d.h</file>
     <file>IViewExtender.h</file>
     <file>IViewProvider.h</file>
+    <file>TCircleBasedParamsGuiComp.h</file>
     <file>TMultiViewExtenderDelegatorCompWrap.h</file>
     <file>TPolygonBasedParamsGuiComp.h</file>
     <file>TShapeParamsGuiCompBase.h</file>
