@@ -244,7 +244,7 @@ QToolBar* TShapeParamsGuiCompBase<Ui, Shape, ShapeModel>::GetToolBar() const
 template <class Ui, class Shape, class ShapeModel>
 QString TShapeParamsGuiCompBase<Ui, Shape, ShapeModel>::GetUnitName() const
 {
-	const imath::IUnitInfo* unitInfoPtr = m_defaultUnitInfoCompPtr.GetPtr();
+	const imath::IUnitInfo* unitInfoPtr = NULL;
 
 	const ShapeModel* objectPtr = BaseClass::GetObservedObject();
 	if (objectPtr != NULL){
@@ -261,7 +261,11 @@ QString TShapeParamsGuiCompBase<Ui, Shape, ShapeModel>::GetUnitName() const
 		return unitInfoPtr->GetUnitName();
 	}
 
-	return "";
+	if (m_defaultUnitInfoCompPtr.IsValid()){
+		return m_defaultUnitInfoCompPtr->GetUnitName();
+	}
+
+	return QString();
 }
 
 
@@ -408,7 +412,7 @@ void TShapeParamsGuiCompBase<Ui, Shape, ShapeModel>::OnGuiModelAttached()
 {
 	BaseClass::OnGuiModelAttached();
 
-	if (BaseClass::IsGuiShown()){
+	if (IsGuiShown()){
 		OnModelAttachedAndGuiShown(BaseClass::GetObservedModel());
 	}
 }
