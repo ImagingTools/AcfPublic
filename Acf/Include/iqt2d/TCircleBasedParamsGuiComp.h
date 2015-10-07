@@ -69,8 +69,18 @@ protected:
 	using BaseClass::GetObservedObject;
 	using BaseClass::GetObservedModel;
 	using BaseClass::DoUpdateModel;
-	using BaseClass::tr;
+    using BaseClass::UpdateAllViews;
+    using BaseClass::IsPositionFixed;
+    using BaseClass::CreateToolsMenu;
+    using BaseClass::tr;
 	using BaseClass::GetQtWidget;
+    using BaseClass::XSpin;
+    using BaseClass::YSpin;
+    using BaseClass::RadiusSpin;
+    using BaseClass::ToolsButton;
+    using BaseClass::GetUnitName;
+    using BaseClass::PositionUnitLabel;
+    using BaseClass::RadiusUnitLabel;
 };
 
 
