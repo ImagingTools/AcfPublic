@@ -131,9 +131,9 @@ protected:
 protected:
 	using BaseClass::GetObservedObject;
 	using BaseClass::GetObservedModel;
-    using BaseClass::DoUpdateModel;
-    using BaseClass::CreateToolsMenu;
-    using BaseClass::NodeParamsTable;
+	using BaseClass::DoUpdateModel;
+	using BaseClass::CreateToolsMenu;
+	using BaseClass::NodeParamsTable;
 	using BaseClass::tr;
 	using BaseClass::GetQtWidget;
 	using BaseClass::RemoveButton;

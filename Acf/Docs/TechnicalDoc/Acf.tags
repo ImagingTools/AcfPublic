@@ -8602,6 +8602,13 @@
     </member>
     <member kind="function">
       <type>bool</type>
+      <name>ConvertToPolygon</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>a1bd51be54da0bb03d4bbbfd27729363d</anchor>
+      <arglist>(i2d::CPolygon &amp;result, int segmentsCount=0) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
       <name>IsIntersectedBy</name>
       <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
       <anchor>a5dbbb1dddb323a340aeb56a40e28c391</anchor>
@@ -46112,17 +46119,24 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>SetValue</name>
+      <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
+      <anchor>a9e8f524be23ad1b4accdd9ae7592ab98</anchor>
+      <arglist>(int x)</arglist>
+    </member>
+    <member kind="function">
       <type>QSpinBox *</type>
       <name>GetEditor</name>
       <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
-      <anchor>a2158275a0d8d212b1c0da9379f88ec7e</anchor>
+      <anchor>a9819f085d1ef7a3848bbd032780571f6</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>QWidgetAction *</type>
       <name>GetWidgetAction</name>
       <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
-      <anchor>abf9eaba664afee86a37d4d82679d8e37</anchor>
+      <anchor>a8405451aa01d29da5b4b813fa7800fed</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
