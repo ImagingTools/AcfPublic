@@ -162,18 +162,18 @@
   <ItemGroup>
     <CustomBuild Include="..\Compositor.qrc">
       <FileType>Document</FileType>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\Compositor.qrc;..\Resources\Icons\CompositorIcon.svg;..\Resources\Images\CompositorLogo.svg;..\Resources\Images\CompositorSplashScreen.png;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\Compositor.qrc;..\Resources\Icons\CompositorIcon.svg;..\Resources\Images\CompositorLogo.svg;..\Resources\Images\CompositorSplashScreen.svg;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\rcc.exe -name Compositor ..\Compositor.qrc -o debug\qrc_Compositor.cpp</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RCC ..\Compositor.qrc</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\qrc_Compositor.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\Compositor.qrc;..\Resources\Icons\CompositorIcon.svg;..\Resources\Images\CompositorLogo.svg;..\Resources\Images\CompositorSplashScreen.png;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\Compositor.qrc;..\Resources\Icons\CompositorIcon.svg;..\Resources\Images\CompositorLogo.svg;..\Resources\Images\CompositorSplashScreen.svg;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\rcc.exe -name Compositor ..\Compositor.qrc -o release\qrc_Compositor.cpp</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RCC ..\Compositor.qrc</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\qrc_Compositor.cpp;%(Outputs)</Outputs>
     </CustomBuild>
     <None Include="..\Resources\Icons\CompositorIcon.svg" />
     <None Include="..\Resources\Images\CompositorLogo.svg" />
-    <None Include="..\Resources\Images\CompositorSplashScreen.png" />
+    <None Include="..\Resources\Images\CompositorSplashScreen.svg" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\Compositor.arx">
