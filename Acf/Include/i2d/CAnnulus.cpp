@@ -1,25 +1,3 @@
-/********************************************************************************
-**
-**	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the ACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.ilena.org or write info@imagingtools.de for further
-** 	information about the ACF.
-**
-********************************************************************************/
-
-
 #include "i2d/CAnnulus.h"
 
 
@@ -109,6 +87,23 @@ CRectangle CAnnulus::GetBoundingBox() const
 		m_position.GetY() - outerRadius,
 		2 * outerRadius,
 		2 * outerRadius);
+}
+
+
+bool CAnnulus::ConvertFrom(const i2d::IObject2d& object)
+{
+	// convert from circle
+	const i2d::CCircle* circlePtr = dynamic_cast<const i2d::CCircle*>(&object);
+	if (circlePtr){
+		SetPosition(circlePtr->GetPosition());
+		SetOuterRadius(circlePtr->GetRadius());
+		SetInnerRadius(circlePtr->GetRadius() / 2);
+
+		return true;
+	}
+
+	// default copy
+	return CopyFrom(object);
 }
 
 

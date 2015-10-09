@@ -1,25 +1,3 @@
-/********************************************************************************
-**
-**	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the ACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.ilena.org or write info@imagingtools.de for further
-** 	information about the ACF.
-**
-********************************************************************************/
-
-
 #ifndef iqt2d_TPolygonBasedParamsGuiComp_included
 #define iqt2d_TPolygonBasedParamsGuiComp_included
 
@@ -125,7 +103,7 @@ protected:
 	virtual void OnGuiCreated();
 
 	// reimplemented (iqt2d::TShapeParamsGuiCompBase)
-	virtual bool PopulateActions(QWidget& host, imod::IModel* modelPtr);
+	virtual bool PopulateActions(IActionAdapter& host, imod::IModel* modelPtr);
 	virtual void OnActionTriggered(QAction* actionPtr);
 
 protected:
@@ -205,6 +183,7 @@ void TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::UpdateMod
 
 
 // protected methods
+
 template <class PolygonBasedShape, class PolygonBasedModel>
 bool TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::GetObjectFromEditor(PolygonBasedModel& object) const
 {
@@ -397,8 +376,6 @@ void TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::OnGuiCrea
 		NodeParamsTable->setItemDelegateForColumn(1, columnDelegate);
 	}
 
-	BaseClass::CloseLineCheckBox->setHidden(true);
-
 	// tools actions
 	CreateToolsMenu(ToolsButton);
 }
@@ -407,7 +384,7 @@ void TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::OnGuiCrea
 // reimplemented (iqt2d::TShapeParamsGuiCompBase)
 
 template <class PolygonBasedShape, class PolygonBasedModel>
-bool TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::PopulateActions(QWidget& host, imod::IModel* modelPtr)
+bool TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::PopulateActions(IActionAdapter& host, imod::IModel* modelPtr)
 {
 	if (!BaseClass::PopulateActions(host, modelPtr)){
 		return false;
@@ -419,13 +396,13 @@ bool TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::PopulateA
 		return false;
 	}
 
-	host.addAction(&m_flipHorizontalAction);
-	host.addAction(&m_flipVerticalAction);
-	host.addAction(&m_rotateCwAction);
-	host.addAction(&m_rotateCcwAction);
+	host.AddAction(m_flipHorizontalAction);
+	host.AddAction(m_flipVerticalAction);
+	host.AddAction(m_rotateCwAction);
+	host.AddAction(m_rotateCcwAction);
 
 	if (polylinePtr){
-		host.addAction(&m_reversePolarityAction);
+		host.AddAction(m_reversePolarityAction);
 	}
 
 	return true;

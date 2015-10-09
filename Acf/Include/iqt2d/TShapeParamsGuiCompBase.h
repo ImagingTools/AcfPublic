@@ -1,25 +1,3 @@
-/********************************************************************************
-**
-**	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the ACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.ilena.org or write info@imagingtools.de for further
-** 	information about the ACF.
-**
-********************************************************************************/
-
-
 #ifndef iqt2d_TShapeParamsGuiCompBase_included
 #define iqt2d_TShapeParamsGuiCompBase_included
 
@@ -45,6 +23,7 @@
 #include "iview/IShapeFactory.h"
 #include "iqt2d/TViewExtenderCompBase.h"
 #include "iqt2d/CIntParamAction.h"
+#include "iqt2d/TActionAdapter.h"
 
 
 namespace iqt2d
@@ -92,8 +71,7 @@ protected:
 	*/
 	virtual void CreateActions() {}
 	virtual void CreateToolsMenu(QAbstractButton* buttonPtr);
-	virtual bool PopulateActions(QWidget& host, imod::IModel* modelPtr);
-	void ProcessActions(QWidget& host);
+	virtual bool PopulateActions(IActionAdapter& host, imod::IModel* modelPtr);
 	virtual void OnModelAttachedAndGuiShown(imod::IModel* modelPtr);
 	virtual void OnModelDetachedOrGuiHidden(imod::IModel* modelPtr);
 
@@ -309,25 +287,9 @@ void TShapeParamsGuiCompBase<Ui, Shape, ShapeModel>::CreateToolsMenu(QAbstractBu
 
 
 template <class Ui, class Shape, class ShapeModel>
-bool TShapeParamsGuiCompBase<Ui, Shape, ShapeModel>::PopulateActions(QWidget& /*host*/, imod::IModel* /*modelPtr*/)
+bool TShapeParamsGuiCompBase<Ui, Shape, ShapeModel>::PopulateActions(IActionAdapter& /*host*/, imod::IModel* /*modelPtr*/)
 {
 	return true;
-}
-
-
-template <class Ui, class Shape, class ShapeModel>
-void TShapeParamsGuiCompBase<Ui, Shape, ShapeModel>::ProcessActions(QWidget& host)
-{
-	QList<QAction*> menuActions = host.actions();
-	for (int i = menuActions.count()-1; i >= 0; i--){
-		QAction* actionPtr = menuActions.at(i);
-		CIntParamAction* intActionPtr = dynamic_cast<CIntParamAction*>(actionPtr);
-		if (intActionPtr){
-			host.insertAction(
-				i < menuActions.count()-1 ? menuActions.at(i+1) : NULL, 
-				intActionPtr->GetWidgetAction());
-		}
-	}
 }
 
 
@@ -335,11 +297,10 @@ template <class Ui, class Shape, class ShapeModel>
 void TShapeParamsGuiCompBase<Ui, Shape, ShapeModel>::OnModelAttachedAndGuiShown(imod::IModel* modelPtr)
 {
 	if (m_menuPtr){
+		TActionAdapter<QMenu> menuAdapter(*m_menuPtr);
 		m_menuPtr->clear();
 
-		if (PopulateActions(*m_menuPtr, modelPtr)){
-			ProcessActions(*m_menuPtr);
-			
+		if (PopulateActions(menuAdapter, modelPtr)){
 			m_menuButtonPtr->setEnabled(true);
 		}
 		else
@@ -348,11 +309,10 @@ void TShapeParamsGuiCompBase<Ui, Shape, ShapeModel>::OnModelAttachedAndGuiShown(
 
 	QToolBar* toolBarPtr = GetToolBar();
 	if (toolBarPtr){
+		TActionAdapter<QToolBar> toolBarAdapter(*toolBarPtr);
 		toolBarPtr->clear();
 
-		if (PopulateActions(*toolBarPtr, modelPtr)){
-			//ProcessActions(*toolBarPtr);
-
+		if (PopulateActions(toolBarAdapter, modelPtr)){
 			toolBarPtr->setVisible(true);
 
 			QObject::connect(toolBarPtr, SIGNAL(triggered(QAction*)), this, SLOT(OnActionTriggered(QAction*)));
@@ -412,7 +372,7 @@ void TShapeParamsGuiCompBase<Ui, Shape, ShapeModel>::OnGuiModelAttached()
 {
 	BaseClass::OnGuiModelAttached();
 
-	if (BaseClass::IsGuiShown()){
+	if (IsGuiShown()){
 		OnModelAttachedAndGuiShown(BaseClass::GetObservedModel());
 	}
 }

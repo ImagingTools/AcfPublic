@@ -1,30 +1,14 @@
-/********************************************************************************
-**
-**	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the ACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.ilena.org or write info@imagingtools.de for further
-** 	information about the ACF.
-**
-********************************************************************************/
-
-
 #include "iqt2d/CPolylineParamsGuiComp.h"
 
 
 namespace iqt2d
 {
+
+
+CPolylineParamsGuiComp::CPolylineParamsGuiComp()
+:	m_openCloseAction(QCoreApplication::translate("iqt2d", "Open/close line"), this)
+{
+}
 
 
 // reimplemented (iview::IShapeFactory)
@@ -50,15 +34,28 @@ iview::IShape* CPolylineParamsGuiComp::CreateShape(const istd::IChangeable* obje
 }
 
 
-// protected methods
+// reimplemented (imod::IModelEditor)
 
-bool CPolylineParamsGuiComp::GetObjectFromEditor(i2d::CPolyline& object) const
+void CPolylineParamsGuiComp::UpdateModel() const
 {
-	bool retVal = BaseClass::GetObjectFromEditor(object);
+	Q_ASSERT(BaseClass::IsGuiCreated());
 
-	object.SetClosed(CloseLineCheckBox->checkState() == Qt::Checked);
+	i2d::CPolyline* objectPtr = GetObservedObject();
+	Q_ASSERT(objectPtr != NULL);
 
-	return retVal;
+	bool isClosed = objectPtr->IsClosed();
+
+	i2d::CPolyline editorObject;
+	if (GetObjectFromEditor(editorObject)){
+	
+		editorObject.SetClosed(isClosed);
+
+		if (!objectPtr->IsEqual(editorObject)){
+			istd::CChangeNotifier changePtr(objectPtr);
+
+			objectPtr->CopyFrom(editorObject);
+		}
+	}
 }
 
 
@@ -94,97 +91,20 @@ void CPolylineParamsGuiComp::on_PasteButton_clicked()
 }
 
 
-void CPolylineParamsGuiComp::on_NodeParamsTable_itemSelectionChanged()
+// reimplemented from TPolygonBasedParamsGuiComp
+
+bool CPolylineParamsGuiComp::PopulateActions(IActionAdapter& host, imod::IModel* modelPtr)
 {
-	CloseLineCheckBox->setDisabled(NodeParamsTable->currentRow() < 0);
-}
-
-
-void CPolylineParamsGuiComp::on_CloseLineCheckBox_stateChanged(int state)
-{
-	i2d::CPolyline* polylinePtr = dynamic_cast<i2d::CPolyline*>(GetObservedModel());
-	if (polylinePtr != NULL){
-		istd::CChangeNotifier notifier(polylinePtr);
-
-		if (state == Qt::Checked){
-			if (!polylinePtr->IsClosed()){
-				polylinePtr->SetClosed(true);
-			}
+	if (BaseClass::PopulateActions(host, modelPtr)){
+		// add to menu only
+		if (dynamic_cast<QMenu*>(host.GetWidget())){
+			host.AddAction(m_openCloseAction);
 		}
-		else if (state == Qt::Unchecked){
-			// open a line at selected point
-			if (polylinePtr->IsClosed()){
-				// get selected node coordinates from the table
-				int row = qMax(NodeParamsTable->currentRow(), 0);
-				if (row > 0){
-					double x = NodeParamsTable->item(row, 0)->data(Qt::DisplayRole).toDouble();
-					double y = NodeParamsTable->item(row, 1)->data(Qt::DisplayRole).toDouble();
 
-					// offset line nodes so that selected point is the last
-					// copy the nodes and find selected node
-					std::vector<i2d::CVector2d> nodes;
-					int offset = 0;
-					int count = polylinePtr->GetNodesCount();
-
-					for (int i = 0; i < count; i++){
-						const i2d::CVector2d& node = polylinePtr->GetNode(i);
-						nodes.push_back(node);
-						if (node.GetX() == x && node.GetY() == y){
-							offset = i;
-						}
-					}
-
-					// replace existing nodes with offset nodes
-					polylinePtr->Clear();
-
-					for (int i = 0; i < count; i++){
-						int insertIndex = (i + offset) % count;
-						polylinePtr->InsertNode(nodes[insertIndex]);
-					}
-				}
-
-				polylinePtr->SetClosed(false);
-			}
-		}
+		return true;
 	}
-}
 
-
-void CPolylineParamsGuiComp::OnGuiCreated()
-{
-	BaseClass::OnGuiCreated();
-
-	UpdateClosedLineCheckBox(false, false);
-}
-
-
-void CPolylineParamsGuiComp::OnGuiModelAttached()
-{
-	BaseClass::OnGuiModelAttached();
-
-	UpdateClosedLineCheckBox(false, false);
-}
-
-
-void CPolylineParamsGuiComp::OnGuiModelDetached()
-{
-	UpdateClosedLineCheckBox(false, true);
-	
-	BaseClass::OnGuiModelDetached();
-}
-
-
-// privates
-
-void CPolylineParamsGuiComp::UpdateClosedLineCheckBox(bool /*forceEnabled*/, bool forceHidden)
-{
-	CloseLineCheckBox->setHidden(true);
-
-	i2d::CPolyline* polylinePtr = dynamic_cast<i2d::CPolyline*>(GetObservedModel());
-	if (!forceHidden && polylinePtr != NULL){
-		CloseLineCheckBox->setChecked(polylinePtr->IsClosed());
-		CloseLineCheckBox->setHidden(false);
-	}
+	return false;
 }
 
 
@@ -192,6 +112,17 @@ void CPolylineParamsGuiComp::UpdateClosedLineCheckBox(bool /*forceEnabled*/, boo
 
 void CPolylineParamsGuiComp::OnActionTriggered(QAction* actionPtr)
 {
+	if (actionPtr == &m_openCloseAction){
+		i2d::CPolyline* polylinePtr = GetObjectPtr();
+		if (polylinePtr){
+			istd::CChangeNotifier changePtr(polylinePtr);
+
+			polylinePtr->SetClosed(!polylinePtr->IsClosed());
+		}
+
+		return;
+	}
+
 	BaseClass::OnActionTriggered(actionPtr);
 }
 
