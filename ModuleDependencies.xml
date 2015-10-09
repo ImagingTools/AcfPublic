@@ -117,7 +117,7 @@
         </NMake>
       </Build>
       <Build IfPlatform="MacOS">
-        <QMakeToMakefile Project="Acf/Build/QMake/AcfAll.pro"/>
+        <QMakeToMakefile Project="Acf/Build/QMake/AcfAll.pro" Version="5.2"/>
         <Make Makefile="Acf/Build/QMake/Makefile" Version="1">
           <EnvironmentVariable Name="ACFDIR" Value="$BUILD_PRODUCT_FOLDER/3rdParty/AcfPublic/Acf"/>
         </Make>
@@ -138,7 +138,7 @@
         </NMake>/>
       </Build>
       <Build IfPlatform="MacOS">
-        <QMakeToMakefile Project="AcfSln/Build/QMake/AcfSlnAll.pro"/>
+        <QMakeToMakefile Project="AcfSln/Build/QMake/AcfSlnAll.pro" Version="5.2"/>
         <Make Makefile="AcfSln/Build/QMake/Makefile" Version="1">
           <EnvironmentVariable Name="ACFCONFIGFDIR" Value="$BUILD_PRODUCT_FOLDER/3rdParty/AcfPublic/Acf/Config"/>
           <EnvironmentVariable Name="ACFDIR" Value="$BUILD_PRODUCT_FOLDER/3rdParty/AcfPublic/Acf"/>
