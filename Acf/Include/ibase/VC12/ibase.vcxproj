@@ -119,6 +119,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\CApplicationInfoComp.cpp" />
+    <ClCompile Include="..\CConsoleApplicationComp.cpp" />
     <ClCompile Include="..\CDelegatedProgressManager.cpp" />
     <ClCompile Include="..\CInstantiatorComp.cpp" />
     <ClCompile Include="..\CModelBinderComp.cpp" />
@@ -132,6 +133,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CApplicationInfoComp.h" />
+    <CustomBuild Include="..\CConsoleApplicationComp.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CConsoleApplicationComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I..\..\..\/Include/ibase/QMake -I..\..\..\/AuxInclude/Qt5_VC12 -I..\..\..\/Include -I..\..\..\/AuxInclude/Qt5_VC12 -I..\..\..\/Include -I..\..\..\/Include -I$(QTDIR)/include -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CConsoleApplicationComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ibase\moc_CConsoleApplicationComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CConsoleApplicationComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ibase\moc_CConsoleApplicationComp.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CConsoleApplicationComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I..\..\..\/Include/ibase/QMake -I..\..\..\/AuxInclude/Qt5_VC12 -I..\..\..\/Include -I..\..\..\/AuxInclude/Qt5_VC12 -I..\..\..\/Include -I..\..\..\/Include -I$(QTDIR)/include -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CConsoleApplicationComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ibase\moc_CConsoleApplicationComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CConsoleApplicationComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ibase\moc_CConsoleApplicationComp.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
     <ClInclude Include="..\CDelegatedProgressManager.h" />
     <ClInclude Include="..\CInstantiatorComp.h" />
     <ClInclude Include="..\CModelBinderComp.h" />
@@ -159,6 +170,9 @@
     <ClInclude Include="..\TSerializableContainer.h" />
     <ClInclude Include="..\TVersionInfoBase.h" />
     <ClInclude Include="..\ibase.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ibase\moc_CConsoleApplicationComp.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

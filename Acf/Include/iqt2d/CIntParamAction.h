@@ -36,14 +36,19 @@
 #include <QtGui/QSpinBox>
 #endif
 
+// ACF includes
+#include "iqt2d/CActionAdapter.h"
+
 
 namespace iqt2d
 {
 
 
-class CIntParamAction: public QAction
+class CIntParamAction: public CActionAdapter::Action
 {
 public:
+	typedef CActionAdapter::Action BaseClass;
+
 	CIntParamAction(const QIcon& icon, const QString& text, int minValue, int maxValue, int value, QObject* parentPtr = NULL);
 	CIntParamAction(const QString& text, int minValue, int maxValue, int value, QObject* parentPtr = NULL);
 
@@ -52,6 +57,10 @@ public:
 
 	QSpinBox* GetEditor() const;
 	QWidgetAction* GetWidgetAction() const;
+
+protected:
+	// reimplemented (CActionAdapter::Action)
+	virtual void OnActionAdded(CActionAdapter& adapter);
 
 protected:
 	void Init(int minValue, int maxValue, int value);

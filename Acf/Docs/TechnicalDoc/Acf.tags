@@ -751,6 +751,18 @@
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
+    <name>CConsoleApplicationComp.h</name>
+    <path>C:/Temp/Acf/Include/ibase/</path>
+    <filename>_c_console_application_comp_8h</filename>
+    <includes id="_t_opt_del_ptr_8h" name="TOptDelPtr.h" local="no" imported="no">istd/TOptDelPtr.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="no" imported="no">ilog/TLoggerCompWrap.h</includes>
+    <includes id="_c_console_reader_8h" name="CConsoleReader.h" local="no" imported="no">iqt/CConsoleReader.h</includes>
+    <includes id="_i_application_8h" name="IApplication.h" local="no" imported="no">ibase/IApplication.h</includes>
+    <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="no" imported="no">ibase/IApplicationInfo.h</includes>
+    <class kind="class">ibase::CConsoleApplicationComp</class>
+    <namespace>ibase</namespace>
+  </compound>
+  <compound kind="file">
     <name>CDelegatedProgressManager.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_delegated_progress_manager_8h</filename>
@@ -3840,6 +3852,14 @@
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
+    <name>CConsoleReader.h</name>
+    <path>C:/Temp/Acf/Include/iqt/</path>
+    <filename>_c_console_reader_8h</filename>
+    <class kind="class">iqt::CConsoleReader</class>
+    <class kind="class">iqt::CConsoleReader::InputObserver</class>
+    <namespace>iqt</namespace>
+  </compound>
+  <compound kind="file">
     <name>CIniSettingsProviderComp.h</name>
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>_c_ini_settings_provider_comp_8h</filename>
@@ -4030,6 +4050,14 @@
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
+    <name>CActionAdapter.h</name>
+    <path>C:/Temp/Acf/Include/iqt2d/</path>
+    <filename>_c_action_adapter_8h</filename>
+    <class kind="class">iqt2d::CActionAdapter</class>
+    <class kind="class">iqt2d::CActionAdapter::Action</class>
+    <namespace>iqt2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CAffineTransformationParamsGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_affine_transformation_params_gui_comp_8h</filename>
@@ -4107,6 +4135,7 @@
     <name>CIntParamAction.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_int_param_action_8h</filename>
+    <includes id="_c_action_adapter_8h" name="CActionAdapter.h" local="yes" imported="no">iqt2d/CActionAdapter.h</includes>
     <class kind="class">iqt2d::CIntParamAction</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -4321,6 +4350,7 @@
     <includes id="_i_shape_factory_8h" name="IShapeFactory.h" local="yes" imported="no">iview/IShapeFactory.h</includes>
     <includes id="_t_view_extender_comp_base_8h" name="TViewExtenderCompBase.h" local="yes" imported="no">iqt2d/TViewExtenderCompBase.h</includes>
     <includes id="_c_int_param_action_8h" name="CIntParamAction.h" local="yes" imported="no">iqt2d/CIntParamAction.h</includes>
+    <includes id="_c_action_adapter_8h" name="CActionAdapter.h" local="yes" imported="no">iqt2d/CActionAdapter.h</includes>
     <class kind="class">iqt2d::TShapeParamsGuiCompBase</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -10998,6 +11028,13 @@
     <name>i2d::CPolyline</name>
     <filename>classi2d_1_1_c_polyline.html</filename>
     <base>i2d::CPolygon</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>a3a6d0f04dbfd70c8ceef89a3120d9ff3</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>i2d::CPolylineComp</name>
@@ -15819,6 +15856,7 @@
     <name>ibase</name>
     <filename>namespaceibase.html</filename>
     <class kind="class">ibase::CApplicationInfoComp</class>
+    <class kind="class">ibase::CConsoleApplicationComp</class>
     <class kind="class">ibase::CDelegatedProgressManager</class>
     <class kind="class">ibase::CInstantiatorComp</class>
     <class kind="class">ibase::CModelBinderComp</class>
@@ -16061,6 +16099,194 @@
       <anchorfile>classiser_1_1_i_version_info.html</anchorfile>
       <anchor>a4be1aceeb8f7b19bba451c8471ed716b</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ibase::CConsoleApplicationComp</name>
+    <filename>classibase_1_1_c_console_application_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base virtualness="virtual">ibase::IApplication</base>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classibase_1_1_c_console_application_comp.html</anchorfile>
+      <anchor>af857bdeb1f4d86b30b0c0665f17bc948</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::TLoggerWrap&lt; Base &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
+      <anchor>a590fd3e388adbdb4dc9bf584b9c9cd2a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InitializeApplication</name>
+      <anchorfile>classibase_1_1_c_console_application_comp.html</anchorfile>
+      <anchor>aa2ff5d3df6aa8d641ebbfc125bd8bf39</anchor>
+      <arglist>(int argc, char **argv)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>Execute</name>
+      <anchorfile>classibase_1_1_c_console_application_comp.html</anchorfile>
+      <anchor>a3dc09d6e96e9fcb39487d8c002d05248</anchor>
+      <arglist>(int argc, char **argv)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetHelpText</name>
+      <anchorfile>classibase_1_1_c_console_application_comp.html</anchorfile>
+      <anchor>a90b419014a0f3dece7551ed1324db103</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QStringList</type>
+      <name>GetApplicationArguments</name>
+      <anchorfile>classibase_1_1_c_console_application_comp.html</anchorfile>
+      <anchor>a64688c04a8c0cbeaf8df356e36d250b7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TLoggerWrap</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>a57511dfea9c5c1e102647f1f7ca826aa</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetLogPtr</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>a87506bdfa64e0509f5fb7a3d430a5dd4</anchor>
+      <arglist>(ilog::IMessageConsumer *logPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ilog::IMessageConsumer *</type>
+      <name>GetLogPtr</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>ab6314c71cabb4562e7229c3c8c06761c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetTracingEnabled</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>ae9e590b90904a64afde7a5ad10f3bca8</anchor>
+      <arglist>(bool trace)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsTracingEnabled</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>aa796620cca275e7834d7a0d5599f73af</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classibase_1_1_c_console_application_comp.html</anchorfile>
+      <anchor>aff40051705a6e16354444c4ec5289eac</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>IsVerboseEnabled</name>
+      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
+      <anchor>a9d1245fd121084ca782a70267cf7d9cb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SendVerboseMessage</name>
+      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
+      <anchor>a1f22cbf9121836e55c06f535f1db9ecb</anchor>
+      <arglist>(const QString &amp;message, const QString &amp;messageSource=QString()) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DecorateMessage</name>
+      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
+      <anchor>a148b8b1a78a6265cc95bb8434fb1e3c7</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
+      <anchor>a8a3add3e8068f0392d0b1cfdd68454ef</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendInfoMessage</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>adc0cc2f5c3b599a9824a0ed6ebe9124c</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendWarningMessage</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>adb540f7def3c56fecc5f7eef36d26ef7</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendErrorMessage</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>aa0a071c19b2b632b147df41207bf979c</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendCriticalMessage</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>abadaac82ecdb83f794136c894ab487ca</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendInfoMessageOnce</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>a80fd5dff3aa3d83e4d39b24e4fc63f52</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendWarningMessageOnce</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>aa0d77dbf2bb831b29438936446f0a393</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendErrorMessageOnce</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>a31e82291cfe271a91013cccf67dbb716</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SendCriticalMessageOnce</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>a1d6acbc0e51abd89a4b2fe22b4b15781</anchor>
+      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsLogConsumed</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>ab4b51ebab3e9634407680f35ef4afa98</anchor>
+      <arglist>(const istd::IInformationProvider::InformationCategory *categoryPtr=NULL, const int *flagsPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SendLogMessage</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>abeeedb5fce3b703e62b314beb2dc9ae2</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -26959,13 +27185,6 @@
       <anchor>abfe3a816e22ce93e2c173c3d440eea85</anchor>
       <arglist></arglist>
     </member>
-    <member kind="typedef">
-      <type>ilog::TLoggerWrap&lt; Base &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
-      <anchor>a590fd3e388adbdb4dc9bf584b9c9cd2a</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="enumeration">
       <type></type>
       <name>OperationState</name>
@@ -27148,41 +27367,6 @@
       <anchor>a8c09e654934ea81ed1637c30cfb4df90</anchor>
       <arglist>(const QString *extensionPtr=NULL) const </arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>TLoggerWrap</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a57511dfea9c5c1e102647f1f7ca826aa</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetLogPtr</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a87506bdfa64e0509f5fb7a3d430a5dd4</anchor>
-      <arglist>(ilog::IMessageConsumer *logPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ilog::IMessageConsumer *</type>
-      <name>GetLogPtr</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>ab6314c71cabb4562e7229c3c8c06761c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetTracingEnabled</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>ae9e590b90904a64afde7a5ad10f3bca8</anchor>
-      <arglist>(bool trace)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsTracingEnabled</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>aa796620cca275e7834d7a0d5599f73af</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
@@ -27203,97 +27387,6 @@
       <anchorfile>classidoc_1_1_c_multi_page_document_file_persistence_comp.html</anchorfile>
       <anchor>acc5b04bdcc75b8247e09bfa2e06e16df</anchor>
       <arglist>(idoc::IMultiPageDocument &amp;document, int pageIndex, iser::IArchive &amp;archive) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>IsVerboseEnabled</name>
-      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
-      <anchor>a9d1245fd121084ca782a70267cf7d9cb</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>SendVerboseMessage</name>
-      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
-      <anchor>a1f22cbf9121836e55c06f535f1db9ecb</anchor>
-      <arglist>(const QString &amp;message, const QString &amp;messageSource=QString()) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>DecorateMessage</name>
-      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
-      <anchor>a148b8b1a78a6265cc95bb8434fb1e3c7</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendInfoMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>adc0cc2f5c3b599a9824a0ed6ebe9124c</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendWarningMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>adb540f7def3c56fecc5f7eef36d26ef7</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendErrorMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>aa0a071c19b2b632b147df41207bf979c</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendCriticalMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>abadaac82ecdb83f794136c894ab487ca</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendInfoMessageOnce</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a80fd5dff3aa3d83e4d39b24e4fc63f52</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendWarningMessageOnce</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>aa0d77dbf2bb831b29438936446f0a393</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendErrorMessageOnce</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a31e82291cfe271a91013cccf67dbb716</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendCriticalMessageOnce</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a1d6acbc0e51abd89a4b2fe22b4b15781</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsLogConsumed</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>ab4b51ebab3e9634407680f35ef4afa98</anchor>
-      <arglist>(const istd::IInformationProvider::InformationCategory *categoryPtr=NULL, const int *flagsPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SendLogMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>abeeedb5fce3b703e62b314beb2dc9ae2</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -32946,13 +33039,6 @@
       <anchorfile>classiimg_1_1_c_bitmap_loader_comp.html</anchorfile>
       <anchor>a23a8928cc0191f1758336b87c14a8034</anchor>
       <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr, bool forLoading, bool forSaving, bool useLog) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
-      <anchor>a8a3add3e8068f0392d0b1cfdd68454ef</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -43411,6 +43497,7 @@
     <class kind="class">iqt::CClipboardSerializerComp</class>
     <class kind="class">iqt::CCompactXmlFileReadArchive</class>
     <class kind="class">iqt::CCompactXmlFileWriteArchive</class>
+    <class kind="class">iqt::CConsoleReader</class>
     <class kind="class">iqt::CIniSettingsProviderComp</class>
     <class kind="class">iqt::CNetworkWriteArchive</class>
     <class kind="class">iqt::CSettingsArchiveBase</class>
@@ -43930,6 +44017,78 @@
       <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
       <anchor>afc69b37d6ea97a1f27980600ea8626da</anchor>
       <arglist>(const QString &amp;text)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt::CConsoleReader</name>
+    <filename>classiqt_1_1_c_console_reader.html</filename>
+    <class kind="class">iqt::CConsoleReader::InputObserver</class>
+    <member kind="typedef">
+      <type>QObject</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt_1_1_c_console_reader.html</anchorfile>
+      <anchor>a710649d52e283724b6aaaf0acd08b3b5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>KeyPressedSignal</name>
+      <anchorfile>classiqt_1_1_c_console_reader.html</anchorfile>
+      <anchor>a400727e26c6af9728951351807971870</anchor>
+      <arglist>(char character)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CConsoleReader</name>
+      <anchorfile>classiqt_1_1_c_console_reader.html</anchorfile>
+      <anchor>aa9d8d0ccb6e65717394f45097eebb972</anchor>
+      <arglist>(QObject *parentPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Start</name>
+      <anchorfile>classiqt_1_1_c_console_reader.html</anchorfile>
+      <anchor>a89cd0b7c44a6d0c869a65ba1f41810c2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Stop</name>
+      <anchorfile>classiqt_1_1_c_console_reader.html</anchorfile>
+      <anchor>ad7958d475251e2c32dfcf056d111d94b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsRunning</name>
+      <anchorfile>classiqt_1_1_c_console_reader.html</anchorfile>
+      <anchor>a4e8625f0fdacb743c3680b3565491d8e</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt::CConsoleReader::InputObserver</name>
+    <filename>classiqt_1_1_c_console_reader_1_1_input_observer.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>InputObserver</name>
+      <anchorfile>classiqt_1_1_c_console_reader_1_1_input_observer.html</anchorfile>
+      <anchor>ae1da8b0a7c02d5d809b283c406e76110</anchor>
+      <arglist>(CConsoleReader &amp;parent)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Stop</name>
+      <anchorfile>classiqt_1_1_c_console_reader_1_1_input_observer.html</anchorfile>
+      <anchor>ac792de3e9897614268e72846f6fcfb08</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>run</name>
+      <anchorfile>classiqt_1_1_c_console_reader_1_1_input_observer.html</anchorfile>
+      <anchor>a1ca0ced7ad70c3f57c013ab856dd7e89</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -44917,6 +45076,7 @@
   <compound kind="namespace">
     <name>iqt2d</name>
     <filename>namespaceiqt2d.html</filename>
+    <class kind="class">iqt2d::CActionAdapter</class>
     <class kind="class">iqt2d::CAffineTransformationParamsGuiComp</class>
     <class kind="class">iqt2d::CAnnulusParamsGuiComp</class>
     <class kind="class">iqt2d::CAnnulusSegmentParamsGuiComp</class>
@@ -44958,6 +45118,71 @@
       <anchorfile>namespaceiqt2d.html</anchorfile>
       <anchor>aaa07639b224bf681c5aa50e41400f109</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::CActionAdapter</name>
+    <filename>classiqt2d_1_1_c_action_adapter.html</filename>
+    <class kind="class">iqt2d::CActionAdapter::Action</class>
+    <member kind="function">
+      <type></type>
+      <name>CActionAdapter</name>
+      <anchorfile>classiqt2d_1_1_c_action_adapter.html</anchorfile>
+      <anchor>a4617958716b5cf3d9aadcbe0080102bd</anchor>
+      <arglist>(QWidget &amp;host)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QAction *</type>
+      <name>AddAction</name>
+      <anchorfile>classiqt2d_1_1_c_action_adapter.html</anchorfile>
+      <anchor>add279f63cac78d9f02f5362b9707505f</anchor>
+      <arglist>(QAction &amp;action)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QAction *</type>
+      <name>AddSeparator</name>
+      <anchorfile>classiqt2d_1_1_c_action_adapter.html</anchorfile>
+      <anchor>a5471c0a1c3a3b7564afca600fc242ed4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QWidget *</type>
+      <name>GetWidget</name>
+      <anchorfile>classiqt2d_1_1_c_action_adapter.html</anchorfile>
+      <anchor>ae8afaacb1a4be65598aae159aea316e8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QWidget *</type>
+      <name>m_hostPtr</name>
+      <anchorfile>classiqt2d_1_1_c_action_adapter.html</anchorfile>
+      <anchor>a9aad2b69e1a7079134d9cad68cd1fec4</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::CActionAdapter::Action</name>
+    <filename>classiqt2d_1_1_c_action_adapter_1_1_action.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Action</name>
+      <anchorfile>classiqt2d_1_1_c_action_adapter_1_1_action.html</anchorfile>
+      <anchor>af4873b81cbb4cd4b4e75656a198ec658</anchor>
+      <arglist>(const QString &amp;text, QObject *parent)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Action</name>
+      <anchorfile>classiqt2d_1_1_c_action_adapter_1_1_action.html</anchorfile>
+      <anchor>a82c6ee850a1b058e9b0c628efae8c544</anchor>
+      <arglist>(const QIcon &amp;icon, const QString &amp;text, QObject *parent)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnActionAdded</name>
+      <anchorfile>classiqt2d_1_1_c_action_adapter_1_1_action.html</anchorfile>
+      <anchor>a4bf66e1c71c45b9aa8d9677f608ec1cc</anchor>
+      <arglist>(CActionAdapter &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -46097,6 +46322,14 @@
   <compound kind="class">
     <name>iqt2d::CIntParamAction</name>
     <filename>classiqt2d_1_1_c_int_param_action.html</filename>
+    <base>iqt2d::CActionAdapter::Action</base>
+    <member kind="typedef">
+      <type>CActionAdapter::Action</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
+      <anchor>a8686400a7a9c8136e8aec8a141fc8217</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CIntParamAction</name>
@@ -46138,6 +46371,13 @@
       <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
       <anchor>a8405451aa01d29da5b4b813fa7800fed</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnActionAdded</name>
+      <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
+      <anchor>a0cbababc0ed957f0434cc079746ee4c7</anchor>
+      <arglist>(CActionAdapter &amp;adapter)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -46830,8 +47070,8 @@
       <type>virtual bool</type>
       <name>PopulateActions</name>
       <anchorfile>classiqt2d_1_1_c_oriented_circle_editor_comp.html</anchorfile>
-      <anchor>ad22f98a7588346d00455ecd5ed17d3ef</anchor>
-      <arglist>(QWidget &amp;host, imod::IModel *modelPtr)</arglist>
+      <anchor>a489d0e41de1024da652baddcd8e57142</anchor>
+      <arglist>(CActionAdapter &amp;host, imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -47101,8 +47341,8 @@
       <type>virtual bool</type>
       <name>PopulateActions</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>ae189e89abf5305391398faf4f33bfe87</anchor>
-      <arglist>(QWidget &amp;host, imod::IModel *modelPtr)</arglist>
+      <anchor>ab9df1f18449a0c936db501bb112269ff</anchor>
+      <arglist>(CActionAdapter &amp;host, imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -47193,6 +47433,13 @@
       <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CPolylineParamsGuiComp</name>
+      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
+      <anchor>ab1bc7fff32efce7d9472f773bd390712</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iview::IShape *</type>
       <name>CreateShape</name>
@@ -47200,19 +47447,19 @@
       <anchor>aaf3b61ce9d73608a10d70aa930979db9</anchor>
       <arglist>(const istd::IChangeable *objectPtr, bool connectToModel=false) const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
+      <anchor>aba9e1055ffb3a75cac61a519345f869a</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>TPolygonBasedParamsGuiComp</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>aa70f0f398f5bbc38b4ac0ad0f7e09e32</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a4ad33e128116c9c72a6f4a4a129f5000</anchor>
-      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -47279,41 +47526,6 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>on_NodeParamsTable_itemSelectionChanged</name>
-      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
-      <anchor>a88850073053773f4db9e7ed14a46404d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_CloseLineCheckBox_stateChanged</name>
-      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
-      <anchor>a05a71d3e91467e4d1c68c3035572e25a</anchor>
-      <arglist>(int state)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
-      <anchor>aed7aa09c251f85b5c98a3d15478aac24</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
-      <anchor>a4344502e47a6b20f49c1a81ec1e26d28</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
-      <anchor>a8309556e62a995aac3b35988dffa1f7b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
       <name>OnActionTriggered</name>
       <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
       <anchor>a00bed9a32198563e87493705e353470f</anchor>
@@ -47321,10 +47533,17 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
-      <name>GetObjectFromEditor</name>
+      <name>PopulateActions</name>
       <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
-      <anchor>a1b00f12f24559159b817a5e621c63819</anchor>
-      <arglist>(i2d::CPolyline &amp;object) const </arglist>
+      <anchor>ac4ebc238698cc55f401c7846e917dddb</anchor>
+      <arglist>(CActionAdapter &amp;host, imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetObjectFromEditor</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a2a47cac7113bb8f03b1972e339d2541b</anchor>
+      <arglist>(i2d::CPolyline &amp;object) const</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>QTableWidget *</type>
@@ -47402,13 +47621,6 @@
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a639829115b16468f337578e9eb36855b</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>PopulateActions</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>ae189e89abf5305391398faf4f33bfe87</anchor>
-      <arglist>(QWidget &amp;host, imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -48077,8 +48289,8 @@
       <type>virtual bool</type>
       <name>PopulateActions</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>ae189e89abf5305391398faf4f33bfe87</anchor>
-      <arglist>(QWidget &amp;host, imod::IModel *modelPtr)</arglist>
+      <anchor>ab9df1f18449a0c936db501bb112269ff</anchor>
+      <arglist>(CActionAdapter &amp;host, imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -48641,8 +48853,8 @@
       <type>virtual bool</type>
       <name>PopulateActions</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>ae189e89abf5305391398faf4f33bfe87</anchor>
-      <arglist>(QWidget &amp;host, imod::IModel *modelPtr)</arglist>
+      <anchor>ab9df1f18449a0c936db501bb112269ff</anchor>
+      <arglist>(CActionAdapter &amp;host, imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -48857,15 +49069,8 @@
       <type>virtual bool</type>
       <name>PopulateActions</name>
       <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
-      <anchor>a509e3d6392260a07721ac05687fa25bc</anchor>
-      <arglist>(QWidget &amp;host, imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>ProcessActions</name>
-      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
-      <anchor>a26356910eba7b3f214f30565e5ebc107</anchor>
-      <arglist>(QWidget &amp;host)</arglist>
+      <anchor>a4c2db135d058aca94d2dc200d09a1f68</anchor>
+      <arglist>(CActionAdapter &amp;host, imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -72570,6 +72775,7 @@
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>dir_3766dd90a8cfbfdbeb9081de0065bff7.html</filename>
     <file>CApplicationInfoComp.h</file>
+    <file>CConsoleApplicationComp.h</file>
     <file>CDelegatedProgressManager.h</file>
     <file>CInstantiatorComp.h</file>
     <file>CModelBinderComp.h</file>
@@ -72948,6 +73154,7 @@
     <file>CClipboardSerializerComp.h</file>
     <file>CCompactXmlFileReadArchive.h</file>
     <file>CCompactXmlFileWriteArchive.h</file>
+    <file>CConsoleReader.h</file>
     <file>CIniSettingsProviderComp.h</file>
     <file>CNetworkWriteArchive.h</file>
     <file>CSettingsArchiveBase.h</file>
@@ -72966,6 +73173,7 @@
     <name>Include/iqt2d</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>dir_4676e37764a5e47bdfc1a91b5e49ff98.html</filename>
+    <file>CActionAdapter.h</file>
     <file>CAffineTransformationParamsGuiComp.h</file>
     <file>CAnnulusParamsGuiComp.h</file>
     <file>CAnnulusSegmentParamsGuiComp.h</file>

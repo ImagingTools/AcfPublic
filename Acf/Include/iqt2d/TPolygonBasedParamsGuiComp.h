@@ -125,7 +125,7 @@ protected:
 	virtual void OnGuiCreated();
 
 	// reimplemented (iqt2d::TShapeParamsGuiCompBase)
-	virtual bool PopulateActions(QWidget& host, imod::IModel* modelPtr);
+	virtual bool PopulateActions(CActionAdapter& host, imod::IModel* modelPtr);
 	virtual void OnActionTriggered(QAction* actionPtr);
 
 protected:
@@ -205,6 +205,7 @@ void TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::UpdateMod
 
 
 // protected methods
+
 template <class PolygonBasedShape, class PolygonBasedModel>
 bool TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::GetObjectFromEditor(PolygonBasedModel& object) const
 {
@@ -397,8 +398,6 @@ void TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::OnGuiCrea
 		NodeParamsTable->setItemDelegateForColumn(1, columnDelegate);
 	}
 
-	BaseClass::CloseLineCheckBox->setHidden(true);
-
 	// tools actions
 	CreateToolsMenu(ToolsButton);
 }
@@ -407,7 +406,7 @@ void TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::OnGuiCrea
 // reimplemented (iqt2d::TShapeParamsGuiCompBase)
 
 template <class PolygonBasedShape, class PolygonBasedModel>
-bool TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::PopulateActions(QWidget& host, imod::IModel* modelPtr)
+bool TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::PopulateActions(CActionAdapter& host, imod::IModel* modelPtr)
 {
 	if (!BaseClass::PopulateActions(host, modelPtr)){
 		return false;
@@ -419,13 +418,13 @@ bool TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::PopulateA
 		return false;
 	}
 
-	host.addAction(&m_flipHorizontalAction);
-	host.addAction(&m_flipVerticalAction);
-	host.addAction(&m_rotateCwAction);
-	host.addAction(&m_rotateCcwAction);
+	host.AddAction(m_flipHorizontalAction);
+	host.AddAction(m_flipVerticalAction);
+	host.AddAction(m_rotateCwAction);
+	host.AddAction(m_rotateCcwAction);
 
 	if (polylinePtr){
-		host.addAction(&m_reversePolarityAction);
+		host.AddAction(m_reversePolarityAction);
 	}
 
 	return true;
