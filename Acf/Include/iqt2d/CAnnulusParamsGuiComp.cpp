@@ -139,6 +139,12 @@ void CAnnulusParamsGuiComp::OnParamsChanged(double /*value*/)
 }
 
 
+void CAnnulusParamsGuiComp::OnActionTriggered(QAction* /*actionPtr*/)
+{
+	// dummy implementation, to be reimplemented
+}
+
+
 } // namespace iqt2d
 
 

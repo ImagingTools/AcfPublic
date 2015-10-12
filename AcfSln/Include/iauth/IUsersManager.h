@@ -25,10 +25,9 @@
 
 
 // Qt includes
-#include <QtCore/QVector>
+#include <QtCore/QString>
 
 // ACF includes
-#include <QtCore/QString>
 #include "iser/ISerializable.h"
 
 // ACF-Solutions includes
@@ -45,6 +44,16 @@ namespace iauth
 class IUsersManager: virtual public iser::ISerializable
 {
 public:
+	/**
+		Data model change notification flags.
+	*/
+	enum ChangeFlags
+	{
+		CF_USER_ADDED = 0x36e7c73,
+		CF_USER_REMOVED,
+		CF_USER_RENAMED
+	};
+
 	/**
 		Get number of users in this collection.
 	*/
@@ -83,7 +92,7 @@ public:
 	/**
 		The method renames the user.
 		You should not call method CUser::SetUserName() directly,
-		becouse of user name is used as primary key of user list.
+		because of user name is used as primary key of user list.
 		\param QString userIndex: user index.
 		\param QString userName: the new user name.
 		\return true if the user name could be changed, otherwise false.

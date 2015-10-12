@@ -68,6 +68,7 @@ protected:
 
 protected Q_SLOTS:
 	void OnParamsChanged(double value);
+	void OnActionTriggered(QAction* actionPtr);
 };
 
 

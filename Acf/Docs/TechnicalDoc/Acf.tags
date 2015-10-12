@@ -45383,6 +45383,13 @@
       <anchor>a2778a67b02da7387dc928bdb3435ca56</anchor>
       <arglist>(double value)</arglist>
     </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnActionTriggered</name>
+      <anchorfile>classiqt2d_1_1_c_annulus_params_gui_comp.html</anchorfile>
+      <anchor>a022002061b9e57d0f2cc0347a4083fcb</anchor>
+      <arglist>(QAction *actionPtr)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
@@ -45485,6 +45492,13 @@
       <anchorfile>classiqt2d_1_1_c_annulus_segment_params_gui_comp.html</anchorfile>
       <anchor>aeb05a8d2cbdfeb875834b2b0e635ee2e</anchor>
       <arglist>(double value)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnActionTriggered</name>
+      <anchorfile>classiqt2d_1_1_c_annulus_segment_params_gui_comp.html</anchorfile>
+      <anchor>acbe961cd30ec2abd5f3259e1c0e34ea1</anchor>
+      <arglist>(QAction *actionPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -45733,13 +45747,6 @@
       <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
       <anchor>abe7ffb3fffa20d85e2983f4333ecdb3c</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnActionTriggered</name>
-      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
-      <anchor>a41b9dc74c0d86808c2b2aa44d7745f33</anchor>
-      <arglist>(QAction *actionPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual i2d::CCircle *</type>
@@ -47100,13 +47107,6 @@
       <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
       <anchor>abe7ffb3fffa20d85e2983f4333ecdb3c</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnActionTriggered</name>
-      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
-      <anchor>a41b9dc74c0d86808c2b2aa44d7745f33</anchor>
-      <arglist>(QAction *actionPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual i2d::COrientedCircle *</type>
@@ -48626,13 +48626,6 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnActionTriggered</name>
-      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
-      <anchor>a41b9dc74c0d86808c2b2aa44d7745f33</anchor>
-      <arglist>(QAction *actionPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual CircleBasedModel *</type>
       <name>CastFromModel</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
@@ -49085,6 +49078,13 @@
       <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
       <anchor>aae805055fe66782ea94ae825ad19ecfa</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnActionTriggered</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>af4c37ff23b90a2aa0227e911f0e28f1b</anchor>
+      <arglist>(QAction *actionPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual Shape *</type>

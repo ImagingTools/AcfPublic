@@ -4334,6 +4334,34 @@
       <anchor>a1d639066585289763839bc5dd10a7825</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ChangeFlags</name>
+      <anchorfile>classiauth_1_1_i_users_manager.html</anchorfile>
+      <anchor>af81bed1f67fb4855ca65a2211a540e8c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_USER_ADDED</name>
+      <anchorfile>classiauth_1_1_i_users_manager.html</anchorfile>
+      <anchor>af81bed1f67fb4855ca65a2211a540e8ca37d0fb653cba95cf3a866f06656232f8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_USER_REMOVED</name>
+      <anchorfile>classiauth_1_1_i_users_manager.html</anchorfile>
+      <anchor>af81bed1f67fb4855ca65a2211a540e8ca55ae8495db600d674eff4d8da02ce421</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_USER_RENAMED</name>
+      <anchorfile>classiauth_1_1_i_users_manager.html</anchorfile>
+      <anchor>af81bed1f67fb4855ca65a2211a540e8cad86894a69735dd3058dc4dc883b124bf</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type>void</type>
       <name>Reset</name>

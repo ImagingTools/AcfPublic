@@ -96,6 +96,7 @@ protected:
 	virtual bool PopulateActions(CActionAdapter& host, imod::IModel* modelPtr);
 	virtual void OnModelAttachedAndGuiShown(imod::IModel* modelPtr);
 	virtual void OnModelDetachedOrGuiHidden(imod::IModel* modelPtr);
+	virtual void OnActionTriggered(QAction* actionPtr);
 
 	/**
 		Simple creation of shape instance.
@@ -337,7 +338,7 @@ void TShapeParamsGuiCompBase<Ui, Shape, ShapeModel>::OnModelAttachedAndGuiShown(
 		if (PopulateActions(toolBarAdapter, modelPtr)){
 			toolBarPtr->setVisible(true);
 
-			QObject::connect(toolBarPtr, SIGNAL(triggered(QAction*)), this, SLOT(OnActionTriggered(QAction*)));
+			QObject::connect(toolBarPtr, SIGNAL(actionTriggered(QAction*)), this, SLOT(OnActionTriggered(QAction*)));
 		}
 		else{
 			toolBarPtr->disconnect();
@@ -359,6 +360,14 @@ void TShapeParamsGuiCompBase<Ui, Shape, ShapeModel>::OnModelDetachedOrGuiHidden(
 		toolBarPtr->disconnect();
 		toolBarPtr->hide();
 	}
+}
+
+
+// reimplemented (iqt2d::TShapeParamsGuiCompBase)
+
+template <class Ui, class Shape, class ShapeModel>
+void TShapeParamsGuiCompBase<Ui, Shape, ShapeModel>::OnActionTriggered(QAction* /*actionPtr*/)
+{
 }
 
 
