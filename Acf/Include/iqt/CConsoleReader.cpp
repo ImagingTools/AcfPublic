@@ -9,22 +9,33 @@
 #include <stdio.h>
 #include <termios.h>
 #include <unistd.h>
+#include <fcntl.h>
 
-extern "C" void kbhit()
+extern "C" int kbhit()
 {
-	static struct termios oldt, newt;
-	tcgetattr( STDIN_FILENO, &oldt);
-	newt = oldt;
+  struct termios oldt, newt;
+  int ch;
+  int oldf;
 
-	newt.c_lflag &= ~(ICANON | ECHO);
+  tcgetattr(STDIN_FILENO, &oldt);
+  newt = oldt;
+  newt.c_lflag &= ~(ICANON | ECHO);
+  tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+  oldf = fcntl(STDIN_FILENO, F_GETFL, 0);
+  fcntl(STDIN_FILENO, F_SETFL, oldf | O_NONBLOCK);
 
-	tcsetattr( STDIN_FILENO, TCSANOW, &newt);
+  ch = getchar();
 
-	int retVal = getchar();
+  tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+  fcntl(STDIN_FILENO, F_SETFL, oldf);
 
-	tcsetattr( STDIN_FILENO, TCSANOW, &oldt);
+  if(ch != EOF)
+  {
+    ungetc(ch, stdin);
+    return ch;
+  }
 
-	return retVal;
+  return 0;
 }
 #endif
 
@@ -84,9 +95,13 @@ void CConsoleReader::InputObserver::Stop()
 void CConsoleReader::InputObserver::run()
 {
 	while (!m_shouldBeFinished){
-		if (kbhit() != 0){
-			emit m_parent.KeyPressedSignal(getch());
-
+        int hit = kbhit();
+        if (hit != 0){
+#ifdef Q_OS_WIN
+            emit m_parent.KeyPressedSignal(_getch());
+#else
+            emit m_parent.KeyPressedSignal(hit);
+#endif
 			msleep(100);
 		}
 	}
