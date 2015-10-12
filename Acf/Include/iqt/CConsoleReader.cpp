@@ -1,3 +1,25 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
 #include <iqt/CConsoleReader.h>
 
 
@@ -11,31 +33,31 @@
 #include <unistd.h>
 #include <fcntl.h>
 
-extern "C" int kbhit()
+extern "C" int _kbhit()
 {
-  struct termios oldt, newt;
-  int ch;
-  int oldf;
+	struct termios oldt, newt;
+	int ch;
+	int oldf;
 
-  tcgetattr(STDIN_FILENO, &oldt);
-  newt = oldt;
-  newt.c_lflag &= ~(ICANON | ECHO);
-  tcsetattr(STDIN_FILENO, TCSANOW, &newt);
-  oldf = fcntl(STDIN_FILENO, F_GETFL, 0);
-  fcntl(STDIN_FILENO, F_SETFL, oldf | O_NONBLOCK);
+	tcgetattr(STDIN_FILENO, &oldt);
+	newt = oldt;
+	newt.c_lflag &= ~(ICANON | ECHO);
+	tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+	oldf = fcntl(STDIN_FILENO, F_GETFL, 0);
+	fcntl(STDIN_FILENO, F_SETFL, oldf | O_NONBLOCK);
 
-  ch = getchar();
+	ch = getchar();
 
-  tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
-  fcntl(STDIN_FILENO, F_SETFL, oldf);
+	tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+	fcntl(STDIN_FILENO, F_SETFL, oldf);
 
-  if(ch != EOF)
-  {
-    ungetc(ch, stdin);
-    return ch;
-  }
+	if(ch != EOF)
+	{
+		ungetc(ch, stdin);
+		return ch;
+	}
 
-  return 0;
+	return 0;
 }
 #endif
 
@@ -95,12 +117,12 @@ void CConsoleReader::InputObserver::Stop()
 void CConsoleReader::InputObserver::run()
 {
 	while (!m_shouldBeFinished){
-        int hit = kbhit();
-        if (hit != 0){
+		int hit = _kbhit();
+		if (hit != 0){
 #ifdef Q_OS_WIN
-            emit m_parent.KeyPressedSignal(_getch());
+			emit m_parent.KeyPressedSignal(_getch());
 #else
-            emit m_parent.KeyPressedSignal(hit);
+			emit m_parent.KeyPressedSignal(hit);
 #endif
 			msleep(100);
 		}
