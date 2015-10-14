@@ -8071,6 +8071,13 @@
       <anchor>a396c24871c18b3c44379e0634e92e453</anchor>
       <arglist>(const CAnnulus &amp;annulus) const </arglist>
     </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>ConvertToPolygon</name>
+      <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
+      <anchor>ae866239fbb2bf11cda37f147e12b75d3</anchor>
+      <arglist>(i2d::CPolygon &amp;result, int segmentsCount=0) const </arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual CRectangle</type>
       <name>GetBoundingBox</name>

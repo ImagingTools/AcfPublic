@@ -26751,6 +26751,13 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
+      <name>on_ResetButton_clicked</name>
+      <anchorfile>classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html</anchorfile>
+      <anchor>a8ac17177681f4f37ad9fbb0508cd3eec</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
       <name>on_EditButton_clicked</name>
       <anchorfile>classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html</anchorfile>
       <anchor>ac6142a401bd4bcb731dec6039b385a2f</anchor>

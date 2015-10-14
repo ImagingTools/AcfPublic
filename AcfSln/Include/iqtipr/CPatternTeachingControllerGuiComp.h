@@ -59,6 +59,7 @@ public:
 
 protected Q_SLOTS:
 	void on_LearnButton_clicked();
+	void on_ResetButton_clicked();
 	void on_EditButton_clicked();
 
 protected:
