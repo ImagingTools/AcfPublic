@@ -27459,8 +27459,8 @@
       <type>void</type>
       <name>SetUnitInfo</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
-      <anchor>aebda2ea838e93f8ca0354db9f627eca0</anchor>
-      <arglist>(const QString &amp;description, const imath::IUnitInfo *unitInfoPtr)</arglist>
+      <anchor>a1c199454030f5b94cf9d5a1c6edbe07e</anchor>
+      <arglist>(const QString &amp;name, const QString &amp;description, const imath::IUnitInfo *unitInfoPtr)</arglist>
     </member>
     <member kind="function">
       <type>double</type>

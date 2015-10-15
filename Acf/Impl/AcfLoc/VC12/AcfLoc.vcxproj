@@ -165,11 +165,11 @@
   <ItemGroup>
     <CustomBuild Include="..\AcfLoc.qrc">
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\AcfLoc.qrc;$(QTDIR)\bin\rcc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">copy ..\..\..\\Impl\AcfLoc\QMake\..\AcfLoc.qrc ..\..\..\\Impl\AcfLoc\QMake\..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc.qrc &amp;&amp; $(QTDIR)\bin\rcc.exe -name AcfLoc ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc.qrc -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\\qrc_AcfLoc.cpp</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">copy ..\..\..\Impl\AcfLoc\QMake\..\AcfLoc.qrc ..\..\..\Impl\AcfLoc\QMake\..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc.qrc &amp;&amp; $(QTDIR)\bin\rcc.exe -name AcfLoc ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc.qrc -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\\qrc_AcfLoc.cpp</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">Generated Resources Compiler</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\qrc_AcfLoc.cpp;%(Outputs)</Outputs>
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\AcfLoc.qrc;$(QTDIR)\bin\rcc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">copy ..\..\..\\Impl\AcfLoc\QMake\..\AcfLoc.qrc ..\..\..\\Impl\AcfLoc\QMake\..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc.qrc &amp;&amp; $(QTDIR)\bin\rcc.exe -name AcfLoc ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc.qrc -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\\qrc_AcfLoc.cpp</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">copy ..\..\..\Impl\AcfLoc\QMake\..\AcfLoc.qrc ..\..\..\Impl\AcfLoc\QMake\..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc.qrc &amp;&amp; $(QTDIR)\bin\rcc.exe -name AcfLoc ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc.qrc -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\\qrc_AcfLoc.cpp</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">Generated Resources Compiler</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\qrc_AcfLoc.cpp;%(Outputs)</Outputs>
     </CustomBuild>

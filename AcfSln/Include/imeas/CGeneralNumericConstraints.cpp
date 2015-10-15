@@ -47,7 +47,7 @@ void CGeneralNumericConstraints::InsertValueInfo(const QString& name, const QStr
 
 	Info info;
 	info.name = name;
-	info.name = description;
+	info.description = description;
 	info.unitInfo = unitInfo;
 
 	if (index >= 0){

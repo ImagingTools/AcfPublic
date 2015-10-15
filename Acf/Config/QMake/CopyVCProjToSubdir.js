@@ -10,6 +10,7 @@ var projectNewExp = new RegExp(".*\." + projectNewExt);
 var solutionExt = "sln";
 var solutionExp = new RegExp(".*\." + solutionExt + "$");
 var projectTagExp = new RegExp("^Project.*");
+var relativePathTagExp = new RegExp("\\$\\(RelativePath\\)(.*)$");
 
 
 function relativePath(base, rel) {
@@ -17,20 +18,16 @@ function relativePath(base, rel) {
     var rell = rel.split('\\');
 
     for (var i = basel.length; i-- >= 0; ) {
-        if (basel[i] === '.')
+        if ((basel[i] === '.') || (basel[i] === ''))
             basel.splice(i, 1);
-    }
-    for (var i = basel.length; i-- >= 1; ) {
-        if (basel[i] === '')
-            basel.splice(i, 1);
+        if ((basel[i] === '..') && (i > 0))
+            basel.splice(i - 1, 2);
     }
     for (var i = rell.length; i-- >= 0; ) {
-        if (rell[i] === '.')
+        if ((rell[i] === '.') || (rell[i] === ''))
             rell.splice(i, 1);
-    }
-    for (var i = rell.length; i-- >= 1; ) {
-        if (rell[i] === '')
-            rell.splice(i, 1);
+        if ((rell[i] === '..') && (i > 0))
+            rell.splice(i - 1, 2);
     }
 
     i = 0;
@@ -89,7 +86,21 @@ function ProcessFolder(shell, fileSystem, folder, vcDirName, replaceDirs) {
                         for (var replFolderIter = new Enumerator(replaceDirs) ; !replFolderIter.atEnd() ; replFolderIter.moveNext()) {
                             var repl = replFolderIter.item();
                             if (repl.key != "") {
-                                text = text.split(repl.key).join(repl.value);
+                                replValue = repl.value;
+
+                                var relPathTagArray = relativePathTagExp.exec(repl.value);
+                                if (relPathTagArray) {
+                                    replValue = relativePath(destDir, repl.key.split("/").join("\\")) + relPathTagArray[1];
+                                }
+
+                                if (repl.separator == "/") {
+                                    replValue = replValue.split("\\").join("/");
+                                }
+                                else if (repl.separator == "\\") {
+                                    replValue = replValue.split("/").join("\\");
+                                }
+
+                                text = text.split(repl.key).join(replValue);
                             }
                         }
 
@@ -127,7 +138,7 @@ function ProcessFolder(shell, fileSystem, folder, vcDirName, replaceDirs) {
 						if (projectTagExp.exec(text)){
 							var textParts = text.split('", "');
 							
-							textParts[1] = relativePath(destDir, textParts[1].split('/').join('\\'));
+							textParts[1] = relativePath(destDir, textParts[1].split("/").join("\\"));
 
 							text = textParts.join("\", \"");
 						}
@@ -169,14 +180,20 @@ function ProcessFolder(shell, fileSystem, folder, vcDirName, replaceDirs) {
 var fileSystem = WScript.CreateObject("Scripting.FileSystemObject");
 var shell = WScript.CreateObject("WScript.Shell");
 
-if (WScript.Arguments.length >= 1) {
+if (WScript.Arguments.length > 0) {
     var vcDirName = WScript.Arguments(0).toString();
 
     var replaceDirs = [];
-    replaceDirs.push({ key: shell.ExpandEnvironmentStrings("%QTDIR%"), value: "$(QTDIR)" });
-    replaceDirs.push({ key: shell.ExpandEnvironmentStrings("%QTDIR%").split("\\").join("/"), value: "$(QTDIR)" });
-    replaceDirs.push({ key: shell.ExpandEnvironmentStrings("%ACFDIR%"), value: "../../" });
-    replaceDirs.push({ key: shell.ExpandEnvironmentStrings("%ACFDIR%").split("\\").join("/"), value: "../../" });
+
+    var replaceExp = new RegExp("-replace(.*)=(.*)$");
+    for (var argIndex = 1; argIndex < WScript.Arguments.length; ++argIndex) {
+        var arg = WScript.Arguments(argIndex).toString();
+        var replaceArray = replaceExp.exec(arg)
+        if (replaceArray) {
+            replaceDirs.push({ key: replaceArray[1].split("/").join("\\"), value: replaceArray[2], separator: "\\" });
+            replaceDirs.push({ key: replaceArray[1].split("\\").join("/"), value: replaceArray[2], separator: "/" });
+        }
+    }
 
     ProcessFolder(shell, fileSystem, fileSystem.GetFolder("."), vcDirName, replaceDirs);
 }

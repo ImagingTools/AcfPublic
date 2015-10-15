@@ -67,10 +67,6 @@ void CTextLogGuiComp::OnGuiCreated()
 
 	m_okCellFormat.setRightPadding(8);
 
-#if QT_VERSION >= 0x050200
-	FilterText->setClearButtonEnabled(true);
-#endif
-
 	connect(SeverityFilterCB, SIGNAL(currentIndexChanged(int)), this, SLOT(DoFilter()));
 	connect(SourceFilterCB, SIGNAL(currentIndexChanged(int)), this, SLOT(DoFilter()));
 	connect(FilterText, SIGNAL(textChanged(QString)), this, SLOT(DoFilter()));
