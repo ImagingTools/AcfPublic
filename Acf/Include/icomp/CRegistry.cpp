@@ -40,7 +40,12 @@ namespace icomp
 {
 
 
-// public methods
+static istd::IChangeable::ChangeSet s_renameElementChangeSet(icomp::IRegistry::CF_ELEMENT_RENAMED, QObject::tr("Rename element"));
+static istd::IChangeable::ChangeSet s_addElementChangeSet(icomp::IRegistry::CF_ELEMENT_ADDED, QObject::tr("Add element"));
+static istd::IChangeable::ChangeSet s_removeElementChangeSet(icomp::IRegistry::CF_ELEMENT_REMOVED, QObject::tr("Remove element"));
+
+	
+	// public methods
 
 // reimplemented (icomp::IRegistry)
 
@@ -86,8 +91,7 @@ IRegistry::ElementInfo* CRegistry::InsertElementInfo(
 		}
 	}
 
-	ChangeSet changeSet(CF_ELEMENT_ADDED, "Add element");
-	istd::CChangeNotifier notifier(this, &changeSet);
+	istd::CChangeNotifier notifier(this, &s_addElementChangeSet);
 	Q_UNUSED(notifier);
 
 	ElementInfo& newElement = m_componentsMap[elementId];
@@ -100,8 +104,7 @@ IRegistry::ElementInfo* CRegistry::InsertElementInfo(
 
 bool CRegistry::RemoveElementInfo(const QByteArray& elementId)
 {
-	ChangeSet changeSet(CF_ELEMENT_REMOVED, "Remove element");
-	istd::CChangeNotifier notifier(this, &changeSet);
+	istd::CChangeNotifier notifier(this, &s_removeElementChangeSet);
 	Q_UNUSED(notifier);
 
 	// remove interfaces exported by this component:
@@ -279,8 +282,7 @@ bool CRegistry::RenameElement(const QByteArray& oldElementId, const QByteArray& 
 		return false;
 	}
 
-	ChangeSet changeSet(CF_ELEMENT_RENAMED, "Rename element");
-	istd::CChangeNotifier notifier(this, &changeSet);
+	istd::CChangeNotifier notifier(this, &s_renameElementChangeSet);
 	Q_UNUSED(notifier);
 
 	// calculate new component exports:

@@ -36,6 +36,14 @@ namespace iprm
 {
 
 
+const istd::IChangeable::ChangeSet s_insertChangeSet(IParamsManager::CF_SET_INSERTED, IOptionsList::CF_OPTIONS_CHANGED, QObject::tr("Insert parameter"));
+const istd::IChangeable::ChangeSet s_removeChangeSet(IParamsManager::CF_SET_REMOVED, IOptionsList::CF_OPTIONS_CHANGED, ISelectionParam::CF_SELECTION_CHANGED, QObject::tr("Remove parameter"));
+const istd::IChangeable::ChangeSet s_moveChangeSet(IParamsManager::CF_SET_ENABLE_CHANGED, IParamsManager::CF_SET_REMOVED, ISelectionParam::CF_SELECTION_CHANGED, QObject::tr("Move parameter"));
+const istd::IChangeable::ChangeSet s_renameChangeSet(IParamsManager::CF_SET_NAME_CHANGED, IOptionsList::CF_OPTION_RENAMED, QObject::tr("Rename"));
+const istd::IChangeable::ChangeSet s_selectChangeSet(IOptionsList::CF_OPTIONS_CHANGED, ISelectionParam::CF_SELECTION_CHANGED, QObject::tr("Change selection"));
+const istd::IChangeable::ChangeSet s_setDescriptionChangeSet(IOptionsList::CF_OPTIONS_CHANGED, QObject::tr("Change description"));
+
+
 CParamsManagerCompBase::CParamsManagerCompBase()
 :	imod::CMultiModelBridgeBase(this),
 	m_selectedIndex(-1)
@@ -58,8 +66,7 @@ int CParamsManagerCompBase::InsertParamsSet(int typeIndex, int index)
 		return -1;
 	}
 
-	ChangeSet changeSet(CF_SET_INSERTED, CF_OPTIONS_CHANGED, "Insert parameter");
-	istd::CChangeNotifier notifier(this, &changeSet);
+	istd::CChangeNotifier notifier(this, &s_insertChangeSet);
 	Q_UNUSED(notifier);
 
 	ParamSetPtr paramsSetPtr(new imod::TModelWrap<ParamSet>());
@@ -106,8 +113,7 @@ bool CParamsManagerCompBase::RemoveParamsSet(int index)
 		return false;
 	}
 
-	ChangeSet changeSet(CF_SET_REMOVED, CF_OPTIONS_CHANGED, CF_SELECTION_CHANGED, "Remove parameter");
-	istd::CChangeNotifier notifier(this, &changeSet);
+	istd::CChangeNotifier notifier(this, &s_removeChangeSet);
 	Q_UNUSED(notifier);
 	
 	int removeIndex = index - fixedParamsCount;
@@ -142,8 +148,7 @@ bool CParamsManagerCompBase::SwapParamsSet(int index1, int index2)
 		return false;
 	}
 
-	ChangeSet changeSet(CF_SET_ENABLE_CHANGED, CF_SET_REMOVED, CF_SELECTION_CHANGED, "Move parameter");
-	istd::CChangeNotifier notifier(this, &changeSet);
+	istd::CChangeNotifier notifier(this, &s_moveChangeSet);
 	Q_UNUSED(notifier);
 
 	ParamSet& paramsSet1 = *m_paramSets[index1 - fixedParamsCount];
@@ -305,8 +310,7 @@ bool CParamsManagerCompBase::SetParamsSetName(int index, const QString& name)
 	}
 
 	if (m_paramSets[index - fixedSetsCount]->name != name){
-		ChangeSet changeSet(CF_SET_NAME_CHANGED, CF_OPTION_RENAMED, "Rename");
-		istd::CChangeNotifier notifier(this, &changeSet);
+		istd::CChangeNotifier notifier(this, &s_renameChangeSet);
 		Q_UNUSED(notifier);
 
 		m_paramSets[index - fixedSetsCount]->name = name;
@@ -346,8 +350,7 @@ void CParamsManagerCompBase::SetParamsSetDescription(int index, const QString& d
 	}
 
 	if (m_paramSets[index - fixedSetsCount]->description.GetName() != description){
-		ChangeSet changeSet(CF_OPTIONS_CHANGED);
-		istd::CChangeNotifier notifier(this, &changeSet);
+		istd::CChangeNotifier notifier(this, &s_setDescriptionChangeSet);
 		Q_UNUSED(notifier);
 
 		m_paramSets[index - fixedSetsCount]->description.SetName(description);
@@ -373,8 +376,7 @@ bool CParamsManagerCompBase::SetSelectedOptionIndex(int index)
 {
 	if (index < GetOptionsCount()){
 		if (index != m_selectedIndex){
-			ChangeSet changeSet(CF_OPTIONS_CHANGED, CF_SELECTION_CHANGED, "Change selection");
-			istd::CChangeNotifier notifier(this, &changeSet);
+			istd::CChangeNotifier notifier(this, &s_selectChangeSet);
 			Q_UNUSED(notifier);
 
 			m_selectedIndex = index;

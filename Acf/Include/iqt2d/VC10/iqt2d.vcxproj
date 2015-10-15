@@ -438,15 +438,18 @@
     <None Include="..\Resources\Icons\AnnulusSegment.svg" />
     <None Include="..\Resources\Icons\Circle.svg" />
     <None Include="..\Resources\Icons\CircleAoi.svg" />
+    <None Include="..\Resources\Icons\FlipHorizontal.svg" />
+    <None Include="..\Resources\Icons\FlipVertical.svg" />
+    <None Include="..\Resources\Icons\OpenCloseLine.svg" />
     <None Include="..\Resources\Icons\Polygon.svg" />
     <None Include="..\Resources\Icons\PolygonAoi.svg" />
     <CustomBuild Include="..\iqt2d.qrc">
       <FileType>Document</FileType>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\iqt2d.qrc;..\Resources\Icons\CircleAoi.svg;..\Resources\Icons\PolygonAoi.svg;..\Resources\Icons\Annulus.svg;..\Resources\Icons\AnnulusSegment.svg;..\Resources\Icons\Polygon.svg;..\Resources\Icons\AnnulusAoi.svg;..\Resources\Icons\Circle.svg;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\iqt2d.qrc;..\Resources\Icons\CircleAoi.svg;..\Resources\Icons\PolygonAoi.svg;..\Resources\Icons\OpenCloseLine.svg;..\Resources\Icons\FlipVertical.svg;..\Resources\Icons\Annulus.svg;..\Resources\Icons\AnnulusSegment.svg;..\Resources\Icons\Polygon.svg;..\Resources\Icons\FlipHorizontal.svg;..\Resources\Icons\AnnulusAoi.svg;..\Resources\Icons\Circle.svg;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\rcc.exe -name iqt2d ..\iqt2d.qrc -o debug\qrc_iqt2d.cpp</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RCC ..\iqt2d.qrc</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\qrc_iqt2d.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\iqt2d.qrc;..\Resources\Icons\CircleAoi.svg;..\Resources\Icons\PolygonAoi.svg;..\Resources\Icons\Annulus.svg;..\Resources\Icons\AnnulusSegment.svg;..\Resources\Icons\Polygon.svg;..\Resources\Icons\AnnulusAoi.svg;..\Resources\Icons\Circle.svg;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\iqt2d.qrc;..\Resources\Icons\CircleAoi.svg;..\Resources\Icons\PolygonAoi.svg;..\Resources\Icons\OpenCloseLine.svg;..\Resources\Icons\FlipVertical.svg;..\Resources\Icons\Annulus.svg;..\Resources\Icons\AnnulusSegment.svg;..\Resources\Icons\Polygon.svg;..\Resources\Icons\FlipHorizontal.svg;..\Resources\Icons\AnnulusAoi.svg;..\Resources\Icons\Circle.svg;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\rcc.exe -name iqt2d ..\iqt2d.qrc -o release\qrc_iqt2d.cpp</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RCC ..\iqt2d.qrc</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\qrc_iqt2d.cpp;%(Outputs)</Outputs>

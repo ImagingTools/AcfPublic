@@ -35,6 +35,9 @@ namespace icmpstr
 {
 
 
+const istd::IChangeable::ChangeSet s_moveChangeSet(i2d::IObject2d::CF_OBJECT_POSITION, QObject::tr("Move component"));
+
+
 CVisualRegistryElement::CVisualRegistryElement()
 :	m_center(0, 0),
 	m_registryPtr(NULL)
@@ -82,8 +85,7 @@ i2d::CVector2d CVisualRegistryElement::GetCenter() const
 void CVisualRegistryElement::MoveCenterTo(const i2d::CVector2d& position)
 {
 	if (position != m_center){
-		ChangeSet changeSet(CF_OBJECT_POSITION);
-		istd::CChangeNotifier notifier(this, &changeSet);
+		istd::CChangeNotifier notifier(this, &s_moveChangeSet);
 		Q_UNUSED(notifier);
 
 		m_center = position;

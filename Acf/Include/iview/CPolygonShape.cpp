@@ -40,6 +40,10 @@ namespace iview
 {
 
 
+const istd::IChangeable::ChangeSet s_moveChangeSet(IDisplay::CS_CONSOLE, i2d::IObject2d::CF_OBJECT_POSITION, QObject::tr("Move node"));
+const istd::IChangeable::ChangeSet s_moveAllChangeSet(IDisplay::CS_CONSOLE, i2d::IObject2d::CF_OBJECT_POSITION, QObject::tr("Move"));
+
+
 CPolygonShape::CPolygonShape()
 	:m_castAxis(1, 0)
 {
@@ -166,8 +170,7 @@ bool CPolygonShape::OnMouseMove(istd::CIndex2d position)
 		int editMode = GetEditMode();
 
 		if ((editMode == ISelectable::EM_MOVE) || (editMode == ISelectable::EM_ADD)){
-			static const istd::IChangeable::ChangeSet changeSet(IDisplay::CS_CONSOLE, i2d::IObject2d::CF_OBJECT_POSITION, "Move node");
-			istd::CChangeNotifier notifier(polygonPtr, &changeSet);
+			istd::CChangeNotifier notifier(polygonPtr, &s_moveChangeSet);
 			Q_UNUSED(notifier);
 
 			polygonPtr->SetNode(m_referenceIndex, m_referencePosition + GetLogPosition(position));
@@ -183,8 +186,7 @@ bool CPolygonShape::OnMouseMove(istd::CIndex2d position)
 			i2d::CAffine2d moveTransform = CalcMoveTransform(cp, m_castTransform);
 			m_castAxis = moveTransform.GetDeformMatrix().GetMultiplied(m_castAxis);
 
-			static const istd::IChangeable::ChangeSet changeSet(IDisplay::CS_CONSOLE, i2d::IObject2d::CF_OBJECT_POSITION, "Move polygon");
-			istd::CChangeNotifier notifier(polygonPtr, &changeSet);
+			istd::CChangeNotifier notifier(polygonPtr, &s_moveAllChangeSet);
 			Q_UNUSED(notifier);
 
 			int nodesCount = polygonPtr->GetNodesCount();
@@ -609,8 +611,7 @@ void CPolygonShape::SetLogDragPosition(const i2d::CVector2d& position)
 {
 	i2d::CPolygon* polygonPtr = dynamic_cast<i2d::CPolygon*>(GetObservedModel());
 	if (polygonPtr != NULL){
-		static const istd::IChangeable::ChangeSet changeSet(IDisplay::CS_CONSOLE, i2d::IObject2d::CF_OBJECT_POSITION, "Drag polygon");
-		istd::CChangeNotifier notifier(polygonPtr, &changeSet);
+		istd::CChangeNotifier notifier(polygonPtr, &s_moveAllChangeSet);
 		Q_UNUSED(notifier);
 
 		int nodesCount = polygonPtr->GetNodesCount();

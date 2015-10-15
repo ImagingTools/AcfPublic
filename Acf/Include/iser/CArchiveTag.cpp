@@ -40,7 +40,7 @@ CArchiveTag::CArchiveTag(
 			const QByteArray& id,
 			const QByteArray& comment,
 			TagType tagType,
-			CArchiveTag* parentPtr,
+			const CArchiveTag* parentPtr,
 			bool isTagSkippingUsed)
 :	m_id(id),
 	m_binaryId(0),
@@ -83,7 +83,7 @@ CArchiveTag::TagType CArchiveTag::GetTagType() const
 }
 
 
-CArchiveTag* CArchiveTag::GetParentTag() const
+const CArchiveTag* CArchiveTag::GetParentTag() const
 {
 	return m_parentPtr;
 }

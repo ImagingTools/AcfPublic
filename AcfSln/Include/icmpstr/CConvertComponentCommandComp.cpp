@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "icmpstr/CComponentPromotorDialogComp.h"
+#include "icmpstr/CConvertComponentCommandComp.h"
 
 
 // STL includes
@@ -46,26 +46,29 @@ namespace icmpstr
 {
 
 
-CComponentPromotorDialogComp::CComponentPromotorDialogComp()
+const istd::IChangeable::ChangeSet s_morphElementChangeSet(icomp::IRegistry::CF_ELEMENT_REMOVED, icomp::IRegistry::CF_ELEMENT_ADDED, QObject::tr("Morph component"));
+
+
+CConvertComponentCommandComp::CConvertComponentCommandComp()
 {
 	setupUi(this);
 
 	DoRetranslate();
 
-	m_promoteComponentCommand.setEnabled(false);
-	m_promoteComponentCommand.SetGroupId(GI_COMPONENT);
-	m_promoteComponentCommand.setShortcut(QKeySequence(Qt::CTRL + Qt::Key_F2));
+	m_convertComponentCommand.setEnabled(false);
+	m_convertComponentCommand.SetGroupId(GI_COMPONENT);
+	m_convertComponentCommand.setShortcut(QKeySequence(Qt::CTRL + Qt::Key_F2));
 
-	m_registryMenu.InsertChild(&m_promoteComponentCommand);
+	m_registryMenu.InsertChild(&m_convertComponentCommand);
 	m_rootMenuCommand.InsertChild(&m_registryMenu);
 
-	connect(&m_promoteComponentCommand, SIGNAL(triggered()), this, SLOT(OnPromoteCommand()));
+	connect(&m_convertComponentCommand, SIGNAL(triggered()), this, SLOT(OnPromoteCommand()));
 }
 
 
 // reimpemented (ibase::ICommandsProvider)
 
-const ibase::IHierarchicalCommand* CComponentPromotorDialogComp::GetCommands() const
+const ibase::IHierarchicalCommand* CConvertComponentCommandComp::GetCommands() const
 {
 	return &m_rootMenuCommand;
 }
@@ -73,7 +76,7 @@ const ibase::IHierarchicalCommand* CComponentPromotorDialogComp::GetCommands() c
 
 // protected methods
 
-void CComponentPromotorDialogComp::InsertElementToFilters(
+void CConvertComponentCommandComp::InsertElementToFilters(
 			const icomp::IRegistry& registry,
 			const QByteArray& elementName,
 			const icomp::IRegistry::ElementInfo& elementInfo)
@@ -200,7 +203,7 @@ void CComponentPromotorDialogComp::InsertElementToFilters(
 }
 
 
-void CComponentPromotorDialogComp::CreatePackagesList()
+void CConvertComponentCommandComp::CreatePackagesList()
 {
 	QString packageName = PackageNameCB->currentText();
 
@@ -234,7 +237,7 @@ void CComponentPromotorDialogComp::CreatePackagesList()
 }
 
 
-void CComponentPromotorDialogComp::CreateComponentsList()
+void CConvertComponentCommandComp::CreateComponentsList()
 {
 	QString componentName = ComponentNameCB->currentText();
 
@@ -270,7 +273,7 @@ void CComponentPromotorDialogComp::CreateComponentsList()
 }
 
 
-void CComponentPromotorDialogComp::CalcFilteredComponents()
+void CConvertComponentCommandComp::CalcFilteredComponents()
 {
 	m_filteredComponents.clear();
 
@@ -346,28 +349,28 @@ void CComponentPromotorDialogComp::CalcFilteredComponents()
 }
 
 
-void CComponentPromotorDialogComp::DoRetranslate()
+void CConvertComponentCommandComp::DoRetranslate()
 {
 	m_registryMenu.SetVisuals(
 				tr("&Registry"),
 				tr("Registry"),
 				tr("Set of commands manipulating registry"));
-	m_promoteComponentCommand.SetVisuals(
-				tr("&Promote component"), 
-				tr("Promote"), 
-				tr("Promote component to another one"));
+	m_convertComponentCommand.SetVisuals(
+				tr("&Convert component"), 
+				tr("Convert"), 
+				tr("Convert component to another one"));
 }
 
 
 // reimplemented (imod::CSingleModelObserverBase)
 
-void CComponentPromotorDialogComp::OnUpdate(const istd::IChangeable::ChangeSet& changeSet)
+void CConvertComponentCommandComp::OnUpdate(const istd::IChangeable::ChangeSet& changeSet)
 {
 	BaseClass::OnUpdate(changeSet);
 
 	const IElementSelectionInfo* objectPtr = GetObservedObject();
 
-	m_promoteComponentCommand.SetEnabled(
+	m_convertComponentCommand.SetEnabled(
 				(objectPtr != NULL) &&
 				!objectPtr->GetSelectedElements().isEmpty());
 }
@@ -375,40 +378,40 @@ void CComponentPromotorDialogComp::OnUpdate(const istd::IChangeable::ChangeSet& 
 
 // protected slots
 
-void CComponentPromotorDialogComp::on_InterfacesPolicyCB_currentIndexChanged(int /*index*/)
+void CConvertComponentCommandComp::on_InterfacesPolicyCB_currentIndexChanged(int /*index*/)
 {
 	CalcFilteredComponents();
 	CreatePackagesList();
 }
 
 
-void CComponentPromotorDialogComp::on_AttributesPolicyCB_currentIndexChanged(int /*index*/)
+void CConvertComponentCommandComp::on_AttributesPolicyCB_currentIndexChanged(int /*index*/)
 {
 	CalcFilteredComponents();
 	CreatePackagesList();
 }
 
 
-void CComponentPromotorDialogComp::on_SubcomponentsPolicyCB_currentIndexChanged(int /*index*/)
+void CConvertComponentCommandComp::on_SubcomponentsPolicyCB_currentIndexChanged(int /*index*/)
 {
 	CalcFilteredComponents();
 	CreatePackagesList();
 }
 
 
-void CComponentPromotorDialogComp::on_PackageNameCB_currentIndexChanged(int /*index*/)
+void CConvertComponentCommandComp::on_PackageNameCB_currentIndexChanged(int /*index*/)
 {
 	CreateComponentsList();
 }
 
 
-void CComponentPromotorDialogComp::on_ComponentNameCB_currentIndexChanged(int index)
+void CConvertComponentCommandComp::on_ComponentNameCB_currentIndexChanged(int index)
 {
 	ButtonBox->button(QDialogButtonBox::Ok)->setEnabled(index >= 0);
 }
 
 
-void CComponentPromotorDialogComp::OnPromoteCommand()
+void CConvertComponentCommandComp::OnPromoteCommand()
 {
 	IElementSelectionInfo* selectionInfoPtr = GetObservedObject();
 	if (!m_metaInfoManagerCompPtr.IsValid() || (selectionInfoPtr == NULL)){
@@ -448,8 +451,7 @@ void CComponentPromotorDialogComp::OnPromoteCommand()
 					PackageNameCB->currentText().toLatin1(),
 					ComponentNameCB->currentText().toLatin1());
 
-		static const istd::IChangeable::ChangeSet registryChangeSet(icomp::IRegistry::CF_ELEMENT_REMOVED, icomp::IRegistry::CF_ELEMENT_ADDED, "Promote component");
-		istd::CChangeNotifier registryNotifier(registryPtr, &registryChangeSet);
+		istd::CChangeNotifier registryNotifier(registryPtr, &s_morphElementChangeSet);
 		Q_UNUSED(registryNotifier);
 
 		for (		IElementSelectionInfo::Elements::Iterator iter = elements.begin();

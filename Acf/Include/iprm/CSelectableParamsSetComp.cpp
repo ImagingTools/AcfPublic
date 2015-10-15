@@ -33,6 +33,9 @@ namespace iprm
 {
 
 
+const istd::IChangeable::ChangeSet s_selectionChangeSet(ISelectionParam::CF_SELECTION_CHANGED);
+
+
 CSelectableParamsSetComp::CSelectableParamsSetComp()
 :	BaseClass2(this),
 	m_selectedIndex(-1),
@@ -137,8 +140,7 @@ bool CSelectableParamsSetComp::SetSelectedOptionIndex(int index)
 		Q_ASSERT(m_paramsManagerCompPtr.IsValid());
 
 		if (m_paramsManagerCompPtr->SetSelectedOptionIndex(index)){
-			ChangeSet changeSet(CF_SELECTION_CHANGED);
-			istd::CChangeNotifier notifier(this, &changeSet);
+			istd::CChangeNotifier notifier(this, &s_selectionChangeSet);
 			Q_UNUSED(notifier);
 
 			m_selectedIndex = index;

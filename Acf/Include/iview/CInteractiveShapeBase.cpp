@@ -39,6 +39,9 @@ namespace iview
 {
 
 
+const istd::IChangeable::ChangeSet s_moveObjectChangeSet(IDisplay::CS_CONSOLE, i2d::IObject2d::CF_OBJECT_POSITION, QObject::tr("Move object"));
+
+
 CInteractiveShapeBase::CInteractiveShapeBase()
 	:m_isSelected(false),
 	 m_isEditablePosition(true)
@@ -139,8 +142,7 @@ void CInteractiveShapeBase::SetDragPosition(const istd::CIndex2d& position)
 	if (!m_dragNotifierPtr.IsValid()){
 		istd::IChangeable* objectPtr = dynamic_cast<istd::IChangeable*>(GetObservedModel());
 
-		static const istd::IChangeable::ChangeSet dragChangeSet(IDisplay::CS_CONSOLE, i2d::IObject2d::CF_OBJECT_POSITION, "Drag object");
-		m_dragNotifierPtr.SetPtr(new istd::CChangeGroup(objectPtr, &dragChangeSet));
+		m_dragNotifierPtr.SetPtr(new istd::CChangeGroup(objectPtr, &s_moveObjectChangeSet));
 	}
 
 	SetLogDragPosition(GetLogPosition(position));
@@ -160,8 +162,7 @@ void CInteractiveShapeBase::EndDrag()
 void CInteractiveShapeBase::BeginTickerDrag()
 {
 	istd::IChangeable* objectPtr = dynamic_cast<istd::IChangeable*>(GetObservedModel());
-	static const istd::IChangeable::ChangeSet dragChangeSet(IDisplay::CS_CONSOLE, i2d::IObject2d::CF_OBJECT_POSITION, "Drag object");
-	m_dragNotifierPtr.SetPtr(new istd::CChangeGroup(objectPtr, &dragChangeSet));
+	m_dragNotifierPtr.SetPtr(new istd::CChangeGroup(objectPtr, &s_moveObjectChangeSet));
 
 	ISelectable* controllerPtr = dynamic_cast<ISelectable*>(GetDisplayPtr());
 	if (controllerPtr != NULL){

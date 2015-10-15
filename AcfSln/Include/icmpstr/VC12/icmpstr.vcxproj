@@ -121,7 +121,7 @@
     <ClCompile Include="..\CAttributeEditorComp.cpp" />
     <ClCompile Include="..\CComponentHelpFileProviderComp.cpp" />
     <ClCompile Include="..\CComponentNoteEditorComp.cpp" />
-    <ClCompile Include="..\CComponentPromotorDialogComp.cpp" />
+    <ClCompile Include="..\CConvertComponentCommandComp.cpp" />
     <ClCompile Include="..\CElementSelectionInfoManagerBase.cpp" />
     <ClCompile Include="..\CGraphicsConnectorItem.cpp" />
     <ClCompile Include="..\CMultiAttributeDelegateWidget.cpp" />
@@ -163,15 +163,15 @@
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CComponentNoteEditorComp.h</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\moc_CComponentNoteEditorComp.cpp;%(Outputs)</Outputs>
     </CustomBuild>
-    <CustomBuild Include="..\CComponentPromotorDialogComp.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CComponentPromotorDialogComp.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I..\..\..\..\AcfSln/Include/icmpstr/QMake -I..\..\..\..\AcfSln/AuxInclude/Qt5_VC12 -I..\..\..\..\Acf/Include -I..\..\..\..\Acf/AuxInclude/Qt5_VC12 -I..\..\..\..\AcfSln/Include -I..\..\..\..\AcfSln/Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CComponentPromotorDialogComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\moc_CComponentPromotorDialogComp.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CComponentPromotorDialogComp.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\moc_CComponentPromotorDialogComp.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CComponentPromotorDialogComp.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I..\..\..\..\AcfSln/Include/icmpstr/QMake -I..\..\..\..\AcfSln/AuxInclude/Qt5_VC12 -I..\..\..\..\Acf/Include -I..\..\..\..\Acf/AuxInclude/Qt5_VC12 -I..\..\..\..\AcfSln/Include -I..\..\..\..\AcfSln/Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CComponentPromotorDialogComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\moc_CComponentPromotorDialogComp.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CComponentPromotorDialogComp.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\moc_CComponentPromotorDialogComp.cpp;%(Outputs)</Outputs>
+    <CustomBuild Include="..\CConvertComponentCommandComp.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CConvertComponentCommandComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I..\..\..\..\AcfSln/Include/icmpstr/QMake -I..\..\..\..\AcfSln/AuxInclude/Qt5_VC12 -I..\..\..\..\Acf/Include -I..\..\..\..\Acf/AuxInclude/Qt5_VC12 -I..\..\..\..\AcfSln/Include -I..\..\..\..\AcfSln/Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CConvertComponentCommandComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\moc_CConvertComponentCommandComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CConvertComponentCommandComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\moc_CConvertComponentCommandComp.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CConvertComponentCommandComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I..\..\..\..\AcfSln/Include/icmpstr/QMake -I..\..\..\..\AcfSln/AuxInclude/Qt5_VC12 -I..\..\..\..\Acf/Include -I..\..\..\..\Acf/AuxInclude/Qt5_VC12 -I..\..\..\..\AcfSln/Include -I..\..\..\..\AcfSln/Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CConvertComponentCommandComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\moc_CConvertComponentCommandComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CConvertComponentCommandComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\moc_CConvertComponentCommandComp.cpp;%(Outputs)</Outputs>
     </CustomBuild>
     <ClInclude Include="..\CElementSelectionInfoManagerBase.h" />
     <CustomBuild Include="..\CGraphicsConnectorItem.h">
@@ -331,7 +331,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\moc_CAttributeEditorComp.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\moc_CComponentNoteEditorComp.cpp" />
-    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\moc_CComponentPromotorDialogComp.cpp" />
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\moc_CConvertComponentCommandComp.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\moc_CGraphicsConnectorItem.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\moc_CMultiAttributeDelegateWidget.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\moc_CMultiAttributeEditor.cpp" />
@@ -354,7 +354,7 @@
     </ClCompile>
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\ui_CAttributeEditorComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\ui_CComponentNoteEditorComp.h" />
-    <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\ui_CComponentPromotorDialogComp.h" />
+    <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\ui_CConvertComponentCommandComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\ui_CMultiAttributeEditor.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\ui_CPackageOverviewComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\ui_CQuickHelpGuiComp.h" />
@@ -387,16 +387,16 @@
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ..\CComponentNoteEditorComp.ui</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\ui_CComponentNoteEditorComp.h;%(Outputs)</Outputs>
     </CustomBuild>
-    <CustomBuild Include="..\CComponentPromotorDialogComp.ui">
+    <CustomBuild Include="..\CConvertComponentCommandComp.ui">
       <FileType>Document</FileType>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CComponentPromotorDialogComp.ui;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\uic.exe ..\CComponentPromotorDialogComp.ui -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\ui_CComponentPromotorDialogComp.h</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">UIC ..\CComponentPromotorDialogComp.ui</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\ui_CComponentPromotorDialogComp.h;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CComponentPromotorDialogComp.ui;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\uic.exe ..\CComponentPromotorDialogComp.ui -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\ui_CComponentPromotorDialogComp.h</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ..\CComponentPromotorDialogComp.ui</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\ui_CComponentPromotorDialogComp.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CConvertComponentCommandComp.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\uic.exe ..\CConvertComponentCommandComp.ui -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\ui_CConvertComponentCommandComp.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">UIC ..\CConvertComponentCommandComp.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\ui_CConvertComponentCommandComp.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CConvertComponentCommandComp.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\uic.exe ..\CConvertComponentCommandComp.ui -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\ui_CConvertComponentCommandComp.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ..\CConvertComponentCommandComp.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\ui_CConvertComponentCommandComp.h;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="..\CMultiAttributeEditor.ui">
       <FileType>Document</FileType>

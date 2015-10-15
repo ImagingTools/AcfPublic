@@ -323,12 +323,12 @@
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
-    <name>CComponentPromotorDialogComp.h</name>
+    <name>CConvertComponentCommandComp.h</name>
     <path>C:/Temp/AcfSln/Include/icmpstr/</path>
-    <filename>_c_component_promotor_dialog_comp_8h</filename>
+    <filename>_c_convert_component_command_comp_8h</filename>
     <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="yes" imported="no">icmpstr/IElementSelectionInfo.h</includes>
-    <class kind="class">icmpstr::CComponentPromotorDialogCompBase</class>
-    <class kind="class">icmpstr::CComponentPromotorDialogComp</class>
+    <class kind="class">icmpstr::CConvertComponentCommandCompBase</class>
+    <class kind="class">icmpstr::CConvertComponentCommandComp</class>
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
@@ -6890,8 +6890,8 @@
     <class kind="class">icmpstr::CAttributeEditorComp</class>
     <class kind="class">icmpstr::CComponentHelpFileProviderComp</class>
     <class kind="class">icmpstr::CComponentNoteEditorComp</class>
-    <class kind="class">icmpstr::CComponentPromotorDialogCompBase</class>
-    <class kind="class">icmpstr::CComponentPromotorDialogComp</class>
+    <class kind="class">icmpstr::CConvertComponentCommandCompBase</class>
+    <class kind="class">icmpstr::CConvertComponentCommandComp</class>
     <class kind="class">icmpstr::CElementSelectionInfoManagerBase</class>
     <class kind="class">icmpstr::CGraphicsConnectorItem</class>
     <class kind="class">icmpstr::CMultiAttributeDelegateWidget</class>
@@ -7525,147 +7525,147 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>icmpstr::CComponentPromotorDialogCompBase</name>
-    <filename>classicmpstr_1_1_c_component_promotor_dialog_comp_base.html</filename>
+    <name>icmpstr::CConvertComponentCommandCompBase</name>
+    <filename>classicmpstr_1_1_c_convert_component_command_comp_base.html</filename>
     <base>icomp::CComponentBase</base>
     <base>TSingleModelObserverBase&lt; IElementSelectionInfo &gt;</base>
   </compound>
   <compound kind="class">
-    <name>icmpstr::CComponentPromotorDialogComp</name>
-    <filename>classicmpstr_1_1_c_component_promotor_dialog_comp.html</filename>
-    <base>TModelObserverCompWrap&lt; CComponentPromotorDialogCompBase &gt;</base>
+    <name>icmpstr::CConvertComponentCommandComp</name>
+    <filename>classicmpstr_1_1_c_convert_component_command_comp.html</filename>
+    <base>TModelObserverCompWrap&lt; CConvertComponentCommandCompBase &gt;</base>
     <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="typedef">
-      <type>ibase::TModelObserverCompWrap&lt; CComponentPromotorDialogCompBase &gt;</type>
+      <type>ibase::TModelObserverCompWrap&lt; CConvertComponentCommandCompBase &gt;</type>
       <name>BaseClass</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a2e084c999f2a66fefe45a9452220fbb9</anchor>
+      <anchorfile>classicmpstr_1_1_c_convert_component_command_comp.html</anchorfile>
+      <anchor>ab828943aa7a9eab981ae3d2796521137</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>imod::TSingleModelObserverBase&lt; IElementSelectionInfo &gt;</type>
       <name>BaseClass2</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a895586751db455af5c2334efdc335d4b</anchor>
+      <anchorfile>classicmpstr_1_1_c_convert_component_command_comp.html</anchorfile>
+      <anchor>ac089c2c90dcd86f58a9b2b1e2b1d5023</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>QDialog</type>
       <name>BaseClass3</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a88309f5a1e055356fa92612ea01d3ed2</anchor>
+      <anchorfile>classicmpstr_1_1_c_convert_component_command_comp.html</anchorfile>
+      <anchor>a7f01aa4584265d0fdcb40da1c8739a64</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
-      <name>CComponentPromotorDialogComp</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a7798dec2cc665e2446d3feb9eaf795f5</anchor>
+      <name>CConvertComponentCommandComp</name>
+      <anchorfile>classicmpstr_1_1_c_convert_component_command_comp.html</anchorfile>
+      <anchor>aa976c2e7911892cf4adc1567753dc9ca</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ibase::IHierarchicalCommand *</type>
       <name>GetCommands</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a922592539adbef1b4100bb691afbd64c</anchor>
+      <anchorfile>classicmpstr_1_1_c_convert_component_command_comp.html</anchorfile>
+      <anchor>a3137e450c8934ed78f155482775f1b50</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="enumeration" protection="protected">
       <type></type>
       <name>GroupId</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>adbd5d01ec79756ee7949da2d46193b8d</anchor>
+      <anchorfile>classicmpstr_1_1_c_convert_component_command_comp.html</anchorfile>
+      <anchor>abcfd390e091578b994d1348b81858fdc</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>GI_COMPONENT</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>adbd5d01ec79756ee7949da2d46193b8dae63e8798886e3adcff68f133aba86dd5</anchor>
+      <anchorfile>classicmpstr_1_1_c_convert_component_command_comp.html</anchorfile>
+      <anchor>abcfd390e091578b994d1348b81858fdca15dbf4dc5db18e06d6ae9725d8f40a85</anchor>
       <arglist></arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_InterfacesPolicyCB_currentIndexChanged</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a4f639c06ed9ff62be2ba68480dbbb170</anchor>
+      <anchorfile>classicmpstr_1_1_c_convert_component_command_comp.html</anchorfile>
+      <anchor>a7cba251117085ea968e407b777f3298c</anchor>
       <arglist>(int index)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_AttributesPolicyCB_currentIndexChanged</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a49aee3ef6a075a54724585e08bcf059f</anchor>
+      <anchorfile>classicmpstr_1_1_c_convert_component_command_comp.html</anchorfile>
+      <anchor>ab9478b8b75ffeb0f4b98ac16378cf9e0</anchor>
       <arglist>(int index)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_SubcomponentsPolicyCB_currentIndexChanged</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>ae69909f7dcf07a4f28f2ba616fe4c034</anchor>
+      <anchorfile>classicmpstr_1_1_c_convert_component_command_comp.html</anchorfile>
+      <anchor>a40d05b54e195d3c82b55783121c33099</anchor>
       <arglist>(int index)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_PackageNameCB_currentIndexChanged</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>acb6f9b3efa6a674be6e13ae09d178de9</anchor>
+      <anchorfile>classicmpstr_1_1_c_convert_component_command_comp.html</anchorfile>
+      <anchor>a8c9f6612724afb3d3c823773ba027df3</anchor>
       <arglist>(int index)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_ComponentNameCB_currentIndexChanged</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>aa1bcd1fbdc5caaaf1197d76aa4b6735f</anchor>
+      <anchorfile>classicmpstr_1_1_c_convert_component_command_comp.html</anchorfile>
+      <anchor>acb0280d58bcb96b261717743a20ad931</anchor>
       <arglist>(int index)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnPromoteCommand</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a16be56238f36a699bbcb5e63465f18ff</anchor>
+      <anchorfile>classicmpstr_1_1_c_convert_component_command_comp.html</anchorfile>
+      <anchor>af53b881a52f7452bfe7b3210459d7845</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>InsertElementToFilters</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a23495e811a03bed532a1feb6e447699e</anchor>
+      <anchorfile>classicmpstr_1_1_c_convert_component_command_comp.html</anchorfile>
+      <anchor>ab09517d3ac0baae69fb0be89edea9bc7</anchor>
       <arglist>(const icomp::IRegistry &amp;registry, const QByteArray &amp;elementName, const icomp::IRegistry::ElementInfo &amp;elementInfo)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>CreatePackagesList</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a954e3fd8790c39502f3dff13b7b6853a</anchor>
+      <anchorfile>classicmpstr_1_1_c_convert_component_command_comp.html</anchorfile>
+      <anchor>a680a547a07dd864197d7dace795a864e</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>CreateComponentsList</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>ac7bf15751a039a3f25ac8fabed65c8ae</anchor>
+      <anchorfile>classicmpstr_1_1_c_convert_component_command_comp.html</anchorfile>
+      <anchor>a7e4ef7228cd97afc3810cfe370c5d6cd</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>CalcFilteredComponents</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a6b9b0b57f4036299b4991b6d7a3fa405</anchor>
+      <anchorfile>classicmpstr_1_1_c_convert_component_command_comp.html</anchorfile>
+      <anchor>a84ee69740cd3365bab9d8e1b27a242d5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>DoRetranslate</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>a126db753c880e9920499a3d65cfa3270</anchor>
+      <anchorfile>classicmpstr_1_1_c_convert_component_command_comp.html</anchorfile>
+      <anchor>adc5b95fff0610218cd69a90c240bc799</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnUpdate</name>
-      <anchorfile>classicmpstr_1_1_c_component_promotor_dialog_comp.html</anchorfile>
-      <anchor>ab7c6ba20a10de128ea5d754c006b145b</anchor>
+      <anchorfile>classicmpstr_1_1_c_convert_component_command_comp.html</anchorfile>
+      <anchor>aa974c07846788c597b3ad36f085a5a82</anchor>
       <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
@@ -30053,7 +30053,7 @@
     <file>CAttributeEditorComp.h</file>
     <file>CComponentHelpFileProviderComp.h</file>
     <file>CComponentNoteEditorComp.h</file>
-    <file>CComponentPromotorDialogComp.h</file>
+    <file>CConvertComponentCommandComp.h</file>
     <file>CElementSelectionInfoManagerBase.h</file>
     <file>CGraphicsConnectorItem.h</file>
     <file>CMultiAttributeDelegateWidget.h</file>

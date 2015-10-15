@@ -31,6 +31,9 @@ namespace imeas
 {
 
 
+const istd::IChangeable::ChangeSet s_changeUnitChangeSet(iprm::ISelectionParam::CF_SELECTION_CHANGED, QObject::tr("Change units"));
+
+
 // public methods
 
 CRelativeUnitSelectorComp::CRelativeUnitSelectorComp()
@@ -65,8 +68,7 @@ bool CRelativeUnitSelectorComp::SetSelectedOptionIndex(int index)
 
 	if (index != m_displayMode)
 	{
-		ChangeSet changes(iprm::ISelectionParam::CF_SELECTION_CHANGED);
-		istd::CChangeNotifier changeNotfiier(this, &changes);
+		istd::CChangeNotifier changeNotfiier(this, &s_changeUnitChangeSet);
 
 		m_displayMode = DisplayMode(index);
 	}

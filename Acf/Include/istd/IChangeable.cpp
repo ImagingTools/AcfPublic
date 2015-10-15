@@ -156,6 +156,7 @@ IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, int id4, int id5, i
 void IChangeable::ChangeSet::Reset()
 {
 	m_ids.clear();
+	m_description.clear();
 }
 
 
@@ -214,7 +215,7 @@ IChangeable::ChangeSet IChangeable::ChangeSet::operator+(const ChangeSet& change
 	retVal.m_ids += m_ids;
 	retVal.m_ids += changeSet.m_ids;
 
-	if (m_description.isEmpty()){
+	if (!changeSet.m_description.isEmpty()){
 		retVal.m_description = changeSet.m_description;
 	}
 	else{
@@ -237,7 +238,7 @@ IChangeable::ChangeSet& IChangeable::ChangeSet::operator+=(const ChangeSet& chan
 {
 	m_ids += changeSet.m_ids;
 
-	if (m_description.isEmpty()){
+	if (!changeSet.m_description.isEmpty()){
 		m_description = changeSet.m_description;
 	}
 

@@ -34,6 +34,9 @@ namespace iwin
 {
 
 
+const istd::IChangeable::ChangeSet s_startChangeSet(istd::ITimeStamp::CF_START_SET);
+
+
 CPerformanceTimeStamp::CPerformanceTimeStamp()
 {
 	m_startCounter = 0;
@@ -70,8 +73,7 @@ quint64 CPerformanceTimeStamp::GetNativeRepresentation() const
 
 void CPerformanceTimeStamp::SetNativeRepresentation(quint64 value)
 {
-	ChangeSet startChangeSet(CF_START_SET);
-	istd::CChangeNotifier notifier(this, &startChangeSet);
+	istd::CChangeNotifier notifier(this, &s_startChangeSet);
 	Q_UNUSED(notifier);
 
 	m_startCounter = qint64(value);

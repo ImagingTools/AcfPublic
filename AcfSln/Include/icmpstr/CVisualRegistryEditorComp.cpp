@@ -48,6 +48,7 @@
 #include "istd/CChangeNotifier.h"
 #include "istd/CIdManipBase.h"
 
+#include "iser/CArchiveTag.h"
 #include "iser/CXmlStringReadArchive.h"
 #include "iser/CXmlStringWriteArchive.h"
 
@@ -69,11 +70,17 @@ namespace icmpstr
 
 // static variables
 
-iser::CArchiveTag s_elementsListTag("ElementsList", "List of elements", iser::CArchiveTag::TT_MULTIPLE);
-iser::CArchiveTag s_elementTag("Element", "Single element", iser::CArchiveTag::TT_GROUP, &s_elementsListTag, true);
-iser::CArchiveTag s_elementIdTag("Id", "Id of element", iser::CArchiveTag::TT_LEAF, &s_elementTag);
-iser::CArchiveTag s_elementAddressTag("Address", "Address of component", iser::CArchiveTag::TT_GROUP, &s_elementTag);
-iser::CArchiveTag s_elementCenterTag("Center", "Center position of element", iser::CArchiveTag::TT_GROUP, &s_elementTag);
+const iser::CArchiveTag s_elementsListTag("ElementsList", "List of elements", iser::CArchiveTag::TT_MULTIPLE);
+const iser::CArchiveTag s_elementTag("Element", "Single element", iser::CArchiveTag::TT_GROUP, &s_elementsListTag, true);
+const iser::CArchiveTag s_elementIdTag("Id", "Id of element", iser::CArchiveTag::TT_LEAF, &s_elementTag);
+const iser::CArchiveTag s_elementAddressTag("Address", "Address of component", iser::CArchiveTag::TT_GROUP, &s_elementTag);
+const iser::CArchiveTag s_elementCenterTag("Center", "Center position of element", iser::CArchiveTag::TT_GROUP, &s_elementTag);
+
+const istd::IChangeable::ChangeSet s_addElementChangeSet(icomp::IRegistry::CF_ELEMENT_ADDED, QObject::tr("Add component"));
+const istd::IChangeable::ChangeSet s_removeElementChangeSet(icomp::IRegistry::CF_ELEMENT_REMOVED, QObject::tr("Remove component"));
+const istd::IChangeable::ChangeSet s_addEmbeddedRegistryChangeSet(icomp::IRegistry::CF_ELEMENT_ADDED, icomp::IRegistry::CF_EMBEDDED, QObject::tr("Add embedded registry"));
+const istd::IChangeable::ChangeSet s_toEmbeddedRegistryChangeSet(icomp::IRegistry::CF_ELEMENT_ADDED, icomp::IRegistry::CF_ELEMENT_REMOVED, icomp::IRegistry::CF_EMBEDDED, QObject::tr("To embedded registry"));
+const istd::IChangeable::ChangeSet s_removeEmbeddedRegistryChangeSet(icomp::IRegistry::CF_ELEMENT_REMOVED, icomp::IRegistry::CF_EMBEDDED, QObject::tr("Remove embedded registry"));
 
 
 CVisualRegistryEditorComp::CVisualRegistryEditorComp()
@@ -392,8 +399,7 @@ icomp::IRegistryElement* CVisualRegistryEditorComp::TryCreateComponent(
 		return NULL;
 	}
 
-	const ChangeSet registryChangeSet(icomp::IRegistry::CF_ELEMENT_ADDED, "Add component");
-	istd::CChangeNotifier registryNotifier(registryPtr, &registryChangeSet);
+	istd::CChangeNotifier registryNotifier(registryPtr, &s_addElementChangeSet);
 	Q_UNUSED(registryNotifier);
 
 	QRegExp regexp("^(\\w*)_(\\d+)$");
@@ -625,8 +631,7 @@ bool CVisualRegistryEditorComp::OnDropObject(const QMimeData& mimeData, QGraphic
 		return false;
 	}
 
-	const ChangeSet registryChangeSet(icomp::IRegistry::CF_ELEMENT_ADDED, "Drop object");
-	istd::CChangeNotifier registryNotifier(registryPtr, &registryChangeSet);
+	istd::CChangeNotifier registryNotifier(registryPtr, &s_addElementChangeSet);
 	Q_UNUSED(registryNotifier);
 
 	i2d::CVector2d position(0, 0);
@@ -984,8 +989,7 @@ void CVisualRegistryEditorComp::OnPasteCommand()
 		return;
 	}
 
-	const ChangeSet registryChangeSet(icomp::IRegistry::CF_ELEMENT_ADDED, "Paste components");
-	istd::CChangeNotifier registryNotifier(registryPtr, &registryChangeSet);
+	istd::CChangeNotifier registryNotifier(registryPtr, &s_addElementChangeSet);
 	Q_UNUSED(registryNotifier);
 
 	iser::CXmlStringReadArchive archive(mimeDataPtr->text().toLocal8Bit(), false);
@@ -1039,8 +1043,7 @@ void CVisualRegistryEditorComp::OnRemoveComponent()
 		return;
 	}
 
-	const ChangeSet registryChangeSet(icomp::IRegistry::CF_ELEMENT_REMOVED, "Remove component");
-	istd::CChangeNotifier registryNotifier(registryPtr, &registryChangeSet);
+	istd::CChangeNotifier registryNotifier(registryPtr, &s_removeElementChangeSet);
 	Q_UNUSED(registryNotifier);
 
 	for (		ElementIds::const_iterator iter = m_selectedElementIds.begin();
@@ -1090,8 +1093,7 @@ void CVisualRegistryEditorComp::NewEmbeddedComponent()
 		return;
 	}
 
-	const ChangeSet registryChangeSet(icomp::IRegistry::CF_ELEMENT_ADDED, icomp::IRegistry::CF_EMBEDDED, "Add embedded registry");
-	istd::CChangeNotifier registryNotifier(registryPtr, &registryChangeSet);
+	istd::CChangeNotifier registryNotifier(registryPtr, &s_addEmbeddedRegistryChangeSet);
 	Q_UNUSED(registryNotifier);
 
 	bool isOk = false;
@@ -1121,8 +1123,7 @@ void CVisualRegistryEditorComp::ToEmbeddedComponent()
 		return;
 	}
 
-	const ChangeSet registryChangeSet(icomp::IRegistry::CF_ELEMENT_ADDED, icomp::IRegistry::CF_ELEMENT_REMOVED, icomp::IRegistry::CF_EMBEDDED, "To embedded registry");
-	istd::CChangeNotifier registryNotifier(registryPtr, &registryChangeSet);
+	istd::CChangeNotifier registryNotifier(registryPtr, &s_toEmbeddedRegistryChangeSet);
 	Q_UNUSED(registryNotifier);
 
 	bool isOk = false;
@@ -1227,8 +1228,7 @@ void CVisualRegistryEditorComp::RemoveEmbeddedComponent()
 		return;
 	}
 
-	const ChangeSet registryChangeSet(icomp::IRegistry::CF_ELEMENT_REMOVED, icomp::IRegistry::CF_EMBEDDED, "Remove embedded registry");
-	istd::CChangeNotifier registryNotifier(registryPtr, &registryChangeSet);
+	istd::CChangeNotifier registryNotifier(registryPtr, &s_removeEmbeddedRegistryChangeSet);
 	Q_UNUSED(registryNotifier);
 
 	registryPtr->RemoveEmbeddedRegistry(m_embeddedRegistryId);

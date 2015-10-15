@@ -31,6 +31,9 @@ namespace iqt2d
 {
 
 
+const istd::IChangeable::ChangeSet s_commandsChangeSet(ibase::ICommandsProvider::CF_COMMANDS);
+
+
 // reimplemented (ibase::ICommandsProvider)
 
 const ibase::IHierarchicalCommand* CSceneConnectorGuiComp::GetCommands() const
@@ -107,8 +110,7 @@ void CSceneConnectorGuiComp::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
-	ChangeSet commandsChangeSet(ibase::ICommandsProvider::CF_COMMANDS);
-	istd::CChangeNotifier commandsNotifier(this, &commandsChangeSet);
+	istd::CChangeNotifier commandsNotifier(this, &s_commandsChangeSet);
 	Q_UNUSED(commandsNotifier);
 
 	if (m_sceneCommandsCompPtr.IsValid()){
@@ -129,8 +131,7 @@ void CSceneConnectorGuiComp::OnComponentCreated()
 
 void CSceneConnectorGuiComp::OnComponentDestroyed()
 {
-	ChangeSet commandsChangeSet(ibase::ICommandsProvider::CF_COMMANDS);
-	istd::CChangeNotifier commandsNotifier(this, &commandsChangeSet);
+	istd::CChangeNotifier commandsNotifier(this, &s_commandsChangeSet);
 	Q_UNUSED(commandsNotifier);
 
 	m_commands.ResetChilds();

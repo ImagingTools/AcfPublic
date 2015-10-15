@@ -35,6 +35,12 @@ namespace iqtmm
 {
 
 
+const istd::IChangeable::ChangeSet s_openMediaChangeSet(imm::IMediaController::CF_STATUS, imm::IMediaController::CF_MEDIA_POSITION);
+const istd::IChangeable::ChangeSet s_closeMediaChangeSet(imm::IMediaController::CF_STATUS);
+const istd::IChangeable::ChangeSet s_startStopChangeSet(imm::IMediaController::CF_STATUS);
+const istd::IChangeable::ChangeSet s_setPositionChangeSet(imm::IMediaController::CF_MEDIA_POSITION);
+
+
 // public methods
 
 CFrameSeqVideoControllerComp::CFrameSeqVideoControllerComp()
@@ -98,8 +104,7 @@ QString CFrameSeqVideoControllerComp::GetOpenedMediumUrl() const
 
 bool CFrameSeqVideoControllerComp::OpenMediumUrl(const QString& url, bool autoPlay)
 {
-	ChangeSet changeSet(CF_STATUS, CF_MEDIA_POSITION);
-	istd::CChangeNotifier notifier(this, &changeSet);
+	istd::CChangeNotifier notifier(this, &s_openMediaChangeSet);
 	Q_UNUSED(notifier);
 
 	m_mediumUrl = url;
@@ -127,8 +132,7 @@ bool CFrameSeqVideoControllerComp::OpenMediumUrl(const QString& url, bool autoPl
 
 void CFrameSeqVideoControllerComp::CloseMedium()
 {
-	ChangeSet changeSet(CF_STATUS);
-	istd::CChangeNotifier notifier(this, &changeSet);
+	istd::CChangeNotifier notifier(this, &s_closeMediaChangeSet);
 	Q_UNUSED(notifier);
 
 	SetPlaying(false);
@@ -143,8 +147,7 @@ bool CFrameSeqVideoControllerComp::IsPlaying() const
 
 bool CFrameSeqVideoControllerComp::SetPlaying(bool state)
 {
-	ChangeSet changeSet(CF_STATUS);
-	istd::CChangeNotifier notifier(this, &changeSet);
+	istd::CChangeNotifier notifier(this, &s_startStopChangeSet);
 	Q_UNUSED(notifier);
 
 	if (m_isPlaying != state){
@@ -216,8 +219,7 @@ int CFrameSeqVideoControllerComp::GetCurrentFrame() const
 bool CFrameSeqVideoControllerComp::SetCurrentFrame(int frameIndex)
 {
 	if (frameIndex != m_currentFrameIndex){
-		ChangeSet changeSet(CF_MEDIA_POSITION);
-		istd::CChangeNotifier notifier(this, &changeSet);
+		istd::CChangeNotifier notifier(this, &s_setPositionChangeSet);
 		Q_UNUSED(notifier);
 
 		m_currentFrameIndex = frameIndex;

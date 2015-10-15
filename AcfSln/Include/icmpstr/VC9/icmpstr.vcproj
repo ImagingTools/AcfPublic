@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="Windows-1252"?>
+<?xml version="1.0" encoding="utf-8"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9,00"
@@ -301,7 +301,7 @@
 				>
 			</File>
 			<File
-				RelativePath="..\CComponentPromotorDialogComp.cpp"
+				RelativePath="..\CConvertComponentCommandComp.cpp"
 				>
 			</File>
 			<File
@@ -395,7 +395,7 @@
 				>
 			</File>
 			<File
-				RelativePath="..\CComponentPromotorDialogComp.h"
+				RelativePath="..\CConvertComponentCommandComp.h"
 				>
 			</File>
 			<File
@@ -536,7 +536,7 @@
 				>
 			</File>
 			<File
-				RelativePath="..\..\..\AuxInclude\Qt5\GeneratedFiles\icmpstr\moc_CComponentPromotorDialogComp.cpp"
+				RelativePath="..\..\..\AuxInclude\Qt5\GeneratedFiles\icmpstr\moc_CConvertComponentCommandComp.cpp"
 				>
 			</File>
 			<File
@@ -608,7 +608,7 @@
 				>
 			</File>
 			<File
-				RelativePath="..\..\..\AuxInclude\Qt5\GeneratedFiles\icmpstr\ui_CComponentPromotorDialogComp.h"
+				RelativePath="..\..\..\AuxInclude\Qt5\GeneratedFiles\icmpstr\ui_CConvertComponentCommandComp.h"
 				>
 			</File>
 			<File
@@ -657,7 +657,7 @@
 				>
 			</File>
 			<File
-				RelativePath="..\CComponentPromotorDialogComp.ui"
+				RelativePath="..\CConvertComponentCommandComp.ui"
 				>
 			</File>
 			<File
@@ -706,7 +706,7 @@
 				>
 			</File>
 			<File
-				RelativePath="..\CComponentPromotorDialogComp.moc"
+				RelativePath="..\CConvertComponentCommandComp.moc"
 				>
 			</File>
 			<File

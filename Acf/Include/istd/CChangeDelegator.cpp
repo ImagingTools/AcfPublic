@@ -54,10 +54,13 @@ void CChangeDelegator::OnBeginChanges()
 void CChangeDelegator::OnEndChanges(const ChangeSet& changeSet)
 {
 	if ((m_slavePtr != NULL) && !changeSet.IsEmpty()){
-		m_slavePtr->EndChanges(GetDelegatedChanges());
+		ChangeSet delegatedChanges(CF_DELEGATED, changeSet.GetDescription());
+
+		m_slavePtr->EndChanges(delegatedChanges);
 	}
 }
 
 
 } // namespace istd
+
 

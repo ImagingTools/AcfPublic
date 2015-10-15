@@ -42,7 +42,7 @@
 #include "icmpstr/CSceneProviderGuiComp.h"
 #include "icmpstr/CXpcEditorComp.h"
 #include "icmpstr/CRegistryTreeViewComp.h"
-#include "icmpstr/CComponentPromotorDialogComp.h"
+#include "icmpstr/CConvertComponentCommandComp.h"
 
 
 /**
@@ -74,7 +74,7 @@ typedef icmpstr::CComponentNoteEditorComp ComponentNoteEditor;
 typedef icomp::TModelCompWrap<icmpstr::CSceneProviderGuiComp> SceneProvider;
 typedef icmpstr::CXpcEditorComp XpcEditorGui;
 typedef icmpstr::CRegistryTreeViewComp RegistryTreeView;
-typedef icmpstr::CComponentPromotorDialogComp ComponentPromotorDialog;
+typedef icmpstr::CConvertComponentCommandComp ConvertComponentCommand;
 
 
 } // namespace CompositorPck

@@ -42,6 +42,10 @@ namespace icmpstr
 {
 
 
+const istd::IChangeable::ChangeSet s_setNoteChangeSet(IComponentNoteController::CF_NOTE_CHANGED, QObject::tr("Change note"));
+const istd::IChangeable::ChangeSet s_renameChangeSet(icomp::IRegistry::CF_ELEMENT_RENAMED, "Rename element");
+
+
 CVisualRegistry::CVisualRegistry()
 :	m_serializeUserData(true)
 {
@@ -225,8 +229,7 @@ void CVisualRegistry::SetComponentNote(const QByteArray& componentName, const QS
 
 	CVisualRegistryElement* elementPtr = dynamic_cast<CVisualRegistryElement*>(elementInfoPtr->elementPtr.GetPtr());
 	if ((elementPtr != NULL) && (elementPtr->GetNote() != componentNote)){
-		ChangeSet changeSet(CF_NOTE_CHANGED, "Change note");
-		istd::CChangeNotifier notifier(this, &changeSet);
+		istd::CChangeNotifier notifier(this, &s_setNoteChangeSet);
 		Q_UNUSED(notifier);
 
 		elementPtr->SetNote(componentNote);
@@ -265,8 +268,7 @@ bool CVisualRegistry::RenameElement(const QByteArray& oldElementId, const QByteA
 		}
 	}
 
-	ChangeSet changeSet(CF_ELEMENT_RENAMED, "Rename element");
-	istd::CChangeNotifier notifier(this, &changeSet);
+	istd::CChangeNotifier notifier(this, &s_renameChangeSet);
 	Q_UNUSED(notifier);
 
 	if (BaseClass::RenameElement(oldElementId, newElementId)){
