@@ -6656,6 +6656,14 @@
     <namespace>iwidgets</namespace>
   </compound>
   <compound kind="file">
+    <name>CCollapsibleGroupWidgetDelegate.h</name>
+    <path>C:/Temp/Acf/Include/iwidgets/</path>
+    <filename>_c_collapsible_group_widget_delegate_8h</filename>
+    <includes id="_i_multi_page_widget_delegate_8h" name="IMultiPageWidgetDelegate.h" local="no" imported="no">iwidgets/IMultiPageWidgetDelegate.h</includes>
+    <class kind="class">iwidgets::CCollapsibleGroupWidgetDelegate</class>
+    <namespace>iwidgets</namespace>
+  </compound>
+  <compound kind="file">
     <name>CDoubleRangeSpinEdit.h</name>
     <path>C:/Temp/Acf/Include/iwidgets/</path>
     <filename>_c_double_range_spin_edit_8h</filename>
@@ -70971,6 +70979,7 @@
     <name>iwidgets</name>
     <filename>namespaceiwidgets.html</filename>
     <class kind="class">iwidgets::CCheckableComboBox</class>
+    <class kind="class">iwidgets::CCollapsibleGroupWidgetDelegate</class>
     <class kind="class">iwidgets::CDoubleRangeSpinEdit</class>
     <class kind="class">iwidgets::CExtLineEdit</class>
     <class kind="class">iwidgets::CHierarchicalHeaderView</class>
@@ -71037,6 +71046,235 @@
       <anchorfile>classiwidgets_1_1_c_checkable_combo_box.html</anchorfile>
       <anchor>aaa06cfe078e35ec3c8a589d750ef3285</anchor>
       <arglist>(QObject *object, QEvent *eventPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwidgets::CCollapsibleGroupWidgetDelegate</name>
+    <filename>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</filename>
+    <base virtualness="virtual">iwidgets::IMultiPageWidgetDelegate</base>
+    <member kind="function">
+      <type></type>
+      <name>CCollapsibleGroupWidgetDelegate</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>ac0233647690d99cfbd8d6d316026a011</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QWidget *</type>
+      <name>CreateContainerWidget</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>a585e9091b673b3ae6904d3a5e470bb54</anchor>
+      <arglist>(QWidget *parentWidgetPtr, int containerGuiFlags=CGF_NONE, int orientation=Qt::Horizontal)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ConnectPageIndexListener</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>a09c91cb57e25f1e93874bb0b468995b6</anchor>
+      <arglist>(QWidget &amp;containerWidget, QObject *receiverPtr, const char *receiverSlotName)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPageHeaderPosition</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>ab5f3b73cb3a3d9fbec2b9283469becfe</anchor>
+      <arglist>(QWidget &amp;containerWidget, PageHeaderPosition pageHeaderPosition)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>InsertPage</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>af036c40279e7f82e363de2edad2f0f44</anchor>
+      <arglist>(QWidget &amp;containerWidget, QWidget *pageWidgetPtr, const QString &amp;pageTitle, int pageIndex=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemovePage</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>ac787b4b48a13cbe99cb0278880938081</anchor>
+      <arglist>(QWidget &amp;containerWidget, int pageIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPagesCount</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>abf6318edba3af9f34c4349f2ea601f9d</anchor>
+      <arglist>(const QWidget &amp;containerWidget) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QWidget *</type>
+      <name>GetPageWidgetPtr</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>a4af826688188510829640b80378c277a</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetCurrentPage</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>a6e55fa2724a3c986708ebaa881b56639</anchor>
+      <arglist>(const QWidget &amp;containerWidget) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetCurrentPage</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>a2464021e42c4da9f44c55d4b02aa3897</anchor>
+      <arglist>(QWidget &amp;containerWidget, int pageIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetPageTitle</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>a5e95e14bc77f1ca8134c5e603b29dceb</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPageTitle</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>aa50f32a4e7dff57a2da8e57be7e30c3e</anchor>
+      <arglist>(QWidget &amp;containerWidget, int pageIndex, const QString &amp;pageTitle)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QIcon</type>
+      <name>GetPageIcon</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>a1e7d4e6c48e15881b394bdfe05540272</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPageIcon</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>ab0c695061099db0f9f38810a625806de</anchor>
+      <arglist>(QWidget &amp;containerWidget, int pageIndex, const QIcon &amp;pageIcon)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetPageToolTip</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>acd0278a8e0b4f566ab4b2b2bc98c1387</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPageToolTip</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>a5af715a87a859c12150ac0df830792ae</anchor>
+      <arglist>(QWidget &amp;containerWidget, int pageIndex, const QString &amp;pageToolTip)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsPageEnabled</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>a381d989bc4c30d63838c452fda189607</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPageEnabled</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>a46f68eae114a7b050d7f394376a8d966</anchor>
+      <arglist>(QWidget &amp;containerWidget, int pageIndex, bool isPageEnabled=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsPageVisible</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>a4244a9cc3c5fbdf3bed2c0294b6c2b2f</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPageVisible</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>abd27939836336440a99b3ae1cde3decb</anchor>
+      <arglist>(QWidget &amp;containerWidget, int pageIndex, bool isPageVisible=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QSize</type>
+      <name>GetPageIconSize</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>a80a4222524c08d5992cf10b60e1fd2ec</anchor>
+      <arglist>(const QWidget &amp;containerWidget) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPageIconSize</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>a9d35a8d2e7f198426b1581f7cf337687</anchor>
+      <arglist>(QWidget &amp;containerWidget, const QSize &amp;pageIconSize)</arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>PageHeaderPosition</name>
+      <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>a80c28d6e600dbc113d50ec3284abeb44</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PHP_AUTO</name>
+      <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>a80c28d6e600dbc113d50ec3284abeb44a068a6ef3fa5be92a26b8c1d6fddf0a4a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PHP_LEFT</name>
+      <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>a80c28d6e600dbc113d50ec3284abeb44aebbfa9432a2b35ddade8db0d7d48bbc5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PHP_TOP</name>
+      <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>a80c28d6e600dbc113d50ec3284abeb44a391331e96e4995fffb9cbe13809ef050</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PHP_RIGHT</name>
+      <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>a80c28d6e600dbc113d50ec3284abeb44a10a04c0d4877ec3cad89238380fdb0c1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PHP_BOTTOM</name>
+      <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>a80c28d6e600dbc113d50ec3284abeb44af3cb94b7cbc8cf6d39cab5a78f9ebba7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ContainerGuiFlags</name>
+      <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>a158980275bdaae3ca81e9d8082d96c2e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CGF_NONE</name>
+      <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>a158980275bdaae3ca81e9d8082d96c2eaff2fedb6358aec38560d945e3a7b8df5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CGF_UNIFORM_SIZES</name>
+      <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>a158980275bdaae3ca81e9d8082d96c2ea5f3e7d586f1c9e92fd231eacdc32c4fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CGF_COMPACT</name>
+      <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>a158980275bdaae3ca81e9d8082d96c2ea7bbb4dae4586ffdb7efa15427b3fc2ed</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -71410,6 +71648,13 @@
     </member>
     <member kind="enumvalue">
       <type>@</type>
+      <name>DT_COLLAPSIBLE_GROUPS</name>
+      <anchorfile>classiwidgets_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>ad2aa91adf114f2eabde7621025aac910a66c4cdc83e64f6e6dab88dc652144f98</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
       <name>DT_USER</name>
       <anchorfile>classiwidgets_1_1_c_multi_page_widget.html</anchorfile>
       <anchor>ad2aa91adf114f2eabde7621025aac910abf0f6737f2bc35cea9dc02c827b65b77</anchor>
@@ -71769,76 +72014,6 @@
       <anchorfile>classiwidgets_1_1_c_simple_gui_container_delegate.html</anchorfile>
       <anchor>abd5f1ca86d9a70487d573c13de313525</anchor>
       <arglist>(QWidget &amp;containerWidget, const QSize &amp;pageIconSize)</arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>PageHeaderPosition</name>
-      <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
-      <anchor>a80c28d6e600dbc113d50ec3284abeb44</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PHP_AUTO</name>
-      <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
-      <anchor>a80c28d6e600dbc113d50ec3284abeb44a068a6ef3fa5be92a26b8c1d6fddf0a4a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PHP_LEFT</name>
-      <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
-      <anchor>a80c28d6e600dbc113d50ec3284abeb44aebbfa9432a2b35ddade8db0d7d48bbc5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PHP_TOP</name>
-      <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
-      <anchor>a80c28d6e600dbc113d50ec3284abeb44a391331e96e4995fffb9cbe13809ef050</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PHP_RIGHT</name>
-      <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
-      <anchor>a80c28d6e600dbc113d50ec3284abeb44a10a04c0d4877ec3cad89238380fdb0c1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PHP_BOTTOM</name>
-      <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
-      <anchor>a80c28d6e600dbc113d50ec3284abeb44af3cb94b7cbc8cf6d39cab5a78f9ebba7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>ContainerGuiFlags</name>
-      <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
-      <anchor>a158980275bdaae3ca81e9d8082d96c2e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>CGF_NONE</name>
-      <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
-      <anchor>a158980275bdaae3ca81e9d8082d96c2eaff2fedb6358aec38560d945e3a7b8df5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>CGF_UNIFORM_SIZES</name>
-      <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
-      <anchor>a158980275bdaae3ca81e9d8082d96c2ea5f3e7d586f1c9e92fd231eacdc32c4fb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>CGF_COMPACT</name>
-      <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
-      <anchor>a158980275bdaae3ca81e9d8082d96c2ea7bbb4dae4586ffdb7efa15427b3fc2ed</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -73506,6 +73681,7 @@
     <path>C:/Temp/Acf/Include/iwidgets/</path>
     <filename>dir_86e1fd1e1d61f1c885cf57f78d3ff836.html</filename>
     <file>CCheckableComboBox.h</file>
+    <file>CCollapsibleGroupWidgetDelegate.h</file>
     <file>CDoubleRangeSpinEdit.h</file>
     <file>CExtLineEdit.h</file>
     <file>CHierarchicalHeaderView.h</file>
