@@ -55,10 +55,13 @@ void CBitMemoryWriteArchive::WriteValue(quint32 inputValue, int bitsCount)
 
 		unsigned char& bufferValue = (unsigned char&)(*(m_dataBuffer.data() + localByteIndex));
 
-		if (bitOn){
-			bufferValue |= 1 << (8 - globalBitIndex - 1);
-		}
-	}
+        if (bitOn){
+            bufferValue |= 1 << (8 - globalBitIndex - 1);
+        }
+        else{
+            bufferValue &= ~(1 << (8 - globalBitIndex - 1));
+        }
+    }
 
 	m_bitPosition += bitsCount;
 }
