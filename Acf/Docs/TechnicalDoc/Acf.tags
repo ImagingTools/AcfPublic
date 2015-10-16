@@ -36057,13 +36057,6 @@
       <anchor>a6bc2c6b1a74dcbd01bf8d3427fd9bf53</anchor>
       <arglist>(const QString &amp;filterText)</arglist>
     </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_FilterClearButton_clicked</name>
-      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a151ed04105fc60d69dbbaf54656bcbf4</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QTreeWidgetItem *</type>
       <name>CreateGuiItem</name>
@@ -69030,6 +69023,13 @@
       <name>IsTouched</name>
       <anchorfile>classiview_1_1_c_polyline_shape.html</anchorfile>
       <anchor>ae3f0a722591852bfc4587eee75ce0585</anchor>
+      <arglist>(istd::CIndex2d position) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetShapeDescriptionAt</name>
+      <anchorfile>classiview_1_1_c_polyline_shape.html</anchorfile>
+      <anchor>a4bb7085ad11fa4c97ed23ec1c4ad4192</anchor>
       <arglist>(istd::CIndex2d position) const </arglist>
     </member>
     <member kind="function" static="yes">

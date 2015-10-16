@@ -98,7 +98,7 @@ void CColorSchemaBase::DrawTicker(QPainter& drawContext, istd::CIndex2d point, T
 		drawContext.save();
 		drawContext.setBrush(GetBrush(SB_SELECTED_TICKER));
 		tickerRect = tickerBox.GetTranslated(point);
-		drawContext.drawRect(iqt::GetQRect(tickerRect));
+		drawContext.drawRect(iqt::GetQRect(tickerRect).adjusted(-1,-1,0,0));
 		drawContext.drawLine(QPoint(tickerRect.GetLeft(), point.GetY()), QPoint(tickerRect.GetRight(), point.GetY()));
 		drawContext.drawLine(QPoint(point.GetX(), tickerRect.GetTop()), QPoint(point.GetX(), tickerRect.GetBottom()));
 		drawContext.restore();
@@ -111,7 +111,7 @@ void CColorSchemaBase::DrawTicker(QPainter& drawContext, istd::CIndex2d point, T
 		drawContext.save();
 		drawContext.setBrush(GetBrush(SB_SELECTED_TICKER));
 		tickerRect = tickerBox.GetTranslated(point);
-		drawContext.drawRect(iqt::GetQRect(tickerRect));
+		drawContext.drawRect(iqt::GetQRect(tickerRect).adjusted(-1,-1,0,0));
 		drawContext.drawLine(QPoint(tickerRect.GetLeft(), tickerRect.GetTop()), QPoint(tickerRect.GetRight() - 1, tickerRect.GetBottom() - 1));
 		drawContext.drawLine(QPoint(tickerRect.GetRight() - 1, tickerRect.GetTop()), QPoint(tickerRect.GetLeft(), tickerRect.GetBottom() - 1));
 		drawContext.restore();
