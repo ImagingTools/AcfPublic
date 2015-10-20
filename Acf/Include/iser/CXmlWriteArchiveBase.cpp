@@ -69,49 +69,19 @@ bool CXmlWriteArchiveBase::EndTag(const CArchiveTag& tag)
 
 bool CXmlWriteArchiveBase::Process(QByteArray& value)
 {
-	bool retVal = true;
-
-	if (m_isSeparatorNeeded){
-		retVal = retVal && MakeIndent();
-		retVal = retVal && WriteString("<" + GetElementSeparator().toLocal8Bit() + "/>\n");
-	}
-	else{
-		m_isSeparatorNeeded = true;
-	}
-
-	retVal = retVal && MakeIndent();
-
 	QByteArray xmlText;
 	EncodeXml(value, xmlText);
 
-	retVal = retVal && WriteString(xmlText) && WriteString("\n");
-
-	return retVal;
+	return WriteTextNode(xmlText);
 }
 
 
 bool CXmlWriteArchiveBase::Process(QString& value)
 {
-	bool retVal = true;
-
-	if (m_isSeparatorNeeded){
-		retVal = retVal && MakeIndent();
-		retVal = retVal && WriteString("<" + GetElementSeparator().toLocal8Bit() + "/>\n");
-	}
-	else{
-		m_isSeparatorNeeded = true;
-	}
-
-	retVal = retVal && MakeIndent();
-
 	QByteArray xmlText;
-
 	EncodeXml(value, xmlText);
 
-	retVal = retVal && WriteString(xmlText) && WriteString("\n");
-
-	return retVal;
-
+	return WriteTextNode(xmlText);
 }
 
 
@@ -146,6 +116,32 @@ bool CXmlWriteArchiveBase::WriteXmlHeader()
 bool CXmlWriteArchiveBase::WriteXmlFooter()
 {
 	return EndTag(m_rootTag);
+}
+
+
+// reimplemented (iser::CTextWriteArchiveBase)
+
+bool CXmlWriteArchiveBase::WriteTextNode(const QByteArray& text)
+{
+	bool retVal = true;
+
+	if (m_isSeparatorNeeded){
+		retVal = retVal && MakeIndent();
+		retVal = retVal && WriteString("<" + GetElementSeparator().toLocal8Bit() + "/>\n");
+	}
+	else{
+		m_isSeparatorNeeded = true;
+	}
+
+	retVal = retVal && MakeIndent();
+
+	QByteArray xmlText;
+
+	EncodeXml(text, xmlText);
+
+	retVal = retVal && WriteString(xmlText) && WriteString("\n");
+
+	return retVal;
 }
 
 

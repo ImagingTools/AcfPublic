@@ -2320,7 +2320,7 @@
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>iqt_2_c_xml_file_read_archive_8h</filename>
     <includes id="_c_xml_document_info_base_8h" name="CXmlDocumentInfoBase.h" local="yes" imported="no">iser/CXmlDocumentInfoBase.h</includes>
-    <includes id="_c_read_archive_base_8h" name="CReadArchiveBase.h" local="yes" imported="no">iser/CReadArchiveBase.h</includes>
+    <includes id="_c_text_read_archive_base_8h" name="CTextReadArchiveBase.h" local="yes" imported="no">iser/CTextReadArchiveBase.h</includes>
     <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
     <class kind="class">iqt::CXmlFileReadArchive</class>
     <namespace>iqt</namespace>
@@ -2338,7 +2338,7 @@
     <name>CXmlFileWriteArchive.h</name>
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>iqt_2_c_xml_file_write_archive_8h</filename>
-    <includes id="_c_write_archive_base_8h" name="CWriteArchiveBase.h" local="yes" imported="no">iser/CWriteArchiveBase.h</includes>
+    <includes id="_c_text_write_archive_base_8h" name="CTextWriteArchiveBase.h" local="yes" imported="no">iser/CTextWriteArchiveBase.h</includes>
     <includes id="_c_file_archive_info_8h" name="CFileArchiveInfo.h" local="yes" imported="no">ifile/CFileArchiveInfo.h</includes>
     <includes id="_c_xml_document_info_base_8h" name="CXmlDocumentInfoBase.h" local="yes" imported="no">iser/CXmlDocumentInfoBase.h</includes>
     <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
@@ -3836,7 +3836,7 @@
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>_c_compact_xml_file_read_archive_8h</filename>
     <includes id="_c_xml_document_info_base_8h" name="CXmlDocumentInfoBase.h" local="yes" imported="no">iser/CXmlDocumentInfoBase.h</includes>
-    <includes id="_c_read_archive_base_8h" name="CReadArchiveBase.h" local="yes" imported="no">iser/CReadArchiveBase.h</includes>
+    <includes id="_c_text_read_archive_base_8h" name="CTextReadArchiveBase.h" local="yes" imported="no">iser/CTextReadArchiveBase.h</includes>
     <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
     <class kind="class">iqt::CCompactXmlFileReadArchive</class>
     <namespace>iqt</namespace>
@@ -3845,7 +3845,7 @@
     <name>CCompactXmlFileWriteArchive.h</name>
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>_c_compact_xml_file_write_archive_8h</filename>
-    <includes id="_c_write_archive_base_8h" name="CWriteArchiveBase.h" local="yes" imported="no">iser/CWriteArchiveBase.h</includes>
+    <includes id="_c_text_write_archive_base_8h" name="CTextWriteArchiveBase.h" local="yes" imported="no">iser/CTextWriteArchiveBase.h</includes>
     <includes id="_c_file_archive_info_8h" name="CFileArchiveInfo.h" local="yes" imported="no">ifile/CFileArchiveInfo.h</includes>
     <includes id="_c_xml_document_info_base_8h" name="CXmlDocumentInfoBase.h" local="yes" imported="no">iser/CXmlDocumentInfoBase.h</includes>
     <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
@@ -31158,12 +31158,12 @@
       <anchor>a933622a64e6c8ee5b78fc47b4ccd8e71</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>ProcessInternal</name>
-      <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>a923338af243e4b0a383d60aace7e06ca</anchor>
-      <arglist>(Type &amp;value)</arglist>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ReadTextNode</name>
+      <anchorfile>classiser_1_1_c_xml_read_archive_base.html</anchorfile>
+      <anchor>a81800f989dea46d276b3168fa17d6a88</anchor>
+      <arglist>(QByteArray &amp;text)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static void</type>
@@ -31424,18 +31424,18 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteTextNode</name>
+      <anchorfile>classiser_1_1_c_xml_write_archive_base.html</anchorfile>
+      <anchor>aa77768f282c0c7d9bb5e285abb072f48</anchor>
+      <arglist>(const QByteArray &amp;text)</arglist>
+    </member>
+    <member kind="function" protection="protected">
       <type></type>
       <name>CTextWriteArchiveBase</name>
       <anchorfile>classiser_1_1_c_text_write_archive_base.html</anchorfile>
       <anchor>ad07dae9848a163ff21902f061f28accf</anchor>
       <arglist>(const IVersionInfo *versionInfoPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>ProcessInternal</name>
-      <anchorfile>classiser_1_1_c_text_write_archive_base.html</anchorfile>
-      <anchor>a9b26efa925067ace5289e6999958f562</anchor>
-      <arglist>(const Type &amp;value)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -43750,7 +43750,7 @@
   <compound kind="class">
     <name>iqt::CCompactXmlFileReadArchive</name>
     <filename>classiqt_1_1_c_compact_xml_file_read_archive.html</filename>
-    <base>iser::CReadArchiveBase</base>
+    <base>iser::CTextReadArchiveBase</base>
     <base>iser::CXmlDocumentInfoBase</base>
     <member kind="function">
       <type></type>
@@ -43798,126 +43798,42 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>a2d24bef1363e5266f008f29428cc62fb</anchor>
-      <arglist>(bool &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>ad0c14ae38625fc611b0c633ae80743b7</anchor>
-      <arglist>(char &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>ae484fe1003f177a457d4aa496cb0452d</anchor>
-      <arglist>(quint8 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>ace4d909574e1db505545e648bf0649ce</anchor>
-      <arglist>(qint8 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>a7c8000769246c57300be0cded128a072</anchor>
-      <arglist>(quint16 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>a5ea965326fa66f7399c91a89b6fd9980</anchor>
-      <arglist>(qint16 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>ab3b5bc87476e90ed3ced14ad5071e3e3</anchor>
-      <arglist>(quint32 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>ac0d4bbda1fffe6981dfaa089492d4ee8</anchor>
-      <arglist>(qint32 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>a57149782d9de66d38bc1700e69bcc193</anchor>
-      <arglist>(quint64 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>afb910803ca83624113b8dc0043e6afd5</anchor>
-      <arglist>(qint64 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>a8eaad4f4f4a5e5f0b2a0f211fc68e2c7</anchor>
-      <arglist>(float &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>a9e1a993d044afd27d61fa9a0e1572ff0</anchor>
-      <arglist>(double &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>a7ec130ab3a230916746b0eb583ea8f38</anchor>
-      <arglist>(QByteArray &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
       <anchor>a2c58d8012536da824f821dd14945a396</anchor>
       <arglist>(QString &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>ProcessData</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>a068e61967c1f8ad6b8c0b97b8ddb3db8</anchor>
-      <arglist>(void *dataPtr, int size)</arglist>
+      <name>Process</name>
+      <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
+      <anchor>adb90ebc35d1e26aa4db0efe6e9eb97b5</anchor>
+      <arglist>(QByteArray &amp;value)</arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>QString</type>
-      <name>PullTextNode</name>
+      <type>bool</type>
+      <name>ReadStringNode</name>
       <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>a530671a09ab33c9da695e7c4c95fe8f4</anchor>
-      <arglist>()</arglist>
+      <anchor>a8ca4e5a7dc42fae5dcb1f5f42b11d3ef</anchor>
+      <arglist>(QString &amp;text)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ReadTextNode</name>
+      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
+      <anchor>aa75dd6f392894e6627b9e003487d616b</anchor>
+      <arglist>(QByteArray &amp;text)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>iqt::CCompactXmlFileWriteArchive</name>
     <filename>classiqt_1_1_c_compact_xml_file_write_archive.html</filename>
-    <base>iser::CWriteArchiveBase</base>
+    <base>iser::CTextWriteArchiveBase</base>
     <base>ifile::CFileArchiveInfo</base>
     <base>iser::CXmlDocumentInfoBase</base>
     <member kind="typedef">
-      <type>iser::CWriteArchiveBase</type>
+      <type>iser::CTextWriteArchiveBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>aed4219e755a8f5efc1ffee03eb1783ad</anchor>
+      <anchor>a7a83d2149c6ab1a3f8eaba3eb85b97db</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -43987,113 +43903,29 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>a231de9d32c19df667037c9cfbc8abf42</anchor>
-      <arglist>(bool &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>a35afaf91128c28e93326202be83c1234</anchor>
-      <arglist>(char &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>abe9bbff5891aa74bede9127e2803720b</anchor>
-      <arglist>(quint8 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>ad12b046948717805f97a7094bdf081c1</anchor>
-      <arglist>(qint8 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>a8a82628e2653169df0d9445235c47254</anchor>
-      <arglist>(quint16 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>ae0348e29fcdf571f13251e07a7f686db</anchor>
-      <arglist>(qint16 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>aca5bd9f5b4ae0371aefa3c8bb3f3f205</anchor>
-      <arglist>(quint32 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>ad3351f29f54fcef222064c8eadf854d6</anchor>
-      <arglist>(qint32 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>a5733a550bfd56393ac8cb26041a312cf</anchor>
-      <arglist>(quint64 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>ac8f585cf8f1ff2ef98f107ad1d45b63a</anchor>
-      <arglist>(qint64 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>a947743688189c131dd2363a9bc012306</anchor>
-      <arglist>(float &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>aabe61b2c22b055395a6f41535c12c4f3</anchor>
-      <arglist>(double &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>a22cb7a6e9ba6a12e81054c5d935c4ced</anchor>
-      <arglist>(QByteArray &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
       <anchor>acb8e1868f71a1363600286165e169568</anchor>
       <arglist>(QString &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>ProcessData</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>ab1063dc21b30f77f51e76f91810e7c91</anchor>
-      <arglist>(void *dataPtr, int size)</arglist>
+      <name>Process</name>
+      <anchorfile>classiser_1_1_c_text_write_archive_base.html</anchorfile>
+      <anchor>addbfd544c6534d8b5a29e66da0fe44e9</anchor>
+      <arglist>(QByteArray &amp;value)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
-      <name>PushTextNode</name>
+      <name>WriteStringNode</name>
       <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>afc69b37d6ea97a1f27980600ea8626da</anchor>
+      <anchor>a3136e80fb0b8df00be3f7c14e29e433b</anchor>
       <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteTextNode</name>
+      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
+      <anchor>ab697e1bb08e73e677f12b1c450eda06f</anchor>
+      <arglist>(const QByteArray &amp;text)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -44484,15 +44316,22 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_settings_read_archive.html</anchorfile>
-      <anchor>aade95d4c832919ec442ac17641c8ca04</anchor>
-      <arglist>(QByteArray &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_settings_read_archive.html</anchorfile>
       <anchor>a916c6a27c3f68635a27458a9e359f58f</anchor>
       <arglist>(QString &amp;value)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>ReadStringNode</name>
+      <anchorfile>classiqt_1_1_c_settings_read_archive.html</anchorfile>
+      <anchor>a4434a431e8dfe7a082fdacfa09e607c5</anchor>
+      <arglist>(QString &amp;text)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ReadTextNode</name>
+      <anchorfile>classiqt_1_1_c_settings_read_archive.html</anchorfile>
+      <anchor>a13e890c4eebc7b8f19da8f538098b76e</anchor>
+      <arglist>(QByteArray &amp;text)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -44594,15 +44433,15 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_settings_write_archive.html</anchorfile>
-      <anchor>a10443a9fbb4f074da6d68e0495ddac49</anchor>
-      <arglist>(QByteArray &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_settings_write_archive.html</anchorfile>
       <anchor>a6a73cdfde9e65521c05f96faf7ea653f</anchor>
       <arglist>(QString &amp;value)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteTextNode</name>
+      <anchorfile>classiqt_1_1_c_settings_write_archive.html</anchorfile>
+      <anchor>ac8e8822b00703c882952db1127e5e93c</anchor>
+      <arglist>(const QByteArray &amp;text)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -44745,7 +44584,7 @@
   <compound kind="class">
     <name>iqt::CXmlFileReadArchive</name>
     <filename>classiqt_1_1_c_xml_file_read_archive.html</filename>
-    <base>iser::CReadArchiveBase</base>
+    <base>iser::CTextReadArchiveBase</base>
     <base>iser::CXmlDocumentInfoBase</base>
     <member kind="function">
       <type></type>
@@ -44793,126 +44632,35 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>a65a235e597179e810b3c027ba3d7b9f9</anchor>
-      <arglist>(bool &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>a1c322b82d35723ed0533372e23d7fdd8</anchor>
-      <arglist>(char &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>a867b23e889823c6b69f475a05b5dcea8</anchor>
-      <arglist>(quint8 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>a75f8f3b6e2f3ef1a963d473f180b6dc3</anchor>
-      <arglist>(qint8 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>a2091bef56bcd9c3b3a4c1f03f4e9f7ae</anchor>
-      <arglist>(quint16 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>acc6e8f1eb654920489e96bc32f7bb679</anchor>
-      <arglist>(qint16 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>a2259dc040ea2217bffc4d5bf02ca2d77</anchor>
-      <arglist>(quint32 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>a72677e357c2b87071413fecb782eba44</anchor>
-      <arglist>(qint32 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>a97a22c23f30a5bf1e0e5924ac05610eb</anchor>
-      <arglist>(quint64 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>ad532e3db98cbd63be30a77e0f0269c24</anchor>
-      <arglist>(qint64 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>a5d69b3c2b7d1ca173186c17717f7d485</anchor>
-      <arglist>(float &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>a330461cf00cb1055a78a208d1bb06080</anchor>
-      <arglist>(double &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>a7248c8f77d7dc033fbc84cbf9948d02f</anchor>
-      <arglist>(QByteArray &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
       <anchor>a33d524637e2eee4197da518681f8de47</anchor>
       <arglist>(QString &amp;value)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ProcessData</name>
-      <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>a2402a2d76bb3846c544ec797f55f7886</anchor>
-      <arglist>(void *dataPtr, int size)</arglist>
-    </member>
     <member kind="function" protection="protected">
-      <type>QString</type>
-      <name>PullTextNode</name>
+      <type>bool</type>
+      <name>ReadStringNode</name>
       <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
-      <anchor>abaca4417d884859c8ca04cdef5c5c81e</anchor>
-      <arglist>()</arglist>
+      <anchor>a0c13eb73981c436eeb3fbac5462d62a5</anchor>
+      <arglist>(QString &amp;text)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ReadTextNode</name>
+      <anchorfile>classiqt_1_1_c_xml_file_read_archive.html</anchorfile>
+      <anchor>aab2943bed9f89ab80c2991ba9969be76</anchor>
+      <arglist>(QByteArray &amp;text)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>iqt::CXmlFileWriteArchive</name>
     <filename>classiqt_1_1_c_xml_file_write_archive.html</filename>
-    <base>iser::CWriteArchiveBase</base>
+    <base>iser::CTextWriteArchiveBase</base>
     <base>ifile::CFileArchiveInfo</base>
     <base>iser::CXmlDocumentInfoBase</base>
     <member kind="typedef">
-      <type>iser::CWriteArchiveBase</type>
+      <type>iser::CTextWriteArchiveBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a04b94ab8ff13725c630088e91ad83482</anchor>
+      <anchor>aa7ea8e8c95453e65ec5b5c29ca83a9c6</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -44982,113 +44730,22 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>afbc23982da392f301ffa7f242d5e1757</anchor>
-      <arglist>(bool &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a540eb262963f105c5cc2caa4ee7e2453</anchor>
-      <arglist>(char &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a72a991862276d3ea3da9989b60d77ea2</anchor>
-      <arglist>(quint8 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>afabb40cb186cb56c43556c2562e89c12</anchor>
-      <arglist>(qint8 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>af24c68cf68c9c3412a101247aa9fb0b4</anchor>
-      <arglist>(quint16 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>ae1a21e4e42e59232aa7d7202241ddff6</anchor>
-      <arglist>(qint16 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a4f22fb9bee9108c8858cfc951df61852</anchor>
-      <arglist>(quint32 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a2f22d1b009316cfd60a0e02524691451</anchor>
-      <arglist>(qint32 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>ac97aef7725fbebf5d5cbad0491d1ae40</anchor>
-      <arglist>(quint64 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a2260a724039e3e6c782fc2af5d5e0cb2</anchor>
-      <arglist>(qint64 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a2769d3bf3283f8011fdfc8f79a7f275d</anchor>
-      <arglist>(float &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a0655b45759f6d06abbc4638849e863e7</anchor>
-      <arglist>(double &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a9f53d7547ee9a7571d95f962fe257b4f</anchor>
-      <arglist>(QByteArray &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
       <anchor>a4e819489ee2bc9a667fdd99a327b1035</anchor>
       <arglist>(QString &amp;value)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ProcessData</name>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteStringNode</name>
       <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a1da2cf937ca8901ac995a6bdd22cf379</anchor>
-      <arglist>(void *dataPtr, int size)</arglist>
+      <anchor>a1a59292223de5a0a68c58f246bc5a654</anchor>
+      <arglist>(const QString &amp;text)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
-      <name>PushTextNode</name>
+      <name>WriteTextNode</name>
       <anchorfile>classiqt_1_1_c_xml_file_write_archive.html</anchorfile>
-      <anchor>a699b6d52a1ed9af7f9a30101c3981085</anchor>
-      <arglist>(const QString &amp;text)</arglist>
+      <anchor>a9a630aa6ce47e7f39a18572dcf662354</anchor>
+      <arglist>(const QByteArray &amp;text)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -58036,18 +57693,25 @@
     <name>iser::CTextReadArchiveBase</name>
     <filename>classiser_1_1_c_text_read_archive_base.html</filename>
     <base>iser::CReadArchiveBase</base>
-    <member kind="function" virtualness="virtual">
+    <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
-      <name>Process</name>
+      <name>ReadTextNode</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>adb90ebc35d1e26aa4db0efe6e9eb97b5</anchor>
-      <arglist>(QByteArray &amp;value)</arglist>
+      <anchor>ab7818ef19c99bca5587bfd4dfc24dc56</anchor>
+      <arglist>(QByteArray &amp;text)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>iser::CTextWriteArchiveBase</name>
     <filename>classiser_1_1_c_text_write_archive_base.html</filename>
     <base>iser::CWriteArchiveBase</base>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual bool</type>
+      <name>WriteTextNode</name>
+      <anchorfile>classiser_1_1_c_text_write_archive_base.html</anchorfile>
+      <anchor>ac6599ef4d8ddf4ef49e284a51c948501</anchor>
+      <arglist>(const QByteArray &amp;text)=0</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iser::CWriteArchiveBase</name>

@@ -25053,7 +25053,7 @@
   <compound kind="class">
     <name>iqtex::CXslTransformationReadArchive</name>
     <filename>classiqtex_1_1_c_xsl_transformation_read_archive.html</filename>
-    <base>iser::CReadArchiveBase</base>
+    <base>iser::CTextReadArchiveBase</base>
     <base>iser::CXmlDocumentInfoBase</base>
     <member kind="function">
       <type></type>
@@ -25101,126 +25101,35 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>ad33b0a8b2533a541722c34845146e0ac</anchor>
-      <arglist>(bool &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>aeaf9fd8d1ebb382b5189ff0bc8dc394b</anchor>
-      <arglist>(char &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>a98f49c355df2c28474c2780b259887a4</anchor>
-      <arglist>(quint8 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>a08be6eddf315f8558909fdef1222c385</anchor>
-      <arglist>(qint8 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>ab9723bb468e0c2eefa031ef6d2e07108</anchor>
-      <arglist>(quint16 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>a158bf3c5dd76b279e41a562451977aef</anchor>
-      <arglist>(qint16 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>a28d8e054e12649c807550b2375bfdcd9</anchor>
-      <arglist>(quint32 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>ad059ed98f239376f88ddf216098bf4ac</anchor>
-      <arglist>(qint32 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>a140786a1eba058fa04ca5d1ecef1e850</anchor>
-      <arglist>(quint64 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>a18e6a76453141c486d9ea335487b87a4</anchor>
-      <arglist>(qint64 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>ad09b868a0d57527d8466b7b614a95771</anchor>
-      <arglist>(float &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>a6c20716f6491053b413d2a1f3b6da3a4</anchor>
-      <arglist>(double &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>a6a5f38873e1f4cfa18eb97ec4d7ba043</anchor>
-      <arglist>(QByteArray &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
       <anchor>afdc9409c0e31f1de68e747860a462f35</anchor>
       <arglist>(QString &amp;value)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ProcessData</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>a067566bb630c798aa0191d09ce21f825</anchor>
-      <arglist>(void *dataPtr, int size)</arglist>
-    </member>
     <member kind="function" protection="protected">
-      <type>QString</type>
-      <name>PullTextNode</name>
+      <type>bool</type>
+      <name>ReadStringNode</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
-      <anchor>a8f610be8cdfe33e12472d375a99227dc</anchor>
-      <arglist>()</arglist>
+      <anchor>af8dadfa9886ca0384fbd9c91dd8a91e6</anchor>
+      <arglist>(QString &amp;text)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ReadTextNode</name>
+      <anchorfile>classiqtex_1_1_c_xsl_transformation_read_archive.html</anchorfile>
+      <anchor>ad97262177e91e999f7ff8910fec46065</anchor>
+      <arglist>(QByteArray &amp;text)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>iqtex::CXslTransformationWriteArchive</name>
     <filename>classiqtex_1_1_c_xsl_transformation_write_archive.html</filename>
-    <base>iser::CWriteArchiveBase</base>
+    <base>iser::CTextWriteArchiveBase</base>
     <base>ifile::CFileArchiveInfo</base>
     <base>iser::CXmlDocumentInfoBase</base>
     <member kind="typedef">
-      <type>iser::CWriteArchiveBase</type>
+      <type>iser::CTextWriteArchiveBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>a289408cba8ed1ac3dd73d916b371bae2</anchor>
+      <anchor>a590ad7cff97a9445e8c608ee384f7212</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -25290,113 +25199,22 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>a63f13254668529fc458c0041bad656fb</anchor>
-      <arglist>(bool &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>ad2f345b41c202587e14073ef56b2e2bc</anchor>
-      <arglist>(char &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>a7e704786242ae89d16f3c3d3ba45bb66</anchor>
-      <arglist>(quint8 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>a3ddafedc51b0091ca8cf9b6f4e99fd3d</anchor>
-      <arglist>(qint8 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>a1b2d1756bf4de12e932435a80a74cbbb</anchor>
-      <arglist>(quint16 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>abeebbed349463030de22a6b434926947</anchor>
-      <arglist>(qint16 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>abf29c5dc8a868e5ecb88a1b709182e46</anchor>
-      <arglist>(quint32 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>a88b4f096bc6f2a75310dc0ff8299da97</anchor>
-      <arglist>(qint32 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>a8eb0d72b23f0f0ef5d7959df8862e4b8</anchor>
-      <arglist>(quint64 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>a6ca7e3abbe187f120332c4314d88e9e6</anchor>
-      <arglist>(qint64 &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>ad91ffce7ace5633d3eebb5b255bb5d88</anchor>
-      <arglist>(float &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>a815ac4565b5aa5da65142e1eeeaf39c5</anchor>
-      <arglist>(double &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>ab3706afb7581e38e3052bb9f907d1a84</anchor>
-      <arglist>(QByteArray &amp;value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
       <anchor>addb432c542889aec9d3d353964d4b84e</anchor>
       <arglist>(QString &amp;value)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ProcessData</name>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteStringNode</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>ae600d1bf8e84af919e4f2fff8d863c5f</anchor>
-      <arglist>(void *dataPtr, int size)</arglist>
+      <anchor>a7eac81644c469f431e239ea7b3231c6e</anchor>
+      <arglist>(const QString &amp;text)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
-      <name>PushTextNode</name>
+      <name>WriteTextNode</name>
       <anchorfile>classiqtex_1_1_c_xsl_transformation_write_archive.html</anchorfile>
-      <anchor>a27f397d19dfc159862f00e93a8a3fbe0</anchor>
-      <arglist>(const QString &amp;text)</arglist>
+      <anchor>a695b256457f7a76e5edc8a6a9cffd689</anchor>
+      <arglist>(const QByteArray &amp;text)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
