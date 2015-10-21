@@ -34824,6 +34824,13 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
+      <type>QObject</type>
+      <name>BaseClass2</name>
+      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
+      <anchor>aa65b36599d9f319a60771dddb378bddc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classilog_1_1_t_message_delegator_comp.html</anchorfile>
@@ -34864,6 +34871,13 @@
       <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
       <anchor>a9f10811e49b682acf3fb777be6ac48f6</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>EmitAddMessage</name>
+      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
+      <anchor>a4a7a177789d268e3647de7aa849faf47</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
     </member>
     <member kind="function">
       <type></type>

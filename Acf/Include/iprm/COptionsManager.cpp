@@ -24,6 +24,7 @@
 
 
 // Qt includes
+#include <QtCore/QObject>
 #include <QtCore/QUuid>
 
 // ACF includes

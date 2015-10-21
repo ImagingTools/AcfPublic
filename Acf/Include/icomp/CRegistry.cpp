@@ -23,6 +23,9 @@
 #include "icomp/CRegistry.h"
 
 
+// Qt includes
+#include <QtCore/QObject>
+
 // ACF includes
 #include "istd/CChangeNotifier.h"
 #include "iser/IArchive.h"

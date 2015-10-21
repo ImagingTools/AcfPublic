@@ -127,14 +127,17 @@ QByteArray CRelativeUnitSelectorComp::GetOptionId(int index) const
 	Q_ASSERT(index < CRelativeUnitSelectorComp::GetOptionsCount());
 
 	switch (index){
-		case DM_NONE:
-			return "none";
-		case DM_PERCENT:
-			return "percent";
-		case DM_PERMILLE:
-			return "permille";
-		default:
-			return QByteArray();
+	case DM_NONE:
+		return "none";
+
+	case DM_PERCENT:
+		return "percent";
+
+	case DM_PERMILLE:
+		return "permille";
+
+	default:
+		return QByteArray();
 	}
 }
 
@@ -156,12 +159,14 @@ int CRelativeUnitSelectorComp::GetUnitType() const
 QString CRelativeUnitSelectorComp::GetUnitName() const
 {
 	switch (m_displayMode){
-		case DM_PERCENT:
-			return "%";
-		case DM_PERMILLE:
-			return QChar(0x2030);
-		default:
-			return QString();
+	case DM_PERCENT:
+		return "%";
+
+	case DM_PERMILLE:
+		return QChar(0x2030);
+
+	default:
+		return QString();
 	}
 }
 
@@ -169,13 +174,15 @@ QString CRelativeUnitSelectorComp::GetUnitName() const
 double CRelativeUnitSelectorComp::GetDisplayMultiplicationFactor() const
 {
 	switch (m_displayMode){
-		case DM_PERCENT:
-			return 100.0;
-		case DM_PERMILLE:
-			return 1000.0;
-	}
+	case DM_PERCENT:
+		return 100.0;
 
-	return 1.0;
+	case DM_PERMILLE:
+		return 1000.0;
+
+	default:
+		return 1.0;
+	}
 }
 
 
@@ -206,6 +213,7 @@ bool CRelativeUnitSelectorComp::Serialize(iser::IArchive& archive)
 	bool retVal = true;
 
 	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this);
+	Q_UNUSED(notifier);
 
 	static iser::CArchiveTag displayModeTag("DisplayMode", "Display mode", iser::CArchiveTag::TT_LEAF);
 	retVal = retVal && archive.BeginTag(displayModeTag);
