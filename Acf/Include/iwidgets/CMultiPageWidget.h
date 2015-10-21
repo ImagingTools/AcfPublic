@@ -1,25 +1,3 @@
-/********************************************************************************
-**
-**	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the ACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.ilena.org or write info@imagingtools.de for further
-** 	information about the ACF.
-**
-********************************************************************************/
-
-
 #ifndef iwidgets_CMultiPageWidget_included
 #define iwidgets_CMultiPageWidget_included
 
@@ -98,7 +76,7 @@ public:
 	/**
 		Construct the multi page widget.
 		\param designMode Specify the type of the underlying page container widget. \sa DesignType
-		\param useHorizontalLayout	If set, the container will try
+		\param orientation	Specify how the pages are layouted in the container UI.
 	*/
 	CMultiPageWidget(
 				QWidget* parentWidgetPtr = NULL,
@@ -113,9 +91,24 @@ public:
 
 	/**
 		Set design mode. Existing pages will be re-integrated into the new container widget.
-		\note Currently, the switching of the design mode at the run time (after creation of this object) is not implemented!
+		\note Currently, the switching of the design mode after adding some pages to this object is not implemented!
+		\sa DesignType
 	*/
 	void SetDesignMode(int designMode);
+
+	/**
+		Set flags for container behavior. Existing pages will be re-integrated into the new container widget.
+		\note Currently, the switching of the container-UI flags after adding some pages to this object is not implemented!
+		\sa IMultiPageWidgetDelegate::ContainerGuiFlags
+	*/
+	void SetContainerGuiFlags(int containerGuiFlags);
+
+	/**
+		Set layout orientation for the pages in the container UI.
+		\note Currently, the switching of the layout orientation after adding some pages to this object is not implemented!
+		\sa Qt::Orientation
+	*/
+	void SetLayoutOrientation(Qt::Orientation orientation);
 
 	/**
 		Remove all pages from the container widget.
