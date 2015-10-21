@@ -71380,6 +71380,20 @@
       <anchor>a6c1d2bdc6ffda3abbdb10f6b760c2b68</anchor>
       <arglist>(int designMode)</arglist>
     </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetContainerGuiFlags</name>
+      <anchorfile>classiwidgets_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>a2e1034c822a8b446e160f05797b9c19b</anchor>
+      <arglist>(int containerGuiFlags)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetLayoutOrientation</name>
+      <anchorfile>classiwidgets_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>a17c6a5f8fe7bf678ce935fbd7448eaac</anchor>
+      <arglist>(Qt::Orientation orientation)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ResetPages</name>
