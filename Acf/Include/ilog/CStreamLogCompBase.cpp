@@ -1,25 +1,3 @@
-/********************************************************************************
-**
-**	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the ACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.ilena.org or write info@imagingtools.de for further
-** 	information about the ACF.
-**
-********************************************************************************/
-
-
 #include "ilog/CStreamLogCompBase.h"
 
 
@@ -41,6 +19,14 @@ CStreamLogCompBase::CStreamLogCompBase()
 	m_lastDotCategory(istd::IInformationProvider::IC_NONE),
 	m_worseCategory(istd::IInformationProvider::IC_NONE)
 {
+	qRegisterMetaType<MessagePtr>("MessagePtr");
+
+	connect(
+				this,
+				SIGNAL(EmitAddMessage(const MessagePtr&)),
+				this,
+				SLOT(OnAddMessage(const MessagePtr&)),
+				Qt::QueuedConnection);
 }
 
 
@@ -63,29 +49,8 @@ bool CStreamLogCompBase::IsMessageSupported(
 
 void CStreamLogCompBase::AddMessage(const MessagePtr& messagePtr)
 {
-	if (messagePtr.IsValid()){
-		istd::IInformationProvider::InformationCategory category = messagePtr->GetInformationCategory();
-		if (category >= *m_minPriorityAttrPtr){
-			if (m_isLastDotShown){
-				WriteText("\n", m_lastDotCategory);
-
-				m_isLastDotShown = false;
-			}
-
-			WriteMessageToStream(*messagePtr);
-		}
-		else if (*m_isDotEnabledAttrPtr){
-			WriteText(".", category);
-
-			m_isLastDotShown = true;
-			m_lastDotCategory = category;
-		}
-
-		if (category > m_worseCategory){
-			m_worseCategory = category;
-		}
-
-		BaseClass::AddMessage(messagePtr);
+	if (messagePtr.IsValid() && IsMessageSupported(messagePtr->GetInformationCategory())){
+		Q_EMIT EmitAddMessage(messagePtr);
 	}
 }
 
@@ -159,6 +124,37 @@ void CStreamLogCompBase::OnComponentDestroyed()
 	}
 
 	m_worseCategory = istd::IInformationProvider::IC_NONE;
+}
+
+
+// private slots
+
+void CStreamLogCompBase::OnAddMessage(const MessagePtr& messagePtr)
+{
+	if (messagePtr.IsValid()){
+		istd::IInformationProvider::InformationCategory category = messagePtr->GetInformationCategory();
+		if (category >= *m_minPriorityAttrPtr){
+			if (m_isLastDotShown){
+				WriteText("\n", m_lastDotCategory);
+
+				m_isLastDotShown = false;
+			}
+
+			WriteMessageToStream(*messagePtr);
+		}
+		else if (*m_isDotEnabledAttrPtr){
+			WriteText(".", category);
+
+			m_isLastDotShown = true;
+			m_lastDotCategory = category;
+		}
+
+		if (category > m_worseCategory){
+			m_worseCategory = category;
+		}
+
+		BaseClass::AddMessage(messagePtr);
+	}
 }
 
 
