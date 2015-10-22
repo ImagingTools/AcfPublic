@@ -17350,6 +17350,20 @@
       <anchor>a1ea3f6b62da99333ff84415ac023e519</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ChangeFlags</name>
+      <anchorfile>classiprm_1_1_i_name_param.html</anchorfile>
+      <anchor>a2e55954bb3324d93a4c6a2a3979cd941</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_RENAME</name>
+      <anchorfile>classiprm_1_1_i_name_param.html</anchorfile>
+      <anchor>a2e55954bb3324d93a4c6a2a3979cd941a4f84d92475041bf3db97c1a947b6f05f</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>

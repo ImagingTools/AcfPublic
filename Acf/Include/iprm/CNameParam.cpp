@@ -23,6 +23,9 @@
 #include "iprm/CNameParam.h"
 
 
+// Qt includes
+#include <QtCore/QObject>
+
 // ACF includes
 #include "istd/CChangeNotifier.h"
 
@@ -32,6 +35,10 @@
 
 namespace iprm
 {
+
+
+// static constants
+const static istd::IChangeable::ChangeSet s_renameChangeSet(iprm::INameParam::CF_RENAME, QObject::tr("Change name"));
 
 
 // reimplemented (iprm::INameParam)
@@ -45,7 +52,7 @@ const QString& CNameParam::GetName() const
 void CNameParam::SetName(const QString& name)
 {
 	if (m_name != name){
-		istd::CChangeNotifier notifier(this);
+		istd::CChangeNotifier notifier(this, &s_renameChangeSet);
 		Q_UNUSED(notifier);
 
 		m_name = name;
