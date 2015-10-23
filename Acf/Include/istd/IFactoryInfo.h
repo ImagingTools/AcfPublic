@@ -26,7 +26,7 @@
 
 // Qt includes
 #include <QtCore/QByteArray>
-#include <QtCore/QVector>
+#include <QtCore/QSet>
 
 // ACF includes
 #include "istd/IPolymorphic.h"
@@ -42,7 +42,7 @@ namespace istd
 class IFactoryInfo: virtual public istd::IPolymorphic  
 {
 public:
-	typedef QVector<QByteArray> KeyList;
+	typedef QSet<QByteArray> KeyList;
 
 	/**
 		Returns all posible keys for this factory.

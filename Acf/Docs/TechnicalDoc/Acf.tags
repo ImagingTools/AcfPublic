@@ -15366,10 +15366,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>QVector&lt; QByteArray &gt;</type>
+      <type>QSet&lt; QByteArray &gt;</type>
       <name>KeyList</name>
       <anchorfile>classistd_1_1_i_factory_info.html</anchorfile>
-      <anchor>ac357ea42763cc3625d85f4cce9fb2312</anchor>
+      <anchor>ae1894175a9fe040b7b729506f188a35f</anchor>
       <arglist></arglist>
     </member>
   </compound>
