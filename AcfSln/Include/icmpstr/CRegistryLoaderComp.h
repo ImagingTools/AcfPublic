@@ -81,7 +81,7 @@ public:
 	virtual QString GetTypeDescription(const QString* extensionPtr = NULL) const;
 
 protected:
-	QString GetLayoutPath(const QString& registryPath) const;
+	QString GetLayoutPath(const QString& registryPath, bool oldFormat) const;
 
 	using QObject::tr;
 

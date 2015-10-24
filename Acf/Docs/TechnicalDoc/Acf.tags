@@ -3835,9 +3835,7 @@
     <name>CCompactXmlFileReadArchive.h</name>
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>_c_compact_xml_file_read_archive_8h</filename>
-    <includes id="_c_xml_document_info_base_8h" name="CXmlDocumentInfoBase.h" local="yes" imported="no">iser/CXmlDocumentInfoBase.h</includes>
-    <includes id="_c_text_read_archive_base_8h" name="CTextReadArchiveBase.h" local="yes" imported="no">iser/CTextReadArchiveBase.h</includes>
-    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
+    <includes id="_c_compact_xml_read_archive_base_8h" name="CCompactXmlReadArchiveBase.h" local="yes" imported="no">iqt/CCompactXmlReadArchiveBase.h</includes>
     <class kind="class">iqt::CCompactXmlFileReadArchive</class>
     <namespace>iqt</namespace>
   </compound>
@@ -3845,11 +3843,45 @@
     <name>CCompactXmlFileWriteArchive.h</name>
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>_c_compact_xml_file_write_archive_8h</filename>
-    <includes id="_c_text_write_archive_base_8h" name="CTextWriteArchiveBase.h" local="yes" imported="no">iser/CTextWriteArchiveBase.h</includes>
     <includes id="_c_file_archive_info_8h" name="CFileArchiveInfo.h" local="yes" imported="no">ifile/CFileArchiveInfo.h</includes>
+    <includes id="_c_compact_xml_write_archive_base_8h" name="CCompactXmlWriteArchiveBase.h" local="yes" imported="no">iqt/CCompactXmlWriteArchiveBase.h</includes>
+    <class kind="class">iqt::CCompactXmlFileWriteArchive</class>
+    <namespace>iqt</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CCompactXmlMemReadArchive.h</name>
+    <path>C:/Temp/Acf/Include/iqt/</path>
+    <filename>_c_compact_xml_mem_read_archive_8h</filename>
+    <includes id="_c_compact_xml_read_archive_base_8h" name="CCompactXmlReadArchiveBase.h" local="yes" imported="no">iqt/CCompactXmlReadArchiveBase.h</includes>
+    <class kind="class">iqt::CCompactXmlMemReadArchive</class>
+    <namespace>iqt</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CCompactXmlMemWriteArchive.h</name>
+    <path>C:/Temp/Acf/Include/iqt/</path>
+    <filename>_c_compact_xml_mem_write_archive_8h</filename>
+    <includes id="_c_compact_xml_write_archive_base_8h" name="CCompactXmlWriteArchiveBase.h" local="yes" imported="no">iqt/CCompactXmlWriteArchiveBase.h</includes>
+    <class kind="class">iqt::CCompactXmlMemWriteArchive</class>
+    <namespace>iqt</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CCompactXmlReadArchiveBase.h</name>
+    <path>C:/Temp/Acf/Include/iqt/</path>
+    <filename>_c_compact_xml_read_archive_base_8h</filename>
+    <includes id="_c_xml_document_info_base_8h" name="CXmlDocumentInfoBase.h" local="yes" imported="no">iser/CXmlDocumentInfoBase.h</includes>
+    <includes id="_c_text_read_archive_base_8h" name="CTextReadArchiveBase.h" local="yes" imported="no">iser/CTextReadArchiveBase.h</includes>
+    <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
+    <class kind="class">iqt::CCompactXmlReadArchiveBase</class>
+    <namespace>iqt</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CCompactXmlWriteArchiveBase.h</name>
+    <path>C:/Temp/Acf/Include/iqt/</path>
+    <filename>_c_compact_xml_write_archive_base_8h</filename>
+    <includes id="_c_text_write_archive_base_8h" name="CTextWriteArchiveBase.h" local="yes" imported="no">iser/CTextWriteArchiveBase.h</includes>
     <includes id="_c_xml_document_info_base_8h" name="CXmlDocumentInfoBase.h" local="yes" imported="no">iser/CXmlDocumentInfoBase.h</includes>
     <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
-    <class kind="class">iqt::CCompactXmlFileWriteArchive</class>
+    <class kind="class">iqt::CCompactXmlWriteArchiveBase</class>
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
@@ -6859,6 +6891,9 @@
     <class kind="class">iqt::CClipboardSerializerComp</class>
     <class kind="class">iqt::CCompactXmlFileReadArchive</class>
     <class kind="class">iqt::CCompactXmlFileWriteArchive</class>
+    <class kind="class">iqt::CCompactXmlMemReadArchive</class>
+    <class kind="class">iqt::CCompactXmlMemWriteArchive</class>
+    <class kind="class">iqt::CCompactXmlReadArchiveBase</class>
     <class kind="class">iqt::CNetworkWriteArchive</class>
     <class kind="class">iqt::CSettingsArchiveBase</class>
     <class kind="class">iqt::CSettingsReadArchive</class>
@@ -12976,6 +13011,13 @@
       <arglist>(double length=1.0) const </arglist>
     </member>
     <member kind="function">
+      <type>bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_c_vector2d.html</anchorfile>
+      <anchor>a5c3e1fa675ec8980b61823d5d0a26377</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function">
       <type>CVector2d</type>
       <name>operator-</name>
       <anchorfile>classi2d_1_1_c_vector2d.html</anchorfile>
@@ -14488,6 +14530,13 @@
       <anchorfile>classi3d_1_1_c_vector3d.html</anchorfile>
       <anchor>af340a32bec58e62cb5352a6a638417ff</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi3d_1_1_c_vector3d.html</anchorfile>
+      <anchor>a4d486e187ee102db57ed99dcf55c2f8c</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function">
       <type>CVector3d</type>
@@ -29655,13 +29704,6 @@
     </member>
     <member kind="enumvalue">
       <type>@</type>
-      <name>MI_TAG_ERROR</name>
-      <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>a42b613ae4af9190f209a8b66da7b0de7a62d09aeb904d8556579e4e2feef8d9df</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
       <name>MI_STRING_TOO_LONG</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
       <anchor>a42b613ae4af9190f209a8b66da7b0de7a78a0d9bc74d41526d83720f99406e9e5</anchor>
@@ -29672,6 +29714,27 @@
       <name>BaseClass</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
       <anchor>aa55e94d60102d6461f3ee78afb3997f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>MessageId</name>
+      <anchorfile>classiser_1_1_i_archive.html</anchorfile>
+      <anchor>ae3a7497d4749710e95d79421bc935b61</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_TAG_ERROR</name>
+      <anchorfile>classiser_1_1_i_archive.html</anchorfile>
+      <anchor>ae3a7497d4749710e95d79421bc935b61abbc21ff5e81c9855833871d53570255d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_TAG_SKIPPED</name>
+      <anchorfile>classiser_1_1_i_archive.html</anchorfile>
+      <anchor>ae3a7497d4749710e95d79421bc935b61ab4bea1fec3de600d0691ceef3c41e564</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -30913,27 +30976,6 @@
       <anchor>a0070490328f58be01324f603cf1adfd3</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>MessageId</name>
-      <anchorfile>classiser_1_1_c_xml_read_archive_base.html</anchorfile>
-      <anchor>af5dec9a01f71edc542eb5b399a20e1ce</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_TAG_ERROR</name>
-      <anchorfile>classiser_1_1_c_xml_read_archive_base.html</anchorfile>
-      <anchor>af5dec9a01f71edc542eb5b399a20e1cea585e520a4008817cbf911c2de19c9c8e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_TAG_SKIPPED</name>
-      <anchorfile>classiser_1_1_c_xml_read_archive_base.html</anchorfile>
-      <anchor>af5dec9a01f71edc542eb5b399a20e1cea3a19b00977a3fafb5eeb6f083a42cc2e</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="typedef">
       <type>CTextReadArchiveBase</type>
       <name>BaseClass</name>
@@ -31745,19 +31787,19 @@
       <anchor>a3cd225588f5729a82e4a44b040ee321b</anchor>
       <arglist>(const QString &amp;filePath, const istd::ILogger *loggerPtr)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SendLogMessage</name>
+      <anchorfile>classifile_1_1_t_file_serializer_comp_1_1_read_archive_ex.html</anchorfile>
+      <anchor>a053ab75acaabba1e6d9d86d8e435f408</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsLogConsumed</name>
       <anchorfile>classifile_1_1_t_file_serializer_comp_1_1_read_archive_ex.html</anchorfile>
       <anchor>af65760373fc3f129a1fa62c6662e58f0</anchor>
       <arglist>(const istd::IInformationProvider::InformationCategory *, const int *flagsPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SendLogMessage</name>
-      <anchorfile>classifile_1_1_t_file_serializer_comp_1_1_read_archive_ex.html</anchorfile>
-      <anchor>a053ab75acaabba1e6d9d86d8e435f408</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31777,19 +31819,19 @@
       <anchor>ae1f6b4ce98c7aaf726428b4d86bf773d</anchor>
       <arglist>(const QString &amp;filePath, const iser::IVersionInfo *infoPtr, const istd::ILogger *loggerPtr)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SendLogMessage</name>
+      <anchorfile>classifile_1_1_t_file_serializer_comp_1_1_write_archive_ex.html</anchorfile>
+      <anchor>a45995e6a3cd152c6e2560fe5ec577b2a</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsLogConsumed</name>
       <anchorfile>classifile_1_1_t_file_serializer_comp_1_1_write_archive_ex.html</anchorfile>
       <anchor>a650722b92af933e6c1cb19f5941ad238</anchor>
       <arglist>(const istd::IInformationProvider::InformationCategory *, const int *flagsPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SendLogMessage</name>
-      <anchorfile>classifile_1_1_t_file_serializer_comp_1_1_write_archive_ex.html</anchorfile>
-      <anchor>a45995e6a3cd152c6e2560fe5ec577b2a</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -43602,6 +43644,10 @@
     <class kind="class">iqt::CClipboardSerializerComp</class>
     <class kind="class">iqt::CCompactXmlFileReadArchive</class>
     <class kind="class">iqt::CCompactXmlFileWriteArchive</class>
+    <class kind="class">iqt::CCompactXmlMemReadArchive</class>
+    <class kind="class">iqt::CCompactXmlMemWriteArchive</class>
+    <class kind="class">iqt::CCompactXmlReadArchiveBase</class>
+    <class kind="class">iqt::CCompactXmlWriteArchiveBase</class>
     <class kind="class">iqt::CConsoleReader</class>
     <class kind="class">iqt::CIniSettingsProviderComp</class>
     <class kind="class">iqt::CNetworkWriteArchive</class>
@@ -43778,8 +43824,14 @@
   <compound kind="class">
     <name>iqt::CCompactXmlFileReadArchive</name>
     <filename>classiqt_1_1_c_compact_xml_file_read_archive.html</filename>
-    <base>iser::CTextReadArchiveBase</base>
-    <base>iser::CXmlDocumentInfoBase</base>
+    <base>iqt::CCompactXmlReadArchiveBase</base>
+    <member kind="typedef">
+      <type>CCompactXmlReadArchiveBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
+      <anchor>a186572f7ae5be78f48a2ed191a6b9cfe</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CCompactXmlFileReadArchive</name>
@@ -43794,39 +43846,46 @@
       <anchor>a5d1cd21936cd453dd0ac3b23f78bd3f6</anchor>
       <arglist>(const QString &amp;filePath)</arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CCompactXmlReadArchiveBase</name>
+      <anchorfile>classiqt_1_1_c_compact_xml_read_archive_base.html</anchorfile>
+      <anchor>a276d90286638b1461fd8fef8cfa83cdb</anchor>
+      <arglist>(const iser::CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsTagSkippingSupported</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>abd444428435980396619258d97f3824f</anchor>
+      <anchorfile>classiqt_1_1_c_compact_xml_read_archive_base.html</anchorfile>
+      <anchor>ac8ada2c1fa3e25d32e6eb7e318537d55</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>BeginTag</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>a90a2e52e393954013c5b5ba315df70ae</anchor>
+      <anchorfile>classiqt_1_1_c_compact_xml_read_archive_base.html</anchorfile>
+      <anchor>aa32443f3ef01423d87831ae90d0d8c55</anchor>
       <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>BeginMultiTag</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>a08ccb2b929004f636cfa93098f93bcbd</anchor>
+      <anchorfile>classiqt_1_1_c_compact_xml_read_archive_base.html</anchorfile>
+      <anchor>a43eabc8b93bf57d3294ece6859a8f86e</anchor>
       <arglist>(const iser::CArchiveTag &amp;tag, const iser::CArchiveTag &amp;subTag, int &amp;count)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>EndTag</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>aca40f5442dbc773d0e14798cfca2d0e6</anchor>
+      <anchorfile>classiqt_1_1_c_compact_xml_read_archive_base.html</anchorfile>
+      <anchor>a2aa0c01bb8be299b635741b1722c1935</anchor>
       <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>a2c58d8012536da824f821dd14945a396</anchor>
+      <anchorfile>classiqt_1_1_c_compact_xml_read_archive_base.html</anchorfile>
+      <anchor>a010bdd0680d04a5d8e5e048ee41d1baf</anchor>
       <arglist>(QString &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -43836,32 +43895,52 @@
       <anchor>adb90ebc35d1e26aa4db0efe6e9eb97b5</anchor>
       <arglist>(QByteArray &amp;value)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DecorateMessage</name>
+      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
+      <anchor>a8098488adc9247a375a79cd8671dd683</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>ReadStringNode</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>a8ca4e5a7dc42fae5dcb1f5f42b11d3ef</anchor>
+      <anchorfile>classiqt_1_1_c_compact_xml_read_archive_base.html</anchorfile>
+      <anchor>a999f7b2554957636f8c178cabd2b875f</anchor>
       <arglist>(QString &amp;text)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>ReadTextNode</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>aa75dd6f392894e6627b9e003487d616b</anchor>
+      <anchorfile>classiqt_1_1_c_compact_xml_read_archive_base.html</anchorfile>
+      <anchor>a70be369e1cac0d1de524bda3e23629a1</anchor>
       <arglist>(QByteArray &amp;text)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QDomDocument</type>
+      <name>m_document</name>
+      <anchorfile>classiqt_1_1_c_compact_xml_read_archive_base.html</anchorfile>
+      <anchor>abd41cb42314e6ba86c2d3fcffd89cd0d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QDomElement</type>
+      <name>m_currentParent</name>
+      <anchorfile>classiqt_1_1_c_compact_xml_read_archive_base.html</anchorfile>
+      <anchor>a27dc8a54344aaedf1f6d387229ab0460</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>iqt::CCompactXmlFileWriteArchive</name>
     <filename>classiqt_1_1_c_compact_xml_file_write_archive.html</filename>
-    <base>iser::CTextWriteArchiveBase</base>
+    <base>iqt::CCompactXmlWriteArchiveBase</base>
     <base>ifile::CFileArchiveInfo</base>
-    <base>iser::CXmlDocumentInfoBase</base>
     <member kind="typedef">
-      <type>iser::CTextWriteArchiveBase</type>
+      <type>CCompactXmlWriteArchiveBase</type>
       <name>BaseClass</name>
       <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>a7a83d2149c6ab1a3f8eaba3eb85b97db</anchor>
+      <anchor>aa82e40a2e08828390afab6fb7dd78d6f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -43871,12 +43950,19 @@
       <anchor>abd6ae8eee072135d2ef18914daab1272</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>iser::CTextWriteArchiveBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt_1_1_c_compact_xml_write_archive_base.html</anchorfile>
+      <anchor>a7b18349483d010a4b10f7222ddd801d8</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CCompactXmlFileWriteArchive</name>
       <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>a398be8b05b0550eec45d5cef5171d79b</anchor>
-      <arglist>(const QString &amp;filePath=&quot;&quot;, const iser::IVersionInfo *versionInfoPtr=NULL, bool serializeHeader=true, const iser::CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
+      <anchor>a253856930377814e9f8458e2a454565d</anchor>
+      <arglist>(const QString &amp;filePath, const iser::IVersionInfo *versionInfoPtr=NULL, bool serializeHeader=true, const iser::CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -43887,51 +43973,58 @@
     </member>
     <member kind="function">
       <type>bool</type>
-      <name>Flush</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>ac5c10609859813cb8eff6960c4f58935</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
       <name>OpenFile</name>
       <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
       <anchor>a94285419869caf53ff4d944f77c9987d</anchor>
       <arglist>(const QString &amp;filePath)</arglist>
     </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>Flush</name>
+      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
+      <anchor>ac5c10609859813cb8eff6960c4f58935</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetString</name>
+      <anchorfile>classiqt_1_1_c_compact_xml_write_archive_base.html</anchorfile>
+      <anchor>acef613d6aa533d1a36ee031a5a3b7ed6</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsTagSkippingSupported</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>abb33dd3e33f8ada3195cde8eff761359</anchor>
+      <anchorfile>classiqt_1_1_c_compact_xml_write_archive_base.html</anchorfile>
+      <anchor>a32ccb64b6d6f91b54b92807c31e78d7f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>BeginTag</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>ae219f02693a5c774fccddd8d487da574</anchor>
+      <anchorfile>classiqt_1_1_c_compact_xml_write_archive_base.html</anchorfile>
+      <anchor>a618e1a7e6e9349149a3bc26ded8f032c</anchor>
       <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>BeginMultiTag</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>ace566dadeb27c0d2952b59d906816a17</anchor>
+      <anchorfile>classiqt_1_1_c_compact_xml_write_archive_base.html</anchorfile>
+      <anchor>a822523a79d992843d62bfa76ddd1ff60</anchor>
       <arglist>(const iser::CArchiveTag &amp;tag, const iser::CArchiveTag &amp;subTag, int &amp;count)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>EndTag</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>aedca9147c1545038fca7be221dffa2eb</anchor>
+      <anchorfile>classiqt_1_1_c_compact_xml_write_archive_base.html</anchorfile>
+      <anchor>a4c904e518d85498d6648da4fa6a5573e</anchor>
       <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>acb8e1868f71a1363600286165e169568</anchor>
+      <anchorfile>classiqt_1_1_c_compact_xml_write_archive_base.html</anchorfile>
+      <anchor>aba6f9f65c46457c3d926982b0901e09b</anchor>
       <arglist>(QString &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -43942,19 +44035,111 @@
       <arglist>(QByteArray &amp;value)</arglist>
     </member>
     <member kind="function" protection="protected">
+      <type></type>
+      <name>CCompactXmlWriteArchiveBase</name>
+      <anchorfile>classiqt_1_1_c_compact_xml_write_archive_base.html</anchorfile>
+      <anchor>ad58a4b3cd6a53ca9b7a70456b39942dc</anchor>
+      <arglist>(const iser::IVersionInfo *versionInfoPtr, bool serializeHeader, const iser::CArchiveTag &amp;rootTag)</arglist>
+    </member>
+    <member kind="function" protection="protected">
       <type>bool</type>
       <name>WriteStringNode</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>a3136e80fb0b8df00be3f7c14e29e433b</anchor>
+      <anchorfile>classiqt_1_1_c_compact_xml_write_archive_base.html</anchorfile>
+      <anchor>ada9b48d079227d48d58ff14038e3505d</anchor>
       <arglist>(const QString &amp;text)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>WriteTextNode</name>
-      <anchorfile>classiqt_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>ab697e1bb08e73e677f12b1c450eda06f</anchor>
+      <anchorfile>classiqt_1_1_c_compact_xml_write_archive_base.html</anchorfile>
+      <anchor>aa7806789d68650b8959ec54f274c5cd6</anchor>
       <arglist>(const QByteArray &amp;text)</arglist>
     </member>
+    <member kind="variable" protection="protected">
+      <type>QDomDocument</type>
+      <name>m_document</name>
+      <anchorfile>classiqt_1_1_c_compact_xml_write_archive_base.html</anchorfile>
+      <anchor>a4a66cc1cda715a16b3dbbb73f47f5987</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QDomElement</type>
+      <name>m_currentParent</name>
+      <anchorfile>classiqt_1_1_c_compact_xml_write_archive_base.html</anchorfile>
+      <anchor>a5a4f5063f794b1e43cb6e737e3d9b713</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt::CCompactXmlMemReadArchive</name>
+    <filename>classiqt_1_1_c_compact_xml_mem_read_archive.html</filename>
+    <base>iqt::CCompactXmlReadArchiveBase</base>
+    <member kind="typedef">
+      <type>CCompactXmlReadArchiveBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt_1_1_c_compact_xml_mem_read_archive.html</anchorfile>
+      <anchor>ab408ca892a5bf6297ffa6af18ba905ab</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CCompactXmlMemReadArchive</name>
+      <anchorfile>classiqt_1_1_c_compact_xml_mem_read_archive.html</anchorfile>
+      <anchor>ab0b13b1bc87419545e33f0d6dc139d77</anchor>
+      <arglist>(const QByteArray &amp;inputString, bool serializeHeader=true, const iser::CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DecorateMessage</name>
+      <anchorfile>classiqt_1_1_c_compact_xml_mem_read_archive.html</anchorfile>
+      <anchor>aa327c1bd7ba2ef4109584ed103287637</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt::CCompactXmlMemWriteArchive</name>
+    <filename>classiqt_1_1_c_compact_xml_mem_write_archive.html</filename>
+    <base>iqt::CCompactXmlWriteArchiveBase</base>
+    <member kind="typedef">
+      <type>CCompactXmlWriteArchiveBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt_1_1_c_compact_xml_mem_write_archive.html</anchorfile>
+      <anchor>a4fbe3baa04f1a6d139a5ac4877e8823a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CCompactXmlMemWriteArchive</name>
+      <anchorfile>classiqt_1_1_c_compact_xml_mem_write_archive.html</anchorfile>
+      <anchor>aa1c318d6b2d3d446bc85e614c3c36419</anchor>
+      <arglist>(const iser::IVersionInfo *versionInfoPtr=NULL, bool serializeHeader=true, const iser::CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetString</name>
+      <anchorfile>classiqt_1_1_c_compact_xml_mem_write_archive.html</anchorfile>
+      <anchor>a4375c517ce14681201349c8d6b82a22d</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt::CCompactXmlReadArchiveBase</name>
+    <filename>classiqt_1_1_c_compact_xml_read_archive_base.html</filename>
+    <base>iser::CTextReadArchiveBase</base>
+    <base>iser::CXmlDocumentInfoBase</base>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DecorateMessage</name>
+      <anchorfile>classiqt_1_1_c_compact_xml_read_archive_base.html</anchorfile>
+      <anchor>a65a8fe44e448a5c63209e096f6f08583</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt::CCompactXmlWriteArchiveBase</name>
+    <filename>classiqt_1_1_c_compact_xml_write_archive_base.html</filename>
+    <base>iser::CTextWriteArchiveBase</base>
+    <base>iser::CXmlDocumentInfoBase</base>
   </compound>
   <compound kind="class">
     <name>iqt::CConsoleReader</name>
@@ -73083,6 +73268,10 @@
     <file>CClipboardSerializerComp.h</file>
     <file>CCompactXmlFileReadArchive.h</file>
     <file>CCompactXmlFileWriteArchive.h</file>
+    <file>CCompactXmlMemReadArchive.h</file>
+    <file>CCompactXmlMemWriteArchive.h</file>
+    <file>CCompactXmlReadArchiveBase.h</file>
+    <file>CCompactXmlWriteArchiveBase.h</file>
     <file>CConsoleReader.h</file>
     <file>CIniSettingsProviderComp.h</file>
     <file>CNetworkWriteArchive.h</file>

@@ -29,10 +29,7 @@
 #include <QtXml/QDomNode>
 
 // ACF includes
-#include "iser/CXmlDocumentInfoBase.h"
-#include "iser/CTextReadArchiveBase.h"
-
-#include "iqt/iqt.h"
+#include "iqt/CCompactXmlReadArchiveBase.h"
 
 
 namespace iqt
@@ -44,9 +41,14 @@ namespace iqt
 
 	\ingroup Persistence
 */
-class CCompactXmlFileReadArchive: public iser::CTextReadArchiveBase, public iser::CXmlDocumentInfoBase
+class CCompactXmlFileReadArchive: public CCompactXmlReadArchiveBase
 {
 public:
+	typedef CCompactXmlReadArchiveBase BaseClass;
+
+	/**
+		Constructor initializing archive to work with file.
+	*/
 	CCompactXmlFileReadArchive(
 				const QString& filePath = "",
 				bool serializeHeader = true,
@@ -54,30 +56,18 @@ public:
 
 	bool OpenFile(const QString& filePath);
 
-	// reimplemented (iser::IArchive)
-	virtual bool IsTagSkippingSupported() const;
-	virtual bool BeginTag(const iser::CArchiveTag& tag);
-	virtual bool BeginMultiTag(const iser::CArchiveTag& tag, const iser::CArchiveTag& subTag, int& count);
-	virtual bool EndTag(const iser::CArchiveTag& tag);
-	virtual bool Process(QString& value);
-	using BaseClass::Process;
-
 protected:
-	bool ReadStringNode(QString& text);
-
-	// reimplemented (iser::CTextReadArchiveBase)
-	virtual bool ReadTextNode(QByteArray& text);
+	// reimplemented (istd::ILogger)
+	virtual void DecorateMessage(
+				istd::IInformationProvider::InformationCategory category,
+				int id,
+				int flags,
+				QString& message,
+				QString& messageSource) const;
 
 private:
-	QDomDocument m_document;
-	QDomElement m_currentParent;
-
-	QByteArray m_currentAttribute;
-
 	bool m_serializeHeader;
-	iser::CArchiveTag m_rootTag;
-
-	QList<const iser::CArchiveTag*> m_tagsStack;
+	QString m_openFileName;
 };
 
 

@@ -50,10 +50,10 @@
 // ACF includes
 #include "istd/CChangeNotifier.h"
 #include "istd/CSystem.h"
-#include "iser/CXmlStringWriteArchive.h"
 #include "icomp/CCompositeComponentStaticInfo.h"
 #include "icomp/CComponentMetaDescriptionEncoder.h"
 #include "iqt/CSignalBlocker.h"
+#include "iqt/CCompactXmlMemWriteArchive.h"
 
 
 namespace icmpstr
@@ -978,7 +978,7 @@ bool CPackageOverviewComp::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
 					QMimeData* mimeDataPtr = new QMimeData;
 
 					icomp::CComponentAddress address = selectedItemPtr->GetAddress();
-					iser::CXmlStringWriteArchive archive(NULL, false);
+					iqt::CCompactXmlMemWriteArchive archive(NULL, false);
 					if (address.Serialize(archive)){
 						mimeDataPtr->setText(archive.GetString());
 

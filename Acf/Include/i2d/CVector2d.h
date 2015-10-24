@@ -130,6 +130,11 @@ public:
 	 */
 	CVector2d GetNormalized(double length = 1.0) const;
 
+	/**
+		Serialize this vector to specified archive.
+	*/
+	bool Serialize(iser::IArchive& archive);
+
 	CVector2d operator-() const;
 
 	CVector2d operator+(const imath::TVector<2>& vector) const;

@@ -37,6 +37,9 @@ namespace i3d
 {
 
 
+/**
+	Definition of position or mathematical vector in 3D space.
+*/
 class CVector3d: public imath::TVector<3>
 {
 public:
@@ -107,6 +110,11 @@ public:
 		Get XY part of this 3D vector.
 	*/
 	i2d::CVector2d GetPlaneCasted() const;
+
+	/**
+		Serialize this vector to specified archive.
+	*/
+	bool Serialize(iser::IArchive& archive);
 
 	CVector3d operator-() const;
 
