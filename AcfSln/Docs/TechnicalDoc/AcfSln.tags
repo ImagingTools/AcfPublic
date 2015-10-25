@@ -8866,6 +8866,13 @@
       <anchor>a37890f5e7856d8458934b77a40d68827</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>QProcess::ProcessState</type>
+      <name>ProcessState</name>
+      <anchorfile>classicmpstr_1_1_c_registry_preview_comp.html</anchorfile>
+      <anchor>a27b5fbac8289e35b7a85c1cd23296d65</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CRegistryPreviewComp</name>
@@ -8898,8 +8905,8 @@
       <type>void</type>
       <name>OnStateChanged</name>
       <anchorfile>classicmpstr_1_1_c_registry_preview_comp.html</anchorfile>
-      <anchor>a7e93fa61d636012840d0bae15da65837</anchor>
-      <arglist>(QProcess::ProcessState state)</arglist>
+      <anchor>a8e139c288c074b5a3a2877a40137e10d</anchor>
+      <arglist>(ProcessState state)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>

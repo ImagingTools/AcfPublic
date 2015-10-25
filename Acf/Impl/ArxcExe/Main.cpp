@@ -30,7 +30,6 @@
 // ACF includes
 #include "istd/CSystem.h"
 #include "icomp/TSimComponentWrap.h"
-#include "icomp/TSimComponentsFactory.h"
 #include "icomp/TModelCompWrap.h"
 
 // ACF packages includes
@@ -112,6 +111,8 @@ int main(int argc, char *argv[])
 
 	if (verboseEnabled){
 		std::cout << "ARX Compiler started in: " << QDir::currentPath().toLocal8Bit().constData() << std::endl;
+		std::cout << "Using configuration: " << configFile.toStdString() << std::endl;
+		std::cout << "Output file: '" << outputFilePath.toStdString() << std::endl;
 
 		istd::CSystem::EnvironmentVariables environmentVariables = istd::CSystem::GetEnvironmentVariables();
 

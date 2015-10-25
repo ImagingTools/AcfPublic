@@ -122,6 +122,7 @@ int CExternalFileConverterComp::ConvertFiles(
 
 	SendVerboseMessage(QString("Process started as %1 %2").arg(m_executablePathCompPtr->GetPath()).arg(arguments.join(" ")));
 
+#ifndef QT_NO_PROCESS
 	m_conversionProcess.start(m_executablePathCompPtr->GetPath(), arguments);
 
 	m_conversionProcess.waitForFinished(-1);
@@ -131,6 +132,9 @@ int CExternalFileConverterComp::ConvertFiles(
 	}
 
 	return (m_conversionProcess.exitCode() == 0) ? iproc::IProcessor::TS_OK : iproc::IProcessor::TS_INVALID;
+#else
+	return iproc::IProcessor::TS_INVALID;
+#endif
 }
 
 
@@ -142,8 +146,10 @@ void CExternalFileConverterComp::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
+#ifndef QT_NO_PROCESS
 	connect(&m_conversionProcess, SIGNAL(readyReadStandardError()), this, SLOT(OnReadyReadStandardError()));
 	connect(&m_conversionProcess, SIGNAL(readyReadStandardOutput()), this, SLOT(OnReadyReadStandardOutput()));
+#endif
 }
 
 
@@ -151,21 +157,25 @@ void CExternalFileConverterComp::OnComponentCreated()
 
 void CExternalFileConverterComp::OnReadyReadStandardError()
 {
+#ifndef QT_NO_PROCESS
 	QString errorOutput = m_conversionProcess.readAllStandardError();
 	
 	errorOutput = errorOutput.simplified();
 
 	SendErrorMessage(0, errorOutput);
+#endif
 }
 
 
 void CExternalFileConverterComp::OnReadyReadStandardOutput()
 {
+#ifndef QT_NO_PROCESS
 	QString standardOutput = m_conversionProcess.readAllStandardOutput();
 
 	standardOutput = standardOutput.simplified();
 
 	SendInfoMessage(0, standardOutput);
+#endif
 }
 
 

@@ -85,12 +85,15 @@ int CRegistryCodeSaverComp::SaveToFile(
 {
 	const icomp::IRegistry* registryPtr = dynamic_cast<const icomp::IRegistry*>(&data);
 	if (registryPtr == NULL){
+		SendErrorMessage(0, "No valid component diagram", "Source code generator");
 		return OS_FAILED;
 	}
 
 	Addresses realAddresses;
 	Addresses composedAddresses;
 	if (!AppendAddresses(*registryPtr, realAddresses, composedAddresses)){
+		SendErrorMessage(0, "Component tree could not be created", "Source code generator");
+
 		return OS_FAILED;
 	}
 
@@ -98,6 +101,8 @@ int CRegistryCodeSaverComp::SaveToFile(
 		QByteArray className;
 		QString baseFilePath;
 		if (!ExtractInfoFromFile(filePath, className, baseFilePath)){
+			SendErrorMessage(0, "Class name could not be extracted", "Source code generator");
+
 			return OS_FAILED;
 		}
 
@@ -109,6 +114,8 @@ int CRegistryCodeSaverComp::SaveToFile(
 			headerFile.remove();
 			codeFile.remove();
 
+			SendErrorMessage(0, "Output files could not be created", "Source code generator");
+
 			return OS_FAILED;
 		}
 
@@ -117,8 +124,12 @@ int CRegistryCodeSaverComp::SaveToFile(
 		if (		!WriteHeader(className, *registryPtr, composedAddresses, realAddresses, headerStream) ||
 					!WriteIncludes(className, realAddresses, codeStream) ||
 					!WriteClassDefinitions(className, *registryPtr, composedAddresses, realAddresses, codeStream)){
+
 			headerFile.remove();
 			codeFile.remove();
+
+			SendErrorMessage(0, "Source code components could not be written", "Source code generator");
+
 			return OS_FAILED;
 		}
 	}
@@ -128,6 +139,8 @@ int CRegistryCodeSaverComp::SaveToFile(
 		if (filePath.isEmpty()){
 			QTextStream depsStream(stdout);
 			if (!WriteDependencies(composedAddresses, realAddresses, allDependencies, depsStream)){
+				SendErrorMessage(0, "Build dependencies could not be written", "Source code generator");
+
 				return OS_FAILED;
 			}
 		}
@@ -136,12 +149,17 @@ int CRegistryCodeSaverComp::SaveToFile(
 
 			if (!depsFile.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text)){
 				depsFile.remove();
+				SendErrorMessage(0, "Dependency file could not be opened", "Source code generator");
+
 				return OS_FAILED;
 			}
 
 			QTextStream depsStream(&depsFile);
 			if (!WriteDependencies(composedAddresses, realAddresses, allDependencies, depsStream)){
 				depsFile.remove();
+
+				SendErrorMessage(0, "Build dependencies could not be written", "Source code generator");
+
 				return OS_FAILED;
 			}
 		}

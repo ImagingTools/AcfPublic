@@ -606,6 +606,7 @@ bool CSceneProviderGuiComp::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
 
 void CSceneProviderGuiComp::OnPrint()
 {
+#ifndef QT_NO_PRINTER
 	if (!m_scenePtr.IsValid()){
 		return;
 	}
@@ -629,6 +630,7 @@ void CSceneProviderGuiComp::OnPrint()
 
 	 // print, fitting the viewport contents into a full page
 	m_scenePtr->render(&painter);
+#endif
 }
 
 
