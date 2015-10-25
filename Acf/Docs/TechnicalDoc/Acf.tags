@@ -6696,6 +6696,13 @@
     <namespace>iwidgets</namespace>
   </compound>
   <compound kind="file">
+    <name>CCollapsiblePage.h</name>
+    <path>C:/Temp/Acf/Include/iwidgets/</path>
+    <filename>_c_collapsible_page_8h</filename>
+    <class kind="class">iwidgets::CCollapsiblePage</class>
+    <namespace>iwidgets</namespace>
+  </compound>
+  <compound kind="file">
     <name>CDoubleRangeSpinEdit.h</name>
     <path>C:/Temp/Acf/Include/iwidgets/</path>
     <filename>_c_double_range_spin_edit_8h</filename>
@@ -70857,6 +70864,7 @@
     <filename>namespaceiwidgets.html</filename>
     <class kind="class">iwidgets::CCheckableComboBox</class>
     <class kind="class">iwidgets::CCollapsibleGroupWidgetDelegate</class>
+    <class kind="class">iwidgets::CCollapsiblePage</class>
     <class kind="class">iwidgets::CDoubleRangeSpinEdit</class>
     <class kind="class">iwidgets::CExtLineEdit</class>
     <class kind="class">iwidgets::CHierarchicalHeaderView</class>
@@ -71152,6 +71160,52 @@
       <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
       <anchor>a158980275bdaae3ca81e9d8082d96c2ea7bbb4dae4586ffdb7efa15427b3fc2ed</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwidgets::CCollapsiblePage</name>
+    <filename>classiwidgets_1_1_c_collapsible_page.html</filename>
+    <member kind="typedef">
+      <type>QWidget</type>
+      <name>BaseClass</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_page.html</anchorfile>
+      <anchor>a091358ad6195f7ca688386a55c821091</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CCollapsiblePage</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_page.html</anchorfile>
+      <anchor>a7cb85ce27eb28baccee558c266f2935f</anchor>
+      <arglist>(QWidget *parentPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetTitle</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_page.html</anchorfile>
+      <anchor>a07c18739a3c1e98e733ea4470bec2ed4</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetWidget</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_page.html</anchorfile>
+      <anchor>aa369bb7739914ddb8e01e26c797db887</anchor>
+      <arglist>(QWidget *pageWidgetPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetIconSize</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_page.html</anchorfile>
+      <anchor>a57b7b65e4ff9731b9bc623fd1ad39bd6</anchor>
+      <arglist>(const QSize &amp;size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetIcon</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_page.html</anchorfile>
+      <anchor>ac2d8ddd127102de7669a95be96b4b0ee</anchor>
+      <arglist>(const QIcon &amp;icon)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -73577,6 +73631,7 @@
     <filename>dir_86e1fd1e1d61f1c885cf57f78d3ff836.html</filename>
     <file>CCheckableComboBox.h</file>
     <file>CCollapsibleGroupWidgetDelegate.h</file>
+    <file>CCollapsiblePage.h</file>
     <file>CDoubleRangeSpinEdit.h</file>
     <file>CExtLineEdit.h</file>
     <file>CHierarchicalHeaderView.h</file>

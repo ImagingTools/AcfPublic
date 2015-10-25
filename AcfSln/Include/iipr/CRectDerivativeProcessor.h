@@ -24,6 +24,9 @@
 #define iipr_CRectDerivativeProcessor_included
 
 
+// STL includes
+#include <vector>
+
 // ACF includes
 #include "iproc/TSyncProcessorWrap.h"
 
