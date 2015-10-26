@@ -25,6 +25,7 @@
 
 // Qt includes
 #include <QtCore/QDateTime>
+#include <QtCore/QThread>
 #include <QtCore/QMetaType>
 
 // ACF includes
@@ -73,7 +74,14 @@ bool CStreamLogCompBase::IsMessageSupported(
 void CStreamLogCompBase::AddMessage(const MessagePtr& messagePtr)
 {
 	if (messagePtr.IsValid() && IsMessageSupported(messagePtr->GetInformationCategory())){
-		Q_EMIT EmitAddMessage(messagePtr);
+		QCoreApplication* applicationPtr = QCoreApplication::instance();
+		bool isMainThread = (applicationPtr == NULL) || (QThread::currentThread() == applicationPtr->thread());
+		if (!isMainThread){
+			Q_EMIT EmitAddMessage(messagePtr);
+		}
+		else{
+			OnAddMessage(messagePtr);
+		}
 	}
 }
 

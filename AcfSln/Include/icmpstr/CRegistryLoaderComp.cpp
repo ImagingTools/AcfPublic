@@ -90,7 +90,8 @@ bool CRegistryLoaderComp::IsOperationSupported(
 			}
 		}
 
-		if ((fileInfo.suffix().compare("arx", Qt::CaseInsensitive) != 0) && (fileInfo.suffix().compare("acc", Qt::CaseInsensitive) != 0)){
+		if (		(!*m_supportOldFormatAttrPtr || (fileInfo.suffix().compare("arx", Qt::CaseInsensitive) != 0)) &&
+					(fileInfo.suffix().compare("acc", Qt::CaseInsensitive) != 0)){
 			if (!beQuiet){
 				SendInfoMessage(MI_BAD_EXTENSION, QObject::tr("File extension is not supported"));
 			}
@@ -118,8 +119,8 @@ int CRegistryLoaderComp::LoadFromFile(
 	CVisualRegistry* geometricalRegistryPtr = dynamic_cast<CVisualRegistry*>(registryPtr);
 
 	if (registryPtr != NULL){
-		if (QFileInfo(filePath).suffix().compare("arx", Qt::CaseInsensitive) == 0){
-			ifile::TFileSerializerComp<ifile::CXmlFileReadArchive, ifile::CXmlFileWriteArchive>::ReadArchiveEx registryArchive(filePath, this);
+		if (QFileInfo(filePath).suffix().compare("acc", Qt::CaseInsensitive) == 0){
+			ifile::TFileSerializerComp<iqt::CCompactXmlFileReadArchive, iqt::CCompactXmlFileWriteArchive>::ReadArchiveEx registryArchive(filePath, this);
 			Q_ASSERT(!registryArchive.IsStoring());
 
 			if (geometricalRegistryPtr != NULL){
@@ -129,7 +130,7 @@ int CRegistryLoaderComp::LoadFromFile(
 					return OS_FAILED;
 				}
 
-				ifile::TFileSerializerComp<ifile::CXmlFileReadArchive, ifile::CXmlFileWriteArchive>::ReadArchiveEx layoutArchive(GetLayoutPath(filePath, true), this);
+				ifile::TFileSerializerComp<iqt::CCompactXmlFileReadArchive, iqt::CCompactXmlFileWriteArchive>::ReadArchiveEx layoutArchive(GetLayoutPath(filePath, false), this);
 				Q_ASSERT(!layoutArchive.IsStoring());
 
 				if (!geometricalRegistryPtr->SerializeUserData(layoutArchive)){
@@ -148,8 +149,8 @@ int CRegistryLoaderComp::LoadFromFile(
 				return OS_OK;
 			}
 		}
-		else{
-			ifile::TFileSerializerComp<iqt::CCompactXmlFileReadArchive, iqt::CCompactXmlFileWriteArchive>::ReadArchiveEx registryArchive(filePath, this);
+		else if (*m_supportOldFormatAttrPtr && (QFileInfo(filePath).suffix().compare("arx", Qt::CaseInsensitive) == 0)){
+			ifile::TFileSerializerComp<ifile::CXmlFileReadArchive, ifile::CXmlFileWriteArchive>::ReadArchiveEx registryArchive(filePath, this);
 			Q_ASSERT(!registryArchive.IsStoring());
 
 			if (geometricalRegistryPtr != NULL){
@@ -159,7 +160,7 @@ int CRegistryLoaderComp::LoadFromFile(
 					return OS_FAILED;
 				}
 
-				ifile::TFileSerializerComp<iqt::CCompactXmlFileReadArchive, iqt::CCompactXmlFileWriteArchive>::ReadArchiveEx layoutArchive(GetLayoutPath(filePath, false), this);
+				ifile::TFileSerializerComp<ifile::CXmlFileReadArchive, ifile::CXmlFileWriteArchive>::ReadArchiveEx layoutArchive(GetLayoutPath(filePath, true), this);
 				Q_ASSERT(!layoutArchive.IsStoring());
 
 				if (!geometricalRegistryPtr->SerializeUserData(layoutArchive)){
@@ -272,7 +273,9 @@ bool CRegistryLoaderComp::GetFileExtensions(QStringList& result, const istd::ICh
 	}
 
 	result.push_back("acc");
-	result.push_back("arx");
+	if (*m_supportOldFormatAttrPtr){
+		result.push_back("arx");
+	}
 
 	return true;
 }
@@ -283,7 +286,7 @@ QString CRegistryLoaderComp::GetTypeDescription(const QString* extensionPtr) con
 	if ((extensionPtr == NULL) || (extensionPtr->compare("acc", Qt::CaseInsensitive) == 0)){
 		return tr("ACF composed component");
 	}
-	else if (extensionPtr->compare("arx", Qt::CaseInsensitive) == 0){
+	else if (*m_supportOldFormatAttrPtr && extensionPtr->compare("arx", Qt::CaseInsensitive) == 0){
 		return tr("Old ACF registry file");
 	}
 

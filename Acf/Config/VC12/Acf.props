@@ -48,7 +48,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <FileConvertCopy>
-      <RegistryFile>..\..\\Partitura\AcfVoce.arp\FileSubstitCopyApp.arx</RegistryFile>
+      <RegistryFile>..\..\\Partitura\AcfVoce.arp\FileSubstitCopyApp.acc</RegistryFile>
       <ConfigFile>..\..\\Config\AcfBaseOnly.xpc</ConfigFile>
       <OutputDir>$(OutputDir)</OutputDir>
       <CommandLineTemplate>"..\..\\Bin\$(Configuration)VC12\Acf.exe" "%(RegistryFile)" -config "%(ConfigFile)" -input "%(FullPath)" -o %(OutputDir)/%(Filename)</CommandLineTemplate>
