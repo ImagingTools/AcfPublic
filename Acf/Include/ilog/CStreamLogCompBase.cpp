@@ -25,6 +25,7 @@
 
 // Qt includes
 #include <QtCore/QDateTime>
+#include <QtCore/QMetaType>
 
 // ACF includes
 #include "istd/IInformationProvider.h"
