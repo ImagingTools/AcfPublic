@@ -42,7 +42,7 @@ class CBitMemoryWriteArchive: public CMemoryWriteArchive
 public:
 	typedef CMemoryWriteArchive BaseClass;
 
-	CBitMemoryWriteArchive(const IVersionInfo* versionInfoPtr = NULL, bool serializeHeader = true);
+	CBitMemoryWriteArchive(const IVersionInfo* versionInfoPtr = NULL, bool serializeHeader = true, int initialBufferSize = -1);
 
 	/**
 		Pushes a value of the \c word bounding by N \c bits into the stream.
