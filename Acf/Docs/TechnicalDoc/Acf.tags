@@ -57612,8 +57612,8 @@
       <type></type>
       <name>CBitMemoryWriteArchive</name>
       <anchorfile>classiser_1_1_c_bit_memory_write_archive.html</anchorfile>
-      <anchor>a0de1bd6f75196774671a20787e066424</anchor>
-      <arglist>(const IVersionInfo *versionInfoPtr=NULL, bool serializeHeader=true)</arglist>
+      <anchor>acf59c844c9a6526e45aaf0dcd8326266</anchor>
+      <arglist>(const IVersionInfo *versionInfoPtr=NULL, bool serializeHeader=true, int initialBufferSize=-1)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
