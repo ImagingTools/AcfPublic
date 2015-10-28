@@ -95,7 +95,7 @@
                         <Data IsEnabled="true" Value="ACF"/>
                     </AttributeInfo>
                     <AttributeInfo Id="VersionNumber" ExportId="" Type="Integer">
-                        <Data IsEnabled="true" Value="3999"/>
+                        <Data IsEnabled="true" Value="4000"/>
                     </AttributeInfo>
                 </AttributeInfoMap>
             </Data>
