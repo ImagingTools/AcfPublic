@@ -176,11 +176,11 @@
   <ItemGroup>
     <CustomBuild Include="..\Compositor.acc">
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\Compositor.acc;..\..\..\..\Acf\Bin\DebugVC10\Arxc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\..\Acf\Config\QMake\..\..\Bin\DebugVC10\Arxc.exe ..\Compositor.acc -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Compositor\CCompositor.cpp -config ..\..\..\Config\Core.xpc -v</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\..\Acf\Config\QMake\..\..\Bin\DebugVC10\Arxc.exe ..\Compositor.acc -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Compositor\CCompositor.cpp -config ..\..\..\Config\AcfSlnConfig.awc -v</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ARX-Compiler</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Compositor\CCompositor.cpp;%(Outputs)</Outputs>
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\Compositor.acc;..\..\..\..\Acf\Bin\ReleaseVC10\Arxc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\..\Acf\Config\QMake\..\..\Bin\ReleaseVC10\Arxc.exe ..\Compositor.acc -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Compositor\CCompositor.cpp -config ..\..\..\Config\Core.xpc -v</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\..\Acf\Config\QMake\..\..\Bin\ReleaseVC10\Arxc.exe ..\Compositor.acc -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Compositor\CCompositor.cpp -config ..\..\..\Config\AcfSlnConfig.awc -v</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ARX-Compiler</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Compositor\CCompositor.cpp;%(Outputs)</Outputs>
     </CustomBuild>
@@ -188,11 +188,11 @@
   <ItemGroup>
     <CustomBuild Include="..\VC\Compositor.rc.xtracf">
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\VC\Compositor.rc.xtracf;..\..\..\..\Acf\Bin\DebugVC10\Acf.exe;..\..\..\..\Acf\Bin\DebugVC10\Arxc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\..\Acf\Config\QMake\..\..\Bin\DebugVC10\Acf.exe ..\..\..\Partitura\AcfInfoCopyApp.acc -config ..\..\..\Config\BaseOnly.xpc -input ..\VC\Compositor.rc.xtracf -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Compositor\Compositor.rc</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\..\Acf\Config\QMake\..\..\Bin\DebugVC10\Acf.exe ..\..\..\Partitura\AcfInfoCopyApp.acc -config ..\..\..\Config\BaseOnly.awc -input ..\VC\Compositor.rc.xtracf -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Compositor\Compositor.rc</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ACF-FileConvertCopy</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Compositor\Compositor.rc;%(Outputs)</Outputs>
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\VC\Compositor.rc.xtracf;..\..\..\..\Acf\Bin\ReleaseVC10\Acf.exe;..\..\..\..\Acf\Bin\ReleaseVC10\Arxc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\..\Acf\Config\QMake\..\..\Bin\ReleaseVC10\Acf.exe ..\..\..\Partitura\AcfInfoCopyApp.acc -config ..\..\..\Config\BaseOnly.xpc -input ..\VC\Compositor.rc.xtracf -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Compositor\Compositor.rc</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\..\Acf\Config\QMake\..\..\Bin\ReleaseVC10\Acf.exe ..\..\..\Partitura\AcfInfoCopyApp.acc -config ..\..\..\Config\BaseOnly.awc -input ..\VC\Compositor.rc.xtracf -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Compositor\Compositor.rc</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ACF-FileConvertCopy</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Compositor\Compositor.rc;%(Outputs)</Outputs>
     </CustomBuild>

@@ -167,11 +167,11 @@
   <ItemGroup>
     <CustomBuild Include="..\XpcEditor.acc">
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\XpcEditor.acc;..\..\..\..\Acf\Bin\DebugVC12\Arxc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\..\Acf\Config\QMake\..\..\Bin\DebugVC12\Arxc.exe ..\XpcEditor.acc -o ..\..\..\Impl\XpcEditorExe\QMake\..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\XpcEditor\CXpcEditor.cpp -config ..\..\..\Impl\XpcEditorExe\QMake\..\..\..\Config\Core.xpc -v</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\..\Acf\Config\QMake\..\..\Bin\DebugVC12\Arxc.exe ..\XpcEditor.acc -o ..\..\..\Impl\XpcEditorExe\QMake\..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\XpcEditor\CXpcEditor.cpp -config ..\..\..\Impl\XpcEditorExe\QMake\..\..\..\Config\AcfSlnConfig.awc -v</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ARX-Compiler</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\XpcEditor\CXpcEditor.cpp;%(Outputs)</Outputs>
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\XpcEditor.acc;..\..\..\..\Acf\Bin\ReleaseVC12\Arxc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\..\Acf\Config\QMake\..\..\Bin\ReleaseVC12\Arxc.exe ..\XpcEditor.acc -o ..\..\..\Impl\XpcEditorExe\QMake\..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\XpcEditor\CXpcEditor.cpp -config ..\..\..\Impl\XpcEditorExe\QMake\..\..\..\Config\Core.xpc -v</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\..\Acf\Config\QMake\..\..\Bin\ReleaseVC12\Arxc.exe ..\XpcEditor.acc -o ..\..\..\Impl\XpcEditorExe\QMake\..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\XpcEditor\CXpcEditor.cpp -config ..\..\..\Impl\XpcEditorExe\QMake\..\..\..\Config\AcfSlnConfig.awc -v</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ARX-Compiler</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\XpcEditor\CXpcEditor.cpp;%(Outputs)</Outputs>
     </CustomBuild>
@@ -179,11 +179,11 @@
   <ItemGroup>
     <CustomBuild Include="..\VC\XpcEditor.rc.xtracf">
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\VC\XpcEditor.rc.xtracf;..\..\..\..\Acf\Bin\DebugVC12\Acf.exe;..\..\..\..\Acf\Bin\DebugVC12\Arxc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\..\Acf\Config\QMake\..\..\Bin\DebugVC12\Acf.exe ..\..\..\Impl\XpcEditorExe\QMake\..\..\..\Partitura\AcfInfoCopyApp.acc -config ..\..\..\Impl\XpcEditorExe\QMake\..\..\..\Config\BaseOnly.xpc -input ..\VC\XpcEditor.rc.xtracf -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\XpcEditor\XpcEditor.rc</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\..\Acf\Config\QMake\..\..\Bin\DebugVC12\Acf.exe ..\..\..\Impl\XpcEditorExe\QMake\..\..\..\Partitura\AcfInfoCopyApp.acc -config ..\..\..\Impl\XpcEditorExe\QMake\..\..\..\Config\BaseOnly.awc -input ..\VC\XpcEditor.rc.xtracf -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\XpcEditor\XpcEditor.rc</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ACF-FileConvertCopy</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\XpcEditor\XpcEditor.rc;%(Outputs)</Outputs>
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\VC\XpcEditor.rc.xtracf;..\..\..\..\Acf\Bin\ReleaseVC12\Acf.exe;..\..\..\..\Acf\Bin\ReleaseVC12\Arxc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\..\Acf\Config\QMake\..\..\Bin\ReleaseVC12\Acf.exe ..\..\..\Impl\XpcEditorExe\QMake\..\..\..\Partitura\AcfInfoCopyApp.acc -config ..\..\..\Impl\XpcEditorExe\QMake\..\..\..\Config\BaseOnly.xpc -input ..\VC\XpcEditor.rc.xtracf -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\XpcEditor\XpcEditor.rc</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\..\Acf\Config\QMake\..\..\Bin\ReleaseVC12\Acf.exe ..\..\..\Impl\XpcEditorExe\QMake\..\..\..\Partitura\AcfInfoCopyApp.acc -config ..\..\..\Impl\XpcEditorExe\QMake\..\..\..\Config\BaseOnly.awc -input ..\VC\XpcEditor.rc.xtracf -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\XpcEditor\XpcEditor.rc</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ACF-FileConvertCopy</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\XpcEditor\XpcEditor.rc;%(Outputs)</Outputs>
     </CustomBuild>
