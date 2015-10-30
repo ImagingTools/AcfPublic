@@ -122,6 +122,10 @@
     <ClCompile Include="..\CBinaryWriteArchiveBase.cpp" />
     <ClCompile Include="..\CBitMemoryReadArchive.cpp" />
     <ClCompile Include="..\CBitMemoryWriteArchive.cpp" />
+    <ClCompile Include="..\CCompactXmlMemReadArchive.cpp" />
+    <ClCompile Include="..\CCompactXmlMemWriteArchive.cpp" />
+    <ClCompile Include="..\CCompactXmlReadArchiveBase.cpp" />
+    <ClCompile Include="..\CCompactXmlWriteArchiveBase.cpp" />
     <ClCompile Include="..\CMemoryReadArchive.cpp" />
     <ClCompile Include="..\CMemoryWriteArchive.cpp" />
     <ClCompile Include="..\CMinimalVersionInfo.cpp" />
@@ -146,6 +150,10 @@
     <ClInclude Include="..\CBinaryWriteArchiveBase.h" />
     <ClInclude Include="..\CBitMemoryReadArchive.h" />
     <ClInclude Include="..\CBitMemoryWriteArchive.h" />
+    <ClInclude Include="..\CCompactXmlMemReadArchive.h" />
+    <ClInclude Include="..\CCompactXmlMemWriteArchive.h" />
+    <ClInclude Include="..\CCompactXmlReadArchiveBase.h" />
+    <ClInclude Include="..\CCompactXmlWriteArchiveBase.h" />
     <ClInclude Include="..\CMemoryReadArchive.h" />
     <ClInclude Include="..\CMemoryWriteArchive.h" />
     <ClInclude Include="..\CMinimalVersionInfo.h" />

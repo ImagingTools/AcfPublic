@@ -120,12 +120,6 @@
   <ItemGroup>
     <ClCompile Include="..\CApplicationSettingsProviderComp.cpp" />
     <ClCompile Include="..\CClipboardSerializerComp.cpp" />
-    <ClCompile Include="..\CCompactXmlFileReadArchive.cpp" />
-    <ClCompile Include="..\CCompactXmlFileWriteArchive.cpp" />
-    <ClCompile Include="..\CCompactXmlMemReadArchive.cpp" />
-    <ClCompile Include="..\CCompactXmlMemWriteArchive.cpp" />
-    <ClCompile Include="..\CCompactXmlReadArchiveBase.cpp" />
-    <ClCompile Include="..\CCompactXmlWriteArchiveBase.cpp" />
     <ClCompile Include="..\CConsoleReader.cpp" />
     <ClCompile Include="..\CIniSettingsProviderComp.cpp" />
     <ClCompile Include="..\CNetworkWriteArchive.cpp" />
@@ -135,19 +129,11 @@
     <ClCompile Include="..\CSettingsWriteArchive.cpp" />
     <ClCompile Include="..\CSignalBlocker.cpp" />
     <ClCompile Include="..\CTranslationManagerComp.cpp" />
-    <ClCompile Include="..\CXmlFileReadArchive.cpp" />
-    <ClCompile Include="..\CXmlFileWriteArchive.cpp" />
     <ClCompile Include="..\iqt.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CApplicationSettingsProviderComp.h" />
     <ClInclude Include="..\CClipboardSerializerComp.h" />
-    <ClInclude Include="..\CCompactXmlFileReadArchive.h" />
-    <ClInclude Include="..\CCompactXmlFileWriteArchive.h" />
-    <ClInclude Include="..\CCompactXmlMemReadArchive.h" />
-    <ClInclude Include="..\CCompactXmlMemWriteArchive.h" />
-    <ClInclude Include="..\CCompactXmlReadArchiveBase.h" />
-    <ClInclude Include="..\CCompactXmlWriteArchiveBase.h" />
     <CustomBuild Include="..\CConsoleReader.h">
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CConsoleReader.h;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I../../../Include/iqt/QMake -I../../../AuxInclude/Qt5_VC12 -I../../../Include -I../../../AuxInclude/Qt5_VC12 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CConsoleReader.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqt\moc_CConsoleReader.cpp</Command>
@@ -175,8 +161,6 @@
     <ClInclude Include="..\CSettingsWriteArchive.h" />
     <ClInclude Include="..\CSignalBlocker.h" />
     <ClInclude Include="..\CTranslationManagerComp.h" />
-    <ClInclude Include="..\CXmlFileReadArchive.h" />
-    <ClInclude Include="..\CXmlFileWriteArchive.h" />
     <ClInclude Include="..\ISettingsProvider.h" />
     <ClInclude Include="..\ITranslationManager.h" />
     <ClInclude Include="..\iqt.h" />

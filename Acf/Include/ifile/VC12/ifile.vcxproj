@@ -119,8 +119,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\CAutoPersistenceComp.cpp" />
+    <ClCompile Include="..\CCompactXmlFileReadArchive.cpp" />
+    <ClCompile Include="..\CCompactXmlFileWriteArchive.cpp" />
     <ClCompile Include="..\CComposedFileMetaInfoProviderComp.cpp" />
     <ClCompile Include="..\CComposedFilePersistenceComp.cpp" />
+    <ClCompile Include="..\CCompressedXmlFileReadArchive.cpp" />
+    <ClCompile Include="..\CCompressedXmlFileWriteArchive.cpp" />
     <ClCompile Include="..\CFileArchiveInfo.cpp" />
     <ClCompile Include="..\CFileListProviderComp.cpp" />
     <ClCompile Include="..\CFileNameParamComp.cpp" />
@@ -131,9 +135,9 @@
     <ClCompile Include="..\CFileWriteArchive.cpp" />
     <ClCompile Include="..\CGeneratedFileNameParamComp.cpp" />
     <ClCompile Include="..\CRelativeFileNameParamComp.cpp" />
+    <ClCompile Include="..\CSimpleXmlFileReadArchive.cpp" />
+    <ClCompile Include="..\CSimpleXmlFileWriteArchive.cpp" />
     <ClCompile Include="..\CSystemLocationComp.cpp" />
-    <ClCompile Include="..\CXmlFileReadArchive.cpp" />
-    <ClCompile Include="..\CXmlFileWriteArchive.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\CAutoPersistenceComp.h">
@@ -146,8 +150,12 @@
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CAutoPersistenceComp.h</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ifile\moc_CAutoPersistenceComp.cpp;%(Outputs)</Outputs>
     </CustomBuild>
+    <ClInclude Include="..\CCompactXmlFileReadArchive.h" />
+    <ClInclude Include="..\CCompactXmlFileWriteArchive.h" />
     <ClInclude Include="..\CComposedFileMetaInfoProviderComp.h" />
     <ClInclude Include="..\CComposedFilePersistenceComp.h" />
+    <ClInclude Include="..\CCompressedXmlFileReadArchive.h" />
+    <ClInclude Include="..\CCompressedXmlFileWriteArchive.h" />
     <ClInclude Include="..\CFileArchiveInfo.h" />
     <CustomBuild Include="..\CFileListProviderComp.h">
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CFileListProviderComp.h;%(AdditionalInputs)</AdditionalInputs>
@@ -176,9 +184,9 @@
     <ClInclude Include="..\CFileWriteArchive.h" />
     <ClInclude Include="..\CGeneratedFileNameParamComp.h" />
     <ClInclude Include="..\CRelativeFileNameParamComp.h" />
+    <ClInclude Include="..\CSimpleXmlFileReadArchive.h" />
+    <ClInclude Include="..\CSimpleXmlFileWriteArchive.h" />
     <ClInclude Include="..\CSystemLocationComp.h" />
-    <ClInclude Include="..\CXmlFileReadArchive.h" />
-    <ClInclude Include="..\CXmlFileWriteArchive.h" />
     <ClInclude Include="..\IFileArchiveInfo.h" />
     <ClInclude Include="..\IFileListProvider.h" />
     <ClInclude Include="..\IFileMetaInfoProvider.h" />

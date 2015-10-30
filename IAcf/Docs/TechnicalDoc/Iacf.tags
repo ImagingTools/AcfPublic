@@ -229,26 +229,6 @@
     <filename>iwin_8h</filename>
     <namespace>iwin</namespace>
   </compound>
-  <compound kind="file">
-    <name>CGzXmlReadArchive.h</name>
-    <path>C:/Temp/Iacf/Include/izlib/</path>
-    <filename>_c_gz_xml_read_archive_8h</filename>
-    <class kind="class">izlib::CGzXmlReadArchive</class>
-    <namespace>izlib</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CGzXmlWriteArchive.h</name>
-    <path>C:/Temp/Iacf/Include/izlib/</path>
-    <filename>_c_gz_xml_write_archive_8h</filename>
-    <class kind="class">izlib::CGzXmlWriteArchive</class>
-    <namespace>izlib</namespace>
-  </compound>
-  <compound kind="file">
-    <name>izlib.h</name>
-    <path>C:/Temp/Iacf/Include/izlib/</path>
-    <filename>izlib_8h</filename>
-    <namespace>izlib</namespace>
-  </compound>
   <compound kind="namespace">
     <name>icbox</name>
     <filename>namespaceicbox.html</filename>
@@ -2209,101 +2189,6 @@
       <arglist>()</arglist>
     </member>
   </compound>
-  <compound kind="namespace">
-    <name>izlib</name>
-    <filename>namespaceizlib.html</filename>
-    <class kind="class">izlib::CGzXmlReadArchive</class>
-    <class kind="class">izlib::CGzXmlWriteArchive</class>
-  </compound>
-  <compound kind="class">
-    <name>izlib::CGzXmlReadArchive</name>
-    <filename>classizlib_1_1_c_gz_xml_read_archive.html</filename>
-    <base>iser::CXmlReadArchiveBase</base>
-    <base>ifile::CFileArchiveInfo</base>
-    <member kind="typedef">
-      <type>iser::CXmlReadArchiveBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classizlib_1_1_c_gz_xml_read_archive.html</anchorfile>
-      <anchor>a50fbe1df25be0d8bb62013800e4fced7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ifile::CFileArchiveInfo</type>
-      <name>BaseClass2</name>
-      <anchorfile>classizlib_1_1_c_gz_xml_read_archive.html</anchorfile>
-      <anchor>a66dd57fcb1ff7a23973e5b4915f24f04</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CGzXmlReadArchive</name>
-      <anchorfile>classizlib_1_1_c_gz_xml_read_archive.html</anchorfile>
-      <anchor>a883fc30735fea3b0e0e68248a51abd9c</anchor>
-      <arglist>(const QString &amp;filePath, bool serializeHeader=true, const iser::CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~CGzXmlReadArchive</name>
-      <anchorfile>classizlib_1_1_c_gz_xml_read_archive.html</anchorfile>
-      <anchor>a2918549170e2ff847e8a2dbd9fcb7d67</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ReadToDelimeter</name>
-      <anchorfile>classizlib_1_1_c_gz_xml_read_archive.html</anchorfile>
-      <anchor>a430b1ffe12af69dfb451de4b7252afde</anchor>
-      <arglist>(const QByteArray &amp;delimeters, QByteArray &amp;result, bool skipDelimeter=true, char *foundDelimeterPtr=NULL)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>izlib::CGzXmlWriteArchive</name>
-    <filename>classizlib_1_1_c_gz_xml_write_archive.html</filename>
-    <base>iser::CXmlWriteArchiveBase</base>
-    <base>ifile::CFileArchiveInfo</base>
-    <member kind="typedef">
-      <type>iser::CXmlWriteArchiveBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classizlib_1_1_c_gz_xml_write_archive.html</anchorfile>
-      <anchor>aa4cf73320dfedfaffe0531e98b9371e6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ifile::CFileArchiveInfo</type>
-      <name>BaseClass2</name>
-      <anchorfile>classizlib_1_1_c_gz_xml_write_archive.html</anchorfile>
-      <anchor>a8fb4e72a9257e347d85dbb78667352eb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CGzXmlWriteArchive</name>
-      <anchorfile>classizlib_1_1_c_gz_xml_write_archive.html</anchorfile>
-      <anchor>ac39700995a4901dcc68f44d08f2a6f21</anchor>
-      <arglist>(const QString &amp;filePath, const iser::IVersionInfo *versionInfoPtr=NULL, bool serializeHeader=true, const iser::CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~CGzXmlWriteArchive</name>
-      <anchorfile>classizlib_1_1_c_gz_xml_write_archive.html</anchorfile>
-      <anchor>af380eda41be2e5719dcfd848f213f8f4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="enumvalue" protection="protected">
-      <type>@</type>
-      <name>CHUNK_SIZE</name>
-      <anchorfile>classizlib_1_1_c_gz_xml_write_archive.html</anchorfile>
-      <anchor>a91c18a2111f340f8df2fbec9a0691308ab4c9af7dde403e879c814c7dd6fabfab</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>WriteString</name>
-      <anchorfile>classizlib_1_1_c_gz_xml_write_archive.html</anchorfile>
-      <anchor>aed64c43c20af5ee1bee80abe4e2825d1</anchor>
-      <arglist>(const QByteArray &amp;value)</arglist>
-    </member>
-  </compound>
   <compound kind="dir">
     <name>Include/icbox</name>
     <path>C:/Temp/Iacf/Include/icbox/</path>
@@ -2347,7 +2232,6 @@
     <dir>Include/iqwt</dir>
     <dir>Include/iqwt3d</dir>
     <dir>Include/iwin</dir>
-    <dir>Include/izlib</dir>
   </compound>
   <compound kind="dir">
     <name>Include/iocv</name>
@@ -2406,13 +2290,5 @@
     <file>CTimeStampCacheComp.h</file>
     <file>iwin.h</file>
     <file>TComPtr.h</file>
-  </compound>
-  <compound kind="dir">
-    <name>Include/izlib</name>
-    <path>C:/Temp/Iacf/Include/izlib/</path>
-    <filename>dir_4333160135b7d0337645edbeb16890e8.html</filename>
-    <file>CGzXmlReadArchive.h</file>
-    <file>CGzXmlWriteArchive.h</file>
-    <file>izlib.h</file>
   </compound>
 </tagfile>
