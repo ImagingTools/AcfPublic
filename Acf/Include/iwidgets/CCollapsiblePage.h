@@ -51,6 +51,7 @@ private Q_SLOTS:
 private:
 	QIcon m_icon;
 	QWidget* m_pageWidgetPtr;
+	QSize m_iconSize;
 };
 
 } // namespace iwidgets
