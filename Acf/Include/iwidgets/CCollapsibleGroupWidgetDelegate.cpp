@@ -31,7 +31,9 @@
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QGroupBox>
+#include <QtWidgets/QScrollArea>
 #else
+#include <QtGui/QScrollArea>
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QGroupBox>
@@ -59,7 +61,15 @@ CCollapsibleGroupWidgetDelegate::CCollapsibleGroupWidgetDelegate()
 
 QWidget* CCollapsibleGroupWidgetDelegate::CreateContainerWidget(QWidget* parentWidgetPtr, int containerGuiFlags, int orientation)
 {	
-	QWidget* containerPtr = new QWidget(parentWidgetPtr);
+	QScrollArea* scrollAreaPtr = new QScrollArea(parentWidgetPtr);
+	scrollAreaPtr->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+	scrollAreaPtr->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+	scrollAreaPtr->setWidgetResizable(true);
+
+	QWidget* containerPtr = new QWidget(scrollAreaPtr);
+	containerPtr->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+	scrollAreaPtr->setWidget(containerPtr);
+	scrollAreaPtr->setFrameShape(QFrame::NoFrame);
 
 	QBoxLayout* boxLayoutPtr = NULL;
 
@@ -79,7 +89,7 @@ QWidget* CCollapsibleGroupWidgetDelegate::CreateContainerWidget(QWidget* parentW
 	m_containerGuiFlags = containerGuiFlags;
 	m_orientation = orientation;
 
-	return containerPtr;
+	return scrollAreaPtr;
 }
 
 
@@ -104,10 +114,17 @@ int CCollapsibleGroupWidgetDelegate::InsertPage(
 		const QString& pageTitle,
 		int /*pageIndex*/)
 {
-	QLayout* containerLayoutPtr = containerWidget.layout();
+
+	QScrollArea* scrollAreaPtr = dynamic_cast<QScrollArea*>(&containerWidget);
+	Q_ASSERT(scrollAreaPtr != NULL);
+
+	QWidget* containerWidgetPtr = scrollAreaPtr->widget();
+	Q_ASSERT(containerWidgetPtr != NULL);
+
+	QLayout* containerLayoutPtr = containerWidgetPtr->layout();
 	Q_ASSERT(containerLayoutPtr != NULL);
 
-	CCollapsiblePage* groupPanelPtr = new CCollapsiblePage(&containerWidget);
+	CCollapsiblePage* groupPanelPtr = new CCollapsiblePage(containerWidgetPtr);
 	groupPanelPtr->SetTitle(pageTitle);
 	groupPanelPtr->SetWidget(pageWidgetPtr);
 	groupPanelPtr->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
@@ -135,7 +152,13 @@ int CCollapsibleGroupWidgetDelegate::InsertPage(
 
 void CCollapsibleGroupWidgetDelegate::RemovePage(QWidget& containerWidget, int pageIndex)
 {
-	QLayout* containerLayoutPtr = containerWidget.layout();
+	QScrollArea* scrollAreaPtr = dynamic_cast<QScrollArea*>(&containerWidget);
+	Q_ASSERT(scrollAreaPtr != NULL);
+
+	QWidget* containerWidgetPtr = scrollAreaPtr->widget();
+	Q_ASSERT(containerWidgetPtr != NULL);
+
+	QLayout* containerLayoutPtr = containerWidgetPtr->layout();
 	Q_ASSERT(containerLayoutPtr != NULL);
 
 	delete containerLayoutPtr->takeAt(pageIndex);
@@ -144,7 +167,13 @@ void CCollapsibleGroupWidgetDelegate::RemovePage(QWidget& containerWidget, int p
 
 int CCollapsibleGroupWidgetDelegate::GetPagesCount(const QWidget& containerWidget) const
 {
-	QLayout* containerLayoutPtr = containerWidget.layout();
+	const QScrollArea* scrollAreaPtr = dynamic_cast<const QScrollArea*>(&containerWidget);
+	Q_ASSERT(scrollAreaPtr != NULL);
+
+	QWidget* containerWidgetPtr = scrollAreaPtr->widget();
+	Q_ASSERT(containerWidgetPtr != NULL);
+
+	QLayout* containerLayoutPtr = containerWidgetPtr->layout();
 	Q_ASSERT(containerLayoutPtr != NULL);
 
 	return containerLayoutPtr->count();
@@ -153,10 +182,13 @@ int CCollapsibleGroupWidgetDelegate::GetPagesCount(const QWidget& containerWidge
 
 QWidget* CCollapsibleGroupWidgetDelegate::GetPageWidgetPtr(const QWidget& containerWidget, int pageIndex) const
 {
-	Q_ASSERT(pageIndex >= 0);
-	Q_ASSERT(pageIndex < GetPagesCount(containerWidget));
+	const QScrollArea* scrollAreaPtr = dynamic_cast<const QScrollArea*>(&containerWidget);
+	Q_ASSERT(scrollAreaPtr != NULL);
 
-	QLayout* containerLayoutPtr = containerWidget.layout();
+	QWidget* containerWidgetPtr = scrollAreaPtr->widget();
+	Q_ASSERT(containerWidgetPtr != NULL);
+
+	QLayout* containerLayoutPtr = containerWidgetPtr->layout();
 	Q_ASSERT(containerLayoutPtr != NULL);
 
 	return containerLayoutPtr->itemAt(pageIndex)->widget();
