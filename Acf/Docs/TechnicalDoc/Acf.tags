@@ -6720,6 +6720,13 @@
     <namespace>iwidgets</namespace>
   </compound>
   <compound kind="file">
+    <name>CFocusDecorator.h</name>
+    <path>C:/Temp/Acf/Include/iwidgets/</path>
+    <filename>_c_focus_decorator_8h</filename>
+    <class kind="class">iwidgets::CFocusDecorator</class>
+    <namespace>iwidgets</namespace>
+  </compound>
+  <compound kind="file">
     <name>CHierarchicalHeaderView.h</name>
     <path>C:/Temp/Acf/Include/iwidgets/</path>
     <filename>_c_hierarchical_header_view_8h</filename>
@@ -70832,6 +70839,7 @@
     <class kind="class">iwidgets::CCollapsiblePage</class>
     <class kind="class">iwidgets::CDoubleRangeSpinEdit</class>
     <class kind="class">iwidgets::CExtLineEdit</class>
+    <class kind="class">iwidgets::CFocusDecorator</class>
     <class kind="class">iwidgets::CHierarchicalHeaderView</class>
     <class kind="class">iwidgets::CItemDelegate</class>
     <class kind="class">iwidgets::CMultiPageWidget</class>
@@ -71389,6 +71397,52 @@
       <anchorfile>classiwidgets_1_1_c_ext_line_edit.html</anchorfile>
       <anchor>a79d8ea55f869d06dd5007097ccaaebd3</anchor>
       <arglist>(QFocusEvent *focusEvent)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwidgets::CFocusDecorator</name>
+    <filename>classiwidgets_1_1_c_focus_decorator.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CFocusDecorator</name>
+      <anchorfile>classiwidgets_1_1_c_focus_decorator.html</anchorfile>
+      <anchor>a1c3b6bd6cdb5d82beacef526e83a545b</anchor>
+      <arglist>(QObject *parentPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CFocusDecorator</name>
+      <anchorfile>classiwidgets_1_1_c_focus_decorator.html</anchorfile>
+      <anchor>a382458990d4771c361b25d29644bcb7a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>RegisterWidget</name>
+      <anchorfile>classiwidgets_1_1_c_focus_decorator.html</anchorfile>
+      <anchor>a4b1d9a0b69ca01369d7f3cc653570048</anchor>
+      <arglist>(QWidget *widgetPtr, QGraphicsEffect *effectPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>UnregisterWidget</name>
+      <anchorfile>classiwidgets_1_1_c_focus_decorator.html</anchorfile>
+      <anchor>aae5fa1d038c00bbc217cd4830165f07e</anchor>
+      <arglist>(QWidget *widgetPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>UnregisterAllWidgets</name>
+      <anchorfile>classiwidgets_1_1_c_focus_decorator.html</anchorfile>
+      <anchor>afb04b07b768b53f8663f73686e08e510</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>eventFilter</name>
+      <anchorfile>classiwidgets_1_1_c_focus_decorator.html</anchorfile>
+      <anchor>a3eb56a1fb6d9907c9d6bdd5ebddbde19</anchor>
+      <arglist>(QObject *objectPtr, QEvent *eventPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -73600,6 +73654,7 @@
     <file>CCollapsiblePage.h</file>
     <file>CDoubleRangeSpinEdit.h</file>
     <file>CExtLineEdit.h</file>
+    <file>CFocusDecorator.h</file>
     <file>CHierarchicalHeaderView.h</file>
     <file>CItemDelegate.h</file>
     <file>CMultiPageWidget.h</file>

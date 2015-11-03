@@ -123,6 +123,7 @@
     <ClCompile Include="..\CCollapsiblePage.cpp" />
     <ClCompile Include="..\CDoubleRangeSpinEdit.cpp" />
     <ClCompile Include="..\CExtLineEdit.cpp" />
+    <ClCompile Include="..\CFocusDecorator.cpp" />
     <ClCompile Include="..\CHierarchicalHeaderView.cpp" />
     <ClCompile Include="..\CItemDelegate.cpp" />
     <ClCompile Include="..\CMultiPageWidget.cpp" />
@@ -176,6 +177,7 @@
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CExtLineEdit.h</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iwidgets\moc_CExtLineEdit.cpp;%(Outputs)</Outputs>
     </CustomBuild>
+    <ClInclude Include="..\CFocusDecorator.h" />
     <CustomBuild Include="..\CHierarchicalHeaderView.h">
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CHierarchicalHeaderView.h;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I../../../Include/iwidgets/QMake -I../../../AuxInclude/Qt5_VC12 -I../../../Include -I../../../AuxInclude/Qt5_VC12 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CHierarchicalHeaderView.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iwidgets\moc_CHierarchicalHeaderView.cpp</Command>
