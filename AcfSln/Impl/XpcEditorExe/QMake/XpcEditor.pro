@@ -1,7 +1,7 @@
 TARGET = XpcEditor
 
-include(../../../../Acf/Config/QMake/ApplicationConfig.pri)
-include(../../../../Acf/Config/QMake/QtBaseConfig.pri)
+include($(ACFCONFIGDIR)/QMake/ApplicationConfig.pri)
+include($(ACFCONFIGDIR)/QMake/QtBaseConfig.pri)
 
 INCLUDEPATH += ../../../Include
 INCLUDEPATH += ../../../Impl
@@ -20,7 +20,7 @@ win32-msvc*{
 QT += xml
 
 mac{
-	ICON += $$PWD/../Mac/$$TARGET.icns
+	ICON += $$PWD/../Mac/XpcEditor.icns
 	QMAKE_INFO_PLIST = $$PWD/../Mac/Info.plist
 }
 
