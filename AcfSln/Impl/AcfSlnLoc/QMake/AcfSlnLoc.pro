@@ -12,12 +12,12 @@ SUBDIRS +=	AcfSlnLocRcc.pro
 else {
 TARGET = AcfSlnLoc
 
-include(../../../Config/QMake/StaticConfig.pri)
+include(../../../../Acf/Config/QMake/StaticConfig.pri)
 
 HEADERS =
 SOURCES =
 ACF_TRANSLATIONS += $$_PRO_FILE_PWD_/../*.ts
 GENERATED_RESOURCES += $$_PRO_FILE_PWD_/../*.qrc
 
-include(../../../Config/QMake/CustomBuild.pri)
+include(../../../../Acf/Config/QMake/CustomBuild.pri)
 }

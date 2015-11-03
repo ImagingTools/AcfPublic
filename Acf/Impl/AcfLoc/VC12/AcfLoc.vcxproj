@@ -121,48 +121,6 @@
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\qrc_AcfLoc.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="..\Acf_de_DE.ts">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\Acf_de_DE.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\lrelease ..\Acf_de_DE.ts -qm ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\Acf_de_DE.qm</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\lrelease</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\Acf_de_DE.qm;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\Acf_de_DE.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\lrelease ..\Acf_de_DE.ts -qm ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\Acf_de_DE.qm</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\lrelease</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\Acf_de_DE.qm;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="..\Acf_en_US.ts">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\Acf_en_US.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\lrelease ..\Acf_en_US.ts -qm ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\Acf_en_US.qm</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\lrelease</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\Acf_en_US.qm;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\Acf_en_US.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\lrelease ..\Acf_en_US.ts -qm ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\Acf_en_US.qm</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\lrelease</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\Acf_en_US.qm;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="..\Acf_pl_PL.ts">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\Acf_pl_PL.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\lrelease ..\Acf_pl_PL.ts -qm ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\Acf_pl_PL.qm</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\lrelease</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\Acf_pl_PL.qm;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\Acf_pl_PL.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\lrelease ..\Acf_pl_PL.ts -qm ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\Acf_pl_PL.qm</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\lrelease</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\Acf_pl_PL.qm;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="..\Acf_ru_RU.ts">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\Acf_ru_RU.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\lrelease ..\Acf_ru_RU.ts -qm ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\Acf_ru_RU.qm</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\lrelease</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\Acf_ru_RU.qm;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\Acf_ru_RU.ts;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\lrelease ..\Acf_ru_RU.ts -qm ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\Acf_ru_RU.qm</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\lrelease</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\Acf_ru_RU.qm;%(Outputs)</Outputs>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
     <CustomBuild Include="..\AcfLoc.qrc">
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\AcfLoc.qrc;$(QTDIR)\bin\rcc.exe;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">copy ..\..\..\Impl\AcfLoc\QMake\..\AcfLoc.qrc ..\..\..\Impl\AcfLoc\QMake\..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc.qrc &amp;&amp; $(QTDIR)\bin\rcc.exe -name AcfLoc ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc.qrc -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfLoc\\qrc_AcfLoc.cpp</Command>

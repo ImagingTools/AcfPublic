@@ -118,6 +118,7 @@
   <ItemGroup>
     <ClCompile Include="..\CConsoleLogComp.cpp" />
     <ClCompile Include="..\CLogComp.cpp" />
+    <ClCompile Include="..\CLogCompBase.cpp" />
     <ClCompile Include="..\CMessage.cpp" />
     <ClCompile Include="..\CMessageContainer.cpp" />
     <ClCompile Include="..\CStreamLogCompBase.cpp" />
@@ -127,18 +128,19 @@
   <ItemGroup>
     <ClInclude Include="..\CConsoleLogComp.h" />
     <ClInclude Include="..\CLogComp.h" />
+    <CustomBuild Include="..\CLogCompBase.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CLogCompBase.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/ilog/QMake -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CLogCompBase.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ilog\moc_CLogCompBase.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CLogCompBase.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ilog\moc_CLogCompBase.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CLogCompBase.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/ilog/QMake -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CLogCompBase.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ilog\moc_CLogCompBase.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CLogCompBase.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ilog\moc_CLogCompBase.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
     <ClInclude Include="..\CMessage.h" />
     <ClInclude Include="..\CMessageContainer.h" />
-    <CustomBuild Include="..\CStreamLogCompBase.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CStreamLogCompBase.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/ilog/QMake -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CStreamLogCompBase.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ilog\moc_CStreamLogCompBase.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CStreamLogCompBase.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ilog\moc_CStreamLogCompBase.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CStreamLogCompBase.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/ilog/QMake -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CStreamLogCompBase.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ilog\moc_CStreamLogCompBase.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CStreamLogCompBase.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ilog\moc_CStreamLogCompBase.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
+    <ClInclude Include="..\CStreamLogCompBase.h" />
     <ClInclude Include="..\CTextFileLogComp.h" />
     <ClInclude Include="..\CTextFileLogStreamerComp.h" />
     <ClInclude Include="..\ILoggable.h" />
@@ -151,7 +153,7 @@
     <ClInclude Include="..\ilog.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ilog\moc_CStreamLogCompBase.cpp" />
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ilog\moc_CLogCompBase.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

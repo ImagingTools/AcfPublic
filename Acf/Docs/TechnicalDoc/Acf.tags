@@ -2823,12 +2823,17 @@
     <name>CLogComp.h</name>
     <path>C:/Temp/Acf/Include/ilog/</path>
     <filename>_c_log_comp_8h</filename>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_message_container_8h" name="IMessageContainer.h" local="yes" imported="no">ilog/IMessageContainer.h</includes>
-    <includes id="_t_message_delegator_comp_8h" name="TMessageDelegatorComp.h" local="yes" imported="no">ilog/TMessageDelegatorComp.h</includes>
+    <includes id="_c_log_comp_base_8h" name="CLogCompBase.h" local="yes" imported="no">ilog/CLogCompBase.h</includes>
     <includes id="_c_message_container_8h" name="CMessageContainer.h" local="yes" imported="no">ilog/CMessageContainer.h</includes>
-    <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ilog/CMessage.h</includes>
     <class kind="class">ilog::CLogComp</class>
+    <namespace>ilog</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CLogCompBase.h</name>
+    <path>C:/Temp/Acf/Include/ilog/</path>
+    <filename>_c_log_comp_base_8h</filename>
+    <includes id="_t_message_delegator_comp_8h" name="TMessageDelegatorComp.h" local="yes" imported="no">ilog/TMessageDelegatorComp.h</includes>
+    <class kind="class">ilog::CLogCompBase</class>
     <namespace>ilog</namespace>
   </compound>
   <compound kind="file">
@@ -2866,7 +2871,7 @@
     <name>CStreamLogCompBase.h</name>
     <path>C:/Temp/Acf/Include/ilog/</path>
     <filename>_c_stream_log_comp_base_8h</filename>
-    <includes id="_t_message_delegator_comp_8h" name="TMessageDelegatorComp.h" local="yes" imported="no">ilog/TMessageDelegatorComp.h</includes>
+    <includes id="_c_log_comp_base_8h" name="CLogCompBase.h" local="yes" imported="no">ilog/CLogCompBase.h</includes>
     <class kind="class">ilog::CStreamLogCompBase</class>
     <namespace>ilog</namespace>
   </compound>
@@ -35172,6 +35177,7 @@
     <filename>namespaceilog.html</filename>
     <class kind="class">ilog::CConsoleLogComp</class>
     <class kind="class">ilog::CLogComp</class>
+    <class kind="class">ilog::CLogCompBase</class>
     <class kind="class">ilog::CMessage</class>
     <class kind="class">ilog::CMessageContainer</class>
     <class kind="class">ilog::CStreamLogCompBase</class>
@@ -35212,17 +35218,24 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ilog::TMessageDelegatorComp&lt; icomp::CComponentBase &gt;</type>
+      <type>ilog::CLogCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>a8ad75c2d433e4ade431f2cbe9467704e</anchor>
+      <anchor>ad5213788e7550f9739087c4beb842c4e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::TMessageDelegatorComp&lt; icomp::CComponentBase &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classilog_1_1_c_log_comp_base.html</anchorfile>
+      <anchor>a9e7d8e4e790f90b1c9a9d319f8772dbb</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>QObject</type>
       <name>BaseClass2</name>
-      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>aa65b36599d9f319a60771dddb378bddc</anchor>
+      <anchorfile>classilog_1_1_c_log_comp_base.html</anchorfile>
+      <anchor>a518d369d3ee4ddbd2af1bb7ac379a40c</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -35262,6 +35275,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>WriteMessageToLog</name>
+      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
+      <anchor>a6a1af9b68b70ce793e194102b97a2e2b</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
       <anchor>a9f10811e49b682acf3fb777be6ac48f6</anchor>
@@ -35270,8 +35290,8 @@
     <member kind="signal">
       <type>void</type>
       <name>EmitAddMessage</name>
-      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>a4a7a177789d268e3647de7aa849faf47</anchor>
+      <anchorfile>classilog_1_1_c_log_comp_base.html</anchorfile>
+      <anchor>a79c2b072401f11b61062918d54f6a2fd</anchor>
       <arglist>(const MessagePtr &amp;messagePtr)</arglist>
     </member>
     <member kind="function">
@@ -35295,24 +35315,31 @@
       <anchor>a42e4eb8bd6c0999495a3c910f19c5224</anchor>
       <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CLogCompBase</name>
+      <anchorfile>classilog_1_1_c_log_comp_base.html</anchorfile>
+      <anchor>a776066d614f935f04008f4fedc96abdd</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>AddMessage</name>
-      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>a1edc6d2ee066f52a17aec32a29744924</anchor>
+      <anchorfile>classilog_1_1_c_log_comp_base.html</anchorfile>
+      <anchor>a0b35969938323e313be83d51ee13f483</anchor>
       <arglist>(const MessagePtr &amp;messagePtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>ilog::CLogComp</name>
     <filename>classilog_1_1_c_log_comp.html</filename>
-    <base>TMessageDelegatorComp&lt; icomp::CComponentBase &gt;</base>
+    <base>ilog::CLogCompBase</base>
     <base>ilog::CMessageContainer</base>
     <member kind="typedef">
-      <type>ilog::TMessageDelegatorComp&lt; icomp::CComponentBase &gt;</type>
+      <type>CLogCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classilog_1_1_c_log_comp.html</anchorfile>
-      <anchor>acf4fec7875ec6e58fa7c9f8e4d10091f</anchor>
+      <anchor>ae8bee342fd11ff4693a3b9e016f6fd3e</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -35361,8 +35388,8 @@
       <type>virtual void</type>
       <name>AddMessage</name>
       <anchorfile>classilog_1_1_c_log_comp.html</anchorfile>
-      <anchor>a98c92da07a2f0146619a7ee211c81869</anchor>
-      <arglist>(const IMessageConsumer::MessagePtr &amp;messagePtr)</arglist>
+      <anchor>a1a6ba55008070d1b0dea497170005138</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -35555,6 +35582,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>WriteMessageToLog</name>
+      <anchorfile>classilog_1_1_c_log_comp.html</anchorfile>
+      <anchor>a7a516bf37e2008a7b508421ecbc379ff</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classilog_1_1_c_log_comp.html</anchorfile>
       <anchor>a462962d9a5fe98556ae63c6fe5ab0f8c</anchor>
@@ -35573,6 +35607,25 @@
       <anchorfile>classistd_1_1_t_hierarchical_base.html</anchorfile>
       <anchor>ad3713733bfce4d91e896080a3e962428</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilog::CLogCompBase</name>
+    <filename>classilog_1_1_c_log_comp_base.html</filename>
+    <base>TMessageDelegatorComp&lt; icomp::CComponentBase &gt;</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsMessageSupported</name>
+      <anchorfile>classilog_1_1_t_message_delegator_comp.html</anchorfile>
+      <anchor>af6a6189d19791283f4e76004796db15c</anchor>
+      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>WriteMessageToLog</name>
+      <anchorfile>classilog_1_1_c_log_comp_base.html</anchorfile>
+      <anchor>a376ad3cd6fb3285ac9100ebb655723b1</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -35835,7 +35888,7 @@
   <compound kind="class">
     <name>ilog::CStreamLogCompBase</name>
     <filename>classilog_1_1_c_stream_log_comp_base.html</filename>
-    <base>TMessageDelegatorComp&lt; icomp::CComponentBase &gt;</base>
+    <base>ilog::CLogCompBase</base>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
       <name>WriteText</name>
@@ -73084,6 +73137,7 @@
     <filename>dir_fe80db594080e2e23e8aa5ef038ae8b9.html</filename>
     <file>CConsoleLogComp.h</file>
     <file>CLogComp.h</file>
+    <file>CLogCompBase.h</file>
     <file>CMessage.h</file>
     <file>CMessageContainer.h</file>
     <file>CStreamLogCompBase.h</file>

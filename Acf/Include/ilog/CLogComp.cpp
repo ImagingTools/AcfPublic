@@ -23,6 +23,10 @@
 #include "ilog/CLogComp.h"
 
 
+// ACF includes
+#include "ilog/CMessage.h"
+
+
 namespace ilog
 {
 
@@ -37,18 +41,24 @@ bool CLogComp::IsMessageSupported(
 			const istd::IInformationProvider* messagePtr) const
 {
 	return BaseClass2::IsMessageSupported(messageCategory, messageId, messagePtr);
-}
+}	
 
 
-void CLogComp::AddMessage(const IMessageConsumer::MessagePtr& messagePtr)
+void CLogComp::AddMessage(const MessagePtr& messagePtr)
 {
-	BaseClass2::AddMessage(messagePtr);
-
 	BaseClass::AddMessage(messagePtr);
 }
 
 
 // protected methods
+
+// reimplemented (ilog::CLogCompBase)
+
+void CLogComp::WriteMessageToLog(const MessagePtr& messagePtr)
+{
+	BaseClass2::AddMessage(messagePtr);
+}
+
 
 // reimplemented (icomp::CComponentBase)
 
