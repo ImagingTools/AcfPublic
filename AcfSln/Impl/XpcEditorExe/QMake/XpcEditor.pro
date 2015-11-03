@@ -1,7 +1,7 @@
 TARGET = XpcEditor
 
-include($(ACFCONFIGDIR)/QMake/ApplicationConfig.pri)
-include($(ACFCONFIGDIR)/QMake/QtBaseConfig.pri)
+include(../../../../Acf/Config/QMake/ApplicationConfig.pri)
+include(../../../../Acf/Config/QMake/QtBaseConfig.pri)
 
 INCLUDEPATH += ../../../Include
 INCLUDEPATH += ../../../Impl
