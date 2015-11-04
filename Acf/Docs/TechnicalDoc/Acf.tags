@@ -6723,6 +6723,7 @@
     <name>CFocusDecorator.h</name>
     <path>C:/Temp/Acf/Include/iwidgets/</path>
     <filename>_c_focus_decorator_8h</filename>
+    <includes id="_t_i_factory_8h" name="TIFactory.h" local="yes" imported="no">istd/TIFactory.h</includes>
     <class kind="class">iwidgets::CFocusDecorator</class>
     <namespace>iwidgets</namespace>
   </compound>
@@ -71402,6 +71403,13 @@
   <compound kind="class">
     <name>iwidgets::CFocusDecorator</name>
     <filename>classiwidgets_1_1_c_focus_decorator.html</filename>
+    <member kind="typedef">
+      <type>istd::TIFactory&lt; QGraphicsEffect &gt;</type>
+      <name>GraphicsEffectFactory</name>
+      <anchorfile>classiwidgets_1_1_c_focus_decorator.html</anchorfile>
+      <anchor>ac7a1b4b1495e2ff1c84650876cdff774</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CFocusDecorator</name>
@@ -71420,8 +71428,8 @@
       <type>bool</type>
       <name>RegisterWidget</name>
       <anchorfile>classiwidgets_1_1_c_focus_decorator.html</anchorfile>
-      <anchor>a4b1d9a0b69ca01369d7f3cc653570048</anchor>
-      <arglist>(QWidget *widgetPtr, QGraphicsEffect *effectPtr)</arglist>
+      <anchor>a36f4ca70557f757cf9fe33376bc34744</anchor>
+      <arglist>(QWidget *widgetPtr, GraphicsEffectFactory *effectFactoryPtr)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
