@@ -20657,18 +20657,67 @@
     <name>iipr::ISearchConstraints</name>
     <filename>classiipr_1_1_i_search_constraints.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>SearchSupportedFlags</name>
+      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
+      <anchor>abc55d471ab230dff8a7a4be1e2a62f78</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SSF_NONE</name>
+      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
+      <anchor>abc55d471ab230dff8a7a4be1e2a62f78ad774ccfdcde86d8b8abbff8a93102ef8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SSF_TRANSLATION</name>
+      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
+      <anchor>abc55d471ab230dff8a7a4be1e2a62f78a09ea702ffe6622f70ebf647c8a487b87</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SSF_ROTATION</name>
+      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
+      <anchor>abc55d471ab230dff8a7a4be1e2a62f78a95a0eede6ce0944898d46f11563efec5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SSF_SCALING</name>
+      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
+      <anchor>abc55d471ab230dff8a7a4be1e2a62f78af24bf9f0d3375d28887c956b00c1cfc1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SSF_MULTIPLE_RESULTS</name>
+      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
+      <anchor>abc55d471ab230dff8a7a4be1e2a62f78ae292d8c5c2645b961e4009d72fdc954b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SSF_SCORE_THRESHOLD</name>
+      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
+      <anchor>abc55d471ab230dff8a7a4be1e2a62f78aafcd76d57db1acd3c5124242f61b1f6e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetSearchSupportedFlags</name>
+      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
+      <anchor>ac3af9b1aba83c680ca0546fb961c8293</anchor>
+      <arglist>() const =0</arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual const istd::CRange &amp;</type>
       <name>GetRotationRangeConstraints</name>
       <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
       <anchor>a4300242f37d9b3c7ee7a7cc8c2182324</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsRotationRangeSupported</name>
-      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
-      <anchor>aa437b7ba3dfa2fbb1e1c75cb9a2acae8</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -20679,10 +20728,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsScaleRangeSupported</name>
+      <type>virtual const istd::CIntRange &amp;</type>
+      <name>GetResultsCountConstraints</name>
       <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
-      <anchor>a59429c1c0b9872ba5ff924ee7eff2aeb</anchor>
+      <anchor>ab5ecd2c1ad7bb1023ea069ac8272c269</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>

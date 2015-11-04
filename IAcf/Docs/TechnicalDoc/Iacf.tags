@@ -82,6 +82,13 @@
     <namespace>iwin</namespace>
   </compound>
   <compound kind="file">
+    <name>CCorrSearchProcessorComp.h</name>
+    <path>C:/Temp/Iacf/Include/iocv/</path>
+    <filename>_c_corr_search_processor_comp_8h</filename>
+    <class kind="class">iocv::CCorrSearchProcessorComp</class>
+    <namespace>iocv</namespace>
+  </compound>
+  <compound kind="file">
     <name>COcvAcquisitionComp.h</name>
     <path>C:/Temp/Iacf/Include/iocv/</path>
     <filename>_c_ocv_acquisition_comp_8h</filename>
@@ -876,10 +883,73 @@
   <compound kind="namespace">
     <name>iocv</name>
     <filename>namespaceiocv.html</filename>
+    <class kind="class">iocv::CCorrSearchProcessorComp</class>
     <class kind="class">iocv::COcvAcquisitionComp</class>
     <class kind="class">iocv::COcvBlobProcessorComp</class>
     <class kind="class">iocv::COcvImage</class>
     <class kind="class">iocv::COcvVideoControllerComp</class>
+  </compound>
+  <compound kind="class">
+    <name>iocv::CCorrSearchProcessorComp</name>
+    <filename>classiocv_1_1_c_corr_search_processor_comp.html</filename>
+    <base>TSyncProcessorCompBase&lt; iipr::IImageToFeatureProcessor &gt;</base>
+    <base virtualness="virtual">iipr::ISearchConstraints</base>
+    <member kind="typedef">
+      <type>iproc::TSyncProcessorCompBase&lt; iipr::IImageToFeatureProcessor &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiocv_1_1_c_corr_search_processor_comp.html</anchorfile>
+      <anchor>a58194dd37e53dc11633135b7ed41709a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoExtractFeatures</name>
+      <anchorfile>classiocv_1_1_c_corr_search_processor_comp.html</anchorfile>
+      <anchor>a6510a1b74dfe2a0619f38400aafd1b41</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;results)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiocv_1_1_c_corr_search_processor_comp.html</anchorfile>
+      <anchor>ab51442a903841912c7626c6d9c25988e</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSearchSupportedFlags</name>
+      <anchorfile>classiocv_1_1_c_corr_search_processor_comp.html</anchorfile>
+      <anchor>a5db0fb58ca18c32a422e87deca57e2ec</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const istd::CRange &amp;</type>
+      <name>GetRotationRangeConstraints</name>
+      <anchorfile>classiocv_1_1_c_corr_search_processor_comp.html</anchorfile>
+      <anchor>a429a19eed9781279cf6f1a4055f1cc53</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const istd::CRange &amp;</type>
+      <name>GetScaleRangeConstraints</name>
+      <anchorfile>classiocv_1_1_c_corr_search_processor_comp.html</anchorfile>
+      <anchor>a9f39a47ec3e0f15f871002576d8c01b5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const istd::CIntRange &amp;</type>
+      <name>GetResultsCountConstraints</name>
+      <anchorfile>classiocv_1_1_c_corr_search_processor_comp.html</anchorfile>
+      <anchor>ab2fe9d1832b44d1d54160bd664f0e956</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoModelSearch</name>
+      <anchorfile>classiocv_1_1_c_corr_search_processor_comp.html</anchorfile>
+      <anchor>a40c1870d84467779dbbc72e786a9cabd</anchor>
+      <arglist>(const iimg::IBitmap &amp;image, const iimg::IBitmap &amp;modelImage, const i2d::CRect &amp;aoi, double minScore, iipr::IFeaturesConsumer &amp;result)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iocv::COcvAcquisitionComp</name>
@@ -2237,6 +2307,7 @@
     <name>Include/iocv</name>
     <path>C:/Temp/Iacf/Include/iocv/</path>
     <filename>dir_ef2d50ad1eb08c82cfa91c345faf6524.html</filename>
+    <file>CCorrSearchProcessorComp.h</file>
     <file>COcvAcquisitionComp.h</file>
     <file>COcvBlobProcessorComp.h</file>
     <file>COcvImage.h</file>
