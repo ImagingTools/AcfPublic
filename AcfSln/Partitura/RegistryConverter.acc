@@ -1,0 +1,146 @@
+<Acf Keywords="" Description="">
+    <AcfHeader>
+        <VersionInfos>
+            <Version Number="4020" Id="0" Description="ACF"/>
+            <Version Number="1483" Id="1" Description="ACF-Solutions"/>
+            <Version Number="328961" Id="1023" Description="Qt Framework"/>
+        </VersionInfos>
+    </AcfHeader>
+    <ElementsList>
+        <Element ComponentId="ComplexCopyApplication" Id="ComplexCopyApplication" PackageId="InstallVoce">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo ExportId="" Id="CompanyName" Type="String">
+                        <Data Value="ImagingTools" IsEnabled="true"/>
+                    </AttributeInfo>
+                    <AttributeInfo ExportId="" Id="EnableVerbose" Type="Boolean">
+                        <Data Value="true" IsEnabled="true"/>
+                    </AttributeInfo>
+                    <AttributeInfo ExportId="" Id="FileCopiers" Type="Reference[]">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>CopyFilesTree</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                    <AttributeInfo ExportId="" Id="LegalCopyright" Type="String">
+                        <Data Value="(C) 2015 Witold Gantzke &amp; Kirill Lepskiy" IsEnabled="true"/>
+                    </AttributeInfo>
+                    <AttributeInfo ExportId="" Id="MainVersionId" Type="Integer">
+                        <Data Value="1" IsEnabled="true"/>
+                    </AttributeInfo>
+                    <AttributeInfo ExportId="" Id="ProductName" Type="String">
+                        <Data Value="ArxToCarxConverter" IsEnabled="true"/>
+                    </AttributeInfo>
+                    <AttributeInfo ExportId="" Id="VersionInfo" Type="Reference">
+                        <Data Value="VersionInfo" IsEnabled="true"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element ComponentId="CopyFilesTree" Id="CopyFilesTree" PackageId="FileProcessingPck">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo ExportId="" Id="EnableVerbose" Type="Boolean">
+                        <Data Value="true" IsEnabled="true"/>
+                    </AttributeInfo>
+                    <AttributeInfo ExportId="" Id="FileCopy" Type="Reference">
+                        <Data Value="FileCopyOverLoader" IsEnabled="true"/>
+                    </AttributeInfo>
+                    <AttributeInfo ExportId="" Id="Filters" Type="String[]">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>*.arx</Value>
+                                <Value>*.acc</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                    <AttributeInfo ExportId="" Id="InputSubDir" Type="String">
+                        <Data Value="." IsEnabled="true"/>
+                    </AttributeInfo>
+                    <AttributeInfo ExportId="" Id="Log" Type="Reference">
+                        <Data Value="ComplexCopyApplication/Log" IsEnabled="true"/>
+                    </AttributeInfo>
+                    <AttributeInfo ExportId="" Id="OutputSubDir" Type="String">
+                        <Data Value="." IsEnabled="true"/>
+                    </AttributeInfo>
+                    <AttributeInfo ExportId="" Id="RecursionDepth" Type="Integer">
+                        <Data Value="-1" IsEnabled="true"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element ComponentId="FileCopyOverLoader" Id="FileCopyOverLoader" PackageId="FileProcessingPck">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo ExportId="" Id="EnableVerbose" Type="Boolean">
+                        <Data Value="true" IsEnabled="true"/>
+                    </AttributeInfo>
+                    <AttributeInfo ExportId="" Id="InputLoader" Type="Reference">
+                        <Data Value="RegistryLoader" IsEnabled="true"/>
+                    </AttributeInfo>
+                    <AttributeInfo ExportId="" Id="Log" Type="Reference">
+                        <Data Value="ComplexCopyApplication/Log" IsEnabled="true"/>
+                    </AttributeInfo>
+                    <AttributeInfo ExportId="" Id="Object" Type="Reference">
+                        <Data Value="Registry" IsEnabled="true"/>
+                    </AttributeInfo>
+                    <AttributeInfo ExportId="" Id="OutputLoader" Type="Reference">
+                        <Data Value="RegistrySaver" IsEnabled="true"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element ComponentId="VisualRegistry" Id="Registry" PackageId="CompositorPck">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap/>
+            </Data>
+        </Element>
+        <Element ComponentId="RegistryLoader" Id="RegistryLoader" PackageId="CompositorPck">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo ExportId="" Id="EnableVerbose" Type="Boolean">
+                        <Data Value="true" IsEnabled="true"/>
+                    </AttributeInfo>
+                    <AttributeInfo ExportId="" Id="Log" Type="Reference">
+                        <Data Value="ComplexCopyApplication/Log" IsEnabled="true"/>
+                    </AttributeInfo>
+                    <AttributeInfo ExportId="" Id="SupportOldFormat" Type="Boolean">
+                        <Data Value="true" IsEnabled="true"/>
+                    </AttributeInfo>
+                    <AttributeInfo ExportId="" Id="VersionInfo" Type="Reference">
+                        <Data Value="VersionInfo" IsEnabled="true"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element ComponentId="RegistryLoader" Id="RegistrySaver" PackageId="CompositorPck">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo ExportId="" Id="EnableVerbose" Type="Boolean">
+                        <Data Value="true" IsEnabled="true"/>
+                    </AttributeInfo>
+                    <AttributeInfo ExportId="" Id="Log" Type="Reference">
+                        <Data Value="ComplexCopyApplication/Log" IsEnabled="true"/>
+                    </AttributeInfo>
+                    <AttributeInfo ExportId="" Id="SupportOldFormat" Type="Boolean">
+                        <Data Value="false" IsEnabled="true"/>
+                    </AttributeInfo>
+                    <AttributeInfo ExportId="" Id="VersionInfo" Type="Reference">
+                        <Data Value="VersionInfo" IsEnabled="true"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element ComponentId="VersionInfo" Id="VersionInfo" PackageId="AcfSlnVoce">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap/>
+            </Data>
+        </Element>
+    </ElementsList>
+    <EmbeddedRegistriesList/>
+    <ExportedInterfaces>
+        <Interface InterfaceId="ibase::IApplication" ComponentId="ComplexCopyApplication"/>
+    </ExportedInterfaces>
+    <ExportedComponents/>
+</Acf>

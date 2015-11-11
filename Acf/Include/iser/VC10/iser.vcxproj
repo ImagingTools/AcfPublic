@@ -117,6 +117,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\CArchiveBase.cpp" />
+    <ClCompile Include="..\CArchiveHeaderInfo.cpp" />
     <ClCompile Include="..\CArchiveTag.cpp" />
     <ClCompile Include="..\CBinaryReadArchiveBase.cpp" />
     <ClCompile Include="..\CBinaryWriteArchiveBase.cpp" />
@@ -131,7 +132,6 @@
     <ClCompile Include="..\CMinimalVersionInfo.cpp" />
     <ClCompile Include="..\CPrimitiveTypesSerializer.cpp" />
     <ClCompile Include="..\CReadArchiveBase.cpp" />
-    <ClCompile Include="..\CReaderVersionInfo.cpp" />
     <ClCompile Include="..\CTextReadArchiveBase.cpp" />
     <ClCompile Include="..\CTextWriteArchiveBase.cpp" />
     <ClCompile Include="..\CWriteArchiveBase.cpp" />
@@ -145,6 +145,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CArchiveBase.h" />
+    <ClInclude Include="..\CArchiveHeaderInfo.h" />
     <ClInclude Include="..\CArchiveTag.h" />
     <ClInclude Include="..\CBinaryReadArchiveBase.h" />
     <ClInclude Include="..\CBinaryWriteArchiveBase.h" />
@@ -159,7 +160,6 @@
     <ClInclude Include="..\CMinimalVersionInfo.h" />
     <ClInclude Include="..\CPrimitiveTypesSerializer.h" />
     <ClInclude Include="..\CReadArchiveBase.h" />
-    <ClInclude Include="..\CReaderVersionInfo.h" />
     <ClInclude Include="..\CTextReadArchiveBase.h" />
     <ClInclude Include="..\CTextWriteArchiveBase.h" />
     <ClInclude Include="..\CWriteArchiveBase.h" />
@@ -174,7 +174,6 @@
     <ClInclude Include="..\ISerializable.h" />
     <ClInclude Include="..\IVersionInfo.h" />
     <ClInclude Include="..\TCopySerializedWrap.h" />
-    <ClInclude Include="..\TVersionInfoSerializer.h" />
     <ClInclude Include="..\iser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -23,10 +23,6 @@
 #include "iser/CReadArchiveBase.h"
 
 
-// ACF includes
-#include "iser/TVersionInfoSerializer.h"
-
-
 namespace iser
 {
 
@@ -63,7 +59,7 @@ bool CReadArchiveBase::ProcessBits(void* dataPtr, int bitsCount, int bytesCount)
 
 bool CReadArchiveBase::SerializeAcfHeader()
 {
-	return TVersionInfoSerializer<CReaderVersionInfo>::ReadVersion(&m_versionInfo, *this);
+	return m_versionInfo.SerializeArchiveHeader(*this);
 }
 
 
