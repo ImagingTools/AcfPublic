@@ -27308,6 +27308,41 @@
   <compound kind="class">
     <name>iqtmeas::CNumericValueWidget</name>
     <filename>classiqtmeas_1_1_c_numeric_value_widget.html</filename>
+    <member kind="enumeration">
+      <type></type>
+      <name>SliderFlags</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>ae7e58acadd784847fdb9f58f5a7b14b3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SF_NONE</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>ae7e58acadd784847fdb9f58f5a7b14b3a3d342c6ff4f2c09801fbdeeeceb9a321</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SF_SLIDER_ONLY</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>ae7e58acadd784847fdb9f58f5a7b14b3a5c8842a0014cc477d22f9d141d86848b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SF_SLIDER_BUTTONS</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>ae7e58acadd784847fdb9f58f5a7b14b3aac82566a8e25662db7505870fda76815</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SF_SINGLE_ROW</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>ae7e58acadd784847fdb9f58f5a7b14b3abfe3618bcbbce53e03d463391d647275</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="signal">
       <type>void</type>
       <name>ValueChanged</name>
@@ -27319,8 +27354,8 @@
       <type></type>
       <name>CNumericValueWidget</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
-      <anchor>a0a3f1a117196000160f70e635a822a63</anchor>
-      <arglist>(QWidget *parentPtr=NULL, bool showSlilder=true, bool showButtons=true, int inputPolicy=0, int maxPrecision=2)</arglist>
+      <anchor>a4bf6bbc6b688ccff27d0a7151e9511af</anchor>
+      <arglist>(QWidget *parentPtr=NULL, int sliderFlags=SF_SLIDER_BUTTONS, int inputPolicy=0, int maxPrecision=2)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
