@@ -27482,6 +27482,13 @@
       <anchor>acc5b04bdcc75b8247e09bfa2e06e16df</anchor>
       <arglist>(idoc::IMultiPageDocument &amp;document, int pageIndex, iser::IArchive &amp;archive) const </arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
+      <anchor>a2f7bc4d824caa22797d1e8e2c35a2782</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>idoc::CSelectedDocModelBinderComp</name>
@@ -30773,6 +30780,13 @@
       <name>OnComponentCreated</name>
       <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
       <anchor>a8a3add3e8068f0392d0b1cfdd68454ef</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
+      <anchor>a2f7bc4d824caa22797d1e8e2c35a2782</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">

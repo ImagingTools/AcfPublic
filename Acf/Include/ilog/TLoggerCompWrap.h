@@ -71,6 +71,7 @@ protected:
 
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();
+	virtual void OnComponentDestroyed();
 
 private:
 	I_REF(ilog::IMessageConsumer, m_logCompPtr);
@@ -132,6 +133,15 @@ void TLoggerCompWrap<Base>::OnComponentCreated()
 	}
 
 	BaseClass::OnComponentCreated();
+}
+
+
+template <class Base>
+void TLoggerCompWrap<Base>::OnComponentDestroyed()
+{
+	this->SetLogPtr(NULL);
+
+	BaseClass::OnComponentDestroyed();
 }
 
 
