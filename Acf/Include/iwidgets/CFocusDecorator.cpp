@@ -34,6 +34,7 @@ CFocusDecorator::CFocusDecorator(QObject* parentPtr)
 {
 }
 
+
 CFocusDecorator::~CFocusDecorator()
 {
 	UnregisterAllWidgets();
@@ -51,6 +52,8 @@ bool CFocusDecorator::RegisterWidget(QWidget* widgetPtr, GraphicsEffectFactory* 
 	}
 
 	widgetPtr->installEventFilter(this);
+
+	connect(widgetPtr, SIGNAL(destroyed(QObject*)), this, SLOT(OnObjectDestroyed(QObject*)));
 
 	m_widgetEffectsMap[widgetPtr] = factoryPtr;
 
@@ -77,7 +80,7 @@ void CFocusDecorator::UnregisterWidget(QWidget* widgetPtr)
 void CFocusDecorator::UnregisterAllWidgets()
 {
 	while(!m_widgetEffectsMap.isEmpty()){
-		QWidget* widgetPtr = m_widgetEffectsMap.begin().key();
+		QWidget* widgetPtr = dynamic_cast<QWidget*>(m_widgetEffectsMap.begin().key());
 
 		UnregisterWidget(widgetPtr);
 	}
@@ -111,10 +114,28 @@ bool CFocusDecorator::eventFilter(QObject* objectPtr, QEvent* eventPtr)
 				}
 				break;
 			}
+
+			case QEvent::Close:{
+				QWidget* widgetPtr = dynamic_cast<QWidget*>(objectPtr);
+				if (widgetPtr != NULL){
+					m_widgetEffectsMap.remove(widgetPtr);
+				}
+				break;
+			}
 		}
 	}
 
 	return QObject::eventFilter(objectPtr, eventPtr);
+}
+
+
+// private slots
+
+void CFocusDecorator::OnObjectDestroyed(QObject* objectPtr)
+{
+	objectPtr->removeEventFilter(this);
+
+	m_widgetEffectsMap.remove(objectPtr);
 }
 
 
