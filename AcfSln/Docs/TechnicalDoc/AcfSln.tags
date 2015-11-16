@@ -13346,6 +13346,13 @@
     <name>ihotf::CFileSystemChangeStorage</name>
     <filename>classihotf_1_1_c_file_system_change_storage.html</filename>
     <base virtualness="virtual">ihotf::IFileSystemChangeStorage</base>
+    <member kind="function">
+      <type></type>
+      <name>CFileSystemChangeStorage</name>
+      <anchorfile>classihotf_1_1_c_file_system_change_storage.html</anchorfile>
+      <anchor>aaa5708083e27900501d3be8133ae2aaa</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetStorageItemsCount</name>
@@ -13421,6 +13428,13 @@
       <name>CF_ATTRIBUTE_CHANGED</name>
       <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
       <anchor>a72f67a9f80343898c6948aaecc6836aaa56203ba063dd39bc72d4223e95758a57</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_DATA_RESET</name>
+      <anchorfile>classihotf_1_1_i_file_system_change_storage.html</anchorfile>
+      <anchor>a72f67a9f80343898c6948aaecc6836aaa052f115e91ea9e6f34a95c624104eddd</anchor>
       <arglist></arglist>
     </member>
   </compound>

@@ -29974,6 +29974,13 @@
       <anchor>a9d4e6f8c3a1c21caa281d6796335ffab</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>WriteTextNode</name>
+      <anchorfile>classifile_1_1_c_compact_xml_file_write_archive.html</anchorfile>
+      <anchor>aadad5301ea377c4f8cfd11d3a2c40513</anchor>
+      <arglist>(const QByteArray &amp;text)</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type></type>
       <name>CCompactXmlWriteArchiveBase</name>
@@ -29987,13 +29994,6 @@
       <anchorfile>classiser_1_1_c_compact_xml_write_archive_base.html</anchorfile>
       <anchor>a6ca4f78503af0d84f5cbbf1bbeea558e</anchor>
       <arglist>(const QString &amp;text)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteTextNode</name>
-      <anchorfile>classiser_1_1_c_compact_xml_write_archive_base.html</anchorfile>
-      <anchor>af7843a7da44dbd0300be31fd628dc99f</anchor>
-      <arglist>(const QByteArray &amp;text)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type></type>
@@ -30270,6 +30270,13 @@
       <anchorfile>classifile_1_1_c_compressed_xml_file_write_archive.html</anchorfile>
       <anchor>aeb46c5cdb588d8f9144b11ac401c6f28</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>WriteTextNode</name>
+      <anchorfile>classiser_1_1_c_compact_xml_write_archive_base.html</anchorfile>
+      <anchor>aae178975cbcda155f4b0512234425006</anchor>
+      <arglist>(const QByteArray &amp;text)</arglist>
     </member>
   </compound>
   <compound kind="class">

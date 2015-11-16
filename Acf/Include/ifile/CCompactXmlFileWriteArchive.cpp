@@ -32,6 +32,8 @@ namespace ifile
 {
 
 
+// public methods
+
 CCompactXmlFileWriteArchive::CCompactXmlFileWriteArchive(
 			const QString& filePath,
 			const iser::IVersionInfo* versionInfoPtr,
@@ -40,8 +42,11 @@ CCompactXmlFileWriteArchive::CCompactXmlFileWriteArchive(
 :	BaseClass(versionInfoPtr, serializeHeader, rootTag),
 	BaseClass2(filePath)
 {
-	if (!filePath.isEmpty()){
-		OpenFile(filePath);
+	QFile file(filePath);
+	if (file.setPermissions(QFileDevice::WriteUser)){
+		if (!filePath.isEmpty()){
+			OpenFile(filePath);
+		}
 	}
 }
 
@@ -72,6 +77,20 @@ bool CCompactXmlFileWriteArchive::Flush()
 	}
 
 	return false;
+}
+
+
+// protected methods
+
+// reimplemented (iser::CTextWriteArchiveBase)
+
+bool CCompactXmlFileWriteArchive::WriteTextNode(const QByteArray& text)
+{
+	if (!m_file.isOpen()){
+		return false;
+	}
+
+	return BaseClass::WriteTextNode(text);
 }
 
 
