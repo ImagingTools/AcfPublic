@@ -41596,8 +41596,8 @@
       <type>bool</type>
       <name>AppendAddresses</name>
       <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>abc6f15ccfcacfc2d2cbbaa91828d5e95</anchor>
-      <arglist>(const icomp::IRegistry &amp;registry, Addresses &amp;realAddresses, Addresses &amp;composedAddresses) const </arglist>
+      <anchor>a4e0e671b891ac1fc9eeb199011ca7cdd</anchor>
+      <arglist>(const icomp::IRegistry &amp;registry, const QStringList &amp;registryPath, Addresses &amp;realAddresses, Addresses &amp;composedAddresses) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>Ids</type>
