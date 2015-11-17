@@ -288,7 +288,7 @@ CSelectionParam::ConstraintsObserver::ConstraintsObserver(CSelectionParam& paren
 
 void CSelectionParam::ConstraintsObserver::OnUpdate(const istd::IChangeable::ChangeSet& changeSet)
 {
-	if (changeSet.Contains(iprm::ISelectionParam::CF_SELECTION_CHANGED)){
+	if (!changeSet.Contains(iprm::IOptionsList::CF_OPTIONS_CHANGED)){
 		return;
 	}
 
