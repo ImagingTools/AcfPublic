@@ -63284,9 +63284,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual const i2d::ICalibration2d *</type>
-      <name>GetCalibrationPtr</name>
+      <name>GetCalibration</name>
       <anchorfile>classiview_1_1_c_none_calibration_shape.html</anchorfile>
-      <anchor>af14416d9acff277d89d0a6f247e4fba5</anchor>
+      <anchor>a980c28ee51065de6ab696c9151286b62</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
