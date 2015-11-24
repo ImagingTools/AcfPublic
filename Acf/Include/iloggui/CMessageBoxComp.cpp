@@ -41,8 +41,7 @@ namespace iloggui
 
 CMessageBoxComp::CMessageBoxComp()
 {
-	connect(
-				this,
+	connect(	this,
 				SIGNAL(EmitAddMessage()),
 				this,
 				SLOT(OnAddMessage()),
