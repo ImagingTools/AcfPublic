@@ -66939,7 +66939,7 @@
       <type>virtual bool</type>
       <name>IsVisible</name>
       <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
-      <anchor>aa7d89984c2a5b077a34f3c88f1628de2</anchor>
+      <anchor>adfe750769151695f6e6390ed0eeca533</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
