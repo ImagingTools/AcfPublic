@@ -3786,7 +3786,7 @@
     <name>IParamsSetValidator.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_i_params_set_validator_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="yes" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="yes" imported="no">ilog/IMessageConsumer.h</includes>
     <class kind="class">iprm::IParamsSetValidator</class>
     <namespace>iprm</namespace>
   </compound>
@@ -43804,8 +43804,8 @@
       <type>virtual bool</type>
       <name>IsParamsSetConsistent</name>
       <anchorfile>classiprm_1_1_i_params_set_validator.html</anchorfile>
-      <anchor>a23e343736863f1c07b92c53561b83fd5</anchor>
-      <arglist>(const IParamsSet &amp;paramsSet) const =0</arglist>
+      <anchor>aa79935224f977fb542147421f3de0de9</anchor>
+      <arglist>(const IParamsSet &amp;paramsSet, ilog::IMessageConsumer *validationMessagesConsumerPtr=NULL) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">

@@ -24,7 +24,7 @@
 
 
 // ACF includes
-#include "istd/IPolymorphic.h"
+#include "ilog/IMessageConsumer.h"
 
 
 namespace iprm
@@ -49,8 +49,11 @@ public:
 
 	/**
 		Return \c true if the parameter set is consistent or \c false otherwise.
+		\param paramsSet	Parameter set to be validated
+		\param validationMessagesConsumerPtr (optional) Consumer for validation messages.
 	*/
-	virtual bool IsParamsSetConsistent(const IParamsSet& paramsSet) const = 0;
+	virtual bool IsParamsSetConsistent(const IParamsSet& paramsSet, ilog::IMessageConsumer* validationMessagesConsumerPtr = NULL) const = 0;
+
 };
 
 
