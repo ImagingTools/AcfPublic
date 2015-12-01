@@ -25561,6 +25561,27 @@
       <anchor>afb8e46d31eab921576865897cd65f46e</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classicomp_1_1_t_model_comp_wrap.html</anchorfile>
+      <anchor>a9529dd5df09334c54e05a22908805dc3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnBeginGlobalChanges</name>
+      <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
+      <anchor>aceb231d5e9520566e35f9ba5c1d1bc76</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnEndGlobalChanges</name>
+      <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
+      <anchor>a64f53c4d57bdd469a002399b69506921</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
@@ -25623,20 +25644,6 @@
       <anchorfile>classiser_1_1_t_copy_serialized_wrap.html</anchorfile>
       <anchor>af3d40308b3497f10d37d531ca9a509f2</anchor>
       <arglist>(const istd::IChangeable &amp;object) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnBeginGlobalChanges</name>
-      <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>aceb231d5e9520566e35f9ba5c1d1bc76</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnEndGlobalChanges</name>
-      <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a64f53c4d57bdd469a002399b69506921</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
