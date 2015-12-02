@@ -195,6 +195,7 @@
     <ClInclude Include="..\IFileResourcesManager.h" />
     <ClInclude Include="..\IFileSystemInfoProvider.h" />
     <ClInclude Include="..\IFileTypeInfo.h" />
+    <ClInclude Include="..\IRelativeFilePath.h" />
     <ClInclude Include="..\TFileSerializerComp.h" />
     <ClInclude Include="..\TXmlFileSerializerComp.h" />
     <ClInclude Include="..\ifile.h" />

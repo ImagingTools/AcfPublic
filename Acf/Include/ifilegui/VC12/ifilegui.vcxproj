@@ -125,6 +125,7 @@
     <ClCompile Include="..\CFilePreviewGuiComp.cpp" />
     <ClCompile Include="..\CFileSystemExplorerGuiComp.cpp" />
     <ClCompile Include="..\CFileTreeViewGuiComp.cpp" />
+    <ClCompile Include="..\CSimpleFilePathParamGuiComp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\CExternalOpenDocumentCommandCompBase.h">
@@ -188,6 +189,16 @@
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CFileTreeViewGuiComp.h</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ifilegui\moc_CFileTreeViewGuiComp.cpp;%(Outputs)</Outputs>
     </CustomBuild>
+    <CustomBuild Include="..\CSimpleFilePathParamGuiComp.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CSimpleFilePathParamGuiComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I../../../Include/ifilegui/QMake -I../../../AuxInclude/Qt5_VC12 -I../../../Include -I../../../AuxInclude/Qt5_VC12 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CSimpleFilePathParamGuiComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ifilegui\moc_CSimpleFilePathParamGuiComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CSimpleFilePathParamGuiComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ifilegui\moc_CSimpleFilePathParamGuiComp.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CSimpleFilePathParamGuiComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I../../../Include/ifilegui/QMake -I../../../AuxInclude/Qt5_VC12 -I../../../Include -I../../../AuxInclude/Qt5_VC12 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CSimpleFilePathParamGuiComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ifilegui\moc_CSimpleFilePathParamGuiComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CSimpleFilePathParamGuiComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ifilegui\moc_CSimpleFilePathParamGuiComp.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
     <ClInclude Include="..\ifilegui.h" />
   </ItemGroup>
   <ItemGroup>
@@ -197,11 +208,13 @@
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ifilegui\moc_CFilePreviewGuiComp.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ifilegui\moc_CFileSystemExplorerGuiComp.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ifilegui\moc_CFileTreeViewGuiComp.cpp" />
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ifilegui\moc_CSimpleFilePathParamGuiComp.cpp" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ifilegui\ui_CFileListProviderGuiComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ifilegui\ui_CFilePersistenceGuiComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ifilegui\ui_CFilePreviewGuiComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ifilegui\ui_CFileSystemExplorerGuiComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ifilegui\ui_CFileTreeViewGuiComp.h" />
+    <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ifilegui\ui_CSimpleFilePathParamGuiComp.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\CFileListProviderGuiComp.ui">
@@ -258,6 +271,17 @@
       <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\uic.exe ..\CFileTreeViewGuiComp.ui -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ifilegui\ui_CFileTreeViewGuiComp.h</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ..\CFileTreeViewGuiComp.ui</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ifilegui\ui_CFileTreeViewGuiComp.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\CSimpleFilePathParamGuiComp.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CSimpleFilePathParamGuiComp.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\uic.exe ..\CSimpleFilePathParamGuiComp.ui -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ifilegui\ui_CSimpleFilePathParamGuiComp.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">UIC ..\CSimpleFilePathParamGuiComp.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ifilegui\ui_CSimpleFilePathParamGuiComp.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CSimpleFilePathParamGuiComp.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\uic.exe ..\CSimpleFilePathParamGuiComp.ui -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ifilegui\ui_CSimpleFilePathParamGuiComp.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ..\CSimpleFilePathParamGuiComp.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ifilegui\ui_CSimpleFilePathParamGuiComp.h;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

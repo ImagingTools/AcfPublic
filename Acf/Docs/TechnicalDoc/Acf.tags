@@ -2180,6 +2180,7 @@
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_c_compact_xml_file_read_archive_8h</filename>
     <includes id="_c_compact_xml_read_archive_base_8h" name="CCompactXmlReadArchiveBase.h" local="yes" imported="no">iser/CCompactXmlReadArchiveBase.h</includes>
+    <includes id="_c_file_archive_info_8h" name="CFileArchiveInfo.h" local="yes" imported="no">ifile/CFileArchiveInfo.h</includes>
     <class kind="class">ifile::CCompactXmlFileReadArchive</class>
     <namespace>ifile</namespace>
   </compound>
@@ -2326,6 +2327,7 @@
     <filename>_c_relative_file_name_param_comp_8h</filename>
     <includes id="_c_multi_model_bridge_base_8h" name="CMultiModelBridgeBase.h" local="yes" imported="no">imod/CMultiModelBridgeBase.h</includes>
     <includes id="_c_file_name_param_comp_8h" name="CFileNameParamComp.h" local="yes" imported="no">ifile/CFileNameParamComp.h</includes>
+    <includes id="_i_relative_file_path_8h" name="IRelativeFilePath.h" local="yes" imported="no">ifile/IRelativeFilePath.h</includes>
     <class kind="class">ifile::CRelativeFileNameParamComp</class>
     <namespace>ifile</namespace>
   </compound>
@@ -2462,6 +2464,14 @@
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
+    <name>IRelativeFilePath.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_i_relative_file_path_8h</filename>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <class kind="class">ifile::IRelativeFilePath</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
     <name>TFileSerializerComp.h</name>
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_t_file_serializer_comp_8h</filename>
@@ -2562,6 +2572,16 @@
     <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <class kind="class">ifilegui::CFileTreeViewGuiComp</class>
+    <namespace>ifilegui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CSimpleFilePathParamGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/ifilegui/</path>
+    <filename>_c_simple_file_path_param_gui_comp_8h</filename>
+    <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="yes" imported="no">ifile/IFileTypeInfo.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
+    <class kind="class">ifilegui::CSimpleFilePathParamGuiComp</class>
     <namespace>ifilegui</namespace>
   </compound>
   <compound kind="file">
@@ -29276,6 +29296,7 @@
     <class kind="interface">ifile::IFileResourceTypeConstraints</class>
     <class kind="class">ifile::IFileSystemInfoProvider</class>
     <class kind="class">ifile::IFileTypeInfo</class>
+    <class kind="class">ifile::IRelativeFilePath</class>
     <class kind="class">ifile::TFileSerializerComp</class>
     <class kind="class">ifile::TXmlFileSerializerComp</class>
   </compound>
@@ -29401,11 +29422,19 @@
     <name>ifile::CCompactXmlFileReadArchive</name>
     <filename>classifile_1_1_c_compact_xml_file_read_archive.html</filename>
     <base>iser::CCompactXmlReadArchiveBase</base>
+    <base>ifile::CFileArchiveInfo</base>
     <member kind="typedef">
       <type>iser::CCompactXmlReadArchiveBase</type>
       <name>BaseClass</name>
       <anchorfile>classifile_1_1_c_compact_xml_file_read_archive.html</anchorfile>
       <anchor>a050cccd093495efcb6bec3d3cf8a6cc5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ifile::CFileArchiveInfo</type>
+      <name>BaseClass2</name>
+      <anchorfile>classifile_1_1_c_compact_xml_file_read_archive.html</anchorfile>
+      <anchor>a9c682abc1cc4cb5776cbe1373df3477c</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -29632,6 +29661,20 @@
       <anchor>a7ac5aed46b0f5533d3058fd782f9cd22</anchor>
       <arglist>(bool state=true)</arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CFileArchiveInfo</name>
+      <anchorfile>classifile_1_1_c_file_archive_info.html</anchorfile>
+      <anchor>aff4f16a0effe663fb3308e039f959d1b</anchor>
+      <arglist>(const QString &amp;filePath)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QString &amp;</type>
+      <name>GetCurrentFilePath</name>
+      <anchorfile>classifile_1_1_c_file_archive_info.html</anchorfile>
+      <anchor>a9d4e6f8c3a1c21caa281d6796335ffab</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>DecorateMessage</name>
@@ -29735,6 +29778,13 @@
       <name>m_currentParent</name>
       <anchorfile>classiser_1_1_c_compact_xml_read_archive_base.html</anchorfile>
       <anchor>aa600716dc35c6f37e0768e130c0aa0a7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QString</type>
+      <name>m_filePath</name>
+      <anchorfile>classifile_1_1_c_file_archive_info.html</anchorfile>
+      <anchor>a1952595055f067cc54bd0dc6016ed2f9</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected" static="yes">
@@ -29967,20 +30017,6 @@
       <anchor>a93047c87be276b9f5827c9d64d31cd1a</anchor>
       <arglist>(void *dataPtr, int bitsCount, int bytesCount)</arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>CFileArchiveInfo</name>
-      <anchorfile>classifile_1_1_c_file_archive_info.html</anchorfile>
-      <anchor>aff4f16a0effe663fb3308e039f959d1b</anchor>
-      <arglist>(const QString &amp;filePath)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const QString &amp;</type>
-      <name>GetCurrentFilePath</name>
-      <anchorfile>classifile_1_1_c_file_archive_info.html</anchorfile>
-      <anchor>a9d4e6f8c3a1c21caa281d6796335ffab</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>WriteTextNode</name>
@@ -30042,13 +30078,6 @@
       <name>m_currentParent</name>
       <anchorfile>classiser_1_1_c_compact_xml_write_archive_base.html</anchorfile>
       <anchor>a58ec9b2c1c77eacc178d30d402c54619</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QString</type>
-      <name>m_filePath</name>
-      <anchorfile>classifile_1_1_c_file_archive_info.html</anchorfile>
-      <anchor>a1952595055f067cc54bd0dc6016ed2f9</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -31343,6 +31372,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetBasePath</name>
+      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
+      <anchor>a32cb34de774c9e6b10aba5d74104eca8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
       <name>GetPath</name>
       <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
@@ -31465,6 +31501,7 @@
   <compound kind="class">
     <name>ifile::CRelativeFileNameParamComp</name>
     <filename>classifile_1_1_c_relative_file_name_param_comp.html</filename>
+    <base virtualness="virtual">ifile::IRelativeFilePath</base>
     <base>ifile::CFileNameParamComp</base>
     <base protection="protected">imod::CMultiModelBridgeBase</base>
     <member kind="function" virtualness="virtual">
@@ -32111,6 +32148,18 @@
     <base virtualness="virtual">istd::IPolymorphic</base>
   </compound>
   <compound kind="class">
+    <name>ifile::IRelativeFilePath</name>
+    <filename>classifile_1_1_i_relative_file_path.html</filename>
+    <base virtualness="virtual">ifile::IFileNameParam</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetBasePath</name>
+      <anchorfile>classifile_1_1_i_relative_file_path.html</anchorfile>
+      <anchor>a87137986acb8bd7fe0254b4b5e7438eb</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>ifile::TFileSerializerComp</name>
     <filename>classifile_1_1_t_file_serializer_comp.html</filename>
     <templarg></templarg>
@@ -32322,6 +32371,7 @@
     <class kind="class">ifilegui::CFilePreviewGuiComp</class>
     <class kind="class">ifilegui::CFileSystemExplorerGuiComp</class>
     <class kind="class">ifilegui::CFileTreeViewGuiComp</class>
+    <class kind="class">ifilegui::CSimpleFilePathParamGuiComp</class>
   </compound>
   <compound kind="class">
     <name>ifilegui::CExternalOpenDocumentCommandCompBase</name>
@@ -32983,6 +33033,67 @@
       <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
       <anchor>ab336987dc363f285a687e73e2dc018e4</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifilegui::CSimpleFilePathParamGuiComp</name>
+    <filename>classifilegui_1_1_c_simple_file_path_param_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CSimpleFilePathParamGuiComp, ifile::IFileNameParam &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CSimpleFilePathParamGuiComp, ifile::IFileNameParam &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classifilegui_1_1_c_simple_file_path_param_gui_comp.html</anchorfile>
+      <anchor>a52648a5bc301ebd836ad8c1c150d3c2b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classifilegui_1_1_c_simple_file_path_param_gui_comp.html</anchorfile>
+      <anchor>a790670f532e2fbe9eeb07f47754e89d6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classifilegui_1_1_c_simple_file_path_param_gui_comp.html</anchorfile>
+      <anchor>a3463bc355e6326622671abdb1bfaf641</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classifilegui_1_1_c_simple_file_path_param_gui_comp.html</anchorfile>
+      <anchor>a93d8c536f7ea81ac961034f89e041c57</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classifilegui_1_1_c_simple_file_path_param_gui_comp.html</anchorfile>
+      <anchor>a10271c0c14f515111adcf17e324b3054</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classifilegui_1_1_c_simple_file_path_param_gui_comp.html</anchorfile>
+      <anchor>aacc0e89737bbcea7ea0be9074d985ac3</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_BrowseButton_clicked</name>
+      <anchorfile>classifilegui_1_1_c_simple_file_path_param_gui_comp.html</anchorfile>
+      <anchor>a3d408403ce0ec7cf6732362fced801a9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_PathEdit_textChanged</name>
+      <anchorfile>classifilegui_1_1_c_simple_file_path_param_gui_comp.html</anchorfile>
+      <anchor>a9c8fbf9e5eedcf59a562d8a9ae92f037</anchor>
+      <arglist>(const QString &amp;text)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -36498,6 +36609,34 @@
     </member>
     <member kind="enumeration" protection="protected">
       <type></type>
+      <name>ActionType</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>ad8cb562c53030a1e293086a59bfc9e30</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
+      <name>AT_CLEAR</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>ad8cb562c53030a1e293086a59bfc9e30ac11a29f82202bde5bf95084b55055cec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
+      <name>AT_EXPORT</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>ad8cb562c53030a1e293086a59bfc9e30a9b121d5eaa736547af991cb836ed5f85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
+      <name>AT_DIAGNOSTICS</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>ad8cb562c53030a1e293086a59bfc9e30a7518889b1b3b9c81b1338776f2e8899f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration" protection="protected">
+      <type></type>
       <name>DataRole</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
       <anchor>a61b2ece386ba62e2ede244b6d3b1240f</anchor>
@@ -36559,18 +36698,25 @@
       <anchor>a586b53d81e956577e4b9336655a9f9ba</anchor>
       <arglist>(const istd::IInformationProvider &amp;message)</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>QIcon</type>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QIcon</type>
       <name>GetCategoryIcon</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a6343064aaeb5357455d574f1fb722bae</anchor>
+      <anchor>a6bfede7e29c296952cbe1e31e399ed8e</anchor>
       <arglist>(int category) const </arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>QString</type>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QIcon</type>
+      <name>GetActionIcon</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a9dc2c58ba2497c8ac3f941b3c2cc0c06</anchor>
+      <arglist>(int functionType) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
       <name>GetCategoryText</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a50dd272161bbaac908c7678c49c4638e</anchor>
+      <anchor>a9a90a5dd91fa1d0cf65a23396aff05db</anchor>
       <arglist>(int category) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -73129,6 +73275,7 @@
     <file>IFileResourceTypeConstraints.h</file>
     <file>IFileSystemInfoProvider.h</file>
     <file>IFileTypeInfo.h</file>
+    <file>IRelativeFilePath.h</file>
     <file>TFileSerializerComp.h</file>
     <file>TXmlFileSerializerComp.h</file>
   </compound>
@@ -73143,6 +73290,7 @@
     <file>CFilePreviewGuiComp.h</file>
     <file>CFileSystemExplorerGuiComp.h</file>
     <file>CFileTreeViewGuiComp.h</file>
+    <file>CSimpleFilePathParamGuiComp.h</file>
     <file>ifilegui.h</file>
   </compound>
   <compound kind="dir">

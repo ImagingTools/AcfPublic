@@ -89,6 +89,13 @@ protected:
 		MM_ALL = istd::IInformationProvider::IC_CRITICAL
 	};
 
+	enum ActionType
+	{
+		AT_CLEAR,
+		AT_EXPORT,
+		AT_DIAGNOSTICS
+	};
+
 	enum DataRole
 	{
 		DR_CATEGORY = Qt::UserRole
@@ -102,11 +109,17 @@ protected:
 	/**
 		Get icons corresponding to specified information category.
 	*/
-	QIcon GetCategoryIcon(int category) const;
+	virtual QIcon GetCategoryIcon(int category) const;
+
+	/**
+		Get icons corresponding to specified log action.
+	*/
+	virtual QIcon GetActionIcon(int functionType) const;
+
 	/**
 		Get text corresponding to specified information category.
 	*/
-	QString GetCategoryText(int category) const;
+	virtual QString GetCategoryText(int category) const;
 
 	// reimplemented (ilog::IMessageConsumer)
 	virtual bool IsMessageSupported(
