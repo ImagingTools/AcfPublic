@@ -158,9 +158,6 @@ protected:
 	int m_workStatus;
 	istd::TDelPtr<istd::CChangeNotifier> m_productChangeNotifierPtr;
 
-	// statics
-	static const ChangeSet s_supplierResultsSet;
-
 private:
 	class InputsObserver: public imod::CMultiModelObserverBase
 	{
