@@ -284,6 +284,9 @@ void CExtComposedParamsSetGuiComp::OnGuiModelAttached()
 						m_connectedEditorsMap[editorPtr] = false;
 					}
 				}
+				else{
+					qDebug(qPrintable(QString("Parameter with ID '%1' could not be connected to the editor").arg(paramId.constData())));
+				}
 			}
 		}
 
