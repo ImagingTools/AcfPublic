@@ -755,10 +755,12 @@
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_c_console_application_comp_8h</filename>
     <includes id="_t_opt_del_ptr_8h" name="TOptDelPtr.h" local="no" imported="no">istd/TOptDelPtr.h</includes>
+    <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="no" imported="no">imod/TModelWrap.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="no" imported="no">ilog/TLoggerCompWrap.h</includes>
     <includes id="_c_console_reader_8h" name="CConsoleReader.h" local="no" imported="no">iqt/CConsoleReader.h</includes>
     <includes id="_i_application_8h" name="IApplication.h" local="no" imported="no">ibase/IApplication.h</includes>
     <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="no" imported="no">ibase/IApplicationInfo.h</includes>
+    <includes id="_i_runtime_status_provider_8h" name="IRuntimeStatusProvider.h" local="no" imported="no">ibase/IRuntimeStatusProvider.h</includes>
     <class kind="class">ibase::CConsoleApplicationComp</class>
     <namespace>ibase</namespace>
   </compound>
