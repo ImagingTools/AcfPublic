@@ -37,7 +37,8 @@ namespace ilog
 CTextFileLogComp:: CTextFileLogComp()
 :	m_outputFile(),
 	m_outputFileStream(&m_outputFile),
-	m_filePathObserver(*this)
+	m_filePathObserver(*this),
+	m_mutex(QMutex::Recursive)
 {
 }
 
@@ -48,6 +49,8 @@ CTextFileLogComp:: CTextFileLogComp()
 
 void CTextFileLogComp::WriteText(const QString& text, istd::IInformationProvider::InformationCategory /*category*/)
 {
+	QMutexLocker lock(&m_mutex);
+
 	if (m_outputFile.isOpen()){
 		m_outputFileStream << text;
 		m_outputFileStream.flush();
@@ -61,7 +64,7 @@ void CTextFileLogComp::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
-	if (m_fileNameModelCompPtr.IsValid()){
+	if (m_fileNameCompPtr.IsValid() && m_fileNameModelCompPtr.IsValid()){
 		m_fileNameModelCompPtr->AttachObserver(&m_filePathObserver);
 	}
 	
@@ -75,7 +78,7 @@ void CTextFileLogComp::OnComponentDestroyed()
 		m_fileNameModelCompPtr->DetachObserver(&m_filePathObserver);
 	}
 
-	m_outputFile.close();
+	CloseFileStream();
 
 	BaseClass::OnComponentDestroyed();
 }
@@ -83,6 +86,8 @@ void CTextFileLogComp::OnComponentDestroyed()
 
 void CTextFileLogComp::OpenFileStream()
 {
+	QMutexLocker lock(&m_mutex);
+
 	if (m_outputFile.isOpen()){
 		m_outputFile.flush();
 
@@ -103,6 +108,14 @@ void CTextFileLogComp::OpenFileStream()
 		m_outputFile.setFileName(m_fileNameCompPtr->GetPath());
 		m_outputFile.open(openMode);
 	}
+}
+
+
+void CTextFileLogComp::CloseFileStream()
+{
+	QMutexLocker lock(&m_mutex);
+
+	m_outputFile.close();
 }
 
 

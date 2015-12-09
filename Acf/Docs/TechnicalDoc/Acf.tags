@@ -1952,11 +1952,13 @@
     <path>C:/Temp/Acf/Include/idoc/</path>
     <filename>_c_serialized_undo_manager_comp_8h</filename>
     <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
+    <includes id="_t_model_observer_comp_wrap_8h" name="TModelObserverCompWrap.h" local="yes" imported="no">ibase/TModelObserverCompWrap.h</includes>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <includes id="_c_memory_write_archive_8h" name="CMemoryWriteArchive.h" local="yes" imported="no">iser/CMemoryWriteArchive.h</includes>
     <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="yes" imported="no">imod/TSingleModelObserverBase.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_undo_manager_8h" name="IUndoManager.h" local="yes" imported="no">idoc/IUndoManager.h</includes>
+    <class kind="class">idoc::CSerializedUndoManagerCompBase</class>
     <class kind="class">idoc::CSerializedUndoManagerComp</class>
     <class kind="struct">idoc::CSerializedUndoManagerComp::UndoStepInfo</class>
     <namespace>idoc</namespace>
@@ -26517,6 +26519,7 @@
     <class kind="class">idoc::CMultiDocumentManagerBase</class>
     <class kind="class">idoc::CMultiPageDocumentFilePersistenceComp</class>
     <class kind="class">idoc::CSelectedDocModelBinderComp</class>
+    <class kind="class">idoc::CSerializedUndoManagerCompBase</class>
     <class kind="class">idoc::CSerializedUndoManagerComp</class>
     <class kind="class">idoc::CSingleDocumentManagerBase</class>
     <class kind="class">idoc::CSingleDocumentTemplateBase</class>
@@ -27659,24 +27662,15 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>idoc::CSerializedUndoManagerComp</name>
-    <filename>classidoc_1_1_c_serialized_undo_manager_comp.html</filename>
+    <name>idoc::CSerializedUndoManagerCompBase</name>
+    <filename>classidoc_1_1_c_serialized_undo_manager_comp_base.html</filename>
     <base>icomp::CComponentBase</base>
     <base>TSingleModelObserverBase&lt; iser::ISerializable &gt;</base>
-    <base virtualness="virtual">idoc::IUndoManager</base>
-    <class kind="struct">idoc::CSerializedUndoManagerComp::UndoStepInfo</class>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
-      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
-      <anchor>a6636f3b6fd8c293a7d6097dd9bdab83b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>imod::TSingleModelObserverBase&lt; iser::ISerializable &gt;</type>
-      <name>BaseClass2</name>
-      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
-      <anchor>a2694d296840a09d5d4df838fb8918a3c</anchor>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp_base.html</anchorfile>
+      <anchor>a155c2b66e04c405c505c1f75933749af</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -27691,6 +27685,83 @@
       <name>ModelType</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSingleModelObserverBase</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>iser::ISerializable *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>iser::ISerializable *</type>
+      <name>GetObjectPtr</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>AttachOrSetObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
+      <arglist>(iser::ISerializable *objectPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnModelAttached</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a4b565abfc347af34875a8d12063acd71</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnModelDetached</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>afd910059cfc9f6cc7f92d524f1252667</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual iser::ISerializable *</type>
+      <name>CastFromModel</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
+      <arglist>(imod::IModel *modelPtr) const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>idoc::CSerializedUndoManagerComp</name>
+    <filename>classidoc_1_1_c_serialized_undo_manager_comp.html</filename>
+    <base>TModelObserverCompWrap&lt; CSerializedUndoManagerCompBase &gt;</base>
+    <base virtualness="virtual">idoc::IUndoManager</base>
+    <class kind="struct">idoc::CSerializedUndoManagerComp::UndoStepInfo</class>
+    <member kind="typedef">
+      <type>ibase::TModelObserverCompWrap&lt; CSerializedUndoManagerCompBase &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
+      <anchor>afa2a6c733bee4d072256bace3cf95c23</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::TSingleModelObserverBase&lt; iser::ISerializable &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
+      <anchor>a2694d296840a09d5d4df838fb8918a3c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSerializedUndoManagerCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
+      <anchor>afa3fcab514bf33fbdb6ec2f83eb8f075</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -27791,34 +27862,6 @@
       <anchor>a73c576ae7e2b56e9357d9e32aa7934b0</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>TSingleModelObserverBase</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>iser::ISerializable *</type>
-      <name>GetObservedObject</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>iser::ISerializable *</type>
-      <name>GetObjectPtr</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>AttachOrSetObject</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
-      <arglist>(iser::ISerializable *objectPtr)</arglist>
-    </member>
     <member kind="typedef" protection="protected">
       <type>istd::TDelPtr&lt; iser::CMemoryWriteArchive &gt;</type>
       <name>UndoArchivePtr</name>
@@ -27888,6 +27931,20 @@
       <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
       <anchor>a98afd4d8d1bff706bc64b55e90467e60</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
+      <anchor>ac046dfe3995e995397f20a1ebf031436</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
+      <anchor>aacf9336769a621402f913fad75bb5cf5</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="struct">
