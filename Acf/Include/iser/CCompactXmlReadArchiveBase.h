@@ -47,7 +47,9 @@ namespace iser
 class CCompactXmlReadArchiveBase: public iser::CTextReadArchiveBase, public iser::CXmlDocumentInfoBase
 {
 public:
-	CCompactXmlReadArchiveBase(const iser::CArchiveTag& rootTag = s_acfRootTag);
+	CCompactXmlReadArchiveBase(
+				bool serializeHeader = true,
+				const iser::CArchiveTag& rootTag = s_acfRootTag);
 
 	// reimplemented (iser::IArchive)
 	virtual bool IsTagSkippingSupported() const;
@@ -59,6 +61,8 @@ public:
 
 protected:
 	bool ReadStringNode(QString& text);
+
+	bool SetContent(QIODevice* devicePtr);
 
 	// reimplemented (iser::CTextReadArchiveBase)
 	virtual bool ReadTextNode(QByteArray& text);
@@ -77,7 +81,11 @@ protected:
 private:
 	QByteArray m_currentAttribute;
 
+	bool m_serializeHeader;
 	iser::CArchiveTag m_rootTag;
+
+	bool m_isNewFormat;			// idicate that new format is enabled
+	bool m_allowAttribute;		// indicate if attribute outputting is allowed now
 
 	typedef QList<const iser::CArchiveTag*> TagsList;
 	TagsList m_tagsStack;

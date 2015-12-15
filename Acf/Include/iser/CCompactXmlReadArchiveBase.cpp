@@ -35,8 +35,13 @@ namespace iser
 {
 
 
-CCompactXmlReadArchiveBase::CCompactXmlReadArchiveBase(const iser::CArchiveTag& rootTag)
-:	m_rootTag(rootTag)
+CCompactXmlReadArchiveBase::CCompactXmlReadArchiveBase(
+			bool serializeHeader,
+			const iser::CArchiveTag& rootTag)
+:	m_serializeHeader(serializeHeader),
+	m_rootTag(rootTag),
+	m_isNewFormat(true),
+	m_allowAttribute(false)
 {
 }
 
@@ -59,7 +64,7 @@ bool CCompactXmlReadArchiveBase::BeginTag(const iser::CArchiveTag& tag)
 
 	if (m_tagsStack.isEmpty() || (m_tagsStack.back() == NULL) || (m_tagsStack.back()->GetTagType() != iser::CArchiveTag::TT_MULTIPLE)){
 		int tagType = tag.GetTagType();
-		if (tagType == iser::CArchiveTag::TT_LEAF){
+		if (m_allowAttribute && (tagType == iser::CArchiveTag::TT_LEAF)){
 			m_currentAttribute = tag.GetId();
 
 			m_tagsStack.push_back(NULL);
@@ -92,6 +97,8 @@ bool CCompactXmlReadArchiveBase::BeginTag(const iser::CArchiveTag& tag)
 
 	m_tagsStack.push_back(&tag);
 
+	m_allowAttribute = true;
+
 	return true;
 }
 
@@ -118,14 +125,16 @@ bool CCompactXmlReadArchiveBase::BeginMultiTag(const iser::CArchiveTag& tag, con
 	}
 
 	int tempCount = 0;
-	QDomElement child = element.firstChildElement(QString(subTag.GetId()));
-	while (!child.isNull()){
+	for (		QDomElement child = element.firstChildElement(QString(subTag.GetId()));
+				!child.isNull();
+				child = child.nextSiblingElement(QString(subTag.GetId()))){
 		tempCount++;
-		child = child.nextSiblingElement(QString(subTag.GetId()));
 	}
 	count = tempCount;
 
 	m_tagsStack.push_back(&tag);
+
+	m_allowAttribute = true;
 
 	return !element.isNull();
 }
@@ -152,6 +161,10 @@ bool CCompactXmlReadArchiveBase::EndTag(const iser::CArchiveTag& /*tag*/)
 
 	m_currentParent = parent.toElement();
 
+	if (m_isNewFormat){
+		m_allowAttribute = false;
+	}
+
 	return !m_currentParent.isNull();
 }
 
@@ -167,9 +180,9 @@ bool CCompactXmlReadArchiveBase::Process(QString& value)
 bool CCompactXmlReadArchiveBase::ReadStringNode(QString& text)
 {
 	if (m_currentAttribute.isEmpty()){
+		// check if the node is separator
 		QDomNode node = m_currentParent.firstChild();
-		//Kill separator tags (<br/>)
-		while (node.nodeName() == "br"){
+		while (!node.isNull() && ((node.nodeName() == GetElementSeparator()) || (node.nodeType() != QDomNode::TextNode))){
 			QDomNode brNode = node;
 			node = node.nextSibling();
 			m_currentParent.removeChild(brNode);
@@ -198,6 +211,29 @@ bool CCompactXmlReadArchiveBase::ReadStringNode(QString& text)
 	}
 
 	return !m_currentParent.isNull();
+}
+
+
+bool CCompactXmlReadArchiveBase::SetContent(QIODevice* devicePtr)
+{
+	bool retVal = false;
+
+	if (m_document.setContent(devicePtr)){
+		m_currentParent = m_document.documentElement();
+
+		retVal = !m_currentParent.isNull();
+
+		if (m_serializeHeader){
+			retVal = retVal && SerializeAcfHeader();
+		}
+
+		quint32 frameworkVersion = quint32(-1);
+		GetVersionInfo().GetVersionNumber(iser::IVersionInfo::AcfVersionId, frameworkVersion);
+
+		m_isNewFormat = (frameworkVersion >= 4051);
+	}
+
+	return retVal;
 }
 
 

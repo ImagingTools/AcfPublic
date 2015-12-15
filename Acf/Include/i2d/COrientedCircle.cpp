@@ -35,6 +35,10 @@ namespace i2d
 {
 
 
+// static constants
+static const iser::CArchiveTag s_orientatedOutsideTag("IsOrientedOutside", "Flag if this circle is oriented inside or outside", iser::CArchiveTag::TT_LEAF);
+
+
 COrientedCircle::COrientedCircle()
 :	m_orientedOutside(false)
 {
@@ -124,16 +128,14 @@ istd::IChangeable* COrientedCircle::CloneMe(CompatibilityMode mode) const
 
 bool COrientedCircle::Serialize(iser::IArchive& archive)
 {
-	static iser::CArchiveTag orientatedOutsideTag("IsOrientedOutside", "Flag if this circle is oriented inside or outside", iser::CArchiveTag::TT_LEAF);
-
 	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this, &GetAllChanges());
 	Q_UNUSED(notifier);
 
 	bool retVal = BaseClass::Serialize(archive);
 
-	retVal = retVal && archive.BeginTag(orientatedOutsideTag);
+	retVal = retVal && archive.BeginTag(s_orientatedOutsideTag);
 	retVal = retVal && archive.Process(m_orientedOutside);
-	retVal = retVal && archive.EndTag(orientatedOutsideTag);
+	retVal = retVal && archive.EndTag(s_orientatedOutsideTag);
 
 	return retVal;
 }

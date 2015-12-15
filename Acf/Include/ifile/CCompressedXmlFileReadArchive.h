@@ -25,6 +25,7 @@
 
 
 // Qt includes
+#include <QtCore/QBuffer>
 #include <QtXml/QDomDocument>
 #include <QtXml/QDomNode>
 
@@ -66,8 +67,8 @@ protected:
 				QString& messageSource) const;
 
 private:
-	bool m_serializeHeader;
 	QString m_openFileName;
+	QBuffer m_buffer;
 };
 
 

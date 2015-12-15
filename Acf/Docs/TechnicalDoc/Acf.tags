@@ -29542,8 +29542,8 @@
       <type></type>
       <name>CCompactXmlReadArchiveBase</name>
       <anchorfile>classiser_1_1_c_compact_xml_read_archive_base.html</anchorfile>
-      <anchor>a6d1d2b6f2db0bd51b0122d5c67ab5cf2</anchor>
-      <arglist>(const iser::CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
+      <anchor>a39804d5e98eea0b03b373d220fee6006</anchor>
+      <arglist>(bool serializeHeader=true, const iser::CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -29748,6 +29748,13 @@
       <anchor>ae2b6ac7b59f2304dd5b406eebe671a88</anchor>
       <arglist>(QString &amp;text)</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SetContent</name>
+      <anchorfile>classiser_1_1_c_compact_xml_read_archive_base.html</anchorfile>
+      <anchor>a5b80cd84f41c1cd67190977fe5154135</anchor>
+      <arglist>(QIODevice *devicePtr)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>ReadTextNode</name>
@@ -29916,11 +29923,11 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual QByteArray</type>
-      <name>GetString</name>
+      <type>virtual</type>
+      <name>~CCompactXmlWriteArchiveBase</name>
       <anchorfile>classiser_1_1_c_compact_xml_write_archive_base.html</anchorfile>
-      <anchor>a77e8520f26bc169445c1886df23148a0</anchor>
-      <arglist>() const </arglist>
+      <anchor>a8673c7605c13fe90baca5d4391127fa9</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -30092,6 +30099,20 @@
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
+      <name>InitArchive</name>
+      <anchorfile>classiser_1_1_c_compact_xml_write_archive_base.html</anchorfile>
+      <anchor>a4206e621c85c0b962b9bd16c7b2f9312</anchor>
+      <arglist>(QIODevice *devicePtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>Flush</name>
+      <anchorfile>classiser_1_1_c_compact_xml_write_archive_base.html</anchorfile>
+      <anchor>aa00026ff23ccea7f7666be86cb633954</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
       <name>WriteStringNode</name>
       <anchorfile>classiser_1_1_c_compact_xml_write_archive_base.html</anchorfile>
       <anchor>a6ca4f78503af0d84f5cbbf1bbeea558e</anchor>
@@ -30126,17 +30147,10 @@
       <arglist>(IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>QDomDocument</type>
-      <name>m_document</name>
+      <type>QXmlStreamWriter</type>
+      <name>m_xmlWriter</name>
       <anchorfile>classiser_1_1_c_compact_xml_write_archive_base.html</anchorfile>
-      <anchor>a26edfbb370ff90f717fd28cfef345cc4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QDomElement</type>
-      <name>m_currentParent</name>
-      <anchorfile>classiser_1_1_c_compact_xml_write_archive_base.html</anchorfile>
-      <anchor>a58ec9b2c1c77eacc178d30d402c54619</anchor>
+      <anchor>af4f0ea3301b53310eb42577417a7f6bc</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -57927,11 +57941,11 @@
       <anchor>a93aca86570b081067d0e5b29a3d5644a</anchor>
       <arglist>(const iser::IVersionInfo *versionInfoPtr=NULL, bool serializeHeader=true, const iser::CArchiveTag &amp;rootTag=s_acfRootTag)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QByteArray</type>
+    <member kind="function">
+      <type>const QByteArray &amp;</type>
       <name>GetString</name>
       <anchorfile>classiser_1_1_c_compact_xml_mem_write_archive.html</anchorfile>
-      <anchor>a9250a10856bc4cc48088837ca2e20517</anchor>
+      <anchor>a4c5d8eb0f1c662bff8f43681b0d37a32</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>

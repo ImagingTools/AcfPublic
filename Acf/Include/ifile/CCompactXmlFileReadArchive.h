@@ -70,7 +70,6 @@ protected:
 				QString& messageSource) const;
 
 private:
-	bool m_serializeHeader;
 	QString m_openFileName;
 };
 
