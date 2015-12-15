@@ -452,7 +452,7 @@ bool CRegistry::Serialize(iser::IArchive& archive)
 
 	bool retVal = true;
 
-	if (frameworkVersion >= 4051){
+	if (frameworkVersion >= 4052){
 		retVal = retVal && archive.BeginTag(s_descriptionTag);
 		retVal = retVal && archive.Process(m_description);
 		retVal = retVal && archive.EndTag(s_descriptionTag);
@@ -467,7 +467,7 @@ bool CRegistry::Serialize(iser::IArchive& archive)
 	retVal = retVal && SerializeExportedInterfaces(archive);
 	retVal = retVal && SerializeExportedComponents(archive);
 
-	if (frameworkVersion < 4051){
+	if (frameworkVersion < 4052){
 		retVal = retVal && archive.BeginTag(s_descriptionTag);
 		retVal = retVal && archive.Process(m_description);
 		retVal = retVal && archive.EndTag(s_descriptionTag);

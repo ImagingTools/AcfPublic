@@ -223,6 +223,8 @@ bool CCompactXmlReadArchiveBase::SetContent(QIODevice* devicePtr)
 
 		retVal = !m_currentParent.isNull();
 
+		m_allowAttribute = true;
+
 		if (m_serializeHeader){
 			retVal = retVal && SerializeAcfHeader();
 		}
@@ -230,7 +232,7 @@ bool CCompactXmlReadArchiveBase::SetContent(QIODevice* devicePtr)
 		quint32 frameworkVersion = quint32(-1);
 		GetVersionInfo().GetVersionNumber(iser::IVersionInfo::AcfVersionId, frameworkVersion);
 
-		m_isNewFormat = (frameworkVersion >= 4051);
+		m_isNewFormat = (frameworkVersion >= 4052);
 	}
 
 	return retVal;
