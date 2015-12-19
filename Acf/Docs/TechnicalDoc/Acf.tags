@@ -59880,8 +59880,8 @@
       <type>bool</type>
       <name>ContainsExplicit</name>
       <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
-      <anchor>ae8266ff53930f6b486486c2bfb8350f3</anchor>
-      <arglist>(int changeId) const </arglist>
+      <anchor>ab7a0b3219bb7b1354675158e7240b531</anchor>
+      <arglist>(int changeId, bool singleOnly=false) const </arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -59902,6 +59902,13 @@
       <name>GetDescription</name>
       <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
       <anchor>a785168e2a23845cbdf53df298e28f329</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>QSet&lt; int &gt;</type>
+      <name>GetIds</name>
+      <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
+      <anchor>aec4de453b38708e179081005ff897961</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
