@@ -304,35 +304,11 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath="..\CDirectoryItemGuiComp.cpp"
-				>
-			</File>
-			<File
 				RelativePath="..\CDirectoryMonitorComp.cpp"
 				>
 			</File>
 			<File
 				RelativePath="..\CDirectoryMonitorParamsGui.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\CHotfolderContainerGuiComp.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\CHotfolderGuiComp.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\CHotfolderProcessingComp.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\CHotfolderTaskManagerComp.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\CProcessingItemPreviewGuiComp.cpp"
 				>
 			</File>
 		</Filter>
@@ -342,39 +318,11 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath="..\CDirectoryItemGuiComp.h"
-				>
-			</File>
-			<File
 				RelativePath="..\CDirectoryMonitorComp.h"
 				>
 			</File>
 			<File
 				RelativePath="..\CDirectoryMonitorParamsGui.h"
-				>
-			</File>
-			<File
-				RelativePath="..\CHotfolderContainerGuiComp.h"
-				>
-			</File>
-			<File
-				RelativePath="..\CHotfolderGuiComp.h"
-				>
-			</File>
-			<File
-				RelativePath="..\CHotfolderProcessingComp.h"
-				>
-			</File>
-			<File
-				RelativePath="..\CHotfolderTaskManagerComp.h"
-				>
-			</File>
-			<File
-				RelativePath="..\CProcessingItemInfoGuiComp.h"
-				>
-			</File>
-			<File
-				RelativePath="..\CProcessingItemPreviewGuiComp.h"
 				>
 			</File>
 			<File
@@ -398,23 +346,7 @@
 			Filter="ui"
 			>
 			<File
-				RelativePath="..\CDirectoryItemGuiComp.ui"
-				>
-			</File>
-			<File
 				RelativePath="..\CDirectoryMonitorParamsGui.ui"
-				>
-			</File>
-			<File
-				RelativePath="..\CHotfolderContainerGuiComp.ui"
-				>
-			</File>
-			<File
-				RelativePath="..\CHotfolderGuiComp.ui"
-				>
-			</File>
-			<File
-				RelativePath="..\CProcessingItemPreviewGuiComp.ui"
 				>
 			</File>
 		</Filter>
@@ -424,10 +356,6 @@
 			UniqueIdentifier="{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}"
 			>
 			<File
-				RelativePath="../../../AuxInclude/Qt5/GeneratedFiles\ihotfgui\moc_CDirectoryItemGuiComp.cpp"
-				>
-			</File>
-			<File
 				RelativePath="../../../AuxInclude/Qt5/GeneratedFiles\ihotfgui\moc_CDirectoryMonitorComp.cpp"
 				>
 			</File>
@@ -436,43 +364,11 @@
 				>
 			</File>
 			<File
-				RelativePath="../../../AuxInclude/Qt5/GeneratedFiles\ihotfgui\moc_CHotfolderContainerGuiComp.cpp"
-				>
-			</File>
-			<File
-				RelativePath="../../../AuxInclude/Qt5/GeneratedFiles\ihotfgui\moc_CHotfolderGuiComp.cpp"
-				>
-			</File>
-			<File
-				RelativePath="../../../AuxInclude/Qt5/GeneratedFiles\ihotfgui\moc_CHotfolderProcessingComp.cpp"
-				>
-			</File>
-			<File
-				RelativePath="../../../AuxInclude/Qt5/GeneratedFiles\ihotfgui\moc_CProcessingItemPreviewGuiComp.cpp"
-				>
-			</File>
-			<File
 				RelativePath="../../../AuxInclude/Qt5/GeneratedFiles\ihotfgui\qrc_ihotfgui.cpp"
 				>
 			</File>
 			<File
-				RelativePath="../../../AuxInclude/Qt5/GeneratedFiles\ihotfgui\ui_CDirectoryItemGuiComp.h"
-				>
-			</File>
-			<File
 				RelativePath="../../../AuxInclude/Qt5/GeneratedFiles\ihotfgui\ui_CDirectoryMonitorParamsGui.h"
-				>
-			</File>
-			<File
-				RelativePath="../../../AuxInclude/Qt5/GeneratedFiles\ihotfgui\ui_CHotfolderContainerGuiComp.h"
-				>
-			</File>
-			<File
-				RelativePath="../../../AuxInclude/Qt5/GeneratedFiles\ihotfgui\ui_CHotfolderGuiComp.h"
-				>
-			</File>
-			<File
-				RelativePath="../../../AuxInclude/Qt5/GeneratedFiles\ihotfgui\ui_CProcessingItemPreviewGuiComp.h"
 				>
 			</File>
 		</Filter>
@@ -480,31 +376,11 @@
 			Name="Moc Files"
 			>
 			<File
-				RelativePath="..\CDirectoryItemGuiComp.moc"
-				>
-			</File>
-			<File
 				RelativePath="..\CDirectoryMonitorComp.moc"
 				>
 			</File>
 			<File
 				RelativePath="..\CDirectoryMonitorParamsGui.moc"
-				>
-			</File>
-			<File
-				RelativePath="..\CHotfolderContainerGuiComp.moc"
-				>
-			</File>
-			<File
-				RelativePath="..\CHotfolderGuiComp.moc"
-				>
-			</File>
-			<File
-				RelativePath="..\CHotfolderProcessingComp.moc"
-				>
-			</File>
-			<File
-				RelativePath="..\CProcessingItemPreviewGuiComp.moc"
 				>
 			</File>
 		</Filter>

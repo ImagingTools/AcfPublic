@@ -119,9 +119,6 @@
     <ClCompile Include="..\CDirectoryMonitorParams.cpp" />
     <ClCompile Include="..\CDirectoryMonitorParamsComp.cpp" />
     <ClCompile Include="..\CFileSystemChangeStorage.cpp" />
-    <ClCompile Include="..\CHotfolderProcessingInfo.cpp" />
-    <ClCompile Include="..\CHotfolderProcessingItem.cpp" />
-    <ClCompile Include="..\CHotfolderStatistics.cpp" />
     <ClCompile Include="..\CMonitoringSession.cpp" />
     <ClCompile Include="..\CMonitoringSessionsManager.cpp" />
   </ItemGroup>
@@ -129,19 +126,11 @@
     <ClInclude Include="..\CDirectoryMonitorParams.h" />
     <ClInclude Include="..\CDirectoryMonitorParamsComp.h" />
     <ClInclude Include="..\CFileSystemChangeStorage.h" />
-    <ClInclude Include="..\CHotfolderProcessingInfo.h" />
-    <ClInclude Include="..\CHotfolderProcessingItem.h" />
-    <ClInclude Include="..\CHotfolderStatistics.h" />
     <ClInclude Include="..\CMonitoringSession.h" />
     <ClInclude Include="..\CMonitoringSessionsManager.h" />
     <ClInclude Include="..\IDirectoryMonitor.h" />
     <ClInclude Include="..\IDirectoryMonitorParams.h" />
     <ClInclude Include="..\IFileSystemChangeStorage.h" />
-    <ClInclude Include="..\IHotfolderInfoManager.h" />
-    <ClInclude Include="..\IHotfolderProcessingInfo.h" />
-    <ClInclude Include="..\IHotfolderProcessingItem.h" />
-    <ClInclude Include="..\IHotfolderStatistics.h" />
-    <ClInclude Include="..\IHotfolderTaskManager.h" />
     <ClInclude Include="..\IMonitoringSession.h" />
     <ClInclude Include="..\IMonitoringSessionManager.h" />
     <ClInclude Include="..\ihotf.h" />
