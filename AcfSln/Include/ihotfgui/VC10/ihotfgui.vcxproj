@@ -118,6 +118,7 @@
   <ItemGroup>
     <ClCompile Include="..\CDirectoryMonitorComp.cpp" />
     <ClCompile Include="..\CDirectoryMonitorParamsGui.cpp" />
+    <ClCompile Include="..\CFileNamingParamsGuiComp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\CDirectoryMonitorComp.h">
@@ -140,11 +141,22 @@
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CDirectoryMonitorParamsGui.h</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ihotfgui\moc_CDirectoryMonitorParamsGui.cpp;%(Outputs)</Outputs>
     </CustomBuild>
+    <CustomBuild Include="..\CFileNamingParamsGuiComp.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CFileNamingParamsGuiComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/ihotfgui/QMake -I../../../AuxInclude/Qt5_VC10 -I..\..\..\..\Acf/Include -I..\..\..\..\Acf/AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CFileNamingParamsGuiComp.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ihotfgui\moc_CFileNamingParamsGuiComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CFileNamingParamsGuiComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ihotfgui\moc_CFileNamingParamsGuiComp.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CFileNamingParamsGuiComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/ihotfgui/QMake -I../../../AuxInclude/Qt5_VC10 -I..\..\..\..\Acf/Include -I..\..\..\..\Acf/AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CFileNamingParamsGuiComp.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ihotfgui\moc_CFileNamingParamsGuiComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CFileNamingParamsGuiComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ihotfgui\moc_CFileNamingParamsGuiComp.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
     <ClInclude Include="..\ihotfgui.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ihotfgui\moc_CDirectoryMonitorComp.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ihotfgui\moc_CDirectoryMonitorParamsGui.cpp" />
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ihotfgui\moc_CFileNamingParamsGuiComp.cpp" />
     <ClCompile Include="debug\qrc_ihotfgui.cpp">
       <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
     </ClCompile>
@@ -152,6 +164,7 @@
       <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
     </ClCompile>
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ihotfgui\ui_CDirectoryMonitorParamsGui.h" />
+    <ClInclude Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ihotfgui\ui_CFileNamingParamsGuiComp.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\CDirectoryMonitorParamsGui.ui">
@@ -164,6 +177,17 @@
       <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\uic.exe ..\CDirectoryMonitorParamsGui.ui -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ihotfgui\ui_CDirectoryMonitorParamsGui.h</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ..\CDirectoryMonitorParamsGui.ui</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ihotfgui\ui_CDirectoryMonitorParamsGui.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\CFileNamingParamsGuiComp.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CFileNamingParamsGuiComp.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\uic.exe ..\CFileNamingParamsGuiComp.ui -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ihotfgui\ui_CFileNamingParamsGuiComp.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">UIC ..\CFileNamingParamsGuiComp.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ihotfgui\ui_CFileNamingParamsGuiComp.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CFileNamingParamsGuiComp.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\uic.exe ..\CFileNamingParamsGuiComp.ui -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ihotfgui\ui_CFileNamingParamsGuiComp.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ..\CFileNamingParamsGuiComp.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ihotfgui\ui_CFileNamingParamsGuiComp.h;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

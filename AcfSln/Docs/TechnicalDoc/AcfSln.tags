@@ -971,6 +971,14 @@
     <namespace>ihotfgui</namespace>
   </compound>
   <compound kind="file">
+    <name>CFileNamingParamsGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
+    <filename>_c_file_naming_params_gui_comp_8h</filename>
+    <includes id="_i_file_naming_params_8h" name="IFileNamingParams.h" local="yes" imported="no">ifileproc/IFileNamingParams.h</includes>
+    <class kind="class">ihotfgui::CFileNamingParamsGuiComp</class>
+    <namespace>ihotfgui</namespace>
+  </compound>
+  <compound kind="file">
     <name>ihotfgui.h</name>
     <path>C:/Temp/AcfSln/Include/ihotfgui/</path>
     <filename>ihotfgui_8h</filename>
@@ -13596,6 +13604,7 @@
     <filename>namespaceihotfgui.html</filename>
     <class kind="class">ihotfgui::CDirectoryMonitorComp</class>
     <class kind="class">ihotfgui::CDirectoryMonitorParamsGui</class>
+    <class kind="class">ihotfgui::CFileNamingParamsGuiComp</class>
   </compound>
   <compound kind="class">
     <name>ihotfgui::CDirectoryMonitorComp</name>
@@ -13816,6 +13825,46 @@
       <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
       <anchor>a57b4613a91b18dade3fc47d307f196cf</anchor>
       <arglist>(QTreeWidgetItem *item, int column)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ihotfgui::CFileNamingParamsGuiComp</name>
+    <filename>classihotfgui_1_1_c_file_naming_params_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CFileNamingParamsGuiComp, ifileproc::IFileNamingParams &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CFileNamingParamsGuiComp, ifileproc::IFileNamingParams &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classihotfgui_1_1_c_file_naming_params_gui_comp.html</anchorfile>
+      <anchor>abac98ae9a461ea37c03700fbed869f37</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classihotfgui_1_1_c_file_naming_params_gui_comp.html</anchorfile>
+      <anchor>acb87ef78aad519ecb4e2b3b60413c1f9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classihotfgui_1_1_c_file_naming_params_gui_comp.html</anchorfile>
+      <anchor>a446d85dddac3e7f4d6c2a8971981d0c4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classihotfgui_1_1_c_file_naming_params_gui_comp.html</anchorfile>
+      <anchor>adb83e1bc4d5bc2e25df1b6e601d98f65</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classihotfgui_1_1_c_file_naming_params_gui_comp.html</anchorfile>
+      <anchor>a8fce45a3657be75f775f5cf64e9d7ae6</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -29023,6 +29072,7 @@
     <filename>dir_a2405bc7aae86aa911e3f3eadbe3ed99.html</filename>
     <file>CDirectoryMonitorComp.h</file>
     <file>CDirectoryMonitorParamsGui.h</file>
+    <file>CFileNamingParamsGuiComp.h</file>
     <file>ihotfgui.h</file>
   </compound>
   <compound kind="dir">
