@@ -100,7 +100,6 @@ Q_SIGNALS:
 
 protected:
 	virtual void SetBackgroundBufferValid(bool state = true);
-	virtual void OnBoundingBoxChanged();
 	virtual void OnResize();
 	virtual bool CanBeMoved() const;
 
@@ -114,9 +113,7 @@ protected:
 	// reimplemented (iview::CViewBase)
 	virtual void SetMousePointer(MousePointerMode mode);
 	void UpdateRectArea(const i2d::CRect& rect);
-
-	// reimplemented (iview::CViewBase)
-	virtual i2d::CRect CalcBoundingBox() const;
+	virtual void OnBoundingBoxChanged();
 
 	// reimplemented (iview::IDisplay)
 	virtual void OnAreaInvalidated(const i2d::CRect& beforeBox, const i2d::CRect& afterBox);
@@ -126,9 +123,6 @@ protected:
 
 private:
 	QCursor m_mousePointerModes[MPM_LAST + 1];
-
-	mutable bool m_blockBBoxEvent;
-	mutable i2d::CRect m_lastBoundingBox;
 
 	imath::CFixedPointManip m_pixelPositionFormatter;
 	imath::CFixedPointManip m_logicalPositionFormatter;

@@ -11936,6 +11936,13 @@
       <anchor>a4f7e1fdf84150ad6c35fca991754d6df</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static const i2d::CRect &amp;</type>
+      <name>GetInvalid</name>
+      <anchorfile>classi2d_1_1_c_rect.html</anchorfile>
+      <anchor>a1c84d9e9034d97a920e2ef7fcdd82ece</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>i2d::CRectangle</name>
@@ -12422,6 +12429,13 @@
       <name>GetEmpty</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
       <anchor>aabba3f13b4dd0e0af35bf2ea41f52249</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const i2d::CRectangle &amp;</type>
+      <name>GetInvalid</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>aa328a38327068f3e05faafc1cf10a604</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -64958,12 +64972,26 @@
       <anchor>a1db130670f3acc8022a311b37c3708b2</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>EnsureBoundingBoxValid</name>
+      <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
+      <anchor>af8a11a08f6a9f48df387d845843335de</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual i2d::CRect</type>
       <name>CalcBoundingBox</name>
       <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
       <anchor>a5ff5fca67784243383d277eba1a424bc</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnBoundingBoxChanged</name>
+      <anchorfile>classiview_1_1_c_view_base.html</anchorfile>
+      <anchor>a7cd968ba437a710c83841d2b4a1a5b9f</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual MousePointerMode</type>
@@ -70103,13 +70131,6 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnBoundingBoxChanged</name>
-      <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
-      <anchor>ae90d6a53c030cc08208eaa2c49c4aca8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>OnResize</name>
       <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
       <anchor>af2a477c38b2b0c2e271be7ca6437fca9</anchor>
@@ -70172,11 +70193,11 @@
       <arglist>(const i2d::CRect &amp;rect)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual i2d::CRect</type>
-      <name>CalcBoundingBox</name>
+      <type>virtual void</type>
+      <name>OnBoundingBoxChanged</name>
       <anchorfile>classiview_1_1_c_viewport.html</anchorfile>
-      <anchor>a3c9a3a14226cf60734b2fd88c0d5c82d</anchor>
-      <arglist>() const </arglist>
+      <anchor>ae90d6a53c030cc08208eaa2c49c4aca8</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>

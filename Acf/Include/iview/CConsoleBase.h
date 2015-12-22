@@ -200,7 +200,7 @@ private:
 	bool m_isRulerButtonVisible;
 	bool m_isMmButtonVisible;
 
-	iview::CScreenTransform m_storedTransform;
+	iview::CScreenTransform m_storedFitTransform;
 
 	bool m_isZoomToFit;
 	bool m_isBkActive;

@@ -194,7 +194,14 @@ public:
 	bool operator!=(const CRect& rect) const;
 
 	// static methods
+	/**
+		Get empty rectangle with all values set to 0.
+	*/
 	static const i2d::CRect& GetEmpty();
+	/**
+		Get invalid rectangle.
+	*/
+	static const i2d::CRect& GetInvalid();
 
 private:
 	istd::CIntRange m_horizontalRange;
@@ -202,6 +209,7 @@ private:
 
 	// static atributes
 	static CRect s_empty;
+	static CRect s_invalid;
 };
 
 
@@ -677,6 +685,12 @@ inline bool CRect::operator!=(const CRect& rect) const
 inline const i2d::CRect& CRect::GetEmpty()
 {
 	return s_empty;
+}
+
+
+inline const i2d::CRect& CRect::GetInvalid()
+{
+	return s_invalid;
 }
 
 

@@ -311,7 +311,14 @@ public:
 	virtual bool Serialize(iser::IArchive& archive);
 
 	// static methods
+	/**
+		Get empty rectangle with all values set to 0.
+	*/
 	static const i2d::CRectangle& GetEmpty();
+	/**
+		Get invalid rectangle.
+	*/
+	static const i2d::CRectangle& GetInvalid();
 
 private:
 	istd::CRange m_horizontalRange;
@@ -319,6 +326,7 @@ private:
 
 	// static atributes
 	static CRectangle s_empty;
+	static CRectangle s_invalid;
 };
 
 
@@ -377,6 +385,12 @@ inline istd::CRange& CRectangle::GetVerticalRangeRef()
 inline const i2d::CRectangle& CRectangle::GetEmpty()
 {
 	return s_empty;
+}
+
+
+inline const i2d::CRectangle& CRectangle::GetInvalid()
+{
+	return s_invalid;
 }
 
 
