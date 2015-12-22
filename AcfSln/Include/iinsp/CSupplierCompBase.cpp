@@ -58,6 +58,8 @@ int CSupplierCompBase::GetWorkStatus() const
 void CSupplierCompBase::InvalidateSupplier()
 {
 	if (m_workStatus >= WS_OK){	
+		m_workStatus = WS_LOCKED;
+
 		m_productChangeNotifierPtr.SetPtr(new istd::CChangeNotifier(this, &s_supplierResultsSet));
 
 		m_workStatus = WS_INVALID;
@@ -68,6 +70,8 @@ void CSupplierCompBase::InvalidateSupplier()
 void CSupplierCompBase::EnsureWorkInitialized()
 {
 	if (m_workStatus < WS_INIT){
+		m_workStatus = WS_LOCKED;
+
 		m_tempMessageContainer.ClearMessages();
 		m_messageContainer.ClearMessages();
 
