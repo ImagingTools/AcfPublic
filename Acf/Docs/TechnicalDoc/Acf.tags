@@ -36822,6 +36822,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>ClearMessages</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>aecd84134788a655e305750f960428ac7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
       <anchor>a77b30b21f8b5aea82e9ddc136bbe4cc1</anchor>
