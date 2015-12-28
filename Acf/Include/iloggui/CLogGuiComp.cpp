@@ -198,6 +198,14 @@ void CLogGuiComp::AddMessage(const MessagePtr& messagePtr)
 }
 
 
+// reimplemented (ilog::IMessageContainer)
+
+void CLogGuiComp::ClearMessages()
+{
+	QTimer::singleShot(0, this, SIGNAL(OnClearAction()));
+}
+
+
 // reimplemented (CGuiComponentBase)
 
 void CLogGuiComp::OnGuiCreated()
