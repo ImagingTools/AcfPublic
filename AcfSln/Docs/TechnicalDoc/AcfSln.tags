@@ -13104,6 +13104,20 @@
       <arglist>(const QStringList &amp;acceptPatterns)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetFolderDepth</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
+      <anchor>a9567404d3aebc165526a4cf3b5e4ae48</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetFolderDepth</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
+      <anchor>ada789bc483c967c1986dd1132f7bf202</anchor>
+      <arglist>(int folderDepth)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
@@ -13499,6 +13513,20 @@
       <anchor>abb07baae6a4cc0d2c79d13ada0b6d0a3</anchor>
       <arglist>(const QStringList &amp;acceptPatterns)=0</arglist>
     </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetFolderDepth</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>a3ca3faaac94e93eda30c87a710c3deb4</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetFolderDepth</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>ae914068939a6369add48cd7cae3fda1b</anchor>
+      <arglist>(int folderDepth)=0</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>ihotf::IFileSystemChangeStorage</name>
@@ -13825,6 +13853,13 @@
       <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
       <anchor>a57b4613a91b18dade3fc47d307f196cf</anchor>
       <arglist>(QTreeWidgetItem *item, int column)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnModelUpdate</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>af93a0eae6cad3c209fd45575b8ba16e9</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

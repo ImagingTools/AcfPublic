@@ -57,6 +57,8 @@ public:
 	virtual void SetAcceptPatterns(const QStringList& acceptPatterns);
 	virtual QStringList GetIgnorePatterns() const;
 	virtual void SetIgnorePatterns(const QStringList& acceptPatterns);
+	virtual int GetFolderDepth() const;
+	virtual void SetFolderDepth(int folderDepth);
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
@@ -66,6 +68,7 @@ private:
 	int m_observedItemTypes;
 	int m_observedChanges;
 	int m_minLastModificationTimeDifference;
+	int m_folderDepth;
 
 	QStringList m_acceptPatterns;
 	QStringList m_ignorePatterns;
