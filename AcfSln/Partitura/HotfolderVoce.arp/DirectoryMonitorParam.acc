@@ -2,9 +2,9 @@
 <Acf>
     <AcfHeader>
         <VersionInfos>
-            <Version Id="0" Number="4054" Description="ACF"/>
-            <Version Id="1" Number="1505" Description="ACF-Solutions"/>
-            <Version Id="1023" Number="328706" Description="Qt Framework"/>
+            <Version Id="0" Number="4064" Description="ACF"/>
+            <Version Id="1" Number="1515" Description="ACF-Solutions"/>
+            <Version Id="1023" Number="328450" Description="Qt Framework"/>
         </VersionInfos>
     </AcfHeader>
     <Description>Parameter for directory monitoring</Description>
@@ -38,6 +38,9 @@
                 <AttributeInfoMap>
                     <AttributeInfo Id="AcceptPatterns" Type="String[]" ExportId="AcceptPatterns">
                         <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="FolderDepth" Type="Integer" ExportId="">
+                        <Data IsEnabled="true" Value="-1"/>
                     </AttributeInfo>
                     <AttributeInfo Id="IgnorePatterns" Type="String[]" ExportId="IgnorePatterns">
                         <Data IsEnabled="false"/>

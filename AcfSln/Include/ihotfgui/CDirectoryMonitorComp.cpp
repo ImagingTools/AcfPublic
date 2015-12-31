@@ -1,25 +1,3 @@
-/********************************************************************************
-**
-**	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the ACF-Solutions Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.ilena.org or write info@imagingtools.de for further
-** 	information about the ACF.
-**
-********************************************************************************/
-
-
 #include "ihotfgui/CDirectoryMonitorComp.h"
 
 
@@ -30,6 +8,7 @@
 // ACF includes
 #include "istd/CChangeNotifier.h"
 #include "istd/CGeneralTimeStamp.h"
+#include "ifile/CFileListProviderComp.h"
 
 
 namespace ihotfgui
@@ -43,6 +22,7 @@ CDirectoryMonitorComp::CDirectoryMonitorComp()
 	m_observingItemTypes(ihotf::IDirectoryMonitorParams::OI_ALL),
 	m_observingChanges(ihotf::IDirectoryMonitorParams::OC_ALL),
 	m_lastModificationMinDifference(30),
+	m_folderDepth(0),
 	m_monitoringParamsObserver(*this),
 	m_directoryParamsObserver(*this),
 	m_lockChanges(false)
@@ -134,7 +114,7 @@ void CDirectoryMonitorComp::OnComponentDestroyed()
 
 void CDirectoryMonitorComp::run()
 {
-    istd::CGeneralTimeStamp updateTimer;
+	istd::CGeneralTimeStamp updateTimer;
 
 	while (!m_finishThread){
 		bool needStateUpdate = updateTimer.GetElapsed() > m_poolingFrequency;
@@ -204,16 +184,35 @@ void CDirectoryMonitorComp::run()
 			}
 		}
 
-		if ((observingChanges & ihotf::IDirectoryMonitorParams::OC_ADD) != 0 && pendingChangesCounter > 0){
-			QStringList currentFiles = m_currentDirectory.entryList(acceptPatterns, QDir::Filters(observingItemTypes) | QDir::NoDotAndDotDot);
+		if ((observingChanges & ihotf::IDirectoryMonitorParams::OC_ADD) != 0 && (m_folderDepth != 0) || (pendingChangesCounter > 0)){
+			QFileInfoList currentFileInfos;
+			if (observingItemTypes & QDir::Files){
+				ifile::CFileListProviderComp::CreateFileList(
+							m_currentDirectory,
+							0,
+							m_folderDepth,
+							acceptPatterns,
+							QDir::Name,
+							currentFileInfos,
+							this);
+			}
+			if ((observingItemTypes & QDir::Dirs) || (observingItemTypes & QDir::Drives)){
+				QFileInfoList directoriesList;
+				ifile::CFileListProviderComp::CreateDirectoryList(
+							m_currentDirectory,
+							0,
+							m_folderDepth,
+							acceptPatterns,
+							QDir::Name,
+							currentFileInfos,
+							this);
+
+				currentFileInfos += directoriesList;
+			}
 
 			FilesSet currentFileItems;
-			for (int fileIndex = 0; fileIndex < int(currentFiles.size()); fileIndex++){
-				QString currentFilePath = m_currentDirectory.absoluteFilePath(currentFiles[fileIndex]);
-
-				QFileInfo fileInfo(currentFilePath);
-
-				currentFileItems.insert(fileInfo.canonicalFilePath());
+			for (int fileIndex = 0; fileIndex < currentFileInfos.count(); fileIndex++){
+				currentFileItems.insert(currentFileInfos[fileIndex].canonicalFilePath());
 			}
 
 			for (FilesSet::Iterator currentFileIter = currentFileItems.begin(); currentFileIter != currentFileItems.end(); ++currentFileIter){
@@ -536,7 +535,8 @@ void CDirectoryMonitorComp::MonitoringParamsObserver::AfterUpdate(imod::IModel* 
 			m_parent.m_poolingFrequency = directoryMonitorParamsPtr->GetPoolingIntervall();
 			m_parent.m_observingItemTypes = directoryMonitorParamsPtr->GetObservedItemTypes();
 			m_parent.m_observingChanges = directoryMonitorParamsPtr->GetObservedChanges();
-			m_parent.m_fileFilterExpressions = (directoryMonitorParamsPtr->GetAcceptPatterns());
+			m_parent.m_fileFilterExpressions = directoryMonitorParamsPtr->GetAcceptPatterns();
+			m_parent.m_folderDepth = directoryMonitorParamsPtr->GetFolderDepth();
 		}
 	}
 
