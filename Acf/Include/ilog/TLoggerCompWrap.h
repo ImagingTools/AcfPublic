@@ -48,7 +48,7 @@ public:
 	I_BEGIN_BASE_COMPONENT(TLoggerCompWrap);
 		I_ASSIGN(m_logCompPtr, "Log", "Consumer log messages", false, "Log");
 		I_ASSIGN(m_verboseEnabledAttrPtr, "EnableVerbose", "If enabled, verbose messages can be produced", true, false);
-		I_ASSIGN(m_showComponentIdAttrPtr, "ShowComponentId", "If enabled the component ID will be shown as a part of the message source", true, false);
+		I_ASSIGN(m_showComponentIdAttrPtr, "ShowComponentId", "If enabled the component ID will be shown as a part of the message source", true, true);
 	I_END_COMPONENT;
 
 protected:

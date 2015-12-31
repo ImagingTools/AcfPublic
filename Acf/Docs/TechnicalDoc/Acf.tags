@@ -30438,8 +30438,8 @@
       <type>static bool</type>
       <name>CreateDirectoryList</name>
       <anchorfile>classifile_1_1_c_file_list_provider_comp.html</anchorfile>
-      <anchor>a90d5ba116de608e476a30457de5ff9ed</anchor>
-      <arglist>(const QDir &amp;root, int minRecursionDepth, int maxRecursionDepth, QFileInfoList &amp;directoryList, istd::ILogger *loggerPtr=NULL)</arglist>
+      <anchor>aa70c83d976d503da9526e0563631becc</anchor>
+      <arglist>(const QDir &amp;root, int minRecursionDepth, int maxRecursionDepth, const QStringList &amp;nameFilters, QDir::SortFlags sortSpec, QFileInfoList &amp;directoryList, istd::ILogger *loggerPtr=NULL)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
