@@ -42229,6 +42229,13 @@
       <anchor>afae644efa9a789dc5c6f6c5a9c9de3de</anchor>
       <arglist>(int versionId) const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classiprm_1_1_c_params_set.html</anchorfile>
+      <anchor>a13caf152322243db86723049c1a6bcd8</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>iprm::IParamsSet *</type>
       <name>GetSlaveParamsSet</name>
