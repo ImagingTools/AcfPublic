@@ -33,7 +33,6 @@
 
 // ACF includes
 #include "i2d/CRectangle.h"
-
 #include "iview/IViewEventObserver.h"
 #include "iview/CScreenTransform.h"
 #include "iview/CViewport.h"
@@ -44,7 +43,6 @@ namespace iview
 
 
 // public methods
-
 
 CConsoleBase::CConsoleBase(QWidget* parent)
 	:QWidget(parent)
@@ -57,8 +55,6 @@ void CConsoleBase::SetZoomToFit(bool state)
 {
 	if (state != m_isZoomToFit){
 		m_isZoomToFit = state;
-
-		CViewport& view = GetViewRef();
 
 		if (m_isZoomToFit){
 			m_storedFitTransform.SetDeformMatrix(i2d::CMatrix2d(0, 0, 0, 0));
