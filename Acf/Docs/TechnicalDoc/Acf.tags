@@ -65792,6 +65792,27 @@
       <anchor>a4b06ef0057a262255483e4b7e43a9e3b</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="variable" protection="protected">
+      <type>QPen</type>
+      <name>m_pens</name>
+      <anchorfile>classiview_1_1_c_color_schema.html</anchorfile>
+      <anchor>a3b0f3b27d20b9aeffa3811ef2e4bf061</anchor>
+      <arglist>[int(IColorSchema::SP_LAST)+1]</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QBrush</type>
+      <name>m_brushes</name>
+      <anchorfile>classiview_1_1_c_color_schema.html</anchorfile>
+      <anchor>a71f166394604f0b80625ff7772d42196</anchor>
+      <arglist>[int(IColorSchema::SB_LAST)+1]</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QFont</type>
+      <name>m_fonts</name>
+      <anchorfile>classiview_1_1_c_color_schema.html</anchorfile>
+      <anchor>aae62ec53dfe6c3194900607cd3b06290</anchor>
+      <arglist>[int(IColorSchema::SF_LAST)+1]</arglist>
+    </member>
     <member kind="variable" protection="protected" static="yes">
       <type>static i2d::CRect</type>
       <name>s_tickerDrawBoxes</name>
