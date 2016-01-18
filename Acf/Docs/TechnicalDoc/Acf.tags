@@ -2369,6 +2369,14 @@
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
+    <name>CTimeStampFileNameParamComp.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_time_stamp_file_name_param_comp_8h</filename>
+    <includes id="_c_relative_file_name_param_comp_8h" name="CRelativeFileNameParamComp.h" local="yes" imported="no">ifile/CRelativeFileNameParamComp.h</includes>
+    <class kind="class">ifile::CTimeStampFileNameParamComp</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
     <name>ifile.h</name>
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>ifile_8h</filename>
@@ -29362,6 +29370,7 @@
     <class kind="class">ifile::CSimpleXmlFileReadArchive</class>
     <class kind="class">ifile::CSimpleXmlFileWriteArchive</class>
     <class kind="class">ifile::CSystemLocationComp</class>
+    <class kind="class">ifile::CTimeStampFileNameParamComp</class>
     <class kind="class">ifile::IFileArchiveInfo</class>
     <class kind="class">ifile::IFileListProvider</class>
     <class kind="class">ifile::IFileMetaInfoProvider</class>
@@ -31996,6 +32005,25 @@
       <anchorfile>classifile_1_1_c_system_location_comp.html</anchorfile>
       <anchor>a2a4cf007ae148c02c5fef67ffe718cfd</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::CTimeStampFileNameParamComp</name>
+    <filename>classifile_1_1_c_time_stamp_file_name_param_comp.html</filename>
+    <base>ifile::CRelativeFileNameParamComp</base>
+    <member kind="typedef">
+      <type>ifile::CRelativeFileNameParamComp</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_time_stamp_file_name_param_comp.html</anchorfile>
+      <anchor>a8d5eecb19792975bae4781ab7c011599</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QString &amp;</type>
+      <name>GetPath</name>
+      <anchorfile>classifile_1_1_c_time_stamp_file_name_param_comp.html</anchorfile>
+      <anchor>a1d2a6cd138b8d4c28666a68a03110db4</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -73403,6 +73431,7 @@
     <file>CSimpleXmlFileReadArchive.h</file>
     <file>CSimpleXmlFileWriteArchive.h</file>
     <file>CSystemLocationComp.h</file>
+    <file>CTimeStampFileNameParamComp.h</file>
     <file>ifile.h</file>
     <file>IFileArchiveInfo.h</file>
     <file>IFileListProvider.h</file>

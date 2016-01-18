@@ -138,6 +138,7 @@
     <ClCompile Include="..\CSimpleXmlFileReadArchive.cpp" />
     <ClCompile Include="..\CSimpleXmlFileWriteArchive.cpp" />
     <ClCompile Include="..\CSystemLocationComp.cpp" />
+    <ClCompile Include="..\CTimeStampFileNameParamComp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\CAutoPersistenceComp.h">
@@ -187,6 +188,7 @@
     <ClInclude Include="..\CSimpleXmlFileReadArchive.h" />
     <ClInclude Include="..\CSimpleXmlFileWriteArchive.h" />
     <ClInclude Include="..\CSystemLocationComp.h" />
+    <ClInclude Include="..\CTimeStampFileNameParamComp.h" />
     <ClInclude Include="..\IFileArchiveInfo.h" />
     <ClInclude Include="..\IFileListProvider.h" />
     <ClInclude Include="..\IFileMetaInfoProvider.h" />
