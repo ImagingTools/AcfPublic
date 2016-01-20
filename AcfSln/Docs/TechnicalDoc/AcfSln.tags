@@ -5856,23 +5856,30 @@
     </member>
     <member kind="enumeration">
       <type></type>
-      <name>WorkMessageType</name>
+      <name>MessageContainerType</name>
       <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
-      <anchor>a48a85d5c275253bdb8189ebb8cbe583b</anchor>
+      <anchor>a144364ad2041b6f133fdc6b3936ba8e8</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
-      <name>WMT_TEMP</name>
+      <name>MCT_RESULTS</name>
       <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
-      <anchor>a48a85d5c275253bdb8189ebb8cbe583baf767b8fe54970c10eb71f1fd1b34bef7</anchor>
+      <anchor>a144364ad2041b6f133fdc6b3936ba8e8aac280f2d0228b3baebc3aeff47589981</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
-      <name>WMT_RESULTS</name>
+      <name>MCT_TEMP</name>
       <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
-      <anchor>a48a85d5c275253bdb8189ebb8cbe583ba0b0872a09830d9194de1de289bb7523b</anchor>
+      <anchor>a144364ad2041b6f133fdc6b3936ba8e8aa18f33d45935d36d0d53ac94cbdf8aaf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MTC_LAST</name>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a144364ad2041b6f133fdc6b3936ba8e8abd363a8e387e254b7b4b271c31c240f4</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -5949,8 +5956,8 @@
       <type>virtual const ilog::IMessageContainer *</type>
       <name>GetWorkMessages</name>
       <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a458f3baaeafea198c5af45816a118390</anchor>
-      <arglist>(int messageType) const </arglist>
+      <anchor>a0f5c05ccbaccc6838be91d6b334ea06e</anchor>
+      <arglist>(int containerType) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iprm::IParamsSet *</type>
@@ -6016,25 +6023,18 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AddMessage</name>
-      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>adf257cd3e17a348a9555d13d94aa43e2</anchor>
-      <arglist>(const ilog::CMessage *messagePtr) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
-      <name>IsMessageSupported</name>
+      <name>IsMessageContainerSupported</name>
       <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a9a9eefc8f17940f30aaab4455232d0d2</anchor>
-      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
+      <anchor>a85d8ddc99e0400e6743bf17266ed8f99</anchor>
+      <arglist>(int containerType) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>AddMessage</name>
       <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a01c1c3d147e621380b49c159aecdd7cb</anchor>
-      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
+      <anchor>a0cff89f148b06dea05ccca9e64c84862</anchor>
+      <arglist>(const ilog::CMessage *messagePtr, int containerType=MCT_RESULTS) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -14550,7 +14550,6 @@
     <filename>classiinsp_1_1_c_supplier_comp_base.html</filename>
     <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">iinsp::ISupplier</base>
-    <base protection="protected" virtualness="virtual">ilog::IMessageConsumer</base>
     <class kind="class">iinsp::CSupplierCompBase::Timer</class>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -14659,8 +14658,8 @@
       <type>virtual const ilog::IMessageContainer *</type>
       <name>GetWorkMessages</name>
       <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
-      <anchor>a8a8e4a785500d734ed358ed318d3c081</anchor>
-      <arglist>(int messageType) const =0</arglist>
+      <anchor>ac8eabdbc6495d5dee2c782a4af297c97</anchor>
+      <arglist>(int containerType) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual iprm::IParamsSet *</type>
@@ -16282,8 +16281,8 @@
       <type>virtual const ilog::IMessageContainer *</type>
       <name>GetWorkMessages</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a2f7bbfafbd8ac6451106c9087b90b31f</anchor>
-      <arglist>(int messageType) const </arglist>
+      <anchor>a1e9eac5eefe5305edb13a77415ea8cd0</anchor>
+      <arglist>(int containerType) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iprm::IParamsSet *</type>
