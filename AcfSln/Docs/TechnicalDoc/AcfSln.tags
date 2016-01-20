@@ -5758,6 +5758,13 @@
     </member>
     <member kind="enumvalue">
       <type>@</type>
+      <name>MI_GEOMETRICAL_RESULT</name>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>abbfdc8f28f1a4d4b4494193d183b49e6a1b60f2abe3a107b4c472946618180247</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
       <name>MI_SUPPLIER_RESULTS_STATUS</name>
       <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
       <anchor>abbfdc8f28f1a4d4b4494193d183b49e6a3716eb5f2abf9b6cc8dc4e02786903d5</anchor>
