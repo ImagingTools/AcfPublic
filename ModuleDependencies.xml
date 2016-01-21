@@ -127,7 +127,10 @@
     <!-- Build for AcfSln with Qt5 -->
     <Build IfTarget="AcfSln2010Qt5">
       <Build IfPlatform="WinOS">
-        <QMakeToMakefile Project="AcfSln/Build/QMake/AcfSlnAll.pro" VisualStudioVersion="2010" Version="5.2"/>
+        <QMakeToMakefile Project="AcfSln/Build/QMake/AcfSlnAll.pro" VisualStudioVersion="2010" Version="5.2">
+          <EnvironmentVariable Name="QTDIR" Value="$BUILD_TEMP_FOLDER\QtLibraries\qtbase"/>
+          <EnvironmentVariable Name="PATH" Value="%PATH%;$BUILD_TEMP_FOLDER\QtLibraries\qtbase\bin"/>
+        </QMakeToMakefile>/>
         <NMake Makefile="AcfSln/Build/QMake/Makefile" Version="2010">
           <EnvironmentVariable Name="ACFCONFIGFDIR" Value="$BUILD_PRODUCT_FOLDER\3rdParty\AcfPublic\Acf\Config"/>
           <EnvironmentVariable Name="ACFDIR" Value="$BUILD_PRODUCT_FOLDER\3rdParty\AcfPublic\Acf"/>
