@@ -2,9 +2,9 @@
 <Acf>
     <AcfHeader>
         <VersionInfos>
-            <Version Id="0" Number="4054" Description="ACF"/>
-            <Version Id="1" Number="1505" Description="ACF-Solutions"/>
-            <Version Id="1023" Number="328706" Description="Qt Framework"/>
+            <Version Id="0" Number="4076" Description="ACF"/>
+            <Version Id="1" Number="1519" Description="ACF-Solutions"/>
+            <Version Id="1023" Number="328449" Description="Qt Framework"/>
         </VersionInfos>
     </AcfHeader>
     <Description>GUI for the color matching supplier</Description>
@@ -71,6 +71,9 @@
         <Element Id="PatternController" PackageId="QtIprPck" ComponentId="PatternTeachingControllerGui">
             <Data IsEnabled="true" Flags="0">
                 <AttributeInfoMap>
+                    <AttributeInfo Id="DarkStyle" Type="Boolean" ExportId="DarkStyle">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
                     <AttributeInfo Id="ErrorColor" Type="Id" ExportId="ErrorColor">
                         <Data IsEnabled="false"/>
                     </AttributeInfo>
