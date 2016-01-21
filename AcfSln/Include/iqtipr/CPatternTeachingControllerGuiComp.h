@@ -1,3 +1,25 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
 #ifndef iqtipr_CPatternTeachingControllerGuiComp_included
 #define iqtipr_CPatternTeachingControllerGuiComp_included
 
@@ -31,7 +53,8 @@ public:
 		I_ASSIGN_TO(m_patternEditorObserverCompPtr, m_patternEditorCompPtr, false);
 		I_ASSIGN(m_patternViewCompPtr, "PatternView", "GUI representing learned pattern", false, "PatternView");
 		I_ASSIGN(m_patternViewObserverCompPtr, "PatternObserver", "Pattern GUI observer", false, "PatternObserver");
-		I_ASSIGN(m_darkSchemeAttrPtr, "DarkStyle", "Dark stylesheet used", true, false);
+		I_ASSIGN(m_errorColorAttr, "ErrorColor", "Color to use for error messages on the GUI", true, "red");
+		I_ASSIGN(m_okColorAttr, "OkColor", "Color to use for ok messages on the GUI", true, "darkGreen");
 	I_END_COMPONENT;
 
 protected Q_SLOTS:
@@ -54,7 +77,8 @@ private:
 	I_REF(iqtgui::IGuiObject, m_patternViewCompPtr);
 	I_REF(imod::IObserver, m_patternViewObserverCompPtr);
 
-	I_ATTR(bool, m_darkSchemeAttrPtr);
+	I_ATTR(QByteArray, m_errorColorAttr);
+	I_ATTR(QByteArray, m_okColorAttr);
 };
 
 
