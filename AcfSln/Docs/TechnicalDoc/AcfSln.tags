@@ -1533,7 +1533,6 @@
     <filename>_c_rect_derivative_processor_8h</filename>
     <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="yes" imported="no">imeas/IDataSequence.h</includes>
-    <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="yes" imported="no">imeas/INumericConstraints.h</includes>
     <class kind="class">iipr::CRectDerivativeProcessor</class>
     <namespace>iipr</namespace>
   </compound>
@@ -18340,8 +18339,6 @@
     <name>iipr::CRectDerivativeProcessor</name>
     <filename>classiipr_1_1_c_rect_derivative_processor.html</filename>
     <base>iproc::TSyncProcessorWrap</base>
-    <base virtualness="virtual">imeas::INumericConstraints</base>
-    <base protection="protected" virtualness="virtual">imath::IUnitInfo</base>
     <member kind="function">
       <type></type>
       <name>CRectDerivativeProcessor</name>
@@ -18376,69 +18373,6 @@
       <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
       <anchor>a3a5377066f46a464a5d55e66a43216e0</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetNumericValuesCount</name>
-      <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>a8aaa5845f57f38aea453a90cdefe07ab</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueName</name>
-      <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>ab9844cca4f7b282b578e7a3f1bfe892f</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueDescription</name>
-      <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>a0fd88a4782e5e91ec9f9c0319b6df93c</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const imath::IUnitInfo *</type>
-      <name>GetNumericValueUnitInfo</name>
-      <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>a7f306e90febf8811bda727f36263db7a</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetUnitType</name>
-      <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>a1f7091b5f0e9e4df0a59d151bac45219</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetUnitName</name>
-      <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>a14117132ffb3483b18a7e85088592326</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetDisplayMultiplicationFactor</name>
-      <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>a71683c5497afb431d988bfe3733a197f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CRange</type>
-      <name>GetValueRange</name>
-      <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>af146bc0a65e5e5583ea415a5174e8835</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const imath::IDoubleManip &amp;</type>
-      <name>GetValueManip</name>
-      <anchorfile>classiipr_1_1_c_rect_derivative_processor.html</anchorfile>
-      <anchor>acaa2fddf52ca73f302a3b00ee6436947</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
