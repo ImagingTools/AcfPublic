@@ -800,10 +800,18 @@
     <namespace>ifileproc</namespace>
   </compound>
   <compound kind="file">
+    <name>CFileNamingParams.h</name>
+    <path>C:/Temp/AcfSln/Include/ifileproc/</path>
+    <filename>_c_file_naming_params_8h</filename>
+    <includes id="_i_file_naming_params_8h" name="IFileNamingParams.h" local="yes" imported="no">ifileproc/IFileNamingParams.h</includes>
+    <class kind="class">ifileproc::CFileNamingParams</class>
+    <namespace>ifileproc</namespace>
+  </compound>
+  <compound kind="file">
     <name>CFileNamingParamsComp.h</name>
     <path>C:/Temp/AcfSln/Include/ifileproc/</path>
     <filename>_c_file_naming_params_comp_8h</filename>
-    <includes id="_i_file_naming_params_8h" name="IFileNamingParams.h" local="yes" imported="no">ifileproc/IFileNamingParams.h</includes>
+    <includes id="_c_file_naming_params_8h" name="CFileNamingParams.h" local="yes" imported="no">ifileproc/CFileNamingParams.h</includes>
     <class kind="class">ifileproc::CFileNamingParamsComp</class>
     <namespace>ifileproc</namespace>
   </compound>
@@ -12116,6 +12124,7 @@
     <class kind="class">ifileproc::CFileInfoCopyComp</class>
     <class kind="class">ifileproc::CFileListConverterComp</class>
     <class kind="class">ifileproc::CFileNamingComp</class>
+    <class kind="class">ifileproc::CFileNamingParams</class>
     <class kind="class">ifileproc::CFileNamingParamsComp</class>
     <class kind="class">ifileproc::CFilePathesContainer</class>
     <class kind="class">ifileproc::CProcessingResultsReviewComp</class>
@@ -12576,15 +12585,105 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>ifileproc::CFileNamingParamsComp</name>
-    <filename>classifileproc_1_1_c_file_naming_params_comp.html</filename>
-    <base>icomp::CComponentBase</base>
+    <name>ifileproc::CFileNamingParams</name>
+    <filename>classifileproc_1_1_c_file_naming_params.html</filename>
     <base virtualness="virtual">ifileproc::IFileNamingParams</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>a9f93a7d613e1f76e2e5651e6a5f08149</anchor>
+    <member kind="function">
+      <type></type>
+      <name>CFileNamingParams</name>
+      <anchorfile>classifileproc_1_1_c_file_naming_params.html</anchorfile>
+      <anchor>a81e1eaa3dc6e12e4acca5974026e1b14</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual OverwriteStrategy</type>
+      <name>GetOverwriteStrategy</name>
+      <anchorfile>classifileproc_1_1_c_file_naming_params.html</anchorfile>
+      <anchor>aaecb7b9dc1cbb8481d5a71df97f4d025</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetOverwriteStrategy</name>
+      <anchorfile>classifileproc_1_1_c_file_naming_params.html</anchorfile>
+      <anchor>a149b54de3b2928e68e18b73d572fa30c</anchor>
+      <arglist>(OverwriteStrategy overwriteStrategy)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetPrefix</name>
+      <anchorfile>classifileproc_1_1_c_file_naming_params.html</anchorfile>
+      <anchor>ad7f7a06963d467faed405caa1086acb0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPrefix</name>
+      <anchorfile>classifileproc_1_1_c_file_naming_params.html</anchorfile>
+      <anchor>a304d27e1cfcd2eb33277cfb6a9ff3eea</anchor>
+      <arglist>(const QString &amp;prefix)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetSuffix</name>
+      <anchorfile>classifileproc_1_1_c_file_naming_params.html</anchorfile>
+      <anchor>ab33bb1bff1385a3ae0e6b15b737b91dc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetSuffix</name>
+      <anchorfile>classifileproc_1_1_c_file_naming_params.html</anchorfile>
+      <anchor>a367d92a10729176a1d1fa031f40df22b</anchor>
+      <arglist>(const QString &amp;suffix)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QStringList</type>
+      <name>GetPatternsToRemove</name>
+      <anchorfile>classifileproc_1_1_c_file_naming_params.html</anchorfile>
+      <anchor>a2a605b54485f89cb2c5466ff232366ee</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPatternsToRemove</name>
+      <anchorfile>classifileproc_1_1_c_file_naming_params.html</anchorfile>
+      <anchor>a409ccb85f900c695716a48c11afa6f28</anchor>
+      <arglist>(const QStringList &amp;patternsToRemove)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classifileproc_1_1_c_file_naming_params.html</anchorfile>
+      <anchor>a4f5825bb6df9d61d4610d67c0f3aa74f</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>OverwriteStrategy</type>
+      <name>m_overwriteStrategy</name>
+      <anchorfile>classifileproc_1_1_c_file_naming_params.html</anchorfile>
+      <anchor>a26919da8eadd17cca7e2de4df79614c9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QString</type>
+      <name>m_suffix</name>
+      <anchorfile>classifileproc_1_1_c_file_naming_params.html</anchorfile>
+      <anchor>a2e77b602cc3d48e9747996ec813462fc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QString</type>
+      <name>m_prefix</name>
+      <anchorfile>classifileproc_1_1_c_file_naming_params.html</anchorfile>
+      <anchor>a3938058c6443b1d740f40d6188fab2fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QStringList</type>
+      <name>m_patternsToRemove</name>
+      <anchorfile>classifileproc_1_1_c_file_naming_params.html</anchorfile>
+      <anchor>a6456e24dcaea65b8677a8489a50e139d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -12608,82 +12707,25 @@
       <anchor>af6cdb3ee75db6fc1062869bc23f4abd2aba08a396fb1f24a745551c9585c3d5bd</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>CFileNamingParamsComp</name>
+  </compound>
+  <compound kind="class">
+    <name>ifileproc::CFileNamingParamsComp</name>
+    <filename>classifileproc_1_1_c_file_naming_params_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>ifileproc::CFileNamingParams</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
       <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>a24f32b7094354f7e0941f37e615b4ced</anchor>
-      <arglist>()</arglist>
+      <anchor>a9f93a7d613e1f76e2e5651e6a5f08149</anchor>
+      <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual OverwriteStrategy</type>
-      <name>GetOverwriteStrategy</name>
+    <member kind="typedef">
+      <type>ifileproc::CFileNamingParams</type>
+      <name>BaseClass2</name>
       <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>ade9242b434379c228f1b5b3f7d0eb3e2</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetOverwriteStrategy</name>
-      <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>ac6814362da5098e9903340b251f531e1</anchor>
-      <arglist>(OverwriteStrategy overwriteStrategy)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetPrefix</name>
-      <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>a19ad71ae219bbe3d9be5681cea88fea6</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetPrefix</name>
-      <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>a1bc94d44ff19a35617328570390b6c9e</anchor>
-      <arglist>(const QString &amp;prefix)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetSuffix</name>
-      <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>a12d370f195951edddc28f9d48d1a3041</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetSuffix</name>
-      <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>a997320def50775776200feadb293c26f</anchor>
-      <arglist>(const QString &amp;suffix)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QStringList</type>
-      <name>GetPatternsToRemove</name>
-      <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>ab4fae40b6f399ed4e77df09e4919406f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetPatternsToRemove</name>
-      <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>a86d9a039cceecf955c86ee481c9d56b2</anchor>
-      <arglist>(const QStringList &amp;patternsToRemove)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classifileproc_1_1_c_file_naming_params_comp.html</anchorfile>
-      <anchor>a7bcdbd60b2cd6089b7f3c354a4edef08</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetOverwriteStrategy</name>
-      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>a213e37f01756a3c6b2594137a2df9d20</anchor>
-      <arglist>(OverwriteStrategy overwriteStrategy)=0</arglist>
+      <anchor>a94289883a1b113e611e339f4477618a4</anchor>
+      <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -12956,6 +12998,13 @@
       <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
       <anchor>a676375f2aadf7f987715775c9e380aa4</anchor>
       <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetOverwriteStrategy</name>
+      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
+      <anchor>a213e37f01756a3c6b2594137a2df9d20</anchor>
+      <arglist>(OverwriteStrategy overwriteStrategy)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
@@ -29015,6 +29064,7 @@
     <file>CFileInfoCopyComp.h</file>
     <file>CFileListConverterComp.h</file>
     <file>CFileNamingComp.h</file>
+    <file>CFileNamingParams.h</file>
     <file>CFileNamingParamsComp.h</file>
     <file>CFilePathesContainer.h</file>
     <file>CProcessingResultsReviewComp.h</file>

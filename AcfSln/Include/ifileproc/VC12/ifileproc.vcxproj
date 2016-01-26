@@ -128,6 +128,7 @@
     <ClCompile Include="..\CFileInfoCopyComp.cpp" />
     <ClCompile Include="..\CFileListConverterComp.cpp" />
     <ClCompile Include="..\CFileNamingComp.cpp" />
+    <ClCompile Include="..\CFileNamingParams.cpp" />
     <ClCompile Include="..\CFileNamingParamsComp.cpp" />
     <ClCompile Include="..\CFilePathesContainer.cpp" />
     <ClCompile Include="..\CProcessingResultsReviewComp.cpp" />
@@ -154,6 +155,7 @@
     <ClInclude Include="..\CFileInfoCopyComp.h" />
     <ClInclude Include="..\CFileListConverterComp.h" />
     <ClInclude Include="..\CFileNamingComp.h" />
+    <ClInclude Include="..\CFileNamingParams.h" />
     <ClInclude Include="..\CFileNamingParamsComp.h" />
     <ClInclude Include="..\CFilePathesContainer.h" />
     <ClInclude Include="..\CProcessingResultsReviewComp.h" />
