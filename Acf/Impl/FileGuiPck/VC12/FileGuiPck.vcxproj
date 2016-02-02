@@ -143,7 +143,7 @@
   <ImportGroup Label="ExtensionTargets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties Qt5Version_x0020_Win32="$(DefaultQtVersion)" />
+      <UserProperties Qt5Version_x0020_Win32="QT_32" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
