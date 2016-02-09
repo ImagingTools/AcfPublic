@@ -762,40 +762,6 @@ private:
     Q_DISABLE_COPY(QtCursorPropertyManager)
 };
 
-class QtFileOpenPropertyManagerPrivate;
-
-class QT_QTPROPERTYBROWSER_EXPORT QtFileOpenPropertyManager : public QtAbstractPropertyManager
-{
-    Q_OBJECT
-public:
-    QtFileOpenPropertyManager(QObject *parent = 0);
-    ~QtFileOpenPropertyManager();
-
-    QString value(const QtProperty *property) const;
-    QString filters(const QtProperty *property) const;
-    QString defaultPath(const QtProperty *property) const;
-
-public Q_SLOTS:
-    void setValue(QtProperty *property, const QString &val);
-    void setFileFilters(QtProperty *property, const QString& fileFilters);
-    void setDefaultPath(QtProperty *property, const QString& path);
-
-Q_SIGNALS:
-    void valueChanged(QtProperty *property, const QString &val);
-    void filterChanged(QtProperty *, const QString &);
-    void directoryChanged(QtProperty *, const QString &);
-
-protected:
-    QString valueText(const QtProperty *property) const;
-    QString displayText(const QtProperty *property) const;
-    virtual void initializeProperty(QtProperty *property);
-    virtual void uninitializeProperty(QtProperty *property);
-private:
-    QtFileOpenPropertyManagerPrivate *d_ptr;
-    Q_DECLARE_PRIVATE(QtFileOpenPropertyManager)
-    Q_DISABLE_COPY(QtFileOpenPropertyManager)
-};
-
 #if QT_VERSION >= 0x040400
 QT_END_NAMESPACE
 #endif

@@ -48,31 +48,6 @@
 QT_BEGIN_NAMESPACE
 #endif
 
-class QtFileOpenFactoryPrivate;
-
-class QT_QTPROPERTYBROWSER_EXPORT QtFileOpenFactory : public QtAbstractEditorFactory<QtFileOpenPropertyManager>
-{
-    Q_OBJECT
-public:
-    QtFileOpenFactory(QObject *parent = 0);
-    ~QtFileOpenFactory();
-protected:
-    void connectPropertyManager(QtFileOpenPropertyManager *manager);
-    QWidget *createEditor(QtFileOpenPropertyManager *manager, QtProperty *property,
-                QWidget *parent);
-    void disconnectPropertyManager(QtFileOpenPropertyManager *manager);
-private:
-    QtFileOpenFactoryPrivate *d_ptr;
-    Q_DECLARE_PRIVATE(QtFileOpenFactory)
-    Q_DISABLE_COPY(QtFileOpenFactory)
-    Q_PRIVATE_SLOT(d_func(), void slotPropertyChanged(QtProperty *, const QString &))
-    Q_PRIVATE_SLOT(d_func(), void slotSetValue(const QString &))
-    Q_PRIVATE_SLOT(d_func(), void slotFilterChanged(QtProperty *, const QString &))
-    Q_PRIVATE_SLOT(d_func(), void slotDirectoryChanged(QtProperty *, const QString &))
-    Q_PRIVATE_SLOT(d_func(), void slotEditorDestroyed(QObject *))
-};
-
-
 class QtSpinBoxFactoryPrivate;
 
 class QT_QTPROPERTYBROWSER_EXPORT QtSpinBoxFactory : public QtAbstractEditorFactory<QtIntPropertyManager>

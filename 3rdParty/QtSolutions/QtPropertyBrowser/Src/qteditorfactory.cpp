@@ -41,7 +41,6 @@
 
 #include "qteditorfactory.h"
 #include "qtpropertybrowserutils_p.h"
-#include "qtvariantproperty.h"
 #include <QSpinBox>
 #include <QScrollBar>
 #include <QComboBox>
@@ -60,8 +59,6 @@
 #include <QStyleOption>
 #include <QPainter>
 #include <QMap>
-
-#include "myfileopenwidget.h"
 
 #if defined(Q_CC_MSVC)
 #    pragma warning(disable: 4786) /* MS VS 6: truncating debug info after 255 characters */
@@ -140,123 +137,6 @@ void EditorFactoryPrivate<Editor>::slotEditorDestroyed(QObject *object)
         }
     }
 }
-
-// QtFileOpenFactory
-
-class QtFileOpenFactoryPrivate : public EditorFactoryPrivate<myFileOpenWidget>
-{
-    QtFileOpenFactory *q_ptr;
-    Q_DECLARE_PUBLIC(QtFileOpenFactory)
-
-public:
-    void slotPropertyChanged(QtProperty *property, const QString &value);
-    void slotSetValue(const QString &value);
-    void slotFilterChanged(QtProperty *property, const QString &value);
-    void slotDirectoryChanged(QtProperty *property, const QString &value);
-};
-
-void QtFileOpenFactoryPrivate::slotPropertyChanged(QtProperty *property,
-                const QString &value)
-{
-    if (!m_createdEditors.contains(property))
-        return;
-
-    QListIterator<myFileOpenWidget *> itEditor( m_createdEditors[property]);
-    while (itEditor.hasNext()) {
-        myFileOpenWidget *editor = itEditor.next();
-        if (editor->text() != value) {
-            editor->blockSignals(true);
-            editor->setText(value);
-            editor->blockSignals(false);
-        }
-    }
-}
-
-void QtFileOpenFactoryPrivate::slotFilterChanged(QtProperty *property, const QString &value)
-{
-    if (!m_createdEditors.contains(property))
-        return;
-
-    QListIterator<myFileOpenWidget *> itEditor( m_createdEditors[property]);
-    while (itEditor.hasNext()) {
-        myFileOpenWidget *editor = itEditor.next();
-        editor->setFilter(value);
-    }
-}
-
-void QtFileOpenFactoryPrivate::slotDirectoryChanged(QtProperty *property, const QString &value)
-{
-    if (!m_createdEditors.contains(property))
-        return;
-
-    QListIterator<myFileOpenWidget *> itEditor( m_createdEditors[property]);
-    while (itEditor.hasNext()) {
-        myFileOpenWidget *editor = itEditor.next();
-        editor->setStartDir(value);
-    }
-}
-
-void QtFileOpenFactoryPrivate::slotSetValue(const QString &value)
-{
-    QObject *object = q_ptr->sender();
-    const QMap<myFileOpenWidget *, QtProperty *>::ConstIterator ecend = m_editorToProperty.constEnd();
-    for (QMap<myFileOpenWidget *, QtProperty *>::ConstIterator itEditor = m_editorToProperty.constBegin(); itEditor != ecend; ++itEditor)
-        if (itEditor.key() == object) {
-            QtProperty *property = itEditor.value();
-            QtFileOpenPropertyManager *manager = q_ptr->propertyManager(property);
-            if (!manager)
-                return;
-            manager->setValue(property, qVariantValue<QString>(value));
-            return;
-        }
-}
-
-
-QtFileOpenFactory::QtFileOpenFactory(QObject *parent)
-    : QtAbstractEditorFactory<QtFileOpenPropertyManager>(parent)
-{
-    d_ptr = new QtFileOpenFactoryPrivate();
-    d_ptr->q_ptr = this;
-
-}
-
-QtFileOpenFactory::~QtFileOpenFactory()
-{
-    qDeleteAll(d_ptr->m_editorToProperty.keys());
-    delete d_ptr;
-}
-
-void QtFileOpenFactory::connectPropertyManager(QtFileOpenPropertyManager *manager)
-{
-    connect(manager, SIGNAL(valueChanged(QtProperty *, const QString &)),
-            this, SLOT(slotPropertyChanged(QtProperty *, const QString &)));
-    connect(manager, SIGNAL(filterChanged(QtProperty *, const QString &)),
-                this, SLOT(slotFilterChanged(QtProperty *, const QString &)));
-    connect(manager, SIGNAL(directoryChanged(QtProperty *, const QString &)),
-                this, SLOT(slotDirectoryChanged(QtProperty *, const QString &)));
-}
-
-QWidget *QtFileOpenFactory::createEditor(QtFileOpenPropertyManager *manager,
-        QtProperty *property, QWidget *parent)
-{
-    myFileOpenWidget *editor = d_ptr->createEditor(property, parent);
-    editor->setText(manager->value(property));
-    editor->setFilter(manager->filters(property));
-    editor->setStartDir(manager->defaultPath(property));
-
-    connect(editor, SIGNAL(textChanged(const QString &)),
-                this, SLOT(slotSetValue(const QString &)));
-    connect(editor, SIGNAL(destroyed(QObject *)),
-                this, SLOT(slotEditorDestroyed(QObject *)));
-    return editor;
-}
-
-void QtFileOpenFactory::disconnectPropertyManager(QtFileOpenPropertyManager *manager)
-{
-    disconnect(manager, SIGNAL(valueChanged(QtProperty *, const QString &)),
-                this, SLOT(slotPropertyChanged(QtProperty *, const QString &)));
-}
-
 
 // ------------ QtSpinBoxFactory
 
