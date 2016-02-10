@@ -51,11 +51,21 @@ win32-msvc*{
 
 LIBRARY_SUFIX =
 
-CONFIG(debug, debug|release){
-        COMPILER_DIR = Debug$$COMPILER_NAME
+COMPILER_CODE = $$COMPILER_NAME
+contains(QMAKE_HOST.arch, x86_64){
+	!macx-clang-32{
+		COMPILER_CODE = $$COMPILER_NAME"_64"
+	}
 }
+
+CONFIG(debug, debug|release){
+	COMPILER_DIR = Debug$$COMPILER_CODE
+}
+
 CONFIG(release, debug|release){
-        COMPILER_DIR = Release$$COMPILER_NAME
+	COMPILER_DIR = Release$$COMPILER_CODE
+
+	# force SSE
         CONFIG += sse2
 }
 
