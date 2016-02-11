@@ -34583,13 +34583,6 @@
       <arglist>(int bitmapIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>Reset</name>
-      <anchorfile>classiimg_1_1_c_multi_page_bitmap_base.html</anchorfile>
-      <anchor>ac25649476c0585a099454f6cb45a10fe</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual iimg::IBitmap *</type>
       <name>InsertBitmap</name>
       <anchorfile>classiimg_1_1_c_multi_page_bitmap_base.html</anchorfile>
@@ -34616,6 +34609,13 @@
       <anchorfile>classiimg_1_1_c_multi_page_bitmap_base.html</anchorfile>
       <anchor>ab8096c46d30eee7fdc5052ab06085e5e</anchor>
       <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classiimg_1_1_c_multi_page_bitmap_base.html</anchorfile>
+      <anchor>aa850fe5efe3cf6470a828e982ff37732</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -34708,13 +34708,6 @@
       <anchor>a54c26fdb7854b18c0bf276c4c31f0f4a</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ResetData</name>
-      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
-      <anchor>a0b695fc36fae74eb1e1f6cb9aba7722c</anchor>
-      <arglist>(CompatibilityMode mode)</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual IBitmap *</type>
       <name>CreateBitmap</name>
@@ -34789,6 +34782,13 @@
       <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
       <anchor>a36e186bc048adedac51c48788a6f0bce</anchor>
       <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
+      <anchor>a0b695fc36fae74eb1e1f6cb9aba7722c</anchor>
+      <arglist>(CompatibilityMode mode)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -35235,13 +35235,6 @@
     <name>iimg::IMultiPageBitmapController</name>
     <filename>classiimg_1_1_i_multi_page_bitmap_controller.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>Reset</name>
-      <anchorfile>classiimg_1_1_i_multi_page_bitmap_controller.html</anchorfile>
-      <anchor>a037c695b040ad977afb17617712c5a44</anchor>
-      <arglist>()=0</arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual iimg::IBitmap *</type>
       <name>InsertBitmap</name>
