@@ -47230,6 +47230,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqt2d_1_1_c_oriented_circle_editor_comp.html</anchorfile>
+      <anchor>ae1b42021a314aea6e39a001068d6a848</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
       <anchor>a38708304cbaae060ad61090774353c8d</anchor>
@@ -47247,13 +47254,6 @@
       <name>OnGuiCreated</name>
       <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
       <anchor>a58a9c5488e13e801ad22f0f91bd77e67</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiRetranslate</name>
-      <anchorfile>classiqt2d_1_1_t_circle_based_params_gui_comp.html</anchorfile>
-      <anchor>abe7ffb3fffa20d85e2983f4333ecdb3c</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -47486,6 +47486,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>aadb2edd9f48e2c1abe4476c3248af62a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>PopulateActions</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
@@ -47685,6 +47692,13 @@
       <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
       <anchor>ac4ebc238698cc55f401c7846e917dddb</anchor>
       <arglist>(CActionAdapter &amp;host, imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
+      <anchor>a1ef383c55110fcc461b40e2a0919fa9b</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -48988,6 +49002,13 @@
       <name>OnGuiCreated</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a639829115b16468f337578e9eb36855b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>aadb2edd9f48e2c1abe4476c3248af62a</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
