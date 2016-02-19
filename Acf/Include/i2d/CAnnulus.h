@@ -81,6 +81,11 @@ public:
 	void SetOuterRadius(double outerRadius);
 
 	/**
+		Set the inner and outer radius of the annulus.
+	*/
+	void SetInnerOuterRadius(double innerRadius, double outerRadius);
+
+	/**
 		Set the inner circle of the annulus object.
 	*/
 	CCircle GetInnerCircle() const;

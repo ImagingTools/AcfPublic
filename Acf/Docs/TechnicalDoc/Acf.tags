@@ -8138,6 +8138,13 @@
       <arglist>(double outerRadius)</arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>SetInnerOuterRadius</name>
+      <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
+      <anchor>acfa6c68c6bf1221145357ab1b24f98a6</anchor>
+      <arglist>(double innerRadius, double outerRadius)</arglist>
+    </member>
+    <member kind="function">
       <type>CCircle</type>
       <name>GetInnerCircle</name>
       <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
