@@ -134,6 +134,11 @@ public:
 		Serialize this vector to specified archive.
 	*/
 	bool Serialize(iser::IArchive& archive);
+	
+	/**
+		Specialized with fuzzy compare.
+	*/
+	bool operator==(const CVector2d& vector) const;
 
 	CVector2d operator-() const;
 
@@ -253,12 +258,10 @@ inline CVector2d CVector2d::operator-() const
 }
 
 
-
 inline CVector2d CVector2d::operator+(const imath::TVector<2>& vector) const
 {
 	return CVector2d(GetX() + vector[0], GetY() + vector[1]);
 }
-
 
 
 inline CVector2d CVector2d::operator-(const imath::TVector<2>& vector) const
@@ -267,12 +270,10 @@ inline CVector2d CVector2d::operator-(const imath::TVector<2>& vector) const
 }
 
 
-
 inline CVector2d CVector2d::operator*(double scalar) const
 {
 	return CVector2d(GetX() * scalar, GetY() * scalar);
 }
-
 
 
 inline CVector2d CVector2d::operator/(double scalar) const
@@ -285,14 +286,12 @@ inline CVector2d CVector2d::operator/(double scalar) const
 }
 
 
-
 inline CVector2d& CVector2d::operator+=(const imath::TVector<2>& vector)
 {
 	BaseClass::operator+=(vector);
 
 	return *this;
 }
-
 
 
 inline CVector2d& CVector2d::operator-=(const imath::TVector<2>& vector)

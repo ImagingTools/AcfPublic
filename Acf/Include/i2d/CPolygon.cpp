@@ -391,8 +391,7 @@ istd::IChangeable* CPolygon::CloneMe(CompatibilityMode mode) const
 bool CPolygon::IsEqual(const IChangeable& object) const
 {
 	const CPolygon* polygonPtr = dynamic_cast<const CPolygon*>(&object);
-	if (polygonPtr != NULL)
-	{
+	if (polygonPtr != NULL){
 		return (m_nodes == polygonPtr->m_nodes);
 	}
 

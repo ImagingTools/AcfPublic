@@ -27,6 +27,8 @@
 // Qt includes
 #include <QtCore/QFile>
 #include <QtCore/QTextStream>
+#include <QtWidgets/QWidget>
+#include <QtWidgets/QStyle>
 
 // ACF includes
 #include "iqt/iqt.h"
@@ -67,6 +69,17 @@ static bool SetStyleSheetFromFile(StyleSheetConsumer& styleSheetConsumer, const 
 	}
 
 	return false;
+}
+
+
+/**
+	Reload style sheet (for example after changing a property).
+*/
+static void Restyle(QWidget* objectPtr)
+{
+	objectPtr->style()->unpolish(objectPtr);
+	objectPtr->style()->polish(objectPtr);
+	objectPtr->update();	
 }
 
 

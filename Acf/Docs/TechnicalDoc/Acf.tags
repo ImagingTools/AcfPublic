@@ -5002,6 +5002,13 @@
       <anchor>ab139d1db099b47b0558a8bcf4c3a14fe</anchor>
       <arglist>(StyleSheetConsumer &amp;styleSheetConsumer, const QString &amp;styleSheetFilePath)</arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>Restyle</name>
+      <anchorfile>namespaceiqtgui.html</anchorfile>
+      <anchor>a989077b6303dc9112021ca411de80cf4</anchor>
+      <arglist>(QWidget *objectPtr)</arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>IVisualStatus.h</name>
@@ -13073,6 +13080,13 @@
       <anchorfile>classi2d_1_1_c_vector2d.html</anchorfile>
       <anchor>a5c3e1fa675ec8980b61823d5d0a26377</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classi2d_1_1_c_vector2d.html</anchorfile>
+      <anchor>a5c97c5f4b19795f3beb40deb07b09df6</anchor>
+      <arglist>(const CVector2d &amp;vector) const </arglist>
     </member>
     <member kind="function">
       <type>CVector2d</type>
@@ -51527,6 +51541,13 @@
       <anchorfile>namespaceiqtgui.html</anchorfile>
       <anchor>ab139d1db099b47b0558a8bcf4c3a14fe</anchor>
       <arglist>(StyleSheetConsumer &amp;styleSheetConsumer, const QString &amp;styleSheetFilePath)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>Restyle</name>
+      <anchorfile>namespaceiqtgui.html</anchorfile>
+      <anchor>a989077b6303dc9112021ca411de80cf4</anchor>
+      <arglist>(QWidget *objectPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
