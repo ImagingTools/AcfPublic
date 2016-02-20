@@ -72,17 +72,6 @@ static bool SetStyleSheetFromFile(StyleSheetConsumer& styleSheetConsumer, const 
 }
 
 
-/**
-	Reload style sheet (for example after changing a property).
-*/
-static void Restyle(QWidget* objectPtr)
-{
-	objectPtr->style()->unpolish(objectPtr);
-	objectPtr->style()->polish(objectPtr);
-	objectPtr->update();	
-}
-
-
 } // namespace iqtgui
 
 

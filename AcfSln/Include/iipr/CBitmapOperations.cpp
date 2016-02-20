@@ -23,6 +23,9 @@
 #include "iipr/CBitmapOperations.h"
 
 
+// STL includes
+#include <cstring>
+
 // ACF includes
 #include "iimg/CScanlineMask.h"
 
