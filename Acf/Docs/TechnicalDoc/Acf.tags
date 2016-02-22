@@ -32137,6 +32137,20 @@
       <anchor>ac82d3dd352e624c9822f1550b9914ef6</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>QList&lt; QByteArray &gt;</type>
+      <name>Ids</name>
+      <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
+      <anchor>aa3e2ae2231a08ad072ae46c12a7552b0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual Ids</type>
+      <name>GetFileIds</name>
+      <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
+      <anchor>a9b2354eaaf1eaa5f80706328d9b91708</anchor>
+      <arglist>() const =0</arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual const IFileResourceTypeConstraints *</type>
       <name>GetResourceTypeConstraints</name>
@@ -32150,13 +32164,6 @@
       <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
       <anchor>a12004013e92556b6d70ebd06016733cb</anchor>
       <arglist>(const QByteArray &amp;resourceId) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const iprm::IOptionsList &amp;</type>
-      <name>GetFileListInfo</name>
-      <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
-      <anchor>abc1a1728f6ee6a643c9deec5ce734200</anchor>
-      <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QByteArray</type>
@@ -32187,11 +32194,25 @@
       <arglist>(const QByteArray &amp;resourceId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetResourceName</name>
+      <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
+      <anchor>a0fe7af9358aeb2c4f832fe04906df723</anchor>
+      <arglist>(const QByteArray &amp;resourceId) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>SetResourceName</name>
       <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
       <anchor>a9d7ebdeac9391a79637cb46b4c3a7cb2</anchor>
       <arglist>(const QByteArray &amp;resourceId, const QString &amp;name)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetResourceDescription</name>
+      <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
+      <anchor>a054413a75b7b358382b0660be63871f4</anchor>
+      <arglist>(const QByteArray &amp;resourceId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
