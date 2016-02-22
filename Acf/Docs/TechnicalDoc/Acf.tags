@@ -8134,8 +8134,8 @@
       <type>void</type>
       <name>SetInnerOuterRadius</name>
       <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
-      <anchor>acfa6c68c6bf1221145357ab1b24f98a6</anchor>
-      <arglist>(double innerRadius, double outerRadius)</arglist>
+      <anchor>af26898a44b5163d04377d41ac1b773ff</anchor>
+      <arglist>(double radius1, double radius2)</arglist>
     </member>
     <member kind="function">
       <type>CCircle</type>
@@ -13080,13 +13080,6 @@
       <anchorfile>classi2d_1_1_c_vector2d.html</anchorfile>
       <anchor>a5c3e1fa675ec8980b61823d5d0a26377</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator==</name>
-      <anchorfile>classi2d_1_1_c_vector2d.html</anchorfile>
-      <anchor>a5c97c5f4b19795f3beb40deb07b09df6</anchor>
-      <arglist>(const CVector2d &amp;vector) const </arglist>
     </member>
     <member kind="function">
       <type>CVector2d</type>
