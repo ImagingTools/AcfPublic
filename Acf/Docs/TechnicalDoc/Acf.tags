@@ -10300,6 +10300,27 @@
     </member>
     <member kind="function">
       <type>CMatrix2d</type>
+      <name>operator+</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>a45aa26ac331a133e8d643a5fc2c0713b</anchor>
+      <arglist>(const BaseClass &amp;matrix) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CMatrix2d</type>
+      <name>operator-</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>a9d893644d7171f746677f4de27b76b53</anchor>
+      <arglist>(const BaseClass &amp;matrix) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CMatrix2d</type>
+      <name>operator-</name>
+      <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
+      <anchor>a08d2c496fd955ec3bb64c827247cc84c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>CMatrix2d</type>
       <name>operator*</name>
       <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
       <anchor>aad730e1191cca2a9157f4c04e58aa4a8</anchor>
@@ -10619,6 +10640,27 @@
       <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
       <anchor>a2bb5b7ed96c113150e5644309a99bc04</anchor>
       <arglist>(double value) const</arglist>
+    </member>
+    <member kind="function">
+      <type>TMatrix&lt; Width, Height, double &gt; &amp;</type>
+      <name>operator+=</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>a861a573fc0c91d39aec877a18d3eb7ef</anchor>
+      <arglist>(const TMatrix&lt; Width, Height, double &gt; &amp;matrix)</arglist>
+    </member>
+    <member kind="function">
+      <type>TMatrix&lt; Width, Height, double &gt; &amp;</type>
+      <name>operator-=</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>a35600e39a509f6cf4b985f0017a0cec2</anchor>
+      <arglist>(const TMatrix&lt; Width, Height, double &gt; &amp;matrix)</arglist>
+    </member>
+    <member kind="function">
+      <type>TMatrix&lt; Width, Height, double &gt; &amp;</type>
+      <name>operator*=</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>a74084217a55f74e3f4b236eb054f3688</anchor>
+      <arglist>(double value)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -14435,6 +14477,27 @@
       <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
       <anchor>a2bb5b7ed96c113150e5644309a99bc04</anchor>
       <arglist>(double value) const</arglist>
+    </member>
+    <member kind="function">
+      <type>TMatrix&lt; Width, Height, double &gt; &amp;</type>
+      <name>operator+=</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>a861a573fc0c91d39aec877a18d3eb7ef</anchor>
+      <arglist>(const TMatrix&lt; Width, Height, double &gt; &amp;matrix)</arglist>
+    </member>
+    <member kind="function">
+      <type>TMatrix&lt; Width, Height, double &gt; &amp;</type>
+      <name>operator-=</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>a35600e39a509f6cf4b985f0017a0cec2</anchor>
+      <arglist>(const TMatrix&lt; Width, Height, double &gt; &amp;matrix)</arglist>
+    </member>
+    <member kind="function">
+      <type>TMatrix&lt; Width, Height, double &gt; &amp;</type>
+      <name>operator*=</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>a74084217a55f74e3f4b236eb054f3688</anchor>
+      <arglist>(double value)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -40290,6 +40353,27 @@
       <arglist>(double value) const </arglist>
     </member>
     <member kind="function">
+      <type>TMatrix&lt; Width, Height, Element &gt; &amp;</type>
+      <name>operator+=</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>a861a573fc0c91d39aec877a18d3eb7ef</anchor>
+      <arglist>(const TMatrix&lt; Width, Height, Element &gt; &amp;matrix)</arglist>
+    </member>
+    <member kind="function">
+      <type>TMatrix&lt; Width, Height, Element &gt; &amp;</type>
+      <name>operator-=</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>a35600e39a509f6cf4b985f0017a0cec2</anchor>
+      <arglist>(const TMatrix&lt; Width, Height, Element &gt; &amp;matrix)</arglist>
+    </member>
+    <member kind="function">
+      <type>TMatrix&lt; Width, Height, Element &gt; &amp;</type>
+      <name>operator*=</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>a74084217a55f74e3f4b236eb054f3688</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function">
       <type>bool</type>
       <name>operator==</name>
       <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
@@ -59559,6 +59643,20 @@
       <anchorfile>classistd_1_1_c_system.html</anchorfile>
       <anchor>af504c48d0de808166c90d8cea2db2682</anchor>
       <arglist>(const QString &amp;fileDrivePath)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QString</type>
+      <name>GetCompilerVariable</name>
+      <anchorfile>classistd_1_1_c_system.html</anchorfile>
+      <anchor>ac61a13d714d168333e7fe2fac9118280</anchor>
+      <arglist>(const QString &amp;varName)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>SetUserVariables</name>
+      <anchorfile>classistd_1_1_c_system.html</anchorfile>
+      <anchor>aaf887d89d7e291c2c7bb8e7822d002e6</anchor>
+      <arglist>(const QString &amp;compilerMode, const QString &amp;compilerName, const QString &amp;platformCode)</arglist>
     </member>
   </compound>
   <compound kind="struct">

@@ -39,8 +39,6 @@ namespace iview
 class CAffineTransformation2dShape: public CInteractiveShapeBase
 {
 public:
-
-
 	enum ControlPoint
 	{
 		NO_POINT = 0,
