@@ -13056,11 +13056,32 @@
       <arglist>(int folderDepth)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetFileTimestampMode</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
+      <anchor>a04d5ec42eab20279156d08eb0af9b9ca</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetFileTimestampMode</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
+      <anchor>a4cfcbcef06dff56a549472a649d959df</anchor>
+      <arglist>(int fileTimestampMode)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
       <anchor>a4b7e6d06c734ab27994d3b3a58b40efe</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_DECLARE_ENUM</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>a2333905660a03c6d703ed62c58054474</anchor>
+      <arglist>(FileTimestampMode, FTM_MODIFIED, FTM_CREATED)</arglist>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -13137,6 +13158,27 @@
       <name>OC_ALL</name>
       <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
       <anchor>aab9a67f159dcfee92c8c5bc4714f0eebaf0a2a07efc2f4f0b5a851383c8a0f9ff</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>FileTimestampMode</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>a345c35892ea9c27727a526e66a9116b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>FTM_MODIFIED</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>a345c35892ea9c27727a526e66a9116b8a9eea93ab544f39a03e700666770f3694</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>FTM_CREATED</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>a345c35892ea9c27727a526e66a9116b8a7ed24a94e9d10bf86f464cf3f208d556</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -13464,6 +13506,20 @@
       <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
       <anchor>ae914068939a6369add48cd7cae3fda1b</anchor>
       <arglist>(int folderDepth)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetFileTimestampMode</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>a80def5eb267a747ce888aee081154db0</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetFileTimestampMode</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>acbc07421486a777dd50ef592479974d9</anchor>
+      <arglist>(int fileTimestampMode)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
