@@ -3687,6 +3687,7 @@
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_params_manager_comp_base_8h</filename>
     <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
+    <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="yes" imported="no">imod/TModelWrap.h</includes>
     <includes id="_c_multi_model_bridge_base_8h" name="CMultiModelBridgeBase.h" local="yes" imported="no">imod/CMultiModelBridgeBase.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="yes" imported="no">iprm/IParamsSet.h</includes>
@@ -3697,6 +3698,7 @@
     <class kind="class">iprm::CParamsManagerCompBaseAttr</class>
     <class kind="class">iprm::CParamsManagerCompBase</class>
     <class kind="class">iprm::CParamsManagerCompBase::ParamSet</class>
+    <class kind="class">iprm::CParamsManagerCompBase::SelectedParams</class>
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
@@ -8731,11 +8733,11 @@
       <anchor>a6d1242b3528e7742d741661f17d9c3d8</anchor>
       <arglist>(const CCircle &amp;circle) const </arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
       <name>ConvertToPolygon</name>
       <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>a1bd51be54da0bb03d4bbbfd27729363d</anchor>
+      <anchor>a864d422481cd4f51dbd97468d1908907</anchor>
       <arglist>(i2d::CPolygon &amp;result, int segmentsCount=0) const </arglist>
     </member>
     <member kind="function">
@@ -10928,6 +10930,13 @@
       <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
       <anchor>aafe2b3bf6e4991c8896ddec076e21beb</anchor>
       <arglist>(const COrientedCircle &amp;circle) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ConvertToPolygon</name>
+      <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
+      <anchor>a7b9a96e107f0f61cb16af368c5a902c2</anchor>
+      <arglist>(i2d::CPolygon &amp;result, int segmentsCount=0) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -43328,6 +43337,7 @@
     <base virtualness="virtual">iprm::IOptionsManager</base>
     <base protection="protected">imod::CMultiModelBridgeBase</base>
     <class kind="class">iprm::CParamsManagerCompBase::ParamSet</class>
+    <class kind="class">iprm::CParamsManagerCompBase::SelectedParams</class>
     <member kind="function" virtualness="pure">
       <type>virtual const IOptionsList *</type>
       <name>GetParamsTypeConstraints</name>
@@ -43409,6 +43419,7 @@
   <compound kind="class">
     <name>iprm::CParamsManagerCompBase::ParamSet</name>
     <filename>classiprm_1_1_c_params_manager_comp_base_1_1_param_set.html</filename>
+    <base>imod::CMultiModelBridgeBase</base>
     <base virtualness="virtual">iprm::IParamsSet</base>
     <base virtualness="virtual">iprm::ISelectionParam</base>
     <base virtualness="virtual">iprm::INameParam</base>
@@ -43550,6 +43561,60 @@
       <name>parentPtr</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set.html</anchorfile>
       <anchor>a38d2503d1da843cb352d97614cbfc201</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprm::CParamsManagerCompBase::SelectedParams</name>
+    <filename>classiprm_1_1_c_params_manager_comp_base_1_1_selected_params.html</filename>
+    <base virtualness="virtual">iprm::IParamsSet</base>
+    <member kind="function">
+      <type></type>
+      <name>SelectedParams</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_selected_params.html</anchorfile>
+      <anchor>a3d49a6093d9e2fe4f443c9d196cabfbb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Ids</type>
+      <name>GetParamIds</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_selected_params.html</anchorfile>
+      <anchor>a29f4eee7d3a5bdad33306f1158b486d9</anchor>
+      <arglist>(bool editableOnly=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iser::ISerializable *</type>
+      <name>GetParameter</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_selected_params.html</anchorfile>
+      <anchor>a599a2118d206dbaf69271434670abb24</anchor>
+      <arglist>(const QByteArray &amp;id) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iser::ISerializable *</type>
+      <name>GetEditableParameter</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_selected_params.html</anchorfile>
+      <anchor>af7552e56c084c6fd39da3039e5354df9</anchor>
+      <arglist>(const QByteArray &amp;id)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_selected_params.html</anchorfile>
+      <anchor>a72daa2d250624392b4c19a2bad739ff5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_selected_params.html</anchorfile>
+      <anchor>a9bcbfe3625ffea280201b4e5939f3dd9</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="variable">
+      <type>CParamsManagerCompBase *</type>
+      <name>parentPtr</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_selected_params.html</anchorfile>
+      <anchor>adf749241421140a1b1d6a41cfd43f993</anchor>
       <arglist></arglist>
     </member>
   </compound>

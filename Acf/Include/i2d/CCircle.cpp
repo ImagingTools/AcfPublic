@@ -107,7 +107,7 @@ bool CCircle::ConvertToPolygon(i2d::CPolygon& result, int segmentsCount) const
 	result.SetCalibration(aoiCalibrationPtr);
 
 	// at least 3 segments
-	int stepsCount = segmentsCount < 3 ? int(radius * I_PI + 1) : segmentsCount;
+	int stepsCount = segmentsCount < 3 ? int(radius * I_PI + 1) * 2 : segmentsCount;
 	if (stepsCount < 3)
 		return false;
 
