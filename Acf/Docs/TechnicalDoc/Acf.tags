@@ -2168,6 +2168,15 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>CApplicationInfoBasedFileNameComp.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_application_info_based_file_name_comp_8h</filename>
+    <includes id="_c_relative_file_name_param_comp_8h" name="CRelativeFileNameParamComp.h" local="yes" imported="no">ifile/CRelativeFileNameParamComp.h</includes>
+    <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="yes" imported="no">ibase/IApplicationInfo.h</includes>
+    <class kind="class">ifile::CApplicationInfoBasedFileNameComp</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
     <name>CAutoPersistenceComp.h</name>
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_c_auto_persistence_comp_8h</filename>
@@ -29429,6 +29438,7 @@
   <compound kind="namespace">
     <name>ifile</name>
     <filename>namespaceifile.html</filename>
+    <class kind="class">ifile::CApplicationInfoBasedFileNameComp</class>
     <class kind="class">ifile::CAutoPersistenceComp</class>
     <class kind="class">ifile::CCompactXmlFileReadArchive</class>
     <class kind="class">ifile::CCompactXmlFileWriteArchive</class>
@@ -29463,6 +29473,123 @@
     <class kind="class">ifile::IRelativeFilePath</class>
     <class kind="class">ifile::TFileSerializerComp</class>
     <class kind="class">ifile::TXmlFileSerializerComp</class>
+  </compound>
+  <compound kind="class">
+    <name>ifile::CApplicationInfoBasedFileNameComp</name>
+    <filename>classifile_1_1_c_application_info_based_file_name_comp.html</filename>
+    <base>ifile::CRelativeFileNameParamComp</base>
+    <member kind="typedef">
+      <type>ifile::CRelativeFileNameParamComp</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_application_info_based_file_name_comp.html</anchorfile>
+      <anchor>ae71092e5c682dd97eaf1025f79d5240c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ifile::CFileNameParamComp</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
+      <anchor>ae0bc05b807c6b3e2c2d7daa6053e2181</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>PathType</name>
+      <anchorfile>classifile_1_1_i_file_name_param.html</anchorfile>
+      <anchor>a97065a34f97c22bf0426dee91b574233</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PT_UNKNOWN</name>
+      <anchorfile>classifile_1_1_i_file_name_param.html</anchorfile>
+      <anchor>a97065a34f97c22bf0426dee91b574233a69ea3cd1b252410b35793147aed4ca72</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PT_FILE</name>
+      <anchorfile>classifile_1_1_i_file_name_param.html</anchorfile>
+      <anchor>a97065a34f97c22bf0426dee91b574233ac6d1bfe787beaad1e522aee73d3e179c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PT_DIRECTORY</name>
+      <anchorfile>classifile_1_1_i_file_name_param.html</anchorfile>
+      <anchor>a97065a34f97c22bf0426dee91b574233ac2f6f5f0c409ad2e3a7c731fdac00589</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PT_URL</name>
+      <anchorfile>classifile_1_1_i_file_name_param.html</anchorfile>
+      <anchor>a97065a34f97c22bf0426dee91b574233a62633ab94bb960da2ea71268e14729a2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_file_name_param_comp.html</anchorfile>
+      <anchor>a54916fac30870586074c12eb2c83acbb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QString &amp;</type>
+      <name>GetPath</name>
+      <anchorfile>classifile_1_1_c_application_info_based_file_name_comp.html</anchorfile>
+      <anchor>a78912026b33eafdb28db91ebb3fea730</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CRelativeFileNameParamComp</name>
+      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
+      <anchor>aacaf35c9c4a6d06dd33befae97f69cb1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetBasePath</name>
+      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
+      <anchor>a32cb34de774c9e6b10aba5d74104eca8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPath</name>
+      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
+      <anchor>a19b054baae0c48d9405552525dfd33fb</anchor>
+      <arglist>(const QString &amp;path)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
+      <anchor>a31db3271b593e7df6e578c8ed171d29b</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
+      <anchor>a946a504308522c3c3df474b877343720</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
+      <anchor>a5d4caa6adb4fa980a476cfe3b0bbe05f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPathType</name>
+      <anchorfile>classifile_1_1_c_file_name_param_comp.html</anchorfile>
+      <anchor>a63b266e2943b72a665fdc113be7aeabe</anchor>
+      <arglist>() const </arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>ifile::CAutoPersistenceComp</name>
@@ -30559,55 +30686,6 @@
     <filename>classifile_1_1_c_file_name_param_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base virtualness="virtual">ifile::IFileNameParam</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classifile_1_1_c_file_name_param_comp.html</anchorfile>
-      <anchor>a54916fac30870586074c12eb2c83acbb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>PathType</name>
-      <anchorfile>classifile_1_1_i_file_name_param.html</anchorfile>
-      <anchor>a97065a34f97c22bf0426dee91b574233</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PT_UNKNOWN</name>
-      <anchorfile>classifile_1_1_i_file_name_param.html</anchorfile>
-      <anchor>a97065a34f97c22bf0426dee91b574233a69ea3cd1b252410b35793147aed4ca72</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PT_FILE</name>
-      <anchorfile>classifile_1_1_i_file_name_param.html</anchorfile>
-      <anchor>a97065a34f97c22bf0426dee91b574233ac6d1bfe787beaad1e522aee73d3e179c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PT_DIRECTORY</name>
-      <anchorfile>classifile_1_1_i_file_name_param.html</anchorfile>
-      <anchor>a97065a34f97c22bf0426dee91b574233ac2f6f5f0c409ad2e3a7c731fdac00589</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PT_URL</name>
-      <anchorfile>classifile_1_1_i_file_name_param.html</anchorfile>
-      <anchor>a97065a34f97c22bf0426dee91b574233a62633ab94bb960da2ea71268e14729a2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetPathType</name>
-      <anchorfile>classifile_1_1_c_file_name_param_comp.html</anchorfile>
-      <anchor>a63b266e2943b72a665fdc113be7aeabe</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
       <name>GetPath</name>
@@ -31493,13 +31571,6 @@
       <anchor>a590fd3e388adbdb4dc9bf584b9c9cd2a</anchor>
       <arglist></arglist>
     </member>
-    <member kind="typedef">
-      <type>ifile::CFileNameParamComp</type>
-      <name>BaseClass</name>
-      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
-      <anchor>ae0bc05b807c6b3e2c2d7daa6053e2181</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetPath</name>
@@ -31542,33 +31613,12 @@
       <anchor>aa796620cca275e7834d7a0d5599f73af</anchor>
       <arglist>() const</arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>CRelativeFileNameParamComp</name>
-      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
-      <anchor>aacaf35c9c4a6d06dd33befae97f69cb1</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetBasePath</name>
-      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
-      <anchor>a32cb34de774c9e6b10aba5d74104eca8</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
       <name>GetPath</name>
       <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
       <anchor>af81764c97d1218d16dbd14a31ce9510e</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
-      <anchor>a31db3271b593e7df6e578c8ed171d29b</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -31682,27 +31732,6 @@
     <base virtualness="virtual">ifile::IRelativeFilePath</base>
     <base>ifile::CFileNameParamComp</base>
     <base protection="protected">imod::CMultiModelBridgeBase</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetPath</name>
-      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
-      <anchor>a19b054baae0c48d9405552525dfd33fb</anchor>
-      <arglist>(const QString &amp;path)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
-      <anchor>a946a504308522c3c3df474b877343720</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
-      <anchor>a5d4caa6adb4fa980a476cfe3b0bbe05f</anchor>
-      <arglist>()</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>ifile::CSimpleXmlFileReadArchive</name>
@@ -73616,6 +73645,7 @@
     <name>Include/ifile</name>
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>dir_ac30d199f176b6715a62fdb8ea793a38.html</filename>
+    <file>CApplicationInfoBasedFileNameComp.h</file>
     <file>CAutoPersistenceComp.h</file>
     <file>CCompactXmlFileReadArchive.h</file>
     <file>CCompactXmlFileWriteArchive.h</file>
