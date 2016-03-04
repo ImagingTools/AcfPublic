@@ -110,6 +110,12 @@ I_EXPORT_COMPONENT(
 			"Timestamp-based file name generation", 
 			"Time File Name")
 
+I_EXPORT_COMPONENT(
+            SystemRelativeFileNameParam,
+            "System dependent relative file name param",
+            "System Relative File Name")
+            
+
 
 } // namespace FilePck
 
