@@ -35860,11 +35860,25 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>a6eb71c24f8fedce74d146392e14dc5ae</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
       <anchor>a05d8995c947602a97f7c5f54c9abd32d</anchor>
       <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEqual</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>a71533bfdca3656dbf166d0c4859d3c36</anchor>
+      <arglist>(const istd::IChangeable &amp;object) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
