@@ -116,8 +116,9 @@ private:
 	bool ConnectToParameterModel(const iprm::IParamsSet& paramsSet);
 	void DisconnectFromParameterModel();
 	void UpdateMonitoringSession() const;
-	bool HasFileAccess(const QString& filePath, FileAccessInfo* lastFileAccessInfoPtr = NULL) const;
+	bool HasFileAccess(const QString& filePath, FileAccessInfo& lastFileAccessInfo) const;
 	bool CheckFileAccess(const QString& filePath) const;
+	QDateTime GetLastAccessTime(const QFileInfo& fileInfo) const;
 
 private:
 	struct FileSystemChanges
@@ -169,7 +170,8 @@ private:
 		{
 		}
 
-		QDateTime accessTimeStamp;
+		QDateTime checkTimeStamp;
+		QDateTime lastAccessTimeStamp;
 		qint64 fileSize;
 	};
 
