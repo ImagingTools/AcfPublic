@@ -59752,6 +59752,13 @@
       <anchor>aaf887d89d7e291c2c7bb8e7822d002e6</anchor>
       <arglist>(const QString &amp;compilerMode, const QString &amp;compilerName, const QString &amp;platformCode)</arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static QString</type>
+      <name>ConvertLocalPathToUnc</name>
+      <anchorfile>classistd_1_1_c_system.html</anchorfile>
+      <anchor>aaaa36204b0bd1ec1b280de472901f457</anchor>
+      <arglist>(const QString &amp;localPath)</arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>istd::CSystem::FileDriveInfo</name>
