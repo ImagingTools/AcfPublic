@@ -128,6 +128,7 @@
     <ClCompile Include="..\CSelectionParamCameraComp.cpp" />
     <ClCompile Include="..\CSnapBitmapSupplierComp.cpp" />
     <ClCompile Include="..\CSnapBitmapSupplierCompBase.cpp" />
+    <ClCompile Include="..\CSnapMultiPageBitmapSupplierComp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CAcquisitionConstraintsComp.h" />
@@ -140,6 +141,7 @@
     <ClInclude Include="..\CSelectionParamCameraComp.h" />
     <ClInclude Include="..\CSnapBitmapSupplierComp.h" />
     <ClInclude Include="..\CSnapBitmapSupplierCompBase.h" />
+    <ClInclude Include="..\CSnapMultiPageBitmapSupplierComp.h" />
     <ClInclude Include="..\IBitmapAcquisition.h" />
     <ClInclude Include="..\ICameraInfo.h" />
     <ClInclude Include="..\IExposureConstraints.h" />
