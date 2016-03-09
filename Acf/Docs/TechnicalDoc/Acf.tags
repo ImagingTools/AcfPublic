@@ -46441,6 +46441,13 @@
       <anchor>a18ae2fd2b1f0fcfbc4ac53b0074d9576</anchor>
       <arglist>(const i2d::CVector2d &amp;screenPosition) const </arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>double</type>
+      <name>GetLocalLineWidth</name>
+      <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
+      <anchor>a35b21ac7dd55dc98dbc9bca430c01fa4</anchor>
+      <arglist>(const i2d::CVector2d &amp;screenPosition) const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsDisplayChangeImportant</name>
@@ -64085,13 +64092,6 @@
       <anchorfile>classiview_1_1_c_annulus_segment_shape.html</anchorfile>
       <anchor>abefeef46d3c6b030cba688fae65bfddf</anchor>
       <arglist>(const i2d::CVector2d &amp;center, const QPointF &amp;point) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>DrawAnnulus</name>
-      <anchorfile>classiview_1_1_c_annulus_shape.html</anchorfile>
-      <anchor>a67815d1ee1eae15e3c216a3e2d00c0bb</anchor>
-      <arglist>(QPainter &amp;painter, istd::CIndex2d center, int minRadius1, int maxRadius1, bool fillFlag=true) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual i2d::CRect</type>
