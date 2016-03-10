@@ -35,8 +35,6 @@
 #include "iser/CArchiveTag.h"
 
 
-
-
 namespace ifile
 {
 
@@ -126,16 +124,15 @@ void CFileNameParamComp::OnComponentCreated()
 		m_path.replace(s_companyNameVariable, organizationName);
 	}
 
-    if (m_path.contains(s_publicSharedPathVariable)){
-
+	if (m_path.contains(s_publicSharedPathVariable)){
 #ifdef Q_OS_WIN
-        QString publicSharedFolder("C:/Users/Public");
+		QString publicSharedFolder("C:/Users/Public");
 #else
-        QString publicSharedFolder("/Users/Shared");
+		QString publicSharedFolder("/Users/Shared");
 #endif
 
-        m_path.replace(s_publicSharedPathVariable, publicSharedFolder);
-    }
+		m_path.replace(s_publicSharedPathVariable, publicSharedFolder);
+	}
 }
 
 

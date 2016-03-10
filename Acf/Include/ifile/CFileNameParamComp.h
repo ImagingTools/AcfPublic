@@ -76,7 +76,7 @@ private:
 	static QString s_tempPathVariable;
 	static QString s_appNameVariable;
 	static QString s_companyNameVariable;
-    static QString s_publicSharedPathVariable;
+	static QString s_publicSharedPathVariable;
 };
 
 
