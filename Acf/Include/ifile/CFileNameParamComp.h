@@ -36,6 +36,10 @@ namespace ifile
 
 /**
 	Basic implementation of interface ifile::IFileNameParam as component.
+	The attribute 'DefaultPath' can contain folowing variables:
+	* $(TempPath) - Temp path using by application (can be user-specific)
+	* $(AppName) - Name of the application
+	* $(CompanyName) - Name of the company
 */
 class CFileNameParamComp:
 			public icomp::CComponentBase,
@@ -68,6 +72,10 @@ private:
 
 	I_ATTR(QString, m_defaultDirAttrPtr);
 	I_ATTR(int, m_pathTypeAttrPtr);
+
+	static QString s_tempPathVariable;
+	static QString s_appNameVariable;
+	static QString s_companyNameVariable;
 };
 
 

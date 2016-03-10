@@ -50,7 +50,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">
     <ClCompile>
-      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\Include&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtConcurrent&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\FilePck&quot;;$(QTDIR)\mkspecs\win32-msvc2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\Include&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtXml&quot;;&quot;$(QTDIR)\include\QtConcurrent&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\FilePck&quot;;$(QTDIR)\mkspecs\win32-msvc2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 -FS /MP /bigobj /Qpar /Gw /FS %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Debug\FilePck\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -62,7 +62,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <ObjectFileName>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Debug\FilePck\</ObjectFileName>
       <OpenMPSupport>false</OpenMPSupport>
-      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_WIDGETS_LIB;QT_CONCURRENT_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_WIDGETS_LIB;QT_XML_LIB;QT_CONCURRENT_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessToFile>false</PreprocessToFile>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
@@ -71,7 +71,7 @@
       <WarningLevel>Level4</WarningLevel>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\iqt.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\ipackage.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\idoc.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\ifile.lib;$(QTDIR)\lib\Qt5Svgd.lib;$(QTDIR)\lib\Qt5XmlPatternsd.lib;$(QTDIR)\lib\Qt5Networkd.lib;$(QTDIR)\lib\Qt5Xmld.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\iimg.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\icmm.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\i2d.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\ibase.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\iprm.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\ilog.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\icomp.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\iser.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\imod.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\imath.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\istd.lib;glu32.lib;opengl32.lib;gdi32.lib;user32.lib;Mpr.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5Concurrentd.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\iqt.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\ipackage.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\idoc.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\ifile.lib;$(QTDIR)\lib\Qt5Svgd.lib;$(QTDIR)\lib\Qt5XmlPatternsd.lib;$(QTDIR)\lib\Qt5Networkd.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\iimg.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\icmm.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\i2d.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\ibase.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\iprm.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\ilog.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\icomp.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\iser.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\imod.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\imath.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12\istd.lib;glu32.lib;opengl32.lib;gdi32.lib;user32.lib;Mpr.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5Xmld.lib;$(QTDIR)\lib\Qt5Concurrentd.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\..\Impl\FilePck\QMake\..\..\..\Lib\DebugVC12;..\..\..\Config\QMake\..\..\Lib\DebugVC12;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -87,12 +87,12 @@
       <WarningLevel>0</WarningLevel>
     </Midl>
     <ResourceCompile>
-      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_WIDGETS_LIB;QT_CONCURRENT_LIB;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_WIDGETS_LIB;QT_XML_LIB;QT_CONCURRENT_LIB;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">
     <ClCompile>
-      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\Include&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtConcurrent&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\FilePck&quot;;$(QTDIR)\mkspecs\win32-msvc2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\Include&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtXml&quot;;&quot;$(QTDIR)\include\QtConcurrent&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\FilePck&quot;;$(QTDIR)\mkspecs\win32-msvc2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 -FS /MP /bigobj /Qpar /Gw /FS %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Release\FilePck\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -104,7 +104,7 @@
       <ObjectFileName>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Release\FilePck\</ObjectFileName>
       <OpenMPSupport>false</OpenMPSupport>
       <Optimization>MaxSpeed</Optimization>
-      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_CONCURRENT_LIB;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_XML_LIB;QT_CONCURRENT_LIB;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessToFile>false</PreprocessToFile>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
@@ -113,7 +113,7 @@
       <WarningLevel>Level4</WarningLevel>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\iqt.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\ipackage.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\idoc.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\ifile.lib;$(QTDIR)\lib\Qt5Svg.lib;$(QTDIR)\lib\Qt5XmlPatterns.lib;$(QTDIR)\lib\Qt5Network.lib;$(QTDIR)\lib\Qt5Xml.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\iimg.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\icmm.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\i2d.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\ibase.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\iprm.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\ilog.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\icomp.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\iser.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\imod.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\imath.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\istd.lib;glu32.lib;opengl32.lib;gdi32.lib;user32.lib;Mpr.lib;$(QTDIR)\lib\Qt5Widgets.lib;$(QTDIR)\lib\Qt5Concurrent.lib;$(QTDIR)\lib\Qt5Gui.lib;$(QTDIR)\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\iqt.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\ipackage.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\idoc.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\ifile.lib;$(QTDIR)\lib\Qt5Svg.lib;$(QTDIR)\lib\Qt5XmlPatterns.lib;$(QTDIR)\lib\Qt5Network.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\iimg.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\icmm.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\i2d.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\ibase.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\iprm.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\ilog.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\icomp.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\iser.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\imod.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\imath.lib;..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12\istd.lib;glu32.lib;opengl32.lib;gdi32.lib;user32.lib;Mpr.lib;$(QTDIR)\lib\Qt5Widgets.lib;$(QTDIR)\lib\Qt5Xml.lib;$(QTDIR)\lib\Qt5Concurrent.lib;$(QTDIR)\lib\Qt5Gui.lib;$(QTDIR)\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\..\Impl\FilePck\QMake\..\..\..\Lib\ReleaseVC12;..\..\..\Config\QMake\..\..\Lib\ReleaseVC12;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -130,7 +130,7 @@
       <WarningLevel>0</WarningLevel>
     </Midl>
     <ResourceCompile>
-      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_CONCURRENT_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_XML_LIB;QT_CONCURRENT_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
