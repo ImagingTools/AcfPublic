@@ -107,7 +107,7 @@ void CSimpleFilePathParamGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& 
 void CSimpleFilePathParamGuiComp::OnGuiCreated()
 {
 	DirectoryLabel->setVisible(false);
-	PathLabel->setVisible(m_pathLabelAttrPtr.IsValid());
+	PathLabel->setVisible(false);
 	UrlLabel->setVisible(false);
 	BrowseButton->setVisible(*m_showBrowseButtonAttrPtr);
 
