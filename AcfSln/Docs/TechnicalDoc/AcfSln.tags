@@ -5514,6 +5514,13 @@
       <arglist>(iimg::IBitmap &amp;bitmap, double resolution)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const iprm::IParamsSet *</type>
+      <name>GetWorkingParamsSet</name>
+      <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
+      <anchor>af4301d83b9059ea7254f6a3d81bee15e</anchor>
+      <arglist>(const iprm::IParamsSet *inputParamsPtr) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>

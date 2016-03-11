@@ -26,6 +26,7 @@
 
 // ACF includes
 #include "ilog/TLoggerCompWrap.h"
+#include "iprm/IParamsSet.h"
 
 // ACF-Solutions includes
 #include "icam/IBitmapAcquisition.h"
@@ -50,6 +51,7 @@ public:
 		I_REGISTER_INTERFACE(IBitmapAcquisition);
 		I_REGISTER_INTERFACE(iproc::IProcessor);
 		I_ASSIGN(m_slaveCameraCompPtr, "SlaveCamera", "Slave camera object", true, "SlaveCamera");
+		I_ASSIGN(m_parameterSetCompPtr, "ParamsSet", "Parameter set used for overriding of the input parameters", false, "ParamsSet");
 	I_END_COMPONENT;
 
 	// reimplemented (iipr::IBitmapAcquisition)
@@ -81,10 +83,14 @@ public:
 	virtual void InitProcessor(const iprm::IParamsSet* paramsPtr);
 
 protected:
+	virtual const iprm::IParamsSet* GetWorkingParamsSet(const iprm::IParamsSet* inputParamsPtr) const;
+
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();
 
+protected:
 	I_REF(IBitmapAcquisition, m_slaveCameraCompPtr);
+	I_REF(iprm::IParamsSet, m_parameterSetCompPtr);
 };
 
 
