@@ -34328,6 +34328,20 @@
       <anchor>a99b6c32efe101e940b4452e4a0fea984</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>int</type>
+      <name>CalcIndexFromCurrentId</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>a49a2f47378b9d9c2ad9c82cc03f1d498</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SyncIndexWithId</name>
+      <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
+      <anchor>a90c3f2198fe92e80f37950979ec37b45</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CSelectionParam</name>

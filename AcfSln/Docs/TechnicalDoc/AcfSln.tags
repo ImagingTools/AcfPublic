@@ -7509,6 +7509,13 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
+      <name>on_FilterEdit_textChanged</name>
+      <anchorfile>classicmpstr_1_1_c_convert_component_command_comp.html</anchorfile>
+      <anchor>ac4fb491720184f2276f293b0f5c16cbd</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
       <name>on_PackageNameCB_currentIndexChanged</name>
       <anchorfile>classicmpstr_1_1_c_convert_component_command_comp.html</anchorfile>
       <anchor>a8c9f6612724afb3d3c823773ba027df3</anchor>
@@ -26368,6 +26375,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
+      <anchor>a218a29d983c4de456221a29366dda07b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
       <anchor>a4f438f3020d29784b1221a7fc09357e1</anchor>
@@ -26487,6 +26501,13 @@
       <name>on_ValueSlider_valueChanged</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
       <anchor>a02af3b5f5b151fda2ebbe7321a126a9a</anchor>
+      <arglist>(int value)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ValueSlider_sliderMoved</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>a378f4ed67ede224d02ad74dd03372bfe</anchor>
       <arglist>(int value)</arglist>
     </member>
     <member kind="slot" protection="protected">

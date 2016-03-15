@@ -37,6 +37,7 @@
 // ACF includes
 #include "iser/CMemoryReadArchive.h"
 #include "iser/CMemoryWriteArchive.h"
+#include "icomp/CComponentMetaDescriptionEncoder.h"
 
 // ACF-Solutions includes
 #include "icmpstr/CVisualRegistryElement.h"
@@ -52,6 +53,10 @@ const istd::IChangeable::ChangeSet s_morphElementChangeSet(icomp::IRegistry::CF_
 CConvertComponentCommandComp::CConvertComponentCommandComp()
 {
 	setupUi(this);
+
+#if QT_VERSION >= 0x050200
+	FilterEdit->setClearButtonEnabled(true);
+#endif
 
 	DoRetranslate();
 
@@ -281,6 +286,8 @@ void CConvertComponentCommandComp::CalcFilteredComponents()
 		return;
 	}
 
+	QString textFilter = FilterEdit->text();
+
 	icomp::IMetaInfoManager::ComponentAddresses addresses = m_metaInfoManagerCompPtr->GetComponentAddresses();
 	for (		icomp::IMetaInfoManager::ComponentAddresses::ConstIterator addressIter = addresses.constBegin();
 				addressIter != addresses.constEnd();
@@ -343,6 +350,31 @@ void CConvertComponentCommandComp::CalcFilteredComponents()
 				}
 			}
 
+			if (!textFilter.isEmpty()){
+				bool filterFound = false;
+
+				icomp::CComponentMetaDescriptionEncoder encoder(staticInfoPtr->GetKeywords());
+
+				QStringList keywords;
+				keywords << address.GetComponentId();
+				keywords << encoder.GetValues();
+
+				for (		QStringList::const_iterator keywordIter = keywords.begin();
+							keywordIter != keywords.end();
+							++keywordIter){
+					const QString& keyword = *keywordIter;
+
+					if (keyword.contains(textFilter, Qt::CaseInsensitive)){
+						filterFound = true;
+						break;
+					}
+				}
+
+				if (!filterFound){
+					continue;
+				}
+			}
+
 			m_filteredComponents.insert(address);
 		}
 	}
@@ -393,6 +425,13 @@ void CConvertComponentCommandComp::on_AttributesPolicyCB_currentIndexChanged(int
 
 
 void CConvertComponentCommandComp::on_SubcomponentsPolicyCB_currentIndexChanged(int /*index*/)
+{
+	CalcFilteredComponents();
+	CreatePackagesList();
+}
+
+
+void CConvertComponentCommandComp::on_FilterEdit_textChanged(const QString& /*text*/)
 {
 	CalcFilteredComponents();
 	CreatePackagesList();
