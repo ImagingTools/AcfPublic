@@ -40,6 +40,8 @@ namespace ifile
 	* $(TempPath) - Temp path using by application (can be user-specific)
 	* $(AppName) - Name of the application
 	* $(CompanyName) - Name of the company
+	* $(PublicSharedPath) -	Public user folder
+	* $(UserHome) -	Current user's home folder
 */
 class CFileNameParamComp:
 			public icomp::CComponentBase,
@@ -77,6 +79,7 @@ private:
 	static QString s_appNameVariable;
 	static QString s_companyNameVariable;
 	static QString s_publicSharedPathVariable;
+	static QString s_userHomePathVariable;
 };
 
 

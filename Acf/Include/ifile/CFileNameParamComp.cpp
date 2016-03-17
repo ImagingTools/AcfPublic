@@ -133,6 +133,17 @@ void CFileNameParamComp::OnComponentCreated()
 
 		m_path.replace(s_publicSharedPathVariable, publicSharedFolder);
 	}
+
+	if (m_path.contains(s_userHomePathVariable)){
+		QString userHomePath;
+
+#if QT_VERSION < 0x050000
+		userHomePath = QDesktopServices::storageLocation(QDesktopServices::HomeLocation);
+#else
+		userHomePath = QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
+#endif
+		m_path.replace(s_userHomePathVariable, userHomePath);
+	}
 }
 
 
@@ -142,6 +153,7 @@ QString CFileNameParamComp::s_tempPathVariable = "$(TempPath)";
 QString CFileNameParamComp::s_appNameVariable = "$(AppName)";
 QString CFileNameParamComp::s_companyNameVariable = "$(CompanyName)";
 QString CFileNameParamComp::s_publicSharedPathVariable = "$(PublicSharedPath)";
+QString CFileNameParamComp::s_userHomePathVariable = "$(UserHome)";
 
 
 } // namespace ifile
