@@ -48267,6 +48267,13 @@
       <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqt2d_1_1_c_rectangle_params_gui_comp.html</anchorfile>
+      <anchor>ac8f3cf4412e91d678c9fb590fd3e4477</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual i2d::CRectangle *</type>
       <name>CastFromModel</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
@@ -70005,10 +70012,10 @@
       <arglist>(const istd::IChangeable *objectPtr, bool connectToModel=false) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual CInteractiveShapeBase *</type>
+      <type>virtual CShapeBase *</type>
       <name>CreateShapeInstance</name>
       <anchorfile>classiview_1_1_c_simple_shape_factory_comp.html</anchorfile>
-      <anchor>a381c1e11a57595347deff640bdb8911b</anchor>
+      <anchor>aea40d30400ecce1c3c0d9e8414e73fc7</anchor>
       <arglist>(const istd::IChangeable &amp;object) const </arglist>
     </member>
   </compound>
