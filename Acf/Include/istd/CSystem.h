@@ -160,7 +160,7 @@ public:
 	/**
 		Convert a local path to UNC representation.
 	*/
-	static QString ConvertLocalPathToUnc(const QString& localPath);
+	static QString ConvertNetworkPathToUnc(const QString& localPath);
 
 private:
 	static QString s_compilerMode;

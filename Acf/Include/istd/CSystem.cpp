@@ -491,7 +491,7 @@ void CSystem::SetUserVariables(const QString& compilerMode, const QString& compi
 }
 
 
-QString CSystem::ConvertLocalPathToUnc(const QString& localPath)
+QString CSystem::ConvertNetworkPathToUnc(const QString& localPath)
 {
 	QString uncPath = localPath;
 
