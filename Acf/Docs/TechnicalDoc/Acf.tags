@@ -59796,9 +59796,9 @@
     </member>
     <member kind="function" static="yes">
       <type>static QString</type>
-      <name>ConvertLocalPathToUnc</name>
+      <name>ConvertNetworkPathToUnc</name>
       <anchorfile>classistd_1_1_c_system.html</anchorfile>
-      <anchor>aaaa36204b0bd1ec1b280de472901f457</anchor>
+      <anchor>ac1dc709be9de1c25ede4507b90701343</anchor>
       <arglist>(const QString &amp;localPath)</arglist>
     </member>
   </compound>
