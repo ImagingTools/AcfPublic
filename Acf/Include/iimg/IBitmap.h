@@ -25,7 +25,7 @@
 
 
 // ACF includes
-#include "i2d/CRectangle.h"
+#include "i2d/CRect.h"
 #include "iimg/IRasterImage.h"
 
 
@@ -86,11 +86,6 @@ public:
 	};
 
 	/**
-		Create and copy bitmap region to the bitmap
-	*/
-	virtual bool CopyBitmapRegion(const iimg::IBitmap& sourceBitmap, const i2d::CRectangle& area) = 0;
-
-	/**
 		Get the bitmap's pixel format.
 		\sa PixelFormat
 	*/
@@ -120,6 +115,11 @@ public:
 		\param	linesDifference	address difference between next and previos line. If it equals 0, the value will be taken from size and number of bits per pixel.
 	*/
 	virtual bool CreateBitmap(PixelFormat pixelFormat, const istd::CIndex2d& size, void* dataPtr, bool releaseFlag, int linesDifference = 0) = 0;
+
+	/**
+		Create image as a copy of rectangular region of some other image.
+	*/
+	virtual bool CreateImageFromRegion(const iimg::IBitmap& sourceImage, const i2d::CRect& region) = 0;
 
 	/**
 		Number of bytes per single line.

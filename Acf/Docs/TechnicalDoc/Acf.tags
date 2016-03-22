@@ -2737,7 +2737,7 @@
     <name>IBitmap.h</name>
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>_i_bitmap_8h</filename>
-    <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
+    <includes id="_c_rect_8h" name="CRect.h" local="yes" imported="no">i2d/CRect.h</includes>
     <includes id="_i_raster_image_8h" name="IRasterImage.h" local="yes" imported="no">iimg/IRasterImage.h</includes>
     <class kind="class">iimg::IBitmap</class>
     <namespace>iimg</namespace>
@@ -33674,10 +33674,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>CopyBitmapRegion</name>
+      <name>CreateImageFromRegion</name>
       <anchorfile>classiimg_1_1_c_bitmap_base.html</anchorfile>
-      <anchor>a80d3335e447acb7db3bae57ed63eaec1</anchor>
-      <arglist>(const iimg::IBitmap &amp;sourceBitmap, const i2d::CRectangle &amp;area)</arglist>
+      <anchor>a59ee919f2cf9fb91865843908ee756ee</anchor>
+      <arglist>(const iimg::IBitmap &amp;sourceBitmap, const i2d::CRect &amp;region)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -35295,10 +35295,10 @@
     <base virtualness="virtual">iimg::IRasterImage</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
-      <name>CopyBitmapRegion</name>
+      <name>CreateImageFromRegion</name>
       <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
-      <anchor>a5c85a5da56ebf5e681416f434ecab2d2</anchor>
-      <arglist>(const iimg::IBitmap &amp;sourceBitmap, const i2d::CRectangle &amp;area)=0</arglist>
+      <anchor>a3e924080ea054f8300e58614101a9d8a</anchor>
+      <arglist>(const iimg::IBitmap &amp;sourceImage, const i2d::CRect &amp;region)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
