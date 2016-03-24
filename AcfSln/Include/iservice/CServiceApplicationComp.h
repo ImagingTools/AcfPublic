@@ -26,6 +26,8 @@
 
 // Qt includes
 #include <QtGui/QIcon>
+#include <QtCore/QList>
+#include <QtCore/QByteArray>
 #if QT_VERSION >= 0x050000
 #include <QtWidgets/QSystemTrayIcon>
 #else
@@ -111,7 +113,7 @@ protected:
 	private:
 		CServiceApplicationComp& m_parent;
 		ibase::IApplication& m_application;
-		QStringList m_applicationArguments;
+        QList<QByteArray>  m_applicationArguments;
 	};
 
 	istd::TDelPtr<CService> m_servicePtr;
