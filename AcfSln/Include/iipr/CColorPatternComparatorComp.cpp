@@ -1,25 +1,3 @@
-/********************************************************************************
-**
-**	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the ACF-Solutions Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.ilena.org or write info@imagingtools.de for further
-** 	information about the ACF.
-**
-********************************************************************************/
-
-
 #include "iipr/CColorPatternComparatorComp.h"
 
 
@@ -122,6 +100,27 @@ QString CColorPatternComparatorComp::GetInformationDescription() const
 		return QObject::tr("Color Check Successful");
 	}
 	
+	if (GetValuesCount()){
+		const imeas::INumericValue& result = GetNumericValue(0);
+		imath::CVarVector values = result.GetValues();
+		QString badString = ": ";
+		if (values.GetElementsCount() == 3){
+			badString += QString(" V>%1%").arg(values[2]*100, 2, 'f', 2);
+		}
+		else if (values.GetElementsCount() == 9){
+			if (values[6] >= 0){
+				badString += QString(" H>%1%").arg(values[6]*100, 2, 'f', 2);
+			}
+			if (values[7] >= 0){
+				badString += QString(" S>%1%").arg(values[7]*100, 2, 'f', 2);
+			}
+			if (values[8] >= 0){
+				badString += QString(" V>%1%").arg(values[8]*100, 2, 'f', 2);
+			}
+		}		
+		return QObject::tr("Color Check Failed") + badString;
+	}
+	
 	return QObject::tr("Color Check Failed");
 }
 
@@ -193,7 +192,7 @@ int CColorPatternComparatorComp::ProduceObject(ProductType& result) const
 	}
 
 	int workingSamplesCount = workingHistogramPtr->GetSamplesCount();
-	int taughtSamplesCount= taughtHistogramPtr->GetSamplesCount();
+	int taughtSamplesCount = taughtHistogramPtr->GetSamplesCount();
 	if (workingSamplesCount != taughtSamplesCount){
 		SendErrorMessage(0, "Working and taught histograms have different dimensions");
 
@@ -250,7 +249,7 @@ int CColorPatternComparatorComp::ProduceObject(ProductType& result) const
 			return WS_ERROR;
 		}
 
-		imath::CVarVector values(6);
+		imath::CVarVector values(9);
 		values[0] = workingHsvColor.GetHue();
 		values[1] = workingHsvColor.GetSaturation() * 255;
 		values[2] = workingHsvColor.GetValue() * 255;
@@ -258,8 +257,6 @@ int CColorPatternComparatorComp::ProduceObject(ProductType& result) const
 		values[3] = taughtHsvColor.GetHue();
 		values[4] = taughtHsvColor.GetSaturation() * 255;
 		values[5] = taughtHsvColor.GetValue() * 255;
-
-		result.SetValues(values);
 
 		i2d::CDirection2d taughtHue = i2d::CDirection2d::FromDegree(taughtHsvColor.GetHue());
 		i2d::CDirection2d workingHue = i2d::CDirection2d::FromDegree(workingHsvColor.GetHue());
@@ -276,6 +273,12 @@ int CColorPatternComparatorComp::ProduceObject(ProductType& result) const
 					(hueDifference <= maxHueDifference) && 
 					(saturationDifference <= maxSaturationDifference) && 
 					(valueDifference <= maxValueDifference);
+					
+		values[6] = (hueDifference <= maxHueDifference) ? -1 : maxHueDifference;
+		values[7] = (saturationDifference <= maxSaturationDifference) ? -1 : maxSaturationDifference;
+		values[8] = (valueDifference <= maxValueDifference) ? -1 : maxValueDifference;
+					
+		result.SetValues(values);
 	}
 	else if(channelsCount == 1){
 		const imeas::IDataStatistics* taughtStatisticsPtr = taughtStatistics.GetChannelStatistics(0);
@@ -290,9 +293,10 @@ int CColorPatternComparatorComp::ProduceObject(ProductType& result) const
 
 		m_isColorPatternMatched = (medianDifference <= thresholdValues[0]);
 
-		imath::CVarVector values(2);
+		imath::CVarVector values(3);
 		values[0] = workingMedian;
-		values[1] = taughtMedian;
+		values[1] = taughtMedian;		
+		values[2] = m_isColorPatternMatched ? -1 : thresholdValues[0];
 
 		result.SetValues(values);
 	}
