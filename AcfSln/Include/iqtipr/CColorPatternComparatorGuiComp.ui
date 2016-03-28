@@ -141,22 +141,17 @@
         </attribute>
         <column>
          <property name="text">
-          <string>Taught</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
           <string>Current</string>
          </property>
         </column>
         <column>
          <property name="text">
-          <string>Difference</string>
+          <string>Taught</string>
          </property>
         </column>
         <column>
          <property name="text">
-          <string>%</string>
+          <string>Difference (%)</string>
          </property>
         </column>
        </widget>

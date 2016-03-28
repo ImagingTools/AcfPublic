@@ -881,7 +881,7 @@ bool QtServiceBasePrivate::sysInit()
 	sysd->status.dwWin32ExitCode	= NO_ERROR;
 	sysd->status.dwServiceSpecificExitCode = 0;
 	sysd->status.dwCheckPoint	= 0;
-	sysd->status.dwWaitHint	= 60000; //CHANGED timeout 60 secs 
+	sysd->status.dwWaitHint	= 0;
 
 	return true;
 }

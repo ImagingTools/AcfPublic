@@ -1,3 +1,25 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
 #include "iqtipr/CColorPatternComparatorGuiComp.h"
 
 // Qt includes
@@ -87,7 +109,7 @@ void CColorPatternComparatorGuiComp::UpdateGui(const istd::IChangeable::ChangeSe
 			const imath::CVarVector& colorValues = value.GetValues();
 			int colorValuesCount = colorValues.GetElementsCount();
 
-			if (colorValuesCount == 3){
+			if (colorValuesCount == 2){
 				QTableWidgetItem* workingColorItem = new QTableWidgetItem(QString::number(colorValues[0]));
 				QTableWidgetItem* taughtColorItem = new QTableWidgetItem(QString::number(colorValues[1]));
 				workingColorItem->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
@@ -95,21 +117,16 @@ void CColorPatternComparatorGuiComp::UpdateGui(const istd::IChangeable::ChangeSe
 
 				double delta = colorValues[1] - colorValues[0];
 				double deltaRel = abs(delta) / 255;
-				QTableWidgetItem* diffItem = new QTableWidgetItem(QString("%1").arg(delta));
-				QTableWidgetItem* diffProcItem = new QTableWidgetItem(QString("%1%").arg(deltaRel * 100, 2, 'g', 2));
+				QTableWidgetItem* diffItem = new QTableWidgetItem(QString("%1 (%2%)").arg(delta).arg(deltaRel*100, 0, 'g', 2));
 
-				double errorValue = colorValues[2];
-				diffProcItem->setForeground(errorValue < 0 ? Qt::green : QColor("orange"));
-				
 				ColorTable->setRowCount(1);
-				ColorTable->setItem(0, 0, taughtColorItem);
-				ColorTable->setItem(0, 1, workingColorItem);
+				ColorTable->setItem(0, 0, workingColorItem);
+				ColorTable->setItem(0, 1, taughtColorItem);
 				ColorTable->setItem(0, 2, diffItem);
-				ColorTable->setItem(0, 3, diffProcItem);
 
 				ColorTable->verticalHeaderItem(0)->setText(tr("Grayvalue"));
 			}
-			else if(colorValuesCount == 9){
+			else if(colorValuesCount == 6){
 				ColorTable->setRowCount(3);
 
 			#if QT_VERSION < 0x050000
@@ -141,16 +158,11 @@ void CColorPatternComparatorGuiComp::UpdateGui(const istd::IChangeable::ChangeSe
 					workingColorItem->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
 					taughtColorItem->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
 
-					QTableWidgetItem* diffItem = new QTableWidgetItem(QString("%1").arg(delta, 2, 'f', 2));
-					QTableWidgetItem* diffProcItem = new QTableWidgetItem(QString("%1%").arg(deltaRel * 100, 2, 'f', 2));
-					
-					double errorValue = colorValues[i + 6];
-					diffProcItem->setForeground(errorValue < 0 ? Qt::green : QColor("orange"));
+					QTableWidgetItem* diffItem = new QTableWidgetItem(QString("%1 (%2%)").arg(delta, 2, 'f', 2).arg(deltaRel * 100, 2, 'f', 2));
 
-					ColorTable->setItem(i, 0, taughtColorItem);
-					ColorTable->setItem(i, 1, workingColorItem);
+					ColorTable->setItem(i, 0, workingColorItem);
+					ColorTable->setItem(i, 1, taughtColorItem);
 					ColorTable->setItem(i, 2, diffItem);
-					ColorTable->setItem(i, 3, diffProcItem);
 				}
 			}
 		}
