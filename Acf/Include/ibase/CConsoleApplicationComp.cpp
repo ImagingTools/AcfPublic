@@ -108,6 +108,8 @@ int CConsoleApplicationComp::Execute(int argc, char** argv)
 
 	m_runtimeStatus.SetRuntimeStatus(ibase::IRuntimeStatusProvider::RS_SHUTDOWN);
 
+	OnApplicationShutdown();
+
 	return retVal;
 }
 
@@ -125,6 +127,11 @@ QStringList CConsoleApplicationComp::GetApplicationArguments() const
 
 
 // protected methods
+
+void CConsoleApplicationComp::OnApplicationShutdown()
+{
+}
+
 
 // reimplemented (icomp::CComponentBase)
 
