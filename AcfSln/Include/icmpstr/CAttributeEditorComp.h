@@ -161,6 +161,8 @@ protected:
 				const icomp::IRegistry& registry,
 				const QByteArray& attributeId,
 				const ElementIdToAttrInfoMap& infos,
+				const QFont& normalFont,
+				const QFont& importantFont,
 				bool& hasError,
 				bool& hasWarning,
 				bool& hasExport) const;

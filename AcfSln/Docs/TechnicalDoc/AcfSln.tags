@@ -7182,8 +7182,8 @@
       <type>bool</type>
       <name>SetAttributeToItem</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a6f62fb68c2a7030f2c1cc46c939793ab</anchor>
-      <arglist>(AttributeGroupType groupType, int &amp;itemIndex, const icomp::IRegistry &amp;registry, const QByteArray &amp;attributeId, const ElementIdToAttrInfoMap &amp;infos, bool &amp;hasError, bool &amp;hasWarning, bool &amp;hasExport) const </arglist>
+      <anchor>a77209b29e7b64a07630e6fb580cfd836</anchor>
+      <arglist>(AttributeGroupType groupType, int &amp;itemIndex, const icomp::IRegistry &amp;registry, const QByteArray &amp;attributeId, const ElementIdToAttrInfoMap &amp;infos, const QFont &amp;normalFont, const QFont &amp;importantFont, bool &amp;hasError, bool &amp;hasWarning, bool &amp;hasExport) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
