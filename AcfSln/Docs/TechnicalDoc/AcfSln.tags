@@ -12672,6 +12672,41 @@
       <anchor>a4f5825bb6df9d61d4610d67c0f3aa74f</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classifileproc_1_1_c_file_naming_params.html</anchorfile>
+      <anchor>a2167c3695376083776db785fdd6cc75d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classifileproc_1_1_c_file_naming_params.html</anchorfile>
+      <anchor>a960dc3d69150e74fbf1e9ea5578bb54d</anchor>
+      <arglist>(const istd::IChangeable &amp;object, istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEqual</name>
+      <anchorfile>classifileproc_1_1_c_file_naming_params.html</anchorfile>
+      <anchor>aa44f3e374dcd364946d83748c215fa73</anchor>
+      <arglist>(const istd::IChangeable &amp;object) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classifileproc_1_1_c_file_naming_params.html</anchorfile>
+      <anchor>ad52c962e390f0df563c0c00e6c1b3ad4</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classifileproc_1_1_c_file_naming_params.html</anchorfile>
+      <anchor>ad2e2a5a5145f9ebb34351f4d97ae6a51</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>OverwriteStrategy</type>
       <name>m_overwriteStrategy</name>
