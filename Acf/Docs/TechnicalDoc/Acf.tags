@@ -2454,6 +2454,7 @@
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_i_file_resources_manager_8h</filename>
     <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="no" imported="no">istd/TSmartPtr.h</includes>
+    <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="no" imported="no">ilog/IMessageConsumer.h</includes>
     <includes id="_i_options_list_8h" name="IOptionsList.h" local="no" imported="no">iprm/IOptionsList.h</includes>
     <includes id="_i_document_meta_info_8h" name="IDocumentMetaInfo.h" local="no" imported="no">idoc/IDocumentMetaInfo.h</includes>
     <class kind="class">ifile::IFileResourcesManager</class>
@@ -32231,6 +32232,34 @@
     <name>ifile::IFileResourcesManager</name>
     <filename>classifile_1_1_i_file_resources_manager.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>LicenseStatus</name>
+      <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
+      <anchor>aec39dd18ef89a2c059063a89f7658dea</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>LS_NONE</name>
+      <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
+      <anchor>aec39dd18ef89a2c059063a89f7658deaaf624eead6a08ead3a94a2e48d7445cd4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>LS_OK</name>
+      <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
+      <anchor>aec39dd18ef89a2c059063a89f7658deaa3609e00347a3e613cf1af1aa007b887f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>LS_NOT_VALID</name>
+      <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
+      <anchor>aec39dd18ef89a2c059063a89f7658deaa4d0864ca193b8825229658bb14bb343e</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>istd::TSmartPtr&lt; istd::IChangeable &gt;</type>
       <name>DataObjectPtr</name>
@@ -32321,6 +32350,13 @@
       <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
       <anchor>a9ed8611ce7b4bd863f336227076fcae6</anchor>
       <arglist>(const QByteArray &amp;resourceId, const QString &amp;description)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual LicenseStatus</type>
+      <name>GetLicenseStatus</name>
+      <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
+      <anchor>a862a119d9cfe7b564a611934ad38dce9</anchor>
+      <arglist>(const QByteArray &amp;resourceId, ilog::IMessageConsumer *messageConsumerPtr=NULL) const =0</arglist>
     </member>
   </compound>
   <compound kind="interface">
