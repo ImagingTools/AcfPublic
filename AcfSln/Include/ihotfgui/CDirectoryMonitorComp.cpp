@@ -1,25 +1,3 @@
-/********************************************************************************
-**
-**	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the ACF-Solutions Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.ilena.org or write info@imagingtools.de for further
-** 	information about the ACF.
-**
-********************************************************************************/
-
-
 #include "ihotfgui/CDirectoryMonitorComp.h"
 
 
@@ -573,17 +551,17 @@ bool CDirectoryMonitorComp::CheckFileAccess(const QString& filePath) const
 
 QDateTime CDirectoryMonitorComp::GetLastAccessTime(const QFileInfo& fileInfo) const
 {
-	switch (m_timestampMode){
-	case ihotf::IDirectoryMonitorParams::FTM_MODIFIED:
-		return fileInfo.lastModified();
+	QDateTime lastAccessTime = QDateTime::fromMSecsSinceEpoch(0);
 
-	case ihotf::IDirectoryMonitorParams::FTM_CREATED:
-		return fileInfo.created();
-	default:
-		I_CRITICAL();
-
-		return QDateTime();
+	if (m_timestampMode & ihotf::IDirectoryMonitorParams::FTM_MODIFIED){
+		lastAccessTime = fileInfo.lastModified();
 	}
+
+	if (m_timestampMode & ihotf::IDirectoryMonitorParams::FTM_MODIFIED){
+		lastAccessTime = qMax(fileInfo.lastModified(), lastAccessTime);
+	}
+
+	return lastAccessTime;
 }
 
 
@@ -611,7 +589,8 @@ void CDirectoryMonitorComp::MonitoringParamsObserver::AfterUpdate(imod::IModel* 
 			m_parent.m_observingChanges = directoryMonitorParamsPtr->GetObservedChanges();
 			m_parent.m_fileFilterExpressions = directoryMonitorParamsPtr->GetAcceptPatterns();
 			m_parent.m_folderDepth = directoryMonitorParamsPtr->GetFolderDepth();
-			m_parent.m_timestampMode = directoryMonitorParamsPtr->GetFileTimestampMode();
+			m_parent.m_timestampMode = directoryMonitorParamsPtr->GetFileTimeStampMode();
+			m_parent.m_lastModificationMinDifference = directoryMonitorParamsPtr->GetMinLastModificationTimeDifference();
 		}
 	}
 

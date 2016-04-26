@@ -1,25 +1,3 @@
-/********************************************************************************
-**
-**	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the ACF-Solutions Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.ilena.org or write info@imagingtools.de for further
-** 	information about the ACF.
-**
-********************************************************************************/
-
-
 #ifndef ihotf_CDirectoryMonitorParams_included
 #define ihotf_CDirectoryMonitorParams_included
 
@@ -59,8 +37,8 @@ public:
 	virtual void SetIgnorePatterns(const QStringList& acceptPatterns);
 	virtual int GetFolderDepth() const;
 	virtual void SetFolderDepth(int folderDepth);
-	virtual int GetFileTimestampMode() const;
-	virtual void SetFileTimestampMode(int fileTimestampMode);
+	virtual int GetFileTimeStampMode() const;
+	virtual void SetFileTimeStampMode(int fileTimeStampMode);
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
@@ -71,7 +49,7 @@ private:
 	int m_observedChanges;
 	int m_minLastModificationTimeDifference;
 	int m_folderDepth;
-	FileTimestampMode m_fileTimestampMode;
+	int m_fileTimeStampMode;
 
 	QStringList m_acceptPatterns;
 	QStringList m_ignorePatterns;

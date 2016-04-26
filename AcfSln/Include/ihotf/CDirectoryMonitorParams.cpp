@@ -42,7 +42,7 @@ CDirectoryMonitorParams::CDirectoryMonitorParams()
 	m_observedChanges(OC_ALL),
 	m_minLastModificationTimeDifference(30),
 	m_folderDepth(0),
-	m_fileTimestampMode(FTM_MODIFIED)
+	m_fileTimeStampMode(FTM_MODIFIED | FTM_CREATED)
 {
 }
 
@@ -162,18 +162,18 @@ void CDirectoryMonitorParams::SetFolderDepth(int folderDepth)
 }
 
 
-int CDirectoryMonitorParams::GetFileTimestampMode() const
+int CDirectoryMonitorParams::GetFileTimeStampMode() const
 {
-	return m_fileTimestampMode;
+	return m_fileTimeStampMode;
 }
 
 
-void CDirectoryMonitorParams::SetFileTimestampMode(int fileTimestampMode)
+void CDirectoryMonitorParams::SetFileTimeStampMode(int fileTimestampMode)
 {
-	if (m_fileTimestampMode != fileTimestampMode){
+	if (m_fileTimeStampMode != fileTimestampMode){
 		istd::CChangeNotifier changeNotifier(this);
 
-		m_fileTimestampMode = FileTimestampMode(fileTimestampMode);
+		m_fileTimeStampMode = fileTimestampMode;
 	}
 }
 
@@ -191,7 +191,7 @@ bool CDirectoryMonitorParams::Serialize(iser::IArchive& archive)
 	static iser::CArchiveTag ignorePatternTag("IgnorePattern", "Single ignored file name pattern", iser::CArchiveTag::TT_LEAF, &ignorePatternsTag);
 	static iser::CArchiveTag minLastModificationTimeDifferenceTag("MinLastModificationTimeDifference", "Minimal last modification time diffrence for operating on the file", iser::CArchiveTag::TT_LEAF);
 	static iser::CArchiveTag folderDepthTag("FolderDepth", "Depth of the monitored folder tree", iser::CArchiveTag::TT_LEAF);
-	static iser::CArchiveTag fileTimestampModeTag("FileTimestampMode", "Mode of the file's timestamp", iser::CArchiveTag::TT_LEAF);
+	static iser::CArchiveTag fileTimeStampModeTag("FileTimeStampMode", "Mode of the file's timestamp", iser::CArchiveTag::TT_LEAF);
 
 	istd::CChangeNotifier changeNotifier(!archive.IsStoring()? this : NULL);
 
@@ -270,9 +270,9 @@ bool CDirectoryMonitorParams::Serialize(iser::IArchive& archive)
 	retVal = retVal && archive.EndTag(folderDepthTag);
 
 
-	retVal = retVal && archive.BeginTag(fileTimestampModeTag);
-	retVal = retVal && I_SERIALIZE_ENUM(FileTimestampMode, archive, m_fileTimestampMode);
-	retVal = retVal && archive.EndTag(fileTimestampModeTag);
+	retVal = retVal && archive.BeginTag(fileTimeStampModeTag);
+	retVal = retVal && I_SERIALIZE_FLAG(FileTimeStampMode, archive, m_fileTimeStampMode);
+	retVal = retVal && archive.EndTag(fileTimeStampModeTag);
 
 	return retVal;
 }
