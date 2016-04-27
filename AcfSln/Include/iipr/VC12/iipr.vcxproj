@@ -1,278 +1,273 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http:$(ACF_TOOLS_BIN)/$(ACF_TOOLS_BIN)/schemas.microsoft.com$(ACF_TOOLS_BIN)/developer$(ACF_TOOLS_BIN)/msbuild$(ACF_TOOLS_BIN)/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
+      <Configuration>Debug<$(ACF_TOOLS_BIN)/Configuration>
+      <Platform>Win32<$(ACF_TOOLS_BIN)/Platform>
+    <$(ACF_TOOLS_BIN)/ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-  </ItemGroup>
+      <Configuration>Release<$(ACF_TOOLS_BIN)/Configuration>
+      <Platform>Win32<$(ACF_TOOLS_BIN)/Platform>
+    <$(ACF_TOOLS_BIN)/ProjectConfiguration>
+  <$(ACF_TOOLS_BIN)/ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{64C782E2-E583-360A-9D9E-FA49579143F7}</ProjectGuid>
-    <RootNamespace>iipr</RootNamespace>
-    <Keyword>Qt4VSv1.0</Keyword>
-  </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+    <ProjectGuid>{64C782E2-E583-360A-9D9E-FA49579143F7}<$(ACF_TOOLS_BIN)/ProjectGuid>
+    <RootNamespace>iipr<$(ACF_TOOLS_BIN)/RootNamespace>
+    <Keyword>Qt4VSv1.0<$(ACF_TOOLS_BIN)/Keyword>
+  <$(ACF_TOOLS_BIN)/PropertyGroup>
+  <Import Project="$(VCTargetsPath)$(ACF_TOOLS_BIN)\Microsoft.Cpp.Default.props" $(ACF_TOOLS_BIN)/>
   <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="Configuration">
-    <OutputDirectory>..\..\..\Lib\DebugVC12\</OutputDirectory>
-    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
-    <CharacterSet>NotSet</CharacterSet>
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <IntermediateDirectory>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Debug\iipr\</IntermediateDirectory>
-  </PropertyGroup>
+    <OutputDirectory>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC12$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false<$(ACF_TOOLS_BIN)/ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet<$(ACF_TOOLS_BIN)/CharacterSet>
+    <ConfigurationType>StaticLibrary<$(ACF_TOOLS_BIN)/ConfigurationType>
+    <IntermediateDirectory>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC12$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Debug$(ACF_TOOLS_BIN)\iipr$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/IntermediateDirectory>
+  <$(ACF_TOOLS_BIN)/PropertyGroup>
   <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="Configuration">
-    <OutputDirectory>..\..\..\Lib\ReleaseVC12\</OutputDirectory>
-    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
-    <CharacterSet>NotSet</CharacterSet>
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <IntermediateDirectory>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Release\iipr\</IntermediateDirectory>
-  </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="ExtensionSettings" />
+    <OutputDirectory>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC12$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false<$(ACF_TOOLS_BIN)/ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet<$(ACF_TOOLS_BIN)/CharacterSet>
+    <ConfigurationType>StaticLibrary<$(ACF_TOOLS_BIN)/ConfigurationType>
+    <IntermediateDirectory>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC12$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Release$(ACF_TOOLS_BIN)\iipr$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/IntermediateDirectory>
+  <$(ACF_TOOLS_BIN)/PropertyGroup>
+  <Import Project="$(VCTargetsPath)$(ACF_TOOLS_BIN)\Microsoft.Cpp.props" $(ACF_TOOLS_BIN)/>
+  <ImportGroup Label="ExtensionSettings" $(ACF_TOOLS_BIN)/>
   <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
-  </ImportGroup>
+    <Import Project="$(UserRootDir)$(ACF_TOOLS_BIN)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)$(ACF_TOOLS_BIN)\Microsoft.Cpp.$(Platform).user.props&apos;)" $(ACF_TOOLS_BIN)/>
+  <$(ACF_TOOLS_BIN)/ImportGroup>
   <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
-  </ImportGroup>
-  <PropertyGroup Label="UserMacros" />
+    <Import Project="$(UserRootDir)$(ACF_TOOLS_BIN)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)$(ACF_TOOLS_BIN)\Microsoft.Cpp.$(Platform).user.props&apos;)" $(ACF_TOOLS_BIN)/>
+  <$(ACF_TOOLS_BIN)/ImportGroup>
+  <PropertyGroup Label="UserMacros" $(ACF_TOOLS_BIN)/>
   <PropertyGroup>
-    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\Lib\DebugVC12\</OutDir>
-    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Debug\iipr\</IntDir>
-    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</IgnoreImportLibrary>
-    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\Lib\ReleaseVC12\</OutDir>
-    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Release\iipr\</IntDir>
-    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</IgnoreImportLibrary>
-  </PropertyGroup>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC12$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC12$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Debug$(ACF_TOOLS_BIN)\iipr$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/IntDir>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true<$(ACF_TOOLS_BIN)/IgnoreImportLibrary>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC12$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC12$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Release$(ACF_TOOLS_BIN)\iipr$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/IntDir>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true<$(ACF_TOOLS_BIN)/IgnoreImportLibrary>
+  <$(ACF_TOOLS_BIN)/PropertyGroup>
   <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">
     <ClCompile>
-      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\..\Acf\Include&quot;;&quot;..\..\..\..\Acf\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\Include&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iipr&quot;;$(QTDIR)\mkspecs\win32-msvc2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>-Zm200 -FS /MP /bigobj /Qpar /Gw /FS %(AdditionalOptions)</AdditionalOptions>
-      <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Debug\iipr\</AssemblerListingLocation>
-      <BrowseInformation>false</BrowseInformation>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <FloatingPointModel>Fast</FloatingPointModel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <ObjectFileName>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Debug\iipr\</ObjectFileName>
-      <OpenMPSupport>false</OpenMPSupport>
-      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PreprocessToFile>false</PreprocessToFile>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
-      <WarningLevel>Level4</WarningLevel>
-    </ClCompile>
+      <AdditionalIncludeDirectories>&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC12&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Include&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC12&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Include&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Include&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include$(ACF_TOOLS_BIN)\QtGui&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include$(ACF_TOOLS_BIN)\QtCore&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC12$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\iipr&quot;;$(QTDIR)$(ACF_TOOLS_BIN)\mkspecs$(ACF_TOOLS_BIN)\win32-msvc2013;%(AdditionalIncludeDirectories)<$(ACF_TOOLS_BIN)/AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -FS $(ACF_TOOLS_BIN)/MP $(ACF_TOOLS_BIN)/bigobj $(ACF_TOOLS_BIN)/Qpar $(ACF_TOOLS_BIN)/Gw $(ACF_TOOLS_BIN)/FS %(AdditionalOptions)<$(ACF_TOOLS_BIN)/AdditionalOptions>
+      <AssemblerListingLocation>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC12$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Debug$(ACF_TOOLS_BIN)\iipr$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/AssemblerListingLocation>
+      <BrowseInformation>false<$(ACF_TOOLS_BIN)/BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase<$(ACF_TOOLS_BIN)/DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)<$(ACF_TOOLS_BIN)/DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2<$(ACF_TOOLS_BIN)/EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync<$(ACF_TOOLS_BIN)/ExceptionHandling>
+      <FloatingPointModel>Fast<$(ACF_TOOLS_BIN)/FloatingPointModel>
+      <FunctionLevelLinking>true<$(ACF_TOOLS_BIN)/FunctionLevelLinking>
+      <ObjectFileName>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC12$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Debug$(ACF_TOOLS_BIN)\iipr$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/ObjectFileName>
+      <OpenMPSupport>false<$(ACF_TOOLS_BIN)/OpenMPSupport>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)<$(ACF_TOOLS_BIN)/PreprocessorDefinitions>
+      <PreprocessToFile>false<$(ACF_TOOLS_BIN)/PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL<$(ACF_TOOLS_BIN)/RuntimeLibrary>
+      <RuntimeTypeInfo>true<$(ACF_TOOLS_BIN)/RuntimeTypeInfo>
+      <SuppressStartupBanner>true<$(ACF_TOOLS_BIN)/SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true<$(ACF_TOOLS_BIN)/TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level4<$(ACF_TOOLS_BIN)/WarningLevel>
+    <$(ACF_TOOLS_BIN)/ClCompile>
     <Link>
-      <IgnoreImportLibrary>true</IgnoreImportLibrary>
-    </Link>
+      <IgnoreImportLibrary>true<$(ACF_TOOLS_BIN)/IgnoreImportLibrary>
+    <$(ACF_TOOLS_BIN)/Link>
     <Midl>
-      <DefaultCharType>Unsigned</DefaultCharType>
-      <EnableErrorChecks>None</EnableErrorChecks>
-      <WarningLevel>0</WarningLevel>
-    </Midl>
+      <DefaultCharType>Unsigned<$(ACF_TOOLS_BIN)/DefaultCharType>
+      <EnableErrorChecks>None<$(ACF_TOOLS_BIN)/EnableErrorChecks>
+      <WarningLevel>0<$(ACF_TOOLS_BIN)/WarningLevel>
+    <$(ACF_TOOLS_BIN)/Midl>
     <ResourceCompile>
-      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ResourceOutputFileName>$(OutDir)\$(InputName).res</ResourceOutputFileName>
-    </ResourceCompile>
-  </ItemDefinitionGroup>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)<$(ACF_TOOLS_BIN)/PreprocessorDefinitions>
+      <ResourceOutputFileName>$(OutDir)$(ACF_TOOLS_BIN)\$(InputName).res<$(ACF_TOOLS_BIN)/ResourceOutputFileName>
+    <$(ACF_TOOLS_BIN)/ResourceCompile>
+  <$(ACF_TOOLS_BIN)/ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">
     <ClCompile>
-      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\..\Acf\Include&quot;;&quot;..\..\..\..\Acf\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\Include&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iipr&quot;;$(QTDIR)\mkspecs\win32-msvc2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>-Zm200 -FS /MP /bigobj /Qpar /Gw /FS %(AdditionalOptions)</AdditionalOptions>
-      <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Release\iipr\</AssemblerListingLocation>
-      <BrowseInformation>false</BrowseInformation>
-      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <FloatingPointModel>Fast</FloatingPointModel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <ObjectFileName>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Release\iipr\</ObjectFileName>
-      <OpenMPSupport>false</OpenMPSupport>
-      <Optimization>MaxSpeed</Optimization>
-      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PreprocessToFile>false</PreprocessToFile>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
-      <WarningLevel>Level4</WarningLevel>
-    </ClCompile>
+      <AdditionalIncludeDirectories>&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC12&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Include&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC12&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Include&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Include&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include$(ACF_TOOLS_BIN)\QtGui&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include$(ACF_TOOLS_BIN)\QtCore&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC12$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\iipr&quot;;$(QTDIR)$(ACF_TOOLS_BIN)\mkspecs$(ACF_TOOLS_BIN)\win32-msvc2013;%(AdditionalIncludeDirectories)<$(ACF_TOOLS_BIN)/AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -FS $(ACF_TOOLS_BIN)/MP $(ACF_TOOLS_BIN)/bigobj $(ACF_TOOLS_BIN)/Qpar $(ACF_TOOLS_BIN)/Gw $(ACF_TOOLS_BIN)/FS %(AdditionalOptions)<$(ACF_TOOLS_BIN)/AdditionalOptions>
+      <AssemblerListingLocation>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC12$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Release$(ACF_TOOLS_BIN)\iipr$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/AssemblerListingLocation>
+      <BrowseInformation>false<$(ACF_TOOLS_BIN)/BrowseInformation>
+      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)<$(ACF_TOOLS_BIN)/DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2<$(ACF_TOOLS_BIN)/EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync<$(ACF_TOOLS_BIN)/ExceptionHandling>
+      <FloatingPointModel>Fast<$(ACF_TOOLS_BIN)/FloatingPointModel>
+      <FunctionLevelLinking>true<$(ACF_TOOLS_BIN)/FunctionLevelLinking>
+      <ObjectFileName>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC12$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Release$(ACF_TOOLS_BIN)\iipr$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/ObjectFileName>
+      <OpenMPSupport>false<$(ACF_TOOLS_BIN)/OpenMPSupport>
+      <Optimization>MaxSpeed<$(ACF_TOOLS_BIN)/Optimization>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)<$(ACF_TOOLS_BIN)/PreprocessorDefinitions>
+      <PreprocessToFile>false<$(ACF_TOOLS_BIN)/PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDLL<$(ACF_TOOLS_BIN)/RuntimeLibrary>
+      <RuntimeTypeInfo>true<$(ACF_TOOLS_BIN)/RuntimeTypeInfo>
+      <SuppressStartupBanner>true<$(ACF_TOOLS_BIN)/SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true<$(ACF_TOOLS_BIN)/TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level4<$(ACF_TOOLS_BIN)/WarningLevel>
+    <$(ACF_TOOLS_BIN)/ClCompile>
     <Link>
-      <IgnoreImportLibrary>true</IgnoreImportLibrary>
-    </Link>
+      <IgnoreImportLibrary>true<$(ACF_TOOLS_BIN)/IgnoreImportLibrary>
+    <$(ACF_TOOLS_BIN)/Link>
     <Midl>
-      <DefaultCharType>Unsigned</DefaultCharType>
-      <EnableErrorChecks>None</EnableErrorChecks>
-      <WarningLevel>0</WarningLevel>
-    </Midl>
+      <DefaultCharType>Unsigned<$(ACF_TOOLS_BIN)/DefaultCharType>
+      <EnableErrorChecks>None<$(ACF_TOOLS_BIN)/EnableErrorChecks>
+      <WarningLevel>0<$(ACF_TOOLS_BIN)/WarningLevel>
+    <$(ACF_TOOLS_BIN)/Midl>
     <ResourceCompile>
-      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ResourceOutputFileName>$(OutDir)\$(InputName).res</ResourceOutputFileName>
-    </ResourceCompile>
-  </ItemDefinitionGroup>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)<$(ACF_TOOLS_BIN)/PreprocessorDefinitions>
+      <ResourceOutputFileName>$(OutDir)$(ACF_TOOLS_BIN)\$(InputName).res<$(ACF_TOOLS_BIN)/ResourceOutputFileName>
+    <$(ACF_TOOLS_BIN)/ResourceCompile>
+  <$(ACF_TOOLS_BIN)/ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\CAdaptiveImageBinarizeProcessorComp.cpp" />
-    <ClCompile Include="..\CAutoImageNormalizeProcessorComp.cpp" />
-    <ClCompile Include="..\CBitmapJoinerSupplierComp.cpp" />
-    <ClCompile Include="..\CBitmapOperations.cpp" />
-    <ClCompile Include="..\CBitmapProviderCacheComp.cpp" />
-    <ClCompile Include="..\CCaliperDistanceFeature.cpp" />
-    <ClCompile Include="..\CCaliperFeature.cpp" />
-    <ClCompile Include="..\CCaliperParams.cpp" />
-    <ClCompile Include="..\CCaliperParamsComp.cpp" />
-    <ClCompile Include="..\CCheckerboardPatternGeneratorComp.cpp" />
-    <ClCompile Include="..\CCircleFindProcessorComp.cpp" />
-    <ClCompile Include="..\CCircleFinderParams.cpp" />
-    <ClCompile Include="..\CCircleFinderParamsComp.cpp" />
-    <ClCompile Include="..\CColorPatternComparatorComp.cpp" />
-    <ClCompile Include="..\CColorPatternControllerComp.cpp" />
-    <ClCompile Include="..\CConvolutionKernel2d.cpp" />
-    <ClCompile Include="..\CConvolutionKernel2dComp.cpp" />
-    <ClCompile Include="..\CConvolutionProcessorComp.cpp" />
-    <ClCompile Include="..\CDelegatedBitmapSupplierComp.cpp" />
-    <ClCompile Include="..\CDifferenceBitmapSupplierComp.cpp" />
-    <ClCompile Include="..\CEdgeDistanceProcessorComp.cpp" />
-    <ClCompile Include="..\CEdgeDistancesSupplierComp.cpp" />
-    <ClCompile Include="..\CExtremumCaliperProcessorComp.cpp" />
-    <ClCompile Include="..\CExtremumCaliperSupplierComp.cpp" />
-    <ClCompile Include="..\CFastGaussianProcessorComp.cpp" />
-    <ClCompile Include="..\CFeatureToImageMapperProcessorComp.cpp" />
-    <ClCompile Include="..\CFeaturesContainer.cpp" />
-    <ClCompile Include="..\CImageBinarizeProcessorComp.cpp" />
-    <ClCompile Include="..\CImageCropProcessorComp.cpp" />
-    <ClCompile Include="..\CImageFlipProcessorComp.cpp" />
-    <ClCompile Include="..\CImageHistogramProcessorComp.cpp" />
-    <ClCompile Include="..\CImageHistogramSupplierComp.cpp" />
-    <ClCompile Include="..\CImageInterpolationParams.cpp" />
-    <ClCompile Include="..\CImageInterpolationParamsComp.cpp" />
-    <ClCompile Include="..\CImageNormalizeProcessorComp.cpp" />
-    <ClCompile Include="..\CImagePolarTransformProcessorComp.cpp" />
-    <ClCompile Include="..\CImageProcessorCompBase.cpp" />
-    <ClCompile Include="..\CImageRegionProcessorCompBase.cpp" />
-    <ClCompile Include="..\CLineProjectionProcessorComp.cpp" />
-    <ClCompile Include="..\CMorphologicalProcessorComp.cpp" />
-    <ClCompile Include="..\CMultiBitmapCacheComp.cpp" />
-    <ClCompile Include="..\CMultiLineProjectionSupplierComp.cpp" />
-    <ClCompile Include="..\CMultiLineSupplierCompBase.cpp" />
-    <ClCompile Include="..\CObjectFeature.cpp" />
-    <ClCompile Include="..\CPositionFromImageSupplierComp.cpp" />
-    <ClCompile Include="..\CProcessedAcquisitionComp.cpp" />
-    <ClCompile Include="..\CProcessedBitmapSupplierComp.cpp" />
-    <ClCompile Include="..\CProjectionSupplierComp.cpp" />
-    <ClCompile Include="..\CRectDerivativeProcessor.cpp" />
-    <ClCompile Include="..\CRectDerivativeProcessorComp.cpp" />
-    <ClCompile Include="..\CRectImageSmoothProcessorComp.cpp" />
-    <ClCompile Include="..\CRgbToGrayProcessorComp.cpp" />
-    <ClCompile Include="..\CRingPatternGeneratorComp.cpp" />
-    <ClCompile Include="..\CRingPatternGeneratorParamsComp.cpp" />
-    <ClCompile Include="..\CSearchBasedFeaturesSupplierComp.cpp" />
-    <ClCompile Include="..\CSearchFeature.cpp" />
-    <ClCompile Include="..\CSearchParams.cpp" />
-    <ClCompile Include="..\CSearchParamsComp.cpp" />
-    <ClCompile Include="..\CSelectableCalibrationProviderComp.cpp" />
-    <ClCompile Include="..\CSingleFeatureConsumer.cpp" />
-    <ClCompile Include="..\CTubeProjectionLinesProviderComp.cpp" />
-    <ClCompile Include="..\CTubeProjectionsGenerator.cpp" />
-  </ItemGroup>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CAdaptiveImageBinarizeProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CAutoImageNormalizeProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CBitmapJoinerSupplierComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CBitmapOperations.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CBitmapProviderCacheComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CCaliperDistanceFeature.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CCaliperFeature.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CCaliperParams.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CCaliperParamsComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CCheckerboardPatternGeneratorComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CCircleFindProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CCircleFinderParams.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CCircleFinderParamsComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CColorPatternComparatorComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CColorPatternControllerComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CConvolutionKernel2d.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CConvolutionKernel2dComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CConvolutionProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CDelegatedBitmapSupplierComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CDifferenceBitmapSupplierComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CEdgeDistanceProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CEdgeDistancesSupplierComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CExtremumCaliperProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CExtremumCaliperSupplierComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CFastGaussianProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CFeatureToImageMapperProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CFeaturesContainer.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CImageBinarizeProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CImageCropProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CImageFlipProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CImageHistogramProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CImageHistogramSupplierComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CImageInterpolationParams.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CImageInterpolationParamsComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CImageNormalizeProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CImagePolarTransformProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CImageProcessorCompBase.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CImageRegionProcessorCompBase.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CLineProjectionProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CMorphologicalProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CMultiBitmapCacheComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CMultiLineProjectionSupplierComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CMultiLineSupplierCompBase.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CObjectFeature.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CPositionFromImageSupplierComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CProcessedAcquisitionComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CProcessedBitmapSupplierComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CProjectionSupplierComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CRectDerivativeProcessor.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CRectDerivativeProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CRectImageSmoothProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CRgbToGrayProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CRingPatternGeneratorComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CRingPatternGeneratorParamsComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CSearchBasedFeaturesSupplierComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CSearchFeature.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CSearchParams.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CSearchParamsComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CSelectableCalibrationProviderComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CSingleFeatureConsumer.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CTubeProjectionLinesProviderComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CTubeProjectionsGenerator.cpp" $(ACF_TOOLS_BIN)/>
+  <$(ACF_TOOLS_BIN)/ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\CAdaptiveImageBinarizeProcessorComp.h" />
-    <ClInclude Include="..\CAutoImageNormalizeProcessorComp.h" />
-    <ClInclude Include="..\CBitmapJoinerSupplierComp.h" />
-    <ClInclude Include="..\CBitmapOperations.h" />
-    <ClInclude Include="..\CBitmapProviderCacheComp.h" />
-    <ClInclude Include="..\CCaliperDistanceFeature.h" />
-    <ClInclude Include="..\CCaliperFeature.h" />
-    <ClInclude Include="..\CCaliperParams.h" />
-    <ClInclude Include="..\CCaliperParamsComp.h" />
-    <ClInclude Include="..\CCheckerboardPatternGeneratorComp.h" />
-    <ClInclude Include="..\CCircleFindProcessorComp.h" />
-    <ClInclude Include="..\CCircleFinderParams.h" />
-    <ClInclude Include="..\CCircleFinderParamsComp.h" />
-    <ClInclude Include="..\CColorPatternComparatorComp.h" />
-    <ClInclude Include="..\CColorPatternControllerComp.h" />
-    <ClInclude Include="..\CConvolutionKernel2d.h" />
-    <ClInclude Include="..\CConvolutionKernel2dComp.h" />
-    <ClInclude Include="..\CConvolutionProcessorComp.h" />
-    <ClInclude Include="..\CDelegatedBitmapSupplierComp.h" />
-    <ClInclude Include="..\CDifferenceBitmapSupplierComp.h" />
-    <ClInclude Include="..\CEdgeDistanceProcessorComp.h" />
-    <ClInclude Include="..\CEdgeDistancesSupplierComp.h" />
-    <ClInclude Include="..\CExtremumCaliperProcessorComp.h" />
-    <ClInclude Include="..\CExtremumCaliperSupplierComp.h" />
-    <ClInclude Include="..\CFastGaussianProcessorComp.h" />
-    <ClInclude Include="..\CFeatureToImageMapperProcessorComp.h" />
-    <ClInclude Include="..\CFeaturesContainer.h" />
-    <ClInclude Include="..\CImageBinarizeProcessorComp.h" />
-    <ClInclude Include="..\CImageCropProcessorComp.h" />
-    <ClInclude Include="..\CImageFlipProcessorComp.h" />
-    <ClInclude Include="..\CImageHistogramProcessorComp.h" />
-    <ClInclude Include="..\CImageHistogramSupplierComp.h" />
-    <ClInclude Include="..\CImageInterpolationParams.h" />
-    <ClInclude Include="..\CImageInterpolationParamsComp.h" />
-    <ClInclude Include="..\CImageNormalizeProcessorComp.h" />
-    <ClInclude Include="..\CImagePolarTransformProcessorComp.h" />
-    <ClInclude Include="..\CImageProcessorCompBase.h" />
-    <ClInclude Include="..\CImageRegionProcessorCompBase.h" />
-    <ClInclude Include="..\CLineProjectionProcessorComp.h" />
-    <ClInclude Include="..\CMorphologicalProcessorComp.h" />
-    <ClInclude Include="..\CMultiBitmapCacheComp.h" />
-    <ClInclude Include="..\CMultiLineProjectionSupplierComp.h" />
-    <ClInclude Include="..\CMultiLineSupplierCompBase.h" />
-    <ClInclude Include="..\CObjectFeature.h" />
-    <ClInclude Include="..\CPositionFromImageSupplierComp.h" />
-    <ClInclude Include="..\CProcessedAcquisitionComp.h" />
-    <ClInclude Include="..\CProcessedBitmapSupplierComp.h" />
-    <ClInclude Include="..\CProjectionSupplierComp.h" />
-    <ClInclude Include="..\CRectDerivativeProcessor.h" />
-    <ClInclude Include="..\CRectDerivativeProcessorComp.h" />
-    <ClInclude Include="..\CRectImageSmoothProcessorComp.h" />
-    <ClInclude Include="..\CRgbToGrayProcessorComp.h" />
-    <ClInclude Include="..\CRingPatternGeneratorComp.h" />
-    <ClInclude Include="..\CRingPatternGeneratorParamsComp.h" />
-    <ClInclude Include="..\CSearchBasedFeaturesSupplierComp.h" />
-    <ClInclude Include="..\CSearchFeature.h" />
-    <ClInclude Include="..\CSearchParams.h" />
-    <ClInclude Include="..\CSearchParamsComp.h" />
-    <ClInclude Include="..\CSelectableCalibrationProviderComp.h" />
-    <ClInclude Include="..\CSingleFeatureConsumer.h" />
-    <ClInclude Include="..\CTubeProjectionLinesProviderComp.h" />
-    <ClInclude Include="..\CTubeProjectionsGenerator.h" />
-    <ClInclude Include="..\ICaliperParams.h" />
-    <ClInclude Include="..\ICaliperProcessor.h" />
-    <ClInclude Include="..\ICircleFinderParams.h" />
-    <ClInclude Include="..\IConvolutionKernel2d.h" />
-    <ClInclude Include="..\IFeatureToFeatureProcessor.h" />
-    <ClInclude Include="..\IFeatureToImageMapper.h" />
-    <ClInclude Include="..\IFeatureToProjectionMapper.h" />
-    <ClInclude Include="..\IFeaturesConsumer.h" />
-    <ClInclude Include="..\IImageInterpolationParams.h" />
-    <ClInclude Include="..\IImageToFeatureProcessor.h" />
-    <ClInclude Include="..\ILineProjectionProcessor.h" />
-    <ClInclude Include="..\IPatternController.h" />
-    <ClInclude Include="..\IProjectionConstraints.h" />
-    <ClInclude Include="..\IProjectionParams.h" />
-    <ClInclude Include="..\IRingPatternGeneratorParams.h" />
-    <ClInclude Include="..\ISearchConstraints.h" />
-    <ClInclude Include="..\ISearchParams.h" />
-    <ClInclude Include="..\TImageParamProcessorCompBase.h" />
-    <ClInclude Include="..\TImagePixelInterpolator.h" />
-    <ClInclude Include="..\TProcessedBitmapSupplierComp.h" />
-    <ClInclude Include="..\TUnaryTransformProcessorComp.h" />
-    <ClInclude Include="..\TWeightedFeatureWrap.h" />
-    <ClInclude Include="..\iipr.h" />
-  </ItemGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets" />
-  <ProjectExtensions>
-    <VisualStudio>
-      <UserProperties Qt5Version_x0020_Win32="QT_32" />
-    </VisualStudio>
-  </ProjectExtensions>
-</Project>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CAdaptiveImageBinarizeProcessorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CAutoImageNormalizeProcessorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CBitmapJoinerSupplierComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CBitmapOperations.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CBitmapProviderCacheComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CCaliperDistanceFeature.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CCaliperFeature.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CCaliperParams.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CCaliperParamsComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CCheckerboardPatternGeneratorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CCircleFindProcessorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CCircleFinderParams.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CCircleFinderParamsComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CColorPatternComparatorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CColorPatternControllerComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CConvolutionKernel2d.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CConvolutionKernel2dComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CConvolutionProcessorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CDelegatedBitmapSupplierComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CDifferenceBitmapSupplierComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CEdgeDistanceProcessorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CEdgeDistancesSupplierComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CExtremumCaliperProcessorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CExtremumCaliperSupplierComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CFastGaussianProcessorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CFeatureToImageMapperProcessorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CFeaturesContainer.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CImageBinarizeProcessorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CImageCropProcessorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CImageFlipProcessorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CImageHistogramProcessorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CImageHistogramSupplierComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CImageInterpolationParams.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CImageInterpolationParamsComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CImageNormalizeProcessorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CImagePolarTransformProcessorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CImageProcessorCompBase.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CImageRegionProcessorCompBase.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CLineProjectionProcessorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CMorphologicalProcessorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CMultiBitmapCacheComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CMultiLineProjectionSupplierComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CMultiLineSupplierCompBase.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CObjectFeature.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CPositionFromImageSupplierComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CProcessedAcquisitionComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CProcessedBitmapSupplierComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CProjectionSupplierComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CRectDerivativeProcessor.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CRectDerivativeProcessorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CRectImageSmoothProcessorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CRgbToGrayProcessorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CRingPatternGeneratorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CRingPatternGeneratorParamsComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CSearchBasedFeaturesSupplierComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CSearchFeature.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CSearchParams.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CSearchParamsComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CSelectableCalibrationProviderComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CSingleFeatureConsumer.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CTubeProjectionLinesProviderComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CTubeProjectionsGenerator.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\ICaliperParams.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\ICaliperProcessor.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\ICircleFinderParams.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\IConvolutionKernel2d.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\IFeatureToFeatureProcessor.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\IFeatureToImageMapper.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\IFeatureToProjectionMapper.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\IFeaturesConsumer.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\IImageInterpolationParams.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\IImageToFeatureProcessor.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\ILineProjectionProcessor.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\IPatternController.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\IProjectionConstraints.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\IProjectionParams.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\IRingPatternGeneratorParams.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\ISearchConstraints.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\ISearchParams.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\TImageParamProcessorCompBase.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\TImagePixelInterpolator.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\TProcessedBitmapSupplierComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\TUnaryTransformProcessorComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\TWeightedFeatureWrap.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\iipr.h" $(ACF_TOOLS_BIN)/>
+  <$(ACF_TOOLS_BIN)/ItemGroup>
+  <Import Project="$(VCTargetsPath)$(ACF_TOOLS_BIN)\Microsoft.Cpp.targets" $(ACF_TOOLS_BIN)/>
+  <ImportGroup Label="ExtensionTargets" $(ACF_TOOLS_BIN)/>
+<$(ACF_TOOLS_BIN)/Project>

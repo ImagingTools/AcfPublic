@@ -59741,9 +59741,9 @@
     </member>
     <member kind="function" static="yes">
       <type>static QString</type>
-      <name>FindVariableValue</name>
+      <name>GetVariableValue</name>
       <anchorfile>classistd_1_1_c_system.html</anchorfile>
-      <anchor>ad6754c643631e9a9c67e34f5e8751f9d</anchor>
+      <anchor>a3cc002c99f04a5f71b450d4c5c26f55f</anchor>
       <arglist>(const QString &amp;varName, bool envVars=true, bool embeddedVars=true)</arglist>
     </member>
     <member kind="function" static="yes">

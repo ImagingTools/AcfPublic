@@ -35,8 +35,8 @@ isEmpty(ACFTOOLS){
 else{
 	# for cross compiling use external tools
 
-	ARXCBIN=$$ACFTOOLS/$$ARX_COMPILER
-	ACFBIN=$$ACFTOOLS/$$ACF_TOOL
+	ARXCBIN=$$ACFTOOLS/$${QMAKE_HOST.os}/$$ARX_COMPILER
+	ACFBIN=$$ACFTOOLS/$${QMAKE_HOST.os}/$$ACF_TOOL
 }
 
 # Correct ACF paths for windows
@@ -48,11 +48,7 @@ win32{
 
 # custom build for ACF Registry Compiler (Arxc)
 ARX_COMPILER_OUTPUT = $${ARXC_OUTDIR}/C${QMAKE_FILE_BASE}.cpp $${ARXC_OUTDIR}/C${QMAKE_FILE_BASE}.h
-ARX_COMPILER_COMMAND = $$ARXCBIN ${QMAKE_FILE_IN} -o $${ARXC_OUTDIR}/C${QMAKE_FILE_BASE}.cpp -config $${ARXC_CONFIG}
-
-!isEmpty(ACFTOOLS){
-	ARX_COMPILER_COMMAND = $$ARX_COMPILER_COMMAND -conf_name $$COMPILER_DIR
-}
+ARX_COMPILER_COMMAND = $$ARXCBIN ${QMAKE_FILE_IN} -o $${ARXC_OUTDIR}/C${QMAKE_FILE_BASE}.cpp -config $${ARXC_CONFIG} -conf_name $$COMPILER_DIR
 
 CONFIG(warn_on, warn_on|warn_off){
 	ARX_COMPILER_COMMAND = $$ARX_COMPILER_COMMAND -v
@@ -70,7 +66,6 @@ arxCompiler.commands = $$ARX_COMPILER_COMMAND
 arxCompiler.input = ARXC_FILES
 arxCompiler.variable_out = SOURCES
 arxCompiler.dependency_type = TYPE_C
-arxCompiler.depends += $$ARXCBIN
 arxCompiler.depend_command = $$ARXCBIN ${QMAKE_FILE_IN} -mode depends -config $${ARXC_CONFIG} -conf_name $$COMPILER_DIR
 QMAKE_EXTRA_COMPILERS += arxCompiler
 
@@ -88,7 +83,6 @@ acfFileConvertCopy.name = ACF-FileConvertCopy
 acfFileConvertCopy.CONFIG += no_link target_predeps
 acfFileConvertCopy.output = $$ACF_CONVERT_OUTPUT
 acfFileConvertCopy.commands = $$ACF_CONVERT_COMMAND
-acfFileConvertCopy.depends += $$ACFBIN $$ARXCBIN
 acfFileConvertCopy.depend_command = $$ARXCBIN $${ACF_CONVERT_REGISTRY} -mode depends -config $${ACF_CONVERT_CONFIG}
 acfFileConvertCopy.input = ACF_CONVERT_FILES
 acfFileConvertCopy.variable_out =

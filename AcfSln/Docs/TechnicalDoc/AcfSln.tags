@@ -13223,17 +13223,17 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetFileTimestampMode</name>
+      <name>GetFileTimeStampMode</name>
       <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
-      <anchor>a04d5ec42eab20279156d08eb0af9b9ca</anchor>
+      <anchor>a3f4b3b7d34b08b746357ba9cce247f99</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>SetFileTimestampMode</name>
+      <name>SetFileTimeStampMode</name>
       <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
-      <anchor>a4cfcbcef06dff56a549472a649d959df</anchor>
-      <arglist>(int fileTimestampMode)</arglist>
+      <anchor>a0ac213dac9689697906914e3802472af</anchor>
+      <arglist>(int fileTimeStampMode)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -13244,10 +13244,10 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>I_DECLARE_ENUM</name>
+      <name>I_DECLARE_FLAGS</name>
       <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>a2333905660a03c6d703ed62c58054474</anchor>
-      <arglist>(FileTimestampMode, FTM_MODIFIED, FTM_CREATED)</arglist>
+      <anchor>a38cce0210993ced774ca260a9882c66e</anchor>
+      <arglist>(FileTimeStampMode, FTM_MODIFIED, FTM_CREATED)</arglist>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -13328,23 +13328,23 @@
     </member>
     <member kind="enumeration">
       <type></type>
-      <name>FileTimestampMode</name>
+      <name>FileTimeStampMode</name>
       <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>a345c35892ea9c27727a526e66a9116b8</anchor>
+      <anchor>a87fa704f30a6395232c541fa5216c313</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>FTM_MODIFIED</name>
       <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>a345c35892ea9c27727a526e66a9116b8a9eea93ab544f39a03e700666770f3694</anchor>
+      <anchor>a87fa704f30a6395232c541fa5216c313a9eea93ab544f39a03e700666770f3694</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>FTM_CREATED</name>
       <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>a345c35892ea9c27727a526e66a9116b8a7ed24a94e9d10bf86f464cf3f208d556</anchor>
+      <anchor>a87fa704f30a6395232c541fa5216c313a7ed24a94e9d10bf86f464cf3f208d556</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -13675,17 +13675,17 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
-      <name>GetFileTimestampMode</name>
+      <name>GetFileTimeStampMode</name>
       <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>a80def5eb267a747ce888aee081154db0</anchor>
+      <anchor>aa0838ba451f663d1ae8b421e2e1a0daf</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
-      <name>SetFileTimestampMode</name>
+      <name>SetFileTimeStampMode</name>
       <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>acbc07421486a777dd50ef592479974d9</anchor>
-      <arglist>(int fileTimestampMode)=0</arglist>
+      <anchor>a0c994c837f83ea6833d59562205fc726</anchor>
+      <arglist>(int fileTimeStampMode)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
