@@ -262,6 +262,16 @@ bool CPackagesLoaderComp::RegisterPackageFile(const QString& file)
 	QByteArray packageId(fileInfo.baseName().toLocal8Bit());
 
 	if (fileInfo.isFile()){
+		if (m_compositePackagesMap.contains(packageId)){
+			SendErrorMessage(
+						MI_CANNOT_REGISTER,
+						QObject::tr("Packages conflict: %1 - %2")
+									.arg(fileInfo.canonicalFilePath())
+									.arg(m_compositePackagesMap[packageId].directory.canonicalPath()));
+
+			return false;
+		}
+
 		RealPackagesMap::ConstIterator foundIter = m_realPackagesMap.constFind(packageId);
 		if (foundIter == m_realPackagesMap.constEnd()){
 			icomp::GetPackageInfoFunc getInfoPtr = GetPackageFunction(fileInfo);
@@ -285,6 +295,16 @@ bool CPackagesLoaderComp::RegisterPackageFile(const QString& file)
 		}
 	}
 	else if (m_registryLoaderCompPtr.IsValid() && fileInfo.isDir()){
+		if (m_realPackagesMap.contains(packageId)){
+			SendErrorMessage(
+						MI_CANNOT_REGISTER,
+						QObject::tr("Packages conflict: %1 - %2")
+									.arg(fileInfo.canonicalFilePath())
+									.arg(m_realPackagesMap[packageId]));
+
+			return false;
+		}
+
 		CompositePackagesMap::ConstIterator foundIter = m_compositePackagesMap.constFind(packageId);
 		if (foundIter == m_compositePackagesMap.constEnd()){
 			CompositePackageInfo& packageInfo = m_compositePackagesMap[packageId];
@@ -418,6 +438,8 @@ bool CPackagesLoaderComp::LoadConfigFile(const QString& configFile)
 	for (int i = 0; i < packageDirsCount; ++i){
 		QString correctedPath;
 		if (CheckAndMarkPath(baseDir, configurationData.GetPackageDir(i), correctedPath)){
+			SendVerboseMessage(tr("Register package directory: %1").arg(correctedPath));
+
 			RegisterPackagesDir(correctedPath);
 		}
 	}
@@ -426,6 +448,8 @@ bool CPackagesLoaderComp::LoadConfigFile(const QString& configFile)
 	for (int i = 0; i < packagesCount; ++i){
 		QString correctedPath;
 		if (CheckAndMarkPath(baseDir, configurationData.GetPackage(i), correctedPath)){
+			SendVerboseMessage(tr("Register package: %1").arg(correctedPath));
+
 			RegisterPackageFile(correctedPath);
 		}
 	}
@@ -489,7 +513,11 @@ CPackagesLoaderComp::LogingRegistry::ElementInfo* CPackagesLoaderComp::LogingReg
 
 bool CPackagesLoaderComp::CheckAndMarkPath(const QDir& directory, const QString& path, QString& resultPath) const
 {
-	QString fullPath = QFileInfo(directory.filePath(istd::CSystem::GetEnrolledPath(path))).canonicalFilePath();
+	QString enrolledPath = istd::CSystem::GetEnrolledPath(path);
+
+	SendVerboseMessage(QString("Converted '%1' into '%2'").arg(path).arg(enrolledPath));
+
+	QString fullPath = QFileInfo(directory.filePath(enrolledPath)).canonicalFilePath();
 	if (!fullPath.isEmpty() && (m_usedFilesList.find(fullPath) == m_usedFilesList.end())){
 		m_usedFilesList.insert(fullPath);
 

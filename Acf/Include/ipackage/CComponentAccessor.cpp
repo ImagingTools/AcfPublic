@@ -35,6 +35,7 @@
 #include "ifile/CComposedFilePersistenceComp.h"
 #include "ifile/CCompactXmlFileReadArchive.h"
 #include "ifile/CCompactXmlFileWriteArchive.h"
+#include "ilog/CConsoleLogComp.h"
 #include "ipackage/CPackagesLoaderComp.h"
 
 
@@ -48,13 +49,17 @@ struct Loader
 	icomp::TSimComponentWrap< ifile::TFileSerializerComp<ifile::CCompactXmlFileReadArchive, ifile::CCompactXmlFileWriteArchive> > registrySerializerComp;
 	icomp::TSimComponentWrap<ifile::CComposedFilePersistenceComp> composedSerializerComp;
 	icomp::TSimComponentWrap<ipackage::CPackagesLoaderComp> packagesLoaderComp;
+	icomp::TSimComponentWrap<ilog::CConsoleLogComp> log;
 
 	Loader()
 	{
+		log.InitComponent();
+
 		oldRegistrySerializerComp.InsertMultiAttr("FileExtensions", QString("arx"));
 		oldRegistrySerializerComp.InitComponent();
 
 		registrySerializerComp.InsertMultiAttr("FileExtensions", QString("acc"));
+		registrySerializerComp.SetRef("Log", &log);
 		registrySerializerComp.InitComponent();
 
 		composedSerializerComp.InsertMultiRef("SlaveLoaders", &oldRegistrySerializerComp);
@@ -62,6 +67,8 @@ struct Loader
 		composedSerializerComp.InitComponent();
 
 		packagesLoaderComp.SetRef("RegistryLoader", &composedSerializerComp);
+		packagesLoaderComp.SetRef("Log", &log);
+		packagesLoaderComp.SetBoolAttr("EnableVerbose", true);
 		packagesLoaderComp.InitComponent();
 	}
 };
