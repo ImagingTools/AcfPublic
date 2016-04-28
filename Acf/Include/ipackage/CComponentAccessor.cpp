@@ -67,8 +67,8 @@ struct Loader
 		composedSerializerComp.InitComponent();
 
 		packagesLoaderComp.SetRef("RegistryLoader", &composedSerializerComp);
-		packagesLoaderComp.SetRef("Log", &log);
-		packagesLoaderComp.SetBoolAttr("EnableVerbose", true);
+//		packagesLoaderComp.SetRef("Log", &log);
+//		packagesLoaderComp.SetBoolAttr("EnableVerbose", true);
 		packagesLoaderComp.InitComponent();
 	}
 };
