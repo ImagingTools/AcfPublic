@@ -51,15 +51,21 @@ struct Loader
 	icomp::TSimComponentWrap<ipackage::CPackagesLoaderComp> packagesLoaderComp;
 	icomp::TSimComponentWrap<ilog::CConsoleLogComp> log;
 
-	Loader()
+	Loader(bool isDiagnosticEnabled)
 	{
+		log.SetBoolAttr("UseCategory", false);
+		log.SetBoolAttr("UseCode", false);
 		log.InitComponent();
 
 		oldRegistrySerializerComp.InsertMultiAttr("FileExtensions", QString("arx"));
 		oldRegistrySerializerComp.InitComponent();
 
 		registrySerializerComp.InsertMultiAttr("FileExtensions", QString("acc"));
-		registrySerializerComp.SetRef("Log", &log);
+		if (isDiagnosticEnabled){
+			registrySerializerComp.SetRef("Log", &log);
+			registrySerializerComp.SetBoolAttr("EnableVerbose", true);
+		}
+
 		registrySerializerComp.InitComponent();
 
 		composedSerializerComp.InsertMultiRef("SlaveLoaders", &oldRegistrySerializerComp);
@@ -67,8 +73,12 @@ struct Loader
 		composedSerializerComp.InitComponent();
 
 		packagesLoaderComp.SetRef("RegistryLoader", &composedSerializerComp);
-//		packagesLoaderComp.SetRef("Log", &log);
-//		packagesLoaderComp.SetBoolAttr("EnableVerbose", true);
+
+		if (isDiagnosticEnabled){
+			packagesLoaderComp.SetRef("Log", &log);
+			packagesLoaderComp.SetBoolAttr("EnableVerbose", true);
+		}
+
 		packagesLoaderComp.InitComponent();
 	}
 };
@@ -83,10 +93,11 @@ namespace ipackage
 
 CComponentAccessor::CComponentAccessor(
 			const QString& registryFile,
-			const QString& configFile)
+			const QString& configFile,
+			bool isDiagnosticEnabled)
 :	m_isAutoInitBlocked(false)
 {
-	static Loader loader;
+	static Loader loader(isDiagnosticEnabled);
 	loader.packagesLoaderComp.LoadPackages(configFile);
 
 	QString usedRegistryFile = registryFile.isEmpty()? QString("default.acc"): registryFile;

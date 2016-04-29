@@ -41655,8 +41655,8 @@
       <type></type>
       <name>CComponentAccessor</name>
       <anchorfile>classipackage_1_1_c_component_accessor.html</anchorfile>
-      <anchor>ac12cd540b46e4da20bddf289fc187c47</anchor>
-      <arglist>(const QString &amp;registryFile, const QString &amp;configFile=QString())</arglist>
+      <anchor>a4be81778358e8242e8e33a160d3a08d7</anchor>
+      <arglist>(const QString &amp;registryFile, const QString &amp;configFile=QString(), bool isDiagnosticEnabled=false)</arglist>
     </member>
     <member kind="function">
       <type>InterfaceType *</type>
