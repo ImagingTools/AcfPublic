@@ -2991,6 +2991,8 @@
     <name>TExtMessage.h</name>
     <path>C:/Temp/Acf/Include/ilog/</path>
     <filename>_t_ext_message_8h</filename>
+    <includes id="_c_change_notifier_8h" name="CChangeNotifier.h" local="yes" imported="no">istd/CChangeNotifier.h</includes>
+    <includes id="_c_class_info_8h" name="CClassInfo.h" local="yes" imported="no">istd/CClassInfo.h</includes>
     <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="yes" imported="no">imod/TModelWrap.h</includes>
     <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ilog/CMessage.h</includes>
     <class kind="class">ilog::TExtMessage</class>

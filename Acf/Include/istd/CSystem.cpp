@@ -500,7 +500,7 @@ QString CSystem::ConvertNetworkPathToUnc(const QString& localPath)
 {
 	QString uncPath = localPath;
 
-#ifdef Q_OS_WIN
+#if defined(Q_OS_WIN) && defined(Q_CC_MSVC)
 	// TODO: Remove this code after complete switching to Qt 5.5,
 	// use QStorageInfo instead of this implementation!
 
@@ -521,7 +521,7 @@ QString CSystem::ConvertNetworkPathToUnc(const QString& localPath)
 
 		delete [] buf;
 	}
-#endif // Q_OS_WIN
+#endif // Q_OS_WIN && Q_CC_MSVC
 
 	return uncPath;
 }

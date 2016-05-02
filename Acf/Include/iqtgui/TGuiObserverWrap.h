@@ -159,7 +159,8 @@ TGuiObserverWrap<Gui, Observer>::TGuiObserverWrap()
 :	m_isReadOnly(false),
 	m_disableUiIfReadOnly(true),
 	m_ignoreUpdatesCounter(0),
-	m_updateOnShow(false)
+	m_updateOnShow(true),
+	m_onShowChangeIds(istd::IChangeable::GetAllChanges())
 {
 }
 
@@ -294,8 +295,6 @@ void TGuiObserverWrap<Gui, Observer>::UpdateEditor(const istd::IChangeable::Chan
 		// prepare postponed update
 		m_updateOnShow = true;
 		m_onShowChangeIds += changeSet;
-
-		return;
 	}
 }
 
