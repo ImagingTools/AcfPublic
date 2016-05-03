@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef IacfBasePck_included
-#define IacfBasePck_included
+#ifndef CameraPck_included
+#define CameraPck_included
 
 
 // ACF includes
@@ -71,6 +71,6 @@ typedef icam::CCalibratedCameraComp CalibratedCamera;
 } // namespace CameraPck
 
 
-#endif // !IacfBasePck_included
+#endif // !CameraPck_included
 
 

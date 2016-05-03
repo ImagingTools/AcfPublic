@@ -221,8 +221,9 @@ void CSplashScreenGuiComp::OnGuiRetranslate()
 
 void CSplashScreenGuiComp::OnAddMessage(const MessagePtr& messagePtr)
 {
-	if (!IsGuiCreated())
+	if (!IsGuiCreated()){
 		return;
+	}
 
 	QString text = messagePtr->GetInformationDescription();
 	if (text.isEmpty()){
