@@ -72,6 +72,8 @@ void CSplashScreenGuiComp::AddMessage(const MessagePtr& messagePtr)
 
 void CSplashScreenGuiComp::OnGuiCreated()
 {
+	BaseClass::OnGuiCreated();
+
 	Q_ASSERT(IsGuiCreated());
 	QSplashScreen* splashScreenPtr = GetQtWidget();
 	Q_ASSERT(splashScreenPtr != NULL);
@@ -219,6 +221,9 @@ void CSplashScreenGuiComp::OnGuiRetranslate()
 
 void CSplashScreenGuiComp::OnAddMessage(const MessagePtr& messagePtr)
 {
+	if (!IsGuiCreated())
+		return;
+
 	QString text = messagePtr->GetInformationDescription();
 	if (text.isEmpty()){
 		ProgressLabel->clear();
