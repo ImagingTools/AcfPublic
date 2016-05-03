@@ -34,6 +34,7 @@
 
 // ACF includes
 #include "ifile/IFilePersistence.h"
+#include "iprm/CEnableableParam.h"
 #include "ilog/CMessageContainer.h"
 #include "ilog/CMessage.h"
 #include "iqtgui/TDesignerGuiObserverCompBase.h"
@@ -59,6 +60,11 @@ public:
 
 	I_BEGIN_COMPONENT(CLogGuiComp);
 		I_REGISTER_INTERFACE(ilog::IMessageConsumer);
+		I_REGISTER_SUBELEMENT(DiagnosticState);
+		I_REGISTER_SUBELEMENT_INTERFACE(DiagnosticState, iprm::IEnableableParam, ExtractDiagnosticState);
+		I_REGISTER_SUBELEMENT_INTERFACE(DiagnosticState, iser::ISerializable, ExtractDiagnosticState);
+		I_REGISTER_SUBELEMENT_INTERFACE(DiagnosticState, istd::IChangeable, ExtractDiagnosticState);
+		I_REGISTER_SUBELEMENT_INTERFACE(DiagnosticState, imod::IModel, ExtractDiagnosticState);
 		I_ASSIGN(m_fileLoaderCompPtr, "Exporter", "File loader used for log export", false, "Exporter");
 		I_ASSIGN(m_slaveMessageConsumerCompPtr, "SlaveMessageConsumer", "Slave message consumer", false, "SlaveMessageConsumer");
 		I_ASSIGN_TO(m_slaveMessageContainerCompPtr, m_slaveMessageConsumerCompPtr, false);
@@ -152,6 +158,7 @@ protected Q_SLOTS:
 	virtual void OnExportAction();
 
 	void OnRemoveMessagesTimer();
+	void EnableDiagnosticMessages(bool state);
 
 	void on_FilterText_textChanged(const QString& filterText);
 
@@ -167,6 +174,13 @@ protected:
 	QAction* m_diagnosticModeActionPtr;
 
 private:
+	// static template methods for subelement access
+	template <class InterfaceType>
+	static InterfaceType* ExtractDiagnosticState(CLogGuiComp& component)
+	{
+		return &component.m_diagnosticState;
+	}
+
 	I_REF(ifile::IFilePersistence, m_fileLoaderCompPtr);
 	I_REF(ilog::IMessageConsumer, m_slaveMessageConsumerCompPtr);
 	I_REF(ilog::IHierarchicalMessageContainer, m_slaveMessageContainerCompPtr);
@@ -182,6 +196,8 @@ private:
 	int m_statusCategory;
 
 	QTimer m_removeMessagesTimer;
+
+	imod::TModelWrap<iprm::CEnableableParam> m_diagnosticState;
 };
 
 

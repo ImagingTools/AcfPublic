@@ -3042,6 +3042,7 @@
     <path>C:/Temp/Acf/Include/iloggui/</path>
     <filename>_c_log_gui_comp_8h</filename>
     <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_c_enableable_param_8h" name="CEnableableParam.h" local="yes" imported="no">iprm/CEnableableParam.h</includes>
     <includes id="_c_message_container_8h" name="CMessageContainer.h" local="yes" imported="no">ilog/CMessageContainer.h</includes>
     <includes id="_c_message_8h" name="CMessage.h" local="yes" imported="no">ilog/CMessage.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
@@ -36996,6 +36997,13 @@
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
       <anchor>a7bc9cd07eed9b34a004a96ddf9af8409</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>EnableDiagnosticMessages</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a54d8d17b403ac4435c21d1e06739b13a</anchor>
+      <arglist>(bool state)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>

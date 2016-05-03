@@ -47,7 +47,7 @@ CDirectoryMonitorParams::CDirectoryMonitorParams()
 }
 
 
-// reimüplemented (ihotf::IDirectoryMonitorParams)
+// reimplemented (ihotf::IDirectoryMonitorParams)
 
 double CDirectoryMonitorParams::GetPoolingIntervall() const
 {

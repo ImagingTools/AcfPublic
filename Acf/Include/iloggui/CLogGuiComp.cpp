@@ -57,10 +57,11 @@ CLogGuiComp::CLogGuiComp()
 	m_currentMessageMode(MM_ALL),
 	m_statusCategory(istd::IInformationProvider::IC_NONE)
 {
+	m_diagnosticState.SetEnabled(false);
+
 	qRegisterMetaType<MessagePtr>("MessagePtr");
 
-	connect(
-				this,
+	connect(	this,
 				SIGNAL(EmitAddMessage(const MessagePtr&)),
 				this,
 				SLOT(OnAddMessage(const MessagePtr&)),
@@ -182,7 +183,7 @@ bool CLogGuiComp::IsMessageSupported(
 {
 	switch (messageCategory){
 	case istd::IInformationProvider::IC_NONE:
-		return *m_allowDiagnosticMessagesAttrPtr && (m_diagnosticModeActionPtr != NULL) && m_diagnosticModeActionPtr->isChecked();
+		return m_diagnosticState.IsEnabled();
 
 	default:
 		return true;
@@ -303,8 +304,11 @@ void CLogGuiComp::OnGuiCreated()
 
 		m_diagnosticModeActionPtr = new QAction(diagnosticModeIcon, tr("Diagnostic Mode"), ToolBarFrame);
 		m_diagnosticModeActionPtr->setCheckable(true);
+		m_diagnosticModeActionPtr->setChecked(m_diagnosticState.IsEnabled());
 		toolBar->addAction(m_diagnosticModeActionPtr);
 		toolBar->insertSeparator(m_diagnosticModeActionPtr);
+
+		connect(m_diagnosticModeActionPtr, SIGNAL(toggled(bool)), this, SLOT(EnableDiagnosticMessages(bool)));
 	}
 
 	connect(&m_removeMessagesTimer, SIGNAL(timeout()), this, SLOT(OnRemoveMessagesTimer()));
@@ -478,6 +482,12 @@ void CLogGuiComp::OnRemoveMessagesTimer()
 			LogView->model()->removeRows(*m_maxMessagesCountAttrPtr - 1, itemsToRemove);
 		}
 	}
+}
+
+
+void CLogGuiComp::EnableDiagnosticMessages(bool state)
+{
+	m_diagnosticState.SetEnabled(state);
 }
 
 
