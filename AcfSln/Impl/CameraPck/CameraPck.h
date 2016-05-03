@@ -61,7 +61,10 @@ typedef icomp::TModelCompWrap<icam::CSelectableBitmapSupplierComp> SelectableBit
 typedef icomp::TModelCompWrap<icam::CSnapMultiPageBitmapSupplierComp> SnapMultiPageBitmapSupplier;
 
 typedef icomp::TModelCompWrap<icam::CSnapBitmapSupplierComp> SnapBitmapSupplier;
-typedef icomp::TModelCompWrap<icam::TSnapBitmapSupplierComp<iimg::CBitmap> > StandardQtBitmapSnapSupplier;
+typedef icomp::TModelCompWrap<
+			icam::TSnapBitmapSupplierComp<iimg::CBitmap> > StandardQtBitmapSnapSupplier;
+typedef icomp::TModelCompWrap<
+			icam::TSnapBitmapSupplierComp<iimg::CGeneralBitmap> > StandardBitmapSnapSupplier;
 typedef icam::CCalibratedCameraComp CalibratedCamera;
 
 
