@@ -25,6 +25,7 @@
 
 
 // Qt includes
+#include <QtCore/QtGlobal>
 #include <QtCore/QStringList>
 
 // ACF includes
@@ -120,13 +121,16 @@ TParamsPtr<ParameterInterace>::TParamsPtr(
 
 
 template <class ParameterInterace>
-void TParamsPtr<ParameterInterace>::Init(const IParamsSet* parameterSetPtr, const QByteArray& parameterId, bool I_IF_DEBUG(isObligatory))
+void TParamsPtr<ParameterInterace>::Init(const IParamsSet* parameterSetPtr, const QByteArray& parameterId, bool isObligatory)
 {
+	Q_UNUSED(isObligatory);
+
 	if ((parameterSetPtr != NULL) && !parameterId.isEmpty()){
 		const iser::ISerializable* parameterPtr = parameterSetPtr->GetParameter(parameterId);
 
 		BaseClass::SetPtr(dynamic_cast<const ParameterInterace*>(parameterPtr));
 
+#if QT_VERSION >= 0x040800
 		I_IF_DEBUG(
 			if (!BaseClass::IsValid() && isObligatory){
 				iprm::IParamsSet::Ids existingParamIds = parameterSetPtr->GetParamIds();
@@ -145,6 +149,7 @@ void TParamsPtr<ParameterInterace>::Init(const IParamsSet* parameterSetPtr, cons
 				}
 			}
 		)
+#endif
 	}
 	else{
 		BaseClass::Reset();
@@ -157,8 +162,10 @@ void TParamsPtr<ParameterInterace>::Init(
 			const IParamsSet* parameterSetPtr,
 			const icomp::TAttributeMember<iattr::CIdAttribute>& parameterIdAttribute,
 			const icomp::TReferenceMember<ParameterInterace>& defaultRef,
-			bool I_IF_DEBUG(isObligatory))
+			bool isObligatory)
 {
+	Q_UNUSED(isObligatory);
+
 	BaseClass::Reset();
 
 	if (parameterSetPtr != NULL){
@@ -167,11 +174,13 @@ void TParamsPtr<ParameterInterace>::Init(
 			const ParameterInterace* paramImplPtr = dynamic_cast<const ParameterInterace*>(paramPtr);
 			BaseClass::SetPtr(paramImplPtr);
 
+#if QT_VERSION >= 0x050000
 			I_IF_DEBUG(
 				if ((paramImplPtr == NULL) && (paramPtr != NULL)){
 					qDebug("Parameter %s in parameter set is not compatible, should be %s", qPrintable(*parameterIdAttribute), qPrintable(istd::CClassInfo::GetName<ParameterInterace>()));
 				}
 			)
+#endif
 		}
 	}
 
@@ -179,6 +188,7 @@ void TParamsPtr<ParameterInterace>::Init(
 		BaseClass::SetPtr(defaultRef.GetPtr());
 	}
 
+#if QT_VERSION >= 0x040800
 	I_IF_DEBUG(
 		if (!BaseClass::IsValid() && isObligatory){
 			QString debugMessage;
@@ -196,10 +206,10 @@ void TParamsPtr<ParameterInterace>::Init(
 			else{
 				debugMessage = QString("Parameter was not specified and no default parameter is active");
 			}
-
 			qDebug(qPrintable(debugMessage));
 		}
 	)
+#endif
 }
 
 
