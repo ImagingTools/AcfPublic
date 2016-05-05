@@ -210,7 +210,7 @@ int CRegistryLoaderComp::SaveToFile(
 				}
 
 				QString layoutFilePath = GetLayoutPath(filePath, true);
-				QFile(layoutFilePath).setPermissions(QFileDevice::WriteUser);
+				QFile(layoutFilePath).setPermissions(QFile::WriteUser);
 
 				ifile::TFileSerializerComp<ifile::CSimpleXmlFileReadArchive, ifile::CSimpleXmlFileWriteArchive>::WriteArchiveEx layoutArchive(layoutFilePath, m_versionInfoCompPtr.GetPtr(), this);
 				Q_ASSERT(layoutArchive.IsStoring());
@@ -243,7 +243,7 @@ int CRegistryLoaderComp::SaveToFile(
 				}
 
 				QString layoutFilePath = GetLayoutPath(filePath, false);
-				QFile(layoutFilePath).setPermissions(QFileDevice::WriteUser);
+				QFile(layoutFilePath).setPermissions(QFile::WriteUser);
 
 				ifile::TFileSerializerComp<ifile::CCompactXmlFileReadArchive, ifile::CCompactXmlFileWriteArchive>::WriteArchiveEx layoutArchive(layoutFilePath, m_versionInfoCompPtr.GetPtr(), this);
 				Q_ASSERT(layoutArchive.IsStoring());
