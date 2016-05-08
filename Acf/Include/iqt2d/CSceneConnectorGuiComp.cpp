@@ -70,6 +70,9 @@ void CSceneConnectorGuiComp::OnGuiCreated()
 			}
 		}
 	}
+	else{
+		ExternFrame->setVisible(false);
+	}
 
 	if (m_sceneProviderCompPtr.IsValid() && m_extenderCompPtr.IsValid()){
 		m_extenderCompPtr->AddItemsToScene(m_sceneProviderCompPtr.GetPtr(), IViewExtender::SF_DIRECT);
