@@ -61,7 +61,7 @@ int CDataSequenceInfoBase::GetWeightMode() const
 
 int CDataSequenceInfoBase::GetNumericValuesCount() const
 {
-	return std::max(0, GetDefaultChannelsCount());
+	return qMax(0, GetDefaultChannelsCount());
 }
 
 
