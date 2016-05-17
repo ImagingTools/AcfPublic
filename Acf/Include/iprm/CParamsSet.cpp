@@ -25,6 +25,7 @@
 
 // ACF includes
 #include "istd/CChangeNotifier.h"
+#include "istd/CChangeGroup.h"
 #include "istd/TDelPtr.h"
 #include "istd/CIdManipBase.h"
 
@@ -224,7 +225,8 @@ bool CParamsSet::Serialize(iser::IArchive& archive)
 			return false;
 		}
 
-		istd::CChangeNotifier notifier(this);
+		istd::CChangeGroup changeGroup(this);
+		Q_UNUSED(changeGroup);
 
 		for (int i = 0; i < paramsCount; ++i){
 			retVal = retVal && archive.BeginTag(parameterTag);
