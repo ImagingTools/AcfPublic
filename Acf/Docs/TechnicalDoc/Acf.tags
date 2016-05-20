@@ -34376,10 +34376,10 @@
     </member>
     <member kind="function" protection="protected">
       <type>int</type>
-      <name>CalcIndexFromCurrentId</name>
+      <name>CalcIndexFromId</name>
       <anchorfile>classiprm_1_1_c_selection_param.html</anchorfile>
-      <anchor>a49a2f47378b9d9c2ad9c82cc03f1d498</anchor>
-      <arglist>() const </arglist>
+      <anchor>a741a7021c944d7080a02b7850d902f22</anchor>
+      <arglist>(const QByteArray &amp;optionId, int suggestedIndex=NO_SELECTION) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -46918,10 +46918,10 @@
       <arglist>(double value)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual iview::CLineShape *</type>
+      <type>virtual iview::CInteractiveShapeBase *</type>
       <name>CreateShapeInstance</name>
       <anchorfile>classiqt2d_1_1_c_line2d_params_gui_comp.html</anchorfile>
-      <anchor>aae91680e3bd889c00eedd048d25087e9</anchor>
+      <anchor>ae2632ec5b460cd53d5c8148fd00e5cc0</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -47890,13 +47890,6 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual iview::IShape *</type>
-      <name>CreateShape</name>
-      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
-      <anchor>aaf3b61ce9d73608a10d70aa930979db9</anchor>
-      <arglist>(const istd::IChangeable *objectPtr, bool connectToModel=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
@@ -47986,6 +47979,13 @@
       <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
       <anchor>ac4ebc238698cc55f401c7846e917dddb</anchor>
       <arglist>(CActionAdapter &amp;host, imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual iview::CInteractiveShapeBase *</type>
+      <name>CreateShapeInstance</name>
+      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
+      <anchor>a73c1894c3ea52e8f1379b9d864beb990</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -49557,10 +49557,10 @@
       <arglist>(QAction *actionPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual Shape *</type>
+      <type>virtual iview::CInteractiveShapeBase *</type>
       <name>CreateShapeInstance</name>
       <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
-      <anchor>a42e450e1f494f70b930e83ec0421cfbd</anchor>
+      <anchor>a22ddcedf8b3f22531337195ed212af72</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
