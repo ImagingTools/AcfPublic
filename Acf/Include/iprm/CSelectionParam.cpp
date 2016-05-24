@@ -92,15 +92,30 @@ bool CSelectionParam::SetSelectedOptionById(const QByteArray& selectedOptionId)
 		return true;
 	}
 
-	int index = CalcIndexFromId(selectedOptionId, NO_SELECTION);
-	if (index != NO_SELECTION){
-		istd::CChangeNotifier notifier(this, &s_selectionChangeSet);
-		Q_UNUSED(notifier);
+	if (selectedOptionId.isEmpty()){
+		if (m_selectedOptionIndex != NO_SELECTION){
+			istd::CChangeNotifier notifier(this, &s_selectionChangeSet);
+			Q_UNUSED(notifier);
 
-		m_selectedOptionId = selectedOptionId;
-		m_selectedOptionIndex = index;
+			m_selectedOptionIndex = NO_SELECTION;
+			m_selectedOptionId.clear();
+		}
+
+		Q_ASSERT(m_selectedOptionId.isEmpty());
 
 		return true;
+	}
+	else{
+		int index = CalcIndexFromId(selectedOptionId, NO_SELECTION);
+		if (index != NO_SELECTION){
+			istd::CChangeNotifier notifier(this, &s_selectionChangeSet);
+			Q_UNUSED(notifier);
+
+			m_selectedOptionId = selectedOptionId;
+			m_selectedOptionIndex = index;
+
+			return true;
+		}
 	}
 
 	return false;
@@ -352,9 +367,9 @@ int CSelectionParam::CalcIndexFromId(const QByteArray& optionId, int suggestedIn
 
 		int optionsCount = m_constraintsPtr->GetOptionsCount();
 		for (int optionIndex = 0; optionIndex < optionsCount; optionIndex++){
-			QByteArray optionId = m_constraintsPtr->GetOptionId(optionIndex);
+			QByteArray id = m_constraintsPtr->GetOptionId(optionIndex);
 
-			if ((optionId == optionId) && m_constraintsPtr->IsOptionEnabled(optionIndex)){
+			if ((optionId == id) && m_constraintsPtr->IsOptionEnabled(optionIndex)){
 				return optionIndex;
 			}
 		}
