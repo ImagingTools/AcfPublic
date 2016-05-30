@@ -1,6 +1,7 @@
 @echo off
 
-set COMPILER_EXT=VC12
+set QTDIR=%QTDIR_64%
+set COMPILER_EXT=VC12_64
 set QMAKESPEC=%QTDIR%\mkspecs\win32-msvc2013
 set path=%path%;%QTDIR%\bin
 cd %~dp0\..\..
@@ -12,13 +13,13 @@ cd Build\QMake
 
 cd %~dp0\..\..\Acf\Docs\Tutorial\Build\QMake
 
-echo Generating %COMPILER_EXT% ACF-Tutorial projects...
+echo Generating %COMPILER_EXT% ACF projects...
 cd Build\QMake
 %QTDIR%\bin\qmake -recursive -tp vc
 
 cd %~dp0\..\..
 
-call Acf\Config\QMake\CopyVCProjToSubdir.js %COMPILER_EXT% -replace%QTDIR%=$(QTDIR) -replace%CD%\=$(RelativePath)\
+call Acf\Config\QMake\CopyVCProjToSubdir.js %COMPILER_EXT% -replace%QTDIR%=$(QTDIR) -replace%QTDIR%=$(QTDIR) -replace%CD%\Acf\=$(RelativePath)\ -replace%CD%\AcfSln\=$(RelativePath)\
 
 
 cd %~dp0\
