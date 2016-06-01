@@ -29665,11 +29665,18 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
+      <name>LoadObject</name>
+      <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
+      <anchor>a3a957c1bbe63408d009ebc900a5ea105</anchor>
+      <arglist>(const QString &amp;filePath)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
       <name>StoreObject</name>
       <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
-      <anchor>a3b5d02bc34df655bd3cbd5c8e149677f</anchor>
-      <arglist>(const istd::IChangeable &amp;object) const </arglist>
+      <anchor>a6a82df9c043d0554bf85f47c4fd54fde</anchor>
+      <arglist>(const istd::IChangeable &amp;object)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
