@@ -5207,6 +5207,7 @@
     <name>COptionsManagerEditorComp.h</name>
     <path>C:/Temp/Acf/Include/iqtprm/</path>
     <filename>_c_options_manager_editor_comp_8h</filename>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_options_manager_8h" name="IOptionsManager.h" local="yes" imported="no">iprm/IOptionsManager.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <class kind="class">iqtprm::COptionsManagerEditorComp</class>
@@ -5237,6 +5238,7 @@
     <name>CParamsManagerGuiCompBase.h</name>
     <path>C:/Temp/Acf/Include/iqtprm/</path>
     <filename>_c_params_manager_gui_comp_base_8h</filename>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="yes" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_params_manager_8h" name="IParamsManager.h" local="yes" imported="no">iprm/IParamsManager.h</includes>
     <includes id="_i_icon_provider_8h" name="IIconProvider.h" local="yes" imported="no">iqtgui/IIconProvider.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="yes" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
@@ -56663,6 +56665,20 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
+      <name>on_LoadParamsButton_clicked</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a93c06286845d375bfc19dea40f493878</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_SaveParamsButton_clicked</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a7c9d7c66477c5edb65f4a11e42c96336</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
       <name>OnAddMenuOptionClicked</name>
       <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
       <anchor>ae1bc21ccfeba6de184132795f986f3f5</anchor>
@@ -56913,6 +56929,20 @@
       <anchorfile>classiqtprm_1_1_c_options_manager_editor_comp.html</anchorfile>
       <anchor>abc56e0ab40d619dddfeaf7e6f931ca52</anchor>
       <arglist>(QListWidgetItem *item)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_LoadParamsButton_clicked</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_editor_comp.html</anchorfile>
+      <anchor>aa459743fbc32d92666612f9d85f76b37</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_SaveParamsButton_clicked</name>
+      <anchorfile>classiqtprm_1_1_c_options_manager_editor_comp.html</anchorfile>
+      <anchor>aafaa86973386de987404dd1199b7f276</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
