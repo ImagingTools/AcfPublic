@@ -301,7 +301,6 @@
     <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_attribute_editor_comp_8h</filename>
     <includes id="_c_element_selection_info_manager_base_8h" name="CElementSelectionInfoManagerBase.h" local="yes" imported="no">icmpstr/CElementSelectionInfoManagerBase.h</includes>
-    <includes id="_c_multi_attribute_editor_8h" name="CMultiAttributeEditor.h" local="yes" imported="no">icmpstr/CMultiAttributeEditor.h</includes>
     <class kind="class">icmpstr::CAttributeEditorComp</class>
     <class kind="struct">icmpstr::CAttributeEditorComp::AttrInfo</class>
     <namespace>icmpstr</namespace>
@@ -7924,6 +7923,13 @@
       <anchor>a9bba9dddc5b78467e29cde259d2d116f</anchor>
       <arglist>(const icomp::IAttributeStaticInfo *attributeStaticInfoPtr)</arglist>
     </member>
+    <member kind="typedef" protection="protected">
+      <type>QSet&lt; QString &gt;</type>
+      <name>MetaInfoFilter</name>
+      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
+      <anchor>acddb53c122dc5674708a2fa55cd4d7d1</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_FilterEdit_editingFinished</name>
@@ -7968,9 +7974,9 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>on_FilterGB_toggled</name>
+      <name>on_EnableFiltersButton_toggled</name>
       <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>aa63cfef6a94570958857d86e16877088</anchor>
+      <anchor>ab064b22f1cd555517a7b69075f9d1d51</anchor>
       <arglist>(bool on)</arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -7989,6 +7995,48 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
+      <name>on_InterfaceClearButton_clicked</name>
+      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
+      <anchor>a8a284cccf99246adb469b7161ef6e438</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_CompanyClearButton_clicked</name>
+      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
+      <anchor>a06a3490202d41498f333e88ab885694b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ProjectClearButton_clicked</name>
+      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
+      <anchor>a7d7eb40f168816c98f7a6c3b7f775933</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_AuthorClearButton_clicked</name>
+      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
+      <anchor>aa5d1a155f0bef120e5ea21b171eede2c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_CategoryClearButton_clicked</name>
+      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
+      <anchor>abaef49ceca7e308d76d5dabccd7581a9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_TagClearButton_clicked</name>
+      <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
+      <anchor>a87afa2ec65cb3806558c9f6aacd4f79b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
       <name>on_KeywordClearButton_clicked</name>
       <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
       <anchor>a8a26e40769d565669b31db3c10703e23</anchor>
@@ -7996,9 +8044,9 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>on_InterfaceClearButton_clicked</name>
+      <name>OnMetaInfoSelectorChanged</name>
       <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a8a284cccf99246adb469b7161ef6e438</anchor>
+      <anchor>a0f0b661f43951aadb49e321b955ddb56</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -8010,17 +8058,17 @@
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>UpdateComponentGroups</name>
+      <name>UpdateAllMetaInfoLists</name>
       <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a86ea72e853678f9b6816f0fcc6eafa08</anchor>
+      <anchor>ad7992758d1c0ca6565f935f4e22f904d</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>UpdateInterfaceList</name>
+      <name>UpdateSingleMetaInfoList</name>
       <anchorfile>classicmpstr_1_1_c_package_overview_comp.html</anchorfile>
-      <anchor>a88405540569440d3cb98c1bedbe92ddf</anchor>
-      <arglist>()</arglist>
+      <anchor>a798a634c5998cc3e40ffbc8e20cb514e</anchor>
+      <arglist>(const MetaInfoFilter &amp;filter, QComboBox &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -8338,6 +8386,13 @@
       <anchor>a17277f70a9bf291a4806d392aa37d8b2af050992c4fda62f91eb3d6eada5fc7e8</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>QF_INCLUDE_SUBELEMENTS</name>
+      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
+      <anchor>a17277f70a9bf291a4806d392aa37d8b2abb55871b094fb117fd7751b669ff42de</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual icomp::IRegistry::Ids</type>
       <name>GetCompatibleElements</name>
@@ -8398,8 +8453,8 @@
       <type>bool</type>
       <name>CheckPointedElementCompatibility</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>ab8210c89891a8bf2b4d6d7a7293edb35</anchor>
-      <arglist>(const QByteArray &amp;pointedElementName, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const icomp::IElementStaticInfo::Ids &amp;optionalInterfaceNames, const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, ilog::IMessageConsumer *reasonConsumerPtr) const </arglist>
+      <anchor>aba7adc84d17beaf9aba054b031905464</anchor>
+      <arglist>(const icomp::IAttributeStaticInfo &amp;attributeMetaInfo, const QByteArray &amp;pointedElementName, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const icomp::IElementStaticInfo::Ids &amp;optionalInterfaceNames, const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, ilog::IMessageConsumer *reasonConsumerPtr) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>

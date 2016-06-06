@@ -69,7 +69,7 @@ icomp::IRegistry::Ids CRegistryConsistInfoComp::GetCompatibleElements(
 								*infoPtr,
 								interfaceNames,
 								queryFlags,
-								true);
+								(queryFlags & QF_INCLUDE_SUBELEMENTS) != 0);
 				}
 				else if (includeUndefined){
 					retVal.insert(elementId);
@@ -91,7 +91,7 @@ icomp::IRegistry::Ids CRegistryConsistInfoComp::GetCompatibleElements(
 							info,
 							interfaceNames,
 							queryFlags,
-							true);
+							(queryFlags & QF_INCLUDE_SUBELEMENTS) != 0);
 			}
 
 			retVal += subIds;
@@ -514,7 +514,7 @@ bool CRegistryConsistInfoComp::CheckAttributeCompatibility(
 			ilog::IMessageConsumer* reasonConsumerPtr) const
 {
 	const icomp::CReferenceAttribute* idPtr = dynamic_cast<const icomp::CReferenceAttribute*>(&attribute);
-	if (idPtr != NULL){		
+	if (idPtr != NULL){
 		icomp::IElementStaticInfo::Ids interfaceNames = attributeMetaInfo.GetRelatedMetaIds(
 					icomp::IComponentStaticInfo::MGI_INTERFACES,
 					0,
@@ -526,6 +526,7 @@ bool CRegistryConsistInfoComp::CheckAttributeCompatibility(
 		const QByteArray& componentId = idPtr->GetValue();
 
 		if (!CheckPointedElementCompatibility(
+					attributeMetaInfo,
 					componentId,
 					interfaceNames,
 					optionalInterfaceNames,
@@ -555,6 +556,7 @@ bool CRegistryConsistInfoComp::CheckAttributeCompatibility(
 			const QByteArray& componentId = multiIdPtr->GetValueAt(idIndex);
 
 			if (!CheckPointedElementCompatibility(
+						attributeMetaInfo,
 						componentId,
 						interfaceNames,
 						optionalInterfaceNames,
@@ -578,6 +580,7 @@ bool CRegistryConsistInfoComp::CheckAttributeCompatibility(
 
 
 bool CRegistryConsistInfoComp::CheckPointedElementCompatibility(
+			const icomp::IAttributeStaticInfo& attributeMetaInfo,
 			const QByteArray& pointedElementName,
 			const icomp::IElementStaticInfo::Ids& interfaceNames,
 			const icomp::IElementStaticInfo::Ids& optionalInterfaceNames,
@@ -587,9 +590,41 @@ bool CRegistryConsistInfoComp::CheckPointedElementCompatibility(
 			bool ignoreUndef,
 			ilog::IMessageConsumer* reasonConsumerPtr) const
 {
+	int attributeFlags = attributeMetaInfo.GetAttributeFlags();
+	if ((attributeFlags & (icomp::IAttributeStaticInfo::AF_FACTORY | icomp::IAttributeStaticInfo::AF_REFERENCE)) == 0){
+		if (!ignoreUndef && (reasonConsumerPtr != NULL)){
+			reasonConsumerPtr->AddMessage(istd::TSmartPtr<const istd::IInformationProvider>(new ilog::CMessage(
+						istd::IInformationProvider::IC_ERROR,
+						MI_BAD_ATTRIBUTE_TYPE,
+						tr("Attribute '%1' in '%2' has incompatible registry entry")
+									.arg(QString(attributeName))
+									.arg(QString(elementName)),
+						tr("Attribute Consistency Check"),
+						0)));
+		}
+
+		return false;
+	}
+
 	QByteArray baseId;
 	QByteArray subId = pointedElementName;
 	istd::CIdManipBase::SplitId(pointedElementName, baseId, subId);
+
+	if (!subId.isEmpty() && ((attributeFlags & icomp::IAttributeStaticInfo::AF_FACTORY) != 0)){
+		if (!ignoreUndef && (reasonConsumerPtr != NULL)){
+			reasonConsumerPtr->AddMessage(istd::TSmartPtr<const istd::IInformationProvider>(new ilog::CMessage(
+						istd::IInformationProvider::IC_ERROR,
+						MI_BAD_ATTRIBUTE_TYPE,
+						tr("Factory '%1' in '%2' try to access subcomponents '%3', which is allowed only for references")
+									.arg(QString(attributeName))
+									.arg(QString(elementName))
+									.arg(QString(pointedElementName)),
+						tr("Attribute Consistency Check"),
+						0)));
+		}
+
+		return false;
+	}
 
 	const icomp::IRegistry::ElementInfo* pointedInfoPtr = registry.GetElementInfo(baseId);
 	if (pointedInfoPtr != NULL){

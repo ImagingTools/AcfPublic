@@ -1489,8 +1489,11 @@ void CAttributeEditorComp::CreateInterfacesTree(
 
 		if (includeSubelement){
 			const icomp::IElementStaticInfo::Ids subcomponentIds = infoPtr->GetMetaIds(icomp::IComponentStaticInfo::MGI_SUBELEMENTS);
-			for (		icomp::IElementStaticInfo::Ids::ConstIterator subIter = subcomponentIds.constBegin();
-						subIter != subcomponentIds.constEnd();
+			QList<QByteArray> sortedSubcomponentIds = subcomponentIds.toList();
+			qSort(sortedSubcomponentIds);
+
+			for (		QList<QByteArray>::ConstIterator subIter = sortedSubcomponentIds.constBegin();
+						subIter != sortedSubcomponentIds.constEnd();
 						++subIter){
 				const QByteArray& sublementId = *subIter;
 
@@ -1612,9 +1615,11 @@ void CAttributeEditorComp::CreateExportedComponentsTree(
 
 	if (elementMetaInfoPtr != NULL){
 		const icomp::IElementStaticInfo::Ids subcomponentIds = elementMetaInfoPtr->GetMetaIds(icomp::IComponentStaticInfo::MGI_SUBELEMENTS);
+		QList<QByteArray> sortedSubcomponentIds = subcomponentIds.toList();
+		qSort(sortedSubcomponentIds);
 
-		for (		icomp::IElementStaticInfo::Ids::ConstIterator subIter = subcomponentIds.constBegin();
-					subIter != subcomponentIds.constEnd();
+		for (		QList<QByteArray>::ConstIterator subIter = sortedSubcomponentIds.constBegin();
+					subIter != sortedSubcomponentIds.constEnd();
 					++subIter, ++itemIndex){
 			const QByteArray& sublementId = *subIter;
 
@@ -2005,6 +2010,7 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 			const icomp::IRegistry* registryPtr = m_parent.GetRegistry();
 			const icomp::IAttributeStaticInfo* staticInfoPtr = m_parent.GetAttributeStaticInfo(id, *elementInfoPtr);
 			if ((registryPtr != NULL) && (staticInfoPtr != NULL) && m_parent.m_consistInfoCompPtr.IsValid()){
+				// prepare queryFlags
 				int queryFlags = IRegistryConsistInfo::QF_NONE;
 				icomp::IElementStaticInfo::Ids obligatoryInterfaces = staticInfoPtr->GetRelatedMetaIds(
 							icomp::IComponentStaticInfo::MGI_INTERFACES,
@@ -2014,6 +2020,10 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 					obligatoryInterfaces = staticInfoPtr->GetRelatedMetaIds(icomp::IComponentStaticInfo::MGI_INTERFACES, 0, 0);	// All asked interface names
 					queryFlags = IRegistryConsistInfo::QF_ANY_INTERFACE;	// for optional interfaces only we are looking for any of them
 				}
+				if ((staticInfoPtr->GetAttributeFlags() & icomp::IAttributeStaticInfo::AF_REFERENCE) != 0){
+					queryFlags = IRegistryConsistInfo::QF_INCLUDE_SUBELEMENTS;
+				}
+
 				icomp::IRegistry::Ids compatIds = m_parent.m_consistInfoCompPtr->GetCompatibleElements(
 							obligatoryInterfaces,
 							*registryPtr,
