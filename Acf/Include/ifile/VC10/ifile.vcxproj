@@ -126,6 +126,7 @@
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CCompressedXmlFileWriteArchive.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CFileArchiveInfo.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CFileListProviderComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CFileNameParam.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CFileNameParamComp.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CFileReadArchive.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CFileSerializerCompBase.cpp" $(ACF_TOOLS_BIN)/>
@@ -168,6 +169,7 @@
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..$(ACF_TOOLS_BIN)\CFileListProviderComp.h<$(ACF_TOOLS_BIN)/Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\ifile$(ACF_TOOLS_BIN)\moc_CFileListProviderComp.cpp;%(Outputs)<$(ACF_TOOLS_BIN)/Outputs>
     <$(ACF_TOOLS_BIN)/CustomBuild>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CFileNameParam.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CFileNameParamComp.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CFileReadArchive.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CFileSerializerCompBase.h" $(ACF_TOOLS_BIN)/>

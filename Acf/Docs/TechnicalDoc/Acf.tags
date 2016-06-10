@@ -2267,12 +2267,20 @@
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
+    <name>CFileNameParam.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_file_name_param_8h</filename>
+    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <class kind="class">ifile::CFileNameParam</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
     <name>CFileNameParamComp.h</name>
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_c_file_name_param_comp_8h</filename>
-    <includes id="_i_serializable_8h" name="ISerializable.h" local="yes" imported="no">iser/ISerializable.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="yes" imported="no">ifile/IFileNameParam.h</includes>
+    <includes id="_c_file_name_param_8h" name="CFileNameParam.h" local="yes" imported="no">ifile/CFileNameParam.h</includes>
     <class kind="class">ifile::CFileNameParamComp</class>
     <namespace>ifile</namespace>
   </compound>
@@ -29462,6 +29470,7 @@
     <class kind="class">ifile::CCompressedXmlFileWriteArchive</class>
     <class kind="class">ifile::CFileArchiveInfo</class>
     <class kind="class">ifile::CFileListProviderComp</class>
+    <class kind="class">ifile::CFileNameParam</class>
     <class kind="class">ifile::CFileNameParamComp</class>
     <class kind="class">ifile::CFileReadArchive</class>
     <class kind="class">ifile::CFileSerializerCompBase</class>
@@ -29548,6 +29557,13 @@
       <anchor>a54916fac30870586074c12eb2c83acbb</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>CFileNameParam</type>
+      <name>BaseClass2</name>
+      <anchorfile>classifile_1_1_c_file_name_param_comp.html</anchorfile>
+      <anchor>aa994d24636fe3dfac1456221ee6d482c</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
       <name>GetPath</name>
@@ -29603,6 +29619,13 @@
       <anchorfile>classifile_1_1_c_file_name_param_comp.html</anchorfile>
       <anchor>a63b266e2943b72a665fdc113be7aeabe</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QString</type>
+      <name>m_path</name>
+      <anchorfile>classifile_1_1_c_file_name_param.html</anchorfile>
+      <anchor>acce9b2be77a5c435628c9debf0e21425</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -30703,31 +30726,43 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>ifile::CFileNameParamComp</name>
-    <filename>classifile_1_1_c_file_name_param_comp.html</filename>
-    <base>icomp::CComponentBase</base>
+    <name>ifile::CFileNameParam</name>
+    <filename>classifile_1_1_c_file_name_param.html</filename>
     <base virtualness="virtual">ifile::IFileNameParam</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPathType</name>
+      <anchorfile>classifile_1_1_c_file_name_param.html</anchorfile>
+      <anchor>a13cde39354290ec1806ec7d5bffd4b24</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
       <name>GetPath</name>
-      <anchorfile>classifile_1_1_c_file_name_param_comp.html</anchorfile>
-      <anchor>ace9355f63a67e573dbe2da501a9ed575</anchor>
+      <anchorfile>classifile_1_1_c_file_name_param.html</anchorfile>
+      <anchor>a43e47c4e778e1ef831a7a7d6ddb79dde</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetPath</name>
-      <anchorfile>classifile_1_1_c_file_name_param_comp.html</anchorfile>
-      <anchor>a009892529003c83bd103cdfec4480bb7</anchor>
+      <anchorfile>classifile_1_1_c_file_name_param.html</anchorfile>
+      <anchor>af839a2b466214baeebe7dbe84c8fafcf</anchor>
       <arglist>(const QString &amp;path)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
-      <anchorfile>classifile_1_1_c_file_name_param_comp.html</anchorfile>
-      <anchor>adde5e22bcf1bafd39452aa69a730a2de</anchor>
+      <anchorfile>classifile_1_1_c_file_name_param.html</anchorfile>
+      <anchor>aaa3e44e743af08ba24ffd955cd24b86d</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::CFileNameParamComp</name>
+    <filename>classifile_1_1_c_file_name_param_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>ifile::CFileNameParam</base>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
@@ -73788,6 +73823,7 @@
     <file>CCompressedXmlFileWriteArchive.h</file>
     <file>CFileArchiveInfo.h</file>
     <file>CFileListProviderComp.h</file>
+    <file>CFileNameParam.h</file>
     <file>CFileNameParamComp.h</file>
     <file>CFileReadArchive.h</file>
     <file>CFileSerializerCompBase.h</file>

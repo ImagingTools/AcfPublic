@@ -26,7 +26,6 @@
 
 // ACF includes
 #include "iser/ISerializable.h"
-#include "icomp/CComponentBase.h"
 #include "ifile/IFileNameParam.h"
 
 
@@ -49,7 +48,7 @@ public:
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
 
-private:
+protected:
 	QString m_path;
 };
 
