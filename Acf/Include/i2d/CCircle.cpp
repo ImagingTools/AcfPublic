@@ -111,7 +111,11 @@ bool CCircle::ConvertToPolygon(i2d::CPolygon& result, int segmentsCount) const
 	if (stepsCount < 3)
 		return false;
 
-	result.SetNodesCountQuiet(stepsCount);
+	istd::CChangeNotifier notifier(&result, &GetAllChanges());
+	Q_UNUSED(notifier);
+
+	result.SetNodesCount(stepsCount);
+	result.SetCalibration(GetCalibration());
 
 	i2d::CVector2d directionVector;
 
@@ -121,7 +125,7 @@ bool CCircle::ConvertToPolygon(i2d::CPolygon& result, int segmentsCount) const
 
 		directionVector.Init(angle);
 
-		result.SetNode(i, center + directionVector * radius);
+		result.SetNodePos(i, center + directionVector * radius);
 	}
 
 	// close if polyline

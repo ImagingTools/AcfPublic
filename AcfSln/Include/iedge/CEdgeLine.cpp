@@ -84,47 +84,41 @@ void CEdgeLine::Clear()
 }
 
 
-const CEdgeNode& CEdgeLine::GetNode(int index) const
+void CEdgeLine::SetNodesCount(int count)
 {
-	return m_nodes[index];
-}
+	istd::CChangeNotifier notifier(this);
+	Q_UNUSED(notifier);
 
-
-CEdgeNode& CEdgeLine::GetNodeRef(int index)
-{
-	return m_nodes[index];
+	m_nodes.resize(count);
 }
 
 
 void CEdgeLine::SetNode(int index, const CEdgeNode& node)
 {
-	BeginChanges(GetAnyChange());
+	istd::CChangeNotifier notifier(this);
+	Q_UNUSED(notifier);
 
 	m_nodes[index] = node;
-
-	EndChanges(GetAnyChange());
 }
 
 
 void CEdgeLine::SetClosed(bool state)
 {
 	if (state != m_isClosed){
-		BeginChanges(GetAnyChange());
+		istd::CChangeNotifier notifier(this);
+		Q_UNUSED(notifier);
 
 		m_isClosed = state;
-
-		EndChanges(GetAnyChange());
 	}
 }
 
 
 bool CEdgeLine::InsertNode(const CEdgeNode& node)
 {
-	BeginChanges(GetAnyChange());
+	istd::CChangeNotifier notifier(this);
+	Q_UNUSED(notifier);
 
 	m_nodes.push_back(node);
-
-	EndChanges(GetAnyChange());
 
 	return true;
 }
@@ -132,7 +126,8 @@ bool CEdgeLine::InsertNode(const CEdgeNode& node)
 
 void CEdgeLine::CopyFromPolyline(const i2d::CPolyline& polyline, double weight, const i2d::CAffine2d* transformPtr)
 {
-	istd::CChangeNotifier notifier(this);
+	istd::CChangeNotifier notifier(this, &GetAllChanges());
+	Q_UNUSED(notifier);
 
 	int size = polyline.GetNodesCount();
 
@@ -149,10 +144,10 @@ void CEdgeLine::CopyFromPolyline(const i2d::CPolyline& polyline, double weight, 
 
 	// copy, transform and remove the consequent duplicates
 	if (transformPtr != NULL){
-		i2d::CVector2d prevPosition = transformPtr->GetApply(polyline.GetNode(size - 1));
+		i2d::CVector2d prevPosition = transformPtr->GetApply(polyline.GetNodePos(size - 1));
 
 		for (int i = 0; i < size; ++i){
-			const i2d::CVector2d& position = transformPtr->GetApply(polyline.GetNode(i));
+			const i2d::CVector2d& position = transformPtr->GetApply(polyline.GetNodePos(i));
 			if ((position != prevPosition) || (!m_isClosed && (i == 0))){
 				m_nodes.push_back(CEdgeNode(position, weight));
 			}
@@ -161,10 +156,10 @@ void CEdgeLine::CopyFromPolyline(const i2d::CPolyline& polyline, double weight, 
 		}
 	}
 	else{
-		i2d::CVector2d prevPosition = polyline.GetNode(size - 1);
+		i2d::CVector2d prevPosition = polyline.GetNodePos(size - 1);
 
 		for (int i = 0; i < size; ++i){
-			const i2d::CVector2d& position = polyline.GetNode(i);
+			const i2d::CVector2d& position = polyline.GetNodePos(i);
 			if ((position != prevPosition) || (!m_isClosed && (i == 0))){
 				m_nodes.push_back(CEdgeNode(position, weight));
 			}
@@ -177,7 +172,10 @@ void CEdgeLine::CopyFromPolyline(const i2d::CPolyline& polyline, double weight, 
 
 void CEdgeLine::CopyToPolyline(i2d::CPolyline& polyline, const i2d::CAffine2d* transformPtr) const
 {
-	polyline.SetNodesCountQuiet(int(m_nodes.size()));
+	istd::CChangeNotifier notifier(&polyline, &GetAllChanges());
+	Q_UNUSED(notifier);
+
+	polyline.SetNodesCount(int(m_nodes.size()));
 	int index = 0;
 
 	if (transformPtr != NULL){
@@ -186,7 +184,7 @@ void CEdgeLine::CopyToPolyline(i2d::CPolyline& polyline, const i2d::CAffine2d* t
 					++iter){
 			const CEdgeNode& node = *iter;
 
-			polyline.SetNode(index++, transformPtr->GetApply(node.GetPosition()));
+			polyline.SetNodePos(index++, transformPtr->GetApply(node.GetPosition()));
 		}
 	}
 	else{
@@ -195,7 +193,7 @@ void CEdgeLine::CopyToPolyline(i2d::CPolyline& polyline, const i2d::CAffine2d* t
 					++iter){
 			const CEdgeNode& node = *iter;
 
-			polyline.SetNode(index++, node.GetPosition());
+			polyline.SetNodePos(index++, node.GetPosition());
 		}
 	}
 
@@ -218,6 +216,7 @@ void CEdgeLine::MoveCenterTo(const i2d::CVector2d& position)
 	EnsureVolatileValid();
 
 	istd::CChangeNotifier notifier(this);
+	Q_UNUSED(notifier);
 
 	i2d::CVector2d diffVector = position - m_center;
 
@@ -245,6 +244,7 @@ bool CEdgeLine::Transform(
 			double* errorFactorPtr)
 {
 	istd::CChangeNotifier notifier(this);
+	Q_UNUSED(notifier);
 
 	int transFlag = transformation.GetTransformationFlags();
 	if ((transFlag & i2d::ITransformation2d::TF_AFFINE) != 0){
@@ -291,6 +291,7 @@ bool CEdgeLine::InvTransform(
 			double* errorFactorPtr)
 {
 	istd::CChangeNotifier notifier(this);
+	Q_UNUSED(notifier);
 
 	int transFlag = transformation.GetTransformationFlags();
 	if ((transFlag & i2d::ITransformation2d::TF_AFFINE) != 0){
@@ -338,7 +339,10 @@ bool CEdgeLine::GetTransformed(
 {
 	CEdgeLine* resultEdgeLinePtr = dynamic_cast<CEdgeLine*>(&result);
 	if (resultEdgeLinePtr != NULL){
-		resultEdgeLinePtr->SetNodesCountQuiet(int(m_nodes.size()));
+		istd::CChangeNotifier notifier(resultEdgeLinePtr);
+		Q_UNUSED(notifier);
+
+		resultEdgeLinePtr->SetNodesCount(int(m_nodes.size()));
 
 		int transFlag = transformation.GetTransformationFlags();
 		if ((transFlag & i2d::ITransformation2d::TF_AFFINE) != 0){
@@ -355,7 +359,7 @@ bool CEdgeLine::GetTransformed(
 							localTransform.GetApply(node.GetPosition()),
 							node.GetWeight());
 
-				resultEdgeLinePtr->SetNodeQuiet(index++, resultNode);
+				resultEdgeLinePtr->m_nodes[index++] = resultNode;
 			}
 		}
 		else{
@@ -377,7 +381,7 @@ bool CEdgeLine::GetTransformed(
 							resultPosition,
 							node.GetWeight());
 
-				resultEdgeLinePtr->SetNodeQuiet(index++, resultNode);
+				resultEdgeLinePtr->m_nodes[index++] = resultNode;
 			}
 		}
 
@@ -417,7 +421,10 @@ bool CEdgeLine::GetInvTransformed(
 {
 	CEdgeLine* resultEdgeLinePtr = dynamic_cast<CEdgeLine*>(&result);
 	if (resultEdgeLinePtr != NULL){
-		resultEdgeLinePtr->SetNodesCountQuiet(int(m_nodes.size()));
+		istd::CChangeNotifier notifier(resultEdgeLinePtr);
+		Q_UNUSED(notifier);
+
+		resultEdgeLinePtr->SetNodesCount(int(m_nodes.size()));
 
 		int transFlag = transformation.GetTransformationFlags();
 		if ((transFlag & i2d::ITransformation2d::TF_AFFINE) != 0){
@@ -434,7 +441,7 @@ bool CEdgeLine::GetInvTransformed(
 							localInvTransform.GetApply(node.GetPosition()),
 							node.GetWeight());
 
-				resultEdgeLinePtr->SetNodeQuiet(index++, resultNode);
+				resultEdgeLinePtr->m_nodes[index++] = resultNode;
 			}
 		}
 		else{
@@ -456,7 +463,7 @@ bool CEdgeLine::GetInvTransformed(
 							resultPosition,
 							node.GetWeight());
 
-				resultEdgeLinePtr->SetNodeQuiet(index++, resultNode);
+				resultEdgeLinePtr->m_nodes[index++] = resultNode;
 			}
 		}
 

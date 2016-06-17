@@ -140,3 +140,5 @@ inline void CParamsSet::SetSlaveSet(const IParamsSet* slaveSetPtr)
 
 
 #endif // !iprm_CParamsSet_included
+
+

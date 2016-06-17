@@ -221,10 +221,7 @@
     <name>CPolygon.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_polygon_8h</filename>
-    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
-    <includes id="_c_object2d_base_8h" name="CObject2dBase.h" local="yes" imported="no">i2d/CObject2dBase.h</includes>
-    <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
-    <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
+    <includes id="_c_polypoint_8h" name="CPolypoint.h" local="yes" imported="no">i2d/CPolypoint.h</includes>
     <class kind="class">i2d::CPolygon</class>
     <namespace>i2d</namespace>
   </compound>
@@ -262,7 +259,7 @@
     <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="yes" imported="no">iser/CArchiveTag.h</includes>
     <includes id="_c_object2d_base_8h" name="CObject2dBase.h" local="yes" imported="no">i2d/CObject2dBase.h</includes>
     <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
-    <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="yes" imported="no">istd/TDelPtr.h</includes>
+    <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
     <class kind="class">i2d::CPolypoint</class>
     <namespace>i2d</namespace>
   </compound>
@@ -4253,6 +4250,16 @@
     <includes id="_c_polyline_shape_8h" name="CPolylineShape.h" local="yes" imported="no">iview/CPolylineShape.h</includes>
     <includes id="_t_polygon_based_params_gui_comp_8h" name="TPolygonBasedParamsGuiComp.h" local="yes" imported="no">iqt2d/TPolygonBasedParamsGuiComp.h</includes>
     <class kind="class">iqt2d::CPolylineParamsGuiComp</class>
+    <namespace>iqt2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CPosition2dParamsGuiComp.h</name>
+    <path>C:/Temp/Acf/Include/iqt2d/</path>
+    <filename>_c_position2d_params_gui_comp_8h</filename>
+    <includes id="_c_position2d_8h" name="CPosition2d.h" local="yes" imported="no">i2d/CPosition2d.h</includes>
+    <includes id="_c_pin_shape_8h" name="CPinShape.h" local="yes" imported="no">iview/CPinShape.h</includes>
+    <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <class kind="class">iqt2d::CPosition2dParamsGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
@@ -9292,90 +9299,6 @@
       <anchor>a0b5ea6d5911ab8a4c3846cd9e81f2f3e</anchor>
       <arglist>(const IChangeable &amp;object) const </arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>CPolygon</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>ab4ea42338c6ef2d89deb95fa4881963f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>Clear</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a85f6f7462c442efdb6b94e61ea5e4170</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetNodesCount</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a855c33b5809933c0c29ffc945b304b60</anchor>
-      <arglist>(int nodesCount)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetNodesCount</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a0e9474de5b18f742068ac948bc517d07</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::CVector2d &amp;</type>
-      <name>GetNode</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a717767fd1adf1b08bfa185ee666a572d</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetNode</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a2b4fe8ecf2eb3e51ace24ec83772b726</anchor>
-      <arglist>(int index, const i2d::CVector2d &amp;node)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>InsertNode</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>ae60e65f1c5cc18ba3ddb67fc8d9c55fb</anchor>
-      <arglist>(const i2d::CVector2d &amp;node)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>InsertNode</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a0840d7e2e1c49dda6b7a1f4b336c5d8c</anchor>
-      <arglist>(int index, const i2d::CVector2d &amp;node)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>RemoveNode</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a9ae30d587ee316efdc1bd8ed5ab73ad1</anchor>
-      <arglist>(int index)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>InsertNodeQuiet</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>adf71ff206b51388390aa07b73bca0280</anchor>
-      <arglist>(const i2d::CVector2d &amp;node)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>InsertNodeQuiet</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a96670b2ebea56a6588f67903a401ebe0</anchor>
-      <arglist>(int index, const i2d::CVector2d &amp;node)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetNodesCountQuiet</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a537c71711fd5387ebf5299608cf0d118</anchor>
-      <arglist>(int count)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetOutlineLength</name>
@@ -9412,59 +9335,122 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Clear</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a1e194b708c4633262cbce855058a3039</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetNodesCount</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a72835442ee212a7bada22946d425a1de</anchor>
+      <arglist>(int nodesCount)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetNodesCount</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>ae36a84e90f1d704825a04594c660660d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::CVector2d &amp;</type>
+      <name>GetNodePos</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a6a73c9c3ba11fd3cb8a9117401f98305</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CVector2d &amp;</type>
+      <name>GetNodePosRef</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a67ea1bf6b4a9d1a24ab4cda4cbfa9aad</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetNodePos</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a27cedb3febbc8f10367b294ecdbb8a98</anchor>
+      <arglist>(int index, const i2d::CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertNode</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a19420b4897359a3b7193364be8abf57e</anchor>
+      <arglist>(const i2d::CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertNode</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>abaef82731415abbac65d5beb67a425cd</anchor>
+      <arglist>(int index, const i2d::CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemoveNode</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>aaf6826c5213842a2b20888522a76e548</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual CVector2d</type>
       <name>GetCenter</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>aa79c771195f0826b3872394f9197b302</anchor>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a17d495856781a74182f986b04a969a5c</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>MoveCenterTo</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a53880a9685e64d6fb4db7c765ff5a5a6</anchor>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a9beb63dc77f466e256779350a0f4ac70</anchor>
       <arglist>(const CVector2d &amp;position)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual i2d::CRectangle</type>
       <name>GetBoundingBox</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a9cbc6a7741b3e95f10a8fece510d70c4</anchor>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a6c0845717acaf74f4a3ffa8d70776b3b</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Transform</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a53e82055ed15ac596a74cf635af324d9</anchor>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a902c1469a1610d8c7c07d944122a5d8a</anchor>
       <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InvTransform</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a363ad5b2f229beb54391ab1cdd96f6c0</anchor>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>af0d98aba8231c48b55bd6ad7e2013811</anchor>
       <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetTransformed</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a5ef3e3494a73c14f978d5e73cd252701</anchor>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>ad3c6bc6bfb666119ebd4ccbeddf3b668</anchor>
       <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetInvTransformed</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>ac4537d82fd57c0ada41467d3ae3f3db2</anchor>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a41b73765b86e80db00f49eb9d3381f45</anchor>
       <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>ab2e6665ff802d40b6817ee549c43bcf2</anchor>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>add29cacdf51401c27d444511753efac0</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
@@ -11137,33 +11123,33 @@
   <compound kind="class">
     <name>i2d::CPolygon</name>
     <filename>classi2d_1_1_c_polygon.html</filename>
-    <base>i2d::CObject2dBase</base>
+    <base>i2d::CPolypoint</base>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>aee96368e13548faa82bd3c2cf7aad01a</anchor>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a403658023d97353d4720ab74899ba2c4</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>aab373d069a4e8854c26831897ea6adae</anchor>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a4f70f2cc264c033ee6bb5d0c3394c188</anchor>
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>acd7a8230afdef605df6e5af2b3087942</anchor>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>abe756bd10ce843d244c44c1b28ff0e67</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsEqual</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a360cc7895316bc492388eb48b678fefe</anchor>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>af3ed15f603c0d70d18eaff383f3dc5b3</anchor>
       <arglist>(const IChangeable &amp;object) const </arglist>
     </member>
   </compound>
@@ -11249,132 +11235,6 @@
     <name>i2d::CPolypoint</name>
     <filename>classi2d_1_1_c_polypoint.html</filename>
     <base>i2d::CObject2dBase</base>
-    <member kind="typedef">
-      <type>std::vector&lt; i2d::CVector2d &gt;</type>
-      <name>Points</name>
-      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a3d2277552f8523ce21c9eb43367004f8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CPolypoint</name>
-      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a83746e7ebacb4ce16704be5834ef6339</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const i2d::CVector2d &amp;</type>
-      <name>GetPoint</name>
-      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a59ee3e8e958d6b6c3849aca05b4d99ee</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetPointsCount</name>
-      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a64f617c70a68a08261c994688778750f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Insert</name>
-      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>abfeee7b9c0530bfb9edd99a3e6bae04b</anchor>
-      <arglist>(const i2d::CVector2d &amp;vector)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Clear</name>
-      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a2b45306c9da492925b14ad72be054d40</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const Points &amp;</type>
-      <name>GetPoints</name>
-      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a7e344f88ad0e12e640746211c13842c8</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual CVector2d</type>
-      <name>GetCenter</name>
-      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a17d495856781a74182f986b04a969a5c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>MoveCenterTo</name>
-      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a9beb63dc77f466e256779350a0f4ac70</anchor>
-      <arglist>(const CVector2d &amp;position)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual CRectangle</type>
-      <name>GetBoundingBox</name>
-      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a4dac129a092ca5a776105c0bd9bcd540</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Transform</name>
-      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a902c1469a1610d8c7c07d944122a5d8a</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>InvTransform</name>
-      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>af0d98aba8231c48b55bd6ad7e2013811</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetTransformed</name>
-      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>ad3c6bc6bfb666119ebd4ccbeddf3b668</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetInvTransformed</name>
-      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a41b73765b86e80db00f49eb9d3381f45</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSupportedOperations</name>
-      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>add29cacdf51401c27d444511753efac0</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CopyFrom</name>
-      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a4f70f2cc264c033ee6bb5d0c3394c188</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
-      <name>CloneMe</name>
-      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>abe756bd10ce843d244c44c1b28ff0e67</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a403658023d97353d4720ab74899ba2c4</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>i2d::CPosition2d</name>
@@ -45570,6 +45430,7 @@
     <class kind="class">iqt2d::COrientedCircleEditorComp</class>
     <class kind="class">iqt2d::CPolygonParamsGuiComp</class>
     <class kind="class">iqt2d::CPolylineParamsGuiComp</class>
+    <class kind="class">iqt2d::CPosition2dParamsGuiComp</class>
     <class kind="class">iqt2d::CQuadrangleParamsGuiComp</class>
     <class kind="class">iqt2d::CRectangleParamsGuiComp</class>
     <class kind="class">iqt2d::CSceneBinderComp</class>
@@ -48171,6 +48032,116 @@
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>af7085dae6a4c8c12f9ea43fa3ff6fbc2</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::CPosition2dParamsGuiComp</name>
+    <filename>classiqt2d_1_1_c_position2d_params_gui_comp.html</filename>
+    <base>TShapeParamsGuiCompBase&lt; Ui::CPosition2dParamsGuiComp, iview::CPinShape, i2d::CPosition2d &gt;</base>
+    <member kind="typedef">
+      <type>iqt2d::TShapeParamsGuiCompBase&lt; Ui::CPosition2dParamsGuiComp, iview::CPinShape, i2d::CPosition2d &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_c_position2d_params_gui_comp.html</anchorfile>
+      <anchor>abea7f2e3376c18b8563b735ae1e6c9dc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSingleModelObserverBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a4183ada6ca430e22ee43b62c1e03ef5d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>i2d::CPosition2d</type>
+      <name>ModelType</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqt2d_1_1_c_position2d_params_gui_comp.html</anchorfile>
+      <anchor>a7dfedbabebed614097bf7dce2d8979fd</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSingleModelObserverBase</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CPosition2d *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CPosition2d *</type>
+      <name>GetObjectPtr</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>AttachOrSetObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
+      <arglist>(i2d::CPosition2d *objectPtr)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnParamsChanged</name>
+      <anchorfile>classiqt2d_1_1_c_position2d_params_gui_comp.html</anchorfile>
+      <anchor>a3fe41ec82ad8b1cf2cf082f751918e94</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnActionTriggered</name>
+      <anchorfile>classiqt2d_1_1_c_position2d_params_gui_comp.html</anchorfile>
+      <anchor>ad3d252265bd8e67b258b91d3d65857c3</anchor>
+      <arglist>(QAction *actionPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqt2d_1_1_c_position2d_params_gui_comp.html</anchorfile>
+      <anchor>a37b2bd24b62365b9fb2e7339041e3db9</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqt2d_1_1_c_position2d_params_gui_comp.html</anchorfile>
+      <anchor>ab9f7748b44672659b9d44225bd46250a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqt2d_1_1_c_position2d_params_gui_comp.html</anchorfile>
+      <anchor>a0f9ac5661b55eb7df563d775d0432ce0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqt2d_1_1_c_position2d_params_gui_comp.html</anchorfile>
+      <anchor>af90dcc34c31fa02e543409cb79e30fab</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual i2d::CPosition2d *</type>
+      <name>CastFromModel</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
+      <arglist>(imod::IModel *modelPtr) const</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -74080,6 +74051,7 @@
     <file>COrientedCircleEditorComp.h</file>
     <file>CPolygonParamsGuiComp.h</file>
     <file>CPolylineParamsGuiComp.h</file>
+    <file>CPosition2dParamsGuiComp.h</file>
     <file>CQuadrangleParamsGuiComp.h</file>
     <file>CRectangleParamsGuiComp.h</file>
     <file>CSceneBinderComp.h</file>

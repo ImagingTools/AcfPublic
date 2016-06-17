@@ -69,7 +69,7 @@ bool CPolylineShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butt
 						const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IColorSchema::TT_MOVE);
 
 						for (int i = nodesCount - 1; i >= 0; --i){
-							const i2d::CVector2d& cp = polylinePtr->GetNode(i);
+							const i2d::CVector2d& cp = polylinePtr->GetNodePos(i);
 
 							istd::CIndex2d sp = GetScreenPosition(cp).ToIndex2d();
 
@@ -89,7 +89,7 @@ bool CPolylineShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butt
 					{
 						i2d::CVector2d cpLast;
 						if (!polylinePtr->IsClosed()){
-							cpLast = polylinePtr->GetNode(nodesCount - 1);
+							cpLast = polylinePtr->GetNodePos(nodesCount - 1);
 						}
 						else{
 							cpLast = GetSegmentMiddle(nodesCount - 1);
@@ -126,7 +126,7 @@ bool CPolylineShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butt
 							}
 						}
 						if (!polylinePtr->IsClosed()){
-							i2d::CVector2d cpFirst = polylinePtr->GetNode(0);
+							i2d::CVector2d cpFirst = polylinePtr->GetNodePos(0);
 							istd::CIndex2d spFirst = GetScreenPosition(cpFirst).ToIndex2d();
 							if (tickerBox.IsInside(position - spFirst)){
 								BeginTickerDrag();
@@ -149,7 +149,7 @@ bool CPolylineShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butt
 						const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IColorSchema::TT_DELETE);
 
 						for (int i = nodesCount - 1; i >= 0; --i){
-							const i2d::CVector2d& cp = polylinePtr->GetNode(i);
+							const i2d::CVector2d& cp = polylinePtr->GetNodePos(i);
 							istd::CIndex2d sp = GetScreenPosition(cp).ToIndex2d();
 							if (tickerBox.IsInside(position - sp)){
 								BeginTickerDrag();
@@ -159,7 +159,7 @@ bool CPolylineShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butt
 									if (i > 0){
 										std::vector<i2d::CVector2d> nodesVector(nodesCount);
 										for (int j = 0; j < nodesCount; ++j){
-											nodesVector[j] = polylinePtr->GetNode(j);
+											nodesVector[j] = polylinePtr->GetNodePos(j);
 										}
 
 										std::rotate(nodesVector.begin(), nodesVector.begin()+i, nodesVector.end());
@@ -167,7 +167,7 @@ bool CPolylineShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton butt
 										istd::CChangeNotifier changeNotifier(polylinePtr);
 
 										for (int j = 0; j < nodesCount; ++j){
-											polylinePtr->SetNode(j, nodesVector.at(j));
+											polylinePtr->SetNodePos(j, nodesVector.at(j));
 										}
 									}
 
@@ -240,7 +240,7 @@ ITouchable::TouchState CPolylineShape::IsTouched(istd::CIndex2d position) const
 			if (IsEditablePosition()){
 				const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IColorSchema::TT_MOVE);
 				for (int i = 0; i < nodesCount; i++){
-					sp = GetScreenPosition(polylinePtr->GetNode(i)).ToIndex2d();
+					sp = GetScreenPosition(polylinePtr->GetNodePos(i)).ToIndex2d();
 					if (tickerBox.IsInside(position - sp)){
 						return TS_TICKER;
 					}
@@ -252,7 +252,7 @@ ITouchable::TouchState CPolylineShape::IsTouched(istd::CIndex2d position) const
 			{
 				const i2d::CRect& tickerBox = colorSchema.GetTickerBox(IColorSchema::TT_DELETE);
 				for (int i = 0; i < nodesCount; i++){
-					sp = GetScreenPosition(polylinePtr->GetNode(i)).ToIndex2d();
+					sp = GetScreenPosition(polylinePtr->GetNodePos(i)).ToIndex2d();
 					if (tickerBox.IsInside(position - sp)){
 						return TS_TICKER;
 					}
@@ -270,13 +270,13 @@ ITouchable::TouchState CPolylineShape::IsTouched(istd::CIndex2d position) const
 				if (isOpened){
 					lastIndex = nodesCount - 2;
 
-					point = polylinePtr->GetNode(0);
+					point = polylinePtr->GetNodePos(0);
 					sp = GetScreenPosition(point).ToIndex2d();
 					if (tickerBox.IsInside(position - sp)){
 						return TS_TICKER;
 					}
 
-					point = polylinePtr->GetNode(nodesCount - 1);
+					point = polylinePtr->GetNodePos(nodesCount - 1);
 					sp = GetScreenPosition(point).ToIndex2d();
 					if (tickerBox.IsInside(position - sp)){
 						return TS_TICKER;
@@ -287,7 +287,7 @@ ITouchable::TouchState CPolylineShape::IsTouched(istd::CIndex2d position) const
 				}
 
 				for (int i = 0; i <= lastIndex; i++){
-					point = (polylinePtr->GetNode(i) + polylinePtr->GetNode((i + 1) % nodesCount)) * 0.5;
+					point = (polylinePtr->GetNodePos(i) + polylinePtr->GetNodePos((i + 1) % nodesCount)) * 0.5;
 					sp = GetScreenPosition(point).ToIndex2d();
 					if (tickerBox.IsInside(position - sp)){
 						return TS_TICKER;
@@ -405,11 +405,11 @@ void CPolylineShape::DrawCurve(QPainter& drawContext) const
 			i2d::CLine2d segmentLine;
 
 			if (polylinePtr->IsClosed()){
-				firstPoint = GetScreenPosition(polylinePtr->GetNode(nodesCount - 1));
+				firstPoint = GetScreenPosition(polylinePtr->GetNodePos(nodesCount - 1));
 				secondPointIndex = 0;
 			}
 			else{
-				firstPoint = GetScreenPosition(polylinePtr->GetNode(0));
+				firstPoint = GetScreenPosition(polylinePtr->GetNodePos(0));
 				secondPointIndex = 1;
 			}
 
@@ -433,7 +433,7 @@ void CPolylineShape::DrawCurve(QPainter& drawContext) const
 				double viewScale = GetViewToScreenTransform().GetDeformMatrix().GetApproxScale();
 
 				for (int pointIndex = secondPointIndex; pointIndex < nodesCount; ++pointIndex){
-					segmentLine.PushEndPoint(GetScreenPosition(polylinePtr->GetNode(pointIndex)));
+					segmentLine.PushEndPoint(GetScreenPosition(polylinePtr->GetNodePos(pointIndex)));
 
 					DrawOrientationMarker(
 								drawContext,
@@ -457,7 +457,7 @@ void CPolylineShape::DrawCurve(QPainter& drawContext) const
 			segmentLine.SetPoint2(firstPoint);
 
 			for (int pointIndex = secondPointIndex; pointIndex < nodesCount; ++pointIndex){
-				segmentLine.PushEndPoint(GetScreenPosition(polylinePtr->GetNode(pointIndex)));
+				segmentLine.PushEndPoint(GetScreenPosition(polylinePtr->GetNodePos(pointIndex)));
 
 				drawContext.drawLine(segmentLine.GetPoint1(), segmentLine.GetPoint2());
 			}
@@ -498,7 +498,7 @@ void CPolylineShape::DrawSelectionElements(QPainter& drawContext) const
 		case ISelectable::EM_MOVE:
 			if (IsEditablePosition()){
 				for (i = 0; i < nodesCount; i++){
-					sp = GetScreenPosition(polylinePtr->GetNode(i)).ToIndex2d();
+					sp = GetScreenPosition(polylinePtr->GetNodePos(i)).ToIndex2d();
 
 					colorSchema.DrawTicker(drawContext, sp, IColorSchema::TT_MOVE);
 				}
@@ -508,7 +508,7 @@ void CPolylineShape::DrawSelectionElements(QPainter& drawContext) const
 		case ISelectable::EM_REMOVE:
 			if (nodesCount > 2){
 				for (i = 0; i < nodesCount; i++){
-					sp = GetScreenPosition(polylinePtr->GetNode(i)).ToIndex2d();
+					sp = GetScreenPosition(polylinePtr->GetNodePos(i)).ToIndex2d();
 
 					colorSchema.DrawTicker(drawContext, sp, IColorSchema::TT_DELETE);
 				}
@@ -517,7 +517,7 @@ void CPolylineShape::DrawSelectionElements(QPainter& drawContext) const
 
 		case ISelectable::EM_ADD:
 			for (i = 1; i < nodesCount - 1; i++){
-				sp = GetScreenPosition(polylinePtr->GetNode(i)).ToIndex2d();
+				sp = GetScreenPosition(polylinePtr->GetNodePos(i)).ToIndex2d();
 
 				colorSchema.DrawTicker(drawContext, sp, IColorSchema::TT_SELECTED_INACTIVE);
 			}
@@ -527,7 +527,7 @@ void CPolylineShape::DrawSelectionElements(QPainter& drawContext) const
 		if ((nodesCount > 0) && (editMode == ISelectable::EM_ADD)){
 			bool isOpened = !polylinePtr->IsClosed();
 			if (isOpened){
-				sp = GetScreenPosition(polylinePtr->GetNode(0)).ToIndex2d();
+				sp = GetScreenPosition(polylinePtr->GetNodePos(0)).ToIndex2d();
 
 				colorSchema.DrawTicker(drawContext, sp, IColorSchema::TT_INSERT);
 			}
@@ -540,7 +540,7 @@ void CPolylineShape::DrawSelectionElements(QPainter& drawContext) const
 			}
 
 			if (isOpened){
-				sp = GetScreenPosition(polylinePtr->GetNode(nodesCount - 1)).ToIndex2d();
+				sp = GetScreenPosition(polylinePtr->GetNodePos(nodesCount - 1)).ToIndex2d();
 
 				colorSchema.DrawTicker(drawContext, sp, IColorSchema::TT_INSERT);
 			}
@@ -566,18 +566,18 @@ bool CPolylineShape::IsCurveTouched(istd::CIndex2d position) const
 		i2d::CLine2d segmentLine;
 		int i;
 		if (polylinePtr->IsClosed()){
-			segmentLine.SetPoint2(GetScreenPosition(polylinePtr->GetNode(nodesCount - 1)));
+			segmentLine.SetPoint2(GetScreenPosition(polylinePtr->GetNodePos(nodesCount - 1)));
 			i = 0;
 		}
 		else{
-			segmentLine.SetPoint2(GetScreenPosition(polylinePtr->GetNode(0)));
+			segmentLine.SetPoint2(GetScreenPosition(polylinePtr->GetNodePos(0)));
 			i = 1;
 		}
 
 		i2d::CVector2d screenPosition(position);
 
 		for (; i < nodesCount; i++){
-			segmentLine.PushEndPoint(GetScreenPosition(polylinePtr->GetNode(i)));
+			segmentLine.PushEndPoint(GetScreenPosition(polylinePtr->GetNodePos(i)));
 
 			if (segmentLine.GetDistance(screenPosition) < logicalLineWidth){
 				return true;

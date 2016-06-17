@@ -11176,17 +11176,38 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
+      <type>int</type>
+      <name>GetNodesCount</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>abf1846d234c56469a1b86ea94344533c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetSegmentsCount</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>aba95040d83e39430102c174ad2b86995</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetNodesCount</name>
+      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
+      <anchor>a5201bb2f7ac018896580be12983a68f3</anchor>
+      <arglist>(int count)</arglist>
+    </member>
+    <member kind="function">
       <type>const CEdgeNode &amp;</type>
       <name>GetNode</name>
       <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
-      <anchor>afd693c176220964b52b46579c41334c9</anchor>
+      <anchor>ad9f8c50770703d1f1bfdbc3c42899045</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function">
       <type>CEdgeNode &amp;</type>
       <name>GetNodeRef</name>
       <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
-      <anchor>a56637a1d3f9e0fb9533b5e4d1d6c89d8</anchor>
+      <anchor>ae07d359fda5eb4759224f7565e7b983a</anchor>
       <arglist>(int index)</arglist>
     </member>
     <member kind="function">
@@ -11209,20 +11230,6 @@
       <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
       <anchor>a7f1496a40e4208699a16075a60fb511a</anchor>
       <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetNodesCount</name>
-      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
-      <anchor>abf1846d234c56469a1b86ea94344533c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetSegmentsCount</name>
-      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
-      <anchor>aba95040d83e39430102c174ad2b86995</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>double</type>
@@ -11251,27 +11258,6 @@
       <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
       <anchor>acde2e468afa74d7c098a98955e696c28</anchor>
       <arglist>(const CEdgeNode &amp;node)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>InsertNodeQuiet</name>
-      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
-      <anchor>a30771a21371de49ec009a9d34631ea9c</anchor>
-      <arglist>(const CEdgeNode &amp;node)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetNodeQuiet</name>
-      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
-      <anchor>a19c8f4c5863ee818d9e16642e893ed88</anchor>
-      <arglist>(int index, const CEdgeNode &amp;node)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetNodesCountQuiet</name>
-      <anchorfile>classiedge_1_1_c_edge_line.html</anchorfile>
-      <anchor>aa92180e5e17bcf9c50cf602295325eef</anchor>
-      <arglist>(int count)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
