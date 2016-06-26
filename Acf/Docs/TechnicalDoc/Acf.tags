@@ -15,21 +15,31 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
-    <name>CAffineTransformation2d.h</name>
+    <name>CAffineCalibration2d.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
-    <filename>_c_affine_transformation2d_8h</filename>
+    <filename>_c_affine_calibration2d_8h</filename>
     <includes id="_i_calibration2d_8h" name="ICalibration2d.h" local="yes" imported="no">i2d/ICalibration2d.h</includes>
+    <includes id="_c_affine_transformation2d_8h" name="CAffineTransformation2d.h" local="yes" imported="no">i2d/CAffineTransformation2d.h</includes>
     <includes id="_c_affine2d_8h" name="CAffine2d.h" local="yes" imported="no">i2d/CAffine2d.h</includes>
-    <class kind="class">i2d::CAffineTransformation2d</class>
+    <class kind="class">i2d::CAffineCalibration2d</class>
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
-    <name>CAffineTransformation2dComp.h</name>
+    <name>CAffineCalibration2dComp.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
-    <filename>_c_affine_transformation2d_comp_8h</filename>
+    <filename>_c_affine_calibration2d_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_c_affine_transformation2d_8h" name="CAffineTransformation2d.h" local="yes" imported="no">i2d/CAffineTransformation2d.h</includes>
-    <class kind="class">i2d::CAffineTransformation2dComp</class>
+    <includes id="_c_affine_calibration2d_8h" name="CAffineCalibration2d.h" local="yes" imported="no">i2d/CAffineCalibration2d.h</includes>
+    <class kind="class">i2d::CAffineCalibration2dComp</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CAffineTransformation2d.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_affine_transformation2d_8h</filename>
+    <includes id="_i_transformation2d_8h" name="ITransformation2d.h" local="yes" imported="no">i2d/ITransformation2d.h</includes>
+    <includes id="_c_affine2d_8h" name="CAffine2d.h" local="yes" imported="no">i2d/CAffine2d.h</includes>
+    <class kind="class">i2d::CAffineTransformation2d</class>
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
@@ -215,6 +225,25 @@
     <includes id="_c_affine2d_8h" name="CAffine2d.h" local="yes" imported="no">i2d/CAffine2d.h</includes>
     <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
     <class kind="class">i2d::CParallelogram</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CPerspectiveCalibration2d.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_perspective_calibration2d_8h</filename>
+    <includes id="_i_calibration2d_8h" name="ICalibration2d.h" local="yes" imported="no">i2d/ICalibration2d.h</includes>
+    <includes id="_c_affine2d_8h" name="CAffine2d.h" local="yes" imported="no">i2d/CAffine2d.h</includes>
+    <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
+    <class kind="class">i2d::CPerspectiveCalibration2d</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CPerspectiveCalibration2dComp.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_perspective_calibration2d_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_c_perspective_calibration2d_8h" name="CPerspectiveCalibration2d.h" local="yes" imported="no">i2d/CPerspectiveCalibration2d.h</includes>
+    <class kind="class">i2d::CPerspectiveCalibration2dComp</class>
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
@@ -4397,7 +4426,6 @@
     <includes id="_c_memory_read_archive_8h" name="CMemoryReadArchive.h" local="yes" imported="no">iser/CMemoryReadArchive.h</includes>
     <includes id="_c_polygon_8h" name="CPolygon.h" local="yes" imported="no">i2d/CPolygon.h</includes>
     <includes id="_c_polyline_8h" name="CPolyline.h" local="yes" imported="no">i2d/CPolyline.h</includes>
-    <includes id="_c_affine_transformation2d_8h" name="CAffineTransformation2d.h" local="yes" imported="no">i2d/CAffineTransformation2d.h</includes>
     <includes id="_c_signal_blocker_8h" name="CSignalBlocker.h" local="yes" imported="no">iqt/CSignalBlocker.h</includes>
     <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
     <class kind="class">iqt2d::TPolygonBasedParamsGuiComp</class>
@@ -6353,25 +6381,6 @@
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
-    <name>CPerspectiveCalibration.h</name>
-    <path>C:/Temp/Acf/Include/iview/</path>
-    <filename>_c_perspective_calibration_8h</filename>
-    <includes id="_c_vector3d_8h" name="CVector3d.h" local="yes" imported="no">i3d/CVector3d.h</includes>
-    <includes id="_c_none_calibration2d_8h" name="CNoneCalibration2d.h" local="yes" imported="no">i2d/CNoneCalibration2d.h</includes>
-    <includes id="_c_affine2d_8h" name="CAffine2d.h" local="yes" imported="no">i2d/CAffine2d.h</includes>
-    <includes id="_c_rectangle_8h" name="CRectangle.h" local="yes" imported="no">i2d/CRectangle.h</includes>
-    <class kind="class">iview::CPerspectiveCalibration</class>
-    <namespace>iview</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CPerspectiveCalibrationBoundsShape.h</name>
-    <path>C:/Temp/Acf/Include/iview/</path>
-    <filename>_c_perspective_calibration_bounds_shape_8h</filename>
-    <includes id="_c_interactive_shape_base_8h" name="CInteractiveShapeBase.h" local="yes" imported="no">iview/CInteractiveShapeBase.h</includes>
-    <class kind="class">iview::CPerspectiveCalibrationBoundsShape</class>
-    <namespace>iview</namespace>
-  </compound>
-  <compound kind="file">
     <name>CPerspectiveCalibrationShape.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_perspective_calibration_shape_8h</filename>
@@ -7113,8 +7122,9 @@
     <name>i2d</name>
     <filename>namespacei2d.html</filename>
     <class kind="class">i2d::CAffine2d</class>
+    <class kind="class">i2d::CAffineCalibration2d</class>
+    <class kind="class">i2d::CAffineCalibration2dComp</class>
     <class kind="class">i2d::CAffineTransformation2d</class>
-    <class kind="class">i2d::CAffineTransformation2dComp</class>
     <class kind="class">i2d::CAnnulus</class>
     <class kind="class">i2d::CAnnulusComp</class>
     <class kind="class">i2d::CAnnulusSegment</class>
@@ -7136,6 +7146,8 @@
     <class kind="class">i2d::COrientedCircle</class>
     <class kind="class">i2d::COrientedCircleComp</class>
     <class kind="class">i2d::CParallelogram</class>
+    <class kind="class">i2d::CPerspectiveCalibration2d</class>
+    <class kind="class">i2d::CPerspectiveCalibration2dComp</class>
     <class kind="class">i2d::CPolygon</class>
     <class kind="class">i2d::CPolygonComp</class>
     <class kind="class">i2d::CPolyline</class>
@@ -7414,294 +7426,15 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>i2d::CAffineTransformation2d</name>
-    <filename>classi2d_1_1_c_affine_transformation2d.html</filename>
+    <name>i2d::CAffineCalibration2d</name>
+    <filename>classi2d_1_1_c_affine_calibration2d.html</filename>
+    <base>i2d::CAffineTransformation2d</base>
     <base virtualness="virtual">i2d::ICalibration2d</base>
-    <member kind="function">
-      <type></type>
-      <name>CAffineTransformation2d</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>adcc41bc3b4002d119455c8ce3ad37fbc</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CAffineTransformation2d</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>ac0c758fdfb6f8715a8fb7b6e8cafb3d8</anchor>
-      <arglist>(const i2d::CAffine2d &amp;transformation)</arglist>
-    </member>
-    <member kind="function">
-      <type>const i2d::CAffine2d &amp;</type>
-      <name>GetTransformation</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>ad332b0e9f8cab93359b61f0f6858aef2</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>i2d::CAffine2d &amp;</type>
-      <name>GetTransformationRef</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>aa775ae8a58241b3914fee28e61c64f28</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetTransformation</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a4c5cbc922fa7b51fcdd3008c56d54356</anchor>
-      <arglist>(const i2d::CAffine2d &amp;transformation)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Reset</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a87289c50a82e49e70fa2ce2113c704bd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Reset</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a46eb5e159e6d70ee35bac0619bf58659</anchor>
-      <arglist>(const CVector2d &amp;translation)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Reset</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a5ee36c90a1f80419754c95495ec6ec55</anchor>
-      <arglist>(const CVector2d &amp;translation, double angle, double scale=1.0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Reset</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a748cb942664072fd64ccd9aa4049f9af</anchor>
-      <arglist>(const CVector2d &amp;translation, double angle, const CVector2d &amp;scale)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetArgumentUnitInfo</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a8ea2696c177c7ea93d6f4ca0bb4ac6c5</anchor>
-      <arglist>(const imath::IUnitInfo *unitInfoPtr)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetResultUnitInfo</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>aec7c7fffe85bf98732ad28a6e481e0e2</anchor>
-      <arglist>(const imath::IUnitInfo *unitInfoPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const imath::IUnitInfo *</type>
-      <name>GetArgumentUnitInfo</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>af9b5501a8db234628ecb55cabd85399f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const imath::IUnitInfo *</type>
-      <name>GetResultUnitInfo</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>aab4a2cc818943a5ad74dd3a98e71af5c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const ICalibration2d *</type>
-      <name>CreateCombinedCalibration</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>ab377e4a737dc25a9e4a5ecc2b0d0c1af</anchor>
-      <arglist>(const ICalibration2d &amp;transform) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetTransformationFlags</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>adaa094ede3fb8d976cf132a8ac7977fc</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetDistance</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a8d8ac117c27f5366c3c476a6212812cc</anchor>
-      <arglist>(const CVector2d &amp;origPos1, const CVector2d &amp;origPos2, double &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetPositionAt</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>abc4dc3326126b6b057f87fa14de29898</anchor>
-      <arglist>(const CVector2d &amp;origPosition, CVector2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetInvPositionAt</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a018f355b0d815f41d61aca32260a1475</anchor>
-      <arglist>(const CVector2d &amp;transfPosition, CVector2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetLocalTransform</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>aeda5e9b9388b9e86110185d6464880c6</anchor>
-      <arglist>(const CVector2d &amp;origPosition, CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetLocalInvTransform</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>ae10832bdf89c32e1a4688256887aa532</anchor>
-      <arglist>(const CVector2d &amp;transfPosition, CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetInvValueAt</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a9ed54e1a451a89dddbf6c61e2f2c2172</anchor>
-      <arglist>(const CVector2d &amp;argument, CVector2d &amp;result) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual CVector2d</type>
-      <name>GetInvValueAt</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a7a7a3584465cba93199bbec59039a65a</anchor>
-      <arglist>(const CVector2d &amp;argument) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetValueAt</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a467f0c9f2120d8ab74a75700575a9c1c</anchor>
-      <arglist>(const CVector2d &amp;argument, CVector2d &amp;result) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual CVector2d</type>
-      <name>GetValueAt</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a9ec8f0febcd856716fcb16492204c094</anchor>
-      <arglist>(const CVector2d &amp;argument) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a75b334351ed65d769049fb2451e3d06d</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CopyFrom</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a60acaed5eecce2e4ec38ee1d81b4bdd8</anchor>
-      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
-      <name>CloneMe</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a3c9948feacb694c7d267b06baf189f65</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>GetInvValueAt</name>
-      <anchorfile>classimath_1_1_t_i_surject_function.html</anchorfile>
-      <anchor>a06827b191e53bb70ce89119fd890b64d</anchor>
-      <arglist>(const CVector2d &amp;argument, CVector2d &amp;result) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual CVector2d</type>
-      <name>GetInvValueAt</name>
-      <anchorfile>classimath_1_1_t_i_surject_function.html</anchorfile>
-      <anchor>a79936c8fe9572c32bfd07baa9ce88b42</anchor>
-      <arglist>(const CVector2d &amp;argument) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>GetValueAt</name>
-      <anchorfile>classimath_1_1_t_i_math_function.html</anchorfile>
-      <anchor>aa491df8c528307ad5fbaf2298bdd1bef</anchor>
-      <arglist>(const CVector2d &amp;argument, CVector2d &amp;result) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual CVector2d</type>
-      <name>GetValueAt</name>
-      <anchorfile>classimath_1_1_t_i_math_function.html</anchorfile>
-      <anchor>ab2196b5efdc7b096b04d4ef8e1faf470</anchor>
-      <arglist>(const CVector2d &amp;argument) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~IPolymorphic</name>
-      <anchorfile>classistd_1_1_i_polymorphic.html</anchorfile>
-      <anchor>a238d6167615349bf27ebc13f8f397902</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual quint32</type>
-      <name>GetMinimalVersion</name>
-      <anchorfile>classiser_1_1_i_serializable.html</anchorfile>
-      <anchor>a455e034210010adc169a4966903822f6</anchor>
-      <arglist>(int versionId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSupportedOperations</name>
-      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
-      <anchor>a9577d4917a5131637c35ef6b6e9fc42a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsEqual</name>
-      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
-      <anchor>a1f340e515832d48750480eefe4d7b4b4</anchor>
-      <arglist>(const IChangeable &amp;object) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ResetData</name>
-      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
-      <anchor>a16d24f1caa10d1acd45b702c47168dc5</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>BeginChanges</name>
-      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
-      <anchor>a137523158c20d928d2c118fd49db8a79</anchor>
-      <arglist>(const ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EndChanges</name>
-      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
-      <anchor>a41fb1d3d435c298fc043e5465a36e1ab</anchor>
-      <arglist>(const ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>BeginChangeGroup</name>
-      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
-      <anchor>a3b6468085bb9fe2986d38d774ff5042d</anchor>
-      <arglist>(const ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EndChangeGroup</name>
-      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
-      <anchor>a38dedab1d9e9000712a1d4e99ba02850</anchor>
-      <arglist>(const ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>CAffine2d</type>
-      <name>m_transformation</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a4f4aa4d0c69401e30ac3691e9d72cc35</anchor>
+    <member kind="typedef">
+      <type>CAffineTransformation2d</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_affine_calibration2d.html</anchorfile>
+      <anchor>a68e85f217c1eab02bf55cc799c961a18</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -7949,6 +7682,370 @@
       <anchor>a4e78e759485a497c072bd70566f495dead6e2681eae74556408f9afd806f217e1</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ChangeFlags</name>
+      <anchorfile>classi2d_1_1_i_calibration2d.html</anchorfile>
+      <anchor>af86cb296bdfb830c1a094867768dc89b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_CALIBRATION_CHANGED</name>
+      <anchorfile>classi2d_1_1_i_calibration2d.html</anchorfile>
+      <anchor>af86cb296bdfb830c1a094867768dc89bacfe24867b7eb7a7b58f36b10ea575dcf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_AREA_CHANGED</name>
+      <anchorfile>classi2d_1_1_i_calibration2d.html</anchorfile>
+      <anchor>af86cb296bdfb830c1a094867768dc89ba7b014cdbd14894829c74e81c1a063360</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_UNITS_CHANGED</name>
+      <anchorfile>classi2d_1_1_i_calibration2d.html</anchorfile>
+      <anchor>af86cb296bdfb830c1a094867768dc89ba24b1f75b4eaebc37b2e78e90ef56b5cd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>TransformationFlags</name>
+      <anchorfile>classi2d_1_1_i_calibration2d.html</anchorfile>
+      <anchor>abfdd5d379daed8ce77a31286133bbe86</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TF_SUPPORT_COMBINE</name>
+      <anchorfile>classi2d_1_1_i_calibration2d.html</anchorfile>
+      <anchor>abfdd5d379daed8ce77a31286133bbe86aed90277881bda3d0538007abeb9e4904</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CAffineCalibration2d</name>
+      <anchorfile>classi2d_1_1_c_affine_calibration2d.html</anchorfile>
+      <anchor>a1d419d3b93e4e39d72f35ddf86a0b4b8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CAffineCalibration2d</name>
+      <anchorfile>classi2d_1_1_c_affine_calibration2d.html</anchorfile>
+      <anchor>acade2505567bff1356b6b033a11e2804</anchor>
+      <arglist>(const i2d::CAffine2d &amp;transformation)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetArgumentArea</name>
+      <anchorfile>classi2d_1_1_c_affine_calibration2d.html</anchorfile>
+      <anchor>abef9a1da40f256edd1181e2794a2ac2d</anchor>
+      <arglist>(const i2d::CRectangle *areaPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetResultArea</name>
+      <anchorfile>classi2d_1_1_c_affine_calibration2d.html</anchorfile>
+      <anchor>a0d1e980618518a827f3f466834b803d4</anchor>
+      <arglist>(const i2d::CRectangle *areaPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetArgumentUnitInfo</name>
+      <anchorfile>classi2d_1_1_c_affine_calibration2d.html</anchorfile>
+      <anchor>ae83c9243eb1606c24da7cc7cf89db7b0</anchor>
+      <arglist>(const imath::IUnitInfo *unitInfoPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetResultUnitInfo</name>
+      <anchorfile>classi2d_1_1_c_affine_calibration2d.html</anchorfile>
+      <anchor>a44d692e89e83afa5959e63092a8baca9</anchor>
+      <arglist>(const imath::IUnitInfo *unitInfoPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const CRectangle *</type>
+      <name>GetArgumentArea</name>
+      <anchorfile>classi2d_1_1_c_affine_calibration2d.html</anchorfile>
+      <anchor>a07bc1ef6ce0e35c6521c50c375db4e1e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const CRectangle *</type>
+      <name>GetResultArea</name>
+      <anchorfile>classi2d_1_1_c_affine_calibration2d.html</anchorfile>
+      <anchor>a1f301fb7d5e4f4ece61c3afcb83066ec</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imath::IUnitInfo *</type>
+      <name>GetArgumentUnitInfo</name>
+      <anchorfile>classi2d_1_1_c_affine_calibration2d.html</anchorfile>
+      <anchor>a72cdb1b9525dd33d0cd097dce2be6517</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imath::IUnitInfo *</type>
+      <name>GetResultUnitInfo</name>
+      <anchorfile>classi2d_1_1_c_affine_calibration2d.html</anchorfile>
+      <anchor>a9df5602676161ec672411e63f1ac15c6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ICalibration2d *</type>
+      <name>CreateCombinedCalibration</name>
+      <anchorfile>classi2d_1_1_c_affine_calibration2d.html</anchorfile>
+      <anchor>af50adb65fabf83b86f3ce139c30991c0</anchor>
+      <arglist>(const ITransformation2d &amp;transformation) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_affine_calibration2d.html</anchorfile>
+      <anchor>a3775a2ccb35e6f5b23d584bdee901438</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classi2d_1_1_c_affine_calibration2d.html</anchorfile>
+      <anchor>a52a7fcaf58d7ef4300220549dae10eda</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CAffineTransformation2d</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>adcc41bc3b4002d119455c8ce3ad37fbc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CAffineTransformation2d</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>ac0c758fdfb6f8715a8fb7b6e8cafb3d8</anchor>
+      <arglist>(const i2d::CAffine2d &amp;transformation)</arglist>
+    </member>
+    <member kind="function">
+      <type>const i2d::CAffine2d &amp;</type>
+      <name>GetTransformation</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>ad332b0e9f8cab93359b61f0f6858aef2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CAffine2d &amp;</type>
+      <name>GetTransformationRef</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>aa775ae8a58241b3914fee28e61c64f28</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetTransformation</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>a4c5cbc922fa7b51fcdd3008c56d54356</anchor>
+      <arglist>(const i2d::CAffine2d &amp;transformation)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>a87289c50a82e49e70fa2ce2113c704bd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>a46eb5e159e6d70ee35bac0619bf58659</anchor>
+      <arglist>(const CVector2d &amp;translation)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>a5ee36c90a1f80419754c95495ec6ec55</anchor>
+      <arglist>(const CVector2d &amp;translation, double angle, double scale=1.0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>a748cb942664072fd64ccd9aa4049f9af</anchor>
+      <arglist>(const CVector2d &amp;translation, double angle, const CVector2d &amp;scale)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTransformationFlags</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>adaa094ede3fb8d976cf132a8ac7977fc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetDistance</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>a8d8ac117c27f5366c3c476a6212812cc</anchor>
+      <arglist>(const CVector2d &amp;origPos1, const CVector2d &amp;origPos2, double &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetPositionAt</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>abc4dc3326126b6b057f87fa14de29898</anchor>
+      <arglist>(const CVector2d &amp;origPosition, CVector2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvPositionAt</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>a018f355b0d815f41d61aca32260a1475</anchor>
+      <arglist>(const CVector2d &amp;transfPosition, CVector2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetLocalTransform</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>aeda5e9b9388b9e86110185d6464880c6</anchor>
+      <arglist>(const CVector2d &amp;origPosition, CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetLocalInvTransform</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>ae10832bdf89c32e1a4688256887aa532</anchor>
+      <arglist>(const CVector2d &amp;transfPosition, CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvValueAt</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>a9ed54e1a451a89dddbf6c61e2f2c2172</anchor>
+      <arglist>(const CVector2d &amp;argument, CVector2d &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual CVector2d</type>
+      <name>GetInvValueAt</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>a7a7a3584465cba93199bbec59039a65a</anchor>
+      <arglist>(const CVector2d &amp;argument) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetValueAt</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>a467f0c9f2120d8ab74a75700575a9c1c</anchor>
+      <arglist>(const CVector2d &amp;argument, CVector2d &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual CVector2d</type>
+      <name>GetValueAt</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>a9ec8f0febcd856716fcb16492204c094</anchor>
+      <arglist>(const CVector2d &amp;argument) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>a75b334351ed65d769049fb2451e3d06d</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>GetInvValueAt</name>
+      <anchorfile>classimath_1_1_t_i_surject_function.html</anchorfile>
+      <anchor>a06827b191e53bb70ce89119fd890b64d</anchor>
+      <arglist>(const CVector2d &amp;argument, CVector2d &amp;result) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual CVector2d</type>
+      <name>GetInvValueAt</name>
+      <anchorfile>classimath_1_1_t_i_surject_function.html</anchorfile>
+      <anchor>a79936c8fe9572c32bfd07baa9ce88b42</anchor>
+      <arglist>(const CVector2d &amp;argument) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>GetValueAt</name>
+      <anchorfile>classimath_1_1_t_i_math_function.html</anchorfile>
+      <anchor>aa491df8c528307ad5fbaf2298bdd1bef</anchor>
+      <arglist>(const CVector2d &amp;argument, CVector2d &amp;result) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual CVector2d</type>
+      <name>GetValueAt</name>
+      <anchorfile>classimath_1_1_t_i_math_function.html</anchorfile>
+      <anchor>ab2196b5efdc7b096b04d4ef8e1faf470</anchor>
+      <arglist>(const CVector2d &amp;argument) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~IPolymorphic</name>
+      <anchorfile>classistd_1_1_i_polymorphic.html</anchorfile>
+      <anchor>a238d6167615349bf27ebc13f8f397902</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual quint32</type>
+      <name>GetMinimalVersion</name>
+      <anchorfile>classiser_1_1_i_serializable.html</anchorfile>
+      <anchor>a455e034210010adc169a4966903822f6</anchor>
+      <arglist>(int versionId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
+      <anchor>a9577d4917a5131637c35ef6b6e9fc42a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEqual</name>
+      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
+      <anchor>a1f340e515832d48750480eefe4d7b4b4</anchor>
+      <arglist>(const IChangeable &amp;object) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
+      <anchor>a16d24f1caa10d1acd45b702c47168dc5</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>BeginChanges</name>
+      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
+      <anchor>a137523158c20d928d2c118fd49db8a79</anchor>
+      <arglist>(const ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EndChanges</name>
+      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
+      <anchor>a41fb1d3d435c298fc043e5465a36e1ab</anchor>
+      <arglist>(const ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>BeginChangeGroup</name>
+      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
+      <anchor>a3b6468085bb9fe2986d38d774ff5042d</anchor>
+      <arglist>(const ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EndChangeGroup</name>
+      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
+      <anchor>a38dedab1d9e9000712a1d4e99ba02850</anchor>
+      <arglist>(const ChangeSet &amp;changeSet)</arglist>
+    </member>
     <member kind="function" static="yes">
       <type>static const ChangeSet &amp;</type>
       <name>GetNoChanges</name>
@@ -7991,31 +8088,45 @@
       <anchor>af0679b84b065bd0e9bb4ba875addb8da</anchor>
       <arglist>(const ChangeSet &amp;changeSet)</arglist>
     </member>
+    <member kind="variable" protection="protected">
+      <type>CAffine2d</type>
+      <name>m_transformation</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>a4f4aa4d0c69401e30ac3691e9d72cc35</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
-    <name>i2d::CAffineTransformation2dComp</name>
-    <filename>classi2d_1_1_c_affine_transformation2d_comp.html</filename>
+    <name>i2d::CAffineCalibration2dComp</name>
+    <filename>classi2d_1_1_c_affine_calibration2d_comp.html</filename>
     <base>icomp::CComponentBase</base>
-    <base>i2d::CAffineTransformation2d</base>
+    <base>i2d::CAffineCalibration2d</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d_comp.html</anchorfile>
-      <anchor>ae19152e1589debdfbad9c900eedf45fd</anchor>
+      <anchorfile>classi2d_1_1_c_affine_calibration2d_comp.html</anchorfile>
+      <anchor>ac7000d0088095346e64f4456ce9efe6a</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CAffineTransformation2d</type>
       <name>BaseClass2</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d_comp.html</anchorfile>
-      <anchor>a1e32c28289a50c785c68f9503f9cb6fa</anchor>
+      <anchorfile>classi2d_1_1_c_affine_calibration2d_comp.html</anchorfile>
+      <anchor>a7cf260d1e7728e7634868f270fd79b95</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
-      <anchorfile>classi2d_1_1_c_affine_transformation2d_comp.html</anchorfile>
-      <anchor>a374a624b643e95d5f39964e7867cdefb</anchor>
+      <anchorfile>classi2d_1_1_c_affine_calibration2d_comp.html</anchorfile>
+      <anchor>a6167abc766dc8afa9973432892b17575</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classi2d_1_1_c_affine_calibration2d_comp.html</anchorfile>
+      <anchor>ae50e9f4225661d5873312c1aa3bbdb86</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -8024,13 +8135,6 @@
       <anchorfile>classicomp_1_1_c_component_base.html</anchorfile>
       <anchor>a25b009c2dd174d3f88437ebe0605ca60</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classicomp_1_1_c_component_base.html</anchorfile>
-      <anchor>a007550438603368acd5133e97547d73f</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual const icomp::IRealComponentStaticInfo &amp;</type>
@@ -8087,6 +8191,25 @@
       <anchorfile>classicomp_1_1_c_component_base.html</anchorfile>
       <anchor>a0024c776694af9db8798416b15347d86</anchor>
       <arglist>(const icomp::IComponentContext *componentContextPtr, const QByteArray &amp;contextId=QByteArray())</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CAffineTransformation2d</name>
+    <filename>classi2d_1_1_c_affine_transformation2d.html</filename>
+    <base virtualness="virtual">i2d::ITransformation2d</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>a60acaed5eecce2e4ec38ee1d81b4bdd8</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
+      <anchor>a3c9948feacb694c7d267b06baf189f65</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8433,6 +8556,13 @@
       <anchorfile>classi2d_1_1_c_annulus_comp.html</anchorfile>
       <anchor>aaa82fe7f5924ed225d2c4662758a2ea7</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classicomp_1_1_c_component_base.html</anchorfile>
+      <anchor>a007550438603368acd5133e97547d73f</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8893,6 +9023,20 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::CRectangle *</type>
+      <name>GetArgumentArea</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>a275f1f5d120a6c890fdb27a75640806b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::CRectangle *</type>
+      <name>GetResultArea</name>
+      <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
+      <anchor>a9b6b4d0e659ac11eaee61b5c346d0e1e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual const imath::IUnitInfo *</type>
       <name>GetArgumentUnitInfo</name>
       <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
@@ -8910,8 +9054,8 @@
       <type>virtual const ICalibration2d *</type>
       <name>CreateCombinedCalibration</name>
       <anchorfile>classi2d_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>a61be492c3f23a0ef862a16d5e3f9564c</anchor>
-      <arglist>(const ICalibration2d &amp;calibration) const </arglist>
+      <anchor>a5103627dde14883f357462f7b060ea92</anchor>
+      <arglist>(const ITransformation2d &amp;transformation) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -10715,6 +10859,20 @@
     <filename>classi2d_1_1_c_none_calibration2d.html</filename>
     <base virtualness="virtual">i2d::ICalibration2d</base>
     <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::CRectangle *</type>
+      <name>GetArgumentArea</name>
+      <anchorfile>classi2d_1_1_c_none_calibration2d.html</anchorfile>
+      <anchor>a069a84fca7da9bb03f6a2769bd8d9da8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::CRectangle *</type>
+      <name>GetResultArea</name>
+      <anchorfile>classi2d_1_1_c_none_calibration2d.html</anchorfile>
+      <anchor>a3e39b38d838bfa03a2a2f21dfd5fc205</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual const imath::IUnitInfo *</type>
       <name>GetArgumentUnitInfo</name>
       <anchorfile>classi2d_1_1_c_none_calibration2d.html</anchorfile>
@@ -10732,8 +10890,8 @@
       <type>virtual const ICalibration2d *</type>
       <name>CreateCombinedCalibration</name>
       <anchorfile>classi2d_1_1_c_none_calibration2d.html</anchorfile>
-      <anchor>a4ec327ba011d0e6d53ed84762f86b6ea</anchor>
-      <arglist>(const ICalibration2d &amp;calibration) const </arglist>
+      <anchor>a22fc6e9f37fd0afa3817f0b1cbde7c12</anchor>
+      <arglist>(const ITransformation2d &amp;transformation) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -11118,6 +11276,304 @@
       <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
       <anchor>a6cffb8f3bd3d584cb868d6899c499a7f</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CPerspectiveCalibration2d</name>
+    <filename>classi2d_1_1_c_perspective_calibration2d.html</filename>
+    <base virtualness="virtual">i2d::ICalibration2d</base>
+    <member kind="function">
+      <type></type>
+      <name>CPerspectiveCalibration2d</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>aece313b1564976c5b570f88f51a08fae</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CPerspectiveCalibration2d</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a0c753209d20bf3e241884c4f04a8f2aa</anchor>
+      <arglist>(const i2d::CAffine2d &amp;affinePart, const i2d::CVector2d &amp;perspectiveAxis)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a3cfdd71e88a6c224a82e0c45476437bc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const i2d::CAffine2d &amp;</type>
+      <name>GetAffinePart</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a3bff2bd36ed4d4d877968602eaf90fe0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CAffine2d &amp;</type>
+      <name>GetAffinePartRef</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>ac56bfbc1f0e28897f383bf5d73ed6f86</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetAffinePart</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a9574bce4fe297281d5e3054cda433c0f</anchor>
+      <arglist>(const i2d::CAffine2d &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>const i2d::CVector2d &amp;</type>
+      <name>GetPerspAxis</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>ae951e0199d0566ca03e65b7b2b818530</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPerspAxis</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>aa058a295e7abd162528e1d4962080b56</anchor>
+      <arglist>(const i2d::CVector2d &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetArgumentArea</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a00cf0ebb6790d9b9c075577acfceb3d6</anchor>
+      <arglist>(const i2d::CRectangle *areaPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetResultArea</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>acee306a1711ef7649399b60be8ba852d</anchor>
+      <arglist>(const i2d::CRectangle *areaPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetArgumentUnitInfo</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a3b56138ef0a13251a9cc754362e70c35</anchor>
+      <arglist>(const imath::IUnitInfo *unitInfoPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetResultUnitInfo</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a2df7bc2ce4425d50fd5d8fcf706b125d</anchor>
+      <arglist>(const imath::IUnitInfo *unitInfoPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a63f1989be13e829a2cd105448168d5dd</anchor>
+      <arglist>(const CPerspectiveCalibration2d &amp;calib) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a834fc8c666d2d302401b9703baa6fa11</anchor>
+      <arglist>(const CPerspectiveCalibration2d &amp;calib) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::CRectangle *</type>
+      <name>GetArgumentArea</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>afd217b64e6a686c0bc31b6e6f07e2fdb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::CRectangle *</type>
+      <name>GetResultArea</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a109f997b741617cb708e8b3cbf861896</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imath::IUnitInfo *</type>
+      <name>GetArgumentUnitInfo</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a64c75b0c6a91911f04df536b806a5c71</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imath::IUnitInfo *</type>
+      <name>GetResultUnitInfo</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a3e9928ce4da2447798abbaa97eb8d892</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ICalibration2d *</type>
+      <name>CreateCombinedCalibration</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a83c65a5abb51544e6b59df820650ad58</anchor>
+      <arglist>(const ITransformation2d &amp;transformation) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTransformationFlags</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>aa0d839cf3f4a7355c76539987c1de10f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetDistance</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a5b22c4970fe20c58648d606ae1cf16e7</anchor>
+      <arglist>(const i2d::CVector2d &amp;origPos1, const i2d::CVector2d &amp;origPos2, double &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetPositionAt</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a34441fad006d13c22c224f4f27073e35</anchor>
+      <arglist>(const i2d::CVector2d &amp;origPosition, i2d::CVector2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvPositionAt</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a91f46e9681d56cf808d4390f7f6d08c4</anchor>
+      <arglist>(const i2d::CVector2d &amp;transfPosition, i2d::CVector2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetLocalTransform</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a138eabb64e668445b79371bf1a901f0c</anchor>
+      <arglist>(const i2d::CVector2d &amp;origPosition, i2d::CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetLocalInvTransform</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>ab1204c293b960f4bcaedf356c6182187</anchor>
+      <arglist>(const i2d::CVector2d &amp;transfPosition, i2d::CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvValueAt</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a15f0fb7ce91993001e3e6b28eb76a8c1</anchor>
+      <arglist>(const i2d::CVector2d &amp;argument, i2d::CVector2d &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetInvValueAt</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>aff39120908ec617ff41ebd125efef99a</anchor>
+      <arglist>(const i2d::CVector2d &amp;argument) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetValueAt</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>ad756a606b42828aaab578d2e5a00c346</anchor>
+      <arglist>(const i2d::CVector2d &amp;argument, i2d::CVector2d &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetValueAt</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a2d40f6ca2113de0267e3ab6aff544afa</anchor>
+      <arglist>(const i2d::CVector2d &amp;argument) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a2f03d978ed101f951cc2c1d095928790</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a8d5e0d1252c4bffa6e8a99a33008d2d9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>aec38419eb193a6e1e14f1ee43e83aa8e</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEqual</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>ab84b29a5f7b1d9c75404b61eb2532640</anchor>
+      <arglist>(const istd::IChangeable &amp;object) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a0aa6b6a21c8084316caa042c89773e9d</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>ae496828d1daa48a60f6558cd0545778d</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>CalcTransformationFlags</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a1294755744b6c12d7f7dade32bff1ad4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnEndChanges</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d.html</anchorfile>
+      <anchor>a05fb34ad0eef3a4025a9477fb417256d</anchor>
+      <arglist>(const ChangeSet &amp;changeSet)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CPerspectiveCalibration2dComp</name>
+    <filename>classi2d_1_1_c_perspective_calibration2d_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>i2d::CPerspectiveCalibration2d</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d_comp.html</anchorfile>
+      <anchor>a652bacef6d76f3a4acd20ae32cd78f4c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CPerspectiveCalibration2d</type>
+      <name>BaseClass2</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d_comp.html</anchorfile>
+      <anchor>a0eaafd926d036637f3ff4e2334b2bc81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d_comp.html</anchorfile>
+      <anchor>a39b34831f96c62b1c8af24908b3413d4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classi2d_1_1_c_perspective_calibration2d_comp.html</anchorfile>
+      <anchor>aaa22c37bd35953d5e9fc1757620674bf</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13421,6 +13877,20 @@
     <filename>classi2d_1_1_i_calibration2d.html</filename>
     <base virtualness="virtual">i2d::ITransformation2d</base>
     <member kind="function" virtualness="pure">
+      <type>virtual const CRectangle *</type>
+      <name>GetArgumentArea</name>
+      <anchorfile>classi2d_1_1_i_calibration2d.html</anchorfile>
+      <anchor>a96d036692921a7696ae95810ca92ec63</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const CRectangle *</type>
+      <name>GetResultArea</name>
+      <anchorfile>classi2d_1_1_i_calibration2d.html</anchorfile>
+      <anchor>a1f2f3fa9aaa0dc7094f2aa68099bf360</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
       <type>virtual const imath::IUnitInfo *</type>
       <name>GetArgumentUnitInfo</name>
       <anchorfile>classi2d_1_1_i_calibration2d.html</anchorfile>
@@ -13438,8 +13908,8 @@
       <type>virtual const ICalibration2d *</type>
       <name>CreateCombinedCalibration</name>
       <anchorfile>classi2d_1_1_i_calibration2d.html</anchorfile>
-      <anchor>a9719e3630abbe1e7cab329174ed6d15c</anchor>
-      <arglist>(const ICalibration2d &amp;calibration) const =0</arglist>
+      <anchor>a7e4752b2216a334e45134a4399cf4f4c</anchor>
+      <arglist>(const ITransformation2d &amp;transformation) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
@@ -63526,8 +63996,6 @@
     <class kind="class">iview::CNoneCalibrationShape</class>
     <class kind="class">iview::COrientedCircleShape</class>
     <class kind="class">iview::CParallelogramShape</class>
-    <class kind="class">iview::CPerspectiveCalibration</class>
-    <class kind="class">iview::CPerspectiveCalibrationBoundsShape</class>
     <class kind="class">iview::CPerspectiveCalibrationShape</class>
     <class kind="class">iview::CPinShape</class>
     <class kind="class">iview::CPolygonShape</class>
@@ -68565,324 +69033,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iview::CPerspectiveCalibration</name>
-    <filename>classiview_1_1_c_perspective_calibration.html</filename>
-    <base virtualness="virtual">i2d::CNoneCalibration2d</base>
-    <member kind="function">
-      <type></type>
-      <name>CPerspectiveCalibration</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a942b9cdbabb3fdc44fda20361bb6cef2</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Reset</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a64eb72eb61a4ff816707a0800f054a39</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetCameraParams</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a269019721b763834d3c80385b36abeef</anchor>
-      <arglist>(const i2d::CVector2d &amp;viewOpticalCenter, const i2d::CVector2d &amp;pixelAngleTangents)</arglist>
-    </member>
-    <member kind="function">
-      <type>const i2d::CRectangle &amp;</type>
-      <name>GetBounds</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a06e25fa40759cd7fc1ce9e45feb7a17a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetBounds</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a41ba6138668baaf20e1dedd280fdee07</anchor>
-      <arglist>(const i2d::CRectangle &amp;bounds)</arglist>
-    </member>
-    <member kind="function">
-      <type>const i3d::CVector3d &amp;</type>
-      <name>GetLogAxisGetX</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>acd974cdea9aaae18c70661ad3c051bb1</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetLogAxisX</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>ab3433dd59d3e2c185a6180d8ce2008d5</anchor>
-      <arglist>(const i3d::CVector3d &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>const i3d::CVector3d &amp;</type>
-      <name>GetLogAxisGetY</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>ab8d416475332744e9a8b31ad60c1bf9d</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetLogAxisY</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>adf75127cfbe493fbdcd48dc0b6547e8c</anchor>
-      <arglist>(const i3d::CVector3d &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>const i3d::CVector3d &amp;</type>
-      <name>GetLogCenter</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a0e18d1a688ff97048c52c41ec49489a9</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetLogCenter</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a54a3ba8aa63645fc81e85f6f0509c6bf</anchor>
-      <arglist>(const i3d::CVector3d &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>const i2d::CVector2d &amp;</type>
-      <name>GetViewCenter</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>ac0651bef2d86e928aa74fa7a3285b707</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetViewCenter</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a85e7bb5339d753c66975b862c125a4d3</anchor>
-      <arglist>(const i2d::CVector2d &amp;center)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>ApplyLeft</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a4064e35edbf40d24b72c3f5418554cb9</anchor>
-      <arglist>(const i2d::CAffine2d &amp;transform)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>ResetAxes</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>ad2ffed12e60b24d6e1d2d3ffa43e46ca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>DoCalibration</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>adc097f11138f9ad02e37f0e479a810d3</anchor>
-      <arglist>(const i2d::CVector2d *logicalPoints, const i2d::CVector2d *viewPoints, int pointsCount)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetLogDerivative</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>aa51cdb52968a1b696e439d6100d00bad</anchor>
-      <arglist>(const i2d::CVector2d &amp;viewPosition, const i2d::CVector2d &amp;viewDirection, double &amp;result) const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator==</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a5faacf00b2a3b6020599685dcd9ad93d</anchor>
-      <arglist>(const CPerspectiveCalibration &amp;calib) const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator!=</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a72e0948c4bb0549a4c20ae88432d2bea</anchor>
-      <arglist>(const CPerspectiveCalibration &amp;calib) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetTransformationFlags</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>aceb0f7855189f660b498be630a7e8468</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetDistance</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a988967453a370d2f8add535a6be9923b</anchor>
-      <arglist>(const i2d::CVector2d &amp;origPos1, const i2d::CVector2d &amp;origPos2, double &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetPositionAt</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a2b33003812ec5148ae6266e428b63edb</anchor>
-      <arglist>(const i2d::CVector2d &amp;origPosition, i2d::CVector2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetInvPositionAt</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a9e8ce493f4b7fc7409c7f8034bf70322</anchor>
-      <arglist>(const i2d::CVector2d &amp;transfPosition, i2d::CVector2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetLocalTransform</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a09222bb7cee9c793f92f8a157f814562</anchor>
-      <arglist>(const i2d::CVector2d &amp;origPosition, i2d::CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetLocalInvTransform</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a3942a7a93fbc60996cee893b28cd0224</anchor>
-      <arglist>(const i2d::CVector2d &amp;transfPosition, i2d::CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetInvValueAt</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a29613caca42292d96829992a149b940c</anchor>
-      <arglist>(const i2d::CVector2d &amp;argument, i2d::CVector2d &amp;result) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual i2d::CVector2d</type>
-      <name>GetInvValueAt</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>aba63c6f02f6daab6e8209b1aab87380b</anchor>
-      <arglist>(const i2d::CVector2d &amp;argument) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetValueAt</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a8b27318fd4c112f623e26e05403fdd63</anchor>
-      <arglist>(const i2d::CVector2d &amp;argument, i2d::CVector2d &amp;result) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual i2d::CVector2d</type>
-      <name>GetValueAt</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a788a3a33df96cf923f25b2c5742ee1cd</anchor>
-      <arglist>(const i2d::CVector2d &amp;argument) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a4cb8727c5b01ae87c8aea399c52f67c8</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>i2d::CVector2d</type>
-      <name>GetNormPosition</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>ae6217749e1153594dbce4177fce33e3e</anchor>
-      <arglist>(const i2d::CVector2d &amp;viewPosition) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>i2d::CVector2d</type>
-      <name>GetViewPosition</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a6d523da00ecedbb535d8487be2f2373a</anchor>
-      <arglist>(const i2d::CVector2d &amp;normPosition) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>CalcAllAxes</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>aeaf646c009c3980ea3c8fdfa710bfdfe</anchor>
-      <arglist>(const i2d::CVector2d *logicalPoints, const i2d::CVector2d *viewPoints, int pointsCount, i3d::CVector3d &amp;newAxisX, i3d::CVector3d &amp;newAxisY, i3d::CVector3d &amp;newCenter)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>CalcAxes2d</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>aa5e4dd3ea9dcaf81201324f7c7ad50e8</anchor>
-      <arglist>(const i2d::CVector2d *logicalPoints, const i2d::CVector2d *viewPoints, int pointsCount, i3d::CVector3d &amp;newAxisX, i3d::CVector3d &amp;newAxisY, i3d::CVector3d &amp;newCenter)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>CalcRotationOY</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a51712808fd8ab3a9f8024b7c0596306e</anchor>
-      <arglist>(const i2d::CVector2d *logicalPoints, const i2d::CVector2d *viewPoints, int pointsCount, i3d::CVector3d &amp;newAxisX, i3d::CVector3d &amp;newAxisY, i3d::CVector3d &amp;newCenter)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>CalcRotationOX</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration.html</anchorfile>
-      <anchor>a4d7cc78dc68c8df15b42a3aab4fc76be</anchor>
-      <arglist>(const i2d::CVector2d *logicalPoints, const i2d::CVector2d *viewPoints, int pointsCount, i3d::CVector3d &amp;newAxisX, i3d::CVector3d &amp;newAxisY, i3d::CVector3d &amp;newCenter)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iview::CPerspectiveCalibrationBoundsShape</name>
-    <filename>classiview_1_1_c_perspective_calibration_bounds_shape.html</filename>
-    <base>iview::CInteractiveShapeBase</base>
-    <member kind="typedef">
-      <type>CInteractiveShapeBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration_bounds_shape.html</anchorfile>
-      <anchor>a436e895c8664c39a3ed83af5b6598097</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual TouchState</type>
-      <name>IsTouched</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration_bounds_shape.html</anchorfile>
-      <anchor>a7af471f367ea6dba2b3144419ac63fd6</anchor>
-      <arglist>(istd::CIndex2d position) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>Draw</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration_bounds_shape.html</anchorfile>
-      <anchor>a4fb5626f85ec7d3d8faf159f39685ac2</anchor>
-      <arglist>(QPainter &amp;drawContext) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnMouseButton</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration_bounds_shape.html</anchorfile>
-      <anchor>ac022f42ddc32fbdc68172d0737e59aed</anchor>
-      <arglist>(istd::CIndex2d position, Qt::MouseButton buttonType, bool downFlag)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnMouseMove</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration_bounds_shape.html</anchorfile>
-      <anchor>a0a68e0b707b0a076b3c2bfc9da5a722b</anchor>
-      <arglist>(istd::CIndex2d position)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual i2d::CRect</type>
-      <name>CalcBoundingBox</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration_bounds_shape.html</anchorfile>
-      <anchor>a4caed41505e3b7025cd64234b3128daa</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>BeginLogDrag</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration_bounds_shape.html</anchorfile>
-      <anchor>af08ea2b237d12e208c6b794561ec6809</anchor>
-      <arglist>(const i2d::CVector2d &amp;reference)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetLogDragPosition</name>
-      <anchorfile>classiview_1_1_c_perspective_calibration_bounds_shape.html</anchorfile>
-      <anchor>a3618689d3c0db257616eda50bc3e93ca</anchor>
-      <arglist>(const i2d::CVector2d &amp;position)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iview::CPerspectiveCalibrationShape</name>
     <filename>classiview_1_1_c_perspective_calibration_shape.html</filename>
     <base>iview::CNoneCalibrationShape</base>
@@ -68906,6 +69056,13 @@
       <anchorfile>classiview_1_1_c_perspective_calibration_shape.html</anchorfile>
       <anchor>ac90bc9fef15a5d4a40fb83f3a561646a</anchor>
       <arglist>(QPainter &amp;drawContext) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>GetLineScreenPosition</name>
+      <anchorfile>classiview_1_1_c_perspective_calibration_shape.html</anchorfile>
+      <anchor>a159f377b2b8751e836c9980b0d69dbee</anchor>
+      <arglist>(const i2d::ICalibration2d &amp;calib, const i2d::CLine2d &amp;logLine, int gridSize, QPointF &amp;point1, QPointF &amp;point2) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -73547,8 +73704,9 @@
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>dir_ab12b57922a5c97d466951af0bae9ac0.html</filename>
     <file>CAffine2d.h</file>
+    <file>CAffineCalibration2d.h</file>
+    <file>CAffineCalibration2dComp.h</file>
     <file>CAffineTransformation2d.h</file>
-    <file>CAffineTransformation2dComp.h</file>
     <file>CAnnulus.h</file>
     <file>CAnnulusComp.h</file>
     <file>CAnnulusSegment.h</file>
@@ -73570,6 +73728,8 @@
     <file>COrientedCircle.h</file>
     <file>COrientedCircleComp.h</file>
     <file>CParallelogram.h</file>
+    <file>CPerspectiveCalibration2d.h</file>
+    <file>CPerspectiveCalibration2dComp.h</file>
     <file>CPolygon.h</file>
     <file>CPolygonComp.h</file>
     <file>CPolyline.h</file>
@@ -74280,8 +74440,6 @@
     <file>CNoneCalibrationShape.h</file>
     <file>COrientedCircleShape.h</file>
     <file>CParallelogramShape.h</file>
-    <file>CPerspectiveCalibration.h</file>
-    <file>CPerspectiveCalibrationBoundsShape.h</file>
     <file>CPerspectiveCalibrationShape.h</file>
     <file>CPinShape.h</file>
     <file>CPolygonShape.h</file>

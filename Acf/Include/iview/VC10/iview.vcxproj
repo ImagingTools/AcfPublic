@@ -138,8 +138,6 @@
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CNoneCalibrationShape.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\COrientedCircleShape.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CParallelogramShape.cpp" $(ACF_TOOLS_BIN)/>
-    <ClCompile Include="..$(ACF_TOOLS_BIN)\CPerspectiveCalibration.cpp" $(ACF_TOOLS_BIN)/>
-    <ClCompile Include="..$(ACF_TOOLS_BIN)\CPerspectiveCalibrationBoundsShape.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CPerspectiveCalibrationShape.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CPinShape.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CPolygonShape.cpp" $(ACF_TOOLS_BIN)/>
@@ -190,8 +188,6 @@
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CNoneCalibrationShape.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\COrientedCircleShape.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CParallelogramShape.h" $(ACF_TOOLS_BIN)/>
-    <ClInclude Include="..$(ACF_TOOLS_BIN)\CPerspectiveCalibration.h" $(ACF_TOOLS_BIN)/>
-    <ClInclude Include="..$(ACF_TOOLS_BIN)\CPerspectiveCalibrationBoundsShape.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CPerspectiveCalibrationShape.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CPinShape.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CPolygonShape.h" $(ACF_TOOLS_BIN)/>

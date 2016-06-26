@@ -119,8 +119,9 @@
   <$(ACF_TOOLS_BIN)/ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CAffine2d.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CAffineCalibration2d.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CAffineCalibration2dComp.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CAffineTransformation2d.cpp" $(ACF_TOOLS_BIN)/>
-    <ClCompile Include="..$(ACF_TOOLS_BIN)\CAffineTransformation2dComp.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CAnnulus.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CAnnulusComp.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CAnnulusSegment.cpp" $(ACF_TOOLS_BIN)/>
@@ -142,6 +143,8 @@
     <ClCompile Include="..$(ACF_TOOLS_BIN)\COrientedCircle.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\COrientedCircleComp.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CParallelogram.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CPerspectiveCalibration2d.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CPerspectiveCalibration2dComp.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CPolygon.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CPolygonComp.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CPolyline.cpp" $(ACF_TOOLS_BIN)/>
@@ -163,8 +166,9 @@
   <$(ACF_TOOLS_BIN)/ItemGroup>
   <ItemGroup>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CAffine2d.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CAffineCalibration2d.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CAffineCalibration2dComp.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CAffineTransformation2d.h" $(ACF_TOOLS_BIN)/>
-    <ClInclude Include="..$(ACF_TOOLS_BIN)\CAffineTransformation2dComp.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CAnnulus.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CAnnulusComp.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CAnnulusSegment.h" $(ACF_TOOLS_BIN)/>
@@ -186,6 +190,8 @@
     <ClInclude Include="..$(ACF_TOOLS_BIN)\COrientedCircle.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\COrientedCircleComp.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CParallelogram.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CPerspectiveCalibration2d.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CPerspectiveCalibration2dComp.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CPolygon.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CPolygonComp.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CPolyline.h" $(ACF_TOOLS_BIN)/>
