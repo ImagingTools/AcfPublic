@@ -46,7 +46,7 @@ namespace ilog
 class IMessageContainer: virtual public iser::ISerializable
 {
 public:
-	typedef QList<ilog::IMessageConsumer::MessagePtr> Messages;
+	typedef QList<IMessageConsumer::MessagePtr> Messages;
 
 	/**
 		Data model change notification flags.

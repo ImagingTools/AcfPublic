@@ -1490,6 +1490,13 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CPerspCalibFinder.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_persp_calib_finder_8h</filename>
+    <class kind="class">iipr::CPerspCalibFinder</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CPositionFromImageSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_position_from_image_supplier_comp_8h</filename>
@@ -14977,6 +14984,7 @@
     <class kind="class">iipr::CMultiLineProjectionSupplierComp</class>
     <class kind="class">iipr::CMultiLineSupplierCompBase</class>
     <class kind="class">iipr::CObjectFeature</class>
+    <class kind="class">iipr::CPerspCalibFinder</class>
     <class kind="class">iipr::CPositionFromImageSupplierComp</class>
     <class kind="class">iipr::CProcessedAcquisitionComp</class>
     <class kind="class">iipr::CProcessedBitmapSupplierBase</class>
@@ -18121,6 +18129,18 @@
       <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
       <anchor>a1e53fe5cc766129d06f84f5e2c211ae0</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CPerspCalibFinder</name>
+    <filename>classiipr_1_1_c_persp_calib_finder.html</filename>
+    <base>istd::IPolymorphic</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>FindPerspCalib</name>
+      <anchorfile>classiipr_1_1_c_persp_calib_finder.html</anchorfile>
+      <anchor>a463b9fa09d392b199066fd97c29a4908</anchor>
+      <arglist>(const i2d::CVector2d *nominalPositionsPtr, const i2d::CVector2d *foundPositionsPtr, int positionsCount, i2d::CPerspectiveCalibration2d &amp;results, bool allowPerspective=true, bool allowRotation=true, bool allowScale=true, bool allowAnisotropic=true, bool allowTranslation=true) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -29324,6 +29344,7 @@
     <file>CMultiLineProjectionSupplierComp.h</file>
     <file>CMultiLineSupplierCompBase.h</file>
     <file>CObjectFeature.h</file>
+    <file>CPerspCalibFinder.h</file>
     <file>CPositionFromImageSupplierComp.h</file>
     <file>CProcessedAcquisitionComp.h</file>
     <file>CProcessedBitmapSupplierComp.h</file>

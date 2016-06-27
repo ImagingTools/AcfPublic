@@ -36931,10 +36931,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>QList&lt; ilog::IMessageConsumer::MessagePtr &gt;</type>
+      <type>QList&lt; IMessageConsumer::MessagePtr &gt;</type>
       <name>Messages</name>
       <anchorfile>classilog_1_1_i_message_container.html</anchorfile>
-      <anchor>ab26f572385d29923dc8ea32eb0f69720</anchor>
+      <anchor>a0a01c7ad5b05697a0a85b530a86a78a4</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">

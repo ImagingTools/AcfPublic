@@ -162,6 +162,7 @@
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CMultiLineProjectionSupplierComp.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CMultiLineSupplierCompBase.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CObjectFeature.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CPerspCalibFinder.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CPositionFromImageSupplierComp.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CProcessedAcquisitionComp.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CProcessedBitmapSupplierComp.cpp" $(ACF_TOOLS_BIN)/>
@@ -226,6 +227,7 @@
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CMultiLineProjectionSupplierComp.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CMultiLineSupplierCompBase.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CObjectFeature.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CPerspCalibFinder.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CPositionFromImageSupplierComp.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CProcessedAcquisitionComp.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CProcessedBitmapSupplierComp.h" $(ACF_TOOLS_BIN)/>
