@@ -56,73 +56,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;..\..\..\..\Acf/Include;..\..\..\..\Acf/AuxInclude/Qt5;..\..\..\..\AcfSln/Include;..\..\..\..\AcfSln/AuxInclude/Qt5;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QWTDIR_6_1_2)\Src&quot;"
-				PreprocessorDefinitions="UNICODE;WIN32;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
-		<Configuration
-			Name="Release|x64"
-			ConfigurationType="4"
-			InheritedPropertySheets="..\..\..\..\Acf\Config\VC9\Static.vsprops;..\..\..\..\Acf\Config\VC9\Release.vsprops;..\..\..\..\Acf\Config\VC9\Win64.vsprops"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="QT Moc Metafile"
-			/>
-			<Tool
-				Name="Qt Linguist"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="QT Resources"
-			/>
-			<Tool
-				Name="QT Designer Form"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-				TargetEnvironment="3"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;..\..\..\..\Acf/Include;..\..\..\..\Acf/AuxInclude/Qt5;..\..\..\..\AcfSln/Include;..\..\..\..\AcfSln/AuxInclude/Qt5;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QWTDIR_6_1_2)\Src&quot;"
+				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;..\..\..\..\Acf/Include&quot;;&quot;..\..\..\..\Acf/AuxInclude/Qt5&quot;;&quot;..\..\..\..\AcfSln/Include&quot;;&quot;..\..\..\..\AcfSln/AuxInclude/Qt5&quot;;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QWTDIR_6_1_0)\Src&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
 			/>
 			<Tool
@@ -187,9 +121,75 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;..\..\..\..\Acf/Include;..\..\..\..\Acf/AuxInclude/Qt5;..\..\..\..\AcfSln/Include;..\..\..\..\AcfSln/AuxInclude/Qt5;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QWTDIR_6_1_2)\Src&quot;"
+				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;..\..\..\..\Acf/Include&quot;;&quot;..\..\..\..\Acf/AuxInclude/Qt5&quot;;&quot;..\..\..\..\AcfSln/Include&quot;;&quot;..\..\..\..\AcfSln/AuxInclude/Qt5&quot;;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QWTDIR_6_1_0)\Src&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
 				WarningLevel="4"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			ConfigurationType="4"
+			InheritedPropertySheets="..\..\..\..\Acf\Config\VC9\Static.vsprops;..\..\..\..\Acf\Config\VC9\Release.vsprops;..\..\..\..\Acf\Config\VC9\Win64.vsprops"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="QT Moc Metafile"
+			/>
+			<Tool
+				Name="Qt Linguist"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="QT Resources"
+			/>
+			<Tool
+				Name="QT Designer Form"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				TargetEnvironment="3"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;..\..\..\..\Acf/Include&quot;;&quot;..\..\..\..\Acf/AuxInclude/Qt5&quot;;&quot;..\..\..\..\AcfSln/Include&quot;;&quot;..\..\..\..\AcfSln/AuxInclude/Qt5&quot;;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QWTDIR_6_1_0)\Src&quot;"
+				PreprocessorDefinitions="UNICODE;WIN32;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -254,7 +254,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;..\..\..\..\Acf/Include;..\..\..\..\Acf/AuxInclude/Qt5;..\..\..\..\AcfSln/Include;..\..\..\..\AcfSln/AuxInclude/Qt5;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QWTDIR_6_1_2)\Src&quot;"
+				AdditionalIncludeDirectories="../../../AuxInclude/Qt5;&quot;..\..\..\..\Acf/Include&quot;;&quot;..\..\..\..\Acf/AuxInclude/Qt5&quot;;&quot;..\..\..\..\AcfSln/Include&quot;;&quot;..\..\..\..\AcfSln/AuxInclude/Qt5&quot;;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QWTDIR_6_1_0)\Src&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
 				WarningLevel="4"
 			/>
@@ -370,14 +370,56 @@
 			<File
 				RelativePath="..\CHistogramViewComp.ui"
 				>
+				<FileConfiguration
+					Name="Release|x64"
+					>
+					<Tool
+						Name="QT Designer Form"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					>
+					<Tool
+						Name="QT Designer Form"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="..\CProgressHistoryGuiComp.ui"
 				>
+				<FileConfiguration
+					Name="Release|x64"
+					>
+					<Tool
+						Name="QT Designer Form"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					>
+					<Tool
+						Name="QT Designer Form"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="..\CQwtDataSequenceViewComp.ui"
 				>
+				<FileConfiguration
+					Name="Release|x64"
+					>
+					<Tool
+						Name="QT Designer Form"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					>
+					<Tool
+						Name="QT Designer Form"
+					/>
+				</FileConfiguration>
 			</File>
 		</Filter>
 		<Filter
@@ -386,10 +428,38 @@
 			<File
 				RelativePath="..\CHistogramViewComp.moc"
 				>
+				<FileConfiguration
+					Name="Release|x64"
+					>
+					<Tool
+						Name="QT Moc Metafile"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					>
+					<Tool
+						Name="QT Moc Metafile"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="..\CQwtDataSequenceViewComp.moc"
 				>
+				<FileConfiguration
+					Name="Release|x64"
+					>
+					<Tool
+						Name="QT Moc Metafile"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					>
+					<Tool
+						Name="QT Moc Metafile"
+					/>
+				</FileConfiguration>
 			</File>
 		</Filter>
 	</Files>

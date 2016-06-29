@@ -7647,6 +7647,13 @@
       <anchor>adfacdea73eb745825f6797b4b8986eacae2bbdae9e4076c92ac80a0009cebbfb9</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SO_RESET</name>
+      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
+      <anchor>adfacdea73eb745825f6797b4b8986eaca14946afedd90430816063cb9e4e0409a</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="enumeration">
       <type></type>
       <name>CompatibilityMode</name>

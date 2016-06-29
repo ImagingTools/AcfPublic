@@ -41,7 +41,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;..\..\..\..\Acf/Include;..\..\..\..\Acf/AuxInclude/Qt5;..\..\..\..\AcfSln/Include;..\..\..\..\AcfSln/AuxInclude/Qt5;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QWTDIR_6_1_2)\Src&quot;;&quot;$(QWT3DDIR_0_3_1)/Include&quot;"
+				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;..\..\..\..\Acf/Include&quot;;&quot;..\..\..\..\Acf/AuxInclude/Qt5&quot;;&quot;..\..\..\..\AcfSln/Include&quot;;&quot;..\..\..\..\AcfSln/AuxInclude/Qt5&quot;;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QWTDIR_6_1_0)\Src&quot;;&quot;$(QWT3DDIR_0_3_1)/Include&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
 			/>
 			<Tool
@@ -56,7 +56,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="qwt.lib qwt3d.lib AcfStd.lib AcfQt.lib Qt5OpenGl.lib OpenGL32.lib Glu32.lib"
-				AdditionalLibraryDirectories="&quot;..\..\..\..\Acf\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(QWTDIR_6_1_2)\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(QWT3DDIR_0_3_1)\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
+				AdditionalLibraryDirectories="&quot;..\..\..\..\Acf\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(QWTDIR_6_1_0)\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(QWT3DDIR_0_3_1)\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -103,7 +103,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;..\..\..\..\Acf/Include;..\..\..\..\Acf/AuxInclude/Qt5;..\..\..\..\AcfSln/Include;..\..\..\..\AcfSln/AuxInclude/Qt5;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QWTDIR_6_1_2)\Src&quot;;&quot;$(QWT3DDIR_0_3_1)/Include&quot;"
+				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;..\..\..\..\Acf/Include&quot;;&quot;..\..\..\..\Acf/AuxInclude/Qt5&quot;;&quot;..\..\..\..\AcfSln/Include&quot;;&quot;..\..\..\..\AcfSln/AuxInclude/Qt5&quot;;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QWTDIR_6_1_0)\Src&quot;;&quot;$(QWT3DDIR_0_3_1)/Include&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
 			/>
 			<Tool
@@ -118,7 +118,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="qwt.lib qwt3d.lib AcfStd.lib AcfQt.lib Qt5OpenGl.lib OpenGL32.lib Glu32.lib"
-				AdditionalLibraryDirectories="&quot;..\..\..\..\Acf\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(QWTDIR_6_1_2)\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(QWT3DDIR_0_3_1)\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
+				AdditionalLibraryDirectories="&quot;..\..\..\..\Acf\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(QWTDIR_6_1_0)\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(QWT3DDIR_0_3_1)\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
 				TargetMachine="17"
 			/>
 			<Tool
@@ -165,7 +165,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;..\..\..\..\Acf/Include;..\..\..\..\Acf/AuxInclude/Qt5;..\..\..\..\AcfSln/Include;..\..\..\..\AcfSln/AuxInclude/Qt5;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QWTDIR_6_1_2)\Src&quot;;&quot;$(QWT3DDIR_0_3_1)/Include&quot;"
+				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;..\..\..\..\Acf/Include&quot;;&quot;..\..\..\..\Acf/AuxInclude/Qt5&quot;;&quot;..\..\..\..\AcfSln/Include&quot;;&quot;..\..\..\..\AcfSln/AuxInclude/Qt5&quot;;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QWTDIR_6_1_0)\Src&quot;;&quot;$(QWT3DDIR_0_3_1)/Include&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
 			/>
 			<Tool
@@ -180,7 +180,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="qwt.lib qwt3d.lib AcfStd.lib AcfQt.lib Qt5OpenGld.lib OpenGL32.lib Glu32.lib"
-				AdditionalLibraryDirectories="&quot;..\..\..\..\Acf\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(QWTDIR_6_1_2)\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(QWT3DDIR_0_3_1)\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
+				AdditionalLibraryDirectories="&quot;..\..\..\..\Acf\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(QWTDIR_6_1_0)\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(QWT3DDIR_0_3_1)\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -227,7 +227,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;..\..\..\..\Acf/Include;..\..\..\..\Acf/AuxInclude/Qt5;..\..\..\..\AcfSln/Include;..\..\..\..\AcfSln/AuxInclude/Qt5;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QWTDIR_6_1_2)\Src&quot;;&quot;$(QWT3DDIR_0_3_1)/Include&quot;"
+				AdditionalIncludeDirectories="../../../Include;../../../AuxInclude/Qt5;&quot;..\..\..\..\Acf/Include&quot;;&quot;..\..\..\..\Acf/AuxInclude/Qt5&quot;;&quot;..\..\..\..\AcfSln/Include&quot;;&quot;..\..\..\..\AcfSln/AuxInclude/Qt5&quot;;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QWTDIR_6_1_0)\Src&quot;;&quot;$(QWT3DDIR_0_3_1)/Include&quot;"
 				PreprocessorDefinitions="UNICODE;WIN32;QT_CORE_LIB;QT_GUI_LIB;QT_XML_LIB;QT_SQL_LIB;QT_OPENGL_LIB;QT_NETWORK_LIB"
 			/>
 			<Tool
@@ -242,7 +242,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="qwt.lib qwt3d.lib AcfStd.lib AcfQt.lib Qt5OpenGld.lib OpenGL32.lib Glu32.lib"
-				AdditionalLibraryDirectories="&quot;..\..\..\..\Acf\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(QWTDIR_6_1_2)\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(QWT3DDIR_0_3_1)\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
+				AdditionalLibraryDirectories="&quot;..\..\..\..\Acf\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(QWTDIR_6_1_0)\Lib\$(ConfigurationName)$(CompilerCode)&quot;;&quot;$(QWT3DDIR_0_3_1)\Lib\$(ConfigurationName)$(CompilerCode)&quot;"
 				TargetMachine="17"
 			/>
 			<Tool
