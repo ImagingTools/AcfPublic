@@ -198,6 +198,7 @@
     <ClInclude Include="..$(ACF_TOOLS_BIN)\IFilePersistence.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\IFilePersistenceInfo.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\IFileResourceTypeConstraints.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\IFileResourceValidator.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\IFileResourcesManager.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\IFileSystemInfoProvider.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\IFileTypeInfo.h" $(ACF_TOOLS_BIN)/>

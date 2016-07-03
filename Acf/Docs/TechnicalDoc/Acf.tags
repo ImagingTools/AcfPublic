@@ -2504,6 +2504,15 @@
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
+    <name>IFileResourceValidator.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_i_file_resource_validator_8h</filename>
+    <includes id="_i_information_provider_8h" name="IInformationProvider.h" local="no" imported="no">istd/IInformationProvider.h</includes>
+    <includes id="_i_file_resources_manager_8h" name="IFileResourcesManager.h" local="no" imported="no">ifile/IFileResourcesManager.h</includes>
+    <class kind="class">ifile::IFileResourceValidator</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
     <name>IFileSystemInfoProvider.h</name>
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_i_file_system_info_provider_8h</filename>
@@ -29828,6 +29837,7 @@
     <class kind="class">ifile::IFilePersistenceInfo</class>
     <class kind="class">ifile::IFileResourcesManager</class>
     <class kind="interface">ifile::IFileResourceTypeConstraints</class>
+    <class kind="class">ifile::IFileResourceValidator</class>
     <class kind="class">ifile::IFileSystemInfoProvider</class>
     <class kind="class">ifile::IFileTypeInfo</class>
     <class kind="class">ifile::IRelativeFilePath</class>
@@ -32796,6 +32806,18 @@
       <anchorfile>classiprm_1_1_i_options_list.html</anchorfile>
       <anchor>a12fcebc0af408e94fc1bfbe2f15e7fa7</anchor>
       <arglist>(int index) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::IFileResourceValidator</name>
+    <filename>classifile_1_1_i_file_resource_validator.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::IInformationProvider::InformationCategory</type>
+      <name>ValidateResource</name>
+      <anchorfile>classifile_1_1_i_file_resource_validator.html</anchorfile>
+      <anchor>a39e5ed9b6391c5c97e53ed1fba9598f2</anchor>
+      <arglist>(const QByteArray &amp;resourceId, const ifile::IFileResourcesManager *fileRepositoryPtr, ilog::IMessageConsumer *messageConsumerPtr=NULL) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -73983,6 +74005,7 @@
     <file>IFilePersistenceInfo.h</file>
     <file>IFileResourcesManager.h</file>
     <file>IFileResourceTypeConstraints.h</file>
+    <file>IFileResourceValidator.h</file>
     <file>IFileSystemInfoProvider.h</file>
     <file>IFileTypeInfo.h</file>
     <file>IRelativeFilePath.h</file>
