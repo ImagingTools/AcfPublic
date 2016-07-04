@@ -32,7 +32,6 @@
 
 // ACF-Solutions includes
 #include "iqtinsp/TSupplierGuiCompBase.h"
-
 #include "GeneratedFiles/iqtipr/ui_CMultiLineSupplierGuiComp.h"
 
 
@@ -40,17 +39,12 @@ namespace iqtipr
 {
 
 
-class CMultiLineSupplierGuiComp:
-			public iqtinsp::TSupplierGuiCompBase<
-						Ui::CMultiLineSupplierGuiComp,
-						imeas::INumericValueProvider>
+class CMultiLineSupplierGuiComp: public iqtinsp::TSupplierGuiCompBase<Ui::CMultiLineSupplierGuiComp>
 {
 	Q_OBJECT
 
 public:
-	typedef iqtinsp::TSupplierGuiCompBase<
-				Ui::CMultiLineSupplierGuiComp,
-				imeas::INumericValueProvider> BaseClass;
+	typedef iqtinsp::TSupplierGuiCompBase<Ui::CMultiLineSupplierGuiComp> BaseClass;
 
 	I_BEGIN_COMPONENT(CMultiLineSupplierGuiComp);
 		I_REGISTER_SUBELEMENT(LineSelection);
@@ -133,3 +127,5 @@ protected:
 
 
 #endif // !iqtipr_CMultiLineSupplierGuiComp_included
+
+

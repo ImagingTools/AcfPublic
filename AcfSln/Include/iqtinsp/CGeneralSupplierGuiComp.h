@@ -33,7 +33,6 @@
 
 // ACF-Solutions includes
 #include "iqtinsp/TSupplierGuiCompBase.h"
-
 #include "GeneratedFiles/iqtinsp/ui_CGeneralSupplierGuiComp.h"
 
 
@@ -42,10 +41,10 @@ namespace iqtinsp
 
 
 template <class UI = Ui::CGeneralSupplierGuiComp>
-class TGeneralSupplierGuiComp: public TSupplierGuiCompBase<UI, iinsp::ISupplier>
+class TGeneralSupplierGuiComp: public TSupplierGuiCompBase<UI>
 {
 public:
-	typedef TSupplierGuiCompBase<UI, iinsp::ISupplier> BaseClass;
+	typedef TSupplierGuiCompBase<UI> BaseClass;
 
 protected:
 	// pseudo slots
@@ -61,7 +60,6 @@ protected:
 	virtual void OnGuiHidden();
 	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet);
 };
-
 
 
 // protected methods
