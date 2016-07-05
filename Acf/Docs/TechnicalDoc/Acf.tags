@@ -33219,8 +33219,8 @@
       <type>static void</type>
       <name>AppendLoaderFilterList</name>
       <anchorfile>classifilegui_1_1_c_file_dialog_loader_comp.html</anchorfile>
-      <anchor>af4ba5055adb30dceaba73d094c256a08</anchor>
-      <arglist>(const ifile::IFileTypeInfo &amp;fileTypeInfo, const istd::IChangeable *dataObjectPtr, int flags, QStringList &amp;allExt, QStringList &amp;result)</arglist>
+      <anchor>a45775b2a99aa3b01f6c322a4f5388c87</anchor>
+      <arglist>(const ifile::IFileTypeInfo &amp;fileTypeInfo, const istd::IChangeable *dataObjectPtr, int flags, QStringList &amp;allExt, QStringList &amp;result, bool allowCommonDescription=true)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>QString</type>
