@@ -91,8 +91,6 @@ private:
 	I_REF(IViewExtender, m_slaveExtenderCompPtr);
 	I_ATTR(int, m_sceneExtenderModeAttrPtr);
 	I_MULTIATTR(int, m_idFiltersAttrPtr);
-
-	istd::TDelPtr<i2d::ICalibration2d> m_viewCalibrationPtr;
 };
 
 
