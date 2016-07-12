@@ -50,7 +50,8 @@ namespace iocv
 int CCorrSearchProcessorComp::DoExtractFeatures(
 			const iprm::IParamsSet* paramsPtr,
 			const iimg::IBitmap& image,
-			iipr::IFeaturesConsumer& results)
+			iipr::IFeaturesConsumer& results,
+			ibase::IProgressManager* /*progressManagerPtr*/)
 {
 	iprm::TParamsPtr<iipr::ISearchParams> searchParamsPtr(paramsPtr, m_searchParamsIdAttrPtr, m_defaultSearchParamsCompPtr, false);
 	iprm::TParamsPtr<iimg::IBitmap> modelImagePtr(paramsPtr, m_modelParamIdAttrPtr, m_defaultModelImageCompPtr, true);
@@ -111,7 +112,7 @@ int CCorrSearchProcessorComp::DoProcessing(
 			const iprm::IParamsSet* paramsPtr,
 			const istd::IPolymorphic* inputPtr,
 			istd::IChangeable* outputPtr,
-			ibase::IProgressManager* /*progressManagerPtr*/)
+			ibase::IProgressManager* progressManagerPtr)
 {
 	const iimg::IBitmap* inputBitmapPtr = dynamic_cast<const iimg::IBitmap*>(inputPtr);
 	if (inputBitmapPtr == NULL){
@@ -127,7 +128,7 @@ int CCorrSearchProcessorComp::DoProcessing(
 		return TS_INVALID;
 	}
 
-	return DoExtractFeatures(paramsPtr, *inputBitmapPtr, *outputConsumerPtr);
+	return DoExtractFeatures(paramsPtr, *inputBitmapPtr, *outputConsumerPtr, progressManagerPtr);
 }
 
 

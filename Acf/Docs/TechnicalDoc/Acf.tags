@@ -35536,46 +35536,53 @@
       <arglist>(int lineIndex) const </arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>CreateFilled</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>ac423f5728acf4a09f1ff308feef05997</anchor>
+      <arglist>(const i2d::CRect &amp;clipArea)</arglist>
+    </member>
+    <member kind="function">
       <type>bool</type>
       <name>CreateFromGeometry</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
-      <anchor>a3faf5d9177545877e2c211923bb4c1d8</anchor>
-      <arglist>(const i2d::IObject2d &amp;geometry, const i2d::CRect *clipAreaPtr)</arglist>
+      <anchor>a6235ffdb1da8c5ed2a2a097315bc1e82</anchor>
+      <arglist>(const i2d::IObject2d &amp;geometry, const i2d::CRect *clipAreaPtr=NULL)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>CreateFromCircle</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
-      <anchor>a7be1736b0f9943de67225bd49c2b274d</anchor>
-      <arglist>(const i2d::CCircle &amp;circle, const i2d::CRect *clipAreaPtr)</arglist>
+      <anchor>ab1df03d5357a23e1d2df38fbd9bc7663</anchor>
+      <arglist>(const i2d::CCircle &amp;circle, const i2d::CRect *clipAreaPtr=NULL)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>CreateFromRectangle</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
-      <anchor>a98ab5f83d275987c8932fa8f92564f44</anchor>
-      <arglist>(const i2d::CRectangle &amp;rect, const i2d::CRect *clipAreaPtr)</arglist>
+      <anchor>ae195c6915e562bf11bd87db9f284bb31</anchor>
+      <arglist>(const i2d::CRectangle &amp;rect, const i2d::CRect *clipAreaPtr=NULL)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>CreateFromAnnulus</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
-      <anchor>ae85f7318c7e21d846f2f16dc26a961df</anchor>
-      <arglist>(const i2d::CAnnulus &amp;annulus, const i2d::CRect *clipAreaPtr)</arglist>
+      <anchor>a0a0ef8b5344591adf80fe69369177e42</anchor>
+      <arglist>(const i2d::CAnnulus &amp;annulus, const i2d::CRect *clipAreaPtr=NULL)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>CreateFromPolygon</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
-      <anchor>a8525f9585560133a3f5f27433158c4ab</anchor>
-      <arglist>(const i2d::CPolygon &amp;polygon, const i2d::CRect *clipAreaPtr)</arglist>
+      <anchor>a7985b2b6311fa651ed5b54ace9a644f7</anchor>
+      <arglist>(const i2d::CPolygon &amp;polygon, const i2d::CRect *clipAreaPtr=NULL)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>CreateFromTube</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
-      <anchor>ae7ab62660b35eb281b4efda1c7507157</anchor>
-      <arglist>(const i2d::CTubePolyline &amp;tube, const i2d::CRect *clipAreaPtr)</arglist>
+      <anchor>afc9e2576fd5d44bca0d3552958182b4a</anchor>
+      <arglist>(const i2d::CTubePolyline &amp;tube, const i2d::CRect *clipAreaPtr=NULL)</arglist>
     </member>
     <member kind="function">
       <type>CScanlineMask</type>
@@ -63095,6 +63102,13 @@
       <anchorfile>classistd_1_1_t_range.html</anchorfile>
       <anchor>a8822cbd0ff2f7bc00c8c839148b8f9f8</anchor>
       <arglist>(const TRange &amp;range)</arglist>
+    </member>
+    <member kind="function">
+      <type>ValueType</type>
+      <name>GetDistance</name>
+      <anchorfile>classistd_1_1_t_range.html</anchorfile>
+      <anchor>a92f6f531f8cd079d181c510103e0c149</anchor>
+      <arglist>(ValueType value) const </arglist>
     </member>
     <member kind="function">
       <type>ValueType</type>

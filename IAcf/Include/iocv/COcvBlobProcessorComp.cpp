@@ -49,7 +49,8 @@ namespace iocv
 int COcvBlobProcessorComp::DoExtractFeatures(
 			const iprm::IParamsSet* paramsPtr,
 			const iimg::IBitmap& image,
-			iipr::IFeaturesConsumer& results)
+			iipr::IFeaturesConsumer& results,
+			ibase::IProgressManager* /*progressManagerPtr*/)
 {
 	if (paramsPtr == NULL){
 		return TS_INVALID;
@@ -72,7 +73,7 @@ int COcvBlobProcessorComp::DoProcessing(
 			const iprm::IParamsSet* paramsPtr,
 			const istd::IPolymorphic* inputPtr,
 			istd::IChangeable* outputPtr,
-			ibase::IProgressManager* /*progressManagerPtr*/)
+			ibase::IProgressManager* progressManagerPtr)
 {
 	const iimg::IBitmap* inputBitmapPtr = dynamic_cast<const iimg::IBitmap*>(inputPtr);
 	if (inputBitmapPtr == NULL){
@@ -88,7 +89,7 @@ int COcvBlobProcessorComp::DoProcessing(
 		return TS_INVALID;
 	}
 
-	return DoExtractFeatures(paramsPtr, *inputBitmapPtr, *outputConsumerPtr);
+	return DoExtractFeatures(paramsPtr, *inputBitmapPtr, *outputConsumerPtr, progressManagerPtr);
 }
 
 

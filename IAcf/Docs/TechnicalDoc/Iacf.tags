@@ -905,8 +905,8 @@
       <type>virtual int</type>
       <name>DoExtractFeatures</name>
       <anchorfile>classiocv_1_1_c_corr_search_processor_comp.html</anchorfile>
-      <anchor>a6510a1b74dfe2a0619f38400aafd1b41</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;results)</arglist>
+      <anchor>a56a85777ce1635f1f7e5a85f1fd64636</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;results, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -1036,8 +1036,8 @@
       <type>virtual int</type>
       <name>DoExtractFeatures</name>
       <anchorfile>classiocv_1_1_c_ocv_blob_processor_comp.html</anchorfile>
-      <anchor>a83ff6a1c22482da8beb65c36c54f5824</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;results)</arglist>
+      <anchor>a8d9ebb7639f09dfd2c921908a0e157ae</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;results, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
