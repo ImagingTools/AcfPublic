@@ -27,6 +27,7 @@
 // Qt includes
 #include<QtCore/QtGlobal>
 #include<QtCore/QMap>
+#include <QtWidgets/QWidget>
 #if QT_VERSION >= 0x050000
 #include <QtWidgets/QMessageBox>
 #else
@@ -53,14 +54,14 @@ namespace iqtinsp
 {
 
 
-template <class UI>
+template <class UI, class WidgetType = QWidget>
 class TSupplierGuiCompBase:
 			public iqt2d::TViewExtenderCompBase<
-						iqtgui::TDesignerGuiObserverCompBase<UI, iinsp::ISupplier> >
+						iqtgui::TDesignerGuiObserverCompBase<UI, iinsp::ISupplier, WidgetType> >
 {
 public:
 	typedef iqt2d::TViewExtenderCompBase<
-					iqtgui::TDesignerGuiObserverCompBase<UI, iinsp::ISupplier> > BaseClass;
+					iqtgui::TDesignerGuiObserverCompBase<UI, iinsp::ISupplier, WidgetType> > BaseClass;
 
 	I_BEGIN_BASE_COMPONENT(TSupplierGuiCompBase);
 		I_ASSIGN(m_paramsLoaderCompPtr, "ParamsLoader", "Loads and saves parameters from and to file", false, "ParamsLoader");
@@ -195,8 +196,8 @@ private:
 
 // public methods
 
-template <class UI>
-TSupplierGuiCompBase<UI>::TSupplierGuiCompBase()
+template <class UI, class WidgetType>
+TSupplierGuiCompBase<UI, WidgetType>::TSupplierGuiCompBase()
 	:m_paramsObserver(this),
 	m_areParamsEditable(false)
 {
@@ -207,8 +208,8 @@ TSupplierGuiCompBase<UI>::TSupplierGuiCompBase()
 
 // reimplemented (iqt2d::IViewExtender)
 
-template <class UI>
-void TSupplierGuiCompBase<UI>::AddItemsToScene(iqt2d::IViewProvider* providerPtr, int flags)
+template <class UI, class WidgetType>
+void TSupplierGuiCompBase<UI, WidgetType>::AddItemsToScene(iqt2d::IViewProvider* providerPtr, int flags)
 {
 	if (*m_viewCalibrationModeAttrPtr > VCM_NONE){
 		if ((*m_viewCalibrationModeAttrPtr >= VCM_ALWAYS) || ((flags & iqt2d::IViewExtender::SF_DIRECT) == 0)){
@@ -235,8 +236,8 @@ void TSupplierGuiCompBase<UI>::AddItemsToScene(iqt2d::IViewProvider* providerPtr
 }
 
 
-template <class UI>
-void TSupplierGuiCompBase<UI>::RemoveItemsFromScene(iqt2d::IViewProvider* providerPtr)
+template <class UI, class WidgetType>
+void TSupplierGuiCompBase<UI, WidgetType>::RemoveItemsFromScene(iqt2d::IViewProvider* providerPtr)
 {
 	if (		m_providerToCalibrationMap.contains(providerPtr) &&
 				(*m_viewCalibrationModeAttrPtr > VCM_NONE) &&
@@ -261,15 +262,15 @@ void TSupplierGuiCompBase<UI>::RemoveItemsFromScene(iqt2d::IViewProvider* provid
 
 // protected methods
 
-template <class UI>
-bool TSupplierGuiCompBase<UI>::AreParamsEditable() const
+template <class UI, class WidgetType>
+bool TSupplierGuiCompBase<UI, WidgetType>::AreParamsEditable() const
 {
 	return m_areParamsEditable;
 }
 
 
-template <class UI>
-bool TSupplierGuiCompBase<UI>::IsLoadParamsSupported() const
+template <class UI, class WidgetType>
+bool TSupplierGuiCompBase<UI, WidgetType>::IsLoadParamsSupported() const
 {
 	const iinsp::ISupplier* supplierPtr = BaseClass::GetObservedObject();
 	if ((supplierPtr != NULL) && m_paramsLoaderCompPtr.IsValid()){
@@ -288,8 +289,8 @@ bool TSupplierGuiCompBase<UI>::IsLoadParamsSupported() const
 }
 
 
-template <class UI>
-bool TSupplierGuiCompBase<UI>::IsSaveParamsSupported() const
+template <class UI, class WidgetType>
+bool TSupplierGuiCompBase<UI, WidgetType>::IsSaveParamsSupported() const
 {
 	const iinsp::ISupplier* supplierPtr = BaseClass::GetObservedObject();
 	if ((supplierPtr != NULL) && m_paramsLoaderCompPtr.IsValid()){
@@ -308,8 +309,8 @@ bool TSupplierGuiCompBase<UI>::IsSaveParamsSupported() const
 }
 
 
-template <class UI>
-bool TSupplierGuiCompBase<UI>::LoadParams()
+template <class UI, class WidgetType>
+bool TSupplierGuiCompBase<UI, WidgetType>::LoadParams()
 {
 	iinsp::ISupplier* supplierPtr = BaseClass::GetObservedObject();
 	if ((supplierPtr != NULL) && m_paramsLoaderCompPtr.IsValid()){
@@ -331,8 +332,8 @@ bool TSupplierGuiCompBase<UI>::LoadParams()
 }
 
 
-template <class UI>
-bool TSupplierGuiCompBase<UI>::SaveParams()
+template <class UI, class WidgetType>
+bool TSupplierGuiCompBase<UI, WidgetType>::SaveParams()
 {
 	const iinsp::ISupplier* supplierPtr = BaseClass::GetObservedObject();
 	if ((supplierPtr != NULL) && m_paramsLoaderCompPtr.IsValid()){
@@ -354,8 +355,8 @@ bool TSupplierGuiCompBase<UI>::SaveParams()
 }
 
 
-template <class UI>
-bool TSupplierGuiCompBase<UI>::DoTest()
+template <class UI, class WidgetType>
+bool TSupplierGuiCompBase<UI, WidgetType>::DoTest()
 {
 	iinsp::ISupplier* supplierPtr = BaseClass::GetObservedObject();
 	if (supplierPtr != NULL){
@@ -370,16 +371,16 @@ bool TSupplierGuiCompBase<UI>::DoTest()
 }
 
 
-template <class UI>
-void TSupplierGuiCompBase<UI>::OnSupplierParamsChanged()
+template <class UI, class WidgetType>
+void TSupplierGuiCompBase<UI, WidgetType>::OnSupplierParamsChanged()
 {
 }
 
 
 // reimplemented (iqtgui::TGuiObserverWrap)
 
-template <class UI>
-void TSupplierGuiCompBase<UI>::OnGuiModelAttached()
+template <class UI, class WidgetType>
+void TSupplierGuiCompBase<UI, WidgetType>::OnGuiModelAttached()
 {
 	BaseClass::OnGuiModelAttached();
 
@@ -418,8 +419,8 @@ void TSupplierGuiCompBase<UI>::OnGuiModelAttached()
 }
 
 
-template <class UI>
-void TSupplierGuiCompBase<UI>::OnGuiModelDetached()
+template <class UI, class WidgetType>
+void TSupplierGuiCompBase<UI, WidgetType>::OnGuiModelDetached()
 {
 	iinsp::ISupplier* supplierPtr = BaseClass::GetObservedObject();
 	Q_ASSERT(supplierPtr != NULL);	// model must be attached
@@ -447,16 +448,16 @@ void TSupplierGuiCompBase<UI>::OnGuiModelDetached()
 
 // reimplemented (iqt2d::TViewExtenderCompBase)
 
-template <class UI>
-void TSupplierGuiCompBase<UI>::CreateShapes(int /*sceneId*/, Shapes& /*result*/)
+template <class UI, class WidgetType>
+void TSupplierGuiCompBase<UI, WidgetType>::CreateShapes(int /*sceneId*/, Shapes& /*result*/)
 {
 }
 
 
 // reimplemented (imod::IObserver)
 
-template <class UI>
-void TSupplierGuiCompBase<UI>::AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet)
+template <class UI, class WidgetType>
+void TSupplierGuiCompBase<UI, WidgetType>::AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet)
 {
 	if (!BaseClass::IsGuiCreated() || changeSet.ContainsExplicit(istd::IChangeable::CF_DESTROYING)){
 		BaseClass::AfterUpdate(modelPtr, changeSet);
@@ -531,8 +532,8 @@ void TSupplierGuiCompBase<UI>::AfterUpdate(imod::IModel* modelPtr, const istd::I
 
 // public methods of embedded class ParamsObserver
 
-template <class UI>
-TSupplierGuiCompBase<UI>::ParamsObserver::ParamsObserver(TSupplierGuiCompBase* parentPtr)
+template <class UI, class WidgetType>
+TSupplierGuiCompBase<UI, WidgetType>::ParamsObserver::ParamsObserver(TSupplierGuiCompBase* parentPtr)
 	:m_parent(*parentPtr)
 {
 	Q_ASSERT(parentPtr != NULL);
@@ -540,8 +541,8 @@ TSupplierGuiCompBase<UI>::ParamsObserver::ParamsObserver(TSupplierGuiCompBase* p
 
 
 // reimplemented (imod::CSingleModelObserverBase)
-template <class UI>
-void TSupplierGuiCompBase<UI>::ParamsObserver::OnUpdate(const istd::IChangeable::ChangeSet& /*changeSet*/)
+template <class UI, class WidgetType>
+void TSupplierGuiCompBase<UI, WidgetType>::ParamsObserver::OnUpdate(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	m_parent.OnSupplierParamsChanged();
 }
