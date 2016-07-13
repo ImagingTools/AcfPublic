@@ -19,7 +19,7 @@ cd Build\QMake
 
 cd %~dp0\..\..
 
-call Acf\Config\QMake\CopyVCProjToSubdir.js %COMPILER_EXT% -replace%QTDIR%=$(QTDIR) -replace%CD%\=$(RelativePath)\
+call Acf\Config\QMake\CopyVCProjToSubdir.js %COMPILER_EXT% -replace%QTDIR%\=$(QTDIR)\ -replace%CD%\=$(RelativePath)\
 
 
 cd %~dp0\
