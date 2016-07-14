@@ -27,10 +27,11 @@
 // Qt includes
 #include<QtCore/QtGlobal>
 #include<QtCore/QMap>
-#include <QtWidgets/QWidget>
 #if QT_VERSION >= 0x050000
+#include <QtWidgets/QWidget>
 #include <QtWidgets/QMessageBox>
 #else
+#include <QtGui/QWidget>
 #include <QtGui/QMessageBox>
 #endif
 
