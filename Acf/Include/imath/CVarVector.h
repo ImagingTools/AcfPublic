@@ -47,7 +47,7 @@ namespace imath
 
 /**
 	Simple implementation of variable-size vector.
- */
+*/
 class CVarVector
 {
 public:
@@ -62,6 +62,12 @@ public:
 		Create vector and initialize number of components.
 	*/
 	explicit CVarVector(int componentsCount, double value = 0);
+
+	/**
+		Constructor with iterators.
+	*/
+	template <typename Iterator>
+	CVarVector(const Iterator& beginIter, const Iterator& endIter);
 
 	/**
 		Copy constructor.
@@ -267,6 +273,13 @@ inline CVarVector::CVarVector(int componentsCount, double value)
 
 inline CVarVector::CVarVector(const CVarVector& vector)
 :	m_elements(vector.m_elements)
+{
+}
+
+
+template <typename Iterator>
+CVarVector::CVarVector(const Iterator& beginIter, const Iterator& endIter)
+	:m_elements(beginIter, endIter)
 {
 }
 

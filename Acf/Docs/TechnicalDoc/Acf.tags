@@ -22043,6 +22043,13 @@
       <type></type>
       <name>CVarVector</name>
       <anchorfile>classimath_1_1_c_var_vector.html</anchorfile>
+      <anchor>a81c756438f4b2fcc3a312fc2dd2d7dcb</anchor>
+      <arglist>(const Iterator &amp;beginIter, const Iterator &amp;endIter)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CVarVector</name>
+      <anchorfile>classimath_1_1_c_var_vector.html</anchorfile>
       <anchor>a11f58fb380db04e339853cdfbfcc34bc</anchor>
       <arglist>(const CVarVector &amp;vector)</arglist>
     </member>
