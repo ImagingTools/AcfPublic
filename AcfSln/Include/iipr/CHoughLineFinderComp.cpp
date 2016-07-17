@@ -153,6 +153,8 @@ int CHoughLineFinderComp::DoExtractFeatures(
 		}
 	}
 
+	SmoothHoughSpace(3);
+
 	WeightToHoughPosMap posMap;
 
 	AnalyseHoughSpace(*m_defaultMaxLinesAttrPtr, 100, posMap);

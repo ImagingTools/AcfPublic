@@ -56,6 +56,7 @@
 #include "iqt2d/CAffineTransformationParamsGuiComp.h"
 #include "iqt2d/CMultiBitmapViewComp.h"
 #include "iqt2d/CArcParamsGuiComp.h"
+#include "iqt2d/CPerspectiveCalibEditorComp.h"
 
 
 /**
@@ -94,6 +95,7 @@ typedef iqt2d::CTubePolylineParamsGuiComp TubePolylineParamsGui;
 typedef iqt2d::CAffineTransformationParamsGuiComp AffineTransformationParamsGui;
 typedef iqt2d::CMultiBitmapViewComp MultiBitmapView;
 typedef iqt2d::CArcParamsGuiComp ArcParamsGui;
+typedef iqt2d::CPerspectiveCalibEditorComp PerspectiveCalibEditor;
 
 
 } // namespace QtViewPck

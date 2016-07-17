@@ -4272,6 +4272,16 @@
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CPerspectiveCalibEditorComp.h</name>
+    <path>C:/Temp/Acf/Include/iqt2d/</path>
+    <filename>_c_perspective_calib_editor_comp_8h</filename>
+    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="yes" imported="no">imod/CMultiModelDispatcherBase.h</includes>
+    <includes id="_c_perspective_calibration2d_8h" name="CPerspectiveCalibration2d.h" local="yes" imported="no">i2d/CPerspectiveCalibration2d.h</includes>
+    <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
+    <class kind="class">iqt2d::CPerspectiveCalibEditorComp</class>
+    <namespace>iqt2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CPolygonParamsGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_polygon_params_gui_comp_8h</filename>
@@ -45941,6 +45951,7 @@
     <class kind="class">iqt2d::CLine2dParamsGuiComp</class>
     <class kind="class">iqt2d::CMultiBitmapViewComp</class>
     <class kind="class">iqt2d::COrientedCircleEditorComp</class>
+    <class kind="class">iqt2d::CPerspectiveCalibEditorComp</class>
     <class kind="class">iqt2d::CPolygonParamsGuiComp</class>
     <class kind="class">iqt2d::CPolylineParamsGuiComp</class>
     <class kind="class">iqt2d::CPosition2dParamsGuiComp</class>
@@ -47982,6 +47993,110 @@
       <anchorfile>classiqt2d_1_1_c_oriented_circle_editor_comp.html</anchorfile>
       <anchor>a0244ec69b9bf6497a5c4775216cb5893</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::CPerspectiveCalibEditorComp</name>
+    <filename>classiqt2d_1_1_c_perspective_calib_editor_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CPerspectiveCalibEditorComp, i2d::CPerspectiveCalibration2d &gt;</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CPerspectiveCalibEditorComp, i2d::CPerspectiveCalibration2d &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_c_perspective_calib_editor_comp.html</anchorfile>
+      <anchor>aba0c5f887db270dd62e3a1a18e6f2393</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSingleModelObserverBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a4183ada6ca430e22ee43b62c1e03ef5d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>i2d::CPerspectiveCalibration2d</type>
+      <name>ModelType</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqt2d_1_1_c_perspective_calib_editor_comp.html</anchorfile>
+      <anchor>a0a2288d603207131ab3451f713976db0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSingleModelObserverBase</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CPerspectiveCalibration2d *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CPerspectiveCalibration2d *</type>
+      <name>GetObjectPtr</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>AttachOrSetObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
+      <arglist>(i2d::CPerspectiveCalibration2d *objectPtr)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnParamsChanged</name>
+      <anchorfile>classiqt2d_1_1_c_perspective_calib_editor_comp.html</anchorfile>
+      <anchor>aadf0065c43a9d44d11fab5b6a8a2ee03</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqt2d_1_1_c_perspective_calib_editor_comp.html</anchorfile>
+      <anchor>afe6fbb86d3874bb17376dec76fa488d4</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqt2d_1_1_c_perspective_calib_editor_comp.html</anchorfile>
+      <anchor>a31515c43128842362cd2a8540e89810f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqt2d_1_1_c_perspective_calib_editor_comp.html</anchorfile>
+      <anchor>a2702117ca61d459fdfaad710d03d0eff</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiqt2d_1_1_c_perspective_calib_editor_comp.html</anchorfile>
+      <anchor>aa9a66397d9905305c5088b0cc703716a</anchor>
+      <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual i2d::CPerspectiveCalibration2d *</type>
+      <name>CastFromModel</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
+      <arglist>(imod::IModel *modelPtr) const</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -74260,6 +74375,7 @@
     <file>CLine2dParamsGuiComp.h</file>
     <file>CMultiBitmapViewComp.h</file>
     <file>COrientedCircleEditorComp.h</file>
+    <file>CPerspectiveCalibEditorComp.h</file>
     <file>CPolygonParamsGuiComp.h</file>
     <file>CPolylineParamsGuiComp.h</file>
     <file>CPosition2dParamsGuiComp.h</file>
