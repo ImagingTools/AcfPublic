@@ -48,13 +48,9 @@ CMultiPageGuiCompBase::CMultiPageGuiCompBase()
 
 // protected methods
 
-int CMultiPageGuiCompBase::AddPageToContainerWidget(
-			iqtgui::IGuiObject& pageGui,
-			const QString& pageTitle)
+int CMultiPageGuiCompBase::AddPageToContainerWidget(iqtgui::IGuiObject& pageGui, const QString& pageTitle)
 {
-	iwidgets::CMultiPageWidget* multiPageWidgetPtr = dynamic_cast<iwidgets::CMultiPageWidget*>(GetWidget());
-	Q_ASSERT(multiPageWidgetPtr != NULL);
-	QWidget* pageContainerPtr = new QWidget(multiPageWidgetPtr);
+	QWidget* pageContainerPtr = new QWidget(GetWidget());
 	QVBoxLayout* pageContainerLayoutPtr = new QVBoxLayout(pageContainerPtr);
 	pageContainerLayoutPtr->setMargin(0);
 
@@ -64,6 +60,9 @@ int CMultiPageGuiCompBase::AddPageToContainerWidget(
 	else{
 		pageGui.CreateGui(pageContainerPtr);
 	}
+
+	iwidgets::CMultiPageWidget* multiPageWidgetPtr = dynamic_cast<iwidgets::CMultiPageWidget*>(GetWidget());
+	Q_ASSERT(multiPageWidgetPtr != NULL);
 
 	int retVal = multiPageWidgetPtr->InsertPage(pageContainerPtr, pageTitle);
 	if (retVal >= 0){

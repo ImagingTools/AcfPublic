@@ -35757,6 +35757,20 @@
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
+      <name>EnsureBoundingBoxValid</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a60d9ac8def673b0e816f85b2f7e9375a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>CalculateBoundingBox</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>ae20ae4c015409b4033ce2edfcae29dbe</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
       <name>InitFromBoudingBox</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
       <anchor>a2793645d0eaef198c83499393433ac03</anchor>

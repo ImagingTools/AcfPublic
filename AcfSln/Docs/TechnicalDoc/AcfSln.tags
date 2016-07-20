@@ -992,6 +992,18 @@
     <namespace>ihotfgui</namespace>
   </compound>
   <compound kind="file">
+    <name>CCheckboardCalibSupplierComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
+    <filename>_c_checkboard_calib_supplier_comp_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="yes" imported="no">iipr/IImageToFeatureProcessor.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
+    <class kind="class">iinsp::CCheckboardCalibSupplierComp</class>
+    <class kind="class">iinsp::CCheckboardCalibSupplierComp::LinesConsumer</class>
+    <class kind="struct">iinsp::CCheckboardCalibSupplierComp::LinesConsumer::LineInfo</class>
+    <namespace>iinsp</namespace>
+  </compound>
+  <compound kind="file">
     <name>CComposedInformationProviderComp.h</name>
     <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_c_composed_information_provider_comp_8h</filename>
@@ -14123,6 +14135,7 @@
   <compound kind="namespace">
     <name>iinsp</name>
     <filename>namespaceiinsp.html</filename>
+    <class kind="class">iinsp::CCheckboardCalibSupplierComp</class>
     <class kind="class">iinsp::CComposedInformationProviderComp</class>
     <class kind="class">iinsp::CIdProviderCacheComp</class>
     <class kind="class">iinsp::CInformationProviderCacheComp</class>
@@ -14133,6 +14146,142 @@
     <class kind="class">iinsp::ISupplier</class>
     <class kind="class">iinsp::ITimeStampProvider</class>
     <class kind="class">iinsp::TSupplierCompWrap</class>
+  </compound>
+  <compound kind="class">
+    <name>iinsp::CCheckboardCalibSupplierComp</name>
+    <filename>classiinsp_1_1_c_checkboard_calib_supplier_comp.html</filename>
+    <base>TSupplierCompWrap&lt; i2d::CPerspectiveCalibration2d &gt;</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
+    <class kind="class">iinsp::CCheckboardCalibSupplierComp::LinesConsumer</class>
+    <member kind="typedef">
+      <type>iinsp::TSupplierCompWrap&lt; i2d::CPerspectiveCalibration2d &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiinsp_1_1_c_checkboard_calib_supplier_comp.html</anchorfile>
+      <anchor>a3a973f13d92a80d42a7a8dfaf9e5e470</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>i2d::CPerspectiveCalibration2d</type>
+      <name>ProductType</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CalculateCalibration</name>
+      <anchorfile>classiinsp_1_1_c_checkboard_calib_supplier_comp.html</anchorfile>
+      <anchor>a8b90fca1fa18e80e0c6e5aeda732bdf8</anchor>
+      <arglist>(const iimg::IBitmap &amp;image, i2d::CPerspectiveCalibration2d &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const i2d::ICalibration2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classiinsp_1_1_c_checkboard_calib_supplier_comp.html</anchorfile>
+      <anchor>a691c0e80047b6713426aa95f12020dcf</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiinsp_1_1_c_checkboard_calib_supplier_comp.html</anchorfile>
+      <anchor>aad220ace8e46204a008c6dd9b9836c88</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiinsp_1_1_c_checkboard_calib_supplier_comp.html</anchorfile>
+      <anchor>a0102fe78014633c5a80cef07bc6fd6d1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>const i2d::CPerspectiveCalibration2d *</type>
+      <name>GetWorkProduct</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; i2d::CPerspectiveCalibration2d &gt;</type>
+      <name>m_productPtr</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iinsp::CCheckboardCalibSupplierComp::LinesConsumer</name>
+    <filename>classiinsp_1_1_c_checkboard_calib_supplier_comp_1_1_lines_consumer.html</filename>
+    <base virtualness="virtual">iipr::IFeaturesConsumer</base>
+    <class kind="struct">iinsp::CCheckboardCalibSupplierComp::LinesConsumer::LineInfo</class>
+    <member kind="typedef">
+      <type>QList&lt; LineInfo &gt;</type>
+      <name>Lines</name>
+      <anchorfile>classiinsp_1_1_c_checkboard_calib_supplier_comp_1_1_lines_consumer.html</anchorfile>
+      <anchor>a24dcfd3f413290a870ad4d7870029862</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetFeatures</name>
+      <anchorfile>classiinsp_1_1_c_checkboard_calib_supplier_comp_1_1_lines_consumer.html</anchorfile>
+      <anchor>a348ef3a1ca2e898da4fbf12eafdac8a5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AddFeature</name>
+      <anchorfile>classiinsp_1_1_c_checkboard_calib_supplier_comp_1_1_lines_consumer.html</anchorfile>
+      <anchor>a99f50c2d6aadd245ce06c106ed32d10f</anchor>
+      <arglist>(const imeas::INumericValue *featurePtr, bool *isFullPtr=NULL)</arglist>
+    </member>
+    <member kind="variable">
+      <type>Lines</type>
+      <name>lines</name>
+      <anchorfile>classiinsp_1_1_c_checkboard_calib_supplier_comp_1_1_lines_consumer.html</anchorfile>
+      <anchor>a0f2c91691bf3001c82a50ddbc9feea65</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>iinsp::CCheckboardCalibSupplierComp::LinesConsumer::LineInfo</name>
+    <filename>structiinsp_1_1_c_checkboard_calib_supplier_comp_1_1_lines_consumer_1_1_line_info.html</filename>
+    <member kind="variable">
+      <type>double</type>
+      <name>weight</name>
+      <anchorfile>structiinsp_1_1_c_checkboard_calib_supplier_comp_1_1_lines_consumer_1_1_line_info.html</anchorfile>
+      <anchor>a7d9ea6d55fc43b360163f94dad0e3a9d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>i2d::CLine2d</type>
+      <name>line</name>
+      <anchorfile>structiinsp_1_1_c_checkboard_calib_supplier_comp_1_1_lines_consumer_1_1_line_info.html</anchorfile>
+      <anchor>a97c83d409c043e5eded082c2b23701eb</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iinsp::CComposedInformationProviderComp</name>
@@ -29272,6 +29421,7 @@
     <name>Include/iinsp</name>
     <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>dir_5022365cd8d99ebf720fac90c1fea03f.html</filename>
+    <file>CCheckboardCalibSupplierComp.h</file>
     <file>CComposedInformationProviderComp.h</file>
     <file>CIdProviderCacheComp.h</file>
     <file>CInformationProviderCacheComp.h</file>
