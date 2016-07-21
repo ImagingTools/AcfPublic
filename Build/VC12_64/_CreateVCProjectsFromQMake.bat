@@ -1,6 +1,6 @@
 @echo off
 
-set QTDIR=%QTDIR_64%
+set QTDIR=%QTDIR_VC12_64%
 set COMPILER_EXT=VC12_64
 set QMAKESPEC=%QTDIR%\mkspecs\win32-msvc2013
 set path=%path%;%QTDIR%\bin
