@@ -2728,7 +2728,6 @@
     <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="yes" imported="no">imod/TModelWrap.h</includes>
     <includes id="_t_multi_page_document_wrap_8h" name="TMultiPageDocumentWrap.h" local="yes" imported="no">idoc/TMultiPageDocumentWrap.h</includes>
     <includes id="_c_standard_document_meta_info_8h" name="CStandardDocumentMetaInfo.h" local="yes" imported="no">idoc/CStandardDocumentMetaInfo.h</includes>
-    <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iimg/IMultiBitmapProvider.h</includes>
     <includes id="_i_multi_page_bitmap_controller_8h" name="IMultiPageBitmapController.h" local="yes" imported="no">iimg/IMultiPageBitmapController.h</includes>
     <class kind="class">iimg::CMultiPageBitmapBase</class>
     <namespace>iimg</namespace>
@@ -2818,6 +2817,7 @@
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>_i_multi_page_bitmap_controller_8h</filename>
     <includes id="_i_bitmap_8h" name="IBitmap.h" local="yes" imported="no">iimg/IBitmap.h</includes>
+    <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="yes" imported="no">iimg/IMultiBitmapProvider.h</includes>
     <class kind="class">iimg::IMultiPageBitmapController</class>
     <namespace>iimg</namespace>
   </compound>
@@ -35141,7 +35141,6 @@
     <name>iimg::CMultiPageBitmapBase</name>
     <filename>classiimg_1_1_c_multi_page_bitmap_base.html</filename>
     <base>TMultiPageDocumentWrap&lt; idoc::IMultiPageDocument &gt;</base>
-    <base virtualness="virtual">iimg::IMultiBitmapProvider</base>
     <base virtualness="virtual">iimg::IMultiPageBitmapController</base>
     <member kind="typedef">
       <type>idoc::CMultiPageDocumentBase</type>
@@ -35865,7 +35864,7 @@
   <compound kind="class">
     <name>iimg::IMultiPageBitmapController</name>
     <filename>classiimg_1_1_i_multi_page_bitmap_controller.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
+    <base virtualness="virtual">iimg::IMultiBitmapProvider</base>
     <member kind="function" virtualness="pure">
       <type>virtual iimg::IBitmap *</type>
       <name>InsertBitmap</name>
