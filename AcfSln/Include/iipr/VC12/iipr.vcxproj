@@ -146,6 +146,7 @@
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CFeatureToImageMapperProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CFeaturesContainer.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CHoughLineFinderComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CHoughSpace2d.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CImageBinarizeProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CImageCropProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CImageFlipProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
@@ -212,6 +213,7 @@
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CFeatureToImageMapperProcessorComp.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CFeaturesContainer.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CHoughLineFinderComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CHoughSpace2d.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CImageBinarizeProcessorComp.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CImageCropProcessorComp.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CImageFlipProcessorComp.h" $(ACF_TOOLS_BIN)/>

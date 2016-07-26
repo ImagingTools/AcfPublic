@@ -1353,7 +1353,15 @@
     <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="yes" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="yes" imported="no">iipr/IImageToFeatureProcessor.h</includes>
     <includes id="_t_weighted_feature_wrap_8h" name="TWeightedFeatureWrap.h" local="yes" imported="no">iipr/TWeightedFeatureWrap.h</includes>
+    <includes id="_c_hough_space2d_8h" name="CHoughSpace2d.h" local="yes" imported="no">iipr/CHoughSpace2d.h</includes>
     <class kind="class">iipr::CHoughLineFinderComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CHoughSpace2d.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_hough_space2d_8h</filename>
+    <class kind="class">iipr::CHoughSpace2d</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -15127,6 +15135,7 @@
     <class kind="class">iipr::CFeaturesContainer</class>
     <class kind="class">iipr::CFeatureToImageMapperProcessorComp</class>
     <class kind="class">iipr::CHoughLineFinderComp</class>
+    <class kind="class">iipr::CHoughSpace2d</class>
     <class kind="class">iipr::CImageBinarizeProcessorComp</class>
     <class kind="class">iipr::CImageCropProcessorComp</class>
     <class kind="class">iipr::CImageFlipProcessorComp</class>
@@ -17383,13 +17392,6 @@
       <anchor>a7a93822536dca1a45e6df2957eb11ad5</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;image, IFeaturesConsumer &amp;results, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
-    <member kind="typedef" protection="protected">
-      <type>QMultiMap&lt; double, i2d::CVector2d &gt;</type>
-      <name>WeightToHoughPosMap</name>
-      <anchorfile>classiipr_1_1_c_hough_line_finder_comp.html</anchorfile>
-      <anchor>ae0268dae5a17ef78592c4f06dd17ec34</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>CreateHoughSpace</name>
@@ -17404,26 +17406,52 @@
       <anchor>a871cef7b9008dfce6a63f12a74d74568</anchor>
       <arglist>(const i2d::CVector2d &amp;position, const i2d::CVector2d &amp;direction)</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>SmoothHoughSpace</name>
-      <anchorfile>classiipr_1_1_c_hough_line_finder_comp.html</anchorfile>
-      <anchor>a0420303f2c30fb47336e6c46c159d27d</anchor>
-      <arglist>(int iterations)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>AnalyseHoughSpace</name>
-      <anchorfile>classiipr_1_1_c_hough_line_finder_comp.html</anchorfile>
-      <anchor>a9c0fd21953c4abf9e9285fc705bdb9d6</anchor>
-      <arglist>(int maxPoints, int minWeight, WeightToHoughPosMap &amp;result)</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiipr_1_1_c_hough_line_finder_comp.html</anchorfile>
       <anchor>abb63b83f5fd37ef71482140fa39b3c26</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CHoughSpace2d</name>
+    <filename>classiipr_1_1_c_hough_space2d.html</filename>
+    <base>iimg::CGeneralBitmap</base>
+    <member kind="typedef">
+      <type>iimg::CGeneralBitmap</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>ada98a8c9f9fc7d0c5aacce3cfcbb01fd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QMultiMap&lt; double, i2d::CVector2d &gt;</type>
+      <name>WeightToHoughPosMap</name>
+      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>aba04b81efb0dfe4e28ac4a3cbf4f21b6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>CreateHoughSpace</name>
+      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a5b8a306f94b808ca83f03a11874831a7</anchor>
+      <arglist>(const istd::CIndex2d &amp;size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SmoothHoughSpace</name>
+      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a6c9913a4c947cf24916c3bfdab275bc3</anchor>
+      <arglist>(int iterations)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>AnalyseHoughSpace</name>
+      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>ad1c8d39c8cf06c00950760a05b6badf2</anchor>
+      <arglist>(int maxPoints, int minWeight, WeightToHoughPosMap &amp;result)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -29466,6 +29494,7 @@
     <file>CFeaturesContainer.h</file>
     <file>CFeatureToImageMapperProcessorComp.h</file>
     <file>CHoughLineFinderComp.h</file>
+    <file>CHoughSpace2d.h</file>
     <file>CImageBinarizeProcessorComp.h</file>
     <file>CImageCropProcessorComp.h</file>
     <file>CImageFlipProcessorComp.h</file>

@@ -26,7 +26,6 @@
 
 // ACF includes
 #include "icomp/CComponentBase.h"
-#include "iimg/CGeneralBitmap.h"
 #include "ilog/IMessageConsumer.h"
 #include "ilog/TLoggerCompWrap.h"
 #include "i2d/CLine2d.h"
@@ -35,6 +34,7 @@
 #include "iproc/TSyncProcessorWrap.h"
 #include "iipr/IImageToFeatureProcessor.h"
 #include "iipr/TWeightedFeatureWrap.h"
+#include "iipr/CHoughSpace2d.h"
 
 
 namespace iipr
@@ -83,12 +83,8 @@ public:
 				ibase::IProgressManager* progressManagerPtr = NULL);
 
 protected:
-	typedef QMultiMap<double, i2d::CVector2d> WeightToHoughPosMap;
-
 	bool CreateHoughSpace();
 	void UpdateHoughSpace(const i2d::CVector2d& position, const i2d::CVector2d& direction);
-	void SmoothHoughSpace(int iterations);
-	void AnalyseHoughSpace(int maxPoints, int minWeight, WeightToHoughPosMap& result);
 
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();
@@ -104,7 +100,7 @@ private:
 	I_REF(ilog::IMessageConsumer, m_resultConsumerCompPtr);
 	I_REF(ilog::IMessageConsumer, m_tempConsumerCompPtr);
 
-	iimg::CGeneralBitmap m_houghSpace;
+	CHoughSpace2d m_houghSpace;
 
 	typedef QVector<i2d::CVector2d> AngleVectors;
 	AngleVectors m_angleVectors;

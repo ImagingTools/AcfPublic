@@ -35763,9 +35763,9 @@
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>CalculateBoundingBox</name>
+      <name>CalcBoundingBox</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
-      <anchor>ae20ae4c015409b4033ce2edfcae29dbe</anchor>
+      <anchor>a05ea03273243c181d2b9793ae1ea4f06</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
