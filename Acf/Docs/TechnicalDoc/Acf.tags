@@ -52964,6 +52964,20 @@
       <anchor>a1ed917583abc8a477ebd0f33efe481c2</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ModelId</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a0d0956be307a8015a288ced787bcec9b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_USER</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a0d0956be307a8015a288ced787bcec9ba44eb0cb3c77fb09d55952f2eb2a337d5</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>iqtgui::CGuiComponentBase</type>
       <name>BaseClass</name>
