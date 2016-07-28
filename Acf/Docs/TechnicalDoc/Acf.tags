@@ -47092,13 +47092,6 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetVisible</name>
-      <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
-      <anchor>a395f84884da10c1461167cc9182bbbd5</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>AssignToLayer</name>
       <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
@@ -47146,6 +47139,13 @@
       <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
       <anchor>a0eed87baa57a0afd2f92a2c0aa68d2d4</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetVisible</name>
+      <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
+      <anchor>a395f84884da10c1461167cc9182bbbd5</anchor>
+      <arglist>(bool state=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IColorSchema *</type>
@@ -71161,6 +71161,13 @@
       <anchorfile>classiview_1_1_i_shape.html</anchorfile>
       <anchor>a3c683e05c0c2ca46e9ce3a9d2b67a199</anchor>
       <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetVisible</name>
+      <anchorfile>classiview_1_1_i_shape.html</anchorfile>
+      <anchor>a93987007850d563db502ddd2fafb75c6</anchor>
+      <arglist>(bool state=true)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>

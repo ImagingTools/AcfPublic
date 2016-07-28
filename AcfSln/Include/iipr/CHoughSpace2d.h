@@ -57,8 +57,27 @@ public:
 	void SmoothHoughSpace(int iterations);
 	/**
 		Analyse this Hough space to find set of local maximums.
+		\param	maxPoints	maximal number of points to find.
+		\param	minWeight	minimal weight of point.
+		\param	minMaxRatio	maximal proportion between best and worse.
+		\param	minDistance	minimal distance between two found points.
+		\param	result		will be filled with list of found points.
 	*/
-	void AnalyseHoughSpace(int maxPoints, int minWeight, WeightToHoughPosMap& result);
+	void AnalyseHoughSpace(int maxPoints, int minWeight, double minMaxRatio, double minDistance, WeightToHoughPosMap& result);
+
+	/**
+		Extract this Hough space to some gray scale bitmap.
+	*/
+	bool ExtractToBitmap(iimg::IBitmap& bitmap);
+
+	/**
+		Calculate minimum of all pixels in this space.
+	*/
+	void CalcMin(const CHoughSpace2d& space);
+	/**
+		Calculate maximum of all pixels in this space.
+	*/
+	void CalcMax(const CHoughSpace2d& space);
 };
 
 

@@ -70,10 +70,6 @@ public:
 	CShapeBase(const CShapeBase& shape);
 	virtual ~CShapeBase();
 
-	/**
-		Make this shape visible.
-	*/
-	virtual void SetVisible(bool state = true);
 	virtual bool AssignToLayer(int layerType);
 
 	virtual void Invalidate();
@@ -98,6 +94,7 @@ public:
 	// reimplemented (iview::IShape)
 	virtual int GetLayerType() const;
 	virtual i2d::CRect GetBoundingBox() const;
+	virtual void SetVisible(bool state = true);
 	virtual const IColorSchema* GetUserColorSchema() const;
 	virtual void SetUserColorSchema(const IColorSchema* schemaPtr);
 

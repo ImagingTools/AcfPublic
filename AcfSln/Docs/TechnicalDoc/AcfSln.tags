@@ -17371,6 +17371,13 @@
       <anchor>a301e5842526e6f49206ca87dc9500f57ac98146e02ad97f90bed5f50dc014e406</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>HOUGH_SPACE</name>
+      <anchorfile>classiipr_1_1_c_hough_line_finder_comp.html</anchorfile>
+      <anchor>a301e5842526e6f49206ca87dc9500f57a4357c0c6982f4ddc86106102f424c52e</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -17403,8 +17410,8 @@
       <type>void</type>
       <name>UpdateHoughSpace</name>
       <anchorfile>classiipr_1_1_c_hough_line_finder_comp.html</anchorfile>
-      <anchor>a871cef7b9008dfce6a63f12a74d74568</anchor>
-      <arglist>(const i2d::CVector2d &amp;position, const i2d::CVector2d &amp;direction)</arglist>
+      <anchor>aef010da68be3602bdc36d52dee3b28c9</anchor>
+      <arglist>(const i2d::CVector2d &amp;position, const i2d::CVector2d &amp;direction, double radiusOffset)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -17450,8 +17457,29 @@
       <type>void</type>
       <name>AnalyseHoughSpace</name>
       <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>ad1c8d39c8cf06c00950760a05b6badf2</anchor>
-      <arglist>(int maxPoints, int minWeight, WeightToHoughPosMap &amp;result)</arglist>
+      <anchor>a30a5f3a861c6895aa3e27809fa6426d7</anchor>
+      <arglist>(int maxPoints, int minWeight, double minMaxRatio, double minDistance, WeightToHoughPosMap &amp;result)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>ExtractToBitmap</name>
+      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a90e68647add35953be65b742a590cd8c</anchor>
+      <arglist>(iimg::IBitmap &amp;bitmap)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CalcMin</name>
+      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>afdb78373a2369ca4c5dbd7864bbc6752</anchor>
+      <arglist>(const CHoughSpace2d &amp;space)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CalcMax</name>
+      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>ab4949b9526112c9ae50a69b925578f65</anchor>
+      <arglist>(const CHoughSpace2d &amp;space)</arglist>
     </member>
   </compound>
   <compound kind="class">
