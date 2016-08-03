@@ -1,5 +1,5 @@
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iauth", "..\..\Include\iauth\VC10\iauth.vcxproj", "{936D58B8-D28B-393F-902C-67FA86178E80}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ihotf", "..\..\Include\ihotf\VC10\ihotf.vcxproj", "{E7CEBD6D-63ED-34F8-B436-4A44EA8D1038}"

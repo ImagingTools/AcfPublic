@@ -1,160 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http:$(ACF_TOOLS_BIN)/$(ACF_TOOLS_BIN)/schemas.microsoft.com$(ACF_TOOLS_BIN)/developer$(ACF_TOOLS_BIN)/msbuild$(ACF_TOOLS_BIN)/2003">
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug<$(ACF_TOOLS_BIN)/Configuration>
-      <Platform>Win32<$(ACF_TOOLS_BIN)/Platform>
-    <$(ACF_TOOLS_BIN)/ProjectConfiguration>
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release<$(ACF_TOOLS_BIN)/Configuration>
-      <Platform>Win32<$(ACF_TOOLS_BIN)/Platform>
-    <$(ACF_TOOLS_BIN)/ProjectConfiguration>
-  <$(ACF_TOOLS_BIN)/ItemGroup>
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{6181EFD4-A4BA-32F4-84CA-092E847A4EC1}<$(ACF_TOOLS_BIN)/ProjectGuid>
-    <RootNamespace>ilog<$(ACF_TOOLS_BIN)/RootNamespace>
-    <Keyword>Qt4VSv1.0<$(ACF_TOOLS_BIN)/Keyword>
-  <$(ACF_TOOLS_BIN)/PropertyGroup>
-  <Import Project="$(VCTargetsPath)$(ACF_TOOLS_BIN)\Microsoft.Cpp.Default.props" $(ACF_TOOLS_BIN)/>
+    <ProjectGuid>{6181EFD4-A4BA-32F4-84CA-092E847A4EC1}</ProjectGuid>
+    <RootNamespace>ilog</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="Configuration">
-    <OutputDirectory>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/OutputDirectory>
-    <ATLMinimizesCRunTimeLibraryUsage>false<$(ACF_TOOLS_BIN)/ATLMinimizesCRunTimeLibraryUsage>
-    <CharacterSet>NotSet<$(ACF_TOOLS_BIN)/CharacterSet>
-    <ConfigurationType>StaticLibrary<$(ACF_TOOLS_BIN)/ConfigurationType>
-    <IntermediateDirectory>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Debug$(ACF_TOOLS_BIN)\ilog$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/IntermediateDirectory>
-  <$(ACF_TOOLS_BIN)/PropertyGroup>
+    <OutputDirectory>..\..\..\Lib\DebugVC10\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\ilog\</IntermediateDirectory>
+  </PropertyGroup>
   <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="Configuration">
-    <OutputDirectory>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/OutputDirectory>
-    <ATLMinimizesCRunTimeLibraryUsage>false<$(ACF_TOOLS_BIN)/ATLMinimizesCRunTimeLibraryUsage>
-    <CharacterSet>NotSet<$(ACF_TOOLS_BIN)/CharacterSet>
-    <ConfigurationType>StaticLibrary<$(ACF_TOOLS_BIN)/ConfigurationType>
-    <IntermediateDirectory>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Release$(ACF_TOOLS_BIN)\ilog$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/IntermediateDirectory>
-  <$(ACF_TOOLS_BIN)/PropertyGroup>
-  <Import Project="$(VCTargetsPath)$(ACF_TOOLS_BIN)\Microsoft.Cpp.props" $(ACF_TOOLS_BIN)/>
-  <ImportGroup Label="ExtensionSettings" $(ACF_TOOLS_BIN)/>
+    <OutputDirectory>..\..\..\Lib\ReleaseVC10\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Release\ilog\</IntermediateDirectory>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
   <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="PropertySheets">
-    <Import Project="$(UserRootDir)$(ACF_TOOLS_BIN)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)$(ACF_TOOLS_BIN)\Microsoft.Cpp.$(Platform).user.props&apos;)" $(ACF_TOOLS_BIN)/>
-  <$(ACF_TOOLS_BIN)/ImportGroup>
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
   <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="PropertySheets">
-    <Import Project="$(UserRootDir)$(ACF_TOOLS_BIN)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)$(ACF_TOOLS_BIN)\Microsoft.Cpp.$(Platform).user.props&apos;)" $(ACF_TOOLS_BIN)/>
-  <$(ACF_TOOLS_BIN)/ImportGroup>
-  <PropertyGroup Label="UserMacros" $(ACF_TOOLS_BIN)/>
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/OutDir>
-    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Debug$(ACF_TOOLS_BIN)\ilog$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/IntDir>
-    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true<$(ACF_TOOLS_BIN)/IgnoreImportLibrary>
-    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/OutDir>
-    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Release$(ACF_TOOLS_BIN)\ilog$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/IntDir>
-    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true<$(ACF_TOOLS_BIN)/IgnoreImportLibrary>
-  <$(ACF_TOOLS_BIN)/PropertyGroup>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\Lib\DebugVC10\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\ilog\</IntDir>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</IgnoreImportLibrary>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\Lib\ReleaseVC10\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Release\ilog\</IntDir>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</IgnoreImportLibrary>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">
     <ClCompile>
-      <AdditionalIncludeDirectories>&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Include&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Include&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Include&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include$(ACF_TOOLS_BIN)\QtGui&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include$(ACF_TOOLS_BIN)\QtCore&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\ilog&quot;;$(QTDIR)$(ACF_TOOLS_BIN)\mkspecs$(ACF_TOOLS_BIN)\win32-msvc2010;%(AdditionalIncludeDirectories)<$(ACF_TOOLS_BIN)/AdditionalIncludeDirectories>
-      <AdditionalOptions>-Zm200 $(ACF_TOOLS_BIN)/MP $(ACF_TOOLS_BIN)/bigobj %(AdditionalOptions)<$(ACF_TOOLS_BIN)/AdditionalOptions>
-      <AssemblerListingLocation>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Debug$(ACF_TOOLS_BIN)\ilog$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/AssemblerListingLocation>
-      <BrowseInformation>false<$(ACF_TOOLS_BIN)/BrowseInformation>
-      <DebugInformationFormat>ProgramDatabase<$(ACF_TOOLS_BIN)/DebugInformationFormat>
-      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)<$(ACF_TOOLS_BIN)/DisableSpecificWarnings>
-      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2<$(ACF_TOOLS_BIN)/EnableEnhancedInstructionSet>
-      <ExceptionHandling>Sync<$(ACF_TOOLS_BIN)/ExceptionHandling>
-      <FloatingPointModel>Fast<$(ACF_TOOLS_BIN)/FloatingPointModel>
-      <ObjectFileName>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Debug$(ACF_TOOLS_BIN)\ilog$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/ObjectFileName>
-      <OpenMPSupport>false<$(ACF_TOOLS_BIN)/OpenMPSupport>
-      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)<$(ACF_TOOLS_BIN)/PreprocessorDefinitions>
-      <PreprocessToFile>false<$(ACF_TOOLS_BIN)/PreprocessToFile>
-      <RuntimeLibrary>MultiThreadedDebugDLL<$(ACF_TOOLS_BIN)/RuntimeLibrary>
-      <RuntimeTypeInfo>true<$(ACF_TOOLS_BIN)/RuntimeTypeInfo>
-      <SuppressStartupBanner>true<$(ACF_TOOLS_BIN)/SuppressStartupBanner>
-      <TreatWChar_tAsBuiltInType>true<$(ACF_TOOLS_BIN)/TreatWChar_tAsBuiltInType>
-      <WarningLevel>Level4<$(ACF_TOOLS_BIN)/WarningLevel>
-    <$(ACF_TOOLS_BIN)/ClCompile>
+      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\Include&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ilog&quot;;$(QTDIR)\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 /MP /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\ilog\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ObjectFileName>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\ilog\</ObjectFileName>
+      <OpenMPSupport>false</OpenMPSupport>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
     <Link>
-      <IgnoreImportLibrary>true<$(ACF_TOOLS_BIN)/IgnoreImportLibrary>
-    <$(ACF_TOOLS_BIN)/Link>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    </Link>
     <Midl>
-      <DefaultCharType>Unsigned<$(ACF_TOOLS_BIN)/DefaultCharType>
-      <EnableErrorChecks>None<$(ACF_TOOLS_BIN)/EnableErrorChecks>
-      <WarningLevel>0<$(ACF_TOOLS_BIN)/WarningLevel>
-    <$(ACF_TOOLS_BIN)/Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
     <ResourceCompile>
-      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)<$(ACF_TOOLS_BIN)/PreprocessorDefinitions>
-      <ResourceOutputFileName>$(OutDir)$(ACF_TOOLS_BIN)\$(InputName).res<$(ACF_TOOLS_BIN)/ResourceOutputFileName>
-    <$(ACF_TOOLS_BIN)/ResourceCompile>
-  <$(ACF_TOOLS_BIN)/ItemDefinitionGroup>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ResourceOutputFileName>$(OutDir)\$(InputName).res</ResourceOutputFileName>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">
     <ClCompile>
-      <AdditionalIncludeDirectories>&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Include&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Include&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Include&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include$(ACF_TOOLS_BIN)\QtGui&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include$(ACF_TOOLS_BIN)\QtCore&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\ilog&quot;;$(QTDIR)$(ACF_TOOLS_BIN)\mkspecs$(ACF_TOOLS_BIN)\win32-msvc2010;%(AdditionalIncludeDirectories)<$(ACF_TOOLS_BIN)/AdditionalIncludeDirectories>
-      <AdditionalOptions>-Zm200 $(ACF_TOOLS_BIN)/MP $(ACF_TOOLS_BIN)/bigobj %(AdditionalOptions)<$(ACF_TOOLS_BIN)/AdditionalOptions>
-      <AssemblerListingLocation>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Release$(ACF_TOOLS_BIN)\ilog$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/AssemblerListingLocation>
-      <BrowseInformation>false<$(ACF_TOOLS_BIN)/BrowseInformation>
-      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)<$(ACF_TOOLS_BIN)/DisableSpecificWarnings>
-      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2<$(ACF_TOOLS_BIN)/EnableEnhancedInstructionSet>
-      <ExceptionHandling>Sync<$(ACF_TOOLS_BIN)/ExceptionHandling>
-      <FloatingPointModel>Fast<$(ACF_TOOLS_BIN)/FloatingPointModel>
-      <ObjectFileName>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Release$(ACF_TOOLS_BIN)\ilog$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/ObjectFileName>
-      <OpenMPSupport>false<$(ACF_TOOLS_BIN)/OpenMPSupport>
-      <Optimization>MaxSpeed<$(ACF_TOOLS_BIN)/Optimization>
-      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)<$(ACF_TOOLS_BIN)/PreprocessorDefinitions>
-      <PreprocessToFile>false<$(ACF_TOOLS_BIN)/PreprocessToFile>
-      <RuntimeLibrary>MultiThreadedDLL<$(ACF_TOOLS_BIN)/RuntimeLibrary>
-      <RuntimeTypeInfo>true<$(ACF_TOOLS_BIN)/RuntimeTypeInfo>
-      <SuppressStartupBanner>true<$(ACF_TOOLS_BIN)/SuppressStartupBanner>
-      <TreatWChar_tAsBuiltInType>true<$(ACF_TOOLS_BIN)/TreatWChar_tAsBuiltInType>
-      <WarningLevel>Level4<$(ACF_TOOLS_BIN)/WarningLevel>
-    <$(ACF_TOOLS_BIN)/ClCompile>
+      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\Include&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ilog&quot;;$(QTDIR)\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 /MP /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Release\ilog\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ObjectFileName>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Release\ilog\</ObjectFileName>
+      <OpenMPSupport>false</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
     <Link>
-      <IgnoreImportLibrary>true<$(ACF_TOOLS_BIN)/IgnoreImportLibrary>
-    <$(ACF_TOOLS_BIN)/Link>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    </Link>
     <Midl>
-      <DefaultCharType>Unsigned<$(ACF_TOOLS_BIN)/DefaultCharType>
-      <EnableErrorChecks>None<$(ACF_TOOLS_BIN)/EnableErrorChecks>
-      <WarningLevel>0<$(ACF_TOOLS_BIN)/WarningLevel>
-    <$(ACF_TOOLS_BIN)/Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
     <ResourceCompile>
-      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)<$(ACF_TOOLS_BIN)/PreprocessorDefinitions>
-      <ResourceOutputFileName>$(OutDir)$(ACF_TOOLS_BIN)\$(InputName).res<$(ACF_TOOLS_BIN)/ResourceOutputFileName>
-    <$(ACF_TOOLS_BIN)/ResourceCompile>
-  <$(ACF_TOOLS_BIN)/ItemDefinitionGroup>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ResourceOutputFileName>$(OutDir)\$(InputName).res</ResourceOutputFileName>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..$(ACF_TOOLS_BIN)\CConsoleLogComp.cpp" $(ACF_TOOLS_BIN)/>
-    <ClCompile Include="..$(ACF_TOOLS_BIN)\CLogComp.cpp" $(ACF_TOOLS_BIN)/>
-    <ClCompile Include="..$(ACF_TOOLS_BIN)\CLogCompBase.cpp" $(ACF_TOOLS_BIN)/>
-    <ClCompile Include="..$(ACF_TOOLS_BIN)\CMessage.cpp" $(ACF_TOOLS_BIN)/>
-    <ClCompile Include="..$(ACF_TOOLS_BIN)\CMessageContainer.cpp" $(ACF_TOOLS_BIN)/>
-    <ClCompile Include="..$(ACF_TOOLS_BIN)\CStreamLogCompBase.cpp" $(ACF_TOOLS_BIN)/>
-    <ClCompile Include="..$(ACF_TOOLS_BIN)\CTextFileLogComp.cpp" $(ACF_TOOLS_BIN)/>
-    <ClCompile Include="..$(ACF_TOOLS_BIN)\CTextFileLogStreamerComp.cpp" $(ACF_TOOLS_BIN)/>
-  <$(ACF_TOOLS_BIN)/ItemGroup>
+    <ClCompile Include="..\CConsoleLogComp.cpp" />
+    <ClCompile Include="..\CLogComp.cpp" />
+    <ClCompile Include="..\CLogCompBase.cpp" />
+    <ClCompile Include="..\CMessage.cpp" />
+    <ClCompile Include="..\CMessageContainer.cpp" />
+    <ClCompile Include="..\CStreamLogCompBase.cpp" />
+    <ClCompile Include="..\CTextFileLogComp.cpp" />
+    <ClCompile Include="..\CTextFileLogStreamerComp.cpp" />
+  </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..$(ACF_TOOLS_BIN)\CConsoleLogComp.h" $(ACF_TOOLS_BIN)/>
-    <ClInclude Include="..$(ACF_TOOLS_BIN)\CLogComp.h" $(ACF_TOOLS_BIN)/>
-    <CustomBuild Include="..$(ACF_TOOLS_BIN)\CLogCompBase.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..$(ACF_TOOLS_BIN)\CLogCompBase.h;%(AdditionalInputs)<$(ACF_TOOLS_BIN)/AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)$(ACF_TOOLS_BIN)\bin$(ACF_TOOLS_BIN)\moc.exe  -DUNICODE -DWIN32 -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)$(ACF_TOOLS_BIN)/mkspecs$(ACF_TOOLS_BIN)/win32-msvc2010 -IC:$(ACF_TOOLS_BIN)/Temp$(ACF_TOOLS_BIN)/Acf$(ACF_TOOLS_BIN)/Include$(ACF_TOOLS_BIN)/ilog$(ACF_TOOLS_BIN)/QMake -IC:$(ACF_TOOLS_BIN)/Temp$(ACF_TOOLS_BIN)/Acf$(ACF_TOOLS_BIN)/AuxInclude$(ACF_TOOLS_BIN)/Qt5_VC10 -IC:$(ACF_TOOLS_BIN)/Temp$(ACF_TOOLS_BIN)/Acf$(ACF_TOOLS_BIN)/Include -IC:$(ACF_TOOLS_BIN)/Temp$(ACF_TOOLS_BIN)/Acf$(ACF_TOOLS_BIN)/AuxInclude$(ACF_TOOLS_BIN)/Qt5_VC10 -IC:$(ACF_TOOLS_BIN)/Temp$(ACF_TOOLS_BIN)/Acf$(ACF_TOOLS_BIN)/Include -IC:$(ACF_TOOLS_BIN)/Temp$(ACF_TOOLS_BIN)/Acf$(ACF_TOOLS_BIN)/Include -I$(QTDIR)$(ACF_TOOLS_BIN)/include -I$(QTDIR)$(ACF_TOOLS_BIN)/include$(ACF_TOOLS_BIN)/QtGui -I$(QTDIR)$(ACF_TOOLS_BIN)/include$(ACF_TOOLS_BIN)/QtCore ..$(ACF_TOOLS_BIN)\CLogCompBase.h -o ..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\ilog$(ACF_TOOLS_BIN)\moc_CLogCompBase.cpp<$(ACF_TOOLS_BIN)/Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..$(ACF_TOOLS_BIN)\CLogCompBase.h<$(ACF_TOOLS_BIN)/Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\ilog$(ACF_TOOLS_BIN)\moc_CLogCompBase.cpp;%(Outputs)<$(ACF_TOOLS_BIN)/Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..$(ACF_TOOLS_BIN)\CLogCompBase.h;%(AdditionalInputs)<$(ACF_TOOLS_BIN)/AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)$(ACF_TOOLS_BIN)\bin$(ACF_TOOLS_BIN)\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)$(ACF_TOOLS_BIN)/mkspecs$(ACF_TOOLS_BIN)/win32-msvc2010 -IC:$(ACF_TOOLS_BIN)/Temp$(ACF_TOOLS_BIN)/Acf$(ACF_TOOLS_BIN)/Include$(ACF_TOOLS_BIN)/ilog$(ACF_TOOLS_BIN)/QMake -IC:$(ACF_TOOLS_BIN)/Temp$(ACF_TOOLS_BIN)/Acf$(ACF_TOOLS_BIN)/AuxInclude$(ACF_TOOLS_BIN)/Qt5_VC10 -IC:$(ACF_TOOLS_BIN)/Temp$(ACF_TOOLS_BIN)/Acf$(ACF_TOOLS_BIN)/Include -IC:$(ACF_TOOLS_BIN)/Temp$(ACF_TOOLS_BIN)/Acf$(ACF_TOOLS_BIN)/AuxInclude$(ACF_TOOLS_BIN)/Qt5_VC10 -IC:$(ACF_TOOLS_BIN)/Temp$(ACF_TOOLS_BIN)/Acf$(ACF_TOOLS_BIN)/Include -IC:$(ACF_TOOLS_BIN)/Temp$(ACF_TOOLS_BIN)/Acf$(ACF_TOOLS_BIN)/Include -I$(QTDIR)$(ACF_TOOLS_BIN)/include -I$(QTDIR)$(ACF_TOOLS_BIN)/include$(ACF_TOOLS_BIN)/QtGui -I$(QTDIR)$(ACF_TOOLS_BIN)/include$(ACF_TOOLS_BIN)/QtCore ..$(ACF_TOOLS_BIN)\CLogCompBase.h -o ..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\ilog$(ACF_TOOLS_BIN)\moc_CLogCompBase.cpp<$(ACF_TOOLS_BIN)/Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..$(ACF_TOOLS_BIN)\CLogCompBase.h<$(ACF_TOOLS_BIN)/Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\ilog$(ACF_TOOLS_BIN)\moc_CLogCompBase.cpp;%(Outputs)<$(ACF_TOOLS_BIN)/Outputs>
-    <$(ACF_TOOLS_BIN)/CustomBuild>
-    <ClInclude Include="..$(ACF_TOOLS_BIN)\CMessage.h" $(ACF_TOOLS_BIN)/>
-    <ClInclude Include="..$(ACF_TOOLS_BIN)\CMessageContainer.h" $(ACF_TOOLS_BIN)/>
-    <ClInclude Include="..$(ACF_TOOLS_BIN)\CStreamLogCompBase.h" $(ACF_TOOLS_BIN)/>
-    <ClInclude Include="..$(ACF_TOOLS_BIN)\CTextFileLogComp.h" $(ACF_TOOLS_BIN)/>
-    <ClInclude Include="..$(ACF_TOOLS_BIN)\CTextFileLogStreamerComp.h" $(ACF_TOOLS_BIN)/>
-    <ClInclude Include="..$(ACF_TOOLS_BIN)\ILoggable.h" $(ACF_TOOLS_BIN)/>
-    <ClInclude Include="..$(ACF_TOOLS_BIN)\IMessageConsumer.h" $(ACF_TOOLS_BIN)/>
-    <ClInclude Include="..$(ACF_TOOLS_BIN)\IMessageContainer.h" $(ACF_TOOLS_BIN)/>
-    <ClInclude Include="..$(ACF_TOOLS_BIN)\TExtMessage.h" $(ACF_TOOLS_BIN)/>
-    <ClInclude Include="..$(ACF_TOOLS_BIN)\TLoggerCompWrap.h" $(ACF_TOOLS_BIN)/>
-    <ClInclude Include="..$(ACF_TOOLS_BIN)\TLoggerWrap.h" $(ACF_TOOLS_BIN)/>
-    <ClInclude Include="..$(ACF_TOOLS_BIN)\TMessageDelegatorComp.h" $(ACF_TOOLS_BIN)/>
-    <ClInclude Include="..$(ACF_TOOLS_BIN)\ilog.h" $(ACF_TOOLS_BIN)/>
-  <$(ACF_TOOLS_BIN)/ItemGroup>
+    <ClInclude Include="..\CConsoleLogComp.h" />
+    <ClInclude Include="..\CLogComp.h" />
+    <CustomBuild Include="..\CLogCompBase.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CLogCompBase.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/ilog/QMake -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CLogCompBase.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ilog\moc_CLogCompBase.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CLogCompBase.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ilog\moc_CLogCompBase.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CLogCompBase.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/ilog/QMake -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CLogCompBase.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ilog\moc_CLogCompBase.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CLogCompBase.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ilog\moc_CLogCompBase.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\CMessage.h" />
+    <ClInclude Include="..\CMessageContainer.h" />
+    <ClInclude Include="..\CStreamLogCompBase.h" />
+    <ClInclude Include="..\CTextFileLogComp.h" />
+    <ClInclude Include="..\CTextFileLogStreamerComp.h" />
+    <ClInclude Include="..\ILoggable.h" />
+    <ClInclude Include="..\IMessageConsumer.h" />
+    <ClInclude Include="..\IMessageContainer.h" />
+    <ClInclude Include="..\TExtMessage.h" />
+    <ClInclude Include="..\TLoggerCompWrap.h" />
+    <ClInclude Include="..\TLoggerWrap.h" />
+    <ClInclude Include="..\TMessageDelegatorComp.h" />
+    <ClInclude Include="..\ilog.h" />
+  </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\ilog$(ACF_TOOLS_BIN)\moc_CLogCompBase.cpp" $(ACF_TOOLS_BIN)/>
-  <$(ACF_TOOLS_BIN)/ItemGroup>
-  <Import Project="$(VCTargetsPath)$(ACF_TOOLS_BIN)\Microsoft.Cpp.targets" $(ACF_TOOLS_BIN)/>
-  <ImportGroup Label="ExtensionTargets" $(ACF_TOOLS_BIN)/>
-<$(ACF_TOOLS_BIN)/Project>
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ilog\moc_CLogCompBase.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

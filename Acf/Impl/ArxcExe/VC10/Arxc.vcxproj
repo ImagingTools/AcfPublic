@@ -1,151 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http:$(ACF_TOOLS_BIN)/$(ACF_TOOLS_BIN)/schemas.microsoft.com$(ACF_TOOLS_BIN)/developer$(ACF_TOOLS_BIN)/msbuild$(ACF_TOOLS_BIN)/2003">
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug<$(ACF_TOOLS_BIN)/Configuration>
-      <Platform>Win32<$(ACF_TOOLS_BIN)/Platform>
-    <$(ACF_TOOLS_BIN)/ProjectConfiguration>
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release<$(ACF_TOOLS_BIN)/Configuration>
-      <Platform>Win32<$(ACF_TOOLS_BIN)/Platform>
-    <$(ACF_TOOLS_BIN)/ProjectConfiguration>
-  <$(ACF_TOOLS_BIN)/ItemGroup>
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F7AC55DA-5E3E-3189-B5C3-887D726A8E84}<$(ACF_TOOLS_BIN)/ProjectGuid>
-    <RootNamespace>Arxc<$(ACF_TOOLS_BIN)/RootNamespace>
-    <Keyword>Qt4VSv1.0<$(ACF_TOOLS_BIN)/Keyword>
-  <$(ACF_TOOLS_BIN)/PropertyGroup>
-  <Import Project="$(VCTargetsPath)$(ACF_TOOLS_BIN)\Microsoft.Cpp.Default.props" $(ACF_TOOLS_BIN)/>
+    <ProjectGuid>{F7AC55DA-5E3E-3189-B5C3-887D726A8E84}</ProjectGuid>
+    <RootNamespace>Arxc</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="Configuration">
-    <OutputDirectory>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Bin$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/OutputDirectory>
-    <ATLMinimizesCRunTimeLibraryUsage>false<$(ACF_TOOLS_BIN)/ATLMinimizesCRunTimeLibraryUsage>
-    <CharacterSet>NotSet<$(ACF_TOOLS_BIN)/CharacterSet>
-    <ConfigurationType>Application<$(ACF_TOOLS_BIN)/ConfigurationType>
-    <IntermediateDirectory>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Debug$(ACF_TOOLS_BIN)\Arxc$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/IntermediateDirectory>
-  <$(ACF_TOOLS_BIN)/PropertyGroup>
+    <OutputDirectory>..\..\..\Bin\DebugVC10\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\Arxc\</IntermediateDirectory>
+  </PropertyGroup>
   <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="Configuration">
-    <OutputDirectory>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Bin$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/OutputDirectory>
-    <ATLMinimizesCRunTimeLibraryUsage>false<$(ACF_TOOLS_BIN)/ATLMinimizesCRunTimeLibraryUsage>
-    <CharacterSet>NotSet<$(ACF_TOOLS_BIN)/CharacterSet>
-    <ConfigurationType>Application<$(ACF_TOOLS_BIN)/ConfigurationType>
-    <IntermediateDirectory>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Release$(ACF_TOOLS_BIN)\Arxc$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/IntermediateDirectory>
-  <$(ACF_TOOLS_BIN)/PropertyGroup>
-  <Import Project="$(VCTargetsPath)$(ACF_TOOLS_BIN)\Microsoft.Cpp.props" $(ACF_TOOLS_BIN)/>
-  <ImportGroup Label="ExtensionSettings" $(ACF_TOOLS_BIN)/>
+    <OutputDirectory>..\..\..\Bin\ReleaseVC10\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Release\Arxc\</IntermediateDirectory>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
   <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="PropertySheets">
-    <Import Project="$(UserRootDir)$(ACF_TOOLS_BIN)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)$(ACF_TOOLS_BIN)\Microsoft.Cpp.$(Platform).user.props&apos;)" $(ACF_TOOLS_BIN)/>
-  <$(ACF_TOOLS_BIN)/ImportGroup>
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
   <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="PropertySheets">
-    <Import Project="$(UserRootDir)$(ACF_TOOLS_BIN)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)$(ACF_TOOLS_BIN)\Microsoft.Cpp.$(Platform).user.props&apos;)" $(ACF_TOOLS_BIN)/>
-  <$(ACF_TOOLS_BIN)/ImportGroup>
-  <PropertyGroup Label="UserMacros" $(ACF_TOOLS_BIN)/>
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Bin$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/OutDir>
-    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Debug$(ACF_TOOLS_BIN)\Arxc$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/IntDir>
-    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true<$(ACF_TOOLS_BIN)/IgnoreImportLibrary>
-    <PostBuildEventUseInBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true<$(ACF_TOOLS_BIN)/PostBuildEventUseInBuild>
-    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Bin$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/OutDir>
-    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Release$(ACF_TOOLS_BIN)\Arxc$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/IntDir>
-    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true<$(ACF_TOOLS_BIN)/IgnoreImportLibrary>
-    <LinkIncremental Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">false<$(ACF_TOOLS_BIN)/LinkIncremental>
-    <PostBuildEventUseInBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true<$(ACF_TOOLS_BIN)/PostBuildEventUseInBuild>
-  <$(ACF_TOOLS_BIN)/PropertyGroup>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\Bin\DebugVC10\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\Arxc\</IntDir>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</IgnoreImportLibrary>
+    <PostBuildEventUseInBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</PostBuildEventUseInBuild>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\Bin\ReleaseVC10\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Release\Arxc\</IntDir>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">false</LinkIncremental>
+    <PostBuildEventUseInBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</PostBuildEventUseInBuild>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">
     <ClCompile>
-      <AdditionalIncludeDirectories>&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Include&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Impl&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Impl&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include$(ACF_TOOLS_BIN)\QtSvg&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include$(ACF_TOOLS_BIN)\QtXmlPatterns&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include$(ACF_TOOLS_BIN)\QtWidgets&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include$(ACF_TOOLS_BIN)\QtNetwork&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include$(ACF_TOOLS_BIN)\QtXml&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include$(ACF_TOOLS_BIN)\QtGui&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include$(ACF_TOOLS_BIN)\QtCore&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Arxc&quot;;$(QTDIR)$(ACF_TOOLS_BIN)\mkspecs$(ACF_TOOLS_BIN)\win32-msvc2010;%(AdditionalIncludeDirectories)<$(ACF_TOOLS_BIN)/AdditionalIncludeDirectories>
-      <AdditionalOptions>-Zm200 $(ACF_TOOLS_BIN)/MP $(ACF_TOOLS_BIN)/bigobj %(AdditionalOptions)<$(ACF_TOOLS_BIN)/AdditionalOptions>
-      <AssemblerListingLocation>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Debug$(ACF_TOOLS_BIN)\Arxc$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/AssemblerListingLocation>
-      <BrowseInformation>false<$(ACF_TOOLS_BIN)/BrowseInformation>
-      <DebugInformationFormat>ProgramDatabase<$(ACF_TOOLS_BIN)/DebugInformationFormat>
-      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)<$(ACF_TOOLS_BIN)/DisableSpecificWarnings>
-      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2<$(ACF_TOOLS_BIN)/EnableEnhancedInstructionSet>
-      <ExceptionHandling>Sync<$(ACF_TOOLS_BIN)/ExceptionHandling>
-      <FloatingPointModel>Fast<$(ACF_TOOLS_BIN)/FloatingPointModel>
-      <ObjectFileName>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Debug$(ACF_TOOLS_BIN)\Arxc$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/ObjectFileName>
-      <OpenMPSupport>false<$(ACF_TOOLS_BIN)/OpenMPSupport>
-      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CONSOLE;UNICODE;WIN32;QT_SVG_LIB;QT_XMLPATTERNS_LIB;QT_WIDGETS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)<$(ACF_TOOLS_BIN)/PreprocessorDefinitions>
-      <PreprocessToFile>false<$(ACF_TOOLS_BIN)/PreprocessToFile>
-      <RuntimeLibrary>MultiThreadedDebugDLL<$(ACF_TOOLS_BIN)/RuntimeLibrary>
-      <RuntimeTypeInfo>true<$(ACF_TOOLS_BIN)/RuntimeTypeInfo>
-      <SuppressStartupBanner>true<$(ACF_TOOLS_BIN)/SuppressStartupBanner>
-      <TreatWChar_tAsBuiltInType>true<$(ACF_TOOLS_BIN)/TreatWChar_tAsBuiltInType>
-      <WarningLevel>Level4<$(ACF_TOOLS_BIN)/WarningLevel>
-    <$(ACF_TOOLS_BIN)/ClCompile>
+      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\Impl&quot;;&quot;..\..\..\Impl&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtSvg&quot;;&quot;$(QTDIR)\include\QtXmlPatterns&quot;;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtNetwork&quot;;&quot;$(QTDIR)\include\QtXml&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Arxc&quot;;$(QTDIR)\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 /MP /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\Arxc\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ObjectFileName>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\Arxc\</ObjectFileName>
+      <OpenMPSupport>false</OpenMPSupport>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CONSOLE;UNICODE;WIN32;QT_SVG_LIB;QT_XMLPATTERNS_LIB;QT_WIDGETS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
     <Link>
-      <AdditionalDependencies>ipackage.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\iqt.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\ipackage.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\idoc.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\ifile.lib;$(QTDIR)$(ACF_TOOLS_BIN)\lib$(ACF_TOOLS_BIN)\Qt5Concurrentd.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\iimg.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\icmm.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\i2d.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\i3d.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\iprm.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\ilog.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\ibase.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\icomp.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\iattr.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\iser.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\imod.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\imath.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\istd.lib;Mpr.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\iqtdoc.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\iview.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\iqt2d.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\iqtprm.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\iloggui.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\ifilegui.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\iqtgui.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10$(ACF_TOOLS_BIN)\iwidgets.lib;glu32.lib;opengl32.lib;gdi32.lib;user32.lib;$(QTDIR)$(ACF_TOOLS_BIN)\lib$(ACF_TOOLS_BIN)\Qt5Svgd.lib;$(QTDIR)$(ACF_TOOLS_BIN)\lib$(ACF_TOOLS_BIN)\Qt5XmlPatternsd.lib;$(QTDIR)$(ACF_TOOLS_BIN)\lib$(ACF_TOOLS_BIN)\Qt5Widgetsd.lib;$(QTDIR)$(ACF_TOOLS_BIN)\lib$(ACF_TOOLS_BIN)\Qt5Networkd.lib;$(QTDIR)$(ACF_TOOLS_BIN)\lib$(ACF_TOOLS_BIN)\Qt5Xmld.lib;$(QTDIR)$(ACF_TOOLS_BIN)\lib$(ACF_TOOLS_BIN)\Qt5Guid.lib;$(QTDIR)$(ACF_TOOLS_BIN)\lib$(ACF_TOOLS_BIN)\Qt5Cored.lib;%(AdditionalDependencies)<$(ACF_TOOLS_BIN)/AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Config$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\DebugVC10;$(QTDIR)$(ACF_TOOLS_BIN)\lib;%(AdditionalLibraryDirectories)<$(ACF_TOOLS_BIN)/AdditionalLibraryDirectories>
-      <AdditionalOptions>&quot;$(ACF_TOOLS_BIN)/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot; %(AdditionalOptions)<$(ACF_TOOLS_BIN)/AdditionalOptions>
-      <DataExecutionPrevention>true<$(ACF_TOOLS_BIN)/DataExecutionPrevention>
-      <GenerateDebugInformation>true<$(ACF_TOOLS_BIN)/GenerateDebugInformation>
-      <IgnoreImportLibrary>true<$(ACF_TOOLS_BIN)/IgnoreImportLibrary>
-      <OutputFile>$(OutDir)$(ACF_TOOLS_BIN)\Arxc.exe<$(ACF_TOOLS_BIN)/OutputFile>
-      <RandomizedBaseAddress>true<$(ACF_TOOLS_BIN)/RandomizedBaseAddress>
-      <SubSystem>Console<$(ACF_TOOLS_BIN)/SubSystem>
-      <SuppressStartupBanner>true<$(ACF_TOOLS_BIN)/SuppressStartupBanner>
-    <$(ACF_TOOLS_BIN)/Link>
+      <AdditionalDependencies>ipackage.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\iqt.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\ipackage.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\idoc.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\ifile.lib;$(QTDIR)\lib\Qt5Concurrentd.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\iimg.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\icmm.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\i2d.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\i3d.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\iprm.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\ilog.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\ibase.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\icomp.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\iattr.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\iser.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\imod.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\imath.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\istd.lib;Mpr.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\iqtdoc.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\iview.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\iqt2d.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\iqtprm.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\iloggui.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\ifilegui.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\iqtgui.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10\iwidgets.lib;glu32.lib;opengl32.lib;gdi32.lib;user32.lib;$(QTDIR)\lib\Qt5Svgd.lib;$(QTDIR)\lib\Qt5XmlPatternsd.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5Networkd.lib;$(QTDIR)\lib\Qt5Xmld.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\DebugVC10;..\..\..\Config\QMake\..\..\Lib\DebugVC10;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>&quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot; %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\Arxc.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
     <Midl>
-      <DefaultCharType>Unsigned<$(ACF_TOOLS_BIN)/DefaultCharType>
-      <EnableErrorChecks>None<$(ACF_TOOLS_BIN)/EnableErrorChecks>
-      <WarningLevel>0<$(ACF_TOOLS_BIN)/WarningLevel>
-    <$(ACF_TOOLS_BIN)/Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
     <ResourceCompile>
-      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CONSOLE;UNICODE;WIN32;QT_SVG_LIB;QT_XMLPATTERNS_LIB;QT_WIDGETS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)<$(ACF_TOOLS_BIN)/PreprocessorDefinitions>
-    <$(ACF_TOOLS_BIN)/ResourceCompile>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CONSOLE;UNICODE;WIN32;QT_SVG_LIB;QT_XMLPATTERNS_LIB;QT_WIDGETS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
     <PostBuildEvent>
-      <Command>$(QTDIR)$(ACF_TOOLS_BIN)\bin$(ACF_TOOLS_BIN)\windeployqt C:$(ACF_TOOLS_BIN)/Temp$(ACF_TOOLS_BIN)/Acf$(ACF_TOOLS_BIN)/Impl$(ACF_TOOLS_BIN)/ArxcExe$(ACF_TOOLS_BIN)/QMake$(ACF_TOOLS_BIN)/..$(ACF_TOOLS_BIN)/..$(ACF_TOOLS_BIN)/..$(ACF_TOOLS_BIN)/Bin$(ACF_TOOLS_BIN)/DebugVC10<$(ACF_TOOLS_BIN)/Command>
-      <Message>$(QTDIR)$(ACF_TOOLS_BIN)\bin$(ACF_TOOLS_BIN)\windeployqt C:$(ACF_TOOLS_BIN)/Temp$(ACF_TOOLS_BIN)/Acf$(ACF_TOOLS_BIN)/Impl$(ACF_TOOLS_BIN)/ArxcExe$(ACF_TOOLS_BIN)/QMake$(ACF_TOOLS_BIN)/..$(ACF_TOOLS_BIN)/..$(ACF_TOOLS_BIN)/..$(ACF_TOOLS_BIN)/Bin$(ACF_TOOLS_BIN)/DebugVC10<$(ACF_TOOLS_BIN)/Message>
-    <$(ACF_TOOLS_BIN)/PostBuildEvent>
-  <$(ACF_TOOLS_BIN)/ItemDefinitionGroup>
+      <Command>$(QTDIR)\bin\windeployqt ../../../Impl/ArxcExe/QMake/../../../Bin/DebugVC10</Command>
+      <Message>$(QTDIR)\bin\windeployqt ../../../Impl/ArxcExe/QMake/../../../Bin/DebugVC10</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">
     <ClCompile>
-      <AdditionalIncludeDirectories>&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Include&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Impl&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Impl&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include$(ACF_TOOLS_BIN)\QtSvg&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include$(ACF_TOOLS_BIN)\QtXmlPatterns&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include$(ACF_TOOLS_BIN)\QtWidgets&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include$(ACF_TOOLS_BIN)\QtNetwork&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include$(ACF_TOOLS_BIN)\QtXml&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include$(ACF_TOOLS_BIN)\QtGui&quot;;&quot;$(QTDIR)$(ACF_TOOLS_BIN)\include$(ACF_TOOLS_BIN)\QtCore&quot;;&quot;..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Arxc&quot;;$(QTDIR)$(ACF_TOOLS_BIN)\mkspecs$(ACF_TOOLS_BIN)\win32-msvc2010;%(AdditionalIncludeDirectories)<$(ACF_TOOLS_BIN)/AdditionalIncludeDirectories>
-      <AdditionalOptions>-Zm200 $(ACF_TOOLS_BIN)/MP $(ACF_TOOLS_BIN)/bigobj %(AdditionalOptions)<$(ACF_TOOLS_BIN)/AdditionalOptions>
-      <AssemblerListingLocation>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Release$(ACF_TOOLS_BIN)\Arxc$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/AssemblerListingLocation>
-      <BrowseInformation>false<$(ACF_TOOLS_BIN)/BrowseInformation>
-      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)<$(ACF_TOOLS_BIN)/DisableSpecificWarnings>
-      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2<$(ACF_TOOLS_BIN)/EnableEnhancedInstructionSet>
-      <ExceptionHandling>Sync<$(ACF_TOOLS_BIN)/ExceptionHandling>
-      <FloatingPointModel>Fast<$(ACF_TOOLS_BIN)/FloatingPointModel>
-      <ObjectFileName>..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\AuxInclude$(ACF_TOOLS_BIN)\Qt5_VC10$(ACF_TOOLS_BIN)\GeneratedFiles$(ACF_TOOLS_BIN)\Release$(ACF_TOOLS_BIN)\Arxc$(ACF_TOOLS_BIN)\<$(ACF_TOOLS_BIN)/ObjectFileName>
-      <OpenMPSupport>false<$(ACF_TOOLS_BIN)/OpenMPSupport>
-      <Optimization>MaxSpeed<$(ACF_TOOLS_BIN)/Optimization>
-      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CONSOLE;UNICODE;WIN32;QT_NO_DEBUG;QT_SVG_LIB;QT_XMLPATTERNS_LIB;QT_WIDGETS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)<$(ACF_TOOLS_BIN)/PreprocessorDefinitions>
-      <PreprocessToFile>false<$(ACF_TOOLS_BIN)/PreprocessToFile>
-      <RuntimeLibrary>MultiThreadedDLL<$(ACF_TOOLS_BIN)/RuntimeLibrary>
-      <RuntimeTypeInfo>true<$(ACF_TOOLS_BIN)/RuntimeTypeInfo>
-      <SuppressStartupBanner>true<$(ACF_TOOLS_BIN)/SuppressStartupBanner>
-      <TreatWChar_tAsBuiltInType>true<$(ACF_TOOLS_BIN)/TreatWChar_tAsBuiltInType>
-      <WarningLevel>Level4<$(ACF_TOOLS_BIN)/WarningLevel>
-    <$(ACF_TOOLS_BIN)/ClCompile>
+      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\Impl&quot;;&quot;..\..\..\Impl&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtSvg&quot;;&quot;$(QTDIR)\include\QtXmlPatterns&quot;;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtNetwork&quot;;&quot;$(QTDIR)\include\QtXml&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Arxc&quot;;$(QTDIR)\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 /MP /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Release\Arxc\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ObjectFileName>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Release\Arxc\</ObjectFileName>
+      <OpenMPSupport>false</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CONSOLE;UNICODE;WIN32;QT_NO_DEBUG;QT_SVG_LIB;QT_XMLPATTERNS_LIB;QT_WIDGETS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
     <Link>
-      <AdditionalDependencies>ipackage.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\iqt.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\ipackage.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\idoc.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\ifile.lib;$(QTDIR)$(ACF_TOOLS_BIN)\lib$(ACF_TOOLS_BIN)\Qt5Concurrent.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\iimg.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\icmm.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\i2d.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\i3d.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\iprm.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\ilog.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\ibase.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\icomp.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\iattr.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\iser.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\imod.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\imath.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\istd.lib;Mpr.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\iqtdoc.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\iview.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\iqt2d.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\iqtprm.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\iloggui.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\ifilegui.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\iqtgui.lib;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10$(ACF_TOOLS_BIN)\iwidgets.lib;glu32.lib;opengl32.lib;gdi32.lib;user32.lib;$(QTDIR)$(ACF_TOOLS_BIN)\lib$(ACF_TOOLS_BIN)\Qt5Svg.lib;$(QTDIR)$(ACF_TOOLS_BIN)\lib$(ACF_TOOLS_BIN)\Qt5XmlPatterns.lib;$(QTDIR)$(ACF_TOOLS_BIN)\lib$(ACF_TOOLS_BIN)\Qt5Widgets.lib;$(QTDIR)$(ACF_TOOLS_BIN)\lib$(ACF_TOOLS_BIN)\Qt5Network.lib;$(QTDIR)$(ACF_TOOLS_BIN)\lib$(ACF_TOOLS_BIN)\Qt5Xml.lib;$(QTDIR)$(ACF_TOOLS_BIN)\lib$(ACF_TOOLS_BIN)\Qt5Gui.lib;$(QTDIR)$(ACF_TOOLS_BIN)\lib$(ACF_TOOLS_BIN)\Qt5Core.lib;%(AdditionalDependencies)<$(ACF_TOOLS_BIN)/AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Impl$(ACF_TOOLS_BIN)\ArxcExe$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10;C:$(ACF_TOOLS_BIN)\Temp$(ACF_TOOLS_BIN)\Acf$(ACF_TOOLS_BIN)\Config$(ACF_TOOLS_BIN)\QMake$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\..$(ACF_TOOLS_BIN)\Lib$(ACF_TOOLS_BIN)\ReleaseVC10;$(QTDIR)$(ACF_TOOLS_BIN)\lib;%(AdditionalLibraryDirectories)<$(ACF_TOOLS_BIN)/AdditionalLibraryDirectories>
-      <AdditionalOptions>&quot;$(ACF_TOOLS_BIN)/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot; %(AdditionalOptions)<$(ACF_TOOLS_BIN)/AdditionalOptions>
-      <DataExecutionPrevention>true<$(ACF_TOOLS_BIN)/DataExecutionPrevention>
-      <GenerateDebugInformation>false<$(ACF_TOOLS_BIN)/GenerateDebugInformation>
-      <IgnoreImportLibrary>true<$(ACF_TOOLS_BIN)/IgnoreImportLibrary>
-      <LinkIncremental>false<$(ACF_TOOLS_BIN)/LinkIncremental>
-      <OutputFile>$(OutDir)$(ACF_TOOLS_BIN)\Arxc.exe<$(ACF_TOOLS_BIN)/OutputFile>
-      <RandomizedBaseAddress>true<$(ACF_TOOLS_BIN)/RandomizedBaseAddress>
-      <SubSystem>Console<$(ACF_TOOLS_BIN)/SubSystem>
-      <SuppressStartupBanner>true<$(ACF_TOOLS_BIN)/SuppressStartupBanner>
-    <$(ACF_TOOLS_BIN)/Link>
+      <AdditionalDependencies>ipackage.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\iqt.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\ipackage.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\idoc.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\ifile.lib;$(QTDIR)\lib\Qt5Concurrent.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\iimg.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\icmm.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\i2d.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\i3d.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\iprm.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\ilog.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\ibase.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\icomp.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\iattr.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\iser.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\imod.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\imath.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\istd.lib;Mpr.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\iqtdoc.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\iview.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\iqt2d.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\iqtprm.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\iloggui.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\ifilegui.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\iqtgui.lib;..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10\iwidgets.lib;glu32.lib;opengl32.lib;gdi32.lib;user32.lib;$(QTDIR)\lib\Qt5Svg.lib;$(QTDIR)\lib\Qt5XmlPatterns.lib;$(QTDIR)\lib\Qt5Widgets.lib;$(QTDIR)\lib\Qt5Network.lib;$(QTDIR)\lib\Qt5Xml.lib;$(QTDIR)\lib\Qt5Gui.lib;$(QTDIR)\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\Impl\ArxcExe\QMake\..\..\..\Lib\ReleaseVC10;..\..\..\Config\QMake\..\..\Lib\ReleaseVC10;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>&quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot; %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\Arxc.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
     <Midl>
-      <DefaultCharType>Unsigned<$(ACF_TOOLS_BIN)/DefaultCharType>
-      <EnableErrorChecks>None<$(ACF_TOOLS_BIN)/EnableErrorChecks>
-      <WarningLevel>0<$(ACF_TOOLS_BIN)/WarningLevel>
-    <$(ACF_TOOLS_BIN)/Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
     <ResourceCompile>
-      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CONSOLE;UNICODE;WIN32;QT_NO_DEBUG;QT_SVG_LIB;QT_XMLPATTERNS_LIB;QT_WIDGETS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)<$(ACF_TOOLS_BIN)/PreprocessorDefinitions>
-    <$(ACF_TOOLS_BIN)/ResourceCompile>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CONSOLE;UNICODE;WIN32;QT_NO_DEBUG;QT_SVG_LIB;QT_XMLPATTERNS_LIB;QT_WIDGETS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
     <PostBuildEvent>
-      <Command>$(QTDIR)$(ACF_TOOLS_BIN)\bin$(ACF_TOOLS_BIN)\windeployqt C:$(ACF_TOOLS_BIN)/Temp$(ACF_TOOLS_BIN)/Acf$(ACF_TOOLS_BIN)/Impl$(ACF_TOOLS_BIN)/ArxcExe$(ACF_TOOLS_BIN)/QMake$(ACF_TOOLS_BIN)/..$(ACF_TOOLS_BIN)/..$(ACF_TOOLS_BIN)/..$(ACF_TOOLS_BIN)/Bin$(ACF_TOOLS_BIN)/ReleaseVC10<$(ACF_TOOLS_BIN)/Command>
-      <Message>$(QTDIR)$(ACF_TOOLS_BIN)\bin$(ACF_TOOLS_BIN)\windeployqt C:$(ACF_TOOLS_BIN)/Temp$(ACF_TOOLS_BIN)/Acf$(ACF_TOOLS_BIN)/Impl$(ACF_TOOLS_BIN)/ArxcExe$(ACF_TOOLS_BIN)/QMake$(ACF_TOOLS_BIN)/..$(ACF_TOOLS_BIN)/..$(ACF_TOOLS_BIN)/..$(ACF_TOOLS_BIN)/Bin$(ACF_TOOLS_BIN)/ReleaseVC10<$(ACF_TOOLS_BIN)/Message>
-    <$(ACF_TOOLS_BIN)/PostBuildEvent>
-  <$(ACF_TOOLS_BIN)/ItemDefinitionGroup>
+      <Command>$(QTDIR)\bin\windeployqt ../../../Impl/ArxcExe/QMake/../../../Bin/ReleaseVC10</Command>
+      <Message>$(QTDIR)\bin\windeployqt ../../../Impl/ArxcExe/QMake/../../../Bin/ReleaseVC10</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..$(ACF_TOOLS_BIN)\Main.cpp" $(ACF_TOOLS_BIN)/>
-  <$(ACF_TOOLS_BIN)/ItemGroup>
-  <Import Project="$(VCTargetsPath)$(ACF_TOOLS_BIN)\Microsoft.Cpp.targets" $(ACF_TOOLS_BIN)/>
-  <ImportGroup Label="ExtensionTargets" $(ACF_TOOLS_BIN)/>
-<$(ACF_TOOLS_BIN)/Project>
+    <ClCompile Include="..\Main.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

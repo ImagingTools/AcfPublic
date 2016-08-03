@@ -1,5 +1,5 @@
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "itutacf", "..\..\Include\itutacf\VC12\itutacf.vcxproj", "{61553042-8DAC-39A6-B71C-4298C8108F3F}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DocView", "..\..\Impl\DocView\VC12\DocView.vcxproj", "{A69201DA-DBBA-3950-B81B-66E12E388462}"

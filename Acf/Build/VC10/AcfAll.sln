@@ -1,5 +1,5 @@
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "istd", "..\..\Include\istd\VC10\istd.vcxproj", "{4959FAE7-A5D5-3B7A-8344-E37C503F46CC}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iser", "..\..\Include\iser\VC10\iser.vcxproj", "{415B39FD-3B22-31F3-BB0E-182D7BBFD7A0}"
