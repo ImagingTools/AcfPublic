@@ -9637,6 +9637,34 @@
       <anchor>add29cacdf51401c27d444511753efac0</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static const istd::IChangeable::ChangeSet</type>
+      <name>s_clearAllNodesChange</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>aabaa9a7128eb482fbdbb79d41cc757d3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static const istd::IChangeable::ChangeSet</type>
+      <name>s_createPolygonNodesChange</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>ac2997265aa907788c8228ca4078d3be9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static const istd::IChangeable::ChangeSet</type>
+      <name>s_insertPolygonNodeChange</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a7cc0dfd198cee71b62e8b74052575eb3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static const istd::IChangeable::ChangeSet</type>
+      <name>s_removePolygonNodeChange</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a045f2f87ec6f3640200bf29857d4014a</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>i2d::CDirection2d</name>
@@ -14298,25 +14326,25 @@
     <templarg>NodeData</templarg>
     <base>i2d::CDataNodePolylineBase</base>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>InsertNode</name>
+      <type>virtual void</type>
+      <name>SetNodesCount</name>
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>acf43b8d0bb7299c5eed71d2b415b92a6</anchor>
-      <arglist>(const i2d::CVector2d &amp;node)</arglist>
+      <anchor>af09f0fa0ad2445dcb4d2ae975fb0d838</anchor>
+      <arglist>(int nodesCount)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InsertNode</name>
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>a11903220d4d63bbdd86169d8e1f39980</anchor>
-      <arglist>(int index, const i2d::CVector2d &amp;node)</arglist>
+      <anchor>ab9c08b5954b53350f55517d9043adf11</anchor>
+      <arglist>(const i2d::CVector2d &amp;position)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetNodesCount</name>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertNode</name>
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>ab92692dc07e24d0b0abb86235ed808e5</anchor>
-      <arglist>(int count)</arglist>
+      <anchor>a304572a8260cf331d878a211b1643e12</anchor>
+      <arglist>(int index, const i2d::CVector2d &amp;position)</arglist>
     </member>
   </compound>
   <compound kind="class">
