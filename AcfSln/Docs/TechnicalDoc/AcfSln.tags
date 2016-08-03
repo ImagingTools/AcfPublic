@@ -992,18 +992,6 @@
     <namespace>ihotfgui</namespace>
   </compound>
   <compound kind="file">
-    <name>CCheckboardCalibSupplierComp.h</name>
-    <path>C:/Temp/AcfSln/Include/iinsp/</path>
-    <filename>_c_checkboard_calib_supplier_comp_8h</filename>
-    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
-    <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="yes" imported="no">iipr/IImageToFeatureProcessor.h</includes>
-    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
-    <class kind="class">iinsp::CCheckboardCalibSupplierComp</class>
-    <class kind="class">iinsp::CCheckboardCalibSupplierComp::LinesConsumer</class>
-    <class kind="struct">iinsp::CCheckboardCalibSupplierComp::LinesConsumer::LineInfo</class>
-    <namespace>iinsp</namespace>
-  </compound>
-  <compound kind="file">
     <name>CComposedInformationProviderComp.h</name>
     <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_c_composed_information_provider_comp_8h</filename>
@@ -1160,6 +1148,21 @@
     <filename>_c_caliper_params_comp_8h</filename>
     <includes id="_c_caliper_params_8h" name="CCaliperParams.h" local="yes" imported="no">iipr/CCaliperParams.h</includes>
     <class kind="class">iipr::CCaliperParamsComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CCheckboardCalibSupplierComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_checkboard_calib_supplier_comp_8h</filename>
+    <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
+    <includes id="_c_general_numeric_constraints_8h" name="CGeneralNumericConstraints.h" local="yes" imported="no">imeas/CGeneralNumericConstraints.h</includes>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="yes" imported="no">iproc/IProcessor.h</includes>
+    <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="yes" imported="no">iipr/IImageToFeatureProcessor.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="yes" imported="no">iinsp/TSupplierCompWrap.h</includes>
+    <class kind="class">iipr::CCheckboardCalibSupplierComp</class>
+    <class kind="struct">iipr::CCheckboardCalibSupplierComp::LineInfo</class>
+    <class kind="class">iipr::CCheckboardCalibSupplierComp::LinesConsumer</class>
+    <class kind="class">iipr::CCheckboardCalibSupplierComp::ChessboardParamsContraints</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -1788,9 +1791,9 @@
     </member>
     <member kind="enumvalue">
       <type>@</type>
-      <name>IacfVersionId</name>
+      <name>AcfSlnVersionId</name>
       <anchorfile>namespaceiipr.html</anchorfile>
-      <anchor>a310caaf2e3e829aef8247d0eb1e37aada28eae46bbb14021d34f46b02f4ecc45f</anchor>
+      <anchor>a310caaf2e3e829aef8247d0eb1e37aadadc7ac768a681f9cd5738b61370e67ceb</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -14143,7 +14146,6 @@
   <compound kind="namespace">
     <name>iinsp</name>
     <filename>namespaceiinsp.html</filename>
-    <class kind="class">iinsp::CCheckboardCalibSupplierComp</class>
     <class kind="class">iinsp::CComposedInformationProviderComp</class>
     <class kind="class">iinsp::CIdProviderCacheComp</class>
     <class kind="class">iinsp::CInformationProviderCacheComp</class>
@@ -14154,142 +14156,6 @@
     <class kind="class">iinsp::ISupplier</class>
     <class kind="class">iinsp::ITimeStampProvider</class>
     <class kind="class">iinsp::TSupplierCompWrap</class>
-  </compound>
-  <compound kind="class">
-    <name>iinsp::CCheckboardCalibSupplierComp</name>
-    <filename>classiinsp_1_1_c_checkboard_calib_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; i2d::CPerspectiveCalibration2d &gt;</base>
-    <base virtualness="virtual">i2d::ICalibrationProvider</base>
-    <class kind="class">iinsp::CCheckboardCalibSupplierComp::LinesConsumer</class>
-    <member kind="typedef">
-      <type>iinsp::TSupplierCompWrap&lt; i2d::CPerspectiveCalibration2d &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiinsp_1_1_c_checkboard_calib_supplier_comp.html</anchorfile>
-      <anchor>a3a973f13d92a80d42a7a8dfaf9e5e470</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>CSupplierCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>i2d::CPerspectiveCalibration2d</type>
-      <name>ProductType</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>CalculateCalibration</name>
-      <anchorfile>classiinsp_1_1_c_checkboard_calib_supplier_comp.html</anchorfile>
-      <anchor>a8b90fca1fa18e80e0c6e5aeda732bdf8</anchor>
-      <arglist>(const iimg::IBitmap &amp;image, i2d::CPerspectiveCalibration2d &amp;result) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual const i2d::ICalibration2d *</type>
-      <name>GetCalibration</name>
-      <anchorfile>classiinsp_1_1_c_checkboard_calib_supplier_comp.html</anchorfile>
-      <anchor>a691c0e80047b6713426aa95f12020dcf</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual int</type>
-      <name>ProduceObject</name>
-      <anchorfile>classiinsp_1_1_c_checkboard_calib_supplier_comp.html</anchorfile>
-      <anchor>aad220ace8e46204a008c6dd9b9836c88</anchor>
-      <arglist>(ProductType &amp;result) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiinsp_1_1_c_checkboard_calib_supplier_comp.html</anchorfile>
-      <anchor>a0102fe78014633c5a80cef07bc6fd6d1</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>const i2d::CPerspectiveCalibration2d *</type>
-      <name>GetWorkProduct</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ClearWorkResults</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>istd::TDelPtr&lt; i2d::CPerspectiveCalibration2d &gt;</type>
-      <name>m_productPtr</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iinsp::CCheckboardCalibSupplierComp::LinesConsumer</name>
-    <filename>classiinsp_1_1_c_checkboard_calib_supplier_comp_1_1_lines_consumer.html</filename>
-    <base virtualness="virtual">iipr::IFeaturesConsumer</base>
-    <class kind="struct">iinsp::CCheckboardCalibSupplierComp::LinesConsumer::LineInfo</class>
-    <member kind="typedef">
-      <type>QList&lt; LineInfo &gt;</type>
-      <name>Lines</name>
-      <anchorfile>classiinsp_1_1_c_checkboard_calib_supplier_comp_1_1_lines_consumer.html</anchorfile>
-      <anchor>a24dcfd3f413290a870ad4d7870029862</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ResetFeatures</name>
-      <anchorfile>classiinsp_1_1_c_checkboard_calib_supplier_comp_1_1_lines_consumer.html</anchorfile>
-      <anchor>a348ef3a1ca2e898da4fbf12eafdac8a5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>AddFeature</name>
-      <anchorfile>classiinsp_1_1_c_checkboard_calib_supplier_comp_1_1_lines_consumer.html</anchorfile>
-      <anchor>a99f50c2d6aadd245ce06c106ed32d10f</anchor>
-      <arglist>(const imeas::INumericValue *featurePtr, bool *isFullPtr=NULL)</arglist>
-    </member>
-    <member kind="variable">
-      <type>Lines</type>
-      <name>lines</name>
-      <anchorfile>classiinsp_1_1_c_checkboard_calib_supplier_comp_1_1_lines_consumer.html</anchorfile>
-      <anchor>a0f2c91691bf3001c82a50ddbc9feea65</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>iinsp::CCheckboardCalibSupplierComp::LinesConsumer::LineInfo</name>
-    <filename>structiinsp_1_1_c_checkboard_calib_supplier_comp_1_1_lines_consumer_1_1_line_info.html</filename>
-    <member kind="variable">
-      <type>double</type>
-      <name>weight</name>
-      <anchorfile>structiinsp_1_1_c_checkboard_calib_supplier_comp_1_1_lines_consumer_1_1_line_info.html</anchorfile>
-      <anchor>a7d9ea6d55fc43b360163f94dad0e3a9d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>i2d::CLine2d</type>
-      <name>line</name>
-      <anchorfile>structiinsp_1_1_c_checkboard_calib_supplier_comp_1_1_lines_consumer_1_1_line_info.html</anchorfile>
-      <anchor>a97c83d409c043e5eded082c2b23701eb</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iinsp::CComposedInformationProviderComp</name>
@@ -14784,9 +14650,16 @@
     </member>
     <member kind="variable" protection="protected">
       <type>MessageContainer</type>
-      <name>m_messageContainer</name>
+      <name>m_resultMessages</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>a09fb65b8bd085efc84bde6da7c5d82fa</anchor>
+      <anchor>a929123b5ded0a5dc13fc25c5d03ec88d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>MessageContainer</type>
+      <name>m_tempContainer</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a064f0ddf58fab426fff78fe457138d6b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -14826,8 +14699,8 @@
       <type></type>
       <name>MessageContainer</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_message_container.html</anchorfile>
-      <anchor>a94b481318a35c828a37b4fe779bf79d8</anchor>
-      <arglist>(CInspectionTaskComp *parentPtr)</arglist>
+      <anchor>a7d6eefd7ead3d967939b2ba4057505bc</anchor>
+      <arglist>(CInspectionTaskComp *parentPtr, iinsp::ISupplier::MessageContainerType containerType)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -15116,6 +14989,7 @@
     <class kind="class">iipr::CCaliperFeature</class>
     <class kind="class">iipr::CCaliperParams</class>
     <class kind="class">iipr::CCaliperParamsComp</class>
+    <class kind="class">iipr::CCheckboardCalibSupplierComp</class>
     <class kind="class">iipr::CCheckerboardPatternGeneratorComp</class>
     <class kind="class">iipr::CCircleFinderParams</class>
     <class kind="class">iipr::CCircleFinderParamsComp</class>
@@ -15212,9 +15086,9 @@
     </member>
     <member kind="enumvalue">
       <type>@</type>
-      <name>IacfVersionId</name>
+      <name>AcfSlnVersionId</name>
       <anchorfile>namespaceiipr.html</anchorfile>
-      <anchor>a310caaf2e3e829aef8247d0eb1e37aada28eae46bbb14021d34f46b02f4ecc45f</anchor>
+      <anchor>a310caaf2e3e829aef8247d0eb1e37aadadc7ac768a681f9cd5738b61370e67ceb</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -15817,6 +15691,190 @@
       <anchorfile>classiipr_1_1_c_caliper_params_comp.html</anchorfile>
       <anchor>a6adce4a883a9827de58eeb10e7860827</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CCheckboardCalibSupplierComp</name>
+    <filename>classiipr_1_1_c_checkboard_calib_supplier_comp.html</filename>
+    <base>TSupplierCompWrap&lt; i2d::CPerspectiveCalibration2d &gt;</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
+    <class kind="class">iipr::CCheckboardCalibSupplierComp::ChessboardParamsContraints</class>
+    <class kind="struct">iipr::CCheckboardCalibSupplierComp::LineInfo</class>
+    <class kind="class">iipr::CCheckboardCalibSupplierComp::LinesConsumer</class>
+    <member kind="typedef">
+      <type>iinsp::TSupplierCompWrap&lt; i2d::CPerspectiveCalibration2d &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp.html</anchorfile>
+      <anchor>a8a4e726ff081a47ae88f4eabe7f9ebaa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSupplierCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>i2d::CPerspectiveCalibration2d</type>
+      <name>ProductType</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CCheckboardCalibSupplierComp</name>
+      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp.html</anchorfile>
+      <anchor>a4e969840986cc17fbec1a525fa337bf8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ICalibration2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp.html</anchorfile>
+      <anchor>afd64492064555b42d610a0f6c331c59a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>QList&lt; LineInfo &gt;</type>
+      <name>Lines</name>
+      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp.html</anchorfile>
+      <anchor>a6efaff850d47c92df47a1c0a6a8d0b7c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CalculateCalibration</name>
+      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp.html</anchorfile>
+      <anchor>a45cb33046bbc68372928b225352a3110</anchor>
+      <arglist>(const iimg::IBitmap &amp;image, i2d::CPerspectiveCalibration2d &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp.html</anchorfile>
+      <anchor>a8d34ea39c93d4e71af692fe4795ee71b</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp.html</anchorfile>
+      <anchor>a032649eead1670f76699c4d6230c899d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>const i2d::CPerspectiveCalibration2d *</type>
+      <name>GetWorkProduct</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; i2d::CPerspectiveCalibration2d &gt;</type>
+      <name>m_productPtr</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CCheckboardCalibSupplierComp::ChessboardParamsContraints</name>
+    <filename>classiipr_1_1_c_checkboard_calib_supplier_comp_1_1_chessboard_params_contraints.html</filename>
+    <base>imeas::INumericConstraints</base>
+    <member kind="function">
+      <type></type>
+      <name>ChessboardParamsContraints</name>
+      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp_1_1_chessboard_params_contraints.html</anchorfile>
+      <anchor>aa0e05d3d0deef093f7864573620f06e4</anchor>
+      <arglist>(const CCheckboardCalibSupplierComp *supplierPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetNumericValuesCount</name>
+      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp_1_1_chessboard_params_contraints.html</anchorfile>
+      <anchor>adba5561c16542e32a346ad51fba03b99</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetNumericValueName</name>
+      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp_1_1_chessboard_params_contraints.html</anchorfile>
+      <anchor>a51037c5bf9d75549357842840764069a</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetNumericValueDescription</name>
+      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp_1_1_chessboard_params_contraints.html</anchorfile>
+      <anchor>ad7e4849eaa37cfad8a0e6b797735d0f0</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imath::IUnitInfo *</type>
+      <name>GetNumericValueUnitInfo</name>
+      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp_1_1_chessboard_params_contraints.html</anchorfile>
+      <anchor>a9f3c915be65241426d53e3716b3879d3</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>iipr::CCheckboardCalibSupplierComp::LineInfo</name>
+    <filename>structiipr_1_1_c_checkboard_calib_supplier_comp_1_1_line_info.html</filename>
+    <member kind="variable">
+      <type>double</type>
+      <name>weight</name>
+      <anchorfile>structiipr_1_1_c_checkboard_calib_supplier_comp_1_1_line_info.html</anchorfile>
+      <anchor>ac834016de1837f3fd1e8c50eb293e364</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>i2d::CLine2d</type>
+      <name>line</name>
+      <anchorfile>structiipr_1_1_c_checkboard_calib_supplier_comp_1_1_line_info.html</anchorfile>
+      <anchor>a49cf6aa9d620b652e26e0a161e412042</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CCheckboardCalibSupplierComp::LinesConsumer</name>
+    <filename>classiipr_1_1_c_checkboard_calib_supplier_comp_1_1_lines_consumer.html</filename>
+    <base virtualness="virtual">iipr::IFeaturesConsumer</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetFeatures</name>
+      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp_1_1_lines_consumer.html</anchorfile>
+      <anchor>a48c1233b0976e0e243414071feea0433</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AddFeature</name>
+      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp_1_1_lines_consumer.html</anchorfile>
+      <anchor>a85fd986fac80a0d059e3994c76ecbc99</anchor>
+      <arglist>(const imeas::INumericValue *featurePtr, bool *isFullPtr=NULL)</arglist>
+    </member>
+    <member kind="variable">
+      <type>Lines</type>
+      <name>lines</name>
+      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp_1_1_lines_consumer.html</anchorfile>
+      <anchor>aa19f1d4a693daf0dd073ec54604f7672</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -16463,6 +16521,13 @@
       <type></type>
       <name>CConvolutionKernel2d</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
+      <anchor>a42214619463efd09b3f6c9f8189740dd</anchor>
+      <arglist>(const CConvolutionKernel2d &amp;kernel)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CConvolutionKernel2d</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
       <anchor>a0414c3cee4da8cdabc17dc922e247a7b</anchor>
       <arglist>(const imath::ISampledFunction2d &amp;function2d)</arglist>
     </member>
@@ -16493,6 +16558,20 @@
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
       <anchor>a0ed1b69fc128ad4b7026e6982337e7ac</anchor>
       <arglist>(const istd::CIndex2d &amp;index, double value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetOffsetValue</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
+      <anchor>ae06828f5ac0267e3f228478e3eeb7307</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetOffsetValue</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
+      <anchor>aa1085bab4ac8b8b7a03037ba9f97858e</anchor>
+      <arglist>(double offset)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -17440,11 +17519,60 @@
       <arglist></arglist>
     </member>
     <member kind="function">
+      <type></type>
+      <name>CHoughSpace2d</name>
+      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a6716285359c8c6c4963753e63b51598a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CHoughSpace2d</name>
+      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a243bb2f4bf41f34e1976f4eb1bc88052</anchor>
+      <arglist>(const istd::CIndex2d &amp;size, double isWrappedX=false, double isWrappedY=false)</arglist>
+    </member>
+    <member kind="function">
       <type>bool</type>
       <name>CreateHoughSpace</name>
       <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>a5b8a306f94b808ca83f03a11874831a7</anchor>
-      <arglist>(const istd::CIndex2d &amp;size)</arglist>
+      <anchor>a788039e919bbbb86564f89ae15754834</anchor>
+      <arglist>(const istd::CIndex2d &amp;size, double isWrappedX=false, double isWrappedY=false)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsWrappedX</name>
+      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>ab6356a3337e02ca8eacb0edfedb020da</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetWrappedX</name>
+      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>ae60f063c341d54eb679695c801a2f40c</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsWrappedY</name>
+      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>acb1d17d751e12fb261dd342458ae1152</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetWrappedY</name>
+      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a2b8c0a566ec6a46bad299b570344ca74</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>IncreaseValueAt</name>
+      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>aa25dc981934989299f5de6f165552fe9</anchor>
+      <arglist>(const i2d::CVector2d &amp;position, double value)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -17457,8 +17585,8 @@
       <type>void</type>
       <name>AnalyseHoughSpace</name>
       <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>a30a5f3a861c6895aa3e27809fa6426d7</anchor>
-      <arglist>(int maxPoints, int minWeight, double minMaxRatio, double minDistance, WeightToHoughPosMap &amp;result)</arglist>
+      <anchor>a250dd8dec5fd5641dde798bcc4712379</anchor>
+      <arglist>(int maxPoints, int minWeight, double minMaxRatio, double minDistance, double minLocalDynamic, WeightToHoughPosMap &amp;result)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -17468,17 +17596,24 @@
       <arglist>(iimg::IBitmap &amp;bitmap)</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
-      <name>CalcMin</name>
+      <type>bool</type>
+      <name>GetSpacePosition</name>
       <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>afdb78373a2369ca4c5dbd7864bbc6752</anchor>
+      <anchor>acfeb8d640e49423bc46f6102c4766f0c</anchor>
+      <arglist>(const i2d::CVector2d &amp;position, i2d::CVector2d &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CalcSpaceMin</name>
+      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a2c4839916bd1477ea9d8a26fa1f29132</anchor>
       <arglist>(const CHoughSpace2d &amp;space)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
-      <name>CalcMax</name>
+      <name>CalcSpaceMax</name>
       <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>ab4949b9526112c9ae50a69b925578f65</anchor>
+      <anchor>aa7423afbb13e29beef05b553dc0401e7</anchor>
       <arglist>(const CHoughSpace2d &amp;space)</arglist>
     </member>
   </compound>
@@ -19913,6 +20048,20 @@
       <anchorfile>classiipr_1_1_i_convolution_kernel2d.html</anchorfile>
       <anchor>a4a3e8b5c7da979d7b3b22d1bfe9036c7</anchor>
       <arglist>(const istd::CIndex2d &amp;index, double value)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetOffsetValue</name>
+      <anchorfile>classiipr_1_1_i_convolution_kernel2d.html</anchorfile>
+      <anchor>a50472a88ccd4504d99b61793479deb64</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetOffsetValue</name>
+      <anchorfile>classiipr_1_1_i_convolution_kernel2d.html</anchorfile>
+      <anchor>aa9061aeb79cfd9bbbe27e166fe329940</anchor>
+      <arglist>(double offset)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -29477,7 +29626,6 @@
     <name>Include/iinsp</name>
     <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>dir_5022365cd8d99ebf720fac90c1fea03f.html</filename>
-    <file>CCheckboardCalibSupplierComp.h</file>
     <file>CComposedInformationProviderComp.h</file>
     <file>CIdProviderCacheComp.h</file>
     <file>CInformationProviderCacheComp.h</file>
@@ -29503,6 +29651,7 @@
     <file>CCaliperFeature.h</file>
     <file>CCaliperParams.h</file>
     <file>CCaliperParamsComp.h</file>
+    <file>CCheckboardCalibSupplierComp.h</file>
     <file>CCheckerboardPatternGeneratorComp.h</file>
     <file>CCircleFinderParams.h</file>
     <file>CCircleFinderParamsComp.h</file>

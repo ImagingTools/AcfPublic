@@ -86,6 +86,7 @@ public:
 		I_ASSIGN(m_generalParamsCompPtr, "GeneralParams", "Optional general parameter set, it will be always serialized", false, "GeneralParams");
 		I_ASSIGN_TO(m_generalParamsModelCompPtr, m_generalParamsCompPtr, true);
 		I_ASSIGN(m_diagnosticNameAttrPtr, "DiagnosticName", "Name of this supplier for diagnostic, if it is not set, no diagnostic log message will be send", false, "");
+		I_ASSIGN(m_supportTempMessagesAttrPtr, "SupportTempMessages", "If enabled cumulation of temporary messages will be supported", true, false);
 	I_END_COMPONENT;
 
 	CInspectionTaskComp();
@@ -131,7 +132,7 @@ protected:
 	public:
 		typedef ilog::CMessageContainer BaseClass;
 
-		MessageContainer(CInspectionTaskComp* parentPtr);
+		MessageContainer(CInspectionTaskComp* parentPtr, iinsp::ISupplier::MessageContainerType containerType);
 
 		// reimplemented (ilog::IMessageContainer)
 		virtual int GetWorstCategory() const;
@@ -143,6 +144,7 @@ protected:
 
 	private:
 		CInspectionTaskComp* m_parentPtr;
+		iinsp::ISupplier::MessageContainerType m_containerType;
 	};
 
 	class Parameters:
@@ -179,6 +181,7 @@ protected:
 	I_REF(iprm::IParamsSet, m_generalParamsCompPtr);
 	I_REF(imod::IModel, m_generalParamsModelCompPtr);
 	I_ATTR(QString, m_diagnosticNameAttrPtr);
+	I_ATTR(bool, m_supportTempMessagesAttrPtr);
 
 	typedef QVector<iinsp::ISupplier*> Suppliers;
 	Suppliers m_subtasks;
@@ -198,7 +201,8 @@ protected:
 	InformationCategory m_resultCategory;
 	QString m_resultDescription;
 
-	MessageContainer m_messageContainer;
+	MessageContainer m_resultMessages;
+	MessageContainer m_tempContainer;
 
 	istd::IChangeable::ChangeSet m_supplierResultsChangeSet;
 	typedef istd::TDelPtr<istd::CChangeNotifier> NotifierPtr;

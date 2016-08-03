@@ -42,7 +42,8 @@ public:
 				int type = UT_UNKNOWN,
 				const QString& name = "",
 				double displayMultFactor = 1.0,
-				const istd::CRange& range = istd::CRange::GetInvalid());
+				const istd::CRange& range = istd::CRange::GetInvalid(),
+				const imath::IDoubleManip* valueManipPtr = NULL);
 
 	void SetUnitType(int type);
 	void SetUnitName(const QString& name);
@@ -61,6 +62,7 @@ private:
 	QString m_name;
 	double m_displayMultFactor;
 	istd::CRange m_range;
+	const imath::IDoubleManip* m_valueManipPtr;
 };
 
 

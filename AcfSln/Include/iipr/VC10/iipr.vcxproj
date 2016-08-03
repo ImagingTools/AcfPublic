@@ -125,6 +125,7 @@
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CCaliperFeature.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CCaliperParams.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CCaliperParamsComp.cpp" $(ACF_TOOLS_BIN)/>
+    <ClCompile Include="..$(ACF_TOOLS_BIN)\CCheckboardCalibSupplierComp.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CCheckerboardPatternGeneratorComp.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CCircleFindProcessorComp.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CCircleFinderParams.cpp" $(ACF_TOOLS_BIN)/>
@@ -192,6 +193,7 @@
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CCaliperFeature.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CCaliperParams.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CCaliperParamsComp.h" $(ACF_TOOLS_BIN)/>
+    <ClInclude Include="..$(ACF_TOOLS_BIN)\CCheckboardCalibSupplierComp.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CCheckerboardPatternGeneratorComp.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CCircleFindProcessorComp.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CCircleFinderParams.h" $(ACF_TOOLS_BIN)/>

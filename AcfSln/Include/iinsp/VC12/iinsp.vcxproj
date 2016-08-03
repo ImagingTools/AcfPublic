@@ -118,7 +118,6 @@
     <$(ACF_TOOLS_BIN)/ResourceCompile>
   <$(ACF_TOOLS_BIN)/ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..$(ACF_TOOLS_BIN)\CCheckboardCalibSupplierComp.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CComposedInformationProviderComp.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CIdProviderCacheComp.cpp" $(ACF_TOOLS_BIN)/>
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CInformationProviderCacheComp.cpp" $(ACF_TOOLS_BIN)/>
@@ -126,7 +125,6 @@
     <ClCompile Include="..$(ACF_TOOLS_BIN)\CSupplierCompBase.cpp" $(ACF_TOOLS_BIN)/>
   <$(ACF_TOOLS_BIN)/ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..$(ACF_TOOLS_BIN)\CCheckboardCalibSupplierComp.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CComposedInformationProviderComp.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CIdProviderCacheComp.h" $(ACF_TOOLS_BIN)/>
     <ClInclude Include="..$(ACF_TOOLS_BIN)\CInformationProviderCacheComp.h" $(ACF_TOOLS_BIN)/>

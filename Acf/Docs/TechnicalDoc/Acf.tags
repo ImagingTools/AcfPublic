@@ -163,6 +163,13 @@
     <includes id="_c_vector2d_8h" name="CVector2d.h" local="yes" imported="no">i2d/CVector2d.h</includes>
     <class kind="class">i2d::CLine2d</class>
     <namespace>i2d</namespace>
+    <member kind="function">
+      <type>uint</type>
+      <name>qHash</name>
+      <anchorfile>_c_line2d_8h.html</anchorfile>
+      <anchor>a73490ecc29c677efdb344d858386245a</anchor>
+      <arglist>(const i2d::CLine2d &amp;key, uint seed=0)</arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>CLine2dComp.h</name>
@@ -433,6 +440,13 @@
     <includes id="i2d_8h" name="i2d.h" local="yes" imported="no">i2d/i2d.h</includes>
     <class kind="class">i2d::CVector2d</class>
     <namespace>i2d</namespace>
+    <member kind="function">
+      <type>uint</type>
+      <name>qHash</name>
+      <anchorfile>_c_vector2d_8h.html</anchorfile>
+      <anchor>a9836edfb7ff41ec32f1258dbc9368ff0</anchor>
+      <arglist>(const i2d::CVector2d &amp;key, uint seed=0)</arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>i2d.h</name>
@@ -38840,8 +38854,8 @@
       <type></type>
       <name>CGeneralUnitInfo</name>
       <anchorfile>classimath_1_1_c_general_unit_info.html</anchorfile>
-      <anchor>a6e0b594262f1643fd1d6ffb63f357b3d</anchor>
-      <arglist>(int type=UT_UNKNOWN, const QString &amp;name=&quot;&quot;, double displayMultFactor=1.0, const istd::CRange &amp;range=istd::CRange::GetInvalid())</arglist>
+      <anchor>a73e30ae59ba19724b8889df508a058cc</anchor>
+      <arglist>(int type=UT_UNKNOWN, const QString &amp;name=&quot;&quot;, double displayMultFactor=1.0, const istd::CRange &amp;range=istd::CRange::GetInvalid(), const imath::IDoubleManip *valueManipPtr=NULL)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -47509,13 +47523,6 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
-      <anchor>a5d3ee208e46d844951373876126df6ff</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
       <anchor>a94242a0fa5d7badea7466d6dda97e797</anchor>
@@ -47547,6 +47554,13 @@
       <name>OnGuiModelHidden</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
       <anchor>af9079aec3cd669b2bf0e0825a26d5d31</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
+      <anchor>aff6d896cdddc470303094516269eaecd</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -48068,6 +48082,13 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
       <arglist>(i2d::CPerspectiveCalibration2d *objectPtr)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_CalibrateButton_clicked</name>
+      <anchorfile>classiqt2d_1_1_c_perspective_calib_editor_comp.html</anchorfile>
+      <anchor>a3979b9fc54561a6f22638ffe7d4baf67</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>

@@ -49,6 +49,7 @@
 #include "iview/IShapeView.h"
 #include "iview/IInteractiveShape.h"
 #include "iview/CShapeBase.h"
+#include "iview/CImageShape.h"
 
 
 namespace iqtinsp
@@ -588,6 +589,7 @@ void CInspectionTaskGuiComp::OnAutoTest()
 
 	MessageList->clear();
 	m_resultShapesMap.clear();
+	m_tempShapesMap.clear();
 
 	iinsp::ISupplier* supplierPtr = dynamic_cast<iinsp::ISupplier*>(GetObservedObject());
 	if (supplierPtr != NULL){
@@ -709,25 +711,7 @@ void CInspectionTaskGuiComp::on_MessageList_itemSelectionChanged()
 	int taskIndex = itemPtr->data(0, DR_TASK_INDEX).toInt();
 	int shapeIndex = itemPtr->data(0, DR_SHAPE_INDEX).toInt();
 
-	if ((taskIndex >= 0) && m_resultShapesMap.contains(taskIndex)){
-		if (taskIndex < m_previewSceneProvidersCompPtr.GetCount()){
-			const iqt2d::IViewProvider* viewProviderPtr = m_previewSceneProvidersCompPtr[taskIndex];
-			if (viewProviderPtr != NULL){
-				iview::IShapeView* viewPtr = viewProviderPtr->GetView();
-				if (viewPtr != NULL){
-					viewPtr->DeselectAllShapes();
-				}
-			}
-		}
-
-		const istd::TPointerVector<iview::IShape>& resultShapes = m_resultShapesMap[taskIndex];
-		if ((shapeIndex >= 0) && (shapeIndex < resultShapes.GetCount())){
-			iview::IInteractiveShape* shapePtr = dynamic_cast<iview::IInteractiveShape*>(resultShapes.GetAt(shapeIndex));
-			if (shapePtr != NULL){
-				shapePtr->SetSelected();
-			}
-		}
-	}
+	ActivateTaskShapes(taskIndex, shapeIndex);
 }
 
 
@@ -760,9 +744,7 @@ void CInspectionTaskGuiComp::on_MessageList_itemDoubleClicked(QTreeWidgetItem* i
 
 void CInspectionTaskGuiComp::AddTaskMessagesToLog(const ilog::IMessageContainer& messageContainer, int taskIndex, bool isAuxiliary)
 {
-	m_resultMessagesMap[taskIndex].CopyFrom(messageContainer, istd::IChangeable::CM_CONVERT);
-
-	ilog::IMessageContainer::Messages messagesList = m_resultMessagesMap[taskIndex].GetMessages();
+	ilog::IMessageContainer::Messages messagesList = messageContainer.GetMessages();
 
 	int messagesCount = messagesList.count();
 	if (messagesCount == 0){
@@ -774,7 +756,7 @@ void CInspectionTaskGuiComp::AddTaskMessagesToLog(const ilog::IMessageContainer&
 		tabName = m_namesAttrPtr[taskIndex];
 	}
 
-	istd::TPointerVector<iview::IShape>& resultShapes = m_resultShapesMap[taskIndex];
+	istd::TPointerVector<iview::IShape>& resultShapes = isAuxiliary? m_tempShapesMap[taskIndex]: m_resultShapesMap[taskIndex];
 
 	// find view associated with this task
 	iview::IShapeView* viewPtr = NULL;
@@ -828,6 +810,19 @@ void CInspectionTaskGuiComp::AddTaskMessagesToLog(const ilog::IMessageContainer&
 			MessageList->addTopLevelItem(messageItemPtr);
 		}
 	}
+
+
+	if (isAuxiliary){
+		QTreeWidgetItem* messageItemPtr = new QTreeWidgetItem;
+
+		messageItemPtr->setData(0, DR_TASK_INDEX, taskIndex);
+		messageItemPtr->setData(0, DR_SHAPE_INDEX, -2);
+
+		messageItemPtr->setText(0, "");
+		messageItemPtr->setText(1, tr("Auxiliary Output"));
+
+		MessageList->addTopLevelItem(messageItemPtr);
+	}
 }
 
 
@@ -849,12 +844,16 @@ void CInspectionTaskGuiComp::UpdateTaskMessages()
 			if (subTaskPtr != NULL){
 				const ilog::IMessageContainer* messageContainerPtr = subTaskPtr->GetWorkMessages(iinsp::ISupplier::MCT_RESULTS);
 				if (messageContainerPtr != NULL){
-					AddTaskMessagesToLog(*messageContainerPtr, subTaskIndex, false);
+					m_resultMessagesMap[subTaskIndex].CopyFrom(*messageContainerPtr, istd::IChangeable::CM_CONVERT);
+
+					AddTaskMessagesToLog(m_resultMessagesMap[subTaskIndex], subTaskIndex, false);
 				}
 
 				messageContainerPtr = subTaskPtr->GetWorkMessages(iinsp::ISupplier::MCT_TEMP);
 				if (messageContainerPtr != NULL){
-					AddTaskMessagesToLog(*messageContainerPtr, subTaskIndex, true);
+					m_tempMessagesMap[subTaskIndex].CopyFrom(*messageContainerPtr, istd::IChangeable::CM_CONVERT);
+
+					AddTaskMessagesToLog(m_tempMessagesMap[subTaskIndex], subTaskIndex, true);
 				}
 			}
 		}
@@ -913,7 +912,7 @@ void CInspectionTaskGuiComp::DoUpdateEditor(int taskIndex)
 	}
 
 	// Activate task related shapes:
-	ActivateTaskShapes(taskIndex);
+	ActivateTaskShapes(taskIndex, -1);
 
 	if (viewPtr != NULL){
 		viewPtr->Update();
@@ -921,7 +920,7 @@ void CInspectionTaskGuiComp::DoUpdateEditor(int taskIndex)
 }
 
 
-void CInspectionTaskGuiComp::ActivateTaskShapes(int taskIndex)
+void CInspectionTaskGuiComp::ActivateTaskShapes(int taskIndex, int shapeIndex)
 {
 	if (!IsGuiCreated()){
 		return;
@@ -939,9 +938,29 @@ void CInspectionTaskGuiComp::ActivateTaskShapes(int taskIndex)
 			Q_ASSERT(shapePtr != NULL);	// only correct instances should be added to container
 
 			shapePtr->SetVisible(taskIndex == shapeTaskIndex);
+
+			iview::IInteractiveShape* interactiveShapePtr = dynamic_cast<iview::IInteractiveShape*>(shapePtr);
+			if (interactiveShapePtr != NULL){
+				interactiveShapePtr->SetSelected(i == shapeIndex);
+			}
 		}
 	}
-	
+
+	for (		ResultShapesMap::ConstIterator shapesContainerIter = m_tempShapesMap.constBegin();
+				shapesContainerIter != m_tempShapesMap.constEnd();
+				++shapesContainerIter){
+		int shapeTaskIndex = shapesContainerIter.key();
+		const istd::TPointerVector<iview::IShape>& resultShapes = shapesContainerIter.value();
+
+		int shapesCount = resultShapes.GetCount();
+		for (int i = 0; i < shapesCount; ++i){
+			iview::IShape* shapePtr = resultShapes.GetAt(i);
+			Q_ASSERT(shapePtr != NULL);	// only correct instances should be added to container
+
+			shapePtr->SetVisible((taskIndex == shapeTaskIndex) && (shapeIndex == -2));
+		}
+	}
+
 	if ((taskIndex >= 0) && (taskIndex  < m_previewSceneProvidersCompPtr.GetCount())){
 		iqt2d::IViewProvider* previewProviderPtr = m_previewSceneProvidersCompPtr[taskIndex];
 		if (previewProviderPtr != NULL){
@@ -977,6 +996,9 @@ void CInspectionTaskGuiComp::CreateMenu()
 
 void CInspectionTaskGuiComp::UpdateMenu()
 {
+	Q_ASSERT(m_pasteCurrentTaskActionPtr != NULL);
+	Q_ASSERT(m_pasteAllActionPtr != NULL);
+
 	QClipboard* clipboardPtr = QApplication::clipboard();
 	const QMimeData* mimeDataPtr = clipboardPtr->mimeData();
 	if (mimeDataPtr != NULL){
