@@ -820,14 +820,10 @@ bool TFastVector<MaxSize, Element>::Serialize(iser::IArchive& archive)
 }
 
 
-} // namespace imath
-
-
-
 template <int MaxSize, class Element>
-inline uint qHash(const imath::TFastVector<MaxSize, Element>& v)
+inline uint qHash(const imath::TFastVector<MaxSize, Element>& v, uint seed = 0)
 {
-	uint retVal = 0;
+	uint retVal = seed;
 
 	int elementsCount = v.GetElementsCount();
 	for (int i = 0; i < elementsCount; ++i){
@@ -838,6 +834,10 @@ inline uint qHash(const imath::TFastVector<MaxSize, Element>& v)
 
 	return retVal;
 }
+
+
+} // namespace imath
+
 
 
 #endif // !imath_TFastVector_included

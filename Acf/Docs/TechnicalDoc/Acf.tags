@@ -1321,8 +1321,8 @@
       <type>uint</type>
       <name>qHash</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>ac8879a5b0e5eec2fab18377172b0faed</anchor>
-      <arglist>(const icomp::CComponentAddress &amp;address)</arglist>
+      <anchor>a0d2eabde69d3b23e9bf3cfa248611aa3</anchor>
+      <arglist>(const icomp::CComponentAddress &amp;address, uint seed=0)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -3303,9 +3303,9 @@
     <member kind="function">
       <type>uint</type>
       <name>qHash</name>
-      <anchorfile>_t_fast_vector_8h.html</anchorfile>
-      <anchor>a1cc3d5ce75247d7419de34a726d651b8</anchor>
-      <arglist>(const imath::TFastVector&lt; MaxSize, Element &gt; &amp;v)</arglist>
+      <anchorfile>namespaceimath.html</anchorfile>
+      <anchor>a849d6f0253b4ed165b1664f4fe6c1d69</anchor>
+      <arglist>(const imath::TFastVector&lt; MaxSize, Element &gt; &amp;v, uint seed=0)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -5816,8 +5816,8 @@
       <type>uint</type>
       <name>qHash</name>
       <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>aca9c6ea628776a2cd96bbb49293b996d</anchor>
-      <arglist>(const istd::CVarIndex &amp;index)</arglist>
+      <anchor>a4b4176039350c8972e20f604fbe22f68</anchor>
+      <arglist>(const istd::CVarIndex &amp;index, uint seed=0)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -22824,8 +22824,8 @@
       <type>uint</type>
       <name>qHash</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>ac8879a5b0e5eec2fab18377172b0faed</anchor>
-      <arglist>(const icomp::CComponentAddress &amp;address)</arglist>
+      <anchor>a0d2eabde69d3b23e9bf3cfa248611aa3</anchor>
+      <arglist>(const icomp::CComponentAddress &amp;address, uint seed=0)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -23394,8 +23394,8 @@
       <type>friend uint</type>
       <name>qHash</name>
       <anchorfile>classicomp_1_1_c_component_address.html</anchorfile>
-      <anchor>a652fb269ebaaa91f75dfa2d04bb7ca86</anchor>
-      <arglist>(const CComponentAddress &amp;address)</arglist>
+      <anchor>aee0aa28b9ebea4962060486d7fa37206</anchor>
+      <arglist>(const CComponentAddress &amp;address, uint seed)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -37855,6 +37855,13 @@
       <anchorfile>namespaceimath.html</anchorfile>
       <anchor>a16971cffcd348e5587ee94a3c0b48ceb</anchor>
       <arglist>(double radian)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint</type>
+      <name>qHash</name>
+      <anchorfile>namespaceimath.html</anchorfile>
+      <anchor>a849d6f0253b4ed165b1664f4fe6c1d69</anchor>
+      <arglist>(const imath::TFastVector&lt; MaxSize, Element &gt; &amp;v, uint seed=0)</arglist>
     </member>
     <member kind="function">
       <type>TMatrix&lt; Width, Height, Element &gt;</type>
@@ -59707,8 +59714,8 @@
       <type>uint</type>
       <name>qHash</name>
       <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>aca9c6ea628776a2cd96bbb49293b996d</anchor>
-      <arglist>(const istd::CVarIndex &amp;index)</arglist>
+      <anchor>a4b4176039350c8972e20f604fbe22f68</anchor>
+      <arglist>(const istd::CVarIndex &amp;index, uint seed=0)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -60915,8 +60922,8 @@
       <type>friend uint</type>
       <name>qHash</name>
       <anchorfile>classistd_1_1_c_var_index.html</anchorfile>
-      <anchor>a7b72c036ea5baa8c16ab7f7fbbb74b02</anchor>
-      <arglist>(const istd::CVarIndex &amp;index)</arglist>
+      <anchor>a550655ecfeec58f9988296cdb559baea</anchor>
+      <arglist>(const istd::CVarIndex &amp;index, uint seed)</arglist>
     </member>
   </compound>
   <compound kind="class">
