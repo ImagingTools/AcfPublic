@@ -166,8 +166,8 @@
     <member kind="function">
       <type>uint</type>
       <name>qHash</name>
-      <anchorfile>_c_line2d_8h.html</anchorfile>
-      <anchor>a73490ecc29c677efdb344d858386245a</anchor>
+      <anchorfile>namespacei2d.html</anchorfile>
+      <anchor>a1df2645cd2431ccb1de330ac0c7ea9ea</anchor>
       <arglist>(const i2d::CLine2d &amp;key, uint seed=0)</arglist>
     </member>
   </compound>
@@ -443,8 +443,8 @@
     <member kind="function">
       <type>uint</type>
       <name>qHash</name>
-      <anchorfile>_c_vector2d_8h.html</anchorfile>
-      <anchor>a9836edfb7ff41ec32f1258dbc9368ff0</anchor>
+      <anchorfile>namespacei2d.html</anchorfile>
+      <anchor>a40083a24c3b5b8ae5b71b21284458e7b</anchor>
       <arglist>(const i2d::CVector2d &amp;key, uint seed=0)</arglist>
     </member>
   </compound>
@@ -7214,6 +7214,20 @@
       <anchorfile>namespacei2d.html</anchorfile>
       <anchor>af339c1831861ba94dc1d0996bc51a84b</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>uint</type>
+      <name>qHash</name>
+      <anchorfile>namespacei2d.html</anchorfile>
+      <anchor>a1df2645cd2431ccb1de330ac0c7ea9ea</anchor>
+      <arglist>(const i2d::CLine2d &amp;key, uint seed=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint</type>
+      <name>qHash</name>
+      <anchorfile>namespacei2d.html</anchorfile>
+      <anchor>a40083a24c3b5b8ae5b71b21284458e7b</anchor>
+      <arglist>(const i2d::CVector2d &amp;key, uint seed=0)</arglist>
     </member>
   </compound>
   <compound kind="class">

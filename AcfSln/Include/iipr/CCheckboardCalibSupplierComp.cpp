@@ -54,7 +54,7 @@ const i2d::ICalibration2d* CCheckboardCalibSupplierComp::GetCalibration() const
 }
 
 
-// protected methods
+//protected methods
 
 bool CCheckboardCalibSupplierComp::CalculateCalibration(const iimg::IBitmap& image, i2d::CPerspectiveCalibration2d& result) const
 {
