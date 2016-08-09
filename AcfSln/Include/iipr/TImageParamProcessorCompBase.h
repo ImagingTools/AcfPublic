@@ -63,7 +63,8 @@ protected:
 		\param	outputImage		output image, where processing results will be stored.
 	*/
 	virtual bool ParamProcessImage(
-				const ParameterType* parameterPtr, 
+				const iprm::IParamsSet* paramsPtr,
+				const ParameterType* procParamPtr,
 				const iimg::IBitmap& inputImage,
 				iimg::IBitmap& outputImage) = 0;
 
@@ -78,7 +79,7 @@ private:
 
 template <class ParameterType>
 bool TImageParamProcessorCompBase<ParameterType>::ProcessImage(
-			const iprm::IParamsSet* paramsPtr, 
+			const iprm::IParamsSet* paramsPtr,
 			const iimg::IBitmap& inputImage,
 			iimg::IBitmap& outputImage)
 {
@@ -88,7 +89,7 @@ bool TImageParamProcessorCompBase<ParameterType>::ProcessImage(
 	}
 	
 	// do image processing:
-	return ParamProcessImage(processorParamsPtr.GetPtr(), inputImage, outputImage);
+	return ParamProcessImage(paramsPtr, processorParamsPtr.GetPtr(), inputImage, outputImage);
 }
 
 

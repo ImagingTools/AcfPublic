@@ -82,7 +82,8 @@ public:
 protected:
 	// reimplemented (iipr::TImageParamProcessorCompBase<imeas::INumericValue>)
 	virtual bool ParamProcessImage(
-				const imeas::INumericValue* paramsPtr,
+				const iprm::IParamsSet* paramsPtr,
+				const imeas::INumericValue* procParamPtr,
 				const iimg::IBitmap& inputImage,
 				iimg::IBitmap& outputImage);
 

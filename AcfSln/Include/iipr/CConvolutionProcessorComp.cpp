@@ -26,6 +26,9 @@
 // Qt includes
 #include <QtCore/QVector>
 
+// ACF includes
+#include "iprm/TParamsPtr.h"
+
 
 namespace iipr
 {
@@ -127,7 +130,8 @@ bool DoConvolution(
 			outputPtr += halfKernelWidth * PixelSize;
 		}
 
-		for (int x = halfKernelWidth; x < outputImageSize.GetX() - halfKernelWidth; ++x){
+		int x;
+		for (x = halfKernelWidth; x < outputImageSize.GetX() - halfKernelWidth; ++x){
 			WorkingType sums[ChannelsCount];
 			for (int channelIndex = 0; channelIndex < ChannelsCount; ++channelIndex){
 				sums[channelIndex] = initialSums[channelIndex];
@@ -190,7 +194,7 @@ bool DoConvolution(
 		}
 
 		if (halfKernelWidth > 0){
-			std::memset(outputPtr, 0, halfKernelWidth * PixelSize);
+			std::memset(outputPtr + x * PixelSize, 0, halfKernelWidth * PixelSize);
 		}
 	}
 
@@ -209,9 +213,9 @@ struct KernelElementFloat
 };
 
 
-template <	typename PixelType,
-			typename WorkingType,
-			int PixelSize>
+template <	typename InputPixelType,
+			typename OutputPixelType,
+			typename WorkingType>
 bool DoConvolutionFloat(
 			const iimg::IBitmap& inputImage,
 			const IConvolutionKernel2d& kernel,
@@ -270,46 +274,43 @@ bool DoConvolutionFloat(
 	WorkingType initialSum = WorkingType(offsetValue);
 
 	for (int y = 0; y < halfKernelHeight; ++y){
-		std::memset(outputImage.GetLinePtr(y), 0, outputImageSize.GetX() * PixelSize);
+		std::memset(outputImage.GetLinePtr(y), 0, outputImageSize.GetX() * sizeof(OutputPixelType));
 	}
 
 	int kernelElementsCount = int(fastAccessElements.size());
 
-	#pragma omp parallel for
+//	#pragma omp parallel for
 
 	for (int y = halfKernelHeight; y < outputImageSize.GetY() - halfKernelHeight; ++y){
-		const quint8* inputPtr = static_cast<const quint8*>(inputImage.GetLinePtr(y));
-		quint8* outputPtr = static_cast<quint8*>(outputImage.GetLinePtr(y));
+		const InputPixelType* inputPtr = static_cast<const InputPixelType*>(inputImage.GetLinePtr(y));
+		OutputPixelType* outputPtr = static_cast<OutputPixelType*>(outputImage.GetLinePtr(y));
 
 		if (halfKernelWidth > 0){
-			std::memset(outputPtr, 0, halfKernelWidth * PixelSize);
-			outputPtr += halfKernelWidth * PixelSize;
+			std::memset(outputPtr, 0, halfKernelWidth * sizeof(OutputPixelType));
 		}
 
-		for (int x = halfKernelWidth; x < outputImageSize.GetX() - halfKernelWidth; ++x){
+		int x;
+		for (x = halfKernelWidth; x < outputImageSize.GetX() - halfKernelWidth; ++x){
 			WorkingType sum = initialSum;
 
 			for (int i = 0; i < kernelElementsCount; ++i){
 				const KernelElementFloat& kernelElement = fastAccessElements[i];
 
-				WorkingType inputValue = *(const PixelType*)(inputPtr + kernelElement.offset);
+				WorkingType inputValue = *(const InputPixelType*)((quint8*)&inputPtr[x] + kernelElement.offset);
 
 				sum += inputValue * kernelElement.factor;
 			}
 
-			*(PixelType*)outputPtr = sum;
-
-			inputPtr += PixelSize;
-			outputPtr += PixelSize;
+			outputPtr[x] = sum;
 		}
 
 		if (halfKernelWidth > 0){
-			std::memset(outputPtr, 0, halfKernelWidth * PixelSize);
+			std::memset(outputPtr + x, 0, halfKernelWidth * sizeof(OutputPixelType));
 		}
 	}
 
 	for (int y = outputImageSize.GetY() - halfKernelHeight; y < outputImageSize.GetY(); ++y){
-		std::memset(outputImage.GetLinePtr(y), 0, outputImageSize.GetX() * PixelSize);
+		std::memset(outputImage.GetLinePtr(y), 0, outputImageSize.GetX() * sizeof(OutputPixelType));
 	}
 
 	return true;
@@ -319,51 +320,131 @@ bool DoConvolutionFloat(
 // reimplemented (iipr::TImageParamProcessorCompBase<ParameterType>)
 
 bool CConvolutionProcessorComp::ParamProcessImage(
-			const IConvolutionKernel2d* paramsPtr,
+			const iprm::IParamsSet* paramsPtr,
+			const IConvolutionKernel2d* procParamPtr,
 			const iimg::IBitmap& inputImage,
 			iimg::IBitmap& outputImage)
 {
-	if (paramsPtr == NULL){
+	if (procParamPtr == NULL){
 		SendErrorMessage(0, "Processing parameters are not set");		
 		
 		return false;
 	}
 
+	int outputPixelFormat = *m_outputPixelTypeAttrPtr;
+	iprm::TParamsPtr<iprm::ISelectionParam> outputFormatParamPtr(paramsPtr, m_outputPixelTypeIdAttrPtr, m_defaultOutputPixelTypeParamCompPtr, false);
+	if (outputFormatParamPtr.IsValid()){
+		outputPixelFormat = outputFormatParamPtr->GetSelectedOptionIndex();
+	}
+
+	int inputPixelFormat = inputImage.GetPixelFormat();
+	if (outputPixelFormat <= iimg::IBitmap::PF_UNKNOWN){
+		outputPixelFormat = inputPixelFormat;
+	}
+
 	istd::CIndex2d inputImageSize = inputImage.GetImageSize();
-	if (inputImageSize != outputImage.GetImageSize()){
-		if (!outputImage.CreateBitmap(inputImage.GetPixelFormat(), inputImageSize)){
+	if (inputImageSize != outputImage.GetImageSize() || outputPixelFormat != outputImage.GetPixelFormat()){
+		if (!outputImage.CreateBitmap(iimg::IBitmap::PixelFormat(outputPixelFormat), inputImageSize)){
 			SendErrorMessage(0, "Output image could not be created");		
 
 			return false;
 		}
 	}
 
-	int pixelFormat = inputImage.GetPixelFormat();
-	switch (pixelFormat){
+	switch (inputPixelFormat){
 	case iimg::IBitmap::PF_GRAY:
-		return DoConvolution<quint8, qint32, 1, 1, -1, 22, true, true>(inputImage, *paramsPtr, *m_normalizeKernelAttrPtr, outputImage);
+		switch (outputPixelFormat){
+		case iimg::IBitmap::PF_GRAY:
+			return DoConvolution<quint8, qint32, 1, 1, -1, 22, true, true>(inputImage, *procParamPtr, *m_normalizeKernelAttrPtr, outputImage);
+
+		case iimg::IBitmap::PF_GRAY16:
+			return DoConvolutionFloat<quint8, quint16, quint16>(inputImage, *procParamPtr, *m_normalizeKernelAttrPtr, outputImage);
+
+		case iimg::IBitmap::PF_GRAY32:
+			return DoConvolutionFloat<quint8, quint32, quint32>(inputImage, *procParamPtr, *m_normalizeKernelAttrPtr, outputImage);
+
+		case iimg::IBitmap::PF_FLOAT32:
+			return DoConvolutionFloat<quint8, float, double>(inputImage, *procParamPtr, *m_normalizeKernelAttrPtr, outputImage);
+
+		case iimg::IBitmap::PF_FLOAT64:
+			return DoConvolutionFloat<quint8, double, double>(inputImage, *procParamPtr, *m_normalizeKernelAttrPtr, outputImage);
+
+		default:
+			break;
+		}
+		break;
 
 	case iimg::IBitmap::PF_RGB:
-		return DoConvolution<quint8, qint32, 4, 4, -1, 22, true, true>(inputImage, *paramsPtr, *m_normalizeKernelAttrPtr, outputImage);
+		if (outputPixelFormat == iimg::IBitmap::PF_RGB){
+			return DoConvolution<quint8, qint32, 4, 4, -1, 22, true, true>(inputImage, *procParamPtr, *m_normalizeKernelAttrPtr, outputImage);
+		}
+		break;
 
 	case iimg::IBitmap::PF_RGBA:
-		return DoConvolution<quint8, qint32, 4, 4, 3, 22, true, true>(inputImage, *paramsPtr, *m_normalizeKernelAttrPtr, outputImage);
+		if (outputPixelFormat == iimg::IBitmap::PF_RGBA){
+			return DoConvolution<quint8, qint32, 4, 4, 3, 22, true, true>(inputImage, *procParamPtr, *m_normalizeKernelAttrPtr, outputImage);
+		}
+		break;
 
 	case iimg::IBitmap::PF_GRAY16:
-		return DoConvolution<quint16, qint32, 2, 1, -1, 14, true, true>(inputImage, *paramsPtr, *m_normalizeKernelAttrPtr, outputImage);
+		switch (outputPixelFormat){
+		case iimg::IBitmap::PF_GRAY16:
+			return DoConvolution<quint16, qint32, 2, 1, -1, 14, true, true>(inputImage, *procParamPtr, *m_normalizeKernelAttrPtr, outputImage);
+
+		case iimg::IBitmap::PF_GRAY32:
+			return DoConvolutionFloat<quint16, quint32, quint32>(inputImage, *procParamPtr, *m_normalizeKernelAttrPtr, outputImage);
+
+		case iimg::IBitmap::PF_FLOAT32:
+			return DoConvolutionFloat<quint16, float, double>(inputImage, *procParamPtr, *m_normalizeKernelAttrPtr, outputImage);
+
+		case iimg::IBitmap::PF_FLOAT64:
+			return DoConvolutionFloat<quint16, double, double>(inputImage, *procParamPtr, *m_normalizeKernelAttrPtr, outputImage);
+
+		default:
+			break;
+		}
+		break;
 
 	case iimg::IBitmap::PF_GRAY32:
-		return DoConvolution<quint32, qint64, 1, 1, -1, 30, true, true>(inputImage, *paramsPtr, *m_normalizeKernelAttrPtr, outputImage);
+		switch (outputPixelFormat){
+		case iimg::IBitmap::PF_GRAY32:
+			return DoConvolution<quint32, qint64, 1, 1, -1, 30, true, true>(inputImage, *procParamPtr, *m_normalizeKernelAttrPtr, outputImage);
+
+		case iimg::IBitmap::PF_FLOAT32:
+			return DoConvolutionFloat<quint32, float, double>(inputImage, *procParamPtr, *m_normalizeKernelAttrPtr, outputImage);
+
+		case iimg::IBitmap::PF_FLOAT64:
+			return DoConvolutionFloat<quint32, double, double>(inputImage, *procParamPtr, *m_normalizeKernelAttrPtr, outputImage);
+
+		default:
+			break;
+		}
+		break;
 
 	case iimg::IBitmap::PF_FLOAT32:
-		return DoConvolutionFloat<float, double, 4>(inputImage, *paramsPtr, *m_normalizeKernelAttrPtr, outputImage);
+		switch (outputPixelFormat){
+		case iimg::IBitmap::PF_FLOAT32:
+			return DoConvolutionFloat<float, float, double>(inputImage, *procParamPtr, *m_normalizeKernelAttrPtr, outputImage);
+
+		case iimg::IBitmap::PF_FLOAT64:
+			return DoConvolutionFloat<float, double, double>(inputImage, *procParamPtr, *m_normalizeKernelAttrPtr, outputImage);
+
+		default:
+			break;
+		}
+		break;
 
 	case iimg::IBitmap::PF_FLOAT64:
-		return DoConvolutionFloat<double, double, 8>(inputImage, *paramsPtr, *m_normalizeKernelAttrPtr, outputImage);
+		return DoConvolutionFloat<double, double, double>(inputImage, *procParamPtr, *m_normalizeKernelAttrPtr, outputImage);
 
 	default:
+		SendErrorMessage(0, QObject::tr("Input image format '%1' not supported").arg(m_formatList.GetOptionName(inputPixelFormat)));
 		return false;
 	}
+
+	SendErrorMessage(0, QObject::tr("Cannot produce output image in format '%1' from input format '%2'").arg(m_formatList.GetOptionName(outputPixelFormat)).arg(m_formatList.GetOptionName(inputPixelFormat)));
+
+	return false;
 }
 
 

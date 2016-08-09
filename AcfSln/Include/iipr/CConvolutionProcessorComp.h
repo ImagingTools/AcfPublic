@@ -24,8 +24,12 @@
 #define iipr_CConvolutionProcessorComp_included
 
 
-#include "iipr/TImageParamProcessorCompBase.h"
+// ACF includes
+#include "iprm/ISelectionParam.h"
+#include "iimg/CPixelFormatList.h"
 
+// ACF-Solutions includes
+#include "iipr/TImageParamProcessorCompBase.h"
 #include "iipr/IConvolutionKernel2d.h"
 
 
@@ -43,17 +47,26 @@ public:
 
 	I_BEGIN_COMPONENT(CConvolutionProcessorComp);
 		I_ASSIGN(m_normalizeKernelAttrPtr, "NormalizeKernel", "If true then kernel will be automatically normalized", true, false);
+		I_ASSIGN(m_outputPixelTypeAttrPtr, "OutputPixelType", "Type of output pixel if not defined over parameters:\n\t0 - As input\n\t1 - Mono\n\t2 - Grayscale\n\t3 - RGB\n\t4 - RGBA\n\t5 - Grayscale 16\n\t6 - Grayscale 32\n\t7 - Float 32\n\t8 - Float 64", true, 0);
+		I_ASSIGN(m_outputPixelTypeIdAttrPtr, "OutputPixelTypeId", "ID of output pixel type in parameter set (type iprm::ISelectionParam)", false, "OutputPixelType");
+		I_ASSIGN(m_defaultOutputPixelTypeParamCompPtr, "DefaultOutputPixelType", "Default output pixel type if not defined in parameter set", false, "DefaultOutputPixelType");
 	I_END_COMPONENT;
 
 protected:
 	// reimplemented (iipr::TImageParamProcessorCompBase)
 	virtual bool ParamProcessImage(
-				const IConvolutionKernel2d* paramsPtr,
+				const iprm::IParamsSet* paramsPtr,
+				const IConvolutionKernel2d* procParamPtr,
 				const iimg::IBitmap& inputImage,
 				iimg::IBitmap& outputImage);
 
 private:
 	I_ATTR(bool, m_normalizeKernelAttrPtr);
+	I_ATTR(int, m_outputPixelTypeAttrPtr);
+	I_ATTR(QByteArray, m_outputPixelTypeIdAttrPtr);
+	I_REF(iprm::ISelectionParam, m_defaultOutputPixelTypeParamCompPtr);
+
+	iimg::CPixelFormatList m_formatList;
 };
 
 
