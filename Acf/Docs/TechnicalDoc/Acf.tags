@@ -2766,6 +2766,14 @@
     <namespace>iimg</namespace>
   </compound>
   <compound kind="file">
+    <name>CPixelFormatList.h</name>
+    <path>C:/Temp/Acf/Include/iimg/</path>
+    <filename>_c_pixel_format_list_8h</filename>
+    <includes id="_i_options_list_8h" name="IOptionsList.h" local="yes" imported="no">iprm/IOptionsList.h</includes>
+    <class kind="class">iimg::CPixelFormatList</class>
+    <namespace>iimg</namespace>
+  </compound>
+  <compound kind="file">
     <name>CReflectedBitmapBase.h</name>
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>_c_reflected_bitmap_base_8h</filename>
@@ -33878,6 +33886,7 @@
     <class kind="class">iimg::CMultiPageBitmapBase</class>
     <class kind="class">iimg::CMultiPageBitmapComp</class>
     <class kind="class">iimg::CMultiPageBitmapSequenceComp</class>
+    <class kind="class">iimg::CPixelFormatList</class>
     <class kind="class">iimg::CReflectedBitmapBase</class>
     <class kind="class">iimg::CScanlineMask</class>
     <class kind="class">iimg::IBitmap</class>
@@ -35468,6 +35477,81 @@
       <anchorfile>classidoc_1_1_t_multi_page_document_wrap.html</anchorfile>
       <anchor>a0b695fc36fae74eb1e1f6cb9aba7722c</anchor>
       <arglist>(CompatibilityMode mode)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iimg::CPixelFormatList</name>
+    <filename>classiimg_1_1_c_pixel_format_list.html</filename>
+    <base virtualness="virtual">iprm::IOptionsList</base>
+    <member kind="typedef">
+      <type>QSet&lt; int &gt;</type>
+      <name>ActiveFormats</name>
+      <anchorfile>classiimg_1_1_c_pixel_format_list.html</anchorfile>
+      <anchor>a41be4f80d418fbf188aaed94c17167d6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CPixelFormatList</name>
+      <anchorfile>classiimg_1_1_c_pixel_format_list.html</anchorfile>
+      <anchor>ac3d1275590f60ddd3429bfbe5d017e37</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>ActiveFormats</type>
+      <name>GetActiveFormats</name>
+      <anchorfile>classiimg_1_1_c_pixel_format_list.html</anchorfile>
+      <anchor>a3c5fa8ff587ea4d9de30a8dbbaf4b4fc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetActiveFormats</name>
+      <anchorfile>classiimg_1_1_c_pixel_format_list.html</anchorfile>
+      <anchor>aa915e9c2237445b9ffdad5b011c3e327</anchor>
+      <arglist>(const ActiveFormats &amp;formats)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsFlags</name>
+      <anchorfile>classiimg_1_1_c_pixel_format_list.html</anchorfile>
+      <anchor>aca6341dd6991e0d1f25c953c08b198b4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classiimg_1_1_c_pixel_format_list.html</anchorfile>
+      <anchor>abe6cf661dd1493b83bd175979cdec699</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classiimg_1_1_c_pixel_format_list.html</anchorfile>
+      <anchor>a83a4070c8f95d7f1ec360512dac82ff7</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classiimg_1_1_c_pixel_format_list.html</anchorfile>
+      <anchor>a71825f3df6c1c36b71e20b354bbb9853</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetOptionId</name>
+      <anchorfile>classiimg_1_1_c_pixel_format_list.html</anchorfile>
+      <anchor>a91dd97e5957fb880f595a4769682f2cd</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classiimg_1_1_c_pixel_format_list.html</anchorfile>
+      <anchor>acfd02a47a1e68c53fa93b0df15a8b66e</anchor>
+      <arglist>(int index) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -74293,6 +74377,7 @@
     <file>CMultiPageBitmapBase.h</file>
     <file>CMultiPageBitmapComp.h</file>
     <file>CMultiPageBitmapSequenceComp.h</file>
+    <file>CPixelFormatList.h</file>
     <file>CReflectedBitmapBase.h</file>
     <file>CScanlineMask.h</file>
     <file>IBitmap.h</file>

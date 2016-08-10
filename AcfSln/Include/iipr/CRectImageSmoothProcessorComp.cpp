@@ -276,12 +276,11 @@ const imath::IUnitInfo* CRectImageSmoothProcessorComp::GetNumericValueUnitInfo(i
 // reimplemented (iipr::TImageParamProcessorCompBase<imeas::INumericValue>)
 
 bool CRectImageSmoothProcessorComp::ParamProcessImage(
-			const iprm::IParamsSet* paramsPtr,
-			const imeas::INumericValue* procParamPtr,
+			const imeas::INumericValue* paramsPtr,
 			const iimg::IBitmap& inputImage,
 			iimg::IBitmap& outputImage)
 {
-	if (procParamPtr == NULL){
+	if (paramsPtr == NULL){
 		return false;
 	}
 
@@ -296,7 +295,7 @@ bool CRectImageSmoothProcessorComp::ParamProcessImage(
 		return false;
 	}
 
-	imath::CVarVector filterLengths = procParamPtr->GetValues();
+	imath::CVarVector filterLengths = paramsPtr->GetValues();
 	int filterDimensionsCount = filterLengths.GetElementsCount();
 	if (filterDimensionsCount < 1){
 		return false;

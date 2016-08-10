@@ -125,6 +125,7 @@
     <ClCompile Include="..\CMultiPageBitmapBase.cpp" />
     <ClCompile Include="..\CMultiPageBitmapComp.cpp" />
     <ClCompile Include="..\CMultiPageBitmapSequenceComp.cpp" />
+    <ClCompile Include="..\CPixelFormatList.cpp" />
     <ClCompile Include="..\CReflectedBitmapBase.cpp" />
     <ClCompile Include="..\CScanlineMask.cpp" />
   </ItemGroup>
@@ -147,6 +148,7 @@
     <ClInclude Include="..\CMultiPageBitmapBase.h" />
     <ClInclude Include="..\CMultiPageBitmapComp.h" />
     <ClInclude Include="..\CMultiPageBitmapSequenceComp.h" />
+    <ClInclude Include="..\CPixelFormatList.h" />
     <ClInclude Include="..\CReflectedBitmapBase.h" />
     <ClInclude Include="..\CScanlineMask.h" />
     <ClInclude Include="..\IBitmap.h" />
