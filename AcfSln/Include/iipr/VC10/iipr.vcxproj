@@ -232,6 +232,7 @@
     <ClInclude Include="..\CMultiLineSupplierCompBase.h" />
     <ClInclude Include="..\CObjectFeature.h" />
     <ClInclude Include="..\CPerspCalibFinder.h" />
+    <ClInclude Include="..\CPixelManip.h" />
     <ClInclude Include="..\CPositionFromImageSupplierComp.h" />
     <ClInclude Include="..\CProcessedAcquisitionComp.h" />
     <ClInclude Include="..\CProcessedBitmapSupplierComp.h" />

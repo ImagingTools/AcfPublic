@@ -1530,6 +1530,16 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CPixelManip.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_pixel_manip_8h</filename>
+    <class kind="class">iipr::CPixelManip</class>
+    <class kind="class">iipr::CPixelManip::Rgba</class>
+    <class kind="class">iipr::CPixelManip::GrayCropAccum32</class>
+    <class kind="class">iipr::CPixelManip::RgbCropAccum32</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CPositionFromImageSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_position_from_image_supplier_comp_8h</filename>
@@ -15028,6 +15038,7 @@
     <class kind="class">iipr::CMultiLineSupplierCompBase</class>
     <class kind="class">iipr::CObjectFeature</class>
     <class kind="class">iipr::CPerspCalibFinder</class>
+    <class kind="class">iipr::CPixelManip</class>
     <class kind="class">iipr::CPositionFromImageSupplierComp</class>
     <class kind="class">iipr::CProcessedAcquisitionComp</class>
     <class kind="class">iipr::CProcessedBitmapSupplierBase</class>
@@ -16637,8 +16648,8 @@
       <type>virtual bool</type>
       <name>ParamProcessImage</name>
       <anchorfile>classiipr_1_1_c_convolution_processor_comp.html</anchorfile>
-      <anchor>af26a1888cdbeb4d9828ab0221433c1dd</anchor>
-      <arglist>(const IConvolutionKernel2d *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
+      <anchor>ad08fa02384193a2f5bca475e8be2efc0</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const IConvolutionKernel2d *procParamPtr, iimg::IBitmap::PixelFormat outputPixelFormat, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -16646,6 +16657,13 @@
       <anchorfile>classiipr_1_1_t_image_param_processor_comp_base.html</anchorfile>
       <anchor>a4cc06678e44cdfcc49f2e343b695182f</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iimg::CPixelFormatList</type>
+      <name>m_formatList</name>
+      <anchorfile>classiipr_1_1_t_image_param_processor_comp_base.html</anchorfile>
+      <anchor>a93116e2247152790f09b8e13bb7713d1</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -18578,6 +18596,530 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iipr::CPixelManip</name>
+    <filename>classiipr_1_1_c_pixel_manip.html</filename>
+    <class kind="class">iipr::CPixelManip::GrayCropAccum32</class>
+    <class kind="class">iipr::CPixelManip::Rgba</class>
+    <class kind="class">iipr::CPixelManip::RgbCropAccum32</class>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CPixelManip::GrayCropAccum32</name>
+    <filename>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</filename>
+    <templarg></templarg>
+    <templarg>Shift</templarg>
+    <templarg>DoCropMin</templarg>
+    <templarg>DoCropMax</templarg>
+    <member kind="function">
+      <type></type>
+      <name>GrayCropAccum32</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a5c4140f39748cc62bc546f8442ed12ad</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>GrayCropAccum32</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>afc227fc690fc5291276e370ce2e6fcff</anchor>
+      <arglist>(const GrayCropAccum32 &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>GrayCropAccum32</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a8fd5a84ab36c5aab655e239beb8bce3f</anchor>
+      <arglist>(int value)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>GrayCropAccum32</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>aaf9b009002b424fc49ec4e3b5e5db359</anchor>
+      <arglist>(quint8 value)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>GrayCropAccum32</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>aa81564f642f87e4a5bdc47b0573b4a85</anchor>
+      <arglist>(quint16 value)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>GrayCropAccum32</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a61904ee0556231b1c1c3407a785d88a5</anchor>
+      <arglist>(quint32 value)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>GrayCropAccum32</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a40ef770d6b81248efa80a2b8a3209ffb</anchor>
+      <arglist>(quint64 value)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>GrayCropAccum32</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>aa658cbbdd2e1d5d48cbf92e4d4d79093</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>ad4ee3b7fca290eb50f7d666894d52b1d</anchor>
+      <arglist>(const GrayCropAccum32 &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a14af21d87ac7061444487895724caa55</anchor>
+      <arglist>(int value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a9a352ed39f52cbd11334d8ea7e8de0a0</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a2fc0e68dcdf8c89c06e32da957d8c5fd</anchor>
+      <arglist>(const GrayCropAccum32 &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a2c817cd342d58d4423eb33ac64603f68</anchor>
+      <arglist>(int value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a79d9358fa2499fa959d4f89ea0d53296</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function">
+      <type>GrayCropAccum32 &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a6fc88661b94f66c790ee1ec7f6d53da3</anchor>
+      <arglist>(const GrayCropAccum32 &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>GrayCropAccum32 &amp;</type>
+      <name>operator+=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a8a3cabf620fa166cc101d5685a568c76</anchor>
+      <arglist>(const GrayCropAccum32 &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>GrayCropAccum32 &amp;</type>
+      <name>operator+=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a37c1b5c9262e291ee61b2c71710e7203</anchor>
+      <arglist>(unsigned int value)</arglist>
+    </member>
+    <member kind="function">
+      <type>GrayCropAccum32 &amp;</type>
+      <name>operator+=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a1c29c41a390a4d29911c9bdbef60c9a6</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function">
+      <type>GrayCropAccum32 &amp;</type>
+      <name>operator-=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a6ee6840039a7bade594a2d1f59d62b50</anchor>
+      <arglist>(const GrayCropAccum32 &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>GrayCropAccum32 &amp;</type>
+      <name>operator-=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a7137ad08392f5b6a51bd9f5329afa265</anchor>
+      <arglist>(unsigned int value)</arglist>
+    </member>
+    <member kind="function">
+      <type>GrayCropAccum32 &amp;</type>
+      <name>operator-=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a1c67ee7ba028c3102a2985cb0a98c3e1</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function">
+      <type>GrayCropAccum32 &amp;</type>
+      <name>operator*=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a33b88c7f658ff254236a42b70ed5a1fd</anchor>
+      <arglist>(const GrayCropAccum32 &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>GrayCropAccum32 &amp;</type>
+      <name>operator*=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a446471917f21cfbf0c615922cf0552c5</anchor>
+      <arglist>(unsigned int value)</arglist>
+    </member>
+    <member kind="function">
+      <type>GrayCropAccum32 &amp;</type>
+      <name>operator*=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>abe4cd434aab503fa5f6a956fd4562853</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function">
+      <type>GrayCropAccum32</type>
+      <name>operator/</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>ae1d1aa0da64e75c120baca49466bacb4</anchor>
+      <arglist>(int value)</arglist>
+    </member>
+    <member kind="function">
+      <type>GrayCropAccum32</type>
+      <name>operator/</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a0b4c3fba0de0dfcfae43fac5b34955e7</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator quint8</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a46416c7fb653c15516d78a46baef3f9d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator quint16</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a4d45a3f6f2368fda514eebec3fa7707c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator quint32</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a4c226fa973fd04bdaf8a1c4ff842b124</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator Rgba</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
+      <anchor>a33ed045016a4d2d78a9c255668ed5832</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CPixelManip::Rgba</name>
+    <filename>classiipr_1_1_c_pixel_manip_1_1_rgba.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Rgba</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgba.html</anchorfile>
+      <anchor>a5272e08ead0b0073edb0aeccae07ed2a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Rgba</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgba.html</anchorfile>
+      <anchor>acbfb32347d61a8ed4e4ab5e39d1403b3</anchor>
+      <arglist>(quint8 r, quint8 g, quint8 b, quint8 a=255)</arglist>
+    </member>
+    <member kind="variable">
+      <type>quint8</type>
+      <name>m_r</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgba.html</anchorfile>
+      <anchor>a46c6bdf40d69f5f4875976ba65e92070</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>quint8</type>
+      <name>m_g</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgba.html</anchorfile>
+      <anchor>a39ff224dcb3f2d1248c29ffb1326331c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>quint8</type>
+      <name>m_b</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgba.html</anchorfile>
+      <anchor>a0d5d14db1f13df7b448101975e1d6ddf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>quint8</type>
+      <name>m_a</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgba.html</anchorfile>
+      <anchor>a63731b8dda90009a1601646bc91452bb</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CPixelManip::RgbCropAccum32</name>
+    <filename>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</filename>
+    <templarg></templarg>
+    <templarg>Shift</templarg>
+    <templarg>DoCropMin</templarg>
+    <templarg>DoCropMax</templarg>
+    <member kind="function">
+      <type></type>
+      <name>RgbCropAccum32</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>a2f2cdb09b56f3de63af7cf95876d6df9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>RgbCropAccum32</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>a2f6d02543e9b7c3a482f1fa74f93eb8d</anchor>
+      <arglist>(const RgbCropAccum32 &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>RgbCropAccum32</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>a5652fab074644c3fc852599f35644e3e</anchor>
+      <arglist>(const Rgba &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>RgbCropAccum32</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>ac29758b753bc7113a1883d7abd1bafc0</anchor>
+      <arglist>(int value)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>RgbCropAccum32</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>a56009a6b920034af5353bea5bd8c97ec</anchor>
+      <arglist>(quint8 value)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>RgbCropAccum32</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>a01e74f1f9cff6473787e4d2d8ac7c9cd</anchor>
+      <arglist>(quint16 value)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>RgbCropAccum32</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>a4429ae0e1c0a892170fd091f3fe2af96</anchor>
+      <arglist>(quint32 value)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>RgbCropAccum32</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>a83dd0f7973318c5bb382435d3efbbe29</anchor>
+      <arglist>(quint64 value)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>RgbCropAccum32</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>a0e5279bf79a9080d7cb78622a5e3901c</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>a7df74bcff70ad53a08f166117334edb0</anchor>
+      <arglist>(const RgbCropAccum32 &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>ae10cb680068a0851ea8b57857d4510d0</anchor>
+      <arglist>(int value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>ae01dea53ea987eb53a5d951d3a954811</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>a6db1e4d721443d1a2f4fdcd5f9195e85</anchor>
+      <arglist>(const RgbCropAccum32 &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>ac85f029a06149a94e8958ec95db6d296</anchor>
+      <arglist>(int value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>aaa7781e1fb236dc33696e43894e9df92</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function">
+      <type>RgbCropAccum32 &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>a3672523d3f3da9e6f176a788676b46d8</anchor>
+      <arglist>(const RgbCropAccum32 &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>RgbCropAccum32 &amp;</type>
+      <name>operator+=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>a93275cc4c64317f1cb3efe95f1505a33</anchor>
+      <arglist>(const RgbCropAccum32 &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>RgbCropAccum32 &amp;</type>
+      <name>operator+=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>a5123b953661a0a368ba987944bc788c6</anchor>
+      <arglist>(const Rgba &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>RgbCropAccum32 &amp;</type>
+      <name>operator+=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>ab147b8fc22799bcefaf609cd18e63dbf</anchor>
+      <arglist>(unsigned int value)</arglist>
+    </member>
+    <member kind="function">
+      <type>RgbCropAccum32 &amp;</type>
+      <name>operator+=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>a43850b564ee043bea4a289d5643bf22d</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function">
+      <type>RgbCropAccum32 &amp;</type>
+      <name>operator-=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>ac0b4d574aad373f259f0753ab8913f70</anchor>
+      <arglist>(const RgbCropAccum32 &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>RgbCropAccum32 &amp;</type>
+      <name>operator-=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>a3f996d6666e4fac3745095618f46ac25</anchor>
+      <arglist>(const Rgba &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>RgbCropAccum32 &amp;</type>
+      <name>operator-=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>a120a31ad0ffd6148fe74adefdfdb715f</anchor>
+      <arglist>(quint32 value)</arglist>
+    </member>
+    <member kind="function">
+      <type>RgbCropAccum32 &amp;</type>
+      <name>operator-=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>af3a30252de921658aa36befcd568b57c</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function">
+      <type>RgbCropAccum32 &amp;</type>
+      <name>operator*=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>ab69743ab7975c25c9be1fc2fb1b39568</anchor>
+      <arglist>(const RgbCropAccum32 &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>RgbCropAccum32 &amp;</type>
+      <name>operator*=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>ab93ce98cc228695a0d0464800f602d70</anchor>
+      <arglist>(int value)</arglist>
+    </member>
+    <member kind="function">
+      <type>RgbCropAccum32 &amp;</type>
+      <name>operator*=</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>a9ba270251d85f6911e4d78c942c258a9</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function">
+      <type>RgbCropAccum32</type>
+      <name>operator/</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>a021c073358f93936b7a847cfa26862f1</anchor>
+      <arglist>(int value)</arglist>
+    </member>
+    <member kind="function">
+      <type>RgbCropAccum32</type>
+      <name>operator/</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>aeedeb164d19988520f78d76771f3e687</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator quint8</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>ab648936086167f6cd61c6e817fb2dade</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator quint16</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>a265c03211ec22442071a9b7d9d14d52c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator quint32</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>a20ce44bcb6198289a9907d83dcfff645</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator float</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>ae28096f14db4764e435b33993c4d77c2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator double</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>aa7d3d46b121f61ebe8fe0fde829345b0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator Rgba</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>a704f92f2c14ca0f0f01d619fa4bb9c17</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iipr::CPositionFromImageSupplierComp</name>
     <filename>classiipr_1_1_c_position_from_image_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; istd::TDelPtr&lt; imeas::INumericValue &gt; &gt;</base>
@@ -19171,17 +19713,31 @@
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
-      <name>DoImageFilter</name>
+      <name>DoRectFilter</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>a93e3cb4b84fb3a0c2c38c9d3dfbfcfcf</anchor>
-      <arglist>(const iimg::IBitmap &amp;inputBitmap, iimg::IBitmap &amp;outputBitmap, int filterWidth, int filterHeight, BorderMode borderMode)</arglist>
+      <anchor>a9672c92f6ca28081719e058831201046</anchor>
+      <arglist>(int filterWidth, int filterHeight, iimg::IBitmap::PixelFormat outputPixelFormat, const iimg::IBitmap &amp;inputBitmap, iimg::IBitmap &amp;outputBitmap, BorderMode borderMode=BM_STRETCH_KERNEL)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>DoRectFilterHorizontal</name>
+      <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
+      <anchor>a127221d6ba3f3ece6cd3079e2fcf30fd</anchor>
+      <arglist>(int filterWidth, iimg::IBitmap::PixelFormat outputPixelFormat, const iimg::IBitmap &amp;inputBitmap, iimg::IBitmap &amp;outputBitmap, BorderMode borderMode=BM_STRETCH_KERNEL)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>DoRectFilterVertical</name>
+      <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
+      <anchor>ab1fe1ddf25bafa086359f0ceee7a7080</anchor>
+      <arglist>(int filterHeight, iimg::IBitmap::PixelFormat outputPixelFormat, const iimg::IBitmap &amp;inputBitmap, iimg::IBitmap &amp;outputBitmap, BorderMode borderMode=BM_STRETCH_KERNEL)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>ParamProcessImage</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>a959f0a400d4ab7cdef5dbf439f2f1e9d</anchor>
-      <arglist>(const imeas::INumericValue *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
+      <anchor>a2c8265dd68bbf80b38720aa799e6bad4</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const imeas::INumericValue *procParamPtr, iimg::IBitmap::PixelFormat outputPixelFormat, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
@@ -19224,6 +19780,13 @@
       <anchorfile>classiipr_1_1_t_image_param_processor_comp_base.html</anchorfile>
       <anchor>a4cc06678e44cdfcc49f2e343b695182f</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iimg::CPixelFormatList</type>
+      <name>m_formatList</name>
+      <anchorfile>classiipr_1_1_t_image_param_processor_comp_base.html</anchorfile>
+      <anchor>a93116e2247152790f09b8e13bb7713d1</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -20474,8 +21037,15 @@
       <type>virtual bool</type>
       <name>ParamProcessImage</name>
       <anchorfile>classiipr_1_1_t_image_param_processor_comp_base.html</anchorfile>
-      <anchor>a9d48a40b0bcb1644d116ca345c789f11</anchor>
-      <arglist>(const ParameterType *parameterPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)=0</arglist>
+      <anchor>a15e5f37f29a55af388d1caedbc960128</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const ParameterType *procParamPtr, iimg::IBitmap::PixelFormat outputPixelFormat, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)=0</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>iimg::CPixelFormatList</type>
+      <name>m_formatList</name>
+      <anchorfile>classiipr_1_1_t_image_param_processor_comp_base.html</anchorfile>
+      <anchor>a93116e2247152790f09b8e13bb7713d1</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -29690,6 +30260,7 @@
     <file>CMultiLineSupplierCompBase.h</file>
     <file>CObjectFeature.h</file>
     <file>CPerspCalibFinder.h</file>
+    <file>CPixelManip.h</file>
     <file>CPositionFromImageSupplierComp.h</file>
     <file>CProcessedAcquisitionComp.h</file>
     <file>CProcessedBitmapSupplierComp.h</file>
