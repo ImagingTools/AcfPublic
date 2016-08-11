@@ -35818,6 +35818,20 @@
       <arglist>(int dx, int dy)</arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>Erode</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a6e644ac32316acee8850771628272c63</anchor>
+      <arglist>(int leftValue, int rightValue, int topValue, int bottomValue)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Dilate</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a5343c65539b7d68dbb6e386b860efaf6</anchor>
+      <arglist>(int leftValue, int rightValue, int topValue, int bottomValue)</arglist>
+    </member>
+    <member kind="function">
       <type>RangesContainer &amp;</type>
       <name>GetRangesContainer</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
@@ -63721,17 +63735,17 @@
     </member>
     <member kind="function">
       <type>void</type>
-      <name>Erosion</name>
+      <name>Erode</name>
       <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
-      <anchor>a841475b74296a68dea5cc5d4437b7a87</anchor>
-      <arglist>(ValueType value)</arglist>
+      <anchor>a82f267581aa411c08794702e21e684cf</anchor>
+      <arglist>(ValueType leftValue, ValueType rightValue=leftValue)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
-      <name>Dilatation</name>
+      <name>Dilate</name>
       <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
-      <anchor>a04e888a95679982782656941ec12879e</anchor>
-      <arglist>(ValueType value)</arglist>
+      <anchor>a0fd8db52213d01bfc043d29b54b10db3</anchor>
+      <arglist>(ValueType leftValue, ValueType rightValue=leftValue)</arglist>
     </member>
     <member kind="function">
       <type>void</type>

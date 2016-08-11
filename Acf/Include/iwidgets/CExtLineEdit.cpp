@@ -147,7 +147,7 @@ void CExtLineEdit::focusInEvent(QFocusEvent* focusEvent)
 	if (text() == m_startupText){
 		clear();
 
-		//setStyleSheet(QString());
+		setStyleSheet(QString());
 	}
 }
 

@@ -160,14 +160,14 @@ public:
 		Erosion shortens the ends of each range with some value.
 		Result is stored in this object.
 	*/
-	void Erosion(ValueType value);
+	void Erode(ValueType leftValue, ValueType rightValue = leftValue);
 
 	/**
 		Calculate dilatation of this range list.
-		Erosion prolongs the ends of each range with some value.
+		Dilatation prolongs the ends of each range with some value for left and right side.
 		Result is stored in this object.
 	*/
-	void Dilatation(ValueType value);
+	void Dilate(ValueType leftValue, ValueType rightValue = leftValue);
 	/**
 		Remove gaps with some length.
 		\param	gapState	state interpreted as a gape.
@@ -665,10 +665,30 @@ void TRanges<ValueType>::Intersection(const TRange<ValueType>& range, bool isInv
 
 
 template <typename ValueType>
-void TRanges<ValueType>::Erosion(ValueType value)
+void TRanges<ValueType>::Erode(ValueType leftValue, ValueType rightValue)
 {
-	bool isErosion = value > 0;
-	ValueType correctionValue = qAbs(value);
+	TRanges<ValueType>::Dilate(-leftValue, -rightValue);
+}
+
+
+template <typename ValueType>
+void TRanges<ValueType>::Dilate(ValueType leftValue, ValueType rightValue)
+{
+	if (leftValue * rightValue < 0){	// do 2 steps for complex dilatation
+		Dilate(leftValue, 0);
+		Dilate(0, rightValue);
+
+		return;
+	}
+
+	ValueType absoluteSum = qAbs(leftValue + rightValue);
+	if (absoluteSum <= 0){
+		return;	// nothing to do
+	}
+
+	bool isErosion = (leftValue + rightValue < 0);
+	ValueType leftValueCorr = qAbs(leftValue);
+	ValueType rightValueCorr = qAbs(rightValue);
 
 	bool state = m_beginState;
 
@@ -684,7 +704,7 @@ void TRanges<ValueType>::Erosion(ValueType value)
 				typename SwitchPoints::iterator prevIter = iter;
 				--prevIter;
 
-				if (*prevIter > point - correctionValue * 2){
+				if (*prevIter > point - absoluteSum){
 					// previous range should be removed - is smaller than the erosion kernel
 					m_switchPoints.erase(prevIter);
 					iter = m_switchPoints.erase(iter);
@@ -694,8 +714,10 @@ void TRanges<ValueType>::Erosion(ValueType value)
 			}
 
 			// range can be moved using kernel size
-			iter = m_switchPoints.erase(iter);
-			iter = m_switchPoints.insert(iter, point - correctionValue);
+			if (leftValueCorr > 0){
+				iter = m_switchPoints.erase(iter);
+				iter = m_switchPoints.insert(iter, point - leftValueCorr);
+			}
 		}
 		else{
 			// move point forward
@@ -703,7 +725,7 @@ void TRanges<ValueType>::Erosion(ValueType value)
 			++nextIter;
 
 			if (nextIter != m_switchPoints.begin()){
-				if (*nextIter < point + correctionValue * 2){
+				if (*nextIter < point + absoluteSum){
 					// following range should be removed - is smaller than the erosion kernel
 					iter = m_switchPoints.erase(iter);
 					iter = m_switchPoints.erase(iter);
@@ -712,9 +734,11 @@ void TRanges<ValueType>::Erosion(ValueType value)
 				}
 			}
 
-			// range can be moved using kernel size
-			iter = m_switchPoints.erase(iter);
-			iter = m_switchPoints.insert(iter, point + correctionValue);
+			if (rightValueCorr > 0){
+				// range can be moved using kernel size
+				iter = m_switchPoints.erase(iter);
+				iter = m_switchPoints.insert(iter, point + rightValueCorr);
+			}
 		}
 
 		++iter;
@@ -723,22 +747,15 @@ void TRanges<ValueType>::Erosion(ValueType value)
 
 
 template <typename ValueType>
-void TRanges<ValueType>::Dilatation(ValueType value)
-{
-	Erosion(-value);
-}
-
-
-template <typename ValueType>
 void TRanges<ValueType>::RemoveGaps(ValueType value, bool gapState)
 {
 	if (gapState){
-		Erosion(-value);
-		Erosion(value);
+		Dilate(value);
+		Erode(value);
 	}
 	else{
-		Erosion(value);
-		Erosion(-value);
+		Erode(value);
+		Dilate(value);
 	}
 }
 
