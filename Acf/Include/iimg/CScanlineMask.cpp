@@ -53,6 +53,14 @@ bool CScanlineMask::IsBitmapRegionEmpty() const
 }
 
 
+i2d::CRect CScanlineMask::GetBoundingRect() const
+{
+	EnsureBoundingBoxValid();
+
+	return m_boundingBox;
+}
+
+
 void CScanlineMask::ResetScanlines(const istd::CIntRange& verticalRange)
 {
 	Q_ASSERT(verticalRange.IsValid());
@@ -146,6 +154,21 @@ bool CScanlineMask::CreateFromGeometry(const i2d::IObject2d& geometry, const i2d
 	const i2d::CPolygon* polygonPtr = dynamic_cast<const i2d::CPolygon*>(&geometry);
 	if (polygonPtr != NULL){
 		CreateFromPolygon(*polygonPtr, clipAreaPtr);
+
+		return true;
+	}
+
+	const CScanlineMask* scanLinePtr = dynamic_cast<const CScanlineMask*>(&geometry);
+	if (scanLinePtr != NULL){
+		if ((clipAreaPtr != NULL) && scanLinePtr->GetBoundingRect().IsOutside(*clipAreaPtr)){
+			// we need to clip
+			CreateFilled(*clipAreaPtr);
+			scanLinePtr->GetIntersection(*this);
+		}
+		else{
+			// we dont need to clip
+			*this = *scanLinePtr;
+		}
 
 		return true;
 	}
@@ -511,7 +534,7 @@ void CScanlineMask::GetUnion(const CScanlineMask& mask, CScanlineMask& result) c
 
 		int maskLineIndex = y - mask.m_firstLinePos;
 		if ((maskLineIndex >= 0) && (maskLineIndex < int(mask.m_scanlines.size()))){
-			int containerIndex = mask.m_scanlines[lineIndex];
+			int containerIndex = mask.m_scanlines[maskLineIndex];
 			if (containerIndex >= 0){
 				Q_ASSERT(containerIndex < mask.m_rangesContainer.size());
 
@@ -585,7 +608,7 @@ void CScanlineMask::GetIntersection(const CScanlineMask& mask, CScanlineMask& re
 		if (		(lineIndex >= 0) && (lineIndex < int(m_scanlines.size())) &&
 					(maskLineIndex >= 0) && (maskLineIndex < int(mask.m_scanlines.size()))){
 			int containerIndex = m_scanlines[lineIndex];
-			int maskContainerIndex = mask.m_scanlines[lineIndex];
+			int maskContainerIndex = mask.m_scanlines[maskLineIndex];
 
 			if ((containerIndex >= 0) && (maskContainerIndex >= 0)){
 				const istd::CIntRanges& ranges = m_rangesContainer[containerIndex];
@@ -668,6 +691,8 @@ void CScanlineMask::Dilate(int leftValue, int rightValue, int topValue, int bott
 		return;
 	}
 
+	m_isBoundingBoxValid = false;
+
 	for (		RangesContainer::Iterator lineIter = m_rangesContainer.begin();
 				lineIter != m_rangesContainer.end();
 				++lineIter){
@@ -733,7 +758,7 @@ void CScanlineMask::Dilate(int leftValue, int rightValue, int topValue, int bott
 
 		for (int shiftY = 1; restErodeLines > 0; shiftY <<= 1, restErodeLines -= shiftY){
 			CScanlineMask shiftedMask;
-			GetTranslated(0, qMin(shiftY, restErodeLines), shiftedMask);
+			GetTranslated(0, -qMin(shiftY, restErodeLines), shiftedMask);
 
 			Intersection(shiftedMask);
 		}

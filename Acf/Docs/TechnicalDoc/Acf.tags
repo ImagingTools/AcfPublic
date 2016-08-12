@@ -35692,6 +35692,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
+      <type>i2d::CRect</type>
+      <name>GetBoundingRect</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>af7646cfbe165814ff7ee270ebab893ea</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>ResetScanlines</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>

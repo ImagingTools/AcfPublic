@@ -224,7 +224,7 @@ bool CRectImageSmoothProcessorComp::DoRectFilter(
 		if (kernelMaxHeight > 1){
 			iimg::CGeneralBitmap tempBitmap;
 
-			return DoRectFilterHorizontal(kernelMaxWidth, outputPixelFormat, inputImage, tempBitmap, borderMode) && DoRectFilterVertical(kernelMaxHeight, outputPixelFormat, inputImage, tempBitmap, borderMode);
+			return DoRectFilterHorizontal(kernelMaxWidth, outputPixelFormat, inputImage, tempBitmap, borderMode) && DoRectFilterVertical(kernelMaxHeight, outputPixelFormat, inputImage, outputImage, borderMode);
 		}
 		else{
 			return DoRectFilterHorizontal(kernelMaxWidth, outputPixelFormat, inputImage, outputImage, borderMode);
@@ -243,6 +243,10 @@ bool CRectImageSmoothProcessorComp::DoRectFilterHorizontal(
 			iimg::IBitmap& outputBitmap,
 			BorderMode borderMode)
 {
+	if (outputPixelFormat == iimg::IBitmap::PF_UNKNOWN){
+		outputPixelFormat = inputBitmap.GetPixelFormat();
+	}
+
 	iimg::IBitmap::PixelFormat inputFormat = inputBitmap.GetPixelFormat();
 	switch (inputFormat){
 	case iimg::IBitmap::PF_GRAY:
@@ -369,6 +373,10 @@ bool CRectImageSmoothProcessorComp::DoRectFilterVertical(
 			iimg::IBitmap& outputBitmap,
 			BorderMode borderMode)
 {
+	if (outputPixelFormat == iimg::IBitmap::PF_UNKNOWN){
+		outputPixelFormat = inputBitmap.GetPixelFormat();
+	}
+
 	iimg::IBitmap::PixelFormat inputFormat = inputBitmap.GetPixelFormat();
 	switch (inputFormat){
 	case iimg::IBitmap::PF_GRAY:
