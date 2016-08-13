@@ -25,7 +25,7 @@
 
 
 // Qt includes
-#include <QMutex>
+#include <QtCore/QMutex>
 
 // ACF includes
 #include "istd/TTransPtr.h"
