@@ -701,7 +701,8 @@ public:
 			BaseClass::m_r = value.m_r;
 			BaseClass::m_g = value.m_g;
 			BaseClass::m_b = value.m_b;
-			BaseClass::m_a = value.m_a;
+			
+			m_a = value.m_a;
 
 			return *this;
 		}
