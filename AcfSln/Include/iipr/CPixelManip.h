@@ -667,41 +667,41 @@ public:
 		{
 			IntType gray = (IntType(value) << Shift);
 
-			return (m_r == gray) && (m_g == gray) && (m_b == gray) && (m_a == (IntType(255) << Shift));
+			return (BaseClass::m_r == gray) && (BaseClass::m_g == gray) && (BaseClass::m_b == gray) && (m_a == (IntType(255) << Shift));
 		}
 
 		bool operator==(double value)
 		{
 			IntType gray = IntType(value * (1 << Shift));
 
-			return (m_r == gray) && (m_g == gray) && (m_b == gray) && (m_a == (IntType(255) << Shift));
+			return (BaseClass::m_r == gray) && (BaseClass::m_g == gray) && (BaseClass::m_b == gray) && (m_a == (IntType(255) << Shift));
 		}
 
 		bool operator!=(const RgbaCropAccum32& value)
 		{
-			return (m_r != value.m_r) || (m_g != value.m_g) || (m_b != value.m_b) || (m_a != value.m_a);
+			return (BaseClass::m_r != value.m_r) || (BaseClass::m_g != value.m_g) || (BaseClass::m_b != value.m_b) || (m_a != value.m_a);
 		}
 
 		bool operator!=(int value)
 		{
 			IntType gray = (IntType(value) << Shift);
 
-			return (m_r != gray) || (m_g != gray) || (m_b != gray) || (m_a != (IntType(255) << Shift));
+			return (BaseClass::m_r != gray) || (BaseClass::m_g != gray) || (BaseClass::m_b != gray) || (m_a != (IntType(255) << Shift));
 		}
 
 		bool operator!=(double value)
 		{
 			IntType gray = IntType(value * (1 << Shift));
 
-			return (m_r != gray) || (m_g != gray) || (m_b != gray) || (m_a != (IntType(255) << Shift));
+			return (BaseClass::m_r != gray) || (BaseClass::m_g != gray) || (BaseClass::m_b != gray) || (m_a != (IntType(255) << Shift));
 		}
 
 		RgbaCropAccum32& operator=(const RgbaCropAccum32& value)
 		{
-			m_r = value.m_r;
-			m_g = value.m_g;
-			m_b = value.m_b;
-			m_a = value.m_a;
+			BaseClass::m_r = value.m_r;
+			BaseClass::m_g = value.m_g;
+			BaseClass::m_b = value.m_b;
+			BaseClass::m_a = value.m_a;
 
 			return *this;
 		}
@@ -710,9 +710,9 @@ public:
 		{
 			IntType a = (m_a + value.m_a) / 2;
 			if (a != 0){
-				m_r = (m_r * m_a + value.m_r * value.m_a) / a;
-				m_g = (m_g * m_a + value.m_g * value.m_a) / a;
-				m_b = (m_b * m_a + value.m_b * value.m_a) / a;
+				BaseClass::m_r = (m_r * m_a + value.m_r * value.m_a) / a;
+				BaseClass::m_g = (m_g * m_a + value.m_g * value.m_a) / a;
+				BaseClass::m_b = (m_b * m_a + value.m_b * value.m_a) / a;
 			}
 			m_a = a;
 
@@ -723,9 +723,9 @@ public:
 		{
 			IntType a = (m_a + (IntType(value.m_a) << Shift)) / 2;
 			if (a != 0){
-				m_r = (m_r * (m_a >> Shift) + (IntType(value.m_r) * IntType(value.m_a) << Shift)) / a;
-				m_g = (m_g * (m_a >> Shift) + (IntType(value.m_g) * IntType(value.m_a) << Shift)) / a;
-				m_b = (m_b * (m_a >> Shift) + (IntType(value.m_b) * IntType(value.m_a) << Shift)) / a;
+				BaseClass::m_r = (BaseClass::m_r * (m_a >> Shift) + (IntType(value.m_r) * IntType(value.m_a) << Shift)) / a;
+				BaseClass::m_g = (BaseClass::m_g * (m_a >> Shift) + (IntType(value.m_g) * IntType(value.m_a) << Shift)) / a;
+				BaseClass::m_b = (BaseClass::m_b * (m_a >> Shift) + (IntType(value.m_b) * IntType(value.m_a) << Shift)) / a;
 			}
 			m_a = a;				  
 									  
@@ -737,9 +737,9 @@ public:
 			IntType gray_corr = (IntType(value) * IntType(255) << Shift);
 			IntType a = (m_a + (IntType(255) << Shift)) / 2;
 			if (a != 0){
-				m_r = (m_r * (m_a >> Shift) + gray_corr) / a;
-				m_g = (m_g * (m_a >> Shift) + gray_corr) / a;
-				m_b = (m_b * (m_a >> Shift) + gray_corr) / a;
+				BaseClass::m_r = (BaseClass::m_r * (m_a >> Shift) + gray_corr) / a;
+				BaseClass::m_g = (BaseClass::m_g * (m_a >> Shift) + gray_corr) / a;
+				BaseClass::m_b = (BaseClass::m_b * (m_a >> Shift) + gray_corr) / a;
 			}
 			m_a = a;				  
 
@@ -751,9 +751,9 @@ public:
 			IntType gray = IntType(value * (255 << Shift));
 			IntType a = (m_a + (IntType(255) << Shift)) / 2;
 			if (a != 0){
-				m_r = (m_r * (m_a >> Shift) + gray_corr) / a;
-				m_g = (m_g * (m_a >> Shift) + gray_corr) / a;
-				m_b = (m_b * (m_a >> Shift) + gray_corr) / a;
+				BaseClass::m_r = (BaseClass::m_r * (m_a >> Shift) + gray_corr) / a;
+				BaseClass::m_g = (BaseClass::m_g * (m_a >> Shift) + gray_corr) / a;
+				BaseClass::m_b = (BaseClass::m_b * (m_a >> Shift) + gray_corr) / a;
 			}
 			m_a = a;
 
@@ -797,7 +797,7 @@ public:
 
 		operator Rgba()
 		{
-			IntType red = m_r;
+			IntType red = BaseClass::m_r;
 			if (DoCropMin && (red < 0)){
 				red = 0;
 			}
@@ -805,7 +805,7 @@ public:
 				red = 0xff;
 			}
 
-			IntType green = m_g;
+			IntType green = BaseClass::m_g;
 			if (DoCropMin && (green < 0)){
 				green = 0;
 			}
@@ -813,7 +813,7 @@ public:
 				green = 0xff;
 			}
 
-			IntType blue = m_b;
+			IntType blue = BaseClass::m_b;
 			if (DoCropMin && (blue < 0)){
 				blue = 0;
 			}
