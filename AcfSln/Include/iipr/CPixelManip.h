@@ -710,9 +710,9 @@ public:
 		{
 			IntType a = (m_a + value.m_a) / 2;
 			if (a != 0){
-				BaseClass::m_r = (m_r * m_a + value.m_r * value.m_a) / a;
-				BaseClass::m_g = (m_g * m_a + value.m_g * value.m_a) / a;
-				BaseClass::m_b = (m_b * m_a + value.m_b * value.m_a) / a;
+				BaseClass::m_r = (BaseClass::m_r * m_a + value.m_r * value.m_a) / a;
+				BaseClass::m_g = (BaseClass::m_g * m_a + value.m_g * value.m_a) / a;
+				BaseClass::m_b = (BaseClass::m_b * m_a + value.m_b * value.m_a) / a;
 			}
 			m_a = a;
 
