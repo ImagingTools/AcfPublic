@@ -748,7 +748,7 @@ public:
 
 		RgbaCropAccum32& operator+=(double value)
 		{
-			IntType gray = IntType(value * (255 << Shift));
+			IntType gray_corr = IntType(value * (255 << Shift));
 			IntType a = (m_a + (IntType(255) << Shift)) / 2;
 			if (a != 0){
 				BaseClass::m_r = (BaseClass::m_r * (m_a >> Shift) + gray_corr) / a;
