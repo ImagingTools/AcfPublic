@@ -660,7 +660,7 @@ public:
 
 		bool operator==(const RgbaCropAccum32& value)
 		{
-			return (m_r == value.m_r) && (m_g == value.m_g) && (m_b == value.m_b) && (m_a == value.m_a);
+			return (BaseClass::m_r == value.m_r) && (BaseClass::m_g == value.m_g) && (BaseClass::m_b == value.m_b) && (m_a == value.m_a);
 		}
 
 		bool operator==(int value)
