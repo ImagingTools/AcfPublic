@@ -63744,15 +63744,15 @@
       <type>void</type>
       <name>Erode</name>
       <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
-      <anchor>a82f267581aa411c08794702e21e684cf</anchor>
-      <arglist>(ValueType leftValue, ValueType rightValue=leftValue)</arglist>
+      <anchor>a4a8f56401ee2cc212d5227e446616e8f</anchor>
+      <arglist>(ValueType leftValue, ValueType rightValue)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>Dilate</name>
       <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
-      <anchor>a0fd8db52213d01bfc043d29b54b10db3</anchor>
-      <arglist>(ValueType leftValue, ValueType rightValue=leftValue)</arglist>
+      <anchor>a21ade651e58b536a2a75fecda294fafe</anchor>
+      <arglist>(ValueType leftValue, ValueType rightValue)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
