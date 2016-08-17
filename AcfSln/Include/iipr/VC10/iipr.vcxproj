@@ -117,7 +117,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\CAdaptiveImageBinarizeProcessorComp.cpp" />
-    <ClCompile Include="..\CAutoImageNormalizeProcessorComp.cpp" />
     <ClCompile Include="..\CBitmapJoinerSupplierComp.cpp" />
     <ClCompile Include="..\CBitmapOperations.cpp" />
     <ClCompile Include="..\CBitmapProviderCacheComp.cpp" />
@@ -185,7 +184,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CAdaptiveImageBinarizeProcessorComp.h" />
-    <ClInclude Include="..\CAutoImageNormalizeProcessorComp.h" />
     <ClInclude Include="..\CBitmapJoinerSupplierComp.h" />
     <ClInclude Include="..\CBitmapOperations.h" />
     <ClInclude Include="..\CBitmapProviderCacheComp.h" />

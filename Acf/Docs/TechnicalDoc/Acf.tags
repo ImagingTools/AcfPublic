@@ -35553,6 +35553,13 @@
       <anchor>acfd02a47a1e68c53fa93b0df15a8b66e</anchor>
       <arglist>(int index) const </arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static const CPixelFormatList &amp;</type>
+      <name>GetInstance</name>
+      <anchorfile>classiimg_1_1_c_pixel_format_list.html</anchorfile>
+      <anchor>ab03920d96c3cd5d64bb412681a4ae6c7</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iimg::CReflectedBitmapBase</name>
