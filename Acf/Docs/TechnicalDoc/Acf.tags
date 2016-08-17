@@ -35664,6 +35664,13 @@
     <base>i2d::CObject2dBase</base>
     <base virtualness="virtual">iimg::IRasterImage</base>
     <member kind="typedef">
+      <type>i2d::CObject2dBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a3aa6c89fe47433b6f72e3e63ee8b444f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>QList&lt; istd::CIntRanges &gt;</type>
       <name>RangesContainer</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
@@ -35928,6 +35935,27 @@
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
       <anchor>a2f3947c71c49739c5ec3bc2bc57dde0b</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a9a9644d40271cbd72d04315ca713450b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a923fa697216b73e68417f9c3a75cb0ea</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>aee3736454af2f8ad1bf652e2f437b127</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>

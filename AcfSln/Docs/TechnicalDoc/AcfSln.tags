@@ -15134,6 +15134,27 @@
       <anchor>a30932dcadedb53a49e5dec6e6c7183cc</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>AoiMode</name>
+      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
+      <anchor>a06fbbbbd08c4fb742be83adc05a01572</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>AM_INPUT_PIXELS</name>
+      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
+      <anchor>a06fbbbbd08c4fb742be83adc05a01572a0406749811fc213835240067af1cad33</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>AM_OUTPUT_PIXELS</name>
+      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
+      <anchor>a06fbbbbd08c4fb742be83adc05a01572a3df7273523ee9fb566d018b14793e275</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>iproc::CSyncProcessorCompBase</type>
       <name>BaseClass</name>
