@@ -35776,6 +35776,13 @@
       <arglist>(const i2d::CTubePolyline &amp;tube, const i2d::CRect *clipAreaPtr=NULL)</arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>GetInverted</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a50c962898958b8a6b6f5068aafaf7a70</anchor>
+      <arglist>(const i2d::CRect &amp;clipArea, CScanlineMask &amp;result) const </arglist>
+    </member>
+    <member kind="function">
       <type>CScanlineMask</type>
       <name>GetUnion</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
@@ -63650,6 +63657,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
+      <type></type>
+      <name>TRanges</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>aa56a13216b72eb5d148695d38ac1a85f</anchor>
+      <arglist>(const istd::TRange&lt; ValueType &gt; &amp;range)</arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>Reset</name>
       <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
@@ -63718,6 +63732,13 @@
       <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
       <anchor>a828da86224b651b28c637b122cf1cff9</anchor>
       <arglist>(const TRanges&lt; ValueType &gt; &amp;rangesList) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetInverted</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>a12e4f5ce2b4dba106247feb74b10227c</anchor>
+      <arglist>(TRanges&lt; ValueType &gt; &amp;result, const TRange&lt; ValueType &gt; *clipRangePtr) const </arglist>
     </member>
     <member kind="function">
       <type>TRanges&lt; ValueType &gt;</type>
@@ -63809,6 +63830,20 @@
       <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
       <anchor>a10cd04168431ce75a3c174d628ebb27d</anchor>
       <arglist>(const TRange&lt; ValueType &gt; &amp;range, RangeList &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>aa4f4adb50495b0e4cf2675bf8ad183cf</anchor>
+      <arglist>(const TRanges&lt; ValueType &gt; &amp;ranges)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>ae0b4d1f32fcacd75e54acbac2352a97c</anchor>
+      <arglist>(const TRanges&lt; ValueType &gt; &amp;ranges)</arglist>
     </member>
   </compound>
   <compound kind="class">

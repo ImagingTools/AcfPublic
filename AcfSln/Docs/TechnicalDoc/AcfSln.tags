@@ -1368,6 +1368,16 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CImageCopyProcessorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_image_copy_processor_comp_8h</filename>
+    <includes id="_i_linear_adjust_params_8h" name="ILinearAdjustParams.h" local="yes" imported="no">imeas/ILinearAdjustParams.h</includes>
+    <includes id="_i_numeric_value_8h" name="INumericValue.h" local="yes" imported="no">imeas/INumericValue.h</includes>
+    <includes id="_c_image_processor_comp_base_8h" name="CImageProcessorCompBase.h" local="yes" imported="no">iipr/CImageProcessorCompBase.h</includes>
+    <class kind="class">iipr::CImageCopyProcessorComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CImageCropProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_crop_processor_comp_8h</filename>
@@ -15013,6 +15023,7 @@
     <class kind="class">iipr::CHoughLineFinderComp</class>
     <class kind="class">iipr::CHoughSpace2d</class>
     <class kind="class">iipr::CImageBinarizeProcessorComp</class>
+    <class kind="class">iipr::CImageCopyProcessorComp</class>
     <class kind="class">iipr::CImageCropProcessorComp</class>
     <class kind="class">iipr::CImageFlipProcessorComp</class>
     <class kind="class">iipr::CImageHistogramProcessorComp</class>
@@ -16473,6 +16484,27 @@
       <anchor>afc912b92500d13115a58f1f2301176f0</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>SeparationType</name>
+      <anchorfile>classiipr_1_1_i_convolution_kernel2d.html</anchorfile>
+      <anchor>a7ea90dedb7301554c9547d2850917cce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>ST_AUTO</name>
+      <anchorfile>classiipr_1_1_i_convolution_kernel2d.html</anchorfile>
+      <anchor>a7ea90dedb7301554c9547d2850917cceab3ae301246786349abef81c70a4d6bed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>ST_HOR_VERT</name>
+      <anchorfile>classiipr_1_1_i_convolution_kernel2d.html</anchorfile>
+      <anchor>a7ea90dedb7301554c9547d2850917ccea055b49aea6ebf49ea7c15bf9755a7be7</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CConvolutionKernel2d</name>
@@ -16494,6 +16526,20 @@
       <anchor>a0414c3cee4da8cdabc17dc922e247a7b</anchor>
       <arglist>(const imath::ISampledFunction2d &amp;function2d)</arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CConvolutionKernel2d</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
+      <anchor>a23d2a162231e37fb48131d2c4d6fa45a</anchor>
+      <arglist>(const istd::CIndex2d &amp;kernelSize, double value=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetKernelDistance</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
+      <anchor>ae2bec3c7f511215b1eb7c012dbb3c26e</anchor>
+      <arglist>(const IConvolutionKernel2d &amp;kernel) const </arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CIndex2d</type>
       <name>GetKernelSize</name>
@@ -16505,8 +16551,8 @@
       <type>virtual void</type>
       <name>SetKernelSize</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>a916126a50cd490578b0b50eccbec7e15</anchor>
-      <arglist>(const istd::CIndex2d &amp;kernelSize)</arglist>
+      <anchor>a837534b40fbffff29b9ee4f530930394</anchor>
+      <arglist>(const istd::CIndex2d &amp;kernelSize, double value=0.0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
@@ -16530,11 +16576,25 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>SetOffsetValue</name>
       <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
-      <anchor>aa1085bab4ac8b8b7a03037ba9f97858e</anchor>
+      <anchor>ae1ff9808ab710db8fdf3172db4a1c1da</anchor>
       <arglist>(double offset)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetCombinedKernel</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
+      <anchor>a9860cfe04fbfa30dedc8f814d23fd363</anchor>
+      <arglist>(const IConvolutionKernel2d &amp;kernel, IConvolutionKernel2d &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>TrySeparateKernels</name>
+      <anchorfile>classiipr_1_1_c_convolution_kernel2d.html</anchorfile>
+      <anchor>a8301dd06b7f39c19c046d24eee699f5f</anchor>
+      <arglist>(IConvolutionKernel2d &amp;result1, IConvolutionKernel2d &amp;result2, int separationType=ST_AUTO, double tolerance=I_BIG_EPSILON) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -16663,8 +16723,8 @@
       <type>static bool</type>
       <name>DoConvolutionFilter</name>
       <anchorfile>classiipr_1_1_c_convolution_processor_comp.html</anchorfile>
-      <anchor>a90705400eac75e74d384c6ffa42c7ef7</anchor>
-      <arglist>(const IConvolutionKernel2d &amp;kernel, int backgroundMode, iimg::IBitmap::PixelFormat outputPixelFormat, const iimg::IBitmap &amp;inputImage, const iimg::CScanlineMask &amp;resultMask, iimg::IBitmap &amp;outputImage, istd::ILogger *loggerPtr=NULL)</arglist>
+      <anchor>ac287672f35e80a439db9d3a03487ce74</anchor>
+      <arglist>(const IConvolutionKernel2d &amp;kernel, BackgroundFillMode backgroundMode, iimg::IBitmap::PixelFormat outputPixelFormat, const iimg::IBitmap &amp;inputImage, const iimg::CScanlineMask &amp;resultMask, iimg::IBitmap &amp;outputImage, istd::ILogger *loggerPtr=NULL)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -16681,10 +16741,10 @@
       <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>int</type>
+      <type>BackgroundFillMode</type>
       <name>GetBackgroundMode</name>
       <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>ac0830afc2fd370fc8d82c6e90121fa4e</anchor>
+      <anchor>ae6e90ed9be68cd4e1597ea9ed83e2f6b</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
     </member>
     <member kind="function" protection="protected">
@@ -17695,6 +17755,32 @@
       <anchorfile>classiipr_1_1_c_image_binarize_processor_comp.html</anchorfile>
       <anchor>a169349d9a8373f26906ae813cf0e8242</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CImageCopyProcessorComp</name>
+    <filename>classiipr_1_1_c_image_copy_processor_comp.html</filename>
+    <base>iipr::CImageProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iipr::CImageProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_image_copy_processor_comp.html</anchorfile>
+      <anchor>a7ebb3b3e90c75807b38831228eae5cf1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>DoImageCopy</name>
+      <anchorfile>classiipr_1_1_c_image_copy_processor_comp.html</anchorfile>
+      <anchor>a838d016c54bd2fa89de2fcb0bf83d9d5</anchor>
+      <arglist>(iimg::IBitmap::PixelFormat outputPixelFormat, const iimg::IBitmap &amp;inputImage, const iimg::CScanlineMask &amp;resultMask, iimg::IBitmap &amp;outputImage, istd::ILogger *loggerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ProcessImage</name>
+      <anchorfile>classiipr_1_1_c_image_copy_processor_comp.html</anchorfile>
+      <anchor>a483da8ccc116fed768f3cefb3706637e</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -20872,8 +20958,8 @@
       <type>virtual void</type>
       <name>SetKernelSize</name>
       <anchorfile>classiipr_1_1_i_convolution_kernel2d.html</anchorfile>
-      <anchor>a5e5b29ef2d7576df1b9061a2bc192e8f</anchor>
-      <arglist>(const istd::CIndex2d &amp;kernelSize)=0</arglist>
+      <anchor>ac11477711e62226bfb79451ec2d6988f</anchor>
+      <arglist>(const istd::CIndex2d &amp;kernelSize, double value=0.0)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
@@ -20897,11 +20983,25 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>SetOffsetValue</name>
       <anchorfile>classiipr_1_1_i_convolution_kernel2d.html</anchorfile>
-      <anchor>aa9061aeb79cfd9bbbe27e166fe329940</anchor>
+      <anchor>a2217af3e893b11d394bdae7d42ee6cd3</anchor>
       <arglist>(double offset)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>GetCombinedKernel</name>
+      <anchorfile>classiipr_1_1_i_convolution_kernel2d.html</anchorfile>
+      <anchor>ab9e376236b5783871a53b5802aacc06d</anchor>
+      <arglist>(const IConvolutionKernel2d &amp;kernel, IConvolutionKernel2d &amp;result) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>TrySeparateKernels</name>
+      <anchorfile>classiipr_1_1_i_convolution_kernel2d.html</anchorfile>
+      <anchor>a8d001fb3d07c5db95e0c122f524b5c4e</anchor>
+      <arglist>(IConvolutionKernel2d &amp;result1, IConvolutionKernel2d &amp;result2, int separationType=ST_AUTO, double tolerance=I_BIG_EPSILON) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -30512,6 +30612,7 @@
     <file>CHoughLineFinderComp.h</file>
     <file>CHoughSpace2d.h</file>
     <file>CImageBinarizeProcessorComp.h</file>
+    <file>CImageCopyProcessorComp.h</file>
     <file>CImageCropProcessorComp.h</file>
     <file>CImageFlipProcessorComp.h</file>
     <file>CImageHistogramProcessorComp.h</file>

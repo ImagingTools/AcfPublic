@@ -148,6 +148,7 @@
     <ClCompile Include="..\CHoughLineFinderComp.cpp" />
     <ClCompile Include="..\CHoughSpace2d.cpp" />
     <ClCompile Include="..\CImageBinarizeProcessorComp.cpp" />
+    <ClCompile Include="..\CImageCopyProcessorComp.cpp" />
     <ClCompile Include="..\CImageCropProcessorComp.cpp" />
     <ClCompile Include="..\CImageFlipProcessorComp.cpp" />
     <ClCompile Include="..\CImageHistogramProcessorComp.cpp" />
@@ -215,6 +216,7 @@
     <ClInclude Include="..\CHoughLineFinderComp.h" />
     <ClInclude Include="..\CHoughSpace2d.h" />
     <ClInclude Include="..\CImageBinarizeProcessorComp.h" />
+    <ClInclude Include="..\CImageCopyProcessorComp.h" />
     <ClInclude Include="..\CImageCropProcessorComp.h" />
     <ClInclude Include="..\CImageFlipProcessorComp.h" />
     <ClInclude Include="..\CImageHistogramProcessorComp.h" />
