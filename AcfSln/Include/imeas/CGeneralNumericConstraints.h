@@ -45,8 +45,6 @@ namespace imeas
 class CGeneralNumericConstraints: virtual public INumericConstraints
 {
 public:
-	typedef icomp::CComponentBase BaseClass;
-
 	/**
 		Removes all value informations.
 	*/
