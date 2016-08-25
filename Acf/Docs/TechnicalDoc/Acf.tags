@@ -4470,7 +4470,7 @@
     <includes id="_c_signal_blocker_8h" name="CSignalBlocker.h" local="yes" imported="no">iqt/CSignalBlocker.h</includes>
     <includes id="_t_shape_params_gui_comp_base_8h" name="TShapeParamsGuiCompBase.h" local="yes" imported="no">iqt2d/TShapeParamsGuiCompBase.h</includes>
     <class kind="class">iqt2d::TPolygonBasedParamsGuiComp</class>
-    <class kind="class">iqt2d::TPolygonBasedParamsGuiComp::CPolygonParamsGuiItemDelegate</class>
+    <class kind="class">iqt2d::TPolygonBasedParamsGuiComp::TableModel</class>
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
@@ -48473,18 +48473,11 @@
       <anchor>a3adb90150890a25794ae767f9c53eb98</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetObjectFromEditor</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a2a47cac7113bb8f03b1972e339d2541b</anchor>
-      <arglist>(i2d::CPolygon &amp;object) const</arglist>
-    </member>
     <member kind="function" protection="protected">
-      <type>QTableWidget *</type>
+      <type>QTableView *</type>
       <name>GetNodeTable</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a404f5b3e48947e6bf207d79d06f8492b</anchor>
+      <anchor>ade8fceef2f92f7ace00959e4f29f5cd5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -48516,39 +48509,39 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
+      <type>virtual int</type>
+      <name>rowCount</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a30547f2127be843f4033f1392af6f5a9</anchor>
-      <arglist>()</arglist>
+      <anchor>a62e6f65221c39cb21852710cd910c035</anchor>
+      <arglist>(const QModelIndex &amp;parent=QModelIndex()) const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
+      <type>virtual int</type>
+      <name>columnCount</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>aacfff00b7914dc828ed70db3c8406731</anchor>
-      <arglist>()</arglist>
+      <anchor>ab0469c166761d52ad11da029d7c2766d</anchor>
+      <arglist>(const QModelIndex &amp;parent=QModelIndex()) const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
+      <type>virtual QVariant</type>
+      <name>data</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a4dabab14cd6524522b487b5fbbc8a0cf</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a3aca94f1bc5cdd49f2a0c1f2a8e2a253</anchor>
+      <arglist>(const QModelIndex &amp;index, int role=Qt::DisplayRole) const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiShown</name>
+      <type>virtual bool</type>
+      <name>setData</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a6d16bf350e992e936c5a308dea76ba8e</anchor>
-      <arglist>()</arglist>
+      <anchor>a0491853731b9fdabde3d3ec90726f820</anchor>
+      <arglist>(const QModelIndex &amp;index, const QVariant &amp;value, int role=Qt::EditRole)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiHidden</name>
+      <type>virtual QVariant</type>
+      <name>headerData</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>ac0fdae358f18c600b23549b5e87d00d5</anchor>
-      <arglist>()</arglist>
+      <anchor>a9783109b8560181ec4ca0f07624cf84a</anchor>
+      <arglist>(int section, Qt::Orientation orientation, int role=Qt::DisplayRole) const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -48577,6 +48570,13 @@
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a242d199c7aaf17853bd368e24094d86d</anchor>
       <arglist>(QAction *actionPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a4dabab14cd6524522b487b5fbbc8a0cf</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual i2d::CPolygon *</type>
@@ -48772,18 +48772,11 @@
       <anchor>a1ef383c55110fcc461b40e2a0919fa9b</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetObjectFromEditor</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a2a47cac7113bb8f03b1972e339d2541b</anchor>
-      <arglist>(i2d::CPolyline &amp;object) const</arglist>
-    </member>
     <member kind="function" protection="protected">
-      <type>QTableWidget *</type>
+      <type>QTableView *</type>
       <name>GetNodeTable</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a404f5b3e48947e6bf207d79d06f8492b</anchor>
+      <anchor>ade8fceef2f92f7ace00959e4f29f5cd5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -48815,39 +48808,39 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
+      <type>virtual int</type>
+      <name>rowCount</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a30547f2127be843f4033f1392af6f5a9</anchor>
-      <arglist>()</arglist>
+      <anchor>a62e6f65221c39cb21852710cd910c035</anchor>
+      <arglist>(const QModelIndex &amp;parent=QModelIndex()) const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
+      <type>virtual int</type>
+      <name>columnCount</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>aacfff00b7914dc828ed70db3c8406731</anchor>
-      <arglist>()</arglist>
+      <anchor>ab0469c166761d52ad11da029d7c2766d</anchor>
+      <arglist>(const QModelIndex &amp;parent=QModelIndex()) const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
+      <type>virtual QVariant</type>
+      <name>data</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a4dabab14cd6524522b487b5fbbc8a0cf</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a3aca94f1bc5cdd49f2a0c1f2a8e2a253</anchor>
+      <arglist>(const QModelIndex &amp;index, int role=Qt::DisplayRole) const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiShown</name>
+      <type>virtual bool</type>
+      <name>setData</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a6d16bf350e992e936c5a308dea76ba8e</anchor>
-      <arglist>()</arglist>
+      <anchor>a0491853731b9fdabde3d3ec90726f820</anchor>
+      <arglist>(const QModelIndex &amp;index, const QVariant &amp;value, int role=Qt::EditRole)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiHidden</name>
+      <type>virtual QVariant</type>
+      <name>headerData</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>ac0fdae358f18c600b23549b5e87d00d5</anchor>
-      <arglist>()</arglist>
+      <anchor>a9783109b8560181ec4ca0f07624cf84a</anchor>
+      <arglist>(int section, Qt::Orientation orientation, int role=Qt::DisplayRole) const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -48862,6 +48855,13 @@
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a242d199c7aaf17853bd368e24094d86d</anchor>
       <arglist>(QAction *actionPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a4dabab14cd6524522b487b5fbbc8a0cf</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual i2d::CPolyline *</type>
@@ -49461,55 +49461,6 @@
       <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqt2d_1_1_c_tube_polyline_params_gui_comp.html</anchorfile>
-      <anchor>a76ea3cdfd1589d5437ef93581a50e29a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TPolygonBasedParamsGuiComp</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>aa70f0f398f5bbc38b4ac0ad0f7e09e32</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TSingleModelObserverBase</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>i2d::CTubePolyline *</type>
-      <name>GetObservedObject</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>i2d::CTubePolyline *</type>
-      <name>GetObjectPtr</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>AttachOrSetObject</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
-      <arglist>(i2d::CTubePolyline *objectPtr)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnParamsChanged</name>
-      <anchorfile>classiqt2d_1_1_c_tube_polyline_params_gui_comp.html</anchorfile>
-      <anchor>a60bed1ad37bb02278e94cbf24aaa9c0c</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnActionTriggered</name>
@@ -49546,38 +49497,45 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnInsertNode</name>
+      <type>virtual int</type>
+      <name>columnCount</name>
       <anchorfile>classiqt2d_1_1_c_tube_polyline_params_gui_comp.html</anchorfile>
-      <anchor>a4a82d485aabf616ed4e4ea17d07292db</anchor>
-      <arglist>()</arglist>
+      <anchor>a2c8aa55baaf6fe826521fcac0b8aa4c8</anchor>
+      <arglist>(const QModelIndex &amp;parent=QModelIndex()) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
+      <type>virtual QVariant</type>
+      <name>data</name>
       <anchorfile>classiqt2d_1_1_c_tube_polyline_params_gui_comp.html</anchorfile>
-      <anchor>a0b551e258761d8ac80876ce192c85647</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiRetranslate</name>
-      <anchorfile>classiqt2d_1_1_c_tube_polyline_params_gui_comp.html</anchorfile>
-      <anchor>a5a749fbcb90d12a93006670d4f7a5e09</anchor>
-      <arglist>()</arglist>
+      <anchor>a472b852e664f38ba205b982f45714a33</anchor>
+      <arglist>(const QModelIndex &amp;index, int role=Qt::DisplayRole) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
-      <name>GetObjectFromEditor</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a2a47cac7113bb8f03b1972e339d2541b</anchor>
-      <arglist>(i2d::CTubePolyline &amp;object) const</arglist>
+      <name>setData</name>
+      <anchorfile>classiqt2d_1_1_c_tube_polyline_params_gui_comp.html</anchorfile>
+      <anchor>ac5b98a049d6bf8f1937c55ffbdcc9e29</anchor>
+      <arglist>(const QModelIndex &amp;index, const QVariant &amp;value, int role=Qt::EditRole)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QVariant</type>
+      <name>headerData</name>
+      <anchorfile>classiqt2d_1_1_c_tube_polyline_params_gui_comp.html</anchorfile>
+      <anchor>a6940b41545b18344197842f9c9b7ddaf</anchor>
+      <arglist>(int section, Qt::Orientation orientation, int role=Qt::DisplayRole) const </arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>QTableWidget *</type>
+      <type>QTableView *</type>
       <name>GetNodeTable</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a404f5b3e48947e6bf207d79d06f8492b</anchor>
+      <anchor>ade8fceef2f92f7ace00959e4f29f5cd5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnInsertNode</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a3413ba3b4208a87dc7c46411c4cff84b</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -49602,38 +49560,24 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
+      <type>virtual int</type>
+      <name>rowCount</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a30547f2127be843f4033f1392af6f5a9</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>aacfff00b7914dc828ed70db3c8406731</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiShown</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a6d16bf350e992e936c5a308dea76ba8e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiHidden</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>ac0fdae358f18c600b23549b5e87d00d5</anchor>
-      <arglist>()</arglist>
+      <anchor>a62e6f65221c39cb21852710cd910c035</anchor>
+      <arglist>(const QModelIndex &amp;parent=QModelIndex()) const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a639829115b16468f337578e9eb36855b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>aadb2edd9f48e2c1abe4476c3248af62a</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -49651,11 +49595,60 @@
       <arglist>(QAction *actionPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a4dabab14cd6524522b487b5fbbc8a0cf</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual i2d::CTubePolyline *</type>
       <name>CastFromModel</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
       <arglist>(imod::IModel *modelPtr) const</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TPolygonBasedParamsGuiComp</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>aa70f0f398f5bbc38b4ac0ad0f7e09e32</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a4ad33e128116c9c72a6f4a4a129f5000</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSingleModelObserverBase</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CTubePolyline *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CTubePolyline *</type>
+      <name>GetObjectPtr</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>AttachOrSetObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
+      <arglist>(i2d::CTubePolyline *objectPtr)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>QAction</type>
@@ -50017,7 +50010,7 @@
     <templarg>PolygonBasedShape</templarg>
     <templarg>PolygonBasedModel</templarg>
     <base>TShapeParamsGuiCompBase&lt; Ui::CPolygonParamsGuiComp, PolygonBasedShape, PolygonBasedModel &gt;</base>
-    <class kind="class">iqt2d::TPolygonBasedParamsGuiComp::CPolygonParamsGuiItemDelegate</class>
+    <class kind="class">iqt2d::TPolygonBasedParamsGuiComp::TableModel</class>
     <member kind="enumeration">
       <type></type>
       <name>CellIndex</name>
@@ -50109,18 +50102,11 @@
       <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
       <arglist>(PolygonBasedModel *objectPtr)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetObjectFromEditor</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a2a47cac7113bb8f03b1972e339d2541b</anchor>
-      <arglist>(PolygonBasedModel &amp;object) const </arglist>
-    </member>
     <member kind="function" protection="protected">
-      <type>QTableWidget *</type>
+      <type>QTableView *</type>
       <name>GetNodeTable</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a404f5b3e48947e6bf207d79d06f8492b</anchor>
+      <anchor>ade8fceef2f92f7ace00959e4f29f5cd5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -50152,39 +50138,39 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
+      <type>virtual int</type>
+      <name>rowCount</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a30547f2127be843f4033f1392af6f5a9</anchor>
-      <arglist>()</arglist>
+      <anchor>a62e6f65221c39cb21852710cd910c035</anchor>
+      <arglist>(const QModelIndex &amp;parent=QModelIndex()) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
+      <type>virtual int</type>
+      <name>columnCount</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>aacfff00b7914dc828ed70db3c8406731</anchor>
-      <arglist>()</arglist>
+      <anchor>ab0469c166761d52ad11da029d7c2766d</anchor>
+      <arglist>(const QModelIndex &amp;parent=QModelIndex()) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
+      <type>virtual QVariant</type>
+      <name>data</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a4dabab14cd6524522b487b5fbbc8a0cf</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a3aca94f1bc5cdd49f2a0c1f2a8e2a253</anchor>
+      <arglist>(const QModelIndex &amp;index, int role=Qt::DisplayRole) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiShown</name>
+      <type>virtual bool</type>
+      <name>setData</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a6d16bf350e992e936c5a308dea76ba8e</anchor>
-      <arglist>()</arglist>
+      <anchor>a0491853731b9fdabde3d3ec90726f820</anchor>
+      <arglist>(const QModelIndex &amp;index, const QVariant &amp;value, int role=Qt::EditRole)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiHidden</name>
+      <type>virtual QVariant</type>
+      <name>headerData</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>ac0fdae358f18c600b23549b5e87d00d5</anchor>
-      <arglist>()</arglist>
+      <anchor>a9783109b8560181ec4ca0f07624cf84a</anchor>
+      <arglist>(int section, Qt::Orientation orientation, int role=Qt::DisplayRole) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -50213,6 +50199,13 @@
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a242d199c7aaf17853bd368e24094d86d</anchor>
       <arglist>(QAction *actionPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a4dabab14cd6524522b487b5fbbc8a0cf</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual PolygonBasedModel *</type>
@@ -50258,21 +50251,63 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqt2d::TPolygonBasedParamsGuiComp::CPolygonParamsGuiItemDelegate</name>
-    <filename>classiqt2d_1_1_t_polygon_based_params_gui_comp_1_1_c_polygon_params_gui_item_delegate.html</filename>
+    <name>iqt2d::TPolygonBasedParamsGuiComp::TableModel</name>
+    <filename>classiqt2d_1_1_t_polygon_based_params_gui_comp_1_1_table_model.html</filename>
+    <member kind="typedef">
+      <type>QAbstractTableModel</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp_1_1_table_model.html</anchorfile>
+      <anchor>a8d1065253d2fff1ae4735fc25ab388bd</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
-      <name>CPolygonParamsGuiItemDelegate</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp_1_1_c_polygon_params_gui_item_delegate.html</anchorfile>
-      <anchor>a03d2f842bcf1d3a2c1f319b1946cd22d</anchor>
-      <arglist>(QObject *parent)</arglist>
+      <name>TableModel</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp_1_1_table_model.html</anchorfile>
+      <anchor>ad1ec42bec7f0104b7c73f8877105de7a</anchor>
+      <arglist>(TPolygonBasedParamsGuiComp&lt; PolygonBasedShape, PolygonBasedModel &gt; *parentPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual QWidget *</type>
-      <name>createEditor</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp_1_1_c_polygon_params_gui_item_delegate.html</anchorfile>
-      <anchor>ab407525b1c480ce9fa245d8ffedaa0c4</anchor>
-      <arglist>(QWidget *parent, const QStyleOptionViewItem &amp;, const QModelIndex &amp;) const </arglist>
+      <type>virtual int</type>
+      <name>rowCount</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp_1_1_table_model.html</anchorfile>
+      <anchor>ae6388fbadd7cd11fbf4984f8b5d725ac</anchor>
+      <arglist>(const QModelIndex &amp;parent=QModelIndex()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>columnCount</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp_1_1_table_model.html</anchorfile>
+      <anchor>af8222407c1e64f817a7f0d8a368599bc</anchor>
+      <arglist>(const QModelIndex &amp;parent=QModelIndex()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QVariant</type>
+      <name>data</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp_1_1_table_model.html</anchorfile>
+      <anchor>ab5e4c1bbb9ce2b584fb4d88e73d415b6</anchor>
+      <arglist>(const QModelIndex &amp;index, int role=Qt::DisplayRole) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>setData</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp_1_1_table_model.html</anchorfile>
+      <anchor>aceae57b6a8d0679091f93a026e76462b</anchor>
+      <arglist>(const QModelIndex &amp;index, const QVariant &amp;value, int role=Qt::EditRole)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QVariant</type>
+      <name>headerData</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp_1_1_table_model.html</anchorfile>
+      <anchor>a553c7a23320427565e1b8ec75464d0cd</anchor>
+      <arglist>(int section, Qt::Orientation orientation, int role=Qt::DisplayRole) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Qt::ItemFlags</type>
+      <name>flags</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp_1_1_table_model.html</anchorfile>
+      <anchor>ad659f5c5c78de884a46d4d08bab1fd95</anchor>
+      <arglist>(const QModelIndex &amp;index) const </arglist>
     </member>
   </compound>
   <compound kind="class">
