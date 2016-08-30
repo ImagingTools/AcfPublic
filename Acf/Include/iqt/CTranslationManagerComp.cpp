@@ -1,25 +1,3 @@
-/********************************************************************************
-**
-**	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the ACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.ilena.org or write info@imagingtools.de for further
-** 	information about the ACF.
-**
-********************************************************************************/
-
-
 #include "iqt/CTranslationManagerComp.h"
 
 
@@ -194,11 +172,21 @@ QString CTranslationManagerComp::GetOptionName(int index) const
 	Q_ASSERT(index < GetOptionsCount());
 
 	if (index >= 0 && m_languagesAttrPtr.IsValid()){
-		QString languageId = m_languagesAttrPtr[index];
+		if (m_languageNamesAttrPtr.IsValid()){
+			if (index < m_languageNamesAttrPtr.GetCount()){
+				return m_languageNamesAttrPtr[index];
+			}
+			else{
+				qDebug("Number of lange names mismatched");
+			}
+		}
+		else{
+			QString languageId = m_languagesAttrPtr[index];
 
-		QLocale locale(languageId);
+			QLocale locale(languageId);
 
-		return QLocale::languageToString(locale.language());
+			return QLocale::languageToString(locale.language());
+		}
 	}
 
 	return QString();

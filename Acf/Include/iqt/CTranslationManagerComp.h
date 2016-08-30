@@ -1,25 +1,3 @@
-/********************************************************************************
-**
-**	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the ACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.ilena.org or write info@imagingtools.de for further
-** 	information about the ACF.
-**
-********************************************************************************/
-
-
 #ifndef iqt_CTranslationManagerComp_included
 #define iqt_CTranslationManagerComp_included
 
@@ -62,6 +40,7 @@ public:
 		I_ASSIGN(m_translationFilePathAttrPtr, "TranslationFilePath", "Base file path got translations", true, "");
 		I_ASSIGN(m_translationFilePrefixAttrPtr, "TranslationFilePrefix", "Prefix of the translation file", true, "");
 		I_ASSIGN_MULTI_0(m_languagesAttrPtr, "LanguageIds", "List of language IDs in ISO-format", true);
+		I_ASSIGN_MULTI_0(m_languageNamesAttrPtr, "LanguageNames", "List of language names according to 'LanguageIds' attribute", false);
 		I_ASSIGN(m_slaveTranslationManagerCompPtr, "SlaveTranslationManager", "Slave translation manager", false, "SlaveTranslationManager");
 		I_ASSIGN(m_languageSelectionCompPtr, "LanguageSelection", "Language selection provider", false, "LanguageSelection");
 		I_ASSIGN_TO(m_languageSelectionModelCompPtr, m_languageSelectionCompPtr, false);
@@ -114,6 +93,7 @@ private:
 	I_ATTR(QString, m_translationFilePathAttrPtr);
 	I_ATTR(QByteArray, m_translationFilePrefixAttrPtr);
 	I_MULTIATTR(QByteArray, m_languagesAttrPtr);
+	I_MULTIATTR(QString, m_languageNamesAttrPtr);
 	I_REF(iqt::ITranslationManager, m_slaveTranslationManagerCompPtr);
 	I_REF(iprm::ISelectionParam, m_languageSelectionCompPtr);
 	I_REF(imod::IModel, m_languageSelectionModelCompPtr);
