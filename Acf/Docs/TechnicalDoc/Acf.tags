@@ -48544,6 +48544,13 @@
       <arglist>(int section, Qt::Orientation orientation, int role=Qt::DisplayRole) const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Qt::ItemFlags</type>
+      <name>flags</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a4517fbca84e6a26a03f41ac3297ac111</anchor>
+      <arglist>(const QModelIndex &amp;index) const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
@@ -48841,6 +48848,13 @@
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a9783109b8560181ec4ca0f07624cf84a</anchor>
       <arglist>(int section, Qt::Orientation orientation, int role=Qt::DisplayRole) const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Qt::ItemFlags</type>
+      <name>flags</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a4517fbca84e6a26a03f41ac3297ac111</anchor>
+      <arglist>(const QModelIndex &amp;index) const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -49567,6 +49581,13 @@
       <arglist>(const QModelIndex &amp;parent=QModelIndex()) const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Qt::ItemFlags</type>
+      <name>flags</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a4517fbca84e6a26a03f41ac3297ac111</anchor>
+      <arglist>(const QModelIndex &amp;index) const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
@@ -50171,6 +50192,13 @@
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a9783109b8560181ec4ca0f07624cf84a</anchor>
       <arglist>(int section, Qt::Orientation orientation, int role=Qt::DisplayRole) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Qt::ItemFlags</type>
+      <name>flags</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a4517fbca84e6a26a03f41ac3297ac111</anchor>
+      <arglist>(const QModelIndex &amp;index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
