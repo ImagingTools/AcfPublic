@@ -1020,6 +1020,13 @@
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
+    <name>TLocalizableWrap.h</name>
+    <path>C:/Temp/Acf/Include/ibase/</path>
+    <filename>_t_localizable_wrap_8h</filename>
+    <class kind="class">ibase::TLocalizableWrap</class>
+    <namespace>ibase</namespace>
+  </compound>
+  <compound kind="file">
     <name>TModelObserverCompWrap.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_t_model_observer_comp_wrap_8h</filename>
@@ -4832,6 +4839,7 @@
     <filename>_c_gui_component_base_8h</filename>
     <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="yes" imported="no">imod/TModelWrap.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="yes" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_t_localizable_wrap_8h" name="TLocalizableWrap.h" local="yes" imported="no">ibase/TLocalizableWrap.h</includes>
     <includes id="_i_gui_object_8h" name="IGuiObject.h" local="yes" imported="no">iqtgui/IGuiObject.h</includes>
     <includes id="_i_visual_status_8h" name="IVisualStatus.h" local="yes" imported="no">iqtgui/IVisualStatus.h</includes>
     <class kind="class">iqtgui::CGuiComponentBase</class>
@@ -16524,6 +16532,7 @@
     <class kind="class">ibase::TComposedFactoryComp</class>
     <class kind="class">ibase::TContainer</class>
     <class kind="class">ibase::TFactorisableContainer</class>
+    <class kind="class">ibase::TLocalizableWrap</class>
     <class kind="class">ibase::TModelObserverCompWrap</class>
     <class kind="class">ibase::TMsbWord</class>
     <class kind="class">ibase::TSerializableContainer</class>
@@ -19241,6 +19250,39 @@
       <anchorfile>classibase_1_1_t_container.html</anchorfile>
       <anchor>a501b81f47325fe321743130bae1cd5a4</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ibase::TLocalizableWrap</name>
+    <filename>classibase_1_1_t_localizable_wrap.html</filename>
+    <templarg>Base</templarg>
+    <member kind="typedef">
+      <type>Base</type>
+      <name>BaseClass</name>
+      <anchorfile>classibase_1_1_t_localizable_wrap.html</anchorfile>
+      <anchor>a7268dfaee182e0fc49a5d0d31d2593b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TLocalizableWrap</name>
+      <anchorfile>classibase_1_1_t_localizable_wrap.html</anchorfile>
+      <anchor>acc479498542019b85868c0a00e984b52</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnableLocalization</name>
+      <anchorfile>classibase_1_1_t_localizable_wrap.html</anchorfile>
+      <anchor>a51904be307958387e79136212fe4d889</anchor>
+      <arglist>(bool enableLocalization=true)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>OnLanguageChanged</name>
+      <anchorfile>classibase_1_1_t_localizable_wrap.html</anchorfile>
+      <anchor>a5801c0ac4dbc222d969fb2745774f7b7</anchor>
+      <arglist>()=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33358,6 +33400,13 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classibase_1_1_t_localizable_wrap.html</anchorfile>
+      <anchor>a7268dfaee182e0fc49a5d0d31d2593b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>CSingleModelObserverBase</type>
       <name>BaseClass</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
@@ -33405,6 +33454,13 @@
       <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
       <anchor>aaebf9e40fa2b193e2e3f7d4e8ce97877</anchor>
       <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnLanguageChanged</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
+      <anchor>a70b6ca2bbf37e6ed9772b19074fd08ff</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -33503,6 +33559,20 @@
       <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
       <anchor>a697d9605707286e48215f8f722b90402</anchor>
       <arglist>(bool *ignoredPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TLocalizableWrap</name>
+      <anchorfile>classibase_1_1_t_localizable_wrap.html</anchorfile>
+      <anchor>acc479498542019b85868c0a00e984b52</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnableLocalization</name>
+      <anchorfile>classibase_1_1_t_localizable_wrap.html</anchorfile>
+      <anchor>a51904be307958387e79136212fe4d889</anchor>
+      <arglist>(bool enableLocalization=true)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -53865,7 +53935,7 @@
   <compound kind="class">
     <name>iqtgui::CGuiComponentBase</name>
     <filename>classiqtgui_1_1_c_gui_component_base.html</filename>
-    <base>icomp::CComponentBase</base>
+    <base>TLocalizableWrap&lt; icomp::CComponentBase &gt;</base>
     <base virtualness="virtual">iqtgui::IGuiObject</base>
     <class kind="class">iqtgui::CGuiComponentBase::VisualStatus</class>
     <member kind="function" protection="protected" virtualness="pure">
@@ -74338,6 +74408,7 @@
     <file>TComposedFactoryComp.h</file>
     <file>TContainer.h</file>
     <file>TFactorisableContainer.h</file>
+    <file>TLocalizableWrap.h</file>
     <file>TModelObserverCompWrap.h</file>
     <file>TMsbWord.h</file>
     <file>TSerializableContainer.h</file>

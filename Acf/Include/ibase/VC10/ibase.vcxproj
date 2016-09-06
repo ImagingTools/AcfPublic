@@ -163,6 +163,7 @@
     <ClInclude Include="..\TComposedFactoryComp.h" />
     <ClInclude Include="..\TContainer.h" />
     <ClInclude Include="..\TFactorisableContainer.h" />
+    <ClInclude Include="..\TLocalizableWrap.h" />
     <ClInclude Include="..\TModelObserverCompWrap.h" />
     <ClInclude Include="..\TMsbWord.h" />
     <ClInclude Include="..\TSerializableContainer.h" />
