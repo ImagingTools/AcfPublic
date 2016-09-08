@@ -31,10 +31,8 @@
 #include <QtGui/QDoubleValidator>
 #include <QtGui/QClipboard>
 #if QT_VERSION >= 0x050000
-#include <QtWidgets/QItemDelegate>
 #include <QtWidgets/QLineEdit>
 #else
-#include <QtGui/QItemDelegate>
 #include <QtGui/QLineEdit>
 #endif
 
