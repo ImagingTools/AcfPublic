@@ -23,6 +23,10 @@
 #include "iocv/COcvImage.h"
 
 
+// STL includes
+#include <cstring>
+
+
 namespace iocv
 {
 

@@ -23,6 +23,9 @@
 #include "iipr/CImageNormalizeProcessorComp.h"
 
 
+// STL includes
+#include <cstring>
+
 // ACF includes
 #include "imath/CFixedPointManip.h"
 #include "iprm/TParamsPtr.h"
