@@ -51,10 +51,9 @@ public:
 	virtual void UpdateModel() const;
 
 protected:
-	// reimplemented (TPolygonBasedParamsGuiComp)
-	virtual bool PopulateActions(CActionAdapter& host, imod::IModel* modelPtr);
-
 	// reimplemented (iqt2d::TShapeParamsGuiCompBase)
+	virtual bool PopulateActions(CActionAdapter& host, imod::IModel* modelPtr);
+	virtual void OnActionTriggered(QAction* actionPtr);
 	virtual iview::CInteractiveShapeBase* CreateShapeInstance() const;
 
 	// reimplemented (iqtgui::CGuiComponentBase)
@@ -67,9 +66,6 @@ protected Q_SLOTS:
 	void on_RemoveButton_clicked();
 	void on_CopyButton_clicked();
 	void on_PasteButton_clicked();
-
-	// reimplemented (TPolygonBasedParamsGuiComp)
-	void OnActionTriggered(QAction* actionPtr);
 
 private:
 	I_ATTR(bool, m_showOrientationAttrPtr);
