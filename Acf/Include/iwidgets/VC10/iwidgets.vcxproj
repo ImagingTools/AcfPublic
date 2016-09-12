@@ -132,6 +132,7 @@
     <ClCompile Include="..\CTextElider.cpp" />
     <ClCompile Include="..\CToolBoxDelegate.cpp" />
     <ClCompile Include="..\CTreeWidgetFilter.cpp" />
+    <ClCompile Include="..\iwidgets.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\CCheckableComboBox.h">

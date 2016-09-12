@@ -6936,6 +6936,7 @@
     <path>C:/Temp/Acf/Include/iwidgets/</path>
     <filename>_i_multi_page_widget_delegate_8h</filename>
     <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="no" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="iwidgets_8h" name="iwidgets.h" local="no" imported="no">iwidgets/iwidgets.h</includes>
     <class kind="class">iwidgets::IMultiPageWidgetDelegate</class>
     <namespace>iwidgets</namespace>
   </compound>
@@ -6945,6 +6946,13 @@
     <filename>iwidgets_8h</filename>
     <includes id="iqt_8h" name="iqt.h" local="yes" imported="no">iqt/iqt.h</includes>
     <namespace>iwidgets</namespace>
+    <member kind="function">
+      <type>void</type>
+      <name>ClearLayout</name>
+      <anchorfile>namespaceiwidgets.html</anchorfile>
+      <anchor>a10697d7b06bf7dba028f55d7be2c35f7</anchor>
+      <arglist>(QLayout *layout)</arglist>
+    </member>
   </compound>
   <compound kind="group">
     <name>AcfCore</name>
@@ -72257,6 +72265,13 @@
     <class kind="class">iwidgets::CTreeWidgetFilter</class>
     <class kind="class">iwidgets::CWidgetUpdateBlocker</class>
     <class kind="class">iwidgets::IMultiPageWidgetDelegate</class>
+    <member kind="function">
+      <type>void</type>
+      <name>ClearLayout</name>
+      <anchorfile>namespaceiwidgets.html</anchorfile>
+      <anchor>a10697d7b06bf7dba028f55d7be2c35f7</anchor>
+      <arglist>(QLayout *layout)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iwidgets::CCheckableComboBox</name>
@@ -72356,6 +72371,13 @@
       <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
       <anchor>ac787b4b48a13cbe99cb0278880938081</anchor>
       <arglist>(QWidget &amp;containerWidget, int pageIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetPages</name>
+      <anchorfile>classiwidgets_1_1_c_collapsible_group_widget_delegate.html</anchorfile>
+      <anchor>ab2fa5ba65a8c6215c1998da7ef43fda1</anchor>
+      <arglist>(QWidget &amp;containerWidget)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -73280,6 +73302,13 @@
       <arglist>(QWidget &amp;containerWidget, int pageIndex)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetPages</name>
+      <anchorfile>classiwidgets_1_1_c_simple_gui_container_delegate.html</anchorfile>
+      <anchor>acd07e4fde7c463aa5fc3b5400cf23bed</anchor>
+      <arglist>(QWidget &amp;containerWidget)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetPagesCount</name>
       <anchorfile>classiwidgets_1_1_c_simple_gui_container_delegate.html</anchorfile>
@@ -73432,6 +73461,13 @@
       <arglist>(QWidget &amp;containerWidget, int pageIndex)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetPages</name>
+      <anchorfile>classiwidgets_1_1_c_splitter_delegate.html</anchorfile>
+      <anchor>ae28b1a453cbe3b0a784cefad50c009c3</anchor>
+      <arglist>(QWidget &amp;containerWidget)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetPagesCount</name>
       <anchorfile>classiwidgets_1_1_c_splitter_delegate.html</anchorfile>
@@ -73582,6 +73618,13 @@
       <anchorfile>classiwidgets_1_1_c_stack_widget_delegate.html</anchorfile>
       <anchor>a9b52e22ff373bef3587b9667b2a188a7</anchor>
       <arglist>(QWidget &amp;containerWidget, int pageIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetPages</name>
+      <anchorfile>classiwidgets_1_1_c_stack_widget_delegate.html</anchorfile>
+      <anchor>ae4adc13af93b7a169b1597e9fa491be0</anchor>
+      <arglist>(QWidget &amp;containerWidget)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -73755,6 +73798,13 @@
       <anchorfile>classiwidgets_1_1_c_tab_widget_delegate.html</anchorfile>
       <anchor>afff4041ff3eb5cf7bfcc3942746f6d11</anchor>
       <arglist>(QWidget &amp;containerWidget, int pageIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetPages</name>
+      <anchorfile>classiwidgets_1_1_c_tab_widget_delegate.html</anchorfile>
+      <anchor>aadb51c8df6f52f769f4231d4dccf53f8</anchor>
+      <arglist>(QWidget &amp;containerWidget)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -73976,6 +74026,13 @@
       <arglist>(QWidget &amp;containerWidget, int pageIndex)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetPages</name>
+      <anchorfile>classiwidgets_1_1_c_tool_box_delegate.html</anchorfile>
+      <anchor>a2f07570270d0943d48c45fd6f8daa3a0</anchor>
+      <arglist>(QWidget &amp;containerWidget)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetPagesCount</name>
       <anchorfile>classiwidgets_1_1_c_tool_box_delegate.html</anchorfile>
@@ -74169,6 +74226,13 @@
       <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
       <anchor>ae691e8665a535f07b908e3ae62d72781</anchor>
       <arglist>(QWidget &amp;containerWidget, int pageIndex)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>ResetPages</name>
+      <anchorfile>classiwidgets_1_1_i_multi_page_widget_delegate.html</anchorfile>
+      <anchor>ac07cba8599fc49da32ad1f644cc86a2e</anchor>
+      <arglist>(QWidget &amp;containerWidget)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
