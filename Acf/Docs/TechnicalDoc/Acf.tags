@@ -55252,6 +55252,13 @@
       <anchor>a70e404a18b0b9cb082f97614e33f2a02</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtgui_1_1_c_tab_container_gui_comp.html</anchorfile>
+      <anchor>a339d7874c2db7d67e5fd6dad1bfdfaa5</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtgui::CTableBasedModelEditorComp</name>

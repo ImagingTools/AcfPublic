@@ -58,6 +58,7 @@ protected:
 
 	// reimplemented (iqtgui::CGuiComponentBase)
 	virtual void OnGuiCreated();
+	virtual void OnGuiDestroyed();
 
 private:
 	I_MULTIREF(IGuiObject, m_slaveWidgetsCompPtr);
