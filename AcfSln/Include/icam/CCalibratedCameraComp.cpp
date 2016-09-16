@@ -26,12 +26,6 @@
 // STD includes
 #include <cmath>
 
-#if defined(_MSC_VER)
-	#ifndef isnan
-		#define isnan(x) _isnan(x)
-	#endif
-#endif
-
 // ACF includes
 #include "iprm/TParamsPtr.h"
 #include "imeas/INumericValue.h"
@@ -59,7 +53,7 @@ bool CCalibratedCameraComp::ReadImageResolution(const iimg::IBitmap& bitmap, dou
 				quint32& bitmapPattern = (quint32&)rawData[0];
 				double& value = (double&)rawData[sizeof(RESOLUTION_PATTERN)];
 
-				if (bitmapPattern == RESOLUTION_PATTERN && !isnan(value) && (value > 0)){
+				if (bitmapPattern == RESOLUTION_PATTERN && !qIsNaN(value) && (value > 0)){
 					resolution = value;
 
 					return true;
@@ -88,7 +82,7 @@ bool CCalibratedCameraComp::ReadImageResolution(const iimg::IBitmap& bitmap, dou
 					res.data[6]= rawData[21];
 					res.data[7]= rawData[22];
 
-					if (!isnan(res.value) && (res.value > 0)){
+					if (!qIsNaN(res.value) && (res.value > 0)){
 						resolution = res.value;
 
 						return true;
