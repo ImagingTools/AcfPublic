@@ -48836,19 +48836,19 @@
       <anchor>acd9f60ffe3891cfcf1abc8eee50da8eb</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnActionTriggered</name>
+      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
+      <anchor>ac735f8b01134fa82a2a2c968bb263cb3</anchor>
+      <arglist>(QAction *actionPtr)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>PopulateActions</name>
       <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
       <anchor>ac4ebc238698cc55f401c7846e917dddb</anchor>
       <arglist>(CActionAdapter &amp;host, imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnActionTriggered</name>
-      <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
-      <anchor>ac735f8b01134fa82a2a2c968bb263cb3</anchor>
-      <arglist>(QAction *actionPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual iview::CInteractiveShapeBase *</type>
@@ -48947,6 +48947,13 @@
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a639829115b16468f337578e9eb36855b</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnActionTriggered</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a242d199c7aaf17853bd368e24094d86d</anchor>
+      <arglist>(QAction *actionPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
