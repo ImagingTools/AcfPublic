@@ -105,6 +105,7 @@ void CTabContainerGuiComp::OnGuiDestroyed()
 			m_cornerGuiCompPtr->DestroyGui();
 		}
 	}
+	BaseClass::OnGuiDestroyed();
 }
 
 
