@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iview/CInteractiveViewLayer.h"
+#include <iview/CInteractiveViewLayer.h>
 
 
 // Qt includes
@@ -28,14 +28,14 @@
 #include <QtGui/QPainter>
 
 // ACF includes
-#include "iqt/iqt.h"
+#include <iqt/iqt.h>
 
-#include "iview/IInteractiveShape.h"
-#include "iview/IShapeView.h"
-#include "iview/IDraggable.h"
-#include "iview/IShapeView.h"
-#include "iview/IViewEventObserver.h"
-#include "iview/CScreenTransform.h"
+#include <iview/IInteractiveShape.h>
+#include <iview/IShapeView.h>
+#include <iview/IDraggable.h>
+#include <iview/IShapeView.h>
+#include <iview/IViewEventObserver.h>
+#include <iview/CScreenTransform.h>
 
 
 namespace iview

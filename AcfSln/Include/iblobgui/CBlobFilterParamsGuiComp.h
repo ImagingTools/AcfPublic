@@ -25,11 +25,11 @@
 
 
 // ACF includes
-#include "iqtgui/TDesignerGuiObserverCompBase.h"
+#include <iqtgui/TDesignerGuiObserverCompBase.h>
 
 // ACF-Solutions includes
-#include "iblob/IBlobFilterParams.h"
-#include "GeneratedFiles/iblobgui/ui_CBlobFilterParamsGuiComp.h"
+#include <iblob/IBlobFilterParams.h>
+#include <GeneratedFiles/iblobgui/ui_CBlobFilterParamsGuiComp.h>
 
 
 namespace iblobgui

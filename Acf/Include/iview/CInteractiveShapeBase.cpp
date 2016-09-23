@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iview/CInteractiveShapeBase.h"
+#include <iview/CInteractiveShapeBase.h>
 
 
 // Qt includes
@@ -28,11 +28,11 @@
 
 
 // ACF includes
-#include "istd/IChangeable.h"
-#include "iqt/iqt.h"
+#include <istd/IChangeable.h>
+#include <iqt/iqt.h>
 
-#include "iview/ISelectable.h"
-#include "iview/IViewLayer.h"
+#include <iview/ISelectable.h>
+#include <iview/IViewLayer.h>
 
 
 namespace iview

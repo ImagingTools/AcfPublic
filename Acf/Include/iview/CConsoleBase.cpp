@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iview/CConsoleBase.h"
+#include <iview/CConsoleBase.h>
 
 
 // Qt includes
@@ -32,10 +32,10 @@
 #endif
 
 // ACF includes
-#include "i2d/CRectangle.h"
-#include "iview/IViewEventObserver.h"
-#include "iview/CScreenTransform.h"
-#include "iview/CViewport.h"
+#include <i2d/CRectangle.h>
+#include <iview/IViewEventObserver.h>
+#include <iview/CScreenTransform.h>
+#include <iview/CViewport.h>
 
 
 namespace iview

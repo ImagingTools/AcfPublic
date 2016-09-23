@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "i2d/CRectangleComp.h"
+#include <i2d/CRectangleComp.h>
 
 
 namespace i2d

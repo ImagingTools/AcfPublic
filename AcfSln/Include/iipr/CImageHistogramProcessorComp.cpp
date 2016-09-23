@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iipr/CImageHistogramProcessorComp.h"
+#include <iipr/CImageHistogramProcessorComp.h>
 
 
 // STL includes
@@ -31,10 +31,10 @@
 #include <QtCore/QCoreApplication>
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "ibase/CSize.h"
-#include "iimg/IBitmap.h"
-#include "iimg/CScanlineMask.h"
+#include <istd/CChangeNotifier.h>
+#include <ibase/CSize.h>
+#include <iimg/IBitmap.h>
+#include <iimg/CScanlineMask.h>
 
 
 namespace iipr

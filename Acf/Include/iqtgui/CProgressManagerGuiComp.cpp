@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtgui/CProgressManagerGuiComp.h"
+#include <iqtgui/CProgressManagerGuiComp.h>
 
 
 // Qt includes

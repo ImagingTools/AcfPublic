@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtgui/CToolBarGuiCompBase.h"
+#include <iqtgui/CToolBarGuiCompBase.h>
 
 
 // Qt includes

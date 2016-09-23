@@ -25,13 +25,13 @@
 
 
 // ACF includes
-#include "iqtgui/TDesignerGuiObserverCompBase.h"
+#include <iqtgui/TDesignerGuiObserverCompBase.h>
 
 
 // Tutorial includes
-#include "IAb.h"
+#include <IAb.h>
 
-#include "GeneratedFiles/ModelObserver/ui_CAbGuiComp.h"
+#include <GeneratedFiles/ModelObserver/ui_CAbGuiComp.h>
 
 
 /**

@@ -20,16 +20,16 @@
 ********************************************************************************/
 
 
-#include "iqtipr/CColorPatternComparatorGuiComp.h"
+#include <iqtipr/CColorPatternComparatorGuiComp.h>
 
 // Qt includes
 #include <QtCore/QTimer>
 
 // ACF includes
-#include "i2d/CDirection2d.h"
-#include "imeas/IDataSequenceProvider.h"
-#include "iprm/IEnableableParam.h"
-#include "iprm/TParamsPtr.h"
+#include <i2d/CDirection2d.h>
+#include <imeas/IDataSequenceProvider.h>
+#include <iprm/IEnableableParam.h>
+#include <iprm/TParamsPtr.h>
 
 
 namespace iqtipr

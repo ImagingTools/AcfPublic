@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iloggui/CTextLogGuiComp.h"
+#include <iloggui/CTextLogGuiComp.h>
 
 
 //#define PERFORMANCE_TEST
@@ -35,7 +35,7 @@
 #endif
 
 // ACF includes
-#include "iqt/CSignalBlocker.h"
+#include <iqt/CSignalBlocker.h>
 
 
 namespace iloggui

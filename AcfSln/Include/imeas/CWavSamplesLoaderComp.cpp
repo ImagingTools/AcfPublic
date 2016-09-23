@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "imeas/CWavSamplesLoaderComp.h"
+#include <imeas/CWavSamplesLoaderComp.h>
 
 
 // STL includes
@@ -32,11 +32,11 @@
 #include <QtCore/QFile>
 
 // ACF includes
-#include "istd/TRange.h"
+#include <istd/TRange.h>
 
 // ACF-Solutions
-#include "imeas/IDataSequence.h"
-#include "imeas/CSamplesInfo.h"
+#include <imeas/IDataSequence.h>
+#include <imeas/CSamplesInfo.h>
 
 
 namespace imeas

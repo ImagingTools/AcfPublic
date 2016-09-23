@@ -23,7 +23,7 @@
 #include "BitmapPck.h"
 
 
-#include "icomp/export.h"
+#include <icomp/export.h>
 
 
 namespace BitmapPck

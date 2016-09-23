@@ -25,9 +25,9 @@
 
 
 // ACF includes
-#include "ifile/IFilePersistence.h"
-#include "ilog/TLoggerCompWrap.h"
-#include "idoc/IMultiPageDocument.h"
+#include <ifile/IFilePersistence.h>
+#include <ilog/TLoggerCompWrap.h>
+#include <idoc/IMultiPageDocument.h>
 
 
 namespace idoc

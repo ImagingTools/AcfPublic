@@ -28,8 +28,8 @@
 #include <QtCore/QMap>
 
 // ACF includes
-#include "iview/IViewLayer.h"
-#include "iview/IShape.h"
+#include <iview/IViewLayer.h>
+#include <iview/IShape.h>
 
 
 namespace iview

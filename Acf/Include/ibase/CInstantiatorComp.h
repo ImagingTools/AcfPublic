@@ -24,7 +24,7 @@
 #define ibase_CInstantiatorComp_included
 
 
-#include "icomp/CComponentBase.h"
+#include <icomp/CComponentBase.h>
 
 
 namespace ibase

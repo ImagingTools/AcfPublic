@@ -24,8 +24,8 @@
 #define iipr_IISearchParamsConstraints_included
 
 
-#include "istd/IChangeable.h"
-#include "istd/TRange.h"
+#include <istd/IChangeable.h>
+#include <istd/TRange.h>
 
 
 namespace iipr

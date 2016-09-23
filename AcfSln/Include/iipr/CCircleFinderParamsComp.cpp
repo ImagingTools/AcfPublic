@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iipr/CCircleFinderParamsComp.h"
+#include <iipr/CCircleFinderParamsComp.h>
 
 
 namespace iipr

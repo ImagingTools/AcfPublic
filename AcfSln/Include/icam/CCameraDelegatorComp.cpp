@@ -20,12 +20,12 @@
 ********************************************************************************/
 
 
-#include "icam/CCameraDelegatorComp.h"
+#include <icam/CCameraDelegatorComp.h>
 
 
 // ACF includes
-#include "istd/CIndex2d.h"
-#include "iprm/CParamsSet.h"
+#include <istd/CIndex2d.h>
+#include <iprm/CParamsSet.h>
 
 
 namespace icam

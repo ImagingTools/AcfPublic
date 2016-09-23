@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtgui/CVersionInfoGuiComp.h"
+#include <iqtgui/CVersionInfoGuiComp.h>
 
 
 namespace iqtgui

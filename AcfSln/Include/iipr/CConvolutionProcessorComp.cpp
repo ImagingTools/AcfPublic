@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iipr/CConvolutionProcessorComp.h"
+#include <iipr/CConvolutionProcessorComp.h>
 
 
 // STL includes
@@ -30,14 +30,14 @@
 #include <QtCore/QVector>
 
 // ACF includes
-#include "iprm/TParamsPtr.h"
-#include "iimg/CPixelFormatList.h"
-#include "iimg/CGeneralBitmap.h"
+#include <iprm/TParamsPtr.h>
+#include <iimg/CPixelFormatList.h>
+#include <iimg/CGeneralBitmap.h>
 
 // ACF-Solutions includes
-#include "iipr/CPixelManip.h"
-#include "iipr/CConvolutionKernel2d.h"
-#include "iipr/CImageCopyProcessorComp.h"
+#include <iipr/CPixelManip.h>
+#include <iipr/CConvolutionKernel2d.h>
+#include <iipr/CImageCopyProcessorComp.h>
 
 
 namespace iipr

@@ -29,9 +29,9 @@
 #endif
 
 // ACF includes
-#include "ibase/IApplication.h"
+#include <ibase/IApplication.h>
 
-#include "GeneratedFiles/XpcEditor/CXpcEditor.h"
+#include <GeneratedFiles/XpcEditor/CXpcEditor.h>
 
 
 int main(int argc, char *argv[])

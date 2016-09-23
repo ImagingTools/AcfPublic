@@ -25,8 +25,8 @@
 
 
 // ACF includes
-#include "iser/IVersionInfo.h"
-#include "icomp/CComponentBase.h"
+#include <iser/IVersionInfo.h>
+#include <icomp/CComponentBase.h>
 
 
 namespace ibase

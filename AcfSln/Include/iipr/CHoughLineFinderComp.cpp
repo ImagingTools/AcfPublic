@@ -20,14 +20,14 @@
 ********************************************************************************/
 
 
-#include "iipr/CHoughLineFinderComp.h"
+#include <iipr/CHoughLineFinderComp.h>
 
 
 // ACF include
-#include "iimg/CScanlineMask.h"
-#include "iimg/CBitmap.h"
-#include "iprm/TParamsPtr.h"
-#include "ilog/TExtMessage.h"
+#include <iimg/CScanlineMask.h>
+#include <iimg/CBitmap.h>
+#include <iprm/TParamsPtr.h>
+#include <ilog/TExtMessage.h>
 
 
 namespace iipr

@@ -20,14 +20,14 @@
 ********************************************************************************/
 
 
-#include "ilog/CConsoleLogComp.h"
+#include <ilog/CConsoleLogComp.h>
 
 
 // STL includes
 #include <iostream>
 
 // ACF includes
-#include "istd/IInformationProvider.h"
+#include <istd/IInformationProvider.h>
 
 // Windows includes
 #ifdef Q_OS_WIN

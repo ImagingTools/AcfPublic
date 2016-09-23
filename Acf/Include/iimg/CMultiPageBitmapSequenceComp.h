@@ -25,9 +25,9 @@
 
 
 // ACF includes
-#include "icomp/CComponentBase.h"
-#include "idoc/TMultiPageDocumentWrap.h"
-#include "iimg/IMultiBitmapProvider.h"
+#include <icomp/CComponentBase.h>
+#include <idoc/TMultiPageDocumentWrap.h>
+#include <iimg/IMultiBitmapProvider.h>
 
 
 namespace iimg

@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iimg/CBitmap.h"
+#include <iimg/CBitmap.h>
 
 
 // include STL
@@ -32,8 +32,8 @@
 #include <QtGui/QColor>
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "istd/TDelPtr.h"
+#include <istd/CChangeNotifier.h>
+#include <istd/TDelPtr.h>
 
 
 namespace iimg

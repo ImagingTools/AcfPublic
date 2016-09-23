@@ -28,7 +28,7 @@
 #include <QtCore/QByteArray>
 
 // ACF includes
-#include "icomp/CMultiReferenceAttribute.h"
+#include <icomp/CMultiReferenceAttribute.h>
 
 
 namespace icomp

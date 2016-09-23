@@ -25,7 +25,7 @@
 
 
 // ACF-Solutions includes
-#include "iipr/IImageInterpolationParams.h"
+#include <iipr/IImageInterpolationParams.h>
 
 
 namespace iipr

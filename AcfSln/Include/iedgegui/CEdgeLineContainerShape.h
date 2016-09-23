@@ -25,8 +25,8 @@
 
 
 // ACF includes
-#include "icmm/IColorTransformation.h"
-#include "iview/CShapeBase.h"
+#include <icmm/IColorTransformation.h>
+#include <iview/CShapeBase.h>
 
 
 namespace iedgegui

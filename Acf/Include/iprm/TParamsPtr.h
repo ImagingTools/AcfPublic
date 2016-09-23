@@ -29,11 +29,11 @@
 #include <QtCore/QStringList>
 
 // ACF includes
-#include "istd/TPointerBase.h"
-#include "iattr/TAttribute.h"
-#include "icomp/TAttributeMember.h"
-#include "icomp/TReferenceMember.h"
-#include "iprm/IParamsSet.h"
+#include <istd/TPointerBase.h>
+#include <iattr/TAttribute.h>
+#include <icomp/TAttributeMember.h>
+#include <icomp/TReferenceMember.h>
+#include <iprm/IParamsSet.h>
 
 
 namespace iprm

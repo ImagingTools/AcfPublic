@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iimg/CMultiPageBitmapComp.h"
+#include <iimg/CMultiPageBitmapComp.h>
 
 
 namespace iimg

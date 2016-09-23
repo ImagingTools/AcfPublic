@@ -20,16 +20,16 @@
 ********************************************************************************/
 
 
-#include "iipr/CSearchBasedFeaturesSupplierComp.h"
+#include <iipr/CSearchBasedFeaturesSupplierComp.h>
 
 
 // ACF includes
-#include "iprm/IParamsManager.h"
-#include "iprm/TParamsPtr.h"
+#include <iprm/IParamsManager.h>
+#include <iprm/TParamsPtr.h>
 
 // ACF-Solutions includes
-#include "iipr/CSearchFeature.h"
-#include "iipr/ISearchParams.h"
+#include <iipr/CSearchFeature.h>
+#include <iipr/ISearchParams.h>
 
 
 namespace iipr

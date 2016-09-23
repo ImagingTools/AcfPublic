@@ -20,14 +20,14 @@
 ********************************************************************************/
 
 
-#include "iproc/CIterativeProcessorComp.h"
+#include <iproc/CIterativeProcessorComp.h>
 
 
 // ACF includes
-#include "iprm/ISelectionParam.h"
-#include "iprm/TParamsPtr.h"
+#include <iprm/ISelectionParam.h>
+#include <iprm/TParamsPtr.h>
 
-#include "ibase/IProgressManager.h"
+#include <ibase/IProgressManager.h>
 
 
 namespace iproc

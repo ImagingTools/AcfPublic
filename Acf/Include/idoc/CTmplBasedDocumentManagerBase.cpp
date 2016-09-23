@@ -20,10 +20,10 @@
 ********************************************************************************/
 
 
-#include "idoc/CTmplBasedDocumentManagerBase.h"
+#include <idoc/CTmplBasedDocumentManagerBase.h>
 
 
-#include "idoc/IDocumentTemplate.h"
+#include <idoc/IDocumentTemplate.h>
 
 
 namespace idoc

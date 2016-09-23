@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ifile/CTimeStampFileNameParamComp.h"
+#include <ifile/CTimeStampFileNameParamComp.h>
 
 
 // Qt includes

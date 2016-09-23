@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ifile/CFileReadArchive.h"
+#include <ifile/CFileReadArchive.h>
 
 
 // Qt includes
@@ -28,7 +28,7 @@
 
 
 // ACF includes
-#include "iser/CArchiveTag.h"
+#include <iser/CArchiveTag.h>
 
 
 namespace ifile

@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iipr/CDelegatedBitmapSupplierComp.h"
+#include <iipr/CDelegatedBitmapSupplierComp.h>
 
 
 namespace iipr

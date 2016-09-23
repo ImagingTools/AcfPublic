@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ifile/CComposedFilePersistenceComp.h"
+#include <ifile/CComposedFilePersistenceComp.h>
 
 
 // Qt includes

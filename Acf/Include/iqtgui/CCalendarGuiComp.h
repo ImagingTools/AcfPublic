@@ -25,9 +25,9 @@
 
 
 // ACF includes
-#include "iqtgui/TDesignerGuiCompBase.h"
+#include <iqtgui/TDesignerGuiCompBase.h>
 
-#include "GeneratedFiles/iqtgui/ui_CCalendarGuiComp.h"
+#include <GeneratedFiles/iqtgui/ui_CCalendarGuiComp.h>
 
 
 namespace iqtgui

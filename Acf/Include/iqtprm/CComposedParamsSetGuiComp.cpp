@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtprm/CComposedParamsSetGuiComp.h"
+#include <iqtprm/CComposedParamsSetGuiComp.h>
 
 
 // Qt includes
@@ -43,11 +43,11 @@
 #endif
 
 // ACF includes
-#include "imod/IModel.h"
-#include "imod/IObserver.h"
-#include "iqt/CSignalBlocker.h"
-#include "iview/IShapeView.h"
-#include "iqt2d/IViewProvider.h"
+#include <imod/IModel.h>
+#include <imod/IObserver.h>
+#include <iqt/CSignalBlocker.h>
+#include <iview/IShapeView.h>
+#include <iqt2d/IViewProvider.h>
 
 
 namespace iqtprm

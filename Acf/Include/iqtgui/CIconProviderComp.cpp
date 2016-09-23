@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtgui/CIconProviderComp.h"
+#include <iqtgui/CIconProviderComp.h>
 
 
 namespace iqtgui

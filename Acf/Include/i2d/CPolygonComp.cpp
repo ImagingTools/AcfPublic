@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "i2d/CPolygonComp.h"
+#include <i2d/CPolygonComp.h>
 
 
 namespace i2d

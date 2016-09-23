@@ -24,10 +24,10 @@
 #define iipr_IFeatureToFeatureProcessor_included
 
 
-#include "iproc/IProcessor.h"
+#include <iproc/IProcessor.h>
 
-#include "iipr/IFeaturesConsumer.h"
-#include "imeas/INumericValueProvider.h"
+#include <iipr/IFeaturesConsumer.h>
+#include <imeas/INumericValueProvider.h>
 
 
 namespace iipr

@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "i2d/CTubePolylineComp.h"
+#include <i2d/CTubePolylineComp.h>
 
 
 namespace i2d

@@ -24,8 +24,8 @@
 
 
 // ACF includes
-#include "iimg/IBitmap.h"
-#include "icam/CCameraDelegatorComp.h"
+#include <iimg/IBitmap.h>
+#include <icam/CCameraDelegatorComp.h>
 
 
 namespace icam

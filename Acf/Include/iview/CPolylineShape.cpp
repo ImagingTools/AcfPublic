@@ -20,15 +20,15 @@
 ********************************************************************************/
 
 
-#include "iview/CPolylineShape.h"
+#include <iview/CPolylineShape.h>
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "imod/IModel.h"
-#include "i2d/CPolyline.h"
-#include "iqt/iqt.h"
-#include "iview/IColorSchema.h"
-#include "iview/CScreenTransform.h"
+#include <istd/CChangeNotifier.h>
+#include <imod/IModel.h>
+#include <i2d/CPolyline.h>
+#include <iqt/iqt.h>
+#include <iview/IColorSchema.h>
+#include <iview/CScreenTransform.h>
 
 
 namespace iview

@@ -25,9 +25,9 @@
 
 
 // ACF includes
-#include "icomp/CComponentBase.h"
+#include <icomp/CComponentBase.h>
 
-#include "iprm/CNameParam.h"
+#include <iprm/CNameParam.h>
 
 
 namespace iprm

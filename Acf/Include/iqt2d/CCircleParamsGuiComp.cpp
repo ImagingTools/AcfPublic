@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqt2d/CCircleParamsGuiComp.h"
+#include <iqt2d/CCircleParamsGuiComp.h>
 
 
 namespace iqt2d

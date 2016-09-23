@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "i2d/CLine2dComp.h"
+#include <i2d/CLine2dComp.h>
 
 
 namespace i2d

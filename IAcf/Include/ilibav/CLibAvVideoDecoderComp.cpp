@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ilibav/CLibAvVideoDecoderComp.h"
+#include <ilibav/CLibAvVideoDecoderComp.h>
 
 
 // Qt includes
@@ -28,13 +28,13 @@
 
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "istd/TSmartPtr.h"
-#include "ifile/IFileNameParam.h"
+#include <istd/CChangeNotifier.h>
+#include <istd/TSmartPtr.h>
+#include <ifile/IFileNameParam.h>
 
-#include "imeas/CSamplesInfo.h"
+#include <imeas/CSamplesInfo.h>
 
-#include "ilibav/CLibAvConverter.h"
+#include <ilibav/CLibAvConverter.h>
 
 
 namespace ilibav

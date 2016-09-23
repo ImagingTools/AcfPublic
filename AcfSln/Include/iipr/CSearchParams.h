@@ -25,10 +25,10 @@
 
 
 // ACF includes
-#include "iimg/CGeneralBitmap.h"
+#include <iimg/CGeneralBitmap.h>
 
 // ACF-Solutions includes
-#include "iipr/ISearchParams.h"
+#include <iipr/ISearchParams.h>
 
 
 namespace iipr

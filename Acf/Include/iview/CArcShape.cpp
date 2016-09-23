@@ -20,17 +20,17 @@
 ********************************************************************************/
 
 
-#include "iview/CArcShape.h"
+#include <iview/CArcShape.h>
 
 
 // Qt includes
 #include <QtGui/QPainter>
 
 // ACF includes
-#include "imod/IModel.h"
-#include "i2d/CArc.h"
-#include "iview/IColorSchema.h"
-#include "iview/CScreenTransform.h"
+#include <imod/IModel.h>
+#include <i2d/CArc.h>
+#include <iview/IColorSchema.h>
+#include <iview/CScreenTransform.h>
 
 
 namespace iview

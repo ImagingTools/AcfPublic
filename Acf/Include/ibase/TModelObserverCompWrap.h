@@ -28,9 +28,9 @@
 #include <QtCore/QDebug>
 
 // ACF includes
-#include "imod/IModel.h"
-#include "imod/TSingleModelObserverBase.h"
-#include "ilog/TLoggerCompWrap.h"
+#include <imod/IModel.h>
+#include <imod/TSingleModelObserverBase.h>
+#include <ilog/TLoggerCompWrap.h>
 
 
 namespace ibase

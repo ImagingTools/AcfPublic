@@ -28,8 +28,8 @@
 #include <QtCore/QString>
 
 // ACF includes
-#include "istd/IPolymorphic.h"
-#include "idoc/IHelpInfoProvider.h"
+#include <istd/IPolymorphic.h>
+#include <idoc/IHelpInfoProvider.h>
 
 
 namespace idoc

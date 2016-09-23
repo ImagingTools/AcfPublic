@@ -24,11 +24,11 @@
 #define WizardGuiPck_included
 
 
-#include "icomp/TModelCompWrap.h"
-#include "icomp/TMakeComponentWrap.h"
+#include <icomp/TModelCompWrap.h>
+#include <icomp/TMakeComponentWrap.h>
 
 
-#include "iwizgui/CWizardOptionsListGuiComp.h"
+#include <iwizgui/CWizardOptionsListGuiComp.h>
 
 
 /**

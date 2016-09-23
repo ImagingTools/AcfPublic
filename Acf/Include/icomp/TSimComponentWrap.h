@@ -25,9 +25,9 @@
 
 
 // ACF includes
-#include "icomp/ICompositeComponent.h"
-#include "icomp/TComponentWrap.h"
-#include "icomp/CSimComponentContextBase.h"
+#include <icomp/ICompositeComponent.h>
+#include <icomp/TComponentWrap.h>
+#include <icomp/CSimComponentContextBase.h>
 
 
 namespace icomp

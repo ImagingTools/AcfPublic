@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ifile/CFileNameParamComp.h"
+#include <ifile/CFileNameParamComp.h>
 
 
 #if QT_VERSION >= 0x050000
@@ -30,9 +30,9 @@
 #endif
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "iser/IArchive.h"
-#include "iser/CArchiveTag.h"
+#include <istd/CChangeNotifier.h>
+#include <iser/IArchive.h>
+#include <iser/CArchiveTag.h>
 
 
 namespace ifile

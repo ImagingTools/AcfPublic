@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iwidgets/CCheckableComboBox.h"
+#include <iwidgets/CCheckableComboBox.h>
 
 
 // Qt includes
@@ -38,7 +38,7 @@
 #endif
 
 // ACF includes
-#include "iqt/CSignalBlocker.h"
+#include <iqt/CSignalBlocker.h>
 
 
 namespace iwidgets

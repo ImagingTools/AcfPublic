@@ -24,7 +24,7 @@
 #define iview_CScreenTransform_included
 
 
-#include "i2d/CAffine2d.h"
+#include <i2d/CAffine2d.h>
 
 
 namespace iview

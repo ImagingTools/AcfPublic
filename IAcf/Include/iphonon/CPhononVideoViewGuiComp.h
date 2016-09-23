@@ -29,8 +29,8 @@
 #include <QtMultiMedia/QMediaPlayer>
 
 // ACF includes
-#include "imm/IVideoController.h"
-#include "iqtgui/TGuiComponentBase.h"
+#include <imm/IVideoController.h>
+#include <iqtgui/TGuiComponentBase.h>
 
 
 namespace iphonon

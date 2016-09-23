@@ -20,9 +20,9 @@
 ********************************************************************************/
 
 
-#include "icmm/CRgbToCmykTransformation.h"
-#include "icmm/CRgb.h"
-#include "icmm/CCmyk.h"
+#include <icmm/CRgbToCmykTransformation.h>
+#include <icmm/CRgb.h>
+#include <icmm/CCmyk.h>
 
 
 namespace icmm

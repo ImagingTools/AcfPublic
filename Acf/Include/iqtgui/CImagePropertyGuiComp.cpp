@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtgui/CImagePropertyGuiComp.h"
+#include <iqtgui/CImagePropertyGuiComp.h>
 
 
 namespace iqtgui

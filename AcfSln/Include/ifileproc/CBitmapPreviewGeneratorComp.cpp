@@ -20,12 +20,12 @@
 ********************************************************************************/
 
 
-#include "ifileproc/CBitmapPreviewGeneratorComp.h"
+#include <ifileproc/CBitmapPreviewGeneratorComp.h>
 
 
 // ACF includes
-#include "iprm/TParamsPtr.h"
-#include "iimg/CBitmap.h"
+#include <iprm/TParamsPtr.h>
+#include <iimg/CBitmap.h>
 
 
 namespace ifileproc

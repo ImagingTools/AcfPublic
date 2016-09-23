@@ -29,7 +29,7 @@
 #include <QtCore/QMap>
 
 // ACF includes
-#include "icomp/IComponentContext.h"
+#include <icomp/IComponentContext.h>
 
 
 namespace icomp

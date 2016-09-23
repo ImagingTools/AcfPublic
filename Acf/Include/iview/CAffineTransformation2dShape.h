@@ -26,7 +26,7 @@
 
 // ACF includes
 #include <i2d/CAffineTransformation2d.h>
-#include "iview/CInteractiveShapeBase.h"
+#include <iview/CInteractiveShapeBase.h>
 
 
 namespace iview

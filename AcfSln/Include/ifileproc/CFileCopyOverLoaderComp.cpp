@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ifileproc/CFileCopyOverLoaderComp.h"
+#include <ifileproc/CFileCopyOverLoaderComp.h>
 
 
 // Qt includes

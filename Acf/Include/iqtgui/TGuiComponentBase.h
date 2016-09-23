@@ -34,7 +34,7 @@
 
 
 // ACF includes
-#include "iqtgui/CGuiComponentBase.h"
+#include <iqtgui/CGuiComponentBase.h>
 
 
 namespace iqtgui

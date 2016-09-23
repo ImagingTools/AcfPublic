@@ -28,10 +28,10 @@
 #include "QtCore/QMap"
 
 // ACF includes
-#include "imath/CVarVector.h"
+#include <imath/CVarVector.h>
 
 // ACF-Solutions includes
-#include "imeas/INumericValue.h"
+#include <imeas/INumericValue.h>
 
 namespace imeas
 {

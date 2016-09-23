@@ -25,10 +25,10 @@
 
 
 // ACF includes
-#include "istd/TOptDelPtr.h"
+#include <istd/TOptDelPtr.h>
 
 // ACF-Solutions includes
-#include "iattr/IAttributeMetaInfo.h"
+#include <iattr/IAttributeMetaInfo.h>
 
 
 namespace iattr

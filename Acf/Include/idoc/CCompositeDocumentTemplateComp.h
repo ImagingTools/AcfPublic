@@ -25,8 +25,8 @@
 
 
 // ACF includes
-#include "icomp/CComponentBase.h"
-#include "idoc/IDocumentTemplate.h"
+#include <icomp/CComponentBase.h>
+#include <idoc/IDocumentTemplate.h>
 
 
 namespace idoc

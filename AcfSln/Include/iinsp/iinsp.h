@@ -24,7 +24,7 @@
 #define iinsp_included
 
 
-#include "iproc/iproc.h"
+#include <iproc/iproc.h>
 
 
 /**

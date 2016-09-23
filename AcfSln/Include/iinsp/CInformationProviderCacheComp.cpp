@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iinsp/CInformationProviderCacheComp.h"
+#include <iinsp/CInformationProviderCacheComp.h>
 
 
 namespace iinsp

@@ -23,7 +23,7 @@
 #include "ProcessingPck.h"
 
 
-#include "icomp/export.h"
+#include <icomp/export.h>
 
 
 namespace ProcessingPck

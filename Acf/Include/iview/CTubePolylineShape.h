@@ -24,7 +24,7 @@
 #define iview_CTubePolylineShape_included
 
 
-#include "iview/CPolylineShape.h"
+#include <iview/CPolylineShape.h>
 
 
 namespace iview

@@ -20,11 +20,11 @@
 ********************************************************************************/
 
 
-#include "imeas/CSimpleNumericValueProvider.h"
+#include <imeas/CSimpleNumericValueProvider.h>
 
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
+#include <istd/CChangeNotifier.h>
 
 
 namespace imeas

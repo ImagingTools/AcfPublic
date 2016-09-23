@@ -28,7 +28,7 @@
 #include <QtCore/QVector>
 
 // ACF includes
-#include "iprm/CParamsManagerCompBase.h"
+#include <iprm/CParamsManagerCompBase.h>
 
 
 namespace iprm

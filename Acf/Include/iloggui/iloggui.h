@@ -25,8 +25,8 @@
 
 
 // ACF includes
-#include "iqtgui/iqtgui.h"
-#include "ilog/ilog.h"
+#include <iqtgui/iqtgui.h>
+#include <ilog/ilog.h>
 
 /**
 	GUI specific interfaces and components for logging functionality.

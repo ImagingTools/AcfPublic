@@ -20,11 +20,11 @@
 ********************************************************************************/
 
 
-#include "iwiz/CStateControllerCompBase.h"
+#include <iwiz/CStateControllerCompBase.h>
 
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
+#include <istd/CChangeNotifier.h>
 
 
 namespace iwiz

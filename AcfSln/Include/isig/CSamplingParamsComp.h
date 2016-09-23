@@ -25,11 +25,11 @@
 
 
 // ACF includes
-#include "iser/ISerializable.h"
-#include "icomp/CComponentBase.h"
+#include <iser/ISerializable.h>
+#include <icomp/CComponentBase.h>
 
-#include "isig/ISamplingConstraints.h"
-#include "isig/ISamplingParams.h"
+#include <isig/ISamplingConstraints.h>
+#include <isig/ISamplingParams.h>
 
 
 namespace isig

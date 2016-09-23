@@ -20,12 +20,12 @@
 ********************************************************************************/
 
 
-#include "iproc/CCascadedProcessorComp.h"
+#include <iproc/CCascadedProcessorComp.h>
 
 
 // ACF includes
-#include "istd/TPointerVector.h"
-#include "ibase/CDelegatedProgressManager.h"
+#include <istd/TPointerVector.h>
+#include <ibase/CDelegatedProgressManager.h>
 
 
 namespace iproc

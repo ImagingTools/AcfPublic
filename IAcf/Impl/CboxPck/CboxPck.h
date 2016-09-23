@@ -24,10 +24,10 @@
 #define CboxPck_included
 
 
-#include "icomp/TModelCompWrap.h"
-#include "icomp/TMakeComponentWrap.h"
+#include <icomp/TModelCompWrap.h>
+#include <icomp/TMakeComponentWrap.h>
 
-#include "icbox/CMemoryBankSerializerComp.h"
+#include <icbox/CMemoryBankSerializerComp.h>
 
 
 /**

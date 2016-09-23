@@ -28,8 +28,8 @@
 #include <QtCore/QVector>
 
 // ACF includes
-#include "iprm/IOptionsManager.h"
-#include "iprm/CSelectionParam.h"
+#include <iprm/IOptionsManager.h>
+#include <iprm/CSelectionParam.h>
 
 
 namespace iprm

@@ -29,9 +29,9 @@
 #endif
 
 // ACF includes
-#include "ibase/IApplication.h"
+#include <ibase/IApplication.h>
 
-#include "GeneratedFiles/Compositor/CCompositor.h"
+#include <GeneratedFiles/Compositor/CCompositor.h>
 
 
 int main(int argc, char *argv[])

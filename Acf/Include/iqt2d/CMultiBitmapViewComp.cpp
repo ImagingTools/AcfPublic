@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqt2d/CMultiBitmapViewComp.h"
+#include <iqt2d/CMultiBitmapViewComp.h>
 
 
 // Qt includes

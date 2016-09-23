@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iipr/CImageInterpolationParamsComp.h"
+#include <iipr/CImageInterpolationParamsComp.h>
 
 
 namespace iipr

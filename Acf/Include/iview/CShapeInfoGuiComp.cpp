@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iview/CShapeInfoGuiComp.h"
+#include <iview/CShapeInfoGuiComp.h>
 
 
 namespace iview

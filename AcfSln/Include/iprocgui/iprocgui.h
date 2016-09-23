@@ -24,9 +24,9 @@
 #define iqproc_included
 
 
-#include "iqt/iqt.h"
-#include "iqtgui/iqtgui.h"
-#include "iqtdoc/iqtdoc.h"
+#include <iqt/iqt.h>
+#include <iqtgui/iqtgui.h>
+#include <iqtdoc/iqtdoc.h>
 
 
 /**

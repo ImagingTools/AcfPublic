@@ -20,15 +20,15 @@
 ********************************************************************************/
 
 
-#include "iipr/CRectImageSmoothProcessorComp.h"
+#include <iipr/CRectImageSmoothProcessorComp.h>
 
 
 // ACF includes
-#include "imath/CFixedPointManip.h"
-#include "iimg/CGeneralBitmap.h"
+#include <imath/CFixedPointManip.h>
+#include <iimg/CGeneralBitmap.h>
 
 // ACF-Solutions includes
-#include "iipr/CPixelManip.h"
+#include <iipr/CPixelManip.h>
 
 
 namespace iipr

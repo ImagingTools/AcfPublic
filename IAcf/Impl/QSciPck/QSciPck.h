@@ -24,7 +24,7 @@
 #define QsciPck_included
 
 
-#include "iqsci/CTextEditorGuiComp.h"
+#include <iqsci/CTextEditorGuiComp.h>
 
 /**
 	Standard Qt package.

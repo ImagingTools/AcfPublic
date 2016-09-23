@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "imeas/CMeasurementRange.h"
+#include <imeas/CMeasurementRange.h>
 
 
 // Qt includes

@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "icmpstr/CGraphicsConnectorItem.h"
+#include <icmpstr/CGraphicsConnectorItem.h>
 
 
 // Qt includes
@@ -28,11 +28,11 @@
 #include <QtGui/QPainterPath>
 
 // ACF includes
-#include "i2d/CVector2d.h"
-#include "iqt/iqt.h"
+#include <i2d/CVector2d.h>
+#include <iqt/iqt.h>
 
 // ACF-Solutions includes
-#include "icmpstr/CRegistryElementShape.h"
+#include <icmpstr/CRegistryElementShape.h>
 
 
 namespace icmpstr

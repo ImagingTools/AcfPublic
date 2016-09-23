@@ -24,7 +24,7 @@
 #define imeas_CSamplesInfo_included
 
 
-#include "imeas/CDataSequenceInfoBase.h"
+#include <imeas/CDataSequenceInfoBase.h>
 
 
 namespace imeas

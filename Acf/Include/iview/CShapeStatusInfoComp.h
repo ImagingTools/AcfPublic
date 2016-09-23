@@ -25,9 +25,9 @@
 
 
 // ACF includes
-#include "icomp/CComponentBase.h"
+#include <icomp/CComponentBase.h>
 
-#include "iview/IShapeStatusInfo.h"
+#include <iview/IShapeStatusInfo.h>
 
 
 namespace iview

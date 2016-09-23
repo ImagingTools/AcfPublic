@@ -26,7 +26,7 @@
 
 #include <QtCore/QString>
 
-#include "iser/ISerializable.h"
+#include <iser/ISerializable.h>
 
 
 namespace idoc

@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "imod/CModelProxy.h"
+#include <imod/CModelProxy.h>
 
 
 namespace imod

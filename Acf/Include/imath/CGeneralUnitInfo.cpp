@@ -20,11 +20,11 @@
 ********************************************************************************/
 
 
-#include "imath/CGeneralUnitInfo.h"
+#include <imath/CGeneralUnitInfo.h>
 
 
 // ACF includes
-#include "imath/CDoubleManip.h"
+#include <imath/CDoubleManip.h>
 
 
 namespace imath

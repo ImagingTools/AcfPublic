@@ -20,10 +20,10 @@
 ********************************************************************************/
 
 
-#include "ibase/CVersionInfoComp.h"
+#include <ibase/CVersionInfoComp.h>
 
 
-#include "istd/AcfVersion.h"
+#include <istd/AcfVersion.h>
 
 
 namespace ibase

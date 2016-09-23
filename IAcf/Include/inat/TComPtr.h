@@ -24,11 +24,11 @@
 #define inat_TComPtr_included
 
 
-#include "inat/inat.h"
+#include <inat/inat.h>
 
 
 #ifdef _WIN32
-#include "iwin/TComPtr.h"
+#include <iwin/TComPtr.h>
 #else
 #error Operating system not supported
 #endif

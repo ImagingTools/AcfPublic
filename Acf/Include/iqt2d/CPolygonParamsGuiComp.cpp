@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqt2d/CPolygonParamsGuiComp.h"
+#include <iqt2d/CPolygonParamsGuiComp.h>
 
 
 namespace iqt2d

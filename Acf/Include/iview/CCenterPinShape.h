@@ -24,11 +24,11 @@
 #define iview_CCenterPinShape_included
 
 
-#include "i2d/CVector2d.h"
-#include "i2d/CPosition2d.h"
+#include <i2d/CVector2d.h>
+#include <i2d/CPosition2d.h>
 
-#include "iview/CInteractiveShapeBase.h"
-#include "iview/CPinShape.h"
+#include <iview/CInteractiveShapeBase.h>
+#include <iview/CPinShape.h>
 
 
 namespace iview

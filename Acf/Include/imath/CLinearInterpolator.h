@@ -28,7 +28,7 @@
 #include <QtCore/QMap>
 
 // ACF includes
-#include "imath/TIMathFunction.h"
+#include <imath/TIMathFunction.h>
 
 
 namespace imath

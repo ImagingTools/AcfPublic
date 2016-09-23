@@ -20,9 +20,10 @@
 ********************************************************************************/
 
 
-#include "icomp/export.h"
-
 #include "OpenCvPck.h"
+
+
+#include <icomp/export.h>
 
 
 namespace OpenCvPck

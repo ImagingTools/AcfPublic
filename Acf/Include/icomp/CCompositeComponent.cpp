@@ -20,14 +20,14 @@
 ********************************************************************************/
 
 
-#include "icomp/CCompositeComponent.h"
+#include <icomp/CCompositeComponent.h>
 
 
-#include "istd/CClassInfo.h"
+#include <istd/CClassInfo.h>
 
-#include "icomp/IComponentEnvironmentManager.h"
-#include "icomp/CCompositeComponentContext.h"
-#include "icomp/CBaseComponentStaticInfo.h"
+#include <icomp/IComponentEnvironmentManager.h>
+#include <icomp/CCompositeComponentContext.h>
+#include <icomp/CBaseComponentStaticInfo.h>
 
 
 namespace icomp

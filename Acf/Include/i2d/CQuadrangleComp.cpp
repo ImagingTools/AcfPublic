@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "i2d/CQuadrangleComp.h"
+#include <i2d/CQuadrangleComp.h>
 
 
 namespace i2d

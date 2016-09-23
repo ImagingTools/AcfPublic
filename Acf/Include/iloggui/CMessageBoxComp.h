@@ -36,9 +36,9 @@
 #endif
 
 // ACF includes
-#include "icomp/CComponentBase.h"
-#include "ilog/IMessageConsumer.h"
-#include "ilog/CMessage.h"
+#include <icomp/CComponentBase.h>
+#include <ilog/IMessageConsumer.h>
+#include <ilog/CMessage.h>
 
 
 namespace iloggui

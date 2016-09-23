@@ -28,9 +28,9 @@
 #include <QFileInfoList>
 
 // ACF includes
-#include "ifile/IFileListProvider.h"
+#include <ifile/IFileListProvider.h>
 
-#include "ifileproc/ifileproc.h"
+#include <ifileproc/ifileproc.h>
 
 
 namespace ifileproc

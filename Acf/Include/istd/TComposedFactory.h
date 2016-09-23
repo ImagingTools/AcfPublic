@@ -28,8 +28,8 @@
 #include <QtCore/QList>
 
 // ACF includes
-#include "istd/TIFactory.h"
-#include "istd/TOptDelPtr.h"
+#include <istd/TIFactory.h>
+#include <istd/TOptDelPtr.h>
 
 
 namespace istd

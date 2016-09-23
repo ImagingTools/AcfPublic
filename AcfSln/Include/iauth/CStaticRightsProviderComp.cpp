@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iauth/CStaticRightsProviderComp.h"
+#include <iauth/CStaticRightsProviderComp.h>
 
 
 namespace iauth

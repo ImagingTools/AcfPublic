@@ -20,15 +20,15 @@
 ********************************************************************************/
 
 
-#include "iipr/CRgbToGrayProcessorComp.h"
+#include <iipr/CRgbToGrayProcessorComp.h>
 
 
 // Qt includes
 #include <QtCore/QObject>
 
  // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "ibase/CSize.h"
+#include <istd/CChangeNotifier.h>
+#include <ibase/CSize.h>
 
 
 namespace iipr

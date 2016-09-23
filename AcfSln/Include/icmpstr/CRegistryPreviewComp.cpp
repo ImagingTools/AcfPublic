@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "icmpstr/CRegistryPreviewComp.h"
+#include <icmpstr/CRegistryPreviewComp.h>
 
 
 // Qt includes
@@ -28,9 +28,9 @@
 #include <QtCore/QMetaType>
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "ifile/CCompactXmlFileWriteArchive.h"
-#include "istd/CSystem.h"
+#include <istd/CChangeNotifier.h>
+#include <ifile/CCompactXmlFileWriteArchive.h>
+#include <istd/CSystem.h>
 
 
 #ifndef QT_NO_PROCESS

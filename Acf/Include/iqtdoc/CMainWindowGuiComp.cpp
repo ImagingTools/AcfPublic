@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtdoc/CMainWindowGuiComp.h"
+#include <iqtdoc/CMainWindowGuiComp.h>
 
 
 // Qt includes
@@ -41,11 +41,11 @@
 #endif
 
 // ACF includes
-#include "imod/IObserver.h"
-#include "ibase/ICommandsProvider.h"
-#include "iqt/CSettingsWriteArchive.h"
-#include "iqt/CSettingsReadArchive.h"
-#include "iqt/CSignalBlocker.h"
+#include <imod/IObserver.h>
+#include <ibase/ICommandsProvider.h>
+#include <iqt/CSettingsWriteArchive.h>
+#include <iqt/CSettingsReadArchive.h>
+#include <iqt/CSignalBlocker.h>
 
 
 namespace iqtdoc

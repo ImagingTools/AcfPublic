@@ -28,9 +28,9 @@
 #include <QtCore/QString>
 
 // ACF includes
-#include "iprm/IParamsSet.h"
-#include "ibase/IProgressManager.h"
-#include "iproc/IProcessor.h"
+#include <iprm/IParamsSet.h>
+#include <ibase/IProgressManager.h>
+#include <iproc/IProcessor.h>
 
 
 namespace ifileproc

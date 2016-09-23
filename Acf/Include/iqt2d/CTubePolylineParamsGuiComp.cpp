@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqt2d/CTubePolylineParamsGuiComp.h"
+#include <iqt2d/CTubePolylineParamsGuiComp.h>
 
 
 namespace iqt2d

@@ -20,15 +20,15 @@
 ********************************************************************************/
 
 
-#include "icam/CCalibratedCameraComp.h"
+#include <icam/CCalibratedCameraComp.h>
 
 
 // STD includes
 #include <cmath>
 
 // ACF includes
-#include "iprm/TParamsPtr.h"
-#include "imeas/INumericValue.h"
+#include <iprm/TParamsPtr.h>
+#include <imeas/INumericValue.h>
 
 
 using namespace std;

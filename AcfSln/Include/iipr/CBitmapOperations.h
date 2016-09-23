@@ -25,10 +25,10 @@
 
 
 // ACF includes
-#include "istd/ILogger.h"
+#include <istd/ILogger.h>
 
 // ACF-Solutions includes
-#include "iimg/IBitmapProvider.h"
+#include <iimg/IBitmapProvider.h>
 
 
 namespace iipr

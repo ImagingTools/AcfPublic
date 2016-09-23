@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtcam/CScaleCalibrationEditorComp.h"
+#include <iqtcam/CScaleCalibrationEditorComp.h>
 
 
 // STL includes

@@ -20,10 +20,10 @@
 ********************************************************************************/
 
 
-#include "icomp/CEnvironmentManagerBase.h"
+#include <icomp/CEnvironmentManagerBase.h>
 
 
-#include "icomp/IRegistry.h"
+#include <icomp/IRegistry.h>
 
 
 namespace icomp

@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ibase/CInstantiatorComp.h"
+#include <ibase/CInstantiatorComp.h>
 
 
 namespace ibase

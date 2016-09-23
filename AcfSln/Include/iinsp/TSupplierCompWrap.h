@@ -25,7 +25,7 @@
 
 
 // ACF-Solutions includes
-#include "iinsp/CSupplierCompBase.h"
+#include <iinsp/CSupplierCompBase.h>
 
 
 namespace iinsp

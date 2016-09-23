@@ -28,7 +28,7 @@
 #include <functional>
 
 // ACF includes
-#include "iipr/CImageProcessorCompBase.h"
+#include <iipr/CImageProcessorCompBase.h>
 
 #ifdef max
 	#undef max

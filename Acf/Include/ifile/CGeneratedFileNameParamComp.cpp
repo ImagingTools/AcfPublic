@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ifile/CGeneratedFileNameParamComp.h"
+#include <ifile/CGeneratedFileNameParamComp.h>
 
 
 // Qt includes
@@ -31,7 +31,7 @@
 #include <QtCore/QFileInfo>
 
 // ACF includes
-#include "istd/CSystem.h"
+#include <istd/CSystem.h>
 
 
 namespace ifile

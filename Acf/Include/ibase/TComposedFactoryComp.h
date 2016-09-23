@@ -25,8 +25,8 @@
 
 
 // ACF includes
-#include "istd/TComposedFactory.h"
-#include "icomp/CComponentBase.h"
+#include <istd/TComposedFactory.h>
+#include <icomp/CComponentBase.h>
 
 
 namespace ibase

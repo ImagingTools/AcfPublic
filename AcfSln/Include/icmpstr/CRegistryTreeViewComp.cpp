@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "icmpstr/CRegistryTreeViewComp.h"
+#include <icmpstr/CRegistryTreeViewComp.h>
 
 
 // Qt includes
@@ -32,9 +32,9 @@
 #endif
 
 // ACF includes
-#include "icomp/CCompositeComponentStaticInfo.h"
-#include "ilog/CMessageContainer.h"
-#include "iwidgets/CItemDelegate.h"
+#include <icomp/CCompositeComponentStaticInfo.h>
+#include <ilog/CMessageContainer.h>
+#include <iwidgets/CItemDelegate.h>
 
 
 namespace icmpstr

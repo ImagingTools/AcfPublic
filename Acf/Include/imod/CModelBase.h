@@ -28,9 +28,9 @@
 #include <QtCore/QMap>
 
 // ACF includes
-#include "imod/imod.h"
-#include "imod/IModel.h"
-#include "imod/IObserver.h"
+#include <imod/imod.h>
+#include <imod/IModel.h>
+#include <imod/IObserver.h>
 
 
 namespace imod

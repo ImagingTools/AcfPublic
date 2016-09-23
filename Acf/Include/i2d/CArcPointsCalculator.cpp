@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "i2d/CArcPointsCalculator.h"
+#include <i2d/CArcPointsCalculator.h>
 
 
 // Qt includes

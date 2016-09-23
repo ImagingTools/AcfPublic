@@ -72,7 +72,7 @@
     <name>TComPtr.h</name>
     <path>C:/Temp/Iacf/Include/inat/</path>
     <filename>inat_2_t_com_ptr_8h</filename>
-    <includes id="inat_8h" name="inat.h" local="yes" imported="no">inat/inat.h</includes>
+    <includes id="inat_8h" name="inat.h" local="no" imported="no">inat/inat.h</includes>
   </compound>
   <compound kind="file">
     <name>TComPtr.h</name>
@@ -158,7 +158,7 @@
     <name>CTextEditorGuiComp.h</name>
     <path>C:/Temp/Iacf/Include/iqsci/</path>
     <filename>_c_text_editor_gui_comp_8h</filename>
-    <includes id="_c_text_editor_8h" name="CTextEditor.h" local="yes" imported="no">iqsci/CTextEditor.h</includes>
+    <includes id="_c_text_editor_8h" name="CTextEditor.h" local="no" imported="no">iqsci/CTextEditor.h</includes>
     <class kind="class">iqsci::CTextEditorGuiComp</class>
     <namespace>iqsci</namespace>
   </compound>
@@ -226,7 +226,7 @@
     <name>CTimeStampCacheComp.h</name>
     <path>C:/Temp/Iacf/Include/iwin/</path>
     <filename>_c_time_stamp_cache_comp_8h</filename>
-    <includes id="_c_performance_time_stamp_8h" name="CPerformanceTimeStamp.h" local="yes" imported="no">iwin/CPerformanceTimeStamp.h</includes>
+    <includes id="_c_performance_time_stamp_8h" name="CPerformanceTimeStamp.h" local="no" imported="no">iwin/CPerformanceTimeStamp.h</includes>
     <class kind="class">iwin::CTimeStampCacheComp</class>
     <namespace>iwin</namespace>
   </compound>

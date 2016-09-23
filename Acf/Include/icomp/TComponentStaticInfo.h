@@ -25,8 +25,8 @@
 
 
 // ACF includes
-#include "icomp/TComponentWrap.h"
-#include "icomp/CBaseComponentStaticInfo.h"
+#include <icomp/TComponentWrap.h>
+#include <icomp/CBaseComponentStaticInfo.h>
 
 
 namespace icomp

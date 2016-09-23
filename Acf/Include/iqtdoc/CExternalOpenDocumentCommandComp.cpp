@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtdoc/CExternalOpenDocumentCommandComp.h"
+#include <iqtdoc/CExternalOpenDocumentCommandComp.h>
 
 
 // Qt includes

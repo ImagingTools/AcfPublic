@@ -20,12 +20,12 @@
 ********************************************************************************/
 
 
-#include "imod/CSingleModelObserverBase.h"
+#include <imod/CSingleModelObserverBase.h>
 
 
 // ACF includes
-#include "istd/IChangeable.h"
-#include "imod/IModel.h"
+#include <istd/IChangeable.h>
+#include <imod/IModel.h>
 
 
 namespace imod

@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "idoc/CMultiDocumentManagerBase.h"
+#include <idoc/CMultiDocumentManagerBase.h>
 
 
 // Qt includes
@@ -28,11 +28,11 @@
 
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "imod/IModel.h"
-#include "imod/IModelEditor.h"
-#include "icomp/CComponentBase.h"
-#include "idoc/IDocumentTemplate.h"
+#include <istd/CChangeNotifier.h>
+#include <imod/IModel.h>
+#include <imod/IModelEditor.h>
+#include <icomp/CComponentBase.h>
+#include <idoc/IDocumentTemplate.h>
 
 
 namespace idoc

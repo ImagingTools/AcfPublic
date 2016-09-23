@@ -29,7 +29,7 @@
 #include <QtCore/QMutex>
 
 // AcfSln includes
-#include "ihotf/IFileSystemChangeStorage.h"
+#include <ihotf/IFileSystemChangeStorage.h>
 
 
 namespace ihotf

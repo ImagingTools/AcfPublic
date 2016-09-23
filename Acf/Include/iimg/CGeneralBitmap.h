@@ -25,8 +25,8 @@
 
 
 // ACF includes
-#include "istd/TOptDelPtr.h"
-#include "iimg/CBitmapBase.h"
+#include <istd/TOptDelPtr.h>
+#include <iimg/CBitmapBase.h>
 
 
 namespace iimg

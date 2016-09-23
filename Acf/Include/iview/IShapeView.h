@@ -28,12 +28,12 @@
 #include <QtCore/QVector>
 
 // ACF includes
-#include "i2d/CRect.h"
-#include "i2d/CAffine2d.h"
+#include <i2d/CRect.h>
+#include <i2d/CAffine2d.h>
 
-#include "iview/IDisplay.h"
-#include "iview/ISelectable.h"
-#include "iview/ISelectableLayer.h"
+#include <iview/IDisplay.h>
+#include <iview/ISelectable.h>
+#include <iview/ISelectableLayer.h>
 
 
 namespace iview

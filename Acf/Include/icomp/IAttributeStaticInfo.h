@@ -28,10 +28,10 @@
 #include <QtCore/QByteArray>
 
 // ACF includes
-#include "istd/IPolymorphic.h"
-#include "iser/IObject.h"
-#include "iattr/IAttributeMetaInfo.h"
-#include "icomp/IElementStaticInfo.h"
+#include <istd/IPolymorphic.h>
+#include <iser/IObject.h>
+#include <iattr/IAttributeMetaInfo.h>
+#include <icomp/IElementStaticInfo.h>
 
 
 namespace icomp

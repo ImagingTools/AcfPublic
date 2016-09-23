@@ -28,8 +28,8 @@
 #include <QtCore/QObject>
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "istd/TOptDelPtr.h"
+#include <istd/CChangeNotifier.h>
+#include <istd/TOptDelPtr.h>
 
 
 namespace istd

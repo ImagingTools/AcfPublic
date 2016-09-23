@@ -24,9 +24,9 @@
 #define iqtgui_IGuiApplication_included
 
 
-#include "ibase/IApplication.h"
+#include <ibase/IApplication.h>
 
-#include "iqtgui/IGuiObject.h"
+#include <iqtgui/IGuiObject.h>
 
 
 namespace iqtgui

@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ifilegui/CExternalOpenDocumentCommandCompBase.h"
+#include <ifilegui/CExternalOpenDocumentCommandCompBase.h>
 
 
 // Qt includes

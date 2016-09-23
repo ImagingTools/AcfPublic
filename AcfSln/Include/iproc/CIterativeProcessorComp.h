@@ -29,11 +29,11 @@
 #include <QtCore/QVector>
 
 // ACF includes
-#include "ilog/TLoggerCompWrap.h"
+#include <ilog/TLoggerCompWrap.h>
 
-#include "iprm/IOptionsList.h"
+#include <iprm/IOptionsList.h>
 
-#include "iproc/TSyncProcessorWrap.h"
+#include <iproc/TSyncProcessorWrap.h>
 
 
 namespace iproc

@@ -20,16 +20,15 @@
 ********************************************************************************/
 
 
-#include "iqwt/CHistogramViewComp.h"
+#include <iqwt/CHistogramViewComp.h>
 
 
 // Qwt includes
-#include "qwt_plot_grid.h"
-#include "qwt_scale_draw.h"
-
+#include <qwt_plot_grid.h>
+#include <qwt_scale_draw.h>
 
 // ACF-Solutions includes
-#include "imeas/IDataStatistics.h"
+#include <imeas/IDataStatistics.h>
 
 
 namespace iqwt

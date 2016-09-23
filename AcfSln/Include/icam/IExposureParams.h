@@ -24,9 +24,9 @@
 #define icam_IExposureParams_included
 
 
-#include "iser/ISerializable.h"
+#include <iser/ISerializable.h>
 
-#include "icam/icam.h"
+#include <icam/icam.h>
 
 
 namespace icam

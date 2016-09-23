@@ -20,14 +20,14 @@
 ********************************************************************************/
 
 
-#include "idoc/CSingleDocumentTemplateComp.h"
+#include <idoc/CSingleDocumentTemplateComp.h>
 
 
 // ACF includes
-#include "istd/TDelPtr.h"
-#include "imod/IModel.h"
-#include "imod/TModelWrap.h"
-#include "idoc/IUndoManager.h"
+#include <istd/TDelPtr.h>
+#include <imod/IModel.h>
+#include <imod/TModelWrap.h>
+#include <idoc/IUndoManager.h>
 
 
 namespace idoc

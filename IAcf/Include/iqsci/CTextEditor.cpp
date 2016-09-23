@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqsci/CTextEditor.h"
+#include <iqsci/CTextEditor.h>
 
 
 // QScinitlla includes
@@ -39,7 +39,7 @@
 #endif
 
 // IACF includes
-#include "iqsci/iqsci.h"
+#include <iqsci/iqsci.h>
 
 
 namespace iqsci

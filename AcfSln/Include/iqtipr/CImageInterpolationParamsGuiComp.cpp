@@ -20,11 +20,11 @@
 ********************************************************************************/
 
 
-#include "iqtipr/CImageInterpolationParamsGuiComp.h"
+#include <iqtipr/CImageInterpolationParamsGuiComp.h>
 
 
 // ACF includes
-#include "istd/CChangeGroup.h"
+#include <istd/CChangeGroup.h>
 
 
 namespace iqtipr

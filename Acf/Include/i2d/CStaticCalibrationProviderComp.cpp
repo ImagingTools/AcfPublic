@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "i2d/CStaticCalibrationProviderComp.h"
+#include <i2d/CStaticCalibrationProviderComp.h>
 
 
 namespace i2d

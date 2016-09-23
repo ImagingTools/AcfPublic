@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtprm/CNameParamGuiComp.h"
+#include <iqtprm/CNameParamGuiComp.h>
 
 
 // Qt includes
@@ -33,7 +33,7 @@
 #endif
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
+#include <istd/CChangeNotifier.h>
 
 
 namespace iqtprm

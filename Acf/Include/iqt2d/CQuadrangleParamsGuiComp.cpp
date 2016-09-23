@@ -20,13 +20,13 @@
 ********************************************************************************/
 
 
-#include "iqt2d/CQuadrangleParamsGuiComp.h"
+#include <iqt2d/CQuadrangleParamsGuiComp.h>
 
 
 // ACF includes
-#include "istd/CChangeGroup.h"
+#include <istd/CChangeGroup.h>
 
-#include "iqt/CSignalBlocker.h"
+#include <iqt/CSignalBlocker.h>
 
 
 namespace iqt2d

@@ -23,7 +23,7 @@
 #include "AuthorizationPck.h"
 
 
-#include "icomp/export.h"
+#include <icomp/export.h>
 
 
 namespace AuthorizationPck

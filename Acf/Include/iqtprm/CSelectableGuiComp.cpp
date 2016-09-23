@@ -20,13 +20,13 @@
 ********************************************************************************/
 
 
-#include "iqtprm/CSelectableGuiComp.h"
+#include <iqtprm/CSelectableGuiComp.h>
 
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
+#include <istd/CChangeNotifier.h>
 
-#include "iprm/IOptionsList.h"
+#include <iprm/IOptionsList.h>
 
 
 namespace iqtprm

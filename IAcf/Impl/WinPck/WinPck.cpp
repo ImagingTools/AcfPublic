@@ -20,9 +20,10 @@
 ********************************************************************************/
 
 
-#include "icomp/export.h"
-
 #include "WinPck.h"
+
+
+#include <icomp/export.h>
 
 
 namespace WinPck

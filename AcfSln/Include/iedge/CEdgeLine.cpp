@@ -20,11 +20,11 @@
 ********************************************************************************/
 
 
-#include "iedge/CEdgeLine.h"
+#include <iedge/CEdgeLine.h>
 
 
 // ACF includes
-#include "istd/TDelPtr.h"
+#include <istd/TDelPtr.h>
 
 
 namespace iedge

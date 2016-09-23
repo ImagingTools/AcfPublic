@@ -20,13 +20,13 @@
 ********************************************************************************/
 
 
-#include "iwiz/CSelectionConsistencyControllerComp.h"
+#include <iwiz/CSelectionConsistencyControllerComp.h>
 
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
+#include <istd/CChangeNotifier.h>
 
-#include "iprm/IOptionsList.h"
+#include <iprm/IOptionsList.h>
 
 
 namespace iwiz

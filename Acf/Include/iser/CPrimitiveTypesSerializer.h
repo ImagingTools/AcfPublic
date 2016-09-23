@@ -34,10 +34,10 @@
 #include <QtCore/QMetaEnum>
 
 // ACF includes
-#include "istd/TRange.h"
-#include "istd/TRanges.h"
-#include "istd/TIndex.h"
-#include "iser/IArchive.h"
+#include <istd/TRange.h>
+#include <istd/TRanges.h>
+#include <istd/TIndex.h>
+#include <iser/IArchive.h>
 
 
 namespace iser

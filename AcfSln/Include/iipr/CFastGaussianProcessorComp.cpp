@@ -20,15 +20,15 @@
 ********************************************************************************/
 
 
-#include "iipr/CFastGaussianProcessorComp.h"
+#include <iipr/CFastGaussianProcessorComp.h>
 
 
 // Qt includes
 #include <QtCore/QVector>
 
 // ACF includes
-#include "iimg/IBitmap.h"
-#include "iimg/CScanlineMask.h"
+#include <iimg/IBitmap.h>
+#include <iimg/CScanlineMask.h>
 
 
 namespace iipr

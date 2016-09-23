@@ -33,7 +33,7 @@
 #endif
 
 // ACF includes
-#include "iimg/IMultiBitmapProvider.h"
+#include <iimg/IMultiBitmapProvider.h>
 
 
 namespace iqtipr

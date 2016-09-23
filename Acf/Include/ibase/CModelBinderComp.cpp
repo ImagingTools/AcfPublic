@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ibase/CModelBinderComp.h"
+#include <ibase/CModelBinderComp.h>
 
 
 namespace ibase

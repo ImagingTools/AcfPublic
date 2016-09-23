@@ -20,14 +20,14 @@
 ********************************************************************************/
 
 
-#include "iwidgets/CExtLineEdit.h"
+#include <iwidgets/CExtLineEdit.h>
 
 
 // Qt includes
 #include <QtGui/QResizeEvent>
 
 // ACF includes
-#include "iqt/CSignalBlocker.h"
+#include <iqt/CSignalBlocker.h>
 
 
 namespace iwidgets

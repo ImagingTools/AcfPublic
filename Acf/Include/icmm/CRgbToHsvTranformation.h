@@ -25,7 +25,7 @@
 
 
 // ACF includes
-#include "icmm/IColorTransformation.h"
+#include <icmm/IColorTransformation.h>
 
 
 namespace icmm

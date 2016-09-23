@@ -20,15 +20,15 @@
 ********************************************************************************/
 
 
-#include "icomp/CSimComponentContextBase.h"
+#include <icomp/CSimComponentContextBase.h>
 
 
-#include "icomp/IComponentStaticInfo.h"
-#include "icomp/IAttributeStaticInfo.h"
-#include "icomp/CReferenceAttribute.h"
-#include "icomp/CFactoryAttribute.h"
-#include "icomp/CMultiFactoryAttribute.h"
-#include "icomp/CMultiReferenceAttribute.h"
+#include <icomp/IComponentStaticInfo.h>
+#include <icomp/IAttributeStaticInfo.h>
+#include <icomp/CReferenceAttribute.h>
+#include <icomp/CFactoryAttribute.h>
+#include <icomp/CMultiFactoryAttribute.h>
+#include <icomp/CMultiReferenceAttribute.h>
 
 
 namespace icomp

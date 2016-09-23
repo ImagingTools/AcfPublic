@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtgui/CHierarchicalCommand.h"
+#include <iqtgui/CHierarchicalCommand.h>
 
 
 namespace iqtgui

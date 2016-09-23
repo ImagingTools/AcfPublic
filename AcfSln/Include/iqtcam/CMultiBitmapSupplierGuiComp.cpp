@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtcam/CMultiBitmapSupplierGuiComp.h"
+#include <iqtcam/CMultiBitmapSupplierGuiComp.h>
 
 
 // Qt includes
@@ -35,7 +35,7 @@
 #endif
 
 // ACF includes
-#include "iview/CImageShape.h"
+#include <iview/CImageShape.h>
 
 
 namespace iqtcam

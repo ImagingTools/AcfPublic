@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iwidgets/CItemDelegate.h"
+#include <iwidgets/CItemDelegate.h>
 
 
 // Qt includes

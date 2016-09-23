@@ -25,7 +25,7 @@
 
 
 // ACF-Solutions includes
-#include "iipr/CImageRegionProcessorCompBase.h"
+#include <iipr/CImageRegionProcessorCompBase.h>
 
 
 namespace iipr

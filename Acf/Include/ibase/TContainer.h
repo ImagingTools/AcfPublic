@@ -28,8 +28,8 @@
 #include <QtCore/QList>
 
 // ACF includes
-#include "istd/IContainerInfo.h"
-#include "istd/CChangeNotifier.h"
+#include <istd/IContainerInfo.h>
+#include <istd/CChangeNotifier.h>
 
 
 namespace ibase

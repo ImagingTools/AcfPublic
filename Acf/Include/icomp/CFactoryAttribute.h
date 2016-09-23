@@ -28,7 +28,7 @@
 #include <QtCore/QByteArray>
 
 // ACF includes
-#include "icomp/CReferenceAttribute.h"
+#include <icomp/CReferenceAttribute.h>
 
 
 namespace icomp

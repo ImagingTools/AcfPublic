@@ -28,10 +28,10 @@
 #include <QtCore/QProcess>
 
 // ACF includes
-#include "ilog/TLoggerCompWrap.h"
-#include "iprm/INameParam.h"
-#include "ifile/IFileNameParam.h"
-#include "ifileproc/IFileConversion.h"
+#include <ilog/TLoggerCompWrap.h>
+#include <iprm/INameParam.h>
+#include <ifile/IFileNameParam.h>
+#include <ifileproc/IFileConversion.h>
 
 
 namespace ifileproc

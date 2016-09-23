@@ -25,9 +25,9 @@
 
 
 // ACF includes
-#include "imod/CMultiModelObserverBase.h"
+#include <imod/CMultiModelObserverBase.h>
 
-#include "imod/imod.h"
+#include <imod/imod.h>
 
 
 namespace imod

@@ -33,11 +33,11 @@
 #endif
 
 // ACF includes
-#include "imod/TSingleModelObserverBase.h"
+#include <imod/TSingleModelObserverBase.h>
 
 // ACF-Solutions includes
-#include "icmpstr/TObjectShapeBase.h"
-#include "icmpstr/CVisualRegistryElement.h"
+#include <icmpstr/TObjectShapeBase.h>
+#include <icmpstr/CVisualRegistryElement.h>
 
 
 namespace icmpstr

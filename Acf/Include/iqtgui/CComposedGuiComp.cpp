@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtgui/CComposedGuiComp.h"
+#include <iqtgui/CComposedGuiComp.h>
 
 
 // Qt includes

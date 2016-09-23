@@ -24,7 +24,7 @@
 #define imath_TIMathFunction_included
 
 
-#include "istd/IPolymorphic.h"
+#include <istd/IPolymorphic.h>
 
 
 namespace imath

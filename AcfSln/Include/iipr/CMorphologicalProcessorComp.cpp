@@ -20,21 +20,21 @@
 ********************************************************************************/
 
 
-#include "iipr/CMorphologicalProcessorComp.h"
+#include <iipr/CMorphologicalProcessorComp.h>
 
 
 // STL includes
 #include <cstring>
 
  // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "ibase/CSize.h"
-#include "iimg/CGeneralBitmap.h"
-#include "iprm/TParamsPtr.h"
-#include "iimg/CScanlineMask.h"
+#include <istd/CChangeNotifier.h>
+#include <ibase/CSize.h>
+#include <iimg/CGeneralBitmap.h>
+#include <iprm/TParamsPtr.h>
+#include <iimg/CScanlineMask.h>
 
 // ACF-Solitions includes
-#include "imeas/INumericValue.h"
+#include <imeas/INumericValue.h>
 
 
 namespace iipr

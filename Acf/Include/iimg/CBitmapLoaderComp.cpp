@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iimg/CBitmapLoaderComp.h"
+#include <iimg/CBitmapLoaderComp.h>
 
 
 // Qt includes
@@ -31,10 +31,10 @@
 
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
+#include <istd/CChangeNotifier.h>
 
-#include "iimg/IQImageProvider.h"
-#include "iimg/CBitmap.h"
+#include <iimg/IQImageProvider.h>
+#include <iimg/CBitmap.h>
 
 
 namespace iimg

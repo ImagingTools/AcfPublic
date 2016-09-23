@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "icmpstr/CRegistryLoaderComp.h"
+#include <icmpstr/CRegistryLoaderComp.h>
 
 
 // Qt includes
@@ -30,15 +30,15 @@
 
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "ifile/TFileSerializerComp.h"
-#include "ifile/CSimpleXmlFileReadArchive.h"
-#include "ifile/CSimpleXmlFileWriteArchive.h"
-#include "ifile/CCompactXmlFileReadArchive.h"
-#include "ifile/CCompactXmlFileWriteArchive.h"
+#include <istd/CChangeNotifier.h>
+#include <ifile/TFileSerializerComp.h>
+#include <ifile/CSimpleXmlFileReadArchive.h>
+#include <ifile/CSimpleXmlFileWriteArchive.h>
+#include <ifile/CCompactXmlFileReadArchive.h>
+#include <ifile/CCompactXmlFileWriteArchive.h>
 
 // ACF-Solutions includes
-#include "icmpstr/CVisualRegistry.h"
+#include <icmpstr/CVisualRegistry.h>
 
 
 namespace icmpstr

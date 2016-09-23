@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ifile/CApplicationInfoBasedFileNameComp.h"
+#include <ifile/CApplicationInfoBasedFileNameComp.h>
 
 
 namespace ifile

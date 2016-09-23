@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iipr/CCaliperParamsComp.h"
+#include <iipr/CCaliperParamsComp.h>
 
 
 namespace iipr

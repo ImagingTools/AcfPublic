@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtprm/COptionsManagerGuiComp.h"
+#include <iqtprm/COptionsManagerGuiComp.h>
 
 
 // Qt includes
@@ -32,9 +32,9 @@
 #endif
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "iprm/IOptionsList.h"
-#include "iprm/INameParam.h"
+#include <istd/CChangeNotifier.h>
+#include <iprm/IOptionsList.h>
+#include <iprm/INameParam.h>
 
 
 namespace iqtprm

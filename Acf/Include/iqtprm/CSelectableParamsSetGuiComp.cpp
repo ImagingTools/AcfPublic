@@ -20,12 +20,12 @@
 ********************************************************************************/
 
 
-#include "iqtprm/CSelectableParamsSetGuiComp.h"
+#include <iqtprm/CSelectableParamsSetGuiComp.h>
 
 
 // ACF includes
-#include "iprm/IOptionsList.h"
-#include "iprm/IParamsSet.h"
+#include <iprm/IOptionsList.h>
+#include <iprm/IParamsSet.h>
 
 
 namespace iqtprm

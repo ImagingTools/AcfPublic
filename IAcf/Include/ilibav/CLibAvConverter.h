@@ -28,7 +28,7 @@
 
 // LIBAV includes
 extern "C"{
-#include "libavformat/avformat.h"
+#include <libavformat/avformat.h>
 #undef PixelFormat
 #undef BYTES_PER_SAMPLE
 #undef BITS_PER_SAMPLE
@@ -36,8 +36,8 @@ extern "C"{
 }
 
 // ACF includes
-#include "istd/CIndex2d.h"
-#include "iimg/IBitmap.h"
+#include <istd/CIndex2d.h>
+#include <iimg/IBitmap.h>
 
 
 namespace ilibav

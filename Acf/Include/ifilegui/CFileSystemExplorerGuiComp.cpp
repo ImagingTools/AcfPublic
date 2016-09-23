@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ifilegui/CFileSystemExplorerGuiComp.h"
+#include <ifilegui/CFileSystemExplorerGuiComp.h>
 
 
 // Qt includes
@@ -35,8 +35,8 @@
 #endif
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "istd/CSystem.h"
+#include <istd/CChangeNotifier.h>
+#include <istd/CSystem.h>
 
 
 namespace ifilegui

@@ -20,11 +20,11 @@
 ********************************************************************************/
 
 
-#include "iqt2d/CSceneBinderComp.h"
+#include <iqt2d/CSceneBinderComp.h>
 
 
 // ACF includes
-#include "iview/IShapeView.h"
+#include <iview/IShapeView.h>
 
 
 namespace iqt2d

@@ -20,11 +20,11 @@
 ********************************************************************************/
 
 
-#include "iqtgui/CCommandBasedSelectionControllerComp.h"
+#include <iqtgui/CCommandBasedSelectionControllerComp.h>
 
 
 // ACF includes
-#include "iprm/IOptionsList.h"
+#include <iprm/IOptionsList.h>
 
 
 namespace iqtgui

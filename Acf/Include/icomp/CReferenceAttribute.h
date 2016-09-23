@@ -28,8 +28,8 @@
 #include <QtCore/QByteArray>
 
 // ACF includes
-#include "iattr/TAttribute.h"
-#include "icomp/IAttributeStaticInfo.h"
+#include <iattr/TAttribute.h>
+#include <icomp/IAttributeStaticInfo.h>
 
 
 namespace icomp

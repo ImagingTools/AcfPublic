@@ -20,9 +20,9 @@
 ********************************************************************************/
 
 
-#include "iipr/CFeatureToImageMapperProcessorComp.h"
+#include <iipr/CFeatureToImageMapperProcessorComp.h>
 
-#include "imeas/INumericValue.h"
+#include <imeas/INumericValue.h>
 
 
 namespace iipr

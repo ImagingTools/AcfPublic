@@ -20,15 +20,15 @@
 ********************************************************************************/
 
 
-#include "imath/CAkimaInterpolator.h"
+#include <imath/CAkimaInterpolator.h>
 
 
 // Qt includes
 #include <QtCore/QVector>
 
 // ACF includes
-#include "istd/istd.h"
-#include "imath/CSplineSegmentFunction.h"
+#include <istd/istd.h>
+#include <imath/CSplineSegmentFunction.h>
 
 
 namespace imath

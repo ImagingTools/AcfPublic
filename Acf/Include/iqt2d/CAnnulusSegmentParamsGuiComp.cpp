@@ -20,11 +20,11 @@
 ********************************************************************************/
 
 
-#include "iqt2d/CAnnulusSegmentParamsGuiComp.h"
+#include <iqt2d/CAnnulusSegmentParamsGuiComp.h>
 
 
 // ACF includes
-#include "istd/CChangeGroup.h"
+#include <istd/CChangeGroup.h>
 
 
 namespace iqt2d

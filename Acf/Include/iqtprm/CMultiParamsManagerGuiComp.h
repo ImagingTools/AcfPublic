@@ -33,9 +33,9 @@
 #endif
 
 // ACF includes
-#include "iqt2d/IViewExtender.h"
+#include <iqt2d/IViewExtender.h>
 
-#include "iqtprm/CParamsManagerGuiCompBase.h"
+#include <iqtprm/CParamsManagerGuiCompBase.h>
 
 
 namespace iqtprm

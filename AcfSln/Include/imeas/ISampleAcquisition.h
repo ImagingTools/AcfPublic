@@ -25,9 +25,9 @@
 
 
 // ACF includes
-#include "istd/CIndex2d.h"
-#include "iimg/IBitmap.h"
-#include "iproc/IProcessor.h"
+#include <istd/CIndex2d.h>
+#include <iimg/IBitmap.h>
+#include <iproc/IProcessor.h>
 
 
 namespace imeas

@@ -25,7 +25,7 @@
 
 
 // ACF includes
-#include "ilog/CStreamLogCompBase.h"
+#include <ilog/CStreamLogCompBase.h>
 
 
 namespace ilog

@@ -20,15 +20,15 @@
 ********************************************************************************/
 
 
-#include "icmpstr/CVisualRegistryElement.h"
+#include <icmpstr/CVisualRegistryElement.h>
 
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "i2d/CRectangle.h"
-#include "icomp/CRegistryElement.h"
+#include <istd/CChangeNotifier.h>
+#include <i2d/CRectangle.h>
+#include <icomp/CRegistryElement.h>
 
-#include "icmpstr/icmpstr.h"
+#include <icmpstr/icmpstr.h>
 
 
 namespace icmpstr

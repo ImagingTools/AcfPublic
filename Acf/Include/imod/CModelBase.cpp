@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "imod/CModelBase.h"
+#include <imod/CModelBase.h>
 
 
 // Qt includes

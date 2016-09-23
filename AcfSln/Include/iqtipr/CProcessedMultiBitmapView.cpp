@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtipr/CProcessedMultiBitmapView.h"
+#include <iqtipr/CProcessedMultiBitmapView.h>
 
 
 // Qt includes
@@ -31,7 +31,7 @@
 #endif
 
 // ACF includes
-#include "iqtipr/CProcessedBitmapView.h"
+#include <iqtipr/CProcessedBitmapView.h>
 
 
 namespace iqtipr

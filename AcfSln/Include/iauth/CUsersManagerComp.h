@@ -28,12 +28,12 @@
 #include <QtCore/QVector>
 
 // ACF includes
-#include "iser/CArchiveTag.h"
-#include "icomp/CComponentBase.h"
+#include <iser/CArchiveTag.h>
+#include <icomp/CComponentBase.h>
 
 // ACF-Solutions includes
-#include "iauth/IUsersManager.h"
-#include "iauth/CUser.h"
+#include <iauth/IUsersManager.h>
+#include <iauth/CUser.h>
 
 
 namespace iauth

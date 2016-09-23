@@ -20,13 +20,13 @@
 ********************************************************************************/
 
 
-#include "iqtgui/CImagePropertiesFrameComp.h"
+#include <iqtgui/CImagePropertiesFrameComp.h>
 
 
 // ACF includes
-#include "i2d/ICalibration2d.h"
-#include "i2d/ICalibrationProvider.h"
-#include "i2d/CAffine2d.h"
+#include <i2d/ICalibration2d.h>
+#include <i2d/ICalibrationProvider.h>
+#include <i2d/CAffine2d.h>
 
 
 namespace iqtgui

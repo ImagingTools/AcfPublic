@@ -25,10 +25,10 @@
 
 
 // ACF includes
-#include "iser/ISerializable.h"
+#include <iser/ISerializable.h>
 
 // ACF-Solutions includes
-#include "imeas/INumericValue.h"
+#include <imeas/INumericValue.h>
 
 
 namespace imeas

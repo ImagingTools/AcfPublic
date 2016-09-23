@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "imath/CDoubleManip.h"
+#include <imath/CDoubleManip.h>
 
 
 namespace imath

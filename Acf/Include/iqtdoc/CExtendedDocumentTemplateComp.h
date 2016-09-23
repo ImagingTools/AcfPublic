@@ -25,9 +25,9 @@
 
 
 // ACF includes
-#include "idoc/CSingleDocumentTemplateComp.h"
+#include <idoc/CSingleDocumentTemplateComp.h>
 
-#include "iqtgui/IGuiObject.h"
+#include <iqtgui/IGuiObject.h>
 
 
 namespace iqtdoc

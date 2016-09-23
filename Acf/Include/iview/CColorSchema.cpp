@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iview/CColorSchema.h"
+#include <iview/CColorSchema.h>
 
 
 // Qt includes

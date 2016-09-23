@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "i2d/CAnnulusComp.h"
+#include <i2d/CAnnulusComp.h>
 
 
 namespace i2d

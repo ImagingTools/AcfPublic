@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ihotfgui/CDirectoryMonitorParamsGui.h"
+#include <ihotfgui/CDirectoryMonitorParamsGui.h>
 
 
 // Qt includes
@@ -31,9 +31,9 @@
 #endif
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "iqt/CSignalBlocker.h"
-#include "iwidgets/CItemDelegate.h"
+#include <istd/CChangeNotifier.h>
+#include <iqt/CSignalBlocker.h>
+#include <iwidgets/CItemDelegate.h>
 
 
 namespace ihotfgui

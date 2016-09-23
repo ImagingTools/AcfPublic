@@ -28,13 +28,13 @@
 #include <QtCore/QObject>
 
 // ACF includes
-#include "imod/CMultiModelDispatcherBase.h"
-#include "ilog/TLoggerCompWrap.h"
-#include "ibase/ICommandsProvider.h"
-#include "idoc/IDocumentManager.h"
-#include "iproc/IProcessor.h"
-#include "iqtgui/IGuiObject.h"
-#include "iqtgui/CHierarchicalCommand.h"
+#include <imod/CMultiModelDispatcherBase.h>
+#include <ilog/TLoggerCompWrap.h>
+#include <ibase/ICommandsProvider.h>
+#include <idoc/IDocumentManager.h>
+#include <iproc/IProcessor.h>
+#include <iqtgui/IGuiObject.h>
+#include <iqtgui/CHierarchicalCommand.h>
 
 
 namespace iprocgui

@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iwidgets/CDoubleRangeSpinEdit.h"
+#include <iwidgets/CDoubleRangeSpinEdit.h>
 
 
 namespace iwidgets

@@ -23,7 +23,7 @@
 #include "EdgePck.h"
 
 
-#include "icomp/export.h"
+#include <icomp/export.h>
 
 
 namespace EdgePck

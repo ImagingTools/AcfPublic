@@ -20,11 +20,11 @@
 ********************************************************************************/
 
 
-#include "iqtmeas/CNumericParamsGuiComp.h"
+#include <iqtmeas/CNumericParamsGuiComp.h>
 
 
 // ACF includes
-#include "imeas/INumericConstraints.h"
+#include <imeas/INumericConstraints.h>
 
 
 namespace iqtmeas

@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtmeas/CDataSequenceSupplierResultsViewComp.h"
+#include <iqtmeas/CDataSequenceSupplierResultsViewComp.h>
 
 
 namespace iqtmeas

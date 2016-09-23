@@ -25,7 +25,7 @@
 
 
 // ACF includes
-#include "GeneratedFiles/iwidgets/ui_CCollapsiblePage.h"
+#include <GeneratedFiles/iwidgets/ui_CCollapsiblePage.h>
 
 
 namespace iwidgets

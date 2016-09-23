@@ -23,7 +23,7 @@
 #include "QaxPck.h"
 
 
-#include "icomp/export.h"
+#include <icomp/export.h>
 
 
 namespace QaxPck

@@ -24,7 +24,7 @@
 #define iview_CAnnulusSegmentShape_included
 
 
-#include "iview/CAnnulusShape.h"
+#include <iview/CAnnulusShape.h>
 
 
 namespace iview

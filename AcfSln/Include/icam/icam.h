@@ -24,9 +24,9 @@
 #define icam_included
 
 
-#include "iproc/iproc.h"
-#include "iimg/iimg.h"
-#include "icomp/icomp.h"
+#include <iproc/iproc.h>
+#include <iimg/iimg.h>
+#include <icomp/icomp.h>
 
 
 /**

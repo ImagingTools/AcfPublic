@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtdoc/CStaticHelpFileProviderComp.h"
+#include <iqtdoc/CStaticHelpFileProviderComp.h>
 
 
 // Qt includes
@@ -28,7 +28,7 @@
 #include <QtCore/QDir>
 
 // ACF includes
-#include "iqt/iqt.h"
+#include <iqt/iqt.h>
 
 
 namespace iqtdoc

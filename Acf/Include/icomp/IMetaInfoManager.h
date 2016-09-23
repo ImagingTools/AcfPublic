@@ -24,10 +24,10 @@
 #define icomp_IMetaInfoManager_included
 
 
-#include "istd/IChangeable.h"
+#include <istd/IChangeable.h>
 
-#include "icomp/IComponentStaticInfo.h"
-#include "icomp/CComponentAddress.h"
+#include <icomp/IComponentStaticInfo.h>
+#include <icomp/CComponentAddress.h>
 
 
 namespace icomp

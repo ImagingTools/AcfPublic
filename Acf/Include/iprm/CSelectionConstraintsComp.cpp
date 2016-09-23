@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iprm/CSelectionConstraintsComp.h"
+#include <iprm/CSelectionConstraintsComp.h>
 
 
 namespace iprm

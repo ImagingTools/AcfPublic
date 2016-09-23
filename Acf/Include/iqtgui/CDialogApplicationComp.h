@@ -25,8 +25,8 @@
 
 
 // ACF includes
-#include "iqtgui/IDialog.h"
-#include "iqtgui/CApplicationCompBase.h"
+#include <iqtgui/IDialog.h>
+#include <iqtgui/CApplicationCompBase.h>
 
 
 namespace iqtgui

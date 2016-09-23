@@ -20,14 +20,14 @@
 ********************************************************************************/
 
 
-#include "iipr/CImageBinarizeProcessorComp.h"
+#include <iipr/CImageBinarizeProcessorComp.h>
 
 
  // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "iprm/TParamsPtr.h"
+#include <istd/CChangeNotifier.h>
+#include <iprm/TParamsPtr.h>
 
-#include "ibase/CSize.h"
+#include <ibase/CSize.h>
 
 
 namespace iipr

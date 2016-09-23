@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtmm/CVideoPlayerGuiComp.h"
+#include <iqtmm/CVideoPlayerGuiComp.h>
 
 
 namespace iqtmm

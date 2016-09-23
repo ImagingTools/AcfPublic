@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iwizgui/CWizardOptionsListGuiComp.h"
+#include <iwizgui/CWizardOptionsListGuiComp.h>
 
 
 // Qt includes
@@ -32,8 +32,8 @@
 #endif
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "iqt/CSignalBlocker.h"
+#include <istd/CChangeNotifier.h>
+#include <iqt/CSignalBlocker.h>
 
 
 namespace iwizgui

@@ -25,7 +25,7 @@
 
 
 // ACF includes
-#include "iprm/IEnableableParam.h"
+#include <iprm/IEnableableParam.h>
 
 
 namespace iprm

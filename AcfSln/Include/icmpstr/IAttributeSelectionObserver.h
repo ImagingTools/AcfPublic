@@ -24,9 +24,9 @@
 #define icmpstr_IAttributeSelectionObserver_included
 
 
-#include "icomp/IAttributeStaticInfo.h"
+#include <icomp/IAttributeStaticInfo.h>
 
-#include "icmpstr/icmpstr.h"
+#include <icmpstr/icmpstr.h>
 
 
 namespace icmpstr

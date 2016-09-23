@@ -37,7 +37,7 @@
 #endif
 
 // ACF includes
-#include "iqt2d/CActionAdapter.h"
+#include <iqt2d/CActionAdapter.h>
 
 
 namespace iqt2d

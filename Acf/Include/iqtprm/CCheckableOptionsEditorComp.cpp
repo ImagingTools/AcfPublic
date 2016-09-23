@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtprm/CCheckableOptionsEditorComp.h"
+#include <iqtprm/CCheckableOptionsEditorComp.h>
 
 
 // Qt includes
@@ -34,7 +34,7 @@
 #endif
 
 // ACF includes
-#include "iprm/IOptionsList.h"
+#include <iprm/IOptionsList.h>
 
 
 namespace iqtprm

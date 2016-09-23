@@ -25,7 +25,7 @@
 
 
 // ACF includes
-#include "iqtprm/CParamsManagerGuiCompBase.h"
+#include <iqtprm/CParamsManagerGuiCompBase.h>
 
 
 namespace iqtprm

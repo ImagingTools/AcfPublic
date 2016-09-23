@@ -28,7 +28,7 @@
 #include <QtCore/QVector>
 
 // ACF includes
-#include "istd/CVarIndex.h"
+#include <istd/CVarIndex.h>
 
 
 namespace istd

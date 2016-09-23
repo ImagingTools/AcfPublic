@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtdoc/CSingletonDocApplicationComp.h"
+#include <iqtdoc/CSingletonDocApplicationComp.h>
 
 
 // Qt includes

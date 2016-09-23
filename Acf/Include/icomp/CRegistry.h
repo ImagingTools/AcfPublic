@@ -24,12 +24,12 @@
 #define icomp_CRegistry_included
 
 
-#include "istd/TChangeDelegator.h"
+#include <istd/TChangeDelegator.h>
 
-#include "imod/TModelWrap.h"
+#include <imod/TModelWrap.h>
 
-#include "icomp/IRegistry.h"
-#include "icomp/CRegistryElement.h"
+#include <icomp/IRegistry.h>
+#include <icomp/CRegistryElement.h>
 
 
 namespace icomp

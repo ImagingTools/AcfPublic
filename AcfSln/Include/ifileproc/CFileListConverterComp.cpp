@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ifileproc/CFileListConverterComp.h"
+#include <ifileproc/CFileListConverterComp.h>
 
 
 // Qt includes

@@ -20,10 +20,10 @@
 ********************************************************************************/
 
 
-#include "QsciPck.h"
+#include "QSciPck.h"
 
 
-#include "icomp/export.h"
+#include <icomp/export.h>
 
 
 namespace QsciPck

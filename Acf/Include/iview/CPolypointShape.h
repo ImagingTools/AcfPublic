@@ -24,7 +24,7 @@
 #define iview_CPolypointShape_included
 
 
-#include "iview/CShapeBase.h"
+#include <iview/CShapeBase.h>
 
 
 namespace iview

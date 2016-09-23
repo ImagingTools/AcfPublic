@@ -24,7 +24,7 @@
 #define icomp_IComponentContext_included
 
 
-#include "istd/IPolymorphic.h"
+#include <istd/IPolymorphic.h>
 
 
 namespace iser

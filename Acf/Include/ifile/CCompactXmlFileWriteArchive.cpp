@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ifile/CCompactXmlFileWriteArchive.h"
+#include <ifile/CCompactXmlFileWriteArchive.h>
 
 
 // Qt includes

@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "icmpstr/CMultiAttributeDelegateWidget.h"
+#include <icmpstr/CMultiAttributeDelegateWidget.h>
 
 
 // Qt includes
@@ -34,7 +34,7 @@
 #endif
 
 // ACF-Solutions includes
-#include "icmpstr/CMultiAttributeEditor.h"
+#include <icmpstr/CMultiAttributeEditor.h>
 
 	
 namespace icmpstr

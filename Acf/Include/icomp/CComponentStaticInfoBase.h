@@ -29,7 +29,7 @@
 #include <QtCore/QMap>
 
 // ACF includes
-#include "icomp/IComponentStaticInfo.h"
+#include <icomp/IComponentStaticInfo.h>
 
 
 namespace icomp

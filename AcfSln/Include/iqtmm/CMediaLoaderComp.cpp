@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtmm/CMediaLoaderComp.h"
+#include <iqtmm/CMediaLoaderComp.h>
 
 
 // Qt includes
@@ -28,7 +28,7 @@
 
 
 // ACF includes
-#include "imm/IMediaController.h"
+#include <imm/IMediaController.h>
 
 
 namespace iqtmm

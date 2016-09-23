@@ -28,8 +28,8 @@
 #include <QtCore/QVector>
 
 // ACF includes
-#include "imod/IModel.h"
-#include "imod/IObserver.h"
+#include <imod/IModel.h>
+#include <imod/IObserver.h>
 
 
 namespace imod

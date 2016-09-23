@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtprm/CParamsManagerGuiComp.h"
+#include <iqtprm/CParamsManagerGuiComp.h>
 
 
 namespace iqtprm

@@ -24,7 +24,7 @@
 #define iqtsig_included
 
 
-#include "iqt/iqt.h"
+#include <iqt/iqt.h>
 
 
 /**

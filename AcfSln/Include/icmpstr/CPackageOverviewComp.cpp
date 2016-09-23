@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "icmpstr/CPackageOverviewComp.h"
+#include <icmpstr/CPackageOverviewComp.h>
 
 
 // Qt includes
@@ -48,12 +48,12 @@
 #endif
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "istd/CSystem.h"
-#include "iser/CCompactXmlMemWriteArchive.h"
-#include "icomp/CCompositeComponentStaticInfo.h"
-#include "icomp/CComponentMetaDescriptionEncoder.h"
-#include "iqt/CSignalBlocker.h"
+#include <istd/CChangeNotifier.h>
+#include <istd/CSystem.h>
+#include <iser/CCompactXmlMemWriteArchive.h>
+#include <icomp/CCompositeComponentStaticInfo.h>
+#include <icomp/CComponentMetaDescriptionEncoder.h>
+#include <iqt/CSignalBlocker.h>
 
 
 namespace icmpstr

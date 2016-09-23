@@ -28,7 +28,7 @@
 #include <QtCore/QString>
 
 // ACF includes
-#include "iprm/IParamsSet.h"
+#include <iprm/IParamsSet.h>
 
 
 namespace ihotf

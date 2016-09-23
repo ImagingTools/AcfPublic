@@ -24,12 +24,12 @@
 #define imath_TMatrix_included
 
 
-#include "istd/TArray.h"
-#include "istd/CIndex2d.h"
+#include <istd/TArray.h>
+#include <istd/CIndex2d.h>
 
-#include "iser/CArchiveTag.h"
+#include <iser/CArchiveTag.h>
 
-#include "imath/TVector.h"
+#include <imath/TVector.h>
 
 
 namespace iser

@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "i2d/CObject2dBase.h"
+#include <i2d/CObject2dBase.h>
 
 
 // Qt includes

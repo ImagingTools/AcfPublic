@@ -24,9 +24,9 @@
 #define iview_CLabelShape_included
 
 
-#include "i2d/CLabel.h"
+#include <i2d/CLabel.h>
 
-#include "iview/CPinShape.h"
+#include <iview/CPinShape.h>
 
 
 namespace iview

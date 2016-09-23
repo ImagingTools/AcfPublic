@@ -25,7 +25,7 @@
 
 
 // ACF includes
-#include "icomp/CComponentBase.h"
+#include <icomp/CComponentBase.h>
 
 
 namespace icomp

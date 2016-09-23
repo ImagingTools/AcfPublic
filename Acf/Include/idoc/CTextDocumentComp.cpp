@@ -20,12 +20,12 @@
 ********************************************************************************/
 
 
-#include "idoc/CTextDocumentComp.h"
+#include <idoc/CTextDocumentComp.h>
 
-#include "iser/IArchive.h"
-#include "iser/CArchiveTag.h"
+#include <iser/IArchive.h>
+#include <iser/CArchiveTag.h>
 
-#include "istd/CChangeNotifier.h"
+#include <istd/CChangeNotifier.h>
 
 
 namespace idoc

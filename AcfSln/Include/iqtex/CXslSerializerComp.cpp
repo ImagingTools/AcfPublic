@@ -20,18 +20,18 @@
 ********************************************************************************/
 
 
-#include "iqtex/CXslSerializerComp.h"
+#include <iqtex/CXslSerializerComp.h>
 
 
 // Qt includes
 #include <QtCore/QObject>
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
+#include <istd/CChangeNotifier.h>
 
 // ACF-Solutions includes
-#include "iqtex/CXslTransformationReadArchive.h"
-#include "iqtex/CXslTransformationWriteArchive.h"
+#include <iqtex/CXslTransformationReadArchive.h>
+#include <iqtex/CXslTransformationWriteArchive.h>
 
 
 namespace iqtex

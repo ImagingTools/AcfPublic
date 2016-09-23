@@ -25,9 +25,9 @@
 
 
 // ACF includes
-#include "icomp/CComponentBase.h"
+#include <icomp/CComponentBase.h>
 
-#include "iproc/IStateController.h"
+#include <iproc/IStateController.h>
 
 
 namespace iwiz

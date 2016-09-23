@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iprm/CFilteredOptionsListComp.h"
+#include <iprm/CFilteredOptionsListComp.h>
 
 
 namespace iprm

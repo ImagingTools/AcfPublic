@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iattr/CAttributesManager.h"
+#include <iattr/CAttributesManager.h>
 
 
 // Qt includes
@@ -28,9 +28,9 @@
 #include <QtCore/QObject>
 
 // ACF includes
-#include "istd/CChangeGroup.h"
-#include "imod/IModel.h"
-#include "iattr/TAttribute.h"
+#include <istd/CChangeGroup.h>
+#include <imod/IModel.h>
+#include <iattr/TAttribute.h>
 
 
 namespace iattr

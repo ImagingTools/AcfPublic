@@ -25,11 +25,11 @@
 
 
 // ACF includes
-#include "iimg/IBitmap.h"
-#include "iprm/IParamsSet.h"
-#include "iproc/IProcessor.h"
+#include <iimg/IBitmap.h>
+#include <iprm/IParamsSet.h>
+#include <iproc/IProcessor.h>
 
-#include "iipr/IFeaturesConsumer.h"
+#include <iipr/IFeaturesConsumer.h>
 
 
 namespace iipr

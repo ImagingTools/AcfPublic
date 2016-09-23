@@ -25,8 +25,8 @@
 
 
 // ACF includes
-#include "icomp/CComponentBase.h"
-#include "iimg/CMultiPageBitmapBase.h"
+#include <icomp/CComponentBase.h>
+#include <iimg/CMultiPageBitmapBase.h>
 
 
 namespace iimg

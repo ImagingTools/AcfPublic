@@ -29,10 +29,10 @@
 
 
 // ACF includes
-#include "icomp/CRegistry.h"
+#include <icomp/CRegistry.h>
 
-#include "icmpstr/IComponentNoteController.h"
-#include "icmpstr/CVisualRegistryElement.h"
+#include <icmpstr/IComponentNoteController.h>
+#include <icmpstr/CVisualRegistryElement.h>
 
 
 namespace icmpstr

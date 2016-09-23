@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iocv/COcvVideoControllerComp.h"
+#include <iocv/COcvVideoControllerComp.h>
 
 
 // Qt includes
@@ -28,11 +28,11 @@
 
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
+#include <istd/CChangeNotifier.h>
 
 
 // IACF includes
-#include "iocv/COcvImage.h"
+#include <iocv/COcvImage.h>
 
 
 namespace iocv

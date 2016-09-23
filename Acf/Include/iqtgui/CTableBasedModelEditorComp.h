@@ -33,7 +33,7 @@
 #endif
 
 // ACF includes
-#include "iqtgui/TItemModelEditorCompBase.h"
+#include <iqtgui/TItemModelEditorCompBase.h>
 
 
 namespace iqtgui

@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iinsp/CComposedInformationProviderComp.h"
+#include <iinsp/CComposedInformationProviderComp.h>
 
 
 namespace iinsp

@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "icomp/CRelatedInfoRegistrator.h"
+#include <icomp/CRelatedInfoRegistrator.h>
 
 
 namespace icomp

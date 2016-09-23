@@ -20,13 +20,13 @@
 ********************************************************************************/
 
 
-#include "icomp/CBaseComponentStaticInfo.h"
+#include <icomp/CBaseComponentStaticInfo.h>
 
 
 // ACF includes
-#include "istd/CIdManipBase.h"
-#include "icomp/IComponent.h"
-#include "icomp/IAttributeStaticInfo.h"
+#include <istd/CIdManipBase.h>
+#include <icomp/IComponent.h>
+#include <icomp/IAttributeStaticInfo.h>
 
 
 namespace icomp

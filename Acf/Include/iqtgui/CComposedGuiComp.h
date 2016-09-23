@@ -35,9 +35,9 @@
 #endif
 
 // ACF includes
-#include "iprm/IParamsSet.h"
-#include "iqtgui/TRestorableGuiWrap.h"
-#include "iqtgui/CMultiPageGuiCompBase.h"
+#include <iprm/IParamsSet.h>
+#include <iqtgui/TRestorableGuiWrap.h>
+#include <iqtgui/CMultiPageGuiCompBase.h>
 
 
 namespace iqtgui

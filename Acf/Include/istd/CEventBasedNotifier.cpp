@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "istd/CEventBasedNotifier.h"
+#include <istd/CEventBasedNotifier.h>
 
 
 // Qt includes

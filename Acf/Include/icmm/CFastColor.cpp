@@ -20,14 +20,14 @@
 ********************************************************************************/
 
 
-#include "icmm/CFastColor.h"
+#include <icmm/CFastColor.h>
 
 
 // Qt includes
 #include<QtCore/QHash>
 
 // ACF includes
-#include "iser/CArchiveTag.h"
+#include <iser/CArchiveTag.h>
 
 
 namespace icmm

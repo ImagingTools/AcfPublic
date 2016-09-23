@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqt2d/CViewProviderGuiComp.h"
+#include <iqt2d/CViewProviderGuiComp.h>
 
 
 namespace iqt2d

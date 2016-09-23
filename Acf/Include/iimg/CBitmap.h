@@ -28,10 +28,10 @@
 #include <QtCore/QMutex>
 
 // ACF includes
-#include "istd/TOptDelPtr.h"
-#include "i2d/ICalibrationProvider.h"
-#include "iimg/CBitmapBase.h"
-#include "iimg/IQImageProvider.h"
+#include <istd/TOptDelPtr.h>
+#include <i2d/ICalibrationProvider.h>
+#include <iimg/CBitmapBase.h>
+#include <iimg/IQImageProvider.h>
 
 
 namespace iimg

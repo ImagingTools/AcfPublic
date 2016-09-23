@@ -25,10 +25,10 @@
 
 
 // ACF includes
-#include "iproc/TSyncProcessorCompBase.h"
+#include <iproc/TSyncProcessorCompBase.h>
 
 // ACF-Solutions includes
-#include "imeas/IDataSequenceStatisticsProcessor.h"
+#include <imeas/IDataSequenceStatisticsProcessor.h>
 
 
 namespace imeas

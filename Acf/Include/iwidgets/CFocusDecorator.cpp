@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iwidgets/CFocusDecorator.h"
+#include <iwidgets/CFocusDecorator.h>
 
 
 namespace iwidgets

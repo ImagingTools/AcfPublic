@@ -20,11 +20,11 @@
 ********************************************************************************/
 
 
-#include "ilog/CLogComp.h"
+#include <ilog/CLogComp.h>
 
 
 // ACF includes
-#include "ilog/CMessage.h"
+#include <ilog/CMessage.h>
 
 
 namespace ilog

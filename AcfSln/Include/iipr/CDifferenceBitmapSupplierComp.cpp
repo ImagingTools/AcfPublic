@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iipr/CDifferenceBitmapSupplierComp.h"
+#include <iipr/CDifferenceBitmapSupplierComp.h>
 
 
 namespace iipr

@@ -24,10 +24,10 @@
 #define iipr_CSingleFeatureConsumer_included
 
 
-#include "istd/TDelPtr.h"
+#include <istd/TDelPtr.h>
 
-#include "iipr/IFeaturesConsumer.h"
-#include "imeas/INumericValueProvider.h"
+#include <iipr/IFeaturesConsumer.h>
+#include <imeas/INumericValueProvider.h>
 
 
 namespace iipr

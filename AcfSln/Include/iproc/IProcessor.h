@@ -25,8 +25,8 @@
 
 
 // ACF includes
-#include "iprm/IParamsSet.h"
-#include "ibase/IProgressManager.h"
+#include <iprm/IParamsSet.h>
+#include <ibase/IProgressManager.h>
 
 
 namespace iproc

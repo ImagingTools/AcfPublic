@@ -32,7 +32,7 @@
 #include <QtGui/QTreeWidget>
 #endif
 
-#include "iwidgets/iwidgets.h"
+#include <iwidgets/iwidgets.h>
 
 
 namespace iwidgets

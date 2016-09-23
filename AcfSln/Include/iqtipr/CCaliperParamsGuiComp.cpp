@@ -20,11 +20,11 @@
 ********************************************************************************/
 
 
-#include "iqtipr/CCaliperParamsGuiComp.h"
+#include <iqtipr/CCaliperParamsGuiComp.h>
 
 
 // ACF includes
-#include "istd/CChangeGroup.h"
+#include <istd/CChangeGroup.h>
 
 
 namespace iqtipr

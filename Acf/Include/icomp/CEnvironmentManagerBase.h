@@ -25,8 +25,8 @@
 
 
 // ACF includes
-#include "icomp/CPackageStaticInfo.h"
-#include "icomp/IComponentEnvironmentManager.h"
+#include <icomp/CPackageStaticInfo.h>
+#include <icomp/IComponentEnvironmentManager.h>
 
 
 namespace icomp

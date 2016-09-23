@@ -20,15 +20,15 @@
 ********************************************************************************/
 
 
-#include "iview/CTubePolylineShape.h"
+#include <iview/CTubePolylineShape.h>
 
 
 // Qt includes
 #include <QtGui/QPainter>
 
 // ACF includes
-#include "i2d/CTubePolyline.h"
-#include "iview/IColorSchema.h"
+#include <i2d/CTubePolyline.h>
+#include <iview/IColorSchema.h>
 
 
 namespace iview

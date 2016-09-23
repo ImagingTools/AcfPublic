@@ -20,14 +20,14 @@
 ********************************************************************************/
 
 
-#include "iipr/CBitmapOperations.h"
+#include <iipr/CBitmapOperations.h>
 
 
 // STL includes
 #include <cstring>
 
 // ACF includes
-#include "iimg/CScanlineMask.h"
+#include <iimg/CScanlineMask.h>
 
 
 namespace iipr

@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtcam/CFileAcquisitionComp.h"
+#include <iqtcam/CFileAcquisitionComp.h>
 
 
 // Qt includes
@@ -30,11 +30,11 @@
 #include <QtCore/QStringList>
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "iprm/IParamsSet.h"
-#include "iimg/IRasterImage.h"
-#include "iimg/IQImageProvider.h"
-#include "iprm/TParamsPtr.h"
+#include <istd/CChangeNotifier.h>
+#include <iprm/IParamsSet.h>
+#include <iimg/IRasterImage.h>
+#include <iimg/IQImageProvider.h>
+#include <iprm/TParamsPtr.h>
 
 
 namespace iqtcam

@@ -25,8 +25,8 @@
 
 
 // ACF includes
-#include "icomp/CComponentBase.h"
-#include "ifile/IFileTypeInfo.h"
+#include <icomp/CComponentBase.h>
+#include <ifile/IFileTypeInfo.h>
 
 
 namespace ifile

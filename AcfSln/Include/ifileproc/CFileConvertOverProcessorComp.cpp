@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ifileproc/CFileConvertOverProcessorComp.h"
+#include <ifileproc/CFileConvertOverProcessorComp.h>
 
 
 // Qt includes

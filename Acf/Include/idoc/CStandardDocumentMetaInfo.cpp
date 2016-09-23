@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "idoc/CStandardDocumentMetaInfo.h"
+#include <idoc/CStandardDocumentMetaInfo.h>
 
 
 // Qt includes
@@ -28,10 +28,10 @@
 #include <QtCore/QDataStream>
 
 // ACF includes
-#include "istd/TDelPtr.h"
-#include "istd/CChangeNotifier.h"
-#include "iser/IArchive.h"
-#include "iser/CArchiveTag.h"
+#include <istd/TDelPtr.h>
+#include <istd/CChangeNotifier.h>
+#include <iser/IArchive.h>
+#include <iser/CArchiveTag.h>
 
 
 namespace idoc

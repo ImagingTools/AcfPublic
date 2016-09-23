@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtdoc/CDocumentMetaInfoEditorComp.h"
+#include <iqtdoc/CDocumentMetaInfoEditorComp.h>
 
 
 // Qt includes

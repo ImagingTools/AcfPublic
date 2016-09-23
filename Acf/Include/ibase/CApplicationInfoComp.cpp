@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ibase/CApplicationInfoComp.h"
+#include <ibase/CApplicationInfoComp.h>
 
 
 namespace ibase
@@ -43,6 +43,12 @@ QString CApplicationInfoComp::GetApplicationAttribute(int attributeId, bool allo
 	case AA_PRODUCT_NAME:
 		if (m_productNameAttrPtr.IsValid()){
 			return allowTranslation? *m_productNameAttrPtr: m_productNameAttrPtr.GetOriginalValue();
+		}
+		break;
+
+	case AA_PRODUCT_EDITION:
+		if (m_productEditionAttrPtr.IsValid()){
+			return allowTranslation? *m_productEditionAttrPtr: m_productEditionAttrPtr.GetOriginalValue();
 		}
 		break;
 
@@ -87,7 +93,7 @@ QString CApplicationInfoComp::GetApplicationAttribute(int attributeId, bool allo
 		break;
 	}
 
-	return "";
+	return QString();
 }
 
 

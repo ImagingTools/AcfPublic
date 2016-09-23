@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iser/CBinaryReadArchiveBase.h"
+#include <iser/CBinaryReadArchiveBase.h>
 
 
 // Qt includes
@@ -29,7 +29,7 @@
 #include <QtCore/QVarLengthArray>
 
 // ACF includes
-#include "iser/CArchiveTag.h"
+#include <iser/CArchiveTag.h>
 
 
 namespace iser

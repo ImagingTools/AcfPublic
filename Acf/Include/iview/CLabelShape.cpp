@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iview/CLabelShape.h"
+#include <iview/CLabelShape.h>
 
 
 // Qt includes
@@ -28,12 +28,12 @@
 #include <QtGui/QPainter>
 
 // ACF includes
-#include "imod/IModel.h"
+#include <imod/IModel.h>
 
-#include "iqt/iqt.h"
+#include <iqt/iqt.h>
 
-#include "iview/IColorSchema.h"
-#include "iview/CScreenTransform.h"
+#include <iview/IColorSchema.h>
+#include <iview/CScreenTransform.h>
 
 
 namespace iview

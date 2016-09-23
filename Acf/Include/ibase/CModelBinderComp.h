@@ -25,9 +25,9 @@
 
 
 // ACF includes
-#include "imod/IModel.h"
-#include "imod/IObserver.h"
-#include "icomp/CComponentBase.h"
+#include <imod/IModel.h>
+#include <imod/IObserver.h>
+#include <icomp/CComponentBase.h>
 
 
 namespace ibase

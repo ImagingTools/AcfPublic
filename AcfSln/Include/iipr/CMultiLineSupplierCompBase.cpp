@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iipr/CMultiLineSupplierCompBase.h"
+#include <iipr/CMultiLineSupplierCompBase.h>
 
 
 namespace iipr

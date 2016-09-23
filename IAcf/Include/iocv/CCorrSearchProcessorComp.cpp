@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iocv/CCorrSearchProcessorComp.h"
+#include <iocv/CCorrSearchProcessorComp.h>
 
 
 // OpenCV includes
@@ -33,10 +33,10 @@
 #include <QtCore/QElapsedTimer>
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "iprm/TParamsPtr.h"
-#include "i2d/CRect.h"
-#include "iipr/CSearchFeature.h"
+#include <istd/CChangeNotifier.h>
+#include <iprm/TParamsPtr.h>
+#include <i2d/CRect.h>
+#include <iipr/CSearchFeature.h>
 
 
 namespace iocv

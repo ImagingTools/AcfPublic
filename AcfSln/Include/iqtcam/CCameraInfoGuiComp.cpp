@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtcam/CCameraInfoGuiComp.h"
+#include <iqtcam/CCameraInfoGuiComp.h>
 
 
 namespace iqtcam

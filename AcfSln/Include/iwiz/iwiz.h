@@ -24,7 +24,7 @@
 #define iwiz_included
 
 
-#include "iprm/irpm.h"
+#include <iprm/irpm.h>
 
 
 /**

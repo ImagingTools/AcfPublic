@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iedge/CExtractedEdgeLinesSupplierComp.h"
+#include <iedge/CExtractedEdgeLinesSupplierComp.h>
 
 
 namespace iedge

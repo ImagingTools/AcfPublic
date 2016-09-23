@@ -20,17 +20,17 @@
 ********************************************************************************/
 
 
-#include "iqtipr/CLineProjectionSupplierGuiComp.h"
+#include <iqtipr/CLineProjectionSupplierGuiComp.h>
 
 
 // ACF includes
-#include "imath/CVarVector.h"
+#include <imath/CVarVector.h>
 
-#include "istd/CChangeNotifier.h"
-#include "iser/CMemoryReadArchive.h"
+#include <istd/CChangeNotifier.h>
+#include <iser/CMemoryReadArchive.h>
 
 // IACF includes
-#include "iqtipr/CProjectionShape.h"
+#include <iqtipr/CProjectionShape.h>
 
 
 namespace iqtipr

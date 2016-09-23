@@ -20,14 +20,14 @@
 ********************************************************************************/
 
 
-#include "CChannelSelectionNode.h"
+#include <MePck/CChannelSelectionNode.h>
 
 
 // Qt includes
 #include <QtCore/QString>
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
+#include <istd/CChangeNotifier.h>
 
 
 namespace imebase

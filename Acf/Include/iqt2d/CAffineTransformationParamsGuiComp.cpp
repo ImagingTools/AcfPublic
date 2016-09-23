@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqt2d/CAffineTransformationParamsGuiComp.h"
+#include <iqt2d/CAffineTransformationParamsGuiComp.h>
 
 
 namespace iqt2d

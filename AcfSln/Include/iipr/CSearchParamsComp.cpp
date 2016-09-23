@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iipr/CSearchParamsComp.h"
+#include <iipr/CSearchParamsComp.h>
 
 
 namespace iipr

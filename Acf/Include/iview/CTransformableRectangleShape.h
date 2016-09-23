@@ -25,9 +25,9 @@
 
 
 // ACF includes
-#include "i2d/CParallelogram.h"
+#include <i2d/CParallelogram.h>
 
-#include "iview/CInteractiveShapeBase.h"
+#include <iview/CInteractiveShapeBase.h>
 
 
 namespace iview

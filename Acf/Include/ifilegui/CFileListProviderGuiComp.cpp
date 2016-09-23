@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ifilegui/CFileListProviderGuiComp.h"
+#include <ifilegui/CFileListProviderGuiComp.h>
 
 
 namespace ifilegui

@@ -25,12 +25,12 @@
 
 
 // ACF includes
-#include "icomp/CComponentBase.h"
+#include <icomp/CComponentBase.h>
 
 // IACF includes
-#include "icam/IExposureConstraints.h"
+#include <icam/IExposureConstraints.h>
 
-#include "isig/ITriggerConstraints.h"
+#include <isig/ITriggerConstraints.h>
 
 
 namespace icam

@@ -28,7 +28,7 @@
 #include <QtGui/QPainter>
 
 // ACF includes
-#include "iview/CPolygonShape.h"
+#include <iview/CPolygonShape.h>
 
 
 namespace iview

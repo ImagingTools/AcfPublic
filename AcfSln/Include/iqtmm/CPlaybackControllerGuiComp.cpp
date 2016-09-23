@@ -20,13 +20,13 @@
 ********************************************************************************/
 
 
-#include "iqtmm/CPlaybackControllerGuiComp.h"
+#include <iqtmm/CPlaybackControllerGuiComp.h>
 
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
+#include <istd/CChangeNotifier.h>
 
-#include "iqt/CSignalBlocker.h"
+#include <iqt/CSignalBlocker.h>
 
 
 namespace iqtmm

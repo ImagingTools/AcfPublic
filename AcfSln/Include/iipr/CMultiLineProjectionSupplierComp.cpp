@@ -20,12 +20,12 @@
 ********************************************************************************/
 
 
-#include "iipr/CMultiLineProjectionSupplierComp.h"
+#include <iipr/CMultiLineProjectionSupplierComp.h>
 
 
 // ACF includes
-#include "ilog/IMessageConsumer.h"
-#include "ilog/TExtMessage.h"
+#include <ilog/IMessageConsumer.h>
+#include <ilog/TExtMessage.h>
 
 
 namespace iipr

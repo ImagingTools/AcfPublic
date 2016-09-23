@@ -28,7 +28,7 @@
 #include <QtCore/QByteArray>
 
 // ACF includes
-#include "istd.h"
+#include <istd/istd.h>
 
 
 namespace istd

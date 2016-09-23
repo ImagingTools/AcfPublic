@@ -20,15 +20,14 @@
 ********************************************************************************/
 
 
-#include "iqwt3d/CSurfaceViewComp.h"
+#include <iqwt3d/CSurfaceViewComp.h>
 
 
 // Qwt3d includes
-#include "qwt3d_gridplot.h"
-
+#include <qwt3d_gridplot.h>
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
+#include <istd/CChangeNotifier.h>
 
 
 namespace iqwt3d

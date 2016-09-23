@@ -28,8 +28,8 @@
 #include <QtCore/QByteArray>
 
 // ACF includes
-#include "icomp/TComponentStaticInfo.h"
-#include "icomp/CPackageStaticInfo.h"
+#include <icomp/TComponentStaticInfo.h>
+#include <icomp/CPackageStaticInfo.h>
 
 
 namespace icomp

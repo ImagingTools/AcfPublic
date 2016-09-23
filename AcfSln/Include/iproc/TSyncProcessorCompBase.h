@@ -24,11 +24,11 @@
 #define iproc_TSyncProcessorCompBase_included
 
 
-#include "ilog/TLoggerCompWrap.h"
+#include <ilog/TLoggerCompWrap.h>
 
-#include "iproc/TSyncProcessorWrap.h"
+#include <iproc/TSyncProcessorWrap.h>
 
-#include "icomp/CComponentBase.h"
+#include <icomp/CComponentBase.h>
 
 
 namespace iproc

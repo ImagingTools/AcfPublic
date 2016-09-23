@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtcam/CSnapImageGuiComp.h"
+#include <iqtcam/CSnapImageGuiComp.h>
 
 
 // Qt includes
@@ -32,8 +32,8 @@
 #endif
 
 // ACF includes
-#include "istd/TDelPtr.h"
-#include "iview/CImageShape.h"
+#include <istd/TDelPtr.h>
+#include <iview/CImageShape.h>
 
 
 namespace iqtcam

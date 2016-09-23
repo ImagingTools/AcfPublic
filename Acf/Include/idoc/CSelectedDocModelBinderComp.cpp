@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "idoc/CSelectedDocModelBinderComp.h"
+#include <idoc/CSelectedDocModelBinderComp.h>
 
 
 // Qt includes

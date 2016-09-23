@@ -29,7 +29,7 @@
 
 
 // ACF includes
-#include "iview/CColorSchemaBase.h"
+#include <iview/CColorSchemaBase.h>
 
 
 namespace iview

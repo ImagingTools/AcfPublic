@@ -24,9 +24,9 @@
 #define iview_IVisualisable_included
 
 
-#include "istd/IPolymorphic.h"
+#include <istd/IPolymorphic.h>
 
-#include "iview/iview.h"
+#include <iview/iview.h>
 
 
 class QPainter;

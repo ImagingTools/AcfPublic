@@ -20,14 +20,14 @@
 ********************************************************************************/
 
 
-#include "icmm/CRgbToXyzTransformation.h"
+#include <icmm/CRgbToXyzTransformation.h>
 
 
 // Qt includes
 #include <QtCore/qmath.h>
 
 // ACF includes
-#include "icmm/CRgb.h"
+#include <icmm/CRgb.h>
 
 
 namespace icmm

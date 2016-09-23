@@ -25,10 +25,10 @@
 
 
 // ACF includes
-#include "ifile/IFileTypeInfo.h"
-#include "ifile/IFileNameParam.h"
-#include "iqtgui/TDesignerGuiObserverCompBase.h"
-#include "GeneratedFiles/ifilegui/ui_CSimpleFilePathParamGuiComp.h"
+#include <ifile/IFileTypeInfo.h>
+#include <ifile/IFileNameParam.h>
+#include <iqtgui/TDesignerGuiObserverCompBase.h>
+#include <GeneratedFiles/ifilegui/ui_CSimpleFilePathParamGuiComp.h>
 
 
 namespace ifilegui

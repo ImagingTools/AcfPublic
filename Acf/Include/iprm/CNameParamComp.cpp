@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iprm/CNameParamComp.h"
+#include <iprm/CNameParamComp.h>
 
 
 namespace iprm

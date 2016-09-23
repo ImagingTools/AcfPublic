@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "icomp/CMultiReferenceAttribute.h"
+#include <icomp/CMultiReferenceAttribute.h>
 
 
 namespace icomp

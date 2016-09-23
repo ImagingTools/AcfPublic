@@ -28,11 +28,11 @@
 #include <QtCore/QMap>
 
 // ACF includes
-#include "istd/TDelPtr.h"
+#include <istd/TDelPtr.h>
 
-#include "icomp/IAttributeStaticInfo.h"
-#include "icomp/IRegistry.h"
-#include "icomp/CBaseComponentStaticInfo.h"
+#include <icomp/IAttributeStaticInfo.h>
+#include <icomp/IRegistry.h>
+#include <icomp/CBaseComponentStaticInfo.h>
 
 
 namespace icomp

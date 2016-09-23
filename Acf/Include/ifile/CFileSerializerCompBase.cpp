@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ifile/CFileSerializerCompBase.h"
+#include <ifile/CFileSerializerCompBase.h>
 
 
 // Qt includes

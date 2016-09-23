@@ -24,11 +24,11 @@
 #define ibase_CApplicationInfoComp_included
 
 
-#include "iser/IVersionInfo.h"
+#include <iser/IVersionInfo.h>
 
-#include "icomp/CComponentBase.h"
+#include <icomp/CComponentBase.h>
 
-#include "ibase/IApplicationInfo.h"
+#include <ibase/IApplicationInfo.h>
 
 
 namespace ibase
@@ -50,6 +50,7 @@ public:
 		I_REGISTER_INTERFACE(ibase::IApplicationInfo);
 		I_ASSIGN(m_companyNameAttrPtr, "CompanyName", "Company name", false, "<my company>");
 		I_ASSIGN(m_productNameAttrPtr, "ProductName", "Product name, the same for all applications in one product", false, "<my product>");
+		I_ASSIGN(m_productEditionAttrPtr, "ProductEdition", "Product edition", false, "");
 		I_ASSIGN(m_applicationNameAttrPtr, "ApplicationName", "Application name", false, "ACF Application");
 		I_ASSIGN(m_applicationSubnameAttrPtr, "ApplicationSubname", "Sub-name of application", false, "");
 		I_ASSIGN(m_applicationTypeAttrPtr, "ApplicationType", "Application type", false, "Server");
@@ -73,6 +74,7 @@ protected:
 private:
 	I_ATTR(QString, m_companyNameAttrPtr);
 	I_ATTR(QString, m_productNameAttrPtr);
+	I_ATTR(QString, m_productEditionAttrPtr);
 	I_ATTR(QString, m_applicationNameAttrPtr);
 	I_ATTR(QString, m_applicationSubnameAttrPtr);
 	I_ATTR(QString, m_applicationTypeAttrPtr);

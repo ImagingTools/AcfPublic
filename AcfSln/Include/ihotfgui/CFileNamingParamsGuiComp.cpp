@@ -20,10 +20,10 @@
 ********************************************************************************/
 
 
-#include "ihotfgui/CFileNamingParamsGuiComp.h"
+#include <ihotfgui/CFileNamingParamsGuiComp.h>
 
 // ACF includes
-#include "istd/CChangeGroup.h"
+#include <istd/CChangeGroup.h>
 
 
 namespace ihotfgui

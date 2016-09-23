@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ifile/CCompactXmlFileReadArchive.h"
+#include <ifile/CCompactXmlFileReadArchive.h>
 
 
 // include STL

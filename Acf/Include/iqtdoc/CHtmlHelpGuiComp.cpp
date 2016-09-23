@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtdoc/CHtmlHelpGuiComp.h"
+#include <iqtdoc/CHtmlHelpGuiComp.h>
 
 
 namespace iqtdoc

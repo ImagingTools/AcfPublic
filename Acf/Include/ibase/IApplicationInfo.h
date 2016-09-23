@@ -28,9 +28,9 @@
 #include <QtCore/QString>
 
 // ACF includes
-#include "istd/IPolymorphic.h"
-#include "iser/IVersionInfo.h"
-#include "ibase/ibase.h"
+#include <istd/IPolymorphic.h>
+#include <iser/IVersionInfo.h>
+#include <ibase/ibase.h>
 
 
 namespace ibase
@@ -49,6 +49,7 @@ public:
 	{
 		AA_COMPANY_NAME,
 		AA_PRODUCT_NAME,
+		AA_PRODUCT_EDITION,
 		AA_APPLICATION_NAME,
 		AA_APPLICATION_SUBNAME,
 		AA_APPLICATION_TYPE,

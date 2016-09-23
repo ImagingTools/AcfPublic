@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iipr/CBitmapJoinerSupplierComp.h"
+#include <iipr/CBitmapJoinerSupplierComp.h>
 
 
 #include <iipr/CBitmapOperations.h>

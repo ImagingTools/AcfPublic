@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ifile/CRelativeFileNameParamComp.h"
+#include <ifile/CRelativeFileNameParamComp.h>
 
 
 // Qt includes
@@ -28,8 +28,8 @@
 
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "ifile/IFileArchiveInfo.h"
+#include <istd/CChangeNotifier.h>
+#include <ifile/IFileArchiveInfo.h>
 
 
 namespace ifile

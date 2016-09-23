@@ -24,7 +24,7 @@
 #define iview_CAffiniteCalibrationShape_included
 
 
-#include "iview/CNoneCalibrationShape.h"
+#include <iview/CNoneCalibrationShape.h>
 
 
 namespace iview

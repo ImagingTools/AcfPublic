@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ilog/CLogCompBase.h"
+#include <ilog/CLogCompBase.h>
 
 
 // Qt includes

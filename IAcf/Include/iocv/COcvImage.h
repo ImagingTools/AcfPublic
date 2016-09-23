@@ -31,7 +31,7 @@
 #undef max
 
 // ACF includes
-#include "iimg/CBitmapBase.h"
+#include <iimg/CBitmapBase.h>
 
 
 namespace iocv

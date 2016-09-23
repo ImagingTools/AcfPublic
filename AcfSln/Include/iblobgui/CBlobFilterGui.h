@@ -25,9 +25,9 @@
 
 
 // QSF includes
-#include "iblob/IBlobFilterParams.h"
+#include <iblob/IBlobFilterParams.h>
 
-#include "GeneratedFiles/iblobgui/ui_CBlobFilterGui.h"
+#include <GeneratedFiles/iblobgui/ui_CBlobFilterGui.h>
 
 
 namespace iblobgui

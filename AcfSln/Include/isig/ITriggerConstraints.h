@@ -24,7 +24,7 @@
 #define isig_ITriggerConstraints_included
 
 
-#include "istd/IPolymorphic.h"
+#include <istd/IPolymorphic.h>
 
 
 namespace isig

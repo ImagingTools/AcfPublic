@@ -20,13 +20,13 @@
 ********************************************************************************/
 
 
-#include "iipr/CImageInterpolationParams.h"
+#include <iipr/CImageInterpolationParams.h>
 
 
 // ACF includes
-#include "iser/IArchive.h"
-#include "iser/CArchiveTag.h"
-#include "istd/CChangeNotifier.h"
+#include <iser/IArchive.h>
+#include <iser/CArchiveTag.h>
+#include <istd/CChangeNotifier.h>
 
 
 namespace iipr

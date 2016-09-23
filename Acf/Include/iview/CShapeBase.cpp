@@ -20,13 +20,13 @@
 ********************************************************************************/
 
 
-#include "iview/CShapeBase.h"
+#include <iview/CShapeBase.h>
 
 
 // ACF includes
-#include "istd/IInformationProvider.h"
-#include "iview/IViewLayer.h"
-#include "iview/IColorSchema.h"
+#include <istd/IInformationProvider.h>
+#include <iview/IViewLayer.h>
+#include <iview/IColorSchema.h>
 
 
 namespace iview

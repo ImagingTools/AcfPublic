@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtdoc/CExtendedDocumentTemplateComp.h"
+#include <iqtdoc/CExtendedDocumentTemplateComp.h>
 
 
 // Qt includes

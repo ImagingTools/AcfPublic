@@ -20,15 +20,15 @@
 ********************************************************************************/
 
 
-#include "icomp/CComponentAddress.h"
+#include <icomp/CComponentAddress.h>
 
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "istd/CIdManipBase.h"
+#include <istd/CChangeNotifier.h>
+#include <istd/CIdManipBase.h>
 
-#include "iser/IArchive.h"
-#include "iser/CArchiveTag.h"
+#include <iser/IArchive.h>
+#include <iser/CArchiveTag.h>
 
 
 namespace icomp

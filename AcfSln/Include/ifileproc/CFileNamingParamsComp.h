@@ -28,10 +28,10 @@
 #include <QtCore/QStringList>
 
 // ACF includes
-#include "icomp/CComponentBase.h"
+#include <icomp/CComponentBase.h>
 
 // ACF-Solutions includes
-#include "ifileproc/CFileNamingParams.h"
+#include <ifileproc/CFileNamingParams.h>
 
 
 namespace ifileproc

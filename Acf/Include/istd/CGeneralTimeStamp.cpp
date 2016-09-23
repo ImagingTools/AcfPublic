@@ -20,14 +20,14 @@
 ********************************************************************************/
 
 
-#include "istd/CGeneralTimeStamp.h"
+#include <istd/CGeneralTimeStamp.h>
 
 
 // Qt includes
 #include <QtCore/QThread>
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
+#include <istd/CChangeNotifier.h>
 
 
 class ThreadBrute: public QThread

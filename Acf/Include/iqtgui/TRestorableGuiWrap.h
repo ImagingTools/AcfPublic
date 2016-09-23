@@ -25,8 +25,8 @@
 
 
 // ACF includes
-#include "iqt/ISettingsProvider.h"
-#include "icomp/CComponentBase.h"
+#include <iqt/ISettingsProvider.h>
+#include <icomp/CComponentBase.h>
 
 
 namespace iqtgui

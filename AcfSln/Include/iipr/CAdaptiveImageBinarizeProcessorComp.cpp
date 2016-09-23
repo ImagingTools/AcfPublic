@@ -20,16 +20,16 @@
 ********************************************************************************/
 
 
-#include "iipr/CAdaptiveImageBinarizeProcessorComp.h"
+#include <iipr/CAdaptiveImageBinarizeProcessorComp.h>
 
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "iprm/TParamsPtr.h"
-#include "iimg/CGeneralBitmap.h"
+#include <istd/CChangeNotifier.h>
+#include <iprm/TParamsPtr.h>
+#include <iimg/CGeneralBitmap.h>
 
 // ACF-Solutions includes
-#include "iipr/CRectImageSmoothProcessorComp.h"
+#include <iipr/CRectImageSmoothProcessorComp.h>
 
 
 namespace iipr

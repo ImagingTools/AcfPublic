@@ -20,14 +20,14 @@
 ********************************************************************************/
 
 
-#include "ilog/CStreamLogCompBase.h"
+#include <ilog/CStreamLogCompBase.h>
 
 
 // Qt includes
 #include <QtCore/QDateTime>
 
 // ACF includes
-#include "istd/IInformationProvider.h"
+#include <istd/IInformationProvider.h>
 
 
 namespace ilog

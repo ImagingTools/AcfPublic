@@ -23,7 +23,7 @@
 #include "SignalPck.h"
 
 
-#include "icomp/export.h"
+#include <icomp/export.h>
 
 
 namespace SignalPck

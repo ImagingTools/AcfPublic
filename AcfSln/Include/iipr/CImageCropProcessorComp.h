@@ -25,8 +25,8 @@
 
 
 // ACF-Solutions includes
-#include "imeas/IDiscreteDataSequence.h"
-#include "iipr/CImageRegionProcessorCompBase.h"
+#include <imeas/IDiscreteDataSequence.h>
+#include <iipr/CImageRegionProcessorCompBase.h>
 
 
 namespace iipr

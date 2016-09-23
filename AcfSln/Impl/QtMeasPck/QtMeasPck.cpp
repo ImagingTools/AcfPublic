@@ -22,9 +22,9 @@
 
 #include "QtMeasPck.h"
 
-#include "icomp/export.h"
+#include <icomp/export.h>
 
-#include "iqtgui/iqtgui.h"
+#include <iqtgui/iqtgui.h>
 
 
 I_REGISTER_QT_RESOURCE(iqtgui);

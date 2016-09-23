@@ -20,17 +20,17 @@
 ********************************************************************************/
 
 
-#include "iipr/CImageFlipProcessorComp.h"
+#include <iipr/CImageFlipProcessorComp.h>
 
 
 // Qt includes
 #include <QtGui/QImage>
 
 // ACF includes
-#include "iimg/CBitmap.h"
+#include <iimg/CBitmap.h>
 
-#include "iprm/TParamsPtr.h"
-#include "iprm/IEnableableParam.h"
+#include <iprm/TParamsPtr.h>
+#include <iprm/IEnableableParam.h>
 
 
 namespace iipr

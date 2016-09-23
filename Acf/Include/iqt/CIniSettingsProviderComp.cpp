@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqt/CIniSettingsProviderComp.h"
+#include <iqt/CIniSettingsProviderComp.h>
 
 
 

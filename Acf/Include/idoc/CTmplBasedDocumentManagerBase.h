@@ -25,7 +25,7 @@
 
 
 // ACF includes
-#include "idoc/IDocumentManager.h"
+#include <idoc/IDocumentManager.h>
 
 
 namespace idoc

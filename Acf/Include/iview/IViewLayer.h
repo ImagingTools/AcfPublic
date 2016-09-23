@@ -25,8 +25,8 @@
 
 
 // ACF includes
-#include "iview/IDisplay.h"
-#include "iview/ITouchable.h"
+#include <iview/IDisplay.h>
+#include <iview/ITouchable.h>
 
 
 class QPainter;

@@ -20,11 +20,11 @@
 ********************************************************************************/
 
 
-#include "iqt2d/CArcParamsGuiComp.h"
+#include <iqt2d/CArcParamsGuiComp.h>
 
 
 // ACF includes
-#include "istd/CChangeGroup.h"
+#include <istd/CChangeGroup.h>
 
 
 namespace iqt2d

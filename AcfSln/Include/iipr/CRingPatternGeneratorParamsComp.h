@@ -25,11 +25,11 @@
 
 
 // ACF includes
-#include "icomp/CComponentBase.h"
+#include <icomp/CComponentBase.h>
 
 
 // IACF includes
-#include "iipr/IRingPatternGeneratorParams.h"
+#include <iipr/IRingPatternGeneratorParams.h>
 
 
 namespace iipr

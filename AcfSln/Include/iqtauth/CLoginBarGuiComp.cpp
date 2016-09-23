@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtauth/CLoginBarGuiComp.h"
+#include <iqtauth/CLoginBarGuiComp.h>
 
 
 // Qt includes

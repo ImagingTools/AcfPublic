@@ -20,13 +20,13 @@
 ********************************************************************************/
 
 
-#include "icam/CExposureParamsComp.h"
+#include <icam/CExposureParamsComp.h>
 
 
-#include "istd/CChangeNotifier.h"
-#include "istd/TRange.h"
+#include <istd/CChangeNotifier.h>
+#include <istd/TRange.h>
 
-#include "iser/CArchiveTag.h"
+#include <iser/CArchiveTag.h>
 
 
 namespace icam

@@ -25,11 +25,11 @@
 
 
 // ACF includes
-#include "istd/IChangeable.h"
+#include <istd/IChangeable.h>
 #include <QtCore/QString>
-#include "ifile/IFileTypeInfo.h"
+#include <ifile/IFileTypeInfo.h>
 
-#include "imm/imm.h"
+#include <imm/imm.h>
 
 
 namespace imm

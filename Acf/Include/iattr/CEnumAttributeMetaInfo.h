@@ -28,11 +28,11 @@
 #include <QtCore/QList>
 
 // ACF includes
-#include "istd/TOptDelPtr.h"
+#include <istd/TOptDelPtr.h>
 
 // ACF-Solutions includes
-#include "iattr/IEnumAttributeMetaInfo.h"
-#include "iattr/CAttributeMetaInfo.h"
+#include <iattr/IEnumAttributeMetaInfo.h>
+#include <iattr/CAttributeMetaInfo.h>
 
 
 namespace iattr

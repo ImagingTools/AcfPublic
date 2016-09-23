@@ -25,8 +25,8 @@
 
 
 // ACF includes
-#include "istd/IPolymorphic.h"
-#include "iqtgui/IGuiObject.h"
+#include <istd/IPolymorphic.h>
+#include <iqtgui/IGuiObject.h>
 
 
 namespace iqtgui

@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqt2d/CExtendedConsoleGuiComp.h"
+#include <iqt2d/CExtendedConsoleGuiComp.h>
 
 
 namespace iqt2d

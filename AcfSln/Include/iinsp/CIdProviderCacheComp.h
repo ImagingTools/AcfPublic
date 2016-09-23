@@ -25,10 +25,10 @@
 
 
 // ACF includes
-#include "icomp/CComponentBase.h"
+#include <icomp/CComponentBase.h>
 
 // ACF-Solutions includes
-#include "iinsp/IIdProvider.h"
+#include <iinsp/IIdProvider.h>
 
 
 namespace iinsp

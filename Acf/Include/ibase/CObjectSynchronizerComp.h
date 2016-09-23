@@ -25,9 +25,9 @@
 
 
 // ACF includes
-#include "icomp/CComponentBase.h"
-#include "imod/CSingleModelObserverBase.h"
-#include "istd/IChangeable.h"
+#include <icomp/CComponentBase.h>
+#include <imod/CSingleModelObserverBase.h>
+#include <istd/IChangeable.h>
 
 
 namespace ibase

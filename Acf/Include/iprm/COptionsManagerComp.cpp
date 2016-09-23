@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iprm/COptionsManagerComp.h"
+#include <iprm/COptionsManagerComp.h>
 
 
 namespace iprm

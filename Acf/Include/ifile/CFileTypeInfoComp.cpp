@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ifile/CFileTypeInfoComp.h"
+#include <ifile/CFileTypeInfoComp.h>
 
 
 // Qt includes

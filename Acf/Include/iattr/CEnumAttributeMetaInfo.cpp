@@ -20,11 +20,11 @@
 ********************************************************************************/
 
 
-#include "iattr/CEnumAttributeMetaInfo.h"
+#include <iattr/CEnumAttributeMetaInfo.h>
 
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
+#include <istd/CChangeNotifier.h>
 
 
 namespace iattr

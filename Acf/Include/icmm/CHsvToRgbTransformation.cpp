@@ -20,15 +20,15 @@
 ********************************************************************************/
 
 
-#include "icmm/CHsvToRgbTransformation.h"
+#include <icmm/CHsvToRgbTransformation.h>
 
 
 // Qt includes
 #include <QtCore/qmath.h>
 
 // ACF includes
-#include "icmm/CHsv.h"
-#include "icmm/CRgb.h"
+#include <icmm/CHsv.h>
+#include <icmm/CRgb.h>
 
 
 namespace icmm

@@ -20,16 +20,16 @@
 ********************************************************************************/
 
 
-#include "iipr/CImageCopyProcessorComp.h"
+#include <iipr/CImageCopyProcessorComp.h>
 
 
 // ACF includes
-#include "imath/CFixedPointManip.h"
-#include "iprm/TParamsPtr.h"
-#include "iimg/CPixelFormatList.h"
+#include <imath/CFixedPointManip.h>
+#include <iprm/TParamsPtr.h>
+#include <iimg/CPixelFormatList.h>
 
 // ACF includes
-#include "iipr/CPixelManip.h"
+#include <iipr/CPixelManip.h>
 
 
 namespace iipr

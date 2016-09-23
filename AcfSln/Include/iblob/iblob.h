@@ -24,7 +24,7 @@
 #define iblob_included
 
 
-#include "iipr/iipr.h"
+#include <iipr/iipr.h>
 
 
 /**

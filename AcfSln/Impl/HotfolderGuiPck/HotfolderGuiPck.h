@@ -24,11 +24,11 @@
 #define HotfolderGuiPck_included
 
 
-#include "icomp/TModelCompWrap.h"
+#include <icomp/TModelCompWrap.h>
 
-#include "ihotfgui/CDirectoryMonitorComp.h"
-#include "ihotfgui/CDirectoryMonitorParamsGui.h"
-#include "ihotfgui/CFileNamingParamsGuiComp.h"
+#include <ihotfgui/CDirectoryMonitorComp.h>
+#include <ihotfgui/CDirectoryMonitorParamsGui.h>
+#include <ihotfgui/CFileNamingParamsGuiComp.h>
 
 
 /**

@@ -24,8 +24,8 @@
 #define iqwt3d_included
 
 
-#include "iqt/iqt.h"
-#include "iqt/icomp.h"
+#include <iqt/iqt.h>
+#include <iqt/icomp.h>
 
 
 /**

@@ -25,9 +25,9 @@
 
 
 // ACF includes
-#include "ifile/IFilePersistence.h"
-#include "ifile/IFilePersistenceInfo.h"
-#include "icomp/CComponentBase.h"
+#include <ifile/IFilePersistence.h>
+#include <ifile/IFilePersistenceInfo.h>
+#include <icomp/CComponentBase.h>
 
 // Qt includes
 #include <QtCore/QFileInfo>

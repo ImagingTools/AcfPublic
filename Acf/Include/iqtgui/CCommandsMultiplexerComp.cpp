@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtgui/CCommandsMultiplexerComp.h"
+#include <iqtgui/CCommandsMultiplexerComp.h>
 
 
 namespace iqtgui

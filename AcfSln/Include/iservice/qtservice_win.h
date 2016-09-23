@@ -73,7 +73,7 @@
 #include <QAbstractEventDispatcher>
 #include <qt_windows.h>
 
-#include "iservice/qtservice.h"
+#include <iservice/qtservice.h>
 
 
 class QtServiceControllerHandler;

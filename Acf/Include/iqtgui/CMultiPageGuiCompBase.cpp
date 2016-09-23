@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtgui/CMultiPageGuiCompBase.h"
+#include <iqtgui/CMultiPageGuiCompBase.h>
 
 
 // Qt includes

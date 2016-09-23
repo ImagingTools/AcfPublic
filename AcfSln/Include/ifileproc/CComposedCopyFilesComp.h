@@ -28,10 +28,10 @@
 #include <QtCore/QString>
 
 // ACF includes
-#include "ilog/TLoggerCompWrap.h"
+#include <ilog/TLoggerCompWrap.h>
 
 // ACF-Solutions includes
-#include "ifileproc/IFileConversion.h"
+#include <ifileproc/IFileConversion.h>
 
 
 namespace ifileproc

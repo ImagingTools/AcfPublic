@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ifileproc/CFileNamingComp.h"
+#include <ifileproc/CFileNamingComp.h>
 
 
 // Qt includes

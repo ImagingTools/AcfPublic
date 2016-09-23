@@ -28,10 +28,10 @@
 #include <vector>
 
 // ACF includes
-#include "iproc/TSyncProcessorWrap.h"
+#include <iproc/TSyncProcessorWrap.h>
 
 // ACF-Solutions includes
-#include "imeas/IDataSequence.h"
+#include <imeas/IDataSequence.h>
 
 
 namespace iipr

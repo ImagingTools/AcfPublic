@@ -25,10 +25,10 @@
 
 
 // ACF includes
-#include "imod/IModel.h"
-#include "icomp/CComponentBase.h"
-#include "ifile/IFilePersistence.h"
-#include "idoc/CSingleDocumentTemplateBase.h"
+#include <imod/IModel.h>
+#include <icomp/CComponentBase.h>
+#include <ifile/IFilePersistence.h>
+#include <idoc/CSingleDocumentTemplateBase.h>
 
 
 namespace idoc

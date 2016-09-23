@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "icmpstr/CQuickHelpGuiComp.h"
+#include <icmpstr/CQuickHelpGuiComp.h>
 
 
 // Qt includes
@@ -30,8 +30,8 @@
 #include <QtXml/QDomDocument>
 #include <QtXml/QDomNode>
 
-#include "iqt/CSignalBlocker.h"
-#include "istd/CSystem.h"
+#include <iqt/CSignalBlocker.h>
+#include <istd/CSystem.h>
 
 
 namespace icmpstr

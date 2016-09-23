@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "icmpstr/CMultiAttributeEditor.h"
+#include <icmpstr/CMultiAttributeEditor.h>
 
 
 // Qt includes

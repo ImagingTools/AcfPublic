@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iipr/CImageHistogramSupplierComp.h"
+#include <iipr/CImageHistogramSupplierComp.h>
 
 
 namespace iipr

@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iprocgui/CProcessorControlGuiComp.h"
+#include <iprocgui/CProcessorControlGuiComp.h>
 
 
 // Qt includes
@@ -32,7 +32,7 @@
 #endif
 
 // ACF includes
-#include "istd/TDelPtr.h"
+#include <istd/TDelPtr.h>
 
 
 namespace iprocgui

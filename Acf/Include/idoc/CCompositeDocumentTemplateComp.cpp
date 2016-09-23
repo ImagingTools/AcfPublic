@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "idoc/CCompositeDocumentTemplateComp.h"
+#include <idoc/CCompositeDocumentTemplateComp.h>
 
 
 namespace idoc

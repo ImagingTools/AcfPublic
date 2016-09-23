@@ -20,14 +20,14 @@
 ********************************************************************************/
 
 
-#include "ifileproc/CCopyFilesTreeComp.h"
+#include <ifileproc/CCopyFilesTreeComp.h>
 
 
 // Qt includes
 #include <QtCore/QObject>
 
 // ACF includes
-#include "istd/CSystem.h"
+#include <istd/CSystem.h>
 
 
 namespace ifileproc

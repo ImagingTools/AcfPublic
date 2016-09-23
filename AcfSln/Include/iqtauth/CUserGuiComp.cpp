@@ -20,16 +20,16 @@
 ********************************************************************************/
 
 
-#include "iqtauth/CUserGuiComp.h"
+#include <iqtauth/CUserGuiComp.h>
 
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "iser/CMemoryReadArchive.h"
+#include <istd/CChangeNotifier.h>
+#include <iser/CMemoryReadArchive.h>
 
 // ACF-Solutions includes
-#include "iqtauth/CChangePasswordDialog.h"
-#include "iqtauth/CUserManagerDialog.h"
+#include <iqtauth/CChangePasswordDialog.h>
+#include <iqtauth/CUserManagerDialog.h>
 
 
 namespace iqtauth

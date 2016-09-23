@@ -31,8 +31,8 @@
 #include <QtCore/QString>
 
 // ACF includes
-#include "imod/CSingleModelObserverBase.h"
-#include "imod/IModel.h"
+#include <imod/CSingleModelObserverBase.h>
+#include <imod/IModel.h>
 
 
 namespace imod

@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "ifile/CComposedFileMetaInfoProviderComp.h"
+#include <ifile/CComposedFileMetaInfoProviderComp.h>
 
 
 // Qt includes

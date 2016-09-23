@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iqtgui/CFreeWidgetGuiComp.h"
+#include <iqtgui/CFreeWidgetGuiComp.h>
 
 
 // Qt includes

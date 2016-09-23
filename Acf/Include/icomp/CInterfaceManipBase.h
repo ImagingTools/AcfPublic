@@ -28,10 +28,10 @@
 #include <QtCore/QByteArray>
 
 // ACF includes
-#include "istd/CIdManipBase.h"
-#include "istd/CClassInfo.h"
+#include <istd/CIdManipBase.h>
+#include <istd/CClassInfo.h>
 
-#include "icomp/IComponent.h"
+#include <icomp/IComponent.h>
 
 
 namespace icomp

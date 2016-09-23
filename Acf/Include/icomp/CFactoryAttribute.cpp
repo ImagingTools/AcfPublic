@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "icomp/CFactoryAttribute.h"
+#include <icomp/CFactoryAttribute.h>
 
 
 namespace icomp

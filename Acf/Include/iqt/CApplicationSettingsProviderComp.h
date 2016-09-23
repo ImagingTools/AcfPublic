@@ -25,9 +25,9 @@
 
 
 // ACF includes
-#include "icomp/CComponentBase.h"
-#include "ibase/IApplicationInfo.h"
-#include "iqt/ISettingsProvider.h"
+#include <icomp/CComponentBase.h>
+#include <ibase/IApplicationInfo.h>
+#include <iqt/ISettingsProvider.h>
 
 
 namespace iqt

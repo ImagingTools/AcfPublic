@@ -20,16 +20,16 @@
 ********************************************************************************/
 
 
-#include "iqtprm/CVariableParamGuiComp.h"
+#include <iqtprm/CVariableParamGuiComp.h>
 
 
 // ACF includes
-#include "istd/CChangeNotifier.h"
-#include "imod/IModel.h"
-#include "imod/IObserver.h"
-#include "iqt/CSignalBlocker.h"
-#include "iview/IShapeView.h"
-#include "iqt2d/IViewProvider.h"
+#include <istd/CChangeNotifier.h>
+#include <imod/IModel.h>
+#include <imod/IObserver.h>
+#include <iqt/CSignalBlocker.h>
+#include <iview/IShapeView.h>
+#include <iqt2d/IViewProvider.h>
 
 
 namespace iqtprm

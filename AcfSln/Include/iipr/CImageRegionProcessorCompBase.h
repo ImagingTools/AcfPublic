@@ -25,8 +25,8 @@
 
 
 // ACF includes
-#include "i2d/ICalibrationProvider.h"
-#include "iproc/TSyncProcessorCompBase.h"
+#include <i2d/ICalibrationProvider.h>
+#include <iproc/TSyncProcessorCompBase.h>
 
 
 namespace i2d

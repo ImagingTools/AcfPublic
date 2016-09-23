@@ -29,11 +29,11 @@
 #include <QtGui/QPixmap>
 
 // ACF includes
-#include "icmm/IColorTransformation.h"
+#include <icmm/IColorTransformation.h>
 
-#include "iimg/IBitmap.h"
+#include <iimg/IBitmap.h>
 
-#include "iview/CShapeBase.h"
+#include <iview/CShapeBase.h>
 
 
 namespace iview
