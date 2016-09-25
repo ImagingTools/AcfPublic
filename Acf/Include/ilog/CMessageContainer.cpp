@@ -152,6 +152,7 @@ bool CMessageContainer::Serialize(iser::IArchive& archive)
 	}
 	else{
 		m_messages.clear();
+		m_worstCategory = -1;
 
 		for (int messageIndex = 0; messageIndex < messageCount; ++messageIndex){
 			retVal = retVal && archive.BeginTag(messageTag);
@@ -197,11 +198,10 @@ bool CMessageContainer::Serialize(iser::IArchive& archive)
 
 int CMessageContainer::GetWorstCategory() const
 {
-	int worstCategory = m_worstCategory;
 	int childCount = GetChildsCount();
 
-	if (worstCategory < 0){
-		worstCategory = 0;
+	if (m_worstCategory < 0){
+		m_worstCategory = 0;
 
 		for (		MessageList::ConstIterator iter = m_messages.constBegin();
 					iter != m_messages.constEnd();
@@ -209,12 +209,13 @@ int CMessageContainer::GetWorstCategory() const
 			const IMessageConsumer::MessagePtr& messagePtr = *iter;
 
 			int category = messagePtr->GetInformationCategory();
-			if (category > worstCategory){
-				worstCategory = category;
+			if (category > m_worstCategory){
+				m_worstCategory = category;
 			}
 		}
 	}
 
+	int worstCategory = m_worstCategory;
 	for (int childIndex = 0; childIndex < childCount; childIndex++){
 		IMessageContainer* childPtr = dynamic_cast<IMessageContainer*>(GetChild(childIndex));
 		if (childPtr != NULL){
@@ -273,9 +274,11 @@ void CMessageContainer::AddMessage(const IMessageConsumer::MessagePtr& messagePt
 	istd::CChangeNotifier changeNotifier(this);
 
 	m_messages.push_front(messagePtr);
-	int messageCategory = messagePtr->GetInformationCategory();
-	if ((m_worstCategory >= 0) && (messageCategory > m_worstCategory)){
-		m_worstCategory = messageCategory;
+	if (m_worstCategory >= 0) {
+		int messageCategory = messagePtr->GetInformationCategory();
+		if (messageCategory > m_worstCategory){
+			m_worstCategory = messageCategory;
+		}
 	}
 
 	if (m_maxMessagesCount >= 0){
@@ -285,6 +288,7 @@ void CMessageContainer::AddMessage(const IMessageConsumer::MessagePtr& messagePt
 			
 			int removeCategory = messageToRemovePtr->GetInformationCategory();
 			if (removeCategory >= m_worstCategory){
+				//invalidate m_worstCategory
 				m_worstCategory = -1;
 			}
 

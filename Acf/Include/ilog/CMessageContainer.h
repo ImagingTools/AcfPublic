@@ -128,7 +128,7 @@ private:
 
 	ilog::IMessageConsumer* m_slaveConsumerPtr;
 	int m_maxMessagesCount;
-	int m_worstCategory;
+	mutable int m_worstCategory;
 };
 
 
