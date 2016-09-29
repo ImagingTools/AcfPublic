@@ -16971,6 +16971,13 @@
       <anchor>abeeedb5fce3b703e62b314beb2dc9ae2</anchor>
       <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
     </member>
+    <member kind="variable" protection="protected">
+      <type>QSet&lt; int &gt;</type>
+      <name>m_onceMessageIds</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>a99a001aadc619309b712edc22852f3a3</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>ibase::CDelegatedProgressManager</name>
@@ -31706,6 +31713,13 @@
       <anchor>abeeedb5fce3b703e62b314beb2dc9ae2</anchor>
       <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const</arglist>
     </member>
+    <member kind="variable" protection="protected">
+      <type>QSet&lt; int &gt;</type>
+      <name>m_onceMessageIds</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>a99a001aadc619309b712edc22852f3a3</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>ifile::CFileSystemInfoProviderComp</name>
@@ -32272,6 +32286,13 @@
       <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
       <anchor>abeeedb5fce3b703e62b314beb2dc9ae2</anchor>
       <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QSet&lt; int &gt;</type>
+      <name>m_onceMessageIds</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>a99a001aadc619309b712edc22852f3a3</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -35213,35 +35234,35 @@
       <type>virtual int</type>
       <name>GetLinesDifference</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>a045279e9d5a1285706a6ccabc6aa9c8a</anchor>
+      <anchor>ac9cd34ecea1ee298179bb7ccb8994cd2</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetPixelsDifference</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>a79c7d2e1c546f36265eefd12e38d18cf</anchor>
+      <anchor>a78802d4a30022e7d6538fe26bb5127da</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetPixelBitsCount</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>a7143c102e9a70aabddd28dc6c03d4872</anchor>
+      <anchor>ab0e9171fa57a0fefcd2d016a5cb283dd</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const void *</type>
       <name>GetLinePtr</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>ab4f19f375719c079cfd8d278df8b6ff0</anchor>
+      <anchor>a476ae0ba40dfa5f86f44dc4401a53942</anchor>
       <arglist>(int positionY) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void *</type>
       <name>GetLinePtr</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>ab689408d8f619df9f80187d3ae11708b</anchor>
+      <anchor>aea92f02b7d2b15548624757b11f2ce28</anchor>
       <arglist>(int positionY)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -35262,14 +35283,14 @@
       <type>virtual istd::CIndex2d</type>
       <name>GetImageSize</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>ade21d993d33bbfb5eb530d8fe7d6944d</anchor>
+      <anchor>a33b8966570825e0697ba538db072c30a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetComponentsCount</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>a5c2825a554bcb3538c237c0fbda73040</anchor>
+      <anchor>a981da43403b18cf3a68f046d048a5188</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">

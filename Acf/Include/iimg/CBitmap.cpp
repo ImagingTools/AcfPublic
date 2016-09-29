@@ -103,7 +103,7 @@ CBitmap::CBitmap()
 
 CBitmap::CBitmap(const CBitmap& bitmap)
 :	BaseClass(bitmap), 
-	m_image(bitmap.m_image.copy()),
+	m_image(bitmap.m_image),
 	m_externalBuffer(NULL)
 {
 }
@@ -368,7 +368,7 @@ bool CBitmap::CopyFrom(const istd::IChangeable& object, CompatibilityMode mode)
 
 		m_externalBuffer.Reset();
 
-		m_image = bitmapImplPtr->GetQImage().copy();
+		m_image = bitmapImplPtr->GetQImage();
 
 		return true;
 	}
@@ -507,7 +507,7 @@ iimg::IBitmap::PixelFormat CBitmap::CalcFromQtFormat(QImage::Format imageFormat)
 
 bool CBitmap::SetQImage(const QImage& image)
 {
-	m_image = image.copy();
+	m_image = image;
 
 	if (m_image.isNull()){
 		return false;
