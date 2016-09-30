@@ -275,11 +275,9 @@ void CMultiBitmapSupplierGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& 
 	if (bitmapsCount > 0){
 		if (BitmapPreview->selectedItems().empty()){
 			SizeLabel->setText("");
-			SelectBitmap(0);
 		}
 		else{
 			SizeLabel->setText(tr("(%1 x %2)").arg(bitmapSize.GetX()).arg(bitmapSize.GetY()));
-			SelectBitmap(BitmapPreview->selectedItems().indexOf(0));
 		}
 	}
 	else{

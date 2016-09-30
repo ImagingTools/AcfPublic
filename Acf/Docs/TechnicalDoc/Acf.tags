@@ -2230,7 +2230,7 @@
     <includes id="_i_changeable_8h" name="IChangeable.h" local="no" imported="no">istd/IChangeable.h</includes>
     <includes id="_i_model_8h" name="IModel.h" local="no" imported="no">imod/IModel.h</includes>
     <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="no" imported="no">imod/CMultiModelDispatcherBase.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="no" imported="no">ilog/TLoggerCompWrap.h</includes>
     <includes id="_c_memory_write_archive_8h" name="CMemoryWriteArchive.h" local="no" imported="no">iser/CMemoryWriteArchive.h</includes>
     <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="no" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="no" imported="no">ifile/IFileNameParam.h</includes>
@@ -30144,7 +30144,7 @@
   <compound kind="class">
     <name>ifile::CAutoPersistenceComp</name>
     <filename>classifile_1_1_c_auto_persistence_comp.html</filename>
-    <base>icomp::CComponentBase</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="enumeration">
       <type></type>
@@ -30175,10 +30175,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
-      <anchor>ad6cca8229f651bdf1501961558f36172</anchor>
+      <anchor>aff391f5aea97c70801ecb27de30c4952</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
