@@ -60,6 +60,8 @@ void CAutoPersistenceComp::SaveObjectSnapshot()
 		return;
 	}
 
+	SendVerboseMessage(tr("SaveSnapshot()"));
+
 	iser::ISerializable* serializablePtr = dynamic_cast<iser::ISerializable*>(m_objectShadowPtr.GetPtr());
 
 	// For the serializable objects memory comparison can be done:
@@ -81,21 +83,32 @@ void CAutoPersistenceComp::SaveObjectSnapshot()
 
 bool CAutoPersistenceComp::LoadObject(const QString& filePath)
 {
-	if (		m_fileLoaderCompPtr.IsValid() &&
-				m_objectCompPtr.IsValid() &&
-				m_loadSaveMutex.tryLock()){
-		int operationState = m_fileLoaderCompPtr->LoadFromFile(*m_objectCompPtr, filePath);
+	SendVerboseMessage(tr("LoadObject( %1 )").arg(filePath));
+	bool retVal = false;
+	if (m_fileLoaderCompPtr.IsValid() &&
+		m_objectCompPtr.IsValid()){
 
-		m_loadSaveMutex.unlock();
-			
-		if (operationState == ifile::IFilePersistence::OS_OK){
-			m_isLoadedFromFile = true;
+		if (LockFile(filePath, false)){
+			if (m_loadSaveMutex.tryLock()){
 
-			return true;
+				int operationState = m_fileLoaderCompPtr->LoadFromFile(*m_objectCompPtr, filePath);
+
+				m_loadSaveMutex.unlock();
+
+				if (operationState == ifile::IFilePersistence::OS_OK){
+					m_isLoadedFromFile = true;
+
+					retVal = true;
+				}
+			}
 		}
+		else {
+			SendWarningMessage(0, tr("Locking %1 unsuccesful (load)").arg(filePath));
+		}
+		UnlockFile();
 	}
 
-	return false;
+	return retVal;
 }
 
 
@@ -109,23 +122,29 @@ bool CAutoPersistenceComp::StoreObject(const istd::IChangeable& object)
 			filePath = m_filePathCompPtr->GetPath();
 		}
 
-		if (LockFile(filePath) && m_loadSaveMutex.tryLock()){
-			if (*m_reloadOnFileChangeAttrPtr){
-				m_blockLoadingOnFileChanges = true;
+		SendVerboseMessage(tr("StoreObject( %1 )").arg(filePath));
+
+		if (LockFile(filePath, true)){
+			if (m_loadSaveMutex.tryLock()){
+				if (*m_reloadOnFileChangeAttrPtr){
+					m_blockLoadingOnFileChanges = true;
+				}
+
+				int operationState = m_fileLoaderCompPtr->SaveToFile(object, filePath);
+
+				m_loadSaveMutex.unlock();
+
+				if (operationState == ifile::IFilePersistence::OS_OK){
+					retVal = true;
+
+					m_isLoadedFromFile = true;
+				}
 			}
-
-			int operationState = m_fileLoaderCompPtr->SaveToFile(object, filePath);
-
-			m_loadSaveMutex.unlock();
-
-			if (operationState == ifile::IFilePersistence::OS_OK){
-				retVal = true;
-
-				m_isLoadedFromFile = true;
-			}
-
-			UnlockFile();
 		}
+		else {
+			SendWarningMessage(0, tr("Locking %1 unsuccesful (store)").arg(filePath));
+		}
+		UnlockFile();
 	}
 
 	return retVal;
@@ -301,6 +320,15 @@ void CAutoPersistenceComp::OnFileContentsChanged(const QString& path)
 		return;
 	}
 
+	SendVerboseMessage(tr("StoreObject( %1 )").arg(path));
+
+	if (path.isEmpty()){
+		//Is this possible?
+		//Path empty -> no need for copy
+		LoadObject(path);
+		return;
+	}
+
 	QString tempPath;
 
 #if QT_VERSION < 0x050000
@@ -311,7 +339,7 @@ void CAutoPersistenceComp::OnFileContentsChanged(const QString& path)
 
 	QString tempFileName = tempPath + "/" + QUuid::createUuid().toString() + "_" + QFileInfo(path).fileName();
 
-	if (LockFile(path)){
+	if (LockFile(path, true)){
 		if (QFile::copy(path, tempFileName)){
 			UnlockFile();
 
@@ -322,10 +350,11 @@ void CAutoPersistenceComp::OnFileContentsChanged(const QString& path)
 			m_fileWatcher.removePaths(m_fileWatcher.files());
 			m_fileWatcher.addPath(path);
 		}
-		else{
-			UnlockFile();
-		}
 	}
+	else {
+		SendWarningMessage(0, tr("Locking %1 unsuccesful (secure load)").arg(path));
+	}
+	UnlockFile();
 }
 
 
@@ -343,25 +372,35 @@ bool CAutoPersistenceComp::TryStartIntervalStore()
 }
 
 
-bool CAutoPersistenceComp::LockFile(const QString& filePath) const
+bool CAutoPersistenceComp::LockFile(const QString& filePath, bool store) const
 {
+#if QT_VERSION >= 0x050000
 	QFileInfo fileInfo(filePath);
-	if (fileInfo.exists()){
+	bool lockRequired = !filePath.isEmpty();
+	lockRequired = lockRequired && fileInfo.exists();
+	if (!store) {
+		//load operation -> Lock is not required when writing is not possible
+		lockRequired = lockRequired && *m_enableLockForLoadAttrPtr;
+		lockRequired = lockRequired && fileInfo.isWritable();
+	}
+	if (lockRequired){
 		QString lockFilePath = filePath + ".lock";
 
-		// Try to remove "dead" lock file, if exists:
-		QFile::remove(lockFilePath);
-
-#if QT_VERSION >= 0x050000
 		if (!m_lockFilePtr.IsValid()){
 			m_lockFilePtr.SetPtr(new QLockFile(lockFilePath));
+			int staleLockTime = int(*m_staleLockTimeAttrPtr * 1000.0);
+			m_lockFilePtr->setStaleLockTime(staleLockTime);
+		}
+
+		if (m_lockFilePtr->isLocked()){
+			SendWarningMessage(0, tr("Possible deadlock conditions: %1").arg(filePath));
 		}
 
 		Q_ASSERT(m_lockFilePtr.IsValid());
-
-		return m_lockFilePtr->lock();
-#endif
+		int timeout = int(*m_tryLockTimeoutAttrPtr * 1000.0);
+		return m_lockFilePtr->tryLock(timeout);
 	}
+#endif
 
 	return true;
 }
