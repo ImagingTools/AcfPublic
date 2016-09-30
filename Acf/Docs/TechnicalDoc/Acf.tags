@@ -167,8 +167,8 @@
       <type>uint</type>
       <name>qHash</name>
       <anchorfile>namespacei2d.html</anchorfile>
-      <anchor>a1df2645cd2431ccb1de330ac0c7ea9ea</anchor>
-      <arglist>(const i2d::CLine2d &amp;key, uint seed=0)</arglist>
+      <anchor>ab635761de722e0ee79a4be536f6a9496</anchor>
+      <arglist>(const CLine2d &amp;key, uint seed=0)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -444,8 +444,8 @@
       <type>uint</type>
       <name>qHash</name>
       <anchorfile>namespacei2d.html</anchorfile>
-      <anchor>a40083a24c3b5b8ae5b71b21284458e7b</anchor>
-      <arglist>(const i2d::CVector2d &amp;key, uint seed=0)</arglist>
+      <anchor>a988d09799b53d49c014cb1f8f07f3e75</anchor>
+      <arglist>(const CVector2d &amp;key, uint seed=0)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -1151,8 +1151,8 @@
       <type>uint</type>
       <name>qHash</name>
       <anchorfile>namespaceicmm.html</anchorfile>
-      <anchor>a71fb9f897e03e2439ee13b0873df2ab9</anchor>
-      <arglist>(const icmm::CFastColor &amp;color, uint seed=0)</arglist>
+      <anchor>a4dbeca8f12a8b30dc4deceaa036b22c4</anchor>
+      <arglist>(const CFastColor &amp;color, uint seed=0)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -1328,8 +1328,8 @@
       <type>uint</type>
       <name>qHash</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a0d2eabde69d3b23e9bf3cfa248611aa3</anchor>
-      <arglist>(const icomp::CComponentAddress &amp;address, uint seed=0)</arglist>
+      <anchor>af10440e4a727c0683a9b4f231f529cfb</anchor>
+      <arglist>(const CComponentAddress &amp;address, uint seed=0)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -2804,6 +2804,13 @@
     <includes id="_i_raster_image_8h" name="IRasterImage.h" local="no" imported="no">iimg/IRasterImage.h</includes>
     <class kind="class">iimg::CScanlineMask</class>
     <namespace>iimg</namespace>
+    <member kind="function">
+      <type>uint</type>
+      <name>qHash</name>
+      <anchorfile>namespaceiimg.html</anchorfile>
+      <anchor>ad98998ab57f4e57e5675119866739dfd</anchor>
+      <arglist>(const CScanlineMask &amp;key, uint seed=0)</arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>IBitmap.h</name>
@@ -3319,8 +3326,8 @@
       <type>uint</type>
       <name>qHash</name>
       <anchorfile>namespaceimath.html</anchorfile>
-      <anchor>a849d6f0253b4ed165b1664f4fe6c1d69</anchor>
-      <arglist>(const imath::TFastVector&lt; MaxSize, Element &gt; &amp;v, uint seed=0)</arglist>
+      <anchor>aedc82fec2b4ab9d4115f538a00e7eb5a</anchor>
+      <arglist>(const TFastVector&lt; MaxSize, Element &gt; &amp;v, uint seed=0)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -5832,8 +5839,8 @@
       <type>uint</type>
       <name>qHash</name>
       <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>a4b4176039350c8972e20f604fbe22f68</anchor>
-      <arglist>(const istd::CVarIndex &amp;index, uint seed=0)</arglist>
+      <anchor>a2dad37939d2b1a014340b8e3dc7f9912</anchor>
+      <arglist>(const CVarIndex &amp;index, uint seed=0)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -6181,6 +6188,13 @@
       <anchorfile>namespaceistd.html</anchorfile>
       <anchor>aa43dd797b70403051ebf80fd7d2fc25d</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>uint</type>
+      <name>qHash</name>
+      <anchorfile>namespaceistd.html</anchorfile>
+      <anchor>ac01b25f3ef3261b696ef13856f6282b4</anchor>
+      <arglist>(const istd::TRanges&lt; ValueType &gt; &amp;key, uint seed=0)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -7250,15 +7264,15 @@
       <type>uint</type>
       <name>qHash</name>
       <anchorfile>namespacei2d.html</anchorfile>
-      <anchor>a1df2645cd2431ccb1de330ac0c7ea9ea</anchor>
-      <arglist>(const i2d::CLine2d &amp;key, uint seed=0)</arglist>
+      <anchor>ab635761de722e0ee79a4be536f6a9496</anchor>
+      <arglist>(const CLine2d &amp;key, uint seed=0)</arglist>
     </member>
     <member kind="function">
       <type>uint</type>
       <name>qHash</name>
       <anchorfile>namespacei2d.html</anchorfile>
-      <anchor>a40083a24c3b5b8ae5b71b21284458e7b</anchor>
-      <arglist>(const i2d::CVector2d &amp;key, uint seed=0)</arglist>
+      <anchor>a988d09799b53d49c014cb1f8f07f3e75</anchor>
+      <arglist>(const CVector2d &amp;key, uint seed=0)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -19497,8 +19511,8 @@
       <type>uint</type>
       <name>qHash</name>
       <anchorfile>namespaceicmm.html</anchorfile>
-      <anchor>a71fb9f897e03e2439ee13b0873df2ab9</anchor>
-      <arglist>(const icmm::CFastColor &amp;color, uint seed=0)</arglist>
+      <anchor>a4dbeca8f12a8b30dc4deceaa036b22c4</anchor>
+      <arglist>(const CFastColor &amp;color, uint seed=0)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -22903,8 +22917,8 @@
       <type>uint</type>
       <name>qHash</name>
       <anchorfile>namespaceicomp.html</anchorfile>
-      <anchor>a0d2eabde69d3b23e9bf3cfa248611aa3</anchor>
-      <arglist>(const icomp::CComponentAddress &amp;address, uint seed=0)</arglist>
+      <anchor>af10440e4a727c0683a9b4f231f529cfb</anchor>
+      <arglist>(const CComponentAddress &amp;address, uint seed=0)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -34052,6 +34066,13 @@
       <anchor>abc60b4a807e4c35802b08f5d9d693446</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type>uint</type>
+      <name>qHash</name>
+      <anchorfile>namespaceiimg.html</anchorfile>
+      <anchor>ad98998ab57f4e57e5675119866739dfd</anchor>
+      <arglist>(const CScanlineMask &amp;key, uint seed=0)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iimg::CBitmap</name>
@@ -35972,20 +35993,6 @@
       <anchor>a5343c65539b7d68dbb6e386b860efaf6</anchor>
       <arglist>(int leftValue, int rightValue, int topValue, int bottomValue)</arglist>
     </member>
-    <member kind="function">
-      <type>RangesContainer &amp;</type>
-      <name>GetRangesContainer</name>
-      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
-      <anchor>a6872fce1a4076f0c0dff547f77990824</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Scanlines &amp;</type>
-      <name>GetScanLines</name>
-      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
-      <anchor>a138ea204a99ae59a4e3d8c4aca877d68</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual i2d::CVector2d</type>
       <name>GetCenter</name>
@@ -36084,6 +36091,20 @@
       <anchor>aee3736454af2f8ad1bf652e2f437b127</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a22e3dd27e68fa76fd8d44f4b4fff7502</anchor>
+      <arglist>(const CScanlineMask &amp;mask) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a84561f1bff8762599e269978314617c5</anchor>
+      <arglist>(const CScanlineMask &amp;mask) const </arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>EnsureBoundingBoxValid</name>
@@ -36104,6 +36125,13 @@
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
       <anchor>a2793645d0eaef198c83499393433ac03</anchor>
       <arglist>(const i2d::CRectangle &amp;objectBoundingBox, const i2d::CRect *clipAreaPtr)</arglist>
+    </member>
+    <member kind="friend">
+      <type>friend uint</type>
+      <name>qHash</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a85fdad79351cd54d5c7a7ca1e598180c</anchor>
+      <arglist>(const CScanlineMask &amp;key, uint seed)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -38134,8 +38162,8 @@
       <type>uint</type>
       <name>qHash</name>
       <anchorfile>namespaceimath.html</anchorfile>
-      <anchor>a849d6f0253b4ed165b1664f4fe6c1d69</anchor>
-      <arglist>(const imath::TFastVector&lt; MaxSize, Element &gt; &amp;v, uint seed=0)</arglist>
+      <anchor>aedc82fec2b4ab9d4115f538a00e7eb5a</anchor>
+      <arglist>(const TFastVector&lt; MaxSize, Element &gt; &amp;v, uint seed=0)</arglist>
     </member>
     <member kind="function">
       <type>TMatrix&lt; Width, Height, Element &gt;</type>
@@ -60058,8 +60086,8 @@
       <type>uint</type>
       <name>qHash</name>
       <anchorfile>namespaceistd.html</anchorfile>
-      <anchor>a4b4176039350c8972e20f604fbe22f68</anchor>
-      <arglist>(const istd::CVarIndex &amp;index, uint seed=0)</arglist>
+      <anchor>a2dad37939d2b1a014340b8e3dc7f9912</anchor>
+      <arglist>(const CVarIndex &amp;index, uint seed=0)</arglist>
     </member>
     <member kind="function">
       <type>uint</type>
@@ -60067,6 +60095,13 @@
       <anchorfile>namespaceistd.html</anchorfile>
       <anchor>af19f6c629923d899d2b82731082b9e04</anchor>
       <arglist>(const TIndex&lt; Dimensions &gt; &amp;key, uint seed=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint</type>
+      <name>qHash</name>
+      <anchorfile>namespaceistd.html</anchorfile>
+      <anchor>ac01b25f3ef3261b696ef13856f6282b4</anchor>
+      <arglist>(const istd::TRanges&lt; ValueType &gt; &amp;key, uint seed=0)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -61273,8 +61308,8 @@
       <type>friend uint</type>
       <name>qHash</name>
       <anchorfile>classistd_1_1_c_var_index.html</anchorfile>
-      <anchor>a550655ecfeec58f9988296cdb559baea</anchor>
-      <arglist>(const istd::CVarIndex &amp;index, uint seed)</arglist>
+      <anchor>a264747b0a59501a77c8c9304af50a3b2</anchor>
+      <arglist>(const CVarIndex &amp;index, uint seed)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -64025,15 +64060,22 @@
       <type>bool</type>
       <name>operator==</name>
       <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
-      <anchor>aa4f4adb50495b0e4cf2675bf8ad183cf</anchor>
-      <arglist>(const TRanges&lt; ValueType &gt; &amp;ranges)</arglist>
+      <anchor>a1b624d6e5edd4bb637ec4bf7539da1ed</anchor>
+      <arglist>(const TRanges&lt; ValueType &gt; &amp;ranges) const </arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>operator!=</name>
       <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
-      <anchor>ae0b4d1f32fcacd75e54acbac2352a97c</anchor>
-      <arglist>(const TRanges&lt; ValueType &gt; &amp;ranges)</arglist>
+      <anchor>af1c63880505168e671505576e8f612df</anchor>
+      <arglist>(const TRanges&lt; ValueType &gt; &amp;ranges) const </arglist>
+    </member>
+    <member kind="function">
+      <type>uint</type>
+      <name>GetHashValue</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>a359a75b5e7daf0d235115fb48b264936</anchor>
+      <arglist>(uint seed=0) const </arglist>
     </member>
   </compound>
   <compound kind="class">

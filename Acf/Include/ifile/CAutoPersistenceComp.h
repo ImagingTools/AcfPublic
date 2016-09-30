@@ -34,7 +34,7 @@
 #include <istd/IChangeable.h>
 #include <imod/IModel.h>
 #include <imod/CMultiModelDispatcherBase.h>
-#include <ilog/TLoggerCompWrap.h>
+#include <icomp/CComponentBase.h>
 #include <iser/CMemoryWriteArchive.h>
 #include <ifile/IFilePersistence.h>
 #include <ifile/IFileNameParam.h>
@@ -65,13 +65,13 @@ namespace ifile
 */
 class CAutoPersistenceComp:
 			public QObject,
-			public ilog::CLoggerComponentBase,
+			public icomp::CComponentBase,
 			protected imod::CMultiModelDispatcherBase
 {
 	Q_OBJECT
 
 public:
-	typedef ilog::CLoggerComponentBase BaseClass;
+	typedef icomp::CComponentBase BaseClass;
 	typedef imod::CMultiModelDispatcherBase BaseClass2;
 
 	enum ModelIds
@@ -106,14 +106,6 @@ public:
 		I_ASSIGN(m_reloadOnFileChangeAttrPtr, "AutoReload", "Update data model if the file was changed", true, false);
 		I_ASSIGN(m_runtimeStatusCompPtr, "RuntimeStatus", "Application's runtime status", false, "RuntimeStatus");
 		I_ASSIGN_TO(m_runtimeStatusModelCompPtr, m_runtimeStatusCompPtr, false);
-#if QT_VERSION >= 0x050000
-		I_ASSIGN(m_staleLockTimeAttrPtr, "StaleLockTime", "Time in seconds after which a lock file is considered stale.", true, 30.0);
-		I_ASSIGN(m_tryLockTimeoutAttrPtr, "TryLockTimeout", "Lock function will wait for at most TryLockTimeout seconds for the lock file to become available."
-															"\nNOTE: Lock will wait forever until the lock file can be locked when net to negative", true, 0.0);
-		I_ASSIGN(m_enableLockForLoadAttrPtr, "EnableLockForRead", "When enabled lock is also set when reading from file."
-			"\nNOTE: On NTFS file systems, ownership and permissions checking is disabled (in QT) by default for performance reasons."
-			"\nEnable this flag when you are known what you are doing.", true, false);
-#endif //QT_VERSION >= 0x050000
 	I_END_COMPONENT;
 
 	/**
@@ -157,7 +149,7 @@ private:
 	*/
 	bool TryStartIntervalStore();
 
-	bool LockFile(const QString& filePath, bool store) const;
+	bool LockFile(const QString& filePath) const;
 	void UnlockFile() const;
 
 private:
@@ -207,30 +199,6 @@ private:
 		If set the data object wil be reloaded if the file was changed.
 	*/
 	I_ATTR(bool, m_reloadOnFileChangeAttrPtr);
-
-#if QT_VERSION >= 0x050000
-	/**
-	The value of m_staleLockTimeAttrPtr is used by Lock() in order to determine when an existing lock file is considered stale,
-	i.e. left over by a crashed process. This is useful for the case where the PID got reused meanwhile, so one way to detect a stale
-	lock file is by the fact that it has been around for a long time.
-	*/
-	I_ATTR(float, m_staleLockTimeAttrPtr);
-
-	/**
-	Lock function will wait for at most timeout seconds for the lock file to become available.
-	Note: Passing a negative number as the timeout is equivalent to calling lock(),
-	i.e. this function will wait forever until the lock file can be locked if timeout is negative.
-	*/
-	I_ATTR(float, m_tryLockTimeoutAttrPtr);
-
-	/**
-	Enable settings lock also for reading.
-	On NTFS file systems, ownership and permissions checking is disabled (in QT) by default for performance reasons.
-	Enable this flag when you are known what you are doing.
-	*/
-	I_ATTR(bool, m_enableLockForLoadAttrPtr);
-
-#endif //QT_VERSION >= 0x050000
 
 	iser::CMemoryWriteArchive m_lastStoredObjectState;
 
