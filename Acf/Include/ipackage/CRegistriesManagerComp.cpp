@@ -71,14 +71,19 @@ bool CRegistriesManagerComp::LoadPackages(const QString& configFilePath)
 
 int CRegistriesManagerComp::GetPackageType(const QByteArray& packageId) const
 {
-	RealPackagesMap::ConstIterator foundNormalIter = m_realPackagesMap.constFind(packageId);
-	if (foundNormalIter != m_realPackagesMap.constEnd()){
-		return PT_REAL;
-	}
 
 	CompositePackagesMap::ConstIterator foundCompositeIter = m_compositePackagesMap.constFind(packageId);
 	if (foundCompositeIter != m_compositePackagesMap.constEnd()){
 		return PT_COMPOSED;
+	}
+
+	if (!*m_ignoreRealPackagesAttrPtr){
+		RealPackagesMap::ConstIterator foundNormalIter = m_realPackagesMap.constFind(packageId);
+		if (foundNormalIter != m_realPackagesMap.constEnd()){
+			return PT_REAL;
+		}
+
+		return PT_UNDIFINED;
 	}
 
 	return PT_UNKNOWN;
@@ -87,14 +92,16 @@ int CRegistriesManagerComp::GetPackageType(const QByteArray& packageId) const
 
 QString CRegistriesManagerComp::GetPackagePath(const QByteArray& packageId) const
 {
-	RealPackagesMap::ConstIterator foundNormalIter = m_realPackagesMap.constFind(packageId);
-	if (foundNormalIter != m_realPackagesMap.constEnd()){
-		return foundNormalIter.value();
-	}
-
 	CompositePackagesMap::ConstIterator foundCompositeIter = m_compositePackagesMap.constFind(packageId);
 	if (foundCompositeIter != m_compositePackagesMap.constEnd()){
 		return foundCompositeIter.value().directory.absolutePath();
+	}
+
+	if (!*m_ignoreRealPackagesAttrPtr){
+		RealPackagesMap::ConstIterator foundNormalIter = m_realPackagesMap.constFind(packageId);
+		if (foundNormalIter != m_realPackagesMap.constEnd()){
+			return foundNormalIter.value();
+		}
 	}
 
 	return QString();
@@ -204,7 +211,7 @@ void CRegistriesManagerComp::RegisterPackageFile(const QString& file)
 
 	QByteArray packageId(fileInfo.baseName().toLocal8Bit());
 
-	if (fileInfo.isFile()){
+	if (!*m_ignoreRealPackagesAttrPtr && fileInfo.isFile()){
 		SendVerboseMessage(QString("Register real package %1 from file %2").arg(packageId.constData()).arg(file));
 
 		RealPackagesMap::ConstIterator foundIter = m_realPackagesMap.constFind(packageId);

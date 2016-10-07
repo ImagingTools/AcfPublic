@@ -23158,6 +23158,13 @@
     </member>
     <member kind="enumvalue">
       <type>@</type>
+      <name>PT_UNDIFINED</name>
+      <anchorfile>classicomp_1_1_i_packages_manager.html</anchorfile>
+      <anchor>a8cff064cb5c0f3cb9bee599fc8cd5882aa506a862cb4916f9480f40a0a38e4a58</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
       <name>PT_UNKNOWN</name>
       <anchorfile>classicomp_1_1_i_packages_manager.html</anchorfile>
       <anchor>a8cff064cb5c0f3cb9bee599fc8cd5882a88e88dd75b94a5f2fd0f4483eaf90259</anchor>
@@ -42830,13 +42837,6 @@
       <anchor>afee1ffd0aaa620069434b21a1fde6d94a510954eef316c1c754ffd7e9b4b9105f</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>WM_DEEP_DEPENDENCIES</name>
-      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>afee1ffd0aaa620069434b21a1fde6d94a1fc5796b96b9e513219ff96cb1e8e8a1</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -42946,8 +42946,8 @@
       <type>bool</type>
       <name>WriteDependencies</name>
       <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
-      <anchor>a56b1865ad279b31cc202003a0c91d593</anchor>
-      <arglist>(const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, bool allDependencies, QTextStream &amp;stream) const </arglist>
+      <anchor>aa324f96ad2d2e606daf09f6cbdd24e29</anchor>
+      <arglist>(const Addresses &amp;composedAddresses, const Addresses &amp;realAddresses, QTextStream &amp;stream) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>

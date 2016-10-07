@@ -52,6 +52,7 @@ static void ShowUsage()
 	std::cout << "\t-config configFile       - specify ACF packages configuration file" << std::endl;
 	std::cout << "\t-sources [on|off]        - enables/disables C++ sources output, default is 'on'" << std::endl;
 	std::cout << "\t-v                       - enable verbose mode" << std::endl;
+	std::cout << "\t-check_real              - check if used real packages exist" << std::endl;
 	std::cout << "\t-no_binary               - disable generating of binary coded registries" << std::endl;
 	std::cout << "\t-conf_name name          - name of configuration, e.g. 'DebugVC12_64'" << std::endl;
 	std::cout << "\t-h or -help              - showing this help" << std::endl;
@@ -73,9 +74,16 @@ int main(int argc, char *argv[])
 	bool verboseEnabled = false;
 	int workingMode = 0;
 	bool useBinaryCode = true;
+	bool checkRealPackages = false;
 
 	QString inputFilePath = argv[1];
 	QString outputFilePath;
+
+	if ((inputFilePath == "-h") || (inputFilePath == "-help")){
+		ShowUsage();
+
+		return 0;
+	}
 
 	for (int index = 2; index < argc; index++){
 		QByteArray argument = argv[index];
@@ -92,6 +100,9 @@ int main(int argc, char *argv[])
 			}
 			else if (option == "no_binary"){
 				useBinaryCode = false;
+			}
+			else if (option == "check_real"){
+				checkRealPackages = true;
 			}
 			else if (index < argc - 1){
 				if (option == "config"){
@@ -193,6 +204,7 @@ int main(int argc, char *argv[])
 
 	icomp::TSimComponentWrap<PackagePck::RegistriesManager> registriesManagerComp;
 	registriesManagerComp.SetRef("RegistryLoader", &registryLoaderComp);
+	registriesManagerComp.SetBoolAttr("AreRealPackagesIgnored", !checkRealPackages);
 	if (workingMode == 0){
 		registriesManagerComp.SetRef("Log", &log);
 	}
