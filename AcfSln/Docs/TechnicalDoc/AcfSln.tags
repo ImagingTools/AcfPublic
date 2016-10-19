@@ -1989,14 +1989,6 @@
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
-    <name>CMeasurementRange.h</name>
-    <path>C:/Temp/AcfSln/Include/imeas/</path>
-    <filename>_c_measurement_range_8h</filename>
-    <includes id="imeas_8h" name="imeas.h" local="no" imported="no">imeas/imeas.h</includes>
-    <class kind="class">imeas::CMeasurementRange</class>
-    <namespace>imeas</namespace>
-  </compound>
-  <compound kind="file">
     <name>CNumericConstraintsComp.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_numeric_constraints_comp_8h</filename>
@@ -2012,15 +2004,6 @@
     <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="no" imported="no">imeas/INumericConstraints.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="no" imported="no">imeas/CSimpleNumericValue.h</includes>
     <class kind="class">imeas::CNumericParamsComp</class>
-    <namespace>imeas</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CNumericValuesJoinerComp.h</name>
-    <path>C:/Temp/AcfSln/Include/imeas/</path>
-    <filename>_c_numeric_values_joiner_comp_8h</filename>
-    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
-    <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="no" imported="no">imeas/CSimpleNumericValue.h</includes>
-    <class kind="class">imeas::CNumericValuesJoinerComp</class>
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
@@ -21599,10 +21582,8 @@
     <class kind="class">imeas::CGeneralNumericValue</class>
     <class kind="class">imeas::CHistogramStatisticsProcessorComp</class>
     <class kind="class">imeas::CLinearAdjustParamsComp</class>
-    <class kind="class">imeas::CMeasurementRange</class>
     <class kind="class">imeas::CNumericConstraintsComp</class>
     <class kind="class">imeas::CNumericParamsComp</class>
-    <class kind="class">imeas::CNumericValuesJoinerComp</class>
     <class kind="class">imeas::CRelativeUnitSelectorComp</class>
     <class kind="class">imeas::CSamplesInfo</class>
     <class kind="class">imeas::CSimpleNumericValue</class>
@@ -22445,115 +22426,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>imeas::CMeasurementRange</name>
-    <filename>classimeas_1_1_c_measurement_range.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>CMeasurementRange</name>
-      <anchorfile>classimeas_1_1_c_measurement_range.html</anchorfile>
-      <anchor>a3538a40504ece8d51f25cfc487ee3a72</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsValid</name>
-      <anchorfile>classimeas_1_1_c_measurement_range.html</anchorfile>
-      <anchor>a4766ddcd8d58beef7d737011f450cbeb</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetLowerErrorLimit</name>
-      <anchorfile>classimeas_1_1_c_measurement_range.html</anchorfile>
-      <anchor>a98df86032b7f4df27e5c6283f8c4fc01</anchor>
-      <arglist>(double lowerErrorLimit)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetUpperErrorLimit</name>
-      <anchorfile>classimeas_1_1_c_measurement_range.html</anchorfile>
-      <anchor>a80d9d924cd51782ca7d37da9929f262b</anchor>
-      <arglist>(double upperErrorLimit)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetLowerWarningLimit</name>
-      <anchorfile>classimeas_1_1_c_measurement_range.html</anchorfile>
-      <anchor>abc8292ec452a419e9c79da055595ebbe</anchor>
-      <arglist>(double lowerWarningLimit)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetUpperWarningLimit</name>
-      <anchorfile>classimeas_1_1_c_measurement_range.html</anchorfile>
-      <anchor>a160c8f12b20e09ad352b6fc53c11facd</anchor>
-      <arglist>(double upperWarningLimit)</arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetLowerErrorLimit</name>
-      <anchorfile>classimeas_1_1_c_measurement_range.html</anchorfile>
-      <anchor>af1a9cca398146cc58d36ca1ba52e26e2</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetUpperErrorLimit</name>
-      <anchorfile>classimeas_1_1_c_measurement_range.html</anchorfile>
-      <anchor>abcb18790c64c082c747e3c4b8908516b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetLowerWarningLimit</name>
-      <anchorfile>classimeas_1_1_c_measurement_range.html</anchorfile>
-      <anchor>a6f3e638770c94e7fc9eff23e85314832</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetUpperWarningLimit</name>
-      <anchorfile>classimeas_1_1_c_measurement_range.html</anchorfile>
-      <anchor>a7516b07fae739c708969059bc434fed9</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsOk</name>
-      <anchorfile>classimeas_1_1_c_measurement_range.html</anchorfile>
-      <anchor>af47033493707e7fd5657e0620880b80b</anchor>
-      <arglist>(double value) const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsWarning</name>
-      <anchorfile>classimeas_1_1_c_measurement_range.html</anchorfile>
-      <anchor>a27252a318af18d24e953581170d2e484</anchor>
-      <arglist>(double value) const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsError</name>
-      <anchorfile>classimeas_1_1_c_measurement_range.html</anchorfile>
-      <anchor>a5c0da78dc0d04590e342318c77cfa37f</anchor>
-      <arglist>(double value) const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator==</name>
-      <anchorfile>classimeas_1_1_c_measurement_range.html</anchorfile>
-      <anchor>a02743d9f36ff133600ad5f1c9497bb25</anchor>
-      <arglist>(const CMeasurementRange &amp;otherRange) const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator!=</name>
-      <anchorfile>classimeas_1_1_c_measurement_range.html</anchorfile>
-      <anchor>a28dd528df2e82fda194c8a9a0d54d67f</anchor>
-      <arglist>(const CMeasurementRange &amp;otherRange) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>imeas::CNumericConstraintsComp</name>
     <filename>classimeas_1_1_c_numeric_constraints_comp.html</filename>
     <base>icomp::CComponentBase</base>
@@ -22698,48 +22570,6 @@
       <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
       <anchor>a66df79f5747b3d2bbb39be65805502e9</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>imeas::CNumericValuesJoinerComp</name>
-    <filename>classimeas_1_1_c_numeric_values_joiner_comp.html</filename>
-    <base>ilog::TLoggerCompWrap</base>
-    <base virtualness="virtual">imeas::INumericValueProvider</base>
-    <base protection="protected">imeas::CSimpleNumericValue</base>
-    <member kind="typedef">
-      <type>ilog::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classimeas_1_1_c_numeric_values_joiner_comp.html</anchorfile>
-      <anchor>a31a0f9444c614d1483690e041ec02f23</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetValuesCount</name>
-      <anchorfile>classimeas_1_1_c_numeric_values_joiner_comp.html</anchorfile>
-      <anchor>a706f4b539cdffbca666cd12e01f11ebe</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const imeas::INumericValue &amp;</type>
-      <name>GetNumericValue</name>
-      <anchorfile>classimeas_1_1_c_numeric_values_joiner_comp.html</anchorfile>
-      <anchor>a41f309cda40c6ef4c1a0afe092996be5</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsValueTypeSupported</name>
-      <anchorfile>classimeas_1_1_c_numeric_values_joiner_comp.html</anchorfile>
-      <anchor>abf186b4c399856f5fbad66fab293dd81</anchor>
-      <arglist>(imeas::INumericValue::ValueTypeId valueTypeId) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual imath::CVarVector</type>
-      <name>GetComponentValue</name>
-      <anchorfile>classimeas_1_1_c_numeric_values_joiner_comp.html</anchorfile>
-      <anchor>a74f050d1e29484cc1915d8f6089ed617</anchor>
-      <arglist>(imeas::INumericValue::ValueTypeId valueTypeId) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -30679,10 +30509,8 @@
     <file>CGeneralNumericValue.h</file>
     <file>CHistogramStatisticsProcessorComp.h</file>
     <file>CLinearAdjustParamsComp.h</file>
-    <file>CMeasurementRange.h</file>
     <file>CNumericConstraintsComp.h</file>
     <file>CNumericParamsComp.h</file>
-    <file>CNumericValuesJoinerComp.h</file>
     <file>CRelativeUnitSelectorComp.h</file>
     <file>CSamplesInfo.h</file>
     <file>CSimpleNumericValue.h</file>

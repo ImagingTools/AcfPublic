@@ -125,10 +125,8 @@
     <ClCompile Include="..\CGeneralNumericValue.cpp" />
     <ClCompile Include="..\CHistogramStatisticsProcessorComp.cpp" />
     <ClCompile Include="..\CLinearAdjustParamsComp.cpp" />
-    <ClCompile Include="..\CMeasurementRange.cpp" />
     <ClCompile Include="..\CNumericConstraintsComp.cpp" />
     <ClCompile Include="..\CNumericParamsComp.cpp" />
-    <ClCompile Include="..\CNumericValuesJoinerComp.cpp" />
     <ClCompile Include="..\CRelativeUnitSelectorComp.cpp" />
     <ClCompile Include="..\CSamplesInfo.cpp" />
     <ClCompile Include="..\CSimpleNumericValue.cpp" />
@@ -145,10 +143,8 @@
     <ClInclude Include="..\CGeneralNumericValue.h" />
     <ClInclude Include="..\CHistogramStatisticsProcessorComp.h" />
     <ClInclude Include="..\CLinearAdjustParamsComp.h" />
-    <ClInclude Include="..\CMeasurementRange.h" />
     <ClInclude Include="..\CNumericConstraintsComp.h" />
     <ClInclude Include="..\CNumericParamsComp.h" />
-    <ClInclude Include="..\CNumericValuesJoinerComp.h" />
     <ClInclude Include="..\CRelativeUnitSelectorComp.h" />
     <ClInclude Include="..\CSamplesInfo.h" />
     <ClInclude Include="..\CSimpleNumericValue.h" />

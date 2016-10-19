@@ -150,7 +150,6 @@
     <ClInclude Include="..\TMatrix.h" />
     <ClInclude Include="..\TSplineGridFunctionBase.h" />
     <ClInclude Include="..\TVector.h" />
-    <ClInclude Include="..\TWeightedNumber.h" />
     <ClInclude Include="..\imath.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
