@@ -35,6 +35,7 @@
 // ACF-Solutions includes
 #include <iqtinsp/TSupplierGuiCompBase.h>
 #include <iqtipr/iqtipr.h>
+
 #include <GeneratedFiles/iqtipr/ui_CSearchBasedFeaturesSupplierGuiComp.h>
 
 

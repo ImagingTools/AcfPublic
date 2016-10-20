@@ -132,7 +132,6 @@
     <ClCompile Include="..\CRelativeUnitSelectorComp.cpp" />
     <ClCompile Include="..\CSamplesInfo.cpp" />
     <ClCompile Include="..\CSimpleNumericValue.cpp" />
-    <ClCompile Include="..\CSimpleNumericValueProvider.cpp" />
     <ClCompile Include="..\CWavSamplesLoaderComp.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -150,7 +149,6 @@
     <ClInclude Include="..\CRelativeUnitSelectorComp.h" />
     <ClInclude Include="..\CSamplesInfo.h" />
     <ClInclude Include="..\CSimpleNumericValue.h" />
-    <ClInclude Include="..\CSimpleNumericValueProvider.h" />
     <ClInclude Include="..\CWavSamplesLoaderComp.h" />
     <ClInclude Include="..\IDataSequence.h" />
     <ClInclude Include="..\IDataSequenceCorrelationProcessor.h" />
@@ -165,7 +163,6 @@
     <ClInclude Include="..\IMultiDataSequenceProvider.h" />
     <ClInclude Include="..\INumericConstraints.h" />
     <ClInclude Include="..\INumericValue.h" />
-    <ClInclude Include="..\INumericValueProvider.h" />
     <ClInclude Include="..\ISampleAcquisition.h" />
     <ClInclude Include="..\TDiscreteDataSequence.h" />
     <ClInclude Include="..\imeas.h" />

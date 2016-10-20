@@ -33,7 +33,6 @@
 #include <iqtgui/TDesignerGuiObserverCompBase.h>
 
 // ACF-Solutions includes
-#include <imeas/INumericValueProvider.h>
 #include <iedge/CEdgeLineContainer.h>
 #include <iqtinsp/TSupplierGuiCompBase.h>
 #include <iqtipr/iqtipr.h>

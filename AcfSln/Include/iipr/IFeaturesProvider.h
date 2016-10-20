@@ -20,46 +20,36 @@
 ********************************************************************************/
 
 
-#ifndef imeas_CSimpleNumericValueProvider_included
-#define imeas_CSimpleNumericValueProvider_included
+#ifndef iipr_IFeaturesContainer_included
+#define iipr_IFeaturesContainer_included
 
 
-// ACF includes
-#include <iser/ISerializable.h>
-#include <ilog/TLoggerCompWrap.h>
-#include <imeas/CSimpleNumericValue.h>
-
-// QSF includes
-#include <imeas/INumericValueProvider.h>
+#include <iipr/IFeaturesConsumer.h>
 
 
-namespace imeas
+namespace iipr
 {
 
 
-class CSimpleNumericValueProvider: virtual public INumericValueProvider
+/**
+	Container allowing access to features.
+*/
+class IFeaturesProvider: virtual public istd::IChangeable
 {
 public:
-	// reimplemented (imeas::INumericValueProvider)
-	virtual int GetValuesCount() const;
-	virtual const imeas::INumericValue& GetNumericValue(int index) const;
-	
-	// reimplemented (iser::ISerializable)
-	virtual bool Serialize(iser::IArchive & archive);
-
-	// reimplemented (istd::IChangeable)
-	virtual bool CopyFrom(const IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS);
-
-private:
-	typedef QVector<imeas::CSimpleNumericValue> Values;
-
-	Values m_values;
+	/**
+		Get number of stored features.
+	*/
+	virtual int GetFeaturesCount() const = 0;
+	/**
+		Get access to single feature.
+	*/
+	virtual const imeas::INumericValue& GetFeature(int index) const = 0;
 };
 
 
-} // namespace imeas
+} // namespace iipr
 
 
-#endif // !imeas_CSimpleNumericValueProvider_included
-
+#endif // !iipr_IFeaturesContainer_included
 

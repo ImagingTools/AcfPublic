@@ -49,9 +49,9 @@ CColorPatternComparatorComp::CColorPatternComparatorComp()
 }
 
 
-// reimplemented (imeas::INumericValueProvider)
+// reimplemented (iipr::IFeaturesProvider)
 
-int CColorPatternComparatorComp::GetValuesCount() const
+int CColorPatternComparatorComp::GetFeaturesCount() const
 {
 	const ProductType* productPtr = GetWorkProduct();
 	if (productPtr != NULL){
@@ -62,7 +62,7 @@ int CColorPatternComparatorComp::GetValuesCount() const
 }
 
 
-const imeas::INumericValue& CColorPatternComparatorComp::GetNumericValue(int I_IF_DEBUG(index)) const
+const imeas::INumericValue& CColorPatternComparatorComp::GetFeature(int I_IF_DEBUG(index)) const
 {
 	I_IF_DEBUG(Q_ASSERT(index == 0));
 
@@ -122,8 +122,8 @@ QString CColorPatternComparatorComp::GetInformationDescription() const
 		return QObject::tr("Color Check Successful");
 	}
 	
-	if (GetValuesCount()){
-		const imeas::INumericValue& result = GetNumericValue(0);
+	if (GetFeaturesCount()){
+		const imeas::INumericValue& result = GetFeature(0);
 		imath::CVarVector values = result.GetValues();
 		QString badString = ": ";
 		if (values.GetElementsCount() == 3){

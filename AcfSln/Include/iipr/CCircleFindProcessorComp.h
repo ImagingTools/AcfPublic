@@ -33,7 +33,7 @@
 
 #include <iproc/TSyncProcessorCompBase.h>
 #include <iipr/IImageToFeatureProcessor.h>
-#include <imeas/INumericValueProvider.h>
+#include <iipr/IFeaturesProvider.h>
 #include <iipr/IFeatureToImageMapper.h>
 #include <iipr/ICircleFinderParams.h>
 #include <iipr/TWeightedFeatureWrap.h>
@@ -127,7 +127,7 @@ protected:
 	void AddProjectionResultsToRays(
 				const i2d::CLine2d& projectionLine,
 				const iprm::IParamsSet& params,
-				const imeas::INumericValueProvider& container,
+				const IFeaturesProvider& container,
 				Rays& inRays,
 				Rays& outRays);
 

@@ -27,7 +27,7 @@
 #include <iproc/IProcessor.h>
 
 #include <iipr/IFeaturesConsumer.h>
-#include <imeas/INumericValueProvider.h>
+#include <iipr/IFeaturesProvider.h>
 
 
 namespace iipr
@@ -46,7 +46,7 @@ public:
 	*/
 	virtual int DoConvertFeatures(
 				const iprm::IParamsSet* paramsPtr,
-				const imeas::INumericValueProvider& container,
+				const IFeaturesProvider& container,
 				IFeaturesConsumer& results) = 0;
 };
 

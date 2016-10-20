@@ -64,7 +64,7 @@ void CColorPatternComparatorGuiComp::OnGuiCreated()
 
 void CColorPatternComparatorGuiComp::UpdateModel() const
 {
-	const imeas::INumericValueProvider* numericValueProviderPtr = CompCastPtr<const imeas::INumericValueProvider>(GetObservedObject());
+	const iipr::IFeaturesProvider* numericValueProviderPtr = CompCastPtr<const iipr::IFeaturesProvider>(GetObservedObject());
 	if (numericValueProviderPtr != NULL){
 		const iinsp::ISupplier* supplierPtr = dynamic_cast<const iinsp::ISupplier*>(numericValueProviderPtr);
 		if (supplierPtr != NULL){
@@ -87,7 +87,7 @@ void CColorPatternComparatorGuiComp::UpdateGui(const istd::IChangeable::ChangeSe
 
 	Q_ASSERT(IsGuiCreated());
 
-	const imeas::INumericValueProvider* numericValueProviderPtr = CompCastPtr<const imeas::INumericValueProvider>(GetObservedObject());
+	const iipr::IFeaturesProvider* numericValueProviderPtr = CompCastPtr<const iipr::IFeaturesProvider>(GetObservedObject());
 	if (numericValueProviderPtr != NULL){
 		const iinsp::ISupplier* supplierPtr = dynamic_cast<const iinsp::ISupplier*>(numericValueProviderPtr);
 		if (supplierPtr != NULL){
@@ -102,9 +102,9 @@ void CColorPatternComparatorGuiComp::UpdateGui(const istd::IChangeable::ChangeSe
 			}
 		}
 
-		int valuesCount = numericValueProviderPtr->GetValuesCount();
+		int valuesCount = numericValueProviderPtr->GetFeaturesCount();
 		if (valuesCount > 0){
-			const imeas::INumericValue& value = numericValueProviderPtr->GetNumericValue(0);
+			const imeas::INumericValue& value = numericValueProviderPtr->GetFeature(0);
 
 			const imath::CVarVector& colorValues = value.GetValues();
 			int colorValuesCount = colorValues.GetElementsCount();

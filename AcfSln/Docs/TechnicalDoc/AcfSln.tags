@@ -588,7 +588,6 @@
     <includes id="_i_processor_8h" name="IProcessor.h" local="no" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="no" imported="no">iinsp/ISupplier.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="no" imported="no">iinsp/TSupplierCompWrap.h</includes>
-    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_c_features_container_8h" name="CFeaturesContainer.h" local="no" imported="no">iipr/CFeaturesContainer.h</includes>
     <includes id="_i_edge_lines_provider_8h" name="IEdgeLinesProvider.h" local="no" imported="no">iedge/IEdgeLinesProvider.h</includes>
     <class kind="class">iedge::CEdgeBasedFeaturesSupplierComp</class>
@@ -707,7 +706,6 @@
     <name>CEdgeLinesSupplierEditorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iedgegui/</path>
     <filename>_c_edge_lines_supplier_editor_comp_8h</filename>
-    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_c_edge_line_container_8h" name="CEdgeLineContainer.h" local="no" imported="no">iedge/CEdgeLineContainer.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="no" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="iqtipr_8h" name="iqtipr.h" local="no" imported="no">iqtipr/iqtipr.h</includes>
@@ -1186,7 +1184,7 @@
     <filename>_c_circle_find_processor_comp_8h</filename>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="no" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="no" imported="no">iipr/IImageToFeatureProcessor.h</includes>
-    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_i_features_provider_8h" name="IFeaturesProvider.h" local="no" imported="no">iipr/IFeaturesProvider.h</includes>
     <includes id="_i_feature_to_image_mapper_8h" name="IFeatureToImageMapper.h" local="no" imported="no">iipr/IFeatureToImageMapper.h</includes>
     <includes id="_i_circle_finder_params_8h" name="ICircleFinderParams.h" local="no" imported="no">iipr/ICircleFinderParams.h</includes>
     <includes id="_t_weighted_feature_wrap_8h" name="TWeightedFeatureWrap.h" local="no" imported="no">iipr/TWeightedFeatureWrap.h</includes>
@@ -1202,7 +1200,7 @@
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="no" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="no" imported="no">imeas/IDataSequenceProvider.h</includes>
     <includes id="_i_data_sequence_statistics_processor_8h" name="IDataSequenceStatisticsProcessor.h" local="no" imported="no">imeas/IDataSequenceStatisticsProcessor.h</includes>
-    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_i_features_provider_8h" name="IFeaturesProvider.h" local="no" imported="no">iipr/IFeaturesProvider.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="no" imported="no">imeas/CSimpleNumericValue.h</includes>
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="no" imported="no">imeas/CGeneralDataSequence.h</includes>
     <class kind="class">iipr::CColorPatternComparatorComp</class>
@@ -1267,7 +1265,7 @@
     <filename>_c_edge_distance_processor_comp_8h</filename>
     <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="no" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="no" imported="no">iipr/IImageToFeatureProcessor.h</includes>
-    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_i_features_provider_8h" name="IFeaturesProvider.h" local="no" imported="no">iipr/IFeaturesProvider.h</includes>
     <includes id="_i_feature_to_image_mapper_8h" name="IFeatureToImageMapper.h" local="no" imported="no">iipr/IFeatureToImageMapper.h</includes>
     <includes id="_i_caliper_params_8h" name="ICaliperParams.h" local="no" imported="no">iipr/ICaliperParams.h</includes>
     <includes id="_t_weighted_feature_wrap_8h" name="TWeightedFeatureWrap.h" local="no" imported="no">iipr/TWeightedFeatureWrap.h</includes>
@@ -1283,7 +1281,6 @@
     <includes id="_i_processor_8h" name="IProcessor.h" local="no" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="no" imported="no">iinsp/ISupplier.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="no" imported="no">iinsp/TSupplierCompWrap.h</includes>
-    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="no" imported="no">imeas/CSimpleNumericValue.h</includes>
     <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="no" imported="no">iipr/IImageToFeatureProcessor.h</includes>
     <includes id="_c_caliper_distance_feature_8h" name="CCaliperDistanceFeature.h" local="no" imported="no">iipr/CCaliperDistanceFeature.h</includes>
@@ -1305,9 +1302,10 @@
     <name>CExtremumCaliperSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_extremum_caliper_supplier_comp_8h</filename>
+    <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="no" imported="no">imeas/IDataSequenceProvider.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="no" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_c_features_container_8h" name="CFeaturesContainer.h" local="no" imported="no">iipr/CFeaturesContainer.h</includes>
-    <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="no" imported="no">imeas/IDataSequenceProvider.h</includes>
+    <includes id="_i_features_provider_8h" name="IFeaturesProvider.h" local="no" imported="no">iipr/IFeaturesProvider.h</includes>
     <includes id="_i_processor_8h" name="IProcessor.h" local="no" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">iipr::CExtremumCaliperSupplierComp</class>
     <namespace>iipr</namespace>
@@ -1325,7 +1323,7 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_features_container_8h</filename>
     <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="no" imported="no">iipr/IFeaturesConsumer.h</includes>
-    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_i_features_provider_8h" name="IFeaturesProvider.h" local="no" imported="no">iipr/IFeaturesProvider.h</includes>
     <class kind="class">iipr::CFeaturesContainer</class>
     <namespace>iipr</namespace>
   </compound>
@@ -1502,7 +1500,7 @@
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="no" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_line_projection_processor_8h" name="ILineProjectionProcessor.h" local="no" imported="no">iipr/ILineProjectionProcessor.h</includes>
     <includes id="_i_multi_data_sequence_provider_8h" name="IMultiDataSequenceProvider.h" local="no" imported="no">imeas/IMultiDataSequenceProvider.h</includes>
-    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_i_features_provider_8h" name="IFeaturesProvider.h" local="no" imported="no">iipr/IFeaturesProvider.h</includes>
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="no" imported="no">imeas/CGeneralDataSequence.h</includes>
     <class kind="class">iipr::CMultiLineProjectionSupplierComp</class>
     <namespace>iipr</namespace>
@@ -1512,7 +1510,7 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_multi_line_supplier_comp_base_8h</filename>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="no" imported="no">iinsp/TSupplierCompWrap.h</includes>
-    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_i_features_provider_8h" name="IFeaturesProvider.h" local="no" imported="no">iipr/IFeaturesProvider.h</includes>
     <class kind="class">iipr::CMultiLineSupplierCompBase</class>
     <namespace>iipr</namespace>
   </compound>
@@ -1549,7 +1547,7 @@
     <includes id="_i_processor_8h" name="IProcessor.h" local="no" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="no" imported="no">iinsp/ISupplier.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="no" imported="no">iinsp/TSupplierCompWrap.h</includes>
-    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_c_features_container_8h" name="CFeaturesContainer.h" local="no" imported="no">iipr/CFeaturesContainer.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="no" imported="no">imeas/CSimpleNumericValue.h</includes>
     <class kind="class">iipr::CPositionFromImageSupplierComp</class>
     <namespace>iipr</namespace>
@@ -1581,7 +1579,6 @@
     <includes id="_i_supplier_8h" name="ISupplier.h" local="no" imported="no">iinsp/ISupplier.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="no" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_multi_data_sequence_provider_8h" name="IMultiDataSequenceProvider.h" local="no" imported="no">imeas/IMultiDataSequenceProvider.h</includes>
-    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="no" imported="no">imeas/CGeneralDataSequence.h</includes>
     <includes id="_i_processor_8h" name="IProcessor.h" local="no" imported="no">iproc/IProcessor.h</includes>
     <class kind="class">iipr::CProjectionSupplierComp</class>
@@ -1645,7 +1642,7 @@
     <includes id="_i_processor_8h" name="IProcessor.h" local="no" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="no" imported="no">iinsp/ISupplier.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="no" imported="no">iinsp/TSupplierCompWrap.h</includes>
-    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_i_features_provider_8h" name="IFeaturesProvider.h" local="no" imported="no">iipr/IFeaturesProvider.h</includes>
     <includes id="_c_features_container_8h" name="CFeaturesContainer.h" local="no" imported="no">iipr/CFeaturesContainer.h</includes>
     <class kind="class">iipr::CSearchBasedFeaturesSupplierComp</class>
     <namespace>iipr</namespace>
@@ -1687,7 +1684,7 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_single_feature_consumer_8h</filename>
     <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="no" imported="no">iipr/IFeaturesConsumer.h</includes>
-    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_i_features_provider_8h" name="IFeaturesProvider.h" local="no" imported="no">iipr/IFeaturesProvider.h</includes>
     <class kind="class">iipr::CSingleFeatureConsumer</class>
     <namespace>iipr</namespace>
   </compound>
@@ -1747,12 +1744,20 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>IFeaturesProvider.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_i_features_provider_8h</filename>
+    <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="no" imported="no">iipr/IFeaturesConsumer.h</includes>
+    <class kind="class">iipr::IFeaturesProvider</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>IFeatureToFeatureProcessor.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_feature_to_feature_processor_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="no" imported="no">iproc/IProcessor.h</includes>
     <includes id="_i_features_consumer_8h" name="IFeaturesConsumer.h" local="no" imported="no">iipr/IFeaturesConsumer.h</includes>
-    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_i_features_provider_8h" name="IFeaturesProvider.h" local="no" imported="no">iipr/IFeaturesProvider.h</includes>
     <class kind="class">iipr::IFeatureToFeatureProcessor</class>
     <namespace>iipr</namespace>
   </compound>
@@ -2030,15 +2035,6 @@
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
-    <name>CSimpleNumericValueProvider.h</name>
-    <path>C:/Temp/AcfSln/Include/imeas/</path>
-    <filename>_c_simple_numeric_value_provider_8h</filename>
-    <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="no" imported="no">imeas/CSimpleNumericValue.h</includes>
-    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
-    <class kind="class">imeas::CSimpleNumericValueProvider</class>
-    <namespace>imeas</namespace>
-  </compound>
-  <compound kind="file">
     <name>CWavSamplesLoaderComp.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_wav_samples_loader_comp_8h</filename>
@@ -2149,14 +2145,6 @@
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_i_numeric_value_8h</filename>
     <class kind="class">imeas::INumericValue</class>
-    <namespace>imeas</namespace>
-  </compound>
-  <compound kind="file">
-    <name>INumericValueProvider.h</name>
-    <path>C:/Temp/AcfSln/Include/imeas/</path>
-    <filename>_i_numeric_value_provider_8h</filename>
-    <includes id="_i_numeric_value_8h" name="INumericValue.h" local="no" imported="no">imeas/INumericValue.h</includes>
-    <class kind="class">imeas::INumericValueProvider</class>
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
@@ -2478,7 +2466,7 @@
     <name>CScaleCalibrationEditorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtcam/</path>
     <filename>_c_scale_calibration_editor_comp_8h</filename>
-    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_i_features_provider_8h" name="IFeaturesProvider.h" local="no" imported="no">iipr/IFeaturesProvider.h</includes>
     <class kind="class">iqtcam::CScaleCalibrationEditorComp</class>
     <namespace>iqtcam</namespace>
   </compound>
@@ -2590,7 +2578,7 @@
     <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_color_pattern_comparator_gui_comp_8h</filename>
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="no" imported="no">imeas/CGeneralDataSequence.h</includes>
-    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_i_features_provider_8h" name="IFeaturesProvider.h" local="no" imported="no">iipr/IFeaturesProvider.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="no" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <class kind="class">iqtipr::CColorPatternComparatorGuiComp</class>
     <namespace>iqtipr</namespace>
@@ -2623,7 +2611,6 @@
     <name>CLineProjectionSupplierGuiComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_line_projection_supplier_gui_comp_8h</filename>
-    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
     <includes id="_i_data_sequence_provider_8h" name="IDataSequenceProvider.h" local="no" imported="no">imeas/IDataSequenceProvider.h</includes>
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="no" imported="no">imeas/CGeneralDataSequence.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="no" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
@@ -2645,7 +2632,6 @@
     <name>CMultiLineSupplierGuiComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_multi_line_supplier_gui_comp_8h</filename>
-    <includes id="_c_simple_numeric_value_provider_8h" name="CSimpleNumericValueProvider.h" local="no" imported="no">imeas/CSimpleNumericValueProvider.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="no" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <class kind="class">iqtipr::CMultiLineSupplierGuiComp</class>
     <class kind="class">iqtipr::CMultiLineSupplierGuiComp::LineSelection</class>
@@ -2696,7 +2682,7 @@
     <name>CValueSupplierGuiComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtipr/</path>
     <filename>_c_value_supplier_gui_comp_8h</filename>
-    <includes id="_i_numeric_value_provider_8h" name="INumericValueProvider.h" local="no" imported="no">imeas/INumericValueProvider.h</includes>
+    <includes id="_i_features_provider_8h" name="IFeaturesProvider.h" local="no" imported="no">iipr/IFeaturesProvider.h</includes>
     <includes id="_t_supplier_gui_comp_base_8h" name="TSupplierGuiCompBase.h" local="no" imported="no">iqtinsp/TSupplierGuiCompBase.h</includes>
     <includes id="iqtipr_8h" name="iqtipr.h" local="no" imported="no">iqtipr/iqtipr.h</includes>
     <class kind="class">iqtipr::CValueSupplierGuiComp</class>
@@ -11006,7 +10992,7 @@
     <name>iedge::CEdgeBasedFeaturesSupplierComp</name>
     <filename>classiedge_1_1_c_edge_based_features_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; QPair&lt; iipr::CFeaturesContainer, std::vector&lt; i2d::CAffineCalibration2d &gt; &gt; &gt;</base>
-    <base virtualness="virtual">imeas::INumericValueProvider</base>
+    <base virtualness="virtual">iipr::IFeaturesProvider</base>
     <base virtualness="virtual">i2d::IMultiCalibrationProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <base virtualness="virtual">istd::IInformationProvider</base>
@@ -11068,16 +11054,16 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetValuesCount</name>
+      <name>GetFeaturesCount</name>
       <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
-      <anchor>ad74d0fefff86d98fcf4987464a6e5bae</anchor>
+      <anchor>aa637ce78c87f838343d1f6c6e7656429</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imeas::INumericValue &amp;</type>
-      <name>GetNumericValue</name>
+      <name>GetFeature</name>
       <anchorfile>classiedge_1_1_c_edge_based_features_supplier_comp.html</anchorfile>
-      <anchor>a60c05b81c37afb6f18b4b4a637c6de2a</anchor>
+      <anchor>a9894405a574c5dec008ee6c672b22b44</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -15049,6 +15035,7 @@
     <class kind="class">iipr::ICircleFinderParams</class>
     <class kind="class">iipr::IConvolutionKernel2d</class>
     <class kind="class">iipr::IFeaturesConsumer</class>
+    <class kind="class">iipr::IFeaturesProvider</class>
     <class kind="class">iipr::IFeatureToFeatureProcessor</class>
     <class kind="class">iipr::IFeatureToImageMapper</class>
     <class kind="class">iipr::IFeatureToProjectionMapper</class>
@@ -16161,8 +16148,8 @@
       <type>void</type>
       <name>AddProjectionResultsToRays</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>ac5e5517c6b65da98ef9021bf386a5a0a</anchor>
-      <arglist>(const i2d::CLine2d &amp;projectionLine, const iprm::IParamsSet &amp;params, const imeas::INumericValueProvider &amp;container, Rays &amp;inRays, Rays &amp;outRays)</arglist>
+      <anchor>a3e4d0204e99de1a7d56ffdd0cbbe8b45</anchor>
+      <arglist>(const i2d::CLine2d &amp;projectionLine, const iprm::IParamsSet &amp;params, const IFeaturesProvider &amp;container, Rays &amp;inRays, Rays &amp;outRays)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -16233,7 +16220,7 @@
     <name>iipr::CColorPatternComparatorComp</name>
     <filename>classiipr_1_1_c_color_pattern_comparator_comp.html</filename>
     <base>TSupplierCompWrap&lt; imeas::CSimpleNumericValue &gt;</base>
-    <base virtualness="virtual">imeas::INumericValueProvider</base>
+    <base virtualness="virtual">iipr::IFeaturesProvider</base>
     <base virtualness="virtual">istd::IInformationProvider</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; imeas::CSimpleNumericValue &gt;</type>
@@ -16265,16 +16252,16 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetValuesCount</name>
+      <name>GetFeaturesCount</name>
       <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
-      <anchor>ab6d54cc25c3c9ad5151b940e084e509c</anchor>
+      <anchor>a08a84cf1a13ca344d12f0c378db098b9</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imeas::INumericValue &amp;</type>
-      <name>GetNumericValue</name>
+      <name>GetFeature</name>
       <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
-      <anchor>aac26f1127d33a5a7a72ddcbc42017c76</anchor>
+      <anchor>a63611f95d1cfd504c04d6dd8df14b68c</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -17004,8 +16991,8 @@
       <type>void</type>
       <name>SetCaliperResults</name>
       <anchorfile>classiipr_1_1_c_edge_distance_processor_comp.html</anchorfile>
-      <anchor>aefdb323e87e4537c29c0cdde930f1196</anchor>
-      <arglist>(const iprm::IParamsSet &amp;params, const imeas::INumericValueProvider &amp;container, ICaliperParams::DirectionMode caliperDirectionMode, CaliperLine &amp;ray) const </arglist>
+      <anchor>aee4f6f2acaeae60bd6d14d79f711bad9</anchor>
+      <arglist>(const iprm::IParamsSet &amp;params, const IFeaturesProvider &amp;container, ICaliperParams::DirectionMode caliperDirectionMode, CaliperLine &amp;ray) const </arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -17048,7 +17035,7 @@
     <name>iipr::CEdgeDistancesSupplierComp</name>
     <filename>classiipr_1_1_c_edge_distances_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; CFeaturesContainer &gt;</base>
-    <base virtualness="virtual">imeas::INumericValueProvider</base>
+    <base virtualness="virtual">iipr::IFeaturesProvider</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; CFeaturesContainer &gt;</type>
       <name>BaseClass</name>
@@ -17072,16 +17059,16 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetValuesCount</name>
+      <name>GetFeaturesCount</name>
       <anchorfile>classiipr_1_1_c_edge_distances_supplier_comp.html</anchorfile>
-      <anchor>ac14808c8b057602ed6bd73cc4754d348</anchor>
+      <anchor>a5a713197fe119005fe1cf845e4d45441</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imeas::INumericValue &amp;</type>
-      <name>GetNumericValue</name>
+      <name>GetFeature</name>
       <anchorfile>classiipr_1_1_c_edge_distances_supplier_comp.html</anchorfile>
-      <anchor>aba80ac7e00e77a881351ae87eb6fed9d</anchor>
+      <anchor>a40fce0de95119c5c859fed34f5eb394a</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -17250,7 +17237,7 @@
     <name>iipr::CExtremumCaliperSupplierComp</name>
     <filename>classiipr_1_1_c_extremum_caliper_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; iipr::CFeaturesContainer &gt;</base>
-    <base virtualness="virtual">imeas::INumericValueProvider</base>
+    <base virtualness="virtual">iipr::IFeaturesProvider</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; iipr::CFeaturesContainer &gt;</type>
       <name>BaseClass</name>
@@ -17274,16 +17261,16 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetValuesCount</name>
+      <name>GetFeaturesCount</name>
       <anchorfile>classiipr_1_1_c_extremum_caliper_supplier_comp.html</anchorfile>
-      <anchor>a1c260e32732e021e76776f6f2a9d42d1</anchor>
+      <anchor>acc84caf68fc480dff66d3eda611f0a78</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imeas::INumericValue &amp;</type>
-      <name>GetNumericValue</name>
+      <name>GetFeature</name>
       <anchorfile>classiipr_1_1_c_extremum_caliper_supplier_comp.html</anchorfile>
-      <anchor>a518d81046c084ea16430da4f137100bc</anchor>
+      <anchor>a5b0b52d0d4d4f714a1dd14f330074409</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -17387,7 +17374,7 @@
     <name>iipr::CFeaturesContainer</name>
     <filename>classiipr_1_1_c_features_container.html</filename>
     <base virtualness="virtual">iipr::IFeaturesConsumer</base>
-    <base virtualness="virtual">imeas::INumericValueProvider</base>
+    <base virtualness="virtual">iipr::IFeaturesProvider</base>
     <member kind="function">
       <type>void</type>
       <name>RemoveFeature</name>
@@ -17418,16 +17405,16 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetValuesCount</name>
+      <name>GetFeaturesCount</name>
       <anchorfile>classiipr_1_1_c_features_container.html</anchorfile>
-      <anchor>a89b39e92e11cc6d86f0d475a492c53b0</anchor>
+      <anchor>a4edd182255b2da1fd87d8b91df8497e3</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imeas::INumericValue &amp;</type>
-      <name>GetNumericValue</name>
+      <name>GetFeature</name>
       <anchorfile>classiipr_1_1_c_features_container.html</anchorfile>
-      <anchor>aeb790dd0a3a430a7c81873281e5701dc</anchor>
+      <anchor>afd9d8e2847c4399310cc5dd6583b9deb</anchor>
       <arglist>(int index) const </arglist>
     </member>
   </compound>
@@ -17454,8 +17441,8 @@
       <type>virtual int</type>
       <name>DoConvertFeatures</name>
       <anchorfile>classiipr_1_1_c_feature_to_image_mapper_processor_comp.html</anchorfile>
-      <anchor>a7afe20834a452b61c710532462b617e1</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const imeas::INumericValueProvider &amp;container, IFeaturesConsumer &amp;results)</arglist>
+      <anchor>a9740b304b91847e996ec61b10f88433d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const IFeaturesProvider &amp;container, IFeaturesConsumer &amp;results)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -18604,7 +18591,7 @@
     <name>iipr::CMultiLineSupplierCompBase</name>
     <filename>classiipr_1_1_c_multi_line_supplier_comp_base.html</filename>
     <base>TSupplierCompWrap&lt; QVector&lt; i2d::CLine2d &gt; &gt;</base>
-    <base virtualness="virtual">imeas::INumericValueProvider</base>
+    <base virtualness="virtual">iipr::IFeaturesProvider</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; QVector&lt; i2d::CLine2d &gt; &gt;</type>
       <name>BaseClass</name>
@@ -18628,16 +18615,16 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetValuesCount</name>
+      <name>GetFeaturesCount</name>
       <anchorfile>classiipr_1_1_c_multi_line_supplier_comp_base.html</anchorfile>
-      <anchor>a1fc472ba15cf1b9f9aaf6104b12e02b6</anchor>
+      <anchor>aa884ea2a8647c94c587d6c830f6bcfc4</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imeas::INumericValue &amp;</type>
-      <name>GetNumericValue</name>
+      <name>GetFeature</name>
       <anchorfile>classiipr_1_1_c_multi_line_supplier_comp_base.html</anchorfile>
-      <anchor>abda18c7e53c7039843f73250a06e8840</anchor>
+      <anchor>aa4cec4c72c5e0347ed4dea122dc0e182</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -19475,42 +19462,28 @@
   <compound kind="class">
     <name>iipr::CPositionFromImageSupplierComp</name>
     <filename>classiipr_1_1_c_position_from_image_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; istd::TDelPtr&lt; imeas::INumericValue &gt; &gt;</base>
-    <base virtualness="virtual">imeas::INumericValueProvider</base>
+    <base>TSupplierCompWrap&lt; CFeaturesContainer &gt;</base>
+    <base virtualness="virtual">iipr::IFeaturesProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
-      <type>iinsp::TSupplierCompWrap&lt; istd::TDelPtr&lt; imeas::INumericValue &gt; &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; CFeaturesContainer &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
-      <anchor>a7363dd0e23035784f08037b2a4702b2c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>CSupplierCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a7fa9f9d87b3803b60ea913d7c9863120</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>istd::TDelPtr&lt; imeas::INumericValue &gt;</type>
-      <name>ProductType</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
+      <anchor>a92b787fa7deb4da93ccf21a160384b84</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetValuesCount</name>
+      <name>GetFeaturesCount</name>
       <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
-      <anchor>abc0a01fb04bf7d484a19b74436494797</anchor>
+      <anchor>acf17a636520f01f9ae270a73641445d2</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imeas::INumericValue &amp;</type>
-      <name>GetNumericValue</name>
+      <name>GetFeature</name>
       <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
-      <anchor>a1ed9118ef6cde2f62a737ec2b6192227</anchor>
+      <anchor>a54d12594875619d60005e54e8cbba2bc</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -19519,20 +19492,6 @@
       <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
       <anchor>a24d0ac12a39463061ed891ac9d884bae</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ClearWorkResults</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
@@ -19548,32 +19507,11 @@
       <anchor>a59c8e8cd4b452ab79c986998f3dd0542</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>const istd::TDelPtr&lt; imeas::INumericValue &gt; *</type>
-      <name>GetWorkProduct</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual int</type>
-      <name>ProduceObject</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ac0753e739d6fc72adcb31b01b7dec782</anchor>
-      <arglist>(istd::TDelPtr&lt; imeas::INumericValue &gt; &amp;result) const =0</arglist>
-    </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; const i2d::ICalibration2d &gt;</type>
       <name>m_outputCalibrationPtr</name>
       <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
       <anchor>ad2ed01ca1a3ed5c8d263f999b75adb98</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>istd::TDelPtr&lt; istd::TDelPtr&lt; imeas::INumericValue &gt; &gt;</type>
-      <name>m_productPtr</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -20260,7 +20198,7 @@
     <name>iipr::CSearchBasedFeaturesSupplierComp</name>
     <filename>classiipr_1_1_c_search_based_features_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; CFeaturesContainer &gt;</base>
-    <base virtualness="virtual">imeas::INumericValueProvider</base>
+    <base virtualness="virtual">iipr::IFeaturesProvider</base>
     <base virtualness="virtual">i2d::IMultiCalibrationProvider</base>
     <base virtualness="virtual">istd::IInformationProvider</base>
     <member kind="typedef">
@@ -20300,16 +20238,16 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetValuesCount</name>
+      <name>GetFeaturesCount</name>
       <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
-      <anchor>ae6283aedf0bf83f94b2a6fa6ce64b92d</anchor>
+      <anchor>ab5574f34a570558c2293ffbb6857c1d2</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imeas::INumericValue &amp;</type>
-      <name>GetNumericValue</name>
+      <name>GetFeature</name>
       <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
-      <anchor>a5d4911cddad190d545796c0acd388723</anchor>
+      <anchor>a5bbc744c3fcf2fcde9c908bf6aba9df4</anchor>
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -20647,7 +20585,7 @@
     <name>iipr::CSingleFeatureConsumer</name>
     <filename>classiipr_1_1_c_single_feature_consumer.html</filename>
     <base virtualness="virtual">iipr::IFeaturesConsumer</base>
-    <base virtualness="virtual">imeas::INumericValueProvider</base>
+    <base virtualness="virtual">iipr::IFeaturesProvider</base>
     <member kind="enumeration">
       <type></type>
       <name>FeaturePolicy</name>
@@ -20713,16 +20651,16 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>GetValuesCount</name>
+      <name>GetFeaturesCount</name>
       <anchorfile>classiipr_1_1_c_single_feature_consumer.html</anchorfile>
-      <anchor>a047ea263b8fc0c1ae31bd13b848c4ff2</anchor>
+      <anchor>a103ab3998de383a4bcf107379d0c3e3f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imeas::INumericValue &amp;</type>
-      <name>GetNumericValue</name>
+      <name>GetFeature</name>
       <anchorfile>classiipr_1_1_c_single_feature_consumer.html</anchorfile>
-      <anchor>aad2f3d538f710964aadb8707a6457962</anchor>
+      <anchor>a9d4d1ea627bc1912e6726fe67522be9e</anchor>
       <arglist>(int index) const </arglist>
     </member>
   </compound>
@@ -21007,6 +20945,25 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iipr::IFeaturesProvider</name>
+    <filename>classiipr_1_1_i_features_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetFeaturesCount</name>
+      <anchorfile>classiipr_1_1_i_features_provider.html</anchorfile>
+      <anchor>a67b1d40a5abd8c5daad6450933484cf6</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const imeas::INumericValue &amp;</type>
+      <name>GetFeature</name>
+      <anchorfile>classiipr_1_1_i_features_provider.html</anchorfile>
+      <anchor>ae33cd64a1f47041158cada429929094f</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iipr::IFeatureToFeatureProcessor</name>
     <filename>classiipr_1_1_i_feature_to_feature_processor.html</filename>
     <base virtualness="virtual">iproc::IProcessor</base>
@@ -21014,8 +20971,8 @@
       <type>virtual int</type>
       <name>DoConvertFeatures</name>
       <anchorfile>classiipr_1_1_i_feature_to_feature_processor.html</anchorfile>
-      <anchor>a7b0afb043fd4284f6ee60e179c3397a5</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const imeas::INumericValueProvider &amp;container, IFeaturesConsumer &amp;results)=0</arglist>
+      <anchor>ae06f7780e0d806f7b2b46516ae31d5dd</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const IFeaturesProvider &amp;container, IFeaturesConsumer &amp;results)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -21587,7 +21544,6 @@
     <class kind="class">imeas::CRelativeUnitSelectorComp</class>
     <class kind="class">imeas::CSamplesInfo</class>
     <class kind="class">imeas::CSimpleNumericValue</class>
-    <class kind="class">imeas::CSimpleNumericValueProvider</class>
     <class kind="class">imeas::CWavSamplesLoaderComp</class>
     <class kind="class">imeas::IDataSequence</class>
     <class kind="class">imeas::IDataSequenceCorrelationProcessor</class>
@@ -21602,7 +21558,6 @@
     <class kind="class">imeas::IMultiDataSequenceProvider</class>
     <class kind="class">imeas::INumericConstraints</class>
     <class kind="class">imeas::INumericValue</class>
-    <class kind="class">imeas::INumericValueProvider</class>
     <class kind="class">imeas::ISampleAcquisition</class>
     <class kind="class">imeas::TDiscreteDataSequence</class>
     <member kind="typedef">
@@ -22815,39 +22770,6 @@
     <base virtualness="virtual">imeas::INumericValue</base>
   </compound>
   <compound kind="class">
-    <name>imeas::CSimpleNumericValueProvider</name>
-    <filename>classimeas_1_1_c_simple_numeric_value_provider.html</filename>
-    <base virtualness="virtual">imeas::INumericValueProvider</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetValuesCount</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value_provider.html</anchorfile>
-      <anchor>a8d5935a2e15a28e8a99680d287fa5f71</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const imeas::INumericValue &amp;</type>
-      <name>GetNumericValue</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value_provider.html</anchorfile>
-      <anchor>a9dcc3ad33fccd9ea51acbf44dd89bf28</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value_provider.html</anchorfile>
-      <anchor>a81e6008977c60d66f74d57ebd64c6333</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CopyFrom</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value_provider.html</anchorfile>
-      <anchor>a8a0db455ee070428b77547dca93df8b9</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>imeas::CWavSamplesLoaderComp</name>
     <filename>classimeas_1_1_c_wav_samples_loader_comp.html</filename>
     <base>icomp::CComponentBase</base>
@@ -23323,25 +23245,6 @@
       <anchorfile>classimeas_1_1_i_numeric_value.html</anchorfile>
       <anchor>a320278040f8a7dfbe897c724bdc70a7f</anchor>
       <arglist>(const imath::CVarVector &amp;values)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>imeas::INumericValueProvider</name>
-    <filename>classimeas_1_1_i_numeric_value_provider.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetValuesCount</name>
-      <anchorfile>classimeas_1_1_i_numeric_value_provider.html</anchorfile>
-      <anchor>a552bff1848be3c7927a19727bc919d5a</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const imeas::INumericValue &amp;</type>
-      <name>GetNumericValue</name>
-      <anchorfile>classimeas_1_1_i_numeric_value_provider.html</anchorfile>
-      <anchor>a2af116b919bcb8294cfe495a666940f7</anchor>
-      <arglist>(int index) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -25182,7 +25085,7 @@
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CScaleCalibrationEditorComp, imeas::INumericValue &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtcam_1_1_c_scale_calibration_editor_comp.html</anchorfile>
-      <anchor>a796add38f325a0903b86af77695a0ca5</anchor>
+      <anchor>a5d1117794cb4a74eee0245790e081874</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -30477,6 +30380,7 @@
     <file>ICircleFinderParams.h</file>
     <file>IConvolutionKernel2d.h</file>
     <file>IFeaturesConsumer.h</file>
+    <file>IFeaturesProvider.h</file>
     <file>IFeatureToFeatureProcessor.h</file>
     <file>IFeatureToImageMapper.h</file>
     <file>IFeatureToProjectionMapper.h</file>
@@ -30514,7 +30418,6 @@
     <file>CRelativeUnitSelectorComp.h</file>
     <file>CSamplesInfo.h</file>
     <file>CSimpleNumericValue.h</file>
-    <file>CSimpleNumericValueProvider.h</file>
     <file>CWavSamplesLoaderComp.h</file>
     <file>IDataSequence.h</file>
     <file>IDataSequenceCorrelationProcessor.h</file>
@@ -30530,7 +30433,6 @@
     <file>IMultiDataSequenceProvider.h</file>
     <file>INumericConstraints.h</file>
     <file>INumericValue.h</file>
-    <file>INumericValueProvider.h</file>
     <file>ISampleAcquisition.h</file>
     <file>TDiscreteDataSequence.h</file>
   </compound>

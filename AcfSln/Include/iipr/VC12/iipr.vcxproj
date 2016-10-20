@@ -261,6 +261,7 @@
     <ClInclude Include="..\IFeatureToImageMapper.h" />
     <ClInclude Include="..\IFeatureToProjectionMapper.h" />
     <ClInclude Include="..\IFeaturesConsumer.h" />
+    <ClInclude Include="..\IFeaturesProvider.h" />
     <ClInclude Include="..\IImageInterpolationParams.h" />
     <ClInclude Include="..\IImageToFeatureProcessor.h" />
     <ClInclude Include="..\ILineProjectionProcessor.h" />

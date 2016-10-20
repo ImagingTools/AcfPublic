@@ -29,7 +29,7 @@
 
 // ACF-Solutions includes
 #include <imeas/CGeneralDataSequence.h>
-#include <imeas/INumericValueProvider.h>
+#include <iipr/IFeaturesProvider.h>
 #include <iqtinsp/TSupplierGuiCompBase.h>
 
 #include <GeneratedFiles/iqtipr/ui_CColorPatternComparatorGuiComp.h>
