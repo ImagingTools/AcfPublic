@@ -136,6 +136,7 @@
     <ClCompile Include="..\CConvolutionProcessorComp.cpp" />
     <ClCompile Include="..\CDelegatedBitmapSupplierComp.cpp" />
     <ClCompile Include="..\CDifferenceBitmapSupplierComp.cpp" />
+    <ClCompile Include="..\CDirectionalOptimalPathSolver.cpp" />
     <ClCompile Include="..\CEdgeDistanceProcessorComp.cpp" />
     <ClCompile Include="..\CEdgeDistancesSupplierComp.cpp" />
     <ClCompile Include="..\CExtremumCaliperProcessorComp.cpp" />
@@ -204,6 +205,7 @@
     <ClInclude Include="..\CConvolutionProcessorComp.h" />
     <ClInclude Include="..\CDelegatedBitmapSupplierComp.h" />
     <ClInclude Include="..\CDifferenceBitmapSupplierComp.h" />
+    <ClInclude Include="..\CDirectionalOptimalPathSolver.h" />
     <ClInclude Include="..\CEdgeDistanceProcessorComp.h" />
     <ClInclude Include="..\CEdgeDistancesSupplierComp.h" />
     <ClInclude Include="..\CExtremumCaliperProcessorComp.h" />

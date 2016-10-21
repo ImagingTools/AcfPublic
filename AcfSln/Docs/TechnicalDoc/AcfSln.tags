@@ -1260,6 +1260,15 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CDirectionalOptimalPathSolver.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_directional_optimal_path_solver_8h</filename>
+    <class kind="class">iipr::CDirectionalOptimalPathSolver</class>
+    <class kind="struct">iipr::CDirectionalOptimalPathSolver::CostElement</class>
+    <class kind="struct">iipr::CDirectionalOptimalPathSolver::Neighbourhood</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CEdgeDistanceProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_edge_distance_processor_comp_8h</filename>
@@ -14982,6 +14991,7 @@
     <class kind="class">iipr::CConvolutionProcessorComp</class>
     <class kind="class">iipr::CDelegatedBitmapSupplierComp</class>
     <class kind="class">iipr::CDifferenceBitmapSupplierComp</class>
+    <class kind="class">iipr::CDirectionalOptimalPathSolver</class>
     <class kind="class">iipr::CEdgeDistanceProcessorComp</class>
     <class kind="class">iipr::CEdgeDistancesSupplierComp</class>
     <class kind="class">iipr::CExtremumCaliperProcessorComp</class>
@@ -16935,6 +16945,160 @@
       <name>m_productPtr</name>
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CDirectionalOptimalPathSolver</name>
+    <filename>classiipr_1_1_c_directional_optimal_path_solver.html</filename>
+    <class kind="struct">iipr::CDirectionalOptimalPathSolver::CostElement</class>
+    <class kind="struct">iipr::CDirectionalOptimalPathSolver::Neighbourhood</class>
+    <member kind="function">
+      <type></type>
+      <name>CDirectionalOptimalPathSolver</name>
+      <anchorfile>classiipr_1_1_c_directional_optimal_path_solver.html</anchorfile>
+      <anchor>a319ef799db50c15b4308e40a97d43483</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>Initialize</name>
+      <anchorfile>classiipr_1_1_c_directional_optimal_path_solver.html</anchorfile>
+      <anchor>a030f0338649b4d82a1904dd016ab904f</anchor>
+      <arglist>(const i2d::CVector2d &amp;beginPoint, const iimg::IBitmap &amp;costOffsetBitmap, const iimg::IBitmap &amp;costXBitmap, const iimg::IBitmap &amp;costYBitmap, const iimg::CScanlineMask &amp;costBitmapMask, double dirFactor)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsInitialized</name>
+      <anchorfile>classiipr_1_1_c_directional_optimal_path_solver.html</anchorfile>
+      <anchor>aba437164a93c0ff0cb40bbf88ecc9be3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>CalculateCostData</name>
+      <anchorfile>classiipr_1_1_c_directional_optimal_path_solver.html</anchorfile>
+      <anchor>ac44a69625fe2239d0175e6887ca71766</anchor>
+      <arglist>(const QVector&lt; i2d::CVector2d &gt; &amp;destPoints, double maxCost, int minDestPoints)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetOptimalPath</name>
+      <anchorfile>classiipr_1_1_c_directional_optimal_path_solver.html</anchorfile>
+      <anchor>aa1706d1584ef967bf4d5761c652071e0</anchor>
+      <arglist>(const i2d::CVector2d &amp;destPoint, i2d::CPolypoint *optimalPathPtr=NULL) const </arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>std::multimap&lt; double, istd::CIndex2d &gt;</type>
+      <name>ProcessingQueue</name>
+      <anchorfile>classiipr_1_1_c_directional_optimal_path_solver.html</anchorfile>
+      <anchor>a5024129359eae0ce4353bf13677b0175</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>TryChangeNeighbour</name>
+      <anchorfile>classiipr_1_1_c_directional_optimal_path_solver.html</anchorfile>
+      <anchor>a2a5df85db271d09de849320d90d7ecdc</anchor>
+      <arglist>(const CostElement &amp;element, const Neighbourhood &amp;neigbourhood, const istd::CIndex2d &amp;neighbourIndex, CostElement &amp;neighbourElement)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>PopNextElement</name>
+      <anchorfile>classiipr_1_1_c_directional_optimal_path_solver.html</anchorfile>
+      <anchor>a75b63fce9deba9b9ba8a3d3483c373d4</anchor>
+      <arglist>(istd::CIndex2d &amp;elementIndex, float &amp;elementCostSum)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>iipr::CDirectionalOptimalPathSolver::CostElement</name>
+    <filename>structiipr_1_1_c_directional_optimal_path_solver_1_1_cost_element.html</filename>
+    <member kind="variable">
+      <type>qint8</type>
+      <name>revDirCode</name>
+      <anchorfile>structiipr_1_1_c_directional_optimal_path_solver_1_1_cost_element.html</anchorfile>
+      <anchor>ad3f3d6499f968da3af17c5aa31ecb7b4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>qint8</type>
+      <name>invMask</name>
+      <anchorfile>structiipr_1_1_c_directional_optimal_path_solver_1_1_cost_element.html</anchorfile>
+      <anchor>a63225f70fbffc3900bde4838f9fdf37d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>costSum</name>
+      <anchorfile>structiipr_1_1_c_directional_optimal_path_solver_1_1_cost_element.html</anchorfile>
+      <anchor>affa2425034a8eae0cb46db287efa397e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>costX</name>
+      <anchorfile>structiipr_1_1_c_directional_optimal_path_solver_1_1_cost_element.html</anchorfile>
+      <anchor>aa29b95adfce581ce0b0a1807890db8f5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>costY</name>
+      <anchorfile>structiipr_1_1_c_directional_optimal_path_solver_1_1_cost_element.html</anchorfile>
+      <anchor>aa724cbf61e26122be0eb798e5443b861</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>costOffset</name>
+      <anchorfile>structiipr_1_1_c_directional_optimal_path_solver_1_1_cost_element.html</anchorfile>
+      <anchor>a58357026a69238100db365789305de4b</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>iipr::CDirectionalOptimalPathSolver::Neighbourhood</name>
+    <filename>structiipr_1_1_c_directional_optimal_path_solver_1_1_neighbourhood.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Neighbourhood</name>
+      <anchorfile>structiipr_1_1_c_directional_optimal_path_solver_1_1_neighbourhood.html</anchorfile>
+      <anchor>a40fd18ef5697159bfe14f4ad2578826a</anchor>
+      <arglist>(float distance, float dirX, float dirY, int revDirCode)</arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>distance</name>
+      <anchorfile>structiipr_1_1_c_directional_optimal_path_solver_1_1_neighbourhood.html</anchorfile>
+      <anchor>a59ac338cf94b56f6065a0e3628f08896</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>dirX</name>
+      <anchorfile>structiipr_1_1_c_directional_optimal_path_solver_1_1_neighbourhood.html</anchorfile>
+      <anchor>a24113b3c7105c5125a226cc999b3e0d1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>dirY</name>
+      <anchorfile>structiipr_1_1_c_directional_optimal_path_solver_1_1_neighbourhood.html</anchorfile>
+      <anchor>ad4114b28ca4d74475af73581dde47693</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>quint8</type>
+      <name>revDirCode</name>
+      <anchorfile>structiipr_1_1_c_directional_optimal_path_solver_1_1_neighbourhood.html</anchorfile>
+      <anchor>ab4adaed3c35300d6c502a1fb95e97575</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>quint8</type>
+      <name>invMask</name>
+      <anchorfile>structiipr_1_1_c_directional_optimal_path_solver_1_1_neighbourhood.html</anchorfile>
+      <anchor>a1b5e4169da626d4f42e6c9ee8856f631</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -30328,6 +30492,7 @@
     <file>CConvolutionProcessorComp.h</file>
     <file>CDelegatedBitmapSupplierComp.h</file>
     <file>CDifferenceBitmapSupplierComp.h</file>
+    <file>CDirectionalOptimalPathSolver.h</file>
     <file>CEdgeDistanceProcessorComp.h</file>
     <file>CEdgeDistancesSupplierComp.h</file>
     <file>CExtremumCaliperProcessorComp.h</file>
