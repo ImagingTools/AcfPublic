@@ -35209,6 +35209,13 @@
       <anchor>a4f8e944b92b4708f0e9a5e7beff00a18</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CGeneralBitmap</name>
+      <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
+      <anchor>ab8c3adb0294b94b6c6aa2f22ed547af0</anchor>
+      <arglist>(const CGeneralBitmap &amp;bitmap)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsFormatSupported</name>
@@ -35320,6 +35327,13 @@
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
       <anchor>a569fc8271b73c9581c1f8b1ed2f9bc2e</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
+    <member kind="function">
+      <type>CGeneralBitmap &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
+      <anchor>a8464c7497eab5612744a4c5d338a5002</anchor>
+      <arglist>(const CGeneralBitmap &amp;bitmap)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
