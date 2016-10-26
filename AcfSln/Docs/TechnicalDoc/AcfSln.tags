@@ -7911,12 +7911,26 @@
       <anchor>afaed3552a9b5378b56375e46a9d36eb7</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnItemChanged</name>
+      <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
+      <anchor>a848f2d0ea5a38bd718a6de57ad51b20e</anchor>
+      <arglist>(QListWidgetItem *itemPtr)</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>CreateValuesTree</name>
       <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
       <anchor>aa32398214a3b67c8aed87e3bdf5eef02</anchor>
       <arglist>(const QStringList &amp;values)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateItemState</name>
+      <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
+      <anchor>a55612871b8c718cec2dc966aef7f5dc9</anchor>
+      <arglist>(QListWidgetItem &amp;item)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8460,6 +8474,13 @@
       <arglist>(const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ilog::IMessageConsumer *reasonConsumerPtr, const icomp::IComponentStaticInfo *componentMetaInfoPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsAttributeValueValid</name>
+      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
+      <anchor>ac7700d01d3f61e4daa441d6d5b4411c8</anchor>
+      <arglist>(int attributeFlags, const QByteArray &amp;attributeText, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const icomp::IElementStaticInfo::Ids &amp;optionalInterfaceNames, const icomp::IRegistry &amp;registry, bool ignoreUndef, ilog::IMessageConsumer *reasonConsumerPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual QIcon</type>
       <name>GetComponentIcon</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
@@ -8484,15 +8505,15 @@
       <type>bool</type>
       <name>CheckPointedElementCompatibility</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>aba7adc84d17beaf9aba054b031905464</anchor>
-      <arglist>(const icomp::IAttributeStaticInfo &amp;attributeMetaInfo, const QByteArray &amp;pointedElementName, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const icomp::IElementStaticInfo::Ids &amp;optionalInterfaceNames, const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, ilog::IMessageConsumer *reasonConsumerPtr) const </arglist>
+      <anchor>ae41023314149247a332ef461b25c4b87</anchor>
+      <arglist>(int attributeFlags, const QByteArray &amp;pointedElementName, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const icomp::IElementStaticInfo::Ids &amp;optionalInterfaceNames, const icomp::IRegistry &amp;registry, bool ignoreUndef, const QString &amp;messagePrefix, ilog::IMessageConsumer *reasonConsumerPtr) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>CheckPointedElementInfoCompatibility</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a449a7d9bdcd2536f2af4964dd603fedf</anchor>
-      <arglist>(const QByteArray &amp;pointedElementName, const icomp::IElementStaticInfo *pointedMetaInfoPtr, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const icomp::IElementStaticInfo::Ids &amp;optionalInterfaceNames, const QByteArray &amp;attributeName, const QByteArray &amp;elementName, bool ignoreUndef, ilog::IMessageConsumer *reasonConsumerPtr) const </arglist>
+      <anchor>a884ef8a5db10c8f13b96c85f723abb53</anchor>
+      <arglist>(const QByteArray &amp;pointedElementName, const icomp::IElementStaticInfo *pointedMetaInfoPtr, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const icomp::IElementStaticInfo::Ids &amp;optionalInterfaceNames, bool ignoreUndef, const QString &amp;messagePrefix, ilog::IMessageConsumer *reasonConsumerPtr) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10580,6 +10601,13 @@
       <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
       <anchor>a952f132ed6ce0fbdf4c011aa445c573c</anchor>
       <arglist>(const QByteArray &amp;attributeName, const QByteArray &amp;elementName, const icomp::IRegistry &amp;registry, bool ignoreUndef, bool allReasons, ilog::IMessageConsumer *reasonConsumerPtr, const icomp::IComponentStaticInfo *componentMetaInfoPtr=NULL) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsAttributeValueValid</name>
+      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
+      <anchor>aea0f4e1be9d5a55dea6aab9d909b95b2</anchor>
+      <arglist>(int attributeFlags, const QByteArray &amp;attributeText, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, const icomp::IElementStaticInfo::Ids &amp;optionalInterfaceNames, const icomp::IRegistry &amp;registry, bool ignoreUndef, ilog::IMessageConsumer *reasonConsumerPtr) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QIcon</type>

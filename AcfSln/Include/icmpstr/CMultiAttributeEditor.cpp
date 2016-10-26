@@ -35,6 +35,9 @@
 #include <QtGui/QLineEdit>
 #endif
 
+// ACF includes
+#include <ilog/CMessageContainer.h>
+
 	
 namespace icmpstr
 {
@@ -46,7 +49,7 @@ CMultiAttributeEditor::CMultiAttributeEditor(
 			const CElementSelectionInfoManagerBase& elementSelectionInfoManager,
 			const QByteArray& attributeId,
 			int attributeFlags)
-	:m_elementSelectionInfoManager(elementSelectionInfoManager),
+:	m_elementSelectionInfoManager(elementSelectionInfoManager),
 	m_attributeId(attributeId),
 	m_attributeFlags(attributeFlags),
 	m_valueItemDelegate(*this)
@@ -60,6 +63,7 @@ CMultiAttributeEditor::CMultiAttributeEditor(
 	connect(m_dialog.UpButton, SIGNAL(clicked()), this, SLOT(OnItemMoveUp()));
 	connect(m_dialog.DownButton, SIGNAL(clicked()), this, SLOT(OnItemMoveDown()));
 	connect(m_dialog.AttributeValuesTree, SIGNAL(itemSelectionChanged()), this, SLOT(UpdateButtonStates()));
+	connect(m_dialog.AttributeValuesTree, SIGNAL(itemChanged(QListWidgetItem*)), this, SLOT(OnItemChanged(QListWidgetItem*)));
 }
 
 
@@ -184,6 +188,14 @@ void CMultiAttributeEditor::UpdateButtonStates()
 }
 
 
+void CMultiAttributeEditor::OnItemChanged(QListWidgetItem* itemPtr)
+{
+	Q_ASSERT(itemPtr != NULL);
+
+	UpdateItemState(*itemPtr);
+}
+
+
 // protected methods
 
 void CMultiAttributeEditor::CreateValuesTree(const QStringList& values)
@@ -191,13 +203,110 @@ void CMultiAttributeEditor::CreateValuesTree(const QStringList& values)
 	for (int itemIndex = 0; itemIndex < values.count(); itemIndex++){
 		QListWidgetItem* itemPtr = new QListWidgetItem();
 		itemPtr->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsEditable | Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled);
-	
 		itemPtr->setText(values[itemIndex]);
+
+		UpdateItemState(*itemPtr);
 
 		m_dialog.AttributeValuesTree->addItem(itemPtr);
 	}
 
 	UpdateButtonStates();
+}
+
+
+void CMultiAttributeEditor::UpdateItemState(QListWidgetItem& item)
+{
+	QStringList textMessages;
+	bool isOk = true;
+
+	const icomp::IRegistry* registryPtr = m_elementSelectionInfoManager.GetRegistry();
+	const IRegistryConsistInfo* consistInfoPtr = m_elementSelectionInfoManager.GetConsistencyInfoPtr();
+	if ((registryPtr != NULL) && (consistInfoPtr != NULL)){
+		const IElementSelectionInfo* selectionInfoPtr = m_elementSelectionInfoManager.GetObservedObject();
+		if (selectionInfoPtr == NULL){
+			return;
+		}
+
+		IElementSelectionInfo::Elements selectedElements = selectionInfoPtr->GetSelectedElements();
+		if (selectedElements.isEmpty()){
+			return;
+		}
+
+		icomp::IElementStaticInfo::Ids obligatoryInterfaces;
+		icomp::IElementStaticInfo::Ids optionalInterfaces;
+
+		for (		IElementSelectionInfo::Elements::const_iterator elemIter = selectedElements.begin();
+					elemIter != selectedElements.end();
+					++elemIter){
+			const icomp::IRegistry::ElementInfo* elementInfoPtr = elemIter.value();
+			Q_ASSERT(elementInfoPtr != NULL);
+			if (!elementInfoPtr->elementPtr.IsValid()){
+				continue;
+			}
+
+			const iser::IObject* attributePtr = m_elementSelectionInfoManager.GetAttributeObject(m_attributeId, *elementInfoPtr);
+			if (attributePtr == NULL){
+				continue;
+			}
+
+			if ((m_attributeFlags & (icomp::IAttributeStaticInfo::AF_REFERENCE | icomp::IAttributeStaticInfo::AF_FACTORY)) != 0){
+				const icomp::IAttributeStaticInfo* staticInfoPtr = m_elementSelectionInfoManager.GetAttributeStaticInfo(m_attributeId, *elementInfoPtr);
+				if (staticInfoPtr != NULL){
+					obligatoryInterfaces += staticInfoPtr->GetRelatedMetaIds(icomp::IComponentStaticInfo::MGI_INTERFACES, 0, 0);
+					optionalInterfaces += staticInfoPtr->GetRelatedMetaIds(icomp::IComponentStaticInfo::MGI_INTERFACES, 0, icomp::IAttributeStaticInfo::AF_NULLABLE);
+				}
+			}
+		}
+
+		ilog::CMessageContainer messageContainer;
+
+		isOk = consistInfoPtr->IsAttributeValueValid(
+					m_attributeFlags,
+					item.text().toLatin1(),
+					obligatoryInterfaces,
+					optionalInterfaces,
+					*registryPtr,
+					true,
+					&messageContainer);
+
+		ilog::IMessageContainer::Messages messages = messageContainer.GetMessages();
+		for (		ilog::IMessageContainer::Messages::ConstIterator messageIter = messages.constBegin();
+					messageIter != messages.constEnd();
+					++messageIter){
+			const ilog::IMessageConsumer::MessagePtr& messagePtr = *messageIter;
+			if (messagePtr.IsValid()){
+				QString messageText;
+
+				switch (messagePtr->GetInformationCategory()){
+				case istd::IInformationProvider::IC_INFO:
+					messageText = tr("Information: ");
+					break;
+
+				case istd::IInformationProvider::IC_WARNING:
+					messageText = tr("Warning: ");
+					break;
+
+				case istd::IInformationProvider::IC_ERROR:
+					messageText = tr("Error: ");
+					break;
+
+				case istd::IInformationProvider::IC_CRITICAL:
+					messageText = tr("Critical error: ");
+					break;
+
+				default:
+					break;
+				}
+
+				messageText += messagePtr->GetInformationDescription();
+
+				textMessages += messageText;
+			}
+		}
+	}
+
+	item.setBackground(isOk? Qt::transparent: Qt::red);
+	item.setToolTip(textMessages.join("\n"));
 }
 
 
