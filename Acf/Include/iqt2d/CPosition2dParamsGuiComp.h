@@ -52,6 +52,9 @@ public:
 				i2d::CPosition2d> BaseClass;
 
 	I_BEGIN_COMPONENT(CPosition2dParamsGuiComp);
+		I_ASSIGN(m_altrnativeStrAttrPtr, "AlternativeLabel", "String that repleace default label", false, "Position");
+		I_ASSIGN(m_xLabelStrAttrPtr, "X_Label", "X value label", false, "X:");
+		I_ASSIGN(m_yLabelStrAttrPtr, "Y_Label", "Y value label", false, "Y:");
 	I_END_COMPONENT;
 
 	// reimplemented (imod::IModelEditor)
@@ -69,6 +72,11 @@ protected:
 protected Q_SLOTS:
 	void OnParamsChanged(double value);
 	void OnActionTriggered(QAction* actionPtr);
+
+private:
+	I_ATTR(QString, m_altrnativeStrAttrPtr);
+	I_ATTR(QString, m_xLabelStrAttrPtr);
+	I_ATTR(QString, m_yLabelStrAttrPtr);
 };
 
 
