@@ -75,21 +75,6 @@ void CPosition2dParamsGuiComp::OnGuiCreated()
 {
 	BaseClass::OnGuiCreated();
 
-	XLabel->setVisible(m_xLabelStrAttrPtr.IsValid());
-	YLabel->setVisible(m_yLabelStrAttrPtr.IsValid());
-
-	if (m_altrnativeStrAttrPtr.IsValid()){
-		PositionLabel->setText(QObject::tr("%1").arg(*m_altrnativeStrAttrPtr));
-	}
-
-	if (m_xLabelStrAttrPtr.IsValid()){
-		XLabel->setText(QObject::tr("%1").arg(*m_xLabelStrAttrPtr));
-	}
-
-	if (m_xLabelStrAttrPtr.IsValid()){
-		YLabel->setText(QObject::tr("%1").arg(*m_yLabelStrAttrPtr));
-	}
-
 	if (IsPositionFixed()){
 		XSpin->setEnabled(false);
 		YSpin->setEnabled(false);
@@ -116,19 +101,7 @@ void CPosition2dParamsGuiComp::OnGuiRetranslate()
 {
 	BaseClass::OnGuiRetranslate();
 
-	if (m_altrnativeStrAttrPtr.IsValid()){
-		PositionLabel->setText(QObject::tr("%1").arg(*m_altrnativeStrAttrPtr));
-	}
-
-	if (m_xLabelStrAttrPtr.IsValid()){
-		XLabel->setText(QObject::tr("%1").arg(*m_xLabelStrAttrPtr));
-	}
-
-	if (m_xLabelStrAttrPtr.IsValid()){
-		YLabel->setText(QObject::tr("%1").arg(*m_yLabelStrAttrPtr));
-	}
-
-	const QString& unitName = GetUnitName();
+	QString unitName = GetUnitName();
 
 	if (!unitName.isEmpty()){
 		PositionUnitLabel->setText(unitName);
