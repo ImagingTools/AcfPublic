@@ -6077,8 +6077,8 @@
       <type>virtual void</type>
       <name>AddMessage</name>
       <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a0cff89f148b06dea05ccca9e64c84862</anchor>
-      <arglist>(const ilog::CMessage *messagePtr, int containerType=MCT_RESULTS) const </arglist>
+      <anchor>a9f253d89ba4264237aa83c09722f6c59</anchor>
+      <arglist>(const istd::IInformationProvider *messagePtr, int containerType=MCT_RESULTS) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
