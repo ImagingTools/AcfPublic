@@ -75,6 +75,9 @@ void CPosition2dParamsGuiComp::OnGuiCreated()
 {
 	BaseClass::OnGuiCreated();
 
+	XLabel->setVisible(m_xLabelStrAttrPtr.IsValid());
+	YLabel->setVisible(m_yLabelStrAttrPtr.IsValid());
+
 	if (IsPositionFixed()){
 		XSpin->setEnabled(false);
 		YSpin->setEnabled(false);
@@ -101,7 +104,19 @@ void CPosition2dParamsGuiComp::OnGuiRetranslate()
 {
 	BaseClass::OnGuiRetranslate();
 
-	QString unitName = GetUnitName();
+	if (m_altrnativeStrAttrPtr.IsValid()){
+		PositionLabel->setText(*m_altrnativeStrAttrPtr);
+	}
+
+	if (m_xLabelStrAttrPtr.IsValid()){
+		XLabel->setText(*m_xLabelStrAttrPtr);
+	}
+
+	if (m_yLabelStrAttrPtr.IsValid()){
+		YLabel->setText(*m_yLabelStrAttrPtr);
+	}
+
+	const QString& unitName = GetUnitName();
 
 	if (!unitName.isEmpty()){
 		PositionUnitLabel->setText(unitName);
