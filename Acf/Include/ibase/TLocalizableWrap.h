@@ -26,6 +26,7 @@
 
 // Qt includes
 #include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
 
 
 namespace ibase
