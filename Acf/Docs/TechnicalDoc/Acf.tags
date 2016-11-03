@@ -33788,6 +33788,55 @@
       <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
       <arglist>(imod::IModel *modelPtr) const</arglist>
     </member>
+    <member kind="variable" protection="protected">
+      <type>QFileSystemWatcher</type>
+      <name>m_fileSystemObserver</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
+      <anchor>a5391c2ff8fef65e4f84d4efc4486ea83</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QDateTime</type>
+      <name>m_lastModificationTimeStamp</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
+      <anchor>aa5e6187599bbc130ec37c836fb6f2090</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QString</type>
+      <name>m_lastFilePath</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
+      <anchor>a591d3ddc0eb81c20e3c5ab34c60b1311</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QFutureWatcher&lt; void &gt;</type>
+      <name>m_previewGenerationWatcher</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
+      <anchor>a2e813566d67c753d1f6acecfa4be4196</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; istd::IChangeable &gt;</type>
+      <name>m_previewObjectPtr</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
+      <anchor>a6ac625ade071d82bb48c566ae2e0db2f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; istd::IChangeable &gt;</type>
+      <name>m_workingObjectPtr</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
+      <anchor>a0da231cf44b370042ba5ff95b170fde5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QMutex</type>
+      <name>m_mutex</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
+      <anchor>a21c28ae8f223c74d0e4feea2d9becff7</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>TSingleModelObserverBase</name>
