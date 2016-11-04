@@ -63,7 +63,11 @@ public:
 		I_ASSIGN(m_objectObserverCompPtr, "ObjectView", "View component for the object", true, "ObjectView");
 		I_ASSIGN_TO(m_objectGuiCompPtr, m_objectObserverCompPtr, true);
 		I_ASSIGN(m_isAsynchronPreviewGenerationEnabledAttrPtr, "AsynchronPreviewGenerationEnabled", "If enabled, the preview generation will be done in a separate thread", true, true);
+		I_ASSIGN(m_noAvailableLabelAttrPtr, "NoAvailableLabel", "Text used for no available preview state", false, "");
+		I_ASSIGN(m_noAvailableIconPathAttrPtr, "NoAvailableIconPath", "Path to the icon used for no available preview state", false, "");
 	I_END_COMPONENT;
+
+	CFilePreviewGuiComp();
 
 protected:
 	// reimplemented (iqtgui::TGuiObserverWrap)
@@ -74,6 +78,7 @@ protected:
 	// reimplemented (iqtgui::CGuiComponentBase)
 	virtual void OnGuiCreated();
 	virtual void OnGuiDestroyed();
+	virtual void OnGuiRetranslate();
 
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();
@@ -84,6 +89,7 @@ private Q_SLOTS:
 
 private:
 	void UpdateObjectFromFile();
+	void ResetPreview();
 
 protected:
 	I_REF(ifile::IFilePersistence, m_fileLoaderCompPtr);
@@ -92,6 +98,8 @@ protected:
 	I_REF(iqtgui::IGuiObject, m_objectGuiCompPtr);	
 	I_REF(istd::IChangeable, m_currentPreviewObjectCompPtr);
 	I_ATTR(bool, m_isAsynchronPreviewGenerationEnabledAttrPtr);
+	I_ATTR(QString, m_noAvailableLabelAttrPtr);
+	I_ATTR(QByteArray, m_noAvailableIconPathAttrPtr);
 
 	QFileSystemWatcher m_fileSystemObserver;
 
@@ -104,6 +112,8 @@ protected:
 	istd::TDelPtr<istd::IChangeable> m_workingObjectPtr;
 
 	QMutex m_mutex;
+
+	bool m_previewWasGenerated;
 };
 
 

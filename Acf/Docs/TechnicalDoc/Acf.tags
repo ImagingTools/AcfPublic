@@ -33739,6 +33739,41 @@
       <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CFilePreviewGuiComp</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
+      <anchor>ab62c3bb5cbe5c838b091914e16514585</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSingleModelObserverBase</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>ifile::IFileNameParam *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>ifile::IFileNameParam *</type>
+      <name>GetObjectPtr</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>AttachOrSetObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
+      <arglist>(ifile::IFileNameParam *objectPtr)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
@@ -33772,6 +33807,13 @@
       <name>OnGuiDestroyed</name>
       <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
       <anchor>a2f118ad984cf1c881a28b6e0dcd8678c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
+      <anchor>a34fbfc8cc603796d0e13133386912513</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -33837,33 +33879,12 @@
       <anchor>a21c28ae8f223c74d0e4feea2d9becff7</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>TSingleModelObserverBase</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>ifile::IFileNameParam *</type>
-      <name>GetObservedObject</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>ifile::IFileNameParam *</type>
-      <name>GetObjectPtr</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
+    <member kind="variable" protection="protected">
       <type>bool</type>
-      <name>AttachOrSetObject</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
-      <arglist>(ifile::IFileNameParam *objectPtr)</arglist>
+      <name>m_previewWasGenerated</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
+      <anchor>a8ccb36c8eb9782be4093bddb4c61cc81</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
