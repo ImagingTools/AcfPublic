@@ -4156,6 +4156,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
+      <type>const QString &amp;</type>
+      <name>GetPassword</name>
+      <anchorfile>classiauth_1_1_c_user.html</anchorfile>
+      <anchor>a76a08df4b27c2665e49a7914093066ef</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
       <type>bool</type>
       <name>SetUserName</name>
       <anchorfile>classiauth_1_1_c_user.html</anchorfile>
