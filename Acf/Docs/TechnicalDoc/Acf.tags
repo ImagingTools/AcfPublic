@@ -4812,11 +4812,15 @@
     <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="no" imported="no">imod/TModelWrap.h</includes>
     <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="no" imported="no">imod/TSingleModelObserverBase.h</includes>
     <includes id="_i_enableable_param_8h" name="IEnableableParam.h" local="no" imported="no">iprm/IEnableableParam.h</includes>
+    <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="no" imported="no">ilog/IMessageConsumer.h</includes>
     <includes id="_i_runtime_status_provider_8h" name="IRuntimeStatusProvider.h" local="no" imported="no">ibase/IRuntimeStatusProvider.h</includes>
+    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="no" imported="no">ibase/ICommandsProvider.h</includes>
     <includes id="_i_gui_object_8h" name="IGuiObject.h" local="no" imported="no">iqtgui/IGuiObject.h</includes>
     <includes id="_i_gui_application_8h" name="IGuiApplication.h" local="no" imported="no">iqtgui/IGuiApplication.h</includes>
     <includes id="_c_application_comp_base_8h" name="CApplicationCompBase.h" local="no" imported="no">iqtgui/CApplicationCompBase.h</includes>
     <class kind="class">iqtgui::CGuiApplicationComp</class>
+    <class kind="class">iqtgui::CGuiApplicationComp::RuntimeStatus</class>
+    <class kind="class">iqtgui::CGuiApplicationComp::TrayMessages</class>
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
@@ -53568,6 +53572,8 @@
     <base>iqtgui::CApplicationCompBase</base>
     <base protection="protected">TSingleModelObserverBase&lt; iprm::IEnableableParam &gt;</base>
     <base virtualness="virtual">iqtgui::IGuiApplication</base>
+    <class kind="class">iqtgui::CGuiApplicationComp::RuntimeStatus</class>
+    <class kind="class">iqtgui::CGuiApplicationComp::TrayMessages</class>
     <member kind="typedef">
       <type>CApplicationCompBase</type>
       <name>BaseClass</name>
@@ -53626,13 +53632,6 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
-      <anchor>a133d9160498f9d2a4cdcec3dbdb2232e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
       <anchor>adfb41515c43fc18425d471daf96957af</anchor>
@@ -53687,6 +53686,62 @@
       <anchor>afd910059cfc9f6cc7f92d524f1252667</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static InterfaceType *</type>
+      <name>ExtractRuntimeStatus</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>a4c05d13707c7363038e129352313da6a</anchor>
+      <arglist>(CGuiApplicationComp &amp;component)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static InterfaceType *</type>
+      <name>ExtractTrayMessages</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>ab52dc1ad44d70858e019424a719fd724</anchor>
+      <arglist>(CGuiApplicationComp &amp;component)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>imod::TModelWrap&lt; RuntimeStatus &gt;</type>
+      <name>m_runtimeStatus</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>a4972ef96064d7545df8af5d8e017fe2b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; QWidget &gt;</type>
+      <name>m_mainWidgetPtr</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>af2655baa66df1f348e8d7e934df399ea</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Qt::WindowFlags</type>
+      <name>m_defaultWidgetFlags</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>a9dea9e1c35f1df4b825aad179587ce98</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QRect</type>
+      <name>m_lastWidgetGeometry</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>a55ab8956a233e597088da07557d75c19</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>TrayMessages</type>
+      <name>m_trayMessages</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>a12569df94d32af55b2acf15a4f295c2a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::TDelPtr&lt; QSystemTrayIcon &gt;</type>
+      <name>m_trayIconPtr</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>a6329a68fa430f6116c108f04fef041ae</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>CSingleModelObserverBase</type>
       <name>BaseClass</name>
@@ -53700,6 +53755,58 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CGuiApplicationComp::RuntimeStatus</name>
+    <filename>classiqtgui_1_1_c_gui_application_comp_1_1_runtime_status.html</filename>
+    <base>ibase::IRuntimeStatusProvider</base>
+    <member kind="function">
+      <type></type>
+      <name>RuntimeStatus</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp_1_1_runtime_status.html</anchorfile>
+      <anchor>aed17e1c5cf701fb826f9d16ff947b79a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetRuntimeStatus</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp_1_1_runtime_status.html</anchorfile>
+      <anchor>a1be80a8e487453ccbdf91bbd71760695</anchor>
+      <arglist>(IRuntimeStatusProvider::RuntimeStatus runtimeStatus)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual IRuntimeStatusProvider::RuntimeStatus</type>
+      <name>GetRuntimeStatus</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp_1_1_runtime_status.html</anchorfile>
+      <anchor>a61e02827622dcfc1cb290f59d699e95f</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CGuiApplicationComp::TrayMessages</name>
+    <filename>classiqtgui_1_1_c_gui_application_comp_1_1_tray_messages.html</filename>
+    <base virtualness="virtual">ilog::IMessageConsumer</base>
+    <member kind="function">
+      <type></type>
+      <name>TrayMessages</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp_1_1_tray_messages.html</anchorfile>
+      <anchor>ae5dbc7f2b4536db882646b1fbbfa2163</anchor>
+      <arglist>(CGuiApplicationComp &amp;parent)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsMessageSupported</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp_1_1_tray_messages.html</anchorfile>
+      <anchor>a1d1e8484c77bd081279854253c4a21ed</anchor>
+      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddMessage</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp_1_1_tray_messages.html</anchorfile>
+      <anchor>a3ba767629e01f7f35cede8be76cf65cf</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
