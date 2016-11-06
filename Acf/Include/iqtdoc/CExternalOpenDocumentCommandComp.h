@@ -53,6 +53,9 @@ protected:
 	// reimplemented (ifilegui::CExternalOpenDocumentCommandCompBase)
 	virtual const istd::IChangeable* GetDocumentPtr() const;
 
+	// reimplemented (iqtgui::CStartProcessCommandComp)
+	virtual void CreateMenu();
+
 	// reimplemented (imod::CSingleModelObserverBase)
 	virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet);
 
@@ -64,6 +67,8 @@ private:
 	I_REF(idoc::IDocumentManager, m_documentManagerCompPtr);
 	I_REF(imod::IModel, m_documentManagerModelCompPtr);
 	I_ATTR(QByteArray, m_documentTypeIdAttrPtr);
+
+	iqtgui::CHierarchicalCommand m_fileCommand;
 };
 
 

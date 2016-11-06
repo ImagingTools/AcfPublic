@@ -33303,6 +33303,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CreateMenu</name>
+      <anchorfile>classiqtgui_1_1_c_process_start_command_comp.html</anchorfile>
+      <anchor>ac1e30188e062c8e4e39a3258bbefd65f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QStringList</type>
       <name>GetProcessArguments</name>
       <anchorfile>classiqtgui_1_1_c_process_start_command_comp.html</anchorfile>
@@ -33328,13 +33335,6 @@
       <name>m_rootCommands</name>
       <anchorfile>classiqtgui_1_1_c_process_start_command_comp.html</anchorfile>
       <anchor>a6ac2b05ad787d7fe3fa427e7e5cc5624</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>iqtgui::CHierarchicalCommand</type>
-      <name>m_fileCommands</name>
-      <anchorfile>classiqtgui_1_1_c_process_start_command_comp.html</anchorfile>
-      <anchor>ad165e2f82380ca5753ed8ccea372d186</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -51089,6 +51089,13 @@
       <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
       <anchor>a2444bfd993857d2324aaea85324f3e95</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CreateMenu</name>
+      <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
+      <anchor>a5a32ef7d9314896002cabd391790d7d2</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>

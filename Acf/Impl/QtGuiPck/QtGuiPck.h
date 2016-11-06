@@ -55,9 +55,7 @@
 #include <iqtgui/CCalendarGuiComp.h>
 #include <iqtgui/CCommandsMultiplexerComp.h>
 #include <iqtgui/CProcessStartCommandComp.h>
-#include <iqtdoc/CExtendedDocumentTemplateComp.h>
-#include <iqtdoc/CStaticHelpFileProviderComp.h>
-#include <iqtdoc/CDoxygenHelpFileProviderComp.h>
+
 
 // ParamGuiPck
 #include <iqtprm/CFileNameParamGuiComp.h>
@@ -89,6 +87,9 @@
 #include <iqtdoc/CSingletonDocApplicationComp.h>
 #include <iqtdoc/CDocumentImportExportCommandComp.h>
 #include <iqtdoc/CExternalOpenDocumentCommandComp.h>
+#include <iqtdoc/CExtendedDocumentTemplateComp.h>
+#include <iqtdoc/CStaticHelpFileProviderComp.h>
+#include <iqtdoc/CDoxygenHelpFileProviderComp.h>
 
 // LogGuiPck
 #include <iloggui/CLogGuiComp.h>
