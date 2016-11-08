@@ -53,6 +53,7 @@ CApplicationCompBase::CApplicationCompBase()
 {
 }
 
+
 // reimplemented (ibase::IApplication)
 
 bool CApplicationCompBase::InitializeApplication(int argc, char** argv)

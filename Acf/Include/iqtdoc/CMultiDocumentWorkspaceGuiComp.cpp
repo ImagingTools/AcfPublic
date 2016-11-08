@@ -29,8 +29,10 @@
 #include <QtCore/QEvent>
 #if QT_VERSION >= 0x050000
 #include <QtWidgets/QMessageBox>
+#include <QtWidgets/QTabBar>
 #else
 #include <QtGui/QMessageBox>
+#include <QtGui/QTabBar>
 #endif
 
 // ACF includes
@@ -100,8 +102,14 @@ void CMultiDocumentWorkspaceGuiComp::OnTryClose(bool* ignoredPtr)
 
 void CMultiDocumentWorkspaceGuiComp::UpdateAllTitles()
 {
+	QMdiArea* workspacePtr = GetQtWidget();
+	Q_ASSERT(workspacePtr != NULL);
+
 	typedef QMap<QString, int> NameFrequencies;
 	NameFrequencies nameFrequencies;
+
+	typedef QMap<QString, QString> TitleToFilePathMap;
+	TitleToFilePathMap titleToFilePathMap;
 
 	int documentsCount = GetDocumentsCount();
 	for (int i = 0; i < documentsCount; ++i){
@@ -138,6 +146,18 @@ void CMultiDocumentWorkspaceGuiComp::UpdateAllTitles()
 				Q_ASSERT(widgetPtr != NULL);
 
 				widgetPtr->setWindowTitle(titleName);
+
+				titleToFilePathMap[titleName] = info.filePath;
+			}
+		}
+	}
+
+	if (*m_showPathAsTipAttrPtr){
+		QTabBar* workspaceBarPtr = workspacePtr->findChild<QTabBar*>();
+		if (workspaceBarPtr != NULL){
+			int tabsCount = workspaceBarPtr->count();
+			for (int viewIndex = 0; viewIndex < tabsCount; viewIndex++){
+				workspaceBarPtr->setTabToolTip(viewIndex, titleToFilePathMap[workspaceBarPtr->tabText(viewIndex)]);
 			}
 		}
 	}
@@ -234,7 +254,7 @@ void CMultiDocumentWorkspaceGuiComp::SetActiveView(istd::IPolymorphic* viewPtr)
 		QMdiArea* workspacePtr = GetQtWidget();
 		Q_ASSERT(workspacePtr != NULL);
 
-		QList<QMdiSubWindow *> windows = workspacePtr->subWindowList();
+		QList<QMdiSubWindow*> windows = workspacePtr->subWindowList();
 		for (int viewIndex = 0; viewIndex < windows.count(); viewIndex++){
 			QMdiSubWindow* windowPtr = windows.at(viewIndex);
 			if (windowPtr != NULL){
@@ -464,6 +484,10 @@ void CMultiDocumentWorkspaceGuiComp::OnGuiCreated()
 
 	mdiAreaPtr->setViewMode(QMdiArea::TabbedView);
 	mdiAreaPtr->setActivationOrder(QMdiArea::ActivationHistoryOrder);
+#if QT_VERSION >= 0x040800
+	mdiAreaPtr->setTabsMovable(true);
+	mdiAreaPtr->setDocumentMode(true);
+#endif
 
 	OnViewsCountChanged();
 }
