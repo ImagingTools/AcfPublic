@@ -69,6 +69,7 @@ public:
 		I_ASSIGN(m_flatViewAttrPtr, "FlatView", "Tries to apply flat view to the design if possible (Group Box: without frame; Tab Bar: triangular tabs; Slider: transparent grip)", true, false);
 	I_END_COMPONENT;
 
+protected:
 	QWidget* GetPageContainerWidget() const;
 
 	// reimplemented (TRestorableGuiWrap)
