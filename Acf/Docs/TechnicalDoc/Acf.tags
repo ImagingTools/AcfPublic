@@ -53167,27 +53167,6 @@
       <anchor>a08b5e789e141a54f216e8d01a2c67b41</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type>QWidget *</type>
-      <name>GetPageContainerWidget</name>
-      <anchorfile>classiqtgui_1_1_c_composed_gui_comp.html</anchorfile>
-      <anchor>a4331d6241eaaf9ff0d8c31ea5a08e401</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnRestoreSettings</name>
-      <anchorfile>classiqtgui_1_1_c_composed_gui_comp.html</anchorfile>
-      <anchor>a6ec1012774b12128d78c8063c50fce37</anchor>
-      <arglist>(const QSettings &amp;settings)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnSaveSettings</name>
-      <anchorfile>classiqtgui_1_1_c_composed_gui_comp.html</anchorfile>
-      <anchor>ae817ec11da293675db10428284f76222</anchor>
-      <arglist>(QSettings &amp;settings) const </arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetPagesCount</name>
@@ -53201,20 +53180,6 @@
       <anchorfile>classiqtgui_1_1_c_composed_gui_comp.html</anchorfile>
       <anchor>af018702ec44b3699a4f9346e9cb6c0f9</anchor>
       <arglist>(int pageIndex) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetDesignType</name>
-      <anchorfile>classiqtgui_1_1_c_composed_gui_comp.html</anchorfile>
-      <anchor>a32693f67d075c8688c6a64af4196c8fc</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtgui_1_1_c_composed_gui_comp.html</anchorfile>
-      <anchor>a39e95e68c62e662ff39a9ce3311dd9cf</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -53265,12 +53230,40 @@
       <anchor>a800938c522827eef7c1bd0be448888f0</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
+    <member kind="function" protection="protected">
+      <type>QWidget *</type>
+      <name>GetPageContainerWidget</name>
+      <anchorfile>classiqtgui_1_1_c_composed_gui_comp.html</anchorfile>
+      <anchor>a4331d6241eaaf9ff0d8c31ea5a08e401</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnPageChanged</name>
-      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
-      <anchor>a37ded4d166ceb9f48f0957b7c0bc0973</anchor>
-      <arglist>(int pageIndex)</arglist>
+      <name>OnRestoreSettings</name>
+      <anchorfile>classiqtgui_1_1_c_composed_gui_comp.html</anchorfile>
+      <anchor>a6ec1012774b12128d78c8063c50fce37</anchor>
+      <arglist>(const QSettings &amp;settings)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSaveSettings</name>
+      <anchorfile>classiqtgui_1_1_c_composed_gui_comp.html</anchorfile>
+      <anchor>ae817ec11da293675db10428284f76222</anchor>
+      <arglist>(QSettings &amp;settings) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetDesignType</name>
+      <anchorfile>classiqtgui_1_1_c_composed_gui_comp.html</anchorfile>
+      <anchor>a32693f67d075c8688c6a64af4196c8fc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtgui_1_1_c_composed_gui_comp.html</anchorfile>
+      <anchor>a39e95e68c62e662ff39a9ce3311dd9cf</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -53376,6 +53369,13 @@
       <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
       <anchor>ab46f12bb2f259dcac1525b276ef12740</anchor>
       <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnPageChanged</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a37ded4d166ceb9f48f0957b7c0bc0973</anchor>
+      <arglist>(int pageIndex)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>imod::TModelWrap&lt; PageModel &gt;</type>
@@ -54568,14 +54568,14 @@
     <filename>classiqtgui_1_1_c_multi_page_gui_comp_base.html</filename>
     <base>iqtgui::CGuiComponentBase</base>
     <base protection="protected">imod::CMultiModelDispatcherBase</base>
-    <member kind="function" protection="protected" virtualness="pure">
+    <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetPagesCount</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
       <anchor>ac5f441fa586dfd7796fac053e57dbcd4</anchor>
       <arglist>() const =0</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="pure">
+    <member kind="function" virtualness="pure">
       <type>virtual iqtgui::IGuiObject *</type>
       <name>GetPageGuiComponent</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>

@@ -79,7 +79,6 @@ public:
 
 	CMultiPageGuiCompBase();
 
-protected:
 	/**
 		Get the number of the pages in the UI container.
 	*/
@@ -90,6 +89,7 @@ protected:
 	*/
 	virtual iqtgui::IGuiObject* GetPageGuiComponent(int pageIndex) const = 0;
 
+protected:
 	/**
 		Get the container UI mode.
 		\sa iqtgui::CMultiPageWidget::DesignType
