@@ -334,7 +334,7 @@ void CMultiPageGuiCompBase::PageModel::SetParent(CMultiPageGuiCompBase* parentPt
 		}
 
 		if (parentPtr != NULL){
-			int activatorsCount = qMin(parentPtr->m_pageActivatorsModelCompPtr.GetCount(), parentPtr->GetPagesCount());
+			int activatorsCount = qMin(parentPtr->m_pageNamesAttrPtr.GetCount(), parentPtr->m_pageActivatorsModelCompPtr.GetCount());
 			for (int pageIndex = 0; pageIndex < activatorsCount; ++pageIndex){
 				imod::IModel* modelPtr = parentPtr->m_pageActivatorsModelCompPtr[pageIndex];
 
