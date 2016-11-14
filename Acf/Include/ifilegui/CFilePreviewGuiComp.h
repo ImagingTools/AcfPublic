@@ -26,8 +26,10 @@
 
 // Qt includes
 #include <QtCore/QFileSystemWatcher>
+#include <QtCore/QTimer>
 #include <QtCore/QDateTime>
 #include <QtCore/QFutureWatcher>
+#include <QtCore/QTimer>
 
 // ACF includes
 #include <ifile/IFilePersistence.h>
@@ -114,6 +116,7 @@ protected:
 	QMutex m_mutex;
 
 	bool m_previewWasGenerated;
+	QTimer m_timer;
 };
 
 

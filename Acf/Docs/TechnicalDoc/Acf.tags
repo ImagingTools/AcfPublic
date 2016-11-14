@@ -33919,6 +33919,13 @@
       <anchor>a8ccb36c8eb9782be4093bddb4c61cc81</anchor>
       <arglist></arglist>
     </member>
+    <member kind="variable" protection="protected">
+      <type>QTimer</type>
+      <name>m_timer</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
+      <anchor>a732d889c8d005c6a059bd658969652a6</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>ifilegui::CFileSystemExplorerGuiComp</name>
