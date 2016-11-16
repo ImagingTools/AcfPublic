@@ -486,7 +486,7 @@
     <name>IObject2d.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_i_object2d_8h</filename>
-    <includes id="_i_serializable_8h" name="ISerializable.h" local="no" imported="no">iser/ISerializable.h</includes>
+    <includes id="_i_object_8h" name="IObject.h" local="no" imported="no">iser/IObject.h</includes>
     <includes id="_i_calibration2d_8h" name="ICalibration2d.h" local="no" imported="no">i2d/ICalibration2d.h</includes>
     <includes id="_i_calibration_provider_8h" name="ICalibrationProvider.h" local="no" imported="no">i2d/ICalibrationProvider.h</includes>
     <class kind="class">i2d::IObject2d</class>
@@ -2939,6 +2939,19 @@
     <filename>_c_console_log_comp_8h</filename>
     <includes id="_c_stream_log_comp_base_8h" name="CStreamLogCompBase.h" local="no" imported="no">ilog/CStreamLogCompBase.h</includes>
     <class kind="class">ilog::CConsoleLogComp</class>
+    <namespace>ilog</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CExtMessage.h</name>
+    <path>C:/Temp/Acf/Include/ilog/</path>
+    <filename>_c_ext_message_8h</filename>
+    <includes id="_c_change_notifier_8h" name="CChangeNotifier.h" local="no" imported="no">istd/CChangeNotifier.h</includes>
+    <includes id="_c_class_info_8h" name="CClassInfo.h" local="no" imported="no">istd/CClassInfo.h</includes>
+    <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="no" imported="no">imod/TModelWrap.h</includes>
+    <includes id="_i_object_8h" name="IObject.h" local="no" imported="no">iser/IObject.h</includes>
+    <includes id="_c_message_8h" name="CMessage.h" local="no" imported="no">ilog/CMessage.h</includes>
+    <class kind="class">ilog::CExtMessage</class>
+    <class kind="struct">ilog::CExtMessage::AttachedObject</class>
     <namespace>ilog</namespace>
   </compound>
   <compound kind="file">
@@ -8580,6 +8593,13 @@
       <anchor>a6c871718d770f05d6d67177967f621ff</anchor>
       <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classiser_1_1_i_object.html</anchorfile>
+      <anchor>abae3ddcb3be9fcd24ec21b87445e5d7e</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>istd::CRange</type>
       <name>m_radiusRange</name>
@@ -14114,7 +14134,7 @@
   <compound kind="class">
     <name>i2d::IObject2d</name>
     <filename>classi2d_1_1_i_object2d.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
+    <base virtualness="virtual">iser::IObject</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
@@ -36529,6 +36549,7 @@
     <name>ilog</name>
     <filename>namespaceilog.html</filename>
     <class kind="class">ilog::CConsoleLogComp</class>
+    <class kind="class">ilog::CExtMessage</class>
     <class kind="class">ilog::CLogComp</class>
     <class kind="class">ilog::CLogCompBase</class>
     <class kind="class">ilog::CMessage</class>
@@ -36681,6 +36702,338 @@
       <anchorfile>classilog_1_1_c_log_comp_base.html</anchorfile>
       <anchor>a0b35969938323e313be83d51ee13f483</anchor>
       <arglist>(const MessagePtr &amp;messagePtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilog::CExtMessage</name>
+    <filename>classilog_1_1_c_ext_message.html</filename>
+    <base>ilog::CMessage</base>
+    <class kind="struct">ilog::CExtMessage::AttachedObject</class>
+    <member kind="typedef">
+      <type>CMessage</type>
+      <name>BaseClass</name>
+      <anchorfile>classilog_1_1_c_ext_message.html</anchorfile>
+      <anchor>a62c1d944e0abbfe6fdaef57936abe7f1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>InformationCategory</name>
+      <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
+      <anchor>a0d3da3c1b4d2d053aa4254a31d8fa152</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>IC_NONE</name>
+      <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
+      <anchor>a0d3da3c1b4d2d053aa4254a31d8fa152ab7b6af3874b959ed3bf91ec86bb59cfc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>IC_INFO</name>
+      <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
+      <anchor>a0d3da3c1b4d2d053aa4254a31d8fa152a42a989ac6baf47a23c6595f66cb30077</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>IC_WARNING</name>
+      <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
+      <anchor>a0d3da3c1b4d2d053aa4254a31d8fa152afdf1bdfc124526192bd59bbdbad614cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>IC_ERROR</name>
+      <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
+      <anchor>a0d3da3c1b4d2d053aa4254a31d8fa152a0ffe506c6f69a959d14eb3b2260a24df</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>IC_CRITICAL</name>
+      <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
+      <anchor>a0d3da3c1b4d2d053aa4254a31d8fa152a2b01052dae4ed85abfdb08c6233aa690</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>InformationTypeFlags</name>
+      <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
+      <anchor>a812ea9923a833041caf405bee3e28e43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>ITF_DEBUG</name>
+      <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
+      <anchor>a812ea9923a833041caf405bee3e28e43aba171212fe51d615533e1d5ffc52decc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>ITF_SYSTEM</name>
+      <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
+      <anchor>a812ea9923a833041caf405bee3e28e43a74fac04adcb58490a5f79d7996e784bf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>ITF_USER</name>
+      <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
+      <anchor>a812ea9923a833041caf405bee3e28e43a4f9d82d2a799d33ff3859f2d4ca4ff2d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CExtMessage</name>
+      <anchorfile>classilog_1_1_c_ext_message.html</anchorfile>
+      <anchor>a996fa4c3125c22f1800333d7a1466943</anchor>
+      <arglist>(const iser::IObjectFactory *factoryPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CExtMessage</name>
+      <anchorfile>classilog_1_1_c_ext_message.html</anchorfile>
+      <anchor>a82b0532b362760d005ca74f26e6e1f70</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;text, const QString &amp;source, int flags=0, const QDateTime *timeStampPtr=NULL, const iser::IObjectFactory *factoryPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>const iser::IObjectFactory *</type>
+      <name>GetObjectFactory</name>
+      <anchorfile>classilog_1_1_c_ext_message.html</anchorfile>
+      <anchor>a8e3ee9425eb15cdc57631c0b130ce7fe</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetObjectFactory</name>
+      <anchorfile>classilog_1_1_c_ext_message.html</anchorfile>
+      <anchor>a7b18789facbab585d217f75778bb33a4</anchor>
+      <arglist>(const iser::IObjectFactory *factoryPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ResetAttachedObjects</name>
+      <anchorfile>classilog_1_1_c_ext_message.html</anchorfile>
+      <anchor>a0e43f434440656525e8a39954eed48be</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetAttachedObjectsCount</name>
+      <anchorfile>classilog_1_1_c_ext_message.html</anchorfile>
+      <anchor>a6c7c33312b10c356d4f61a724f98fb85</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const iser::IObject *</type>
+      <name>GetAttachedObject</name>
+      <anchorfile>classilog_1_1_c_ext_message.html</anchorfile>
+      <anchor>a6a7d529a5a17093bdf9d9f78da5d6c46</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>const QString &amp;</type>
+      <name>GetAttachedObjectDescription</name>
+      <anchorfile>classilog_1_1_c_ext_message.html</anchorfile>
+      <anchor>a879529103437171378d3bc65c89d3eee</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>InsertAttachedObject</name>
+      <anchorfile>classilog_1_1_c_ext_message.html</anchorfile>
+      <anchor>aa78417eedd485a27d6194d0e99a37da6</anchor>
+      <arglist>(const iser::IObject *objectPtr, const QString &amp;description=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classilog_1_1_c_ext_message.html</anchorfile>
+      <anchor>a32d6a6276b355f6764ee4777dea27099</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classilog_1_1_c_ext_message.html</anchorfile>
+      <anchor>afbb5740d8249ca61e26b8743afc64b3a</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classilog_1_1_c_ext_message.html</anchorfile>
+      <anchor>a184b3642ce37114183236a0847dd3077</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_STRICT)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classilog_1_1_c_ext_message.html</anchorfile>
+      <anchor>a5e7b08267beb81cbb223181ea16c845d</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMessage</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a0fff68ff01b65a0b770d827b49a47c69</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMessage</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>ab6a037921a5ad26c9c3b48b1f65c6ab2</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;text, const QString &amp;source, int flags=0, const QDateTime *timeStampPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetMessageValues</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a8316b52aad4581e2046df199d019a712</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;text, const QString &amp;source, int flags=0, const QDateTime *timeStampPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetCategory</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a169defc09e3fa0e409eb8650c43cbf19</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetText</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>aa282f7c18578a82fcac617d13fcfa220</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetSource</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>aa1eb7378e6ba58dc833dfa75d1e2ee65</anchor>
+      <arglist>(const QString &amp;source)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QDateTime</type>
+      <name>GetInformationTimeStamp</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a2babd989f89e26cfe3f53f55d014d7ad</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual InformationCategory</type>
+      <name>GetInformationCategory</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a84640ff7ea2b0e773f94903981e006b4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetInformationId</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a62f4fc6d02cd85f55dc47712bcfd3a9e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetInformationDescription</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>aff1883a317b933c35da72ddc6e936c84</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetInformationSource</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a1101a384ad237ce3072d793927b697ef</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetInformationFlags</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a09acb35d4402f4da8c81e9926b40c723</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classilog_1_1_c_ext_message.html</anchorfile>
+      <anchor>a0b46fc6f40c7001fdf7c27e32f8f95f0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QByteArray</type>
+      <name>GetMessageTypeId</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a983172fce095b5a040d6310a305f56e8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::IInformationProvider::InformationCategory</type>
+      <name>m_category</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a91657b7965ffd65faf1d19c9d7f5ec4d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_id</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>af318d820cbc8cc1cc3515f9531f8d615</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QString</type>
+      <name>m_text</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a3b654bb6daca28c31c6486744d93a481</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QString</type>
+      <name>m_source</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>ad1fd2d227516f069699c151b63b73f73</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_flags</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>a47b69cd76e08833067e7abce84167230</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QDateTime</type>
+      <name>m_timeStamp</name>
+      <anchorfile>classilog_1_1_c_message.html</anchorfile>
+      <anchor>ac64645a8d6e9cd247d50e462b013af08</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>ilog::CExtMessage::AttachedObject</name>
+    <filename>structilog_1_1_c_ext_message_1_1_attached_object.html</filename>
+    <member kind="variable">
+      <type>istd::TDelPtr&lt; const iser::IObject &gt;</type>
+      <name>objectPtr</name>
+      <anchorfile>structilog_1_1_c_ext_message_1_1_attached_object.html</anchorfile>
+      <anchor>ac5b2a96c4e60bc323b86526797802027</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>description</name>
+      <anchorfile>structilog_1_1_c_ext_message_1_1_attached_object.html</anchorfile>
+      <anchor>a7fb913417d0ffb88abec29f44ae5b9ad</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -37000,90 +37353,6 @@
     <filename>classilog_1_1_c_message.html</filename>
     <base virtualness="virtual">istd::IInformationProvider</base>
     <base virtualness="virtual">iser::IObject</base>
-    <member kind="function">
-      <type></type>
-      <name>CMessage</name>
-      <anchorfile>classilog_1_1_c_message.html</anchorfile>
-      <anchor>a0fff68ff01b65a0b770d827b49a47c69</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CMessage</name>
-      <anchorfile>classilog_1_1_c_message.html</anchorfile>
-      <anchor>ab6a037921a5ad26c9c3b48b1f65c6ab2</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;text, const QString &amp;source, int flags=0, const QDateTime *timeStampPtr=NULL)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetMessageValues</name>
-      <anchorfile>classilog_1_1_c_message.html</anchorfile>
-      <anchor>a8316b52aad4581e2046df199d019a712</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;text, const QString &amp;source, int flags=0, const QDateTime *timeStampPtr=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetCategory</name>
-      <anchorfile>classilog_1_1_c_message.html</anchorfile>
-      <anchor>a169defc09e3fa0e409eb8650c43cbf19</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetText</name>
-      <anchorfile>classilog_1_1_c_message.html</anchorfile>
-      <anchor>aa282f7c18578a82fcac617d13fcfa220</anchor>
-      <arglist>(const QString &amp;text)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetSource</name>
-      <anchorfile>classilog_1_1_c_message.html</anchorfile>
-      <anchor>aa1eb7378e6ba58dc833dfa75d1e2ee65</anchor>
-      <arglist>(const QString &amp;source)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QDateTime</type>
-      <name>GetInformationTimeStamp</name>
-      <anchorfile>classilog_1_1_c_message.html</anchorfile>
-      <anchor>a2babd989f89e26cfe3f53f55d014d7ad</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual InformationCategory</type>
-      <name>GetInformationCategory</name>
-      <anchorfile>classilog_1_1_c_message.html</anchorfile>
-      <anchor>a84640ff7ea2b0e773f94903981e006b4</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetInformationId</name>
-      <anchorfile>classilog_1_1_c_message.html</anchorfile>
-      <anchor>a62f4fc6d02cd85f55dc47712bcfd3a9e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetInformationDescription</name>
-      <anchorfile>classilog_1_1_c_message.html</anchorfile>
-      <anchor>aff1883a317b933c35da72ddc6e936c84</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetInformationSource</name>
-      <anchorfile>classilog_1_1_c_message.html</anchorfile>
-      <anchor>a1101a384ad237ce3072d793927b697ef</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetInformationFlags</name>
-      <anchorfile>classilog_1_1_c_message.html</anchorfile>
-      <anchor>a09acb35d4402f4da8c81e9926b40c723</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
       <name>GetFactoryId</name>
@@ -37111,125 +37380,6 @@
       <anchorfile>classilog_1_1_c_message.html</anchorfile>
       <anchor>a805ee7a0049df207360ad4eefa2e877c</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static QByteArray</type>
-      <name>GetMessageTypeId</name>
-      <anchorfile>classilog_1_1_c_message.html</anchorfile>
-      <anchor>a983172fce095b5a040d6310a305f56e8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>istd::IInformationProvider::InformationCategory</type>
-      <name>m_category</name>
-      <anchorfile>classilog_1_1_c_message.html</anchorfile>
-      <anchor>a91657b7965ffd65faf1d19c9d7f5ec4d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>int</type>
-      <name>m_id</name>
-      <anchorfile>classilog_1_1_c_message.html</anchorfile>
-      <anchor>af318d820cbc8cc1cc3515f9531f8d615</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QString</type>
-      <name>m_text</name>
-      <anchorfile>classilog_1_1_c_message.html</anchorfile>
-      <anchor>a3b654bb6daca28c31c6486744d93a481</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QString</type>
-      <name>m_source</name>
-      <anchorfile>classilog_1_1_c_message.html</anchorfile>
-      <anchor>ad1fd2d227516f069699c151b63b73f73</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>int</type>
-      <name>m_flags</name>
-      <anchorfile>classilog_1_1_c_message.html</anchorfile>
-      <anchor>a47b69cd76e08833067e7abce84167230</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QDateTime</type>
-      <name>m_timeStamp</name>
-      <anchorfile>classilog_1_1_c_message.html</anchorfile>
-      <anchor>ac64645a8d6e9cd247d50e462b013af08</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>InformationCategory</name>
-      <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
-      <anchor>a0d3da3c1b4d2d053aa4254a31d8fa152</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>IC_NONE</name>
-      <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
-      <anchor>a0d3da3c1b4d2d053aa4254a31d8fa152ab7b6af3874b959ed3bf91ec86bb59cfc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>IC_INFO</name>
-      <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
-      <anchor>a0d3da3c1b4d2d053aa4254a31d8fa152a42a989ac6baf47a23c6595f66cb30077</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>IC_WARNING</name>
-      <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
-      <anchor>a0d3da3c1b4d2d053aa4254a31d8fa152afdf1bdfc124526192bd59bbdbad614cb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>IC_ERROR</name>
-      <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
-      <anchor>a0d3da3c1b4d2d053aa4254a31d8fa152a0ffe506c6f69a959d14eb3b2260a24df</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>IC_CRITICAL</name>
-      <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
-      <anchor>a0d3da3c1b4d2d053aa4254a31d8fa152a2b01052dae4ed85abfdb08c6233aa690</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>InformationTypeFlags</name>
-      <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
-      <anchor>a812ea9923a833041caf405bee3e28e43</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>ITF_DEBUG</name>
-      <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
-      <anchor>a812ea9923a833041caf405bee3e28e43aba171212fe51d615533e1d5ffc52decc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>ITF_SYSTEM</name>
-      <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
-      <anchor>a812ea9923a833041caf405bee3e28e43a74fac04adcb58490a5f79d7996e784bf</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>ITF_USER</name>
-      <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
-      <anchor>a812ea9923a833041caf405bee3e28e43a4f9d82d2a799d33ff3859f2d4ca4ff2d</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -44884,13 +45034,6 @@
       <anchor>a2eb6b638293e7b23e93f84e928bbd071</anchor>
       <arglist>(const QByteArray &amp;id)=0</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QByteArray</type>
-      <name>GetFactoryId</name>
-      <anchorfile>classiser_1_1_i_object.html</anchorfile>
-      <anchor>abae3ddcb3be9fcd24ec21b87445e5d7e</anchor>
-      <arglist>() const </arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iprm::IParamsSetValidator</name>
@@ -47264,6 +47407,13 @@
       <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
       <anchor>a6cea0263a33b261c730c6755c98c0515</anchor>
       <arglist>(const IColorSchema *schemaPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetDefaultDescription</name>
+      <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
+      <anchor>a82888a194b3c38a02144355b5ede9991</anchor>
+      <arglist>(const QString &amp;description)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -71531,6 +71681,13 @@
       <arglist>(bool state=true)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
+      <type>virtual const iview::IColorSchema *</type>
+      <name>GetUserColorSchema</name>
+      <anchorfile>classiview_1_1_i_shape.html</anchorfile>
+      <anchor>a358a0165447e857a15e3cb16767c7cf5</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>SetUserColorSchema</name>
       <anchorfile>classiview_1_1_i_shape.html</anchorfile>
@@ -71538,11 +71695,11 @@
       <arglist>(const IColorSchema *schemaPtr)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const iview::IColorSchema *</type>
-      <name>GetUserColorSchema</name>
+      <type>virtual void</type>
+      <name>SetDefaultDescription</name>
       <anchorfile>classiview_1_1_i_shape.html</anchorfile>
-      <anchor>a358a0165447e857a15e3cb16767c7cf5</anchor>
-      <arglist>() const =0</arglist>
+      <anchor>a849245a70c79f89c4ecdf5398fb59ce3</anchor>
+      <arglist>(const QString &amp;description)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -74645,6 +74802,7 @@
     <path>C:/Temp/Acf/Include/ilog/</path>
     <filename>dir_fe80db594080e2e23e8aa5ef038ae8b9.html</filename>
     <file>CConsoleLogComp.h</file>
+    <file>CExtMessage.h</file>
     <file>CLogComp.h</file>
     <file>CLogCompBase.h</file>
     <file>CMessage.h</file>

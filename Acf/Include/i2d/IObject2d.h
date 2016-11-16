@@ -25,7 +25,7 @@
 
 
 // ACF includes
-#include <iser/ISerializable.h>
+#include <iser/IObject.h>
 #include <i2d/ICalibration2d.h>
 #include <i2d/ICalibrationProvider.h>
 
@@ -42,7 +42,7 @@ class CRectangle;
 	Common interface for describing the 2D-objects.
 */
 class IObject2d:
-			virtual public iser::ISerializable,
+			virtual public iser::IObject,
 			virtual public ICalibrationProvider
 {
 public:

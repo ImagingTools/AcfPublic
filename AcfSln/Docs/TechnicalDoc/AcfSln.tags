@@ -26084,9 +26084,9 @@
     </member>
     <member kind="enumvalue">
       <type>@</type>
-      <name>DR_SHAPE_INDEX</name>
+      <name>DR_SHAPE_INDICES</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>aaf567d81493ff1fd3b1e02461dd7f453a05d6708a666b15d413ee95e52937d050</anchor>
+      <anchor>aaf567d81493ff1fd3b1e02461dd7f453a178e6606d830a1094dd3a5f89b85d256</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">

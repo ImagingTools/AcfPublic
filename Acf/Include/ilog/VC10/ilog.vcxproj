@@ -115,6 +115,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\CConsoleLogComp.cpp" />
+    <ClCompile Include="..\CExtMessage.cpp" />
     <ClCompile Include="..\CLogComp.cpp" />
     <ClCompile Include="..\CLogCompBase.cpp" />
     <ClCompile Include="..\CMessage.cpp" />
@@ -125,6 +126,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CConsoleLogComp.h" />
+    <ClInclude Include="..\CExtMessage.h" />
     <ClInclude Include="..\CLogComp.h" />
     <CustomBuild Include="..\CLogCompBase.h">
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CLogCompBase.h;%(AdditionalInputs)</AdditionalInputs>

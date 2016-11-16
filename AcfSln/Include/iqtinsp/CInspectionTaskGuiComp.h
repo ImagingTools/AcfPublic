@@ -93,7 +93,7 @@ public:
 	enum DataRole
 	{
 		DR_TASK_INDEX = Qt::UserRole + 1,
-		DR_SHAPE_INDEX
+		DR_SHAPE_INDICES
 	};
 
 	I_BEGIN_COMPONENT(CInspectionTaskGuiComp);
@@ -153,10 +153,12 @@ Q_SIGNALS:
 	void DoAutoTest();
 
 private:
+	typedef QSet<int> ShapeIndices;
+
 	void AddTaskMessagesToLog(const ilog::IMessageContainer& messageContainer, int taskIndex, bool isAuxiliary);
 	void UpdateTaskMessages();
 	void DoUpdateEditor(int taskIndex);
-	void ActivateTaskShapes(int taskIndex, int shapeIndex);
+	void ActivateTaskShapes(int taskIndex, const ShapeIndices& shapeIndices);
 	void CreateMenu();
 	void UpdateMenu();
 	bool CopyTaskParametersToClipboard(iser::ISerializable* objectPtr, const char* mimeType) const;

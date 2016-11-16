@@ -97,6 +97,7 @@ public:
 	virtual void SetVisible(bool state = true);
 	virtual const IColorSchema* GetUserColorSchema() const;
 	virtual void SetUserColorSchema(const IColorSchema* schemaPtr);
+	virtual void SetDefaultDescription(const QString& description);
 
 	// reimplemented (iview::IVisualizable)
 	virtual bool IsVisible() const;
@@ -205,6 +206,8 @@ private:
 	bool m_isVisible;
 	int m_layerType;
 	ShapeTransformMode m_shapeTransformMode;
+
+	QString m_defaultDescription;
 };
 
 

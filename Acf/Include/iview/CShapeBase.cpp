@@ -163,6 +163,12 @@ void CShapeBase::SetUserColorSchema(const IColorSchema* schemaPtr)
 }
 
 
+void CShapeBase::SetDefaultDescription(const QString& description)
+{
+	m_defaultDescription = description;
+}
+
+
 // reimplemented (iview::IVisualizable)
 
 bool CShapeBase::IsVisible() const
@@ -221,7 +227,7 @@ QString CShapeBase::GetShapeDescriptionAt(istd::CIndex2d /*position*/) const
 		return infoPtr->GetInformationDescription();
 	}
 
-	return "";
+	return m_defaultDescription;
 }
 
 
