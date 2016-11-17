@@ -27,7 +27,7 @@
 #include <cstring>
 
 // Qt includes
-#include <QtCore/qmath.h>
+#include <QtCore/QtMath>
 #include <QtCore/QCoreApplication>
 
 // ACF includes

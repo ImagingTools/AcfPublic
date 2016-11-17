@@ -25,7 +25,7 @@
 
 
 // Qt includes
-#include <QtCore/qmath.h>
+#include <QtCore/QtMath>
 #include <QtCore/QtGlobal>
 #include <QtCore/QPointF>
 

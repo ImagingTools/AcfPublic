@@ -25,7 +25,7 @@
 
 
 // Qt includes
-#include <QtCore/QString.h>
+#include <QtCore/QString>
 
 // ACF includes
 #include <imod/IModel.h>
