@@ -134,6 +134,10 @@ void CFilePreviewGuiComp::OnGuiDestroyed()
 		m_timer.stop();
 	}
 
+	m_lastModificationTimeStamp = QDateTime();
+	m_lastFilePath.clear();
+	m_previewWasGenerated = false;
+
 	BaseClass::OnGuiDestroyed();
 }
 
