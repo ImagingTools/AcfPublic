@@ -266,8 +266,7 @@ void CCollapsibleGroupWidgetDelegate::SetPageIcon(QWidget& containerWidget, int 
 {
 	CCollapsiblePage* pageWidgetPtr = dynamic_cast<CCollapsiblePage*>(GetPageWidgetPtr(containerWidget, pageIndex));
 	if (pageWidgetPtr != NULL){
-		QPixmap pixmap = pageIcon.pixmap(m_iconSize * pageWidgetPtr->devicePixelRatio());
-		pageWidgetPtr->SetIcon(pixmap);
+		pageWidgetPtr->SetIcon(pageIcon);
 	}
 }
 
