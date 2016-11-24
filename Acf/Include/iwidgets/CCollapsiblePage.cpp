@@ -71,17 +71,6 @@ void CCollapsiblePage::SetIconSize(const QSize& size)
 
 	m_iconSize = size;
 
-/*#if QT_VERSION >= 0x050000
-	QScreen* primarySceenPtr = QGuiApplication::primaryScreen();
-	if (primarySceenPtr != NULL){
-		double devicePixelRatio = primarySceenPtr->devicePixelRatio();
-
-		m_iconSize *= devicePixelRatio;
-	}
-#endif*/
-
-	m_iconSize *= devicePixelRatio();
-
 	CollapsiblePageIconToolButton->setIconSize(m_iconSize);
 	CollapsiblePageIconToolButton->setIcon(m_icon);
 }
@@ -92,19 +81,6 @@ void CCollapsiblePage::SetIcon(const QIcon& icon)
 	m_icon = icon;
 
 	CollapsiblePageIconToolButton->setVisible(!m_icon.isNull());
-
-	QSize renderingIconSize = m_iconSize;
-
-/*#if QT_VERSION >= 0x050000
-	QScreen* primarySceenPtr = QGuiApplication::primaryScreen();
-	if (primarySceenPtr != NULL){
-		double devicePixelRatio = primarySceenPtr->devicePixelRatio();
-
-		renderingIconSize *= devicePixelRatio;
-	}
-#endif
-*/
-	
 
 	CollapsiblePageIconToolButton->setIcon(m_icon);
 }
