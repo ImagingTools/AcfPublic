@@ -2,9 +2,9 @@
 <Acf>
     <AcfHeader>
         <VersionInfos>
-            <Version Id="0" Number="4139" Description="ACF"/>
-            <Version Id="1" Number="1556" Description="ACF-Solutions"/>
-            <Version Id="1023" Number="328450" Description="Qt Framework"/>
+            <Version Id="0" Number="4292" Description="ACF"/>
+            <Version Id="1" Number="1651" Description="ACF-Solutions"/>
+            <Version Id="1023" Number="329217" Description="Qt Framework"/>
         </VersionInfos>
     </AcfHeader>
     <Description>XML-based persistence for automatic object serialization at begining and finalization of the application</Description>
@@ -32,6 +32,9 @@
                         <Data IsEnabled="false"/>
                     </AttributeInfo>
                     <AttributeInfo Id="StoreInterval" Type="Real" ExportId="StoreInterval">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="StoreOnBegin" Type="Boolean" ExportId="StoreOnBegin">
                         <Data IsEnabled="false"/>
                     </AttributeInfo>
                     <AttributeInfo Id="StoreOnChange" Type="Boolean" ExportId="StoreOnChange">
