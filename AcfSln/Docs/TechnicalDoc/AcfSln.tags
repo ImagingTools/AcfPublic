@@ -14187,7 +14187,6 @@
     <name>iinsp::CComposedInformationProviderComp</name>
     <filename>classiinsp_1_1_c_composed_information_provider_comp.html</filename>
     <base>icomp::CComponentBase</base>
-    <base protection="protected">imod::CMultiModelBridgeBase</base>
     <base virtualness="virtual">istd::IInformationProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -14370,7 +14369,7 @@
     <base virtualness="virtual">iinsp::IInspectionTask</base>
     <base virtualness="virtual">iinsp::ISupplier</base>
     <base virtualness="virtual">istd::IInformationProvider</base>
-    <base protection="protected">imod::CMultiModelBridgeBase</base>
+    <base protection="protected">imod::CModelUpdateBridge</base>
     <class kind="class">iinsp::CInspectionTaskComp::MessageContainer</class>
     <class kind="class">iinsp::CInspectionTaskComp::Parameters</class>
     <member kind="enumeration">
@@ -14409,10 +14408,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>imod::CMultiModelBridgeBase</type>
+      <type>imod::CModelUpdateBridge</type>
       <name>BaseClass2</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>a12198bff1d69b95db90f8783b59da116</anchor>
+      <anchor>a03a5200dc9d459ea9b6444f96df35fa3</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -14761,7 +14760,7 @@
     <name>iinsp::CInspectionTaskComp::Parameters</name>
     <filename>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</filename>
     <base virtualness="virtual">iprm::IParamsSet</base>
-    <base>imod::CMultiModelBridgeBase</base>
+    <base>imod::CModelUpdateBridge</base>
     <member kind="function">
       <type></type>
       <name>Parameters</name>
@@ -16792,19 +16791,11 @@
     <base virtualness="virtual">iimg::IBitmapProvider</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <base virtualness="virtual">iinsp::ISupplier</base>
-    <base protection="protected">imod::CMultiModelBridgeBase</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
       <anchor>a0d7d004b4c1888b54e3494cac59265e4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>imod::CMultiModelBridgeBase</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a243ec036da3d9ebb3d67aa13afa2d7b8</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">

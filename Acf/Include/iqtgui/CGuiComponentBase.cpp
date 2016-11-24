@@ -120,10 +120,10 @@ bool CGuiComponentBase::CreateGui(QWidget* parentPtr)
 
 bool CGuiComponentBase::DestroyGui()
 {
+	EnableLocalization(false);
+
 	if (m_widgetPtr != NULL){
 		OnGuiDestroyed();
-
-		EnableLocalization(false);
 
 		m_widgetPtr->deleteLater();
 
@@ -247,8 +247,7 @@ bool CGuiComponentBase::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
 		break;
 
 	case QEvent::LanguageChange:
-		OnRetranslate();
-		OnGuiRetranslate();
+		OnLanguageChanged();
 		break;
 
 	default:

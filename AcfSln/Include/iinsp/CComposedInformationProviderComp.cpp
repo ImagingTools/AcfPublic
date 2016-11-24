@@ -30,7 +30,7 @@ namespace iinsp
 // public methods
 
 CComposedInformationProviderComp::CComposedInformationProviderComp()
-:	imod::CMultiModelBridgeBase(this)
+:	m_updateBridge(this)
 {
 }
 
@@ -114,7 +114,7 @@ void CComposedInformationProviderComp::OnComponentCreated()
 	for (int index = 0; index < providerModelsCount; ++index){
 		imod::IModel* infoProviderModelPtr = m_slaveInformationProviderModelsCompPtr[index];
 		if (infoProviderModelPtr != NULL){
-			infoProviderModelPtr->AttachObserver(this);
+			infoProviderModelPtr->AttachObserver(&m_updateBridge);
 		}
 	}
 }
@@ -122,7 +122,7 @@ void CComposedInformationProviderComp::OnComponentCreated()
 
 void CComposedInformationProviderComp::OnComponentDestroyed()
 {
-	EnsureModelsDetached();
+	m_updateBridge.EnsureModelsDetached();
 
 	BaseClass::OnComponentDestroyed();
 }

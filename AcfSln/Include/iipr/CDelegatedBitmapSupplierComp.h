@@ -29,7 +29,7 @@
 
 // ACF includes
 #include <imod/IModel.h>
-#include <imod/CMultiModelBridgeBase.h>
+#include <imod/CModelUpdateBridge.h>
 #include <i2d/ICalibration2d.h>
 #include <i2d/ICalibrationProvider.h>
 #include <iinsp/TSupplierCompWrap.h>
@@ -50,12 +50,10 @@ class CDelegatedBitmapSupplierComp:
 			virtual public istd::IChangeable,
 			virtual public iimg::IBitmapProvider,
 			virtual public i2d::ICalibrationProvider,
-			virtual public iinsp::ISupplier,
-			protected imod::CMultiModelBridgeBase
+			virtual public iinsp::ISupplier
 {
 public:
 	typedef ilog::CLoggerComponentBase BaseClass;
-	typedef imod::CMultiModelBridgeBase BaseClass2;
 
 	I_BEGIN_COMPONENT(CDelegatedBitmapSupplierComp);
 		I_REGISTER_INTERFACE(iinsp::ISupplier);
@@ -104,6 +102,8 @@ private:
 	I_REF(iinsp::ISupplier, m_bitmapSupplierCompPtr);
 	I_REF(imod::IModel, m_bitmapProviderModelCompPtr);
 	I_REF(i2d::ICalibrationProvider, m_calibrationProviderCompPtr);
+
+	imod::CModelUpdateBridge m_updateBridge;
 };
 
 

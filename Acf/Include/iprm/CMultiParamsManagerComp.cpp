@@ -295,7 +295,7 @@ bool CMultiParamsManagerComp::EnsureParamExist(int index, const QByteArray& type
 
 			imod::IModel* modelPtr = dynamic_cast<imod::IModel*>(newParamsSetPtr);
 			if (modelPtr != NULL){
-				modelPtr->AttachObserver(this);
+				modelPtr->AttachObserver(&m_updateBridge);
 			}
 		}
 
@@ -350,8 +350,8 @@ bool CMultiParamsManagerComp::EnsureParamExist(int index, const QByteArray& type
 
 		imod::IModel* paramsModelPtr = dynamic_cast<imod::IModel*>(newParamsSetPtr);
 		if (paramsModelPtr != NULL){
-			paramsModelPtr->AttachObserver(paramsSetPtr.GetPtr());
-			paramsModelPtr->AttachObserver(this);
+			paramsModelPtr->AttachObserver(&paramsSetPtr->updateBridge);
+			paramsModelPtr->AttachObserver(&m_updateBridge);
 		}
 	}
 
@@ -401,7 +401,7 @@ void CMultiParamsManagerComp::OnComponentCreated()
 	for (int setIndex = 0; setIndex < fixedSetsCount; setIndex++){
 		imod::IModel* modelPtr = dynamic_cast<imod::IModel*>(m_fixedParamSetsCompPtr[setIndex]);
 		if (modelPtr != NULL){
-			modelPtr->AttachObserver(this);
+			modelPtr->AttachObserver(&m_updateBridge);
 		}
 	}
 
@@ -442,8 +442,8 @@ void CMultiParamsManagerComp::OnComponentDestroyed()
 
 	for (int setIndex = 0; setIndex < setsCount; setIndex++){
 		imod::IModel* modelPtr = dynamic_cast<imod::IModel*>(GetParamsSet(setIndex));
-		if (modelPtr != NULL && modelPtr->IsAttached(this)){
-			modelPtr->DetachObserver(this);
+		if (modelPtr != NULL && modelPtr->IsAttached(&m_updateBridge)){
+			modelPtr->DetachObserver(&m_updateBridge);
 		}
 	}
 

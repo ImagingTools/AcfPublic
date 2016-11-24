@@ -30,7 +30,7 @@
 // ACF includes
 #include <istd/TOptDelPtr.h>
 #include <istd/TPointerVector.h>
-#include <imod/CMultiModelBridgeBase.h>
+#include <imod/CModelUpdateBridge.h>
 #include <iprm/IParamsSet.h>
 
 
@@ -41,9 +41,7 @@ namespace iprm
 /**
 	Basic implementation of interface IParamsSet.
 */
-class CParamsSet:
-			virtual public IParamsSet,
-			protected imod::CMultiModelBridgeBase
+class CParamsSet: virtual public IParamsSet
 {
 public:
 	struct ParameterInfo
@@ -119,6 +117,8 @@ private:
 	QByteArray m_paramsTypeId;
 
 	const IParamsSet* m_slaveSetPtr;
+
+	imod::CModelUpdateBridge m_updateBridge;
 };
 
 

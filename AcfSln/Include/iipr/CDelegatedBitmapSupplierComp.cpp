@@ -28,7 +28,7 @@ namespace iipr
 
 
 CDelegatedBitmapSupplierComp::CDelegatedBitmapSupplierComp()
-:	BaseClass2(this)
+:	m_updateBridge(this)
 {
 }
 
@@ -143,16 +143,16 @@ void CDelegatedBitmapSupplierComp::OnComponentCreated()
 
 	if (m_bitmapProviderCompPtr.IsValid()){
 		if (m_bitmapProviderModelCompPtr.IsValid()){
-			m_bitmapProviderModelCompPtr->AttachObserver(this);
+			m_bitmapProviderModelCompPtr->AttachObserver(&m_updateBridge);
 		}
 	}
 	else{
 		if (m_bitmapModelCompPtr.IsValid()){
-			m_bitmapModelCompPtr->AttachObserver(this);
+			m_bitmapModelCompPtr->AttachObserver(&m_updateBridge);
 		}
 
 		if (m_calibrationModelCompPtr.IsValid()){
-			m_calibrationModelCompPtr->AttachObserver(this);
+			m_calibrationModelCompPtr->AttachObserver(&m_updateBridge);
 		}
 	}
 }
@@ -160,7 +160,7 @@ void CDelegatedBitmapSupplierComp::OnComponentCreated()
 
 void CDelegatedBitmapSupplierComp::OnComponentDestroyed()
 {
-	BaseClass2::EnsureModelsDetached();
+	m_updateBridge.EnsureModelsDetached();
 
 	BaseClass::OnComponentDestroyed();
 }

@@ -30,7 +30,7 @@
 // ACF includes
 #include <istd/TDelPtr.h>
 #include <imod/TModelWrap.h>
-#include <imod/CMultiModelBridgeBase.h>
+#include <imod/CModelUpdateBridge.h>
 #include <icomp/CComponentBase.h>
 #include <iprm/IParamsSet.h>
 #include <iprm/ISelectionParam.h>
@@ -87,8 +87,7 @@ protected:
 class CParamsManagerCompBase:
 			public CParamsManagerCompBaseAttr,
 			virtual public IParamsManager,
-			virtual public IOptionsManager,
-			protected imod::CMultiModelBridgeBase
+			virtual public IOptionsManager
 {
 public:
 	typedef CParamsManagerCompBaseAttr BaseClass;
@@ -163,7 +162,6 @@ protected:
 	int m_selectedIndex;
 
 	class ParamSet:
-				public imod::CMultiModelBridgeBase,
 				virtual public IParamsSet,
 				virtual public ISelectionParam,
 				virtual public INameParam
@@ -200,6 +198,8 @@ protected:
 		iprm::CNameParam description;
 		bool isEnabled;
 		CParamsManagerCompBase* parentPtr;
+
+		imod::CModelUpdateBridge updateBridge;
 	};
 	
 	class SelectedParams: virtual public IParamsSet
@@ -226,6 +226,8 @@ protected:
 	typedef QList<ParamSetPtr> ParamSets;
 
 	ParamSets m_paramSets;
+
+	imod::CModelUpdateBridge m_updateBridge;
 
 private:
 	// static template methods for subelement access

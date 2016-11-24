@@ -27,7 +27,7 @@
 #include <icomp/CComponentBase.h>
 
 #include <imod/CSingleModelObserverBase.h>
-#include <imod/CMultiModelBridgeBase.h>
+#include <imod/CModelUpdateBridge.h>
 
 #include <iprm/IOptionsList.h>
 #include <iprm/IParamsSet.h>
@@ -44,14 +44,14 @@ namespace iprm
 */
 class CSelectableParamsSetComp:
 			public icomp::CComponentBase,
-			protected imod::CMultiModelBridgeBase,
+			protected imod::CModelUpdateBridge,
 			virtual public iprm::IParamsSet,
 			virtual public iprm::ISelectionParam,
 			virtual protected iprm::IOptionsList
 {
 public:
 	typedef icomp::CComponentBase BaseClass;
-	typedef imod::CMultiModelBridgeBase BaseClass2;
+	typedef imod::CModelUpdateBridge BaseClass2;
 
 	I_BEGIN_COMPONENT(CSelectableParamsSetComp);
 		I_REGISTER_INTERFACE(iser::ISerializable);

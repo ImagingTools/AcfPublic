@@ -27,7 +27,7 @@
 // ACF includes
 #include <icomp/CComponentBase.h>
 
-#include <imod/CMultiModelBridgeBase.h>
+#include <imod/CModelUpdateBridge.h>
 
 #include <i2d/ICalibration2d.h>
 #include <i2d/ICalibrationProvider.h>
@@ -44,8 +44,7 @@ namespace i2d
 */
 class CStaticCalibrationProviderComp:
 			public icomp::CComponentBase,
-			public ICalibrationProvider,
-			protected imod::CMultiModelBridgeBase
+			public ICalibrationProvider
 {
 public:
 	typedef icomp::CComponentBase BaseClass;
@@ -70,6 +69,8 @@ protected:
 private:
 	I_REF(ICalibration2d, m_calibrationCompPtr);
 	I_REF(imod::IModel, m_calibrationModelCompPtr);
+
+	imod::CModelUpdateBridge m_updateBridge;
 };
 
 

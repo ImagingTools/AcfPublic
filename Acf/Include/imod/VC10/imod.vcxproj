@@ -116,7 +116,7 @@
   <ItemGroup>
     <ClCompile Include="..\CModelBase.cpp" />
     <ClCompile Include="..\CModelProxy.cpp" />
-    <ClCompile Include="..\CMultiModelBridgeBase.cpp" />
+    <ClCompile Include="..\CModelUpdateBridge.cpp" />
     <ClCompile Include="..\CMultiModelDispatcherBase.cpp" />
     <ClCompile Include="..\CMultiModelObserverBase.cpp" />
     <ClCompile Include="..\CSingleModelObserverBase.cpp" />
@@ -124,7 +124,7 @@
   <ItemGroup>
     <ClInclude Include="..\CModelBase.h" />
     <ClInclude Include="..\CModelProxy.h" />
-    <ClInclude Include="..\CMultiModelBridgeBase.h" />
+    <ClInclude Include="..\CModelUpdateBridge.h" />
     <ClInclude Include="..\CMultiModelDispatcherBase.h" />
     <ClInclude Include="..\CMultiModelObserverBase.h" />
     <ClInclude Include="..\CSingleModelObserverBase.h" />

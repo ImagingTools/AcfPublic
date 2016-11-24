@@ -51,7 +51,6 @@ bool DoSimpleFilterHor(
 	Q_ASSERT(kernelMaxWidth >= 1);
 
 	istd::CIndex2d imageSize = inputImage.GetImageSize();
-	istd::CIndex2d outputImageSize = outputImage.GetImageSize();
 
 	int imageWidth = imageSize.GetX();
 	int imageHeight = imageSize.GetY();
@@ -134,7 +133,6 @@ bool DoSimpleFilterVer(
 	Q_ASSERT(kernelMaxHeight >= 1);
 
 	istd::CIndex2d imageSize = inputImage.GetImageSize();
-	istd::CIndex2d outputImageSize = outputImage.GetImageSize();
 
 	int imageWidth = imageSize.GetX();
 	int imageHeight = imageSize.GetY();

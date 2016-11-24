@@ -64,12 +64,7 @@ int CMultiPageGuiCompBase::AddPageToContainerWidget(iqtgui::IGuiObject& pageGui,
 	iwidgets::CMultiPageWidget* multiPageWidgetPtr = dynamic_cast<iwidgets::CMultiPageWidget*>(GetWidget());
 	Q_ASSERT(multiPageWidgetPtr != NULL);
 
-	int retVal = multiPageWidgetPtr->InsertPage(pageContainerPtr, pageTitle);
-	if (retVal >= 0){
-		m_pageModel.SetSelectedOptionIndex(multiPageWidgetPtr->GetCurrentPage());
-	}
-
-	return retVal;
+	return multiPageWidgetPtr->InsertPage(pageContainerPtr, pageTitle);
 }
 
 
@@ -192,6 +187,7 @@ void CMultiPageGuiCompBase::CreatePages()
 void CMultiPageGuiCompBase::ResetPages()
 {
 	m_pageToGuiIndexMap.clear();
+	m_pageModel.SetSelectedOptionIndex(iprm::ISelectionParam::NO_SELECTION);
 
 	UnregisterAllModels();
 
@@ -207,8 +203,6 @@ void CMultiPageGuiCompBase::ResetPages()
 	Q_ASSERT(multiPageWidgetPtr != NULL);
 
 	multiPageWidgetPtr->ResetPages();
-
-	m_pageModel.SetSelectedOptionIndex(iprm::ISelectionParam::NO_SELECTION);
 }
 
 
@@ -320,7 +314,7 @@ void CMultiPageGuiCompBase::OnPageChanged(int pageIndex)
 // public methods of the embedded class PageModel
 
 CMultiPageGuiCompBase::PageModel::PageModel()
-:	imod::CMultiModelBridgeBase(this),
+:	imod::CModelUpdateBridge(this),
 	m_parentPtr(NULL)
 {
 }
