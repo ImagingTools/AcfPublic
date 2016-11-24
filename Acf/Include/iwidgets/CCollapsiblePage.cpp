@@ -44,7 +44,7 @@ CCollapsiblePage::CCollapsiblePage(QWidget* parentPtr)
 {
 	setupUi(this);
 
-	CollapsiblePageIconLabel->setHidden(true);
+	CollapsiblePageIconToolButton->setHidden(true);
 
 	connect(CollapseButton, SIGNAL(toggled(bool)), this, SLOT(SetPageVisible(bool)));
 }
@@ -66,12 +66,13 @@ void CCollapsiblePage::SetWidget(QWidget* pageWidgetPtr)
 
 void CCollapsiblePage::SetIconSize(const QSize& size)
 {
-	CollapsiblePageIconLabel->setMinimumSize(size);
-	CollapsiblePageIconLabel->setMaximumSize(size);
+	CollapsiblePageIconToolButton->setMinimumSize(size);
+	CollapsiblePageIconToolButton->setMaximumSize(size);
 
 	m_iconSize = size;
 
-	CollapsiblePageIconLabel->setPixmap(m_icon.pixmap(size));
+	//CollapsiblePageIconToolButton->setPixmap(m_icon.pixmap(size));
+	CollapsiblePageIconToolButton->setIcon(m_icon);
 }
 
 
@@ -79,7 +80,7 @@ void CCollapsiblePage::SetIcon(const QIcon& icon)
 {
 	m_icon = icon;
 
-	CollapsiblePageIconLabel->setVisible(!m_icon.isNull());
+	CollapsiblePageIconToolButton->setVisible(!m_icon.isNull());
 
 	QSize renderingIconSize = m_iconSize;
 
@@ -91,7 +92,8 @@ void CCollapsiblePage::SetIcon(const QIcon& icon)
 		renderingIconSize *= devicePixelRatio;
 	}
 #endif
-	CollapsiblePageIconLabel->setPixmap(m_icon.pixmap(renderingIconSize));
+	//CollapsiblePageIconToolButton->setPixmap(m_icon.pixmap(renderingIconSize));
+	CollapsiblePageIconToolButton->setIcon(m_icon);
 }
 
 
