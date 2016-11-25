@@ -25,6 +25,7 @@
 
 // ACF includes
 #include <iview/IShapeFactory.h>
+#include <iview/IColorSchema.h>
 
 
 namespace iqtinsp
