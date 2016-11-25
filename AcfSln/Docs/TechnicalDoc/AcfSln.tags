@@ -2546,6 +2546,7 @@
     <path>C:/Temp/AcfSln/Include/iqtinsp/</path>
     <filename>_c_inspection_task_gui_comp_8h</filename>
     <includes id="_i_inspection_task_8h" name="IInspectionTask.h" local="no" imported="no">iinsp/IInspectionTask.h</includes>
+    <includes id="_t_result_shape_creator_wrap_8h" name="TResultShapeCreatorWrap.h" local="no" imported="no">iqtinsp/TResultShapeCreatorWrap.h</includes>
     <class kind="class">iqtinsp::CInspectionTaskGuiCompBase</class>
     <class kind="class">iqtinsp::CInspectionTaskGuiComp</class>
     <namespace>iqtinsp</namespace>
@@ -2554,6 +2555,13 @@
     <name>iqtinsp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtinsp/</path>
     <filename>iqtinsp_8h</filename>
+    <namespace>iqtinsp</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TResultShapeCreatorWrap.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtinsp/</path>
+    <filename>_t_result_shape_creator_wrap_8h</filename>
+    <class kind="class">iqtinsp::TResultShapeCreatorWrap</class>
     <namespace>iqtinsp</namespace>
   </compound>
   <compound kind="file">
@@ -25791,6 +25799,7 @@
     <class kind="class">iqtinsp::CGeneralSupplierGuiComp</class>
     <class kind="class">iqtinsp::CInspectionTaskGuiCompBase</class>
     <class kind="class">iqtinsp::CInspectionTaskGuiComp</class>
+    <class kind="class">iqtinsp::TResultShapeCreatorWrap</class>
     <class kind="class">iqtinsp::TSupplierGuiCompBase</class>
   </compound>
   <compound kind="class">
@@ -26057,7 +26066,7 @@
   <compound kind="class">
     <name>iqtinsp::CInspectionTaskGuiComp</name>
     <filename>classiqtinsp_1_1_c_inspection_task_gui_comp.html</filename>
-    <base>iqtinsp::CInspectionTaskGuiCompBase</base>
+    <base>TResultShapeCreatorWrap&lt; CInspectionTaskGuiCompBase &gt;</base>
     <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="enumeration">
       <type></type>
@@ -26081,10 +26090,17 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>CInspectionTaskGuiCompBase</type>
+      <type>TResultShapeCreatorWrap&lt; CInspectionTaskGuiCompBase &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a84ee3833e39025fdb325e2db3a6387e1</anchor>
+      <anchor>a6197c0691f008409466eb68adbb1f4e0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CInspectionTaskGuiCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtinsp_1_1_t_result_shape_creator_wrap.html</anchorfile>
+      <anchor>a7533e8726af42954c7e0116a753f20dd</anchor>
       <arglist></arglist>
     </member>
     <member kind="signal">
@@ -26128,6 +26144,13 @@
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
       <anchor>ad9058807cc1e70f35c76cf5ae0acb41c</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iview::IShape *</type>
+      <name>CreateResultShape</name>
+      <anchorfile>classiqtinsp_1_1_t_result_shape_creator_wrap.html</anchorfile>
+      <anchor>a83f4947f3bbe9e818e62d04d8a011287</anchor>
+      <arglist>(const iview::IShapeFactory *shapeFactoryPtr, const istd::IChangeable *objectPtr, const istd::IInformationProvider *infoPtr, bool connectToModel=true) const</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -26254,6 +26277,25 @@
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
       <anchor>a42dc658c6fe4765fff7d191bf6ffb6f5</anchor>
       <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtinsp::TResultShapeCreatorWrap</name>
+    <filename>classiqtinsp_1_1_t_result_shape_creator_wrap.html</filename>
+    <templarg>Base</templarg>
+    <member kind="typedef">
+      <type>Base</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtinsp_1_1_t_result_shape_creator_wrap.html</anchorfile>
+      <anchor>a7533e8726af42954c7e0116a753f20dd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iview::IShape *</type>
+      <name>CreateResultShape</name>
+      <anchorfile>classiqtinsp_1_1_t_result_shape_creator_wrap.html</anchorfile>
+      <anchor>a83f4947f3bbe9e818e62d04d8a011287</anchor>
+      <arglist>(const iview::IShapeFactory *shapeFactoryPtr, const istd::IChangeable *objectPtr, const istd::IInformationProvider *infoPtr, bool connectToModel=true) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -30740,6 +30782,7 @@
     <file>CGeneralSupplierGuiComp.h</file>
     <file>CInspectionTaskGuiComp.h</file>
     <file>iqtinsp.h</file>
+    <file>TResultShapeCreatorWrap.h</file>
     <file>TSupplierGuiCompBase.h</file>
   </compound>
   <compound kind="dir">

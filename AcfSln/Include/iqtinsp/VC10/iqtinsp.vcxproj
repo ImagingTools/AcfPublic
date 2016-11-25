@@ -138,6 +138,7 @@
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CInspectionTaskGuiComp.h</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqtinsp\moc_CInspectionTaskGuiComp.cpp;%(Outputs)</Outputs>
     </CustomBuild>
+    <ClInclude Include="..\TResultShapeCreatorWrap.h" />
     <ClInclude Include="..\TSupplierGuiCompBase.h" />
     <ClInclude Include="..\iqtinsp.h" />
   </ItemGroup>
