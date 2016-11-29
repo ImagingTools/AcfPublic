@@ -57,6 +57,9 @@ namespace iqtcam
 {
 
 
+/**
+	\deprecated This class is deprecated, use \c iqtcam::CSnapImageParamsEditorComp instead.
+*/
 class CSnapImageGuiComp: public iqt2d::TViewExtenderCompBase<iqtgui::TDesignerGuiCompBase<Ui::CSnapImageGuiComp, QWidget> >
 {
 	Q_OBJECT

@@ -123,6 +123,7 @@
     <ClCompile Include="..\CMultiBitmapSupplierGuiComp.cpp" />
     <ClCompile Include="..\CScaleCalibrationEditorComp.cpp" />
     <ClCompile Include="..\CSnapImageGuiComp.cpp" />
+    <ClCompile Include="..\CSnapImageParamsEditorComp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\CBitmapSupplierGuiComp.h">
@@ -186,6 +187,16 @@
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CSnapImageGuiComp.h</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtcam\moc_CSnapImageGuiComp.cpp;%(Outputs)</Outputs>
     </CustomBuild>
+    <CustomBuild Include="..\CSnapImageParamsEditorComp.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CSnapImageParamsEditorComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I../../../Include/iqtcam/QMake -I../../../AuxInclude/Qt5_VC12 -I..\..\..\..\Acf/Include -I..\..\..\..\Acf/AuxInclude/Qt5_VC12 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CSnapImageParamsEditorComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtcam\moc_CSnapImageParamsEditorComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CSnapImageParamsEditorComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtcam\moc_CSnapImageParamsEditorComp.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CSnapImageParamsEditorComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I../../../Include/iqtcam/QMake -I../../../AuxInclude/Qt5_VC12 -I..\..\..\..\Acf/Include -I..\..\..\..\Acf/AuxInclude/Qt5_VC12 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CSnapImageParamsEditorComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtcam\moc_CSnapImageParamsEditorComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CSnapImageParamsEditorComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtcam\moc_CSnapImageParamsEditorComp.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
     <ClInclude Include="..\iqtcam.h" />
   </ItemGroup>
   <ItemGroup>
@@ -195,12 +206,14 @@
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtcam\moc_CMultiBitmapSupplierGuiComp.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtcam\moc_CScaleCalibrationEditorComp.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtcam\moc_CSnapImageGuiComp.cpp" />
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtcam\moc_CSnapImageParamsEditorComp.cpp" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtcam\ui_CBitmapSupplierGuiComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtcam\ui_CCameraInfoGuiComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtcam\ui_CExposureParamsGuiComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtcam\ui_CMultiBitmapSupplierGuiComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtcam\ui_CScaleCalibrationEditorComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtcam\ui_CSnapImageGuiComp.h" />
+    <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtcam\ui_CSnapImageParamsEditorComp.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\CBitmapSupplierGuiComp.ui">
@@ -268,6 +281,17 @@
       <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\uic.exe ..\CSnapImageGuiComp.ui -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtcam\ui_CSnapImageGuiComp.h</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ..\CSnapImageGuiComp.ui</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtcam\ui_CSnapImageGuiComp.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\CSnapImageParamsEditorComp.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CSnapImageParamsEditorComp.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\uic.exe ..\CSnapImageParamsEditorComp.ui -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtcam\ui_CSnapImageParamsEditorComp.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">UIC ..\CSnapImageParamsEditorComp.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtcam\ui_CSnapImageParamsEditorComp.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CSnapImageParamsEditorComp.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\uic.exe ..\CSnapImageParamsEditorComp.ui -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtcam\ui_CSnapImageParamsEditorComp.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ..\CSnapImageParamsEditorComp.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtcam\ui_CSnapImageParamsEditorComp.h;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
