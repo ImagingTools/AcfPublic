@@ -64,7 +64,7 @@ int CCircleFindProcessorComp::DoExtractFeatures(
 
 	iprm::TParamsPtr<istd::IChangeable> aoiObjectPtr(paramsPtr, *m_aoiParamIdAttrPtr);
 	if (!aoiObjectPtr.IsValid()){
-		SendErrorMessage(0, "Search region for the circle was not defined");
+		SendErrorMessage(0, QObject::tr("Search region for the circle was not defined"));
 
 		return TS_INVALID;
 	}
@@ -76,14 +76,14 @@ int CCircleFindProcessorComp::DoExtractFeatures(
 	}
 
 	if (aoiPtr == NULL){
-		SendErrorMessage(0, "Search region for the circle was not defined");
+		SendErrorMessage(0, QObject::tr("Search region for the circle was not defined"));
 
 		return TS_INVALID;
 	}
 
 	iprm::TParamsPtr<iipr::ICircleFinderParams> circleFinderParamsPtr(paramsPtr, *m_circleFinderParamsIdAttrPtr);
 	if (!circleFinderParamsPtr.IsValid()){
-		SendErrorMessage(0, "Circle finder parameters were not set");
+		SendErrorMessage(0, QObject::tr("Circle finder parameters were not set"));
 
 		return TS_INVALID;
 	}
@@ -112,7 +112,7 @@ int CCircleFindProcessorComp::DoExtractFeatures(
 			return TS_OK;
 		}
 		else{
-			SendErrorMessage(0, "Not enought points found");
+			SendErrorMessage(0, QObject::tr("Not enought points found"));
 		}
 	}
 	else{
@@ -134,7 +134,7 @@ int CCircleFindProcessorComp::DoExtractFeatures(
 			return TS_OK;
 		}
 		else{
-			SendErrorMessage(0, "Not enought points found");
+			SendErrorMessage(0, QObject::tr("Not enought points found"));
 		}
 	}
 
@@ -536,6 +536,30 @@ void CCircleFindProcessorComp::AddIntermediateResults(Rays& outRays)
 		return;
 	}
 
+	istd::TDelPtr<ilog::CExtMessage> usedPointMessagePtr;
+	istd::TDelPtr<ilog::CExtMessage> unusedPointMessagePtr;
+	if (*m_sendUsedPointsToTempAttrPtr){
+		usedPointMessagePtr.SetPtr(new ilog::CExtMessage(
+					istd::IInformationProvider::IC_INFO,
+					iinsp::CSupplierCompBase::MI_INTERMEDIATE,
+					QObject::tr("Used found points"),
+					"CircleFinder"));
+		unusedPointMessagePtr.SetPtr(new ilog::CExtMessage(
+					istd::IInformationProvider::IC_INFO,
+					iinsp::CSupplierCompBase::MI_INTERMEDIATE,
+					QObject::tr("Unused found points"),
+					"CircleFinder"));
+	}
+
+	istd::TDelPtr<ilog::CExtMessage> projectionLinesMessagePtr;
+	if (*m_sendLinesToTempAttrPtr){
+		projectionLinesMessagePtr.SetPtr(new ilog::CExtMessage(
+					istd::IInformationProvider::IC_INFO,
+					iinsp::CSupplierCompBase::MI_INTERMEDIATE,
+					QObject::tr("Projection lines"),
+					"CircleFinder"));
+	}
+
 	for (uint rayIndex = 0; rayIndex < outRays.size(); rayIndex++){
 		const Ray& ray = outRays.at(rayIndex);
 
@@ -546,37 +570,36 @@ void CCircleFindProcessorComp::AddIntermediateResults(Rays& outRays)
 
 				const i2d::CVector2d& position = rayPoint.position;
 
-				ilog::CExtMessage* pointMessagePtr = new ilog::CExtMessage(
-							(pointIndex != ray.usedIndex)?
-										istd::IInformationProvider::IC_INFO:
-										istd::IInformationProvider::IC_WARNING,
-							iinsp::CSupplierCompBase::MI_INTERMEDIATE,
-							(pointIndex != ray.usedIndex)?
-										QString("Point %1 at (%2, %3)").arg(rayIndex).arg(position.GetX()).arg(position.GetY()):
-										QString("Unused point %1 at (%2, %3)").arg(rayIndex).arg(position.GetX()).arg(position.GetY()),
-							"CircleFinder");
 				i2d::CPosition2d* pointMessageObjectPtr = new imod::TModelWrap<i2d::CPosition2d>();
 				pointMessageObjectPtr->SetPosition(position);
 				pointMessageObjectPtr->SetCalibration(m_resultCalibrationCompPtr.GetPtr());
-				pointMessagePtr->InsertAttachedObject(pointMessageObjectPtr);
-
-				m_tempConsumerCompPtr->AddMessage(ilog::IMessageConsumer::MessagePtr(pointMessagePtr));
+				if (pointIndex == ray.usedIndex){
+					usedPointMessagePtr->InsertAttachedObject(pointMessageObjectPtr, QObject::tr("Point %1 at (%2, %3)").arg(rayIndex).arg(position.GetX()).arg(position.GetY()));
+				}
+				else{
+					unusedPointMessagePtr->InsertAttachedObject(pointMessageObjectPtr, QObject::tr("Unused point %1 at (%2, %3)").arg(rayIndex).arg(position.GetX()).arg(position.GetY()));
+				}
 			}
 		}
 
-		if (*m_sendLinesToTempAttrPtr){
-			ilog::CExtMessage* pointMessagePtr = new ilog::CExtMessage(
-						istd::IInformationProvider::IC_INFO,
-						iinsp::CSupplierCompBase::MI_INTERMEDIATE,
-						QString("Line %1").arg(rayIndex),
-						"CircleFinder");
-			i2d::CLine2d* pointMessageObjectPtr = new imod::TModelWrap<i2d::CLine2d>();
-			pointMessageObjectPtr->SetPoint1(ray.projectionLine.GetPoint1());
-			pointMessageObjectPtr->SetPoint2(ray.projectionLine.GetPoint2());
-			pointMessagePtr->InsertAttachedObject(pointMessageObjectPtr);
-
-			m_tempConsumerCompPtr->AddMessage(ilog::IMessageConsumer::MessagePtr(pointMessagePtr));
+		if (m_tempConsumerCompPtr.IsValid()){
+			i2d::CLine2d* lineMessageObjectPtr = new imod::TModelWrap<i2d::CLine2d>();
+			lineMessageObjectPtr->SetPoint1(ray.projectionLine.GetPoint1());
+			lineMessageObjectPtr->SetPoint2(ray.projectionLine.GetPoint2());
+			projectionLinesMessagePtr->InsertAttachedObject(lineMessageObjectPtr, QString("Line %1").arg(rayIndex));
 		}
+	}
+
+	if (usedPointMessagePtr.IsValid() && usedPointMessagePtr->GetAttachedObjectsCount() > 0){
+		m_tempConsumerCompPtr->AddMessage(ilog::IMessageConsumer::MessagePtr(usedPointMessagePtr.PopPtr()));
+	}
+
+	if (unusedPointMessagePtr.IsValid() && unusedPointMessagePtr->GetAttachedObjectsCount() > 0){
+		m_tempConsumerCompPtr->AddMessage(ilog::IMessageConsumer::MessagePtr(unusedPointMessagePtr.PopPtr()));
+	}
+
+	if (projectionLinesMessagePtr.IsValid() && projectionLinesMessagePtr->GetAttachedObjectsCount() > 0){
+		m_tempConsumerCompPtr->AddMessage(ilog::IMessageConsumer::MessagePtr(projectionLinesMessagePtr.PopPtr()));
 	}
 }
 
