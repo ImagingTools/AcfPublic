@@ -30,7 +30,7 @@
 #include <QtCore/QTranslator>
 
 // ACF includes
-#include <istd/TPointerVector.h>
+#include <istd/TSmartPtr.h>
 #include <icomp/CComponentBase.h>
 #include <imod/TSingleModelObserverBase.h>
 #include <iprm/ISelectionParam.h>
@@ -120,7 +120,14 @@ private:
 	I_REF(iprm::ISelectionParam, m_languageSelectionCompPtr);
 	I_REF(imod::IModel, m_languageSelectionModelCompPtr);
 
-	typedef istd::TPointerVector<QTranslator> TranslatorsList;
+	struct Translator
+	{
+		istd::TSmartPtr<QTranslator> translatorPtr;
+		QString languageName;
+		QByteArray languageId;
+	};
+
+	typedef QVector<Translator> TranslatorsList;
 
 	TranslatorsList m_translatorsList;
 
