@@ -1027,6 +1027,15 @@
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
+    <name>TMakeModelObserverCompWrap.h</name>
+    <path>C:/Temp/Acf/Include/ibase/</path>
+    <filename>_t_make_model_observer_comp_wrap_8h</filename>
+    <includes id="_t_make_component_wrap_8h" name="TMakeComponentWrap.h" local="no" imported="no">icomp/TMakeComponentWrap.h</includes>
+    <includes id="_t_model_observer_comp_wrap_8h" name="TModelObserverCompWrap.h" local="no" imported="no">ibase/TModelObserverCompWrap.h</includes>
+    <class kind="class">ibase::TMakeModelObserverCompWrap</class>
+    <namespace>ibase</namespace>
+  </compound>
+  <compound kind="file">
     <name>TModelObserverCompWrap.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_t_model_observer_comp_wrap_8h</filename>
@@ -6997,6 +7006,7 @@
     <title>Data model</title>
     <filename>group___data_model.html</filename>
     <class kind="class">ibase::CObjectSynchronizerComp</class>
+    <class kind="class">ibase::TMakeModelObserverCompWrap</class>
     <class kind="class">ibase::TModelObserverCompWrap</class>
     <class kind="class">istd::CChangeDelegator</class>
     <class kind="class">istd::CChangeGroup</class>
@@ -16503,6 +16513,7 @@
     <class kind="class">ibase::TContainer</class>
     <class kind="class">ibase::TFactorisableContainer</class>
     <class kind="class">ibase::TLocalizableWrap</class>
+    <class kind="class">ibase::TMakeModelObserverCompWrap</class>
     <class kind="class">ibase::TModelObserverCompWrap</class>
     <class kind="class">ibase::TMsbWord</class>
     <class kind="class">ibase::TSerializableContainer</class>
@@ -19267,6 +19278,64 @@
       <anchorfile>classibase_1_1_t_localizable_wrap.html</anchorfile>
       <anchor>a5801c0ac4dbc222d969fb2745774f7b7</anchor>
       <arglist>()=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ibase::TMakeModelObserverCompWrap</name>
+    <filename>classibase_1_1_t_make_model_observer_comp_wrap.html</filename>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <base>TModelObserverCompWrap&lt; icomp::TMakeComponentWrap&lt; Base, Interface1, Interface2, Interface3, Interface4, Interface5, Interface6, Interface7, Interface8, Interface9, Interface10 &gt; &gt;</base>
+    <member kind="typedef">
+      <type>ibase::TModelObserverCompWrap&lt; icomp::TMakeComponentWrap&lt; Base, Interface1, Interface2, Interface3, Interface4, Interface5, Interface6, Interface7, Interface8, Interface9, Interface10 &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classibase_1_1_t_make_model_observer_comp_wrap.html</anchorfile>
+      <anchor>a208517fe697ffc0cb4d694e4e91a8064</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>icomp::TMakeComponentWrap&lt; Base, Interface1, Interface2, Interface3, Interface4, Interface5, Interface6, Interface7, Interface8, Interface9, Interface10 &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
+      <anchor>afa3fcab514bf33fbdb6ec2f83eb8f075</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classicomp_1_1_t_make_component_wrap.html</anchorfile>
+      <anchor>aba7be2536a66b574fd830d24dc5dadc5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Base</type>
+      <name>BaseClass2</name>
+      <anchorfile>classicomp_1_1_t_make_component_wrap.html</anchorfile>
+      <anchor>a0b35c16d25c9e2e9ce82fc0f6865d878</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
+      <anchor>ac046dfe3995e995397f20a1ebf031436</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
+      <anchor>aacf9336769a621402f913fad75bb5cf5</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -26132,20 +26201,6 @@
     <templarg></templarg>
     <templarg></templarg>
     <base>icomp::CComponentBase</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classicomp_1_1_t_make_component_wrap.html</anchorfile>
-      <anchor>aba7be2536a66b574fd830d24dc5dadc5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Base</type>
-      <name>BaseClass2</name>
-      <anchorfile>classicomp_1_1_t_make_component_wrap.html</anchorfile>
-      <anchor>a0b35c16d25c9e2e9ce82fc0f6865d878</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>icomp::TModelCompWrap</name>
@@ -74625,6 +74680,7 @@
     <file>TContainer.h</file>
     <file>TFactorisableContainer.h</file>
     <file>TLocalizableWrap.h</file>
+    <file>TMakeModelObserverCompWrap.h</file>
     <file>TModelObserverCompWrap.h</file>
     <file>TMsbWord.h</file>
     <file>TSerializableContainer.h</file>
