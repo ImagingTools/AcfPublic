@@ -61000,6 +61000,13 @@
       <arglist></arglist>
     </member>
     <member kind="function" static="yes">
+      <type>static QString</type>
+      <name>GetOperationSystemName</name>
+      <anchorfile>classistd_1_1_c_system.html</anchorfile>
+      <anchor>abb8c8ccef40d11f1c4f0d46d97c83a20</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
       <type>static bool</type>
       <name>ConvertToFileName</name>
       <anchorfile>classistd_1_1_c_system.html</anchorfile>
