@@ -35,6 +35,7 @@
 
 // ACF includes
 #include <istd/CChangeNotifier.h>
+#include <istd/CSystem.h>
 
 
 namespace iqtgui
@@ -60,6 +61,9 @@ bool CGuiComponentBase::CreateGui(QWidget* parentPtr)
 {
 	if (m_widgetPtr == NULL){
 		m_widgetPtr = CreateQtWidget(parentPtr);
+
+		QString operationSystemName = istd::CSystem::GetOperationSystemName();
+		m_widgetPtr->setProperty("OperatingSystem", operationSystemName);
 
 		QByteArray componentId;
 		QByteArray widgetId;

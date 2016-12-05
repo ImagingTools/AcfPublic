@@ -52894,6 +52894,13 @@
       <anchor>a44957c1cf1d3b71e1606b3d3e23539df</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>ApplyStyleSheet</name>
+      <anchorfile>classiqtgui_1_1_c_application_comp_base.html</anchorfile>
+      <anchor>a763cf0805c7681fd0c016f4253234d8f</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
