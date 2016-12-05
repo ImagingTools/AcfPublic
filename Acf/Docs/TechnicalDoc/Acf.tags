@@ -44569,22 +44569,12 @@
     <name>iprm::CSelectableParamsSetComp</name>
     <filename>classiprm_1_1_c_selectable_params_set_comp.html</filename>
     <base>icomp::CComponentBase</base>
-    <base protection="protected">imod::CModelUpdateBridge</base>
     <base virtualness="virtual">iprm::IParamsSet</base>
-    <base virtualness="virtual">iprm::ISelectionParam</base>
-    <base protection="protected" virtualness="virtual">iprm::IOptionsList</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
       <anchor>ae14fd809d7d54d725a5fc82bfe9789ee</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>imod::CModelUpdateBridge</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>a717e4c2d3ea1fde32d1220f7f4b8fcca</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -44593,13 +44583,6 @@
       <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
       <anchor>a87cac9890335a0a4d45b7c553f95dbec</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QByteArray</type>
-      <name>GetFactoryId</name>
-      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>a9826630bd40e9c054c95a1c648cd8749</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
@@ -44623,95 +44606,11 @@
       <arglist>(const QByteArray &amp;id)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const IOptionsList *</type>
-      <name>GetSelectionConstraints</name>
-      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>af4c531af2f8f6fab7ff06ba15e0164bb</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSelectedOptionIndex</name>
-      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>a749b6beac464544bd61aec916b1ce731</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetSelectedOptionIndex</name>
-      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>a29f358621cd59a848f5b603f18ba7334</anchor>
-      <arglist>(int index)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ISelectionParam *</type>
-      <name>GetSubselection</name>
-      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>aa537c7c79285e3f418d7f6bdf2ae04f4</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AfterUpdate</name>
-      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>a5c4cd93bf800d1873e2d93823b382b7a</anchor>
-      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
       <anchor>a368e08ba23a7cfb1631a01a59bad2894</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>SetupCurrentParamsSetBridge</name>
-      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>a2d14573411e2c2f13683aeb0ab6b0313</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetOptionsFlags</name>
-      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>a6bd9ac1ea2c805f02a65cc72d23ad4e2</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetOptionsCount</name>
-      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>afb132afb680e660db4e12567c955f43c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetOptionName</name>
-      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>ab2a4536ea0eaf0d78b6f401c43896bcb</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetOptionDescription</name>
-      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>ac237183a634a2997b744f6b221d3ac50</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QByteArray</type>
-      <name>GetOptionId</name>
-      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>abae0be7119a71db9c22a391aa35c8b98</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsOptionEnabled</name>
-      <anchorfile>classiprm_1_1_c_selectable_params_set_comp.html</anchorfile>
-      <anchor>a8901032aacd4c37426afe69368071a24</anchor>
-      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
