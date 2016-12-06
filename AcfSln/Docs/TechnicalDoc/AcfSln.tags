@@ -1237,7 +1237,7 @@
     <name>CConvolutionProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_convolution_processor_comp_8h</filename>
-    <includes id="_t_image_param_processor_comp_base_8h" name="TImageParamProcessorCompBase.h" local="no" imported="no">iipr/TImageParamProcessorCompBase.h</includes>
+    <includes id="_c_image_processor_comp_base_8h" name="CImageProcessorCompBase.h" local="no" imported="no">iipr/CImageProcessorCompBase.h</includes>
     <includes id="_i_convolution_kernel2d_8h" name="IConvolutionKernel2d.h" local="no" imported="no">iipr/IConvolutionKernel2d.h</includes>
     <class kind="class">iipr::CConvolutionProcessorComp</class>
     <namespace>iipr</namespace>
@@ -1615,8 +1615,8 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_rect_image_smooth_processor_comp_8h</filename>
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="no" imported="no">imeas/INumericValue.h</includes>
-    <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="no" imported="no">imeas/INumericConstraints.h</includes>
-    <includes id="_t_image_param_processor_comp_base_8h" name="TImageParamProcessorCompBase.h" local="no" imported="no">iipr/TImageParamProcessorCompBase.h</includes>
+    <includes id="_c_general_numeric_constraints_8h" name="CGeneralNumericConstraints.h" local="no" imported="no">imeas/CGeneralNumericConstraints.h</includes>
+    <includes id="_c_image_processor_comp_base_8h" name="CImageProcessorCompBase.h" local="no" imported="no">iipr/CImageProcessorCompBase.h</includes>
     <class kind="class">iipr::CRectImageSmoothProcessorComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -1873,14 +1873,6 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_search_params_8h</filename>
     <class kind="class">iipr::ISearchParams</class>
-    <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TImageParamProcessorCompBase.h</name>
-    <path>C:/Temp/AcfSln/Include/iipr/</path>
-    <filename>_t_image_param_processor_comp_base_8h</filename>
-    <includes id="_c_image_processor_comp_base_8h" name="CImageProcessorCompBase.h" local="no" imported="no">iipr/CImageProcessorCompBase.h</includes>
-    <class kind="class">iipr::TImageParamProcessorCompBase</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -15110,7 +15102,6 @@
     <class kind="class">iipr::IRingPatternGeneratorParams</class>
     <class kind="class">iipr::ISearchConstraints</class>
     <class kind="class">iipr::ISearchParams</class>
-    <class kind="class">iipr::TImageParamProcessorCompBase</class>
     <class kind="class">iipr::TImagePixelInterpolator</class>
     <class kind="class">iipr::TProcessedBitmapSupplierComp</class>
     <class kind="class">iipr::InvertFunction</class>
@@ -16673,19 +16664,12 @@
   <compound kind="class">
     <name>iipr::CConvolutionProcessorComp</name>
     <filename>classiipr_1_1_c_convolution_processor_comp.html</filename>
-    <base>TImageParamProcessorCompBase&lt; IConvolutionKernel2d &gt;</base>
+    <base>iipr::CImageProcessorCompBase</base>
     <member kind="typedef">
-      <type>iipr::TImageParamProcessorCompBase&lt; IConvolutionKernel2d &gt;</type>
+      <type>iipr::CImageProcessorCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_convolution_processor_comp.html</anchorfile>
-      <anchor>ab48905a537869b8ef04de439029ab8e6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>CImageProcessorCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_t_image_param_processor_comp_base.html</anchorfile>
-      <anchor>a38b457b2c6b6ceed4de13dea3d592617</anchor>
+      <anchor>a77f6d76d039ef56ba969f0c1a137d651</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -16760,16 +16744,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
-      <name>ParamProcessImage</name>
-      <anchorfile>classiipr_1_1_c_convolution_processor_comp.html</anchorfile>
-      <anchor>ae5bf3de63eeb2b8c4d9d41e90ff00506</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const IConvolutionKernel2d *procParamPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
       <name>ProcessImage</name>
-      <anchorfile>classiipr_1_1_t_image_param_processor_comp_base.html</anchorfile>
-      <anchor>a4cc06678e44cdfcc49f2e343b695182f</anchor>
+      <anchorfile>classiipr_1_1_c_convolution_processor_comp.html</anchorfile>
+      <anchor>aaad9412b2bb29a1823a059aa2f9e9746</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -20116,9 +20093,7 @@
   <compound kind="class">
     <name>iipr::CRectImageSmoothProcessorComp</name>
     <filename>classiipr_1_1_c_rect_image_smooth_processor_comp.html</filename>
-    <base>TImageParamProcessorCompBase&lt; imeas::INumericValue &gt;</base>
-    <base virtualness="virtual">imeas::INumericConstraints</base>
-    <base protection="protected" virtualness="virtual">imath::IUnitInfo</base>
+    <base>iipr::CImageProcessorCompBase</base>
     <member kind="enumeration">
       <type></type>
       <name>UnitMode</name>
@@ -20169,46 +20144,11 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>iipr::TImageParamProcessorCompBase&lt; imeas::INumericValue &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>a877ade4a9f8feea3f78345e322f0ae74</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
       <type>CImageProcessorCompBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_t_image_param_processor_comp_base.html</anchorfile>
-      <anchor>a38b457b2c6b6ceed4de13dea3d592617</anchor>
+      <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
+      <anchor>a7f28323869308a0bd192b26f8bd4d548</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetNumericValuesCount</name>
-      <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>aa5078c209ea812abb27b263737ce919f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueName</name>
-      <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>ace3dfd70dbb6334b9c451f1a815ac4d8</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueDescription</name>
-      <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>af392d7780d8d68a5296669e79892fea3</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const imath::IUnitInfo *</type>
-      <name>GetNumericValueUnitInfo</name>
-      <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>a9e11b813d91445b5e8fde4e12e34d7d0</anchor>
-      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
@@ -20233,52 +20173,17 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
-      <name>ParamProcessImage</name>
-      <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>a74271d760f419e432dfc6dbf05b7f763</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const imeas::INumericValue *procParamPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetUnitType</name>
-      <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>ad29e44d4dea5acd9b900e8d8e8c5cbba</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetUnitName</name>
-      <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>ad802414194a0d3513d4765ce1f366646</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetDisplayMultiplicationFactor</name>
-      <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>abb296d8ab35fa5e44e1612e701238b62</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual istd::CRange</type>
-      <name>GetValueRange</name>
-      <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>ad863e90199ab1a3ed1284b0d72ee138c</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual const imath::IDoubleManip &amp;</type>
-      <name>GetValueManip</name>
-      <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>adbf9f15b2cf3d9c99818945965c1aabd</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
       <name>ProcessImage</name>
-      <anchorfile>classiipr_1_1_t_image_param_processor_comp_base.html</anchorfile>
-      <anchor>a4cc06678e44cdfcc49f2e343b695182f</anchor>
+      <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
+      <anchor>acc9b6174f983bb6a66dd7819f9e259be</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
+      <anchor>ae6845a7fd4af1cab747ed7bff4bf8a6f</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -21537,33 +21442,6 @@
       <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
       <anchor>aa8ed7557cfd27fcf7d282a5729c0043c</anchor>
       <arglist>(int nominalModelsCount)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::TImageParamProcessorCompBase</name>
-    <filename>classiipr_1_1_t_image_param_processor_comp_base.html</filename>
-    <templarg>ParameterType</templarg>
-    <base>iipr::CImageProcessorCompBase</base>
-    <member kind="typedef">
-      <type>CImageProcessorCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_t_image_param_processor_comp_base.html</anchorfile>
-      <anchor>a38b457b2c6b6ceed4de13dea3d592617</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ProcessImage</name>
-      <anchorfile>classiipr_1_1_t_image_param_processor_comp_base.html</anchorfile>
-      <anchor>a4cc06678e44cdfcc49f2e343b695182f</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual bool</type>
-      <name>ParamProcessImage</name>
-      <anchorfile>classiipr_1_1_t_image_param_processor_comp_base.html</anchorfile>
-      <anchor>a70b98531bc288dffcbfee48b7b5e1136</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const ParameterType *procParamPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -30817,7 +30695,6 @@
     <file>IRingPatternGeneratorParams.h</file>
     <file>ISearchConstraints.h</file>
     <file>ISearchParams.h</file>
-    <file>TImageParamProcessorCompBase.h</file>
     <file>TImagePixelInterpolator.h</file>
     <file>TProcessedBitmapSupplierComp.h</file>
     <file>TUnaryTransformProcessorComp.h</file>
