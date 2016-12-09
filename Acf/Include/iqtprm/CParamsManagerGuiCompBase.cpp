@@ -686,7 +686,7 @@ void CParamsManagerGuiCompBase::OnGuiModelAttached()
 	AddRemoveButtonsFrame->setVisible(areAddRemoveButtonsNeeded);
 	UpDownButtonsFrame->setVisible(areUpDownButtonsNeeded);
 
-	ButtonsFrame->setVisible(areAddRemoveButtonsNeeded && areUpDownButtonsNeeded);
+	ButtonsFrame->setVisible(areAddRemoveButtonsNeeded || areUpDownButtonsNeeded);
 }
 
 
