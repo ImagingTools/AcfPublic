@@ -120,6 +120,25 @@
     <namespace>iblob</namespace>
   </compound>
   <compound kind="file">
+    <name>CBlobProcessorCompBase.h</name>
+    <path>C:/Temp/AcfSln/Include/iblob/</path>
+    <filename>_c_blob_processor_comp_base_8h</filename>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="no" imported="no">iproc/TSyncProcessorCompBase.h</includes>
+    <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="no" imported="no">iipr/IImageToFeatureProcessor.h</includes>
+    <includes id="_i_blob_filter_params_8h" name="IBlobFilterParams.h" local="no" imported="no">iblob/IBlobFilterParams.h</includes>
+    <class kind="class">iblob::CBlobProcessorCompBase</class>
+    <namespace>iblob</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CPreciseBlobProcessorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iblob/</path>
+    <filename>_c_precise_blob_processor_comp_8h</filename>
+    <includes id="_i_numeric_value_8h" name="INumericValue.h" local="no" imported="no">imeas/INumericValue.h</includes>
+    <includes id="_c_blob_processor_comp_base_8h" name="CBlobProcessorCompBase.h" local="no" imported="no">iblob/CBlobProcessorCompBase.h</includes>
+    <class kind="class">iblob::CPreciseBlobProcessorComp</class>
+    <namespace>iblob</namespace>
+  </compound>
+  <compound kind="file">
     <name>iblob.h</name>
     <path>C:/Temp/AcfSln/Include/iblob/</path>
     <filename>iblob_8h</filename>
@@ -4513,6 +4532,8 @@
     <class kind="class">iblob::CBlobDescriptorInfo</class>
     <class kind="class">iblob::CBlobFeature</class>
     <class kind="class">iblob::CBlobFilterParams</class>
+    <class kind="class">iblob::CBlobProcessorCompBase</class>
+    <class kind="class">iblob::CPreciseBlobProcessorComp</class>
     <class kind="class">iblob::IBlobFilterParams</class>
     <member kind="typedef">
       <type>QList&lt; CBlobDescriptorInfo &gt;</type>
@@ -5055,6 +5076,261 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iblob::CBlobProcessorCompBase</name>
+    <filename>classiblob_1_1_c_blob_processor_comp_base.html</filename>
+    <base>TSyncProcessorCompBase&lt; iipr::IImageToFeatureProcessor &gt;</base>
+    <member kind="typedef">
+      <type>iproc::TSyncProcessorCompBase&lt; iipr::IImageToFeatureProcessor &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiblob_1_1_c_blob_processor_comp_base.html</anchorfile>
+      <anchor>ac2eee4b65976ecb807be8d8900434b0d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>a89a981e20fa8a2d09462bb32d933509e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iproc::TSyncProcessorWrap&lt; iipr::IImageToFeatureProcessor &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>ae7231378d49277f210d184366095ac75</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iipr::IImageToFeatureProcessor</type>
+      <name>InterfaceType</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_comp_base.html</anchorfile>
+      <anchor>aeb82b61f5619c5cfd1cfdefe18320b2d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iipr::IImageToFeatureProcessor</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3b21fc424b686e6bcf4537b75d89adf3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>MessageId</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a71f0e6f70fcf044073f7055a0e0f5225</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_BAD_PARAMS</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a71f0e6f70fcf044073f7055a0e0f5225a0670e38ef8e7cadcc77fcffde5b01b06</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_PROCESSING_ERROR</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a71f0e6f70fcf044073f7055a0e0f5225a128a151b6f04fa2eda6e912ac1480d4b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ProcessorState</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>aa94aa4786e71ae61cf56e58d93675e7a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PS_UNKNOWN</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>aa94aa4786e71ae61cf56e58d93675e7aab1e7cabfb9d1020ee100b6ee1fbe5620</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PS_INITIALIZATION</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>aa94aa4786e71ae61cf56e58d93675e7aa2d7a7e4db57eeef7e5be24d2dbc6dc63</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PS_READY</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>aa94aa4786e71ae61cf56e58d93675e7aabad97a2c4f0c515bd712963edecdbbba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PS_INVALID</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>aa94aa4786e71ae61cf56e58d93675e7aabbd46d78a0723b57d57c31298901e5f8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>TaskState</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a53fe9860f57b67e209887f985cf3ea73</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TS_NONE</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a53fe9860f57b67e209887f985cf3ea73a4193a2826a1a3ecb44b5a47247656aaa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TS_WAIT</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a53fe9860f57b67e209887f985cf3ea73a66a293521f3e1288297befd306c46b85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TS_OK</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a53fe9860f57b67e209887f985cf3ea73a012c8b8611b7e4dd198a6ce37aa6bf57</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TS_CANCELED</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a53fe9860f57b67e209887f985cf3ea73a1fad2f44bdf50b7c30ddda7738995a43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>TS_INVALID</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a53fe9860f57b67e209887f985cf3ea73ae6084d2b3eadd5d5928353a9d5b59594</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoExtractFeatures</name>
+      <anchorfile>classiblob_1_1_c_blob_processor_comp_base.html</anchorfile>
+      <anchor>aba989b8727aa34a507ad2cbd2cc62162</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;results, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiblob_1_1_c_blob_processor_comp_base.html</anchorfile>
+      <anchor>a2b61bab8d4cbbdab1fabb3a5b59f97f0</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSyncProcessorWrap</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a33b9338307557966bc5e0f87e375de37</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetProcessorState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>adc1704c346843a8bcaf57e055e902b71</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AreParamsAccepted</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>ae97572f44492b12a88117a22db51483d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a06c427a3f188b18011a3c842be354183</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>WaitTaskFinished</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a5e249d7e56f018e4e4f3ce872f1d622d</anchor>
+      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a0a5cd08f5800f4d01eeae041dd5a5aa7</anchor>
+      <arglist>(int taskId=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetReadyTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a7644b6e2edc8e32f3e4a9987a2a97ab9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTaskState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>aeea1cf5b8c422a59cb9c76550cb83a81</anchor>
+      <arglist>(int taskId=-1) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual bool</type>
+      <name>CalculateBlobs</name>
+      <anchorfile>classiblob_1_1_c_blob_processor_comp_base.html</anchorfile>
+      <anchor>a58ed540e30fb0e0df9ed676724b11606</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iblob::IBlobFilterParams *filterParamsPtr, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;result)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static bool</type>
+      <name>IsValueAcceptedByFilter</name>
+      <anchorfile>classiblob_1_1_c_blob_processor_comp_base.html</anchorfile>
+      <anchor>a0fb1eaace174ccb5297cea1c2781bee6</anchor>
+      <arglist>(const iblob::IBlobFilterParams::Filter &amp;filter, double value)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iblob::CPreciseBlobProcessorComp</name>
+    <filename>classiblob_1_1_c_precise_blob_processor_comp.html</filename>
+    <base>iblob::CBlobProcessorCompBase</base>
+    <member kind="typedef">
+      <type>CBlobProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiblob_1_1_c_precise_blob_processor_comp.html</anchorfile>
+      <anchor>abca6778a628de902ef6a0bedfa23dfda</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>DoCalculateBlobs</name>
+      <anchorfile>classiblob_1_1_c_precise_blob_processor_comp.html</anchorfile>
+      <anchor>a917134b12a75199c2e69ccab5b73a2b7</anchor>
+      <arglist>(double threshold, const iblob::IBlobFilterParams *filterParamsPtr, const iimg::CScanlineMask &amp;imageMask, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;result, istd::ILogger *loggerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CalculateBlobs</name>
+      <anchorfile>classiblob_1_1_c_precise_blob_processor_comp.html</anchorfile>
+      <anchor>a41987d6ddf537fc7d60b1d538866feb3</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iblob::IBlobFilterParams *filterParamsPtr, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;result)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iblob::IBlobFilterParams</name>
     <filename>classiblob_1_1_i_blob_filter_params.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
@@ -5376,104 +5652,6 @@
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
       <anchor>a341af101bb2dff0d381a2bc45d29cc1b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>MessageId</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>a71f0e6f70fcf044073f7055a0e0f5225</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_BAD_PARAMS</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>a71f0e6f70fcf044073f7055a0e0f5225a0670e38ef8e7cadcc77fcffde5b01b06</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_PROCESSING_ERROR</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>a71f0e6f70fcf044073f7055a0e0f5225a128a151b6f04fa2eda6e912ac1480d4b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>ProcessorState</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>aa94aa4786e71ae61cf56e58d93675e7a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PS_UNKNOWN</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>aa94aa4786e71ae61cf56e58d93675e7aab1e7cabfb9d1020ee100b6ee1fbe5620</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PS_INITIALIZATION</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>aa94aa4786e71ae61cf56e58d93675e7aa2d7a7e4db57eeef7e5be24d2dbc6dc63</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PS_READY</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>aa94aa4786e71ae61cf56e58d93675e7aabad97a2c4f0c515bd712963edecdbbba</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PS_INVALID</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>aa94aa4786e71ae61cf56e58d93675e7aabbd46d78a0723b57d57c31298901e5f8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>TaskState</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>a53fe9860f57b67e209887f985cf3ea73</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>TS_NONE</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>a53fe9860f57b67e209887f985cf3ea73a4193a2826a1a3ecb44b5a47247656aaa</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>TS_WAIT</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>a53fe9860f57b67e209887f985cf3ea73a66a293521f3e1288297befd306c46b85</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>TS_OK</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>a53fe9860f57b67e209887f985cf3ea73a012c8b8611b7e4dd198a6ce37aa6bf57</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>TS_CANCELED</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>a53fe9860f57b67e209887f985cf3ea73a1fad2f44bdf50b7c30ddda7738995a43</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>TS_INVALID</name>
-      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
-      <anchor>a53fe9860f57b67e209887f985cf3ea73ae6084d2b3eadd5d5928353a9d5b59594</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -30438,6 +30616,8 @@
     <file>CBlobDescriptorInfo.h</file>
     <file>CBlobFeature.h</file>
     <file>CBlobFilterParams.h</file>
+    <file>CBlobProcessorCompBase.h</file>
+    <file>CPreciseBlobProcessorComp.h</file>
     <file>iblob.h</file>
     <file>IBlobFilterParams.h</file>
   </compound>

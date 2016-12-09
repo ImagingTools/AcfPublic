@@ -117,11 +117,15 @@
     <ClCompile Include="..\CBlobDescriptorInfo.cpp" />
     <ClCompile Include="..\CBlobFeature.cpp" />
     <ClCompile Include="..\CBlobFilterParams.cpp" />
+    <ClCompile Include="..\CBlobProcessorCompBase.cpp" />
+    <ClCompile Include="..\CPreciseBlobProcessorComp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CBlobDescriptorInfo.h" />
     <ClInclude Include="..\CBlobFeature.h" />
     <ClInclude Include="..\CBlobFilterParams.h" />
+    <ClInclude Include="..\CBlobProcessorCompBase.h" />
+    <ClInclude Include="..\CPreciseBlobProcessorComp.h" />
     <ClInclude Include="..\IBlobFilterParams.h" />
     <ClInclude Include="..\iblob.h" />
   </ItemGroup>
