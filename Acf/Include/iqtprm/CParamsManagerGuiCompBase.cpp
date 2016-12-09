@@ -768,8 +768,6 @@ void CParamsManagerGuiCompBase::AfterUpdate(imod::IModel* modelPtr, const istd::
 
 void CParamsManagerGuiCompBase::AttachCurrentExtender()
 {
-	DetachCurrentExtender();
-
 	iqt2d::IViewExtender* extenderPtr = GetCurrentViewExtenderPtr();
 	if (extenderPtr != NULL){
 		for (		ConnectedSceneFlags::const_iterator sceneIter = m_connectedSceneFlags.begin();
