@@ -134,6 +134,7 @@
     <path>C:/Temp/AcfSln/Include/iblob/</path>
     <filename>_c_precise_blob_processor_comp_8h</filename>
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="no" imported="no">imeas/INumericValue.h</includes>
+    <includes id="_c_general_numeric_constraints_8h" name="CGeneralNumericConstraints.h" local="no" imported="no">imeas/CGeneralNumericConstraints.h</includes>
     <includes id="_c_blob_processor_comp_base_8h" name="CBlobProcessorCompBase.h" local="no" imported="no">iblob/CBlobProcessorCompBase.h</includes>
     <class kind="class">iblob::CPreciseBlobProcessorComp</class>
     <namespace>iblob</namespace>
@@ -5308,6 +5309,20 @@
     <name>iblob::CPreciseBlobProcessorComp</name>
     <filename>classiblob_1_1_c_precise_blob_processor_comp.html</filename>
     <base>iblob::CBlobProcessorCompBase</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>MessageId</name>
+      <anchorfile>classiblob_1_1_c_precise_blob_processor_comp.html</anchorfile>
+      <anchor>a593b87a695a38f22ec6f3c69a96b4669</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>FOUND_BLOB</name>
+      <anchorfile>classiblob_1_1_c_precise_blob_processor_comp.html</anchorfile>
+      <anchor>a593b87a695a38f22ec6f3c69a96b4669aea0db057490b93c57b357703b519fabc</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>CBlobProcessorCompBase</type>
       <name>BaseClass</name>
@@ -5315,12 +5330,19 @@
       <anchor>abca6778a628de902ef6a0bedfa23dfda</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CPreciseBlobProcessorComp</name>
+      <anchorfile>classiblob_1_1_c_precise_blob_processor_comp.html</anchorfile>
+      <anchor>abec0cb75f2d95e0a173368b7c6f8927e</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" static="yes">
       <type>static bool</type>
       <name>DoCalculateBlobs</name>
       <anchorfile>classiblob_1_1_c_precise_blob_processor_comp.html</anchorfile>
-      <anchor>a917134b12a75199c2e69ccab5b73a2b7</anchor>
-      <arglist>(double threshold, const iblob::IBlobFilterParams *filterParamsPtr, const iimg::CScanlineMask &amp;imageMask, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;result, istd::ILogger *loggerPtr=NULL)</arglist>
+      <anchor>ac1a9095b280f25ab52c37184626ada13</anchor>
+      <arglist>(const istd::CRange &amp;relValueRange, const iblob::IBlobFilterParams *filterParamsPtr, const iimg::CScanlineMask &amp;imageMask, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;result, ilog::IMessageConsumer *resultConsumerPtr=NULL, ilog::IMessageConsumer *tempMessageConsumerPtr=NULL)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
