@@ -4750,6 +4750,13 @@
     </member>
     <member kind="function">
       <type>double</type>
+      <name>GetCompactness</name>
+      <anchorfile>classiblob_1_1_c_blob_feature.html</anchorfile>
+      <anchor>a774ea70d9543ee3f86d9b2b0652d7bbb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
       <name>GetPerimeter</name>
       <anchorfile>classiblob_1_1_c_blob_feature.html</anchorfile>
       <anchor>a866bdcb82ab7b919e9000ab8a210b4f5</anchor>

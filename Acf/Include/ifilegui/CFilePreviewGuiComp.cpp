@@ -44,8 +44,7 @@ namespace ifilegui
 // public methods
 
 CFilePreviewGuiComp::CFilePreviewGuiComp()
-	:m_previewWasGenerated(false),
-	m_resizeWatcher(*this)
+	:m_previewWasGenerated(false)
 {
 }
 
@@ -98,6 +97,7 @@ void CFilePreviewGuiComp::OnGuiCreated()
 {
 	BaseClass::OnGuiCreated();
 
+
 	m_fileLoaderCompPtr.EnsureInitialized();
 
 	if (m_objectGuiCompPtr.IsValid()){
@@ -113,6 +113,19 @@ void CFilePreviewGuiComp::OnGuiCreated()
 		NoPreviewAvailableLabel->setText(*m_noAvailableLabelAttrPtr);
 	}
 
+
+	PreviewWidget* NoPreviewAvailableGraphicsView = new PreviewWidget(GetQtWidget());
+	// basic settings for a Widget
+	QSizePolicy sizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
+	sizePolicy.setHorizontalStretch(0);
+	sizePolicy.setVerticalStretch(0);
+	NoPreviewAvailableGraphicsView->setSizePolicy(sizePolicy);
+	NoPreviewAvailableGraphicsView->setFrameShape(QFrame::NoFrame);
+	NoPreviewAvailableGraphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+	NoPreviewAvailableGraphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+
+	PreviewLayout->insertWidget(0, NoPreviewAvailableGraphicsView);
+
 	// select QGraphicsSvgItem
 	QGraphicsSvgItem* item = NULL;
 	if (m_noAvailableIconPathAttrPtr.IsValid()){
@@ -125,8 +138,6 @@ void CFilePreviewGuiComp::OnGuiCreated()
 	QGraphicsScene *scene = new QGraphicsScene(NoPreviewAvailableGraphicsView);
 	scene->addItem(item);
 	NoPreviewAvailableGraphicsView->setScene(scene);
-	NoPreviewAvailableGraphicsView->installEventFilter(&m_resizeWatcher);
-	connect(&m_resizeWatcher, SIGNAL(Resized()), this, SLOT(UpdatePreviewSize()));
 
 	m_timer.setSingleShot(true);
 	m_timer.setInterval(1000);
@@ -261,16 +272,6 @@ void CFilePreviewGuiComp::OnPreviewGenerationFinished()
 }
 
 
-void CFilePreviewGuiComp::UpdatePreviewSize()
-{
-	QList<QGraphicsItem*> itemList = NoPreviewAvailableGraphicsView->items();
-	if (!itemList.isEmpty()){
-		// only one item expected
-		NoPreviewAvailableGraphicsView->fitInView(itemList.first(), Qt::KeepAspectRatio);
-	}
-}
-
-
 // private methods
 
 void CFilePreviewGuiComp::UpdateObjectFromFile()
@@ -325,20 +326,27 @@ void CFilePreviewGuiComp::ResetPreview()
 }
 
 
-// public methods of nested class ResizeWatcher
+// public methods of nested class PreviewWidget
 
-CFilePreviewGuiComp::ResizeWatcher::ResizeWatcher(CFilePreviewGuiComp& parent)
-	:m_parent(parent)
+CFilePreviewGuiComp::PreviewWidget::PreviewWidget(QWidget *parent)
+	:QGraphicsView(parent)
 {
 }
 
-bool CFilePreviewGuiComp::ResizeWatcher::eventFilter(QObject* /*watched*/, QEvent *event)
-{
-	if ((event->type() == QEvent::Resize) || (event->type() == QEvent::Paint)){
-		m_parent.UpdatePreviewSize();
-	}
 
-	return false;
+// protected methods of nested class PreviewWidget
+
+// reimplemented (QWidget)
+
+void CFilePreviewGuiComp::PreviewWidget::resizeEvent(QResizeEvent* eventPtr)
+{
+	Q_UNUSED(eventPtr);
+
+	QList<QGraphicsItem*> itemList = items();
+	if (!itemList.isEmpty()){
+		// only one item expected
+		fitInView(itemList.first(), Qt::KeepAspectRatio);
+	}
 }
 
 

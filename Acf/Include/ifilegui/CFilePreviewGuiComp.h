@@ -29,6 +29,7 @@
 #include <QtCore/QTimer>
 #include <QtCore/QDateTime>
 #include <QtCore/QFutureWatcher>
+#include <QtWidgets/QGraphicsView>
 
 // ACF includes
 #include <ifile/IFilePersistence.h>
@@ -87,7 +88,6 @@ protected:
 private Q_SLOTS:
 	void UpdateFilePreview();
 	void OnPreviewGenerationFinished();
-	void UpdatePreviewSize();
 
 private:
 	void UpdateObjectFromFile();
@@ -95,15 +95,16 @@ private:
 	
 protected:
 	/**
-		Helper class to watch after Resize and Show Events
+		Helper class to watch after QGraphicsView Resize
 	*/
-	class ResizeWatcher : public QObject
+	class PreviewWidget : public QGraphicsView
 	{
 	public:
-		ResizeWatcher(CFilePreviewGuiComp& parent);
-		virtual bool eventFilter(QObject* watched, QEvent *event);
-	private:
-		CFilePreviewGuiComp& m_parent;
+		PreviewWidget(QWidget *parent = NULL);
+
+	protected:
+		// reimplemented (QWidget)
+		void resizeEvent(QResizeEvent* eventPtr);
 	};
 
 protected:
@@ -130,8 +131,6 @@ protected:
 
 	bool m_previewWasGenerated;
 	QTimer m_timer;
-
-	ResizeWatcher m_resizeWatcher;
 };
 
 

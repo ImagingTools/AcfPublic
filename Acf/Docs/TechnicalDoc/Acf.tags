@@ -2644,7 +2644,7 @@
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="no" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="no" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <class kind="class">ifilegui::CFilePreviewGuiComp</class>
-    <class kind="class">ifilegui::CFilePreviewGuiComp::ResizeWatcher</class>
+    <class kind="class">ifilegui::CFilePreviewGuiComp::PreviewWidget</class>
     <namespace>ifilegui</namespace>
   </compound>
   <compound kind="file">
@@ -33754,7 +33754,7 @@
     <name>ifilegui::CFilePreviewGuiComp</name>
     <filename>classifilegui_1_1_c_file_preview_gui_comp.html</filename>
     <base>TDesignerGuiObserverCompBase&lt; Ui::CFilePreviewGuiComp, ifile::IFileNameParam &gt;</base>
-    <class kind="class">ifilegui::CFilePreviewGuiComp::ResizeWatcher</class>
+    <class kind="class">ifilegui::CFilePreviewGuiComp::PreviewWidget</class>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CFilePreviewGuiComp, ifile::IFileNameParam &gt;</type>
       <name>BaseClass</name>
@@ -33930,30 +33930,23 @@
       <anchor>a732d889c8d005c6a059bd658969652a6</anchor>
       <arglist></arglist>
     </member>
-    <member kind="variable" protection="protected">
-      <type>ResizeWatcher</type>
-      <name>m_resizeWatcher</name>
-      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
-      <anchor>a2fd1e22b8e56fc72818021410edcfab5</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="class">
-    <name>ifilegui::CFilePreviewGuiComp::ResizeWatcher</name>
-    <filename>classifilegui_1_1_c_file_preview_gui_comp_1_1_resize_watcher.html</filename>
+    <name>ifilegui::CFilePreviewGuiComp::PreviewWidget</name>
+    <filename>classifilegui_1_1_c_file_preview_gui_comp_1_1_preview_widget.html</filename>
     <member kind="function">
       <type></type>
-      <name>ResizeWatcher</name>
-      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp_1_1_resize_watcher.html</anchorfile>
-      <anchor>ae2bac83394f2dd4e0cba469a09bd9c7c</anchor>
-      <arglist>(CFilePreviewGuiComp &amp;parent)</arglist>
+      <name>PreviewWidget</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp_1_1_preview_widget.html</anchorfile>
+      <anchor>ac5ce79502e18d391aece488cb87e128b</anchor>
+      <arglist>(QWidget *parent=NULL)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>eventFilter</name>
-      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp_1_1_resize_watcher.html</anchorfile>
-      <anchor>a5636ff1ae3c153a3477f5711928e0f68</anchor>
-      <arglist>(QObject *watched, QEvent *event)</arglist>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>resizeEvent</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp_1_1_preview_widget.html</anchorfile>
+      <anchor>acd9d91ca2009ce4cc397f4096362bb87</anchor>
+      <arglist>(QResizeEvent *eventPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
