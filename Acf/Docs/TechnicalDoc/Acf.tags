@@ -4496,7 +4496,6 @@
     <includes id="_i_shape_factory_8h" name="IShapeFactory.h" local="no" imported="no">iview/IShapeFactory.h</includes>
     <includes id="_c_interactive_shape_base_8h" name="CInteractiveShapeBase.h" local="no" imported="no">iview/CInteractiveShapeBase.h</includes>
     <includes id="_t_view_extender_comp_base_8h" name="TViewExtenderCompBase.h" local="no" imported="no">iqt2d/TViewExtenderCompBase.h</includes>
-    <includes id="_c_int_param_action_8h" name="CIntParamAction.h" local="no" imported="no">iqt2d/CIntParamAction.h</includes>
     <includes id="_c_action_adapter_8h" name="CActionAdapter.h" local="no" imported="no">iqt2d/CActionAdapter.h</includes>
     <class kind="class">iqt2d::TShapeParamsGuiCompBase</class>
     <namespace>iqt2d</namespace>
