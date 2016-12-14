@@ -4177,14 +4177,6 @@
     <namespace>iqt</namespace>
   </compound>
   <compound kind="file">
-    <name>CActionAdapter.h</name>
-    <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>_c_action_adapter_8h</filename>
-    <class kind="class">iqt2d::CActionAdapter</class>
-    <class kind="class">iqt2d::CActionAdapter::Action</class>
-    <namespace>iqt2d</namespace>
-  </compound>
-  <compound kind="file">
     <name>CAffineTransformationParamsGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_affine_transformation_params_gui_comp_8h</filename>
@@ -4256,14 +4248,6 @@
     <includes id="_c_image_shape_8h" name="CImageShape.h" local="no" imported="no">iview/CImageShape.h</includes>
     <includes id="_c_view_provider_gui_comp_8h" name="CViewProviderGuiComp.h" local="no" imported="no">iqt2d/CViewProviderGuiComp.h</includes>
     <class kind="class">iqt2d::CImageViewComp</class>
-    <namespace>iqt2d</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CIntParamAction.h</name>
-    <path>C:/Temp/Acf/Include/iqt2d/</path>
-    <filename>_c_int_param_action_8h</filename>
-    <includes id="_c_action_adapter_8h" name="CActionAdapter.h" local="no" imported="no">iqt2d/CActionAdapter.h</includes>
-    <class kind="class">iqt2d::CIntParamAction</class>
     <namespace>iqt2d</namespace>
   </compound>
   <compound kind="file">
@@ -4496,7 +4480,6 @@
     <includes id="_i_shape_factory_8h" name="IShapeFactory.h" local="no" imported="no">iview/IShapeFactory.h</includes>
     <includes id="_c_interactive_shape_base_8h" name="CInteractiveShapeBase.h" local="no" imported="no">iview/CInteractiveShapeBase.h</includes>
     <includes id="_t_view_extender_comp_base_8h" name="TViewExtenderCompBase.h" local="no" imported="no">iqt2d/TViewExtenderCompBase.h</includes>
-    <includes id="_c_action_adapter_8h" name="CActionAdapter.h" local="no" imported="no">iqt2d/CActionAdapter.h</includes>
     <class kind="class">iqt2d::TShapeParamsGuiCompBase</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -46186,7 +46169,6 @@
   <compound kind="namespace">
     <name>iqt2d</name>
     <filename>namespaceiqt2d.html</filename>
-    <class kind="class">iqt2d::CActionAdapter</class>
     <class kind="class">iqt2d::CAffineTransformationParamsGuiComp</class>
     <class kind="class">iqt2d::CAnnulusParamsGuiComp</class>
     <class kind="class">iqt2d::CAnnulusSegmentParamsGuiComp</class>
@@ -46194,7 +46176,6 @@
     <class kind="class">iqt2d::CCircleParamsGuiComp</class>
     <class kind="class">iqt2d::CExtendedConsoleGuiComp</class>
     <class kind="class">iqt2d::CImageViewComp</class>
-    <class kind="class">iqt2d::CIntParamAction</class>
     <class kind="class">iqt2d::CLine2dParamsGuiComp</class>
     <class kind="class">iqt2d::CMultiBitmapViewComp</class>
     <class kind="class">iqt2d::COrientedCircleEditorComp</class>
@@ -46230,71 +46211,6 @@
       <anchorfile>namespaceiqt2d.html</anchorfile>
       <anchor>aaa07639b224bf681c5aa50e41400f109</anchor>
       <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt2d::CActionAdapter</name>
-    <filename>classiqt2d_1_1_c_action_adapter.html</filename>
-    <class kind="class">iqt2d::CActionAdapter::Action</class>
-    <member kind="function">
-      <type></type>
-      <name>CActionAdapter</name>
-      <anchorfile>classiqt2d_1_1_c_action_adapter.html</anchorfile>
-      <anchor>a4617958716b5cf3d9aadcbe0080102bd</anchor>
-      <arglist>(QWidget &amp;host)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QAction *</type>
-      <name>AddAction</name>
-      <anchorfile>classiqt2d_1_1_c_action_adapter.html</anchorfile>
-      <anchor>add279f63cac78d9f02f5362b9707505f</anchor>
-      <arglist>(QAction &amp;action)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QAction *</type>
-      <name>AddSeparator</name>
-      <anchorfile>classiqt2d_1_1_c_action_adapter.html</anchorfile>
-      <anchor>a5471c0a1c3a3b7564afca600fc242ed4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QWidget *</type>
-      <name>GetWidget</name>
-      <anchorfile>classiqt2d_1_1_c_action_adapter.html</anchorfile>
-      <anchor>ae8afaacb1a4be65598aae159aea316e8</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QWidget *</type>
-      <name>m_hostPtr</name>
-      <anchorfile>classiqt2d_1_1_c_action_adapter.html</anchorfile>
-      <anchor>a9aad2b69e1a7079134d9cad68cd1fec4</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqt2d::CActionAdapter::Action</name>
-    <filename>classiqt2d_1_1_c_action_adapter_1_1_action.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>Action</name>
-      <anchorfile>classiqt2d_1_1_c_action_adapter_1_1_action.html</anchorfile>
-      <anchor>af4873b81cbb4cd4b4e75656a198ec658</anchor>
-      <arglist>(const QString &amp;text, QObject *parent)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Action</name>
-      <anchorfile>classiqt2d_1_1_c_action_adapter_1_1_action.html</anchorfile>
-      <anchor>a82c6ee850a1b058e9b0c628efae8c544</anchor>
-      <arglist>(const QIcon &amp;icon, const QString &amp;text, QObject *parent)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnActionAdded</name>
-      <anchorfile>classiqt2d_1_1_c_action_adapter_1_1_action.html</anchorfile>
-      <anchor>a4bf66e1c71c45b9aa8d9677f608ec1cc</anchor>
-      <arglist>(CActionAdapter &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -47453,88 +47369,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqt2d::CIntParamAction</name>
-    <filename>classiqt2d_1_1_c_int_param_action.html</filename>
-    <base>iqt2d::CActionAdapter::Action</base>
-    <member kind="typedef">
-      <type>CActionAdapter::Action</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
-      <anchor>a8686400a7a9c8136e8aec8a141fc8217</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CIntParamAction</name>
-      <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
-      <anchor>aa22425628449917dc036953ff2b270a9</anchor>
-      <arglist>(const QIcon &amp;icon, const QString &amp;text, int minValue, int maxValue, int value, QObject *parentPtr=NULL)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CIntParamAction</name>
-      <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
-      <anchor>aef1114937092edfe2f86a567eec5f8bd</anchor>
-      <arglist>(const QString &amp;text, int minValue, int maxValue, int value, QObject *parentPtr=NULL)</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetValue</name>
-      <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
-      <anchor>a53c105303e248d4739042fa48a0ca6eb</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetValue</name>
-      <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
-      <anchor>a9e8f524be23ad1b4accdd9ae7592ab98</anchor>
-      <arglist>(int x)</arglist>
-    </member>
-    <member kind="function">
-      <type>QSpinBox *</type>
-      <name>GetEditor</name>
-      <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
-      <anchor>a9819f085d1ef7a3848bbd032780571f6</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>QWidgetAction *</type>
-      <name>GetWidgetAction</name>
-      <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
-      <anchor>a8405451aa01d29da5b4b813fa7800fed</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnActionAdded</name>
-      <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
-      <anchor>a0cbababc0ed957f0434cc079746ee4c7</anchor>
-      <arglist>(CActionAdapter &amp;adapter)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>Init</name>
-      <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
-      <anchor>a5827e6f60bf5782730dc16561d0bd711</anchor>
-      <arglist>(int minValue, int maxValue, int value)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QWidgetAction *</type>
-      <name>m_widgetActionPtr</name>
-      <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
-      <anchor>a975db219464cd8d441356920b65da9b4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QSpinBox *</type>
-      <name>m_spinEditor</name>
-      <anchorfile>classiqt2d_1_1_c_int_param_action.html</anchorfile>
-      <anchor>a9117c43970d4c69ea3d118cb55964cdb</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iqt2d::CLine2dParamsGuiComp</name>
     <filename>classiqt2d_1_1_c_line2d_params_gui_comp.html</filename>
     <base>TShapeParamsGuiCompBase&lt; Ui::CLine2dParamsGuiComp, iview::CLineShape, i2d::CLine2d &gt;</base>
@@ -48203,8 +48037,8 @@
       <type>virtual bool</type>
       <name>PopulateActions</name>
       <anchorfile>classiqt2d_1_1_c_oriented_circle_editor_comp.html</anchorfile>
-      <anchor>a489d0e41de1024da652baddcd8e57142</anchor>
-      <arglist>(CActionAdapter &amp;host, imod::IModel *modelPtr)</arglist>
+      <anchor>ad22f98a7588346d00455ecd5ed17d3ef</anchor>
+      <arglist>(QWidget &amp;host, imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -48576,6 +48410,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a62171b38553c1c5cd1d95a43b771968f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiRetranslate</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>aadb2edd9f48e2c1abe4476c3248af62a</anchor>
@@ -48585,8 +48426,8 @@
       <type>virtual bool</type>
       <name>PopulateActions</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>ab9df1f18449a0c936db501bb112269ff</anchor>
-      <arglist>(CActionAdapter &amp;host, imod::IModel *modelPtr)</arglist>
+      <anchor>ae189e89abf5305391398faf4f33bfe87</anchor>
+      <arglist>(QWidget &amp;host, imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -48779,8 +48620,8 @@
       <type>virtual bool</type>
       <name>PopulateActions</name>
       <anchorfile>classiqt2d_1_1_c_polyline_params_gui_comp.html</anchorfile>
-      <anchor>ac4ebc238698cc55f401c7846e917dddb</anchor>
-      <arglist>(CActionAdapter &amp;host, imod::IModel *modelPtr)</arglist>
+      <anchor>a0e7de6557bb7f2be0029819baa9f5297</anchor>
+      <arglist>(QWidget &amp;host, imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual iview::CInteractiveShapeBase *</type>
@@ -48878,6 +48719,13 @@
       <name>OnGuiCreated</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a639829115b16468f337578e9eb36855b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a62171b38553c1c5cd1d95a43b771968f</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -49613,6 +49461,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a62171b38553c1c5cd1d95a43b771968f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiRetranslate</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>aadb2edd9f48e2c1abe4476c3248af62a</anchor>
@@ -49622,8 +49477,8 @@
       <type>virtual bool</type>
       <name>PopulateActions</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>ab9df1f18449a0c936db501bb112269ff</anchor>
-      <arglist>(CActionAdapter &amp;host, imod::IModel *modelPtr)</arglist>
+      <anchor>ae189e89abf5305391398faf4f33bfe87</anchor>
+      <arglist>(QWidget &amp;host, imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -50226,6 +50081,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a62171b38553c1c5cd1d95a43b771968f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiRetranslate</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>aadb2edd9f48e2c1abe4476c3248af62a</anchor>
@@ -50235,8 +50097,8 @@
       <type>virtual bool</type>
       <name>PopulateActions</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>ab9df1f18449a0c936db501bb112269ff</anchor>
-      <arglist>(CActionAdapter &amp;host, imod::IModel *modelPtr)</arglist>
+      <anchor>ae189e89abf5305391398faf4f33bfe87</anchor>
+      <arglist>(QWidget &amp;host, imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -50484,13 +50346,6 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>CreateActions</name>
-      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
-      <anchor>a101a5f62f18044dfd3378489cf884cef</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>CreateToolsMenu</name>
       <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
       <anchor>a24177816938d0f4ef68e7c721930a792</anchor>
@@ -50500,8 +50355,8 @@
       <type>virtual bool</type>
       <name>PopulateActions</name>
       <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
-      <anchor>a4c2db135d058aca94d2dc200d09a1f68</anchor>
-      <arglist>(CActionAdapter &amp;host, imod::IModel *modelPtr)</arglist>
+      <anchor>a509e3d6392260a07721ac05687fa25bc</anchor>
+      <arglist>(QWidget &amp;host, imod::IModel *modelPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -50579,6 +50434,20 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
       <arglist>(imod::IModel *modelPtr) const</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QMenu *</type>
+      <name>m_menuPtr</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>ac5daeb61cd13de61fd9f604821da8a35</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QAbstractButton *</type>
+      <name>m_menuButtonPtr</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>a79d00a465a628df57a454ff5b93af850</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -74975,7 +74844,6 @@
     <name>Include/iqt2d</name>
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>dir_4676e37764a5e47bdfc1a91b5e49ff98.html</filename>
-    <file>CActionAdapter.h</file>
     <file>CAffineTransformationParamsGuiComp.h</file>
     <file>CAnnulusParamsGuiComp.h</file>
     <file>CAnnulusSegmentParamsGuiComp.h</file>
@@ -74983,7 +74851,6 @@
     <file>CCircleParamsGuiComp.h</file>
     <file>CExtendedConsoleGuiComp.h</file>
     <file>CImageViewComp.h</file>
-    <file>CIntParamAction.h</file>
     <file>CLine2dParamsGuiComp.h</file>
     <file>CMultiBitmapViewComp.h</file>
     <file>COrientedCircleEditorComp.h</file>

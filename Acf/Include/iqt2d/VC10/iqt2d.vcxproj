@@ -114,7 +114,6 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\CActionAdapter.cpp" />
     <ClCompile Include="..\CAffineTransformationParamsGuiComp.cpp" />
     <ClCompile Include="..\CAnnulusParamsGuiComp.cpp" />
     <ClCompile Include="..\CAnnulusSegmentParamsGuiComp.cpp" />
@@ -122,7 +121,6 @@
     <ClCompile Include="..\CCircleParamsGuiComp.cpp" />
     <ClCompile Include="..\CExtendedConsoleGuiComp.cpp" />
     <ClCompile Include="..\CImageViewComp.cpp" />
-    <ClCompile Include="..\CIntParamAction.cpp" />
     <ClCompile Include="..\CLine2dParamsGuiComp.cpp" />
     <ClCompile Include="..\CMultiBitmapViewComp.cpp" />
     <ClCompile Include="..\COrientedCircleEditorComp.cpp" />
@@ -139,7 +137,6 @@
     <ClCompile Include="..\CViewProviderGuiComp.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\CActionAdapter.h" />
     <CustomBuild Include="..\CAffineTransformationParamsGuiComp.h">
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CAffineTransformationParamsGuiComp.h;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/iqt2d/QMake -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CAffineTransformationParamsGuiComp.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqt2d\moc_CAffineTransformationParamsGuiComp.cpp</Command>
@@ -192,7 +189,6 @@
     </CustomBuild>
     <ClInclude Include="..\CExtendedConsoleGuiComp.h" />
     <ClInclude Include="..\CImageViewComp.h" />
-    <ClInclude Include="..\CIntParamAction.h" />
     <CustomBuild Include="..\CLine2dParamsGuiComp.h">
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CLine2dParamsGuiComp.h;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/iqt2d/QMake -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CLine2dParamsGuiComp.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqt2d\moc_CLine2dParamsGuiComp.cpp</Command>
