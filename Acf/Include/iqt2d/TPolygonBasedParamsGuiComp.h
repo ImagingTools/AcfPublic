@@ -135,7 +135,6 @@ protected:
 
 	// reimplemented (iqtgui::CGuiComponentBase)
 	virtual void OnGuiCreated();
-	virtual void OnGuiDestroyed();
 	virtual void OnGuiRetranslate();
 
 	// reimplemented (iqt2d::TShapeParamsGuiCompBase)
@@ -401,20 +400,6 @@ void TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::OnGuiCrea
 
 	// tools actions
 	CreateToolsMenu(ToolsButton);
-}
-
-
-template <class PolygonBasedShape, class PolygonBasedModel>
-void TPolygonBasedParamsGuiComp<PolygonBasedShape, PolygonBasedModel>::OnGuiDestroyed()
-{
-	m_menuButtonPtr = NULL;
-	if (m_menuPtr != NULL){
-		m_menuPtr->deleteLater();
-
-		m_menuPtr = NULL;
-	}
-
-	BaseClass::OnGuiDestroyed();
 }
 
 

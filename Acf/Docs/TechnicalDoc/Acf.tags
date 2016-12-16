@@ -48410,13 +48410,6 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a62171b38553c1c5cd1d95a43b771968f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>OnGuiRetranslate</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>aadb2edd9f48e2c1abe4476c3248af62a</anchor>
@@ -48719,13 +48712,6 @@
       <name>OnGuiCreated</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>a639829115b16468f337578e9eb36855b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a62171b38553c1c5cd1d95a43b771968f</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -49461,13 +49447,6 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a62171b38553c1c5cd1d95a43b771968f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>OnGuiRetranslate</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>aadb2edd9f48e2c1abe4476c3248af62a</anchor>
@@ -50081,13 +50060,6 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
-      <anchor>a62171b38553c1c5cd1d95a43b771968f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>OnGuiRetranslate</name>
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
       <anchor>aadb2edd9f48e2c1abe4476c3248af62a</anchor>
@@ -50395,23 +50367,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnGuiCreated</name>
+      <name>OnGuiDestroyed</name>
       <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
-      <anchor>acb24175dd030938b74035b41d3393ce2</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
-      <anchor>a1f10d3233694293c2b5e54ebd4a53733</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
-      <anchor>abc113ec1b135cabd7cf60fc69a92e6c9</anchor>
+      <anchor>af1e5160c36a155c9bf3eea0e3cbbe7ff</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -50429,25 +50387,25 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>a1f10d3233694293c2b5e54ebd4a53733</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
+      <anchor>abc113ec1b135cabd7cf60fc69a92e6c9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual ShapeModel *</type>
       <name>CastFromModel</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
       <arglist>(imod::IModel *modelPtr) const</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QMenu *</type>
-      <name>m_menuPtr</name>
-      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
-      <anchor>ac5daeb61cd13de61fd9f604821da8a35</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QAbstractButton *</type>
-      <name>m_menuButtonPtr</name>
-      <anchorfile>classiqt2d_1_1_t_shape_params_gui_comp_base.html</anchorfile>
-      <anchor>a79d00a465a628df57a454ff5b93af850</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
