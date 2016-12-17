@@ -171,6 +171,21 @@
     <namespace>iblobgui</namespace>
   </compound>
   <compound kind="file">
+    <name>CSimpleLensCorrection.h</name>
+    <path>C:/Temp/AcfSln/Include/icalib/</path>
+    <filename>_c_simple_lens_correction_8h</filename>
+    <class kind="class">icalib::CSimpleLensCorrection</class>
+    <namespace>icalib</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CSimpleLensCorrectionComp.h</name>
+    <path>C:/Temp/AcfSln/Include/icalib/</path>
+    <filename>_c_simple_lens_correction_comp_8h</filename>
+    <includes id="_c_simple_lens_correction_8h" name="CSimpleLensCorrection.h" local="no" imported="no">icalib/CSimpleLensCorrection.h</includes>
+    <class kind="class">icalib::CSimpleLensCorrectionComp</class>
+    <namespace>icalib</namespace>
+  </compound>
+  <compound kind="file">
     <name>CAcquisitionConstraintsComp.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_acquisition_constraints_comp_8h</filename>
@@ -1276,6 +1291,7 @@
     <filename>_c_difference_bitmap_supplier_comp_8h</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="no" imported="no">iproc/IProcessor.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="no" imported="no">iinsp/TSupplierCompWrap.h</includes>
+    <includes id="_c_general_numeric_constraints_8h" name="CGeneralNumericConstraints.h" local="no" imported="no">imeas/CGeneralNumericConstraints.h</includes>
     <class kind="class">iipr::CDifferenceBitmapSupplierComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -5593,6 +5609,254 @@
       <name>OnGuiDestroyed</name>
       <anchorfile>classiblobgui_1_1_c_blob_filter_params_gui_comp.html</anchorfile>
       <anchor>aca8b463dc088e23e282d8dc0498ff4f3</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>icalib</name>
+    <filename>namespaceicalib.html</filename>
+    <class kind="class">icalib::CSimpleLensCorrection</class>
+    <class kind="class">icalib::CSimpleLensCorrectionComp</class>
+  </compound>
+  <compound kind="class">
+    <name>icalib::CSimpleLensCorrection</name>
+    <filename>classicalib_1_1_c_simple_lens_correction.html</filename>
+    <base virtualness="virtual">i2d::ICalibration2d</base>
+    <member kind="function">
+      <type></type>
+      <name>CSimpleLensCorrection</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>ac4bfd334401011fa3cbb2c2cdc98c7d2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSimpleLensCorrection</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a4c27f5fce0f12169e581991e0579faac</anchor>
+      <arglist>(const i2d::CVector2d &amp;opticalCenter, double distortionFactor=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>af19092495cc5e83df628a1b8ef3dfa1d</anchor>
+      <arglist>(const i2d::CVector2d &amp;opticalCenter=i2d::CVector2d::GetZero(), double distortionFactor=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>const i2d::CVector2d &amp;</type>
+      <name>GetOpticalCenter</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a2ce2459c33ac951ca3e6eb8def7bc2c0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetOpticalCenter</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>aeab761385f201910d703d1fdd1d86f72</anchor>
+      <arglist>(const i2d::CVector2d &amp;center)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetDistortionFactor</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a257ff2cae4fa01fb4f477558d2f007bf</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetDistortionFactor</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>aeef2ee891ca9673dc602306d08caf9e8</anchor>
+      <arglist>(double factor)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>ad153392573ec4e86a3da2ea9e833d2c9</anchor>
+      <arglist>(const CSimpleLensCorrection &amp;calib) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a749f9c1f51f5b2c540bd3d8e59f5e41c</anchor>
+      <arglist>(const CSimpleLensCorrection &amp;calib) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::CRectangle *</type>
+      <name>GetArgumentArea</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a9f0c5741a345ccf65aa2af9ff421d971</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::CRectangle *</type>
+      <name>GetResultArea</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a3263de150135f8f562b9690c2519e88a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imath::IUnitInfo *</type>
+      <name>GetArgumentUnitInfo</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a555169332e426fe7f133130b868de103</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imath::IUnitInfo *</type>
+      <name>GetResultUnitInfo</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a3aa3fbffd548728c2245ca4e215d5d55</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ICalibration2d *</type>
+      <name>CreateCombinedCalibration</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a016a1540b94608ee9fbeaadcbaa301d6</anchor>
+      <arglist>(const ITransformation2d &amp;transformation) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTransformationFlags</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a4ca3f91536539554215fc3178ab47ed5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetDistance</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>ad698ffcf2882cf8757b530d9e3cd28e3</anchor>
+      <arglist>(const i2d::CVector2d &amp;origPos1, const i2d::CVector2d &amp;origPos2, double &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetPositionAt</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a75e655a871fb5f0ea143c26cebc77ebe</anchor>
+      <arglist>(const i2d::CVector2d &amp;origPosition, i2d::CVector2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvPositionAt</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>acd9bca417275928e5ce1e9ab41f41a46</anchor>
+      <arglist>(const i2d::CVector2d &amp;transfPosition, i2d::CVector2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetLocalTransform</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a5ea559695495fef1ac1446e34e13909d</anchor>
+      <arglist>(const i2d::CVector2d &amp;origPosition, i2d::CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetLocalInvTransform</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a299e9154cded6c99112faf6bd6d512bd</anchor>
+      <arglist>(const i2d::CVector2d &amp;transfPosition, i2d::CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvValueAt</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a2c12e5b5bae18474708a10473f65cc02</anchor>
+      <arglist>(const i2d::CVector2d &amp;argument, i2d::CVector2d &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetInvValueAt</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>ade208313665c22ec526b35a6f1630e64</anchor>
+      <arglist>(const i2d::CVector2d &amp;argument) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetValueAt</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a10641432cd79e3518e306b421f6e3858</anchor>
+      <arglist>(const i2d::CVector2d &amp;argument, i2d::CVector2d &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetValueAt</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>ac1737f28308fa830bcd4373a52987f9f</anchor>
+      <arglist>(const i2d::CVector2d &amp;argument) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a350485bfedf698910c2230f1932fc4ad</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a6b41d5f686a51edb8d17f5a7fbeac92e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a1e02b858fb59a4621fe1c5bab52216bc</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEqual</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a5adb4a63c03450c7e4eaf3189ccd7417</anchor>
+      <arglist>(const istd::IChangeable &amp;object) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a046dd1f1dbd7a9a7fb554eaf47f1439c</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a65366fe3d6fd4732d44bfc82e4e0a4e5</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icalib::CSimpleLensCorrectionComp</name>
+    <filename>classicalib_1_1_c_simple_lens_correction_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>icalib::CSimpleLensCorrection</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction_comp.html</anchorfile>
+      <anchor>a30bb9d5858ffb24ab9e0532bc293fc41</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CSimpleLensCorrection</type>
+      <name>BaseClass2</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction_comp.html</anchorfile>
+      <anchor>a9eae5dd90619aee5633f8300824732cc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction_comp.html</anchorfile>
+      <anchor>a29c51c226c7f3282fb6899d3ac24789a</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -17112,26 +17376,47 @@
       <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>EnsureBitmapCreated</name>
+    <member kind="function">
+      <type></type>
+      <name>CDifferenceBitmapSupplierComp</name>
       <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a6ed2c0bcd494f93f78c13b7d8eacc234</anchor>
-      <arglist>(ProductType &amp;result) const </arglist>
+      <anchor>a6f637c6f585345a99449d16ec004d2da</anchor>
+      <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" virtualness="virtual">
       <type>virtual const iimg::IBitmap *</type>
       <name>GetBitmap</name>
       <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
       <anchor>a57bb9d04a73f1ec22ba88cf2d65e58e1</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" virtualness="virtual">
       <type>virtual const i2d::ICalibration2d *</type>
       <name>GetCalibration</name>
       <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
       <anchor>a99e5991fca38bee7b7cca2a458422341</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>EnsureBitmapCreated</name>
+      <anchorfile>classiipr_1_1_c_difference_bitmap_supplier_comp.html</anchorfile>
+      <anchor>a6ed2c0bcd494f93f78c13b7d8eacc234</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
@@ -17153,20 +17438,6 @@
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
       <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ClearWorkResults</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; QPair&lt; i2d::ICalibration2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
@@ -30658,6 +30929,13 @@
     <file>CBlobFilterParamsGuiComp.h</file>
   </compound>
   <compound kind="dir">
+    <name>Include/icalib</name>
+    <path>C:/Temp/AcfSln/Include/icalib/</path>
+    <filename>dir_cb55906c441f89390c81c0d68c23317c.html</filename>
+    <file>CSimpleLensCorrection.h</file>
+    <file>CSimpleLensCorrectionComp.h</file>
+  </compound>
+  <compound kind="dir">
     <name>Include/icam</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>dir_f2296beff96c253567dc2b95d81f611c.html</filename>
@@ -30961,6 +31239,7 @@
     <dir>Include/iauth</dir>
     <dir>Include/iblob</dir>
     <dir>Include/iblobgui</dir>
+    <dir>Include/icalib</dir>
     <dir>Include/icam</dir>
     <dir>Include/icmpstr</dir>
     <dir>Include/idocproc</dir>

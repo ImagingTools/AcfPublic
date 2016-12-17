@@ -14,6 +14,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iqtex", "..\..\Include\iqte
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iqtmm", "..\..\Include\iqtmm\VC10\iqtmm.vcxproj", "{363131D1-A1FD-3E77-A2A5-7F40DCBB391C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "icalib", "..\..\Include\icalib\VC10\icalib.vcxproj", "{CE147382-435D-36AF-B813-9795C81C82E0}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "icam", "..\..\Include\icam\VC10\icam.vcxproj", "{B87D9840-5680-3E82-891E-6502A462BBF7}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iqtauth", "..\..\Include\iqtauth\VC10\iqtauth.vcxproj", "{E447B8D0-E9D8-3B37-8D26-F20E54943493}"
@@ -350,6 +352,10 @@ Global
 		{363131D1-A1FD-3E77-A2A5-7F40DCBB391C}.Debug|Win32.Build.0 = Debug|Win32
 		{363131D1-A1FD-3E77-A2A5-7F40DCBB391C}.Release|Win32.ActiveCfg = Release|Win32
 		{363131D1-A1FD-3E77-A2A5-7F40DCBB391C}.Release|Win32.Build.0 = Release|Win32
+		{CE147382-435D-36AF-B813-9795C81C82E0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CE147382-435D-36AF-B813-9795C81C82E0}.Debug|Win32.Build.0 = Debug|Win32
+		{CE147382-435D-36AF-B813-9795C81C82E0}.Release|Win32.ActiveCfg = Release|Win32
+		{CE147382-435D-36AF-B813-9795C81C82E0}.Release|Win32.Build.0 = Release|Win32
 		{B87D9840-5680-3E82-891E-6502A462BBF7}.Debug|Win32.ActiveCfg = Debug|Win32
 		{B87D9840-5680-3E82-891E-6502A462BBF7}.Debug|Win32.Build.0 = Debug|Win32
 		{B87D9840-5680-3E82-891E-6502A462BBF7}.Release|Win32.ActiveCfg = Release|Win32
