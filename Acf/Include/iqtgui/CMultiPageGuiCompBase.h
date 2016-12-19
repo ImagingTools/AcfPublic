@@ -68,13 +68,15 @@ public:
 		I_REGISTER_SUBELEMENT_INTERFACE_T(PageModel, IMultiVisualStatusProvider, ExtractPageModel);
 		I_ASSIGN_MULTI_0(m_slaveWidgetsVisualCompPtr, "GuiVisualInfos", "Provide visual information for each GUI", false);
 		I_ASSIGN_TO(m_slaveWidgetsModelCompPtr, m_slaveWidgetsVisualCompPtr, false);
-		I_ASSIGN_MULTI_0(m_pageActivatorsCompPtr, "PageActivators", "Optional activators for each page", false);
+		I_ASSIGN_MULTI_0(m_pageActivatorsCompPtr, "PageActivators", "Optional activators for each page (enable/disable)", false);
 		I_ASSIGN_TO(m_pageActivatorsModelCompPtr, m_pageActivatorsCompPtr, false);
 		I_ASSIGN_MULTI_0(m_pageNamesAttrPtr, "Names", "List of the page titles", true);
 		I_ASSIGN(m_iconSizeAttrPtr, "IconSize", "Size for page icons", false, 16);
 		I_ASSIGN(m_useHorizontalLayoutAttrPtr, "UseHorizontalLayout", "Use horizontal layout", true, false);
 		I_ASSIGN(m_useSameStretchingFactorAttrPtr, "UseSameStretchingFactor", "Set the same stretching factor for all widgets. Only for group box mode", false, false);
 		I_ASSIGN(m_insertSpacerAttrPtr, "InsertSpacer", "If enabled, insert spacer after the last page widget", false, false);
+		I_ASSIGN_MULTI_0(m_pageVisibilityActivatorsCompPtr, "PageVisibilityActivators", "Optional visibility activators for each page (show/hide)", false);
+		I_ASSIGN_TO(m_pageVisibilityActivatorsModelCompPtr, m_pageVisibilityActivatorsCompPtr, false);
 	I_END_COMPONENT;
 
 	CMultiPageGuiCompBase();
@@ -207,6 +209,8 @@ protected:
 	I_ATTR(bool, m_useHorizontalLayoutAttrPtr);
 	I_ATTR(bool, m_useSameStretchingFactorAttrPtr);
 	I_ATTR(bool, m_insertSpacerAttrPtr);
+	I_MULTIREF(iprm::IEnableableParam, m_pageVisibilityActivatorsCompPtr);
+	I_MULTIREF(imod::IModel, m_pageVisibilityActivatorsModelCompPtr);
 
 	imod::TModelWrap<PageModel> m_pageModel;
 
