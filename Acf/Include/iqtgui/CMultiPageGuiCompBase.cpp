@@ -371,11 +371,12 @@ void CMultiPageGuiCompBase::PageModel::UpdatePageState()
 			multiPageWidgetPtr->SetPageEnabled(i, paramPtr->IsEnabled());
 		}
 
-	int visActivatorsCount = qMin(m_parentPtr->m_pageVisibilityActivatorsCompPtr.GetCount(), m_parentPtr->GetPagesCount());
-	for (int i = 0; i < visActivatorsCount; ++i){
-		const iprm::IEnableableParam* paramPtr = m_parentPtr->m_pageVisibilityActivatorsCompPtr[i];
-		if ((paramPtr != NULL) && (multiPageWidgetPtr != NULL)){
-			multiPageWidgetPtr->SetPageVisible(i, paramPtr->IsEnabled());
+		int visActivatorsCount = qMin(m_parentPtr->m_pageVisibilityActivatorsCompPtr.GetCount(), m_parentPtr->GetPagesCount());
+		for (int i = 0; i < visActivatorsCount; ++i){
+			const iprm::IEnableableParam* paramPtr = m_parentPtr->m_pageVisibilityActivatorsCompPtr[i];
+			if ((paramPtr != NULL) && (multiPageWidgetPtr != NULL)){
+				multiPageWidgetPtr->SetPageVisible(i, paramPtr->IsEnabled());
+			}
 		}
 	}
 }
