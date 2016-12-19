@@ -1507,11 +1507,11 @@ bool CRegistryCodeSaverComp::WriteRegistryClassBody(
 
 	if (*m_useBinaryCodeAttrPtr){
 		bool isTranslationFound = false;
+
+		WriteRegistryTranslation(registry, isTranslationFound, stream);
+
 		if (m_translationLevelAttrPtr.IsValid()){
 			WritePackagesTranslation(*m_translationLevelAttrPtr, isTranslationFound, stream);
-		}
-		else{
-			WriteRegistryTranslation(registry, isTranslationFound, stream);
 		}
 
 		if (isTranslationFound){
