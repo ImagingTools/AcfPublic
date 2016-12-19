@@ -166,6 +166,7 @@
     <ClInclude Include="..\IComponentContext.h" />
     <ClInclude Include="..\IComponentEnvironmentManager.h" />
     <ClInclude Include="..\IComponentInterfaceExtractor.h" />
+    <ClInclude Include="..\IComponentListProvider.h" />
     <ClInclude Include="..\IComponentStaticInfo.h" />
     <ClInclude Include="..\ICompositeComponent.h" />
     <ClInclude Include="..\IElementStaticInfo.h" />

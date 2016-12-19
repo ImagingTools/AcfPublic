@@ -20,42 +20,41 @@
 ********************************************************************************/
 
 
-#ifndef icomp_IRegistriesManager_included
-#define icomp_IRegistriesManager_included
+#ifndef icomp_IComponentListProvider_included
+#define icomp_IComponentListProvider_included
 
-
-// Qt includes
-#include <QtCore/QByteArray>
 
 // ACF includes
-#include <icomp/IComponentListProvider.h>
+#include <icomp/IComponentStaticInfo.h>
+#include <icomp/CComponentAddress.h>
 
 
 namespace icomp
 {
 
 
-class IRegistry;
-
-
-/**
-	Allow access to registries defined by composed components.
-*/
-class IRegistriesManager: virtual public IComponentListProvider
+class IComponentListProvider: virtual public istd::IChangeable
 {
 public:
+	enum ComponentTypeFlag
+	{
+		CTF_REAL = 1 << IComponentStaticInfo::CT_REAL,
+		CTF_COMPOSITE = 1 << IComponentStaticInfo::CT_COMPOSITE,
+		CTF_ALL = -1
+	};
+
+	typedef QSet<CComponentAddress> ComponentAddresses;
+
 	/**
-		Get access to stored registry.
-		\param	address		adress of registry treated as composed component.
-		\return				registry object or NULL if specified composite component is not registered.
+		Get addresses of known components.
 	*/
-	virtual const IRegistry* GetRegistry(const CComponentAddress& address, const IRegistry* contextRegistryPtr = NULL) const = 0;
+	virtual ComponentAddresses GetComponentAddresses(int typeFlag = CTF_ALL) const = 0;
 };
 
 
 } // namespace icomp
 
 
-#endif // !icomp_IRegistriesManager_included
+#endif // !icomp_IComponentListProvider_included
 
 

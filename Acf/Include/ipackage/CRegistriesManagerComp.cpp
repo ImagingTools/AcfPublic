@@ -39,6 +39,55 @@ namespace ipackage
 {
 
 
+// reimplemented (icomp::IExtPackagesManager)
+
+icomp::IExtPackagesManager::PathList CRegistriesManagerComp::GetConfigurationPathList(PathType pathType) const
+{
+	switch (pathType){
+	case PT_CONFIG:
+		return m_usedConfigFilesList;
+
+	case PT_PACKAGES_DIR:
+		return m_usedPackageDirsList;
+
+	case PT_PACKAGE:
+		return m_usedPackageFilesList;
+
+	case PT_REGISTRY:
+		return m_usedRegistryFilesList;
+
+	default:
+		break;
+	}
+
+	PathList retVal;
+	retVal += m_usedConfigFilesList;
+	retVal += m_usedPackageDirsList;
+	retVal += m_usedPackageFilesList;
+	retVal += m_usedRegistryFilesList;
+
+	return retVal;
+}
+
+
+int CRegistriesManagerComp::GetPackageDefinitionLevel(const QByteArray& packageId) const
+{
+	CompositePackagesMap::ConstIterator foundCompositeIter = m_compositePackagesMap.constFind(packageId);
+	if (foundCompositeIter != m_compositePackagesMap.constEnd()){
+		return foundCompositeIter->definitionLevel;
+	}
+
+	if (!*m_ignoreRealPackagesAttrPtr){
+		RealPackagesMap::ConstIterator foundNormalIter = m_realPackagesMap.constFind(packageId);
+		if (foundNormalIter != m_realPackagesMap.constEnd()){
+			return foundNormalIter->definitionLevel;
+		}
+	}
+
+	return -1;
+}
+
+
 // reimplemented (icomp::IPackagesManager)
 
 bool CRegistriesManagerComp::LoadPackages(const QString& configFilePath)
@@ -52,15 +101,15 @@ bool CRegistriesManagerComp::LoadPackages(const QString& configFilePath)
 	if (!configFilePath.isEmpty()){
 		SendVerboseMessage(QString("Configure component environment using ") + configFilePath);
 	
-		retVal = retVal && LoadConfigFile(configFilePath);
+		retVal = retVal && LoadConfigFile(configFilePath, 0);
 	}
 	else{
 		SendVerboseMessage("Configure component environment using default configuration");
 
-		if (!LoadConfigFile("Default.awc")){
+		if (!LoadConfigFile("Default.awc", 0)){
 			QDir applicationDir = QCoreApplication::applicationDirPath();
-			if (!LoadConfigFile(applicationDir.absoluteFilePath("Default.awc"))){
-				RegisterPackagesDir(applicationDir.absolutePath());
+			if (!LoadConfigFile(applicationDir.absoluteFilePath("Default.awc"), 0)){
+				RegisterPackagesDir(applicationDir.absolutePath(), 0);
 			}
 		}
 	}
@@ -94,13 +143,13 @@ QString CRegistriesManagerComp::GetPackagePath(const QByteArray& packageId) cons
 {
 	CompositePackagesMap::ConstIterator foundCompositeIter = m_compositePackagesMap.constFind(packageId);
 	if (foundCompositeIter != m_compositePackagesMap.constEnd()){
-		return foundCompositeIter.value().directory.absolutePath();
+		return foundCompositeIter->directory.absolutePath();
 	}
 
 	if (!*m_ignoreRealPackagesAttrPtr){
 		RealPackagesMap::ConstIterator foundNormalIter = m_realPackagesMap.constFind(packageId);
 		if (foundNormalIter != m_realPackagesMap.constEnd()){
-			return foundNormalIter.value();
+			return foundNormalIter->filePath;
 		}
 	}
 
@@ -124,37 +173,6 @@ QString CRegistriesManagerComp::GetRegistryPath(const icomp::CComponentAddress& 
 }
 
 
-// reimplemented (icomp::IExtRegistriesManager)
-
-icomp::IExtPackagesManager::PathList CRegistriesManagerComp::GetConfigurationPathList(PathType pathType) const
-{
-	switch (pathType){
-	case PT_CONFIG:
-		return m_usedConfigFilesList;
-
-	case PT_PACKAGES_DIR:
-		return m_usedPackageDirsList;
-
-	case PT_PACKAGE:
-		return m_usedPackageFilesList;
-
-	case PT_REGISTRY:
-		return m_usedRegistryFilesList;
-
-	default:
-		break;
-	}
-
-	PathList retVal;
-	retVal += m_usedConfigFilesList;
-	retVal += m_usedPackageDirsList;
-	retVal += m_usedPackageFilesList;
-	retVal += m_usedRegistryFilesList;
-
-	return retVal;
-}
-
-
 // reimplemented (icomp::IRegistriesManager)
 
 const icomp::IRegistry* CRegistriesManagerComp::GetRegistry(const icomp::CComponentAddress& address, const icomp::IRegistry* contextRegistryPtr) const
@@ -174,6 +192,18 @@ const icomp::IRegistry* CRegistriesManagerComp::GetRegistry(const icomp::CCompon
 	}
 
 	return NULL;
+}
+
+
+// reimplemented (icomp::IComponentListProvider)
+
+icomp::IComponentListProvider::ComponentAddresses CRegistriesManagerComp::GetComponentAddresses(int typeFlag) const
+{
+	ComponentAddresses retVal;
+	if ((typeFlag & CTF_COMPOSITE) != 0){
+	}
+
+	return retVal;
 }
 
 
@@ -205,7 +235,7 @@ const icomp::IRegistry* CRegistriesManagerComp::GetRegistryFromFile(const QStrin
 
 // protected methods
 
-void CRegistriesManagerComp::RegisterPackageFile(const QString& file)
+void CRegistriesManagerComp::RegisterPackageFile(const QString& file, int definitionLevel)
 {
 	QFileInfo fileInfo(file);
 
@@ -216,14 +246,16 @@ void CRegistriesManagerComp::RegisterPackageFile(const QString& file)
 
 		RealPackagesMap::ConstIterator foundIter = m_realPackagesMap.constFind(packageId);
 		if (foundIter == m_realPackagesMap.constEnd()){
-			m_realPackagesMap[packageId] = fileInfo.canonicalFilePath();
+			RealPackageInfo& info = m_realPackagesMap[packageId];
+			info.filePath = fileInfo.canonicalFilePath();
+			info.definitionLevel = definitionLevel;
 		}
-		else if (foundIter.value() != fileInfo.canonicalFilePath()){
+		else if (foundIter->filePath != fileInfo.canonicalFilePath()){
 			SendWarningMessage(
 						MI_CANNOT_REGISTER,
 						QObject::tr("Second real package definition was ignored %1 (previous: %2)")
 									.arg(fileInfo.canonicalFilePath())
-									.arg(foundIter.value()));
+									.arg(foundIter->filePath));
 		}
 	}
 	else if (m_registryLoaderCompPtr.IsValid() && fileInfo.isDir()){
@@ -270,7 +302,7 @@ void CRegistriesManagerComp::RegisterPackageFile(const QString& file)
 }
 
 
-void CRegistriesManagerComp::RegisterPackagesDir(const QString& path)
+void CRegistriesManagerComp::RegisterPackagesDir(const QString& path, int definitionLevel)
 {
 	QDir packagesDir(path);
 
@@ -284,12 +316,12 @@ void CRegistriesManagerComp::RegisterPackagesDir(const QString& path)
 				++iter){
 		QString filePath = packagesDir.absoluteFilePath(*iter);
 
-		RegisterPackageFile(filePath);
+		RegisterPackageFile(filePath, definitionLevel);
 	}
 }
 
 
-bool CRegistriesManagerComp::LoadConfigFile(const QString& configFile)
+bool CRegistriesManagerComp::LoadConfigFile(const QString& configFile, int definitionLevel)
 {
 	QString correctedPath;
 	if (!CheckAndMarkPath(m_usedConfigFilesList, QDir(), configFile, correctedPath)){
@@ -330,14 +362,14 @@ bool CRegistriesManagerComp::LoadConfigFile(const QString& configFile)
 	int configFilesCount = configurationData.GetConfigFilesCount();
 	for (int i = 0; i < configFilesCount; ++i){
 		QString configFilePath = istd::CSystem::GetEnrolledPath(configurationData.GetConfFile(i));
-		retVal = LoadConfigFile(baseDir.absoluteFilePath(configFilePath)) && retVal;
+		retVal = LoadConfigFile(baseDir.absoluteFilePath(configFilePath), definitionLevel + 1) && retVal;
 	}
 
 	int packageDirsCount = configurationData.GetPackageDirsCount();
 	for (int i = 0; i < packageDirsCount; ++i){
 		QString correctedPath;
 		if (CheckAndMarkPath(m_usedPackageDirsList, baseDir, configurationData.GetPackageDir(i), correctedPath)){
-			RegisterPackagesDir(correctedPath);
+			RegisterPackagesDir(correctedPath, definitionLevel);
 		}
 	}
 
@@ -345,7 +377,7 @@ bool CRegistriesManagerComp::LoadConfigFile(const QString& configFile)
 	for (int i = 0; i < packagesCount; ++i){
 		QString correctedPath;
 		if (CheckAndMarkPath(m_usedPackageFilesList, baseDir, configurationData.GetPackage(i), correctedPath)){
-			RegisterPackageFile(correctedPath);
+			RegisterPackageFile(correctedPath, definitionLevel);
 		}
 	}
 
@@ -386,7 +418,7 @@ void CRegistriesManagerComp::OnComponentCreated()
 
 			QString enrolledPath = istd::CSystem::GetEnrolledPath(path);
 
-			LoadConfigFile(applicationDir.absoluteFilePath(enrolledPath));
+			LoadConfigFile(applicationDir.absoluteFilePath(enrolledPath), 0);
 		}
 	}
 }

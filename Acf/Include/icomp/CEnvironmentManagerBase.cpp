@@ -76,9 +76,9 @@ const IRegistry* CEnvironmentManagerBase::GetRegistry(const CComponentAddress& a
 }
 
 
-// reimplemented (icomp::IMetaInfoManager)
+// reimplemented (icomp::IComponentListProvider)
 
-CEnvironmentManagerBase::ComponentAddresses CEnvironmentManagerBase::GetComponentAddresses(int typeFlag) const
+icomp::IComponentListProvider::ComponentAddresses CEnvironmentManagerBase::GetComponentAddresses(int typeFlag) const
 {
 	ComponentAddresses retVal;
 
@@ -117,6 +117,8 @@ CEnvironmentManagerBase::ComponentAddresses CEnvironmentManagerBase::GetComponen
 	return retVal;
 }
 
+
+// reimplemented (icomp::IMetaInfoManager)
 
 const IComponentStaticInfo* CEnvironmentManagerBase::GetComponentMetaInfo(const CComponentAddress& address) const
 {

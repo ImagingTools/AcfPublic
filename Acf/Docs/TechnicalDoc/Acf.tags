@@ -1657,6 +1657,15 @@
     <namespace>icomp</namespace>
   </compound>
   <compound kind="file">
+    <name>IComponentListProvider.h</name>
+    <path>C:/Temp/Acf/Include/icomp/</path>
+    <filename>_i_component_list_provider_8h</filename>
+    <includes id="_i_component_static_info_8h" name="IComponentStaticInfo.h" local="no" imported="no">icomp/IComponentStaticInfo.h</includes>
+    <includes id="_c_component_address_8h" name="CComponentAddress.h" local="no" imported="no">icomp/CComponentAddress.h</includes>
+    <class kind="class">icomp::IComponentListProvider</class>
+    <namespace>icomp</namespace>
+  </compound>
+  <compound kind="file">
     <name>IComponentStaticInfo.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_i_component_static_info_8h</filename>
@@ -1693,9 +1702,8 @@
     <name>IMetaInfoManager.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_i_meta_info_manager_8h</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="no" imported="no">istd/IChangeable.h</includes>
     <includes id="_i_component_static_info_8h" name="IComponentStaticInfo.h" local="no" imported="no">icomp/IComponentStaticInfo.h</includes>
-    <includes id="_c_component_address_8h" name="CComponentAddress.h" local="no" imported="no">icomp/CComponentAddress.h</includes>
+    <includes id="_i_component_list_provider_8h" name="IComponentListProvider.h" local="no" imported="no">icomp/IComponentListProvider.h</includes>
     <class kind="class">icomp::IMetaInfoManager</class>
     <namespace>icomp</namespace>
   </compound>
@@ -1729,7 +1737,7 @@
     <name>IRegistriesManager.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_i_registries_manager_8h</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="no" imported="no">istd/IChangeable.h</includes>
+    <includes id="_i_component_list_provider_8h" name="IComponentListProvider.h" local="no" imported="no">icomp/IComponentListProvider.h</includes>
     <class kind="class">icomp::IRegistriesManager</class>
     <namespace>icomp</namespace>
   </compound>
@@ -22878,6 +22886,7 @@
     <class kind="class">icomp::IComponentContext</class>
     <class kind="class">icomp::IComponentEnvironmentManager</class>
     <class kind="class">icomp::IComponentInterfaceExtractor</class>
+    <class kind="class">icomp::IComponentListProvider</class>
     <class kind="class">icomp::IComponentStaticInfo</class>
     <class kind="class">icomp::ICompositeComponent</class>
     <class kind="class">icomp::IElementStaticInfo</class>
@@ -23186,36 +23195,36 @@
     <member kind="enumeration">
       <type></type>
       <name>ComponentTypeFlag</name>
-      <anchorfile>classicomp_1_1_i_meta_info_manager.html</anchorfile>
-      <anchor>a9b6818ea2ee2385a8216f49aef6a14ca</anchor>
+      <anchorfile>classicomp_1_1_i_component_list_provider.html</anchorfile>
+      <anchor>aa3261121bb6440150c49f2669496c624</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>CTF_REAL</name>
-      <anchorfile>classicomp_1_1_i_meta_info_manager.html</anchorfile>
-      <anchor>a9b6818ea2ee2385a8216f49aef6a14caa23acc0649bb33b35334fccb4616e475f</anchor>
+      <anchorfile>classicomp_1_1_i_component_list_provider.html</anchorfile>
+      <anchor>aa3261121bb6440150c49f2669496c624a412f563da5f769d34411363a6dc10766</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>CTF_COMPOSITE</name>
-      <anchorfile>classicomp_1_1_i_meta_info_manager.html</anchorfile>
-      <anchor>a9b6818ea2ee2385a8216f49aef6a14caa188a6fe4944a4ea45503873768b2a520</anchor>
+      <anchorfile>classicomp_1_1_i_component_list_provider.html</anchorfile>
+      <anchor>aa3261121bb6440150c49f2669496c624aef7cfbd4788bb161e5e6ec18649e3938</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>CTF_ALL</name>
-      <anchorfile>classicomp_1_1_i_meta_info_manager.html</anchorfile>
-      <anchor>a9b6818ea2ee2385a8216f49aef6a14caa15594ca56ac70e36ac74a0e9ea3f8a3b</anchor>
+      <anchorfile>classicomp_1_1_i_component_list_provider.html</anchorfile>
+      <anchor>aa3261121bb6440150c49f2669496c624acba3d20611acee0ca4db2579f8212be7</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>QSet&lt; CComponentAddress &gt;</type>
       <name>ComponentAddresses</name>
-      <anchorfile>classicomp_1_1_i_meta_info_manager.html</anchorfile>
-      <anchor>a5cec64ff37d3ef338014d19e48ee5cab</anchor>
+      <anchorfile>classicomp_1_1_i_component_list_provider.html</anchorfile>
+      <anchor>a6784e0e1edf1408d47889b46ca8bc49f</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -25131,8 +25140,8 @@
     <member kind="function" virtualness="pure">
       <type>virtual ComponentAddresses</type>
       <name>GetComponentAddresses</name>
-      <anchorfile>classicomp_1_1_i_meta_info_manager.html</anchorfile>
-      <anchor>a46425bee260914706997333a1a362b1c</anchor>
+      <anchorfile>classicomp_1_1_i_component_list_provider.html</anchorfile>
+      <anchor>ac0c4692173b55479c468e675f9e323bb</anchor>
       <arglist>(int typeFlag=CTF_ALL) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -25161,6 +25170,11 @@
       <anchor>a149a3f42a339a288b146814e1c50b78b</anchor>
       <arglist>(const istd::CClassInfo &amp;interfaceType, IComponent &amp;component, const QByteArray &amp;subId) const =0</arglist>
     </member>
+  </compound>
+  <compound kind="class">
+    <name>icomp::IComponentListProvider</name>
+    <filename>classicomp_1_1_i_component_list_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
   </compound>
   <compound kind="class">
     <name>icomp::IComponentStaticInfo</name>
@@ -25315,11 +25329,18 @@
       <anchor>a92e6c507f7ba102e75b4b9cda6ccc354</anchor>
       <arglist>(PathType pathType) const =0</arglist>
     </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetPackageDefinitionLevel</name>
+      <anchorfile>classicomp_1_1_i_ext_packages_manager.html</anchorfile>
+      <anchor>a84370cf90b1259fc38558a8db67a7173</anchor>
+      <arglist>(const QByteArray &amp;packageId) const =0</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>icomp::IMetaInfoManager</name>
     <filename>classicomp_1_1_i_meta_info_manager.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
+    <base virtualness="virtual">icomp::IComponentListProvider</base>
   </compound>
   <compound kind="class">
     <name>icomp::IPackagesManager</name>
@@ -25361,7 +25382,7 @@
   <compound kind="class">
     <name>icomp::IRegistriesManager</name>
     <filename>classicomp_1_1_i_registries_manager.html</filename>
-    <base virtualness="virtual">istd::IChangeable</base>
+    <base virtualness="virtual">icomp::IComponentListProvider</base>
   </compound>
   <compound kind="class">
     <name>icomp::IRegistry</name>
@@ -42641,6 +42662,20 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual PathList</type>
+      <name>GetConfigurationPathList</name>
+      <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
+      <anchor>af292494f123bd950012338fa9081f0bb</anchor>
+      <arglist>(PathType pathType) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPackageDefinitionLevel</name>
+      <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
+      <anchor>ad9585f3090c57d1fe7a5e781fc33f925</anchor>
+      <arglist>(const QByteArray &amp;packageId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>LoadPackages</name>
       <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
@@ -42669,18 +42704,18 @@
       <arglist>(const icomp::CComponentAddress &amp;address) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual PathList</type>
-      <name>GetConfigurationPathList</name>
-      <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>af292494f123bd950012338fa9081f0bb</anchor>
-      <arglist>(PathType pathType) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual const icomp::IRegistry *</type>
       <name>GetRegistry</name>
       <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
       <anchor>ae01aba15987aa766562a7ff7ec4575c5</anchor>
       <arglist>(const icomp::CComponentAddress &amp;address, const icomp::IRegistry *contextRegistryPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ComponentAddresses</type>
+      <name>GetComponentAddresses</name>
+      <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
+      <anchor>a861e2a6c7f9ee7ee7c97f26b4f9d7ce9</anchor>
+      <arglist>(int typeFlag=CTF_ALL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const icomp::IRegistry *</type>
@@ -42693,22 +42728,22 @@
       <type>void</type>
       <name>RegisterPackageFile</name>
       <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>aa369781b1cbf8713a541e8682bd5a02a</anchor>
-      <arglist>(const QString &amp;file)</arglist>
+      <anchor>ab6477acb62073e72ca2831f49b910887</anchor>
+      <arglist>(const QString &amp;file, int definitionLevel)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>RegisterPackagesDir</name>
       <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>a3d24bdc6d34bac8f829aa0861db00921</anchor>
-      <arglist>(const QString &amp;subDir)</arglist>
+      <anchor>a27c0887dbfb697ea70b8d7a424d5dda8</anchor>
+      <arglist>(const QString &amp;subDir, int definitionLevel)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>LoadConfigFile</name>
       <anchorfile>classipackage_1_1_c_registries_manager_comp.html</anchorfile>
-      <anchor>a788836068b3a14736c37473be03d84a7</anchor>
-      <arglist>(const QString &amp;configFile)</arglist>
+      <anchor>a672f4b87ee154fb9905b11c9825a963b</anchor>
+      <arglist>(const QString &amp;configFile, int definitionLevel)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -42925,6 +42960,13 @@
       <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
       <anchor>a120fd2421c05dda35ddd439f9095b23a</anchor>
       <arglist>(const icomp::IRegistry &amp;registry, bool &amp;translationFound, QTextStream &amp;stream) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WritePackagesTranslation</name>
+      <anchorfile>classipackage_1_1_c_registry_code_saver_comp.html</anchorfile>
+      <anchor>a15331f6fc68803bef08bf4ad8a93d9c4</anchor>
+      <arglist>(int level, bool &amp;translationFound, QTextStream &amp;stream) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -74482,6 +74524,7 @@
     <file>IComponentContext.h</file>
     <file>IComponentEnvironmentManager.h</file>
     <file>IComponentInterfaceExtractor.h</file>
+    <file>IComponentListProvider.h</file>
     <file>IComponentStaticInfo.h</file>
     <file>ICompositeComponent.h</file>
     <file>IElementStaticInfo.h</file>
