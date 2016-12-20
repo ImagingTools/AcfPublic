@@ -68,7 +68,6 @@
 					<EnvironmentVariable Name="ACFDIR" Value="$BUILD_PRODUCT_FOLDER\3rdParty\AcfPublic\Acf"/>
 					<EnvironmentVariable Name="QTDIR" Value="$CONFIG_QTDIR_WINOS"/>
 					<EnvironmentVariable Name="PATH" Value="%PATH%;$CONFIG_QTDIR_WINOS\Bin"/>
-          <EnvironmentVariable Name="ACFDIR_BUILD" Value="$BUILD_MODULE_TEMP_FOLDER/Acf"/>
         </NMake>
 			</Build>
 			<Build IfPlatform="MacOS">
@@ -77,7 +76,6 @@
 					<EnvironmentVariable Name="ACFDIR" Value="$BUILD_PRODUCT_FOLDER/3rdParty/AcfPublic/Acf"/>
 					<EnvironmentVariable Name="QTDIR" Value="$CONFIG_QTDIR_MACOS"/>
 					<EnvironmentVariable Name="PATH" Value="$PATH:$CONFIG_QTDIR_MACOS/Bin"/>
-          <EnvironmentVariable Name="ACFDIR_BUILD" Value="$BUILD_MODULE_TEMP_FOLDER/Acf"/>
         </Make>
 			</Build>
 		</Build>
@@ -158,22 +156,28 @@
 				<Build IfArchitecture="x86">
 					<NMake Makefile="Acf/Build/QMake/Makefile" Version="2013" WorkingDirectory="$BUILD_MODULE_TEMP_FOLDER/">
 						<EnvironmentVariable Name="QTDIR" Value="$BUILD_PRODUCT_FOLDER\3rdParty\QtLibraries\msvc2013"/>
-					</NMake>
+            <EnvironmentVariable Name="ACFDIR_BUILD" Value="$BUILD_MODULE_TEMP_FOLDER/Acf"/>
+          </NMake>
 				</Build>
 				<Build IfArchitecture="x64">
 					<NMake Makefile="Acf/Build/QMake/Makefile" Version="2013" WorkingDirectory="$BUILD_MODULE_TEMP_FOLDER/">
 						<EnvironmentVariable Name="QTDIR" Value="$BUILD_PRODUCT_FOLDER\3rdParty\QtLibraries\msvc2013_64"/>
-					</NMake>
+            <EnvironmentVariable Name="ACFDIR_BUILD" Value="$BUILD_MODULE_TEMP_FOLDER/Acf"/>
+          </NMake>
 				</Build>
 			</Build>
 
-			<!-- shadow build for OSX -->
-			<Build IfPlatform="MacOS">
-				<QMakeToMakefile Project="Acf/Build/QMake/AcfAll.pro" Version="5.6" ShadowBuildFolder="$BUILD_MODULE_TEMP_FOLDER/Acf/Build/QMake/"/>
-				<Make WorkingDirectory="$BUILD_MODULE_TEMP_FOLDER/Acf/Build/QMake/"/>
-			</Build>
+      <!-- shadow build for OSX -->
+      <Build IfPlatform="MacOS">
+        <QMakeToMakefile Project="Acf/Build/QMake/AcfAll.pro" Version="5.6" ShadowBuildFolder="$BUILD_MODULE_TEMP_FOLDER/Acf/Build/QMake/">
+          <EnvironmentVariable Name="ACFDIR_BUILD" Value="$BUILD_MODULE_TEMP_FOLDER/Acf"/>
+        </QMakeToMakefile>
+        <Make WorkingDirectory="$BUILD_MODULE_TEMP_FOLDER/Acf/Build/QMake/">
+          <EnvironmentVariable Name="ACFDIR_BUILD" Value="$BUILD_MODULE_TEMP_FOLDER/Acf"/>
+        </Make>
+      </Build>
 
-		</Build>
+    </Build>
 
 		<Build IfTarget="AcfSln2013">
 			<Build IfPlatform="WinOS">
