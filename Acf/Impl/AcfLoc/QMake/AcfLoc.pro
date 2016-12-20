@@ -21,6 +21,6 @@ ACFDIRBUILD = $$(ACFDIR_BUILD)
 	INCLUDEPATH += $$(ACFDIR_BUILD)/$$AUXINCLUDEDIR
 }
 
-message("BUILD DIR: " $$ACFDIRBUILD);
+message("BUILD DIR2: " $$ACFDIRBUILD);
 
 include(../../../Config/QMake/CustomBuild.pri)
