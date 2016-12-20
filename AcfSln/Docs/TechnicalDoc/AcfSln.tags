@@ -24744,6 +24744,20 @@
       <anchor>ad18327d1f372363d799dff5ac1ddf951</anchor>
       <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_TEXTATTR</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>ac0e4fddcdc7fe6dd9281762d8a0fd9fa</anchor>
+      <arglist>(m_commandNameAttrPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_TEXTATTR</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>ad2f532e1c3ed5b9184dbd6d8b0765dc6</anchor>
+      <arglist>(m_menuNameAttrPtr)</arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CDocumentProcessingManagerCompBase</name>
@@ -24873,6 +24887,48 @@
       <anchorfile>classiprocgui_1_1_c_processor_command_comp.html</anchorfile>
       <anchor>a8be49e72d3adebf7c9d48396f601f10e</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_TEXTATTR</name>
+      <anchorfile>classiprocgui_1_1_c_processor_command_comp.html</anchorfile>
+      <anchor>a78979015583c6cbbff327423289fb77d</anchor>
+      <arglist>(m_menuNameAttrPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_TEXTATTR</name>
+      <anchorfile>classiprocgui_1_1_c_processor_command_comp.html</anchorfile>
+      <anchor>a7d5db7188ede35f70027efce8806ef36</anchor>
+      <arglist>(m_menuDescriptionAttrPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_TEXTATTR</name>
+      <anchorfile>classiprocgui_1_1_c_processor_command_comp.html</anchorfile>
+      <anchor>a54f4ab596b238a97d4a7f11b4dd4e094</anchor>
+      <arglist>(m_rootMenuNameAttrPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_TEXTATTR</name>
+      <anchorfile>classiprocgui_1_1_c_processor_command_comp.html</anchorfile>
+      <anchor>aa0bcb9d58d12965268e98b9c306eaec0</anchor>
+      <arglist>(m_successMessageAttrPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_TEXTATTR</name>
+      <anchorfile>classiprocgui_1_1_c_processor_command_comp.html</anchorfile>
+      <anchor>a14e9d7c9d4b090d52c54495097a4ea9d</anchor>
+      <arglist>(m_errorMessageAttrPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_TEXTATTR</name>
+      <anchorfile>classiprocgui_1_1_c_processor_command_comp.html</anchorfile>
+      <anchor>aad7be1f961d1ebc85dea03c4d289aedd</anchor>
+      <arglist>(m_cancelMessageAttrPtr)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>iqtgui::CHierarchicalCommand</type>
@@ -26607,6 +26663,13 @@
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp_base.html</anchorfile>
       <anchor>a0826b1dc6a7362db434d747d51dc5838</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_MULTITEXTATTR</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp_base.html</anchorfile>
+      <anchor>ae30afb46aa6a50752709f990e1db88d4</anchor>
+      <arglist>(m_namesAttrPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">

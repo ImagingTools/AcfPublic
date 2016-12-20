@@ -96,7 +96,7 @@ private:
 	I_ATTR(bool, m_allowAddRemoveAttrPtr);
 	I_ATTR(bool, m_allowUpDownAttrPtr);
 	I_ATTR(int, m_iconSizeAttrPtr);
-	I_ATTR(QString, m_defaultOptionNameAttrPtr);
+	I_TEXTATTR(m_defaultOptionNameAttrPtr);
 	I_REF(ifile::IFilePersistence, m_paramsLoaderCompPtr);
 
 	mutable int m_lastSelectedIndex;

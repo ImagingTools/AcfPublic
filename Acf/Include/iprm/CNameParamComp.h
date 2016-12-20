@@ -62,7 +62,7 @@ protected:
 	virtual void OnComponentCreated();
 
 private:
-	I_ATTR(QString, m_defaultNameAttrPtr);
+	I_TEXTATTR(m_defaultNameAttrPtr);
 	I_ATTR(bool, m_isNameFixedAttrPtr);
 };
 

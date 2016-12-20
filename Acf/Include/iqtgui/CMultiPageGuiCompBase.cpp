@@ -46,20 +46,59 @@ CMultiPageGuiCompBase::CMultiPageGuiCompBase()
 }
 
 
-// protected methods
-
-int CMultiPageGuiCompBase::AddPageToContainerWidget(iqtgui::IGuiObject& pageGui, const QString& pageTitle)
+bool CMultiPageGuiCompBase::IsPageCreated(int index) const
 {
-	QWidget* pageContainerPtr = new QWidget(GetWidget());
+	if (index >= m_pageCreatedFlags.count()){
+		return false;
+	}
+
+	return m_pageCreatedFlags[index];
+}
+
+
+void CMultiPageGuiCompBase::SetPageCreated(int index)
+{
+	if (index >= m_pageCreatedFlags.count()){
+		m_pageCreatedFlags.resize(index + 1);
+	}
+
+	m_pageCreatedFlags[index] = true;
+}
+
+
+void CMultiPageGuiCompBase::InitPageGui(int pageIndex)
+{
+	iqtgui::IGuiObject* pageGuiPtr = GetPageGuiComponent(pageIndex);
+
+	if (pageGuiPtr == NULL || IsPageCreated(pageIndex)){
+		return;
+	}
+
+	iwidgets::CMultiPageWidget* multiPageWidgetPtr = dynamic_cast<iwidgets::CMultiPageWidget*>(GetWidget());
+	Q_ASSERT(multiPageWidgetPtr != NULL);
+
+	QWidget* pageContainerPtr = multiPageWidgetPtr->GetPageWidgetPtr(pageIndex);
+	Q_ASSERT(pageContainerPtr != NULL);
+
 	QVBoxLayout* pageContainerLayoutPtr = new QVBoxLayout(pageContainerPtr);
 	pageContainerLayoutPtr->setMargin(0);
 
-	if (pageGui.GetWidget() != NULL){
-		pageContainerLayoutPtr->addWidget(pageGui.GetWidget());
+	if (pageGuiPtr->GetWidget() != NULL){
+		pageContainerLayoutPtr->addWidget(pageGuiPtr->GetWidget());
 	}
 	else{
-		pageGui.CreateGui(pageContainerPtr);
+		pageGuiPtr->CreateGui(pageContainerPtr);
 	}
+
+	SetPageCreated(pageIndex);
+}
+
+
+// protected methods
+
+int CMultiPageGuiCompBase::AddPageToContainerWidget(const QString& pageTitle)
+{
+	QWidget* pageContainerPtr = new QWidget(GetWidget());
 
 	iwidgets::CMultiPageWidget* multiPageWidgetPtr = dynamic_cast<iwidgets::CMultiPageWidget*>(GetWidget());
 	Q_ASSERT(multiPageWidgetPtr != NULL);
@@ -84,7 +123,7 @@ bool CMultiPageGuiCompBase::CreatePage(int guiIndex)
 	if (guiPtr != NULL){
 		QString pageTitle = GetPageGuiName(*guiPtr);
 
-		int pageIndex = AddPageToContainerWidget(*guiPtr, pageTitle);
+		int pageIndex = AddPageToContainerWidget(pageTitle);
 		if (pageIndex < 0){
 			pageIndex = guiIndex;
 		}
@@ -168,15 +207,25 @@ void CMultiPageGuiCompBase::UpdateVisualElements()
 
 void CMultiPageGuiCompBase::CreatePages()
 {
+	bool isLazyInit = *m_lazyPagesInitializationAttrPtr;
+
+	bool firstPageInitialized = false;
+
 	int pagesCount = GetPagesCount();
 	for (int pageIndex = 0; pageIndex < pagesCount; pageIndex++){
 		CreatePage(pageIndex);
-	}
 
-	for (int pageIndex = 0; pageIndex < pagesCount; pageIndex++){
-		if (m_pageModel.IsOptionEnabled(pageIndex)){
+		if (!firstPageInitialized && m_pageModel.IsOptionEnabled(pageIndex)){
+			firstPageInitialized = true;
 			m_pageModel.SetSelectedOptionIndex(pageIndex);
-			break;
+
+			if (isLazyInit){
+				InitPageGui(pageIndex);
+			}
+		}
+
+		if (!isLazyInit){
+			InitPageGui(pageIndex);
 		}
 	}
 
@@ -194,7 +243,7 @@ void CMultiPageGuiCompBase::ResetPages()
 	int pagesCount = GetPagesCount();
 	for (int pageIndex = 0; pageIndex < pagesCount; pageIndex++){
 		iqtgui::IGuiObject* guiPtr = GetPageGuiComponent(pageIndex);
-		if (guiPtr != NULL){
+		if ((guiPtr != NULL) && IsPageCreated(pageIndex)){
 			guiPtr->DestroyGui();
 		}
 	}
@@ -203,6 +252,8 @@ void CMultiPageGuiCompBase::ResetPages()
 	Q_ASSERT(multiPageWidgetPtr != NULL);
 
 	multiPageWidgetPtr->ResetPages();
+
+	m_pageCreatedFlags.clear();
 }
 
 
@@ -307,6 +358,10 @@ void CMultiPageGuiCompBase::OnModelChanged(int /*modelId*/, const istd::IChangea
 
 void CMultiPageGuiCompBase::OnPageChanged(int pageIndex)
 {
+	if ((pageIndex > 0) && !IsPageCreated(pageIndex)){
+		InitPageGui(pageIndex);
+	}
+
 	m_pageModel.SetSelectedOptionIndex(pageIndex);
 }
 

@@ -1374,6 +1374,20 @@
     </member>
     <member kind="define">
       <type>#define</type>
+      <name>I_TEXTATTR</name>
+      <anchorfile>group___component_concept.html</anchorfile>
+      <anchor>gabb49e69eb4851a9615c5c8b3fc4ab21d</anchor>
+      <arglist>(member)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>I_MULTITEXTATTR</name>
+      <anchorfile>group___component_concept.html</anchorfile>
+      <anchor>gab92a04f1b939ed5a373dda69611b0e1f</anchor>
+      <arglist>(member)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
       <name>I_TFACT</name>
       <anchorfile>_c_component_base_8h.html</anchorfile>
       <anchor>a91a1c623c0ea9f2fb0a37e19e1280f09</anchor>
@@ -7140,6 +7154,20 @@
     <class kind="class">icomp::TModelCompWrap</class>
     <class kind="class">icomp::TSimComponentsFactory</class>
     <class kind="class">icomp::TSimComponentWrap</class>
+    <member kind="define">
+      <type>#define</type>
+      <name>I_TEXTATTR</name>
+      <anchorfile>group___component_concept.html</anchorfile>
+      <anchor>gabb49e69eb4851a9615c5c8b3fc4ab21d</anchor>
+      <arglist>(member)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>I_MULTITEXTATTR</name>
+      <anchorfile>group___component_concept.html</anchorfile>
+      <anchor>gab92a04f1b939ed5a373dda69611b0e1f</anchor>
+      <arglist>(member)</arglist>
+    </member>
   </compound>
   <compound kind="group">
     <name>ApplicationFramework</name>
@@ -33870,6 +33898,13 @@
       <anchor>a54789eec0a1c05ae5719c417fe2270af</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_TEXTATTR</name>
+      <anchorfile>classifilegui_1_1_c_file_preview_gui_comp.html</anchorfile>
+      <anchor>a627e4b0ce3ebffdcc43287fbeadbaafb</anchor>
+      <arglist>(m_noAvailableLabelAttrPtr)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual ifile::IFileNameParam *</type>
       <name>CastFromModel</name>
@@ -43913,6 +43948,27 @@
       <anchor>ad1cc5217a9e5fdc7a2d8a3cd1736c948</anchor>
       <arglist>(const QString &amp;name) const </arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_MULTITEXTATTR</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_attr.html</anchorfile>
+      <anchor>a4548c147ffd0dbd00181c7f27a553348</anchor>
+      <arglist>(m_fixedSetNamesAttrPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_MULTITEXTATTR</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_attr.html</anchorfile>
+      <anchor>a31754cf6d0d7d9544d1a8cdc006cb238</anchor>
+      <arglist>(m_fixedSetDescriptionsAttrPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_TEXTATTR</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_attr.html</anchorfile>
+      <anchor>a5ae38643217b374510fe9a02df23723f</anchor>
+      <arglist>(m_defaultSetNameAttrPtr)</arglist>
+    </member>
     <member kind="typedef" protection="protected">
       <type>istd::TDelPtr&lt; ParamSet &gt;</type>
       <name>ParamSetPtr</name>
@@ -47638,6 +47694,13 @@
       <anchor>a7dab5727abe8a52b56bfe2040c54e240</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_MULTITEXTATTR</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a15972710eefa8f70f1d426f9561d9b46</anchor>
+      <arglist>(m_viewLabelPrefixesAttrPtr)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
@@ -50675,6 +50738,20 @@
       <anchor>aca1127338a71fa7912562977c935050a</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_TEXTATTR</name>
+      <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
+      <anchor>a087c6c92dd9b37ae6f77def3c06d3974</anchor>
+      <arglist>(m_importCommandNameAttrPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_TEXTATTR</name>
+      <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
+      <anchor>afad46fae69f47a204da7bfb1a31c8111</anchor>
+      <arglist>(m_exportCommandNameAttrPtr)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual idoc::IDocumentManager *</type>
       <name>CastFromModel</name>
@@ -52700,6 +52777,13 @@
       <anchor>a0c33657f979f6d3d3094cdf4733aaee5</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_MULTITEXTATTR</name>
+      <anchorfile>classiqtgui_1_1_c_about_widget_gui_comp.html</anchorfile>
+      <anchor>a60646af10b6c9544c9bd4fd3d704b463</anchor>
+      <arglist>(m_versionNamesAttrPtr)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtgui::CApplicationCompBase</name>
@@ -52857,6 +52941,34 @@
       <anchorfile>classiqtgui_1_1_c_command_based_selection_controller_comp.html</anchorfile>
       <anchor>a7e2e7fc2db6d6445ef5a7d657ebe7fa9</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_TEXTATTR</name>
+      <anchorfile>classiqtgui_1_1_c_command_based_selection_controller_comp.html</anchorfile>
+      <anchor>ab7a3711499f98ee8532387933a2e8096</anchor>
+      <arglist>(m_noSelectionCommandAttrPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_TEXTATTR</name>
+      <anchorfile>classiqtgui_1_1_c_command_based_selection_controller_comp.html</anchorfile>
+      <anchor>a520f2e06a7c33cc000fc6966c46948a1</anchor>
+      <arglist>(m_menuNameAttrPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_TEXTATTR</name>
+      <anchorfile>classiqtgui_1_1_c_command_based_selection_controller_comp.html</anchorfile>
+      <anchor>adf17f3fcead05fa9350edf44a6f22050</anchor>
+      <arglist>(m_menuDescriptionAttrPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_TEXTATTR</name>
+      <anchorfile>classiqtgui_1_1_c_command_based_selection_controller_comp.html</anchorfile>
+      <anchor>a41111d9a60a0f4887f23f5401d6d15e0</anchor>
+      <arglist>(m_rootMenuNameAttrPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -53303,8 +53415,8 @@
       <type>virtual int</type>
       <name>AddPageToContainerWidget</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
-      <anchor>ac1793aecf0a2c28cfcc61033a8c09123</anchor>
-      <arglist>(iqtgui::IGuiObject &amp;pageGui, const QString &amp;pageTitle)</arglist>
+      <anchor>aa43837b961ff7c7d1907382e590173ca</anchor>
+      <arglist>(const QString &amp;pageTitle)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QString</type>
@@ -53389,6 +53501,34 @@
       <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
       <anchor>ab46f12bb2f259dcac1525b276ef12740</anchor>
       <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>IsPageCreated</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a7dea7f9ad1a9afcde6d8c723e810fe7b</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetPageCreated</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a587e52c8e5197beab330f53f5b946f52</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>InitPageGui</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a8d2fbbb9f06dd9da80b7a979eeb0649f</anchor>
+      <arglist>(int pageIndex)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_MULTITEXTATTR</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>aeabfeb92945256eb64481c4ade137a0b</anchor>
+      <arglist>(m_pageNamesAttrPtr)</arglist>
     </member>
     <member kind="slot" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -53614,6 +53754,13 @@
       <anchorfile>classiqtgui_1_1_c_free_widget_gui_comp.html</anchorfile>
       <anchor>a4b641824af9ccb71c5107ae9f90c4935</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_TEXTATTR</name>
+      <anchorfile>classiqtgui_1_1_c_free_widget_gui_comp.html</anchorfile>
+      <anchor>a219f1b4047dc5112d023b894551898c6</anchor>
+      <arglist>(m_titleAttrPtr)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; QMainWindow &gt;</type>
@@ -58259,6 +58406,13 @@
       <anchorfile>classiqtprm_1_1_c_selectable_gui_comp.html</anchorfile>
       <anchor>a458f8e8d6f1f73a9a3c8f24bfaea6d88</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_TEXTATTR</name>
+      <anchorfile>classiqtprm_1_1_c_selectable_gui_comp.html</anchorfile>
+      <anchor>aac7c0dd3c6a608f10bfb6d54c831d59b</anchor>
+      <arglist>(m_noSelectionLabelAttrPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">

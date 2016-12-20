@@ -50,8 +50,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iqtprm", "..\..\Include\iqt
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ipackage", "..\..\Include\ipackage\VC10\ipackage.vcxproj", "{0B2A6FCA-9AD0-31BB-8D05-2186413FC5AE}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AcfLoc", "..\..\Impl\AcfLoc\VC10\AcfLoc.vcxproj", "{71B59564-578B-3667-BA0C-C7E523C901B7}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BasePck", "..\..\Impl\BasePck\VC10\BasePck.vcxproj", "{CDC5947E-3600-386D-9B48-4EA9D4C10589}"
 	ProjectSection(ProjectDependencies) = postProject
 		{2EE5153E-E259-32CB-A21C-E154E2BEEE31} = {2EE5153E-E259-32CB-A21C-E154E2BEEE31}
@@ -306,6 +304,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Arxc", "..\..\Impl\ArxcExe\
 		{8B40305C-FC93-38BE-9387-209E1616F9BF} = {8B40305C-FC93-38BE-9387-209E1616F9BF}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AcfLoc", "..\..\Impl\AcfLoc\VC10\AcfLoc.vcxproj", "{71B59564-578B-3667-BA0C-C7E523C901B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -412,10 +412,6 @@ Global
 		{0B2A6FCA-9AD0-31BB-8D05-2186413FC5AE}.Debug|Win32.Build.0 = Debug|Win32
 		{0B2A6FCA-9AD0-31BB-8D05-2186413FC5AE}.Release|Win32.ActiveCfg = Release|Win32
 		{0B2A6FCA-9AD0-31BB-8D05-2186413FC5AE}.Release|Win32.Build.0 = Release|Win32
-		{71B59564-578B-3667-BA0C-C7E523C901B7}.Debug|Win32.ActiveCfg = Debug|Win32
-		{71B59564-578B-3667-BA0C-C7E523C901B7}.Debug|Win32.Build.0 = Debug|Win32
-		{71B59564-578B-3667-BA0C-C7E523C901B7}.Release|Win32.ActiveCfg = Release|Win32
-		{71B59564-578B-3667-BA0C-C7E523C901B7}.Release|Win32.Build.0 = Release|Win32
 		{CDC5947E-3600-386D-9B48-4EA9D4C10589}.Debug|Win32.ActiveCfg = Debug|Win32
 		{CDC5947E-3600-386D-9B48-4EA9D4C10589}.Debug|Win32.Build.0 = Debug|Win32
 		{CDC5947E-3600-386D-9B48-4EA9D4C10589}.Release|Win32.ActiveCfg = Release|Win32
@@ -456,6 +452,10 @@ Global
 		{F7AC55DA-5E3E-3189-B5C3-887D726A8E84}.Debug|Win32.Build.0 = Debug|Win32
 		{F7AC55DA-5E3E-3189-B5C3-887D726A8E84}.Release|Win32.ActiveCfg = Release|Win32
 		{F7AC55DA-5E3E-3189-B5C3-887D726A8E84}.Release|Win32.Build.0 = Release|Win32
+		{71B59564-578B-3667-BA0C-C7E523C901B7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{71B59564-578B-3667-BA0C-C7E523C901B7}.Debug|Win32.Build.0 = Debug|Win32
+		{71B59564-578B-3667-BA0C-C7E523C901B7}.Release|Win32.ActiveCfg = Release|Win32
+		{71B59564-578B-3667-BA0C-C7E523C901B7}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 	EndGlobalSection

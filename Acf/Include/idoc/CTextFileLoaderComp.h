@@ -69,7 +69,7 @@ public:
 
 private:
 	I_MULTIATTR(QString, m_fileExtensionsAttrPtr);
-	I_MULTIATTR(QString, m_typeDescriptionsAttrPtr);
+	I_MULTITEXTATTR(m_typeDescriptionsAttrPtr);
 };
 
 
