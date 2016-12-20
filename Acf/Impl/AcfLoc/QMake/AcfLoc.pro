@@ -14,4 +14,10 @@ ARXC_CONFIG = $$PWD/../../../Config/AcfConfig.awc
 ARXC_FILES += $$PWD/../*.acc
 ARXC_OUTDIR = $$OUT_PWD/$$AUXINCLUDEPATH/GeneratedFiles/$$TARGET
 
+
+# Get build output directory of shadow build:
+ACFDIRBUILD = $$(ACFDIR_BUILD)
+!isEmpty(ACFDIRBUILD){
+	INCLUDEPATH += $$(ACFDIR_BUILD)/$$AUXINCLUDEDIR
+}
 include(../../../Config/QMake/CustomBuild.pri)
