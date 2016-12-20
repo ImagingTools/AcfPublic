@@ -14,4 +14,4 @@ ARXC_CONFIG = $$PWD/../../../Config/AcfConfig.awc
 ARXC_FILES += $$PWD/../*.acc
 ARXC_OUTDIR = $$OUT_PWD/$$AUXINCLUDEPATH/GeneratedFiles/$$TARGET
 
-include(../../../../Acf/Config/QMake/CustomBuild.pri)
+include(../../../Config/QMake/CustomBuild.pri)

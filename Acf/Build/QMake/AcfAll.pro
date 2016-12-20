@@ -122,3 +122,4 @@ ipackage.file = ../../Include/ipackage/QMake/ipackage.pro
 
 SUBDIRS += AcfLoc
 AcfLoc.file = ../../Impl/AcfLoc/QMake/AcfLoc.pro
+AcfLoc.depends = Arxc
