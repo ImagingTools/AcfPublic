@@ -68,7 +68,8 @@
 					<EnvironmentVariable Name="ACFDIR" Value="$BUILD_PRODUCT_FOLDER\3rdParty\AcfPublic\Acf"/>
 					<EnvironmentVariable Name="QTDIR" Value="$CONFIG_QTDIR_WINOS"/>
 					<EnvironmentVariable Name="PATH" Value="%PATH%;$CONFIG_QTDIR_WINOS\Bin"/>
-				</NMake>
+          <EnvironmentVariable Name="ACFDIR_BUILD" Value="$BUILD_MODULE_TEMP_FOLDER/Acf"/>
+        </NMake>
 			</Build>
 			<Build IfPlatform="MacOS">
 				<QMakeToMakefile Project="Acf/Build/QMake/AcfAll.pro"/>
@@ -76,7 +77,8 @@
 					<EnvironmentVariable Name="ACFDIR" Value="$BUILD_PRODUCT_FOLDER/3rdParty/AcfPublic/Acf"/>
 					<EnvironmentVariable Name="QTDIR" Value="$CONFIG_QTDIR_MACOS"/>
 					<EnvironmentVariable Name="PATH" Value="$PATH:$CONFIG_QTDIR_MACOS/Bin"/>
-				</Make>
+          <EnvironmentVariable Name="ACFDIR_BUILD" Value="$BUILD_MODULE_TEMP_FOLDER/Acf"/>
+        </Make>
 			</Build>
 		</Build>
 
