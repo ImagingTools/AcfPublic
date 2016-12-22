@@ -186,6 +186,14 @@
     <namespace>icalib</namespace>
   </compound>
   <compound kind="file">
+    <name>CSimpleLensCorrectionEditorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/icalibgui/</path>
+    <filename>_c_simple_lens_correction_editor_comp_8h</filename>
+    <includes id="_c_simple_lens_correction_8h" name="CSimpleLensCorrection.h" local="no" imported="no">icalib/CSimpleLensCorrection.h</includes>
+    <class kind="class">icalibgui::CSimpleLensCorrectionEditorComp</class>
+    <namespace>icalibgui</namespace>
+  </compound>
+  <compound kind="file">
     <name>CAcquisitionConstraintsComp.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_acquisition_constraints_comp_8h</filename>
@@ -5858,6 +5866,73 @@
       <anchorfile>classicalib_1_1_c_simple_lens_correction_comp.html</anchorfile>
       <anchor>a29c51c226c7f3282fb6899d3ac24789a</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>icalibgui</name>
+    <filename>namespaceicalibgui.html</filename>
+    <class kind="class">icalibgui::CSimpleLensCorrectionEditorComp</class>
+  </compound>
+  <compound kind="class">
+    <name>icalibgui::CSimpleLensCorrectionEditorComp</name>
+    <filename>classicalibgui_1_1_c_simple_lens_correction_editor_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CSimpleLensCorrectionEditorComp, icalib::CSimpleLensCorrection &gt;</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CSimpleLensCorrectionEditorComp, icalib::CSimpleLensCorrection &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classicalibgui_1_1_c_simple_lens_correction_editor_comp.html</anchorfile>
+      <anchor>a23c1ac37d9197e2bd2249d21f0cb0ef1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classicalibgui_1_1_c_simple_lens_correction_editor_comp.html</anchorfile>
+      <anchor>aac9b71c76e0b9ace998625220f02220f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_CalibrateButton_clicked</name>
+      <anchorfile>classicalibgui_1_1_c_simple_lens_correction_editor_comp.html</anchorfile>
+      <anchor>a166a46db9989e6980a9a705ba98309ef</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnParamsChanged</name>
+      <anchorfile>classicalibgui_1_1_c_simple_lens_correction_editor_comp.html</anchorfile>
+      <anchor>abd31f3dadd30d17f7edb8d33062db21e</anchor>
+      <arglist>(double value)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classicalibgui_1_1_c_simple_lens_correction_editor_comp.html</anchorfile>
+      <anchor>af3524431cd91bb57f65ebd94b43c3e1a</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classicalibgui_1_1_c_simple_lens_correction_editor_comp.html</anchorfile>
+      <anchor>ab7482473acc8845db7562bbc1e36bef3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classicalibgui_1_1_c_simple_lens_correction_editor_comp.html</anchorfile>
+      <anchor>a2f2abb8261740cd973fb9add70fb906e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classicalibgui_1_1_c_simple_lens_correction_editor_comp.html</anchorfile>
+      <anchor>ac923262ab6b0d3100994f34d4c5e0596</anchor>
+      <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -30999,6 +31074,12 @@
     <file>CSimpleLensCorrectionComp.h</file>
   </compound>
   <compound kind="dir">
+    <name>Include/icalibgui</name>
+    <path>C:/Temp/AcfSln/Include/icalibgui/</path>
+    <filename>dir_dd8eb3da8bccd58a9946c5b55ede8641.html</filename>
+    <file>CSimpleLensCorrectionEditorComp.h</file>
+  </compound>
+  <compound kind="dir">
     <name>Include/icam</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>dir_f2296beff96c253567dc2b95d81f611c.html</filename>
@@ -31303,6 +31384,7 @@
     <dir>Include/iblob</dir>
     <dir>Include/iblobgui</dir>
     <dir>Include/icalib</dir>
+    <dir>Include/icalibgui</dir>
     <dir>Include/icam</dir>
     <dir>Include/icmpstr</dir>
     <dir>Include/idocproc</dir>

@@ -46,95 +46,52 @@ CMultiPageGuiCompBase::CMultiPageGuiCompBase()
 }
 
 
-bool CMultiPageGuiCompBase::IsPageCreated(int index) const
+bool CMultiPageGuiCompBase::EnsurePageInitialized(int pageIndex)
 {
-	if (index >= m_pageCreatedFlags.count()){
+	Q_ASSERT(pageIndex >= 0);
+
+	PageInfo& pageInfo = m_pageIndexToInfoMap[pageIndex];
+	if (pageInfo.isCreated){
+		return true;
+	}
+
+	iqtgui::IGuiObject* pageGuiPtr = GetPageGuiComponent(pageIndex);
+	if ((pageGuiPtr == NULL) || (pageInfo.widgetIndex < 0) || (pageInfo.widgetPtr == NULL)){
 		return false;
 	}
 
-	return m_pageCreatedFlags[index];
-}
+	pageInfo.isCreated = pageGuiPtr->CreateGui(pageInfo.widgetPtr);
 
-
-void CMultiPageGuiCompBase::SetPageCreated(int index)
-{
-	if (index >= m_pageCreatedFlags.count()){
-		m_pageCreatedFlags.resize(index + 1);
-	}
-
-	m_pageCreatedFlags[index] = true;
-}
-
-
-void CMultiPageGuiCompBase::InitPageGui(int pageIndex)
-{
-	iqtgui::IGuiObject* pageGuiPtr = GetPageGuiComponent(pageIndex);
-
-	if (pageGuiPtr == NULL || IsPageCreated(pageIndex)){
-		return;
-	}
-
-	iwidgets::CMultiPageWidget* multiPageWidgetPtr = dynamic_cast<iwidgets::CMultiPageWidget*>(GetWidget());
-	Q_ASSERT(multiPageWidgetPtr != NULL);
-
-	QWidget* pageContainerPtr = multiPageWidgetPtr->GetPageWidgetPtr(pageIndex);
-	Q_ASSERT(pageContainerPtr != NULL);
-
-	QVBoxLayout* pageContainerLayoutPtr = new QVBoxLayout(pageContainerPtr);
-	pageContainerLayoutPtr->setMargin(0);
-
-	if (pageGuiPtr->GetWidget() != NULL){
-		pageContainerLayoutPtr->addWidget(pageGuiPtr->GetWidget());
-	}
-	else{
-		pageGuiPtr->CreateGui(pageContainerPtr);
-	}
-
-	SetPageCreated(pageIndex);
+	return true;
 }
 
 
 // protected methods
 
-int CMultiPageGuiCompBase::AddPageToContainerWidget(const QString& pageTitle)
+bool CMultiPageGuiCompBase::CreatePage(int pageIndex)
 {
-	QWidget* pageContainerPtr = new QWidget(GetWidget());
+	Q_ASSERT(pageIndex >= 0);
 
-	iwidgets::CMultiPageWidget* multiPageWidgetPtr = dynamic_cast<iwidgets::CMultiPageWidget*>(GetWidget());
-	Q_ASSERT(multiPageWidgetPtr != NULL);
-
-	return multiPageWidgetPtr->InsertPage(pageContainerPtr, pageTitle);
-}
-
-
-QString CMultiPageGuiCompBase::GetPageGuiName(const iqtgui::IGuiObject& pageGui) const
-{
-	if (m_guiNamesMap.contains(&pageGui)){
-		return m_guiNamesMap[&pageGui];
-	}
-
-	return QString();
-}
-
-
-bool CMultiPageGuiCompBase::CreatePage(int guiIndex)
-{
-	iqtgui::IGuiObject* guiPtr = GetPageGuiComponent(guiIndex);
+	iqtgui::IGuiObject* guiPtr = GetPageGuiComponent(pageIndex);
 	if (guiPtr != NULL){
-		QString pageTitle = GetPageGuiName(*guiPtr);
+		PageInfo& pageInfo = m_pageIndexToInfoMap[pageIndex];
 
-		int pageIndex = AddPageToContainerWidget(pageTitle);
-		if (pageIndex < 0){
-			pageIndex = guiIndex;
+		if (pageInfo.widgetPtr == NULL){
+			pageInfo.widgetPtr = new QWidget(GetWidget());
+			QVBoxLayout* pageContainerLayoutPtr = new QVBoxLayout(pageInfo.widgetPtr);
+			pageContainerLayoutPtr->setMargin(0);
 		}
 
-		m_pageToGuiIndexMap[pageIndex] = guiIndex;
+		iwidgets::CMultiPageWidget* multiPageWidgetPtr = dynamic_cast<iwidgets::CMultiPageWidget*>(GetWidget());
+		Q_ASSERT(multiPageWidgetPtr != NULL);
 
-		if (		(guiIndex < m_slaveWidgetsVisualCompPtr.GetCount()) &&
-					(guiIndex < m_slaveWidgetsModelCompPtr.GetCount())){
-			imod::IModel* modelPtr = m_slaveWidgetsModelCompPtr[guiIndex];
-			if ((m_slaveWidgetsVisualCompPtr[guiIndex] != NULL) && (modelPtr != NULL)){
-				RegisterModel(modelPtr, guiIndex);
+		pageInfo.widgetIndex = multiPageWidgetPtr->InsertPage(pageInfo.widgetPtr, pageInfo.pageTitle);
+
+		if (		(pageIndex < m_slaveWidgetsVisualCompPtr.GetCount()) &&
+					(pageIndex < m_slaveWidgetsModelCompPtr.GetCount())){
+			imod::IModel* modelPtr = m_slaveWidgetsModelCompPtr[pageIndex];
+			if ((m_slaveWidgetsVisualCompPtr[pageIndex] != NULL) && (modelPtr != NULL)){
+				RegisterModel(modelPtr, pageIndex);
 			}
 		}
 
@@ -147,24 +104,44 @@ bool CMultiPageGuiCompBase::CreatePage(int guiIndex)
 
 void CMultiPageGuiCompBase::RemovePage(int pageIndex)
 {
-	if (m_pageToGuiIndexMap.contains(pageIndex)){
-		int guiIndex = m_pageToGuiIndexMap[pageIndex];
-		UnregisterModel(guiIndex);
+	if (m_pageIndexToInfoMap.contains(pageIndex)){
+		UnregisterModel(pageIndex);
 
 		iwidgets::CMultiPageWidget* multiPageWidgetPtr = dynamic_cast<iwidgets::CMultiPageWidget*>(GetWidget());
 		Q_ASSERT(multiPageWidgetPtr != NULL);
 
-		multiPageWidgetPtr->RemovePage(pageIndex);
+		PageInfo& pageInfo = m_pageIndexToInfoMap[pageIndex];
+
+		if (pageInfo.isCreated){
+			iqtgui::IGuiObject* guiPtr = GetPageGuiComponent(pageIndex);
+			Q_ASSERT(guiPtr != NULL);
+
+			guiPtr->DestroyGui();
+
+			pageInfo.isCreated = false;
+		}
+
+		if (pageInfo.widgetIndex >= 0){
+			multiPageWidgetPtr->RemovePage(pageInfo.widgetIndex);
+			pageInfo.widgetIndex = -1;
+			pageInfo.widgetPtr = NULL;
+		}
 	}
 }
 
 
 void CMultiPageGuiCompBase::SetCurrentPage(int pageIndex)
 {
-	iwidgets::CMultiPageWidget* multiPageWidgetPtr = dynamic_cast<iwidgets::CMultiPageWidget*>(GetWidget());
-	Q_ASSERT(multiPageWidgetPtr != NULL);
+	if (m_pageIndexToInfoMap.contains(pageIndex)){
+		iwidgets::CMultiPageWidget* multiPageWidgetPtr = dynamic_cast<iwidgets::CMultiPageWidget*>(GetWidget());
+		Q_ASSERT(multiPageWidgetPtr != NULL);
 
-	multiPageWidgetPtr->SetCurrentPage(pageIndex);
+		const PageInfo& pageInfo = m_pageIndexToInfoMap[pageIndex];
+
+		if (pageInfo.widgetIndex >= 0){
+			multiPageWidgetPtr->SetCurrentPage(pageInfo.widgetIndex);
+		}
+	}
 }
 
 
@@ -175,30 +152,30 @@ void CMultiPageGuiCompBase::UpdateVisualElements()
 
 	int visualProvidersCount = m_slaveWidgetsVisualCompPtr.GetCount();
 
-	for (		PageToGuiIndexMap::ConstIterator iter = m_pageToGuiIndexMap.constBegin();
-				iter != m_pageToGuiIndexMap.constEnd();
+	for (		PageIndexToInfoMap::ConstIterator iter = m_pageIndexToInfoMap.constBegin();
+				iter != m_pageIndexToInfoMap.constEnd();
 				++iter){
 		int pageIndex = iter.key();
 		Q_ASSERT(pageIndex >= 0);
 		Q_ASSERT(pageIndex < GetPagesCount());
 
-		int guiIndex = iter.value();
-		Q_ASSERT(guiIndex >= 0);
-		Q_ASSERT(guiIndex < GetPagesCount());
+		const PageInfo& pageInfo = iter.value();
 
-		QIcon pageIcon;
-		QString pageToolTip;
+		if (pageInfo.widgetIndex >= 0){
+			QIcon pageIcon;
+			QString pageToolTip;
 
-		if (guiIndex < visualProvidersCount){
-			const IVisualStatus* visualProviderPtr = m_slaveWidgetsVisualCompPtr[guiIndex];
-			if (visualProviderPtr != NULL){
-				pageIcon = visualProviderPtr->GetStatusIcon();
-				pageToolTip = visualProviderPtr->GetStatusText();
+			if (pageIndex < visualProvidersCount){
+				const IVisualStatus* visualProviderPtr = m_slaveWidgetsVisualCompPtr[pageIndex];
+				if (visualProviderPtr != NULL){
+					pageIcon = visualProviderPtr->GetStatusIcon();
+					pageToolTip = visualProviderPtr->GetStatusText();
+				}
 			}
-		}
 
-		multiPageWidgetPtr->SetPageIcon(pageIndex, pageIcon);
-		multiPageWidgetPtr->SetPageToolTip(pageIndex, pageToolTip);
+			multiPageWidgetPtr->SetPageIcon(pageInfo.widgetIndex, pageIcon);
+			multiPageWidgetPtr->SetPageToolTip(pageInfo.widgetIndex, pageToolTip);
+		}
 	}
 
 	m_pageModel.UpdatePageState();
@@ -207,7 +184,9 @@ void CMultiPageGuiCompBase::UpdateVisualElements()
 
 void CMultiPageGuiCompBase::CreatePages()
 {
-	bool isLazyInit = *m_lazyPagesInitializationAttrPtr;
+	int designType = GetDesignType();
+
+	bool isLazyInit = *m_lazyPagesInitializationAttrPtr && iwidgets::CMultiPageWidget::IsPageIndexChangeSupported(designType);
 
 	bool firstPageInitialized = false;
 
@@ -215,17 +194,17 @@ void CMultiPageGuiCompBase::CreatePages()
 	for (int pageIndex = 0; pageIndex < pagesCount; pageIndex++){
 		CreatePage(pageIndex);
 
+		bool initPage = !isLazyInit;
+
 		if (!firstPageInitialized && m_pageModel.IsOptionEnabled(pageIndex)){
 			firstPageInitialized = true;
 			m_pageModel.SetSelectedOptionIndex(pageIndex);
 
-			if (isLazyInit){
-				InitPageGui(pageIndex);
-			}
+			initPage = true;
 		}
 
-		if (!isLazyInit){
-			InitPageGui(pageIndex);
+		if (initPage){
+			EnsurePageInitialized(pageIndex);
 		}
 	}
 
@@ -235,16 +214,27 @@ void CMultiPageGuiCompBase::CreatePages()
 
 void CMultiPageGuiCompBase::ResetPages()
 {
-	m_pageToGuiIndexMap.clear();
-	m_pageModel.SetSelectedOptionIndex(iprm::ISelectionParam::NO_SELECTION);
-
 	UnregisterAllModels();
 
-	int pagesCount = GetPagesCount();
-	for (int pageIndex = 0; pageIndex < pagesCount; pageIndex++){
-		iqtgui::IGuiObject* guiPtr = GetPageGuiComponent(pageIndex);
-		if ((guiPtr != NULL) && IsPageCreated(pageIndex)){
+	m_pageModel.SetSelectedOptionIndex(iprm::ISelectionParam::NO_SELECTION);
+
+	for (		PageIndexToInfoMap::Iterator iter = m_pageIndexToInfoMap.begin();
+				iter != m_pageIndexToInfoMap.end();
+				++iter){
+		int pageIndex = iter.key();
+		Q_ASSERT(pageIndex >= 0);
+		Q_ASSERT(pageIndex < GetPagesCount());
+
+		PageInfo& pageInfo = iter.value();
+		if (pageInfo.isCreated){
+			iqtgui::IGuiObject* guiPtr = GetPageGuiComponent(pageIndex);
+			Q_ASSERT(guiPtr != NULL);
+
 			guiPtr->DestroyGui();
+
+			pageInfo.isCreated = false;
+			pageInfo.widgetIndex = -1;
+			pageInfo.widgetPtr = NULL;
 		}
 	}
 
@@ -252,8 +242,6 @@ void CMultiPageGuiCompBase::ResetPages()
 	Q_ASSERT(multiPageWidgetPtr != NULL);
 
 	multiPageWidgetPtr->ResetPages();
-
-	m_pageCreatedFlags.clear();
 }
 
 
@@ -327,7 +315,7 @@ void CMultiPageGuiCompBase::OnComponentCreated()
 			continue;
 		}
 
-		m_guiNamesMap[guiPtr] = name;
+		m_pageIndexToInfoMap[pageIndex].pageTitle = name;
 	}
 
 	m_pageModel.SetParent(this);
@@ -336,7 +324,7 @@ void CMultiPageGuiCompBase::OnComponentCreated()
 
 void CMultiPageGuiCompBase::OnComponentDestroyed()
 {
-	m_guiNamesMap.clear();
+	m_pageIndexToInfoMap.clear();
 
 	m_pageModel.SetParent(NULL);
 
@@ -358,8 +346,8 @@ void CMultiPageGuiCompBase::OnModelChanged(int /*modelId*/, const istd::IChangea
 
 void CMultiPageGuiCompBase::OnPageChanged(int pageIndex)
 {
-	if ((pageIndex > 0) && !IsPageCreated(pageIndex)){
-		InitPageGui(pageIndex);
+	if (pageIndex > 0){
+		EnsurePageInitialized(pageIndex);
 	}
 
 	m_pageModel.SetSelectedOptionIndex(pageIndex);
@@ -369,8 +357,8 @@ void CMultiPageGuiCompBase::OnPageChanged(int pageIndex)
 // public methods of the embedded class PageModel
 
 CMultiPageGuiCompBase::PageModel::PageModel()
-:	imod::CModelUpdateBridge(this),
-	m_parentPtr(NULL)
+:	m_parentPtr(NULL),
+	m_updateBridge(this)
 {
 }
 
@@ -379,7 +367,7 @@ void CMultiPageGuiCompBase::PageModel::SetParent(CMultiPageGuiCompBase* parentPt
 {
 	if (parentPtr != m_parentPtr){
 		if (m_parentPtr != NULL){
-			EnsureModelsDetached();
+			m_updateBridge.EnsureModelsDetached();
 		}
 
 		if (parentPtr != NULL){
@@ -387,8 +375,18 @@ void CMultiPageGuiCompBase::PageModel::SetParent(CMultiPageGuiCompBase* parentPt
 			for (int pageIndex = 0; pageIndex < activatorsCount; ++pageIndex){
 				imod::IModel* modelPtr = parentPtr->m_pageActivatorsModelCompPtr[pageIndex];
 
-				if ((modelPtr != NULL) && !modelPtr->IsAttached(this)){
-					modelPtr->AttachObserver(this);
+				if ((modelPtr != NULL) && !modelPtr->IsAttached(&m_updateBridge)){
+					modelPtr->AttachObserver(&m_updateBridge);
+				}
+			}
+
+
+			int visActivatorsCount = qMin(parentPtr->m_pageVisibilityActivatorsModelCompPtr.GetCount(), parentPtr->GetPagesCount());
+			for (int pageIndex = 0; pageIndex < visActivatorsCount; ++pageIndex){
+				imod::IModel* modelPtr = parentPtr->m_pageVisibilityActivatorsModelCompPtr[pageIndex];
+
+				if ((modelPtr != NULL) && !modelPtr->IsAttached(&m_updateBridge)){
+					modelPtr->AttachObserver(&m_updateBridge);
 				}
 			}
 		}
@@ -409,12 +407,30 @@ void CMultiPageGuiCompBase::PageModel::UpdatePageState()
 	Q_ASSERT(m_parentPtr != NULL);
 
 	iwidgets::CMultiPageWidget* multiPageWidgetPtr = dynamic_cast<iwidgets::CMultiPageWidget*>(m_parentPtr->GetWidget());
+	Q_ASSERT(multiPageWidgetPtr != NULL);
 
-	int activatorsCount = qMin(m_parentPtr->m_pageActivatorsCompPtr.GetCount(), m_parentPtr->GetPagesCount());
-	for (int i = 0; i < activatorsCount; ++i){
-		const iprm::IEnableableParam* paramPtr = m_parentPtr->m_pageActivatorsCompPtr[i];
-		if ((paramPtr != NULL) && (multiPageWidgetPtr != NULL)){
-			multiPageWidgetPtr->SetPageEnabled(i, paramPtr->IsEnabled());
+	for (		PageIndexToInfoMap::ConstIterator iter = m_parentPtr->m_pageIndexToInfoMap.constBegin();
+				iter != m_parentPtr->m_pageIndexToInfoMap.constEnd();
+				++iter){
+		int pageIndex = iter.key();
+		Q_ASSERT(pageIndex >= 0);
+		Q_ASSERT(pageIndex < m_parentPtr->GetPagesCount());
+
+		const PageInfo& pageInfo = iter.value();
+		if (pageInfo.widgetIndex >= 0){
+			if (pageIndex < m_parentPtr->m_pageActivatorsCompPtr.GetCount()){
+				const iprm::IEnableableParam* paramPtr = m_parentPtr->m_pageActivatorsCompPtr[pageIndex];
+				if (paramPtr != NULL){
+					multiPageWidgetPtr->SetPageEnabled(pageInfo.widgetIndex, paramPtr->IsEnabled());
+				}
+			}
+
+			if (pageIndex < m_parentPtr->m_pageVisibilityActivatorsCompPtr.GetCount()){
+				const iprm::IEnableableParam* paramPtr = m_parentPtr->m_pageVisibilityActivatorsCompPtr[pageIndex];
+				if (paramPtr != NULL){
+					multiPageWidgetPtr->SetPageVisible(pageInfo.widgetIndex, paramPtr->IsEnabled());
+				}
+			}
 		}
 	}
 }
@@ -422,14 +438,21 @@ void CMultiPageGuiCompBase::PageModel::UpdatePageState()
 
 // reimplemented (iprm::ISelectionParam)
 
-
 bool CMultiPageGuiCompBase::PageModel::SetSelectedOptionIndex(int index)
 {
 	Q_ASSERT(m_parentPtr != NULL);
 
 	iwidgets::CMultiPageWidget* multiPageWidgetPtr = dynamic_cast<iwidgets::CMultiPageWidget*>(m_parentPtr->GetWidget());
 	if ((multiPageWidgetPtr != NULL) && BaseClass::SetSelectedOptionIndex(index)){
-		return multiPageWidgetPtr->SetCurrentPage(index);
+		int widgetIndex = -1;
+		if (index >= 0){
+			const PageInfo& pageInfo = m_parentPtr->m_pageIndexToInfoMap[index];
+			widgetIndex = pageInfo.widgetIndex;
+		}
+
+		if (widgetIndex >= 0){
+			return multiPageWidgetPtr->SetCurrentPage(widgetIndex);
+		}
 	}
 
 	return false;
@@ -486,14 +509,22 @@ bool CMultiPageGuiCompBase::PageModel::IsOptionEnabled(int index) const
 		return false;
 	}
 
+	bool retVal = true;
 	if (index < m_parentPtr->m_pageActivatorsCompPtr.GetCount()){
 		const iprm::IEnableableParam* paramPtr = m_parentPtr->m_pageActivatorsCompPtr[index];
 		if (paramPtr != NULL){
-			return paramPtr->IsEnabled();
+			retVal = paramPtr->IsEnabled();
 		}
 	}
 
-	return true;
+	if (retVal && (index < m_parentPtr->m_pageVisibilityActivatorsCompPtr.GetCount())){
+		const iprm::IEnableableParam* paramPtr = m_parentPtr->m_pageVisibilityActivatorsCompPtr[index];
+		if (paramPtr != NULL){
+			retVal = paramPtr->IsEnabled();
+		}
+	}
+
+	return retVal;
 }
 
 
@@ -501,12 +532,16 @@ bool CMultiPageGuiCompBase::PageModel::IsOptionEnabled(int index) const
 
 int CMultiPageGuiCompBase::PageModel::GetStatusesCount() const
 {
+	Q_ASSERT(m_parentPtr != NULL);
+
 	return m_parentPtr->m_slaveWidgetsVisualCompPtr.GetCount();
 }
 
 
 const IVisualStatus* CMultiPageGuiCompBase::PageModel::GetVisualStatus(int statusIndex) const
 {
+	Q_ASSERT(m_parentPtr != NULL);
+
 	return m_parentPtr->m_slaveWidgetsVisualCompPtr[statusIndex];
 }
 

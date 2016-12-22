@@ -53412,25 +53412,11 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual int</type>
-      <name>AddPageToContainerWidget</name>
-      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
-      <anchor>aa43837b961ff7c7d1907382e590173ca</anchor>
-      <arglist>(const QString &amp;pageTitle)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetPageGuiName</name>
-      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
-      <anchor>a3a4c74075f5bce085b34117ab74282f6</anchor>
-      <arglist>(const iqtgui::IGuiObject &amp;pageGui) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>CreatePage</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
-      <anchor>a5583e078c0ede8f052f0203e8099e52e</anchor>
-      <arglist>(int guiIndex)</arglist>
+      <anchor>aba926baa10a67641bd428ca7e7a758f7</anchor>
+      <arglist>(int pageIndex)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -53504,23 +53490,9 @@
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
-      <name>IsPageCreated</name>
+      <name>EnsurePageInitialized</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
-      <anchor>a7dea7f9ad1a9afcde6d8c723e810fe7b</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>SetPageCreated</name>
-      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
-      <anchor>a587e52c8e5197beab330f53f5b946f52</anchor>
-      <arglist>(int index)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>InitPageGui</name>
-      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
-      <anchor>a8d2fbbb9f06dd9da80b7a979eeb0649f</anchor>
+      <anchor>a0e8323fb09434faeb886894fb6bafa77</anchor>
       <arglist>(int pageIndex)</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -73395,6 +73367,13 @@
       <anchorfile>classiwidgets_1_1_c_multi_page_widget.html</anchorfile>
       <anchor>a3a59ea013bd2770db0a3430f2f728153</anchor>
       <arglist>(int uiMode)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>IsPageIndexChangeSupported</name>
+      <anchorfile>classiwidgets_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>ae1a08e8fc55d98e0b9f515bd5ca53c18</anchor>
+      <arglist>(int designMode)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>

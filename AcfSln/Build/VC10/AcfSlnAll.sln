@@ -16,11 +16,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iqtmm", "..\..\Include\iqtm
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "icalib", "..\..\Include\icalib\VC10\icalib.vcxproj", "{CE147382-435D-36AF-B813-9795C81C82E0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "icalibgui", "..\..\Include\icalibgui\VC10\icalibgui.vcxproj", "{359E1584-7EC0-3EE4-88A2-DB4F7C86A5DD}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "icam", "..\..\Include\icam\VC10\icam.vcxproj", "{B87D9840-5680-3E82-891E-6502A462BBF7}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iqtauth", "..\..\Include\iqtauth\VC10\iqtauth.vcxproj", "{E447B8D0-E9D8-3B37-8D26-F20E54943493}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iqtcam", "..\..\Include\iqtcam\VC10\iqtcam.vcxproj", "{96E237A7-D09D-36B1-8425-D7D5A0645BFA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iqtauth", "..\..\Include\iqtauth\VC10\iqtauth.vcxproj", "{E447B8D0-E9D8-3B37-8D26-F20E54943493}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iinsp", "..\..\Include\iinsp\VC10\iinsp.vcxproj", "{941D1624-B22C-32B4-8E8E-21C0C63AC70E}"
 EndProject
@@ -356,18 +358,22 @@ Global
 		{CE147382-435D-36AF-B813-9795C81C82E0}.Debug|Win32.Build.0 = Debug|Win32
 		{CE147382-435D-36AF-B813-9795C81C82E0}.Release|Win32.ActiveCfg = Release|Win32
 		{CE147382-435D-36AF-B813-9795C81C82E0}.Release|Win32.Build.0 = Release|Win32
+		{359E1584-7EC0-3EE4-88A2-DB4F7C86A5DD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{359E1584-7EC0-3EE4-88A2-DB4F7C86A5DD}.Debug|Win32.Build.0 = Debug|Win32
+		{359E1584-7EC0-3EE4-88A2-DB4F7C86A5DD}.Release|Win32.ActiveCfg = Release|Win32
+		{359E1584-7EC0-3EE4-88A2-DB4F7C86A5DD}.Release|Win32.Build.0 = Release|Win32
 		{B87D9840-5680-3E82-891E-6502A462BBF7}.Debug|Win32.ActiveCfg = Debug|Win32
 		{B87D9840-5680-3E82-891E-6502A462BBF7}.Debug|Win32.Build.0 = Debug|Win32
 		{B87D9840-5680-3E82-891E-6502A462BBF7}.Release|Win32.ActiveCfg = Release|Win32
 		{B87D9840-5680-3E82-891E-6502A462BBF7}.Release|Win32.Build.0 = Release|Win32
-		{E447B8D0-E9D8-3B37-8D26-F20E54943493}.Debug|Win32.ActiveCfg = Debug|Win32
-		{E447B8D0-E9D8-3B37-8D26-F20E54943493}.Debug|Win32.Build.0 = Debug|Win32
-		{E447B8D0-E9D8-3B37-8D26-F20E54943493}.Release|Win32.ActiveCfg = Release|Win32
-		{E447B8D0-E9D8-3B37-8D26-F20E54943493}.Release|Win32.Build.0 = Release|Win32
 		{96E237A7-D09D-36B1-8425-D7D5A0645BFA}.Debug|Win32.ActiveCfg = Debug|Win32
 		{96E237A7-D09D-36B1-8425-D7D5A0645BFA}.Debug|Win32.Build.0 = Debug|Win32
 		{96E237A7-D09D-36B1-8425-D7D5A0645BFA}.Release|Win32.ActiveCfg = Release|Win32
 		{96E237A7-D09D-36B1-8425-D7D5A0645BFA}.Release|Win32.Build.0 = Release|Win32
+		{E447B8D0-E9D8-3B37-8D26-F20E54943493}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E447B8D0-E9D8-3B37-8D26-F20E54943493}.Debug|Win32.Build.0 = Debug|Win32
+		{E447B8D0-E9D8-3B37-8D26-F20E54943493}.Release|Win32.ActiveCfg = Release|Win32
+		{E447B8D0-E9D8-3B37-8D26-F20E54943493}.Release|Win32.Build.0 = Release|Win32
 		{941D1624-B22C-32B4-8E8E-21C0C63AC70E}.Debug|Win32.ActiveCfg = Debug|Win32
 		{941D1624-B22C-32B4-8E8E-21C0C63AC70E}.Debug|Win32.Build.0 = Debug|Win32
 		{941D1624-B22C-32B4-8E8E-21C0C63AC70E}.Release|Win32.ActiveCfg = Release|Win32
